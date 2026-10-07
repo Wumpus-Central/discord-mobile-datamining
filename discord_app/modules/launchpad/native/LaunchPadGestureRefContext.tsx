@@ -1,10 +1,10 @@
-// === Module 15969: react ===
+// === Module 15969: LaunchPadGestureRefContext ===
 
-// Module 15969 (react)
-import react from "react" /* 19 */;
-import size from "module_2" /* 2 */;
+// Module 15969 (LaunchPadGestureRefContext)
+import noop from "module_19" /* 19 */;
 
-const context = react.createContext({ current: "r" });
+const context = noop.createContext({ current: "r" });
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadGestureRefContext.tsx");
 
 export default context;

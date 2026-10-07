@@ -1,26 +1,25 @@
 // === Module 15809: DisableStreamPreviewsSetting ===
 
 // Module 15809 (DisableStreamPreviewsSetting)
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import SettingsConstants from "SettingsConstants" /* 7645 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const obj = {
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["1CzWUK"]);
+    const intl = util.intl;
+    return intl.string(util.t["1CzWUK"]);
   },
   useDescription() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.jTNPHM);
+    const intl = util.intl;
+    return intl.string(util.t.jTNPHM);
   },
-  parent: MobileUserSettings.VOICE,
+  parent: SettingsConstants.MobileUserSettings.VOICE,
   useValue: () => {
     const DisableStreamPreviews = UserSettings.DisableStreamPreviews;
     let flag = DisableStreamPreviews.useSetting();
@@ -30,8 +29,7 @@ const obj = {
     return flag;
   },
   onValueChange: UserSettings.DisableStreamPreviews.updateSetting
-};
-const toggle = SettingBuilders.createToggle(obj);
+});
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/DisableStreamPreviewsSetting.tsx");
 
 export default toggle;

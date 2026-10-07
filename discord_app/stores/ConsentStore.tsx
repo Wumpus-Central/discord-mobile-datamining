@@ -1,25 +1,24 @@
 // === Module 6091: ConsentStore ===
 
 // Module 6091 (ConsentStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import size from "module_2" /* 2 */;
 
 let c0 = false;
 let c1 = false;
 let obj = {};
 let c3 = null;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class ConsentStore extends Store {
-  hasConsented(arg0) {
-    const consented = null != obj[arg0] && obj[arg0].consented;
-    return consented;
-  }
-  getAuthenticationConsentRequired() {
-    return c3;
-  }
 }
 const prototype = ConsentStore.prototype;
+prototype["hasConsented"] = function hasConsented(arg0) {
+  let consented = null != obj[arg0];
+  if (consented) {
+    consented = obj[arg0].consented;
+  }
+  return consented;
+};
 Object.defineProperty(prototype, "consents", {
   get: function consents() {
     return obj;
@@ -38,6 +37,9 @@ Object.defineProperty(prototype, "receivedConsentsInConnectionOpen", {
   },
   set: undefined
 });
+prototype["getAuthenticationConsentRequired"] = function getAuthenticationConsentRequired() {
+  return c3;
+};
 ConsentStore.displayName = "ConsentStore";
 obj = {
   CONNECTION_OPEN: function handleConnectionOpen(consents) {
@@ -67,6 +69,7 @@ obj = {
   }
 };
 const consentStore = new ConsentStore(DispatcherDefault, obj);
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/ConsentStore.tsx");
 
 export default consentStore;

@@ -2,13 +2,14 @@
 
 // Module 7846 (UserProfileSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import isEqualDefault from "isEqual" /* 5016 */;
+import _modDef5016 from "module_5016" /* 5016 */;
 import GuildTagUtils from "GuildTagUtils" /* 7847 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import UserStore from "UserStore" /* 1377 */;
 import UserProfileStore from "UserProfileStore" /* 7124 */;
-import size from "module_2" /* 2 */;
 
+require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileSettingsActionCreators.tsx");
 
 export const setPendingChanges = function setPendingChanges(guildId) {
@@ -34,11 +35,10 @@ export const setPendingChanges = function setPendingChanges(guildId) {
     }
     if ("nickname" in merged) {
       let nick;
-      const nickname = merged.nickname;
       if (member != null) {
         nick = member.nick;
       }
-      if (nickname === nick) {
+      if (merged.nickname === nick) {
         obj.pendingNickname = undefined;
       } else {
         if ("" === merged.nickname) {
@@ -51,31 +51,28 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       }
     }
     if ("displayNameStyles" in merged) {
-      let displayNameStyles2;
       const displayNameStyles = merged.displayNameStyles;
       if (null != guildId) {
         let displayNameStyles1;
         if (member != null) {
           displayNameStyles1 = member.displayNameStyles;
         }
-        displayNameStyles2 = displayNameStyles1;
+        let displayNameStyles2 = displayNameStyles1;
       } else {
         displayNameStyles2 = currentUser.displayNameStyles;
       }
       let tmp13 = displayNameStyles;
-      const tmp12 = isEqualDefault;
       if (displayNameStyles == null) {
         tmp13 = null;
       }
       if (displayNameStyles2 == null) {
         displayNameStyles2 = null;
       }
-      obj.pendingDisplayNameStyles = tmp12(tmp13, displayNameStyles2) ? undefined : displayNameStyles;
+      obj.pendingDisplayNameStyles = _modDef5016(tmp13, displayNameStyles2) ? undefined : displayNameStyles;
     }
     if ("customTypingIndicatorStyle" in merged) {
       const customTypingIndicatorStyle = merged.customTypingIndicatorStyle;
       let tmp17 = customTypingIndicatorStyle;
-      const tmp16 = isEqualDefault;
       if (customTypingIndicatorStyle == null) {
         tmp17 = null;
       }
@@ -83,15 +80,14 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       if (typingIndicatorStyle == null) {
         typingIndicatorStyle = null;
       }
-      obj.pendingCustomTypingIndicatorStyle = tmp16(tmp17, typingIndicatorStyle) ? undefined : customTypingIndicatorStyle;
+      obj.pendingCustomTypingIndicatorStyle = _modDef5016(tmp17, typingIndicatorStyle) ? undefined : customTypingIndicatorStyle;
     }
     if ("pronouns" in merged) {
-      let pronouns1;
-      const pronouns = merged.pronouns;
+      let pronouns;
       if (userProfile != null) {
-        pronouns1 = userProfile.pronouns;
+        pronouns = userProfile.pronouns;
       }
-      if (pronouns === pronouns1) {
+      if (merged.pronouns === pronouns) {
         obj.pendingPronouns = undefined;
       } else {
         obj.pendingPronouns = merged.pronouns;
@@ -227,7 +223,6 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       }
     }
     if ("banner" in merged) {
-      let banner2;
       const banner = merged.banner;
       let imageUri2;
       if (banner != null) {
@@ -244,7 +239,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
         if (banner1 == null) {
           banner1 = null;
         }
-        banner2 = banner1;
+        let banner2 = banner1;
       } else {
         banner2 = currentUser.banner;
         if (banner2 == null) {
@@ -278,9 +273,8 @@ export const setPendingChanges = function setPendingChanges(guildId) {
     if ("themeColors" in merged) {
       if (null != guildId) {
         if (null != merged.themeColors) {
-          let tmp42;
           if (null == merged.themeColors[0]) {
-            tmp42 = null;
+            let tmp42 = null;
           }
           let themeColors;
           if (userProfile != null) {
@@ -289,7 +283,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
           if (themeColors == null) {
             themeColors = null;
           }
-          if (isEqualDefault(tmp42, themeColors)) {
+          if (_modDef5016(tmp42, themeColors)) {
             obj.pendingThemeColors = undefined;
           } else {
             obj.pendingThemeColors = merged.themeColors;
@@ -303,20 +297,18 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       tmp42 = themeColors1;
     }
     if ("bio" in merged) {
-      let bio1;
-      const bio = merged.bio;
+      let bio;
       if (userProfile != null) {
-        bio1 = userProfile.bio;
+        bio = userProfile.bio;
       }
-      if (bio === bio1) {
+      if (merged.bio === bio) {
         obj.pendingBio = undefined;
       } else {
         obj.pendingBio = merged.bio;
       }
     }
     if ("primaryGuildId" in merged) {
-      const obj2 = GuildTagUtils;
-      let guildId1 = obj2.getUserPrimaryGuild(currentUser.primaryGuild).guildId;
+      let guildId1 = GuildTagUtils.getUserPrimaryGuild(currentUser.primaryGuild).guildId;
       if (guildId1 == null) {
         guildId1 = null;
       }
@@ -329,10 +321,8 @@ export const setPendingChanges = function setPendingChanges(guildId) {
     if ("legacyUsernameDisabled" in merged) {
       obj.pendingLegacyUsernameDisabled = merged.legacyUsernameDisabled;
     }
-    const obj3 = { type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", guildId };
-    const dispatch = DispatcherDefault.dispatch;
-    DispatcherDefault;
+    const obj4 = { type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", guildId };
     const merged1 = Object.assign(obj);
-    dispatch(obj3);
+    DispatcherDefault.dispatch(obj4);
   }
 };

@@ -14,7 +14,7 @@ const promise = new Promise((resolve) => {
 const result = size.fileFinishedImporting("modules/app_startup/PostTTIScheduler/PostTTIScheduler.tsx");
 
 export const schedulePostTTIEvent = function schedulePostTTIEvent(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   promise.then(() => {
     closure_0();
   });

@@ -5,43 +5,43 @@ import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/emoji_terms/LazyPromiseInitializer.tsx");
 class LazyPromiseInitializer {
-  constructor(loader) {
-    const merged = Object.assign({ loading: false, loaded: false });
-    merged.loader = loader;
+  constructor(arg0) {
+    merged = Object.assign({ loading: false, loaded: false });
+    merged.loader = global;
     return merged;
-  }
-  setParams(param) {
-    const self = this;
-    if (this.param !== param) {
-      self.param = param;
-      self.loading = false;
-      self.loaded = false;
-    }
-  }
-  get() {
-    this.ensureLoaded();
-    return this.val;
-  }
-  ensureLoaded() {
-    const self = this;
-    if (!this.loaded) {
-      if (!self.loading) {
-        if (undefined !== self.param) {
-          const param = self.param;
-          self.loading = true;
-          const loaderResult = self.loader(param);
-          loaderResult.then((result) => {
-            if (param === self.param) {
-              self.val = result;
-              self.loading = false;
-              self.loaded = true;
-            }
-          });
-        }
-      }
-    }
   }
 }
 const prototype = LazyPromiseInitializer.prototype;
+prototype["setParams"] = function setParams(param) {
+  const self = this;
+  if (this.param !== param) {
+    self.param = param;
+    self.loading = false;
+    self.loaded = false;
+  }
+};
+prototype["get"] = function get() {
+  this.ensureLoaded();
+  return this.val;
+};
+prototype["ensureLoaded"] = function ensureLoaded() {
+  const self = this;
+  if (!this.loaded) {
+    if (!self.loading) {
+      if (undefined !== self.param) {
+        const param = self.param;
+        self.loading = true;
+        self.loader(param).then((result) => {
+          if (param === self.param) {
+            self.val = result;
+            self.loading = false;
+            self.loaded = true;
+          }
+        });
+        const loaderResult = self.loader(param);
+      }
+    }
+  }
+};
 
 export default LazyPromiseInitializer;

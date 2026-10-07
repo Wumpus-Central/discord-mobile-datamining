@@ -1,69 +1,52 @@
 // === Module 16247: OneColumnGuildUpsellList ===
 
 // Module 16247 (OneColumnGuildUpsellList)
-import Fragment from "Fragment" /* 21 */;
 import GameCommunityMultiGuildUpsellCardDefault from "GameCommunityMultiGuildUpsellCard" /* 16248 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15466 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-let _require, dependencyMap, num, offset, scrollToOffsetResult, set, tmp3, tmp6;
-
-let react = react_mod;
-const jsx = Fragment.jsx;
+const require = fn;
+const jsx = fn(21).jsx;
 const viewabilityConfig = { itemVisiblePercentThreshold: 50, minimumViewTime: 500 };
 let c8 = 0;
+const createStyles = fn(4896);
 let closure_9 = createStyles.createStyles({ hidden: { opacity: 0 } });
-let ReactCompilerGating = ReactCompilerGating_mod;
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0, arg1) {
-  let closure_0;
-  let first;
-  let ref;
-  let tmp7;
+let ReactCompilerGating = fn(558);
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   _require = arg0;
-  let closure_1 = arg1;
-  let obj = require("react");
-  const cResult = obj.c(5);
-  const tmp = _require;
+  closure_1 = arg1;
+  const cResult = require("c").c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const _Set = Set;
-    const self = this;
-    const self2 = this;
-    set = new Set();
+    const set = new Set();
     cResult[0] = set;
-    first = set;
+    let first = set;
   } else {
     first = cResult[0];
   }
-  dependencyMap = react.useRef(first);
+  dependencyMap = noop.useRef(first);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function c() {
       const current = ref.current;
       current.clear();
     };
     cResult[1] = fn;
-    tmp7 = fn;
+    let tmp9 = fn;
   } else {
-    tmp7 = cResult[1];
+    tmp9 = cResult[1];
   }
-  const tmpResult = tmp(1491);
-  const focusEffect = tmpResult.useFocusEffect(tmp7);
+  let obj = require("c");
+  const focusEffect = require("Link").useFocusEffect(tmp9);
   if (cResult[2] === arg1) {
-    let tmp9;
     if (cResult[3] === arg0) {
-      tmp9 = cResult[4];
+      let tmp11 = cResult[4];
     }
-    return tmp9;
+    return tmp11;
   }
   const fn2 = function u(viewableItems) {
-    let location_stack;
     viewableItems = viewableItems.viewableItems;
     let item = viewableItems.forEach((item) => {
-      let obj2;
       item = item.item;
       if (null != item) {
         let hasItem = null == item.id;
@@ -73,13 +56,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0, 
         }
         if (!hasItem) {
           const current2 = ref.current;
-          const tmp5 = closure_1_0[item.id];
           current2.add(item.id);
-          const obj = { type: closure_0(ref[6]).ImpressionTypes.PANE, name: closure_0(ref[6]).ImpressionNames.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD, properties: obj2 };
-          const trackImpression = closure_0(ref[5]).trackImpression;
-          closure_0(ref[5]);
-          obj2 = { game_id: tmp5, guild_id: item.id, location_stack };
-          trackImpression(obj);
+          const obj2 = { type: dependencyMap(ref[6]).ImpressionTypes.PANE, name: dependencyMap(ref[6]).ImpressionNames.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD, properties: null };
+          const obj3 = { game_id: dependencyMap[item.id], guild_id: item.id, location_stack };
+          obj2.properties = obj3;
+          dependencyMap(ref[5]).trackImpression(obj2);
+          const obj = dependencyMap(ref[5]);
         }
       }
     });
@@ -87,26 +69,20 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0, 
   cResult[2] = arg1;
   cResult[3] = arg0;
   cResult[4] = fn2;
-  tmp9 = fn2;
+  tmp11 = fn2;
 }) : ((arg0, arg1) => {
-  let closure_0;
-  let ref;
   _require = arg0;
-  let closure_1 = arg1;
-  const useRef = react.useRef;
-  set = new Set();
-  dependencyMap = useRef(set);
-  let obj = require("Link");
-  const focusEffect = obj.useFocusEffect(react.useCallback(() => {
+  closure_1 = arg1;
+  dependencyMap = noop.useRef(new Set());
+  const set = new Set();
+  const focusEffect = require("Link").useFocusEffect(noop.useCallback(() => {
     const current = ref.current;
     current.clear();
   }, []));
   const items = [arg0, arg1];
-  return react.useCallback((viewableItems) => {
-    let location_stack;
+  return noop.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     let item = viewableItems.forEach((item) => {
-      let obj2;
       item = item.item;
       if (null != item) {
         let hasItem = null == item.id;
@@ -116,37 +92,26 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0, 
         }
         if (!hasItem) {
           const current2 = ref.current;
-          const tmp5 = closure_1_0[item.id];
           current2.add(item.id);
-          const obj = { type: closure_0(ref[6]).ImpressionTypes.PANE, name: closure_0(ref[6]).ImpressionNames.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD, properties: obj2 };
-          const trackImpression = closure_0(ref[5]).trackImpression;
-          closure_0(ref[5]);
-          obj2 = { game_id: tmp5, guild_id: item.id, location_stack };
-          trackImpression(obj);
+          const obj2 = { type: dependencyMap(ref[6]).ImpressionTypes.PANE, name: dependencyMap(ref[6]).ImpressionNames.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD, properties: null };
+          const obj3 = { game_id: dependencyMap[item.id], guild_id: item.id, location_stack };
+          obj2.properties = obj3;
+          dependencyMap(ref[5]).trackImpression(obj2);
+          const obj = dependencyMap(ref[5]);
         }
       }
     });
   }, items);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onDismiss) => {
-  let cardAction;
-  let closure_4;
-  let contentContainerStyle;
-  let first1;
-  let ref;
-  let stateFromStoresObject;
-  let subheader;
-  let suggestedGuilds;
-  let tmp13;
-  let tmp15;
-  let tmp16;
-  let tmp2 = ref;
-  let obj = cardAction(ref[8]);
-  const cResult = obj.c(22);
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_community_upsell/native/OneColumnGuildUpsellList.tsx");
+
+export const OneColumnGuildUpsellList = ReactCompilerGating.isReactCompilerEnabled() ? ((onDismiss) => {
+  const cResult = cardAction(ref[8]).c(22);
   ({ suggestedGuilds, contentContainerStyle, subheader, cardAction } = onDismiss);
   onDismiss = onDismiss.onDismiss;
-  const tmp4 = closure_9();
+  closure_9();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function v(id) {
       return id.id;
@@ -156,53 +121,54 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onDismiss) => {
   } else {
     first = cResult[0];
   }
-  ref = react.useRef(null);
+  ref = noop.useRef(null);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     class E {
       constructor() {
-        return offset > 0;
+        return closure_8 > 0;
       }
     }
     cResult[1] = E;
   } else {
     class E {
       constructor() {
-        return offset > 0;
+        return closure_8 > 0;
       }
     }
   }
-  const tmp8 = first1(react.useState(E), 2);
+  const tmp8 = first1(noop.useState(E), 2);
   first1 = tmp8[0];
-  react = tmp8[1];
+  noop = tmp8[1];
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     class G {
-      constructor(nativeEvent) {
-        const y = nativeEvent.nativeEvent.contentOffset.y;
+      constructor(arg0) {
+        closure_8 = onDismiss.nativeEvent.contentOffset.y;
+        return;
       }
     }
     cResult[2] = G;
   } else {
     class G {
-      constructor(nativeEvent) {
-        const y = nativeEvent.nativeEvent.contentOffset.y;
+      constructor(arg0) {
+        closure_8 = onDismiss.nativeEvent.contentOffset.y;
+        return;
       }
     }
   }
   if (cResult[3] !== first1) {
     class M {
       constructor() {
-        tmp = closure_3;
-        if (tmp) {
-          tmp2 = closure_2;
+        if (closure_3) {
+          tmp = closure_2;
           current = closure_2.current;
-          tmp3 = null;
+          tmp2 = null;
           if (current != null) {
             obj = { offset: null, animated: false };
-            tmp4 = c8;
+            tmp3 = c8;
             obj.offset = c8;
             scrollToOffsetResult = current.scrollToOffset(obj);
           }
-          tmp6 = globalThis;
+          tmp5 = globalThis;
           _requestAnimationFrame = requestAnimationFrame;
           animationFrame = requestAnimationFrame(() => {
             const current = ref.current;
@@ -221,18 +187,17 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onDismiss) => {
   } else {
     class M {
       constructor() {
-        tmp = closure_3;
-        if (tmp) {
-          tmp2 = closure_2;
+        if (closure_3) {
+          tmp = closure_2;
           current = closure_2.current;
-          tmp3 = null;
+          tmp2 = null;
           if (current != null) {
             obj = { offset: null, animated: false };
-            tmp4 = c8;
+            tmp3 = c8;
             obj.offset = c8;
             scrollToOffsetResult = current.scrollToOffset(obj);
           }
-          tmp6 = globalThis;
+          tmp5 = globalThis;
           _requestAnimationFrame = requestAnimationFrame;
           animationFrame = requestAnimationFrame(() => {
             const current = ref.current;
@@ -265,7 +230,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onDismiss) => {
     cResult[5] = first1;
     cResult[6] = F;
     cResult[7] = items;
-    tmp13 = items;
+    let tmp13 = items;
   } else {
     class F {
       constructor() {
@@ -300,13 +265,13 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onDismiss) => {
     const items1 = [stateFromStoresObject];
     class N {
       constructor() {
-        return stateFromStoresObject.getGuildGameIds();
+        return closure_5.getGuildGameIds();
       }
     }
     cResult[8] = items1;
     cResult[9] = N;
-    tmp16 = N;
-    tmp15 = items1;
+    let tmp16 = N;
+    const tmp15 = items1;
   } else {
     class F {
       constructor() {
@@ -323,9 +288,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onDismiss) => {
     }
     tmp16 = cResult[9];
   }
-  const tmpResult = cardAction(tmp2[10]);
-  stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp15, tmp16);
-  onDismiss(tmp2[11]);
+  let obj = cardAction(ref[8]);
+  stateFromStoresObject = cardAction(ref[10]).useStateFromStoresObject(tmp15, tmp16);
+  onDismiss(ref[11]);
   if (cResult[10] === cardAction) {
     class F {
       constructor() {
@@ -342,50 +307,48 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onDismiss) => {
     }
   }
   class Y {
-    constructor(item) {
-      item = item.item;
-      let tmp = null;
-      const tmp2 = null != stateFromStoresObject[item.id];
-      GameCommunityMultiGuildUpsellCardDefault;
+    constructor(arg0) {
+      item = onDismiss.item;
+      tmp = null;
+      tmp2 = null != closure_5[item.id];
+      tmp3 = jsx;
+      obj = { guild: item, gameId: closure_5[item.id], cardAction, onDismiss: null };
+      tmp4 = closure_1(closure_2[13]);
       if (tmp2) {
         tmp = onDismiss;
       }
-      return <tmp4 key={item.id} guild={item} gameId={stateFromStoresObject[item.id]} cardAction={cardAction} onDismiss={tmp} />;
+      obj.onDismiss = tmp;
+      return tmp3(tmp4, obj, item.id);
     }
   }
   cResult[10] = cardAction;
   cResult[11] = stateFromStoresObject;
   cResult[12] = onDismiss;
   cResult[13] = Y;
+  const tmpResult = cardAction(ref[10]);
 }) : ((cardAction) => {
-  let closure_4;
-  let closure_8;
-  let contentContainerStyle;
-  let subheader;
-  let suggestedGuilds;
   cardAction = cardAction.cardAction;
   const onDismiss = cardAction.onDismiss;
   let first;
-  react = undefined;
+  noop = undefined;
   let stateFromStoresObject;
   ({ suggestedGuilds, contentContainerStyle, subheader } = cardAction);
-  let tmp = closure_9();
-  const callback = react.useCallback((id) => id.id, []);
-  const ref = react.useRef(null);
-  const tmp4 = first(react.useState(() => closure_8 > 0), 2);
+  const callback = noop.useCallback((id) => id.id, []);
+  const ref = noop.useRef(null);
+  const tmp4 = first(noop.useState(() => closure_8 > 0), 2);
   first = tmp4[0];
-  react = tmp4[1];
+  noop = tmp4[1];
   const items = [first];
-  const callback1 = react.useCallback((nativeEvent) => {
+  const callback1 = noop.useCallback((nativeEvent) => {
     const y = nativeEvent.nativeEvent.contentOffset.y;
   }, []);
   const items1 = [first];
-  const callback2 = react.useCallback(() => {
+  const callback2 = noop.useCallback(() => {
     if (first) {
       offset = closure_8;
       let current = ref.current;
       if (current != null) {
-        let obj = { offset: tmp2, animated: false };
+        let obj = { offset: tmp, animated: false };
         current.scrollToOffset(obj);
       }
       const _requestAnimationFrame = requestAnimationFrame;
@@ -399,38 +362,43 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onDismiss) => {
       });
     }
   }, items);
-  const effect = react.useEffect(() => {
-    let closure_0;
+  const effect = noop.useEffect(() => {
     if (first) {
       const _setTimeout = setTimeout;
       const timeout = setTimeout(() => closure_1_4(false), 500);
       return () => clearTimeout(closure_0);
     }
   }, items1);
-  let obj = cardAction(ref[10]);
+  let tmp = closure_9();
   const items2 = [stateFromStoresObject];
-  stateFromStoresObject = obj.useStateFromStoresObject(items2, () => stateFromStoresObject.getGuildGameIds());
+  stateFromStoresObject = cardAction(ref[10]).useStateFromStoresObject(items2, () => stateFromStoresObject.getGuildGameIds());
+  let obj = cardAction(ref[10]);
   const items3 = [onDismiss, stateFromStoresObject, cardAction];
-  const tmp10 = onDismiss(ref[11]);
-  const analyticsLocations = tmp10(onDismiss(ref[12]).GAME_COMMUNITY_MULTI_GUILD_UPSELL_GUILDS_BAR_ENTRYPOINT).analyticsLocations;
-  const callback3 = react.useCallback((item) => {
+  const callback3 = noop.useCallback((item) => {
     item = item.item;
     let tmp = null;
-    const tmp2 = null != stateFromStoresObject[item.id];
-    GameCommunityMultiGuildUpsellCardDefault;
+    const obj = { guild: item, gameId: stateFromStoresObject[item.id], cardAction, onDismiss: null };
     if (tmp2) {
       tmp = onDismiss;
     }
-    return <tmp4 key={item.id} guild={item} gameId={stateFromStoresObject[item.id]} cardAction={cardAction} onDismiss={tmp} />;
+    obj.onDismiss = tmp;
+    return jsx(GameCommunityMultiGuildUpsellCardDefault, { guild: item, gameId: stateFromStoresObject[item.id], cardAction, onDismiss: null }, item.id);
   }, items3);
+  const tmp10 = onDismiss(ref[11]);
+  const obj2 = { ref, style: null, onViewableItemsChanged: null, viewabilityConfig: null, contentContainerStyle: null, keyExtractor: null, data: null, ListHeaderComponent: null, renderItem: null, drawDistance: 3000, onScroll: null, scrollEventThrottle: 16, onLoad: null };
   let hidden;
-  const tmp12 = closure_10(stateFromStoresObject, analyticsLocations);
-  const FlashList = cardAction(ref[14]).FlashList;
   if (first) {
     hidden = tmp.hidden;
   }
-  return <FlashList ref={ref} style={hidden} onViewableItemsChanged={tmp12} viewabilityConfig={viewabilityConfig} contentContainerStyle={contentContainerStyle} keyExtractor={callback} data={suggestedGuilds} ListHeaderComponent={subheader} renderItem={callback3} drawDistance={3000} onScroll={callback1} scrollEventThrottle={16} onLoad={callback2} />;
+  obj2.style = hidden;
+  obj2.onViewableItemsChanged = closure_10(stateFromStoresObject, onDismiss(ref[11])(onDismiss(ref[12]).GAME_COMMUNITY_MULTI_GUILD_UPSELL_GUILDS_BAR_ENTRYPOINT).analyticsLocations);
+  obj2.viewabilityConfig = viewabilityConfig;
+  obj2.contentContainerStyle = contentContainerStyle;
+  obj2.keyExtractor = callback;
+  obj2.data = suggestedGuilds;
+  obj2.ListHeaderComponent = subheader;
+  obj2.renderItem = callback3;
+  obj2.onScroll = callback1;
+  obj2.onLoad = callback2;
+  return jsx(cardAction(ref[14]).FlashList, { ref, style: null, onViewableItemsChanged: null, viewabilityConfig: null, contentContainerStyle: null, keyExtractor: null, data: null, ListHeaderComponent: null, renderItem: null, drawDistance: 3000, onScroll: null, scrollEventThrottle: 16, onLoad: null });
 });
-const result = size.fileFinishedImporting("modules/game_community_upsell/native/OneColumnGuildUpsellList.tsx");
-
-export const OneColumnGuildUpsellList = tmp2;

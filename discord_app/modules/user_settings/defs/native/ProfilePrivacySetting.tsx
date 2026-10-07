@@ -1,9 +1,9 @@
 // === Module 14674: ProfilePrivacySetting ===
 
 // Module 14674 (ProfilePrivacySetting)
-import intl7 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
-import asyncRequire from "asyncRequire" /* 1987 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import SettingsConstants from "SettingsConstants" /* 7645 */;
@@ -12,15 +12,14 @@ import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-let obj = {
+const radio = SettingBuilders.createRadio({
   useTitle() {
-    const intl = intl7.intl;
-    return intl.string(intl7.t.Qnf32C);
+    const intl = util.intl;
+    return intl.string(util.t.Qnf32C);
   },
-  parent: MobileUserSettings.DATA_AND_PRIVACY,
+  parent: SettingsConstants.MobileUserSettings.DATA_AND_PRIVACY,
   useValue: () => {
     const ProfileVisibility = UserSettings.ProfileVisibility;
     return ProfileVisibility.useSetting();
@@ -31,38 +30,38 @@ let obj = {
     const setting = ProfileVisibility.getSetting();
     const ProfileVisibility2 = UserSettings.ProfileVisibility;
     ProfileVisibility2.updateSetting(NumberResult);
-    const obj = ActivityPrivacyUpsellUtils;
-    const profileToActivityUpsell = obj.computeProfileToActivityUpsell(setting, NumberResult);
+    const profileToActivityUpsell = ActivityPrivacyUpsellUtils.computeProfileToActivityUpsell(setting, NumberResult);
     if (null != profileToActivityUpsell) {
-      const obj4 = { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null };
       ({ direction: obj3.direction, affectedGuildIds: obj3.affectedGuildIds, settingName: obj3.settingName, mappedActivityValue: obj3.mappedActivityValue } = profileToActivityUpsell);
-      const obj2 = ActionSheetActionCreatorsDefault;
-      obj2.openLazy(asyncRequire(14676, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", obj4);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14676, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null });
+      const obj4 = { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null };
     }
   },
   useOptions() {
-    let intl;
-    let intl2;
-    let intl3;
-    let intl4;
-    let intl5;
-    let intl6;
-    const obj = { label: intl.string(intl7.t.Boxc8R), subLabel: intl2.string(intl7.t["nLj+nc"]), value: preloaded_user_settings.ProfileVisibility.FRIENDS_AND_ALL_GUILDS };
-    intl = intl7.intl;
-    intl2 = intl7.intl;
+    const obj = { label: null, subLabel: null, value: null };
+    const intl = util.intl;
+    obj.label = intl.string(util.t.Boxc8R);
+    const intl2 = util.intl;
+    obj.subLabel = intl2.string(util.t["nLj+nc"]);
+    obj.value = preloaded_user_settings.ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
     const items = [obj, , ];
-    const obj2 = { label: intl3.string(intl7.t.YOIKBt), subLabel: intl4.string(intl7.t.y0JZ4s), value: preloaded_user_settings.ProfileVisibility.FRIENDS_AND_SMALL_GUILDS };
-    intl3 = intl7.intl;
-    intl4 = intl7.intl;
+    const obj2 = { label: null, subLabel: null, value: null };
+    const intl3 = util.intl;
+    obj2.label = intl3.string(util.t.YOIKBt);
+    const intl4 = util.intl;
+    obj2.subLabel = intl4.string(util.t.y0JZ4s);
+    obj2.value = preloaded_user_settings.ProfileVisibility.FRIENDS_AND_SMALL_GUILDS;
     items[1] = obj2;
-    const obj3 = { label: intl5.string(intl7.t.u0nlJv), subLabel: intl6.string(intl7.t["4jnKHu"]), value: preloaded_user_settings.ProfileVisibility.FRIENDS_ONLY };
-    intl5 = intl7.intl;
-    intl6 = intl7.intl;
+    const obj3 = { label: null, subLabel: null, value: null };
+    const intl5 = util.intl;
+    obj3.label = intl5.string(util.t.u0nlJv);
+    const intl6 = util.intl;
+    obj3.subLabel = intl6.string(util.t["4jnKHu"]);
+    obj3.value = preloaded_user_settings.ProfileVisibility.FRIENDS_ONLY;
     items[2] = obj3;
     return items;
   }
-};
-const radio = SettingBuilders.createRadio(obj);
+});
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/ProfilePrivacySetting.tsx");
 
 export default radio;

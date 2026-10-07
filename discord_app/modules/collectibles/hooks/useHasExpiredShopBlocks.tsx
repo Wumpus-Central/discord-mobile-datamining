@@ -1,72 +1,65 @@
 // === Module 15743: useHasExpiredShopBlocks ===
 
 // Module 15743 (useHasExpiredShopBlocks)
-import Constants from "Constants" /* 1085 */;
-import _slicedToArray_mod from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
-let c3;
-let closure_4;
-const f121539 = (type) => {
-  const tmp = time1;
-  if (type.type === time1(closure_2_1[5]).ShopBlockType.IMMERSIVE_BANNER) {
-    let time = null;
-    if (null != type.endTime) {
-      const endTime2 = type.endTime;
-      time = endTime2.getTime();
-    }
-    time1 = time;
-  } else {
-    time1 = null;
-    if (type.type === tmp(closure_2_1[5]).ShopBlockType.COUNTDOWN_TIMER) {
-      const endTime = type.endTime;
-      time1 = endTime.getTime();
-    }
-  }
-  let tmp5 = null == time1;
-  if (!tmp5) {
-    tmp5 = null != time1 && time1 < time1;
-    const tmp6 = null != time1 && time1 < time1;
-  }
-};
-let _slicedToArray = _slicedToArray_mod;
-({ useEffect: c3, useState: closure_4 } = react);
-const MAX_TIMEOUT_MS = Constants.MAX_TIMEOUT_MS;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
-  let closure_0;
-  let closure_1;
-  let closure_2;
-  let closure_3;
+const require = fn;
+const noop = fn(19);
+({ useEffect: c3, useState: closure_4 } = noop);
+const MAX_TIMEOUT_MS = fn(1085).MAX_TIMEOUT_MS;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useHasExpiredShopBlocks.tsx");
+
+export const useHasExpiredShopBlocks = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
   _require = arg0;
   dependencyMap = arg1;
   _slicedToArray = arg2;
-  const obj = require("react");
-  const cResult = obj.c(5);
-  [, closure_3] = closure_4(false);
+  const cResult = require("c").c(5);
+  const obj = require("c");
+  closure_3 = _slicedToArray(closure_4(false), 2)[1];
   if (cResult[0] === arg1) {
     if (cResult[1] === arg0) {
-      let tmp4;
-      let tmp5;
       if (cResult[2] === arg2) {
-        tmp4 = cResult[3];
-        tmp5 = cResult[4];
+        let tmp4 = cResult[3];
+        let tmp5 = cResult[4];
       }
       closure_3(tmp4, tmp5);
       return tmp3;
     }
   }
   const fn = function p() {
-    let timeout;
-    let c0 = null;
-    const item = timeout.forEach(f121539);
+    let timeout = null;
+    const item = timeout.forEach((type) => {
+      if (type.type === time1(dependencyMap[5]).ShopBlockType.IMMERSIVE_BANNER) {
+        let time = null;
+        if (null != type.endTime) {
+          const endTime2 = type.endTime;
+          time = endTime2.getTime();
+        }
+        time1 = time;
+      } else {
+        time1 = null;
+        if (type.type === tmp(dependencyMap[5]).ShopBlockType.COUNTDOWN_TIMER) {
+          const endTime = type.endTime;
+          time1 = endTime.getTime();
+        }
+      }
+      let tmp5 = null == time1;
+      if (!tmp5) {
+        let tmp6 = null != time1;
+        if (tmp6) {
+          tmp6 = time1 < time1;
+        }
+        tmp5 = tmp6;
+      }
+      tmp = time1;
+    });
     if (!closure_1) {
       if (!closure_2) {
-        if (null != c0) {
+        if (null != tmp2) {
           const _Date = Date;
           const diff = tmp2 - Date.now();
           if (diff <= 0) {
@@ -94,22 +87,42 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
   tmp5 = items;
   tmp4 = fn;
 }) : ((arg0, arg1, arg2) => {
-  let closure_2;
-  let closure_3;
-  let first;
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   _slicedToArray = arg2;
-  [first, closure_3] = closure_4(false);
+  let tmp = _slicedToArray(closure_4(false), 2);
+  closure_3 = tmp[1];
   const items = [arg1, arg2, arg0];
   closure_3(() => {
-    let timeout;
     let time1 = null;
-    const item = timeout.forEach(f121539);
-    if (!closure_1) {
+    const item = time1.forEach((type) => {
+      if (type.type === time1(dependencyMap[5]).ShopBlockType.IMMERSIVE_BANNER) {
+        let time = null;
+        if (null != type.endTime) {
+          const endTime2 = type.endTime;
+          time = endTime2.getTime();
+        }
+        time1 = time;
+      } else {
+        time1 = null;
+        if (type.type === tmp(dependencyMap[5]).ShopBlockType.COUNTDOWN_TIMER) {
+          const endTime = type.endTime;
+          time1 = endTime.getTime();
+        }
+      }
+      let tmp5 = null == time1;
+      if (!tmp5) {
+        let tmp6 = null != time1;
+        if (tmp6) {
+          tmp6 = time1 < time1;
+        }
+        tmp5 = tmp6;
+      }
+      tmp = time1;
+    });
+    if (!dependencyMap) {
       if (!closure_2) {
-        if (null != time1) {
-          let tmp5 = globalThis;
+        if (null != tmp2) {
           const _Date = Date;
           const diff = tmp2 - Date.now();
           if (diff <= 0) {
@@ -118,18 +131,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
             closure_3(false);
             const _setTimeout = setTimeout;
             const _Math = Math;
-            timeout = setTimeout(() => {
+            time1 = setTimeout(() => {
               closure_1_3(true);
             }, Math.min(MAX_TIMEOUT_MS, diff));
-            return () => clearTimeout(closure_0);
+            return () => clearTimeout(time1);
           }
         }
       }
     }
     closure_3(false);
   }, items);
-  return first;
+  return tmp[0];
 });
-const result = size.fileFinishedImporting("modules/collectibles/hooks/useHasExpiredShopBlocks.tsx");
-
-export const useHasExpiredShopBlocks = tmp3;

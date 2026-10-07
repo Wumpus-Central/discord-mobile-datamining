@@ -1,70 +1,54 @@
 // === Module 6501: UserSettingsAccountUnverifiedHeader ===
 
 // Module 6501 (UserSettingsAccountUnverifiedHeader)
-import get_initialized from "get initialized" /* 504 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl5 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Pressables from "Pressables" /* 5916 */;
+import util from "util" /* 1126 */;
 import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6014 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let closure_4;
-let hasOwnProperty;
-let obj2;
-let obj3;
+const initialize = PressableOpacity(504);
+const Text_Text = PressableOpacity(4892);
+const Pressables = PressableOpacity(5916);
+require = fn;
 function handleOpenEmailVerification() {
-  const obj = EmailVerificationModalActionCreatorsDefault;
-  obj.open();
+  EmailVerificationModalActionCreatorsDefault.open();
 }
 function getBannerText(stateFromStores) {
-  let intl;
-  let intl2;
-  let intl3;
-  let intl4;
-  let tmp = null;
-  if (null != stateFromStores) {
-    let tmp4;
-    if (null == stateFromStores.email) {
-      const obj2 = { title: intl3.string(intl5.t["/yqgqs"]), button: intl4.string(intl5.t.ydw5nX) };
-      intl3 = intl5.intl;
-      intl4 = intl5.intl;
-      tmp4 = obj2;
-    } else {
-      tmp4 = null;
-      if (!stateFromStores.verified) {
-        const obj = { title: intl.string(intl5.t["3sWbf3"]), button: intl2.string(intl5.t["13ofGu"]) };
-        intl = intl5.intl;
-        intl2 = intl5.intl;
-        tmp4 = obj;
-      }
-    }
-    tmp = tmp4;
+  if (null == stateFromStores) {
+    return null;
+  } else if (null == stateFromStores.email) {
+    const obj2 = { title: null, button: null };
+    const intl3 = util.intl;
+    obj2.title = intl3.string(util.t["/yqgqs"]);
+    const intl4 = util.intl;
+    obj2.button = intl4.string(util.t.ydw5nX);
+  } else if (!stateFromStores.verified) {
+    const obj = { title: null, button: null };
+    const intl = util.intl;
+    obj.title = intl.string(util.t["3sWbf3"]);
+    const intl2 = util.intl;
+    obj.button = intl2.string(util.t["13ofGu"]);
   }
-  return tmp;
 }
-({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { accountWarning: obj2, accountWarningText: { flex: 1, lineHeight: 16 }, accountWarningButton: obj3 };
-obj2 = { backgroundColor: nativeDefault.unsafe_rawColors.RED_400, height: 36, alignItems: "center", alignSelf: "stretch", flexDirection: "row", paddingHorizontal: 16 };
-createStyles = createStyles.createStyles;
-obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.xs, paddingHorizontal: 8, paddingVertical: 4 };
-let closure_6 = createStyles(obj);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let currentUser;
-  let items1;
-  let tmp5;
-  let tmp6;
-  let tmp9;
-  const obj = react2;
-  const cResult = obj.c(14);
-  const tmp4 = closure_6();
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { accountWarning: { backgroundColor: nativeDefault.unsafe_rawColors.RED_400, height: 36, alignItems: "center", alignSelf: "stretch", flexDirection: "row", paddingHorizontal: 16 }, accountWarningText: { flex: 1, lineHeight: 16 }, accountWarningButton: null };
+let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.RED_400, height: 36, alignItems: "center", alignSelf: "stretch", flexDirection: "row", paddingHorizontal: 16 };
+obj2.accountWarningButton = { borderWidth: 1, borderColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.xs, paddingHorizontal: 8, paddingVertical: 4 };
+let closure_6 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj4 = { borderWidth: 1, borderColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.xs, paddingHorizontal: 8, paddingVertical: 4 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountUnverifiedHeader.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let PressableOpacity = require;
+  let tmp = dependencyMap;
+  const cResult = c.c(14);
+  let accountWarning = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     const fn = function u() {
@@ -72,86 +56,75 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     };
     cResult[0] = items;
     cResult[1] = fn;
-    tmp5 = items;
-    tmp6 = fn;
+    tmp3 = items;
+    tmp4 = fn;
   } else {
-    [tmp5, tmp6] = cResult;
+    [tmp3, tmp4] = cResult;
   }
-  const tmpResult = get_initialized;
-  const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
+  const stateFromStores = initialize.useStateFromStores(tmp3, tmp4);
   if (cResult[2] !== stateFromStores) {
-    const tmp11 = getBannerText(stateFromStores);
+    const tmp9 = getBannerText(stateFromStores);
     cResult[2] = stateFromStores;
-    cResult[3] = tmp11;
-    tmp9 = tmp11;
+    cResult[3] = tmp9;
+    let tmp7 = tmp9;
   } else {
-    tmp9 = cResult[3];
+    tmp7 = cResult[3];
   }
-  let tmp12 = null;
-  if (null != tmp9) {
-    if (cResult[4] === tmp9.title) {
-      let tmp13;
-      if (cResult[5] === tmp4.accountWarningText) {
-        tmp13 = cResult[6];
+  if (null == tmp7) {
+    return null;
+  } else {
+    if (cResult[4] === tmp7.title) {
+      if (cResult[5] === accountWarning.accountWarningText) {
+        let tmp10 = cResult[6];
       }
-      if (cResult[7] === tmp9.button) {
-        let tmp16;
-        if (cResult[8] === tmp4.accountWarningButton) {
-          tmp16 = cResult[9];
+      if (cResult[7] === tmp7.button) {
+        if (cResult[8] === accountWarning.accountWarningButton) {
+          let tmp13 = cResult[9];
         }
-        if (cResult[10] === tmp4.accountWarning) {
-          if (cResult[11] === tmp13) {
-            let tmp19;
-            if (cResult[12] === tmp16) {
-              tmp19 = cResult[13];
-            }
-            tmp12 = tmp19;
+        if (cResult[10] === accountWarning.accountWarning) {
+          if (cResult[11] === tmp10) {
           }
         }
-        const obj2 = { accessibilityRole: "button", style: tmp4.accountWarning, onPress: handleOpenEmailVerification, children: items1 };
-        items1 = [tmp13, tmp16];
-        const tmp22 = hasOwnProperty(Pressables.PressableOpacity, obj2);
-        cResult[10] = tmp4.accountWarning;
-        cResult[11] = tmp13;
-        cResult[12] = tmp16;
-        cResult[13] = tmp22;
-        tmp19 = tmp22;
+        PressableOpacity = Pressables.PressableOpacity;
+        const obj2 = { accessibilityRole: "button", style: accountWarning.accountWarning, onPress: handleOpenEmailVerification, children: null };
+        const items1 = [tmp10, tmp13];
+        obj2.children = items1;
+        tmp = hasOwnProperty(PressableOpacity, obj2);
+        accountWarning = accountWarning.accountWarning;
+        cResult[10] = accountWarning;
+        cResult[11] = tmp10;
+        cResult[12] = tmp13;
+        cResult[13] = tmp;
       }
-      const obj3 = { style: tmp4.accountWarningButton, variant: "text-xs/medium", color: "text-overlay-light", children: tmp9.button };
-      const tmp18 = React3(Text_Text.Text, obj3);
-      cResult[7] = tmp9.button;
-      cResult[8] = tmp4.accountWarningButton;
-      cResult[9] = tmp18;
-      tmp16 = tmp18;
+      const obj3 = { style: accountWarning.accountWarningButton, variant: "text-xs/medium", color: "text-overlay-light", children: tmp7.button };
+      const tmp15 = React4(Text_Text.Text, obj3);
+      cResult[7] = tmp7.button;
+      cResult[8] = accountWarning.accountWarningButton;
+      cResult[9] = tmp15;
+      tmp13 = tmp15;
     }
-    const obj4 = { style: tmp4.accountWarningText, variant: "text-xs/bold", color: "text-overlay-light", children: tmp9.title };
-    const tmp15 = React3(Text_Text.Text, obj4);
-    cResult[4] = tmp9.title;
-    cResult[5] = tmp4.accountWarningText;
-    cResult[6] = tmp15;
-    tmp13 = tmp15;
+    const obj4 = { style: accountWarning.accountWarningText, variant: "text-xs/bold", color: "text-overlay-light", children: tmp7.title };
+    const tmp12 = React4(Text_Text.Text, obj4);
+    cResult[4] = tmp7.title;
+    cResult[5] = accountWarning.accountWarningText;
+    cResult[6] = tmp12;
+    tmp10 = tmp12;
   }
-  return tmp12;
+  const PressableOpacityResult = initialize;
 }) : (() => {
-  let currentUser;
-  let items1;
   const tmp = closure_6();
   const items = [UserStore];
-  const obj = get_initialized;
-  const tmp4 = getBannerText(obj.useStateFromStores(items, () => currentUser.getCurrentUser()));
+  const tmp4 = getBannerText(initialize.useStateFromStores(items, () => currentUser.getCurrentUser()));
   let tmp5 = null;
   if (null != tmp4) {
-    const obj2 = { accessibilityRole: "button", style: tmp.accountWarning, onPress: handleOpenEmailVerification, children: items1 };
-    const PressableOpacity = Pressables.PressableOpacity;
+    const obj2 = { accessibilityRole: "button", style: tmp.accountWarning, onPress: handleOpenEmailVerification, children: null };
     const obj3 = { style: tmp.accountWarningText, variant: "text-xs/bold", color: "text-overlay-light", children: tmp4.title };
-    items1 = [React3(Text_Text.Text, obj3), ];
+    const items1 = [React4(Text_Text.Text, obj3), ];
     const obj4 = { style: tmp.accountWarningButton, variant: "text-xs/medium", color: "text-overlay-light", children: tmp4.button };
-    items1[1] = React3(Text_Text.Text, obj4);
-    tmp5 = hasOwnProperty(PressableOpacity, obj2);
+    items1[1] = React4(Text_Text.Text, obj4);
+    obj2.children = items1;
+    tmp5 = hasOwnProperty(Pressables.PressableOpacity, obj2);
   }
   return tmp5;
 });
-const result = size.fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountUnverifiedHeader.tsx");
-
-export default tmp5;
 export { getBannerText };

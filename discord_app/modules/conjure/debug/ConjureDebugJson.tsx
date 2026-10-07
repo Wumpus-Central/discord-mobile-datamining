@@ -23,8 +23,7 @@ export const extractLogJson = function extractLogJson(message) {
     if (-1 === tmp3) {
       return null;
     } else {
-      const str3 = message.slice(tmp3);
-      const trimmed = str3.trim();
+      const trimmed = message.slice(tmp3).trim();
       if (trimmed.length < 2) {
         return null;
       } else {
@@ -33,18 +32,17 @@ export const extractLogJson = function extractLogJson(message) {
           const parsed = JSON.parse(trimmed);
           if (typeof parsed === "object") {
             if (null != parsed) {
-              let obj;
-              const str4 = message.slice(0, tmp3);
-              const trimmed1 = str4.trim();
+              const trimmed1 = message.slice(0, tmp3).trim();
               const _JSON2 = JSON;
               const json = JSON.stringify(parsed, null, 2);
               const _Array = Array;
               if (Array.isArray(parsed)) {
-                obj = { prefix: trimmed1, pretty: json, marker: "[\u2026]", size: parsed.length };
                 const obj2 = { prefix: trimmed1, pretty: json, marker: "[\u2026]", size: parsed.length };
+                let obj = obj2;
               } else {
-                obj = { prefix: trimmed1, pretty: json, marker: "{\u2026}", size: Object.keys(parsed).length };
+                obj = { prefix: trimmed1, pretty: json, marker: "{\u2026}", size: null };
                 const _Object = Object;
+                obj.size = Object.keys(parsed).length;
               }
               return obj;
             }
@@ -54,6 +52,7 @@ export const extractLogJson = function extractLogJson(message) {
           return null;
         }
       }
+      const str3 = message.slice(tmp3);
     }
   }
 };

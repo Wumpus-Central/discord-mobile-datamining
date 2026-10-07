@@ -1,27 +1,21 @@
 // === Module 12270: useIsApplicationDeveloper ===
 
 // Module 12270 (useIsApplicationDeveloper)
-import DeveloperApplicationsConstants from "DeveloperApplicationsConstants" /* 12272 */;
 import DeveloperApplicationsActionCreators from "DeveloperApplicationsActionCreators" /* 12273 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import DeveloperApplicationsStore from "DeveloperApplicationsStore" /* 12271 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require;
 
-const constants = DeveloperApplicationsConstants.DeveloperApplicationsFetchState;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let fetchState;
-  let setting;
-  let tmp5;
-  let tmp6;
+require = fn;
+const constants = fn(12272).DeveloperApplicationsFetchState;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/applications/useIsApplicationDeveloper.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   _require = arg0;
-  let tmp = _require;
-  let obj = require("react");
-  const cResult = obj.c(10);
+  const cResult = require("c").c(10);
   const DeveloperMode = require("UserSettings").DeveloperMode;
   setting = DeveloperMode.useSetting();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -36,8 +30,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const tmpResult = tmp(setting[6]);
-  const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
+  let obj = require("c");
+  const stateFromStores = require("initialize").useStateFromStores(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [DeveloperApplicationsStore];
     cResult[2] = items1;
@@ -45,7 +39,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (cResult[3] !== arg0) {
     class S {
       constructor() {
-        return DeveloperApplicationsStore.isDeveloperOfApplication(closure_0);
+        return closure_3.isDeveloperOfApplication(closure_0);
       }
     }
     cResult[3] = arg0;
@@ -53,25 +47,33 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     class S {
       constructor() {
-        return DeveloperApplicationsStore.isDeveloperOfApplication(closure_0);
+        return closure_3.isDeveloperOfApplication(closure_0);
       }
     }
   }
-  tmp(setting[6]);
+  require("initialize");
   if (cResult[5] === arg0) {
     class S {
       constructor() {
-        return DeveloperApplicationsStore.isDeveloperOfApplication(closure_0);
+        return closure_3.isDeveloperOfApplication(closure_0);
       }
     }
   }
   class D {
     constructor() {
-      const tmp = null != closure_0 && setting && stateFromStores === constants.INITIALIZED;
+      tmp = null != closure_0 && closure_1;
       if (tmp) {
-        const obj = DeveloperApplicationsActionCreators;
-        const developerApplications = obj.fetchDeveloperApplications();
+        tmp2 = closure_2;
+        tmp3 = closure_4;
+        tmp = closure_2 === closure_4.INITIALIZED;
       }
+      if (tmp) {
+        tmp4 = closure_0;
+        tmp5 = closure_1;
+        obj = closure_0(closure_1[7]);
+        developerApplications = obj.fetchDeveloperApplications();
+      }
+      return;
     }
   }
   const items2 = [arg0, setting, stateFromStores];
@@ -80,29 +82,25 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[7] = stateFromStores;
   cResult[8] = D;
   cResult[9] = items2;
+  const tmpResult = require("initialize");
 }) : ((arg0) => {
-  let closure_0;
-  let fetchState;
-  let setting;
   _require = arg0;
   const DeveloperMode = require("UserSettings").DeveloperMode;
   setting = DeveloperMode.useSetting();
-  let obj = require("get initialized");
   const items = [DeveloperApplicationsStore];
-  const stateFromStores = obj.useStateFromStores(items, () => fetchState.getFetchState());
+  const stateFromStores = require("initialize").useStateFromStores(items, () => fetchState.getFetchState());
+  let obj = require("initialize");
   const items1 = [DeveloperApplicationsStore];
   const items2 = [arg0, setting, stateFromStores];
-  const obj2 = require("get initialized");
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => DeveloperApplicationsStore.isDeveloperOfApplication(closure_0));
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => DeveloperApplicationsStore.isDeveloperOfApplication(closure_0));
   const effect = stateFromStores.useEffect(() => {
-    const tmp = null != closure_0 && setting && stateFromStores === constants.INITIALIZED;
+    let tmp = null != closure_0 && setting;
     if (tmp) {
-      const obj = DeveloperApplicationsActionCreators;
-      const developerApplications = obj.fetchDeveloperApplications();
+      tmp = stateFromStores === constants.INITIALIZED;
+    }
+    if (tmp) {
+      const developerApplications = DeveloperApplicationsActionCreators.fetchDeveloperApplications();
     }
   }, items2);
   return stateFromStores1;
 });
-const result = size.fileFinishedImporting("modules/applications/useIsApplicationDeveloper.tsx");
-
-export default tmp2;

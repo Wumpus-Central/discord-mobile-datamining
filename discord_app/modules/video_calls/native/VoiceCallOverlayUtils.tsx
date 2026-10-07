@@ -21,13 +21,12 @@ function doRectanglesIntersectWorklet(arg0, arg1, MIN_MARGIN_BETWEEN_OVERLAYS) {
                       let tmp = arg0.x + arg0.width + MIN_MARGIN_BETWEEN_OVERLAYS < arg1.x;
                       const diff = arg0.y - MIN_MARGIN_BETWEEN_OVERLAYS;
                       const sum = arg0.y + arg0.height + MIN_MARGIN_BETWEEN_OVERLAYS;
-                      const y = arg1.y;
                       const sum1 = arg1.y + arg1.height;
                       if (!tmp) {
                         tmp = arg0.x - MIN_MARGIN_BETWEEN_OVERLAYS > arg1.x + arg1.width;
                       }
                       if (!tmp) {
-                        tmp = sum < y;
+                        tmp = sum < arg1.y;
                       }
                       if (!tmp) {
                         tmp = diff > sum1;
@@ -75,12 +74,8 @@ const result = size.fileFinishedImporting("modules/video_calls/native/VoiceCallO
 
 export { doesTargetPositionIntersectOtherOverlaysWorklet };
 export const updateVoiceCallOverlayLayoutState = function updateVoiceCallOverlayLayoutState(voiceCallOverlayType, voiceCallOverlayLayoutState) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "VOICE_CALL_OVERLAY_LAYOUT_STATE_UPDATE", voiceCallOverlayType, voiceCallOverlayLayoutState };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "VOICE_CALL_OVERLAY_LAYOUT_STATE_UPDATE", voiceCallOverlayType, voiceCallOverlayLayoutState });
 };
 export const setPipEnabledWhileFocusedOnActivityOrStream = function setPipEnabledWhileFocusedOnActivityOrStream(pipEnabledWhileFocusedOnActivityOrStream) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "VOICE_CALL_SET_PIP_ENABLED_FOR_ACTIVITY_OR_STREAM", pipEnabledWhileFocusedOnActivityOrStream };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "VOICE_CALL_SET_PIP_ENABLED_FOR_ACTIVITY_OR_STREAM", pipEnabledWhileFocusedOnActivityOrStream });
 };

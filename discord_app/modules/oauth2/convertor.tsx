@@ -9,17 +9,16 @@ const result = size.fileFinishedImporting("modules/oauth2/convertor.tsx");
 export const convertOAuth2Authorization = function convertOAuth2Authorization(guilds) {
   let tmp = guilds;
   if (null != guilds.guilds) {
-    let obj = {
-      guilds: guilds.map((permissions) => {
-          let deserializer;
-          const obj = { permissions: deserializer.deserialize(permissions.permissions) };
-          const merged = Object.assign(permissions);
-          deserializer = BigFlagUtilsAll;
-          return obj;
-        })
-    };
+    let obj = {};
     let merged = Object.assign(guilds);
     guilds = guilds.guilds;
+    obj.guilds = guilds.map((permissions) => {
+      const obj = {};
+      const merged = Object.assign(permissions);
+      const deserializer = BigFlagUtilsAll;
+      obj.permissions = deserializer.deserialize(permissions.permissions);
+      return obj;
+    });
     tmp = obj;
   }
   return tmp;

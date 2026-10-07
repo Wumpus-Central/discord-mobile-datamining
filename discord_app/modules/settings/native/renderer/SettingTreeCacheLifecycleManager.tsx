@@ -1,29 +1,25 @@
 // === Module 17670: SettingTreeCacheLifecycleManager ===
 
 // Module 17670 (SettingTreeCacheLifecycleManager)
-import SettingTreeManagerDefault from "SettingTreeManager" /* 14520 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
-import size from "module_2" /* 2 */;
 
-let importDefault;
-
-class SettingTreeManagerLifecycleManager extends AutomaticLifecycleManager {
-  constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    importDefault = applyArgumentsResult;
-    applyArgumentsResult.actions = {
-      POST_CONNECTION_OPEN() {
-        return importDefault.handleConnectionOpen();
-      }
-    };
-    applyArgumentsResult.handleConnectionOpen = function handleConnectionOpen() {
-      const obj = SettingTreeManagerDefault;
-      obj.clearCaches();
-    };
-    return applyArgumentsResult;
-  }
+const prototype = function SettingTreeManagerLifecycleManager() {
+  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+  importDefault = applyArgumentsResult;
+  applyArgumentsResult.actions = {
+    POST_CONNECTION_OPEN() {
+      return applyArgumentsResult.handleConnectionOpen();
+    }
+  };
+  applyArgumentsResult.handleConnectionOpen = function handleConnectionOpen() {
+    applyArgumentsResult(dependencyMap[1]).clearCaches();
+  };
+  return applyArgumentsResult;
+}.prototype;
+class prototype extends tmp2 {
 }
-const settingTreeManagerLifecycleManager = new SettingTreeManagerLifecycleManager();
+const prototype1 = new prototype();
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingTreeCacheLifecycleManager.tsx");
 
-export default settingTreeManagerLifecycleManager;
+export default prototype1;

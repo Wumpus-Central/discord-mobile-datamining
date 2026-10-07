@@ -1,69 +1,61 @@
 // === Module 12726: InAppReportsRemediationsElement ===
 
 // Module 12726 (InAppReportsRemediationsElement)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl2 from "intl" /* 1126 */;
-import TableRowGroup2 from "TableRowGroup" /* 6081 */;
-import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import util from "util" /* 1126 */;
+import TableRowGroup from "TableRowGroup" /* 6081 */;
+import noop from "module_19" /* 19 */;
 
-let children;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_32 } };
+let closure_4 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+const obj3 = { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_32 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsRemediationsElement.tsx");
 
-let obj2;
-const View = react_native.View;
-const jsx = Fragment.jsx;
-let obj = { container: obj2 };
-obj2 = { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_32 };
-let closure_4 = createStyles.createStyles(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
-  let first;
-  let tmp7;
-  const obj = react2;
-  const cResult = obj.c(6);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+  const cResult = c.c(6);
   children = children.children;
   const tmp4 = closure_4();
-  const container = tmp4.container;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = intl2.intl;
-    const stringResult = intl.string(intl2.t["k+QA9N"]);
+    const intl = util.intl;
+    const stringResult = intl.string(util.t["k+QA9N"]);
     cResult[0] = stringResult;
-    first = stringResult;
+    let first = stringResult;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== children) {
-    const tmp9 = jsx(TableRowGroup2.TableRowGroup, { title: first, hasIcons: true, children });
+    const obj2 = { title: first, hasIcons: true, children };
+    const tmp9 = jsx(TableRowGroup.TableRowGroup, { title: first, hasIcons: true, children });
     cResult[1] = children;
     cResult[2] = tmp9;
-    tmp7 = tmp9;
+    let tmp7 = tmp9;
   } else {
     tmp7 = cResult[2];
   }
   if (cResult[3] === tmp4.container) {
-    let tmp10;
     if (cResult[4] === tmp7) {
-      tmp10 = cResult[5];
+      let tmp10 = cResult[5];
     }
     return tmp10;
   }
-  const tmp11 = <View style={container}>{tmp7}</View>;
+  const tmp11 = <View style={tmp4.container}>{tmp7}</View>;
   cResult[3] = tmp4.container;
   cResult[4] = tmp7;
   cResult[5] = tmp11;
   tmp10 = tmp11;
 }) : ((children) => {
-  let intl;
-  children = children.children;
-  ({ title: intl.string(intl2.t["k+QA9N"]), hasIcons: true, children });
-  const TableRowGroup = TableRowGroup2.TableRowGroup;
-  intl = intl2.intl;
+  const obj = { style: closure_4().container, children: null };
+  const obj2 = { title: null, hasIcons: true, children: null };
+  const intl = util.intl;
+  obj2.title = intl.string(util.t["k+QA9N"]);
+  obj2.children = children.children;
+  obj.children = jsx(TableRowGroup.TableRowGroup, { title: null, hasIcons: true, children: null });
   return <View style={closure_4().container}>{null}</View>;
 });
-const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsRemediationsElement.tsx");
-
-export default tmp3;

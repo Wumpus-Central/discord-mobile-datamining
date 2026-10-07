@@ -1,29 +1,28 @@
 // === Module 18154: native_required_assets_misc ===
 
 // Module 18154 (native_required_assets_misc)
-import AssetRegistryDefault from "AssetRegistry" /* 1406 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 1407 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 1408 */;
-import AssetRegistryDefault4 from "AssetRegistry" /* 1409 */;
-import AssetRegistryDefault5 from "AssetRegistry" /* 1410 */;
-import AssetRegistryDefault6 from "AssetRegistry" /* 1424 */;
-import AssetRegistryDefault7 from "AssetRegistry" /* 1425 */;
-import AssetRegistryDefault8 from "AssetRegistry" /* 1426 */;
-import AssetRegistryDefault9 from "AssetRegistry" /* 1427 */;
-import AssetRegistryDefault10 from "AssetRegistry" /* 1428 */;
-import AssetRegistryDefault11 from "AssetRegistry" /* 1429 */;
-import AssetRegistryDefault12 from "AssetRegistry" /* 1430 */;
-import AssetRegistryDefault13 from "AssetRegistry" /* 1431 */;
-import AssetRegistryDefault14 from "AssetRegistry" /* 18155 */;
-import AssetRegistryDefault15 from "AssetRegistry" /* 18156 */;
-import AssetRegistryDefault16 from "AssetRegistry" /* 18157 */;
-import AssetRegistryDefault17 from "AssetRegistry" /* 18158 */;
-import AssetRegistryDefault18 from "AssetRegistry" /* 18159 */;
-import AssetRegistryDefault19 from "AssetRegistry" /* 18160 */;
-import AssetRegistryDefault20 from "AssetRegistry" /* 18161 */;
+import _modDef1406 from "module_1406" /* 1406 */;
+import _modDef1407 from "module_1407" /* 1407 */;
+import _modDef1408 from "module_1408" /* 1408 */;
+import _modDef1409 from "module_1409" /* 1409 */;
+import _modDef1410 from "module_1410" /* 1410 */;
+import _modDef1424 from "module_1424" /* 1424 */;
+import _modDef1425 from "module_1425" /* 1425 */;
+import _modDef1426 from "module_1426" /* 1426 */;
+import _modDef1427 from "module_1427" /* 1427 */;
+import _modDef1428 from "module_1428" /* 1428 */;
+import _modDef1429 from "module_1429" /* 1429 */;
+import _modDef1430 from "module_1430" /* 1430 */;
+import _modDef1431 from "module_1431" /* 1431 */;
+import _modDef18155 from "module_18155" /* 18155 */;
+import _modDef18156 from "module_18156" /* 18156 */;
+import _modDef18157 from "module_18157" /* 18157 */;
+import _modDef18158 from "module_18158" /* 18158 */;
+import _modDef18159 from "module_18159" /* 18159 */;
+import _modDef18160 from "module_18160" /* 18160 */;
+import _modDef18161 from "module_18161" /* 18161 */;
 import size from "module_2" /* 2 */;
 
-const obj = { DefaultAvatar0: AssetRegistryDefault, DefaultAvatar1: AssetRegistryDefault2, DefaultAvatar2: AssetRegistryDefault3, DefaultAvatar3: AssetRegistryDefault4, DefaultAvatar4: AssetRegistryDefault5, DefaultGroup0: AssetRegistryDefault6, DefaultGroup1: AssetRegistryDefault7, DefaultGroup2: AssetRegistryDefault8, DefaultGroup3: AssetRegistryDefault9, DefaultGroup4: AssetRegistryDefault10, DefaultGroup5: AssetRegistryDefault11, DefaultGroup6: AssetRegistryDefault12, DefaultGroup7: AssetRegistryDefault13, PoopDark: AssetRegistryDefault14, PoopLight: AssetRegistryDefault15, RoleSubscriptionBadge: AssetRegistryDefault16, RoleSubscriptionLanyard: AssetRegistryDefault17, RoleSubscriptionPurchaseCard: AssetRegistryDefault18, SummaryIndicatorEnd: AssetRegistryDefault19, SummaryIndicatorStart: AssetRegistryDefault20 };
 const result = size.fileFinishedImporting("modules/react_asset/native/native_required_assets_misc.tsx");
 
-export const NATIVE_REQUIRED_ASSETS_MISC = obj;
+export const NATIVE_REQUIRED_ASSETS_MISC = { DefaultAvatar0: _modDef1406, DefaultAvatar1: _modDef1407, DefaultAvatar2: _modDef1408, DefaultAvatar3: _modDef1409, DefaultAvatar4: _modDef1410, DefaultGroup0: _modDef1424, DefaultGroup1: _modDef1425, DefaultGroup2: _modDef1426, DefaultGroup3: _modDef1427, DefaultGroup4: _modDef1428, DefaultGroup5: _modDef1429, DefaultGroup6: _modDef1430, DefaultGroup7: _modDef1431, PoopDark: _modDef18155, PoopLight: _modDef18156, RoleSubscriptionBadge: _modDef18157, RoleSubscriptionLanyard: _modDef18158, RoleSubscriptionPurchaseCard: _modDef18159, SummaryIndicatorEnd: _modDef18160, SummaryIndicatorStart: _modDef18161 };

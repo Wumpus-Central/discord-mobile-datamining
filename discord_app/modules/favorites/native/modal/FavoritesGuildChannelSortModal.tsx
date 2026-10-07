@@ -1,45 +1,33 @@
 // === Module 16107: FavoritesGuildChannelSortModal ===
 
 // Module 16107 (FavoritesGuildChannelSortModal)
-import Fragment from "Fragment" /* 21 */;
-import Constants from "Constants" /* 1085 */;
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import ChannelRecord from "ChannelRecord" /* 2055 */;
 import openFavoritesGuildChannelSortModal from "openFavoritesGuildChannelSortModal" /* 16106 */;
 import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 16109 */;
 import GuildSettingsModalChannelsDefault from "GuildSettingsModalChannels" /* 16110 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import GuildSettingsModalChannelsStore from "GuildSettingsModalChannelsStore" /* 16108 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-const ALL_CHANNEL_TYPES = ChannelRecord.ALL_CHANNEL_TYPES;
-const FAVORITES = Constants.FAVORITES;
-const jsx = Fragment.jsx;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let args;
-  let bottom;
-  let obj3;
-  let tmp10;
-  let tmp4;
-  let tmp5;
-  let tmp7;
-  let tmp9;
-  const tmp = bottom;
-  let obj = bottom(576);
-  const cResult = obj.c(7);
+require = fn;
+const ALL_CHANNEL_TYPES = fn(2055).ALL_CHANNEL_TYPES;
+const FAVORITES = fn(1085).FAVORITES;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/native/modal/FavoritesGuildChannelSortModal.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = bottom(576).c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function u() {
-      const guild = GuildSettingsModalChannelsStore.initGuild(FAVORITES);
+      guild = GuildSettingsModalChannelsStore.initGuild(FAVORITES);
       const items = [...closure_1_5];
-      const tmp2 = GuildSettingsModalChannelsActionCreatorsDefault;
-      tmp2.startReordering.apply(items);
+      GuildSettingsModalChannelsActionCreatorsDefault.startReordering.apply(items);
       return () => {
-        const obj = closure_1_1(closure_1_2[7]);
-        obj.stopReordering();
-        const obj2 = closure_1_1(closure_1_2[7]);
-        obj2.terminate();
+        closure_1_1(16109).stopReordering();
+        const obj = closure_1_1(16109);
+        closure_1_1(16109).terminate();
       };
     };
     let items = [];
@@ -50,75 +38,66 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const effect = react.useEffect(tmp4, tmp5);
+  const effect = noop.useEffect(tmp4, tmp5);
   bottom = useSafeAreaInsetsDefault().bottom;
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1126).intl;
     const stringResult = intl.string(tmp(1126).t.OGiMXJ);
     cResult[2] = stringResult;
-    tmp7 = stringResult;
+    let tmp7 = stringResult;
   } else {
     tmp7 = cResult[2];
   }
   if (cResult[3] !== bottom) {
-    let obj2 = { FAVORITES_GUILD_CHANNEL_SORT: obj3 };
-    obj3 = {
+    const obj2 = { FAVORITES_GUILD_CHANNEL_SORT: null };
+    const obj3 = {
       title: tmp7,
       render() {
-          const obj2 = { paddingBottom: 16 + bottom };
-          GuildSettingsModalChannelsDefault;
-          return <tmp guildId={FAVORITES} contentContainerStyle={obj2} onDone={openFavoritesGuildChannelSortModal.closeFavoritesGuildChannelSortModal} />;
+          const obj = { guildId: FAVORITES, contentContainerStyle: { paddingBottom: 16 + bottom }, onDone: openFavoritesGuildChannelSortModal.closeFavoritesGuildChannelSortModal };
+          return jsx(GuildSettingsModalChannelsDefault, { guildId: FAVORITES, contentContainerStyle: { paddingBottom: 16 + bottom }, onDone: openFavoritesGuildChannelSortModal.closeFavoritesGuildChannelSortModal });
         }
     };
+    obj2.FAVORITES_GUILD_CHANNEL_SORT = obj3;
     cResult[3] = bottom;
     cResult[4] = obj2;
-    tmp9 = obj2;
+    let tmp9 = obj2;
   } else {
     tmp9 = cResult[4];
   }
   if (cResult[5] !== tmp9) {
+    const obj4 = { screens: tmp9, initialRouteName: "FAVORITES_GUILD_CHANNEL_SORT" };
     const tmp12 = jsx(tmp(6503).Navigator, { screens: tmp9, initialRouteName: "FAVORITES_GUILD_CHANNEL_SORT" });
     cResult[5] = tmp9;
     cResult[6] = tmp12;
-    tmp10 = tmp12;
+    let tmp10 = tmp12;
   } else {
     tmp10 = cResult[6];
   }
   return tmp10;
 }) : (() => {
-  let args;
-  let guildId;
-  const effect = react.useEffect(() => {
-    const guild = GuildSettingsModalChannelsStore.initGuild(guildId);
+  const effect = noop.useEffect(() => {
+    guild = GuildSettingsModalChannelsStore.initGuild(guildId);
     const items = [...closure_1_5];
-    const tmp2 = GuildSettingsModalChannelsActionCreatorsDefault;
-    tmp2.startReordering.apply(items);
+    GuildSettingsModalChannelsActionCreatorsDefault.startReordering.apply(items);
     return () => {
-      const obj = closure_1_1(closure_1_2[7]);
-      obj.stopReordering();
-      const obj2 = closure_1_1(closure_1_2[7]);
-      obj2.terminate();
+      closure_1_1(16109).stopReordering();
+      const obj = closure_1_1(16109);
+      closure_1_1(16109).terminate();
     };
   }, []);
   const bottom = useSafeAreaInsetsDefault().bottom;
   let items = [bottom];
-  const screens = react.useMemo(() => {
-    let intl;
-    let obj2;
-    const obj = { FAVORITES_GUILD_CHANNEL_SORT: obj2 };
-    obj2 = {
-      title: intl.string(intl2.t.OGiMXJ),
-      render() {
-        const obj2 = { paddingBottom: 16 + closure_1_0 };
-        GuildSettingsModalChannelsDefault;
-        return <tmp guildId={guildId} contentContainerStyle={obj2} onDone={bottom(dependencyMap[11]).closeFavoritesGuildChannelSortModal} />;
-      }
+  const screens = noop.useMemo(() => {
+    let obj = { FAVORITES_GUILD_CHANNEL_SORT: null };
+    const obj2 = { title: null, render: null };
+    const intl = util.intl;
+    obj2.title = intl.string(util.t.OGiMXJ);
+    obj2.render = function render() {
+      const obj = { guildId, contentContainerStyle: { paddingBottom: 16 + closure_1_0 }, onDone: bottom(16106).closeFavoritesGuildChannelSortModal };
+      return jsx(GuildSettingsModalChannelsDefault, { guildId, contentContainerStyle: { paddingBottom: 16 + closure_1_0 }, onDone: bottom(16106).closeFavoritesGuildChannelSortModal });
     };
-    intl = intl2.intl;
+    obj.FAVORITES_GUILD_CHANNEL_SORT = obj2;
     return obj;
   }, items);
   return jsx(bottom(6503).Navigator, { screens, initialRouteName: "FAVORITES_GUILD_CHANNEL_SORT" });
 });
-const result = size.fileFinishedImporting("modules/favorites/native/modal/FavoritesGuildChannelSortModal.tsx");
-
-export default tmp2;

@@ -2,7 +2,7 @@
 
 // Module 5578 (StageChannelsConstants)
 import Constants from "Constants" /* 1085 */;
-import intl5 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
 import size from "module_2" /* 2 */;
 
@@ -23,18 +23,14 @@ export const STAGE_INVITE_STATE_KEY = "stage-invite";
 export const STAGE_BOOSTING_SHEET_KEY = "stage-boosting";
 export const RequestToSpeakPermissionStates = { EVERYONE: 1, [1]: "EVERYONE", NO_ONE: 2, [2]: "NO_ONE", ROLES: 3, [3]: "ROLES" };
 export const getStagePublicInfoText = function getStagePublicInfoText() {
-  let obj2;
-  const intl = intl5.intl;
-  const items = [intl.string(intl5.t["9XlQ9W"]), , , ];
-  const intl2 = intl5.intl;
-  items[1] = intl2.string(intl5.t.lF0IbB);
-  const intl3 = intl5.intl;
-  const format = intl3.format;
-  const obj = { articleURL: obj2.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES) };
-  const q2jZ6N = intl5.t.q2jZ6N;
-  obj2 = HelpdeskUtilsDefault;
-  items[2] = format(q2jZ6N, obj);
-  const intl4 = intl5.intl;
-  items[3] = intl4.string(intl5.t.xfb7ZU);
+  const intl = util.intl;
+  const items = [intl.string(util.t["9XlQ9W"]), , , ];
+  const intl2 = util.intl;
+  items[1] = intl2.string(util.t.lF0IbB);
+  const intl3 = util.intl;
+  const obj = { articleURL: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES) };
+  items[2] = intl3.format(util.t.q2jZ6N, obj);
+  const intl4 = util.intl;
+  items[3] = intl4.string(util.t.xfb7ZU);
   return items;
 };

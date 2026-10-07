@@ -1,80 +1,66 @@
 // === Module 12950: UserProfilePrivacyNotice ===
 
 // Module 12950 (UserProfilePrivacyNotice)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1085 */;
-import intl3 from "intl" /* 1126 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
+import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import dismissible_content from "dismissible_content" /* 2036 */;
-import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4818 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import Pressables from "Pressables" /* 5916 */;
 import XSmallIcon from "XSmallIcon" /* 6024 */;
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6901 */;
 import useUserIsTeen from "useUserIsTeen" /* 8327 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let _require;
 
-let metroImportAll;
-let metroImportDefault;
-let obj2;
-const View = react_native.View;
-const UserSettingsSections = Constants.UserSettingsSections;
-const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
-({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
-let obj = { container: obj2, icon: { flexShrink: 0, marginTop: 2 }, text: { flex: 1 }, closeButton: { flexShrink: 0 } };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, borderWidth: 1, borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8 };
-let closure_9 = createStyles.createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+const preloaded_user_settings = PRIVATE_PROFILE_INLINE_NOTICE(1197);
+const dismissible_content = PRIVATE_PROFILE_INLINE_NOTICE(2036);
+require = fn;
+const View = fn(17).View;
+const UserSettingsSections = fn(1085).UserSettingsSections;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, borderWidth: 1, borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8 }, icon: { flexShrink: 0, marginTop: 2 }, text: { flex: 1 }, closeButton: { flexShrink: 0 } };
+let closure_9 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp6;
-  const obj = react2;
-  const cResult = obj.c(2);
-  const obj2 = useUserIsTeen;
-  const userIsTeen = obj2.useUserIsTeen();
+  let PRIVATE_PROFILE_INLINE_NOTICE = require;
+  let items = dependencyMap;
+  const cResult = c.c(2);
+  const userIsTeen = useUserIsTeen.useUserIsTeen();
   const ProfileVisibility = UserSettings.ProfileVisibility;
   if (userIsTeen) {
-    if (tmp5 !== preloaded_user_settings.ProfileVisibility.FRIENDS_AND_ALL_GUILDS) {
-      let first;
+    if (tmp3 !== preloaded_user_settings.ProfileVisibility.FRIENDS_AND_ALL_GUILDS) {
       const _Symbol = Symbol;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE];
+        PRIVATE_PROFILE_INLINE_NOTICE = dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE;
+        items = [PRIVATE_PROFILE_INLINE_NOTICE];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
-      tmp6 = first;
     }
-    return tmp6;
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [];
     cResult[1] = items1;
-    tmp6 = items1;
+    let tmp4 = items1;
   } else {
-    tmp6 = cResult[1];
+    tmp4 = cResult[1];
   }
+  return tmp4;
 }) : (() => {
-  let setting;
-  let userIsTeen;
-  const obj = userIsTeen(setting[12]);
-  userIsTeen = obj.useUserIsTeen();
+  userIsTeen = userIsTeen(setting[12]).useUserIsTeen();
   const ProfileVisibility = userIsTeen(setting[13]).ProfileVisibility;
   setting = ProfileVisibility.useSetting();
   let items = [userIsTeen, setting];
-  return react.useMemo(() => {
+  return noop.useMemo(() => {
     if (userIsTeen) {
       if (setting !== preloaded_user_settings.ProfileVisibility.FRIENDS_AND_ALL_GUILDS) {
         const items = [dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE];
@@ -83,169 +69,140 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }, items);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+fn(558);
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, borderWidth: 1, borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8 };
+ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const tmp = closure_10();
-  const obj = useSelectedDismissibleContent;
-  return _slicedToArray(obj.useSelectedDismissibleContent(tmp), 1)[0] === dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE;
+  return _slicedToArray(useSelectedDismissibleContent.useSelectedDismissibleContent(tmp), 1)[0] === dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE;
 }) : (() => {
   const tmp = closure_10();
-  const obj = useSelectedDismissibleContent;
-  return _slicedToArray(obj.useSelectedDismissibleContent(tmp), 1)[0] === dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE;
+  return _slicedToArray(useSelectedDismissibleContent.useSelectedDismissibleContent(tmp), 1)[0] === dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let closure_0;
-  let first1;
-  let items;
-  let obj = require("react");
-  const cResult = obj.c(35);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePrivacyNotice.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = require("c").c(35);
   const tmp4 = closure_9();
+  const obj = require("c");
   const tmp5 = closure_10();
-  let obj2 = require("useSelectedDismissibleContent");
-  const tmp6 = _slicedToArray(obj2.useSelectedDismissibleContent(tmp5), 2);
-  _require = tmp8;
-  const first = tmp6[0];
+  let num = 2;
+  const tmp6 = _slicedToArray(require("useSelectedDismissibleContent").useSelectedDismissibleContent(tmp5), 2);
+  _require = tmp7;
   const ProfileVisibility = require("UserSettings").ProfileVisibility;
-  const setting = ProfileVisibility.useSetting();
+  let str = ProfileVisibility.useSetting();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n(children, arg1) {
-      let obj = {
+      return closure_1_7(closure_0(dependencyMap[16]).Text, {
         variant: "text-sm/normal",
         color: "text-link",
         onPress() {
-          const obj = closure_1_0(closure_1_1[17]);
-          const obj2 = { screen: constants.DATA_AND_PRIVACY };
-          return obj.openUserSettings(obj2);
+          return closure_1_0(closure_1_1[17]).openUserSettings({ screen: constants.DATA_AND_PRIVACY });
         },
         children
-      };
-      return closure_1_7(closure_0(dependencyMap[16]).Text, obj, arg1);
+      }, arg1);
     };
     cResult[0] = fn;
-    first1 = fn;
+    let first = fn;
   } else {
-    first1 = cResult[0];
+    first = cResult[0];
   }
-  if (first !== require("dismissible_content").DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE) {
+  if (tmp6[0] !== require("dismissible_content").DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE) {
     return null;
   } else {
-    let dqQ7AN;
-    let tmp18;
-    let tmp21;
-    if (cResult[1] === setting) {
+    if (cResult[1] === str) {
       if (cResult[2] === tmp4.container) {
         if (cResult[3] === tmp4.icon) {
-          let tmp11;
-          let tmp12;
-          let tmp13;
-          let str;
-          let str2;
-          let tmp14;
-          let tmp15;
-          let tmp16;
           if (cResult[4] === tmp4.text) {
-            tmp11 = cResult[5];
-            tmp12 = cResult[6];
-            tmp13 = cResult[7];
-            str = cResult[8];
-            str2 = cResult[9];
-            tmp14 = cResult[10];
-            tmp15 = cResult[11];
-            tmp16 = cResult[12];
-          }
-          if (cResult[16] === tmp11) {
-            if (cResult[17] === tmp13) {
-              if (cResult[18] === str) {
-                if (cResult[19] === str2) {
-                  let tmp25;
-                  let tmp28;
-                  let tmp30;
-                  let tmp31;
-                  if (cResult[20] === tmp14) {
-                    tmp25 = cResult[21];
-                  }
-                  const _Symbol2 = Symbol;
-                  if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-                    const intl2 = tmp(1126).intl;
-                    const stringResult = intl2.string(require("intl").t.WAI6xu);
-                    cResult[22] = stringResult;
-                    tmp28 = stringResult;
-                  } else {
-                    tmp28 = cResult[22];
-                  }
-                  if (cResult[23] !== tmp6[1]) {
-                    const fn2 = function p() {
-                      return closure_0(ContentDismissActionType.USER_DISMISS);
-                    };
-                    cResult[23] = tmp6[1];
-                    cResult[24] = fn2;
-                    tmp30 = fn2;
-                  } else {
-                    tmp30 = cResult[24];
-                  }
-                  const _Symbol3 = Symbol;
-                  if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-                    const tmp33 = closure_7(require("XSmallIcon").XSmallIcon, { size: "xs", color: "icon-feedback-info" });
-                    cResult[25] = tmp33;
-                    tmp31 = tmp33;
-                  } else {
-                    tmp31 = cResult[25];
-                  }
-                  if (cResult[26] === tmp4.closeButton) {
-                    let tmp34;
-                    if (cResult[27] === tmp30) {
-                      tmp34 = cResult[28];
+            if (cResult[16] === cResult[5]) {
+              if (cResult[17] === tmp11) {
+                if (cResult[18] === tmp12) {
+                  if (cResult[19] === tmp13) {
+                    if (cResult[20] === tmp14) {
+                      let tmp30 = cResult[21];
                     }
-                    if (cResult[29] === tmp12) {
-                      if (cResult[30] === tmp34) {
-                        if (cResult[31] === tmp15) {
-                          if (cResult[32] === tmp16) {
-                            let tmp37;
-                            if (cResult[33] === tmp25) {
-                              tmp37 = cResult[34];
+                    const _Symbol2 = Symbol;
+                    if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
+                      const intl2 = tmp(1126).intl;
+                      const stringResult = intl2.string(tmp(1126).t.WAI6xu);
+                      cResult[22] = stringResult;
+                      let tmp33 = stringResult;
+                    } else {
+                      tmp33 = cResult[22];
+                    }
+                    if (cResult[23] !== tmp7) {
+                      const fn2 = function p() {
+                        return closure_0(ContentDismissActionType.USER_DISMISS);
+                      };
+                      cResult[23] = tmp7;
+                      cResult[24] = fn2;
+                      let tmp35 = fn2;
+                    } else {
+                      tmp35 = cResult[24];
+                    }
+                    const _Symbol3 = Symbol;
+                    if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
+                      const tmp38 = closure_7(tmp(6024).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
+                      cResult[25] = tmp38;
+                      let tmp36 = tmp38;
+                    } else {
+                      tmp36 = cResult[25];
+                    }
+                    if (cResult[26] === tmp4.closeButton) {
+                      if (cResult[27] === tmp35) {
+                        let tmp39 = cResult[28];
+                      }
+                      if (cResult[29] === tmp10) {
+                        if (cResult[30] === tmp39) {
+                          if (cResult[31] === tmp15) {
+                            if (cResult[32] === tmp16) {
+                              if (cResult[33] === tmp30) {
+                                let tmp42 = cResult[34];
+                              }
+                              return tmp42;
                             }
-                            return tmp37;
                           }
                         }
                       }
+                      const obj3 = { style: tmp15, children: null };
+                      const items = [tmp16, tmp30, tmp39];
+                      obj3.children = items;
+                      const tmp44 = closure_8(tmp10, obj3);
+                      cResult[29] = tmp10;
+                      cResult[30] = tmp39;
+                      cResult[31] = tmp15;
+                      cResult[32] = tmp16;
+                      cResult[33] = tmp30;
+                      cResult[34] = tmp44;
+                      tmp42 = tmp44;
                     }
-                    const obj3 = { style: tmp15, children: items };
-                    items = [tmp16, tmp25, tmp34];
-                    const tmp39 = closure_8(tmp12, obj3);
-                    cResult[29] = tmp12;
-                    cResult[30] = tmp34;
-                    cResult[31] = tmp15;
-                    cResult[32] = tmp16;
-                    cResult[33] = tmp25;
-                    cResult[34] = tmp39;
-                    tmp37 = tmp39;
+                    const obj4 = { accessibilityRole: "button", accessibilityLabel: tmp33, onPress: tmp35, style: tmp4.closeButton, children: tmp36 };
+                    const tmp41 = closure_7(tmp(5916).PressableOpacity, obj4);
+                    cResult[26] = tmp4.closeButton;
+                    cResult[27] = tmp35;
+                    cResult[28] = tmp41;
+                    tmp39 = tmp41;
                   }
-                  const obj4 = { accessibilityRole: "button", accessibilityLabel: tmp28, onPress: tmp30, style: tmp4.closeButton, children: tmp31 };
-                  const tmp36 = closure_7(require("Pressables").PressableOpacity, obj4);
-                  cResult[26] = tmp4.closeButton;
-                  cResult[27] = tmp30;
-                  cResult[28] = tmp36;
-                  tmp34 = tmp36;
                 }
               }
             }
+            const obj5 = { style: cResult[7], variant: cResult[8], color: cResult[9], children: cResult[10] };
+            const tmp32 = closure_7(cResult[5], obj5);
+            cResult[16] = cResult[5];
+            cResult[17] = cResult[7];
+            cResult[18] = cResult[8];
+            cResult[19] = cResult[9];
+            cResult[20] = cResult[10];
+            cResult[21] = tmp32;
+            tmp30 = tmp32;
           }
-          const obj5 = { style: tmp13, variant: str, color: str2, children: tmp14 };
-          const tmp27 = closure_7(tmp11, obj5);
-          cResult[16] = tmp11;
-          cResult[17] = tmp13;
-          cResult[18] = str;
-          cResult[19] = str2;
-          cResult[20] = tmp14;
-          cResult[21] = tmp27;
-          tmp25 = tmp27;
         }
       }
     }
-    if (require("preloaded_user_settings").ProfileVisibility.FRIENDS_ONLY === setting) {
-      dqQ7AN = tmp(1126).t["0UBDvq"];
-    } else if (require("preloaded_user_settings").ProfileVisibility.FRIENDS_AND_SMALL_GUILDS === setting) {
+    if (tmp(1197).ProfileVisibility.FRIENDS_ONLY === str) {
+      let dqQ7AN = tmp(1126).t["0UBDvq"];
+    } else if (tmp(1197).ProfileVisibility.FRIENDS_AND_SMALL_GUILDS === str) {
       dqQ7AN = tmp(1126).t["9AvQO/"];
     } else {
       const FRIENDS_AND_ALL_GUILDS = tmp(1197).ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
@@ -254,110 +211,88 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const container = tmp4.container;
     const _Symbol = Symbol;
     if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp20 = closure_7(require("CircleInformationIcon").CircleInformationIcon, { size: "xs", color: "icon-feedback-info" });
-      cResult[13] = tmp20;
-      tmp18 = tmp20;
+      const tmp19 = closure_7(tmp(4818).CircleInformationIcon, { size: "xs", color: "icon-feedback-info" });
+      cResult[13] = tmp19;
+      let str2 = tmp19;
     } else {
-      tmp18 = cResult[13];
+      str2 = cResult[13];
     }
     if (cResult[14] !== tmp4.icon) {
-      const obj6 = { style: tmp4.icon, children: tmp18 };
-      const tmp23 = closure_7(View, obj6);
+      const obj6 = { style: tmp4.icon, children: str2 };
+      const tmp22 = closure_7(View, obj6);
       cResult[14] = tmp4.icon;
-      cResult[15] = tmp23;
-      tmp21 = tmp23;
+      cResult[15] = tmp22;
+      let tmp20 = tmp22;
     } else {
-      tmp21 = cResult[15];
+      tmp20 = cResult[15];
     }
     const Text = tmp(4892).Text;
     const text = tmp4.text;
     const intl = tmp(1126).intl;
-    const obj7 = { privacySettingsLink: first1 };
+    const obj7 = { privacySettingsLink: first };
     const formatResult = intl.format(dqQ7AN, obj7);
-    cResult[1] = setting;
-    cResult[2] = tmp4.container;
+    cResult[1] = str;
+    cResult[num] = tmp4.container;
     cResult[3] = tmp4.icon;
     cResult[4] = tmp4.text;
     cResult[5] = Text;
     cResult[6] = View;
     cResult[7] = text;
+    str = "text-sm/normal";
     cResult[8] = "text-sm/normal";
+    str2 = "text-default";
     cResult[9] = "text-default";
     cResult[10] = formatResult;
     cResult[11] = container;
-    cResult[12] = tmp21;
-    tmp16 = tmp21;
-    tmp15 = container;
-    tmp14 = formatResult;
-    str2 = "text-default";
-    str = "text-sm/normal";
-    tmp13 = text;
-    tmp12 = View;
-    tmp11 = Text;
+    num = 12;
+    cResult[12] = tmp20;
   }
+  const obj2 = require("useSelectedDismissibleContent");
 }) : (() => {
-  let intl;
-  let intl2;
-  let items;
-  let obj5;
-  let require;
-  let tmp6;
   const tmp = closure_9();
   const tmp2 = closure_10();
-  let obj = useSelectedDismissibleContent;
-  [tmp6, require] = obj.useSelectedDismissibleContent(tmp2);
-  _slicedToArray(obj.useSelectedDismissibleContent(tmp2), 2);
+  [tmp6, require] = useSelectedDismissibleContent.useSelectedDismissibleContent(tmp2);
   const ProfileVisibility = UserSettings.ProfileVisibility;
   const setting = ProfileVisibility.useSetting();
-  const callback = react.useCallback((children, arg1) => {
-    let obj = {
-      variant: "text-sm/normal",
-      color: "text-link",
-      onPress() {
-        const obj = closure_1_0(closure_1_1[17]);
-        const obj2 = { screen: constants.DATA_AND_PRIVACY };
-        return obj.openUserSettings(obj2);
-      },
-      children
-    };
-    return closure_1_7(require("Text/Text").Text, obj, arg1);
-  }, []);
+  const callback = noop.useCallback((children, arg1) => closure_1_7(require("Text/Text").Text, {
+    variant: "text-sm/normal",
+    color: "text-link",
+    onPress() {
+      return closure_1_0(closure_1_1[17]).openUserSettings({ screen: constants.DATA_AND_PRIVACY });
+    },
+    children
+  }, arg1), []);
   if (tmp6 !== dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE) {
     return null;
   } else {
-    let dqQ7AN;
     if (preloaded_user_settings.ProfileVisibility.FRIENDS_ONLY === setting) {
-      dqQ7AN = intl3.t["0UBDvq"];
+      let dqQ7AN = util.t["0UBDvq"];
     } else if (preloaded_user_settings.ProfileVisibility.FRIENDS_AND_SMALL_GUILDS === setting) {
-      dqQ7AN = intl3.t["9AvQO/"];
+      dqQ7AN = util.t["9AvQO/"];
     } else {
       const FRIENDS_AND_ALL_GUILDS = preloaded_user_settings.ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
-      dqQ7AN = intl3.t.dqQ7AN;
+      dqQ7AN = util.t.dqQ7AN;
     }
-    let obj2 = { style: tmp.container, children: items };
+    const obj2 = { style: tmp.container, children: null };
     const obj3 = { style: tmp.icon, children: closure_7(CircleInformationIcon.CircleInformationIcon, { size: "xs", color: "icon-feedback-info" }) };
-    items = [closure_7(View, obj3), , ];
-    const obj4 = { style: tmp.text, variant: "text-sm/normal", color: "text-default", children: intl.format(dqQ7AN, obj5) };
-    const Text = Text_Text.Text;
-    intl = intl3.intl;
-    obj5 = { privacySettingsLink: callback };
-    items[1] = closure_7(Text, obj4);
-    const obj6 = {
-      accessibilityRole: "button",
-      accessibilityLabel: intl2.string(intl3.t.WAI6xu),
-      onPress() {
-          return _require(ContentDismissActionType.USER_DISMISS);
-        },
-      style: tmp.closeButton,
-      children: closure_7(XSmallIcon.XSmallIcon, { size: "xs", color: "icon-feedback-info" })
+    const items = [closure_7(View, obj3), , ];
+    const obj4 = { style: tmp.text, variant: "text-sm/normal", color: "text-default", children: null };
+    const intl = util.intl;
+    const obj5 = { privacySettingsLink: callback };
+    obj4.children = intl.format(dqQ7AN, obj5);
+    items[1] = closure_7(Text_Text.Text, obj4);
+    const obj6 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
+    const intl2 = util.intl;
+    obj6.accessibilityLabel = intl2.string(util.t.WAI6xu);
+    obj6.onPress = function onPress() {
+      return _require(ContentDismissActionType.USER_DISMISS);
     };
-    const PressableOpacity = Pressables.PressableOpacity;
-    intl2 = intl3.intl;
-    items[2] = closure_7(PressableOpacity, obj6);
+    obj6.style = tmp.closeButton;
+    obj6.children = closure_7(XSmallIcon.XSmallIcon, { size: "xs", color: "icon-feedback-info" });
+    items[2] = closure_7(Pressables.PressableOpacity, obj6);
+    obj2.children = items;
     return closure_8(View, obj2);
   }
+  const tmp5 = _slicedToArray(useSelectedDismissibleContent.useSelectedDismissibleContent(tmp2), 2);
 });
-const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePrivacyNotice.tsx");
-
-export default tmp4;
 export const useIsPrivacyNoticeVisible = tmp3;

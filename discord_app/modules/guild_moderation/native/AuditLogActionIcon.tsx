@@ -1,124 +1,60 @@
 // === Module 17765: AuditLogActionIcon ===
 
 // Module 17765 (AuditLogActionIcon)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4818 */;
-import LinkIcon from "LinkIcon" /* 4845 */;
 import ChatIcon from "ChatIcon" /* 5862 */;
-import ThreadIcon from "ThreadIcon" /* 5864 */;
-import GroupIcon from "GroupIcon" /* 5880 */;
-import StageIcon from "StageIcon" /* 5888 */;
-import FlagIcon from "FlagIcon" /* 8348 */;
-import ReactionIcon from "ReactionIcon" /* 8444 */;
 import RobotIcon2 from "RobotIcon" /* 8987 */;
-import CalendarIcon from "CalendarIcon" /* 9310 */;
-import SlashBoxIcon from "SlashBoxIcon" /* 11005 */;
-import CircleQuestionIcon from "CircleQuestionIcon" /* 11028 */;
-import SoundboardIcon from "SoundboardIcon" /* 12200 */;
-import StickerIcon from "StickerIcon" /* 12205 */;
-import PuzzlePieceIcon from "PuzzlePieceIcon" /* 14778 */;
-import WebhookIcon from "WebhookIcon" /* 16933 */;
-import ChannelListIcon from "ChannelListIcon" /* 17703 */;
-import ListBulletsIcon from "ListBulletsIcon" /* 17766 */;
-import HomeIcon from "HomeIcon" /* 17768 */;
-import AssetRegistryDefault from "AssetRegistry" /* 17770 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 17771 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 17772 */;
-import react from "react" /* 19 */;
-import AuditLogRecord from "AuditLogRecord" /* 17760 */;
-import Constants from "Constants" /* 1085 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import _modDef17770 from "module_17770" /* 17770 */;
+import _modDef17771 from "module_17771" /* 17771 */;
+import _modDef17772 from "module_17772" /* 17772 */;
+import noop from "module_19" /* 19 */;
 
-let action;
-
-let ALL;
-let APPLICATION_COMMAND;
-let AUTO_MODERATION_RULE;
-let AuditLogTargetTypes;
-let CHANNEL;
-let CHANNEL_OVERWRITE;
-let EMOJI;
-let GUILD;
-let GUILD_HOME;
-let GUILD_MEMBER_VERIFICATION;
-let GUILD_ONBOARDING;
-let GUILD_PROFILE;
-let GUILD_SCHEDULED_EVENT;
-let GUILD_SCHEDULED_EVENT_EXCEPTION;
-let GUILD_SOUNDBOARD;
-let HOME_SETTINGS;
-let INTEGRATION;
-let INVITE;
-let ONBOARDING_PROMPT;
-let ROLE;
-let STAGE_INSTANCE;
-let STICKER;
-let THREAD;
-let UNKNOWN;
-let USER;
-let VOICE_CHANNEL_STATUS;
-let WEBHOOK;
-let c9;
-let closure_4;
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let size;
-const View = react_native.View;
+require = fn;
+const View = fn(17).View;
+const AuditLogRecord = fn(17760);
 ({ getTargetType: closure_4, getActionType: hasOwnProperty } = AuditLogRecord);
-({ AuditLogTargetTypes, AuditLogActionTypes: metroRequire, AuditLogActions: metroImportDefault } = Constants);
-({ jsx: metroImportAll, jsxs: c9 } = Fragment);
-let obj = { actionImageContainer: { height: 24, width: 24 }, actionImageOverlay: size, iconComponent: { width: 22, height: 22 }, actionImage: { position: "absolute" } };
-size = { borderRadius: nativeDefault.radii.round, width: 13, height: 13, bottom: 0, right: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-let closure_10 = createStyles.createStyles(obj);
-let obj2 = { [ALL]: ListBulletsIcon.ListBulletsIcon, [CHANNEL]: ChannelListIcon.ChannelListIcon, [CHANNEL_OVERWRITE]: ChannelListIcon.ChannelListIcon, [EMOJI]: ReactionIcon.ReactionIcon, [GUILD]: CircleInformationIcon.CircleInformationIcon, [GUILD_PROFILE]: CircleInformationIcon.CircleInformationIcon, [INTEGRATION]: PuzzlePieceIcon.PuzzlePieceIcon, [INVITE]: LinkIcon.LinkIcon, [ROLE]: FlagIcon.FlagIcon, [USER]: GroupIcon.GroupIcon, [WEBHOOK]: WebhookIcon.WebhookIcon, [STAGE_INSTANCE]: StageIcon.StageIcon, [GUILD_SCHEDULED_EVENT]: CalendarIcon.CalendarIcon, [GUILD_SCHEDULED_EVENT_EXCEPTION]: CalendarIcon.CalendarIcon, [THREAD]: ThreadIcon.ThreadIcon, [STICKER]: StickerIcon.StickerIcon, [APPLICATION_COMMAND]: SlashBoxIcon.SlashBoxIcon, [AUTO_MODERATION_RULE]: WebhookIcon.WebhookIcon, [GUILD_SOUNDBOARD]: SoundboardIcon.SoundboardIcon, [ONBOARDING_PROMPT]: GroupIcon.GroupIcon, [GUILD_ONBOARDING]: GroupIcon.GroupIcon, [HOME_SETTINGS]: GroupIcon.GroupIcon, [GUILD_MEMBER_VERIFICATION]: GroupIcon.GroupIcon, [VOICE_CHANNEL_STATUS]: ChannelListIcon.ChannelListIcon, [GUILD_HOME]: HomeIcon.HomeIcon, [UNKNOWN]: CircleQuestionIcon.CircleQuestionIcon };
+const Constants = fn(1085);
+({ AuditLogTargetTypes, AuditLogActionTypes: metroRequire, AuditLogActions: closure_7 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { actionImageContainer: { height: 24, width: 24 }, actionImageOverlay: null, iconComponent: null, actionImage: null };
+let size = { borderRadius: nativeDefault.radii.round, width: 13, height: 13, bottom: 0, right: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.actionImageOverlay = size;
+obj2.iconComponent = { width: 22, height: 22 };
+obj2.actionImage = { position: "absolute" };
+let closure_10 = createStyles.createStyles(obj2);
+let obj3 = { [ALL]: fn(17766).ListBulletsIcon, [CHANNEL]: fn(17703).ChannelListIcon, [CHANNEL_OVERWRITE]: fn(17703).ChannelListIcon, [EMOJI]: fn(8444).ReactionIcon, [GUILD]: fn(4818).CircleInformationIcon, [GUILD_PROFILE]: fn(4818).CircleInformationIcon, [INTEGRATION]: fn(14778).PuzzlePieceIcon, [INVITE]: fn(4845).LinkIcon, [ROLE]: fn(8348).FlagIcon, [USER]: fn(5880).GroupIcon, [WEBHOOK]: fn(16933).WebhookIcon, [STAGE_INSTANCE]: fn(5888).StageIcon, [GUILD_SCHEDULED_EVENT]: fn(9310).CalendarIcon, [GUILD_SCHEDULED_EVENT_EXCEPTION]: fn(9310).CalendarIcon, [THREAD]: fn(5864).ThreadIcon, [STICKER]: fn(12205).StickerIcon, [APPLICATION_COMMAND]: fn(11005).SlashBoxIcon, [AUTO_MODERATION_RULE]: fn(16933).WebhookIcon, [GUILD_SOUNDBOARD]: fn(12200).SoundboardIcon, [ONBOARDING_PROMPT]: fn(5880).GroupIcon, [GUILD_ONBOARDING]: fn(5880).GroupIcon, [HOME_SETTINGS]: fn(5880).GroupIcon, [GUILD_MEMBER_VERIFICATION]: fn(5880).GroupIcon, [VOICE_CHANNEL_STATUS]: fn(17703).ChannelListIcon, [GUILD_HOME]: fn(17768).HomeIcon, [UNKNOWN]: fn(11028).CircleQuestionIcon };
 ({ ALL, CHANNEL, CHANNEL_OVERWRITE, EMOJI, GUILD, GUILD_PROFILE, INTEGRATION, INVITE, ROLE, USER, WEBHOOK, STAGE_INSTANCE, GUILD_SCHEDULED_EVENT, GUILD_SCHEDULED_EVENT_EXCEPTION, THREAD, STICKER, APPLICATION_COMMAND, AUTO_MODERATION_RULE, GUILD_SOUNDBOARD, ONBOARDING_PROMPT, GUILD_ONBOARDING, HOME_SETTINGS, GUILD_MEMBER_VERIFICATION, VOICE_CHANNEL_STATUS, GUILD_HOME, UNKNOWN } = AuditLogTargetTypes);
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((action) => {
-  let items;
-  let items1;
-  let tmp13;
-  let tmp5;
-  const obj = react2;
-  const cResult = obj.c(18);
+  const cResult = c.c(18);
   action = action.action;
   const tmp4 = closure_10();
   if (cResult[0] !== action) {
-    let tmp9;
     const tmp7 = hasOwnProperty(action);
-    if (metroRequire.CREATE === tmp7) {
-      tmp9 = AssetRegistryDefault;
-    } else if (metroRequire.UPDATE === tmp7) {
-      tmp9 = AssetRegistryDefault2;
-    } else {
+    if (constants.CREATE === tmp7) {
+      let tmp9 = _modDef17770;
+      cResult[0] = action;
+      cResult[1] = tmp9;
+    } else if (constants.UPDATE !== tmp7) {
       tmp9 = null;
-      if (metroRequire.DELETE === tmp7) {
-        tmp9 = AssetRegistryDefault3;
+      if (constants.DELETE === tmp7) {
+        tmp9 = _modDef17772;
       }
     }
-    cResult[0] = action;
-    cResult[1] = tmp9;
-    tmp5 = tmp9;
-  } else {
-    tmp5 = cResult[1];
-  }
-  if (cResult[2] !== action) {
-    let RobotIcon;
-    if (action === metroImportDefault.MESSAGE_DELETE) {
-      RobotIcon = ChatIcon.ChatIcon;
+    tmp9 = _modDef17771;
+  } else if (cResult[2] !== action) {
+    if (action === constants2.MESSAGE_DELETE) {
+      let RobotIcon = ChatIcon.ChatIcon;
     } else {
-      if (action !== metroImportDefault.AUTO_MODERATION_BLOCK_MESSAGE) {
-        if (action !== metroImportDefault.AUTO_MODERATION_FLAG_TO_CHANNEL) {
-          if (action !== metroImportDefault.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) {
-            if (action !== metroImportDefault.AUTO_MODERATION_QUARANTINE_USER) {
-              RobotIcon = obj2[tmp15];
+      if (action !== constants2.AUTO_MODERATION_BLOCK_MESSAGE) {
+        if (action !== constants2.AUTO_MODERATION_FLAG_TO_CHANNEL) {
+          if (action !== constants2.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) {
+            if (action !== constants2.AUTO_MODERATION_QUARANTINE_USER) {
+              RobotIcon = obj3[tmp16];
             }
           }
         }
@@ -127,146 +63,133 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((action) => {
     }
     cResult[2] = action;
     cResult[3] = RobotIcon;
-    tmp13 = RobotIcon;
   } else {
-    tmp13 = cResult[3];
-  }
-  if (cResult[4] === tmp13) {
-    let tmp18;
-    if (cResult[5] === tmp4.iconComponent) {
-      tmp18 = cResult[6];
-    }
-    if (cResult[7] === tmp4.actionImage) {
-      let tmp20;
-      if (cResult[8] === tmp4.actionImageOverlay) {
-        tmp20 = cResult[9];
+    if (cResult[4] === cResult[3]) {
+      if (cResult[5] === tmp4.iconComponent) {
+        let tmp20 = cResult[6];
       }
-      if (cResult[10] === tmp5) {
-        let tmp24;
-        if (cResult[11] === tmp4.actionImage) {
-          tmp24 = cResult[12];
+      if (cResult[7] === tmp4.actionImage) {
+        if (cResult[8] === tmp4.actionImageOverlay) {
+          let tmp23 = cResult[9];
         }
-        if (cResult[13] === tmp4.actionImageContainer) {
-          if (cResult[14] === tmp18) {
-            if (cResult[15] === tmp20) {
-              let tmp27;
-              if (cResult[16] === tmp24) {
-                tmp27 = cResult[17];
+        if (cResult[10] === tmp5) {
+          if (cResult[11] === tmp4.actionImage) {
+            let tmp27 = cResult[12];
+          }
+          if (cResult[13] === tmp4.actionImageContainer) {
+            if (cResult[14] === tmp20) {
+              if (cResult[15] === tmp23) {
+                if (cResult[16] === tmp27) {
+                  let tmp30 = cResult[17];
+                }
+                return tmp30;
               }
-              return tmp27;
             }
           }
+          const obj2 = { style: tmp4.actionImageContainer, children: null };
+          const items = [tmp20, tmp23, tmp27];
+          obj2.children = items;
+          const tmp33 = options(View, obj2);
+          cResult[13] = tmp4.actionImageContainer;
+          cResult[14] = tmp20;
+          cResult[15] = tmp23;
+          cResult[16] = tmp27;
+          cResult[17] = tmp33;
+          tmp30 = tmp33;
         }
-        obj2 = { style: tmp4.actionImageContainer, children: items };
-        items = [tmp18, tmp20, tmp24];
-        const tmp30 = React4(View, obj2);
-        cResult[13] = tmp4.actionImageContainer;
-        cResult[14] = tmp18;
-        cResult[15] = tmp20;
-        cResult[16] = tmp24;
-        cResult[17] = tmp30;
-        tmp27 = tmp30;
+        obj3 = { style: tmp4.actionImage, source: tmp5, disableColor: true };
+        const tmp29 = closure_1_8(native.Icon, obj3);
+        cResult[10] = tmp5;
+        cResult[11] = tmp4.actionImage;
+        cResult[12] = tmp29;
+        tmp27 = tmp29;
       }
-      const obj3 = { style: tmp4.actionImage, source: tmp5, disableColor: true };
-      const tmp26 = metroImportAll(native.Icon, obj3);
-      cResult[10] = tmp5;
-      cResult[11] = tmp4.actionImage;
-      cResult[12] = tmp26;
-      tmp24 = tmp26;
+      const obj4 = { style: null };
+      const items1 = [, ];
+      ({ actionImageOverlay: arr[0], actionImage: arr[1] } = tmp4);
+      obj4.style = items1;
+      const tmp26 = closure_1_8(View, obj4);
+      cResult[7] = tmp4.actionImage;
+      cResult[8] = tmp4.actionImageOverlay;
+      cResult[9] = tmp26;
+      tmp23 = tmp26;
     }
-    const obj4 = { style: items1 };
-    items1 = [, ];
-    ({ actionImageOverlay: arr[0], actionImage: arr[1] } = tmp4);
-    const tmp23 = metroImportAll(View, obj4);
-    cResult[7] = tmp4.actionImage;
-    cResult[8] = tmp4.actionImageOverlay;
-    cResult[9] = tmp23;
-    tmp20 = tmp23;
+    const obj5 = { size: "custom", style: tmp4.iconComponent };
+    const tmp22 = closure_1_8(cResult[3], obj5);
+    cResult[4] = cResult[3];
+    cResult[5] = tmp4.iconComponent;
+    cResult[6] = tmp22;
+    tmp20 = tmp22;
   }
-  const obj5 = { size: "custom", style: tmp4.iconComponent };
-  const tmp19 = metroImportAll(tmp13, obj5);
-  cResult[4] = tmp13;
-  cResult[5] = tmp4.iconComponent;
-  cResult[6] = tmp19;
-  tmp18 = tmp19;
 }) : ((action) => {
-  let RobotIcon;
-  let items;
-  let items1;
-  let tmp4;
   action = action.action;
   const tmp = closure_10();
   const tmp2 = hasOwnProperty(action);
-  if (metroRequire.CREATE === tmp2) {
-    tmp4 = AssetRegistryDefault;
-  } else if (metroRequire.UPDATE === tmp2) {
-    tmp4 = AssetRegistryDefault2;
+  if (constants.CREATE === tmp2) {
+    let tmp4 = _modDef17770;
+  } else if (constants.UPDATE === tmp2) {
+    tmp4 = _modDef17771;
   } else {
     tmp4 = null;
-    if (metroRequire.DELETE === tmp2) {
-      tmp4 = AssetRegistryDefault3;
+    if (constants.DELETE === tmp2) {
+      tmp4 = _modDef17772;
     }
   }
-  if (action === metroImportDefault.MESSAGE_DELETE) {
-    RobotIcon = ChatIcon.ChatIcon;
+  if (action === constants2.MESSAGE_DELETE) {
+    let RobotIcon = ChatIcon.ChatIcon;
   } else {
-    if (action !== metroImportDefault.AUTO_MODERATION_BLOCK_MESSAGE) {
-      if (action !== metroImportDefault.AUTO_MODERATION_FLAG_TO_CHANNEL) {
-        if (action !== metroImportDefault.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) {
-          if (action !== metroImportDefault.AUTO_MODERATION_QUARANTINE_USER) {
-            RobotIcon = obj2[tmp11];
+    if (action !== constants2.AUTO_MODERATION_BLOCK_MESSAGE) {
+      if (action !== constants2.AUTO_MODERATION_FLAG_TO_CHANNEL) {
+        if (action !== constants2.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) {
+          if (action !== constants2.AUTO_MODERATION_QUARANTINE_USER) {
+            RobotIcon = obj3[tmp11];
           }
         }
       }
     }
     RobotIcon = RobotIcon2.RobotIcon;
   }
-  obj2 = { size: "custom", style: tmp.iconComponent };
-  const obj = { style: tmp.actionImageContainer, children: items };
-  items = [metroImportAll(RobotIcon, obj2), , ];
-  const obj3 = { style: items1 };
-  items1 = [, ];
+  const obj = { style: tmp.actionImageContainer, children: null };
+  const items = [closure_1_8(RobotIcon, { size: "custom", style: tmp.iconComponent }), , ];
+  obj3 = { style: null };
+  const items1 = [, ];
   ({ actionImageOverlay: arr2[0], actionImage: arr2[1] } = tmp);
-  items[1] = metroImportAll(View, obj3);
-  const obj4 = { style: tmp.actionImage, source: tmp4, disableColor: true };
-  items[2] = metroImportAll(native.Icon, obj4);
-  return React4(View, obj);
+  obj3.style = items1;
+  items[1] = closure_1_8(View, obj3);
+  items[2] = closure_1_8(native.Icon, { style: tmp.actionImage, source: tmp4, disableColor: true });
+  obj.children = items;
+  return options(View, obj);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((action) => {
-  let tmp3;
-  const obj = react2;
-  const cResult = obj.c(5);
+ReactCompilerGating = fn(558);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_moderation/native/AuditLogActionIcon.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((action) => {
+  const cResult = c.c(5);
   const tmp2 = closure_10();
   action = action.action;
   if (cResult[0] !== action) {
-    obj2 = { action };
-    const tmp6 = metroImportAll(closure_12, obj2);
+    const obj2 = { action };
+    const tmp6 = closure_1_8(closure_12, obj2);
     cResult[0] = action;
     cResult[1] = tmp6;
-    tmp3 = tmp6;
+    let tmp3 = tmp6;
   } else {
     tmp3 = cResult[1];
   }
   if (cResult[2] === tmp2.actionImageContainer) {
-    let tmp7;
     if (cResult[3] === tmp3) {
-      tmp7 = cResult[4];
+      let tmp7 = cResult[4];
     }
     return tmp7;
   }
-  const obj3 = { style: tmp2.actionImageContainer, children: tmp3 };
-  const tmp8 = metroImportAll(View, obj3);
+  const tmp8 = closure_1_8(View, { style: tmp2.actionImageContainer, children: tmp3 });
   cResult[2] = tmp2.actionImageContainer;
   cResult[3] = tmp3;
   cResult[4] = tmp8;
   tmp7 = tmp8;
+  obj3 = { style: tmp2.actionImageContainer, children: tmp3 };
 }) : ((action) => {
-  const obj = { style: closure_10().actionImageContainer, children: metroImportAll(closure_12, obj2) };
-  obj2 = { action: action.action };
-  return metroImportAll(View, obj);
+  const obj = { style: closure_10().actionImageContainer, children: closure_1_8(closure_12, { action: action.action }) };
+  return closure_1_8(View, obj);
 });
-size = size_mod;
-const result = size.fileFinishedImporting("modules/guild_moderation/native/AuditLogActionIcon.tsx");
-
-export default tmp6;

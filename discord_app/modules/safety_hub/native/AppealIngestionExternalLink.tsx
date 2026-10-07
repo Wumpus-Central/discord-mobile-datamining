@@ -1,76 +1,62 @@
 // === Module 11525: AppealIngestionExternalLink ===
 
 // Module 11525 (AppealIngestionExternalLink)
-import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import LinkingDefault from "Linking" /* 4571 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import Pressables from "Pressables" /* 5916 */;
-import AssetRegistry from "AssetRegistry" /* 8322 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _mod8322 from "module_8322" /* 8322 */;
+import noop from "module_19" /* 19 */;
 
-let onPress;
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { childButton: { marginBottom: 8, borderRadius: nativeDefault.radii.xs }, childContainer: null, childButtonText: null, chevron: null };
+let obj3 = { marginBottom: 8, borderRadius: nativeDefault.radii.xs };
+obj2.childContainer = { minHeight: 60, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingVertical: 16, paddingStart: 16, paddingEnd: 8, borderRadius: nativeDefault.radii.xs };
+obj2.childButtonText = { flex: 1, lineHeight: 20 };
+let obj4 = { minHeight: 60, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingVertical: 16, paddingStart: 16, paddingEnd: 8, borderRadius: nativeDefault.radii.xs };
+obj2.chevron = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let closure_6 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj5 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionExternalLink.tsx");
 
-let closure_4;
-let hasOwnProperty;
-let obj2;
-let obj3;
-let obj4;
-const View = react_native.View;
-({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { childButton: obj2, childContainer: obj3, childButtonText: { flex: 1, lineHeight: 20 }, chevron: obj4 };
-obj2 = { marginBottom: 8, borderRadius: nativeDefault.radii.xs };
-createStyles = createStyles.createStyles;
-obj3 = { minHeight: 60, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingVertical: 16, paddingStart: 16, paddingEnd: 8, borderRadius: nativeDefault.radii.xs };
-obj4 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-let closure_6 = createStyles(obj);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
-  let items;
-  let text;
-  let url;
-  let obj = url(576);
-  const cResult = obj.c(16);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
+  const cResult = url(576).c(16);
   ({ text, url } = onPress);
   onPress = onPress.onPress;
   const tmp4 = closure_6();
   if (cResult[0] === onPress) {
-    let tmp5;
     if (cResult[1] === url) {
-      tmp5 = cResult[2];
+      let tmp5 = cResult[2];
     }
     if (cResult[3] === tmp4.childButtonText) {
-      let tmp6;
-      let tmp9;
       if (cResult[4] === text) {
-        tmp6 = cResult[5];
+        let tmp6 = cResult[5];
       }
       if (cResult[6] !== tmp4.chevron.color) {
         const obj2 = { source: url(8322), color: tmp4.chevron.color };
-        const Icon = url(1188).Icon;
-        const tmp11 = closure_4(Icon, obj2);
+        const tmp11 = closure_4(url(1188).Icon, obj2);
         cResult[6] = tmp4.chevron.color;
         cResult[7] = tmp11;
-        tmp9 = tmp11;
+        let tmp9 = tmp11;
       } else {
         tmp9 = cResult[7];
       }
       if (cResult[8] === tmp4.childContainer) {
         if (cResult[9] === tmp6) {
-          let tmp12;
           if (cResult[10] === tmp9) {
-            tmp12 = cResult[11];
+            let tmp12 = cResult[11];
           }
           if (cResult[12] === tmp5) {
             if (cResult[13] === tmp4.childButton) {
-              let tmp16;
               if (cResult[14] === tmp12) {
-                tmp16 = cResult[15];
+                let tmp16 = cResult[15];
               }
               return tmp16;
             }
@@ -84,8 +70,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
           tmp16 = tmp18;
         }
       }
-      const obj4 = { style: tmp4.childContainer, children: items };
-      items = [tmp6, tmp9];
+      const obj4 = { style: tmp4.childContainer, children: null };
+      const items = [tmp6, tmp9];
+      obj4.children = items;
       const tmp15 = closure_5(View, obj4);
       cResult[8] = tmp4.childContainer;
       cResult[9] = tmp6;
@@ -104,41 +91,30 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
     if (onPress != null) {
       tmp();
     }
-    const obj = LinkingDefault;
-    obj.openURL(url);
+    LinkingDefault.openURL(url);
   };
   cResult[0] = onPress;
   cResult[1] = url;
   cResult[2] = fn;
   tmp5 = fn;
-}) : ((text) => {
-  let items;
-  let obj2;
-  ({ url: require, onPress: importDefault } = text);
-  text = text.text;
+  const obj = url(576);
+}) : ((children) => {
+  ({ url: require, onPress: importDefault } = children);
   const tmp = closure_6();
-  let obj = {
+  const obj = {
     style: tmp.childButton,
     accessibilityRole: "button",
     onPress() {
-      if (importDefault != null) {
+      if (closure_1_1 != null) {
         tmp();
       }
-      const obj = LinkingDefault;
-      obj.openURL(require);
+      LinkingDefault.openURL(require);
     },
-    children: closure_5(View, obj2)
+    children: null
   };
-  obj2 = { style: tmp.childContainer, children: items };
-  const PressableHighlight = Pressables.PressableHighlight;
-  items = [, ];
-  const obj3 = { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: text };
-  items[0] = closure_4(Text_Text.Text, obj3);
-  const obj4 = { source: AssetRegistry, color: tmp.chevron.color };
-  const Icon = native.Icon;
-  items[1] = closure_4(Icon, obj4);
-  return closure_4(PressableHighlight, obj);
+  const obj2 = { style: tmp.childContainer, children: null };
+  const items = [closure_4(Text_Text.Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: children.text }), closure_4(native.Icon, { source: _mod8322, color: tmp.chevron.color })];
+  obj2.children = items;
+  obj.children = closure_5(View, obj2);
+  return closure_4(Pressables.PressableHighlight, obj);
 });
-const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionExternalLink.tsx");
-
-export default tmp5;

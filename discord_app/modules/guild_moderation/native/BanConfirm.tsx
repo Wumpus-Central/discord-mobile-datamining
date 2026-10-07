@@ -3,133 +3,165 @@
 // Module 11476 (BanConfirm)
 import nativeDefault from "native" /* 587 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import intl7 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let banUserResult, catchPromise, guildId, nextPromise, ref, ref2, tmp13, tmp3, tmp4, tmp5, tmp6, tmp7;
 
-let c10;
-let closure_12;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-let obj10;
-let obj11;
-let obj12;
-let obj13;
-let obj14;
-let obj9;
-let unpackModuleId;
-({ Image: hasOwnProperty, View: metroRequire, ScrollView: metroImportDefault } = react_native);
-({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = Fragment);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: hasOwnProperty, View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+let items = [
+  {
+    value: 0,
+    getLabel() {
+      const intl = util.intl;
+      return intl.string(util.t["4obaMS"]);
+    }
+  },
+  {
+    value: DurationsDefault.Seconds.HOUR,
+    getLabel() {
+      const intl = util.intl;
+      return intl.string(util.t.RKpitY);
+    }
+  },
+,
+,
+,
+,
+
+];
 let obj = {
   value: 0,
   getLabel() {
-    const intl = intl7.intl;
-    return intl.string(intl7.t["4obaMS"]);
+    const intl = util.intl;
+    return intl.string(util.t["4obaMS"]);
   }
 };
-let items = [obj, , , , , , ];
 let obj2 = {
   value: DurationsDefault.Seconds.HOUR,
   getLabel() {
-    const intl = intl7.intl;
-    return intl.string(intl7.t.RKpitY);
+    const intl = util.intl;
+    return intl.string(util.t.RKpitY);
   }
 };
-items[1] = obj2;
+items[2] = {
+  value: 6 * DurationsDefault.Seconds.HOUR,
+  getLabel() {
+    const intl = util.intl;
+    return intl.string(util.t["8WfJZ8"]);
+  }
+};
 let obj3 = {
   value: 6 * DurationsDefault.Seconds.HOUR,
   getLabel() {
-    const intl = intl7.intl;
-    return intl.string(intl7.t["8WfJZ8"]);
+    const intl = util.intl;
+    return intl.string(util.t["8WfJZ8"]);
   }
 };
-items[2] = obj3;
+items[3] = {
+  value: 12 * DurationsDefault.Seconds.HOUR,
+  getLabel() {
+    const intl = util.intl;
+    return intl.string(util.t.p1up7u);
+  }
+};
 let obj4 = {
   value: 12 * DurationsDefault.Seconds.HOUR,
   getLabel() {
-    const intl = intl7.intl;
-    return intl.string(intl7.t.p1up7u);
+    const intl = util.intl;
+    return intl.string(util.t.p1up7u);
   }
 };
-items[3] = obj4;
+items[4] = {
+  value: DurationsDefault.Seconds.DAY,
+  getLabel() {
+    const intl = util.intl;
+    return intl.string(util.t.XuVkkD);
+  }
+};
 let obj5 = {
   value: DurationsDefault.Seconds.DAY,
   getLabel() {
-    const intl = intl7.intl;
-    return intl.string(intl7.t.XuVkkD);
+    const intl = util.intl;
+    return intl.string(util.t.XuVkkD);
   }
 };
-items[4] = obj5;
+items[5] = {
+  value: 3 * DurationsDefault.Seconds.DAY,
+  getLabel() {
+    const intl = util.intl;
+    return intl.string(util.t["gMcDS+"]);
+  }
+};
 let obj6 = {
   value: 3 * DurationsDefault.Seconds.DAY,
   getLabel() {
-    const intl = intl7.intl;
-    return intl.string(intl7.t["gMcDS+"]);
+    const intl = util.intl;
+    return intl.string(util.t["gMcDS+"]);
   }
 };
-items[5] = obj6;
+items[6] = {
+  value: 7 * DurationsDefault.Seconds.DAY,
+  getLabel() {
+    const intl = util.intl;
+    return intl.string(util.t.FA7IUk);
+  }
+};
+const createStyles = fn(4896);
+let obj8 = { container: null, iconLabelBlock: null, iconStyles: null, blurb: null, redText: null, errorText: null };
 let obj7 = {
   value: 7 * DurationsDefault.Seconds.DAY,
   getLabel() {
-    const intl = intl7.intl;
-    return intl.string(intl7.t.FA7IUk);
+    const intl = util.intl;
+    return intl.string(util.t.FA7IUk);
   }
 };
-items[6] = obj7;
-let createStyles = createStyles_mod;
-let obj8 = { container: obj9, iconLabelBlock: obj10, iconStyles: obj11, blurb: obj12, redText: obj13, errorText: obj14 };
-obj9 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles = createStyles.createStyles;
-obj10 = { marginTop: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16, alignItems: "center" };
-obj11 = { height: 1.25 * nativeDefault.space.PX_96 };
-obj12 = { marginVertical: nativeDefault.space.PX_16 };
-obj13 = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_4, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
-obj14 = { marginBottom: nativeDefault.space.PX_16 };
-let closure_14 = createStyles(obj8);
-const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
-  let closure_7;
-  let first;
-  let onBan;
-  let stateFromStores1;
-  let tmp10;
-  let tmp12;
-  let tmp16;
-  let tmp9;
-  let tmp2 = onBan;
-  let obj = guildId(onBan[11]);
-  const cResult = obj.c(22);
+obj8.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let obj10 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj8.iconLabelBlock = { marginTop: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16, alignItems: "center" };
+let obj11 = { marginTop: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16, alignItems: "center" };
+obj8.iconStyles = { height: 1.25 * nativeDefault.space.PX_96 };
+let obj12 = { height: 1.25 * nativeDefault.space.PX_96 };
+obj8.blurb = { marginVertical: nativeDefault.space.PX_16 };
+let obj13 = { marginVertical: nativeDefault.space.PX_16 };
+obj8.redText = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_4, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
+let obj14 = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_4, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
+obj8.errorText = { marginBottom: nativeDefault.space.PX_16 };
+let closure_14 = createStyles.createStyles(obj8);
+const ReactCompilerGating = fn(558);
+let obj15 = { marginBottom: nativeDefault.space.PX_16 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_moderation/native/BanConfirm.tsx");
+
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+  const cResult = guildId(onBan[11]).c(22);
   guildId = guildId.guildId;
   const userId = guildId.userId;
   onBan = guildId.onBan;
   closure_14();
   ref = stateFromStores1.useRef(null);
-  const ref1 = stateFromStores1.useRef(null);
+  let obj = guildId(onBan[11]);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { includeKeyboardHeight: true };
     cResult[0] = obj3;
-    first = obj3;
+    let first = obj3;
   } else {
     first = cResult[0];
   }
   const insets = userId(tmp2[12])(first).insets;
-  const tmp8 = userId;
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    items = [{ ref: ref1, offset: { type: "toBottom" } }];
     const obj4 = { ref: ref1, offset: { type: "toBottom" } };
+    items = [obj4];
     cResult[1] = items;
-    tmp9 = items;
+    let tmp9 = items;
   } else {
     tmp9 = cResult[1];
   }
@@ -137,15 +169,15 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((g
     const obj5 = { insets, inputs: tmp9, scrollViewRef: ref };
     cResult[2] = insets;
     cResult[3] = obj5;
-    tmp10 = obj5;
+    let tmp10 = obj5;
   } else {
     tmp10 = cResult[3];
   }
-  tmp8(tmp2[13])(tmp10);
+  userId(onBan[13])(tmp10);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [GuildStore];
     cResult[4] = items1;
-    tmp12 = items1;
+    let tmp12 = items1;
   } else {
     tmp12 = cResult[4];
   }
@@ -164,8 +196,8 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((g
       }
     }
   }
-  const tmpResult = guildId(tmp2[14]);
-  const stateFromStores = tmpResult.useStateFromStores(tmp12, I);
+  ref1 = stateFromStores1.useRef(null);
+  const stateFromStores = guildId(onBan[14]).useStateFromStores(tmp12, I);
   if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
     class I {
       constructor() {
@@ -174,7 +206,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((g
     }
     const items2 = [UserStore];
     cResult[7] = items2;
-    tmp16 = items2;
+    const tmp16 = items2;
   } else {
     class I {
       constructor() {
@@ -197,10 +229,10 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((g
       }
     }
   }
-  const tmpResult2 = guildId(tmp2[14]);
-  stateFromStores1 = tmpResult2.useStateFromStores(tmp16, tmp18);
+  const tmpResult = guildId(onBan[14]);
+  stateFromStores1 = guildId(onBan[14]).useStateFromStores(tmp16, tmp18);
   ref = obj2.useRef(0);
-  ref2 = obj2.useRef("");
+  stateFromStores1.useRef("");
   if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
     class V {
       constructor() {
@@ -215,8 +247,8 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((g
       }
     }
   }
+  const tmpResult2 = guildId(onBan[14]);
   [r10103, closure_7] = stateFromStores(stateFromStores1.useState(V), 2);
-  stateFromStores(stateFromStores1.useState(V), 2);
   if (cResult[11] === stateFromStores) {
     class V {
       constructor() {
@@ -246,7 +278,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((g
         banUserResult = obj.banUser(tmp.id, closure_4.id, closure_13[closure_5.current].value, closure_6.current);
         tmp13 = onBan;
         nextPromise = banUserResult.then(onBan);
-        catchPromise = nextPromise.catch(() => { /* body not rendered: F141601 */ });
+        catchPromise = nextPromise.catch(() => { ... });
       }
       return;
     }
@@ -255,34 +287,8 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((g
   cResult[12] = onBan;
   cResult[13] = stateFromStores1;
   cResult[14] = M;
+  const tmp21 = stateFromStores(stateFromStores1.useState(V), 2);
 }) : ((arg0) => {
-  let Button;
-  let Qd6w7T;
-  let _undefined;
-  let c7;
-  let format;
-  let format2;
-  let format3;
-  let intl3;
-  let intl4;
-  let intl5;
-  let items4;
-  let obj12;
-  let obj15;
-  let obj17;
-  let obj18;
-  let obj20;
-  let obj21;
-  let obj5;
-  let obj9;
-  let onBan;
-  let prop;
-  let tmp11;
-  let tmp4Result;
-  let tmp4Result3;
-  let tmp4Result4;
-  let v8jV9fx;
-  const f108034 = () => ({ banning: false, banError: false });
   ({ guildId: require, userId: importDefault, onBan } = arg0);
   let stateFromStores1;
   c7 = undefined;
@@ -290,102 +296,91 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((g
   ref = stateFromStores1.useRef(null);
   const ref1 = stateFromStores1.useRef(null);
   const insets = require("useSafeAreaInsetsKeyboardAware")({ includeKeyboardHeight: true }).insets;
-  let obj = { insets, inputs: items, scrollViewRef: ref };
+  let obj = { insets, inputs: null, scrollViewRef: ref };
   items = [{ ref: ref1, offset: { type: "toBottom" } }];
+  obj.inputs = items;
   require("useSafeAreaAvoidingInputs")(obj);
   const items1 = [GuildStore];
-  const obj2 = require("get initialized");
-  const stateFromStores = obj2.useStateFromStores(items1, () => GuildStore.getGuild(require));
+  const stateFromStores = require("initialize").useStateFromStores(items1, () => GuildStore.getGuild(require));
+  const obj2 = require("initialize");
   const items2 = [UserStore];
-  const obj3 = require("get initialized");
-  stateFromStores1 = obj3.useStateFromStores(items2, () => UserStore.getUser(importDefault));
+  stateFromStores1 = require("initialize").useStateFromStores(items2, () => UserStore.getUser(importDefault));
   ref = stateFromStores1.useRef(0);
   ref2 = stateFromStores1.useRef("");
-  [tmp11, c7] = stateFromStores(stateFromStores1.useState(f108034), 2);
+  const obj3 = require("initialize");
+  [tmp11, c7] = stateFromStores(stateFromStores1.useState(() => ({ banning: false, banError: false })), 2);
   const items3 = [stateFromStores, stateFromStores1, onBan];
   let tmp14Result2 = null;
-  stateFromStores(stateFromStores1.useState(f108034), 2);
   if (null != stateFromStores1) {
     tmp14Result2 = null;
     if (null != stateFromStores) {
-      const obj4 = { style: tmp.container, ref, contentContainerStyle: obj5, children: closure_11(closure_12, obj21) };
-      obj5 = { paddingHorizontal: require("native").space.PX_24, paddingBottom: insets.bottom };
-      const obj6 = { style: tmp.iconLabelBlock, children: items4 };
-      const obj7 = { style: tmp.iconStyles, source: require("AssetRegistry"), resizeMode: "contain" };
-      items4 = [closure_10(ref, obj7), , ];
-      const obj8 = { style: tmp.redText, variant: "text-md/semibold", children: format(Qd6w7T, obj9) };
-      const Text = require("Text/Text").Text;
-      const intl = require("intl").intl;
-      format = intl.format;
-      obj9 = { username: tmp4Result.getName(stateFromStores1) };
-      Qd6w7T = require("intl").t.Qd6w7T;
-      tmp4Result = require("UserUtils");
-      items4[1] = closure_10(Text, obj8);
+      const obj4 = { style: tmp.container, ref, contentContainerStyle: null, children: null };
+      const obj5 = { paddingHorizontal: require("native").space.PX_24, paddingBottom: insets.bottom };
+      obj4.contentContainerStyle = obj5;
+      const obj6 = { style: tmp.iconLabelBlock, children: null };
+      const obj7 = { style: tmp.iconStyles, source: require("module_11477"), resizeMode: "contain" };
+      const items4 = [closure_10(ref, obj7), , ];
+      const obj8 = { style: tmp.redText, variant: "text-md/semibold", children: null };
+      const intl = require("util").intl;
+      const obj9 = { username: require("UserUtils").getName(stateFromStores1) };
+      obj8.children = intl.format(require("util").t.Qd6w7T, obj9);
+      items4[1] = closure_10(require("Text/Text").Text, obj8);
       const obj10 = { variant: "text-lg/bold", color: "text-feedback-warning", children: stateFromStores.name };
       items4[2] = closure_10(require("Text/Text").Text, obj10);
+      obj6.children = items4;
       const items5 = [closure_11(ref2, obj6), , , , , ];
-      const obj11 = { style: tmp.blurb, variant: "heading-md/normal", color: "text-feedback-warning", children: format2(v8jV9fx, obj12) };
-      const Text2 = require("Text/Text").Text;
-      const intl2 = require("intl").intl;
-      format2 = intl2.format;
-      obj12 = { user: tmp4Result3.getName(stateFromStores1) };
-      v8jV9fx = require("intl").t["8jV9fx"];
-      tmp4Result3 = require("UserUtils");
-      items5[1] = closure_10(Text2, obj11);
-      const obj13 = {
-        title: intl3.string(require("intl").t["8l3W0y"]),
-        defaultValue: items[0].value,
-        onChange(current) {
-              ref.current = current;
-            },
-        hasIcons: false,
-        children: items.map((getLabel, value) => {
-              const obj = { value, label: getLabel.getLabel() };
-              const TableRadioRow = require("TableRadioRow").TableRadioRow;
-              return closure_1_10(TableRadioRow, obj, value);
-            })
+      const obj11 = { style: tmp.blurb, variant: "heading-md/normal", color: "text-feedback-warning", children: null };
+      const intl2 = require("util").intl;
+      const obj12 = { user: null };
+      const tmp15 = c7;
+      const tmp4Result = require("UserUtils");
+      obj12.user = require("UserUtils").getName(stateFromStores1);
+      obj11.children = intl2.format(require("util").t["8jV9fx"], obj12);
+      items5[1] = closure_10(require("Text/Text").Text, obj11);
+      const obj13 = { title: null, defaultValue: null, onChange: null, hasIcons: false, children: null };
+      const intl3 = require("util").intl;
+      obj13.title = intl3.string(require("util").t["8l3W0y"]);
+      obj13.defaultValue = items[0].value;
+      obj13.onChange = function onChange(current) {
+        closure_5.current = current;
       };
-      const TableRadioGroup = require("TableRadioGroup").TableRadioGroup;
-      intl3 = require("intl").intl;
-      items5[2] = closure_10(TableRadioGroup, obj13);
-      const obj14 = {
-        ref: ref1,
-        containerStyle: obj15,
-        label: intl4.string(require("intl").t.w4Ivys),
-        maxLength: 512,
-        onChange(current) {
-              ref2.current = current;
-            }
+      obj13.children = items.map((getLabel, value) => closure_1_10(require("TableRadioRow").TableRadioRow, { value, label: getLabel.getLabel() }, value));
+      items5[2] = closure_10(require("TableRadioGroup").TableRadioGroup, obj13);
+      const obj14 = { ref: ref1, containerStyle: null, label: null, maxLength: 512, onChange: null };
+      const obj15 = { marginVertical: require("native").space.PX_16 };
+      obj14.containerStyle = obj15;
+      const intl4 = require("util").intl;
+      obj14.label = intl4.string(require("util").t.w4Ivys);
+      obj14.onChange = function onChange(current) {
+        closure_6.current = current;
       };
-      obj15 = { marginVertical: require("native").space.PX_16 };
-      const TextArea = require("TextArea").TextArea;
-      intl4 = require("intl").intl;
-      items5[3] = closure_10(TextArea, obj14);
-      const obj16 = { style: obj17, children: closure_10(Button, obj18) };
-      obj17 = { marginBottom: require("native").space.PX_16 };
-      obj18 = { variant: "destructive", text: intl5.string(require("intl").t["5MBJ5M"]), onPress: tmp12, disabled: tmp11.banning };
-      Button = require("components/Button/Button").Button;
-      intl5 = require("intl").intl;
+      items5[3] = closure_10(require("TextArea").TextArea, obj14);
+      const obj16 = { style: null, children: null };
+      const obj17 = { marginBottom: require("native").space.PX_16 };
+      obj16.style = obj17;
+      const obj18 = { variant: "destructive", text: null, onPress: null, disabled: null };
+      const intl5 = require("util").intl;
+      obj18.text = intl5.string(require("util").t["5MBJ5M"]);
+      obj18.onPress = tmp12;
+      obj18.disabled = tmp11.banning;
+      obj16.children = closure_10(require("components/Button/Button").Button, obj18);
       items5[4] = closure_10(ref2, obj16);
       let tmp14Result = null;
-      const tmp15 = c7;
       if (tmp11.banError) {
-        const obj19 = { style: tmp.errorText, variant: "text-md/semibold", color: "input-text-error-default", children: format3(prop, obj20) };
-        const Text3 = require("Text/Text").Text;
-        const intl6 = require("intl").intl;
-        format3 = intl6.format;
-        obj20 = { user: tmp4Result4.getName(stateFromStores1) };
-        prop = require("intl").t["/K6eer"];
-        tmp4Result4 = require("UserUtils");
-        tmp14Result = closure_10(Text3, obj19);
+        const obj19 = { style: tmp.errorText, variant: "text-md/semibold", color: "input-text-error-default", children: null };
+        const intl6 = require("util").intl;
+        const obj20 = { user: require("UserUtils").getName(stateFromStores1) };
+        obj19.children = intl6.format(require("util").t["/K6eer"], obj20);
+        tmp14Result = closure_10(require("Text/Text").Text, obj19);
+        const tmp4Result4 = require("UserUtils");
       }
-      obj21 = { children: items5 };
+      const obj21 = { children: null };
       items5[5] = tmp14Result;
+      obj21.children = items5;
+      obj4.children = closure_11(closure_12, obj21);
       tmp14Result2 = closure_10(tmp15, obj4);
+      const tmp4Result3 = require("UserUtils");
     }
   }
   return tmp14Result2;
 }));
-const result = size.fileFinishedImporting("modules/guild_moderation/native/BanConfirm.tsx");
-
-export default memoResult;

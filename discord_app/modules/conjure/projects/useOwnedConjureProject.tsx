@@ -3,42 +3,35 @@
 // Module 12283 (useOwnedConjureProject)
 import useIsOwnedConjureApplicationDefault from "useIsOwnedConjureApplication" /* 8733 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 8734 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, importDefault;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
-  let closure_0;
-  let closure_1;
-  let first;
+const require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/conjure/projects/useOwnedConjureProject.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   _require = arg0;
-  const obj = require("react");
-  const cResult = obj.c(8);
+  const cResult = require("c").c(8);
   const tmp4 = useIsOwnedConjureApplicationDefault(arg0, arg1);
   importDefault = tmp4;
-  const tmp = _require;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ConjureProjectStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === arg0) {
-    let tmp7;
-    let tmp8;
     if (cResult[2] === tmp4) {
-      tmp7 = cResult[3];
-      tmp8 = cResult[4];
+      let tmp7 = cResult[3];
+      let tmp8 = cResult[4];
     }
-    const tmpResult = tmp(504);
-    const stateFromStores = tmpResult.useStateFromStores(first, tmp7, tmp8);
+    const stateFromStores = tmp(504).useStateFromStores(first, tmp7, tmp8);
     if (cResult[5] === tmp4) {
-      let tmp10;
       if (cResult[6] === stateFromStores) {
-        tmp10 = cResult[7];
+        let tmp10 = cResult[7];
       }
       return tmp10;
     }
@@ -47,6 +40,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     cResult[6] = stateFromStores;
     cResult[7] = obj2;
     tmp10 = obj2;
+    const tmpResult = tmp(504);
   }
   const fn = function l() {
     let result = null;
@@ -65,18 +59,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[4] = items1;
   tmp8 = items1;
   tmp7 = fn;
+  const obj = require("c");
+  tmp = _require;
 }) : ((arg0, arg1) => {
-  let closure_0;
-  let closure_1;
   _require = arg0;
   const tmp = useIsOwnedConjureApplicationDefault(arg0, arg1);
   importDefault = tmp;
   const items = [ConjureProjectStore];
   const items1 = [tmp, arg0];
-  const obj = require("get initialized");
-  const obj2 = {
+  const obj = require("initialize");
+  return {
     isOwned: tmp,
-    project: obj.useStateFromStores(items, () => {
+    project: require("initialize").useStateFromStores(items, () => {
       let result = null;
       if (true === closure_1) {
         result = null;
@@ -87,8 +81,4 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
       return result;
     }, items1)
   };
-  return obj2;
 });
-let result = size.fileFinishedImporting("modules/conjure/projects/useOwnedConjureProject.tsx");
-
-export default tmp2;

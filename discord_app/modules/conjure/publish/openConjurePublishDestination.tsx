@@ -1,20 +1,19 @@
 // === Module 16653: openConjurePublishDestination ===
 
 // Module 16653 (openConjurePublishDestination)
-import Constants from "Constants" /* 1085 */;
 import router_utils from "router_utils" /* 1112 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
 import transitionToGuild from "transitionToGuild" /* 6855 */;
-import FramesConstants from "FramesConstants" /* 8738 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 9019 */;
 import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 9027 */;
 import ApplicationStore from "ApplicationStore" /* 5124 */;
 import GuildChannelStore from "GuildChannelStore" /* 4513 */;
 import UserStore from "UserStore" /* 1377 */;
-import size from "module_2" /* 2 */;
 
-const Routes = Constants.Routes;
-const MAIN_SURFACE = FramesConstants.MAIN_SURFACE;
+require = fn;
+const Routes = fn(1085).Routes;
+const MAIN_SURFACE = fn(8738).MAIN_SURFACE;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/openConjurePublishDestination.tsx");
 
 export const openConjureProductionDm = function openConjureProductionDm(arg0) {
@@ -29,26 +28,19 @@ export const openConjureProductionDm = function openConjureProductionDm(arg0) {
   if (recipientIds == null) {
     recipientIds = arg0;
   }
-  const obj = ChannelActionCreatorsDefault;
-  return obj.openPrivateChannel({ recipientIds });
+  return ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds });
 };
 export const openConjurePublishDestination = function openConjurePublishDestination(destination, arg1) {
-  let appChannelId;
-  let applicationId;
-  let guildId;
-  let openAutomodSettings;
   ({ applicationId, guildId, appChannelId, openAutomodSettings } = arg1);
   if ("launch" === destination) {
-    const obj = canLaunchContextlessFrame;
     if (obj.canLaunchContextlessFrame(ApplicationStore.getApplication(applicationId))) {
       const obj6 = { applicationId, surface: MAIN_SURFACE };
-      const obj5 = FramesActionCreatorsDefault;
-      const launchFrameResult = obj5.launchFrame(obj6);
-      launchFrameResult.catch(() => {
+      FramesActionCreatorsDefault.launchFrame(obj6).catch(() => {
 
       });
       return Promise.resolve();
     }
+    obj = canLaunchContextlessFrame;
   } else if ("profile" === destination) {
     const currentUser = UserStore.getCurrentUser();
     let id;
@@ -62,8 +54,7 @@ export const openConjurePublishDestination = function openConjurePublishDestinat
   } else if ("channel" === destination) {
     if (null != guildId) {
       if (null != appChannelId) {
-        const obj7 = router_utils;
-        obj7.transitionTo(Routes.CHANNEL(guildId, appChannelId));
+        router_utils.transitionTo(Routes.CHANNEL(guildId, appChannelId));
         return Promise.resolve();
       }
     }
@@ -76,7 +67,6 @@ export const openConjurePublishDestination = function openConjurePublishDestinat
     }
   }
   if ("dm" !== destination) {
-    let resolved;
     if (null != guildId) {
       const defaultChannel = GuildChannelStore.getDefaultChannel(guildId);
       let id1;
@@ -84,27 +74,23 @@ export const openConjurePublishDestination = function openConjurePublishDestinat
         id1 = defaultChannel.id;
       }
       if (null == id1) {
-        const obj4 = transitionToGuild;
-        obj4.transitionToGuild(guildId);
+        transitionToGuild.transitionToGuild(guildId);
       } else {
-        const obj3 = router_utils;
-        obj3.transitionTo(Routes.CHANNEL(guildId, id1));
+        router_utils.transitionTo(Routes.CHANNEL(guildId, id1));
       }
-      resolved = Promise.resolve();
+      const resolved = Promise.resolve();
     }
-    return resolved;
   }
   const application = ApplicationStore.getApplication(applicationId);
-  let id2;
+  let recipientIds;
   if (application != null) {
     const bot = application.bot;
     if (bot != null) {
-      id2 = bot.id;
+      recipientIds = bot.id;
     }
   }
-  if (id2 == null) {
-    id2 = applicationId;
+  if (recipientIds == null) {
+    recipientIds = applicationId;
   }
-  const obj2 = ChannelActionCreatorsDefault;
-  resolved = obj2.openPrivateChannel({ recipientIds: id2 });
+  return ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds });
 };

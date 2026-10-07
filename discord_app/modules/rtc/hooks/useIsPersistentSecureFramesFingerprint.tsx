@@ -1,47 +1,30 @@
 // === Module 9388: useIsPersistentSecureFramesFingerprint ===
 
 // Module 9388 (useIsPersistentSecureFramesFingerprint)
-import SecureFramesConstants from "SecureFramesConstants" /* 9380 */;
-import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
-import _slicedToArray_mod from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
-import size from "module_2" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let c6, c7, closure_2;
-
-let _asyncToGenerator = _asyncToGenerator_mod;
-let _slicedToArray = _slicedToArray_mod;
-let react = react_mod;
-let closure_5 = SecureFramesConstants.SECURE_FRAMES_PUBLIC_KEY_VERSION;
+const require = fn;
+let closure_5 = fn(9380).SECURE_FRAMES_PUBLIC_KEY_VERSION;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useIsPersistentSecureFramesFingerprint.tsx");
 
 export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSecureFramesFingerprint(userId) {
-  let _undefined;
-  let c3;
-  let closure_4;
-  let isOtherUserKeyPersistent;
-  let loading;
-  let tmp4;
   userId = userId.userId;
   const userKey = userId.userKey;
-  _asyncToGenerator = undefined;
   _slicedToArray = undefined;
-  react = undefined;
-  [loading, _asyncToGenerator] = react.useState(true);
-  const tmp3 = _slicedToArray(react.useState(false), 2);
-  [tmp4, c3] = tmp3;
-  [isOtherUserKeyPersistent, react] = react.useState(false);
-  const useCallback = react.useCallback;
-  let closure_0 = _asyncToGenerator(async (arg0, arg1) => {
-    let closure_3;
-    let obj2;
-    let obj5;
-    closure_0 = arg0;
-    let closure_1 = arg1;
+  noop = undefined;
+  const loading = _slicedToArray(noop.useState(true), 2);
+  asyncGeneratorStep = loading[1];
+  [tmp3, c3] = noop.useState(false);
+  const isOtherUserKeyPersistent = _slicedToArray(noop.useState(false), 2);
+  noop = isOtherUserKeyPersistent[1];
+  closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp7 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -51,10 +34,7 @@ export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSe
         return { value: "IconComponent", done: null };
       }
     } else {
-      let tmp47;
-      let c5;
       try {
-        let tmp;
         c7 = 2;
         if (0 === c6) {
           if (arg0 === 1) {
@@ -65,28 +45,33 @@ export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSe
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            closure_2 = undefined;
-            tmp = undefined;
-            tmp47 = undefined;
+            closure_2 = tmp8;
+            closure_130_0 = closure_0;
+            closure_130_1 = closure_1;
+            closure_130_2 = undefined;
+            closure_130_3 = undefined;
+            closure_130_4 = undefined;
             closure_2(true);
             c5 = 2;
-            closure_2 = callback;
+            closure_130_2 = callback;
             c6 = 3;
             c7 = 1;
-            const obj6 = { value: obj5.isCurrentUserPublicKeyMatch(callback), done: false };
-            obj5 = closure_0(userKey[4]);
+            const obj6 = { value: closure_0(userKey[4]).isCurrentUserPublicKeyMatch(callback), done: false };
             return obj6;
           }
-        } else if (1 === c6) {
+        } else if (1 === tmp8) {
           c5 = 0;
           closure_2(false);
-          throw tmp47;
+          throw tmp51;
         } else {
-          if (2 === c6) {
+          if (2 === tmp8) {
             c5 = 1;
-            tmp(false);
-            tmp47(false);
-          } else if (3 === c6) {
+            tmp4(false);
+            tmp51(false);
+            c5 = 0;
+            closure_2(false);
+            c7 = 3;
+          } else if (3 === tmp8) {
             if (arg0 === 1) {
               c7 = 3;
               throw value;
@@ -97,57 +82,58 @@ export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSe
               const obj7 = { value, done: true };
               return obj7;
             } else {
-              tmp = value;
+              closure_130_3 = value;
               c6 = 4;
               c7 = 1;
-              const obj8 = { value: obj2.isPublicKeyMatch(closure_0, closure_1, closure_2), done: false };
-              obj2 = closure_0(userKey[4]);
+              const obj8 = { value: closure_0(userKey[4]).isPublicKeyMatch(closure_130_0, closure_130_1, closure_130_2), done: false };
               return obj8;
             }
           } else if (arg0 === 1) {
             c7 = 3;
             throw value;
-          } else if (arg0 === 2) {
-            c5 = 0;
-            closure_2(false);
-            c7 = 3;
-            const obj = { value, done: true };
-            return obj;
-          } else {
-            tmp47 = value;
-            tmp(tmp);
-            tmp47(tmp47);
+          } else if (arg0 !== 2) {
+            closure_130_4 = value;
+            tmp4(closure_130_3);
+            tmp51(closure_130_4);
             c5 = 1;
           }
           c5 = 0;
           closure_2(false);
           c7 = 3;
-          return { value: "IconComponent", done: null };
+          const obj = { value, done: true };
+          return obj;
         }
-      } catch (tmp47) {
-        if (0 === c5) {
-          c7 = 3;
-          throw tmp47;
-        } else if (1 === tmp49) {
-          c6 = 1;
+      } catch (tmp51) {
+        if (tmp5 === c5) {
+          c7 = tmp3;
+          throw tmp51;
+        } else if (tmp2 === tmp53) {
+          c6 = tmp2;
         } else {
-          c6 = 2;
+          c6 = tmp;
         }
       }
     }
   });
-  const callback = useCallback(function() {
-    return closure_0(...arguments);
+  const callback = noop.useCallback(function() {
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   }, []);
   const items = [userKey, callback, userId];
-  const effect = react.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null == userKey) {
       _undefined(false);
       closure_4(false);
       closure_2(false);
     } else {
-      callback(userId, tmp);
+      callback(closure_0, tmp);
     }
   }, items);
-  return { loading, isCurrentUserKeyPersistent, isOtherUserKeyPersistent };
+  return { loading: loading[0], isCurrentUserKeyPersistent, isOtherUserKeyPersistent: isOtherUserKeyPersistent[0] };
 };

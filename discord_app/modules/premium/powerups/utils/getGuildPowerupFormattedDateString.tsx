@@ -2,8 +2,8 @@
 
 // Module 12172 (getGuildPowerupFormattedDateString)
 import LocaleStore from "LocaleStore" /* 2116 */;
-import size from "module_2" /* 2 */;
 
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/getGuildPowerupFormattedDateString.tsx");
 
 export default function getGuildPowerupFormattedDateString(arg0) {
@@ -11,10 +11,8 @@ export default function getGuildPowerupFormattedDateString(arg0) {
   if (arg1 === undefined) {
     date = { month: "numeric", day: "numeric" };
   }
-  const obj = { timeZone: "UTC" };
-  const toLocaleDateString = new Date(arg0).toLocaleDateString;
-  const locale = LocaleStore.locale;
-  new Date(arg0);
+  const obj = {};
   const merged = Object.assign(date);
-  return toLocaleDateString(locale, obj);
+  obj.timeZone = "UTC";
+  return new Date(arg0).toLocaleDateString(LocaleStore.locale, obj);
 };

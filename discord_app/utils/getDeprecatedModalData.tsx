@@ -1,20 +1,13 @@
 // === Module 5101: getDeprecatedModalData ===
 
 // Module 5101 (getDeprecatedModalData)
-import Constants from "Constants" /* 1085 */;
 import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import size from "module_2" /* 2 */;
 
-const ModalAnimation = Constants.ModalAnimation;
+const ModalAnimation = fn(1085).ModalAnimation;
+const size = fn(2);
 const result = size.fileFinishedImporting("utils/getDeprecatedModalData.tsx");
 
 export default function getDeprecatedModalData(modal, key, props) {
-  let animation;
-  let backdropStyle;
-  let flag;
-  let flag2;
-  let flag3;
-  let str2;
   let tmp = arg3;
   if (arg3 === undefined) {
     tmp = null;
@@ -26,30 +19,43 @@ export default function getDeprecatedModalData(modal, key, props) {
   if (str == null) {
     str = "modal";
   }
-  const obj = { key: str, modal, animation, shouldPersistUnderModals: flag, props, backdropStyle, backdropInstant: flag2, disableAnimation: flag3, closable: typeof key.closable !== "boolean" || key.closable, label: str2, callbacks: {} };
-  animation = key.animation;
-  if (animation == null) {
-    animation = AccessibilityStore.useReducedMotion ? ModalAnimation.FADE : ModalAnimation.SLIDE_UP;
+  const obj = { key: str, modal, animation: null, shouldPersistUnderModals: null, props: null, backdropStyle: null, backdropInstant: null, disableAnimation: null, closable: null, label: null, callbacks: null };
+  const animation = key.animation;
+  if (animation != null) {
+    obj.animation = animation;
+    let flag = key.shouldPersistUnderModals;
+    if (flag == null) {
+      flag = false;
+    }
+    obj.shouldPersistUnderModals = flag;
+    obj.props = props;
+    let backdropStyle = key.backdropStyle;
+    if (backdropStyle == null) {
+      backdropStyle = null;
+    }
+    obj.backdropStyle = backdropStyle;
+    let flag2 = key.backdropInstant;
+    if (flag2 == null) {
+      flag2 = false;
+    }
+    obj.backdropInstant = flag2;
+    let flag3 = key.disableAnimation;
+    if (flag3 == null) {
+      flag3 = false;
+    }
+    obj.disableAnimation = flag3;
+    const closable = key.closable;
+    let closable2 = typeof closable !== "boolean";
+    if (typeof closable === "boolean") {
+      closable2 = key.closable;
+    }
+    obj.closable = closable2;
+    let str2 = key.label;
+    if (str2 == null) {
+      str2 = "";
+    }
+    obj.label = str2;
+    obj.callbacks = {};
+    return obj;
   }
-  flag = key.shouldPersistUnderModals;
-  if (flag == null) {
-    flag = false;
-  }
-  backdropStyle = key.backdropStyle;
-  if (backdropStyle == null) {
-    backdropStyle = null;
-  }
-  flag2 = key.backdropInstant;
-  if (flag2 == null) {
-    flag2 = false;
-  }
-  flag3 = key.disableAnimation;
-  if (flag3 == null) {
-    flag3 = false;
-  }
-  str2 = key.label;
-  if (str2 == null) {
-    str2 = "";
-  }
-  return obj;
 };

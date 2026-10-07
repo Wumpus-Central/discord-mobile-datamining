@@ -3,21 +3,18 @@
 // Module 11903 (useChatInputFloatingWidth)
 import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
 import timing from "timing" /* 4897 */;
-import ChatInputConstants from "ChatInputConstants" /* 11589 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let expanded, set, set2;
-
-let closure_3 = ChatInputConstants.CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG;
+require = fn;
+let closure_3 = fn(11589).CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG;
 let closure_4 = { code: "function useChatInputFloatingWidthTsx1(){const{collapsedWidth,expandedWidth,progress}=this.__closure;return{width:collapsedWidth+(expandedWidth-collapsedWidth)*progress.get()};}" };
 const __initData = { code: "function useChatInputFloatingWidthTsx2(){const{collapsedWidth,expandedWidth,progress}=this.__closure;return{width:collapsedWidth+(expandedWidth-collapsedWidth)*progress.get()};}" };
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((expanded) => {
-  let collapsedWidth;
-  const tmp2 = collapsedWidth;
-  let obj = expanded(collapsedWidth[3]);
-  const cResult = obj.c(7);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/chat_input/native/action_buttons/useChatInputFloatingWidth.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((expanded) => {
+  const cResult = expanded(collapsedWidth[3]).c(7);
   expanded = expanded.expanded;
   collapsedWidth = expanded.collapsedWidth;
   const expandedWidth = expanded.expandedWidth;
@@ -26,64 +23,53 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((expanded) => {
   if (undefined !== enterDelayMs) {
     num = enterDelayMs;
   }
+  let obj = expanded(collapsedWidth[3]);
   let num2 = 0;
-  const useSharedValue = expanded(tmp2[4]).useSharedValue;
-  expanded(tmp2[4]);
   if (expanded) {
     num2 = 1;
   }
-  const sharedValue = useSharedValue(num2);
+  const sharedValue = expanded(collapsedWidth[4]).useSharedValue(num2);
   if (cResult[0] === num) {
     if (cResult[1] === expanded) {
-      let tmp6;
-      let tmp7;
-      let tmp12;
       if (cResult[2] === sharedValue) {
-        tmp6 = cResult[3];
-        tmp7 = cResult[4];
+        let tmp5 = cResult[3];
+        let tmp6 = cResult[4];
       }
-      const effect = expandedWidth.useEffect(tmp6, tmp7);
+      const effect = expandedWidth.useEffect(tmp5, tmp6);
       const fn2 = function w() {
-        let diff;
-        const obj = { width: collapsedWidth + diff * sharedValue.get() };
-        diff = expandedWidth - collapsedWidth;
+        const obj = { width: null };
+        const diff = expandedWidth - collapsedWidth;
+        obj.width = collapsedWidth + diff * sharedValue.get();
         return obj;
       };
-      const obj2 = { collapsedWidth, expandedWidth, progress: sharedValue };
+      let obj2 = { collapsedWidth, expandedWidth, progress: sharedValue };
       fn2.__closure = obj2;
       fn2.__workletHash = 2289574047387;
       fn2.__initData = sharedValue;
-      const tmpResult2 = expanded(tmp2[4]);
-      const animatedStyle = tmpResult2.useAnimatedStyle(fn2);
+      const animatedStyle = tmp(tmp2[4]).useAnimatedStyle(fn2);
       if (cResult[5] !== animatedStyle) {
-        const obj3 = { animatedStyle };
+        let obj3 = { animatedStyle };
         cResult[5] = animatedStyle;
         cResult[6] = obj3;
-        tmp12 = obj3;
+        let tmp11 = obj3;
       } else {
-        tmp12 = cResult[6];
+        tmp11 = cResult[6];
       }
-      return tmp12;
+      return tmp11;
     }
   }
   const fn = function l() {
     if (expanded) {
       if (0 > 0) {
-        set2 = sharedValue.set;
-        const withDelay = ReanimatedRexport.withDelay;
-        ReanimatedRexport;
-        const obj = timing;
-        set2(withDelay(tmp2, obj.withTiming(1, closure_3, "respect-motion-settings")));
+        const obj2 = ReanimatedRexport;
+        const result = sharedValue.set(obj2.withDelay(tmp2, timing.withTiming(1, closure_3, "respect-motion-settings")));
       }
     }
     let num2 = 0;
-    set = sharedValue.set;
-    const withTiming = timing.withTiming;
-    timing;
     if (expanded) {
       num2 = 1;
     }
-    const result = set(withTiming(num2, closure_3, "respect-motion-settings"));
+    const result1 = sharedValue.set(timing.withTiming(num2, closure_3, "respect-motion-settings"));
   };
   const items = [expanded, num, sharedValue];
   cResult[0] = num;
@@ -91,11 +77,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((expanded) => {
   cResult[2] = sharedValue;
   cResult[3] = fn;
   cResult[4] = items;
-  tmp7 = items;
-  tmp6 = fn;
+  tmp6 = items;
+  tmp5 = fn;
 }) : ((expanded) => {
-  let fn;
-  let tmpResult;
   expanded = expanded.expanded;
   const collapsedWidth = expanded.collapsedWidth;
   const expandedWidth = expanded.expandedWidth;
@@ -104,48 +88,36 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((expanded) => {
     num = 0;
   }
   let sharedValue;
-  const tmp2 = collapsedWidth;
   let num2 = 0;
-  const useSharedValue = expanded(collapsedWidth[4]).useSharedValue;
-  expanded(collapsedWidth[4]);
-  const tmp = expanded;
   if (expanded) {
     num2 = 1;
   }
-  sharedValue = useSharedValue(num2);
+  sharedValue = expanded(collapsedWidth[4]).useSharedValue(num2);
   const items = [expanded, num, sharedValue];
   const effect = expandedWidth.useEffect(() => {
     if (expanded) {
       if (0 > 0) {
-        set2 = sharedValue.set;
-        const withDelay = ReanimatedRexport.withDelay;
-        ReanimatedRexport;
-        const obj = timing;
-        set2(withDelay(tmp2, obj.withTiming(1, closure_3, "respect-motion-settings")));
+        const obj2 = ReanimatedRexport;
+        const result = sharedValue.set(obj2.withDelay(tmp2, timing.withTiming(1, closure_3, "respect-motion-settings")));
       }
     }
     let num2 = 0;
-    set = sharedValue.set;
-    const withTiming = timing.withTiming;
-    timing;
     if (expanded) {
       num2 = 1;
     }
-    const result = set(withTiming(num2, closure_3, "respect-motion-settings"));
+    const result1 = sharedValue.set(timing.withTiming(num2, closure_3, "respect-motion-settings"));
   }, items);
-  let obj = { animatedStyle: tmpResult.useAnimatedStyle(fn) };
-  fn = function c() {
-    let diff;
-    const obj = { width: collapsedWidth + diff * sharedValue.get() };
-    diff = expandedWidth - collapsedWidth;
+  let obj2 = { animatedStyle: null };
+  let obj = expanded(collapsedWidth[4]);
+  const fn = function c() {
+    const obj = { width: null };
+    const diff = expandedWidth - collapsedWidth;
+    obj.width = collapsedWidth + diff * sharedValue.get();
     return obj;
   };
   fn.__closure = { collapsedWidth, expandedWidth, progress: sharedValue };
   fn.__workletHash = 11629489974776;
   fn.__initData = __initData;
-  tmpResult = tmp(tmp2[4]);
-  return obj;
+  obj2.animatedStyle = expanded(collapsedWidth[4]).useAnimatedStyle(fn);
+  return obj2;
 });
-let result = size.fileFinishedImporting("modules/chat_input/native/action_buttons/useChatInputFloatingWidth.tsx");
-
-export default tmp2;

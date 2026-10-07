@@ -2,83 +2,74 @@
 
 // Module 5696 (StickersPackStore)
 import DurationsDefault from "Durations" /* 1102 */;
-import js_shim_PlainRecord from "js_shim/PlainRecord" /* 2068 */;
-import LibdiscoreStore2 from "LibdiscoreStore" /* 2075 */;
 import StickersTypes from "StickersTypes" /* 5436 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-let map;
-
-function parsePackStickers(stickers) {
-  const obj = {};
-  const iter = stickers[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    obj[nextResult.id] = parseServerPackSticker(nextResult);
-    continue;
-  }
-  return obj;
-}
+require = fn;
 function parseServerPackSticker(id) {
   const obj = { id: id.id, tags: id.tags, type: id.type, name: id.name, description: id.description, format_type: id.format_type, pack_id: id.pack_id };
   obj[TypeTag] = "PackSticker";
   return obj;
 }
 function deriveStickerMetadata(name, name2) {
-  let trimmed;
   const items = [];
-  const obj = { type: StickersTypes.StickerMetadataTypes.STICKER_NAME, value: trimmed.toLocaleLowerCase() };
-  const str = name.name;
-  trimmed = str.trim();
+  const obj = { type: StickersTypes.StickerMetadataTypes.STICKER_NAME, value: null };
+  const trimmed = name.name.trim();
+  obj.value = trimmed.toLocaleLowerCase();
   items.push(obj);
   if (null != name2) {
-    const push = items.push;
     const obj2 = { type: StickersTypes.StickerMetadataTypes.PACK_NAME, value: name2.name };
-    push(obj2);
+    items.push(obj2);
   }
   return items;
 }
 function ingestStickerPack(item10017, packStickersDatabase, packsDatabase, premiumPacksDatabase, arg4) {
   const result = packsDatabase.set(item10017.id, item10017);
   const result1 = premiumPacksDatabase.set(item10017.id, item10017);
-  packStickersDatabase.setPartition(item10017.id, parsePackStickers(item10017.stickers));
+  packStickersDatabase.setPartition(item10017.id, (function parsePackStickers(stickers) {
+    const obj = {};
+    const iter = stickers[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      obj[nextResult.id] = parseServerPackSticker(nextResult);
+      continue;
+    }
+    return obj;
+  })(item10017.stickers));
 }
-const TypeTag = js_shim_PlainRecord.TypeTag;
-const LibdiscoreStore = LibdiscoreStore2.LibdiscoreStore;
+const TypeTag = fn(2068).TypeTag;
+const LibdiscoreStore = fn(2075).LibdiscoreStore;
 let c4 = false;
 let closure_5 = null;
 const HOUR = DurationsDefault.Millis.HOUR;
 class StickersPackStore extends LibdiscoreStore {
   constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    require = applyArgumentsResult;
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    closure_0 = applyArgumentsResult;
     applyArgumentsResult.packsDatabase = applyArgumentsResult.addKVDatabase("stickerPacks");
     applyArgumentsResult.packStickersDatabase = applyArgumentsResult.addKKVDatabase("packStickers");
-    const packStickersDatabase = applyArgumentsResult.packStickersDatabase;
+    packStickersDatabase = applyArgumentsResult.packStickersDatabase;
     applyArgumentsResult.packStickerByIdIndex = packStickersDatabase.addSecondaryKVIndex("id");
     applyArgumentsResult.premiumPacksDatabase = applyArgumentsResult.addKVDatabase("premiumPacks");
-    const packStickersDatabase2 = applyArgumentsResult.packStickersDatabase;
+    packStickersDatabase2 = applyArgumentsResult.packStickersDatabase;
     applyArgumentsResult.getAllPackStickers = packStickersDatabase2.memoized((obj) => {
-      map = new Map();
-      for (const key10009 in obj) {
+      const map = new Map();
+      for (const key10009 in arg0) {
         let _Object = Object;
-        let result = map.set(key10009, Object.values(obj[key10009].root));
+        let result = map.set(key10009, Object.values(arg0[key10009].root));
         continue;
       }
       return map;
     });
-    const packStickersDatabase3 = applyArgumentsResult.packStickersDatabase;
+    packStickersDatabase3 = applyArgumentsResult.packStickersDatabase;
     applyArgumentsResult.getStickerMetadataMap = packStickersDatabase3.memoized((obj) => {
-      let tmp4;
-      let tmp5;
-      map = new Map();
-      for (const key10012 in obj) {
+      const map = new Map();
+      for (const key10012 in arg0) {
         let _Object = Object;
-        let entries = Object.entries(obj[key10012].root);
+        let entries = Object.entries(arg0[key10012].root);
         for (const item10014 of entries) {
           let tmp3 = _slicedToArray(item10014, 2);
-          let packsDatabase = require.packsDatabase;
+          let packsDatabase = applyArgumentsResult.packsDatabase;
           [tmp4, tmp5] = tmp3;
           let result = map.set(tmp4, deriveStickerMetadata(tmp5, packsDatabase.get(key10012)));
           continue;
@@ -86,38 +77,26 @@ class StickersPackStore extends LibdiscoreStore {
       }
       return map;
     });
-    const premiumPacksDatabase = applyArgumentsResult.premiumPacksDatabase;
+    premiumPacksDatabase = applyArgumentsResult.premiumPacksDatabase;
     applyArgumentsResult.getPremiumPacks = premiumPacksDatabase.memoized((arg0) => Object.values(arg0));
     return applyArgumentsResult;
   }
-  stateWrapper() {
-    const self = this;
-    return {
-      packsDatabase: this.packsDatabase,
-      packStickersDatabase: this.packStickersDatabase,
-      premiumPacksDatabase: this.premiumPacksDatabase,
-      markDirty() {
-        return self.markDirty();
-      },
-      clearAllDBs() {
-        return self.clearAllDatabases();
-      }
-    };
-  }
-  getStickerById(arg0) {
-    const packStickerByIdIndex = this.packStickerByIdIndex;
-    return packStickerByIdIndex.get(arg0);
-  }
-  isPremiumPack(arg0) {
-    const premiumPacksDatabase = this.premiumPacksDatabase;
-    return null != premiumPacksDatabase.get(arg0);
-  }
-  getStickerPack(arg0) {
-    const packsDatabase = this.packsDatabase;
-    return packsDatabase.get(arg0);
-  }
 }
 const prototype = StickersPackStore.prototype;
+prototype["stateWrapper"] = function stateWrapper() {
+  const self = this;
+  return {
+    packsDatabase: this.packsDatabase,
+    packStickersDatabase: this.packStickersDatabase,
+    premiumPacksDatabase: this.premiumPacksDatabase,
+    markDirty() {
+      return self.markDirty();
+    },
+    clearAllDBs() {
+      return self.clearAllDatabases();
+    }
+  };
+};
 Object.defineProperty(prototype, "isFetchingStickerPacks", {
   get: function isFetchingStickerPacks() {
     return c4;
@@ -136,36 +115,50 @@ Object.defineProperty(prototype, "hasLoadedStickerPacks", {
   },
   set: undefined
 });
+prototype["getStickerById"] = function getStickerById(arg0) {
+  const packStickerByIdIndex = this.packStickerByIdIndex;
+  return packStickerByIdIndex.get(arg0);
+};
+prototype["isPremiumPack"] = function isPremiumPack(arg0) {
+  const premiumPacksDatabase = this.premiumPacksDatabase;
+  return null != premiumPacksDatabase.get(arg0);
+};
+prototype["getStickerPack"] = function getStickerPack(arg0) {
+  const packsDatabase = this.packsDatabase;
+  return packsDatabase.get(arg0);
+};
 StickersPackStore.displayName = "StickersPackStore";
-let obj = {
+const stickersPackStore = new StickersPackStore({
   LOGOUT(arg0, clearAllDBs) {
     clearAllDBs.clearAllDBs();
   },
   STICKER_PACK_FETCH_SUCCESS(pack, arg1) {
-    let packStickersDatabase;
-    let packsDatabase;
-    let premiumPacksDatabase;
     pack = pack.pack;
     ({ packStickersDatabase, packsDatabase, premiumPacksDatabase } = arg1);
     const result = packsDatabase.set(pack.id, pack);
-    packStickersDatabase.setPartition(pack.id, parsePackStickers(pack.stickers));
+    packStickersDatabase.setPartition(pack.id, (function parsePackStickers(stickers) {
+      const obj = {};
+      const iter = stickers[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        obj[nextResult.id] = parseServerPackSticker(nextResult);
+        continue;
+      }
+      return obj;
+    })(pack.stickers));
   },
   STICKER_PACKS_FETCH_START(arg0, markDirty) {
     c4 = true;
     markDirty.markDirty();
   },
-  STICKER_PACKS_FETCH_SUCCESS(packs, markDirty) {
-    let packStickersDatabase;
-    let packsDatabase;
-    let premiumPacksDatabase;
-    packs = packs.packs;
+  STICKER_PACKS_FETCH_SUCCESS(arg0, markDirty) {
     ({ packStickersDatabase, packsDatabase, premiumPacksDatabase } = markDirty);
     c4 = false;
     markDirty.markDirty();
     closure_5 = performance.now();
-    for (const item10017 of packs) {
+    for (const item10017 of tmp) {
       let flag = true;
-      let tmp7 = ingestStickerPack(item10017, packStickersDatabase, packsDatabase, premiumPacksDatabase, true);
+      let tmp8 = ingestStickerPack(item10017, packStickersDatabase, packsDatabase, premiumPacksDatabase, true);
       continue;
     }
   },
@@ -176,8 +169,8 @@ let obj = {
     obj[TypeTag] = "PackSticker";
     packStickersDatabase.setRecord(sticker.pack_id, sticker.id, obj);
   }
-};
-const stickersPackStore = new StickersPackStore(obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/stickers/StickersPackStore.tsx");
 
 export default stickersPackStore;

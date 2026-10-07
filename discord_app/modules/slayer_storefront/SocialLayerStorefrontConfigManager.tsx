@@ -3,24 +3,23 @@
 // Module 13568 (SocialLayerStorefrontConfigManager)
 import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10545 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
-import size from "module_2" /* 2 */;
 
-class SocialLayerStorefrontConfigManager extends AutomaticLifecycleManager {
+require = fn;
+class SocialLayerStorefrontConfigManager extends tmp2 {
   constructor() {
-    let onPostConnectionOpen;
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    const obj = { POST_CONNECTION_OPEN: onPostConnectionOpen.bind(applyArgumentsResult) };
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    obj = { POST_CONNECTION_OPEN: null };
     onPostConnectionOpen = applyArgumentsResult.onPostConnectionOpen;
+    obj.POST_CONNECTION_OPEN = onPostConnectionOpen.bind(applyArgumentsResult);
     applyArgumentsResult.actions = obj;
     return applyArgumentsResult;
   }
-  onPostConnectionOpen() {
-    const obj = SocialLayerStorefrontActionCreators;
-    const socialLayerStorefrontConfig = obj.fetchSocialLayerStorefrontConfig();
-  }
 }
-const prototype = SocialLayerStorefrontConfigManager.prototype;
+SocialLayerStorefrontConfigManager.prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
+  const socialLayerStorefrontConfig = SocialLayerStorefrontActionCreators.fetchSocialLayerStorefrontConfig();
+};
 const socialLayerStorefrontConfigManager = new SocialLayerStorefrontConfigManager();
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontConfigManager.tsx");
 
 export default socialLayerStorefrontConfigManager;

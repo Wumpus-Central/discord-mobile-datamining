@@ -1,120 +1,122 @@
 // === Module 17059: ChannelSettingsChangeRTCRegion ===
 
 // Module 17059 (ChannelSettingsChangeRTCRegion)
-import Fragment from "Fragment" /* 21 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 587 */;
-import intl2 from "intl" /* 1126 */;
-import native from "native" /* 4595 */;
+import util from "util" /* 1126 */;
 import TableRadioRow from "TableRadioRow" /* 6078 */;
 import TableRadioGroup from "TableRadioGroup" /* 6079 */;
-import Form2 from "Form" /* 8924 */;
+import Form from "Form" /* 8924 */;
 import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10075 */;
 import _toArray from "_toArray" /* 729 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import RegionStore from "RegionStore" /* 17010 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let channelId;
-
-let obj2;
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
 const AUTOMATIC_RTC_REGION = "AUTOMATIC_RTC_REGION";
-let obj = { form: obj2 };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_16 };
-const metroImportAll = createStyles.createLegacyClassComponentStyles(obj);
-const PureComponent = react.PureComponent;
+const createStyles = fn(4896);
+let obj2 = { form: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_16 } };
+let closure_8 = createStyles.createLegacyClassComponentStyles(obj2);
+const PureComponent = noop.PureComponent;
 class ChannelSettingsChangeRTCRegion extends PureComponent {
   constructor() {
-    let intl;
-    let items;
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    const obj = { regions: items, submitting: false, selectedRegionId: AUTOMATIC_RTC_REGION };
-    const channel = applyArgumentsResult.props.channel;
-    const regions = RegionStore.getRegions(channel.getGuildId());
-    const obj2 = { id: AUTOMATIC_RTC_REGION, name: intl.string(intl2.t.JEmsap), sample_hostname: "", sample_port: 0, vip: false, deprecated: false, optimal: false, hidden: false };
-    intl = intl2.intl;
-    items = [obj2];
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    closure_0 = applyArgumentsResult;
+    obj = { regions: [], submitting: false, selectedRegionId: AUTOMATIC_RTC_REGION };
+    channel = applyArgumentsResult.props.channel;
+    tmp3 = AUTOMATIC_RTC_REGION;
+    regions = closure_5.getRegions(channel.getGuildId());
+    obj1 = { id: AUTOMATIC_RTC_REGION, name: null, sample_hostname: "", sample_port: 0, vip: false, deprecated: false, optimal: false, hidden: false };
+    intl = closure_0(closure_2[8]).intl;
+    obj1.name = intl.string(closure_0(closure_2[8]).t.JEmsap);
+    items = [];
+    items[0] = obj1;
     if (null != regions) {
-      const push = items.push;
-      const items1 = [];
-      HermesBuiltin.arraySpread(items1, regions.filter((deprecated) => !deprecated.deprecated && !deprecated.hidden), 0);
-      HermesBuiltin.apply(push, items1, items);
-      const found = regions.find((id) => id.id === applyArgumentsResult.props.channel.rtcRegion);
-      let id;
+      push = items.push;
+      items1 = [];
+      num = 0;
+      tmp4 = items1;
+      arraySpreadResult = HermesBuiltin.arraySpread(regions.filter((deprecated) => {
+        deprecated = deprecated.deprecated;
+        let tmp = !deprecated;
+        if (!deprecated) {
+          tmp = !deprecated.hidden;
+        }
+        return tmp;
+      }), 0);
+      tmp6 = push;
+      tmp7 = items1;
+      tmp8 = items;
+      applyResult = HermesBuiltin.apply(items1, items);
+      found = regions.find((id) => id.id === applyArgumentsResult.props.channel.rtcRegion);
+      id = undefined;
       if (found != null) {
         id = found.id;
       }
       if (id == null) {
-        id = AUTOMATIC_RTC_REGION;
+        id = tmp3;
       }
       obj.selectedRegionId = id;
     }
+    obj.regions = items;
     applyArgumentsResult.state = obj;
     return applyArgumentsResult;
   }
-  handleSetRegion(arg0) {
-    let rtcRegion;
-    const self = this;
-    let tmp = arg0;
-    let c0 = arg0;
-    let tmp2 = arg0;
-    const state = this.state;
-    if (arg0 == null) {
-      tmp2 = AUTOMATIC_RTC_REGION;
-    }
-    state.selectedRegionId = tmp2;
-    if (tmp === AUTOMATIC_RTC_REGION) {
-      c0 = null;
-      tmp = null;
-    }
-    let obj = self(10075);
-    obj.updateChannel({ rtcRegion: tmp });
-    self.setState({ submitting: true }, () => {
-      const obj = ChannelSettingsActionCreatorsDefault;
-      const obj2 = { rtcRegion };
-      obj.saveChannel(self.props.channel.id, obj2);
-    });
-  }
-  renderRegion(label) {
-    return jsx(TableRadioRow.TableRadioRow, { label: label.name, value: label.id }, label.id);
-  }
-  renderRegions() {
-    const self = this;
-    const arr = _toArray(this.state.regions);
-    const substr = arr.slice(0);
-    const mapped = substr.map(this.renderRegion, this);
-    return jsx(TableRadioGroup.TableRadioGroup, {
-      defaultValue: this.state.selectedRegionId,
-      onChange(arg0) {
-        return self.handleSetRegion(arg0);
-      },
-      hasIcons: false,
-      children: mapped
-    });
-  }
-  render() {
-    const Form = Form2.Form;
-    return <Form style={closure_8(this.context).form}>{this.renderRegions()}</Form>;
-  }
 }
 const prototype = ChannelSettingsChangeRTCRegion.prototype;
-ChannelSettingsChangeRTCRegion.contextType = native.ThemeContext;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
-  let first;
-  let tmp6;
-  let tmp9;
-  const obj = channelId(576);
-  const cResult = obj.c(5);
-  const tmp = channelId;
+prototype["handleSetRegion"] = function handleSetRegion(arg0) {
+  const self = this;
+  let tmp = arg0;
+  c0 = arg0;
+  let tmp2 = arg0;
+  if (arg0 == null) {
+    tmp2 = AUTOMATIC_RTC_REGION;
+  }
+  this.state.selectedRegionId = tmp2;
+  if (tmp === AUTOMATIC_RTC_REGION) {
+    c0 = null;
+    tmp = null;
+  }
+  self(10075).updateChannel({ rtcRegion: tmp });
+  self.setState({ submitting: true }, () => {
+    ChannelSettingsActionCreatorsDefault.saveChannel(self.props.channel.id, { rtcRegion });
+  });
+};
+prototype["renderRegion"] = function renderRegion(label) {
+  return jsx(TableRadioRow.TableRadioRow, { label: label.name, value: label.id }, label.id);
+};
+prototype["renderRegions"] = function renderRegions() {
+  const self = this;
+  const substr = _toArray(this.state.regions).slice(0);
+  const mapped = substr.map(this.renderRegion, this);
+  return jsx(TableRadioGroup.TableRadioGroup, {
+    defaultValue: this.state.selectedRegionId,
+    onChange(arg0) {
+      return self.handleSetRegion(arg0);
+    },
+    hasIcons: false,
+    children: mapped
+  });
+};
+prototype["render"] = function render() {
+  const tmp = closure_8(this.context);
+  return jsx(Form.Form, { style: closure_8(this.context).form, children: this.renderRegions() });
+};
+ChannelSettingsChangeRTCRegion.contextType = fn(4595).ThemeContext;
+const ReactCompilerGating = fn(558);
+const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_16 };
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeRTCRegion.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+  const cResult = channelId(576).c(5);
   channelId = channelId.channelId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -124,18 +126,19 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     };
     cResult[1] = channelId;
     cResult[2] = fn;
-    tmp6 = fn;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const tmpResult = tmp(504);
-  const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+  const obj = channelId(576);
+  const stateFromStores = channelId(504).useStateFromStores(first, tmp6);
   _modDef38(null != stateFromStores, "ConnectedChannelSettingsChangeRTCRegion: channel cannot be undefined");
   if (cResult[3] !== stateFromStores) {
+    const obj2 = { channel: stateFromStores };
     const tmp12 = <ChannelSettingsChangeRTCRegion channel={stateFromStores} />;
     cResult[3] = stateFromStores;
     cResult[4] = tmp12;
-    tmp9 = tmp12;
+    let tmp9 = tmp12;
   } else {
     tmp9 = cResult[4];
   }
@@ -143,11 +146,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
 }) : ((channelId) => {
   channelId = channelId.channelId;
   const items = [ChannelStore];
-  const obj = channelId(504);
-  const channel = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  const channel = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   _modDef38(null != channel, "ConnectedChannelSettingsChangeRTCRegion: channel cannot be undefined");
   return <ChannelSettingsChangeRTCRegion channel={channel} />;
 });
-const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeRTCRegion.tsx");
-
-export default tmp3;

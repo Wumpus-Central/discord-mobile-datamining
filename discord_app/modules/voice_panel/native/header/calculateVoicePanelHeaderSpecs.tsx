@@ -5,8 +5,7 @@ import size from "module_2" /* 2 */;
 
 const fn = function t(top, token) {
   const bound = Math.max(token, top.top);
-  const obj = { height: 44 + bound, paddingTop: bound, paddingLeft: Math.max(token, top.left), paddingRight: Math.max(token, top.right) };
-  return obj;
+  return { height: 44 + bound, paddingTop: bound, paddingLeft: Math.max(token, top.left), paddingRight: Math.max(token, top.right) };
 };
 fn.__closure = { BASE_VOICE_PANEL_HEADER_HEIGHT: 44 };
 fn.__workletHash = 6201232972174;

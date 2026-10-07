@@ -1,40 +1,35 @@
 // === Module 12187: GuildPowerupRollbackSheet ===
 
 // Module 12187 (GuildPowerupRollbackSheet)
-import Fragment from "Fragment" /* 21 */;
-import react from "react" /* 576 */;
+import jsxProd from "jsxProd" /* 21 */;
+import c from "c" /* 576 */;
 import components_Button_Button from "components/Button/Button" /* 5601 */;
-import PromoSheet2 from "PromoSheet" /* 10058 */;
+import PromoSheet from "PromoSheet" /* 10058 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-const jsx = Fragment.jsx;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let body;
-  let ctaText;
-  let header;
-  let onCtaPress;
-  let onDismiss;
-  const obj = react;
-  const cResult = obj.c(8);
+const jsx = jsxProd.jsx;
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupRollbackSheet.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(8);
   ({ header, body, ctaText, onCtaPress, onDismiss } = arg0);
   if (cResult[0] === ctaText) {
-    let tmp4;
     if (cResult[1] === onCtaPress) {
-      tmp4 = cResult[2];
+      let tmp4 = cResult[2];
     }
     if (cResult[3] === body) {
       if (cResult[4] === header) {
         if (cResult[5] === onDismiss) {
-          let tmp7;
           if (cResult[6] === tmp4) {
-            tmp7 = cResult[7];
+            let tmp7 = cResult[7];
           }
           return tmp7;
         }
       }
     }
-    const tmp9 = jsx(PromoSheet2.PromoSheet, { title: header, description: body, onDismiss, actions: tmp4 });
+    const obj2 = { title: header, description: body, onDismiss, actions: tmp4 };
+    const tmp9 = jsx(PromoSheet.PromoSheet, { title: header, description: body, onDismiss, actions: tmp4 });
     cResult[3] = body;
     cResult[4] = header;
     cResult[5] = onDismiss;
@@ -44,6 +39,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   let tmp5;
   if (null != ctaText) {
+    const obj3 = { variant: "primary", text: ctaText, onPress: onCtaPress };
     tmp5 = jsx(components_Button_Button.Button, { variant: "primary", text: ctaText, onPress: onCtaPress });
   }
   cResult[0] = ctaText;
@@ -51,19 +47,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp5;
   tmp4 = tmp5;
 }) : ((ctaText) => {
-  let body;
-  let header;
-  let onCtaPress;
-  let onDismiss;
   ctaText = ctaText.ctaText;
   ({ header, body, onCtaPress, onDismiss } = ctaText);
+  const obj = { title: header, description: body, onDismiss, actions: null };
   let tmpResult;
-  const PromoSheet = PromoSheet2.PromoSheet;
   if (null != ctaText) {
+    const obj2 = { variant: "primary", text: ctaText, onPress: onCtaPress };
     tmpResult = jsx(components_Button_Button.Button, { variant: "primary", text: ctaText, onPress: onCtaPress });
   }
-  return <PromoSheet title={header} description={body} onDismiss={onDismiss} actions={tmpResult} />;
+  obj.actions = tmpResult;
+  return jsx(PromoSheet.PromoSheet, { title: header, description: body, onDismiss, actions: null });
 });
-const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupRollbackSheet.tsx");
-
-export default tmp2;

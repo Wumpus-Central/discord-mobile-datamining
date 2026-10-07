@@ -1,71 +1,72 @@
 // === Module 4565: openURL ===
 
 // Module 4565 (openURL)
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import size from "module_2" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = globalThis.__r;
-let closure_2;
-
-let obj = function _openURL() {
-  let paths;
-  obj = _asyncToGenerator(async (arg0, skipExtensionCheck) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
-    return (async (arg0, value) => {
-      if (c4 === 2) {
-        c4 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+const require = fn;
+let closure_3 = async function _openURL(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
         if (arg0 === 1) {
+          c4 = 3;
           throw value;
         } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              return { value, done: true };
-            } else {
-              closure_2 = tmp;
-              require("handleURL").default(closure_0);
-              c3 = 1;
-              c4 = 1;
-              const obj4 = { value: require("asyncRequire")(paths[2], paths.paths), done: false };
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            return { value, done: true };
-          } else {
-            obj = { skipExtensionCheck, analyticsLocations: [] };
-            value.default(closure_0, obj);
-            c4 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp14) {
           c4 = 3;
-          throw tmp14;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp2;
+          closure_130_0 = closure_0;
+          closure_130_1 = closure_1;
+          require("handleURL").default(closure_0);
+          c3 = 1;
+          c4 = 1;
+          const obj4 = { value: require("asyncRequireImpl")(paths[2], paths.paths), done: false };
+          return obj4;
         }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj5 = { value, done: true };
+        return obj5;
+      } else {
+        const obj = { skipExtensionCheck: closure_130_1, analyticsLocations: [] };
+        value.default(closure_130_0, obj);
+        c4 = 3;
+        return { value: "IconComponent", done: null };
       }
-    })();
-  });
-  return obj(...arguments);
+    } catch (tmp15) {
+      c4 = tmp;
+      throw tmp15;
+    }
+  }
 };
+const size = fn(2);
 const result = size.fileFinishedImporting("lib/openURL.tsx");
 
 export default function openURL() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_3.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

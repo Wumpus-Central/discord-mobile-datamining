@@ -3,20 +3,20 @@
 // Module 9008 (RpcCommandInterception)
 import size from "module_2" /* 2 */;
 
-let c0 = null;
+let global = null;
 const result = size.fileFinishedImporting("modules/rpc/RpcCommandInterception.tsx");
 
 export function setRpcCommandInterceptor(answerFor) {
-  let c0 = answerFor;
+  global = answerFor;
 }
-export const interceptRpcCommand = function interceptRpcCommand(arg0) {
-  if (null == _null) {
+export const interceptRpcCommand = function interceptRpcCommand(framebus) {
+  if (null == global) {
     return null;
   } else {
     try {
-      return _null(arg0);
+      return global(framebus);
     } catch (err) {
-      return null;
+      return tmp;
     }
   }
 };

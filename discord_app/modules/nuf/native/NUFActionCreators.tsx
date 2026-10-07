@@ -2,122 +2,109 @@
 
 // Module 12368 (NUFActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import CreateGuildConstants from "CreateGuildConstants" /* 6475 */;
 import ContactSyncUtils from "ContactSyncUtils" /* 12344 */;
 import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12348 */;
-import NUFConstants from "NUFConstants" /* 12369 */;
 import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 12427 */;
 import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12430 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import ContactSyncModalStore from "ContactSyncModalStore" /* 12341 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5447 */;
 import UserStore from "UserStore" /* 1377 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let localAccount;
 
-let closure_4;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-let modalConfig = function _startContactSyncForDiscoverability() {
-  const obj = _asyncToGenerator(async (name) => {
-    let c2 = 0;
-    let c3 = 0;
-    return (async function(arg0) {
-      let obj2;
-      let obj5;
-      if (c3 === 2) {
-        c3 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp2 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+require = fn;
+let closure_13 = async function _startContactSyncForDiscoverability() {
+  c2 = 0;
+  c3 = 0;
+  return (async (arg0) => {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        try {
-          c3 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              return { value, done: true };
-            } else {
-              closure_1 = tmp3;
-              currentUser = currentUser.getCurrentUser();
-              let phone;
-              if (currentUser != null) {
-                phone = currentUser.phone;
-              }
-              localAccount = localAccount.getLocalAccount(constants.CONTACTS);
-              ContactSyncUtils;
-              if (null == phone) {
-                const _Error = Error;
-                const self = this;
-                const self2 = this;
-                const error = new Error("Cannot start contact sync without a phone number");
-                throw error;
-              } else {
-                closure_2_6(name);
-                c2 = 1;
-                c3 = 1;
-                const obj6 = { enabled: tmp14, name };
-                const obj7 = { value: obj5.updateContactSyncEnabled(obj6), done: false };
-                obj5 = ContactSyncActionCreatorsDefault;
-                return obj7;
-              }
-            }
-          } else if (1 === c2) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              return { value, done: true };
-            } else {
-              c2 = 2;
-              c3 = 1;
-              const obj9 = { value: obj2.uploadContacts("[]", true), done: false };
-              obj2 = closure_129_0(closure_129_2[15]);
-              return obj9;
-            }
-          } else if (arg0 === 1) {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c3 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
             c3 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            return { value, done: true };
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            c3 = 3;
-            return { value: "IconComponent", done: null };
+            closure_1 = tmp4;
+            currentUser = currentUser.getCurrentUser();
+            let phone;
+            if (currentUser != null) {
+              phone = currentUser.phone;
+            }
+            localAccount = localAccount.getLocalAccount(constants.CONTACTS);
+            ContactSyncUtils;
+            if (null == phone) {
+              const _Error = Error;
+              const error = new Error("Cannot start contact sync without a phone number");
+              throw error;
+            } else {
+              closure_2_6(name);
+              const obj6 = { enabled: tmp15, name };
+              c2 = 1;
+              c3 = 1;
+              const obj7 = { value: ContactSyncActionCreatorsDefault.updateContactSyncEnabled(obj6), done: false };
+              return obj7;
+            }
           }
-        } catch (tmp22) {
+        } else if (1 === tmp4) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj8 = { value, done: true };
+            return obj8;
+          } else {
+            c2 = 2;
+            c3 = 1;
+            const obj9 = { value: closure_129_0(closure_129_2[15]).uploadContacts("[]", true), done: false };
+            return obj9;
+          }
+        } else if (arg0 === 1) {
           c3 = 3;
-          throw tmp22;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          c3 = 3;
+          return { value: "IconComponent", done: null };
         }
+      } catch (tmp25) {
+        c3 = tmp;
+        throw tmp25;
       }
-    })();
-  });
-  return obj(...arguments);
+    }
+  })();
 };
-({ setAllowEmail: closure_4, setAllowSync: hasOwnProperty, setName: metroRequire, useContactSyncModalStore: metroImportDefault } = ContactSyncModalStore);
-let closure_10 = NUFConstants.NUF_DISCOVERABILITY_MODAL_KEY;
-const PlatformTypes = Constants.PlatformTypes;
-let closure_12 = CreateGuildConstants.IN_APP_GUILD_TEMPLATES_MODAL_KEY;
+const ContactSyncModalStore = fn(12341);
+({ setAllowEmail: closure_4, setAllowSync: hasOwnProperty, setName: metroRequire, useContactSyncModalStore: closure_7 } = ContactSyncModalStore);
+let closure_10 = fn(12369).NUF_DISCOVERABILITY_MODAL_KEY;
+const PlatformTypes = fn(1085).PlatformTypes;
+let closure_12 = fn(6475).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/NUFActionCreators.tsx");
 
 export const startOnboarding = function startOnboarding() {
-  const obj = DispatcherDefault;
-  obj.dispatch({ type: "ONBOARDING_START" });
+  DispatcherDefault.dispatch({ type: "ONBOARDING_START" });
 };
 export const nextOnboardingStep = function nextOnboardingStep(skip) {
   let flag = skip.skip;
@@ -128,25 +115,19 @@ export const nextOnboardingStep = function nextOnboardingStep(skip) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const obj = DispatcherDefault;
-  obj.dispatch({ type: "ONBOARDING_STEP", skip: flag, skipAttempt: flag2 });
+  DispatcherDefault.dispatch({ type: "ONBOARDING_STEP", skip: flag, skipAttempt: flag2 });
 };
 export const previousOnboardingStep = function previousOnboardingStep() {
-  const obj = DispatcherDefault;
-  obj.dispatch({ type: "ONBOARDING_STEP", back: true });
+  DispatcherDefault.dispatch({ type: "ONBOARDING_STEP", back: true });
 };
 export const transitionToNUFGuildTemplatesModal = function transitionToNUFGuildTemplatesModal(SLIDE_IN) {
-  let closure_0 = SLIDE_IN;
-  const obj = ModalActionCreatorsDefault;
-  obj.pushLazy(_asyncToGenerator(async () => {
-    let c3;
-    let closure_1;
-    let value = tmp;
-    await value(paths[10])(paths[9], paths.paths);
-    value = value.default;
-    modalConfig = { animation: closure_129_0 };
-    value.modalConfig = modalConfig;
-    return value;
+  closure_0 = SLIDE_IN;
+  ModalActionCreatorsDefault.pushLazy(asyncGeneratorStep(async () => {
+    closure_1 = tmp5;
+    await tmp2(paths[10])(paths[9], paths.paths);
+    closure_128_0 = value.default;
+    closure_128_0.modalConfig = { animation: closure_129_0 };
+    return closure_128_0;
   }), {}, closure_12);
 };
 export const transitionToHubEmailConnectionModal = function transitionToHubEmailConnectionModal(SLIDE_IN, arg1) {
@@ -154,46 +135,40 @@ export const transitionToHubEmailConnectionModal = function transitionToHubEmail
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = HubEmailConnectionModalActionCreatorsDefault;
-  let obj2 = {
+  HubEmailConnectionModalActionCreatorsDefault.open({
     onCloseExtra(invite) {
-      const tmp = invite;
-      if (tmp) {
-        const obj2 = nuf_NUFActionCreators;
-        const result = obj2.setNewUserFlowCompleted();
+      if (invite) {
+        const result = nuf_NUFActionCreators.setNewUserFlowCompleted();
       } else {
-        const obj = DispatcherDefault;
-        obj.dispatch({ type: "ONBOARDING_STEP" });
+        DispatcherDefault.dispatch({ type: "ONBOARDING_STEP" });
       }
     },
     displayStudentPrompt: flag
-  };
-  obj.open(obj2, SLIDE_IN);
+  }, SLIDE_IN);
 };
 export const openDiscoverabilityModal = function openDiscoverabilityModal() {
-  let paths;
-  const obj = ModalActionCreatorsDefault;
-  obj.pushLazy(_asyncToGenerator(async () => {
-    let c2;
-    let c3;
-    let closure_1;
-    let value = tmp;
-    await require("asyncRequire")(paths[13], paths.paths);
-    value = value.default;
-    modalConfig = { animation: closure_129_0(closure_129_2[14]).ModalAnimation.SLIDE_IN_OUT };
-    value.modalConfig = modalConfig;
-    return value;
+  ModalActionCreatorsDefault.pushLazy(asyncGeneratorStep(async () => {
+    closure_1 = tmp5;
+    closure_0 = tmp2;
+    await require("asyncRequireImpl")(paths[13], paths.paths);
+    closure_128_0 = value.default;
+    closure_128_0.modalConfig = { animation: closure_129_0(closure_129_2[14]).ModalAnimation.SLIDE_IN_OUT };
+    return closure_128_0;
   }), {}, closure_10);
 };
 export const closeDiscoverabilityModal = function closeDiscoverabilityModal(skip) {
-  const obj = ModalActionCreatorsDefault;
-  obj.popWithKey(closure_10);
-  const obj2 = DispatcherDefault;
-  const obj3 = { type: "ONBOARDING_STEP", skip };
-  obj2.dispatch(obj3);
+  ModalActionCreatorsDefault.popWithKey(closure_10);
+  DispatcherDefault.dispatch({ type: "ONBOARDING_STEP", skip });
 };
 export const startContactSyncForDiscoverability = function startContactSyncForDiscoverability() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_13.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const toggleDiscoverabilityForUser = function toggleDiscoverabilityForUser() {
   const currentUser = UserStore.getCurrentUser();
@@ -201,13 +176,13 @@ export const toggleDiscoverabilityForUser = function toggleDiscoverabilityForUse
   if (currentUser != null) {
     phone = currentUser.phone;
   }
-  metroImportDefault = metroImportDefault.getState();
+  state = state.getState();
   if (null != phone) {
-    hasOwnProperty(!(metroImportDefault.allowPhone || metroImportDefault.allowEmail));
+    hasOwnProperty(!tmp4);
   } else {
     hasOwnProperty(false);
-    if (!(metroImportDefault.allowPhone || metroImportDefault.allowEmail)) {
-      React3(true);
+    if (!tmp4) {
+      React4(true);
     }
   }
 };

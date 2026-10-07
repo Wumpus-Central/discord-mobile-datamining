@@ -2,7 +2,7 @@
 
 // Module 1195 (UnsyncedUserSettingsStore)
 import _modDef12 from "module_12" /* 12 */;
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
@@ -12,63 +12,48 @@ import getSystemThemeDefault from "getSystemTheme" /* 1230 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
-let CHANNEL_SIDEBAR_WIDTH;
-let hasOwnProperty;
 const SystemThemeState = ThemeConstants.SystemThemeState;
 const ListDensityMode = UserSettingsConstants.ListDensityMode;
 ({ DEFAULT_CHAT_SIDEBAR_WIDTH: hasOwnProperty, CHANNEL_SIDEBAR_WIDTH } = Constants);
-const DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH = Constants.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
+let closure_7 = Constants.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
 const ExpressionPickerWidths = ExpressionPickerConstants.ExpressionPickerWidths;
 let obj = { DATA_SAVER: "data_saver", STANDARD: "standard", BEST: "best" };
 let closure_9 = (window.innerWidth - CHANNEL_SIDEBAR_WIDTH) / 2;
 const STANDARD = obj.STANDARD;
 let closure_11 = null;
 let closure_12 = {};
-const DeviceSettingsStore = get_initializedDefault.DeviceSettingsStore;
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class UnsyncedUserSettingsStore extends DeviceSettingsStore {
-  initialize(arg0) {
-    let obj = arg0;
-    if (arg0 == null) {
-      obj = {};
-    }
-    closure_12 = obj;
-    const useSystemTheme = obj.useSystemTheme;
-    if (null != useSystemTheme) {
-      let UNSET;
-      if (null != getSystemThemeDefault()) {
-        UNSET = useSystemTheme;
-        if (typeof useSystemTheme === "boolean") {
-          UNSET = useSystemTheme ? SystemThemeState.ON : SystemThemeState.OFF;
-        }
-      }
-      obj.useSystemTheme = UNSET;
-      let lowQualityImageMode = closure_12.dataSavingMode;
-      const tmp3 = closure_12;
-      if (lowQualityImageMode == null) {
-        lowQualityImageMode = closure_12.lowQualityImageMode;
-      }
-      tmp3.dataSavingMode = lowQualityImageMode;
-      let str = closure_12.hdrDynamicRange;
-      const tmp5 = closure_12;
-      if (str == null) {
-        str = "no-limit";
-      }
-      tmp5.hdrDynamicRange = str;
-    }
-    UNSET = SystemThemeState.UNSET;
-  }
-  getUserAgnosticState() {
-    return closure_12;
-  }
-  isVisualRefreshDisabled(arg0) {
-    let disableVisualRefresh = closure_12.disableVisualRefresh;
-    if (disableVisualRefresh == null) {
-      disableVisualRefresh = arg0;
-    }
-    return disableVisualRefresh;
-  }
 }
 const prototype = UnsyncedUserSettingsStore.prototype;
+prototype["initialize"] = function initialize(arg0) {
+  let obj = arg0;
+  if (arg0 == null) {
+    obj = {};
+  }
+  closure_12 = obj;
+  const useSystemTheme = obj.useSystemTheme;
+  if (null != useSystemTheme) {
+    if (null != getSystemThemeDefault()) {
+      let UNSET = useSystemTheme;
+    }
+    obj.useSystemTheme = UNSET;
+    let lowQualityImageMode = closure_12.dataSavingMode;
+    if (lowQualityImageMode == null) {
+      lowQualityImageMode = closure_12.lowQualityImageMode;
+    }
+    closure_12.dataSavingMode = lowQualityImageMode;
+    let str = closure_12.hdrDynamicRange;
+    if (str == null) {
+      str = "no-limit";
+    }
+    closure_12.hdrDynamicRange = str;
+  }
+  UNSET = SystemThemeState.UNSET;
+};
+prototype["getUserAgnosticState"] = function getUserAgnosticState() {
+  return closure_12;
+};
 Object.defineProperty(prototype, "lowQualityImageMode", {
   get: function lowQualityImageMode() {
     let flag = closure_12.lowQualityImageMode;
@@ -116,7 +101,7 @@ Object.defineProperty(prototype, "messageRequestSidebarWidth", {
   get: function messageRequestSidebarWidth() {
     let messageRequestSidebarWidth = closure_12.messageRequestSidebarWidth;
     if (messageRequestSidebarWidth == null) {
-      messageRequestSidebarWidth = DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
+      messageRequestSidebarWidth = closure_7;
     }
     return messageRequestSidebarWidth;
   },
@@ -309,6 +294,13 @@ Object.defineProperty(prototype, "saveCameraUploadsToDevice", {
   },
   set: undefined
 });
+prototype["isVisualRefreshDisabled"] = function isVisualRefreshDisabled(arg0) {
+  let disableVisualRefresh = closure_12.disableVisualRefresh;
+  if (disableVisualRefresh == null) {
+    disableVisualRefresh = arg0;
+  }
+  return disableVisualRefresh;
+};
 Object.defineProperty(prototype, "listDensity", {
   get: function listDensity() {
     let COZY = closure_12.listDensity;
@@ -354,27 +346,24 @@ UnsyncedUserSettingsStore.persistKey = "UnsyncedUserSettingsStore";
 const items = [
   () => {
     const Storage = Storage3.Storage;
-    const value = Storage.get("UserSettingsStore");
+    value = Storage.get("UserSettingsStore");
     const Storage2 = Storage3.Storage;
     Storage2.remove("UserSettingsStore");
-    const obj = _modDef12;
-    return obj.pick(value, "dataSavingMode", "videoUploadQuality", "lowQualityImageMode", "useSystemTheme", "expressionPickerWidth", "disableVoiceChannelChangeAlert", "disableHideSelfStreamAndVideoConfirmationAlert", "pushUpsellDismissed", "disableEmbeddedActivityPopOutAlert", "disableActivityHardwareAccelerationPrompt", "disableInviteWithTextChannelActivityLaunch", "disableActivityHostLeftNitroUpsell", "disableCallUserConfirmationPrompt", "disableApplicationSubscriptionCancellationSurvey", "enableAndroidChatListAnimations");
+    return _modDef12.pick(value, "dataSavingMode", "videoUploadQuality", "lowQualityImageMode", "useSystemTheme", "expressionPickerWidth", "disableVoiceChannelChangeAlert", "disableHideSelfStreamAndVideoConfirmationAlert", "pushUpsellDismissed", "disableEmbeddedActivityPopOutAlert", "disableActivityHardwareAccelerationPrompt", "disableInviteWithTextChannelActivityLaunch", "disableActivityHostLeftNitroUpsell", "disableCallUserConfirmationPrompt", "disableApplicationSubscriptionCancellationSurvey", "enableAndroidChatListAnimations");
   },
   (arg0) => {
-    delete arg0["disableVisualRefresh"];
+    delete tmp[tmp2];
   }
 ];
 UnsyncedUserSettingsStore.migrations = items;
-const obj2 = {
+const unsyncedUserSettingsStore = new UnsyncedUserSettingsStore(DispatcherDefault, {
   UNSYNCED_USER_SETTINGS_UPDATE: function handleUnsyncedUserSettingsUpdate(settings) {
-    const obj = {};
     const merged = Object.assign(closure_12);
     const merged1 = Object.assign(settings.settings);
-    closure_12 = obj;
+    closure_12 = {};
   },
   LOGOUT: function handleLogOut() {
-    const obj = { useSystemTheme: closure_12.useSystemTheme };
-    closure_12 = obj;
+    closure_12 = { useSystemTheme: closure_12.useSystemTheme };
   },
   LOGIN_SUCCESS: function handleLogInSuccess() {
     if (null == closure_12) {
@@ -384,8 +373,7 @@ const obj2 = {
   REGISTER_SUCCESS: function handleRegisterSuccess() {
     closure_12.useSystemTheme = SystemThemeState.ON;
   }
-};
-const unsyncedUserSettingsStore = new UnsyncedUserSettingsStore(DispatcherDefault, obj2);
+});
 const result = size.fileFinishedImporting("modules/user_settings/UnsyncedUserSettingsStore.tsx");
 
 export default unsyncedUserSettingsStore;

@@ -1,10 +1,9 @@
-// === Module 10390: react-native ===
+// === Module 10390: DCDPhotos ===
 
-// Module 10390 (react-native)
-import react_native from "react-native" /* 17 */;
+// Module 10390 (DCDPhotos)
+import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 
-const DCDPhotos = react_native.NativeModules.DCDPhotos;
 const result = size.fileFinishedImporting("modules/device/native/DCDPhotos.tsx");
 
-export default DCDPhotos;
+export default _mod17.NativeModules.DCDPhotos;

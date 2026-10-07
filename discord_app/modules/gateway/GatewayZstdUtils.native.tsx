@@ -1,20 +1,16 @@
 // === Module 13475: GatewayZstdUtils ===
 
 // Module 13475 (GatewayZstdUtils)
-import react_native from "react-native" /* 17 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import react_nativeDefault from "react-native" /* 13476 */;
+import _mod17 from "module_17" /* 17 */;
+import NativeCompressionModuleDefault from "NativeCompressionModule" /* 13476 */;
 import size from "module_2" /* 2 */;
 
-const NativeModules = react_native.NativeModules;
+const NativeModules = _mod17.NativeModules;
 const result = size.fileFinishedImporting("modules/gateway/GatewayZstdUtils.native.tsx");
 
 export const supportsZstd = function supportsZstd() {
-  let flag;
-  const obj = PlatformUtils;
   if (obj.isAndroid()) {
-    const obj2 = react_nativeDefault;
-    flag = obj2.getConstants().supportsZstd;
+    let flag = NativeCompressionModuleDefault.getConstants().supportsZstd;
   } else {
     const DCDCompressionManager = NativeModules.DCDCompressionManager;
     flag = undefined;

@@ -3,27 +3,19 @@
 // Module 8310 (useStageBlockedUsersCount)
 import StageChannelParticipants from "StageChannelParticipants" /* 5589 */;
 import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5582 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require;
 
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+fn(558);
+let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let first;
-  let tmp6;
-  let tmp7;
   _require = arg0;
-  const tmp = _require;
-  const obj = require("react");
-  const cResult = obj.c(4);
+  const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [StageChannelParticipantStore];
-    let num = 0;
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -39,21 +31,19 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[1] = arg0;
     cResult[2] = fn;
     cResult[3] = items1;
-    tmp7 = items1;
-    tmp6 = fn;
+    let tmp7 = items1;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  const tmpResult = tmp(504);
-  return tmpResult.useStateFromStores(first, tmp6, tmp7);
+  const obj = require("c");
+  return require("initialize").useStateFromStores(first, tmp6, tmp7);
 }) : ((arg0) => {
-  let closure_0;
   _require = arg0;
   const items = [StageChannelParticipantStore];
   const items1 = [arg0];
-  const obj = require("get initialized");
-  return obj.useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     let num = 0;
     if (null != closure_0) {
       num = StageChannelParticipantStore.getParticipantCount(tmp, StageChannelParticipants.StageChannelParticipantNamedIndex.BLOCKED);
@@ -61,21 +51,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return num;
   }, items1);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let first;
-  let tmp6;
-  let tmp7;
   _require = arg0;
-  const tmp = _require;
-  const obj = require("react");
-  const cResult = obj.c(4);
+  const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [StageChannelParticipantStore];
-    let num = 0;
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -91,21 +74,19 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[1] = arg0;
     cResult[2] = fn;
     cResult[3] = items1;
-    tmp7 = items1;
-    tmp6 = fn;
+    let tmp7 = items1;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  const tmpResult = tmp(504);
-  return tmpResult.useStateFromStores(first, tmp6, tmp7);
+  const obj = require("c");
+  return require("initialize").useStateFromStores(first, tmp6, tmp7);
 }) : ((arg0) => {
-  let closure_0;
   _require = arg0;
   const items = [StageChannelParticipantStore];
   const items1 = [arg0];
-  const obj = require("get initialized");
-  return obj.useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     let num = 0;
     if (null != closure_0) {
       num = StageChannelParticipantStore.getParticipantCount(tmp, StageChannelParticipants.StageChannelParticipantNamedIndex.IGNORED);
@@ -113,20 +94,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return num;
   }, items1);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let first;
-  let tmp6;
-  let tmp7;
   _require = arg0;
-  const obj = require("react");
-  const cResult = obj.c(4);
-  const tmp = _require;
+  const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [StageChannelParticipantStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -138,63 +113,21 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[1] = arg0;
     cResult[2] = fn;
     cResult[3] = items1;
-    tmp7 = items1;
-    tmp6 = fn;
+    let tmp7 = items1;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  const tmpResult = tmp(504);
-  return tmpResult.useStateFromStores(first, tmp6, tmp7);
+  const obj = require("c");
+  return require("initialize").useStateFromStores(first, tmp6, tmp7);
 }) : ((arg0) => {
-  let closure_0;
   _require = arg0;
   const items = [StageChannelParticipantStore];
   const items1 = [arg0];
-  const obj = require("get initialized");
-  return obj.useStateFromStores(items, () => StageChannelParticipantStore.getMutableParticipants(closure_0, StageChannelParticipants.StageChannelParticipantNamedIndex.BLOCKED), items1);
+  return require("initialize").useStateFromStores(items, () => StageChannelParticipantStore.getMutableParticipants(closure_0, StageChannelParticipants.StageChannelParticipantNamedIndex.BLOCKED), items1);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let first;
-  let tmp6;
-  let tmp7;
-  _require = arg0;
-  const obj = require("react");
-  const cResult = obj.c(4);
-  const tmp = _require;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [StageChannelParticipantStore];
-    cResult[0] = items;
-    first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const fn = function c() {
-      return StageChannelParticipantStore.getMutableParticipants(closure_0, StageChannelParticipants.StageChannelParticipantNamedIndex.IGNORED);
-    };
-    const items1 = [arg0];
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    cResult[3] = items1;
-    tmp7 = items1;
-    tmp6 = fn;
-  } else {
-    tmp6 = cResult[2];
-    tmp7 = cResult[3];
-  }
-  const tmpResult = tmp(504);
-  return tmpResult.useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
-  let closure_0;
-  _require = arg0;
-  const items = [StageChannelParticipantStore];
-  const items1 = [arg0];
-  const obj = require("get initialized");
-  return obj.useStateFromStores(items, () => StageChannelParticipantStore.getMutableParticipants(closure_0, StageChannelParticipants.StageChannelParticipantNamedIndex.IGNORED), items1);
-});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useStageBlockedUsersCount.tsx");
 
 export const useStageBlockedUsersCount = tmp2;
@@ -214,4 +147,35 @@ export const getStageIgnoredUsersCount = function getStageIgnoredUsersCount(id) 
   return num;
 };
 export const useStageBlockedUsers = tmp4;
-export const useStageIgnoredUsers = tmp5;
+export const useStageIgnoredUsers = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  _require = arg0;
+  const cResult = require("c").c(4);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [StageChannelParticipantStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== arg0) {
+    const fn = function c() {
+      return StageChannelParticipantStore.getMutableParticipants(closure_0, StageChannelParticipants.StageChannelParticipantNamedIndex.IGNORED);
+    };
+    const items1 = [arg0];
+    cResult[1] = arg0;
+    cResult[2] = fn;
+    cResult[3] = items1;
+    let tmp7 = items1;
+    let tmp6 = fn;
+  } else {
+    tmp6 = cResult[2];
+    tmp7 = cResult[3];
+  }
+  const obj = require("c");
+  return require("initialize").useStateFromStores(first, tmp6, tmp7);
+}) : ((arg0) => {
+  _require = arg0;
+  const items = [StageChannelParticipantStore];
+  const items1 = [arg0];
+  return require("initialize").useStateFromStores(items, () => StageChannelParticipantStore.getMutableParticipants(closure_0, StageChannelParticipants.StageChannelParticipantNamedIndex.IGNORED), items1);
+});

@@ -1,47 +1,41 @@
 // === Module 16309: useGuildsBarBadges ===
 
 // Module 16309 (useGuildsBarBadges)
-import Fragment from "Fragment" /* 21 */;
 import native from "native" /* 1188 */;
 import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4707 */;
 import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16278 */;
 import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 16314 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import GuildIncidentsStore from "GuildIncidentsStore" /* 11173 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4706 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import PermissionStore from "PermissionStore" /* 4515 */;
 import UserStore from "UserStore" /* 1377 */;
-import Constants from "Constants" /* 1085 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, importDefault, tmp11, tmp15, tmp2;
 
-let closure_14;
-let map1;
+require = fn;
 let closure_3 = ["guildActivityIndicatorSource"];
 let closure_4 = ["guildActivityIndicatorSource"];
+const Constants = fn(1085);
 ({ GuildFeatures: map1, Permissions: closure_14 } = Constants);
-const jsx = Fragment.jsx;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_16 = createStyles.createStyles({ topRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
-  let closure_0;
-  let first;
-  let items5;
-  let tmp9;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBadges.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
   _require = arg0;
-  const obj = require("react");
-  const cResult = obj.c(47);
+  const cResult = require("c").c(47);
   const tmp4 = closure_16();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -80,8 +74,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
       }
     }
   }
-  const tmpResult = require("get initialized");
-  const stateFromStores = tmpResult.useStateFromStores(first, D);
+  const obj = require("c");
+  const stateFromStores = require("initialize").useStateFromStores(first, D);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class D {
       constructor() {
@@ -100,7 +94,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
     }
     const items1 = [UserGuildJoinRequestStore, UserStore, GuildMemberStore];
     cResult[3] = items1;
-    tmp9 = items1;
+    const tmp9 = items1;
   } else {
     class D {
       constructor() {
@@ -119,8 +113,6 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
     }
   }
   if (cResult[4] === arg0) {
-    let tmp13;
-    let tmp17;
     class D {
       constructor() {
         guild = closure_10.getGuild(closure_0);
@@ -136,8 +128,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
         return flag;
       }
     }
-    const tmpResult5 = require("get initialized");
-    const stateFromStores1 = tmpResult5.useStateFromStores(tmp9, C, items5);
+    const stateFromStores1 = tmp(504).useStateFromStores(tmp9, C, items5);
     const _Symbol = Symbol;
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
       class D {
@@ -157,7 +148,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
       }
       const items2 = [PermissionStore, GuildStore, GuildIncidentsStore];
       cResult[8] = items2;
-      tmp13 = items2;
+      const tmp13 = items2;
     } else {
       class D {
         constructor() {
@@ -204,15 +195,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
                 if (tmp10) {
                   tmp11 = globalThis;
                   _Date = Date;
-                  self = this;
-                  self2 = this;
+                  tmp12 = new.target;
+                  tmp13 = new.target;
                   date = new Date(guildIncident.invitesDisabledUntil);
                   _Date2 = Date;
-                  self3 = this;
-                  self4 = this;
+                  tmp15 = new.target;
+                  tmp16 = new.target;
                   date1 = new Date();
-                  tmp14 = date1;
-                  tmp15 = date;
+                  tmp18 = date1;
+                  tmp19 = date;
                   tmp10 = date > date1;
                 }
                 hasItem = tmp10;
@@ -227,7 +218,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
       cResult[9] = arg0;
       cResult[10] = U;
       cResult[11] = items3;
-      tmp17 = items3;
+      let tmp17 = items3;
     } else {
       class U {
         constructor() {
@@ -257,15 +248,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
                 if (tmp10) {
                   tmp11 = globalThis;
                   _Date = Date;
-                  self = this;
-                  self2 = this;
+                  tmp12 = new.target;
+                  tmp13 = new.target;
                   date = new Date(guildIncident.invitesDisabledUntil);
                   _Date2 = Date;
-                  self3 = this;
-                  self4 = this;
+                  tmp15 = new.target;
+                  tmp16 = new.target;
                   date1 = new Date();
-                  tmp14 = date1;
-                  tmp15 = date;
+                  tmp18 = date1;
+                  tmp19 = date;
                   tmp10 = date > date1;
                 }
                 hasItem = tmp10;
@@ -278,13 +269,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
       }
       tmp17 = cResult[11];
     }
-    const tmpResult6 = require("get initialized");
-    const stateFromStores2 = tmpResult6.useStateFromStores(tmp13, U, tmp17);
+    const tmpResult5 = tmp(504);
+    const stateFromStores2 = tmp(504).useStateFromStores(tmp13, U, tmp17);
     const tmp20 = stateFromStores(16310)(arg0);
-    const tmpResult7 = require("useToken");
-    const token = tmpResult7.useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
-    const tmpResult8 = require("useToken");
-    const token1 = tmpResult8.useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
+    const tmpResult6 = tmp(504);
+    const token = tmp(4586).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
+    const tmpResult7 = tmp(4586);
+    const token1 = tmp(4586).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
     const diff = token1 - tmp(1188).BADGE_PADDING;
     if (cResult[12] !== diff) {
       class U {
@@ -315,15 +306,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
                 if (tmp10) {
                   tmp11 = globalThis;
                   _Date = Date;
-                  self = this;
-                  self2 = this;
+                  tmp12 = new.target;
+                  tmp13 = new.target;
                   date = new Date(guildIncident.invitesDisabledUntil);
                   _Date2 = Date;
-                  self3 = this;
-                  self4 = this;
+                  tmp15 = new.target;
+                  tmp16 = new.target;
                   date1 = new Date();
-                  tmp14 = date1;
-                  tmp15 = date;
+                  tmp18 = date1;
+                  tmp19 = date;
                   tmp10 = date > date1;
                 }
                 hasItem = tmp10;
@@ -366,15 +357,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
                 if (tmp10) {
                   tmp11 = globalThis;
                   _Date = Date;
-                  self = this;
-                  self2 = this;
+                  tmp12 = new.target;
+                  tmp13 = new.target;
                   date = new Date(guildIncident.invitesDisabledUntil);
                   _Date2 = Date;
-                  self3 = this;
-                  self4 = this;
+                  tmp15 = new.target;
+                  tmp16 = new.target;
                   date1 = new Date();
-                  tmp14 = date1;
-                  tmp15 = date;
+                  tmp18 = date1;
+                  tmp19 = date;
                   tmp10 = date > date1;
                 }
                 hasItem = tmp10;
@@ -415,15 +406,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
                 if (tmp10) {
                   tmp11 = globalThis;
                   _Date = Date;
-                  self = this;
-                  self2 = this;
+                  tmp12 = new.target;
+                  tmp13 = new.target;
                   date = new Date(guildIncident.invitesDisabledUntil);
                   _Date2 = Date;
-                  self3 = this;
-                  self4 = this;
+                  tmp15 = new.target;
+                  tmp16 = new.target;
                   date1 = new Date();
-                  tmp14 = date1;
-                  tmp15 = date;
+                  tmp18 = date1;
+                  tmp19 = date;
                   tmp10 = date > date1;
                 }
                 hasItem = tmp10;
@@ -463,15 +454,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
                   if (tmp10) {
                     tmp11 = globalThis;
                     _Date = Date;
-                    self = this;
-                    self2 = this;
+                    tmp12 = new.target;
+                    tmp13 = new.target;
                     date = new Date(guildIncident.invitesDisabledUntil);
                     _Date2 = Date;
-                    self3 = this;
-                    self4 = this;
+                    tmp15 = new.target;
+                    tmp16 = new.target;
                     date1 = new Date();
-                    tmp14 = date1;
-                    tmp15 = date;
+                    tmp18 = date1;
+                    tmp19 = date;
                     tmp10 = date > date1;
                   }
                   hasItem = tmp10;
@@ -514,15 +505,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
                   if (tmp10) {
                     tmp11 = globalThis;
                     _Date = Date;
-                    self = this;
-                    self2 = this;
+                    tmp12 = new.target;
+                    tmp13 = new.target;
                     date = new Date(guildIncident.invitesDisabledUntil);
                     _Date2 = Date;
-                    self3 = this;
-                    self4 = this;
+                    tmp15 = new.target;
+                    tmp16 = new.target;
                     date1 = new Date();
-                    tmp14 = date1;
-                    tmp15 = date;
+                    tmp18 = date1;
+                    tmp19 = date;
                     tmp10 = date > date1;
                   }
                   hasItem = tmp10;
@@ -563,15 +554,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
                   if (tmp10) {
                     tmp11 = globalThis;
                     _Date = Date;
-                    self = this;
-                    self2 = this;
+                    tmp12 = new.target;
+                    tmp13 = new.target;
                     date = new Date(guildIncident.invitesDisabledUntil);
                     _Date2 = Date;
-                    self3 = this;
-                    self4 = this;
+                    tmp15 = new.target;
+                    tmp16 = new.target;
                     date1 = new Date();
-                    tmp14 = date1;
-                    tmp15 = date;
+                    tmp18 = date1;
+                    tmp19 = date;
                     tmp10 = date > date1;
                   }
                   hasItem = tmp10;
@@ -612,15 +603,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
                   if (tmp10) {
                     tmp11 = globalThis;
                     _Date = Date;
-                    self = this;
-                    self2 = this;
+                    tmp12 = new.target;
+                    tmp13 = new.target;
                     date = new Date(guildIncident.invitesDisabledUntil);
                     _Date2 = Date;
-                    self3 = this;
-                    self4 = this;
+                    tmp15 = new.target;
+                    tmp16 = new.target;
                     date1 = new Date();
-                    tmp14 = date1;
-                    tmp15 = date;
+                    tmp18 = date1;
+                    tmp19 = date;
                     tmp10 = date > date1;
                   }
                   hasItem = tmp10;
@@ -661,15 +652,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
                   if (tmp10) {
                     tmp11 = globalThis;
                     _Date = Date;
-                    self = this;
-                    self2 = this;
+                    tmp12 = new.target;
+                    tmp13 = new.target;
                     date = new Date(guildIncident.invitesDisabledUntil);
                     _Date2 = Date;
-                    self3 = this;
-                    self4 = this;
+                    tmp15 = new.target;
+                    tmp16 = new.target;
                     date1 = new Date();
-                    tmp14 = date1;
-                    tmp15 = date;
+                    tmp18 = date1;
+                    tmp19 = date;
                     tmp10 = date > date1;
                   }
                   hasItem = tmp10;
@@ -710,15 +701,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
                   if (tmp10) {
                     tmp11 = globalThis;
                     _Date = Date;
-                    self = this;
-                    self2 = this;
+                    tmp12 = new.target;
+                    tmp13 = new.target;
                     date = new Date(guildIncident.invitesDisabledUntil);
                     _Date2 = Date;
-                    self3 = this;
-                    self4 = this;
+                    tmp15 = new.target;
+                    tmp16 = new.target;
                     date1 = new Date();
-                    tmp14 = date1;
-                    tmp15 = date;
+                    tmp18 = date1;
+                    tmp19 = date;
                     tmp10 = date > date1;
                   }
                   hasItem = tmp10;
@@ -732,29 +723,28 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
       }
       const obj2 = { guildActivityIndicatorSource: undefined, IconComponent: undefined, isCurrentUserConnected: tmp20.isCurrentUserConnected };
       const guildActivityIndicatorSource = obj2.guildActivityIndicatorSource;
+      const tmp36 = _objectWithoutProperties(obj2, closure_3);
       cResult[19] = tmp20.isCurrentUserConnected;
       cResult[20] = undefined;
       cResult[21] = undefined;
-      const tmp36 = _objectWithoutProperties(obj2, closure_3);
       class C {
         constructor() {
-          tmp = closure_1;
-          if (tmp) {
-            tmp2 = closure_8;
-            tmp3 = closure_0;
+          if (closure_1) {
+            tmp = closure_8;
+            tmp2 = closure_0;
             request = closure_8.getRequest(closure_0);
-            tmp5 = closure_12;
+            tmp4 = closure_12;
             currentUser = closure_12.getCurrentUser();
-            tmp7 = null;
+            tmp6 = null;
             if (null != currentUser) {
               if (null != request) {
                 if (request.userId === currentUser.id) {
-                  tmp8 = closure_9;
-                  member = closure_9.getMember(tmp3, request.userId);
+                  tmp7 = closure_9;
+                  member = closure_9.getMember(tmp2, request.userId);
                   if (null != member) {
                     if (!member.isPending) {
-                      tmp10 = closure_0;
-                      tmp11 = closure_2;
+                      tmp9 = closure_0;
+                      tmp10 = closure_2;
                       obj = closure_0(closure_2[14]);
                     }
                   }
@@ -772,23 +762,22 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
     const items4 = [tmp4.topRightBadge, tmp25];
     class C {
       constructor() {
-        tmp = closure_1;
-        if (tmp) {
-          tmp2 = closure_8;
-          tmp3 = closure_0;
+        if (closure_1) {
+          tmp = closure_8;
+          tmp2 = closure_0;
           request = closure_8.getRequest(closure_0);
-          tmp5 = closure_12;
+          tmp4 = closure_12;
           currentUser = closure_12.getCurrentUser();
-          tmp7 = null;
+          tmp6 = null;
           if (null != currentUser) {
             if (null != request) {
               if (request.userId === currentUser.id) {
-                tmp8 = closure_9;
-                member = closure_9.getMember(tmp3, request.userId);
+                tmp7 = closure_9;
+                member = closure_9.getMember(tmp2, request.userId);
                 if (null != member) {
                   if (!member.isPending) {
-                    tmp10 = closure_0;
-                    tmp11 = closure_2;
+                    tmp9 = closure_0;
+                    tmp10 = closure_2;
                     obj = closure_0(closure_2[14]);
                   }
                 }
@@ -803,26 +792,26 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
     cResult[14] = tmp4.topRightBadge;
     cResult[15] = tmp25;
     cResult[16] = items4;
+    const tmpResult8 = tmp(4586);
   }
   class C {
     constructor() {
-      tmp = closure_1;
-      if (tmp) {
-        tmp2 = closure_8;
-        tmp3 = closure_0;
+      if (closure_1) {
+        tmp = closure_8;
+        tmp2 = closure_0;
         request = closure_8.getRequest(closure_0);
-        tmp5 = closure_12;
+        tmp4 = closure_12;
         currentUser = closure_12.getCurrentUser();
-        tmp7 = null;
+        tmp6 = null;
         if (null != currentUser) {
           if (null != request) {
             if (request.userId === currentUser.id) {
-              tmp8 = closure_9;
-              member = closure_9.getMember(tmp3, request.userId);
+              tmp7 = closure_9;
+              member = closure_9.getMember(tmp2, request.userId);
               if (null != member) {
                 if (!member.isPending) {
-                  tmp10 = closure_0;
-                  tmp11 = closure_2;
+                  tmp9 = closure_0;
+                  tmp10 = closure_2;
                   obj = closure_0(closure_2[14]);
                 }
               }
@@ -839,35 +828,28 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
   cResult[5] = stateFromStores;
   cResult[6] = C;
   cResult[7] = items5;
+  const tmpResult = require("initialize");
 }) : ((arg0, mentionCount, isMentionLowImportance) => {
-  let closure_0;
-  let cutout;
-  let cutoutTopRight;
-  let items7;
-  let memo;
-  let stateFromStores;
-  let topRightBadge;
   _require = arg0;
   const tmp = closure_16();
   importDefault = tmp;
-  let obj = require("get initialized");
   let items = [GuildStore];
-  stateFromStores = obj.useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
+    guild = GuildStore.getGuild(closure_0);
     let flag;
     if (guild != null) {
       const features = guild.features;
-      flag = features.has(map1.MEMBER_VERIFICATION_MANUAL_APPROVAL);
+      flag = features.has(constants.MEMBER_VERIFICATION_MANUAL_APPROVAL);
     }
     if (flag == null) {
       flag = false;
     }
     return flag;
   });
-  let obj2 = require("get initialized");
+  const obj = require("initialize");
   const items1 = [cutout, UserStore, GuildMemberStore];
   const items2 = [arg0, stateFromStores];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => {
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
     if (stateFromStores) {
       const request = UserGuildJoinRequestStore.getRequest(closure_0);
       const currentUser = UserStore.getCurrentUser();
@@ -886,20 +868,20 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
       }
     }
   }, items2);
+  let obj2 = require("initialize");
   const items3 = [PermissionStore, GuildStore, cutoutTopRight];
   const items4 = [arg0];
-  const obj3 = require("get initialized");
-  const stateFromStores2 = obj3.useStateFromStores(items3, function() {
-    const guild = GuildStore.getGuild(closure_0);
+  const stateFromStores2 = require("initialize").useStateFromStores(items3, () => {
+    guild = GuildStore.getGuild(closure_0);
     if (null != guild) {
-      if (PermissionStore.can(constants.MANAGE_GUILD, guild)) {
+      if (PermissionStore.can(constants2.MANAGE_GUILD, guild)) {
         const guildIncident = GuildIncidentsStore.getGuildIncident(closure_0);
         let hasItem;
         if (guild != null) {
           const features = guild.features;
           const has = features.has;
           if (has != null) {
-            hasItem = has(map1.INVITES_DISABLED);
+            hasItem = has(constants.INVITES_DISABLED);
           }
         }
         if (!hasItem) {
@@ -910,14 +892,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
           let tmp10 = null != invitesDisabledUntil;
           if (tmp10) {
             const _Date = Date;
-            const self = this;
-            const self2 = this;
-            const _Date2 = Date;
-            const self3 = this;
-            const self4 = this;
             const date = new Date(guildIncident.invitesDisabledUntil);
-            tmp10 = date > new Date();
+            const _Date2 = Date;
             const date1 = new Date();
+            tmp10 = date > date1;
           }
           hasItem = tmp10;
         }
@@ -928,22 +906,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
   }, items4);
   const tmp5 = require("useGuildsBarGuildMediaState")(arg0);
   closure_3 = tmp5;
+  let obj3 = require("initialize");
+  const token = require("useToken").useToken(require("native").modules.mobile.GUILD_BAR_ITEM_SIZE);
   let obj4 = require("useToken");
-  const token = obj4.useToken(require("native").modules.mobile.GUILD_BAR_ITEM_SIZE);
-  let obj5 = require("useToken");
-  const token1 = obj5.useToken(require("native").modules.mobile.GUILD_BAR_ITEM_MARGIN);
+  const token1 = require("useToken").useToken(require("native").modules.mobile.GUILD_BAR_ITEM_MARGIN);
   const items5 = [tmp.topRightBadge, token1];
   memo = memo.useMemo(() => {
     const items = [topRightBadge.topRightBadge, { top: token1 - native.BADGE_PADDING }];
-    ({ top: token1 - native.BADGE_PADDING });
     return items;
   }, items5);
   const items6 = [tmp5, memo, token];
   const memo1 = memo.useMemo(() => {
-    let icon;
-    let tmp14;
-    const obj = GuildsBarActivityIndicator;
-    const mediaIcon = obj.getMediaIcon(closure_3);
+    const mediaIcon = GuildsBarActivityIndicator.getMediaIcon(closure_3);
     let source;
     if (mediaIcon != null) {
       source = mediaIcon.source;
@@ -951,50 +925,44 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
     if (source == null) {
       source = null;
     }
-    const obj2 = { guildActivityIndicatorSource: source, IconComponent: icon, isCurrentUserConnected: closure_3.isCurrentUserConnected };
-    icon = undefined;
+    const obj2 = { guildActivityIndicatorSource: source, IconComponent: null, isCurrentUserConnected: null };
+    let icon;
     if (mediaIcon != null) {
       icon = mediaIcon.icon;
     }
+    obj2.IconComponent = icon;
+    obj2.isCurrentUserConnected = closure_3.isCurrentUserConnected;
     const guildActivityIndicatorSource = obj2.guildActivityIndicatorSource;
-    let tmp8 = null;
     const tmp7 = _objectWithoutProperties(obj2, closure_4);
+    let tmp8 = null;
     if (null != guildActivityIndicatorSource) {
-      const GuildsBarActivityIndicatorBase = GuildsBarActivityIndicator.GuildsBarActivityIndicatorBase;
+      const obj3 = { style: memo, source: guildActivityIndicatorSource };
       const merged = Object.assign(tmp7);
-      tmp8 = <GuildsBarActivityIndicatorBase style={memo} source={guildActivityIndicatorSource} />;
+      tmp8 = jsx(GuildsBarActivityIndicator.GuildsBarActivityIndicatorBase, { style: memo, source: guildActivityIndicatorSource });
     }
-    const obj4 = { badgeTopRight: tmp8, cutoutTopRight: tmp14 };
-    tmp14 = undefined;
+    const obj4 = { badgeTopRight: tmp8, cutoutTopRight: null };
+    let tmp14;
     if (null != guildActivityIndicatorSource) {
       const obj5 = { position: "top-right", containerSize: token };
       tmp14 = computeGuildsBarCutoutDefault(obj5);
     }
+    obj4.cutoutTopRight = tmp14;
     return obj4;
   }, items6);
   cutoutTopRight = memo1.cutoutTopRight;
-  const badgeTopRight = memo1.badgeTopRight;
-  const obj6 = { mentionCount, isMentionLowImportance, joinRequestState: stateFromStores1, shouldShowInvitesDisabled: stateFromStores2 };
-  let tmp10 = require("useGuildsBarBottomRightBadge")(obj6);
+  let tmp10 = require("useGuildsBarBottomRightBadge")({ mentionCount, isMentionLowImportance, joinRequestState: stateFromStores1, shouldShowInvitesDisabled: stateFromStores2 });
   cutout = tmp10.cutout;
-  const obj7 = {
-    badgeTopRight,
-    badgeBottomRight: tmp10.badge,
-    cutouts: memo.useMemo(() => {
-      const items = [];
-      if (null != cutoutTopRight) {
-        items.push(tmp);
-      }
-      if (null != cutout) {
-        items.push(tmp3);
-      }
-      return items;
-    }, items7),
-    mediaState: tmp5
-  };
-  items7 = [cutoutTopRight, cutout];
+  const obj7 = { badgeTopRight: memo1.badgeTopRight, badgeBottomRight: tmp10.badge, cutouts: null, mediaState: tmp5 };
+  const items7 = [cutoutTopRight, cutout];
+  obj7.cutouts = memo.useMemo(() => {
+    const items = [];
+    if (null != cutoutTopRight) {
+      items.push(tmp);
+    }
+    if (null != cutout) {
+      items.push(tmp3);
+    }
+    return items;
+  }, items7);
   return obj7;
 });
-const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBadges.tsx");
-
-export default tmp3;

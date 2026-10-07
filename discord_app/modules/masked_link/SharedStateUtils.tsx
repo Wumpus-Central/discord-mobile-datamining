@@ -1,45 +1,36 @@
 // === Module 12767: SharedStateUtils ===
 
 // Module 12767 (SharedStateUtils)
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 8060 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let str;
-
-let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((url) => {
-  let hostname;
-  let protocol;
-  let tmp4;
-  let tmp6;
-  const obj = react2;
-  const cResult = obj.c(15);
+require = fn;
+let ReactCompilerGating = fn(558);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((url) => {
+  const cResult = c.c(15);
   if (cResult[0] !== url) {
-    const tmpResult = MaskedLinkStoreMethodsAdditional;
-    const protocol1 = tmpResult.getProtocol(url);
+    const protocol1 = MaskedLinkStoreMethodsAdditional.getProtocol(url);
     cResult[0] = url;
     cResult[1] = protocol1;
-    tmp4 = protocol1;
+    let tmp4 = protocol1;
+    const tmpResult = MaskedLinkStoreMethodsAdditional;
   } else {
     tmp4 = cResult[1];
   }
   if (cResult[2] !== url) {
-    const tmpResult2 = MaskedLinkStoreMethodsAdditional;
-    const hostname1 = tmpResult2.getHostname(url);
+    const hostname1 = MaskedLinkStoreMethodsAdditional.getHostname(url);
     cResult[2] = url;
     cResult[3] = hostname1;
-    tmp6 = hostname1;
+    let tmp6 = hostname1;
+    const tmpResult2 = MaskedLinkStoreMethodsAdditional;
   } else {
     tmp6 = cResult[3];
   }
   if (cResult[4] === tmp4) {
-    let tmp8;
     if (cResult[5] === tmp6) {
-      tmp8 = cResult[6];
+      let tmp8 = cResult[6];
     }
     ({ protocol, hostname } = tmp8);
     let str3 = "";
@@ -49,16 +40,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((url) => {
     const _HermesInternal = HermesInternal;
     const combined = "" + protocol + str3 + hostname;
     if (cResult[7] === combined) {
-      let tmp12;
       if (cResult[8] === url) {
-        tmp12 = cResult[9];
+        let tmp12 = cResult[9];
       }
       if (cResult[10] === str3) {
         if (cResult[11] === hostname) {
           if (cResult[12] === protocol) {
-            let tmp14;
             if (cResult[13] === tmp12) {
-              tmp14 = cResult[14];
+              let tmp14 = cResult[14];
             }
             return tmp14;
           }
@@ -84,16 +73,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((url) => {
   cResult[6] = url1;
   tmp8 = url1;
 }) : ((str) => {
-  let hostname;
-  let protocol;
-  let closure_0 = str;
+  closure_0 = str;
   const items = [str];
-  const memo = react.useMemo(() => {
-    let obj2;
-    let obj3;
-    const url = { protocol: obj2.getProtocol(str), hostname: obj3.getHostname(str) };
-    obj2 = MaskedLinkStoreMethodsAdditional;
-    obj3 = MaskedLinkStoreMethodsAdditional;
+  const memo = noop.useMemo(() => {
+    const url = { protocol: MaskedLinkStoreMethodsAdditional.getProtocol(closure_0), hostname: null };
+    url.hostname = MaskedLinkStoreMethodsAdditional.getHostname(closure_0);
     return url;
   }, items);
   ({ protocol, hostname } = memo);
@@ -105,48 +89,42 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((url) => {
   return url;
 });
 let closure_4 = tmp2;
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((url) => {
-  let authorityPrefix;
-  let first;
-  let hostname;
-  let protocol;
-  let theRestOfTheUrl;
-  let tmp4;
-  const obj = react2;
-  const cResult = obj.c(17);
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/masked_link/SharedStateUtils.tsx");
+
+export const useUrlParts = tmp2;
+export const useModalState = ReactCompilerGating.isReactCompilerEnabled() ? ((url) => {
+  const cResult = c.c(17);
   url = url.url;
   const trustUrl = url.trustUrl;
   const onConfirm = url.onConfirm;
   const onCancel = url.onCancel;
   const onClose = url.onClose;
-  [first, tmp4] = react.useState(false);
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  const first = tmp2[0];
   ({ protocol, authorityPrefix, hostname, theRestOfTheUrl } = closure_4(url));
-  const tmp5 = closure_4(url);
   if (cResult[0] === onClose) {
     if (cResult[1] === onConfirm) {
       if (cResult[2] === first) {
         if (cResult[3] === trustUrl) {
-          let tmp6;
           if (cResult[4] === url) {
-            tmp6 = cResult[5];
+            let tmp5 = cResult[5];
           }
           if (cResult[6] === onCancel) {
-            let tmp7;
             if (cResult[7] === onClose) {
-              tmp7 = cResult[8];
+              let tmp6 = cResult[8];
             }
             if (cResult[9] === authorityPrefix) {
-              if (cResult[10] === tmp7) {
-                if (cResult[11] === tmp6) {
+              if (cResult[10] === tmp6) {
+                if (cResult[11] === tmp5) {
                   if (cResult[12] === hostname) {
                     if (cResult[13] === protocol) {
                       if (cResult[14] === first) {
-                        let tmp8;
                         if (cResult[15] === theRestOfTheUrl) {
-                          tmp8 = cResult[16];
+                          let tmp7 = cResult[16];
                         }
-                        return tmp8;
+                        return tmp7;
                       }
                     }
                   }
@@ -155,42 +133,44 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((url) => {
             }
             class S {
               constructor() {
-                onCancel();
+                tmp = onCancel();
                 if (onClose != null) {
-                  onClose();
+                  tmp2 = onClose();
                 }
+                return;
               }
             }
-            tmp9[0] = protocol;
-            tmp9[1] = authorityPrefix;
-            tmp9[2] = hostname;
-            tmp9[3] = theRestOfTheUrl;
-            tmp9[4] = first;
-            tmp9[5] = tmp4;
-            tmp9[6] = tmp6;
-            tmp9[7] = tmp7;
+            tmp8[0] = protocol;
+            tmp8[1] = authorityPrefix;
+            tmp8[2] = hostname;
+            tmp8[3] = theRestOfTheUrl;
+            tmp8[4] = first;
+            tmp8[5] = tmp2[1];
+            tmp8[6] = tmp5;
+            tmp8[7] = tmp6;
             cResult[9] = authorityPrefix;
-            cResult[10] = tmp7;
-            cResult[11] = tmp6;
+            cResult[10] = tmp6;
+            cResult[11] = tmp5;
             cResult[12] = hostname;
             cResult[13] = protocol;
             cResult[14] = first;
             cResult[15] = theRestOfTheUrl;
-            cResult[16] = tmp9;
-            tmp8 = tmp9;
+            cResult[16] = tmp8;
+            tmp7 = tmp8;
           }
           class S {
             constructor() {
-              onCancel();
+              tmp = onCancel();
               if (onClose != null) {
-                onClose();
+                tmp2 = onClose();
               }
+              return;
             }
           }
           cResult[6] = onCancel;
           cResult[7] = onClose;
           cResult[8] = S;
-          tmp7 = S;
+          tmp6 = S;
         }
       }
     }
@@ -210,26 +190,19 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((url) => {
   cResult[3] = trustUrl;
   cResult[4] = url;
   cResult[5] = fn;
-  tmp6 = fn;
+  tmp5 = fn;
 }) : ((url) => {
-  let authorityPrefix;
-  let first;
-  let hostname;
-  let protocol;
-  let theRestOfTheUrl;
-  let tmp3;
   url = url.url;
   const trustUrl = url.trustUrl;
   const onConfirm = url.onConfirm;
   const onCancel = url.onCancel;
   const onClose = url.onClose;
-  first = undefined;
-  [first, tmp3] = react.useState(false);
-  const items = [url, first, trustUrl, onConfirm, onClose];
+  const tmp = _slicedToArray(noop.useState(false), 2);
+  const shouldTrustUrl = tmp[0];
+  const items = [url, shouldTrustUrl, trustUrl, onConfirm, onClose];
   ({ protocol, authorityPrefix, hostname, theRestOfTheUrl } = closure_4(url));
   const items1 = [onCancel, onClose];
-  const tmp4 = closure_4(url);
-  const callback = react.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (first) {
       trustUrl(url);
     }
@@ -243,10 +216,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((url) => {
     authorityPrefix,
     hostname,
     theRestOfTheUrl,
-    shouldTrustUrl: first,
-    setShouldTrustUrl: tmp3,
+    shouldTrustUrl,
+    setShouldTrustUrl: tmp[1],
     handleConfirm: callback,
-    handleCancel: react.useCallback(() => {
+    handleCancel: noop.useCallback(() => {
       onCancel();
       if (onClose != null) {
         onClose();
@@ -255,7 +228,3 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((url) => {
   };
   return url1;
 });
-const result = size.fileFinishedImporting("modules/masked_link/SharedStateUtils.tsx");
-
-export const useUrlParts = tmp2;
-export const useModalState = tmp3;

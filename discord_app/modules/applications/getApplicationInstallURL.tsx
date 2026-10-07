@@ -8,12 +8,8 @@ const Routes = Constants.Routes;
 let result = size.fileFinishedImporting("modules/applications/getApplicationInstallURL.tsx");
 
 export const getActivityLaunchURL = function getActivityLaunchURL(applicationId) {
-  let customId;
-  let linkId;
-  let referrerId;
   ({ customId, referrerId, linkId } = applicationId);
-  const ACTIVITY_DETAILSResult = Routes.ACTIVITY_DETAILS(applicationId.applicationId);
-  const str = new URL(ACTIVITY_DETAILSResult, "" + location.protocol + "//" + location.host);
+  const str = new URL(Routes.ACTIVITY_DETAILS(applicationId.applicationId), "" + location.protocol + "//" + location.host);
   const searchParams = str.searchParams;
   if (null != linkId) {
     const result = searchParams.set("link_id", linkId);
@@ -27,18 +23,11 @@ export const getActivityLaunchURL = function getActivityLaunchURL(applicationId)
   return str.toString();
 };
 export const getApplicationInstallURL = function getApplicationInstallURL(application) {
-  let customInstallUrl;
-  let installParams;
-  let integrationTypesConfig;
-  let permissions;
-  let scopes;
   ({ customInstallUrl, installParams, integrationTypesConfig } = application);
   if (null != customInstallUrl) {
     return customInstallUrl;
   } else {
     const _URLSearchParams = URLSearchParams;
-    const self = this;
-    const self2 = this;
     const str7 = new URLSearchParams();
     const result = str7.set("client_id", tmp);
     let someResult = null != integrationTypesConfig;

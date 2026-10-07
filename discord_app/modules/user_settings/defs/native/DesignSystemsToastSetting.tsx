@@ -8,21 +8,18 @@ import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const UserSettingsSections = Constants.UserSettingsSections;
-const obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
     return "Toast";
   },
-  parent: MobileUserSettings.DESIGN_SYSTEMS,
+  parent: SettingsConstants.MobileUserSettings.DESIGN_SYSTEMS,
   screen: {
-    route: UserSettingsSections.DESIGN_SYSTEM_TOAST,
+    route: Constants.UserSettingsSections.DESIGN_SYSTEM_TOAST,
     getComponent() {
       return require("UserSettingsDesignSystemToast").default;
     }
   }
-};
-const route = SettingBuilders.createRoute(obj);
+});
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsToastSetting.tsx");
 
 export default route;

@@ -1,13 +1,10 @@
 // === Module 6743: SocialLayerStorefrontStore ===
 
 // Module 6743 (SocialLayerStorefrontStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import size from "module_2" /* 2 */;
-
-let closure_18, locale;
 
 function handleUserSettingsStoreUpdate() {
   if (locale === LocaleStore.locale) {
@@ -17,186 +14,182 @@ function handleUserSettingsStoreUpdate() {
   }
 }
 let obj = {};
-let obj11 = {};
-let obj12 = {};
 obj = {};
 obj = {};
 obj = {};
-let obj3 = {};
 obj = {};
 obj = {};
 obj = {};
-let closure_13 = {};
+const dependencyMap = {};
 new Set();
 obj = { state: "idle" };
 let set1 = new Set();
 let set = set1;
-let closure_17 = {};
-const authStore4 = {};
+let dependencyMap2 = {};
+let dependencyMap3 = {};
 let closure_19 = {};
 let closure_20 = {};
-const set2 = new Set();
-set1 = set2;
+set1 = new Set();
 let c22 = null;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class SocialLayerStorefrontStore extends Store {
-  initialize() {
-    this.waitFor(AuthenticationStore, LocaleStore);
-    const items = [LocaleStore];
-    this.syncWith(items, handleUserSettingsStoreUpdate);
-    locale = LocaleStore.locale;
-  }
-  getStorefrontData(arg0) {
-    return obj11[arg0];
-  }
-  getStorefrontDataForApplicationId(arg0) {
-    return obj12[arg0];
-  }
-  getLoadedStorefrontApplicationIds() {
-    return Object.keys(obj12);
-  }
-  getStorefrontFetchState(type) {
-    let applicationId;
-    let guildId;
-    let tmp3;
-    if ("guild" === type.type) {
-      guildId = type.guildId;
-    } else {
-      guildId = closure_18[type.applicationId];
-    }
-    if ("guild" === type.type) {
-      applicationId = closure_17[type.guildId];
-    } else {
-      applicationId = type.applicationId;
-    }
-    if (null != guildId) {
-      tmp3 = obj11[guildId];
-    } else if (null != applicationId) {
-      tmp3 = obj12[applicationId];
-    }
-    return tmp3;
-  }
-  getSkuAssets() {
-    return obj3;
-  }
-  getStorefrontMetadata(arg0) {
-    return obj[arg0];
-  }
-  getStorefrontEntries(applicationId) {
-    return obj[applicationId];
-  }
-  getStorefrontById(storefrontId) {
-    return obj[storefrontId];
-  }
-  getPreviewStorefrontId(arg0) {
-    let tmp = obj[arg0];
-    if (tmp == null) {
-      tmp = null;
-    }
-    return tmp;
-  }
-  getStorefrontState(arg0) {
-    if (null != arg0) {
-      return obj[arg0];
-    }
-  }
-  getAnnouncement(arg0) {
-    return obj[arg0];
-  }
-  getConfig() {
-    let config = null;
-    if ("success" === obj.state) {
-      config = obj.config;
-    }
-    return config;
-  }
-  getConfigForApplicationId(id) {
-    return closure_20[id];
-  }
-  getApplicationIdFromDetectableId(application_id) {
-    return closure_19[application_id];
-  }
-  getDetectableIdsToApplicationIds() {
-    return closure_19;
-  }
-  getGuildIdFromApplicationId(applicationId) {
-    let tmp;
-    if (null != applicationId) {
-      tmp = closure_18[applicationId];
-    }
-    return tmp;
-  }
-  getApplicationIdFromGuildId(id) {
-    if (null != id) {
-      let tmp2 = closure_17[id];
-      if (tmp2 == null) {
-        let applicationId;
-        if (obj11[id] != null) {
-          const storefront = tmp4.storefront;
-          if (storefront != null) {
-            applicationId = storefront.applicationId;
-          }
-        }
-        tmp2 = applicationId;
-      }
-      return tmp2;
-    }
-  }
-  getConfigFetchState() {
-    return obj;
-  }
-  getStorefrontApplicationIds() {
-    return set;
-  }
-  hasStorefrontForApplicationId(applicationIdFromGuildId) {
-    const hasItem = null != applicationIdFromGuildId && set.has(applicationIdFromGuildId);
-    return hasItem;
-  }
-  getStorefrontGuildIds() {
-    return set1;
-  }
-  getSKUEligibility(skuId) {
-    let state;
-    if (obj[skuId] != null) {
-      state = tmp.state;
-    }
-    return state;
-  }
-  getSKUEligibilityEntry(arg0) {
-    return obj[arg0];
-  }
-  getNormalizedSKUEligibility(arg0) {
-    let state;
-    if (obj[arg0] != null) {
-      state = tmp.state;
-    }
-    return "ineligible" !== state;
-  }
-  getAnnouncementModalContentConfig() {
-    return c22;
-  }
 }
 const prototype = SocialLayerStorefrontStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(AuthenticationStore, LocaleStore);
+  const items = [LocaleStore];
+  this.syncWith(items, handleUserSettingsStoreUpdate);
+  locale = LocaleStore.locale;
+};
+prototype["getStorefrontData"] = function getStorefrontData(arg0) {
+  return obj11[arg0];
+};
+prototype["getStorefrontDataForApplicationId"] = function getStorefrontDataForApplicationId(arg0) {
+  return obj12[arg0];
+};
+prototype["getLoadedStorefrontApplicationIds"] = function getLoadedStorefrontApplicationIds() {
+  return Object.keys(obj12);
+};
+prototype["getStorefrontFetchState"] = function getStorefrontFetchState(type) {
+  if ("guild" === type.type) {
+    let guildId = type.guildId;
+  } else {
+    guildId = dependencyMap3[type.applicationId];
+  }
+  if ("guild" === type.type) {
+    let applicationId = dependencyMap2[type.guildId];
+  } else {
+    applicationId = type.applicationId;
+  }
+  if (null != guildId) {
+    let tmp3 = obj11[guildId];
+  } else if (null != applicationId) {
+    tmp3 = obj12[applicationId];
+  }
+  return tmp3;
+};
+prototype["getSkuAssets"] = function getSkuAssets() {
+  return obj3;
+};
+prototype["getStorefrontMetadata"] = function getStorefrontMetadata(arg0) {
+  return obj[arg0];
+};
+prototype["getStorefrontEntries"] = function getStorefrontEntries(applicationId) {
+  return obj[applicationId];
+};
+prototype["getStorefrontById"] = function getStorefrontById(storefrontId) {
+  return obj[storefrontId];
+};
+prototype["getPreviewStorefrontId"] = function getPreviewStorefrontId(arg0) {
+  let tmp = obj[arg0];
+  if (tmp == null) {
+    tmp = null;
+  }
+  return tmp;
+};
+prototype["getStorefrontState"] = function getStorefrontState(arg0) {
+  if (null != arg0) {
+    return obj[arg0];
+  }
+};
+prototype["getAnnouncement"] = function getAnnouncement(arg0) {
+  return obj[arg0];
+};
+prototype["getConfig"] = function getConfig() {
+  let config = null;
+  if ("success" === obj.state) {
+    config = obj.config;
+  }
+  return config;
+};
+prototype["getConfigForApplicationId"] = function getConfigForApplicationId(id) {
+  return closure_20[id];
+};
+prototype["getApplicationIdFromDetectableId"] = function getApplicationIdFromDetectableId(application_id) {
+  return closure_19[application_id];
+};
+prototype["getDetectableIdsToApplicationIds"] = function getDetectableIdsToApplicationIds() {
+  return closure_19;
+};
+prototype["getGuildIdFromApplicationId"] = function getGuildIdFromApplicationId(applicationId) {
+  let tmp;
+  if (null != applicationId) {
+    tmp = dependencyMap3[applicationId];
+  }
+  return tmp;
+};
+prototype["getApplicationIdFromGuildId"] = function getApplicationIdFromGuildId(id) {
+  if (null != id) {
+    let tmp2 = dependencyMap2[id];
+    if (tmp2 == null) {
+      let applicationId;
+      if (obj11[id] != null) {
+        const storefront = tmp4.storefront;
+        if (storefront != null) {
+          applicationId = storefront.applicationId;
+        }
+      }
+      tmp2 = applicationId;
+    }
+    return tmp2;
+  }
+};
+prototype["getConfigFetchState"] = function getConfigFetchState() {
+  return obj;
+};
+prototype["getStorefrontApplicationIds"] = function getStorefrontApplicationIds() {
+  return set;
+};
+prototype["hasStorefrontForApplicationId"] = function hasStorefrontForApplicationId(applicationIdFromGuildId) {
+  let hasItem = null != applicationIdFromGuildId;
+  if (hasItem) {
+    hasItem = set.has(applicationIdFromGuildId);
+  }
+  return hasItem;
+};
+prototype["getStorefrontGuildIds"] = function getStorefrontGuildIds() {
+  return set1;
+};
+prototype["getSKUEligibility"] = function getSKUEligibility(skuId) {
+  state = undefined;
+  if (obj[skuId] != null) {
+    state = tmp.state;
+  }
+  return state;
+};
+prototype["getSKUEligibilityEntry"] = function getSKUEligibilityEntry(arg0) {
+  return obj[arg0];
+};
+prototype["getNormalizedSKUEligibility"] = function getNormalizedSKUEligibility(arg0) {
+  state = undefined;
+  if (obj[arg0] != null) {
+    state = tmp.state;
+  }
+  return "ineligible" !== state;
+};
+prototype["getAnnouncementModalContentConfig"] = function getAnnouncementModalContentConfig() {
+  return c22;
+};
 SocialLayerStorefrontStore.displayName = "SocialLayerStorefrontStore";
 obj = {
   LOGOUT: function handleLogout() {
     closure_13 = {};
     new Set();
-    new Set();
+    set1 = new Set();
+    set = set1;
     closure_17 = {};
     closure_18 = {};
     closure_19 = {};
     closure_20 = {};
     set1 = new Set();
     c22 = null;
-    new Set();
   },
   STOREFRONT_PROMOTION_ID_OVERRIDE_SET: function handleStorefrontPromotionIdOverrideSet() {
 
   },
   POST_CONNECTION_OPEN: function handlePostConnectionOpen() {
     closure_13 = {};
-    new Set();
+    set = new Set();
   },
   ENTITLEMENT_CREATE: function handleEntitlementCreate(entitlement) {
     entitlement = entitlement.entitlement;
@@ -205,20 +198,21 @@ obj = {
     } else {
       obj = {};
       const merged = Object.assign(obj);
-      delete obj[entitlement.sku_id];
+      const sku_id = entitlement.sku_id;
+      delete tmp2[tmp];
     }
   },
   INTERACTION_FAILURE: function handleInteractionFailure(interactionId) {
     interactionId = interactionId.interactionId;
     if (null == interactionId) {
       return false;
-    } else if (null == closure_13[interactionId]) {
+    } else if (null == dependencyMap[interactionId]) {
       const _Object = Object;
       const values = Object.values(obj);
       if (values.some((state) => "checking" === state.state)) {
         if (set.size >= 25) {
+          set.delete(set.values().next().value);
           const iter = set.values();
-          set.delete(iter.next().value);
         }
         set.add(interactionId);
       }
@@ -226,29 +220,26 @@ obj = {
     } else {
       obj = {};
       const merged = Object.assign(obj);
-      obj[closure_13[interactionId]] = { state: "error", reason: "interaction_failure" };
-      delete closure_13[interactionId];
+      obj[tmp16] = { state: "error", reason: "interaction_failure" };
+      delete tmp[tmp2];
     }
   },
-  INTERACTION_SUCCESS: function handleInteractionSuccess(interactionId) {
-    interactionId = interactionId.interactionId;
-    if (null == closure_13[interactionId]) {
+  INTERACTION_SUCCESS: function handleInteractionSuccess(arg0) {
+    if (null == dependencyMap[arg0.interactionId]) {
       return false;
     } else {
-      delete closure_13[interactionId];
+      delete tmp[tmp2];
     }
   },
   SOCIAL_LAYER_STOREFRONT_LOAD: function handleSocialLayerStorefrontLoad(guildOrApplicationId) {
-    let applicationId;
-    let guildId;
     guildOrApplicationId = guildOrApplicationId.guildOrApplicationId;
     if ("guild" === guildOrApplicationId.type) {
-      guildId = guildOrApplicationId.guildId;
+      let guildId = guildOrApplicationId.guildId;
     } else {
-      guildId = closure_18[guildOrApplicationId.applicationId];
+      guildId = dependencyMap3[guildOrApplicationId.applicationId];
     }
     if ("guild" === guildOrApplicationId.type) {
-      applicationId = closure_17[guildOrApplicationId.guildId];
+      let applicationId = dependencyMap2[guildOrApplicationId.guildId];
     } else {
       applicationId = guildOrApplicationId.applicationId;
     }
@@ -266,21 +257,21 @@ obj = {
       obj12[applicationId] = obj3;
     }
     const merged4 = Object.assign(obj11);
+    obj11 = {};
     const merged5 = Object.assign(obj12);
+    obj12 = {};
+    const obj4 = {};
+    const obj5 = {};
   },
   SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: function handleSocialLayerStorefrontLoadSuccess(arg0) {
-    let guildId2;
-    let guildOrApplicationId;
-    let storefront;
     ({ guildOrApplicationId, storefront } = arg0);
     if ("guild" === guildOrApplicationId.type) {
-      guildId2 = guildOrApplicationId.guildId;
+      let guildId2 = guildOrApplicationId.guildId;
     } else {
-      let guildId;
       if ("guild" === guildOrApplicationId.type) {
-        guildId = guildOrApplicationId.guildId;
+        let guildId = guildOrApplicationId.guildId;
       } else {
-        guildId = closure_18[guildOrApplicationId.applicationId];
+        guildId = dependencyMap3[guildOrApplicationId.applicationId];
       }
       if ("guild" === guildOrApplicationId.type) {
         guildId2 = guildId;
@@ -289,19 +280,25 @@ obj = {
         guildId2 = guildId;
       }
     }
-    const tmp4 = null != guildId2 && null == closure_17[guildId2];
+    let tmp4 = null != guildId2;
     if (tmp4) {
-      closure_17[guildId2] = storefront.applicationId;
-      obj = {};
-      const merged = Object.assign(closure_17);
-      closure_17 = obj;
+      tmp4 = null == dependencyMap2[guildId2];
     }
-    const tmp10 = null != storefront.applicationId && null != guildId2 && null == closure_18[storefront.applicationId];
+    if (tmp4) {
+      dependencyMap2[guildId2] = storefront.applicationId;
+      obj = {};
+      const merged = Object.assign(dependencyMap2);
+      dependencyMap2 = obj;
+    }
+    let tmp10 = null != storefront.applicationId && null != guildId2;
     if (tmp10) {
-      closure_18[storefront.applicationId] = guildId2;
+      tmp10 = null == dependencyMap3[storefront.applicationId];
+    }
+    if (tmp10) {
+      dependencyMap3[storefront.applicationId] = guildId2;
       const obj2 = {};
-      const merged1 = Object.assign(closure_18);
-      closure_18 = obj2;
+      const merged1 = Object.assign(dependencyMap3);
+      dependencyMap3 = obj2;
     }
     const applicationId2 = storefront.applicationId;
     obj3 = { state: "fetched", fetchedAt: Date.now(), storefront };
@@ -318,7 +315,9 @@ obj = {
       obj12[applicationId2] = obj5;
     }
     const merged6 = Object.assign(obj11);
+    obj11 = {};
     const merged7 = Object.assign(obj12);
+    obj12 = {};
     if (null != storefront.assets) {
       const obj8 = {};
       const merged8 = Object.assign(obj3);
@@ -327,45 +326,37 @@ obj = {
     }
   },
   SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS: function handleSocialLayerStorefrontPartialLoadSuccess(assets) {
-    assets = assets.assets;
-    obj = {};
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(assets);
+    const merged = Object.assign(obj3);
+    const merged1 = Object.assign(assets.assets);
   },
   SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS: function handleSocialLayerStorefrontMetadataLoadSuccess(arg0) {
-    let applicationId;
-    let storefrontMetadata;
     obj = {};
     ({ applicationId, storefrontMetadata } = arg0);
     const merged = Object.assign(obj);
     obj[applicationId] = storefrontMetadata;
   },
   SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE: function handleSocialLayerStorefrontLoadFailure(guildOrApplicationId) {
-    let applicationId;
-    let guildId;
-    let tmp3;
     guildOrApplicationId = guildOrApplicationId.guildOrApplicationId;
-    const eager = guildOrApplicationId.eager;
     if ("guild" === guildOrApplicationId.type) {
-      guildId = guildOrApplicationId.guildId;
+      let guildId = guildOrApplicationId.guildId;
     } else {
-      guildId = closure_18[guildOrApplicationId.applicationId];
+      guildId = dependencyMap3[guildOrApplicationId.applicationId];
     }
     if ("guild" === guildOrApplicationId.type) {
-      applicationId = closure_17[guildOrApplicationId.guildId];
+      let applicationId = dependencyMap2[guildOrApplicationId.guildId];
     } else {
       applicationId = guildOrApplicationId.applicationId;
     }
     if (null != guildId) {
-      tmp3 = obj11[guildId];
+      let tmp6 = obj11[guildId];
     } else if (null != applicationId) {
-      tmp3 = obj12[applicationId];
+      tmp6 = obj12[applicationId];
     }
-    if (null == tmp3) {
+    if (null == tmp6) {
       return false;
-    } else if (eager) {
-      if ("loading" === tmp3.state) {
-        if (null != tmp3.storefront) {
+    } else if (guildOrApplicationId.eager) {
+      if ("loading" === tmp6.state) {
+        if (null != tmp6.storefront) {
           const obj2 = { state: "fetched" };
           if (null != guildId) {
             obj3 = {};
@@ -388,10 +379,10 @@ obj = {
         }
       }
       if (null != guildId) {
-        delete obj11[guildId];
+        delete tmp[tmp3];
       }
       if (null != applicationId) {
-        delete obj12[applicationId];
+        delete tmp[tmp2];
       }
       const obj7 = {};
       const merged6 = Object.assign(obj11);
@@ -400,8 +391,9 @@ obj = {
       const merged7 = Object.assign(obj12);
       obj12 = obj8;
     } else {
-      obj = { state: "error", fetchedAt: Date.now(), storefront: "o" };
+      obj = { state: "error", fetchedAt: null, storefront: "o" };
       const _Date = Date;
+      obj.fetchedAt = Date.now();
       if (null != guildId) {
         const obj9 = {};
         const merged8 = Object.assign(obj11[guildId]);
@@ -427,13 +419,10 @@ obj = {
   },
   SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_START: function handleSocialLayerStorefrontAnnouncementFetchStart(guildId) {
     obj = {};
-    guildId = guildId.guildId;
     const merged = Object.assign(obj);
-    obj[guildId] = { state: "loading" };
+    obj[guildId.guildId] = { state: "loading" };
   },
   SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_SUCCESS: function handleSocialLayerStorefrontAnnouncementFetchSuccess(arg0) {
-    let announcement;
-    let guildId;
     obj = {};
     ({ guildId, announcement } = arg0);
     const merged = Object.assign(obj);
@@ -441,9 +430,8 @@ obj = {
   },
   SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_FAILURE: function handleSocialLayerStorefrontAnnouncementFetchFailure(guildId) {
     obj = {};
-    guildId = guildId.guildId;
     const merged = Object.assign(obj);
-    obj[guildId] = { state: "error" };
+    obj[guildId.guildId] = { state: "error" };
   },
   SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_START: function handleStorefrontConfigFetchStart() {
 
@@ -486,41 +474,32 @@ obj = {
   },
   SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_START: function handleSKUPurchaseEligibilityCheckStart(skuId) {
     obj = {};
-    skuId = skuId.skuId;
     const merged = Object.assign(obj);
-    obj[skuId] = { state: "checking" };
+    obj[skuId.skuId] = { state: "checking" };
   },
   SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE: function handleSKUPurchaseEligibilityCheckCreate(arg0) {
-    let interactionId;
-    let skuId;
     ({ skuId, interactionId } = arg0);
-    let state;
+    state = undefined;
     if (obj[skuId] != null) {
       state = tmp.state;
     }
-    let tmp3 = "checking" === state;
-    if (tmp3) {
-      if (set.has(interactionId)) {
-        set.delete(interactionId);
-        obj = {};
-        const merged = Object.assign(obj);
-        obj[skuId] = { state: "error", reason: "interaction_failure" };
-      } else {
-        closure_13[interactionId] = skuId;
-      }
-      tmp3 = tmp6;
+    if ("checking" !== state) {
+      return tmp3;
+    } else if (set.has(interactionId)) {
+      set.delete(interactionId);
+      obj = {};
+      const merged = Object.assign(obj);
+      obj[skuId] = { state: "error", reason: "interaction_failure" };
+    } else {
+      closure_13[interactionId] = skuId;
     }
-    return tmp3;
   },
   SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE: function handleSKUPurchaseEligibilityCheckFailure(httpStatus) {
-    let reason;
-    let skuId;
     ({ skuId, reason } = httpStatus);
     if (reason === undefined) {
       reason = "http_error";
     }
-    let state;
-    httpStatus = httpStatus.httpStatus;
+    state = undefined;
     if (obj[skuId] != null) {
       state = tmp.state;
     }
@@ -531,22 +510,17 @@ obj = {
     }
     obj = {};
     const merged = Object.assign(obj);
-    obj[skuId] = { state: "error", reason, httpStatus };
+    obj[skuId] = { state: "error", reason, httpStatus: httpStatus.httpStatus };
   },
   SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE: function handleSKUPurchaseEligibilityResponse(arg0) {
-    let eligible;
-    let ineligibleReason;
-    let recipientId;
-    let skuId;
     ({ skuId, recipientId, eligible, ineligibleReason } = arg0);
     if (AuthenticationStore.getId() !== recipientId) {
       return false;
     } else {
-      let obj2;
       obj = {};
       const merged = Object.assign(obj);
       if (eligible) {
-        obj2 = { state: "eligible" };
+        let obj2 = { state: "eligible" };
       } else {
         obj2 = { state: "ineligible", ineligibleReason };
       }
@@ -555,41 +529,36 @@ obj = {
   },
   SOCIAL_LAYER_STOREFRONT_ENTRIES_LOAD: function handleSocialLayerStorefrontEntriesLoad(applicationId) {
     obj = {};
-    applicationId = applicationId.applicationId;
     const merged = Object.assign(obj);
-    obj[applicationId] = { state: "loading" };
+    obj[applicationId.applicationId] = { state: "loading" };
   },
   SOCIAL_LAYER_STOREFRONT_ENTRIES_LOAD_SUCCESS: function handleSocialLayerStorefrontEntriesLoadSuccess(arg0) {
-    let applicationId;
-    let entries;
     obj = {};
     ({ applicationId, entries } = arg0);
     const merged = Object.assign(obj);
     obj[applicationId] = { state: "fetched", entries, fetchedAt: Date.now() };
-    ({ state: "fetched", entries, fetchedAt: Date.now() });
   },
   SOCIAL_LAYER_STOREFRONT_ENTRIES_LOAD_FAILURE: function handleSocialLayerStorefrontEntriesLoadFailure(applicationId) {
     obj = {};
-    applicationId = applicationId.applicationId;
     const merged = Object.assign(obj);
-    obj[applicationId] = { state: "error", fetchedAt: Date.now() };
-    ({ state: "error", fetchedAt: Date.now() });
+    obj[applicationId.applicationId] = { state: "error", fetchedAt: Date.now() };
   },
   SOCIAL_LAYER_STOREFRONT_BY_ID_LOAD: function handleSocialLayerStorefrontByIdLoad(storefrontId) {
     storefrontId = storefrontId.storefrontId;
     obj = {};
     const merged = Object.assign(obj);
-    const obj2 = { storefront: null, state: "loading", fetchedAt: null };
+    const obj2 = {};
     const merged1 = Object.assign(obj[storefrontId]);
+    obj2.storefront = null;
+    obj2.state = "loading";
+    obj2.fetchedAt = null;
     obj[storefrontId] = obj2;
   },
   SOCIAL_LAYER_STOREFRONT_BY_ID_LOAD_SUCCESS: function handleSocialLayerStorefrontByIdLoadSuccess(storefront) {
     storefront = storefront.storefront;
     obj = {};
-    const storefrontId = storefront.storefrontId;
     const merged = Object.assign(obj);
-    obj[storefrontId] = { storefront, state: "fetched", fetchedAt: Date.now() };
-    ({ storefront, state: "fetched", fetchedAt: Date.now() });
+    obj[storefront.storefrontId] = { storefront, state: "fetched", fetchedAt: Date.now() };
     if (null != storefront.assets) {
       obj3 = {};
       const merged1 = Object.assign(obj3);
@@ -598,21 +567,17 @@ obj = {
   },
   SOCIAL_LAYER_STOREFRONT_BY_ID_LOAD_FAILURE: function handleSocialLayerStorefrontByIdLoadFailure(storefrontId) {
     obj = {};
-    storefrontId = storefrontId.storefrontId;
     const merged = Object.assign(obj);
-    obj[storefrontId] = { storefront: null, state: "error", fetchedAt: Date.now() };
-    ({ storefront: null, state: "error", fetchedAt: Date.now() });
+    obj[storefrontId.storefrontId] = { storefront: null, state: "error", fetchedAt: Date.now() };
   },
-  SOCIAL_LAYER_STOREFRONT_SET_PREVIEW: function handleSocialLayerStorefrontSetPreview(arg0) {
-    let applicationId;
-    let storefrontId;
-    ({ applicationId, storefrontId } = arg0);
+  SOCIAL_LAYER_STOREFRONT_SET_PREVIEW: function handleSocialLayerStorefrontSetPreview(storefrontId) {
+    storefrontId = storefrontId.storefrontId;
     obj = {};
     const merged = Object.assign(obj);
     if (null == storefrontId) {
-      delete obj[applicationId];
+      delete tmp[tmp2];
     } else {
-      obj[applicationId] = storefrontId;
+      obj[storefrontId.applicationId] = storefrontId;
     }
   },
   SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT_FETCH_SUCCESS: function handleLaunchAnnouncementFetchSuccess(config) {
@@ -623,6 +588,7 @@ obj = {
   }
 };
 const socialLayerStorefrontStore = new SocialLayerStorefrontStore(DispatcherDefault, obj);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontStore.tsx");
 
 export default socialLayerStorefrontStore;

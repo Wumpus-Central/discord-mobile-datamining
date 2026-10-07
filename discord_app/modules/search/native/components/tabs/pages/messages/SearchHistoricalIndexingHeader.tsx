@@ -1,30 +1,22 @@
 // === Module 16908: SearchHistoricalIndexingHeader ===
 
 // Module 16908 (SearchHistoricalIndexingHeader)
-import Fragment from "Fragment" /* 21 */;
 import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12001 */;
-import react_mod from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
-import SearchConstants from "SearchConstants" /* 7524 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let searchContext;
-
-let SEARCH_LIST_HORIZONTAL_PADDING;
-let SEARCH_ROW_TAP_STATE_PADDING;
-let hasOwnProperty;
-let react = react_mod;
+const require = fn;
+const SearchConstants = fn(7524);
 ({ SearchTabs: hasOwnProperty, SEARCH_LIST_HORIZONTAL_PADDING, SEARCH_ROW_TAP_STATE_PADDING } = SearchConstants);
-const jsx = Fragment.jsx;
-let obj = { header: { marginBottom: 16 }, headerMessages: { marginHorizontal: SEARCH_LIST_HORIZONTAL_PADDING, marginTop: SEARCH_ROW_TAP_STATE_PADDING } };
-let closure_7 = createStyles.createStyles(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
-  let headerMessages;
-  let tmp5;
-  let obj = searchContext(576);
-  const cResult = obj.c(16);
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let closure_7 = createStyles.createStyles({ header: { marginBottom: 16 }, headerMessages: { marginHorizontal: SEARCH_LIST_HORIZONTAL_PADDING, marginTop: SEARCH_ROW_TAP_STATE_PADDING } });
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchHistoricalIndexingHeader.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+  const cResult = searchContext(576).c(16);
   searchContext = searchContext.searchContext;
   const documentsIndexed = searchContext.documentsIndexed;
   const tab = searchContext.tab;
@@ -34,54 +26,50 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => 
     const toLocaleStringResult = NumberResult.toLocaleString(LocaleStore.locale);
     cResult[0] = NumberResult;
     cResult[1] = toLocaleStringResult;
-    tmp5 = toLocaleStringResult;
+    let tmp5 = toLocaleStringResult;
   } else {
     tmp5 = cResult[1];
   }
   if (tab === constants.MESSAGES) {
-    headerMessages = tmp4.headerMessages;
+    const headerMessages = tmp4.headerMessages;
   }
   if (cResult[2] === documentsIndexed) {
-    let tmp9;
-    let tmp10;
     if (cResult[3] === searchContext) {
-      tmp9 = cResult[4];
-      tmp10 = cResult[5];
+      let tmp9 = cResult[4];
+      let tmp10 = cResult[5];
     }
-    const effect = react.useEffect(tmp9, tmp10);
+    const effect = noop.useEffect(tmp9, tmp10);
     if (cResult[6] === headerMessages) {
-      let tmp13;
-      let tmp14;
-      let tmp16;
       if (cResult[7] === tmp4.header) {
-        tmp13 = cResult[8];
+        let tmp13 = cResult[8];
       }
       if (cResult[9] !== tmp5) {
         const intl = tmp(1126).intl;
-        let obj2 = { count: tmp5 };
-        const formatResult = intl.format(searchContext(1126).t["4Y3O+O"], obj2);
+        const obj2 = { count: tmp5 };
+        const formatResult = intl.format(tmp(1126).t["4Y3O+O"], obj2);
         cResult[9] = tmp5;
         cResult[10] = formatResult;
-        tmp14 = formatResult;
+        let tmp14 = formatResult;
       } else {
         tmp14 = cResult[10];
       }
       if (cResult[11] !== tmp14) {
-        const tmp18 = jsx(searchContext(4892).Text, { variant: "heading-sm/normal", color: "interactive-text-default", children: tmp14 });
+        const obj3 = { variant: "heading-sm/normal", color: "interactive-text-default", children: tmp14 };
+        const tmp18 = jsx(tmp(4892).Text, { variant: "heading-sm/normal", color: "interactive-text-default", children: tmp14 });
         cResult[11] = tmp14;
         cResult[12] = tmp18;
-        tmp16 = tmp18;
+        let tmp16 = tmp18;
       } else {
         tmp16 = cResult[12];
       }
       if (cResult[13] === tmp13) {
-        let tmp19;
         if (cResult[14] === tmp16) {
-          tmp19 = cResult[15];
+          let tmp19 = cResult[15];
         }
         return tmp19;
       }
-      const tmp21 = jsx(searchContext(6002).Card, { variant: "primary", border: "subtle", style: tmp13, children: tmp16 });
+      const obj4 = { variant: "primary", border: "subtle", style: tmp13, children: tmp16 };
+      const tmp21 = jsx(tmp(6002).Card, { variant: "primary", border: "subtle", style: tmp13, children: tmp16 });
       cResult[13] = tmp13;
       cResult[14] = tmp16;
       cResult[15] = tmp21;
@@ -94,9 +82,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => 
     tmp13 = items;
   }
   const fn = function b() {
-    const obj = search_tracking_TrackingDefault;
-    const obj2 = { searchContext, isHistoricalIndexing: true, documentsIndexed };
-    obj.trackSearchIndexing(obj2);
+    search_tracking_TrackingDefault.trackSearchIndexing({ searchContext, isHistoricalIndexing: true, documentsIndexed });
   };
   const items1 = [documentsIndexed, searchContext];
   cResult[2] = documentsIndexed;
@@ -105,38 +91,32 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => 
   cResult[5] = items1;
   tmp10 = items1;
   tmp9 = fn;
+  const obj = searchContext(576);
 }) : ((searchContext) => {
-  let intl;
   searchContext = searchContext.searchContext;
   const documentsIndexed = searchContext.documentsIndexed;
   const tab = searchContext.tab;
   const tmp = closure_7();
-  react = tmp;
+  noop = tmp;
   const items = [documentsIndexed];
   const items1 = [tmp.headerMessages, tab];
-  const memo = react.useMemo(() => {
-    const NumberResult = Number(documentsIndexed);
-    return NumberResult.toLocaleString(LocaleStore.locale);
-  }, items);
+  const memo = noop.useMemo(() => Number(documentsIndexed).toLocaleString(LocaleStore.locale), items);
   const items2 = [documentsIndexed, searchContext];
-  const memo1 = react.useMemo(() => {
-    if (tab === hasOwnProperty.MESSAGES) {
+  const memo1 = noop.useMemo(() => {
+    if (tab === constants.MESSAGES) {
       headerMessages = headerMessages.headerMessages;
     }
     return headerMessages;
   }, items1);
-  const effect = react.useEffect(() => {
-    const obj = search_tracking_TrackingDefault;
-    const obj2 = { searchContext, isHistoricalIndexing: true, documentsIndexed };
-    obj.trackSearchIndexing(obj2);
+  const effect = noop.useEffect(() => {
+    search_tracking_TrackingDefault.trackSearchIndexing({ searchContext, isHistoricalIndexing: true, documentsIndexed });
   }, items2);
+  const obj = { variant: "primary", border: "subtle", style: null, children: null };
   const items3 = [tmp.header, memo1];
-  const Card = searchContext(tab[10]).Card;
-  let obj2 = { variant: "heading-sm/normal", color: "interactive-text-default", children: intl.format(searchContext(tab[8]).t["4Y3O+O"], { count: memo }) };
-  const Text = searchContext(tab[9]).Text;
-  intl = searchContext(tab[8]).intl;
-  return <Card variant="primary" border="subtle" style={items3}>{null}</Card>;
+  obj.style = items3;
+  const obj2 = { variant: "heading-sm/normal", color: "interactive-text-default", children: null };
+  const intl = searchContext(tab[8]).intl;
+  obj2.children = intl.format(searchContext(tab[8]).t["4Y3O+O"], { count: memo });
+  obj.children = jsx(searchContext(tab[9]).Text, { variant: "heading-sm/normal", color: "interactive-text-default", children: null });
+  return jsx(searchContext(tab[10]).Card, { variant: "primary", border: "subtle", style: null, children: null });
 });
-const result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchHistoricalIndexingHeader.tsx");
-
-export default tmp3;

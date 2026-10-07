@@ -1,33 +1,29 @@
 // === Module 9120: openIgnoreThermalStateAlert ===
 
 // Module 9120 (openIgnoreThermalStateAlert)
-import Fragment from "Fragment" /* 21 */;
-import asyncRequire from "asyncRequire" /* 1987 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
-import react from "react" /* 19 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let IgnoreThermalStateAlert;
-
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/native/openIgnoreThermalStateAlert.tsx");
 
 export const openIgnoreThermalStateAlert = function openIgnoreThermalStateAlert(arg0) {
-  let closure_0 = arg0;
-  const obj = actions_AlertActionCreatorsDefault;
-  const obj2 = {
+  closure_0 = arg0;
+  actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      let onConfirm;
-      const promise = asyncRequire(9121, dependencyMap.paths);
-      return promise.then((IgnoreThermalStateAlert) => {
+      return asyncRequireImpl(9121, dependencyMap.paths).then((IgnoreThermalStateAlert) => {
         IgnoreThermalStateAlert = IgnoreThermalStateAlert.IgnoreThermalStateAlert;
         return (arg0) => {
+          const obj = {};
           const merged = Object.assign(arg0);
-          return <IgnoreThermalStateAlert onConfirm={onConfirm} />;
+          obj.onConfirm = onConfirm;
+          return <IgnoreThermalStateAlert />;
         };
       });
     },
     isDismissable: false
-  };
-  obj.openLazy(obj2);
+  });
 };

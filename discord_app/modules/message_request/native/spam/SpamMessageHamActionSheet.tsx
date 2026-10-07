@@ -1,71 +1,57 @@
 // === Module 12104: SpamMessageHamActionSheet ===
 
 // Module 12104 (SpamMessageHamActionSheet)
-import react_native from "react-native" /* 17 */;
-import get_initialized from "get initialized" /* 504 */;
+import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
-import intl4 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import AssetRegistryDefault from "AssetRegistry" /* 4813 */;
+import _modDef4813 from "module_4813" /* 4813 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import components_Button_Button from "components/Button/Button" /* 5601 */;
-import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6651 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6651 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
 import ActionSheetCloseButton from "ActionSheetCloseButton" /* 6703 */;
 import Form from "Form" /* 8924 */;
 import useMessageRequestActions from "useMessageRequestActions" /* 12099 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let BottomSheet, channel, openResult;
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, container: null, buttonContainer: null, switch: null };
+const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.container = { marginTop: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 };
+let obj4 = { marginTop: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.buttonContainer = { marginTop: nativeDefault.space.PX_24 };
+obj2.switch = { paddingHorizontal: 0 };
+let closure_9 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj5 = { marginTop: nativeDefault.space.PX_24 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/message_request/native/spam/SpamMessageHamActionSheet.tsx");
 
-let metroImportAll;
-let metroImportDefault;
-let obj2;
-let obj3;
-let obj4;
-let react = react_mod;
-const View = react_native.View;
-({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { header: obj2, container: obj3, buttonContainer: obj4, switch: { paddingHorizontal: 0 } };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-createStyles = createStyles.createStyles;
-obj3 = { marginTop: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 };
-obj4 = { marginTop: nativeDefault.space.PX_24 };
-let closure_9 = createStyles(obj);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
-  let closure_4;
-  let first;
-  let isAcceptLoading;
-  let isOptimisticAccepted;
-  let onCancel;
-  let tmp10;
-  const tmp = channel;
-  let obj = channel(onCancel[8]);
-  const cResult = obj.c(44);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+  const cResult = channel(onCancel[8]).c(44);
   channel = channel.channel;
   const onConfirm = channel.onConfirm;
   onCancel = channel.onCancel;
   closure_9();
-  const tmp5 = first(react.useState(false), 2);
+  const tmp5 = first(noop.useState(false), 2);
   first = tmp5[0];
-  react = tmp5[1];
+  noop = tmp5[1];
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
       constructor() {
-        tmp = onConfirm(onCancel[9]);
-        obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
-        open = tmp.open;
+        obj = onConfirm(onCancel[9]);
+        obj1 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
         intl = channel(onCancel[10]).intl;
-        obj.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
-        obj.icon = onConfirm(onCancel[11]);
-        openResult = open(obj);
+        obj1.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
+        obj1.icon = onConfirm(onCancel[11]);
+        openResult = obj.open(obj1);
         return;
       }
     }
@@ -73,13 +59,12 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   } else {
     class S {
       constructor() {
-        tmp = onConfirm(onCancel[9]);
-        obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
-        open = tmp.open;
+        obj = onConfirm(onCancel[9]);
+        obj1 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
         intl = channel(onCancel[10]).intl;
-        obj.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
-        obj.icon = onConfirm(onCancel[11]);
-        openResult = open(obj);
+        obj1.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
+        obj1.icon = onConfirm(onCancel[11]);
+        openResult = obj.open(obj1);
         return;
       }
     }
@@ -87,13 +72,12 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
       constructor() {
-        tmp = onConfirm(onCancel[9]);
-        obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
-        open = tmp.open;
+        obj = onConfirm(onCancel[9]);
+        obj1 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
         intl = channel(onCancel[10]).intl;
-        obj.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
-        obj.icon = onConfirm(onCancel[11]);
-        openResult = open(obj);
+        obj1.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
+        obj1.icon = onConfirm(onCancel[11]);
+        openResult = obj.open(obj1);
         return;
       }
     }
@@ -101,13 +85,12 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   } else {
     class S {
       constructor() {
-        tmp = onConfirm(onCancel[9]);
-        obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
-        open = tmp.open;
+        obj = onConfirm(onCancel[9]);
+        obj1 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
         intl = channel(onCancel[10]).intl;
-        obj.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
-        obj.icon = onConfirm(onCancel[11]);
-        openResult = open(obj);
+        obj1.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
+        obj1.icon = onConfirm(onCancel[11]);
+        openResult = obj.open(obj1);
         return;
       }
     }
@@ -115,29 +98,27 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
       constructor() {
-        tmp = onConfirm(onCancel[9]);
-        obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
-        open = tmp.open;
+        obj = onConfirm(onCancel[9]);
+        obj1 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
         intl = channel(onCancel[10]).intl;
-        obj.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
-        obj.icon = onConfirm(onCancel[11]);
-        openResult = open(obj);
+        obj1.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
+        obj1.icon = onConfirm(onCancel[11]);
+        openResult = obj.open(obj1);
         return;
       }
     }
     const items = [UserStore];
     cResult[2] = items;
-    tmp10 = items;
+    const tmp10 = items;
   } else {
     class S {
       constructor() {
-        tmp = onConfirm(onCancel[9]);
-        obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
-        open = tmp.open;
+        obj = onConfirm(onCancel[9]);
+        obj1 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
         intl = channel(onCancel[10]).intl;
-        obj.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
-        obj.icon = onConfirm(onCancel[11]);
-        openResult = open(obj);
+        obj1.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
+        obj1.icon = onConfirm(onCancel[11]);
+        openResult = obj.open(obj1);
         return;
       }
     }
@@ -157,8 +138,8 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       }
     }
   }
-  const tmpResult = tmp(onCancel[13]);
-  const stateFromStores = tmpResult.useStateFromStores(tmp10, P);
+  const obj = channel(onCancel[8]);
+  const stateFromStores = channel(onCancel[13]).useStateFromStores(tmp10, P);
   if (cResult[5] !== stateFromStores) {
     class P {
       constructor() {
@@ -177,8 +158,8 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       }
     }
   }
-  const tmpResult2 = tmp(onCancel[14]);
-  const messageRequestActions = tmpResult2.useMessageRequestActions(tmp14);
+  const tmpResult = channel(onCancel[13]);
+  const messageRequestActions = channel(onCancel[14]).useMessageRequestActions(tmp14);
   const acceptMessageRequest = messageRequestActions.acceptMessageRequest;
   ({ isAcceptLoading, isOptimisticAccepted } = messageRequestActions);
   if (cResult[7] === acceptMessageRequest) {
@@ -200,102 +181,88 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[9] = first;
   cResult[10] = onConfirm;
   cResult[11] = L;
+  const tmpResult2 = channel(onCancel[14]);
 }) : ((arg0) => {
-  let Button;
-  let _undefined;
-  let c5;
-  let closure_4;
-  let intl;
-  let intl2;
-  let intl3;
-  let isAcceptLoading;
-  let isOptimisticAccepted;
-  let items1;
-  let items2;
-  let obj10;
-  let obj6;
-  let recipientId;
   ({ channel: require, onConfirm: importDefault, onCancel: dependencyMap } = arg0);
-  let value;
-  react = undefined;
+  value = undefined;
+  noop = undefined;
   c5 = undefined;
   const tmp = closure_9();
-  const tmp2 = value(react.useState(false), 2);
+  const tmp2 = value(noop.useState(false), 2);
   value = tmp2[0];
-  react = tmp2[1];
-  let obj = get_initialized;
+  noop = tmp2[1];
   const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(require.getRecipientId()));
-  const obj2 = useMessageRequestActions;
-  const obj3 = {
+  const stateFromStores = initialize.useStateFromStores(items, () => UserStore.getUser(recipientId.getRecipientId()));
+  const messageRequestActions = useMessageRequestActions.useMessageRequestActions({
     user: stateFromStores,
     onError() {
-      let intl;
-      const obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: intl.string(intl4.t["EDYbS+"]), icon: AssetRegistryDefault };
-      const open = ToastActionCreatorsDefault.open;
-      ToastActionCreatorsDefault;
-      intl = intl4.intl;
-      open(obj);
+      const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+      const intl = recipientId(1126).intl;
+      obj2.content = intl.string(recipientId(1126).t["EDYbS+"]);
+      obj2.icon = _modDef4813;
+      ToastActionCreatorsDefault.open(obj2);
     },
     onAcceptSuccess() {
-      const obj = ActionSheetActionCreatorsDefault;
-      obj.hideActionSheet();
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     }
-  };
-  const messageRequestActions = obj2.useMessageRequestActions(obj3);
+  });
   ({ acceptMessageRequest: c5, isAcceptLoading, isOptimisticAccepted } = messageRequestActions);
-  const isUserProfileLoading = messageRequestActions.isUserProfileLoading;
   const obj4 = {
     onDismiss() {
       dependencyMap();
     },
-    children: items1
+    children: null
   };
-  BottomSheet = Sheet_BottomSheet.BottomSheet;
-  const obj5 = { title: intl.string(intl4.t["9ty6yc"]), trailing: closure_7(ActionSheetCloseButton.ActionSheetCloseButton, obj6), backgroundColor: tmp.header };
-  const BottomSheetTitleHeader = BottomSheetTitleHeader2.BottomSheetTitleHeader;
-  intl = intl4.intl;
-  obj6 = {
+  const obj5 = { title: null, trailing: null, backgroundColor: null };
+  let intl = util.intl;
+  obj5.title = intl.string(util.t["9ty6yc"]);
+  obj5.trailing = closure_7(ActionSheetCloseButton.ActionSheetCloseButton, {
     onPress() {
-      const obj = ActionSheetActionCreatorsDefault;
-      obj.hideActionSheet();
+      ActionSheetActionCreatorsDefault.hideActionSheet();
       dependencyMap();
     }
+  });
+  obj5.backgroundColor = tmp.header;
+  const items1 = [closure_7(BottomSheetTitleHeader.BottomSheetTitleHeader, obj5), ];
+  const obj7 = { style: tmp.container, children: null };
+  const obj8 = { style: tmp.switch, label: null, value: null, switchProps: null, onValueChange: null };
+  const intl2 = util.intl;
+  obj8.label = intl2.string(util.t.ZhGpNQ);
+  obj8.value = value;
+  obj8.switchProps = { renderIosBackground: true };
+  obj8.onValueChange = function onValueChange(arg0) {
+    return closure_4(arg0);
   };
-  items1 = [closure_7(BottomSheetTitleHeader, obj5), ];
-  const obj7 = { style: tmp.container, children: items2 };
-  const obj8 = {
-    style: tmp.switch,
-    label: intl2.string(intl4.t.ZhGpNQ),
-    value,
-    switchProps: { renderIosBackground: true },
-    onValueChange(arg0) {
-      return closure_4(arg0);
-    }
-  };
-  const FormSwitchRow = Form.FormSwitchRow;
-  intl2 = intl4.intl;
-  items2 = [closure_7(FormSwitchRow, obj8), ];
-  const obj9 = { style: tmp.buttonContainer, children: closure_7(Button, obj10) };
-  obj10 = {
+  const items2 = [closure_7(Form.FormSwitchRow, obj8), ];
+  const obj9 = { style: tmp.buttonContainer, children: null };
+  const obj10 = {
     size: "md",
     onPress() {
       importDefault(first);
-      _undefined(require.id);
+      _undefined(recipientId.id);
     },
-    text: intl3.string(intl4.t.olZgw5),
-    disabled: isAcceptLoading || isUserProfileLoading || isOptimisticAccepted,
-    loading: isAcceptLoading
+    text: null,
+    disabled: null,
+    loading: null
   };
-  Button = components_Button_Button.Button;
-  intl3 = intl4.intl;
+  const intl3 = util.intl;
+  obj10.text = intl3.string(util.t.olZgw5);
+  let isUserProfileLoading = isAcceptLoading;
+  if (!isAcceptLoading) {
+    isUserProfileLoading = messageRequestActions.isUserProfileLoading;
+  }
+  if (!isUserProfileLoading) {
+    isUserProfileLoading = isOptimisticAccepted;
+  }
+  obj10.disabled = isUserProfileLoading;
   if (!isAcceptLoading) {
     isAcceptLoading = isOptimisticAccepted;
   }
+  obj10.loading = isAcceptLoading;
+  obj9.children = closure_7(components_Button_Button.Button, obj10);
   items2[1] = closure_7(c5, obj9);
+  obj7.children = items2;
   items1[1] = closure_8(c5, obj7);
-  return closure_8(BottomSheet, obj4);
+  obj4.children = items1;
+  return closure_8(Sheet_BottomSheet.BottomSheet, obj4);
 });
-const result = size.fileFinishedImporting("modules/message_request/native/spam/SpamMessageHamActionSheet.tsx");
-
-export default tmp4;

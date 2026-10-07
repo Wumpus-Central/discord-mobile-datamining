@@ -1,25 +1,20 @@
 // === Module 13098: MessageActivityInviteCoverImageStore ===
 
 // Module 13098 (MessageActivityInviteCoverImageStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import LRUCacheDefault from "LRUCache" /* 1444 */;
-import size from "module_2" /* 2 */;
+import privDefault from "priv" /* 1444 */;
 
-const React = new LRUCacheDefault({ max: 500 });
-new LRUCacheDefault({ max: 500 });
-const Store = get_initializedDefault.Store;
+let closure_0 = new privDefault({ max: 500 });
+const Store = initializeDefault.Store;
 class MessageActivityInviteCoverImageStore extends Store {
-  getCoverImageURL(messageId) {
-    return closure_0.get(messageId.messageId);
-  }
 }
-const prototype = MessageActivityInviteCoverImageStore.prototype;
+MessageActivityInviteCoverImageStore.prototype["getCoverImageURL"] = function getCoverImageURL(messageId) {
+  return closure_0.get(messageId.messageId);
+};
 MessageActivityInviteCoverImageStore.displayName = "MessageActivityInviteCoverImageStore";
-const obj = {
+const messageActivityInviteCoverImageStore = new MessageActivityInviteCoverImageStore(DispatcherDefault, {
   SET_MESSAGE_ACTIVITY_INVITE_COVER_IMAGE_URL: function handleSetMessageActivityInviteCoverImageURL(arg0) {
-    let coverImageURL;
-    let messageId;
     ({ messageId, coverImageURL } = arg0);
     if (closure_0.get(messageId) === coverImageURL) {
       return false;
@@ -27,8 +22,8 @@ const obj = {
       const result = closure_0.set(messageId, coverImageURL);
     }
   }
-};
-const messageActivityInviteCoverImageStore = new MessageActivityInviteCoverImageStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/MessageActivityInviteCoverImageStore.tsx");
 
 export default messageActivityInviteCoverImageStore;

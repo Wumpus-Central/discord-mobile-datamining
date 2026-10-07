@@ -10,36 +10,30 @@ import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
 const isGuildTextChannelType = ChannelRecord.isGuildTextChannelType;
 const GuildFeatures = Constants.GuildFeatures;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
-  let closure_0;
-  let closure_1;
-  let first;
+const result = size.fileFinishedImporting("modules/welcome_screen/useWelcomeScreenEnabled.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   _require = arg0;
   dependencyMap = arg1;
-  const obj = require("react");
-  const cResult = obj.c(4);
-  const tmp = _require;
+  const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore, GuildStore, SelectedChannelStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === arg0) {
-    let tmp8;
     if (cResult[2] === arg1) {
-      tmp8 = cResult[3];
+      let tmp8 = cResult[3];
     }
-    const tmpResult = tmp(504);
-    return tmpResult.useStateFromStores(first, tmp8);
+    return tmp(504).useStateFromStores(first, tmp8);
   }
   const fn = function _() {
-    const guild = GuildStore.getGuild(closure_1);
+    guild = GuildStore.getGuild(closure_1);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
@@ -53,7 +47,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
           return false;
         } else {
           const channel = ChannelStore.getChannel(closure_0);
-          const tmp9 = closure_0 === SelectedChannelStore.getChannelId(closure_1) && null != channel && channel.getGuildId() === guild.id && isGuildTextChannelType(channel.type);
+          let tmp9 = closure_0 === SelectedChannelStore.getChannelId(closure_1) && null != channel && channel.getGuildId() === guild.id;
+          if (tmp9) {
+            tmp9 = isGuildTextChannelType(channel.type);
+          }
           return tmp9;
         }
       }
@@ -64,15 +61,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[2] = arg1;
   cResult[3] = fn;
   tmp8 = fn;
+  const obj = require("c");
+  tmp = _require;
 }) : ((arg0, arg1) => {
-  let closure_0;
-  let closure_1;
   _require = arg0;
   dependencyMap = arg1;
   const items = [ChannelStore, GuildStore, SelectedChannelStore];
-  const obj = require("get initialized");
-  return obj.useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_1);
+  return require("initialize").useStateFromStores(items, () => {
+    guild = GuildStore.getGuild(closure_1);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
@@ -86,7 +82,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
           return false;
         } else {
           const channel = ChannelStore.getChannel(closure_0);
-          const tmp9 = closure_0 === SelectedChannelStore.getChannelId(closure_1) && null != channel && channel.getGuildId() === guild.id && isGuildTextChannelType(channel.type);
+          let tmp9 = closure_0 === SelectedChannelStore.getChannelId(closure_1) && null != channel && channel.getGuildId() === guild.id;
+          if (tmp9) {
+            tmp9 = isGuildTextChannelType(channel.type);
+          }
           return tmp9;
         }
       }
@@ -94,6 +93,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     return false;
   });
 });
-const result = size.fileFinishedImporting("modules/welcome_screen/useWelcomeScreenEnabled.tsx");
-
-export default tmp2;

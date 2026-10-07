@@ -7,12 +7,8 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/errors/VideoStreamReadyActionCreators.tsx");
 
 export const videoStreamTimedOut = function videoStreamTimedOut(current, userId, mediaContext, streamKey) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "VIDEO_STREAM_READY_TIMEOUT", videoStreamId: current, mediaContext, userId, streamKey };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "VIDEO_STREAM_READY_TIMEOUT", videoStreamId: current, mediaContext, userId, streamKey });
 };
 export const clearVideoStreamTimeout = function clearVideoStreamTimeout(DEFAULT, userId) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "CLEAR_VIDEO_STREAM_READY_TIMEOUT", mediaContext: DEFAULT, userId };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "CLEAR_VIDEO_STREAM_READY_TIMEOUT", mediaContext: DEFAULT, userId });
 };

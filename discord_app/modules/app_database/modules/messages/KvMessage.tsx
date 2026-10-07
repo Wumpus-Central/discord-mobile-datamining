@@ -1,68 +1,63 @@
 // === Module 7009: KvMessage ===
 
 // Module 7009 (KvMessage)
-import Constants from "Constants" /* 1085 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import _slicedToArray from "module_32" /* 32 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import UserStore from "UserStore" /* 1377 */;
-import size from "module_2" /* 2 */;
 
-let author;
-
-const EMPTY_STRING_SNOWFLAKE_ID = Constants.EMPTY_STRING_SNOWFLAKE_ID;
-class KvMessage {
-  static fromMessage(guild_id, channelId, item10024, connectionId) {
-    const tmp = _slicedToArray(KvMessage.deriveMemberUsers(guild_id, item10024), 2);
-    return { id: item10024.id, channelId, message: item10024, members: tmp[0], users: tmp[1], connectionId };
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
+const prototype = function KvMessage() {
+  return Object.create(new.target.prototype);
+}.prototype;
+prototype["fromMessage"] = function fromMessage(guild_id, channelId, nextResult, connectionId) {
+  const tmp = _slicedToArray(prototype.deriveMemberUsers(guild_id, nextResult), 2);
+  return { id: nextResult.id, channelId, message: nextResult, members: tmp[0], users: tmp[1], connectionId };
+};
+prototype["deriveMemberUsers"] = function deriveMemberUsers(guild_id, author) {
+  author = author.author;
+  let id;
+  if (author != null) {
+    id = author.id;
   }
-  static deriveMemberUsers(guild_id, author) {
-    author = author.author;
-    let id;
-    const _Set = Set;
-    if (author != null) {
-      id = author.id;
-    }
-    const items = [id, ];
-    const interaction = author.interaction;
-    let id1;
-    if (interaction != null) {
-      id1 = interaction.user.id;
-    }
-    items[1] = id1;
-    const mentions = author.mentions;
-    let mapped;
-    if (mentions != null) {
-      mapped = mentions.map((id) => id.id);
-    }
-    if (mapped == null) {
-      mapped = [];
-    }
-    HermesBuiltin.arraySpread(items, mapped, 2);
-    const _Set1 = new _Set(items);
-    const items1 = [];
-    const items2 = [];
-    for (const item10035 of _Set1) {
-      if (null != item10035) {
-        let user = UserStore.getUser(item10035);
-        let tmp11 = guild_id;
-        let getTrueMember = GuildMemberStore.getTrueMember;
-        if (guild_id == null) {
-          tmp11 = EMPTY_STRING_SNOWFLAKE_ID;
-        }
-        let trueMember = getTrueMember(tmp11, item10035);
-        if (null != user) {
-          let arr = items2.push(user);
-        }
-        if (null != trueMember) {
-          let arr2 = items1.push(trueMember);
-        }
+  const items = [id, ];
+  const interaction = author.interaction;
+  let id1;
+  if (interaction != null) {
+    id1 = interaction.user.id;
+  }
+  items[1] = id1;
+  const mentions = author.mentions;
+  let mapped;
+  if (mentions != null) {
+    mapped = mentions.map((id) => id.id);
+  }
+  if (mapped == null) {
+    mapped = [];
+  }
+  HermesBuiltin.arraySpread(mapped, 2);
+  const items1 = [];
+  const items2 = [];
+  for (const item10035 of set) {
+    if (null != item10035) {
+      let user = UserStore.getUser(item10035);
+      let tmp10 = arg0;
+      if (arg0 == null) {
+        tmp10 = EMPTY_STRING_SNOWFLAKE_ID;
       }
-      continue;
+      let trueMember = GuildMemberStore.getTrueMember(tmp10, item10035);
+      if (null != user) {
+        let arr = items2.push(user);
+      }
+      if (null != trueMember) {
+        let arr2 = items1.push(trueMember);
+      }
     }
-    const items3 = [items1, items2];
-    return items3;
+    continue;
   }
-}
+  const items3 = [items1, items2];
+  return items3;
+};
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_database/modules/messages/KvMessage.tsx");
 
-export { KvMessage };
+export const KvMessage = prototype;

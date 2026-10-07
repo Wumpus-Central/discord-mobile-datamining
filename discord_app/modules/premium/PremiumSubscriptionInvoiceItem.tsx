@@ -4,22 +4,20 @@
 import _modDef12 from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 
-let set;
-
 const result = size.fileFinishedImporting("modules/premium/PremiumSubscriptionInvoiceItem.tsx");
 
 export const coalesceInvoiceItems = function coalesceInvoiceItems(arr) {
   const items = [];
-  set = new Set();
+  const set = new Set();
   const mapped = arr.map((subscriptionPlanId) => {
     for (const item10009 of items) {
-      if (item10009.subscriptionPlanId === subscriptionPlanId.subscriptionPlanId) {
-        if (item10009.subscriptionPlanPrice === subscriptionPlanId.subscriptionPlanPrice) {
-          if (item10009.amount === subscriptionPlanId.amount) {
+      if (item10009.subscriptionPlanId === arg0.subscriptionPlanId) {
+        if (item10009.subscriptionPlanPrice === arg0.subscriptionPlanPrice) {
+          if (item10009.amount === arg0.amount) {
             let obj2 = _modDef12;
-            if (obj2.isEqual(item10009.discounts, subscriptionPlanId.discounts)) {
+            if (obj2.isEqual(item10009.discounts, arg0.discounts)) {
               let addResult = set.add(item10009.subscriptionPlanId);
-              item10009.quantity = item10009.quantity + subscriptionPlanId.quantity;
+              item10009.quantity = item10009.quantity + arg0.quantity;
               obj.return();
             }
           }
@@ -27,10 +25,9 @@ export const coalesceInvoiceItems = function coalesceInvoiceItems(arr) {
       }
       continue;
     }
-    const push = items.push;
-    const obj3 = {};
     const merged = Object.assign(subscriptionPlanId);
-    push(obj3);
+    items.push({});
+    const obj3 = {};
   });
   return items.map((subscriptionPlanId) => {
     let obj = {};
@@ -39,8 +36,9 @@ export const coalesceInvoiceItems = function coalesceInvoiceItems(arr) {
       obj.amount = obj.amount * obj.quantity;
       const discounts = obj.discounts;
       obj.discounts = discounts.map((amount) => {
-        obj = { amount: amount.amount * obj.quantity };
+        obj = {};
         const merged = Object.assign(amount);
+        obj.amount = amount.amount * obj.quantity;
         return obj;
       });
       if (null != obj.tax) {

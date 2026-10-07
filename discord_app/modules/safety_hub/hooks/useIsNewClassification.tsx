@@ -7,8 +7,6 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useIsNewClassification.tsx");
 
 export const useIsNewClassification = function useIsNewClassification(classification) {
-  const obj = SnowflakeUtilsDefault;
-  const extractTimestampResult = obj.extractTimestamp(classification.id);
-  const date = new Date();
-  return abs(extractTimestampResult - date.getTime()) < 86400000;
+  const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(classification.id);
+  return Math.abs(extractTimestampResult - new Date().getTime()) < 86400000;
 };

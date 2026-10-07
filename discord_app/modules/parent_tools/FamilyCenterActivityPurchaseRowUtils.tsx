@@ -1,7 +1,7 @@
 // === Module 14726: FamilyCenterActivityPurchaseRowUtils ===
 
 // Module 14726 (FamilyCenterActivityPurchaseRowUtils)
-import intl6 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
 import _modDef2521 from "module_2521" /* 2521 */;
@@ -10,23 +10,21 @@ import ProfileEffectRecord from "ProfileEffectRecord" /* 7072 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import size from "module_2" /* 2 */;
 
-let hasOwnProperty;
-let metroRequire;
 function getCollectibleTypeName(type) {
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
-    const intl5 = intl6.intl;
+    const intl5 = util.intl;
     return intl5.string(_modDef2521.obi47v);
   } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
-    const intl4 = intl6.intl;
+    const intl4 = util.intl;
     return intl4.string(_modDef2521.RX8BMR);
   } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
-    const intl3 = intl6.intl;
+    const intl3 = util.intl;
     return intl3.string(_modDef2521.nNGEHk);
   } else if (CollectiblesItemType.CollectiblesItemType.BUNDLE === type) {
-    const intl2 = intl6.intl;
+    const intl2 = util.intl;
     return intl2.string(_modDef2521.VS1fKo);
   } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
-    const intl = intl6.intl;
+    const intl = util.intl;
     return intl.string(_modDef2521.JiIY1l);
   } else {
     return "";
@@ -41,17 +39,16 @@ export const PREVIEW_SIZE = 40;
 export const NAMEPLATE_ASPECT_RATIO = 5.333333333333333;
 export { getCollectibleTypeName };
 export const getAvatarDecorationPreviewUrl = function getAvatarDecorationPreviewUrl(product) {
-  let obj3;
   if (0 === product.items.length) {
     return null;
   } else {
     const first = product.items[0];
     let avatarDecorationURL = null;
     if (isAvatarDecorationRecord(first)) {
-      const obj2 = { avatarDecoration: obj3, size: 40, canAnimate: true };
-      obj3 = { asset: first.asset };
-      const obj = AvatarUtils;
-      avatarDecorationURL = obj.getAvatarDecorationURL(obj2);
+      const obj2 = { avatarDecoration: null, size: 40, canAnimate: true };
+      const obj3 = { asset: first.asset };
+      obj2.avatarDecoration = obj3;
+      avatarDecorationURL = AvatarUtils.getAvatarDecorationURL(obj2);
     }
     return avatarDecorationURL;
   }
@@ -73,23 +70,21 @@ export const isGuildBoostSubscription = function isGuildBoostSubscription(subscr
     return false;
   } else {
     let skuId;
-    if (metroRequire[subscriptionPlanId] != null) {
+    if (dependencyMap[subscriptionPlanId] != null) {
       skuId = tmp2.skuId;
     }
-    return skuId === hasOwnProperty.GUILD;
+    return skuId === constants.GUILD;
   }
 };
 export const getPurchaseDisplayInfo = function getPurchaseDisplayInfo(name, subscriptionPlanId) {
-  let displayName;
-  let typeName;
   const isSubscription = null != subscriptionPlanId;
   if (null != name) {
-    displayName = name.name;
-    typeName = getCollectibleTypeName(name.type);
+    let displayName = name.name;
+    const typeName = getCollectibleTypeName(name.type);
   } else if (isSubscription) {
     if (null != subscriptionPlanId) {
       let name1;
-      if (metroRequire[subscriptionPlanId] != null) {
+      if (dependencyMap[subscriptionPlanId] != null) {
         name1 = tmp4.name;
       }
       displayName = name1;

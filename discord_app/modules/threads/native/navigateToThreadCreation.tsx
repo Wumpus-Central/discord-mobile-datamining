@@ -9,11 +9,10 @@ import size from "module_2" /* 2 */;
 let result = size.fileFinishedImporting("modules/threads/native/navigateToThreadCreation.tsx");
 
 export const navigateToThreadCreation = function navigateToThreadCreation(channel, Message) {
-  const obj = ThreadActionCreatorsDefault;
-  const result = obj.openThreadCreationForMobile(channel, undefined, Message);
-  const obj2 = NavigationRouteUtils;
+  const result = ThreadActionCreatorsDefault.openThreadCreationForMobile(channel, undefined, Message);
   if (!obj2.navigateToCreateThread(channel.guild_id, channel.id)) {
+    transitionToChannel.transitionToChannel(channel.id);
     const tmp3Result = transitionToChannel;
-    tmp3Result.transitionToChannel(channel.id);
   }
+  obj2 = NavigationRouteUtils;
 };

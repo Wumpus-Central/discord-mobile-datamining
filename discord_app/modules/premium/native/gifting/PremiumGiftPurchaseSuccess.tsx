@@ -1,80 +1,62 @@
 // === Module 10823: PremiumGiftPurchaseSuccess ===
 
 // Module 10823 (PremiumGiftPurchaseSuccess)
-import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1085 */;
-import PremiumConstants from "PremiumConstants" /* 1379 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
 import ToastUtils from "ToastUtils" /* 4573 */;
-import AssetRegistryDefault from "AssetRegistry" /* 4850 */;
+import _modDef4850 from "module_4850" /* 4850 */;
 import GiftCodeUtils from "GiftCodeUtils" /* 5317 */;
 import ClipboardUtils from "ClipboardUtils" /* 6695 */;
 import showShareActionSheet from "showShareActionSheet" /* 8048 */;
 import PremiumGiftModal from "PremiumGiftModal" /* 10406 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import SKUStore from "SKUStore" /* 5702 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let copyResult, giftCodeRecord, importDefault, navigation, tmp3, trackGiftCodeCopyResult;
-
-let c10;
-let c9;
-let metroImportAll;
-let obj2;
-let obj3;
-let obj4;
-let obj5;
-let obj6;
-let tmp14;
-const PremiumGiftBackgroundAnimationDefault = tmp14(10575);
-const View = react_native.View;
-const SubscriptionIntervalTypes = PremiumConstants.SubscriptionIntervalTypes;
-const AnalyticsSections = Constants.AnalyticsSections;
-({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { disclaimer: obj2, title: obj3, description: obj4, input: obj5, inputLabel: obj6 };
-obj2 = { marginTop: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_16 };
-createStyles = createStyles.createStyles;
-obj3 = { marginTop: nativeDefault.space.PX_24, textAlign: "center" };
-obj4 = { marginTop: nativeDefault.space.PX_8, textAlign: "center" };
-obj5 = { marginTop: nativeDefault.space.PX_24 };
-obj6 = { marginBottom: nativeDefault.space.PX_4 };
-let closure_11 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((giftCodeRecord) => {
-  let first;
-  let items;
-  let onClose;
-  let tmp7;
-  const tmp2 = navigation;
-  let obj = onClose(navigation[9]);
-  const cResult = obj.c(22);
+const PremiumGiftBackgroundAnimationDefault = tmp15(10575);
+require = fn;
+const View = fn(17).View;
+const SubscriptionIntervalTypes = fn(1379).SubscriptionIntervalTypes;
+const AnalyticsSections = fn(1085).AnalyticsSections;
+const jsxProd = fn(21);
+({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { disclaimer: { marginTop: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_16 }, title: null, description: null, input: null, inputLabel: null };
+let obj3 = { marginTop: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_16 };
+obj2.title = { marginTop: nativeDefault.space.PX_24, textAlign: "center" };
+let obj4 = { marginTop: nativeDefault.space.PX_24, textAlign: "center" };
+obj2.description = { marginTop: nativeDefault.space.PX_8, textAlign: "center" };
+let obj5 = { marginTop: nativeDefault.space.PX_8, textAlign: "center" };
+obj2.input = { marginTop: nativeDefault.space.PX_24 };
+let obj6 = { marginTop: nativeDefault.space.PX_24 };
+obj2.inputLabel = { marginBottom: nativeDefault.space.PX_4 };
+let closure_11 = createStyles.createStyles(obj2);
+fn(558);
+let obj7 = { marginBottom: nativeDefault.space.PX_4 };
+const ReactCompilerGating = fn(558);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((giftCodeRecord) => {
+  const cResult = onClose(navigation[9]).c(22);
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
-  let obj2 = onClose(navigation[10]);
-  const nativeGiftContext = obj2.useNativeGiftContext();
+  let obj = onClose(navigation[9]);
+  const nativeGiftContext = onClose(navigation[10]).useNativeGiftContext();
   onClose = nativeGiftContext.onClose;
   const prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
-  let obj3 = onClose(navigation[11]);
-  navigation = obj3.useNavigation();
+  let obj2 = onClose(navigation[10]);
+  navigation = onClose(navigation[11]).useNavigation();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj4 = { location: "PremiumGiftSuccessActions" };
     cResult[0] = obj4;
-    first = obj4;
+    let first = obj4;
   } else {
     first = cResult[0];
   }
   const GiftingBadgeExperiment = tmp(tmp2[12]).GiftingBadgeExperiment;
   const enabled = GiftingBadgeExperiment.useConfig(first).enabled;
   if (cResult[1] !== giftCodeRecord.code) {
-    const tmpResult = onClose(tmp2[13]);
-    const giftCodeURL = tmpResult.getGiftCodeURL(giftCodeRecord.code);
+    const giftCodeURL = tmp(tmp2[13]).getGiftCodeURL(giftCodeRecord.code);
     cResult[1] = giftCodeRecord.code;
     cResult[2] = giftCodeURL;
-    tmp7 = giftCodeURL;
+    let tmp7 = giftCodeURL;
+    const tmpResult = tmp(tmp2[13]);
   } else {
     tmp7 = cResult[2];
   }
@@ -82,66 +64,60 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((giftCodeRecord) => {
   if (cResult[3] === prePurchaseGiftingBadgeProgress) {
     if (cResult[4] === enabled) {
       if (cResult[5] === navigation) {
-        let tmp9;
         if (cResult[6] === onClose) {
-          tmp9 = cResult[7];
+          let tmp9 = cResult[7];
         }
         if (cResult[8] === prePurchaseGiftingBadgeProgress) {
           if (cResult[9] === tmp7) {
             if (cResult[10] === enabled) {
-              let tmp10;
-              let tmp11;
-              let tmp13;
-              let tmp16;
-              let tmp18;
               if (cResult[11] === navigation) {
-                tmp10 = cResult[12];
+                let tmp10 = cResult[12];
               }
               const _Symbol = Symbol;
               if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
                 const intl = tmp(tmp2[16]).intl;
-                const stringResult = intl.string(onClose(tmp2[16]).t.RDE0Sc);
+                const stringResult = intl.string(tmp(tmp2[16]).t.RDE0Sc);
                 cResult[13] = stringResult;
-                tmp11 = stringResult;
+                let tmp11 = stringResult;
               } else {
                 tmp11 = cResult[13];
               }
               if (cResult[14] !== tmp10) {
                 const obj5 = { variant: "primary", text: tmp11, onPress: tmp10 };
-                const tmp15 = closure_8(onClose(tmp2[17]).Button, obj5);
+                const tmp15 = closure_8(tmp(tmp2[17]).Button, obj5);
                 cResult[14] = tmp10;
                 cResult[15] = tmp15;
-                tmp13 = tmp15;
+                let tmp13 = tmp15;
               } else {
                 tmp13 = cResult[15];
               }
               const _Symbol2 = Symbol;
               if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
                 const intl2 = tmp(tmp2[16]).intl;
-                const stringResult1 = intl2.string(onClose(tmp2[16]).t.cpT0Cq);
+                const stringResult1 = intl2.string(tmp(tmp2[16]).t.cpT0Cq);
                 cResult[16] = stringResult1;
-                tmp16 = stringResult1;
+                let tmp16 = stringResult1;
               } else {
                 tmp16 = cResult[16];
               }
               if (cResult[17] !== tmp9) {
                 const obj6 = { variant: "secondary", text: tmp16, onPress: tmp9 };
-                const tmp20 = closure_8(onClose(tmp2[17]).Button, obj6);
+                const tmp20 = closure_8(tmp(tmp2[17]).Button, obj6);
                 cResult[17] = tmp9;
                 cResult[18] = tmp20;
-                tmp18 = tmp20;
+                let tmp18 = tmp20;
               } else {
                 tmp18 = cResult[18];
               }
               if (cResult[19] === tmp13) {
-                let tmp21;
                 if (cResult[20] === tmp18) {
-                  tmp21 = cResult[21];
+                  let tmp21 = cResult[21];
                 }
                 return tmp21;
               }
-              const obj7 = { children: items };
-              items = [tmp13, tmp18];
+              const obj7 = { children: null };
+              const items = [tmp13, tmp18];
+              obj7.children = items;
               const tmp24 = closure_10(closure_9, obj7);
               cResult[19] = tmp13;
               cResult[20] = tmp18;
@@ -151,14 +127,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((giftCodeRecord) => {
           }
         }
         const fn2 = function x() {
-          const obj = showShareActionSheet;
-          const obj2 = { url };
-          obj.showShareActionSheet(obj2, AnalyticsSections.PREMIUM_GIFT_SUCCESS_MODAL);
-          const tmp4 = enabled && null != prePurchaseGiftingBadgeProgress;
+          showShareActionSheet.showShareActionSheet({ url }, AnalyticsSections.PREMIUM_GIFT_SUCCESS_MODAL);
+          let tmp4 = enabled;
+          if (enabled) {
+            tmp4 = null != prePurchaseGiftingBadgeProgress;
+          }
           if (tmp4) {
             const obj3 = { currentProgress: prePurchaseGiftingBadgeProgress };
             navigation.navigate(PremiumGiftModal.PremiumGiftScreens.GIFTING_BADGE, obj3);
           }
+          const obj2 = { url };
         };
         cResult[8] = prePurchaseGiftingBadgeProgress;
         cResult[9] = tmp7;
@@ -172,7 +150,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((giftCodeRecord) => {
   const fn = function h() {
     if (enabled) {
       if (null != prePurchaseGiftingBadgeProgress) {
-        const obj = { currentProgress: tmp2 };
+        const obj = { currentProgress: tmp };
         navigation.navigate(PremiumGiftModal.PremiumGiftScreens.GIFTING_BADGE, obj);
       }
     }
@@ -184,88 +162,72 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((giftCodeRecord) => {
   cResult[6] = onClose;
   cResult[7] = fn;
   tmp9 = fn;
+  let obj3 = onClose(navigation[11]);
 }) : ((giftCodeRecord) => {
-  let intl;
-  let intl2;
-  let items2;
   let onClose;
-  navigation = undefined;
-  giftCodeRecord = giftCodeRecord.giftCodeRecord;
-  let obj = onClose(navigation[10]);
-  const nativeGiftContext = obj.useNativeGiftContext();
+  let navigation;
+  const nativeGiftContext = onClose(navigation[10]).useNativeGiftContext();
   onClose = nativeGiftContext.onClose;
   const prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
-  let obj2 = onClose(navigation[11]);
-  navigation = obj2.useNavigation();
+  let obj = onClose(navigation[10]);
+  navigation = onClose(navigation[11]).useNavigation();
   const GiftingBadgeExperiment = onClose(navigation[12]).GiftingBadgeExperiment;
   const enabled = GiftingBadgeExperiment.useConfig({ location: "PremiumGiftSuccessActions" }).enabled;
-  let obj3 = onClose(navigation[13]);
-  const giftCodeURL = obj3.getGiftCodeURL(giftCodeRecord.code);
+  let obj2 = onClose(navigation[11]);
+  const giftCodeURL = onClose(navigation[13]).getGiftCodeURL(giftCodeRecord.giftCodeRecord.code);
   const items = [enabled, prePurchaseGiftingBadgeProgress, navigation, onClose];
   const items1 = [giftCodeURL, enabled, prePurchaseGiftingBadgeProgress, navigation];
   const callback = enabled.useCallback(() => {
     if (enabled) {
       if (null != prePurchaseGiftingBadgeProgress) {
-        const obj = { currentProgress: tmp2 };
+        const obj = { currentProgress: tmp };
         navigation.navigate(PremiumGiftModal.PremiumGiftScreens.GIFTING_BADGE, obj);
       }
     }
     onClose();
   }, items);
-  const obj4 = { children: items2 };
+  const obj4 = { children: null };
   const callback1 = enabled.useCallback(() => {
-    const obj = showShareActionSheet;
-    const obj2 = { url: giftCodeURL };
-    obj.showShareActionSheet(obj2, AnalyticsSections.PREMIUM_GIFT_SUCCESS_MODAL);
-    const tmp4 = enabled && null != prePurchaseGiftingBadgeProgress;
+    showShareActionSheet.showShareActionSheet({ url: giftCodeURL }, AnalyticsSections.PREMIUM_GIFT_SUCCESS_MODAL);
+    let tmp4 = enabled;
+    if (enabled) {
+      tmp4 = null != prePurchaseGiftingBadgeProgress;
+    }
     if (tmp4) {
       const obj3 = { currentProgress: prePurchaseGiftingBadgeProgress };
       navigation.navigate(PremiumGiftModal.PremiumGiftScreens.GIFTING_BADGE, obj3);
     }
+    const obj2 = { url: giftCodeURL };
   }, items1);
-  const obj5 = { variant: "primary", text: intl.string(onClose(navigation[16]).t.RDE0Sc), onPress: callback1 };
-  const Button = onClose(navigation[17]).Button;
-  intl = onClose(navigation[16]).intl;
-  items2 = [closure_8(Button, obj5), ];
-  const obj6 = { variant: "secondary", text: intl2.string(onClose(navigation[16]).t.cpT0Cq), onPress: callback };
-  const Button2 = onClose(navigation[17]).Button;
-  intl2 = onClose(navigation[16]).intl;
-  items2[1] = closure_8(Button2, obj6);
+  const obj5 = { variant: "primary", text: null, onPress: null };
+  const intl = onClose(navigation[16]).intl;
+  obj5.text = intl.string(onClose(navigation[16]).t.RDE0Sc);
+  obj5.onPress = callback1;
+  const items2 = [closure_8(onClose(navigation[17]).Button, obj5), ];
+  const obj6 = { variant: "secondary", text: null, onPress: null };
+  const intl2 = onClose(navigation[16]).intl;
+  obj6.text = intl2.string(onClose(navigation[16]).t.cpT0Cq);
+  obj6.onPress = callback;
+  items2[1] = closure_8(onClose(navigation[17]).Button, obj6);
+  obj4.children = items2;
   return closure_10(closure_9, obj4);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((giftCodeRecord) => {
-  let closure_1;
-  let giftStyle;
-  let input;
-  let inputLabel;
-  let items;
-  let items1;
-  let obj11;
-  let planInterval;
-  let premiumType;
-  let str;
-  let subscriptionPlanId;
-  let tmp10;
-  let tmp11;
-  let tmp12;
-  let tmp13;
-  let tmp6;
-  let tmp8;
-  let tmp9;
-  let obj = giftCodeRecord(576);
-  const cResult = obj.c(48);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftPurchaseSuccess.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((giftCodeRecord) => {
+  const cResult = giftCodeRecord(576).c(48);
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
   const tmp4 = closure_11();
-  let obj2 = giftCodeRecord(10443);
-  const nativeGiftContext = obj2.useNativeGiftContext();
+  let obj = giftCodeRecord(576);
+  const nativeGiftContext = giftCodeRecord(10443).useNativeGiftContext();
   ({ premiumType, planInterval, giftStyle } = nativeGiftContext);
   if (cResult[0] !== giftCodeRecord.code) {
-    const tmpResult = giftCodeRecord(5317);
-    const giftCodeURL = tmpResult.getGiftCodeURL(giftCodeRecord.code);
+    const giftCodeURL = tmp(5317).getGiftCodeURL(giftCodeRecord.code);
     cResult[0] = giftCodeRecord.code;
     cResult[1] = giftCodeURL;
-    tmp6 = giftCodeURL;
+    let tmp6 = giftCodeURL;
+    const tmpResult = tmp(5317);
   } else {
     tmp6 = cResult[1];
   }
@@ -280,143 +242,128 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((giftCodeRecord) =>
           if (cResult[6] === giftStyle) {
             if (cResult[7] === tmp4.description) {
               if (cResult[8] === tmp4.title) {
-                tmp8 = cResult[9];
-                tmp9 = cResult[10];
-                tmp10 = cResult[11];
-                str = cResult[12];
-                tmp11 = cResult[13];
-                tmp12 = cResult[14];
-                tmp13 = cResult[15];
-              }
-              if (cResult[24] === tmp8) {
-                if (cResult[25] === tmp10) {
-                  if (cResult[26] === str) {
-                    let tmp31;
-                    let tmp35;
-                    let tmp37;
-                    if (cResult[27] === tmp11) {
-                      tmp31 = cResult[28];
-                    }
-                    const _Symbol2 = Symbol;
-                    ({ input, inputLabel } = tmp4);
-                    if (cResult[29] === Symbol.for("react.memo_cache_sentinel")) {
-                      const intl3 = tmp(1126).intl;
-                      const stringResult = intl3.string(giftCodeRecord(1126).t["qS+yMo"]);
-                      cResult[29] = stringResult;
-                      tmp35 = stringResult;
-                    } else {
-                      tmp35 = cResult[29];
-                    }
-                    if (cResult[30] !== tmp4.inputLabel) {
-                      let obj3 = { style: inputLabel, variant: "heading-md/bold", children: tmp35 };
-                      const tmp39 = closure_8(giftCodeRecord(4892).Text, obj3);
-                      cResult[30] = tmp4.inputLabel;
-                      cResult[31] = tmp39;
-                      tmp37 = tmp39;
-                    } else {
-                      tmp37 = cResult[31];
-                    }
-                    if (cResult[32] === tmp6) {
-                      let tmp40;
-                      if (cResult[33] === tmp9) {
-                        tmp40 = cResult[34];
+                if (cResult[24] === cResult[9]) {
+                  if (cResult[25] === tmp10) {
+                    if (cResult[26] === tmp11) {
+                      if (cResult[27] === tmp12) {
+                        let tmp38 = cResult[28];
                       }
-                      if (cResult[35] === tmp4.input) {
-                        if (cResult[36] === tmp37) {
-                          let tmp44;
-                          let tmp48;
-                          let tmp50;
-                          if (cResult[37] === tmp40) {
-                            tmp44 = cResult[38];
-                          }
-                          const _Symbol3 = Symbol;
-                          const disclaimer = tmp4.disclaimer;
-                          if (cResult[39] === Symbol.for("react.memo_cache_sentinel")) {
-                            const intl4 = tmp(1126).intl;
-                            const stringResult1 = intl4.string(giftCodeRecord(1126).t.As9eLl);
-                            cResult[39] = stringResult1;
-                            tmp48 = stringResult1;
-                          } else {
-                            tmp48 = cResult[39];
-                          }
-                          if (cResult[40] !== tmp4.disclaimer) {
-                            const obj4 = { style: disclaimer, variant: "text-xs/normal", children: tmp48 };
-                            const tmp52 = closure_8(giftCodeRecord(4892).Text, obj4);
-                            cResult[40] = tmp4.disclaimer;
-                            cResult[41] = tmp52;
-                            tmp50 = tmp52;
-                          } else {
-                            tmp50 = cResult[41];
-                          }
-                          if (cResult[42] === tmp44) {
-                            if (cResult[43] === tmp50) {
-                              if (cResult[44] === tmp12) {
-                                if (cResult[45] === tmp13) {
-                                  let tmp53;
-                                  if (cResult[46] === tmp31) {
-                                    tmp53 = cResult[47];
+                      const _Symbol2 = Symbol;
+                      ({ input, inputLabel } = tmp4);
+                      if (cResult[29] === Symbol.for("react.memo_cache_sentinel")) {
+                        const intl3 = tmp(1126).intl;
+                        const stringResult = intl3.string(tmp(1126).t["qS+yMo"]);
+                        cResult[29] = stringResult;
+                        let tmp42 = stringResult;
+                      } else {
+                        tmp42 = cResult[29];
+                      }
+                      if (cResult[30] !== tmp4.inputLabel) {
+                        let obj3 = { style: inputLabel, variant: "heading-md/bold", children: tmp42 };
+                        const tmp46 = closure_8(tmp(4892).Text, obj3);
+                        cResult[30] = tmp4.inputLabel;
+                        cResult[31] = tmp46;
+                        let tmp44 = tmp46;
+                      } else {
+                        tmp44 = cResult[31];
+                      }
+                      if (cResult[32] === tmp6) {
+                        if (cResult[33] === tmp9) {
+                          let tmp47 = cResult[34];
+                        }
+                        if (cResult[35] === tmp4.input) {
+                          if (cResult[36] === tmp44) {
+                            if (cResult[37] === tmp47) {
+                              let tmp51 = cResult[38];
+                            }
+                            const _Symbol3 = Symbol;
+                            if (cResult[39] === Symbol.for("react.memo_cache_sentinel")) {
+                              const intl4 = tmp(1126).intl;
+                              const stringResult1 = intl4.string(tmp(1126).t.As9eLl);
+                              cResult[39] = stringResult1;
+                              let tmp55 = stringResult1;
+                            } else {
+                              tmp55 = cResult[39];
+                            }
+                            if (cResult[40] !== tmp4.disclaimer) {
+                              const obj4 = { style: tmp4.disclaimer, variant: "text-xs/normal", children: tmp55 };
+                              const tmp59 = closure_8(tmp(4892).Text, obj4);
+                              cResult[40] = tmp4.disclaimer;
+                              cResult[41] = tmp59;
+                              let tmp57 = tmp59;
+                            } else {
+                              tmp57 = cResult[41];
+                            }
+                            if (cResult[42] === tmp51) {
+                              if (cResult[43] === tmp57) {
+                                if (cResult[44] === tmp13) {
+                                  if (cResult[45] === tmp14) {
+                                    if (cResult[46] === tmp38) {
+                                      let tmp60 = cResult[47];
+                                    }
+                                    return tmp60;
                                   }
-                                  return tmp53;
                                 }
                               }
                             }
-                          }
-                          const obj6 = { children: items };
-                          items = [tmp12, tmp13, tmp31, tmp44, tmp50];
-                          const tmp56 = closure_10(closure_9, obj6);
-                          cResult[42] = tmp44;
-                          cResult[43] = tmp50;
-                          cResult[44] = tmp12;
-                          cResult[45] = tmp13;
-                          cResult[46] = tmp31;
-                          class N {
-                            constructor() {
-                              tmp = giftCodeRecord;
-                              value = closure_5.get(giftCodeRecord.skuId);
-                              if (null != value) {
-                                tmp3 = closure_0;
-                                tmp4 = closure_2;
-                                obj = closure_0(closure_2[13]);
-                                trackGiftCodeCopyResult = obj.trackGiftCodeCopy(tmp, value);
+                            const obj6 = { children: null };
+                            const items = [tmp13, tmp14, tmp38, tmp51, tmp57];
+                            obj6.children = items;
+                            const tmp63 = closure_10(closure_9, obj6);
+                            cResult[42] = tmp51;
+                            cResult[43] = tmp57;
+                            cResult[44] = tmp13;
+                            cResult[45] = tmp14;
+                            cResult[46] = tmp38;
+                            class N {
+                              constructor() {
+                                tmp = giftCodeRecord;
+                                value = closure_5.get(giftCodeRecord.skuId);
+                                if (null != value) {
+                                  tmp3 = closure_0;
+                                  tmp4 = closure_2;
+                                  obj = closure_0(closure_2[13]);
+                                  trackGiftCodeCopyResult = obj.trackGiftCodeCopy(tmp, value);
+                                }
+                                obj2 = closure_0(closure_2[19]);
+                                copyResult = obj2.copy(closure_1);
+                                obj3 = closure_0(closure_2[20]);
+                                result = obj3.presentCopiedToClipboard();
+                                return;
                               }
-                              obj2 = closure_0(closure_2[19]);
-                              copyResult = obj2.copy(closure_1);
-                              obj3 = closure_0(closure_2[20]);
-                              result = obj3.presentCopiedToClipboard();
-                              return;
                             }
+                            cResult[47] = tmp63;
+                            tmp60 = tmp63;
                           }
-                          cResult[47] = tmp56;
-                          tmp53 = tmp56;
                         }
+                        const obj7 = { style: input, children: null };
+                        const items1 = [tmp44, tmp47];
+                        obj7.children = items1;
+                        const tmp54 = closure_10(View, obj7);
+                        cResult[35] = tmp4.input;
+                        cResult[36] = tmp44;
+                        cResult[37] = tmp47;
+                        cResult[38] = tmp54;
+                        tmp51 = tmp54;
                       }
-                      const obj7 = { style: input, children: items1 };
-                      items1 = [tmp37, tmp40];
-                      const tmp47 = closure_10(View, obj7);
-                      cResult[35] = tmp4.input;
-                      cResult[36] = tmp37;
-                      cResult[37] = tmp40;
-                      cResult[38] = tmp47;
-                      tmp44 = tmp47;
+                      const obj8 = { text: tmp6, icon: _modDef4850, iconPosition: "end", onPress: tmp9 };
+                      const tmp50 = closure_8(tmp(8602).InputButton, obj8);
+                      cResult[32] = tmp6;
+                      cResult[33] = tmp9;
+                      cResult[34] = tmp50;
+                      tmp47 = tmp50;
                     }
-                    const obj8 = { text: tmp6, icon: AssetRegistryDefault, iconPosition: "end", onPress: tmp9 };
-                    const InputButton = tmp(8602).InputButton;
-                    const tmp43 = closure_8(InputButton, obj8);
-                    cResult[32] = tmp6;
-                    cResult[33] = tmp9;
-                    cResult[34] = tmp43;
-                    tmp40 = tmp43;
                   }
                 }
+                const obj9 = { style: cResult[11], variant: cResult[12], children: cResult[13] };
+                const tmp40 = closure_8(cResult[9], obj9);
+                cResult[24] = cResult[9];
+                cResult[25] = cResult[11];
+                cResult[26] = cResult[12];
+                cResult[27] = cResult[13];
+                cResult[28] = tmp40;
+                tmp38 = tmp40;
               }
-              const obj9 = { style: tmp10, variant: str, children: tmp11 };
-              const tmp33 = closure_8(tmp8, obj9);
-              cResult[24] = tmp8;
-              cResult[25] = tmp10;
-              cResult[26] = str;
-              cResult[27] = tmp11;
-              cResult[28] = tmp33;
-              tmp31 = tmp33;
             }
           }
         }
@@ -424,63 +371,57 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((giftCodeRecord) =>
     }
   }
   if (null != giftCodeRecord.subscriptionPlanId) {
-    subscriptionPlanId = giftCodeRecord.subscriptionPlanId;
+    let subscriptionPlanId = giftCodeRecord.subscriptionPlanId;
   } else {
-    const tmpResult2 = giftCodeRecord(4534);
-    subscriptionPlanId = tmpResult2.getPlanIdForPremiumType(premiumType, planInterval);
+    subscriptionPlanId = tmp(4534).getPlanIdForPremiumType(premiumType, planInterval);
+    const tmpResult2 = tmp(4534);
   }
-  const obj5 = PremiumUtilsDefault;
-  const tierDisplayNameByPlanId = obj5.getTierDisplayNameByPlanId(subscriptionPlanId);
+  let obj2 = giftCodeRecord(10443);
+  const tierDisplayNameByPlanId = PremiumUtilsDefault.getTierDisplayNameByPlanId(subscriptionPlanId);
   PremiumUtilsDefault;
   if (cResult[16] === giftCodeRecord) {
-    let tmp19;
-    let tmp20;
-    let tmp25;
-    let tmp27;
-    let bUdTqI;
     if (cResult[17] === tmp6) {
-      tmp19 = cResult[18];
+      let tmp20 = cResult[18];
     }
     if (cResult[19] !== giftStyle) {
-      const obj10 = { children: closure_8(PremiumGiftBackgroundAnimationDefault, obj11) };
-      obj11 = { giftStyle };
-      const tmp23 = closure_8(View, obj10);
+      const obj10 = { children: null };
+      const obj11 = { giftStyle };
+      obj10.children = closure_8(PremiumGiftBackgroundAnimationDefault, obj11);
+      const tmp24 = closure_8(View, obj10);
       cResult[19] = giftStyle;
-      cResult[20] = tmp23;
-      tmp20 = tmp23;
+      cResult[20] = tmp24;
+      let tmp21 = tmp24;
     } else {
-      tmp20 = cResult[20];
+      tmp21 = cResult[20];
     }
     const _Symbol = Symbol;
-    const title = tmp4.title;
     if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
       const intl = tmp(1126).intl;
-      const stringResult2 = intl.string(giftCodeRecord(1126).t["/s1xR7"]);
+      const stringResult2 = intl.string(tmp(1126).t["/s1xR7"]);
       cResult[21] = stringResult2;
-      tmp25 = stringResult2;
+      let tmp26 = stringResult2;
     } else {
-      tmp25 = cResult[21];
+      tmp26 = cResult[21];
     }
     if (cResult[22] !== tmp4.title) {
-      const obj12 = { style: title, variant: "heading-lg/bold", children: tmp25 };
-      const tmp29 = closure_8(giftCodeRecord(4892).Text, obj12);
+      const obj12 = { style: tmp4.title, variant: "heading-lg/bold", children: tmp26 };
+      const tmp30 = closure_8(tmp(4892).Text, obj12);
       cResult[22] = tmp4.title;
-      cResult[23] = tmp29;
-      tmp27 = tmp29;
+      cResult[23] = tmp30;
+      let tmp28 = tmp30;
     } else {
-      tmp27 = cResult[23];
+      tmp28 = cResult[23];
     }
     const Text = tmp(4892).Text;
     const description = tmp4.description;
     const intl2 = tmp(1126).intl;
-    const format = intl2.format;
-    if (tmp17 === tmp18) {
-      bUdTqI = tmp(1126).t.rli5ey;
+    if (tmp18 === tmp19) {
+      let bUdTqI = tmp(1126).t.rli5ey;
     } else {
       bUdTqI = tmp(1126).t.bUdTqI;
     }
     const obj13 = { intervalCount: 1, name: tierDisplayNameByPlanId };
-    const formatResult = format(bUdTqI, obj13);
+    const formatResult = intl2.format(bUdTqI, obj13);
     cResult[2] = giftCodeRecord;
     cResult[3] = tmp6;
     cResult[4] = planInterval;
@@ -505,19 +446,13 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((giftCodeRecord) =>
     }
     cResult[8] = tmp4.title;
     cResult[9] = Text;
-    cResult[10] = tmp19;
+    cResult[10] = tmp20;
     cResult[11] = description;
+    giftStyle = "text-md/medium";
     cResult[12] = "text-md/medium";
     cResult[13] = formatResult;
-    cResult[14] = tmp20;
-    cResult[15] = tmp27;
-    tmp13 = tmp27;
-    tmp12 = tmp20;
-    tmp11 = formatResult;
-    str = "text-md/medium";
-    tmp10 = description;
-    tmp9 = tmp19;
-    tmp8 = Text;
+    cResult[14] = tmp21;
+    cResult[15] = tmp28;
   }
   class N {
     constructor() {
@@ -539,85 +474,67 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((giftCodeRecord) =>
   cResult[16] = giftCodeRecord;
   cResult[17] = tmp6;
   cResult[18] = N;
-  tmp19 = N;
+  tmp20 = N;
 }) : ((giftCodeRecord) => {
-  let bUdTqI;
-  let format;
-  let giftStyle;
-  let intl;
-  let intl3;
-  let intl4;
-  let items2;
-  let planInterval;
-  let premiumType;
-  let subscriptionPlanId;
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
   const tmp = closure_11();
-  let obj = giftCodeRecord(10443);
-  const nativeGiftContext = obj.useNativeGiftContext();
+  const nativeGiftContext = giftCodeRecord(10443).useNativeGiftContext();
   ({ giftStyle, premiumType, planInterval } = nativeGiftContext);
-  let obj2 = giftCodeRecord(5317);
-  const giftCodeURL = obj2.getGiftCodeURL(giftCodeRecord.code);
+  let obj = giftCodeRecord(10443);
+  const giftCodeURL = giftCodeRecord(5317).getGiftCodeURL(giftCodeRecord.code);
   if (null != giftCodeRecord.giftStyle) {
     giftStyle = giftCodeRecord.giftStyle;
   }
   if (null != giftCodeRecord.subscriptionPlanId) {
-    subscriptionPlanId = giftCodeRecord.subscriptionPlanId;
+    let subscriptionPlanId = giftCodeRecord.subscriptionPlanId;
   } else {
-    const tmp2Result = giftCodeRecord(4534);
-    subscriptionPlanId = tmp2Result.getPlanIdForPremiumType(premiumType, planInterval);
+    subscriptionPlanId = tmp2(4534).getPlanIdForPremiumType(premiumType, planInterval);
+    const tmp2Result = tmp2(4534);
   }
-  const obj4 = giftCodeURL(4534);
-  const tierDisplayNameByPlanId = obj4.getTierDisplayNameByPlanId(subscriptionPlanId);
-  const items = [giftCodeRecord, giftCodeURL];
-  const obj5 = giftCodeURL(4534);
-  const intervalType = obj5.getInterval(subscriptionPlanId).intervalType;
-  const YEAR = SubscriptionIntervalTypes.YEAR;
-  let obj3 = { children: closure_8(giftCodeURL(10575), { giftStyle }) };
-  const callback = react.useCallback(() => {
-    const value = SKUStore.get(giftCodeRecord.skuId);
-    if (null != value) {
-      const obj = GiftCodeUtils;
-      obj.trackGiftCodeCopy(giftCodeRecord, value);
-    }
-    const obj2 = ClipboardUtils;
-    obj2.copy(giftCodeURL);
-    const obj3 = ToastUtils;
-    const result = obj3.presentCopiedToClipboard();
-  }, items);
-  const items1 = [closure_8(View, obj3), , , , ];
-  const obj6 = { style: tmp.title, variant: "heading-lg/bold", children: intl.string(giftCodeRecord(1126).t["/s1xR7"]) };
-  const Text = tmp2(4892).Text;
-  intl = tmp2(1126).intl;
-  items1[1] = closure_8(Text, obj6);
-  const obj7 = { style: tmp.description, variant: "text-md/medium", children: format(bUdTqI, { intervalCount: 1, name: tierDisplayNameByPlanId }) };
-  const Text2 = tmp2(4892).Text;
-  const intl2 = tmp2(1126).intl;
-  format = intl2.format;
+  let obj2 = giftCodeRecord(5317);
   const tmp6 = giftCodeURL;
-  if (intervalType === YEAR) {
-    bUdTqI = tmp2(1126).t.rli5ey;
+  const tierDisplayNameByPlanId = giftCodeURL(4534).getTierDisplayNameByPlanId(subscriptionPlanId);
+  const obj4 = giftCodeURL(4534);
+  const items = [giftCodeRecord, giftCodeURL];
+  let obj3 = { children: null };
+  const callback = noop.useCallback(() => {
+    value = SKUStore.get(giftCodeRecord.skuId);
+    if (null != value) {
+      GiftCodeUtils.trackGiftCodeCopy(giftCodeRecord, value);
+    }
+    ClipboardUtils.copy(giftCodeURL);
+    const result = ToastUtils.presentCopiedToClipboard();
+  }, items);
+  obj3.children = closure_8(giftCodeURL(10575), { giftStyle });
+  const items1 = [closure_8(View, obj3), , , , ];
+  const obj6 = { style: tmp.title, variant: "heading-lg/bold", children: null };
+  const intl = tmp2(1126).intl;
+  obj6.children = intl.string(giftCodeRecord(1126).t["/s1xR7"]);
+  items1[1] = closure_8(giftCodeRecord(4892).Text, obj6);
+  const obj7 = { style: tmp.description, variant: "text-md/medium", children: null };
+  const intl2 = tmp2(1126).intl;
+  if (obj5.getInterval(subscriptionPlanId).intervalType === SubscriptionIntervalTypes.YEAR) {
+    let bUdTqI = tmp2(1126).t.rli5ey;
   } else {
     bUdTqI = tmp2(1126).t.bUdTqI;
   }
-  const obj8 = { children: items1 };
-  items1[2] = closure_8(Text2, obj7);
-  const obj9 = { style: tmp.input, children: items2 };
-  const obj10 = { style: tmp.inputLabel, variant: "heading-md/bold", children: intl3.string(giftCodeRecord(1126).t["qS+yMo"]) };
-  const Text3 = tmp2(4892).Text;
-  intl3 = tmp2(1126).intl;
-  items2 = [closure_8(Text3, obj10), ];
-  const obj11 = { text: giftCodeURL, icon: tmp6(4850), iconPosition: "end", onPress: callback };
-  const InputButton = tmp2(8602).InputButton;
-  items2[1] = closure_8(InputButton, obj11);
+  const obj8 = { children: null };
+  obj7.children = intl2.format(bUdTqI, { intervalCount: 1, name: tierDisplayNameByPlanId });
+  items1[2] = closure_8(giftCodeRecord(4892).Text, obj7);
+  const obj9 = { style: tmp.input, children: null };
+  const obj10 = { style: tmp.inputLabel, variant: "heading-md/bold", children: null };
+  const intl3 = tmp2(1126).intl;
+  obj10.children = intl3.string(giftCodeRecord(1126).t["qS+yMo"]);
+  const items2 = [closure_8(giftCodeRecord(4892).Text, obj10), ];
+  obj5 = giftCodeURL(4534);
+  items2[1] = closure_8(giftCodeRecord(8602).InputButton, { text: giftCodeURL, icon: tmp6(4850), iconPosition: "end", onPress: callback });
+  obj9.children = items2;
   items1[3] = closure_10(View, obj9);
-  const obj12 = { style: tmp.disclaimer, variant: "text-xs/normal", children: intl4.string(giftCodeRecord(1126).t.As9eLl) };
-  const Text4 = tmp2(4892).Text;
-  intl4 = tmp2(1126).intl;
-  items1[4] = closure_8(Text4, obj12);
+  const obj12 = { style: tmp.disclaimer, variant: "text-xs/normal", children: null };
+  const intl4 = tmp2(1126).intl;
+  obj12.children = intl4.string(giftCodeRecord(1126).t.As9eLl);
+  items1[4] = closure_8(giftCodeRecord(4892).Text, obj12);
+  obj8.children = items1;
   return closure_10(closure_9, obj8);
 });
-let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftPurchaseSuccess.tsx");
-
-export default tmp5;
-export const PremiumGiftSuccessActions = tmp4;
+export const PremiumGiftSuccessActions = tmp3;

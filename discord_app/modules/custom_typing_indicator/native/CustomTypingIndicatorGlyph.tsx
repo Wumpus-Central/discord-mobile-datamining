@@ -1,43 +1,37 @@
 // === Module 11608: CustomTypingIndicatorGlyph ===
 
 // Module 11608 (CustomTypingIndicatorGlyph)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
 import CustomTypingIndicatorAnimatedEmojiDefault from "CustomTypingIndicatorAnimatedEmoji" /* 11609 */;
-import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let config, dependencyMap;
-
-const View = react_native.View;
-const jsx = Fragment.jsx;
+const require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_5 = createStyles.createStyles({ emojiRow: { flexDirection: "row", alignItems: "center" } });
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((config) => {
-  let animation;
-  let tmp5;
-  const obj = config(576);
-  const cResult = obj.c(19);
-  config = config.config;
-  size = config.size;
+const ReactCompilerGating = fn(558);
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorGlyph.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((config) => {
+  const cResult = emojis(576).c(19);
+  emojis = config.config;
+  const size = config.size;
   const tmp4 = closure_5();
-  if (cResult[0] !== config) {
-    const tmpResult = config(1398);
-    const effectiveCustomTypingIndicatorAnimation = tmpResult.getEffectiveCustomTypingIndicatorAnimation(config);
-    cResult[0] = config;
+  if (cResult[0] !== emojis) {
+    const effectiveCustomTypingIndicatorAnimation = tmp(1398).getEffectiveCustomTypingIndicatorAnimation(emojis);
+    cResult[0] = emojis;
     cResult[1] = effectiveCustomTypingIndicatorAnimation;
-    tmp5 = effectiveCustomTypingIndicatorAnimation;
+    let tmp5 = effectiveCustomTypingIndicatorAnimation;
+    const tmpResult = tmp(1398);
   } else {
     tmp5 = cResult[1];
   }
   dependencyMap = tmp5;
-  const tmpResult2 = config(1398);
-  if (tmpResult2.hasCustomTypingIndicatorEmojis(config.emojis)) {
-    let PX_4;
-    let tmp14;
+  const obj = emojis(576);
+  if (tmpResult2.hasCustomTypingIndicatorEmojis(emojis.emojis)) {
     if (null == size) {
-      PX_4 = size(587).space.PX_4;
+      let PX_4 = size(587).space.PX_4;
     } else {
       PX_4 = size / 4;
     }
@@ -45,49 +39,45 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((config) => {
       const obj2 = { gap: PX_4 };
       cResult[3] = PX_4;
       cResult[4] = obj2;
-      tmp14 = obj2;
+      let tmp14 = obj2;
     } else {
       tmp14 = cResult[4];
     }
     if (cResult[5] === tmp4.emojiRow) {
-      let tmp15;
-      let tmp16;
       if (cResult[6] === tmp14) {
-        tmp15 = cResult[7];
+        let tmp15 = cResult[7];
       }
       if (cResult[8] === tmp5) {
-        if (cResult[9] === config.emojis) {
+        if (cResult[9] === emojis.emojis) {
           if (cResult[10] === size) {
-            tmp16 = cResult[11];
-          }
-          if (cResult[16] === tmp15) {
-            let tmp19;
-            if (cResult[17] === tmp16) {
-              tmp19 = cResult[18];
+            if (cResult[16] === tmp15) {
+              if (cResult[17] === tmp16) {
+                let tmp20 = cResult[18];
+              }
+              return tmp20;
             }
-            return tmp19;
-          }
-          class C {
-            constructor(arg0, arg1) {
-              obj = { emoji: config, index: arg1, emojiCount: config.emojis.length, animation: closure_2, size };
-              return jsx(closure_1(closure_2[9]), obj, arg1);
+            class C {
+              constructor(arg0, arg1) {
+                obj = { emoji: config, index: arg1, emojiCount: config.emojis.length, animation: closure_2, size };
+                return jsx(closure_1(closure_2[9]), obj, arg1);
+              }
             }
+            const obj3 = { style: tmp15, children: cResult[11] };
+            const tmp22 = <View style={tmp15}>{cResult[11]}</View>;
+            cResult[16] = tmp15;
+            cResult[17] = cResult[11];
+            cResult[18] = tmp22;
+            tmp20 = tmp22;
           }
-          const tmp21 = <View style={tmp15}>{tmp16}</View>;
-          cResult[16] = tmp15;
-          cResult[17] = tmp16;
-          cResult[18] = tmp21;
-          tmp19 = tmp21;
         }
       }
       if (cResult[12] === tmp5) {
-        if (cResult[13] === config.emojis.length) {
-          let tmp17;
+        if (cResult[13] === emojis.emojis.length) {
           if (cResult[14] === size) {
-            tmp17 = cResult[15];
+            let tmp17 = cResult[15];
           }
-          const emojis = config.emojis;
-          const mapped = emojis.map(tmp17);
+          const emojis1 = emojis.emojis;
+          const mapped = emojis1.map(tmp17);
           class C {
             constructor(arg0, arg1) {
               obj = { emoji: config, index: arg1, emojiCount: config.emojis.length, animation: closure_2, size };
@@ -95,10 +85,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((config) => {
             }
           }
           cResult[8] = tmp5;
-          cResult[9] = config.emojis;
+          emojis = emojis.emojis;
+          cResult[9] = emojis;
           cResult[10] = size;
           cResult[11] = mapped;
-          tmp16 = mapped;
         }
       }
       class C {
@@ -108,7 +98,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((config) => {
         }
       }
       cResult[12] = tmp5;
-      cResult[13] = config.emojis.length;
+      cResult[13] = emojis.emojis.length;
       cResult[14] = size;
       cResult[15] = C;
       tmp17 = C;
@@ -119,7 +109,6 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((config) => {
     cResult[7] = items;
     tmp15 = items;
   } else {
-    let tmp9;
     const _Symbol = Symbol;
     class C {
       constructor(arg0, arg1) {
@@ -128,47 +117,46 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((config) => {
       }
     }
     if (tmp7 === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp11 = jsx(config(1188).Ellipsis, {});
       class C {
         constructor(arg0, arg1) {
           obj = { emoji: config, index: arg1, emojiCount: config.emojis.length, animation: closure_2, size };
           return jsx(closure_1(closure_2[9]), obj, arg1);
         }
       }
-      tmp9 = tmp11;
+      let tmp9 = jsx(tmp(1188).Ellipsis, {});
+      const tmp11 = jsx(tmp(1188).Ellipsis, {});
     } else {
       tmp9 = cResult[2];
     }
     return tmp9;
   }
+  tmpResult2 = emojis(1398);
 }) : ((config) => {
-  let animation;
-  let tmp4Result;
-  config = config.config;
-  size = config.size;
+  let map = config.config;
+  const size = config.size;
+  dependencyMap = undefined;
+  let obj = dependencyMap;
   const tmp = closure_5();
-  const obj = config(1398);
-  dependencyMap = obj.getEffectiveCustomTypingIndicatorAnimation(config);
-  const obj2 = config(1398);
-  const tmp2 = config;
-  if (obj2.hasCustomTypingIndicatorEmojis(config.emojis)) {
-    let PX_4;
-    const items = [tmp.emojiRow, ];
+  const tmp2 = map;
+  dependencyMap = map(1398).getEffectiveCustomTypingIndicatorAnimation(map);
+  const obj2 = map(1398);
+  if (obj3.hasCustomTypingIndicatorEmojis(map.emojis)) {
+    let items = [tmp.emojiRow, ];
     if (null == size) {
-      PX_4 = size(587).space.PX_4;
+      let PX_4 = size(587).space.PX_4;
     } else {
       PX_4 = size / 4;
     }
+    obj = { style: null, children: null };
     const obj4 = { gap: PX_4 };
     items[1] = obj4;
-    const emojis = config.emojis;
-    tmp4Result = <View style={items}>{emojis.map((emoji, index) => jsx(CustomTypingIndicatorAnimatedEmojiDefault, { emoji, index, emojiCount: config.emojis.length, animation, size }, index))}</View>;
+    obj.style = items;
+    items = map.emojis;
+    map = items.map;
+    obj.children = map((emoji, index) => jsx(CustomTypingIndicatorAnimatedEmojiDefault, { emoji, index, emojiCount: map.emojis.length, animation, size }, index));
+    <View style={null}>{null}</View>;
   } else {
-    tmp4Result = jsx(tmp2(1188).Ellipsis, {});
+    return jsx(tmp2(1188).Ellipsis, {});
   }
-  return tmp4Result;
+  obj3 = map(1398);
 });
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorGlyph.tsx");
-
-export default tmp3;

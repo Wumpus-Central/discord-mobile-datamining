@@ -7,7 +7,6 @@ import DeviceOrientation from "DeviceOrientation" /* 8018 */;
 import PlatformUtils_mod from "PlatformUtils" /* 1369 */;
 import size from "module_2" /* 2 */;
 
-let str;
 let PlatformUtils = PlatformUtils_mod;
 if (PlatformUtils.isAndroid()) {
   const _module1 = useIsWindowLarge;
@@ -15,7 +14,7 @@ if (PlatformUtils.isAndroid()) {
   if (_module1.getIsWindowLarge()) {
     str2 = "fullScreenModal";
   }
-  str = str2;
+  let str = str2;
 } else {
   const _module2 = DeviceUtils;
   str = "modal";
@@ -23,12 +22,12 @@ if (PlatformUtils.isAndroid()) {
     str = "fullScreenModal";
   }
 }
-let obj = { presentation: str, lockOrientation: !PlatformUtils.isAndroid() };
-PlatformUtils = PlatformUtils_mod;
+let obj = { presentation: str, lockOrientation: null };
+let PlatformUtils = PlatformUtils_mod;
+obj.lockOrientation = !PlatformUtils.isAndroid();
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx");
 
 export default function getNavigationModalPresentation(arg0) {
-  let tmp4;
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = obj;
@@ -39,26 +38,29 @@ export default function getNavigationModalPresentation(arg0) {
   }
   let lockOrientation = tmp.lockOrientation;
   if (lockOrientation === undefined) {
-    const lockOrientation2 = obj.lockOrientation && "transparentModal" !== presentation;
+    let lockOrientation2 = obj.lockOrientation;
+    if (lockOrientation2) {
+      lockOrientation2 = "transparentModal" !== presentation;
+    }
     lockOrientation = lockOrientation2;
   }
-  obj = { presentation, orientation: tmp4 };
-  tmp4 = undefined;
+  obj = { presentation, orientation: null };
+  let tmp4;
   if (lockOrientation) {
-    const obj2 = DeviceOrientation;
-    const orientationLock = obj2.getOrientationLock();
+    const orientationLock = DeviceOrientation.getOrientationLock();
     let str2 = "landscape";
     let str4 = "landscape";
     if ("LANDSCAPE" !== orientationLock) {
       if (null != orientationLock) {
         str2 = "portrait";
       } else {
+        const orientation = DeviceOrientation.getOrientation();
         const tmp5Result = DeviceOrientation;
-        const orientation = tmp5Result.getOrientation();
       }
       str4 = str2;
     }
     tmp4 = str4;
   }
+  obj.orientation = tmp4;
   return obj;
 };

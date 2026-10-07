@@ -1,131 +1,108 @@
 // === Module 14456: UserProfileEditFormTextField ===
 
 // Module 14456 (UserProfileEditFormTextField)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
-import TextInput_TextInput from "TextInput/TextInput" /* 6105 */;
-import TextArea2 from "TextArea" /* 6587 */;
+import c from "c" /* 576 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
+const TextInput = TextArea(6105);
+const TextArea2 = TextArea(6587);
+require = fn;
 let closure_2 = ["label", "description", "errorMessage", "containerStyle", "numberOfLines", "inputRef"];
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let containerStyle;
-  let description;
-  let errorMessage;
-  let inputRef;
-  let label;
-  let numberOfLines;
-  let tmp10;
-  let tmp4;
-  let tmp5;
-  let tmp6;
-  let tmp7;
-  let tmp8;
-  let tmp9;
-  const obj = react2;
-  const cResult = obj.c(21);
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditFormTextField.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let TextArea = require;
+  let tmp = dependencyMap;
+  const cResult = c.c(21);
   if (cResult[0] !== arg0) {
     ({ label, description, errorMessage, containerStyle, numberOfLines, inputRef } = arg0);
-    const tmp13 = _objectWithoutProperties(arg0, closure_2);
+    const tmp12 = _objectWithoutProperties(arg0, closure_2);
     cResult[0] = arg0;
     cResult[1] = containerStyle;
     cResult[2] = description;
     cResult[3] = errorMessage;
     cResult[4] = inputRef;
     cResult[5] = label;
-    cResult[6] = tmp13;
+    cResult[6] = tmp12;
     cResult[7] = numberOfLines;
-    tmp10 = numberOfLines;
-    tmp9 = tmp13;
-    tmp8 = label;
-    tmp7 = inputRef;
-    tmp6 = errorMessage;
-    tmp5 = description;
-    tmp4 = containerStyle;
+    let tmp9 = numberOfLines;
+    let tmp8 = tmp12;
+    let tmp7 = label;
+    let tmp6 = inputRef;
+    let tmp5 = errorMessage;
+    let tmp4 = description;
+    let tmp3 = containerStyle;
   } else {
-    tmp4 = cResult[1];
-    tmp5 = cResult[2];
-    tmp6 = cResult[3];
-    tmp7 = cResult[4];
-    tmp8 = cResult[5];
-    tmp9 = cResult[6];
-    tmp10 = cResult[7];
+    tmp3 = cResult[1];
+    tmp4 = cResult[2];
+    tmp5 = cResult[3];
+    tmp6 = cResult[4];
+    tmp7 = cResult[5];
+    tmp8 = cResult[6];
+    tmp9 = cResult[7];
   }
   let num9 = 1;
-  if (undefined !== tmp10) {
-    num9 = tmp10;
+  if (undefined !== tmp9) {
+    num9 = tmp9;
   }
   let str;
-  if (null != tmp6) {
+  if (null != tmp5) {
     str = "error";
   }
-  if (cResult[8] === tmp4) {
-    if (cResult[9] === tmp5) {
-      if (cResult[10] === tmp6) {
-        if (cResult[11] === tmp8) {
-          if (cResult[12] === tmp9) {
-            let tmp14;
-            let tmp16;
+  if (cResult[8] === tmp3) {
+    if (cResult[9] === tmp4) {
+      if (cResult[10] === tmp5) {
+        if (cResult[11] === tmp7) {
+          if (cResult[12] === tmp8) {
             if (cResult[13] === str) {
-              tmp14 = cResult[14];
+              let tmp13 = cResult[14];
             }
             if (num9 > 1) {
-              if (cResult[15] === tmp14) {
-                let tmp22;
-                if (cResult[16] === tmp7) {
-                  tmp22 = cResult[17];
-                }
-                tmp16 = tmp22;
+              if (cResult[15] === tmp13) {
               }
-              const TextArea = TextArea2.TextArea;
-              const merged = Object.assign(tmp14);
-              const tmp27 = <TextArea ref={tmp7} />;
-              cResult[15] = tmp14;
-              cResult[16] = tmp7;
-              cResult[17] = tmp27;
-              tmp22 = tmp27;
+              TextArea = TextArea2.TextArea;
+              const obj2 = { ref: tmp6 };
+              const merged = Object.assign(tmp13);
+              tmp = <TextArea ref={tmp6} />;
+              cResult[15] = tmp13;
+              cResult[16] = tmp6;
+              cResult[17] = tmp;
             } else {
-              if (cResult[18] === tmp14) {
-                if (cResult[19] === tmp7) {
-                  tmp16 = cResult[20];
+              if (cResult[18] === tmp13) {
+                if (cResult[19] === tmp6) {
+                  let tmp15 = cResult[20];
                 }
+                return tmp15;
               }
-              const TextInput = TextInput_TextInput.TextInput;
-              const merged1 = Object.assign(tmp14);
-              const tmp21 = <TextInput ref={tmp7} clearable />;
-              cResult[18] = tmp14;
-              cResult[19] = tmp7;
-              cResult[20] = tmp21;
-              tmp16 = tmp21;
+              const obj3 = { ref: tmp6 };
+              const merged1 = Object.assign(tmp13);
+              obj3.clearable = true;
+              const tmp20 = jsx(TextInput.TextInput, { ref: tmp6 });
+              cResult[18] = tmp13;
+              cResult[19] = tmp6;
+              cResult[20] = tmp20;
+              tmp15 = tmp20;
             }
-            return tmp16;
           }
         }
       }
     }
   }
-  const obj4 = { label: tmp8, description: tmp5, errorMessage: tmp6, containerStyle: tmp4, status: str };
-  const merged2 = Object.assign(tmp9);
-  cResult[8] = tmp4;
-  cResult[9] = tmp5;
-  cResult[10] = tmp6;
-  cResult[11] = tmp8;
-  cResult[12] = tmp9;
+  const obj4 = { label: tmp7, description: tmp4, errorMessage: tmp5, containerStyle: tmp3, status: str };
+  const merged2 = Object.assign(tmp8);
+  cResult[8] = tmp3;
+  cResult[9] = tmp4;
+  cResult[10] = tmp5;
+  cResult[11] = tmp7;
+  cResult[12] = tmp8;
   cResult[13] = str;
   cResult[14] = obj4;
-  tmp14 = obj4;
+  tmp13 = obj4;
 }) : ((inputRef) => {
-  let containerStyle;
-  let description;
-  let errorMessage;
-  let label;
-  let numberOfLines;
-  let str;
-  let tmp9;
   ({ errorMessage, numberOfLines } = inputRef);
   ({ label, description, containerStyle } = inputRef);
   if (numberOfLines === undefined) {
@@ -133,23 +110,22 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   inputRef = inputRef.inputRef;
   const merged = Object.assign(inputRef, Object.assign({ label: 0, description: 0, errorMessage: 0, containerStyle: 0, numberOfLines: 0, inputRef: 0 }));
-  const obj = { label, description, errorMessage, containerStyle, status: str };
-  str = undefined;
+  const obj = { label, description, errorMessage, containerStyle, status: null };
+  let str;
   if (null != errorMessage) {
     str = "error";
   }
+  obj.status = str;
   const merged1 = Object.assign(merged);
   if (numberOfLines > 1) {
-    const TextArea = TextArea2.TextArea;
+    const obj2 = { ref: inputRef };
     const merged2 = Object.assign(obj);
-    tmp9 = <TextArea ref={inputRef} />;
+    let tmp9 = jsx(TextArea2.TextArea, { ref: inputRef });
   } else {
-    const TextInput = TextInput_TextInput.TextInput;
+    const obj3 = { ref: inputRef };
     const merged3 = Object.assign(obj);
-    tmp9 = <TextInput ref={inputRef} clearable />;
+    obj3.clearable = true;
+    tmp9 = jsx(TextInput.TextInput, { ref: inputRef });
   }
   return tmp9;
 });
-const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditFormTextField.tsx");
-
-export default tmp3;

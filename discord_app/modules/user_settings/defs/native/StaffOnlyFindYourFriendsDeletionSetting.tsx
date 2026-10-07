@@ -1,151 +1,123 @@
 // === Module 14665: StaffOnlyFindYourFriendsDeletionSetting ===
 
 // Module 14665 (StaffOnlyFindYourFriendsDeletionSetting)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import react from "react" /* 576 */;
-import _slicedToArray from "_slicedToArray" /* 4498 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14666 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import module_1254 from "module_1254" /* 1254 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import size from "module_2" /* 2 */;
+import c from "c" /* 576 */;
+import _mod4498 from "module_4498" /* 4498 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = globalThis.__r;
-let _require, c4, c5, closure_2;
-
+require = fn;
 function setFindYourFriendsDeletionIsLoading(isLoading) {
-  let state;
   _require = isLoading;
-  obj = require("react-native");
-  obj.batchUpdates(() => {
-    obj = { isLoading };
-    return state.setState(obj);
-  });
+  require("ReactBatchUpdates").batchUpdates(() => state.setState({ isLoading }));
 }
-let obj = function _onFindYourFriendsDeletionPress() {
-  obj = _asyncToGenerator(async function() {
-    let obj5;
-    function getFindYourFriendsDeletionIsLoading() {
-      return state.getState().isLoading;
-    }
-    if (c5 === 2) {
-      c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_9 = async function _onFindYourFriendsDeletionPress() {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      let c3;
-      try {
-        let closure_1;
-        let content;
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_1 = tmp;
-            content = undefined;
-            if (!getFindYourFriendsDeletionIsLoading()) {
-              setFindYourFriendsDeletionIsLoading(true);
-              c3 = 2;
-              c4 = 3;
-              c5 = 1;
-              const obj6 = { value: obj5.adminDeleteContactSync(), done: false };
-              obj5 = require("ContactSyncUtils");
-              return obj6;
-            }
-          }
-        } else if (1 === c4) {
-          c3 = 0;
-          closure_129_7(false);
-          throw closure_2;
-        } else {
-          if (2 === c4) {
-            c3 = 1;
-            closure_1 = closure_2;
-            const self = this;
-            const self2 = this;
-            const aPIError = new closure_129_0(closure_129_2[10]).APIError(closure_1);
-            content = aPIError.getAnyErrorMessage();
-            if (null != content) {
-              const obj7 = { key: "FIND_YOUR_FRIENDS_DELETION", content };
-              const obj3 = closure_129_1(closure_129_2[11]);
-              obj3.open(obj7);
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 0;
-            closure_129_7(false);
-            c5 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            c3 = 1;
-          }
-          c3 = 0;
-          closure_129_7(false);
-        }
-        c5 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp35) {
-        closure_2 = tmp35;
-        if (0 === c3) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
           c5 = 3;
-          throw tmp35;
-        } else if (1 === tmp37) {
-          c4 = 1;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          c4 = 2;
+          closure_1 = tmp4;
+          closure_0 = tmp8;
+          let anyErrorMessage;
+          if ((function getFindYourFriendsDeletionIsLoading() {
+            return state.getState().isLoading;
+          })()) {
+            c5 = 3;
+          } else {
+            setFindYourFriendsDeletionIsLoading(true);
+            c3 = 2;
+            c4 = 3;
+            c5 = 1;
+            const obj6 = { value: require("ContactSyncUtils").adminDeleteContactSync(), done: false };
+            return obj6;
+          }
         }
+      } else if (1 !== tmp8) {
+        if (2 === tmp8) {
+          c3 = 1;
+          closure_128_1 = closure_2;
+          const aPIError = new closure_129_0(closure_129_2[10]).APIError(closure_128_1);
+          anyErrorMessage = aPIError.getAnyErrorMessage();
+          if (null != anyErrorMessage) {
+            const obj7 = { key: "FIND_YOUR_FRIENDS_DELETION", content: anyErrorMessage };
+            closure_129_1(closure_129_2[11]).open(obj7);
+            const obj3 = closure_129_1(closure_129_2[11]);
+          }
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 0;
+          closure_129_7(false);
+          c5 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          c3 = 1;
+        }
+        c3 = 0;
+        closure_129_7(false);
+      }
+      c3 = 0;
+      closure_129_7(false);
+      throw closure_2;
+    } catch (tmp41) {
+      closure_2 = tmp41;
+      if (tmp5 === c3) {
+        c5 = tmp3;
+        throw tmp41;
+      } else if (tmp2 === tmp43) {
+        c4 = tmp2;
+      } else {
+        c4 = tmp;
       }
     }
-  });
-  return obj(...arguments);
+  }
 };
-const ActivityIndicator = react_native.ActivityIndicator;
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const jsx = Fragment.jsx;
-let closure_6 = module_1254.createWithEqualityFn(() => ({ isLoading: false }));
-let ReactCompilerGating = ReactCompilerGating_mod;
+const ActivityIndicator = fn(17).ActivityIndicator;
+const jsx = fn(21).jsx;
+const identity = fn(1254);
+let closure_6 = identity.createWithEqualityFn(() => ({ isLoading: false }));
+let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  obj = react;
-  const cResult = obj.c(1);
+  const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function e(isLoading) {
       return isLoading.isLoading;
     };
     cResult[0] = fn;
-    first = fn;
+    let first = fn;
   } else {
     first = cResult[0];
   }
-  return closure_6(first, _slicedToArray.shallow);
-}) : (() => closure_6((isLoading) => isLoading.isLoading, _slicedToArray.shallow));
-ReactCompilerGating = ReactCompilerGating_mod;
+  return closure_6(first, _mod4498.shallow);
+}) : (() => closure_6((isLoading) => isLoading.isLoading, _mod4498.shallow));
+ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
+fn = () => closure_8();
+const SettingBuilders = fn(11142);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp3;
-  obj = react;
-  const cResult = obj.c(2);
+  const cResult = c.c(2);
   const tmp2 = closure_8();
   if (cResult[0] !== tmp2) {
     let tmp4 = null;
@@ -154,7 +126,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     cResult[0] = tmp2;
     cResult[1] = tmp4;
-    tmp3 = tmp4;
+    let tmp3 = tmp4;
   } else {
     tmp3 = cResult[1];
   }
@@ -166,20 +138,47 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   return tmp;
 });
-let fn = () => closure_8();
-obj = {
+const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "STAFF ONLY - Find your friends deletion";
   },
-  parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7645).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useIsDisabled: fn,
   onPress: function onFindYourFriendsDeletionPress() {
-    return obj(...arguments);
+    const self = this;
+    const apply = closure_9.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   },
-  usePredicate: useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate,
-  useTrailing: tmp3
-};
-const pressable = SettingBuilders.createPressable(obj);
+  usePredicate: fn(14666).useStaffOrDeveloperSettingPredicate,
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(2);
+    const tmp2 = closure_8();
+    if (cResult[0] !== tmp2) {
+      let tmp4 = null;
+      if (tmp2) {
+        tmp4 = <ActivityIndicator />;
+      }
+      cResult[0] = tmp2;
+      cResult[1] = tmp4;
+      let tmp3 = tmp4;
+    } else {
+      tmp3 = cResult[1];
+    }
+    return tmp3;
+  }) : (() => {
+    let tmp = null;
+    if (closure_8()) {
+      tmp = <ActivityIndicator />;
+    }
+    return tmp;
+  })
+});
+const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx");
 
 export default pressable;

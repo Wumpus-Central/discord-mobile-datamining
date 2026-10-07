@@ -4,20 +4,15 @@
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 
-let obj = {
+const result = size.fileFinishedImporting("actions/native/InAppNotificationActionCreators.tsx");
+
+export default {
   enqueueNotification(buildResult) {
-    const obj = DispatcherDefault;
-    const obj2 = { type: "ENQUEUE_IN_APP_NOTIFICATION", notification: buildResult };
-    obj.dispatch(obj2);
+    DispatcherDefault.dispatch({ type: "ENQUEUE_IN_APP_NOTIFICATION", notification: buildResult });
   },
   clearNotification() {
-    let obj = DispatcherDefault;
-    obj.wait(() => {
-      const obj = DispatcherDefault;
-      obj.dispatch({ type: "CLEAR_IN_APP_NOTIFICATION" });
+    DispatcherDefault.wait(() => {
+      DispatcherDefault.dispatch({ type: "CLEAR_IN_APP_NOTIFICATION" });
     });
   }
 };
-const result = size.fileFinishedImporting("actions/native/InAppNotificationActionCreators.tsx");
-
-export default obj;

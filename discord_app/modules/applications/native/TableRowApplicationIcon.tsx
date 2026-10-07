@@ -1,62 +1,55 @@
 // === Module 9257: TableRowApplicationIcon ===
 
 // Module 9257 (TableRowApplicationIcon)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import FastImageDefault from "FastImage" /* 5981 */;
-import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let application;
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { icon: null };
+let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm };
+obj2.icon = size;
+let closure_4 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/applications/native/TableRowApplicationIcon.tsx");
 
-let size;
-const jsx = Fragment.jsx;
-let obj = { icon: size };
-size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm };
-let closure_4 = createStyles.createStyles(obj);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) => {
-  const obj = react2;
-  const cResult = obj.c(6);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((application) => {
+  const cResult = c.c(6);
   application = application.application;
   const tmp3 = closure_4();
   if (cResult[0] === application.icon) {
-    let tmp4;
     if (cResult[1] === application.id) {
-      tmp4 = cResult[2];
+      let tmp4 = cResult[2];
     }
     if (cResult[3] === tmp3.icon) {
-      let tmp6;
       if (cResult[4] === tmp4) {
-        tmp6 = cResult[5];
+        let tmp6 = cResult[5];
       }
       return tmp6;
     }
+    const obj3 = { source: tmp4, style: tmp3.icon };
     const tmp9 = jsx(FastImageDefault, { source: tmp4, style: tmp3.icon });
     cResult[3] = tmp3.icon;
     cResult[4] = tmp4;
     cResult[5] = tmp9;
     tmp6 = tmp9;
   }
-  const obj2 = AvatarUtilsDefault;
-  const obj4 = { id: application.id, icon: application.icon, size: 32 };
-  const applicationIconSource = obj2.getApplicationIconSource(obj4);
+  const applicationIconSource = AvatarUtilsDefault.getApplicationIconSource({ id: application.id, icon: application.icon, size: 32 });
   cResult[0] = application.icon;
   cResult[1] = application.id;
   cResult[2] = applicationIconSource;
   tmp4 = applicationIconSource;
+  const obj4 = { id: application.id, icon: application.icon, size: 32 };
 }) : ((application) => {
   application = application.application;
+  const obj = { source: null, style: null };
   const tmp = closure_4();
-  FastImageDefault;
-  const obj2 = AvatarUtilsDefault;
-  const obj3 = { id: application.id, icon: application.icon, size: 32 };
-  return <tmp2 source={obj2.getApplicationIconSource(obj3)} style={tmp.icon} />;
+  obj.source = AvatarUtilsDefault.getApplicationIconSource({ id: application.id, icon: application.icon, size: 32 });
+  obj.style = tmp.icon;
+  return <tmp2 source={null} style={null} />;
 });
-size = size_mod;
-const result = size.fileFinishedImporting("modules/applications/native/TableRowApplicationIcon.tsx");
-
-export default tmp3;

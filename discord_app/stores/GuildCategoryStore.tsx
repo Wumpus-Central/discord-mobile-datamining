@@ -1,7 +1,7 @@
 // === Module 6613: GuildCategoryStore ===
 
 // Module 6613 (GuildCategoryStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import getFlattedChannelListDefault from "getFlattedChannelList" /* 6614 */;
 import FavoriteStore from "FavoriteStore" /* 2054 */;
@@ -9,13 +9,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 4513 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-let c10;
-let c9;
-let hasOwnProperty;
-let metroRequire;
 function setIndex(arg0, index) {
   arg0.index = index;
 }
@@ -34,19 +28,15 @@ function rebuildGuild(arg0) {
   }
   const channels = GuildChannelStore.getChannels(arg0);
   const obj = { _categories: [], null: [] };
-  const arr = channels[constants.GUILD_CATEGORY];
-  const item = arr.forEach((channel) => {
+  const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
     channel = channel.channel;
     const _categories = obj._categories;
     _categories.push({ channel, index: -1 });
     obj[channel.id] = [];
   });
-  const arr2 = channels[hasOwnProperty];
-  const item1 = arr2.forEach(updateChannel);
-  const arr3 = channels[metroRequire];
-  const item2 = arr3.forEach(updateChannel);
-  const arr4 = getFlattedChannelListDefault(obj._categories, obj);
-  const item3 = arr4.forEach(setIndex);
+  const item1 = channels[hasOwnProperty].forEach(updateChannel);
+  const item2 = channels[timestampProducer].forEach(updateChannel);
+  const item3 = getFlattedChannelListDefault(obj._categories, obj).forEach(setIndex);
   closure_12[arg0] = obj;
   return obj;
 }
@@ -67,20 +57,17 @@ function handleConnectionOpen() {
     }
     const channels = GuildChannelStore.getChannels(c11);
     const obj = { _categories: [], null: [] };
-    const arr = channels[constants.GUILD_CATEGORY];
-    const item = arr.forEach((channel) => {
+    const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
       channel = channel.channel;
       const _categories = obj._categories;
       _categories.push({ channel, index: -1 });
       obj[channel.id] = [];
     });
-    const arr2 = channels[hasOwnProperty];
-    const item1 = arr2.forEach(updateChannel);
-    const arr3 = channels[metroRequire];
-    const item2 = arr3.forEach(updateChannel);
-    const arr4 = getFlattedChannelListDefault(obj._categories, obj);
-    const item3 = arr4.forEach(setIndex);
+    const item1 = channels[hasOwnProperty].forEach(updateChannel);
+    const item2 = channels[timestampProducer].forEach(updateChannel);
+    const item3 = getFlattedChannelListDefault(obj._categories, obj).forEach(setIndex);
     closure_12[c11] = obj;
+    const arr4 = getFlattedChannelListDefault(obj._categories, obj);
   }
 }
 function handleGuildUpdates(guild) {
@@ -101,20 +88,17 @@ function handleGuildUpdates(guild) {
     }
     const channels = GuildChannelStore.getChannels(id);
     const obj = { _categories: [], null: [] };
-    const arr = channels[constants.GUILD_CATEGORY];
-    const item = arr.forEach((channel) => {
+    const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
       channel = channel.channel;
       const _categories = obj._categories;
       _categories.push({ channel, index: -1 });
       obj[channel.id] = [];
     });
-    const arr2 = channels[hasOwnProperty];
-    const item1 = arr2.forEach(updateChannel);
-    const arr3 = channels[metroRequire];
-    const item2 = arr3.forEach(updateChannel);
-    const arr4 = getFlattedChannelListDefault(obj._categories, obj);
-    const item3 = arr4.forEach(setIndex);
+    const item1 = channels[hasOwnProperty].forEach(updateChannel);
+    const item2 = channels[timestampProducer].forEach(updateChannel);
+    const item3 = getFlattedChannelListDefault(obj._categories, obj).forEach(setIndex);
     closure_12[id] = obj;
+    const arr4 = getFlattedChannelListDefault(obj._categories, obj);
   }
 }
 function handleChannelUpdate(channel) {
@@ -138,20 +122,17 @@ function handleChannelUpdate(channel) {
       }
       const channels = GuildChannelStore.getChannels(guild_id);
       const obj = { _categories: [], null: [] };
-      const arr = channels[constants.GUILD_CATEGORY];
-      const item = arr.forEach((channel) => {
+      const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
         channel = channel.channel;
         const _categories = obj._categories;
         _categories.push({ channel, index: -1 });
         obj[channel.id] = [];
       });
-      const arr2 = channels[hasOwnProperty];
-      const item1 = arr2.forEach(updateChannel);
-      const arr3 = channels[metroRequire];
-      const item2 = arr3.forEach(updateChannel);
-      const arr4 = getFlattedChannelListDefault(obj._categories, obj);
-      const item3 = arr4.forEach(setIndex);
+      const item1 = channels[hasOwnProperty].forEach(updateChannel);
+      const item2 = channels[timestampProducer].forEach(updateChannel);
+      const item3 = getFlattedChannelListDefault(obj._categories, obj).forEach(setIndex);
       closure_12[guild_id] = obj;
+      const arr4 = getFlattedChannelListDefault(obj._categories, obj);
     }
   }
 }
@@ -173,24 +154,21 @@ function handleGuildRoleUpdate(guildId) {
     }
     const channels = GuildChannelStore.getChannels(guildId);
     const obj = { _categories: [], null: [] };
-    const arr = channels[constants.GUILD_CATEGORY];
-    const item = arr.forEach((channel) => {
+    const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
       channel = channel.channel;
       const _categories = obj._categories;
       _categories.push({ channel, index: -1 });
       obj[channel.id] = [];
     });
-    const arr2 = channels[hasOwnProperty];
-    const item1 = arr2.forEach(updateChannel);
-    const arr3 = channels[metroRequire];
-    const item2 = arr3.forEach(updateChannel);
-    const arr4 = getFlattedChannelListDefault(obj._categories, obj);
-    const item3 = arr4.forEach(setIndex);
+    const item1 = channels[hasOwnProperty].forEach(updateChannel);
+    const item2 = channels[timestampProducer].forEach(updateChannel);
+    const item3 = getFlattedChannelListDefault(obj._categories, obj).forEach(setIndex);
     closure_12[guildId] = obj;
+    const arr4 = getFlattedChannelListDefault(obj._categories, obj);
   }
 }
 function updateSelectedVoiceChannel(channel, channelId) {
-  c13 = channelId;
+  require = channelId;
   if (null != channel) {
     if (null != channel.getGuildId()) {
       const guildId = channel.getGuildId();
@@ -213,21 +191,18 @@ function updateSelectedVoiceChannel(channel, channelId) {
           }
           const channels = GuildChannelStore.getChannels(guildId);
           const obj = { _categories: [], null: [] };
-          const arr = channels[constants.GUILD_CATEGORY];
-          const item = arr.forEach((channel) => {
+          const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
             channel = channel.channel;
             const _categories = obj._categories;
             _categories.push({ channel, index: -1 });
             obj[channel.id] = [];
           });
-          const arr2 = channels[hasOwnProperty];
-          const item1 = arr2.forEach(updateChannel);
-          const arr3 = channels[metroRequire];
-          const item2 = arr3.forEach(updateChannel);
-          const arr4 = getFlattedChannelListDefault(obj._categories, obj);
-          const item3 = arr4.forEach(setIndex);
+          const item1 = channels[hasOwnProperty].forEach(updateChannel);
+          const item2 = channels[timestampProducer].forEach(updateChannel);
+          const item3 = getFlattedChannelListDefault(obj._categories, obj).forEach(setIndex);
           closure_12[guildId] = obj;
           flag = true;
+          const arr4 = getFlattedChannelListDefault(obj._categories, obj);
         }
       }
       return flag;
@@ -248,83 +223,76 @@ function handleFavoritesUpdate() {
     }
     _null.push({ channel, index: -1 });
   }
-  const channels = GuildChannelStore.getChannels(authStore);
+  const channels = GuildChannelStore.getChannels(v65535);
   const obj = { _categories: [], null: [] };
-  const arr = channels[constants.GUILD_CATEGORY];
-  const item = arr.forEach((channel) => {
+  const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
     channel = channel.channel;
     const _categories = obj._categories;
     _categories.push({ channel, index: -1 });
     obj[channel.id] = [];
   });
-  const arr2 = channels[hasOwnProperty];
-  const item1 = arr2.forEach(updateChannel);
-  const arr3 = channels[metroRequire];
-  const item2 = arr3.forEach(updateChannel);
-  const arr4 = getFlattedChannelListDefault(obj._categories, obj);
-  const item3 = arr4.forEach(setIndex);
-  closure_12[authStore] = obj;
+  const item1 = channels[hasOwnProperty].forEach(updateChannel);
+  const item2 = channels[timestampProducer].forEach(updateChannel);
+  const item3 = getFlattedChannelListDefault(obj._categories, obj).forEach(setIndex);
+  closure_12[v65535] = obj;
 }
-let GuildChannelStore = GuildChannelStore_mod;
+let GuildChannelStore = fn(4513);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: hasOwnProperty, GUILD_VOCAL_CHANNELS_KEY: metroRequire } = GuildChannelStore);
-GuildChannelStore = GuildChannelStore_mod;
-({ ChannelTypes: c9, FAVORITES: c10 } = Constants);
+let GuildChannelStore = GuildChannelStore_mod;
+const Constants = fn(1085);
+({ ChannelTypes: closure_9, FAVORITES: c10 } = Constants);
 let c11 = null;
-let closure_12 = {};
-let c13 = null;
+const dependencyMap = {};
+let require = null;
 let closure_14 = { _categories: [], null: [] };
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class GuildCategoryStore extends Store {
-  initialize() {
-    this.waitFor(GuildChannelStore, GuildStore, AuthenticationStore, ChannelStore, FavoriteStore);
-    const items = [FavoriteStore];
-    this.syncWith(items, handleFavoritesUpdate);
-  }
-  getCategories(arg0) {
-    let tmp;
-    if (null != arg0) {
-      let tmp3 = closure_12[arg0];
-      if (tmp3 == null) {
-        function updateChannel(channel) {
-          channel = channel.channel;
-          let str = "null";
-          if (null != channel.parent_id) {
-            str = channel.parent_id;
-          }
-          let _null = obj[str];
-          if (_null == null) {
-            _null = obj.null;
-          }
-          _null.push({ channel, index: -1 });
-        }
-        const channels = GuildChannelStore.getChannels(arg0);
-        const obj = { _categories: [], null: [] };
-        const arr = channels[constants.GUILD_CATEGORY];
-        const item = arr.forEach((channel) => {
-          channel = channel.channel;
-          const _categories = obj._categories;
-          _categories.push({ channel, index: -1 });
-          obj[channel.id] = [];
-        });
-        const arr2 = channels[hasOwnProperty];
-        const item1 = arr2.forEach(updateChannel);
-        const arr3 = channels[metroRequire];
-        const item2 = arr3.forEach(updateChannel);
-        const arr4 = getFlattedChannelListDefault(obj._categories, obj);
-        const item3 = arr4.forEach(setIndex);
-        closure_12[arg0] = obj;
-        tmp3 = obj;
-      }
-      tmp = tmp3;
-    } else {
-      tmp = closure_14;
-    }
-    return tmp;
-  }
 }
 const prototype = GuildCategoryStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(GuildChannelStore, GuildStore, AuthenticationStore, ChannelStore, FavoriteStore);
+  const items = [FavoriteStore];
+  this.syncWith(items, handleFavoritesUpdate);
+};
+prototype["getCategories"] = function getCategories(arg0) {
+  if (null != arg0) {
+    let tmp3 = dependencyMap[arg0];
+    if (tmp3 == null) {
+      function updateChannel(channel) {
+        channel = channel.channel;
+        let str = "null";
+        if (null != channel.parent_id) {
+          str = channel.parent_id;
+        }
+        let _null = obj[str];
+        if (_null == null) {
+          _null = obj.null;
+        }
+        _null.push({ channel, index: -1 });
+      }
+      const channels = GuildChannelStore.getChannels(arg0);
+      const obj = { _categories: [], null: [] };
+      const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
+        channel = channel.channel;
+        const _categories = obj._categories;
+        _categories.push({ channel, index: -1 });
+        obj[channel.id] = [];
+      });
+      const item1 = channels[hasOwnProperty].forEach(updateChannel);
+      const item2 = channels[timestampProducer].forEach(updateChannel);
+      const item3 = getFlattedChannelListDefault(obj._categories, obj).forEach(setIndex);
+      dependencyMap[arg0] = obj;
+      tmp3 = obj;
+      const arr4 = getFlattedChannelListDefault(obj._categories, obj);
+    }
+    let tmp = tmp3;
+  } else {
+    tmp = closure_14;
+  }
+  return tmp;
+};
 GuildCategoryStore.displayName = "GuildCategoryStore";
-let obj = {
+const guildCategoryStore = new GuildCategoryStore(DispatcherDefault, {
   CHANNEL_SELECT: function handleChannelSelect(guildId) {
     guildId = guildId.guildId;
     let tmp = guildId;
@@ -334,7 +302,7 @@ let obj = {
     c11 = tmp;
     let tmp2 = null != guildId;
     if (tmp2) {
-      if (null == closure_12[guildId]) {
+      if (null == dependencyMap[guildId]) {
         function updateChannel(channel) {
           channel = channel.channel;
           let str = "null";
@@ -349,20 +317,17 @@ let obj = {
         }
         const channels = GuildChannelStore.getChannels(guildId);
         const obj = { _categories: [], null: [] };
-        const arr = channels[constants.GUILD_CATEGORY];
-        const item = arr.forEach((channel) => {
+        const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
           channel = channel.channel;
           const _categories = obj._categories;
           _categories.push({ channel, index: -1 });
           obj[channel.id] = [];
         });
-        const arr2 = channels[hasOwnProperty];
-        const item1 = arr2.forEach(updateChannel);
-        const arr3 = channels[metroRequire];
-        const item2 = arr3.forEach(updateChannel);
+        const item1 = channels[hasOwnProperty].forEach(updateChannel);
+        const item2 = channels[timestampProducer].forEach(updateChannel);
+        const item3 = getFlattedChannelListDefault(obj._categories, obj).forEach(setIndex);
+        dependencyMap[guildId] = obj;
         const arr4 = getFlattedChannelListDefault(obj._categories, obj);
-        const item3 = arr4.forEach(setIndex);
-        closure_12[guildId] = obj;
       }
       tmp2 = tmp4;
     }
@@ -374,7 +339,7 @@ let obj = {
   GUILD_CREATE: handleGuildUpdates,
   GUILD_UPDATE: handleGuildUpdates,
   GUILD_DELETE: function handleGuildDelete(arg0) {
-    delete closure_12[arg0.guild.id];
+    delete tmp[tmp2];
   },
   CHANNEL_CREATE: handleChannelUpdate,
   CHANNEL_DELETE: handleChannelUpdate,
@@ -416,20 +381,17 @@ let obj = {
         }
         const channels = GuildChannelStore.getChannels(guildId);
         const obj = { _categories: [], null: [] };
-        const arr = channels[constants.GUILD_CATEGORY];
-        const item = arr.forEach((channel) => {
+        const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
           channel = channel.channel;
           const _categories = obj._categories;
           _categories.push({ channel, index: -1 });
           obj[channel.id] = [];
         });
-        const arr2 = channels[hasOwnProperty];
-        const item1 = arr2.forEach(updateChannel);
-        const arr3 = channels[metroRequire];
-        const item2 = arr3.forEach(updateChannel);
-        const arr4 = getFlattedChannelListDefault(obj._categories, obj);
-        const item3 = arr4.forEach(setIndex);
+        const item1 = channels[hasOwnProperty].forEach(updateChannel);
+        const item2 = channels[timestampProducer].forEach(updateChannel);
+        const item3 = getFlattedChannelListDefault(obj._categories, obj).forEach(setIndex);
         closure_12[guildId] = obj;
+        const arr4 = getFlattedChannelListDefault(obj._categories, obj);
       }
     }
   },
@@ -451,20 +413,17 @@ let obj = {
       }
       const channels = GuildChannelStore.getChannels(c11);
       const obj = { _categories: [], null: [] };
-      const arr = channels[constants.GUILD_CATEGORY];
-      const item = arr.forEach((channel) => {
+      const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
         channel = channel.channel;
         const _categories = obj._categories;
         _categories.push({ channel, index: -1 });
         obj[channel.id] = [];
       });
-      const arr2 = channels[hasOwnProperty];
-      const item1 = arr2.forEach(updateChannel);
-      const arr3 = channels[metroRequire];
-      const item2 = arr3.forEach(updateChannel);
-      const arr4 = getFlattedChannelListDefault(obj._categories, obj);
-      const item3 = arr4.forEach(setIndex);
+      const item1 = channels[hasOwnProperty].forEach(updateChannel);
+      const item2 = channels[timestampProducer].forEach(updateChannel);
+      const item3 = getFlattedChannelListDefault(obj._categories, obj).forEach(setIndex);
       closure_12[c11] = obj;
+      const arr4 = getFlattedChannelListDefault(obj._categories, obj);
     }
   },
   GUILD_ROLE_CREATE: handleGuildRoleUpdate,
@@ -475,30 +434,27 @@ let obj = {
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {
     channelId = channelId.channelId;
     if (null == channelId) {
-      let tmp2;
-      if (null != c13) {
-        tmp2 = updateSelectedVoiceChannel(ChannelStore.getChannel(c13), null);
+      if (null != require) {
+        let tmp2 = updateSelectedVoiceChannel(ChannelStore.getChannel(require), null);
       }
       return tmp2;
     }
     tmp2 = updateSelectedVoiceChannel(ChannelStore.getChannel(channelId), channelId);
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
-    let channel;
-    let sessionId;
     voiceStates = voiceStates.voiceStates;
     return voiceStates.reduce((acc, channelId) => {
       channelId = channelId.channelId;
       let tmp = acc;
       if (sessionId.getSessionId() === channelId.sessionId) {
         tmp = updateSelectedVoiceChannel(channel.getChannel(channelId), channelId) || acc;
-        updateSelectedVoiceChannel(channel.getChannel(channelId), channelId) || acc;
+        const tmp4 = updateSelectedVoiceChannel(channel.getChannel(channelId), channelId) || acc;
       }
       return tmp;
     }, false);
   }
-};
-const guildCategoryStore = new GuildCategoryStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/GuildCategoryStore.tsx");
 
 export default guildCategoryStore;

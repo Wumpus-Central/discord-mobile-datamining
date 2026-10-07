@@ -1,55 +1,40 @@
 // === Module 11591: TypingIndicator ===
 
 // Module 11591 (TypingIndicator)
-import react_native from "react-native" /* 17 */;
-import get_initialized from "get initialized" /* 504 */;
-import react2 from "react" /* 576 */;
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import native from "native" /* 4595 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
 import spring from "spring" /* 5604 */;
 import springPresets from "springPresets" /* 5605 */;
-import SlowmodeStore from "SlowmodeStore" /* 7184 */;
-import useChatBottomManagerUIStore from "useChatBottomManagerUIStore" /* 9100 */;
 import useTypingUsersIds from "useTypingUsersIds" /* 11593 */;
 import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 11600 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 4895 */;
 import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5647 */;
 import TypingStore from "TypingStore" /* 11592 */;
 import UserStore from "UserStore" /* 1377 */;
-import Fragment from "Fragment" /* 21 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import createStyles from "createStyles" /* 4896 */;
-import size from "module_2" /* 2 */;
 
-let currentUser, set;
-
-let closure_12;
-let closure_14;
-let map1;
+require = fn;
 function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
-  const obj = { transitionState, cleanUp };
+  const obj = {};
   const merged = Object.assign(arg1);
-  return closure_12(closure_23, obj, arg0);
+  obj.transitionState = transitionState;
+  obj.cleanUp = cleanUp;
+  return __initData(closure_23, obj, arg0);
 }
-let View = react_native.View;
-let closure_5 = useChatBottomManagerUIStore.useChatShowingAutoComplete;
-const SlowmodeType = SlowmodeStore.SlowmodeType;
-const AnalyticEvents = Constants.AnalyticEvents;
-({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = Fragment);
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
-  let tmp10;
-  let tmp5;
-  let tmp6;
-  let tmp9;
-  const obj = react2;
-  const cResult = obj.c(8);
-  const obj2 = useTypingUsersIds;
-  const typingUserIds = obj2.useTypingUserIds(arg0, arg1);
+const View = fn(17).View;
+let closure_5 = fn(9100).useChatShowingAutoComplete;
+const SlowmodeType = fn(7184).SlowmodeType;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const jsxProd = fn(21);
+({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
+let ReactCompilerGating = fn(558);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  const cResult = c.c(8);
+  const typingUserIds = useTypingUsersIds.useTypingUserIds(arg0, arg1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [DevSettingsStore];
     const fn = function s() {
@@ -62,8 +47,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const tmpResult = get_initialized;
-  const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
+  const stateFromStores = initialize.useStateFromStores(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [UserStore];
     const fn2 = function h() {
@@ -76,19 +60,18 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     };
     cResult[2] = items1;
     cResult[3] = fn2;
-    tmp10 = fn2;
-    tmp9 = items1;
+    let tmp10 = fn2;
+    let tmp9 = items1;
   } else {
     tmp9 = cResult[2];
     tmp10 = cResult[3];
   }
-  const tmpResult2 = get_initialized;
-  const stateFromStores1 = tmpResult2.useStateFromStores(tmp9, tmp10);
+  const tmpResult = initialize;
+  const stateFromStores1 = initialize.useStateFromStores(tmp9, tmp10);
   if (cResult[4] === stateFromStores1) {
     if (cResult[5] === stateFromStores) {
-      let tmp13;
       if (cResult[6] === typingUserIds) {
-        tmp13 = cResult[7];
+        let tmp13 = cResult[7];
       }
       return tmp13;
     }
@@ -106,17 +89,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[6] = typingUserIds;
   cResult[7] = tmp14;
   tmp13 = tmp14;
+  const tmpResult2 = initialize;
 }) : ((arg0, arg1) => {
-  let stateFromStores1;
-  let typingUserIds;
+  typingUserIds = typingUserIds(stateFromStores1[12]).useTypingUserIds(arg0, arg1);
   const obj = typingUserIds(stateFromStores1[12]);
-  typingUserIds = obj.useTypingUserIds(arg0, arg1);
   let items = [DevSettingsStore];
+  const stateFromStores = typingUserIds(stateFromStores1[13]).useStateFromStores(items, () => DevSettingsStore.get("preview_own_typing_indicator"));
   const obj2 = typingUserIds(stateFromStores1[13]);
-  const stateFromStores = obj2.useStateFromStores(items, () => DevSettingsStore.get("preview_own_typing_indicator"));
   const items1 = [UserStore];
-  const obj3 = typingUserIds(stateFromStores1[13]);
-  stateFromStores1 = obj3.useStateFromStores(items1, () => {
+  stateFromStores1 = typingUserIds(stateFromStores1[13]).useStateFromStores(items1, () => {
     currentUser = currentUser.getCurrentUser();
     let id;
     if (currentUser != null) {
@@ -125,23 +106,24 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     return id;
   });
   const items2 = [stateFromStores, stateFromStores1, typingUserIds];
-  return react.useMemo(() => {
+  return noop.useMemo(() => {
     if (stateFromStores) {
-      let tmp4;
       if (null != stateFromStores1) {
-        const items = [tmp2];
-        tmp4 = items;
+        const items = [tmp];
+        let tmp3 = items;
       }
-      return tmp4;
+      return tmp3;
     }
-    tmp4 = typingUserIds;
+    tmp3 = typingUserIds;
   }, items2);
 });
-let closure_15 = tmp4;
+let closure_15 = tmp3;
+const createStyles = fn(4896);
 let closure_16 = createStyles.createStyles((arg0) => {
-  const obj = { typingWrapper: { paddingTop: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 }, wrapperHoriz: { justifyContent: "space-between", flexDirection: "row", alignItems: "center" }, horiz: { marginRight: nativeDefault.space.PX_8, alignItems: "center", flexDirection: "row", flex: 1 }, text: { flex: 1 } };
-  ({ paddingTop: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 });
-  ({ marginRight: nativeDefault.space.PX_8, alignItems: "center", flexDirection: "row", flex: 1 });
+  const obj = { typingWrapper: { paddingTop: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 }, wrapperHoriz: { justifyContent: "space-between", flexDirection: "row", alignItems: "center" }, horiz: null, text: null };
+  const obj2 = { paddingTop: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 };
+  obj.horiz = { marginRight: nativeDefault.space.PX_8, alignItems: "center", flexDirection: "row", flex: 1 };
+  obj.text = { flex: 1 };
   return obj;
 });
 let closure_17 = { code: "function TypingIndicatorTsx1(){const{typingIndicatorLayout}=this.__closure;return typingIndicatorLayout.get();}" };
@@ -150,22 +132,16 @@ let closure_19 = { code: "function TypingIndicatorTsx3(){const{typingIndicatorLa
 const __initData = { code: "function TypingIndicatorTsx4(){const{typingIndicatorLayout}=this.__closure;return typingIndicatorLayout.get();}" };
 const __initData2 = { code: "function TypingIndicatorTsx5(current,prev){const{translateYValue,withSpring,springStandard}=this.__closure;if(current===prev)return;if(current==null)return;if(current.y.toFixed(2)!==current.height.toFixed(2))return;translateYValue.set(withSpring(-current.height,springStandard,'respect-motion-settings'));}" };
 const __initData3 = { code: "function TypingIndicatorTsx6(){const{typingIndicatorLayout,translateYValue,transitionState,TransitionStates}=this.__closure;const layout=typingIndicatorLayout.get();return{opacity:translateYValue.get()===0||transitionState===TransitionStates.YEETED?0:1,top:layout===null||layout===void 0?void 0:layout.height,transform:[{translateY:translateYValue.get()}]};}" };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
-  let cleanUp;
-  let tmp5;
-  let tmp6;
-  let transitionState;
-  let typingUserIds;
-  let tmp = channel;
-  let obj = channel(cleanUp[11]);
-  const cResult = obj.c(52);
+  const cResult = channel(cleanUp[11]).c(52);
   channel = channel.channel;
   ({ typingUserIds, transitionState } = channel);
-  const tmp2 = cleanUp;
   cleanUp = channel.cleanUp;
-  let obj2 = channel(cleanUp[16]);
-  let customTypingIndicatorConfig = obj2.useCustomTypingIndicatorConfig("TypingIndicatorInner");
+  let obj = channel(cleanUp[11]);
+  let tmp = channel;
+  const tmp2 = cleanUp;
+  let customTypingIndicatorConfig = channel(cleanUp[16]).useCustomTypingIndicatorConfig("TypingIndicatorInner");
   const canView = customTypingIndicatorConfig.canView;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [DevSettingsStore];
@@ -174,15 +150,14 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
         return closure_6.get("preview_own_typing_indicator");
       }
     }
-    let num = 0;
     cResult[0] = items;
     cResult[1] = T;
     tmp5 = items;
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const tmpResult = tmp(tmp2[13]);
-  const stateFromStores = tmpResult.useStateFromStores(tmp5, T);
+  let obj2 = channel(cleanUp[16]);
+  const stateFromStores = tmp(tmp2[13]).useStateFromStores(tmp5, T);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     class F {
       constructor() {
@@ -206,7 +181,6 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       }
     }
   }
-  const id = channel.id;
   if (cResult[3] !== channel) {
     class F {
       constructor() {
@@ -240,55 +214,42 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       }
     }
   }
-  let obj3 = { channelId: id, guildId: tmp10, typingUserIds };
   cResult[5] = channel.id;
   cResult[6] = tmp10;
   cResult[7] = typingUserIds;
-  cResult[8] = obj3;
+  cResult[8] = { channelId: channel.id, guildId: tmp10, typingUserIds };
+  let obj3 = { channelId: channel.id, guildId: tmp10, typingUserIds };
+  const tmpResult = tmp(tmp2[13]);
 }) : ((channel) => {
-  let items6;
-  let items7;
-  let items8;
-  let obj8;
-  let tmp21Result;
-  let tmp27;
-  let transitionState;
-  let typingUserIds;
   channel = channel.channel;
   ({ typingUserIds, transitionState } = channel);
   const cleanUp = channel.cleanUp;
-  let closure_6;
+  closure_6 = undefined;
   let sharedValue;
   let sharedValue1;
-  let tmp = channel;
-  let obj = channel(cleanUp[16]);
-  let customTypingIndicatorConfig = obj.useCustomTypingIndicatorConfig("TypingIndicatorInner");
+  let customTypingIndicatorConfig = channel(cleanUp[16]).useCustomTypingIndicatorConfig("TypingIndicatorInner");
   const canView = customTypingIndicatorConfig.canView;
-  const canSet = customTypingIndicatorConfig.canSet;
-  let obj2 = channel(cleanUp[13]);
+  let obj = channel(cleanUp[16]);
   let items = [closure_6];
-  const stateFromStores = obj2.useStateFromStores(items, () => closure_6.get("preview_own_typing_indicator"));
-  let obj3 = canView;
+  const stateFromStores = channel(cleanUp[13]).useStateFromStores(items, () => closure_6.get("preview_own_typing_indicator"));
   const callback = canView.useCallback(() => {
-    const obj = channel(cleanUp[17]);
-    const result = obj.openCustomTypingIndicatorAnnounceActionSheet();
+    const result = channel(cleanUp[17]).openCustomTypingIndicatorAnnounceActionSheet();
   }, []);
-  const obj4 = { channelId: channel.id, guildId: channel.getGuildId(), typingUserIds };
-  let tmp7 = transitionState(cleanUp[18]);
-  const tmp7Result = tmp7(obj4);
+  const obj4 = { channelId: channel.id, guildId: null, typingUserIds: null };
+  let obj2 = channel(cleanUp[13]);
+  obj4.guildId = channel.getGuildId();
+  obj4.typingUserIds = typingUserIds;
+  const tmp7Result = transitionState(cleanUp[18])(obj4);
   let first = null;
   if (1 === typingUserIds.length) {
     first = typingUserIds[0];
   }
+  let tmp7 = transitionState(cleanUp[18]);
   const items1 = [TypingStore, UserStore, sharedValue];
   const items2 = [first, canView, stateFromStores, channel];
-  const tmpResult = tmp(cleanUp[13]);
-  const stateFromStoresObject = tmpResult.useStateFromStoresObject(items1, () => {
-    let obj2;
-    let obj3;
+  const stateFromStoresObject = channel(cleanUp[13]).useStateFromStoresObject(items1, () => {
     if (null != first) {
       if (canView) {
-        let customTypingIndicatorConfig;
         const user = UserStore.getUser(first);
         if (stateFromStores) {
           let typingIndicatorStyle;
@@ -298,7 +259,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
           if (typingIndicatorStyle == null) {
             typingIndicatorStyle = null;
           }
-          customTypingIndicatorConfig = typingIndicatorStyle;
+          let customTypingIndicatorConfig = typingIndicatorStyle;
         } else {
           customTypingIndicatorConfig = TypingStore.getCustomTypingIndicatorConfig(first);
         }
@@ -309,9 +270,10 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
             if (null != guildId) {
               guildEmojis = RawGuildEmojiStore.getGuildEmojis(guildId);
             }
-            const obj = { config: obj2.getViewableCustomTypingIndicatorConfig(customTypingIndicatorConfig, channel, first, guildEmojis), name: obj3.getName(guildId, channel.id, user) };
-            obj2 = CustomTypingIndicatorUtils;
-            obj3 = NicknameUtilsDefault;
+            const obj = { config: null, name: null };
+            const obj2 = CustomTypingIndicatorUtils;
+            obj.config = obj2.getViewableCustomTypingIndicatorConfig(customTypingIndicatorConfig, channel, first, guildEmojis);
+            obj.name = NicknameUtilsDefault.getName(guildId, channel.id, user);
             return obj;
           }
         }
@@ -325,22 +287,21 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   ({ id: arr4[1], type: arr4[2] } = channel);
   const effect = obj3.useEffect(() => {
     if (closure_6) {
-      const obj3 = { channel_id: null, channel_type: null };
       ({ id: obj2.channel_id, type: obj2.channel_type } = channel);
-      const obj = AnalyticsUtilsDefault;
-      obj.track(AnalyticEvents.TYPING_INDICATOR_STYLE_SEEN, obj3);
+      AnalyticsUtilsDefault.track(AnalyticEvents.TYPING_INDICATOR_STYLE_SEEN, { channel_id: null, channel_type: null });
+      const obj3 = { channel_id: null, channel_type: null };
     }
   }, items3);
-  const tmpResult6 = tmp(cleanUp[22]);
-  sharedValue = tmpResult6.useSharedValue(undefined);
+  const tmpResult = channel(cleanUp[13]);
+  sharedValue = channel(cleanUp[22]).useSharedValue(undefined);
   const items4 = [sharedValue];
   const callback1 = obj3.useCallback((nativeEvent) => {
     const result = sharedValue.set(nativeEvent.nativeEvent.layout);
   }, items4);
-  const tmpResult7 = tmp(cleanUp[23]);
-  const tmp15 = closure_16(tmpResult7.useToken(transitionState(cleanUp[15]).modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING));
-  const tmpResult8 = tmp(cleanUp[22]);
-  sharedValue1 = tmpResult8.useSharedValue(0);
+  const tmpResult6 = channel(cleanUp[22]);
+  const tmp15 = closure_16(channel(cleanUp[23]).useToken(transitionState(cleanUp[15]).modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING));
+  const tmpResult7 = channel(cleanUp[23]);
+  sharedValue1 = channel(cleanUp[22]).useSharedValue(0);
   const items5 = [cleanUp, transitionState, sharedValue1];
   const effect1 = obj3.useEffect(() => {
     if (transitionState === native.TransitionStates.YEETED) {
@@ -348,10 +309,10 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       cleanUp();
     }
   }, items5);
-  const tmpResult9 = tmp(cleanUp[22]);
+  const tmpResult8 = channel(cleanUp[22]);
   class P {
     constructor() {
-      return sharedValue.get();
+      return closure_7.get();
     }
   }
   P.__closure = { typingIndicatorLayout: sharedValue };
@@ -359,111 +320,135 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   P.__initData = __initData;
   class U {
     constructor(arg0, arg1) {
-      let tmp = arg0 !== arg1 && null != arg0;
+      tmp = channel !== arg1;
       if (tmp) {
-        const y = arg0.y;
-        const height = arg0.height;
-        const toFixedResult = y.toFixed(2);
+        tmp2 = null;
+        tmp = null != channel;
+      }
+      if (tmp) {
+        y = channel.y;
+        num = 2;
+        height = channel.height;
+        toFixedResult = y.toFixed(2);
         tmp = toFixedResult === height.toFixed(2);
       }
       if (tmp) {
-        set = sharedValue1.set;
-        const obj = spring;
-        const tmp7 = -arg0.height;
-        const result = set(obj.withSpring(tmp7, springPresets.springStandard, "respect-motion-settings"));
+        tmp4 = closure_8;
+        tmp5 = closure_0;
+        tmp6 = closure_2;
+        obj = closure_0(closure_2[25]);
+        tmp7 = -channel.height;
+        str = "respect-motion-settings";
+        result = closure_8.set(obj.withSpring(tmp7, closure_0(closure_2[26]).springStandard, "respect-motion-settings"));
       }
+      return;
     }
   }
-  U.__closure = { translateYValue: sharedValue1, withSpring: tmp(cleanUp[25]).withSpring, springStandard: tmp(cleanUp[26]).springStandard };
+  const tmpResult9 = channel(cleanUp[22]);
+  U.__closure = { translateYValue: sharedValue1, withSpring: channel(cleanUp[25]).withSpring, springStandard: channel(cleanUp[26]).springStandard };
   U.__workletHash = 16463416523660;
   U.__initData = __initData2;
-  ({ translateYValue: sharedValue1, withSpring: tmp(cleanUp[25]).withSpring, springStandard: tmp(cleanUp[26]).springStandard });
   const animatedReaction = tmpResult9.useAnimatedReaction(P, U);
-  const tmpResult10 = tmp(cleanUp[22]);
+  const obj5 = { translateYValue: sharedValue1, withSpring: channel(cleanUp[25]).withSpring, springStandard: channel(cleanUp[26]).springStandard };
   class G {
     constructor() {
-      let height;
-      let items;
-      let num;
-      const value = sharedValue.get();
-      if (0 === sharedValue1.get()) {
+      value = closure_7.get();
+      obj = closure_8;
+      if (0 === closure_8.get()) {
         num = 0;
       } else {
+        tmp2 = transitionState;
+        tmp3 = closure_0;
+        tmp4 = closure_2;
         num = 1;
       }
-      const obj2 = { opacity: num, top: height, transform: items };
+      obj1 = { opacity: num, top: null, transform: null };
       height = undefined;
       if (value != null) {
         height = value.height;
       }
-      items = [{ translateY: sharedValue1.get() }];
-      ({ translateY: sharedValue1.get() });
-      return obj2;
+      obj1.top = height;
+      obj4 = { translateY: obj.get() };
+      items = [];
+      items[0] = obj4;
+      obj1.transform = items;
+      return obj1;
     }
   }
-  G.__closure = { typingIndicatorLayout: sharedValue, translateYValue: sharedValue1, transitionState, TransitionStates: tmp(cleanUp[24]).TransitionStates };
+  const tmpResult10 = channel(cleanUp[22]);
+  G.__closure = { typingIndicatorLayout: sharedValue, translateYValue: sharedValue1, transitionState, TransitionStates: channel(cleanUp[24]).TransitionStates };
   G.__workletHash = 12928775581926;
   G.__initData = __initData3;
-  ({ typingIndicatorLayout: sharedValue, translateYValue: sharedValue1, transitionState, TransitionStates: tmp(cleanUp[24]).TransitionStates });
   const animatedStyle = tmpResult10.useAnimatedStyle(G);
-  const obj7 = { style: items6, onLayout: callback1, children: closure_14(stateFromStores, obj8) };
-  items6 = [tmp15.typingWrapper, animatedStyle];
-  obj8 = { style: tmp15.wrapperHoriz, children: items8 };
-  const obj9 = { style: tmp15.horiz, children: tmp21Result };
-  View = transitionState(tmp2[22]).View;
+  const obj7 = { style: null, onLayout: callback1, children: null };
+  const items6 = [tmp15.typingWrapper, animatedStyle];
+  obj7.style = items6;
+  const obj8 = { style: tmp15.wrapperHoriz, children: null };
+  const obj9 = { style: tmp15.horiz, children: null };
   if (null != stateFromStoresObject.config) {
-    const obj10 = { config: null, username: null, onPress: tmp27 };
+    const obj10 = { config: null, username: null, onPress: null };
     ({ config: obj18.config, name: obj18.username } = stateFromStoresObject);
-    tmp27 = undefined;
-    const tmp6Result = transitionState(cleanUp[27]);
-    if (canSet) {
+    let tmp27;
+    if (customTypingIndicatorConfig.canSet) {
       tmp27 = callback;
     }
-    tmp21Result = closure_12(tmp6Result, obj10);
+    obj10.onPress = tmp27;
+    let tmp21Result = closure_12(transitionState(tmp2[27]), obj10);
+    const tmp6Result = transitionState(tmp2[27]);
   } else {
     let tmp20Result3 = null;
     if (null != tmp7Result) {
       tmp20Result3 = closure_12(tmp(tmp2[28]).Ellipsis, {});
     }
-    const obj11 = { children: items7 };
-    items7 = [tmp20Result3, ];
+    const obj11 = { children: null };
+    const items7 = [tmp20Result3, ];
     const obj12 = { style: tmp15.text, lineClamp: 1, maxFontSizeMultiplier: 2, variant: "text-xs/medium", color: "interactive-text-default", includeFontPadding: true, ellipsizeMode: "tail", children: tmp7Result };
-    items7[1] = closure_12(tmp(cleanUp[29]).Text, obj12);
+    items7[1] = closure_12(tmp(tmp2[29]).Text, obj12);
+    obj11.children = items7;
     tmp21Result = closure_14(closure_13, obj11);
   }
-  items8 = [closure_12(stateFromStores, obj9), ];
+  obj9.children = tmp21Result;
+  const items8 = [closure_12(stateFromStores, obj9), ];
   let tmp20Result4 = null;
   if (channel.rateLimitPerUser > 0) {
     const obj13 = { channel, hasTypingText: null != tmp7Result, slowmodeType: sharedValue1.SendMessage };
     tmp20Result4 = closure_12(transitionState(tmp2[30]), obj13);
   }
   items8[1] = tmp20Result4;
-  return closure_12(View, obj7);
+  obj8.children = items8;
+  obj7.children = closure_14(stateFromStores, obj8);
+  return closure_12(transitionState(cleanUp[22]).View, obj7);
 });
-let memo = react.memo;
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 function hasTypingIndicatorContent(channel, typingUserIdsForDisplay, arg2) {
-  return (channel.rateLimitPerUser > 0 || typingUserIdsForDisplay.length > 0) && !arg2;
+  let tmp = channel.rateLimitPerUser > 0;
+  if (!tmp) {
+    tmp = typingUserIdsForDisplay.length > 0;
+  }
+  if (tmp) {
+    tmp = !arg2;
+  }
+  return tmp;
 }
-const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
-  const obj = react2;
-  const cResult = obj.c(6);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/chat/native/TypingIndicator.tsx");
+
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+  const cResult = c.c(6);
   channel = channel.channel;
   const tmp4 = closure_5(channel.screenIndex);
   const arr = closure_15(channel.id, 4);
   if (cResult[0] === channel) {
     if (cResult[1] === tmp4) {
-      let tmp5;
-      let tmp8;
       if (cResult[2] === arr) {
-        tmp5 = cResult[3];
+        let tmp5 = cResult[3];
       }
       if (cResult[4] !== tmp5) {
         const obj2 = { item: tmp5, renderItem: renderTypingIndicator };
-        const tmp11 = closure_12(native.TransitionItem, obj2);
+        const tmp11 = __initData(native.TransitionItem, obj2);
         cResult[4] = tmp5;
         cResult[5] = tmp11;
-        tmp8 = tmp11;
+        let tmp8 = tmp11;
       } else {
         tmp8 = cResult[5];
       }
@@ -471,37 +456,39 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel
     }
   }
   let tmp7;
-  const tmp6 = (channel.rateLimitPerUser > 0 || arr.length > 0) && !tmp4;
   if (tmp6) {
-    tmp7 = { channel, typingUserIds: arr };
     const obj3 = { channel, typingUserIds: arr };
+    tmp7 = obj3;
   }
   cResult[0] = channel;
   cResult[1] = tmp4;
   cResult[2] = arr;
   cResult[3] = tmp7;
   tmp5 = tmp7;
+  tmp6 = (channel.rateLimitPerUser > 0 || arr.length > 0) && !tmp4;
 }) : ((channel) => {
   channel = channel.channel;
   const tmp = closure_5(channel.screenIndex);
-  let closure_1 = tmp;
+  closure_1 = tmp;
   const tmp2 = closure_15(channel.id, 4);
-  let closure_2 = tmp2;
+  const typingUserIds = tmp2;
   const items = [channel, tmp2, tmp];
-  const memo = react.useMemo(() => {
-    let tmp4;
-    const tmp3 = (channel.rateLimitPerUser > 0 || typingUserIds.length > 0) && !closure_1;
+  const memo = noop.useMemo(() => {
+    let tmp3 = channel.rateLimitPerUser > 0;
+    if (!tmp3) {
+      tmp3 = typingUserIds.length > 0;
+    }
     if (tmp3) {
-      tmp4 = { channel, typingUserIds };
+      tmp3 = !closure_1;
+    }
+    let tmp4;
+    if (tmp3) {
       const obj = { channel, typingUserIds };
+      tmp4 = obj;
     }
     return tmp4;
   }, items);
-  let obj = { item: memo, renderItem: renderTypingIndicator };
-  return closure_12(native.TransitionItem, obj);
+  return __initData(native.TransitionItem, { item: memo, renderItem: renderTypingIndicator });
 }));
-let result = size.fileFinishedImporting("modules/chat/native/TypingIndicator.tsx");
-
-export default memoResult;
 export { hasTypingIndicatorContent };
-export const useTypingUserIdsForDisplay = tmp4;
+export const useTypingUserIdsForDisplay = tmp3;

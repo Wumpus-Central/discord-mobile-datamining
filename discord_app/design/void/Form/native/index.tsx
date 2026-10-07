@@ -31,7 +31,6 @@ import size from "module_2" /* 2 */;
 const FormTextDefault = FormText;
 
 const result = size.fileFinishedImporting("design/void/Form/native/index.tsx");
-const FormText_export = FormTextDefault;
 
 export const Form = Form_FormDefault;
 export const FormArrow = FormArrowDefault;
@@ -50,7 +49,7 @@ export const FormSection = FormSectionDefault;
 export const FormSelect = FormSelectDefault;
 export const FormSubLabel = FormSubLabelDefault;
 export const FormSwitch = Form_FormSwitchDefault;
-export { FormText_export as FormText };
+export const FormText = FormTextDefault;
 export const FormTextColors = FormText.FormTextColors;
 export const FormTitle = FormTitleDefault;
 export const FormSwitchRow = FormSwitchRowDefault;

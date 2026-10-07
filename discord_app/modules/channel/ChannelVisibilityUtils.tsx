@@ -4,12 +4,15 @@
 import ChannelSectionStore from "ChannelSectionStore" /* 6793 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
-import size from "module_2" /* 2 */;
 
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/ChannelVisibilityUtils.tsx");
 
 export const isChannelCurrentlyVisible = function isChannelCurrentlyVisible(id) {
   const channelId = SelectedChannelStore.getChannelId(SelectedGuildStore.getGuildId());
-  const tmp2 = channelId === id || ChannelSectionStore.getCurrentSidebarChannelId(channelId) === id;
+  let tmp2 = channelId === id;
+  if (!tmp2) {
+    tmp2 = ChannelSectionStore.getCurrentSidebarChannelId(channelId) === id;
+  }
   return tmp2;
 };

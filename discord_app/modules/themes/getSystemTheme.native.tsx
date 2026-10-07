@@ -1,11 +1,11 @@
 // === Module 1230: getSystemTheme ===
 
 // Module 1230 (getSystemTheme)
-import react_native from "react-native" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
 import ThemeConstants from "ThemeConstants" /* 1196 */;
 import size from "module_2" /* 2 */;
 
-const Appearance = react_native.Appearance;
+const Appearance = _mod17.Appearance;
 const SystemTheme = ThemeConstants.SystemTheme;
 const result = size.fileFinishedImporting("modules/themes/getSystemTheme.native.tsx");
 

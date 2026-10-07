@@ -1,116 +1,97 @@
 // === Module 17806: GuildSettingsServerTagColorPickerActionSheet ===
 
 // Module 17806 (GuildSettingsServerTagColorPickerActionSheet)
-import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import ColorUtils from "ColorUtils" /* 4733 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import ColorPickerUtils from "ColorPickerUtils" /* 14440 */;
-import _slicedToArray_mod from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import GuildTagConstants from "GuildTagConstants" /* 7614 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let BottomSheet, secondaryColor;
-
-let c10;
-let c9;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let _slicedToArray = _slicedToArray_mod;
-const View = react_native.View;
-({ GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: metroRequire, GUILD_TAG_BADGE_PALETTE_PRESETS: metroImportDefault, GuildTagBadgeSize: metroImportAll } = GuildTagConstants);
-({ jsx: c9, jsxs: c10 } = Fragment);
+require = fn;
+const View = fn(17).View;
+const GuildTagConstants = fn(7614);
+({ GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: metroRequire, GUILD_TAG_BADGE_PALETTE_PRESETS: closure_7, GuildTagBadgeSize: closure_8 } = GuildTagConstants);
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 let closure_12 = { leading: true, trailing: true };
+const createStyles = fn(4896);
 let closure_13 = createStyles.createStyles((width) => {
-  const obj = { container: { paddingHorizontal: PX_16, paddingBottom: nativeDefault.space.PX_16 }, preview: { alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_24, paddingVertical: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, previewChiplet: { backgroundColor: "transparent", paddingHorizontal: 0, paddingVertical: 0, columnGap: nativeDefault.space.PX_8 }, colorTabs: { alignSelf: "center", width }, saturationValuePicker: { alignSelf: "center" }, saturationValueColorBox: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE }, saturationValueColorBoxInner: { width, minWidth: width, height: 160, minHeight: 160 }, selector: size, huePicker: { alignSelf: "center" }, hueColorBarInner: { width, minWidth: width, height: 24 }, hexInput: { height: 48, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.INPUT_BORDER_DEFAULT, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12, textAlign: "center" }, buttonGroup: { marginTop: nativeDefault.space.PX_24 } };
-  ({ paddingHorizontal: PX_16, paddingBottom: nativeDefault.space.PX_16 });
-  ({ alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_24, paddingVertical: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE });
-  ({ backgroundColor: "transparent", paddingHorizontal: 0, paddingVertical: 0, columnGap: nativeDefault.space.PX_8 });
-  ({ borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE });
-  size = { width: 16, height: 16, borderRadius: nativeDefault.radii.round, borderColor: nativeDefault.unsafe_rawColors.WHITE };
-  ({ height: 48, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.INPUT_BORDER_DEFAULT, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12, textAlign: "center" });
-  ({ marginTop: nativeDefault.space.PX_24 });
+  const obj = { container: { paddingHorizontal: PX_16, paddingBottom: nativeDefault.space.PX_16 }, preview: null, previewChiplet: null, colorTabs: null, saturationValuePicker: null, saturationValueColorBox: null, saturationValueColorBoxInner: null, selector: null, huePicker: null, hueColorBarInner: null, hexInput: null, buttonGroup: null };
+  const obj2 = { paddingHorizontal: PX_16, paddingBottom: nativeDefault.space.PX_16 };
+  obj.preview = { alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_24, paddingVertical: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+  const obj3 = { alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_24, paddingVertical: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+  obj.previewChiplet = { backgroundColor: "transparent", paddingHorizontal: 0, paddingVertical: 0, columnGap: nativeDefault.space.PX_8 };
+  obj.colorTabs = { alignSelf: "center", width };
+  obj.saturationValuePicker = { alignSelf: "center" };
+  const obj4 = { backgroundColor: "transparent", paddingHorizontal: 0, paddingVertical: 0, columnGap: nativeDefault.space.PX_8 };
+  obj.saturationValueColorBox = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
+  obj.saturationValueColorBoxInner = { width, minWidth: width, height: 160, minHeight: 160 };
+  const size = { width: 16, height: 16, borderRadius: nativeDefault.radii.round, borderColor: nativeDefault.unsafe_rawColors.WHITE };
+  obj.selector = size;
+  obj.huePicker = { alignSelf: "center" };
+  obj.hueColorBarInner = { width, minWidth: width, height: 24 };
+  const obj5 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
+  obj.hexInput = { height: 48, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.INPUT_BORDER_DEFAULT, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12, textAlign: "center" };
+  const obj6 = { height: 48, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.INPUT_BORDER_DEFAULT, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12, textAlign: "center" };
+  obj.buttonGroup = { marginTop: nativeDefault.space.PX_24 };
   return obj;
 });
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((secondaryColor) => {
-  let badge;
-  let closure_3;
-  let closure_6;
-  let first1;
-  let first2;
-  let onSelectColor;
-  let primaryColor;
-  let ref;
-  let sharedValue2;
-  let tag;
-  let tmp24;
-  let tmp2 = onSelectColor;
-  let obj = primaryColor(onSelectColor[10]);
-  const cResult = obj.c(114);
+const ReactCompilerGating = fn(558);
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagColorPickerActionSheet.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((secondaryColor) => {
+  const cResult = primaryColor(onSelectColor[10]).c(114);
   ({ tag, badge, primaryColor } = secondaryColor);
   secondaryColor = secondaryColor.secondaryColor;
   onSelectColor = secondaryColor.onSelectColor;
   const bound = Math.max(240, Math.min(secondaryColor(onSelectColor[11])().width - 2 * ref, 358));
-  sharedValue2(bound);
+  sharedValue1(bound);
   _slicedToArray = tmp6;
   const first = first2[0];
-  let obj2 = first;
-  [first1, closure_6] = first.useState(primaryColor);
+  [first1, dependencyMap] = first.useState(primaryColor);
   let tmp11 = null;
-  const useState = first.useState;
-  if (closure_6[badge] >= 2) {
+  if (dependencyMap[badge] >= 2) {
     tmp11 = secondaryColor;
   }
-  const tmp8Result = _slicedToArray(useState(tmp11), 2);
-  first2 = tmp8Result[0];
-  let closure_8 = tmp8Result[1];
-  const tmp8Result3 = _slicedToArray(obj2.useState("primary"), 2);
-  const first3 = tmp8Result3[0];
-  let closure_10 = tmp8Result3[1];
-  ref = obj2.useRef(false);
+  [first2, closure_8] = first.useState(tmp11);
+  [first3, closure_10] = first.useState("primary");
+  let obj = primaryColor(onSelectColor[10]);
+  ref = first.useRef(false);
   let primary = first1;
-  const hex2rgb2hsv = primaryColor(tmp2[8]).hex2rgb2hsv;
-  primaryColor(tmp2[8]);
   if (first1 == null) {
     primary = first.primary;
   }
-  let hex2rgb2hsvResult = hex2rgb2hsv(primary);
+  let hex2rgb2hsvResult = primaryColor(onSelectColor[8]).hex2rgb2hsv(primary);
+  const tmpResult = primaryColor(onSelectColor[8]);
   let num;
-  const useSharedValue = primaryColor(tmp2[12]).useSharedValue;
-  primaryColor(tmp2[12]);
   if (hex2rgb2hsvResult != null) {
     num = hex2rgb2hsvResult.h;
   }
   if (num == null) {
     num = 0;
   }
-  const sharedValue = useSharedValue(num);
+  const sharedValue = primaryColor(onSelectColor[12]).useSharedValue(num);
+  const tmpResult5 = primaryColor(onSelectColor[12]);
   let num2;
-  const useSharedValue2 = primaryColor(tmp2[12]).useSharedValue;
-  primaryColor(tmp2[12]);
   if (hex2rgb2hsvResult != null) {
     num2 = hex2rgb2hsvResult.s;
   }
   if (num2 == null) {
     num2 = 100;
   }
-  sharedValue2 = useSharedValue2(num2 / 100);
+  sharedValue1 = primaryColor(onSelectColor[12]).useSharedValue(num2 / 100);
+  const tmpResult6 = primaryColor(onSelectColor[12]);
   let num3;
-  const useSharedValue3 = primaryColor(tmp2[12]).useSharedValue;
-  primaryColor(tmp2[12]);
   if (hex2rgb2hsvResult != null) {
     num3 = hex2rgb2hsvResult.v;
   }
   if (num3 == null) {
     num3 = 100;
   }
-  const sharedValue3 = useSharedValue3(num3 / 100);
+  const sharedValue2 = primaryColor(onSelectColor[12]).useSharedValue(num3 / 100);
   let str = first1;
   if (first1 == null) {
     str = first.primary;
@@ -119,41 +100,35 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((secondaryColor) => {
     let formatted = str.toUpperCase();
     cResult[0] = str;
     cResult[1] = formatted;
-    tmp24 = formatted;
+    let tmp20 = formatted;
   } else {
-    tmp24 = cResult[1];
+    tmp20 = cResult[1];
   }
-  const tmp8Result4 = _slicedToArray(obj2.useState(tmp24), 2);
-  let closure_15 = tmp8Result4[0];
-  let closure_16 = tmp8Result4[1];
+  [closure_15, closure_16] = first.useState(tmp20);
   let primary2 = first1;
   if (first1 == null) {
     primary2 = first.primary;
   }
-  let tmp27 = null;
-  if (closure_6[badge] >= 2) {
+  let tmp23 = null;
+  if (dependencyMap[badge] >= 2) {
     let secondary = first2;
     if (first2 == null) {
       secondary = first.secondary;
     }
-    tmp27 = secondary;
+    tmp23 = secondary;
   }
-  secondary = tmp27;
+  secondary = tmp23;
   if (cResult[2] === primary2) {
-    let tmp28;
-    if (cResult[3] === tmp27) {
-      tmp28 = cResult[4];
+    if (cResult[3] === tmp23) {
+      let tmp24 = cResult[4];
     }
-    let closure_19 = tmp28;
+    closure_19 = tmp24;
     if (cResult[5] === primaryColor) {
-      let tmp29;
-      let tmp30;
       if (cResult[6] === secondaryColor) {
-        tmp29 = cResult[7];
+        let tmp25 = cResult[7];
       }
-      let closure_20 = tmp29;
+      closure_20 = tmp25;
       const _Symbol = Symbol;
-      let str2 = "react.memo_cache_sentinel";
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         function le(arg0, str) {
           let formatted;
@@ -170,37 +145,33 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((secondaryColor) => {
           }
         }
         cResult[8] = le;
-        tmp30 = le;
+        let tmp26 = le;
       } else {
-        tmp30 = cResult[8];
+        tmp26 = cResult[8];
       }
-      let closure_21 = tmp30;
+      closure_21 = tmp26;
       if (cResult[9] === sharedValue) {
-        if (cResult[10] === sharedValue2) {
-          let tmp31;
-          if (cResult[11] === sharedValue3) {
-            tmp31 = cResult[12];
+        if (cResult[10] === sharedValue1) {
+          if (cResult[11] === sharedValue2) {
+            let tmp27 = cResult[12];
           }
-          let closure_22 = tmp31;
+          closure_22 = tmp27;
           if (cResult[13] === sharedValue) {
-            if (cResult[14] === sharedValue2) {
-              let tmp32;
-              let tmp33;
-              let tmp39;
-              if (cResult[15] === sharedValue3) {
-                tmp32 = cResult[16];
+            if (cResult[14] === sharedValue1) {
+              if (cResult[15] === sharedValue2) {
+                let tmp28 = cResult[16];
               }
-              let closure_23 = tmp32;
-              if (cResult[17] !== tmp32) {
-                const items = [tmp32];
-                cResult[17] = tmp32;
+              closure_23 = tmp28;
+              if (cResult[17] !== tmp28) {
+                const items = [tmp28];
+                cResult[17] = tmp28;
                 cResult[18] = items;
-                tmp33 = items;
+                let tmp29 = items;
               } else {
-                tmp33 = cResult[18];
+                tmp29 = cResult[18];
               }
               const tmpResult8 = primaryColor(tmp2[13]);
-              const throttledFunction = tmpResult8.useThrottledFunction(tmp32, 32, tmp33, sharedValue);
+              const throttledFunction = tmpResult8.useThrottledFunction(tmp28, 32, tmp29, sharedValue);
               if (cResult[19] !== throttledFunction) {
                 function he() {
                   if (ref.current) {
@@ -218,13 +189,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((secondaryColor) => {
                 }
                 cResult[19] = throttledFunction;
                 cResult[20] = he;
-                tmp39 = he;
+                let tmp35 = he;
               } else {
-                tmp39 = cResult[20];
+                tmp35 = cResult[20];
               }
-              let closure_25 = tmp39;
+              closure_25 = tmp35;
               if (cResult[21] === first3) {
-                let tmp42;
                 if (cResult[24] !== throttledFunction) {
                   class Se {
                     constructor() {
@@ -235,16 +205,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((secondaryColor) => {
                   cResult[24] = throttledFunction;
                   cResult[25] = Se;
                   cResult[26] = items1;
-                  tmp42 = items1;
+                  let tmp38 = items1;
                 } else {
                   class Se {
                     constructor() {
                       return () => throttledFunction.cancel();
                     }
                   }
-                  tmp42 = cResult[26];
+                  tmp38 = cResult[26];
                 }
-                const effect = obj2.useEffect(Se, tmp42);
+                const effect = obj2.useEffect(Se, tmp38);
                 if (cResult[27] === first3) {
                   class Se {
                     constructor() {
@@ -254,16 +224,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((secondaryColor) => {
                 }
                 function me() {
                   throttledFunction.cancel();
-                  ref.current = false;
+                  closure_11.current = false;
                   closure_23(first3);
                 }
                 cResult[27] = first3;
                 cResult[28] = throttledFunction;
-                cResult[29] = tmp32;
+                cResult[29] = tmp28;
                 cResult[30] = me;
               }
               function ge() {
-                ref.current = true;
+                closure_11.current = true;
                 throttledFunction(first3);
               }
               cResult[21] = first3;
@@ -272,39 +242,35 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((secondaryColor) => {
             }
           }
           function se(colorChannel) {
-            const value = sharedValue.get();
-            const value3 = sharedValue2.get();
-            const value4 = sharedValue3.get();
-            const obj = ColorPickerUtils;
-            const hsvToRgbWorkletResult = obj.hsvToRgbWorklet({ h: value, s: value3, v: value4 });
-            const obj2 = ColorUtils;
-            const str = obj2.rgbToHex(hsvToRgbWorkletResult[0], hsvToRgbWorkletResult[1], hsvToRgbWorkletResult[2]);
-            const formatted = str.toUpperCase();
+            value = sharedValue.get();
+            value3 = sharedValue1.get();
+            const value4 = sharedValue2.get();
+            const hsvToRgbWorkletResult = ColorPickerUtils.hsvToRgbWorklet({ h: value, s: value3, v: value4 });
+            const formatted = ColorUtils.rgbToHex(hsvToRgbWorkletResult[0], hsvToRgbWorkletResult[1], hsvToRgbWorkletResult[2]).toUpperCase();
             closure_16(formatted);
             closure_21(colorChannel, formatted);
             return { colorChannel, hex: formatted };
           }
           cResult[13] = sharedValue;
-          cResult[14] = sharedValue2;
-          cResult[15] = sharedValue3;
+          cResult[14] = sharedValue1;
+          cResult[15] = sharedValue2;
           cResult[16] = se;
-          tmp32 = se;
+          tmp28 = se;
         }
       }
       function oe(combined) {
-        const obj = ColorUtils;
-        const hex2rgb2hsvResult = obj.hex2rgb2hsv(combined);
+        const hex2rgb2hsvResult = ColorUtils.hex2rgb2hsv(combined);
         if (null != hex2rgb2hsvResult) {
           const result = sharedValue.set(hex2rgb2hsvResult.h);
-          const result1 = sharedValue2.set(hex2rgb2hsvResult.s / 100);
-          const result2 = sharedValue3.set(hex2rgb2hsvResult.v / 100);
+          const result1 = sharedValue1.set(hex2rgb2hsvResult.s / 100);
+          const result2 = sharedValue2.set(hex2rgb2hsvResult.v / 100);
         }
       }
       cResult[9] = sharedValue;
-      cResult[10] = sharedValue2;
-      cResult[11] = sharedValue3;
+      cResult[10] = sharedValue1;
+      cResult[11] = sharedValue2;
       cResult[12] = oe;
-      tmp31 = oe;
+      tmp27 = oe;
     }
     function ae(arg0) {
       return "primary" === arg0 ? primaryColor : secondaryColor;
@@ -312,65 +278,43 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((secondaryColor) => {
     cResult[5] = primaryColor;
     cResult[6] = secondaryColor;
     cResult[7] = ae;
-    tmp29 = ae;
+    tmp25 = ae;
   }
   class Q {
     constructor(arg0) {
-      let tmp;
-      if ("primary" === arg0) {
-        tmp = primary2;
+      if ("primary" === secondaryColor) {
+        tmp = primary;
       } else {
         tmp = secondary;
+        tmp2 = null;
         if (secondary == null) {
-          tmp = primary2;
+          tmp = primary;
         }
       }
       return tmp;
     }
   }
   cResult[2] = primary2;
-  cResult[3] = tmp27;
+  cResult[3] = tmp23;
   cResult[4] = Q;
-  tmp28 = Q;
+  tmp24 = Q;
+  const tmpResult7 = primaryColor(onSelectColor[12]);
 }) : ((secondaryColor) => {
-  let BaseGuildTagChiplet;
-  let BottomSheetTitleHeader;
-  let GuildBadge;
-  let Stack;
-  let badge;
-  let closure_3;
-  let closure_6;
-  let first1;
-  let intl;
-  let intl2;
-  let intl3;
-  let intl4;
-  let intl5;
-  let items13;
-  let items14;
-  let obj3;
-  let obj4;
-  let obj6;
-  let obj8;
-  let primaryColor;
-  let tag;
-  let tmp47;
-  let tmp48;
   ({ tag, badge, primaryColor } = secondaryColor);
   secondaryColor = secondaryColor.secondaryColor;
   const onSelectColor = secondaryColor.onSelectColor;
   first1 = undefined;
-  closure_6 = undefined;
-  let first2;
-  let closure_8;
-  let first3;
-  let closure_10;
+  dependencyMap = undefined;
+  first2 = undefined;
+  closure_8 = undefined;
+  first3 = undefined;
+  closure_10 = undefined;
   let ref;
   let sharedValue;
+  let sharedValue1;
   let sharedValue2;
-  let sharedValue3;
-  let first4;
-  let closure_16;
+  first4 = undefined;
+  closure_16 = undefined;
   let primary2;
   let secondary;
   let callback;
@@ -380,90 +324,72 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((secondaryColor) => {
   let callback4;
   let throttledFunction;
   let callback5;
-  let tmp = secondaryColor;
-  let tmp2 = onSelectColor;
   const bound = Math.max(240, Math.min(secondaryColor(onSelectColor[11])().width - 2 * ref, 358));
-  const tmp4 = sharedValue2(bound);
+  const tmp4 = sharedValue1(bound);
   _slicedToArray = tmp5;
   const first = first2[0];
-  let obj = first;
-  let tmp7 = _slicedToArray;
-  [first1, closure_6] = first.useState(primaryColor);
+  [first1, dependencyMap] = first.useState(primaryColor);
   let tmp10 = null;
-  const useState = first.useState;
-  if (closure_6[badge] >= 2) {
+  if (dependencyMap[badge] >= 2) {
     tmp10 = secondaryColor;
   }
-  const tmp7Result = tmp7(useState(tmp10), 2);
-  first2 = tmp7Result[0];
-  closure_8 = tmp7Result[1];
-  const tmp7Result3 = tmp7(obj.useState("primary"), 2);
-  first3 = tmp7Result3[0];
-  closure_10 = tmp7Result3[1];
+  [first2, closure_8] = first.useState(tmp10);
+  [first3, closure_10] = first.useState("primary");
   ref = obj.useRef(false);
   let primary = first1;
-  const hex2rgb2hsv = primaryColor(tmp2[8]).hex2rgb2hsv;
-  primaryColor(tmp2[8]);
   if (first1 == null) {
     primary = first.primary;
   }
-  let hex2rgb2hsvResult = hex2rgb2hsv(primary);
+  let hex2rgb2hsvResult = primaryColor(onSelectColor[8]).hex2rgb2hsv(primary);
+  let obj2 = primaryColor(onSelectColor[8]);
   let num;
-  const useSharedValue = tmp15(tmp2[12]).useSharedValue;
-  primaryColor(tmp2[12]);
   if (hex2rgb2hsvResult != null) {
     num = hex2rgb2hsvResult.h;
   }
   if (num == null) {
     num = 0;
   }
-  sharedValue = useSharedValue(num);
+  sharedValue = primaryColor(onSelectColor[12]).useSharedValue(num);
+  const tmp15Result = primaryColor(onSelectColor[12]);
   let num2;
-  const useSharedValue2 = tmp15(tmp2[12]).useSharedValue;
-  primaryColor(tmp2[12]);
   if (hex2rgb2hsvResult != null) {
     num2 = hex2rgb2hsvResult.s;
   }
   if (num2 == null) {
     num2 = 100;
   }
-  sharedValue2 = useSharedValue2(num2 / 100);
+  sharedValue1 = primaryColor(onSelectColor[12]).useSharedValue(num2 / 100);
+  const tmp15Result6 = primaryColor(onSelectColor[12]);
   let num3;
-  const useSharedValue3 = tmp15(tmp2[12]).useSharedValue;
-  primaryColor(tmp2[12]);
   if (hex2rgb2hsvResult != null) {
     num3 = hex2rgb2hsvResult.v;
   }
   if (num3 == null) {
     num3 = 100;
   }
-  sharedValue3 = useSharedValue3(num3 / 100);
+  sharedValue2 = primaryColor(onSelectColor[12]).useSharedValue(num3 / 100);
   let str = first1;
-  const useState2 = obj.useState;
   if (first1 == null) {
     str = first.primary;
   }
-  const tmp7Result4 = tmp7(useState2(str.toUpperCase()), 2);
-  first4 = tmp7Result4[0];
-  closure_16 = tmp7Result4[1];
+  [first4, closure_16] = first.useState(str.toUpperCase());
   primary2 = first1;
   if (first1 == null) {
     primary2 = first.primary;
   }
-  let tmp26 = null;
-  if (closure_6[badge] >= 2) {
+  let tmp22 = null;
+  if (dependencyMap[badge] >= 2) {
     secondary = first2;
     if (first2 == null) {
       secondary = first.secondary;
     }
-    tmp26 = secondary;
+    tmp22 = secondary;
   }
-  secondary = tmp26;
-  let items = [primary2, tmp26];
+  secondary = tmp22;
+  let items = [primary2, tmp22];
   callback = obj.useCallback((arg0) => {
-    let tmp;
     if ("primary" === arg0) {
-      tmp = primary2;
+      let tmp = primary2;
     } else {
       tmp = secondary;
       if (secondary == null) {
@@ -488,33 +414,29 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((secondaryColor) => {
       closure_8(formatted);
     }
   }, []);
-  const items2 = [sharedValue, sharedValue2, sharedValue3];
+  const items2 = [sharedValue, sharedValue1, sharedValue2];
   callback3 = obj.useCallback((combined) => {
-    const obj = ColorUtils;
-    const hex2rgb2hsvResult = obj.hex2rgb2hsv(combined);
+    const hex2rgb2hsvResult = ColorUtils.hex2rgb2hsv(combined);
     if (null != hex2rgb2hsvResult) {
       const result = sharedValue.set(hex2rgb2hsvResult.h);
-      const result1 = sharedValue2.set(hex2rgb2hsvResult.s / 100);
-      const result2 = sharedValue3.set(hex2rgb2hsvResult.v / 100);
+      const result1 = sharedValue1.set(hex2rgb2hsvResult.s / 100);
+      const result2 = sharedValue2.set(hex2rgb2hsvResult.v / 100);
     }
   }, items2);
-  const items3 = [sharedValue, sharedValue2, callback2, sharedValue3];
+  const items3 = [sharedValue, sharedValue1, callback2, sharedValue2];
   callback4 = obj.useCallback((colorChannel) => {
-    const value = sharedValue.get();
-    const value3 = sharedValue2.get();
-    const value4 = sharedValue3.get();
-    const obj = ColorPickerUtils;
-    const hsvToRgbWorkletResult = obj.hsvToRgbWorklet({ h: value, s: value3, v: value4 });
-    const obj2 = ColorUtils;
-    const str = obj2.rgbToHex(hsvToRgbWorkletResult[0], hsvToRgbWorkletResult[1], hsvToRgbWorkletResult[2]);
-    const formatted = str.toUpperCase();
+    value = sharedValue.get();
+    value3 = sharedValue1.get();
+    const value4 = sharedValue2.get();
+    const hsvToRgbWorkletResult = ColorPickerUtils.hsvToRgbWorklet({ h: value, s: value3, v: value4 });
+    const formatted = ColorUtils.rgbToHex(hsvToRgbWorkletResult[0], hsvToRgbWorkletResult[1], hsvToRgbWorkletResult[2]).toUpperCase();
     closure_16(formatted);
     callback2(colorChannel, formatted);
     return { colorChannel, hex: formatted };
   }, items3);
+  const tmp15Result7 = primaryColor(onSelectColor[12]);
   const items4 = [callback4];
-  const tmp15Result8 = primaryColor(tmp2[13]);
-  throttledFunction = tmp15Result8.useThrottledFunction(callback4, 32, items4, sharedValue);
+  throttledFunction = primaryColor(onSelectColor[13]).useThrottledFunction(callback4, 32, items4, sharedValue);
   const items5 = [throttledFunction];
   callback5 = obj.useCallback(() => {
     if (ref.current) {
@@ -533,7 +455,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((secondaryColor) => {
   const items6 = [first3, throttledFunction];
   const items7 = [throttledFunction];
   const callback6 = obj.useCallback(() => {
-    ref.current = true;
+    closure_11.current = true;
     throttledFunction(first3);
   }, items6);
   const effect = obj.useEffect(() => () => throttledFunction.cancel(), items7);
@@ -541,7 +463,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((secondaryColor) => {
   const items9 = [first3, callback2, throttledFunction, callback3];
   const callback7 = obj.useCallback(() => {
     throttledFunction.cancel();
-    ref.current = false;
+    closure_11.current = false;
     callback4(first3);
   }, items8);
   const items10 = [first3, first, callback1, callback2, throttledFunction, callback3];
@@ -551,14 +473,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((secondaryColor) => {
         const _HermesInternal = HermesInternal;
         combined = "#" + combined.toUpperCase();
       }
-      ref.current = false;
+      closure_11.current = false;
       throttledFunction.cancel();
       closure_16(combined);
-      const obj = ColorUtils;
       if (null != obj.hex2rgb2hsv(combined)) {
         callback2(first3, combined);
         callback3(combined);
       }
+      obj = ColorUtils;
     }
     combined = combined.toUpperCase();
   }, items9);
@@ -574,7 +496,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((secondaryColor) => {
     if (tmp2 == null) {
       str = secondary;
     }
-    ref.current = false;
+    closure_11.current = false;
     throttledFunction.cancel();
     closure_16(str.toUpperCase());
     callback2(first3, tmp2);
@@ -589,29 +511,28 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((secondaryColor) => {
       callback5();
       throttledFunction.cancel();
       closure_10(str);
-      const str2 = callback(str);
-      const formatted = str2.toUpperCase();
+      const formatted = callback(str).toUpperCase();
       closure_16(formatted);
       callback3(formatted);
+      const str2 = callback(str);
     }
   }, items11);
   const memo = obj.useMemo(() => {
-    let intl;
-    let intl2;
-    const obj = { id: "primary", label: intl.string(primaryColor(onSelectColor[14]).t.PHT1N2), page: null };
-    intl = primaryColor(onSelectColor[14]).intl;
+    const obj = { id: "primary", label: null, page: null };
+    const intl = primaryColor(onSelectColor[14]).intl;
+    obj.label = intl.string(primaryColor(onSelectColor[14]).t.PHT1N2);
     const items = [obj, ];
-    const obj2 = { id: "secondary", label: intl2.string(primaryColor(onSelectColor[14]).t["9/wzjF"]), page: null };
-    intl2 = primaryColor(onSelectColor[14]).intl;
+    const obj2 = { id: "secondary", label: null, page: null };
+    const intl2 = primaryColor(onSelectColor[14]).intl;
+    obj2.label = intl2.string(primaryColor(onSelectColor[14]).t["9/wzjF"]);
     items[1] = obj2;
     return items;
   }, []);
-  const items12 = [first1, first2, callback5, tmp5, first4, onSelectColor];
-  const tmp15Result9 = primaryColor(tmp2[15]);
-  const segmentedControlState = tmp15Result9.useSegmentedControlState({ items: memo, pageWidth: bound, onSetActiveIndex: callback10 });
+  const tmp15Result8 = primaryColor(onSelectColor[13]);
+  const items12 = [first1, first2, callback5, dependencyMap[badge] >= 2, first4, onSelectColor];
+  const segmentedControlState = primaryColor(onSelectColor[15]).useSegmentedControlState({ items: memo, pageWidth: bound, onSetActiveIndex: callback10 });
   let str2 = "WUMP";
   const callback11 = obj.useCallback(() => {
-    const obj = ColorUtils;
     if (null != obj.hex2rgb2hsv(first4)) {
       const tmp13 = callback5();
       let colorChannel;
@@ -643,61 +564,69 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((secondaryColor) => {
         tmp7 = formatted1;
       }
       onSelectColor(formatted, tmp7);
-      const obj2 = ActionSheetActionCreatorsDefault;
-      obj2.hideActionSheet();
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     }
+    obj = ColorUtils;
   }, items12);
   if ("" !== tag) {
     str2 = tag;
   }
-  const tmp15Result10 = primaryColor(tmp2[8]);
-  let obj2 = { startExpanded: true, keyboardShouldPersistTaps: "handled", header: first3(BottomSheetTitleHeader, obj3), children: closure_10(Stack, obj4) };
-  const tmp43 = null == tmp15Result10.hex2rgb2hsv(first4);
-  BottomSheet = tmp15(tmp2[26]).BottomSheet;
-  obj3 = { title: intl.string(primaryColor(tmp2[14]).t.T1IxYH) };
-  BottomSheetTitleHeader = tmp15(tmp2[17]).BottomSheetTitleHeader;
-  intl = tmp15(tmp2[14]).intl;
-  obj4 = { spacing: tmp(tmp2[5]).space.PX_8, style: tmp4.container, children: items13 };
-  Stack = tmp15(tmp2[25]).Stack;
-  const obj5 = { accessible: true, accessibilityLabel: intl2.formatToPlainString(primaryColor(tmp2[14]).t.R1AXap, { tag: str2 }), style: tmp4.preview, children: first3(BaseGuildTagChiplet, obj6) };
-  intl2 = tmp15(tmp2[14]).intl;
-  obj6 = { guildTag: str2, guildBadge: first3(GuildBadge, size), textVariant: "heading-xxl/semibold", textStyle: primaryColor(tmp2[20]).TextStyleSheet["heading-xxl/semibold"], badgeSize: tmp47.SIZE_36, containerStyles: tmp4.previewChiplet };
-  BaseGuildTagChiplet = tmp15(tmp2[19]).BaseGuildTagChiplet;
-  size = { badge, width: closure_8.SIZE_36, height: closure_8.SIZE_36, primaryTintColor: first1, secondaryTintColor: tmp48 };
-  GuildBadge = tmp15(tmp2[18]).GuildBadge;
-  tmp48 = undefined;
-  tmp47 = closure_8;
-  if (closure_6[badge] >= 2) {
-    tmp48 = first2;
+  const tmp15Result9 = primaryColor(onSelectColor[15]);
+  const tmp15Result10 = primaryColor(onSelectColor[8]);
+  const obj3 = { startExpanded: true, keyboardShouldPersistTaps: "handled", header: null, children: null };
+  const obj4 = { title: null };
+  let intl = tmp15(tmp2[14]).intl;
+  obj4.title = intl.string(primaryColor(onSelectColor[14]).t.T1IxYH);
+  obj3.header = first3(primaryColor(onSelectColor[17]).BottomSheetTitleHeader, obj4);
+  const obj5 = { spacing: secondaryColor(onSelectColor[5]).space.PX_8, style: tmp4.container, children: null };
+  const obj6 = { accessible: true, accessibilityLabel: null, style: null, children: null };
+  let intl2 = tmp15(tmp2[14]).intl;
+  obj6.accessibilityLabel = intl2.formatToPlainString(primaryColor(onSelectColor[14]).t.R1AXap, { tag: str2 });
+  obj6.style = tmp4.preview;
+  const obj7 = { guildTag: str2, guildBadge: null, textVariant: "heading-xxl/semibold", textStyle: null, badgeSize: null, containerStyles: null };
+  const size = { badge, width: closure_8.SIZE_36, height: closure_8.SIZE_36, primaryTintColor: first1, secondaryTintColor: null };
+  let tmp44;
+  if (dependencyMap[badge] >= 2) {
+    tmp44 = first2;
   }
-  items13 = [first3(first1, obj5), , , , ];
-  let tmp44Result = null;
-  if (closure_6[badge] >= 2) {
-    const obj7 = { style: tmp4.colorTabs, children: first3(primaryColor(tmp2[21]).SegmentedControl, obj8) };
-    obj8 = { state: segmentedControlState, variant: "experimental_Large", keyboardShouldPersistTaps: "handled" };
-    tmp44Result = tmp44(tmp46, obj7);
+  size.secondaryTintColor = tmp44;
+  obj7.guildBadge = first3(primaryColor(onSelectColor[18]).GuildBadge, size);
+  obj7.textStyle = primaryColor(onSelectColor[20]).TextStyleSheet["heading-xxl/semibold"];
+  obj7.badgeSize = closure_8.SIZE_36;
+  obj7.containerStyles = tmp4.previewChiplet;
+  obj6.children = first3(primaryColor(onSelectColor[19]).BaseGuildTagChiplet, obj7);
+  const items13 = [first3(first1, obj6), , , , ];
+  let tmp40Result = null;
+  if (dependencyMap[badge] >= 2) {
+    const obj8 = { style: tmp4.colorTabs, children: null };
+    const obj9 = { state: segmentedControlState, variant: "experimental_Large", keyboardShouldPersistTaps: "handled" };
+    obj8.children = tmp40(tmp15(tmp2[21]).SegmentedControl, obj9);
+    tmp40Result = tmp40(tmp42, obj8);
   }
-  items13[1] = tmp44Result;
-  const obj9 = { hue: sharedValue, saturation: sharedValue2, value: sharedValue3, saturationValuePickerStyle: tmp4.saturationValuePicker, saturationValueColorBoxStyle: tmp4.saturationValueColorBox, saturationValueColorBoxInnerStyle: tmp4.saturationValueColorBoxInner, saturationValueSelectorStyle: tmp4.selector, huePickerStyle: tmp4.huePicker, hueColorBarInnerStyle: tmp4.hueColorBarInner, hueSliderStyle: tmp4.selector, onPanUpdate: callback6, onPanFinalize: callback7 };
-  items13[2] = first3(tmp(tmp2[22]), obj9);
-  const obj10 = { accessibilityLabel: intl3.string(primaryColor(tmp2[14]).t["ozfa/h"]), value: first4, onChangeText: callback8, maxLength: 7, autoCapitalize: "characters", autoCorrect: false, style: tmp4.hexInput };
-  const BottomSheetTextInput = tmp15(tmp2[23]).BottomSheetTextInput;
-  intl3 = tmp15(tmp2[14]).intl;
-  items13[3] = first3(BottomSheetTextInput, obj10);
-  const obj11 = { spacing: tmp(tmp2[5]).space.PX_8, style: tmp4.buttonGroup, children: items14 };
-  const Stack2 = tmp15(tmp2[25]).Stack;
-  const obj12 = { grow: true, text: intl4.string(primaryColor(tmp2[14]).t["R3BPH+"]), onPress: callback11, disabled: tmp43 };
-  const Button = tmp15(tmp2[24]).Button;
-  intl4 = tmp15(tmp2[14]).intl;
-  items14 = [first3(Button, obj12), ];
-  const obj13 = { grow: true, variant: "secondary", text: intl5.string(primaryColor(tmp2[14]).t.yBZMsQ), onPress: callback9 };
-  const Button2 = tmp15(tmp2[24]).Button;
-  intl5 = tmp15(tmp2[14]).intl;
-  items14[1] = first3(Button2, obj13);
-  items13[4] = closure_10(Stack2, obj11);
-  return first3(BottomSheet, obj2);
+  items13[1] = tmp40Result;
+  items13[2] = first3(secondaryColor(onSelectColor[22]), { hue: sharedValue, saturation: sharedValue1, value: sharedValue2, saturationValuePickerStyle: tmp4.saturationValuePicker, saturationValueColorBoxStyle: tmp4.saturationValueColorBox, saturationValueColorBoxInnerStyle: tmp4.saturationValueColorBoxInner, saturationValueSelectorStyle: tmp4.selector, huePickerStyle: tmp4.huePicker, hueColorBarInnerStyle: tmp4.hueColorBarInner, hueSliderStyle: tmp4.selector, onPanUpdate: callback6, onPanFinalize: callback7 });
+  const obj11 = { accessibilityLabel: null, value: null, onChangeText: null, maxLength: 7, autoCapitalize: "characters", autoCorrect: false, style: null };
+  const intl3 = tmp15(tmp2[14]).intl;
+  obj11.accessibilityLabel = intl3.string(primaryColor(onSelectColor[14]).t["ozfa/h"]);
+  obj11.value = first4;
+  obj11.onChangeText = callback8;
+  obj11.style = tmp4.hexInput;
+  items13[3] = first3(primaryColor(onSelectColor[23]).BottomSheetTextInput, obj11);
+  const obj12 = { spacing: secondaryColor(onSelectColor[5]).space.PX_8, style: tmp4.buttonGroup, children: null };
+  const obj13 = { grow: true, text: null, onPress: null, disabled: null };
+  const intl4 = tmp15(tmp2[14]).intl;
+  obj13.text = intl4.string(primaryColor(onSelectColor[14]).t["R3BPH+"]);
+  obj13.onPress = callback11;
+  obj13.disabled = null == primaryColor(onSelectColor[8]).hex2rgb2hsv(first4);
+  const items14 = [first3(primaryColor(onSelectColor[24]).Button, obj13), ];
+  const obj14 = { grow: true, variant: "secondary", text: null, onPress: null };
+  const intl5 = tmp15(tmp2[14]).intl;
+  obj14.text = intl5.string(primaryColor(onSelectColor[14]).t.yBZMsQ);
+  obj14.onPress = callback9;
+  items14[1] = first3(primaryColor(onSelectColor[24]).Button, obj14);
+  obj12.children = items14;
+  items13[4] = closure_10(primaryColor(onSelectColor[25]).Stack, obj12);
+  obj5.children = items13;
+  obj3.children = closure_10(primaryColor(onSelectColor[25]).Stack, obj5);
+  return first3(primaryColor(onSelectColor[26]).BottomSheet, obj3);
 });
-let size = size_mod;
-let result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagColorPickerActionSheet.tsx");
-
-export default tmp4;

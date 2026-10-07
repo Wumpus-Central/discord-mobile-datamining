@@ -1,57 +1,51 @@
 // === Module 4874: MobileNativeUpdateConstants ===
 
 // Module 4874 (MobileNativeUpdateConstants)
-import PlatformUtils from "PlatformUtils" /* 1369 */;
 import URLUtilsDefault from "URLUtils" /* 1371 */;
-import module_4467 from "module_4467" /* 4467 */;
-import react_native_mod from "react-native" /* 1368 */;
-import size from "module_2" /* 2 */;
+import hooks from "module_4467" /* 4467 */;
 
 let tmp3 = null;
-const durationResult = module_4467.duration(6, "hours");
 if (undefined !== process.env.INTERNAL_UPDATE_URL) {
   const _process = process;
   tmp3 = null;
   if ("" !== process.env.INTERNAL_UPDATE_URL) {
-    let toURLSafeResult;
-    const _module = PlatformUtils;
-    if (_module.isIOS()) {
+    if (obj2.isIOS()) {
       const _process2 = process;
+      let toURLSafeResult = URLUtilsDefault.toURLSafe(process.env.INTERNAL_UPDATE_URL);
       const importDefaultResult1 = URLUtilsDefault;
-      toURLSafeResult = importDefaultResult1.toURLSafe(process.env.INTERNAL_UPDATE_URL);
     } else {
-      const _module1 = PlatformUtils;
       toURLSafeResult = null;
+      const obj3 = fn(1369);
     }
     tmp3 = toURLSafeResult;
+    obj2 = fn(1369);
   }
 }
-let react_native = react_native_mod;
-react_native = react_native.getConstants();
+let ClientInfoUtils = fn(1368);
+ClientInfoUtils = ClientInfoUtils.getConstants();
 let Build;
-const _parseInt = parseInt;
-if (react_native != null) {
-  Build = react_native.Build;
+if (ClientInfoUtils != null) {
+  Build = ClientInfoUtils.Build;
 }
-const _parseIntResult = _parseInt(Build);
+const parsed = parseInt(Build);
 let tmp8 = null;
-if (!Number.isNaN(_parseIntResult)) {
+if (!Number.isNaN(parsed)) {
   tmp8 = null;
-  if (0 !== _parseIntResult) {
+  if (0 !== parsed) {
     tmp8 = null;
-    if (123456 !== _parseIntResult) {
+    if (123456 !== parsed) {
       tmp8 = null;
-      if (1234567890 !== _parseIntResult) {
-        tmp8 = _parseIntResult;
+      if (1234567890 !== parsed) {
+        tmp8 = parsed;
       }
     }
   }
 }
-react_native = react_native_mod;
-react_native = react_native.getConstants();
+ClientInfoUtils = fn(1368);
+ClientInfoUtils = ClientInfoUtils.getConstants();
 let Version;
-if (react_native != null) {
-  Version = react_native.Version;
+if (ClientInfoUtils != null) {
+  Version = ClientInfoUtils.Version;
 }
 if (Version == null) {
   Version = null;
@@ -62,12 +56,13 @@ if (null !== tmp3) {
   if (null !== tmp8) {
     tmp11 = null;
     if (null !== Version) {
-      tmp11 = { url: tmp3, currentBuild: tmp8, currentVersion: Version };
       const obj = { url: tmp3, currentBuild: tmp8, currentVersion: Version };
+      tmp11 = obj;
     }
   }
 }
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateConstants.tsx");
 
-export const UPDATE_CHECK_INTERVAL = durationResult;
+export const UPDATE_CHECK_INTERVAL = hooks.duration(6, "hours");
 export const UPDATE_CONFIG = tmp11;

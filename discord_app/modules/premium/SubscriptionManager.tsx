@@ -1,272 +1,259 @@
 // === Module 17677: SubscriptionManager ===
 
 // Module 17677 (SubscriptionManager)
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1976 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5411 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1377 */;
 import BillingInfoStore from "BillingInfoStore" /* 4536 */;
 import SubscriptionStore from "SubscriptionStore" /* 4540 */;
 import EntitlementStore from "EntitlementStore" /* 6909 */;
-import PremiumConstants from "PremiumConstants" /* 1379 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
-import size from "module_2" /* 2 */;
 
-let c1, c2, currentUser, isFetchingMostRecentSubscription;
-
-let metroImportAll;
-let metroImportDefault;
-({ PREMIUM_SUBSCRIPTION_APPLICATION: metroImportDefault, PremiumTypes: metroImportAll } = PremiumConstants);
-class SubscriptionManager extends AutomaticLifecycleManager {
-  constructor() {
-    let TIER_1;
-    let applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    require = applyArgumentsResult;
-    applyArgumentsResult.actions = {
-      POST_CONNECTION_OPEN() {
-        const result = require.maybeFetchSubscriptions();
-        const result1 = require.maybeFetchCountryCode();
-        const result2 = require.maybeFetchMostRecentSubscription();
-      }
-    };
-    applyArgumentsResult.maybeFetchSubscriptions = _asyncToGenerator(async () => {
-      let closure_0;
-      let obj3;
-      let obj5;
-      if (currentUser === 2) {
-        currentUser = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+let require = fn;
+const PremiumConstants = fn(1379);
+({ PREMIUM_SUBSCRIPTION_APPLICATION: closure_7, PremiumTypes: closure_8 } = PremiumConstants);
+const prototype = function SubscriptionManager() {
+  let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+  require = applyArgumentsResult;
+  applyArgumentsResult.actions = {
+    POST_CONNECTION_OPEN() {
+      const result = applyArgumentsResult.maybeFetchSubscriptions();
+      const result1 = applyArgumentsResult.maybeFetchCountryCode();
+      const result2 = applyArgumentsResult.maybeFetchMostRecentSubscription();
+    }
+  };
+  applyArgumentsResult.maybeFetchSubscriptions = asyncGeneratorStep(async () => {
+    if (currentUser === 2) {
+      currentUser = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          let closure_1;
-          let tmp;
-          currentUser = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              currentUser = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              currentUser = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              closure_1 = tmp4;
-              tmp = undefined;
-              currentUser = currentUser.getCurrentUser();
-              const isSubscriptionFetching = BillingInfoStore.isSubscriptionFetching;
-              const obj9 = tmp(closure_1[7]);
-              if (obj9.isPremium(currentUser)) {
-                const result = isFetchingMostRecentSubscription.hasFetchedSubscriptions() || isSubscriptionFetching;
-                if (!result) {
-                  c2 = 1;
-                  currentUser = 1;
-                  const obj6 = { value: obj3.fetchSubscriptions(), done: false };
-                  obj3 = tmp(closure_1[8]);
-                  return obj6;
-                }
-              }
-              currentUser = 3;
-              return { value: "IconComponent", done: null };
-            }
-          } else if (1 === c2) {
-            if (arg0 === 1) {
-              currentUser = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              currentUser = 3;
-              const obj7 = { value, done: true };
-              return obj7;
-            }
-          } else if (arg0 === 1) {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        currentUser = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
             currentUser = 3;
             throw value;
           } else if (arg0 === 2) {
             currentUser = 3;
-            const obj = { value, done: true };
-            return obj;
-          }
-          tmp = isFetchingMostRecentSubscription.getPremiumSubscription();
-          let paymentSourceId;
-          if (tmp != null) {
-            paymentSourceId = tmp.paymentSourceId;
-          }
-          let hasItem = null != paymentSourceId;
-          if (!hasItem) {
-            const applicationIdsFetched = EntitlementStore.applicationIdsFetched;
-            hasItem = applicationIdsFetched.has(closure_1_7);
-          }
-          if (!hasItem) {
-            c2 = 2;
-            currentUser = 1;
-            const obj8 = { value: obj5.fetchUserEntitlementsForApplication(closure_1_7), done: false };
-            obj5 = tmp(closure_1[9]);
-            return obj8;
-          }
-        } catch (tmp22) {
-          currentUser = 3;
-          throw tmp22;
-        }
-      }
-    });
-    applyArgumentsResult.maybeFetchMostRecentSubscription = function maybeFetchMostRecentSubscription() {
-      currentUser = currentUser.getCurrentUser();
-      let premiumType;
-      const isPremiumAtMost = PremiumTypeUtils.isPremiumAtMost;
-      PremiumTypeUtils;
-      if (currentUser != null) {
-        premiumType = currentUser.premiumType;
-      }
-      if (premiumType == null) {
-        premiumType = null;
-      }
-      let hasHadPremiumResult = null != currentUser;
-      const isPremiumAtMostResult = isPremiumAtMost(premiumType, TIER_1.TIER_1);
-      isFetchingMostRecentSubscription = isFetchingMostRecentSubscription.getIsFetchingMostRecentSubscription();
-      if (hasHadPremiumResult) {
-        hasHadPremiumResult = isPremiumAtMostResult;
-      }
-      if (hasHadPremiumResult) {
-        hasHadPremiumResult = currentUser.hasHadPremium();
-      }
-      if (hasHadPremiumResult) {
-        hasHadPremiumResult = !isFetchingMostRecentSubscription;
-      }
-      if (hasHadPremiumResult) {
-        const tmpResult = actions_BillingActionCreators;
-        const mostRecentSubscription = tmpResult.fetchMostRecentSubscription();
-      }
-    };
-    applyArgumentsResult.maybeFetchCountryCode = _asyncToGenerator(async () => {
-      let v3;
-      if (v3 === 2) {
-        v3 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp2 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          v3 = 2;
-          if (0 === c1) {
-            if (arg0 === 1) {
-              v3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              v3 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              currentUser = currentUser.getCurrentUser();
-              const obj5 = v3(c1[7]);
-              const isPremiumResult = obj5.isPremium(currentUser) && !ipCountryCodeLoaded.ipCountryCodeLoaded;
-              if (isPremiumResult) {
-                c1 = 1;
-                v3 = 1;
-                const obj4 = { value: applyArgumentsResult.fetchCountryCode(), done: false };
-                return obj4;
-              }
-            }
-          } else if (arg0 === 1) {
-            v3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            v3 = 3;
-            const obj = { value, done: true };
-            return obj;
-          }
-          v3 = 3;
-          return { value: "IconComponent", done: null };
-        } catch (tmp7) {
-          v3 = 3;
-          throw tmp7;
-        }
-      }
-    });
-    applyArgumentsResult.fetchCountryCode = _asyncToGenerator(async () => {
-      let closure_0;
-      if (c2 === 2) {
-        c2 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp2 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c2 = 2;
-          if (0 === c1) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              applyArgumentsResult = tmp3;
-              const obj5 = applyArgumentsResult(c1[8]);
-              c1 = 1;
-              c2 = 1;
-              const obj6 = { value: obj5.fetchIpCountryCode(), done: false };
-              return obj6;
-            }
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            if (1 === c1) {
-              if (arg0 === 1) {
-                c2 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c2 = 3;
-                const obj7 = { value, done: true };
-                return obj7;
-              } else if (null != ipCountryCode.ipCountryCode) {
-                const obj2 = applyArgumentsResult(c1[8]);
-                c1 = 2;
-                c2 = 1;
-                const obj8 = { value: obj2.fetchPaymentSources(), done: false };
-                return obj8;
+            dependencyMap = tmp5;
+            let premiumSubscription;
+            currentUser = currentUser.getCurrentUser();
+            if (obj9.isPremium(currentUser)) {
+              let isSubscriptionFetching = isFetchingMostRecentSubscription.hasFetchedSubscriptions();
+              if (!isSubscriptionFetching) {
+                isSubscriptionFetching = BillingInfoStore.isSubscriptionFetching;
               }
-            } else if (arg0 === 1) {
-              c2 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              const obj = { value, done: true };
-              return obj;
+              if (!isSubscriptionFetching) {
+                c2 = 1;
+                currentUser = 1;
+                const obj6 = { value: tmp2(5411).fetchSubscriptions(), done: false };
+                return obj6;
+              }
             }
-            c2 = 3;
+            currentUser = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp12) {
-          c2 = 3;
-          throw tmp12;
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            currentUser = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            currentUser = 3;
+            const obj7 = { value, done: true };
+            return obj7;
+          }
+        } else if (arg0 === 1) {
+          currentUser = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          currentUser = 3;
+          const obj = { value, done: true };
+          return obj;
         }
+        premiumSubscription = isFetchingMostRecentSubscription.getPremiumSubscription();
+        let paymentSourceId;
+        if (premiumSubscription != null) {
+          paymentSourceId = premiumSubscription.paymentSourceId;
+        }
+        let hasItem = null != paymentSourceId;
+        if (!hasItem) {
+          const applicationIdsFetched = EntitlementStore.applicationIdsFetched;
+          hasItem = applicationIdsFetched.has(closure_1_7);
+        }
+        if (!hasItem) {
+          c2 = 2;
+          currentUser = 1;
+          const obj8 = { value: tmp2(6915).fetchUserEntitlementsForApplication(closure_1_7), done: false };
+          return obj8;
+        }
+      } catch (tmp22) {
+        currentUser = tmp;
+        throw tmp22;
       }
-    });
-    return applyArgumentsResult;
-  }
+    }
+  });
+  applyArgumentsResult.maybeFetchMostRecentSubscription = function maybeFetchMostRecentSubscription() {
+    currentUser = currentUser.getCurrentUser();
+    let premiumType;
+    if (currentUser != null) {
+      premiumType = currentUser.premiumType;
+    }
+    if (premiumType == null) {
+      premiumType = null;
+    }
+    const obj2 = applyArgumentsResult(dependencyMap[7]);
+    let hasHadPremiumResult = null != currentUser;
+    isFetchingMostRecentSubscription = isFetchingMostRecentSubscription.getIsFetchingMostRecentSubscription();
+    if (hasHadPremiumResult) {
+      hasHadPremiumResult = isPremiumAtMostResult;
+    }
+    if (hasHadPremiumResult) {
+      hasHadPremiumResult = currentUser.hasHadPremium();
+    }
+    if (hasHadPremiumResult) {
+      hasHadPremiumResult = !isFetchingMostRecentSubscription;
+    }
+    if (hasHadPremiumResult) {
+      const mostRecentSubscription = applyArgumentsResult(dependencyMap[8]).fetchMostRecentSubscription();
+      const tmpResult = applyArgumentsResult(dependencyMap[8]);
+    }
+    isPremiumAtMostResult = applyArgumentsResult(dependencyMap[7]).isPremiumAtMost(premiumType, TIER_1.TIER_1);
+  };
+  closure_129_0 = applyArgumentsResult;
+  applyArgumentsResult.maybeFetchCountryCode = asyncGeneratorStep(async () => {
+    if (v3 === 2) {
+      v3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        v3 = 2;
+        if (0 === dependencyMap) {
+          if (arg0 === 1) {
+            v3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            v3 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            currentUser = currentUser.getCurrentUser();
+            let isPremiumResult = v3(dependencyMap[7]).isPremium(currentUser);
+            if (isPremiumResult) {
+              isPremiumResult = !ipCountryCodeLoaded.ipCountryCodeLoaded;
+            }
+            if (isPremiumResult) {
+              dependencyMap = 1;
+              v3 = 1;
+              const obj4 = { value: applyArgumentsResult.fetchCountryCode(), done: false };
+              return obj4;
+            }
+            const obj5 = v3(dependencyMap[7]);
+          }
+        } else if (arg0 === 1) {
+          v3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          v3 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+        v3 = 3;
+        return { value: "IconComponent", done: null };
+      } catch (tmp8) {
+        v3 = tmp;
+        throw tmp8;
+      }
+    }
+  });
+  applyArgumentsResult.fetchCountryCode = asyncGeneratorStep(async () => {
+    if (c2 === 2) {
+      c2 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c2 = 2;
+        if (0 === dependencyMap) {
+          if (arg0 === 1) {
+            c2 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c2 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            applyArgumentsResult = tmp4;
+            dependencyMap = 1;
+            c2 = 1;
+            const obj6 = { value: applyArgumentsResult(5411).fetchIpCountryCode(), done: false };
+            return obj6;
+          }
+        } else {
+          if (1 === tmp4) {
+            if (arg0 === 1) {
+              c2 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c2 = 3;
+              const obj7 = { value, done: true };
+              return obj7;
+            } else if (null != ipCountryCode.ipCountryCode) {
+              dependencyMap = 2;
+              c2 = 1;
+              const obj8 = { value: applyArgumentsResult(5411).fetchPaymentSources(), done: false };
+              return obj8;
+            }
+          } else if (arg0 === 1) {
+            c2 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c2 = 3;
+            const obj = { value, done: true };
+            return obj;
+          }
+          c2 = 3;
+          return { value: "IconComponent", done: null };
+        }
+      } catch (tmp13) {
+        c2 = tmp;
+        throw tmp13;
+      }
+    }
+  });
+  return applyArgumentsResult;
+}.prototype;
+class prototype extends tmp3 {
 }
-const subscriptionManager = new SubscriptionManager();
+const prototype1 = new prototype();
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/SubscriptionManager.tsx");
 
-export default subscriptionManager;
+export default prototype1;

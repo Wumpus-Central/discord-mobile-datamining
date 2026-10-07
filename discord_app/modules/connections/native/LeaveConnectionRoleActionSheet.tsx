@@ -1,143 +1,119 @@
 // === Module 11202: LeaveConnectionRoleActionSheet ===
 
 // Module 11202 (LeaveConnectionRoleActionSheet)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
-import intl4 from "intl" /* 1126 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import components_Button_Button from "components/Button/Button" /* 5601 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let BottomSheet, onLeaveRolePressed;
-
-let c3;
-let closure_4;
-const View = react_native.View;
-({ jsx: c3, jsxs: closure_4 } = Fragment);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4896);
 let closure_5 = createStyles.createStyles({ container: { padding: 12 }, marginTop: { marginTop: 8 }, button: { marginTop: 8, marginBottom: 16 } });
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onLeaveRolePressed) => {
-  let first;
-  let intl;
-  let items;
-  let obj6;
-  let tmp10;
-  let tmp13;
-  let tmp15;
-  let tmp8;
-  const obj = react2;
-  const cResult = obj.c(14);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/connections/native/LeaveConnectionRoleActionSheet.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((onLeaveRolePressed) => {
+  const cResult = c.c(14);
   onLeaveRolePressed = onLeaveRolePressed.onLeaveRolePressed;
   const tmp4 = closure_5();
-  const container = tmp4.container;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: intl.string(intl4.t.vytvJF) };
-    const Text = Text_Text.Text;
-    intl = intl4.intl;
-    const tmp7 = _false(Text, obj2);
+    const obj2 = { variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+    const intl = util.intl;
+    obj2.children = intl.string(util.t.vytvJF);
+    const tmp7 = React3(Text_Text.Text, obj2);
     cResult[0] = tmp7;
-    first = tmp7;
+    let first = tmp7;
   } else {
     first = cResult[0];
   }
-  const marginTop = tmp4.marginTop;
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl2 = intl4.intl;
-    const stringResult = intl2.string(intl4.t.caJwb5);
+    const intl2 = util.intl;
+    const stringResult = intl2.string(util.t.caJwb5);
     cResult[1] = stringResult;
-    tmp8 = stringResult;
+    let tmp8 = stringResult;
   } else {
     tmp8 = cResult[1];
   }
   if (cResult[2] !== tmp4.marginTop) {
-    const obj3 = { style: marginTop, variant: "text-md/normal", color: "text-default", children: tmp8 };
-    const tmp12 = _false(Text_Text.Text, obj3);
+    const obj3 = { style: tmp4.marginTop, variant: "text-md/normal", color: "text-default", children: tmp8 };
+    const tmp12 = React3(Text_Text.Text, obj3);
     cResult[2] = tmp4.marginTop;
     cResult[3] = tmp12;
-    tmp10 = tmp12;
+    let tmp10 = tmp12;
   } else {
     tmp10 = cResult[3];
   }
-  const button = tmp4.button;
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl3 = intl4.intl;
-    const stringResult1 = intl3.string(intl4.t["+Oi4XF"]);
+    const intl3 = util.intl;
+    const stringResult1 = intl3.string(util.t["+Oi4XF"]);
     cResult[4] = stringResult1;
-    tmp13 = stringResult1;
+    let tmp13 = stringResult1;
   } else {
     tmp13 = cResult[4];
   }
   if (cResult[5] !== onLeaveRolePressed) {
     const obj4 = { variant: "destructive", onPress: onLeaveRolePressed, text: tmp13, grow: true };
-    const tmp17 = _false(components_Button_Button.Button, obj4);
+    const tmp17 = React3(components_Button_Button.Button, obj4);
     cResult[5] = onLeaveRolePressed;
     cResult[6] = tmp17;
-    tmp15 = tmp17;
+    let tmp15 = tmp17;
   } else {
     tmp15 = cResult[6];
   }
   if (cResult[7] === tmp4.button) {
-    let tmp18;
     if (cResult[8] === tmp15) {
-      tmp18 = cResult[9];
+      let tmp18 = cResult[9];
     }
     if (cResult[10] === tmp4.container) {
       if (cResult[11] === tmp10) {
-        let tmp20;
         if (cResult[12] === tmp18) {
-          tmp20 = cResult[13];
+          let tmp20 = cResult[13];
         }
         return tmp20;
       }
     }
-    const obj5 = { children: React3(View, obj6) };
-    obj6 = { style: container, children: items };
-    items = [first, tmp10, tmp18];
-    BottomSheet = Sheet_BottomSheet.BottomSheet;
-    const tmp24 = _false(BottomSheet, obj5);
+    const obj5 = { children: null };
+    const obj6 = { style: tmp4.container, children: null };
+    const items = [first, tmp10, tmp18];
+    obj6.children = items;
+    obj5.children = React4(View, obj6);
+    const tmp24 = React3(Sheet_BottomSheet.BottomSheet, obj5);
     cResult[10] = tmp4.container;
     cResult[11] = tmp10;
     cResult[12] = tmp18;
     cResult[13] = tmp24;
     tmp20 = tmp24;
   }
-  const tmp19 = _false(View, { style: button, children: tmp15 });
+  const tmp19 = React3(View, { style: tmp4.button, children: tmp15 });
   cResult[7] = tmp4.button;
   cResult[8] = tmp15;
   cResult[9] = tmp19;
   tmp18 = tmp19;
 }) : ((onLeaveRolePressed) => {
-  let Button;
-  let intl;
-  let intl2;
-  let intl3;
-  let items;
-  let obj2;
-  let obj6;
-  onLeaveRolePressed = onLeaveRolePressed.onLeaveRolePressed;
   const tmp = closure_5();
-  const obj = { children: React3(View, obj2) };
-  obj2 = { style: tmp.container, children: items };
-  BottomSheet = Sheet_BottomSheet.BottomSheet;
-  const obj3 = { variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: intl.string(intl4.t.vytvJF) };
-  const Text = Text_Text.Text;
-  intl = intl4.intl;
-  items = [_false(Text, obj3), , ];
-  const obj4 = { style: tmp.marginTop, variant: "text-md/normal", color: "text-default", children: intl2.string(intl4.t.caJwb5) };
-  const Text2 = Text_Text.Text;
-  intl2 = intl4.intl;
-  items[1] = _false(Text2, obj4);
-  const obj5 = { style: tmp.button, children: _false(Button, obj6) };
-  obj6 = { variant: "destructive", onPress: onLeaveRolePressed, text: intl3.string(intl4.t["+Oi4XF"]), grow: true };
-  Button = components_Button_Button.Button;
-  intl3 = intl4.intl;
-  items[2] = _false(View, obj5);
-  return _false(BottomSheet, obj);
+  const obj = { children: null };
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = { variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const intl = util.intl;
+  obj3.children = intl.string(util.t.vytvJF);
+  const items = [React3(Text_Text.Text, obj3), , ];
+  const obj4 = { style: tmp.marginTop, variant: "text-md/normal", color: "text-default", children: null };
+  const intl2 = util.intl;
+  obj4.children = intl2.string(util.t.caJwb5);
+  items[1] = React3(Text_Text.Text, obj4);
+  const obj5 = { style: tmp.button, children: null };
+  const obj6 = { variant: "destructive", onPress: onLeaveRolePressed.onLeaveRolePressed, text: null, grow: true };
+  const intl3 = util.intl;
+  obj6.text = intl3.string(util.t["+Oi4XF"]);
+  obj5.children = React3(components_Button_Button.Button, obj6);
+  items[2] = React3(View, obj5);
+  obj2.children = items;
+  obj.children = React4(View, obj2);
+  return React3(Sheet_BottomSheet.BottomSheet, obj);
 });
-const result = size.fileFinishedImporting("modules/connections/native/LeaveConnectionRoleActionSheet.tsx");
-
-export default tmp4;

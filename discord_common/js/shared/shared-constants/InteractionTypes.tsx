@@ -3,10 +3,11 @@
 // Module 5126 (InteractionTypes)
 import size from "module_2" /* 2 */;
 
-const obj = { USER_SENDABLE: new Set([2, 3, 4, 5]), FOLLOWUP: new Set([2, 3, 5]), SILENT: new Set([8, 9, 10]) };
-new Set([2, 3, 4, 5]);
-new Set([2, 3, 5]);
-new Set([8, 9, 10]);
+const obj = { USER_SENDABLE: new Set([2, 3, 4, 5]), FOLLOWUP: null, SILENT: null };
+const set = new Set([2, 3, 4, 5]);
+obj.FOLLOWUP = new Set([2, 3, 5]);
+const set1 = new Set([2, 3, 5]);
+obj.SILENT = new Set([8, 9, 10]);
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/InteractionTypes.tsx");
 
 export const InteractionTypes = { PING: 1, [1]: "PING", APPLICATION_COMMAND: 2, [2]: "APPLICATION_COMMAND", MESSAGE_COMPONENT: 3, [3]: "MESSAGE_COMPONENT", APPLICATION_COMMAND_AUTOCOMPLETE: 4, [4]: "APPLICATION_COMMAND_AUTOCOMPLETE", MODAL_SUBMIT: 5, [5]: "MODAL_SUBMIT", SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY: 6, [6]: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY", APPLICATION_WIDGET_REFRESH: 7, [7]: "APPLICATION_WIDGET_REFRESH", AUTO_MODERATION_CONTENT_CHECK: 8, [8]: "AUTO_MODERATION_CONTENT_CHECK", GAME_ORGANIZATION_FETCH_ORGANIZATION_FOR_USER: 9, [9]: "GAME_ORGANIZATION_FETCH_ORGANIZATION_FOR_USER", GAME_ORGANIZATION_FETCH_ORGANIZATIONS_FOR_USER: 10, [10]: "GAME_ORGANIZATION_FETCH_ORGANIZATIONS_FOR_USER" };

@@ -2,8 +2,8 @@
 
 // Module 5031 (getSoundshareAnalyticsContext)
 import RunningGameStore from "RunningGameStore" /* 2006 */;
-import size from "module_2" /* 2 */;
 
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/utils/getSoundshareAnalyticsContext.tsx");
 
 export default function getSoundshareAnalyticsContext(sourcePid) {
@@ -26,6 +26,7 @@ export default function getSoundshareAnalyticsContext(sourcePid) {
       tmp = id;
       tmp2 = name;
     }
-    return { soundshare_session: sourcePid.soundshareSession, share_game_name: tmp2, share_game_id: tmp };
+    const obj = { soundshare_session: sourcePid.soundshareSession, share_game_name: tmp2, share_game_id: tmp };
+    return obj;
   }
 };

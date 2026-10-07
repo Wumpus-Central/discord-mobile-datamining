@@ -2,41 +2,43 @@
 
 // Module 8324 (IarSettingsUpsellsConfigDmSpamFilter)
 import ChannelTypes from "ChannelTypes" /* 1106 */;
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import MenuTypes from "MenuTypes" /* 8313 */;
 import size from "module_2" /* 2 */;
 
-let items;
-let items1;
 const obj = {
   getTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.vJOqMB);
+    const intl = util.intl;
+    return intl.string(util.t.vJOqMB);
   },
   getDisabledTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["B5ZvY+"]);
+    const intl = util.intl;
+    return intl.string(util.t["B5ZvY+"]);
   },
   getDescription() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["43UEUh"]);
+    const intl = util.intl;
+    return intl.string(util.t["43UEUh"]);
   },
-  eligibleReportSubtypes: items,
-  eligibleChannelTypes: items1,
-  onApply() {
-    const DmSpamFilterV2 = UserSettings.DmSpamFilterV2;
-    return DmSpamFilterV2.updateSetting(preloaded_user_settings.DmSpamFilterV2.NON_FRIENDS);
-  },
-  predicate() {
-    const DmSpamFilterV2 = UserSettings.DmSpamFilterV2;
-    const setting = DmSpamFilterV2.getSetting();
-    return setting === preloaded_user_settings.DmSpamFilterV2.DISABLED;
-  }
+  eligibleReportSubtypes: null,
+  eligibleChannelTypes: null,
+  onApply: null,
+  predicate: null
 };
-items = [MenuTypes.ReportSubType.SUB_SPAM];
-items1 = [ChannelTypes.ChannelTypes.DM, ChannelTypes.ChannelTypes.GROUP_DM];
+const items = [MenuTypes.ReportSubType.SUB_SPAM];
+obj.eligibleReportSubtypes = items;
+const items1 = [ChannelTypes.ChannelTypes.DM, ChannelTypes.ChannelTypes.GROUP_DM];
+obj.eligibleChannelTypes = items1;
+obj.onApply = function onApply() {
+  const DmSpamFilterV2 = UserSettings.DmSpamFilterV2;
+  return DmSpamFilterV2.updateSetting(preloaded_user_settings.DmSpamFilterV2.NON_FRIENDS);
+};
+obj.predicate = function predicate() {
+  const DmSpamFilterV2 = UserSettings.DmSpamFilterV2;
+  const setting = DmSpamFilterV2.getSetting();
+  return setting === preloaded_user_settings.DmSpamFilterV2.DISABLED;
+};
 const result = size.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigDmSpamFilter.tsx");
 
 export default obj;

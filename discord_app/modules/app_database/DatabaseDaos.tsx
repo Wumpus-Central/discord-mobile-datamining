@@ -1,213 +1,363 @@
 // === Module 2078: DatabaseDaos ===
 
 // Module 2078 (DatabaseDaos)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import _mod2079 from "module_2079" /* 2079 */;
 import DatabaseManagerDefault from "DatabaseManager" /* 2095 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import size from "module_2" /* 2 */;
 
-const items = [_mod2079.TableId.KvCache, "guild_basic_channels"];
+let require = fn;
+const items = [fn(2079).TableId.KvCache, "guild_basic_channels"];
 const items1 = [items, ];
-const items2 = [_mod2079.TableId.KvCache, "basic_channels_stale"];
+const items2 = [fn(2079).TableId.KvCache, "basic_channels_stale"];
 items1[1] = items2;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class DatabaseDaos extends Store {
   constructor() {
-    const channels = (arg0) => {
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    closure_0 = applyArgumentsResult;
+    applyArgumentsResult.database = function database(arg0) {
+      id = arg0;
+      if (arg0 == null) {
+        id = id.getId();
+      }
+      return DatabaseManagerDefault.database(id);
+    };
+    closure_129_0 = (database) => {
+      const guildEntityDao = new applyArgumentsResult(2079).GuildEntityDao("guild_channels", applyArgumentsResult(2079).TableId.KvCache, database);
+      return guildEntityDao;
+    };
+    applyArgumentsResult.channels = (arg0) => {
       let databaseResult = arg0;
       if (arg0 == null) {
-        const obj = DatabaseManagerDefault;
-        databaseResult = obj.database(AuthenticationStore.getId());
+        databaseResult = DatabaseManagerDefault.database(AuthenticationStore.getId());
       }
       let tmp5 = null;
       if (null != databaseResult) {
-        tmp5 = f85930(databaseResult);
+        tmp5 = applyArgumentsResult(databaseResult);
       }
       return tmp5;
     };
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    require = applyArgumentsResult;
-    applyArgumentsResult.database = function database(arg0) {
-      let id = arg0;
-      const database = DatabaseManagerDefault.database;
-      DatabaseManagerDefault;
-      if (arg0 == null) {
-        id = AuthenticationStore.getId();
-      }
-      return database(id);
-    };
-    const f85913 = (database) => {
-      const guildEntityDao = new f85913(closure_1_2[1]).GuildEntityDao("guild_channels", f85913(closure_1_2[1]).TableId.KvCache, database);
-      return guildEntityDao;
-    };
-    applyArgumentsResult.channels = channels;
-    const f85914 = (database) => {
-      const guildDao = new f85914(closure_1_2[1]).GuildDao("guild_channels_temp", f85914(closure_1_2[1]).TableId.KvCache, database);
+    closure_130_0 = (database) => {
+      const guildDao = new applyArgumentsResult(2079).GuildDao("guild_channels_temp", applyArgumentsResult(2079).TableId.KvCache, database);
       return guildDao;
     };
-    applyArgumentsResult.channelsTemp = channels;
-    const f85915 = (database) => {
-      const dao = new f85915(closure_1_2[1]).Dao("basic_channels", f85915(closure_1_2[1]).TableId.KvCache, database);
+    applyArgumentsResult.channelsTemp = (arg0) => {
+      let databaseResult = arg0;
+      if (arg0 == null) {
+        databaseResult = DatabaseManagerDefault.database(AuthenticationStore.getId());
+      }
+      let tmp5 = null;
+      if (null != databaseResult) {
+        tmp5 = applyArgumentsResult(databaseResult);
+      }
+      return tmp5;
+    };
+    closure_131_0 = (database) => {
+      const dao = new applyArgumentsResult(2079).Dao("basic_channels", applyArgumentsResult(2079).TableId.KvCache, database);
       return dao;
     };
-    applyArgumentsResult.basicChannels = channels;
-    const f85916 = (database) => {
-      const dao = new f85916(closure_1_2[1]).Dao("basic_channels_synced", f85916(closure_1_2[1]).TableId.KvCache, database);
+    applyArgumentsResult.basicChannels = (arg0) => {
+      let databaseResult = arg0;
+      if (arg0 == null) {
+        databaseResult = DatabaseManagerDefault.database(AuthenticationStore.getId());
+      }
+      let tmp5 = null;
+      if (null != databaseResult) {
+        tmp5 = applyArgumentsResult(databaseResult);
+      }
+      return tmp5;
+    };
+    closure_132_0 = (database) => {
+      const dao = new applyArgumentsResult(2079).Dao("basic_channels_synced", applyArgumentsResult(2079).TableId.KvCache, database);
       return dao;
     };
-    applyArgumentsResult.syncedBasicChannels = channels;
-    const f85917 = (database) => {
-      const dao = new f85917(closure_1_2[1]).Dao("cache", f85917(closure_1_2[1]).TableId.KvCache, database);
+    applyArgumentsResult.syncedBasicChannels = (arg0) => {
+      let databaseResult = arg0;
+      if (arg0 == null) {
+        databaseResult = DatabaseManagerDefault.database(AuthenticationStore.getId());
+      }
+      let tmp5 = null;
+      if (null != databaseResult) {
+        tmp5 = applyArgumentsResult(databaseResult);
+      }
+      return tmp5;
+    };
+    closure_133_0 = (database) => {
+      const dao = new applyArgumentsResult(2079).Dao("cache", applyArgumentsResult(2079).TableId.KvCache, database);
       return dao;
     };
-    applyArgumentsResult.cache = channels;
-    const f85918 = (database) => {
-      const dao = new f85918(closure_1_2[1]).Dao("force_resync_version", f85918(closure_1_2[1]).TableId.KvCache, database);
+    applyArgumentsResult.cache = (arg0) => {
+      let databaseResult = arg0;
+      if (arg0 == null) {
+        databaseResult = DatabaseManagerDefault.database(AuthenticationStore.getId());
+      }
+      let tmp5 = null;
+      if (null != databaseResult) {
+        tmp5 = applyArgumentsResult(databaseResult);
+      }
+      return tmp5;
+    };
+    closure_134_0 = (database) => {
+      const dao = new applyArgumentsResult(2079).Dao("force_resync_version", applyArgumentsResult(2079).TableId.KvCache, database);
       return dao;
     };
-    applyArgumentsResult.forceResyncVersion = channels;
-    const f85919 = (database) => {
-      const guildEntityDao = new f85919(closure_1_2[1]).GuildEntityDao("guild_emojis", f85919(closure_1_2[1]).TableId.KvCache, database);
+    applyArgumentsResult.forceResyncVersion = (arg0) => {
+      let databaseResult = arg0;
+      if (arg0 == null) {
+        databaseResult = DatabaseManagerDefault.database(AuthenticationStore.getId());
+      }
+      let tmp5 = null;
+      if (null != databaseResult) {
+        tmp5 = applyArgumentsResult(databaseResult);
+      }
+      return tmp5;
+    };
+    closure_135_0 = (database) => {
+      const guildEntityDao = new applyArgumentsResult(2079).GuildEntityDao("guild_emojis", applyArgumentsResult(2079).TableId.KvCache, database);
       return guildEntityDao;
     };
-    applyArgumentsResult.emojis = channels;
-    const f85920 = (database) => {
-      const entityDao = new f85920(closure_1_2[1]).EntityDao("guilds", f85920(closure_1_2[1]).TableId.KvCache, database);
+    applyArgumentsResult.emojis = (arg0) => {
+      let databaseResult = arg0;
+      if (arg0 == null) {
+        databaseResult = DatabaseManagerDefault.database(AuthenticationStore.getId());
+      }
+      let tmp5 = null;
+      if (null != databaseResult) {
+        tmp5 = applyArgumentsResult(databaseResult);
+      }
+      return tmp5;
+    };
+    closure_136_0 = (database) => {
+      const entityDao = new applyArgumentsResult(2079).EntityDao("guilds", applyArgumentsResult(2079).TableId.KvCache, database);
       return entityDao;
     };
-    applyArgumentsResult.guilds = channels;
-    const f85921 = (database) => {
-      const entityDao = new f85921(closure_1_2[1]).EntityDao("guilds_requiring_deleted_ids_sync", f85921(closure_1_2[1]).TableId.KvCache, database);
+    applyArgumentsResult.guilds = (arg0) => {
+      let databaseResult = arg0;
+      if (arg0 == null) {
+        databaseResult = DatabaseManagerDefault.database(AuthenticationStore.getId());
+      }
+      let tmp5 = null;
+      if (null != databaseResult) {
+        tmp5 = applyArgumentsResult(databaseResult);
+      }
+      return tmp5;
+    };
+    closure_137_0 = (database) => {
+      const entityDao = new applyArgumentsResult(2079).EntityDao("guilds_requiring_deleted_ids_sync", applyArgumentsResult(2079).TableId.KvCache, database);
       return entityDao;
     };
-    applyArgumentsResult.guildsRequiringDeletedIdsSync = channels;
-    const f85922 = (database) => {
-      const entityDao = new f85922(closure_1_2[1]).EntityDao("guilds_requiring_channel_sync", f85922(closure_1_2[1]).TableId.KvCache, database);
+    applyArgumentsResult.guildsRequiringDeletedIdsSync = (arg0) => {
+      let databaseResult = arg0;
+      if (arg0 == null) {
+        databaseResult = DatabaseManagerDefault.database(AuthenticationStore.getId());
+      }
+      let tmp5 = null;
+      if (null != databaseResult) {
+        tmp5 = applyArgumentsResult(databaseResult);
+      }
+      return tmp5;
+    };
+    closure_138_0 = (database) => {
+      const entityDao = new applyArgumentsResult(2079).EntityDao("guilds_requiring_channel_sync", applyArgumentsResult(2079).TableId.KvCache, database);
       return entityDao;
     };
-    applyArgumentsResult.guildsRequiringChannelSync = channels;
-    const f85923 = (database) => {
-      const messageDao = new f85923(closure_1_2[1]).MessageDao("messages", f85923(closure_1_2[1]).TableId.Messages, database);
+    applyArgumentsResult.guildsRequiringChannelSync = (arg0) => {
+      let databaseResult = arg0;
+      if (arg0 == null) {
+        databaseResult = DatabaseManagerDefault.database(AuthenticationStore.getId());
+      }
+      let tmp5 = null;
+      if (null != databaseResult) {
+        tmp5 = applyArgumentsResult(databaseResult);
+      }
+      return tmp5;
+    };
+    closure_139_0 = (database) => {
+      const messageDao = new applyArgumentsResult(2079).MessageDao("messages", applyArgumentsResult(2079).TableId.Messages, database);
       return messageDao;
     };
-    applyArgumentsResult.messages = channels;
-    const f85924 = (database) => {
-      const guildEntityDao = new f85924(closure_1_2[1]).GuildEntityDao("guild_stickers", f85924(closure_1_2[1]).TableId.KvCache, database);
+    applyArgumentsResult.messages = (arg0) => {
+      let databaseResult = arg0;
+      if (arg0 == null) {
+        databaseResult = DatabaseManagerDefault.database(AuthenticationStore.getId());
+      }
+      let tmp5 = null;
+      if (null != databaseResult) {
+        tmp5 = applyArgumentsResult(databaseResult);
+      }
+      return tmp5;
+    };
+    closure_140_0 = (database) => {
+      const guildEntityDao = new applyArgumentsResult(2079).GuildEntityDao("guild_stickers", applyArgumentsResult(2079).TableId.KvCache, database);
       return guildEntityDao;
     };
-    applyArgumentsResult.stickers = channels;
-    const f85925 = (database) => {
-      const entityDao = new f85925(closure_1_2[1]).EntityDao("guild_versions", f85925(closure_1_2[1]).TableId.KvCache, database);
+    applyArgumentsResult.stickers = (arg0) => {
+      let databaseResult = arg0;
+      if (arg0 == null) {
+        databaseResult = DatabaseManagerDefault.database(AuthenticationStore.getId());
+      }
+      let tmp5 = null;
+      if (null != databaseResult) {
+        tmp5 = applyArgumentsResult(databaseResult);
+      }
+      return tmp5;
+    };
+    closure_141_0 = (database) => {
+      const entityDao = new applyArgumentsResult(2079).EntityDao("guild_versions", applyArgumentsResult(2079).TableId.KvCache, database);
       return entityDao;
     };
-    applyArgumentsResult.guildVersions = channels;
-    const f85926 = (database) => {
-      const entityDao = new f85926(closure_1_2[1]).EntityDao("non_guild_versions", f85926(closure_1_2[1]).TableId.KvCache, database);
+    applyArgumentsResult.guildVersions = (arg0) => {
+      let databaseResult = arg0;
+      if (arg0 == null) {
+        databaseResult = DatabaseManagerDefault.database(AuthenticationStore.getId());
+      }
+      let tmp5 = null;
+      if (null != databaseResult) {
+        tmp5 = applyArgumentsResult(databaseResult);
+      }
+      return tmp5;
+    };
+    closure_142_0 = (database) => {
+      const entityDao = new applyArgumentsResult(2079).EntityDao("non_guild_versions", applyArgumentsResult(2079).TableId.KvCache, database);
       return entityDao;
     };
-    applyArgumentsResult.nonGuildVersions = channels;
-    const f85927 = (database) => {
-      const entityDao = new f85927(closure_1_2[1]).EntityDao("user_settings", f85927(closure_1_2[1]).TableId.KvCache, database);
+    applyArgumentsResult.nonGuildVersions = (arg0) => {
+      let databaseResult = arg0;
+      if (arg0 == null) {
+        databaseResult = DatabaseManagerDefault.database(AuthenticationStore.getId());
+      }
+      let tmp5 = null;
+      if (null != databaseResult) {
+        tmp5 = applyArgumentsResult(databaseResult);
+      }
+      return tmp5;
+    };
+    closure_143_0 = (database) => {
+      const entityDao = new applyArgumentsResult(2079).EntityDao("user_settings", applyArgumentsResult(2079).TableId.KvCache, database);
       return entityDao;
     };
-    applyArgumentsResult.userSettings = channels;
-    const f85928 = (database) => {
-      const dao = new f85928(closure_1_2[1]).Dao("read_states", f85928(closure_1_2[1]).TableId.KvCache, database);
+    applyArgumentsResult.userSettings = (arg0) => {
+      let databaseResult = arg0;
+      if (arg0 == null) {
+        databaseResult = DatabaseManagerDefault.database(AuthenticationStore.getId());
+      }
+      let tmp5 = null;
+      if (null != databaseResult) {
+        tmp5 = applyArgumentsResult(databaseResult);
+      }
+      return tmp5;
+    };
+    closure_144_0 = (database) => {
+      const dao = new applyArgumentsResult(2079).Dao("read_states", applyArgumentsResult(2079).TableId.KvCache, database);
       return dao;
     };
-    applyArgumentsResult.readStates = channels;
-    const f85929 = (database) => {
-      const dao = new f85929(closure_1_2[1]).Dao("user_guild_settings", f85929(closure_1_2[1]).TableId.KvCache, database);
+    applyArgumentsResult.readStates = (arg0) => {
+      let databaseResult = arg0;
+      if (arg0 == null) {
+        databaseResult = DatabaseManagerDefault.database(AuthenticationStore.getId());
+      }
+      let tmp5 = null;
+      if (null != databaseResult) {
+        tmp5 = applyArgumentsResult(databaseResult);
+      }
+      return tmp5;
+    };
+    closure_145_0 = (database) => {
+      const dao = new applyArgumentsResult(2079).Dao("user_guild_settings", applyArgumentsResult(2079).TableId.KvCache, database);
       return dao;
     };
-    applyArgumentsResult.userGuildSettings = channels;
-    const f85930 = (database) => {
-      const entityDao = new f85930(closure_1_2[1]).EntityDao("user_search_items", f85930(closure_1_2[1]).TableId.KvCache, database);
+    applyArgumentsResult.userGuildSettings = (arg0) => {
+      let databaseResult = arg0;
+      if (arg0 == null) {
+        databaseResult = DatabaseManagerDefault.database(AuthenticationStore.getId());
+      }
+      let tmp5 = null;
+      if (null != databaseResult) {
+        tmp5 = applyArgumentsResult(databaseResult);
+      }
+      return tmp5;
+    };
+    closure_146_0 = (database) => {
+      const entityDao = new applyArgumentsResult(2079).EntityDao("user_search_items", applyArgumentsResult(2079).TableId.KvCache, database);
       return entityDao;
     };
-    applyArgumentsResult.userSearchItems = channels;
+    applyArgumentsResult.userSearchItems = (arg0) => {
+      let databaseResult = arg0;
+      if (arg0 == null) {
+        databaseResult = DatabaseManagerDefault.database(AuthenticationStore.getId());
+      }
+      let tmp5 = null;
+      if (null != databaseResult) {
+        tmp5 = applyArgumentsResult(databaseResult);
+      }
+      return tmp5;
+    };
     applyArgumentsResult.channelsTransaction = function channelsTransaction(database) {
-      const channelsResult = require.channels(database.database);
-      return channelsResult.upgradeTransaction(database);
+      return applyArgumentsResult.channels(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.channelsTempTransaction = function channelsTempTransaction(database) {
-      const channelsTempResult = require.channelsTemp(database.database);
-      return channelsTempResult.upgradeTransaction(database);
+      return applyArgumentsResult.channelsTemp(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.basicChannelsTransaction = function basicChannelsTransaction(database) {
-      const basicChannelsResult = require.basicChannels(database.database);
-      return basicChannelsResult.upgradeTransaction(database);
+      return applyArgumentsResult.basicChannels(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.syncedBasicChannelsTransaction = function syncedBasicChannelsTransaction(database) {
-      const syncedBasicChannelsResult = require.syncedBasicChannels(database.database);
-      return syncedBasicChannelsResult.upgradeTransaction(database);
+      return applyArgumentsResult.syncedBasicChannels(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.cacheTransaction = function cacheTransaction(database) {
-      const cacheResult = require.cache(database.database);
-      return cacheResult.upgradeTransaction(database);
+      return applyArgumentsResult.cache(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.forceResyncVersionTransaction = function forceResyncVersionTransaction(database) {
-      const forceResyncVersionResult = require.forceResyncVersion(database.database);
-      return forceResyncVersionResult.upgradeTransaction(database);
+      return applyArgumentsResult.forceResyncVersion(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.emojisTransaction = function emojisTransaction(database) {
-      const emojisResult = require.emojis(database.database);
-      return emojisResult.upgradeTransaction(database);
+      return applyArgumentsResult.emojis(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.guildsTransaction = function guildsTransaction(database) {
-      const guildsResult = require.guilds(database.database);
-      return guildsResult.upgradeTransaction(database);
+      return applyArgumentsResult.guilds(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.messagesTransaction = function messagesTransaction(database) {
-      const messagesResult = require.messages(database.database);
-      return messagesResult.upgradeTransaction(database);
+      return applyArgumentsResult.messages(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.stickersTransaction = function stickersTransaction(database) {
-      const stickersResult = require.stickers(database.database);
-      return stickersResult.upgradeTransaction(database);
+      return applyArgumentsResult.stickers(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.guildVersionsTransaction = function guildVersionsTransaction(database) {
-      const guildVersionsResult = require.guildVersions(database.database);
-      return guildVersionsResult.upgradeTransaction(database);
+      return applyArgumentsResult.guildVersions(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.nonGuildVersionsTransaction = function nonGuildVersionsTransaction(database) {
-      const nonGuildVersionsResult = require.nonGuildVersions(database.database);
-      return nonGuildVersionsResult.upgradeTransaction(database);
+      return applyArgumentsResult.nonGuildVersions(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.userSettingsTransaction = function userSettingsTransaction(database) {
-      const userSettingsResult = require.userSettings(database.database);
-      return userSettingsResult.upgradeTransaction(database);
+      return applyArgumentsResult.userSettings(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.readStatesTransaction = function readStatesTransaction(database) {
-      const states = require.readStates(database.database);
+      const states = applyArgumentsResult.readStates(database.database);
       return states.upgradeTransaction(database);
     };
     applyArgumentsResult.userGuildSettingsTransaction = function userGuildSettingsTransaction(database) {
-      const userGuildSettingsResult = require.userGuildSettings(database.database);
-      return userGuildSettingsResult.upgradeTransaction(database);
+      return applyArgumentsResult.userGuildSettings(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.guildsRequiringDeletedIdsSyncTransaction = function guildsRequiringDeletedIdsSyncTransaction(database) {
-      const result = require.guildsRequiringDeletedIdsSync(database.database);
+      const result = applyArgumentsResult.guildsRequiringDeletedIdsSync(database.database);
       return result.upgradeTransaction(database);
     };
     applyArgumentsResult.guildsRequiringChannelSyncTransaction = function guildsRequiringChannelSyncTransaction(database) {
-      const result = require.guildsRequiringChannelSync(database.database);
+      const result = applyArgumentsResult.guildsRequiringChannelSync(database.database);
       return result.upgradeTransaction(database);
     };
     applyArgumentsResult.userSearchItemsTransaction = function userSearchItemsTransaction(database) {
-      const userSearchItemsResult = require.userSearchItems(database.database);
-      return userSearchItemsResult.upgradeTransaction(database);
+      return applyArgumentsResult.userSearchItems(database.database).upgradeTransaction(database);
     };
     return applyArgumentsResult;
   }
-  initialize() {
-    this.waitFor(AuthenticationStore);
-  }
 }
-const prototype = DatabaseDaos.prototype;
+DatabaseDaos.prototype["initialize"] = function initialize() {
+  this.waitFor(AuthenticationStore);
+};
 const databaseDaos = new DatabaseDaos(DispatcherDefault, {});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_database/DatabaseDaos.tsx");
 
 export default databaseDaos;

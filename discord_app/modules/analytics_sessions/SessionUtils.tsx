@@ -2,16 +2,15 @@
 
 // Module 6993 (SessionUtils)
 import DurationsDefault from "Durations" /* 1102 */;
-import size from "module_2" /* 2 */;
 
 const result = 30 * DurationsDefault.Millis.MINUTE;
-const _window = result;
+const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/analytics_sessions/SessionUtils.tsx");
 
 export const SESSION_IDLE_TIMEOUT_MILLIS = result;
 export const CLIENT_SESSION_STORAGE_VERSION = 1;
 export const isSessionExpired = function isSessionExpired(lastUsedTimestamp) {
-  const sum = _window + lastUsedTimestamp.lastUsedTimestamp;
+  const sum = result + lastUsedTimestamp.lastUsedTimestamp;
   return sum - Date.now() <= 0;
 };
 export const timestampOrZero = function timestampOrZero(arg0) {

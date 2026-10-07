@@ -12,12 +12,10 @@ export { DETECTABLE_GAME_TO_APPLICATION_ID_MAP };
 export const getGameIdsForDetectedGames = function getGameIdsForDetectedGames(arg0) {
   const entries = Object.entries(arg0);
   const found = entries.filter((item) => {
-    let tmp;
     [, tmp] = item;
     return tmp;
   });
   const mapped = found.map((item) => {
-    let tmp;
     [tmp, ] = item;
     return DETECTABLE_GAME_TO_APPLICATION_ID_MAP[tmp];
   });

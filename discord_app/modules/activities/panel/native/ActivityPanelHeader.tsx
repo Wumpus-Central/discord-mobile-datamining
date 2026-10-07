@@ -1,14 +1,11 @@
 // === Module 17206: ActivityPanelHeader ===
 
 // Module 17206 (ActivityPanelHeader)
-import get_initialized from "get initialized" /* 504 */;
-import react2 from "react" /* 576 */;
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1096 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import native from "native" /* 4595 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6670 */;
 import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17197 */;
 import BlurVisualEffectViewDefault from "BlurVisualEffectView" /* 17207 */;
@@ -16,51 +13,39 @@ import InviteActivityButtonDefault from "InviteActivityButton" /* 17208 */;
 import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 17212 */;
 import QuestActivityButtonDefault from "QuestActivityButton" /* 17213 */;
 import LeaveActivityButtonDefault from "LeaveActivityButton" /* 17218 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 9001 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
 
-let context, dependencyMap;
-
-let StyleSheet;
-let c10;
-let c9;
-let closure_12;
-let hasOwnProperty;
-let map1;
-let metroImportAll;
-let obj2;
-let obj4;
-let size;
-({ View: hasOwnProperty, StyleSheet } = react_native);
-({ ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT: metroImportAll, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: c9, ActivityPanelModes: c10 } = ActivityPanelConstants);
-const ThemeTypes = Constants.ThemeTypes;
-({ jsx: closure_12, jsxs: map1 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { panelHeader: obj2, panelLandscape: { flexDirection: "column-reverse" }, headerContainer: { position: "absolute", top: 0 }, pullIndicator: size };
-obj2 = { justifyContent: "space-between", alignItems: "center", flexDirection: "row", gap: 8 };
-createStyles = createStyles.createStyles;
+const native = GestureDetector(4595);
+const LegacyBaseButton = GestureDetector(6147);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
+const ActivityPanelConstants = fn(9001);
+({ ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT: closure_8, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_9, ActivityPanelModes: c10 } = ActivityPanelConstants);
+const ThemeTypes = fn(1096).ThemeTypes;
+const jsxProd = fn(21);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
+let createStyles = fn(4896);
+let obj = { panelHeader: null, panelLandscape: null, headerContainer: null, pullIndicator: null };
+let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-size = { backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.sm, width: 32, height: 4, alignSelf: "center", marginTop: 4, opacity: 0.3 };
-let closure_14 = createStyles(obj);
+obj3.justifyContent = "space-between";
+obj3.alignItems = "center";
+obj3.flexDirection = "row";
+obj3.gap = 8;
+obj.panelHeader = obj3;
+obj.panelLandscape = { flexDirection: "column-reverse" };
+obj.headerContainer = { position: "absolute", top: 0 };
+let size = { backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.sm, width: 32, height: 4, alignSelf: "center", marginTop: 4, opacity: 0.3 };
+obj.pullIndicator = size;
+let closure_14 = createStyles.createStyles(obj);
 const __initData = { code: "function ActivityPanelHeaderTsx1(){const{runOnJS,setMode,ActivityPanelModes}=this.__closure;runOnJS(setMode)(ActivityPanelModes.PIP);}" };
 const __initData2 = { code: "function ActivityPanelHeaderTsx2(){const{runOnJS,setMode,ActivityPanelModes}=this.__closure;runOnJS(setMode)(ActivityPanelModes.PIP);}" };
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let landscape;
-  let panelLandscape;
-  let pipState;
-  let setMode;
-  let tmp6;
-  let wrapperOffset;
-  let obj = setMode(576);
-  const cResult = obj.c(24);
+let ReactCompilerGating = fn(558);
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = setMode(576).c(24);
   ({ landscape, setMode } = arg0);
   ({ wrapperOffset, pipState } = arg0);
   const tmp4 = closure_14();
@@ -73,7 +58,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj2 = { borderTopStartRadius: num, borderTopEndRadius: num };
     cResult[0] = num;
     cResult[1] = obj2;
-    tmp6 = obj2;
+    let tmp6 = obj2;
   } else {
     tmp6 = cResult[1];
   }
@@ -87,7 +72,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     num5 = 24;
   }
   if (landscape) {
-    panelLandscape = tmp4.panelLandscape;
+    const panelLandscape = tmp4.panelLandscape;
   }
   let num6 = 8;
   if (landscape) {
@@ -104,9 +89,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (cResult[4] === num5) {
     if (cResult[5] === num6) {
       if (cResult[6] === num7) {
-        let tmp9;
         if (cResult[7] === num8) {
-          tmp9 = cResult[8];
+          let tmp9 = cResult[8];
         }
         if (cResult[9] === tmp4.panelHeader) {
           if (cResult[10] === panelLandscape) {
@@ -118,12 +102,12 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   return;
                 }
               }
-              T.__closure = { runOnJS: setMode(4618).runOnJS, setMode, ActivityPanelModes };
+              const obj3 = { runOnJS: setMode(4618).runOnJS, setMode, ActivityPanelModes };
+              T.__closure = obj3;
               T.__workletHash = 14504167937928;
               T.__initData = __initData;
               cResult[13] = setMode;
               cResult[14] = T;
-              const obj3 = { runOnJS: setMode(4618).runOnJS, setMode, ActivityPanelModes };
             } else {
               class T {
                 constructor() {
@@ -142,11 +126,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 }
               }
             }
+            const obj4 = { mode: setMode(17203).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: T, disableHorizontalSafeAreas: true };
             cResult[15] = T;
             cResult[16] = pipState;
             cResult[17] = wrapperOffset;
-            cResult[18] = { mode: setMode(17203).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: T, disableHorizontalSafeAreas: true };
-            const obj4 = { mode: setMode(17203).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: T, disableHorizontalSafeAreas: true };
+            cResult[18] = obj4;
           }
         }
         const items1 = [tmp4.panelHeader, panelLandscape, tmp9];
@@ -164,23 +148,19 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[7] = num8;
   cResult[8] = obj5;
   tmp9 = obj5;
+  const obj = setMode(576);
 }) : ((landscape) => {
-  let closure_2;
-  let obj3;
-  let pipState;
-  let tmp6;
-  let wrapperOffset;
   landscape = landscape.landscape;
   const setMode = landscape.setMode;
   ({ wrapperOffset, pipState } = landscape);
   const tmp = closure_14();
   dependencyMap = tmp;
   const tmp2 = setMode(1618)();
-  let closure_3 = tmp2;
+  closure_3 = tmp2;
   let items = [landscape];
   const items1 = [landscape, tmp2, , ];
   ({ panelHeader: arr2[2], panelLandscape: arr2[3] } = tmp);
-  const memo = react.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let num = 0;
     if (!landscape) {
       num = nativeDefault.radii.lg;
@@ -189,14 +169,10 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return items;
   }, items);
   const fn = function c() {
-    const obj = ReanimatedRexport;
-    obj.runOnJS(setMode)(constants.PIP);
+    ReanimatedRexport.runOnJS(setMode)(ActivityPanelModes.PIP);
   };
-  let obj = { runOnJS: landscape(4618).runOnJS, setMode, ActivityPanelModes };
-  const memo1 = react.useMemo(() => {
-    let num2;
-    let num3;
-    let num4;
+  let obj = { runOnJS: null, setMode: null, ActivityPanelModes: null };
+  const memo1 = noop.useMemo(() => {
     let num = 8;
     if (landscape) {
       num = 24;
@@ -207,185 +183,153 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       panelLandscape = closure_2.panelLandscape;
     }
     items[1] = panelLandscape;
-    const obj = { paddingTop: num, paddingBottom: num2, paddingLeft: num4, paddingRight: num3 };
-    num2 = 8;
+    const obj = { paddingTop: num, paddingBottom: null, paddingLeft: null, paddingRight: null };
+    let num2 = 8;
     if (landscape) {
       num2 = 24;
     }
-    num3 = 16;
-    num4 = 16;
+    obj.paddingBottom = num2;
+    let num3 = 16;
+    let num4 = 16;
     if (!landscape) {
       num4 = 8 + closure_3.left;
     }
+    obj.paddingLeft = num4;
     if (!landscape) {
       num3 = 8 + closure_3.right;
     }
+    obj.paddingRight = num3;
     items[2] = obj;
     return items;
   }, items1);
-  const useCallback = react.useCallback;
+  obj.runOnJS = landscape(4618).runOnJS;
+  obj.setMode = setMode;
+  obj.ActivityPanelModes = ActivityPanelModes;
   fn.__closure = obj;
   fn.__workletHash = 2822287991787;
   fn.__initData = __initData2;
   const items2 = [setMode];
-  const obj2 = { gesture: tmp6(obj3), headerWrapperStyles: memo, headerStyles: memo1, styles: tmp };
-  const callback = useCallback(fn, items2);
-  obj3 = { mode: landscape(17203).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: callback, disableHorizontalSafeAreas: true };
-  tmp6 = setMode(17203);
+  const obj2 = { gesture: null, headerWrapperStyles: null, headerStyles: null, styles: null };
+  const callback = noop.useCallback(fn, items2);
+  const obj3 = { mode: landscape(17203).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: callback, disableHorizontalSafeAreas: true };
+  obj2.gesture = setMode(17203)(obj3);
+  obj2.headerWrapperStyles = memo;
+  obj2.headerStyles = memo1;
+  obj2.styles = tmp;
   return obj2;
 });
-let closure_17 = tmp7;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((hasConnectedActivity) => {
-  let children;
-  let gesture;
-  let headerStyles;
-  let headerWrapperStyles;
-  let items;
-  let landscape;
-  let obj3;
-  const obj = react2;
-  const cResult = obj.c(14);
+let closure_17 = tmp6;
+ReactCompilerGating = fn(558);
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((hasConnectedActivity) => {
+  let GestureDetector = require;
+  let tmp = dependencyMap;
+  const cResult = c.c(14);
   ({ children, gesture, headerWrapperStyles, headerStyles, landscape } = hasConnectedActivity);
-  hasConnectedActivity = hasConnectedActivity.hasConnectedActivity;
-  const tmp4 = closure_14();
-  let tmp5 = null;
-  if (hasConnectedActivity) {
-    let first;
+  const tmp3 = closure_14();
+  if (!hasConnectedActivity.hasConnectedActivity) {
+    return null;
+  } else {
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp10 = closure_12(BlurVisualEffectViewDefault, {});
-      cResult[0] = tmp10;
-      first = tmp10;
+      const tmp8 = __initData(BlurVisualEffectViewDefault, {});
+      cResult[0] = tmp8;
+      let first = tmp8;
     } else {
       first = cResult[0];
     }
     if (cResult[1] === landscape) {
-      let tmp11;
-      if (cResult[2] === tmp4) {
-        tmp11 = cResult[3];
+      if (cResult[2] === tmp3) {
+        let tmp9 = cResult[3];
       }
       if (cResult[4] === children) {
-        let tmp15;
         if (cResult[5] === headerStyles) {
-          tmp15 = cResult[6];
+          let tmp13 = cResult[6];
         }
         if (cResult[7] === headerWrapperStyles) {
-          if (cResult[8] === tmp11) {
-            let tmp19;
-            if (cResult[9] === tmp15) {
-              tmp19 = cResult[10];
+          if (cResult[8] === tmp9) {
+            if (cResult[9] === tmp13) {
+              let tmp17 = cResult[10];
             }
             if (cResult[11] === gesture) {
-              let tmp23;
-              if (cResult[12] === tmp19) {
-                tmp23 = cResult[13];
-              }
-              tmp5 = tmp23;
             }
-            const obj2 = { theme: ThemeTypes.DARK, children: closure_12(LegacyBaseButton.GestureDetector, obj3) };
-            const ThemeContextProvider = native.ThemeContextProvider;
-            obj3 = { gesture, children: tmp19 };
-            const tmp26 = closure_12(ThemeContextProvider, obj2);
+            const obj2 = { theme: ThemeTypes.DARK, children: null };
+            GestureDetector = LegacyBaseButton.GestureDetector;
+            const obj3 = { gesture, children: tmp17 };
+            tmp = __initData(GestureDetector, obj3);
+            obj2.children = tmp;
+            const tmp24 = __initData(native.ThemeContextProvider, obj2);
             cResult[11] = gesture;
-            cResult[12] = tmp19;
-            cResult[13] = tmp26;
-            tmp23 = tmp26;
+            cResult[12] = tmp17;
+            cResult[13] = tmp24;
           }
         }
-        const obj4 = { style: headerWrapperStyles, children: items };
-        items = [first, tmp11, tmp15];
-        const tmp22 = map1(hasOwnProperty, obj4);
+        const obj4 = { style: headerWrapperStyles, children: null };
+        const items = [first, tmp9, tmp13];
+        obj4.children = items;
+        const tmp20 = __initData2(hasOwnProperty, obj4);
         cResult[7] = headerWrapperStyles;
-        cResult[8] = tmp11;
-        cResult[9] = tmp15;
-        cResult[10] = tmp22;
-        tmp19 = tmp22;
+        cResult[8] = tmp9;
+        cResult[9] = tmp13;
+        cResult[10] = tmp20;
+        tmp17 = tmp20;
       }
       const obj5 = { style: headerStyles, children };
-      const tmp18 = closure_12(hasOwnProperty, obj5);
+      const tmp16 = __initData(hasOwnProperty, obj5);
       cResult[4] = children;
       cResult[5] = headerStyles;
-      cResult[6] = tmp18;
-      tmp15 = tmp18;
+      cResult[6] = tmp16;
+      tmp13 = tmp16;
     }
-    let tmp12 = !landscape;
-    if (tmp12) {
-      const obj6 = { style: tmp4.pullIndicator };
-      tmp12 = closure_12(hasOwnProperty, obj6);
+    let tmp10 = !landscape;
+    if (!landscape) {
+      const obj6 = { style: tmp3.pullIndicator };
+      tmp10 = __initData(hasOwnProperty, obj6);
     }
     cResult[1] = landscape;
-    cResult[2] = tmp4;
-    cResult[3] = tmp12;
-    tmp11 = tmp12;
+    cResult[2] = tmp3;
+    cResult[3] = tmp10;
+    tmp9 = tmp10;
   }
-  return tmp5;
 }) : ((landscape) => {
-  let GestureDetector;
-  let children;
-  let gesture;
-  let hasConnectedActivity;
-  let headerStyles;
-  let headerWrapperStyles;
-  let items;
-  let obj2;
-  let obj3;
   landscape = landscape.landscape;
   ({ children, hasConnectedActivity, gesture, headerWrapperStyles, headerStyles } = landscape);
   let tmp3Result2 = null;
   if (hasConnectedActivity) {
-    const obj = { theme: ThemeTypes.DARK, children: closure_12(GestureDetector, obj2) };
-    const ThemeContextProvider = native.ThemeContextProvider;
-    obj2 = { gesture, children: map1(hasOwnProperty, obj3) };
-    obj3 = { style: headerWrapperStyles, children: items };
-    GestureDetector = LegacyBaseButton.GestureDetector;
-    items = [closure_12(BlurVisualEffectViewDefault, {}), , ];
+    const obj = { theme: ThemeTypes.DARK, children: null };
+    const obj2 = { gesture, children: null };
+    const obj3 = { style: headerWrapperStyles, children: null };
+    const items = [__initData(BlurVisualEffectViewDefault, {}), , ];
     let tmp3Result = !landscape;
-    if (tmp3Result) {
+    if (!landscape) {
       const obj4 = { style: tmp.pullIndicator };
-      tmp3Result = closure_12(hasOwnProperty, obj4);
+      tmp3Result = __initData(hasOwnProperty, obj4);
     }
     items[1] = tmp3Result;
     const obj5 = { style: headerStyles, children };
-    items[2] = closure_12(hasOwnProperty, obj5);
-    tmp3Result2 = closure_12(ThemeContextProvider, obj);
+    items[2] = __initData(hasOwnProperty, obj5);
+    obj3.children = items;
+    obj2.children = __initData2(hasOwnProperty, obj3);
+    obj.children = __initData(LegacyBaseButton.GestureDetector, obj2);
+    tmp3Result2 = __initData(native.ThemeContextProvider, obj);
   }
   return tmp3Result2;
 });
-let closure_18 = tmp8;
-createStyles = createStyles_mod;
-let obj3 = { buttonContainer: obj4, buttonContainerLandscape: { flexDirection: "column-reverse" } };
-obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexShrink: 1 };
-const styles = createStyles.createStyles(obj3);
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_20 = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let gesture;
-  let headerStyles;
-  let headerWrapperStyles;
-  let items3;
-  let items4;
-  let landscape;
-  let pipState;
-  let setMode;
-  let wrapperOffset;
-  const obj = react2;
-  const cResult = obj.c(37);
+let closure_18 = tmp7;
+createStyles = fn(4896);
+let obj4 = { buttonContainer: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexShrink: 1 }, buttonContainerLandscape: { flexDirection: "column-reverse" } };
+const styles = createStyles.createStyles(obj4);
+ReactCompilerGating = fn(558);
+let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(37);
   ({ landscape, setMode, pipState, wrapperOffset } = arg0);
   if (cResult[0] === landscape) {
     if (cResult[1] === pipState) {
       if (cResult[2] === setMode) {
-        let tmp4;
-        let tmp10;
-        let tmp9;
-        let tmp8;
-        let tmp15;
-        let tmp22;
         if (cResult[3] === wrapperOffset) {
-          tmp4 = cResult[4];
+          let tmp4 = cResult[4];
         }
         ({ gesture, headerWrapperStyles, headerStyles } = closure_17(tmp4));
         const _Symbol = Symbol;
-        closure_17(tmp4);
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [EmbeddedActivitiesStore];
           const fn = function y() {
@@ -395,16 +339,16 @@ let closure_20 = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg
           cResult[5] = items;
           cResult[6] = fn;
           cResult[7] = items1;
-          tmp10 = items1;
-          tmp9 = fn;
-          tmp8 = items;
+          let tmp10 = items1;
+          let tmp9 = fn;
+          let tmp8 = items;
         } else {
           tmp8 = cResult[5];
           tmp9 = cResult[6];
           tmp10 = cResult[7];
         }
-        const tmpResult = get_initialized;
-        const stateFromStores = tmpResult.useStateFromStores(tmp8, tmp9, tmp10);
+        const tmp6 = closure_17(tmp4);
+        const stateFromStores = initialize.useStateFromStores(tmp8, tmp9, tmp10);
         let applicationId;
         if (stateFromStores != null) {
           applicationId = stateFromStores.applicationId;
@@ -413,7 +357,7 @@ let closure_20 = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg
           const items2 = [applicationId];
           cResult[8] = applicationId;
           cResult[9] = items2;
-          tmp15 = items2;
+          let tmp15 = items2;
         } else {
           tmp15 = cResult[9];
         }
@@ -425,10 +369,10 @@ let closure_20 = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg
         }
         if (cResult[10] !== id) {
           const obj2 = { applicationId: id };
-          const tmp24 = closure_12(InviteActivityButtonDefault, obj2);
+          const tmp24 = __initData(InviteActivityButtonDefault, obj2);
           cResult[10] = id;
           cResult[11] = tmp24;
-          tmp22 = tmp24;
+          let tmp22 = tmp24;
         } else {
           tmp22 = cResult[11];
         }
@@ -437,9 +381,8 @@ let closure_20 = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg
           prop = tmp20.buttonContainerLandscape;
         }
         if (cResult[12] === tmp20.buttonContainer) {
-          let tmp27;
           if (cResult[13] === prop) {
-            tmp27 = cResult[14];
+            let tmp27 = cResult[14];
           }
           let tmp28;
           if (!landscape) {
@@ -450,20 +393,18 @@ let closure_20 = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg
             tmp28 = name;
           }
           if (cResult[15] === setMode) {
-            let tmp30;
-            let tmp33;
             if (cResult[16] === tmp28) {
-              tmp30 = cResult[17];
+              let tmp30 = cResult[17];
             }
             if (cResult[18] !== applicationId) {
               let tmp34 = null != applicationId;
               if (tmp34) {
                 const obj3 = { applicationId };
-                tmp34 = closure_12(QuestActivityButtonDefault, obj3);
+                tmp34 = __initData(QuestActivityButtonDefault, obj3);
               }
               cResult[18] = applicationId;
               cResult[19] = tmp34;
-              tmp33 = tmp34;
+              let tmp33 = tmp34;
             } else {
               tmp33 = cResult[19];
             }
@@ -474,18 +415,16 @@ let closure_20 = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg
             if (cResult[20] === tmp27) {
               if (cResult[21] === tmp30) {
                 if (cResult[22] === tmp33) {
-                  let tmp37;
                   if (cResult[23] === tmp36) {
-                    tmp37 = cResult[24];
+                    let tmp37 = cResult[24];
                   }
                   let tmp41 = null;
                   if (!landscape) {
                     tmp41 = tmp22;
                   }
                   if (cResult[25] === setMode) {
-                    let tmp43;
-                    if (cResult[26] === stateFromStores) {
-                      tmp43 = cResult[27];
+                    if (cResult[26] === tmp42) {
+                      let tmp43 = cResult[27];
                     }
                     if (cResult[28] === gesture) {
                       if (cResult[29] === headerStyles) {
@@ -494,9 +433,8 @@ let closure_20 = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg
                             if (cResult[32] === tmp37) {
                               if (cResult[33] === tmp41) {
                                 if (cResult[34] === tmp43) {
-                                  let tmp46;
-                                  if (cResult[35] === null != stateFromStores) {
-                                    tmp46 = cResult[36];
+                                  if (cResult[35] === tmp25) {
+                                    let tmp46 = cResult[36];
                                   }
                                   return tmp46;
                                 }
@@ -506,9 +444,10 @@ let closure_20 = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg
                         }
                       }
                     }
-                    const obj4 = { hasConnectedActivity: null != stateFromStores, gesture, headerWrapperStyles, headerStyles, landscape, children: items3 };
-                    items3 = [tmp37, tmp41, tmp43];
-                    const tmp49 = map1(closure_18, obj4);
+                    const obj4 = { hasConnectedActivity: tmp25, gesture, headerWrapperStyles, headerStyles, landscape, children: null };
+                    const items3 = [tmp37, tmp41, tmp43];
+                    obj4.children = items3;
+                    const tmp49 = __initData2(closure_18, obj4);
                     cResult[28] = gesture;
                     cResult[29] = headerStyles;
                     cResult[30] = headerWrapperStyles;
@@ -516,12 +455,12 @@ let closure_20 = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg
                     cResult[32] = tmp37;
                     cResult[33] = tmp41;
                     cResult[34] = tmp43;
-                    cResult[35] = null != stateFromStores;
+                    cResult[35] = tmp25;
                     cResult[36] = tmp49;
                     tmp46 = tmp49;
                   }
                   const obj5 = { selfEmbeddedActivity: stateFromStores, setMode };
-                  const tmp45 = closure_12(LeaveActivityButtonDefault, obj5);
+                  const tmp45 = __initData(LeaveActivityButtonDefault, obj5);
                   cResult[25] = setMode;
                   cResult[26] = stateFromStores;
                   cResult[27] = tmp45;
@@ -529,9 +468,10 @@ let closure_20 = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg
                 }
               }
             }
-            const obj6 = { style: tmp27, children: items4 };
-            items4 = [tmp30, tmp33, tmp36];
-            const tmp40 = map1(hasOwnProperty, obj6);
+            const obj6 = { style: tmp27, children: null };
+            const items4 = [tmp30, tmp33, tmp36];
+            obj6.children = items4;
+            const tmp40 = __initData2(hasOwnProperty, obj6);
             cResult[20] = tmp27;
             cResult[21] = tmp30;
             cResult[22] = tmp33;
@@ -540,7 +480,7 @@ let closure_20 = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg
             tmp37 = tmp40;
           }
           const obj7 = { activityName: tmp28, setMode };
-          const tmp32 = closure_12(MinimizeActivityButtonDefault, obj7);
+          const tmp32 = __initData(MinimizeActivityButtonDefault, obj7);
           cResult[15] = setMode;
           cResult[16] = tmp28;
           cResult[17] = tmp32;
@@ -551,6 +491,7 @@ let closure_20 = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg
         cResult[13] = prop;
         cResult[14] = items5;
         tmp27 = items5;
+        const tmpResult = initialize;
       }
     }
   }
@@ -562,20 +503,12 @@ let closure_20 = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg
   cResult[4] = obj8;
   tmp4 = obj8;
 }) : ((wrapperOffset) => {
-  let gesture;
-  let headerStyles;
-  let headerWrapperStyles;
-  let items3;
-  let items4;
-  let landscape;
-  let setMode;
   ({ landscape, setMode } = wrapperOffset);
+  ({ gesture, headerWrapperStyles, headerStyles } = closure_17({ landscape, setMode, wrapperOffset: wrapperOffset.wrapperOffset, pipState: wrapperOffset.pipState }));
   const obj = { landscape, setMode, wrapperOffset: wrapperOffset.wrapperOffset, pipState: wrapperOffset.pipState };
-  ({ gesture, headerWrapperStyles, headerStyles } = closure_17(obj));
-  closure_17(obj);
+  const tmp = closure_17({ landscape, setMode, wrapperOffset: wrapperOffset.wrapperOffset, pipState: wrapperOffset.pipState });
   const items = [EmbeddedActivitiesStore];
-  const obj2 = get_initialized;
-  const stateFromStores = obj2.useStateFromStores(items, () => EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(EmbeddedActivitiesStore.getConnectedActivityLocation()), []);
+  const stateFromStores = initialize.useStateFromStores(items, () => EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(EmbeddedActivitiesStore.getConnectedActivityLocation()), []);
   let applicationId;
   if (stateFromStores != null) {
     applicationId = stateFromStores.applicationId;
@@ -584,21 +517,19 @@ let closure_20 = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg
   const first = _slicedToArray(useGetOrFetchApplicationsDefault(items1), 1)[0];
   const tmp7 = styles();
   let id;
-  const tmp9 = InviteActivityButtonDefault;
   if (first != null) {
     id = first.id;
   }
-  const tmp8Result = closure_12(tmp9, { applicationId: id });
+  const tmp8Result = __initData(InviteActivityButtonDefault, { applicationId: id });
+  const obj3 = { hasConnectedActivity: null != stateFromStores, gesture, headerWrapperStyles, headerStyles, landscape, children: null };
   const items2 = [tmp7.buttonContainer, ];
   let prop;
-  const obj3 = { hasConnectedActivity: null != stateFromStores, gesture, headerWrapperStyles, headerStyles, landscape, children: items4 };
   if (landscape) {
     prop = tmp7.buttonContainerLandscape;
   }
-  const obj4 = { style: items2, children: items3 };
+  const obj4 = { style: items2, children: null };
   items2[1] = prop;
   let tmp17;
-  const tmp5Result = MinimizeActivityButtonDefault;
   if (!landscape) {
     let name;
     if (first != null) {
@@ -606,11 +537,11 @@ let closure_20 = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg
     }
     tmp17 = name;
   }
-  items3 = [closure_12(tmp5Result, { activityName: tmp17, setMode }), , ];
+  const items3 = [__initData(MinimizeActivityButtonDefault, { activityName: tmp17, setMode }), , ];
   let tmp8Result2 = null != applicationId;
   if (tmp8Result2) {
     const obj5 = { applicationId };
-    tmp8Result2 = closure_12(QuestActivityButtonDefault, obj5);
+    tmp8Result2 = __initData(QuestActivityButtonDefault, obj5);
   }
   items3[1] = tmp8Result2;
   let tmp20 = null;
@@ -618,39 +549,32 @@ let closure_20 = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg
     tmp20 = tmp8Result;
   }
   items3[2] = tmp20;
-  items4 = [map1(hasOwnProperty, obj4), , ];
+  obj4.children = items3;
+  const items4 = [__initData2(hasOwnProperty, obj4), , ];
   let tmp21 = null;
   if (!landscape) {
     tmp21 = tmp8Result;
   }
   items4[1] = tmp21;
-  const tmp5Result2 = LeaveActivityButtonDefault;
-  items4[2] = closure_12(tmp5Result2, { selfEmbeddedActivity: stateFromStores, setMode });
-  return map1(closure_18, obj3);
+  const tmp23 = stateFromStores;
+  const tmp5Result = MinimizeActivityButtonDefault;
+  items4[2] = __initData(LeaveActivityButtonDefault, { selfEmbeddedActivity: tmp23, setMode });
+  obj3.children = items4;
+  return __initData2(closure_18, obj3);
 }));
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
-  let num;
-  let pipState;
-  let setMode;
-  let str;
-  let str2;
-  let tmp4;
-  let wrapperDimensions;
-  let wrapperOffset;
-  const obj = react2;
-  const cResult = obj.c(14);
-  context = context.context;
+ReactCompilerGating = fn(558);
+let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
+  const cResult = c.c(14);
   const tmp2 = closure_14();
-  const context1 = react.useContext(context);
-  ({ wrapperDimensions, setMode, wrapperOffset, pipState } = context1);
+  context = noop.useContext(context.context);
+  ({ wrapperDimensions, setMode, wrapperOffset, pipState } = context);
   if (wrapperDimensions.isWindowLandscape) {
-    str2 = React4;
-    tmp4 = 0;
-    num = null;
-    str = "auto";
+    let str2 = options;
+    let tmp4 = 0;
+    let num = null;
+    let str = "auto";
   } else {
-    str = metroImportAll;
+    str = closure_1_8;
     str2 = "auto";
     tmp4 = null;
     num = 0;
@@ -658,22 +582,19 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
   if (cResult[0] === tmp4) {
     if (cResult[1] === str) {
       if (cResult[2] === num) {
-        let tmp5;
         if (cResult[3] === str2) {
-          tmp5 = cResult[4];
+          let tmp5 = cResult[4];
         }
         if (cResult[5] === tmp2.headerContainer) {
-          let tmp6;
           if (cResult[6] === tmp5) {
-            tmp6 = cResult[7];
+            let tmp6 = cResult[7];
           }
           if (cResult[8] === tmp6) {
             if (cResult[9] === pipState) {
               if (cResult[10] === setMode) {
                 if (cResult[11] === wrapperDimensions) {
-                  let tmp7;
                   if (cResult[12] === wrapperOffset) {
-                    tmp7 = cResult[13];
+                    let tmp7 = cResult[13];
                   }
                   return tmp7;
                 }
@@ -697,7 +618,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
       }
     }
   }
-  size = { width: str2, height: str, right: 0, left: num, bottom: tmp4 };
+  const size = { width: str2, height: str, right: 0, left: num, bottom: tmp4 };
   cResult[0] = tmp4;
   cResult[1] = str;
   cResult[2] = num;
@@ -705,81 +626,60 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
   cResult[4] = size;
   tmp5 = size;
 }) : ((context) => {
-  let items;
-  let pipState;
-  let setMode;
-  let wrapperOffset;
-  context = context.context;
   let tmp = closure_14();
   const headerContainer = tmp;
-  const context1 = react.useContext(context);
-  const wrapperDimensions = context1.wrapperDimensions;
-  const obj = {
-    headerStyles: react.useMemo(() => {
-      let num;
-      let str;
-      let str2;
-      let tmp;
-      if (wrapperDimensions.isWindowLandscape) {
-        str2 = React4;
-        tmp = 0;
-        num = null;
-        str = "auto";
-      } else {
-        str = metroImportAll;
-        str2 = "auto";
-        tmp = null;
-        num = 0;
-      }
-      const items = [headerContainer.headerContainer, { width: str2, height: str, right: 0, left: num, bottom: tmp }];
-      return items;
-    }, items),
-    wrapperDimensions,
-    setMode,
-    wrapperOffset,
-    pipState
-  };
-  items = [tmp.headerContainer, wrapperDimensions.isWindowLandscape];
-  ({ setMode, wrapperOffset, pipState } = context1);
+  context = noop.useContext(context.context);
+  const wrapperDimensions = context.wrapperDimensions;
+  const obj = { headerStyles: null, wrapperDimensions, setMode, wrapperOffset, pipState };
+  let items = [tmp.headerContainer, wrapperDimensions.isWindowLandscape];
+  ({ setMode, wrapperOffset, pipState } = context);
+  obj.headerStyles = noop.useMemo(() => {
+    if (wrapperDimensions.isWindowLandscape) {
+      let str2 = options;
+      let tmp = 0;
+      let num = null;
+      let str = "auto";
+    } else {
+      str = closure_2_8;
+      str2 = "auto";
+      tmp = null;
+      num = 0;
+    }
+    const items = [headerContainer.headerContainer, { width: str2, height: str, right: 0, left: num, bottom: tmp }];
+    return items;
+  }, items);
   return obj;
 });
-let closure_21 = tmp10;
-let memo = react.memo;
-ReactCompilerGating = ReactCompilerGating_mod;
-const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  let headerStyles;
-  let pipState;
-  let setMode;
-  let wrapperDimensions;
-  let wrapperOffset;
-  const obj = react2;
-  const cResult = obj.c(9);
+let closure_21 = tmp9;
+ReactCompilerGating = fn(558);
+let obj5 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexShrink: 1 };
+size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelHeader.tsx");
+
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { context: ActivityPanelStateContextDefault };
     cResult[0] = obj2;
-    first = obj2;
+    let first = obj2;
   } else {
     first = cResult[0];
   }
   ({ headerStyles, wrapperDimensions, setMode, wrapperOffset, pipState } = closure_21(first));
-  closure_21(first);
   if (cResult[1] === pipState) {
     if (cResult[2] === setMode) {
       if (cResult[3] === wrapperDimensions.isWindowLandscape) {
-        let tmp6;
         if (cResult[4] === wrapperOffset) {
-          tmp6 = cResult[5];
+          let tmp6 = cResult[5];
         }
         if (cResult[6] === headerStyles) {
-          let tmp8;
           if (cResult[7] === tmp6) {
-            tmp8 = cResult[8];
+            let tmp8 = cResult[8];
           }
           return tmp8;
         }
         const obj3 = { style: headerStyles, children: tmp6 };
-        const tmp11 = closure_12(hasOwnProperty, obj3);
+        const tmp11 = __initData(hasOwnProperty, obj3);
         cResult[6] = headerStyles;
         cResult[7] = tmp6;
         cResult[8] = tmp11;
@@ -787,27 +687,21 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
   }
-  const obj4 = { landscape: wrapperDimensions.isWindowLandscape, setMode, wrapperOffset, pipState };
-  const tmp7 = closure_12(closure_20, obj4);
+  const tmp7 = __initData(closure_20, { landscape: wrapperDimensions.isWindowLandscape, setMode, wrapperOffset, pipState });
   cResult[1] = pipState;
   cResult[2] = setMode;
   cResult[3] = wrapperDimensions.isWindowLandscape;
   cResult[4] = wrapperOffset;
   cResult[5] = tmp7;
   tmp6 = tmp7;
+  const obj4 = { landscape: wrapperDimensions.isWindowLandscape, setMode, wrapperOffset, pipState };
+  const tmp5 = closure_21(first);
 }) : (() => {
-  let obj3;
-  const obj = { context: ActivityPanelStateContextDefault };
-  const tmp = closure_21(obj);
-  const obj2 = { style: tmp.headerStyles, children: closure_12(closure_20, obj3) };
-  obj3 = { landscape: tmp.wrapperDimensions.isWindowLandscape, setMode: tmp.setMode, wrapperOffset: tmp.wrapperOffset, pipState: tmp.pipState };
-  return closure_12(hasOwnProperty, obj2);
+  const tmp = closure_21({ context: ActivityPanelStateContextDefault });
+  const obj2 = { style: tmp.headerStyles, children: __initData(closure_20, { landscape: tmp.wrapperDimensions.isWindowLandscape, setMode: tmp.setMode, wrapperOffset: tmp.wrapperOffset, pipState: tmp.pipState }) };
+  return __initData(hasOwnProperty, obj2);
 }));
-size = size_mod;
-const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelHeader.tsx");
-
-export default memoResult;
-export const useBaseActivityPanelHeaderContent = tmp7;
-export const BaseActivityPanelContent = tmp8;
+export const useBaseActivityPanelHeaderContent = tmp6;
+export const BaseActivityPanelContent = tmp7;
 export const useMinimizeAndQuestButtonContainerStyles = styles;
-export const useBaseActivityPanelHeader = tmp10;
+export const useBaseActivityPanelHeader = tmp9;

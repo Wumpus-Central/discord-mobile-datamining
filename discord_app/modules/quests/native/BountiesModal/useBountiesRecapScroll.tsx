@@ -1,12 +1,9 @@
 // === Module 14836: useBountiesRecapScroll ===
 
 // Module 14836 (useBountiesRecapScroll)
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let listRef;
-
+const require = fn;
 function getRevealProgress(scrollY, lastBountyScrollOffset, height2) {
   let num = 0;
   if (height2 > 0) {
@@ -17,12 +14,14 @@ function getRevealProgress(scrollY, lastBountyScrollOffset, height2) {
 getRevealProgress.__closure = {};
 getRevealProgress.__workletHash = 9769647749947;
 getRevealProgress.__initData = { code: "function getRevealProgress_useBountiesRecapScrollTsx1(scrollOffset,startOffset,revealHeight){if(revealHeight<=0){return 0;}return(scrollOffset-startOffset)/revealHeight;}" };
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((listRef) => {
-  let closure_3;
-  let enabled;
-  let tmp2;
-  let obj = listRef(enabled[2]);
-  const cResult = obj.c(17);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesRecapScroll.tsx");
+
+export const RECAP_SNAP_EPSILON = 2;
+export { getRevealProgress };
+export const useBountiesRecapScroll = ReactCompilerGating.isReactCompilerEnabled() ? ((listRef) => {
+  const cResult = listRef(enabled[2]).c(17);
   listRef = listRef.listRef;
   enabled = listRef.enabled;
   const offsets = listRef.offsets;
@@ -34,10 +33,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((listRef) => {
         current.scrollToOffset(obj);
       }
     };
-    let num = 0;
     cResult[0] = listRef;
     cResult[1] = fn;
-    tmp2 = fn;
+    let tmp2 = fn;
   } else {
     tmp2 = cResult[1];
   }
@@ -47,38 +45,49 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((listRef) => {
       if (cResult[6] === offsets.fullRecap) {
         if (cResult[7] === offsets.lastBounty) {
           if (cResult[8] === offsets.revealHeight) {
-            let tmp4;
             if (cResult[9] === tmp2) {
-              tmp4 = cResult[10];
+              let tmp4 = cResult[10];
             }
-            let closure_4 = tmp4;
+            closure_4 = tmp4;
             class B {
               constructor(arg0) {
                 if (enabled) {
-                  if (arg0 > offsets.lastBounty) {
-                    const revealHeight = offsets.revealHeight;
+                  tmp = listRef;
+                  tmp2 = offsets;
+                  if (listRef > offsets.lastBounty) {
+                    tmp7 = getRevealProgress;
+                    revealHeight = tmp2.revealHeight;
                     if (typeof getRevealProgress === "function") {
-                      let num = 0;
+                      num = 0;
                       if (revealHeight > 0) {
-                        num = (arg0 - tmp9) / revealHeight;
+                        num = (listRef - tmp8) / revealHeight;
                       }
-                      const tmp4 = num >= 0.25 ? offsets.fullRecap : offsets.lastBounty;
-                      const _Math = Math;
-                      if (Math.abs(arg0 - tmp4) >= 2) {
-                        closure_3(tmp4);
+                      num2 = 0.25;
+                      tmp3 = num >= 0.25 ? tmp2.fullRecap : tmp2.lastBounty;
+                      tmp4 = globalThis;
+                      _Math = Math;
+                      num3 = 2;
+                      if (Math.abs(listRef - tmp3) >= 2) {
+                        tmp5 = closure_3;
+                        tmp6 = closure_3(tmp3);
                       }
                     } else {
+                      str = "Trying to call a non-function";
                       throw new TypeError("Trying to call a non-function");
                     }
                   }
                 }
+                return;
               }
             }
             class R {
-              constructor(contentOffset) {
+              constructor(arg0) {
                 if (enabled) {
-                  closure_4(contentOffset.contentOffset.y);
+                  tmp = listRef;
+                  tmp2 = closure_4;
+                  tmp3 = closure_4(listRef.contentOffset.y);
                 }
+                return;
               }
             }
             cResult[11] = enabled;
@@ -91,23 +100,32 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((listRef) => {
     class B {
       constructor(arg0) {
         if (enabled) {
-          if (arg0 > offsets.lastBounty) {
-            const revealHeight = offsets.revealHeight;
+          tmp = listRef;
+          tmp2 = offsets;
+          if (listRef > offsets.lastBounty) {
+            tmp7 = getRevealProgress;
+            revealHeight = tmp2.revealHeight;
             if (typeof getRevealProgress === "function") {
-              let num = 0;
+              num = 0;
               if (revealHeight > 0) {
-                num = (arg0 - tmp9) / revealHeight;
+                num = (listRef - tmp8) / revealHeight;
               }
-              const tmp4 = num >= 0.25 ? offsets.fullRecap : offsets.lastBounty;
-              const _Math = Math;
-              if (Math.abs(arg0 - tmp4) >= 2) {
-                closure_3(tmp4);
+              num2 = 0.25;
+              tmp3 = num >= 0.25 ? tmp2.fullRecap : tmp2.lastBounty;
+              tmp4 = globalThis;
+              _Math = Math;
+              num3 = 2;
+              if (Math.abs(listRef - tmp3) >= 2) {
+                tmp5 = closure_3;
+                tmp6 = closure_3(tmp3);
               }
             } else {
+              str = "Trying to call a non-function";
               throw new TypeError("Trying to call a non-function");
             }
           }
         }
+        return;
       }
     }
     cResult[5] = enabled;
@@ -124,8 +142,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((listRef) => {
   cResult[2] = offsets.lastBounty;
   cResult[3] = tmp2;
   cResult[4] = fn2;
+  let obj = listRef(enabled[2]);
 }) : ((listRef) => {
-  let items3;
   listRef = listRef.listRef;
   const enabled = listRef.enabled;
   const offsets = listRef.offsets;
@@ -151,12 +169,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((listRef) => {
         if (typeof getRevealProgress === "function") {
           let num = 0;
           if (revealHeight > 0) {
-            num = (arg0 - tmp9) / revealHeight;
+            num = (arg0 - tmp8) / revealHeight;
           }
-          const tmp4 = num >= 0.25 ? offsets.fullRecap : offsets.lastBounty;
+          const tmp3 = num >= 0.25 ? offsets.fullRecap : offsets.lastBounty;
           const _Math = Math;
-          if (Math.abs(arg0 - tmp4) >= 2) {
-            callback(tmp4);
+          if (Math.abs(arg0 - tmp3) >= 2) {
+            callback(tmp3);
           }
         } else {
           throw new TypeError("Trying to call a non-function");
@@ -164,19 +182,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((listRef) => {
       }
     }
   }, items2);
-  let obj = {
-    scrollToLastBounty: callback1,
-    handleRecapMomentumEnd: offsets.useCallback((contentOffset) => {
-      if (enabled) {
-        callback2(contentOffset.contentOffset.y);
-      }
-    }, items3)
-  };
-  items3 = [enabled, callback2];
+  let obj = { scrollToLastBounty: callback1, handleRecapMomentumEnd: null };
+  const items3 = [enabled, callback2];
+  obj.handleRecapMomentumEnd = offsets.useCallback((contentOffset) => {
+    if (enabled) {
+      callback2(contentOffset.contentOffset.y);
+    }
+  }, items3);
   return obj;
 });
-const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesRecapScroll.tsx");
-
-export const RECAP_SNAP_EPSILON = 2;
-export { getRevealProgress };
-export const useBountiesRecapScroll = tmp2;

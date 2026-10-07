@@ -3,7 +3,7 @@
 // Module 7187 (ApplicationCodedLink)
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import CodedLink from "CodedLink" /* 4881 */;
-import _slicedToArray from "_slicedToArray" /* 7188 */;
+import storefrontMessageEmbedCodedLink from "storefrontMessageEmbedCodedLink" /* 7188 */;
 import activityBookmarkUtils from "activityBookmarkUtils" /* 7189 */;
 import size from "module_2" /* 2 */;
 
@@ -15,22 +15,18 @@ let result = size.fileFinishedImporting("modules/coded_links/ApplicationCodedLin
 
 export const APP_LINK_CODED_TYPES = set;
 export const isApplicationCodedLink = function isApplicationCodedLink(type) {
-  const obj = GlobalUtils;
-  return obj.isInSet(type, set);
+  return GlobalUtils.isInSet(type, set);
 };
 export const APP_LINK_CODED_TYPES_MOBILE_SUPPORT = set1;
 export const isApplicationCodedLinkMobileSupported = function isApplicationCodedLinkMobileSupported(type) {
-  const obj = GlobalUtils;
-  return obj.isInSet(type, set1);
+  return GlobalUtils.isInSet(type, set1);
 };
 export const getApplicationCodedLinkData = function getApplicationCodedLinkData(type, code, url) {
-  let tmpResult2;
   if (CodedLink.CodedLinkType.APP_DIRECTORY_PROFILE !== type) {
     if (CodedLink.CodedLinkType.APP_OAUTH2_LINK !== type) {
       if (CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
         if (CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type) {
-          const tmpResult = _slicedToArray;
-          const result = tmpResult.parseStorefrontSkuCodedLink(code);
+          const result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           let tmp5 = null;
           if (null != result) {
             const obj2 = { type, applicationId: null, skuId: null };
@@ -39,8 +35,7 @@ export const getApplicationCodedLinkData = function getApplicationCodedLinkData(
           }
           return tmp5;
         } else if (CodedLink.CodedLinkType.ACTIVITY_BOOKMARK === type) {
-          const obj = { type, applicationId: code, params: tmpResult2.extractActivityBookmarkParams(url) };
-          tmpResult2 = activityBookmarkUtils;
+          const obj = { type, applicationId: code, params: activityBookmarkUtils.extractActivityBookmarkParams(url) };
           return obj;
         }
       }

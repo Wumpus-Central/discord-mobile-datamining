@@ -1,36 +1,29 @@
 // === Module 14897: AdContentSeenStore ===
 
 // Module 14897 (AdContentSeenStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AdCreativeType from "AdCreativeType" /* 5637 */;
 import QuestDataUtils from "QuestDataUtils" /* 7196 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import _slicedToArray from "module_32" /* 32 */;
 import AdDeliveryStore from "AdDeliveryStore" /* 7197 */;
 import QuestStore from "QuestStore" /* 7200 */;
-import size from "module_2" /* 2 */;
 
-let set;
-
+require = fn;
 function getOrCreateSet(QUEST) {
-  let value = map.get(QUEST);
+  value = map.get(QUEST);
   if (null == value) {
     const _Set = Set;
-    const self = this;
-    const self2 = this;
-    set = new Set();
+    const set = new Set();
     const result = map.set(QUEST, set);
     value = set;
   }
   return value;
 }
 function syncWithQuestStore() {
-  let tmp5;
-  let tmp7;
   const quests = QuestStore.quests;
   const obj = getOrCreateSet(AdCreativeType.AdCreativeType.QUEST);
   let flag = false;
-  const tmp = quests[Symbol.iterator]();
   while (tmp !== undefined) {
     let tmp4 = _slicedToArray(tmp2, 2);
     [tmp5, tmp7] = tmp4;
@@ -67,7 +60,7 @@ function syncWithQuestStore() {
   if (0 !== QuestStore.lastFetchedCurrentQuests) {
     if (quests.size > 0) {
       for (const item10063 of obj) {
-        let value = quests.get(item10063);
+        value = quests.get(item10063);
         let isQuestExpiredResult = null == value;
         if (!isQuestExpiredResult) {
           let obj3 = QuestDataUtils;
@@ -86,7 +79,10 @@ function syncWithQuestStore() {
     if (obj4.size > 0) {
       const questHomeHero = AdDeliveryStore.getQuestHomeHero();
       for (const item10097 of obj4) {
-        let tmp37 = null != questHomeHero && item10097 === questHomeHero.id;
+        let tmp37 = null != questHomeHero;
+        if (tmp37) {
+          tmp37 = item10097 === questHomeHero.id;
+        }
         if (!tmp37) {
           let deleteResult1 = obj4.delete(item10097);
           flag = true;
@@ -98,65 +94,62 @@ function syncWithQuestStore() {
   return flag;
 }
 let map = new Map();
-const PersistedStore = get_initializedDefault.PersistedStore;
+const PersistedStore = initializeDefault.PersistedStore;
 class AdContentSeenStore extends PersistedStore {
-  initialize(seenContentIds) {
-    const self = this;
-    this.waitFor(QuestStore, AdDeliveryStore);
-    map = new Map();
-    if (null != seenContentIds) {
-      const _Object = Object;
-      const entries = Object.entries(seenContentIds.seenContentIds);
-      const tmp18 = entries[Symbol.iterator]();
-      while (tmp18 !== undefined) {
-        let tmp7 = _slicedToArray(tmp4, 2);
-        let tmp8 = tmp7[1];
-        let _Number = Number;
-        set = map.set;
-        let _Set = Set;
-        let self2 = this;
-        let self3 = this;
-        let NumberResult = Number(tmp7[0]);
-        let set1 = new Set(tmp8);
-        let result = set(NumberResult, set1);
-        continue;
-      }
-    }
-    const items = [QuestStore, AdDeliveryStore];
-    self.syncWith(items, syncWithQuestStore);
-  }
-  getState() {
-    const seenContentIds = {};
-    const tmp2 = map[Symbol.iterator]();
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      let _Array = Array;
-      seenContentIds[tmp5[0]] = Array.from(tmp5[1]);
-      continue;
-    }
-    return { seenContentIds };
-  }
-  hasSeen(arg0, arg1) {
-    const value = map.get(arg0);
-    let flag;
-    if (value != null) {
-      flag = value.has(arg1);
-    }
-    if (flag == null) {
-      flag = false;
-    }
-    return flag;
-  }
 }
 const prototype = AdContentSeenStore.prototype;
+prototype["initialize"] = function initialize(seenContentIds) {
+  const self = this;
+  this.waitFor(QuestStore, AdDeliveryStore);
+  map = new Map();
+  if (null != seenContentIds) {
+    const _Object = Object;
+    const entries = Object.entries(seenContentIds.seenContentIds);
+    const tmp20 = entries[Symbol.iterator]();
+    while (tmp20 !== undefined) {
+      let tmp7 = _slicedToArray(tmp4, 2);
+      let tmp8 = tmp7[1];
+      let _Number = Number;
+      let _Set = Set;
+      let tmp11 = new.target;
+      let tmp12 = new.target;
+      let NumberResult = Number(tmp7[0]);
+      let set = new Set(tmp8);
+      let result = map.set(NumberResult, set);
+      continue;
+    }
+  }
+  const items = [QuestStore, AdDeliveryStore];
+  self.syncWith(items, syncWithQuestStore);
+};
+prototype["getState"] = function getState() {
+  const seenContentIds = {};
+  while (tmp2 !== undefined) {
+    let tmp5 = _slicedToArray(tmp3, 2);
+    let _Array = Array;
+    seenContentIds[tmp5[0]] = Array.from(tmp5[1]);
+    continue;
+  }
+  return { seenContentIds };
+};
+prototype["hasSeen"] = function hasSeen(arg0, arg1) {
+  value = map.get(arg0);
+  let flag;
+  if (value != null) {
+    flag = value.has(arg1);
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  return flag;
+};
 AdContentSeenStore.displayName = "AdContentSeenStore";
 AdContentSeenStore.persistKey = "AdContentSeenStore";
-let obj = {
+const adContentSeenStore = new AdContentSeenStore(DispatcherDefault, {
   AD_CONTENT_MARK_SEEN: function handleMarkSeen(adCreativeType) {
     const obj = getOrCreateSet(adCreativeType.adCreativeType);
     let flag = false;
-    const contentIds = adCreativeType.contentIds;
-    for (const item10013 of contentIds) {
+    for (const item10013 of tmp) {
       if (!obj.has(item10013)) {
         let addResult = obj.add(item10013);
         flag = true;
@@ -166,7 +159,7 @@ let obj = {
     return flag;
   },
   AD_CONTENT_MARK_UNSEEN: function handleMarkUnseen(adCreativeType) {
-    const value = map.get(adCreativeType.adCreativeType);
+    value = map.get(adCreativeType.adCreativeType);
     if (null == value) {
       return false;
     } else {
@@ -182,8 +175,8 @@ let obj = {
       return flag;
     }
   }
-};
-const adContentSeenStore = new AdContentSeenStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/AdContentSeenStore.tsx");
 
 export default adContentSeenStore;

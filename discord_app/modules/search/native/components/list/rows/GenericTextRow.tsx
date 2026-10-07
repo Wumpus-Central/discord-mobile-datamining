@@ -1,55 +1,48 @@
 // === Module 16875: GenericTextRow ===
 
 // Module 16875 (GenericTextRow)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 4892 */;
-import SearchListRow2 from "SearchListRow" /* 16828 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import SearchListRow from "SearchListRow" /* 16828 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-let c0, c1, text;
-
-const View = react_native.View;
-const jsx = Fragment.jsx;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_6 = createStyles.createStyles({ title: { flexDirection: "row" }, container: { padding: 10 } });
-const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
-  let accessibilityActions;
-  let icon;
-  let onAccessibilityAction;
-  let onPress;
-  let trailing;
-  let obj = react2;
-  const cResult = obj.c(18);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GenericTextRow.tsx");
+
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
+  const cResult = c.c(18);
   text = text.text;
+  closure_0 = text;
   ({ icon, onPress } = text);
   ({ trailing, accessibilityActions, onAccessibilityAction } = text);
   const tmp4 = closure_6();
   if (cResult[0] === onPress) {
-    let tmp5;
     if (cResult[1] === text) {
-      tmp5 = cResult[2];
+      let tmp5 = cResult[2];
     }
     if (cResult[3] === tmp4.container) {
-      let tmp6;
       if (cResult[4] === text) {
-        tmp6 = cResult[5];
+        let tmp6 = cResult[5];
       }
       if (cResult[6] === tmp4.title) {
-        let tmp9;
-        let tmp13;
         if (cResult[7] === tmp6) {
-          tmp9 = cResult[8];
+          let tmp9 = cResult[8];
         }
         if (cResult[9] !== icon) {
-          const tmp15 = null != icon && <icon size="sm" color="mobile-text-heading-primary" />;
+          let tmp15 = null != icon;
+          if (tmp15) {
+            tmp15 = <icon size="sm" color="mobile-text-heading-primary" />;
+          }
           cResult[9] = icon;
           cResult[10] = tmp15;
-          tmp13 = tmp15;
+          let tmp13 = tmp15;
         } else {
           tmp13 = cResult[10];
         }
@@ -58,9 +51,8 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((t
             if (cResult[13] === tmp9) {
               if (cResult[14] === onAccessibilityAction) {
                 if (cResult[15] === tmp13) {
-                  let tmp17;
                   if (cResult[16] === trailing) {
-                    tmp17 = cResult[17];
+                    let tmp17 = cResult[17];
                   }
                   return tmp17;
                 }
@@ -68,7 +60,8 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((t
             }
           }
         }
-        const tmp19 = jsx(SearchListRow2.SearchListRow, { icon: tmp13, label: tmp9, onPress: tmp5, trailing, accessibilityActions, onAccessibilityAction });
+        let obj2 = { icon: tmp13, label: tmp9, onPress: tmp5, trailing, accessibilityActions, onAccessibilityAction };
+        const tmp19 = jsx(SearchListRow.SearchListRow, { icon: tmp13, label: tmp9, onPress: tmp5, trailing, accessibilityActions, onAccessibilityAction });
         cResult[11] = accessibilityActions;
         cResult[12] = tmp5;
         cResult[13] = tmp9;
@@ -78,24 +71,25 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((t
         cResult[17] = tmp19;
         tmp17 = tmp19;
       }
+      let obj3 = { style: tmp4.title, children: tmp6 };
       const tmp12 = <View style={tmp4.title}>{tmp6}</View>;
       cResult[6] = tmp4.title;
       cResult[7] = tmp6;
       cResult[8] = tmp12;
       tmp9 = tmp12;
     }
+    let obj4 = { lineClamp: 1, variant: "text-md/medium", color: "mobile-text-heading-primary", style: tmp4.container, children: text };
     const tmp8 = jsx(Text_Text.Text, { lineClamp: 1, variant: "text-md/medium", color: "mobile-text-heading-primary", style: tmp4.container, children: text });
     cResult[3] = tmp4.container;
     cResult[4] = text;
     cResult[5] = tmp8;
     tmp6 = tmp8;
   }
-  let closure_0 = _asyncToGenerator(async () => {
-    let v1;
+  closure_0 = asyncGeneratorStep(async () => {
     if (c0 === 2) {
       c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp2 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -132,35 +126,39 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((t
           c0 = 3;
           return { value: "IconComponent", done: null };
         }
-      } catch (tmp6) {
-        c0 = 3;
-        throw tmp6;
+      } catch (tmp7) {
+        c0 = tmp;
+        throw tmp7;
       }
     }
   });
   const fn = function() {
-    return closure_0(...arguments);
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   };
   cResult[0] = onPress;
   cResult[1] = text;
   cResult[2] = fn;
   tmp5 = fn;
 }) : ((text) => {
-  let accessibilityActions;
-  let icon;
-  let onAccessibilityAction;
-  let onPress;
-  let trailing;
   text = text.text;
+  require = text;
   ({ icon, onPress } = text);
   ({ trailing, accessibilityActions, onAccessibilityAction } = text);
   const tmp = closure_6();
   const items = [onPress, text];
-  const onPress1 = react.useCallback(_asyncToGenerator(async () => {
+  let obj = { style: tmp.title, children: null };
+  const onPress1 = noop.useCallback(asyncGeneratorStep(async () => {
     if (c0 === 2) {
       c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp2 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -197,21 +195,17 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((t
           c0 = 3;
           return { value: "IconComponent", done: null };
         }
-      } catch (tmp6) {
-        c0 = 3;
-        throw tmp6;
+      } catch (tmp7) {
+        c0 = tmp;
+        throw tmp7;
       }
     }
   }), items);
-  let obj2 = { lineClamp: 1, variant: "text-md/medium", color: "mobile-text-heading-primary", style: tmp.container, children: text };
+  obj.children = jsx(Text_Text.Text, { lineClamp: 1, variant: "text-md/medium", color: "mobile-text-heading-primary", style: tmp.container, children: text });
   const label = <View style={tmp.title}>{null}</View>;
   let icon1 = null != icon;
-  const SearchListRow = SearchListRow2.SearchListRow;
   if (icon1) {
     icon1 = <icon size="sm" color="mobile-text-heading-primary" />;
   }
-  return <SearchListRow icon={icon1} label={label} onPress={onPress1} trailing={trailing} accessibilityActions={accessibilityActions} onAccessibilityAction={onAccessibilityAction} />;
+  return jsx(SearchListRow.SearchListRow, { icon: icon1, label, onPress: onPress1, trailing, accessibilityActions, onAccessibilityAction });
 }));
-const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GenericTextRow.tsx");
-
-export default memoResult;

@@ -2,43 +2,30 @@
 
 // Module 7294 (mobile/NativePermissionUtils)
 import LoggerDefault from "Logger" /* 3 */;
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import useAlertStore from "useAlertStore" /* 5716 */;
-import NativePermissionBaseUtils2 from "NativePermissionBaseUtils" /* 7291 */;
-import react_nativeDefault from "react-native" /* 7296 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import react from "react" /* 19 */;
-import NativePermissionConstants from "NativePermissionConstants" /* 5105 */;
-import PlatformUtils_mod from "PlatformUtils" /* 1369 */;
-import MetaQuestUtils_mod from "MetaQuestUtils" /* 1615 */;
-import react_native2_mod from "react-native" /* 7295 */;
-import size from "module_2" /* 2 */;
+import openPrivacySettingsDefault from "openPrivacySettings" /* 7296 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import NativePermissionManagerModule_mod from "NativePermissionManagerModule" /* 7295 */;
 
-const require = globalThis.__r;
-let c7, c8;
-
-let AUDIO;
-let AUDIO2;
-let HEADSET_CAMERA;
-let HEADSET_CAMERA2;
-let NativePermissionTypes;
-let fn;
-let fn2;
-let hasOwnProperty;
-let items1;
-let items4;
-let items6;
-let items9;
-let react_native2;
-let tmp6;
+require = fn;
 function combineStatuses() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_8.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-let requestPermissionLookup = function _combineStatuses() {
-  let obj = _asyncToGenerator(async (arg0) => {
-    let closure_0 = arg0;
+let closure_8 = async function _combineStatuses(arg0) {
+  dependencyMap = arg0;
+  c7 = 0;
+  c8 = 0;
+  c6 = 0;
+  return (async (arg0) => {
     if (c8 === 2) {
       c8 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -53,8 +40,6 @@ let requestPermissionLookup = function _combineStatuses() {
       }
     } else {
       while (true) {
-        let c0;
-        let closure_1;
         c8 = 2;
         if (0 === c7) {
           if (arg0 === 1) {
@@ -65,16 +50,17 @@ let requestPermissionLookup = function _combineStatuses() {
             let obj3 = { value, done: true };
             return obj3;
           } else {
-            let closure_4 = tmp;
-            let closure_3 = tmp2;
-            c0 = undefined;
-            let closure_2 = closure_0;
-            closure_1 = closure_0[Symbol.iterator]();
+            closure_4 = tmp;
+            closure_3 = tmp2;
+            closure_131_0 = undefined;
+            closure_131_1 = undefined;
+            closure_2 = dependencyMap;
+            closure_1 = dependencyMap[Symbol.iterator]();
           }
         } else if (1 === tmp5) {
-          let c6 = 0;
+          c6 = 0;
           closure_1.return();
-          throw constants;
+          throw closure_1_5;
         } else if (arg0 === 1) {
           c8 = 3;
           throw value;
@@ -85,10 +71,10 @@ let requestPermissionLookup = function _combineStatuses() {
           let obj4 = { value, done: true };
           return obj4;
         } else {
-          closure_1 = value;
-          if (closure_1 !== closure_132_5.AUTHORIZED) {
+          closure_131_1 = value;
+          if (closure_131_1 !== closure_132_5.AUTHORIZED) {
             c6 = 0;
-            let tmp11 = closure_1;
+            let tmp11 = closure_131_1;
             closure_1.return();
             c8 = 3;
             let obj = { value: tmp11, done: true };
@@ -103,132 +89,128 @@ let requestPermissionLookup = function _combineStatuses() {
           return obj5;
         } else {
           c6 = 1;
-          c0 = tmp19;
+          closure_131_0 = tmp19;
           c7 = 2;
           c8 = 1;
-          let obj6 = { value: c0(), done: false };
+          let obj6 = { value: closure_131_0(), done: false };
           return obj6;
         }
       }
     }
-  });
-  return obj(...arguments);
+  })();
 };
-const Platform = react_native.Platform;
+const NativePermissionConstants = fn(5105);
 ({ NativePermissionTypes, NativePermissionStatus: hasOwnProperty } = NativePermissionConstants);
-const jsx = Fragment.jsx;
-let PlatformUtils = PlatformUtils_mod;
+const jsx = fn(21).jsx;
+let PlatformUtils = fn(1369);
 PlatformUtils = PlatformUtils.isAndroid();
 if (PlatformUtils) {
-  let num = 28;
-  PlatformUtils = Platform.constants.Version <= 28;
+  PlatformUtils = fn(17).Platform.constants.Version <= 28;
 }
-let MetaQuestUtils = MetaQuestUtils_mod;
+let MetaQuestUtils = fn(1615);
 MetaQuestUtils = MetaQuestUtils.isMetaQuest();
 if (PlatformUtils) {
-  let items = [react_native2.requestExternalStorageAuthorization];
-  items1 = items;
+  let items = [NativePermissionManagerModule.requestExternalStorageAuthorization];
+  let items1 = items;
 } else {
   items1 = [];
 }
 const items2 = [...items1];
-react_native2 = react_native2_mod;
+let NativePermissionManagerModule = NativePermissionManagerModule_mod;
 if (MetaQuestUtils) {
-  const items3 = [react_native2.requestAvatarCameraAuthorization];
-  items4 = items3;
+  const items3 = [NativePermissionManagerModule.requestAvatarCameraAuthorization];
+  let items4 = items3;
 } else {
-  items4 = [react_native2.requestCameraAuthorization];
+  items4 = [NativePermissionManagerModule.requestCameraAuthorization];
 }
-HermesBuiltin.arraySpread(items2, items4, tmp6);
+HermesBuiltin.arraySpread(items4, tmp5);
 if (PlatformUtils) {
-  const items5 = [react_native2.hasExternalStorageAuthorization];
-  items6 = items5;
+  const items5 = [NativePermissionManagerModule.hasExternalStorageAuthorization];
+  let items6 = items5;
 } else {
   items6 = [];
 }
 const items7 = [...items6];
-react_native2 = react_native2_mod;
+let NativePermissionManagerModule = NativePermissionManagerModule_mod;
 if (MetaQuestUtils) {
-  const items8 = [react_native2.hasAvatarCameraAuthorization];
-  items9 = items8;
+  const items8 = [NativePermissionManagerModule.hasAvatarCameraAuthorization];
+  let items9 = items8;
 } else {
-  items9 = [react_native2.hasCameraAuthorization];
+  items9 = [NativePermissionManagerModule.hasCameraAuthorization];
 }
-HermesBuiltin.arraySpread(items7, items9, tmp9);
-const NativePermissionBaseUtils = NativePermissionBaseUtils2.NativePermissionBaseUtils;
+HermesBuiltin.arraySpread(items9, tmp8);
+let NativePermissionIOSUtils;
+const NativePermissionBaseUtils = fn(7291).NativePermissionBaseUtils;
 class NativePermissionIOSUtils extends NativePermissionBaseUtils {
-  requestPermissionCore(arg0, arg1) {
-    return this.performRequest(NativePermissionIOSUtils.requestPermissionLookup, arg0, arg1);
-  }
-  hasPermissionCore(arg0, arg1) {
-    return this.performRequest(NativePermissionIOSUtils.hasPermissionLookup, arg0, arg1);
-  }
-  performRequest(hasPermissionLookup, arg1, arg2) {
-    let resolved;
-    if (null == hasPermissionLookup[arg1]) {
-      const self2 = this;
-      const self3 = this;
-      const _HermesInternal = HermesInternal;
-      const obj = new LoggerDefault("NativePermissionUtils");
-      obj.error("Unable to locate permission type " + arg1);
-      resolved = Promise.resolve(false);
-    } else {
-      const self = this;
-      resolved = this.requestAuthorization(arg1, tmp, arg2);
-    }
-    return resolved;
-  }
-  didHavePermission(arg0) {
-    const storage = this.storage;
-    return storage.hasPermission(arg0);
-  }
-  openSettings() {
-    react_nativeDefault();
-  }
-  openAlertModal(arg0) {
-    let body;
-    let onConfirm;
-    let paths;
-    ({ body, onConfirm } = arg0);
-    react.lazy(() => require("asyncRequire")(paths[11], paths.paths));
-    const openAlert = useAlertStore.openAlert;
-    useAlertStore;
-    const intl = intl2.intl;
-    openAlert("permission-denied", <lazyResult title={intl.string(intl2.t.sMFVrS)} body={body} onConfirm={onConfirm} />);
-  }
 }
 const prototype = NativePermissionIOSUtils.prototype;
-requestPermissionLookup = { [NativePermissionTypes.CAMERA]: () => combineStatuses(items2), [HEADSET_CAMERA]: react_native2.requestHeadsetCameraAuthorization };
+prototype["requestPermissionCore"] = function requestPermissionCore(arg0, arg1) {
+  return this.performRequest(NativePermissionIOSUtils.requestPermissionLookup, arg0, arg1);
+};
+prototype["hasPermissionCore"] = function hasPermissionCore(arg0, arg1) {
+  return this.performRequest(NativePermissionIOSUtils.hasPermissionLookup, arg0, arg1);
+};
+prototype["performRequest"] = function performRequest(hasPermissionLookup, arg1, arg2) {
+  if (null == hasPermissionLookup[arg1]) {
+    const obj = new LoggerDefault("NativePermissionUtils");
+    const _HermesInternal = HermesInternal;
+    obj.error("Unable to locate permission type " + arg1);
+    let resolved = Promise.resolve(false);
+  } else {
+    const self = this;
+    resolved = this.requestAuthorization(arg1, tmp, arg2);
+  }
+  return resolved;
+};
+prototype["didHavePermission"] = function didHavePermission(arg0) {
+  const storage = this.storage;
+  return storage.hasPermission(arg0);
+};
+prototype["openSettings"] = function openSettings() {
+  openPrivacySettingsDefault();
+};
+prototype["openAlertModal"] = function openAlertModal(arg0) {
+  ({ body, onConfirm } = arg0);
+  const lazyResult = noop.lazy(() => require("asyncRequireImpl")(paths[11], paths.paths));
+  const obj2 = { title: null, body: null, onConfirm: null };
+  const intl = util.intl;
+  obj2.title = intl.string(util.t.sMFVrS);
+  obj2.body = body;
+  obj2.onConfirm = onConfirm;
+  useAlertStore.openAlert("permission-denied", <lazyResult title={null} body={null} onConfirm={null} />);
+};
+let obj3 = { [NativePermissionTypes.CAMERA]: () => combineStatuses(items2), [HEADSET_CAMERA]: NativePermissionManagerModule.requestHeadsetCameraAuthorization };
 ({ HEADSET_CAMERA, AUDIO } = NativePermissionTypes);
-PlatformUtils = PlatformUtils_mod;
+PlatformUtils = fn(1369);
 if (PlatformUtils.isAndroid()) {
   fn = () => {
-    const items = [react_native.requestMicrophoneAuthorization, react_native.requestModifyAudioAuthorization];
+    const items = [NativePermissionManagerModule.requestMicrophoneAuthorization, NativePermissionManagerModule.requestModifyAudioAuthorization];
     return combineStatuses(items);
   };
 } else {
-  fn = react_native2.requestMicrophoneAuthorization;
+  fn = NativePermissionManagerModule.requestMicrophoneAuthorization;
 }
-requestPermissionLookup[AUDIO] = fn;
-requestPermissionLookup[NativePermissionTypes.PHOTOS] = react_native2.requestPhotoAuthorization;
-requestPermissionLookup[NativePermissionTypes.CONTACTS] = react_native2.requestContactsAuthorization;
-requestPermissionLookup[NativePermissionTypes.INPUT_MONITORING] = () => Promise.resolve(hasOwnProperty.AUTHORIZED);
-NativePermissionIOSUtils.requestPermissionLookup = requestPermissionLookup;
-let obj2 = { [NativePermissionTypes.CAMERA]: () => combineStatuses(items7), [HEADSET_CAMERA2]: react_native2.hasHeadsetCameraAuthorization };
+obj3[AUDIO] = fn;
+obj3[NativePermissionTypes.PHOTOS] = NativePermissionManagerModule.requestPhotoAuthorization;
+obj3[NativePermissionTypes.CONTACTS] = NativePermissionManagerModule.requestContactsAuthorization;
+obj3[NativePermissionTypes.INPUT_MONITORING] = () => Promise.resolve(constants.AUTHORIZED);
+NativePermissionIOSUtils.requestPermissionLookup = obj3;
+let obj5 = { [NativePermissionTypes.CAMERA]: () => combineStatuses(items7), [HEADSET_CAMERA2]: NativePermissionManagerModule.hasHeadsetCameraAuthorization };
 ({ HEADSET_CAMERA: HEADSET_CAMERA2, AUDIO: AUDIO2 } = NativePermissionTypes);
-PlatformUtils = PlatformUtils_mod;
+PlatformUtils = fn(1369);
 if (PlatformUtils.isAndroid()) {
-  fn2 = () => {
-    const items = [react_native.hasMicrophoneAuthorization, react_native.hasModifyAudioAuthorization];
+  let fn2 = () => {
+    const items = [NativePermissionManagerModule.hasMicrophoneAuthorization, NativePermissionManagerModule.hasModifyAudioAuthorization];
     return combineStatuses(items);
   };
 } else {
-  fn2 = react_native2.hasMicrophoneAuthorization;
+  fn2 = NativePermissionManagerModule.hasMicrophoneAuthorization;
 }
-obj2[AUDIO2] = fn2;
-obj2[NativePermissionTypes.INPUT_MONITORING] = () => Promise.resolve(hasOwnProperty.AUTHORIZED);
-NativePermissionIOSUtils.hasPermissionLookup = obj2;
+obj5[AUDIO2] = fn2;
+obj5[NativePermissionTypes.INPUT_MONITORING] = () => Promise.resolve(constants.AUTHORIZED);
+NativePermissionIOSUtils.hasPermissionLookup = obj5;
 const nativePermissionIOSUtils = new NativePermissionIOSUtils();
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/native_permissions/mobile/NativePermissionUtils.native.tsx");
 
 export default nativePermissionIOSUtils;

@@ -1,167 +1,145 @@
 // === Module 11394: SpotifyUtils ===
 
 // Module 11394 (SpotifyUtils)
-import Constants from "Constants" /* 1085 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import PlatformsDefault from "Platforms" /* 5449 */;
 import SpotifyActionCreators from "SpotifyActionCreators" /* 11396 */;
 import UserActivityActionCreators from "UserActivityActionCreators" /* 11397 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RunningGameStore from "RunningGameStore" /* 2006 */;
 import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11395 */;
 import SpotifyStore from "SpotifyStore" /* 5446 */;
-import SpotifyConstants from "SpotifyConstants" /* 8026 */;
-import size from "module_2" /* 2 */;
 
-let TRACK, closure_3, closure_4;
-
-let c9;
-let metroImportAll;
-let metroImportDefault;
+require = fn;
 function asString(str) {
   if (typeof str === "string") {
     return str;
   } else {
     const _Error = Error;
-    const self = this;
-    const self2 = this;
     const error = new Error("value is not a string");
     throw error;
   }
 }
-let value = function _getSpotifyMetadataFromActivity() {
-  const obj = _asyncToGenerator(async (arg0, type) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    return (async function(arg0, value) {
-      let album_id;
-      let mapped;
-      let mapped1;
-      let obj4;
-      if (c6 === 2) {
-        c6 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+let closure_13 = async function _getSpotifyMetadataFromActivity(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
+          c6 = 3;
           throw value;
         } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              return { value, done: true };
-            } else {
-              closure_4 = tmp4;
-              closure_3 = tmp;
-              closure_0 = undefined;
-              type = undefined;
-              c5 = 1;
-              c6 = 1;
-              const obj5 = { value: obj4.getMetadata(closure_0, type), done: false };
-              obj4 = UserActivityActionCreators;
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            return { value, done: true };
-          } else {
-            closure_0 = value;
-            type = closure_0.type;
-            TRACK = type;
-            if (type == null) {
-              TRACK = closure_132_8.TRACK;
-            }
-            closure_132_12(TRACK);
-            type = closure_132_9(TRACK);
-            if (null === type) {
-              const _Error = Error;
-              const _HermesInternal = HermesInternal;
-              const self = this;
-              const self2 = this;
-              const error = new Error("invalid type " + closure_0.type);
-              throw error;
-            } else {
-              let context_uri;
-              if (typeof closure_0.context_uri === "string") {
-                context_uri = closure_0.context_uri;
-              }
-              value = { context_uri, album_id, artist_ids: mapped, type, button_urls: mapped1 };
-              album_id = closure_0.album_id;
-              closure_132_12(album_id);
-              const _Array = Array;
-              if (Array.isArray(closure_0.artist_ids)) {
-                const artist_ids = closure_0.artist_ids;
-                mapped = artist_ids.map(closure_132_12);
-              } else {
-                mapped = [];
-              }
-              const _Array2 = Array;
-              if (Array.isArray(closure_0.button_urls)) {
-                const button_urls = closure_0.button_urls;
-                mapped1 = button_urls.map(closure_132_12);
-              } else {
-                mapped1 = [];
-              }
-              c6 = 3;
-              return { value, done: true };
-            }
-          }
-        } catch (tmp38) {
           c6 = 3;
-          throw tmp38;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_0 = undefined;
+          closure_131_1 = undefined;
+          c5 = 1;
+          c6 = 1;
+          const obj5 = { value: UserActivityActionCreators.getMetadata(closure_0, closure_1), done: false };
+          return obj5;
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } else {
+        closure_131_0 = value;
+        const type = closure_131_0.type;
+        let TRACK = type;
+        if (type == null) {
+          TRACK = closure_132_8.TRACK;
+        }
+        closure_132_12(TRACK);
+        closure_131_1 = closure_132_9(TRACK);
+        if (null === closure_131_1) {
+          const _Error = Error;
+          const _HermesInternal = HermesInternal;
+          const error = new Error("invalid type " + closure_131_0.type);
+          throw error;
+        } else {
+          let context_uri;
+          if (typeof closure_131_0.context_uri === "string") {
+            context_uri = closure_131_0.context_uri;
+          }
+          const obj = { context_uri, album_id: null, artist_ids: null, type: null, button_urls: null };
+          const album_id = closure_131_0.album_id;
+          closure_132_12(album_id);
+          obj.album_id = album_id;
+          const _Array = Array;
+          if (Array.isArray(closure_131_0.artist_ids)) {
+            const artist_ids = closure_131_0.artist_ids;
+            let mapped = artist_ids.map(closure_132_12);
+          } else {
+            mapped = [];
+          }
+          obj.artist_ids = mapped;
+          obj.type = closure_131_1;
+          const _Array2 = Array;
+          if (Array.isArray(closure_131_0.button_urls)) {
+            const button_urls = closure_131_0.button_urls;
+            let mapped1 = button_urls.map(closure_132_12);
+          } else {
+            mapped1 = [];
+          }
+          obj.button_urls = mapped1;
+          c6 = 3;
         }
       }
-    })();
-  });
-  return obj(...arguments);
+    } catch (tmp41) {
+      c6 = tmp;
+      throw tmp41;
+    }
+  }
 };
-({ SPOTIFY_APP_PROTOCOL: metroImportDefault, SpotifyResourceTypes: metroImportAll, getSpotifyResourceType: c9 } = SpotifyConstants);
-const PlatformTypes = Constants.PlatformTypes;
+const SpotifyConstants = fn(8026);
+({ SPOTIFY_APP_PROTOCOL: closure_7, SpotifyResourceTypes: closure_8, getSpotifyResourceType: closure_9 } = SpotifyConstants);
+const PlatformTypes = fn(1085).PlatformTypes;
 let closure_11 = 30 * DurationsDefault.Millis.SECOND;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/spotify/SpotifyUtils.tsx");
 
 export const isSpotifyPlayable = function isSpotifyPlayable(getActiveSocketAndDevice) {
-  const isProtocolRegisteredResult = null != getActiveSocketAndDevice.getActiveSocketAndDevice() || SpotifyProtocolStore.isProtocolRegistered();
+  let isProtocolRegisteredResult = null != getActiveSocketAndDevice.getActiveSocketAndDevice();
+  if (!isProtocolRegisteredResult) {
+    isProtocolRegisteredResult = SpotifyProtocolStore.isProtocolRegistered();
+  }
   return isProtocolRegisteredResult;
 };
 export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
-  let device;
-  let socket;
   const activeSocketAndDevice = SpotifyStore.getActiveSocketAndDevice();
   if (null != activeSocketAndDevice) {
     return Promise.resolve(activeSocketAndDevice);
   } else if (SpotifyProtocolStore.isProtocolRegistered()) {
     let playableComputerDevices = SpotifyStore.getPlayableComputerDevices();
-    const isObservedAppRunning = RunningGameStore.isObservedAppRunning;
-    let obj2 = PlatformsDefault;
-    if (isObservedAppRunning(obj2.get(PlatformTypes.SPOTIFY).name)) {
+    if (RunningGameStore.isObservedAppRunning(obj2.get(PlatformTypes.SPOTIFY).name)) {
       if (playableComputerDevices.length > 0) {
         ({ socket, device } = playableComputerDevices[0]);
-        const obj3 = playableComputerDevices(11396);
-        obj3.setActiveDevice(socket.accountId, device.id);
+        playableComputerDevices(11396).setActiveDevice(socket.accountId, device.id);
         const obj4 = { socket, device };
         return Promise.resolve(obj4);
       }
     }
-    const self3 = this;
-    const self4 = this;
     const promise = new Promise((arg0, arg1) => {
-      let closure_2;
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       function onSpotifyStoreChange() {
         playableComputerDevices = SpotifyStore.getPlayableComputerDevices();
         function _loop(socket, device) {
@@ -171,10 +149,8 @@ export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
             closure_2_6.removeChangeListener(closure_3);
             const _setImmediate = setImmediate;
             setImmediate(() => {
-              const obj = playableComputerDevices(dependencyMap[8]);
-              obj.setActiveDevice(socket.accountId, device.id);
-              const obj2 = { socket, device };
-              closure_2_0(obj2);
+              playableComputerDevices(dependencyMap[8]).setActiveDevice(socket.accountId, device.id);
+              closure_2_0({ socket, device });
             });
           }
         }
@@ -196,10 +172,8 @@ export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
     return promise;
   } else {
     const _Error = Error;
-    const self = this;
-    const self2 = this;
     let error = new Error("protocol is not registered");
-    return reject(error);
+    return Promise.reject(error);
   }
 };
 export const isSpotifyPremium = function isSpotifyPremium() {
@@ -214,25 +188,19 @@ export const ensureSpotifyPremium = function ensureSpotifyPremium() {
   const activeSocketAndDevice = SpotifyStore.getActiveSocketAndDevice();
   if (null == activeSocketAndDevice) {
     let _Error = Error;
-    let self = this;
-    let self2 = this;
     let error = new Error("no active profile");
-    return reject(error);
+    return Promise.reject(error);
   } else {
-    let resolved;
     const socket = activeSocketAndDevice.socket;
     if (socket.isPremium) {
-      resolved = Promise.resolve();
+      let resolved = Promise.resolve();
     } else {
-      const obj = SpotifyActionCreators;
-      const profile = obj.getProfile(socket.accountId, socket.accessToken);
-      resolved = profile.then(function() {
+      const profile = SpotifyActionCreators.getProfile(socket.accountId, socket.accessToken);
+      resolved = profile.then(() => {
         if (!socket.isPremium) {
           const _Error = Error;
-          const self = this;
-          const self2 = this;
           const error = new Error("spotify account is not premium");
-          return reject(error);
+          return Promise.reject(error);
         }
       });
     }
@@ -240,5 +208,12 @@ export const ensureSpotifyPremium = function ensureSpotifyPremium() {
   }
 };
 export const getSpotifyMetadataFromActivity = function getSpotifyMetadataFromActivity() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_13.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

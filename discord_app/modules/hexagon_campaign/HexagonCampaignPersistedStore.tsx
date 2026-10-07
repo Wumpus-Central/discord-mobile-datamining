@@ -1,28 +1,28 @@
 // === Module 14177: HexagonCampaignPersistedStore ===
 
 // Module 14177 (HexagonCampaignPersistedStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import size from "module_2" /* 2 */;
 
 function handleAppliedPerksCleared() {
 
 }
 let obj = { hasAppliedPerk: false };
-const PersistedStore = get_initializedDefault.PersistedStore;
+const PersistedStore = initializeDefault.PersistedStore;
 class HexagonCampaignPersistedStore extends PersistedStore {
-  initialize(arg0) {
-    if (null != arg0) {
-      obj = {};
-      const merged = Object.assign(obj);
-      const merged1 = Object.assign(arg0);
-    }
-  }
-  getState() {
-    return obj;
-  }
 }
-Object.defineProperty(HexagonCampaignPersistedStore.prototype, "hasAppliedPerk", {
+const prototype = HexagonCampaignPersistedStore.prototype;
+prototype["initialize"] = function initialize(arg0) {
+  if (null != arg0) {
+    obj = {};
+    const merged = Object.assign(obj);
+    const merged1 = Object.assign(arg0);
+  }
+};
+prototype["getState"] = function getState() {
+  return obj;
+};
+Object.defineProperty(prototype, "hasAppliedPerk", {
   get: function hasAppliedPerk() {
     return obj.hasAppliedPerk;
   },
@@ -30,15 +30,16 @@ Object.defineProperty(HexagonCampaignPersistedStore.prototype, "hasAppliedPerk",
 });
 HexagonCampaignPersistedStore.displayName = "HexagonCampaignPersistedStore";
 HexagonCampaignPersistedStore.persistKey = "HexagonCampaignPersistedStore";
-const obj2 = {
+const hexagonCampaignPersistedStore = new HexagonCampaignPersistedStore(DispatcherDefault, {
   HEXAGON_CAMPAIGN_PERK_APPLIED: function handlePerkApplied() {
-    obj = { hasAppliedPerk: true };
+    obj = {};
     const merged = Object.assign(obj);
+    obj.hasAppliedPerk = true;
   },
   HEXAGON_CAMPAIGN_APPLIED_PERKS_CLEARED: handleAppliedPerksCleared,
   LOGOUT: handleAppliedPerksCleared
-};
-const hexagonCampaignPersistedStore = new HexagonCampaignPersistedStore(DispatcherDefault, obj2);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/hexagon_campaign/HexagonCampaignPersistedStore.tsx");
 
 export default hexagonCampaignPersistedStore;

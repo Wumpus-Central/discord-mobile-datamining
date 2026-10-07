@@ -3,30 +3,29 @@
 // Module 13088 (SpotifyApplicationRecord)
 import ApplicationRecord from "ApplicationRecord" /* 2009 */;
 import Platforms from "Platforms" /* 5449 */;
-import size from "module_2" /* 2 */;
 
-let tmp2;
 const spotify = "spotify";
 const value = Platforms.get("spotify");
-const map = value;
-class SpotifyApplicationRecord extends ApplicationRecord {
+let closure_1 = value;
+class SpotifyApplicationRecord extends tmp4 {
   constructor() {
-    const tmp2 = new tmp({}, new.target, tmp);
-    tmp2.id = spotify;
-    tmp2.name = map.name;
-    return tmp2;
-  }
-  getIconURL() {
-    return map.icon.lightPNG;
-  }
-  getWhiteIconURL() {
-    return map.icon.whitePNG;
+    tmp1 = new tmp({}, new.target, tmp);
+    tmp1.id = spotify;
+    tmp1.name = closure_1.name;
+    return tmp1;
   }
 }
 const prototype = SpotifyApplicationRecord.prototype;
+prototype["getIconURL"] = function getIconURL() {
+  return value.icon.lightPNG;
+};
+prototype["getWhiteIconURL"] = function getWhiteIconURL() {
+  return value.icon.whitePNG;
+};
 const tmp6 = new "getWhiteIconURL"({}, tmp2, tmp);
 tmp6.id = "spotify";
 tmp6.name = value.name;
+const size = fn(2);
 const result = size.fileFinishedImporting("records/SpotifyApplicationRecord.tsx");
 
 export default SpotifyApplicationRecord;

@@ -1,34 +1,29 @@
 // === Module 16191: GuildBoostingProgressBarPersistedStore ===
 
 // Module 16191 (GuildBoostingProgressBarPersistedStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import size from "module_2" /* 2 */;
 
-let closure_0;
-
-const React = {};
-const PersistedStore = get_initializedDefault.PersistedStore;
+let closure_0 = {};
+const PersistedStore = initializeDefault.PersistedStore;
 class GuildBoostingProgressBarPersistedStore extends PersistedStore {
-  initialize(arg0) {
-    if (null != arg0) {
-      closure_0 = arg0;
-    }
-  }
-  getState() {
-    return closure_0;
-  }
-  getCountForGuild(guildId) {
-    return closure_0[guildId];
-  }
 }
 const prototype = GuildBoostingProgressBarPersistedStore.prototype;
+prototype["initialize"] = function initialize(arg0) {
+  if (null != arg0) {
+    closure_0 = arg0;
+  }
+};
+prototype["getState"] = function getState() {
+  return closure_0;
+};
+prototype["getCountForGuild"] = function getCountForGuild(guildId) {
+  return closure_0[guildId];
+};
 GuildBoostingProgressBarPersistedStore.displayName = "GuildBoostingProgressBarPersistedStore";
 GuildBoostingProgressBarPersistedStore.persistKey = "PremiumGuildProgressBarPersistedStore";
-let obj = {
+const guildBoostingProgressBarPersistedStore = new GuildBoostingProgressBarPersistedStore(DispatcherDefault, {
   APPLIED_GUILD_BOOST_COUNT_UPDATE: function handlePremiumCountUpdate(arg0) {
-    let guildId;
-    let premiumCount;
     const obj = {};
     ({ guildId, premiumCount } = arg0);
     const merged = Object.assign(closure_0);
@@ -38,8 +33,8 @@ let obj = {
   APPLIED_GUILD_BOOST_COUNT_RESET: function handlePremiumCountReset() {
     closure_0 = {};
   }
-};
-const guildBoostingProgressBarPersistedStore = new GuildBoostingProgressBarPersistedStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/GuildBoostingProgressBarPersistedStore.tsx");
 
 export default guildBoostingProgressBarPersistedStore;

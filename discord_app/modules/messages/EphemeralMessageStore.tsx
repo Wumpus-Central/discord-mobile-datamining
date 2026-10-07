@@ -1,16 +1,13 @@
 // === Module 5117: EphemeralMessageStore ===
 
 // Module 5117 (EphemeralMessageStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
 import FlagUtils from "FlagUtils" /* 1390 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 5118 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import size from "module_2" /* 2 */;
 
-let set;
-
+require = fn;
 function dropChannelIfEmpty(channelId, value) {
   if (0 === value.size) {
     map.delete(channelId);
@@ -23,87 +20,75 @@ function clearAll() {
     map.clear();
   }
 }
-const MessageFlags = Constants.MessageFlags;
+const MessageFlags = fn(1085).MessageFlags;
 let closure_4 = [];
 let map = new Map();
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class EphemeralMessageStore extends Store {
-  initialize() {
-    this.waitFor(ChannelStore);
-  }
-  getMessages(arg0) {
-    const value = map.get(arg0);
-    if (null != value) {
-      let arr;
-      if (0 !== value.size) {
-        const _Array = Array;
-        arr = Array.from(value.values());
-      }
-      return arr;
-    }
-    arr = closure_4;
-  }
 }
 const prototype = EphemeralMessageStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(ChannelStore);
+};
+prototype["getMessages"] = function getMessages(arg0) {
+  value = map.get(arg0);
+  if (null != value) {
+    if (0 !== value.size) {
+      const _Array = Array;
+      let arr = Array.from(value.values());
+    }
+    return arr;
+  }
+  arr = closure_4;
+};
 EphemeralMessageStore.displayName = "EphemeralMessageStore";
-let obj = {
+const ephemeralMessageStore = new EphemeralMessageStore(DispatcherDefault, {
   MESSAGE_CREATE: function handleMessageCreate(arg0) {
-    let channelId;
-    let message;
     ({ channelId, message } = arg0);
     let num = message.flags;
-    const hasFlag = FlagUtils.hasFlag;
-    FlagUtils;
     if (num == null) {
       num = 0;
     }
-    if (hasFlag(num, MessageFlags.EPHEMERAL)) {
-      let value = map.get(channelId);
-      const obj = map;
+    if (obj.hasFlag(num, MessageFlags.EPHEMERAL)) {
+      value = map.get(channelId);
       if (null == value) {
         const _Map = Map;
-        const self = this;
-        const self2 = this;
         map = new Map();
-        const result = obj.set(channelId, map);
+        const result = obj2.set(channelId, map);
         value = map;
       }
-      const id = message.id;
-      set = value.set;
-      const tmpResult = MessageRecordUtils;
-      const result1 = set(id, tmpResult.createMessageRecord(message));
+      const result1 = value.set(message.id, MessageRecordUtils.createMessageRecord(message));
       if (value.size > 50) {
-        const iter = value.keys();
-        const iter2 = iter.next();
+        const iter2 = value.keys().next();
         while (true !== iter2.done) {
           let deleteResult = value.delete(iter2.value);
           if (value.size <= 50) {
             break;
           }
         }
+        const iter = value.keys();
       }
+      obj2 = map;
+      const tmpResult = MessageRecordUtils;
     } else {
       return false;
     }
+    obj = FlagUtils;
   },
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
-    let channel_id;
-    let id;
     message = message.message;
     ({ channel_id, id } = message);
     if (null != channel_id) {
       if (null != id) {
-        const value = map.get(channel_id);
+        value = map.get(channel_id);
         if (null == value) {
           return false;
         } else {
-          const value2 = value.get(id);
+          value2 = value.get(id);
           if (null == value2) {
             return false;
           } else {
-            set = value.set;
-            const obj2 = MessageRecordUtils;
-            const result = set(id, obj2.updateMessageRecord(value2, message));
+            const result = value.set(id, MessageRecordUtils.updateMessageRecord(value2, message));
           }
         }
       }
@@ -112,10 +97,9 @@ let obj = {
   },
   MESSAGE_DELETE: function handleMessageDelete(channelId) {
     channelId = channelId.channelId;
-    const id = channelId.id;
-    const value = map.get(channelId);
+    value = map.get(channelId);
     if (null != value) {
-      if (value.delete(id)) {
+      if (value.delete(channelId.id)) {
         if (0 === value.size) {
           map.delete(channelId);
         }
@@ -124,10 +108,8 @@ let obj = {
     return false;
   },
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(arg0) {
-    let channelId;
-    let ids;
     ({ channelId, ids } = arg0);
-    const value = map.get(channelId);
+    value = map.get(channelId);
     if (null == value) {
       return false;
     } else {
@@ -186,8 +168,8 @@ let obj = {
   CONNECTION_OPEN: clearAll,
   OVERLAY_INITIALIZE: clearAll,
   LOGOUT: clearAll
-};
-const ephemeralMessageStore = new EphemeralMessageStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/EphemeralMessageStore.tsx");
 
 export default ephemeralMessageStore;

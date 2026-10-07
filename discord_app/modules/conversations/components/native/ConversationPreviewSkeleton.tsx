@@ -1,115 +1,93 @@
 // === Module 7597: ConversationPreviewSkeleton ===
 
 // Module 7597 (ConversationPreviewSkeleton)
-import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
 import timing from "timing" /* 4897 */;
-import ConversationConstants from "ConversationConstants" /* 7118 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let _require, set;
 
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-let obj5;
-let size;
-let size1;
-let View = react_native.View;
-let closure_5 = ConversationConstants.MOBILE_PREVIEW_MESSAGE_COUNT;
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { row: obj2, rowSpacing: obj3, avatar: size, lines: obj4, lineName: size1, lineText: obj5 };
-obj2 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_4 };
-createStyles = createStyles.createStyles;
-obj3 = { marginTop: nativeDefault.space.PX_26 };
-size = { width: 24, height: 24, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
-obj4 = { flex: 1, gap: nativeDefault.space.PX_4 };
-size1 = { height: 10, width: "35%", borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
-obj5 = { height: 10, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
-let closure_8 = createStyles(obj);
+require = fn;
+const View = fn(17).View;
+let closure_5 = fn(7118).MOBILE_PREVIEW_MESSAGE_COUNT;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { row: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_4 }, rowSpacing: null, avatar: null, lines: null, lineName: null, lineText: null };
+let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_4 };
+obj2.rowSpacing = { marginTop: nativeDefault.space.PX_26 };
+let size = { width: 24, height: 24, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+obj2.avatar = size;
+const obj4 = { marginTop: nativeDefault.space.PX_26 };
+obj2.lines = { flex: 1, gap: nativeDefault.space.PX_4 };
+const size1 = { height: 10, width: "35%", borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+obj2.lineName = size1;
+const obj5 = { flex: 1, gap: nativeDefault.space.PX_4 };
+obj2.lineText = { height: 10, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+let closure_8 = createStyles.createStyles(obj2);
 const __initData = { code: "function ConversationPreviewSkeletonTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
 const __initData2 = { code: "function ConversationPreviewSkeletonTsx2(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let row;
-  let tmp10;
-  let tmp6;
-  let tmp7;
-  const tmp = _require;
-  let obj = require("react");
-  const cResult = obj.c(8);
-  let tmp4 = closure_8();
+const ReactCompilerGating = fn(558);
+const obj6 = { height: 10, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+size = fn(2);
+let result = size.fileFinishedImporting("modules/conversations/components/native/ConversationPreviewSkeleton.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = require("c").c(8);
+  const tmp4 = closure_8();
   _require = tmp4;
-  let obj2 = require("ReanimatedRexport");
-  const sharedValue = obj2.useSharedValue(0.4);
+  let obj = require("c");
+  const tmp = _require;
+  const sharedValue = require("ReanimatedRexport").useSharedValue(0.4);
   if (cResult[0] !== sharedValue) {
     const fn = function s() {
-      set = sharedValue.set;
-      const withRepeat = ReanimatedRexport.withRepeat;
-      ReanimatedRexport;
-      const obj = timing;
-      const result = set(withRepeat(obj.withTiming(1, { duration: 700 }), -1, true));
+      const obj = ReanimatedRexport;
+      const result = sharedValue.set(obj.withRepeat(timing.withTiming(1, { duration: 700 }), -1, true));
     };
     let items = [sharedValue];
     cResult[0] = sharedValue;
     cResult[1] = fn;
     cResult[2] = items;
-    tmp7 = items;
-    tmp6 = fn;
+    let tmp7 = items;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[1];
     tmp7 = cResult[2];
   }
-  const effect = react.useEffect(tmp6, tmp7);
+  const effect = noop.useEffect(tmp6, tmp7);
+  const obj2 = require("ReanimatedRexport");
   const fn2 = function v() {
-    const obj = { opacity: sharedValue.get() };
-    return obj;
+    return { opacity: sharedValue.get() };
   };
   fn2.__closure = { opacity: sharedValue };
   fn2.__workletHash = 11432452203963;
   fn2.__initData = __initData;
-  const tmpResult = tmp(4618);
-  const animatedStyle = tmpResult.useAnimatedStyle(fn2);
+  const animatedStyle = tmp(4618).useAnimatedStyle(fn2);
   if (cResult[3] !== tmp4) {
     const _Array = Array;
     let obj3 = { length: closure_5 };
-    const arr = Array.from(obj3, (arg0, id) => {
-      let items1;
-      let items2;
+    const arr = Array.from(obj3, (arg0, arg1) => {
       const items = [row.row, ];
-      const obj = { style: items, children: items1 };
-      const tmp4 = id > 0 && row.rowSpacing;
-      items[1] = tmp4;
-      items1 = [, ];
-      const obj2 = { style: row.avatar };
-      items1[0] = metroRequire(View, obj2);
-      const obj3 = { style: row.lines, children: items2 };
-      items2 = [, ];
-      const obj4 = { style: row.lineName };
-      items2[0] = metroRequire(View, obj4);
-      const obj5 = { style: row.lineText };
-      items2[1] = metroRequire(View, obj5);
-      items1[1] = metroImportDefault(View, obj3);
-      return metroImportDefault(View, obj, id);
+      const obj = { style: items, children: null };
+      items[1] = arg1 > 0 && row.rowSpacing;
+      const items1 = [timestampProducer(View, { style: row.avatar }), ];
+      const obj3 = { style: row.lines, children: null };
+      const items2 = [timestampProducer(View, { style: row.lineName }), timestampProducer(View, { style: row.lineText })];
+      obj3.children = items2;
+      items1[1] = React5(View, obj3);
+      obj.children = items1;
+      return React5(View, obj, arg1);
     });
     cResult[3] = tmp4;
     cResult[4] = arr;
-    tmp10 = arr;
+    let tmp10 = arr;
   } else {
     tmp10 = cResult[4];
   }
   if (cResult[5] === animatedStyle) {
-    let tmp14;
     if (cResult[6] === tmp10) {
-      tmp14 = cResult[7];
+      let tmp14 = cResult[7];
     }
     return tmp14;
   }
@@ -118,57 +96,38 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[6] = tmp10;
   cResult[7] = tmp15;
   tmp14 = tmp15;
+  const tmpResult = tmp(4618);
 }) : (() => {
-  let obj4;
-  let row;
   _require = closure_8();
-  let obj = require("ReanimatedRexport");
-  const sharedValue = obj.useSharedValue(0.4);
+  const sharedValue = require("ReanimatedRexport").useSharedValue(0.4);
   let items = [sharedValue];
-  const effect = react.useEffect(() => {
-    set = sharedValue.set;
-    const withRepeat = ReanimatedRexport.withRepeat;
-    ReanimatedRexport;
-    const obj = timing;
-    const result = set(withRepeat(obj.withTiming(1, { duration: 700 }), -1, true));
+  const effect = noop.useEffect(() => {
+    const obj = ReanimatedRexport;
+    const result = sharedValue.set(obj.withRepeat(timing.withTiming(1, { duration: 700 }), -1, true));
   }, items);
-  let obj2 = require("ReanimatedRexport");
+  let obj = require("ReanimatedRexport");
   const fn = function y() {
-    const obj = { opacity: sharedValue.get() };
-    return obj;
+    return { opacity: sharedValue.get() };
   };
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 8310335020248;
   fn.__initData = __initData2;
-  const animatedStyle = obj2.useAnimatedStyle(fn);
+  const animatedStyle = require("ReanimatedRexport").useAnimatedStyle(fn);
   let obj3 = {
     style: animatedStyle,
     "aria-hidden": true,
-    children: Array.from(obj4, (arg0, id) => {
-      let items1;
-      let items2;
+    children: Array.from({ length: closure_5 }, (arg0, arg1) => {
       const items = [row.row, ];
-      const obj = { style: items, children: items1 };
-      const tmp4 = id > 0 && row.rowSpacing;
-      items[1] = tmp4;
-      items1 = [, ];
-      const obj2 = { style: row.avatar };
-      items1[0] = metroRequire(View, obj2);
-      const obj3 = { style: row.lines, children: items2 };
-      items2 = [, ];
-      const obj4 = { style: row.lineName };
-      items2[0] = metroRequire(View, obj4);
-      const obj5 = { style: row.lineText };
-      items2[1] = metroRequire(View, obj5);
-      items1[1] = metroImportDefault(View, obj3);
-      return metroImportDefault(View, obj, id);
+      const obj = { style: items, children: null };
+      items[1] = arg1 > 0 && row.rowSpacing;
+      const items1 = [timestampProducer(View, { style: row.avatar }), ];
+      const obj3 = { style: row.lines, children: null };
+      const items2 = [timestampProducer(View, { style: row.lineName }), timestampProducer(View, { style: row.lineText })];
+      obj3.children = items2;
+      items1[1] = React5(View, obj3);
+      obj.children = items1;
+      return React5(View, obj, arg1);
     })
   };
-  obj4 = { length: closure_5 };
-  View = sharedValue(4618).View;
-  return closure_6(View, obj3);
+  return closure_6(sharedValue(4618).View, obj3);
 });
-size = size_mod;
-let result = size.fileFinishedImporting("modules/conversations/components/native/ConversationPreviewSkeleton.tsx");
-
-export default tmp4;

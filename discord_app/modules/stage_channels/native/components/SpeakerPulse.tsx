@@ -1,52 +1,35 @@
 // === Module 13948: SpeakerPulse ===
 
 // Module 13948 (SpeakerPulse)
-import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
 import timing from "timing" /* 4897 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let flag, num, num2, num3, num4, obj1, obj12, set, tmp10, tmp11, tmp14, tmp15, tmp17, tmp18, tmp22, tmp23, tmp3, tmp9;
-
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-const View = react_native.View;
-({ jsx: metroRequire, Fragment: metroImportDefault, jsxs: metroImportAll } = Fragment);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 0.16;
 let c10 = 250;
 let c11 = 500;
-let createStyles = createStyles_mod;
-let obj = { pulse: obj2, border: obj3 };
-obj2 = { backgroundColor: nativeDefault.colors.WHITE };
-createStyles = createStyles.createStyles;
-obj3 = { backgroundColor: nativeDefault.colors.STATUS_SPEAKING };
-let closure_12 = createStyles(obj);
+const createStyles = fn(4896);
+let obj2 = { pulse: { backgroundColor: nativeDefault.colors.WHITE }, border: null };
+let obj3 = { backgroundColor: nativeDefault.colors.WHITE };
+obj2.border = { backgroundColor: nativeDefault.colors.STATUS_SPEAKING };
+let closure_12 = createStyles.createStyles(obj2);
 const __initData = { code: "function SpeakerPulseTsx1(){const{animatedInnerOpacity}=this.__closure;return{opacity:animatedInnerOpacity.get()};}" };
 const __initData2 = { code: "function SpeakerPulseTsx2(){const{animatedOuterOpacity}=this.__closure;return{opacity:animatedOuterOpacity.get()};}" };
 const __initData3 = { code: "function SpeakerPulseTsx3(){const{animatedInnerOpacity}=this.__closure;return{opacity:animatedInnerOpacity.get()};}" };
 const __initData4 = { code: "function SpeakerPulseTsx4(){const{animatedOuterOpacity}=this.__closure;return{opacity:animatedOuterOpacity.get()};}" };
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let color;
-  let items2;
-  let obj5;
-  let sharedValue1;
-  let stateFromStores;
-  let style;
-  let tmp5;
-  let tmp6;
-  let tmp7;
-  let useReducedMotion;
-  let obj = stateFromStores(sharedValue1[7]);
-  const cResult = obj.c(28);
+const ReactCompilerGating = fn(558);
+let obj4 = { backgroundColor: nativeDefault.colors.STATUS_SPEAKING };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/stage_channels/native/components/SpeakerPulse.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = stateFromStores(sharedValue1[7]).c(28);
   ({ color, style } = arg0);
   const tmp4 = closure_12();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -65,22 +48,19 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     [tmp5, tmp6, tmp7] = cResult;
   }
+  const obj = stateFromStores(sharedValue1[7]);
+  stateFromStores = stateFromStores(sharedValue1[8]).useStateFromStores(tmp5, O, tmp7);
   const tmpResult = stateFromStores(sharedValue1[8]);
-  stateFromStores = tmpResult.useStateFromStores(tmp5, O, tmp7);
+  const sharedValue = stateFromStores(sharedValue1[9]).useSharedValue(c9);
   const tmpResult4 = stateFromStores(sharedValue1[9]);
-  const sharedValue = tmpResult4.useSharedValue(c9);
-  const tmpResult5 = stateFromStores(sharedValue1[9]);
-  sharedValue1 = tmpResult5.useSharedValue(c9);
+  sharedValue1 = stateFromStores(sharedValue1[9]).useSharedValue(c9);
   if (cResult[3] === sharedValue) {
     if (cResult[4] === sharedValue1) {
-      let tmp12;
-      let tmp13;
-      let tmp20;
       if (cResult[5] === stateFromStores) {
-        tmp12 = cResult[6];
-        tmp13 = cResult[7];
+        let tmp12 = cResult[6];
+        let tmp13 = cResult[7];
       }
-      const effect = react.useEffect(tmp12, tmp13);
+      const effect = noop.useEffect(tmp12, tmp13);
       class O {
         constructor() {
           return !closure_1_5.useReducedMotion;
@@ -97,7 +77,6 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       A.__workletHash = 202297893401;
       A.__initData = __initData;
       const animatedStyle = obj5.useAnimatedStyle(A);
-      const tmpResult6 = stateFromStores(sharedValue1[9]);
       class C {
         constructor() {
           obj = { opacity: closure_2.get() };
@@ -108,7 +87,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       C.__closure = obj3;
       C.__workletHash = 13537504931930;
       C.__initData = __initData2;
-      const animatedStyle1 = tmpResult6.useAnimatedStyle(C);
+      const animatedStyle1 = tmp(tmp2[9]).useAnimatedStyle(C);
       if (cResult[8] !== color) {
         let tmp21 = null;
         if (null != color) {
@@ -127,7 +106,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
         }
         cResult[9] = tmp21;
-        tmp20 = tmp21;
+        let tmp20 = tmp21;
       } else {
         tmp20 = cResult[9];
       }
@@ -145,8 +124,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               return obj;
             }
           }
-          let obj6 = { style: items2 };
-          items2 = [tmp4.pulse, style, animatedStyle, tmp28];
+          const items2 = [tmp4.pulse, style, animatedStyle, tmp28];
+          { style: null }.style = items2;
           class C {
             constructor() {
               obj = { opacity: closure_2.get() };
@@ -157,6 +136,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           cResult[16] = style;
           cResult[17] = tmp4.pulse;
           cResult[18] = tmp32;
+          let obj6 = { style: null };
         }
       }
       class I {
@@ -170,46 +150,39 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             result1 = closure_2.set(0);
             tmp9 = closure_0;
             tmp10 = closure_2;
-            tmp11 = closure_0(closure_2[9]);
-            withRepeat = tmp11.withRepeat;
-            tmp12 = closure_0(closure_2[9]);
-            withSequence = tmp12.withSequence;
-            tmp13 = closure_0(closure_2[9]);
-            withDelay = tmp13.withDelay;
-            obj2 = closure_0(closure_2[10]);
-            tmp14 = c9;
+            obj2 = closure_0(closure_2[9]);
+            obj3 = closure_0(closure_2[9]);
+            obj4 = closure_0(closure_2[9]);
+            obj5 = closure_0(closure_2[10]);
+            tmp11 = c9;
             obj1 = { duration: null };
-            tmp15 = c10;
+            tmp12 = c10;
             obj1.duration = c10;
             num2 = 100;
-            withDelayResult = withDelay(100, obj2.withTiming(c9, obj1));
-            tmp17 = closure_0(closure_2[9]);
-            withDelay2 = tmp17.withDelay;
-            obj4 = closure_0(closure_2[10]);
-            obj10 = { duration: null };
-            tmp18 = c11;
-            obj10.duration = c11;
+            withDelayResult = obj4.withDelay(100, obj5.withTiming(c9, obj1));
+            obj7 = closure_0(closure_2[9]);
+            obj8 = closure_0(closure_2[10]);
+            obj17 = { duration: null };
+            tmp14 = c11;
+            obj17.duration = c11;
             flag = false;
             num3 = -1;
-            withRepeatResult = withRepeat(withSequence(withDelayResult, withDelay2(c10, obj4.withTiming(0, obj10))), -1, false);
-            tmp20 = closure_0(closure_2[9]);
-            withRepeat2 = tmp20.withRepeat;
-            tmp21 = closure_0(closure_2[9]);
-            withSequence2 = tmp21.withSequence;
-            tmp22 = closure_0(closure_2[9]);
-            withDelay3 = tmp22.withDelay;
-            obj6 = closure_0(closure_2[10]);
-            tmp23 = c9;
-            obj11 = { duration: null };
-            obj11.duration = c10;
+            withRepeatResult = obj2.withRepeat(obj3.withSequence(withDelayResult, obj7.withDelay(c10, obj8.withTiming(0, obj17))), -1, false);
+            obj10 = closure_0(closure_2[9]);
+            obj11 = closure_0(closure_2[9]);
+            obj12 = closure_0(closure_2[9]);
+            obj13 = closure_0(closure_2[10]);
+            tmp16 = c9;
+            obj18 = { duration: null };
+            obj18.duration = c10;
             num4 = 350;
-            withDelay3Result = withDelay3(350, obj6.withTiming(c9, obj11));
-            obj8 = closure_0(closure_2[10]);
-            obj12 = { duration: null };
-            obj12.duration = c11;
-            withRepeat2Result = withRepeat2(withSequence2(withDelay3Result, obj8.withTiming(0, obj12)), -1, false);
+            withDelayResult1 = obj12.withDelay(350, obj13.withTiming(c9, obj18));
+            obj15 = closure_0(closure_2[10]);
+            obj19 = { duration: null };
+            obj19.duration = c11;
+            withRepeatResult1 = obj10.withRepeat(obj11.withSequence(withDelayResult1, obj15.withTiming(0, obj19)), -1, false);
             result2 = obj.set(withRepeatResult);
-            result3 = closure_2.set(withRepeat2Result);
+            result3 = closure_2.set(withRepeatResult1);
           } else {
             tmp = c9;
             result4 = set(c9);
@@ -227,6 +200,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       cResult[11] = tmp4.border;
       cResult[12] = tmp20;
       cResult[13] = tmp26;
+      const tmpResult6 = tmp(tmp2[9]);
     }
   }
   class I {
@@ -240,46 +214,39 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         result1 = closure_2.set(0);
         tmp9 = closure_0;
         tmp10 = closure_2;
-        tmp11 = closure_0(closure_2[9]);
-        withRepeat = tmp11.withRepeat;
-        tmp12 = closure_0(closure_2[9]);
-        withSequence = tmp12.withSequence;
-        tmp13 = closure_0(closure_2[9]);
-        withDelay = tmp13.withDelay;
-        obj2 = closure_0(closure_2[10]);
-        tmp14 = c9;
+        obj2 = closure_0(closure_2[9]);
+        obj3 = closure_0(closure_2[9]);
+        obj4 = closure_0(closure_2[9]);
+        obj5 = closure_0(closure_2[10]);
+        tmp11 = c9;
         obj1 = { duration: null };
-        tmp15 = c10;
+        tmp12 = c10;
         obj1.duration = c10;
         num2 = 100;
-        withDelayResult = withDelay(100, obj2.withTiming(c9, obj1));
-        tmp17 = closure_0(closure_2[9]);
-        withDelay2 = tmp17.withDelay;
-        obj4 = closure_0(closure_2[10]);
-        obj10 = { duration: null };
-        tmp18 = c11;
-        obj10.duration = c11;
+        withDelayResult = obj4.withDelay(100, obj5.withTiming(c9, obj1));
+        obj7 = closure_0(closure_2[9]);
+        obj8 = closure_0(closure_2[10]);
+        obj17 = { duration: null };
+        tmp14 = c11;
+        obj17.duration = c11;
         flag = false;
         num3 = -1;
-        withRepeatResult = withRepeat(withSequence(withDelayResult, withDelay2(c10, obj4.withTiming(0, obj10))), -1, false);
-        tmp20 = closure_0(closure_2[9]);
-        withRepeat2 = tmp20.withRepeat;
-        tmp21 = closure_0(closure_2[9]);
-        withSequence2 = tmp21.withSequence;
-        tmp22 = closure_0(closure_2[9]);
-        withDelay3 = tmp22.withDelay;
-        obj6 = closure_0(closure_2[10]);
-        tmp23 = c9;
-        obj11 = { duration: null };
-        obj11.duration = c10;
+        withRepeatResult = obj2.withRepeat(obj3.withSequence(withDelayResult, obj7.withDelay(c10, obj8.withTiming(0, obj17))), -1, false);
+        obj10 = closure_0(closure_2[9]);
+        obj11 = closure_0(closure_2[9]);
+        obj12 = closure_0(closure_2[9]);
+        obj13 = closure_0(closure_2[10]);
+        tmp16 = c9;
+        obj18 = { duration: null };
+        obj18.duration = c10;
         num4 = 350;
-        withDelay3Result = withDelay3(350, obj6.withTiming(c9, obj11));
-        obj8 = closure_0(closure_2[10]);
-        obj12 = { duration: null };
-        obj12.duration = c11;
-        withRepeat2Result = withRepeat2(withSequence2(withDelay3Result, obj8.withTiming(0, obj12)), -1, false);
+        withDelayResult1 = obj12.withDelay(350, obj13.withTiming(c9, obj18));
+        obj15 = closure_0(closure_2[10]);
+        obj19 = { duration: null };
+        obj19.duration = c11;
+        withRepeatResult1 = obj10.withRepeat(obj11.withSequence(withDelayResult1, obj15.withTiming(0, obj19)), -1, false);
         result2 = obj.set(withRepeatResult);
-        result3 = closure_2.set(withRepeat2Result);
+        result3 = closure_2.set(withRepeatResult1);
       } else {
         tmp = c9;
         result4 = set(c9);
@@ -298,77 +265,57 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[7] = items4;
   tmp13 = items4;
   tmp12 = I;
+  const tmpResult5 = stateFromStores(sharedValue1[9]);
 }) : ((arg0) => {
-  let color;
-  let items3;
-  let items4;
-  let items5;
-  let items6;
-  let items7;
-  let style;
-  let useReducedMotion;
   ({ color, style } = arg0);
   let stateFromStores;
   let sharedValue1;
   const tmp = closure_12();
-  let obj = stateFromStores(sharedValue1[8]);
   const items = [AccessibilityStore];
-  stateFromStores = obj.useStateFromStores(items, () => !useReducedMotion.useReducedMotion, []);
+  stateFromStores = stateFromStores(sharedValue1[8]).useStateFromStores(items, () => !useReducedMotion.useReducedMotion, []);
+  const obj = stateFromStores(sharedValue1[8]);
+  const sharedValue = stateFromStores(sharedValue1[9]).useSharedValue(c9);
   let obj2 = stateFromStores(sharedValue1[9]);
-  const sharedValue = obj2.useSharedValue(c9);
-  let obj3 = stateFromStores(sharedValue1[9]);
-  sharedValue1 = obj3.useSharedValue(c9);
+  sharedValue1 = stateFromStores(sharedValue1[9]).useSharedValue(c9);
   const items1 = [stateFromStores, sharedValue, sharedValue1];
-  const effect = react.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (stateFromStores) {
       const result = set(0);
       const result1 = sharedValue1.set(0);
-      const withRepeat = ReanimatedRexport.withRepeat;
-      ReanimatedRexport;
-      const withSequence = ReanimatedRexport.withSequence;
-      ReanimatedRexport;
-      const withDelay = ReanimatedRexport.withDelay;
-      ReanimatedRexport;
-      const obj3 = { duration };
-      const obj2 = timing;
-      const withDelayResult = withDelay(100, obj2.withTiming(c9, obj3));
-      const withDelay2 = ReanimatedRexport.withDelay;
-      ReanimatedRexport;
-      const obj5 = { duration: duration2 };
-      const obj4 = timing;
-      const withRepeatResult = withRepeat(withSequence(withDelayResult, withDelay2(duration, obj4.withTiming(0, obj5))), -1, false);
-      const withRepeat2 = ReanimatedRexport.withRepeat;
-      ReanimatedRexport;
-      const withSequence2 = ReanimatedRexport.withSequence;
-      ReanimatedRexport;
-      const withDelay3 = ReanimatedRexport.withDelay;
-      ReanimatedRexport;
-      const obj7 = { duration };
-      const obj6 = timing;
+      const obj2 = ReanimatedRexport;
+      const obj3 = ReanimatedRexport;
+      const obj4 = ReanimatedRexport;
+      const obj6 = { duration };
+      const withDelayResult = obj4.withDelay(100, timing.withTiming(c9, obj6));
+      const obj7 = ReanimatedRexport;
       const obj9 = { duration: duration2 };
-      const withDelay3Result = withDelay3(350, obj6.withTiming(c9, obj7));
-      const obj8 = timing;
-      const withRepeat2Result = withRepeat2(withSequence2(withDelay3Result, obj8.withTiming(0, obj9)), -1, false);
+      const withRepeatResult = obj2.withRepeat(obj3.withSequence(withDelayResult, obj7.withDelay(duration, timing.withTiming(0, obj9))), -1, false);
+      const obj10 = ReanimatedRexport;
+      const obj11 = ReanimatedRexport;
+      const obj12 = ReanimatedRexport;
+      const obj14 = { duration };
+      const withDelayResult1 = obj12.withDelay(350, timing.withTiming(c9, obj14));
+      const obj16 = { duration: duration2 };
       const result2 = sharedValue.set(withRepeatResult);
-      const result3 = sharedValue1.set(withRepeat2Result);
+      const result3 = sharedValue1.set(obj10.withRepeat(obj11.withSequence(withDelayResult1, timing.withTiming(0, obj16)), -1, false));
+      const withRepeatResult1 = obj10.withRepeat(obj11.withSequence(withDelayResult1, timing.withTiming(0, obj16)), -1, false);
     } else {
       const result4 = set(c9);
       const result5 = sharedValue1.set(c9);
     }
   }, items1);
-  let obj4 = stateFromStores(sharedValue1[9]);
+  let obj3 = stateFromStores(sharedValue1[9]);
   const fn = function v() {
-    const obj = { opacity: sharedValue.get() };
-    return obj;
+    return { opacity: sharedValue.get() };
   };
   fn.__closure = { animatedInnerOpacity: sharedValue };
   fn.__workletHash = 190943686683;
   fn.__initData = __initData3;
-  const animatedStyle = obj4.useAnimatedStyle(fn);
-  let obj5 = stateFromStores(sharedValue1[9]);
+  const animatedStyle = stateFromStores(sharedValue1[9]).useAnimatedStyle(fn);
+  let obj4 = stateFromStores(sharedValue1[9]);
   class D {
     constructor() {
-      const obj = { opacity: sharedValue1.get() };
+      obj = { opacity: closure_2.get() };
       return obj;
     }
   }
@@ -377,29 +324,31 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   D.__initData = __initData4;
   const items2 = [tmp.border, , ];
   let tmp13 = null;
-  const animatedStyle1 = obj5.useAnimatedStyle(D);
+  const animatedStyle1 = stateFromStores(sharedValue1[9]).useAnimatedStyle(D);
   if (null != color) {
     let obj6 = { backgroundColor: color };
     tmp13 = obj6;
   }
-  let obj7 = { children: items3 };
+  let obj7 = { children: null };
   items2[1] = tmp13;
   items2[2] = style;
-  items3 = [closure_6(View, { style: items2 }), , ];
-  let obj8 = { style: items4 };
-  items4 = [tmp.pulse, style, animatedStyle, ];
-  let obj9 = { transform: items5 };
-  items5 = [{ scale: 1.5 }];
+  const items3 = [closure_6(View, { style: items2 }), , ];
+  let obj8 = { style: null };
+  const items4 = [tmp.pulse, style, animatedStyle, ];
+  let obj9 = { transform: null };
+  const items5 = [{ scale: 1.5 }];
+  obj9.transform = items5;
   items4[3] = obj9;
+  obj8.style = items4;
   items3[1] = closure_6(sharedValue(sharedValue1[9]).View, obj8);
-  const obj10 = { style: items6 };
-  items6 = [tmp.pulse, style, animatedStyle1, ];
-  const obj11 = { transform: items7 };
-  items7 = [{ scale: 2 }];
+  let obj10 = { style: null };
+  const items6 = [tmp.pulse, style, animatedStyle1, ];
+  let obj11 = { transform: null };
+  const items7 = [{ scale: 2 }];
+  obj11.transform = items7;
   items6[3] = obj11;
+  obj10.style = items6;
   items3[2] = closure_6(sharedValue(sharedValue1[9]).View, obj10);
+  obj7.children = items3;
   return closure_8(closure_7, obj7);
 });
-let result = size.fileFinishedImporting("modules/stage_channels/native/components/SpeakerPulse.tsx");
-
-export default tmp4;

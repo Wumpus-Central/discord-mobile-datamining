@@ -2,149 +2,138 @@
 
 // Module 9486 (StartEventPlatformUtils)
 import _modDef38 from "module_38" /* 38 */;
-import Constants from "Constants" /* 1085 */;
 import router_utils from "router_utils" /* 1112 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2057 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5575 */;
 import StageChannelModalActionCreatorsAll from "StageChannelModalActionCreators" /* 8102 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
-import size from "module_2" /* 2 */;
 
-let c4, c5;
-
-let obj = function _navigateToEvent() {
-  let guildId;
-  obj = _asyncToGenerator(async (arg0, arg1) => {
-    let entity_type;
-    let guild_id;
-    let obj10;
-    let obj2;
-    let obj8;
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    if (c5 === 2) {
-      c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+require = fn;
+let closure_10 = async function _navigateToEvent(arg0) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
-      try {
-        let channel;
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            let closure_3 = tmp4;
-            let closure_2 = tmp;
-            closure_0 = closure_1;
-            channel = undefined;
-            ({ entity_type, guild_id } = closure_0);
-            if (constants.STAGE_INSTANCE === entity_type) {
-              const channelId = RTCConnectionStore.getChannelId();
-              channel = ChannelStore.getChannel(tmp50.channel_id);
-              _modDef38(null != channel, "could not find channel");
-              if (channelId !== channel.id) {
-                c4 = 1;
-                c5 = 1;
-                const obj5 = { value: obj10.connectToStage(channel, true), done: false };
-                obj10 = StageChannelModalActionCreatorsAll;
-                return obj5;
-              }
-            } else {
-              if (constants.VOICE === entity_type) {
-                const channelId1 = RTCConnectionStore.getChannelId();
-                const channel1 = ChannelStore.getChannel(tmp50.channel_id);
-                _modDef38(null != channel1, "could not find channel");
-                if (channelId1 !== channel1.id) {
-                  const tmp20Result = SelectedChannelActionCreatorsDefault;
-                  const voiceChannel = tmp20Result.selectVoiceChannel(channel1.id);
-                }
-                if (closure_1 != null) {
-                  closure_1();
-                }
-              } else if (constants.EXTERNAL === entity_type) {
-                if (guildId.getGuildId() !== guild_id) {
-                  const obj6 = router_utils;
-                  obj6.transitionTo(Routes.CHANNEL(guild_id));
-                }
-                if (closure_1 != null) {
-                  closure_1();
-                }
-              }
-              c5 = 3;
-              return { value: "IconComponent", done: null };
-            }
-          }
-        } else if (1 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj7 = { value, done: true };
-            return obj7;
-          }
-        } else if (2 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj9 = { value, done: true };
-            return obj9;
-          } else {
-            c4 = 3;
-            c5 = 1;
-            const obj11 = { value: obj2.audienceAckRequestToSpeak(channel, false), done: false };
-            obj2 = closure_131_0(closure_131_3[8]);
-            return obj11;
-          }
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
           c5 = 3;
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          let tmp27 = closure_1;
+          closure_130_0 = closure_1;
+          closure_130_1 = undefined;
+          ({ entity_type, guild_id } = _require);
+          if (constants.STAGE_INSTANCE === entity_type) {
+            const channelId = RTCConnectionStore.getChannelId();
+            const channel = ChannelStore.getChannel(_require.channel_id);
+            closure_130_1 = channel;
+            _modDef38(null != channel, "could not find channel");
+            if (channelId !== channel.id) {
+              c4 = 1;
+              c5 = 1;
+              const obj5 = { value: StageChannelModalActionCreatorsAll.connectToStage(channel, true), done: false };
+              return obj5;
+            }
+          } else {
+            if (constants.VOICE === entity_type) {
+              const channelId1 = RTCConnectionStore.getChannelId();
+              const channel1 = ChannelStore.getChannel(_require.channel_id);
+              _modDef38(null != channel1, "could not find channel");
+              if (channelId1 !== channel1.id) {
+                const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel1.id);
+                const tmp21Result = SelectedChannelActionCreatorsDefault;
+              }
+              if (tmp27 != null) {
+                tmp27 = tmp27();
+              }
+            } else if (constants.EXTERNAL === entity_type) {
+              if (guildId.getGuildId() !== guild_id) {
+                router_utils.transitionTo(Routes.CHANNEL(guild_id));
+              }
+              if (tmp27 != null) {
+                tmp27();
+              }
+            }
+            c5 = 3;
+          }
         }
-        if (closure_0 != null) {
-          tmp36();
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj7 = { value, done: true };
+          return obj7;
         }
-        c4 = 2;
-        c5 = 1;
-        const obj12 = { value: obj8.navigateToStage(channel, null), done: false };
-        obj8 = closure_131_2(closure_131_3[7]);
-        return obj12;
-      } catch (tmp46) {
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj9 = { value, done: true };
+          return obj9;
+        } else {
+          c4 = 3;
+          c5 = 1;
+          const obj11 = { value: closure_131_0(closure_131_3[8]).audienceAckRequestToSpeak(closure_130_1, false), done: false };
+          return obj11;
+        }
+      } else if (arg0 === 1) {
         c5 = 3;
-        throw tmp46;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj = { value, done: true };
+        return obj;
       }
+      if (closure_130_0 != null) {
+        tmp37();
+      }
+      c4 = 2;
+      c5 = 1;
+      const obj12 = { value: closure_131_2(closure_131_3[7]).navigateToStage(closure_130_1, null), done: false };
+      return obj12;
+    } catch (tmp47) {
+      c5 = tmp;
+      throw tmp47;
     }
-  });
-  return obj(...arguments);
+  }
 };
-let closure_8 = GuildScheduledEventsConstants.GuildScheduledEventEntityTypes;
-const Routes = Constants.Routes;
+let closure_8 = fn(2057).GuildScheduledEventEntityTypes;
+const Routes = fn(1085).Routes;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/StartEventPlatformUtils.native.tsx");
 
 export const navigateToEvent = function navigateToEvent() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_10.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const postStartActions = function postStartActions() {
   return Promise.resolve();

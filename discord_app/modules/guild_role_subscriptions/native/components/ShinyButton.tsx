@@ -1,41 +1,30 @@
 // === Module 9916: ShinyButton ===
 
 // Module 9916 (ShinyButton)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import BaseTextButton2 from "BaseTextButton" /* 5602 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9917 */;
+import BaseTextButton from "BaseTextButton" /* 5602 */;
+import _modDef9917 from "module_9917" /* 9917 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let obj2;
-let obj3;
+require = fn;
 let closure_3 = ["style", "loading", "disabled", "onPress"];
-const jsx = Fragment.jsx;
-let createStyles = createStyles_mod;
-let obj = { container: obj2, sparkleIcon: obj3, disabled: { opacity: 0.5 } };
-createStyles = createStyles.createStyles;
-obj2 = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT };
-obj3 = { marginRight: 4, tintColor: nativeDefault.colors.WHITE };
-let closure_6 = createStyles(obj);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let disabled;
-  let loading;
-  let onPress;
-  let style;
-  let tmp12;
-  let tmp4;
-  let tmp5;
-  let tmp6;
-  let tmp7;
-  let tmp8;
-  const obj = react2;
-  const cResult = obj.c(23);
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { container: { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT }, sparkleIcon: null, disabled: null };
+let obj3 = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT };
+obj2.sparkleIcon = { marginRight: 4, tintColor: nativeDefault.colors.WHITE };
+obj2.disabled = { opacity: 0.5 };
+let closure_6 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+const obj4 = { marginRight: 4, tintColor: nativeDefault.colors.WHITE };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/ShinyButton.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(23);
   if (cResult[0] !== arg0) {
     ({ style, loading, disabled, onPress } = arg0);
     const tmp11 = _objectWithoutProperties(arg0, closure_3);
@@ -45,11 +34,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[3] = tmp11;
     cResult[4] = style;
     cResult[5] = onPress;
-    tmp8 = onPress;
-    tmp7 = style;
-    tmp6 = tmp11;
-    tmp5 = loading;
-    tmp4 = disabled;
+    let tmp8 = onPress;
+    let tmp7 = style;
+    let tmp6 = tmp11;
+    let tmp5 = loading;
+    let tmp4 = disabled;
   } else {
     tmp4 = cResult[1];
     tmp5 = cResult[2];
@@ -66,31 +55,28 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     cResult[6] = tmp8;
     cResult[7] = fn;
-    tmp12 = fn;
+    let tmp12 = fn;
   } else {
     tmp12 = cResult[7];
   }
   const tmp13 = closure_6();
   if (cResult[8] === tmp7) {
-    let tmp14;
     if (cResult[9] === tmp13.container) {
-      tmp14 = cResult[10];
+      let tmp14 = cResult[10];
     }
     if (cResult[11] === tmp4) {
       if (cResult[12] === tmp5) {
         if (cResult[13] === tmp13.disabled) {
-          let tmp15;
           if (cResult[14] === tmp13.sparkleIcon) {
-            tmp15 = cResult[15];
+            let tmp15 = cResult[15];
           }
           if (cResult[16] === tmp4) {
             if (cResult[17] === tmp5) {
               if (cResult[18] === tmp12) {
                 if (cResult[19] === tmp6) {
                   if (cResult[20] === tmp14) {
-                    let tmp19;
                     if (cResult[21] === tmp15) {
-                      tmp19 = cResult[22];
+                      let tmp19 = cResult[22];
                     }
                     return tmp19;
                   }
@@ -98,9 +84,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
             }
           }
-          const BaseTextButton = BaseTextButton2.BaseTextButton;
+          const obj2 = { onPress: tmp12, pillStyle: tmp14, loading: tmp5, disabled: tmp4, icon: tmp15 };
           const merged = Object.assign(tmp6);
-          const tmp24 = <BaseTextButton onPress={tmp12} pillStyle={tmp14} loading={tmp5} disabled={tmp4} icon={tmp15} />;
+          const tmp24 = jsx(BaseTextButton.BaseTextButton, { onPress: tmp12, pillStyle: tmp14, loading: tmp5, disabled: tmp4, icon: tmp15 });
           cResult[16] = tmp4;
           cResult[17] = tmp5;
           cResult[18] = tmp12;
@@ -114,9 +100,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     let tmp17Result;
     if (!tmp5) {
-      const Icon = native.Icon;
-      const items = [tmp13.sparkleIcon, tmp4 && tmp13.disabled];
-      tmp17Result = <Icon size={native.Icon.Sizes.REFRESH_SMALL_16} source={AssetRegistryDefault} style={items} />;
+      const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9917, style: null };
+      const items = [tmp13.sparkleIcon, ];
+      let disabled2 = tmp4;
+      if (tmp4) {
+        disabled2 = tmp13.disabled;
+      }
+      items[1] = disabled2;
+      obj3.style = items;
+      tmp17Result = jsx(native.Icon, { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9917, style: null });
     }
     cResult[11] = tmp4;
     cResult[12] = tmp5;
@@ -131,11 +123,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[10] = items1;
   tmp14 = items1;
 }) : ((style) => {
-  let disabled;
-  let loading;
-  let onPress;
   ({ loading, disabled, onPress } = style);
-  style = style.style;
   if (onPress === undefined) {
     onPress = function c() {
 
@@ -143,21 +131,21 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const merged = Object.assign(style, Object.assign({ style: 0, loading: 0, disabled: 0, onPress: 0 }));
   const tmp2 = closure_6();
-  const items = [tmp2.container, style];
+  const obj = { onPress, pillStyle: null, loading, disabled, icon: null };
+  const items = [tmp2.container, style.style];
+  obj.pillStyle = items;
   let tmp3Result;
-  const BaseTextButton = BaseTextButton2.BaseTextButton;
   if (!loading) {
-    const Icon = native.Icon;
+    const obj2 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9917, style: null };
     const items1 = [tmp2.sparkleIcon, ];
     if (disabled) {
       disabled = tmp2.disabled;
     }
     items1[1] = disabled;
-    tmp3Result = <Icon size={native.Icon.Sizes.REFRESH_SMALL_16} source={AssetRegistryDefault} style={items1} />;
+    obj2.style = items1;
+    tmp3Result = jsx(native.Icon, { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9917, style: null });
   }
+  obj.icon = tmp3Result;
   const merged1 = Object.assign(merged);
-  return <BaseTextButton onPress={onPress} pillStyle={items} loading={loading} disabled={disabled} icon={tmp3Result} />;
+  return jsx(BaseTextButton.BaseTextButton, { onPress, pillStyle: null, loading, disabled, icon: null });
 });
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/ShinyButton.tsx");
-
-export default tmp4;

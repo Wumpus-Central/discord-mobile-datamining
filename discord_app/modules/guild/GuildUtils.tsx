@@ -5,19 +5,18 @@ import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require;
 
 let result = size.fileFinishedImporting("modules/guild/GuildUtils.tsx");
 
 export const handleJoinGuild = function handleJoinGuild(guildId) {
   _require = guildId;
   if (null != guildId) {
-    let obj = GuildActionCreatorsDefault;
-    const joinGuildResult = obj.joinGuild(guildId);
-    const nextPromise = joinGuildResult.then(() => {
-      const obj = GuildActionCreatorsDefault;
-      const result = obj.transitionToGuildSync(guildId);
+    const joinGuildResult = GuildActionCreatorsDefault.joinGuild(guildId);
+    GuildActionCreatorsDefault.joinGuild(guildId).then(() => {
+      const result = GuildActionCreatorsDefault.transitionToGuildSync(closure_0);
+    }).catch(require("JoinGuildRefusedError").ignoreJoinGuildRefused);
+    const nextPromise = GuildActionCreatorsDefault.joinGuild(guildId).then(() => {
+      const result = GuildActionCreatorsDefault.transitionToGuildSync(closure_0);
     });
-    nextPromise.catch(require("JoinGuildRefusedError").ignoreJoinGuildRefused);
   }
 };

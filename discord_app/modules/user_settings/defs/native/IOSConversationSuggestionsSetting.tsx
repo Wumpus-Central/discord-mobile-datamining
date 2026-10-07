@@ -2,56 +2,40 @@
 
 // Module 14673 (IOSConversationSuggestionsSetting)
 import LoggerDefault from "Logger" /* 3 */;
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
-import intl2 from "intl" /* 1126 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import _slicedToArray from "_slicedToArray" /* 4498 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import react from "react" /* 19 */;
-import module_1254 from "module_1254" /* 1254 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import size from "module_2" /* 2 */;
+import _mod4498 from "module_4498" /* 4498 */;
+import noop from "module_19" /* 19 */;
 
-let conversationSuggestionsEnabled;
-
-const NativeModules = react_native.NativeModules;
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-let closure_4 = module_1254.createWithEqualityFn(() => ({ isEnabled: true }));
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+const identity = fn(1254);
+let closure_4 = identity.createWithEqualityFn(() => ({ isEnabled: true }));
+let ReactCompilerGating = fn(558);
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  const obj = react2;
-  const cResult = obj.c(1);
+  const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n(isEnabled) {
       return isEnabled.isEnabled;
     };
     cResult[0] = fn;
-    first = fn;
+    let first = fn;
   } else {
     first = cResult[0];
   }
-  return closure_4(first, _slicedToArray.shallow);
-}) : (() => closure_4((isEnabled) => isEnabled.isEnabled, _slicedToArray.shallow));
-const IntentsHandler = NativeModules.IntentsHandler;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp2;
-  let tmp3;
-  let obj = react2;
-  const cResult = obj.c(2);
+  return closure_4(first, _mod4498.shallow);
+}) : (() => closure_4((isEnabled) => isEnabled.isEnabled, _mod4498.shallow));
+fn(17).NativeModules.IntentsHandler;
+ReactCompilerGating = fn(558);
+const SettingBuilders = fn(11142);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t() {
       conversationSuggestionsEnabled = conversationSuggestionsEnabled.getConversationSuggestionsEnabled();
       conversationSuggestionsEnabled.then((result) => {
-        let closure_0 = result;
-        const obj = closure_0(closure_2[4]);
-        obj.batchUpdates(() => {
-          const obj = { isEnabled };
-          return state.setState(obj);
-        });
+        closure_0 = result;
+        closure_0(closure_2[4]).batchUpdates(() => state.setState({ isEnabled }));
       });
     };
     const items = [];
@@ -62,51 +46,68 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp2, tmp3] = cResult;
   }
-  const effect = react.useEffect(tmp2, tmp3);
+  const effect = noop.useEffect(tmp2, tmp3);
   return closure_5();
 }) : (() => {
-  const effect = react.useEffect(() => {
-    let state;
+  const effect = noop.useEffect(() => {
     conversationSuggestionsEnabled = conversationSuggestionsEnabled.getConversationSuggestionsEnabled();
     conversationSuggestionsEnabled.then((result) => {
       const isEnabled = result;
-      let obj = isEnabled(closure_2[4]);
-      obj.batchUpdates(() => {
-        const obj = { isEnabled };
-        return state.setState(obj);
-      });
+      isEnabled(closure_2[4]).batchUpdates(() => state.setState({ isEnabled }));
     });
   }, []);
   return closure_5();
 });
-let obj = {
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.J8foZq);
+    const intl = util.intl;
+    return intl.string(util.t.J8foZq);
   },
-  parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue: tmp2,
+  parent: fn(7645).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(2);
+    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+      const fn = function t() {
+        conversationSuggestionsEnabled = conversationSuggestionsEnabled.getConversationSuggestionsEnabled();
+        conversationSuggestionsEnabled.then((result) => {
+          closure_0 = result;
+          closure_0(closure_2[4]).batchUpdates(() => state.setState({ isEnabled }));
+        });
+      };
+      const items = [];
+      cResult[0] = fn;
+      cResult[1] = items;
+      tmp2 = fn;
+      tmp3 = items;
+    } else {
+      [tmp2, tmp3] = cResult;
+    }
+    const effect = noop.useEffect(tmp2, tmp3);
+    return closure_5();
+  }) : (() => {
+    const effect = noop.useEffect(() => {
+      conversationSuggestionsEnabled = conversationSuggestionsEnabled.getConversationSuggestionsEnabled();
+      conversationSuggestionsEnabled.then((result) => {
+        const isEnabled = result;
+        isEnabled(closure_2[4]).batchUpdates(() => state.setState({ isEnabled }));
+      });
+    }, []);
+    return closure_5();
+  }),
   onValueChange: function onIOSConversationSuggestionsSettingValueChange(arg0) {
     const result = IntentsHandler.setConversationSuggestionsEnabled(arg0);
-    const nextPromise = result.then((result) => {
-      let closure_0 = result;
-      const obj = closure_0(closure_2[4]);
-      obj.batchUpdates(() => {
-        const obj = { isEnabled };
-        return state.setState(obj);
-      });
-    });
-    nextPromise.catch((error) => {
-      const obj = new LoggerDefault("ConversationSuggestions");
-      obj.error("Error suggesting conversations", error);
+    result.then((result) => {
+      closure_0 = result;
+      closure_0(1259).batchUpdates(() => state.setState({ isEnabled }));
+    }).catch((error) => {
+      new LoggerDefault("ConversationSuggestions").error("Error suggesting conversations", error);
     });
   },
   usePredicate: function useHasIOSConversationSuggestionsSetting() {
-    const obj = PlatformUtils;
-    return !obj.isAndroid();
+    return !PlatformUtils.isAndroid();
   }
-};
-const toggle = SettingBuilders.createToggle(obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/IOSConversationSuggestionsSetting.tsx");
 
 export default toggle;

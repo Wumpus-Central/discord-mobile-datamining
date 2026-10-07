@@ -1,34 +1,19 @@
 // === Module 14843: useBountiesModalTiming ===
 
 // Module 14843 (useBountiesModalTiming)
-import QuestConstants from "QuestConstants" /* 5630 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let endMode;
-
-let closure_4 = QuestConstants.BOUNTY_CTA_TIMER_MILLISECONDS;
+const require = fn;
+let closure_4 = fn(5630).BOUNTY_CTA_TIMER_MILLISECONDS;
 const BountyVideoEndMode = { END_CARD: "END_CARD", END_CARD_WITH_CTA: "END_CARD_WITH_CTA", LOOP: "LOOP", APP_STORE_LOOP: "APP_STORE_LOOP" };
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((endMode) => {
-  let closure_11;
-  let closure_13;
-  let closure_14;
-  let closure_15;
-  let initialMaxVideoProgressSec;
-  let initialProgressSec;
-  let initialVideoDurationSec;
-  let isCompleted;
-  let onRewardEarned;
-  let rewardDurationMs;
-  let tmp10;
-  let tmp12;
-  let tmp14;
-  let tmp16;
-  let tmp7;
-  const obj = endMode(rewardDurationMs[4]);
-  const cResult = obj.c(32);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesModalTiming.tsx");
+
+export { BountyVideoEndMode };
+export const useBountiesModalTiming = ReactCompilerGating.isReactCompilerEnabled() ? ((endMode) => {
+  const cResult = endMode(rewardDurationMs[4]).c(32);
   endMode = endMode.endMode;
   rewardDurationMs = endMode.rewardDurationMs;
   ({ isCompleted, onRewardEarned } = endMode);
@@ -52,57 +37,46 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((endMode) => {
     num3 = initialVideoDurationSec;
   }
   let tmp2 = null != num3;
-  const useState = onVideoProgress.useState;
   if (tmp2) {
     tmp2 = num >= num3 - 1;
   }
   if (tmp2) {
-    const tmp3 = onVideoLooped;
     tmp2 = endMode !== onVideoLooped.LOOP;
   }
   if (tmp2) {
     tmp2 = endMode !== onVideoLooped.APP_STORE_LOOP;
   }
-  [tmp7, closure_11] = onRewardEarned(useState(tmp2), 2);
-  const tmp6 = onRewardEarned(useState(tmp2), 2);
+  const obj = endMode(rewardDurationMs[4]);
+  [tmp7, closure_11] = onRewardEarned(onVideoProgress.useState(tmp2), 2);
   if (cResult[0] === num) {
-    let tmp8;
     if (cResult[1] === num3) {
-      tmp8 = cResult[2];
+      let tmp8 = cResult[2];
     }
-    [tmp10, closure_12] = onRewardEarned(onVideoProgress.useState(tmp8), 2);
-    onRewardEarned(onVideoProgress.useState(tmp8), 2);
-    [tmp12, closure_13] = onRewardEarned(onVideoProgress.useState(null), 2);
-    onRewardEarned(onVideoProgress.useState(null), 2);
-    [tmp14, closure_14] = onRewardEarned(onVideoProgress.useState(num2), 2);
-    onRewardEarned(onVideoProgress.useState(num2), 2);
-    [tmp16, closure_15] = onRewardEarned(onVideoProgress.useState(num3), 2);
-    onRewardEarned(onVideoProgress.useState(num3), 2);
-    const ref = obj2.useRef(isCompleted);
-    const ref2 = obj2.useRef(num2);
-    const useRef = obj2.useRef;
+    [tmp10, closure_12] = onRewardEarned(obj2.useState(tmp8), 2);
+    const tmp5Result = onRewardEarned(obj2.useState(tmp8), 2);
+    [tmp12, closure_13] = onRewardEarned(obj2.useState(null), 2);
+    const tmp5Result4 = onRewardEarned(obj2.useState(null), 2);
+    [tmp14, closure_14] = onRewardEarned(obj2.useState(num2), 2);
+    const tmp5Result5 = onRewardEarned(obj2.useState(num2), 2);
+    [tmp16, closure_15] = onRewardEarned(obj2.useState(num3), 2);
+    obj2.useRef(isCompleted);
+    obj2.useRef(num2);
     if (num3 == null) {
       num3 = 0;
     }
-    const ref3 = useRef(num3);
-    const ref4 = obj2.useRef(0);
-    const ref5 = obj2.useRef(num);
+    obj2.useRef(num3);
+    obj2.useRef(0);
+    obj2.useRef(num);
     if (cResult[3] === onRewardEarned) {
       if (cResult[4] === onVideoProgress) {
-        let tmp17;
         if (cResult[5] === rewardDurationMs) {
-          tmp17 = cResult[6];
+          let tmp17 = cResult[6];
         }
         if (cResult[7] === endMode) {
           if (cResult[8] === onRewardEarned) {
             if (cResult[9] === onVideoEnd) {
-              let tmp18;
-              let tmp19;
-              let tmp21;
-              let tmp22;
-              let tmp23;
               if (cResult[10] === onVideoLooped) {
-                tmp18 = cResult[11];
+                let tmp18 = cResult[11];
               }
               if (cResult[12] !== playerRef) {
                 function te() {
@@ -112,22 +86,22 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((endMode) => {
                       current.seekToStart();
                     }
                   }
-                  closure_13(0);
-                  closure_11(false);
+                  closure_1_13(0);
+                  closure_1_11(false);
                 }
                 cResult[12] = playerRef;
                 cResult[13] = te;
-                tmp19 = te;
+                let tmp19 = te;
               } else {
                 tmp19 = cResult[13];
               }
               const _Symbol = Symbol;
               if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
                 function oe() {
-                  closure_11(true);
+                  closure_1_11(true);
                 }
                 cResult[14] = oe;
-                tmp21 = oe;
+                let tmp21 = oe;
               } else {
                 tmp21 = cResult[14];
               }
@@ -137,7 +111,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((endMode) => {
                 }
                 cResult[15] = onVideoPaused;
                 cResult[16] = se;
-                tmp22 = se;
+                let tmp22 = se;
               } else {
                 tmp22 = cResult[16];
               }
@@ -147,7 +121,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((endMode) => {
                 }
                 cResult[17] = onVideoResumed;
                 cResult[18] = le;
-                tmp23 = le;
+                let tmp23 = le;
               } else {
                 tmp23 = cResult[18];
               }
@@ -173,7 +147,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((endMode) => {
                   }
                 }
               }
-              const tmp27 = tmp7 && endMode !== onVideoLooped.END_CARD_WITH_CTA;
+              let tmp27 = tmp7;
+              if (tmp7) {
+                tmp27 = endMode !== onVideoLooped.END_CARD_WITH_CTA;
+              }
               if (!isCompleted) {
                 isCompleted = result > onVideoEnd;
               }
@@ -191,9 +168,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((endMode) => {
                               if (cResult[27] === result1) {
                                 if (cResult[28] === isCompleted) {
                                   if (cResult[29] === tmp10) {
-                                    let tmp30;
                                     if (cResult[30] === tmp16) {
-                                      tmp30 = cResult[31];
+                                      let tmp30 = cResult[31];
                                     }
                                     return tmp30;
                                   }
@@ -229,7 +205,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((endMode) => {
           onVideoEnd(ref2.current, ref3.current, ref5.current);
           if (endMode !== obj.LOOP) {
             if (tmp3 !== obj.APP_STORE_LOOP) {
-              closure_11(true);
+              closure_1_11(true);
             }
             if (!ref.current) {
               tmp7.current = true;
@@ -249,21 +225,21 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((endMode) => {
       }
     }
     const fn2 = function w(progress) {
-      let currentTime;
-      let seekableDuration;
       ({ currentTime, seekableDuration } = progress);
-      progress = progress.progress;
-      closure_13(null);
+      closure_1_13(null);
       const bound = Math.max(currentTime, ref2.current);
       ref2.current = bound;
-      ref3.current = seekableDuration;
-      ref5.current = currentTime;
-      closure_12(progress);
-      closure_14(bound);
-      closure_15(seekableDuration);
+      closure_18.current = seekableDuration;
+      closure_20.current = currentTime;
+      closure_1_12(progress.progress);
+      closure_1_14(bound);
+      closure_1_15(seekableDuration);
       onVideoProgress(bound, seekableDuration, currentTime);
       const current = ref.current;
-      const tmp8 = !current && 1000 * bound >= rewardDurationMs;
+      let tmp8 = !current;
+      if (!current) {
+        tmp8 = 1000 * bound >= rewardDurationMs;
+      }
       if (tmp8) {
         ref.current = true;
         onRewardEarned();
@@ -274,6 +250,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((endMode) => {
     cResult[5] = rewardDurationMs;
     cResult[6] = fn2;
     tmp17 = fn2;
+    const tmp5Result6 = onRewardEarned(obj2.useState(num3), 2);
   }
   const fn = function l() {
     num = 0;
@@ -286,31 +263,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((endMode) => {
   cResult[1] = num3;
   cResult[2] = fn;
   tmp8 = fn;
+  const tmp6 = onRewardEarned(onVideoProgress.useState(tmp2), 2);
 }) : ((endMode) => {
-  let _undefined;
-  let _undefined2;
-  let _undefined3;
-  let _undefined4;
-  let _undefined5;
-  let c11;
-  let c12;
-  let c13;
-  let c14;
-  let c15;
-  let isCompleted;
-  let onRewardEarned;
-  let tmp11;
-  let tmp13;
-  let tmp5;
-  let tmp7;
-  let tmp9;
-  const f118376 = () => {
-    num = 0;
-    if (null != num3) {
-      num = num / tmp;
-    }
-    return num;
-  };
   endMode = endMode.endMode;
   const rewardDurationMs = endMode.rewardDurationMs;
   ({ isCompleted, onRewardEarned } = endMode);
@@ -337,14 +291,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((endMode) => {
   c13 = undefined;
   c14 = undefined;
   c15 = undefined;
-  let ref;
-  let ref2;
-  let ref3;
-  let ref4;
-  let ref5;
-  const obj = onVideoProgress;
   let tmp = null != num3;
-  const useState = onVideoProgress.useState;
   if (tmp) {
     tmp = num >= num3 - 1;
   }
@@ -352,46 +299,55 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((endMode) => {
     tmp = endMode !== onVideoLooped.LOOP;
   }
   if (tmp) {
-    const tmp3 = onVideoLooped;
     tmp = endMode !== onVideoLooped.APP_STORE_LOOP;
   }
-  [tmp5, c11] = onRewardEarned(useState(tmp), 2);
-  const tmp4 = onRewardEarned(useState(tmp), 2);
-  [tmp7, c12] = onRewardEarned(obj.useState(f118376), 2);
-  const tmp6 = onRewardEarned(obj.useState(f118376), 2);
-  let tmp8 = onRewardEarned(obj.useState(null), 2);
-  [tmp9, c13] = tmp8;
-  [tmp11, c14] = onRewardEarned(obj.useState(num2), 2);
-  onRewardEarned(obj.useState(num2), 2);
-  [tmp13, c15] = onRewardEarned(obj.useState(num3), 2);
-  onRewardEarned(obj.useState(num3), 2);
-  ref = obj.useRef(isCompleted);
-  ref2 = obj.useRef(num2);
-  const useRef = obj.useRef;
+  [tmp5, c11] = onRewardEarned(onVideoProgress.useState(tmp), 2);
+  const tmp4 = onRewardEarned(onVideoProgress.useState(tmp), 2);
+  [tmp7, c12] = onRewardEarned(onVideoProgress.useState(() => {
+    num = 0;
+    if (null != num3) {
+      num = num / tmp;
+    }
+    return num;
+  }), 2);
+  const tmp6 = onRewardEarned(onVideoProgress.useState(() => {
+    num = 0;
+    if (null != num3) {
+      num = num / tmp;
+    }
+    return num;
+  }), 2);
+  [tmp9, c13] = onRewardEarned(onVideoProgress.useState(null), 2);
+  let tmp8 = onRewardEarned(onVideoProgress.useState(null), 2);
+  [tmp11, c14] = onRewardEarned(onVideoProgress.useState(num2), 2);
+  const tmp10 = onRewardEarned(onVideoProgress.useState(num2), 2);
+  [tmp13, c15] = onRewardEarned(onVideoProgress.useState(num3), 2);
+  onVideoProgress.useRef(isCompleted);
+  onVideoProgress.useRef(num2);
   if (num3 == null) {
     num3 = 0;
   }
-  ref3 = useRef(num3);
-  ref4 = obj.useRef(0);
-  ref5 = obj.useRef(num);
+  onVideoProgress.useRef(num3);
+  onVideoProgress.useRef(0);
+  onVideoProgress.useRef(num);
   const items = [onVideoProgress, onRewardEarned, rewardDurationMs];
   const items1 = [endMode, onVideoEnd, onVideoLooped, onRewardEarned];
   const callback = obj.useCallback((progress) => {
-    let currentTime;
-    let seekableDuration;
     ({ currentTime, seekableDuration } = progress);
-    progress = progress.progress;
     _undefined3(null);
     const bound = Math.max(currentTime, ref2.current);
     ref2.current = bound;
-    ref3.current = seekableDuration;
-    ref5.current = currentTime;
-    _undefined2(progress);
+    closure_18.current = seekableDuration;
+    closure_20.current = currentTime;
+    _undefined2(progress.progress);
     _undefined4(bound);
     _undefined5(seekableDuration);
     onVideoProgress(bound, seekableDuration, currentTime);
     const current = ref.current;
-    const tmp8 = !current && 1000 * bound >= rewardDurationMs;
+    let tmp8 = !current;
+    if (!current) {
+      tmp8 = 1000 * bound >= rewardDurationMs;
+    }
     if (tmp8) {
       ref.current = true;
       onRewardEarned();
@@ -455,16 +411,16 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((endMode) => {
       }
     }
   }
-  const tmp23 = tmp5 && endMode !== onVideoLooped.END_CARD_WITH_CTA;
+  let tmp23 = tmp5;
+  if (tmp5) {
+    tmp23 = endMode !== onVideoLooped.END_CARD_WITH_CTA;
+  }
   if (!isCompleted) {
     isCompleted = result > onVideoEnd;
   }
   if (isCompleted) {
     isCompleted = !tmp23;
   }
-  return { isCtaVisible: isCompleted, isEndCardVisible: tmp5, handleVideoEnd: callback1, handleVideoProgress: callback, handleVideoPaused: callback4, handleVideoResumed: callback5, handleReplay: callback2, showEndCard: callback3, rewardRemainingSeconds: num5, rewardTotalSeconds: result1, normalizedProgress: tmp7, maxVideoProgressSeconds: tmp11, videoDuration: tmp13 };
+  const obj2 = { isCtaVisible: isCompleted, isEndCardVisible: tmp5, handleVideoEnd: callback1, handleVideoProgress: callback, handleVideoPaused: callback4, handleVideoResumed: callback5, handleReplay: callback2, showEndCard: callback3, rewardRemainingSeconds: num5, rewardTotalSeconds: result1, normalizedProgress: tmp7, maxVideoProgressSeconds: tmp11, videoDuration: tmp13 };
+  return obj2;
 });
-let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesModalTiming.tsx");
-
-export { BountyVideoEndMode };
-export const useBountiesModalTiming = tmp2;

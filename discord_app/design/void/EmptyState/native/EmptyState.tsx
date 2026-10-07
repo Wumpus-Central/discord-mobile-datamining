@@ -1,48 +1,31 @@
 // === Module 13959: EmptyState ===
 
 // Module 13959 (EmptyState)
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import shared from "shared" /* 4735 */;
 import Text_Text from "Text/Text" /* 4892 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let Illustration;
-
-let c2;
-let c3;
-let closure_4;
-let hasOwnProperty;
-let obj2;
-({ View: c2, Image: c3 } = react_native);
-({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c2, Image: c3 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = { textTransform: "none" };
 let closure_7 = { accessible: false, accessibilityRole: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-let obj = { container: obj2, emptyImage: { flex: 1, maxWidth: 300, maxHeight: 200 }, textGroup: { alignSelf: "stretch", alignItems: "center" }, emptyTitle: { marginTop: 20, textTransform: "uppercase" }, emptyBody: { textAlign: "center", marginTop: 8 } };
-obj2 = { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: 36, paddingBottom: 80, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-let closure_8 = createStyles.createStyles(obj);
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((Illustration) => {
-  let body;
-  let bodyStyle;
-  let children;
-  let items2;
-  let items3;
-  let items4;
-  let items5;
-  let style;
-  let title;
-  let titleStyle;
-  let tmp10;
-  const obj = react2;
-  const cResult = obj.c(30);
+const createStyles = fn(4896);
+let obj2 = { container: { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: 36, paddingBottom: 80, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, emptyImage: { flex: 1, maxWidth: 300, maxHeight: 200 }, textGroup: { alignSelf: "stretch", alignItems: "center" }, emptyTitle: { marginTop: 20, textTransform: "uppercase" }, emptyBody: { textAlign: "center", marginTop: 8 } };
+let closure_8 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: 36, paddingBottom: 80, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/EmptyState/native/EmptyState.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((Illustration) => {
+  const cResult = c.c(30);
   const tmp4 = closure_8();
-  const obj2 = shared;
-  const themeContext = obj2.useThemeContext();
+  const themeContext = shared.useThemeContext();
   let hasItem;
   if (themeContext != null) {
     const enabledExperiments = themeContext.enabledExperiments;
@@ -53,25 +36,19 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((Illustration) => {
   shared;
   if (null != Illustration.Illustration) {
     if (cResult[0] === Illustration.imageStyle) {
-      let tmp20;
       if (cResult[1] === tmp4.emptyImage) {
-        tmp20 = cResult[2];
+        let tmp20 = cResult[2];
       }
       if (cResult[3] === Illustration.Illustration) {
-        let tmp21;
-        if (cResult[4] === tmp20) {
-          tmp21 = cResult[5];
-        }
-        tmp10 = tmp21;
       }
-      Illustration = Illustration.Illustration;
-      const obj3 = { resizeMode: "contain", style: tmp20 };
+      const obj3 = {};
       const merged = Object.assign(closure_7);
-      const tmp26 = React3(Illustration, obj3);
+      obj3.resizeMode = "contain";
+      obj3.style = tmp20;
+      const tmp26 = React4(Illustration.Illustration, obj3);
       cResult[3] = Illustration.Illustration;
       cResult[4] = tmp20;
       cResult[5] = tmp26;
-      tmp21 = tmp26;
     }
     const items = [tmp4.emptyImage, Illustration.imageStyle];
     cResult[0] = Illustration.imageStyle;
@@ -79,27 +56,27 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((Illustration) => {
     cResult[2] = items;
     tmp20 = items;
   } else {
-    tmp10 = null;
+    let tmp10 = null;
     if (null != Illustration.lightSource) {
       tmp10 = null;
       if (null != Illustration.darkSource) {
-        const tmpResult2 = shared;
-        const tmp11 = tmpResult2.isThemeLight(tmp9) ? Illustration.lightSource : Illustration.darkSource;
+        const tmp11 = shared.isThemeLight(tmp9) ? Illustration.lightSource : Illustration.darkSource;
         if (cResult[6] === Illustration.imageStyle) {
-          let tmp12;
           if (cResult[7] === tmp4.emptyImage) {
-            tmp12 = cResult[8];
+            let tmp12 = cResult[8];
           }
           if (cResult[9] === tmp11) {
-            let tmp13;
             if (cResult[10] === tmp12) {
-              tmp13 = cResult[11];
+              let tmp13 = cResult[11];
             }
             tmp10 = tmp13;
           }
-          const obj4 = { resizeMode: "contain", source: tmp11, style: tmp12 };
+          const obj4 = {};
           const merged1 = Object.assign(closure_7);
-          const tmp19 = React3(_false, obj4);
+          obj4.resizeMode = "contain";
+          obj4.source = tmp11;
+          obj4.style = tmp12;
+          const tmp19 = React4(React3, obj4);
           cResult[9] = tmp11;
           cResult[10] = tmp12;
           cResult[11] = tmp19;
@@ -110,47 +87,46 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((Illustration) => {
         cResult[7] = tmp4.emptyImage;
         cResult[8] = items1;
         tmp12 = items1;
+        const tmpResult2 = shared;
       }
     }
-  }
-  ({ style, body, title, children, bodyStyle, titleStyle } = Illustration);
-  if (cResult[12] === style) {
-    let tmp28;
-    if (cResult[13] === tmp4.container) {
-      tmp28 = cResult[14];
-    }
-    if (cResult[15] === body) {
-      if (cResult[16] === bodyStyle) {
-        if (cResult[17] === (null != title || null != body)) {
-          if (cResult[18] === tmp4.emptyBody) {
-            if (cResult[19] === tmp4.emptyTitle) {
-              if (cResult[20] === tmp4.textGroup) {
-                if (cResult[21] === title) {
-                  if (cResult[22] === titleStyle) {
-                    let tmp29;
-                    if (cResult[23] === closure_6) {
-                      tmp29 = cResult[24];
-                    }
-                    if (cResult[25] === children) {
-                      if (cResult[26] === tmp10) {
-                        if (cResult[27] === tmp28) {
-                          let tmp37;
-                          if (cResult[28] === tmp29) {
-                            tmp37 = cResult[29];
+    ({ style, body, title, children, bodyStyle, titleStyle } = Illustration);
+    if (cResult[12] === style) {
+      if (cResult[13] === tmp4.container) {
+        let tmp29 = cResult[14];
+      }
+      if (cResult[15] === body) {
+        if (cResult[16] === bodyStyle) {
+          if (cResult[17] === tmp28) {
+            if (cResult[18] === tmp4.emptyBody) {
+              if (cResult[19] === tmp4.emptyTitle) {
+                if (cResult[20] === tmp4.textGroup) {
+                  if (cResult[21] === title) {
+                    if (cResult[22] === titleStyle) {
+                      if (cResult[23] === closure_6) {
+                        let tmp30 = cResult[24];
+                      }
+                      if (cResult[25] === children) {
+                        if (cResult[26] === tmp10) {
+                          if (cResult[27] === tmp29) {
+                            if (cResult[28] === tmp30) {
+                              let tmp38 = cResult[29];
+                            }
+                            return tmp38;
                           }
-                          return tmp37;
                         }
                       }
+                      const obj5 = { style: tmp29, children: null };
+                      const items2 = [tmp10, tmp30, children];
+                      obj5.children = items2;
+                      const tmp41 = hasOwnProperty(React2, obj5);
+                      cResult[25] = children;
+                      cResult[26] = tmp10;
+                      cResult[27] = tmp29;
+                      cResult[28] = tmp30;
+                      cResult[29] = tmp41;
+                      tmp38 = tmp41;
                     }
-                    const obj5 = { style: tmp28, children: items2 };
-                    items2 = [tmp10, tmp29, children];
-                    const tmp40 = hasOwnProperty(React2, obj5);
-                    cResult[25] = children;
-                    cResult[26] = tmp10;
-                    cResult[27] = tmp28;
-                    cResult[28] = tmp29;
-                    cResult[29] = tmp40;
-                    tmp37 = tmp40;
                   }
                 }
               }
@@ -158,59 +134,51 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((Illustration) => {
           }
         }
       }
-    }
-    let tmp31Result = null;
-    if (null != title || null != body) {
-      let tmp33 = null;
-      const obj6 = { style: tmp4.textGroup, accessible: true, children: items4 };
-      if (null != title) {
-        const obj7 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, style: items3, children: title };
-        items3 = [tmp4.emptyTitle, titleStyle, closure_6];
-        tmp33 = React3(Text_Text.Text, obj7);
+      let tmp32Result = null;
+      if (tmp28) {
+        const obj6 = { style: tmp4.textGroup, accessible: true, children: null };
+        let tmp34 = null;
+        if (null != title) {
+          const obj7 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, style: null, children: null };
+          const items3 = [tmp4.emptyTitle, titleStyle, closure_6];
+          obj7.style = items3;
+          obj7.children = title;
+          tmp34 = React4(Text_Text.Text, obj7);
+        }
+        const items4 = [tmp34, ];
+        let tmp36 = null;
+        if (null != body) {
+          const obj8 = { variant: "text-md/medium", color: "text-muted", maxFontSizeMultiplier: 2, style: null, children: null };
+          const items5 = [tmp4.emptyBody, bodyStyle];
+          obj8.style = items5;
+          obj8.children = body;
+          tmp36 = React4(Text_Text.Text, obj8);
+        }
+        items4[1] = tmp36;
+        obj6.children = items4;
+        tmp32Result = hasOwnProperty(React2, obj6);
       }
-      items4 = [tmp33, ];
-      let tmp35 = null;
-      if (null != body) {
-        const obj8 = { variant: "text-md/medium", color: "text-muted", maxFontSizeMultiplier: 2, style: items5, children: body };
-        items5 = [tmp4.emptyBody, bodyStyle];
-        tmp35 = React3(Text_Text.Text, obj8);
-      }
-      items4[1] = tmp35;
-      tmp31Result = hasOwnProperty(React2, obj6);
+      cResult[15] = body;
+      cResult[16] = bodyStyle;
+      cResult[17] = tmp28;
+      cResult[18] = tmp4.emptyBody;
+      cResult[19] = tmp4.emptyTitle;
+      cResult[20] = tmp4.textGroup;
+      cResult[21] = title;
+      cResult[22] = titleStyle;
+      cResult[23] = closure_6;
+      cResult[24] = tmp32Result;
+      tmp30 = tmp32Result;
     }
-    cResult[15] = body;
-    cResult[16] = bodyStyle;
-    cResult[17] = null != title || null != body;
-    cResult[18] = tmp4.emptyBody;
-    cResult[19] = tmp4.emptyTitle;
-    cResult[20] = tmp4.textGroup;
-    cResult[21] = title;
-    cResult[22] = titleStyle;
-    cResult[23] = closure_6;
-    cResult[24] = tmp31Result;
-    tmp29 = tmp31Result;
+    const items6 = [tmp4.container, style];
+    cResult[12] = style;
+    cResult[13] = tmp4.container;
+    cResult[14] = items6;
+    tmp29 = items6;
   }
-  const items6 = [tmp4.container, style];
-  cResult[12] = style;
-  cResult[13] = tmp4.container;
-  cResult[14] = items6;
-  tmp28 = items6;
 }) : ((Illustration) => {
-  let body;
-  let items;
-  let items1;
-  let items2;
-  let items3;
-  let items4;
-  let items5;
-  let items6;
-  let title;
-  let tmp11Result;
-  let tmp22Result;
-  let tmp2Result2;
   const tmp = closure_8();
-  const obj = shared;
-  const themeContext = obj.useThemeContext();
+  const themeContext = shared.useThemeContext();
   let hasItem;
   if (themeContext != null) {
     const enabledExperiments = themeContext.enabledExperiments;
@@ -220,51 +188,58 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((Illustration) => {
   }
   shared;
   if (null != Illustration.Illustration) {
-    Illustration = Illustration.Illustration;
-    const obj2 = { resizeMode: "contain", style: items };
+    const obj2 = {};
     const merged = Object.assign(closure_7);
-    items = [tmp.emptyImage, Illustration.imageStyle];
-    tmp11Result = React3(Illustration, obj2);
+    obj2.resizeMode = "contain";
+    const items = [tmp.emptyImage, Illustration.imageStyle];
+    obj2.style = items;
+    let tmp11Result = React4(Illustration.Illustration, obj2);
   } else {
     tmp11Result = null;
-    const tmp9 = null != Illustration.lightSource && null != Illustration.darkSource;
     if (tmp9) {
-      const obj3 = { resizeMode: "contain", source: tmp2Result2.isThemeLight(tmp8) ? Illustration.lightSource : Illustration.darkSource, style: items1 };
+      const obj3 = {};
       const merged1 = Object.assign(closure_7);
-      items1 = [tmp.emptyImage, Illustration.imageStyle];
-      tmp2Result2 = shared;
-      tmp11Result = React3(_false, obj3);
+      obj3.resizeMode = "contain";
+      obj3.source = shared.isThemeLight(tmp8) ? Illustration.lightSource : Illustration.darkSource;
+      const items1 = [tmp.emptyImage, Illustration.imageStyle];
+      obj3.style = items1;
+      tmp11Result = React4(React3, obj3);
+      const tmp2Result2 = shared;
     }
+    tmp9 = null != Illustration.lightSource && null != Illustration.darkSource;
   }
   ({ body, title } = Illustration);
-  const obj4 = { style: items2, children: items3 };
-  items2 = [tmp.container, Illustration.style];
-  items3 = [tmp11Result, , ];
-  const children = Illustration.children;
+  const obj4 = { style: null, children: null };
+  const items2 = [tmp.container, Illustration.style];
+  obj4.style = items2;
+  const items3 = [tmp11Result, , ];
   if (null != title) {
+    const obj5 = { style: tmp.textGroup, accessible: true, children: null };
     let tmp25 = null;
-    const obj5 = { style: tmp.textGroup, accessible: true, children: items5 };
     if (null != title) {
-      const obj6 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, style: items4, children: title };
-      items4 = [tmp.emptyTitle, tmp21, closure_6];
-      tmp25 = React3(Text_Text.Text, obj6);
+      const obj6 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, style: null, children: null };
+      const items4 = [tmp.emptyTitle, tmp21, closure_6];
+      obj6.style = items4;
+      obj6.children = title;
+      tmp25 = React4(Text_Text.Text, obj6);
     }
-    items5 = [tmp25, ];
+    const items5 = [tmp25, ];
     let tmp27 = null;
     if (null != body) {
-      const obj7 = { variant: "text-md/medium", color: "text-muted", maxFontSizeMultiplier: 2, style: items6, children: body };
-      items6 = [tmp.emptyBody, tmp20];
-      tmp27 = React3(Text_Text.Text, obj7);
+      const obj7 = { variant: "text-md/medium", color: "text-muted", maxFontSizeMultiplier: 2, style: null, children: null };
+      const items6 = [tmp.emptyBody, tmp20];
+      obj7.style = items6;
+      obj7.children = body;
+      tmp27 = React4(Text_Text.Text, obj7);
     }
     items5[1] = tmp27;
-    tmp22Result = hasOwnProperty(React2, obj5);
+    obj5.children = items5;
+    let tmp22Result = hasOwnProperty(React2, obj5);
   } else {
     tmp22Result = null;
   }
   items3[1] = tmp22Result;
-  items3[2] = children;
+  items3[2] = Illustration.children;
+  obj4.children = items3;
   return hasOwnProperty(React2, obj4);
 });
-const result = size.fileFinishedImporting("design/void/EmptyState/native/EmptyState.tsx");
-
-export default tmp5;

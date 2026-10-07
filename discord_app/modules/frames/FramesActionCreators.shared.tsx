@@ -1,189 +1,152 @@
-// === Module 9021: launchFrame ===
+// === Module 9021: _launchFrame ===
 
-// Module 9021 (launchFrame)
+// Module 9021 (_launchFrame)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 9001 */;
 import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 9022 */;
 import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9026 */;
 import getFrameRequestSurfaceTypeDefault from "getFrameRequestSurfaceType" /* 9071 */;
 import getFramesManagerDefault from "getFramesManager" /* 9076 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import FramesStore from "FramesStore" /* 9000 */;
-import FramesConstants from "FramesConstants" /* 8738 */;
-import size from "module_2" /* 2 */;
 
-let dispatchResult1;
-
-let c9;
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let obj = function _launchFrame() {
-  obj = _asyncToGenerator(async (applicationId) => {
-    let c0;
-    let c1;
-    let c2;
-    let c3;
-    let c4;
-    let c5;
-    let hostWindowKey;
-    let obj6;
-    let tmp50;
-    let value;
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (applicationId === 1) {
-        throw value;
-      } else if (applicationId === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+require = fn;
+let closure_11 = async function _launchFrame(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      let analyticsContext;
-      try {
-        let surface;
-        let customId;
-        let referrerId;
-        let intent;
-        let proxyTicket;
-        let closure_9;
-        let message;
-        c6 = 2;
-        if (0 === hostWindowKey) {
-          if (applicationId === 1) {
-            c6 = 3;
-            throw value;
-          } else if (applicationId === 2) {
-            c6 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            let closure_2 = tmp;
-            let closure_1 = tmp4;
-            applicationId = undefined;
-            surface = undefined;
-            customId = undefined;
-            referrerId = undefined;
-            analyticsContext = undefined;
-            ({ applicationId: c0, surface: c1, customId: c2, referrerId: c3, analyticsContext: c4, hostWindowKey: c5 } = closure_0);
-            value = undefined;
-            intent = undefined;
-            proxyTicket = undefined;
-            closure_9 = undefined;
-            message = undefined;
-            hostWindowKey = 1;
-            c6 = 1;
-            return { value: "Reflect", done: true };
-          }
-        } else if (1 === hostWindowKey) {
-          if (applicationId === 1) {
-            c6 = 3;
-            throw value;
-          } else if (applicationId === 2) {
-            c6 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          } else {
-            value = closure_130_9(applicationId, surface);
-            intent = closure_130_4.getFrame(value);
-            if (null != intent) {
-              if (intent.intent === closure_130_5.MAIN) {
-                closure_130_14(value);
-                const obj7 = { frameId: value, layoutMode: closure_130_6.FOCUSED };
-                closure_130_15(obj7);
-              }
-              c6 = 3;
-              const obj10 = { value, done: true };
-              return obj10;
-            } else {
-              if (closure_130_8(surface) === closure_130_5.MAIN) {
-                const obj8 = closure_130_0(closure_130_2[4]);
-                const result = obj8.leaveCurrentEmbeddedActivity();
-                closure_130_12();
-              }
-              const obj11 = { type: "FRAME_LAUNCH_START", applicationId, frameId: value, surface };
-              const obj9 = closure_130_1(closure_130_2[5]);
-              obj9.dispatch(obj11);
-              analyticsContext = 1;
-              const createProxyTicket = closure_130_0(closure_130_2[6]).createProxyTicket;
-              const tmp46 = closure_130_0(closure_130_2[6]);
-              hostWindowKey = 4;
-              c6 = 1;
-              const obj12 = { value: createProxyTicket(applicationId, tmp50, closure_130_1(closure_130_2[7])(surface)), done: false };
-              tmp50 = closure_130_7(surface);
-              return obj12;
-            }
-          }
-        } else {
-          let error;
-          if (2 === hostWindowKey) {
-            analyticsContext = 0;
-            error = closure_3;
-            closure_9 = closure_130_1(closure_130_2[8])();
-            hostWindowKey = 3;
-            c6 = 1;
-            const obj13 = { value: obj6.getActivityLaunchErrorInfo(error, applicationId), done: false };
-            obj6 = closure_130_0(closure_130_2[9]);
-            return obj13;
-          } else if (3 === hostWindowKey) {
-            if (applicationId === 1) {
-              c6 = 3;
-              throw value;
-            } else if (applicationId === 2) {
-              c6 = 3;
-              const obj14 = { value, done: true };
-              return obj14;
-            } else {
-              message = value;
-              closure_9.showLaunchErrorModal(message.message);
-              const obj15 = { type: "FRAME_LAUNCH_FAIL", applicationId, frameId: value, error, analyticsContext };
-              const obj3 = closure_130_1(closure_130_2[5]);
-              obj3.dispatch(obj15);
-              throw error;
-            }
-          } else if (applicationId === 1) {
-            c6 = 3;
-            throw value;
-          } else if (applicationId === 2) {
-            analyticsContext = 0;
-            c6 = 3;
-            const obj16 = { value, done: true };
-            return obj16;
-          } else {
-            proxyTicket = value;
-            const obj18 = { type: "FRAME_LAUNCH", applicationId, frameId: value, surface, proxyTicket, customId, referrerId, analyticsContext, hostWindowKey };
-            const obj17 = closure_130_1(closure_130_2[5]);
-            obj17.dispatch(obj18);
-            analyticsContext = 0;
-            c6 = 3;
-            obj = { value, done: true };
-            return obj;
-          }
-        }
-      } catch (tmp68) {
-        closure_3 = tmp68;
-        if (0 === analyticsContext) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
           c6 = 3;
-          throw tmp68;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          hostWindowKey = 2;
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          closure_129_5 = undefined;
+          ({ applicationId: closure_129_0, surface: closure_129_1, customId: closure_129_2, referrerId: closure_129_3, analyticsContext: closure_129_4, hostWindowKey: closure_129_5 } = closure_0);
+          closure_129_6 = undefined;
+          let frame;
+          closure_129_8 = undefined;
+          closure_129_9 = undefined;
+          closure_129_10 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "Reflect", done: true };
         }
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_129_6 = closure_130_9(closure_129_0, closure_129_1);
+          frame = closure_130_4.getFrame(closure_129_6);
+          if (null != frame) {
+            if (frame.intent === closure_130_5.MAIN) {
+              closure_130_14(closure_129_6);
+              const obj7 = { frameId: closure_129_6, layoutMode: closure_130_6.FOCUSED };
+              closure_130_15(obj7);
+            }
+            c6 = 3;
+            const obj10 = { value: closure_129_6, done: true };
+            return obj10;
+          } else {
+            if (closure_130_8(closure_129_1) === closure_130_5.MAIN) {
+              const result = closure_130_0(closure_130_2[4]).leaveCurrentEmbeddedActivity();
+              closure_130_12();
+              const obj8 = closure_130_0(closure_130_2[4]);
+            }
+            const obj12 = { type: "FRAME_LAUNCH_START", applicationId: closure_129_0, frameId: closure_129_6, surface: closure_129_1 };
+            closure_130_1(closure_130_2[5]).dispatch(obj12);
+            c4 = 1;
+            const obj9 = closure_130_1(closure_130_2[5]);
+            const obj11 = closure_130_0(closure_130_2[6]);
+            c5 = 4;
+            c6 = 1;
+            const obj13 = { value: obj11.createProxyTicket(closure_129_0, closure_130_7(closure_129_1), closure_130_1(closure_130_2[7])(closure_129_1)), done: false };
+            return obj13;
+          }
+        }
+      } else if (2 === tmp7) {
+        c4 = 0;
+        closure_129_11 = closure_3;
+        closure_129_9 = closure_130_1(closure_130_2[8])();
+        c5 = 3;
+        c6 = 1;
+        const obj14 = { value: closure_130_0(closure_130_2[9]).getActivityLaunchErrorInfo(closure_129_11, closure_129_0), done: false };
+        return obj14;
+      } else if (3 === tmp7) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj15 = { value, done: true };
+          return obj15;
+        } else {
+          closure_129_10 = value;
+          closure_129_9.showLaunchErrorModal(closure_129_10.message);
+          const obj16 = { type: "FRAME_LAUNCH_FAIL", applicationId: closure_129_0, frameId: closure_129_6, error: closure_129_11, analyticsContext: closure_129_4 };
+          closure_130_1(closure_130_2[5]).dispatch(obj16);
+          throw closure_129_11;
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        const obj17 = { value, done: true };
+        return obj17;
+      } else {
+        closure_129_8 = value;
+        const obj19 = { type: "FRAME_LAUNCH", applicationId: closure_129_0, frameId: closure_129_6, surface: closure_129_1, proxyTicket: closure_129_8, customId: closure_129_2, referrerId: closure_129_3, analyticsContext: closure_129_4, hostWindowKey: closure_129_5 };
+        closure_130_1(closure_130_2[5]).dispatch(obj19);
+        c4 = 0;
+        c6 = 3;
+        const obj = { value: closure_129_6, done: true };
+        return obj;
+      }
+    } catch (tmp70) {
+      closure_3 = tmp70;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp70;
+      } else {
+        c5 = tmp;
       }
     }
-  });
-  return obj(...arguments);
+  }
 };
 function clearMainFrameSlot() {
   const mainFrame = FramesStore.getMainFrame();
   if (null != mainFrame) {
-    if (mainFrame.intent === hasOwnProperty.MAIN) {
-      obj = getFramesManagerDefault();
-      obj.leaveFrame(mainFrame.id);
+    if (mainFrame.intent === constants.MAIN) {
+      getFramesManagerDefault().leaveFrame(mainFrame.id);
+      const obj = getFramesManagerDefault();
     } else {
       demoteMainFrame(mainFrame.id);
     }
@@ -196,20 +159,15 @@ function demoteMainFrame(id) {
     id = mainFrame.id;
   }
   if (id === id) {
-    const FOCUSED = metroRequire.FOCUSED;
     const frame = FramesStore.getFrame(id);
     if (null != frame) {
-      const obj3 = { type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: frame.applicationId, frameId: id, layoutMode: FOCUSED };
-      const obj2 = DispatcherDefault;
-      obj2.dispatch(obj3);
+      const obj3 = { type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: frame.applicationId, frameId: id, layoutMode: constants2.FOCUSED };
+      DispatcherDefault.dispatch(obj3);
     }
-    const PANEL = ActivityPanelModes.PANEL;
-    const obj5 = { type: "FRAME_SET_PANEL_MODE", frameId: id, activityPanelMode: PANEL };
-    const obj4 = DispatcherDefault;
-    obj4.dispatch(obj5);
+    const obj5 = { type: "FRAME_SET_PANEL_MODE", frameId: id, activityPanelMode: ActivityPanelModes.PANEL };
+    DispatcherDefault.dispatch(obj5);
     const obj7 = { type: "FRAME_CLEAR_MAIN_SLOT", frameId: id };
-    const obj6 = DispatcherDefault;
-    obj6.dispatch(obj7);
+    DispatcherDefault.dispatch(obj7);
   }
 }
 function promoteFrame(frameId) {
@@ -223,216 +181,203 @@ function promoteFrame(frameId) {
     tmp = id !== frameId;
   }
   if (tmp) {
-    const obj2 = leaveCurrentEmbeddedActivity;
-    const result = obj2.leaveCurrentEmbeddedActivity();
-    const mainFrame1 = FramesStore.getMainFrame();
-    if (null != mainFrame1) {
-      if (mainFrame1.intent === hasOwnProperty.MAIN) {
-        const obj3 = getFramesManagerDefault();
-        obj3.leaveFrame(mainFrame1.id);
-      } else {
-        demoteMainFrame(mainFrame1.id);
-      }
+    const result = leaveCurrentEmbeddedActivity.leaveCurrentEmbeddedActivity();
+    let mainFrame1 = FramesStore.getMainFrame();
+    if (null == mainFrame1) {
+      mainFrame1 = DispatcherDefault;
+      const obj3 = { type: "FRAME_PROMOTE", frameId };
+      mainFrame1.dispatch(obj3);
+    } else if (mainFrame1.intent !== constants.MAIN) {
+      demoteMainFrame(mainFrame1.id);
     }
-    const obj5 = { type: "FRAME_PROMOTE", frameId };
-    const obj4 = DispatcherDefault;
-    obj4.dispatch(obj5);
+    getFramesManagerDefault().leaveFrame(mainFrame1.id);
+    const obj4 = getFramesManagerDefault();
   }
 }
 function updateFrameLayoutMode(frameId) {
   frameId = frameId.frameId;
-  const layoutMode = frameId.layoutMode;
   const frame = FramesStore.getFrame(frameId);
   if (null != frame) {
-    const obj2 = { type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: frame.applicationId, frameId, layoutMode };
-    obj = DispatcherDefault;
-    obj.dispatch(obj2);
+    const obj2 = { type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: frame.applicationId, frameId, layoutMode: frameId.layoutMode };
+    DispatcherDefault.dispatch(obj2);
   }
 }
-obj = function _refreshProxyTicket() {
-  obj = _asyncToGenerator(async (frameId) => {
-    let closure_3;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
-    return (async (arg0) => {
-      let tmp81;
-      if (c6 === 2) {
-        c6 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+let closure_16 = async function _refreshProxyTicket() {
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  return (async (arg0) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp8 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        let tmp49;
-        let c4;
-        try {
-          let applicationId;
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              return { value, done: true };
-            } else {
-              applicationId = undefined;
-              proxyTicket = undefined;
-              tmp49 = undefined;
-              message = undefined;
-              frame = frame.getFrame(frameId);
-              if (null == frame) {
-                c6 = 3;
-                return { value: false, done: true };
-              } else {
-                applicationId = frame.applicationId;
-                const surface = frame.surface;
-                const obj5 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId, frameId, refreshing: true };
-                const obj20 = DispatcherDefault;
-                obj20.dispatch(obj5);
-                c4 = 2;
-                const createProxyTicket = EmbeddedActivitiesActionCreators.createProxyTicket;
-                EmbeddedActivitiesActionCreators;
-                c5 = 4;
-                c6 = 1;
-                const obj7 = { value: createProxyTicket(applicationId, tmp81, getFrameRequestSurfaceTypeDefault(surface)), done: false };
-                tmp81 = closure_2_7(surface);
-                return obj7;
-              }
-            }
-          } else if (1 === c5) {
-            c4 = 0;
-            const obj8 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId, frameId, refreshing: false };
-            const obj11 = closure_130_1(closure_130_2[5]);
-            dispatchResult1 = obj11.dispatch(obj8);
-            throw tmp49;
-          } else if (2 === c5) {
-            c4 = 1;
-            let closure_5 = tmp49;
-            tmp49 = closure_130_1(closure_130_2[8])();
-            const obj9 = closure_130_0(closure_130_2[9]);
-            dispatchResult1 = obj9.getActivityLaunchErrorInfo(closure_5, applicationId);
-            c5 = 3;
-            c6 = 1;
-            return { value: dispatchResult1, done: false };
-          } else if (3 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 0;
-              const obj12 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId, frameId, refreshing: false };
-              const obj6 = closure_130_1(closure_130_2[5]);
-              obj6.dispatch(obj12);
-              c6 = 3;
-              return { value, done: true };
-            } else {
-              message = value;
-              tmp49.showLaunchErrorModal(message.message);
-              c4 = 0;
-              const obj14 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId, frameId, refreshing: false };
-              const obj4 = closure_130_1(closure_130_2[5]);
-              obj4.dispatch(obj14);
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_2 = tmp4;
+            closure_1 = tmp6;
+            closure_129_0 = frameId;
+            closure_129_1 = undefined;
+            closure_129_2 = undefined;
+            closure_129_3 = undefined;
+            closure_129_4 = undefined;
+            frame = frame.getFrame(frameId);
+            if (null == frame) {
               c6 = 3;
               return { value: false, done: true };
+            } else {
+              const applicationId = frame.applicationId;
+              closure_129_1 = applicationId;
+              const surface = frame.surface;
+              const obj5 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId, frameId, refreshing: true };
+              DispatcherDefault.dispatch(obj5);
+              c4 = 2;
+              const obj22 = EmbeddedActivitiesActionCreators;
+              c5 = 4;
+              c6 = 1;
+              const obj7 = { value: obj22.createProxyTicket(applicationId, closure_2_7(surface), getFrameRequestSurfaceTypeDefault(surface)), done: false };
+              return obj7;
             }
-          } else if (arg0 === 1) {
+          }
+        } else if (1 === tmp9) {
+          c4 = 0;
+          const obj8 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: closure_129_1, frameId: closure_129_0, refreshing: false };
+          closure_130_1(closure_130_2[5]).dispatch(obj8);
+          throw closure_3;
+        } else if (2 === tmp9) {
+          c4 = 1;
+          closure_129_5 = closure_3;
+          closure_129_3 = closure_130_1(closure_130_2[8])();
+          c5 = 3;
+          c6 = 1;
+          const obj10 = { value: closure_130_0(closure_130_2[9]).getActivityLaunchErrorInfo(closure_129_5, closure_129_1), done: false };
+          return obj10;
+        } else if (3 === tmp9) {
+          if (arg0 === 1) {
             c6 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 0;
-            const obj15 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId, frameId, refreshing: false };
-            obj = closure_130_1(closure_130_2[5]);
-            obj.dispatch(obj15);
+            const obj12 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: closure_129_1, frameId: closure_129_0, refreshing: false };
+            closure_130_1(closure_130_2[5]).dispatch(obj12);
             c6 = 3;
-            return { value, done: true };
+            const obj13 = { value, done: true };
+            return obj13;
           } else {
-            proxyTicket = value;
-            const obj19 = { type: "FRAME_UPDATE_PROXY_TICKET", applicationId, frameId, proxyTicket };
-            const obj16 = closure_130_1(closure_130_2[5]);
-            obj16.dispatch(obj19);
+            closure_129_4 = value;
+            closure_129_3.showLaunchErrorModal(closure_129_4.message);
             c4 = 0;
-            const obj21 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId, frameId, refreshing: false };
-            const obj18 = closure_130_1(closure_130_2[5]);
-            obj18.dispatch(obj21);
+            const obj14 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: closure_129_1, frameId: closure_129_0, refreshing: false };
+            closure_130_1(closure_130_2[5]).dispatch(obj14);
             c6 = 3;
-            return { value: true, done: true };
+            return { value: false, done: true };
           }
-        } catch (tmp49) {
-          if (0 === c4) {
-            c6 = 3;
-            throw tmp49;
-          } else if (1 === tmp51) {
-            c5 = 1;
-          } else {
-            c5 = 2;
-          }
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 0;
+          const obj15 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: closure_129_1, frameId: closure_129_0, refreshing: false };
+          closure_130_1(closure_130_2[5]).dispatch(obj15);
+          c6 = 3;
+          const obj17 = { value, done: true };
+          return obj17;
+        } else {
+          closure_129_2 = value;
+          const obj19 = { type: "FRAME_UPDATE_PROXY_TICKET", applicationId: closure_129_1, frameId: closure_129_0, proxyTicket: closure_129_2 };
+          closure_130_1(closure_130_2[5]).dispatch(obj19);
+          c4 = 0;
+          const obj16 = closure_130_1(closure_130_2[5]);
+          const obj21 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: closure_129_1, frameId: closure_129_0, refreshing: false };
+          closure_130_1(closure_130_2[5]).dispatch(obj21);
+          c6 = 3;
+          return { value: true, done: true };
+        }
+      } catch (tmp54) {
+        closure_3 = tmp54;
+        if (tmp5 === c4) {
+          c6 = tmp3;
+          throw tmp54;
+        } else if (tmp2 === tmp56) {
+          c5 = tmp2;
+        } else {
+          c5 = tmp;
         }
       }
-    })();
-  });
-  return obj(...arguments);
+    }
+  })();
 };
-({ FrameIntent: hasOwnProperty, FrameLayoutModes: metroRequire, getChannelIdForSurface: metroImportDefault, getFrameIntentForSurface: metroImportAll, makeFrameId: c9 } = FramesConstants);
-const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;
+const FramesConstants = fn(8738);
+({ FrameIntent: hasOwnProperty, FrameLayoutModes: metroRequire, getChannelIdForSurface: closure_7, getFrameIntentForSurface: closure_8, makeFrameId: closure_9 } = FramesConstants);
+const ActivityPanelModes = fn(9001).ActivityPanelModes;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");
 
 export const launchFrame = function launchFrame() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_11.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export { clearMainFrameSlot };
 export { demoteMainFrame };
 export { promoteFrame };
 export { updateFrameLayoutMode };
 export const setFramePrefersPictureInPictureOnNavigateAway = function setFramePrefersPictureInPictureOnNavigateAway(frameId, enabled) {
-  obj = DispatcherDefault;
-  const obj2 = { type: "FRAME_SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY", frameId, enabled };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "FRAME_SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY", frameId, enabled });
 };
 export const updateFramePanelMode = function updateFramePanelMode(id, PIP) {
-  obj = DispatcherDefault;
-  const obj2 = { type: "FRAME_SET_PANEL_MODE", frameId: id, activityPanelMode: PIP };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId: id, activityPanelMode: PIP });
 };
 export const resetFrameLayoutModes = function resetFrameLayoutModes(frameId) {
-  const FOCUSED = metroRequire.FOCUSED;
   const frame = FramesStore.getFrame(frameId);
   if (null != frame) {
-    const obj2 = { type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: frame.applicationId, frameId, layoutMode: FOCUSED };
-    obj = DispatcherDefault;
-    obj.dispatch(obj2);
+    const obj2 = { type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: frame.applicationId, frameId, layoutMode: constants2.FOCUSED };
+    DispatcherDefault.dispatch(obj2);
   }
-  const PANEL = ActivityPanelModes.PANEL;
-  const obj3 = DispatcherDefault;
-  const obj4 = { type: "FRAME_SET_PANEL_MODE", frameId, activityPanelMode: PANEL };
-  obj3.dispatch(obj4);
+  DispatcherDefault.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId, activityPanelMode: ActivityPanelModes.PANEL });
+  const obj4 = { type: "FRAME_SET_PANEL_MODE", frameId, activityPanelMode: ActivityPanelModes.PANEL };
 };
 export const attachFrameIframe = function attachFrameIframe(id, first1) {
-  obj = DispatcherDefault;
-  const obj2 = { type: "FRAME_IFRAME_MOUNT", frameId: id, iframeId: first1 };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "FRAME_IFRAME_MOUNT", frameId: id, iframeId: first1 });
 };
 export const detachFrameIframe = function detachFrameIframe(frameId, iframeId) {
-  obj = DispatcherDefault;
-  const obj2 = { type: "FRAME_IFRAME_UNMOUNT", frameId, iframeId };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "FRAME_IFRAME_UNMOUNT", frameId, iframeId });
 };
 export const attachFrameHostWindow = function attachFrameHostWindow(frameId, windowKey) {
-  obj = DispatcherDefault;
-  const obj2 = { type: "FRAME_HOST_WINDOW_MOUNT", frameId, windowKey };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "FRAME_HOST_WINDOW_MOUNT", frameId, windowKey });
 };
 export const detachFrameHostWindow = function detachFrameHostWindow(frameId, windowKey) {
-  obj = DispatcherDefault;
-  const obj2 = { type: "FRAME_HOST_WINDOW_UNMOUNT", frameId, windowKey };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "FRAME_HOST_WINDOW_UNMOUNT", frameId, windowKey });
 };
 export const refreshProxyTicket = function refreshProxyTicket() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_16.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

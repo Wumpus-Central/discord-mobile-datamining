@@ -1,449 +1,419 @@
 // === Module 5954: SpellcheckUtils ===
 
 // Module 5954 (SpellcheckUtils)
+import PlatformUtils2 from "PlatformUtils" /* 1369 */;
 import DiscordNativeDefault from "DiscordNative" /* 4496 */;
-import PostConnectionCallbackStore from "PostConnectionCallbackStore" /* 5955 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import PlatformUtils_mod from "PlatformUtils" /* 1369 */;
-import size from "module_2" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let c4, c5;
-
-let obj = function _setEnabled() {
-  let value;
-  obj = _asyncToGenerator(async (enabled) => {
-    let c2 = 0;
-    let c3 = 0;
-    return (async (arg0) => {
-      if (c3 === 2) {
-        c3 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+require = fn;
+let closure_7 = async function _setEnabled(arg0) {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
         if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              return { value, done: true };
-            } else {
-              closure_1 = undefined;
-              c2 = 1;
-              c3 = 1;
-              return { value, done: false };
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            return { value, done: true };
-          } else {
-            closure_1 = value;
-            if (null != closure_1) {
-              closure_1.enabled = enabled;
-            }
-            c3 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp12) {
-          c3 = 3;
-          throw tmp12;
-        }
-      }
-    })();
-  });
-  return obj(...arguments);
-};
-obj = function _setLearnedWords() {
-  let value;
-  obj = _asyncToGenerator(async (arg0) => {
-    let closure_0 = arg0;
-    if (c3 === 2) {
-      c3 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        let learnedWords;
-        c3 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            learnedWords = undefined;
-            c2 = 1;
-            c3 = 1;
-            const obj4 = { value, done: false };
-            return obj4;
-          }
-        } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          learnedWords = value;
-          if (null != learnedWords) {
-            learnedWords.setLearnedWords(closure_0);
-          }
-          c3 = 3;
-          return { value: "IconComponent", done: null };
+          closure_1 = tmp2;
+          closure_129_0 = closure_0;
+          closure_129_1 = undefined;
+          c2 = 1;
+          c3 = 1;
+          const obj4 = { value, done: false };
+          return obj4;
         }
-      } catch (tmp13) {
+      } else if (arg0 === 1) {
         c3 = 3;
-        throw tmp13;
-      }
-    }
-  });
-  return obj(...arguments);
-};
-obj = function _isMisspelled() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    if (c5 === 2) {
-      c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        c3 = 3;
+        const obj = { value, done: true };
+        return obj;
       } else {
+        closure_129_1 = value;
+        if (null != closure_129_1) {
+          closure_129_1.enabled = closure_129_0;
+        }
+        c3 = 3;
         return { value: "IconComponent", done: null };
       }
+    } catch (tmp13) {
+      c3 = tmp;
+      throw tmp13;
+    }
+  }
+};
+let closure_8 = async function _setLearnedWords(arg0) {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        let misspelled;
-        let flag;
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            let closure_3 = tmp4;
-            misspelled = tmp;
-            flag = closure_1;
-            if (closure_1 === undefined) {
-              flag = false;
-            }
-            misspelled = undefined;
-            c4 = 1;
-            c5 = 1;
-            return { value: "Reflect", done: true };
-          }
-        } else if (1 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            c4 = 2;
-            c5 = 1;
-            const obj5 = { value: closure_131_5, done: false };
-            return obj5;
-          }
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_1 = tmp2;
+          closure_129_0 = closure_0;
+          closure_129_1 = undefined;
+          c2 = 1;
+          c3 = 1;
+          const obj4 = { value, done: false };
+          return obj4;
+        }
+      } else if (arg0 === 1) {
+        c3 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } else {
+        closure_129_1 = value;
+        if (null != closure_129_1) {
+          closure_129_1.setLearnedWords(closure_129_0);
+        }
+        c3 = 3;
+        return { value: "IconComponent", done: null };
+      }
+    } catch (tmp14) {
+      c3 = tmp;
+      throw tmp14;
+    }
+  }
+};
+let closure_9 = async function _isMisspelled(arg0) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
           c5 = 3;
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          misspelled = value;
-          const isMisspelledResult = null != misspelled && misspelled.isMisspelled(closure_0, flag);
-          c5 = 3;
-          obj = { value: isMisspelledResult, done: true };
-          return obj;
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          closure_130_1 = undefined;
+          closure_130_0 = closure_0;
+          let flag = closure_1;
+          if (closure_1 === undefined) {
+            flag = false;
+          }
+          closure_130_1 = flag;
+          closure_130_2 = undefined;
+          c4 = 1;
+          c5 = 1;
+          return { value: "Reflect", done: true };
         }
-      } catch (tmp15) {
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          c4 = 2;
+          c5 = 1;
+          const obj5 = { value: closure_131_5, done: false };
+          return obj5;
+        }
+      } else if (arg0 === 1) {
         c5 = 3;
-        throw tmp15;
-      }
-    }
-  });
-  return obj(...arguments);
-};
-obj = function _getCorrections() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        c5 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
-        return { value: "IconComponent", done: null };
+        closure_130_2 = value;
+        let isMisspelledResult = null != closure_130_2;
+        if (isMisspelledResult) {
+          isMisspelledResult = closure_130_2.isMisspelled(closure_130_0, closure_130_1);
+        }
+        c5 = 3;
+        const obj = { value: isMisspelledResult, done: true };
+        return obj;
       }
+    } catch (tmp16) {
+      c5 = tmp;
+      throw tmp16;
+    }
+  }
+};
+let closure_10 = async function _getCorrections(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        let correctionsForMisspelling;
-        let num10;
-        let flag;
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            let closure_4 = tmp4;
-            correctionsForMisspelling = tmp;
-            num10 = undefined;
-            flag = closure_1;
-            if (closure_1 === undefined) {
-              flag = false;
-            }
-            num10 = closure_2;
-            if (closure_2 === undefined) {
-              num10 = 5;
-            }
-            correctionsForMisspelling = undefined;
-            c5 = 1;
-            c6 = 1;
-            return { value: "Reflect", done: true };
-          }
-        } else if (1 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            c5 = 2;
-            c6 = 1;
-            const obj5 = { value: closure_132_5, done: false };
-            return obj5;
-          }
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          let items;
-          correctionsForMisspelling = value;
-          if (null == correctionsForMisspelling) {
-            items = [];
-          } else {
-            correctionsForMisspelling = correctionsForMisspelling.getCorrectionsForMisspelling(closure_0, flag);
-            items = correctionsForMisspelling.slice(0, num10);
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_1 = undefined;
+          closure_131_2 = undefined;
+          closure_131_0 = closure_0;
+          let flag = closure_1;
+          if (closure_1 === undefined) {
+            flag = false;
           }
-          c6 = 3;
-          obj = { value: items, done: true };
-          return obj;
+          closure_131_1 = flag;
+          let num10 = closure_2;
+          if (closure_2 === undefined) {
+            num10 = 5;
+          }
+          closure_131_2 = num10;
+          closure_131_3 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "Reflect", done: true };
         }
-      } catch (tmp15) {
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          c5 = 2;
+          c6 = 1;
+          const obj5 = { value: closure_132_5, done: false };
+          return obj5;
+        }
+      } else if (arg0 === 1) {
         c6 = 3;
-        throw tmp15;
-      }
-    }
-  });
-  return obj(...arguments);
-};
-obj = function _getCachedMisspelling() {
-  obj = _asyncToGenerator(async () => {
-    let closure_2;
-    let corrections;
-    let closure_0 = arg0;
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        c6 = 3;
+        const obj = { value, done: true };
+        return obj;
       } else {
-        return { value: "IconComponent", done: null };
+        closure_131_3 = value;
+        if (null == closure_131_3) {
+          const items = [];
+        } else {
+          const correctionsForMisspelling = closure_131_3.getCorrectionsForMisspelling(closure_131_0, closure_131_1);
+          const substr = correctionsForMisspelling.slice(0, closure_131_2);
+        }
+        c6 = 3;
       }
+    } catch (tmp17) {
+      c6 = tmp;
+      throw tmp17;
+    }
+  }
+};
+let closure_11 = async function _getCachedMisspelling() {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        let cachedMisspelling2;
-        let cachedMisspelling;
-        let num11;
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            cachedMisspelling2 = tmp4;
-            cachedMisspelling = tmp;
-            num11 = closure_0;
-            if (closure_0 === undefined) {
-              num11 = 5;
-            }
-            cachedMisspelling = undefined;
-            cachedMisspelling2 = undefined;
-            c3 = 1;
-            c4 = 1;
-            return { value: "Reflect", done: true };
-          }
-        } else if (1 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            c3 = 2;
-            c4 = 1;
-            const obj5 = { value: closure_130_5, done: false };
-            return obj5;
-          }
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          cachedMisspelling = value;
-          if (null == cachedMisspelling) {
-            const obj7 = { misspelledWord: "", corrections: [] };
-            c4 = 3;
-            const obj8 = { value: obj7, done: true };
-            return obj8;
-          } else {
-            cachedMisspelling2 = cachedMisspelling.getCachedMisspelling();
-            obj = { misspelledWord: cachedMisspelling2.misspelledWord, corrections: corrections.slice(0, num11) };
-            corrections = cachedMisspelling2.corrections;
-            c4 = 3;
-            const obj9 = { value: obj, done: true };
-            return obj9;
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          let num11 = closure_0;
+          if (closure_0 === undefined) {
+            num11 = 5;
           }
+          closure_129_0 = num11;
+          closure_129_1 = undefined;
+          let cachedMisspelling;
+          c3 = 1;
+          c4 = 1;
+          return { value: "Reflect", done: true };
         }
-      } catch (tmp11) {
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          c3 = 2;
+          c4 = 1;
+          const obj5 = { value: closure_130_5, done: false };
+          return obj5;
+        }
+      } else if (arg0 === 1) {
         c4 = 3;
-        throw tmp11;
-      }
-    }
-  });
-  return obj(...arguments);
-};
-obj = function _replaceWithCorrection() {
-  let value;
-  obj = _asyncToGenerator(async (arg0) => {
-    let closure_1;
-    let closure_0 = arg0;
-    if (c3 === 2) {
-      c3 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        c4 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
-        return { value: "IconComponent", done: null };
+        closure_129_1 = value;
+        if (null == closure_129_1) {
+          const obj7 = { misspelledWord: "", corrections: [] };
+          c4 = 3;
+          const obj8 = { value: obj7, done: true };
+          return obj8;
+        } else {
+          cachedMisspelling = closure_129_1.getCachedMisspelling();
+          const obj = { misspelledWord: cachedMisspelling.misspelledWord, corrections: null };
+          const corrections = cachedMisspelling.corrections;
+          obj.corrections = corrections.slice(0, closure_129_0);
+          c4 = 3;
+          const obj9 = { value: obj, done: true };
+          return obj9;
+        }
       }
+    } catch (tmp12) {
+      c4 = tmp;
+      throw tmp12;
+    }
+  }
+};
+let closure_12 = async function _replaceWithCorrection(arg0) {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        let tmp;
-        c3 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            tmp = undefined;
-            c2 = 1;
-            c3 = 1;
-            const obj4 = { value, done: false };
-            return obj4;
-          }
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          tmp = value;
-          if (null != tmp) {
-            tmp.replaceMisspelling(closure_0);
-          }
-          c3 = 3;
-          return { value: "IconComponent", done: null };
+          closure_1 = tmp2;
+          closure_129_0 = closure_0;
+          closure_129_1 = undefined;
+          c2 = 1;
+          c3 = 1;
+          const obj4 = { value, done: false };
+          return obj4;
         }
-      } catch (tmp13) {
+      } else if (arg0 === 1) {
         c3 = 3;
-        throw tmp13;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } else {
+        closure_129_1 = value;
+        if (null != closure_129_1) {
+          closure_129_1.replaceMisspelling(closure_129_0);
+        }
+        c3 = 3;
+        return { value: "IconComponent", done: null };
       }
+    } catch (tmp14) {
+      c3 = tmp;
+      throw tmp14;
     }
-  });
-  return obj(...arguments);
+  }
 };
-const addPostConnectionCallback = PostConnectionCallbackStore.addPostConnectionCallback;
-let PlatformUtils = PlatformUtils_mod;
+fn(5955).addPostConnectionCallback;
+let PlatformUtils = fn(1369);
 PlatformUtils = PlatformUtils.isDesktop();
 if (PlatformUtils) {
   const importDefaultResult = DiscordNativeDefault;
-  let tmp4 = null;
   let spellCheck;
   if (importDefaultResult != null) {
     spellCheck = importDefaultResult.spellCheck;
@@ -452,26 +422,20 @@ if (PlatformUtils) {
 }
 let promise = null;
 if (PlatformUtils) {
-  const self = this;
-  const self2 = this;
   promise = new Promise((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     const resolved = Promise.resolve();
-    resolved.then(() => addPostConnectionCallback(() => {
-      obj = closure_0(dependencyMap[4]);
-      return closure_1_0(obj.install());
-    }));
+    resolved.then(() => addPostConnectionCallback(() => closure_1_0(closure_0(dependencyMap[4]).install())));
   });
 }
-let c6 = null;
+let global = null;
 if (promise != null) {
   promise.then((result) => {
-    let c6 = result;
+    global = result;
   });
 }
 function isSupported() {
-  obj = PlatformUtils;
-  let isDesktopResult = obj.isDesktop();
+  let isDesktopResult = PlatformUtils2.isDesktop();
   if (isDesktopResult) {
     const tmp4 = DiscordNativeDefault;
     let spellCheck;
@@ -482,34 +446,76 @@ function isSupported() {
   }
   return isDesktopResult;
 }
+const size = fn(2);
 const result = size.fileFinishedImporting("utils/SpellcheckUtils.tsx");
 
 export { isSupported };
 export const setEnabled = function setEnabled() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_7.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const setLearnedWords = function setLearnedWords() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_8.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const isMisspelled = function isMisspelled() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_9.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const getCorrections = function getCorrections() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_10.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const getCachedMisspelling = function getCachedMisspelling() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_11.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const replaceWithCorrection = function replaceWithCorrection() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_12.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const setAppLocale = function setAppLocale(arg0) {
-  if (null != appLocale) {
-    appLocale.setAppLocale(arg0);
+  if (null != global) {
+    global.setAppLocale(arg0);
   }
 };
 export const addResultListener = function addResultListener(arg0) {
-  let fn;
   const tmp3 = DiscordNativeDefault;
   let spellCheck1;
   if (tmp3 != null) {
@@ -523,7 +529,7 @@ export const addResultListener = function addResultListener(arg0) {
 
       };
     }
-    fn = fn2;
+    let fn = fn2;
   } else {
     fn = () => {
 

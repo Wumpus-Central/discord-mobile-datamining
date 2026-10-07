@@ -1,7 +1,7 @@
 // === Module 11157: useDrawerWidth ===
 
 // Module 11157 (useDrawerWidth)
-import react from "react" /* 576 */;
+import c from "c" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import useChatLayout from "useChatLayout" /* 4745 */;
 import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4747 */;
@@ -15,24 +15,31 @@ const DM_WIDTH = Constants.DM_WIDTH;
 const sum = 260 + DM_WIDTH;
 let c3 = sum;
 let closure_4 = 300 + DM_WIDTH;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const obj = react;
-  const cResult = obj.c(3);
+const result = size.fileFinishedImporting("modules/screen/native/drawer/useDrawerWidth.tsx");
+
+export const DRAWER_LEFT_WIDTH_MIN = sum;
+export const getDrawerWidth = function getDrawerWidth() {
+  const width = useBaseAppContainerDimensions.getBaseAppContainerDimensions().width;
+  const chatLayout = useChatLayout.getChatLayout();
+  if (!chatLayout.isChatBesideChannelList) {
+    return width;
+  } else if (tmp2) {
+    let bound = sum;
+  } else {
+    const _Math = Math;
+    bound = Math.min(closure_4, width - 32);
+  }
+};
+export const useDrawerWidth = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(3);
   const width = useBaseAppContainerDimensionsDefault().width;
   const tmp2 = useChatLayoutDefault();
   const isChatLockedOpen = tmp2.isChatLockedOpen;
-  let tmp3 = width;
-  if (tmp2.isChatBesideChannelList) {
-    let bound;
-    if (cResult[0] === isChatLockedOpen) {
-      let tmp4;
-      if (cResult[1] === width) {
-        tmp4 = cResult[2];
-      }
-      tmp3 = tmp4;
-    }
+  if (!tmp2.isChatBesideChannelList) {
+    return width;
+  } else {
     if (isChatLockedOpen) {
-      bound = c3;
+      let bound = sum;
     } else {
       const _Math = Math;
       bound = Math.min(closure_4, width - 32);
@@ -40,44 +47,16 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[0] = isChatLockedOpen;
     cResult[1] = width;
     cResult[2] = bound;
-    tmp4 = bound;
   }
-  return tmp3;
 }) : (() => {
   const width = useBaseAppContainerDimensionsDefault().width;
-  const tmp = useChatLayoutDefault();
-  let tmp2 = width;
-  if (tmp.isChatBesideChannelList) {
-    let bound;
-    if (tmp.isChatLockedOpen) {
-      bound = c3;
-    } else {
-      const _Math = Math;
-      bound = Math.min(closure_4, width - 32);
-    }
-    tmp2 = bound;
+  if (!tmp.isChatBesideChannelList) {
+    return width;
+  } else if (tmp2) {
+    let bound = sum;
+  } else {
+    const _Math = Math;
+    bound = Math.min(closure_4, width - 32);
   }
-  return tmp2;
+  tmp = useChatLayoutDefault();
 });
-const result = size.fileFinishedImporting("modules/screen/native/drawer/useDrawerWidth.tsx");
-
-export const DRAWER_LEFT_WIDTH_MIN = sum;
-export const getDrawerWidth = function getDrawerWidth() {
-  const obj = useBaseAppContainerDimensions;
-  const width = obj.getBaseAppContainerDimensions().width;
-  const obj2 = useChatLayout;
-  const chatLayout = obj2.getChatLayout();
-  let tmp2 = width;
-  if (chatLayout.isChatBesideChannelList) {
-    let bound;
-    if (chatLayout.isChatLockedOpen) {
-      bound = c3;
-    } else {
-      const _Math = Math;
-      bound = Math.min(closure_4, width - 32);
-    }
-    tmp2 = bound;
-  }
-  return tmp2;
-};
-export const useDrawerWidth = tmp3;

@@ -1,246 +1,282 @@
 // === Module 18067: GlobalDiscoveryServersFeaturedSearchManager ===
 
 // Module 18067 (GlobalDiscoveryServersFeaturedSearchManager)
-import Constants from "Constants" /* 1085 */;
-import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9284 */;
 import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 13533 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
-import size from "module_2" /* 2 */;
 
-let closure_4, constants;
-
+let require = fn;
 GlobalDiscoveryServersSearchResultsStoreDefault;
-let closure_6 = GlobalDiscoveryServersConstants.DISCOVERY_ALL_CATEGORIES_ID;
-const Endpoints = Constants.Endpoints;
-class GlobalDiscoveryServersFeaturedSearchManager extends AutomaticLifecycleManager {
-  constructor() {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    require = applyArgumentsResult;
-    applyArgumentsResult.actions = {
-      POST_CONNECTION_OPEN() {
-        return require.handleConnectionOpen();
-      }
-    };
-    applyArgumentsResult.queue = new Set();
-    applyArgumentsResult.isFetchEnabled = false;
-    applyArgumentsResult.handleConnectionOpen = function handleConnectionOpen() {
-      require.isFetchEnabled = true;
-      const queue = require.queue;
-      const item = queue.forEach((categoryId) => {
-        if (categoryId === closure_2_6) {
-          const featuredGuilds = closure_1_0.fetchFeaturedGuilds();
-        } else {
-          const obj = { categoryId };
-          const categoryFeaturedGuilds = closure_1_0.fetchCategoryFeaturedGuilds(obj);
-        }
-      });
-    };
-    new Set();
-    _asyncToGenerator(async (arg0) => {
-      let categoryId;
-      let obj10;
-      let obj12;
-      let stringify;
-      closure_0 = arg0;
-      if (constants === 2) {
-        constants = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+let closure_6 = fn(9284).DISCOVERY_ALL_CATEGORIES_ID;
+const Endpoints = fn(1085).Endpoints;
+const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
+  let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+  require = applyArgumentsResult;
+  applyArgumentsResult.actions = {
+    POST_CONNECTION_OPEN() {
+      return applyArgumentsResult.handleConnectionOpen();
+    }
+  };
+  applyArgumentsResult.queue = new Set();
+  applyArgumentsResult.isFetchEnabled = false;
+  applyArgumentsResult.handleConnectionOpen = function handleConnectionOpen() {
+    applyArgumentsResult.isFetchEnabled = true;
+    const queue = applyArgumentsResult.queue;
+    const item = queue.forEach((categoryId) => {
+      if (categoryId === closure_2_6) {
+        const featuredGuilds = closure_1_0.fetchFeaturedGuilds();
       } else {
-        let c5;
-        try {
-          let error;
-          let total;
-          let guilds;
-          let _false;
-          constants = 2;
-          if (0 === categoryId) {
-            if (arg0 === 1) {
-              constants = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              constants = 3;
-              const obj5 = { value, done: true };
-              return obj5;
-            } else {
-              error = tmp;
-              closure_0 = undefined;
-              total = undefined;
-              guilds = undefined;
-              if (applyArgumentsResult.isFetchEnabled) {
-                let forceRefresh;
-                if (closure_0 != null) {
-                  forceRefresh = tmp60.forceRefresh;
-                }
-                _false = forceRefresh;
-                if (forceRefresh == null) {
-                  _false = false;
-                }
-                const obj6 = { categoryId };
-                if (!_false) {
-                  closure_0(error[5]);
-                }
-                const obj9 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_START", categoryId, reset: true };
-                const obj8 = _false(error[6]);
-                obj8.dispatch(obj9);
-                c5 = 1;
-                const HTTP = closure_0(error[7]).HTTP;
-                const request = { url: constants.GUILD_DISCOVERY, query: stringify(obj10), oldFormErrors: true, rejectWithError: obj12.rejectWithMigratedError() };
-                const get = HTTP.get;
-                obj10 = { offset: 0, limit: closure_0(error[9]).GlobalDiscoveryServersLimits.FEATURED_DEFAULT_LIMIT };
-                stringify = _false(error[8]).stringify;
-                const tmp36 = _false(error[8]);
-                obj12 = closure_0(error[7]);
-                categoryId = 2;
-                constants = 1;
-                const obj11 = { value: get(request), done: false };
-                return obj11;
-              } else {
-                const queue = tmp61.queue;
-                queue.add(categoryId);
-              }
-            }
-          } else if (1 === categoryId) {
-            c5 = 0;
-            error = closure_4;
-            const obj13 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE", categoryId, error };
-            const obj2 = _false(error[6]);
-            obj2.dispatch(obj13);
-            const obj14 = { categoryId };
-            const obj4 = guilds(error[10]);
-            const result = obj4.trackGuildDiscoveryGetFeaturedGuildsFailed(obj14);
-          } else if (arg0 === 1) {
+        const obj = { categoryId };
+        const categoryFeaturedGuilds = closure_1_0.fetchCategoryFeaturedGuilds(obj);
+      }
+    });
+  };
+  closure_129_1 = applyArgumentsResult;
+  closure_129_0 = asyncGeneratorStep(async (arg0) => {
+    if (constants === 2) {
+      constants = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        constants = 2;
+        if (0 === categoryId) {
+          if (arg0 === 1) {
             constants = 3;
             throw value;
           } else if (arg0 === 2) {
-            c5 = 0;
             constants = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            closure_2 = tmp7;
+            closure_130_0 = undefined;
+            let total;
+            closure_130_2 = undefined;
+            if (isFetchEnabled.isFetchEnabled) {
+              let forceRefresh;
+              if (applyArgumentsResult != null) {
+                forceRefresh = applyArgumentsResult.forceRefresh;
+              }
+              isFetchEnabled = forceRefresh;
+              if (forceRefresh == null) {
+                isFetchEnabled = false;
+              }
+              { categoryId: null }.categoryId = categoryId;
+              if (!isFetchEnabled) {
+                applyArgumentsResult(tmp3[5]);
+              }
+              const obj9 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_START", categoryId, reset: true };
+              isFetchEnabled(tmp3[6]).dispatch(obj9);
+              c5 = 1;
+              const HTTP = applyArgumentsResult(tmp3[7]).HTTP;
+              const request = { url: constants.GUILD_DISCOVERY, query: null, oldFormErrors: true, rejectWithError: null };
+              const obj6 = { categoryId: null };
+              const obj8 = isFetchEnabled(tmp3[6]);
+              const obj10 = { offset: 0, limit: applyArgumentsResult(tmp3[9]).GlobalDiscoveryServersLimits.FEATURED_DEFAULT_LIMIT };
+              request.query = isFetchEnabled(tmp3[8]).stringify(obj10);
+              const obj11 = isFetchEnabled(tmp3[8]);
+              request.rejectWithError = applyArgumentsResult(tmp3[7]).rejectWithMigratedError();
+              categoryId = 2;
+              constants = 1;
+              const obj12 = { value: HTTP.get(request), done: false };
+              return obj12;
+            } else {
+              const queue = tmp64.queue;
+              queue.add(categoryId);
+            }
+          }
+        } else {
+          if (1 === tmp7) {
+            c5 = 0;
+            closure_130_3 = closure_4;
+            const obj14 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE", categoryId, error: closure_130_3 };
+            isFetchEnabled(tmp3[6]).dispatch(obj14);
+            const obj2 = isFetchEnabled(tmp3[6]);
+            const obj15 = { categoryId };
+            const result = closure_2(tmp3[10]).trackGuildDiscoveryGetFeaturedGuildsFailed(obj15);
+            const obj4 = closure_2(tmp3[10]);
+          } else if (arg0 === 1) {
+            constants = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_130_0 = value;
+            total = closure_130_0.body.total;
+            const guilds = closure_130_0.body.guilds;
+            closure_130_2 = guilds.map(applyArgumentsResult(tmp3[5]).fromDiscoverableGuildServer);
+            const obj16 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS", categoryId, guilds: closure_130_2, total };
+            isFetchEnabled(tmp3[6]).dispatch(obj16);
+            c5 = 0;
+            const obj17 = isFetchEnabled(tmp3[6]);
+          }
+          c5 = 0;
+          constants = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+        constants = 3;
+      } catch (tmp43) {
+        closure_4 = tmp43;
+        if (tmp4 === c5) {
+          constants = tmp2;
+          throw tmp43;
+        } else {
+          categoryId = tmp;
+        }
+      }
+    }
+  });
+  applyArgumentsResult.fetchFeaturedGuilds = function() {
+    const self = this;
+    const apply = applyArgumentsResult.apply;
+    if (typeof apply === "unknown") {
+      applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  };
+  closure_130_1 = applyArgumentsResult;
+  closure_130_0 = asyncGeneratorStep(async (arg0) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === lastFetchTimestamp) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            isFetchEnabled = tmp7;
+            closure_129_0 = undefined;
+            closure_129_1 = undefined;
+            ({ categoryId: closure_129_0, forceRefresh } = applyArgumentsResult);
+            if (forceRefresh === undefined) {
+              forceRefresh = false;
+            }
+            closure_129_1 = forceRefresh;
+            let lastFetchTimestamp2;
+            closure_129_3 = undefined;
+            let total;
+            closure_129_5 = undefined;
+            lastFetchTimestamp = 1;
+            c6 = 1;
+            return { value: "Reflect", done: true };
+          }
+        } else {
+          if (1 === tmp7) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj6 = { value, done: true };
+              return obj6;
+            } else if (closure_130_1.isFetchEnabled) {
+              const obj9 = { categoryId: closure_129_0 };
+              lastFetchTimestamp2 = lastFetchTimestamp.getLastFetchTimestamp(obj9);
+              if (!closure_129_1) {
+                applyArgumentsResult(tmp49[5]);
+              }
+              const obj10 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_START", categoryId: closure_129_0, reset: true };
+              isFetchEnabled(tmp49[6]).dispatch(obj10);
+              c4 = 1;
+              const HTTP = applyArgumentsResult(tmp49[7]).HTTP;
+              const request = { url: constants.GUILD_DISCOVERY, query: null, oldFormErrors: true, rejectWithError: null };
+              const obj8 = isFetchEnabled(tmp49[6]);
+              const obj12 = { categories: null };
+              const items = [closure_129_0];
+              obj12.categories = items;
+              request.query = isFetchEnabled(tmp49[8]).stringify(obj12);
+              const obj11 = isFetchEnabled(tmp49[8]);
+              request.rejectWithError = applyArgumentsResult(tmp49[7]).rejectWithMigratedError();
+              lastFetchTimestamp = 3;
+              c6 = 1;
+              const obj14 = { value: HTTP.get(request), done: false };
+              return obj14;
+            } else {
+              const queue = closure_130_1.queue;
+              queue.add(closure_129_0);
+            }
+          } else {
+            if (2 === tmp7) {
+              c4 = 0;
+              closure_129_6 = tmp49;
+              const obj15 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE", categoryId: closure_129_0, error: closure_129_6 };
+              isFetchEnabled(tmp49[6]).dispatch(obj15);
+              const obj2 = isFetchEnabled(tmp49[6]);
+              const obj16 = { categoryId: closure_129_0 };
+              const result = tmp3(tmp49[10]).trackGuildDiscoveryGetFeaturedGuildsFailed(obj16);
+              const obj4 = tmp3(tmp49[10]);
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 !== 2) {
+              closure_129_3 = value;
+              total = closure_129_3.body.total;
+              const guilds = closure_129_3.body.guilds;
+              closure_129_5 = guilds.map(applyArgumentsResult(tmp49[5]).fromDiscoverableGuildServer);
+              const obj17 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS", categoryId: closure_129_0, guilds: closure_129_5, total };
+              isFetchEnabled(tmp49[6]).dispatch(obj17);
+              c4 = 0;
+              const obj18 = isFetchEnabled(tmp49[6]);
+            }
+            c4 = 0;
+            c6 = 3;
             const obj = { value, done: true };
             return obj;
-          } else {
-            closure_0 = value;
-            total = closure_0.body.total;
-            guilds = closure_0.body.guilds;
-            guilds = guilds.map(closure_0(error[5]).fromDiscoverableGuildServer);
-            const obj15 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS", categoryId, guilds, total };
-            const obj16 = _false(error[6]);
-            obj16.dispatch(obj15);
-            c5 = 0;
           }
-          constants = 3;
-          return { value: "IconComponent", done: null };
-        } catch (tmp41) {
-          closure_4 = tmp41;
-          if (0 === c5) {
-            constants = 3;
-            throw tmp41;
-          } else {
-            categoryId = 1;
-          }
-        }
-      }
-    });
-    applyArgumentsResult.fetchFeaturedGuilds = function() {
-      return closure_0(...arguments);
-    };
-    let closure_0 = _asyncToGenerator(async (categoryId) => {
-      let c0;
-      let closure_1;
-      let closure_2;
-      let closure_3;
-      let forceRefresh;
-      let guilds;
-      let items;
-      let obj11;
-      let obj12;
-      let obj13;
-      let tmp;
-      let tmp46;
-      if (1 === guilds) {
-        if (categoryId === 1) {
-          let c6 = 3;
-          throw value;
-        } else if (categoryId === 2) {
           c6 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
-        } else if (closure_130_1.isFetchEnabled) {
-          const obj9 = { categoryId };
-          tmp = guilds.getLastFetchTimestamp(obj9);
-          const tmp23 = forceRefresh;
-          if (!tmp23) {
-            categoryId(tmp46[5]);
-          }
-          const obj10 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_START", categoryId, reset: true };
-          const obj8 = applyArgumentsResult(tmp46[6]);
-          obj8.dispatch(obj10);
-          let c4 = 1;
-          const HTTP = categoryId(tmp46[7]).HTTP;
-          const request = { url: constants.GUILD_DISCOVERY, query: obj11.stringify(obj12), oldFormErrors: true, rejectWithError: obj13.rejectWithMigratedError() };
-          const get = HTTP.get;
-          obj12 = { categories: items };
-          items = [categoryId];
-          obj11 = applyArgumentsResult(tmp46[8]);
-          obj13 = categoryId(tmp46[7]);
-          guilds = 3;
-          c6 = 1;
-          const obj14 = { value: get(request), done: false };
-          return obj14;
-        } else {
-          const queue = closure_130_1.queue;
-          queue.add(categoryId);
         }
-      } else if (2 === guilds) {
-        c4 = 0;
-        const error = tmp46;
-        const obj15 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE", categoryId, error };
-        const obj2 = applyArgumentsResult(tmp46[6]);
-        obj2.dispatch(obj15);
-        const obj16 = { categoryId };
-        const obj4 = tmp(tmp46[10]);
-        const result = obj4.trackGuildDiscoveryGetFeaturedGuildsFailed(obj16);
-      } else if (categoryId === 1) {
-        c6 = 3;
-        throw value;
-      } else if (categoryId === 2) {
-        c4 = 0;
-        c6 = 3;
-        const obj = { value, done: true };
-        return obj;
-      } else {
-        tmp46 = value;
-        const total = tmp46.body.total;
-        guilds = tmp46.body.guilds;
-        guilds = guilds.map(categoryId(tmp46[5]).fromDiscoverableGuildServer);
-        const obj17 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS", categoryId, guilds, total };
-        const obj18 = applyArgumentsResult(tmp46[6]);
-        obj18.dispatch(obj17);
-        c4 = 0;
+      } catch (tmp49) {
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp49;
+        } else {
+          lastFetchTimestamp = tmp;
+        }
       }
-      await "IconComponent";
-      applyArgumentsResult = tmp4;
-      ({ categoryId: c0, forceRefresh } = categoryId);
-      if (forceRefresh === undefined) {
-        forceRefresh = false;
-      }
-      return "Reflect";
-    });
-    applyArgumentsResult.fetchCategoryFeaturedGuilds = function() {
-      return closure_0(...arguments);
-    };
+    }
+  });
+  applyArgumentsResult.fetchCategoryFeaturedGuilds = function() {
+    const self = this;
+    const apply = applyArgumentsResult.apply;
+    if (typeof apply === "unknown") {
+      applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
     return applyArgumentsResult;
-  }
+  };
+  return applyArgumentsResult;
+}.prototype;
+class prototype extends tmp2 {
 }
-const globalDiscoveryServersFeaturedSearchManager = new GlobalDiscoveryServersFeaturedSearchManager();
+const prototype1 = new prototype();
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersFeaturedSearchManager.tsx");
 
-export default globalDiscoveryServersFeaturedSearchManager;
+export default prototype1;

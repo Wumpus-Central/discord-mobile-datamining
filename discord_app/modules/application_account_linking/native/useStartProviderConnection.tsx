@@ -2,33 +2,29 @@
 
 // Module 6682 (useStartProviderConnection)
 import LinkingDefault from "Linking" /* 4571 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-let c5, c6;
+const require = globalThis.__r;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let canConnect;
-  let hasConnection;
-  let loading;
-  let startConnection;
-  let tmp3;
-  let obj = startConnection(576);
-  const cResult = obj.c(8);
-  let obj2 = startConnection(6683);
-  const providerConnection = obj2.useProviderConnection(arg0);
+const require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_account_linking/native/useStartProviderConnection.tsx");
+
+export const useStartProviderConnection = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = require("c").c(8);
+  let obj = require("c");
+  const providerConnection = require("useProviderConnection").useProviderConnection(arg0);
   ({ loading, hasConnection, canConnect, startConnection } = providerConnection);
+  _require = startConnection;
   const account = providerConnection.account;
   if (cResult[0] !== startConnection) {
-    let closure_0 = _asyncToGenerator(async (arg0) => {
-      let obj5;
-      closure_0 = arg0;
+    _require = asyncGeneratorStep(async (arg0) => {
       if (c6 === 2) {
         c6 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (tmp6 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -38,7 +34,6 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           return { value: "IconComponent", done: null };
         }
       } else {
-        let c4;
         try {
           c6 = 2;
           if (0 === c5) {
@@ -50,15 +45,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              let closure_2 = tmp;
-              let closure_1 = tmp4;
-              closure_0 = undefined;
+              closure_2 = tmp3;
+              closure_1 = tmp7;
+              closure_129_0 = undefined;
               c5 = 1;
               c6 = 1;
               const obj4 = { value: closure_0(closure_0), done: false };
               return obj4;
             }
-          } else if (1 === c5) {
+          } else if (1 === tmp7) {
             if (arg0 === 1) {
               c6 = 3;
               throw value;
@@ -67,14 +62,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               const obj6 = { value, done: true };
               return obj6;
             } else {
-              closure_0 = value;
-              if (closure_0.success) {
-                if (null != closure_0.url) {
+              closure_129_0 = value;
+              if (closure_129_0.success) {
+                if (null != closure_129_0.url) {
                   c4 = 1;
                   c5 = 3;
                   c6 = 1;
-                  const obj7 = { value: obj5.openURL(closure_0.url), done: false };
-                  obj5 = LinkingDefault;
+                  const obj7 = { value: LinkingDefault.openURL(closure_129_0.url), done: false };
                   return obj7;
                 }
               }
@@ -82,7 +76,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               const obj8 = { value: { success: false }, done: true };
               return obj8;
             }
-          } else if (2 === c5) {
+          } else if (2 === tmp7) {
             c4 = 0;
             c6 = 3;
             const obj9 = { value: { success: false }, done: true };
@@ -101,23 +95,30 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             const obj = { value: { success: true }, done: true };
             return obj;
           }
-        } catch (tmp15) {
-          let closure_3 = tmp15;
-          if (0 === c4) {
-            c6 = 3;
-            throw tmp15;
+        } catch (tmp18) {
+          closure_3 = tmp18;
+          if (tmp4 === c4) {
+            c6 = tmp2;
+            throw tmp18;
           } else {
-            c5 = 2;
+            c5 = tmp;
           }
         }
       }
     });
     const fn = function() {
-      return closure_0(...arguments);
+      const self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     };
     cResult[0] = startConnection;
     cResult[1] = fn;
-    tmp3 = fn;
+    let tmp3 = fn;
   } else {
     tmp3 = cResult[1];
   }
@@ -125,9 +126,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (cResult[3] === canConnect) {
       if (cResult[4] === hasConnection) {
         if (cResult[5] === loading) {
-          let tmp5;
           if (cResult[6] === tmp3) {
-            tmp5 = cResult[7];
+            let tmp5 = cResult[7];
           }
           return tmp5;
         }
@@ -142,24 +142,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = tmp3;
   cResult[7] = obj3;
   tmp5 = obj3;
+  let obj2 = require("useProviderConnection");
 }) : ((arg0) => {
-  let account;
-  let canConnect;
-  let hasConnection;
-  let loading;
-  let startConnection;
-  let obj = startConnection(6683);
-  const providerConnection = obj.useProviderConnection(arg0);
-  startConnection = providerConnection.startConnection;
+  const providerConnection = require("useProviderConnection").useProviderConnection(arg0);
+  const startConnection = providerConnection.startConnection;
   ({ loading, hasConnection, canConnect, account } = providerConnection);
-  const useCallback = react.useCallback;
-  let closure_0 = _asyncToGenerator(async (arg0) => {
-    let obj5;
-    closure_0 = arg0;
+  _require = asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -169,7 +161,6 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         return { value: "IconComponent", done: null };
       }
     } else {
-      let c4;
       try {
         c6 = 2;
         if (0 === c5) {
@@ -181,15 +172,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            let closure_2 = tmp;
-            let closure_1 = tmp4;
-            closure_0 = undefined;
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            closure_129_0 = undefined;
             c5 = 1;
             c6 = 1;
             const obj4 = { value: closure_0(closure_0), done: false };
             return obj4;
           }
-        } else if (1 === c5) {
+        } else if (1 === tmp7) {
           if (arg0 === 1) {
             c6 = 3;
             throw value;
@@ -198,14 +189,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             const obj6 = { value, done: true };
             return obj6;
           } else {
-            closure_0 = value;
-            if (closure_0.success) {
-              if (null != closure_0.url) {
+            closure_129_0 = value;
+            if (closure_129_0.success) {
+              if (null != closure_129_0.url) {
                 c4 = 1;
                 c5 = 3;
                 c6 = 1;
-                const obj7 = { value: obj5.openURL(closure_0.url), done: false };
-                obj5 = LinkingDefault;
+                const obj7 = { value: LinkingDefault.openURL(closure_129_0.url), done: false };
                 return obj7;
               }
             }
@@ -213,7 +203,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             const obj8 = { value: { success: false }, done: true };
             return obj8;
           }
-        } else if (2 === c5) {
+        } else if (2 === tmp7) {
           c4 = 0;
           c6 = 3;
           const obj9 = { value: { success: false }, done: true };
@@ -232,29 +222,33 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           const obj = { value: { success: true }, done: true };
           return obj;
         }
-      } catch (tmp15) {
-        let closure_3 = tmp15;
-        if (0 === c4) {
-          c6 = 3;
-          throw tmp15;
+      } catch (tmp18) {
+        closure_3 = tmp18;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp18;
         } else {
-          c5 = 2;
+          c5 = tmp;
         }
       }
     }
   });
   const items = [startConnection];
-  let obj2 = {
+  let obj = require("useProviderConnection");
+  return {
     loading,
     hasConnection,
     canConnect,
-    startConnection: useCallback(function() {
-      return closure_0(...arguments);
+    startConnection: noop.useCallback(function() {
+      const self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     }, items),
     account
   };
-  return obj2;
 });
-const result = size.fileFinishedImporting("modules/application_account_linking/native/useStartProviderConnection.tsx");
-
-export const useStartProviderConnection = tmp2;

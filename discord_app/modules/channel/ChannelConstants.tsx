@@ -7,7 +7,6 @@ const StaticChannelRoute = { CONJURE: "conjuring", ROLE_SUBSCRIPTIONS: "role-sub
 const set = new Set(Object.values(StaticChannelRoute));
 const obj2 = { GUILD_HOME: "home", SERVER_GUIDE: "guide", CHANNEL_BROWSER: "browse", CUSTOMIZE_COMMUNITY: "customize", LINKED_ROLES: "linked-roles" };
 const frozen = Object.freeze({ GUILD_FEED_REMOVED: 1, PINNED: 2, ACTIVE_CHANNELS_REMOVED: 4, REQUIRE_TAG: 16, IS_SPAM: 32, IS_GUILD_RESOURCE_CHANNEL: 128, CLYDE_AI: 256, IS_SCHEDULED_FOR_DELETION: 512, IS_MEDIA_CHANNEL: 1024, SUMMARIES_DISABLED: 2048, IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL: 8192, IS_BROADCASTING: 16384, HIDE_MEDIA_DOWNLOAD_OPTIONS: 32768, IS_JOIN_REQUEST_INTERVIEW_CHANNEL: 65536, OBFUSCATED: 131072, IS_MODERATOR_REPORT_CHANNEL: 524288, IS_SPOILER_CHANNEL: 2097152, IS_GAME_INVITES_CHANNEL: 4194304, HAS_ONLY_SYSTEM_MESSAGES: 8388608 });
-const set1 = new Set(Object.values(obj2));
 const result = size.fileFinishedImporting("modules/channel/ChannelConstants.tsx");
 
 export { StaticChannelRoute };
@@ -29,4 +28,4 @@ export const ChannelFlags = frozen;
 export const MAX_CHANNEL_TOPIC_LENGTH = 1024;
 export const MAX_FORUM_CHANNEL_TOPIC_LENGTH = 4096;
 export const StaticChannelId = obj2;
-export const StaticChannelIds = set1;
+export const StaticChannelIds = new Set(Object.values(obj2));

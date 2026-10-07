@@ -1,34 +1,28 @@
 // === Module 15922: useAuthFlowBackHandler ===
 
 // Module 15922 (useAuthFlowBackHandler)
-import RegistrationConstants from "RegistrationConstants" /* 15907 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
-let closure_3 = RegistrationConstants.RegistrationTransitionActionTypes;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((step) => {
-  let context;
+const require = fn;
+let closure_3 = fn(15907).RegistrationTransitionActionTypes;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/utils/useAuthFlowBackHandler.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((step) => {
   _require = step;
-  let obj = require("react");
-  const cResult = obj.c(3);
-  const tmp2 = context;
-  context = react.useContext(require("Auth").TrackRegistrationContext);
-  const tmp = _require;
+  const cResult = require("c").c(3);
+  context = noop.useContext(require("Auth").TrackRegistrationContext);
   if (cResult[0] === step) {
-    let tmp5;
     if (cResult[1] === context) {
-      tmp5 = cResult[2];
+      let tmp5 = cResult[2];
     }
-    const tmpResult = tmp(tmp2[5]);
-    tmpResult.useNavigatorBackPressHandler(tmp5);
+    require("useNavigatorBackPressHandler").useNavigatorBackPressHandler(tmp5);
   }
   const fn = function o() {
-    const obj = { step, actionType: constants.VIEWED };
-    context(obj);
+    context({ step, actionType: constants.VIEWED });
     return false;
   };
   cResult[0] = step;
@@ -36,16 +30,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((step) => {
   cResult[2] = fn;
   tmp5 = fn;
 }) : ((step) => {
-  let closure_1;
   _require = step;
-  dependencyMap = react.useContext(require("Auth").TrackRegistrationContext);
-  let obj = require("useNavigatorBackPressHandler");
-  obj.useNavigatorBackPressHandler(() => {
-    const obj = { step, actionType: constants.VIEWED };
-    closure_1(obj);
+  dependencyMap = noop.useContext(require("Auth").TrackRegistrationContext);
+  require("useNavigatorBackPressHandler").useNavigatorBackPressHandler(() => {
+    closure_1({ step, actionType: constants.VIEWED });
     return false;
   });
 });
-const result = size.fileFinishedImporting("modules/auth/native/components/utils/useAuthFlowBackHandler.tsx");
-
-export default tmp2;

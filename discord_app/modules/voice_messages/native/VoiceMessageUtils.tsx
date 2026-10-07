@@ -3,132 +3,103 @@
 // Module 11900 (VoiceMessageUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import byteLengthDefault from "byteLength" /* 206 */;
-import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import HapticUtils from "HapticUtils" /* 4861 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4951 */;
 import downsampleWaveformDefault from "downsampleWaveform" /* 11901 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import VoiceMessagesUIStore from "VoiceMessagesUIStore" /* 11587 */;
-import VoiceMessageConstants from "VoiceMessageConstants" /* 11588 */;
-import module_12 from "module_12" /* 12 */;
-import size from "module_2" /* 2 */;
+import apply from "module_12" /* 12 */;
 
-const require = globalThis.__r;
-let _require, c2, c3, c5, c6, closure_3, initialize_secs, state;
-
-let c10;
-let c9;
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let hasOwnProperty;
-let map1;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let unpackModuleId;
-const f109749 = (item) => Math.min(item, closure_1_13);
-let obj = function _startAudioRecording() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let obj5;
-    let closure_0 = arg0;
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
+require = fn;
+let closure_22 = async function _startAudioRecording(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp3;
+          closure_1 = tmp5;
+          closure_129_0 = closure_0;
+          closure_129_1 = undefined;
+          c19 = null;
+          options(constants.REQUESTED);
+          closure_2_8(closure_0);
+          const mediaEngine = MediaEngineStore.getMediaEngine();
+          mediaEngine.on(require("BaseConnectionEvent").MediaEngineEvent.VoiceActivity, guild);
+          c4 = 1;
+          const _performance2 = performance;
+          closure_129_1 = performance.now();
+          const mediaEngine1 = MediaEngineStore.getMediaEngine();
+          const obj4 = { echoCancellation: MediaEngineStore.getEchoCancellation(), echoCancellationPreEcho: false, noiseSuppression: MediaEngineStore.getNoiseSuppression(), automaticGainControlConfig: null, noiseCancellation: null };
+          const obj5 = { enabled: MediaEngineStore.getAutomaticGainControl() };
+          obj4.automaticGainControlConfig = obj5;
+          obj4.noiseCancellation = MediaEngineStore.getNoiseCancellation();
+          c5 = 2;
+          c6 = 1;
+          const obj6 = { value: mediaEngine1.startLocalAudioRecording(obj4), done: false };
+          return obj6;
+        }
+      } else if (1 === tmp8) {
+        c4 = 0;
+        closure_129_2 = closure_3;
+        closure_130_24();
+        throw closure_129_2;
+      } else if (arg0 === 1) {
+        c6 = 3;
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        c4 = 0;
+        c6 = 3;
+        const obj = { value, done: true };
+        return obj;
       } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      let c4;
-      try {
-        let closure_2;
-        let closure_1;
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_2 = tmp;
-            c19 = null;
-            React4(constants.REQUESTED);
-            metroImportAll(closure_0);
-            const mediaEngine = MediaEngineStore.getMediaEngine();
-            mediaEngine.on(require("BaseConnectionEvent").MediaEngineEvent.VoiceActivity, closure_2_21);
-            c4 = 1;
-            const _performance2 = performance;
-            closure_1 = performance.now();
-            const mediaEngine1 = MediaEngineStore.getMediaEngine();
-            const obj4 = { echoCancellation: MediaEngineStore.getEchoCancellation(), echoCancellationPreEcho: false, noiseSuppression: MediaEngineStore.getNoiseSuppression(), automaticGainControlConfig: obj5, noiseCancellation: MediaEngineStore.getNoiseCancellation() };
-            const startLocalAudioRecording = mediaEngine1.startLocalAudioRecording;
-            obj5 = { enabled: MediaEngineStore.getAutomaticGainControl() };
-            c5 = 2;
-            c6 = 1;
-            const obj6 = { value: startLocalAudioRecording(obj4), done: false };
-            return obj6;
-          }
-        } else {
-          let recordingId;
-          if (1 === tmp4) {
-            c4 = 0;
-            closure_2 = closure_3;
-            recordingId = closure_130_24();
-            throw closure_2;
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            c6 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            const _performance = performance;
-            let closure_19 = performance.now() - closure_1;
-            logger.log("Voice message audio startup latency:", closure_19);
-            recordingId = state.getState().recordingId;
-            if (recordingId !== closure_0) {
-              c4 = 0;
-              c6 = 3;
-              return { value: "IconComponent", done: null };
-            } else {
-              closure_130_9(constants.STARTED);
-              recordingId = closure_130_10;
-              const _Date = Date;
-              closure_130_10(Date.now());
-              c4 = 0;
-              c6 = 3;
-              return { value: "IconComponent", done: null };
-            }
-          }
-        }
-      } catch (tmp16) {
-        closure_3 = tmp16;
-        if (0 === c4) {
+        const _performance = performance;
+        closure_130_19 = performance.now() - closure_129_1;
+        closure_130_20.log("Voice message audio startup latency:", closure_130_19);
+        if (closure_130_11.getState().recordingId !== closure_129_0) {
+          c4 = 0;
           c6 = 3;
-          throw tmp16;
+          return { value: "IconComponent", done: null };
         } else {
-          c5 = 1;
+          closure_130_9(closure_130_12.STARTED);
+          const _Date = Date;
+          closure_130_10(Date.now());
+          c4 = 0;
+          c6 = 3;
+          return { value: "IconComponent", done: null };
         }
+      }
+    } catch (tmp22) {
+      closure_3 = tmp22;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp22;
+      } else {
+        c5 = tmp;
       }
     }
-  });
-  return obj(...arguments);
+  }
 };
 function removeVoiceActivityListener() {
   const mediaEngine = MediaEngineStore.getMediaEngine();
@@ -137,17 +108,15 @@ function removeVoiceActivityListener() {
 function resetAudioRecording() {
   const mediaEngine = MediaEngineStore.getMediaEngine();
   mediaEngine.removeListener(BaseConnectionEvent.MediaEngineEvent.VoiceActivity, closure_21);
-  metroRequire();
+  timestampProducer();
 }
 function stopAndGetAudioRecording() {
-  let closure_0;
-  const tmp = closure_8(null);
+  closure_8(null);
   closure_9(null);
   let mediaEngine = MediaEngineStore.getMediaEngine();
   mediaEngine.removeListener(require("BaseConnectionEvent").MediaEngineEvent.VoiceActivity, closure_21);
-  let waveform = state.getState().waveform;
+  let waveform = closure_11.getState().waveform;
   const mapped = waveform.map((item) => {
-    let tmp;
     [tmp] = item;
     return tmp;
   });
@@ -155,203 +124,213 @@ function stopAndGetAudioRecording() {
   if (mapped.length > closure_16) {
     arr3 = downsampleWaveformDefault(mapped, tmp5);
   }
-  const mapped1 = arr3.map(f109749);
-  const fromByteArray = byteLengthDefault.fromByteArray;
-  byteLengthDefault;
+  const mapped1 = arr3.map((item) => Math.min(item, closure_1_13));
   const uint8Array = new Uint8Array(mapped1);
-  _require = fromByteArray(uint8Array);
-  const promise = new Promise((waveform) => {
+  _require = byteLengthDefault.fromByteArray(uint8Array);
+  return new Promise((waveform) => {
     mediaEngine = mediaEngine.getMediaEngine();
     const result = mediaEngine.stopLocalAudioRecording((filename, arg1) => {
-      obj = { filename, durationSecs: arg1 / 1000, waveform };
-      waveform(obj);
+      waveform({ filename, durationSecs: arg1 / 1000, waveform });
     });
   });
-  return promise;
 }
-obj = function _endAudioRecording() {
-  obj = _asyncToGenerator(async () => {
-    if (c3 === 2) {
-      c3 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_26 = async function _endAudioRecording() {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        let startTimeMillis;
-        let data;
-        c3 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            let closure_1 = tmp;
-            startTimeMillis = undefined;
-            state = state.getState();
-            data = state.savedVoiceMessageUploadData;
-            const tmp8 = null == data && state.recordingStatus === constants.REQUESTED;
-            if (tmp8) {
-              stopAndGetAudioRecording();
-              data = { filename: "", durationSecs: 0, waveform: "" };
-            }
-            if (null == data) {
-              c2 = 1;
-              c3 = 1;
-              const obj4 = { value: stopAndGetAudioRecording(), done: false };
-              return obj4;
-            }
-          }
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          data = value;
-        }
-        startTimeMillis = closure_129_11.getState().startTimeMillis;
-        closure_129_24();
-        const obj5 = { data, startTimeMillis };
-        c3 = 3;
-        const obj6 = { value: obj5, done: true };
-        return obj6;
-      } catch (tmp20) {
-        c3 = 3;
-        throw tmp20;
-      }
-    }
-  });
-  return obj(...arguments);
-};
-function stopAndCacheAudioRecording() {
-  return obj(...arguments);
-}
-obj = function _stopAndCacheAudioRecording() {
-  obj = _asyncToGenerator(async () => {
-    if (c3 === 2) {
-      c3 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        let closure_0;
-        c3 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            let closure_1 = tmp;
-            closure_0 = undefined;
+          closure_1 = tmp2;
+          closure_0 = tmp3;
+          closure_128_0 = undefined;
+          let startTimeMillis;
+          state = state.getState();
+          closure_128_0 = state.savedVoiceMessageUploadData;
+          let tmp9 = null == closure_128_0;
+          if (tmp9) {
+            tmp9 = state.recordingStatus === constants.REQUESTED;
+          }
+          if (tmp9) {
+            stopAndGetAudioRecording();
+            closure_128_0 = { filename: "", durationSecs: 0, waveform: "" };
+          }
+          if (null == closure_128_0) {
             c2 = 1;
             c3 = 1;
             const obj4 = { value: stopAndGetAudioRecording(), done: false };
             return obj4;
+          } else {
+            startTimeMillis = closure_129_11.getState().startTimeMillis;
+            closure_129_24();
+            const obj5 = { data: closure_128_0, startTimeMillis };
+            c3 = 3;
           }
-        } else if (arg0 === 1) {
+        }
+      } else if (arg0 === 1) {
+        c3 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        closure_128_0 = value;
+      }
+      c3 = 3;
+      const obj = { value, done: true };
+      return obj;
+    } catch (tmp21) {
+      c3 = tmp;
+      throw tmp21;
+    }
+  }
+};
+function stopAndCacheAudioRecording() {
+  const self = this;
+  const apply = closure_28.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_28 = async function _stopAndCacheAudioRecording() {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          closure_0 = value;
-          closure_129_23();
-          closure_129_7(closure_0);
-          c3 = 3;
-          return { value: "IconComponent", done: null };
+          closure_1 = tmp2;
+          closure_0 = tmp3;
+          closure_128_0 = undefined;
+          c2 = 1;
+          c3 = 1;
+          const obj4 = { value: stopAndGetAudioRecording(), done: false };
+          return obj4;
         }
-      } catch (tmp14) {
+      } else if (arg0 === 1) {
         c3 = 3;
-        throw tmp14;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } else {
+        closure_128_0 = value;
+        closure_129_23();
+        closure_129_7(closure_128_0);
+        c3 = 3;
+        return { value: "IconComponent", done: null };
       }
+    } catch (tmp15) {
+      c3 = tmp;
+      throw tmp15;
     }
-  });
-  return obj(...arguments);
+  }
 };
-({ addVoiceMessageWave: hasOwnProperty, resetVoiceMessageState: metroRequire, setSavedVoiceMessageUploadData: metroImportDefault, setVoiceMessageRecordingId: metroImportAll, setVoiceMessageRecordingState: c9, setVoiceMessageStartTimeMillis: c10, useVoiceMessagesUIStore: unpackModuleId, VoiceMessageRecordingStatus: closure_12 } = VoiceMessagesUIStore);
+const VoiceMessagesUIStore = fn(11587);
+({ addVoiceMessageWave: hasOwnProperty, resetVoiceMessageState: metroRequire, setSavedVoiceMessageUploadData: closure_7, setVoiceMessageRecordingId: closure_8, setVoiceMessageRecordingState: closure_9, setVoiceMessageStartTimeMillis: c10, useVoiceMessagesUIStore: closure_11, VoiceMessageRecordingStatus: closure_12 } = VoiceMessagesUIStore);
+const VoiceMessageConstants = fn(11588);
 ({ WAVEFORM_WAVE_MAX_VALUE: map1, VOICE_RECORDING_MIN_DB: closure_14, VOICE_RECORDING_MAX_DB: closure_15, WAVEFORM_MAX_SAMPLES: closure_16, VOICE_RECORDING_MAX_DURATION_MILLIS: closure_17 } = VoiceMessageConstants);
-const AnalyticEvents = Constants.AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 let c19 = null;
-const tmp4 = new LoggerDefault("VoiceMessages");
-let closure_20 = tmp4;
-let closure_21 = module_12.throttle((arg0) => {
-  state = unpackModuleId.getState();
+let closure_20 = new LoggerDefault("VoiceMessages");
+let closure_21 = apply.throttle((arg0) => {
+  state = closure_1_11.getState();
   if (null != state.startTimeMillis) {
-    hasOwnProperty(map1 * ((arg0 - authStore2) / (closure_15 - authStore2)));
+    hasOwnProperty(__initData2 * ((arg0 - closure_1_14) / (closure_1_15 - closure_1_14)));
     let tmp8 = null == state.savedVoiceMessageUploadData;
     if (tmp8) {
       const _performance = performance;
-      tmp8 = performance.now() - state.startTimeMillis >= closure_17;
+      tmp8 = performance.now() - state.startTimeMillis >= constants;
     }
     if (tmp8) {
       stopAndCacheAudioRecording();
     }
   }
 }, 100);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_messages/native/VoiceMessageUtils.tsx");
 
 export const generateBase64EncodedWaveform = function generateBase64EncodedWaveform(arg0) {
   let arr = arg0;
-  if (arg0.length > authStore3) {
+  if (arg0.length > value2) {
     arr = downsampleWaveformDefault(arg0, tmp);
   }
-  const mapped = arr.map(f109749);
-  const fromByteArray = byteLengthDefault.fromByteArray;
-  byteLengthDefault;
+  const mapped = arr.map((item) => Math.min(item, closure_1_13));
   const uint8Array = new Uint8Array(mapped);
-  return fromByteArray(uint8Array);
+  return byteLengthDefault.fromByteArray(uint8Array);
 };
 export const startAudioRecording = function startAudioRecording() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_22.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const endAudioRecording = function endAudioRecording() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_26.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export { stopAndCacheAudioRecording };
 export const emitVoiceMessageRecorded = function emitVoiceMessageRecorded(CANCELLED_DURATION, durationSecs, startTimeMillis) {
   if (null != startTimeMillis) {
+    const obj2 = { recording_start_timestamp: startTimeMillis, recording_stop_timestamp: null, duration_secs: null, result: null, initialize_secs: null };
     const _Date = Date;
-    obj = { recording_start_timestamp: startTimeMillis, recording_stop_timestamp: Date.now(), duration_secs: durationSecs, result: CANCELLED_DURATION, initialize_secs };
-    const track = AnalyticsUtilsDefault.track;
-    const VOICE_MESSAGE_RECORDED = AnalyticEvents.VOICE_MESSAGE_RECORDED;
-    AnalyticsUtilsDefault;
-    track(VOICE_MESSAGE_RECORDED, obj);
+    obj2.recording_stop_timestamp = Date.now();
+    obj2.duration_secs = durationSecs;
+    obj2.result = CANCELLED_DURATION;
+    obj2.initialize_secs = initialize_secs;
+    AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_MESSAGE_RECORDED, obj2);
     initialize_secs = null;
   }
 };
 export const triggerHaptic = function triggerHaptic() {
-  const triggerHapticFeedback = HapticUtils.triggerHapticFeedback;
-  HapticUtils;
-  obj = PlatformUtils;
-  const isAndroidResult = obj.isAndroid();
+  const obj = HapticUtils;
   const HapticFeedbackTypes = HapticUtils.HapticFeedbackTypes;
-  const result = triggerHapticFeedback(isAndroidResult ? HapticFeedbackTypes.IMPACT_LIGHT : HapticFeedbackTypes.IMPACT_MEDIUM);
+  const result = obj.triggerHapticFeedback(PlatformUtils.isAndroid() ? HapticFeedbackTypes.IMPACT_LIGHT : HapticFeedbackTypes.IMPACT_MEDIUM);
 };

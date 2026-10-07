@@ -1,70 +1,112 @@
 // === Module 15256: AnimateStickersSetting ===
 
 // Module 15256 (AnimateStickersSetting)
-import react2 from "react" /* 576 */;
-import intl4 from "intl" /* 1126 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import StickersConstants from "StickersConstants" /* 2031 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const StickerAnimationSettings = StickersConstants.StickerAnimationSettings;
+require = fn;
+const StickerAnimationSettings = fn(2031).StickerAnimationSettings;
+const ReactCompilerGating = fn(558);
+const SettingBuilders = fn(11142);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  let intl;
-  let intl2;
-  let intl3;
-  const obj = react2;
-  const cResult = obj.c(1);
+  const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { label: intl.string(intl4.t["Xp+X2U"]), value: StickerAnimationSettings.ALWAYS_ANIMATE };
-    intl = intl4.intl;
+    const obj2 = { label: null, value: null };
+    const intl = util.intl;
+    obj2.label = intl.string(util.t["Xp+X2U"]);
+    obj2.value = StickerAnimationSettings.ALWAYS_ANIMATE;
     const items = [obj2, , ];
-    const obj3 = { label: intl2.string(intl4.t.IlLT7e), value: StickerAnimationSettings.ANIMATE_ON_INTERACTION };
-    intl2 = intl4.intl;
+    const obj3 = { label: null, value: null };
+    const intl2 = util.intl;
+    obj3.label = intl2.string(util.t.IlLT7e);
+    obj3.value = StickerAnimationSettings.ANIMATE_ON_INTERACTION;
     items[1] = obj3;
-    const obj4 = { label: intl3.string(intl4.t.IGu8x3), value: StickerAnimationSettings.NEVER_ANIMATE };
-    intl3 = intl4.intl;
+    const obj4 = { label: null, value: null };
+    const intl3 = util.intl;
+    obj4.label = intl3.string(util.t.IGu8x3);
+    obj4.value = StickerAnimationSettings.NEVER_ANIMATE;
     items[2] = obj4;
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   return first;
-}) : (() => react.useMemo(() => {
-  let intl;
-  let intl2;
-  let intl3;
-  const obj = { label: intl.string(intl4.t["Xp+X2U"]), value: constants.ALWAYS_ANIMATE };
-  intl = intl4.intl;
+}) : (() => noop.useMemo(() => {
+  const obj = { label: null, value: null };
+  const intl = util.intl;
+  obj.label = intl.string(util.t["Xp+X2U"]);
+  obj.value = constants.ALWAYS_ANIMATE;
   const items = [obj, , ];
-  const obj2 = { label: intl2.string(intl4.t.IlLT7e), value: constants.ANIMATE_ON_INTERACTION };
-  intl2 = intl4.intl;
+  const obj2 = { label: null, value: null };
+  const intl2 = util.intl;
+  obj2.label = intl2.string(util.t.IlLT7e);
+  obj2.value = constants.ANIMATE_ON_INTERACTION;
   items[1] = obj2;
-  const obj3 = { label: intl3.string(intl4.t.IGu8x3), value: constants.NEVER_ANIMATE };
-  intl3 = intl4.intl;
+  const obj3 = { label: null, value: null };
+  const intl3 = util.intl;
+  obj3.label = intl3.string(util.t.IGu8x3);
+  obj3.value = constants.NEVER_ANIMATE;
   items[2] = obj3;
   return items;
 }, []));
-let obj = {
+const radio = SettingBuilders.createRadio({
   useTitle() {
-    const intl = intl4.intl;
-    return intl.string(intl4.t.R5nQkS);
+    const intl = util.intl;
+    return intl.string(util.t.R5nQkS);
   },
-  parent: MobileUserSettings.ACCESSIBILITY,
-  useValue: UserSettings.AnimateStickers.useSetting,
+  parent: fn(7645).MobileUserSettings.ACCESSIBILITY,
+  useValue: fn(2028).AnimateStickers.useSetting,
   onValueChange: function onAnimateStickerSettingValueChange(arg0) {
     const AnimateStickers = UserSettings.AnimateStickers;
     AnimateStickers.updateSetting(Number(arg0));
   },
-  useOptions: tmp2
-};
-const radio = SettingBuilders.createRadio(obj);
+  useOptions: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(1);
+    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+      const obj2 = { label: null, value: null };
+      const intl = util.intl;
+      obj2.label = intl.string(util.t["Xp+X2U"]);
+      obj2.value = StickerAnimationSettings.ALWAYS_ANIMATE;
+      const items = [obj2, , ];
+      const obj3 = { label: null, value: null };
+      const intl2 = util.intl;
+      obj3.label = intl2.string(util.t.IlLT7e);
+      obj3.value = StickerAnimationSettings.ANIMATE_ON_INTERACTION;
+      items[1] = obj3;
+      const obj4 = { label: null, value: null };
+      const intl3 = util.intl;
+      obj4.label = intl3.string(util.t.IGu8x3);
+      obj4.value = StickerAnimationSettings.NEVER_ANIMATE;
+      items[2] = obj4;
+      cResult[0] = items;
+      let first = items;
+    } else {
+      first = cResult[0];
+    }
+    return first;
+  }) : (() => noop.useMemo(() => {
+    const obj = { label: null, value: null };
+    const intl = util.intl;
+    obj.label = intl.string(util.t["Xp+X2U"]);
+    obj.value = constants.ALWAYS_ANIMATE;
+    const items = [obj, , ];
+    const obj2 = { label: null, value: null };
+    const intl2 = util.intl;
+    obj2.label = intl2.string(util.t.IlLT7e);
+    obj2.value = constants.ANIMATE_ON_INTERACTION;
+    items[1] = obj2;
+    const obj3 = { label: null, value: null };
+    const intl3 = util.intl;
+    obj3.label = intl3.string(util.t.IGu8x3);
+    obj3.value = constants.NEVER_ANIMATE;
+    items[2] = obj3;
+    return items;
+  }, []))
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AnimateStickersSetting.tsx");
 
 export default radio;

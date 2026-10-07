@@ -10,13 +10,11 @@ const constants = ChannelDetailsConstants.ChannelDetailsNavigatorScreens;
 let result = size.fileFinishedImporting("modules/threads/native/showThreadBrowserModal.tsx");
 
 export default function showThreadBrowserModal(id) {
-  const obj = ThreadUtils;
-  const result = obj.trackThreadBrowserOpened();
-  const obj2 = RootNavigationRef;
-  const rootNavigationRef = obj2.getRootNavigationRef();
-  const tmp2 = null != rootNavigationRef && rootNavigationRef.isReady();
+  const result = ThreadUtils.trackThreadBrowserOpened();
+  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (tmp2) {
     const obj3 = { channelId: id.id, initialRouteName: constants.THREADS };
     rootNavigationRef.navigate("sidebar", obj3);
   }
+  tmp2 = null != rootNavigationRef && rootNavigationRef.isReady();
 };

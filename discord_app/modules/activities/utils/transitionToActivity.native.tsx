@@ -22,31 +22,32 @@ const VoiceChatDrawerState = ChannelCallConstants.VoiceChatDrawerState;
 let result = size.fileFinishedImporting("modules/activities/utils/transitionToActivity.native.tsx");
 
 export default function transitionToActivity(guild_id, connectedActivityLocation) {
-  const obj = embeddedActivityLocationUtils;
-  const embeddedActivityLocationChannelId = obj.getEmbeddedActivityLocationChannelId(connectedActivityLocation);
+  const embeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(connectedActivityLocation);
   if (null != embeddedActivityLocationChannelId) {
-    const tmpResult = NavigationRouteUtils;
-    const isModalOpenResult = tmpResult.isModalOpen(ChannelCallModalDefault);
-    const tmp4 = !isModalOpenResult && isVoiceEmbeddedActivityDefault(embeddedActivityLocationChannelId);
+    const isModalOpenResult = NavigationRouteUtils.isModalOpen(ChannelCallModalDefault);
+    let tmp4 = !isModalOpenResult;
+    if (!isModalOpenResult) {
+      tmp4 = isVoiceEmbeddedActivityDefault(embeddedActivityLocationChannelId);
+    }
     if (tmp4) {
       openChannelCallModalForChannelIdDefault(embeddedActivityLocationChannelId);
     }
     const selfEmbeddedActivityForLocation = EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
     if (null != selfEmbeddedActivityForLocation) {
       if (isVoiceEmbeddedActivityDefault(embeddedActivityLocationChannelId)) {
-        const selectParticipant = ChannelRTCActionCreatorsDefault.selectParticipant;
-        ChannelRTCActionCreatorsDefault;
+        const tmp15Result = ChannelRTCActionCreatorsDefault;
+        ({ applicationId: obj5.applicationId, compositeInstanceId: obj5.instanceId } = selfEmbeddedActivityForLocation);
+        const participant = tmp15Result.selectParticipant(embeddedActivityLocationChannelId, ChannelRTCParticipants.getEmbeddedActivityParticipantId({ applicationId: null, instanceId: null }));
         const obj2 = { applicationId: null, instanceId: null };
-        ({ applicationId: obj4.applicationId, compositeInstanceId: obj4.instanceId } = selfEmbeddedActivityForLocation);
         const tmpResult3 = ChannelRTCParticipants;
-        const participant = selectParticipant(embeddedActivityLocationChannelId, tmpResult3.getEmbeddedActivityParticipantId(obj2));
-        const tmp16Result2 = ActionSheetActionCreatorsDefault;
-        tmp16Result2.hideActionSheet();
+        ActionSheetActionCreatorsDefault.hideActionSheet();
         setVoiceChatDrawerState(embeddedActivityLocationChannelId, VoiceChatDrawerState.CLOSED);
+        const tmp15Result2 = ActionSheetActionCreatorsDefault;
       } else {
+        const result = EmbeddedActivitiesActionCreators.updateActivityPanelMode(ActivityPanelModes.PANEL);
         const tmpResult4 = EmbeddedActivitiesActionCreators;
-        const result = tmpResult4.updateActivityPanelMode(ActivityPanelModes.PANEL);
       }
     }
+    const tmpResult = NavigationRouteUtils;
   }
 };

@@ -10,7 +10,7 @@ export default function getError(arg0, arg1) {
   if (null != arg1[arg0]) {
     const _Array = Array;
     let first = tmp;
-    if (Array.isArray(arg1[arg0])) {
+    if (Array.isArray(tmp)) {
       first = tmp[0];
     }
     tmp2 = first;

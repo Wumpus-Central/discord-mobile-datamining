@@ -1,8 +1,8 @@
 // === Module 14653: ExplicitMediaFiltersNonFriendsDMsSetting ===
 
 // Module 14653 (ExplicitMediaFiltersNonFriendsDMsSetting)
-import react from "react" /* 576 */;
-import intl4 from "intl" /* 1126 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 6811 */;
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7122 */;
 import SettingsConstants from "SettingsConstants" /* 7645 */;
@@ -15,53 +15,40 @@ import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp4;
-  const obj = react;
-  const cResult = obj.c(2);
-  const obj2 = useExplicitContentSettingsOrDefault;
-  const explicitContentNonFriendDm = obj2.useExplicitContentSettingOrDefault().explicitContentNonFriendDm;
+  const cResult = c.c(2);
+  const explicitContentNonFriendDm = useExplicitContentSettingsOrDefault.useExplicitContentSettingOrDefault().explicitContentNonFriendDm;
   if (cResult[0] !== explicitContentNonFriendDm) {
-    const tmpResult = ExplicitMediaRedactionUtils;
-    const tmp5 = tmpResult.redactionSettingToRenderedString(explicitContentNonFriendDm)();
+    const tmp5 = ExplicitMediaRedactionUtils.redactionSettingToRenderedString(explicitContentNonFriendDm)();
     cResult[0] = explicitContentNonFriendDm;
     cResult[1] = tmp5;
-    tmp4 = tmp5;
+    let tmp4 = tmp5;
+    const tmpResult = ExplicitMediaRedactionUtils;
   } else {
     tmp4 = cResult[1];
   }
   return tmp4;
 }) : (() => {
   const obj = useExplicitContentSettingsOrDefault;
-  const explicitContentNonFriendDm = obj.useExplicitContentSettingOrDefault().explicitContentNonFriendDm;
-  const obj2 = ExplicitMediaRedactionUtils;
-  return obj2.redactionSettingToRenderedString(explicitContentNonFriendDm)();
+  return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentNonFriendDm)();
 });
 function onObscuredContentNonFriendsDmOnPress() {
-  let intl2;
-  let obj = SensitiveMediaExplicitRedactionSettingsUtils;
-  const explicitContentNonFriendDm = obj.getExplicitContentSettingOrDefault().explicitContentNonFriendDm;
-  const intl = intl4.intl;
-  const stringResult = intl.string(intl4.t.GYpoAq);
-  let obj2 = {
-    title: stringResult,
-    subtitle: intl2.string(intl4.t["Yh+HX1"]),
-    handlePress(explicitContentNonFriendDm) {
-      const obj = SensitiveMediaExplicitRedactionSettingsUtils;
-      const obj2 = { explicitContentNonFriendDm };
-      return obj.updateExplicitContentSetting(obj2);
-    },
-    currentValue: explicitContentNonFriendDm
+  const intl = util.intl;
+  const obj = SensitiveMediaExplicitRedactionSettingsUtils;
+  const stringResult = intl.string(util.t.GYpoAq);
+  const obj3 = { title: stringResult, subtitle: null, handlePress: null, currentValue: null };
+  const intl2 = util.intl;
+  obj3.subtitle = intl2.string(util.t["Yh+HX1"]);
+  obj3.handlePress = function handlePress(explicitContentNonFriendDm) {
+    return SensitiveMediaExplicitRedactionSettingsUtils.updateExplicitContentSetting({ explicitContentNonFriendDm });
   };
-  const handleSensitiveMediaFilterPress = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress;
-  ExplicitMediaRedactionNativeUtils;
-  intl2 = intl4.intl;
-  const result = handleSensitiveMediaFilterPress(obj2);
+  obj3.currentValue = obj.getExplicitContentSettingOrDefault().explicitContentNonFriendDm;
+  const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj3);
 }
 function getTitle() {
-  const intl = intl4.intl;
-  return intl.string(intl4.t["Yh+HX1"]);
+  const intl = util.intl;
+  return intl.string(util.t["Yh+HX1"]);
 }
-let obj = {
+const pressable = SettingBuilders.createPressable({
   useTitle: getTitle,
   parent() {
     return MobileUserSettings.SENSITIVE_CONTENT_FILTERS;
@@ -69,17 +56,16 @@ let obj = {
   useTrailing: tmp2,
   onPress: onObscuredContentNonFriendsDmOnPress,
   useSearchTerms: function getSearchTerms() {
-    const intl = intl4.intl;
-    const items = [intl.string(intl4.t["N/oRI+"]), , ];
-    const intl2 = intl4.intl;
-    items[1] = intl2.string(intl4.t.QVdYsK);
-    const intl3 = intl4.intl;
-    items[2] = intl3.string(intl4.t["5mnTa7"]);
+    const intl = util.intl;
+    const items = [intl.string(util.t["N/oRI+"]), , ];
+    const intl2 = util.intl;
+    items[1] = intl2.string(util.t.QVdYsK);
+    const intl3 = util.intl;
+    items[2] = intl3.string(util.t["5mnTa7"]);
     return items;
   },
   useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled
-};
-const pressable = SettingBuilders.createPressable(obj);
+});
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/ExplicitMediaFiltersNonFriendsDMsSetting.tsx");
 
 export default pressable;

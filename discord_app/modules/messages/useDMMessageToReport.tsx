@@ -1,7 +1,7 @@
 // === Module 12267: useDMMessageToReport ===
 
 // Module 12267 (useDMMessageToReport)
-import react from "react" /* 576 */;
+import c from "c" /* 576 */;
 import useLongestChannelMessageBeforeReply from "useLongestChannelMessageBeforeReply" /* 12107 */;
 import useIsRelationshipTypeSpamReportable from "useIsRelationshipTypeSpamReportable" /* 12268 */;
 import getApplicationFromBotUserIdDefault from "getApplicationFromBotUserId" /* 12269 */;
@@ -10,25 +10,17 @@ import useMessageRequestPreview from "useMessageRequestPreview" /* 12274 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-let id;
+const result = size.fileFinishedImporting("modules/messages/useDMMessageToReport.tsx");
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) => {
-  let error;
-  let loaded;
-  let message;
-  let tmp13;
-  const obj = react;
-  const cResult = obj.c(6);
-  const obj2 = useIsRelationshipTypeSpamReportable;
-  let isRelationshipTypeSpamReportable = obj2.useIsRelationshipTypeSpamReportable(arg1);
+export const useDMMessageToReport = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) => {
+  const cResult = c.c(6);
+  let isRelationshipTypeSpamReportable = useIsRelationshipTypeSpamReportable.useIsRelationshipTypeSpamReportable(arg1);
   let tmp7 = null;
-  const tmp6 = getApplicationFromBotUserIdDefault;
   if (arg2) {
     tmp7 = arg1;
   }
-  const tmp6Result = tmp6(tmp7);
+  const tmp6Result = getApplicationFromBotUserIdDefault(tmp7);
   let tmp10 = null;
-  const tmp5Result = useIsApplicationDeveloperDefault;
   if (arg2) {
     id = undefined;
     if (tmp6Result != null) {
@@ -42,18 +34,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) =>
   if (arg2) {
     isRelationshipTypeSpamReportable = !tmp5Result(tmp10);
   }
-  const tmpResult = useLongestChannelMessageBeforeReply;
-  let longestChannelMessageBeforeReply = tmpResult.useLongestChannelMessageBeforeReply(id.id, arg1);
+  tmp5Result = useIsApplicationDeveloperDefault;
+  let longestChannelMessageBeforeReply = useLongestChannelMessageBeforeReply.useLongestChannelMessageBeforeReply(id.id, arg1);
   if (cResult[0] !== isRelationshipTypeSpamReportable) {
     const obj3 = { enabled: isRelationshipTypeSpamReportable };
     cResult[0] = isRelationshipTypeSpamReportable;
     cResult[1] = obj3;
-    tmp13 = obj3;
+    let tmp13 = obj3;
   } else {
     tmp13 = cResult[1];
   }
-  const tmpResult2 = useMessageRequestPreview;
-  const messageRequestPreview = tmpResult2.useMessageRequestPreview(id, tmp13);
+  const tmpResult = useLongestChannelMessageBeforeReply;
+  const messageRequestPreview = useMessageRequestPreview.useMessageRequestPreview(id, tmp13);
   ({ message, loaded, error } = messageRequestPreview);
   if (longestChannelMessageBeforeReply == null) {
     let id1;
@@ -71,9 +63,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) =>
   }
   if (cResult[2] === (null != longestChannelMessageBeforeReply || loaded || error)) {
     if (cResult[3] === isRelationshipTypeSpamReportable) {
-      let tmp18;
       if (cResult[4] === longestChannelMessageBeforeReply) {
-        tmp18 = cResult[5];
+        let tmp18 = cResult[5];
       }
       return tmp18;
     }
@@ -84,19 +75,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) =>
   cResult[4] = longestChannelMessageBeforeReply;
   cResult[5] = obj4;
   tmp18 = obj4;
+  const tmpResult2 = useMessageRequestPreview;
 }) : ((id, arg1, arg2) => {
-  let error;
-  let loaded;
-  const obj = useIsRelationshipTypeSpamReportable;
-  let isRelationshipTypeSpamReportable = obj.useIsRelationshipTypeSpamReportable(arg1);
+  let isRelationshipTypeSpamReportable = useIsRelationshipTypeSpamReportable.useIsRelationshipTypeSpamReportable(arg1);
   let tmp6 = null;
-  const tmp5 = getApplicationFromBotUserIdDefault;
   if (arg2) {
     tmp6 = arg1;
   }
-  const tmp5Result = tmp5(tmp6);
+  const tmp5Result = getApplicationFromBotUserIdDefault(tmp6);
   let tmp9 = null;
-  const tmp4Result = useIsApplicationDeveloperDefault;
   if (arg2) {
     id = undefined;
     if (tmp5Result != null) {
@@ -110,10 +97,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) =>
   if (arg2) {
     isRelationshipTypeSpamReportable = !tmp4Result(tmp9);
   }
+  tmp4Result = useIsApplicationDeveloperDefault;
+  const longestChannelMessageBeforeReply = useLongestChannelMessageBeforeReply.useLongestChannelMessageBeforeReply(id.id, arg1);
   const tmpResult = useLongestChannelMessageBeforeReply;
-  const longestChannelMessageBeforeReply = tmpResult.useLongestChannelMessageBeforeReply(id.id, arg1);
-  const tmpResult2 = useMessageRequestPreview;
-  const messageRequestPreview = tmpResult2.useMessageRequestPreview(id, { enabled: isRelationshipTypeSpamReportable });
+  const messageRequestPreview = useMessageRequestPreview.useMessageRequestPreview(id, { enabled: isRelationshipTypeSpamReportable });
   const message = messageRequestPreview.message;
   let tmp13 = longestChannelMessageBeforeReply;
   ({ loaded, error } = messageRequestPreview);
@@ -133,6 +120,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) =>
   }
   return { message: tmp13, isReportable: isRelationshipTypeSpamReportable, isLoaded: null != tmp13 || loaded || error };
 });
-const result = size.fileFinishedImporting("modules/messages/useDMMessageToReport.tsx");
-
-export const useDMMessageToReport = tmp2;

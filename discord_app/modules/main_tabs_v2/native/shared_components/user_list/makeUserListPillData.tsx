@@ -1,20 +1,18 @@
 // === Module 10608: makeUserListPillData ===
 
 // Module 10608 (makeUserListPillData)
-import Fragment from "Fragment" /* 21 */;
 import native from "native" /* 1188 */;
 import UserUtilsDefault from "UserUtils" /* 4728 */;
-import react from "react" /* 19 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/makeUserListPillData.tsx");
 
 export default function makeUserListPillData(id) {
-  let obj2;
-  const obj = { id: id.id, text: obj2.getName(id), icon: null };
-  obj2 = UserUtilsDefault;
-  ({ user: id, guildId: "Array", size: native.AvatarSizes.XXSMALL });
-  const Avatar = native.Avatar;
+  const obj = { id: id.id, text: UserUtilsDefault.getName(id), icon: null };
+  const obj3 = { user: id, guildId: "Array", size: native.AvatarSizes.XXSMALL };
+  obj.icon = jsx(native.Avatar, { user: id, guildId: "Array", size: native.AvatarSizes.XXSMALL });
   return obj;
 };

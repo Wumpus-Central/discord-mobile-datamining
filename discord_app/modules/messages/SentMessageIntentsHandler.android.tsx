@@ -3,7 +3,9 @@
 // Module 7269 (SentMessageIntentsHandler)
 import size from "module_2" /* 2 */;
 
-const obj = {
+const result = size.fileFinishedImporting("modules/messages/SentMessageIntentsHandler.android.tsx");
+
+export default {
   init() {
 
   },
@@ -14,6 +16,3 @@ const obj = {
 
   }
 };
-const result = size.fileFinishedImporting("modules/messages/SentMessageIntentsHandler.android.tsx");
-
-export default obj;

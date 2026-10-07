@@ -1,27 +1,25 @@
 // === Module 10953: VideoQuestUtils ===
 
 // Module 10953 (VideoQuestUtils)
-import Constants from "Constants" /* 1085 */;
-import intl6 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
 import QuestDataUtils from "QuestDataUtils" /* 7196 */;
 import AnalyticsActions from "AnalyticsActions" /* 7215 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7221 */;
 import QuestActionCreators from "QuestActionCreators" /* 10007 */;
-import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 10954 */;
 import NetworkStore from "NetworkStore" /* 4945 */;
 import QuestStore from "QuestStore" /* 7200 */;
 import VideoQuestUIStore from "VideoQuestUIStore" /* 7202 */;
-import size from "module_2" /* 2 */;
 
-const AnalyticEvents = Constants.AnalyticEvents;
+require = fn;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const portrait = "portrait";
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/VideoQuestUtils.tsx");
 
-export const getVideoQuestWatchCtaText = MobileQuestVideoWatchCtaCopy.getVideoQuestWatchCtaText;
+export const getVideoQuestWatchCtaText = fn(10954).getVideoQuestWatchCtaText;
 export const sendVideoProgress = function sendVideoProgress(quest, currentTime) {
-  const obj = QuestDataUtils;
-  let isQuestExpiredResult = obj.isQuestExpired(quest);
+  let isQuestExpiredResult = QuestDataUtils.isQuestExpired(quest);
   if (!isQuestExpiredResult) {
     const userStatus = quest.userStatus;
     let enrolledAt;
@@ -39,17 +37,16 @@ export const sendVideoProgress = function sendVideoProgress(quest, currentTime) 
     isQuestExpiredResult = null != completedAt;
   }
   if (!isQuestExpiredResult) {
+    QuestActionCreators.updateVideoProgress(quest.id, currentTime);
     const tmpResult = QuestActionCreators;
-    tmpResult.updateVideoProgress(quest.id, currentTime);
   }
 };
 export const getVideoOrientation = function getVideoOrientation(assets) {
   const video = assets.assets.video;
   if (null != video) {
     if (null != video.width) {
-      let str;
       if (null != video.height) {
-        str = "portrait";
+        let str = "portrait";
         if (video.width > video.height) {
           str = "landscape";
         }
@@ -60,36 +57,32 @@ export const getVideoOrientation = function getVideoOrientation(assets) {
   str = portrait;
 };
 export const getVideoQuestProgressRemainingAccessibilityLabel = function getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, arg1) {
-  let minutes;
-  let seconds;
-  const tmp3 = arg1;
-  if (tmp3) {
-    const intl5 = intl6.intl;
-    return intl5.string(intl6.t["ij5E/5"]);
+  if (arg1) {
+    const intl5 = util.intl;
+    return intl5.string(util.t["ij5E/5"]);
   } else {
-    let formatToPlainStringResult;
-    const tmpResult = QuestTaskUtils;
-    const remainingTaskTime = tmpResult.getRemainingTaskTime(questTaskDetails);
+    const remainingTaskTime = QuestTaskUtils.getRemainingTaskTime(questTaskDetails);
     ({ minutes, seconds } = remainingTaskTime);
     if (minutes > 0) {
       if (seconds > 0) {
-        const intl3 = intl6.intl;
+        const intl3 = util.intl;
         const time = { minutes, seconds };
-        formatToPlainStringResult = intl3.formatToPlainString(intl6.t["lW/66D"], time);
+        let formatToPlainStringResult = intl3.formatToPlainString(util.t["lW/66D"], time);
       }
-      const intl4 = intl6.intl;
+      const intl4 = util.intl;
       const obj = { remainingTime: formatToPlainStringResult };
-      return intl4.formatToPlainString(intl6.t.nzYZrt, obj);
+      return intl4.formatToPlainString(util.t.nzYZrt, obj);
     }
     if (minutes > 0) {
-      const intl2 = intl6.intl;
+      const intl2 = util.intl;
       const obj2 = { count: minutes };
-      formatToPlainStringResult = intl2.formatToPlainString(intl6.t["SxnF/O"], obj2);
+      formatToPlainStringResult = intl2.formatToPlainString(util.t["SxnF/O"], obj2);
     } else {
-      const intl = intl6.intl;
+      const intl = util.intl;
       const obj3 = { count: seconds };
-      formatToPlainStringResult = intl.formatToPlainString(intl6.t["0BZpdi"], obj3);
+      formatToPlainStringResult = intl.formatToPlainString(util.t["0BZpdi"], obj3);
     }
+    const tmpResult = QuestTaskUtils;
   }
 };
 export const formatVideoProgressRatio = function formatVideoProgressRatio(maxVideoProgressSeconds, current) {
@@ -111,21 +104,14 @@ export const formatVideoProgressRatio = function formatVideoProgressRatio(maxVid
 export const getVideoQuestEndCardCtaText = function getVideoQuestEndCardCtaText(ctaConfig) {
   let buttonLabel = ctaConfig.ctaConfig.buttonLabel;
   if (buttonLabel == null) {
-    const intl = intl6.intl;
-    buttonLabel = intl.string(intl6.t.iiTtpJ);
+    const intl = util.intl;
+    buttonLabel = intl.string(util.t.iiTtpJ);
   }
   return buttonLabel;
 };
 export const handleVideoQuestModalClose = function handleVideoQuestModalClose(arg0) {
-  let duration;
-  let maxTimestampSec2;
-  let obj2;
-  let obj6;
-  let questId;
-  let sourceQuestContent;
-  let videoSessionId;
   ({ questId, sourceQuestContent, videoSessionId } = arg0);
-  const state = VideoQuestUIStore.getState();
+  state = VideoQuestUIStore.getState();
   state.setTranscriptEnabled(false);
   const state1 = VideoQuestUIStore.getState();
   const videoProgress = state1.getVideoProgress(questId);
@@ -149,9 +135,7 @@ export const handleVideoQuestModalClose = function handleVideoQuestModalClose(ar
       tmp4 = null == completedAt;
     }
     if (tmp4) {
-      const maxTimestampSec = videoProgress.maxTimestampSec;
-      const obj3 = QuestDataUtils;
-      let isQuestExpiredResult = obj3.isQuestExpired(quest);
+      let isQuestExpiredResult = QuestDataUtils.isQuestExpired(quest);
       if (!isQuestExpiredResult) {
         const userStatus3 = quest.userStatus;
         let enrolledAt1;
@@ -169,33 +153,34 @@ export const handleVideoQuestModalClose = function handleVideoQuestModalClose(ar
         isQuestExpiredResult = null != completedAt1;
       }
       if (!isQuestExpiredResult) {
+        QuestActionCreators.updateVideoProgress(quest.id, videoProgress.maxTimestampSec);
         const tmp6Result = QuestActionCreators;
-        tmp6Result.updateVideoProgress(quest.id, maxTimestampSec);
       }
     }
-    ({ maxTimestampSec: maxTimestampSec2, duration } = videoProgress);
+    ({ maxTimestampSec, duration } = videoProgress);
     let num2 = 0;
-    if (maxTimestampSec2 > 0) {
+    if (maxTimestampSec > 0) {
       num2 = 0;
       if (duration > 0) {
         let num4 = 1;
-        if (maxTimestampSec2 < duration) {
+        if (maxTimestampSec < duration) {
           const _Math = Math;
           const _Math2 = Math;
-          num4 = Math.min(1, Math.round(maxTimestampSec2 / duration * 100) / 100);
+          num4 = Math.min(1, Math.round(maxTimestampSec / duration * 100) / 100);
         }
         num2 = num4;
       }
     }
-    const obj = { questId, event: AnalyticEvents.QUEST_VIDEO_PROGRESSED, properties: obj2, sourceQuestContent };
-    obj2 = { progress: num2, video_timestamp_seconds: videoProgress.maxTimestampSec, video_session_id: videoSessionId };
-    const obj5 = AnalyticsActions;
-    obj5.trackQuestEvent(obj);
-    const obj4 = { questId, event: AnalyticEvents.QUEST_VIDEO_MODAL_CLOSED, properties: obj6, sourceQuestContent };
-    obj6 = { video_progress: num2, video_session_id: videoSessionId, network_connection_speed: NetworkStore.getEffectiveConnectionSpeed() };
-    const trackQuestEvent = AnalyticsActions.trackQuestEvent;
-    AnalyticsActions;
-    trackQuestEvent(obj4);
+    const obj = { questId, event: AnalyticEvents.QUEST_VIDEO_PROGRESSED, properties: null, sourceQuestContent: null };
+    const obj2 = { progress: num2, video_timestamp_seconds: videoProgress.maxTimestampSec, video_session_id: videoSessionId };
+    obj.properties = obj2;
+    obj.sourceQuestContent = sourceQuestContent;
+    AnalyticsActions.trackQuestEvent(obj);
+    const obj4 = { questId, event: AnalyticEvents.QUEST_VIDEO_MODAL_CLOSED, properties: null, sourceQuestContent: null };
+    const obj6 = { video_progress: num2, video_session_id: videoSessionId, network_connection_speed: NetworkStore.getEffectiveConnectionSpeed() };
+    obj4.properties = obj6;
+    obj4.sourceQuestContent = sourceQuestContent;
+    AnalyticsActions.trackQuestEvent(obj4);
   }
 };
 export const getVideoQuestModalKey = function getVideoQuestModalKey(questId) {
@@ -210,8 +195,7 @@ export const computeMaxSeekableTime = function computeMaxSeekableTime(arg0, arg1
   return bound;
 };
 export const isVideoQuestProgressing = function isVideoQuestProgressing(id) {
-  const obj = QuestTaskUtils;
-  let isModalOpenResult = obj.hasWatchVideoTasks(id);
+  let isModalOpenResult = QuestTaskUtils.hasWatchVideoTasks(id);
   if (isModalOpenResult) {
     const _HermesInternal = HermesInternal;
     isModalOpenResult = NavigationRouteUtils.isModalOpen("VIDEO-QUEST-" + id.id);

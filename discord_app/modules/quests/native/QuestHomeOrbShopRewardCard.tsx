@@ -2,319 +2,309 @@
 
 // Module 14903 (QuestHomeOrbShopRewardCard)
 import nativeDefault from "native" /* 587 */;
-import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7077 */;
-import openProductDetailsActionSheet2 from "openProductDetailsActionSheet" /* 7858 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
-import UserStore_mod from "UserStore" /* 1377 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 7858 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1377 */;
 
-let product;
-
-let StyleSheet;
-let c9;
-let closure_4;
-let metroImportAll;
-let metroImportDefault;
-let obj2;
-let obj3;
-({ View: closure_4, StyleSheet } = react_native);
-let UserStore = UserStore_mod;
-const ShopCtaEnum = CollectiblesShopConstants.ShopCtaEnum;
-({ jsx: metroImportDefault, Fragment: metroImportAll, jsxs: c9 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { card: obj2, assetTile: obj3 };
-obj2 = { overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm, position: "relative" };
-createStyles = createStyles.createStyles;
-obj3 = {};
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet } = get_ActivityIndicator);
+const ShopCtaEnum = fn(1087).ShopCtaEnum;
+const jsxProd = fn(21);
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { card: { overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm, position: "relative" }, assetTile: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-let closure_10 = createStyles(obj);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((product) => {
-  let analyticsLocations;
-  let cardHeight;
-  let cardWidth;
-  let clickable;
-  let currentUser;
-  let hideCardDetails;
-  let items1;
-  let require;
-  let tmp7;
-  let tmp8;
-  const tmp2 = analyticsLocations;
-  let obj = require("react");
-  const cResult = obj.c(44);
+obj2.assetTile = {};
+let closure_10 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm, position: "relative" };
+let obj4 = {};
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/native/QuestHomeOrbShopRewardCard.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((product) => {
+  let PressableOpacity = require;
+  let tmp = analyticsLocations;
+  const cResult = require("c").c(44);
   product = product.product;
   require = product;
   ({ cardWidth, cardHeight, hideCardDetails, clickable } = product);
   if (undefined === cardWidth) {
-    cardWidth = tmp(tmp2[9]).COLLECTIBLES_SHOP_CARD_WIDTH;
+    cardWidth = PressableOpacity(tmp[9]).COLLECTIBLES_SHOP_CARD_WIDTH;
   }
   if (undefined === cardHeight) {
-    cardHeight = tmp(tmp2[9]).COLLECTIBLES_SHOP_CARD_HEIGHT;
+    cardHeight = PressableOpacity(tmp[9]).COLLECTIBLES_SHOP_CARD_HEIGHT;
   }
-  const tmp5 = undefined !== clickable && clickable;
-  const tmp6 = closure_10();
+  const tmp5 = closure_10();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     const fn = function s() {
-      const obj = defaultVariantIndex(analyticsLocations[10]);
-      return obj.canUseShopDiscounts(currentUser.getCurrentUser());
+      return defaultVariantIndex(analyticsLocations[10]).canUseShopDiscounts(currentUser.getCurrentUser());
     };
     cResult[0] = items;
     cResult[1] = fn;
-    tmp7 = items;
-    tmp8 = fn;
+    tmp6 = items;
+    tmp7 = fn;
   } else {
-    [tmp7, tmp8] = cResult;
+    [tmp6, tmp7] = cResult;
   }
-  const tmpResult = require("get initialized");
-  const stateFromStores = tmpResult.useStateFromStores(tmp7, tmp8);
-  const tmpResult6 = require("useDefaultVariantIndex");
-  const defaultVariantIndex = tmpResult6.useDefaultVariantIndex(product);
-  analyticsLocations = defaultVariantIndex(tmp2[13])().analyticsLocations;
-  const tmpResult7 = require("CollectiblesAnalyticsContext");
-  const collectiblesAnalyticsContext = tmpResult7.useCollectiblesAnalyticsContext();
+  let obj = require("c");
+  const tmp4 = undefined !== clickable && clickable;
+  const stateFromStores = PressableOpacity(tmp[11]).useStateFromStores(tmp6, tmp7);
+  const PressableOpacityResult = PressableOpacity(tmp[11]);
+  const defaultVariantIndex = PressableOpacity(tmp[12]).useDefaultVariantIndex(product);
+  analyticsLocations = defaultVariantIndex(tmp[13])().analyticsLocations;
+  const PressableOpacityResult1 = PressableOpacity(tmp[12]);
+  const collectiblesAnalyticsContext = PressableOpacity(tmp[14]).useCollectiblesAnalyticsContext();
   if (cResult[2] === analyticsLocations) {
-    let tmp14;
-    let tmp17;
     if (cResult[3] === product) {
-      tmp14 = cResult[4];
+      let tmp13 = cResult[4];
     }
-    const tmpResult8 = require("useTrackShopCardClick");
-    const trackShopCardClick = tmpResult8.useTrackShopCardClick(tmp14);
+    const trackShopCardClick = PressableOpacity(tmp[15]).useTrackShopCardClick(tmp13);
+    const PressableOpacityResult3 = PressableOpacity(tmp[15]);
     let obj2 = { product, hasShopDiscount: stateFromStores };
-    const tmpResult9 = require("CollectiblesProductUtils");
-    const productOrbPrice = tmpResult9.getProductOrbPrice(obj2);
+    const productOrbPrice = PressableOpacity(tmp[16]).getProductOrbPrice(obj2);
     if (cResult[5] !== product) {
-      const tmpResult10 = require("getProductName");
-      const productName = tmpResult10.getProductName(product);
+      const productName = PressableOpacity(tmp[17]).getProductName(product);
       cResult[5] = product;
       cResult[6] = productName;
-      tmp17 = productName;
+      let tmp16 = productName;
+      const PressableOpacityResult5 = PressableOpacity(tmp[17]);
     } else {
-      tmp17 = cResult[6];
+      tmp16 = cResult[6];
     }
     if (cResult[7] === collectiblesAnalyticsContext) {
       if (cResult[8] === analyticsLocations) {
         if (cResult[9] === product) {
-          let tmp19;
           if (cResult[10] === defaultVariantIndex) {
-            tmp19 = cResult[11];
+            let tmp18 = cResult[11];
           }
-          UserStore = tmp19;
+          UserStore = tmp18;
           if (null == productOrbPrice) {
             return null;
           } else {
             if (cResult[12] === cardHeight) {
-              let tmp21;
               if (cResult[13] === cardWidth) {
-                tmp21 = cResult[14];
+                let tmp20 = cResult[14];
               }
-              if (cResult[15] === tmp6.card) {
+              if (cResult[15] === tmp5.card) {
                 if (cResult[18] === cardHeight) {
                   if (cResult[19] === cardWidth) {
-                    if (cResult[20] === (undefined !== hideCardDetails && hideCardDetails)) {
-                      let tmp24;
+                    if (cResult[20] === tmp3) {
                       if (cResult[21] === product) {
-                        tmp24 = cResult[22];
+                        let tmp23 = cResult[22];
                       }
-                      if (cResult[23] === tmp6.assetTile) {
-                        let tmp27;
-                        if (cResult[24] === tmp24) {
-                          tmp27 = cResult[25];
+                      if (cResult[23] === tmp5.assetTile) {
+                        if (cResult[24] === tmp23) {
+                          let tmp26 = cResult[25];
                         }
-                        if (cResult[26] === (undefined !== hideCardDetails && hideCardDetails)) {
-                          let tmp31;
+                        if (cResult[26] === tmp3) {
                           if (cResult[27] === product) {
-                            tmp31 = cResult[28];
+                            let tmp30 = cResult[28];
                           }
-                          if (cResult[29] === tmp27) {
-                            let tmp35;
-                            let tmp39;
-                            if (cResult[30] === tmp31) {
-                              tmp35 = cResult[31];
+                          if (cResult[29] === tmp26) {
+                            if (cResult[30] === tmp30) {
+                              let tmp34 = cResult[31];
                             }
-                            if (tmp5) {
-                              if (cResult[36] === tmp19) {
-                                let tmp42;
+                            if (tmp4) {
+                              if (cResult[36] === tmp18) {
                                 if (cResult[37] === trackShopCardClick) {
-                                  tmp42 = cResult[38];
+                                  let tmp41 = cResult[38];
                                 }
                                 class K {
                                   constructor() {
-                                    trackShopCardClick(ShopCtaEnum.OPEN_DETAILS);
-                                    currentUser();
+                                    tmp = closure_4(ShopCtaEnum.OPEN_DETAILS);
+                                    tmp2 = closure_5();
+                                    return;
                                   }
                                 }
-                                const obj3 = { style: tmp23, onPress: tmp42, activeOpacity: 0.8, accessibilityRole: "button", accessibilityLabel: tmp17, children: tmp35 };
-                                cResult[39] = tmp35;
-                                const tmp45 = closure_7(require("Pressables").PressableOpacity, obj3);
+                                PressableOpacity = PressableOpacity(tmp[22]).PressableOpacity;
+                                let obj3 = { style: tmp22, onPress: tmp41, activeOpacity: 0.8, accessibilityRole: "button", accessibilityLabel: tmp16, children: tmp34 };
+                                tmp = closure_7(PressableOpacity, obj3);
                                 class B {
                                   constructor() {
-                                    const obj = ActionSheetActionCreatorsDefault;
-                                    obj.hideActionSheet();
-                                    const obj2 = { product: require, initialVariantIndex: defaultVariantIndex, analyticsLocations, shopAnalyticsContext: collectiblesAnalyticsContext };
-                                    const openProductDetailsActionSheet = openProductDetailsActionSheet2.openProductDetailsActionSheet;
-                                    openProductDetailsActionSheet2;
-                                    const result = openProductDetailsActionSheet(obj2);
+                                    obj = closure_1(closure_2[18]);
+                                    hideActionSheetResult = obj.hideActionSheet();
+                                    obj2 = closure_0(closure_2[19]);
+                                    obj1 = { product, initialVariantIndex: closure_1, analyticsLocations, shopAnalyticsContext: null };
+                                    tmp2 = closure_3;
+                                    obj1.shopAnalyticsContext = tmp2;
+                                    result = obj2.openProductDetailsActionSheet(obj1);
+                                    return;
                                   }
                                 }
-                                cResult[40] = tmp23;
-                                cResult[41] = tmp17;
-                                cResult[42] = tmp42;
-                                cResult[43] = tmp45;
+                                cResult[40] = tmp22;
+                                cResult[41] = tmp16;
+                                cResult[42] = tmp41;
+                                cResult[43] = tmp;
                               }
                               class K {
                                 constructor() {
-                                  trackShopCardClick(ShopCtaEnum.OPEN_DETAILS);
-                                  currentUser();
+                                  tmp = closure_4(ShopCtaEnum.OPEN_DETAILS);
+                                  tmp2 = closure_5();
+                                  return;
                                 }
                               }
-                              cResult[36] = tmp19;
+                              cResult[36] = tmp18;
                               cResult[37] = trackShopCardClick;
                               cResult[38] = K;
-                              tmp42 = K;
+                              tmp41 = K;
                             } else {
-                              if (cResult[32] === tmp35) {
-                                if (cResult[33] === tmp23) {
-                                  if (cResult[34] === tmp17) {
-                                    tmp39 = cResult[35];
+                              if (cResult[32] === tmp34) {
+                                if (cResult[33] === tmp22) {
+                                  class K {
+                                    constructor() {
+                                      tmp = closure_4(ShopCtaEnum.OPEN_DETAILS);
+                                      tmp2 = closure_5();
+                                      return;
+                                    }
                                   }
                                 }
                               }
                               class K {
                                 constructor() {
-                                  trackShopCardClick(ShopCtaEnum.OPEN_DETAILS);
-                                  currentUser();
+                                  tmp = closure_4(ShopCtaEnum.OPEN_DETAILS);
+                                  tmp2 = closure_5();
+                                  return;
                                 }
                               }
-                              const obj4 = { style: tmp23, accessible: true, accessibilityRole: "text", accessibilityLabel: tmp17, children: tmp35 };
-                              const tmp41 = closure_7(trackShopCardClick, obj4);
-                              cResult[32] = tmp35;
+                              const obj4 = { style: tmp22, accessible: true, accessibilityRole: "text", accessibilityLabel: tmp16, children: tmp34 };
+                              const tmp40 = closure_7(trackShopCardClick, obj4);
+                              cResult[32] = tmp34;
                               class B {
                                 constructor() {
-                                  const obj = ActionSheetActionCreatorsDefault;
-                                  obj.hideActionSheet();
-                                  const obj2 = { product: require, initialVariantIndex: defaultVariantIndex, analyticsLocations, shopAnalyticsContext: collectiblesAnalyticsContext };
-                                  const openProductDetailsActionSheet = openProductDetailsActionSheet2.openProductDetailsActionSheet;
-                                  openProductDetailsActionSheet2;
-                                  const result = openProductDetailsActionSheet(obj2);
+                                  obj = closure_1(closure_2[18]);
+                                  hideActionSheetResult = obj.hideActionSheet();
+                                  obj2 = closure_0(closure_2[19]);
+                                  obj1 = { product, initialVariantIndex: closure_1, analyticsLocations, shopAnalyticsContext: null };
+                                  tmp2 = closure_3;
+                                  obj1.shopAnalyticsContext = tmp2;
+                                  result = obj2.openProductDetailsActionSheet(obj1);
+                                  return;
                                 }
                               }
-                              cResult[34] = tmp17;
-                              cResult[35] = tmp41;
-                              tmp39 = tmp41;
+                              cResult[34] = tmp16;
+                              cResult[35] = tmp40;
                             }
-                            return tmp39;
                           }
-                          const obj5 = { children: items1 };
-                          items1 = [tmp27, tmp31];
-                          const tmp38 = closure_9(closure_8, obj5);
+                          const obj5 = { children: null };
+                          const items1 = [tmp26, tmp30];
+                          obj5.children = items1;
+                          const tmp37 = closure_9(closure_8, obj5);
                           class B {
                             constructor() {
-                              const obj = ActionSheetActionCreatorsDefault;
-                              obj.hideActionSheet();
-                              const obj2 = { product: require, initialVariantIndex: defaultVariantIndex, analyticsLocations, shopAnalyticsContext: collectiblesAnalyticsContext };
-                              const openProductDetailsActionSheet = openProductDetailsActionSheet2.openProductDetailsActionSheet;
-                              openProductDetailsActionSheet2;
-                              const result = openProductDetailsActionSheet(obj2);
+                              obj = closure_1(closure_2[18]);
+                              hideActionSheetResult = obj.hideActionSheet();
+                              obj2 = closure_0(closure_2[19]);
+                              obj1 = { product, initialVariantIndex: closure_1, analyticsLocations, shopAnalyticsContext: null };
+                              tmp2 = closure_3;
+                              obj1.shopAnalyticsContext = tmp2;
+                              result = obj2.openProductDetailsActionSheet(obj1);
+                              return;
                             }
                           }
-                          cResult[30] = tmp31;
-                          cResult[31] = tmp38;
-                          tmp35 = tmp38;
+                          cResult[30] = tmp30;
+                          cResult[31] = tmp37;
+                          tmp34 = tmp37;
                         }
-                        let tmp32 = !tmp4;
-                        if (tmp32) {
+                        let tmp31 = !tmp3;
+                        if (!tmp3) {
                           class K {
                             constructor() {
-                              trackShopCardClick(ShopCtaEnum.OPEN_DETAILS);
-                              currentUser();
+                              tmp = closure_4(ShopCtaEnum.OPEN_DETAILS);
+                              tmp2 = closure_5();
+                              return;
                             }
                           }
-                          tmp34[0] = product;
-                          tmp32 = closure_7(tmp12(tmp2[21]), tmp34);
+                          tmp33[0] = product;
+                          tmp31 = closure_7(tmp11(tmp[21]), tmp33);
                         }
-                        cResult[26] = undefined !== hideCardDetails && hideCardDetails;
+                        cResult[26] = tmp3;
                         cResult[27] = product;
-                        cResult[28] = tmp32;
-                        tmp31 = tmp32;
+                        cResult[28] = tmp31;
+                        tmp30 = tmp31;
                       }
-                      const obj6 = { style: tmp6.assetTile, children: tmp24 };
-                      const tmp30 = closure_7(trackShopCardClick, obj6);
-                      cResult[23] = tmp6.assetTile;
+                      const obj6 = { style: tmp5.assetTile, children: tmp23 };
+                      const tmp29 = closure_7(trackShopCardClick, obj6);
+                      cResult[23] = tmp5.assetTile;
                       class B {
                         constructor() {
-                          const obj = ActionSheetActionCreatorsDefault;
-                          obj.hideActionSheet();
-                          const obj2 = { product: require, initialVariantIndex: defaultVariantIndex, analyticsLocations, shopAnalyticsContext: collectiblesAnalyticsContext };
-                          const openProductDetailsActionSheet = openProductDetailsActionSheet2.openProductDetailsActionSheet;
-                          openProductDetailsActionSheet2;
-                          const result = openProductDetailsActionSheet(obj2);
+                          obj = closure_1(closure_2[18]);
+                          hideActionSheetResult = obj.hideActionSheet();
+                          obj2 = closure_0(closure_2[19]);
+                          obj1 = { product, initialVariantIndex: closure_1, analyticsLocations, shopAnalyticsContext: null };
+                          tmp2 = closure_3;
+                          obj1.shopAnalyticsContext = tmp2;
+                          result = obj2.openProductDetailsActionSheet(obj1);
+                          return;
                         }
                       }
-                      cResult[25] = tmp30;
-                      tmp27 = tmp30;
+                      cResult[25] = tmp29;
+                      tmp26 = tmp29;
                     }
                   }
                 }
-                const obj7 = { product, cardWidth, cardHeight, hideCardDetails: undefined !== hideCardDetails && hideCardDetails };
-                const tmp26 = closure_7(defaultVariantIndex(tmp2[20]), obj7);
+                const obj7 = { product, cardWidth, cardHeight, hideCardDetails: tmp3 };
+                const tmp25 = closure_7(tmp11(tmp[20]), obj7);
                 cResult[18] = cardHeight;
                 class B {
                   constructor() {
-                    const obj = ActionSheetActionCreatorsDefault;
-                    obj.hideActionSheet();
-                    const obj2 = { product: require, initialVariantIndex: defaultVariantIndex, analyticsLocations, shopAnalyticsContext: collectiblesAnalyticsContext };
-                    const openProductDetailsActionSheet = openProductDetailsActionSheet2.openProductDetailsActionSheet;
-                    openProductDetailsActionSheet2;
-                    const result = openProductDetailsActionSheet(obj2);
+                    obj = closure_1(closure_2[18]);
+                    hideActionSheetResult = obj.hideActionSheet();
+                    obj2 = closure_0(closure_2[19]);
+                    obj1 = { product, initialVariantIndex: closure_1, analyticsLocations, shopAnalyticsContext: null };
+                    tmp2 = closure_3;
+                    obj1.shopAnalyticsContext = tmp2;
+                    result = obj2.openProductDetailsActionSheet(obj1);
+                    return;
                   }
                 }
                 cResult[19] = cardWidth;
-                cResult[20] = undefined !== hideCardDetails && hideCardDetails;
+                cResult[20] = tmp3;
                 cResult[21] = product;
-                cResult[22] = tmp26;
-                tmp24 = tmp26;
+                cResult[22] = tmp25;
+                tmp23 = tmp25;
               }
-              const items2 = [tmp6.card, tmp21];
-              cResult[15] = tmp6.card;
-              cResult[16] = tmp21;
+              const items2 = [tmp5.card, tmp20];
+              cResult[15] = tmp5.card;
+              cResult[16] = tmp20;
               cResult[17] = items2;
               class B {
                 constructor() {
-                  const obj = ActionSheetActionCreatorsDefault;
-                  obj.hideActionSheet();
-                  const obj2 = { product: require, initialVariantIndex: defaultVariantIndex, analyticsLocations, shopAnalyticsContext: collectiblesAnalyticsContext };
-                  const openProductDetailsActionSheet = openProductDetailsActionSheet2.openProductDetailsActionSheet;
-                  openProductDetailsActionSheet2;
-                  const result = openProductDetailsActionSheet(obj2);
+                  obj = closure_1(closure_2[18]);
+                  hideActionSheetResult = obj.hideActionSheet();
+                  obj2 = closure_0(closure_2[19]);
+                  obj1 = { product, initialVariantIndex: closure_1, analyticsLocations, shopAnalyticsContext: null };
+                  tmp2 = closure_3;
+                  obj1.shopAnalyticsContext = tmp2;
+                  result = obj2.openProductDetailsActionSheet(obj1);
+                  return;
                 }
               }
             }
-            tmp22[0] = cardWidth;
-            tmp22[1] = cardHeight;
+            tmp21[0] = cardWidth;
+            tmp21[1] = cardHeight;
             cResult[12] = cardHeight;
             cResult[13] = cardWidth;
-            cResult[14] = tmp22;
-            tmp21 = tmp22;
+            cResult[14] = tmp21;
+            tmp20 = tmp21;
           }
         }
       }
     }
     class B {
       constructor() {
-        const obj = ActionSheetActionCreatorsDefault;
-        obj.hideActionSheet();
-        const obj2 = { product: require, initialVariantIndex: defaultVariantIndex, analyticsLocations, shopAnalyticsContext: collectiblesAnalyticsContext };
-        const openProductDetailsActionSheet = openProductDetailsActionSheet2.openProductDetailsActionSheet;
-        openProductDetailsActionSheet2;
-        const result = openProductDetailsActionSheet(obj2);
+        obj = closure_1(closure_2[18]);
+        hideActionSheetResult = obj.hideActionSheet();
+        obj2 = closure_0(closure_2[19]);
+        obj1 = { product, initialVariantIndex: closure_1, analyticsLocations, shopAnalyticsContext: null };
+        tmp2 = closure_3;
+        obj1.shopAnalyticsContext = tmp2;
+        result = obj2.openProductDetailsActionSheet(obj1);
+        return;
       }
     }
     cResult[7] = collectiblesAnalyticsContext;
@@ -322,16 +312,16 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((product) => {
     cResult[9] = product;
     cResult[10] = defaultVariantIndex;
     cResult[11] = B;
-    tmp19 = B;
+    tmp18 = B;
+    const PressableOpacityResult4 = PressableOpacity(tmp[16]);
   }
   const obj8 = { product, analyticsLocations };
   cResult[2] = analyticsLocations;
   cResult[3] = product;
   cResult[4] = obj8;
-  tmp14 = obj8;
+  tmp13 = obj8;
+  const PressableOpacityResult2 = PressableOpacity(tmp[14]);
 }) : ((product) => {
-  let defaultVariantIndex;
-  let obj7;
   product = product.product;
   const require = product;
   let COLLECTIBLES_SHOP_CARD_WIDTH = product.cardWidth;
@@ -353,55 +343,44 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((product) => {
   defaultVariantIndex = undefined;
   let currentUser;
   const tmp5 = closure_10();
-  let obj = require("get initialized");
   const items = [currentUser];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    const obj = stateFromStores(defaultVariantIndex[10]);
-    return obj.canUseShopDiscounts(currentUser.getCurrentUser());
-  });
-  let obj2 = require("useDefaultVariantIndex");
-  defaultVariantIndex = obj2.useDefaultVariantIndex(product);
-  const analyticsLocations = stateFromStores(defaultVariantIndex[13])().analyticsLocations;
-  const obj3 = require("CollectiblesAnalyticsContext");
-  const collectiblesAnalyticsContext = obj3.useCollectiblesAnalyticsContext();
-  const obj4 = require("useTrackShopCardClick");
-  currentUser = obj4.useTrackShopCardClick({ product, analyticsLocations });
-  const items1 = [product, stateFromStores];
-  const memo = analyticsLocations.useMemo(() => {
-    const obj = CollectiblesProductUtils;
-    const obj2 = { product: require, hasShopDiscount: stateFromStores };
-    return obj.getProductOrbPrice(obj2);
-  }, items1);
-  const obj5 = require("getProductName");
-  const productName = obj5.getProductName(product);
-  const items2 = [collectiblesAnalyticsContext, analyticsLocations, product, defaultVariantIndex];
-  let closure_6 = analyticsLocations.useCallback(() => {
-    const obj = ActionSheetActionCreatorsDefault;
-    obj.hideActionSheet();
-    const obj2 = { product: require, initialVariantIndex: defaultVariantIndex, analyticsLocations, shopAnalyticsContext: collectiblesAnalyticsContext };
-    const openProductDetailsActionSheet = openProductDetailsActionSheet2.openProductDetailsActionSheet;
-    openProductDetailsActionSheet2;
-    const result = openProductDetailsActionSheet(obj2);
-  }, items2);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => stateFromStores(defaultVariantIndex[10]).canUseShopDiscounts(currentUser.getCurrentUser()));
+  let obj = require("initialize");
   const tmp6 = require;
+  defaultVariantIndex = require("useDefaultVariantIndex").useDefaultVariantIndex(product);
+  const analyticsLocations = stateFromStores(defaultVariantIndex[13])().analyticsLocations;
+  let obj2 = require("useDefaultVariantIndex");
+  const collectiblesAnalyticsContext = require("CollectiblesAnalyticsContext").useCollectiblesAnalyticsContext();
+  let obj3 = require("CollectiblesAnalyticsContext");
+  currentUser = require("useTrackShopCardClick").useTrackShopCardClick({ product, analyticsLocations });
+  const items1 = [product, stateFromStores];
+  const memo = analyticsLocations.useMemo(() => CollectiblesProductUtils.getProductOrbPrice({ product, hasShopDiscount: stateFromStores }), items1);
+  const obj4 = require("useTrackShopCardClick");
+  const productName = require("getProductName").getProductName(product);
+  const items2 = [collectiblesAnalyticsContext, analyticsLocations, product, defaultVariantIndex];
+  closure_6 = analyticsLocations.useCallback(() => {
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+    const obj3 = { product, initialVariantIndex: defaultVariantIndex, analyticsLocations, shopAnalyticsContext: collectiblesAnalyticsContext };
+    const result = openProductDetailsActionSheet.openProductDetailsActionSheet(obj3);
+  }, items2);
   if (null == memo) {
     return null;
   } else {
-    let tmp19Result2;
     const items3 = [tmp5.card, ];
-    size = { width: COLLECTIBLES_SHOP_CARD_WIDTH, height: COLLECTIBLES_SHOP_CARD_HEIGHT };
+    const size = { width: COLLECTIBLES_SHOP_CARD_WIDTH, height: COLLECTIBLES_SHOP_CARD_HEIGHT };
     items3[1] = size;
-    const obj6 = { style: tmp5.assetTile, children: closure_7(stateFromStores(defaultVariantIndex[20]), obj7) };
-    obj7 = { product, cardWidth: COLLECTIBLES_SHOP_CARD_WIDTH, cardHeight: COLLECTIBLES_SHOP_CARD_HEIGHT, hideCardDetails: flag };
+    const obj6 = { style: tmp5.assetTile, children: null };
+    const obj7 = { product, cardWidth: COLLECTIBLES_SHOP_CARD_WIDTH, cardHeight: COLLECTIBLES_SHOP_CARD_HEIGHT, hideCardDetails: flag };
+    obj6.children = closure_7(tmp10(tmp7[20]), obj7);
     const items4 = [closure_7(collectiblesAnalyticsContext, obj6), ];
     let tmp19Result = !flag;
-    const tmp20 = collectiblesAnalyticsContext;
-    if (tmp19Result) {
+    if (!flag) {
       const obj8 = { product, collectibleProductState: null, hidePrice: true };
       tmp19Result = closure_7(tmp10(tmp7[21]), obj8);
     }
-    const obj9 = { children: items4 };
+    const obj9 = { children: null };
     items4[1] = tmp19Result;
+    obj9.children = items4;
     const tmp17Result = closure_9(closure_8, obj9);
     if (flag2) {
       const obj10 = {
@@ -415,17 +394,14 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((product) => {
         accessibilityLabel: productName,
         children: tmp17Result
       };
-      tmp19Result2 = closure_7(tmp6(tmp7[22]).PressableOpacity, obj10);
+      let tmp19Result2 = closure_7(tmp6(tmp7[22]).PressableOpacity, obj10);
     } else {
       const obj11 = { style: items3, accessible: true, accessibilityRole: "text", accessibilityLabel: productName, children: tmp17Result };
-      tmp19Result2 = closure_7(tmp20, obj11);
+      tmp19Result2 = closure_7(collectiblesAnalyticsContext, obj11);
     }
     return tmp19Result2;
   }
+  const obj5 = require("getProductName");
 });
-let size = size_mod;
-let result = size.fileFinishedImporting("modules/quests/native/QuestHomeOrbShopRewardCard.tsx");
-
-export default tmp6;
 export const QUEST_HOME_REPLACE_MEDIA_CARD_WIDTH = 114;
 export const QUEST_HOME_REPLACE_MEDIA_CARD_HEIGHT = 123;

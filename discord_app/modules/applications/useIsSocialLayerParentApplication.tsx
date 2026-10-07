@@ -1,41 +1,34 @@
 // === Module 8757: useIsSocialLayerParentApplication ===
 
 // Module 8757 (useIsSocialLayerParentApplication)
-import react2 from "react" /* 576 */;
-import Constants from "Constants" /* 1085 */;
+import c from "c" /* 576 */;
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8758 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-const ApplicationFlags = Constants.ApplicationFlags;
+require = fn;
+const ApplicationFlags = fn(1085).ApplicationFlags;
+const ReactCompilerGating = fn(558);
 function getIsSocialLayerParentApplication(application) {
-  const obj = ApplicationFlagUtils;
-  return obj.hasApplicationFlag(application, ApplicationFlags.PARENT);
+  return ApplicationFlagUtils.hasApplicationFlag(application, ApplicationFlags.PARENT);
 }
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) => {
-  let tmp4;
-  const obj = react2;
-  const cResult = obj.c(2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/applications/useIsSocialLayerParentApplication.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((application) => {
+  const cResult = c.c(2);
   if (cResult[0] !== application) {
-    const tmpResult = ApplicationFlagUtils;
-    const hasApplicationFlagResult = tmpResult.hasApplicationFlag(application, ApplicationFlags.PARENT);
+    const hasApplicationFlagResult = ApplicationFlagUtils.hasApplicationFlag(application, ApplicationFlags.PARENT);
     cResult[0] = application;
     cResult[1] = hasApplicationFlagResult;
-    tmp4 = hasApplicationFlagResult;
+    let tmp4 = hasApplicationFlagResult;
+    const tmpResult = ApplicationFlagUtils;
   } else {
     tmp4 = cResult[1];
   }
   return tmp4;
 }) : ((arg0) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const items = [arg0];
-  return react.useMemo(() => {
-    const obj = ApplicationFlagUtils;
-    return obj.hasApplicationFlag(closure_0, ApplicationFlags.PARENT);
-  }, items);
+  return noop.useMemo(() => ApplicationFlagUtils.hasApplicationFlag(closure_0, ApplicationFlags.PARENT), items);
 });
-const result = size.fileFinishedImporting("modules/applications/useIsSocialLayerParentApplication.tsx");
-
-export default tmp2;
 export { getIsSocialLayerParentApplication };

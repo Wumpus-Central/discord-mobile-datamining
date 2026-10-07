@@ -1,28 +1,25 @@
 // === Module 16072: useFavoritesGuildCategoryFullNotice ===
 
 // Module 16072 (useFavoritesGuildCategoryFullNotice)
-import get_initialized from "get initialized" /* 504 */;
-import react from "react" /* 576 */;
-import Constants from "Constants" /* 1085 */;
-import intl3 from "intl" /* 1126 */;
-import FavoritesConstants from "FavoritesConstants" /* 2065 */;
-import FavoritesUtils from "FavoritesUtils" /* 2077 */;
+import c from "c" /* 576 */;
 import _modDef3395 from "module_3395" /* 3395 */;
-import FavoritesHooks from "FavoritesHooks" /* 10049 */;
 import FavoriteStore from "FavoriteStore" /* 2054 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let closure_4 = FavoritesConstants.FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME;
-const ChannelTypes = Constants.ChannelTypes;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((getGuildId, str) => {
-  let autoAddJoinedThreads;
-  let intl;
-  let intl2;
-  let tmp4;
-  let tmp5;
-  const obj = react;
-  const cResult = obj.c(3);
+const initialize = intl(504);
+const util = intl(1126);
+const FavoritesUtils = intl(2077);
+const FavoritesHooks = intl(10049);
+require = fn;
+let closure_4 = fn(2065).FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME;
+const ChannelTypes = fn(1085).ChannelTypes;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildCategoryFullNotice.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((getGuildId, str) => {
+  let intl = require;
+  let stringResult = dependencyMap;
+  const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [FavoriteStore];
     const fn = function _() {
@@ -30,55 +27,48 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((getGuildId, str) =
     };
     cResult[0] = items;
     cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
+    tmp3 = items;
+    tmp4 = fn;
   } else {
-    [tmp4, tmp5] = cResult;
+    [tmp3, tmp4] = cResult;
   }
-  const tmpResult = get_initialized;
-  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+  const stateFromStores = initialize.useStateFromStores(tmp3, tmp4);
   FavoritesHooks;
-  let tmp10 = null;
+  let tmp9 = null;
   if (stateFromStores) {
-    tmp10 = null;
-    if (tmp9) {
-      tmp10 = null;
+    tmp9 = null;
+    if (tmp8) {
+      tmp9 = null;
       if (null != str) {
-        tmp10 = null;
-        const tmpResult4 = FavoritesUtils;
-        if (tmpResult4.isFavoritesGuildId(getGuildId.getGuildId())) {
-          tmp10 = null;
+        tmp9 = null;
+        if (intlResult2.isFavoritesGuildId(getGuildId.getGuildId())) {
+          tmp9 = null;
           if (getGuildId.type === ChannelTypes.GUILD_CATEGORY) {
             str = str.trim();
             const formatted = str.toLowerCase();
-            tmp10 = null;
+            tmp9 = null;
             if (formatted === closure_4.toLowerCase()) {
-              let tmp14;
               const _Symbol = Symbol;
               if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-                const obj2 = { label: intl.string(_modDef3395.WsUrMD), tooltip: intl2.string(_modDef3395.dW9Kov) };
-                intl = intl3.intl;
-                intl2 = intl3.intl;
+                const obj2 = { label: null, tooltip: null };
+                const intl2 = util.intl;
+                obj2.label = intl2.string(_modDef3395.WsUrMD);
+                intl = util.intl;
+                stringResult = intl.string(_modDef3395.dW9Kov);
+                obj2.tooltip = stringResult;
                 cResult[2] = obj2;
-                tmp14 = obj2;
-              } else {
-                tmp14 = cResult[2];
               }
-              tmp10 = tmp14;
             }
           }
         }
+        intlResult2 = FavoritesUtils;
       }
     }
   }
-  return tmp10;
+  return tmp9;
 }) : ((getGuildId, str) => {
-  let autoAddJoinedThreads;
-  let intl;
-  let intl2;
   const items = [FavoriteStore];
-  const obj = get_initialized;
-  const stateFromStores = obj.useStateFromStores(items, () => autoAddJoinedThreads.autoAddJoinedThreads);
+  const stateFromStores = initialize.useStateFromStores(items, () => autoAddJoinedThreads.autoAddJoinedThreads);
   FavoritesHooks;
   let tmp6 = null;
   if (stateFromStores) {
@@ -87,7 +77,6 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((getGuildId, str) =
       tmp6 = null;
       if (null != str) {
         tmp6 = null;
-        const tmpResult = FavoritesUtils;
         if (tmpResult.isFavoritesGuildId(getGuildId.getGuildId())) {
           tmp6 = null;
           if (getGuildId.type === ChannelTypes.GUILD_CATEGORY) {
@@ -95,18 +84,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((getGuildId, str) =
             const formatted = str.toLowerCase();
             tmp6 = null;
             if (formatted === closure_4.toLowerCase()) {
-              const obj2 = { label: intl.string(_modDef3395.WsUrMD), tooltip: intl2.string(_modDef3395.dW9Kov) };
-              intl = intl3.intl;
-              intl2 = intl3.intl;
+              const obj2 = { label: null, tooltip: null };
+              const intl = util.intl;
+              obj2.label = intl.string(_modDef3395.WsUrMD);
+              const intl2 = util.intl;
+              obj2.tooltip = intl2.string(_modDef3395.dW9Kov);
               tmp6 = obj2;
             }
           }
         }
+        tmpResult = FavoritesUtils;
       }
     }
   }
   return tmp6;
 });
-const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildCategoryFullNotice.tsx");
-
-export default tmp2;

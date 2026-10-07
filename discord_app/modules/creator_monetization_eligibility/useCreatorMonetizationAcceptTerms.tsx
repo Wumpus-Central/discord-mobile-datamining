@@ -1,153 +1,135 @@
 // === Module 17927: useCreatorMonetizationAcceptTerms ===
 
 // Module 17927 (useCreatorMonetizationAcceptTerms)
-import GuildRecord from "GuildRecord" /* 2070 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, c4, c5, closure_0, dependencyMap;
 
-const isGuildOwner = GuildRecord.isGuildOwner;
+const require = fn;
+const isGuildOwner = fn(2070).isGuildOwner;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationAcceptTerms.tsx");
 
 export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg1) {
-  let closure_3;
-  let isExpeditedOnboardingGuild;
-  let items1;
-  let items2;
-  let items3;
-  let obj4;
-  let tmp5;
   _require = arg0;
-  let closure_1 = arg1;
-  let obj = require("get initialized");
+  closure_1 = arg1;
   const items = [GuildStore];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(closure_0));
-  const tmp2 = isExpeditedOnboardingGuild(react.useState(), 2);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
+  const tmp2 = isExpeditedOnboardingGuild(noop.useState(), 2);
   dependencyMap = tmp2[1];
-  const first = tmp2[0];
-  const tmp4 = isExpeditedOnboardingGuild(react.useState(false), 2);
-  [tmp5, _asyncToGenerator] = tmp4;
+  let obj = require("initialize");
+  [tmp4, asyncGeneratorStep] = isExpeditedOnboardingGuild(noop.useState(false), 2);
+  let tmp3 = isExpeditedOnboardingGuild(noop.useState(false), 2);
+  isExpeditedOnboardingGuild = require("CreatorMonetizationEligibilityExperimentUtils").useIsExpeditedOnboardingGuild(stateFromStores);
+  const obj3 = { canSubmitAcceptance: null, error: null, loading: null, submitAcceptTermsRequest: null };
   let obj2 = require("CreatorMonetizationEligibilityExperimentUtils");
-  isExpeditedOnboardingGuild = obj2.useIsExpeditedOnboardingGuild(stateFromStores);
-  let obj3 = {
-    canSubmitAcceptance: obj4.useStateFromStores(items1, () => {
-      const tmp3 = null != stateFromStores && isGuildOwner(tmp2, tmp);
-      return tmp3;
-    }, items2),
-    error: first,
-    loading: tmp5,
-    submitAcceptTermsRequest: react.useCallback(_asyncToGenerator(async function() {
-      let closure_2;
-      let obj3;
-      let obj5;
-      if (c5 === 2) {
-        c5 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+  const items1 = [UserStore];
+  const items2 = [stateFromStores];
+  obj3.canSubmitAcceptance = require("initialize").useStateFromStores(items1, () => {
+    let tmp3 = null != stateFromStores;
+    if (tmp3) {
+      tmp3 = isGuildOwner(tmp2, tmp);
+    }
+    return tmp3;
+  }, items2);
+  obj3.error = tmp2[0];
+  obj3.loading = tmp4;
+  const items3 = [arg0, arg1, isExpeditedOnboardingGuild];
+  obj3.submitAcceptTermsRequest = noop.useCallback(asyncGeneratorStep(async () => {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        let c3;
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              closure_0 = tmp4;
-              if (null != closure_0) {
-                _asyncToGenerator(true);
-                closure_3(undefined);
-                c3 = 2;
-                if (null != tmp) {
-                  c4 = 4;
-                  c5 = 1;
-                  const obj6 = { value: obj5.acceptCreatorMonetizationTerms(closure_0, tmp36), done: false };
-                  obj5 = tmp41(c3[8]);
-                  return obj6;
-                } else {
-                  c4 = 3;
-                  c5 = 1;
-                  const obj7 = { value: obj3.acceptCreatorMonetizationTermsV2(closure_0), done: false };
-                  obj3 = tmp41(c3[8]);
-                  return obj7;
-                }
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_0 = tmp8;
+            if (null != closure_0) {
+              asyncGeneratorStep(true);
+              dependencyMap(undefined);
+              dependencyMap = 2;
+              if (null != tmp4) {
+                c4 = 4;
+                c5 = 1;
+                const obj6 = { value: tmp47(17928).acceptCreatorMonetizationTerms(tmp55, tmp42), done: false };
+                return obj6;
+              } else {
+                c4 = 3;
+                c5 = 1;
+                const obj7 = { value: tmp47(17928).acceptCreatorMonetizationTermsV2(tmp55), done: false };
+                return obj7;
               }
             }
-          } else if (1 === c4) {
-            c3 = 0;
-            closure_129_4(false);
-            throw tmp41;
+            c5 = 3;
+          }
+        } else if (1 !== tmp8) {
+          if (2 === tmp8) {
+            dependencyMap = 1;
+            closure_128_0 = tmp47;
+            const tmp25 = new tmp4(5320)(closure_128_0);
+            closure_129_3(tmp25);
           } else {
-            if (2 === c4) {
-              c3 = 1;
-              closure_0 = tmp41;
-              const self = this;
-              const self2 = this;
-              const tmp19 = new tmp(c3[9])(closure_0);
-              closure_129_3(tmp19);
-            } else {
-              if (3 === c4) {
-                if (arg0 === 1) {
-                  c5 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 0;
-                  closure_129_4(false);
-                  c5 = 3;
-                  const obj8 = { value, done: true };
-                  return obj8;
-                }
-              } else if (arg0 === 1) {
+            if (3 === tmp8) {
+              if (arg0 === 1) {
                 c5 = 3;
                 throw value;
               } else if (arg0 === 2) {
-                c3 = 0;
+                dependencyMap = 0;
                 closure_129_4(false);
                 c5 = 3;
-                const obj = { value, done: true };
-                return obj;
+                const obj8 = { value, done: true };
+                return obj8;
               }
-              c3 = 1;
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              dependencyMap = 0;
+              closure_129_4(false);
+              c5 = 3;
+              const obj = { value, done: true };
+              return obj;
             }
-            c3 = 0;
-            closure_129_4(false);
+            dependencyMap = 1;
           }
-          c5 = 3;
-          return { value: "IconComponent", done: null };
-        } catch (tmp41) {
-          if (0 === c3) {
-            c5 = 3;
-            throw tmp41;
-          } else if (1 === tmp43) {
-            c4 = 1;
-          } else {
-            c4 = 2;
-          }
+          dependencyMap = 0;
+          closure_129_4(false);
+        }
+        dependencyMap = 0;
+        closure_129_4(false);
+        throw tmp47;
+      } catch (tmp47) {
+        if (tmp5 === dependencyMap) {
+          c5 = tmp3;
+          throw tmp47;
+        } else if (tmp2 === tmp49) {
+          c4 = tmp2;
+        } else {
+          c4 = tmp;
         }
       }
-    }), items3)
-  };
-  obj4 = require("get initialized");
-  items1 = [UserStore];
-  items2 = [stateFromStores];
-  items3 = [arg0, arg1, isExpeditedOnboardingGuild];
+    }
+  }), items3);
   return obj3;
 };

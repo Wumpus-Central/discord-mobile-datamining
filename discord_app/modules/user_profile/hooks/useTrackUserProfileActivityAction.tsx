@@ -1,24 +1,19 @@
 // === Module 12862: useTrackUserProfileActivityAction ===
 
 // Module 12862 (useTrackUserProfileActivityAction)
-import react from "react" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 7873 */;
 import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8480 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let user;
 
-react.useCallback;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
-  let activity;
-  let first;
-  let tmp7;
-  const tmp2 = activity;
-  let obj = user(activity[3]);
-  const cResult = obj.c(13);
-  const tmp = user;
+_mod19.useCallback;
+let result = size.fileFinishedImporting("modules/user_profile/hooks/useTrackUserProfileActivityAction.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+  const cResult = user(activity[3]).c(13);
   user = user.user;
   const display = user.display;
   activity = user.activity;
@@ -26,8 +21,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   const stream = user.stream;
   const voiceChannelId = user.voiceChannelId;
   let analyticsLocations = user.analyticsLocations;
-  let obj2 = user(activity[4]);
-  const userProfileAnalyticsContext = obj2.useUserProfileAnalyticsContext();
+  const obj = user(activity[3]);
+  const tmp = user;
+  const tmp2 = activity;
+  const userProfileAnalyticsContext = user(activity[4]).useUserProfileAnalyticsContext();
   const context = userProfileAnalyticsContext.context;
   const trackUserProfileAction = userProfileAnalyticsContext.trackUserProfileAction;
   if (analyticsLocations == null) {
@@ -36,7 +33,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [stream];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -46,12 +43,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     };
     cResult[1] = user.id;
     cResult[2] = fn;
-    tmp7 = fn;
+    let tmp7 = fn;
   } else {
     tmp7 = cResult[2];
   }
-  const tmpResult = tmp(tmp2[6]);
-  const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
+  const obj2 = user(activity[4]);
+  const stateFromStores = tmp(tmp2[6]).useStateFromStores(first, tmp7);
   if (cResult[3] === activity) {
     if (cResult[4] === analyticsLocations) {
       if (cResult[5] === context) {
@@ -60,9 +57,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
             if (cResult[8] === stateFromStores) {
               if (cResult[9] === stream) {
                 if (cResult[10] === trackUserProfileAction) {
-                  let tmp9;
                   if (cResult[11] === voiceChannelId) {
-                    tmp9 = cResult[12];
+                    let tmp9 = cResult[12];
                   }
                   return tmp9;
                 }
@@ -74,15 +70,15 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     }
   }
   class P {
-    constructor(action) {
-      action = action.action;
-      const obj = { action, analyticsLocations };
-      trackUserProfileAction(obj);
-      const trackUserProfileActivityAction = UserProfileAnalyticsUtils.trackUserProfileActivityAction;
-      const obj2 = { action, display, activity, entry, stream, outbox: stateFromStores, voiceChannelId, analyticsLocations };
-      UserProfileAnalyticsUtils;
-      const merged = Object.assign(context);
-      const result = trackUserProfileActivityAction(obj2);
+    constructor(arg0) {
+      action = user.action;
+      obj = { action, analyticsLocations };
+      tmp = trackUserProfileAction(obj);
+      obj2 = closure_0(closure_2[7]);
+      obj1 = { action, display, activity, entry, stream, outbox: closure_9, voiceChannelId, analyticsLocations };
+      merged = Object.assign(context);
+      result = obj2.trackUserProfileActivityAction(obj1);
+      return;
     }
   }
   cResult[3] = activity;
@@ -97,9 +93,6 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   cResult[12] = P;
   tmp9 = P;
 }) : ((activity) => {
-  let display;
-  let id;
-  let require;
   ({ user: require, display } = activity);
   activity = activity.activity;
   const entry = activity.entry;
@@ -107,29 +100,20 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   const voiceChannelId = activity.voiceChannelId;
   let analyticsLocations;
   let stateFromStores;
-  const tmp2 = activity;
-  let obj = require("UserProfileAnalyticsContext");
-  const userProfileAnalyticsContext = obj.useUserProfileAnalyticsContext();
+  const userProfileAnalyticsContext = require("UserProfileAnalyticsContext").useUserProfileAnalyticsContext();
   const context = userProfileAnalyticsContext.context;
   const trackUserProfileAction = userProfileAnalyticsContext.trackUserProfileAction;
   if (analyticsLocations == null) {
     analyticsLocations = display(activity[5])().analyticsLocations;
   }
+  const obj = require("UserProfileAnalyticsContext");
   const items = [stream];
-  const tmpResult = require("get initialized");
-  stateFromStores = tmpResult.useStateFromStores(items, () => ContentInventoryOutboxStore.getUserOutbox(require.id));
+  stateFromStores = require("initialize").useStateFromStores(items, () => ContentInventoryOutboxStore.getUserOutbox(id.id));
   const items1 = [trackUserProfileAction, context, display, activity, stream, entry, stateFromStores, voiceChannelId, analyticsLocations];
   return entry((action) => {
     action = action.action;
-    const obj = { action, analyticsLocations };
-    trackUserProfileAction(obj);
-    const trackUserProfileActivityAction = UserProfileAnalyticsUtils.trackUserProfileActivityAction;
-    const obj2 = { action, display, activity, entry, stream, outbox: stateFromStores, voiceChannelId, analyticsLocations };
-    UserProfileAnalyticsUtils;
+    trackUserProfileAction({ action, analyticsLocations });
     const merged = Object.assign(context);
-    const result = trackUserProfileActivityAction(obj2);
+    const result = UserProfileAnalyticsUtils.trackUserProfileActivityAction({ action, display, activity, entry, stream, outbox: stateFromStores, voiceChannelId, analyticsLocations });
   }, items1);
 });
-let result = size.fileFinishedImporting("modules/user_profile/hooks/useTrackUserProfileActivityAction.tsx");
-
-export default tmp2;

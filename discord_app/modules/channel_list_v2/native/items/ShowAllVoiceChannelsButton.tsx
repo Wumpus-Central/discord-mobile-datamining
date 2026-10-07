@@ -1,31 +1,25 @@
 // === Module 16159: ShowAllVoiceChannelsButton ===
 
 // Module 16159 (ShowAllVoiceChannelsButton)
-import Fragment from "Fragment" /* 21 */;
 import VoiceCategoryActionCreators from "VoiceCategoryActionCreators" /* 16160 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import ChannelListVoiceCategoryStore from "ChannelListVoiceCategoryStore" /* 7057 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let flag, guildId, num, scrollToTopResult, tmp3, tmp4, voiceCategoryExpandResult;
+require = fn;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/ShowAllVoiceChannelsButton.tsx");
 
-const jsx = Fragment.jsx;
-const memo = react.memo;
-const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
-  let first;
-  let section;
-  let stateFromStores;
-  let tmp6;
-  let obj = guildId(section[4]);
-  const cResult = obj.c(14);
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+  const cResult = guildId(section[4]).c(14);
   guildId = guildId.guildId;
   section = guildId.section;
   const listRef = guildId.listRef;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [stateFromStores];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -35,57 +29,52 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildId
     };
     cResult[1] = guildId;
     cResult[2] = fn;
-    tmp6 = fn;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const tmpResult = guildId(section[5]);
-  stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+  let obj = guildId(section[4]);
+  stateFromStores = guildId(section[5]).useStateFromStores(first, tmp6);
   if (cResult[3] === stateFromStores) {
     if (cResult[4] === guildId) {
       if (cResult[5] === listRef) {
-        let tmp8;
-        let tmp9;
-        let tmp11;
         if (cResult[6] === section) {
-          tmp8 = cResult[7];
+          let tmp8 = cResult[7];
         }
         if (cResult[8] !== stateFromStores) {
-          let stringResult;
           const intl = tmp(tmp2[8]).intl;
           const string = intl.string;
-          const t = tmp(tmp2[8]).t;
+          let t = tmp(tmp2[8]).t;
           if (stateFromStores) {
-            stringResult = string(t["/eB9Bg"]);
+            t = t["/eB9Bg"];
+            let stringResult = string(t);
           } else {
             stringResult = string(t.Q2gPWl);
           }
           cResult[8] = stateFromStores;
           cResult[9] = stringResult;
-          tmp9 = stringResult;
         } else {
-          tmp9 = cResult[9];
-        }
-        const _Symbol = Symbol;
-        if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp13 = jsx(guildId(section[9]).VoiceNormalIcon, { size: "sm" });
-          cResult[10] = tmp13;
-          tmp11 = tmp13;
-        } else {
-          tmp11 = cResult[10];
-        }
-        if (cResult[11] === tmp8) {
-          let tmp14;
-          if (cResult[12] === tmp9) {
-            tmp14 = cResult[13];
+          const _Symbol = Symbol;
+          if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+            const tmp15 = jsx(tmp(tmp2[9]).VoiceNormalIcon, { size: "sm" });
+            cResult[10] = tmp15;
+            let tmp13 = tmp15;
+          } else {
+            tmp13 = cResult[10];
           }
-          return tmp14;
+          if (cResult[11] === tmp8) {
+            if (cResult[12] === tmp9) {
+              let tmp16 = cResult[13];
+            }
+            return tmp16;
+          }
+          let obj2 = { text: cResult[9], icon: tmp13, onPress: tmp8, variant: "secondary", size: "sm" };
+          const tmp18 = jsx(tmp(tmp2[10]).Button, { text: cResult[9], icon: tmp13, onPress: tmp8, variant: "secondary", size: "sm" });
+          cResult[11] = tmp8;
+          cResult[12] = cResult[9];
+          cResult[13] = tmp18;
+          tmp16 = tmp18;
         }
-        const tmp16 = jsx(guildId(section[10]).Button, { text: tmp9, icon: tmp11, onPress: tmp8, variant: "secondary", size: "sm" });
-        cResult[11] = tmp8;
-        cResult[12] = tmp9;
-        cResult[13] = tmp16;
-        tmp14 = tmp16;
       }
     }
   }
@@ -99,16 +88,13 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildId
         _setTimeout = setTimeout;
         num = 0;
         timerId = setTimeout(() => {
-          let obj2;
-          let round;
           const current = ref.current;
           if (current != null) {
+            const obj = { animated: false, section, item: 0, paddingStart: null };
             const _Math = Math;
-            const scrollToLocation = current.scrollToLocation;
-            const obj = { animated: false, section, item: 0, paddingStart: round(0.3 * obj2.getWindowDimensions().height) };
-            round = Math.round;
-            obj2 = guildId(section[7]);
-            scrollToLocation(obj);
+            obj.paddingStart = Math.round(0.3 * guildId(section[7]).getWindowDimensions().height);
+            current.scrollToLocation(obj);
+            const obj2 = guildId(section[7]);
           }
         }, 0);
       } else {
@@ -131,33 +117,28 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildId
   cResult[6] = section;
   cResult[7] = C;
   tmp8 = C;
+  const tmpResult = guildId(section[5]);
 }) : ((guildId) => {
-  let stringResult;
   guildId = guildId.guildId;
   const section = guildId.section;
   const listRef = guildId.listRef;
   let stateFromStores;
-  let obj = guildId(section[5]);
   const items = [stateFromStores];
-  stateFromStores = obj.useStateFromStores(items, () => ChannelListVoiceCategoryStore.isVoiceCategoryCollapsed(guildId));
+  stateFromStores = guildId(section[5]).useStateFromStores(items, () => ChannelListVoiceCategoryStore.isVoiceCategoryCollapsed(guildId));
   const items1 = [stateFromStores, guildId, section, listRef];
   const callback = listRef.useCallback(() => {
-    let ref;
     let obj = VoiceCategoryActionCreators;
     if (stateFromStores) {
       obj.voiceCategoryExpand(guildId);
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
-        let obj2;
-        let round;
         const current = ref.current;
         if (current != null) {
+          const obj = { animated: false, section, item: 0, paddingStart: null };
           const _Math = Math;
-          const scrollToLocation = current.scrollToLocation;
-          const obj = { animated: false, section, item: 0, paddingStart: round(0.3 * obj2.getWindowDimensions().height) };
-          round = Math.round;
-          obj2 = guildId(section[7]);
-          scrollToLocation(obj);
+          obj.paddingStart = Math.round(0.3 * guildId(section[7]).getWindowDimensions().height);
+          current.scrollToLocation(obj);
+          const obj2 = guildId(section[7]);
         }
       }, 0);
     } else {
@@ -168,19 +149,14 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildId
       }
     }
   }, items1);
-  const Button = guildId(section[10]).Button;
   const intl = guildId(section[8]).intl;
   const string = intl.string;
   const t = guildId(section[8]).t;
-  const tmp = guildId;
-  const tmp2 = section;
   if (stateFromStores) {
-    stringResult = string(t["/eB9Bg"]);
+    let stringResult = string(t["/eB9Bg"]);
   } else {
     stringResult = string(t.Q2gPWl);
   }
-  return <Button text={stringResult} icon={jsx(tmp(tmp2[9]).VoiceNormalIcon, { size: "sm" })} onPress={callback} variant="secondary" size="sm" />;
+  let obj = guildId(section[5]);
+  return jsx(guildId(section[10]).Button, { text: stringResult, icon: jsx(guildId(section[9]).VoiceNormalIcon, { size: "sm" }), onPress: callback, variant: "secondary", size: "sm" });
 }));
-let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/ShowAllVoiceChannelsButton.tsx");
-
-export default memoResult;

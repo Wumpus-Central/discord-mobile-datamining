@@ -4,9 +4,9 @@
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import types from "types" /* 1384 */;
 import user from "user" /* 1385 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
 
+require = fn;
 function parseServerPerkConfigKind(kind) {
   if (null != kind.kind) {
     const type = kind.kind.type;
@@ -21,7 +21,6 @@ function parseServerPerkConfigKind(kind) {
 }
 function getPerkSource(perks, MONTHLY_ORBS) {
   if (null != perks) {
-    let source;
     const _String = String;
     const tmp3 = perks.configByPerk[String(undefined, MONTHLY_ORBS)];
     let source1;
@@ -29,7 +28,7 @@ function getPerkSource(perks, MONTHLY_ORBS) {
       source1 = tmp3.source;
     }
     if (null != source1) {
-      source = tmp3.source;
+      let source = tmp3.source;
     } else {
       let flag = false;
       if (null != perks) {
@@ -38,12 +37,10 @@ function getPerkSource(perks, MONTHLY_ORBS) {
         const rounded = Math.floor(MONTHLY_ORBS / 64);
         let hasItem = rounded < activePerksBitmask.length;
         if (hasItem) {
-          const has = BigFlagUtilsAll.has;
-          BigFlagUtilsAll;
           const deserializer = BigFlagUtilsAll;
-          const deserializeResult = deserializer.deserialize(activePerksBitmask[rounded]);
           const obj = BigFlagUtilsAll;
-          hasItem = has(deserializeResult, obj.getFlag(MONTHLY_ORBS % 64));
+          const deserializeResult = deserializer.deserialize(activePerksBitmask[rounded]);
+          hasItem = obj.has(deserializeResult, BigFlagUtilsAll.getFlag(MONTHLY_ORBS % 64));
         }
         flag = hasItem;
       }
@@ -55,25 +52,26 @@ function getPerkSource(perks, MONTHLY_ORBS) {
     return source;
   }
 }
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/perks_state/PerksStateUtils.tsx");
 
 export const parseServerPerks = function parseServerPerks(perks) {
-  let first;
-  let tmp7;
   if (null == perks) {
     return null;
   } else {
     const obj2 = {};
     const _Object = Object;
     const entries = Object.entries(perks.config_by_perk);
-    const tmp12 = entries[Symbol.iterator]();
-    while (tmp12 !== undefined) {
-      [first, tmp7] = tmp2;
-      let obj = { source: tmp7.source, kind: parseServerPerkConfigKind(tmp7) };
-      obj2[first] = obj;
+    const tmp11 = entries[Symbol.iterator]();
+    while (tmp11 !== undefined) {
+      let tmp5 = _slicedToArray(tmp2, 2);
+      let tmp6 = tmp5[1];
+      let obj = { source: tmp6.source, kind: parseServerPerkConfigKind(tmp6) };
+      obj2[tmp5[0]] = obj;
       continue;
     }
-    return { activePerksBitmask: perks.active_perks_bitmask, configByPerk: obj2, rulesVersion: perks.rules_version };
+    const obj3 = { activePerksBitmask: perks.active_perks_bitmask, configByPerk: obj2, rulesVersion: perks.rules_version };
+    return obj3;
   }
 };
 export const hasPerk = function hasPerk(perks, MONTHLY_ORBS) {
@@ -85,12 +83,10 @@ export const hasPerk = function hasPerk(perks, MONTHLY_ORBS) {
     const rounded = Math.floor(MONTHLY_ORBS / 64);
     let hasItem = rounded < activePerksBitmask.length;
     if (hasItem) {
-      const has = BigFlagUtilsAll.has;
-      BigFlagUtilsAll;
       const deserializer = BigFlagUtilsAll;
-      const deserializeResult = deserializer.deserialize(activePerksBitmask[rounded]);
       const obj = BigFlagUtilsAll;
-      hasItem = has(deserializeResult, obj.getFlag(MONTHLY_ORBS % 64));
+      const deserializeResult = deserializer.deserialize(activePerksBitmask[rounded]);
+      hasItem = obj.has(deserializeResult, BigFlagUtilsAll.getFlag(MONTHLY_ORBS % 64));
     }
     return hasItem;
   }

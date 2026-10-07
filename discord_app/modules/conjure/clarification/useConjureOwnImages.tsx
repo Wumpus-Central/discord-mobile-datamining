@@ -3,41 +3,28 @@
 // Module 16739 (useConjureOwnImages)
 import _modDef3753 from "module_3753" /* 3753 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 12923 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let _require, dependencyMap, id, importDefault;
 
-let metroImportDefault;
-let metroRequire;
-function onPick() {
-
-}
-function onRemove() {
-
-}
-function onUpload() {
-
-}
-function onLink() {
-  return Promise.resolve(false);
-}
+const require = fn;
 function _toPropertyKey(obj) {
   let StringResult = obj;
   if (typeof obj === "object") {
     StringResult = obj;
-    if (StringResult) {
+    if (obj) {
       const _Symbol = Symbol;
       if (undefined !== obj[Symbol.toPrimitive]) {
-        const callResult = obj[Symbol.toPrimitive].call(obj[Symbol.toPrimitive], "string");
+        const call = tmp3.call;
+        if (typeof call === "unknown") {
+          let callResult = tmp3("string");
+        } else {
+          callResult = call(obj, "string");
+        }
         StringResult = callResult;
         if (typeof callResult === "object") {
           const _TypeError = TypeError;
-          const self = this;
-          const self2 = this;
           const typeError = new TypeError("@@toPrimitive must return a primitive value.");
           throw typeError;
         }
@@ -53,28 +40,40 @@ function _toPropertyKey(obj) {
   }
   return text;
 }
-({ deleteStagedAttachment: metroRequire, importAttachmentFromUrl: metroImportDefault } = ConjureConnectionStore);
+const ConjureConnectionStore = fn(12923);
+({ deleteStagedAttachment: metroRequire, importAttachmentFromUrl: closure_7 } = ConjureConnectionStore);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/clarification/useConjureOwnImages.tsx");
 
 export function inertOwnImageControls(image, selected) {
-  return { image, selected, busy: null, error: null, onPick, onRemove, onUpload, onLink };
+  return {
+    image,
+    selected,
+    busy: null,
+    error: null,
+    onPick() {
+
+    },
+    onRemove() {
+
+    },
+    onUpload() {
+
+    },
+    onLink() {
+      return Promise.resolve(false);
+    }
+  };
 }
 export const useConjureOwnImages = function useConjureOwnImages(projectId, first1, arg2) {
-  let closure_2;
-  let closure_4;
-  let closure_6;
-  let closure_8;
-  let first;
-  let first2;
   _require = projectId;
   importDefault = first1;
   dependencyMap = arg2;
   [first, _slicedToArray] = first1.useState({});
   [first1, closure_6] = first1.useState({});
   [first2, closure_8] = first1.useState({});
-  let intl = require("intl").intl;
+  let intl = require("util").intl;
   const stringResult = intl.string(_modDef3753.wTsP5l);
-  const text = stringResult;
   let items = [first];
   const items1 = [first1, first, first2];
   const callback = first1.useCallback((arg0) => {
@@ -84,22 +83,20 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
     }
     return tmp;
   }, items);
-  const callback1 = first1.useCallback((multi_select) => {
-    let tmp = null != first[multi_select.id];
-    if (tmp) {
-      let tmp5;
-      if (true === multi_select.multi_select) {
-        tmp5 = true === first2[multi_select.id];
-      } else {
-        let kind;
-        if (first1[multi_select.id] != null) {
-          kind = tmp3.kind;
-        }
-        tmp5 = "image" === kind;
+  const callback1 = first1.useCallback((arg0) => {
+    let tmp = arg0;
+    if (null == first[arg0.id]) {
+      return tmp2;
+    } else if (true === tmp.multi_select) {
+      tmp = first2[tmp.id];
+      let tmp6 = true === tmp;
+    } else {
+      let kind;
+      if (dependencyMap[tmp.id] != null) {
+        kind = tmp4.kind;
       }
-      tmp = tmp5;
+      tmp6 = "image" === kind;
     }
-    return tmp;
   }, items1);
   const items2 = [stringResult, first, first2];
   const items3 = [stringResult, first1, first, projectId, callback1, arg2, first1];
@@ -107,250 +104,256 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
     let tmp2;
     if (null != first[arg0.id]) {
       if (true === first2[arg0.id]) {
-        tmp2 = { attachment: first[arg0.id].attachment, text };
-        const obj = { attachment: first[arg0.id].attachment, text };
+        const obj = { attachment: tmp.attachment, text: stringResult };
+        tmp2 = obj;
       }
     }
     return tmp2;
   }, items2);
-  let obj = {
+  return {
     imageFor: callback,
     selectedFor: callback1,
     multiPartFor: callback2,
     controlsFor: first1.useCallback((id, arg1) => {
-      let _null;
-      let busy;
-      let closure_1;
-      let closure_3;
-      let error;
-      const f153729 = (arg0) => {
-        obj = {};
-        const merged = Object.assign(arg0);
-        obj[obj] = true;
-        return obj;
-      };
       id = id.id;
-      first1 = true === id.multi_select;
-      let tmp = first[id];
+      dependencyMap = true === id.multi_select;
+      let tmp = closure_3[id];
       if (tmp == null) {
         tmp = null;
       }
-      let c2 = tmp;
+      c2 = tmp;
       if (arg1) {
-        let obj2 = { image: tmp, selected: callback1(id), busy: null, error: null, onPick, onRemove, onUpload, onLink };
-        return obj2;
-      } else {
-        let tmp2 = first1;
-        first = first1[id];
-        let obj = {
+        let obj2 = {
           image: tmp,
           selected: callback1(id),
-          busy,
-          error,
+          busy: null,
+          error: null,
           onPick() {
-              let attachment;
-              if (null != c2) {
-                if (closure_1) {
-                  closure_8((arg0) => {
-                    const obj = {};
-                    const merged = Object.assign(arg0);
-                    obj[id] = true !== arg0[id];
-                    return obj;
-                  });
-                } else {
-                  _null((arg0) => {
-                    const obj = {};
-                    const merged = Object.assign(arg0);
-                    const obj2 = { kind: "image", attachment: attachment.attachment, text };
-                    obj[id] = obj2;
-                    return obj;
-                  });
-                }
-              }
+
             },
           onRemove() {
-              if (null != c2) {
-                const promise = metroRequire(projectId, tmp.attachment.id);
-                promise.catch(() => {
 
-                });
-                closure_4((arg0) => {
-                  const obj = Object.create(null);
-                  obj[id] = 0;
-                  return Object.assign(arg0, obj);
-                });
-                closure_8((arg0) => {
-                  const obj = {};
-                  const merged = Object.assign(arg0);
-                  obj[id] = false;
-                  return obj;
-                });
-                _null((dependencyMap) => {
-                  let kind;
-                  if (dependencyMap[id] != null) {
-                    kind = tmp2.kind;
-                  }
-                  if ("image" !== kind) {
-                    return dependencyMap;
-                  } else {
-                    const items = [id];
-                    return first(dependencyMap, items.map(closure_8));
-                  }
-                });
-              }
             },
-          onUpload(promise) {
-              let closure_0 = { busy: "upload", error: null };
-              closure_1_6((arg0) => {
-                obj = {};
-                const merged = Object.assign(arg0);
-                obj[closure_0] = obj;
-                return obj;
-              });
-              promise.then((errorText) => {
-                let obj;
-                if ("errorText" in errorText) {
-                  const obj3 = { source: "upload", text: errorText.errorText };
-                  closure_1_6((arg0) => {
-                    obj = {};
-                    const merged = Object.assign(arg0);
-                    obj[closure_0] = obj;
-                    return obj;
-                  });
-                } else {
-                  closure_1_4((arg0) => {
-                    if (null != arg0[closure_0]) {
-                      const promise = closure_6(id, arg0[closure_0].attachment.id);
-                      promise.catch(() => {
+          onUpload() {
 
-                      });
-                    }
-                    obj = {};
-                    const merged = Object.assign(arg0);
-                    obj[closure_0] = obj;
-                    return obj;
-                  });
-                  closure_0 = { busy: null, error: null };
-                  closure_1_6((arg0) => {
-                    obj = {};
-                    const merged = Object.assign(arg0);
-                    obj[closure_0] = obj;
-                    return obj;
-                  });
-                  if (closure_1) {
-                    closure_1_8(f153729);
-                  } else {
-                    _null((arg0) => {
-                      let tmp2 = arg0;
-                      if (arg0[closure_0] === closure_2_3) {
-                        obj = {};
-                        const merged = Object.assign(arg0);
-                        const obj2 = { kind: "image", attachment: obj.attachment, text };
-                        obj[tmp] = obj2;
-                        tmp2 = obj;
-                      }
-                      return tmp2;
-                    });
-                  }
-                }
-              }, () => {
-                let intl;
-                let obj;
-                const obj2 = { source: "upload", text: intl.string(closure_1(c2[5])["kUw/b1"]) };
-                intl = id(c2[4]).intl;
-                return closure_1_6((arg0) => {
-                  obj = {};
-                  const merged = Object.assign(arg0);
-                  obj[closure_0] = obj;
-                  return obj;
-                });
-              });
             },
-          onLink(arg0) {
-              let closure_0 = { busy: "link", error: null };
-              let tmp = closure_1_6((arg0) => {
-                obj = {};
-                const merged = Object.assign(arg0);
-                obj[closure_0] = obj;
-                return obj;
-              });
-              let promise = first2(id, arg0);
-              return promise.then((attachment) => {
-                let obj = { attachment };
-                const tmp = closure_1_4((arg0) => {
-                  if (null != arg0[closure_0]) {
-                    const promise = closure_6(id, arg0[closure_0].attachment.id);
-                    promise.catch(() => {
-
-                    });
-                  }
-                  obj = {};
-                  const merged = Object.assign(arg0);
-                  obj[closure_0] = obj;
-                  return obj;
-                });
-                closure_0 = { busy: null, error: null };
-                let tmp2 = closure_1_6((arg0) => {
-                  obj = {};
-                  const merged = Object.assign(arg0);
-                  obj[closure_0] = obj;
-                  return obj;
-                });
-                if (closure_1) {
-                  closure_1_8(f153729);
-                } else {
-                  _null((arg0) => {
-                    let tmp2 = arg0;
-                    if (arg0[closure_0] === closure_2_3) {
-                      obj = {};
-                      const merged = Object.assign(arg0);
-                      const obj2 = { kind: "image", attachment: obj.attachment, text };
-                      obj[tmp] = obj2;
-                      tmp2 = obj;
-                    }
-                    return tmp2;
-                  });
-                }
-                return true;
-              }, (message) => {
-                let obj2;
-                if (message instanceof Error) {
-                  if ("" !== message.message) {
-                    message = message.message;
-                  }
-                  let obj = { busy: null, error: obj2 };
-                  obj2 = { source: "link", text: message };
-                  closure_1_6((arg0) => {
-                    obj = {};
-                    const merged = Object.assign(arg0);
-                    obj[closure_0] = obj;
-                    return obj;
-                  });
-                  return false;
-                }
-                const intl = id(c2[4]).intl;
-                message = intl.string(closure_1(c2[5]).l79PMc);
-              });
+          onLink() {
+              return Promise.resolve(false);
             }
         };
-        busy = undefined;
-        const tmp4 = first1;
+        return obj2;
+      } else {
+        closure_3 = dependencyMap[id];
+        let obj = { image: tmp, selected: callback1(id), busy: null, error: null, onPick: null, onRemove: null, onUpload: null, onLink: null };
+        let busy;
         if (first1[id] != null) {
           busy = tmp5.busy;
         }
         if (busy == null) {
           busy = null;
         }
-        error = undefined;
-        if (tmp4[id] != null) {
+        obj.busy = busy;
+        let error;
+        if (first1[id] != null) {
           error = tmp7.error;
         }
         if (error == null) {
           error = null;
         }
+        obj.error = error;
+        obj.onPick = function onPick() {
+          if (null != c2) {
+            if (closure_1) {
+              closure_8((arg0) => {
+                const obj = {};
+                const merged = Object.assign(arg0);
+                obj[id] = true !== arg0[id];
+                return obj;
+              });
+            } else {
+              _null((arg0) => {
+                const obj = {};
+                const merged = Object.assign(arg0);
+                obj[id] = { kind: "image", attachment: attachment.attachment, text };
+                return obj;
+              });
+            }
+          }
+        };
+        obj.onRemove = function onRemove() {
+          if (null != c2) {
+            timestampProducer(closure_0, tmp.attachment.id).catch(() => {
+
+            });
+            closure_4((arg0) => {
+              const obj = Object.create(null);
+              obj[id] = 0;
+              return Object.assign(arg0, obj);
+            });
+            closure_8((arg0) => {
+              const obj = {};
+              const merged = Object.assign(arg0);
+              obj[id] = false;
+              return obj;
+            });
+            _null((dependencyMap) => {
+              let kind;
+              if (dependencyMap[id] != null) {
+                kind = tmp2.kind;
+              }
+              if ("image" !== kind) {
+                return dependencyMap;
+              } else {
+                const items = [id];
+                return first(dependencyMap, items.map(closure_8));
+              }
+            });
+            const promise = timestampProducer(closure_0, tmp.attachment.id);
+          }
+        };
+        obj.onUpload = function onUpload(promise) {
+          closure_0 = { busy: "upload", error: null };
+          closure_1_6((arg0) => {
+            obj = {};
+            const merged = Object.assign(arg0);
+            obj[closure_0] = obj;
+            return obj;
+          });
+          promise.then((errorText) => {
+            if ("errorText" in errorText) {
+              const obj2 = { busy: null, error: null };
+              const obj3 = { source: "upload", text: errorText.errorText };
+              obj2.error = obj3;
+              closure_130_0 = obj2;
+              closure_1_6((arg0) => {
+                obj = {};
+                const merged = Object.assign(arg0);
+                obj[closure_0] = obj;
+                return obj;
+              });
+            } else {
+              { attachment: null }.attachment = errorText;
+              closure_1_4((arg0) => {
+                if (null != arg0[closure_0]) {
+                  closure_6(id, tmp2.attachment.id).catch(/* F155309 */ function() { ... });
+                  const promise = closure_6(id, tmp2.attachment.id);
+                }
+                obj = {};
+                const merged = Object.assign(arg0);
+                obj[closure_0] = obj;
+                return obj;
+              });
+              closure_129_0 = { busy: null, error: null };
+              closure_1_6((arg0) => {
+                obj = {};
+                const merged = Object.assign(arg0);
+                obj[closure_0] = obj;
+                return obj;
+              });
+              if (closure_1) {
+                closure_1_8((arg0) => {
+                  obj = {};
+                  const merged = Object.assign(arg0);
+                  obj[obj] = true;
+                  return obj;
+                });
+              } else {
+                dependencyMap((arg0) => {
+                  let tmp2 = arg0;
+                  if (arg0[closure_0] === closure_2_3) {
+                    obj = {};
+                    const merged = Object.assign(arg0);
+                    const obj2 = { kind: "image", attachment: obj.attachment, text };
+                    obj[tmp] = obj2;
+                    tmp2 = obj;
+                  }
+                  return tmp2;
+                });
+              }
+              const obj = { attachment: null };
+            }
+          }, () => {
+            const obj = { busy: null, error: null };
+            const obj2 = { source: "upload", text: null };
+            const intl = id(1126).intl;
+            obj2.text = intl.string(closure_1(3753)["kUw/b1"]);
+            obj.error = obj2;
+            return closure_1_6((arg0) => {
+              obj = {};
+              const merged = Object.assign(arg0);
+              obj[closure_0] = obj;
+              return obj;
+            });
+          });
+        };
+        obj.onLink = function onLink(arg0) {
+          closure_0 = { busy: "link", error: null };
+          closure_1_6((arg0) => {
+            obj = {};
+            const merged = Object.assign(arg0);
+            obj[closure_0] = obj;
+            return obj;
+          });
+          return first2(id, arg0).then((attachment) => {
+            closure_1_4((arg0) => {
+              if (null != arg0[closure_0]) {
+                closure_6(id, tmp2.attachment.id).catch(/* F155309 */ function() { ... });
+                const promise = closure_6(id, tmp2.attachment.id);
+              }
+              obj = {};
+              const merged = Object.assign(arg0);
+              obj[closure_0] = obj;
+              return obj;
+            });
+            closure_129_0 = { busy: null, error: null };
+            closure_1_6((arg0) => {
+              obj = {};
+              const merged = Object.assign(arg0);
+              obj[closure_0] = obj;
+              return obj;
+            });
+            if (closure_1) {
+              closure_1_8((arg0) => {
+                obj = {};
+                const merged = Object.assign(arg0);
+                obj[obj] = true;
+                return obj;
+              });
+            } else {
+              dependencyMap((arg0) => {
+                let tmp2 = arg0;
+                if (arg0[closure_0] === closure_2_3) {
+                  obj = {};
+                  const merged = Object.assign(arg0);
+                  const obj2 = { kind: "image", attachment: obj.attachment, text };
+                  obj[tmp] = obj2;
+                  tmp2 = obj;
+                }
+                return tmp2;
+              });
+            }
+            return true;
+          }, (message) => {
+            if (message instanceof Error) {
+              if ("" !== message.message) {
+                message = message.message;
+              }
+              const obj2 = { source: "link", text: message };
+              { busy: null, error: null }.error = obj2;
+              closure_1_6((arg0) => {
+                obj = {};
+                const merged = Object.assign(arg0);
+                obj[closure_0] = obj;
+                return obj;
+              });
+              return false;
+            }
+            const intl = id(1126).intl;
+            message = intl.string(closure_1(3753).l79PMc);
+          });
+        };
         return obj;
       }
     }, items3)
   };
-  return obj;
 };

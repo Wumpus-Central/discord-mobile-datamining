@@ -1,39 +1,24 @@
 // === Module 8937: FormRadioRow ===
 
 // Module 8937 (FormRadioRow)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
-import react_native from "react-native" /* 4600 */;
-import TableRadioRow2 from "TableRadioRow" /* 6078 */;
+import c from "c" /* 576 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4600 */;
+import TableRadioRow from "TableRadioRow" /* 6078 */;
 import RedesignCompat from "RedesignCompat" /* 6080 */;
 import FormRowDefault from "FormRow" /* 6640 */;
 import Form_FormRadioDefault from "Form/FormRadio" /* 6646 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
+require = fn;
 let closure_3 = ["selected", "align", "leading", "value", "onPress", "style"];
-const jsx = Fragment.jsx;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let accessibilityRole;
-  let accessibilityState;
-  let align;
-  let leading;
-  let onPress;
-  let selected;
-  let style;
-  let tmp10;
-  let tmp15;
-  let tmp4;
-  let tmp5;
-  let tmp6;
-  let tmp7;
-  let tmp8;
-  let tmp9;
-  let value;
-  const obj = react2;
-  const cResult = obj.c(31);
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FormRadioRow.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(31);
   if (cResult[0] !== arg0) {
     ({ selected, align, leading, value, onPress, style } = arg0);
     const tmp13 = _objectWithoutProperties(arg0, closure_3);
@@ -45,13 +30,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[5] = style;
     cResult[6] = align;
     cResult[7] = value;
-    tmp10 = value;
-    tmp9 = align;
-    tmp8 = style;
-    tmp7 = selected;
-    tmp6 = tmp13;
-    tmp5 = onPress;
-    tmp4 = leading;
+    let tmp10 = value;
+    let tmp9 = align;
+    let tmp8 = style;
+    let tmp7 = selected;
+    let tmp6 = tmp13;
+    let tmp5 = onPress;
+    let tmp4 = leading;
   } else {
     tmp4 = cResult[1];
     tmp5 = cResult[2];
@@ -65,35 +50,33 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (undefined !== tmp9) {
     str = tmp9;
   }
-  const context = react.useContext(RedesignCompat.RedesignCompatContext);
+  const context = noop.useContext(RedesignCompat.RedesignCompatContext);
   if (cResult[8] !== tmp7) {
     const obj2 = { selected: tmp7 };
     cResult[8] = tmp7;
     cResult[9] = obj2;
-    tmp15 = obj2;
+    let tmp15 = obj2;
   } else {
     tmp15 = cResult[9];
   }
-  const tmpResult = react_native;
-  const radioA11yNative = tmpResult.useRadioA11yNative(tmp15);
+  const radioA11yNative = useA11yRolesNative.useRadioA11yNative(tmp15);
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   if (context) {
     if (cResult[10] === tmp5) {
       if (cResult[11] === tmp6) {
         if (cResult[12] === tmp7) {
           if (cResult[13] === tmp4) {
-            let tmp33;
             if (cResult[14] === tmp10) {
-              tmp33 = cResult[15];
+              let tmp33 = cResult[15];
             }
             return tmp33;
           }
         }
       }
     }
-    const TableRadioRow = TableRadioRow2.TableRadioRow;
+    const obj3 = { icon: tmp4, value: tmp10, legacyCompat_selected: tmp7, legacyCompat_onPress: tmp5 };
     const merged = Object.assign(tmp6);
-    const tmp38 = <TableRadioRow icon={tmp4} value={tmp10} legacyCompat_selected={tmp7} legacyCompat_onPress={tmp5} />;
+    const tmp38 = jsx(TableRadioRow.TableRadioRow, { icon: tmp4, value: tmp10, legacyCompat_selected: tmp7, legacyCompat_onPress: tmp5 });
     cResult[10] = tmp5;
     cResult[11] = tmp6;
     cResult[12] = tmp7;
@@ -103,15 +86,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp33 = tmp38;
   } else {
     if (cResult[16] === str) {
-      let tmp17;
       if (cResult[17] === tmp7) {
-        tmp17 = cResult[18];
+        let tmp17 = cResult[18];
       }
       if (cResult[19] === str) {
         if (cResult[20] === tmp4) {
-          let tmp21;
           if (cResult[21] === tmp7) {
-            tmp21 = cResult[22];
+            let tmp21 = cResult[22];
           }
           if (cResult[23] === accessibilityRole) {
             if (cResult[24] === accessibilityState) {
@@ -119,9 +100,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 if (cResult[26] === tmp6) {
                   if (cResult[27] === tmp8) {
                     if (cResult[28] === tmp17) {
-                      let tmp25;
                       if (cResult[29] === tmp21) {
-                        tmp25 = cResult[30];
+                        let tmp25 = cResult[30];
                       }
                       return tmp25;
                     }
@@ -130,9 +110,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
             }
           }
-          FormRowDefault;
+          const obj4 = {};
           const merged1 = Object.assign(tmp6);
-          const tmp32 = <tmp28 style={tmp8} onPress={tmp5} accessibilityRole={accessibilityRole} accessibilityState={accessibilityState} trailing={tmp17} leading={tmp21} />;
+          obj4.style = tmp8;
+          obj4.onPress = tmp5;
+          obj4.accessibilityRole = accessibilityRole;
+          obj4.accessibilityState = accessibilityState;
+          obj4.trailing = tmp17;
+          obj4.leading = tmp21;
+          const tmp32 = jsx(FormRowDefault, {});
           cResult[23] = accessibilityRole;
           cResult[24] = accessibilityState;
           cResult[25] = tmp5;
@@ -146,6 +132,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       let tmp22 = tmp4;
       if ("left" === str) {
+        const obj5 = { selected: tmp7 };
         tmp22 = jsx(Form_FormRadioDefault, { selected: tmp7 });
       }
       cResult[19] = str;
@@ -156,6 +143,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     let tmp18 = null;
     if ("right" === str) {
+      const obj6 = { selected: tmp7 };
       tmp18 = jsx(Form_FormRadioDefault, { selected: tmp7 });
     }
     cResult[16] = str;
@@ -163,14 +151,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[18] = tmp18;
     tmp17 = tmp18;
   }
+  const tmpResult = useA11yRolesNative;
 }) : ((arg0) => {
-  let align;
-  let leading;
-  let onPress;
-  let selected;
-  let style;
-  let tmp8Result;
-  let value;
   ({ selected, align } = arg0);
   if (align === undefined) {
     align = "left";
@@ -178,28 +160,32 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   ({ leading, onPress } = arg0);
   ({ value, style } = arg0);
   const merged = Object.assign(arg0, Object.assign({ selected: 0, align: 0, leading: 0, value: 0, onPress: 0, style: 0 }));
-  const context = react.useContext(RedesignCompat.RedesignCompatContext);
-  const obj = react_native;
-  const radioA11yNative = obj.useRadioA11yNative({ selected });
+  const context = noop.useContext(RedesignCompat.RedesignCompatContext);
+  const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected });
   if (context) {
-    const TableRadioRow = TableRadioRow2.TableRadioRow;
+    const obj2 = { icon: leading, value, legacyCompat_selected: selected, legacyCompat_onPress: onPress };
     const merged1 = Object.assign(merged);
-    tmp8Result = <TableRadioRow icon={leading} value={value} legacyCompat_selected={selected} legacyCompat_onPress={onPress} />;
+    let tmp8Result = jsx(TableRadioRow.TableRadioRow, { icon: leading, value, legacyCompat_selected: selected, legacyCompat_onPress: onPress });
   } else {
-    FormRowDefault;
+    const obj3 = {};
     const merged2 = Object.assign(merged);
+    obj3.style = style;
+    obj3.onPress = onPress;
+    obj3.accessibilityRole = tmp6;
+    obj3.accessibilityState = tmp7;
     let tmp8Result3 = null;
     if ("right" === align) {
+      const obj4 = { selected };
       tmp8Result3 = jsx(Form_FormRadioDefault, { selected });
     }
+    obj3.trailing = tmp8Result3;
     let tmp8Result4 = leading;
     if ("left" === align) {
+      const obj5 = { selected };
       tmp8Result4 = jsx(Form_FormRadioDefault, { selected });
     }
-    tmp8Result = <tmp10 style={style} onPress={onPress} accessibilityRole={tmp6} accessibilityState={tmp7} trailing={tmp8Result3} leading={tmp8Result4} />;
+    obj3.leading = tmp8Result4;
+    tmp8Result = jsx(FormRowDefault, {});
   }
   return tmp8Result;
 });
-const result = size.fileFinishedImporting("design/void/Form/native/FormRadioRow.tsx");
-
-export default tmp2;

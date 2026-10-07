@@ -8,6 +8,5 @@ const result = size.fileFinishedImporting("modules/channel/sanitizeGuildTextChan
 export default function sanitizeGuildTextChannelName(str) {
   str = str.replace(/[\s-~]+/g, "-");
   const str2 = str.replace(/^-+/, "");
-  const str3 = str2.replace(/[\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g, "");
-  return str3.toLowerCase();
+  return str.replace(/^-+/, "").replace(/[\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g, "").toLowerCase();
 };

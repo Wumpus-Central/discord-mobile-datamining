@@ -1,65 +1,59 @@
 // === Module 16192: useTotalPossibleBoostCount ===
 
 // Module 16192 (useTotalPossibleBoostCount)
-import react from "react" /* 19 */;
-import react2 from "react" /* 576 */;
+import _mod19 from "module_19" /* 19 */;
+import c from "c" /* 576 */;
 import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4774 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-let c3;
-let closure_4;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-const useMemo = react.useMemo;
+const useMemo = _mod19.useMemo;
 ({ MULTIPLE_PURCHASEABLE_PREMIUM_FEATURES_BOOST_INFO: c3, PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO: closure_4 } = GuildPowerupsConstants);
-({ AppliedGuildBoostsRequiredForBoostedGuildTier: hasOwnProperty, BoostedGuildTiers: metroRequire, GuildFeatures: metroImportDefault } = Constants);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((features) => {
-  let closure_0 = features;
-  const obj = react2;
-  const cResult = obj.c(5);
-  let num = 0;
-  if (null != features) {
-    let tmp4;
-    let closure_1;
+({ AppliedGuildBoostsRequiredForBoostedGuildTier: hasOwnProperty, BoostedGuildTiers: metroRequire, GuildFeatures: closure_7 } = Constants);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useTotalPossibleBoostCount.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let tmp = arg0;
+  const id = arg0;
+  const cResult = c.c(5);
+  if (null == arg0) {
+    return 0;
+  } else {
     let features1;
-    const first = cResult[0];
-    if (features != null) {
-      features1 = features.features;
+    if (tmp != null) {
+      features1 = tmp.features;
     }
-    if (first !== features1) {
+    if (cResult[0] !== features1) {
       let hasItem;
-      if (features != null) {
-        features = features.features;
-        hasItem = features.has(metroImportDefault.PREMIUM_TIER_3_OVERRIDE);
+      if (tmp != null) {
+        const features = tmp.features;
+        hasItem = features.has(React5.PREMIUM_TIER_3_OVERRIDE);
       }
       let features2;
-      if (features != null) {
-        features2 = features.features;
+      if (tmp != null) {
+        features2 = tmp.features;
       }
       cResult[0] = features2;
       cResult[1] = hasItem;
-      tmp4 = hasItem;
+      let tmp4 = hasItem;
     } else {
       tmp4 = cResult[1];
     }
-    if (cResult[2] === features) {
-      if (cResult[3] === true === tmp4) {
+    if (cResult[2] === tmp) {
+      if (cResult[3] === tmp8) {
         closure_1 = cResult[4];
       }
-      num = closure_1;
     }
-    let num3 = 0;
+    let num2 = 0;
     if (true !== tmp4) {
-      num3 = hasOwnProperty[metroRequire.TIER_3];
+      num2 = hasOwnProperty[TIER_3.TIER_3];
     }
-    closure_1 = num3;
+    closure_1 = num2;
     const _Object = Object;
-    const values = Object.values(React3);
+    const values = Object.values(React4);
     const _Object2 = Object;
-    const combined = values.concat(Object.values(_false));
+    const combined = values.concat(Object.values(React3));
     const item = combined.forEach((includedInLevel) => {
       let tmp = null == includedInLevel.includedInLevel;
       if (tmp) {
@@ -77,17 +71,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((features) => {
         closure_1 = closure_1 + includedInLevel.boostPrice;
       }
     });
-    cResult[2] = features;
+    cResult[2] = tmp;
     cResult[3] = true === tmp4;
+    tmp = closure_1;
     cResult[4] = closure_1;
   }
-  return num;
 }) : ((arg0) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const items = [arg0];
   return useMemo(() => {
-    let id;
-    let tmp = id;
     if (null == id) {
       return 0;
     } else {
@@ -126,6 +118,3 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((features) => {
     }
   }, items);
 });
-const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useTotalPossibleBoostCount.tsx");
-
-export default tmp4;

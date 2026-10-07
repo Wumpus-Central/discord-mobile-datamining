@@ -2,56 +2,47 @@
 
 // Module 12839 (ContentInventoryActivityStore)
 import _modDef12 from "module_12" /* 12 */;
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7824 */;
 import utils from "utils" /* 7829 */;
 import matchUtils from "matchUtils" /* 8023 */;
 import ContentInventoryTypes from "ContentInventoryTypes" /* 8027 */;
 import PresenceStore from "PresenceStore" /* 4936 */;
 import ContentInventoryStore from "ContentInventoryStore" /* 8022 */;
-import size from "module_2" /* 2 */;
 
-let _require;
-
+require = fn;
 function entryToKey(content) {
   return "" + content.author_id + ":" + content.id;
 }
 function getMatchingActivity(author_type) {
   _require = author_type;
-  let obj = require("utils");
   let tmp3 = null;
   if (!obj.isEntryExpired(author_type)) {
     let found;
-    const tmpResult = require("utils");
     if (tmpResult.isEntryActive(author_type)) {
-      if (author_type.author_type === require("ContentInventoryAuthorType").ContentInventoryAuthorType.USER) {
+      if (author_type.author_type === tmp(8045).ContentInventoryAuthorType.USER) {
         const activities = PresenceStore.getActivities(author_type.author_id);
         found = activities.find((type) => {
-          let result;
           if (type.type === ActivityTypes.PLAYING) {
-            const obj = ContentInventoryTypes;
-            if (obj.isApplicationEntry(author_type)) {
+            if (obj.isApplicationEntry(closure_0)) {
+              let result = matchUtils.isMatchingApplicationActivity(closure_0, type);
               const tmp2Result = matchUtils;
-              result = tmp2Result.isMatchingApplicationActivity(author_type, type);
             }
             return result;
           }
           let tmp5 = type.type !== ActivityTypes.LISTENING;
           if (!tmp5) {
-            const obj2 = ContentInventoryTypes;
-            tmp5 = !obj2.isListenedSessionEntry(author_type);
+            tmp5 = !ContentInventoryTypes.isListenedSessionEntry(closure_0);
           }
           result = !tmp5;
-          if (result) {
-            const obj3 = matchUtils;
-            result = obj3.isMatchingListeningActivity(author_type, type);
+          if (!tmp5) {
+            result = matchUtils.isMatchingListeningActivity(closure_0, type);
           }
         });
       }
     }
     tmp3 = found;
+    tmpResult = tmp(7829);
   }
   return tmp3;
 }
@@ -78,70 +69,62 @@ function detectMatchingActivityForEntries(entries) {
   return { updatedKeys, matchedKeys };
 }
 function handlePresenceUpdates() {
-  let matchedKeys;
-  let updatedKeys;
   let flag = false;
   const arr = Array.from(map.keys());
-  set = new Set();
   const set1 = new Set();
   const feeds = ContentInventoryStore.getFeeds();
   const values = feeds.values();
   const iter = values[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let entries;
-    let tmp4 = nextResult;
-    if (set.size > 0) {
-      let entries1 = tmp4.entries;
-      entries = entries1.filter((content) => {
-        content = content.content;
-        return !set.has("" + content.author_id + ":" + content.id);
-      });
+  while (true) {
+    let nextResult = iter.next();
+    if (iter === undefined) {
+      let obj2 = _modDef12;
+      let items = [];
+      let arraySpreadResult = HermesBuiltin.arraySpread(set1, 0);
+      let differenceResult = obj2.difference(arr, items);
+      for (const item10081 of differenceResult) {
+        let deleteResult = map.delete(item10081);
+        flag = true;
+        continue;
+      }
+      return flag;
     } else {
-      entries = tmp4.entries;
+      let tmp8 = nextResult;
+      let tmp9 = detectMatchingActivityForEntries;
+      if (set.size > 0) {
+        let entries1 = tmp8.entries;
+        let entries = entries1.filter((content) => {
+          content = content.content;
+          return !set.has("" + content.author_id + ":" + content.id);
+        });
+      } else {
+        entries = tmp8.entries;
+      }
+      let tmp9Result = tmp9(entries);
+      let updatedKeys = tmp9Result.updatedKeys;
+      let matchedKeys = tmp9Result.matchedKeys;
+      tmp9 = updatedKeys[Symbol.iterator]();
     }
-    let tmp5Result = detectMatchingActivityForEntries(entries);
-    ({ updatedKeys, matchedKeys } = tmp5Result);
-    for (const item10049 of updatedKeys) {
-      let addResult = set.add(item10049);
-      continue;
-    }
-    for (const item10058 of matchedKeys) {
-      let addResult1 = set1.add(item10058);
-      continue;
-    }
-    let tmp16 = flag || updatedKeys.size > 0;
-    flag = tmp16;
-    continue;
   }
-  const items = [...set1];
-  const obj4 = _modDef12;
-  const differenceResult = obj4.difference(arr, items);
-  for (const item10081 of differenceResult) {
-    let deleteResult = map.delete(item10081);
-    flag = true;
-    continue;
-  }
-  return flag;
+  set = new Set();
 }
-const ActivityTypes = Constants.ActivityTypes;
-let items = [ContentInventoryEntryType.ContentInventoryEntryType.LISTENED_SESSION];
+const ActivityTypes = fn(1085).ActivityTypes;
+let items = [fn(7824).ContentInventoryEntryType.LISTENED_SESSION];
 let set = new Set(items);
 const map = new Map();
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class ContentInventoryActivityStore extends Store {
   constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    const require = applyArgumentsResult;
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    closure_0 = applyArgumentsResult;
     applyArgumentsResult.canRenderContent = function canRenderContent(content_type) {
-      const obj = utils;
-      let tmp2 = !obj.isEntryExpired(content_type);
-      obj.isEntryExpired(content_type);
-      if (tmp2) {
+      const isEntryExpiredResult = utils.isEntryExpired(content_type);
+      let tmp2 = !isEntryExpiredResult;
+      if (!isEntryExpiredResult) {
         const hasItem = set.has(content_type.content_type);
         let tmp5 = !hasItem;
         if (hasItem) {
-          tmp5 = null != require.getMatchingActivity(content_type);
+          tmp5 = null != applyArgumentsResult.getMatchingActivity(content_type);
         }
         tmp2 = tmp5;
       }
@@ -149,32 +132,31 @@ class ContentInventoryActivityStore extends Store {
     };
     return applyArgumentsResult;
   }
-  initialize() {
-    this.waitFor(ContentInventoryStore, PresenceStore);
-    const items = [PresenceStore];
-    this.syncWith(items, handlePresenceUpdates);
-  }
-  getMatchingActivity(author_id) {
-    let value = null;
-    const obj = utils;
-    if (!obj.isEntryExpired(author_id)) {
-      const _HermesInternal = HermesInternal;
-      value = map.get("" + author_id.author_id + ":" + author_id.id);
-    }
-    return value;
-  }
 }
 const prototype = ContentInventoryActivityStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(ContentInventoryStore, PresenceStore);
+  const items = [PresenceStore];
+  this.syncWith(items, handlePresenceUpdates);
+};
+prototype["getMatchingActivity"] = function getMatchingActivity(author_id) {
+  value = null;
+  if (!obj.isEntryExpired(author_id)) {
+    const _HermesInternal = HermesInternal;
+    value = map.get("" + author_id.author_id + ":" + author_id.id);
+  }
+  return value;
+};
 ContentInventoryActivityStore.displayName = "ContentInventoryActivityStore";
-let obj = {
+const contentInventoryActivityStore = new ContentInventoryActivityStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     map.clear();
   },
   CONTENT_INVENTORY_SET_FEED: function handleSetContentInventoryFeed(feed) {
     return detectMatchingActivityForEntries(feed.feed.entries).updatedKeys.size > 0;
   }
-};
-const contentInventoryActivityStore = new ContentInventoryActivityStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryActivityStore.tsx");
 
 export default contentInventoryActivityStore;

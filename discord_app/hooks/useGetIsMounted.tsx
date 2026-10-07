@@ -1,18 +1,17 @@
 // === Module 7932: useGetIsMounted ===
 
 // Module 7932 (useGetIsMounted)
-import react2 from "react" /* 576 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import c from "c" /* 576 */;
+import noop from "module_19" /* 19 */;
 
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp2;
-  let tmp3;
-  let tmp5;
-  const obj = react2;
-  const cResult = obj.c(3);
-  let closure_0 = react.useRef(true);
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("hooks/useGetIsMounted.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(3);
+  noop.useRef(true);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n() {
       return () => {
@@ -27,24 +26,21 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp2, tmp3] = cResult;
   }
-  const effect = react.useEffect(tmp2, tmp3);
+  const effect = noop.useEffect(tmp2, tmp3);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function u() {
       return ref.current;
     };
     cResult[2] = fn2;
-    tmp5 = fn2;
+    let tmp5 = fn2;
   } else {
     tmp5 = cResult[2];
   }
   return tmp5;
 }) : (() => {
-  let closure_0 = react.useRef(true);
-  const effect = react.useEffect(() => () => {
+  noop.useRef(true);
+  const effect = noop.useEffect(() => () => {
     ref.current = false;
   }, []);
-  return react.useCallback(() => ref.current, []);
+  return noop.useCallback(() => ref.current, []);
 });
-const result = size.fileFinishedImporting("hooks/useGetIsMounted.tsx");
-
-export default tmp2;

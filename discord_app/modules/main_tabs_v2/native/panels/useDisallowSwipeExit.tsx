@@ -1,20 +1,22 @@
 // === Module 16630: useDisallowSwipeExit ===
 
 // Module 16630 (useDisallowSwipeExit)
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 16364 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
 const MainTabsNavigatorPanelContextDefault = MainTabsNavigatorPanelContext;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0 = arg0;
-  const obj = react2;
-  const cResult = obj.c(5);
-  const disallowGesture = react.useContext(MainTabsNavigatorPanelContextDefault).disallowGesture;
-  const context = react.useContext(MainTabsNavigatorPanelContext.MainTabsChannelScreenStackContext);
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/useDisallowSwipeExit.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  closure_0 = arg0;
+  const cResult = c.c(5);
+  const disallowGesture = noop.useContext(MainTabsNavigatorPanelContextDefault).disallowGesture;
+  const context = noop.useContext(MainTabsNavigatorPanelContext.MainTabsChannelScreenStackContext);
   let disallowGesture1;
   if (context != null) {
     disallowGesture1 = context.disallowGesture;
@@ -24,13 +26,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   if (cResult[0] === arg0) {
     if (cResult[1] === disallowGesture) {
-      let tmp4;
-      let tmp5;
       if (cResult[2] === disallowGesture1) {
-        tmp4 = cResult[3];
-        tmp5 = cResult[4];
+        let tmp4 = cResult[3];
+        let tmp5 = cResult[4];
       }
-      const effect = react.useEffect(tmp4, tmp5);
+      const effect = noop.useEffect(tmp4, tmp5);
     }
   }
   const fn = function n() {
@@ -56,9 +56,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp5 = items;
   tmp4 = fn;
 }) : ((arg0) => {
-  let closure_0 = arg0;
-  const disallowGesture = react.useContext(MainTabsNavigatorPanelContextDefault).disallowGesture;
-  const context = react.useContext(MainTabsNavigatorPanelContext.MainTabsChannelScreenStackContext);
+  closure_0 = arg0;
+  const disallowGesture = noop.useContext(MainTabsNavigatorPanelContextDefault).disallowGesture;
+  const context = noop.useContext(MainTabsNavigatorPanelContext.MainTabsChannelScreenStackContext);
   let disallowGesture1;
   if (context != null) {
     disallowGesture1 = context.disallowGesture;
@@ -67,7 +67,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     disallowGesture1 = null;
   }
   const items = [arg0, disallowGesture, disallowGesture1];
-  const effect = react.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (closure_0) {
       let result = disallowGesture.set(true);
       if (disallowGesture1 != null) {
@@ -82,6 +82,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }, items);
 });
-let result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/useDisallowSwipeExit.tsx");
-
-export default tmp2;

@@ -2,80 +2,66 @@
 
 // Module 9195 (useGuildScheduledEvents)
 import DurationsDefault from "Durations" /* 1102 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import PermissionStore from "PermissionStore" /* 4515 */;
 import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7050 */;
 import UpcomingEventNoticesStore from "UpcomingEventNoticesStore" /* 9196 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2057 */;
-import Constants from "Constants" /* 1085 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, dependencyMap, map;
 
-let closure_12;
-let closure_14;
-let map1;
-let metroImportAll;
-let metroImportDefault;
-let unpackModuleId;
+const require = fn;
+let GuildScheduledEventStore = fn(7050);
+({ isGuildScheduledEventActive: closure_7, StaticGuildEventIndexes: closure_8 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-({ isGuildScheduledEventActive: metroImportDefault, StaticGuildEventIndexes: metroImportAll } = GuildScheduledEventStore);
-GuildScheduledEventStore = GuildScheduledEventStore_mod;
-({ GuildScheduledEventEntityTypes: unpackModuleId, GuildScheduledEventStatus: closure_12 } = GuildScheduledEventsConstants);
+const GuildScheduledEventsConstants = fn(2057);
+({ GuildScheduledEventEntityTypes: closure_11, GuildScheduledEventStatus: closure_12 } = GuildScheduledEventsConstants);
+const Constants = fn(1085);
 ({ BasicPermissions: map1, GuildFeatures: closure_14 } = Constants);
 let closure_15 = [];
 let closure_16 = 15 * DurationsDefault.Millis.MINUTE;
-let ReactCompilerGating = ReactCompilerGating_mod;
+fn(558);
+let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
-  let closure_0;
-  let closure_1;
-  let first;
   _require = arg0;
   dependencyMap = arg1;
-  const obj = require("react");
-  const cResult = obj.c(5);
-  const tmp = _require;
+  const cResult = require("c").c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore, GuildScheduledEventStore, PermissionStore, ChannelStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === arg1) {
-    let tmp9;
-    let tmp10;
     if (cResult[2] === arg0) {
-      tmp9 = cResult[3];
-      tmp10 = cResult[4];
+      let tmp9 = cResult[3];
+      let tmp10 = cResult[4];
     }
-    const tmpResult = tmp(504);
-    return tmpResult.useStateFromStoresArray(first, tmp9, tmp10);
+    return tmp(504).useStateFromStoresArray(first, tmp9, tmp10);
   }
   const fn = function s() {
-    let found;
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     if (null == guild) {
-      found = closure_15;
+      let found = closure_15;
     } else {
       let GUILD_EVENT_UPCOMINGResult = closure_1;
-      const getGuildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex;
       if (closure_1 == null) {
-        GUILD_EVENT_UPCOMINGResult = metroImportAll.GUILD_EVENT_UPCOMING(guild.id);
+        GUILD_EVENT_UPCOMINGResult = closure_2_8.GUILD_EVENT_UPCOMING(guild.id);
       }
-      const guildScheduledEventsByIndex = getGuildScheduledEventsByIndex(GUILD_EVENT_UPCOMINGResult);
+      const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(GUILD_EVENT_UPCOMINGResult);
       found = guildScheduledEventsByIndex.filter((channel_id) => {
         channel_id = channel_id.channel_id;
         if (null == channel_id) {
           return true;
         } else {
           basicChannel = basicChannel.getBasicChannel(channel_id);
-          const canBasicChannelResult = null != basicChannel && closure_1_6.canBasicChannel(constants.VIEW_CHANNEL, basicChannel);
+          let canBasicChannelResult = null != basicChannel;
+          if (canBasicChannelResult) {
+            canBasicChannelResult = closure_1_6.canBasicChannel(constants.VIEW_CHANNEL, basicChannel);
+          }
           return canBasicChannelResult;
         }
       });
@@ -89,33 +75,33 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[4] = items1;
   tmp10 = items1;
   tmp9 = fn;
+  const obj = require("c");
+  tmp = _require;
 }) : ((arg0, arg1) => {
-  let closure_0;
-  let closure_1;
   _require = arg0;
   dependencyMap = arg1;
   const items = [GuildStore, GuildScheduledEventStore, PermissionStore, ChannelStore];
   const items1 = [arg1, arg0];
-  const obj = require("get initialized");
-  return obj.useStateFromStoresArray(items, () => {
-    let found;
-    const guild = GuildStore.getGuild(closure_0);
+  return require("initialize").useStateFromStoresArray(items, () => {
+    guild = GuildStore.getGuild(closure_0);
     if (null == guild) {
-      found = closure_15;
+      let found = closure_15;
     } else {
       let GUILD_EVENT_UPCOMINGResult = closure_1;
-      const getGuildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex;
       if (closure_1 == null) {
-        GUILD_EVENT_UPCOMINGResult = metroImportAll.GUILD_EVENT_UPCOMING(guild.id);
+        GUILD_EVENT_UPCOMINGResult = closure_2_8.GUILD_EVENT_UPCOMING(guild.id);
       }
-      const guildScheduledEventsByIndex = getGuildScheduledEventsByIndex(GUILD_EVENT_UPCOMINGResult);
+      const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(GUILD_EVENT_UPCOMINGResult);
       found = guildScheduledEventsByIndex.filter((channel_id) => {
         channel_id = channel_id.channel_id;
         if (null == channel_id) {
           return true;
         } else {
           basicChannel = basicChannel.getBasicChannel(channel_id);
-          const canBasicChannelResult = null != basicChannel && closure_1_6.canBasicChannel(constants.VIEW_CHANNEL, basicChannel);
+          let canBasicChannelResult = null != basicChannel;
+          if (canBasicChannelResult) {
+            canBasicChannelResult = closure_1_6.canBasicChannel(constants.VIEW_CHANNEL, basicChannel);
+          }
           return canBasicChannelResult;
         }
       });
@@ -123,20 +109,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     return found;
   }, items1);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let first;
-  let tmp8;
-  let tmp9;
   _require = arg0;
-  const obj = require("react");
-  const cResult = obj.c(4);
-  const tmp = _require;
+  const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildScheduledEventStore, ChannelStore, PermissionStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -144,7 +124,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const fn = function u() {
       const basicChannel = ChannelStore.getBasicChannel(closure_0);
       if (null != basicChannel) {
-        if (PermissionStore.canBasicChannel(map1.VIEW_CHANNEL, basicChannel)) {
+        if (PermissionStore.canBasicChannel(constants2.VIEW_CHANNEL, basicChannel)) {
           let guild_id;
           if (basicChannel != null) {
             guild_id = basicChannel.guild_id;
@@ -152,7 +132,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           if (null == guild_id) {
             return null;
           } else {
-            const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(metroImportAll.CHANNEL_EVENT_ACTIVE(closure_0));
+            const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(closure_2_8.CHANNEL_EVENT_ACTIVE(closure_0));
             let first = null;
             if (guildScheduledEventsByIndex.length > 0) {
               first = guildScheduledEventsByIndex[0];
@@ -167,24 +147,22 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[1] = arg0;
     cResult[2] = fn;
     cResult[3] = items1;
-    tmp9 = items1;
-    tmp8 = fn;
+    let tmp9 = items1;
+    let tmp8 = fn;
   } else {
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
-  const tmpResult = tmp(504);
-  return tmpResult.useStateFromStores(first, tmp8, tmp9);
+  const obj = require("c");
+  return require("initialize").useStateFromStores(first, tmp8, tmp9);
 }) : ((arg0) => {
-  let closure_0;
   _require = arg0;
   const items = [GuildScheduledEventStore, ChannelStore, PermissionStore];
   const items1 = [arg0];
-  const obj = require("get initialized");
-  return obj.useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     const basicChannel = ChannelStore.getBasicChannel(closure_0);
     if (null != basicChannel) {
-      if (PermissionStore.canBasicChannel(map1.VIEW_CHANNEL, basicChannel)) {
+      if (PermissionStore.canBasicChannel(constants2.VIEW_CHANNEL, basicChannel)) {
         let guild_id;
         if (basicChannel != null) {
           guild_id = basicChannel.guild_id;
@@ -192,7 +170,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         if (null == guild_id) {
           return null;
         } else {
-          const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(metroImportAll.CHANNEL_EVENT_ACTIVE(closure_0));
+          const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(closure_2_8.CHANNEL_EVENT_ACTIVE(closure_0));
           let first = null;
           if (guildScheduledEventsByIndex.length > 0) {
             first = guildScheduledEventsByIndex[0];
@@ -204,100 +182,20 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return null;
   }, items1);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
-  let closure_0;
-  let closure_1;
-  let first;
-  let tmp6;
-  let tmp7;
-  let tmp8;
-  _require = arg0;
-  const obj = require("react");
-  const cResult = obj.c(6);
-  const tmp = _require;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildScheduledEventStore];
-    cResult[0] = items;
-    first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const fn = function l() {
-      return GuildScheduledEventStore.getGuildScheduledEventsForGuild(closure_0);
-    };
-    const items1 = [arg0];
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    cResult[3] = items1;
-    tmp7 = items1;
-    tmp6 = fn;
-  } else {
-    tmp6 = cResult[2];
-    tmp7 = cResult[3];
-  }
-  const tmpResult = tmp(504);
-  const stateFromStoresArray = tmpResult.useStateFromStoresArray(first, tmp6, tmp7);
-  if (cResult[4] !== stateFromStoresArray) {
-    const _Map = Map;
-    const self = this;
-    const self2 = this;
-    map = new Map();
-    dependencyMap = map;
-    const item = stateFromStoresArray.forEach((channel_id) => {
-      channel_id = channel_id.channel_id;
-      if (null != channel_id) {
-        const result = closure_1.set(channel_id, channel_id);
-      }
-    });
-    cResult[4] = stateFromStoresArray;
-    cResult[5] = map;
-    tmp8 = map;
-  } else {
-    dependencyMap = cResult[5];
-  }
-  return tmp8;
-}) : ((arg0) => {
-  let closure_0;
-  let stateFromStoresArray;
-  _require = arg0;
-  const items = [GuildScheduledEventStore];
-  const items1 = [arg0];
-  const obj = require("get initialized");
-  stateFromStoresArray = obj.useStateFromStoresArray(items, () => GuildScheduledEventStore.getGuildScheduledEventsForGuild(closure_0), items1);
-  const items2 = [stateFromStoresArray];
-  return react.useMemo(() => {
-    map = new Map();
-    const item = stateFromStoresArray.forEach((channel_id) => {
-      channel_id = channel_id.channel_id;
-      if (null != channel_id) {
-        const result = map.set(channel_id, channel_id);
-      }
-    });
-    return map;
-  }, items2);
-});
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let first;
-  let tmp8;
-  let tmp9;
   _require = arg0;
-  const obj = require("react");
-  const cResult = obj.c(4);
-  const tmp = _require;
+  const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildScheduledEventStore, ChannelStore, PermissionStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
     const fn = function u() {
-      const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(metroImportAll.GUILD_EVENT_UPCOMING(closure_0));
+      const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(closure_2_8.GUILD_EVENT_UPCOMING(closure_0));
       return guildScheduledEventsByIndex.filter((entity_type) => {
         if (entity_type.entity_type !== constants.NONE) {
           if (entity_type.status === constants2.SCHEDULED) {
@@ -305,7 +203,10 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               return true;
             } else {
               basicChannel = basicChannel.getBasicChannel(entity_type.channel_id);
-              const canBasicChannelResult = null != basicChannel && closure_1_6.canBasicChannel(constants3.VIEW_CHANNEL, basicChannel);
+              let canBasicChannelResult = null != basicChannel;
+              if (canBasicChannelResult) {
+                canBasicChannelResult = closure_1_6.canBasicChannel(constants3.VIEW_CHANNEL, basicChannel);
+              }
               return canBasicChannelResult;
             }
           }
@@ -317,22 +218,20 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[1] = arg0;
     cResult[2] = fn;
     cResult[3] = items1;
-    tmp9 = items1;
-    tmp8 = fn;
+    let tmp9 = items1;
+    let tmp8 = fn;
   } else {
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
-  const tmpResult = tmp(504);
-  return tmpResult.useStateFromStoresArray(first, tmp8, tmp9);
+  const obj = require("c");
+  return require("initialize").useStateFromStoresArray(first, tmp8, tmp9);
 }) : ((arg0) => {
-  let closure_0;
   _require = arg0;
   const items = [GuildScheduledEventStore, ChannelStore, PermissionStore];
   const items1 = [arg0];
-  const obj = require("get initialized");
-  return obj.useStateFromStoresArray(items, () => {
-    const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(metroImportAll.GUILD_EVENT_UPCOMING(closure_0));
+  return require("initialize").useStateFromStoresArray(items, () => {
+    const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(closure_2_8.GUILD_EVENT_UPCOMING(closure_0));
     return guildScheduledEventsByIndex.filter((entity_type) => {
       if (entity_type.entity_type !== constants.NONE) {
         if (entity_type.status === constants2.SCHEDULED) {
@@ -340,7 +239,10 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             return true;
           } else {
             basicChannel = basicChannel.getBasicChannel(entity_type.channel_id);
-            const canBasicChannelResult = null != basicChannel && closure_1_6.canBasicChannel(constants3.VIEW_CHANNEL, basicChannel);
+            let canBasicChannelResult = null != basicChannel;
+            if (canBasicChannelResult) {
+              canBasicChannelResult = closure_1_6.canBasicChannel(constants3.VIEW_CHANNEL, basicChannel);
+            }
             return canBasicChannelResult;
           }
         }
@@ -350,21 +252,71 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }, items1);
 });
 let closure_17 = tmp8;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let closure_1;
-  let tmp10;
-  let tmp13;
-  let tmp15;
-  let tmp16;
-  let tmp18;
-  let tmp5;
-  let tmp6;
-  let tmp9;
+ReactCompilerGating = fn(558);
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   _require = arg0;
-  let obj = require("react");
-  const cResult = obj.c(11);
+  const cResult = require("c").c(6);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [GuildScheduledEventStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== arg0) {
+    const fn = function l() {
+      return GuildScheduledEventStore.getGuildScheduledEventsForGuild(closure_0);
+    };
+    const items1 = [arg0];
+    cResult[1] = arg0;
+    cResult[2] = fn;
+    cResult[3] = items1;
+    let tmp7 = items1;
+    let tmp6 = fn;
+  } else {
+    tmp6 = cResult[2];
+    tmp7 = cResult[3];
+  }
+  const obj = require("c");
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(first, tmp6, tmp7);
+  if (cResult[4] !== stateFromStoresArray) {
+    const _Map = Map;
+    const map = new Map();
+    dependencyMap = map;
+    const item = stateFromStoresArray.forEach((channel_id) => {
+      channel_id = channel_id.channel_id;
+      if (null != channel_id) {
+        const result = closure_1.set(channel_id, channel_id);
+      }
+    });
+    cResult[4] = stateFromStoresArray;
+    cResult[5] = map;
+    const tmp8 = map;
+  } else {
+    dependencyMap = cResult[5];
+  }
+  return tmp8;
+}) : ((arg0) => {
+  _require = arg0;
+  const items = [GuildScheduledEventStore];
+  const items1 = [arg0];
+  stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => GuildScheduledEventStore.getGuildScheduledEventsForGuild(closure_0), items1);
+  const items2 = [stateFromStoresArray];
+  return noop.useMemo(() => {
+    const map = new Map();
+    const item = stateFromStoresArray.forEach((channel_id) => {
+      channel_id = channel_id.channel_id;
+      if (null != channel_id) {
+        const result = map.set(channel_id, channel_id);
+      }
+    });
+    return map;
+  }, items2);
+});
+ReactCompilerGating = fn(558);
+let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  _require = arg0;
+  const cResult = require("c").c(11);
   const tmp4 = closure_17(arg0);
   dependencyMap = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -379,8 +331,8 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const tmpResult = require("get initialized");
-  const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp5, tmp6);
+  const obj = require("c");
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [UpcomingEventNoticesStore];
     const fn2 = function o() {
@@ -388,32 +340,29 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[2] = items1;
     cResult[3] = fn2;
-    tmp10 = fn2;
-    tmp9 = items1;
+    let tmp10 = fn2;
+    let tmp9 = items1;
   } else {
     tmp9 = cResult[2];
     tmp10 = cResult[3];
   }
-  const tmpResult4 = require("get initialized");
-  const stateFromStoresObject1 = tmpResult4.useStateFromStoresObject(tmp9, tmp10);
+  const tmpResult = require("initialize");
+  const stateFromStoresObject1 = require("initialize").useStateFromStoresObject(tmp9, tmp10);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [GuildScheduledEventStore];
     cResult[4] = items2;
-    tmp13 = items2;
+    let tmp13 = items2;
   } else {
     tmp13 = cResult[4];
   }
   if (cResult[5] !== tmp4) {
     const fn3 = function h() {
-      let interestedInEventRecurrence;
-      let reduced;
       if (null == closure_1) {
-        reduced = {};
+        let reduced = {};
       } else {
         reduced = closure_1.reduce((acc, id) => {
           const obj2 = {};
-          const obj = closure_1_0(closure_1_1[13]);
-          const nextRecurrenceIdInEvent = obj.getNextRecurrenceIdInEvent(id);
+          const nextRecurrenceIdInEvent = closure_1_0(closure_1_1[13]).getNextRecurrenceIdInEvent(id);
           const merged = Object.assign(acc);
           obj2[id.id] = interestedInEventRecurrence.isInterestedInEventRecurrence(id.id, nextRecurrenceIdInEvent);
           return obj2;
@@ -425,25 +374,25 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[5] = tmp4;
     cResult[6] = fn3;
     cResult[7] = items3;
-    tmp16 = items3;
-    tmp15 = fn3;
+    let tmp16 = items3;
+    let tmp15 = fn3;
   } else {
     tmp15 = cResult[6];
     tmp16 = cResult[7];
   }
-  const tmpResult5 = require("get initialized");
-  const stateFromStoresObject2 = tmpResult5.useStateFromStoresObject(tmp13, tmp15, tmp16);
+  const tmpResult4 = require("initialize");
+  const stateFromStoresObject2 = require("initialize").useStateFromStoresObject(tmp13, tmp15, tmp16);
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
     const items4 = [GuildStore];
     cResult[8] = items4;
-    tmp18 = items4;
+    let tmp18 = items4;
   } else {
     tmp18 = cResult[8];
   }
   if (cResult[9] !== arg0) {
     class G {
       constructor() {
-        return GuildStore.getGuild(closure_0);
+        return closure_5.getGuild(closure_0);
       }
     }
     cResult[9] = arg0;
@@ -451,17 +400,17 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     class G {
       constructor() {
-        return GuildStore.getGuild(closure_0);
+        return closure_5.getGuild(closure_0);
       }
     }
   }
-  const tmpResult6 = require("get initialized");
-  const stateFromStores = tmpResult6.useStateFromStores(tmp18, G);
+  const tmpResult5 = require("initialize");
+  const stateFromStores = require("initialize").useStateFromStores(tmp18, G);
   let hasItem = null != stateFromStores;
   if (hasItem) {
     class G {
       constructor() {
-        return GuildStore.getGuild(closure_0);
+        return closure_5.getGuild(closure_0);
       }
     }
     hasItem = !obj6.has(constants3.COMMUNITY);
@@ -469,7 +418,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (hasItem) {
     class G {
       constructor() {
-        return GuildStore.getGuild(closure_0);
+        return closure_5.getGuild(closure_0);
       }
     }
     hasItem = obj7.has(constants3.INTERNAL_EMPLOYEE_ONLY);
@@ -477,35 +426,31 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (null != tmp4) {
     class G {
       constructor() {
-        return GuildStore.getGuild(closure_0);
+        return closure_5.getGuild(closure_0);
       }
     }
   }
+  const tmpResult6 = require("initialize");
 }) : ((arg0) => {
-  let closure_0;
   let nextShownUpcomingEventNoticeType;
   let tmp8;
   _require = arg0;
-  let arr = closure_17(arg0);
-  let obj = require("get initialized");
+  const arr = closure_17(arg0);
   const items = [UpcomingEventNoticesStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => UpcomingEventNoticesStore.getAllEventDismissals());
-  let obj2 = require("get initialized");
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => UpcomingEventNoticesStore.getAllEventDismissals());
+  const obj = require("initialize");
   const items1 = [UpcomingEventNoticesStore];
-  const stateFromStoresObject1 = obj2.useStateFromStoresObject(items1, () => UpcomingEventNoticesStore.getAllUpcomingNoticeSeenTimes());
+  const stateFromStoresObject1 = require("initialize").useStateFromStoresObject(items1, () => UpcomingEventNoticesStore.getAllUpcomingNoticeSeenTimes());
+  let obj2 = require("initialize");
   const items2 = [GuildScheduledEventStore];
   const items3 = [arr];
-  const obj3 = require("get initialized");
-  const stateFromStoresObject2 = obj3.useStateFromStoresObject(items2, () => {
-    let interestedInEventRecurrence;
-    let reduced;
+  const stateFromStoresObject2 = require("initialize").useStateFromStoresObject(items2, () => {
     if (null == arr) {
-      reduced = {};
+      let reduced = {};
     } else {
       reduced = arr.reduce((acc, id) => {
         const obj2 = {};
-        const obj = closure_1_0(arr[13]);
-        const nextRecurrenceIdInEvent = obj.getNextRecurrenceIdInEvent(id);
+        const nextRecurrenceIdInEvent = closure_1_0(arr[13]).getNextRecurrenceIdInEvent(id);
         const merged = Object.assign(acc);
         obj2[id.id] = interestedInEventRecurrence.isInterestedInEventRecurrence(id.id, nextRecurrenceIdInEvent);
         return obj2;
@@ -513,9 +458,9 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     return reduced;
   }, items3);
+  const obj3 = require("initialize");
   const items4 = [GuildStore];
-  const obj4 = require("get initialized");
-  const stateFromStores = obj4.useStateFromStores(items4, () => GuildStore.getGuild(closure_0));
+  const stateFromStores = require("initialize").useStateFromStores(items4, () => GuildStore.getGuild(closure_0));
   let hasItem = null != stateFromStores;
   if (hasItem) {
     const features = stateFromStores.features;
@@ -546,25 +491,22 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               num = num + 1;
             }
           }
-          return { upcomingEvent: tmp8, noticeType: nextShownUpcomingEventNoticeType };
+          const obj6 = { upcomingEvent: tmp8, noticeType: nextShownUpcomingEventNoticeType };
+          return obj6;
         }
       }
     }
   }
+  const obj4 = require("initialize");
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let first;
-  let tmp8;
-  let tmp9;
   _require = arg0;
-  const tmp = _require;
-  const obj = require("react");
-  const cResult = obj.c(4);
+  const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildScheduledEventStore, ChannelStore, PermissionStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -574,8 +516,8 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         if (ChannelStore !== undefined) {
           closure_0 = ChannelStore;
           if (PermissionStore !== undefined) {
-            let closure_1 = PermissionStore;
-            const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(metroImportAll.GUILD_EVENT_ACTIVE(tmp));
+            closure_1 = PermissionStore;
+            const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(closure_2_8.GUILD_EVENT_ACTIVE(tmp));
             return guildScheduledEventsByIndex.find((entity_type) => {
               if (entity_type.entity_type !== constants.NONE) {
                 if (closure_2_7(entity_type)) {
@@ -583,7 +525,10 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     return true;
                   } else {
                     basicChannel = basicChannel.getBasicChannel(entity_type.channel_id);
-                    const canBasicChannelResult = null != basicChannel && closure_1.canBasicChannel(constants2.VIEW_CHANNEL, basicChannel);
+                    let canBasicChannelResult = null != basicChannel;
+                    if (canBasicChannelResult) {
+                      canBasicChannelResult = closure_1.canBasicChannel(constants2.VIEW_CHANNEL, basicChannel);
+                    }
                     return canBasicChannelResult;
                   }
                 }
@@ -598,26 +543,25 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[1] = arg0;
     cResult[2] = fn;
     cResult[3] = items1;
-    tmp9 = items1;
-    tmp8 = fn;
+    let tmp9 = items1;
+    let tmp8 = fn;
   } else {
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
-  const tmpResult = tmp(504);
-  return tmpResult.useStateFromStores(first, tmp8, tmp9);
+  const obj = require("c");
+  return require("initialize").useStateFromStores(first, tmp8, tmp9);
 }) : ((arg0) => {
   _require = arg0;
   const items = [GuildScheduledEventStore, ChannelStore, PermissionStore];
   const items1 = [arg0];
-  const obj = require("get initialized");
-  return obj.useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     if (GuildScheduledEventStore !== undefined) {
       if (ChannelStore !== undefined) {
-        closure_0 = ChannelStore;
+        let basicChannel = ChannelStore;
         if (PermissionStore !== undefined) {
-          let closure_1 = PermissionStore;
-          const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(metroImportAll.GUILD_EVENT_ACTIVE(tmp));
+          closure_1 = PermissionStore;
+          const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(closure_2_8.GUILD_EVENT_ACTIVE(tmp));
           return guildScheduledEventsByIndex.find((entity_type) => {
             if (entity_type.entity_type !== constants.NONE) {
               if (closure_2_7(entity_type)) {
@@ -625,7 +569,10 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   return true;
                 } else {
                   basicChannel = basicChannel.getBasicChannel(entity_type.channel_id);
-                  const canBasicChannelResult = null != basicChannel && closure_1.canBasicChannel(constants2.VIEW_CHANNEL, basicChannel);
+                  let canBasicChannelResult = null != basicChannel;
+                  if (canBasicChannelResult) {
+                    canBasicChannelResult = closure_1.canBasicChannel(constants2.VIEW_CHANNEL, basicChannel);
+                  }
                   return canBasicChannelResult;
                 }
               }
@@ -637,352 +584,85 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }, items1);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let first;
-  let tmp6;
-  let tmp7;
   _require = arg0;
-  const obj = require("react");
-  const cResult = obj.c(4);
-  const tmp = _require;
+  const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildScheduledEventStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
     const fn = function l() {
-      return GuildScheduledEventStore.getGuildScheduledEventsByIndex(metroImportAll.CHANNEL_EVENT_UPCOMING(closure_0));
+      return GuildScheduledEventStore.getGuildScheduledEventsByIndex(closure_2_8.CHANNEL_EVENT_UPCOMING(closure_0));
     };
     const items1 = [arg0];
     cResult[1] = arg0;
     cResult[2] = fn;
     cResult[3] = items1;
-    tmp7 = items1;
-    tmp6 = fn;
+    let tmp7 = items1;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  const tmpResult = tmp(504);
-  return tmpResult.useStateFromStores(first, tmp6, tmp7);
+  const obj = require("c");
+  return require("initialize").useStateFromStores(first, tmp6, tmp7);
 }) : ((arg0) => {
-  let closure_0;
   _require = arg0;
   const items = [GuildScheduledEventStore];
   const items1 = [arg0];
-  const obj = require("get initialized");
-  return obj.useStateFromStores(items, () => GuildScheduledEventStore.getGuildScheduledEventsByIndex(metroImportAll.CHANNEL_EVENT_UPCOMING(closure_0)), items1);
+  return require("initialize").useStateFromStores(items, () => GuildScheduledEventStore.getGuildScheduledEventsByIndex(closure_2_8.CHANNEL_EVENT_UPCOMING(closure_0)), items1);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let first;
-  let tmp7;
-  let tmp8;
   _require = arg0;
-  const obj = require("react");
-  const cResult = obj.c(4);
-  const tmp = _require;
+  const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore, GuildScheduledEventStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
     const fn = function u() {
-      let channel;
-      const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(metroImportAll.GUILD_EVENT_ACTIVE(closure_0));
+      const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(closure_2_8.GUILD_EVENT_ACTIVE(closure_0));
       const found = guildScheduledEventsByIndex.find((channel_id) => null != channel.getChannel(channel_id.channel_id));
       let channel_id;
-      const getChannel = ChannelStore.getChannel;
       if (found != null) {
         channel_id = found.channel_id;
       }
-      return getChannel(channel_id);
+      return ChannelStore.getChannel(channel_id);
     };
     const items1 = [arg0];
     cResult[1] = arg0;
     cResult[2] = fn;
     cResult[3] = items1;
-    tmp8 = items1;
-    tmp7 = fn;
+    let tmp8 = items1;
+    let tmp7 = fn;
   } else {
     tmp7 = cResult[2];
     tmp8 = cResult[3];
   }
-  const tmpResult = tmp(504);
-  return tmpResult.useStateFromStores(first, tmp7, tmp8);
+  const obj = require("c");
+  return require("initialize").useStateFromStores(first, tmp7, tmp8);
 }) : ((arg0) => {
-  let closure_0;
   _require = arg0;
   const items = [ChannelStore, GuildScheduledEventStore];
   const items1 = [arg0];
-  const obj = require("get initialized");
-  return obj.useStateFromStores(items, () => {
-    let channel;
-    const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(metroImportAll.GUILD_EVENT_ACTIVE(closure_0));
+  return require("initialize").useStateFromStores(items, () => {
+    const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(closure_2_8.GUILD_EVENT_ACTIVE(closure_0));
     const found = guildScheduledEventsByIndex.find((channel_id) => null != channel.getChannel(channel_id.channel_id));
     let channel_id;
-    const getChannel = ChannelStore.getChannel;
     if (found != null) {
       channel_id = found.channel_id;
     }
-    return getChannel(channel_id);
+    return ChannelStore.getChannel(channel_id);
   }, items1);
-});
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let first;
-  let items2;
-  let tmp10;
-  let tmp6;
-  let tmp7;
-  let tmp8;
-  _require = arg0;
-  const tmp = _require;
-  let obj = require("react");
-  const cResult = obj.c(12);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function u() {
-      return Date.now();
-    };
-    cResult[0] = fn;
-    first = fn;
-  } else {
-    first = cResult[0];
-  }
-  [tmp6, dependencyMap] = react.useState(first);
-  _slicedToArray(react.useState(first), 2);
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn2 = function c() {
-      const interval = setInterval(() => {
-        closure_1_1(Date.now());
-      }, closure_1_16);
-      return () => clearInterval(closure_0);
-    };
-    let items = [];
-    cResult[1] = fn2;
-    cResult[2] = items;
-    tmp8 = items;
-    tmp7 = fn2;
-  } else {
-    tmp7 = cResult[1];
-    tmp8 = cResult[2];
-  }
-  const effect = react.useEffect(tmp7, tmp8);
-  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const items1 = [GuildScheduledEventStore];
-    cResult[3] = items1;
-    tmp10 = items1;
-  } else {
-    tmp10 = cResult[3];
-  }
-  if (cResult[4] !== arg0) {
-    class S {
-      constructor() {
-        let items;
-        if (null == closure_0) {
-          items = [];
-        } else {
-          items = GuildScheduledEventStore.getGuildScheduledEventsByIndex(metroImportAll.CHANNEL_EVENT_UPCOMING(tmp));
-        }
-        return items;
-      }
-    }
-    cResult[4] = arg0;
-    cResult[5] = S;
-  } else {
-    class S {
-      constructor() {
-        let items;
-        if (null == closure_0) {
-          items = [];
-        } else {
-          items = GuildScheduledEventStore.getGuildScheduledEventsByIndex(metroImportAll.CHANNEL_EVENT_UPCOMING(tmp));
-        }
-        return items;
-      }
-    }
-  }
-  if (cResult[6] === arg0) {
-    let tmp13;
-    class S {
-      constructor() {
-        let items;
-        if (null == closure_0) {
-          items = [];
-        } else {
-          items = GuildScheduledEventStore.getGuildScheduledEventsByIndex(metroImportAll.CHANNEL_EVENT_UPCOMING(tmp));
-        }
-        return items;
-      }
-    }
-    const tmpResult = tmp(504);
-    const stateFromStores = tmpResult.useStateFromStores(tmp10, S, items2);
-    if (cResult[9] !== stateFromStores) {
-      class S {
-        constructor() {
-          let items;
-          if (null == closure_0) {
-            items = [];
-          } else {
-            items = GuildScheduledEventStore.getGuildScheduledEventsByIndex(metroImportAll.CHANNEL_EVENT_UPCOMING(tmp));
-          }
-          return items;
-        }
-      }
-      if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-        class A {
-          constructor(status) {
-            let endTime;
-            let startTime;
-            const obj = closure_0(dependencyMap[15]);
-            const eventSchedule = obj.getEventSchedule(status);
-            ({ startTime, endTime } = eventSchedule);
-            const getEventTimeData = closure_0(dependencyMap[13]).getEventTimeData;
-            let toISOStringResult1;
-            closure_0(dependencyMap[13]);
-            const toISOStringResult = startTime.toISOString();
-            if (endTime != null) {
-              toISOStringResult1 = endTime.toISOString();
-            }
-            const eventTimeData = getEventTimeData(toISOStringResult, toISOStringResult1);
-            let withinStartWindow = status.status !== constants.ACTIVE;
-            const diffMinutes = eventTimeData.diffMinutes;
-            if (withinStartWindow) {
-              withinStartWindow = eventTimeData.withinStartWindow;
-            }
-            if (withinStartWindow) {
-              withinStartWindow = diffMinutes < 15;
-            }
-            return withinStartWindow;
-          }
-        }
-        cResult[11] = A;
-      } else {
-        class A {
-          constructor(status) {
-            let endTime;
-            let startTime;
-            const obj = closure_0(dependencyMap[15]);
-            const eventSchedule = obj.getEventSchedule(status);
-            ({ startTime, endTime } = eventSchedule);
-            const getEventTimeData = closure_0(dependencyMap[13]).getEventTimeData;
-            let toISOStringResult1;
-            closure_0(dependencyMap[13]);
-            const toISOStringResult = startTime.toISOString();
-            if (endTime != null) {
-              toISOStringResult1 = endTime.toISOString();
-            }
-            const eventTimeData = getEventTimeData(toISOStringResult, toISOStringResult1);
-            let withinStartWindow = status.status !== constants.ACTIVE;
-            const diffMinutes = eventTimeData.diffMinutes;
-            if (withinStartWindow) {
-              withinStartWindow = eventTimeData.withinStartWindow;
-            }
-            if (withinStartWindow) {
-              withinStartWindow = diffMinutes < 15;
-            }
-            return withinStartWindow;
-          }
-        }
-      }
-      const found = stateFromStores.filter(A);
-      cResult[9] = stateFromStores;
-      cResult[10] = found;
-      tmp13 = found;
-    } else {
-      class A {
-        constructor(status) {
-          let endTime;
-          let startTime;
-          const obj = closure_0(dependencyMap[15]);
-          const eventSchedule = obj.getEventSchedule(status);
-          ({ startTime, endTime } = eventSchedule);
-          const getEventTimeData = closure_0(dependencyMap[13]).getEventTimeData;
-          let toISOStringResult1;
-          closure_0(dependencyMap[13]);
-          const toISOStringResult = startTime.toISOString();
-          if (endTime != null) {
-            toISOStringResult1 = endTime.toISOString();
-          }
-          const eventTimeData = getEventTimeData(toISOStringResult, toISOStringResult1);
-          let withinStartWindow = status.status !== constants.ACTIVE;
-          const diffMinutes = eventTimeData.diffMinutes;
-          if (withinStartWindow) {
-            withinStartWindow = eventTimeData.withinStartWindow;
-          }
-          if (withinStartWindow) {
-            withinStartWindow = diffMinutes < 15;
-          }
-          return withinStartWindow;
-        }
-      }
-    }
-    return tmp13;
-  }
-  items2 = [arg0, tmp6];
-  cResult[6] = arg0;
-  cResult[7] = tmp6;
-  cResult[8] = items2;
-}) : ((arg0) => {
-  let closure_0;
-  let stateFromStores;
-  let tmp2;
-  _require = arg0;
-  const tmp = stateFromStores(react.useState(() => Date.now()), 2);
-  [tmp2, dependencyMap] = tmp;
-  const effect = react.useEffect(() => {
-    const interval = setInterval(() => {
-      closure_1_1(Date.now());
-    }, closure_1_16);
-    return () => clearInterval(closure_0);
-  }, []);
-  let obj = require("get initialized");
-  let items = [GuildScheduledEventStore];
-  const items1 = [arg0, tmp2];
-  stateFromStores = obj.useStateFromStores(items, () => {
-    let items;
-    if (null == closure_0) {
-      items = [];
-    } else {
-      items = GuildScheduledEventStore.getGuildScheduledEventsByIndex(metroImportAll.CHANNEL_EVENT_UPCOMING(tmp));
-    }
-    return items;
-  }, items1);
-  const items2 = [stateFromStores];
-  return react.useMemo(() => stateFromStores.filter((status) => {
-    let endTime;
-    let startTime;
-    const obj = closure_1_0(closure_1_1[15]);
-    const eventSchedule = obj.getEventSchedule(status);
-    ({ startTime, endTime } = eventSchedule);
-    const getEventTimeData = closure_1_0(closure_1_1[13]).getEventTimeData;
-    let toISOStringResult1;
-    closure_1_0(closure_1_1[13]);
-    const toISOStringResult = startTime.toISOString();
-    if (endTime != null) {
-      toISOStringResult1 = endTime.toISOString();
-    }
-    const eventTimeData = getEventTimeData(toISOStringResult, toISOStringResult1);
-    let withinStartWindow = status.status !== constants.ACTIVE;
-    const diffMinutes = eventTimeData.diffMinutes;
-    if (withinStartWindow) {
-      withinStartWindow = eventTimeData.withinStartWindow;
-    }
-    if (withinStartWindow) {
-      withinStartWindow = diffMinutes < 15;
-    }
-    return withinStartWindow;
-  }), items2);
 });
 function getGuildActiveEvent(guildId) {
   let obj = arg1;
@@ -993,12 +673,12 @@ function getGuildActiveEvent(guildId) {
   if (arg2 === undefined) {
     tmp = ChannelStore;
   }
-  let closure_0 = tmp;
+  closure_0 = tmp;
   let tmp2 = arg3;
   if (arg3 === undefined) {
     tmp2 = PermissionStore;
   }
-  let closure_1 = tmp2;
+  closure_1 = tmp2;
   const guildScheduledEventsByIndex = obj.getGuildScheduledEventsByIndex(closure_8.GUILD_EVENT_ACTIVE(guildId));
   return guildScheduledEventsByIndex.find((entity_type) => {
     if (entity_type.entity_type !== constants.NONE) {
@@ -1007,7 +687,10 @@ function getGuildActiveEvent(guildId) {
           return true;
         } else {
           basicChannel = basicChannel.getBasicChannel(entity_type.channel_id);
-          const canBasicChannelResult = null != basicChannel && closure_1.canBasicChannel(constants2.VIEW_CHANNEL, basicChannel);
+          let canBasicChannelResult = null != basicChannel;
+          if (canBasicChannelResult) {
+            canBasicChannelResult = closure_1.canBasicChannel(constants2.VIEW_CHANNEL, basicChannel);
+          }
           return canBasicChannelResult;
         }
       }
@@ -1015,6 +698,7 @@ function getGuildActiveEvent(guildId) {
     return false;
   });
 }
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildScheduledEvents.tsx");
 
 export default tmp5;
@@ -1026,4 +710,224 @@ export { getGuildActiveEvent };
 export const useGuildActiveEvent = tmp10;
 export const useGuildChannelScheduledEvents = tmp11;
 export const useFirstActiveEventChannel = tmp12;
-export const useImminentUpcomingGuildEvents = tmp13;
+export const useImminentUpcomingGuildEvents = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  _require = arg0;
+  const cResult = require("c").c(12);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function u() {
+      return Date.now();
+    };
+    cResult[0] = fn;
+    let first = fn;
+  } else {
+    first = cResult[0];
+  }
+  let obj = require("c");
+  const tmp = _require;
+  [tmp6, dependencyMap] = noop.useState(first);
+  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn2 = function c() {
+      const interval = setInterval(() => {
+        dependencyMap(Date.now());
+      }, closure_1_16);
+      return () => clearInterval(closure_0);
+    };
+    let items = [];
+    cResult[1] = fn2;
+    cResult[2] = items;
+    let tmp8 = items;
+    let tmp7 = fn2;
+  } else {
+    tmp7 = cResult[1];
+    tmp8 = cResult[2];
+  }
+  const effect = noop.useEffect(tmp7, tmp8);
+  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+    const items1 = [GuildScheduledEventStore];
+    cResult[3] = items1;
+    let tmp10 = items1;
+  } else {
+    tmp10 = cResult[3];
+  }
+  if (cResult[4] !== arg0) {
+    class S {
+      constructor() {
+        if (null == closure_0) {
+          items = [];
+        } else {
+          tmp2 = closure_9;
+          tmp3 = StaticGuildEventIndexes;
+          items = closure_9.getGuildScheduledEventsByIndex(StaticGuildEventIndexes.CHANNEL_EVENT_UPCOMING(tmp));
+        }
+        return items;
+      }
+    }
+    cResult[4] = arg0;
+    cResult[5] = S;
+  } else {
+    class S {
+      constructor() {
+        if (null == closure_0) {
+          items = [];
+        } else {
+          tmp2 = closure_9;
+          tmp3 = StaticGuildEventIndexes;
+          items = closure_9.getGuildScheduledEventsByIndex(StaticGuildEventIndexes.CHANNEL_EVENT_UPCOMING(tmp));
+        }
+        return items;
+      }
+    }
+  }
+  if (cResult[6] === arg0) {
+    class S {
+      constructor() {
+        if (null == closure_0) {
+          items = [];
+        } else {
+          tmp2 = closure_9;
+          tmp3 = StaticGuildEventIndexes;
+          items = closure_9.getGuildScheduledEventsByIndex(StaticGuildEventIndexes.CHANNEL_EVENT_UPCOMING(tmp));
+        }
+        return items;
+      }
+    }
+    const stateFromStores = tmp(504).useStateFromStores(tmp10, S, items2);
+    if (cResult[9] !== stateFromStores) {
+      class S {
+        constructor() {
+          if (null == closure_0) {
+            items = [];
+          } else {
+            tmp2 = closure_9;
+            tmp3 = StaticGuildEventIndexes;
+            items = closure_9.getGuildScheduledEventsByIndex(StaticGuildEventIndexes.CHANNEL_EVENT_UPCOMING(tmp));
+          }
+          return items;
+        }
+      }
+      if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+        class A {
+          constructor(arg0) {
+            obj = closure_0(closure_1[15]);
+            eventSchedule = obj.getEventSchedule(arg0);
+            ({ startTime, endTime } = eventSchedule);
+            obj2 = closure_0(closure_1[13]);
+            toISOStringResult1 = undefined;
+            toISOStringResult = startTime.toISOString();
+            if (endTime != null) {
+              toISOStringResult1 = endTime.toISOString();
+            }
+            eventTimeData = obj2.getEventTimeData(toISOStringResult, toISOStringResult1);
+            withinStartWindow = arg0.status !== closure_1_12.ACTIVE;
+            if (withinStartWindow) {
+              withinStartWindow = eventTimeData.withinStartWindow;
+            }
+            if (withinStartWindow) {
+              num = 15;
+              withinStartWindow = eventTimeData.diffMinutes < 15;
+            }
+            return withinStartWindow;
+          }
+        }
+        cResult[11] = A;
+      } else {
+        class A {
+          constructor(arg0) {
+            obj = closure_0(closure_1[15]);
+            eventSchedule = obj.getEventSchedule(arg0);
+            ({ startTime, endTime } = eventSchedule);
+            obj2 = closure_0(closure_1[13]);
+            toISOStringResult1 = undefined;
+            toISOStringResult = startTime.toISOString();
+            if (endTime != null) {
+              toISOStringResult1 = endTime.toISOString();
+            }
+            eventTimeData = obj2.getEventTimeData(toISOStringResult, toISOStringResult1);
+            withinStartWindow = arg0.status !== closure_1_12.ACTIVE;
+            if (withinStartWindow) {
+              withinStartWindow = eventTimeData.withinStartWindow;
+            }
+            if (withinStartWindow) {
+              num = 15;
+              withinStartWindow = eventTimeData.diffMinutes < 15;
+            }
+            return withinStartWindow;
+          }
+        }
+      }
+      const found = stateFromStores.filter(A);
+      cResult[9] = stateFromStores;
+      cResult[10] = found;
+    } else {
+      class A {
+        constructor(arg0) {
+          obj = closure_0(closure_1[15]);
+          eventSchedule = obj.getEventSchedule(arg0);
+          ({ startTime, endTime } = eventSchedule);
+          obj2 = closure_0(closure_1[13]);
+          toISOStringResult1 = undefined;
+          toISOStringResult = startTime.toISOString();
+          if (endTime != null) {
+            toISOStringResult1 = endTime.toISOString();
+          }
+          eventTimeData = obj2.getEventTimeData(toISOStringResult, toISOStringResult1);
+          withinStartWindow = arg0.status !== closure_1_12.ACTIVE;
+          if (withinStartWindow) {
+            withinStartWindow = eventTimeData.withinStartWindow;
+          }
+          if (withinStartWindow) {
+            num = 15;
+            withinStartWindow = eventTimeData.diffMinutes < 15;
+          }
+          return withinStartWindow;
+        }
+      }
+    }
+    const tmpResult = tmp(504);
+  }
+  items2 = [arg0, tmp6];
+  cResult[6] = arg0;
+  cResult[7] = tmp6;
+  cResult[8] = items2;
+  const tmp5 = _slicedToArray(noop.useState(first), 2);
+}) : ((arg0) => {
+  _require = arg0;
+  [tmp2, dependencyMap] = stateFromStores(noop.useState(() => Date.now()), 2);
+  const effect = noop.useEffect(() => {
+    const interval = setInterval(() => {
+      closure_1_1(Date.now());
+    }, closure_1_16);
+    return () => clearInterval(closure_0);
+  }, []);
+  const tmp = stateFromStores(noop.useState(() => Date.now()), 2);
+  let items = [GuildScheduledEventStore];
+  const items1 = [arg0, tmp2];
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
+    if (null == closure_0) {
+      let items = [];
+    } else {
+      items = GuildScheduledEventStore.getGuildScheduledEventsByIndex(closure_2_8.CHANNEL_EVENT_UPCOMING(tmp));
+    }
+    return items;
+  }, items1);
+  const items2 = [stateFromStores];
+  return noop.useMemo(() => stateFromStores.filter((status) => {
+    const eventSchedule = closure_1_0(9201).getEventSchedule(status);
+    ({ startTime, endTime } = eventSchedule);
+    const obj = closure_1_0(9201);
+    let toISOStringResult1;
+    const obj2 = closure_1_0(9198);
+    if (endTime != null) {
+      toISOStringResult1 = endTime.toISOString();
+    }
+    const eventTimeData = obj2.getEventTimeData(startTime.toISOString(), toISOStringResult1);
+    let withinStartWindow = status.status !== constants.ACTIVE;
+    if (withinStartWindow) {
+      withinStartWindow = eventTimeData.withinStartWindow;
+    }
+    if (withinStartWindow) {
+      withinStartWindow = eventTimeData.diffMinutes < 15;
+    }
+    return withinStartWindow;
+  }), items2);
+});

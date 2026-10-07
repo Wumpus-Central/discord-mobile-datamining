@@ -7,33 +7,31 @@ import reanimated_AccessibilityPreferencesSharedValue from "reanimated/Accessibi
 import size from "module_2" /* 2 */;
 
 const CONFIG_NEVER_ANIMATE = ReanimatedConstants.CONFIG_NEVER_ANIMATE;
-function withSpring(targetHeight, CHANNEL_SPRING_CONFIG, arg2) {
-  let tmp5;
+function withSpring(value, SUBTLE_SPRING, arg2) {
   let str = arg2;
   if (arg2 === undefined) {
     str = "respect-motion-settings";
   }
   const accessibilityPreferencesSharedValue = reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue;
   if ("animate-always" === str) {
-    let tmp7 = CHANNEL_SPRING_CONFIG;
-    if ("animate-always" === str) {
-      let obj = CHANNEL_SPRING_CONFIG;
-      if (CHANNEL_SPRING_CONFIG == null) {
+    let tmp7 = SUBTLE_SPRING;
+    if (tmp4) {
+      let obj = SUBTLE_SPRING;
+      if (SUBTLE_SPRING == null) {
         obj = {};
       }
-      const obj2 = { reduceMotion: ReanimatedRexport.ReduceMotion.Never };
+      const obj2 = {};
       const merged = Object.assign(obj);
+      obj2.reduceMotion = ReanimatedRexport.ReduceMotion.Never;
       tmp7 = obj2;
     }
-    tmp5 = tmp7;
+    let tmp5 = tmp7;
   } else {
     tmp5 = CONFIG_NEVER_ANIMATE;
   }
-  const tmpResult = ReanimatedRexport;
-  return tmpResult.withSpring(targetHeight, tmp5, fn);
+  return ReanimatedRexport.withSpring(value, tmp5, fn);
 }
-let obj = { accessibilityPreferencesSharedValue: reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, CONFIG_NEVER_ANIMATE, ReduceMotion: ReanimatedRexport.ReduceMotion, REAwithSpring: ReanimatedRexport.withSpring };
-withSpring.__closure = obj;
+withSpring.__closure = { accessibilityPreferencesSharedValue: reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, CONFIG_NEVER_ANIMATE, ReduceMotion: ReanimatedRexport.ReduceMotion, REAwithSpring: ReanimatedRexport.withSpring };
 withSpring.__workletHash = 14783154107972;
 withSpring.__initData = { code: "function withSpring_springTsx1(toValue,config,shouldAnimate='respect-motion-settings',callback){const{accessibilityPreferencesSharedValue,CONFIG_NEVER_ANIMATE,ReduceMotion,REAwithSpring}=this.__closure;const reducedMotionEnabled=accessibilityPreferencesSharedValue.get().reduceMotion;const animate=shouldAnimate==='animate-always'||shouldAnimate==='respect-motion-settings'&&!reducedMotionEnabled;const configForRea=!animate?CONFIG_NEVER_ANIMATE:shouldAnimate==='animate-always'?{...(config!==null&&config!==void 0?config:{}),reduceMotion:ReduceMotion.Never}:config;return REAwithSpring(toValue,configForRea,callback);}" };
 const result = size.fileFinishedImporting("design/animation/reanimated/spring/spring.tsx");

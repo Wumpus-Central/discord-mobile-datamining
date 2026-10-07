@@ -2,48 +2,32 @@
 
 // Module 17135 (AppIconsCoachmark)
 import nativeDefault from "native" /* 587 */;
-import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9655 */;
+import _modDef9655 from "module_9655" /* 9655 */;
 import AppIconUtils from "AppIconUtils" /* 13280 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 17136 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import _modDef17136 from "module_17136" /* 17136 */;
+import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let BottomSheet, markAsDismissed;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { container: { padding: nativeDefault.space.PX_16, paddingBottom: 0 }, info: { alignItems: "center" }, image: { alignSelf: "center", marginBottom: 20 }, nitroWheel: { marginRight: 8 }, titleContainer: { display: "flex", flexDirection: "row", alignItems: "center" }, subtitle: { marginTop: 8, textAlign: "center" }, footer: null };
+let obj3 = { padding: nativeDefault.space.PX_16, paddingBottom: 0 };
+obj2.footer = { marginTop: 20, gap: nativeDefault.space.PX_8 };
+let closure_10 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj4 = { marginTop: 20, gap: nativeDefault.space.PX_8 };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_icons/native/AppIconsCoachmark.tsx");
 
-let c9;
-let closure_4;
-let hasOwnProperty;
-let metroImportAll;
-let obj2;
-let obj3;
-({ Image: closure_4, View: hasOwnProperty } = react_native);
-const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
-({ jsx: metroImportAll, jsxs: c9 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { container: obj2, info: { alignItems: "center" }, image: { alignSelf: "center", marginBottom: 20 }, nitroWheel: { marginRight: 8 }, titleContainer: { display: "flex", flexDirection: "row", alignItems: "center" }, subtitle: { marginTop: 8, textAlign: "center" }, footer: obj3 };
-obj2 = { padding: nativeDefault.space.PX_16, paddingBottom: 0 };
-createStyles = createStyles.createStyles;
-obj3 = { marginTop: 20, gap: nativeDefault.space.PX_8 };
-let closure_10 = createStyles(obj);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => {
-  let currentUser;
-  let intl;
-  let items1;
-  let items2;
-  let tmp22;
-  let tmp5;
-  let tmp6;
-  let tmp9;
-  let obj = markAsDismissed(576);
-  const cResult = obj.c(43);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => {
+  const cResult = markAsDismissed(576).c(43);
   markAsDismissed = markAsDismissed.markAsDismissed;
   const tmp4 = closure_10();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -58,26 +42,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => 
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const tmpResult = markAsDismissed(504);
-  const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
+  let obj = markAsDismissed(576);
+  const stateFromStores = markAsDismissed(504).useStateFromStores(tmp5, tmp6);
   if (cResult[2] !== stateFromStores) {
-    const obj3 = PremiumUtilsDefault;
-    const isPremiumResult = obj3.isPremium(stateFromStores);
+    const isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
     cResult[2] = stateFromStores;
     cResult[3] = isPremiumResult;
-    tmp9 = isPremiumResult;
+    let tmp9 = isPremiumResult;
   } else {
     tmp9 = cResult[3];
   }
   if (cResult[4] !== markAsDismissed) {
     const fn2 = function b() {
-      const obj = ActionSheetActionCreatorsDefault;
-      obj.hideActionSheet();
+      ActionSheetActionCreatorsDefault.hideActionSheet();
       if (markAsDismissed != null) {
         tmp3(ContentDismissActionType.PRIMARY);
       }
-      const obj2 = AppIconUtils;
-      const result = obj2.navigateToAppIconSettings();
+      const result = AppIconUtils.navigateToAppIconSettings();
     };
     cResult[4] = markAsDismissed;
     cResult[5] = fn2;
@@ -85,11 +66,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => 
   if (cResult[6] !== markAsDismissed) {
     class A {
       constructor() {
-        const obj = ActionSheetActionCreatorsDefault;
-        obj.hideActionSheet();
+        obj = closure_1(closure_2[11]);
+        hideActionSheetResult = obj.hideActionSheet();
         if (markAsDismissed != null) {
-          tmp2(ContentDismissActionType.DISMISS);
+          tmp3 = ContentDismissActionType;
+          tmp2Result = tmp2(ContentDismissActionType.DISMISS);
         }
+        return;
       }
     }
     cResult[6] = markAsDismissed;
@@ -97,11 +80,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => 
   } else {
     class A {
       constructor() {
-        const obj = ActionSheetActionCreatorsDefault;
-        obj.hideActionSheet();
+        obj = closure_1(closure_2[11]);
+        hideActionSheetResult = obj.hideActionSheet();
         if (markAsDismissed != null) {
-          tmp2(ContentDismissActionType.DISMISS);
+          tmp3 = ContentDismissActionType;
+          tmp2Result = tmp2(ContentDismissActionType.DISMISS);
         }
+        return;
       }
     }
   }
@@ -126,10 +111,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => 
         return markAsDismissed(ContentDismissActionType.DISMISS);
       }
     }
-    let obj2 = { source: AssetRegistryDefault2, style: tmp4.image };
-    cResult[10] = tmp4.image;
-    cResult[11] = closure_8(closure_4, obj2);
+    let obj2 = { source: _modDef17136, style: tmp4.image };
     const tmp18 = closure_8(closure_4, obj2);
+    cResult[10] = tmp4.image;
+    cResult[11] = tmp18;
   } else {
     class D {
       constructor() {
@@ -143,11 +128,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => 
         return markAsDismissed(ContentDismissActionType.DISMISS);
       }
     }
-    const obj4 = { source: AssetRegistryDefault, size: markAsDismissed(1188).IconSizes.MEDIUM, style: tmp4.nitroWheel, disableColor: true };
-    const Icon = tmp(1188).Icon;
+    const obj4 = { source: _modDef9655, size: tmp(1188).IconSizes.MEDIUM, style: tmp4.nitroWheel, disableColor: true };
+    const tmp21 = closure_8(tmp(1188).Icon, obj4);
     cResult[12] = tmp4.nitroWheel;
-    cResult[13] = closure_8(Icon, obj4);
-    const tmp21 = closure_8(Icon, obj4);
+    cResult[13] = tmp21;
   } else {
     class D {
       constructor() {
@@ -161,12 +145,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => 
         return markAsDismissed(ContentDismissActionType.DISMISS);
       }
     }
-    const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: intl.string(markAsDismissed(1126).t.EfA4Cq) };
-    const Text = tmp(4892).Text;
-    intl = tmp(1126).intl;
-    const tmp23 = closure_8(Text, obj5);
+    const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    const intl = tmp(1126).intl;
+    obj5.children = intl.string(tmp(1126).t.EfA4Cq);
+    const tmp23 = closure_8(tmp(4892).Text, obj5);
     cResult[14] = tmp23;
-    tmp22 = tmp23;
+    const tmp22 = tmp23;
   } else {
     class D {
       constructor() {
@@ -186,14 +170,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => 
           return markAsDismissed(ContentDismissActionType.DISMISS);
         }
       }
-      const string = tmp27.string;
-      const t = tmp(1126).t;
       if (tmp9) {
         class D {
           constructor() {
             return markAsDismissed(ContentDismissActionType.DISMISS);
           }
         }
+        const stringResult = obj8.string(tmp(1126).t);
       } else {
         class D {
           constructor() {
@@ -202,70 +185,60 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => 
         }
       }
       cResult[18] = tmp9;
-      cResult[19] = tmp28;
+      cResult[19] = stringResult;
     } else {
       class D {
         constructor() {
           return markAsDismissed(ContentDismissActionType.DISMISS);
         }
       }
-    }
-    if (cResult[20] === tmp4.subtitle) {
-      class D {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.DISMISS);
-        }
-      }
-      if (cResult[23] === tmp4.info) {
+      if (cResult[20] === tmp4.subtitle) {
         class D {
           constructor() {
             return markAsDismissed(ContentDismissActionType.DISMISS);
           }
         }
+        if (cResult[23] === tmp4.info) {
+          class D {
+            constructor() {
+              return markAsDismissed(ContentDismissActionType.DISMISS);
+            }
+          }
+        }
+        const obj6 = { style: tmp4.info, children: null };
+        const items1 = [tmp15, tmp24, tmp29];
+        obj6.children = items1;
+        const tmp35 = closure_9(closure_5, obj6);
+        cResult[23] = tmp4.info;
+        cResult[24] = tmp24;
+        cResult[25] = tmp29;
+        cResult[26] = tmp15;
+        cResult[27] = tmp35;
       }
-      const obj6 = { style: tmp4.info, children: items1 };
-      items1 = [tmp15, tmp24, tmp29];
-      cResult[23] = tmp4.info;
-      cResult[24] = tmp24;
-      cResult[25] = tmp29;
-      cResult[26] = tmp15;
-      cResult[27] = closure_9(closure_5, obj6);
-      const tmp35 = closure_9(closure_5, obj6);
+      const obj7 = { variant: "text-md/normal", color: "text-default", style: tmp4.subtitle, children: tmp26 };
+      const tmp31 = closure_8(tmp(4892).Text, obj7);
+      cResult[20] = tmp4.subtitle;
+      cResult[21] = tmp26;
+      cResult[22] = tmp31;
     }
-    const obj7 = { variant: "text-md/normal", color: "text-default", style: tmp4.subtitle, children: tmp28 };
-    cResult[20] = tmp4.subtitle;
-    cResult[21] = tmp28;
-    cResult[22] = closure_8(markAsDismissed(4892).Text, obj7);
-    const tmp31 = closure_8(markAsDismissed(4892).Text, obj7);
   }
-  const obj8 = { style: tmp4.titleContainer, children: items2 };
-  items2 = [tmp19, tmp22];
+  const obj9 = { style: tmp4.titleContainer, children: null };
+  const items2 = [tmp19, tmp22];
+  obj9.children = items2;
+  const tmp25 = closure_9(closure_5, obj9);
   cResult[15] = tmp4.titleContainer;
   cResult[16] = tmp19;
-  cResult[17] = closure_9(closure_5, obj8);
-  const tmp25 = closure_9(closure_5, obj8);
+  cResult[17] = tmp25;
+  const tmpResult = markAsDismissed(504);
 }) : ((markAsDismissed) => {
-  let currentUser;
-  let intl;
-  let intl3;
-  let intl4;
-  let items2;
-  let items3;
-  let items4;
-  let items5;
-  let stringResult;
   markAsDismissed = markAsDismissed.markAsDismissed;
   const tmp = closure_10();
-  const tmp2 = markAsDismissed;
-  let obj = markAsDismissed(504);
   const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj2 = PremiumUtilsDefault;
+  const stateFromStores = markAsDismissed(504).useStateFromStores(items, () => currentUser.getCurrentUser());
+  let obj = markAsDismissed(504);
   const items1 = [markAsDismissed];
-  const isPremiumResult = obj2.isPremium(stateFromStores);
-  const callback = react.useCallback(() => {
-    const obj = ActionSheetActionCreatorsDefault;
-    obj.hideActionSheet();
+  const callback = noop.useCallback(() => {
+    ActionSheetActionCreatorsDefault.hideActionSheet();
     if (markAsDismissed != null) {
       tmp2(ContentDismissActionType.DISMISS);
     }
@@ -275,56 +248,52 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => 
       return markAsDismissed(ContentDismissActionType.DISMISS);
     },
     contentStyles: tmp.container,
-    children: items4
+    children: null
   };
-  const obj4 = { style: tmp.info, children: items2 };
-  const obj5 = { source: AssetRegistryDefault2, style: tmp.image };
-  BottomSheet = markAsDismissed(6652).BottomSheet;
-  items2 = [closure_8(closure_4, obj5), , ];
-  const obj6 = { style: tmp.titleContainer, children: items3 };
-  const obj7 = { source: AssetRegistryDefault, size: markAsDismissed(1188).IconSizes.MEDIUM, style: tmp.nitroWheel, disableColor: true };
-  const Icon = markAsDismissed(1188).Icon;
-  items3 = [closure_8(Icon, obj7), ];
-  const obj8 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: intl.string(markAsDismissed(1126).t.EfA4Cq) };
-  const Text = markAsDismissed(4892).Text;
-  intl = markAsDismissed(1126).intl;
-  items3[1] = closure_8(Text, obj8);
+  const obj4 = { style: tmp.info, children: null };
+  const isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
+  const items2 = [closure_8(closure_4, { source: _modDef17136, style: tmp.image }), , ];
+  const obj6 = { style: tmp.titleContainer, children: null };
+  const obj5 = { source: _modDef17136, style: tmp.image };
+  const items3 = [closure_8(markAsDismissed(1188).Icon, { source: _modDef9655, size: markAsDismissed(1188).IconSizes.MEDIUM, style: tmp.nitroWheel, disableColor: true }), ];
+  const obj8 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const intl = markAsDismissed(1126).intl;
+  obj8.children = intl.string(markAsDismissed(1126).t.EfA4Cq);
+  items3[1] = closure_8(markAsDismissed(4892).Text, obj8);
+  obj6.children = items3;
   items2[1] = closure_9(closure_5, obj6);
-  const obj9 = { variant: "text-md/normal", color: "text-default", style: tmp.subtitle, children: stringResult };
-  const Text2 = markAsDismissed(4892).Text;
+  const obj9 = { variant: "text-md/normal", color: "text-default", style: tmp.subtitle, children: null };
   const intl2 = markAsDismissed(1126).intl;
   const string = intl2.string;
   const t = markAsDismissed(1126).t;
   if (isPremiumResult) {
-    stringResult = string(t.IgchKK);
+    let stringResult = string(t.IgchKK);
   } else {
     stringResult = string(t.D0XzaS);
   }
-  items2[2] = closure_8(Text2, obj9);
-  items4 = [closure_9(closure_5, obj4), ];
-  const obj10 = { style: tmp.footer, children: items5 };
-  const obj11 = {
-    text: intl3.string(tmp2(1126).t.Pt547C),
-    onPress() {
-      const obj = ActionSheetActionCreatorsDefault;
-      obj.hideActionSheet();
-      if (markAsDismissed != null) {
-        tmp3(ContentDismissActionType.PRIMARY);
-      }
-      const obj2 = AppIconUtils;
-      const result = obj2.navigateToAppIconSettings();
+  obj9.children = stringResult;
+  items2[2] = closure_8(markAsDismissed(4892).Text, obj9);
+  obj4.children = items2;
+  const items4 = [closure_9(closure_5, obj4), ];
+  const obj10 = { style: tmp.footer, children: null };
+  const obj11 = { text: null, onPress: null };
+  const intl3 = tmp2(1126).intl;
+  obj11.text = intl3.string(markAsDismissed(1126).t.Pt547C);
+  obj11.onPress = function onPress() {
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+    if (markAsDismissed != null) {
+      tmp3(ContentDismissActionType.PRIMARY);
     }
+    const result = AppIconUtils.navigateToAppIconSettings();
   };
-  const Button = tmp2(5601).Button;
-  intl3 = tmp2(1126).intl;
-  items5 = [closure_8(Button, obj11), ];
-  const obj12 = { variant: "secondary", text: intl4.string(tmp2(1126).t.iSrIIZ), onPress: callback };
-  const Button2 = tmp2(5601).Button;
-  intl4 = tmp2(1126).intl;
-  items5[1] = closure_8(Button2, obj12);
+  const items5 = [closure_8(markAsDismissed(5601).Button, obj11), ];
+  const obj12 = { variant: "secondary", text: null, onPress: null };
+  const intl4 = tmp2(1126).intl;
+  obj12.text = intl4.string(markAsDismissed(1126).t.iSrIIZ);
+  obj12.onPress = callback;
+  items5[1] = closure_8(markAsDismissed(5601).Button, obj12);
+  obj10.children = items5;
   items4[1] = closure_9(closure_5, obj10);
-  return closure_9(BottomSheet, obj3);
+  obj3.children = items4;
+  return closure_9(markAsDismissed(6652).BottomSheet, obj3);
 });
-let result = size.fileFinishedImporting("modules/app_icons/native/AppIconsCoachmark.tsx");
-
-export default tmp5;

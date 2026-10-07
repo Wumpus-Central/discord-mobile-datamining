@@ -1,14 +1,16 @@
-// === Module 8753: react-native ===
+// === Module 8753: SamsungManager ===
 
-// Module 8753 (react-native)
-import react_native from "react-native" /* 17 */;
+// Module 8753 (SamsungManager)
+import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 
-const NativeModules = react_native.NativeModules;
-const obj = {
-  checkIfOAuthRequest(clientId) {
+const NativeModules = _mod17.NativeModules;
+const result = size.fileFinishedImporting("modules/samsung/native/SamsungManager.android.tsx");
+
+export default {
+  checkIfOAuthRequest(arg0) {
     const Samsung = NativeModules.Samsung;
-    return Samsung.checkIfOAuthRequest(clientId);
+    return Samsung.checkIfOAuthRequest(arg0);
   },
   showConnectionDisclaimer() {
     const Samsung = NativeModules.Samsung;
@@ -18,11 +20,8 @@ const obj = {
     const Samsung = NativeModules.Samsung;
     return Samsung.getAccountUrlAndAuthCode();
   },
-  finishSamsungAuthorization(arg0, arg1, state) {
+  finishSamsungAuthorization(arg0, arg1, text1) {
     const Samsung = NativeModules.Samsung;
-    return Samsung.finishSamsungAuthorization(arg0, arg1, state);
+    return Samsung.finishSamsungAuthorization(arg0, arg1, text1);
   }
 };
-const result = size.fileFinishedImporting("modules/samsung/native/SamsungManager.android.tsx");
-
-export default obj;

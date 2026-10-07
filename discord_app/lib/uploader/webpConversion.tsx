@@ -2,207 +2,30 @@
 
 // Module 7324 (webpConversion)
 import LoggerDefault from "Logger" /* 3 */;
-import _modDef1251 from "module_1251" /* 1251 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import size_mod from "module_2" /* 2 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1251 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let UNKNOWN_ERROR, closure_12, closure_3, errorResult;
-
+const require = fn;
 function _shouldConvertToWebP() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_7.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-let obj = function _shouldConvertToWebP2() {
-  obj = _asyncToGenerator(async (arg0) => {
-    const type = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
-    return (async function(arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          let obj14;
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              return { value, done: true };
-            } else {
-              closure_2 = tmp;
-              closure_1 = undefined;
-              obj14 = undefined;
-              if ("image/webp" === type.type) {
-                closure_2_4.verbose("[WebP] File already WebP format");
-                c6 = 3;
-                return { value: constants.ALREADY_WEBP, done: true };
-              } else {
-                const items = ["image/png"];
-                if (items.includes(type.type)) {
-                  c4 = 1;
-                  if (typeof type.arrayBuffer === "function") {
-                    c5 = 4;
-                    c6 = 1;
-                    const obj5 = { value: type.arrayBuffer(), done: false };
-                    return obj5;
-                  } else {
-                    const self3 = this;
-                    const self4 = this;
-                    c5 = 3;
-                    c6 = 1;
-                    const obj6 = {
-                      value: new Promise((data, arg1) => {
-                                      closure_0 = data;
-                                      closure_1 = arg1;
-                                      const fileReader = new FileReader();
-                                      fileReader.onload = () => closure_0(fileReader.result);
-                                      fileReader.onerror = () => {
-                                        const error = new Error("Failed to read file as ArrayBuffer");
-                                        return closure_1(error);
-                                      };
-                                      const asArrayBuffer = fileReader.readAsArrayBuffer(closure_0);
-                                    }),
-                      done: false
-                    };
-                    return obj6;
-                  }
-                } else {
-                  const _HermesInternal = HermesInternal;
-                  closure_2_4.verbose("[WebP] Unsupported format: " + type.type);
-                  c6 = 3;
-                  return { value: constants.UNSUPPORTED_FORMAT, done: true };
-                }
-              }
-            }
-          } else if (1 === c5) {
-            c4 = 0;
-            closure_130_4.warn("[WebP] Failed to read file data:", closure_3);
-            c6 = 3;
-            return { value: closure_130_5.CONVERSION_FAILED, done: true };
-          } else if (2 === c5) {
-            c4 = 0;
-            closure_4 = closure_3;
-            closure_130_4.warn("[WebP] PNG analysis failed:", closure_4);
-            c6 = 3;
-            return { value: closure_130_5.CORRUPTED_FILE, done: true };
-          } else {
-            if (3 === c5) {
-              if (arg0 === 1) {
-                c6 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c4 = 0;
-                c6 = 3;
-                return { value, done: true };
-              }
-            } else if (4 === c5) {
-              if (arg0 === 1) {
-                c6 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c4 = 0;
-                c6 = 3;
-                return { value, done: true };
-              }
-            } else if (5 === c5) {
-              c4 = 0;
-              let closure_5 = closure_3;
-              closure_130_4.warn("[WebP] ICC profile detection failed:", closure_5);
-              c6 = 3;
-              return { value: closure_130_5.ICC_DETECTION_FAILED, done: true };
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 0;
-              c6 = 3;
-              return { value, done: true };
-            } else if (value) {
-              c4 = 0;
-              c6 = 3;
-              return { value: null, done: true };
-            } else {
-              c4 = 0;
-              c6 = 3;
-              return { value: closure_130_5.ICC_NON_SRGB_PROFILE, done: true };
-            }
-            closure_1 = value;
-            c4 = 2;
-            const DiscordImageFactory = closure_130_0(closure_130_2[2]).DiscordImageFactory;
-            obj14 = DiscordImageFactory.create(closure_1);
-            if (null == obj14) {
-              const _Error = Error;
-              const self = this;
-              const self2 = this;
-              let error = new Error("DiscordImage.create returned null");
-              throw error;
-            } else if (obj14.hasTransparency()) {
-              closure_130_4.verbose("[webp] png uses actual transparency - skipping conversion");
-              c4 = 0;
-              c6 = 3;
-              return { value: closure_130_5.HAS_TRANSPARENCY, done: true };
-            } else if (obj14.isAnimated()) {
-              closure_130_4.verbose("[webp] png is animated (apng) - skipping conversion");
-              c4 = 0;
-              c6 = 3;
-              return { value: closure_130_5.ANIMATED_IMAGE, done: true };
-            } else if (obj14.isPng8()) {
-              closure_130_4.verbose("[webp] png is PNG8 format (indexed color) - skipping conversion");
-              c4 = 0;
-              c6 = 3;
-              return { value: closure_130_5.PNG8_FORMAT, done: true };
-            } else {
-              c4 = 3;
-              c5 = 6;
-              c6 = 1;
-              const obj35 = { value: obj14.hasSrgbIccProfile(), done: false };
-              return obj35;
-            }
-          }
-        } catch (tmp64) {
-          closure_3 = tmp64;
-          if (0 === c4) {
-            c6 = 3;
-            throw tmp64;
-          } else if (1 === c4) {
-            c5 = 1;
-          } else if (2 === c4) {
-            c5 = 2;
-          } else {
-            c5 = 5;
-          }
-        }
-      }
-    })();
-  });
-  return obj(...arguments);
-};
-function hashImageData(data) {
-  const uint8Array = new Uint8Array(data.data.buffer);
-  const str = _modDef1251(uint8Array);
-  return str.toString(16);
-}
-obj = function _performWebPConversion() {
-  obj = _asyncToGenerator(async function(arg0) {
-    let height;
-    let width;
-    let closure_0 = arg0;
+let closure_7 = async function _shouldConvertToWebP2(arg0) {
+  let type = arg0;
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  return (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp8 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -212,20 +35,7 @@ obj = function _performWebPConversion() {
         return { value: "IconComponent", done: null };
       }
     } else {
-      let c4;
       try {
-        let image;
-        let webpBlob;
-        let closure_6;
-        let closure_7;
-        let image1;
-        let src;
-        let closure_10;
-        let closure_11;
-        let closure_13;
-        let pixelHashTimeMs;
-        let element;
-        let context;
         c6 = 2;
         if (0 === c5) {
           if (arg0 === 1) {
@@ -236,398 +46,574 @@ obj = function _performWebPConversion() {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            let closure_2 = tmp;
-            let closure_1 = tmp4;
-            image = undefined;
-            closure_4 = undefined;
-            webpBlob = undefined;
-            closure_6 = undefined;
-            closure_7 = undefined;
-            image1 = undefined;
-            src = undefined;
-            closure_10 = undefined;
-            closure_11 = undefined;
-            closure_12 = undefined;
-            closure_13 = undefined;
-            pixelHashTimeMs = undefined;
-            const _document = document;
-            element = <canvas />;
-            context = element.getContext("2d");
-            if (null == context) {
-              const _Error2 = Error;
-              const self7 = this;
-              const self8 = this;
-              let error = new Error("could not get canvas context");
-              throw error;
-            } else {
-              const self3 = this;
-              const self4 = this;
-              image = new globalThis.Image();
-              const _URL5 = URL;
-              closure_4 = URL.createObjectURL(closure_0);
-              c4 = 1;
-              const self5 = this;
-              const self6 = this;
-              const promise = new Promise((arg0, arg1) => {
-                closure_0 = arg0;
-                closure_1 = arg1;
-                image.onload = () => closure_0();
-                image.onerror = () => {
-                  const error = new Error("failed to load image");
-                  return closure_1(error);
-                };
-                image.src = src;
-              });
-              c5 = 3;
-              c6 = 1;
-              const obj4 = { value: promise, done: false };
+            closure_2 = tmp4;
+            closure_1 = tmp9;
+            closure_129_0 = type;
+            closure_129_1 = undefined;
+            closure_129_2 = undefined;
+            if ("image/webp" === type.type) {
+              closure_2_4.verbose("[WebP] File already WebP format");
+              c6 = 3;
+              const obj4 = { value: constants.ALREADY_WEBP, done: true };
               return obj4;
-            }
-          }
-        } else if (1 === c5) {
-          c4 = 0;
-          const _URL4 = URL;
-          URL.revokeObjectURL(closure_4);
-          throw closure_3;
-        } else if (2 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          } else {
-            webpBlob = value;
-            if (null == webpBlob) {
-              const _Error = Error;
-              const self = this;
-              const self2 = this;
-              const error1 = new Error("failed to convert to webp");
-              throw error1;
             } else {
-              const _performance = performance;
-              closure_6 = performance.now();
-              c5 = 4;
-              c6 = 1;
-              const obj6 = { value: context.getImageData(0, 0, element.width, element.height), done: false };
-              return obj6;
+              const items = ["image/png"];
+              if (items.includes(type.type)) {
+                c4 = 1;
+                if (typeof type.arrayBuffer === "function") {
+                  c5 = 4;
+                  c6 = 1;
+                  const obj5 = { value: type.arrayBuffer(), done: false };
+                  return obj5;
+                } else {
+                  const promise = new Promise((arg0, arg1) => {
+                    closure_0 = arg0;
+                    closure_1 = arg1;
+                    const fileReader = new FileReader();
+                    fileReader.onload = () => closure_0(fileReader.result);
+                    fileReader.onerror = () => {
+                      const error = new Error("Failed to read file as ArrayBuffer");
+                      return closure_1(error);
+                    };
+                    const asArrayBuffer = fileReader.readAsArrayBuffer(type);
+                  });
+                  c5 = 3;
+                  c6 = 1;
+                  const obj6 = { value: promise, done: false };
+                  return obj6;
+                }
+              } else {
+                const _HermesInternal = HermesInternal;
+                closure_2_4.verbose("[WebP] Unsupported format: " + type.type);
+                c6 = 3;
+                const obj7 = { value: constants.UNSUPPORTED_FORMAT, done: true };
+                return obj7;
+              }
             }
           }
-        } else if (3 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            const _URL3 = URL;
-            URL.revokeObjectURL(closure_4);
-            c6 = 3;
-            const obj7 = { value, done: true };
-            return obj7;
-          } else {
-            element.width = image.width;
-            element.height = image.height;
-            context.drawImage(image, 0, 0);
-            c4 = 0;
-            const _URL8 = URL;
-            URL.revokeObjectURL(closure_4);
-            const self13 = this;
-            const self14 = this;
-            const promise3 = new Promise((arg0) => {
-              closure_1_1.toBlob(arg0, "image/webp", 1);
-            });
-            c5 = 2;
-            c6 = 1;
-            const obj8 = { value: promise3, done: false };
-            return obj8;
-          }
-        } else if (4 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj9 = { value, done: true };
-            return obj9;
-          } else {
-            closure_7 = value;
-            context.clearRect(0, 0, element.width, element.height);
-            const Image2 = globalThis.Image;
-            const self9 = this;
-            const self10 = this;
-            image1 = new globalThis.Image();
-            const _URL7 = URL;
-            src = URL.createObjectURL(webpBlob);
-            c4 = 2;
-            const self11 = this;
-            const self12 = this;
-            const promise4 = new Promise((arg0, arg1) => {
-              closure_0 = arg0;
-              closure_1 = arg1;
-              closure_1_8.onload = () => closure_0();
-              closure_1_8.onerror = () => {
-                const error = new Error("failed to load image");
-                return closure_1(error);
-              };
-              closure_1_8.src = src;
-            });
-            c5 = 7;
-            c6 = 1;
-            const obj10 = { value: promise4, done: false };
-            return obj10;
-          }
-        } else if (5 === c5) {
+        } else if (1 === tmp9) {
           c4 = 0;
-          const _URL2 = URL;
-          URL.revokeObjectURL(src);
-          throw closure_3;
-        } else if (6 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj11 = { value, done: true };
-            return obj11;
-          } else {
-            let obj13;
-            closure_10 = value;
-            closure_11 = closure_130_8(closure_7);
-            closure_12 = closure_130_8(closure_10);
-            closure_13 = closure_11 === closure_12;
-            const _performance2 = performance;
-            pixelHashTimeMs = performance.now() - closure_6;
-            const name = closure_0.name;
-            const _Math = Math;
-            ({ width, height } = image1);
-            const _HermesInternal = HermesInternal;
-            closure_130_4.verbose("[WebP] Pixel hash results: fileName=" + name + " fileLength={" + closure_0.size + "} width=" + width + " height=" + height + " pixelHash=" + closure_11 + " mezzanineFileLength={" + webpBlob.size + "} mezzaninePixelHash=" + closure_12 + " match=" + closure_13 + " elapsed_ms=" + Math.round(pixelHashTimeMs));
-            if (closure_13) {
-              const obj12 = { success: true, webpBlob, pixelHashTimeMs };
-              obj13 = obj12;
-            } else {
-              obj13 = { success: false, reason: closure_130_5.PIXEL_HASH_MISMATCH, pixelHashTimeMs };
-            }
-            c6 = 3;
-            const obj14 = { value: obj13, done: true };
-            return obj14;
-          }
-        } else if (arg0 === 1) {
+          closure_129_3 = closure_3;
+          closure_130_4.warn("[WebP] Failed to read file data:", closure_129_3);
           c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
+          const obj8 = { value: closure_130_5.CONVERSION_FAILED, done: true };
+          return obj8;
+        } else if (2 === tmp9) {
           c4 = 0;
-          const _URL = URL;
-          URL.revokeObjectURL(src);
+          closure_129_4 = closure_3;
+          closure_130_4.warn("[WebP] PNG analysis failed:", closure_129_4);
           c6 = 3;
-          const obj15 = { value, done: true };
-          return obj15;
+          const obj9 = { value: closure_130_5.CORRUPTED_FILE, done: true };
+          return obj9;
         } else {
-          context.drawImage(image1, 0, 0);
-          c4 = 0;
-          const _URL6 = URL;
-          URL.revokeObjectURL(src);
-          c5 = 6;
-          c6 = 1;
-          obj = { value: context.getImageData(0, 0, element.width, element.height), done: false };
-          return obj;
+          if (3 === tmp9) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 0;
+              c6 = 3;
+              const obj10 = { value, done: true };
+              return obj10;
+            }
+          } else if (4 === tmp9) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 0;
+              c6 = 3;
+              const obj11 = { value, done: true };
+              return obj11;
+            }
+          } else if (5 === tmp9) {
+            c4 = 0;
+            closure_129_5 = closure_3;
+            closure_130_4.warn("[WebP] ICC profile detection failed:", closure_129_5);
+            c6 = 3;
+            const obj12 = { value: closure_130_5.ICC_DETECTION_FAILED, done: true };
+            return obj12;
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 0;
+            c6 = 3;
+            const obj13 = { value, done: true };
+            return obj13;
+          } else if (value) {
+            c4 = 0;
+            c6 = 3;
+            return { value: null, done: true };
+          } else {
+            c4 = 0;
+            c6 = 3;
+            const obj = { value: closure_130_5.ICC_NON_SRGB_PROFILE, done: true };
+            return obj;
+          }
+          closure_129_1 = value;
+          c4 = 2;
+          const DiscordImageFactory = closure_130_0(closure_130_2[2]).DiscordImageFactory;
+          const obj14 = DiscordImageFactory.create(closure_129_1);
+          closure_129_2 = obj14;
+          if (null == obj14) {
+            const _Error = Error;
+            let error = new Error("DiscordImage.create returned null");
+            throw error;
+          } else if (closure_129_2.hasTransparency()) {
+            closure_130_4.verbose("[webp] png uses actual transparency - skipping conversion");
+            c4 = 0;
+            c6 = 3;
+            const obj15 = { value: closure_130_5.HAS_TRANSPARENCY, done: true };
+            return obj15;
+          } else if (closure_129_2.isAnimated()) {
+            closure_130_4.verbose("[webp] png is animated (apng) - skipping conversion");
+            c4 = 0;
+            c6 = 3;
+            const obj16 = { value: closure_130_5.ANIMATED_IMAGE, done: true };
+            return obj16;
+          } else if (closure_129_2.isPng8()) {
+            closure_130_4.verbose("[webp] png is PNG8 format (indexed color) - skipping conversion");
+            c4 = 0;
+            c6 = 3;
+            const obj17 = { value: closure_130_5.PNG8_FORMAT, done: true };
+            return obj17;
+          } else {
+            c4 = 3;
+            c5 = 6;
+            c6 = 1;
+            const obj35 = { value: closure_129_2.hasSrgbIccProfile(), done: false };
+            return obj35;
+          }
         }
-      } catch (tmp41) {
-        closure_3 = tmp41;
-        if (0 === c4) {
-          c6 = 3;
-          throw tmp41;
-        } else if (1 === tmp43) {
-          c5 = 1;
+      } catch (tmp71) {
+        closure_3 = tmp71;
+        if (tmp5 === c4) {
+          c6 = tmp3;
+          throw tmp71;
+        } else if (tmp2 === tmp73) {
+          c5 = tmp2;
+        } else if (tmp === tmp73) {
+          c5 = tmp;
         } else {
-          c5 = 5;
+          c5 = tmp6;
         }
       }
     }
-  });
-  return obj(...arguments);
+  })();
 };
-obj = function _maybeConvertToWebP() {
-  obj = _asyncToGenerator(async (originalFile) => {
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
-    return (async function(arg0) {
-      function performWebPConversion() {
-        return closure_1_9(...arguments);
-      }
-      if (c7 === 2) {
-        c7 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+function hashImageData(data) {
+  const uint8Array = new Uint8Array(data.data.buffer);
+  return MurmurHashV3Default(uint8Array).toString(16);
+}
+let closure_9 = async function _performWebPConversion(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
+          c6 = 3;
           throw value;
         } else if (arg0 === 2) {
-          return { value, done: true };
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          let closure_1;
-          let closure_2;
-          let closure_5;
-          let webpBlob;
-          let num2;
-          let closure_8;
-          let createFailedResult;
-          let num = 2;
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              return { value, done: true };
-            } else {
-              closure_3 = tmp;
-              closure_1 = undefined;
-              closure_2 = undefined;
-              closure_4 = undefined;
-              closure_5 = undefined;
-              webpBlob = undefined;
-              num2 = undefined;
-              closure_8 = undefined;
-              createFailedResult = function createFailedResult(CONVERSION_FAILED) {
-                let num;
-                if (size === undefined) {
-                  size = originalFile.size;
-                }
-                obj = { success: false, originalFile, sizeBefore: originalFile.size, sizeAfter: size, compressionRatio: num, reason: CONVERSION_FAILED, compressTimeMs: Math.round(performance.now() - closure_2) };
-                num = 1;
-                if (originalFile.size > 0) {
-                  num = size / originalFile.size;
-                }
-                return obj;
+          closure_2 = tmp3;
+          closure_1 = tmp8;
+          closure_129_0 = closure_0;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          closure_129_5 = undefined;
+          closure_129_6 = undefined;
+          closure_129_7 = undefined;
+          closure_129_8 = undefined;
+          closure_129_9 = undefined;
+          closure_129_10 = undefined;
+          closure_129_11 = undefined;
+          closure_129_12 = undefined;
+          closure_129_13 = undefined;
+          closure_129_14 = undefined;
+          const _document = document;
+          const element = <canvas />;
+          closure_129_1 = element;
+          const context = element.getContext("2d");
+          closure_129_2 = context;
+          if (null == context) {
+            const _Error2 = Error;
+            let error = new Error("could not get canvas context");
+            throw error;
+          } else {
+            const image = new globalThis.Image();
+            closure_129_3 = image;
+            const _URL5 = URL;
+            closure_129_4 = URL.createObjectURL(closure_0);
+            c4 = 1;
+            const promise = new Promise((arg0, arg1) => {
+              closure_0 = arg0;
+              closure_1 = arg1;
+              closure_1_3.onload = () => closure_0();
+              closure_1_3.onerror = () => {
+                const error = new Error("failed to load image");
+                return closure_1(error);
               };
-              if (null == originalFile) {
-                const _Error = Error;
-                const self = this;
-                const self2 = this;
-                const error = new Error("file is null or undefined");
-                throw error;
-              } else {
-                const _HermesInternal4 = HermesInternal;
-                closure_2_4.verbose("[WebP] Starting conversion for: " + originalFile.name);
-                const _performance = performance;
-                closure_2 = performance.now();
-                c5 = 1;
-                c6 = 2;
-                c7 = 1;
-                const obj4 = { value: _shouldConvertToWebP(originalFile), done: false };
-                return obj4;
-              }
-            }
-          } else if (1 === c6) {
-            c5 = 0;
-            let closure_9 = closure_4;
-            const _HermesInternal3 = HermesInternal;
-            errorResult = closure_131_4.error("[WebP] Conversion failed for " + originalFile.name + ":", closure_9);
-            c7 = 3;
-            const obj5 = { value: createFailedResult(closure_131_5.CONVERSION_FAILED), done: true };
-            return obj5;
-          } else if (2 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 0;
-              c7 = 3;
-              return { value, done: true };
-            } else {
-              closure_4 = value;
-              if (null != closure_4) {
-                const _HermesInternal2 = HermesInternal;
-                closure_131_4.verbose("[WebP] Conversion rejected: " + closure_4);
-                c5 = 0;
-                c7 = 3;
-                const obj7 = { value: createFailedResult(closure_4), done: true };
-                return obj7;
-              } else {
-                c6 = 3;
-                c7 = 1;
-                const obj8 = { value: performWebPConversion(originalFile), done: false };
-                return obj8;
-              }
-            }
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 0;
-            c7 = 3;
-            return { value, done: true };
-          } else {
-            closure_5 = value;
-            if (closure_5.success) {
-              if (null != closure_5.webpBlob) {
-                webpBlob = closure_5.webpBlob;
-                num2 = 1;
-                if (originalFile.size > 0) {
-                  num2 = webpBlob.size / originalFile.size;
-                }
-                closure_8 = 1 - num2;
-                if (closure_8 < 0) {
-                  const _Math = Math;
-                  const _HermesInternal = HermesInternal;
-                  closure_131_4.verbose("[WebP] Insufficient savings: " + Math.round(100 * closure_8) + "% < 0% (" + originalFile.size + " -> " + webpBlob.size + " bytes)");
-                  obj = createFailedResult(closure_131_5.INSUFFICIENT_SAVINGS, webpBlob.size);
-                } else {
-                  const _performance2 = performance;
-                  closure_1 = performance.now() - closure_2;
-                  const name = originalFile.name;
-                  const _Math2 = Math;
-                  const _HermesInternal5 = HermesInternal;
-                  closure_131_4.verbose("[WebP] Conversion successful: " + name + " to WebP in " + Math.round(closure_1) + "ms");
-                  obj = { success: true, originalFile, convertedBlob: webpBlob, sizeBefore: originalFile.size, sizeAfter: webpBlob.size, compressionRatio: num2, hashTimeMs: closure_5.pixelHashTimeMs, compressTimeMs: errorResult };
-                  const _Math3 = Math;
-                  errorResult = Math.round(closure_1);
-                }
-                c5 = 0;
-                c7 = 3;
-                return { value: obj, done: true };
-              }
-            }
-            const reason = closure_5.reason;
-            UNKNOWN_ERROR = reason;
-            const tmp24 = createFailedResult;
-            if (reason == null) {
-              UNKNOWN_ERROR = closure_131_5.UNKNOWN_ERROR;
-            }
-            c5 = 0;
-            c7 = 3;
-            const obj11 = { value: tmp24(UNKNOWN_ERROR), done: true };
-            return obj11;
-          }
-        } catch (tmp52) {
-          closure_4 = tmp52;
-          if (0 === c5) {
-            c7 = 3;
-            throw tmp52;
-          } else {
+              closure_1_3.src = src;
+            });
+            c5 = 3;
             c6 = 1;
+            const obj4 = { value: promise, done: false };
+            return obj4;
           }
         }
+      } else if (1 === tmp8) {
+        c4 = 0;
+        const _URL4 = URL;
+        URL.revokeObjectURL(closure_129_4);
+        throw closure_3;
+      } else if (2 === tmp8) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_129_5 = value;
+          if (null == closure_129_5) {
+            const _Error = Error;
+            const error1 = new Error("failed to convert to webp");
+            throw error1;
+          } else {
+            const _performance = performance;
+            closure_129_6 = performance.now();
+            c5 = 4;
+            c6 = 1;
+            const obj6 = { value: closure_129_2.getImageData(0, 0, closure_129_1.width, closure_129_1.height), done: false };
+            return obj6;
+          }
+        }
+      } else if (3 === tmp8) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 0;
+          const _URL3 = URL;
+          URL.revokeObjectURL(closure_129_4);
+          c6 = 3;
+          const obj7 = { value, done: true };
+          return obj7;
+        } else {
+          closure_129_1.width = closure_129_3.width;
+          closure_129_1.height = closure_129_3.height;
+          closure_129_2.drawImage(closure_129_3, 0, 0);
+          c4 = 0;
+          const _URL8 = URL;
+          URL.revokeObjectURL(closure_129_4);
+          const promise3 = new Promise((arg0) => {
+            closure_1_1.toBlob(arg0, "image/webp", 1);
+          });
+          c5 = 2;
+          c6 = 1;
+          const obj8 = { value: promise3, done: false };
+          return obj8;
+        }
+      } else if (4 === tmp8) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj9 = { value, done: true };
+          return obj9;
+        } else {
+          closure_129_7 = value;
+          closure_129_2.clearRect(0, 0, closure_129_1.width, closure_129_1.height);
+          const image1 = new globalThis.Image();
+          closure_129_8 = image1;
+          const _URL7 = URL;
+          closure_129_9 = URL.createObjectURL(closure_129_5);
+          c4 = 2;
+          const promise4 = new Promise((arg0, arg1) => {
+            closure_0 = arg0;
+            closure_1 = arg1;
+            closure_1_8.onload = () => closure_0();
+            closure_1_8.onerror = () => {
+              const error = new Error("failed to load image");
+              return closure_1(error);
+            };
+            closure_1_8.src = src2;
+          });
+          c5 = 7;
+          c6 = 1;
+          const obj10 = { value: promise4, done: false };
+          return obj10;
+        }
+      } else if (5 === tmp8) {
+        c4 = 0;
+        const _URL2 = URL;
+        URL.revokeObjectURL(closure_129_9);
+        throw closure_3;
+      } else if (6 === tmp8) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj11 = { value, done: true };
+          return obj11;
+        } else {
+          closure_129_10 = value;
+          closure_129_11 = closure_130_8(closure_129_7);
+          closure_129_12 = closure_130_8(closure_129_10);
+          closure_129_13 = closure_129_11 === closure_129_12;
+          const _performance2 = performance;
+          closure_129_14 = performance.now() - closure_129_6;
+          const name = closure_129_0.name;
+          const _Math = Math;
+          ({ width, height } = closure_129_8);
+          const _HermesInternal = HermesInternal;
+          closure_130_4.verbose("[WebP] Pixel hash results: fileName=" + name + " fileLength={" + closure_129_0.size + "} width=" + width + " height=" + height + " pixelHash=" + closure_129_11 + " mezzanineFileLength={" + closure_129_5.size + "} mezzaninePixelHash=" + closure_129_12 + " match=" + closure_129_13 + " elapsed_ms=" + Math.round(closure_129_14));
+          if (closure_129_13) {
+            const obj12 = { success: true, webpBlob: closure_129_5, pixelHashTimeMs: closure_129_14 };
+          } else {
+            const obj13 = { success: false, reason: closure_130_5.PIXEL_HASH_MISMATCH, pixelHashTimeMs: closure_129_14 };
+          }
+          c6 = 3;
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        const _URL = URL;
+        URL.revokeObjectURL(closure_129_9);
+        c6 = 3;
+        const obj14 = { value, done: true };
+        return obj14;
+      } else {
+        closure_129_2.drawImage(closure_129_8, 0, 0);
+        c4 = 0;
+        const _URL6 = URL;
+        URL.revokeObjectURL(closure_129_9);
+        c5 = 6;
+        c6 = 1;
+        const obj = { value: closure_129_2.getImageData(0, 0, closure_129_1.width, closure_129_1.height), done: false };
+        return obj;
       }
-    })();
-  });
-  return obj(...arguments);
+    } catch (tmp54) {
+      closure_3 = tmp54;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp54;
+      } else if (tmp === tmp56) {
+        c5 = tmp;
+      } else {
+        c5 = tmp5;
+      }
+    }
+  }
+};
+let closure_10 = async function _maybeConvertToWebP(arg0) {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === c6) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_3 = tmp3;
+          closure_2 = tmp5;
+          closure_130_0 = originalFile;
+          closure_130_1 = undefined;
+          closure_130_2 = undefined;
+          closure_130_4 = undefined;
+          closure_130_5 = undefined;
+          let webpBlob;
+          closure_130_7 = undefined;
+          closure_130_8 = undefined;
+          closure_130_3 = function createFailedResult(reason) {
+            let size = arg1;
+            if (arg1 === undefined) {
+              size = originalFile.size;
+            }
+            const obj = { success: false, originalFile, sizeBefore: originalFile.size, sizeAfter: size, compressionRatio: null, reason: null, compressTimeMs: null };
+            let num = 1;
+            if (originalFile.size > 0) {
+              num = size / originalFile.size;
+            }
+            obj.compressionRatio = num;
+            obj.reason = reason;
+            obj.compressTimeMs = Math.round(performance.now() - closure_1_2);
+            return obj;
+          };
+          if (null == originalFile) {
+            const _Error = Error;
+            const error = new Error("file is null or undefined");
+            throw error;
+          } else {
+            const _HermesInternal4 = HermesInternal;
+            React4.verbose("[WebP] Starting conversion for: " + originalFile.name);
+            const _performance = performance;
+            closure_130_2 = performance.now();
+            c5 = 1;
+            c6 = 2;
+            c7 = 1;
+            const obj4 = { value: _shouldConvertToWebP(originalFile), done: false };
+            return obj4;
+          }
+        }
+      } else if (1 === tmp8) {
+        c5 = 0;
+        closure_130_9 = closure_4;
+        const _HermesInternal3 = HermesInternal;
+        closure_131_4.error("[WebP] Conversion failed for " + closure_130_0.name + ":", closure_130_9);
+        c7 = 3;
+        const obj5 = { value: closure_130_3(closure_131_5.CONVERSION_FAILED), done: true };
+        return obj5;
+      } else if (2 === tmp8) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          c7 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          closure_130_4 = value;
+          if (null != closure_130_4) {
+            const _HermesInternal2 = HermesInternal;
+            closure_131_4.verbose("[WebP] Conversion rejected: " + closure_130_4);
+            c5 = 0;
+            c7 = 3;
+            const obj7 = { value: closure_130_3(closure_130_4), done: true };
+            return obj7;
+          } else {
+            c6 = 3;
+            c7 = 1;
+            const obj8 = {
+              value: (function performWebPConversion() {
+                          const self = this;
+                          const apply = closure_1_9.apply;
+                          if (typeof apply === "unknown") {
+                            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                          } else {
+                            applyArgumentsResult = apply(self, arguments);
+                          }
+                          return applyArgumentsResult;
+                        })(closure_130_0),
+              done: false
+            };
+            return obj8;
+          }
+        }
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 0;
+        c7 = 3;
+        const obj9 = { value, done: true };
+        return obj9;
+      } else {
+        closure_130_5 = value;
+        if (closure_130_5.success) {
+          if (null != closure_130_5.webpBlob) {
+            webpBlob = closure_130_5.webpBlob;
+            let num2 = 1;
+            if (closure_130_0.size > 0) {
+              num2 = webpBlob.size / closure_130_0.size;
+            }
+            closure_130_7 = num2;
+            closure_130_8 = 1 - closure_130_7;
+            if (closure_130_8 < 0) {
+              const _Math = Math;
+              const _HermesInternal = HermesInternal;
+              closure_131_4.verbose("[WebP] Insufficient savings: " + Math.round(100 * closure_130_8) + "% < 0% (" + closure_130_0.size + " -> " + webpBlob.size + " bytes)");
+              closure_130_3(closure_131_5.INSUFFICIENT_SAVINGS, webpBlob.size);
+            } else {
+              const _performance2 = performance;
+              closure_130_1 = performance.now() - closure_130_2;
+              const name = closure_130_0.name;
+              const _Math2 = Math;
+              const _HermesInternal5 = HermesInternal;
+              closure_131_4.verbose("[WebP] Conversion successful: " + name + " to WebP in " + Math.round(closure_130_1) + "ms");
+              const obj10 = { success: true, originalFile: closure_130_0, convertedBlob: webpBlob, sizeBefore: closure_130_0.size, sizeAfter: webpBlob.size, compressionRatio: closure_130_7, hashTimeMs: closure_130_5.pixelHashTimeMs, compressTimeMs: null };
+              const _Math3 = Math;
+              obj10.compressTimeMs = Math.round(closure_130_1);
+            }
+            c5 = 0;
+            c7 = 3;
+          }
+        }
+        const reason = closure_130_5.reason;
+        let UNKNOWN_ERROR = reason;
+        if (reason == null) {
+          UNKNOWN_ERROR = closure_131_5.UNKNOWN_ERROR;
+        }
+        c5 = 0;
+        c7 = 3;
+        let obj = { value: closure_130_3(UNKNOWN_ERROR), done: true };
+        return obj;
+      }
+    } catch (tmp59) {
+      closure_4 = tmp59;
+      if (tmp4 === c5) {
+        c7 = tmp2;
+        throw tmp59;
+      } else {
+        c6 = tmp;
+      }
+    }
+  }
 };
 let closure_4 = new LoggerDefault("WebP");
-obj = { ALREADY_WEBP: "already_webp", UNSUPPORTED_FORMAT: "unsupported_format", ANIMATED_IMAGE: "animated_image", HAS_TRANSPARENCY: "has_transparency", PNG8_FORMAT: "png8_format", INSUFFICIENT_SAVINGS: "insufficient_savings", CONVERSION_FAILED: "conversion_failed", CORRUPTED_FILE: "corrupted_file", PIXEL_HASH_MISMATCH: "pixel_hash_mismatch", ICC_NON_SRGB_PROFILE: "icc_non_srgb_profile", ICC_DETECTION_FAILED: "icc_detection_failed", UNKNOWN_ERROR: "unknown_error" };
-new LoggerDefault("WebP");
-let size = size_mod;
+const ConversionFailureReason = { ALREADY_WEBP: "already_webp", UNSUPPORTED_FORMAT: "unsupported_format", ANIMATED_IMAGE: "animated_image", HAS_TRANSPARENCY: "has_transparency", PNG8_FORMAT: "png8_format", INSUFFICIENT_SAVINGS: "insufficient_savings", CONVERSION_FAILED: "conversion_failed", CORRUPTED_FILE: "corrupted_file", PIXEL_HASH_MISMATCH: "pixel_hash_mismatch", ICC_NON_SRGB_PROFILE: "icc_non_srgb_profile", ICC_DETECTION_FAILED: "icc_detection_failed", UNKNOWN_ERROR: "unknown_error" };
+let size = fn(2);
 const result = size.fileFinishedImporting("lib/uploader/webpConversion.tsx");
 
-export const ConversionFailureReason = obj;
+export { ConversionFailureReason };
 export { _shouldConvertToWebP };
 export const maybeConvertToWebP = function maybeConvertToWebP() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_10.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

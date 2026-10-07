@@ -2,297 +2,209 @@
 
 // Module 17640 (NotificationPermissionManager)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import asyncRequire from "asyncRequire" /* 1987 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import _modDef4467 from "module_4467" /* 4467 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import NativePermissionConstants from "NativePermissionConstants" /* 5105 */;
-import react_nativeDefault from "react-native" /* 7295 */;
-import PushNotificationPermissionStore2 from "PushNotificationPermissionStore" /* 12067 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7295 */;
 import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12070 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4517 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
-import NotificationPermissionConstants from "NotificationPermissionConstants" /* 12068 */;
-import Constants from "Constants" /* 1085 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12067 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
-import size from "module_2" /* 2 */;
 
-const PushNotificationPermissionStore = PushNotificationPermissionStore2;
-let closure_3;
-
-let c10;
-let closure_12;
-let closure_14;
-let map1;
-let unpackModuleId;
+require = fn;
 function haveNotSeenPromptSince(arg0, arg1) {
   const tmp = PushNotificationPermissionStore.getState().promptLastSeen[arg0];
   let tmp2 = null == tmp;
   if (!tmp2) {
     let tmp4;
     if (items.includes(arg0)) {
-      obj = _modDef4467();
-      tmp4 = obj.diff(tmp, "days") >= 1;
+      tmp4 = _modDef4467().diff(tmp, "days") >= 1;
+      const obj = _modDef4467();
     }
     tmp2 = tmp4;
   }
   return tmp2;
 }
 function shouldShowPrompt() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_19.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-let obj = function _shouldShowPrompt() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let obj3;
-    let closure_0 = arg0;
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        let closure_1;
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            let closure_2 = tmp;
-            closure_1 = undefined;
-            c3 = 1;
-            c4 = 1;
-            const obj5 = { value: obj3.getNotificationAuthorizationStatus(), done: false };
-            obj3 = react_nativeDefault;
-            return obj5;
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
-        } else {
-          closure_1 = value;
-          const tmp10 = (closure_1 === closure_130_15.UNDETERMINED || closure_1 === closure_130_15.PROVISIONAL) && closure_130_17(closure_0, 1);
-          c4 = 3;
-          obj = { value: tmp10, done: true };
-          return obj;
-        }
-      } catch (tmp22) {
-        c4 = 3;
-        throw tmp22;
-      }
-    }
-  });
-  return obj(...arguments);
+let closure_19 = async function _shouldShowPrompt() {
+  closure_2 = tmp2;
+  closure_1 = tmp3;
+  closure_129_0 = closure_0;
+  await NativePermissionManagerModuleDefault.getNotificationAuthorizationStatus();
+  closure_129_1 = value;
+  let tmp11 = closure_129_1 === closure_130_15.UNDETERMINED;
+  if (!tmp11) {
+    tmp11 = closure_129_1 === closure_130_15.PROVISIONAL;
+  }
+  if (tmp11) {
+    tmp11 = closure_130_17(closure_129_0, 1);
+  }
+  return tmp11;
 };
 function shouldShowReactivationPrompt() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_21.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-obj = function _shouldShowReactivationPrompt() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let obj3;
-    let closure_0 = arg0;
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            let closure_2 = tmp;
-            let closure_1 = tmp2;
-            c3 = 1;
-            c4 = 1;
-            const obj5 = { value: obj3.getNotificationAuthorizationStatus(), done: false };
-            obj3 = react_nativeDefault;
-            return obj5;
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
-        } else {
-          const tmp8 = value === closure_130_15.DENIED && closure_130_17(closure_0, 1);
-          c4 = 3;
-          obj = { value: tmp8, done: true };
-          return obj;
-        }
-      } catch (tmp16) {
-        c4 = 3;
-        throw tmp16;
-      }
-    }
-  });
-  return obj(...arguments);
+let closure_21 = async function _shouldShowReactivationPrompt() {
+  closure_2 = tmp2;
+  closure_1 = tmp3;
+  closure_129_0 = closure_0;
+  await NativePermissionManagerModuleDefault.getNotificationAuthorizationStatus();
+  let tmp9 = value === closure_130_15.DENIED;
+  if (tmp9) {
+    tmp9 = closure_130_17(closure_129_0, 1);
+  }
+  return tmp9;
 };
 function showPrompt(arg0, arg1, arg2) {
-  let closure_22;
-  let timeout;
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   if (null != timeout) {
     const _clearTimeout = clearTimeout;
     clearTimeout(timeout);
   }
   timeout = setTimeout(() => {
-    obj = PushNotificationActionCreators;
-    const result = obj.setPushPermissionReactivationSeen(closure_0);
-    const openLazy = ActionSheetActionCreatorsDefault.openLazy;
-    const obj2 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT, impressionProperties: { action_location: location }, location };
-    ActionSheetActionCreatorsDefault;
-    const tmp3 = asyncRequire(17641, dependencyMap.paths);
-    openLazy(tmp3, authStore, obj2);
+    const result = PushNotificationActionCreators.setPushPermissionReactivationSeen(closure_0);
+    const obj3 = { impressionName: null, impressionProperties: null, location: null };
+    const obj2 = ActionSheetActionCreatorsDefault;
+    obj3.impressionName = discord_common_AnalyticsUtils.ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
+    obj3.impressionProperties = { action_location: location };
+    obj3.location = location;
+    obj2.openLazy(asyncRequireImpl(17641, dependencyMap.paths), v65535, obj3);
   }, arg2);
 }
 function _logNotificationPermissionStatus() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_25.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-obj = function _logNotificationPermissionStatus2() {
-  obj = _asyncToGenerator(async () => {
-    let closure_1;
-    let obj2;
-    let tmp6;
-    if (c3 === 2) {
-      c3 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_25 = async function _logNotificationPermissionStatus2() {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
-      try {
-        let closure_0;
-        let tmp4;
-        c3 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_0 = undefined;
-            tmp4 = undefined;
-            c2 = 1;
-            c3 = 1;
-            const obj5 = { value: obj2.getNotificationAuthorizationStatus(), done: false };
-            obj2 = react_nativeDefault;
-            return obj5;
-          }
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          closure_0 = value;
-          const obj6 = closure_129_0(closure_129_2[16]);
-          tmp4 = obj6.allowInAppNotifications();
-          const obj7 = { os_enabled: closure_0 === closure_129_15.AUTHORIZED, foreground_app_enabled: tmp4, background_app_enabled: tmp4, notification_authorization_status: tmp6 };
-          const track = closure_129_1(closure_129_2[17]).track;
-          const NOTIFICATION_PERMISSION_STATUS = closure_129_14.NOTIFICATION_PERMISSION_STATUS;
-          const tmp20 = closure_129_1(closure_129_2[17]);
-          tmp6 = null;
-          const obj8 = closure_129_0(closure_129_2[18]);
-          if (obj8.isIOS()) {
-            tmp6 = closure_0;
-          }
-          track(NOTIFICATION_PERMISSION_STATUS, obj7);
-          c3 = 3;
-          return { value: "IconComponent", done: null };
+          closure_1 = tmp5;
+          closure_0 = tmp2;
+          closure_128_0 = undefined;
+          closure_128_1 = undefined;
+          c2 = 1;
+          c3 = 1;
+          const obj5 = { value: NativePermissionManagerModuleDefault.getNotificationAuthorizationStatus(), done: false };
+          return obj5;
         }
-      } catch (tmp10) {
+      } else if (arg0 === 1) {
         c3 = 3;
-        throw tmp10;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } else {
+        closure_128_0 = value;
+        closure_128_1 = closure_129_0(closure_129_2[16]).allowInAppNotifications();
+        const obj6 = closure_129_0(closure_129_2[16]);
+        const obj8 = { os_enabled: closure_128_0 === closure_129_15.AUTHORIZED, foreground_app_enabled: closure_128_1, background_app_enabled: closure_128_1, notification_authorization_status: null };
+        const obj7 = closure_129_1(closure_129_2[17]);
+        let tmp7 = null;
+        if (obj9.isIOS()) {
+          tmp7 = closure_128_0;
+        }
+        obj8.notification_authorization_status = tmp7;
+        obj7.track(closure_129_14.NOTIFICATION_PERMISSION_STATUS, obj8);
+        c3 = 3;
+        return { value: "IconComponent", done: null };
       }
+    } catch (tmp11) {
+      c3 = tmp;
+      throw tmp11;
     }
-  });
-  return obj(...arguments);
+  }
 };
-const PermissionPromptType = PushNotificationPermissionStore2.PermissionPromptType;
-({ NOTIFICATION_REACTIVATION_ACTIONSHEET_KEY: c10, EventActionLocation: unpackModuleId } = NotificationPermissionConstants);
+const PermissionPromptType = fn(12067).PermissionPromptType;
+const NotificationPermissionConstants = fn(12068);
+({ NOTIFICATION_REACTIVATION_ACTIONSHEET_KEY: c10, EventActionLocation: closure_11 } = NotificationPermissionConstants);
+const Constants = fn(1085);
 ({ RelationshipTypes: closure_12, GuildFeatures: map1, AnalyticEvents: closure_14 } = Constants);
-let closure_15 = NativePermissionConstants.NotificationAuthorizationStatus;
+let closure_15 = fn(5105).NotificationAuthorizationStatus;
 const items = [, ];
 ({ FRIEND_REQUEST_SENT: arr[0], INVITE_ACCEPTED: arr[1] } = PermissionPromptType);
 let c22 = null;
-class NotificationPermissionManager extends AutomaticLifecycleManager {
+class NotificationPermissionManager extends tmp4 {
   constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    require = applyArgumentsResult;
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    closure_0 = applyArgumentsResult;
     applyArgumentsResult.previousAppState = null;
     applyArgumentsResult.actions = {
       MESSAGE_CREATE(message) {
-        require.handleMessageCreate(message);
-        const result = require.handleMessageCreateForNudge(message);
-      },
+            applyArgumentsResult.handleMessageCreate(message);
+            const result = applyArgumentsResult.handleMessageCreateForNudge(message);
+          },
       MESSAGE_REACTION_ADD(optimistic) {
-        const result = require.handleReactionAddForNudge(optimistic);
-      },
+            const result = applyArgumentsResult.handleReactionAddForNudge(optimistic);
+          },
       INVITE_ACCEPT_SUCCESS(arg0) {
-        require.handleInviteAccept(arg0);
-      },
+            applyArgumentsResult.handleInviteAccept(arg0);
+          },
       RELATIONSHIP_ADD(arg0) {
-        const result = require.handleSendFriendRequest(arg0);
-      },
+            const result = applyArgumentsResult.handleSendFriendRequest(arg0);
+          },
       POST_CONNECTION_OPEN() {
-        require.handleConnectionOpen();
-      },
+            applyArgumentsResult.handleConnectionOpen();
+          },
       APP_STATE_UPDATE(arg0) {
-        require.handleAppStateUpdate(arg0);
-      }
+            applyArgumentsResult.handleAppStateUpdate(arg0);
+          }
     };
-    applyArgumentsResult.handleConnectionOpen = _asyncToGenerator(async () => {
+    closure_129_0 = applyArgumentsResult;
+    applyArgumentsResult.handleConnectionOpen = closure_3(async () => {
       if (c2 === 2) {
         c2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp2 === 3) {
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -313,13 +225,13 @@ class NotificationPermissionManager extends AutomaticLifecycleManager {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              let closure_0 = tmp3;
+              closure_0 = tmp4;
               c1 = 1;
               c2 = 1;
-              const obj4 = { value: closure_1_24(), done: false };
+              const obj4 = { value: _logNotificationPermissionStatus(), done: false };
               return obj4;
             }
-          } else if (1 === c1) {
+          } else if (1 === tmp4) {
             if (arg0 === 1) {
               c2 = 3;
               throw value;
@@ -338,130 +250,133 @@ class NotificationPermissionManager extends AutomaticLifecycleManager {
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             c2 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp7) {
-          c2 = 3;
-          throw tmp7;
+        } catch (tmp8) {
+          c2 = tmp;
+          throw tmp8;
         }
       }
     });
-    _asyncToGenerator(async (arg0) => {
-      let constants2;
-      let author = arg0;
-      let c3 = 0;
-      let c4 = 0;
-      const iter = (async (arg0) => {
-        let c0;
-        let c1;
-        let c2;
-        if (c4 === 2) {
-          c4 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            return { value, done: true };
-          } else {
-            return { value: "IconComponent", done: null };
-          }
+    closure_130_0 = closure_3(async (arg0) => {
+      if (c4 === 2) {
+        c4 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
-          try {
-            c4 = 2;
-            if (0 === c3) {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              closure_2 = tmp5;
+              closure_1 = tmp2;
+              closure_129_0 = undefined;
+              closure_129_1 = undefined;
+              closure_129_2 = undefined;
+              closure_129_3 = undefined;
+              ({ message: closure_129_0, optimistic: closure_129_1, isPushNotification: closure_129_2, sendMessageOptions: closure_129_3 } = closure_0);
+              c3 = 1;
+              c4 = 1;
+              return { value: "Reflect", done: true };
+            }
+          } else {
+            if (1 === tmp5) {
               if (arg0 === 1) {
                 c4 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                return { value, done: true };
+                const obj4 = { value, done: true };
+                return obj4;
               } else {
-                closure_2 = tmp4;
-                closure_1 = tmp;
-                author = undefined;
-                c1 = undefined;
-                c2 = undefined;
-                ({ message: c0, optimistic: c1, isPushNotification: c2, sendMessageOptions: c3 } = closure_0);
-                c3 = 1;
-                c4 = 1;
-                return { value: "Reflect", done: true };
-              }
-            } else {
-              let tmp5;
-              if (1 === c3) {
-                if (arg0 === 1) {
+                let tmp7 = closure_129_1;
+                if (!closure_129_1) {
+                  tmp7 = closure_129_2;
+                }
+                if (!tmp7) {
+                  tmp7 = null != closure_129_3;
+                }
+                if (tmp7) {
                   c4 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c4 = 3;
-                  return { value, done: true };
                 } else {
-                  const tmp6 = c1 || c2 || null != c3;
-                  if (!tmp6) {
-                    id = undefined;
+                  let id;
+                  if (closure_129_0 != null) {
+                    const author = closure_129_0.author;
                     if (author != null) {
-                      author = author.author;
-                      if (author != null) {
-                        id = author.id;
-                      }
-                    }
-                    tmp5 = id === id.getId();
-                    if (tmp5) {
-                      c3 = 2;
-                      c4 = 1;
-                      const obj5 = { value: closure_1_18(constants.MESSAGE_SENT), done: false };
-                      return obj5;
+                      id = author.id;
                     }
                   }
-                  c4 = 3;
-                  return { value: "IconComponent", done: null };
+                  let tmp6 = id === id.getId();
                 }
-              } else if (arg0 === 1) {
-                c4 = 3;
-                throw value;
-              } else {
-                tmp5 = value;
-                if (arg0 === 2) {
-                  c4 = 3;
-                  return { value, done: true };
-                }
+                c3 = 2;
+                c4 = 1;
+                const obj5 = { value: shouldShowPrompt(constants.MESSAGE_SENT), done: false };
+                return obj5;
               }
-              if (tmp5) {
-                closure_1_23(constants.MESSAGE_SENT, constants2.MESSAGE_SENT, 1000);
+            } else if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else {
+              tmp6 = value;
+              if (arg0 === 2) {
+                c4 = 3;
+                const obj = { value, done: true };
+                return obj;
               }
             }
-          } catch (tmp23) {
-            c4 = 3;
-            throw tmp23;
+            if (tmp6) {
+              showPrompt(constants.MESSAGE_SENT, constants2.MESSAGE_SENT, 1000);
+            }
           }
+        } catch (tmp24) {
+          c4 = tmp;
+          throw tmp24;
         }
-      })();
-      iter.next();
-      return iter;
+      }
     });
     applyArgumentsResult.handleMessageCreate = function() {
-      return closure_0(...arguments);
+      const self = this;
+      const apply = applyArgumentsResult.apply;
+      if (typeof apply === "unknown") {
+        applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     };
-    _asyncToGenerator(async (arg0) => {
-      let constants2;
-      let constants3;
-      let invite = arg0;
-      let c4 = 0;
-      let c5 = 0;
+    closure_131_0 = closure_3(async (arg0) => {
+      const invite = arg0;
+      c4 = 0;
+      c5 = 0;
       const iter = (async (arg0) => {
         if (c5 === 2) {
           c5 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
+        } else if (tmp4 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            return { value, done: true };
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "IconComponent", done: null };
           }
@@ -474,27 +389,27 @@ class NotificationPermissionManager extends AutomaticLifecycleManager {
                 throw value;
               } else if (arg0 === 2) {
                 c5 = 3;
-                return { value, done: true };
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
-                closure_3 = tmp4;
-                closure_2 = tmp;
-                invite = undefined;
-                invite = invite.invite;
+                closure_3 = tmp5;
+                let invite2;
+                invite2 = invite.invite;
                 c4 = 1;
                 c5 = 1;
                 return { value: "Reflect", done: true };
               }
             } else {
-              let tmp5;
-              if (1 === c4) {
+              if (1 === tmp5) {
                 if (arg0 === 1) {
                   c5 = 3;
                   throw value;
                 } else if (arg0 === 2) {
                   c5 = 3;
-                  return { value, done: true };
+                  const obj5 = { value, done: true };
+                  return obj5;
                 } else {
-                  const guild = invite.guild;
+                  guild = invite2.guild;
                   let features;
                   if (guild != null) {
                     features = guild.features;
@@ -503,28 +418,27 @@ class NotificationPermissionManager extends AutomaticLifecycleManager {
                   if (features == null) {
                     closure_1 = [];
                   }
-                  if (!closure_1.includes(constants3.COMMUNITY)) {
-                    const obj4 = closure_1(closure_2[20]);
-                    if (obj4.getConfig({ location: "NotificationPermissionManager" }).inHoldout) {
-                      c4 = 2;
-                      c5 = 1;
-                      const obj6 = { value: closure_1_18(constants.INVITE_ACCEPTED), done: false };
-                      return obj6;
-                    }
+                  if (closure_1.includes(constants3.COMMUNITY)) {
+                    c5 = 3;
+                  } else {
+                    closure_1(tmp2[20]);
                   }
-                  c5 = 3;
-                  return { value: "IconComponent", done: null };
+                  c4 = 2;
+                  c5 = 1;
+                  const obj6 = { value: closure_1_18(constants.INVITE_ACCEPTED), done: false };
+                  return obj6;
                 }
-              } else if (2 === c4) {
+              } else if (2 === tmp5) {
                 if (arg0 === 1) {
                   c5 = 3;
                   throw value;
                 } else if (arg0 === 2) {
                   c5 = 3;
-                  return { value, done: true };
+                  const obj7 = { value, done: true };
+                  return obj7;
                 } else {
-                  tmp5 = value;
-                  if (!tmp5) {
+                  let tmp6 = value;
+                  if (!value) {
                     c4 = 3;
                     c5 = 1;
                     const obj8 = { value: closure_1_20(constants.INVITE_ACCEPTED), done: false };
@@ -535,19 +449,20 @@ class NotificationPermissionManager extends AutomaticLifecycleManager {
                 c5 = 3;
                 throw value;
               } else {
-                tmp5 = value;
+                tmp6 = value;
                 if (arg0 === 2) {
                   c5 = 3;
-                  return { value, done: true };
+                  const obj = { value, done: true };
+                  return obj;
                 }
               }
-              if (tmp5) {
+              if (tmp6) {
                 closure_1_23(constants.INVITE_ACCEPTED, constants2.INVITE_ACCEPTED, 1000);
               }
             }
-          } catch (tmp25) {
-            c5 = 3;
-            throw tmp25;
+          } catch (tmp26) {
+            c5 = tmp;
+            throw tmp26;
           }
         }
       })();
@@ -555,19 +470,21 @@ class NotificationPermissionManager extends AutomaticLifecycleManager {
       return iter;
     });
     applyArgumentsResult.handleInviteAccept = function() {
-      return closure_0(...arguments);
+      const self = this;
+      const apply = applyArgumentsResult.apply;
+      if (typeof apply === "unknown") {
+        applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     };
-    _asyncToGenerator(async (arg0) => {
-      let closure_1;
-      let closure_2;
-      let constants2;
-      let constants3;
-      let relationship = arg0;
-      let c3 = 0;
-      let c4 = 0;
+    closure_132_0 = closure_3(async (arg0) => {
+      const relationship = arg0;
+      c3 = 0;
+      c4 = 0;
       const iter = (async (arg0) => {
-        let tmp5;
-        if (1 === c3) {
+        if (1 === tmp5) {
           if (arg0 === 1) {
             c4 = 3;
             throw value;
@@ -575,15 +492,14 @@ class NotificationPermissionManager extends AutomaticLifecycleManager {
             c4 = 3;
             return { value, done: true };
           } else {
-            tmp5 = relationship.type === constants3.PENDING_OUTGOING;
-            if (tmp5) {
+            let tmp6 = relationship2.type === constants3.PENDING_OUTGOING;
+            if (tmp6) {
               c3 = 2;
               c4 = 1;
-              const obj5 = { value: closure_1_18(constants.FRIEND_REQUEST_SENT), done: false };
-              return obj5;
+              return { value: closure_1_18(constants.FRIEND_REQUEST_SENT), done: false };
             }
           }
-        } else if (2 === c3) {
+        } else if (2 === tmp5) {
           if (arg0 === 1) {
             c4 = 3;
             throw value;
@@ -591,43 +507,51 @@ class NotificationPermissionManager extends AutomaticLifecycleManager {
             c4 = 3;
             return { value, done: true };
           } else {
-            tmp5 = value;
-            if (!tmp5) {
+            tmp6 = value;
+            if (!value) {
               c3 = 3;
               c4 = 1;
-              const obj7 = { value: closure_1_20(constants.FRIEND_REQUEST_SENT), done: false };
-              return obj7;
+              return { value: closure_1_20(constants.FRIEND_REQUEST_SENT), done: false };
             }
           }
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else {
-          tmp5 = value;
+          tmp6 = value;
           if (arg0 === 2) {
             c4 = 3;
             return { value, done: true };
           }
         }
-        if (tmp5) {
+        if (tmp6) {
           closure_1_23(constants.FRIEND_REQUEST_SENT, constants2.FRIEND_REQUEST_SENT, 100);
         }
         await "IconComponent";
-        relationship = relationship.relationship;
+        closure_1 = tmp2;
+        relationship2 = relationship.relationship;
         return "Reflect";
       })();
       iter.next();
       return iter;
     });
     applyArgumentsResult.handleSendFriendRequest = function() {
-      return closure_0(...arguments);
+      const self = this;
+      const apply = applyArgumentsResult.apply;
+      if (typeof apply === "unknown") {
+        applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     };
-    let closure_0 = _asyncToGenerator(async (arg0) => {
-      closure_0 = arg0;
+    closure_133_0 = undefined;
+    closure_133_1 = applyArgumentsResult;
+    closure_133_0 = closure_3(async (arg0) => {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -638,9 +562,6 @@ class NotificationPermissionManager extends AutomaticLifecycleManager {
         }
       } else {
         try {
-          let state;
-          let closure_1;
-          let closure_2;
           c4 = 2;
           if (0 === c3) {
             if (arg0 === 1) {
@@ -651,15 +572,18 @@ class NotificationPermissionManager extends AutomaticLifecycleManager {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              state = closure_0.state;
-              closure_1 = undefined;
-              closure_2 = undefined;
+              dependencyMap = tmp5;
+              closure_1 = tmp2;
+              state = undefined;
+              state = applyArgumentsResult.state;
+              closure_129_1 = undefined;
+              closure_129_2 = undefined;
               c3 = 1;
               c4 = 1;
               return { value: "Reflect", done: true };
             }
           } else {
-            if (1 === c3) {
+            if (1 === tmp5) {
               if (arg0 === 1) {
                 c4 = 3;
                 throw value;
@@ -668,10 +592,13 @@ class NotificationPermissionManager extends AutomaticLifecycleManager {
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                closure_1 = closure_130_1.previousAppState === closure_0(closure_2[21]).AppStates.BACKGROUND;
-                closure_2 = state === closure_0(closure_2[21]).AppStates.ACTIVE;
-                const tmp6 = closure_1 && closure_2;
-                if (tmp6) {
+                closure_129_1 = closure_130_1.previousAppState === applyArgumentsResult(1105).AppStates.BACKGROUND;
+                closure_129_2 = state === applyArgumentsResult(1105).AppStates.ACTIVE;
+                let tmp7 = closure_129_1;
+                if (closure_129_1) {
+                  tmp7 = closure_129_2;
+                }
+                if (tmp7) {
                   c3 = 2;
                   c4 = 1;
                   const obj5 = { value: closure_130_1._handleNotificationAuthorizationStatusUpdate(), done: false };
@@ -679,7 +606,7 @@ class NotificationPermissionManager extends AutomaticLifecycleManager {
                 }
               }
             } else {
-              if (2 === c3) {
+              if (2 === tmp5) {
                 if (arg0 === 1) {
                   c4 = 3;
                   throw value;
@@ -693,36 +620,41 @@ class NotificationPermissionManager extends AutomaticLifecycleManager {
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               }
               closure_130_1.previousAppState = state;
               c4 = 3;
               return { value: "IconComponent", done: null };
             }
-            if (state === closure_0(closure_2[21]).AppStates.ACTIVE) {
+            if (state === applyArgumentsResult(1105).AppStates.ACTIVE) {
               c3 = 3;
               c4 = 1;
-              const obj7 = { value: closure_1_24(), done: false };
+              const obj7 = { value: _logNotificationPermissionStatus(), done: false };
               return obj7;
             }
           }
-        } catch (tmp21) {
-          c4 = 3;
-          throw tmp21;
+        } catch (tmp22) {
+          c4 = tmp;
+          throw tmp22;
         }
       }
     });
     applyArgumentsResult.handleAppStateUpdate = function() {
-      return closure_0(...arguments);
+      const self = this;
+      const apply = applyArgumentsResult.apply;
+      if (typeof apply === "unknown") {
+        applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     };
-    applyArgumentsResult._handleNotificationAuthorizationStatusUpdate = _asyncToGenerator(async () => {
-      let closure_0;
-      let closure_1;
+    applyArgumentsResult._handleNotificationAuthorizationStatusUpdate = closure_3(async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -733,9 +665,8 @@ class NotificationPermissionManager extends AutomaticLifecycleManager {
         }
       } else {
         try {
-          let tmp;
           c3 = 2;
-          if (0 === c2) {
+          if (0 === dependencyMap) {
             if (arg0 === 1) {
               c3 = 3;
               throw value;
@@ -744,11 +675,10 @@ class NotificationPermissionManager extends AutomaticLifecycleManager {
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              tmp = undefined;
-              const obj3 = tmp4(c2[14]);
-              c2 = 1;
+              closure_128_0 = undefined;
+              dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: obj3.getNotificationAuthorizationStatus(), done: false };
+              const obj5 = { value: tmp5(7295).getNotificationAuthorizationStatus(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -759,75 +689,71 @@ class NotificationPermissionManager extends AutomaticLifecycleManager {
             const obj6 = { value, done: true };
             return obj6;
           } else {
-            tmp = value;
-            obj = tmp(c2[15]);
-            const result = obj.updateNotificationAuthorizationStatus(tmp);
+            closure_128_0 = value;
+            const result = tmp2(12070).updateNotificationAuthorizationStatus(closure_128_0);
             c3 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp13) {
-          c3 = 3;
-          throw tmp13;
+        } catch (tmp14) {
+          c3 = tmp;
+          throw tmp14;
         }
       }
     });
     return applyArgumentsResult;
   }
-  handleMessageCreateForNudge(message) {
-    message = message.message;
-    if (!message.optimistic) {
-      if (!message.isPushNotification) {
-        if (null == tmp2) {
-          let id;
-          if (message != null) {
-            const author = message.author;
-            if (author != null) {
-              id = author.id;
-            }
-          }
-          if (id === AuthenticationStore.getId()) {
-            const channel = ChannelStore.getChannel(tmp);
-            if (null != channel) {
-              let isMutedResult;
-              const guildId = channel.getGuildId();
-              if (channel.isThread()) {
-                isMutedResult = JoinedThreadsStore.isMuted(channel.id);
-              } else {
-                isMutedResult = UserGuildSettingsStore.isChannelMuted(guildId, channel.id);
-              }
-              if (!isMutedResult) {
-                obj = PushNotificationActionCreators;
-                const result = obj.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.CHANNEL_BANNER);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  handleReactionAddForNudge(optimistic) {
-    if (!optimistic.optimistic) {
-      if (tmp2 === AuthenticationStore.getId()) {
-        const channel = ChannelStore.getChannel(tmp);
-        if (null != channel) {
-          let isMutedResult;
-          const guildId = channel.getGuildId();
-          if (channel.isThread()) {
-            isMutedResult = JoinedThreadsStore.isMuted(channel.id);
-          } else {
-            isMutedResult = UserGuildSettingsStore.isChannelMuted(guildId, channel.id);
-          }
-          if (!isMutedResult) {
-            obj = PushNotificationActionCreators;
-            const result = obj.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.POST_REACTION_BANNER);
-          }
-        }
-      }
-    }
-  }
 }
 const prototype = NotificationPermissionManager.prototype;
+prototype["handleMessageCreateForNudge"] = function handleMessageCreateForNudge(message) {
+  message = message.message;
+  if (!message.optimistic) {
+    if (!message.isPushNotification) {
+      if (null == tmp2) {
+        let id;
+        if (message != null) {
+          const author = message.author;
+          if (author != null) {
+            id = author.id;
+          }
+        }
+        if (id === AuthenticationStore.getId()) {
+          const channel = ChannelStore.getChannel(tmp);
+          if (null != channel) {
+            const guildId = channel.getGuildId();
+            if (channel.isThread()) {
+              let isMutedResult = JoinedThreadsStore.isMuted(channel.id);
+            } else {
+              isMutedResult = UserGuildSettingsStore.isChannelMuted(guildId, channel.id);
+            }
+            if (!isMutedResult) {
+              const result = PushNotificationActionCreators.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.CHANNEL_BANNER);
+            }
+          }
+        }
+      }
+    }
+  }
+};
+prototype["handleReactionAddForNudge"] = function handleReactionAddForNudge(optimistic) {
+  if (!optimistic.optimistic) {
+    if (tmp2 === AuthenticationStore.getId()) {
+      const channel = ChannelStore.getChannel(tmp);
+      if (null != channel) {
+        const guildId = channel.getGuildId();
+        if (channel.isThread()) {
+          let isMutedResult = JoinedThreadsStore.isMuted(channel.id);
+        } else {
+          isMutedResult = UserGuildSettingsStore.isChannelMuted(guildId, channel.id);
+        }
+        if (!isMutedResult) {
+          const result = PushNotificationActionCreators.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.POST_REACTION_BANNER);
+        }
+      }
+    }
+  }
+};
 const notificationPermissionManager = new NotificationPermissionManager();
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/NotificationPermissionManager.tsx");
 
 export default notificationPermissionManager;

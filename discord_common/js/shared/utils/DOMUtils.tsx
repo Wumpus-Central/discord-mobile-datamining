@@ -69,28 +69,18 @@ export const removeNode = function removeNode(parentNode) {
 };
 export const eventOwnerDocument = function eventOwnerDocument(target) {
   target = target.target;
-  let tmp = null;
-  if (null != target) {
-    let ownerDocument;
-    if ("ownerDocument" in target) {
-      ownerDocument = target.ownerDocument;
-    } else {
-      ownerDocument = null;
-      if ("document" in target) {
-        ownerDocument = target.document;
-      }
+  if (null == target) {
+    return null;
+  } else if ("ownerDocument" in target) {
+    let ownerDocument = target.ownerDocument;
+  } else {
+    ownerDocument = null;
+    if ("document" in target) {
+      ownerDocument = target.document;
     }
-    tmp = ownerDocument;
   }
-  return tmp;
 };
 export const clickedOnVisibleImage = function clickedOnVisibleImage(arg0, arg1, arg2, arg3) {
-  let height;
-  let height2;
-  let left;
-  let top;
-  let width;
-  let width2;
   ({ width, height } = arg2);
   ({ width: width2, height: height2 } = arg3);
   ({ top, left } = arg3);
@@ -99,7 +89,14 @@ export const clickedOnVisibleImage = function clickedOnVisibleImage(arg0, arg1, 
   const result1 = height * bound;
   const sum = (height2 - result1) / 2 + left;
   const sum1 = (width2 - result) / 2 + top;
-  return arg1 >= sum && arg1 <= sum + result1 && arg0 >= sum1 && arg0 <= sum1 + result;
+  let tmp6 = arg1 >= sum && arg1 <= sum + result1;
+  if (tmp6) {
+    tmp6 = arg0 >= sum1;
+  }
+  if (tmp6) {
+    tmp6 = arg0 <= sum1 + result;
+  }
+  return tmp6;
 };
 export const getParentElementByClassName = function getParentElementByClassName(parentElement, arg1) {
   parentElement = parentElement.parentElement;

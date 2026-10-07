@@ -2,17 +2,15 @@
 
 // Module 4561 (SystemDateFormatter)
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import react_nativeDefault from "react-native" /* 4562 */;
+import NativeDateFormatUtilsModuleDefault from "NativeDateFormatUtilsModule" /* 4562 */;
 import size from "module_2" /* 2 */;
 
-let __DiscordCreateDateFormatter;
 if (null != global.__DiscordCreateDateFormatter) {
-  __DiscordCreateDateFormatter = global.__DiscordCreateDateFormatter;
+  let __DiscordCreateDateFormatter = global.__DiscordCreateDateFormatter;
 } else {
-  let DateFormatUtils;
   const _module = PlatformUtils;
   if (_module.isAndroid()) {
-    DateFormatUtils = react_nativeDefault;
+    let DateFormatUtils = NativeDateFormatUtilsModuleDefault;
   } else {
     DateFormatUtils = tmp2.DateFormatUtils;
   }
@@ -33,6 +31,5 @@ const result = size.fileFinishedImporting("modules/system_date_format/SystemDate
 
 export const makeFormatter = __DiscordCreateDateFormatter;
 export const supportsSystemDateFormatter = function supportsSystemDateFormatter() {
-  const obj = PlatformUtils;
-  return obj.isIOS();
+  return PlatformUtils.isIOS();
 };

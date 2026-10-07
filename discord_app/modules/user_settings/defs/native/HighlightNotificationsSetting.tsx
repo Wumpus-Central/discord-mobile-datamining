@@ -1,26 +1,15 @@
 // === Module 15361: HighlightNotificationsSetting ===
 
 // Module 15361 (HighlightNotificationsSetting)
-import get_initialized from "get initialized" /* 504 */;
-import react from "react" /* 576 */;
-import Constants from "Constants" /* 1085 */;
-import intl2 from "intl" /* 1126 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const UserSettingsSections = Constants.UserSettingsSections;
+require = fn;
+const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let guildCount;
-  let tmp4;
-  let tmp5;
-  const obj = react;
-  const cResult = obj.c(2);
+  const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore];
     const fn = function s() {
@@ -33,33 +22,31 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const tmpResult = get_initialized;
-  return tmpResult.useStateFromStores(tmp4, tmp5);
+  return initialize.useStateFromStores(tmp4, tmp5);
 }) : (() => {
-  let guildCount;
   const items = [GuildStore];
-  const obj = get_initialized;
-  return obj.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
+  return initialize.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
 });
-let obj = {
+const SettingBuilders = fn(11142);
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.o8Bypv);
+    const intl = util.intl;
+    return intl.string(util.t.o8Bypv);
   },
-  parent: MobileUserSettings.NOTIFICATIONS,
+  parent: fn(7645).MobileUserSettings.NOTIFICATIONS,
   useDescription() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["Vw/Xn8"]);
+    const intl = util.intl;
+    return intl.string(util.t["Vw/Xn8"]);
   },
   usePredicate: tmp2,
   screen: {
-    route: UserSettingsSections.HIGHLIGHT_NOTIFICATIONS,
+    route: fn(1085).UserSettingsSections.HIGHLIGHT_NOTIFICATIONS,
     getComponent() {
       return require("UserSettingsHighlightNotifications").default;
     }
   }
-};
-const route = SettingBuilders.createRoute(obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/HighlightNotificationsSetting.tsx");
 
 export default route;

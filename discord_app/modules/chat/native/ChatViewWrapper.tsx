@@ -6,9 +6,8 @@ import ChatViewWrapperBaseDefault from "ChatViewWrapperBase" /* 9795 */;
 import AnimatedKeyboardExperiment from "AnimatedKeyboardExperiment" /* 9783 */;
 import size from "module_2" /* 2 */;
 
-let importDefaultResult;
 if (AnimatedKeyboardExperiment.isAnimatedAndroidKeyboard()) {
-  importDefaultResult = ChatViewWrapperAnimatedKeyboardDefault;
+  let importDefaultResult = ChatViewWrapperAnimatedKeyboardDefault;
 } else {
   importDefaultResult = ChatViewWrapperBaseDefault;
 }

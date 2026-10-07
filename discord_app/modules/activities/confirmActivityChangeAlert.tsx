@@ -1,50 +1,48 @@
 // === Module 9039: confirmActivityChangeAlert ===
 
 // Module 9039 (confirmActivityChangeAlert)
-import intl7 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import StringUtils from "StringUtils" /* 2018 */;
 import useChannelName from "useChannelName" /* 5049 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
 import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import size from "module_2" /* 2 */;
 
+require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/confirmActivityChangeAlert.tsx");
 
 export default function confirmActivityChangeModal(name, channel, onConfirm, onCancel) {
-  let format;
-  let intl;
-  let intl2;
-  let intl3;
-  let obj3;
-  let prop;
   let str = "";
   if (null != channel) {
-    const obj = useChannelName;
-    str = obj.computeChannelName(channel, UserStore, RelationshipStore);
+    str = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
   }
-  const obj2 = { title: intl.string(intl7.t.XkIWkk), cancelText: intl2.string(intl7.t["ETE/oC"]), confirmText: intl3.string(intl7.t["cY+Oob"]), onConfirm, onCancel, body: format(prop, obj3), isDismissable: false };
-  const show = AlertActionCreatorsDefault.show;
-  AlertActionCreatorsDefault;
-  intl = intl7.intl;
-  intl2 = intl7.intl;
-  intl3 = intl7.intl;
-  const intl4 = intl7.intl;
-  format = intl4.format;
+  const obj3 = { title: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, body: null, isDismissable: false };
+  const intl = util.intl;
+  obj3.title = intl.string(util.t.XkIWkk);
+  const intl2 = util.intl;
+  obj3.cancelText = intl2.string(util.t["ETE/oC"]);
+  const intl3 = util.intl;
+  obj3.confirmText = intl3.string(util.t["cY+Oob"]);
+  obj3.onConfirm = onConfirm;
+  obj3.onCancel = onCancel;
+  const intl4 = util.intl;
   name = undefined;
-  prop = intl7.t["5/Xort"];
   if (name != null) {
     name = name.name;
   }
   if (name == null) {
-    const intl5 = intl7.intl;
-    name = intl5.string(intl7.t.G99XFs);
+    const intl5 = util.intl;
+    name = intl5.string(util.t.G99XFs);
   }
-  obj3 = { currentApplicationName: name, currentApplicationChannelName: str };
-  const tmp7Result = StringUtils;
-  if (tmp7Result.isNullOrEmpty(str)) {
-    const intl6 = intl7.intl;
-    str = intl6.string(intl7.t.OGUjmt);
+  const obj4 = { currentApplicationName: name, currentApplicationChannelName: null };
+  const obj2 = AlertActionCreatorsDefault;
+  if (tmp6Result.isNullOrEmpty(str)) {
+    const intl6 = util.intl;
+    str = intl6.string(util.t.OGUjmt);
   }
-  show(obj2);
+  obj4.currentApplicationChannelName = str;
+  obj3.body = intl4.format(util.t["5/Xort"], obj4);
+  obj2.show(obj3);
+  tmp6Result = StringUtils;
 };

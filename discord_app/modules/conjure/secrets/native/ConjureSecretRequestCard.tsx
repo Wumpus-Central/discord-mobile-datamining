@@ -1,71 +1,57 @@
 // === Module 16747: ConjureSecretRequestCard ===
 
 // Module 16747 (ConjureSecretRequestCard)
-import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4860 */;
 import spring from "spring" /* 5604 */;
 import springPresets from "springPresets" /* 5605 */;
 import ConjureSecretsSheet from "ConjureSecretsSheet" /* 16748 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const ConjureSecretsSheetDefault = ConjureSecretsSheet;
-let projectId, set;
 
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-let View = react_native.View;
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { card: obj2, cardAwaiting: obj3, status: obj4 };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
-createStyles = createStyles.createStyles;
-obj3 = { borderColor: nativeDefault.colors.BACKGROUND_BRAND };
-obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-let closure_8 = createStyles(obj);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, cardAwaiting: null, status: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
+obj2.cardAwaiting = { borderColor: nativeDefault.colors.BACKGROUND_BRAND };
+let obj4 = { borderColor: nativeDefault.colors.BACKGROUND_BRAND };
+obj2.status = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+let closure_8 = createStyles.createStyles(obj2);
 let closure_9 = { code: "function ConjureSecretRequestCardTsx1(){const{enter,tokens}=this.__closure;return{opacity:enter.get(),transform:[{translateY:(enter.get()-1)*tokens.space.PX_4}]};}" };
 let closure_10 = { code: "function ConjureSecretRequestCardTsx2(){const{enter}=this.__closure;return{opacity:enter.get(),transform:[{scale:0.5+enter.get()*0.5}]};}" };
 const __initData = { code: "function ConjureSecretRequestCardTsx3(){const{enter,tokens}=this.__closure;return{opacity:enter.get(),transform:[{translateY:(enter.get()-1)*tokens.space.PX_4}]};}" };
 const __initData2 = { code: "function ConjureSecretRequestCardTsx4(){const{enter}=this.__closure;return{opacity:enter.get(),transform:[{scale:0.5+enter.get()*0.5}]};}" };
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
-  let awaiting;
-  let cardId;
-  let request;
-  let secretRequestStatusChanged;
-  let status;
-  let useReducedMotion;
-  let tmp = projectId;
-  let obj = projectId(secretRequestStatusChanged[7]);
-  const cResult = obj.c(84);
+const ReactCompilerGating = fn(558);
+const obj5 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/conjure/secrets/native/ConjureSecretRequestCard.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
+  const cResult = projectId(secretRequestStatusChanged[7]).c(84);
   projectId = projectId.projectId;
   ({ cardId, request } = projectId);
   ({ status, awaiting } = projectId);
   closure_8();
   if (cResult[0] === projectId) {
-    let tmp13;
-    let tmp12;
     if (cResult[3] !== request.fields) {
       const _Symbol = Symbol;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         class E {
-          constructor(id) {
-            const obj = { id: id.name, label: id.label, icon: projectId(secretRequestStatusChanged[10]).KeyIcon };
+          constructor(arg0) {
+            obj = { id: projectId.name, label: projectId.label, icon: projectId(closure_2[10]).KeyIcon };
             return obj;
           }
         }
         cResult[5] = E;
       } else {
         class E {
-          constructor(id) {
-            const obj = { id: id.name, label: id.label, icon: projectId(secretRequestStatusChanged[10]).KeyIcon };
+          constructor(arg0) {
+            obj = { id: projectId.name, label: projectId.label, icon: projectId(closure_2[10]).KeyIcon };
             return obj;
           }
         }
@@ -76,175 +62,138 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       cResult[4] = mapped;
     } else {
       class E {
-        constructor(id) {
-          const obj = { id: id.name, label: id.label, icon: projectId(secretRequestStatusChanged[10]).KeyIcon };
+        constructor(arg0) {
+          obj = { id: projectId.name, label: projectId.label, icon: projectId(closure_2[10]).KeyIcon };
           return obj;
         }
       }
-    }
-    const tmpResult = tmp(secretRequestStatusChanged[11]);
-    secretRequestStatusChanged = tmpResult.useSecretRequestStatusChanged(cardId, status);
-    const _Symbol2 = Symbol;
-    if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      class E {
-        constructor(id) {
-          const obj = { id: id.name, label: id.label, icon: projectId(secretRequestStatusChanged[10]).KeyIcon };
-          return obj;
-        }
-      }
-      let items = [AccessibilityStore];
-      class O {
-        constructor() {
-          return useReducedMotion.useReducedMotion;
-        }
-      }
-      cResult[6] = items;
-      cResult[7] = O;
-      tmp13 = O;
-      tmp12 = items;
-    } else {
-      class E {
-        constructor(id) {
-          const obj = { id: id.name, label: id.label, icon: projectId(secretRequestStatusChanged[10]).KeyIcon };
-          return obj;
-        }
-      }
-      tmp13 = cResult[7];
-    }
-    const tmpResult3 = tmp(secretRequestStatusChanged[12]);
-    const stateFromStores = tmpResult3.useStateFromStores(tmp12, tmp13);
-    const tmpResult4 = tmp(secretRequestStatusChanged[13]);
-    const sharedValue = tmpResult4.useSharedValue(1);
-    if (cResult[8] === secretRequestStatusChanged) {
-      class E {
-        constructor(id) {
-          const obj = { id: id.name, label: id.label, icon: projectId(secretRequestStatusChanged[10]).KeyIcon };
-          return obj;
-        }
-      }
-    }
-    class P {
-      constructor() {
-        if (secretRequestStatusChanged) {
-          if (!stateFromStores) {
-            const result = sharedValue.set(0);
-            set = sharedValue.set;
-            const obj = spring;
-            const result1 = set(obj.withSpring(1, springPresets.SUBTLE_SPRING));
+      secretRequestStatusChanged = tmp(tmp2[11]).useSecretRequestStatusChanged(cardId, status);
+      const _Symbol2 = Symbol;
+      if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+        class E {
+          constructor(arg0) {
+            obj = { id: projectId.name, label: projectId.label, icon: projectId(closure_2[10]).KeyIcon };
+            return obj;
           }
         }
-        const result2 = sharedValue.set(1);
+        let items = [AccessibilityStore];
+        class O {
+          constructor() {
+            return closure_1_5.useReducedMotion;
+          }
+        }
+        cResult[6] = items;
+        cResult[7] = O;
+        let tmp14 = O;
+        const tmp13 = items;
+      } else {
+        class E {
+          constructor(arg0) {
+            obj = { id: projectId.name, label: projectId.label, icon: projectId(closure_2[10]).KeyIcon };
+            return obj;
+          }
+        }
+        tmp14 = cResult[7];
       }
+      const tmpResult = tmp(tmp2[11]);
+      const stateFromStores = tmp(tmp2[12]).useStateFromStores(tmp13, tmp14);
+      const tmpResult3 = tmp(tmp2[12]);
+      const sharedValue = tmp(tmp2[13]).useSharedValue(1);
+      if (cResult[8] === secretRequestStatusChanged) {
+        class E {
+          constructor(arg0) {
+            obj = { id: projectId.name, label: projectId.label, icon: projectId(closure_2[10]).KeyIcon };
+            return obj;
+          }
+        }
+      }
+      class P {
+        constructor() {
+          if (closure_2) {
+            tmp = closure_3;
+            if (!closure_3) {
+              tmp2 = closure_4;
+              num = 0;
+              result = closure_4.set(0);
+              tmp4 = closure_0;
+              tmp5 = closure_2;
+              obj = closure_0(closure_2[14]);
+              num2 = 1;
+              result1 = closure_4.set(obj.withSpring(1, closure_0(closure_2[15]).SUBTLE_SPRING));
+            }
+            return;
+          }
+          result2 = closure_4.set(1);
+          return;
+        }
+      }
+      cResult[8] = secretRequestStatusChanged;
+      cResult[9] = sharedValue;
+      cResult[10] = stateFromStores;
+      cResult[11] = P;
+      const tmpResult4 = tmp(tmp2[13]);
     }
-    cResult[8] = secretRequestStatusChanged;
-    cResult[9] = sharedValue;
-    cResult[10] = stateFromStores;
-    cResult[11] = P;
   }
-  const fn = function x() {
-    let obj2;
-    const tmp = ActionSheetActionCreators;
-    const showActionSheet = tmp.showActionSheet;
-    const obj = { content: metroRequire(ConjureSecretsSheetDefault, obj2), key: ConjureSecretsSheet.CONJURE_SECRETS_SHEET_KEY };
-    obj2 = { projectId, request };
-    showActionSheet(obj);
-  };
   cResult[0] = projectId;
   cResult[1] = request;
-  cResult[2] = fn;
+  cResult[2] = tmp6;
+  let obj = projectId(secretRequestStatusChanged[7]);
 }) : ((projectId) => {
-  let CircleCheckIcon;
-  let HCQvpO;
-  let TagGroup3;
-  let Text4;
-  let awaiting;
-  let cardId;
-  let intl10;
-  let intl3;
-  let intl4;
-  let intl5;
-  let intl6;
-  let intl7;
-  let intl8;
-  let intl9;
-  let items4;
-  let items5;
-  let items6;
-  let items7;
-  let items8;
-  let items9;
-  let obj12;
-  let obj16;
-  let obj7;
-  let request;
-  let status;
-  let string;
-  let tmp27Result;
-  let useReducedMotion;
   projectId = projectId.projectId;
   ({ cardId, request } = projectId);
   ({ status, awaiting } = projectId);
   let secretRequestStatusChanged;
   let stateFromStores;
-  let tmp = closure_8();
+  const tmp = closure_8();
   let items = [projectId, request];
   const items1 = [request.fields];
   const callback = stateFromStores.useCallback(() => {
-    let obj2;
-    const tmp = ActionSheetActionCreators;
-    const showActionSheet = tmp.showActionSheet;
-    const obj = { content: metroRequire(ConjureSecretsSheetDefault, obj2), key: ConjureSecretsSheet.CONJURE_SECRETS_SHEET_KEY };
-    obj2 = { projectId, request };
-    showActionSheet(obj);
+    const obj2 = { content: timestampProducer(ConjureSecretsSheetDefault, { projectId, request }), key: ConjureSecretsSheet.CONJURE_SECRETS_SHEET_KEY };
+    ActionSheetActionCreators.showActionSheet(obj2);
   }, items);
   const memo = stateFromStores.useMemo(() => {
     const fields = request.fields;
-    return fields.map((id) => {
-      const obj = { id: id.name, label: id.label, icon: projectId(secretRequestStatusChanged[10]).KeyIcon };
-      return obj;
-    });
+    return fields.map((id) => ({ id: id.name, label: id.label, icon: projectId(secretRequestStatusChanged[10]).KeyIcon }));
   }, items1);
+  secretRequestStatusChanged = projectId(secretRequestStatusChanged[11]).useSecretRequestStatusChanged(cardId, status);
   let obj = projectId(secretRequestStatusChanged[11]);
-  secretRequestStatusChanged = obj.useSecretRequestStatusChanged(cardId, status);
-  let obj2 = projectId(secretRequestStatusChanged[12]);
   const items2 = [AccessibilityStore];
-  stateFromStores = obj2.useStateFromStores(items2, () => useReducedMotion.useReducedMotion);
-  const obj3 = projectId(secretRequestStatusChanged[13]);
-  const sharedValue = obj3.useSharedValue(1);
+  stateFromStores = projectId(secretRequestStatusChanged[12]).useStateFromStores(items2, () => useReducedMotion.useReducedMotion);
+  let obj2 = projectId(secretRequestStatusChanged[12]);
+  const sharedValue = projectId(secretRequestStatusChanged[13]).useSharedValue(1);
   const items3 = [sharedValue, secretRequestStatusChanged, status, stateFromStores, cardId];
   const layoutEffect = stateFromStores.useLayoutEffect(() => {
     if (secretRequestStatusChanged) {
       if (!stateFromStores) {
         const result = sharedValue.set(0);
-        set = sharedValue.set;
-        const obj = spring;
-        const result1 = set(obj.withSpring(1, springPresets.SUBTLE_SPRING));
+        const result1 = sharedValue.set(spring.withSpring(1, springPresets.SUBTLE_SPRING));
       }
     }
     const result2 = sharedValue.set(1);
   }, items3);
+  const obj3 = projectId(secretRequestStatusChanged[13]);
   const fn = function w() {
-    let diff;
-    let items;
-    const obj = { opacity: sharedValue.get(), transform: items };
-    const obj2 = { translateY: diff * nativeDefault.space.PX_4 };
-    diff = sharedValue.get() - 1;
-    items = [obj2];
+    const obj = { opacity: sharedValue.get(), transform: null };
+    const obj2 = { translateY: null };
+    const diff = sharedValue.get() - 1;
+    obj2.translateY = diff * nativeDefault.space.PX_4;
+    const items = [obj2];
+    obj.transform = items;
     return obj;
   };
   const obj4 = projectId(secretRequestStatusChanged[13]);
   fn.__closure = { enter: sharedValue, tokens: request(secretRequestStatusChanged[5]) };
   fn.__workletHash = 6679182484244;
   fn.__initData = __initData;
-  ({ enter: sharedValue, tokens: request(secretRequestStatusChanged[5]) });
   const animatedStyle = obj4.useAnimatedStyle(fn);
   projectId(secretRequestStatusChanged[13]);
   class R {
     constructor() {
-      let items;
-      const obj = { opacity: sharedValue.get(), transform: items };
-      items = [{ scale: 0.5 + 0.5 * sharedValue.get() }];
-      ({ scale: 0.5 + 0.5 * sharedValue.get() });
+      obj = { opacity: closure_4.get(), transform: null };
+      obj1 = { scale: 0.5 + 0.5 * closure_4.get() };
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
       return obj;
     }
   }
@@ -252,103 +201,107 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   R.__workletHash = 12712289937001;
   R.__initData = __initData2;
   if ("superseded" === status) {
-    const obj6 = { style: items4, children: closure_6(Text4, obj7) };
-    items4 = [tmp.card, animatedStyle];
-    const View4 = request(tmp5[13]).View;
-    obj7 = { variant: "text-xs/semibold", color: "text-muted", children: intl10.string(request(secretRequestStatusChanged[18]).CTxtdV) };
-    Text4 = tmp4(tmp5[16]).Text;
-    intl10 = tmp4(tmp5[17]).intl;
-    tmp27Result = closure_6(View4, obj6);
+    const obj6 = { style: null, children: null };
+    const items4 = [tmp.card, animatedStyle];
+    obj6.style = items4;
+    const obj7 = { variant: "text-xs/semibold", color: "text-muted", children: null };
+    const intl10 = tmp4(tmp5[17]).intl;
+    obj7.children = intl10.string(request(tmp5[18]).CTxtdV);
+    obj6.children = closure_6(tmp4(tmp5[16]).Text, obj7);
+    let tmp27Result = closure_6(request(tmp5[13]).View, obj6);
   } else if ("inactive" === status) {
-    const obj8 = { style: items5, children: items6 };
-    items5 = [tmp.card, animatedStyle];
-    const View3 = request(tmp5[13]).View;
-    const obj9 = { variant: "text-xs/semibold", color: "text-muted", children: intl8.string(request(secretRequestStatusChanged[18]).HCQvpO) };
-    const Text3 = tmp4(tmp5[16]).Text;
-    intl8 = tmp4(tmp5[17]).intl;
-    items6 = [closure_6(Text3, obj9), ];
-    const obj10 = { label: intl9.string(request(secretRequestStatusChanged[18]).HCQvpO), size: "xs", items: memo };
-    const TagGroup4 = tmp4(tmp5[19]).TagGroup;
-    intl9 = tmp4(tmp5[17]).intl;
-    items6[1] = closure_6(TagGroup4, obj10);
-    tmp27Result = closure_7(View3, obj8);
+    const obj8 = { style: null, children: null };
+    const items5 = [tmp.card, animatedStyle];
+    obj8.style = items5;
+    const obj9 = { variant: "text-xs/semibold", color: "text-muted", children: null };
+    const intl8 = tmp4(tmp5[17]).intl;
+    obj9.children = intl8.string(request(tmp5[18]).HCQvpO);
+    const items6 = [closure_6(tmp4(tmp5[16]).Text, obj9), ];
+    const obj10 = { label: null, size: "xs", items: null };
+    const intl9 = tmp4(tmp5[17]).intl;
+    obj10.label = intl9.string(request(tmp5[18]).HCQvpO);
+    obj10.items = memo;
+    items6[1] = closure_6(tmp4(tmp5[19]).TagGroup, obj10);
+    obj8.children = items6;
+    tmp27Result = closure_7(request(tmp5[13]).View, obj8);
   } else if ("pending" === status) {
-    const obj11 = { style: tmp.card, children: closure_6(TagGroup3, obj12) };
-    obj12 = { label: intl7.string(request(secretRequestStatusChanged[18]).HCQvpO), size: "xs", items: memo };
-    TagGroup3 = tmp4(tmp5[19]).TagGroup;
-    intl7 = tmp4(tmp5[17]).intl;
+    const obj11 = { style: tmp.card, children: null };
+    const obj12 = { label: null, size: "xs", items: null };
+    const intl7 = tmp4(tmp5[17]).intl;
+    obj12.label = intl7.string(request(tmp5[18]).HCQvpO);
+    obj12.items = memo;
+    obj11.children = closure_6(tmp4(tmp5[19]).TagGroup, obj12);
     tmp27Result = closure_6(sharedValue, obj11);
   } else if ("received" === status) {
-    const obj13 = { style: items7, children: items9 };
-    items7 = [tmp.card, animatedStyle];
-    const obj14 = { style: tmp.status, children: items8 };
-    View = request(tmp5[13]).View;
-    const obj15 = { style: tmp13, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: closure_6(CircleCheckIcon, obj16) };
-    const View2 = request(tmp5[13]).View;
-    obj16 = { size: "xs", color: request(secretRequestStatusChanged[5]).colors.ICON_FEEDBACK_POSITIVE };
-    CircleCheckIcon = tmp4(tmp5[20]).CircleCheckIcon;
-    items8 = [closure_6(View2, obj15), ];
-    const obj17 = { variant: "text-xs/semibold", color: "text-feedback-positive", children: intl5.string(request(secretRequestStatusChanged[18]).sfp7Up) };
-    const Text2 = tmp4(tmp5[16]).Text;
-    intl5 = tmp4(tmp5[17]).intl;
-    items8[1] = closure_6(Text2, obj17);
-    items9 = [closure_7(sharedValue, obj14), ];
-    const obj18 = { label: intl6.string(request(secretRequestStatusChanged[18]).sfp7Up), size: "xs", items: memo };
-    const TagGroup2 = tmp4(tmp5[19]).TagGroup;
-    intl6 = tmp4(tmp5[17]).intl;
-    items9[1] = closure_6(TagGroup2, obj18);
-    tmp27Result = closure_7(View, obj13);
+    const obj13 = { style: null, children: null };
+    const items7 = [tmp.card, animatedStyle];
+    obj13.style = items7;
+    const obj14 = { style: tmp.status, children: null };
+    const obj15 = { style: tmp13, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: null };
+    const obj16 = { size: "xs", color: request(tmp5[5]).colors.ICON_FEEDBACK_POSITIVE };
+    obj15.children = closure_6(tmp4(tmp5[20]).CircleCheckIcon, obj16);
+    const items8 = [closure_6(request(tmp5[13]).View, obj15), ];
+    const obj17 = { variant: "text-xs/semibold", color: "text-feedback-positive", children: null };
+    const intl5 = tmp4(tmp5[17]).intl;
+    obj17.children = intl5.string(request(tmp5[18]).sfp7Up);
+    items8[1] = closure_6(tmp4(tmp5[16]).Text, obj17);
+    obj14.children = items8;
+    const items9 = [closure_7(sharedValue, obj14), ];
+    const obj18 = { label: null, size: "xs", items: null };
+    const intl6 = tmp4(tmp5[17]).intl;
+    obj18.label = intl6.string(request(tmp5[18]).sfp7Up);
+    obj18.items = memo;
+    items9[1] = closure_6(tmp4(tmp5[19]).TagGroup, obj18);
+    obj13.children = items9;
+    tmp27Result = closure_7(request(tmp5[13]).View, obj13);
   } else {
     const items10 = [tmp.card, ];
     let cardAwaiting = null != awaiting;
-    const tmp28 = sharedValue;
     if (cardAwaiting) {
       cardAwaiting = tmp.cardAwaiting;
     }
-    const obj19 = { style: items10, children: null };
+    const obj19 = { style: null, children: null };
     items10[1] = cardAwaiting;
+    obj19.style = items10;
     let tmp14 = null;
     if (null != awaiting) {
       tmp14 = closure_6(tmp4(tmp5[21]).ConjureAwaitingPulseRing, {});
     }
     const items11 = [tmp14, , , , ];
     let str = "text-muted";
-    const Text = tmp4(tmp5[16]).Text;
     if (null != awaiting) {
       str = "text-brand";
     }
-    const obj20 = { variant: "text-xs/semibold", color: str, children: string(HCQvpO) };
+    const obj20 = { variant: "text-xs/semibold", color: str, children: null };
     const intl = tmp4(tmp5[17]).intl;
-    string = intl.string;
     if (null != awaiting) {
-      HCQvpO = request(tmp5[18]).O0QIqj;
+      let HCQvpO = request(tmp5[18]).O0QIqj;
     } else {
       HCQvpO = request(tmp5[18]).HCQvpO;
     }
-    items11[1] = closure_6(Text, obj20);
+    obj20.children = intl.string(HCQvpO);
+    items11[1] = closure_6(tmp4(tmp5[16]).Text, obj20);
     if (null != request.note) {
-      let note;
       if ("" !== request.note) {
-        note = request.note;
+        let note = request.note;
       }
       const obj21 = { variant: "text-sm/normal", color: "text-default", children: note };
       items11[2] = closure_6(tmp17, obj21);
-      const obj22 = { label: intl3.string(request(secretRequestStatusChanged[18]).HCQvpO), size: "xs", items: memo };
-      const TagGroup = tmp4(tmp5[19]).TagGroup;
-      intl3 = tmp4(tmp5[17]).intl;
-      items11[3] = closure_6(TagGroup, obj22);
-      const obj23 = { variant: "primary", size: "sm", onPress: callback, text: intl4.string(request(secretRequestStatusChanged[18]).EK8tKY) };
-      const Button = tmp4(tmp5[22]).Button;
-      intl4 = tmp4(tmp5[17]).intl;
-      items11[4] = closure_6(Button, obj23);
+      const obj22 = { label: null, size: "xs", items: null };
+      const intl3 = tmp4(tmp5[17]).intl;
+      obj22.label = intl3.string(request(tmp5[18]).HCQvpO);
+      obj22.items = memo;
+      items11[3] = closure_6(tmp4(tmp5[19]).TagGroup, obj22);
+      const obj23 = { variant: "primary", size: "sm", onPress: callback, text: null };
+      const intl4 = tmp4(tmp5[17]).intl;
+      obj23.text = intl4.string(request(tmp5[18]).EK8tKY);
+      items11[4] = closure_6(tmp4(tmp5[22]).Button, obj23);
       obj19.children = items11;
       tmp27Result = closure_7(tmp28, obj19);
     }
     const intl2 = tmp4(tmp5[17]).intl;
     note = intl2.string(request(tmp5[18]).MPGSHL);
+    tmp28 = sharedValue;
   }
   return tmp27Result;
 });
-let result = size.fileFinishedImporting("modules/conjure/secrets/native/ConjureSecretRequestCard.tsx");
-
-export default tmp4;

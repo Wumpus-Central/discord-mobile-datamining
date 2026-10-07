@@ -1,67 +1,52 @@
 // === Module 14835: useBountyRecurringSwipeUpNux ===
 
 // Module 14835 (useBountyRecurringSwipeUpNux)
-import react from "react" /* 576 */;
+import c from "c" /* 576 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6901 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-let isEligible;
-
+require = fn;
 let c3 = 86400000;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((isEligible) => {
-  let first;
-  let tmp10;
-  let tmp9;
-  const obj = react;
-  const cResult = obj.c(4);
-  isEligible = isEligible.isEligible;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyRecurringSwipeUpNux.tsx");
+
+export const useBountyRecurringSwipeUpNux = ReactCompilerGating.isReactCompilerEnabled() ? ((isEligible) => {
+  const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { cooldownDurationMs };
     cResult[0] = obj2;
-    first = obj2;
+    let first = obj2;
   } else {
     first = cResult[0];
   }
   let prop = null;
-  const useSelectedTimeRecurringDismissibleContent = useSelectedDismissibleContent.useSelectedTimeRecurringDismissibleContent;
-  useSelectedDismissibleContent;
-  if (isEligible) {
+  if (isEligible.isEligible) {
     prop = dismissible_content.DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX;
   }
-  [tmp9, tmp10] = useSelectedTimeRecurringDismissibleContent(prop, first);
-  _slicedToArray(useSelectedTimeRecurringDismissibleContent(prop, first), 2);
-  const tmp11 = tmp9 === dismissible_content.DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX;
-  if (cResult[1] === tmp10) {
-    let tmp12;
-    if (cResult[2] === tmp11) {
-      tmp12 = cResult[3];
+  const tmpResult = useSelectedDismissibleContent;
+  [tmp8, tmp9] = useSelectedDismissibleContent.useSelectedTimeRecurringDismissibleContent(prop, first);
+  const tmp10 = tmp8 === dismissible_content.DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX;
+  if (cResult[1] === tmp9) {
+    if (cResult[2] === tmp10) {
+      let tmp11 = cResult[3];
     }
-    return tmp12;
+    return tmp11;
   }
-  const obj3 = { hasRecurringSwipeUpNux: tmp11, dismissRecurringSwipeUpNux: tmp10 };
-  cResult[1] = tmp10;
-  cResult[2] = tmp11;
+  const obj3 = { hasRecurringSwipeUpNux: tmp10, dismissRecurringSwipeUpNux: tmp9 };
+  cResult[1] = tmp9;
+  cResult[2] = tmp10;
   cResult[3] = obj3;
-  tmp12 = obj3;
+  tmp11 = obj3;
+  const tmp7 = _slicedToArray(useSelectedDismissibleContent.useSelectedTimeRecurringDismissibleContent(prop, first), 2);
 }) : ((isEligible) => {
-  let tmp6;
-  let tmp7;
-  isEligible = isEligible.isEligible;
   let prop = null;
-  const useSelectedTimeRecurringDismissibleContent = useSelectedDismissibleContent.useSelectedTimeRecurringDismissibleContent;
-  useSelectedDismissibleContent;
-  if (isEligible) {
+  if (isEligible.isEligible) {
     prop = dismissible_content.DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX;
   }
-  const obj = { cooldownDurationMs };
-  const tmp5 = _slicedToArray(useSelectedTimeRecurringDismissibleContent(prop, obj), 2);
-  const obj2 = { hasRecurringSwipeUpNux: tmp6 === dismissible_content.DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX, dismissRecurringSwipeUpNux: tmp7 };
-  [tmp6, tmp7] = tmp5;
-  return obj2;
+  const obj2 = { cooldownDurationMs };
+  const tmp4 = _slicedToArray(useSelectedDismissibleContent.useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs }), 2);
+  [tmp5, tmp6] = tmp4;
+  return { hasRecurringSwipeUpNux: tmp5 === dismissible_content.DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX, dismissRecurringSwipeUpNux: tmp6 };
 });
-const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyRecurringSwipeUpNux.tsx");
-
-export const useBountyRecurringSwipeUpNux = tmp2;

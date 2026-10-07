@@ -2,35 +2,37 @@
 
 // Module 5708 (utils/AutocompleteUtils)
 import Constants from "Constants" /* 1085 */;
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import size from "module_2" /* 2 */;
 
-const AutoCompleteResultTypes = Constants.AutoCompleteResultTypes;
+Constants.AutoCompleteResultTypes;
 const items = [["game", "gameMentionInput"], ["time", "timestampMentionInput"]];
 const map = new Map(items);
-let obj = {
+const result = size.fileFinishedImporting("utils/native/AutocompleteUtils.tsx");
+
+export default {
   MENTION_EVERYONE() {
-    let intl;
-    const obj = { type: AutoCompleteResultTypes.GLOBAL, test: "everyone", text: "@everyone", description: intl.string(intl2.t["5atMLZ"]) };
-    intl = intl2.intl;
+    const obj = { type: AutoCompleteResultTypes.GLOBAL, test: "everyone", text: "@everyone", description: null };
+    const intl = util.intl;
+    obj.description = intl.string(util.t["5atMLZ"]);
     return obj;
   },
   MENTION_HERE() {
-    let intl;
-    const obj = { type: AutoCompleteResultTypes.GLOBAL, test: "here", text: "@here", description: intl.string(intl2.t.iX9SFD) };
-    intl = intl2.intl;
+    const obj = { type: AutoCompleteResultTypes.GLOBAL, test: "here", text: "@here", description: null };
+    const intl = util.intl;
+    obj.description = intl.string(util.t.iX9SFD);
     return obj;
   },
   MENTION_GAME() {
-    let intl;
-    const obj = { test: "game", text: "@game", inlineAutocompleteType: "gameMentionInput", description: intl.string(intl2.t["1kR88y"]) };
-    intl = intl2.intl;
+    const obj = { test: "game", text: "@game", inlineAutocompleteType: "gameMentionInput", description: null };
+    const intl = util.intl;
+    obj.description = intl.string(util.t["1kR88y"]);
     return obj;
   },
   MENTION_TIMESTAMP() {
-    let intl;
-    const obj = { test: "time", text: "@time", inlineAutocompleteType: "timestampMentionInput", description: intl.string(intl2.t.V6L3TV) };
-    intl = intl2.intl;
+    const obj = { test: "time", text: "@time", inlineAutocompleteType: "timestampMentionInput", description: null };
+    const intl = util.intl;
+    obj.description = intl.string(util.t.V6L3TV);
     return obj;
   },
   LAUNCHABLE_APPLICATIONS() {
@@ -40,6 +42,3 @@ let obj = {
     return map.get(trigger.toLowerCase());
   }
 };
-const result = size.fileFinishedImporting("utils/native/AutocompleteUtils.tsx");
-
-export default obj;

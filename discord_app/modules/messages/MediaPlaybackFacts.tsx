@@ -1,40 +1,36 @@
 // === Module 10006: MediaPlaybackFacts ===
 
 // Module 10006 (MediaPlaybackFacts)
-import size_mod from "module_2" /* 2 */;
-
-let set;
+import size from "module_2" /* 2 */;
 
 const map = new Map();
 const re1 = /\/[^/?#]+\/\d+\/(\d+)\/[^/?#]+/;
-let size = size_mod;
 let result = size.fileFinishedImporting("modules/messages/MediaPlaybackFacts.tsx");
 
 export const rememberMediaPlaybackFacts = function rememberMediaPlaybackFacts(id) {
-  let duration_secs;
   id = id.id;
   if (null != id) {
     if ("" !== id) {
       if (map.has(id)) {
         map.delete(id);
       } else if (map.size >= 512) {
-        const iter = map.keys();
-        const iter2 = iter.next();
+        const iter2 = map.keys().next();
         if (!iter2.done) {
           map.delete(iter2.value);
         }
+        const iter = map.keys();
       }
-      size = id.size;
-      set = map.set;
+      let size = id.size;
       if (size == null) {
         size = null;
       }
-      const obj = { fileSize: size, fileDurationSec: duration_secs };
-      duration_secs = id.duration_secs;
+      const obj = { fileSize: size, fileDurationSec: null };
+      let duration_secs = id.duration_secs;
       if (duration_secs == null) {
         duration_secs = null;
       }
-      const result = set(id, obj);
+      obj.fileDurationSec = duration_secs;
+      const result = map.set(id, obj);
     }
   }
 };
@@ -72,7 +68,7 @@ export const getMediaPlaybackFacts = function getMediaPlaybackFacts(arg0) {
   }
   let tmp5 = null;
   if (null != tmp) {
-    let value = map.get(tmp);
+    value = map.get(tmp);
     if (value == null) {
       value = null;
     }
@@ -98,7 +94,7 @@ export const resolveReportedMediaFacts = function resolveReportedMediaFacts(medi
   }
   let tmp5 = null;
   if (null != tmp) {
-    let value = map.get(tmp);
+    value = map.get(tmp);
     if (value == null) {
       value = null;
     }
@@ -118,7 +114,7 @@ export const resolveReportedMediaFacts = function resolveReportedMediaFacts(medi
   if (fileSize == null) {
     fileSize = null;
   }
-  const obj = { fileSize, fileDurationSec };
+  const obj = { fileSize, fileDurationSec: null };
   fileDurationSec = undefined;
   if (tmp5 != null) {
     fileDurationSec = tmp5.fileDurationSec;
@@ -126,6 +122,7 @@ export const resolveReportedMediaFacts = function resolveReportedMediaFacts(medi
   if (fileDurationSec == null) {
     fileDurationSec = tmp8;
   }
+  obj.fileDurationSec = fileDurationSec;
   return obj;
 };
 export const clearMediaPlaybackFactsForTest = function clearMediaPlaybackFactsForTest() {

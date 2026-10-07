@@ -1,102 +1,109 @@
 // === Module 7173: ArtProfileAnalytics ===
 
 // Module 7173 (ArtProfileAnalytics)
-import Constants from "Constants" /* 1085 */;
 import Timers from "Timers" /* 2046 */;
-import react_nativeDefault from "react-native" /* 7171 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import size from "module_2" /* 2 */;
+import NativeTTIModuleDefault from "NativeTTIModule" /* 7171 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let closure_2, closure_3, java_baseline_profile_compilation_status;
-
-let obj = function _trackAndroidArtProfileSnapshotAsync() {
-  obj = _asyncToGenerator(async (load_id, arg1) => {
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
-    return (async (arg0, value) => {
-      if (c5 === 2) {
-        c5 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+require = fn;
+let closure_7 = async function _trackAndroidArtProfileSnapshotAsync(arg0) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
         if (arg0 === 1) {
+          c5 = 3;
           throw value;
         } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          let closure_5;
-          let obj5;
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              return { value, done: true };
-            } else {
-              closure_2 = undefined;
-              closure_3 = undefined;
-              java_baseline_profile_compilation_status = undefined;
-              closure_5 = undefined;
-              obj5 = undefined;
-              const obj7 = react_nativeDefault;
-              const javaBaselineProfileCompilationStatus = obj7.getJavaBaselineProfileCompilationStatus();
-              const catchPromise = javaBaselineProfileCompilationStatus.catch(() => closure_1_6);
-              const items = [catchPromise, ];
-              const obj8 = Timers;
-              const timeoutPromiseResult = obj8.timeoutPromise(10000);
-              items[1] = timeoutPromiseResult.then(() => closure_1_6);
-              const items1 = [Promise.race(items), ];
-              const obj9 = react_nativeDefault;
-              items1[1] = obj9.getAndroidArtProfileTelemetry();
-              c4 = 1;
-              c5 = 1;
-              const obj4 = { value: all(items1), done: false };
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            return { value, done: true };
-          } else {
-            closure_2 = value;
-            closure_3 = closure_131_3(closure_2, 2);
-            java_baseline_profile_compilation_status = closure_3[0];
-            closure_5 = closure_3[1];
-            obj5 = { load_id, java_baseline_profile_compilation_status, package_update_age_ms: closure_5.packageUpdateAgeMs, launch_index_since_package_update: closure_5.launchIndexSincePackageUpdate, changed_since_previous_observation: closure_5.changedSincePreviousObservation, reference_profile_metadata_status: closure_5.referenceProfileMetadataStatus, reference_profile_size_bytes: closure_5.referenceProfileSizeBytes, reference_profile_last_modified_ms: closure_5.referenceProfileLastModifiedMs, current_profile_metadata_status: closure_5.currentProfileMetadataStatus, current_profile_size_bytes: closure_5.currentProfileSizeBytes, current_profile_last_modified_ms: closure_5.currentProfileLastModifiedMs };
-            const merged = Object.assign(closure_1);
-            const obj6 = closure_131_1(closure_131_2[5]);
-            obj6.track(closure_131_5.ANDROID_ART_PROFILE_SNAPSHOT, obj5, { logEventProperties: true });
-            c5 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp5) {
           c5 = 3;
-          throw tmp5;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_3 = tmp2;
+          closure_2 = tmp5;
+          closure_130_0 = closure_0;
+          closure_130_1 = closure_1;
+          closure_130_2 = undefined;
+          closure_130_3 = undefined;
+          closure_130_4 = undefined;
+          closure_130_5 = undefined;
+          closure_130_6 = undefined;
+          const javaBaselineProfileCompilationStatus = NativeTTIModuleDefault.getJavaBaselineProfileCompilationStatus();
+          const catchPromise = javaBaselineProfileCompilationStatus.catch(() => closure_1_6);
+          const items = [catchPromise, Timers.timeoutPromise(10000).then(() => closure_1_6)];
+          const items1 = [Promise.race(items), ];
+          const timeoutPromiseResult = Timers.timeoutPromise(10000);
+          items1[1] = NativeTTIModuleDefault.getAndroidArtProfileTelemetry();
+          c4 = 1;
+          c5 = 1;
+          const obj4 = { value: Promise.all(items1), done: false };
+          return obj4;
         }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } else {
+        closure_130_2 = value;
+        closure_130_3 = closure_131_3(closure_130_2, 2);
+        closure_130_4 = closure_130_3[0];
+        closure_130_5 = closure_130_3[1];
+        const obj5 = {};
+        const merged = Object.assign(closure_130_1);
+        obj5.load_id = closure_130_0;
+        obj5.java_baseline_profile_compilation_status = closure_130_4;
+        obj5.package_update_age_ms = closure_130_5.packageUpdateAgeMs;
+        obj5.launch_index_since_package_update = closure_130_5.launchIndexSincePackageUpdate;
+        obj5.changed_since_previous_observation = closure_130_5.changedSincePreviousObservation;
+        obj5.reference_profile_metadata_status = closure_130_5.referenceProfileMetadataStatus;
+        obj5.reference_profile_size_bytes = closure_130_5.referenceProfileSizeBytes;
+        obj5.reference_profile_last_modified_ms = closure_130_5.referenceProfileLastModifiedMs;
+        obj5.current_profile_metadata_status = closure_130_5.currentProfileMetadataStatus;
+        obj5.current_profile_size_bytes = closure_130_5.currentProfileSizeBytes;
+        obj5.current_profile_last_modified_ms = closure_130_5.currentProfileLastModifiedMs;
+        closure_130_6 = obj5;
+        closure_131_1(closure_131_2[5]).track(closure_131_5.ANDROID_ART_PROFILE_SNAPSHOT, closure_130_6, { logEventProperties: true });
+        c5 = 3;
+        return { value: "IconComponent", done: null };
       }
-    })();
-  });
-  return obj(...arguments);
+    } catch (tmp6) {
+      c5 = tmp;
+      throw tmp6;
+    }
+  }
 };
-const AnalyticEvents = Constants.AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const UNKNOWN_STATUS = "UNKNOWN_STATUS";
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/tti_analytics/native/ArtProfileAnalytics.android.tsx");
 
-export const trackAndroidArtProfileSnapshot = function trackAndroidArtProfileSnapshot(load_id, arg1) {
-  function trackAndroidArtProfileSnapshotAsync() {
-    return obj(...arguments);
-  }
-  const promise = trackAndroidArtProfileSnapshotAsync(load_id, arg1);
-  promise.catch(() => {
+export const trackAndroidArtProfileSnapshot = function trackAndroidArtProfileSnapshot(arg0, arg1) {
+  (function trackAndroidArtProfileSnapshotAsync() {
+    const self = this;
+    const apply = closure_1_7.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  })(arg0, arg1).catch(() => {
 
   });
 };

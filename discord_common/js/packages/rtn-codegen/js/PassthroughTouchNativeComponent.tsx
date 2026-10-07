@@ -1,14 +1,13 @@
 // === Module 13952: PassthroughTouchNativeComponent ===
 
 // Module 13952 (PassthroughTouchNativeComponent)
-import DynamicallyInjectedByGestureHandler from "DynamicallyInjectedByGestureHandler" /* 106 */;
+import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;
 
-let obj2;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "PassthroughTouchView", directEventTypes: { topTouchDown: { registrationName: "onTouchDown" } }, validAttributes: obj2 };
-obj2 = {};
-const merged = Object.assign(DynamicallyInjectedByGestureHandler.ConditionallyIgnoredEventHandlers({ onTouchDown: true }));
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "PassthroughTouchView", directEventTypes: { topTouchDown: { registrationName: "onTouchDown" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onTouchDown: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = {};
 const value = module_65.get("PassthroughTouchView", () => obj);
 const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/PassthroughTouchNativeComponent.tsx");
 

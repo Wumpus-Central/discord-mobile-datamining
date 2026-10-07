@@ -9,9 +9,8 @@ const obj = { id: -1, label: "Not Eligible", shortLabel: "Not Eligible", type: e
 const result = size.fileFinishedImporting("modules/experiments/devtools/ExperimentDevToolsUtils.tsx");
 
 export const getExperimentVariantsForDevTools = function getExperimentVariantsForDevTools(experiment) {
-  let variants;
   if (experiment.system !== ExperimentManager.ExperimentSystem.APEX) {
-    variants = experiment.variants;
+    let variants = experiment.variants;
   } else {
     const items = [obj];
     variants = items.concat(experiment.variants);

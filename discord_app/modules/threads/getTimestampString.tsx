@@ -1,36 +1,30 @@
-// === Module 7021: getTimestampString ===
+// === Module 7021: threads/getTimestampString ===
 
-// Module 7021 (getTimestampString)
-import intl2 from "intl" /* 1126 */;
+// Module 7021 (threads/getTimestampString)
+import util from "util" /* 1126 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let importDefault;
 
 let c3 = 2592000;
 let c4 = 31104000;
 const result = size.fileFinishedImporting("modules/threads/getTimestampString.tsx");
 
 export default function getTimestampString(arg0, fn) {
-  let closure_1;
   let flag = arg2;
   if (arg2 === undefined) {
     flag = true;
   }
   importDefault = undefined;
   let time;
-  let obj = require("module_4467")();
-  const diffResult = obj.diff(require("module_4467")(arg0), "s");
+  const diffResult = require("module_4467")().diff(require("module_4467")(arg0), "s");
   let tmp4;
-  const tmp = importDefault;
   if (null != fn) {
     tmp4 = fn();
   }
   function formatString(minutes, diffResult) {
-    let tmp4;
-    const tmp3 = null != closure_1 && null != closure_1[minutes];
     if (tmp3) {
-      let tmp5 = closure_1[minutes];
+      let tmp5 = dependencyMap[minutes];
       if (tmp5 == null) {
         let tmp6;
         if (time != null) {
@@ -41,7 +35,7 @@ export default function getTimestampString(arg0, fn) {
       if (tmp5 == null) {
         tmp5 = null;
       }
-      tmp4 = tmp5;
+      let tmp4 = tmp5;
     } else {
       tmp4 = undefined;
       if (time != null) {
@@ -55,7 +49,7 @@ export default function getTimestampString(arg0, fn) {
     if (null != tmp4) {
       let formatToPlainStringResult = tmp4;
       if (typeof tmp4 !== "string") {
-        const intl = intl2.intl;
+        const intl = util.intl;
         const obj = { count: diffResult };
         formatToPlainStringResult = intl.formatToPlainString(tmp4, obj);
       }
@@ -66,13 +60,12 @@ export default function getTimestampString(arg0, fn) {
   importDefault = tmp4;
   time = { seconds: flag(tmp2[0]).t.sMPmtq, minutes: flag(tmp2[0]).t.N9M4N1, hours: flag(tmp2[0]).t.p0KedC, days: flag(tmp2[0]).t.gjK5av, months: flag(tmp2[0]).t.kHo4Or, years: flag(tmp2[0]).t.KjKr2P };
   if (diffResult < 60) {
-    let formatStringResult;
     let seconds;
     if (tmp4 != null) {
       seconds = tmp4.seconds;
     }
     if (null != seconds) {
-      formatStringResult = formatString("seconds", diffResult);
+      let formatStringResult = formatString("seconds", diffResult);
     } else {
       formatStringResult = formatString("minutes", 1);
     }
@@ -81,7 +74,6 @@ export default function getTimestampString(arg0, fn) {
     }
   }
   if (diffResult < 3600) {
-    let tmp7 = globalThis;
     const _Math = Math;
     const formatStringResult1 = formatString("minutes", Math.floor(diffResult / 60));
     if (null != formatStringResult1) {
@@ -122,6 +114,6 @@ export default function getTimestampString(arg0, fn) {
       }
     }
   }
-  const obj3 = tmp(time[1])(arg0);
-  return obj3.format("LL");
+  let obj = require("module_4467")();
+  return require("module_4467")(arg0).format("LL");
 };

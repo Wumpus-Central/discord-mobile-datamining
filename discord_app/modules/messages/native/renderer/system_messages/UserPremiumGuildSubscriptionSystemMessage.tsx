@@ -1,7 +1,7 @@
 // === Module 7674: UserPremiumGuildSubscriptionSystemMessage ===
 
 // Module 7674 (UserPremiumGuildSubscriptionSystemMessage)
-import intl3 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7630 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7632 */;
 import createCommonMessageDefault from "createCommonMessage" /* 7634 */;
@@ -10,24 +10,20 @@ import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionSystemMessage.tsx");
 
-export const createUserPremiumGuildSubscriptionSystemMessage = function createUserPremiumGuildSubscriptionSystemMessage(message) {
-  let formatToPartsResult;
-  message = message.message;
-  const roleStyle = message.roleStyle;
+export const createUserPremiumGuildSubscriptionSystemMessage = function createUserPremiumGuildSubscriptionSystemMessage(roleStyle) {
+  const message = roleStyle.message;
   const tmp3 = getNumSubscriptionsPurchasedFromSystemMessageDefault(message);
-  const obj = useAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  const tmp6 = formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle });
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
+  const tmp6 = formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   if (tmp3 > 1) {
-    const intl2 = intl3.intl;
+    const intl2 = util.intl;
     const obj2 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6, numSubscriptions: tmp3 };
-    formatToPartsResult = intl2.formatToParts(intl3.t.rbj006, obj2);
+    let formatToPartsResult = intl2.formatToParts(util.t.rbj006, obj2);
   } else {
-    const intl = intl3.intl;
+    const intl = util.intl;
     const obj3 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6 };
-    formatToPartsResult = intl.formatToParts(intl3.t.ihxM9x, obj3);
+    formatToPartsResult = intl.formatToParts(util.t.ihxM9x, obj3);
   }
-  const obj4 = { content: formatToPartsResult };
-  const merged = Object.assign(createCommonMessageDefault(message));
-  return obj4;
+  const merged = Object.assign(createCommonMessageDefault(roleStyle));
+  return { content: formatToPartsResult };
 };

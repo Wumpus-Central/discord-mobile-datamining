@@ -1,8 +1,7 @@
 // === Module 8038: ICYMIUtils ===
 
 // Module 8038 (ICYMIUtils)
-import intl11 from "intl" /* 1126 */;
-import ChannelRecord from "ChannelRecord" /* 2055 */;
+import util from "util" /* 1126 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 5118 */;
 import ForumPostMediaUtils from "ForumPostMediaUtils" /* 7551 */;
 import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7824 */;
@@ -10,147 +9,139 @@ import ICYMITypes from "ICYMITypes" /* 8034 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8039 */;
 import generateHydrationId from "generateHydrationId" /* 8044 */;
 import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 8045 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7050 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8035 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-let c4, c5;
-
-let c10;
-let c9;
-let obj = function _hydrateItems() {
-  obj = _asyncToGenerator(async (arg0, arg1, arg2, arg3) => {
-    let items;
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let closure_3 = arg3;
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        let obj3 = { value, done: true };
-        return obj3;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+require = fn;
+let closure_12 = async function _hydrateItems(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj4 = { value, done: true };
+      return obj4;
     } else {
-      try {
-        c4 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_0 = closure_3;
-            const substr = closure_0.slice(closure_1, closure_2);
-            if (0 !== substr.length) {
-              const loadHydratedAttempt = ICYMIActionCreatorsDefault.loadHydratedAttempt;
-              let obj2 = generateHydrationId;
-              const hydratedAttempt = loadHydratedAttempt(obj2.generateHydrationId(closure_1, closure_2));
-              const found = substr.filter((item) => null == closure_0[item.id]);
-              const found1 = found.filter((type) => type.type === closure_1_0(closure_1_2[7]).ICYMIItemTypes.MESSAGE);
-              const mapped = found1.map((channel_id) => ({ channel_id: channel_id.data.channel_id, message_id: channel_id.data.message_id }));
-              const mapped1 = found.map((type) => {
-                if (type.type === closure_1_0(closure_1_2[7]).ICYMIItemTypes.MESSAGE) {
-                  const message_context = type.data.message_context;
-                  let reply_message_id;
-                  if (message_context != null) {
-                    reply_message_id = message_context.reply_message_id;
-                  }
-                  const items = [];
-                  if (null != reply_message_id) {
-                    obj = { channel_id: type.data.channel_id, message_id: type.data.message_context.reply_message_id };
-                    items.push(obj);
-                  }
-                  const message_context2 = type.data.message_context;
-                  let before_message_id;
-                  if (message_context2 != null) {
-                    before_message_id = message_context2.before_message_id;
-                  }
-                  if (null != before_message_id) {
-                    const obj2 = { channel_id: type.data.channel_id, message_id: type.data.message_context.before_message_id };
-                    items.push(obj2);
-                  }
-                  const message_context3 = type.data.message_context;
-                  let after_message_id;
-                  if (message_context3 != null) {
-                    after_message_id = message_context3.after_message_id;
-                  }
-                  if (null != after_message_id) {
-                    const obj3 = { channel_id: type.data.channel_id, message_id: type.data.message_context.after_message_id };
-                    items.push(obj3);
-                  }
-                  return items;
-                } else {
-                  return [];
-                }
-              });
-              const _Boolean = Boolean;
-              const flatResult = mapped1.flat();
-              const found2 = flatResult.filter(Boolean);
-              const found3 = found.filter((type) => type.type === closure_1_0(closure_1_2[7]).ICYMIItemTypes.ACTIVITY);
-              const mapped2 = found3.map((data) => ({ user_id: data.data.user_id, content_id: data.data.content_id }));
-              const obj5 = { messageItems: items, activityItems: mapped2 };
-              items = [];
-              const fetchHydrated = ICYMIActionCreatorsDefault.fetchHydrated;
-              HermesBuiltin.arraySpread(items, found2, HermesBuiltin.arraySpread(items, mapped, 0));
-              c5 = 1;
-              c4 = 1;
-              const obj6 = { value: fetchHydrated(closure_1, closure_2, obj5), done: false };
-              return obj6;
-            }
-          }
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          dependencyMap = closure_3;
+          const substr = dependencyMap.slice(closure_1, dependencyMap2);
+          if (0 !== substr.length) {
+            let obj2 = ICYMIActionCreatorsDefault;
+            const hydratedAttempt = obj2.loadHydratedAttempt(generateHydrationId.generateHydrationId(closure_1, dependencyMap2));
+            const found = substr.filter((item) => null == dependencyMap[item.id]);
+            const found1 = found.filter((type) => type.type === dependencyMap(8034).ICYMIItemTypes.MESSAGE);
+            const mapped = found1.map((channel_id) => ({ channel_id: channel_id.data.channel_id, message_id: channel_id.data.message_id }));
+            const mapped1 = found.map((type) => {
+              if (type.type === dependencyMap(8034).ICYMIItemTypes.MESSAGE) {
+                const message_context = type.data.message_context;
+                let reply_message_id;
+                if (message_context != null) {
+                  reply_message_id = message_context.reply_message_id;
+                }
+                const items = [];
+                if (null != reply_message_id) {
+                  const obj = { channel_id: type.data.channel_id, message_id: type.data.message_context.reply_message_id };
+                  items.push(obj);
+                }
+                const message_context2 = type.data.message_context;
+                let before_message_id;
+                if (message_context2 != null) {
+                  before_message_id = message_context2.before_message_id;
+                }
+                if (null != before_message_id) {
+                  const obj2 = { channel_id: type.data.channel_id, message_id: type.data.message_context.before_message_id };
+                  items.push(obj2);
+                }
+                const message_context3 = type.data.message_context;
+                let after_message_id;
+                if (message_context3 != null) {
+                  after_message_id = message_context3.after_message_id;
+                }
+                if (null != after_message_id) {
+                  const obj3 = { channel_id: type.data.channel_id, message_id: type.data.message_context.after_message_id };
+                  items.push(obj3);
+                }
+                return items;
+              } else {
+                return [];
+              }
+            });
+            const _Boolean = Boolean;
+            const found2 = mapped1.flat().filter(Boolean);
+            const found3 = found.filter((type) => type.type === dependencyMap(8034).ICYMIItemTypes.ACTIVITY);
+            const mapped2 = found3.map((data) => ({ user_id: data.data.user_id, content_id: data.data.content_id }));
+            const flatResult = mapped1.flat();
+            const obj7 = { messageItems: null, activityItems: null };
+            let items = [];
+            HermesBuiltin.arraySpread(found2, HermesBuiltin.arraySpread(mapped, 0));
+            obj7.messageItems = items;
+            obj7.activityItems = mapped2;
+            c5 = 1;
+            c4 = 1;
+            const obj8 = { value: ICYMIActionCreatorsDefault.fetchHydrated(closure_1, dependencyMap2, obj7), done: false };
+            return obj8;
+          }
         }
+      } else if (arg0 === 1) {
         c4 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp19) {
+        throw value;
+      } else if (arg0 === 2) {
         c4 = 3;
-        throw tmp19;
+        let obj = { value, done: true };
+        return obj;
       }
+      c4 = 3;
+      return { value: "IconComponent", done: null };
+    } catch (tmp17) {
+      c4 = tmp;
+      throw tmp17;
     }
-  });
-  return obj(...arguments);
+  }
 };
-const ThreadChannelRecord = ChannelRecord.ThreadChannelRecord;
-({ ChannelTypes: c9, GuildNSFWContentLevel: c10 } = Constants);
-obj = { UNKNOWN: 0, [0]: "UNKNOWN", DEFAULT: 1, [1]: "DEFAULT", MORE: 2, [2]: "MORE", LESS: 3, [3]: "LESS", MUTED: 4, [4]: "MUTED" };
+const ThreadChannelRecord = fn(2055).ThreadChannelRecord;
+const Constants = fn(1085);
+({ ChannelTypes: closure_9, GuildNSFWContentLevel: c10 } = Constants);
+const ICYMICustomScore = { UNKNOWN: 0, [0]: "UNKNOWN", DEFAULT: 1, [1]: "DEFAULT", MORE: 2, [2]: "MORE", LESS: 3, [3]: "LESS", MUTED: 4, [4]: "MUTED" };
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/ICYMIUtils.tsx");
 
-export const ICYMICustomScore = obj;
+export { ICYMICustomScore };
 export const isGuildItem = function isGuildItem(type) {
-  const tmp3 = type.type === ICYMITypes.ICYMIItemTypes.MESSAGE || type.type === ICYMITypes.ICYMIItemTypes.GUILD_EVENT;
+  let tmp3 = type.type === ICYMITypes.ICYMIItemTypes.MESSAGE;
+  if (!tmp3) {
+    tmp3 = type.type === ICYMITypes.ICYMIItemTypes.GUILD_EVENT;
+  }
   return tmp3;
 };
 export const isChannelCustomScoreEligible = function isChannelCustomScoreEligible(stateFromStores) {
   let tmp2 = stateFromStores.type === constants.GUILD_FORUM;
   if (!tmp2) {
     tmp2 = stateFromStores.type === constants.GUILD_ANNOUNCEMENT || stateFromStores.type === constants.GUILD_TEXT;
+    const tmp3 = stateFromStores.type === constants.GUILD_ANNOUNCEMENT || stateFromStores.type === constants.GUILD_TEXT;
   }
   return tmp2;
 };
 export const numberToCustomScore = function numberToCustomScore(stateFromStores1) {
-  let DEFAULT;
   if (stateFromStores1 < -1.5) {
-    DEFAULT = obj.MUTED;
+    let DEFAULT = obj.MUTED;
   } else if (stateFromStores1 < 0) {
     DEFAULT = obj.LESS;
   } else if (stateFromStores1 > 0) {
@@ -172,34 +163,39 @@ export const customScoreToNumber = function customScoreToNumber(DEFAULT) {
   }
 };
 export const hydrateItems = function hydrateItems() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_12.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const createGravityMessageFromServer = function createGravityMessageFromServer(message, arg1) {
-  let fromServerResult;
-  let obj2;
-  obj = { message: obj2.createMessageRecord(message.message), threadChannel: fromServerResult };
+  const obj = {};
   const merged = Object.assign(arg1);
-  fromServerResult = undefined;
-  obj2 = MessageRecordUtils;
+  obj.message = MessageRecordUtils.createMessageRecord(message.message);
+  let fromServerResult;
   if (null != message.thread_channel) {
     fromServerResult = ThreadChannelRecord.fromServer(message.thread_channel, message.guild_id);
   }
+  obj.threadChannel = fromServerResult;
   return obj;
 };
 export const customStatusToContentInventoryEntry = function customStatusToContentInventoryEntry(notificationItem) {
-  let obj2;
-  let str;
-  obj = { id: notificationItem.id, type: ICYMITypes.ICYMIItemTypes.CUSTOM_STATUS, activity: obj2, score: null, score_components: null };
-  obj2 = { id: notificationItem.id, author_id: notificationItem.data.user_id, author_type: ContentInventoryAuthorType.ContentInventoryAuthorType.USER, traits: [], participants: [], content_type: ContentInventoryEntryType.ContentInventoryEntryType.CUSTOM_STATUS, extra: { type: "custom_status_extra", status: str, emoji_id: notificationItem.data.emoji_id, emoji_name: notificationItem.data.emoji_name, emoji_animated: notificationItem.data.emoji_animated, attachments: notificationItem.data.attachments } };
-  str = notificationItem.data.text;
+  const obj = { id: notificationItem.id, type: ICYMITypes.ICYMIItemTypes.CUSTOM_STATUS, activity: null, score: null, score_components: null };
+  const obj2 = { id: notificationItem.id, author_id: notificationItem.data.user_id, author_type: ContentInventoryAuthorType.ContentInventoryAuthorType.USER, traits: [], participants: [], content_type: ContentInventoryEntryType.ContentInventoryEntryType.CUSTOM_STATUS, extra: null };
+  let str = notificationItem.data.text;
   if (str == null) {
     str = "";
   }
+  obj2.extra = { type: "custom_status_extra", status: str, emoji_id: notificationItem.data.emoji_id, emoji_name: notificationItem.data.emoji_name, emoji_animated: notificationItem.data.emoji_animated, attachments: notificationItem.data.attachments };
+  obj.activity = obj2;
   ({ score: obj.score, score_components: obj.score_components } = notificationItem);
   return obj;
 };
 export const compareGravityUnreadIds = function compareGravityUnreadIds(id, id2, arg2) {
-  let num;
   let readTimestamp = ICYMIUnreadStateStore.getReadTimestamp(id);
   if (null == readTimestamp) {
     let tmp2;
@@ -225,24 +221,22 @@ export const compareGravityUnreadIds = function compareGravityUnreadIds(id, id2,
       }
       num2 = num3;
     }
-    num = num2;
+    let num = num2;
   } else {
     num = 0;
   }
   return num;
 };
 export const isItemNSFW = function isItemNSFW(data) {
-  let guild_id;
-  let id;
   const kind = data.data.kind;
   if ("message" === kind) {
-    id = data.data.message.channel_id;
+    let id = data.data.message.channel_id;
   } else if ("forumThread" === kind) {
     id = data.data.threadChannel.id;
   } else if ("guildEvent" === kind) {
     const guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(data.data.eventId);
     if (guildScheduledEvent != null) {
-      guild_id = guildScheduledEvent.guild_id;
+      const guild_id = guildScheduledEvent.guild_id;
     }
   } else {
     return false;
@@ -262,7 +256,7 @@ export const isItemNSFW = function isItemNSFW(data) {
     if (guild_id1 == null) {
       guild_id1 = guild_id;
     }
-    let guild = null;
+    guild = null;
     if (null != guild_id1) {
       guild = GuildStore.getGuild(guild_id1);
     }
@@ -330,7 +324,6 @@ export const determineContentType = function determineContentType(channel, messa
   } else if (channel.type === tmp.GUILD_FORUM) {
     return ICYMITypes.ContentType.FORUM_POST;
   } else {
-    let INTERESTING;
     if (null != message.reactions) {
       const reactions = message.reactions;
       const mapped = reactions.map((count_details) => {
@@ -348,33 +341,32 @@ export const determineContentType = function determineContentType(channel, messa
         }
         return num;
       });
-      let num = 0;
       if (0 !== mapped.length) {
-        let num2 = 10;
         if (mapped.reduce((acc, item) => acc + item) > 10) {
           return ICYMITypes.ContentType.POPULAR_MESSAGE;
         }
       }
     }
-    let num3 = 0;
     if (message.attachments.length > 0) {
-      let IMAGE;
-      obj = ForumPostMediaUtils;
+      let ContentType = dependencyMap;
       if (obj.isValidImageAttachment(message.attachments[0])) {
-        IMAGE = ICYMITypes.ContentType.IMAGE;
+        ContentType = ICYMITypes.ContentType;
+        let IMAGE = ContentType.IMAGE;
       } else {
+        const result = ForumPostMediaUtils.isValidVideoAttachment(message.attachments[0]);
+        const ContentType2 = ICYMITypes.ContentType;
+        IMAGE = result ? ContentType2.VIDEO : ContentType2.FILE;
         const tmp6Result = ForumPostMediaUtils;
-        const result = tmp6Result.isValidVideoAttachment(message.attachments[0]);
-        const ContentType = ICYMITypes.ContentType;
-        IMAGE = result ? ContentType.VIDEO : ContentType.FILE;
       }
-      INTERESTING = IMAGE;
-    } else if (message.embeds.length > 0) {
-      INTERESTING = ICYMITypes.ContentType.LINK;
+      obj = ForumPostMediaUtils;
     } else {
-      INTERESTING = ICYMITypes.ContentType.INTERESTING;
+      if (message.embeds.length > 0) {
+        let INTERESTING = ICYMITypes.ContentType.LINK;
+      } else {
+        INTERESTING = ICYMITypes.ContentType.INTERESTING;
+      }
+      return INTERESTING;
     }
-    return INTERESTING;
   }
 };
 export const contentTypeToText = function contentTypeToText(ANNOUNCEMENT) {
@@ -383,42 +375,41 @@ export const contentTypeToText = function contentTypeToText(ANNOUNCEMENT) {
     flag = false;
   }
   if (ICYMITypes.ContentType.POPULAR_MESSAGE === ANNOUNCEMENT) {
-    const intl10 = intl11.intl;
-    return intl10.string(intl11.t["H/2+cl"]);
+    const intl10 = util.intl;
+    return intl10.string(util.t["H/2+cl"]);
   } else if (ICYMITypes.ContentType.IMAGE === ANNOUNCEMENT) {
-    const intl9 = intl11.intl;
-    return intl9.string(intl11.t.gmOWAo);
+    const intl9 = util.intl;
+    return intl9.string(util.t.gmOWAo);
   } else if (ICYMITypes.ContentType.VIDEO === ANNOUNCEMENT) {
-    const intl8 = intl11.intl;
-    return intl8.string(intl11.t.swhcPM);
+    const intl8 = util.intl;
+    return intl8.string(util.t.swhcPM);
   } else if (ICYMITypes.ContentType.LINK === ANNOUNCEMENT) {
-    const intl7 = intl11.intl;
-    return intl7.string(intl11.t.oj5yvD);
+    const intl7 = util.intl;
+    return intl7.string(util.t.oj5yvD);
   } else if (ICYMITypes.ContentType.THREAD === ANNOUNCEMENT) {
-    const intl6 = intl11.intl;
-    return intl6.string(intl11.t.DwLrLK);
+    const intl6 = util.intl;
+    return intl6.string(util.t.DwLrLK);
   } else if (ICYMITypes.ContentType.FORUM_POST === ANNOUNCEMENT) {
-    const intl5 = intl11.intl;
-    return intl5.string(intl11.t["Q9/6BS"]);
+    const intl5 = util.intl;
+    return intl5.string(util.t["Q9/6BS"]);
   } else if (ICYMITypes.ContentType.CHANGED_STATUS === ANNOUNCEMENT) {
-    const intl4 = intl11.intl;
-    return intl4.string(intl11.t.TGrUmi);
+    const intl4 = util.intl;
+    return intl4.string(util.t.TGrUmi);
   } else if (ICYMITypes.ContentType.INTERESTING === ANNOUNCEMENT) {
-    const intl3 = intl11.intl;
-    return intl3.string(intl11.t["TahE/i"]);
+    const intl3 = util.intl;
+    return intl3.string(util.t["TahE/i"]);
   } else if (ICYMITypes.ContentType.ANNOUNCEMENT === ANNOUNCEMENT) {
-    let stringResult;
-    const intl2 = intl11.intl;
+    const intl2 = util.intl;
     const string = intl2.string;
-    const t = intl11.t;
+    const t = util.t;
     if (flag) {
-      stringResult = string(t.E0MW8I);
+      let stringResult = string(t.E0MW8I);
     } else {
       stringResult = string(t["2ih63V"]);
     }
     return stringResult;
   } else if (ICYMITypes.ContentType.FILE === ANNOUNCEMENT) {
-    const intl = intl11.intl;
-    return intl.string(intl11.t.pYrnTY);
+    const intl = util.intl;
+    return intl.string(util.t.pYrnTY);
   }
 };

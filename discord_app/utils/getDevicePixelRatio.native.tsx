@@ -1,10 +1,10 @@
-// === Module 1885: react-native ===
+// === Module 1885: getDevicePixelRatio ===
 
-// Module 1885 (react-native)
-import react_native from "react-native" /* 17 */;
+// Module 1885 (getDevicePixelRatio)
+import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 
-const PixelRatio = react_native.PixelRatio;
+const PixelRatio = _mod17.PixelRatio;
 const result = size.fileFinishedImporting("utils/getDevicePixelRatio.native.tsx");
 
 export default function getDevicePixelRatio() {

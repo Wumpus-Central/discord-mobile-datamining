@@ -11,7 +11,7 @@ export default function shouldRemoveSelfMention(type, arg1) {
   const SELF_MENTIONABLE_SYSTEM = MessageTypesSets.SELF_MENTIONABLE_SYSTEM;
   const hasItem = SELF_MENTIONABLE_SYSTEM.has(type.type);
   let tmp2 = !hasItem;
-  if (tmp2) {
+  if (!hasItem) {
     const author = type.author;
     let id;
     if (author != null) {

@@ -2,36 +2,33 @@
 
 // Module 9116 (useIsActivitiesAvailableInShelf)
 import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9026 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, arg1) => {
-  let closure_2;
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/useIsActivitiesAvailableInShelf.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, arg1) => {
   _require = guildId;
-  let obj = require("react");
-  const cResult = obj.c(8);
-  let obj2 = require("useIsActivitiesEnabledForCurrentPlatform");
-  const isActivitiesEnabledForCurrentPlatform = obj2.useIsActivitiesEnabledForCurrentPlatform();
+  const cResult = require("c").c(8);
+  let obj = require("c");
+  const isActivitiesEnabledForCurrentPlatform = require("useIsActivitiesEnabledForCurrentPlatform").useIsActivitiesEnabledForCurrentPlatform();
   const tmp3 = isActivitiesEnabledForCurrentPlatform(9117)(arg1);
   if (cResult[0] === guildId) {
-    let tmp4;
     if (cResult[1] === tmp3) {
-      tmp4 = cResult[2];
+      let tmp4 = cResult[2];
     }
     dependencyMap = tmp4;
     if (cResult[3] === guildId) {
       if (cResult[4] === isActivitiesEnabledForCurrentPlatform) {
-        let tmp6;
-        let tmp7;
         if (cResult[5] === tmp4) {
-          tmp6 = cResult[6];
-          tmp7 = cResult[7];
+          let tmp6 = cResult[6];
+          let tmp7 = cResult[7];
         }
-        const effect = react.useEffect(tmp6, tmp7);
+        const effect = noop.useEffect(tmp6, tmp7);
         if (tmp4) {
           tmp4 = isActivitiesEnabledForCurrentPlatform;
         }
@@ -39,11 +36,13 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, arg1) => {
       }
     }
     const fn = function o() {
-      const tmp = closure_2 && isActivitiesEnabledForCurrentPlatform;
+      let tmp = closure_2;
+      if (closure_2) {
+        tmp = isActivitiesEnabledForCurrentPlatform;
+      }
       if (tmp) {
         const obj2 = { guildId };
-        const obj = EmbeddedActivitiesActionCreators;
-        const shelf = obj.fetchShelf(obj2);
+        const shelf = EmbeddedActivitiesActionCreators.fetchShelf(obj2);
       }
     };
     const items = [guildId, isActivitiesEnabledForCurrentPlatform, tmp4];
@@ -55,17 +54,23 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, arg1) => {
     tmp7 = items;
     tmp6 = fn;
   }
+  let tmp5 = null != guildId;
+  if (tmp5) {
+    tmp5 = "" !== guildId;
+  }
+  if (!tmp5) {
+    tmp5 = tmp3;
+  }
   cResult[0] = guildId;
   cResult[1] = tmp3;
-  cResult[2] = null != guildId && "" !== guildId || tmp3;
+  cResult[2] = tmp5;
   tmp4 = tmp5;
+  let obj2 = require("useIsActivitiesEnabledForCurrentPlatform");
 }) : ((guildId, arg1) => {
-  let closure_2;
   _require = guildId;
-  let obj = require("useIsActivitiesEnabledForCurrentPlatform");
-  const isActivitiesEnabledForCurrentPlatform = obj.useIsActivitiesEnabledForCurrentPlatform();
+  const isActivitiesEnabledForCurrentPlatform = require("useIsActivitiesEnabledForCurrentPlatform").useIsActivitiesEnabledForCurrentPlatform();
   let tmp3 = null != guildId;
-  const tmp2 = isActivitiesEnabledForCurrentPlatform(9117)(arg1);
+  let obj = require("useIsActivitiesEnabledForCurrentPlatform");
   if (tmp3) {
     tmp3 = "" !== guildId;
   }
@@ -74,12 +79,14 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, arg1) => {
   }
   dependencyMap = tmp3;
   const items = [guildId, isActivitiesEnabledForCurrentPlatform, tmp3];
-  const effect = react.useEffect(() => {
-    const tmp = closure_2 && isActivitiesEnabledForCurrentPlatform;
+  const effect = noop.useEffect(() => {
+    let tmp = closure_2;
+    if (closure_2) {
+      tmp = isActivitiesEnabledForCurrentPlatform;
+    }
     if (tmp) {
       const obj2 = { guildId };
-      const obj = EmbeddedActivitiesActionCreators;
-      const shelf = obj.fetchShelf(obj2);
+      const shelf = EmbeddedActivitiesActionCreators.fetchShelf(obj2);
     }
   }, items);
   if (tmp3) {
@@ -87,6 +94,3 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, arg1) => {
   }
   return tmp3;
 });
-const result = size.fileFinishedImporting("modules/activities/useIsActivitiesAvailableInShelf.tsx");
-
-export default tmp2;

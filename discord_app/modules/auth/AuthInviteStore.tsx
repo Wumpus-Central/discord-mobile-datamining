@@ -1,33 +1,30 @@
 // === Module 4785: AuthInviteStore ===
 
 // Module 4785 (AuthInviteStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
-import size from "module_2" /* 2 */;
 
-const React2 = {};
-const Store = get_initializedDefault.Store;
+require = fn;
+let closure_2 = {};
+const Store = initializeDefault.Store;
 class AuthInviteStore extends Store {
-  getGuild(arg0) {
-    return closure_2[arg0];
-  }
 }
-const prototype = AuthInviteStore.prototype;
+AuthInviteStore.prototype["getGuild"] = function getGuild(arg0) {
+  return closure_2[arg0];
+};
 AuthInviteStore.displayName = "AuthInviteStore";
-let obj = {
+const authInviteStore = new AuthInviteStore(DispatcherDefault, {
   AUTH_INVITE_UPDATE: function handleAuthInviteUpdate(invite) {
-    const guild = invite.invite.guild;
+    guild = invite.invite.guild;
     if (null == guild) {
       return false;
     } else {
-      const id = guild.id;
-      const obj = GuildRecordUtils;
-      closure_2[id] = obj.fromInviteGuild(guild);
+      closure_2[guild.id] = GuildRecordUtils.fromInviteGuild(guild);
     }
   }
-};
-const authInviteStore = new AuthInviteStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/AuthInviteStore.tsx");
 
 export default authInviteStore;

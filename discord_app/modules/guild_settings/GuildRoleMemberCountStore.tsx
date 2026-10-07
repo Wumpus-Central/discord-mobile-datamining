@@ -1,65 +1,65 @@
 // === Module 6630: GuildRoleMemberCountStore ===
 
 // Module 6630 (GuildRoleMemberCountStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import size from "module_2" /* 2 */;
 
-const React = {};
-const Store = get_initializedDefault.Store;
+const dependencyMap = {};
+let closure_1 = {};
+const Store = initializeDefault.Store;
 class GuildRoleMemberCountStore extends Store {
-  getRoleMemberCount(id) {
-    let tmp = null;
-    if (null != id) {
-      tmp = closure_0[id];
-    }
-    return tmp;
-  }
-  shouldFetch(arg0) {
-    if (null == arg0) {
-      return false;
-    } else {
-      let tmp3 = null == tmp2;
-      if (!tmp3) {
-        const _Date = Date;
-        tmp3 = Date.now() - tmp2 > 120000;
-      }
-      return tmp3;
-    }
-  }
 }
 const prototype = GuildRoleMemberCountStore.prototype;
+prototype["getRoleMemberCount"] = function getRoleMemberCount(id) {
+  let tmp = null;
+  if (null != id) {
+    tmp = dependencyMap[id];
+  }
+  return tmp;
+};
+prototype["shouldFetch"] = function shouldFetch(arg0) {
+  if (null == arg0) {
+    return false;
+  } else {
+    let tmp3 = null == tmp2;
+    if (!tmp3) {
+      const _Date = Date;
+      tmp3 = Date.now() - tmp2 > 120000;
+    }
+    return tmp3;
+  }
+};
 GuildRoleMemberCountStore.displayName = "GuildRoleMemberCountStore";
-const obj = {
+const guildRoleMemberCountStore = new GuildRoleMemberCountStore(DispatcherDefault, {
   GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS: function handleGuildRoleMemberCountFetchSuccess(guildId) {
     guildId = guildId.guildId;
     closure_0[guildId] = guildId.roleMemberCount;
     closure_1[guildId] = Date.now();
   },
   GUILD_ROLE_MEMBER_COUNT_UPDATE: function handleGuildRoleMemberCountUpdate(arg0) {
-    if (null == closure_0[arg0.guildId]) {
+    if (null == dependencyMap[arg0.guildId]) {
       return false;
     } else {
-      closure_0[arg0.guildId][tmp] = tmp2;
+      tmp3[tmp] = tmp2;
     }
   },
   GUILD_ROLE_MEMBER_BULK_ADD: function handleGuildRoleMemberBulkAdd(roleId) {
     roleId = roleId.roleId;
-    if (null == closure_0[roleId.guildId]) {
+    if (null == dependencyMap[roleId.guildId]) {
       return false;
-    } else if (null == closure_0[roleId.guildId][roleId]) {
+    } else if (null == tmp2[roleId]) {
       return false;
     } else {
       const _Object = Object;
-      closure_0[roleId.guildId][roleId] = closure_0[roleId.guildId][roleId] + Object.keys(tmp).length;
+      tmp2[roleId] = tmp2[roleId] + Object.keys(tmp).length;
     }
   },
   GUILD_ROLE_MEMBER_ADD: function handleGuildRoleMemberAdd(roleId) {
     roleId = roleId.roleId;
     let tmp2 = null != tmp;
     if (tmp2) {
-      if (null != closure_0[roleId.guildId][roleId]) {
-        closure_0[roleId.guildId][roleId] = closure_0[roleId.guildId][roleId] + 1;
+      if (null != tmp[roleId]) {
+        tmp[roleId] = tmp[roleId] + 1;
       }
       tmp2 = tmp3;
     }
@@ -69,9 +69,9 @@ const obj = {
     roleId = roleId.roleId;
     let tmp2 = null != tmp;
     if (tmp2) {
-      if (null != closure_0[roleId.guildId][roleId]) {
+      if (null != tmp[roleId]) {
         const _Math = Math;
-        closure_0[roleId.guildId][roleId] = Math.max(closure_0[roleId.guildId][roleId] - 1, 0);
+        tmp[roleId] = Math.max(tmp[roleId] - 1, 0);
       }
       tmp2 = tmp3;
     }
@@ -79,19 +79,18 @@ const obj = {
   },
   GUILD_ROLE_CREATE: function handleGuildRoleCreate(guildId) {
     guildId = guildId.guildId;
-    const role = guildId.role;
-    if (null == closure_0[guildId]) {
-      closure_0[guildId] = {};
+    if (null == dependencyMap[guildId]) {
+      dependencyMap[guildId] = {};
     }
-    closure_0[guildId][role.id] = 0;
+    dependencyMap[guildId][guildId.role.id] = 0;
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     guild = guild.guild;
-    delete closure_0[guild.id];
-    delete closure_1[guild.id];
+    delete tmp4[tmp3];
+    delete tmp2[tmp];
   }
-};
-const guildRoleMemberCountStore = new GuildRoleMemberCountStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/GuildRoleMemberCountStore.tsx");
 
 export default guildRoleMemberCountStore;

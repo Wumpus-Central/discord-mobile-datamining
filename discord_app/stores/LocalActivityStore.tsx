@@ -1,12 +1,12 @@
 // === Module 11129: LocalActivityStore ===
 
 // Module 11129 (LocalActivityStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1342 from "module_1342" /* 1342 */;
 import FlagUtils from "FlagUtils" /* 1390 */;
 import ActivityFlagUtils from "ActivityFlagUtils" /* 11136 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import ApplicationStore from "ApplicationStore" /* 5124 */;
 import RunningGameStore from "RunningGameStore" /* 2006 */;
@@ -20,22 +20,10 @@ import DetectableGameStore from "DetectableGameStore" /* 2024 */;
 import ExternalStreamingStore from "ExternalStreamingStore" /* 11133 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import SessionsStore from "SessionsStore" /* 4914 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-let application_id, set;
-
-let closure_17;
-let closure_18;
-let closure_19;
+require = fn;
 function updateActivities() {
-  let id;
-  let obj3;
-  let streamerActiveStreamMetadata;
-  let tmp22;
   const items = [];
-  const tmp = items;
-  let tmp2 = streamerActiveStreamMetadata;
   const CustomStatusSetting = items(streamerActiveStreamMetadata[15]).CustomStatusSetting;
   const setting = CustomStatusSetting.getSetting();
   let tmp4 = null != setting;
@@ -44,12 +32,8 @@ function updateActivities() {
     if (!tmp5) {
       const _Date = Date;
       const _Number = Number;
-      const self = this;
-      const self2 = this;
-      const _Date2 = Date;
-      const self3 = this;
-      const self4 = this;
       const date = new Date(Number(setting.expiresAtMs));
+      const _Date2 = Date;
       const time = date.getTime();
       const date1 = new Date();
       tmp5 = time - date1.getTime() > 0;
@@ -57,84 +41,80 @@ function updateActivities() {
     tmp4 = tmp5;
   }
   if (tmp4) {
-    const push = items.push;
+    items.push(tmp(tmp2[16]).getActivityFromCustomStatus(setting));
     const tmpResult = tmp(tmp2[16]);
-    push(tmpResult.getActivityFromCustomStatus(setting));
   }
   const items1 = [...FirstPartyRichPresenceStore.getActivities()];
   items.push.apply(items1);
   const stream = ExternalStreamingStore.getStream();
   if (null != stream) {
-    const push2 = items.push;
     const obj = { type: constants.STREAMING };
     const merged = Object.assign(stream);
-    push2(obj);
+    items.push(obj);
   }
-  const self5 = this;
-  set = new Set();
-  const arr3 = set(tmp2[17]);
-  const item = arr3.forEach(closure_21, (arg0) => {
-    let tmp;
+  const set = new Set();
+  const item = set(streamerActiveStreamMetadata[17]).forEach(closure_21, (arg0) => {
     [, tmp] = arg0;
     if (null != tmp.application_id) {
       set.add(tmp.name);
       items.push(tmp);
     }
   });
-  const tmp20 = null != ApplicationStreamingStore.getCurrentUserActiveStream();
+  const arr3 = set(streamerActiveStreamMetadata[17]);
+  const tmp22 = set;
   const visibleGame = RunningGameStore.getVisibleGame();
-  if (tmp20) {
+  if (tmp24) {
     streamerActiveStreamMetadata = ApplicationStreamingStore.getStreamerActiveStreamMetadata();
     const visibleRunningGames = RunningGameStore.getVisibleRunningGames();
     let pid;
     if (streamerActiveStreamMetadata != null) {
       pid = streamerActiveStreamMetadata.pid;
     }
-    let tmp25 = null;
+    let tmp29 = null;
     if (null != pid) {
       let found = visibleRunningGames.find((pid) => pid.pid === streamerActiveStreamMetadata.pid);
       if (found == null) {
         found = null;
       }
-      tmp25 = found;
+      tmp29 = found;
     }
-    let tmp27 = null == tmp25;
-    if (tmp27) {
+    let tmp31 = null == tmp29;
+    if (tmp31) {
       let id1;
       if (streamerActiveStreamMetadata != null) {
         id1 = streamerActiveStreamMetadata.id;
       }
-      tmp27 = null != id1;
+      tmp31 = null != id1;
     }
-    if (tmp27) {
+    if (tmp31) {
       let found1 = visibleRunningGames.find((id) => id.id === streamerActiveStreamMetadata.id);
       if (found1 == null) {
         found1 = null;
       }
-      tmp25 = found1;
+      tmp29 = found1;
     }
-    if (null != tmp25) {
-      tmp22 = tmp25;
+    if (null != tmp29) {
+      let tmp26 = tmp29;
       if (null == c22) {
-        let start = tmp25.start;
+        let start = tmp29.start;
         if (start == null) {
           const _Date3 = Date;
           start = Date.now();
         }
         c22 = start;
-        tmp22 = tmp25;
+        tmp26 = tmp29;
       }
     } else {
       c22 = null;
-      tmp22 = visibleGame;
+      tmp26 = visibleGame;
     }
   } else {
     c22 = null;
-    tmp22 = visibleGame;
+    tmp26 = visibleGame;
   }
   let sdkResolutionForPID;
-  if (null != tmp22) {
-    sdkResolutionForPID = RunningGameStore.getSdkResolutionForPID(tmp22.pid);
+  if (null != tmp26) {
+    sdkResolutionForPID = RunningGameStore.getSdkResolutionForPID(tmp26.pid);
   }
   let id2;
   if (null != sdkResolutionForPID) {
@@ -146,13 +126,12 @@ function updateActivities() {
   let someResult = null != id2;
   if (someResult) {
     const items2 = [];
-    HermesBuiltin.arraySpread(items2, remoteActivities, HermesBuiltin.arraySpread(items2, items, 0));
+    HermesBuiltin.arraySpread(remoteActivities, HermesBuiltin.arraySpread(items, 0));
     someResult = items2.some((application_id) => {
       let tmp2 = application_id.application_id === id2;
       if (!tmp2) {
         application_id = application_id.application_id;
-        const getApplication = ApplicationStore.getApplication;
-        const application = getApplication(application_id);
+        const application = ApplicationStore.getApplication(application_id);
         let canonicalGameId;
         if (application != null) {
           canonicalGameId = application.getCanonicalGameId();
@@ -162,29 +141,26 @@ function updateActivities() {
       return tmp2;
     });
   }
-  let tmp40 = null != tmp22 && null != tmp22.name;
-  if (tmp40) {
+  let tmp44 = null != tmp26 && null != tmp26.name;
+  if (tmp44) {
     if (!someResult) {
-      someResult = set.has(tmp22.name);
+      someResult = set.has(tmp26.name);
     }
     if (!someResult) {
       const items3 = [];
-      const doesGameHaveRichPresence = tmp(tmp2[19]).doesGameHaveRichPresence;
-      tmp(tmp2[19]);
-      HermesBuiltin.arraySpread(items3, remoteActivities, HermesBuiltin.arraySpread(items3, items, 0));
-      someResult = doesGameHaveRichPresence(tmp22, items3);
+      HermesBuiltin.arraySpread(remoteActivities, HermesBuiltin.arraySpread(items, 0));
+      someResult = tmp(tmp2[19]).doesGameHaveRichPresence(tmp26, items3);
+      const tmpResult3 = tmp(tmp2[19]);
     }
-    tmp40 = someResult;
+    tmp44 = someResult;
   }
-  const tmp47 = null != tmp22 && tmp22.isLauncher;
-  if (null != tmp22) {
-    if (null != tmp22.name) {
-      if (!tmp40) {
-        if (!tmp47) {
-          const findGameResult = DetectableGameStore.findGame(tmp22);
-          const obj2 = { type: constants.PLAYING, name: null, application_id: id, timestamps: obj3 };
-          ({ name: obj8.name, id } = tmp22);
-          const push3 = items.push;
+  if (null != tmp26) {
+    if (null != tmp26.name) {
+      if (!tmp44) {
+        if (!tmp50) {
+          const findGameResult = DetectableGameStore.findGame(tmp26);
+          const obj2 = { type: constants.PLAYING, name: null, application_id: null, timestamps: null };
+          ({ name: obj9.name, id } = tmp26);
           if (id == null) {
             let id3;
             if (findGameResult != null) {
@@ -192,84 +168,85 @@ function updateActivities() {
             }
             id = id3;
           }
+          obj2.application_id = id;
           let start2 = c22;
           if (c22 == null) {
-            start2 = tmp22.start;
+            start2 = tmp26.start;
           }
-          obj3 = { start: start2 };
+          const obj3 = { start: start2 };
+          obj2.timestamps = obj3;
+          const merged1 = Object.assign(tmp(tmp2[20]).maybeAddAdditionalGameMetadata(tmp26));
+          items.push(obj2);
           const tmpResult4 = tmp(tmp2[20]);
-          const merged1 = Object.assign(tmpResult4.maybeAddAdditionalGameMetadata(tmp22));
-          push3(obj2);
         }
       }
     }
   }
   const activity = SpotifyStore.getActivity();
   if (null != activity) {
-    const push4 = items.push;
     const obj4 = { type: constants.LISTENING };
     const merged2 = Object.assign(activity);
-    push4(obj4);
+    items.push(obj4);
   }
-  let flag = !tmp18(tmp2[21])(items, items);
-  set(tmp2[21])(items, items);
-  if (flag) {
+  const tmp64 = tmp22(streamerActiveStreamMetadata[21])(items, items);
+  let flag = !tmp64;
+  if (!tmp64) {
     flag = true;
   }
   return flag;
 }
+const Constants = fn(1085);
 ({ ActivityFlags: closure_17, ActivityGamePlatforms: closure_18, ActivityTypes: closure_19 } = Constants);
 let closure_20 = [];
-let closure_21 = {};
+const dependencyMap = {};
 let c22 = null;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class LocalActivityStore extends Store {
-  initialize() {
-    this.waitFor(ApplicationStore, ApplicationStreamingStore, ChannelStore, EmbeddedActivitiesStore, ExternalStreamingStore, FirstPartyRichPresenceStore, DetectableGameStore, RunningGameStore, SelectedChannelStore, SessionsStore, SocialSdkApplicationStore, SpotifyStore, UserSettingsProtoStore);
-    const items = [FirstPartyRichPresenceStore];
-    this.syncWith(items, () => updateActivities());
-  }
-  getActivities() {
-    return closure_20;
-  }
-  getPrimaryActivity() {
-    return closure_20[0];
-  }
-  getApplicationActivity(arg0) {
-    let closure_0 = arg0;
-    return this.findActivity((application_id) => application_id.application_id === closure_0);
-  }
-  getCustomStatusActivity() {
-    return this.findActivity((type) => type.type === constants.CUSTOM_STATUS);
-  }
-  findActivity(cResult) {
-    return closure_20.find(cResult);
-  }
-  getApplicationActivities() {
-    return closure_21;
-  }
-  getActivityForPID(arg0) {
-    const values = Object.values(closure_21);
-    const obj = values[Symbol.iterator]();
-    while (obj !== undefined) {
-      let tmp4 = _slicedToArray(tmp2, 2);
-      if (tmp4[0] === arg0) {
-        obj.return();
-        return tmp5;
-      }
-    }
-    return null;
-  }
 }
 const prototype = LocalActivityStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(ApplicationStore, ApplicationStreamingStore, ChannelStore, EmbeddedActivitiesStore, ExternalStreamingStore, FirstPartyRichPresenceStore, DetectableGameStore, RunningGameStore, SelectedChannelStore, SessionsStore, SocialSdkApplicationStore, SpotifyStore, UserSettingsProtoStore);
+  const items = [FirstPartyRichPresenceStore];
+  this.syncWith(items, () => updateActivities());
+};
+prototype["getActivities"] = function getActivities() {
+  return closure_20;
+};
+prototype["getPrimaryActivity"] = function getPrimaryActivity() {
+  return closure_20[0];
+};
+prototype["getApplicationActivity"] = function getApplicationActivity(arg0) {
+  closure_0 = arg0;
+  return this.findActivity((application_id) => application_id.application_id === closure_0);
+};
+prototype["getCustomStatusActivity"] = function getCustomStatusActivity() {
+  return this.findActivity((type) => type.type === constants.CUSTOM_STATUS);
+};
+prototype["findActivity"] = function findActivity(cResult) {
+  return closure_20.find(cResult);
+};
+prototype["getApplicationActivities"] = function getApplicationActivities() {
+  return closure_21;
+};
+prototype["getActivityForPID"] = function getActivityForPID(arg0) {
+  const values = Object.values(closure_21);
+  const obj = values[Symbol.iterator]();
+  while (obj !== undefined) {
+    let tmp4 = _slicedToArray(tmp2, 2);
+    if (tmp4[0] === arg0) {
+      obj.return();
+      return tmp5;
+    }
+  }
+  return null;
+};
 LocalActivityStore.displayName = "LocalActivityStore";
-let obj = {
+const localActivityStore = new LocalActivityStore(DispatcherDefault, {
   ROBLOX_SUBGAME_UPDATE: updateActivities,
   ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: updateActivities,
   OVERLAY_INITIALIZE: function handleOverlayInitialize(localActivities) {
-    const obj = {};
     const merged = Object.assign(localActivities.localActivities);
-    closure_21 = obj;
+    closure_21 = {};
     updateActivities();
   },
   START_SESSION: function handleStartSession() {
@@ -277,34 +254,29 @@ let obj = {
     updateActivities();
   },
   LOCAL_ACTIVITY_UPDATE: function handleLocalActivityUpdate(arg0) {
-    let activity;
-    let partyPrivacy;
-    let pid;
-    let socketId;
-    let tmp4;
     ({ socketId, pid, activity, partyPrivacy } = arg0);
     if (null == activity) {
-      tmp4 = null == closure_21[socketId];
+      let tmp6 = null == dependencyMap[socketId];
     } else {
       const items = [pid, activity, partyPrivacy];
-      tmp4 = _modDef1342(closure_21[socketId], items);
+      tmp6 = _modDef1342(dependencyMap[socketId], items);
     }
-    if (!tmp4) {
+    if (!tmp6) {
       if (null != activity) {
         const items1 = [pid, activity, partyPrivacy];
-        closure_21[socketId] = items1;
+        dependencyMap[socketId] = items1;
       } else {
-        delete closure_21[socketId];
+        delete tmp[tmp2];
       }
     }
-    let tmp7 = !tmp4;
-    if (tmp4) {
-      tmp7 = updateActivities();
+    let tmp10 = !tmp6;
+    if (tmp6) {
+      tmp10 = updateActivities();
     }
-    return tmp7;
+    return tmp10;
   },
   RPC_APP_DISCONNECTED: function handleRPCAppDisconnected(arg0) {
-    delete closure_21[arg0.socketId];
+    delete tmp[tmp2];
     updateActivities();
   },
   RUNNING_GAMES_CHANGE: updateActivities,
@@ -320,14 +292,10 @@ let obj = {
   STREAM_START: updateActivities,
   STREAM_STOP: updateActivities,
   USER_SETTINGS_PROTO_UPDATE: function handleUserSettingsProtoUpdate() {
-    let constants2;
-    function recalculateActivityPartyPrivacyFlags() {
-      let tmp8;
-      let tmp9;
+    (function recalculateActivityPartyPrivacyFlags() {
       obj = {};
       let flag = false;
       const entries = Object.entries(obj);
-      const tmp2 = entries[Symbol.iterator]();
       while (tmp2 !== undefined) {
         let tmp5 = _slicedToArray(tmp3, 2);
         let first = tmp5[0];
@@ -339,27 +307,24 @@ let obj = {
           num = 0;
         }
         let tmp12 = num;
-        let tmp15 = ActivityFlagUtils;
-        let computeActivityFlags = tmp15.computeActivityFlags;
-        let tmp17 = FlagUtils;
+        let obj2 = ActivityFlagUtils;
+        let obj3 = FlagUtils;
         let num2;
-        let hasFlag = tmp17.hasFlag;
         if (tmp9 != null) {
           num2 = tmp9.flags;
         }
         if (num2 == null) {
           num2 = 0;
         }
-        let hasFlagResult = hasFlag(num2, constants.INSTANCE);
-        let platform = tmp9.platform;
-        let EMBEDDED = constants2.EMBEDDED;
+        let hasFlagResult = obj3.hasFlag(num2, constants.INSTANCE);
         let tmp13Result = ActivityFlagUtils;
-        let activityFlags = computeActivityFlags(tmp9, hasFlagResult, platform === EMBEDDED, tmp13Result.isContextlessEmbeddedActivity(tmp9), tmp11);
+        let activityFlags = obj2.computeActivityFlags(tmp9, hasFlagResult, tmp9.platform === constants2.EMBEDDED, tmp13Result.isContextlessEmbeddedActivity(tmp9), tmp11);
         if (activityFlags !== tmp12) {
           let items = [tmp8, , ];
-          let obj2 = { flags: tmp26 };
+          let obj4 = {};
           let merged = Object.assign(tmp9);
-          items[1] = obj2;
+          obj4.flags = tmp24;
+          items[1] = obj4;
           items[2] = tmp11;
           obj[first] = items;
           flag = true;
@@ -375,14 +340,13 @@ let obj = {
         str = "APPLICATION_ACTIVITIES_CHANGED";
       }
       return str;
-    }
-    recalculateActivityPartyPrivacyFlags();
-    let tmp2 = updateActivities();
+    })();
+    updateActivities();
   },
   EMBEDDED_ACTIVITY_CLOSE: updateActivities,
   RUNNING_GAME_TOGGLE_DETECTION: updateActivities
-};
-const localActivityStore = new LocalActivityStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/LocalActivityStore.tsx");
 
 export default localActivityStore;

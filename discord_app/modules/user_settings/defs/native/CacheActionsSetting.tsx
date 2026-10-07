@@ -1,49 +1,38 @@
 // === Module 15411: CacheActionsSetting ===
 
 // Module 15411 (CacheActionsSetting)
-import react from "react" /* 19 */;
-import get_initialized from "get initialized" /* 504 */;
-import react2 from "react" /* 576 */;
-import intl6 from "intl" /* 1126 */;
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
 import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4580 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4818 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5975 */;
-import TableRow4 from "TableRow" /* 6000 */;
-import TableRowGroup2 from "TableRowGroup" /* 6081 */;
-import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6651 */;
-import ActionSheet2 from "ActionSheet" /* 6708 */;
+import TableRow from "TableRow" /* 6000 */;
+import TableRowGroup from "TableRowGroup" /* 6081 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6651 */;
+import ActionSheet from "ActionSheet" /* 6708 */;
 import FileIcon from "FileIcon" /* 11814 */;
 import FileUpIcon from "FileUpIcon" /* 15380 */;
 import CacheActionsDiskUsageSection from "CacheActionsDiskUsageSection" /* 15412 */;
 import DiskUsageManagerDefault from "DiskUsageManager" /* 15413 */;
 import FileWarningIcon from "FileWarningIcon" /* 15417 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
-import Fragment from "Fragment" /* 21 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
 const CacheActionsDiskUsageSectionDefault = CacheActionsDiskUsageSection;
-let _require, c1, c2;
 
-let metroImportAll;
-let metroImportDefault;
+require = fn;
 function handleCacheActionPress(text) {
-  let tmp6;
-  const obj = DesignSystemsNotificationComponentsExperiment;
-  const designSystemsNotificationComponents = obj.getDesignSystemsNotificationComponents("CacheActionsSetting");
+  const designSystemsNotificationComponents = DesignSystemsNotificationComponentsExperiment.getDesignSystemsNotificationComponents("CacheActionsSetting");
   const obj2 = ToastActionCreatorsDefault;
   if (designSystemsNotificationComponents) {
-    const openMana = obj2.openMana;
     const obj3 = { text, icon: CircleInformationIcon.CircleInformationIcon };
-    openMana(text, obj3);
-    tmp6 = importDefault;
+    obj2.openMana(text, obj3);
+    let tmp6 = importDefault;
   } else {
     const obj4 = {
       key: text,
@@ -55,19 +44,450 @@ function handleCacheActionPress(text) {
     obj2.open(obj4);
     tmp6 = importDefault;
   }
+  tmp6(4860).hideActionSheet(CacheActionsActionSheet);
   const tmp6Result = tmp6(4860);
-  tmp6Result.hideActionSheet(CacheActionsActionSheet);
 }
-const useState = react.useState;
-({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+const useState = fn(19).useState;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const CacheActionsActionSheet = "CacheActionsActionSheet";
-let ReactCompilerGating = ReactCompilerGating_mod;
+fn(558);
+const ReactCompilerGating = fn(558);
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = require("c").c(25);
+  let obj = require("c");
+  const diskUsageMeasurement = require("CacheActionsDiskUsageSection").useDiskUsageMeasurement();
+  ({ diskUsageState, isCalculating, handleCalculateSize } = diskUsageMeasurement);
+  const tmp5 = _slicedToArray(useState(false), 2);
+  let first = isCalculating;
+  if (!isCalculating) {
+    first = tmp5[0];
+  }
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    let obj3 = { title: null };
+    let intl = tmp(1126).intl;
+    obj3.title = intl.string(tmp(1126).t.ZVZVwR);
+    const tmp10 = closure_7(tmp(6651).BottomSheetTitleHeader, obj3);
+    const intl2 = tmp(1126).intl;
+    const stringResult = intl2.string(tmp(1126).t.AVZpFH);
+    cResult[0] = tmp10;
+    cResult[1] = stringResult;
+    tmp7 = tmp10;
+    tmp8 = stringResult;
+  } else {
+    [tmp7, tmp8] = cResult;
+  }
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    const tmp15 = closure_7(tmp(15380).FileUpIcon, {});
+    const intl3 = tmp(1126).intl;
+    const stringResult1 = intl3.string(tmp(1126).t["/GUaXh"]);
+    cResult[2] = tmp15;
+    cResult[3] = stringResult1;
+    let tmp13 = stringResult1;
+    let tmp12 = tmp15;
+  } else {
+    tmp12 = cResult[2];
+    tmp13 = cResult[3];
+  }
+  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+    _require = asyncGeneratorStep(async () => {
+      if (dependencyMap === 2) {
+        dependencyMap = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          dependencyMap = 2;
+          if (0 === c1) {
+            if (arg0 === 1) {
+              dependencyMap = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              dependencyMap = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              c1 = 1;
+              dependencyMap = 1;
+              const obj5 = { value: tmp2(15416).writeCaches(), done: false };
+              return obj5;
+            }
+          } else if (arg0 === 1) {
+            dependencyMap = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            dependencyMap = 3;
+            const obj = { value, done: true };
+            return obj;
+          } else {
+            const intl = tmp2(1126).intl;
+            handleCacheActionPress(intl.string(tmp2(1126).t.GgUIfl));
+            dependencyMap = 3;
+            return { value: "IconComponent", done: null };
+          }
+        } catch (tmp15) {
+          dependencyMap = tmp;
+          throw tmp15;
+        }
+      }
+    });
+    const fn = function() {
+      const self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    };
+    cResult[4] = fn;
+    let tmp17 = fn;
+  } else {
+    tmp17 = cResult[4];
+  }
+  if (cResult[5] !== first) {
+    let obj4 = { icon: tmp12, label: tmp13, disabled: first, onPress: tmp17 };
+    const tmp21 = closure_7(tmp(6000).TableRow, obj4);
+    cResult[5] = first;
+    cResult[6] = tmp21;
+    let tmp19 = tmp21;
+  } else {
+    tmp19 = cResult[6];
+  }
+  if (cResult[7] === handleCalculateSize) {
+    if (cResult[8] === first) {
+      if (cResult[9] === isCalculating) {
+        let tmp22 = cResult[10];
+      }
+      const _Symbol = Symbol;
+      if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+        const tmp29 = closure_7(tmp(15417).FileWarningIcon, { color: "text-feedback-critical" });
+        const intl5 = tmp(1126).intl;
+        const stringResult2 = intl5.string(tmp(1126).t.tgwiMO);
+        cResult[11] = tmp29;
+        cResult[12] = stringResult2;
+        let tmp27 = stringResult2;
+        let tmp26 = tmp29;
+      } else {
+        tmp26 = cResult[11];
+        tmp27 = cResult[12];
+      }
+      const _Symbol2 = Symbol;
+      if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
+        closure_129_0 = asyncGeneratorStep(async () => {
+          if (dependencyMap === 2) {
+            dependencyMap = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp4 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              const obj2 = { value, done: true };
+              return obj2;
+            } else {
+              return { value: "IconComponent", done: null };
+            }
+          } else {
+            try {
+              dependencyMap = 2;
+              if (0 === v1) {
+                if (arg0 === 1) {
+                  dependencyMap = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  dependencyMap = 3;
+                  const obj3 = { value, done: true };
+                  return obj3;
+                } else {
+                  v1(15413).clearCaches();
+                  const obj5 = v1(15413);
+                  tmp2(15416).clearCaches();
+                  const obj6 = tmp2(15416);
+                  v1 = 1;
+                  dependencyMap = 1;
+                  const obj4 = { value: tmp2(4857).browserManagerClearWebsiteData(), done: false };
+                  return obj4;
+                }
+              } else if (arg0 === 1) {
+                dependencyMap = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                dependencyMap = 3;
+                const obj = { value, done: true };
+                return obj;
+              } else {
+                const intl = tmp2(1126).intl;
+                handleCacheActionPress(intl.string(tmp2(1126).t["23xR5w"]));
+                dependencyMap = 3;
+                return { value: "IconComponent", done: null };
+              }
+            } catch (tmp13) {
+              dependencyMap = tmp;
+              throw tmp13;
+            }
+          }
+        });
+        const fn2 = function() {
+          const self = this;
+          const apply = closure_0.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
+        };
+        cResult[13] = fn2;
+        let tmp31 = fn2;
+      } else {
+        tmp31 = cResult[13];
+      }
+      if (cResult[14] !== first) {
+        let obj5 = { variant: "danger", icon: tmp26, label: tmp27, disabled: first, onPress: tmp31 };
+        const tmp35 = closure_7(tmp(6000).TableRow, obj5);
+        cResult[14] = first;
+        cResult[15] = tmp35;
+        let tmp33 = tmp35;
+      } else {
+        tmp33 = cResult[15];
+      }
+      if (cResult[16] === tmp33) {
+        if (cResult[17] === tmp19) {
+          if (cResult[18] === tmp22) {
+            let tmp36 = cResult[19];
+          }
+          if (cResult[20] !== diskUsageState) {
+            let tmp41 = null != diskUsageState;
+            if (tmp41) {
+              let obj6 = { state: diskUsageState, onDiagnosticsBusyChange: tmp5[1] };
+              tmp41 = closure_7(CacheActionsDiskUsageSectionDefault, obj6);
+            }
+            cResult[20] = diskUsageState;
+            cResult[21] = tmp41;
+            let tmp39 = tmp41;
+          } else {
+            tmp39 = cResult[21];
+          }
+          if (cResult[22] === tmp36) {
+            if (cResult[23] === tmp39) {
+              let tmp44 = cResult[24];
+            }
+            return tmp44;
+          }
+          const obj7 = { header: tmp7, dismissAccessibilityLabel: tmp8, children: null };
+          const items = [tmp36, tmp39];
+          obj7.children = items;
+          const tmp46 = closure_8(tmp(6708).ActionSheet, obj7);
+          cResult[22] = tmp36;
+          cResult[23] = tmp39;
+          cResult[24] = tmp46;
+          tmp44 = tmp46;
+        }
+      }
+      const obj8 = { hasIcons: true, children: null };
+      const items1 = [tmp19, tmp22, tmp33];
+      obj8.children = items1;
+      const tmp38 = closure_8(tmp(6081).TableRowGroup, obj8);
+      cResult[16] = tmp33;
+      cResult[17] = tmp19;
+      cResult[18] = tmp22;
+      cResult[19] = tmp38;
+      tmp36 = tmp38;
+    }
+  }
+  let tmp24Result2 = null != DiskUsageManagerDefault.calculateSize;
+  if (tmp24Result2) {
+    const obj9 = { icon: closure_7(tmp(11814).FileIcon, {}), label: null, trailing: null, disabled: null, accessibilityState: null, onPress: null };
+    const intl4 = tmp(1126).intl;
+    const t = tmp(1126).t;
+    obj9.label = intl4.string(isCalculating ? t.Ynmbie : t.iAFGRu);
+    let tmp24Result = null;
+    if (isCalculating) {
+      tmp24Result = closure_7(tmp(5975).ActivityIndicator, { size: "small", accessible: false });
+    }
+    obj9.trailing = tmp24Result;
+    obj9.disabled = first;
+    const obj10 = { busy: isCalculating, disabled: first };
+    obj9.accessibilityState = obj10;
+    obj9.onPress = handleCalculateSize;
+    tmp24Result2 = closure_7(tmp(6000).TableRow, obj9);
+  }
+  cResult[7] = handleCalculateSize;
+  cResult[8] = first;
+  cResult[9] = isCalculating;
+  cResult[10] = tmp24Result2;
+  tmp22 = tmp24Result2;
+  let obj2 = require("CacheActionsDiskUsageSection");
+}) : (() => {
+  const diskUsageMeasurement = CacheActionsDiskUsageSection.useDiskUsageMeasurement();
+  ({ diskUsageState, isCalculating } = diskUsageMeasurement);
+  const tmp4 = _slicedToArray(useState(false), 2);
+  let first = isCalculating;
+  if (!isCalculating) {
+    first = tmp4[0];
+  }
+  let obj2 = { header: null, dismissAccessibilityLabel: null, children: null };
+  let obj3 = { title: null };
+  let intl = util.intl;
+  obj3.title = intl.string(util.t.ZVZVwR);
+  obj2.header = React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj3);
+  const intl2 = util.intl;
+  obj2.dismissAccessibilityLabel = intl2.string(util.t.AVZpFH);
+  let obj4 = { icon: React5(FileUpIcon.FileUpIcon, {}), label: null, disabled: null, onPress: null };
+  const intl3 = util.intl;
+  obj4.label = intl3.string(util.t["/GUaXh"]);
+  obj4.disabled = first;
+  obj4.onPress = asyncGeneratorStep(async () => {
+    if (c2 === 2) {
+      c2 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c2 = 2;
+        if (0 === c1) {
+          if (arg0 === 1) {
+            c2 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c2 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_0 = tmp2;
+            c1 = 1;
+            c2 = 1;
+            const obj5 = { value: require("CacheActionCreators").writeCaches(), done: false };
+            return obj5;
+          }
+        } else if (arg0 === 1) {
+          c2 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c2 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          const intl = closure_128_0(closure_128_2[9]).intl;
+          closure_128_10(intl.string(closure_128_0(closure_128_2[9]).t.GgUIfl));
+          c2 = 3;
+          return { value: "IconComponent", done: null };
+        }
+      } catch (tmp15) {
+        c2 = tmp;
+        throw tmp15;
+      }
+    }
+  });
+  const items = [React5(TableRow.TableRow, obj4), , ];
+  let tmp7Result3 = null != DiskUsageManagerDefault.calculateSize;
+  if (tmp7Result3) {
+    let obj5 = { icon: React5(FileIcon.FileIcon, {}), label: null, trailing: null, disabled: null, accessibilityState: null, onPress: null };
+    const intl4 = util.intl;
+    const t = util.t;
+    obj5.label = intl4.string(isCalculating ? t.Ynmbie : t.iAFGRu);
+    let tmp7Result = null;
+    if (isCalculating) {
+      tmp7Result = React5(ActivityIndicator_ActivityIndicator.ActivityIndicator, { size: "small", accessible: false });
+    }
+    obj5.trailing = tmp7Result;
+    obj5.disabled = first;
+    let obj6 = { busy: isCalculating, disabled: first };
+    obj5.accessibilityState = obj6;
+    obj5.onPress = diskUsageMeasurement.handleCalculateSize;
+    tmp7Result3 = React5(TableRow.TableRow, obj5);
+  }
+  let obj7 = { hasIcons: true, children: null };
+  items[1] = tmp7Result3;
+  const obj8 = { variant: "danger", icon: React5(FileWarningIcon.FileWarningIcon, { color: "text-feedback-critical" }), label: null, disabled: null, onPress: null };
+  const intl5 = util.intl;
+  obj8.label = intl5.string(util.t.tgwiMO);
+  obj8.disabled = first;
+  obj8.onPress = asyncGeneratorStep(async () => {
+    if (c2 === 2) {
+      c2 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj5 = { value, done: true };
+        return obj5;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c2 = 2;
+        if (0 === c1) {
+          if (arg0 === 1) {
+            c2 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c2 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            closure_0 = tmp2;
+            DiskUsageManagerDefault.clearCaches();
+            require("CacheActionCreators").clearCaches();
+            const obj3 = require("CacheActionCreators");
+            c1 = 1;
+            c2 = 1;
+            const obj7 = { value: require("BrowserManager").browserManagerClearWebsiteData(), done: false };
+            return obj7;
+          }
+        } else if (arg0 === 1) {
+          c2 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c2 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          const intl = closure_128_0(closure_128_2[9]).intl;
+          closure_128_10(intl.string(closure_128_0(closure_128_2[9]).t["23xR5w"]));
+          c2 = 3;
+          return { value: "IconComponent", done: null };
+        }
+      } catch (tmp21) {
+        c2 = tmp;
+        throw tmp21;
+      }
+    }
+  });
+  items[2] = React5(TableRow.TableRow, obj8);
+  obj7.children = items;
+  const items1 = [closure_1_8(TableRowGroup.TableRowGroup, obj7), ];
+  let tmp7Result4 = null != diskUsageState;
+  if (tmp7Result4) {
+    const obj9 = { state: diskUsageState, onDiagnosticsBusyChange: tmp4[1] };
+    tmp7Result4 = React5(CacheActionsDiskUsageSectionDefault, obj9);
+  }
+  items1[1] = tmp7Result4;
+  obj2.children = items1;
+  return closure_1_8(ActionSheet.ActionSheet, obj2);
+});
+const SettingBuilders = fn(11142);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let connected;
-  let tmp4;
-  let tmp5;
-  const obj = react2;
-  const cResult = obj.c(2);
+  const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GatewayConnectionStore];
     const fn = function n() {
@@ -80,503 +500,53 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const tmpResult = get_initialized;
-  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+  const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
   const DeveloperMode = UserSettings.DeveloperMode;
-  const tmp8 = DeveloperMode.useSetting() && stateFromStores;
-  return tmp8;
+  const tmpResult = initialize;
+  return DeveloperMode.useSetting() && stateFromStores;
 }) : (() => {
-  let connected;
   const items = [GatewayConnectionStore];
-  const obj = get_initialized;
-  const stateFromStores = obj.useStateFromStores(items, () => connected.isConnected());
+  const stateFromStores = initialize.useStateFromStores(items, () => connected.isConnected());
   const DeveloperMode = UserSettings.DeveloperMode;
-  const tmp2 = DeveloperMode.useSetting() && stateFromStores;
-  return tmp2;
+  return DeveloperMode.useSetting() && stateFromStores;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let closure_0;
-  let diskUsageState;
-  let handleCalculateSize;
-  let intl;
-  let isCalculating;
-  let items;
-  let items1;
-  let obj10;
-  let string;
-  let t;
-  let tmp13;
-  let tmp14;
-  let tmp18;
-  let tmp20;
-  let tmp25Result;
-  let tmp8;
-  let tmp9;
-  const tmp = _require;
-  let obj = require("react");
-  const cResult = obj.c(25);
-  let obj2 = require("CacheActionsDiskUsageSection");
-  const diskUsageMeasurement = obj2.useDiskUsageMeasurement();
-  ({ diskUsageState, isCalculating, handleCalculateSize } = diskUsageMeasurement);
-  const tmp5 = _slicedToArray(useState(false), 2);
-  let first = isCalculating;
-  const tmp6 = tmp5[1];
-  if (!isCalculating) {
-    first = tmp5[0];
-  }
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj3 = { title: intl.string(tmp(1126).t.ZVZVwR) };
-    const BottomSheetTitleHeader = tmp(6651).BottomSheetTitleHeader;
-    intl = tmp(1126).intl;
-    const tmp11 = closure_7(BottomSheetTitleHeader, obj3);
-    const intl2 = tmp(1126).intl;
-    const stringResult = intl2.string(tmp(1126).t.AVZpFH);
-    cResult[0] = tmp11;
-    cResult[1] = stringResult;
-    tmp8 = tmp11;
-    tmp9 = stringResult;
-  } else {
-    [tmp8, tmp9] = cResult;
-  }
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp16 = closure_7(tmp(15380).FileUpIcon, {});
-    const intl3 = tmp(1126).intl;
-    const stringResult1 = intl3.string(tmp(1126).t["/GUaXh"]);
-    cResult[2] = tmp16;
-    cResult[3] = stringResult1;
-    tmp14 = stringResult1;
-    tmp13 = tmp16;
-  } else {
-    tmp13 = cResult[2];
-    tmp14 = cResult[3];
-  }
-  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    _require = _asyncToGenerator(async () => {
-      if (c2 === 2) {
-        c2 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c2 = 2;
-          if (0 === c1) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              c1 = 1;
-              const obj2 = tmp(c2[17]);
-              c2 = 1;
-              const obj5 = { value: obj2.writeCaches(), done: false };
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c2 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            const obj = { value, done: true };
-            return obj;
-          } else {
-            const intl = tmp(c2[9]).intl;
-            handleCacheActionPress(intl.string(tmp(c2[9]).t.GgUIfl));
-            c2 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp14) {
-          c2 = 3;
-          throw tmp14;
-        }
-      }
-    });
-    const fn = function() {
-      return closure_0(...arguments);
-    };
-    cResult[4] = fn;
-    tmp18 = fn;
-  } else {
-    tmp18 = cResult[4];
-  }
-  if (cResult[5] !== first) {
-    let obj4 = { icon: tmp13, label: tmp14, disabled: first, onPress: tmp18 };
-    const tmp22 = closure_7(tmp(6000).TableRow, obj4);
-    cResult[5] = first;
-    cResult[6] = tmp22;
-    tmp20 = tmp22;
-  } else {
-    tmp20 = cResult[6];
-  }
-  if (cResult[7] === handleCalculateSize) {
-    if (cResult[8] === first) {
-      let tmp23;
-      let tmp28;
-      let tmp27;
-      let tmp32;
-      let tmp34;
-      if (cResult[9] === isCalculating) {
-        tmp23 = cResult[10];
-      }
-      const _Symbol = Symbol;
-      if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp30 = closure_7(tmp(15417).FileWarningIcon, { color: "text-feedback-critical" });
-        const intl5 = tmp(1126).intl;
-        const stringResult2 = intl5.string(tmp(1126).t.tgwiMO);
-        cResult[11] = tmp30;
-        cResult[12] = stringResult2;
-        tmp28 = stringResult2;
-        tmp27 = tmp30;
-      } else {
-        tmp27 = cResult[11];
-        tmp28 = cResult[12];
-      }
-      const _Symbol2 = Symbol;
-      if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-        _require = _asyncToGenerator(async () => {
-          let v1;
-          if (c2 === 2) {
-            c2 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              const obj2 = { value, done: true };
-              return obj2;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
-          } else {
-            try {
-              c2 = 2;
-              if (0 === v1) {
-                if (arg0 === 1) {
-                  c2 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c2 = 3;
-                  const obj3 = { value, done: true };
-                  return obj3;
-                } else {
-                  const obj5 = v1(c2[19]);
-                  obj5.clearCaches();
-                  const obj6 = tmp(c2[17]);
-                  obj6.clearCaches();
-                  v1 = 1;
-                  const obj7 = tmp(c2[23]);
-                  c2 = 1;
-                  const obj4 = { value: obj7.browserManagerClearWebsiteData(), done: false };
-                  return obj4;
-                }
-              } else if (arg0 === 1) {
-                c2 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c2 = 3;
-                const obj = { value, done: true };
-                return obj;
-              } else {
-                const intl = tmp(c2[9]).intl;
-                closure_1_10(intl.string(tmp(c2[9]).t["23xR5w"]));
-                c2 = 3;
-                return { value: "IconComponent", done: null };
-              }
-            } catch (tmp12) {
-              c2 = 3;
-              throw tmp12;
-            }
-          }
-        });
-        const fn2 = function() {
-          return closure_0(...arguments);
-        };
-        cResult[13] = fn2;
-        tmp32 = fn2;
-      } else {
-        tmp32 = cResult[13];
-      }
-      if (cResult[14] !== first) {
-        let obj5 = { variant: "danger", icon: tmp27, label: tmp28, disabled: first, onPress: tmp32 };
-        const tmp36 = closure_7(tmp(6000).TableRow, obj5);
-        cResult[14] = first;
-        cResult[15] = tmp36;
-        tmp34 = tmp36;
-      } else {
-        tmp34 = cResult[15];
-      }
-      if (cResult[16] === tmp34) {
-        if (cResult[17] === tmp20) {
-          let tmp37;
-          let tmp40;
-          if (cResult[18] === tmp23) {
-            tmp37 = cResult[19];
-          }
-          if (cResult[20] !== diskUsageState) {
-            let tmp42 = null != diskUsageState;
-            if (tmp42) {
-              let obj6 = { state: diskUsageState, onDiagnosticsBusyChange: tmp6 };
-              tmp42 = closure_7(CacheActionsDiskUsageSectionDefault, obj6);
-            }
-            cResult[20] = diskUsageState;
-            cResult[21] = tmp42;
-            tmp40 = tmp42;
-          } else {
-            tmp40 = cResult[21];
-          }
-          if (cResult[22] === tmp37) {
-            let tmp45;
-            if (cResult[23] === tmp40) {
-              tmp45 = cResult[24];
-            }
-            return tmp45;
-          }
-          let obj7 = { header: tmp8, dismissAccessibilityLabel: tmp9, children: items };
-          items = [tmp37, tmp40];
-          const tmp47 = closure_8(tmp(6708).ActionSheet, obj7);
-          cResult[22] = tmp37;
-          cResult[23] = tmp40;
-          cResult[24] = tmp47;
-          tmp45 = tmp47;
-        }
-      }
-      const obj8 = { hasIcons: true, children: items1 };
-      items1 = [tmp20, tmp23, tmp34];
-      const tmp39 = closure_8(tmp(6081).TableRowGroup, obj8);
-      cResult[16] = tmp34;
-      cResult[17] = tmp20;
-      cResult[18] = tmp23;
-      cResult[19] = tmp39;
-      tmp37 = tmp39;
-    }
-  }
-  let tmp25Result2 = null != DiskUsageManagerDefault.calculateSize;
-  if (tmp25Result2) {
-    const obj9 = { icon: closure_7(tmp(11814).FileIcon, {}), label: string(isCalculating ? t.Ynmbie : t.iAFGRu), trailing: tmp25Result, disabled: first, accessibilityState: obj10, onPress: handleCalculateSize };
-    const TableRow = tmp(6000).TableRow;
-    const intl4 = tmp(1126).intl;
-    string = intl4.string;
-    t = tmp(1126).t;
-    tmp25Result = null;
-    if (isCalculating) {
-      tmp25Result = closure_7(tmp(5975).ActivityIndicator, { size: "small", accessible: false });
-    }
-    obj10 = { busy: isCalculating, disabled: first };
-    tmp25Result2 = closure_7(TableRow, obj9);
-  }
-  cResult[7] = handleCalculateSize;
-  cResult[8] = first;
-  cResult[9] = isCalculating;
-  cResult[10] = tmp25Result2;
-  tmp23 = tmp25Result2;
-}) : (() => {
-  let BottomSheetTitleHeader;
-  let diskUsageState;
-  let intl;
-  let intl2;
-  let intl3;
-  let intl5;
-  let isCalculating;
-  let items1;
-  let obj3;
-  let obj6;
-  let string;
-  let t;
-  let tmp8Result;
-  let obj = CacheActionsDiskUsageSection;
-  const diskUsageMeasurement = obj.useDiskUsageMeasurement();
-  ({ diskUsageState, isCalculating } = diskUsageMeasurement);
-  const handleCalculateSize = diskUsageMeasurement.handleCalculateSize;
-  const tmp4 = _slicedToArray(useState(false), 2);
-  let first = isCalculating;
-  const tmp5 = tmp4[1];
-  if (!isCalculating) {
-    first = tmp4[0];
-  }
-  let obj2 = { header: metroImportDefault(BottomSheetTitleHeader, obj3), dismissAccessibilityLabel: intl2.string(intl6.t.AVZpFH), children: items1 };
-  const ActionSheet = ActionSheet2.ActionSheet;
-  obj3 = { title: intl.string(intl6.t.ZVZVwR) };
-  BottomSheetTitleHeader = BottomSheetTitleHeader2.BottomSheetTitleHeader;
-  intl = intl6.intl;
-  intl2 = intl6.intl;
-  const TableRowGroup = TableRowGroup2.TableRowGroup;
-  let obj4 = {
-    icon: metroImportDefault(FileUpIcon.FileUpIcon, {}),
-    label: intl3.string(intl6.t["/GUaXh"]),
-    disabled: first,
-    onPress: _asyncToGenerator(async () => {
-      let obj2;
-      if (c2 === 2) {
-        c2 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c2 = 2;
-          if (0 === c1) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              let closure_0 = tmp;
-              c1 = 1;
-              c2 = 1;
-              const obj5 = { value: obj2.writeCaches(), done: false };
-              obj2 = require("CacheActionCreators");
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c2 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            const obj = { value, done: true };
-            return obj;
-          } else {
-            const intl = closure_128_0(closure_128_2[9]).intl;
-            closure_128_10(intl.string(closure_128_0(closure_128_2[9]).t.GgUIfl));
-            c2 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp14) {
-          c2 = 3;
-          throw tmp14;
-        }
-      }
-    })
-  };
-  const TableRow = TableRow4.TableRow;
-  intl3 = intl6.intl;
-  const items = [metroImportDefault(TableRow, obj4), , ];
-  let tmp8Result3 = null != DiskUsageManagerDefault.calculateSize;
-  if (tmp8Result3) {
-    let obj5 = { icon: metroImportDefault(FileIcon.FileIcon, {}), label: string(isCalculating ? t.Ynmbie : t.iAFGRu), trailing: tmp8Result, disabled: first, accessibilityState: obj6, onPress: handleCalculateSize };
-    const TableRow2 = TableRow4.TableRow;
-    const intl4 = intl6.intl;
-    string = intl4.string;
-    t = intl6.t;
-    tmp8Result = null;
-    if (isCalculating) {
-      tmp8Result = metroImportDefault(ActivityIndicator_ActivityIndicator.ActivityIndicator, { size: "small", accessible: false });
-    }
-    obj6 = { busy: isCalculating, disabled: first };
-    tmp8Result3 = metroImportDefault(TableRow2, obj5);
-  }
-  let obj7 = { hasIcons: true, children: items };
-  items[1] = tmp8Result3;
-  const obj8 = {
-    variant: "danger",
-    icon: metroImportDefault(FileWarningIcon.FileWarningIcon, { color: "text-feedback-critical" }),
-    label: intl5.string(intl6.t.tgwiMO),
-    disabled: first,
-    onPress: _asyncToGenerator(async () => {
-      let obj4;
-      if (c2 === 2) {
-        c2 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj5 = { value, done: true };
-          return obj5;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c2 = 2;
-          if (0 === c1) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
-            } else {
-              let closure_0 = tmp;
-              const obj2 = DiskUsageManagerDefault;
-              obj2.clearCaches();
-              const obj3 = require("CacheActionCreators");
-              obj3.clearCaches();
-              c1 = 1;
-              c2 = 1;
-              const obj7 = { value: obj4.browserManagerClearWebsiteData(), done: false };
-              obj4 = require("BrowserManager");
-              return obj7;
-            }
-          } else if (arg0 === 1) {
-            c2 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            const obj = { value, done: true };
-            return obj;
-          } else {
-            const intl = closure_128_0(closure_128_2[9]).intl;
-            closure_128_10(intl.string(closure_128_0(closure_128_2[9]).t["23xR5w"]));
-            c2 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp20) {
-          c2 = 3;
-          throw tmp20;
-        }
-      }
-    })
-  };
-  const TableRow3 = TableRow4.TableRow;
-  intl5 = intl6.intl;
-  items[2] = metroImportDefault(TableRow3, obj8);
-  items1 = [metroImportAll(TableRowGroup, obj7), ];
-  let tmp8Result4 = null != diskUsageState;
-  if (tmp8Result4) {
-    const obj9 = { state: diskUsageState, onDiagnosticsBusyChange: tmp5 };
-    tmp8Result4 = metroImportDefault(CacheActionsDiskUsageSectionDefault, obj9);
-  }
-  items1[1] = tmp8Result4;
-  return metroImportAll(ActionSheet, obj2);
-});
-let obj = {
+const pressable = SettingBuilders.createPressable({
   useTitle: function useCacheActionsTitle() {
-    const intl = intl6.intl;
-    return intl.string(intl6.t.ZVZVwR);
+    const intl = util.intl;
+    return intl.string(util.t.ZVZVwR);
   },
   parent: null,
-  IconComponent: FileWarningIcon.FileWarningIcon,
+  IconComponent: fn(15417).FileWarningIcon,
   onPress: function handleCacheActionsPress() {
-    const obj = ActionSheetActionCreatorsDefault;
-    const obj2 = { default: closure_11 };
-    obj.openLazy(Promise.resolve(obj2), CacheActionsActionSheet);
+    ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: closure_11 }), CacheActionsActionSheet);
   },
-  usePredicate: tmp3,
+  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(2);
+    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+      const items = [GatewayConnectionStore];
+      const fn = function n() {
+        return connected.isConnected();
+      };
+      cResult[0] = items;
+      cResult[1] = fn;
+      tmp4 = items;
+      tmp5 = fn;
+    } else {
+      [tmp4, tmp5] = cResult;
+    }
+    const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+    const DeveloperMode = UserSettings.DeveloperMode;
+    const tmpResult = initialize;
+    return DeveloperMode.useSetting() && stateFromStores;
+  }) : (() => {
+    const items = [GatewayConnectionStore];
+    const stateFromStores = initialize.useStateFromStores(items, () => connected.isConnected());
+    const DeveloperMode = UserSettings.DeveloperMode;
+    return DeveloperMode.useSetting() && stateFromStores;
+  }),
   withArrow: true
-};
-const pressable = SettingBuilders.createPressable(obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/CacheActionsSetting.tsx");
 
 export default pressable;

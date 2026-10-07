@@ -1,83 +1,68 @@
 // === Module 13317: Footer ===
 
 // Module 13317 (Footer)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
-import intl2 from "intl" /* 1126 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import components_Button_Button from "components/Button/Button" /* 5601 */;
 import FastImageDefault from "FastImage" /* 5981 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
 import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 13318 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13319 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _modDef13319 from "module_13319" /* 13319 */;
+import noop from "module_19" /* 19 */;
 
-let closure_4;
-let hasOwnProperty;
-let metroRequire;
-const View = react_native.View;
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = Fragment);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4896);
 let closure_7 = createStyles.createStyles({ container: { flex: 1, flexDirection: "column", alignItems: "center", width: "100%" }, footerText: { marginBottom: 24 }, button: { marginBottom: 40 }, easterEggSpacing: { position: "absolute", top: 40 } });
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let buttonText;
-  let intl;
-  let items;
-  let items1;
-  let obj7;
-  let openPayment;
-  let showSubscribeButton;
-  let style;
-  const obj = react2;
-  const cResult = obj.c(15);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/premium/native/Footer.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(15);
   ({ style, showSubscribeButton } = arg0);
   const tmp4 = closure_7();
-  const tmp6 = useOpenPremiumMarketingPaymentDefault;
-  ({ openPayment, buttonText } = tmp6(AnalyticsLocationDefault.PREMIUM_MARKETING_FOOTER));
-  tmp6(AnalyticsLocationDefault.PREMIUM_MARKETING_FOOTER);
+  ({ openPayment, buttonText } = useOpenPremiumMarketingPaymentDefault(AnalyticsLocationDefault.PREMIUM_MARKETING_FOOTER));
   if (cResult[0] === style) {
-    let tmp8;
     if (cResult[1] === tmp4.container) {
-      tmp8 = cResult[2];
+      let tmp8 = cResult[2];
     }
     if (cResult[3] === buttonText) {
       if (cResult[4] === openPayment) {
         if (cResult[5] === showSubscribeButton) {
           if (cResult[6] === tmp4.button) {
-            let tmp9;
-            let tmp16;
             if (cResult[7] === tmp4.footerText) {
-              tmp9 = cResult[8];
+              let tmp9 = cResult[8];
             }
             let easterEggSpacing = null;
             if (!showSubscribeButton) {
               easterEggSpacing = tmp4.easterEggSpacing;
             }
             if (cResult[9] !== easterEggSpacing) {
-              const obj2 = { style: easterEggSpacing, source: AssetRegistryDefault };
-              const tmp5Result = FastImageDefault;
-              const tmp19 = React3(tmp5Result, obj2);
+              const obj2 = { style: easterEggSpacing, source: _modDef13319 };
+              const tmp19 = React4(FastImageDefault, obj2);
               cResult[9] = easterEggSpacing;
               cResult[10] = tmp19;
-              tmp16 = tmp19;
+              let tmp16 = tmp19;
+              const tmp5Result = FastImageDefault;
             } else {
               tmp16 = cResult[10];
             }
             if (cResult[11] === tmp8) {
               if (cResult[12] === tmp9) {
-                let tmp20;
                 if (cResult[13] === tmp16) {
-                  tmp20 = cResult[14];
+                  let tmp20 = cResult[14];
                 }
                 return tmp20;
               }
             }
-            const obj3 = { style: tmp8, children: items };
-            items = [tmp9, tmp16];
-            const tmp23 = metroRequire(View, obj3);
+            const obj3 = { style: tmp8, children: null };
+            const items = [tmp9, tmp16];
+            obj3.children = items;
+            const tmp23 = timestampProducer(View, obj3);
             cResult[11] = tmp8;
             cResult[12] = tmp9;
             cResult[13] = tmp16;
@@ -88,16 +73,18 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     let tmp10 = showSubscribeButton;
-    if (tmp10) {
-      const obj4 = { children: items1 };
-      const obj5 = { style: tmp4.footerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: intl.string(intl2.t["2bSPbq"]) };
-      const Text = Text_Text.Text;
-      intl = intl2.intl;
-      items1 = [React3(Text, obj5), ];
-      const obj6 = { style: tmp4.button, children: React3(components_Button_Button.Button, obj7) };
-      obj7 = { text: buttonText, variant: "primary", size: "lg", onPress: openPayment, grow: true };
-      items1[1] = React3(View, obj6);
-      tmp10 = metroRequire(hasOwnProperty, obj4);
+    if (showSubscribeButton) {
+      const obj4 = { children: null };
+      const obj5 = { style: tmp4.footerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+      const intl = util.intl;
+      obj5.children = intl.string(util.t["2bSPbq"]);
+      const items1 = [React4(Text_Text.Text, obj5), ];
+      const obj6 = { style: tmp4.button, children: null };
+      const obj7 = { text: buttonText, variant: "primary", size: "lg", onPress: openPayment, grow: true };
+      obj6.children = React4(components_Button_Button.Button, obj7);
+      items1[1] = React4(View, obj6);
+      obj4.children = items1;
+      tmp10 = timestampProducer(hasOwnProperty, obj4);
     }
     cResult[3] = buttonText;
     cResult[4] = openPayment;
@@ -112,41 +99,35 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.container;
   cResult[2] = items2;
   tmp8 = items2;
+  const tmp6Result = useOpenPremiumMarketingPaymentDefault(AnalyticsLocationDefault.PREMIUM_MARKETING_FOOTER);
 }) : ((showSubscribeButton) => {
-  let intl;
-  let items;
-  let items1;
-  let items2;
-  let obj5;
   showSubscribeButton = showSubscribeButton.showSubscribeButton;
-  const style = showSubscribeButton.style;
   const tmp = closure_7();
-  const tmp4 = useOpenPremiumMarketingPaymentDefault;
-  tmp4(AnalyticsLocationDefault.PREMIUM_MARKETING_FOOTER);
-  const obj = { style: items, children: items2 };
-  items = [tmp.container, style];
+  useOpenPremiumMarketingPaymentDefault(AnalyticsLocationDefault.PREMIUM_MARKETING_FOOTER);
+  const obj = { style: null, children: null };
+  const items = [tmp.container, showSubscribeButton.style];
+  obj.style = items;
   let tmp8Result = showSubscribeButton;
-  if (tmp8Result) {
-    const obj2 = { children: items1 };
-    const obj3 = { style: tmp.footerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: intl.string(intl2.t["2bSPbq"]) };
-    const Text = Text_Text.Text;
-    intl = intl2.intl;
-    items1 = [React3(Text, obj3), ];
-    const obj4 = { style: tmp.button, children: React3(components_Button_Button.Button, obj5) };
-    obj5 = { text: tmp7, variant: "primary", size: "lg", onPress: tmp6, grow: true };
-    items1[1] = React3(View, obj4);
-    tmp8Result = metroRequire(hasOwnProperty, obj2);
+  if (showSubscribeButton) {
+    const obj2 = { children: null };
+    const obj3 = { style: tmp.footerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    const intl = util.intl;
+    obj3.children = intl.string(util.t["2bSPbq"]);
+    const items1 = [React4(Text_Text.Text, obj3), ];
+    const obj4 = { style: tmp.button, children: null };
+    const obj5 = { text: tmp7, variant: "primary", size: "lg", onPress: tmp6, grow: true };
+    obj4.children = React4(components_Button_Button.Button, obj5);
+    items1[1] = React4(View, obj4);
+    obj2.children = items1;
+    tmp8Result = timestampProducer(hasOwnProperty, obj2);
   }
-  items2 = [tmp8Result, ];
+  const items2 = [tmp8Result, ];
   let easterEggSpacing = null;
-  const tmp2Result = FastImageDefault;
   if (!showSubscribeButton) {
     easterEggSpacing = tmp.easterEggSpacing;
   }
-  const obj6 = { style: easterEggSpacing, source: AssetRegistryDefault };
-  items2[1] = React3(tmp2Result, obj6);
-  return metroRequire(View, obj);
+  const tmp2Result = FastImageDefault;
+  items2[1] = React4(tmp2Result, { style: easterEggSpacing, source: _modDef13319 });
+  obj.children = items2;
+  return timestampProducer(View, obj);
 });
-const result = size.fileFinishedImporting("modules/user_settings/premium/native/Footer.tsx");
-
-export default tmp4;

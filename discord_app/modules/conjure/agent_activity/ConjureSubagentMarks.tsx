@@ -1,14 +1,12 @@
 // === Module 16719: ConjureSubagentMarks ===
 
 // Module 16719 (ConjureSubagentMarks)
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import _modDef3753 from "module_3753" /* 3753 */;
 import size from "module_2" /* 2 */;
 
-let map;
-
 const items = ["snail", "goat", "frog", "bunny", "cat", "caterpillar", "butterfly", "dog", "spider", "bee", "bot"];
-let closure_4 = {
+const dependencyMap = {
   snail() {
     return _modDef3753.ABeVsS;
   },
@@ -50,13 +48,12 @@ export const isConjureSubagentMarkKey = function isConjureSubagentMarkKey(helper
   return items.includes(helperMark);
 };
 export const subagentMarkName = function subagentMarkName(helperMark) {
-  const intl = intl2.intl;
-  return intl.string(closure_4[helperMark]());
+  const intl = util.intl;
+  return intl.string(dependencyMap[helperMark]());
 };
 export const assignSubagentMarkKeys = function assignSubagentMarkKeys(arr) {
-  let length;
-  let closure_0 = items;
-  let c1 = 0;
+  let length = items;
+  c1 = 0;
   let str = arr[0];
   if (str == null) {
     str = "";
@@ -72,9 +69,8 @@ export const assignSubagentMarkKeys = function assignSubagentMarkKeys(arr) {
       length = str.length;
     } while (num < length);
   }
-  map = new Map();
   const item = arr.forEach((item, index) => {
     const result = map.set(item, length[(c1 + index) % length.length]);
   });
-  return map;
+  return new Map();
 };

@@ -4,110 +4,108 @@
 import size from "module_2" /* 2 */;
 
 class SettingsConfig {
-  constructor(teenByDefault) {
-    const obj = Object.create(new.target.prototype);
-    obj.teenByDefault = teenByDefault;
+  constructor(arg0) {
+    obj = Object.create(new.target.prototype);
+    obj.teenByDefault = global;
     return obj;
-  }
-  isFeatureTeenByDefault(arg0) {
-    return this.teenByDefault & arg0;
-  }
-  hasTeenDefaults() {
-    let num = this.teenByDefault;
-    if (num == null) {
-      num = 0;
-    }
-    return 0 !== num;
   }
 }
 const prototype = SettingsConfig.prototype;
+prototype["isFeatureTeenByDefault"] = function isFeatureTeenByDefault(arg0) {
+  return this.teenByDefault & arg0;
+};
+prototype["hasTeenDefaults"] = function hasTeenDefaults() {
+  let num = this.teenByDefault;
+  if (num == null) {
+    num = 0;
+  }
+  return 0 !== num;
+};
 class AgeVerificationConfig {
-  constructor(gatedFeatures) {
-    const obj = Object.create(new.target.prototype);
-    obj.gatedFeatures = gatedFeatures;
+  constructor(arg0) {
+    obj = Object.create(new.target.prototype);
+    obj.gatedFeatures = global;
     return obj;
-  }
-  isFeatureAgeGated(arg0) {
-    return this.gatedFeatures & arg0;
-  }
-  hasAgeGatedFeatures() {
-    let num = this.gatedFeatures;
-    if (num == null) {
-      num = 0;
-    }
-    return 0 !== num;
   }
 }
 const prototype2 = AgeVerificationConfig.prototype;
+prototype2["isFeatureAgeGated"] = function isFeatureAgeGated(arg0) {
+  return this.gatedFeatures & arg0;
+};
+prototype2["hasAgeGatedFeatures"] = function hasAgeGatedFeatures() {
+  let num = this.gatedFeatures;
+  if (num == null) {
+    num = 0;
+  }
+  return 0 !== num;
+};
 class AppStoreConfig {
-  constructor(shouldCollectSignal) {
-    const obj = Object.create(new.target.prototype);
-    obj.shouldCollectSignal = shouldCollectSignal;
+  constructor(arg0) {
+    obj = Object.create(new.target.prototype);
+    obj.shouldCollectSignal = global;
     return obj;
   }
 }
+let RegionalFeatureConfig;
 class RegionalFeatureConfig {
-  constructor(settings, ageVerification, appStore) {
-    const obj = Object.create(new.target.prototype);
-    obj.settings = settings;
-    obj.ageVerification = ageVerification;
-    obj.appStore = appStore;
+  constructor(arg0, arg1, arg2) {
+    obj = Object.create(new.target.prototype);
+    obj.settings = global;
+    obj.ageVerification = require;
+    obj.appStore = importDefault;
     return obj;
   }
-  isFeatureAgeGated(arg0) {
-    const ageVerification = this.ageVerification;
-    return ageVerification.isFeatureAgeGated(arg0);
-  }
-  isFeatureTeenByDefault(arg0) {
-    const settings = this.settings;
-    return settings.isFeatureTeenByDefault(arg0);
-  }
-  hasAgeGatedFeatures() {
-    const ageVerification = this.ageVerification;
-    return ageVerification.hasAgeGatedFeatures();
-  }
-  hasTeenDefaults() {
-    const settings = this.settings;
-    return settings.hasTeenDefaults();
-  }
-  shouldCollectAppStoreSignal() {
-    return this.appStore.shouldCollectSignal;
-  }
-  static fromConnectionOpen(regionalFeatureConfig) {
-    if (typeof SettingsConfig === "function") {
-      const obj = Object.create(SettingsConfig.prototype);
-      obj.teenByDefault = tmp2;
-      const self = this;
-      if (typeof AgeVerificationConfig === "function") {
-        const obj4 = Object.create(AgeVerificationConfig.prototype);
-        obj4.gatedFeatures = tmp4;
-        const self2 = this;
-        if (typeof AppStoreConfig === "function") {
-          const tmp8 = true === tmp7;
-          const obj5 = Object.create(tmp6.prototype);
-          obj5.shouldCollectSignal = tmp8;
-          const self3 = this;
-          if (typeof RegionalFeatureConfig === "function") {
-            const obj6 = Object.create(RegionalFeatureConfig.prototype);
-            obj6.settings = obj;
-            obj6.ageVerification = obj4;
-            obj6.appStore = obj5;
-            return obj6;
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
+}
+const prototype3 = RegionalFeatureConfig.prototype;
+prototype3["isFeatureAgeGated"] = function isFeatureAgeGated(arg0) {
+  const ageVerification = this.ageVerification;
+  return ageVerification.isFeatureAgeGated(arg0);
+};
+prototype3["isFeatureTeenByDefault"] = function isFeatureTeenByDefault(arg0) {
+  const settings = this.settings;
+  return settings.isFeatureTeenByDefault(arg0);
+};
+prototype3["hasAgeGatedFeatures"] = function hasAgeGatedFeatures() {
+  const ageVerification = this.ageVerification;
+  return ageVerification.hasAgeGatedFeatures();
+};
+prototype3["hasTeenDefaults"] = function hasTeenDefaults() {
+  const settings = this.settings;
+  return settings.hasTeenDefaults();
+};
+prototype3["shouldCollectAppStoreSignal"] = function shouldCollectAppStoreSignal() {
+  return this.appStore.shouldCollectSignal;
+};
+RegionalFeatureConfig["fromConnectionOpen"] = function fromConnectionOpen(regionalFeatureConfig) {
+  if (typeof SettingsConfig === "function") {
+    const obj = Object.create(SettingsConfig.prototype);
+    obj.teenByDefault = tmp2;
+    if (typeof AgeVerificationConfig === "function") {
+      const obj4 = Object.create(AgeVerificationConfig.prototype);
+      obj4.gatedFeatures = tmp4;
+      if (typeof AppStoreConfig === "function") {
+        const obj5 = Object.create(tmp7.prototype);
+        obj5.shouldCollectSignal = true === tmp8;
+        if (typeof RegionalFeatureConfig === "function") {
+          const obj6 = Object.create(RegionalFeatureConfig.prototype);
+          obj6.settings = obj;
+          obj6.ageVerification = obj4;
+          obj6.appStore = obj5;
+          return obj6;
         } else {
           throw new TypeError("Trying to call a non-function");
         }
+        const tmp10 = true === tmp8;
       } else {
         throw new TypeError("Trying to call a non-function");
       }
     } else {
       throw new TypeError("Trying to call a non-function");
     }
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-}
-const prototype3 = RegionalFeatureConfig.prototype;
+};
 const result = size.fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigModels.tsx");
 
 export { SettingsConfig };

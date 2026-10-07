@@ -5,44 +5,45 @@ import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_database/system/AppDatabaseManager.Entry.tsx");
 class Entry {
-  constructor(parent, definition) {
-    const obj = Object.create(new.target.prototype);
-    obj.parent = parent;
+  constructor(arg0, arg1) {
+    obj = Object.create(new.target.prototype);
+    obj.parent = global;
     obj.module = null;
-    obj.definition = definition;
+    obj.definition = require;
     return obj;
   }
-  load() {
-    const self = this;
-    if (null == this.module) {
-      const definition = self.definition;
-      self.module = definition.require();
-    }
-  }
-  reset() {
-    const _module = this.module;
-    if (_module != null) {
-      _module.resetInMemoryState();
-    }
-  }
-  execute(arg0, arg1) {
-    this.load();
-    if (null != this.module) {
-      const actions = this.module.actions;
-      if (actions[arg0.type] != null) {
-        actions[arg0.type](arg0, arg1);
-      }
-    }
-  }
-  validateInDev() {
-
-  }
 }
-Object.defineProperty(Entry.prototype, "actions", {
+const prototype = Entry.prototype;
+Object.defineProperty(prototype, "actions", {
   get: function actions() {
     return this.definition.actions;
   },
   set: undefined
 });
+prototype["load"] = function load() {
+  const self = this;
+  if (null == this.module) {
+    const definition = self.definition;
+    self.module = definition.require();
+  }
+};
+prototype["reset"] = function reset() {
+  const _module = this.module;
+  if (_module != null) {
+    _module.resetInMemoryState();
+  }
+};
+prototype["execute"] = function execute(arg0, arg1) {
+  this.load();
+  if (null != this.module) {
+    const actions = this.module.actions;
+    if (actions[arg0.type] != null) {
+      tmp3(arg0, arg1);
+    }
+  }
+};
+prototype["validateInDev"] = function validateInDev() {
+
+};
 
 export { Entry };

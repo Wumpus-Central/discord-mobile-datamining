@@ -1,30 +1,20 @@
 // === Module 10984: trackBadgeDirectoryAction ===
 
 // Module 10984 (trackBadgeDirectoryAction)
-import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import UserStore from "UserStore" /* 1377 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7874 */;
-import size from "module_2" /* 2 */;
 
-const AnalyticEvents = Constants.AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/trackBadgeDirectoryAction.tsx");
 
 export default function trackBadgeDirectoryAction(arg0) {
-  let actionName;
-  let badge;
-  let badge_id;
-  let displayedUserId;
-  let flag;
-  let flag2;
-  let id;
-  let isSociallyNavigated;
-  let tmp10;
   ({ badge, displayedUserId } = arg0);
   ({ actionName, isSociallyNavigated } = arg0);
   const currentUser = UserStore.getCurrentUser();
   if (currentUser != null) {
-    id = currentUser.id;
+    const id = currentUser.id;
   }
   let badgeById;
   if (null != badge) {
@@ -43,18 +33,16 @@ export default function trackBadgeDirectoryAction(arg0) {
     const badges = BadgeDirectoryStore.getBadges(displayedUserId);
     length = badges.filter((owned) => owned.owned).length;
   }
-  const obj = { badge_action: actionName, badge_id, badge_tier: tmp10, badge_owner_id: displayedUserId, is_owned: flag, progress_to_next_tier: remainingToNextTier, is_earnable: flag2, is_socially_navigated: isSociallyNavigated, total_badges_owned: length };
-  badge_id = undefined;
-  const track = AnalyticsUtilsDefault.track;
-  const BADGE_DIRECTORY_ACTION = AnalyticEvents.BADGE_DIRECTORY_ACTION;
-  AnalyticsUtilsDefault;
+  const obj2 = { badge_action: actionName, badge_id: null, badge_tier: null, badge_owner_id: null, is_owned: null, progress_to_next_tier: null, is_earnable: null, is_socially_navigated: null, total_badges_owned: null };
+  let badge_id;
   if (badge != null) {
     badge_id = badge.badge_id;
   }
-  tmp10 = undefined;
+  obj2.badge_id = badge_id;
+  let tmp9;
   if (null != badge) {
-    let tmp11 = badge.owned ? badge.current_tier : badge.next_tier;
-    if (tmp11 == null) {
+    let tmp10 = badge.owned ? badge.current_tier : badge.next_tier;
+    if (tmp10 == null) {
       const tiers = badge.tiers;
       let key;
       if (tiers != null) {
@@ -63,23 +51,30 @@ export default function trackBadgeDirectoryAction(arg0) {
           key = first.key;
         }
       }
-      tmp11 = key;
+      tmp10 = key;
     }
-    tmp10 = tmp11;
+    tmp9 = tmp10;
   }
-  flag = undefined;
+  obj2.badge_tier = tmp9;
+  obj2.badge_owner_id = displayedUserId;
+  let flag;
   if (badgeById != null) {
     flag = badgeById.owned;
   }
   if (flag == null) {
     flag = false;
   }
-  flag2 = undefined;
+  obj2.is_owned = flag;
+  obj2.progress_to_next_tier = remainingToNextTier;
+  let flag2;
   if (badge != null) {
     flag2 = badge.is_earnable;
   }
   if (flag2 == null) {
     flag2 = false;
   }
-  track(BADGE_DIRECTORY_ACTION, obj);
+  obj2.is_earnable = flag2;
+  obj2.is_socially_navigated = isSociallyNavigated;
+  obj2.total_badges_owned = length;
+  AnalyticsUtilsDefault.track(AnalyticEvents.BADGE_DIRECTORY_ACTION, obj2);
 };

@@ -1,104 +1,90 @@
 // === Module 10837: ProfileEffectUserPreview ===
 
 // Module 10837 (ProfileEffectUserPreview)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
-import intl3 from "intl" /* 1126 */;
+import c from "c" /* 576 */;
 import UserProfilePreviewDefault from "UserProfilePreview" /* 10838 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
+const util = mbHmX2(1126);
+require = fn;
 let closure_3 = ["profileEffect", "avatarDecorationOverride", "profileFrameOverride"];
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let avatarDecorationOverride;
-  let profileEffect;
-  let profileFrameOverride;
-  let tmp11;
-  let tmp4;
-  let tmp5;
-  let tmp6;
-  let tmp7;
-  const obj = react2;
-  const cResult = obj.c(13);
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/profile_effects/native/previews/ProfileEffectUserPreview.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let mbHmX2 = require;
+  const cResult = c.c(13);
   if (cResult[0] !== arg0) {
     ({ profileEffect, avatarDecorationOverride, profileFrameOverride } = arg0);
-    const tmp10 = _objectWithoutProperties(arg0, closure_3);
+    const tmp9 = _objectWithoutProperties(arg0, closure_3);
     cResult[0] = arg0;
     cResult[1] = avatarDecorationOverride;
     cResult[2] = profileEffect;
     cResult[3] = profileFrameOverride;
-    cResult[4] = tmp10;
-    tmp7 = tmp10;
-    tmp6 = profileFrameOverride;
-    tmp5 = profileEffect;
-    tmp4 = avatarDecorationOverride;
+    cResult[4] = tmp9;
+    let tmp6 = tmp9;
+    let tmp5 = profileFrameOverride;
+    let tmp4 = profileEffect;
+    let tmp3 = avatarDecorationOverride;
   } else {
-    tmp4 = cResult[1];
-    tmp5 = cResult[2];
-    tmp6 = cResult[3];
-    tmp7 = cResult[4];
+    tmp3 = cResult[1];
+    tmp4 = cResult[2];
+    tmp5 = cResult[3];
+    tmp6 = cResult[4];
   }
-  if (cResult[5] !== tmp5) {
-    let formatToPlainStringResult;
-    if (null != tmp5) {
-      const intl2 = intl3.intl;
-      const obj2 = { a11y_text: tmp5.accessibilityLabel };
-      formatToPlainStringResult = intl2.formatToPlainString(intl3.t.mbHmX2, obj2);
+  if (cResult[5] !== tmp4) {
+    if (null != tmp4) {
+      const intl2 = util.intl;
+      mbHmX2 = util.t.mbHmX2;
+      const obj2 = { a11y_text: tmp4.accessibilityLabel };
+      let formatToPlainStringResult = intl2.formatToPlainString(mbHmX2, obj2);
     } else {
-      const intl = intl3.intl;
-      formatToPlainStringResult = intl.string(intl3.t.XYdHeC);
+      const intl = util.intl;
+      formatToPlainStringResult = intl.string(util.t.XYdHeC);
     }
-    cResult[5] = tmp5;
+    cResult[5] = tmp4;
     cResult[6] = formatToPlainStringResult;
-    tmp11 = formatToPlainStringResult;
   } else {
-    tmp11 = cResult[6];
-  }
-  if (cResult[7] === tmp4) {
-    if (cResult[8] === tmp5) {
-      if (cResult[9] === tmp6) {
-        if (cResult[10] === tmp7) {
-          let tmp14;
-          if (cResult[11] === tmp11) {
-            tmp14 = cResult[12];
+    if (cResult[7] === tmp3) {
+      if (cResult[8] === tmp4) {
+        if (cResult[9] === tmp5) {
+          if (cResult[10] === tmp6) {
+            if (cResult[11] === tmp10) {
+              let tmp14 = cResult[12];
+            }
+            return tmp14;
           }
-          return tmp14;
         }
       }
     }
+    const obj3 = { profileEffectOverride: tmp4, avatarDecorationOverride: tmp3, profileFrameOverride: tmp5, accessibilityLabel: cResult[6] };
+    const merged = Object.assign(tmp6);
+    const tmp21 = jsx(UserProfilePreviewDefault, { profileEffectOverride: tmp4, avatarDecorationOverride: tmp3, profileFrameOverride: tmp5, accessibilityLabel: cResult[6] });
+    cResult[7] = tmp3;
+    cResult[8] = tmp4;
+    cResult[9] = tmp5;
+    cResult[10] = tmp6;
+    cResult[11] = cResult[6];
+    cResult[12] = tmp21;
+    tmp14 = tmp21;
   }
-  UserProfilePreviewDefault;
-  const merged = Object.assign(tmp7);
-  const tmp17 = <tmp15 profileEffectOverride={tmp5} avatarDecorationOverride={tmp4} profileFrameOverride={tmp6} accessibilityLabel={tmp11} />;
-  cResult[7] = tmp4;
-  cResult[8] = tmp5;
-  cResult[9] = tmp6;
-  cResult[10] = tmp7;
-  cResult[11] = tmp11;
-  cResult[12] = tmp17;
-  tmp14 = tmp17;
 }) : ((profileEffect) => {
-  let avatarDecorationOverride;
-  let formatToPlainStringResult;
-  let profileFrameOverride;
   profileEffect = profileEffect.profileEffect;
   ({ avatarDecorationOverride, profileFrameOverride } = profileEffect);
   const merged = Object.assign(profileEffect, Object.assign({ profileEffect: 0, avatarDecorationOverride: 0, profileFrameOverride: 0 }));
-  UserProfilePreviewDefault;
+  const obj = { profileEffectOverride: profileEffect, avatarDecorationOverride, profileFrameOverride, accessibilityLabel: null };
   if (null != profileEffect) {
-    const intl2 = intl3.intl;
+    const intl2 = util.intl;
     const obj2 = { a11y_text: profileEffect.accessibilityLabel };
-    formatToPlainStringResult = intl2.formatToPlainString(intl3.t.mbHmX2, obj2);
+    let formatToPlainStringResult = intl2.formatToPlainString(util.t.mbHmX2, obj2);
   } else {
-    const intl = intl3.intl;
-    formatToPlainStringResult = intl.string(intl3.t.XYdHeC);
+    const intl = util.intl;
+    formatToPlainStringResult = intl.string(util.t.XYdHeC);
   }
+  obj.accessibilityLabel = formatToPlainStringResult;
   const merged1 = Object.assign(merged);
-  return <tmp4 profileEffectOverride={profileEffect} avatarDecorationOverride={avatarDecorationOverride} profileFrameOverride={profileFrameOverride} accessibilityLabel={formatToPlainStringResult} />;
+  return jsx(UserProfilePreviewDefault, { profileEffectOverride: profileEffect, avatarDecorationOverride, profileFrameOverride, accessibilityLabel: null });
 });
-const result = size.fileFinishedImporting("modules/collectibles/profile_effects/native/previews/ProfileEffectUserPreview.tsx");
-
-export default tmp3;

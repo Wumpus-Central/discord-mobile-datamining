@@ -1,12 +1,14 @@
 // === Module 4571: Linking ===
 
 // Module 4571 (Linking)
-import react_native from "react-native" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
 import handleURL from "handleURL" /* 4566 */;
 import size from "module_2" /* 2 */;
 
-const Linking = react_native.Linking;
-const obj = {
+const Linking = _mod17.Linking;
+const result = size.fileFinishedImporting("lib/native/Linking.tsx");
+
+export default {
   openURL(arg0, arg1) {
     let flag = arg2;
     if (arg2 === undefined) {
@@ -18,12 +20,8 @@ const obj = {
     handleURL.default(href, SAFARI, { forceExternalBrowser: true });
   },
   performURLNavigation(href) {
-    const openURLResult = Linking.openURL(href);
-    openURLResult.catch(() => {
+    Linking.openURL(href).catch(() => {
 
     });
   }
 };
-const result = size.fileFinishedImporting("lib/native/Linking.tsx");
-
-export default obj;

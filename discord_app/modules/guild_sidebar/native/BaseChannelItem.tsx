@@ -1,184 +1,163 @@
 // === Module 12031: BaseChannelItem ===
 
 // Module 12031 (BaseChannelItem)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ReadStateConstants from "ReadStateConstants" /* 5078 */;
 import native2 from "native" /* 8602 */;
 import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 12032 */;
 import TouchableBackgroundDefault from "TouchableBackground" /* 12033 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
-import RedesignChannelListConstants from "RedesignChannelListConstants" /* 11711 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let dependencyMap;
-
-let c10;
-let metroImportAll;
-let metroImportDefault;
-let unpackModuleId;
+const utils_PlatformUtils = Text(1370);
+const Text_Text = Text(4892);
+require = fn;
 let closure_3 = ["icon", "name", "mode", "hideIcon", "disableHighlightOnPress", "channelInfo", "children", "unread"];
-const View = react_native.View;
-({ CHANNEL_SUBTITLE_TEXT_VARIANT: metroImportDefault, CHANNEL_TITLE_LINE_HEIGHT: metroImportAll } = RedesignChannelListConstants);
-const UnreadSetting = ReadStateConstants.UnreadSetting;
-({ jsx: c10, jsxs: unpackModuleId } = Fragment);
+const View = fn(17).View;
+const RedesignChannelListConstants = fn(11711);
+({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_7, CHANNEL_TITLE_LINE_HEIGHT: closure_8 } = RedesignChannelListConstants);
+const UnreadSetting = fn(5078).UnreadSetting;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4896);
 let closure_12 = createStyles.createStyles((arg0) => {
-  let num2;
-  let num3;
-  let obj7;
-  const obj = { rowPaddingNoIcon: { paddingHorizontal: 6 }, rowSelected: { borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, backgroundColor: nativeDefault.colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED }, unreadIndicator: { left: -nativeDefault.space.PX_8 }, channelIcon: { width: 16, height: 16, marginRight: 8, opacity: num2 }, redesignedChannelIcon: { marginRight: 8, opacity: num3 }, channelIconNormal: { tintColor: nativeDefault.colors.CHANNEL_ICON }, channelIconUnread: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE }, channelIconMuted: { tintColor: nativeDefault.colors.ICON_MUTED }, channel: { paddingHorizontal: 8, paddingVertical: 8, flexDirection: "row", alignItems: "center", position: "relative" }, channelNameContainer: { flex: 1, flexDirection: "column", alignItems: "stretch", justifyContent: "center" }, channelName: obj7 };
-  ({ borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, backgroundColor: nativeDefault.colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED });
+  const obj = { rowPaddingNoIcon: { paddingHorizontal: 6 }, rowSelected: null, unreadIndicator: null, channelIcon: null, redesignedChannelIcon: null, channelIconNormal: null, channelIconUnread: null, channelIconMuted: null, channel: null, channelNameContainer: null, channelName: null };
+  obj2 = { borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, backgroundColor: nativeDefault.colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
+  obj.rowSelected = obj2;
+  obj.unreadIndicator = { left: -nativeDefault.space.PX_8 };
   let num = 1;
-  num2 = 1;
-  ({ left: -nativeDefault.space.PX_8 });
-  if (arg0 === obj.MUTED) {
+  let num2 = 1;
+  if (arg0 === obj2.MUTED) {
     num2 = 0.5;
   }
-  num3 = num;
-  if (arg0 === obj.MUTED) {
+  obj.channelIcon = { width: 16, height: 16, marginRight: 8, opacity: num2 };
+  let num3 = num;
+  if (arg0 === obj2.MUTED) {
     num3 = 0.5;
   }
-  ({ tintColor: nativeDefault.colors.CHANNEL_ICON });
-  ({ tintColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE });
-  obj7 = { flexGrow: 1, textAlign: "left", lineHeight: metroImportAll, opacity: num };
-  ({ tintColor: nativeDefault.colors.ICON_MUTED });
-  if (arg0 === obj.MUTED) {
+  obj.redesignedChannelIcon = { marginRight: 8, opacity: num3 };
+  const obj3 = { left: -nativeDefault.space.PX_8 };
+  obj.channelIconNormal = { tintColor: nativeDefault.colors.CHANNEL_ICON };
+  const obj4 = { tintColor: nativeDefault.colors.CHANNEL_ICON };
+  obj.channelIconUnread = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+  const obj5 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+  obj.channelIconMuted = { tintColor: nativeDefault.colors.ICON_MUTED };
+  obj.channel = { paddingHorizontal: 8, paddingVertical: 8, flexDirection: "row", alignItems: "center", position: "relative" };
+  obj.channelNameContainer = { flex: 1, flexDirection: "column", alignItems: "stretch", justifyContent: "center" };
+  const obj7 = { flexGrow: 1, textAlign: "left", lineHeight, opacity: null };
+  if (arg0 === obj2.MUTED) {
     num = 0.5;
   }
+  obj7.opacity = num;
+  obj.channelName = obj7;
   return obj;
 });
-const ChannelModes = { SELECTED: "Selected", LOCKED: "Locked", MUTED: "Muted", RELEVANT: "Relevant", UNREAD_LESS_IMPORTANT: "UnreadLessImportant", UNREAD_IMPORTANT: "UnreadImportant", DEFAULT: "Default" };
-let ReactCompilerGating = ReactCompilerGating_mod;
+let obj2 = { SELECTED: "Selected", LOCKED: "Locked", MUTED: "Muted", RELEVANT: "Relevant", UNREAD_LESS_IMPORTANT: "UnreadLessImportant", UNREAD_IMPORTANT: "UnreadImportant", DEFAULT: "Default" };
+let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let mode;
-  let subtitle;
-  let tmp4;
-  const obj = react2;
-  const cResult = obj.c(8);
+  let Text = require;
+  let tmp = dependencyMap;
+  const cResult = c.c(8);
   ({ mode, subtitle } = arg0);
   if (cResult[0] !== mode) {
-    if (mode !== obj.UNREAD_IMPORTANT) {
-      if (mode !== obj.RELEVANT) {
-        let obj2;
-        if (mode !== obj.SELECTED) {
-          const MUTED = tmp5.MUTED;
-          obj2 = { variant: metroImportDefault, color: "text-muted" };
+    if (mode !== obj2.UNREAD_IMPORTANT) {
+      if (mode !== tmp4.RELEVANT) {
+        if (mode !== tmp4.SELECTED) {
+          const MUTED = tmp4.MUTED;
+          obj2 = { variant, color: "text-muted" };
         }
         cResult[0] = mode;
         cResult[1] = obj2;
-        tmp4 = obj2;
       }
     }
-    obj2 = { variant: metroImportDefault, color: "redesign-channel-name-text" };
-    const obj3 = { variant: metroImportDefault, color: "redesign-channel-name-text" };
+    const obj3 = { variant, color: "redesign-channel-name-text" };
+    obj2 = obj3;
+  } else if (null == subtitle) {
+    return null;
   } else {
-    tmp4 = cResult[1];
-  }
-  let tmp8 = null;
-  if (null != subtitle) {
-    let tmp9;
     if (cResult[2] !== subtitle) {
-      const tmpResult = utils_PlatformUtils;
-      const tmp11 = !tmpResult.isAndroid() && typeof subtitle === "string";
+      const isAndroidResult = utils_PlatformUtils.isAndroid();
+      let tmp11 = !isAndroidResult;
+      if (!isAndroidResult) {
+        tmp11 = typeof subtitle === "string";
+      }
       cResult[2] = subtitle;
       cResult[3] = tmp11;
-      tmp9 = tmp11;
+      let tmp9 = tmp11;
+      const TextResult = utils_PlatformUtils;
     } else {
       tmp9 = cResult[3];
     }
-    if (cResult[4] === tmp4) {
+    if (cResult[4] === tmp3) {
       if (cResult[5] === subtitle) {
-        let tmp12;
-        if (cResult[6] === tmp9) {
-          tmp12 = cResult[7];
-        }
-        tmp8 = tmp12;
       }
     }
-    const obj4 = { experimental_useNativeText: tmp9, lineClamp: 1, children: subtitle };
-    const Text = Text_Text.Text;
-    const merged = Object.assign(tmp4);
-    const tmp17 = authStore(Text, obj4);
-    cResult[4] = tmp4;
+    Text = Text_Text.Text;
+    const obj4 = { experimental_useNativeText: tmp9, lineClamp: 1 };
+    const merged = Object.assign(tmp3);
+    obj4.children = subtitle;
+    tmp = v65535(Text, obj4);
+    cResult[4] = tmp3;
     cResult[5] = subtitle;
     cResult[6] = tmp9;
-    cResult[7] = tmp17;
-    tmp12 = tmp17;
+    cResult[7] = tmp;
   }
-  return tmp8;
 }) : ((arg0) => {
-  let mode;
-  let obj;
-  let subtitle;
   ({ mode, subtitle } = arg0);
-  if (mode !== obj.UNREAD_IMPORTANT) {
-    if (mode !== obj.RELEVANT) {
-      if (mode !== obj.SELECTED) {
+  if (mode !== obj2.UNREAD_IMPORTANT) {
+    if (mode !== tmp.RELEVANT) {
+      if (mode !== tmp.SELECTED) {
         const MUTED = tmp.MUTED;
-        obj = { variant: metroImportDefault, color: "text-muted" };
+        let obj = { variant, color: "text-muted" };
       }
       let tmp4Result = null;
       if (null != subtitle) {
-        const Text = Text_Text.Text;
-        const obj3 = utils_PlatformUtils;
-        const obj2 = { experimental_useNativeText: !obj3.isAndroid() && typeof subtitle === "string", lineClamp: 1, children: subtitle };
-        !obj3.isAndroid() && typeof subtitle === "string";
+        const isAndroidResult = utils_PlatformUtils.isAndroid();
+        let tmp8 = !isAndroidResult;
+        if (!isAndroidResult) {
+          tmp8 = typeof subtitle === "string";
+        }
+        obj2 = { experimental_useNativeText: tmp8, lineClamp: 1 };
         const merged = Object.assign(obj);
-        tmp4Result = authStore(Text, obj2);
+        obj2.children = subtitle;
+        tmp4Result = v65535(Text_Text.Text, obj2);
       }
       return tmp4Result;
     }
   }
-  obj = { variant: metroImportDefault, color: "redesign-channel-name-text" };
+  obj = { variant, color: "redesign-channel-name-text" };
+  const obj4 = { variant, color: "redesign-channel-name-text" };
 });
 let closure_14 = tmp4;
-ReactCompilerGating = ReactCompilerGating_mod;
+fn(558);
+ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let IconComponent;
-  let disableColor;
-  let isChannelLive;
-  let mode;
-  let source;
-  let str;
-  let style;
-  const obj = react2;
-  const cResult = obj.c(20);
+  const cResult = c.c(20);
   ({ disableColor, mode, source, IconComponent, style, isChannelLive } = arg0);
-  const tmp4 = closure_12(mode);
+  let redesignedChannelIcon = closure_12(mode);
   if (cResult[0] === disableColor) {
-    if (cResult[1] === mode === obj.MUTED) {
-      if (cResult[2] === mode === obj.SELECTED) {
+    if (cResult[1] === tmp4) {
+      if (cResult[2] === tmp6) {
         if (cResult[3] === style) {
-          if (cResult[4] === tmp4.channelIcon) {
-            if (cResult[5] === tmp4.channelIconMuted) {
-              if (cResult[6] === tmp4.channelIconNormal) {
-                if (cResult[7] === tmp4.channelIconUnread) {
-                  let tmp8;
-                  let tmp15Result;
-                  if (cResult[8] === mode === obj.UNREAD_IMPORTANT) {
-                    tmp8 = cResult[9];
+          if (cResult[4] === redesignedChannelIcon.channelIcon) {
+            if (cResult[5] === redesignedChannelIcon.channelIconMuted) {
+              if (cResult[6] === redesignedChannelIcon.channelIconNormal) {
+                if (cResult[7] === redesignedChannelIcon.channelIconUnread) {
+                  if (cResult[8] === tmp5) {
+                    let tmp7 = cResult[9];
                   }
                   if (cResult[10] === IconComponent) {
                     if (cResult[11] === disableColor) {
-                      if (cResult[12] === tmp8) {
+                      if (cResult[12] === tmp7) {
                         if (cResult[13] === isChannelLive) {
-                          if (cResult[14] === mode === obj.MUTED) {
-                            if (cResult[15] === mode === obj.SELECTED) {
+                          if (cResult[14] === tmp4) {
+                            if (cResult[15] === tmp6) {
                               if (cResult[16] === source) {
-                                if (cResult[17] === tmp4.redesignedChannelIcon) {
-                                  let tmp11;
-                                  if (cResult[18] === mode === obj.UNREAD_IMPORTANT) {
-                                    tmp11 = cResult[19];
+                                if (cResult[17] === redesignedChannelIcon.redesignedChannelIcon) {
+                                  if (cResult[18] === tmp5) {
+                                    return cResult[19];
                                   }
-                                  return tmp11;
                                 }
                               }
                             }
@@ -188,14 +167,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     }
                   }
                   if (null != IconComponent) {
-                    const obj2 = { size: "sm", style: tmp4.redesignedChannelIcon, color: str };
-                    str = "status-positive";
+                    obj2 = { size: "sm", style: redesignedChannelIcon.redesignedChannelIcon, color: null };
+                    let str = "status-positive";
                     if (!isChannelLive) {
                       let str2 = "icon-muted";
-                      if (mode !== obj.MUTED) {
-                        let str3;
-                        if (mode === obj.UNREAD_IMPORTANT) {
-                          str3 = "interactive-text-active";
+                      if (!tmp4) {
+                        if (tmp5) {
+                          let str3 = "interactive-text-active";
                         } else {
                           str3 = "channel-icon";
                         }
@@ -203,23 +181,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                       }
                       str = str2;
                     }
-                    tmp15Result = authStore(IconComponent, obj2);
+                    obj2.color = str;
+                    let tmp14Result = v65535(IconComponent, obj2);
                   } else {
-                    const obj3 = { disableColor, size: native.Icon.Sizes.CUSTOM, style: tmp8, source };
-                    const Icon = native.Icon;
-                    tmp15Result = authStore(Icon, obj3);
+                    const obj3 = { disableColor, size: native.Icon.Sizes.CUSTOM, style: tmp7, source };
+                    tmp14Result = v65535(native.Icon, obj3);
                   }
                   cResult[10] = IconComponent;
                   cResult[11] = disableColor;
-                  cResult[12] = tmp8;
+                  cResult[12] = tmp7;
                   cResult[13] = isChannelLive;
-                  cResult[14] = mode === obj.MUTED;
-                  cResult[15] = mode === obj.SELECTED;
+                  cResult[14] = tmp4;
+                  cResult[15] = tmp6;
                   cResult[16] = source;
-                  cResult[17] = tmp4.redesignedChannelIcon;
-                  cResult[18] = mode === obj.UNREAD_IMPORTANT;
-                  cResult[19] = tmp15Result;
-                  tmp11 = tmp15Result;
+                  redesignedChannelIcon = redesignedChannelIcon.redesignedChannelIcon;
+                  cResult[17] = redesignedChannelIcon;
+                  cResult[18] = tmp5;
+                  cResult[19] = tmp14Result;
                 }
               }
             }
@@ -228,144 +206,121 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }
-  const items = [tmp4.channelIcon];
-  if (true !== disableColor) {
-    let channelIconUnread;
-    const push = items.push;
-    if (mode === obj.MUTED) {
-      channelIconUnread = tmp4.channelIconMuted;
+  const items = [redesignedChannelIcon.channelIcon];
+  if (true === disableColor) {
+    if (null != style) {
+      items.push(style);
+    }
+    cResult[0] = disableColor;
+    cResult[1] = tmp4;
+    cResult[2] = tmp6;
+    cResult[3] = style;
+    cResult[4] = redesignedChannelIcon.channelIcon;
+    cResult[5] = redesignedChannelIcon.channelIconMuted;
+    cResult[6] = redesignedChannelIcon.channelIconNormal;
+    cResult[7] = redesignedChannelIcon.channelIconUnread;
+    cResult[8] = tmp5;
+    cResult[9] = items;
+    tmp7 = items;
+  } else {
+    if (tmp4) {
+      let channelIconUnread = redesignedChannelIcon.channelIconMuted;
     } else {
-      if (mode !== obj.UNREAD_IMPORTANT) {
-        if (mode !== obj.SELECTED) {
-          channelIconUnread = tmp4.channelIconNormal;
+      if (!tmp5) {
+        if (!tmp6) {
+          channelIconUnread = redesignedChannelIcon.channelIconNormal;
         }
       }
-      channelIconUnread = tmp4.channelIconUnread;
+      channelIconUnread = redesignedChannelIcon.channelIconUnread;
     }
-    push(channelIconUnread);
+    items.push(channelIconUnread);
   }
-  if (null != style) {
-    items.push(style);
-  }
-  cResult[0] = disableColor;
-  cResult[1] = mode === obj.MUTED;
-  cResult[2] = mode === obj.SELECTED;
-  cResult[3] = style;
-  cResult[4] = tmp4.channelIcon;
-  cResult[5] = tmp4.channelIconMuted;
-  cResult[6] = tmp4.channelIconNormal;
-  cResult[7] = tmp4.channelIconUnread;
-  cResult[8] = mode === obj.UNREAD_IMPORTANT;
-  cResult[9] = items;
-  tmp8 = items;
 }) : ((arg0) => {
-  let IconComponent;
-  let disableColor;
-  let isChannelLive;
-  let mode;
-  let obj;
-  let source;
-  let str;
-  let style;
-  let tmp11Result;
   ({ disableColor, mode, IconComponent, style } = arg0);
   ({ source, isChannelLive } = arg0);
   const tmp = closure_12(mode);
-  const items = [];
-  const tmp4 = mode === obj.SELECTED;
-  items[0] = tmp.channelIcon;
-  if (true !== disableColor) {
-    let channelIconUnread;
-    const push = items.push;
-    if (mode === obj.MUTED) {
-      channelIconUnread = tmp.channelIconMuted;
+  const items = [tmp.channelIcon];
+  if (true === disableColor) {
+    if (null != style) {
+      items.push(style);
+    }
+    if (null != IconComponent) {
+      obj2 = { size: "sm", style: tmp.redesignedChannelIcon, color: null };
+      let str = "status-positive";
+      if (!isChannelLive) {
+        let str2 = "icon-muted";
+        if (!tmp2) {
+          if (tmp3) {
+            let str3 = "interactive-text-active";
+          } else {
+            str3 = "channel-icon";
+          }
+          str2 = str3;
+        }
+        str = str2;
+      }
+      obj2.color = str;
+      let tmp12Result = v65535(IconComponent, obj2);
     } else {
-      if (mode !== obj.UNREAD_IMPORTANT) {
+      const obj = { disableColor, size: native.Icon.Sizes.CUSTOM, style: items, source };
+      tmp12Result = v65535(native.Icon, obj);
+    }
+    return tmp12Result;
+  } else {
+    if (tmp2) {
+      let channelIconUnread = tmp.channelIconMuted;
+    } else {
+      if (!tmp3) {
         if (!tmp4) {
           channelIconUnread = tmp.channelIconNormal;
         }
       }
       channelIconUnread = tmp.channelIconUnread;
     }
-    push(channelIconUnread);
+    items.push(channelIconUnread);
   }
-  if (null != style) {
-    items.push(style);
-  }
-  if (null != IconComponent) {
-    const obj2 = { size: "sm", style: tmp.redesignedChannelIcon, color: str };
-    str = "status-positive";
-    if (!isChannelLive) {
-      let str2 = "icon-muted";
-      if (mode !== obj.MUTED) {
-        let str3;
-        if (mode === obj.UNREAD_IMPORTANT) {
-          str3 = "interactive-text-active";
-        } else {
-          str3 = "channel-icon";
-        }
-        str2 = str3;
-      }
-      str = str2;
-    }
-    tmp11Result = authStore(IconComponent, obj2);
-  } else {
-    obj = { disableColor, size: native.Icon.Sizes.CUSTOM, style: items, source };
-    const Icon = native.Icon;
-    tmp11Result = authStore(Icon, obj);
-  }
-  return tmp11Result;
+  tmp4 = mode === obj2.SELECTED;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let items;
-  let mode;
-  let name;
-  let subtitle;
-  let textStyle;
-  const obj = react2;
-  const cResult = obj.c(14);
+  const cResult = c.c(14);
   ({ mode, name, subtitle, textStyle } = arg0);
   const tmp4 = closure_12(mode);
-  if (mode !== obj.UNREAD_IMPORTANT) {
-    let obj2;
-    if (mode !== obj.RELEVANT) {
-      if (mode === obj.UNREAD_LESS_IMPORTANT) {
+  if (mode !== obj2.UNREAD_IMPORTANT) {
+    if (mode !== tmp6.RELEVANT) {
+      if (mode === tmp6.UNREAD_LESS_IMPORTANT) {
         obj2 = { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
-      } else if (mode === obj.MUTED) {
+      } else if (mode === tmp6.MUTED) {
         obj2 = { variant: "text-md/medium", color: "text-muted" };
       } else {
         obj2 = mode === tmp6.SELECTED ? { variant: "text-md/medium", color: "redesign-channel-name-text" } : { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
       }
     }
     if (cResult[0] === tmp4.channelName) {
-      let tmp7;
       if (cResult[1] === textStyle) {
-        tmp7 = cResult[2];
+        let tmp7 = cResult[2];
       }
       if (cResult[3] === name) {
         if (cResult[4] === obj2) {
-          let tmp8;
           if (cResult[5] === tmp7) {
-            tmp8 = cResult[6];
+            let tmp8 = cResult[6];
           }
           if (cResult[7] === mode) {
-            let tmp14;
             if (cResult[8] === subtitle) {
-              tmp14 = cResult[9];
+              let tmp14 = cResult[9];
             }
             if (cResult[10] === tmp4.channelNameContainer) {
               if (cResult[11] === tmp8) {
-                let tmp18;
                 if (cResult[12] === tmp14) {
-                  tmp18 = cResult[13];
+                  let tmp18 = cResult[13];
                 }
                 return tmp18;
               }
             }
-            const obj3 = { style: tmp5, children: items };
-            items = [tmp8, tmp14];
-            const tmp21 = unpackModuleId(View, obj3);
+            const obj3 = { style: tmp5, children: null };
+            const items = [tmp8, tmp14];
+            obj3.children = items;
+            const tmp21 = closure_1_11(View, obj3);
             cResult[10] = tmp4.channelNameContainer;
             cResult[11] = tmp8;
             cResult[12] = tmp14;
@@ -373,17 +328,19 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             tmp18 = tmp21;
           }
           const obj4 = { mode, subtitle };
-          const tmp17 = authStore(closure_14, obj4);
+          const tmp17 = v65535(closure_14, obj4);
           cResult[7] = mode;
           cResult[8] = subtitle;
           cResult[9] = tmp17;
           tmp14 = tmp17;
         }
       }
-      const obj5 = { experimental_useNativeText: true, lineClamp: 1, style: tmp7, children: name };
-      const Text = Text_Text.Text;
+      const obj5 = { experimental_useNativeText: true };
       const merged = Object.assign(obj2);
-      const tmp13 = authStore(Text, obj5);
+      obj5.lineClamp = 1;
+      obj5.style = tmp7;
+      obj5.children = name;
+      const tmp13 = v65535(Text_Text.Text, obj5);
       cResult[3] = name;
       cResult[4] = obj2;
       cResult[5] = tmp7;
@@ -398,60 +355,58 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   obj2 = { variant: "text-md/semibold", color: "redesign-channel-name-text" };
 }) : ((mode) => {
-  let items;
-  let name;
-  let subtitle;
-  let textStyle;
   mode = mode.mode;
   ({ name, subtitle, textStyle } = mode);
   const tmp = closure_12(mode);
   const obj = { style: tmp.channelNameContainer, children: null };
-  if (mode !== obj.UNREAD_IMPORTANT) {
-    let obj2;
-    if (mode !== obj.RELEVANT) {
-      if (mode === obj.UNREAD_LESS_IMPORTANT) {
+  if (mode !== obj2.UNREAD_IMPORTANT) {
+    if (mode !== tmp6.RELEVANT) {
+      if (mode === tmp6.UNREAD_LESS_IMPORTANT) {
         obj2 = { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
-      } else if (mode === obj.MUTED) {
+      } else if (mode === tmp6.MUTED) {
         obj2 = { variant: "text-md/medium", color: "text-muted" };
       } else {
         obj2 = mode === tmp6.SELECTED ? { variant: "text-md/medium", color: "redesign-channel-name-text" } : { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
       }
     }
-    const obj3 = { experimental_useNativeText: true, lineClamp: 1, style: items, children: name };
+    const obj3 = { experimental_useNativeText: true };
     const merged = Object.assign(obj2);
-    items = [tmp.channelName, textStyle];
-    const items1 = [authStore(tmp5, obj3), ];
+    obj3.lineClamp = 1;
+    const items = [tmp.channelName, textStyle];
+    obj3.style = items;
+    obj3.children = name;
+    const items1 = [v65535(tmp5, obj3), ];
     const obj4 = { mode, subtitle };
-    items1[1] = authStore(closure_14, obj4);
+    items1[1] = v65535(closure_14, obj4);
     obj.children = items1;
-    return unpackModuleId(View, obj);
+    return closure_1_11(View, obj);
   }
   obj2 = { variant: "text-md/semibold", color: "redesign-channel-name-text" };
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let ALL_MESSAGES;
-  let channelInfo;
-  let children;
-  let disableHighlightOnPress;
-  let hideIcon;
-  let icon;
-  let items;
-  let items1;
-  let mode;
-  let name;
-  let tmp10;
-  let tmp11;
-  let tmp12;
-  let tmp4;
-  let tmp5;
-  let tmp6;
-  let tmp7;
-  let tmp8;
-  let tmp9;
-  let unread;
-  const obj = react2;
-  const cResult = obj.c(30);
+function useChannelNameTextProps(channelMode) {
+  if (channelMode !== obj2.UNREAD_IMPORTANT) {
+    return { variant: "text-md/semibold", color: "redesign-channel-name-text" };
+  }
+}
+function getChannelSubtitleTextProps(channelMode) {
+  if (channelMode !== obj2.UNREAD_IMPORTANT) {
+    if (channelMode !== tmp.RELEVANT) {
+      if (channelMode !== tmp.SELECTED) {
+        const MUTED = tmp.MUTED;
+        let obj = { variant, color: "text-muted" };
+      }
+      return obj;
+    }
+  }
+  obj2 = { variant, color: "redesign-channel-name-text" };
+  obj = obj2;
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_sidebar/native/BaseChannelItem.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let tmp34Result = dependencyMap;
+  const cResult = c.c(30);
   if (cResult[0] !== arg0) {
     ({ icon, name, mode, hideIcon, disableHighlightOnPress, channelInfo, children, unread } = arg0);
     const tmp15 = _objectWithoutProperties(arg0, closure_3);
@@ -465,15 +420,13 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[7] = tmp15;
     cResult[8] = disableHighlightOnPress;
     cResult[9] = unread;
-    tmp12 = unread;
-    tmp11 = disableHighlightOnPress;
-    tmp10 = tmp15;
-    tmp9 = name;
-    tmp8 = mode;
-    tmp7 = icon;
-    tmp6 = hideIcon;
-    tmp5 = children;
-    tmp4 = channelInfo;
+    let tmp10 = tmp15;
+    let tmp9 = name;
+    let tmp8 = mode;
+    let tmp7 = icon;
+    let tmp6 = hideIcon;
+    let tmp5 = children;
+    let tmp4 = channelInfo;
   } else {
     tmp4 = cResult[1];
     tmp5 = cResult[2];
@@ -482,116 +435,107 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp8 = cResult[5];
     tmp9 = cResult[6];
     tmp10 = cResult[7];
-    tmp11 = cResult[8];
-    tmp12 = cResult[9];
   }
   const tmp18 = closure_12(tmp8);
-  let rowSelected = tmp8 === obj.SELECTED;
-  const tmp20 = obj;
+  let rowPaddingNoIcon = tmp6;
+  if (tmp6) {
+    rowPaddingNoIcon = tmp18.rowPaddingNoIcon;
+  }
+  let rowSelected = tmp8 === obj2.SELECTED;
   if (rowSelected) {
     rowSelected = tmp18.rowSelected;
   }
   if (cResult[10] === tmp18.channel) {
-    if (cResult[11] === (tmp6 && tmp18.rowPaddingNoIcon)) {
-      let tmp21;
+    if (cResult[11] === rowPaddingNoIcon) {
       if (cResult[12] === rowSelected) {
-        tmp21 = cResult[13];
+        let tmp20 = cResult[13];
       }
       if (cResult[14] === tmp6) {
         if (cResult[15] === tmp8) {
           if (cResult[16] === tmp18.unreadIndicator) {
-            let tmp22;
-            if (cResult[17] === (undefined !== tmp12 && tmp12)) {
-              tmp22 = cResult[18];
+            if (cResult[17] === tmp17) {
+              let tmp21 = cResult[18];
+            }
+            let tmp29 = !tmp6;
+            if (!tmp6) {
+              tmp29 = tmp7;
             }
             if (cResult[19] === tmp4) {
               if (cResult[20] === tmp9) {
-                if (cResult[21] === tmp21) {
-                  if (cResult[22] === tmp22) {
-                    let tmp30;
-                    let AnimatedPressableHighlight;
-                    if (cResult[23] === (!tmp6 && tmp7)) {
-                      tmp30 = cResult[24];
+                if (cResult[21] === tmp20) {
+                  if (cResult[22] === tmp21) {
+                    if (cResult[23] === tmp29) {
+                      let tmp30 = cResult[24];
                     }
                     if (cResult[25] === tmp30) {
                       if (cResult[26] === tmp5) {
-                        if (cResult[27] === (undefined !== tmp11 && tmp11)) {
-                          let tmp34;
+                        if (cResult[27] === tmp16) {
                           if (cResult[28] === tmp10) {
-                            tmp34 = cResult[29];
+                            return cResult[29];
                           }
-                          return tmp34;
                         }
                       }
                     }
-                    if (undefined !== tmp11 && tmp11) {
-                      AnimatedPressableHighlight = TouchableBackgroundDefault;
+                    if (tmp16) {
+                      let AnimatedPressableHighlight = TouchableBackgroundDefault;
                     } else {
                       AnimatedPressableHighlight = native2.AnimatedPressableHighlight;
                     }
-                    const obj2 = { children: items };
+                    obj2 = {};
                     const merged = Object.assign(tmp10);
-                    items = [tmp30, tmp5];
-                    const tmp35Result = unpackModuleId(AnimatedPressableHighlight, obj2);
+                    const items = [tmp30, tmp5];
+                    obj2.children = items;
+                    tmp34Result = closure_1_11(AnimatedPressableHighlight, obj2);
                     cResult[25] = tmp30;
                     cResult[26] = tmp5;
-                    cResult[27] = undefined !== tmp11 && tmp11;
+                    cResult[27] = tmp16;
                     cResult[28] = tmp10;
-                    cResult[29] = tmp35Result;
-                    tmp34 = tmp35Result;
+                    cResult[29] = tmp34Result;
                   }
                 }
               }
             }
-            const obj3 = { style: tmp21, children: items1 };
-            items1 = [tmp22, !tmp6 && tmp7, tmp9, tmp4];
-            const tmp33 = unpackModuleId(View, obj3);
+            const obj3 = { style: tmp20, children: null };
+            const items1 = [tmp21, tmp29, tmp9, tmp4];
+            obj3.children = items1;
+            const tmp33 = closure_1_11(View, obj3);
             cResult[19] = tmp4;
             cResult[20] = tmp9;
-            cResult[21] = tmp21;
-            cResult[22] = tmp22;
-            cResult[23] = !tmp6 && tmp7;
+            cResult[21] = tmp20;
+            cResult[22] = tmp21;
+            cResult[23] = tmp29;
             cResult[24] = tmp33;
             tmp30 = tmp33;
           }
         }
       }
-      let tmp24Result = !tmp6;
-      if (tmp24Result) {
-        const obj4 = { style: tmp18.unreadIndicator, unread: undefined !== tmp12 && tmp12, resolvedUnreadSetting: ALL_MESSAGES };
-        const tmp26 = StaticChannelIndicatorDefault;
-        if (tmp8 === tmp20.UNREAD_LESS_IMPORTANT) {
-          ALL_MESSAGES = UnreadSetting.ONLY_MENTIONS;
+      if (tmp6) {
+        cResult[14] = tmp6;
+        cResult[15] = tmp8;
+        cResult[16] = tmp18.unreadIndicator;
+        cResult[17] = tmp17;
+        cResult[18] = tmp22;
+        tmp21 = tmp22;
+      } else {
+        const obj4 = { style: tmp18.unreadIndicator, unread: tmp17, resolvedUnreadSetting: null };
+        if (tmp8 === tmp19.UNREAD_LESS_IMPORTANT) {
+          let ALL_MESSAGES = UnreadSetting.ONLY_MENTIONS;
         } else {
           ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
         }
-        tmp24Result = authStore(tmp26, obj4);
+        obj4.resolvedUnreadSetting = ALL_MESSAGES;
+        v65535(StaticChannelIndicatorDefault, obj4);
       }
-      cResult[14] = tmp6;
-      cResult[15] = tmp8;
-      cResult[16] = tmp18.unreadIndicator;
-      cResult[17] = undefined !== tmp12 && tmp12;
-      cResult[18] = tmp24Result;
-      tmp22 = tmp24Result;
     }
   }
-  const items2 = [tmp18.channel, tmp6 && tmp18.rowPaddingNoIcon, rowSelected];
+  const items2 = [tmp18.channel, rowPaddingNoIcon, rowSelected];
   cResult[10] = tmp18.channel;
-  cResult[11] = tmp6 && tmp18.rowPaddingNoIcon;
+  cResult[11] = rowPaddingNoIcon;
   cResult[12] = rowSelected;
   cResult[13] = items2;
-  tmp21 = items2;
+  tmp20 = items2;
+  tmp19 = obj2;
 }) : ((mode) => {
-  let ALL_MESSAGES;
-  let AnimatedPressableHighlight;
-  let channel;
-  let channelInfo;
-  let children;
-  let icon;
-  let items1;
-  let items2;
-  let name;
-  let unread;
   mode = mode.mode;
   const hideIcon = mode.hideIcon;
   let flag = mode.disableHighlightOnPress;
@@ -608,67 +552,51 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   dependencyMap = tmp2;
   let items = [hideIcon, mode, tmp2];
   const obj = {
-    style: react.useMemo(() => {
-      const items = [channel.channel, hideIcon && channel.rowPaddingNoIcon, mode === obj.SELECTED && channel.rowSelected];
+    style: noop.useMemo(() => {
+      const items = [channel.channel, , ];
+      let rowPaddingNoIcon = hideIcon;
+      if (hideIcon) {
+        rowPaddingNoIcon = channel.rowPaddingNoIcon;
+      }
+      items[1] = rowPaddingNoIcon;
+      items[2] = mode === obj2.SELECTED && channel.rowSelected;
       return items;
     }, items),
-    children: items1
+    children: null
   };
-  let tmp6Result = !hideIcon;
-  if (tmp6Result) {
-    const obj2 = { style: tmp2.unreadIndicator, unread, resolvedUnreadSetting: ALL_MESSAGES };
-    const tmp9 = hideIcon(12032);
-    if (mode === obj.UNREAD_LESS_IMPORTANT) {
-      ALL_MESSAGES = UnreadSetting.ONLY_MENTIONS;
+  if (hideIcon) {
+    const items1 = [tmp5, , , ];
+    let tmp14 = !hideIcon;
+    if (!hideIcon) {
+      tmp14 = icon;
+    }
+    items1[1] = tmp14;
+    items1[2] = name;
+    items1[3] = channelInfo;
+    obj.children = items1;
+    if (flag) {
+      let AnimatedPressableHighlight = hideIcon(12033);
+    } else {
+      AnimatedPressableHighlight = mode(8602).AnimatedPressableHighlight;
+    }
+    obj2 = {};
+    const merged1 = Object.assign(merged);
+    const items2 = [closure_11(tmp4, obj), children];
+    obj2.children = items2;
+    return closure_11(AnimatedPressableHighlight, obj2);
+  } else {
+    const obj3 = { style: tmp2.unreadIndicator, unread, resolvedUnreadSetting: null };
+    if (mode === obj2.UNREAD_LESS_IMPORTANT) {
+      let ALL_MESSAGES = UnreadSetting.ONLY_MENTIONS;
     } else {
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
-    tmp6Result = closure_10(tmp9, obj2);
+    obj3.resolvedUnreadSetting = ALL_MESSAGES;
+    closure_10(hideIcon(12032), obj3);
+    const tmp9 = hideIcon(12032);
   }
-  items1 = [tmp6Result, !hideIcon && icon, name, channelInfo];
-  const tmp3Result = closure_11(View, obj);
-  if (flag) {
-    AnimatedPressableHighlight = hideIcon(12033);
-  } else {
-    AnimatedPressableHighlight = mode(8602).AnimatedPressableHighlight;
-  }
-  const obj3 = { children: items2 };
-  const merged1 = Object.assign(merged);
-  items2 = [tmp3Result, children];
-  return closure_11(AnimatedPressableHighlight, obj3);
 });
-function useChannelNameTextProps(channelMode) {
-  let obj;
-  if (channelMode !== obj.UNREAD_IMPORTANT) {
-    if (channelMode !== obj.RELEVANT) {
-      if (channelMode === obj.UNREAD_LESS_IMPORTANT) {
-        obj = { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
-      } else if (channelMode === obj.MUTED) {
-        obj = { variant: "text-md/medium", color: "text-muted" };
-      } else {
-        obj = channelMode === tmp.SELECTED ? { variant: "text-md/medium", color: "redesign-channel-name-text" } : { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
-      }
-    }
-    return { variant: "text-md/semibold", color: "redesign-channel-name-text" };
-  }
-}
-function getChannelSubtitleTextProps(channelMode) {
-  let obj;
-  if (channelMode !== obj.UNREAD_IMPORTANT) {
-    if (channelMode !== obj.RELEVANT) {
-      if (channelMode !== obj.SELECTED) {
-        const MUTED = tmp.MUTED;
-        obj = { variant: metroImportDefault, color: "text-muted" };
-      }
-      return obj;
-    }
-  }
-  obj = { variant: metroImportDefault, color: "redesign-channel-name-text" };
-}
-const result = size.fileFinishedImporting("modules/guild_sidebar/native/BaseChannelItem.tsx");
-
-export default tmp7;
-export { ChannelModes };
+export const ChannelModes = obj2;
 export const BaseChannelSubtitle = tmp4;
 export const BaseChannelIcon = tmp5;
 export { useChannelNameTextProps };

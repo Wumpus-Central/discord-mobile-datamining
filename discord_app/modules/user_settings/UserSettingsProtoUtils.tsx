@@ -7,9 +7,9 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/user_settings/UserSettingsProtoUtils.tsx");
 
 export const getProtoFieldClass = function getProtoFieldClass(PreloadedUserSettings, field) {
-  let closure_0 = field;
+  closure_0 = field;
   const fields = PreloadedUserSettings.fields;
-  const found = fields.find((localName) => localName.localName === field);
+  const found = fields.find((localName) => localName.localName === closure_0);
   if (null == found) {
     const _Error = Error;
     const _String = String;
@@ -20,11 +20,9 @@ export const getProtoFieldClass = function getProtoFieldClass(PreloadedUserSetti
   }
 };
 export const createModifiedProto = function createModifiedProto(favoriteGifs, fn, protoFieldClass, PreloadedUserSettings, arg4) {
-  let fromBinaryResult;
   if (null != favoriteGifs) {
-    const fromBinary = protoFieldClass.fromBinary;
+    let fromBinaryResult = protoFieldClass.fromBinary(protoFieldClass.toBinary(favoriteGifs), ProtoUtils.BINARY_READ_OPTIONS);
     const toBinaryResult = protoFieldClass.toBinary(favoriteGifs);
-    fromBinaryResult = fromBinary(toBinaryResult, ProtoUtils.BINARY_READ_OPTIONS);
   } else {
     fromBinaryResult = protoFieldClass.create();
   }

@@ -24,12 +24,10 @@ export function getTagMinHeight(arg0) {
   }
 }
 export const getTagTextVariant = function getTagTextVariant(size) {
-  const obj = TagGroupShared;
-  return obj.getTagTextVariant(size);
+  return TagGroupShared.getTagTextVariant(size);
 };
 export const getTagIconSize = function getTagIconSize(size) {
-  const obj = TagGroupShared;
-  return obj.getTagIconSize(size);
+  return TagGroupShared.getTagIconSize(size);
 };
 export function getTagGraphicDimension(size) {
   let num = 12;
@@ -39,9 +37,8 @@ export function getTagGraphicDimension(size) {
   return num;
 }
 export const getTagBorderRadius = function getTagBorderRadius(arg0, arg1) {
-  let xs;
   if ("filter" === arg1) {
-    xs = nativeDefault.radii.round;
+    let xs = nativeDefault.radii.round;
   } else if ("md" === arg0) {
     xs = nativeDefault.radii.sm;
   } else {
@@ -50,18 +47,16 @@ export const getTagBorderRadius = function getTagBorderRadius(arg0, arg1) {
   return xs;
 };
 export const getTagHorizontalPadding = function getTagHorizontalPadding(arg0) {
-  let PX_8;
   if ("md" === arg0) {
-    PX_8 = nativeDefault.space.PX_12;
+    let PX_8 = nativeDefault.space.PX_12;
   } else {
     PX_8 = nativeDefault.space.PX_8;
   }
   return PX_8;
 };
 export const getTagGap = function getTagGap(arg0) {
-  let PX_4;
   if ("md" === arg0) {
-    PX_4 = nativeDefault.space.PX_8;
+    let PX_4 = nativeDefault.space.PX_8;
   } else {
     PX_4 = nativeDefault.space.PX_4;
   }

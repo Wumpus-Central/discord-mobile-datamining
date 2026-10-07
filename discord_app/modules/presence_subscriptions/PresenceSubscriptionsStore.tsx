@@ -1,91 +1,84 @@
 // === Module 11145: PresenceSubscriptionsStore ===
 
 // Module 11145 (PresenceSubscriptionsStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 2011 */;
-import Timers from "Timers" /* 2046 */;
 import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11146 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import _slicedToArray from "module_32" /* 32 */;
 import PresenceStore from "PresenceStore" /* 4936 */;
-import size from "module_2" /* 2 */;
 
 function handleConnectionOpenOrResumed() {
   closure_5 = {};
   closure_6 = {};
 }
-const INVITE_EXPIRATION_MS = Constants.INVITE_EXPIRATION_MS;
+const INVITE_EXPIRATION_MS = fn(2011).INVITE_EXPIRATION_MS;
 let closure_5 = {};
 let closure_6 = {};
-const delayedCall = new Timers.DelayedCall(3000, function flush() {
-  let tmp6;
-  let tmp7;
+const delayedCall = new fn(2046).DelayedCall(3000, function flush() {
   const items = [];
   const entries = Object.entries(closure_6);
-  const tmp2 = entries[Symbol.iterator]();
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let arr = items.push(tmp7);
-    closure_5[tmp6] = tmp7;
-    delete closure_6[tmp6];
+  while (tmp4 !== undefined) {
+    let tmp7 = _slicedToArray(tmp5, 2);
+    [tmp8, tmp9] = tmp7;
+    let arr = items.push(tmp9);
+    closure_5[tmp8] = tmp9;
+    delete tmp[tmp2];
     continue;
   }
   if (0 !== items.length) {
-    const obj = ActivitiesActionCreatorsDefault;
-    obj.subscribeActivities(items);
+    ActivitiesActionCreatorsDefault.subscribeActivities(items);
   }
+  tmp4 = entries[Symbol.iterator]();
 });
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class PresenceSubscriptionsStore extends Store {
-  initialize() {
-    this.waitFor(PresenceStore);
-  }
-  isSubscribed(applicationId) {
-    const combined = "" + applicationId.applicationId + ":" + applicationId.partyId;
-    return combined in closure_5 || combined in closure_6;
-  }
 }
 const prototype = PresenceSubscriptionsStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(PresenceStore);
+};
+prototype["isSubscribed"] = function isSubscribed(applicationId) {
+  const combined = "" + applicationId.applicationId + ":" + applicationId.partyId;
+  let tmp2 = combined in closure_5;
+  if (!tmp2) {
+    tmp2 = combined in closure_6;
+  }
+  return tmp2;
+};
 PresenceSubscriptionsStore.displayName = "PresenceSubscriptionsStore";
-let obj = {
+const presenceSubscriptionsStore = new PresenceSubscriptionsStore(DispatcherDefault, {
   PRESENCE_SUBSCRIPTIONS_ADD: function handleSubscriptionAdd(subscription) {
-    let applicationId;
-    let channelId;
-    let inviteTime;
-    let messageId;
-    let partyId;
-    let userId;
-    function prune() {
+    subscription = subscription.subscription;
+    const tmp = (function prune() {
       let flag = false;
       const timestamp = Date.now();
       const entries = Object.entries(closure_1_5);
-      const tmp3 = entries[Symbol.iterator]();
-      while (tmp3 !== undefined) {
-        let tmp6 = _slicedToArray(tmp4, 2);
-        if (tmp6[1].expiresAt < timestamp) {
-          delete closure_1_5[tmp7];
+      while (tmp7 !== undefined) {
+        let tmp10 = _slicedToArray(tmp8, 2);
+        if (tmp10[1].expiresAt < timestamp) {
+          delete tmp4[tmp3];
           flag = true;
         }
         continue;
       }
       const entries1 = Object.entries(closure_1_6);
       for (const item10033 of entries1) {
-        let tmp10 = _slicedToArray(item10033, 2);
-        if (tmp10[1].expiresAt < timestamp) {
-          delete closure_1_6[tmp11];
+        let tmp16 = _slicedToArray(item10033, 2);
+        if (tmp16[1].expiresAt < timestamp) {
+          delete tmp2[tmp];
           flag = true;
         }
         continue;
       }
       return flag;
-    }
-    subscription = subscription.subscription;
-    const tmp = prune();
+    })();
     ({ applicationId, partyId } = subscription);
     ({ userId, messageId, channelId, inviteTime } = subscription);
     const combined = "" + subscription.applicationId + ":" + subscription.partyId;
-    let tmp3 = combined in closure_5 || combined in closure_6;
+    let tmp3 = combined in closure_5;
+    if (!tmp3) {
+      tmp3 = combined in closure_6;
+    }
     if (tmp3) {
       return tmp;
     } else {
@@ -97,10 +90,9 @@ let obj = {
         const _HermesInternal = HermesInternal;
         const _Date2 = Date;
         const combined1 = "" + applicationId + ":" + partyId;
-        closure_6[combined1] = { userId, applicationId, partyId, messageId, channelId, expiresAt: INVITE_EXPIRATION_MS + Date.now() };
         const obj = { userId, applicationId, partyId, messageId, channelId, expiresAt: INVITE_EXPIRATION_MS + Date.now() };
+        closure_6[combined1] = obj;
         delayedCall.delay();
-        let flag = true;
         return true;
       }
     }
@@ -111,8 +103,8 @@ let obj = {
     closure_5 = {};
     closure_6 = {};
   }
-};
-const presenceSubscriptionsStore = new PresenceSubscriptionsStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/presence_subscriptions/PresenceSubscriptionsStore.tsx");
 
 export default presenceSubscriptionsStore;

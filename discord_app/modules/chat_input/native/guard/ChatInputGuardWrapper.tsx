@@ -1,85 +1,49 @@
 // === Module 12091: ChatInputGuardWrapper ===
 
 // Module 12091 (ChatInputGuardWrapper)
-import Fragment from "Fragment" /* 21 */;
-import ChannelRecord from "ChannelRecord" /* 2055 */;
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4502 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4521 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
 import MemberVerificationUtils from "MemberVerificationUtils" /* 5849 */;
-import PhoneConstants from "PhoneConstants" /* 6547 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9447 */;
 import navigateToThreadCreation from "navigateToThreadCreation" /* 11032 */;
 import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11199 */;
-import ChatInputConstants from "ChatInputConstants" /* 11589 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 4516 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import GuildVerificationStore from "GuildVerificationStore" /* 5577 */;
 import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-let closure_12;
-let map1;
-let unpackModuleId;
-const isThread = ChannelRecord.isThread;
-const TextAreaCta = ChatInputConstants.TextAreaCta;
-({ AnalyticEvents: unpackModuleId, ChannelTypes: closure_12, VerificationCriteria: map1 } = Constants);
-let closure_14 = PhoneConstants.PHONE_VERIFICATION_MODAL_KEY;
-const jsx = Fragment.jsx;
+require = fn;
+const isThread = fn(2055).isThread;
+const TextAreaCta = fn(11589).TextAreaCta;
+const Constants = fn(1085);
+({ AnalyticEvents: closure_11, ChannelTypes: closure_12, VerificationCriteria: map1 } = Constants);
+let closure_14 = fn(6547).PHONE_VERIFICATION_MODAL_KEY;
+const jsx = fn(21).jsx;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardWrapper.tsx");
 
 export default function ChatInputGuardWrapper(channel) {
-  let accountDeadline;
-  let automodUserProfileQuarantined;
-  let canCreateThreads;
-  let canSendMessages;
-  let children;
-  let intl4;
-  let isReadonly;
-  let memberDeadline;
-  let missingVerificationRole;
-  let newAccount;
-  let newMember;
-  let notEmailVerified;
-  let notPhoneVerified;
-  let onJumpToPresent;
-  let requiredLinkedLobbyApplication;
-  let screenIndex;
-  let shouldRelaunchLinkedLobbyApplication;
-  let showLinkedLobbyApplicationLoadingIndicator;
-  let showMemberVerificationModal;
-  let tmp21Result;
-  let tmp23;
-  let user;
   channel = channel.channel;
   let stateFromStores;
   ({ screenIndex, canSendMessages, canCreateThreads, children, isReadonly, onJumpToPresent } = channel);
   const guildId = channel.getGuildId();
-  let tmp2 = channel;
-  let tmp3 = stateFromStores;
-  let obj = channel(stateFromStores[12]);
+  const tmp3 = stateFromStores;
   const items = [GuildStore];
-  stateFromStores = obj.useStateFromStores(items, () => {
-    const obj = MemberVerificationUtils;
-    return obj.guildHasVerificationGate(GuildStore.getGuild(guildId));
-  });
-  let obj2 = channel(stateFromStores[12]);
+  stateFromStores = channel(stateFromStores[12]).useStateFromStores(items, () => MemberVerificationUtils.guildHasVerificationGate(GuildStore.getGuild(guildId)));
+  let obj = channel(stateFromStores[12]);
   const items1 = [GuildVerificationStore];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => GuildVerificationStore.getCheck(guildId));
+  const stateFromStores1 = channel(stateFromStores[12]).useStateFromStores(items1, () => GuildVerificationStore.getCheck(guildId));
   const notClaimed = stateFromStores1.notClaimed;
   const verificationRole = stateFromStores1.verificationRole;
   ({ notPhoneVerified, notEmailVerified, newMember, newAccount, memberDeadline, accountDeadline, missingVerificationRole } = stateFromStores1);
-  let obj3 = channel(stateFromStores[12]);
+  let obj2 = channel(stateFromStores[12]);
   const items2 = [UserStore, GuildMemberStore];
   const items3 = [guildId, stateFromStores, notClaimed];
-  const stateFromStoresObject = obj3.useStateFromStoresObject(items2, () => {
-    let isPending;
-    let tmp6Result;
-    let tmp8;
+  const stateFromStoresObject = channel(stateFromStores[12]).useStateFromStoresObject(items2, () => {
     const currentUser = UserStore.getCurrentUser();
     let member = null;
     if (null != currentUser) {
@@ -88,68 +52,82 @@ export default function ChatInputGuardWrapper(channel) {
         member = GuildMemberStore.getMember(tmp3, currentUser.id);
       }
     }
-    const obj = { user: currentUser, showMemberVerificationModal: (true === isPending || notClaimed) && stateFromStores, communicationDisabledGuildMember: tmp8, automodUserProfileQuarantined: tmp6Result.hasAutomodQuarantinedProfile(member) };
-    isPending = undefined;
+    const obj = { user: currentUser, showMemberVerificationModal: null, communicationDisabledGuildMember: null, automodUserProfileQuarantined: null };
+    let isPending;
     if (member != null) {
       isPending = member.isPending;
     }
-    tmp8 = undefined;
-    const obj2 = CommunicationDisabledUtils;
+    obj.showMemberVerificationModal = (true === isPending || notClaimed) && stateFromStores;
+    let tmp8;
     if (obj2.isMemberCommunicationDisabled(member)) {
       tmp8 = member;
     }
-    tmp6Result = AutomodPermissionUtils;
+    obj.communicationDisabledGuildMember = tmp8;
+    obj2 = CommunicationDisabledUtils;
+    obj.automodUserProfileQuarantined = AutomodPermissionUtils.hasAutomodQuarantinedProfile(member);
     return obj;
   }, items3);
   const communicationDisabledGuildMember = stateFromStoresObject.communicationDisabledGuildMember;
   ({ user, showMemberVerificationModal, automodUserProfileQuarantined } = stateFromStoresObject);
   let tmp9 = channel.type === constants2.GUILD_ANNOUNCEMENT;
-  let tmp8 = guildId(stateFromStores[16])(user, channel);
+  let obj3 = channel(stateFromStores[12]);
   if (tmp9) {
     tmp9 = !canSendMessages;
   }
+  const tmp10 = guildId(tmp3[17])({ channelId: channel.id });
   let obj4 = { channelId: channel.id };
-  const tmp10 = guildId(tmp3[17])(obj4);
-  const tmp2Result = tmp2(tmp3[18]);
-  const tmp11 = tmp2Result.useIsMessageRequest(channel.id) && channel.isPrivate();
-  const tmp2Result4 = tmp2(tmp3[19]);
-  const tmp12 = tmp2Result4.useIsSpamMessageRequest(channel.id) && channel.isPrivate();
+  let tmp8 = guildId(stateFromStores[16])(user, channel);
+  const tmp2Result = channel(tmp3[18]);
+  const tmp11 = channel(tmp3[18]).useIsMessageRequest(channel.id) && channel.isPrivate();
+  const tmp2Result4 = channel(tmp3[19]);
+  const tmp12 = channel(tmp3[19]).useIsSpamMessageRequest(channel.id) && channel.isPrivate();
+  const isForumPostResult = channel.isForumPost();
   const items4 = [RelationshipStore];
   const items5 = [channel];
-  const isForumPostResult = channel.isForumPost();
-  const tmp2Result5 = tmp2(tmp3[12]);
-  const stateFromStores2 = tmp2Result5.useStateFromStores(items4, () => {
-    const isDMResult = channel.isDM() && RelationshipStore.isBlocked(channel.getRecipientId());
+  const stateFromStores2 = channel(tmp3[12]).useStateFromStores(items4, () => {
+    let isDMResult = channel.isDM();
+    if (isDMResult) {
+      isDMResult = RelationshipStore.isBlocked(channel.getRecipientId());
+    }
     return isDMResult;
   }, items5);
+  const tmp2Result5 = channel(tmp3[12]);
   const items6 = [notClaimed];
   const items7 = [guildId];
-  const tmp2Result6 = tmp2(tmp3[12]);
-  const stateFromStores3 = tmp2Result6.useStateFromStores(items6, () => {
-    const isLurkingResult = null != guildId && LurkingStore.isLurking(tmp);
+  const stateFromStores3 = channel(tmp3[12]).useStateFromStores(items6, () => {
+    let isLurkingResult = null != guildId;
+    if (isLurkingResult) {
+      isLurkingResult = LurkingStore.isLurking(tmp);
+    }
     return isLurkingResult;
   }, items7);
+  const tmp2Result6 = channel(tmp3[12]);
   ({ showLinkedLobbyApplicationLoadingIndicator, requiredLinkedLobbyApplication, shouldRelaunchLinkedLobbyApplication } = guildId(tmp3[20])(channel.linkedLobby));
-  guildId(tmp3[20])(channel.linkedLobby);
   guildId(tmp3[21])(channel.id);
   if (tmp11) {
-    tmp21Result = jsx(tmp7(tmp3[31]), { channel });
-    tmp23 = jsx;
+    const obj5 = { channel };
+    let tmp21Result = jsx(tmp7(tmp3[31]), { channel });
+    let tmp23 = jsx;
   } else if (tmp12) {
+    const obj6 = { channel };
     tmp21Result = jsx(tmp7(tmp3[32]), { channel });
     tmp23 = jsx;
   } else if (channel.isSystemDM()) {
-    guildId(tmp3[33]);
+    const obj7 = { type: "simple-action", icon: jsx(tmp2(tmp3[34]).CircleInformationIcon, {}), message: null, subtext: null };
     const intl14 = tmp2(tmp3[35]).intl;
+    obj7.message = intl14.string(tmp2(tmp3[35]).t.Bt2N7D);
     const intl15 = tmp2(tmp3[35]).intl;
-    tmp21Result = <tmp7Result type="simple-action" icon={null} message={intl14.string(tmp2(tmp3[35]).t.Bt2N7D)} subtext={intl15.string(tmp2(tmp3[35]).t["n/Vzkw"])} />;
+    obj7.subtext = intl15.string(tmp2(tmp3[35]).t["n/Vzkw"]);
+    tmp21Result = jsx(tmp7(tmp3[33]), { type: "simple-action", icon: jsx(tmp2(tmp3[34]).CircleInformationIcon, {}), message: null, subtext: null });
     tmp23 = jsx;
+    const tmp7Result = tmp7(tmp3[33]);
   } else if (tmp8) {
     tmp21Result = jsx(tmp7(tmp3[36]), {});
     tmp23 = jsx;
   } else {
     if (tmp9) {
       if (null != tmp10) {
+        const obj8 = { pendingGameProfileReturn: tmp10 };
         tmp21Result = jsx(tmp7(tmp3[37]), { pendingGameProfileReturn: tmp10 });
         tmp23 = jsx;
       }
@@ -157,107 +135,122 @@ export default function ChatInputGuardWrapper(channel) {
     if (!stateFromStores3) {
       if (!tmp9) {
         if (stateFromStores2) {
-          guildId(tmp3[33]);
+          const obj9 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
           const intl12 = tmp2(tmp3[35]).intl;
+          obj9.message = intl12.string(tmp2(tmp3[35]).t["9T6N5/"]);
           const intl13 = tmp2(tmp3[35]).intl;
-          tmp21Result = <tmp7Result9 type="button-action" message={intl12.string(tmp2(tmp3[35]).t["9T6N5/"])} buttonPrimaryText={intl13.string(tmp2(tmp3[35]).t.XyHpKH)} buttonPrimaryOnPress={function handleUnblock() {
+          obj9.buttonPrimaryText = intl13.string(tmp2(tmp3[35]).t.XyHpKH);
+          obj9.buttonPrimaryOnPress = function handleUnblock() {
             if (channel.isDM()) {
               const obj3 = { cta_type: TextAreaCta.UNBLOCK };
-              const obj2 = AppAnalyticsUtilsDefault;
-              obj2.trackWithMetadata(unpackModuleId.TEXT_AREA_CTA_CLICKED, obj3);
-              const obj4 = RelationshipActionCreatorsDefault;
-              obj4.unblockUser(channel.getRecipientId());
+              AppAnalyticsUtilsDefault.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, obj3);
+              RelationshipActionCreatorsDefault.unblockUser(channel.getRecipientId());
             }
-          }} />;
+          };
+          tmp21Result = jsx(tmp7(tmp3[33]), { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
           tmp23 = jsx;
+          const tmp7Result9 = tmp7(tmp3[33]);
         } else if (showMemberVerificationModal) {
+          const obj10 = { guildId };
           tmp21Result = jsx(tmp7(tmp3[39]), { guildId });
           tmp23 = jsx;
         } else {
           if (!showLinkedLobbyApplicationLoadingIndicator) {
             if (null == requiredLinkedLobbyApplication) {
               if (null != communicationDisabledGuildMember) {
+                const obj11 = { guildMember: communicationDisabledGuildMember };
                 tmp21Result = jsx(tmp7(tmp3[41]), { guildMember: communicationDisabledGuildMember });
                 tmp23 = jsx;
               } else if (automodUserProfileQuarantined) {
+                const obj12 = { guildId };
                 tmp21Result = jsx(tmp7(tmp3[42]), { guildId });
                 tmp23 = jsx;
               } else if (notClaimed) {
-                guildId(tmp3[33]);
+                const obj13 = { type: "simple-action", icon: jsx(tmp2(tmp3[43]).ChatXIcon, {}), message: null };
                 const intl11 = tmp2(tmp3[35]).intl;
-                tmp21Result = <tmp7Result10 type="simple-action" icon={null} message={intl11.string(tmp2(tmp3[35]).t["Eg3/c9"])} />;
+                obj13.message = intl11.string(tmp2(tmp3[35]).t["Eg3/c9"]);
+                tmp21Result = jsx(tmp7(tmp3[33]), { type: "simple-action", icon: jsx(tmp2(tmp3[43]).ChatXIcon, {}), message: null });
                 tmp23 = jsx;
+                const tmp7Result10 = tmp7(tmp3[33]);
               } else if (notPhoneVerified) {
-                guildId(tmp3[33]);
+                const obj14 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
                 const intl9 = tmp2(tmp3[35]).intl;
+                obj14.message = intl9.string(tmp2(tmp3[35]).t["2dThMM"]);
                 const intl10 = tmp2(tmp3[35]).intl;
-                tmp21Result = <tmp7Result11 type="button-action" message={intl9.string(tmp2(tmp3[35]).t["2dThMM"])} buttonPrimaryText={intl10.string(tmp2(tmp3[35]).t["50gfOv"])} buttonPrimaryOnPress={function handleVerifyPhone() {
+                obj14.buttonPrimaryText = intl10.string(tmp2(tmp3[35]).t["50gfOv"]);
+                obj14.buttonPrimaryOnPress = function handleVerifyPhone() {
+                  guildId(stateFromStores[22]).trackWithMetadata(constants2.TEXT_AREA_CTA_CLICKED, { cta_type: constants.VERIFY_PHONE });
                   const obj = guildId(stateFromStores[22]);
                   const obj2 = { cta_type: constants.VERIFY_PHONE };
-                  obj.trackWithMetadata(constants2.TEXT_AREA_CTA_CLICKED, obj2);
-                  const pushLazy = guildId(stateFromStores[24]).pushLazy;
-                  const obj3 = { reason: channel(stateFromStores[27]).ChangePhoneReason.GUILD_PHONE_REQUIRED };
-                  guildId(stateFromStores[24]);
-                  const tmp3 = channel(stateFromStores[26])(stateFromStores[25], stateFromStores.paths);
-                  pushLazy(tmp3, obj3, closure_1_14);
-                }} />;
+                  const obj4 = { reason: null };
+                  const obj3 = guildId(stateFromStores[24]);
+                  obj4.reason = channel(stateFromStores[27]).ChangePhoneReason.GUILD_PHONE_REQUIRED;
+                  obj3.pushLazy(channel(stateFromStores[26])(stateFromStores[25], stateFromStores.paths), obj4, closure_1_14);
+                };
+                tmp21Result = jsx(tmp7(tmp3[33]), { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
                 tmp23 = jsx;
+                const tmp7Result11 = tmp7(tmp3[33]);
               } else if (notEmailVerified) {
-                guildId(tmp3[33]);
+                const obj15 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
                 const intl7 = tmp2(tmp3[35]).intl;
+                obj15.message = intl7.string(tmp2(tmp3[35]).t.FkGPS5);
                 const intl8 = tmp2(tmp3[35]).intl;
-                tmp21Result = <tmp7Result12 type="button-action" message={intl7.string(tmp2(tmp3[35]).t.FkGPS5)} buttonPrimaryText={intl8.string(tmp2(tmp3[35]).t.lm1UKt)} buttonPrimaryOnPress={function handleVerifyEmail() {
+                obj15.buttonPrimaryText = intl8.string(tmp2(tmp3[35]).t.lm1UKt);
+                obj15.buttonPrimaryOnPress = function handleVerifyEmail() {
+                  guildId(stateFromStores[22]).trackWithMetadata(constants2.TEXT_AREA_CTA_CLICKED, { cta_type: constants.VERIFY_EMAIL });
                   const obj = guildId(stateFromStores[22]);
                   const obj2 = { cta_type: constants.VERIFY_EMAIL };
-                  obj.trackWithMetadata(constants2.TEXT_AREA_CTA_CLICKED, obj2);
-                  const obj3 = guildId(stateFromStores[28]);
-                  obj3.open();
-                }} />;
+                  guildId(stateFromStores[28]).open();
+                };
+                tmp21Result = jsx(tmp7(tmp3[33]), { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
                 tmp23 = jsx;
+                const tmp7Result12 = tmp7(tmp3[33]);
               } else if (newMember) {
-                guildId(tmp3[33]);
+                const obj16 = { type: "simple-action", icon: jsx(tmp2(tmp3[44]).CalendarIcon, {}), message: null, countdown: null };
                 const intl6 = tmp2(tmp3[35]).intl;
                 const obj17 = { min: constants3.MEMBER_AGE };
-                tmp21Result = <tmp7Result13 type="simple-action" icon={null} message={intl6.formatToPlainString(tmp2(tmp3[35]).t.IH7RMF, obj17)} countdown={memberDeadline} />;
+                obj16.message = intl6.formatToPlainString(tmp2(tmp3[35]).t.IH7RMF, obj17);
+                obj16.countdown = memberDeadline;
+                tmp21Result = jsx(tmp7(tmp3[33]), { type: "simple-action", icon: jsx(tmp2(tmp3[44]).CalendarIcon, {}), message: null, countdown: null });
                 tmp23 = jsx;
+                const tmp7Result13 = tmp7(tmp3[33]);
               } else if (newAccount) {
-                guildId(tmp3[33]);
+                const obj18 = { type: "simple-action", icon: jsx(tmp2(tmp3[44]).CalendarIcon, {}), message: null, countdown: null };
                 const intl5 = tmp2(tmp3[35]).intl;
                 const obj19 = { min: constants3.ACCOUNT_AGE };
-                tmp21Result = <tmp7Result14 type="simple-action" icon={null} message={intl5.formatToPlainString(tmp2(tmp3[35]).t["2JA2GH"], obj19)} countdown={accountDeadline} />;
+                obj18.message = intl5.formatToPlainString(tmp2(tmp3[35]).t["2JA2GH"], obj19);
+                obj18.countdown = accountDeadline;
+                tmp21Result = jsx(tmp7(tmp3[33]), { type: "simple-action", icon: jsx(tmp2(tmp3[44]).CalendarIcon, {}), message: null, countdown: null });
                 tmp23 = jsx;
+                const tmp7Result14 = tmp7(tmp3[33]);
               } else {
                 if (missingVerificationRole) {
                   if (null != verificationRole) {
-                    let obj22;
-                    const guild_connections = verificationRole.tags.guild_connections;
                     const intl3 = tmp2(tmp3[35]).intl;
-                    const format = intl3.format;
+                    const obj20 = { roleName: null };
                     const _HermesInternal = HermesInternal;
-                    const obj20 = { roleName: "@" + verificationRole.name };
-                    const HbivnU = tmp2(tmp3[35]).t.HbivnU;
-                    const formatResult = format(HbivnU, obj20);
-                    guildId(tmp3[33]);
-                    if (null === guild_connections) {
-                      const obj21 = {
-                        type: "button-action",
-                        message: formatResult,
-                        buttonPrimaryText: intl4.string(tmp2(tmp3[35]).t["6Ge2LG"]),
-                        buttonPrimaryOnPress: function handleGetVerificationRole() {
-                                              const tmp2 = null != verificationRole && null != guildId;
-                                              if (tmp2) {
-                                                const obj = GuildRoleConnectionsModalActionCreators;
-                                                const result = obj.openGuildRoleConnectionsConnectAccountModal(verificationRole, guildId);
-                                              }
-                                            }
+                    obj20.roleName = "@" + verificationRole.name;
+                    const formatResult = intl3.format(tmp2(tmp3[35]).t.HbivnU, obj20);
+                    if (null === verificationRole.tags.guild_connections) {
+                      const obj21 = { type: "button-action", message: formatResult, buttonPrimaryText: null, buttonPrimaryOnPress: null };
+                      const intl4 = tmp2(tmp3[35]).intl;
+                      obj21.buttonPrimaryText = intl4.string(tmp2(tmp3[35]).t["6Ge2LG"]);
+                      obj21.buttonPrimaryOnPress = function handleGetVerificationRole() {
+                        let tmp2 = null != verificationRole;
+                        if (tmp2) {
+                          tmp2 = null != guildId;
+                        }
+                        if (tmp2) {
+                          const result = GuildRoleConnectionsModalActionCreators.openGuildRoleConnectionsConnectAccountModal(verificationRole, guildId);
+                        }
                       };
-                      intl4 = tmp2(tmp3[35]).intl;
-                      obj22 = obj21;
+                      let obj22 = obj21;
                     } else {
                       obj22 = { type: "simple-action", message: formatResult };
                     }
-                    tmp21Result = <tmp7Result15 {...obj22} />;
+                    tmp21Result = jsx(tmp7(tmp3[33]), obj22);
                     tmp23 = jsx;
+                    const tmp7Result15 = tmp7(tmp3[33]);
                   }
                 }
                 if (isReadonly) {
@@ -265,15 +258,19 @@ export default function ChatInputGuardWrapper(channel) {
                     if (!isForumPostResult) {
                       if (!verificationRole(channel.type)) {
                         if (canCreateThreads) {
-                          guildId(tmp3[33]);
+                          const obj23 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
                           const intl = tmp2(tmp3[35]).intl;
+                          obj23.message = intl.string(tmp2(tmp3[35]).t.Yi2xuY);
                           const intl2 = tmp2(tmp3[35]).intl;
-                          tmp21Result = <tmp7Result16 type="button-action" message={intl.string(tmp2(tmp3[35]).t.Yi2xuY)} buttonPrimaryText={intl2.string(tmp2(tmp3[35]).t.rBIGBL)} buttonPrimaryOnPress={function handleCreateThread() {
-                            const obj = navigateToThreadCreation;
-                            const result = obj.navigateToThreadCreation(channel, "chat input guard");
-                          }} />;
+                          obj23.buttonPrimaryText = intl2.string(tmp2(tmp3[35]).t.rBIGBL);
+                          obj23.buttonPrimaryOnPress = function handleCreateThread() {
+                            const result = navigateToThreadCreation.navigateToThreadCreation(channel, "chat input guard");
+                          };
+                          tmp21Result = jsx(tmp7(tmp3[33]), { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
                           tmp23 = jsx;
+                          const tmp7Result16 = tmp7(tmp3[33]);
                         } else {
+                          const obj24 = { guildId, channel };
                           tmp21Result = jsx(tmp7(tmp3[45]), { guildId, channel });
                           tmp23 = jsx;
                         }
@@ -285,14 +282,15 @@ export default function ChatInputGuardWrapper(channel) {
               }
             }
           }
+          const obj25 = { showLinkedLobbyApplicationLoadingIndicator, requiredLinkedLobbyApplication, shouldRelaunchLinkedLobbyApplication };
           tmp21Result = jsx(tmp7(tmp3[40]), { showLinkedLobbyApplicationLoadingIndicator, requiredLinkedLobbyApplication, shouldRelaunchLinkedLobbyApplication });
           tmp23 = jsx;
         }
       }
     }
+    const obj26 = { channel, isReadonlyAnnouncementsChannel: tmp9 };
     tmp21Result = jsx(tmp7(tmp3[38]), { channel, isReadonlyAnnouncementsChannel: tmp9 });
     tmp23 = jsx;
   }
-  const obj27 = { screenIndex, channelId: channel.id, onJumpToPresent, children: tmp21Result };
-  return tmp23(tmp2(tmp3[33]).ChatInputGuardContainer, obj27);
+  return tmp23(channel(tmp3[33]).ChatInputGuardContainer, { screenIndex, channelId: channel.id, onJumpToPresent, children: tmp21Result });
 };

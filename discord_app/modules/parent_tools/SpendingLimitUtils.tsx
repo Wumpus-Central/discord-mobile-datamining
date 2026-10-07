@@ -11,6 +11,7 @@ export const spendingLimitEqual = function spendingLimitEqual(amount, amount2) {
     let tmp2 = null != amount && null != amount2;
     if (tmp2) {
       tmp2 = amount.amount === amount2.amount && amount.currency === amount2.currency;
+      const tmp3 = amount.amount === amount2.amount && amount.currency === amount2.currency;
     }
     tmp = tmp2;
   }
@@ -19,20 +20,16 @@ export const spendingLimitEqual = function spendingLimitEqual(amount, amount2) {
 export const getNextRenewalDateLabel = function getNextRenewalDateLabel() {
   const date = new Date();
   const uTCFullYear = date.getUTCFullYear();
-  const date1 = new Date(UTC(uTCFullYear, date.getUTCMonth() + 1, 1));
   const dateTimeFormat = new Intl.DateTimeFormat(undefined, { dateStyle: "short", timeZone: "UTC" });
-  return dateTimeFormat.format(date1);
+  return dateTimeFormat.format(new Date(Date.UTC(uTCFullYear, date.getUTCMonth() + 1, 1)));
 };
 export const getCurrencySymbol = function getCurrencySymbol(formatted) {
   try {
     const _Intl = Intl;
-    const self = this;
     const obj = { style: "currency", currency: formatted.toUpperCase() };
     formatted = undefined;
-    const self2 = this;
-    const numberFormat = new NumberFormat(undefined, obj);
-    const formatToPartsResult = numberFormat.formatToParts(0);
-    const iter = formatToPartsResult.find((type) => "currency" === type.type);
+    const numberFormat = new Intl.NumberFormat(undefined, obj);
+    const iter = numberFormat.formatToParts(0).find((type) => "currency" === type.type);
     if (iter != null) {
       formatted = iter.value;
     }
@@ -41,7 +38,7 @@ export const getCurrencySymbol = function getCurrencySymbol(formatted) {
     }
     return formatted;
   } catch (err) {
-    return formatted.toUpperCase();
+    return str.toUpperCase();
   }
 };
 export const sanitizeAmountInput = function sanitizeAmountInput(str, arg1) {
@@ -51,11 +48,10 @@ export const sanitizeAmountInput = function sanitizeAmountInput(str, arg1) {
     let str2 = str.replace(/[^0-9.]/g, "");
     const parts = str2.split(".");
     if (1 !== parts.length) {
-      const first = parts[0];
       const substr = parts.slice(1);
       const joined = substr.join("");
       const _HermesInternal = HermesInternal;
-      str2 = "" + first + "." + joined.slice(0, arg1);
+      str2 = "" + parts[0] + "." + joined.slice(0, arg1);
     }
     return str2;
   }

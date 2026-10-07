@@ -1,168 +1,141 @@
 // === Module 15926: RegisterDisplayName ===
 
 // Module 15926 (RegisterDisplayName)
-import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import intl5 from "intl" /* 1126 */;
-import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
+import util from "util" /* 1126 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14535 */;
-import RegistrationUIStore from "RegistrationUIStore" /* 15906 */;
-import RegistrationConstants from "RegistrationConstants" /* 15907 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, importDefault, navigation, setOptionsResult;
 
-let c10;
-let c9;
-let closure_12;
-let map1;
-let metroImportAll;
-let obj2;
-let obj3;
-let unpackModuleId;
+require = fn;
 function getGlobalNameError(first1) {
   if (closure_16.includes(first1)) {
-    const intl2 = intl5.intl;
-    return intl2.string(intl5.t.WeJZyy);
+    const intl2 = util.intl;
+    return intl2.string(util.t.WeJZyy);
   } else {
     for (const item10009 of closure_15) {
-      let formatted = first1.toLowerCase();
+      let formatted = arg0.toLowerCase();
       if (formatted.includes(item10009)) {
-        let intl = intl5.intl;
-        let stringResult = intl.string(intl5.t.WeJZyy);
+        let intl = util.intl;
+        let stringResult = intl.string(util.t.WeJZyy);
         obj.return();
         return stringResult;
       }
     }
   }
 }
-let _asyncToGenerator = _asyncToGenerator_mod;
-let react = react_mod;
-const View = react_native.View;
-({ updateRegistrationOptions: metroImportAll, useRegistrationUIStore: c9 } = RegistrationUIStore);
-({ RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: unpackModuleId } = RegistrationConstants);
-({ jsx: closure_12, jsxs: map1 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { globalName: obj2, button: obj3, page: { flex: 1 } };
-obj2 = { marginTop: nativeDefault.space.PX_24 };
-createStyles = createStyles.createStyles;
-obj3 = { marginTop: nativeDefault.space.PX_24 };
-let closure_14 = createStyles(obj);
+const View = fn(17).View;
+const RegistrationUIStore = fn(15906);
+({ updateRegistrationOptions: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
+const RegistrationConstants = fn(15907);
+({ RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: closure_11 } = RegistrationConstants);
+const jsxProd = fn(21);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { globalName: { marginTop: nativeDefault.space.PX_24 }, button: null, page: null };
+let obj3 = { marginTop: nativeDefault.space.PX_24 };
+obj2.button = { marginTop: nativeDefault.space.PX_24 };
+obj2.page = { flex: 1 };
+let closure_14 = createStyles.createStyles(obj2);
 let closure_15 = ["discord", "hypesquad", "snowsgiving", "system message", "system mesage", "sustem mesage", "sustem message"];
 let closure_16 = ["everyone", "here"];
-const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let closure_3;
-  let closure_5;
-  let context;
-  let first;
-  let first1;
-  let obj6;
-  let tmp12;
-  let tmp15;
-  let tmp19;
-  let tmp24;
-  let tmp25;
-  let tmp28;
-  const tmp = navigation;
-  let obj = navigation(first1[12]);
-  const cResult = obj.c(55);
+const ReactCompilerGating = fn(558);
+let obj4 = { marginTop: nativeDefault.space.PX_24 };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/auth/native/components/RegisterDisplayName.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = require("c").c(55);
   closure_14();
   require("useWideAuthView")();
-  let obj2 = navigation(first1[14]);
-  navigation = obj2.useNavigation();
-  const obj3 = react;
-  [r10025, importDefault] = context(react.useState(false), 2);
-  context(react.useState(false), 2);
+  let obj = require("c");
+  const navigation = require("useNavigation").useNavigation();
+  _require = navigation;
+  const obj2 = require("useNavigation");
   const tmp8 = context;
+  [r10025, importDefault] = context(noop.useState(false), 2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function u(errors) {
       return errors.errors;
     };
     cResult[0] = fn;
-    first = fn;
+    let first = fn;
   } else {
     first = cResult[0];
   }
-  const tmp11 = state(first);
+  const tmp11 = closure_9(first);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function x() {
-      let str = state.getState().registrationOptions.globalName;
+      let str = closure_1_9.getState().registrationOptions.globalName;
       if (str == null) {
         str = "";
       }
       return str;
     };
     cResult[1] = fn2;
-    tmp12 = fn2;
+    let tmp12 = fn2;
   } else {
     tmp12 = cResult[1];
   }
-  const tmp8Result = tmp8(obj3.useState(tmp12), 2);
+  const tmp8Result = tmp8(noop.useState(tmp12), 2);
   first1 = tmp8Result[0];
-  _asyncToGenerator = tmp8Result[1];
+  asyncGeneratorStep = tmp8Result[1];
   if (cResult[2] !== first1) {
     const tmp17 = getGlobalNameError(first1);
     cResult[2] = first1;
     cResult[3] = tmp17;
-    tmp15 = tmp17;
+    let tmp15 = tmp17;
   } else {
     tmp15 = cResult[3];
   }
   context = obj3.useContext(tmp(tmp2[15]).TrackRegistrationContext);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = tmp(tmp2[16]);
-    const previousRegistrationTransitionStep = tmpResult.getPreviousRegistrationTransitionStep(tmp(tmp2[17]).AuthStates.REGISTER_DISPLAY_NAME);
+    const previousRegistrationTransitionStep = tmp(tmp2[16]).getPreviousRegistrationTransitionStep(tmp(tmp2[17]).AuthStates.REGISTER_DISPLAY_NAME);
     cResult[4] = previousRegistrationTransitionStep;
-    tmp19 = previousRegistrationTransitionStep;
+    let tmp19 = previousRegistrationTransitionStep;
+    const tmpResult = tmp(tmp2[16]);
   } else {
     tmp19 = cResult[4];
   }
-  const tmp21 = require("useAuthFlowBackHandler")(tmp19);
-  const tmp5Result = require("useInitialRegistrationStep");
-  tmp5Result(tmp(first1[17]).AuthStates.REGISTER_DISPLAY_NAME);
+  require("useAuthFlowBackHandler")(tmp19);
+  const tmp9 = context(noop.useState(false), 2);
+  require("useInitialRegistrationStep")(require("ConstantsIOS").AuthStates.REGISTER_DISPLAY_NAME);
   if (cResult[5] !== context) {
     const fn3 = function j() {
-      const obj = { step: constants.ACCOUNT_DISPLAY_NAME, actionType: unpackModuleId.VIEWED };
-      context(obj);
+      context({ step: constants.ACCOUNT_DISPLAY_NAME, actionType: constants2.VIEWED });
     };
     const items = [context];
     cResult[5] = context;
     cResult[6] = fn3;
     cResult[7] = items;
-    tmp25 = items;
-    tmp24 = fn3;
+    let tmp25 = items;
+    let tmp24 = fn3;
   } else {
     tmp24 = cResult[6];
     tmp25 = cResult[7];
   }
   const effect = obj3.useEffect(tmp24, tmp25);
-  const ref = obj3.useRef(null);
+  const ref = noop.useRef(null);
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj4 = { inputRef: ref };
+    const obj4 = { inputRef: ref };
     cResult[8] = obj4;
-    tmp28 = obj4;
+    let tmp28 = obj4;
   } else {
     tmp28 = cResult[8];
   }
   require("useFocusRefOnNavigation")(tmp28);
   if (cResult[9] === navigation) {
-    let tmp30;
     if (cResult[10] === context) {
-      tmp30 = cResult[11];
+      let tmp30 = cResult[11];
     }
-    react = tmp30;
+    noop = tmp30;
     if (cResult[12] === tmp30) {
-      let tmp31;
-      let tmp32;
       if (cResult[13] === navigation) {
-        tmp31 = cResult[14];
-        tmp32 = cResult[15];
+        let tmp31 = cResult[14];
+        let tmp32 = cResult[15];
       }
       const layoutEffect = obj3.useLayoutEffect(tmp31, tmp32);
       const _Symbol = Symbol;
@@ -170,16 +143,13 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         constructor() {
           obj = {
             headerRight() {
-                      let intl;
-                      const obj = {
-                        text: intl.string(navigation(first1[10]).t["5Wxrcd"]),
-                        onPress() {
-                          return closure_1_5(null);
-                        }
+                      const obj = { text: null, onPress: null };
+                      const intl = closure_0(first1[10]).intl;
+                      obj.text = intl.string(closure_0(first1[10]).t["5Wxrcd"]);
+                      obj.onPress = function onPress() {
+                        return closure_1_5(null);
                       };
-                      const HeaderActionButton = navigation(first1[22]).HeaderActionButton;
-                      intl = navigation(first1[10]).intl;
-                      return closure_2_12(HeaderActionButton, obj);
+                      return closure_2_12(closure_0(first1[22]).HeaderActionButton, obj);
                     }
           };
           setOptionsResult = closure_0.setOptions(obj);
@@ -188,8 +158,14 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
       if (tmp34 === Symbol.for("react.memo_cache_sentinel")) {
         class V {
-          constructor(str) {
-            closure_3("");
+          constructor(arg0) {
+            tmp = closure_3;
+            str = "";
+            if ("" !== arg0.trim()) {
+              str = arg0;
+            }
+            tmpResult = tmp(str);
+            return;
           }
         }
         cResult[16] = V;
@@ -197,16 +173,13 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           constructor() {
             obj = {
               headerRight() {
-                          let intl;
-                          const obj = {
-                            text: intl.string(navigation(first1[10]).t["5Wxrcd"]),
-                            onPress() {
-                              return closure_1_5(null);
-                            }
+                          const obj = { text: null, onPress: null };
+                          const intl = closure_0(first1[10]).intl;
+                          obj.text = intl.string(closure_0(first1[10]).t["5Wxrcd"]);
+                          obj.onPress = function onPress() {
+                            return closure_1_5(null);
                           };
-                          const HeaderActionButton = navigation(first1[22]).HeaderActionButton;
-                          intl = navigation(first1[10]).intl;
-                          return closure_2_12(HeaderActionButton, obj);
+                          return closure_2_12(closure_0(first1[22]).HeaderActionButton, obj);
                         }
             };
             setOptionsResult = closure_0.setOptions(obj);
@@ -215,15 +188,27 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
       } else {
         class V {
-          constructor(str) {
-            closure_3("");
+          constructor(arg0) {
+            tmp = closure_3;
+            str = "";
+            if ("" !== arg0.trim()) {
+              str = arg0;
+            }
+            tmpResult = tmp(str);
+            return;
           }
         }
       }
       if (cResult[17] === tmp11) {
         class V {
-          constructor(str) {
-            closure_3("");
+          constructor(arg0) {
+            tmp = closure_3;
+            str = "";
+            if ("" !== arg0.trim()) {
+              str = arg0;
+            }
+            tmpResult = tmp(str);
+            return;
           }
         }
         const _Symbol2 = Symbol;
@@ -231,16 +216,13 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           constructor() {
             obj = {
               headerRight() {
-                          let intl;
-                          const obj = {
-                            text: intl.string(navigation(first1[10]).t["5Wxrcd"]),
-                            onPress() {
-                              return closure_1_5(null);
-                            }
+                          const obj = { text: null, onPress: null };
+                          const intl = closure_0(first1[10]).intl;
+                          obj.text = intl.string(closure_0(first1[10]).t["5Wxrcd"]);
+                          obj.onPress = function onPress() {
+                            return closure_1_5(null);
                           };
-                          const HeaderActionButton = navigation(first1[22]).HeaderActionButton;
-                          intl = navigation(first1[10]).intl;
-                          return closure_2_12(HeaderActionButton, obj);
+                          return closure_2_12(closure_0(first1[22]).HeaderActionButton, obj);
                         }
             };
             setOptionsResult = closure_0.setOptions(obj);
@@ -249,8 +231,14 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
         if (cResult[21] === first1) {
           class V {
-            constructor(str) {
-              closure_3("");
+            constructor(arg0) {
+              tmp = closure_3;
+              str = "";
+              if ("" !== arg0.trim()) {
+                str = arg0;
+              }
+              tmpResult = tmp(str);
+              return;
             }
           }
           const _Symbol3 = Symbol;
@@ -258,16 +246,13 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             constructor() {
               obj = {
                 headerRight() {
-                              let intl;
-                              const obj = {
-                                text: intl.string(navigation(first1[10]).t["5Wxrcd"]),
-                                onPress() {
-                                  return closure_1_5(null);
-                                }
+                              const obj = { text: null, onPress: null };
+                              const intl = closure_0(first1[10]).intl;
+                              obj.text = intl.string(closure_0(first1[10]).t["5Wxrcd"]);
+                              obj.onPress = function onPress() {
+                                return closure_1_5(null);
                               };
-                              const HeaderActionButton = navigation(first1[22]).HeaderActionButton;
-                              intl = navigation(first1[10]).intl;
-                              return closure_2_12(HeaderActionButton, obj);
+                              return closure_2_12(closure_0(first1[22]).HeaderActionButton, obj);
                             }
               };
               setOptionsResult = closure_0.setOptions(obj);
@@ -275,34 +260,42 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             }
           }
           if (cResult[25] !== tmp36) {
-            let stringResult;
             class V {
-              constructor(str) {
-                closure_3("");
+              constructor(arg0) {
+                tmp = closure_3;
+                str = "";
+                if ("" !== arg0.trim()) {
+                  str = arg0;
+                }
+                tmpResult = tmp(str);
+                return;
               }
             }
             if (null == tmp36) {
               class V {
-                constructor(str) {
-                  closure_3("");
+                constructor(arg0) {
+                  tmp = closure_3;
+                  str = "";
+                  if ("" !== arg0.trim()) {
+                    str = arg0;
+                  }
+                  tmpResult = tmp(str);
+                  return;
                 }
               }
-              stringResult = obj6.string(tmp(first1[10]).t.fbKwSs);
+              const stringResult = obj6.string(tmp(tmp2[10]).t.fbKwSs);
             }
             class K {
               constructor() {
                 obj = {
                   headerRight() {
-                                  let intl;
-                                  const obj = {
-                                    text: intl.string(navigation(first1[10]).t["5Wxrcd"]),
-                                    onPress() {
-                                      return closure_1_5(null);
-                                    }
+                                  const obj = { text: null, onPress: null };
+                                  const intl = closure_0(first1[10]).intl;
+                                  obj.text = intl.string(closure_0(first1[10]).t["5Wxrcd"]);
+                                  obj.onPress = function onPress() {
+                                    return closure_1_5(null);
                                   };
-                                  const HeaderActionButton = navigation(first1[22]).HeaderActionButton;
-                                  intl = navigation(first1[10]).intl;
-                                  return closure_2_12(HeaderActionButton, obj);
+                                  return closure_2_12(closure_0(first1[22]).HeaderActionButton, obj);
                                 }
                 };
                 setOptionsResult = closure_0.setOptions(obj);
@@ -312,25 +305,37 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             cResult[26] = stringResult;
           } else {
             class V {
-              constructor(str) {
-                closure_3("");
+              constructor(arg0) {
+                tmp = closure_3;
+                str = "";
+                if ("" !== arg0.trim()) {
+                  str = arg0;
+                }
+                tmpResult = tmp(str);
+                return;
               }
             }
           }
           if (cResult[27] === first1) {
             class V {
-              constructor(str) {
-                closure_3("");
+              constructor(arg0) {
+                tmp = closure_3;
+                str = "";
+                if ("" !== arg0.trim()) {
+                  str = arg0;
+                }
+                tmpResult = tmp(str);
+                return;
               }
             }
           }
-          const obj5 = { ref, value: first1, onChange: tmp35, returnKeyType: "next", onSubmitEditing: tmp39, textContentType: "nickname", errorMessage: tmp36, label: tmp41, description: tmp42, clearable: true };
+          let obj5 = { ref, value: first1, onChange: tmp35, returnKeyType: "next", onSubmitEditing: tmp39, textContentType: "nickname", errorMessage: tmp36, label: tmp41, description: tmp42, clearable: true };
+          const tmp46 = closure_12(tmp(tmp2[24]).TextInput, obj5);
           cResult[27] = first1;
           cResult[28] = tmp36;
           cResult[29] = tmp39;
           cResult[30] = tmp42;
-          cResult[31] = closure_12(tmp(first1[24]).TextInput, obj5);
-          const tmp46 = closure_12(tmp(first1[24]).TextInput, obj5);
+          cResult[31] = tmp46;
         }
         const fn5 = function q() {
           return closure_5(first1);
@@ -339,12 +344,17 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         cResult[22] = tmp30;
         cResult[23] = fn5;
       }
-      let str = "global_name";
       const tmp37 = require("getError")("global_name", tmp11);
       if (tmp37 == null) {
         class V {
-          constructor(str) {
-            closure_3("");
+          constructor(arg0) {
+            tmp = closure_3;
+            str = "";
+            if ("" !== arg0.trim()) {
+              str = arg0;
+            }
+            tmpResult = tmp(str);
+            return;
           }
         }
       }
@@ -356,16 +366,13 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       constructor() {
         obj = {
           headerRight() {
-                  let intl;
-                  const obj = {
-                    text: intl.string(navigation(first1[10]).t["5Wxrcd"]),
-                    onPress() {
-                      return closure_1_5(null);
-                    }
+                  const obj = { text: null, onPress: null };
+                  const intl = closure_0(first1[10]).intl;
+                  obj.text = intl.string(closure_0(first1[10]).t["5Wxrcd"]);
+                  obj.onPress = function onPress() {
+                    return closure_1_5(null);
                   };
-                  const HeaderActionButton = navigation(first1[22]).HeaderActionButton;
-                  intl = navigation(first1[10]).intl;
-                  return closure_2_12(HeaderActionButton, obj);
+                  return closure_2_12(closure_0(first1[22]).HeaderActionButton, obj);
                 }
         };
         setOptionsResult = closure_0.setOptions(obj);
@@ -380,20 +387,19 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp32 = items1;
     tmp31 = K;
   }
-  _require = _asyncToGenerator(async (globalName) => {
-    let closure_1;
-    let c2 = 0;
-    let c3 = 0;
+  _require = asyncGeneratorStep(async (globalName) => {
+    c2 = 0;
+    c3 = 0;
     return (async (arg0) => {
-      let obj2;
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          return { value, done: true };
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "IconComponent", done: null };
         }
@@ -406,26 +412,28 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              return { value, done: true };
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
               const obj6 = { globalName };
               closure_2_8(obj6);
-              const registrationOptions = state.getState().registrationOptions;
+              const registrationOptions = closure_2_9.getState().registrationOptions;
               const obj7 = { step: constants.ACCOUNT_DISPLAY_NAME, actionType: constants2.SUBMITTED };
-              closure_1_4(obj7);
-              const tmp5 = null != registrationOptions.username && "" !== registrationOptions.username;
-              if (!tmp5) {
-                tmp(true);
-                if (!closure_2_7.wasRegistrationSuggestionFetched(globalName)) {
+              context(obj7);
+              let tmp6 = null != registrationOptions.username;
+              if (tmp6) {
+                tmp6 = "" !== registrationOptions.username;
+              }
+              if (!tmp6) {
+                tmp2(true);
+                if (!UniqueUsernamesStore.wasRegistrationSuggestionFetched(globalName)) {
                   c2 = 1;
                   c3 = 1;
-                  const obj8 = { value: obj2.fetchSuggestionsRegistration(globalName), done: false };
-                  obj2 = closure_2_1(first1[21]);
+                  const obj8 = { value: require("UniqueUsernamesActionCreators").fetchSuggestionsRegistration(globalName), done: false };
                   return obj8;
                 }
               }
-              const obj4 = globalName(first1[16]);
-              const result = obj4.handleNextOrSubmitRegistration(globalName(first1[17]).AuthStates.REGISTER_DISPLAY_NAME, globalName, closure_1_4);
+              const result = globalName(first1[16]).handleNextOrSubmitRegistration(globalName(first1[17]).AuthStates.REGISTER_DISPLAY_NAME, globalName, context);
               c3 = 3;
               return { value: "IconComponent", done: null };
             }
@@ -434,86 +442,74 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            return { value, done: true };
+            const obj = { value, done: true };
+            return obj;
           }
-          tmp(false);
-        } catch (tmp21) {
-          c3 = 3;
-          throw tmp21;
+          tmp2(false);
+        } catch (tmp22) {
+          c3 = tmp;
+          throw tmp22;
         }
       }
     })();
   });
   const fn4 = function() {
-    return closure_0(...arguments);
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   };
   cResult[9] = navigation;
   cResult[10] = context;
   cResult[11] = fn4;
   tmp30 = fn4;
+  const tmp5Result = require("useInitialRegistrationStep");
 }) : (() => {
-  let Button;
-  let TextInput;
-  let callback;
-  let closure_1;
-  let closure_3;
-  let context;
-  let intl;
-  let intl2;
-  let intl4;
-  let items3;
-  let obj5;
-  let obj7;
-  let str;
-  let stringResult;
-  let tmp28;
   const tmp = closure_14();
-  const tmp3 = str;
-  let tmp5 = navigation;
   const tmp4 = require("useWideAuthView")();
-  let obj = navigation(str[14]);
-  navigation = obj.useNavigation();
+  const navigation = require("useNavigation").useNavigation();
+  _require = navigation;
   const tmp7 = context(callback.useState(false), 2);
   importDefault = tmp7[1];
-  const first = tmp7[0];
-  const tmp9 = state((errors) => errors.errors);
-  const tmp10 = context(callback.useState(() => {
-    str = state.getState().registrationOptions.globalName;
+  let obj = require("useNavigation");
+  const tmp9 = context(callback.useState(() => {
+    str = closure_1_9.getState().registrationOptions.globalName;
     if (str == null) {
       str = "";
     }
     return str;
   }), 2);
-  str = tmp10[0];
-  _asyncToGenerator = tmp10[1];
-  const tmp11 = getGlobalNameError(str);
-  context = callback.useContext(navigation(str[15]).TrackRegistrationContext);
-  const tmp13 = require("useAuthFlowBackHandler");
-  let obj2 = navigation(str[16]);
-  tmp13(obj2.getPreviousRegistrationTransitionStep(navigation(str[17]).AuthStates.REGISTER_DISPLAY_NAME));
-  const tmp15 = require("useInitialRegistrationStep");
-  tmp15(navigation(str[17]).AuthStates.REGISTER_DISPLAY_NAME);
+  asyncGeneratorStep = tmp9[1];
+  const tmp10 = getGlobalNameError(tmp9[0]);
+  context = callback.useContext(require("Auth").TrackRegistrationContext);
+  const tmp8 = closure_9((errors) => errors.errors);
+  const tmp12 = require("useAuthFlowBackHandler");
+  tmp12(require("RegistrationStepsUtils").getPreviousRegistrationTransitionStep(require("ConstantsIOS").AuthStates.REGISTER_DISPLAY_NAME));
+  const obj2 = require("RegistrationStepsUtils");
+  require("useInitialRegistrationStep")(require("ConstantsIOS").AuthStates.REGISTER_DISPLAY_NAME);
   const items = [context];
   const effect = callback.useEffect(() => {
-    const obj = { step: constants.ACCOUNT_DISPLAY_NAME, actionType: unpackModuleId.VIEWED };
-    context(obj);
+    context({ step: constants.ACCOUNT_DISPLAY_NAME, actionType: constants2.VIEWED });
   }, items);
   const ref = callback.useRef(null);
   require("useFocusRefOnNavigation")({ inputRef: ref });
-  const useCallback = callback.useCallback;
-  let closure_0 = _asyncToGenerator(async (globalName) => {
-    let c2 = 0;
-    let c3 = 0;
+  _require = asyncGeneratorStep(async (globalName) => {
+    c2 = 0;
+    c3 = 0;
     return (async (arg0) => {
-      let obj2;
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          return { value, done: true };
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "IconComponent", done: null };
         }
@@ -526,26 +522,28 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              return { value, done: true };
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
               const obj6 = { globalName };
               closure_2_8(obj6);
-              const registrationOptions = state.getState().registrationOptions;
+              const registrationOptions = closure_2_9.getState().registrationOptions;
               const obj7 = { step: constants.ACCOUNT_DISPLAY_NAME, actionType: constants2.SUBMITTED };
-              closure_1_4(obj7);
-              const tmp5 = null != registrationOptions.username && "" !== registrationOptions.username;
-              if (!tmp5) {
-                tmp(true);
-                if (!closure_2_7.wasRegistrationSuggestionFetched(globalName)) {
+              context(obj7);
+              let tmp6 = null != registrationOptions.username;
+              if (tmp6) {
+                tmp6 = "" !== registrationOptions.username;
+              }
+              if (!tmp6) {
+                tmp2(true);
+                if (!UniqueUsernamesStore.wasRegistrationSuggestionFetched(globalName)) {
                   c2 = 1;
                   c3 = 1;
-                  const obj8 = { value: obj2.fetchSuggestionsRegistration(globalName), done: false };
-                  obj2 = closure_2_1(str[21]);
+                  const obj8 = { value: tmp2(str[21]).fetchSuggestionsRegistration(globalName), done: false };
                   return obj8;
                 }
               }
-              const obj4 = globalName(str[16]);
-              const result = obj4.handleNextOrSubmitRegistration(globalName(str[17]).AuthStates.REGISTER_DISPLAY_NAME, globalName, closure_1_4);
+              const result = globalName(str[16]).handleNextOrSubmitRegistration(globalName(str[17]).AuthStates.REGISTER_DISPLAY_NAME, globalName, context);
               c3 = 3;
               return { value: "IconComponent", done: null };
             }
@@ -554,95 +552,98 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            return { value, done: true };
+            const obj = { value, done: true };
+            return obj;
           }
-          tmp(false);
-        } catch (tmp21) {
-          c3 = 3;
-          throw tmp21;
+          tmp2(false);
+        } catch (tmp22) {
+          c3 = tmp;
+          throw tmp22;
         }
       }
     })();
   });
   const items1 = [navigation, context];
-  callback = useCallback(function() {
-    return closure_0(...arguments);
+  callback = callback.useCallback(function() {
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   }, items1);
   const items2 = [callback, navigation];
   const layoutEffect = callback.useLayoutEffect(() => {
-    let obj = {
+    options.setOptions({
       headerRight() {
-        let intl;
-        const obj = {
-          text: intl.string(navigation(str[10]).t["5Wxrcd"]),
-          onPress() {
-            return closure_1_5(null);
-          }
+        const obj = { text: null, onPress: null };
+        const intl = closure_0(str[10]).intl;
+        obj.text = intl.string(closure_0(str[10]).t["5Wxrcd"]);
+        obj.onPress = function onPress() {
+          return closure_1_5(null);
         };
-        const HeaderActionButton = navigation(str[22]).HeaderActionButton;
-        intl = navigation(str[10]).intl;
-        return closure_2_12(HeaderActionButton, obj);
+        return closure_2_12(closure_0(str[22]).HeaderActionButton, obj);
       }
-    };
-    navigation.setOptions(obj);
+    });
   }, items2);
-  let tmp22 = require("getError")("global_name", tmp9);
-  if (tmp22 == null) {
-    tmp22 = tmp11;
+  let tmp21 = require("getError")("global_name", tmp8);
+  if (tmp21 == null) {
+    tmp21 = tmp10;
   }
-  const obj3 = { headerText: intl.string(tmp5(tmp3[10]).t.LYIh7j), children: items3 };
-  const tmp2Result = require("AuthFormView");
-  intl = tmp5(tmp3[10]).intl;
-  let obj4 = { style: tmp.globalName, children: closure_12(TextInput, obj5) };
-  obj5 = {
+  let obj3 = { headerText: null, children: null };
+  const tmp14 = require("useInitialRegistrationStep");
+  let intl = tmp5(tmp3[10]).intl;
+  obj3.headerText = intl.string(require("util").t.LYIh7j);
+  const obj4 = { style: tmp.globalName, children: null };
+  let obj5 = {
     ref,
-    value: str,
+    value: tmp9[0],
     onChange(str) {
-      closure_3("");
+      str = "";
+      closure_3(str);
     },
     returnKeyType: "next",
     onSubmitEditing() {
       return callback(str);
     },
     textContentType: "nickname",
-    errorMessage: tmp22,
-    label: intl2.string(tmp5(tmp3[10]).t["9AjdkD"]),
-    description: stringResult,
+    errorMessage: tmp21,
+    label: null,
+    description: null,
     clearable: true
   };
-  TextInput = tmp5(tmp3[24]).TextInput;
-  intl2 = tmp5(tmp3[10]).intl;
-  stringResult = undefined;
-  if (null == tmp22) {
+  const intl2 = tmp5(tmp3[10]).intl;
+  obj5.label = intl2.string(require("util").t["9AjdkD"]);
+  let stringResult;
+  if (null == tmp21) {
     const intl3 = tmp5(tmp3[10]).intl;
     stringResult = intl3.string(tmp5(tmp3[10]).t.fbKwSs);
   }
-  items3 = [closure_12(View, obj4), ];
-  let obj6 = { style: tmp.button, children: closure_12(Button, obj7) };
-  obj7 = {
-    size: "lg",
-    loading: first,
-    text: intl4.string(tmp5(tmp3[10]).t.PDTjLN),
-    onPress() {
-      return callback(str);
-    },
-    disabled: tmp28
+  obj5.description = stringResult;
+  obj4.children = closure_12(require("TextInput").TextInput, obj5);
+  const items3 = [closure_12(View, obj4), ];
+  let obj6 = { style: tmp.button, children: null };
+  let obj7 = { size: "lg", loading: tmp7[0], text: null, onPress: null, disabled: null };
+  const intl4 = tmp5(tmp3[10]).intl;
+  obj7.text = intl4.string(require("util").t.PDTjLN);
+  obj7.onPress = function onPress() {
+    return callback(str);
   };
-  Button = tmp5(tmp3[25]).Button;
-  intl4 = tmp5(tmp3[10]).intl;
-  tmp28 = null != tmp11;
-  if (!tmp28) {
-    tmp28 = "" === str.trim();
+  let tmp27 = null != tmp10;
+  if (!tmp27) {
+    tmp27 = "" === str.trim();
   }
+  obj7.disabled = tmp27;
+  obj6.children = closure_12(require("components/Button/Button").Button, obj7);
   items3[1] = closure_12(View, obj6);
-  const tmp23Result = closure_13(tmp2Result, obj3);
-  let tmp25Result = tmp23Result;
+  obj3.children = items3;
+  const tmp22Result = closure_13(require("AuthFormView"), obj3);
+  let tmp24Result = tmp22Result;
   if (!tmp4) {
-    let obj8 = { style: tmp.page, children: tmp23Result };
-    tmp25Result = closure_12(tmp2(tmp3[27]), obj8);
+    let obj8 = { style: tmp.page, children: tmp22Result };
+    tmp24Result = closure_12(tmp2(tmp3[27]), obj8);
   }
-  return tmp25Result;
+  return tmp24Result;
 });
-let result = size.fileFinishedImporting("modules/auth/native/components/RegisterDisplayName.tsx");
-
-export default tmp6;

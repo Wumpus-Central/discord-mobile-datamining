@@ -1,27 +1,22 @@
 // === Module 5583: SpeakingStore ===
 
 // Module 5583 (SpeakingStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants2 from "Constants" /* 1085 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
 import ProportionalVadIndicatorExperimentDefault from "ProportionalVadIndicatorExperiment" /* 5584 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import Constants from "Constants" /* 4921 */;
-import size from "module_2" /* 2 */;
 
-let c10;
-let c9;
 function anyoneHasFlagInContext(DEFAULT, VOICE, arg2) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
-  const value = map.get(DEFAULT);
+  value = map.get(DEFAULT);
   if (null == value) {
     return false;
   } else {
@@ -47,79 +42,66 @@ function handleConnectionOpen(user) {
   sessionId = user.sessionId;
   c14 = null;
 }
-const Permissions = Constants2.Permissions;
-({ SpeakingFlags: c9, MediaEngineContextTypes: c10 } = Constants);
+const Permissions = fn(1085).Permissions;
+const Constants = fn(4921);
+({ SpeakingFlags: closure_9, MediaEngineContextTypes: c10 } = Constants);
 let map = new Map();
 let id = null;
 let sessionId = null;
 let c14 = null;
 let isActive = false;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class SpeakingStore extends Store {
-  initialize() {
-    this.mustEmitChanges((type) => "CONNECTION_OPEN" !== type.type && "VOICE_STATE_UPDATES" !== type.type);
-    this.waitFor(ChannelStore, MediaEngineStore, RTCConnectionStore, SelectedChannelStore);
+}
+const prototype = SpeakingStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.mustEmitChanges((type) => {
+    let tmp = "CONNECTION_OPEN" !== type.type;
+    if (tmp) {
+      tmp = "VOICE_STATE_UPDATES" !== type.type;
+    }
+    return tmp;
+  });
+  this.waitFor(ChannelStore, MediaEngineStore, RTCConnectionStore, SelectedChannelStore);
+};
+prototype["getSpeakingDuration"] = function getSpeakingDuration(id, timestamp) {
+  let DEFAULT = arg2;
+  if (arg2 === undefined) {
+    DEFAULT = constants2.DEFAULT;
   }
-  getSpeakingDuration(id, timestamp) {
-    let DEFAULT = arg2;
-    if (arg2 === undefined) {
-      DEFAULT = constants2.DEFAULT;
+  value = map.get(DEFAULT);
+  let since;
+  if (value != null) {
+    value2 = value.get(id);
+    if (value2 != null) {
+      since = value2.since;
     }
-    const value = map.get(DEFAULT);
-    let since;
-    if (value != null) {
-      const value2 = value.get(id);
-      if (value2 != null) {
-        since = value2.since;
-      }
-    }
-    let num = 0;
-    if (null != since) {
-      num = timestamp - since;
-    }
-    return num;
   }
-  getSpeakers() {
-    let DEFAULT = arg0;
-    if (arg0 === undefined) {
-      DEFAULT = constants2.DEFAULT;
-    }
-    const _Array = Array;
-    let value = map.get(DEFAULT);
-    let keys;
-    if (value != null) {
-      keys = value.keys();
-    }
-    if (keys == null) {
-      keys = [];
-    }
-    const fromResult = from(keys);
-    return fromResult.filter((item) => {
-      const VOICE = constants.VOICE;
-      const value = map.get(DEFAULT);
-      let flags;
-      if (value != null) {
-        const value2 = value.get(item);
-        if (value2 != null) {
-          flags = value2.flags;
-        }
-      }
-      if (flags == null) {
-        flags = constants.NONE;
-      }
-      return (flags & VOICE) === VOICE;
-    });
+  let num = 0;
+  if (null != since) {
+    num = timestamp - since;
   }
-  isSpeaking(id) {
-    let DEFAULT = context;
-    if (context === undefined) {
-      DEFAULT = constants2.DEFAULT;
-    }
+  return num;
+};
+prototype["getSpeakers"] = function getSpeakers() {
+  let DEFAULT = arg0;
+  if (arg0 === undefined) {
+    DEFAULT = constants2.DEFAULT;
+  }
+  value = map.get(DEFAULT);
+  let keys;
+  if (value != null) {
+    keys = value.keys();
+  }
+  if (keys == null) {
+    keys = [];
+  }
+  return Array.from(keys).filter((item) => {
     const VOICE = constants.VOICE;
-    const value = map.get(DEFAULT);
+    value = map.get(DEFAULT);
     let flags;
     if (value != null) {
-      const value2 = value.get(id);
+      value2 = value.get(item);
       if (value2 != null) {
         flags = value2.flags;
       }
@@ -128,145 +110,159 @@ class SpeakingStore extends Store {
       flags = constants.NONE;
     }
     return (flags & VOICE) === VOICE;
+  });
+};
+prototype["isSpeaking"] = function isSpeaking(id) {
+  let DEFAULT = context;
+  if (context === undefined) {
+    DEFAULT = constants2.DEFAULT;
   }
-  isPrioritySpeaker(id) {
-    let DEFAULT;
-    if (DEFAULT === undefined) {
-      DEFAULT = constants2.DEFAULT;
+  const VOICE = constants.VOICE;
+  value = map.get(DEFAULT);
+  let flags;
+  if (value != null) {
+    value2 = value.get(id);
+    if (value2 != null) {
+      flags = value2.flags;
     }
-    const PRIORITY = constants.PRIORITY;
-    const value = map.get(DEFAULT);
-    let flags;
-    if (value != null) {
-      const value2 = value.get(id);
-      if (value2 != null) {
-        flags = value2.flags;
-      }
-    }
-    if (flags == null) {
-      flags = constants.NONE;
-    }
-    return (flags & PRIORITY) === PRIORITY;
   }
-  isSoundSharing(arg0) {
-    let DEFAULT = arg1;
-    if (arg1 === undefined) {
-      DEFAULT = constants2.DEFAULT;
-    }
-    const SOUNDSHARE = constants.SOUNDSHARE;
-    const value = map.get(DEFAULT);
-    let flags;
-    if (value != null) {
-      const value2 = value.get(arg0);
-      if (value2 != null) {
-        flags = value2.flags;
-      }
-    }
-    if (flags == null) {
-      flags = constants.NONE;
-    }
-    return (flags & SOUNDSHARE) === SOUNDSHARE;
+  if (flags == null) {
+    flags = constants.NONE;
   }
-  isAnyoneElseSpeaking() {
-    let DEFAULT;
-    if (DEFAULT === undefined) {
-      DEFAULT = constants2.DEFAULT;
-    }
-    return anyoneHasFlagInContext(DEFAULT, constants.VOICE, true);
+  return (flags & VOICE) === VOICE;
+};
+prototype["isPrioritySpeaker"] = function isPrioritySpeaker(id) {
+  if (DEFAULT === undefined) {
+    DEFAULT = constants2.DEFAULT;
   }
-  isCurrentUserSpeaking() {
-    let DEFAULT = context;
-    if (context === undefined) {
-      DEFAULT = constants2.DEFAULT;
+  const PRIORITY = constants.PRIORITY;
+  value = map.get(DEFAULT);
+  let flags;
+  if (value != null) {
+    value2 = value.get(id);
+    if (value2 != null) {
+      flags = value2.flags;
     }
-    let isSpeakingResult = null != id;
-    if (isSpeakingResult) {
-      const self = this;
-      isSpeakingResult = this.isSpeaking(id, DEFAULT);
-    }
-    return isSpeakingResult;
   }
-  isCurrentUserPTTActive() {
-    return isActive;
+  if (flags == null) {
+    flags = constants.NONE;
   }
-  isAnyonePrioritySpeaking() {
-    let DEFAULT;
-    if (DEFAULT === undefined) {
-      DEFAULT = constants2.DEFAULT;
-    }
-    return anyoneHasFlagInContext(DEFAULT, constants.VOICE | constants.PRIORITY);
+  return (flags & PRIORITY) === PRIORITY;
+};
+prototype["isSoundSharing"] = function isSoundSharing(arg0) {
+  let DEFAULT = arg1;
+  if (arg1 === undefined) {
+    DEFAULT = constants2.DEFAULT;
   }
-  isCurrentUserPrioritySpeaker() {
-    let DEFAULT;
-    if (DEFAULT === undefined) {
-      DEFAULT = constants2.DEFAULT;
+  const SOUNDSHARE = constants.SOUNDSHARE;
+  value = map.get(DEFAULT);
+  let flags;
+  if (value != null) {
+    value2 = value.get(arg0);
+    if (value2 != null) {
+      flags = value2.flags;
     }
-    let isPrioritySpeakerResult = null != id;
-    if (isPrioritySpeakerResult) {
-      const self = this;
-      isPrioritySpeakerResult = this.isPrioritySpeaker(id, DEFAULT);
-    }
-    return isPrioritySpeakerResult;
   }
-  isCurrentUserPrioritySpeaking() {
-    let DEFAULT = context;
-    if (context === undefined) {
-      DEFAULT = constants2.DEFAULT;
-    }
+  if (flags == null) {
+    flags = constants.NONE;
+  }
+  return (flags & SOUNDSHARE) === SOUNDSHARE;
+};
+prototype["isAnyoneElseSpeaking"] = function isAnyoneElseSpeaking() {
+  if (DEFAULT === undefined) {
+    DEFAULT = constants2.DEFAULT;
+  }
+  return anyoneHasFlagInContext(DEFAULT, constants.VOICE, true);
+};
+prototype["isCurrentUserSpeaking"] = function isCurrentUserSpeaking() {
+  let DEFAULT = context;
+  if (context === undefined) {
+    DEFAULT = constants2.DEFAULT;
+  }
+  let isSpeakingResult = null != id;
+  if (isSpeakingResult) {
     const self = this;
-    const isPrioritySpeakerResult = null != id && self.isPrioritySpeaker(id, DEFAULT) && self.isSpeaking(id, DEFAULT);
-    return isPrioritySpeakerResult;
+    isSpeakingResult = this.isSpeaking(id, DEFAULT);
   }
-  getVoiceVolume(arg0) {
-    let DEFAULT = arg1;
-    if (arg1 === undefined) {
-      DEFAULT = constants2.DEFAULT;
-    }
-    const obj = ProportionalVadIndicatorExperimentDefault;
-    const config = obj.getConfig({ location: "SpeakingStore" });
-    let num = -Infinity;
-    if (config.enabled) {
-      num = -Infinity;
-      if (!config.disableUI) {
-        const value = map.get(DEFAULT);
-        let num2;
-        if (value != null) {
-          const value2 = value.get(arg0);
-          if (value2 != null) {
-            num2 = value2.voiceDb;
-          }
+  return isSpeakingResult;
+};
+prototype["isCurrentUserPTTActive"] = function isCurrentUserPTTActive() {
+  return isActive;
+};
+prototype["isAnyonePrioritySpeaking"] = function isAnyonePrioritySpeaking() {
+  if (DEFAULT === undefined) {
+    DEFAULT = constants2.DEFAULT;
+  }
+  return anyoneHasFlagInContext(DEFAULT, constants.VOICE | constants.PRIORITY);
+};
+prototype["isCurrentUserPrioritySpeaker"] = function isCurrentUserPrioritySpeaker() {
+  if (DEFAULT === undefined) {
+    DEFAULT = constants2.DEFAULT;
+  }
+  let isPrioritySpeakerResult = null != id;
+  if (isPrioritySpeakerResult) {
+    const self = this;
+    isPrioritySpeakerResult = this.isPrioritySpeaker(id, DEFAULT);
+  }
+  return isPrioritySpeakerResult;
+};
+prototype["isCurrentUserPrioritySpeaking"] = function isCurrentUserPrioritySpeaking() {
+  let DEFAULT = context;
+  if (context === undefined) {
+    DEFAULT = constants2.DEFAULT;
+  }
+  const self = this;
+  let isPrioritySpeakerResult = null != id;
+  if (isPrioritySpeakerResult) {
+    isPrioritySpeakerResult = self.isPrioritySpeaker(id, DEFAULT);
+  }
+  if (isPrioritySpeakerResult) {
+    isPrioritySpeakerResult = self.isSpeaking(id, DEFAULT);
+  }
+  return isPrioritySpeakerResult;
+};
+prototype["getVoiceVolume"] = function getVoiceVolume(arg0) {
+  let DEFAULT = arg1;
+  if (arg1 === undefined) {
+    DEFAULT = constants2.DEFAULT;
+  }
+  const config = ProportionalVadIndicatorExperimentDefault.getConfig({ location: "SpeakingStore" });
+  let num = -Infinity;
+  if (config.enabled) {
+    num = -Infinity;
+    if (!config.disableUI) {
+      value = map.get(DEFAULT);
+      let num2;
+      if (value != null) {
+        value2 = value.get(arg0);
+        if (value2 != null) {
+          num2 = value2.voiceDb;
         }
-        if (num2 == null) {
-          num2 = -Infinity;
-        }
-        num = num2;
       }
+      if (num2 == null) {
+        num2 = -Infinity;
+      }
+      num = num2;
     }
-    return num;
   }
-}
-const prototype = SpeakingStore.prototype;
+  return num;
+};
 SpeakingStore.displayName = "SpeakingStore";
-let obj = {
+const speakingStore = new SpeakingStore(DispatcherDefault, {
   CONNECTION_OPEN: handleConnectionOpen,
   OVERLAY_INITIALIZE: handleConnectionOpen,
   SPEAKING: function handleSpeaking(arg0) {
-    let context;
-    let flag3;
-    let speakingFlags;
-    let userId;
-    let voiceDb;
     ({ context, userId, speakingFlags, voiceDb } = arg0);
     let num = speakingFlags;
     if ((speakingFlags & constants.PRIORITY) === constants.PRIORITY) {
       const channel = ChannelStore.getChannel(SelectedChannelStore.getVoiceChannelId());
       if (null != channel) {
         const obj2 = { permission: Permissions.PRIORITY_SPEAKER, user: userId, context: channel };
-        const obj = PermissionUtilsAll;
         if (obj.can(obj2)) {
           MediaEngineStore.setCanHavePriority(userId, true);
           num = speakingFlags;
         }
+        obj = PermissionUtilsAll;
       }
       MediaEngineStore.setCanHavePriority(userId, false);
       num = speakingFlags & ~constants.PRIORITY;
@@ -281,16 +277,14 @@ let obj = {
     if (context === undefined) {
       DEFAULT = constants2.DEFAULT;
     }
-    let value = map.get(DEFAULT);
+    value = map.get(DEFAULT);
     if (null == value) {
       const _Map = Map;
-      const self = this;
-      const self2 = this;
       map = new Map();
       const result = obj3.set(DEFAULT, map);
       value = map;
     }
-    const value2 = value.get(userId);
+    value2 = value.get(userId);
     let num2;
     if (value2 != null) {
       num2 = value2.flags;
@@ -301,9 +295,9 @@ let obj = {
     if (0 !== num2) {
       if (0 === num) {
         value.delete(userId);
-        flag3 = true;
+        let flag3 = true;
         if (0 === value.size) {
-          map.delete(context);
+          obj3.delete(context);
           flag3 = true;
         }
       } else {
@@ -316,7 +310,7 @@ let obj = {
         }
         if ((num2 & constants.VOICE) === constants.VOICE !== (num & constants.VOICE) === constants.VOICE) {
           let timestamp = null;
-          if ((num & constants.VOICE) === constants.VOICE) {
+          if (tmp18) {
             const _Date = Date;
             timestamp = Date.now();
           }
@@ -332,14 +326,14 @@ let obj = {
     return flag3;
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
-    let channelId;
     voiceStates = voiceStates.voiceStates;
     return voiceStates.reduce((acc, item) => {
-      let tmp13;
-      let userId;
       ({ userId, channelId, sessionId } = item);
+      let tmp2 = userId === id;
+      if (tmp2) {
+        tmp2 = sessionId === closure_1_13;
+      }
       let tmp4 = tmp;
-      const tmp2 = userId === id && sessionId === closure_1_13;
       if (tmp2) {
         let tmp6 = channelId;
         if (channelId == null) {
@@ -351,43 +345,46 @@ let obj = {
       let flag = false;
       if (c14 !== tmp4) {
         flag = map.delete(constants.DEFAULT) || false;
-        map.delete(constants.DEFAULT) || false;
+        const tmp9 = map.delete(constants.DEFAULT) || false;
       }
       if (null == channelId) {
-        let flag3;
-        if (userId === id) {
-          if (sessionId === closure_1_13) {
-            flag3 = map.delete(constants.DEFAULT) || flag;
-            map.delete(constants.DEFAULT) || flag;
-          }
-          tmp13 = flag3;
-        }
-        const DEFAULT2 = constants.DEFAULT;
-        const value = map.get(DEFAULT2);
-        flag3 = false;
-        if (null != value) {
-          const deleteResult = value.delete(userId);
-          flag3 = deleteResult;
-          if (0 === value.size) {
-            map.delete(DEFAULT2);
+        if (userId !== id) {
+          const DEFAULT2 = constants.DEFAULT;
+          value = map.get(DEFAULT2);
+          let flag3 = false;
+          if (null != value) {
+            const deleteResult = value.delete(userId);
             flag3 = deleteResult;
+            if (0 === value.size) {
+              map.delete(DEFAULT2);
+              flag3 = deleteResult;
+            }
+          }
+          if (!flag3) {
+            flag3 = flag;
           }
         }
-        if (!flag3) {
-          flag3 = flag;
-        }
+        flag3 = map.delete(constants.DEFAULT) || flag;
+        const tmp27 = map.delete(constants.DEFAULT) || flag;
       } else {
         if (userId === id) {
           if (sessionId !== closure_1_13) {
-            tmp13 = map.delete(constants.DEFAULT) || flag;
-            map.delete(constants.DEFAULT) || flag;
+            let tmp13 = map.delete(constants.DEFAULT) || flag;
+            const tmp19 = map.delete(constants.DEFAULT) || flag;
           }
+          if (!tmp13) {
+            tmp13 = acc;
+          }
+          return tmp13;
+        }
+        let tmp11 = userId !== id;
+        if (tmp11) {
+          tmp11 = channelId !== channelId.getChannelId();
         }
         tmp13 = flag;
-        const tmp11 = userId !== id && channelId !== channelId.getChannelId();
         if (tmp11) {
           const DEFAULT = constants.DEFAULT;
-          const value2 = map.get(DEFAULT);
+          value2 = map.get(DEFAULT);
           let flag2 = false;
           if (null != value2) {
             const deleteResult2 = value2.delete(userId);
@@ -403,17 +400,13 @@ let obj = {
           tmp13 = flag2;
         }
       }
-      if (!tmp13) {
-        tmp13 = acc;
-      }
-      return tmp13;
     }, false);
   },
   PUSH_TO_TALK_STATE_CHANGE: function handlePushToTalkStateChange(isActive) {
     isActive = isActive.isActive;
   }
-};
-const speakingStore = new SpeakingStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("stores/SpeakingStore.tsx");
 
 export default speakingStore;

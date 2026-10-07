@@ -1,21 +1,13 @@
 // === Module 13096: useJoinFromSupportedPlatformsIconKeys ===
 
 // Module 13096 (useJoinFromSupportedPlatformsIconKeys)
-import react2 from "react" /* 576 */;
-import Constants from "Constants" /* 1085 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import c from "c" /* 576 */;
+import noop from "module_19" /* 19 */;
 
-let set;
-
+require = fn;
 function getJoinFromSupportedPlatformsIconKeys(isGameLaunchable) {
-  let currentPlatform;
-  let platforms;
-  let tmp15;
   ({ platforms, currentPlatform } = isGameLaunchable);
-  isGameLaunchable = isGameLaunchable.isGameLaunchable;
-  set = new Set(platforms);
+  const set = new Set(platforms);
   if (null != platforms) {
     if (0 !== platforms.length) {
       if (null != currentPlatform) {
@@ -28,7 +20,6 @@ function getJoinFromSupportedPlatformsIconKeys(isGameLaunchable) {
         if (set.has(ActivityGamePlatforms.IOS)) {
           items.push(obj.MOBILE);
         }
-        const tmp8 = set.has(ActivityGamePlatforms.PS4) || set.has(ActivityGamePlatforms.PS5);
         if (tmp8) {
           items.push(obj.PLAYSTATION);
         }
@@ -43,6 +34,7 @@ function getJoinFromSupportedPlatformsIconKeys(isGameLaunchable) {
           items.push(obj.VR);
           tmp15 = items;
         }
+        tmp8 = set.has(ActivityGamePlatforms.PS4) || set.has(ActivityGamePlatforms.PS5);
       }
       if (set.has(ActivityGamePlatforms.ANDROID)) {
         items.push(obj.ANDROID);
@@ -53,22 +45,23 @@ function getJoinFromSupportedPlatformsIconKeys(isGameLaunchable) {
   }
   tmp15 = closure_5;
 }
-const ActivityGamePlatforms = Constants.ActivityGamePlatforms;
+const ActivityGamePlatforms = fn(1085).ActivityGamePlatforms;
 const IconKey = { DESKTOP: "desktop", MOBILE: "mobile", ANDROID: "android", IOS: "ios", PLAYSTATION: "playstation", XBOX: "xbox", VR: "vr" };
 let closure_5 = [];
-const obj2 = { [ActivityGamePlatforms.DESKTOP]: IconKey.DESKTOP, [ActivityGamePlatforms.ANDROID]: IconKey.ANDROID, [ActivityGamePlatforms.IOS]: IconKey.IOS, [ActivityGamePlatforms.XBOX]: IconKey.XBOX, [ActivityGamePlatforms.PS4]: IconKey.PLAYSTATION, [ActivityGamePlatforms.PS5]: IconKey.PLAYSTATION, [ActivityGamePlatforms.SAMSUNG]: null, [ActivityGamePlatforms.EMBEDDED]: null, [ActivityGamePlatforms.META_QUEST]: IconKey.VR };
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let currentPlatform;
-  let isGameLaunchable;
-  let platforms;
-  const obj = react2;
-  const cResult = obj.c(4);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/utils/useJoinFromSupportedPlatformsIconKeys.tsx");
+
+export { IconKey };
+export const ACTIVITY_GAME_PLATFORM_TO_ICON_KEY = { [ActivityGamePlatforms.DESKTOP]: IconKey.DESKTOP, [ActivityGamePlatforms.ANDROID]: IconKey.ANDROID, [ActivityGamePlatforms.IOS]: IconKey.IOS, [ActivityGamePlatforms.XBOX]: IconKey.XBOX, [ActivityGamePlatforms.PS4]: IconKey.PLAYSTATION, [ActivityGamePlatforms.PS5]: IconKey.PLAYSTATION, [ActivityGamePlatforms.SAMSUNG]: null, [ActivityGamePlatforms.EMBEDDED]: null, [ActivityGamePlatforms.META_QUEST]: IconKey.VR };
+export { getJoinFromSupportedPlatformsIconKeys };
+export const useJoinFromSupportedPlatformsIconKeys = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(4);
   ({ platforms, currentPlatform, isGameLaunchable } = arg0);
   if (cResult[0] === currentPlatform) {
     if (cResult[1] === isGameLaunchable) {
-      let tmp2;
       if (cResult[2] === platforms) {
-        tmp2 = cResult[3];
+        let tmp2 = cResult[3];
       }
       return tmp2;
     }
@@ -84,14 +77,5 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const currentPlatform = platforms.currentPlatform;
   const isGameLaunchable = platforms.isGameLaunchable;
   const items = [currentPlatform, platforms, isGameLaunchable];
-  return isGameLaunchable.useMemo(() => {
-    const obj = { platforms, currentPlatform, isGameLaunchable };
-    return getJoinFromSupportedPlatformsIconKeys(obj);
-  }, items);
+  return isGameLaunchable.useMemo(() => getJoinFromSupportedPlatformsIconKeys({ platforms, currentPlatform, isGameLaunchable }), items);
 });
-const result = size.fileFinishedImporting("modules/activities/utils/useJoinFromSupportedPlatformsIconKeys.tsx");
-
-export { IconKey };
-export const ACTIVITY_GAME_PLATFORM_TO_ICON_KEY = obj2;
-export { getJoinFromSupportedPlatformsIconKeys };
-export const useJoinFromSupportedPlatformsIconKeys = tmp2;

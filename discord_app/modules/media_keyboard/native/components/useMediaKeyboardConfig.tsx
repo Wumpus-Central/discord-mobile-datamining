@@ -1,40 +1,31 @@
 // === Module 16647: useMediaKeyboardConfig ===
 
 // Module 16647 (useMediaKeyboardConfig)
-import react2 from "react" /* 576 */;
-import MediaKeyboardConstants from "MediaKeyboardConstants" /* 1614 */;
+import c from "c" /* 576 */;
 import Server from "Server" /* 1985 */;
 import ThreadHooks from "ThreadHooks" /* 6782 */;
 import PollsUtils from "PollsUtils" /* 7270 */;
 import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 9033 */;
 import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10377 */;
 import useUploadDisabledDefault from "useUploadDisabled" /* 11879 */;
-import react from "react" /* 19 */;
-import Constants from "Constants" /* 1085 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let dependencyMap, importDefault;
-
-let hasOwnProperty;
-let metroRequire;
-let MediaKeyboardTarget = MediaKeyboardConstants.MediaKeyboardTarget;
+require = fn;
+let MediaKeyboardTarget = fn(1614).MediaKeyboardTarget;
+const Constants = fn(1085);
 ({ ChannelTypesSets: hasOwnProperty, MAX_UPLOAD_COUNT: metroRequire } = Constants);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
-  let channel;
-  let context;
-  let fileTypes;
-  let tmp11;
-  const obj = react2;
-  const cResult = obj.c(15);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_keyboard/native/components/useMediaKeyboardConfig.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(15);
   ({ channel, context } = arg0);
-  const obj2 = PollsUtils;
-  const tmp6 = obj2.useCanPostPollsInChannel(channel) && context.target !== MediaKeyboardTarget.COMMAND;
+  const tmp6 = PollsUtils.useCanPostPollsInChannel(channel) && context.target !== MediaKeyboardTarget.COMMAND;
   const tmp7 = useUploadDisabledDefault(channel);
-  const tmpResult = ThreadHooks;
-  let canStartThread = tmpResult.useCanStartThread(channel);
+  let canStartThread = ThreadHooks.useCanStartThread(channel);
   if (canStartThread) {
-    const GUILD_THREADS_ONLY = hasOwnProperty.GUILD_THREADS_ONLY;
+    const GUILD_THREADS_ONLY = constants.GUILD_THREADS_ONLY;
     canStartThread = !GUILD_THREADS_ONLY.has(channel.type);
   }
   if (canStartThread) {
@@ -43,14 +34,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
   if (canStartThread) {
     canStartThread = !tmp5;
   }
-  const tmpResult3 = ActivitiesInTextUtils;
-  const tmp10 = tmpResult3.useIsAppLauncherEnabled(channel.id) && context.target !== MediaKeyboardTarget.COMMAND;
+  const tmpResult = ThreadHooks;
+  const tmp10 = ActivitiesInTextUtils.useIsAppLauncherEnabled(channel.id) && context.target !== MediaKeyboardTarget.COMMAND;
   if (cResult[0] !== context.target) {
-    const tmpResult4 = MediaKeyboardUtils;
-    const mediaKeyboardDraftType = tmpResult4.getMediaKeyboardDraftType(context.target);
+    const mediaKeyboardDraftType = MediaKeyboardUtils.getMediaKeyboardDraftType(context.target);
     cResult[0] = context.target;
     cResult[1] = mediaKeyboardDraftType;
-    tmp11 = mediaKeyboardDraftType;
+    let tmp11 = mediaKeyboardDraftType;
+    const tmpResult4 = MediaKeyboardUtils;
   } else {
     tmp11 = cResult[1];
   }
@@ -59,25 +50,22 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
     if (target !== MediaKeyboardTarget.COMMAND) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      const self = this;
-      const self2 = this;
       const error = new Error("MediaKeyboard does not support context target " + target);
       throw error;
     }
   }
   if (target === MediaKeyboardTarget.COMMAND) {
     if (context.option.type === Server.ApplicationCommandOptionType.ATTACHMENT) {
-      fileTypes = context.option.fileTypes;
+      const fileTypes = context.option.fileTypes;
     }
   }
   let num3 = 1;
   if (target === MediaKeyboardTarget.CHAT) {
-    num3 = metroRequire;
+    num3 = timestampProducer;
   }
   if (cResult[2] === context.option) {
-    let tmp14;
     if (cResult[3] === target) {
-      tmp14 = cResult[4];
+      let tmp14 = cResult[4];
     }
     if (cResult[5] === tmp6) {
       if (cResult[6] === canStartThread) {
@@ -85,11 +73,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
           if (cResult[8] === fileTypes) {
             if (cResult[9] === tmp10) {
               if (cResult[10] === num3) {
-                if (cResult[11] === target === tmp13) {
+                if (cResult[11] === tmp16) {
                   if (cResult[12] === tmp14) {
-                    let tmp17;
                     if (cResult[13] === tmp7) {
-                      tmp17 = cResult[14];
+                      let tmp17 = cResult[14];
                     }
                     return tmp17;
                   }
@@ -122,22 +109,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
   cResult[3] = target;
   cResult[4] = tmp15;
   tmp14 = tmp15;
+  const tmpResult3 = ActivitiesInTextUtils;
 }) : ((arg0) => {
-  let canPostPolls;
-  let channel;
-  let context;
-  let isAppLauncherEnabled;
-  let uploadDisabled;
   ({ channel, context } = arg0);
   MediaKeyboardTarget = undefined;
   let mediaKeyboardDraftType;
-  let obj = context(7270);
-  const tmp4 = obj.useCanPostPollsInChannel(channel) && context.target !== MediaKeyboardTarget.COMMAND;
+  const tmp4 = context(7270).useCanPostPollsInChannel(channel) && context.target !== MediaKeyboardTarget.COMMAND;
   importDefault = tmp4;
   const tmp5 = useUploadDisabledDefault(channel);
   dependencyMap = tmp5;
-  const tmp2Result = context(6782);
-  let canStartThread = tmp2Result.useCanStartThread(channel);
+  let obj = context(7270);
+  let canStartThread = context(6782).useCanStartThread(channel);
   if (canStartThread) {
     const GUILD_THREADS_ONLY = mediaKeyboardDraftType.GUILD_THREADS_ONLY;
     canStartThread = !GUILD_THREADS_ONLY.has(channel.type);
@@ -148,21 +130,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
   if (canStartThread) {
     canStartThread = !tmp;
   }
-  const tmp2Result3 = context(9033);
-  const tmp8 = tmp2Result3.useIsAppLauncherEnabled(channel.id) && context.target !== MediaKeyboardTarget.COMMAND;
+  const tmp2Result = context(6782);
+  const tmp8 = context(9033).useIsAppLauncherEnabled(channel.id) && context.target !== MediaKeyboardTarget.COMMAND;
   MediaKeyboardTarget = tmp8;
-  const tmp2Result4 = context(10377);
-  mediaKeyboardDraftType = tmp2Result4.getMediaKeyboardDraftType(context.target);
+  const tmp2Result3 = context(9033);
+  mediaKeyboardDraftType = context(10377).getMediaKeyboardDraftType(context.target);
   let items = [context, tmp4, tmp5, mediaKeyboardDraftType, canStartThread, tmp8];
-  return canStartThread.useMemo(function() {
-    let tmp6;
+  return canStartThread.useMemo(() => {
     const target = context.target;
     if (target !== MediaKeyboardTarget.CHAT) {
       if (target !== MediaKeyboardTarget.COMMAND) {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
-        const self = this;
-        const self2 = this;
         const error = new Error("MediaKeyboard does not support context target " + target);
         throw error;
       }
@@ -175,17 +154,21 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
     }
     let num = 1;
     if (target === MediaKeyboardTarget.CHAT) {
-      num = metroRequire;
+      num = timestampProducer;
     }
-    const obj = { uploadLimit: num, disableWhenReachedLimit: target === MediaKeyboardTarget.CHAT, includedUploadIds: tmp6, fileTypes, canPostPolls, canStartThreads: canStartThread, isAppLauncherEnabled, uploadDisabled, draftType: mediaKeyboardDraftType };
-    tmp6 = undefined;
+    const obj = { uploadLimit: num, disableWhenReachedLimit: target === MediaKeyboardTarget.CHAT, includedUploadIds: null, fileTypes: null, canPostPolls: null, canStartThreads: null, isAppLauncherEnabled: null, uploadDisabled: null, draftType: null };
+    let tmp6;
     if (target !== MediaKeyboardTarget.CHAT) {
       const items = [context.option.name];
       tmp6 = items;
     }
+    obj.includedUploadIds = tmp6;
+    obj.fileTypes = fileTypes;
+    obj.canPostPolls = canPostPolls;
+    obj.canStartThreads = canStartThread;
+    obj.isAppLauncherEnabled = isAppLauncherEnabled;
+    obj.uploadDisabled = uploadDisabled;
+    obj.draftType = mediaKeyboardDraftType;
     return obj;
   }, items);
 });
-const result = size.fileFinishedImporting("modules/media_keyboard/native/components/useMediaKeyboardConfig.tsx");
-
-export default tmp3;

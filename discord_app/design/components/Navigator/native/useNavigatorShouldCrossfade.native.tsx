@@ -1,28 +1,28 @@
 // === Module 6504: useNavigatorShouldCrossfade ===
 
 // Module 6504 (useNavigatorShouldCrossfade)
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import react3 from "react" /* 4602 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4602 */;
+import noop from "module_19" /* 19 */;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const obj = react2;
-  const cResult = obj.c(3);
-  const context = react.useContext(react3.AccessibilityPreferencesContext);
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Navigator/native/useNavigatorShouldCrossfade.native.tsx");
+
+export const useNavigatorShouldCrossfade = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(3);
+  const context = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext);
   const prefersCrossfades = context.prefersCrossfades;
   const enabled = context.reducedMotion.enabled;
   if (cResult[0] === prefersCrossfades) {
-    let tmp5;
     if (cResult[1] === enabled) {
-      tmp5 = cResult[2];
+      let tmp5 = cResult[2];
     }
     return tmp5;
   }
   let tmp6 = prefersCrossfades;
-  const tmpResult = PlatformUtils;
   if (tmpResult.isAndroid()) {
     tmp6 = enabled;
   }
@@ -30,16 +30,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[1] = enabled;
   cResult[2] = tmp6;
   tmp5 = tmp6;
+  tmpResult = PlatformUtils;
 }) : (() => {
-  const context = react.useContext(react3.AccessibilityPreferencesContext);
-  let prefersCrossfades = context.prefersCrossfades;
-  const enabled = context.reducedMotion.enabled;
-  const obj = PlatformUtils;
+  const context = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext);
+  let enabled = context.prefersCrossfades;
   if (obj.isAndroid()) {
-    prefersCrossfades = enabled;
+    enabled = context.reducedMotion.enabled;
   }
-  return prefersCrossfades;
+  return enabled;
 });
-const result = size.fileFinishedImporting("design/components/Navigator/native/useNavigatorShouldCrossfade.native.tsx");
-
-export const useNavigatorShouldCrossfade = tmp2;

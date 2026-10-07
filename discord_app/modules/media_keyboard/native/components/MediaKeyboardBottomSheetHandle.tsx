@@ -1,83 +1,71 @@
 // === Module 10385: MediaKeyboardBottomSheetHandle ===
 
 // Module 10385 (MediaKeyboardBottomSheetHandle)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
-import intl2 from "intl" /* 1126 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import useStateFromSharedValue from "useStateFromSharedValue" /* 7952 */;
 import native from "native" /* 8602 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let onPress;
+require = fn;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetHandle.tsx");
 
-const jsx = Fragment.jsx;
-const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
-  let first;
-  let tmp6;
-  const obj = react2;
-  const cResult = obj.c(7);
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
+  const cResult = c.c(7);
   onPress = onPress.onPress;
-  const animatedIndex = onPress.animatedIndex;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function l(arg0) {
       return arg0 > 0;
     };
     cResult[0] = fn;
-    first = fn;
+    let first = fn;
   } else {
     first = cResult[0];
   }
-  const tmpResult = useStateFromSharedValue;
-  const derivedStateFromSharedValue = tmpResult.useDerivedStateFromSharedValue(animatedIndex, first);
+  const derivedStateFromSharedValue = useStateFromSharedValue.useDerivedStateFromSharedValue(onPress.animatedIndex, first);
   if (cResult[1] !== derivedStateFromSharedValue) {
-    let stringResult;
-    const intl = intl2.intl;
+    const intl = util.intl;
     const string = intl.string;
-    const t = intl2.t;
+    let iTcuma = util.t;
     if (derivedStateFromSharedValue) {
-      stringResult = string(t.iTcuma);
+      iTcuma = iTcuma.iTcuma;
+      let stringResult = string(iTcuma);
     } else {
-      stringResult = string(t.dcl9MQ);
+      stringResult = string(iTcuma.dcl9MQ);
     }
     cResult[1] = derivedStateFromSharedValue;
     cResult[2] = stringResult;
-    tmp6 = stringResult;
   } else {
-    tmp6 = cResult[2];
-  }
-  if (cResult[3] === tmp6) {
-    if (cResult[4] === onPress) {
-      let tmp9;
-      if (cResult[5] === null == onPress) {
-        tmp9 = cResult[6];
+    if (cResult[3] === cResult[2]) {
+      if (cResult[4] === onPress) {
+        if (cResult[5] === tmp10) {
+          let tmp11 = cResult[6];
+        }
+        return tmp11;
       }
-      return tmp9;
     }
+    const obj2 = { onPress, accessibilityLabel: cResult[2], "aria-hidden": null == onPress };
+    const tmp13 = jsx(native.ActionSheetDragHandle, { onPress, accessibilityLabel: cResult[2], "aria-hidden": null == onPress });
+    cResult[3] = cResult[2];
+    cResult[4] = onPress;
+    cResult[5] = null == onPress;
+    cResult[6] = tmp13;
+    tmp11 = tmp13;
   }
-  const tmp10 = jsx(native.ActionSheetDragHandle, { onPress, accessibilityLabel: tmp6, "aria-hidden": null == onPress });
-  cResult[3] = tmp6;
-  cResult[4] = onPress;
-  cResult[5] = null == onPress;
-  cResult[6] = tmp10;
-  tmp9 = tmp10;
+  const tmpResult = useStateFromSharedValue;
 }) : ((onPress) => {
-  let stringResult;
   onPress = onPress.onPress;
-  const animatedIndex = onPress.animatedIndex;
-  const obj = useStateFromSharedValue;
-  const derivedStateFromSharedValue = obj.useDerivedStateFromSharedValue(animatedIndex, (arg0) => arg0 > 0);
-  const intl = intl2.intl;
+  const derivedStateFromSharedValue = useStateFromSharedValue.useDerivedStateFromSharedValue(onPress.animatedIndex, (arg0) => arg0 > 0);
+  const intl = util.intl;
   const string = intl.string;
-  const t = intl2.t;
+  const t = util.t;
   if (derivedStateFromSharedValue) {
-    stringResult = string(t.iTcuma);
+    let stringResult = string(t.iTcuma);
   } else {
     stringResult = string(t.dcl9MQ);
   }
   return jsx(native.ActionSheetDragHandle, { onPress, accessibilityLabel: stringResult, "aria-hidden": null == onPress });
 }));
-const result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetHandle.tsx");
-
-export default memoResult;

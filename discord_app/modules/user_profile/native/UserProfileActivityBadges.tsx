@@ -1,12 +1,10 @@
 // === Module 12847: UserProfileActivityBadges ===
 
 // Module 12847 (UserProfileActivityBadges)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1085 */;
 import Text_Text from "Text/Text" /* 4892 */;
-import GroupIcon2 from "GroupIcon" /* 5880 */;
+import GroupIcon from "GroupIcon" /* 5880 */;
 import AppsIcon2 from "AppsIcon" /* 5897 */;
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7242 */;
 import utils from "utils" /* 7829 */;
@@ -14,30 +12,22 @@ import GameControllerIcon from "GameControllerIcon" /* 8771 */;
 import MusicIcon from "MusicIcon" /* 9584 */;
 import TvIcon from "TvIcon" /* 10629 */;
 import conjurePresenceActivity from "conjurePresenceActivity" /* 10634 */;
-import TopicsIcon2 from "TopicsIcon" /* 11289 */;
+import TopicsIcon from "TopicsIcon" /* 11289 */;
 import HourglassIcon from "HourglassIcon" /* 12717 */;
-import useTimestampTickedNow from "useTimestampTickedNow" /* 12848 */;
 import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 12849 */;
 import Badges from "Badges" /* 12850 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let hasOwnProperty;
-let metroRequire;
+require = fn;
 function getTimestampBadgeIcon(activity, arg1) {
-  let AppsIcon;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
   if (flag) {
-    AppsIcon = HourglassIcon.HourglassIcon;
+    let AppsIcon = HourglassIcon.HourglassIcon;
   } else {
     if (!isEmbeddedActivityDefault(activity)) {
-      const obj = conjurePresenceActivity;
       if (!obj.isConjurePresenceActivity(activity)) {
         if (activity.type === ActivityTypes.WATCHING) {
           AppsIcon = TvIcon.TvIcon;
@@ -47,26 +37,26 @@ function getTimestampBadgeIcon(activity, arg1) {
           AppsIcon = GameControllerIcon.GameControllerIcon;
         }
       }
+      obj = conjurePresenceActivity;
     }
     AppsIcon = AppsIcon2.AppsIcon;
   }
   return AppsIcon;
 }
-const View = react_native.View;
-const ActivityTypes = Constants.ActivityTypes;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
+const View = fn(17).View;
+const ActivityTypes = fn(1085).ActivityTypes;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4896);
 let closure_7 = createStyles.createStyles({ container: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, bold: { fontWeight: "bold" } });
-let ReactCompilerGating = ReactCompilerGating_mod;
+fn(558);
+let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
-  let items;
-  const obj = react2;
-  const cResult = obj.c(16);
+  const cResult = c.c(16);
   activity = activity.activity;
   const tmp4 = closure_7();
   const timestamps = activity.timestamps;
   let start;
-  const obj2 = useTimestampTickedNow;
-  const now = obj2.useTimestampTickedNow().now;
   if (timestamps != null) {
     start = timestamps.start;
   }
@@ -76,9 +66,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
   if (null != start) {
     if (!shouldShowActivityTimeBarDefault(activity)) {
       const timestamps2 = activity.timestamps;
-      let end;
       if (timestamps2 != null) {
-        end = timestamps2.end;
+        const end = timestamps2.end;
       }
       const timestamps3 = activity.timestamps;
       let flag;
@@ -88,56 +77,59 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
       if (flag == null) {
         flag = false;
       }
+      let tmp6 = flag;
+      if (flag) {
+        tmp6 = null != end;
+      }
+      if (tmp6) {
+        tmp6 = end > obj2.useTimestampTickedNow().now;
+      }
       if (cResult[0] === activity) {
-        let tmp8;
-        let tmp11;
-        if (cResult[1] === (flag && null != end && end > now)) {
-          tmp8 = cResult[2];
+        if (cResult[1] === tmp6) {
+          let tmp7 = cResult[2];
         }
-        if (cResult[3] !== tmp8) {
+        if (cResult[3] !== tmp7) {
           const obj3 = { size: "xxs", color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
-          const tmp13 = hasOwnProperty(tmp8, obj3);
-          cResult[3] = tmp8;
-          cResult[4] = tmp13;
-          tmp11 = tmp13;
+          const tmp12 = hasOwnProperty(tmp7, obj3);
+          cResult[3] = tmp7;
+          cResult[4] = tmp12;
+          let tmp10 = tmp12;
         } else {
-          tmp11 = cResult[4];
+          tmp10 = cResult[4];
         }
         if (cResult[5] === end) {
           if (cResult[6] === flag) {
-            let tmp14;
             if (cResult[7] === start) {
-              tmp14 = cResult[8];
+              let tmp13 = cResult[8];
             }
             if (cResult[9] === tmp4.bold) {
-              let tmp15;
-              if (cResult[10] === tmp14) {
-                tmp15 = cResult[11];
+              if (cResult[10] === tmp13) {
+                let tmp14 = cResult[11];
               }
               if (cResult[12] === tmp4.container) {
-                if (cResult[13] === tmp11) {
-                  let tmp18;
-                  if (cResult[14] === tmp15) {
-                    tmp18 = cResult[15];
+                if (cResult[13] === tmp10) {
+                  if (cResult[14] === tmp14) {
+                    let tmp17 = cResult[15];
                   }
-                  return tmp18;
+                  return tmp17;
                 }
               }
-              const obj4 = { style: tmp4.container, children: items };
-              items = [tmp11, tmp15];
-              const tmp21 = metroRequire(View, obj4);
+              const obj4 = { style: tmp4.container, children: null };
+              const items = [tmp10, tmp14];
+              obj4.children = items;
+              const tmp20 = timestampProducer(View, obj4);
               cResult[12] = tmp4.container;
-              cResult[13] = tmp11;
-              cResult[14] = tmp15;
-              cResult[15] = tmp21;
-              tmp18 = tmp21;
+              cResult[13] = tmp10;
+              cResult[14] = tmp14;
+              cResult[15] = tmp20;
+              tmp17 = tmp20;
             }
-            const obj5 = { entry: tmp14, style: tmp4.bold };
-            const tmp17 = hasOwnProperty(Badges.ActiveTimestamp, obj5);
+            const obj5 = { entry: tmp13, style: tmp4.bold };
+            const tmp16 = hasOwnProperty(Badges.ActiveTimestamp, obj5);
             cResult[9] = tmp4.bold;
-            cResult[10] = tmp14;
-            cResult[11] = tmp17;
-            tmp15 = tmp17;
+            cResult[10] = tmp13;
+            cResult[11] = tmp16;
+            tmp14 = tmp16;
           }
         }
         const obj6 = { start, end, isCountDown: flag };
@@ -145,25 +137,21 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
         cResult[6] = flag;
         cResult[7] = start;
         cResult[8] = obj6;
-        tmp14 = obj6;
+        tmp13 = obj6;
       }
-      const tmp10 = getTimestampBadgeIcon(activity, flag && null != end && end > now);
+      const tmp9 = getTimestampBadgeIcon(activity, tmp6);
       cResult[0] = activity;
-      cResult[1] = flag && null != end && end > now;
-      cResult[2] = tmp10;
-      tmp8 = tmp10;
+      cResult[1] = tmp6;
+      cResult[2] = tmp9;
+      tmp7 = tmp9;
     }
   }
   return null;
 }) : ((activity) => {
-  let items;
-  let obj5;
   activity = activity.activity;
   const tmp = closure_7();
   const timestamps = activity.timestamps;
   let start;
-  const obj = useTimestampTickedNow;
-  const now = obj.useTimestampTickedNow().now;
   if (timestamps != null) {
     start = timestamps.start;
   }
@@ -185,192 +173,171 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
       if (flag == null) {
         flag = false;
       }
-      const obj2 = { style: tmp.container, children: items };
-      const tmp7 = flag && null != end && end > now;
+      let tmp7 = flag;
+      if (flag) {
+        tmp7 = null != end;
+      }
+      if (tmp7) {
+        tmp7 = end > obj.useTimestampTickedNow().now;
+      }
+      const obj2 = { style: tmp.container, children: null };
       const obj3 = { size: "xxs", color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
-      const tmp6Result = getTimestampBadgeIcon(activity, tmp7);
-      items = [hasOwnProperty(tmp6Result, obj3), ];
-      const obj4 = { entry: obj5, style: tmp.bold };
-      obj5 = { start, end, isCountDown: flag };
+      const items = [hasOwnProperty(getTimestampBadgeIcon(activity, tmp7), obj3), ];
+      const obj4 = { entry: null, style: null };
+      const obj5 = { start, end, isCountDown: flag };
+      obj4.entry = obj5;
+      obj4.style = tmp.bold;
       items[1] = hasOwnProperty(Badges.ActiveTimestamp, obj4);
-      return metroRequire(View, obj2);
+      obj2.children = items;
+      return timestampProducer(View, obj2);
     }
   }
   return null;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
-  let items;
-  const obj = react2;
-  const cResult = obj.c(9);
+ReactCompilerGating = fn(558);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
+  const cResult = c.c(9);
   activity = activity.activity;
-  const tmp4 = closure_7();
+  let container = closure_7();
   if (!isEmbeddedActivityDefault(activity)) {
     if (null != activity.party) {
       if (cResult[0] === activity.party) {
-        let tmp7;
         if (cResult[1] === activity.state) {
-          tmp7 = cResult[2];
+          let tmp6 = cResult[2];
         }
-        let tmp9 = null;
-        if (null != tmp7) {
-          let tmp11;
-          let tmp14;
+        if (null == tmp6) {
+          return null;
+        } else {
           const _Symbol = Symbol;
           if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
             const obj2 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-            const GroupIcon = GroupIcon2.GroupIcon;
-            const tmp13 = hasOwnProperty(GroupIcon, obj2);
-            cResult[3] = tmp13;
-            tmp11 = tmp13;
+            const tmp12 = hasOwnProperty(GroupIcon.GroupIcon, obj2);
+            cResult[3] = tmp12;
+            let tmp10 = tmp12;
           } else {
-            tmp11 = cResult[3];
+            tmp10 = cResult[3];
           }
-          if (cResult[4] !== tmp7) {
-            const obj3 = { variant: "text-sm/medium", color: "text-muted", children: tmp7 };
-            const tmp16 = hasOwnProperty(Text_Text.Text, obj3);
-            cResult[4] = tmp7;
-            cResult[5] = tmp16;
-            tmp14 = tmp16;
+          if (cResult[4] !== tmp6) {
+            const obj3 = { variant: "text-sm/medium", color: "text-muted", children: tmp6 };
+            const tmp15 = hasOwnProperty(Text_Text.Text, obj3);
+            cResult[4] = tmp6;
+            cResult[5] = tmp15;
+            let tmp13 = tmp15;
           } else {
-            tmp14 = cResult[5];
+            tmp13 = cResult[5];
           }
-          if (cResult[6] === tmp4.container) {
-            let tmp17;
-            if (cResult[7] === tmp14) {
-              tmp17 = cResult[8];
-            }
-            tmp9 = tmp17;
+          if (cResult[6] === container.container) {
           }
-          const obj4 = { style: tmp4.container, children: items };
-          items = [tmp11, tmp14];
-          const tmp20 = metroRequire(View, obj4);
-          cResult[6] = tmp4.container;
-          cResult[7] = tmp14;
-          cResult[8] = tmp20;
-          tmp17 = tmp20;
+          const obj4 = { style: container.container, children: null };
+          const items = [tmp10, tmp13];
+          obj4.children = items;
+          const tmp19 = timestampProducer(View, obj4);
+          container = container.container;
+          cResult[6] = container;
+          cResult[7] = tmp13;
+          cResult[8] = tmp19;
         }
-        return tmp9;
       }
-      const tmpResult = utils;
-      const richGameStateBadgeText = tmpResult.getRichGameStateBadgeText(activity.state, activity.party);
+      const richGameStateBadgeText = utils.getRichGameStateBadgeText(activity.state, activity.party);
       cResult[0] = activity.party;
       cResult[1] = activity.state;
       cResult[2] = richGameStateBadgeText;
-      tmp7 = richGameStateBadgeText;
+      tmp6 = richGameStateBadgeText;
+      const tmpResult = utils;
     }
   }
   return null;
 }) : ((activity) => {
-  let items;
   activity = activity.activity;
-  const tmp = closure_7();
   if (!isEmbeddedActivityDefault(activity)) {
     if (null != activity.party) {
-      const obj4 = utils;
-      const richGameStateBadgeText = obj4.getRichGameStateBadgeText(activity.state, activity.party);
+      const richGameStateBadgeText = utils.getRichGameStateBadgeText(activity.state, activity.party);
       let tmp8 = null;
       if (null != richGameStateBadgeText) {
-        const obj = { style: tmp.container, children: items };
+        const obj = { style: tmp.container, children: null };
         const obj2 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-        const GroupIcon = GroupIcon2.GroupIcon;
-        items = [hasOwnProperty(GroupIcon, obj2), ];
+        const items = [hasOwnProperty(GroupIcon.GroupIcon, obj2), ];
         const obj3 = { variant: "text-sm/medium", color: "text-muted", children: richGameStateBadgeText };
         items[1] = hasOwnProperty(Text_Text.Text, obj3);
-        tmp8 = metroRequire(View, obj);
+        obj.children = items;
+        tmp8 = timestampProducer(View, obj);
       }
       return tmp8;
     }
   }
   return null;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
-  let items;
-  let tmp6;
-  const obj = react2;
-  const cResult = obj.c(8);
-  activity = activity.activity;
-  const tmp4 = closure_7();
-  const assets = activity.assets;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityBadges.tsx");
+
+export const TimestampBadge = tmp4;
+export const PartyBadge = tmp5;
+export const EpisodeBadge = ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
+  const cResult = c.c(8);
+  let container = closure_7();
+  const assets = activity.activity.assets;
   let large_text;
   if (assets != null) {
     large_text = assets.large_text;
   }
   if (cResult[0] !== large_text) {
-    const tmpResult = utils;
-    const episodeBadgeText = tmpResult.getEpisodeBadgeText(large_text);
+    const episodeBadgeText = utils.getEpisodeBadgeText(large_text);
     cResult[0] = large_text;
     cResult[1] = episodeBadgeText;
-    tmp6 = episodeBadgeText;
+    let tmp5 = episodeBadgeText;
+    const tmpResult = utils;
   } else {
-    tmp6 = cResult[1];
+    tmp5 = cResult[1];
   }
-  let tmp8 = null;
-  if (null != tmp6) {
-    let tmp10;
-    let tmp14;
+  if (null == tmp5) {
+    return null;
+  } else {
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-      const TopicsIcon = TopicsIcon2.TopicsIcon;
-      const tmp13 = hasOwnProperty(TopicsIcon, obj2);
-      cResult[2] = tmp13;
-      tmp10 = tmp13;
+      const tmp11 = hasOwnProperty(TopicsIcon.TopicsIcon, obj2);
+      cResult[2] = tmp11;
+      let tmp8 = tmp11;
     } else {
-      tmp10 = cResult[2];
+      tmp8 = cResult[2];
     }
-    if (cResult[3] !== tmp6) {
-      const obj3 = { variant: "text-sm/medium", color: "text-muted", children: tmp6 };
-      const tmp16 = hasOwnProperty(Text_Text.Text, obj3);
-      cResult[3] = tmp6;
-      cResult[4] = tmp16;
-      tmp14 = tmp16;
+    if (cResult[3] !== tmp5) {
+      const obj3 = { variant: "text-sm/medium", color: "text-muted", children: tmp5 };
+      const tmp14 = hasOwnProperty(Text_Text.Text, obj3);
+      cResult[3] = tmp5;
+      cResult[4] = tmp14;
+      let tmp12 = tmp14;
     } else {
-      tmp14 = cResult[4];
+      tmp12 = cResult[4];
     }
-    if (cResult[5] === tmp4.container) {
-      let tmp17;
-      if (cResult[6] === tmp14) {
-        tmp17 = cResult[7];
-      }
-      tmp8 = tmp17;
+    if (cResult[5] === container.container) {
     }
-    const obj4 = { style: tmp4.container, children: items };
-    items = [tmp10, tmp14];
-    const tmp20 = metroRequire(View, obj4);
-    cResult[5] = tmp4.container;
-    cResult[6] = tmp14;
-    cResult[7] = tmp20;
-    tmp17 = tmp20;
+    const obj4 = { style: container.container, children: null };
+    const items = [tmp8, tmp12];
+    obj4.children = items;
+    const tmp18 = timestampProducer(View, obj4);
+    container = container.container;
+    cResult[5] = container;
+    cResult[6] = tmp12;
+    cResult[7] = tmp18;
   }
-  return tmp8;
 }) : ((activity) => {
-  let items;
-  activity = activity.activity;
-  const assets = activity.assets;
-  let large_text;
   const tmp = closure_7();
-  const getEpisodeBadgeText = utils.getEpisodeBadgeText;
-  utils;
+  const assets = activity.activity.assets;
+  let large_text;
   if (assets != null) {
     large_text = assets.large_text;
   }
-  const episodeBadgeText = getEpisodeBadgeText(large_text);
-  let tmp7 = null;
+  const episodeBadgeText = utils.getEpisodeBadgeText(large_text);
+  let tmp6 = null;
   if (null != episodeBadgeText) {
-    const obj = { style: tmp.container, children: items };
-    const obj2 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-    const TopicsIcon = TopicsIcon2.TopicsIcon;
-    items = [hasOwnProperty(TopicsIcon, obj2), ];
-    const obj3 = { variant: "text-sm/medium", color: "text-muted", children: episodeBadgeText };
-    items[1] = hasOwnProperty(Text_Text.Text, obj3);
-    tmp7 = metroRequire(View, obj);
+    const obj2 = { style: tmp.container, children: null };
+    const obj3 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
+    const items = [hasOwnProperty(TopicsIcon.TopicsIcon, obj3), ];
+    const obj4 = { variant: "text-sm/medium", color: "text-muted", children: episodeBadgeText };
+    items[1] = hasOwnProperty(Text_Text.Text, obj4);
+    obj2.children = items;
+    tmp6 = timestampProducer(View, obj2);
   }
-  return tmp7;
+  return tmp6;
 });
-const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityBadges.tsx");
-
-export const TimestampBadge = tmp4;
-export const PartyBadge = tmp5;
-export const EpisodeBadge = tmp6;

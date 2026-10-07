@@ -1,25 +1,22 @@
 // === Module 11943: GuildDirectorySearchModal ===
 
 // Module 11943 (GuildDirectorySearchModal)
-import Fragment from "Fragment" /* 21 */;
 import useInitialValueDefault from "useInitialValue" /* 5991 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import GuildDirectorySearchDefault from "GuildDirectorySearch" /* 11944 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let _require;
 
-const jsx = Fragment.jsx;
+const require = fn;
+const jsx = fn(21).jsx;
 const SEARCH_SCREEN_KEY = "SEARCH_SCREEN_KEY";
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let tmp4;
-  let tmp6;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectorySearchModal.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   _require = arg0;
-  const obj = require("react");
-  const cResult = obj.c(4);
-  const tmp = _require;
+  const cResult = require("c").c(4);
   if (cResult[0] !== arg0) {
     const fn = function o() {
       return {
@@ -27,47 +24,42 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           fullscreen: true,
           headerShown: false,
           render() {
-            const obj = {};
-            const tmp = closure_2_1(closure_2_2[2]);
             const merged = Object.assign(closure_0);
-            return closure_2_3(tmp, obj);
+            return jsx(GuildDirectorySearchDefault, {});
           }
         }
       };
     };
     cResult[0] = arg0;
     cResult[1] = fn;
-    tmp4 = fn;
+    let tmp4 = fn;
   } else {
     tmp4 = cResult[1];
   }
   const tmp5 = useInitialValueDefault(tmp4);
   if (cResult[2] !== tmp5) {
-    const tmp9 = jsx(tmp(6503).Navigator, { screens: tmp5, initialRouteName: SEARCH_SCREEN_KEY });
+    const obj2 = { screens: tmp5, initialRouteName: SEARCH_SCREEN_KEY };
+    const tmp9 = jsx(require("Navigator").Navigator, { screens: tmp5, initialRouteName: SEARCH_SCREEN_KEY });
     cResult[2] = tmp5;
     cResult[3] = tmp9;
-    tmp6 = tmp9;
+    let tmp6 = tmp9;
   } else {
     tmp6 = cResult[3];
   }
   return tmp6;
 }) : ((arg0) => {
   _require = arg0;
-  const Navigator = require("Navigator").Navigator;
-  return <Navigator screens={useInitialValueDefault(() => {
-    let obj = {
-      fullscreen: true,
-      headerShown: false,
-      render() {
-        const obj = {};
-        const tmp = closure_2_1(closure_2_2[2]);
-        const merged = Object.assign(closure_0);
-        return closure_2_3(tmp, obj);
+  return jsx(require("Navigator").Navigator, {
+    screens: useInitialValueDefault(() => ({
+      [closure_2_4]: {
+        fullscreen: true,
+        headerShown: false,
+        render() {
+          const merged = Object.assign(closure_0);
+          return jsx(GuildDirectorySearchDefault, {});
+        }
       }
-    };
-    return { [closure_2_4]: obj };
-  })} initialRouteName={SEARCH_SCREEN_KEY} />;
+    })),
+    initialRouteName: SEARCH_SCREEN_KEY
+  });
 });
-const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectorySearchModal.tsx");
-
-export default tmp3;

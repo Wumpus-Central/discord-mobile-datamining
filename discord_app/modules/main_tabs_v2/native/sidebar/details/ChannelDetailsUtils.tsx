@@ -9,13 +9,12 @@ const ChannelDetailsButtonTypes = ChannelDetailsConstants.ChannelDetailsButtonTy
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx");
 
 export const getChannelDetailsButtons = function getChannelDetailsButtons(channel) {
-  let items;
   let flag = stateFromStores;
   if (stateFromStores === undefined) {
     flag = false;
   }
   if (channel.type === ChannelTypes.ChannelTypes.GUILD_DIRECTORY) {
-    items = [];
+    let items = [];
   } else {
     items = [, , ];
     ({ SEARCH: arr[0], MUTE: arr[1], SETTINGS: arr[2] } = ChannelDetailsButtonTypes);
@@ -27,6 +26,5 @@ export const getChannelDetailsButtons = function getChannelDetailsButtons(channe
   return found;
 };
 export const navigateToChannelDetailsScreen = function navigateToChannelDetailsScreen(navigation, PERMISSIONS, channelId, source) {
-  const obj = { screen: PERMISSIONS, channelId, source };
-  navigation.navigate("sidebar", obj);
+  navigation.navigate("sidebar", { screen: PERMISSIONS, channelId, source });
 };

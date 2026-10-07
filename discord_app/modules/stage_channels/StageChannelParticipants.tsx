@@ -2,7 +2,6 @@
 
 // Module 5589 (StageChannelParticipants)
 import SecondaryIndexMap from "SecondaryIndexMap" /* 4510 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5043 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
@@ -17,17 +16,9 @@ import UserStore from "UserStore" /* 1377 */;
 import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import StageChannelRoleStore from "StageChannelRoleStore" /* 5585 */;
 import StageInstanceStore from "StageInstanceStore" /* 2056 */;
-import size from "module_2" /* 2 */;
 
-let set;
-
+require = fn;
 function sortKey(speaker) {
-  let connectedOn;
-  let role;
-  let type;
-  let user;
-  let userNick;
-  let voiceState;
   ({ role, connectedOn, voiceState } = speaker);
   let str = "\u0001";
   let str2 = "\u0001";
@@ -54,15 +45,13 @@ function sortKey(speaker) {
     num = 999;
   }
   const combined = "" + num;
-  const padStartResult = combined.padStart(3, "0");
-  return "" + str2 + str3 + str4 + str + padStartResult + connectedOn + getParticipantUserKeyDefault(userNick, user);
+  return "" + str2 + str3 + str4 + str + combined.padStart(3, "0") + connectedOn + getParticipantUserKeyDefault(userNick, user);
 }
 function requestToSpeakSortKey(user) {
-  let id;
   user = user.user;
   const requestToSpeakTimestamp = user.voiceState.requestToSpeakTimestamp;
   if (null == requestToSpeakTimestamp) {
-    id = user.id;
+    let id = user.id;
   } else {
     const _Date = Date;
     const _HermesInternal = HermesInternal;
@@ -71,17 +60,9 @@ function requestToSpeakSortKey(user) {
   return id;
 }
 function getParticipantIndex(arg0) {
-  let blocked;
-  let ignored;
-  let isFriend;
-  let role;
-  let rtsState;
-  let speaker;
-  let tmp12;
   ({ role, rtsState } = arg0);
   ({ speaker, blocked, ignored, isFriend } = arg0);
   const items = [];
-  const tmp3 = rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK || rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
   if (tmp3) {
     items.push(obj.ALL_REQUESTED_TO_SPEAK);
   }
@@ -90,7 +71,7 @@ function getParticipantIndex(arg0) {
   }
   if (speaker) {
     items.push(obj.SPEAKER);
-    tmp12 = obj;
+    let tmp12 = obj;
   } else {
     if (null != role) {
       items.push(role.id);
@@ -110,189 +91,197 @@ function getParticipantIndex(arg0) {
   }
   return items;
 }
-const getComparator = SortedVoiceStateStore.getComparator;
+const getComparator = fn(4920).getComparator;
 const StageChannelParticipantNamedIndex = { SPEAKER: "SPEAKER", AUDIENCE: "AUDIENCE", NO_ROLE: "NO_ROLE", ALL_REQUESTED_TO_SPEAK: "ALL_REQUESTED_TO_SPEAK", REQUESTED_TO_SPEAK_ONLY: "REQUESTED_TO_SPEAK_ONLY", BLOCKED: "BLOCKED", IGNORED: "IGNORED", FRIEND: "FRIEND", SELECTED: "SELECTED", MEDIA: "MEDIA" };
 let obj2 = { VOICE: "VOICE", STREAM: "STREAM" };
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/StageChannelParticipants.tsx");
 class StageChannelParticipants {
-  constructor(channelId) {
-    const merged = Object.assign({ participants: null, _participantsIndex: null, _requestToSpeakIndex: null });
+  constructor(arg0) {
+    merged = Object.assign({ participants: null, _participantsIndex: null, _requestToSpeakIndex: null });
     merged[0] = {};
-    const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap(getParticipantIndex, sortKey);
+    secondaryIndexMap = new closure_0(closure_2[12]).SecondaryIndexMap(getParticipantIndex, sortKey);
     merged[1] = secondaryIndexMap;
-    const secondaryIndexMap1 = new SecondaryIndexMap.SecondaryIndexMap(() => [], requestToSpeakSortKey);
+    secondaryIndexMap1 = new closure_0(closure_2[12]).SecondaryIndexMap(() => [], requestToSpeakSortKey);
     merged[2] = secondaryIndexMap1;
-    merged.channelId = channelId;
-    const channel = ChannelStore.getChannel(channelId);
-    let guildId;
+    merged.channelId = global;
+    channel = closure_4.getChannel(global);
+    guildId = undefined;
     if (channel != null) {
       guildId = channel.getGuildId();
     }
     merged.guildId = guildId;
     return merged;
   }
-  _getParticipantsForUser(userId, arg1) {
-    let connectedOn;
-    let encodeStreamKeyResult;
-    let obj3;
-    let obj4;
-    let tmp11Result;
-    const self = this;
-    const items = [];
-    const voiceStateForChannel = VoiceStateStore.getVoiceStateForChannel(this.channelId, userId);
-    if (null == voiceStateForChannel) {
-      return items;
-    } else {
-      const user = UserStore.getUser(userId);
-      if (null == user) {
-        const isPublicResult = null != self.guildId && StageInstanceStore.isPublic(self.channelId);
-        if (isPublicResult) {
-          const member = GuildMemberRequesterStore.requestMember(self.guildId, userId);
-        }
-        return items;
-      } else {
-        let first = null;
-        if (null != arg1) {
-          first = arg1[0];
-        }
-        let member1 = null;
-        if (null != self.guildId) {
-          member1 = GuildMemberStore.getMember(self.guildId, userId);
-        }
-        let nick;
-        if (member1 != null) {
-          nick = member1.nick;
-        }
-        if (nick == null) {
-          const obj = NicknameUtilsDefault;
-          nick = obj.getName(self.guildId, self.channelId, user);
-        }
-        obj2 = { user, userNick: obj3.getName(self.guildId, self.channelId, user), nick, comparator: getComparator(voiceStateForChannel, nick), voiceState: voiceStateForChannel, role: obj4.getHighestHoistedRole(self.guildId, userId), speaker: StageChannelRoleStore.isSpeaker(userId, self.channelId), member: member1, blocked: RelationshipStore.isBlocked(user.id), ignored: RelationshipStore.isIgnored(user.id), isFriend: RelationshipStore.isFriend(user.id), connectedOn };
-        obj3 = NicknameUtilsDefault;
-        connectedOn = undefined;
-        obj4 = useGuildMemberDisplayRole;
-        if (first != null) {
-          connectedOn = first.connectedOn;
-        }
-        if (connectedOn == null) {
-          const _Date = Date;
-          connectedOn = Date.now();
-        }
-        const obj5 = { type: obj2.VOICE, id: user.id, rtsState: tmp11Result.getAudienceRequestToSpeakState(voiceStateForChannel) };
-        const merged = Object.assign(obj2);
-        tmp11Result = useAudienceRequestToSpeakState;
-        items.push(obj5);
-        let streamForUser = ApplicationStreamingStore.getStreamForUser(userId, self.guildId);
-        const tmp19 = obj2;
-        if (streamForUser == null) {
-          streamForUser = ApplicationStreamingStore.getActiveStreamForUser(userId, self.guildId);
-        }
-        if (null != streamForUser) {
-          if (streamForUser.channelId === self.channelId) {
-            const obj6 = { id: encodeStreamKeyResult, type: tmp19.STREAM, rtsState: useAudienceRequestToSpeakState.RequestToSpeakStates.NONE };
-            const tmp11Result2 = StreamKeyUtils;
-            encodeStreamKeyResult = tmp11Result2.encodeStreamKey(streamForUser);
-            const merged1 = Object.assign(obj2);
-            items.push(obj6);
-          }
-        }
-        return items;
-      }
-    }
-  }
-  updateParticipant(arg0) {
-    const self = this;
-    let closure_0 = arg0;
-    let result = this._getParticipantsForUser(arg0, arr);
-    let flag = null != arr || 0 !== result.length;
-    if (flag) {
-      if (this.participants[arg0] != null) {
-        const item = arr.forEach((id) => {
-          const _participantsIndex = self._participantsIndex;
-          _participantsIndex.delete(id.id);
-          const _requestToSpeakIndex = self._requestToSpeakIndex;
-          _requestToSpeakIndex.delete(id.id);
-        });
-      }
-      const item1 = result.forEach((id) => {
-        const _participantsIndex = self._participantsIndex;
-        const result = _participantsIndex.set(id.id, id);
-        if (id.id === closure_0) {
-          const rtsState = id.rtsState;
-          const tmp6 = rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK || rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-          if (tmp6) {
-            const _requestToSpeakIndex2 = self._requestToSpeakIndex;
-            const result1 = _requestToSpeakIndex2.set(closure_0, id);
-          }
-        }
-        const _requestToSpeakIndex = self._requestToSpeakIndex;
-        _requestToSpeakIndex.delete(closure_0);
-      });
-      this.participants[arg0] = result;
-      flag = true;
-    }
-    return flag;
-  }
-  rebuild() {
-    const self = this;
-    const channel = ChannelStore.getChannel(this.channelId);
-    if (null != channel) {
-      if (channel.isGuildStageVoice()) {
-        const _Set = Set;
-        const _Object = Object;
-        const self2 = this;
-        const self3 = this;
-        const _participantsIndex = self._participantsIndex;
-        set = new Set(Object.keys(VoiceStateStore.getVoiceStatesForChannel(channel.id)));
-        _participantsIndex.clear();
-        const _requestToSpeakIndex = self._requestToSpeakIndex;
-        _requestToSpeakIndex.clear();
-        self.participants = {};
-        const item = set.forEach((item) => self.updateParticipant(item));
-        return true;
-      }
-    }
-    return false;
-  }
-  size(arg0) {
-    const _participantsIndex = this._participantsIndex;
-    return _participantsIndex.size(arg0);
-  }
-  toArray(arg0) {
-    const _participantsIndex = this._participantsIndex;
-    return _participantsIndex.values(arg0, true);
-  }
-  getParticipant(arg0) {
-    const _participantsIndex = this._participantsIndex;
-    let value = _participantsIndex.get(arg0);
-    if (value == null) {
-      value = null;
-    }
-    return value;
-  }
-  getRequestToSpeakParticipants() {
-    const _requestToSpeakIndex = this._requestToSpeakIndex;
-    return _requestToSpeakIndex.values(undefined, true);
-  }
 }
 const prototype = StageChannelParticipants.prototype;
+prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId, arg1) {
+  const self = this;
+  const items = [];
+  const voiceStateForChannel = VoiceStateStore.getVoiceStateForChannel(this.channelId, userId);
+  if (null == voiceStateForChannel) {
+    return items;
+  } else {
+    const user = UserStore.getUser(userId);
+    if (null == user) {
+      let isPublicResult = null != self.guildId;
+      if (isPublicResult) {
+        isPublicResult = StageInstanceStore.isPublic(self.channelId);
+      }
+      if (isPublicResult) {
+        const member = GuildMemberRequesterStore.requestMember(self.guildId, userId);
+      }
+      return items;
+    } else {
+      let first = null;
+      if (null != arg1) {
+        first = arg1[0];
+      }
+      let member1 = null;
+      if (null != self.guildId) {
+        member1 = GuildMemberStore.getMember(self.guildId, userId);
+      }
+      let nick;
+      if (member1 != null) {
+        nick = member1.nick;
+      }
+      if (nick == null) {
+        nick = NicknameUtilsDefault.getName(self.guildId, self.channelId, user);
+      }
+      obj2 = { user, userNick: NicknameUtilsDefault.getName(self.guildId, self.channelId, user), nick, comparator: getComparator(voiceStateForChannel, nick), voiceState: voiceStateForChannel, role: null, speaker: null, member: null, blocked: null, ignored: null, isFriend: null, connectedOn: null };
+      obj2.role = useGuildMemberDisplayRole.getHighestHoistedRole(self.guildId, userId);
+      obj2.speaker = StageChannelRoleStore.isSpeaker(userId, self.channelId);
+      obj2.member = member1;
+      obj2.blocked = RelationshipStore.isBlocked(user.id);
+      obj2.ignored = RelationshipStore.isIgnored(user.id);
+      obj2.isFriend = RelationshipStore.isFriend(user.id);
+      let connectedOn;
+      if (first != null) {
+        connectedOn = first.connectedOn;
+      }
+      if (connectedOn == null) {
+        const _Date = Date;
+        connectedOn = Date.now();
+      }
+      obj2.connectedOn = connectedOn;
+      const obj5 = {};
+      const merged = Object.assign(obj2);
+      obj5.type = obj2.VOICE;
+      obj5.id = user.id;
+      const tmp19 = obj2;
+      obj5.rtsState = useAudienceRequestToSpeakState.getAudienceRequestToSpeakState(voiceStateForChannel);
+      items.push(obj5);
+      let streamForUser = ApplicationStreamingStore.getStreamForUser(userId, self.guildId);
+      if (streamForUser == null) {
+        streamForUser = ApplicationStreamingStore.getActiveStreamForUser(userId, self.guildId);
+      }
+      if (null != streamForUser) {
+        if (streamForUser.channelId === self.channelId) {
+          const obj6 = {};
+          const tmp11Result2 = StreamKeyUtils;
+          const merged1 = Object.assign(obj2);
+          obj6.id = StreamKeyUtils.encodeStreamKey(streamForUser);
+          obj6.type = tmp19.STREAM;
+          obj6.rtsState = useAudienceRequestToSpeakState.RequestToSpeakStates.NONE;
+          items.push(obj6);
+          const encodeStreamKeyResult = StreamKeyUtils.encodeStreamKey(streamForUser);
+        }
+      }
+      return items;
+    }
+  }
+};
+prototype["updateParticipant"] = function updateParticipant(arg0) {
+  const self = this;
+  closure_0 = arg0;
+  let result = this._getParticipantsForUser(arg0, arr);
+  let flag = null != arr;
+  if (!flag) {
+    flag = 0 !== result.length;
+  }
+  if (flag) {
+    if (arr != null) {
+      const item = arr.forEach((id) => {
+        const _participantsIndex = self._participantsIndex;
+        _participantsIndex.delete(id.id);
+        const _requestToSpeakIndex = self._requestToSpeakIndex;
+        _requestToSpeakIndex.delete(id.id);
+      });
+    }
+    const item1 = result.forEach((id) => {
+      const _participantsIndex = self._participantsIndex;
+      const result = _participantsIndex.set(id.id, id);
+      if (id.id === closure_0) {
+        const rtsState = id.rtsState;
+        if (tmp6) {
+          const _requestToSpeakIndex2 = self._requestToSpeakIndex;
+          const result1 = _requestToSpeakIndex2.set(closure_0, id);
+        }
+        tmp6 = rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK || rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+      }
+      const _requestToSpeakIndex = self._requestToSpeakIndex;
+      _requestToSpeakIndex.delete(closure_0);
+    });
+    this.participants[arg0] = result;
+    flag = true;
+  }
+  return flag;
+};
+prototype["rebuild"] = function rebuild() {
+  const self = this;
+  const channel = ChannelStore.getChannel(this.channelId);
+  if (null != channel) {
+    if (channel.isGuildStageVoice()) {
+      const _Set = Set;
+      const _Object = Object;
+      const set = new Set(Object.keys(VoiceStateStore.getVoiceStatesForChannel(channel.id)));
+      const _participantsIndex = self._participantsIndex;
+      _participantsIndex.clear();
+      const _requestToSpeakIndex = self._requestToSpeakIndex;
+      _requestToSpeakIndex.clear();
+      self.participants = {};
+      const item = set.forEach((item) => self.updateParticipant(item));
+      return true;
+    }
+  }
+  return false;
+};
 Object.defineProperty(prototype, "version", {
   get: function version() {
     return this._participantsIndex.version;
   },
   set: undefined
 });
+prototype["size"] = function size(arg0) {
+  const _participantsIndex = this._participantsIndex;
+  return _participantsIndex.size(arg0);
+};
+prototype["toArray"] = function toArray(arg0) {
+  const _participantsIndex = this._participantsIndex;
+  return _participantsIndex.values(arg0, true);
+};
+prototype["getParticipant"] = function getParticipant(arg0) {
+  const _participantsIndex = this._participantsIndex;
+  value = _participantsIndex.get(arg0);
+  if (value == null) {
+    value = null;
+  }
+  return value;
+};
 Object.defineProperty(prototype, "requestToSpeakVersion", {
   get: function requestToSpeakVersion() {
     return this._requestToSpeakIndex.version;
   },
   set: undefined
 });
+prototype["getRequestToSpeakParticipants"] = function getRequestToSpeakParticipants() {
+  const _requestToSpeakIndex = this._requestToSpeakIndex;
+  return _requestToSpeakIndex.values(undefined, true);
+};
 
 export default StageChannelParticipants;
 export { StageChannelParticipantNamedIndex };
 export const StageChannelParticipantTypes = obj2;
 export const isRequestedToSpeakAll = function isRequestedToSpeakAll(rtsState) {
-  const tmp3 = rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK || rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-  return tmp3;
+  return rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK || rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 };

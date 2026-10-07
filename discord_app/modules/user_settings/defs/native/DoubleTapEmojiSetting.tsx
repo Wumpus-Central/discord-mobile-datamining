@@ -1,179 +1,89 @@
 // === Module 15836: DoubleTapEmojiSetting ===
 
 // Module 15836 (DoubleTapEmojiSetting)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1085 */;
-import intl2 from "intl" /* 1126 */;
-import EmojiConstants from "EmojiConstants" /* 1380 */;
+import util from "util" /* 1126 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import EmojiDefault from "Emoji" /* 6632 */;
 import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 7638 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import size_mod from "module_2" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
-let _require, closure_2, constants, emoji;
-
-let obj2;
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const AnalyticEvents = Constants.AnalyticEvents;
-const EmojiIntention = EmojiConstants.EmojiIntention;
-const jsx = Fragment.jsx;
-let obj = { textEmoji: obj2 };
-obj2 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-let closure_7 = createStyles.createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp5;
-  let tmp7;
-  let tmp9;
-  const obj = react2;
-  const cResult = obj.c(6);
-  const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
-  const setting = DoubleTapReactionEmoji.useSetting();
-  if (cResult[0] !== setting) {
-    const tmpResult = DoubleTapToReactUtils;
-    const result = tmpResult.disambiguatedEmojiFromSettingsValue(setting);
-    cResult[0] = setting;
-    cResult[1] = result;
-    tmp5 = result;
-  } else {
-    tmp5 = cResult[1];
-  }
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult2 = DoubleTapToReactUtils;
-    const fallbackDoubleTapDisambiguatedEmoji = tmpResult2.getFallbackDoubleTapDisambiguatedEmoji();
-    cResult[2] = fallbackDoubleTapDisambiguatedEmoji;
-    tmp7 = fallbackDoubleTapDisambiguatedEmoji;
-  } else {
-    tmp7 = cResult[2];
-  }
-  if (null == tmp5) {
-    if (null != tmp7) {
-      let tmp14;
-      const _Symbol = Symbol;
-      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp17 = <closure_8 emoji={tmp7} />;
-        cResult[3] = tmp17;
-        tmp14 = tmp17;
-      } else {
-        tmp14 = cResult[3];
-      }
-      tmp9 = tmp14;
-    }
-    return tmp9;
-  }
-  tmp9 = null;
-  if (null != tmp5) {
-    let tmp10;
-    if (cResult[4] !== tmp5) {
-      const tmp13 = <closure_8 emoji={tmp5} />;
-      cResult[4] = tmp5;
-      cResult[5] = tmp13;
-      tmp10 = tmp13;
-    } else {
-      tmp10 = cResult[5];
-    }
-    tmp9 = tmp10;
-  }
-}) : (() => {
-  let tmp4;
-  const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
-  const setting = DoubleTapReactionEmoji.useSetting();
-  const obj = DoubleTapToReactUtils;
-  const result = obj.disambiguatedEmojiFromSettingsValue(setting);
-  const obj2 = DoubleTapToReactUtils;
-  const fallbackDoubleTapDisambiguatedEmoji = obj2.getFallbackDoubleTapDisambiguatedEmoji();
-  if (null == result) {
-    if (null != fallbackDoubleTapDisambiguatedEmoji) {
-      tmp4 = <closure_8 emoji={fallbackDoubleTapDisambiguatedEmoji} />;
-    }
-    return tmp4;
-  }
-  tmp4 = null;
-  if (null != result) {
-    tmp4 = <closure_8 emoji={result} />;
-  }
-});
-ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const EmojiIntention = fn(1380).EmojiIntention;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { textEmoji: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
+let closure_7 = createStyles.createStyles(obj2);
+fn(558);
+let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((emoji) => {
-  let url;
-  const obj = react2;
-  const cResult = obj.c(8);
+  const cResult = c.c(8);
   emoji = emoji.emoji;
   const tmp3 = closure_7();
   if (cResult[0] === emoji.id) {
-    let tmp4;
-    let tmp7;
     if (cResult[1] === emoji.url) {
-      tmp4 = cResult[2];
-    }
-    const _Symbol = Symbol;
-    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      size = { height: 24, width: 24 };
-      cResult[3] = size;
-      tmp7 = size;
-    } else {
-      tmp7 = cResult[3];
-    }
-    let str2 = "";
-    if (null == emoji.id) {
-      str2 = emoji.surrogates;
-    }
-    if (cResult[4] === tmp4) {
-      if (cResult[5] === tmp3.textEmoji) {
-        let tmp9;
-        if (cResult[6] === str2) {
-          tmp9 = cResult[7];
-        }
-        return tmp9;
+      const _Symbol = Symbol;
+      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+        const size = { height: 24, width: 24 };
+        cResult[3] = size;
+        let tmp7 = size;
+      } else {
+        tmp7 = cResult[3];
       }
+      let str2 = "";
+      if (null == emoji.id) {
+        str2 = emoji.surrogates;
+      }
+      if (cResult[4] === cResult[2]) {
+        if (cResult[5] === tmp3.textEmoji) {
+          if (cResult[6] === str2) {
+            let tmp9 = cResult[7];
+          }
+          return tmp9;
+        }
+      }
+      const obj3 = { fastImageStyle: tmp7, src: cResult[2], name: str2, adjustsFontSizeToFit: true, textEmojiStyle: tmp3.textEmoji };
+      const tmp12 = jsx(EmojiDefault, { fastImageStyle: tmp7, src: cResult[2], name: str2, adjustsFontSizeToFit: true, textEmojiStyle: tmp3.textEmoji });
+      cResult[4] = cResult[2];
+      cResult[5] = tmp3.textEmoji;
+      cResult[6] = str2;
+      cResult[7] = tmp12;
+      tmp9 = tmp12;
     }
-    const tmp12 = jsx(EmojiDefault, { fastImageStyle: tmp7, src: tmp4, name: str2, adjustsFontSizeToFit: true, textEmojiStyle: tmp3.textEmoji });
-    cResult[4] = tmp4;
-    cResult[5] = tmp3.textEmoji;
-    cResult[6] = str2;
-    cResult[7] = tmp12;
-    tmp9 = tmp12;
   }
   if (null != emoji.id) {
     const obj4 = { id: emoji.id, size: 24, animated: false };
-    const obj2 = AvatarUtilsDefault;
-    url = obj2.getEmojiURL(obj4);
+    let url = AvatarUtilsDefault.getEmojiURL(obj4);
   } else {
     url = emoji.url;
   }
   cResult[0] = emoji.id;
   cResult[1] = emoji.url;
   cResult[2] = url;
-  tmp4 = url;
 }) : ((emoji) => {
-  let url;
   emoji = emoji.emoji;
-  const tmp = closure_7();
   if (null != emoji.id) {
     const obj2 = { id: emoji.id, size: 24, animated: false };
-    const obj = AvatarUtilsDefault;
-    url = obj.getEmojiURL(obj2);
+    let url = AvatarUtilsDefault.getEmojiURL(obj2);
   } else {
     url = emoji.url;
   }
+  const obj3 = { fastImageStyle: { height: 24, width: 24 }, src: url, name: null, adjustsFontSizeToFit: true, textEmojiStyle: null };
   let str = "";
-  EmojiDefault;
+  const tmp = closure_7();
   if (null == emoji.id) {
     str = emoji.surrogates;
   }
-  return <tmp5 fastImageStyle={{ height: 24, width: 24 }} src={url} name={str} adjustsFontSizeToFit textEmojiStyle={tmp.textEmoji} />;
+  obj3.name = str;
+  obj3.textEmojiStyle = tmp.textEmoji;
+  return jsx(EmojiDefault, { fastImageStyle: { height: 24, width: 24 }, src: url, name: null, adjustsFontSizeToFit: true, textEmojiStyle: null });
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 const useIsDisabled = () => {
   const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
@@ -183,19 +93,77 @@ const useIsDisabled = () => {
   }
   return flag;
 };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp5;
-  const obj = react2;
-  const cResult = obj.c(2);
+ReactCompilerGating = fn(558);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(6);
   const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
   const setting = DoubleTapReactionEmoji.useSetting();
   if (cResult[0] !== setting) {
-    const tmpResult = DoubleTapToReactUtils;
-    const result = tmpResult.disambiguatedEmojiFromSettingsValue(setting);
+    const result = DoubleTapToReactUtils.disambiguatedEmojiFromSettingsValue(setting);
     cResult[0] = setting;
     cResult[1] = result;
-    tmp5 = result;
+    let tmp5 = result;
+    const tmpResult = DoubleTapToReactUtils;
+  } else {
+    tmp5 = cResult[1];
+  }
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    const fallbackDoubleTapDisambiguatedEmoji = DoubleTapToReactUtils.getFallbackDoubleTapDisambiguatedEmoji();
+    cResult[2] = fallbackDoubleTapDisambiguatedEmoji;
+    let tmp7 = fallbackDoubleTapDisambiguatedEmoji;
+    const tmpResult2 = DoubleTapToReactUtils;
+  } else {
+    tmp7 = cResult[2];
+  }
+  if (null == tmp5) {
+    if (null != tmp7) {
+      const _Symbol = Symbol;
+      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj2 = { emoji: tmp7 };
+        const tmp17 = <closure_8 emoji={tmp7} />;
+        cResult[3] = tmp17;
+      }
+    }
+  }
+  if (null == tmp5) {
+    return null;
+  } else if (cResult[4] !== tmp5) {
+    const obj3 = { emoji: tmp5 };
+    const tmp12 = <closure_8 emoji={tmp5} />;
+    cResult[4] = tmp5;
+    cResult[5] = tmp12;
+  }
+}) : (() => {
+  const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
+  const setting = DoubleTapReactionEmoji.useSetting();
+  const result = DoubleTapToReactUtils.disambiguatedEmojiFromSettingsValue(setting);
+  const fallbackDoubleTapDisambiguatedEmoji = DoubleTapToReactUtils.getFallbackDoubleTapDisambiguatedEmoji();
+  if (null == result) {
+    if (null != fallbackDoubleTapDisambiguatedEmoji) {
+      const obj3 = { emoji: fallbackDoubleTapDisambiguatedEmoji };
+      let tmp4 = <closure_8 emoji={fallbackDoubleTapDisambiguatedEmoji} />;
+    }
+    return tmp4;
+  }
+  tmp4 = null;
+  if (null != result) {
+    const obj4 = { emoji: result };
+    tmp4 = <closure_8 emoji={result} />;
+  }
+});
+ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
+const SettingBuilders = fn(11142);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
+  const setting = DoubleTapReactionEmoji.useSetting();
+  if (cResult[0] !== setting) {
+    const result = DoubleTapToReactUtils.disambiguatedEmojiFromSettingsValue(setting);
+    cResult[0] = setting;
+    cResult[1] = result;
+    let tmp5 = result;
+    const tmpResult = DoubleTapToReactUtils;
   } else {
     tmp5 = cResult[1];
   }
@@ -208,8 +176,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
 }) : (() => {
   const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
   const setting = DoubleTapReactionEmoji.useSetting();
-  const obj = DoubleTapToReactUtils;
-  const result = obj.disambiguatedEmojiFromSettingsValue(setting);
+  const result = DoubleTapToReactUtils.disambiguatedEmojiFromSettingsValue(setting);
   let combined = null;
   if (null != result) {
     const _HermesInternal = HermesInternal;
@@ -217,92 +184,114 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   return combined;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const obj3 = {
+const pressable = SettingBuilders.createPressable({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["96WKNB"]);
+    const intl = util.intl;
+    return intl.string(util.t["96WKNB"]);
   },
-  parent: MobileUserSettings.CHAT,
+  parent: fn(7645).MobileUserSettings.CHAT,
   useTrailing: tmp3,
   onPress: function onPressSetting() {
-    let closure_0;
-    const tmp = require("openEmojiPickerActionSheet");
-    let obj = {
-      pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI,
-      onPressEmoji: function() {
-        return closure_0(...arguments);
-      },
-      startExpanded: true
-    };
-    const openEmojiPickerActionSheet = tmp.openEmojiPickerActionSheet;
-    _require = _asyncToGenerator(async (emoji) => {
-      let closure_1;
-      let c3 = 0;
-      let c4 = 0;
-      return (async (arg0) => {
-        if (constants === 2) {
-          constants = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            return { value, done: true };
-          } else {
-            return { value: "IconComponent", done: null };
-          }
+    let obj2 = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
+    _require = asyncGeneratorStep(async (arg0) => {
+      if (constants === 2) {
+        constants = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
-          try {
-            constants = 2;
-            if (0 === c3) {
-              if (arg0 === 1) {
-                constants = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                constants = 3;
-                return { value, done: true };
-              } else {
-                closure_2 = tmp4;
-                ({ id: obj7.emoji_id, name: obj7.emoji_name, animated: obj7.emoji_animated } = emoji);
-                const obj4 = { emoji_id: null, emoji_name: null, emoji_animated: null, recommended: false, location: tmp(closure_2[16]).USER_SETTINGS };
-                const track = tmp(closure_2[15]).track;
-                const DOUBLE_TAP_REACT_EMOJI_UPDATED = constants.DOUBLE_TAP_REACT_EMOJI_UPDATED;
-                tmp(closure_2[15]);
-                track(DOUBLE_TAP_REACT_EMOJI_UPDATED, obj4);
-                const DoubleTapReactionEmoji = emoji(closure_2[10]).DoubleTapReactionEmoji;
-                const obj5 = { emojiId: null, emojiName: null, animated: null, disableDoubleTap: false };
-                ({ id: obj8.emojiId, name: obj8.emojiName, animated: obj8.animated } = emoji);
-                c3 = 1;
-                constants = 1;
-                const obj6 = { value: DoubleTapReactionEmoji.updateSetting(obj5), done: false };
-                return obj6;
-              }
-            } else if (arg0 === 1) {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          constants = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
               constants = 3;
               throw value;
             } else if (arg0 === 2) {
               constants = 3;
-              return { value, done: true };
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
-              const obj16 = { emoji };
-              const obj = emoji(closure_2[17]);
-              const result = obj.showDoubleTapEmojiUpdatedToast(obj16);
-              constants = 3;
-              return { value: "IconComponent", done: null };
+              closure_129_0 = closure_0;
+              const obj4 = { emoji_id: null, emoji_name: null, emoji_animated: null, recommended: false, location: null };
+              ({ id: obj8.emoji_id, name: obj8.emoji_name, animated: obj8.emoji_animated } = closure_0);
+              obj4.location = tmp2(tmp5[16]).USER_SETTINGS;
+              tmp2(tmp5[15]).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj4);
+              const DoubleTapReactionEmoji = closure_0(tmp5[10]).DoubleTapReactionEmoji;
+              ({ id: obj9.emojiId, name: obj9.emojiName, animated: obj9.animated } = closure_0);
+              c3 = 1;
+              constants = 1;
+              const obj6 = { value: DoubleTapReactionEmoji.updateSetting({ emojiId: null, emojiName: null, animated: null, disableDoubleTap: false }), done: false };
+              return obj6;
             }
-          } catch (tmp11) {
+          } else if (arg0 === 1) {
             constants = 3;
-            throw tmp11;
+            throw value;
+          } else if (arg0 === 2) {
+            constants = 3;
+            const obj16 = { value, done: true };
+            return obj16;
+          } else {
+            const obj17 = { emoji: closure_129_0 };
+            const result = closure_0(tmp5[17]).showDoubleTapEmojiUpdatedToast(obj17);
+            constants = 3;
+            return { value: "IconComponent", done: null };
           }
+        } catch (tmp12) {
+          constants = tmp;
+          throw tmp12;
         }
-      })();
+      }
     });
-    let result = openEmojiPickerActionSheet(obj);
+    obj2.onPressEmoji = function() {
+      const self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    };
+    let result = require("openEmojiPickerActionSheet").openEmojiPickerActionSheet(obj2);
   },
   withArrow: true,
-  useDescription: tmp5,
+  useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(2);
+    const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
+    const setting = DoubleTapReactionEmoji.useSetting();
+    if (cResult[0] !== setting) {
+      const result = DoubleTapToReactUtils.disambiguatedEmojiFromSettingsValue(setting);
+      cResult[0] = setting;
+      cResult[1] = result;
+      let tmp5 = result;
+      const tmpResult = DoubleTapToReactUtils;
+    } else {
+      tmp5 = cResult[1];
+    }
+    let combined = null;
+    if (null != tmp5) {
+      const _HermesInternal = HermesInternal;
+      combined = ":" + tmp5.name + ":";
+    }
+    return combined;
+  }) : (() => {
+    const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
+    const setting = DoubleTapReactionEmoji.useSetting();
+    const result = DoubleTapToReactUtils.disambiguatedEmojiFromSettingsValue(setting);
+    let combined = null;
+    if (null != result) {
+      const _HermesInternal = HermesInternal;
+      combined = ":" + result.name + ":";
+    }
+    return combined;
+  }),
   useIsDisabled,
   usePredicate: () => {
     if (typeof fn === "function") {
@@ -316,9 +305,8 @@ const obj3 = {
       throw new TypeError("Trying to call a non-function");
     }
   }
-};
-const pressable = SettingBuilders.createPressable(obj3);
-let size = size_mod;
+});
+let size = fn(2);
 const result2 = size.fileFinishedImporting("modules/user_settings/defs/native/DoubleTapEmojiSetting.tsx");
 
 export default pressable;

@@ -1,57 +1,51 @@
 // === Module 17780: GuildSettingsEmojiStore ===
 
 // Module 17780 (GuildSettingsEmojiStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import EmojiRecord from "EmojiRecord" /* 17781 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
-import LRUCache from "LRUCache" /* 1444 */;
-import size from "module_2" /* 2 */;
+import priv from "priv" /* 1444 */;
 
-const React2 = {};
-const _false = {};
+const dependencyMap = {};
+const dependencyMap2 = {};
 let closure_4 = 0;
-const obj = { max: 5, maxAge: DurationsDefault.Millis.HOUR };
-const importDefaultResult1 = new LRUCache(obj);
-const Store = get_initializedDefault.Store;
+const obj = { max: 5, maxAge: null };
+obj.maxAge = DurationsDefault.Millis.HOUR;
+const importDefaultResult1 = new priv(obj);
+const Store = initializeDefault.Store;
 class GuildSettingsEmojiStore extends Store {
-  initialize() {
-    this.waitFor(SelectedGuildStore);
-  }
-  isUploadingEmoji() {
-    return closure_4 > 0;
-  }
-  getEmojiRevision(id) {
-    let num = closure_2[id];
-    if (num == null) {
-      num = 0;
-    }
-    return num;
-  }
-  getEmojis(id) {
-    return closure_3[id];
-  }
-  getEmojiRawAsset(arg0) {
-    return importDefaultResult1.get(arg0);
-  }
 }
 const prototype = GuildSettingsEmojiStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(SelectedGuildStore);
+};
+prototype["isUploadingEmoji"] = function isUploadingEmoji() {
+  return closure_4 > 0;
+};
+prototype["getEmojiRevision"] = function getEmojiRevision(id) {
+  let num = dependencyMap[id];
+  if (num == null) {
+    num = 0;
+  }
+  return num;
+};
+prototype["getEmojis"] = function getEmojis(id) {
+  return dependencyMap2[id];
+};
+prototype["getEmojiRawAsset"] = function getEmojiRawAsset(arg0) {
+  return importDefaultResult1.get(arg0);
+};
 GuildSettingsEmojiStore.displayName = "GuildSettingsEmojiStore";
-const obj2 = {
+const guildSettingsEmojiStore = new GuildSettingsEmojiStore(DispatcherDefault, {
   EMOJI_DELETE: function handleEmojiDelete(arg0) {
-    let closure_129_0;
-    let guildId;
-    ({ guildId, emojiId: closure_129_0 } = arg0);
-    const arr = closure_3[guildId];
-    closure_3[guildId] = arr.filter((id) => id.id !== closure_1_0);
+    ({ guildId, emojiId: EmojiRecord } = arg0);
+    dependencyMap2[guildId] = dependencyMap2[guildId].filter((id) => id.id !== EmojiRecord);
   },
   EMOJI_FETCH_SUCCESS: function handleFetchSuccess(emojis) {
     emojis = emojis.emojis;
-    closure_3[emojis.guildId] = emojis.map((item) => {
-      const tmp = new EmojiRecord(item);
-      return tmp;
-    });
+    closure_3[emojis.guildId] = emojis.map((item) => new EmojiRecord(item));
   },
   EMOJI_FETCH_FAILURE: function handleFetchFailure(guildId) {
     closure_3[guildId.guildId] = [];
@@ -67,14 +61,14 @@ const obj2 = {
   },
   GUILD_EMOJIS_UPDATE: function handleGuildEmojiUpdate(guildId) {
     guildId = guildId.guildId;
-    let num = closure_2[guildId];
+    let num = dependencyMap[guildId];
     if (num == null) {
       num = 0;
     }
-    closure_2[guildId] = num + 1;
+    dependencyMap[guildId] = num + 1;
   }
-};
-const guildSettingsEmojiStore = new GuildSettingsEmojiStore(DispatcherDefault, obj2);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsEmojiStore.tsx");
 
 export default guildSettingsEmojiStore;

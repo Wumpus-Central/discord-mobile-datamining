@@ -1,74 +1,45 @@
 // === Module 15947: AgeGateUnderage ===
 
 // Module 15947 (AgeGateUnderage)
-import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1085 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
 import NavigatorHeader from "NavigatorHeader" /* 6017 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 6439 */;
-import AuthHeaderDefault from "AuthHeader" /* 6469 */;
-import AuthNavbarPlaceholderDefault from "AuthNavbarPlaceholder" /* 6473 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let dependencyMap, importDefault, navigation, onClose;
-
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-const View = react_native.View;
-const HelpdeskArticles = Constants.HelpdeskArticles;
-({ jsx: metroRequire, Fragment: metroImportDefault, jsxs: metroImportAll } = Fragment);
+require = fn;
+const View = fn(17).View;
+const HelpdeskArticles = fn(1085).HelpdeskArticles;
+const jsxProd = fn(21);
+({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4896);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 0;
   if (arg0) {
     num = 80;
   }
   const obj = { container: { alignItems: "center", justifyContent: "center", flex: 1, padding: 16, paddingTop: 0, paddingBottom: num, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, header: { marginTop: 16 }, body: { marginTop: 8, lineHeight: 20, textAlign: "center" }, buttonWrapper: { width: "100%", marginTop: 24 } };
-  ({ alignItems: "center", justifyContent: "center", flex: 1, padding: 16, paddingTop: 0, paddingBottom: num, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW });
   return obj;
 });
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
-  let Button;
-  let closure_1;
-  let closure_2;
-  let disableSwipe;
-  let existingUser;
-  let fromRegister;
-  let intl4;
-  let intl5;
-  let items;
-  let items1;
-  let obj6;
-  let tmp7Result;
-  let underageMessage;
-  let obj = onClose(576);
-  const cResult = obj.c(34);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/age_gate/native/components/AgeGateUnderage.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
+  const cResult = onClose(576).c(34);
   onClose = onClose.onClose;
   ({ underageMessage, existingUser, fromRegister, disableSwipe } = onClose);
   importDefault = tmp4;
   dependencyMap = tmp6;
   const tmp8 = useWideAuthViewDefault();
   const tmp9 = closure_9(tmp8);
-  const tmpResult = onClose(1490);
-  navigation = tmpResult.useNavigation();
+  let obj = onClose(576);
+  const navigation = onClose(1490).useNavigation();
   if (cResult[0] === (undefined !== disableSwipe && disableSwipe)) {
-    if (cResult[1] === (undefined !== existingUser && existingUser)) {
+    if (cResult[1] === tmp4) {
       if (cResult[2] === navigation) {
-        let tmp11;
-        let tmp12;
-        let tmp15;
-        let tmp17;
-        let tmp19;
-        let tmp24;
-        let tmp23;
         if (cResult[3] === onClose) {
-          tmp11 = cResult[4];
-          tmp12 = cResult[5];
+          let tmp11 = cResult[4];
+          let tmp12 = cResult[5];
         }
         const layoutEffect = navigation.useLayoutEffect(tmp11, tmp12);
         if (cResult[6] !== onClose) {
@@ -78,168 +49,156 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
           };
           cResult[6] = onClose;
           cResult[7] = fn2;
-          tmp15 = fn2;
+          let tmp15 = fn2;
         } else {
           tmp15 = cResult[7];
         }
-        const tmpResult2 = onClose(6023);
-        tmpResult2.useNavigatorBackPressHandler(tmp15);
-        if (cResult[8] !== (undefined !== existingUser && existingUser)) {
-          let stringResult;
+        tmp(6023).useNavigatorBackPressHandler(tmp15);
+        if (cResult[8] !== tmp4) {
           const intl = tmp(1126).intl;
           const string = intl.string;
-          const t = tmp(1126).t;
-          if (undefined !== existingUser && existingUser) {
-            stringResult = string(t["NR/zrG"]);
+          let t = tmp(1126).t;
+          if (tmp4) {
+            t = t["NR/zrG"];
+            let stringResult = string(t);
           } else {
             stringResult = string(t.nCB6Ga);
           }
-          cResult[8] = undefined !== existingUser && existingUser;
+          cResult[8] = tmp4;
           cResult[9] = stringResult;
-          tmp17 = stringResult;
         } else {
-          tmp17 = cResult[9];
-        }
-        if (cResult[10] !== tmp8) {
-          let tmp20 = null;
-          if (!tmp8) {
-            tmp20 = closure_6(tmp7(6470), {});
-          }
-          cResult[10] = tmp8;
-          cResult[11] = tmp20;
-          tmp19 = tmp20;
-        } else {
-          tmp19 = cResult[11];
-        }
-        const _Symbol = Symbol;
-        if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp26 = closure_6(AuthNavbarPlaceholderDefault, {});
-          const tmp27 = closure_6(onClose(8130).ShieldSpotIllustration, {});
-          cResult[12] = tmp27;
-          cResult[13] = tmp26;
-          tmp24 = tmp26;
-          tmp23 = tmp27;
-        } else {
-          tmp23 = cResult[12];
-          tmp24 = cResult[13];
-        }
-        if (cResult[14] === tmp17) {
-          let tmp28;
-          let stringResult1;
-          if (cResult[15] === tmp9.header) {
-            tmp28 = cResult[16];
-          }
-          if (cResult[17] === (undefined !== fromRegister && fromRegister)) {
-            let tmp31;
-            if (cResult[18] === underageMessage) {
-              tmp31 = cResult[19];
+          if (cResult[10] !== tmp8) {
+            let tmp22 = null;
+            if (!tmp8) {
+              tmp22 = closure_6(tmp7(6470), {});
             }
-            if (cResult[20] === tmp9.body) {
-              let tmp36;
-              if (cResult[21] === tmp31) {
-                tmp36 = cResult[22];
-              }
-              if (cResult[23] === (undefined !== existingUser && existingUser)) {
-                if (cResult[24] === onClose) {
-                  if (cResult[25] === tmp9.body) {
-                    let tmp39;
-                    if (cResult[26] === tmp9.buttonWrapper) {
-                      tmp39 = cResult[27];
-                    }
-                    if (cResult[28] === tmp9.container) {
-                      if (cResult[29] === tmp28) {
-                        if (cResult[30] === tmp36) {
-                          if (cResult[31] === tmp39) {
-                            let tmp45;
-                            if (cResult[32] === tmp19) {
-                              tmp45 = cResult[33];
+            cResult[10] = tmp8;
+            cResult[11] = tmp22;
+            let tmp21 = tmp22;
+          } else {
+            tmp21 = cResult[11];
+          }
+          const _Symbol = Symbol;
+          if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
+            const tmp28 = closure_6(tmp7(6473), {});
+            const tmp29 = closure_6(tmp(8130).ShieldSpotIllustration, {});
+            cResult[12] = tmp29;
+            cResult[13] = tmp28;
+            let tmp26 = tmp28;
+            let tmp25 = tmp29;
+          } else {
+            tmp25 = cResult[12];
+            tmp26 = cResult[13];
+          }
+          if (cResult[14] === cResult[9]) {
+            if (cResult[15] === tmp9.header) {
+              let tmp30 = cResult[16];
+            }
+            if (cResult[17] === tmp5) {
+              if (cResult[18] === underageMessage) {
+                if (cResult[20] === tmp9.body) {
+                  if (cResult[21] === tmp33) {
+                    let tmp39 = cResult[22];
+                  }
+                  if (cResult[23] === tmp4) {
+                    if (cResult[24] === onClose) {
+                      if (cResult[25] === tmp9.body) {
+                        if (cResult[26] === tmp9.buttonWrapper) {
+                          let tmp42 = cResult[27];
+                        }
+                        if (cResult[28] === tmp9.container) {
+                          if (cResult[29] === tmp30) {
+                            if (cResult[30] === tmp39) {
+                              if (cResult[31] === tmp42) {
+                                if (cResult[32] === tmp21) {
+                                  let tmp48 = cResult[33];
+                                }
+                                return tmp48;
+                              }
                             }
-                            return tmp45;
                           }
                         }
+                        let obj2 = { style: tmp9.container, children: null };
+                        const items = [tmp21, tmp26, tmp25, tmp30, tmp39, tmp42];
+                        obj2.children = items;
+                        const tmp51 = closure_8(View, obj2);
+                        cResult[28] = tmp9.container;
+                        cResult[29] = tmp30;
+                        cResult[30] = tmp39;
+                        cResult[31] = tmp42;
+                        cResult[32] = tmp21;
+                        cResult[33] = tmp51;
+                        tmp48 = tmp51;
                       }
                     }
-                    let obj2 = { style: tmp9.container, children: items };
-                    items = [tmp19, tmp24, tmp23, tmp28, tmp36, tmp39];
-                    const tmp48 = closure_8(View, obj2);
-                    cResult[28] = tmp9.container;
-                    cResult[29] = tmp28;
-                    cResult[30] = tmp36;
-                    cResult[31] = tmp39;
-                    cResult[32] = tmp19;
-                    cResult[33] = tmp48;
-                    tmp45 = tmp48;
                   }
+                  let tmp43 = null;
+                  if (tmp4) {
+                    const obj3 = { children: null };
+                    const obj4 = { style: tmp9.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
+                    const intl4 = tmp(1126).intl;
+                    obj4.children = intl4.format(tmp(1126).t["3axQdB"], { days: 30 });
+                    const items1 = [closure_6(tmp(4892).Text, obj4), ];
+                    const obj5 = { style: tmp9.buttonWrapper, children: null };
+                    const obj6 = { onPress: onClose, text: null, grow: true };
+                    const intl5 = tmp(1126).intl;
+                    obj6.text = intl5.string(tmp(1126).t.JhDw5o);
+                    obj5.children = closure_6(tmp(5601).Button, obj6);
+                    items1[1] = closure_6(View, obj5);
+                    obj3.children = items1;
+                    tmp43 = closure_8(closure_7, obj3);
+                  }
+                  cResult[23] = tmp4;
+                  cResult[24] = onClose;
+                  cResult[25] = tmp9.body;
+                  cResult[26] = tmp9.buttonWrapper;
+                  cResult[27] = tmp43;
+                  tmp42 = tmp43;
                 }
+                const obj7 = { style: tmp9.body, variant: "text-md/medium", color: "interactive-text-default", children: cResult[19] };
+                const tmp41 = closure_6(tmp(4892).Text, obj7);
+                cResult[20] = tmp9.body;
+                cResult[21] = cResult[19];
+                cResult[22] = tmp41;
+                tmp39 = tmp41;
               }
-              let tmp40 = null;
-              if (undefined !== existingUser && existingUser) {
-                const obj3 = { children: items1 };
-                const obj4 = { style: tmp9.body, variant: "text-md/medium", color: "interactive-text-default", children: intl4.format(onClose(1126).t["3axQdB"], { days: 30 }) };
-                const Text = tmp(4892).Text;
-                intl4 = tmp(1126).intl;
-                items1 = [closure_6(Text, obj4), ];
-                const obj5 = { style: tmp9.buttonWrapper, children: closure_6(Button, obj6) };
-                obj6 = { onPress: onClose, text: intl5.string(onClose(1126).t.JhDw5o), grow: true };
-                Button = tmp(5601).Button;
-                intl5 = tmp(1126).intl;
-                items1[1] = closure_6(View, obj5);
-                tmp40 = closure_8(closure_7, obj3);
+            }
+            const intl2 = tmp(1126).intl;
+            if (tmp5) {
+              let stringResult1 = intl2.string(tmp(1126).t.GDQgHL);
+            } else {
+              let stringResult2 = underageMessage;
+              if (underageMessage == null) {
+                const intl3 = tmp(1126).intl;
+                stringResult2 = intl3.string(tmp(1126).t.WqEH4D);
               }
-              cResult[23] = undefined !== existingUser && existingUser;
-              cResult[24] = onClose;
-              cResult[25] = tmp9.body;
-              cResult[26] = tmp9.buttonWrapper;
-              cResult[27] = tmp40;
-              tmp39 = tmp40;
+              const obj8 = { underageMessage: stringResult2, helpURL: tmp7(2115).getArticleURL(HelpdeskArticles.AGE_GATE) };
+              stringResult1 = intl2.format(tmp(1126).t.b0QzXe, obj8);
+              const tmp7Result = tmp7(2115);
             }
-            const obj7 = { style: tmp9.body, variant: "text-md/medium", color: "interactive-text-default", children: tmp31 };
-            const tmp38 = closure_6(onClose(4892).Text, obj7);
-            cResult[20] = tmp9.body;
-            cResult[21] = tmp31;
-            cResult[22] = tmp38;
-            tmp36 = tmp38;
+            cResult[17] = tmp5;
+            cResult[18] = underageMessage;
+            cResult[19] = stringResult1;
           }
-          const intl2 = tmp(1126).intl;
-          if (undefined !== fromRegister && fromRegister) {
-            stringResult1 = intl2.string(tmp(1126).t.GDQgHL);
-          } else {
-            const format = intl2.format;
-            let stringResult2 = underageMessage;
-            const b0QzXe = tmp(1126).t.b0QzXe;
-            if (underageMessage == null) {
-              const intl3 = tmp(1126).intl;
-              stringResult2 = intl3.string(tmp(1126).t.WqEH4D);
-            }
-            const obj8 = { underageMessage: stringResult2, helpURL: tmp7Result.getArticleURL(HelpdeskArticles.AGE_GATE) };
-            tmp7Result = HelpdeskUtilsDefault;
-            stringResult1 = format(b0QzXe, obj8);
-          }
-          cResult[17] = undefined !== fromRegister && fromRegister;
-          cResult[18] = underageMessage;
-          cResult[19] = stringResult1;
-          tmp31 = stringResult1;
+          const obj9 = { style: tmp9.header, children: cResult[9] };
+          const tmp32 = closure_6(tmp7(6469), obj9);
+          cResult[14] = cResult[9];
+          cResult[15] = tmp9.header;
+          cResult[16] = tmp32;
+          tmp30 = tmp32;
         }
-        const obj9 = { style: tmp9.header, children: tmp17 };
-        const tmp30 = closure_6(AuthHeaderDefault, obj9);
-        cResult[14] = tmp17;
-        cResult[15] = tmp9.header;
-        cResult[16] = tmp30;
-        tmp28 = tmp30;
+        const tmpResult2 = tmp(6023);
       }
     }
   }
   let fn = function h() {
-    let fn;
-    const setOptions = navigation.setOptions;
     if (closure_1) {
-      fn = () => null;
+      let fn = () => null;
     } else {
-      const obj = NavigatorHeader;
-      fn = obj.getHeaderBackButton(onClose);
+      fn = NavigatorHeader.getHeaderBackButton(onClose);
     }
+    navigation.setOptions({ headerLeft: fn, gestureEnabled: !closure_2 });
     const obj2 = { headerLeft: fn, gestureEnabled: !closure_2 };
-    setOptions(obj2);
   };
   const items2 = [onClose, undefined !== existingUser && existingUser, navigation, undefined !== disableSwipe && disableSwipe];
   cResult[0] = undefined !== disableSwipe && disableSwipe;
@@ -250,18 +209,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   cResult[5] = items2;
   tmp12 = items2;
   tmp11 = fn;
+  const tmpResult = onClose(1490);
 }) : ((onClose) => {
-  let Button;
-  let existingUser;
-  let intl4;
-  let intl5;
-  let items1;
-  let items2;
-  let obj10;
-  let stringResult;
-  let stringResult1;
-  let tmpResult;
-  let underageMessage;
   onClose = onClose.onClose;
   ({ underageMessage, existingUser } = onClose);
   if (existingUser === undefined) {
@@ -277,23 +226,19 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   }
   const tmp3 = existingUser(flag2[8])();
   const tmp4 = closure_9(tmp3);
-  let obj = onClose(flag2[9]);
-  navigation = obj.useNavigation();
+  const navigation = onClose(flag2[9]).useNavigation();
   const items = [onClose, existingUser, navigation, flag2];
   const layoutEffect = navigation.useLayoutEffect(() => {
-    let fn;
-    const setOptions = navigation.setOptions;
     if (existingUser) {
-      fn = () => null;
+      let fn = () => null;
     } else {
-      const obj = NavigatorHeader;
-      fn = obj.getHeaderBackButton(onClose);
+      fn = NavigatorHeader.getHeaderBackButton(onClose);
     }
+    navigation.setOptions({ headerLeft: fn, gestureEnabled: !flag2 });
     const obj2 = { headerLeft: fn, gestureEnabled: !flag2 };
-    setOptions(obj2);
   }, items);
-  let obj2 = onClose(flag2[11]);
-  obj2.useNavigatorBackPressHandler(() => {
+  let obj = onClose(flag2[9]);
+  onClose(flag2[11]).useNavigatorBackPressHandler(() => {
     onClose();
     return true;
   });
@@ -301,52 +246,48 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   const string = intl.string;
   const t = onClose(flag2[12]).t;
   if (existingUser) {
-    stringResult = string(t["NR/zrG"]);
+    let stringResult = string(t["NR/zrG"]);
   } else {
     stringResult = string(t.nCB6Ga);
   }
+  const obj3 = { style: tmp4.container, children: null };
   let tmp12 = null;
-  const obj3 = { style: tmp4.container, children: items1 };
   if (!tmp3) {
     tmp12 = closure_6(tmp(tmp2[13]), {});
   }
-  items1 = [tmp12, closure_6(tmp(flag2[14]), {}), closure_6(onClose(flag2[15]).ShieldSpotIllustration, {}), , , ];
-  const obj4 = { style: tmp4.header, children: stringResult };
-  items1[3] = closure_6(existingUser(flag2[16]), obj4);
-  const obj5 = { style: tmp4.body, variant: "text-md/medium", color: "interactive-text-default", children: stringResult1 };
-  const Text = tmp5(tmp2[18]).Text;
+  const items1 = [tmp12, closure_6(existingUser(flag2[14]), {}), closure_6(onClose(flag2[15]).ShieldSpotIllustration, {}), closure_6(existingUser(flag2[16]), { style: tmp4.header, children: stringResult }), , ];
+  const obj5 = { style: tmp4.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
   const intl2 = tmp5(tmp2[12]).intl;
   if (flag) {
-    stringResult1 = intl2.string(tmp5(tmp2[12]).t.GDQgHL);
+    let stringResult1 = intl2.string(tmp5(tmp2[12]).t.GDQgHL);
   } else {
-    const format = intl2.format;
-    const b0QzXe = tmp5(tmp2[12]).t.b0QzXe;
     if (underageMessage == null) {
       const intl3 = tmp5(tmp2[12]).intl;
       underageMessage = intl3.string(tmp5(tmp2[12]).t.WqEH4D);
     }
-    const obj6 = { underageMessage, helpURL: tmpResult.getArticleURL(HelpdeskArticles.AGE_GATE) };
-    tmpResult = existingUser(flag2[17]);
-    stringResult1 = format(b0QzXe, obj6);
+    const obj6 = { underageMessage, helpURL: tmp(tmp2[17]).getArticleURL(HelpdeskArticles.AGE_GATE) };
+    stringResult1 = intl2.format(tmp5(tmp2[12]).t.b0QzXe, obj6);
+    const tmpResult = tmp(tmp2[17]);
   }
-  items1[4] = closure_6(Text, obj5);
+  obj5.children = stringResult1;
+  items1[4] = closure_6(onClose(flag2[18]).Text, obj5);
   let tmp10Result = null;
   if (existingUser) {
-    const obj7 = { children: items2 };
-    const obj8 = { style: tmp4.body, variant: "text-md/medium", color: "interactive-text-default", children: intl4.format(onClose(flag2[12]).t["3axQdB"], { days: 30 }) };
-    const Text2 = tmp5(tmp2[18]).Text;
-    intl4 = tmp5(tmp2[12]).intl;
-    items2 = [closure_6(Text2, obj8), ];
-    const obj9 = { style: tmp4.buttonWrapper, children: closure_6(Button, obj10) };
-    obj10 = { onPress: onClose, text: intl5.string(onClose(flag2[12]).t.JhDw5o), grow: true };
-    Button = tmp5(tmp2[19]).Button;
-    intl5 = tmp5(tmp2[12]).intl;
+    const obj7 = { children: null };
+    const obj8 = { style: tmp4.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
+    const intl4 = tmp5(tmp2[12]).intl;
+    obj8.children = intl4.format(tmp5(tmp2[12]).t["3axQdB"], { days: 30 });
+    const items2 = [closure_6(tmp5(tmp2[18]).Text, obj8), ];
+    const obj9 = { style: tmp4.buttonWrapper, children: null };
+    const obj10 = { onPress: onClose, text: null, grow: true };
+    const intl5 = tmp5(tmp2[12]).intl;
+    obj10.text = intl5.string(tmp5(tmp2[12]).t.JhDw5o);
+    obj9.children = closure_6(tmp5(tmp2[19]).Button, obj10);
     items2[1] = closure_6(View, obj9);
+    obj7.children = items2;
     tmp10Result = closure_8(closure_7, obj7);
   }
   items1[5] = tmp10Result;
+  obj3.children = items1;
   return closure_8(View, obj3);
 });
-const result = size.fileFinishedImporting("modules/age_gate/native/components/AgeGateUnderage.tsx");
-
-export default tmp3;

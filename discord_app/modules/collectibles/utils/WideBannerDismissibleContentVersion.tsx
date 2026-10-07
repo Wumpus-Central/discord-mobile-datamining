@@ -1,12 +1,12 @@
 // === Module 13823: WideBannerDismissibleContentVersion ===
 
 // Module 13823 (WideBannerDismissibleContentVersion)
-import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
 import ShopBlockType from "ShopBlockType" /* 7096 */;
 import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 7108 */;
-import size from "module_2" /* 2 */;
 
-const CollectibleShopTab = CollectiblesShopConstants.CollectibleShopTab;
+require = fn;
+const CollectibleShopTab = fn(1087).CollectibleShopTab;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/utils/WideBannerDismissibleContentVersion.tsx");
 
 export const getWideBannerDismissibleContentVersion = function getWideBannerDismissibleContentVersion() {
@@ -21,9 +21,8 @@ export const getWideBannerDismissibleContentVersion = function getWideBannerDism
       prop = found.dismissibleContentVersion;
     }
     if (null != prop) {
-      let dismissibleContentVersion = found.dismissibleContentVersion;
       obj.return();
-      return dismissibleContentVersion;
+      return found.dismissibleContentVersion;
     }
   }
   return 0;

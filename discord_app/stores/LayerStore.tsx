@@ -1,35 +1,32 @@
 // === Module 12144: LayerStore ===
 
 // Module 12144 (LayerStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import size from "module_2" /* 2 */;
-
-let closure_0;
 
 function handlePopAllLayers() {
   closure_0 = [];
 }
-const React = [];
-const Store = get_initializedDefault.Store;
+let closure_0 = [];
+const Store = initializeDefault.Store;
 class LayerStore extends Store {
-  hasLayers() {
-    return closure_0.length > 0;
-  }
-  getLayers() {
-    return closure_0;
-  }
 }
 const prototype = LayerStore.prototype;
+prototype["hasLayers"] = function hasLayers() {
+  return closure_0.length > 0;
+};
+prototype["getLayers"] = function getLayers() {
+  return closure_0;
+};
 LayerStore.displayName = "LayerStore";
-const obj = {
+const layerStore = new LayerStore(DispatcherDefault, {
   LAYER_PUSH: function handleAddLayer(component) {
     component = component.component;
     if (closure_0.indexOf(component) >= 0) {
       return false;
     } else {
       const items = [];
-      items[HermesBuiltin.arraySpread(items, closure_0, 0)] = component;
+      items[HermesBuiltin.arraySpread(closure_0, 0)] = component;
       closure_0 = items;
     }
   },
@@ -43,8 +40,8 @@ const obj = {
   LAYER_POP_ALL: handlePopAllLayers,
   LOGOUT: handlePopAllLayers,
   NOTIFICATION_CLICK: handlePopAllLayers
-};
-const layerStore = new LayerStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/LayerStore.tsx");
 
 export default layerStore;

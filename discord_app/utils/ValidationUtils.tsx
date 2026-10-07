@@ -10,7 +10,9 @@ const re3 = /^(.*)#[0-9]{1,5}$/;
 const re4 = /^(https:\/\/)?(discord\.com\/discovery\/game\/)([0-9-]+)\/?/;
 let closure_5 = ["@", "#", ":", "```", "discord", "hypesquad", "system message", "system mesage", "sustem message", "sustem mesage"];
 let closure_6 = ["discordtag", "everyone", "here", "discord nitro", "discord"];
-const obj = {
+const result = size.fileFinishedImporting("utils/ValidationUtils.tsx");
+
+export default {
   isEmail(query) {
     return re0.test(query);
   },
@@ -24,9 +26,12 @@ const obj = {
     const match = re3.exec(query);
     if (null != match) {
       if (match.length > 1) {
-        let closure_0 = tmp;
+        closure_0 = tmp;
         const someResult = closure_5.some((item) => closure_0.includes(item));
-        const tmp5 = !someResult && !closure_6.includes(match[1]);
+        let tmp5 = !someResult;
+        if (!someResult) {
+          tmp5 = !closure_6.includes(tmp);
+        }
         return tmp5;
       }
     }
@@ -36,6 +41,3 @@ const obj = {
     return re4.test(arg0);
   }
 };
-const result = size.fileFinishedImporting("utils/ValidationUtils.tsx");
-
-export default obj;

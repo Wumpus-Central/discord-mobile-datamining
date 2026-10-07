@@ -8,8 +8,7 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/jank_stats/native/isJankScreenReportingEnabled.tsx");
 
 export const isJankScreenReportingEnabled = function isJankScreenReportingEnabled() {
-  const obj = PlatformUtils;
-  let isAndroidResult = obj.isAndroid();
+  let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {
     const AndroidJankPerScreenExperiment = libdiscoreExperiments.AndroidJankPerScreenExperiment;
     isAndroidResult = AndroidJankPerScreenExperiment.getCachedEnabled();

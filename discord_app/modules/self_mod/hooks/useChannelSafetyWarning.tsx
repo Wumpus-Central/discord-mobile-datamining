@@ -2,29 +2,22 @@
 
 // Module 9802 (useChannelSafetyWarning)
 import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 9799 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
-  let closure_0;
-  let closure_1;
-  let first;
-  let tmp10;
-  let tmp6;
-  let tmp7;
-  let tmp9;
+const require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/hooks/useChannelSafetyWarning.tsx");
+
+export const useChannelSafetyWarning = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   _require = arg0;
   dependencyMap = arg1;
-  let tmp = _require;
-  const obj = require("react");
-  const cResult = obj.c(10);
+  const cResult = require("c").c(10);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelSafetyWarningsStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -36,20 +29,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     cResult[1] = arg0;
     cResult[2] = fn;
     cResult[3] = items1;
-    tmp7 = items1;
-    tmp6 = fn;
+    let tmp7 = items1;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  const tmpResult = tmp(504);
-  const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
+  const obj = require("c");
+  const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
   if (cResult[4] === stateFromStores) {
-    let tmp8;
     if (cResult[5] === arg1) {
-      tmp8 = cResult[6];
+      return cResult[6];
     }
-    return tmp8;
   }
   if (cResult[7] !== arg1) {
     const fn2 = function y(type) {
@@ -57,11 +48,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     };
     cResult[7] = arg1;
     cResult[8] = fn2;
-    tmp9 = fn2;
+    let tmp8 = fn2;
   } else {
-    tmp9 = cResult[8];
+    tmp8 = cResult[8];
   }
-  const found = stateFromStores.filter(tmp9);
+  const found = stateFromStores.filter(tmp8);
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
     const fn3 = function _(dismiss_timestamp) {
       let tmp = null == dismiss_timestamp.dismiss_timestamp;
@@ -82,24 +73,21 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
       return tmp;
     };
     cResult[9] = fn3;
-    tmp10 = fn3;
+    let tmp9 = fn3;
   } else {
-    tmp10 = cResult[9];
+    tmp9 = cResult[9];
   }
-  const found1 = found.find(tmp10);
+  const found1 = found.find(tmp9);
   cResult[4] = stateFromStores;
   cResult[5] = arg1;
   cResult[6] = found1;
-  tmp8 = found1;
+  const tmpResult = require("initialize");
 }) : ((arg0, arg1) => {
-  let closure_0;
-  let closure_1;
   _require = arg0;
   dependencyMap = arg1;
   const items = [ChannelSafetyWarningsStore];
   const items1 = [arg0];
-  const obj = require("get initialized");
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelSafetyWarningsStore.getChannelSafetyWarnings(closure_0), items1);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelSafetyWarningsStore.getChannelSafetyWarnings(closure_0), items1);
   const found = stateFromStores.filter((type) => type.type === closure_1);
   return found.find((dismiss_timestamp) => {
     let tmp = null == dismiss_timestamp.dismiss_timestamp;
@@ -120,6 +108,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     return tmp;
   });
 });
-const result = size.fileFinishedImporting("modules/self_mod/hooks/useChannelSafetyWarning.tsx");
-
-export const useChannelSafetyWarning = tmp2;

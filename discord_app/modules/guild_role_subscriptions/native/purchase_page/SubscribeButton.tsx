@@ -1,186 +1,152 @@
 // === Module 16543: SubscribeButton ===
 
 // Module 16543 (SubscribeButton)
-import react_native from "react-native" /* 17 */;
-import Constants from "Constants" /* 1085 */;
-import intl4 from "intl" /* 1126 */;
-import asyncRequire from "asyncRequire" /* 1987 */;
-import ChannelConstants from "ChannelConstants" /* 2058 */;
+import util from "util" /* 1126 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
 import NativePaymentHooksDefault from "NativePaymentHooks" /* 8900 */;
 import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15060 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4508 */;
-import Fragment from "Fragment" /* 21 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let c1, c4, closure_2, intl3, show, showResult, tmp;
-
-let closure_12;
-let map1;
+require = fn;
 function useCreateRoleSubscription(listingId) {
-  let ROLE_SUBSCRIPTIONS_TAB;
-  let closure_1;
-  let createSubscription;
-  let currentlySelectedChannelId;
-  let first1;
-  let items1;
-  let tmp10;
   let obj = GuildRoleSubscriptionListingEditStateUtilsAll;
-  const first = _slicedToArray(obj.useSubscriptionPlan(listingId), 1)[0];
-  let obj2 = GuildRoleSubscriptionListingEditStateUtilsAll;
-  const applicationId = obj2.useApplicationId(listingId);
-  let obj3 = createSubscription(504);
+  const applicationId = GuildRoleSubscriptionListingEditStateUtilsAll.useApplicationId(listingId);
   const items = [SelectedChannelStore];
   if (obj3.useStateFromStores(items, () => currentlySelectedChannelId.getCurrentlySelectedChannelId()) === StaticChannelRoute.ROLE_SUBSCRIPTIONS) {
-    ROLE_SUBSCRIPTIONS_TAB = AnalyticsLocations.ROLE_SUBSCRIPTION_GATED_CHANNEL;
+    let ROLE_SUBSCRIPTIONS_TAB = AnalyticsLocations.ROLE_SUBSCRIPTION_GATED_CHANNEL;
   } else {
     ROLE_SUBSCRIPTIONS_TAB = AnalyticsLocations.ROLE_SUBSCRIPTIONS_TAB;
   }
+  obj3 = createSubscription(504);
   let obj4 = NativePaymentHooksDefault;
-  const obj5 = { planId: first.id, analyticsLocation: ROLE_SUBSCRIPTIONS_TAB, skuId: listingId, applicationId };
-  const createSubscription1 = obj4.useCreateSubscription(obj5);
+  const createSubscription1 = obj4.useCreateSubscription({ planId: _slicedToArray(obj.useSubscriptionPlan(listingId), 1)[0].id, analyticsLocation: ROLE_SUBSCRIPTIONS_TAB, skuId: listingId, applicationId });
   createSubscription = createSubscription1.createSubscription;
   const nativePaymentsConnected = createSubscription1.nativePaymentsConnected;
-  [first1, importDefault] = react.useState(false);
-  const obj6 = {
-    createSubscription: react.useCallback(_asyncToGenerator(async () => {
-      if (c4 === 2) {
-        c4 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+  const tmp2Result = _slicedToArray(noop.useState(false), 2);
+  importDefault = tmp2Result[1];
+  const obj6 = { createSubscription: null, loading: null };
+  const items1 = [createSubscription];
+  obj6.createSubscription = noop.useCallback(asyncGeneratorStep(async () => {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        let c3;
-        try {
-          c4 = 2;
-          if (0 === c1) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              let closure_0 = tmp;
-              c3 = 1;
-              v1(true);
-              c1 = 2;
-              c4 = 1;
-              const obj4 = { value: createSubscription(), done: false };
-              return obj4;
-            }
-          } else if (1 === tmp4) {
-            c3 = 0;
-            closure_128_1(false);
-            throw closure_2;
-          } else if (arg0 === 1) {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c1) {
+          if (arg0 === 1) {
             c4 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c3 = 0;
-            closure_128_1(false);
             c4 = 3;
-            const obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            c3 = 0;
-            closure_128_1(false);
-            c4 = 3;
-            return { value: "IconComponent", done: null };
+            closure_0 = tmp3;
+            c3 = 1;
+            v2(true);
+            c1 = 2;
+            c4 = 1;
+            const obj4 = { value: createSubscription(), done: false };
+            return obj4;
           }
-        } catch (tmp19) {
-          closure_2 = tmp19;
-          if (0 === c3) {
-            c4 = 3;
-            throw tmp19;
-          } else {
-            c1 = 1;
-          }
+        } else if (1 === tmp7) {
+          c3 = 0;
+          closure_128_1(false);
+          throw closure_2;
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 0;
+          closure_128_1(false);
+          c4 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          c3 = 0;
+          closure_128_1(false);
+          c4 = 3;
+          return { value: "IconComponent", done: null };
+        }
+      } catch (tmp22) {
+        closure_2 = tmp22;
+        if (tmp4 === c3) {
+          c4 = tmp2;
+          throw tmp22;
+        } else {
+          c1 = tmp;
         }
       }
-    }), items1),
-    loading: tmp10
-  };
-  items1 = [createSubscription];
-  tmp10 = !nativePaymentsConnected;
+    }
+  }), items1);
+  let first = !nativePaymentsConnected;
   if (nativePaymentsConnected) {
-    tmp10 = first1;
+    first = tmp2Result[0];
   }
+  obj6.loading = first;
   return obj6;
 }
 function emphasisHook(children) {
-  const obj = { variant: "text-xs/semibold", color: "text-default", children };
-  return closure_12(Text_Text.Text, obj);
+  return __initData(Text_Text.Text, { variant: "text-xs/semibold", color: "text-default", children });
 }
 function SwitchTiersButton(activeSubscription) {
-  let intl;
-  let intl2;
-  let items;
-  let obj5;
   activeSubscription = activeSubscription.activeSubscription;
   const activeListingId = activeSubscription.activeListingId;
   const changeToListingId = activeSubscription.changeToListingId;
   let obj = changeToListingId(15060);
-  const first = _slicedToArray(obj.useName(activeListingId), 1)[0];
-  const obj3 = { children: items };
+  const obj3 = { children: null };
   const obj2 = activeListingId(4467)(activeSubscription.currentPeriodEnd);
-  const obj4 = { variant: "text-xs/normal", color: "text-muted", children: intl.format(activeSubscription(1126).t.lA7ztO, obj5) };
-  const formatResult = obj2.format("MMMM Do");
-  const Text = activeSubscription(4892).Text;
-  intl = activeSubscription(1126).intl;
-  obj5 = { activeListingName: first, billingEndDate: formatResult, emphasisHook };
-  items = [closure_12(Text, obj4), closure_12(activeSubscription(1188).Spacer, { size: 16 }), ];
-  const obj6 = {
-    text: intl2.string(activeSubscription(1126).t.SACegK),
-    onPress() {
-      const openLazy = ActionSheetActionCreatorsDefault.openLazy;
-      ActionSheetActionCreatorsDefault;
-      const obj = { activeSubscription, activeListingId, changeToListingId };
-      const tmp2 = asyncRequire(16544, dependencyMap.paths);
-      openLazy(tmp2, "ChangeSubscriptionCard:" + changeToListingId, obj);
-    }
+  const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
+  const intl = activeSubscription(1126).intl;
+  const formatResult = activeListingId(4467)(activeSubscription.currentPeriodEnd).format("MMMM Do");
+  obj4.children = intl.format(activeSubscription(1126).t.lA7ztO, { activeListingName: _slicedToArray(obj.useName(activeListingId), 1)[0], billingEndDate: activeListingId(4467)(activeSubscription.currentPeriodEnd).format("MMMM Do"), emphasisHook });
+  const items = [closure_12(activeSubscription(4892).Text, obj4), closure_12(activeSubscription(1188).Spacer, { size: 16 }), ];
+  const obj6 = { text: null, onPress: null };
+  const intl2 = activeSubscription(1126).intl;
+  obj6.text = intl2.string(activeSubscription(1126).t.SACegK);
+  obj6.onPress = function onPress() {
+    const obj = ActionSheetActionCreatorsDefault;
+    obj.openLazy(asyncRequireImpl(16544, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, { activeSubscription, activeListingId, changeToListingId });
   };
-  const ArrowButton = activeSubscription(16537).ArrowButton;
-  intl2 = activeSubscription(1126).intl;
-  items[2] = closure_12(ArrowButton, obj6);
+  items[2] = closure_12(activeSubscription(16537).ArrowButton, obj6);
+  obj3.children = items;
   return closure_13(View, obj3);
 }
-const View = react_native.View;
-const AnalyticsLocations = Constants.AnalyticsLocations;
-const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
-({ jsx: closure_12, jsxs: map1 } = Fragment);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((listingId) => {
-  let activeSubscription;
-  let activeSubscriptionListing;
-  let createSubscription;
-  let first;
-  let id;
-  let loading;
-  let showMemberVerificationGate;
-  let tmp6;
-  let tmp7;
-  let obj = listingId(showMemberVerificationGate[23]);
-  const cResult = obj.c(18);
+const View = fn(17).View;
+const AnalyticsLocations = fn(1085).AnalyticsLocations;
+const StaticChannelRoute = fn(2058).StaticChannelRoute;
+const jsxProd = fn(21);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/SubscribeButton.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((listingId) => {
+  let Button = listingId;
+  let tmp = showMemberVerificationGate;
+  const cResult = listingId(showMemberVerificationGate[23]).c(18);
   listingId = listingId.listingId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildRoleSubscriptionsStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -192,142 +158,123 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((listingId) => {
     cResult[1] = listingId;
     cResult[2] = fn;
     cResult[3] = items1;
-    tmp7 = items1;
-    tmp6 = fn;
+    let tmp6 = items1;
+    let tmp5 = fn;
   } else {
-    tmp6 = cResult[2];
-    tmp7 = cResult[3];
+    tmp5 = cResult[2];
+    tmp6 = cResult[3];
   }
-  const tmpResult = listingId(showMemberVerificationGate[10]);
-  const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
+  let obj = listingId(showMemberVerificationGate[23]);
+  const stateFromStores = Button(tmp[10]).useStateFromStores(first, tmp5, tmp6);
   let id1;
-  const tmp10 = createSubscription(showMemberVerificationGate[24]);
+  const ButtonResult = Button(tmp[10]);
   if (stateFromStores != null) {
     id1 = stateFromStores.id;
   }
-  ({ activeSubscriptionListing, activeSubscription } = tmp10(id1));
-  tmp10(id1);
+  const tmp9 = createSubscription(tmp[24]);
+  ({ activeSubscriptionListing, activeSubscription } = createSubscription(tmp[24])(id1));
   if (activeSubscriptionListing != null) {
-    id = activeSubscriptionListing.id;
+    const id = activeSubscriptionListing.id;
   }
+  const tmp9Result = createSubscription(tmp[24])(id1);
   ({ loading, createSubscription } = useCreateRoleSubscription(listingId));
   let guild_id;
-  useCreateRoleSubscription(listingId);
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
   }
-  const tmpResult2 = listingId(showMemberVerificationGate[25]);
-  showMemberVerificationGate = tmpResult2.useShowMemberVerificationGate(guild_id);
+  const tmp12 = useCreateRoleSubscription(listingId);
+  showMemberVerificationGate = Button(tmp[25]).useShowMemberVerificationGate(guild_id);
   if (cResult[4] === createSubscription) {
     if (cResult[5] === guild_id) {
-      let tmp16;
-      let tmp19;
       if (cResult[6] === showMemberVerificationGate) {
-        tmp16 = cResult[7];
+        let tmp15 = cResult[7];
       }
       if (id === listingId) {
-        let tmp26;
-        let tmp28;
         const _Symbol2 = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          let intl2 = tmp(tmp2[14]).intl;
-          const stringResult = intl2.string(listingId(showMemberVerificationGate[14]).t.XvAuMo);
+          let intl2 = Button(tmp[14]).intl;
+          const stringResult = intl2.string(Button(tmp[14]).t.XvAuMo);
           cResult[8] = stringResult;
-          tmp26 = stringResult;
+          let onPress = stringResult;
         } else {
-          tmp26 = cResult[8];
+          onPress = cResult[8];
         }
         const _Symbol3 = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = {
-            text: tmp26,
-            variant: "secondary",
-            disabled: true,
-            onPress() {
+          Button = Button(tmp[26]).Button;
+          let obj2 = { text: onPress, variant: "secondary", disabled: true, onPress: null };
+          onPress = function onPress() {
 
-                    }
           };
-          const tmp30 = closure_12(listingId(showMemberVerificationGate[26]).Button, obj2);
-          cResult[9] = tmp30;
-          tmp28 = tmp30;
-        } else {
-          tmp28 = cResult[9];
+          obj2.onPress = onPress;
+          tmp = closure_12(Button, obj2);
+          cResult[9] = tmp;
         }
-        tmp19 = tmp28;
       } else {
-        let tmp17;
         if (null != activeSubscriptionListing) {
           if (null != activeSubscription) {
             if (cResult[10] === activeSubscription) {
               if (cResult[11] === activeSubscriptionListing.id) {
-                let tmp22;
-                if (cResult[12] === listingId) {
-                  tmp22 = cResult[13];
-                }
-                tmp19 = tmp22;
               }
             }
             const obj3 = { changeToListingId: listingId, activeListingId: activeSubscriptionListing.id, activeSubscription };
-            const tmp25 = closure_12(SwitchTiersButton, obj3);
+            const tmp24 = closure_12(SwitchTiersButton, obj3);
             cResult[10] = activeSubscription;
-            cResult[11] = activeSubscriptionListing.id;
+            activeSubscriptionListing = activeSubscriptionListing.id;
+            cResult[11] = activeSubscriptionListing;
             cResult[12] = listingId;
-            cResult[13] = tmp25;
-            tmp22 = tmp25;
+            cResult[13] = tmp24;
           }
         }
         const _Symbol = Symbol;
         if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-          let intl = tmp(tmp2[14]).intl;
-          const stringResult1 = intl.string(listingId(showMemberVerificationGate[14]).t.BEeXib);
+          let intl = Button(tmp[14]).intl;
+          const stringResult1 = intl.string(Button(tmp[14]).t.BEeXib);
           cResult[14] = stringResult1;
-          tmp17 = stringResult1;
+          let tmp16 = stringResult1;
         } else {
-          tmp17 = cResult[14];
+          tmp16 = cResult[14];
         }
-        if (cResult[15] === tmp16) {
+        if (cResult[15] === tmp15) {
           if (cResult[16] === loading) {
-            tmp19 = cResult[17];
+            let tmp18 = cResult[17];
           }
+          return tmp18;
         }
-        const obj4 = { text: tmp17, onPress: tmp16, loading };
-        const tmp21 = closure_12(createSubscription(showMemberVerificationGate[27]), obj4);
-        cResult[15] = tmp16;
+        const obj4 = { text: tmp16, onPress: tmp15, loading };
+        const tmp20 = closure_12(createSubscription(tmp[27]), obj4);
+        cResult[15] = tmp15;
         cResult[16] = loading;
-        cResult[17] = tmp21;
-        tmp19 = tmp21;
+        cResult[17] = tmp20;
+        tmp18 = tmp20;
       }
-      return tmp19;
     }
   }
   class S {
     constructor() {
-      tmp = closure_3;
-      if (tmp) {
-        tmp2 = null;
+      if (closure_3) {
+        tmp = null;
         if (null != guild_id) {
           closure_0 = guild_id;
-          tmp4 = closure_1;
-          tmp5 = closure_3;
-          tmp6 = closure_1(closure_3[13]);
-          obj = { body: null, onConfirm: null, confirmText: null, cancelText: null };
-          tmp7 = closure_0;
-          show = tmp6.show;
+          tmp3 = closure_1;
+          tmp4 = closure_3;
+          obj = closure_1(closure_3[13]);
+          obj1 = { body: null, onConfirm: null, confirmText: null, cancelText: null };
+          tmp5 = closure_0;
           intl = closure_0(closure_3[14]).intl;
-          obj.body = intl.string(closure_0(closure_3[14]).t.PYrJGS);
-          obj.onConfirm = function onConfirm() {
-            const obj = listingId(showMemberVerificationGate[15]);
-            return obj.openMemberVerificationModal(closure_0);
+          obj1.body = intl.string(closure_0(closure_3[14]).t.PYrJGS);
+          obj1.onConfirm = function onConfirm() {
+            return listingId(showMemberVerificationGate[15]).openMemberVerificationModal(closure_0);
           };
           intl2 = closure_0(closure_3[14]).intl;
-          obj.confirmText = intl2.string(closure_0(closure_3[14]).t.IjFdkV);
+          obj1.confirmText = intl2.string(closure_0(closure_3[14]).t.IjFdkV);
           intl3 = closure_0(closure_3[14]).intl;
-          obj.cancelText = intl3.string(closure_0(closure_3[14]).t["ETE/oC"]);
-          showResult = show(obj);
+          obj1.cancelText = intl3.string(closure_0(closure_3[14]).t["ETE/oC"]);
+          showResult = obj.show(obj1);
         }
         return;
       }
-      tmp3 = createSubscription();
+      tmp2 = createSubscription();
       return;
     }
   }
@@ -335,55 +282,45 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((listingId) => {
   cResult[5] = guild_id;
   cResult[6] = showMemberVerificationGate;
   cResult[7] = S;
-  tmp16 = S;
+  tmp15 = S;
+  const ButtonResult1 = Button(tmp[25]);
 }) : ((listingId) => {
-  let activeSubscription;
-  let activeSubscriptionListing;
-  let intl;
-  let intl2;
-  let tmp15;
   listingId = listingId.listingId;
   let createSubscription;
   let guild_id;
   let showMemberVerificationGate;
-  let obj = listingId(showMemberVerificationGate[10]);
   const items = [GuildRoleSubscriptionsStore];
   const items1 = [listingId];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildRoleSubscriptionsStore.getSubscriptionGroupListingForSubscriptionListing(listingId), items1);
+  const stateFromStores = listingId(showMemberVerificationGate[10]).useStateFromStores(items, () => GuildRoleSubscriptionsStore.getSubscriptionGroupListingForSubscriptionListing(listingId), items1);
   let id;
-  const tmp5 = createSubscription(showMemberVerificationGate[24]);
+  let obj = listingId(showMemberVerificationGate[10]);
   const tmp4 = createSubscription;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  ({ activeSubscriptionListing, activeSubscription } = tmp5(id));
+  const tmp5 = createSubscription(showMemberVerificationGate[24]);
+  ({ activeSubscriptionListing, activeSubscription } = createSubscription(showMemberVerificationGate[24])(id));
   let id1;
-  tmp5(id);
   if (activeSubscriptionListing != null) {
     id1 = activeSubscriptionListing.id;
   }
   const tmp9 = useCreateRoleSubscription(listingId);
   createSubscription = tmp9.createSubscription;
   guild_id = undefined;
-  const loading = tmp9.loading;
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
   }
-  const tmpResult = listingId(showMemberVerificationGate[25]);
-  showMemberVerificationGate = tmpResult.useShowMemberVerificationGate(guild_id);
+  const tmp5Result = createSubscription(showMemberVerificationGate[24])(id);
+  showMemberVerificationGate = listingId(showMemberVerificationGate[25]).useShowMemberVerificationGate(guild_id);
   const items2 = [createSubscription, guild_id, showMemberVerificationGate];
   if (id1 === listingId) {
-    const obj2 = {
-      text: intl2.string(listingId(showMemberVerificationGate[14]).t.XvAuMo),
-      variant: "secondary",
-      disabled: true,
-      onPress() {
+    let obj2 = { text: null, variant: "secondary", disabled: true, onPress: null };
+    let intl2 = tmp(tmp2[14]).intl;
+    obj2.text = intl2.string(tmp(tmp2[14]).t.XvAuMo);
+    obj2.onPress = function onPress() {
 
-        }
     };
-    const Button = tmp(tmp2[26]).Button;
-    intl2 = tmp(tmp2[14]).intl;
-    tmp15 = closure_12(Button, obj2);
+    let tmp15 = closure_12(tmp(tmp2[26]).Button, obj2);
   } else {
     if (null != activeSubscriptionListing) {
       if (null != activeSubscription) {
@@ -391,13 +328,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((listingId) => {
         tmp15 = closure_12(SwitchTiersButton, obj3);
       }
     }
-    const obj4 = { text: intl.string(listingId(showMemberVerificationGate[14]).t.BEeXib), onPress: tmp12, loading };
-    const tmp4Result = tmp4(showMemberVerificationGate[27]);
-    intl = tmp(tmp2[14]).intl;
-    tmp15 = closure_12(tmp4Result, obj4);
+    const obj4 = { text: null, onPress: null, loading: null };
+    let intl = tmp(tmp2[14]).intl;
+    obj4.text = intl.string(tmp(tmp2[14]).t.BEeXib);
+    obj4.onPress = tmp12;
+    obj4.loading = tmp9.loading;
+    tmp15 = closure_12(tmp4(tmp2[27]), obj4);
+    const tmp4Result = tmp4(tmp2[27]);
   }
   return tmp15;
 });
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/SubscribeButton.tsx");
-
-export default tmp3;

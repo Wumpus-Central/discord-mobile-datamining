@@ -4,16 +4,9 @@
 import URLUtilsDefault from "URLUtils" /* 1371 */;
 import size from "module_2" /* 2 */;
 
-let regExp2;
-let regExp3;
-let regExp4;
-let regExp5;
-let regExp6;
-let regExp7;
 function safelyPartiallyDecodeURIComponent(hash) {
   let substr;
-  const obj = URLUtilsDefault;
-  const result = obj.safeDecodeURIComponent(hash);
+  const result = URLUtilsDefault.safeDecodeURIComponent(hash);
   if (null == result) {
     return hash;
   } else {
@@ -23,12 +16,9 @@ function safelyPartiallyDecodeURIComponent(hash) {
     let str4 = "";
     if (hash.length > 0) {
       do {
-        let sum;
-        let substr1;
         let codePointAtResult = str2.codePointAt(0);
         let codePointAtResult1 = str.codePointAt(0);
         if (codePointAtResult !== codePointAtResult1) {
-          let tmp10;
           let _String2 = String;
           let fromCodePointResult = String.fromCodePoint(codePointAtResult1);
           let _encodeURIComponent = encodeURIComponent;
@@ -39,14 +29,14 @@ function safelyPartiallyDecodeURIComponent(hash) {
           }
           if (codePointAtResult1 >= 0) {
             if (codePointAtResult1 < 128) {
-              tmp10 = 1 !== closure_5[codePointAtResult1];
+              let tmp10 = 1 !== closure_5[codePointAtResult1];
               let tmp20 = fromCodePointResult;
               if (tmp10) {
                 tmp20 = encodeURIComponentResult;
               }
-              sum = str3 + tmp20;
+              let sum = str3 + tmp20;
               substr = str2.substring(num);
-              substr1 = str.substring(fromCodePointResult.length);
+              let substr1 = str.substring(fromCodePointResult.length);
             }
           }
           tmp10 = 8206 === codePointAtResult1 || 8207 === codePointAtResult1 || 8234 === codePointAtResult1 || 8235 === codePointAtResult1 || 8236 === codePointAtResult1 || 8237 === codePointAtResult1 || 8238 === codePointAtResult1 || 1564 === codePointAtResult1 || 8294 === codePointAtResult1 || 8295 === codePointAtResult1 || 8296 === codePointAtResult1 || 8297 === codePointAtResult1 || 128271 === codePointAtResult1 || 128272 === codePointAtResult1 || 128274 === codePointAtResult1 || 128275 === codePointAtResult1 || 133 === codePointAtResult1 || 160 === codePointAtResult1 || 5760 === codePointAtResult1 || 8192 === codePointAtResult1 || 8193 === codePointAtResult1 || 8194 === codePointAtResult1 || 8195 === codePointAtResult1 || 8196 === codePointAtResult1 || 8197 === codePointAtResult1 || 8198 === codePointAtResult1 || 8199 === codePointAtResult1 || 8200 === codePointAtResult1 || 8201 === codePointAtResult1 || 8202 === codePointAtResult1 || 8232 === codePointAtResult1 || 8233 === codePointAtResult1 || 8239 === codePointAtResult1 || 8287 === codePointAtResult1 || 12288 === codePointAtResult1 || 10240 === codePointAtResult1 || 173 === codePointAtResult1 || 847 === codePointAtResult1;
@@ -186,29 +176,35 @@ function safelyPartiallyDecodeURIComponent(hash) {
 const items = ["\u034F", "\u17B4", "\u17B5", "\u1160", "\u3164", "\uFFA0"];
 const regExp = new RegExp("" + /(?:[\xAD\u0600-\u0605\u061C\u06DD\u070F\u0890\u0891\u08E2\u180E\u200B-\u200F\u202A-\u202E\u2060-\u2064\u2066-\u206F\uFEFF\uFFF9-\uFFFB]|\uD804[\uDCBD\uDCCD]|\uD80D[\uDC30-\uDC3F]|\uD82F[\uDCA0-\uDCA3]|\uD834[\uDD73-\uDD7A]|\uDB40[\uDC01\uDC20-\uDC7F])|\u2028|\u2029|[\0-\t\x0B-\x1F\x7F-\x9F]|[\xA0\u1680\u2000-\u200A\u202F\u205F\u3000]/g.source + "|" + items.join("|"), "gu");
 const regExp1 = new RegExp("" + /(?:[\xAD\u0600-\u0605\u061C\u06DD\u070F\u0890\u0891\u08E2\u180E\u200B-\u200F\u202A-\u202E\u2060-\u2064\u2066-\u206F\uFEFF\uFFF9-\uFFFB]|\uD804[\uDCBD\uDCCD]|\uD80D[\uDC30-\uDC3F]|\uD82F[\uDCA0-\uDCA3]|\uD834[\uDD73-\uDD7A]|\uDB40[\uDC01\uDC20-\uDC7F])|\u2028|\u2029|[\0-\x08\x0B-\x1F\x7F-\x9F]|[\xA0\u1680\u2000-\u200A\u202F\u205F\u3000]/g.source + "|" + items.join("|"), "gu");
-let obj = { character: "h", matcher: regExp2 };
+let obj = { character: "h", matcher: null };
 const items1 = ["H", "\u04BB", "\u0570", "\u13C2", "\u210E", "\u{1D421}", "\u{1D489}", "\u{1D4BD}", "\u{1D4F1}", "\u{1D525}", "\u{1D559}", "\u{1D58D}", "\u{1D5C1}", "\u{1D5F5}", "\u{1D629}", "\u{1D65D}", "\u{1D691}", "\uFF48"];
-regExp2 = new RegExp(items1.join("|"), "gu");
+const regExp2 = new RegExp(items1.join("|"), "gu");
+obj.matcher = regExp2;
 const items2 = [obj, , , , , ];
+const obj2 = { character: "t", matcher: null };
 const items3 = ["T", "\u{1D42D}", "\u{1D461}", "\u{1D495}", "\u{1D4C9}", "\u{1D4FD}", "\u{1D531}", "\u{1D565}", "\u{1D599}", "\u{1D5CD}", "\u{1D601}", "\u{1D635}", "\u{1D669}", "\u{1D69D}"];
-const obj2 = { character: "t", matcher: regExp3 };
-regExp3 = new RegExp(items3.join("|"), "gu");
+const regExp3 = new RegExp(items3.join("|"), "gu");
+obj2.matcher = regExp3;
 items2[1] = obj2;
+const obj3 = { character: "p", matcher: null };
 const items4 = ["P", "\u03C1", "\u03F1", "\u0440", "\u2374", "\u2CA3", "\u{1D429}", "\u{1D45D}", "\u{1D491}", "\u{1D4C5}", "\u{1D4F9}", "\u{1D52D}", "\u{1D561}", "\u{1D595}", "\u{1D5C9}", "\u{1D5FD}", "\u{1D631}", "\u{1D665}", "\u{1D699}", "\u{1D6D2}", "\u{1D6E0}", "\u{1D70C}", "\u{1D71A}", "\u{1D746}", "\u{1D754}", "\u{1D780}", "\u{1D78E}", "\u{1D7BA}", "\u{1D7C8}", "\uFF50", "\u048F"];
-const obj3 = { character: "p", matcher: regExp4 };
-regExp4 = new RegExp(items4.join("|"), "gu");
+const regExp4 = new RegExp(items4.join("|"), "gu");
+obj3.matcher = regExp4;
 items2[2] = obj3;
+const obj4 = { character: "s", matcher: null };
 const items5 = ["S", "\u01BD", "\u0455", "\uA731", "\uABAA", "\u{10448}", "\u{118C1}", "\u{1D42C}", "\u{1D460}", "\u{1D494}", "\u{1D4C8}", "\u{1D4FC}", "\u{1D530}", "\u{1D564}", "\u{1D598}", "\u{1D5CC}", "\u{1D600}", "\u{1D634}", "\u{1D668}", "\u{1D69C}", "\uFF53"];
-const obj4 = { character: "s", matcher: regExp5 };
-regExp5 = new RegExp(items5.join("|"), "gu");
+const regExp5 = new RegExp(items5.join("|"), "gu");
+obj4.matcher = regExp5;
 items2[3] = obj4;
+const obj5 = { character: ":", matcher: null };
 const items6 = ["\u02D0", "\u02F8", "\u0589", "\u05C3", "\u0703", "\u0704", "\u0903", "\u0A83", "\u16EC", "\u1803", "\u1809", "\u205A", "\u2236", "\uA4FD", "\uA789", "\uFE30", "\uFF1A", ";", "\u037E"];
-const obj5 = { character: ":", matcher: regExp6 };
-regExp6 = new RegExp(items6.join("|"), "gu");
+const regExp6 = new RegExp(items6.join("|"), "gu");
+obj5.matcher = regExp6;
 items2[4] = obj5;
+const obj6 = { character: "/", matcher: null };
 const items7 = ["\u1735", "\u2041", "\u2044", "\u2215", "\u2571", "\u27CB", "\u29F8", "\u2CC6", "\u2F03", "\u3033", "\u30CE", "\u31D3", "\u4E3F", "\u{1D23A}"];
-const obj6 = { character: "/", matcher: regExp7 };
-regExp7 = new RegExp(items7.join("|"), "gu");
+const regExp7 = new RegExp(items7.join("|"), "gu");
+obj6.matcher = regExp7;
 items2[5] = obj6;
 let closure_5 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0];
 let result = size.fileFinishedImporting("modules/markup/UnicodeSanitizationUtils.tsx");
@@ -218,26 +214,25 @@ export const BLANK_CHARACTERS_TO_SANITIZE_REGEX_EXCLUDING_TABS = regExp1;
 export const sanitizeWhitespace = function sanitizeWhitespace(url) {
   return url.replace(regExp, "");
 };
-export const sanitizeWhitespaceExcludingTabs = function sanitizeWhitespaceExcludingTabs(substr) {
-  return substr.replace(regExp1, "");
+export const sanitizeWhitespaceExcludingTabs = function sanitizeWhitespaceExcludingTabs(str) {
+  return str.replace(regExp1, "");
 };
 export const UNICODE_CONFUSABLES_FOR_URL_DETECTION = items2;
 export const sanitizeUnicodeConfusables = function sanitizeUnicodeConfusables(sanitizeWhitespaceResult) {
-  let closure_0 = sanitizeWhitespaceResult;
+  closure_0 = sanitizeWhitespaceResult;
   const item = items2.forEach((matcher) => {
     closure_0 = closure_0.replace(matcher.matcher, matcher.character);
   });
   return closure_0;
 };
 export const safelyMakeUrlHumanReadable = function safelyMakeUrlHumanReadable(uRL) {
-  let protocol;
   let startsWithResult = "null" === uRL.origin;
   if (startsWithResult) {
     const pathname = uRL.pathname;
     startsWithResult = pathname.startsWith("//");
   }
   if (startsWithResult) {
-    protocol = uRL.protocol;
+    let protocol = uRL.protocol;
   } else {
     let str3 = "";
     if ("" !== uRL.username) {
@@ -252,12 +247,12 @@ export const safelyMakeUrlHumanReadable = function safelyMakeUrlHumanReadable(uR
       text1 = `${tmp2}@`;
     }
     let str8 = "";
-    const str6 = uRL.href;
     if ("//" === str6.substr(uRL.protocol.length, 2)) {
       str8 = "//";
     }
     const _HermesInternal = HermesInternal;
     protocol = "" + uRL.protocol + str8 + text1 + uRL.host;
+    str6 = uRL.href;
   }
   const sum = protocol + safelyPartiallyDecodeURIComponent(uRL.pathname);
   const sum1 = sum + safelyPartiallyDecodeURIComponent(uRL.search);

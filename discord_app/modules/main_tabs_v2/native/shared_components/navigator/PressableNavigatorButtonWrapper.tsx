@@ -1,35 +1,34 @@
 // === Module 7515: PressableNavigatorButtonWrapper ===
 
 // Module 7515 (PressableNavigatorButtonWrapper)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import react from "react" /* 576 */;
+import _mod17 from "module_17" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import react_native2 from "react-native" /* 7510 */;
+import MainTabsV2Constants from "MainTabsV2Constants" /* 7510 */;
 import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
-let size;
-const View = react_native.View;
-const MIN_HEADER_HEIGHT = react_native2.MIN_HEADER_HEIGHT;
-const jsx = Fragment.jsx;
-let obj = { buttonWrapper: size, buttonWrapperModal: { marginLeft: -8 } };
-size = { flexShrink: 0, flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_8, height: MIN_HEADER_HEIGHT, width: MIN_HEADER_HEIGHT };
+const View = _mod17.View;
+const MIN_HEADER_HEIGHT = MainTabsV2Constants.MIN_HEADER_HEIGHT;
+const jsx = jsxProd.jsx;
+const obj = { buttonWrapper: null, buttonWrapperModal: null };
+let size = { flexShrink: 0, flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_8, height: MIN_HEADER_HEIGHT, width: MIN_HEADER_HEIGHT };
+obj.buttonWrapper = size;
+obj.buttonWrapperModal = { marginLeft: -8 };
 let closure_4 = createStyles.createStyles(obj);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let children;
-  let isModal;
-  const obj = react;
-  const cResult = obj.c(3);
+let size = size_mod;
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorButtonWrapper.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(3);
   ({ children, isModal } = arg0);
-  const tmp2 = undefined !== isModal && isModal;
   const tmp3 = closure_4();
-  const tmp4 = tmp2 ? tmp3.buttonWrapperModal : tmp3.buttonWrapper;
+  const tmp4 = undefined !== isModal && isModal ? tmp3.buttonWrapperModal : tmp3.buttonWrapper;
   if (cResult[0] === children) {
-    let tmp5;
     if (cResult[1] === tmp4) {
-      tmp5 = cResult[2];
+      let tmp5 = cResult[2];
     }
     return tmp5;
   }
@@ -38,16 +37,11 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-}) : ((isModal) => {
-  let flag = isModal.isModal;
-  const children = isModal.children;
+}) : ((children) => {
+  let flag = children.isModal;
   if (flag === undefined) {
     flag = false;
   }
   const tmp = closure_4();
-  return <View collapsable={false} style={flag ? tmp.buttonWrapperModal : tmp.buttonWrapper} importantForAccessibility="yes">{children}</View>;
+  return <View collapsable={false} style={flag ? tmp.buttonWrapperModal : tmp.buttonWrapper} importantForAccessibility="yes">{children.children}</View>;
 });
-size = size_mod;
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorButtonWrapper.tsx");
-
-export default tmp2;

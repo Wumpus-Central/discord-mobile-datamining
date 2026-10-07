@@ -2,80 +2,65 @@
 
 // Module 11397 (UserActivityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import PresenceStore from "PresenceStore" /* 4936 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, activityMetadata;
 
-let obj = function _getMetadata() {
-  obj = _asyncToGenerator(async (userId, arg1) => {
-    let closure_2;
-    let closure_3;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
-    return (async function(arg0, value) {
-      let obj11;
-      userId = closure_1;
-      const metadata = userId.metadata;
-      if (null != metadata) {
-        const _Object = Object;
-        if (Object.keys(metadata).length > 0) {
-          c5 = 3;
-          return { value: metadata, done: true };
-        }
+const require = fn;
+let closure_6 = async function _getMetadata(arg0, arg1) {
+  let metadata = arg0;
+  closure_1 = arg1;
+  c4 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    closure_3 = tmp3;
+    closure_2 = tmp2;
+    closure_130_0 = closure_1;
+    metadata = metadata.metadata;
+    if (null != metadata) {
+      const _Object = Object;
+      if (Object.keys(metadata).length > 0) {
+        c5 = 3;
+        return { value: metadata, done: true };
       }
-      activityMetadata = activityMetadata.getActivityMetadata(closure_1);
-      if (null != activityMetadata) {
-        return activityMetadata;
-      }
-      if (null == userId.session_id) {
-        const _Error = Error;
-        const self = this;
-        const self2 = this;
-        const error = new Error("null/undefined session_id");
-        throw error;
-      }
-      const HTTP = require("HTTPUtils").HTTP;
-      const get = HTTP.get;
-      const obj6 = { url: Endpoints.USER_ACTIVITY_METADATA(closure_1, userId.session_id, userId.application_id), oldFormErrors: true, rejectWithError: obj11.rejectWithMigratedError() };
-      obj11 = require("HTTPUtils");
-      await get(obj6);
-      const body = value.body;
-      const obj9 = { type: "ACTIVITY_METADATA_UPDATE", metadata: body, userId };
-      obj = closure_131_1(closure_131_2[3]);
-      obj.dispatch(obj9);
-      return body;
-    })();
-  });
-  return obj(...arguments);
+    }
+    activityMetadata = activityMetadata.getActivityMetadata(closure_1);
+    if (null != activityMetadata) {
+      return activityMetadata;
+    }
+    if (null == tmp27.session_id) {
+      const _Error = Error;
+      const error = new Error("null/undefined session_id");
+      throw error;
+    }
+    const HTTP = require("HTTPUtils").HTTP;
+    await HTTP.get({ url: Endpoints.USER_ACTIVITY_METADATA(closure_1, tmp27.session_id, tmp27.application_id), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() });
+    const body = value.body;
+    closure_131_1(closure_131_2[3]).dispatch({ type: "ACTIVITY_METADATA_UPDATE", metadata: body, userId: closure_130_0 });
+    return body;
+  })();
 };
-const Endpoints = Constants.Endpoints;
+const Endpoints = fn(1085).Endpoints;
+const size = fn(2);
 const result = size.fileFinishedImporting("actions/UserActivityActionCreators.tsx");
 
 export const sync = function sync(activity, userId) {
-  obj = DispatcherDefault;
-  const obj2 = { type: "ACTIVITY_SYNC", activity, userId };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "ACTIVITY_SYNC", activity, userId });
 };
 export const play = function play(activity, userId) {
   _require = activity;
-  const promise = require("asyncRequire")(11394, dependencyMap.paths);
-  const nextPromise = promise.then((getSpotifyMetadataFromActivity) => getSpotifyMetadataFromActivity.getSpotifyMetadataFromActivity(activity, userId));
-  const nextPromise1 = nextPromise.then((metadata) => {
-    obj = DispatcherDefault;
-    const obj2 = { type: "ACTIVITY_PLAY", activity, userId, metadata };
-    return obj.dispatch(obj2);
-  });
-  nextPromise1.catch(() => {
-    obj = DispatcherDefault;
-    const obj2 = { type: "ACTIVITY_PLAY", activity, userId };
-    return obj.dispatch(obj2);
-  });
+  const promise = require("asyncRequireImpl")(11394, dependencyMap.paths);
+  const nextPromise = require("asyncRequireImpl")(11394, dependencyMap.paths).then((getSpotifyMetadataFromActivity) => getSpotifyMetadataFromActivity.getSpotifyMetadataFromActivity(closure_0, closure_1));
+  require("asyncRequireImpl")(11394, dependencyMap.paths).then((getSpotifyMetadataFromActivity) => getSpotifyMetadataFromActivity.getSpotifyMetadataFromActivity(closure_0, closure_1)).then((metadata) => DispatcherDefault.dispatch({ type: "ACTIVITY_PLAY", activity, userId, metadata })).catch(() => DispatcherDefault.dispatch({ type: "ACTIVITY_PLAY", activity, userId }));
 };
 export const getMetadata = function getMetadata() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_6.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

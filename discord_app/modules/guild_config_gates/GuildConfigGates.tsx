@@ -1,18 +1,14 @@
 // === Module 17856: GuildConfigGates ===
 
 // Module 17856 (GuildConfigGates)
-import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildConfigGatesStore from "GuildConfigGatesStore" /* 17857 */;
-import get_initialized from "get initialized" /* 504 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let applicationIdentityLinkedRolesEnabled, closure_4, guildVerificationRoleEnabled;
-
-const Endpoints = Constants.Endpoints;
-const obj = {
+require = fn;
+const Endpoints = fn(1085).Endpoints;
+const initialize = fn(504);
+let obj2 = {
   getQueryId(arg0) {
     let tmp = arg0;
     if (arg0 == null) {
@@ -31,86 +27,93 @@ const obj = {
     }
     return tmp;
   },
-  load: function() {
-    return closure_3(...arguments);
-  }
+  load: null
 };
-const createFetchStore = get_initialized.createFetchStore;
-let closure_3 = _asyncToGenerator(async (guildId) => {
-  let c5 = 0;
-  let c6 = 0;
-  return (async (arg0) => {
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        return { value, done: true };
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_3 = asyncGeneratorStep(async (arg0) => {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        let body;
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            return { value, done: true };
-          } else {
-            closure_4 = tmp4;
-            closure_3 = tmp;
-            body = undefined;
-            if (null != guildId) {
-              const HTTP = HTTPUtils.HTTP;
-              c5 = 1;
-              c6 = 1;
-              const obj4 = { value: HTTP.get(Endpoints.GUILD_CONFIG_GATES(tmp25)), done: false };
-              return obj4;
-            }
-          }
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          return { value, done: true };
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          body = value.body;
-          const guild_verification_role_enabled = body.guild_verification_role_enabled;
-          const obj5 = { type: "GUILD_CONFIG_GATES_FETCH_SUCCESS", guildId, guildVerificationRoleEnabled, applicationIdentityLinkedRolesEnabled };
-          guildVerificationRoleEnabled = guild_verification_role_enabled;
-          const dispatch = closure_132_1(closure_132_2[5]).dispatch;
-          closure_132_1(closure_132_2[5]);
-          if (guild_verification_role_enabled == null) {
-            guildVerificationRoleEnabled = false;
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_0 = closure_0;
+          let body;
+          if (null != closure_0) {
+            const HTTP = HTTPUtils.HTTP;
+            c5 = 1;
+            c6 = 1;
+            const obj4 = { value: HTTP.get(Endpoints.GUILD_CONFIG_GATES(tmp26)), done: false };
+            return obj4;
+          } else {
+            c6 = 3;
           }
-          const application_identity_linked_roles_enabled = body.application_identity_linked_roles_enabled;
-          applicationIdentityLinkedRolesEnabled = application_identity_linked_roles_enabled;
-          if (application_identity_linked_roles_enabled == null) {
-            applicationIdentityLinkedRolesEnabled = false;
-          }
-          dispatch(obj5);
         }
+      } else if (arg0 === 1) {
         c6 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp13) {
-        c6 = 3;
-        throw tmp13;
+        throw value;
+      } else if (arg0 !== 2) {
+        body = value.body;
+        const obj6 = { type: "GUILD_CONFIG_GATES_FETCH_SUCCESS", guildId: closure_131_0, guildVerificationRoleEnabled: null, applicationIdentityLinkedRolesEnabled: null };
+        const guild_verification_role_enabled = body.guild_verification_role_enabled;
+        let guildVerificationRoleEnabled = guild_verification_role_enabled;
+        if (guild_verification_role_enabled == null) {
+          guildVerificationRoleEnabled = false;
+        }
+        obj6.guildVerificationRoleEnabled = guildVerificationRoleEnabled;
+        const application_identity_linked_roles_enabled = body.application_identity_linked_roles_enabled;
+        let applicationIdentityLinkedRolesEnabled = application_identity_linked_roles_enabled;
+        if (application_identity_linked_roles_enabled == null) {
+          applicationIdentityLinkedRolesEnabled = false;
+        }
+        obj6.applicationIdentityLinkedRolesEnabled = applicationIdentityLinkedRolesEnabled;
+        closure_132_1(closure_132_2[5]).dispatch(obj6);
+        const obj5 = closure_132_1(closure_132_2[5]);
       }
+      c6 = 3;
+      const obj = { value, done: true };
+      return obj;
+    } catch (tmp14) {
+      c6 = tmp;
+      throw tmp14;
     }
-  })();
+  }
 });
-let closure_6 = createFetchStore(GuildConfigGatesStore, obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+obj2.load = function() {
+  const self = this;
+  const apply = closure_3.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+let closure_6 = initialize.createFetchStore(GuildConfigGatesStore, obj2);
+let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
+const size = fn(2);
 const result2 = size.fileFinishedImporting("modules/guild_config_gates/GuildConfigGates.tsx");
 
 export const useGuildVerificationRoleEnabled = (arg0) => {

@@ -1,39 +1,31 @@
 // === Module 16851: guild_channels/ChannelTitle ===
 
 // Module 16851 (guild_channels/ChannelTitle)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 4892 */;
-import ReadStateConstants from "ReadStateConstants" /* 5078 */;
 import ChannelListLayout from "ChannelListLayout" /* 11712 */;
-import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-const UnreadSetting = ReadStateConstants.UnreadSetting;
-const jsx = Fragment.jsx;
+require = fn;
+const UnreadSetting = fn(5078).UnreadSetting;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let closure_5 = createStyles.createStyleProperties({ muted: nativeDefault.colors.TEXT_MUTED, normal: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: nativeDefault.colors.REDESIGN_CHANNEL_NAME_TEXT });
+const ReactCompilerGating = fn(558);
 let obj = { muted: nativeDefault.colors.TEXT_MUTED, normal: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: nativeDefault.colors.REDESIGN_CHANNEL_NAME_TEXT };
-let closure_5 = createStyles.createStyleProperties(obj);
-const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let connected;
-  let layout;
-  let muted;
-  let resolvedUnreadSetting;
-  let title;
-  let tmp4;
-  let tmp8;
-  let unread;
-  const obj = react2;
-  const cResult = obj.c(8);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelTitle.tsx");
+
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(8);
   ({ title, unread, layout, muted, resolvedUnreadSetting, connected } = arg0);
   if (cResult[0] !== layout) {
-    const tmpResult = ChannelListLayout;
-    const layoutStyles = tmpResult.getLayoutStyles(layout);
+    const layoutStyles = ChannelListLayout.getLayoutStyles(layout);
     cResult[0] = layout;
     cResult[1] = layoutStyles;
-    tmp4 = layoutStyles;
+    let tmp4 = layoutStyles;
+    const tmpResult = ChannelListLayout;
   } else {
     tmp4 = cResult[1];
   }
@@ -56,7 +48,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     const obj2 = { color: unreadOrConnected, paddingRight: 4, flexShrink: 1 };
     cResult[2] = unreadOrConnected;
     cResult[3] = obj2;
-    tmp8 = obj2;
+    let tmp8 = obj2;
   } else {
     tmp8 = cResult[3];
   }
@@ -65,9 +57,8 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
   }
   if (cResult[4] === tmp4.channelName.text.variant) {
     if (cResult[5] === tmp8) {
-      let tmp9;
       if (cResult[6] === title) {
-        tmp9 = cResult[7];
+        let tmp9 = cResult[7];
       }
       return tmp9;
     }
@@ -78,17 +69,14 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
   cResult[6] = title;
   cResult[7] = tmp10;
   tmp9 = tmp10;
+  const obj3 = { variant: tmp4.channelName.text.variant, lineClamp: 1, maxFontSizeMultiplier: 1.75, style: tmp8, children: title };
 }) : ((unread) => {
-  let muted;
-  let title;
   ({ title, muted } = unread);
   unread = unread.unread;
   const resolvedUnreadSetting = unread.resolvedUnreadSetting;
   const connected = unread.connected;
-  const layout = unread.layout;
-  const obj = muted(unread[7]);
-  const layoutStyles = obj.getLayoutStyles(layout);
-  const tmp2 = closure_5();
+  const layoutStyles = muted(unread[7]).getLayoutStyles(unread.layout);
+  let tmp2 = closure_5();
   const normal = tmp2;
   const items = [unread, tmp2, connected, muted, resolvedUnreadSetting];
   const memo = resolvedUnreadSetting.useMemo(() => {
@@ -96,21 +84,23 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     if (muted) {
       color = normal.muted;
     } else {
-      const tmp3 = unread && resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES || connected;
-      if (tmp3) {
+      let tmp2 = unread;
+      if (unread) {
+        tmp2 = resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES;
+      }
+      if (!tmp2) {
+        tmp2 = connected;
+      }
+      if (tmp2) {
         color = normal.unreadOrConnected;
       }
     }
     return { color, paddingRight: 4, flexShrink: 1 };
   }, items);
-  const obj2 = { variant: layoutStyles.channelName.text.variant, lineClamp: 1, maxFontSizeMultiplier: 1.75, style: memo, children: title };
-  const Text = muted(unread[8]).Text;
-  const tmp4 = normal;
+  const obj2 = { variant: layoutStyles.channelName.text.variant, lineClamp: 1, maxFontSizeMultiplier: 1.75, style: memo, children: null };
   if (title == null) {
     title = "";
   }
-  return tmp4(Text, obj2);
+  obj2.children = title;
+  return normal(muted(unread[8]).Text, obj2);
 }));
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelTitle.tsx");
-
-export default memoResult;

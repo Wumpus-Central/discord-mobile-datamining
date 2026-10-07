@@ -15,6 +15,5 @@ export const createNonce = function createNonce() {
   if (timestamp !== timestamp) {
     snowflakeSequence.reset();
   }
-  const obj = SnowflakeUtilsDefault;
-  return obj.fromTimestampWithSequence(timestamp, snowflakeSequence);
+  return SnowflakeUtilsDefault.fromTimestampWithSequence(timestamp, snowflakeSequence);
 };

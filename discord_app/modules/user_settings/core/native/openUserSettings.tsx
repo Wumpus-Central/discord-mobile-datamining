@@ -19,13 +19,9 @@ export const openUserSettings = (screen, fn, arg2) => {
   if (flag === undefined) {
     flag = true;
   }
-  const obj2 = RootNavigationRef;
-  const rootNavigationRef = obj2.getRootNavigationRef();
-  const tmp2 = null != rootNavigationRef && rootNavigationRef.isReady();
+  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (tmp2) {
     screen = undefined;
-    const dispatch = DispatcherDefault.dispatch;
-    DispatcherDefault;
     if (screen != null) {
       screen = screen.screen;
     }
@@ -33,11 +29,12 @@ export const openUserSettings = (screen, fn, arg2) => {
       screen = UserSettingsSections.OVERVIEW;
     }
     const obj3 = { type: "USER_SETTINGS_MODAL_INIT", section: screen };
-    dispatch(obj3);
-    const obj4 = { pop: flag };
-    rootNavigationRef.navigate("settings", screen, obj4);
+    DispatcherDefault.dispatch(obj3);
+    const obj5 = { pop: flag };
+    rootNavigationRef.navigate("settings", screen, obj5);
     if (fn != null) {
       fn();
     }
   }
+  tmp2 = null != rootNavigationRef && rootNavigationRef.isReady();
 };

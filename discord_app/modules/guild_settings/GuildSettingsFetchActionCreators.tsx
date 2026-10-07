@@ -2,70 +2,60 @@
 
 // Module 9289 (GuildSettingsFetchActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ApplicationRecord from "ApplicationRecord" /* 2009 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserRecord from "UserRecord" /* 1391 */;
-import size from "module_2" /* 2 */;
 
-let obj = function _fetchGuildIntegrationsApplications() {
-  obj = _asyncToGenerator(async (guildId) => {
-    let closure_1;
-    let closure_2;
-    let c3 = 0;
-    let c4 = 0;
-    return (async (arg0) => {
-      let obj9;
-      const HTTP = HTTPUtils.HTTP;
-      const request = { url: Endpoints.GUILD_INTEGRATIONS(guildId), query: { include_applications: true, include_role_connections_metadata: true }, oldFormErrors: true, rejectWithError: obj9.rejectWithMigratedError() };
-      const get = HTTP.get;
-      obj9 = HTTPUtils;
-      await get(request);
-      const body = value.body;
-      const tmp4 = body.map(function(application) {
-        let fromServer;
-        let tmp5;
-        obj = { application: fromServer, user: tmp5 };
-        const merged = Object.assign(application);
-        fromServer = undefined;
-        if ("application" in application) {
-          if (null != application.application) {
-            fromServer = closure_1_4.createFromServer(application.application);
-          }
-        }
-        tmp5 = undefined;
-        if ("user" in application) {
-          if (null != application.user) {
-            const self = this;
-            const self2 = this;
-            tmp5 = new closure_1_5(application.user);
-          }
-        }
-        return obj;
-      });
-      obj = closure_130_1(closure_130_2[5]);
-      const obj6 = { type: "GUILD_SETTINGS_LOADED_INTEGRATIONS", guildId, integrations: tmp4 };
-      obj.dispatch(obj6);
-      return tmp4;
-    })();
+require = fn;
+let closure_7 = async function _fetchGuildIntegrationsApplications() {
+  closure_2 = tmp2;
+  closure_1 = tmp5;
+  closure_129_0 = closure_0;
+  const HTTP = HTTPUtils.HTTP;
+  const request = { url: Endpoints.GUILD_INTEGRATIONS(closure_0), query: { include_applications: true, include_role_connections_metadata: true }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+  await HTTP.get(request);
+  const body = value.body;
+  closure_129_1 = body.map((application) => {
+    const obj = {};
+    const merged = Object.assign(application);
+    let fromServer;
+    if ("application" in application) {
+      if (null != application.application) {
+        fromServer = closure_1_4.createFromServer(application.application);
+      }
+    }
+    obj.application = fromServer;
+    let tmp5;
+    if ("user" in application) {
+      if (null != application.user) {
+        tmp5 = new closure_1_5(application.user);
+      }
+    }
+    obj.user = tmp5;
+    return obj;
   });
-  return obj(...arguments);
+  closure_130_1(closure_130_2[5]).dispatch({ type: "GUILD_SETTINGS_LOADED_INTEGRATIONS", guildId: closure_129_0, integrations: closure_129_1 });
+  return closure_129_1;
 };
-const BasicApplicationRecord = ApplicationRecord.BasicApplicationRecord;
-const Endpoints = Constants.Endpoints;
+const BasicApplicationRecord = fn(2009).BasicApplicationRecord;
+const Endpoints = fn(1085).Endpoints;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsFetchActionCreators.tsx");
 
 export const fetchGuildIntegrationsApplications = function fetchGuildIntegrationsApplications() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_7.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const fetchGuildEmbed = function fetchGuildEmbed(guildId) {
   const HTTP = HTTPUtils.HTTP;
-  obj = { url: Endpoints.GUILD_WIDGET(guildId), oldFormErrors: true, rejectWithError: true };
-  const value = HTTP.get(obj);
+  value = HTTP.get({ url: Endpoints.GUILD_WIDGET(guildId), oldFormErrors: true, rejectWithError: true });
   return value.then((body) => {
-    obj = DispatcherDefault;
-    const obj2 = { type: "GUILD_SETTINGS_SET_WIDGET", enabled: body.body.enabled, channelId: body.body.channel_id };
-    obj.dispatch(obj2);
+    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_SET_WIDGET", enabled: body.body.enabled, channelId: body.body.channel_id });
   });
 };

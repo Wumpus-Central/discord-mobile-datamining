@@ -2,24 +2,23 @@
 
 // Module 17562 (IAPManager)
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
-import size from "module_2" /* 2 */;
 
-class IAPManager extends AutomaticLifecycleManager {
-  constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    const obj = {
-      POST_CONNECTION_OPEN() {
+const prototype = function IAPManager() {
+  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+  applyArgumentsResult.actions = {
+    POST_CONNECTION_OPEN() {
 
-      },
-      APP_STATE_UPDATE() {
+    },
+    APP_STATE_UPDATE() {
 
-      }
-    };
-    applyArgumentsResult.actions = obj;
-    return applyArgumentsResult;
-  }
+    }
+  };
+  return applyArgumentsResult;
+}.prototype;
+class prototype extends tmp2 {
 }
-const iAPManager = new IAPManager();
+const prototype1 = new prototype();
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/IAPManager.android.tsx");
 
-export default iAPManager;
+export default prototype1;

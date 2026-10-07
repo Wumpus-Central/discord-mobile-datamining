@@ -1,201 +1,167 @@
 // === Module 17385: ChannelCallUtils ===
 
 // Module 17385 (ChannelCallUtils)
-import Fragment from "Fragment" /* 21 */;
-import intl2 from "intl" /* 1126 */;
-import asyncRequire from "asyncRequire" /* 1987 */;
+import util from "util" /* 1126 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5097 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9494 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9698 */;
+import _modDef9698 from "module_9698" /* 9698 */;
 import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11225 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 12743 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 17386 */;
-import AssetRegistryDefault4 from "AssetRegistry" /* 17387 */;
-import react from "react" /* 19 */;
+import _modDef12743 from "module_12743" /* 12743 */;
+import _modDef17386 from "module_17386" /* 17386 */;
+import _modDef17387 from "module_17387" /* 17387 */;
+import noop from "module_19" /* 19 */;
 import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4935 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, importDefault;
 
-let closure_4;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-({ UserSettingsSections: closure_4, AnalyticsPages: hasOwnProperty, InstantInviteSources: metroRequire, RPC_APPLICATION_LOGGING_CATEGORY: metroImportDefault } = Constants);
-const jsx = Fragment.jsx;
+require = fn;
+const Constants = fn(1085);
+({ UserSettingsSections: closure_4, AnalyticsPages: hasOwnProperty, InstantInviteSources: metroRequire, RPC_APPLICATION_LOGGING_CATEGORY: closure_7 } = Constants);
+const jsx = fn(21).jsx;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/ChannelCallUtils.tsx");
 
 export const voiceSettings = function voiceSettings() {
-  let intl;
-  let obj = {
-    label: intl.string(intl2.t.dsXapM),
-    icon: AssetRegistryDefault3,
-    onPress() {
-      const obj = require("openUserSettings");
-      const obj2 = { screen: constants.VOICE };
-      obj.openUserSettings(obj2);
-      const obj3 = ActionSheetActionCreatorsDefault;
-      obj3.hideActionSheet();
-    }
+  let obj = { label: null, icon: null, onPress: null };
+  const intl = util.intl;
+  obj.label = intl.string(util.t.dsXapM);
+  obj.icon = _modDef17386;
+  obj.onPress = function onPress() {
+    require("openUserSettings").openUserSettings({ screen: constants.VOICE });
+    const obj = require("openUserSettings");
+    const obj2 = { screen: constants.VOICE };
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  intl = intl2.intl;
   return obj;
 };
 export const videoParticipantsHidden = function videoParticipantsHidden(arg0, arg1) {
-  let id;
-  let intl;
   _require = arg0;
-  let closure_1 = arg1;
-  let obj = {
-    label: intl.string(require("intl").t.hoZYAA),
-    switchValue: !arg1,
-    onPress() {
-      const obj = ChannelRTCActionCreatorsDefault;
-      const result = obj.toggleVoiceParticipantsHidden(id.id, !closure_1);
-    }
+  closure_1 = arg1;
+  const obj = { label: null, switchValue: null, onPress: null };
+  const intl = require("util").intl;
+  obj.label = intl.string(require("util").t.hoZYAA);
+  obj.switchValue = !arg1;
+  obj.onPress = function onPress() {
+    const result = ChannelRTCActionCreatorsDefault.toggleVoiceParticipantsHidden(id.id, !closure_1);
   };
-  intl = require("intl").intl;
   return obj;
 };
 export const openHideSelfStreamAndVideoConfirmDialog = function openHideSelfStreamAndVideoConfirmDialog(arg0, arg1) {
-  let closure_1;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   importDefault = arg1;
-  const obj = actions_AlertActionCreatorsDefault;
-  const obj2 = {
+  actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      let onConfirm;
-      let type;
-      const promise = asyncRequire(17383, dependencyMap.paths);
-      return promise.then((result) => {
+      return asyncRequireImpl(17383, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
+          const obj = {};
           const merged = Object.assign(arg0);
-          return <closure_0 type={type} onConfirm={onConfirm} />;
+          obj.type = type;
+          obj.onConfirm = onConfirm;
+          return <closure_0 />;
         };
       });
     },
     isDismissable: false
-  };
-  obj.openLazy(obj2);
+  });
 };
 export const selfVideoHidden = function selfVideoHidden(arg0, arg1) {
-  let intl;
-  let closure_0 = arg1;
-  const obj = {
-    label: intl.string(intl2.t.MH8ESU),
-    switchValue: !arg0,
-    onPress() {
-      closure_0();
-    }
+  closure_0 = arg1;
+  const obj = { label: null, switchValue: null, onPress: null };
+  const intl = util.intl;
+  obj.label = intl.string(util.t.MH8ESU);
+  obj.switchValue = !arg0;
+  obj.onPress = function onPress() {
+    closure_0();
   };
-  intl = intl2.intl;
   return obj;
 };
 export const reportStreamIssue = function reportStreamIssue(stream) {
-  let intl;
   _require = stream;
-  let obj = {
-    label: intl.string(require("intl").t.KHGhHf),
-    icon: AssetRegistryDefault4,
-    onPress() {
-      const obj = StreamKeyUtils;
-      const encodeStreamKeyResult = obj.encodeStreamKey(stream);
-      let videoStats = StreamRTCConnectionStore.getVideoStats(encodeStreamKeyResult);
-      if (videoStats == null) {
-        videoStats = {};
-      }
-      const obj3 = { media_session_id: StreamRTCConnectionStore.getMediaSessionId(encodeStreamKeyResult), rtc_connection_id: StreamRTCConnectionStore.getRtcConnectionId(encodeStreamKeyResult), stream_region: StreamRTCConnectionStore.getRegion(encodeStreamKeyResult), max_viewers: StreamRTCConnectionStore.getMaxViewers(encodeStreamKeyResult) };
-      const merged = Object.assign(videoStats);
-      const openLazy = ActionSheetActionCreatorsDefault.openLazy;
-      ActionSheetActionCreatorsDefault;
-      const tmp7 = asyncRequire(17388, dependencyMap.paths);
-      openLazy(tmp7, "StreamReportProblem" + stream.ownerId, { stream, analyticsData: obj3 });
+  let obj = { label: null, icon: null, onPress: null };
+  const intl = require("util").intl;
+  obj.label = intl.string(require("util").t.KHGhHf);
+  obj.icon = _modDef17387;
+  obj.onPress = function onPress() {
+    const encodeStreamKeyResult = StreamKeyUtils.encodeStreamKey(stream);
+    let videoStats = StreamRTCConnectionStore.getVideoStats(encodeStreamKeyResult);
+    if (videoStats == null) {
+      videoStats = {};
     }
+    const merged = Object.assign(videoStats);
+    const obj3 = { media_session_id: StreamRTCConnectionStore.getMediaSessionId(encodeStreamKeyResult), rtc_connection_id: StreamRTCConnectionStore.getRtcConnectionId(encodeStreamKeyResult), stream_region: StreamRTCConnectionStore.getRegion(encodeStreamKeyResult), max_viewers: StreamRTCConnectionStore.getMaxViewers(encodeStreamKeyResult) };
+    const obj5 = ActionSheetActionCreatorsDefault;
+    obj5.openLazy(asyncRequireImpl(17388, dependencyMap.paths), "StreamReportProblem" + stream.ownerId, { stream, analyticsData: obj3 });
+    const tmp6 = asyncRequireImpl(17388, dependencyMap.paths);
   };
-  intl = require("intl").intl;
   return obj;
 };
 export const invite = function invite(dependencyMap, stream, targetApplicationId) {
-  let intl;
-  let onPress;
   _require = dependencyMap;
   importDefault = stream;
   dependencyMap = targetApplicationId;
   if (null != stream) {
-    onPress = function onPress() {
-      const obj = instant_invite_InstantInviteUtils;
-      const obj2 = { source: metroRequire.STREAM, stream };
-      return obj.showInstantInviteActionSheet(dependencyMap, obj2);
-    };
+    function onPress() {
+      return instant_invite_InstantInviteUtils.showInstantInviteActionSheet(closure_0, { source: constants2.STREAM, stream });
+    }
   } else {
     onPress = function onPress() {
-      const obj = instant_invite_InstantInviteUtils;
-      const obj2 = { source: metroRequire.VOICE_CHANNEL };
-      return obj.showInstantInviteActionSheet(dependencyMap, obj2);
+      return instant_invite_InstantInviteUtils.showInstantInviteActionSheet(closure_0, { source: constants2.VOICE_CHANNEL });
     };
     if (null != targetApplicationId) {
       onPress = function onPress() {
-        const obj = instant_invite_InstantInviteUtils;
-        const obj2 = { source: metroRequire.ACTIVITY_INVITE, targetApplicationId };
-        return obj.showInstantInviteActionSheet(dependencyMap, obj2);
+        return instant_invite_InstantInviteUtils.showInstantInviteActionSheet(closure_0, { source: constants2.ACTIVITY_INVITE, targetApplicationId });
       };
     }
   }
   if (dependencyMap.isPrivate()) {
     onPress = function onPress() {
-      return openGroupDMAddMembersDefault(dependencyMap.id, hasOwnProperty.CHANNEL_CALL);
+      return openGroupDMAddMembersDefault(dependencyMap.id, constants.CHANNEL_CALL);
     };
   }
-  let obj = { label: intl.string(require("intl").t.VINpSK), icon: AssetRegistryDefault, onPress };
-  intl = require("intl").intl;
+  const obj = { label: null, icon: null, onPress: null };
+  const intl = require("util").intl;
+  obj.label = intl.string(require("util").t.VINpSK);
+  obj.icon = _modDef9698;
+  obj.onPress = onPress;
   return obj;
 };
 export const rtcDebugPanel = function rtcDebugPanel(arg0) {
-  let closure_0;
-  let intl;
   _require = arg0;
-  let obj = {
-    label: intl.string(require("intl").t.X8bCMe),
-    icon: AssetRegistryDefault2,
-    onPress() {
-      closure_0();
-      const obj = ActionSheetActionCreatorsDefault;
-      obj.hideActionSheet();
-    }
+  const obj = { label: null, icon: null, onPress: null };
+  const intl = require("util").intl;
+  obj.label = intl.string(require("util").t.X8bCMe);
+  obj.icon = _modDef12743;
+  obj.onPress = function onPress() {
+    closure_0();
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  intl = require("intl").intl;
   return obj;
 };
 export const shareActivityLogs = function shareActivityLogs() {
-  let intl;
-  let obj = {
-    label: intl.string(intl2.t.iQzQs3),
-    icon: AssetRegistryDefault2,
-    onPress() {
-      let intl;
-      const items = [closure_1_7];
-      const obj = require("LogAggregator");
-      const json = obj.stringify(items);
-      if ("" === json) {
-        const obj2 = { key: "EMBEDDED_ACTIVITIES_SHARE_EMPTY_LOGS_ERROR_MESSAGE", content: intl.string(require("intl").t["i+9VWy"]) };
-        const open = ToastActionCreatorsDefault.open;
-        ToastActionCreatorsDefault;
-        intl = require("intl").intl;
-        open(obj2);
-      } else {
-        const obj3 = { message: json };
-        const tmpResult = require("showShareActionSheet");
-        tmpResult.showShareActionSheet(obj3, "Activity Logs");
-      }
+  let obj = { label: null, icon: null, onPress: null };
+  let intl = util.intl;
+  obj.label = intl.string(util.t.iQzQs3);
+  obj.icon = _modDef12743;
+  obj.onPress = function onPress() {
+    const items = [closure_1_7];
+    const json = require("LogAggregator").stringify(items);
+    if ("" === json) {
+      const obj2 = { key: "EMBEDDED_ACTIVITIES_SHARE_EMPTY_LOGS_ERROR_MESSAGE", content: null };
+      const intl = require("util").intl;
+      obj2.content = intl.string(require("util").t["i+9VWy"]);
+      ToastActionCreatorsDefault.open(obj2);
+    } else {
+      const obj3 = { message: json };
+      require("showShareActionSheet").showShareActionSheet(obj3, "Activity Logs");
+      const tmpResult = require("showShareActionSheet");
     }
+    const obj = require("LogAggregator");
   };
-  intl = intl2.intl;
   return obj;
 };

@@ -1,108 +1,78 @@
 // === Module 9165: ActivityTile ===
 
 // Module 9165 (ActivityTile)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import FormConstants from "FormConstants" /* 1192 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import Constants2 from "Constants" /* 2011 */;
 import native2 from "native" /* 4595 */;
 import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 9081 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import UserStore from "UserStore" /* 1377 */;
-import Constants from "Constants" /* 1085 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-let _require, applicationId, c2, participant;
-
-let Fonts;
-let c10;
-let metroImportAll;
-let obj2;
-let obj3;
-let obj4;
-let size;
-let unpackModuleId;
-const View = react_native.View;
-({ ThemeTypes: metroImportAll, Fonts } = Constants);
-const getThemedRippleConfig = FormConstants.getThemedRippleConfig;
-const ActivityLayoutMode = Constants2.ActivityLayoutMode;
-({ jsx: c10, jsxs: unpackModuleId } = Fragment);
-const XSMALL = native.AvatarSizes.XSMALL;
-const androidRippleConfig = getThemedRippleConfig({ foreground: true });
-let createStyles = createStyles_mod;
-let obj = { pressableOpacity: size, activityPreview: { alignItems: "center", display: "flex", width: "100%", padding: 16 }, activityViewContainer: obj2, titleText: obj3, subtitleText: { textAlign: "center", marginLeft: 16, marginRight: 16 }, overflow: obj4, buttonWrapper: { marginTop: 8, alignSelf: "center" }, buttonPill: { borderRadius: 100 } };
-size = { width: "100%", height: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", alignItems: "center" };
-createStyles = createStyles.createStyles;
-obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj3 = { fontSize: 16, lineHeight: 24, color: nativeDefault.colors.TEXT_DEFAULT, fontFamily: Fonts.DISPLAY_EXTRABOLD, textAlign: "center", marginLeft: 16, marginRight: 16 };
-obj4 = { height: native.AVATAR_SIZE_MAP[XSMALL], backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
-let closure_14 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+const View = fn(17).View;
+const Constants = fn(1085);
+({ ThemeTypes: closure_8, Fonts } = Constants);
+let ActivityLayoutMode = fn(2011).ActivityLayoutMode;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const XSMALL = fn(1188).AvatarSizes.XSMALL;
+const androidRippleConfig = fn(1192).getThemedRippleConfig({ foreground: true });
+const createStyles = fn(4896);
+let obj2 = { pressableOpacity: null, activityPreview: null, activityViewContainer: null, titleText: null, subtitleText: null, overflow: null, buttonWrapper: null, buttonPill: null };
+let size = { width: "100%", height: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", alignItems: "center" };
+obj2.pressableOpacity = size;
+obj2.activityPreview = { alignItems: "center", display: "flex", width: "100%", padding: 16 };
+obj2.activityViewContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.titleText = { fontSize: 16, lineHeight: 24, color: nativeDefault.colors.TEXT_DEFAULT, fontFamily: Fonts.DISPLAY_EXTRABOLD, textAlign: "center", marginLeft: 16, marginRight: 16 };
+obj2.subtitleText = { textAlign: "center", marginLeft: 16, marginRight: 16 };
+let obj4 = { fontSize: 16, lineHeight: 24, color: nativeDefault.colors.TEXT_DEFAULT, fontFamily: Fonts.DISPLAY_EXTRABOLD, textAlign: "center", marginLeft: 16, marginRight: 16 };
+obj2.overflow = { height: fn(1188).AVATAR_SIZE_MAP[XSMALL], backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
+obj2.buttonWrapper = { marginTop: 8, alignSelf: "center" };
+obj2.buttonPill = { borderRadius: 100 };
+let closure_14 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((participants) => {
-  let first;
-  let tmp6;
   _require = participants;
-  const obj = require("react");
-  const cResult = obj.c(3);
-  const tmp = _require;
+  const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== participants.participants) {
     const fn = function a() {
-      let user;
-      const arr = Array.from(participants.participants);
-      const mapped = arr.map((userId) => user.getUser(userId.userId));
+      const mapped = Array.from(participants.participants).map((userId) => user.getUser(userId.userId));
       return mapped.filter(GlobalUtils.isNotNullish);
     };
     cResult[1] = participants.participants;
     cResult[2] = fn;
-    tmp6 = fn;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const tmpResult = tmp(504);
-  return tmpResult.useStateFromStoresArray(first, tmp6);
+  const obj = require("c");
+  return require("initialize").useStateFromStoresArray(first, tmp6);
 }) : ((arg0) => {
-  let participants;
   _require = arg0;
   const items = [UserStore];
-  const obj = require("get initialized");
-  return obj.useStateFromStoresArray(items, () => {
-    let user;
-    const arr = Array.from(participants.participants);
-    const mapped = arr.map((userId) => user.getUser(userId.userId));
+  return require("initialize").useStateFromStoresArray(items, () => {
+    const mapped = Array.from(participants.participants).map((userId) => user.getUser(userId.userId));
     return mapped.filter(GlobalUtils.isNotNullish);
   });
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => {
-  let analyticsContext;
-  let channel;
-  let embeddedActivityJoinability;
-  let onSingleTap;
-  let stateFromStores;
-  let style;
-  let tmp15;
-  let tmp5;
-  const tmp2 = onSingleTap;
-  let obj = participant(onSingleTap[14]);
-  const cResult = obj.c(61);
+  const cResult = require("c").c(61);
   participant = participant.participant;
+  _require = participant;
   ({ style, channel } = participant);
   onSingleTap = participant.onSingleTap;
   const tmp4 = closure_14();
@@ -110,57 +80,48 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((participant) =
     const items = [participant.applicationId];
     cResult[0] = participant.applicationId;
     cResult[1] = items;
-    tmp5 = items;
+    let tmp5 = items;
   } else {
     tmp5 = cResult[1];
   }
   const application = stateFromStores(channel(tmp2[17])(tmp5), 1)[0];
   const arr2 = closure_15(participant);
-  const getName = channel(tmp2[18]).getName;
+  let obj = require("c");
   let first1;
-  channel(tmp2[18]);
   let guildId = channel.getGuildId();
-  let id = channel.id;
   if (arr2 != null) {
     first1 = arr2[0];
   }
-  let name = getName(guildId, id, first1);
+  let name = channel(onSingleTap[18]).getName(guildId, channel.id, first1);
   if (name == null) {
     let first2;
-    const getName2 = channel(tmp2[19]).getName;
-    channel(tmp2[19]);
     if (arr2 != null) {
       first2 = arr2[0];
     }
-    name = getName2(first2);
+    name = channel(tmp2[19]).getName(first2);
+    const tmp6Result = channel(tmp2[19]);
   }
-  const tmp14 = channel(tmp2[20])();
+  const tmp12 = channel(onSingleTap[20])();
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp16 = analyticsContext;
     const items1 = [analyticsContext];
     cResult[2] = items1;
-    tmp15 = items1;
+    let tmp13 = items1;
   } else {
-    tmp15 = cResult[2];
+    tmp13 = cResult[2];
   }
   let id1;
-  const tmp17 = cResult[3];
   if (application != null) {
     id1 = application.id;
   }
-  if (tmp17 === id1) {
-    let tmp19;
-    let id2;
-    let tmp29;
+  if (cResult[3] === id1) {
     if (cResult[4] === channel.id) {
-      tmp19 = cResult[5];
+      let tmp16 = cResult[5];
     }
-    const tmpResult = participant(tmp2[16]);
-    stateFromStores = tmpResult.useStateFromStores(tmp15, tmp19);
+    stateFromStores = tmp(tmp2[16]).useStateFromStores(tmp13, tmp16);
+    const tmpResult = tmp(tmp2[16]);
+    const analyticsLocations = channel(tmp2[21])(channel(tmp2[22]).ACTIVITY_TILE).analyticsLocations;
     const tmp6Result2 = channel(tmp2[21]);
-    const analyticsLocations = tmp6Result2(channel(tmp2[22]).ACTIVITY_TILE).analyticsLocations;
-    const tmpResult3 = participant(tmp2[23]);
-    analyticsContext = tmpResult3.useAnalyticsContext();
+    analyticsContext = tmp(tmp2[23]).useAnalyticsContext();
     let name1;
     if (application != null) {
       name1 = application.name;
@@ -169,170 +130,182 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((participant) =
       const intl = tmp(tmp2[24]).intl;
       name1 = intl.string(tmp(tmp2[24]).t.WCNe7F);
     }
-    let obj4 = embeddedActivityJoinability;
     const currentUser = embeddedActivityJoinability.getCurrentUser();
     if (currentUser != null) {
-      id2 = currentUser.id;
+      let id = currentUser.id;
     }
-    let tmp25 = null != tmp14;
-    if (tmp25) {
-      let id4;
-      const id3 = tmp14.id;
+    let tmp22 = null != tmp12;
+    if (tmp22) {
+      let id2;
       if (application != null) {
-        id4 = application.id;
+        id2 = application.id;
       }
-      tmp25 = id3 === id4;
+      tmp22 = tmp12.id === id2;
     }
-    if (!tmp25) {
-      let tmp27 = null != id2;
-      if (tmp27) {
+    if (!tmp22) {
+      let tmp24 = null != id;
+      if (tmp24) {
         let hasItem;
         if (stateFromStores != null) {
           const userIds = stateFromStores.userIds;
-          hasItem = userIds.has(id2);
+          hasItem = userIds.has(id);
         }
-        tmp27 = hasItem;
+        tmp24 = hasItem;
       }
-      tmp25 = tmp27;
+      tmp22 = tmp24;
     }
     const _Symbol = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      const currentUser1 = obj4.getCurrentUser();
-      let id5;
+      const currentUser1 = obj6.getCurrentUser();
+      let id3;
       if (currentUser1 != null) {
-        id5 = currentUser1.id;
+        id3 = currentUser1.id;
       }
-      cResult[6] = id5;
-      tmp29 = id5;
+      cResult[6] = id3;
+      let tmp26 = id3;
     } else {
-      tmp29 = cResult[6];
+      tmp26 = cResult[6];
     }
     if (cResult[7] === application) {
-      let tmp32;
-      let handleCanJoin;
       if (cResult[8] === channel.id) {
-        tmp32 = cResult[9];
+        let tmp29 = cResult[9];
       }
-      const tmpResult4 = participant(tmp2[25]);
-      embeddedActivityJoinability = tmpResult4.useEmbeddedActivityJoinability(tmp32);
+      embeddedActivityJoinability = tmp(tmp2[25]).useEmbeddedActivityJoinability(tmp29);
       if (cResult[10] === analyticsContext) {
         if (cResult[11] === analyticsLocations) {
           if (cResult[12] === application) {
             if (cResult[13] === channel.id) {
-              let tmp34;
               if (cResult[14] === stateFromStores) {
-                tmp34 = cResult[15];
+                let tmp31 = cResult[15];
               }
-              handleCanJoin = tmp34;
+              let handleCanJoin = tmp31;
               if (cResult[16] === embeddedActivityJoinability) {
-                if (cResult[17] === tmp34) {
+                if (cResult[17] === tmp31) {
                   if (arr2.length > 1) {
                     const intl3 = tmp(tmp2[24]).intl;
-                    let obj2 = { username: name, count: arr2.length - 1 };
-                    intl3.formatToPlainString(participant(tmp2[24]).t.cpe6CK, obj2);
+                    let obj3 = { username: name, count: arr2.length - 1 };
+                    intl3.formatToPlainString(tmp(tmp2[24]).t.cpe6CK, obj3);
                   } else {
                     const intl2 = tmp(tmp2[24]).intl;
-                    let obj3 = { username: name };
-                    intl2.formatToPlainString(participant(tmp2[24]).t["7Uuia2"], obj3);
+                    let obj4 = { username: name };
+                    intl2.formatToPlainString(tmp(tmp2[24]).t["7Uuia2"], obj4);
                   }
-                  if (tmp25) {
-                    let tmp47;
+                  if (tmp22) {
                     if (cResult[20] !== channel) {
                       let obj5 = { channel, layoutMode: ActivityLayoutMode.PIP };
-                      const tmp50 = closure_10(channel(tmp2[29]), obj5);
+                      const tmp47 = closure_10(channel(tmp2[29]), obj5);
                       cResult[20] = channel;
-                      cResult[21] = tmp50;
-                      tmp47 = tmp50;
+                      cResult[21] = tmp47;
+                      let tmp44 = tmp47;
                     } else {
-                      tmp47 = cResult[21];
+                      tmp44 = cResult[21];
                     }
                     if (cResult[22] === onSingleTap) {
                       if (cResult[23] === tmp4.activityViewContainer) {
-                        let tmp51;
-                        if (cResult[24] === tmp47) {
-                          tmp51 = cResult[25];
+                        if (cResult[24] === tmp44) {
+                          let tmp48 = cResult[25];
                         }
-                        return tmp51;
+                        return tmp48;
                       }
                     }
-                    let obj6 = { pointerEvents: "box-only", style: tmp4.activityViewContainer, onPress: onSingleTap, activeOpacity: 1, children: tmp47 };
-                    const tmp53 = closure_10(participant(tmp2[30]).PressableOpacity, obj6);
+                    const obj7 = { pointerEvents: "box-only", style: tmp4.activityViewContainer, onPress: onSingleTap, activeOpacity: 1, children: tmp44 };
+                    const tmp50 = closure_10(tmp(tmp2[30]).PressableOpacity, obj7);
                     cResult[22] = onSingleTap;
                     cResult[23] = tmp4.activityViewContainer;
-                    cResult[24] = tmp47;
-                    cResult[25] = tmp53;
-                    tmp51 = tmp53;
+                    cResult[24] = tmp44;
+                    cResult[25] = tmp50;
+                    tmp48 = tmp50;
                   } else {
                     const PressableOpacity = tmp(tmp2[30]).PressableOpacity;
                     const intl4 = tmp(tmp2[24]).intl;
-                    const obj7 = { applicationName: name1 };
-                    intl4.formatToPlainString(participant(tmp2[24]).t.Yw5Hr2, obj7);
+                    const obj8 = { applicationName: name1 };
+                    intl4.formatToPlainString(tmp(tmp2[24]).t.Yw5Hr2, obj8);
                     if (cResult[26] !== application) {
-                      const obj8 = { application, resizeMode: "cover" };
+                      const obj9 = { application, resizeMode: "cover" };
+                      const tmp38 = closure_10(channel(tmp2[31]), obj9);
                       cResult[26] = application;
-                      cResult[27] = closure_10(channel(tmp2[31]), obj8);
-                      const tmp41 = closure_10(channel(tmp2[31]), obj8);
+                      cResult[27] = tmp38;
                     }
                     if (cResult[28] === style) {
                       if (cResult[31] !== participant.guildId) {
                         class Q {
-                          constructor(user, arg1) {
-                            let guildId;
-                            let tmp5;
-                            const obj = { user, guildId, size: XSMALL, cutout: tmp5 };
-                            guildId = participant.guildId;
-                            const CutoutableAvatarImage = native.CutoutableAvatarImage;
+                          constructor(arg0, arg1) {
+                            tmp2 = closure_0;
+                            tmp3 = closure_2;
+                            tmp = jsx;
+                            obj = { user: participant, guildId: null, size: null, cutout: null };
+                            guildId = closure_0.guildId;
+                            obj.guildId = guildId;
+                            obj.size = XSMALL;
                             tmp5 = undefined;
                             if (!arg1) {
-                              tmp5 = { radius: native.AVATAR_SIZE_MAP[tmp4] / 2 + 3, direction: native.CutoutDirection.RIGHT, inset: -6 };
-                              const obj2 = { radius: native.AVATAR_SIZE_MAP[tmp4] / 2 + 3, direction: native.CutoutDirection.RIGHT, inset: -6 };
+                              obj1 = { radius: null, direction: null, inset: -6 };
+                              num = 2;
+                              num2 = 3;
+                              obj1.radius = tmp2(tmp3[10]).AVATAR_SIZE_MAP[tmp4] / 2 + 3;
+                              obj1.direction = tmp2(tmp3[10]).CutoutDirection.RIGHT;
+                              tmp5 = obj1;
                             }
-                            return authStore(CutoutableAvatarImage, obj);
+                            obj.cutout = tmp5;
+                            return tmp(closure_0(closure_2[10]).CutoutableAvatarImage, obj);
                           }
                         }
                         cResult[31] = participant.guildId;
                         cResult[32] = Q;
                       } else {
                         class Q {
-                          constructor(user, arg1) {
-                            let guildId;
-                            let tmp5;
-                            const obj = { user, guildId, size: XSMALL, cutout: tmp5 };
-                            guildId = participant.guildId;
-                            const CutoutableAvatarImage = native.CutoutableAvatarImage;
+                          constructor(arg0, arg1) {
+                            tmp2 = closure_0;
+                            tmp3 = closure_2;
+                            tmp = jsx;
+                            obj = { user: participant, guildId: null, size: null, cutout: null };
+                            guildId = closure_0.guildId;
+                            obj.guildId = guildId;
+                            obj.size = XSMALL;
                             tmp5 = undefined;
                             if (!arg1) {
-                              tmp5 = { radius: native.AVATAR_SIZE_MAP[tmp4] / 2 + 3, direction: native.CutoutDirection.RIGHT, inset: -6 };
-                              const obj2 = { radius: native.AVATAR_SIZE_MAP[tmp4] / 2 + 3, direction: native.CutoutDirection.RIGHT, inset: -6 };
+                              obj1 = { radius: null, direction: null, inset: -6 };
+                              num = 2;
+                              num2 = 3;
+                              obj1.radius = tmp2(tmp3[10]).AVATAR_SIZE_MAP[tmp4] / 2 + 3;
+                              obj1.direction = tmp2(tmp3[10]).CutoutDirection.RIGHT;
+                              tmp5 = obj1;
                             }
-                            return authStore(CutoutableAvatarImage, obj);
+                            obj.cutout = tmp5;
+                            return tmp(closure_0(closure_2[10]).CutoutableAvatarImage, obj);
                           }
                         }
                       }
                       if (cResult[33] === tmp4.overflow) {
                         class Q {
-                          constructor(user, arg1) {
-                            let guildId;
-                            let tmp5;
-                            const obj = { user, guildId, size: XSMALL, cutout: tmp5 };
-                            guildId = participant.guildId;
-                            const CutoutableAvatarImage = native.CutoutableAvatarImage;
+                          constructor(arg0, arg1) {
+                            tmp2 = closure_0;
+                            tmp3 = closure_2;
+                            tmp = jsx;
+                            obj = { user: participant, guildId: null, size: null, cutout: null };
+                            guildId = closure_0.guildId;
+                            obj.guildId = guildId;
+                            obj.size = XSMALL;
                             tmp5 = undefined;
                             if (!arg1) {
-                              tmp5 = { radius: native.AVATAR_SIZE_MAP[tmp4] / 2 + 3, direction: native.CutoutDirection.RIGHT, inset: -6 };
-                              const obj2 = { radius: native.AVATAR_SIZE_MAP[tmp4] / 2 + 3, direction: native.CutoutDirection.RIGHT, inset: -6 };
+                              obj1 = { radius: null, direction: null, inset: -6 };
+                              num = 2;
+                              num2 = 3;
+                              obj1.radius = tmp2(tmp3[10]).AVATAR_SIZE_MAP[tmp4] / 2 + 3;
+                              obj1.direction = tmp2(tmp3[10]).CutoutDirection.RIGHT;
+                              tmp5 = obj1;
                             }
-                            return authStore(CutoutableAvatarImage, obj);
+                            obj.cutout = tmp5;
+                            return tmp(closure_0(closure_2[10]).CutoutableAvatarImage, obj);
                           }
                         }
                       }
-                      const obj9 = { offsetAmount: -6, overflowStyle: tmp4.overflow, overflowComponent: participant(tmp2[10]).OverflowText, items: arr2, max: 4, renderItem: Q };
-                      const SummarizedIconRow = tmp(tmp2[10]).SummarizedIconRow;
+                      const obj10 = { offsetAmount: -6, overflowStyle: tmp4.overflow, overflowComponent: tmp(tmp2[10]).OverflowText, items: arr2, max: 4, renderItem: Q };
+                      const tmp43 = closure_10(tmp(tmp2[10]).SummarizedIconRow, obj10);
                       cResult[33] = tmp4.overflow;
                       cResult[34] = Q;
                       cResult[35] = arr2;
-                      cResult[36] = closure_10(SummarizedIconRow, obj9);
-                      const tmp46 = closure_10(SummarizedIconRow, obj9);
+                      cResult[36] = tmp43;
                     }
                     const items2 = [tmp4.activityPreview, style];
                     cResult[28] = style;
@@ -342,14 +315,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((participant) =
                 }
               }
               const fn2 = function z() {
-                const obj = { embeddedActivityJoinability, handleCanJoin };
-                handlePressJoinActivityDefault(obj);
+                handlePressJoinActivityDefault({ embeddedActivityJoinability, handleCanJoin });
                 if (onSingleTap != null) {
                   onSingleTap();
                 }
               };
               cResult[16] = embeddedActivityJoinability;
-              cResult[17] = tmp34;
+              cResult[17] = tmp31;
               cResult[18] = onSingleTap;
               cResult[19] = fn2;
             }
@@ -357,11 +329,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((participant) =
         }
       }
       _require = application(function*() {
-        let id;
         if (c2 === 2) {
           c2 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp2 === 3) {
+        } else if (tmp3 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
@@ -382,36 +353,45 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((participant) =
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                const tmp10 = null != applicationId && null != application;
-                if (tmp10) {
-                  const obj4 = { applicationId: applicationId.applicationId, activityChannelId: id.id, locationObject: _location.location, analyticsLocations };
+                let tmp11 = null != stateFromStores;
+                if (tmp11) {
+                  tmp11 = null != application;
+                }
+                if (tmp11) {
+                  const obj4 = { applicationId: stateFromStores.applicationId, activityChannelId: id.id, locationObject: _location.location, analyticsLocations };
                   id = 1;
                   c2 = 1;
                   const obj5 = { value: channel(onSingleTap[26])(obj4), done: false };
                   return obj5;
+                } else {
+                  c2 = 3;
                 }
               }
             } else if (arg0 === 1) {
               c2 = 3;
               throw value;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
-            } else {
-              const obj = tmp3(onSingleTap[27]);
-              const result = obj.setOrientationLockState(application);
+            } else if (arg0 !== 2) {
+              const result = tmp4(onSingleTap[27]).setOrientationLockState(application);
+              const obj = tmp4(onSingleTap[27]);
             }
             c2 = 3;
-            return { value: "IconComponent", done: null };
-          } catch (tmp16) {
-            c2 = 3;
-            throw tmp16;
+            const obj6 = { value, done: true };
+            return obj6;
+          } catch (tmp17) {
+            c2 = tmp;
+            throw tmp17;
           }
         }
       });
       handleCanJoin = function handleCanJoin() {
-        return closure_0(...arguments);
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
       };
       cResult[10] = analyticsContext;
       cResult[11] = analyticsLocations;
@@ -419,28 +399,38 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((participant) =
       cResult[13] = channel.id;
       cResult[14] = stateFromStores;
       cResult[15] = handleCanJoin;
-      tmp34 = handleCanJoin;
+      tmp31 = handleCanJoin;
+      const tmpResult4 = tmp(tmp2[25]);
     }
-    const obj10 = { userId: tmp29, channelId: channel.id, application };
+    const obj11 = { userId: tmp26, channelId: channel.id, application };
     cResult[7] = application;
     cResult[8] = channel.id;
-    cResult[9] = obj10;
-    tmp32 = obj10;
+    cResult[9] = obj11;
+    tmp29 = obj11;
+    obj6 = embeddedActivityJoinability;
+    const tmpResult3 = tmp(tmp2[23]);
   }
   if (application != null) {
     class Q {
-      constructor(user, arg1) {
-        let guildId;
-        let tmp5;
-        const obj = { user, guildId, size: XSMALL, cutout: tmp5 };
-        guildId = participant.guildId;
-        const CutoutableAvatarImage = native.CutoutableAvatarImage;
+      constructor(arg0, arg1) {
+        tmp2 = closure_0;
+        tmp3 = closure_2;
+        tmp = jsx;
+        obj = { user: participant, guildId: null, size: null, cutout: null };
+        guildId = closure_0.guildId;
+        obj.guildId = guildId;
+        obj.size = XSMALL;
         tmp5 = undefined;
         if (!arg1) {
-          tmp5 = { radius: native.AVATAR_SIZE_MAP[tmp4] / 2 + 3, direction: native.CutoutDirection.RIGHT, inset: -6 };
-          const obj2 = { radius: native.AVATAR_SIZE_MAP[tmp4] / 2 + 3, direction: native.CutoutDirection.RIGHT, inset: -6 };
+          obj1 = { radius: null, direction: null, inset: -6 };
+          num = 2;
+          num2 = 3;
+          obj1.radius = tmp2(tmp3[10]).AVATAR_SIZE_MAP[tmp4] / 2 + 3;
+          obj1.direction = tmp2(tmp3[10]).CutoutDirection.RIGHT;
+          tmp5 = obj1;
         }
-        return authStore(CutoutableAvatarImage, obj);
+        obj.cutout = tmp5;
+        return tmp(closure_0(closure_2[10]).CutoutableAvatarImage, obj);
       }
     }
   }
@@ -448,284 +438,262 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((participant) =
     const embeddedActivitiesForChannelIncludingHidden = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannelIncludingHidden(channel.id);
     return embeddedActivitiesForChannelIncludingHidden.find((applicationId) => {
       id = undefined;
-      applicationId = applicationId.applicationId;
       if (id != null) {
         id = id.id;
       }
-      return applicationId === id;
+      return applicationId.applicationId === id;
     });
   };
   cResult[3] = undefined;
   cResult[4] = channel.id;
   cResult[5] = fn;
-  tmp19 = fn;
+  tmp16 = fn;
+  let obj2 = channel(onSingleTap[18]);
 }) : ((participant) => {
-  let BaseTextButton;
-  let formatToPlainStringResult;
-  let id2;
-  let intl4;
-  let intl5;
-  let items2;
-  let items3;
-  let items4;
-  let obj10;
-  let obj17;
-  let obj8;
-  let tmp26Result;
   participant = participant.participant;
   const channel = participant.channel;
   const onSingleTap = participant.onSingleTap;
   let stateFromStores;
   let analyticsLocations;
-  let closure_6;
+  closure_6 = undefined;
   let embeddedActivityJoinability;
   function handleCanJoin() {
-    return obj(...arguments);
+    const self = this;
+    const apply = closure_9.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   }
-  let obj = function _handleCanJoin2() {
-    let _location;
-    let id;
-    obj = _asyncToGenerator(async () => {
-      let closure_0;
-      let v1;
-      if (c2 === 2) {
-        c2 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+  ActivityLayoutMode = async function _handleCanJoin2() {
+    if (dependencyMap === 2) {
+      dependencyMap = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          c2 = 2;
-          if (0 === v1) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              const tmp11 = null != stateFromStores && null != application;
-              if (tmp11) {
-                const obj4 = { applicationId: stateFromStores.applicationId, activityChannelId: id.id, locationObject: _location.location, analyticsLocations };
-                v1 = 1;
-                c2 = 1;
-                const obj5 = { value: v1(c2[26])(obj4), done: false };
-                return obj5;
-              }
-            }
-          } else if (arg0 === 1) {
-            c2 = 3;
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        dependencyMap = 2;
+        if (0 === v1) {
+          if (arg0 === 1) {
+            dependencyMap = 3;
             throw value;
           } else if (arg0 === 2) {
-            c2 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
+            dependencyMap = 3;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            obj = tmp(c2[27]);
-            const result = obj.setOrientationLockState(closure_128_3);
+            let tmp12 = null != stateFromStores;
+            if (tmp12) {
+              tmp12 = null != application;
+            }
+            if (tmp12) {
+              const obj4 = { applicationId: stateFromStores.applicationId, activityChannelId: id.id, locationObject: _location.location, analyticsLocations };
+              v1 = 1;
+              dependencyMap = 1;
+              const obj5 = { value: v1(9083)(obj4), done: false };
+              return obj5;
+            } else {
+              dependencyMap = 3;
+            }
           }
-          c2 = 3;
-          return { value: "IconComponent", done: null };
-        } catch (tmp17) {
-          c2 = 3;
-          throw tmp17;
+        } else if (arg0 === 1) {
+          dependencyMap = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          const result = tmp2(9168).setOrientationLockState(closure_128_3);
+          const obj = tmp2(9168);
         }
+        dependencyMap = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } catch (tmp18) {
+        dependencyMap = tmp;
+        throw tmp18;
       }
-    });
-    return obj(...arguments);
+    }
   };
-  const style = participant.style;
   const tmp = closure_14();
-  const tmp3 = onSingleTap;
   const items = [participant.applicationId];
   const application = stateFromStores(channel(onSingleTap[17])(items), 1)[0];
   const arr2 = closure_15(participant);
-  let tmp5 = channel(onSingleTap[18]);
-  const getName = tmp5.getName;
   let first1;
   let guildId = channel.getGuildId();
-  let id = channel.id;
   if (arr2 != null) {
     first1 = arr2[0];
   }
-  let name = getName(guildId, id, first1);
+  let name = channel(onSingleTap[18]).getName(guildId, channel.id, first1);
   if (name == null) {
     let first2;
-    const getName2 = tmp2(tmp3[19]).getName;
-    channel(tmp3[19]);
     if (arr2 != null) {
       first2 = arr2[0];
     }
-    name = getName2(first2);
+    name = tmp2(tmp3[19]).getName(first2);
+    const tmp2Result = tmp2(tmp3[19]);
   }
-  let tmp11 = tmp2(tmp3[20])();
-  obj = participant(tmp3[16]);
+  const tmp9 = channel(onSingleTap[20])();
+  let obj = channel(onSingleTap[18]);
   const items1 = [closure_6];
-  stateFromStores = obj.useStateFromStores(items1, () => {
+  stateFromStores = participant(onSingleTap[16]).useStateFromStores(items1, () => {
     const embeddedActivitiesForChannelIncludingHidden = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannelIncludingHidden(channel.id);
     return embeddedActivitiesForChannelIncludingHidden.find((applicationId) => {
       id = undefined;
-      applicationId = applicationId.applicationId;
       if (id != null) {
         id = id.id;
       }
-      return applicationId === id;
+      return applicationId.applicationId === id;
     });
   });
-  const tmp2Result2 = channel(tmp3[21]);
-  analyticsLocations = tmp2Result2(tmp2(tmp3[22]).ACTIVITY_TILE).analyticsLocations;
-  let obj2 = participant(tmp3[23]);
-  closure_6 = obj2.useAnalyticsContext();
+  let obj3 = participant(onSingleTap[16]);
+  analyticsLocations = channel(onSingleTap[21])(tmp2(tmp3[22]).ACTIVITY_TILE).analyticsLocations;
+  const tmp2Result2 = channel(onSingleTap[21]);
+  closure_6 = participant(onSingleTap[23]).useAnalyticsContext();
   let name1;
   if (application != null) {
     name1 = application.name;
   }
   if (name1 == null) {
-    const intl = tmp12(tmp3[24]).intl;
-    name1 = intl.string(tmp12(tmp3[24]).t.WCNe7F);
+    const intl = tmp10(tmp3[24]).intl;
+    name1 = intl.string(tmp10(tmp3[24]).t.WCNe7F);
   }
-  let obj3 = embeddedActivityJoinability;
   const currentUser = embeddedActivityJoinability.getCurrentUser();
   if (currentUser != null) {
-    id2 = currentUser.id;
+    let id = currentUser.id;
   }
-  let tmp17 = null != tmp11;
-  if (tmp17) {
+  let tmp15 = null != tmp9;
+  if (tmp15) {
     let id1;
-    const id3 = tmp11.id;
     if (application != null) {
       id1 = application.id;
     }
-    tmp17 = id3 === id1;
+    tmp15 = tmp9.id === id1;
   }
-  if (!tmp17) {
-    let tmp19 = null != id2;
-    if (tmp19) {
+  if (!tmp15) {
+    let tmp17 = null != id;
+    if (tmp17) {
       let hasItem;
       if (stateFromStores != null) {
         const userIds = stateFromStores.userIds;
-        hasItem = userIds.has(id2);
+        hasItem = userIds.has(id);
       }
-      tmp19 = hasItem;
+      tmp17 = hasItem;
     }
-    tmp17 = tmp19;
+    tmp15 = tmp17;
   }
-  const useEmbeddedActivityJoinability = tmp12(tmp3[25]).useEmbeddedActivityJoinability;
-  participant(tmp3[25]);
-  const currentUser1 = obj3.getCurrentUser();
-  let id4;
+  let obj4 = participant(onSingleTap[23]);
+  let obj5 = embeddedActivityJoinability;
+  const currentUser1 = obj5.getCurrentUser();
+  let id2;
   if (currentUser1 != null) {
-    id4 = currentUser1.id;
+    id2 = currentUser1.id;
   }
-  let obj4 = { userId: id4, channelId: channel.id, application };
-  embeddedActivityJoinability = useEmbeddedActivityJoinability(obj4);
-  const CAN_JOIN = tmp12(tmp3[25]).EmbeddedActivityJoinability.CAN_JOIN;
+  embeddedActivityJoinability = participant(onSingleTap[25]).useEmbeddedActivityJoinability({ userId: id2, channelId: channel.id, application });
   if (arr2.length > 1) {
-    const intl3 = tmp12(tmp3[24]).intl;
-    let obj5 = { username: name, count: arr2.length - 1 };
-    formatToPlainStringResult = intl3.formatToPlainString(tmp12(tmp3[24]).t.cpe6CK, obj5);
+    const intl3 = tmp10(tmp3[24]).intl;
+    let obj6 = { username: name, count: arr2.length - 1 };
+    let formatToPlainStringResult = intl3.formatToPlainString(tmp10(tmp3[24]).t.cpe6CK, obj6);
   } else {
-    const intl2 = tmp12(tmp3[24]).intl;
-    let obj6 = { username: name };
-    formatToPlainStringResult = intl2.formatToPlainString(tmp12(tmp3[24]).t["7Uuia2"], obj6);
+    const intl2 = tmp10(tmp3[24]).intl;
+    const obj7 = { username: name };
+    formatToPlainStringResult = intl2.formatToPlainString(tmp10(tmp3[24]).t["7Uuia2"], obj7);
   }
-  if (tmp17) {
-    const obj7 = { pointerEvents: "box-only", style: tmp.activityViewContainer, onPress: onSingleTap, activeOpacity: 1, children: closure_10(channel(tmp3[29]), obj8) };
-    const PressableOpacity2 = tmp12(tmp3[30]).PressableOpacity;
-    obj8 = { channel, layoutMode: obj.PIP };
-    tmp26Result = closure_10(PressableOpacity2, obj7);
+  if (tmp15) {
+    const obj8 = { pointerEvents: "box-only", style: tmp.activityViewContainer, onPress: onSingleTap, activeOpacity: 1, children: null };
+    const obj9 = { channel, layoutMode: ActivityLayoutMode.PIP };
+    obj8.children = closure_10(tmp2(tmp3[29]), obj9);
+    let tmp23Result = closure_10(tmp10(tmp3[30]).PressableOpacity, obj8);
   } else {
     function handleTileOrButtonPress() {
-      obj = { embeddedActivityJoinability, handleCanJoin };
-      handlePressJoinActivityDefault(obj);
+      handlePressJoinActivityDefault({ embeddedActivityJoinability, handleCanJoin });
       if (onSingleTap != null) {
         onSingleTap();
       }
     }
-    const obj9 = { accessibilityRole: "button", accessibilityLabel: intl4.formatToPlainString(participant(tmp3[24]).t.Yw5Hr2, obj10), androidRippleConfig, onPress: handleTileOrButtonPress, style: tmp.pressableOpacity, children: items2 };
-    const PressableOpacity = tmp12(tmp3[30]).PressableOpacity;
-    intl4 = tmp12(tmp3[24]).intl;
-    obj10 = { applicationName: name1 };
-    const obj11 = { application, resizeMode: "cover" };
-    items2 = [closure_10(tmp2(tmp3[31]), obj11), ];
-    const obj12 = { style: items3, children: items4 };
-    items3 = [tmp.activityPreview, style];
-    const obj13 = {
+    const obj10 = { accessibilityRole: "button", accessibilityLabel: null, androidRippleConfig: null, onPress: null, style: null, children: null };
+    const intl4 = tmp10(tmp3[24]).intl;
+    const obj11 = { applicationName: name1 };
+    obj10.accessibilityLabel = intl4.formatToPlainString(tmp10(tmp3[24]).t.Yw5Hr2, obj11);
+    obj10.androidRippleConfig = androidRippleConfig;
+    obj10.onPress = handleTileOrButtonPress;
+    obj10.style = tmp.pressableOpacity;
+    const obj12 = { application, resizeMode: "cover" };
+    const items2 = [closure_10(tmp2(tmp3[31]), obj12), ];
+    const obj13 = { style: null, children: null };
+    const items3 = [tmp.activityPreview, participant.style];
+    obj13.style = items3;
+    const obj14 = {
       offsetAmount: -6,
       overflowStyle: tmp.overflow,
-      overflowComponent: participant(tmp3[10]).OverflowText,
+      overflowComponent: tmp10(tmp3[10]).OverflowText,
       items: arr2,
       max: 4,
       renderItem(user, arg1) {
-          let guildId;
+          const obj = { user, guildId: null, size: XSMALL, cutout: null };
+          const guildId = participant.guildId;
+          obj.guildId = guildId;
           let tmp5;
-          obj = { user, guildId, size: XSMALL, cutout: tmp5 };
-          guildId = participant.guildId;
-          const CutoutableAvatarImage = native.CutoutableAvatarImage;
-          tmp5 = undefined;
           if (!arg1) {
-            tmp5 = { radius: native.AVATAR_SIZE_MAP[tmp4] / 2 + 3, direction: native.CutoutDirection.RIGHT, inset: -6 };
             const obj2 = { radius: native.AVATAR_SIZE_MAP[tmp4] / 2 + 3, direction: native.CutoutDirection.RIGHT, inset: -6 };
+            tmp5 = obj2;
           }
-          return authStore(CutoutableAvatarImage, obj);
+          obj.cutout = tmp5;
+          return v65535(native.CutoutableAvatarImage, obj);
         }
     };
-    const SummarizedIconRow = tmp12(tmp3[10]).SummarizedIconRow;
-    items4 = [closure_10(SummarizedIconRow, obj13), , , ];
-    const obj14 = { style: tmp.subtitleText, lineClamp: 2, variant: "text-sm/normal", children: formatToPlainStringResult };
-    items4[1] = closure_10(participant(tmp3[32]).Text, obj14);
-    const obj15 = { style: tmp.titleText, children: name1 };
-    items4[2] = closure_10(participant(tmp3[10]).LegacyText, obj15);
-    let tmp28Result = null;
-    if (embeddedActivityJoinability === CAN_JOIN) {
-      const obj16 = { style: tmp.buttonWrapper, children: closure_10(BaseTextButton, obj17) };
-      obj17 = { onPress: handleTileOrButtonPress, pillStyle: tmp.buttonPill, text: intl5.string(participant(tmp3[24]).t["4i2vj+"]), variant: "secondary" };
-      BaseTextButton = tmp12(tmp3[33]).BaseTextButton;
-      intl5 = tmp12(tmp3[24]).intl;
-      tmp28Result = closure_10(tmp29, obj16);
+    const items4 = [closure_10(tmp10(tmp3[10]).SummarizedIconRow, obj14), , , ];
+    const obj15 = { style: tmp.subtitleText, lineClamp: 2, variant: "text-sm/normal", children: formatToPlainStringResult };
+    items4[1] = closure_10(tmp10(tmp3[32]).Text, obj15);
+    const obj16 = { style: tmp.titleText, children: name1 };
+    items4[2] = closure_10(tmp10(tmp3[10]).LegacyText, obj16);
+    let tmp25Result = null;
+    if (embeddedActivityJoinability === tmp10(tmp3[25]).EmbeddedActivityJoinability.CAN_JOIN) {
+      const obj17 = { style: tmp.buttonWrapper, children: null };
+      const obj18 = { onPress: handleTileOrButtonPress, pillStyle: tmp.buttonPill, text: null, variant: "secondary" };
+      const intl5 = tmp10(tmp3[24]).intl;
+      obj18.text = intl5.string(tmp10(tmp3[24]).t["4i2vj+"]);
+      obj17.children = closure_10(tmp10(tmp3[33]).BaseTextButton, obj18);
+      tmp25Result = closure_10(tmp26, obj17);
     }
-    items4[3] = tmp28Result;
-    items2[1] = closure_11(analyticsLocations, obj12);
-    tmp26Result = closure_11(PressableOpacity, obj9);
+    items4[3] = tmp25Result;
+    obj13.children = items4;
+    items2[1] = closure_11(analyticsLocations, obj13);
+    obj10.children = items2;
+    tmp23Result = closure_11(tmp10(tmp3[30]).PressableOpacity, obj10);
   }
-  return tmp26Result;
+  return tmp23Result;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityTile(arg0) {
-  let obj3;
-  let tmp4;
-  const obj = react2;
-  const cResult = obj.c(2);
+ReactCompilerGating = fn(558);
+let obj5 = { height: fn(1188).AVATAR_SIZE_MAP[XSMALL], backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
+size = fn(2);
+let result = size.fileFinishedImporting("modules/video_calls/native/components/ActivityTile.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityTile(arg0) {
+  const cResult = c.c(2);
   if (cResult[0] !== arg0) {
-    const obj2 = { theme: metroImportAll.DARK, children: authStore(closure_16, obj3) };
-    obj3 = {};
-    const ThemeContextProvider = native2.ThemeContextProvider;
+    const obj2 = { theme: constants.DARK, children: null };
+    const obj3 = {};
     const merged = Object.assign(arg0);
-    const tmp11 = authStore(ThemeContextProvider, obj2);
+    obj2.children = v65535(closure_16, obj3);
+    const tmp11 = v65535(native2.ThemeContextProvider, obj2);
     cResult[0] = arg0;
     cResult[1] = tmp11;
-    tmp4 = tmp11;
+    let tmp4 = tmp11;
   } else {
     tmp4 = cResult[1];
   }
   return tmp4;
 }) : (function ActivityTile(arg0) {
-  let obj2;
-  const obj = { theme: metroImportAll.DARK, children: authStore(closure_16, obj2) };
-  obj2 = {};
-  const ThemeContextProvider = native2.ThemeContextProvider;
+  const obj = { theme: constants.DARK, children: null };
   const merged = Object.assign(arg0);
-  return authStore(ThemeContextProvider, obj);
+  obj.children = v65535(closure_16, {});
+  return v65535(native2.ThemeContextProvider, obj);
 });
-size = size_mod;
-let result = size.fileFinishedImporting("modules/video_calls/native/components/ActivityTile.tsx");
-
-export default tmp6;

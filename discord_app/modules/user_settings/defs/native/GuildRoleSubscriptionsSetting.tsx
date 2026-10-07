@@ -2,7 +2,7 @@
 
 // Module 15037 (GuildRoleSubscriptionsSetting)
 import Constants from "Constants" /* 1085 */;
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import SettingsConstants from "SettingsConstants" /* 7645 */;
 import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 15038 */;
 import useUserRoleSubscriptionRelationshipDefault from "useUserRoleSubscriptionRelationship" /* 15039 */;
@@ -13,27 +13,24 @@ import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const UserSettingsSections = Constants.UserSettingsSections;
 const constants = GuildRoleSubscriptionsConstants.UserGuildRoleSubscriptionRelationship;
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.trSpHX);
+    const intl = util.intl;
+    return intl.string(util.t.trSpHX);
   },
-  parent: MobileUserSettings.PREMIUM,
+  parent: SettingsConstants.MobileUserSettings.PREMIUM,
   IconComponent: TicketIcon.TicketIcon,
   usePredicate: () => useUserRoleSubscriptionRelationshipDefault() === constants.SUBSCRIBED,
   screen: {
-    route: UserSettingsSections.GUILD_ROLE_SUBSCRIPTIONS,
+    route: Constants.UserSettingsSections.GUILD_ROLE_SUBSCRIPTIONS,
     getComponent() {
       return require("UserSettingsGuildRoleSubscriptions").default;
     }
   }
-};
-const route = SettingBuilders.createRoute(obj);
+});
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/GuildRoleSubscriptionsSetting.tsx");
 
 export default route;

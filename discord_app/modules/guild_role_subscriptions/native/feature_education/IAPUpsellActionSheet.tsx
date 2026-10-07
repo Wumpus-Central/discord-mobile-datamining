@@ -1,90 +1,82 @@
 // === Module 16213: IAPUpsellActionSheet ===
 
 // Module 16213 (IAPUpsellActionSheet)
-import Fragment from "Fragment" /* 21 */;
-import Constants from "Constants" /* 1085 */;
 import router_utils from "router_utils" /* 1112 */;
-import intl4 from "intl" /* 1126 */;
-import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import ChannelConstants from "ChannelConstants" /* 2058 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import util from "util" /* 1126 */;
+import noop from "module_19" /* 19 */;
 
-let guildId;
+require = fn;
+const Routes = fn(1085).Routes;
+const StaticChannelRoute = fn(2058).StaticChannelRoute;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/feature_education/IAPUpsellActionSheet.tsx");
 
-const Routes = Constants.Routes;
-const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
-const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
-  let obj = guildId(576);
-  const cResult = obj.c(9);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+  const cResult = guildId(576).c(9);
   guildId = guildId.guildId;
   const markAsDismissed = guildId.markAsDismissed;
   if (cResult[0] === guildId) {
-    let tmp4;
-    let tmp8;
-    let tmp7;
-    let tmp6;
     if (cResult[1] === markAsDismissed) {
-      tmp4 = cResult[2];
+      let tmp4 = cResult[2];
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
       const intl = tmp(1126).intl;
-      const stringResult = intl.string(guildId(1126).t.rBw4cE);
+      const stringResult = intl.string(tmp(1126).t.rBw4cE);
       const intl2 = tmp(1126).intl;
-      const stringResult1 = intl2.string(guildId(1126).t.mKHibc);
+      const stringResult1 = intl2.string(tmp(1126).t.mKHibc);
       const intl3 = tmp(1126).intl;
-      const stringResult2 = intl3.string(guildId(1126).t.RzWDqY);
+      const stringResult2 = intl3.string(tmp(1126).t.RzWDqY);
       cResult[3] = stringResult;
       cResult[4] = stringResult1;
       cResult[5] = stringResult2;
-      tmp8 = stringResult2;
-      tmp7 = stringResult1;
-      tmp6 = stringResult;
+      let tmp8 = stringResult2;
+      let tmp7 = stringResult1;
+      let tmp6 = stringResult;
     } else {
       tmp6 = cResult[3];
       tmp7 = cResult[4];
       tmp8 = cResult[5];
     }
     if (cResult[6] === tmp4) {
-      let tmp12;
       if (cResult[7] === markAsDismissed) {
-        tmp12 = cResult[8];
+        let tmp12 = cResult[8];
       }
       return tmp12;
     }
-    markAsDismissed(16214);
-    const tmp16 = <tmp15 imageSource={markAsDismissed(16215)} header={tmp6} body={tmp7} cta={tmp8} onCTAPress={tmp4} markAsDismissed={markAsDismissed} />;
+    const obj2 = { imageSource: markAsDismissed(16215), header: tmp6, body: tmp7, cta: tmp8, onCTAPress: tmp4, markAsDismissed };
+    const tmp16 = jsx(markAsDismissed(16214), { imageSource: markAsDismissed(16215), header: tmp6, body: tmp7, cta: tmp8, onCTAPress: tmp4, markAsDismissed });
     cResult[6] = tmp4;
     cResult[7] = markAsDismissed;
     cResult[8] = tmp16;
     tmp12 = tmp16;
+    const tmp15 = markAsDismissed(16214);
   }
   const fn = function l() {
-    const obj = router_utils;
-    obj.transitionTo(Routes.CHANNEL(guildId, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
+    router_utils.transitionTo(Routes.CHANNEL(guildId, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
     markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
   cResult[0] = guildId;
   cResult[1] = markAsDismissed;
   cResult[2] = fn;
   tmp4 = fn;
+  const obj = guildId(576);
 }) : ((arg0) => {
-  let markAsDismissed;
   ({ guildId: require, markAsDismissed } = arg0);
-  markAsDismissed(16214);
-  const intl = intl4.intl;
-  const intl2 = intl4.intl;
-  const intl3 = intl4.intl;
-  return <tmp imageSource={markAsDismissed(16215)} header={intl.string(intl4.t.rBw4cE)} body={intl2.string(intl4.t.mKHibc)} cta={intl3.string(intl4.t.RzWDqY)} onCTAPress={function onCTAPress() {
-    const obj = router_utils;
-    obj.transitionTo(Routes.CHANNEL(require, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
+  const obj = { imageSource: markAsDismissed(16215), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null };
+  const intl = util.intl;
+  obj.header = intl.string(util.t.rBw4cE);
+  const intl2 = util.intl;
+  obj.body = intl2.string(util.t.mKHibc);
+  const intl3 = util.intl;
+  obj.cta = intl3.string(util.t.RzWDqY);
+  obj.onCTAPress = function onCTAPress() {
+    router_utils.transitionTo(Routes.CHANNEL(closure_1_0, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
     markAsDismissed(ContentDismissActionType.UNKNOWN);
-  }} markAsDismissed={markAsDismissed} />;
+  };
+  obj.markAsDismissed = markAsDismissed;
+  return jsx(markAsDismissed(16214), { imageSource: markAsDismissed(16215), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null });
 });
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/feature_education/IAPUpsellActionSheet.tsx");
-
-export default tmp3;

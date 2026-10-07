@@ -3,32 +3,30 @@
 // Module 14834 (useVisibilityTransition)
 import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
 import timing from "timing" /* 4897 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let react = react_mod;
+require = fn;
 let closure_4 = { code: "function useVisibilityTransitionTsx1(){const{withTiming,visibility,visible,entranceTiming,exitTiming,runOnJS,animationCallbackJSThread}=this.__closure;return{opacity:withTiming(visibility,visible?entranceTiming:exitTiming,\"respect-motion-settings\",function(){\"worklet\";runOnJS(animationCallbackJSThread)();})};}" };
 let closure_5 = { code: "function useVisibilityTransitionTsx2(){const{runOnJS,animationCallbackJSThread}=this.__closure;runOnJS(animationCallbackJSThread)();}" };
 const __initData = { code: "function useVisibilityTransitionTsx3(){const{withTiming,visibility,visible,entranceTiming,exitTiming,runOnJS,animationCallbackJSThread}=this.__closure;return{opacity:withTiming(visibility,visible?entranceTiming:exitTiming,'respect-motion-settings',function(){'worklet';runOnJS(animationCallbackJSThread)();})};}" };
 let closure_7 = { code: "function useVisibilityTransitionTsx4(){const{runOnJS,animationCallbackJSThread}=this.__closure;runOnJS(animationCallbackJSThread)();}" };
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
-  let closure_3;
-  let entranceTiming;
-  let obj = visible(entranceTiming[3]);
-  const cResult = obj.c(3);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useVisibilityTransition.tsx");
+
+export const useVisibilityTransition = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
+  const cResult = visible(entranceTiming[3]).c(3);
   visible = visible.visible;
   entranceTiming = visible.entranceTiming;
   const exitTiming = visible.exitTiming;
-  let tmp4 = exitTiming(react.useState(false), 2);
-  react = tmp6;
-  const first = tmp4[0];
-  const tmp7 = exitTiming(react.useState(visible), 2);
-  if (tmp7[0] !== visible) {
-    tmp7[1](visible);
+  let tmp4 = exitTiming(noop.useState(false), 2);
+  noop = tmp5;
+  const tmp6 = exitTiming(noop.useState(visible), 2);
+  if (tmp6[0] !== visible) {
+    tmp6[1](visible);
     if (!visible) {
-      tmp4[1](true);
+      tmp5(true);
     }
   }
   function animationCallbackJSThread() {
@@ -38,95 +36,85 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
   if (visible) {
     num = 1;
   }
+  let obj = visible(entranceTiming[3]);
   let fn = function w() {
-    let fn;
-    let tmp4;
-    let obj = timing;
-    const obj2 = { opacity: obj.withTiming(num, tmp4, "respect-motion-settings", fn) };
-    fn = function n() {
-      const obj = visible(entranceTiming[4]);
-      obj.runOnJS(animationCallbackJSThread)();
+    const obj2 = { opacity: null };
+    const fn = function n() {
+      visible(entranceTiming[4]).runOnJS(animationCallbackJSThread)();
     };
-    tmp4 = visible ? entranceTiming : exitTiming;
+    const obj = timing;
+    const tmp4 = visible ? entranceTiming : exitTiming;
     fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, animationCallbackJSThread };
     fn.__workletHash = 11904317879470;
     fn.__initData = __initData;
-    ({ runOnJS: ReanimatedRexport.runOnJS, animationCallbackJSThread });
+    obj2.opacity = obj.withTiming(num, tmp4, "respect-motion-settings", fn);
     return obj2;
   };
   const tmpResult = visible(entranceTiming[4]);
-  let obj2 = { withTiming: tmp(tmp2[5]).withTiming, visibility: num, visible, entranceTiming, exitTiming, runOnJS: tmp(tmp2[4]).runOnJS, animationCallbackJSThread };
-  fn.__closure = obj2;
+  fn.__closure = { withTiming: visible(entranceTiming[5]).withTiming, visibility: num, visible, entranceTiming, exitTiming, runOnJS: visible(entranceTiming[4]).runOnJS, animationCallbackJSThread };
   fn.__workletHash = 15161321814882;
   fn.__initData = animationCallbackJSThread;
   const animatedStyle = tmpResult.useAnimatedStyle(fn);
-  if (cResult[0] === animatedStyle) {
-    let tmp12;
-    if (cResult[1] === (visible || first)) {
-      tmp12 = cResult[2];
-    }
-    return tmp12;
+  let first = visible;
+  if (!visible) {
+    first = tmp4[0];
   }
-  const obj3 = { opacityStyle: animatedStyle, shouldRender: tmp11 };
+  if (cResult[0] === animatedStyle) {
+    if (cResult[1] === first) {
+      let tmp11 = cResult[2];
+    }
+    return tmp11;
+  }
+  const obj3 = { opacityStyle: animatedStyle, shouldRender: first };
   cResult[0] = animatedStyle;
-  cResult[1] = visible || first;
+  cResult[1] = first;
   cResult[2] = obj3;
-  tmp12 = obj3;
+  tmp11 = obj3;
 }) : ((visible) => {
-  let closure_3;
-  let fn;
-  let obj3;
   visible = visible.visible;
   const entranceTiming = visible.entranceTiming;
   const exitTiming = visible.exitTiming;
-  react = undefined;
+  noop = undefined;
   let animationCallbackJSThread;
   let num;
-  let obj = react;
-  const tmp = exitTiming(react.useState(false), 2);
-  react = tmp3;
-  const first = tmp[0];
-  let tmp4 = exitTiming(react.useState(visible), 2);
-  if (tmp4[0] !== visible) {
-    tmp4[1](visible);
+  const tmp = exitTiming(noop.useState(false), 2);
+  noop = tmp2;
+  const tmp3 = exitTiming(noop.useState(visible), 2);
+  if (tmp3[0] !== visible) {
+    tmp3[1](visible);
     if (!visible) {
-      tmp[1](true);
+      tmp2(true);
     }
   }
-  animationCallbackJSThread = obj.useCallback(() => {
+  animationCallbackJSThread = noop.useCallback(() => {
     closure_3(false);
   }, []);
   num = 0;
   if (visible) {
     num = 1;
   }
-  let obj2 = { opacityStyle: obj3.useAnimatedStyle(fn), shouldRender: visible };
-  obj3 = visible(entranceTiming[4]);
-  fn = function k() {
-    let fn;
-    let tmp4;
-    let obj = timing;
-    const obj2 = { opacity: obj.withTiming(num, tmp4, "respect-motion-settings", fn) };
-    fn = function n() {
-      const obj = visible(entranceTiming[4]);
-      obj.runOnJS(animationCallbackJSThread)();
+  let obj2 = { opacityStyle: null, shouldRender: null };
+  let fn = function k() {
+    const obj2 = { opacity: null };
+    const fn = function n() {
+      visible(entranceTiming[4]).runOnJS(animationCallbackJSThread)();
     };
-    tmp4 = visible ? entranceTiming : exitTiming;
+    const obj = timing;
+    const tmp4 = visible ? entranceTiming : exitTiming;
     fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, animationCallbackJSThread };
     fn.__workletHash = 1398088040;
     fn.__initData = __initData;
-    ({ runOnJS: ReanimatedRexport.runOnJS, animationCallbackJSThread });
+    obj2.opacity = obj.withTiming(num, tmp4, "respect-motion-settings", fn);
     return obj2;
   };
+  const obj3 = visible(entranceTiming[4]);
   fn.__closure = { withTiming: visible(entranceTiming[5]).withTiming, visibility: num, visible, entranceTiming, exitTiming, runOnJS: visible(entranceTiming[4]).runOnJS, animationCallbackJSThread };
   fn.__workletHash = 2811685925792;
   fn.__initData = __initData;
-  ({ withTiming: visible(entranceTiming[5]).withTiming, visibility: num, visible, entranceTiming, exitTiming, runOnJS: visible(entranceTiming[4]).runOnJS, animationCallbackJSThread });
+  obj2.opacityStyle = obj3.useAnimatedStyle(fn);
   if (!visible) {
-    visible = first;
+    visible = tmp[0];
   }
+  obj2.shouldRender = visible;
   return obj2;
 });
-const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useVisibilityTransition.tsx");
-
-export const useVisibilityTransition = tmp2;

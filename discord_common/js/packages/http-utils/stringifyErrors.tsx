@@ -3,122 +3,880 @@
 // Module 1338 (stringifyErrors)
 import size from "module_2" /* 2 */;
 
-function stringifyErrors(body) {
-  const f83962 = (acc, message) => {
-    let tmp;
-    if (typeof message === "function") {
-      let tmp2 = message;
-      let tmp3 = null;
-      let str = "";
-      let str2 = "";
-      if (null != message) {
-        let tmp4 = message;
-        if (typeof message !== "string") {
-          if (null != message) {
-            if (message.message) {
-              str = message.message;
-            }
-            tmp4 = str;
-          }
-          let tmp5 = globalThis;
-          let _Array = Array;
-          if (Array.isArray(message)) {
-            let reduced = message.reduce(f83962, []);
-            let str3 = ", ";
-            str = reduced.join(", ");
-          } else if (typeof message === "object") {
-            let _Object = Object;
-            let keys = Object.keys(message);
-            let reduced1 = keys.reduce(f83963, []);
-            let str5 = ", ";
-            str = reduced1.join(", ");
-          }
-        }
-        str2 = tmp4;
-      }
-      return tmp(str2);
-    } else {
-      let str4 = "Trying to call a non-function";
-      throw new TypeError("Trying to call a non-function");
-    }
-  };
-  const f83963 = (arr, item) => {
-    arr = message[item];
-    if (typeof closure_2_0 === "function") {
-      let tmp = null;
-      let str = "";
-      let str2 = "";
-      if (null != arr) {
-        let tmp2 = arr;
-        if (typeof arr !== "string") {
-          let str3;
-          if (null != arr) {
-            if (arr.message) {
-              str3 = arr.message;
-            }
-            tmp2 = str3;
-          }
-          let tmp3 = globalThis;
-          let _Array = Array;
-          if (Array.isArray(arr)) {
-            let reduced = arr.reduce(f83962, []);
-            let str4 = ", ";
-            str3 = reduced.join(", ");
-          } else {
-            str3 = "";
-            if (typeof arr === "object") {
-              let _Object = Object;
-              let keys = Object.keys(arr);
-              let reduced1 = keys.reduce(f83963, []);
-              let str9 = ", ";
-              str3 = reduced1.join(", ");
-            }
-          }
-        }
-        str2 = tmp2;
-      }
-      let tmp4 = arr;
-      let combined = arr;
-      if (str2) {
-        let tmp6 = globalThis;
-        let _HermesInternal = HermesInternal;
-        let str5 = ")";
-        let str6 = " (";
-        let str7 = "";
-        let tmp7 = str2;
-        let tmp8 = item;
-        combined = arr.concat("" + str2 + " (" + item + ")");
-      }
-      return combined;
-    } else {
-      let str8 = "Trying to call a non-function";
-      throw new TypeError("Trying to call a non-function");
-    }
-  };
-  let closure_0 = body;
+function stringifyErrors(message) {
+  closure_0 = message;
   let str = "";
   let str2 = "";
-  if (null != body) {
-    let tmp = body;
-    if (typeof body !== "string") {
-      if (null != body) {
-        if (body.message) {
-          str = body.message;
-        }
-        tmp = str;
-      }
+  if (null != message) {
+    if (typeof message === "string") {
+      str2 = message;
+    } else if (null == message) {
       const _Array = Array;
-      if (Array.isArray(body)) {
-        const reduced = body.reduce(f83962, []);
+      if (Array.isArray(message)) {
+        const reduced = message.reduce((acc, message) => {
+          if (typeof closure_0 === "function") {
+            closure_0 = message;
+            let str = "";
+            let str2 = "";
+            if (null != message) {
+              if (typeof message === "string") {
+                str2 = message;
+              } else if (null == message) {
+                const _Array = Array;
+                if (Array.isArray(message)) {
+                  const reduced = message.reduce((acc, message) => {
+                    if (typeof closure_0 === "function") {
+                      closure_0 = message;
+                      let str = "";
+                      let str2 = "";
+                      if (null != message) {
+                        if (typeof message === "string") {
+                          str2 = message;
+                        } else if (null == message) {
+                          const _Array = Array;
+                          if (Array.isArray(message)) {
+                            const reduced = message.reduce((acc, message) => {
+                              if (typeof closure_0 === "function") {
+                                closure_0 = message;
+                                let str = "";
+                                let str2 = "";
+                                if (null != message) {
+                                  if (typeof message === "string") {
+                                    str2 = message;
+                                  } else if (null == message) {
+                                    const _Array = Array;
+                                    if (Array.isArray(message)) {
+                                      const reduced = message.reduce((acc, message) => {
+                                        if (typeof closure_0 === "function") {
+                                          closure_0 = message;
+                                          let str = "";
+                                          let str2 = "";
+                                          if (null != message) {
+                                            if (typeof message === "string") {
+                                              str2 = message;
+                                            } else if (null == message) {
+                                              const _Array = Array;
+                                              if (Array.isArray(message)) {
+                                                const reduced = message.reduce(() => { ... }, []);
+                                                str = reduced.join(", ");
+                                              } else if (typeof message === "object") {
+                                                const _Object = Object;
+                                                const keys = Object.keys(message);
+                                                const reduced1 = keys.reduce(() => { ... }, []);
+                                                str = reduced1.join(", ");
+                                              }
+                                            }
+                                          }
+                                          return tmp(str2);
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      }, []);
+                                      str = reduced.join(", ");
+                                    } else if (typeof message === "object") {
+                                      const _Object = Object;
+                                      const keys = Object.keys(message);
+                                      const reduced1 = keys.reduce((arr, item) => {
+                                        arr = closure_1_0[item];
+                                        if (typeof closure_2_0 === "function") {
+                                          let str2 = "";
+                                          if (null != arr) {
+                                            if (typeof arr === "string") {
+                                              str2 = arr;
+                                            } else if (null == arr) {
+                                              let _Array = Array;
+                                              if (Array.isArray(arr)) {
+                                                let reduced = arr.reduce(() => { ... }, []);
+                                                let str3 = reduced.join(", ");
+                                              } else {
+                                                str3 = "";
+                                                if (typeof arr === "object") {
+                                                  let _Object = Object;
+                                                  let keys = Object.keys(arr);
+                                                  let reduced1 = keys.reduce(() => { ... }, []);
+                                                  str3 = reduced1.join(", ");
+                                                }
+                                              }
+                                            }
+                                          }
+                                          let combined = arr;
+                                          if (str2) {
+                                            let _HermesInternal = HermesInternal;
+                                            combined = arr.concat("" + str2 + " (" + item + ")");
+                                          }
+                                          return combined;
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      }, []);
+                                      str = reduced1.join(", ");
+                                    }
+                                  }
+                                }
+                                return tmp(str2);
+                              } else {
+                                throw new TypeError("Trying to call a non-function");
+                              }
+                            }, []);
+                            str = reduced.join(", ");
+                          } else if (typeof message === "object") {
+                            const _Object = Object;
+                            const keys = Object.keys(message);
+                            const reduced1 = keys.reduce((arr, item) => {
+                              arr = closure_1_0[item];
+                              if (typeof closure_2_0 === "function") {
+                                let str2 = "";
+                                if (null != arr) {
+                                  if (typeof arr === "string") {
+                                    str2 = arr;
+                                  } else if (null == arr) {
+                                    let _Array = Array;
+                                    if (Array.isArray(arr)) {
+                                      let reduced = arr.reduce((acc, message) => {
+                                        if (typeof closure_0 === "function") {
+                                          closure_0 = message;
+                                          let str = "";
+                                          let str2 = "";
+                                          if (null != message) {
+                                            if (typeof message === "string") {
+                                              str2 = message;
+                                            } else if (null == message) {
+                                              const _Array = Array;
+                                              if (Array.isArray(message)) {
+                                                const reduced = message.reduce(() => { ... }, []);
+                                                str = reduced.join(", ");
+                                              } else if (typeof message === "object") {
+                                                const _Object = Object;
+                                                const keys = Object.keys(message);
+                                                const reduced1 = keys.reduce(() => { ... }, []);
+                                                str = reduced1.join(", ");
+                                              }
+                                            }
+                                          }
+                                          return tmp(str2);
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      }, []);
+                                      let str3 = reduced.join(", ");
+                                    } else {
+                                      str3 = "";
+                                      if (typeof arr === "object") {
+                                        let _Object = Object;
+                                        let keys = Object.keys(arr);
+                                        let reduced1 = keys.reduce((arr, item) => {
+                                          arr = closure_1_0[item];
+                                          if (typeof closure_2_0 === "function") {
+                                            let str2 = "";
+                                            if (null != arr) {
+                                              if (typeof arr === "string") {
+                                                str2 = arr;
+                                              } else if (null == arr) {
+                                                let _Array = Array;
+                                                if (Array.isArray(arr)) {
+                                                  let reduced = arr.reduce(() => { ... }, []);
+                                                  let str3 = reduced.join(", ");
+                                                } else {
+                                                  str3 = "";
+                                                  if (typeof arr === "object") {
+                                                    let _Object = Object;
+                                                    let keys = Object.keys(arr);
+                                                    let reduced1 = keys.reduce(() => { ... }, []);
+                                                    str3 = reduced1.join(", ");
+                                                  }
+                                                }
+                                              }
+                                            }
+                                            let combined = arr;
+                                            if (str2) {
+                                              let _HermesInternal = HermesInternal;
+                                              combined = arr.concat("" + str2 + " (" + item + ")");
+                                            }
+                                            return combined;
+                                          } else {
+                                            throw new TypeError("Trying to call a non-function");
+                                          }
+                                        }, []);
+                                        str3 = reduced1.join(", ");
+                                      }
+                                    }
+                                  }
+                                }
+                                let combined = arr;
+                                if (str2) {
+                                  let _HermesInternal = HermesInternal;
+                                  combined = arr.concat("" + str2 + " (" + item + ")");
+                                }
+                                return combined;
+                              } else {
+                                throw new TypeError("Trying to call a non-function");
+                              }
+                            }, []);
+                            str = reduced1.join(", ");
+                          }
+                        }
+                      }
+                      return tmp(str2);
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
+                    }
+                  }, []);
+                  str = reduced.join(", ");
+                } else if (typeof message === "object") {
+                  const _Object = Object;
+                  const keys = Object.keys(message);
+                  const reduced1 = keys.reduce((arr, item) => {
+                    arr = closure_1_0[item];
+                    if (typeof closure_2_0 === "function") {
+                      let str2 = "";
+                      if (null != arr) {
+                        if (typeof arr === "string") {
+                          str2 = arr;
+                        } else if (null == arr) {
+                          let _Array = Array;
+                          if (Array.isArray(arr)) {
+                            let reduced = arr.reduce((acc, message) => {
+                              if (typeof closure_0 === "function") {
+                                closure_0 = message;
+                                let str = "";
+                                let str2 = "";
+                                if (null != message) {
+                                  if (typeof message === "string") {
+                                    str2 = message;
+                                  } else if (null == message) {
+                                    const _Array = Array;
+                                    if (Array.isArray(message)) {
+                                      const reduced = message.reduce((acc, message) => {
+                                        if (typeof closure_0 === "function") {
+                                          closure_0 = message;
+                                          let str = "";
+                                          let str2 = "";
+                                          if (null != message) {
+                                            if (typeof message === "string") {
+                                              str2 = message;
+                                            } else if (null == message) {
+                                              const _Array = Array;
+                                              if (Array.isArray(message)) {
+                                                const reduced = message.reduce(() => { ... }, []);
+                                                str = reduced.join(", ");
+                                              } else if (typeof message === "object") {
+                                                const _Object = Object;
+                                                const keys = Object.keys(message);
+                                                const reduced1 = keys.reduce(() => { ... }, []);
+                                                str = reduced1.join(", ");
+                                              }
+                                            }
+                                          }
+                                          return tmp(str2);
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      }, []);
+                                      str = reduced.join(", ");
+                                    } else if (typeof message === "object") {
+                                      const _Object = Object;
+                                      const keys = Object.keys(message);
+                                      const reduced1 = keys.reduce((arr, item) => {
+                                        arr = closure_1_0[item];
+                                        if (typeof closure_2_0 === "function") {
+                                          let str2 = "";
+                                          if (null != arr) {
+                                            if (typeof arr === "string") {
+                                              str2 = arr;
+                                            } else if (null == arr) {
+                                              let _Array = Array;
+                                              if (Array.isArray(arr)) {
+                                                let reduced = arr.reduce(() => { ... }, []);
+                                                let str3 = reduced.join(", ");
+                                              } else {
+                                                str3 = "";
+                                                if (typeof arr === "object") {
+                                                  let _Object = Object;
+                                                  let keys = Object.keys(arr);
+                                                  let reduced1 = keys.reduce(() => { ... }, []);
+                                                  str3 = reduced1.join(", ");
+                                                }
+                                              }
+                                            }
+                                          }
+                                          let combined = arr;
+                                          if (str2) {
+                                            let _HermesInternal = HermesInternal;
+                                            combined = arr.concat("" + str2 + " (" + item + ")");
+                                          }
+                                          return combined;
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      }, []);
+                                      str = reduced1.join(", ");
+                                    }
+                                  }
+                                }
+                                return tmp(str2);
+                              } else {
+                                throw new TypeError("Trying to call a non-function");
+                              }
+                            }, []);
+                            let str3 = reduced.join(", ");
+                          } else {
+                            str3 = "";
+                            if (typeof arr === "object") {
+                              let _Object = Object;
+                              let keys = Object.keys(arr);
+                              let reduced1 = keys.reduce((arr, item) => {
+                                arr = closure_1_0[item];
+                                if (typeof closure_2_0 === "function") {
+                                  let str2 = "";
+                                  if (null != arr) {
+                                    if (typeof arr === "string") {
+                                      str2 = arr;
+                                    } else if (null == arr) {
+                                      let _Array = Array;
+                                      if (Array.isArray(arr)) {
+                                        let reduced = arr.reduce((acc, message) => {
+                                          if (typeof closure_0 === "function") {
+                                            closure_0 = message;
+                                            let str = "";
+                                            let str2 = "";
+                                            if (null != message) {
+                                              if (typeof message === "string") {
+                                                str2 = message;
+                                              } else if (null == message) {
+                                                const _Array = Array;
+                                                if (Array.isArray(message)) {
+                                                  const reduced = message.reduce(() => { ... }, []);
+                                                  str = reduced.join(", ");
+                                                } else if (typeof message === "object") {
+                                                  const _Object = Object;
+                                                  const keys = Object.keys(message);
+                                                  const reduced1 = keys.reduce(() => { ... }, []);
+                                                  str = reduced1.join(", ");
+                                                }
+                                              }
+                                            }
+                                            return tmp(str2);
+                                          } else {
+                                            throw new TypeError("Trying to call a non-function");
+                                          }
+                                        }, []);
+                                        let str3 = reduced.join(", ");
+                                      } else {
+                                        str3 = "";
+                                        if (typeof arr === "object") {
+                                          let _Object = Object;
+                                          let keys = Object.keys(arr);
+                                          let reduced1 = keys.reduce((arr, item) => {
+                                            arr = closure_1_0[item];
+                                            if (typeof closure_2_0 === "function") {
+                                              let str2 = "";
+                                              if (null != arr) {
+                                                if (typeof arr === "string") {
+                                                  str2 = arr;
+                                                } else if (null == arr) {
+                                                  let _Array = Array;
+                                                  if (Array.isArray(arr)) {
+                                                    let reduced = arr.reduce(() => { ... }, []);
+                                                    let str3 = reduced.join(", ");
+                                                  } else {
+                                                    str3 = "";
+                                                    if (typeof arr === "object") {
+                                                      let _Object = Object;
+                                                      let keys = Object.keys(arr);
+                                                      let reduced1 = keys.reduce(() => { ... }, []);
+                                                      str3 = reduced1.join(", ");
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                              let combined = arr;
+                                              if (str2) {
+                                                let _HermesInternal = HermesInternal;
+                                                combined = arr.concat("" + str2 + " (" + item + ")");
+                                              }
+                                              return combined;
+                                            } else {
+                                              throw new TypeError("Trying to call a non-function");
+                                            }
+                                          }, []);
+                                          str3 = reduced1.join(", ");
+                                        }
+                                      }
+                                    }
+                                  }
+                                  let combined = arr;
+                                  if (str2) {
+                                    let _HermesInternal = HermesInternal;
+                                    combined = arr.concat("" + str2 + " (" + item + ")");
+                                  }
+                                  return combined;
+                                } else {
+                                  throw new TypeError("Trying to call a non-function");
+                                }
+                              }, []);
+                              str3 = reduced1.join(", ");
+                            }
+                          }
+                        }
+                      }
+                      let combined = arr;
+                      if (str2) {
+                        let _HermesInternal = HermesInternal;
+                        combined = arr.concat("" + str2 + " (" + item + ")");
+                      }
+                      return combined;
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
+                    }
+                  }, []);
+                  str = reduced1.join(", ");
+                }
+              }
+            }
+            return tmp(str2);
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        }, []);
         str = reduced.join(", ");
-      } else if (typeof body === "object") {
+      } else if (typeof message === "object") {
         const _Object = Object;
-        const keys = Object.keys(body);
-        const reduced1 = keys.reduce(f83963, []);
+        const keys = Object.keys(message);
+        const reduced1 = keys.reduce((arr, item) => {
+          arr = closure_1_0[item];
+          if (typeof closure_2_0 === "function") {
+            let str2 = "";
+            if (null != arr) {
+              if (typeof arr === "string") {
+                str2 = arr;
+              } else if (null == arr) {
+                let _Array = Array;
+                if (Array.isArray(arr)) {
+                  let reduced = arr.reduce((acc, message) => {
+                    if (typeof closure_0 === "function") {
+                      closure_0 = message;
+                      let str = "";
+                      let str2 = "";
+                      if (null != message) {
+                        if (typeof message === "string") {
+                          str2 = message;
+                        } else if (null == message) {
+                          const _Array = Array;
+                          if (Array.isArray(message)) {
+                            const reduced = message.reduce((acc, message) => {
+                              if (typeof closure_0 === "function") {
+                                closure_0 = message;
+                                let str = "";
+                                let str2 = "";
+                                if (null != message) {
+                                  if (typeof message === "string") {
+                                    str2 = message;
+                                  } else if (null == message) {
+                                    const _Array = Array;
+                                    if (Array.isArray(message)) {
+                                      const reduced = message.reduce((acc, message) => {
+                                        if (typeof closure_0 === "function") {
+                                          closure_0 = message;
+                                          let str = "";
+                                          let str2 = "";
+                                          if (null != message) {
+                                            if (typeof message === "string") {
+                                              str2 = message;
+                                            } else if (null == message) {
+                                              const _Array = Array;
+                                              if (Array.isArray(message)) {
+                                                const reduced = message.reduce(() => { ... }, []);
+                                                str = reduced.join(", ");
+                                              } else if (typeof message === "object") {
+                                                const _Object = Object;
+                                                const keys = Object.keys(message);
+                                                const reduced1 = keys.reduce(() => { ... }, []);
+                                                str = reduced1.join(", ");
+                                              }
+                                            }
+                                          }
+                                          return tmp(str2);
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      }, []);
+                                      str = reduced.join(", ");
+                                    } else if (typeof message === "object") {
+                                      const _Object = Object;
+                                      const keys = Object.keys(message);
+                                      const reduced1 = keys.reduce((arr, item) => {
+                                        arr = closure_1_0[item];
+                                        if (typeof closure_2_0 === "function") {
+                                          let str2 = "";
+                                          if (null != arr) {
+                                            if (typeof arr === "string") {
+                                              str2 = arr;
+                                            } else if (null == arr) {
+                                              let _Array = Array;
+                                              if (Array.isArray(arr)) {
+                                                let reduced = arr.reduce(() => { ... }, []);
+                                                let str3 = reduced.join(", ");
+                                              } else {
+                                                str3 = "";
+                                                if (typeof arr === "object") {
+                                                  let _Object = Object;
+                                                  let keys = Object.keys(arr);
+                                                  let reduced1 = keys.reduce(() => { ... }, []);
+                                                  str3 = reduced1.join(", ");
+                                                }
+                                              }
+                                            }
+                                          }
+                                          let combined = arr;
+                                          if (str2) {
+                                            let _HermesInternal = HermesInternal;
+                                            combined = arr.concat("" + str2 + " (" + item + ")");
+                                          }
+                                          return combined;
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      }, []);
+                                      str = reduced1.join(", ");
+                                    }
+                                  }
+                                }
+                                return tmp(str2);
+                              } else {
+                                throw new TypeError("Trying to call a non-function");
+                              }
+                            }, []);
+                            str = reduced.join(", ");
+                          } else if (typeof message === "object") {
+                            const _Object = Object;
+                            const keys = Object.keys(message);
+                            const reduced1 = keys.reduce((arr, item) => {
+                              arr = closure_1_0[item];
+                              if (typeof closure_2_0 === "function") {
+                                let str2 = "";
+                                if (null != arr) {
+                                  if (typeof arr === "string") {
+                                    str2 = arr;
+                                  } else if (null == arr) {
+                                    let _Array = Array;
+                                    if (Array.isArray(arr)) {
+                                      let reduced = arr.reduce((acc, message) => {
+                                        if (typeof closure_0 === "function") {
+                                          closure_0 = message;
+                                          let str = "";
+                                          let str2 = "";
+                                          if (null != message) {
+                                            if (typeof message === "string") {
+                                              str2 = message;
+                                            } else if (null == message) {
+                                              const _Array = Array;
+                                              if (Array.isArray(message)) {
+                                                const reduced = message.reduce(() => { ... }, []);
+                                                str = reduced.join(", ");
+                                              } else if (typeof message === "object") {
+                                                const _Object = Object;
+                                                const keys = Object.keys(message);
+                                                const reduced1 = keys.reduce(() => { ... }, []);
+                                                str = reduced1.join(", ");
+                                              }
+                                            }
+                                          }
+                                          return tmp(str2);
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      }, []);
+                                      let str3 = reduced.join(", ");
+                                    } else {
+                                      str3 = "";
+                                      if (typeof arr === "object") {
+                                        let _Object = Object;
+                                        let keys = Object.keys(arr);
+                                        let reduced1 = keys.reduce((arr, item) => {
+                                          arr = closure_1_0[item];
+                                          if (typeof closure_2_0 === "function") {
+                                            let str2 = "";
+                                            if (null != arr) {
+                                              if (typeof arr === "string") {
+                                                str2 = arr;
+                                              } else if (null == arr) {
+                                                let _Array = Array;
+                                                if (Array.isArray(arr)) {
+                                                  let reduced = arr.reduce(() => { ... }, []);
+                                                  let str3 = reduced.join(", ");
+                                                } else {
+                                                  str3 = "";
+                                                  if (typeof arr === "object") {
+                                                    let _Object = Object;
+                                                    let keys = Object.keys(arr);
+                                                    let reduced1 = keys.reduce(() => { ... }, []);
+                                                    str3 = reduced1.join(", ");
+                                                  }
+                                                }
+                                              }
+                                            }
+                                            let combined = arr;
+                                            if (str2) {
+                                              let _HermesInternal = HermesInternal;
+                                              combined = arr.concat("" + str2 + " (" + item + ")");
+                                            }
+                                            return combined;
+                                          } else {
+                                            throw new TypeError("Trying to call a non-function");
+                                          }
+                                        }, []);
+                                        str3 = reduced1.join(", ");
+                                      }
+                                    }
+                                  }
+                                }
+                                let combined = arr;
+                                if (str2) {
+                                  let _HermesInternal = HermesInternal;
+                                  combined = arr.concat("" + str2 + " (" + item + ")");
+                                }
+                                return combined;
+                              } else {
+                                throw new TypeError("Trying to call a non-function");
+                              }
+                            }, []);
+                            str = reduced1.join(", ");
+                          }
+                        }
+                      }
+                      return tmp(str2);
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
+                    }
+                  }, []);
+                  let str3 = reduced.join(", ");
+                } else {
+                  str3 = "";
+                  if (typeof arr === "object") {
+                    let _Object = Object;
+                    let keys = Object.keys(arr);
+                    let reduced1 = keys.reduce((arr, item) => {
+                      arr = closure_1_0[item];
+                      if (typeof closure_2_0 === "function") {
+                        let str2 = "";
+                        if (null != arr) {
+                          if (typeof arr === "string") {
+                            str2 = arr;
+                          } else if (null == arr) {
+                            let _Array = Array;
+                            if (Array.isArray(arr)) {
+                              let reduced = arr.reduce((acc, message) => {
+                                if (typeof closure_0 === "function") {
+                                  closure_0 = message;
+                                  let str = "";
+                                  let str2 = "";
+                                  if (null != message) {
+                                    if (typeof message === "string") {
+                                      str2 = message;
+                                    } else if (null == message) {
+                                      const _Array = Array;
+                                      if (Array.isArray(message)) {
+                                        const reduced = message.reduce((acc, message) => {
+                                          if (typeof closure_0 === "function") {
+                                            closure_0 = message;
+                                            let str = "";
+                                            let str2 = "";
+                                            if (null != message) {
+                                              if (typeof message === "string") {
+                                                str2 = message;
+                                              } else if (null == message) {
+                                                const _Array = Array;
+                                                if (Array.isArray(message)) {
+                                                  const reduced = message.reduce(() => { ... }, []);
+                                                  str = reduced.join(", ");
+                                                } else if (typeof message === "object") {
+                                                  const _Object = Object;
+                                                  const keys = Object.keys(message);
+                                                  const reduced1 = keys.reduce(() => { ... }, []);
+                                                  str = reduced1.join(", ");
+                                                }
+                                              }
+                                            }
+                                            return tmp(str2);
+                                          } else {
+                                            throw new TypeError("Trying to call a non-function");
+                                          }
+                                        }, []);
+                                        str = reduced.join(", ");
+                                      } else if (typeof message === "object") {
+                                        const _Object = Object;
+                                        const keys = Object.keys(message);
+                                        const reduced1 = keys.reduce((arr, item) => {
+                                          arr = closure_1_0[item];
+                                          if (typeof closure_2_0 === "function") {
+                                            let str2 = "";
+                                            if (null != arr) {
+                                              if (typeof arr === "string") {
+                                                str2 = arr;
+                                              } else if (null == arr) {
+                                                let _Array = Array;
+                                                if (Array.isArray(arr)) {
+                                                  let reduced = arr.reduce(() => { ... }, []);
+                                                  let str3 = reduced.join(", ");
+                                                } else {
+                                                  str3 = "";
+                                                  if (typeof arr === "object") {
+                                                    let _Object = Object;
+                                                    let keys = Object.keys(arr);
+                                                    let reduced1 = keys.reduce(() => { ... }, []);
+                                                    str3 = reduced1.join(", ");
+                                                  }
+                                                }
+                                              }
+                                            }
+                                            let combined = arr;
+                                            if (str2) {
+                                              let _HermesInternal = HermesInternal;
+                                              combined = arr.concat("" + str2 + " (" + item + ")");
+                                            }
+                                            return combined;
+                                          } else {
+                                            throw new TypeError("Trying to call a non-function");
+                                          }
+                                        }, []);
+                                        str = reduced1.join(", ");
+                                      }
+                                    }
+                                  }
+                                  return tmp(str2);
+                                } else {
+                                  throw new TypeError("Trying to call a non-function");
+                                }
+                              }, []);
+                              let str3 = reduced.join(", ");
+                            } else {
+                              str3 = "";
+                              if (typeof arr === "object") {
+                                let _Object = Object;
+                                let keys = Object.keys(arr);
+                                let reduced1 = keys.reduce((arr, item) => {
+                                  arr = closure_1_0[item];
+                                  if (typeof closure_2_0 === "function") {
+                                    let str2 = "";
+                                    if (null != arr) {
+                                      if (typeof arr === "string") {
+                                        str2 = arr;
+                                      } else if (null == arr) {
+                                        let _Array = Array;
+                                        if (Array.isArray(arr)) {
+                                          let reduced = arr.reduce((acc, message) => {
+                                            if (typeof closure_0 === "function") {
+                                              closure_0 = message;
+                                              let str = "";
+                                              let str2 = "";
+                                              if (null != message) {
+                                                if (typeof message === "string") {
+                                                  str2 = message;
+                                                } else if (null == message) {
+                                                  const _Array = Array;
+                                                  if (Array.isArray(message)) {
+                                                    const reduced = message.reduce(() => { ... }, []);
+                                                    str = reduced.join(", ");
+                                                  } else if (typeof message === "object") {
+                                                    const _Object = Object;
+                                                    const keys = Object.keys(message);
+                                                    const reduced1 = keys.reduce(() => { ... }, []);
+                                                    str = reduced1.join(", ");
+                                                  }
+                                                }
+                                              }
+                                              return tmp(str2);
+                                            } else {
+                                              throw new TypeError("Trying to call a non-function");
+                                            }
+                                          }, []);
+                                          let str3 = reduced.join(", ");
+                                        } else {
+                                          str3 = "";
+                                          if (typeof arr === "object") {
+                                            let _Object = Object;
+                                            let keys = Object.keys(arr);
+                                            let reduced1 = keys.reduce((arr, item) => {
+                                              arr = closure_1_0[item];
+                                              if (typeof closure_2_0 === "function") {
+                                                let str2 = "";
+                                                if (null != arr) {
+                                                  if (typeof arr === "string") {
+                                                    str2 = arr;
+                                                  } else if (null == arr) {
+                                                    let _Array = Array;
+                                                    if (Array.isArray(arr)) {
+                                                      let reduced = arr.reduce(() => { ... }, []);
+                                                      let str3 = reduced.join(", ");
+                                                    } else {
+                                                      str3 = "";
+                                                      if (typeof arr === "object") {
+                                                        let _Object = Object;
+                                                        let keys = Object.keys(arr);
+                                                        let reduced1 = keys.reduce(() => { ... }, []);
+                                                        str3 = reduced1.join(", ");
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                                let combined = arr;
+                                                if (str2) {
+                                                  let _HermesInternal = HermesInternal;
+                                                  combined = arr.concat("" + str2 + " (" + item + ")");
+                                                }
+                                                return combined;
+                                              } else {
+                                                throw new TypeError("Trying to call a non-function");
+                                              }
+                                            }, []);
+                                            str3 = reduced1.join(", ");
+                                          }
+                                        }
+                                      }
+                                    }
+                                    let combined = arr;
+                                    if (str2) {
+                                      let _HermesInternal = HermesInternal;
+                                      combined = arr.concat("" + str2 + " (" + item + ")");
+                                    }
+                                    return combined;
+                                  } else {
+                                    throw new TypeError("Trying to call a non-function");
+                                  }
+                                }, []);
+                                str3 = reduced1.join(", ");
+                              }
+                            }
+                          }
+                        }
+                        let combined = arr;
+                        if (str2) {
+                          let _HermesInternal = HermesInternal;
+                          combined = arr.concat("" + str2 + " (" + item + ")");
+                        }
+                        return combined;
+                      } else {
+                        throw new TypeError("Trying to call a non-function");
+                      }
+                    }, []);
+                    str3 = reduced1.join(", ");
+                  }
+                }
+              }
+            }
+            let combined = arr;
+            if (str2) {
+              let _HermesInternal = HermesInternal;
+              combined = arr.concat("" + str2 + " (" + item + ")");
+            }
+            return combined;
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        }, []);
         str = reduced1.join(", ");
       }
     }
-    str2 = tmp;
   }
   return str2;
 }

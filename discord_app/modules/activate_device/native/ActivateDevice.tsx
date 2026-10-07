@@ -1,103 +1,85 @@
 // === Module 13705: ActivateDevice ===
 
 // Module 13705 (ActivateDevice)
-import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import react_nativeDefault from "react-native" /* 1886 */;
+import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1886 */;
 import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 8783 */;
 import _modDef13709 from "module_13709" /* 13709 */;
 import _modDef13710 from "module_13710" /* 13710 */;
-import _slicedToArray_mod from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let importDefault, obj1, onClose, openOAuth2ModalResult, tmp3, tmp5, tmp6, tmp7, tmp8;
 
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let _slicedToArray = _slicedToArray_mod;
-({ View: hasOwnProperty, ImageBackground: metroRequire, ActivityIndicator: metroImportDefault, ScrollView: metroImportAll } = react_native);
-const jsx = Fragment.jsx;
-let createStyles = createStyles_mod;
-let obj = { background: { flex: 1 }, imageStyle: obj2, safeArea: { flex: 1, justifyContent: "center", alignItems: "center" }, content: obj3, scroller: { alignSelf: "stretch", flexGrow: 0 }, scrollerContent: { flexDirection: "column", gap: 16 } };
-obj2 = { marginVertical: 0, resizeMode: "cover", backgroundColor: nativeDefault.colors.TEXT_BRAND };
-createStyles = createStyles.createStyles;
-obj3 = { maxWidth: 480, backgroundColor: nativeDefault.colors.PANEL_BG, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.lg, padding: 24, marginHorizontal: 24, marginVertical: 36, shadowColor: nativeDefault.colors.BLACK, shadowOpacity: 0.2, shadowOffset: { width: 0, height: 4 }, shadowRadius: 4 };
-let closure_10 = createStyles(obj);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
-  let closure_1;
-  let closure_3;
-  let deviceCodeAuthorizeCallback;
-  let first;
-  let first1;
-  let first2;
-  let tmp11;
-  let tmp12;
-  let tmp17;
-  let tmp20;
-  let tmp22;
-  const tmp = first1;
-  let obj = first1(first2[7]);
-  const cResult = obj.c(39);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, ImageBackground: metroRequire, ActivityIndicator: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { background: { flex: 1 }, imageStyle: { marginVertical: 0, resizeMode: "cover", backgroundColor: nativeDefault.colors.TEXT_BRAND }, safeArea: { flex: 1, justifyContent: "center", alignItems: "center" }, content: null, scroller: null, scrollerContent: null };
+let obj3 = { marginVertical: 0, resizeMode: "cover", backgroundColor: nativeDefault.colors.TEXT_BRAND };
+obj2.content = { maxWidth: 480, backgroundColor: nativeDefault.colors.PANEL_BG, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.lg, padding: 24, marginHorizontal: 24, marginVertical: 36, shadowColor: nativeDefault.colors.BLACK, shadowOpacity: 0.2, shadowOffset: { width: 0, height: 4 }, shadowRadius: 4 };
+obj2.scroller = { alignSelf: "stretch", flexGrow: 0 };
+obj2.scrollerContent = { flexDirection: "column", gap: 16 };
+let closure_10 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj4 = { maxWidth: 480, backgroundColor: nativeDefault.colors.PANEL_BG, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.lg, padding: 24, marginHorizontal: 24, marginVertical: 36, shadowColor: nativeDefault.colors.BLACK, shadowOpacity: 0.2, shadowOffset: { width: 0, height: 4 }, shadowRadius: 4 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activate_device/native/ActivateDevice.tsx");
+
+export const ActivateDevice = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
+  const cResult = first1(first2[7]).c(39);
   onClose = onClose.onClose;
   const tmp4 = closure_10();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { type: "user-code-input", usePrefilledCode: true };
     cResult[0] = obj2;
-    first = obj2;
+    let first = obj2;
   } else {
     first = cResult[0];
   }
-  let obj3 = deviceCodeAuthorizeCallback;
   [first1, importDefault] = deviceCodeAuthorizeCallback.useState(first);
   [first2, _slicedToArray] = deviceCodeAuthorizeCallback.useState(null);
-  const tmpResult = tmp(first2[8]);
-  const activateDeviceStepTracking = tmpResult.useActivateDeviceStepTracking(first1);
+  let obj = first1(first2[7]);
+  const activateDeviceStepTracking = first1(first2[8]).useActivateDeviceStepTracking(first1);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function v() {
       closure_1({ type: "user-code-input" });
     };
     cResult[1] = fn;
-    tmp11 = fn;
+    let tmp11 = fn;
   } else {
     tmp11 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function w(userCodeData) {
-      const obj = { type: "success", userCodeData };
-      closure_1(obj);
+      closure_1({ type: "success", userCodeData });
     };
     cResult[2] = fn2;
-    tmp12 = fn2;
+    let tmp12 = fn2;
   } else {
     tmp12 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class L {
-      constructor(userCodeData) {
-        const obj = { type: "error", userCodeData };
-        closure_1(obj);
+      constructor(arg0) {
+        obj = { type: "error", userCodeData: onClose };
+        tmp = closure_1(obj);
+        return;
       }
     }
     cResult[3] = L;
   } else {
     class L {
-      constructor(userCodeData) {
-        const obj = { type: "error", userCodeData };
-        closure_1(obj);
+      constructor(arg0) {
+        obj = { type: "error", userCodeData: onClose };
+        tmp = closure_1(obj);
+        return;
       }
     }
   }
-  const tmpResult2 = tmp(first2[9]);
-  deviceCodeAuthorizeCallback = tmpResult2.useDeviceCodeAuthorizeCallback(tmp11, L, tmp12);
+  const tmpResult = first1(first2[8]);
+  deviceCodeAuthorizeCallback = first1(first2[9]).useDeviceCodeAuthorizeCallback(tmp11, L, tmp12);
   if (cResult[4] !== deviceCodeAuthorizeCallback) {
     class U {
       constructor(arg0) {
@@ -113,7 +95,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
           isEmbeddedFlow: true,
           withBackPressHandler: false,
           callbackWithoutPost(arg0) {
-                  return deviceCodeAuthorizeCallback(userCodeData, arg0);
+                  return deviceCodeAuthorizeCallback(closure_0, arg0);
                 }
         };
         openOAuth2ModalResult = obj2.openOAuth2Modal(obj1);
@@ -137,7 +119,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
           isEmbeddedFlow: true,
           withBackPressHandler: false,
           callbackWithoutPost(arg0) {
-                  return deviceCodeAuthorizeCallback(userCodeData, arg0);
+                  return deviceCodeAuthorizeCallback(closure_0, arg0);
                 }
         };
         openOAuth2ModalResult = obj2.openOAuth2Modal(obj1);
@@ -161,10 +143,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
             tmp8 = closure_3(closure_1(tmp2[12]));
           } else {
             scopes = userCodeData.scopes;
-            if (scopes.some((item) => {
-              const obj = first1(first2[13]);
-              return obj.isSocialLayerUmbrellaScope(item);
-            })) {
+            if (scopes.some((item) => first1(first2[13]).isSocialLayerUmbrellaScope(item))) {
               tmp3 = closure_3;
               tmp4 = closure_1;
               tmp5 = closure_3(closure_1(tmp2[14]));
@@ -178,7 +157,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
     cResult[6] = first1;
     cResult[7] = B;
     cResult[8] = items;
-    tmp17 = items;
+    let tmp17 = items;
   } else {
     class B {
       constructor() {
@@ -195,10 +174,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
             tmp8 = closure_3(closure_1(tmp2[12]));
           } else {
             scopes = userCodeData.scopes;
-            if (scopes.some((item) => {
-              const obj = first1(first2[13]);
-              return obj.isSocialLayerUmbrellaScope(item);
-            })) {
+            if (scopes.some((item) => first1(first2[13]).isSocialLayerUmbrellaScope(item))) {
               tmp3 = closure_3;
               tmp4 = closure_1;
               tmp5 = closure_3(closure_1(tmp2[14]));
@@ -214,26 +190,34 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   if (cResult[9] !== first2) {
     class R {
       constructor() {
-        if (null != first2) {
-          const obj2 = { uri: tmp };
-          const obj = react_nativeDefault;
-          obj.preload(obj2);
+        if (null != closure_2) {
+          tmp2 = closure_1;
+          tmp3 = closure_2;
+          obj = closure_1(closure_2[15]);
+          obj1 = { uri: null };
+          obj1.uri = tmp;
+          preloadResult = obj.preload(obj1);
         }
+        return;
       }
     }
     const items1 = [first2];
     cResult[9] = first2;
     cResult[10] = R;
     cResult[11] = items1;
-    tmp20 = items1;
+    let tmp20 = items1;
   } else {
     class R {
       constructor() {
-        if (null != first2) {
-          const obj2 = { uri: tmp };
-          const obj = react_nativeDefault;
-          obj.preload(obj2);
+        if (null != closure_2) {
+          tmp2 = closure_1;
+          tmp3 = closure_2;
+          obj = closure_1(closure_2[15]);
+          obj1 = { uri: null };
+          obj1.uri = tmp;
+          preloadResult = obj.preload(obj1);
         }
+        return;
       }
     }
     tmp20 = cResult[11];
@@ -243,154 +227,207 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   if ("user-code-input" === type) {
     class R {
       constructor() {
-        if (null != first2) {
-          const obj2 = { uri: tmp };
-          const obj = react_nativeDefault;
-          obj.preload(obj2);
+        if (null != closure_2) {
+          tmp2 = closure_1;
+          tmp3 = closure_2;
+          obj = closure_1(closure_2[15]);
+          obj1 = { uri: null };
+          obj1.uri = tmp;
+          preloadResult = obj.preload(obj1);
         }
+        return;
       }
     }
     if (first1.usePrefilledCode) {
       class R {
         constructor() {
-          if (null != first2) {
-            const obj2 = { uri: tmp };
-            const obj = react_nativeDefault;
-            obj.preload(obj2);
+          if (null != closure_2) {
+            tmp2 = closure_1;
+            tmp3 = closure_2;
+            obj = closure_1(closure_2[15]);
+            obj1 = { uri: null };
+            obj1.uri = tmp;
+            preloadResult = obj.preload(obj1);
           }
+          return;
         }
       }
     }
     if (cResult[12] === onClose) {
       class R {
         constructor() {
-          if (null != first2) {
-            const obj2 = { uri: tmp };
-            const obj = react_nativeDefault;
-            obj.preload(obj2);
+          if (null != closure_2) {
+            tmp2 = closure_1;
+            tmp3 = closure_2;
+            obj = closure_1(closure_2[15]);
+            obj1 = { uri: null };
+            obj1.uri = tmp;
+            preloadResult = obj.preload(obj1);
           }
+          return;
         }
       }
     }
+    const obj4 = { prefilledUserCode: tmp31, onUserCodeAccepted: U, onClose };
+    const tmp34 = jsx(tmp(tmp2[16]).UserCodeInput, { prefilledUserCode: tmp31, onUserCodeAccepted: U, onClose });
     cResult[12] = onClose;
     cResult[13] = tmp31;
     cResult[14] = U;
-    cResult[15] = jsx(tmp(first2[16]).UserCodeInput, { prefilledUserCode: tmp31, onUserCodeAccepted: U, onClose });
-    const tmp34 = jsx(tmp(first2[16]).UserCodeInput, { prefilledUserCode: tmp31, onUserCodeAccepted: U, onClose });
+    cResult[15] = tmp34;
   } else {
     class R {
       constructor() {
-        if (null != first2) {
-          const obj2 = { uri: tmp };
-          const obj = react_nativeDefault;
-          obj.preload(obj2);
+        if (null != closure_2) {
+          tmp2 = closure_1;
+          tmp3 = closure_2;
+          obj = closure_1(closure_2[15]);
+          obj1 = { uri: null };
+          obj1.uri = tmp;
+          preloadResult = obj.preload(obj1);
         }
+        return;
       }
     }
     if ("authorization" === type) {
-      let tmp28;
       class R {
         constructor() {
-          if (null != first2) {
-            const obj2 = { uri: tmp };
-            const obj = react_nativeDefault;
-            obj.preload(obj2);
+          if (null != closure_2) {
+            tmp2 = closure_1;
+            tmp3 = closure_2;
+            obj = closure_1(closure_2[15]);
+            obj1 = { uri: null };
+            obj1.uri = tmp;
+            preloadResult = obj.preload(obj1);
           }
+          return;
         }
       }
       if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
         class R {
           constructor() {
-            if (null != first2) {
-              const obj2 = { uri: tmp };
-              const obj = react_nativeDefault;
-              obj.preload(obj2);
+            if (null != closure_2) {
+              tmp2 = closure_1;
+              tmp3 = closure_2;
+              obj = closure_1(closure_2[15]);
+              obj1 = { uri: null };
+              obj1.uri = tmp;
+              preloadResult = obj.preload(obj1);
             }
+            return;
           }
         }
         const tmp30 = <closure_7 animating />;
         cResult[16] = tmp30;
-        tmp28 = tmp30;
+        const tmp28 = tmp30;
       } else {
         class R {
           constructor() {
-            if (null != first2) {
-              const obj2 = { uri: tmp };
-              const obj = react_nativeDefault;
-              obj.preload(obj2);
+            if (null != closure_2) {
+              tmp2 = closure_1;
+              tmp3 = closure_2;
+              obj = closure_1(closure_2[15]);
+              obj1 = { uri: null };
+              obj1.uri = tmp;
+              preloadResult = obj.preload(obj1);
             }
+            return;
           }
         }
       }
-      tmp22 = tmp28;
+      let tmp22 = tmp28;
     } else {
       class R {
         constructor() {
-          if (null != first2) {
-            const obj2 = { uri: tmp };
-            const obj = react_nativeDefault;
-            obj.preload(obj2);
+          if (null != closure_2) {
+            tmp2 = closure_1;
+            tmp3 = closure_2;
+            obj = closure_1(closure_2[15]);
+            obj1 = { uri: null };
+            obj1.uri = tmp;
+            preloadResult = obj.preload(obj1);
           }
+          return;
         }
       }
       if ("success" === type) {
         class R {
           constructor() {
-            if (null != first2) {
-              const obj2 = { uri: tmp };
-              const obj = react_nativeDefault;
-              obj.preload(obj2);
+            if (null != closure_2) {
+              tmp2 = closure_1;
+              tmp3 = closure_2;
+              obj = closure_1(closure_2[15]);
+              obj1 = { uri: null };
+              obj1.uri = tmp;
+              preloadResult = obj.preload(obj1);
             }
+            return;
           }
         }
+        const obj5 = { onComplete: onClose, data: first1.userCodeData, successImage: first2 };
+        const tmp27 = jsx(tmp(tmp2[17]).ActivateDeviceSuccess, { onComplete: onClose, data: first1.userCodeData, successImage: first2 });
         cResult[17] = onClose;
         cResult[18] = first1.userCodeData;
         cResult[19] = first2;
-        cResult[20] = jsx(tmp(first2[17]).ActivateDeviceSuccess, { onComplete: onClose, data: first1.userCodeData, successImage: first2 });
-        const tmp27 = jsx(tmp(first2[17]).ActivateDeviceSuccess, { onComplete: onClose, data: first1.userCodeData, successImage: first2 });
+        cResult[20] = tmp27;
       } else {
         class R {
           constructor() {
-            if (null != first2) {
-              const obj2 = { uri: tmp };
-              const obj = react_nativeDefault;
-              obj.preload(obj2);
+            if (null != closure_2) {
+              tmp2 = closure_1;
+              tmp3 = closure_2;
+              obj = closure_1(closure_2[15]);
+              obj1 = { uri: null };
+              obj1.uri = tmp;
+              preloadResult = obj.preload(obj1);
             }
+            return;
           }
         }
         tmp22 = null;
         if ("error" === type) {
-          let tmp23;
           class R {
             constructor() {
-              if (null != first2) {
-                const obj2 = { uri: tmp };
-                const obj = react_nativeDefault;
-                obj.preload(obj2);
+              if (null != closure_2) {
+                tmp2 = closure_1;
+                tmp3 = closure_2;
+                obj = closure_1(closure_2[15]);
+                obj1 = { uri: null };
+                obj1.uri = tmp;
+                preloadResult = obj.preload(obj1);
               }
+              return;
             }
           }
           if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
             class R {
               constructor() {
-                if (null != first2) {
-                  const obj2 = { uri: tmp };
-                  const obj = react_nativeDefault;
-                  obj.preload(obj2);
+                if (null != closure_2) {
+                  tmp2 = closure_1;
+                  tmp3 = closure_2;
+                  obj = closure_1(closure_2[15]);
+                  obj1 = { uri: null };
+                  obj1.uri = tmp;
+                  preloadResult = obj.preload(obj1);
                 }
+                return;
               }
             }
-            const tmp24 = jsx(tmp(first2[18]).ActivateDeviceError, { onRetry: tmp11 });
+            const obj6 = { onRetry: tmp11 };
+            const tmp24 = jsx(tmp(tmp2[18]).ActivateDeviceError, { onRetry: tmp11 });
             cResult[21] = tmp24;
-            tmp23 = tmp24;
+            const tmp23 = tmp24;
           } else {
             class R {
               constructor() {
-                if (null != first2) {
-                  const obj2 = { uri: tmp };
-                  const obj = react_nativeDefault;
-                  obj.preload(obj2);
+                if (null != closure_2) {
+                  tmp2 = closure_1;
+                  tmp3 = closure_2;
+                  obj = closure_1(closure_2[15]);
+                  obj1 = { uri: null };
+                  obj1.uri = tmp;
+                  preloadResult = obj.preload(obj1);
                 }
+                return;
               }
             }
           }
@@ -398,85 +435,106 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
         }
       }
     }
+    const _Symbol = Symbol;
+    if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
+      class R {
+        constructor() {
+          if (null != closure_2) {
+            tmp2 = closure_1;
+            tmp3 = closure_2;
+            obj = closure_1(closure_2[15]);
+            obj1 = { uri: null };
+            obj1.uri = tmp;
+            preloadResult = obj.preload(obj1);
+          }
+          return;
+        }
+      }
+      const source = obj9.makeSource(require("module_13717"));
+      cResult[22] = source;
+    } else {
+      class R {
+        constructor() {
+          if (null != closure_2) {
+            tmp2 = closure_1;
+            tmp3 = closure_2;
+            obj = closure_1(closure_2[15]);
+            obj1 = { uri: null };
+            obj1.uri = tmp;
+            preloadResult = obj.preload(obj1);
+          }
+          return;
+        }
+      }
+    }
+    if (cResult[23] !== tmp4.background) {
+      class R {
+        constructor() {
+          if (null != closure_2) {
+            tmp2 = closure_1;
+            tmp3 = closure_2;
+            obj = closure_1(closure_2[15]);
+            obj1 = { uri: null };
+            obj1.uri = tmp;
+            preloadResult = obj.preload(obj1);
+          }
+          return;
+        }
+      }
+      tmp39[0] = tmp4.background;
+      cResult[23] = tmp4.background;
+      cResult[24] = tmp39;
+    } else {
+      class R {
+        constructor() {
+          if (null != closure_2) {
+            tmp2 = closure_1;
+            tmp3 = closure_2;
+            obj = closure_1(closure_2[15]);
+            obj1 = { uri: null };
+            obj1.uri = tmp;
+            preloadResult = obj.preload(obj1);
+          }
+          return;
+        }
+      }
+    }
+    if (cResult[25] === tmp22) {
+      class R {
+        constructor() {
+          if (null != closure_2) {
+            tmp2 = closure_1;
+            tmp3 = closure_2;
+            obj = closure_1(closure_2[15]);
+            obj1 = { uri: null };
+            obj1.uri = tmp;
+            preloadResult = obj.preload(obj1);
+          }
+          return;
+        }
+      }
+    }
+    const obj7 = { bounces: false, style: null, contentContainerStyle: null, children: null };
+    ({ scroller: obj10.style, scrollerContent: obj10.contentContainerStyle } = tmp4);
+    obj7.children = tmp22;
+    const tmp43 = <closure_8 bounces={false} style={null} contentContainerStyle={null}>{null}</closure_8>;
+    cResult[25] = tmp22;
+    cResult[26] = tmp4.scroller;
+    cResult[27] = tmp4.scrollerContent;
+    cResult[28] = tmp43;
   }
-  if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-    class R {
-      constructor() {
-        if (null != first2) {
-          const obj2 = { uri: tmp };
-          const obj = react_nativeDefault;
-          obj.preload(obj2);
-        }
-      }
-    }
-    const source = obj9.makeSource(require("module_13717"));
-    cResult[22] = source;
-  } else {
-    class R {
-      constructor() {
-        if (null != first2) {
-          const obj2 = { uri: tmp };
-          const obj = react_nativeDefault;
-          obj.preload(obj2);
-        }
-      }
-    }
-  }
-  if (cResult[23] !== tmp4.background) {
-    class R {
-      constructor() {
-        if (null != first2) {
-          const obj2 = { uri: tmp };
-          const obj = react_nativeDefault;
-          obj.preload(obj2);
-        }
-      }
-    }
-    tmp39[0] = tmp4.background;
-    cResult[23] = tmp4.background;
-    cResult[24] = tmp39;
-  } else {
-    class R {
-      constructor() {
-        if (null != first2) {
-          const obj2 = { uri: tmp };
-          const obj = react_nativeDefault;
-          obj.preload(obj2);
-        }
-      }
-    }
-  }
-  if (cResult[25] === tmp22) {
-    class R {
-      constructor() {
-        if (null != first2) {
-          const obj2 = { uri: tmp };
-          const obj = react_nativeDefault;
-          obj.preload(obj2);
-        }
-      }
-    }
-  }
-  cResult[25] = tmp22;
-  cResult[26] = tmp4.scroller;
-  cResult[27] = tmp4.scrollerContent;
-  cResult[28] = <closure_8 bounces={false} style={tmp4.scroller} contentContainerStyle={tmp4.scrollerContent}>{tmp22}</closure_8>;
+  const tmpResult2 = first1(first2[9]);
 }) : ((onClose) => {
-  let closure_1;
-  let closure_3;
-  let first1;
   onClose = onClose.onClose;
   first1 = undefined;
   _slicedToArray = undefined;
   let deviceCodeAuthorizeCallback;
-  const prefilledUserCode = onClose.prefilledUserCode;
   const tmp = closure_10();
   const tmp2 = _slicedToArray(deviceCodeAuthorizeCallback.useState({ type: "user-code-input", usePrefilledCode: true }), 2);
   const first = tmp2[0];
   importDefault = tmp4;
   [first1, _slicedToArray] = deviceCodeAuthorizeCallback.useState(null);
-  let obj = first(first1[8]);
-  const activateDeviceStepTracking = obj.useActivateDeviceStepTracking(first);
+  const activateDeviceStepTracking = first(first1[8]).useActivateDeviceStepTracking(first);
   let items = [tmp2[1]];
   const callback = deviceCodeAuthorizeCallback.useCallback(() => {
     closure_1({ type: "user-code-input" });
@@ -484,23 +542,19 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   const items1 = [tmp2[1]];
   const items2 = [tmp2[1]];
   const callback1 = deviceCodeAuthorizeCallback.useCallback((userCodeData) => {
-    const obj = { type: "success", userCodeData };
-    closure_1(obj);
+    closure_1({ type: "success", userCodeData });
   }, items1);
   const callback2 = deviceCodeAuthorizeCallback.useCallback((userCodeData) => {
-    const obj = { type: "error", userCodeData };
-    closure_1(obj);
+    closure_1({ type: "error", userCodeData });
   }, items2);
-  let obj2 = first(first1[9]);
-  deviceCodeAuthorizeCallback = obj2.useDeviceCodeAuthorizeCallback(callback, callback2, callback1);
+  let obj = first(first1[8]);
+  deviceCodeAuthorizeCallback = first(first1[9]).useDeviceCodeAuthorizeCallback(callback, callback2, callback1);
   const items3 = [deviceCodeAuthorizeCallback];
   const items4 = [first];
   const callback3 = deviceCodeAuthorizeCallback.useCallback((userCodeData) => {
-    let closure_0 = userCodeData;
-    const obj = { type: "authorization", userCodeData };
-    closure_1(obj);
-    const obj2 = first(first1[10]);
-    const obj3 = {
+    closure_0 = userCodeData;
+    closure_1({ type: "authorization", userCodeData });
+    first(first1[10]).openOAuth2Modal({
       clientId: userCodeData.clientId,
       scopes: userCodeData.scopes,
       responseType: "code",
@@ -508,10 +562,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
       isEmbeddedFlow: true,
       withBackPressHandler: false,
       callbackWithoutPost(arg0) {
-        return deviceCodeAuthorizeCallback(userCodeData, arg0);
+        return deviceCodeAuthorizeCallback(closure_0, arg0);
       }
-    };
-    obj2.openOAuth2Modal(obj3);
+    });
   }, items3);
   const effect = deviceCodeAuthorizeCallback.useEffect(() => {
     if ("userCodeData" in first) {
@@ -521,10 +574,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
         closure_3(_modDef13709);
       } else {
         const scopes = userCodeData.scopes;
-        if (scopes.some((item) => {
-          const obj = first(first1[13]);
-          return obj.isSocialLayerUmbrellaScope(item);
-        })) {
+        if (scopes.some((item) => first(first1[13]).isSocialLayerUmbrellaScope(item))) {
           closure_3(_modDef13710);
         }
       }
@@ -534,34 +584,38 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   const effect1 = deviceCodeAuthorizeCallback.useEffect(() => {
     if (null != first1) {
       const obj2 = { uri: tmp };
-      const obj = react_nativeDefault;
-      obj.preload(obj2);
+      NativeImageManagerModuleDefault.preload(obj2);
     }
   }, items5);
   const type = first.type;
   if ("user-code-input" === type) {
-    let tmp22;
-    const UserCodeInput = tmp7(tmp8[16]).UserCodeInput;
+    let prefilledUserCode;
     if (first.usePrefilledCode) {
-      tmp22 = prefilledUserCode;
+      prefilledUserCode = onClose.prefilledUserCode;
     }
-    let tmp21Result = <UserCodeInput prefilledUserCode={tmp22} onUserCodeAccepted={callback3} onClose={onClose} />;
+    const obj3 = { prefilledUserCode, onUserCodeAccepted: callback3, onClose };
+    let tmp21Result = jsx(tmp7(tmp8[16]).UserCodeInput, { prefilledUserCode, onUserCodeAccepted: callback3, onClose });
   } else if ("authorization" === type) {
     tmp21Result = <closure_7 animating />;
   } else if ("success" === type) {
+    const obj4 = { onComplete: onClose, data: first.userCodeData, successImage: first1 };
     tmp21Result = jsx(tmp7(tmp8[17]).ActivateDeviceSuccess, { onComplete: onClose, data: first.userCodeData, successImage: first1 });
   } else {
     tmp21Result = null;
     if ("error" === type) {
+      const obj5 = { onRetry: callback };
       tmp21Result = jsx(tmp7(tmp8[18]).ActivateDeviceError, { onRetry: callback });
     }
   }
+  const obj6 = { source: null, imageStyle: null, style: null, children: null };
+  let obj2 = first(first1[9]);
+  obj6.source = first(first1[19]).makeSource(require("module_13717"));
+  obj6.imageStyle = tmp.imageStyle;
   const items6 = [tmp.background];
+  obj6.style = items6;
   const rect = { bottom: true, top: true, style: tmp.safeArea, children: null };
-  const tmp7Result = first(first1[19]);
-  const SafeAreaPaddingView = tmp7(tmp8[21]).SafeAreaPaddingView;
-  return <closure_6 source={tmp7Result.makeSource(require("module_13717"))} imageStyle={tmp.imageStyle} style={items6}>{null}</closure_6>;
+  const obj7 = { style: tmp.content, children: <closure_8 bounces={false} style={tmp.scroller} contentContainerStyle={tmp.scrollerContent}>{tmp21Result}</closure_8> };
+  rect.children = <closure_5 style={tmp.content}><closure_8 bounces={false} style={tmp.scroller} contentContainerStyle={tmp.scrollerContent}>{tmp21Result}</closure_8></closure_5>;
+  obj6.children = jsx(first(first1[21]).SafeAreaPaddingView, { bottom: true, top: true, style: tmp.safeArea, children: null });
+  return <closure_6 source={null} imageStyle={null} style={null}>{null}</closure_6>;
 });
-const result = size.fileFinishedImporting("modules/activate_device/native/ActivateDevice.tsx");
-
-export const ActivateDevice = tmp4;

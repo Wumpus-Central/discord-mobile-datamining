@@ -2,95 +2,79 @@
 
 // Module 14524 (useSettingSearchResults)
 import debounceDefault from "debounce" /* 551 */;
+import SettingTreeManagerDefault from "SettingTreeManager" /* 14520 */;
 import UserSettingSearchManagerDefault from "UserSettingSearchManager" /* 14525 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import UserSettingSearchStore from "UserSettingSearchStore" /* 14517 */;
 import SettingBlocklistStore from "SettingBlocklistStore" /* 14424 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let setting;
-
-let react = react_mod;
+const require = fn;
 let closure_7 = [];
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
-  let closure_4;
-  let first;
-  let tmp10;
-  let tmp12;
-  let tmp14;
-  let tmp15;
-  let tmp18;
-  let tmp19;
-  let obj = first(576);
-  const cResult = obj.c(8);
-  const tmp = first;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/settings/native/search/hooks/useSettingSearchResults.tsx");
+
+export const useSettingSearchResults = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = first(576).c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const self = this;
-    const self2 = this;
     const tmp6 = UserSettingSearchManagerDefault;
-    const tmpResult = tmp(14519);
-    const tmp62 = new tmp6(tmpResult.getSettingSearchableTitles());
+    const tmp62 = new tmp6(tmp(14519).getSettingSearchableTitles());
     cResult[0] = tmp62;
     first = tmp62;
+    const tmpResult = tmp(14519);
   } else {
     first = cResult[0];
   }
-  [tmp10, importDefault] = _slicedToArray(react.useState(closure_7), 2);
-  const tmp9 = _slicedToArray(react.useState(closure_7), 2);
-  [tmp12, dependencyMap] = _slicedToArray(react.useState(false), 2);
-  const tmp11 = _slicedToArray(react.useState(false), 2);
-  const tmp13 = _slicedToArray(react.useState(10), 2);
-  [tmp14, _slicedToArray] = tmp13;
-  const obj3 = react;
+  const obj = first(576);
+  const obj3 = noop;
+  tmp = first;
+  [tmp12, importDefault] = noop.useState(closure_7);
+  const tmp11 = _slicedToArray(noop.useState(closure_7), 2);
+  [tmp14, dependencyMap] = noop.useState(false);
+  const tmp13 = _slicedToArray(noop.useState(false), 2);
+  [tmp16, _slicedToArray] = noop.useState(10);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp17 = debounceDefault((arg0) => {
+    const tmp19 = debounceDefault((arg0) => {
       const field = SettingBlocklistStore.getField("blocklist");
-      const scoredSearchResults = first.getScoredSearchResults(arg0);
-      const found = scoredSearchResults.filter((setting) => {
+      const found = first.getScoredSearchResults(arg0).filter((setting) => {
         setting = setting.setting;
-        const obj = closure_2_1(closure_2_2[4]);
-        let tmp3 = !obj.isBlocked(setting, closure_0);
-        obj.isBlocked(setting, closure_0);
-        if (tmp3) {
-          tmp3 = !first(closure_2_2[5]).SETTING_RENDERER_CONFIG[setting].unsearchable;
+        const isBlockedResult = SettingTreeManagerDefault.isBlocked(setting, closure_0);
+        let tmp3 = !isBlockedResult;
+        if (!isBlockedResult) {
+          tmp3 = !first(14425).SETTING_RENDERER_CONFIG[setting].unsearchable;
         }
         return tmp3;
       });
       importDefault(found);
       _slicedToArray(Math.max(Math.min(found.length, 10), 5));
-      let tmp3 = dependencyMap(false);
+      dependencyMap(false);
     }, 350);
-    cResult[1] = tmp17;
-    tmp15 = tmp17;
+    cResult[1] = tmp19;
+    let tmp17 = tmp19;
   } else {
-    tmp15 = cResult[1];
+    tmp17 = cResult[1];
   }
-  react = tmp15;
+  noop = tmp17;
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function q() {
-      const obj = {
-        equalityFn(arg0, arg1) {
-          return arg0 === arg1;
-        }
-      };
-      let closure_0 = UserSettingSearchStore.subscribe((query) => {
-        const str = query.query;
-        return str.trim();
-      }, (arg0) => {
+      closure_0 = UserSettingSearchStore.subscribe((query) => query.query.trim(), (arg0) => {
         if ("" === arg0) {
           const cancel = closure_1_4.cancel;
           if (cancel != null) {
             cancel();
           }
           closure_1_1(closure_2_7);
-          closure_1_2(false);
+          dependencyMap(false);
         } else {
-          closure_1_2(true);
+          dependencyMap(true);
           closure_1_4(arg0);
         }
-      }, obj);
+      }, {
+        equalityFn(arg0, arg1) {
+          return arg0 === arg1;
+        }
+      });
       return () => {
         closure_0();
         const cancel = closure_4.cancel;
@@ -99,90 +83,79 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
         }
       };
     };
-    const items = [tmp15];
+    const items = [tmp17];
     cResult[2] = fn;
     cResult[3] = items;
-    tmp19 = items;
-    tmp18 = fn;
+    let tmp21 = items;
+    let tmp20 = fn;
   } else {
-    tmp18 = cResult[2];
-    tmp19 = cResult[3];
+    tmp20 = cResult[2];
+    tmp21 = cResult[3];
   }
-  const effect = obj3.useEffect(tmp18, tmp19);
-  if (cResult[4] === tmp12) {
-    if (cResult[5] === tmp14) {
-      let tmp21;
-      if (cResult[6] === tmp10) {
-        tmp21 = cResult[7];
+  const effect = obj3.useEffect(tmp20, tmp21);
+  if (cResult[4] === tmp14) {
+    if (cResult[5] === tmp16) {
+      if (cResult[6] === tmp12) {
+        let tmp23 = cResult[7];
       }
-      return tmp21;
+      return tmp23;
     }
   }
-  const obj2 = { settings: tmp10, isLoading: tmp12, placeholderCount: tmp14 };
-  cResult[4] = tmp12;
-  cResult[5] = tmp14;
-  cResult[6] = tmp10;
+  const obj2 = { settings: tmp12, isLoading: tmp14, placeholderCount: tmp16 };
+  cResult[4] = tmp14;
+  cResult[5] = tmp16;
+  cResult[6] = tmp12;
   cResult[7] = obj2;
-  tmp21 = obj2;
+  tmp23 = obj2;
+  const tmp15 = _slicedToArray(noop.useState(10), 2);
 }) : (() => {
-  let closure_1;
-  let closure_2;
-  let closure_3;
-  let field;
-  let isLoading;
-  let memo1;
-  let placeholderCount;
-  let settings;
   const memo = memo1.useMemo(() => {
-    const tmp = closure_1(closure_2[8]);
-    const obj = memo(closure_2[9]);
-    const tmp2 = new tmp(obj.getSettingSearchableTitles());
-    return tmp2;
+    const tmp = closure_1(14525);
+    const obj = memo(14519);
+    return new tmp(memo(14519).getSettingSearchableTitles());
   }, []);
-  [settings, closure_1] = memo1.useState(closure_7);
-  [isLoading, closure_2] = memo1.useState(false);
-  [placeholderCount, _slicedToArray] = memo1.useState(10);
+  const settings = _slicedToArray(memo1.useState(closure_7), 2);
+  closure_1 = settings[1];
+  const isLoading = _slicedToArray(memo1.useState(false), 2);
+  dependencyMap = isLoading[1];
+  const placeholderCount = _slicedToArray(memo1.useState(10), 2);
+  _slicedToArray = placeholderCount[1];
   const items = [memo];
   memo1 = memo1.useMemo(() => debounceDefault((arg0) => {
     const field2 = field.getField("blocklist");
     scoredSearchResults = scoredSearchResults.getScoredSearchResults(arg0);
     const found = scoredSearchResults.filter((setting) => {
       setting = setting.setting;
-      const obj = closure_2_1(closure_2_2[4]);
-      let tmp3 = !obj.isBlocked(setting, closure_0);
-      obj.isBlocked(setting, closure_0);
-      if (tmp3) {
-        tmp3 = !scoredSearchResults(closure_2_2[5]).SETTING_RENDERER_CONFIG[setting].unsearchable;
+      const isBlockedResult = closure_2_1(14520).isBlocked(setting, closure_0);
+      let tmp3 = !isBlockedResult;
+      if (!isBlockedResult) {
+        tmp3 = !scoredSearchResults(14425).SETTING_RENDERER_CONFIG[setting].unsearchable;
       }
       return tmp3;
     });
     closure_1_1(found);
     closure_1_3(Math.max(Math.min(found.length, 10), 5));
-    let tmp3 = closure_1_2(false);
+    dependencyMap(false);
   }, 350), items);
   const items1 = [memo1];
   const effect = memo1.useEffect(() => {
-    const obj = {
-      equalityFn(arg0, arg1) {
-        return arg0 === arg1;
-      }
-    };
-    let closure_0 = UserSettingSearchStore.subscribe((query) => {
-      const str = query.query;
-      return str.trim();
-    }, (arg0) => {
+    closure_0 = UserSettingSearchStore.subscribe((query) => query.query.trim(), (arg0) => {
       if ("" === arg0) {
         const cancel = memo1.cancel;
         if (cancel != null) {
           cancel();
         }
         closure_1_1(closure_2_7);
-        closure_1_2(false);
+        dependencyMap(false);
       } else {
-        closure_1_2(true);
+        dependencyMap(true);
         memo1(arg0);
       }
-    }, obj);
+    }, {
+      equalityFn(arg0, arg1) {
+        return arg0 === arg1;
+      }
+    });
     return () => {
       closure_0();
       const cancel = memo1.cancel;
@@ -191,8 +164,5 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
       }
     };
   }, items1);
-  return { settings, isLoading, placeholderCount };
+  return { settings: settings[0], isLoading: isLoading[0], placeholderCount: placeholderCount[0] };
 });
-const result = size.fileFinishedImporting("modules/settings/native/search/hooks/useSettingSearchResults.tsx");
-
-export const useSettingSearchResults = tmp2;

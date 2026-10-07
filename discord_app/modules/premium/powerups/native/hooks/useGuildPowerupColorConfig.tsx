@@ -7,11 +7,9 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupColorConfig.tsx");
 
 export default function useGuildPowerupColorConfig(arg0) {
-  let obj;
-  const tmp = arg0;
-  if (tmp) {
-    obj = { textColor: "text-default", iconColor: nativeDefault.colors.TEXT_DEFAULT };
+  if (arg0) {
     const obj2 = { textColor: "text-default", iconColor: nativeDefault.colors.TEXT_DEFAULT };
+    let obj = obj2;
   } else {
     obj = { textColor: "text-muted", iconColor: nativeDefault.colors.TEXT_MUTED };
   }

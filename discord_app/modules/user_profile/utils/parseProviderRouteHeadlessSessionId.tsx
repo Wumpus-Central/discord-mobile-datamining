@@ -2,10 +2,10 @@
 
 // Module 12857 (parseProviderRouteHeadlessSessionId)
 import PlatformsDefault from "Platforms" /* 5449 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
 
 let c3 = "h:";
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/utils/parseProviderRouteHeadlessSessionId.tsx");
 
 export default function parseProviderRouteHeadlessSessionId(str) {
@@ -15,8 +15,7 @@ export default function parseProviderRouteHeadlessSessionId(str) {
       const first = _slicedToArray(str.split(","), 1)[0];
       if (null != first) {
         if (0 !== first.length) {
-          const obj = PlatformsDefault;
-          const value = obj.get(first);
+          value = PlatformsDefault.get(first);
           let tmp5 = null;
           if (null != value) {
             tmp5 = null;

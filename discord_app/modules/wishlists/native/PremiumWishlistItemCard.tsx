@@ -1,27 +1,22 @@
 // === Module 10785: PremiumWishlistItemCard ===
 
 // Module 10785 (PremiumWishlistItemCard)
-import Fragment from "Fragment" /* 21 */;
 import SKUPreview from "SKUPreview" /* 8459 */;
 import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 8460 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
+require = fn;
 let closure_3 = ["sku", "source", "size"];
-const jsx = Fragment.jsx;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let _require;
-  let sku;
-  let source;
-  let tmp3;
-  let tmp5;
-  let tmp6;
-  const obj = require("react");
-  const cResult = obj.c(13);
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/native/PremiumWishlistItemCard.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = require("c").c(13);
   if (cResult[0] !== arg0) {
     ({ sku, source, size } = arg0);
     _require = size;
@@ -31,9 +26,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[2] = size;
     cResult[3] = sku;
     cResult[4] = source;
-    tmp6 = source;
-    tmp5 = sku;
-    tmp3 = tmp9;
+    let tmp6 = source;
+    let tmp5 = sku;
+    let tmp3 = tmp9;
   } else {
     tmp3 = cResult[1];
     _require = cResult[2];
@@ -65,27 +60,22 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }
-  WishlistItemCardBaseDefault;
+  const obj = require("c");
+  const obj2 = { accessibilityLabel: tmp5.name, renderPreview: P, source: tmp6, size };
   const merged = Object.assign(tmp3);
   cResult[7] = tmp3;
   cResult[8] = P;
   cResult[9] = size;
   cResult[10] = tmp5.name;
   cResult[11] = tmp6;
-  cResult[12] = <tmp11 accessibilityLabel={tmp5.name} renderPreview={P} source={tmp6} size={size} />;
+  cResult[12] = jsx(WishlistItemCardBaseDefault, { accessibilityLabel: tmp5.name, renderPreview: P, source: tmp6, size });
+  const tmp13 = jsx(WishlistItemCardBaseDefault, { accessibilityLabel: tmp5.name, renderPreview: P, source: tmp6, size });
 }) : ((size) => {
-  let sku;
-  let source;
   size = size.size;
   ({ sku, source } = size);
   const merged = Object.assign(size, Object.assign({ sku: 0, source: 0, size: 0 }));
   const items = [size];
-  const callback = react.useCallback(() => jsx(SKUPreview.PremiumSKUPreview, { size }), items);
-  WishlistItemCardBaseDefault;
+  const callback = noop.useCallback(() => jsx(SKUPreview.PremiumSKUPreview, { size }), items);
   const merged1 = Object.assign(merged);
-  return <tmp3 accessibilityLabel={sku.name} renderPreview={callback} source={source} size={size} />;
+  return jsx(WishlistItemCardBaseDefault, { accessibilityLabel: sku.name, renderPreview: callback, source, size });
 });
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/wishlists/native/PremiumWishlistItemCard.tsx");
-
-export default tmp2;

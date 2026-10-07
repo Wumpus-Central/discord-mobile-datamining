@@ -8,34 +8,34 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/presence/splitAgeRestrictedActivities.tsx");
 
 export default function splitAgeRestrictedActivities(activities, hiddenActivities) {
-  let items2;
   const ContentClassificationPresenceFilterExperiment = ContentClassificationPresenceFilterExperiment2.ContentClassificationPresenceFilterExperiment;
   if (ContentClassificationPresenceFilterExperiment.getConfig({ location: "presence_filtering" }).enabled) {
-    let obj4;
     const items = [];
     const items1 = [];
     const iter = activities[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp6 = nextResult;
+      let tmp5 = nextResult;
       let obj2 = ContentClassificationReference;
       if (obj2.isAgeRestrictedClassificationReference(nextResult.content_classification)) {
-        let arr = items1.push(tmp6);
+        let arr = items1.push(tmp5);
       } else {
-        let arr2 = items.push(tmp6);
+        let arr2 = items.push(tmp5);
       }
       continue;
     }
     if (0 === items1.length) {
-      obj4 = { activities, hiddenActivities };
       const obj3 = { activities, hiddenActivities };
+      let obj4 = obj3;
     } else {
-      obj4 = { activities: items, hiddenActivities: items2 };
-      items2 = [];
-      HermesBuiltin.arraySpread(items2, items1, HermesBuiltin.arraySpread(items2, hiddenActivities, 0));
+      obj4 = { activities: items, hiddenActivities: null };
+      const items2 = [];
+      HermesBuiltin.arraySpread(items1, HermesBuiltin.arraySpread(hiddenActivities, 0));
+      obj4.hiddenActivities = items2;
     }
     return obj4;
   } else {
-    return { activities, hiddenActivities };
+    const obj = { activities, hiddenActivities };
+    return obj;
   }
 };

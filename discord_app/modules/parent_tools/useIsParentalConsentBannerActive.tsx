@@ -1,24 +1,22 @@
 // === Module 14689: useIsParentalConsentBannerActive ===
 
 // Module 14689 (useIsParentalConsentBannerActive)
-import react from "react" /* 576 */;
+import c from "c" /* 576 */;
 import useParentalConsentWarning from "useParentalConsentWarning" /* 14690 */;
 import ParentalConsentWarningTypes from "ParentalConsentWarningTypes" /* 14692 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp7;
-  const obj = react;
-  const cResult = obj.c(2);
-  const obj2 = useParentalConsentWarning;
-  const parentalConsentWarning = obj2.useParentalConsentWarning();
+const result = size.fileFinishedImporting("modules/parent_tools/useIsParentalConsentBannerActive.tsx");
+
+export const useIsParentalConsentBannerActive = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();
   let surfaces1;
-  const first = cResult[0];
   if (parentalConsentWarning != null) {
     surfaces1 = parentalConsentWarning.surfaces;
   }
-  if (first !== surfaces1) {
+  if (cResult[0] !== surfaces1) {
     let hasItem;
     if (parentalConsentWarning != null) {
       const surfaces = parentalConsentWarning.surfaces;
@@ -32,14 +30,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     cResult[0] = surfaces2;
     cResult[1] = hasItem;
-    tmp7 = hasItem;
+    let tmp6 = hasItem;
   } else {
-    tmp7 = cResult[1];
+    tmp6 = cResult[1];
   }
-  return true === tmp7;
+  return true === tmp6;
 }) : (() => {
-  const obj = useParentalConsentWarning;
-  const parentalConsentWarning = obj.useParentalConsentWarning();
+  const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();
   let hasItem;
   if (parentalConsentWarning != null) {
     const surfaces = parentalConsentWarning.surfaces;
@@ -49,6 +46,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   return true === hasItem;
 });
-const result = size.fileFinishedImporting("modules/parent_tools/useIsParentalConsentBannerActive.tsx");
-
-export const useIsParentalConsentBannerActive = tmp2;

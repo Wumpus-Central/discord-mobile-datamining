@@ -1,25 +1,27 @@
 // === Module 17539: getInAppReportsFeedbackOptions ===
 
 // Module 17539 (getInAppReportsFeedbackOptions)
-import intl4 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import size from "module_2" /* 2 */;
 
 const InAppReportsFeedbackReasonOption = { COULD_NOT_FIND: "I couldn't find what I was looking for", CONFUSING_LANGUAGE: "I found the language confusing", OTHER: "Other" };
 const result = size.fileFinishedImporting("modules/in_app_reports/getInAppReportsFeedbackOptions.tsx");
 
 export default function getInAppReportsFeedbackOptions() {
-  let intl;
-  let intl2;
-  let intl3;
-  let obj;
-  obj = { label: intl.string(intl4.t.cigGCe), code: 2, value: obj.COULD_NOT_FIND };
-  intl = intl4.intl;
+  const obj = { label: null, code: 2, value: null };
+  const intl = util.intl;
+  obj.label = intl.string(util.t.cigGCe);
+  obj.value = obj.COULD_NOT_FIND;
   const items = [obj, , ];
-  const obj2 = { label: intl2.string(intl4.t.ZyXA0q), code: 3, value: obj.CONFUSING_LANGUAGE };
-  intl2 = intl4.intl;
+  const obj2 = { label: null, code: 3, value: null };
+  const intl2 = util.intl;
+  obj2.label = intl2.string(util.t.ZyXA0q);
+  obj2.value = obj.CONFUSING_LANGUAGE;
   items[1] = obj2;
-  const obj3 = { label: intl3.string(intl4.t.emlT91), code: 1, value: obj.OTHER };
-  intl3 = intl4.intl;
+  const obj3 = { label: null, code: 1, value: null };
+  const intl3 = util.intl;
+  obj3.label = intl3.string(util.t.emlT91);
+  obj3.value = obj.OTHER;
   items[2] = obj3;
   return items;
 };

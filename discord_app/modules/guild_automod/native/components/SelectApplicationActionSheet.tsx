@@ -1,117 +1,118 @@
 // === Module 17749: SelectApplicationActionSheet ===
 
 // Module 17749 (SelectApplicationActionSheet)
-import Fragment from "Fragment" /* 21 */;
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import TableRadioRow2 from "TableRadioRow" /* 6078 */;
-import TableRadioGroup2 from "TableRadioGroup" /* 6079 */;
-import ActionSheet2 from "ActionSheet" /* 6708 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import TableRadioRow from "TableRadioRow" /* 6078 */;
+import TableRadioGroup from "TableRadioGroup" /* 6079 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6651 */;
+import ActionSheet from "ActionSheet" /* 6708 */;
+import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 9257 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let applications;
-  let first;
-  let onSelectApplication;
-  let selectedApplicationId;
-  let tmp10;
-  let tmp6;
-  let tmp7;
-  let obj = onSelectApplication(576);
-  const cResult = obj.c(11);
+require = fn;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_automod/native/components/SelectApplicationActionSheet.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = onSelectApplication(576).c(11);
   ({ applications, selectedApplicationId, onSelectApplication } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = onSelectApplication(1126).intl;
     const stringResult = intl.string(onSelectApplication(1126).t.FKSiso);
     cResult[0] = stringResult;
-    first = stringResult;
+    let first = stringResult;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== onSelectApplication) {
     const fn = function h(dependencyMap) {
-      const obj = ActionSheetActionCreatorsDefault;
-      obj.hideActionSheet();
+      ActionSheetActionCreatorsDefault.hideActionSheet();
       onSelectApplication(dependencyMap);
     };
     cResult[1] = onSelectApplication;
     cResult[2] = fn;
-    tmp6 = fn;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj2 = { title: first };
     const tmp9 = jsx(onSelectApplication(6651).BottomSheetTitleHeader, { title: first });
     cResult[3] = tmp9;
-    tmp7 = tmp9;
+    let tmp7 = tmp9;
   } else {
     tmp7 = cResult[3];
   }
   if (cResult[4] !== applications) {
-    let tmp11;
     const _Symbol = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
       const fn2 = function v(application) {
-        const TableRadioRow = onSelectApplication(dependencyMap[7]).TableRadioRow;
-        return <TableRadioRow key={application.id} value={application.id} label={application.name} icon={null} />;
+        const obj = { value: application.id, label: application.name, icon: jsx(TableRowApplicationIconDefault, { application }) };
+        return jsx(onSelectApplication(6078).TableRadioRow, { value: application.id, label: application.name, icon: jsx(TableRowApplicationIconDefault, { application }) }, application.id);
       };
       cResult[6] = fn2;
-      tmp11 = fn2;
+      let tmp11 = fn2;
     } else {
       tmp11 = cResult[6];
     }
     const mapped = applications.map(tmp11);
     cResult[4] = applications;
     cResult[5] = mapped;
-    tmp10 = mapped;
   } else {
-    tmp10 = cResult[5];
-  }
-  if (cResult[7] === tmp6) {
-    if (cResult[8] === selectedApplicationId) {
-      let tmp13;
-      if (cResult[9] === tmp10) {
-        tmp13 = cResult[10];
+    if (cResult[7] === tmp6) {
+      if (cResult[8] === selectedApplicationId) {
+        if (cResult[9] === tmp10) {
+          let tmp14 = cResult[10];
+        }
+        return tmp14;
       }
-      return tmp13;
     }
+    const obj3 = { header: tmp7, children: null };
+    const obj4 = { hasIcons: true, accessibilityLabel: first, defaultValue: selectedApplicationId, onChange: tmp6, children: cResult[5] };
+    obj3.children = jsx(onSelectApplication(6079).TableRadioGroup, { hasIcons: true, accessibilityLabel: first, defaultValue: selectedApplicationId, onChange: tmp6, children: cResult[5] });
+    const tmp16 = jsx(onSelectApplication(6708).ActionSheet, { header: tmp7, children: null });
+    cResult[7] = tmp6;
+    cResult[8] = selectedApplicationId;
+    cResult[9] = cResult[5];
+    cResult[10] = tmp16;
+    tmp14 = tmp16;
   }
-  const ActionSheet = onSelectApplication(6708).ActionSheet;
-  const tmp14 = <ActionSheet header={tmp7}>{null}</ActionSheet>;
-  cResult[7] = tmp6;
-  cResult[8] = selectedApplicationId;
-  cResult[9] = tmp10;
-  cResult[10] = tmp14;
-  tmp13 = tmp14;
+  let obj = onSelectApplication(576);
 }) : ((arg0) => {
-  let applications;
-  let selectedApplicationId;
   ({ applications, selectedApplicationId, onSelectApplication: require } = arg0);
-  const intl = intl2.intl;
-  const stringResult = intl.string(intl2.t.FKSiso);
-  const ActionSheet = ActionSheet2.ActionSheet;
+  const intl = util.intl;
+  const stringResult = intl.string(util.t.FKSiso);
+  let obj = { header: jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: stringResult }), children: null };
   const obj2 = {
     hasIcons: true,
     accessibilityLabel: stringResult,
     defaultValue: selectedApplicationId,
     onChange(arg0) {
-      const obj = ActionSheetActionCreatorsDefault;
-      obj.hideActionSheet();
+      ActionSheetActionCreatorsDefault.hideActionSheet();
       require(arg0);
     },
     children: applications.map((application) => {
-      const TableRadioRow = TableRadioRow2.TableRadioRow;
-      return <TableRadioRow key={application.id} value={application.id} label={application.name} icon={null} />;
+      const obj = { value: application.id, label: application.name, icon: jsx(TableRowApplicationIconDefault, { application }) };
+      return jsx(TableRadioRow.TableRadioRow, { value: application.id, label: application.name, icon: jsx(TableRowApplicationIconDefault, { application }) }, application.id);
     })
   };
-  const TableRadioGroup = TableRadioGroup2.TableRadioGroup;
-  return <ActionSheet header={null}>{null}</ActionSheet>;
+  obj.children = jsx(TableRadioGroup.TableRadioGroup, {
+    hasIcons: true,
+    accessibilityLabel: stringResult,
+    defaultValue: selectedApplicationId,
+    onChange(arg0) {
+      ActionSheetActionCreatorsDefault.hideActionSheet();
+      require(arg0);
+    },
+    children: applications.map((application) => {
+      const obj = { value: application.id, label: application.name, icon: jsx(TableRowApplicationIconDefault, { application }) };
+      return jsx(TableRadioRow.TableRadioRow, { value: application.id, label: application.name, icon: jsx(TableRowApplicationIconDefault, { application }) }, application.id);
+    })
+  });
+  return jsx(ActionSheet.ActionSheet, { header: jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: stringResult }), children: null });
 });
-const result = size.fileFinishedImporting("modules/guild_automod/native/components/SelectApplicationActionSheet.tsx");
-
-export default tmp3;

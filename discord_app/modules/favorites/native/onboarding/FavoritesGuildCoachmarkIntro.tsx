@@ -1,46 +1,34 @@
 // === Module 16294: FavoritesGuildCoachmarkIntro ===
 
 // Module 16294 (FavoritesGuildCoachmarkIntro)
-import Fragment from "Fragment" /* 21 */;
-import Constants from "Constants" /* 1085 */;
-import intl4 from "intl" /* 1126 */;
-import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
+import util from "util" /* 1126 */;
 import _modDef3395 from "module_3395" /* 3395 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
 import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10057 */;
 import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16289 */;
-import _slicedToArray_mod from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16265 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let dependencyMap, markAsDismissed;
-
-let _slicedToArray = _slicedToArray_mod;
-const FAVORITES = Constants.FAVORITES;
-const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
-const jsx = Fragment.jsx;
+require = fn;
+const FAVORITES = fn(1085).FAVORITES;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const jsx = fn(21).jsx;
 const __initData = { code: "function FavoritesGuildCoachmarkIntroTsx1(){const{scrollPosition}=this.__closure;return scrollPosition.get()<=0;}" };
 const __initData2 = { code: "function FavoritesGuildCoachmarkIntroTsx2(atTop,wasAtTop){const{runOnJS,setScrolledToTop}=this.__closure;if(atTop===wasAtTop){return;}runOnJS(setScrolledToTop)(atTop);}" };
 const __initData3 = { code: "function FavoritesGuildCoachmarkIntroTsx3(){const{scrollPosition}=this.__closure;return scrollPosition.get()<=0;}" };
 const __initData4 = { code: "function FavoritesGuildCoachmarkIntroTsx4(atTop,wasAtTop){const{runOnJS,setScrolledToTop}=this.__closure;if(atTop===wasAtTop){return;}runOnJS(setScrolledToTop)(atTop);}" };
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => {
-  let closure_2;
-  let first;
-  let tmp10;
-  let tmp14;
-  let tmp15;
-  let tmp20;
-  let tmp7;
-  let tmp9;
-  let obj = markAsDismissed(576);
-  const cResult = obj.c(14);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkIntro.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => {
+  const cResult = markAsDismissed(576).c(14);
   markAsDismissed = markAsDismissed.markAsDismissed;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const state = GuildsBarDnDStore.getState();
+    state = GuildsBarDnDStore.getState();
     cResult[0] = state;
-    first = state;
+    let first = state;
   } else {
     first = cResult[0];
   }
@@ -50,14 +38,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
       return scrollPosition.get() <= 0;
     };
     cResult[1] = fn;
-    tmp7 = fn;
+    let tmp7 = fn;
   } else {
     tmp7 = cResult[1];
   }
-  [tmp9, tmp10] = react.useState(tmp7);
+  let obj = markAsDismissed(576);
+  [tmp9, tmp10] = noop.useState(tmp7);
   dependencyMap = tmp10;
-  _slicedToArray(react.useState(tmp7), 2);
-  const tmpResult = markAsDismissed(4618);
+  const tmp8 = _slicedToArray(noop.useState(tmp7), 2);
   class C {
     constructor() {
       return scrollPosition.get() <= 0;
@@ -68,19 +56,19 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
   C.__initData = __initData;
   const fn2 = function k(arg0, arg1) {
     if (arg0 !== arg1) {
-      const obj = ReanimatedRexport;
-      obj.runOnJS(dependencyMap)(arg0);
+      ReanimatedRexport.runOnJS(closure_2)(arg0);
     }
   };
+  const tmpResult = markAsDismissed(4618);
   fn2.__closure = { runOnJS: markAsDismissed(4618).runOnJS, setScrolledToTop: tmp10 };
   fn2.__workletHash = 13648062364539;
   fn2.__initData = __initData2;
-  ({ runOnJS: markAsDismissed(4618).runOnJS, setScrolledToTop: tmp10 });
   const animatedReaction = tmpResult.useAnimatedReaction(C, fn2);
   if (cResult[2] !== markAsDismissed) {
     class I {
       constructor() {
-        markAsDismissed(ContentDismissActionType.USER_DISMISS);
+        tmp = markAsDismissed(ContentDismissActionType.USER_DISMISS);
+        return;
       }
     }
     cResult[2] = markAsDismissed;
@@ -88,17 +76,19 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
   } else {
     class I {
       constructor() {
-        markAsDismissed(ContentDismissActionType.USER_DISMISS);
+        tmp = markAsDismissed(ContentDismissActionType.USER_DISMISS);
+        return;
       }
     }
   }
   if (cResult[4] !== markAsDismissed) {
     class D {
       constructor() {
-        const obj = FavoritesGuildAnalytics;
-        const result = obj.setNextFavoritesGuildViewSource("intro_dc");
-        transitionGuildsBarToGuildOrOpenSelectedChannelDefault(FAVORITES);
-        markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+        obj = closure_0(closure_2[9]);
+        result = obj.setNextFavoritesGuildViewSource("intro_dc");
+        tmp2 = closure_1(closure_2[10])(FAVORITES);
+        tmp3 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+        return;
       }
     }
     cResult[4] = markAsDismissed;
@@ -106,20 +96,22 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
   } else {
     class D {
       constructor() {
-        const obj = FavoritesGuildAnalytics;
-        const result = obj.setNextFavoritesGuildViewSource("intro_dc");
-        transitionGuildsBarToGuildOrOpenSelectedChannelDefault(FAVORITES);
-        markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+        obj = closure_0(closure_2[9]);
+        result = obj.setNextFavoritesGuildViewSource("intro_dc");
+        tmp2 = closure_1(closure_2[10])(FAVORITES);
+        tmp3 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+        return;
       }
     }
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     class D {
       constructor() {
-        const obj = FavoritesGuildAnalytics;
-        const result = obj.setNextFavoritesGuildViewSource("intro_dc");
-        transitionGuildsBarToGuildOrOpenSelectedChannelDefault(FAVORITES);
-        markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+        obj = closure_0(closure_2[9]);
+        result = obj.setNextFavoritesGuildViewSource("intro_dc");
+        tmp2 = closure_1(closure_2[10])(FAVORITES);
+        tmp3 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+        return;
       }
     }
     const stringResult = obj4.string(scrollPosition(3395)["bu/mLv"]);
@@ -127,15 +119,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
     const stringResult1 = intl.string(scrollPosition(3395).kxQJ7q);
     cResult[6] = stringResult;
     cResult[7] = stringResult1;
-    tmp15 = stringResult1;
-    tmp14 = stringResult;
+    let tmp15 = stringResult1;
+    const tmp14 = stringResult;
   } else {
     class D {
       constructor() {
-        const obj = FavoritesGuildAnalytics;
-        const result = obj.setNextFavoritesGuildViewSource("intro_dc");
-        transitionGuildsBarToGuildOrOpenSelectedChannelDefault(FAVORITES);
-        markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+        obj = closure_0(closure_2[9]);
+        result = obj.setNextFavoritesGuildViewSource("intro_dc");
+        tmp2 = closure_1(closure_2[10])(FAVORITES);
+        tmp3 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+        return;
       }
     }
     tmp15 = cResult[7];
@@ -143,18 +136,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
     class R {
       constructor() {
-        return jsx(scrollPosition(dependencyMap[13]), {});
+        return closure_1_8(scrollPosition(closure_2[13]), {});
       }
     }
     const intl2 = tmp(1126).intl;
     const stringResult2 = intl2.string(scrollPosition(3395)["vN/KQ9"]);
     cResult[8] = R;
     cResult[9] = stringResult2;
-    tmp20 = stringResult2;
+    let tmp20 = stringResult2;
   } else {
     class R {
       constructor() {
-        return jsx(scrollPosition(dependencyMap[13]), {});
+        return closure_1_8(scrollPosition(closure_2[13]), {});
       }
     }
     tmp20 = cResult[9];
@@ -162,28 +155,25 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
   if (cResult[10] === D) {
     class R {
       constructor() {
-        return jsx(scrollPosition(dependencyMap[13]), {});
+        return closure_1_8(scrollPosition(closure_2[13]), {});
       }
     }
   }
-  const obj3 = { visible: tmp9, position: "bottom", title: tmp14, description: tmp15, onDismiss: I, renderImgComponent: R, buttonLabel: tmp20, onButtonPress: D };
   cResult[10] = D;
   cResult[11] = I;
   cResult[12] = tmp9;
-  cResult[13] = obj3;
+  cResult[13] = { visible: tmp9, position: "bottom", title: tmp14, description: tmp15, onDismiss: I, renderImgComponent: R, buttonLabel: tmp20, onButtonPress: D };
+  const obj2 = { runOnJS: markAsDismissed(4618).runOnJS, setScrolledToTop: tmp10 };
+  const obj3 = { visible: tmp9, position: "bottom", title: tmp14, description: tmp15, onDismiss: I, renderImgComponent: R, buttonLabel: tmp20, onButtonPress: D };
 }) : ((markAsDismissed) => {
-  let closure_3;
-  let tmp3;
-  let visible;
   markAsDismissed = markAsDismissed.markAsDismissed;
-  visible = undefined;
+  _slicedToArray = undefined;
   let onDismiss;
   let callback1;
-  const targetRef = markAsDismissed.targetRef;
   const scrollPosition = callback1.getState().scrollPosition;
-  [visible, tmp3] = onDismiss.useState(() => scrollPosition.get() <= 0);
+  const tmp = _slicedToArray(onDismiss.useState(() => scrollPosition.get() <= 0), 2);
+  const visible = tmp[0];
   _slicedToArray = tmp3;
-  let obj = markAsDismissed(visible[8]);
   const fn = function v() {
     return scrollPosition.get() <= 0;
   };
@@ -192,14 +182,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
   fn.__initData = __initData3;
   const fn2 = function p(arg0, arg1) {
     if (arg0 !== arg1) {
-      const obj = ReanimatedRexport;
-      obj.runOnJS(closure_3)(arg0);
+      ReanimatedRexport.runOnJS(closure_3)(arg0);
     }
   };
-  fn2.__closure = { runOnJS: markAsDismissed(visible[8]).runOnJS, setScrolledToTop: tmp3 };
+  let obj = markAsDismissed(visible[8]);
+  fn2.__closure = { runOnJS: markAsDismissed(visible[8]).runOnJS, setScrolledToTop: tmp[1] };
   fn2.__workletHash = 4195860117373;
   fn2.__initData = __initData4;
-  ({ runOnJS: markAsDismissed(visible[8]).runOnJS, setScrolledToTop: tmp3 });
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
   const items = [markAsDismissed];
   onDismiss = onDismiss.useCallback(() => {
@@ -207,37 +196,27 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
   }, items);
   const items1 = [markAsDismissed];
   callback1 = onDismiss.useCallback(() => {
-    const obj = FavoritesGuildAnalytics;
-    const result = obj.setNextFavoritesGuildViewSource("intro_dc");
+    const result = FavoritesGuildAnalytics.setNextFavoritesGuildViewSource("intro_dc");
     transitionGuildsBarToGuildOrOpenSelectedChannelDefault(FAVORITES);
     markAsDismissed(ContentDismissActionType.TAKE_ACTION);
   }, items1);
   const items2 = [visible, onDismiss, callback1];
   const memo = onDismiss.useMemo(() => {
-    let intl;
-    let intl2;
-    let intl3;
-    const obj = {
-      visible,
-      position: "bottom",
-      title: intl.string(_modDef3395["bu/mLv"]),
-      description: intl2.string(_modDef3395.kxQJ7q),
-      onDismiss,
-      renderImgComponent() {
-        return closure_1_8(scrollPosition(visible[13]), {});
-      },
-      buttonLabel: intl3.string(_modDef3395["vN/KQ9"]),
-      onButtonPress: callback1
+    const obj = { visible, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: null, buttonLabel: null, onButtonPress: null };
+    const intl = util.intl;
+    obj.title = intl.string(_modDef3395["bu/mLv"]);
+    const intl2 = util.intl;
+    obj.description = intl2.string(_modDef3395.kxQJ7q);
+    obj.onDismiss = onDismiss;
+    obj.renderImgComponent = function renderImgComponent() {
+      return closure_1_8(scrollPosition(visible[13]), {});
     };
-    intl = intl4.intl;
-    intl2 = intl4.intl;
-    intl3 = intl4.intl;
+    const intl3 = util.intl;
+    obj.buttonLabel = intl3.string(_modDef3395["vN/KQ9"]);
+    obj.onButtonPress = callback1;
     return obj;
   }, items2);
-  const obj3 = markAsDismissed(visible[14]);
-  const coachmark = obj3.useCoachmark(targetRef, memo);
+  const obj2 = { runOnJS: markAsDismissed(visible[8]).runOnJS, setScrolledToTop: tmp[1] };
+  const coachmark = markAsDismissed(visible[14]).useCoachmark(markAsDismissed.targetRef, memo);
   return null;
 });
-let result = size.fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkIntro.tsx");
-
-export default tmp2;

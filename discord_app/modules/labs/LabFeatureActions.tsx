@@ -3,9 +3,9 @@
 // Module 15375 (LabFeatureActions)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import LabFeatureStore from "LabFeatureStore" /* 8041 */;
-import size from "module_2" /* 2 */;
 
 let closure_3 = {};
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/labs/LabFeatureActions.tsx");
 
 export const toggleLabFeature = function toggleLabFeature(ICYMI_LAB_FEATURE, arg1) {
@@ -17,7 +17,6 @@ export const toggleLabFeature = function toggleLabFeature(ICYMI_LAB_FEATURE, arg
   if (enabled === undefined) {
     enabled = !LabFeatureStore.get(ICYMI_LAB_FEATURE);
   }
-  const obj = DispatcherDefault;
+  DispatcherDefault.dispatch({ type: "LAB_FEATURE_TOGGLE", labFeature: ICYMI_LAB_FEATURE, enabled });
   const obj2 = { type: "LAB_FEATURE_TOGGLE", labFeature: ICYMI_LAB_FEATURE, enabled };
-  obj.dispatch(obj2);
 };

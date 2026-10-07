@@ -1,66 +1,96 @@
 // === Module 15145: DefaultGuildThemePreferenceSetting ===
 
 // Module 15145 (DefaultGuildThemePreferenceSetting)
-import react2 from "react" /* 576 */;
-import intl3 from "intl" /* 1126 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4778 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
+require = fn;
+const ReactCompilerGating = fn(558);
+const SettingBuilders = fn(11142);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  let intl;
-  let intl2;
-  const obj = react2;
-  const cResult = obj.c(1);
+  const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { label: intl.string(intl3.t.aN3RNQ), value: preloaded_user_settings.GuildThemeSourcePreference.GUILD };
-    intl = intl3.intl;
+    const obj2 = { label: null, value: null };
+    const intl = util.intl;
+    obj2.label = intl.string(util.t.aN3RNQ);
+    obj2.value = preloaded_user_settings.GuildThemeSourcePreference.GUILD;
     const items = [obj2, ];
-    const obj3 = { label: intl2.string(intl3.t.js8y7t), value: preloaded_user_settings.GuildThemeSourcePreference.PERSONAL };
-    intl2 = intl3.intl;
+    const obj3 = { label: null, value: null };
+    const intl2 = util.intl;
+    obj3.label = intl2.string(util.t.js8y7t);
+    obj3.value = preloaded_user_settings.GuildThemeSourcePreference.PERSONAL;
     items[1] = obj3;
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   return first;
-}) : (() => react.useMemo(() => {
-  let intl;
-  let intl2;
-  const obj = { label: intl.string(intl3.t.aN3RNQ), value: preloaded_user_settings.GuildThemeSourcePreference.GUILD };
-  intl = intl3.intl;
+}) : (() => noop.useMemo(() => {
+  const obj = { label: null, value: null };
+  const intl = util.intl;
+  obj.label = intl.string(util.t.aN3RNQ);
+  obj.value = preloaded_user_settings.GuildThemeSourcePreference.GUILD;
   const items = [obj, ];
-  const obj2 = { label: intl2.string(intl3.t.js8y7t), value: preloaded_user_settings.GuildThemeSourcePreference.PERSONAL };
-  intl2 = intl3.intl;
+  const obj2 = { label: null, value: null };
+  const intl2 = util.intl;
+  obj2.label = intl2.string(util.t.js8y7t);
+  obj2.value = preloaded_user_settings.GuildThemeSourcePreference.PERSONAL;
   items[1] = obj2;
   return items;
 }, []));
-let obj = {
+const radio = SettingBuilders.createRadio({
   useTitle() {
-    const intl = intl3.intl;
-    return intl.string(intl3.t.Q7mm4g);
+    const intl = util.intl;
+    return intl.string(util.t.Q7mm4g);
   },
-  parent: MobileUserSettings.APPEARANCE,
-  useValue: UserSettings.DefaultGuildThemePreference.useSetting,
+  parent: fn(7645).MobileUserSettings.APPEARANCE,
+  useValue: fn(2028).DefaultGuildThemePreference.useSetting,
   onValueChange: function onDefaultGuildThemePreferenceChange(arg0) {
     const DefaultGuildThemePreference = UserSettings.DefaultGuildThemePreference;
     DefaultGuildThemePreference.updateSetting(Number(arg0));
   },
-  useOptions: tmp2,
+  useOptions: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(1);
+    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+      const obj2 = { label: null, value: null };
+      const intl = util.intl;
+      obj2.label = intl.string(util.t.aN3RNQ);
+      obj2.value = preloaded_user_settings.GuildThemeSourcePreference.GUILD;
+      const items = [obj2, ];
+      const obj3 = { label: null, value: null };
+      const intl2 = util.intl;
+      obj3.label = intl2.string(util.t.js8y7t);
+      obj3.value = preloaded_user_settings.GuildThemeSourcePreference.PERSONAL;
+      items[1] = obj3;
+      cResult[0] = items;
+      let first = items;
+    } else {
+      first = cResult[0];
+    }
+    return first;
+  }) : (() => noop.useMemo(() => {
+    const obj = { label: null, value: null };
+    const intl = util.intl;
+    obj.label = intl.string(util.t.aN3RNQ);
+    obj.value = preloaded_user_settings.GuildThemeSourcePreference.GUILD;
+    const items = [obj, ];
+    const obj2 = { label: null, value: null };
+    const intl2 = util.intl;
+    obj2.label = intl2.string(util.t.js8y7t);
+    obj2.value = preloaded_user_settings.GuildThemeSourcePreference.PERSONAL;
+    items[1] = obj2;
+    return items;
+  }, [])),
   usePredicate() {
-    const obj = ServerThemeUserExperiment;
-    return obj.useServerThemeUserEnabled("DefaultGuildThemePreferenceSetting");
+    return ServerThemeUserExperiment.useServerThemeUserEnabled("DefaultGuildThemePreferenceSetting");
   }
-};
-const radio = SettingBuilders.createRadio(obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DefaultGuildThemePreferenceSetting.tsx");
 
 export default radio;

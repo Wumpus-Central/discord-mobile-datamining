@@ -3,7 +3,6 @@
 // Module 1377 (UserStore)
 import _mod12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import PremiumConstants from "PremiumConstants" /* 1379 */;
 import UserStoreUtils from "UserStoreUtils" /* 1388 */;
 import FlagUtilsAll from "FlagUtils" /* 1390 */;
 import PrimaryGuildUtils from "PrimaryGuildUtils" /* 1393 */;
@@ -19,29 +18,22 @@ import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1378 */;
 import UserRecord from "UserRecord" /* 1391 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1084 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-let clip_participants, message_preview, moderator_report, set;
-
-let c9;
-let metroImportAll;
-let metroImportDefault;
+require = fn;
 function mergeGuildAvatar(id, guildId, avatar) {
   if (null == obj[id]) {
     return false;
   } else {
-    let result;
     if (null == avatar) {
-      result = obj.removeGuildAvatarHash(guildId);
+      let result = obj.removeGuildAvatarHash(guildId);
     } else {
       result = obj.addGuildAvatarHash(guildId, avatar);
     }
-    tmp[obj[id].id] = result;
-    if (obj[id] !== result) {
+    tmp[obj.id] = result;
+    if (obj !== result) {
       closure_12 = closure_12 + 1;
     }
-    return obj[id] !== result;
+    return obj !== result;
   }
 }
 function mergeUserPrimaryGuild(id, primary_guild) {
@@ -50,14 +42,14 @@ function mergeUserPrimaryGuild(id, primary_guild) {
     const obj = PrimaryGuildUtils;
     const result = obj.isUserPrimaryGuildEqual(tmp2.primaryGuild, primary_guild.primary_guild);
     let tmp8 = !result;
-    if (tmp8) {
+    if (!result) {
       let flag = null == tmp2.primaryGuild || null != primary_guild.primary_guild;
       if (flag) {
-        const tmp5Result = PrimaryGuildUtils;
-        obj[id].primaryGuild = tmp5Result.ensureUserPrimaryGuild(primary_guild.primary_guild);
-        tmp[obj[id].id] = obj[id];
+        tmp2.primaryGuild = PrimaryGuildUtils.ensureUserPrimaryGuild(primary_guild.primary_guild);
+        tmp[tmp2.id] = tmp2;
         closure_12 = closure_12 + 1;
         flag = true;
+        const tmp5Result = PrimaryGuildUtils;
       }
       tmp8 = flag;
     }
@@ -69,86 +61,85 @@ function transformUser(mfa_enabled) {
   mfa_enabled = mfa_enabled.mfa_enabled;
   if (null != mfa_enabled) {
     mfa_enabled.mfaEnabled = mfa_enabled;
-    delete mfa_enabled["mfa_enabled"];
+    delete tmp[tmp2];
   }
-  const obj = UserStoreUtils;
-  const premiumTypeFromRawValue = obj.getPremiumTypeFromRawValue(mfa_enabled.premium_type);
+  const premiumTypeFromRawValue = UserStoreUtils.getPremiumTypeFromRawValue(mfa_enabled.premium_type);
   if (undefined !== premiumTypeFromRawValue) {
     mfa_enabled.premiumType = premiumTypeFromRawValue;
-    delete mfa_enabled["premium_type"];
+    delete tmp[tmp3];
   }
   const nsfw_allowed = mfa_enabled.nsfw_allowed;
   if (null != nsfw_allowed) {
     mfa_enabled.nsfwAllowed = nsfw_allowed;
-    delete mfa_enabled["nsfw_allowed"];
+    delete tmp[tmp3];
   }
   const age_verification_status = mfa_enabled.age_verification_status;
   if (null != age_verification_status) {
     mfa_enabled.ageVerificationStatus = age_verification_status;
-    delete mfa_enabled["age_verification_status"];
+    delete tmp[tmp3];
   }
   const public_flags = mfa_enabled.public_flags;
   if (null != public_flags) {
     mfa_enabled.publicFlags = public_flags;
-    delete mfa_enabled["public_flags"];
+    delete tmp[tmp3];
   }
   const purchased_flags = mfa_enabled.purchased_flags;
   if (undefined !== purchased_flags) {
     mfa_enabled.purchasedFlags = purchased_flags;
-    delete mfa_enabled["purchased_flags"];
+    delete tmp[tmp3];
   }
   const premium_usage_flags = mfa_enabled.premium_usage_flags;
   if (undefined !== premium_usage_flags) {
     mfa_enabled.premiumUsageFlags = premium_usage_flags;
-    delete mfa_enabled["premium_usage_flags"];
+    delete tmp[tmp3];
   }
   if (null === mfa_enabled.banner_color) {
-    delete mfa_enabled["banner_color"];
+    delete tmp[tmp3];
   }
   const avatar_decoration_data = mfa_enabled.avatar_decoration_data;
   if (undefined !== avatar_decoration_data) {
-    const tmp2Result = AvatarDecorationUtils;
-    mfa_enabled.avatarDecorationData = tmp2Result.parseAvatarDecorationData(avatar_decoration_data);
-    delete mfa_enabled["avatar_decoration_data"];
+    mfa_enabled.avatarDecorationData = AvatarDecorationUtils.parseAvatarDecorationData(avatar_decoration_data);
+    delete tmp[tmp3];
+    const tmp4Result = AvatarDecorationUtils;
   }
   const collectibles = mfa_enabled.collectibles;
   if (undefined !== collectibles) {
-    delete mfa_enabled["collectibles"];
-    const tmp2Result6 = mappers;
-    mfa_enabled.collectibles = tmp2Result6.parseServerUserCollectibles(collectibles);
+    delete tmp[tmp3];
+    mfa_enabled.collectibles = mappers.parseServerUserCollectibles(collectibles);
+    const tmp4Result6 = mappers;
   }
   const global_name = mfa_enabled.global_name;
   if (undefined !== global_name) {
     mfa_enabled.globalName = global_name;
-    delete mfa_enabled["global_name"];
+    delete tmp[tmp3];
   }
   const primary_guild = mfa_enabled.primary_guild;
   if (undefined !== primary_guild) {
-    const tmp2Result7 = PrimaryGuildUtils;
-    mfa_enabled.primary_guild = tmp2Result7.ensureUserPrimaryGuild(primary_guild);
+    mfa_enabled.primary_guild = PrimaryGuildUtils.ensureUserPrimaryGuild(primary_guild);
+    const tmp4Result7 = PrimaryGuildUtils;
   }
   const display_name_styles = mfa_enabled.display_name_styles;
   if (undefined !== display_name_styles) {
-    const tmp2Result8 = DisplayNameStylesUtils;
-    mfa_enabled.displayNameStyles = tmp2Result8.parseServerDisplayNameStyles(display_name_styles);
-    delete mfa_enabled["display_name_styles"];
+    mfa_enabled.displayNameStyles = DisplayNameStylesUtils.parseServerDisplayNameStyles(display_name_styles);
+    delete tmp[tmp3];
+    const tmp4Result8 = DisplayNameStylesUtils;
   }
   const typing_indicator_style = mfa_enabled.typing_indicator_style;
   if (undefined !== typing_indicator_style) {
-    const tmp2Result9 = CustomTypingIndicatorTypes;
-    mfa_enabled.typingIndicatorStyle = tmp2Result9.parseServerTypingIndicatorStyle(typing_indicator_style);
-    delete mfa_enabled["typing_indicator_style"];
+    mfa_enabled.typingIndicatorStyle = CustomTypingIndicatorTypes.parseServerTypingIndicatorStyle(typing_indicator_style);
+    delete tmp[tmp3];
+    const tmp4Result9 = CustomTypingIndicatorTypes;
   }
   const vad_colors = mfa_enabled.vad_colors;
   if (undefined !== vad_colors) {
     mfa_enabled.vadColors = vad_colors;
-    delete mfa_enabled["vad_colors"];
+    delete tmp[tmp3];
   }
   const premium_state = mfa_enabled.premium_state;
   if (undefined !== premium_state) {
-    const tmp2Result10 = PremiumStateUtils;
-    mfa_enabled.premiumState = tmp2Result10.parseServerPremiumState(premium_state);
-    delete mfa_enabled["premium_state"];
+    mfa_enabled.premiumState = PremiumStateUtils.parseServerPremiumState(premium_state);
+    delete tmp[tmp3];
+    const tmp4Result10 = PremiumStateUtils;
   }
   const restricted_schedule = mfa_enabled.restricted_schedule;
   if (undefined !== restricted_schedule) {
@@ -158,38 +149,36 @@ function transformUser(mfa_enabled) {
       fromServerResult = null;
     }
     mfa_enabled.restrictedSchedule = fromServerResult;
-    delete mfa_enabled["restricted_schedule"];
+    delete tmp[tmp2];
   }
   const app_transaction_ids = mfa_enabled.app_transaction_ids;
   if (undefined !== app_transaction_ids) {
     mfa_enabled.appTransactionIds = app_transaction_ids;
-    delete mfa_enabled["app_transaction_ids"];
+    delete tmp[tmp2];
   }
   return mfa_enabled;
 }
 function mergeUser(user, arg1) {
-  let mergeResult;
-  let tmp21;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
   }
-  const tmp2 = undefined !== user.id && user.id === AuthenticationStore.getId();
+  let tmp2 = undefined !== user.id;
+  if (tmp2) {
+    tmp2 = user.id === AuthenticationStore.getId();
+  }
   if (null == obj[user.id]) {
     transformUser(user);
-    const self = this;
-    const self2 = this;
-    const tmp26 = new UserRecord(user);
-    const premiumType3 = tmp26.premiumType;
-    mergeResult = tmp26;
-    tmp21 = premiumType3;
+    const tmp28 = new UserRecord(user);
+    const premiumType3 = tmp28.premiumType;
+    let mergeResult = tmp28;
+    let tmp21 = premiumType3;
     if (undefined !== premiumType3) {
-      mergeResult = tmp26;
+      mergeResult = tmp28;
       tmp21 = premiumType3;
       if (tmp2) {
-        const obj7 = UserStoreUtils;
-        const isStaffEnvResult = obj7.isStaffEnv(tmp26);
-        let premiumType4 = tmp26.premiumType;
+        const isStaffEnvResult = UserStoreUtils.isStaffEnv(tmp28);
+        let premiumType4 = tmp28.premiumType;
         if (isStaffEnvResult) {
           let premiumTypeOverride = OverridePremiumTypeStore.getPremiumTypeOverride();
           if (premiumTypeOverride === closure_10) {
@@ -197,8 +186,8 @@ function mergeUser(user, arg1) {
           }
           premiumType4 = premiumTypeOverride;
         }
-        tmp26.premiumType = premiumType4;
-        let perks2 = tmp26.perks;
+        tmp28.premiumType = premiumType4;
+        let perks2 = tmp28.perks;
         if (isStaffEnvResult) {
           let perksActual = null;
           if (null !== OverridePremiumTypeStore.getPremiumTypeOverride()) {
@@ -206,8 +195,8 @@ function mergeUser(user, arg1) {
           }
           perks2 = perksActual;
         }
-        tmp26.perks = perks2;
-        mergeResult = tmp26;
+        tmp28.perks = perks2;
+        mergeResult = tmp28;
         tmp21 = premiumType3;
       }
     }
@@ -221,12 +210,10 @@ function mergeUser(user, arg1) {
       }
       let isStaffEnvRawDataResult = undefined !== premiumType && tmp2;
       if (isStaffEnvRawDataResult) {
-        const obj2 = UserStoreUtils;
-        isStaffEnvRawDataResult = obj2.isStaffEnvRawData(user);
+        isStaffEnvRawDataResult = UserStoreUtils.isStaffEnvRawData(user);
       }
       if (isStaffEnvRawDataResult) {
-        const obj3 = UserStoreUtils;
-        const isStaffEnvRawDataResult1 = obj3.isStaffEnvRawData(user);
+        const isStaffEnvRawDataResult1 = UserStoreUtils.isStaffEnvRawData(user);
         let premiumType2 = user.premium_type;
         if (premiumType2 == null) {
           premiumType2 = user.premiumType;
@@ -253,26 +240,24 @@ function mergeUser(user, arg1) {
         }
         user.perks = perks;
       }
-      const tmp16 = null == obj[user.id].primaryGuild && null == user.primary_guild;
       if (tmp16 !== true) {
-        const tmp17 = null != obj[user.id].primaryGuild && null == user.primary_guild;
         if (tmp17 !== true) {
-          const obj5 = PrimaryGuildUtils;
-          if (obj5.isUserPrimaryGuildEqual(obj[user.id].primaryGuild, user.primary_guild) !== true) {
+          if (obj5.isUserPrimaryGuildEqual(obj.primaryGuild, user.primary_guild) !== true) {
+            user.primary_guild = PrimaryGuildUtils.ensureUserPrimaryGuild(user.primary_guild);
             const tmp18Result = PrimaryGuildUtils;
-            user.primary_guild = tmp18Result.ensureUserPrimaryGuild(user.primary_guild);
           }
+          obj5 = PrimaryGuildUtils;
         }
-        user.primary_guild = obj[user.id].primaryGuild;
+        user.primary_guild = obj.primaryGuild;
+        tmp17 = null != obj.primaryGuild && null == user.primary_guild;
       }
       mergeResult = obj.merge(user);
       tmp21 = premiumType;
+      tmp16 = null == obj.primaryGuild && null == user.primary_guild;
     }
   }
-  const validatePremiumType = UserStoreUtils.validatePremiumType;
-  UserStoreUtils;
   const obj9 = UserStoreUtils;
-  validatePremiumType(obj9.isStaffEnv(mergeResult), tmp21, mergeResult.premiumType);
+  obj9.validatePremiumType(UserStoreUtils.isStaffEnv(mergeResult), tmp21, mergeResult.premiumType);
   obj[user.id] = mergeResult;
   if (obj[user.id] !== mergeResult) {
     closure_12 = closure_12 + 1;
@@ -280,8 +265,14 @@ function mergeUser(user, arg1) {
   return obj[user.id] !== mergeResult;
 }
 function mergeUsersFromMessage(message, arg1) {
-  let closure_0 = arg1;
-  const tmp = null != message.author && "SENDING" !== message.state && message.author.id !== AuthenticationStore.getId();
+  closure_0 = arg1;
+  let tmp = null != message.author;
+  if (tmp) {
+    tmp = "SENDING" !== message.state;
+  }
+  if (tmp) {
+    tmp = message.author.id !== AuthenticationStore.getId();
+  }
   if (tmp) {
     mergeUser(message.author, arg1);
   }
@@ -345,7 +336,10 @@ function mergeUsersFromMessage(message, arg1) {
   if (interaction_metadata != null) {
     user2 = interaction_metadata.user;
   }
-  const tmp17 = null != user2 && message.interaction_metadata.user.id !== AuthenticationStore.getId();
+  let tmp17 = null != user2;
+  if (tmp17) {
+    tmp17 = message.interaction_metadata.user.id !== AuthenticationStore.getId();
+  }
   if (tmp17) {
     mergeUser(message.interaction_metadata.user, arg1);
   }
@@ -376,7 +370,6 @@ function mergeUsersFromMessage(message, arg1) {
       }
       const message = moderator_report.message;
       users = undefined;
-      const _Object = Object;
       if (message != null) {
         const resolved = message.resolved;
         if (resolved != null) {
@@ -386,8 +379,8 @@ function mergeUsersFromMessage(message, arg1) {
       if (users == null) {
         users = {};
       }
-      const values2 = values(users);
-      const item = values2.forEach((id) => {
+      const values = Object.values(users);
+      const item = values.forEach((id) => {
         if (id.id !== AuthenticationStore.getId()) {
           mergeUser(id, closure_1_0);
         }
@@ -395,14 +388,11 @@ function mergeUsersFromMessage(message, arg1) {
     });
   }
 }
-function handleConnectionOpen(arg0) {
-  let guilds;
-  let obj;
-  let user;
-  ({ user, users, guilds } = arg0);
-  delete user["premium"];
-  delete user["banner_color"];
-  mergeUser(user);
+function handleConnectionOpen(user) {
+  ({ users, guilds } = user);
+  delete tmp2[tmp];
+  delete tmp2[tmp];
+  mergeUser(user.user);
   let item = users.forEach((item) => {
     mergeUser(item);
   });
@@ -412,46 +402,39 @@ function handleConnectionOpen(arg0) {
       id = members.id;
       avatar = avatar.avatar;
       if (null != users[avatar.user.id]) {
-        let result;
         if (null == avatar) {
-          result = obj.removeGuildAvatarHash(id);
+          let result = obj.removeGuildAvatarHash(id);
         } else {
           result = obj.addGuildAvatarHash(id, avatar);
         }
-        users[users[avatar.user.id].id] = result;
-        if (users[avatar.user.id] !== result) {
+        users[obj.id] = result;
+        if (obj !== result) {
           closure_12 = closure_12 + 1;
         }
       }
       const user = avatar.user;
       if (null != users[avatar.user.id]) {
-        const obj3 = PrimaryGuildUtils;
-        const result1 = obj3.isUserPrimaryGuildEqual(tmp4.primaryGuild, user.primary_guild);
-        const tmp10 = !result1;
-        if (tmp10) {
-          const tmp5 = null == users[avatar.user.id].primaryGuild || null != user.primary_guild;
+        const result1 = PrimaryGuildUtils.isUserPrimaryGuildEqual(tmp4.primaryGuild, user.primary_guild);
+        if (!result1) {
           if (tmp5) {
-            const tmp7Result = PrimaryGuildUtils;
-            users[avatar.user.id].primaryGuild = tmp7Result.ensureUserPrimaryGuild(user.primary_guild);
-            users[users[avatar.user.id].id] = users[avatar.user.id];
+            tmp4.primaryGuild = PrimaryGuildUtils.ensureUserPrimaryGuild(user.primary_guild);
+            users[tmp4.id] = tmp4;
             closure_12 = closure_12 + 1;
+            const tmp7Result = PrimaryGuildUtils;
           }
+          tmp5 = null == tmp4.primaryGuild || null != user.primary_guild;
         }
       }
     });
   });
-  const tmp4 = obj;
   if (null != obj[AuthenticationStore.getId(AuthenticationStore)]) {
     obj = { id, username: "Wumpus", discriminator: "0", globalName: "Wumpus", avatar: "c1f86b313385cb97985f1b118851c28c" };
-    const self = this;
-    const self2 = this;
-    tmp4[id] = new UserRecord(obj);
-    const tmp8 = new UserRecord(obj);
+    const tmp12 = new UserRecord(obj);
+    tmp6[id] = tmp12;
   }
+  tmp6 = obj;
 }
 function handleConnectionOpenSupplemental(arg0) {
-  let guilds;
-  let lazyPrivateChannels;
   ({ guilds, lazyPrivateChannels } = arg0);
   let item = guilds.forEach((members) => {
     members = members.members;
@@ -459,30 +442,27 @@ function handleConnectionOpenSupplemental(arg0) {
       id = members.id;
       avatar = avatar.avatar;
       if (null != users[avatar.user.id]) {
-        let result;
         if (null == avatar) {
-          result = obj.removeGuildAvatarHash(id);
+          let result = obj.removeGuildAvatarHash(id);
         } else {
           result = obj.addGuildAvatarHash(id, avatar);
         }
-        users[users[avatar.user.id].id] = result;
-        if (users[avatar.user.id] !== result) {
+        users[obj.id] = result;
+        if (obj !== result) {
           closure_12 = closure_12 + 1;
         }
       }
       const user = avatar.user;
       if (null != users[avatar.user.id]) {
-        const obj3 = PrimaryGuildUtils;
-        const result1 = obj3.isUserPrimaryGuildEqual(tmp4.primaryGuild, user.primary_guild);
-        const tmp10 = !result1;
-        if (tmp10) {
-          const tmp5 = null == users[avatar.user.id].primaryGuild || null != user.primary_guild;
+        const result1 = PrimaryGuildUtils.isUserPrimaryGuildEqual(tmp4.primaryGuild, user.primary_guild);
+        if (!result1) {
           if (tmp5) {
-            const tmp7Result = PrimaryGuildUtils;
-            users[avatar.user.id].primaryGuild = tmp7Result.ensureUserPrimaryGuild(user.primary_guild);
-            users[users[avatar.user.id].id] = users[avatar.user.id];
+            tmp4.primaryGuild = PrimaryGuildUtils.ensureUserPrimaryGuild(user.primary_guild);
+            users[tmp4.id] = tmp4;
             closure_12 = closure_12 + 1;
+            const tmp7Result = PrimaryGuildUtils;
           }
+          tmp5 = null == tmp4.primaryGuild || null != user.primary_guild;
         }
       }
     });
@@ -513,11 +493,10 @@ function handleInitialize(users) {
         tmp7 = isIncompleteUser(tmp5);
       }
       if (!tmp7) {
-        let self = this;
-        let self2 = this;
-        id = tmp5.id;
-        let tmp13 = new UserRecord(nextResult);
-        obj[id] = tmp13;
+        let tmp12 = new.target;
+        let tmp13 = new.target;
+        let tmp15 = new UserRecord(nextResult);
+        obj[tmp5.id] = tmp15;
       }
       continue;
     }
@@ -532,8 +511,7 @@ function handleUserUpdate(user) {
   }
 }
 function handleRestrictedScheduleUpdate(id) {
-  const obj = { id: id.userId, restricted_schedule: id.restrictedSchedule };
-  return mergeUser(obj);
+  return mergeUser({ id: id.userId, restricted_schedule: id.restrictedSchedule });
 }
 function handleUserProfileFetchSuccess(userProfile) {
   userProfile = userProfile.userProfile;
@@ -547,11 +525,9 @@ function handleCurrentUserUpdate(user) {
   mergeUser(user.user);
 }
 function updatePremiumType(user) {
-  let premiumType;
   user = user.user;
-  const obj = { id: user.id, premiumType };
-  premiumType = user.premiumType;
-  const obj2 = UserStoreUtils;
+  const obj = { id: user.id, premiumType: null };
+  let premiumType = user.premiumType;
   if (obj2.isStaffEnv(user)) {
     let premiumTypeOverride = OverridePremiumTypeStore.getPremiumTypeOverride();
     if (premiumTypeOverride === closure_10) {
@@ -559,6 +535,7 @@ function updatePremiumType(user) {
     }
     premiumType = premiumTypeOverride;
   }
+  obj.premiumType = premiumType;
   return mergeUser(obj, true);
 }
 function handleLoadMessages(messages) {
@@ -609,8 +586,6 @@ function handleThreadListSync(mostRecentMessages) {
 function handleLoadSearchResults(data) {
   data = data.data;
   let item = data.forEach((item) => {
-    let channels;
-    let messages;
     ({ messages, channels } = item);
     item = messages.forEach((arr) => {
       const item = arr.forEach((item) => {
@@ -618,7 +593,6 @@ function handleLoadSearchResults(data) {
       });
     });
     const item1 = channels.forEach((type) => {
-      const tmp2 = type.type !== constants.DM && type.type !== tmp.GROUP_DM;
       if (!tmp2) {
         const recipients = type.recipients;
         if (recipients != null) {
@@ -628,6 +602,7 @@ function handleLoadSearchResults(data) {
           closure_1_17(type.recipient);
         }
       }
+      tmp2 = type.type !== constants.DM && type.type !== tmp.GROUP_DM;
     });
   });
   return false;
@@ -640,8 +615,6 @@ function handleSmartSearchFetchSuccess(messages) {
   return false;
 }
 function handleLoadThreadsSuccess(arg0) {
-  let firstMessages;
-  let owners;
   ({ firstMessages, owners } = arg0);
   if (null != firstMessages) {
     const item = firstMessages.forEach((item) => {
@@ -655,9 +628,6 @@ function handleLoadThreadsSuccess(arg0) {
 function handleLoadForumPosts(threads) {
   const values = Object.values(threads.threads);
   const item = values.forEach((item) => {
-    let first_message;
-    let most_recent_message;
-    let owner;
     ({ first_message, most_recent_message, owner } = item);
     if (null != first_message) {
       mergeUsersFromMessage(first_message, true);
@@ -665,10 +635,10 @@ function handleLoadForumPosts(threads) {
     if (null != most_recent_message) {
       mergeUsersFromMessage(most_recent_message, true);
     }
-    const tmp5 = null != owner && null != owner.user;
     if (tmp5) {
       mergeUser(owner.user, true);
     }
+    tmp5 = null != owner && null != owner.user;
   });
 }
 function handleLoadMessageRequestsSupplementalDataSuccess(supplementalData) {
@@ -681,11 +651,8 @@ function handleLoadMessageRequestsSupplementalDataSuccess(supplementalData) {
   });
 }
 function handleFetchUsersForGuildEventSuccess(arg0) {
-  let guildScheduledEventUsers;
   ({ guildScheduledEventUsers, guildId: require } = arg0);
   const item = guildScheduledEventUsers.forEach((item) => {
-    let member;
-    let user;
     ({ user, member } = item);
     if (null != user) {
       mergeUser(user);
@@ -695,14 +662,13 @@ function handleFetchUsersForGuildEventSuccess(arg0) {
       }
       if (null != avatar) {
         if (null != obj[user.id]) {
-          let result;
           if (null == avatar) {
-            result = obj.removeGuildAvatarHash(require);
+            let result = obj.removeGuildAvatarHash(require);
           } else {
             result = obj.addGuildAvatarHash(require, avatar);
           }
-          tmp5[obj[user.id].id] = result;
-          if (obj[user.id] !== result) {
+          tmp5[obj.id] = result;
+          if (obj !== result) {
             closure_12 = closure_12 + 1;
           }
         }
@@ -729,16 +695,14 @@ function handleIncomingMessage(message) {
   mergeUsersFromMessage(message, true);
   if (null != message.flags) {
     const obj = FlagUtilsAll;
-    if (obj.hasFlag(message.flags, metroImportAll.URGENT)) {
-      const tmp6 = obj[AuthenticationStore.getId(AuthenticationStore)];
-      let flag = null != tmp6;
-      const tmp5 = obj;
+    if (obj.hasFlag(message.flags, constants2.URGENT)) {
+      const obj3 = obj[AuthenticationStore.getId(AuthenticationStore)];
+      let flag = null != obj3;
       if (flag) {
         id = AuthenticationStore.getId();
-        set = tmp6.set;
-        const tmp2Result = FlagUtilsAll;
-        tmp5[id] = set("flags", tmp2Result.setFlag(tmp6.flags, metroImportDefault.HAS_UNREAD_URGENT_MESSAGES, true));
+        obj[id] = obj3.set("flags", FlagUtilsAll.setFlag(obj3.flags, constants.HAS_UNREAD_URGENT_MESSAGES, true));
         flag = true;
+        const tmp2Result = FlagUtilsAll;
       }
       return flag;
     }
@@ -767,26 +731,25 @@ function handleUpdateChannels(arg0) {
 function handlePresenceUpdates(updates) {
   updates = updates.updates;
   const mapped = updates.map((item) => {
-    let tmp2 = closure_11[item.user.id];
     id = tmp2;
-    if (null == tmp2) {
+    if (null == closure_11[item.user.id]) {
       return false;
     } else {
       const reduced = closure_44.reduce((acc, item) => {
         const user = item.user;
         let tmp2 = acc;
         if (user.hasOwnProperty(item)) {
-          set = result.set;
-          const obj = _mod12;
-          result = set(obj.camelCase(item), item.user[item]);
-          tmp2 = acc || result !== result;
-          const tmp7 = acc || result !== result;
+          result = result.set(_mod12.camelCase(item), item.user[item]);
+          let tmp7 = acc;
+          if (!acc) {
+            tmp7 = result !== result;
+          }
+          tmp2 = tmp7;
         }
         return tmp2;
       }, false);
       let tmp5 = reduced;
       if (tmp5) {
-        let tmp7 = id;
         tmp[id.id] = id;
         tmp5 = reduced;
       }
@@ -807,25 +770,24 @@ function handleBan(user) {
   return mergeUser(user.user);
 }
 function handleRecipient(isMember) {
-  isMember = isMember.isMember && mergeUser(isMember.user);
+  isMember = isMember.isMember;
+  if (isMember) {
+    isMember = mergeUser(isMember.user);
+  }
   return isMember;
 }
 function handleGuildMembers(user) {
-  let avatar;
-  let guildId;
   ({ guildId, avatar } = user);
   let flag = false;
-  const tmp = mergeUser(user.user);
   if (null != obj[user.user.id]) {
-    let result;
     if (null == avatar) {
-      result = obj.removeGuildAvatarHash(guildId);
+      let result = obj.removeGuildAvatarHash(guildId);
     } else {
       result = obj.addGuildAvatarHash(guildId, avatar);
     }
-    tmp2[obj[user.user.id].id] = result;
+    tmp2[obj.id] = result;
     flag = tmp4;
-    if (flag) {
+    if (obj !== result) {
       closure_12 = closure_12 + 1;
       flag = tmp4;
     }
@@ -858,25 +820,22 @@ function handleGuildMemberListUpdate(arg0) {
   return false;
 }
 function handleGuildMembersChunkBatch(arg0) {
-  let closure_0 = false;
+  closure_0 = false;
   function _loop(iter) {
-    closure_0 = iter;
     const members = iter.members;
-    let tmp = members.reduce((acc, avatar) => {
-      guildId = guildId.guildId;
+    iter = members.reduce((acc, avatar) => {
+      const guildId = iter.guildId;
       avatar = avatar.avatar;
       let flag = false;
-      const tmp = closure_2_17(avatar.user);
-      if (null != closure_2_11[avatar.user.id]) {
-        let result;
+      if (null != users[avatar.user.id]) {
         if (null == avatar) {
-          result = obj.removeGuildAvatarHash(guildId);
+          let result = obj.removeGuildAvatarHash(guildId);
         } else {
           result = obj.addGuildAvatarHash(guildId, avatar);
         }
-        tmp2[closure_2_11[avatar.user.id].id] = result;
+        tmp2[obj.id] = result;
         flag = tmp4;
-        if (flag) {
+        if (obj !== result) {
           closure_12 = closure_12 + 1;
           flag = tmp4;
         }
@@ -888,10 +847,9 @@ function handleGuildMembersChunkBatch(arg0) {
         flag = acc;
       }
       return flag;
-    }, false) || closure_0;
-    closure_0 = tmp;
+    }, false) || iter;
   }
-  const iter = arg0.chunks[Symbol.iterator]();
+  let iter = arg0.chunks[Symbol.iterator]();
   while (iter !== undefined) {
     let _loopResult = _loop(iter.next());
     continue;
@@ -935,13 +893,19 @@ function handleLocalMessagesLoaded(users) {
 }
 function handleThreadMemberListUpdate(members) {
   members = members.members;
-  let c0 = false;
+  c0 = false;
   const item = members.forEach((member) => {
-    const tmp = null != member.member && mergeUser(member.member.user);
+    let tmp = null != member.member;
+    if (tmp) {
+      tmp = mergeUser(member.member.user);
+    }
     if (tmp) {
       c0 = true;
     }
-    const tmp3 = null != member.presence && mergeUser(member.presence.user);
+    let tmp3 = null != member.presence;
+    if (tmp3) {
+      tmp3 = mergeUser(member.presence.user);
+    }
     if (tmp3) {
       c0 = true;
     }
@@ -950,14 +914,20 @@ function handleThreadMemberListUpdate(members) {
 }
 function handleThreadMembersUpdate(addedMembers) {
   addedMembers = addedMembers.addedMembers;
-  let c0 = false;
+  c0 = false;
   if (addedMembers != null) {
     const item = addedMembers.forEach((member) => {
-      const tmp = null != member.member && mergeUser(member.member.user);
+      let tmp = null != member.member;
+      if (tmp) {
+        tmp = mergeUser(member.member.user);
+      }
       if (tmp) {
         c0 = true;
       }
-      const tmp3 = null != member.presence && mergeUser(member.presence.user);
+      let tmp3 = null != member.presence;
+      if (tmp3) {
+        tmp3 = mergeUser(member.presence.user);
+      }
       if (tmp3) {
         c0 = true;
       }
@@ -969,29 +939,23 @@ function handleGuildCreate(guild) {
   guild = guild.guild;
   const members = guild.members;
   const item = members.forEach((user) => {
-    let avatar;
-    let bot;
-    let discriminator;
-    let obj;
-    let username;
     user = user.user;
     id = user.id;
     const avatar2 = user.avatar;
     ({ username, avatar, discriminator, bot } = user);
     if (id !== AuthenticationStore.getId()) {
-      obj = { id, username, avatar, discriminator, bot };
+      const obj = { id, username, avatar, discriminator, bot };
       mergeUser(obj);
     }
     const id2 = guild.id;
     if (null != obj[id]) {
-      let result;
       if (null == avatar2) {
-        result = obj2.removeGuildAvatarHash(id2);
+        let result = obj2.removeGuildAvatarHash(id2);
       } else {
         result = obj2.addGuildAvatarHash(id2, avatar2);
       }
-      tmp3[obj[id].id] = result;
-      if (obj[id] !== result) {
+      tmp3[obj2.id] = result;
+      if (obj2 !== result) {
         closure_12 = closure_12 + 1;
       }
     }
@@ -1005,36 +969,30 @@ function handleGameRelationshipAdd(gameRelationship) {
 }
 function handleLoadRelationships(relationships) {
   relationships = relationships.relationships;
-  return relationships.reduce((acc, user) => {
-    const tmp = mergeUser(user.user) || acc;
-    return tmp;
-  }, false);
+  return relationships.reduce((acc, user) => mergeUser(user.user) || acc, false);
 }
 function handleFriendSuggestionCreate(suggestion) {
   return mergeUser(suggestion.suggestion.suggested_user);
 }
 function handleLoadFriendSuggestions(suggestions) {
   suggestions = suggestions.suggestions;
-  return suggestions.reduce((acc, suggested_user) => {
-    const tmp = mergeUser(suggested_user.suggested_user) || acc;
-    return tmp;
-  }, false);
+  return suggestions.reduce((acc, suggested_user) => mergeUser(suggested_user.suggested_user) || acc, false);
 }
 function handleAuditLogFetched(users) {
   users = users.users;
-  const item = users.forEach(function(id) {
+  const item = users.forEach((id) => {
     if (null == users[id.id]) {
-      const self = this;
-      const self2 = this;
-      id = id.id;
-      tmp[id] = new UserRecord(id);
-      const tmp4 = new UserRecord(id);
+      const tmp6 = new UserRecord(id);
+      tmp[id.id] = tmp6;
     }
   });
 }
 function handleGiftCodeResolve(giftCode) {
   giftCode = giftCode.giftCode;
-  const tmp = null != giftCode.user && mergeUser(giftCode.user);
+  let tmp = null != giftCode.user;
+  if (tmp) {
+    tmp = mergeUser(giftCode.user);
+  }
   return tmp;
 }
 function handleGuildPremiumSubscriptionsFetchSuccess(appliedBoosts) {
@@ -1047,8 +1005,6 @@ function handleGuildPremiumSubscriptionsFetchSuccess(appliedBoosts) {
   });
 }
 function handleGuildJoinRequest(request) {
-  let actioned_by_user;
-  let user;
   ({ user, actioned_by_user } = request.request);
   let flag = false;
   if (null != user) {
@@ -1056,59 +1012,45 @@ function handleGuildJoinRequest(request) {
   }
   let tmp2 = flag;
   if (null != actioned_by_user) {
-    tmp2 = flag || mergeUser(actioned_by_user);
-    const tmp3 = flag || mergeUser(actioned_by_user);
+    let tmp3 = flag;
+    if (!flag) {
+      tmp3 = mergeUser(actioned_by_user);
+    }
+    tmp2 = tmp3;
   }
   return tmp2;
 }
 function handleInitialFamilyCenterLoad(familyCenterTeenActivity) {
-  const items = [...familyCenterTeenActivity.users];
-  familyCenterTeenActivity = familyCenterTeenActivity.familyCenterTeenActivity;
-  return items.reduce((acc, item) => {
-    const tmp = mergeUser(item) || acc;
-    return tmp;
-  }, false);
+  const items = [...familyCenterTeenActivity.familyCenterTeenActivity.users];
+  return items.reduce((acc, item) => mergeUser(item) || acc, false);
 }
 function handleLinkedUserFetch(users) {
   users = users.users;
-  return users.reduce((acc, item) => {
-    const tmp = mergeUser(item) || acc;
-    return tmp;
-  }, false);
+  return users.reduce((acc, item) => mergeUser(item) || acc, false);
 }
 function handleRequestLinkSuccess(users) {
   users = users.users;
-  return users.reduce((acc, item) => {
-    const tmp = mergeUser(item) || acc;
-    return tmp;
-  }, false);
+  return users.reduce((acc, item) => mergeUser(item) || acc, false);
 }
 function handleTeenActivityFetch(familyCenterTeenActivity) {
   familyCenterTeenActivity = familyCenterTeenActivity.familyCenterTeenActivity;
   if (undefined !== familyCenterTeenActivity) {
     users = familyCenterTeenActivity.users;
-    return users.reduce((acc, item) => {
-      const tmp = mergeUser(item) || acc;
-      return tmp;
-    }, false);
+    return users.reduce((acc, item) => mergeUser(item) || acc, false);
   }
 }
 function handleTeenActivityMoreFetch(familyCenterTeenActivity) {
   users = familyCenterTeenActivity.familyCenterTeenActivity.users;
-  return users.reduce((acc, item) => {
-    const tmp = mergeUser(item) || acc;
-    return tmp;
-  }, false);
+  return users.reduce((acc, item) => mergeUser(item) || acc, false);
 }
 function handleMemberSafetyGuildMemberSearchSuccess(members) {
-  let closure_0;
   members = members.members;
   id = AuthenticationStore.getId();
   return members.reduce((acc, member) => {
     let tmp = acc;
     if (member.member.user.id !== closure_0) {
       tmp = mergeUser(member.member.user) || acc;
-      mergeUser(member.member.user) || acc;
+      const tmp3 = mergeUser(member.member.user) || acc;
     }
     return tmp;
   }, false);
@@ -1124,7 +1066,13 @@ function handleLoadICYMIHydratedItems(messageItems) {
 function handleEmbeddedActivityUpdateV2(instance) {
   const participants = instance.instance.participants;
   return participants.reduce((acc, member) => {
-    const tmp = isActivityParticipantValidGuildMemberDefault(member) && mergeUser(member.member.user) || acc;
+    let tmp = isActivityParticipantValidGuildMemberDefault(member);
+    if (tmp) {
+      tmp = mergeUser(member.member.user);
+    }
+    if (!tmp) {
+      tmp = acc;
+    }
     return tmp;
   }, false);
 }
@@ -1143,14 +1091,13 @@ function handleInitiateAgeVerification(arg0) {
   }
 }
 function handleCloseAgeVerificationModal(status) {
-  status = status.status;
   const obj2 = AuthenticationStore[AuthenticationStore.getId(AuthenticationStore)];
   let tmp2 = null != obj2;
   if (tmp2) {
     let flag = obj2.ageVerificationStatus === Server.AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
     if (flag) {
       id = AuthenticationStore.getId();
-      AuthenticationStore[id] = obj2.set("ageVerificationStatus", status);
+      AuthenticationStore[id] = obj2.set("ageVerificationStatus", status.status);
       flag = true;
     }
     tmp2 = flag;
@@ -1183,26 +1130,35 @@ function handleInteractionModalCreate(resolved) {
 function handleGuildStickersFetchSuccess(stickers) {
   stickers = stickers.stickers;
   return stickers.reduce((acc, user) => {
-    const tmp = null != user.user && mergeUser(user.user) || acc;
+    let tmp = null != user.user;
+    if (tmp) {
+      tmp = mergeUser(user.user);
+    }
+    if (!tmp) {
+      tmp = acc;
+    }
     return tmp;
   }, false);
 }
-({ UserFlags: metroImportDefault, MessageFlags: metroImportAll, ChannelTypes: c9 } = Constants);
-let closure_10 = PremiumConstants.UNSELECTED_PREMIUM_TYPE_OVERRIDE;
+const Constants = fn(1085);
+({ UserFlags: closure_7, MessageFlags: closure_8, ChannelTypes: closure_9 } = Constants);
+let closure_10 = fn(1379).UNSELECTED_PREMIUM_TYPE_OVERRIDE;
 let users = {};
 let closure_12 = 0;
 let c13 = "47835198259242069";
 let closure_44 = ["username", "avatar", "global_name", "discriminator", "bot", "primary_guild"];
-class UserStore extends MobileCacheSnapshotStore {
+let UserStore;
+class UserStore extends tmp2 {
   constructor() {
-    const obj = {
+    closure_0 = undefined;
+    obj = {
       CONNECTION_OPEN: handleConnectionOpen,
       CONNECTION_OPEN_SUPPLEMENTAL: handleConnectionOpenSupplemental,
       UPDATE_CLIENT_PREMIUM_TYPE: updatePremiumType,
       OVERLAY_INITIALIZE: handleInitialize,
       CACHE_LOADED(users) {
-        return closure_0.handleLoadCache(users);
-      },
+            return closure_0.handleLoadCache(users);
+          },
       USER_UPDATE: handleUserUpdate,
       USER_RESTRICTED_SCHEDULE_UPDATE: handleRestrictedScheduleUpdate,
       USER_PROFILE_FETCH_SUCCESS: handleUserProfileFetchSuccess,
@@ -1268,149 +1224,148 @@ class UserStore extends MobileCacheSnapshotStore {
       CLOSE_AGE_VERIFICATION_MODAL: handleCloseAgeVerificationModal,
       INTERACTION_MODAL_CREATE: handleInteractionModalCreate
     };
-    const tmp2 = new tmp(obj, handleSmartSearchFetchSuccess, handleCloseAgeVerificationModal, new.target);
-    let closure_0 = tmp2;
-    return tmp2;
-  }
-  initialize() {
-    this.waitFor(AuthenticationStore, OverridePremiumTypeStore);
-  }
-  takeSnapshot() {
-    let items;
-    let obj2;
-    const obj = { version: UserStore.LATEST_SNAPSHOT_VERSION, data: obj2 };
-    obj2 = { users: items.filter(GlobalUtils.isNotNullish) };
-    items = [this.getCurrentUser()];
-    return obj;
-  }
-  handleLoadCache(users) {
-    const snapshot = this.readSnapshot(UserStore.LATEST_SNAPSHOT_VERSION);
-    if (null != snapshot) {
-      users = snapshot.users;
-      for (const item10012 of users) {
-        let self = this;
-        let self2 = this;
-        id = item10012.id;
-        let tmp8 = new UserRecord(item10012);
-        obj[id] = tmp8;
-        continue;
-      }
-    }
-    if (null != users.users) {
-      const users2 = users.users;
-      const iter = users2[Symbol.iterator]();
-      const nextResult = iter.next();
-      while (iter !== undefined) {
-        let tmp14 = nextResult;
-        let tmp17 = nextResult.id in obj;
-        if (tmp17) {
-          tmp17 = isIncompleteUser(tmp14);
-        }
-        if (!tmp17) {
-          let self3 = this;
-          let self4 = this;
-          let id2 = tmp14.id;
-          let tmp24 = new UserRecord(nextResult);
-          obj[id2] = tmp24;
-        }
-        continue;
-      }
-    }
-    const items = [, ];
-    ({ privateChannels: arr[0], initialGuildChannels: arr[1] } = users);
-    for (const item10056 of items) {
-      for (const item10061 of item10056) {
-        let rawRecipients = item10061.rawRecipients;
-        if (rawRecipients != null) {
-          let item = rawRecipients.forEach((item) => mergeUser(item, false));
-        }
-        continue;
-      }
-      continue;
-    }
-  }
-  getUserStoreVersion() {
-    return closure_12;
-  }
-  getUser(arg0) {
-    if (null != arg0) {
-      return obj[arg0];
-    }
-  }
-  getUsers() {
-    return obj;
-  }
-  forEach(fn) {
-    for (const key10005 in obj) {
-      if (false === fn(obj[key10005])) {
-        break;
-      }
-    }
-  }
-  findByTag(match, match2) {
-    for (const key10005 in obj) {
-      let obj = obj[key10005];
-      if (null != match2) {
-        if (obj.username === match) {
-          if (obj.discriminator === match2) {
-            return obj;
-          }
-        }
-      }
-      if (null != match2) {
-        continue;
-      } else {
-        if (obj.username !== match) {
-          continue;
-        } else if (!obj.hasUniqueUsername()) {
-          continue;
-        } else {
-          return obj;
-        }
-        continue;
-      }
-      continue;
-    }
-  }
-  filter(fn) {
-    let flag = arg1;
-    if (arg1 === undefined) {
-      flag = false;
-    }
-    const items = [];
-    for (const key10006 in obj) {
-      let tmp5 = obj[key10006];
-      if (!fn(tmp5)) {
-        continue;
-      } else {
-        let arr = items.push(tmp5);
-        continue;
-      }
-      continue;
-    }
-    if (flag) {
-      const sorted = items.sort((username, username2) => {
-        let num = 1;
-        if (username.username <= username2.username) {
-          let num2 = 0;
-          if (username.username < username2.username) {
-            num2 = -1;
-          }
-          num = num2;
-        }
-        return num;
-      });
-    }
-    return items;
-  }
-  getCurrentUser() {
-    return obj[AuthenticationStore.getId(AuthenticationStore)];
+    tmp1 = new tmp(obj, handleSmartSearchFetchSuccess, handleCloseAgeVerificationModal, new.target);
+    closure_0 = tmp1;
+    return tmp1;
   }
 }
 const prototype = UserStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(AuthenticationStore, OverridePremiumTypeStore);
+};
+prototype["takeSnapshot"] = function takeSnapshot() {
+  const obj = { version: UserStore.LATEST_SNAPSHOT_VERSION, data: null };
+  const obj2 = { users: null };
+  const items = [this.getCurrentUser()];
+  obj2.users = items.filter(GlobalUtils.isNotNullish);
+  obj.data = obj2;
+  return obj;
+};
+prototype["handleLoadCache"] = function handleLoadCache(users) {
+  const snapshot = this.readSnapshot(UserStore.LATEST_SNAPSHOT_VERSION);
+  if (null != snapshot) {
+    users = snapshot.users;
+    for (const item10012 of users) {
+      let tmp7 = new.target;
+      let tmp8 = new.target;
+      let tmp10 = new UserRecord(item10012);
+      obj[item10012.id] = tmp10;
+      continue;
+    }
+  }
+  if (null != users.users) {
+    const users2 = users.users;
+    const iter = users2[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp16 = nextResult;
+      let tmp19 = nextResult.id in obj;
+      if (tmp19) {
+        tmp19 = isIncompleteUser(tmp16);
+      }
+      if (!tmp19) {
+        let tmp25 = new.target;
+        let tmp26 = new.target;
+        let tmp28 = new UserRecord(nextResult);
+        obj[tmp16.id] = tmp28;
+      }
+      continue;
+    }
+  }
+  const items = [, ];
+  ({ privateChannels: arr[0], initialGuildChannels: arr[1] } = users);
+  for (const item10056 of items) {
+    for (const item10061 of item10056) {
+      let rawRecipients = item10061.rawRecipients;
+      if (rawRecipients != null) {
+        let item = rawRecipients.forEach((item) => mergeUser(item, false));
+      }
+      continue;
+    }
+    continue;
+  }
+};
+prototype["getUserStoreVersion"] = function getUserStoreVersion() {
+  return closure_12;
+};
+prototype["getUser"] = function getUser(arg0) {
+  if (null != arg0) {
+    return obj[arg0];
+  }
+};
+prototype["getUsers"] = function getUsers() {
+  return obj;
+};
+prototype["forEach"] = function forEach(fn) {
+  for (const key10005 in obj) {
+    if (false === arg0(obj[key10005])) {
+      break;
+    }
+  }
+};
+prototype["findByTag"] = function findByTag(match, match2) {
+  for (const key10005 in obj) {
+    let obj = obj[key10005];
+    if (null != arg1) {
+      if (obj.username === arg0) {
+        if (obj.discriminator === arg1) {
+          return obj;
+        }
+      }
+    }
+    if (null != arg1) {
+      continue;
+    } else {
+      if (obj.username !== arg0) {
+        continue;
+      } else if (!obj.hasUniqueUsername()) {
+        continue;
+      } else {
+        return obj;
+      }
+      continue;
+    }
+    continue;
+  }
+};
+prototype["filter"] = function filter(fn) {
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = false;
+  }
+  const items = [];
+  for (const key10006 in obj) {
+    let tmp5 = obj[key10006];
+    if (!arg0(tmp5)) {
+      continue;
+    } else {
+      let arr = items.push(tmp5);
+      continue;
+    }
+    continue;
+  }
+  if (flag) {
+    const sorted = items.sort((username, username2) => {
+      let num = 1;
+      if (username.username <= username2.username) {
+        let num2 = 0;
+        if (username.username < username2.username) {
+          num2 = -1;
+        }
+        num = num2;
+      }
+      return num;
+    });
+  }
+  return items;
+};
+prototype["getCurrentUser"] = function getCurrentUser() {
+  return obj[AuthenticationStore.getId(AuthenticationStore)];
+};
 UserStore.displayName = "UserStore";
 UserStore.LATEST_SNAPSHOT_VERSION = 1;
 const userStore = new UserStore();
+const size = fn(2);
 let result = size.fileFinishedImporting("stores/UserStore.tsx");
 
 export default userStore;

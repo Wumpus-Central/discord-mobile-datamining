@@ -1,46 +1,33 @@
 // === Module 16573: PruneGuildModalActionCreators ===
 
 // Module 16573 (PruneGuildModalActionCreators)
-import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
-import size from "module_2" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let c1;
+require = fn;
+const Endpoints = fn(1085).Endpoints;
+const size = fn(2);
+const result = size.fileFinishedImporting("actions/PruneGuildModalActionCreators.tsx");
 
-let _asyncToGenerator = _asyncToGenerator_mod;
-const Endpoints = Constants.Endpoints;
-let obj = {
+export default {
   updateEstimate(arg0) {
-    let closure_2;
-    let num;
-    let closure_0 = arg0;
-    _asyncToGenerator = arg2;
+    closure_0 = arg0;
+    asyncGeneratorStep = arg2;
     return (async () => {
-      let obj4;
-      let obj8;
-      const HTTP = v3(c1[2]).HTTP;
-      const request = { url: Endpoints.GUILD_PRUNE(closure_0), query: obj4, oldFormErrors: true, rejectWithError: obj8.rejectWithMigratedError() };
-      const get = HTTP.get;
-      obj4 = { days: 2, include_roles };
-      obj8 = v3(c1[2]);
-      await get(request);
+      const HTTP = v3(1282).HTTP;
+      const request = { url: Endpoints.GUILD_PRUNE(closure_0), query: { days: num, include_roles }, oldFormErrors: true, rejectWithError: v3(1282).rejectWithMigratedError() };
+      await HTTP.get(request);
       return value.body.pruned;
     })();
   },
   updateEstimateV2(id, arg1) {
-    let closure_2;
-    let num;
-    let closure_0 = id;
-    _asyncToGenerator = arg2;
+    closure_0 = id;
+    asyncGeneratorStep = arg2;
     return (async () => {
-      let obj4;
-      let obj7;
-      let v3;
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp2 === 3) {
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -52,7 +39,7 @@ let obj = {
       } else {
         try {
           v3 = 2;
-          if (0 === c1) {
+          if (0 === dependencyMap) {
             if (arg0 === 1) {
               v3 = 3;
               throw value;
@@ -61,14 +48,14 @@ let obj = {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(c1[2]).HTTP;
-              const request = { url: Endpoints.GUILD_PRUNE_V2(id), query: obj4, oldFormErrors: true, rejectWithError: obj7.rejectWithMigratedError() };
-              const get = HTTP.get;
-              obj4 = { days: 2, include_roles };
-              obj7 = v3(c1[2]);
-              c1 = 1;
+              const HTTP = v3(1282).HTTP;
+              const request = { url: Endpoints.GUILD_PRUNE_V2(closure_0), query: null, oldFormErrors: true, rejectWithError: null };
+              const obj4 = { days: num, include_roles };
+              request.query = obj4;
+              request.rejectWithError = v3(1282).rejectWithMigratedError();
+              dependencyMap = 1;
               v3 = 1;
-              const obj5 = { value: get(request), done: false };
+              const obj5 = { value: HTTP.get(request), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -82,24 +69,16 @@ let obj = {
             v3 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp4) {
-          v3 = 3;
-          throw tmp4;
+        } catch (tmp5) {
+          v3 = tmp;
+          throw tmp5;
         }
       }
     })();
   },
   prune(arg0, days, include_roles) {
-    let obj;
-    let obj3;
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: Endpoints.GUILD_PRUNE(arg0), body: obj, oldFormErrors: true, rejectWithError: obj3.rejectWithMigratedError() };
-    const post = HTTP.post;
-    obj = { days, compute_prune_count: false, include_roles };
-    obj3 = HTTPUtils;
-    return post(request);
+    const request = { url: Endpoints.GUILD_PRUNE(arg0), body: { days, compute_prune_count: false, include_roles }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    return HTTP.post(request);
   }
 };
-const result = size.fileFinishedImporting("actions/PruneGuildModalActionCreators.tsx");
-
-export default obj;

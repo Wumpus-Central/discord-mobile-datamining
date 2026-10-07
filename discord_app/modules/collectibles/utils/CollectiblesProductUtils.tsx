@@ -2,23 +2,17 @@
 
 // Module 7077 (CollectiblesProductUtils)
 import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7072 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-let effects;
-
-let closure_4;
-let hasOwnProperty;
-const f94304 = (currency) => currency.currency === constants.DISCORD_ORB;
-const f94305 = (currency) => currency.currency !== constants.DISCORD_ORB;
-const isProfileEffectRecord = ProfileEffectRecord.isProfileEffectRecord;
+require = fn;
+const isProfileEffectRecord = fn(7072).isProfileEffectRecord;
+const Constants = fn(1085);
 ({ CurrencyCodes: closure_4, PriceSetAssignmentPurchaseTypes: hasOwnProperty } = Constants);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesProductUtils.tsx");
 
 export const getProductOrbPrice = function getProductOrbPrice(arg0) {
-  const tmp2 = arg0.product.prices[arg0.hasShopDiscount ? hasOwnProperty.PREMIUM_TIER_2 : hasOwnProperty.DEFAULT];
+  const tmp2 = arg0.product.prices[arg0.hasShopDiscount ? constants.PREMIUM_TIER_2 : constants.DEFAULT];
   let prices;
   if (tmp2 != null) {
     const countryPrices = tmp2.countryPrices;
@@ -29,14 +23,14 @@ export const getProductOrbPrice = function getProductOrbPrice(arg0) {
   if (prices == null) {
     prices = [];
   }
-  let found = prices.find(f94304);
+  let found = prices.find((currency) => currency.currency === constants.DISCORD_ORB);
   if (found == null) {
     found = null;
   }
   return found;
 };
 export const getProductFiatPrice = function getProductFiatPrice(arg0) {
-  const tmp2 = arg0.product.prices[arg0.hasShopDiscount ? hasOwnProperty.MOBILE_PREMIUM_TIER_2 : hasOwnProperty.MOBILE];
+  const tmp2 = arg0.product.prices[arg0.hasShopDiscount ? constants.MOBILE_PREMIUM_TIER_2 : constants.MOBILE];
   let prices;
   if (tmp2 != null) {
     const countryPrices = tmp2.countryPrices;
@@ -47,7 +41,7 @@ export const getProductFiatPrice = function getProductFiatPrice(arg0) {
   if (prices == null) {
     prices = [];
   }
-  let found = prices.find(f94305);
+  let found = prices.find((currency) => currency.currency !== constants.DISCORD_ORB);
   if (found == null) {
     found = null;
   }
@@ -55,7 +49,7 @@ export const getProductFiatPrice = function getProductFiatPrice(arg0) {
 };
 export const getHasOrbPrice = function getHasOrbPrice(arg0) {
   let prices;
-  if (arg0.prices[hasOwnProperty.DEFAULT] != null) {
+  if (arg0.prices[constants.DEFAULT] != null) {
     const countryPrices = tmp.countryPrices;
     if (countryPrices != null) {
       prices = countryPrices.prices;
@@ -64,7 +58,7 @@ export const getHasOrbPrice = function getHasOrbPrice(arg0) {
   if (prices == null) {
     prices = [];
   }
-  let found = prices.find(f94304);
+  let found = prices.find((currency) => currency.currency === constants.DISCORD_ORB);
   if (found == null) {
     found = null;
   }
@@ -72,7 +66,7 @@ export const getHasOrbPrice = function getHasOrbPrice(arg0) {
 };
 export const getHasNonOrbPrice = function getHasNonOrbPrice(arg0) {
   let prices;
-  if (arg0.prices[hasOwnProperty.MOBILE] != null) {
+  if (arg0.prices[constants.MOBILE] != null) {
     const countryPrices = tmp.countryPrices;
     if (countryPrices != null) {
       prices = countryPrices.prices;
@@ -81,7 +75,7 @@ export const getHasNonOrbPrice = function getHasNonOrbPrice(arg0) {
   if (prices == null) {
     prices = [];
   }
-  let found = prices.find(f94305);
+  let found = prices.find((currency) => currency.currency !== constants.DISCORD_ORB);
   if (found == null) {
     found = null;
   }
@@ -92,7 +86,7 @@ export const isOrbsExclusiveProduct = function isOrbsExclusiveProduct(product) {
     return false;
   } else {
     let prices;
-    if (product.prices[hasOwnProperty.DEFAULT] != null) {
+    if (product.prices[constants.DEFAULT] != null) {
       const countryPrices = tmp6.countryPrices;
       if (countryPrices != null) {
         prices = countryPrices.prices;
@@ -101,13 +95,13 @@ export const isOrbsExclusiveProduct = function isOrbsExclusiveProduct(product) {
     if (prices == null) {
       prices = [];
     }
-    let found = prices.find(f94304);
+    let found = prices.find((currency) => currency.currency === constants.DISCORD_ORB);
     if (found == null) {
       found = null;
     }
     let tmp2 = null != found;
     let prices1;
-    if (product.prices[hasOwnProperty.MOBILE] != null) {
+    if (product.prices[constants.MOBILE] != null) {
       const countryPrices2 = tmp3.countryPrices;
       if (countryPrices2 != null) {
         prices1 = countryPrices2.prices;
@@ -116,7 +110,7 @@ export const isOrbsExclusiveProduct = function isOrbsExclusiveProduct(product) {
     if (prices1 == null) {
       prices1 = [];
     }
-    let found1 = prices1.find(f94305);
+    let found1 = prices1.find((currency) => currency.currency !== constants.DISCORD_ORB);
     if (found1 == null) {
       found1 = null;
     }
@@ -155,7 +149,13 @@ export const isDynamicProduct = function isDynamicProduct(selectedProduct) {
         let someResult = isProfileEffectRecord(effects);
         if (someResult) {
           effects = effects.effects;
-          someResult = effects.some((randomizedSources) => null != randomizedSources.randomizedSources && randomizedSources.randomizedSources.length > 0);
+          someResult = effects.some((randomizedSources) => {
+            let tmp = null != randomizedSources.randomizedSources;
+            if (tmp) {
+              tmp = randomizedSources.randomizedSources.length > 0;
+            }
+            return tmp;
+          });
         }
         return someResult;
       });
@@ -176,7 +176,7 @@ export const getProductsWithOrbsPrice = function getProductsWithOrbsPrice(arr) {
     if (prices == null) {
       prices = [];
     }
-    let found = prices.find(f94304);
+    let found = prices.find((currency) => currency.currency === constants.DISCORD_ORB);
     if (found == null) {
       found = null;
     }
@@ -191,7 +191,7 @@ export const getProductsWithOrbsPrice = function getProductsWithOrbsPrice(arr) {
     if (prices1 == null) {
       prices1 = [];
     }
-    let found1 = prices1.find(f94305);
+    let found1 = prices1.find((currency) => currency.currency !== constants.DISCORD_ORB);
     if (found1 == null) {
       found1 = null;
     }
@@ -202,23 +202,40 @@ export const getProductsWithOrbsPrice = function getProductsWithOrbsPrice(arr) {
   });
 };
 export const getIsVariantProduct = function getIsVariantProduct(product) {
-  const tmp = product.type === CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP && null != product.variants && 0 !== product.variants.length;
+  let tmp = product.type === CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP;
+  if (tmp) {
+    tmp = null != product.variants;
+  }
+  if (tmp) {
+    tmp = 0 !== product.variants.length;
+  }
   return tmp;
 };
 export const getProductSkuIds = function getProductSkuIds(product) {
-  let mapped;
-  const tmp = product.type === CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP && null != product.variants && 0 !== product.variants.length;
+  let tmp = product.type === CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP;
+  if (tmp) {
+    tmp = null != product.variants;
+  }
+  if (tmp) {
+    tmp = 0 !== product.variants.length;
+  }
   if (tmp) {
     const variants = product.variants;
-    mapped = variants.map((skuId) => skuId.skuId);
+    let mapped = variants.map((skuId) => skuId.skuId);
   } else {
     mapped = [product.skuId];
   }
   return mapped;
 };
 export const getSelectedProduct = function getSelectedProduct(product, defaultVariantIndex) {
+  let tmp = product.type === CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP;
+  if (tmp) {
+    tmp = null != product.variants;
+  }
+  if (tmp) {
+    tmp = 0 !== product.variants.length;
+  }
   let tmp3 = product;
-  const tmp = product.type === CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP && null != product.variants && 0 !== product.variants.length;
   if (tmp) {
     tmp3 = product;
     if (null != defaultVariantIndex) {

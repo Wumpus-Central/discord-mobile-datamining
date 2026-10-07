@@ -1,38 +1,33 @@
 // === Module 11672: AppLauncherOnboardingPersistedStore ===
 
 // Module 11672 (AppLauncherOnboardingPersistedStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import size from "module_2" /* 2 */;
 
 let triggeredOnboardingContentMetadata = { canShowBotsBanner: false, canShowAppsOrActivitiesBanner: false, willShowGlobalSearchOnboarding: false, timeMs: 0, channelId: "0" };
-const PersistedStore = get_initializedDefault.PersistedStore;
+let closure_1 = { lastSeenTimeMs: null, triggeredOnboardingContentMetadata };
+const PersistedStore = initializeDefault.PersistedStore;
 class AppLauncherOnboardingPersistedStore extends PersistedStore {
-  initialize(arg0) {
-    if (null != arg0) {
-      ({ lastSeenTimeMs: closure_1.lastSeenTimeMs, triggeredOnboardingContentMetadata: closure_1.triggeredOnboardingContentMetadata } = arg0);
-    }
-  }
-  getState() {
-    return closure_1;
-  }
-  getLastSeenTimeMs() {
-    return closure_1.lastSeenTimeMs;
-  }
-  getTriggeredOnboardingContentMetadata() {
-    return closure_1.triggeredOnboardingContentMetadata;
-  }
 }
 const prototype = AppLauncherOnboardingPersistedStore.prototype;
+prototype["initialize"] = function initialize(arg0) {
+  if (null != arg0) {
+    ({ lastSeenTimeMs: closure_1.lastSeenTimeMs, triggeredOnboardingContentMetadata: closure_1.triggeredOnboardingContentMetadata } = arg0);
+  }
+};
+prototype["getState"] = function getState() {
+  return closure_1;
+};
+prototype["getLastSeenTimeMs"] = function getLastSeenTimeMs() {
+  return closure_1.lastSeenTimeMs;
+};
+prototype["getTriggeredOnboardingContentMetadata"] = function getTriggeredOnboardingContentMetadata() {
+  return closure_1.triggeredOnboardingContentMetadata;
+};
 AppLauncherOnboardingPersistedStore.displayName = "AppLauncherOnboardingPersistedStore";
 AppLauncherOnboardingPersistedStore.persistKey = "AppLauncherOnboardingPersistedStore";
 const items = [
   (lastSeenTimeMs) => {
-    let channelId;
-    let obj2;
-    let prop;
-    let prop1;
-    let timeMs;
     lastSeenTimeMs = undefined;
     if (lastSeenTimeMs != null) {
       lastSeenTimeMs = lastSeenTimeMs.lastSeenTimeMs;
@@ -40,7 +35,7 @@ const items = [
     if (lastSeenTimeMs == null) {
       lastSeenTimeMs = null;
     }
-    const obj = { lastSeenTimeMs, triggeredOnboardingContentMetadata: obj2 };
+    const obj = { lastSeenTimeMs, triggeredOnboardingContentMetadata: null };
     let canShowBotsBanner;
     if (lastSeenTimeMs != null) {
       triggeredOnboardingContentMetadata = lastSeenTimeMs.triggeredOnboardingContentMetadata;
@@ -51,8 +46,8 @@ const items = [
     if (canShowBotsBanner == null) {
       canShowBotsBanner = obj.canShowBotsBanner;
     }
-    obj2 = { canShowBotsBanner, canShowAppsOrActivitiesBanner: prop, willShowGlobalSearchOnboarding: prop1, timeMs, channelId };
-    prop = undefined;
+    const obj2 = { canShowBotsBanner, canShowAppsOrActivitiesBanner: null, willShowGlobalSearchOnboarding: null, timeMs: null, channelId: null };
+    let prop;
     if (lastSeenTimeMs != null) {
       const triggeredOnboardingContentMetadata2 = lastSeenTimeMs.triggeredOnboardingContentMetadata;
       if (triggeredOnboardingContentMetadata2 != null) {
@@ -62,7 +57,8 @@ const items = [
     if (prop == null) {
       prop = obj.canShowAppsOrActivitiesBanner;
     }
-    prop1 = undefined;
+    obj2.canShowAppsOrActivitiesBanner = prop;
+    let prop1;
     if (lastSeenTimeMs != null) {
       const triggeredOnboardingContentMetadata3 = lastSeenTimeMs.triggeredOnboardingContentMetadata;
       if (triggeredOnboardingContentMetadata3 != null) {
@@ -72,7 +68,8 @@ const items = [
     if (prop1 == null) {
       prop1 = obj.willShowGlobalSearchOnboarding;
     }
-    timeMs = undefined;
+    obj2.willShowGlobalSearchOnboarding = prop1;
+    let timeMs;
     if (lastSeenTimeMs != null) {
       const triggeredOnboardingContentMetadata4 = lastSeenTimeMs.triggeredOnboardingContentMetadata;
       if (triggeredOnboardingContentMetadata4 != null) {
@@ -82,7 +79,8 @@ const items = [
     if (timeMs == null) {
       timeMs = obj.timeMs;
     }
-    channelId = undefined;
+    obj2.timeMs = timeMs;
+    let channelId;
     if (lastSeenTimeMs != null) {
       const triggeredOnboardingContentMetadata5 = lastSeenTimeMs.triggeredOnboardingContentMetadata;
       if (triggeredOnboardingContentMetadata5 != null) {
@@ -92,19 +90,21 @@ const items = [
     if (channelId == null) {
       channelId = obj.channelId;
     }
+    obj2.channelId = channelId;
+    obj.triggeredOnboardingContentMetadata = obj2;
     return obj;
   }
 ];
 AppLauncherOnboardingPersistedStore.migrations = items;
-let obj2 = {
+const appLauncherOnboardingPersistedStore = new AppLauncherOnboardingPersistedStore(DispatcherDefault, {
   APP_LAUNCHER_ONBOARDING_SET_LAST_SEEN_TIME_MS: function handleSetLastSeenTimeMs() {
     closure_1.lastSeenTimeMs = Date.now();
   },
   APP_LAUNCHER_ONBOARDING_SET_TRIGGERED_ONBOARDING_CONTENT_METADATA: function handleSetTriggeredOnboardingContentMetadata(triggeredOnboardingContentMetadata) {
     closure_1.triggeredOnboardingContentMetadata = triggeredOnboardingContentMetadata.triggeredOnboardingContentMetadata;
   }
-};
-const appLauncherOnboardingPersistedStore = new AppLauncherOnboardingPersistedStore(DispatcherDefault, obj2);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingPersistedStore.tsx");
 
 export default appLauncherOnboardingPersistedStore;

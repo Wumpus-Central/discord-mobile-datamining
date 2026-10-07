@@ -1,95 +1,80 @@
 // === Module 17742: DefaultKeywordListTriggerFields ===
 
 // Module 17742 (DefaultKeywordListTriggerFields)
-import Constants from "Constants" /* 11487 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let rule;
+const require = fn;
+let maxWordCount = fn(11487).MAX_KEYWORDS_PER_ALLOWLIST_DEFAULT_KEYWORD_RULE;
+const jsxProd = fn(21);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_automod/native/components/DefaultKeywordListTriggerFields.tsx");
 
-let closure_4;
-let hasOwnProperty;
-let metroRequire;
-let maxWordCount = Constants.MAX_KEYWORDS_PER_ALLOWLIST_DEFAULT_KEYWORD_RULE;
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = Fragment);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((rule) => {
-  let closure_3;
-  let items;
-  let presets;
-  let obj = rule(presets[4]);
-  const cResult = obj.c(21);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((rule) => {
+  const cResult = rule(presets[4]).c(21);
   rule = rule.rule;
   const onChangeRule = rule.onChangeRule;
   presets = rule.triggerMetadata.presets;
   if (cResult[0] === onChangeRule) {
     if (cResult[1] === rule) {
-      let tmp4;
-      let tmp6;
       if (cResult[2] === presets) {
-        tmp4 = cResult[3];
+        let tmp4 = cResult[3];
       }
       maxWordCount = tmp4;
       const _Symbol = Symbol;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(tmp2[5]).intl;
-        const stringResult = intl.string(rule(presets[5]).t.CX5Yfc);
+        const stringResult = intl.string(tmp(tmp2[5]).t.CX5Yfc);
         cResult[4] = stringResult;
-        tmp6 = stringResult;
+        let tmp6 = stringResult;
       } else {
         tmp6 = cResult[4];
       }
       if (cResult[5] === tmp4) {
-        let tmp8;
-        let tmp10;
-        let tmp14;
-        let tmp13;
         if (cResult[6] === presets) {
-          tmp8 = cResult[7];
+          let tmp8 = cResult[7];
         }
         if (cResult[8] !== tmp8) {
           let obj2 = { title: tmp6, hasIcons: false, children: tmp8 };
-          const tmp12 = closure_4(rule(presets[8]).TableRowGroup, obj2);
+          const tmp12 = closure_4(tmp(tmp2[8]).TableRowGroup, obj2);
           cResult[8] = tmp8;
           cResult[9] = tmp12;
-          tmp10 = tmp12;
+          let tmp10 = tmp12;
         } else {
           tmp10 = cResult[9];
         }
         const _Symbol2 = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
           const intl2 = tmp(tmp2[5]).intl;
-          const stringResult1 = intl2.string(rule(presets[5]).t.lbE2Nm);
+          const stringResult1 = intl2.string(tmp(tmp2[5]).t.lbE2Nm);
           const intl3 = tmp(tmp2[5]).intl;
-          const stringResult2 = intl3.string(rule(presets[5]).t.qm7UZ8);
+          const stringResult2 = intl3.string(tmp(tmp2[5]).t.qm7UZ8);
           cResult[10] = stringResult1;
           cResult[11] = stringResult2;
-          tmp14 = stringResult2;
-          tmp13 = stringResult1;
+          let tmp14 = stringResult2;
+          let tmp13 = stringResult1;
         } else {
           tmp13 = cResult[10];
           tmp14 = cResult[11];
         }
         if (cResult[12] === onChangeRule) {
-          let tmp17;
           if (cResult[13] === rule) {
-            tmp17 = cResult[14];
+            let tmp17 = cResult[14];
           }
           if (cResult[15] === rule.triggerMetadata.allowList) {
-            let tmp18;
             if (cResult[16] === tmp17) {
-              tmp18 = cResult[17];
+              let tmp18 = cResult[17];
             }
             if (cResult[18] === tmp10) {
-              let tmp23;
               if (cResult[19] === tmp18) {
-                tmp23 = cResult[20];
+                let tmp23 = cResult[20];
               }
               return tmp23;
             }
-            const obj3 = { children: items };
-            items = [tmp10, tmp18];
+            const obj3 = { children: null };
+            let items = [tmp10, tmp18];
+            obj3.children = items;
             const tmp26 = closure_6(closure_5, obj3);
             cResult[18] = tmp10;
             cResult[19] = tmp18;
@@ -97,18 +82,19 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((rule) => {
             tmp23 = tmp26;
           }
           const obj4 = { label: tmp13, description: tmp14, type: "keywords", keywords: rule.triggerMetadata.allowList, maxWordCount, onChangeKeywords: tmp17, start: true, end: true };
-          const tmp22 = closure_4(onChangeRule(presets[9]), obj4);
+          const tmp22 = closure_4(onChangeRule(tmp2[9]), obj4);
           cResult[15] = rule.triggerMetadata.allowList;
           cResult[16] = tmp17;
           cResult[17] = tmp22;
           tmp18 = tmp22;
         }
         const fn2 = function y(allowList) {
-          let obj2;
-          const obj = { triggerMetadata: obj2 };
+          const obj = {};
           const merged = Object.assign(rule);
-          obj2 = { allowList };
+          const obj2 = {};
           const merged1 = Object.assign(rule.triggerMetadata);
+          obj2.allowList = allowList;
+          obj.triggerMetadata = obj2;
           return onChangeRule(obj);
         };
         cResult[12] = onChangeRule;
@@ -118,22 +104,18 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((rule) => {
       }
       const KEYWORD_PRESETS = tmp(tmp2[6]).KEYWORD_PRESETS;
       const mapped = KEYWORD_PRESETS.map((item) => {
-        let headerText;
-        let subtitleText;
-        let closure_0 = item;
-        const obj = rule(presets[6]);
-        const keywordPresetInfo = obj.getKeywordPresetInfo(item);
+        closure_0 = item;
+        const keywordPresetInfo = rule(presets[6]).getKeywordPresetInfo(item);
         ({ headerText, subtitleText } = keywordPresetInfo);
-        const obj2 = {
+        const obj = rule(presets[6]);
+        return closure_1_4(rule(presets[7]).TableCheckboxRow, {
           label: headerText,
           subLabel: subtitleText,
           checked: presets.includes(item),
           onPress(arg0) {
-            return closure_3(item, arg0);
+            return closure_3(closure_0, arg0);
           }
-        };
-        const TableCheckboxRow = rule(presets[7]).TableCheckboxRow;
-        return closure_1_4(TableCheckboxRow, obj2, item);
+        }, item);
       });
       cResult[5] = tmp4;
       cResult[6] = presets;
@@ -142,22 +124,21 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((rule) => {
     }
   }
   const fn = function c(arg0, arg1) {
-    let found;
-    let obj2;
-    let closure_0 = arg0;
+    closure_0 = arg0;
     const filter = presets.filter;
-    const tmp3 = arg1;
-    if (tmp3) {
+    if (arg1) {
       const items = [];
-      items[HermesBuiltin.arraySpread(items, filter((arg0) => arg0 !== iter), 0)] = arg0;
-      found = items;
+      items[HermesBuiltin.arraySpread(filter((arg0) => arg0 !== closure_0), 0)] = arg0;
+      let found = items;
     } else {
       found = filter((arg0) => arg0 !== closure_0);
     }
-    const obj = { triggerMetadata: obj2 };
+    const obj = {};
     const merged = Object.assign(rule);
-    obj2 = { presets: found };
+    const obj2 = {};
     const merged1 = Object.assign(rule.triggerMetadata);
+    obj2.presets = found;
+    obj.triggerMetadata = obj2;
     onChangeRule(obj);
   };
   cResult[0] = onChangeRule;
@@ -165,80 +146,62 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((rule) => {
   cResult[2] = presets;
   cResult[3] = fn;
   tmp4 = fn;
+  let obj = rule(presets[4]);
 }) : ((rule) => {
-  let KEYWORD_PRESETS;
-  let intl;
-  let intl2;
-  let intl3;
-  let items;
   rule = rule.rule;
   const onChangeRule = rule.onChangeRule;
   const presets = rule.triggerMetadata.presets;
-  let obj = { children: items };
-  let obj2 = {
-    title: intl.string(rule(presets[5]).t.CX5Yfc),
-    hasIcons: false,
-    children: KEYWORD_PRESETS.map((item) => {
-      let headerText;
-      let subtitleText;
-      let closure_0 = item;
-      let obj = rule(presets[6]);
-      const keywordPresetInfo = obj.getKeywordPresetInfo(item);
-      ({ headerText, subtitleText } = keywordPresetInfo);
-      let obj2 = {
-        label: headerText,
-        subLabel: subtitleText,
-        checked: presets.includes(item),
-        onPress(arg0) {
-          let found;
-          let obj2;
-          const filter = presets.filter;
-          const tmp4 = arg0;
-          if (tmp4) {
-            const items = [];
-            items[HermesBuiltin.arraySpread(items, filter((arg0) => arg0 !== requiredAction), 0)] = tmp2;
-            found = items;
-          } else {
-            found = filter((arg0) => arg0 !== closure_0);
-          }
-          const obj = { triggerMetadata: obj2 };
-          const merged = Object.assign(rule);
-          obj2 = { presets: found };
-          const merged1 = Object.assign(rule.triggerMetadata);
-          onChangeRule(obj);
+  let obj = { children: null };
+  let obj2 = { title: null, hasIcons: false, children: null };
+  const intl = rule(presets[5]).intl;
+  obj2.title = intl.string(rule(presets[5]).t.CX5Yfc);
+  const KEYWORD_PRESETS = rule(presets[6]).KEYWORD_PRESETS;
+  obj2.children = KEYWORD_PRESETS.map((item) => {
+    closure_0 = item;
+    const keywordPresetInfo = rule(presets[6]).getKeywordPresetInfo(item);
+    ({ headerText, subtitleText } = keywordPresetInfo);
+    let obj = rule(presets[6]);
+    return closure_1_4(rule(presets[7]).TableCheckboxRow, {
+      label: headerText,
+      subLabel: subtitleText,
+      checked: presets.includes(item),
+      onPress(arg0) {
+        const filter = presets.filter;
+        if (arg0) {
+          const items = [];
+          items[HermesBuiltin.arraySpread(filter((arg0) => arg0 !== closure_0), 0)] = tmp;
+          let found = items;
+        } else {
+          found = filter((arg0) => arg0 !== closure_0);
         }
-      };
-      const TableCheckboxRow = rule(presets[7]).TableCheckboxRow;
-      return closure_1_4(TableCheckboxRow, obj2, item);
-    })
+        const obj = {};
+        const merged = Object.assign(rule);
+        const obj2 = {};
+        const merged1 = Object.assign(rule.triggerMetadata);
+        obj2.presets = found;
+        obj.triggerMetadata = obj2;
+        onChangeRule(obj);
+      }
+    }, item);
+  });
+  let items = [closure_4(rule(presets[8]).TableRowGroup, obj2), ];
+  const obj3 = { label: null, description: null, type: "keywords", keywords: null, maxWordCount: null, onChangeKeywords: null, start: true, end: true };
+  const intl2 = rule(presets[5]).intl;
+  obj3.label = intl2.string(rule(presets[5]).t.lbE2Nm);
+  const intl3 = rule(presets[5]).intl;
+  obj3.description = intl3.string(rule(presets[5]).t.qm7UZ8);
+  obj3.keywords = rule.triggerMetadata.allowList;
+  obj3.maxWordCount = maxWordCount;
+  obj3.onChangeKeywords = function onChangeKeywords(allowList) {
+    const obj = {};
+    const merged = Object.assign(rule);
+    const obj2 = {};
+    const merged1 = Object.assign(rule.triggerMetadata);
+    obj2.allowList = allowList;
+    obj.triggerMetadata = obj2;
+    return onChangeRule(obj);
   };
-  const TableRowGroup = rule(presets[8]).TableRowGroup;
-  intl = rule(presets[5]).intl;
-  KEYWORD_PRESETS = rule(presets[6]).KEYWORD_PRESETS;
-  items = [closure_4(TableRowGroup, obj2), ];
-  const obj3 = {
-    label: intl2.string(rule(presets[5]).t.lbE2Nm),
-    description: intl3.string(rule(presets[5]).t.qm7UZ8),
-    type: "keywords",
-    keywords: rule.triggerMetadata.allowList,
-    maxWordCount,
-    onChangeKeywords(allowList) {
-      let obj2;
-      const obj = { triggerMetadata: obj2 };
-      const merged = Object.assign(rule);
-      obj2 = { allowList };
-      const merged1 = Object.assign(rule.triggerMetadata);
-      return onChangeRule(obj);
-    },
-    start: true,
-    end: true
-  };
-  const tmp = onChangeRule(presets[9]);
-  intl2 = rule(presets[5]).intl;
-  intl3 = rule(presets[5]).intl;
-  items[1] = closure_4(tmp, obj3);
+  items[1] = closure_4(onChangeRule(presets[9]), obj3);
+  obj.children = items;
   return closure_6(closure_5, obj);
 });
-const result = size.fileFinishedImporting("modules/guild_automod/native/components/DefaultKeywordListTriggerFields.tsx");
-
-export default tmp4;

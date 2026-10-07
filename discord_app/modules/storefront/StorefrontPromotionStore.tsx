@@ -1,59 +1,57 @@
 // === Module 8475: StorefrontPromotionStore ===
 
 // Module 8475 (StorefrontPromotionStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import size from "module_2" /* 2 */;
 
 function handleReset() {
 
 }
 let obj = {};
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class StorefrontPromotionStore extends Store {
-  getFetchState(arg0) {
-    let state;
-    if (obj[arg0] != null) {
-      state = tmp.state;
-    }
-    return state;
-  }
-  getFetchedAt(arg0) {
-    let state;
-    if (obj[arg0] != null) {
-      state = tmp.state;
-    }
-    if ("success" !== state) {
-      let state1;
-      if (obj[arg0] != null) {
-        state1 = tmp.state;
-      }
-    }
-    return obj[arg0].fetchedAt;
-  }
-  getPromotionsForApplication(arg0) {
-    let tmp4;
-    let state;
-    if (obj[arg0] != null) {
-      state = tmp.state;
-    }
-    if ("success" === state) {
-      let promotions = tmp.promotions;
-      if (promotions == null) {
-        promotions = null;
-      }
-      tmp4 = promotions;
-    } else {
-      let state1;
-      if (obj[arg0] != null) {
-        state1 = tmp.state;
-      }
-      tmp4 = null;
-    }
-    return tmp4;
-  }
 }
 const prototype = StorefrontPromotionStore.prototype;
+prototype["getFetchState"] = function getFetchState(arg0) {
+  state = undefined;
+  if (obj[arg0] != null) {
+    state = tmp.state;
+  }
+  return state;
+};
+prototype["getFetchedAt"] = function getFetchedAt(arg0) {
+  state = undefined;
+  if (obj[arg0] != null) {
+    state = tmp.state;
+  }
+  if ("success" !== state) {
+    let state1;
+    if (tmp != null) {
+      state1 = tmp.state;
+    }
+  }
+  return obj[arg0].fetchedAt;
+};
+prototype["getPromotionsForApplication"] = function getPromotionsForApplication(arg0) {
+  state = undefined;
+  if (obj[arg0] != null) {
+    state = tmp.state;
+  }
+  if ("success" === state) {
+    let promotions = tmp.promotions;
+    if (promotions == null) {
+      promotions = null;
+    }
+    let tmp4 = promotions;
+  } else {
+    let state1;
+    if (tmp != null) {
+      state1 = tmp.state;
+    }
+    tmp4 = null;
+  }
+  return tmp4;
+};
 StorefrontPromotionStore.displayName = "StorefrontPromotionStore";
 obj = {
   LOGOUT: handleReset,
@@ -61,27 +59,25 @@ obj = {
     const iter = arg0.applicationIds[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp4 = obj[nextResult];
-      let state;
-      let tmp5 = tmp4;
-      let tmp6 = obj;
-      if (tmp4 != null) {
-        state = tmp4.state;
+      let tmp3 = obj[nextResult];
+      state = undefined;
+      let tmp4 = tmp3;
+      let tmp5 = obj;
+      if (tmp3 != null) {
+        state = tmp3.state;
       }
-      let tmp8;
+      let tmp7;
       if ("success" === state) {
         let items = [];
-        let arraySpreadResult = HermesBuiltin.arraySpread(items, tmp5.promotions, 0);
-        tmp8 = items;
+        let arraySpreadResult = HermesBuiltin.arraySpread(tmp4.promotions, 0);
+        tmp7 = items;
       }
-      obj = { state: "loading", promotions: tmp8 };
-      tmp6[nextResult] = obj;
+      obj = { state: "loading", promotions: tmp7 };
+      tmp5[nextResult] = obj;
       continue;
     }
   },
   STOREFRONT_PROMOTIONS_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
-    let applicationIds;
-    let promotions;
     ({ applicationIds, promotions } = arg0);
     obj = {};
     const timestamp = Date.now();
@@ -96,7 +92,7 @@ obj = {
     while (iter !== undefined) {
       let applicationId = nextResult.applicationId;
       let tmp6 = obj[applicationId];
-      let state;
+      state = undefined;
       let tmp4 = nextResult;
       let tmp5 = applicationId;
       if (tmp6 != null) {
@@ -109,10 +105,9 @@ obj = {
       continue;
     }
   },
-  STOREFRONT_PROMOTIONS_FETCH_FAIL: function handleFetchFail(applicationIds) {
-    applicationIds = applicationIds.applicationIds;
-    for (const item10010 of applicationIds) {
-      obj = { state: "error", fetchedAt: tmp };
+  STOREFRONT_PROMOTIONS_FETCH_FAIL: function handleFetchFail(arg0) {
+    for (const item10010 of tmp) {
+      obj = { state: "error", fetchedAt: tmp2 };
       obj[item10010] = obj;
       continue;
     }
@@ -120,6 +115,7 @@ obj = {
   STOREFRONT_PROMOTION_ID_OVERRIDE_SET: handleReset
 };
 const storefrontPromotionStore = new StorefrontPromotionStore(DispatcherDefault, obj);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/StorefrontPromotionStore.tsx");
 
 export default storefrontPromotionStore;

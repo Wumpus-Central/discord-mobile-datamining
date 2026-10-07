@@ -1,38 +1,27 @@
 // === Module 11909: useShowConvoStarterInDM ===
 
 // Module 11909 (useShowConvoStarterInDM)
-import react from "react" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
 import ChannelConstants from "ChannelConstants" /* 2058 */;
-import MessageRequestStore_mod from "MessageRequestStore" /* 6734 */;
-import MessageStore_mod from "MessageStore" /* 5116 */;
+import MessageRequestStore from "MessageRequestStore" /* 6734 */;
+import MessageStore from "MessageStore" /* 5116 */;
 import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore_mod from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let dependencyMap;
 
-let metroImportAll;
-let metroImportDefault;
-let useRef = react.useRef;
-let MessageRequestStore = MessageRequestStore_mod;
-let MessageStore = MessageStore_mod;
-let UserStore = UserStore_mod;
-({ RelationshipTypes: metroImportDefault, UserFlags: metroImportAll } = Constants);
+let useRef = _mod19.useRef;
+({ RelationshipTypes: closure_7, UserFlags: closure_8 } = Constants);
 const ChannelFlags = ChannelConstants.ChannelFlags;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
-  let closure_3;
-  let closure_4;
-  let closure_6;
-  let ref;
-  let ref2;
-  let tmp4;
+let result = size.fileFinishedImporting("modules/messages/useShowConvoStarterInDM.tsx");
+
+export const MAX_MESSAGES_ALLOWED_FOR_GREETING = 25;
+export const useShowConvoStarterInDM = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   const _require = id;
-  const tmp = _require;
-  const obj = require("react");
-  const cResult = obj.c(15);
+  const cResult = require("c").c(15);
   dependencyMap = useRef(false);
   useRef = useRef(id.id);
   if (cResult[0] !== id) {
@@ -43,26 +32,22 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     }
     cResult[0] = id;
     cResult[1] = tmp5;
-    tmp4 = tmp5;
+    let tmp4 = tmp5;
   } else {
     tmp4 = cResult[1];
   }
   MessageRequestStore = tmp4;
   if (cResult[2] === id) {
-    let tmp6;
-    let tmp9;
-    let tmp13;
     if (cResult[3] === tmp4) {
-      tmp6 = cResult[4];
+      let tmp6 = cResult[4];
     }
     MessageStore = tmp6;
-    const tmpResult = tmp(9798);
-    const strangerDangerWarning = tmpResult.useStrangerDangerWarning(id.id);
+    const strangerDangerWarning = tmp(9798).useStrangerDangerWarning(id.id);
     if (cResult[5] !== id) {
       const hasFlagResult = id.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);
       cResult[5] = id;
       cResult[6] = hasFlagResult;
-      tmp9 = hasFlagResult;
+      let tmp9 = hasFlagResult;
     } else {
       tmp9 = cResult[6];
     }
@@ -71,7 +56,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [MessageStore, MessageRequestStore, strangerDangerWarning, UserStore];
       cResult[7] = items;
-      tmp13 = items;
+      let tmp13 = items;
     } else {
       tmp13 = cResult[7];
     }
@@ -79,60 +64,90 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
       if (cResult[9] === tmp4) {
         if (cResult[10] === tmp9) {
           if (cResult[11] === strangerDangerWarning) {
-            let tmp18;
-            let tmp19;
             if (cResult[12] === tmp6) {
-              tmp18 = cResult[13];
-              tmp19 = cResult[14];
+              let tmp18 = cResult[13];
+              let tmp19 = cResult[14];
             }
-            const tmpResult2 = tmp(504);
-            return tmpResult2.useStateFromStores(tmp13, tmp18, tmp19);
+            return tmp(504).useStateFromStores(tmp13, tmp18, tmp19);
           }
         }
       }
     }
     class D {
       constructor() {
-        if (ref2.current !== id.id) {
-          ref.current = false;
-          tmp.current = id.id;
+        tmp2 = closure_0;
+        if (closure_2.current !== closure_0.id) {
+          tmp3 = closure_1;
+          flag = false;
+          closure_1.current = false;
+          tmp.current = tmp2.id;
         }
-        if (null != strangerDangerWarning) {
+        if (null != closure_5) {
+          flag6 = false;
           return false;
-        } else if (closure_3) {
-          if (MessageRequestStore.isMessageRequest(id.id)) {
-            return false;
-          } else {
-            if (null != closure_4) {
-              if (RelationshipStore.getRelationshipType(closure_4) === metroImportDefault.BLOCKED) {
-                return false;
-              }
-            }
-            if (null != closure_4) {
-              const user = UserStore.getUser(closure_4);
-              if (null != user) {
-                if (user.hasFlag(metroImportAll.PROVISIONAL_ACCOUNT)) {
+        } else {
+          tmp15 = closure_3;
+          if (closure_3) {
+            tmp4 = closure_3;
+            if (closure_3.isMessageRequest(tmp2.id)) {
+              flag5 = false;
+              return false;
+            } else {
+              tmp5 = closure_4;
+              if (null != closure_4) {
+                tmp6 = closure_5;
+                tmp7 = RelationshipTypes;
+                if (closure_5.getRelationshipType(tmp5) === RelationshipTypes.BLOCKED) {
+                  flag4 = false;
                   return false;
                 }
               }
+              if (null != tmp5) {
+                tmp8 = closure_6;
+                user = closure_6.getUser(tmp5);
+                if (null != user) {
+                  tmp9 = UserFlags;
+                  if (user.hasFlag(UserFlags.PROVISIONAL_ACCOUNT)) {
+                    flag3 = false;
+                    return false;
+                  }
+                }
+              }
+              obj2 = closure_4;
+              messages = closure_4.getMessages(tmp2.id);
+              hasMoreBefore = messages.hasMoreBefore;
+              tmp10 = !hasMoreBefore;
+              if (!hasMoreBefore) {
+                tmp10 = !messages.hasMoreAfter;
+              }
+              if (tmp10) {
+                num = 25;
+                tmp10 = messages.length < 25;
+              }
+              current = messages.ready;
+              result = obj2.hasCurrentUserSentWaveBlockingMessage(tmp2.id);
+              if (!current) {
+                tmp12 = closure_1;
+                current = closure_1.current;
+              }
+              if (current) {
+                tmp13 = closure_6;
+                if (!closure_6) {
+                  tmp13 = tmp10;
+                }
+                current = tmp13;
+              }
+              if (current) {
+                current = !result;
+              }
+              tmp14 = closure_1;
+              closure_1.current = current;
+              return current;
             }
-            const messages = MessageStore.getMessages(id.id);
-            let current = messages.ready;
-            const result = MessageStore.hasCurrentUserSentWaveBlockingMessage(id.id);
-            if (!current) {
-              current = ref.current;
-            }
-            if (current) {
-              current = closure_6 || tmp10;
-            }
-            if (current) {
-              current = !result;
-            }
-            ref.current = current;
-            return current;
+          } else {
+            flag2 = false;
+            return false;
           }
-        } else {
-          return false;
         }
       }
     }
@@ -146,6 +161,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     cResult[14] = items1;
     tmp19 = items1;
     tmp18 = D;
+    const tmpResult = tmp(9798);
   }
   let recipientId = null;
   if (tmp4) {
@@ -155,9 +171,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   cResult[3] = tmp4;
   cResult[4] = recipientId;
   tmp6 = recipientId;
+  const obj = require("c");
 }) : ((id) => {
-  let ref;
-  let ref2;
   const _require = id;
   dependencyMap = useRef(false);
   useRef = useRef(id.id);
@@ -166,19 +181,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     const rawRecipients = id.rawRecipients;
     tmp = !rawRecipients.some((bot) => bot.bot);
   }
-  let closure_3 = tmp;
+  closure_3 = tmp;
   let recipientId = null;
   if (tmp) {
     recipientId = id.getRecipientId();
   }
-  const obj = require("useStrangerDangerWarning");
-  const strangerDangerWarning = obj.useStrangerDangerWarning(id.id);
+  const strangerDangerWarning = require("useStrangerDangerWarning").useStrangerDangerWarning(id.id);
   const hasFlagResult = id.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);
   UserStore = hasFlagResult;
+  const obj = require("useStrangerDangerWarning");
   const items = [recipientId, closure_3, strangerDangerWarning, UserStore];
   const items1 = [strangerDangerWarning, tmp, id.id, recipientId, hasFlagResult];
-  const obj2 = require("get initialized");
-  return obj2.useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     if (ref2.current !== id.id) {
       ref.current = false;
       tmp.current = id.id;
@@ -190,26 +204,38 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
         return false;
       } else {
         if (null != recipientId) {
-          if (RelationshipStore.getRelationshipType(recipientId) === metroImportDefault.BLOCKED) {
+          if (RelationshipStore.getRelationshipType(recipientId) === constants.BLOCKED) {
             return false;
           }
         }
         if (null != recipientId) {
           const user = UserStore.getUser(recipientId);
           if (null != user) {
-            if (user.hasFlag(metroImportAll.PROVISIONAL_ACCOUNT)) {
+            if (user.hasFlag(constants2.PROVISIONAL_ACCOUNT)) {
               return false;
             }
           }
         }
         const messages = MessageStore.getMessages(id.id);
+        const hasMoreBefore = messages.hasMoreBefore;
+        let tmp10 = !hasMoreBefore;
+        if (!hasMoreBefore) {
+          tmp10 = !messages.hasMoreAfter;
+        }
+        if (tmp10) {
+          tmp10 = messages.length < 25;
+        }
         let current = messages.ready;
         const result = MessageStore.hasCurrentUserSentWaveBlockingMessage(id.id);
         if (!current) {
           current = ref.current;
         }
         if (current) {
-          current = UserStore || tmp10;
+          let tmp13 = hasFlagResult;
+          if (!hasFlagResult) {
+            tmp13 = tmp10;
+          }
+          current = tmp13;
         }
         if (current) {
           current = !result;
@@ -222,7 +248,3 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     }
   }, items1);
 });
-let result = size.fileFinishedImporting("modules/messages/useShowConvoStarterInDM.tsx");
-
-export const MAX_MESSAGES_ALLOWED_FOR_GREETING = 25;
-export const useShowConvoStarterInDM = tmp3;

@@ -1,45 +1,33 @@
 // === Module 9836: ConfirmBlockUserAlert ===
 
 // Module 9836 (ConfirmBlockUserAlert)
-import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import intl5 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import components_Button_Button from "components/Button/Button" /* 5601 */;
 import ReportModals from "ReportModals" /* 8312 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9447 */;
-import Constants from "Constants" /* 9797 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let nextPromise, obj1, onPress, userId;
+require = fn;
+const View = fn(17).View;
+const LOCATION_CONTEXT_MOBILE = fn(9797).LOCATION_CONTEXT_MOBILE;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { header: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" }, text: null, buttonsContainer: null };
+let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" };
+obj2.text = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_4, textAlign: "center" };
+let obj4 = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_4, textAlign: "center" };
+obj2.buttonsContainer = { gap: nativeDefault.space.PX_12, marginBottom: -nativeDefault.space.PX_8 };
+let closure_9 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj5 = { gap: nativeDefault.space.PX_12, marginBottom: -nativeDefault.space.PX_8 };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/self_mod/shared/native/ConfirmBlockUserAlert.tsx");
 
-let metroImportAll;
-let metroImportDefault;
-let obj2;
-let obj3;
-let obj4;
-const View = react_native.View;
-const LOCATION_CONTEXT_MOBILE = Constants.LOCATION_CONTEXT_MOBILE;
-({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { header: obj2, text: obj3, buttonsContainer: obj4 };
-obj2 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" };
-createStyles = createStyles.createStyles;
-obj3 = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_4, textAlign: "center" };
-obj4 = { gap: nativeDefault.space.PX_12, marginBottom: -nativeDefault.space.PX_8 };
-let closure_9 = createStyles(obj);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
-  let description;
-  let first;
-  let items1;
-  let onCancel;
-  let tmp7;
-  let obj = userId(onCancel[8]);
-  const cResult = obj.c(47);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+  const cResult = userId(onCancel[8]).c(47);
   userId = userId.userId;
   const channelId = userId.channelId;
   ({ description, onCancel } = userId);
@@ -51,7 +39,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [onBlock];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -61,293 +49,282 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     };
     cResult[1] = userId;
     cResult[2] = fn;
-    tmp7 = fn;
+    let tmp7 = fn;
   } else {
     tmp7 = cResult[2];
   }
+  let obj = userId(onCancel[8]);
+  const stateFromStores = userId(onCancel[9]).useStateFromStores(first, tmp7);
   const tmpResult = userId(onCancel[9]);
-  const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
+  const lastChannelMessage = userId(onCancel[10]).useLastChannelMessage(channelId);
   const tmpResult2 = userId(onCancel[10]);
-  const lastChannelMessage = tmpResult2.useLastChannelMessage(channelId);
-  const obj4 = channelId(onCancel[11]);
-  const name = obj4.useName(stateFromStores);
+  const name = channelId(onCancel[11]).useName(stateFromStores);
   if (cResult[3] === channelId) {
-    let tmp11;
     if (cResult[4] === userId) {
-      tmp11 = cResult[5];
+      let tmp11 = cResult[5];
     }
-    let closure_7 = tmp11;
+    closure_7 = tmp11;
     if (cResult[6] === onCancel) {
-      let tmp12;
       if (cResult[7] === onClose) {
-        tmp12 = cResult[8];
+        let tmp12 = cResult[8];
       }
       onPress = tmp12;
       if (cResult[9] === tmp11) {
         if (cResult[10] === onBlock) {
-          let tmp13;
           if (cResult[11] === onClose) {
-            tmp13 = cResult[12];
+            let tmp13 = cResult[12];
           }
           if (cResult[13] === tmp11) {
             if (cResult[14] === lastChannelMessage) {
               if (cResult[15] === onBlockAndReport) {
-                let tmp14;
                 if (cResult[16] === onClose) {
-                  tmp14 = cResult[17];
+                  let tmp14 = cResult[17];
                 }
                 if (cResult[18] !== tmp12) {
                   class R {
                     constructor() {
-                      let intl;
-                      const obj = { size: "lg", onPress, text: intl.string(intl5.t["ETE/oC"]), variant: "secondary" };
-                      const Button = components_Button_Button.Button;
-                      intl = intl5.intl;
-                      return metroImportDefault(Button, obj);
+                      obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
+                      intl = closure_0(closure_2[16]).intl;
+                      obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
+                      return jsx(closure_0(closure_2[15]).Button, obj);
                     }
                   }
                   cResult[18] = tmp12;
                   class M {
                     constructor() {
-                      onClose();
-                      closure_7();
-                      onBlock();
+                      tmp = onClose();
+                      tmp2 = closure_7();
+                      tmp3 = onBlock();
+                      return;
                     }
                   }
                   cResult[19] = R;
                 } else {
                   class R {
                     constructor() {
-                      let intl;
-                      const obj = { size: "lg", onPress, text: intl.string(intl5.t["ETE/oC"]), variant: "secondary" };
-                      const Button = components_Button_Button.Button;
-                      intl = intl5.intl;
-                      return metroImportDefault(Button, obj);
+                      obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
+                      intl = closure_0(closure_2[16]).intl;
+                      obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
+                      return jsx(closure_0(closure_2[15]).Button, obj);
                     }
                   }
                 }
-                const header = tmp4.header;
                 class M {
                   constructor() {
-                    onClose();
-                    closure_7();
-                    onBlock();
+                    tmp = onClose();
+                    tmp2 = closure_7();
+                    tmp3 = onBlock();
+                    return;
                   }
                 }
                 if (cResult[22] === tmp4.header) {
-                  let formatResult;
                   class R {
                     constructor() {
-                      let intl;
-                      const obj = { size: "lg", onPress, text: intl.string(intl5.t["ETE/oC"]), variant: "secondary" };
-                      const Button = components_Button_Button.Button;
-                      intl = intl5.intl;
-                      return metroImportDefault(Button, obj);
+                      obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
+                      intl = closure_0(closure_2[16]).intl;
+                      obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
+                      return jsx(closure_0(closure_2[15]).Button, obj);
                     }
                   }
                   if (cResult[25] === description) {
                     class R {
                       constructor() {
-                        let intl;
-                        const obj = { size: "lg", onPress, text: intl.string(intl5.t["ETE/oC"]), variant: "secondary" };
-                        const Button = components_Button_Button.Button;
-                        intl = intl5.intl;
-                        return metroImportDefault(Button, obj);
+                        obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
+                        intl = closure_0(closure_2[16]).intl;
+                        obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
+                        return jsx(closure_0(closure_2[15]).Button, obj);
                       }
                     }
                     if (cResult[28] === tmp4.text) {
-                      let tmp29;
                       class R {
                         constructor() {
-                          let intl;
-                          const obj = { size: "lg", onPress, text: intl.string(intl5.t["ETE/oC"]), variant: "secondary" };
-                          const Button = components_Button_Button.Button;
-                          intl = intl5.intl;
-                          return metroImportDefault(Button, obj);
+                          obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
+                          intl = closure_0(closure_2[16]).intl;
+                          obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
+                          return jsx(closure_0(closure_2[15]).Button, obj);
                         }
                       }
                       const _Symbol = Symbol;
-                      const buttonsContainer = tmp4.buttonsContainer;
                       class M {
                         constructor() {
-                          onClose();
-                          closure_7();
-                          onBlock();
+                          tmp = onClose();
+                          tmp2 = closure_7();
+                          tmp3 = onBlock();
+                          return;
                         }
                       }
-                      if (tmp28 === Symbol.for("react.memo_cache_sentinel")) {
+                      if (tmp27 === Symbol.for("react.memo_cache_sentinel")) {
                         class R {
                           constructor() {
-                            let intl;
-                            const obj = { size: "lg", onPress, text: intl.string(intl5.t["ETE/oC"]), variant: "secondary" };
-                            const Button = components_Button_Button.Button;
-                            intl = intl5.intl;
-                            return metroImportDefault(Button, obj);
+                            obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
+                            intl = closure_0(closure_2[16]).intl;
+                            obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
+                            return jsx(closure_0(closure_2[15]).Button, obj);
                           }
                         }
-                        const stringResult = obj7.string(userId(onCancel[16]).t.l4Emac);
+                        const stringResult = obj8.string(tmp(onCancel[16]).t.l4Emac);
                         class M {
                           constructor() {
-                            onClose();
-                            closure_7();
-                            onBlock();
+                            tmp = onClose();
+                            tmp2 = closure_7();
+                            tmp3 = onBlock();
+                            return;
                           }
                         }
                         cResult[31] = stringResult;
-                        tmp29 = stringResult;
+                        const tmp28 = stringResult;
                       } else {
                         class R {
                           constructor() {
-                            let intl;
-                            const obj = { size: "lg", onPress, text: intl.string(intl5.t["ETE/oC"]), variant: "secondary" };
-                            const Button = components_Button_Button.Button;
-                            intl = intl5.intl;
-                            return metroImportDefault(Button, obj);
+                            obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
+                            intl = closure_0(closure_2[16]).intl;
+                            obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
+                            return jsx(closure_0(closure_2[15]).Button, obj);
                           }
                         }
                       }
                       if (blockButtonVariant == null) {
                         class R {
                           constructor() {
-                            let intl;
-                            const obj = { size: "lg", onPress, text: intl.string(intl5.t["ETE/oC"]), variant: "secondary" };
-                            const Button = components_Button_Button.Button;
-                            intl = intl5.intl;
-                            return metroImportDefault(Button, obj);
+                            obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
+                            intl = closure_0(closure_2[16]).intl;
+                            obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
+                            return jsx(closure_0(closure_2[15]).Button, obj);
                           }
                         }
                       }
                       if (cResult[32] === tmp13) {
                         class R {
                           constructor() {
-                            let intl;
-                            const obj = { size: "lg", onPress, text: intl.string(intl5.t["ETE/oC"]), variant: "secondary" };
-                            const Button = components_Button_Button.Button;
-                            intl = intl5.intl;
-                            return metroImportDefault(Button, obj);
+                            obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
+                            intl = closure_0(closure_2[16]).intl;
+                            obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
+                            return jsx(closure_0(closure_2[15]).Button, obj);
                           }
                         }
                         if (cResult[35] === tmp14) {
                           class R {
                             constructor() {
-                              let intl;
-                              const obj = { size: "lg", onPress, text: intl.string(intl5.t["ETE/oC"]), variant: "secondary" };
-                              const Button = components_Button_Button.Button;
-                              intl = intl5.intl;
-                              return metroImportDefault(Button, obj);
+                              obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
+                              intl = closure_0(closure_2[16]).intl;
+                              obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
+                              return jsx(closure_0(closure_2[15]).Button, obj);
                             }
                           }
                           if (cResult[38] === tmp4.buttonsContainer) {
                             class R {
                               constructor() {
-                                let intl;
-                                const obj = { size: "lg", onPress, text: intl.string(intl5.t["ETE/oC"]), variant: "secondary" };
-                                const Button = components_Button_Button.Button;
-                                intl = intl5.intl;
-                                return metroImportDefault(Button, obj);
+                                obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
+                                intl = closure_0(closure_2[16]).intl;
+                                obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
+                                return jsx(closure_0(closure_2[15]).Button, obj);
                               }
                             }
                           }
                           class M {
                             constructor() {
-                              onClose();
-                              closure_7();
-                              onBlock();
+                              tmp = onClose();
+                              tmp2 = closure_7();
+                              tmp3 = onBlock();
+                              return;
                             }
                           }
-                          let obj2 = { style: buttonsContainer, children: items1 };
-                          items1 = [tmp32, tmp35];
+                          let obj2 = { style: tmp4.buttonsContainer, children: null };
+                          const items1 = [tmp31, tmp34];
+                          obj2.children = items1;
+                          const tmp38 = onPress(onBlockAndReport, obj2);
                           cResult[38] = tmp4.buttonsContainer;
-                          cResult[39] = tmp32;
-                          cResult[40] = tmp35;
-                          cResult[41] = onPress(onBlockAndReport, obj2);
-                          const tmp39 = onPress(onBlockAndReport, obj2);
+                          cResult[39] = tmp31;
+                          cResult[40] = tmp34;
+                          cResult[41] = tmp38;
                         }
                         class M {
                           constructor() {
-                            onClose();
-                            closure_7();
-                            onBlock();
+                            tmp = onClose();
+                            tmp2 = closure_7();
+                            tmp3 = onBlock();
+                            return;
                           }
                         }
                         cResult[35] = tmp14;
                         cResult[36] = onBlockAndReport;
                         cResult[37] = null != onBlockAndReport;
                       }
-                      const obj3 = { size: "lg", onPress: tmp13, text: tmp29, variant: blockButtonVariant };
+                      const obj3 = { size: "lg", onPress: tmp13, text: tmp28, variant: blockButtonVariant };
+                      const tmp33 = closure_7(tmp(onCancel[15]).Button, obj3);
                       cResult[32] = tmp13;
                       cResult[33] = blockButtonVariant;
-                      cResult[34] = closure_7(userId(onCancel[15]).Button, obj3);
-                      const tmp34 = closure_7(userId(onCancel[15]).Button, obj3);
+                      cResult[34] = tmp33;
                     }
                     class M {
                       constructor() {
-                        onClose();
-                        closure_7();
-                        onBlock();
+                        tmp = onClose();
+                        tmp2 = closure_7();
+                        tmp3 = onBlock();
+                        return;
                       }
                     }
-                    tmp26[0] = tmp4.text;
-                    tmp26[2] = tmp20;
+                    tmp25[0] = tmp4.text;
+                    tmp25[2] = tmp20;
+                    const tmp26 = closure_7(tmp(onCancel[17]).Text, tmp25);
                     cResult[28] = tmp4.text;
                     cResult[29] = tmp20;
-                    cResult[30] = closure_7(userId(onCancel[17]).Text, tmp26);
-                    const tmp27 = closure_7(userId(onCancel[17]).Text, tmp26);
+                    cResult[30] = tmp26;
                   }
                   class M {
                     constructor() {
-                      onClose();
-                      closure_7();
-                      onBlock();
+                      tmp = onClose();
+                      tmp2 = closure_7();
+                      tmp3 = onBlock();
+                      return;
                     }
                   }
                   if (description == null) {
                     class R {
                       constructor() {
-                        let intl;
-                        const obj = { size: "lg", onPress, text: intl.string(intl5.t["ETE/oC"]), variant: "secondary" };
-                        const Button = components_Button_Button.Button;
-                        intl = intl5.intl;
-                        return metroImportDefault(Button, obj);
+                        obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
+                        intl = closure_0(closure_2[16]).intl;
+                        obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
+                        return jsx(closure_0(closure_2[15]).Button, obj);
                       }
                     }
-                    const format = tmp23.format;
-                    const obj5 = { name: null };
                     class M {
                       constructor() {
-                        onClose();
-                        closure_7();
-                        onBlock();
+                        tmp = onClose();
+                        tmp2 = closure_7();
+                        tmp3 = onBlock();
+                        return;
                       }
                     }
-                    formatResult = format(userId(onCancel[16]).t.pegItC, obj5);
+                    const formatResult = obj6.format(tmp(onCancel[16]).t.pegItC, { name: null });
+                    const obj5 = { name: null };
                   }
                   cResult[25] = description;
                   cResult[26] = name;
                   cResult[27] = formatResult;
                 }
-                const obj6 = { style: header, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: tmp16 };
+                const obj7 = { style: tmp4.header, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: tmp16 };
+                const tmp19 = closure_7(tmp(onCancel[17]).Text, obj7);
                 cResult[22] = tmp4.header;
                 cResult[23] = tmp16;
-                cResult[24] = closure_7(userId(onCancel[17]).Text, obj6);
-                const tmp19 = closure_7(userId(onCancel[17]).Text, obj6);
+                cResult[24] = tmp19;
               }
             }
           }
           const fn2 = function z() {
             onClose();
             closure_7();
-            const obj = ReportModals;
-            const result = obj.showReportModalForInappropriateConversationSafetyAlert(lastChannelMessage);
+            const result = ReportModals.showReportModalForInappropriateConversationSafetyAlert(lastChannelMessage);
             if (onBlockAndReport != null) {
               onBlockAndReport();
             }
           };
           class M {
             constructor() {
-              onClose();
-              closure_7();
-              onBlock();
+              tmp = onClose();
+              tmp2 = closure_7();
+              tmp3 = onBlock();
+              return;
             }
           }
           cResult[13] = tmp11;
@@ -360,9 +337,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
       }
       class M {
         constructor() {
-          onClose();
-          closure_7();
-          onBlock();
+          tmp = onClose();
+          tmp2 = closure_7();
+          tmp3 = onBlock();
+          return;
         }
       }
       cResult[9] = tmp11;
@@ -373,8 +351,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     }
     class A {
       constructor() {
-        onClose();
-        onCancel();
+        tmp = onClose();
+        tmp2 = onCancel();
+        return;
       }
     }
     cResult[6] = onCancel;
@@ -388,8 +367,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
       obj1 = { location: LOCATION_CONTEXT_MOBILE };
       blockUserResult = obj.blockUser(userId, obj1);
       nextPromise = blockUserResult.then(() => {
-        const obj = channelId(onCancel[13]);
-        const result = obj.showBlockSuccessToast(userId, closure_1_1);
+        const result = channelId(onCancel[13]).showBlockSuccessToast(userId, closure_1_1);
       });
       return;
     }
@@ -398,14 +376,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   cResult[4] = userId;
   cResult[5] = E;
   tmp11 = E;
+  const obj4 = channelId(onCancel[11]);
 }) : ((userId) => {
-  let description;
-  let intl;
-  let intl3;
-  let intl4;
-  let items5;
-  let items6;
-  let onCancel;
   userId = userId.userId;
   const channelId = userId.channelId;
   ({ description, onCancel } = userId);
@@ -414,21 +386,17 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   const onBlock = userId.onBlock;
   let str = userId.blockButtonVariant;
   const tmp = closure_9();
-  let obj = userId(onCancel[9]);
   const items = [onBlock];
-  const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(userId));
+  const stateFromStores = userId(onCancel[9]).useStateFromStores(items, () => UserStore.getUser(userId));
+  let obj = userId(onCancel[9]);
+  const lastChannelMessage = userId(onCancel[10]).useLastChannelMessage(channelId);
   let obj2 = userId(onCancel[10]);
-  const lastChannelMessage = obj2.useLastChannelMessage(channelId);
-  const obj3 = channelId(onCancel[11]);
-  const name = obj3.useName(stateFromStores);
+  const name = channelId(onCancel[11]).useName(stateFromStores);
   const items1 = [userId, channelId];
   const callback = onClose.useCallback(() => {
-    let obj = RelationshipActionCreatorsDefault;
     const obj2 = { location: LOCATION_CONTEXT_MOBILE };
-    const blockUserResult = obj.blockUser(userId, obj2);
-    blockUserResult.then(() => {
-      const obj = channelId(onCancel[13]);
-      const result = obj.showBlockSuccessToast(userId, closure_1_1);
+    RelationshipActionCreatorsDefault.blockUser(userId, { location: LOCATION_CONTEXT_MOBILE }).then(() => {
+      const result = channelId(onCancel[13]).showBlockSuccessToast(userId, closure_1_1);
     });
   }, items1);
   const items2 = [onClose, onCancel];
@@ -446,55 +414,52 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   const callback2 = onClose.useCallback(() => {
     onClose();
     callback();
-    const obj = ReportModals;
-    const result = obj.showReportModalForInappropriateConversationSafetyAlert(lastChannelMessage);
+    const result = ReportModals.showReportModalForInappropriateConversationSafetyAlert(lastChannelMessage);
     if (onBlockAndReport != null) {
       onBlockAndReport();
     }
   }, items4);
   const obj4 = {
     renderConfirmButton() {
-      let intl;
-      const obj = { size: "lg", onPress, text: intl.string(intl5.t["ETE/oC"]), variant: "secondary" };
-      const Button = components_Button_Button.Button;
-      intl = intl5.intl;
-      return metroImportDefault(Button, obj);
+      const obj = { size: "lg", onPress, text: null, variant: "secondary" };
+      const intl = util.intl;
+      obj.text = intl.string(util.t["ETE/oC"]);
+      return React5(components_Button_Button.Button, obj);
     },
-    children: items5
+    children: null
   };
-  const obj5 = { style: tmp.header, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: intl.format(userId(onCancel[16]).t.x5pOn9, { name }) };
-  const tmp11 = channelId(onCancel[18]);
-  const Text = userId(onCancel[17]).Text;
-  intl = userId(onCancel[16]).intl;
-  items5 = [callback(Text, obj5), , ];
-  const obj6 = { style: tmp.text, variant: "text-md/medium", children: description };
-  const Text2 = userId(onCancel[17]).Text;
+  const obj3 = channelId(onCancel[11]);
+  const obj5 = { style: tmp.header, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
+  let intl = userId(onCancel[16]).intl;
+  obj5.children = intl.format(userId(onCancel[16]).t.x5pOn9, { name });
+  const items5 = [callback(userId(onCancel[17]).Text, obj5), , ];
+  const obj6 = { style: tmp.text, variant: "text-md/medium", children: null };
   if (description == null) {
     const intl2 = tmp2(tmp3[16]).intl;
     const obj7 = { name };
     description = intl2.format(tmp2(tmp3[16]).t.pegItC, obj7);
   }
-  items5[1] = callback(Text2, obj6);
-  const obj8 = { style: tmp.buttonsContainer, children: items6 };
-  const obj9 = { size: "lg", onPress: callback1, text: intl3.string(userId(onCancel[16]).t.l4Emac), variant: str };
-  let Button = tmp2(tmp3[15]).Button;
-  intl3 = tmp2(tmp3[16]).intl;
-  const tmp13 = onBlockAndReport;
+  obj6.children = description;
+  items5[1] = callback(userId(onCancel[17]).Text, obj6);
+  const obj8 = { style: tmp.buttonsContainer, children: null };
+  const obj9 = { size: "lg", onPress: callback1, text: null, variant: null };
+  const intl3 = tmp2(tmp3[16]).intl;
+  obj9.text = intl3.string(userId(onCancel[16]).t.l4Emac);
   if (str == null) {
     str = "destructive";
   }
-  items6 = [callback(Button, obj9), ];
+  obj9.variant = str;
+  const items6 = [callback(userId(onCancel[15]).Button, obj9), ];
   let tmp12Result = null != onBlockAndReport;
   if (tmp12Result) {
-    const obj10 = { size: "lg", onPress: callback2, text: intl4.string(userId(onCancel[16]).t["39O+8F"]), variant: "secondary" };
-    const Button2 = tmp2(tmp3[15]).Button;
-    intl4 = tmp2(tmp3[16]).intl;
-    tmp12Result = tmp12(Button2, obj10);
+    const obj10 = { size: "lg", onPress: callback2, text: null, variant: "secondary" };
+    const intl4 = tmp2(tmp3[16]).intl;
+    obj10.text = intl4.string(tmp2(tmp3[16]).t["39O+8F"]);
+    tmp12Result = tmp12(tmp2(tmp3[15]).Button, obj10);
   }
   items6[1] = tmp12Result;
-  items5[2] = onPress(tmp13, obj8);
-  return onPress(tmp11, obj4);
+  obj8.children = items6;
+  items5[2] = onPress(onBlockAndReport, obj8);
+  obj4.children = items5;
+  return onPress(channelId(onCancel[18]), obj4);
 });
-let result = size.fileFinishedImporting("modules/self_mod/shared/native/ConfirmBlockUserAlert.tsx");
-
-export default tmp4;

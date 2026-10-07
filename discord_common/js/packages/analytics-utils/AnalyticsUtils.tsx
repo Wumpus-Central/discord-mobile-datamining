@@ -11,47 +11,38 @@ import AnalyticsSchema from "AnalyticsSchema" /* 1346 */;
 import getSuperProperties from "getSuperProperties" /* 1347 */;
 import size from "module_2" /* 2 */;
 
-const analyticsTrackingStoreMaker = AnalyticsTrackingStore.analyticsTrackingStoreMaker;
-const AnalyticsActionHandlers = AnalyticsTrackingStore.AnalyticsActionHandlers;
-const ImpressionTypes = StandardAnalyticsConstants.ImpressionTypes;
-let closure_4 = {};
+const dependencyMap = {};
 let closure_5 = {};
-const ImpressionGroups = StandardAnalyticsConstants.ImpressionGroups;
 const result = size.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx");
-const encodeProperties_export = encodeProperties.encodeProperties;
-const getSuperProperties_export = getSuperProperties.getSuperProperties;
 
-export { encodeProperties_export as encodeProperties };
-export { analyticsTrackingStoreMaker };
-export { AnalyticsActionHandlers };
-export { ImpressionTypes };
-export { ImpressionGroups };
+export const encodeProperties = encodeProperties.encodeProperties;
+export const analyticsTrackingStoreMaker = AnalyticsTrackingStore.analyticsTrackingStoreMaker;
+export const AnalyticsActionHandlers = AnalyticsTrackingStore.AnalyticsActionHandlers;
+export const ImpressionTypes = StandardAnalyticsConstants.ImpressionTypes;
+export const ImpressionGroups = StandardAnalyticsConstants.ImpressionGroups;
 export const ImpressionNames = AnalyticsSchema.ImpressionNames;
 export const NetworkActionNames = AnalyticsSchema.NetworkActionNames;
 export const SpanComponentNames = AnalyticsSchema.SpanComponentNames;
 export const SpanTtiNames = AnalyticsSchema.SpanTtiNames;
-export { getSuperProperties_export as getSuperProperties };
+export const getSuperProperties = getSuperProperties.getSuperProperties;
 export const getSuperPropertiesBase64 = getSuperProperties.getSuperPropertiesBase64;
 export const extendSuperProperties = getSuperProperties.extendSuperProperties;
 export const getOS = getSuperProperties.getOS;
 export const getDevice = getSuperProperties.getDevice;
 export const getCampaignParams = getSuperProperties.getCampaignParams;
 export const isThrottled = function isThrottled(CHANNEL_OPENED) {
-  let tmp = null != closure_4[CHANNEL_OPENED];
+  let tmp = null != dependencyMap[CHANNEL_OPENED];
   if (tmp) {
     const _Date = Date;
-    tmp = closure_4[CHANNEL_OPENED] > Date.now();
+    tmp = dependencyMap[CHANNEL_OPENED] > Date.now();
   }
   return tmp;
 };
 export const trackMaker = (arg0) => {
-  let TRACK_ACTION_NAME;
-  let dispatcher;
   ({ addBreadcrumb: global, analyticEventConfigs: require } = arg0);
   ({ dispatcher, TRACK_ACTION_NAME } = arg0);
-  let obj = AnalyticsTrackingActionCreators;
-  let closure_2 = obj.queueTrackingEventMaker(dispatcher, TRACK_ACTION_NAME);
-  return function track(framebus, arg1) {
+  closure_2 = AnalyticsTrackingActionCreators.queueTrackingEventMaker(dispatcher, TRACK_ACTION_NAME);
+  return function track(arg0, arg1) {
     let obj = arg2;
     if (arg2 === undefined) {
       obj = {};
@@ -65,25 +56,25 @@ export const trackMaker = (arg0) => {
     if (arg1 == null) {
       obj2 = {};
     }
-    let obj3 = tmp2;
-    if (typeof require[framebus] === "function") {
-      let tmp2Result = tmp2(obj2);
-      if (tmp2Result == null) {
-        tmp2Result = null;
+    let obj3 = tmp;
+    if (typeof require[arg0] === "function") {
+      let tmpResult = tmp(obj2);
+      if (tmpResult == null) {
+        tmpResult = null;
       }
-      obj3 = tmp2Result;
+      obj3 = tmpResult;
     }
     if (null != obj3) {
       if ("throttlePeriod" in obj3) {
-        const items = [framebus];
-        HermesBuiltin.arraySpread(items, obj3.throttleKeys(obj2), 1);
+        const items = [arg0];
+        HermesBuiltin.arraySpread(obj3.throttleKeys(obj2), 1);
         const joined = items.join("_");
-        let tmp14 = null != closure_4[joined];
-        if (tmp14) {
+        let tmp13 = null != dependencyMap[joined];
+        if (tmp13) {
           const _Date = Date;
-          tmp14 = closure_4[joined] > Date.now();
+          tmp13 = dependencyMap[joined] > Date.now();
         }
-        if (tmp14) {
+        if (tmp13) {
           return Promise.resolve();
         } else {
           if (typeof obj3.throttlePercent === "number") {
@@ -100,7 +91,7 @@ export const trackMaker = (arg0) => {
             }
           }
           const _Date2 = Date;
-          closure_4[joined] = Date.now() + obj3.throttlePeriod;
+          dependencyMap[joined] = Date.now() + obj3.throttlePeriod;
         }
       } else if ("throttlePercent" in obj3) {
         const _Math = Math;
@@ -109,13 +100,12 @@ export const trackMaker = (arg0) => {
         }
       } else {
         const _HermesInternal = HermesInternal;
-        const tmp6 = _modDef38;
-        tmp6(false, "Unsupported analytics event config: " + obj3);
+        _modDef38(false, "Unsupported analytics event config: " + obj3);
       }
     }
-    if (global != null) {
-      global(framebus);
+    if (closure_1_0 != null) {
+      closure_1_0(arg0);
     }
-    return closure_2(framebus, arg1, obj);
+    return closure_2(arg0, arg1, obj);
   };
 };

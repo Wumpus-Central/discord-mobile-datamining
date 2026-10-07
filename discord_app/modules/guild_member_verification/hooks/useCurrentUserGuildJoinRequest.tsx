@@ -2,25 +2,21 @@
 
 // Module 5942 (useCurrentUserGuildJoinRequest)
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4706 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let first;
-  let tmp6;
-  let tmp7;
+const require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useCurrentUserGuildJoinRequest.tsx");
+
+export const useCurrentUserGuildJoinRequest = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   _require = arg0;
-  const tmp = _require;
-  const obj = require("react");
-  const cResult = obj.c(4);
+  const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserGuildJoinRequestStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -36,21 +32,19 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[1] = arg0;
     cResult[2] = fn;
     cResult[3] = items1;
-    tmp7 = items1;
-    tmp6 = fn;
+    let tmp7 = items1;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  const tmpResult = tmp(504);
-  return tmpResult.useStateFromStores(first, tmp6, tmp7);
+  const obj = require("c");
+  return require("initialize").useStateFromStores(first, tmp6, tmp7);
 }) : ((arg0) => {
-  let closure_0;
   _require = arg0;
   const items = [UserGuildJoinRequestStore];
   const items1 = [arg0];
-  const obj = require("get initialized");
-  return obj.useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     let request = null;
     if (null != closure_0) {
       request = UserGuildJoinRequestStore.getRequest(tmp);
@@ -58,6 +52,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return request;
   }, items1);
 });
-const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useCurrentUserGuildJoinRequest.tsx");
-
-export const useCurrentUserGuildJoinRequest = tmp2;

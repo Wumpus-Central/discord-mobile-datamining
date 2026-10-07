@@ -1,18 +1,17 @@
 // === Module 15794: useSecureFramesVerifiedUsers ===
 
 // Module 15794 (useSecureFramesVerifiedUsers)
-import get_initialized from "get initialized" /* 504 */;
-import react from "react" /* 576 */;
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
 import VerifiedKeyStore from "VerifiedKeyStore" /* 9362 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp4;
-  let tmp5;
-  let userIds;
-  const obj = react;
-  const cResult = obj.c(2);
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rtc/hooks/useSecureFramesVerifiedUsers.tsx");
+
+export const useSecureFramesVerifiedUserIds = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [VerifiedKeyStore];
     const fn = function o() {
@@ -25,14 +24,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const tmpResult = get_initialized;
-  return tmpResult.useStateFromStoresArray(tmp4, tmp5);
+  return initialize.useStateFromStoresArray(tmp4, tmp5);
 }) : (() => {
-  let userIds;
   const items = [VerifiedKeyStore];
-  const obj = get_initialized;
-  return obj.useStateFromStoresArray(items, () => userIds.getUserIds());
+  return initialize.useStateFromStoresArray(items, () => userIds.getUserIds());
 });
-const result = size.fileFinishedImporting("modules/rtc/hooks/useSecureFramesVerifiedUsers.tsx");
-
-export const useSecureFramesVerifiedUserIds = tmp2;

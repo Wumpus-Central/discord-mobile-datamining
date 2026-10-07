@@ -2,10 +2,8 @@
 
 // Module 16022 (HappeningNow)
 import _mod12 from "module_12" /* 12 */;
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
@@ -22,342 +20,264 @@ import HappeningNowCardEventDefault from "HappeningNowCardEvent" /* 16051 */;
 import HappeningNowCardActiveChannelDefault from "HappeningNowCardActiveChannel" /* 16052 */;
 import HappeningNowCardUserDefault from "HappeningNowCardUser" /* 16053 */;
 import HappeningNowActions from "HappeningNowActions" /* 16054 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
-import HappeningNowConstants from "HappeningNowConstants" /* 15129 */;
-import ReanimatedHelperTypes from "ReanimatedHelperTypes" /* 6578 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
-let _require, dependencyMap, importDefault, listRef, scrollToOffsetResult, viewableItems;
-
-let HAPPENING_NOW_PANELS_CONTAINER_PADDING;
-let c9;
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-const f72492 = (arg0, ref) => {
-  const obj = react2;
-  const cResult = obj.c(3);
-  if (cResult[0] === arg0) {
-    let tmp4;
-    if (cResult[1] === ref) {
-      tmp4 = cResult[2];
-    }
-    return tmp4;
-  }
-  const GestureDetector = LegacyBaseButton.GestureDetector;
-  const merged = Object.assign(arg0);
-  const tmp6 = <GestureDetector gesture={gesture}>{null}</GestureDetector>;
-  cResult[0] = arg0;
-  cResult[1] = ref;
-  cResult[2] = tmp6;
-  tmp4 = tmp6;
-};
-const f72493 = (arg0, ref) => {
-  const GestureDetector = LegacyBaseButton.GestureDetector;
-  const merged = Object.assign(arg0);
-  return <GestureDetector gesture={gesture}>{null}</GestureDetector>;
-};
+require = fn;
 function renderCard(kind, fullWidth) {
   if ("placeholder" !== kind.kind) {
     if (!fullWidth.loading) {
       switch (kind.kind) {
         case "live-guild-stage":
-        {
-          HappeningNowCardLiveStageDefault;
+          const obj2 = {};
           const merged = Object.assign(kind);
           const merged1 = Object.assign(fullWidth);
-          return <tmp112 />;
-        }
+          return jsx(HappeningNowCardLiveStageDefault, {});
         case "guild-event":
-        {
-          HappeningNowCardEventDefault;
+          const obj3 = {};
           const merged2 = Object.assign(kind);
           const merged3 = Object.assign(fullWidth);
-          return <tmp102 />;
-        }
+          return jsx(HappeningNowCardEventDefault, {});
         case "active-channel":
-        {
-          HappeningNowCardActiveChannelDefault;
+          const obj4 = {};
           const merged4 = Object.assign(kind);
           const merged5 = Object.assign(fullWidth);
-          return <tmp92 />;
-        }
+          return jsx(HappeningNowCardActiveChannelDefault, {});
         case "user":
-        {
-          HappeningNowCardUserDefault;
+          const obj5 = {};
           const merged6 = Object.assign(kind);
           const merged7 = Object.assign(fullWidth);
-          return <tmp82 />;
-        }
+          return jsx(HappeningNowCardUserDefault, {});
         case "activity":
-        {
-          HappeningNowCardActivityDefault;
+          const obj6 = {};
           const merged8 = Object.assign(kind);
           const merged9 = Object.assign(fullWidth);
-          return <tmp72 />;
-        }
+          return jsx(HappeningNowCardActivityDefault, {});
         case "voice":
-        {
-          HappeningNowCardVoiceDefault;
+          const obj7 = {};
           const merged10 = Object.assign(kind);
           const merged11 = Object.assign(fullWidth);
-          return <tmp62 />;
-        }
+          return jsx(HappeningNowCardVoiceDefault, {});
         case "invite":
-        {
-          const HappeningNowCardInvite = HappeningNowActions.HappeningNowCardInvite;
+          const obj8 = {};
           const merged12 = Object.assign(kind);
           const merged13 = Object.assign(fullWidth);
-          return <HappeningNowCardInvite />;
-        }
+          return jsx(HappeningNowActions.HappeningNowCardInvite, {});
         case "customize-guild":
-        {
-          const HappeningNowCardCustomizeGuild = HappeningNowActions.HappeningNowCardCustomizeGuild;
+          const obj9 = {};
           const merged14 = Object.assign(kind);
           const merged15 = Object.assign(fullWidth);
-          return <HappeningNowCardCustomizeGuild />;
-        }
+          return jsx(HappeningNowActions.HappeningNowCardCustomizeGuild, {});
         case "create-channel":
-        {
-          const HappeningNowCardCreateChannel = HappeningNowActions.HappeningNowCardCreateChannel;
+          const obj10 = {};
           const merged16 = Object.assign(kind);
           const merged17 = Object.assign(fullWidth);
-          return <HappeningNowCardCreateChannel />;
-        }
+          return jsx(HappeningNowActions.HappeningNowCardCreateChannel, {});
         case "student-hub-add-channel":
-        {
-          const HappeningNowStudentHubAddServer = HappeningNowActions.HappeningNowStudentHubAddServer;
+          const obj11 = {};
           const merged18 = Object.assign(kind);
           const merged19 = Object.assign(fullWidth);
-          return <HappeningNowStudentHubAddServer />;
-        }
+          return jsx(HappeningNowActions.HappeningNowStudentHubAddServer, {});
         case "embedded-activity":
-        {
-          HappeningNowCardEmbeddedActivityDefault;
+          const obj12 = {};
           const merged20 = Object.assign(kind);
           const merged21 = Object.assign(fullWidth);
-          return <tmp15 cardKey={keyExtractor(kind)} />;
-        }
+          obj12.cardKey = keyExtractor(kind);
+          return jsx(HappeningNowCardEmbeddedActivityDefault, {});
         case "unified-vc":
-        {
-          HappeningNowCardUnifiedVCDefault;
+          const obj = {};
           const merged22 = Object.assign(kind);
           const merged23 = Object.assign(fullWidth);
-          return <tmp4 cardKey={keyExtractor(kind)} />;
-        }
+          obj.cardKey = keyExtractor(kind);
+          return jsx(HappeningNowCardUnifiedVCDefault, {});
         default:
-        {
-          const obj13 = GlobalUtils;
-          obj13.assertNever(kind);
-          break;
-        }
+          GlobalUtils.assertNever(kind);
       }
     }
   }
   return jsx(HappeningNowCardPlaceholder.HappeningNowCardPlaceholder, { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant });
 }
 function keyExtractor(kind) {
-  let combined;
-  let combined1;
-  let userId2;
   switch (kind.kind) {
     case "placeholder":
-    {
       const _HermesInternal7 = HermesInternal;
       return "" + kind.kind + "-" + kind.index;
-    }
     case "live-guild-stage":
-    {
       const _HermesInternal6 = HermesInternal;
       return "" + kind.kind + "-" + kind.stage.id;
-    }
     case "guild-event":
-    {
       const _HermesInternal5 = HermesInternal;
       return "" + kind.kind + "-" + kind.event.id;
-    }
     case "active-channel":
-    {
       const _HermesInternal4 = HermesInternal;
       return "" + kind.kind + "-" + kind.channelId;
-    }
     case "user":
-    {
-      let kind3;
-      let userId3;
       ({ kind: kind3, userId: userId3 } = kind);
       let _HermesInternal3 = HermesInternal;
-      combined = "" + kind3 + "-" + userId3;
+      let combined = "" + kind3 + "-" + userId3;
       return combined;
-    }
     case "activity":
-    {
-      let kind3;
-      let userId3;
       ({ kind: kind3, userId: userId3 } = kind);
-      let _HermesInternal3 = HermesInternal;
+      _HermesInternal3 = HermesInternal;
       combined = "" + kind3 + "-" + userId3;
       return combined;
-    }
     case "voice":
-    {
-      let kind2;
-      let voiceState;
       ({ kind: kind2, voiceState } = kind);
-      userId2 = voiceState.channelId ?? kind.userId;
+      let userId2 = voiceState.channelId;
+      if (userId2 == null) {
+        userId2 = kind.userId;
+      }
       let _HermesInternal2 = HermesInternal;
-      combined1 = "" + kind2 + "-" + userId2;
+      let combined1 = "" + kind2 + "-" + userId2;
       return combined1;
-    }
     case "unified-vc":
-    {
-      let kind2;
-      let voiceState;
       ({ kind: kind2, voiceState } = kind);
-      userId2 = voiceState.channelId ?? kind.userId;
-      let _HermesInternal2 = HermesInternal;
+      userId2 = voiceState.channelId;
+      if (userId2 == null) {
+        userId2 = kind.userId;
+      }
+      _HermesInternal2 = HermesInternal;
       combined1 = "" + kind2 + "-" + userId2;
       return combined1;
-    }
     case "invite":
-    {
       return kind.kind;
-    }
     case "customize-guild":
-    {
       return kind.kind;
-    }
     case "create-channel":
-    {
       return kind.kind;
-    }
     case "student-hub-add-channel":
-    {
       return kind.kind;
-    }
     case "embedded-activity":
-    {
-      const kindValue = kind.kind;
-      const userId = kind.voiceState.channelId ?? kind.userId;
+      kind = kind.kind;
+      let userId = kind.voiceState.channelId;
+      if (userId == null) {
+        userId = kind.userId;
+      }
       const _HermesInternal = HermesInternal;
-      return "" + kindValue + "-" + userId + "-" + kind.activity.applicationId;
-    }
+      return "" + kind + "-" + userId + "-" + kind.activity.applicationId;
     default:
-    {
-      const obj = GlobalUtils;
-      obj.assertNever(kind);
-      break;
-    }
+      GlobalUtils.assertNever(kind);
   }
 }
 function getItemType(kind) {
   return kind.kind;
 }
-let react = react_mod;
-({ ScrollView: hasOwnProperty, View: metroRequire } = react_native);
-({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: metroImportDefault, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: metroImportAll, HAPPENING_NOW_PANELS_CONTAINER_PADDING, HappeningNowKindIds: c9 } = HappeningNowConstants);
-const AnalyticEvents = Constants.AnalyticEvents;
-const jsx = Fragment.jsx;
-const createContext = react.createContext;
-const context = createContext(ReanimatedHelperTypes.createFakeSharedValue([]));
-let obj = { containerInner: { paddingLeft: HAPPENING_NOW_PANELS_CONTAINER_PADDING, paddingRight: HAPPENING_NOW_PANELS_CONTAINER_PADDING }, loading: obj2 };
-obj2 = { paddingHorizontal: nativeDefault.space.PX_8, flex: 1 };
+get_ActivityIndicator = fn(17);
+({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const HappeningNowConstants = fn(15129);
+({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: closure_7, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_8, HAPPENING_NOW_PANELS_CONTAINER_PADDING, HappeningNowKindIds: closure_9 } = HappeningNowConstants);
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const jsx = fn(21).jsx;
+const ReanimatedHelperTypes = fn(6578);
+const context = noop.createContext(ReanimatedHelperTypes.createFakeSharedValue([]));
+const createStyles = fn(4896);
+let obj = { containerInner: { paddingLeft: HAPPENING_NOW_PANELS_CONTAINER_PADDING, paddingRight: HAPPENING_NOW_PANELS_CONTAINER_PADDING }, loading: { paddingHorizontal: nativeDefault.space.PX_8, flex: 1 } };
 let closure_13 = createStyles.createStyles(obj);
-const Gesture = LegacyBaseButton.Gesture;
-const NativeResult = Gesture.Native();
-const gesture = NativeResult.disallowInterruption(true);
+const Gesture = fn(6147).Gesture;
+let obj4 = { paddingHorizontal: nativeDefault.space.PX_8, flex: 1 };
+const gesture = Gesture.Native().disallowInterruption(true);
 const maintainVisibleContentPosition = { disabled: true };
-const forwardRef = react.forwardRef;
-let ReactCompilerGating = ReactCompilerGating_mod;
-forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? f72492 : f72493).displayName = "HappeningNowScrollView";
-const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? f72492 : f72493);
-ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
+const forwardRefResult = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
+  const cResult = c.c(3);
+  if (cResult[0] === arg0) {
+    if (cResult[1] === ref) {
+      let tmp4 = cResult[2];
+    }
+    return tmp4;
+  }
+  const obj2 = { gesture, children: null };
+  const merged = Object.assign(arg0);
+  obj2.children = <hasOwnProperty ref={ref} />;
+  const tmp6 = jsx(LegacyBaseButton.GestureDetector, { gesture, children: null });
+  cResult[0] = arg0;
+  cResult[1] = ref;
+  cResult[2] = tmp6;
+  tmp4 = tmp6;
+  const obj3 = { ref };
+}) : ((arg0, ref) => {
+  const obj = { gesture, children: null };
+  const merged = Object.assign(arg0);
+  obj.children = <hasOwnProperty ref={ref} />;
+  return jsx(LegacyBaseButton.GestureDetector, { gesture, children: null });
+}));
+forwardRefResult.displayName = "HappeningNowScrollView";
+ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((isFocused, arg1) => {
-  let closure_4;
-  let tmp3;
-  let tmp6;
   _require = isFocused;
   importDefault = arg1;
-  let tmp = isFocused;
-  let obj = require("react");
-  const cResult = obj.c(10);
+  const cResult = require("c").c(10);
   isFocused = isFocused.isFocused;
-  let obj2 = react;
-  let closure_3 = react.useRef(isFocused);
+  closure_3 = noop.useRef(isFocused);
   if (cResult[0] !== arg1) {
     const fn = function o() {
-      let data;
-      const obj = { context: "messages", num_cards: closure_3.current.data.length, max_viewed_card_index: Math.min(ref.current, closure_3.current.data.length), card_types: data.map((item) => closure_1_9[item.kind]) };
-      data = closure_3.current.data;
-      const obj2 = HappeningNowAnalytics;
-      const merged = Object.assign(obj2.getAffinityProperties(closure_3.current.data));
+      const obj = { context: "messages", num_cards: closure_3.current.data.length, max_viewed_card_index: Math.min(ref.current, closure_3.current.data.length), card_types: null };
+      const data = closure_3.current.data;
+      obj.card_types = data.map((item) => closure_1_9[item.kind]);
+      const merged = Object.assign(HappeningNowAnalytics.getAffinityProperties(closure_3.current.data));
       return obj;
     };
     cResult[0] = arg1;
     cResult[1] = fn;
-    tmp3 = fn;
+    let tmp3 = fn;
   } else {
     tmp3 = cResult[1];
   }
   const tmp5 = require("useStableCallback")(tmp3);
-  react = tmp5;
-  const tmp4 = importDefault;
+  noop = tmp5;
   if (cResult[2] !== isFocused) {
     const fn2 = function p() {
       closure_3.current = current;
     };
     cResult[2] = isFocused;
     cResult[3] = fn2;
-    tmp6 = fn2;
+    let tmp6 = fn2;
   } else {
     tmp6 = cResult[3];
   }
   const effect = obj2.useEffect(tmp6);
   if (cResult[4] === tmp5) {
-    let tmp8;
-    let tmp9;
-    let tmp11;
     if (cResult[5] === isFocused) {
-      tmp8 = cResult[6];
-      tmp9 = cResult[7];
+      let tmp8 = cResult[6];
+      let tmp9 = cResult[7];
     }
     const effect1 = obj2.useEffect(tmp8, tmp9);
     if (cResult[8] !== tmp5) {
       const fn4 = function _() {
         return () => {
           current = ref.current;
-          const tmp = !current.loading && current.data.length > 0;
+          const loading = current.loading;
+          let tmp = !loading;
+          if (!loading) {
+            tmp = current.data.length > 0;
+          }
           if (tmp) {
+            closure_1(isFocused[14]).track(constants.ACTIVITY_CARDS_VIEWED, closure_1_4());
             const obj = closure_1(isFocused[14]);
-            obj.track(constants.ACTIVITY_CARDS_VIEWED, closure_1_4());
           }
         };
       };
       cResult[8] = tmp5;
       cResult[9] = fn4;
-      tmp11 = fn4;
+      let tmp11 = fn4;
     } else {
       tmp11 = cResult[9];
     }
-    tmp4(tmp[15])(tmp11);
+    require("useMountEffect")(tmp11);
   }
   const fn3 = function v() {
     let tmp = !isFocused;
-    if (tmp) {
+    if (!isFocused) {
       current = closure_3.current;
-      tmp = !current.loading && current.data.length > 0;
-      const tmp3 = !current.loading && current.data.length > 0;
+      const loading = current.loading;
+      let tmp3 = !loading;
+      if (!loading) {
+        tmp3 = current.data.length > 0;
+      }
+      tmp = tmp3;
     }
     if (tmp) {
-      const obj = AnalyticsUtilsDefault;
-      obj.track(AnalyticEvents.ACTIVITY_CARDS_VIEWED, closure_4());
+      AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARDS_VIEWED, closure_4());
     }
   };
   const items = [isFocused, tmp5];
@@ -368,102 +288,101 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((isFocused, arg
   tmp9 = items;
   tmp8 = fn3;
 }) : ((isFocused, arg1) => {
-  let closure_4;
   let current = isFocused;
   importDefault = arg1;
   isFocused = isFocused.isFocused;
-  let closure_3 = react.useRef(isFocused);
+  closure_3 = noop.useRef(isFocused);
   let tmp = require("useStableCallback")(() => {
-    let data;
-    const obj = { context: "messages", num_cards: closure_3.current.data.length, max_viewed_card_index: Math.min(ref.current, closure_3.current.data.length), card_types: data.map((item) => closure_1_9[item.kind]) };
-    data = closure_3.current.data;
-    const obj2 = HappeningNowAnalytics;
-    const merged = Object.assign(obj2.getAffinityProperties(closure_3.current.data));
+    const obj = { context: "messages", num_cards: closure_3.current.data.length, max_viewed_card_index: Math.min(ref.current, closure_3.current.data.length), card_types: null };
+    const data = closure_3.current.data;
+    obj.card_types = data.map((item) => closure_1_9[item.kind]);
+    const merged = Object.assign(HappeningNowAnalytics.getAffinityProperties(closure_3.current.data));
     return obj;
   });
-  react = tmp;
-  const effect = react.useEffect(() => {
+  noop = tmp;
+  const effect = noop.useEffect(() => {
     closure_3.current = current;
   });
   const items = [isFocused, tmp];
-  const effect1 = react.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     let tmp = !isFocused;
-    if (tmp) {
+    if (!isFocused) {
       current = closure_3.current;
-      tmp = !current.loading && current.data.length > 0;
-      const tmp3 = !current.loading && current.data.length > 0;
+      const loading = current.loading;
+      let tmp3 = !loading;
+      if (!loading) {
+        tmp3 = current.data.length > 0;
+      }
+      tmp = tmp3;
     }
     if (tmp) {
-      const obj = AnalyticsUtilsDefault;
-      obj.track(AnalyticEvents.ACTIVITY_CARDS_VIEWED, closure_4());
+      AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARDS_VIEWED, closure_4());
     }
   }, items);
   require("useMountEffect")(() => () => {
     current = ref.current;
-    const tmp = !current.loading && current.data.length > 0;
+    const loading = current.loading;
+    let tmp = !loading;
+    if (!loading) {
+      tmp = current.data.length > 0;
+    }
     if (tmp) {
+      closure_1(isFocused[14]).track(constants.ACTIVITY_CARDS_VIEWED, closure_1_4());
       const obj = closure_1(isFocused[14]);
-      obj.track(constants.ACTIVITY_CARDS_VIEWED, closure_1_4());
     }
   });
 });
-let memo = react.memo;
-ReactCompilerGating = ReactCompilerGating_mod;
-const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRef) => {
-  let arr;
-  let loading;
-  let tmp10;
-  let tmp6;
-  const tmp2 = dependencyMap;
-  let obj = listRef(576);
-  const cResult = obj.c(46);
+ReactCompilerGating = fn(558);
+const NativeResult = Gesture.Native();
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNow.tsx");
+
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRef) => {
+  const cResult = listRef(576).c(46);
   listRef = listRef.listRef;
-  const cards = listRef.cards;
   const tmp4 = closure_13();
-  const obj2 = listRef(1491);
-  const isFocused = obj2.useIsFocused();
+  const obj = listRef(576);
+  const isFocused = listRef(1491).useIsFocused();
   if (cResult[0] !== isFocused) {
     const obj3 = { withoutUserCards: "IconComponent", guildId: "Array", showMultipleActivitiesPerChannel: "SET_SOUNDPACK", isFocused };
     cResult[0] = isFocused;
     cResult[1] = obj3;
-    tmp6 = obj3;
+    let tmp6 = obj3;
   } else {
     tmp6 = cResult[1];
   }
-  [arr, tmp10] = ref(isFocused(16024)(cards, tmp6), 2);
+  const obj2 = listRef(1491);
+  const tmp7 = isFocused;
+  const tmp8 = ref;
+  [arr, tmp10] = ref(isFocused(16024)(listRef.cards, tmp6), 2);
   dependencyMap = tmp10;
-  ref(isFocused(16024)(cards, tmp6), 2);
-  const tmp11 = isFocused(6664);
-  const analyticsLocations = tmp11(isFocused(6688).ACTIVITIES_HAPPENING_NOW).analyticsLocations;
-  ref = react.useRef(0);
-  const obj4 = react;
-  if (cResult[2] === arr) {
+  const tmp9 = ref(isFocused(16024)(listRef.cards, tmp6), 2);
+  const analyticsLocations = isFocused(6664)(isFocused(6688).ACTIVITIES_HAPPENING_NOW).analyticsLocations;
+  let num3 = 0;
+  ref = noop.useRef(0);
+  if (cResult[2] === length) {
     if (cResult[3] === isFocused) {
-      let tmp13;
       if (cResult[4] === tmp10) {
-        tmp13 = cResult[5];
+        let tmp13 = cResult[5];
       }
       closure_17(tmp13, ref);
       if (cResult[6] === isFocused) {
-        let tmp16;
-        let tmp17;
         if (cResult[7] === listRef) {
-          tmp16 = cResult[8];
-          tmp17 = cResult[9];
+          let tmp16 = cResult[8];
+          let tmp17 = cResult[9];
         }
         const effect = obj4.useEffect(tmp16, tmp17);
         const _Symbol = Symbol;
         class S {
           constructor() {
-            tmp = closure_1;
-            if (!tmp) {
-              tmp2 = listRef;
+            if (!closure_1) {
+              tmp = listRef;
               current = listRef.current;
-              tmp3 = null;
+              tmp2 = null;
               if (current != null) {
                 scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
               }
-              tmp5 = closure_3;
+              tmp4 = closure_3;
               num = 0;
               closure_3.current = 0;
             }
@@ -486,17 +405,17 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRef
             }
           }
         }
-        const findIndexResult = arr.findIndex(V);
-        react = findIndexResult;
-        let num8 = Infinity;
-        if (findIndexResult >= 0) {
+        const findIndexResult = length.findIndex(V);
+        noop = findIndexResult;
+        let num9 = Infinity;
+        if (findIndexResult >= num3) {
           class V {
             constructor(arg0) {
               obj = listRef(closure_2[20]);
               return obj.cardSize(listRef) === closure_1_8;
             }
           }
-          num8 = closure_7 * findIndexResult;
+          num9 = closure_7 * findIndexResult;
         }
         if (cResult[11] === findIndexResult) {
           class V {
@@ -505,54 +424,51 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRef
               return obj.cardSize(listRef) === closure_1_8;
             }
           }
-          const first = tmp8(tmp7(16032)(num8, D), 2)[0];
-          ref(isFocused(16032)(num8, D), 2);
+          const first = tmp8(tmp7(16032)(num9, D), 2)[0];
           class S {
             constructor() {
-              tmp = closure_1;
-              if (!tmp) {
-                tmp2 = listRef;
+              if (!closure_1) {
+                tmp = listRef;
                 current = listRef.current;
-                tmp3 = null;
+                tmp2 = null;
                 if (current != null) {
                   scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
                 }
-                tmp5 = closure_3;
+                tmp4 = closure_3;
                 num = 0;
                 closure_3.current = 0;
               }
               return;
             }
           }
-          if (cResult[14] !== arr) {
+          if (cResult[14] !== length) {
             class V {
               constructor(arg0) {
                 obj = listRef(closure_2[20]);
                 return obj.cardSize(listRef) === closure_1_8;
               }
             }
-            let result = obj6.filterHappeningNowCards(arr);
-            const tmpResult = listRef(16031);
-            const result1 = tmpResult.sortHappeningNowCards(result);
+            let result = obj6.filterHappeningNowCards(length);
+            const result1 = tmp(16031).sortHappeningNowCards(result);
             class S {
               constructor() {
-                tmp = closure_1;
-                if (!tmp) {
-                  tmp2 = listRef;
+                if (!closure_1) {
+                  tmp = listRef;
                   current = listRef.current;
-                  tmp3 = null;
+                  tmp2 = null;
                   if (current != null) {
                     scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
                   }
-                  tmp5 = closure_3;
+                  tmp4 = closure_3;
                   num = 0;
                   closure_3.current = 0;
                 }
                 return;
               }
             }
-            cResult[14] = arr;
+            cResult[14] = length;
             cResult[15] = result1;
+            const tmpResult = tmp(16031);
           } else {
             class V {
               constructor(arg0) {
@@ -561,8 +477,8 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRef
               }
             }
           }
-          const tmpResult3 = listRef(16032);
-          const happeningNowScrollSnapping = tmpResult3.useHappeningNowScrollSnapping(listRef);
+          const tmp8Result = tmp8(tmp7(16032)(num9, D), 2);
+          const happeningNowScrollSnapping = tmp(16032).useHappeningNowScrollSnapping(listRef);
           if (cResult[16] !== tmp10) {
             class Y {
               constructor(arg0) {
@@ -573,15 +489,14 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRef
             cResult[16] = tmp10;
             class S {
               constructor() {
-                tmp = closure_1;
-                if (!tmp) {
-                  tmp2 = listRef;
+                if (!closure_1) {
+                  tmp = listRef;
                   current = listRef.current;
-                  tmp3 = null;
+                  tmp2 = null;
                   if (current != null) {
                     scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
                   }
-                  tmp5 = closure_3;
+                  tmp4 = closure_3;
                   num = 0;
                   closure_3.current = 0;
                 }
@@ -596,29 +511,28 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRef
               }
             }
           }
-          const tmpResult4 = listRef(4618);
-          const sharedValue = tmpResult4.useSharedValue([]);
+          const tmpResult3 = tmp(16032);
+          const sharedValue = tmp(4618).useSharedValue([]);
           if (cResult[18] !== sharedValue) {
             class X {
               constructor(arg0) {
                 viewableItems = listRef.viewableItems;
                 obj = closure_0(closure_2[23]);
-                result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { /* body not rendered: F145611 */ }));
+                result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { ... }));
                 return;
               }
             }
             cResult[18] = sharedValue;
             class S {
               constructor() {
-                tmp = closure_1;
-                if (!tmp) {
-                  tmp2 = listRef;
+                if (!closure_1) {
+                  tmp = listRef;
                   current = listRef.current;
-                  tmp3 = null;
+                  tmp2 = null;
                   if (current != null) {
                     scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
                   }
-                  tmp5 = closure_3;
+                  tmp4 = closure_3;
                   num = 0;
                   closure_3.current = 0;
                 }
@@ -630,7 +544,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRef
               constructor(arg0) {
                 viewableItems = listRef.viewableItems;
                 obj = closure_0(closure_2[23]);
-                result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { /* body not rendered: F145611 */ }));
+                result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { ... }));
                 return;
               }
             }
@@ -652,12 +566,12 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRef
               return;
             }
           }
-          if (0 === arr.length) {
+          if (num3 === length.length) {
             class X {
               constructor(arg0) {
                 viewableItems = listRef.viewableItems;
                 obj = closure_0(closure_2[23]);
-                result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { /* body not rendered: F145611 */ }));
+                result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { ... }));
                 return;
               }
             }
@@ -667,108 +581,32 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRef
               constructor(arg0) {
                 viewableItems = listRef.viewableItems;
                 obj = closure_0(closure_2[23]);
-                result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { /* body not rendered: F145611 */ }));
+                result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { ... }));
                 return;
               }
             }
             const obj5 = { index: 0, loading: tmp10, fullwidth: true, panelVariant: true };
-            const tmp43 = renderCard(arr.length > 0 ? arr[0] : { kind: "placeholder", index: 0 }, obj5);
             class S {
               constructor() {
-                tmp = closure_1;
-                if (!tmp) {
-                  tmp2 = listRef;
+                if (!closure_1) {
+                  tmp = listRef;
                   current = listRef.current;
-                  tmp3 = null;
+                  tmp2 = null;
                   if (current != null) {
                     scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
                   }
-                  tmp5 = closure_3;
+                  tmp4 = closure_3;
                   num = 0;
                   closure_3.current = 0;
                 }
                 return;
               }
             }
-            cResult[23] = arr[0];
-            cResult[24] = arr.length;
+            cResult[23] = length[0];
+            cResult[24] = length.length;
             cResult[25] = tmp10;
-            cResult[26] = tmp43;
-          } else {
-            let tmp34;
-            class X {
-              constructor(arg0) {
-                viewableItems = listRef.viewableItems;
-                obj = closure_0(closure_2[23]);
-                result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { /* body not rendered: F145611 */ }));
-                return;
-              }
-            }
-            if (cResult[30] === Symbol.for("react.memo_cache_sentinel")) {
-              class X {
-                constructor(arg0) {
-                  viewableItems = listRef.viewableItems;
-                  obj = closure_0(closure_2[23]);
-                  result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { /* body not rendered: F145611 */ }));
-                  return;
-                }
-              }
-              const stringResult = obj10.string(listRef(1126).t["1+boPi"]);
-              class S {
-                constructor() {
-                  tmp = closure_1;
-                  if (!tmp) {
-                    tmp2 = listRef;
-                    current = listRef.current;
-                    tmp3 = null;
-                    if (current != null) {
-                      scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
-                    }
-                    tmp5 = closure_3;
-                    num = 0;
-                    closure_3.current = 0;
-                  }
-                  return;
-                }
-              }
-              tmp34 = stringResult;
-            } else {
-              class X {
-                constructor(arg0) {
-                  viewableItems = listRef.viewableItems;
-                  obj = closure_0(closure_2[23]);
-                  result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { /* body not rendered: F145611 */ }));
-                  return;
-                }
-              }
-            }
-            if (cResult[31] === tmp33) {
-              class X {
-                constructor(arg0) {
-                  viewableItems = listRef.viewableItems;
-                  obj = closure_0(closure_2[23]);
-                  result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { /* body not rendered: F145611 */ }));
-                  return;
-                }
-              }
-            }
-            class S {
-              constructor() {
-                tmp = closure_1;
-                if (!tmp) {
-                  tmp2 = listRef;
-                  current = listRef.current;
-                  tmp3 = null;
-                  if (current != null) {
-                    scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
-                  }
-                  tmp5 = closure_3;
-                  num = 0;
-                  closure_3.current = 0;
-                }
-                return;
-              }
-            }
+            num3 = 26;
+            cResult[26] = renderCard(length.length.length > num3 ? length.length[0] : { kind: "placeholder", index: 0 }, obj5);
             class D {
               constructor(arg0, arg1) {
                 sum = arg1 + listRef;
@@ -786,6 +624,105 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRef
                 return;
               }
             }
+            const tmp42 = renderCard(length.length > num3 ? length[0] : { kind: "placeholder", index: 0 }, obj5);
+          } else {
+            class X {
+              constructor(arg0) {
+                viewableItems = listRef.viewableItems;
+                obj = closure_0(closure_2[23]);
+                result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { ... }));
+                return;
+              }
+            }
+            if (cResult[30] === Symbol.for("react.memo_cache_sentinel")) {
+              class X {
+                constructor(arg0) {
+                  viewableItems = listRef.viewableItems;
+                  obj = closure_0(closure_2[23]);
+                  result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { ... }));
+                  return;
+                }
+              }
+              class S {
+                constructor() {
+                  if (!closure_1) {
+                    tmp = listRef;
+                    current = listRef.current;
+                    tmp2 = null;
+                    if (current != null) {
+                      scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
+                    }
+                    tmp4 = closure_3;
+                    num = 0;
+                    closure_3.current = 0;
+                  }
+                  return;
+                }
+              }
+              const stringResult = obj10.string(tmp(1126).t["1+boPi"]);
+              const tmp34 = obj10.string(tmp(1126).t["1+boPi"]);
+            } else {
+              class X {
+                constructor(arg0) {
+                  viewableItems = listRef.viewableItems;
+                  obj = closure_0(closure_2[23]);
+                  result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { ... }));
+                  return;
+                }
+              }
+            }
+            if (cResult[31] === tmp33) {
+              class X {
+                constructor(arg0) {
+                  viewableItems = listRef.viewableItems;
+                  obj = closure_0(closure_2[23]);
+                  result = obj.updateSharedValueArrayIfChanged(closure_6, viewableItems.map(() => { ... }));
+                  return;
+                }
+              }
+            }
+            class S {
+              constructor() {
+                if (!closure_1) {
+                  tmp = listRef;
+                  current = listRef.current;
+                  tmp2 = null;
+                  if (current != null) {
+                    scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
+                  }
+                  tmp4 = closure_3;
+                  num = 0;
+                  closure_3.current = 0;
+                }
+                return;
+              }
+            }
+            const obj7 = { ref: listRef, horizontal: true, renderScrollComponent, decelerationRate: "fast", onScroll: first, maintainVisibleContentPosition, snapToInterval: tmp25, snapToOffsets: null, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null };
+            class D {
+              constructor(arg0, arg1) {
+                sum = arg1 + listRef;
+                if (sum < closure_5) {
+                  tmp6 = closure_7;
+                  sum1 = sum / closure_7 | 0;
+                } else {
+                  tmp3 = closure_4;
+                  tmp4 = closure_8;
+                  sum1 = closure_4 + ((sum - tmp2) / closure_8 | 0);
+                }
+                if (sum1 > closure_3.current) {
+                  closure_3.current = sum1;
+                }
+                return;
+              }
+            }
+            obj7.accessibilityLabel = tmp34;
+            obj7.contentContainerStyle = tmp4.containerInner;
+            obj7.data = tmp26;
+            obj7.renderItem = Y;
+            obj7.onViewableItemsChanged = tmp33;
+            obj7.keyExtractor = keyExtractor;
+            obj7.getItemType = getItemType;
+            const tmp41 = jsx(tmp(8404).FlashList, { ref: listRef, horizontal: true, renderScrollComponent, decelerationRate: "fast", onScroll: first, maintainVisibleContentPosition, snapToInterval: tmp25, snapToOffsets: null, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null });
             cResult[31] = tmp33;
             cResult[32] = first;
             cResult[33] = tmp26;
@@ -794,9 +731,9 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRef
             cResult[36] = Y;
             cResult[37] = tmp25;
             cResult[38] = tmp4.containerInner;
-            cResult[39] = jsx(listRef(8404).FlashList, { ref: listRef, horizontal: true, renderScrollComponent, decelerationRate: "fast", onScroll: first, maintainVisibleContentPosition, snapToInterval: tmp25, snapToOffsets: null, showsHorizontalScrollIndicator: false, accessibilityLabel: tmp34, contentContainerStyle: tmp4.containerInner, data: tmp26, renderItem: Y, onViewableItemsChanged: tmp33, keyExtractor, getItemType });
-            const tmp41 = jsx(listRef(8404).FlashList, { ref: listRef, horizontal: true, renderScrollComponent, decelerationRate: "fast", onScroll: first, maintainVisibleContentPosition, snapToInterval: tmp25, snapToOffsets: null, showsHorizontalScrollIndicator: false, accessibilityLabel: tmp34, contentContainerStyle: tmp4.containerInner, data: tmp26, renderItem: Y, onViewableItemsChanged: tmp33, keyExtractor, getItemType });
+            cResult[39] = tmp41;
           }
+          const tmpResult4 = tmp(4618);
         }
         class D {
           constructor(arg0, arg1) {
@@ -816,20 +753,19 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRef
           }
         }
         cResult[11] = findIndexResult;
-        cResult[12] = num8;
+        cResult[12] = num9;
         cResult[13] = D;
       }
       class S {
         constructor() {
-          tmp = closure_1;
-          if (!tmp) {
-            tmp2 = listRef;
+          if (!closure_1) {
+            tmp = listRef;
             current = listRef.current;
-            tmp3 = null;
+            tmp2 = null;
             if (current != null) {
               scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
             }
-            tmp5 = closure_3;
+            tmp4 = closure_3;
             num = 0;
             closure_3.current = 0;
           }
@@ -844,36 +780,31 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRef
       tmp16 = S;
     }
   }
-  const obj8 = { data: arr, isFocused, loading: tmp10 };
-  cResult[2] = arr;
+  const obj8 = { data: length, isFocused, loading: tmp10 };
+  cResult[2] = length;
   cResult[3] = isFocused;
   cResult[4] = tmp10;
   cResult[5] = obj8;
   tmp13 = obj8;
+  obj4 = noop;
+  const tmp11 = isFocused(6664);
 }) : ((listRef) => {
-  let intl;
-  let loading;
-  let tmp18;
-  let tmp28Result;
   listRef = listRef.listRef;
-  let data;
-  ref = undefined;
+  let children;
+  _slicedToArray = undefined;
+  let ref;
   let sharedValue;
   let callback2;
-  const cards = listRef.cards;
   const tmp = closure_13();
-  const tmp2 = listRef;
-  let obj = listRef(data[16]);
-  const isFocused = obj.useIsFocused();
-  const tmp7 = ref(isFocused(data[17])(cards, { withoutUserCards: "IconComponent", guildId: "Array", showMultipleActivitiesPerChannel: "SET_SOUNDPACK", isFocused }), 2);
-  data = tmp7[0];
-  const tmp6 = ref;
-  ref = tmp8;
-  let obj2 = ref;
-  const tmp9 = isFocused(data[18]);
-  const analyticsLocations = tmp9(isFocused(data[19]).ACTIVITIES_HAPPENING_NOW).analyticsLocations;
+  const isFocused = listRef(children[16]).useIsFocused();
+  const tmp7 = _slicedToArray(isFocused(children[17])(listRef.cards, { withoutUserCards: "IconComponent", guildId: "Array", showMultipleActivitiesPerChannel: "SET_SOUNDPACK", isFocused }), 2);
+  children = tmp7[0];
+  _slicedToArray = tmp8;
+  let obj = listRef(children[16]);
+  const tmp5 = isFocused;
+  const tmp6 = _slicedToArray;
   ref = ref.useRef(0);
-  closure_17({ data, isFocused, loading: tmp7[1] }, ref);
+  closure_17({ data: children, isFocused, loading: tmp7[1] }, ref);
   const items = [isFocused, listRef];
   const effect = ref.useEffect(() => {
     if (!isFocused) {
@@ -884,82 +815,71 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRef
       ref.current = 0;
     }
   }, items);
-  const findIndexResult = data.findIndex((item) => {
-    const obj = listRef(first[20]);
-    return obj.cardSize(item) === callback2;
-  });
-  let c5 = findIndexResult;
+  const findIndexResult = children.findIndex((item) => listRef(first[20]).cardSize(item) === callback2);
+  c5 = findIndexResult;
   let num = Infinity;
-  const tmp5 = isFocused;
   if (findIndexResult >= 0) {
     num = sharedValue * findIndexResult;
   }
   const items1 = [findIndexResult, num];
   const callback = obj2.useCallback((arg0, arg1) => {
-    let sum1;
     const sum = arg1 + arg0;
     if (sum < num) {
-      sum1 = sum / metroImportDefault | 0;
+      let sum1 = sum / React5 | 0;
     } else {
-      sum1 = c5 + ((sum - tmp2) / metroImportAll | 0);
+      sum1 = c5 + ((sum - tmp2) / closure_2_8 | 0);
     }
     if (sum1 > ref.current) {
       ref.current = sum1;
     }
   }, items1);
-  const tmp6Result = tmp6(tmp5(data[21])(num, callback), 2);
-  const first1 = tmp6Result[0];
+  const tmp6Result = tmp6(tmp5(children[21])(num, callback), 2);
   if (tmp6Result[1]) {
-    tmp18 = sharedValue;
+    const tmp17 = sharedValue;
   }
-  const items2 = [data];
+  const items2 = [children];
   const memo = obj2.useMemo(() => {
-    const obj = happeningNowRankingUtils;
-    const result = obj.filterHappeningNowCards(first);
-    const obj2 = happeningNowRankingUtils;
-    return obj2.sortHappeningNowCards(result);
+    const result = happeningNowRankingUtils.filterHappeningNowCards(first);
+    return happeningNowRankingUtils.sortHappeningNowCards(result);
   }, items2);
+  const tmp9 = isFocused(children[18]);
   const items3 = [tmp7[1]];
-  const tmp2Result = tmp2(data[21]);
-  const happeningNowScrollSnapping = tmp2Result.useHappeningNowScrollSnapping(listRef);
-  const callback1 = obj2.useCallback((index) => {
-    const obj = { index: index.index, loading, panelVariant: true };
-    return renderCard(index.item, obj);
-  }, items3);
-  const tmp2Result2 = tmp2(data[22]);
-  sharedValue = tmp2Result2.useSharedValue([]);
+  const happeningNowScrollSnapping = listRef(children[21]).useHappeningNowScrollSnapping(listRef);
+  const callback1 = obj2.useCallback((index) => renderCard(index.item, { index: index.index, loading, panelVariant: true }), items3);
+  const tmp2Result = listRef(children[21]);
+  sharedValue = listRef(children[22]).useSharedValue([]);
   const items4 = [sharedValue];
   callback2 = obj2.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
-    const obj = updateSharedValueIfChanged;
-    const result = obj.updateSharedValueArrayIfChanged(sharedValue, viewableItems.map((item) => closure_1_19(item.item)));
+    const result = updateSharedValueIfChanged.updateSharedValueArrayIfChanged(sharedValue, viewableItems.map((item) => closure_1_19(item.item)));
   }, items4);
   const items5 = [callback2];
-  const memo1 = obj2.useMemo(() => {
-    const obj = _mod12;
-    return obj.debounce(callback2, 130);
-  }, items5);
-  if (0 === data.length) {
-    let tmp27;
-    if (!tmp7[1]) {
-      tmp27 = <num />;
+  const memo1 = obj2.useMemo(() => _mod12.debounce(callback2, 130), items5);
+  if (0 === children.length) {
+    if (!tmp8) {
+      return <num />;
     }
-    return tmp27;
   }
-  if (tmp7[1]) {
-    const obj4 = { index: 0, loading: tmp7[1], fullwidth: true, panelVariant: true };
-    tmp28Result = <num style={tmp.loading}>{renderCard(data.length > 0 ? data[0] : { kind: "placeholder", index: 0 }, obj4)}</num>;
-  } else {
-    const Provider = context.Provider;
-    const AnalyticsLocationProvider = tmp2(tmp3[18]).AnalyticsLocationProvider;
-    ({ ref: listRef, horizontal: true, renderScrollComponent, decelerationRate: "fast", onScroll: first1, maintainVisibleContentPosition, snapToInterval: tmp18, snapToOffsets: happeningNowScrollSnapping, showsHorizontalScrollIndicator: false, accessibilityLabel: intl.string(tmp2(data[25]).t["1+boPi"]), contentContainerStyle: tmp.containerInner, data: memo, renderItem: callback1, onViewableItemsChanged: memo1, keyExtractor, getItemType });
-    const FlashList = tmp2(tmp3[26]).FlashList;
-    intl = tmp2(tmp3[25]).intl;
-    tmp28Result = <Provider value={sharedValue}>{null}</Provider>;
+  if (!tmp7[1]) {
+    const obj3 = { value: sharedValue, children: null };
+    const obj4 = { value: tmp9(isFocused(children[19]).ACTIVITIES_HAPPENING_NOW).analyticsLocations, children: null };
+    const obj5 = { ref: listRef, horizontal: true, renderScrollComponent, decelerationRate: "fast", onScroll: tmp6Result[0], maintainVisibleContentPosition, snapToInterval: tmp17, snapToOffsets: happeningNowScrollSnapping, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null };
+    const intl = tmp2(tmp3[25]).intl;
+    obj5.accessibilityLabel = intl.string(tmp2(tmp3[25]).t["1+boPi"]);
+    obj5.contentContainerStyle = tmp.containerInner;
+    obj5.data = memo;
+    obj5.renderItem = callback1;
+    obj5.onViewableItemsChanged = memo1;
+    obj5.keyExtractor = keyExtractor;
+    obj5.getItemType = getItemType;
+    obj4.children = jsx(tmp2(tmp3[26]).FlashList, { ref: listRef, horizontal: true, renderScrollComponent, decelerationRate: "fast", onScroll: tmp6Result[0], maintainVisibleContentPosition, snapToInterval: tmp17, snapToOffsets: happeningNowScrollSnapping, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null });
+    obj3.children = jsx(tmp2(tmp3[18]).AnalyticsLocationProvider, { value: tmp9(isFocused(children[19]).ACTIVITIES_HAPPENING_NOW).analyticsLocations, children: null });
+    <context.Provider value={sharedValue}>{null}</context.Provider>;
   }
-  tmp27 = tmp28Result;
+  const obj6 = { style: tmp.loading, children: null };
+  children = renderCard(children.length > 0 ? children[0] : { kind: "placeholder", index: 0 }, { index: 0, loading: tmp8, fullwidth: true, panelVariant: true });
+  obj6.children = children;
+  <num style={tmp.loading}>{null}</num>;
+  const tmp2Result2 = listRef(children[22]);
 }));
-let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNow.tsx");
-
-export default memoResult;
 export const ViewableHappeningNowCardKeysContext = context;

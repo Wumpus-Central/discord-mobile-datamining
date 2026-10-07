@@ -1,11 +1,10 @@
 // === Module 16669: ConjureNativeChat ===
 
 // Module 16669 (ConjureNativeChat)
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import Constants from "Constants" /* 1085 */;
-import intl13 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import _modDef3753 from "module_3753" /* 3753 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 4883 */;
@@ -17,8 +16,7 @@ import _modDef6059 from "module_6059" /* 6059 */;
 import ConjureDesignFeedback from "ConjureDesignFeedback" /* 16584 */;
 import ConjureHistoryFormat from "ConjureHistoryFormat" /* 16658 */;
 import ConjureVersionRestoreConfirm from "ConjureVersionRestoreConfirm" /* 16662 */;
-import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 16670 */;
-import ConjureRepliedMessage from "ConjureRepliedMessage" /* 16672 */;
+import ConjureNativeStatusLineDefault from "ConjureNativeStatusLine" /* 16670 */;
 import ConjureMessageAuthor from "ConjureMessageAuthor" /* 16673 */;
 import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 16676 */;
 import useConjureAttachmentImage from "useConjureAttachmentImage" /* 16678 */;
@@ -42,238 +40,191 @@ import ConjureSecretRequestState from "ConjureSecretRequestState" /* 16749 */;
 import conjurePendingPlan from "conjurePendingPlan" /* 16754 */;
 import ConjureChatGrouping from "ConjureChatGrouping" /* 16755 */;
 import chat_ConjureRepliedMessage from "chat/ConjureRepliedMessage" /* 16760 */;
-import _slicedToArray_mod from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1986 */;
 import ConjureConnectionStore_mod from "ConjureConnectionStore" /* 12923 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 8734 */;
 import ConjureChatStore_mod from "ConjureChatStore" /* 12924 */;
-import Fragment_mod from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-const ConjureNativeStatusLineDefault = ConjureNativeStatusLine;
 const ConjureNativeCollapsibleSectionDefault = ConjureNativeCollapsibleSection;
 const ConjurePlanAutomodExamplesDefault = ConjurePlanAutomodExamples;
-let _require, autoscrollToBottomThreshold, dependencyMap, fadingEdgeLength, map, nativeEvent, set, viewableItems;
 
-let c10;
-let closure_12;
-let closure_16;
-let closure_17;
-let closure_19;
-let closure_20;
-let closure_21;
-let hasOwnProperty;
-let map1;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let obj10;
-let obj11;
-let obj12;
-let obj13;
-let obj14;
-let obj15;
-let obj3;
-let obj4;
-let obj5;
-let obj6;
-let obj7;
-let obj8;
-let obj9;
-let rect;
-let rect1;
-let unpackModuleId;
-let _slicedToArray = _slicedToArray_mod;
-let react = react_mod;
-({ ActivityIndicator: hasOwnProperty, Image: metroRequire, Pressable: metroImportDefault, View: metroImportAll } = react_native);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: hasOwnProperty, Image: metroRequire, Pressable: closure_7, View: closure_8 } = get_ActivityIndicator);
+let ConjureConnectionStore = fn(12923);
+({ ensureConnection: c10, getAttachmentUrl: closure_11, interruptTurn: closure_12, sendUserMessage: map1 } = ConjureConnectionStore);
 let ConjureConnectionStore = ConjureConnectionStore_mod;
-({ ensureConnection: c10, getAttachmentUrl: unpackModuleId, interruptTurn: closure_12, sendUserMessage: map1 } = ConjureConnectionStore);
-ConjureConnectionStore = ConjureConnectionStore_mod;
-let ConjureChatStore = ConjureChatStore_mod;
+let ConjureChatStore = fn(12924);
 ({ getOlderHistoryCursor: closure_16, turnSettled: closure_17 } = ConjureChatStore);
-ConjureChatStore = ConjureChatStore_mod;
-const Fonts = Constants.Fonts;
-let Fragment = Fragment_mod;
-({ jsx: closure_19, jsxs: closure_20, Fragment: closure_21 } = Fragment);
+let ConjureChatStore = ConjureChatStore_mod;
+const jsxProd = fn(21);
+({ jsx: closure_19, jsxs: closure_20, Fragment: closure_21 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_12 = nativeDefault.space.PX_12;
-let diff = ConjureNativeStatusLine.MESSAGE_CONTENT_INSET - ConjureNativeStatusLine.MESSAGE_EDGE_INSET;
+let diff = fn(16670).MESSAGE_CONTENT_INSET - fn(16670).MESSAGE_EDGE_INSET;
 let c22 = 0.2;
 let c23 = 500;
 let c24 = 52;
 const BLACK = nativeDefault.unsafe_rawColors.BLACK;
 let items = [BLACK, , ];
-let obj = _modDef683(BLACK);
-const alphaResult = obj.alpha(0.2);
-items[1] = alphaResult.css();
+let obj2 = _modDef683(BLACK);
+items[1] = _modDef683(BLACK).alpha(0.2).css();
 items[2] = "transparent";
 const locations = [0, 0.4, 1];
 const start = { x: 0, y: 0 };
 const end = { x: 0, y: 1 };
-let createStyles = createStyles_mod;
-let obj2 = { container: { flex: 1 }, transcript: { flex: 1 }, maskSolid: { flex: 1, backgroundColor: BLACK }, maskFade: { height: 52 }, transcriptArea: { flex: 1, position: "relative" }, transcriptContent: obj3, bottomStack: { position: "absolute", left: 0, right: 0, bottom: 0 }, row: obj4, rowGroupStart: { marginTop: PX_12 }, avatar: rect, spoken: { position: "relative", gap: PX_8 }, avatarSpoken: rect1, avatarSpokenReplying: obj5, reminderSlot: { marginTop: -PX_8 }, reminderTip: { paddingTop: PX_8 }, reminderSeparated: obj6, header: obj7, planActions: obj8, planReplyHint: { flexShrink: 1 }, designImage: obj9, designPlaceholder: obj10, ideaCards: { gap: PX_8 }, activityBox: { marginLeft: -diff }, activityDetail: { paddingLeft: diff }, stepDetail: obj11, stepCommand: { fontFamily: Fonts.CODE_NORMAL, fontSize: 12, lineHeight: 18 }, attachmentPills: obj12, agentReaction: obj13, agentReactionEmoji: { width: 18, height: 18 }, attachmentPill: obj14, placeholder: obj15 };
-obj3 = { paddingTop: nativeDefault.space.PX_8 };
-createStyles = createStyles.createStyles;
-obj4 = { position: "relative", paddingLeft: ConjureNativeStatusLine.MESSAGE_CONTENT_INSET, paddingRight: ConjureNativeStatusLine.MESSAGE_EDGE_INSET, paddingVertical: 2, gap: PX_8 };
-rect = { position: "absolute", left: ConjureNativeStatusLine.MESSAGE_EDGE_INSET, top: 2 };
-rect1 = { left: ConjureNativeStatusLine.MESSAGE_EDGE_INSET - ConjureNativeStatusLine.MESSAGE_CONTENT_INSET, top: 0 };
-obj5 = { top: ConjureRepliedMessage.REPLY_PREVIEW_HEIGHT + PX_8 };
-obj6 = { paddingTop: PX_12 + 4 };
-obj7 = { marginBottom: -nativeDefault.space.PX_4 };
-obj8 = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", rowGap: nativeDefault.space.PX_8, columnGap: nativeDefault.space.PX_12 };
-obj9 = { width: "100%", aspectRatio: 1.6, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
-obj10 = { width: "100%", aspectRatio: 1.6, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, alignItems: "center", justifyContent: "center" };
-obj11 = { marginTop: nativeDefault.space.PX_4, paddingLeft: nativeDefault.space.PX_12, borderLeftWidth: 2, borderLeftColor: nativeDefault.colors.BORDER_SUBTLE, gap: 2 };
-obj12 = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 };
-obj13 = { alignSelf: "flex-start", alignItems: "center", justifyContent: "center", marginTop: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_6, paddingVertical: 2, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
-obj14 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4 };
-obj15 = { alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_24 };
-let closure_29 = createStyles(obj2);
-let ReactCompilerGating = ReactCompilerGating_mod;
+const createStyles = fn(4896);
+let obj = { container: { flex: 1 }, transcript: { flex: 1 }, maskSolid: { flex: 1, backgroundColor: BLACK }, maskFade: { height: 52 }, transcriptArea: { flex: 1, position: "relative" }, transcriptContent: null, bottomStack: null, row: null, rowGroupStart: null, avatar: null, spoken: null, avatarSpoken: null, avatarSpokenReplying: null, reminderSlot: null, reminderTip: null, reminderSeparated: null, header: null, planActions: null, planReplyHint: null, designImage: null, designPlaceholder: null, ideaCards: null, activityBox: null, activityDetail: null, stepDetail: null, stepCommand: null, attachmentPills: null, agentReaction: null, agentReactionEmoji: null, attachmentPill: null, placeholder: null };
+const alphaResult = _modDef683(BLACK).alpha(0.2);
+obj.transcriptContent = { paddingTop: nativeDefault.space.PX_8 };
+obj.bottomStack = { position: "absolute", left: 0, right: 0, bottom: 0 };
+let obj3 = { paddingTop: nativeDefault.space.PX_8 };
+obj.row = { position: "relative", paddingLeft: fn(16670).MESSAGE_CONTENT_INSET, paddingRight: fn(16670).MESSAGE_EDGE_INSET, paddingVertical: 2, gap: PX_8 };
+obj.rowGroupStart = { marginTop: PX_12 };
+const rect = { position: "absolute", left: fn(16670).MESSAGE_EDGE_INSET, top: 2 };
+obj.avatar = rect;
+obj.spoken = { position: "relative", gap: PX_8 };
+const rect1 = { left: fn(16670).MESSAGE_EDGE_INSET - fn(16670).MESSAGE_CONTENT_INSET, top: 0 };
+obj.avatarSpoken = rect1;
+let obj5 = { position: "relative", paddingLeft: fn(16670).MESSAGE_CONTENT_INSET, paddingRight: fn(16670).MESSAGE_EDGE_INSET, paddingVertical: 2, gap: PX_8 };
+obj.avatarSpokenReplying = { top: fn(16672).REPLY_PREVIEW_HEIGHT + PX_8 };
+obj.reminderSlot = { marginTop: -PX_8 };
+obj.reminderTip = { paddingTop: PX_8 };
+obj.reminderSeparated = { paddingTop: PX_12 + 4 };
+let obj6 = { top: fn(16672).REPLY_PREVIEW_HEIGHT + PX_8 };
+let obj7 = { paddingTop: PX_12 + 4 };
+obj.header = { marginBottom: -nativeDefault.space.PX_4 };
+let obj8 = { marginBottom: -nativeDefault.space.PX_4 };
+obj.planActions = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", rowGap: nativeDefault.space.PX_8, columnGap: nativeDefault.space.PX_12 };
+obj.planReplyHint = { flexShrink: 1 };
+let obj9 = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", rowGap: nativeDefault.space.PX_8, columnGap: nativeDefault.space.PX_12 };
+obj.designImage = { width: "100%", aspectRatio: 1.6, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+let obj10 = { width: "100%", aspectRatio: 1.6, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+obj.designPlaceholder = { width: "100%", aspectRatio: 1.6, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, alignItems: "center", justifyContent: "center" };
+obj.ideaCards = { gap: PX_8 };
+obj.activityBox = { marginLeft: -diff };
+obj.activityDetail = { paddingLeft: diff };
+let obj11 = { width: "100%", aspectRatio: 1.6, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, alignItems: "center", justifyContent: "center" };
+obj.stepDetail = { marginTop: nativeDefault.space.PX_4, paddingLeft: nativeDefault.space.PX_12, borderLeftWidth: 2, borderLeftColor: nativeDefault.colors.BORDER_SUBTLE, gap: 2 };
+obj.stepCommand = { fontFamily: fn(1085).Fonts.CODE_NORMAL, fontSize: 12, lineHeight: 18 };
+let obj12 = { marginTop: nativeDefault.space.PX_4, paddingLeft: nativeDefault.space.PX_12, borderLeftWidth: 2, borderLeftColor: nativeDefault.colors.BORDER_SUBTLE, gap: 2 };
+obj.attachmentPills = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 };
+let obj13 = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 };
+obj.agentReaction = { alignSelf: "flex-start", alignItems: "center", justifyContent: "center", marginTop: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_6, paddingVertical: 2, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+obj.agentReactionEmoji = { width: 18, height: 18 };
+let obj14 = { alignSelf: "flex-start", alignItems: "center", justifyContent: "center", marginTop: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_6, paddingVertical: 2, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+obj.attachmentPill = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4 };
+let obj15 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4 };
+obj.placeholder = { alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_24 };
+let closure_29 = createStyles.createStyles(obj);
+let ReactCompilerGating = fn(558);
 let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let design;
-  let handleError;
-  let intl2;
-  let obj5;
-  let obj7;
-  let projectId;
-  let src;
-  const obj = react2;
-  const cResult = obj.c(7);
+  const cResult = c.c(7);
   ({ projectId, design } = arg0);
-  const tmp4 = closure_29();
-  const obj2 = useConjureAttachmentImage;
-  const conjureAttachmentImage = obj2.useConjureAttachmentImage(projectId, design.id);
+  let designPlaceholder = closure_29();
+  const conjureAttachmentImage = useConjureAttachmentImage.useConjureAttachmentImage(projectId, design.id);
   ({ src, handleError } = conjureAttachmentImage);
   if (conjureAttachmentImage.gone) {
     return null;
   } else {
-    let first;
-    let tmp10;
-    let tmp19;
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = intl13.intl;
+      const intl = util.intl;
       const stringResult = intl.string(_modDef3753["3/aHX6"]);
       cResult[0] = stringResult;
-      first = stringResult;
+      let first = stringResult;
     } else {
       first = cResult[0];
     }
     const _Symbol2 = Symbol;
     if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: intl2.string(_modDef3753.X15LLY) };
-      const Text = Text_Text.Text;
-      intl2 = intl13.intl;
-      const tmp13 = closure_19(Text, obj3);
-      cResult[1] = tmp13;
-      tmp10 = tmp13;
+      const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+      const intl2 = util.intl;
+      obj3.children = intl2.string(_modDef3753.X15LLY);
+      const tmp12 = closure_1_19(Text_Text.Text, obj3);
+      cResult[1] = tmp12;
+      let tmp9 = tmp12;
     } else {
-      tmp10 = cResult[1];
+      tmp9 = cResult[1];
     }
     if (cResult[2] === handleError) {
       if (cResult[3] === src) {
-        if (cResult[4] === tmp4.designImage) {
-          let tmp14;
-          if (cResult[5] === tmp4.designPlaceholder) {
-            tmp14 = cResult[6];
+        if (cResult[4] === designPlaceholder.designImage) {
+          if (cResult[5] === designPlaceholder.designPlaceholder) {
+            return cResult[6];
           }
-          return tmp14;
         }
       }
     }
-    items = [tmp10, ];
-    const Stack = Stack_Stack.Stack;
+    items = [tmp9, ];
     if (null == src) {
-      const obj4 = { style: tmp4.designPlaceholder, children: closure_19(hasOwnProperty, obj5) };
-      obj5 = { size: "small", accessibilityLabel: first };
-      tmp19 = closure_19(metroImportAll, obj4);
+      const obj4 = { style: designPlaceholder.designPlaceholder, children: null };
+      const obj5 = { size: "small", accessibilityLabel: first };
+      obj4.children = closure_1_19(hasOwnProperty, obj5);
+      let tmp17 = closure_1_19(closure_1_8, obj4);
     } else {
-      const obj6 = { source: obj7, style: tmp4.designImage, resizeMode: "cover", onError: handleError, accessible: true, accessibilityRole: "image", accessibilityLabel: first };
-      obj7 = { uri: src };
-      tmp19 = closure_19(metroRequire, obj6);
+      const obj6 = { source: null, style: null, resizeMode: "cover", onError: null, accessible: true, accessibilityRole: "image", accessibilityLabel: null };
+      const obj7 = { uri: src };
+      obj6.source = obj7;
+      obj6.style = designPlaceholder.designImage;
+      obj6.onError = handleError;
+      obj6.accessibilityLabel = first;
+      tmp17 = closure_1_19(timestampProducer, obj6);
     }
-    const obj8 = { direction: "vertical", spacing: 4, children: items };
-    items[1] = tmp19;
-    const tmp15Result = closure_20(Stack, obj8);
+    const obj8 = { direction: "vertical", spacing: 4, children: null };
+    items[1] = tmp17;
+    obj8.children = items;
+    const tmp13Result = closure_1_20(Stack_Stack.Stack, obj8);
     cResult[2] = handleError;
     cResult[3] = src;
-    cResult[4] = tmp4.designImage;
-    cResult[5] = tmp4.designPlaceholder;
-    cResult[6] = tmp15Result;
-    tmp14 = tmp15Result;
+    src = designPlaceholder.designImage;
+    cResult[4] = src;
+    designPlaceholder = designPlaceholder.designPlaceholder;
+    cResult[5] = designPlaceholder;
+    cResult[6] = tmp13Result;
   }
 }) : ((arg0) => {
-  let design;
-  let intl2;
-  let obj4;
-  let obj6;
-  let projectId;
   ({ projectId, design } = arg0);
   const tmp = closure_29();
-  const obj = useConjureAttachmentImage;
-  const conjureAttachmentImage = obj.useConjureAttachmentImage(projectId, design.id);
+  const conjureAttachmentImage = useConjureAttachmentImage.useConjureAttachmentImage(projectId, design.id);
   const src = conjureAttachmentImage.src;
   if (conjureAttachmentImage.gone) {
     return null;
   } else {
-    let tmp9Result;
-    const intl = intl13.intl;
+    const intl = util.intl;
     const stringResult = intl.string(_modDef3753["3/aHX6"]);
-    const Stack = Stack_Stack.Stack;
-    const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: intl2.string(_modDef3753.X15LLY) };
-    const Text = Text_Text.Text;
-    intl2 = intl13.intl;
-    items = [closure_19(Text, obj2), ];
+    const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+    const intl2 = util.intl;
+    obj2.children = intl2.string(_modDef3753.X15LLY);
+    items = [closure_1_19(Text_Text.Text, obj2), ];
     if (null == src) {
-      const obj3 = { style: tmp.designPlaceholder, children: closure_19(hasOwnProperty, obj4) };
-      obj4 = { size: "small", accessibilityLabel: stringResult };
-      tmp9Result = closure_19(metroImportAll, obj3);
+      const obj3 = { style: tmp.designPlaceholder, children: null };
+      const obj4 = { size: "small", accessibilityLabel: stringResult };
+      obj3.children = closure_1_19(hasOwnProperty, obj4);
+      let tmp9Result = closure_1_19(closure_1_8, obj3);
     } else {
-      const obj5 = { source: obj6, style: tmp.designImage, resizeMode: "cover", onError: tmp5, accessible: true, accessibilityRole: "image", accessibilityLabel: stringResult };
-      obj6 = { uri: src };
-      tmp9Result = closure_19(metroRequire, obj5);
+      const obj5 = { source: null, style: null, resizeMode: "cover", onError: null, accessible: true, accessibilityRole: "image", accessibilityLabel: null };
+      const obj6 = { uri: src };
+      obj5.source = obj6;
+      obj5.style = tmp.designImage;
+      obj5.onError = tmp5;
+      obj5.accessibilityLabel = stringResult;
+      tmp9Result = closure_1_19(timestampProducer, obj5);
     }
-    const obj7 = { direction: "vertical", spacing: 4, children: items };
+    const obj7 = { direction: "vertical", spacing: 4, children: null };
     items[1] = tmp9Result;
-    return closure_20(Stack, obj7);
+    obj7.children = items;
+    return closure_1_20(Stack_Stack.Stack, obj7);
   }
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let arr;
-  let arr3;
-  let expanded;
-  let intl10;
-  let intl11;
-  let intl12;
-  let intl3;
-  let intl7;
-  let intl8;
-  let intl9;
-  let items1;
-  let items2;
-  let items3;
-  let items4;
-  let items5;
-  let onApprove;
-  let onToggleExpanded;
-  let projectId;
-  let proposal;
-  let superseded;
-  let tmp16;
-  let tmp8;
-  let version;
-  let obj = react2;
-  const cResult = obj.c(64);
+  const cResult = c.c(64);
   ({ projectId, proposal, version, superseded, expanded, onToggleExpanded, onApprove } = arg0);
   const tmp6 = closure_29();
-  const str = proposal.summary;
-  const trimmed = str.trim();
+  const trimmed = proposal.summary.trim();
   if (cResult[0] !== proposal.what_changed) {
     let str3;
     if (proposal.what_changed != null) {
@@ -284,7 +235,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     cResult[0] = proposal.what_changed;
     cResult[1] = str3;
-    tmp8 = str3;
+    let tmp8 = str3;
   } else {
     tmp8 = cResult[1];
   }
@@ -295,7 +246,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     cResult[2] = proposal.bot_permissions;
     cResult[3] = bot_permissions;
-    arr = bot_permissions;
+    let arr = bot_permissions;
   } else {
     arr = cResult[3];
   }
@@ -306,235 +257,210 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     cResult[4] = proposal.privileged_intents;
     cResult[5] = privileged_intents;
-    arr3 = privileged_intents;
+    let arr3 = privileged_intents;
   } else {
     arr3 = cResult[5];
   }
   const automod = proposal.automod;
-  const tmpResult = conjurePlanWidget2;
-  const conjurePlanWidget = tmpResult.useConjurePlanWidget(projectId, proposal);
+  const conjurePlanWidget = conjurePlanWidget2.useConjurePlanWidget(projectId, proposal);
   const tmp14 = ConjureNativeCardSurfaceDefault;
   const tmp15 = ConjureNativeCollapsibleSectionDefault;
   if (cResult[6] === (undefined !== superseded && superseded)) {
-    let tmp19;
-    let tmp24;
-    let tmp23;
-    let tmp27;
-    let tmp30;
-    let stringResult2;
     if (cResult[7] === version) {
-      tmp16 = cResult[8];
-    }
-    if (cResult[9] !== (undefined !== superseded && superseded)) {
-      let tmp20 = null;
-      if (undefined !== superseded && superseded) {
-        const obj2 = { children: intl3.string(_modDef3753.hF2c41) };
-        const ConjureNativeCollapsibleMeta = ConjureNativeCollapsibleSection.ConjureNativeCollapsibleMeta;
-        intl3 = intl13.intl;
-        tmp20 = closure_19(ConjureNativeCollapsibleMeta, obj2);
-      }
-      cResult[9] = undefined !== superseded && superseded;
-      cResult[10] = tmp20;
-      tmp19 = tmp20;
-    } else {
-      tmp19 = cResult[10];
-    }
-    const _Symbol = Symbol;
-    if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl4 = intl13.intl;
-      const stringResult = intl4.string(_modDef3753.yD8EJS);
-      const intl5 = intl13.intl;
-      const stringResult1 = intl5.string(_modDef3753.nSPGNb);
-      cResult[11] = stringResult;
-      cResult[12] = stringResult1;
-      tmp24 = stringResult1;
-      tmp23 = stringResult;
-    } else {
-      tmp23 = cResult[11];
-      tmp24 = cResult[12];
-    }
-    const Stack = Stack_Stack.Stack;
-    if (cResult[13] !== automod) {
-      let tmp28 = null;
-      if (null != automod) {
-        tmp28 = closure_19(ConjurePlanAutomodExamples.ConjurePlanAutomodTypeTag, {});
-      }
-      cResult[13] = automod;
-      cResult[14] = tmp28;
-      tmp27 = tmp28;
-    } else {
-      tmp27 = cResult[14];
-    }
-    if (cResult[15] !== tmp8) {
-      let tmp31 = null;
-      if ("" !== tmp8) {
-        const obj3 = { direction: "vertical", spacing: 4, children: items };
-        const Stack5 = Stack_Stack.Stack;
-        const obj4 = { variant: "text-sm/semibold", color: "text-muted", children: intl12.string(_modDef3753.iNS4dl) };
-        const Text8 = Text_Text.Text;
-        intl12 = intl13.intl;
-        items = [closure_19(Text8, obj4), ];
-        const obj5 = { variant: "text-md/normal", color: "text-default", children: tmp8 };
-        items[1] = closure_19(Text_Text.Text, obj5);
-        tmp31 = closure_20(Stack5, obj3);
-      }
-      cResult[15] = tmp8;
-      cResult[16] = tmp31;
-      tmp30 = tmp31;
-    } else {
-      tmp30 = cResult[16];
-    }
-    let Text = Text_Text.Text;
-    if ("" === trimmed) {
-      const intl6 = intl13.intl;
-      stringResult2 = intl6.string(_modDef3753["0+RUWx"]);
-    } else {
-      const tmp13Result = MarkupUtilsDefault;
-      stringResult2 = tmp13Result.parse(trimmed, true, ConjureNativeMarkdown.CONJURE_MARKUP_OPTIONS);
-    }
-    if (cResult[17] === Text) {
-      let tmp33;
-      let tmp36;
-      if (cResult[18] === stringResult2) {
-        tmp33 = cResult[19];
-      }
-      if (cResult[20] !== automod) {
-        let tmp38 = null;
-        if (null != automod) {
-          tmp38 = null;
-          if (automod.examples.length > 0) {
-            const obj6 = { automod };
-            tmp38 = closure_19(ConjurePlanAutomodExamplesDefault, obj6);
-          }
+      if (cResult[9] !== tmp4) {
+        let tmp21 = null;
+        if (tmp4) {
+          const obj2 = { children: null };
+          const intl3 = util.intl;
+          obj2.children = intl3.string(_modDef3753.hF2c41);
+          tmp21 = closure_1_19(ConjureNativeCollapsibleSection.ConjureNativeCollapsibleMeta, obj2);
         }
-        cResult[20] = automod;
-        cResult[21] = tmp38;
-        tmp36 = tmp38;
+        cResult[9] = tmp4;
+        cResult[10] = tmp21;
+        let tmp20 = tmp21;
       } else {
-        tmp36 = cResult[21];
+        tmp20 = cResult[10];
       }
-      if (cResult[22] === automod) {
-        if (cResult[23] === projectId) {
-          let tmp40;
-          if (cResult[24] === proposal.design_image) {
-            tmp40 = cResult[25];
+      const _Symbol = Symbol;
+      if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+        const intl4 = util.intl;
+        const stringResult = intl4.string(_modDef3753.yD8EJS);
+        const intl5 = util.intl;
+        const stringResult1 = intl5.string(_modDef3753.nSPGNb);
+        cResult[11] = stringResult;
+        cResult[12] = stringResult1;
+        let tmp25 = stringResult1;
+        let tmp24 = stringResult;
+      } else {
+        tmp24 = cResult[11];
+        tmp25 = cResult[12];
+      }
+      const Stack = Stack_Stack.Stack;
+      if (cResult[13] !== automod) {
+        let tmp29 = null;
+        if (null != automod) {
+          tmp29 = closure_1_19(ConjurePlanAutomodExamples.ConjurePlanAutomodTypeTag, {});
+        }
+        cResult[13] = automod;
+        cResult[14] = tmp29;
+        let tmp28 = tmp29;
+      } else {
+        tmp28 = cResult[14];
+      }
+      if (cResult[15] !== tmp8) {
+        let tmp32 = null;
+        if ("" !== tmp8) {
+          const obj3 = { direction: "vertical", spacing: 4, children: null };
+          const obj4 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+          const intl12 = util.intl;
+          obj4.children = intl12.string(_modDef3753.iNS4dl);
+          items = [closure_1_19(Text_Text.Text, obj4), ];
+          const obj5 = { variant: "text-md/normal", color: "text-default", children: tmp8 };
+          items[1] = closure_1_19(Text_Text.Text, obj5);
+          obj3.children = items;
+          tmp32 = closure_1_20(Stack_Stack.Stack, obj3);
+        }
+        cResult[15] = tmp8;
+        cResult[16] = tmp32;
+        let tmp31 = tmp32;
+      } else {
+        tmp31 = cResult[16];
+      }
+      const Text = Text_Text.Text;
+      if ("" === trimmed) {
+        const intl6 = util.intl;
+        let stringResult2 = intl6.string(_modDef3753["0+RUWx"]);
+      } else {
+        stringResult2 = MarkupUtilsDefault.parse(trimmed, true, ConjureNativeMarkdown.CONJURE_MARKUP_OPTIONS);
+        const tmp13Result = MarkupUtilsDefault;
+      }
+      if (cResult[17] === Text) {
+        if (cResult[18] === stringResult2) {
+          let tmp34 = cResult[19];
+        }
+        if (cResult[20] !== automod) {
+          let tmp39 = null;
+          if (null != automod) {
+            tmp39 = null;
+            if (automod.examples.length > 0) {
+              const obj6 = { automod };
+              tmp39 = closure_1_19(ConjurePlanAutomodExamplesDefault, obj6);
+            }
           }
-          if (cResult[26] === automod) {
-            let tmp45;
-            let tmp53;
-            let tmp57;
-            let tmp61;
-            if (cResult[27] === conjurePlanWidget) {
-              tmp45 = cResult[28];
+          cResult[20] = automod;
+          cResult[21] = tmp39;
+          let tmp37 = tmp39;
+        } else {
+          tmp37 = cResult[21];
+        }
+        if (cResult[22] === automod) {
+          if (cResult[23] === projectId) {
+            if (cResult[24] === proposal.design_image) {
+              let tmp41 = cResult[25];
             }
-            if (cResult[29] !== proposal.changes) {
-              let tmp54 = null;
-              if (proposal.changes.length > 0) {
-                const obj7 = { direction: "vertical", spacing: 4, children: items1 };
-                const Stack2 = Stack_Stack.Stack;
-                const obj8 = { variant: "text-sm/semibold", color: "text-muted", children: intl7.string(_modDef3753["5+mG1z"]) };
-                const Text2 = Text_Text.Text;
-                intl7 = intl13.intl;
-                items1 = [closure_19(Text2, obj8), ];
-                const changes = proposal.changes;
-                items1[1] = changes.map((item, index) => {
-                  const obj = { variant: "text-sm/normal", color: "text-default", children: "\u2022 " + item };
-                  const Text = require("Text/Text").Text;
-                  return closure_1_19(Text, obj, index);
-                });
-                tmp54 = closure_20(Stack2, obj7);
+            if (cResult[26] === automod) {
+              if (cResult[27] === conjurePlanWidget) {
+                let tmp46 = cResult[28];
               }
-              cResult[29] = proposal.changes;
-              cResult[30] = tmp54;
-              tmp53 = tmp54;
-            } else {
-              tmp53 = cResult[30];
-            }
-            if (cResult[31] !== arr) {
-              let tmp58 = null;
-              if (arr.length > 0) {
-                const obj9 = { direction: "vertical", spacing: 4, children: items2 };
-                const Stack3 = Stack_Stack.Stack;
-                const obj10 = { variant: "text-sm/semibold", color: "text-muted", children: intl8.string(_modDef3753["2UbW6r"]) };
-                const Text3 = Text_Text.Text;
-                intl8 = intl13.intl;
-                items2 = [closure_19(Text3, obj10), ];
-                const obj11 = { variant: "text-sm/normal", color: "text-default", children: arr.join(", ") };
-                const Text4 = Text_Text.Text;
-                items2[1] = closure_19(Text4, obj11);
-                tmp58 = closure_20(Stack3, obj9);
-              }
-              cResult[31] = arr;
-              cResult[32] = tmp58;
-              tmp57 = tmp58;
-            } else {
-              tmp57 = cResult[32];
-            }
-            if (cResult[33] !== arr3) {
-              let tmp62 = null;
-              if (arr3.length > 0) {
-                const obj12 = { direction: "vertical", spacing: 4, children: items3 };
-                const Stack4 = Stack_Stack.Stack;
-                const obj13 = { variant: "text-sm/semibold", color: "text-muted", children: intl9.string(_modDef3753["7TKfpj"]) };
-                const Text5 = Text_Text.Text;
-                intl9 = intl13.intl;
-                items3 = [closure_19(Text5, obj13), ];
-                const obj14 = { variant: "text-sm/normal", color: "text-default", children: arr3.join(", ") };
-                const Text6 = Text_Text.Text;
-                items3[1] = closure_19(Text6, obj14);
-                tmp62 = closure_20(Stack4, obj12);
-              }
-              cResult[33] = arr3;
-              cResult[34] = tmp62;
-              tmp61 = tmp62;
-            } else {
-              tmp61 = cResult[34];
-            }
-            if (cResult[35] === onApprove) {
-              if (cResult[36] === tmp6) {
-                let tmp65;
-                if (cResult[37] === (undefined !== superseded && superseded)) {
-                  tmp65 = cResult[38];
+              if (cResult[29] !== proposal.changes) {
+                let tmp55 = null;
+                if (proposal.changes.length > 0) {
+                  const obj7 = { direction: "vertical", spacing: 4, children: null };
+                  const obj8 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+                  const intl7 = util.intl;
+                  obj8.children = intl7.string(_modDef3753["5+mG1z"]);
+                  const items1 = [closure_1_19(Text_Text.Text, obj8), ];
+                  const changes = proposal.changes;
+                  items1[1] = changes.map((item, index) => closure_1_19(require("Text/Text").Text, { variant: "text-sm/normal", color: "text-default", children: "\u2022 " + item }, index));
+                  obj7.children = items1;
+                  tmp55 = closure_1_20(Stack_Stack.Stack, obj7);
                 }
-                if (cResult[39] === Stack) {
-                  if (cResult[40] === tmp27) {
-                    if (cResult[41] === tmp30) {
-                      if (cResult[42] === tmp33) {
-                        if (cResult[43] === tmp36) {
-                          if (cResult[44] === tmp40) {
-                            if (cResult[45] === tmp45) {
-                              if (cResult[46] === tmp53) {
-                                if (cResult[47] === tmp57) {
-                                  if (cResult[48] === tmp61) {
-                                    let tmp71;
-                                    if (cResult[49] === tmp65) {
-                                      tmp71 = cResult[50];
-                                    }
-                                    if (cResult[51] === tmp15) {
-                                      if (cResult[52] === (undefined === expanded || expanded)) {
-                                        if (cResult[53] === onToggleExpanded) {
-                                          if (cResult[54] === (undefined !== superseded && superseded)) {
-                                            if (cResult[55] === tmp71) {
-                                              if (cResult[56] === tmp16) {
-                                                if (cResult[57] === tmp19) {
-                                                  if (cResult[58] === tmp23) {
-                                                    let tmp74;
-                                                    if (cResult[59] === tmp24) {
-                                                      tmp74 = cResult[60];
-                                                    }
-                                                    if (cResult[61] === tmp14) {
-                                                      let tmp77;
-                                                      if (cResult[62] === tmp74) {
-                                                        tmp77 = cResult[63];
+                cResult[29] = proposal.changes;
+                cResult[30] = tmp55;
+                let tmp54 = tmp55;
+              } else {
+                tmp54 = cResult[30];
+              }
+              if (cResult[31] !== arr) {
+                let tmp59 = null;
+                if (arr.length > 0) {
+                  const obj9 = { direction: "vertical", spacing: 4, children: null };
+                  const obj10 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+                  const intl8 = util.intl;
+                  obj10.children = intl8.string(_modDef3753["2UbW6r"]);
+                  const items2 = [closure_1_19(Text_Text.Text, obj10), ];
+                  const obj11 = { variant: "text-sm/normal", color: "text-default", children: arr.join(", ") };
+                  items2[1] = closure_1_19(Text_Text.Text, obj11);
+                  obj9.children = items2;
+                  tmp59 = closure_1_20(Stack_Stack.Stack, obj9);
+                }
+                cResult[31] = arr;
+                cResult[32] = tmp59;
+                let tmp58 = tmp59;
+              } else {
+                tmp58 = cResult[32];
+              }
+              if (cResult[33] !== arr3) {
+                let tmp63 = null;
+                if (arr3.length > 0) {
+                  const obj12 = { direction: "vertical", spacing: 4, children: null };
+                  const obj13 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+                  const intl9 = util.intl;
+                  obj13.children = intl9.string(_modDef3753["7TKfpj"]);
+                  const items3 = [closure_1_19(Text_Text.Text, obj13), ];
+                  const obj14 = { variant: "text-sm/normal", color: "text-default", children: arr3.join(", ") };
+                  items3[1] = closure_1_19(Text_Text.Text, obj14);
+                  obj12.children = items3;
+                  tmp63 = closure_1_20(Stack_Stack.Stack, obj12);
+                }
+                cResult[33] = arr3;
+                cResult[34] = tmp63;
+                let tmp62 = tmp63;
+              } else {
+                tmp62 = cResult[34];
+              }
+              if (cResult[35] === onApprove) {
+                if (cResult[36] === tmp6) {
+                  if (cResult[37] === tmp4) {
+                    let tmp66 = cResult[38];
+                  }
+                  if (cResult[39] === Stack) {
+                    if (cResult[40] === tmp28) {
+                      if (cResult[41] === tmp31) {
+                        if (cResult[42] === tmp34) {
+                          if (cResult[43] === tmp37) {
+                            if (cResult[44] === tmp41) {
+                              if (cResult[45] === tmp46) {
+                                if (cResult[46] === tmp54) {
+                                  if (cResult[47] === tmp58) {
+                                    if (cResult[48] === tmp62) {
+                                      if (cResult[49] === tmp66) {
+                                        let tmp72 = cResult[50];
+                                      }
+                                      if (cResult[51] === tmp15) {
+                                        if (cResult[52] === tmp5) {
+                                          if (cResult[53] === onToggleExpanded) {
+                                            if (cResult[54] === tmp4) {
+                                              if (cResult[55] === tmp72) {
+                                                if (cResult[56] === tmp16) {
+                                                  if (cResult[57] === tmp20) {
+                                                    if (cResult[58] === tmp24) {
+                                                      if (cResult[59] === tmp25) {
+                                                        let tmp75 = cResult[60];
                                                       }
-                                                      return tmp77;
+                                                      if (cResult[61] === tmp14) {
+                                                        if (cResult[62] === tmp75) {
+                                                          let tmp78 = cResult[63];
+                                                        }
+                                                        return tmp78;
+                                                      }
+                                                      const obj15 = { children: tmp75 };
+                                                      const tmp80 = closure_1_19(tmp14, obj15);
+                                                      cResult[61] = tmp14;
+                                                      cResult[62] = tmp75;
+                                                      cResult[63] = tmp80;
+                                                      tmp78 = tmp80;
                                                     }
-                                                    const obj15 = { children: tmp74 };
-                                                    const tmp79 = closure_19(tmp14, obj15);
-                                                    cResult[61] = tmp14;
-                                                    cResult[62] = tmp74;
-                                                    cResult[63] = tmp79;
-                                                    tmp77 = tmp79;
                                                   }
                                                 }
                                               }
@@ -542,20 +468,20 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                           }
                                         }
                                       }
+                                      const obj16 = { title: tmp16, meta: tmp20, superseded: tmp4, expanded: tmp5, onToggleExpanded, showLabel: tmp24, hideLabel: tmp25, children: tmp72 };
+                                      const tmp77 = closure_1_19(tmp15, obj16);
+                                      cResult[51] = tmp15;
+                                      cResult[52] = tmp5;
+                                      cResult[53] = onToggleExpanded;
+                                      cResult[54] = tmp4;
+                                      cResult[55] = tmp72;
+                                      cResult[56] = tmp16;
+                                      cResult[57] = tmp20;
+                                      cResult[58] = tmp24;
+                                      cResult[59] = tmp25;
+                                      cResult[60] = tmp77;
+                                      tmp75 = tmp77;
                                     }
-                                    const obj16 = { title: tmp16, meta: tmp19, superseded: undefined !== superseded && superseded, expanded: undefined === expanded || expanded, onToggleExpanded, showLabel: tmp23, hideLabel: tmp24, children: tmp71 };
-                                    const tmp76 = closure_19(tmp15, obj16);
-                                    cResult[51] = tmp15;
-                                    cResult[52] = undefined === expanded || expanded;
-                                    cResult[53] = onToggleExpanded;
-                                    cResult[54] = undefined !== superseded && superseded;
-                                    cResult[55] = tmp71;
-                                    cResult[56] = tmp16;
-                                    cResult[57] = tmp19;
-                                    cResult[58] = tmp23;
-                                    cResult[59] = tmp24;
-                                    cResult[60] = tmp76;
-                                    tmp74 = tmp76;
                                   }
                                 }
                               }
@@ -565,120 +491,98 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                       }
                     }
                   }
+                  const obj17 = { direction: "vertical", spacing: 8, children: null };
+                  const items4 = [tmp28, tmp31, tmp34, tmp37, tmp41, tmp46, tmp54, tmp58, tmp62, tmp66];
+                  obj17.children = items4;
+                  const tmp74 = closure_1_20(Stack, obj17);
+                  cResult[39] = Stack;
+                  cResult[40] = tmp28;
+                  cResult[41] = tmp31;
+                  cResult[42] = tmp34;
+                  cResult[43] = tmp37;
+                  cResult[44] = tmp41;
+                  cResult[45] = tmp46;
+                  cResult[46] = tmp54;
+                  cResult[47] = tmp58;
+                  cResult[48] = tmp62;
+                  cResult[49] = tmp66;
+                  cResult[50] = tmp74;
+                  tmp72 = tmp74;
                 }
-                const obj17 = { direction: "vertical", spacing: 8, children: items4 };
-                items4 = [tmp27, tmp30, tmp33, tmp36, tmp40, tmp45, tmp53, tmp57, tmp61, tmp65];
-                const tmp73 = closure_20(Stack, obj17);
-                cResult[39] = Stack;
-                cResult[40] = tmp27;
-                cResult[41] = tmp30;
-                cResult[42] = tmp33;
-                cResult[43] = tmp36;
-                cResult[44] = tmp40;
-                cResult[45] = tmp45;
-                cResult[46] = tmp53;
-                cResult[47] = tmp57;
-                cResult[48] = tmp61;
-                cResult[49] = tmp65;
-                cResult[50] = tmp73;
-                tmp71 = tmp73;
+              }
+              let tmp68 = null;
+              if (null != onApprove) {
+                tmp68 = null;
+                if (!tmp4) {
+                  const obj18 = { style: tmp6.planActions, children: null };
+                  const obj19 = { text: null, variant: "primary", onPress: null };
+                  const intl10 = util.intl;
+                  obj19.text = intl10.string(_modDef3753["6S+wRM"]);
+                  obj19.onPress = onApprove;
+                  const items5 = [closure_1_19(components_Button_Button.Button, obj19), ];
+                  const obj20 = { variant: "text-sm/normal", color: "text-muted", style: tmp6.planReplyHint, children: null };
+                  const intl11 = util.intl;
+                  obj20.children = intl11.string(_modDef3753.IZoqbR);
+                  items5[1] = closure_1_19(Text_Text.Text, obj20);
+                  obj18.children = items5;
+                  tmp68 = closure_1_20(closure_1_8, obj18);
+                }
+              }
+              cResult[35] = onApprove;
+              cResult[36] = tmp6;
+              cResult[37] = tmp4;
+              cResult[38] = tmp68;
+              tmp66 = tmp68;
+            }
+            let tmp48 = null;
+            if (null == automod) {
+              tmp48 = null;
+              if (null != conjurePlanWidget) {
+                const obj21 = {};
+                const merged = Object.assign(conjurePlanWidget);
+                tmp48 = closure_1_19(ConjurePlanWidgetDefault, obj21);
+                const tmp13Result2 = ConjurePlanWidgetDefault;
               }
             }
-            let tmp67 = null;
-            if (null != onApprove) {
-              tmp67 = null;
-              if (!(undefined !== superseded && superseded)) {
-                const obj18 = { style: tmp6.planActions, children: items5 };
-                const obj19 = { text: intl10.string(_modDef3753["6S+wRM"]), variant: "primary", onPress: onApprove };
-                const Button = components_Button_Button.Button;
-                intl10 = intl13.intl;
-                items5 = [closure_19(Button, obj19), ];
-                const obj20 = { variant: "text-sm/normal", color: "text-muted", style: tmp6.planReplyHint, children: intl11.string(_modDef3753.IZoqbR) };
-                const Text7 = Text_Text.Text;
-                intl11 = intl13.intl;
-                items5[1] = closure_19(Text7, obj20);
-                tmp67 = closure_20(metroImportAll, obj18);
-              }
-            }
-            cResult[35] = onApprove;
-            cResult[36] = tmp6;
-            cResult[37] = undefined !== superseded && superseded;
-            cResult[38] = tmp67;
-            tmp65 = tmp67;
+            cResult[26] = automod;
+            cResult[27] = conjurePlanWidget;
+            cResult[28] = tmp48;
+            tmp46 = tmp48;
           }
-          let tmp47 = null;
-          if (null == automod) {
-            tmp47 = null;
-            if (null != conjurePlanWidget) {
-              const obj21 = {};
-              const tmp13Result2 = ConjurePlanWidgetDefault;
-              const merged = Object.assign(conjurePlanWidget);
-              tmp47 = closure_19(tmp13Result2, obj21);
-            }
+        }
+        let tmp43 = null;
+        if (null == automod) {
+          tmp43 = null;
+          if (null != proposal.design_image) {
+            const obj22 = { projectId, design: proposal.design_image };
+            tmp43 = closure_1_19(closure_30, obj22);
           }
-          cResult[26] = automod;
-          cResult[27] = conjurePlanWidget;
-          cResult[28] = tmp47;
-          tmp45 = tmp47;
         }
+        cResult[22] = automod;
+        cResult[23] = projectId;
+        cResult[24] = proposal.design_image;
+        cResult[25] = tmp43;
+        tmp41 = tmp43;
       }
-      let tmp42 = null;
-      if (null == automod) {
-        tmp42 = null;
-        if (null != proposal.design_image) {
-          const obj22 = { projectId, design: proposal.design_image };
-          tmp42 = closure_19(closure_30, obj22);
-        }
-      }
-      cResult[22] = automod;
-      cResult[23] = projectId;
-      cResult[24] = proposal.design_image;
-      cResult[25] = tmp42;
-      tmp40 = tmp42;
+      const obj23 = { variant: "text-md/normal", color: "text-default", children: stringResult2 };
+      const tmp36 = closure_1_19(Text, obj23);
+      cResult[17] = Text;
+      cResult[18] = stringResult2;
+      cResult[19] = tmp36;
+      tmp34 = tmp36;
     }
-    const obj23 = { variant: "text-md/normal", color: "text-default", children: stringResult2 };
-    const tmp35 = closure_19(Text, obj23);
-    cResult[17] = Text;
-    cResult[18] = stringResult2;
-    cResult[19] = tmp35;
-    tmp33 = tmp35;
   }
-  if (undefined !== superseded && superseded) {
-    let formatToPlainStringResult;
-    if (null != version) {
-      const intl2 = intl13.intl;
-      const obj24 = { version };
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef3753.YZ3qJs, obj24);
-    }
-    cResult[6] = undefined !== superseded && superseded;
+  if (!(undefined !== superseded && superseded)) {
+    const intl = util.intl;
+    let stringResult3 = intl.string(_modDef3753["3b6e7o"]);
+    cResult[6] = tmp4;
     cResult[7] = version;
-    cResult[8] = formatToPlainStringResult;
-    tmp16 = formatToPlainStringResult;
+    cResult[8] = stringResult3;
   }
-  const intl = intl13.intl;
-  formatToPlainStringResult = intl.string(_modDef3753["3b6e7o"]);
+  const intl2 = util.intl;
+  stringResult3 = intl2.formatToPlainString(_modDef3753.YZ3qJs, { version });
+  const tmpResult = conjurePlanWidget2;
 }) : ((expanded) => {
-  let Stack;
-  let intl10;
-  let intl11;
-  let intl12;
-  let intl3;
-  let intl4;
-  let intl5;
-  let intl7;
-  let intl8;
-  let intl9;
-  let items1;
-  let items2;
-  let items3;
-  let items4;
-  let items5;
-  let obj24;
-  let projectId;
-  let proposal;
-  let superseded;
-  let tmp6Result;
-  let version;
   ({ projectId, proposal, version, superseded } = expanded);
   if (superseded === undefined) {
     superseded = false;
@@ -688,10 +592,8 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     flag = true;
   }
   const onApprove = expanded.onApprove;
-  const onToggleExpanded = expanded.onToggleExpanded;
   const tmp = closure_29();
-  const str = proposal.summary;
-  const trimmed = str.trim();
+  const trimmed = proposal.summary.trim();
   let str3;
   if (proposal.what_changed != null) {
     str3 = str2.trim();
@@ -708,62 +610,62 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     privileged_intents = [];
   }
   const automod = proposal.automod;
-  let obj = conjurePlanWidget2;
-  const conjurePlanWidget = obj.useConjurePlanWidget(projectId, proposal);
-  const tmp8 = ConjureNativeCardSurfaceDefault;
+  const conjurePlanWidget = conjurePlanWidget2.useConjurePlanWidget(projectId, proposal);
   if (superseded) {
-    let formatToPlainStringResult;
-    let stringResult;
     if (null != version) {
-      const intl2 = intl13.intl;
+      const intl2 = util.intl;
       const obj2 = { version };
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef3753.YZ3qJs, obj2);
+      let formatToPlainStringResult = intl2.formatToPlainString(_modDef3753.YZ3qJs, obj2);
     }
-    const obj3 = { title: formatToPlainStringResult, meta: tmp6Result, superseded, expanded: flag, onToggleExpanded, showLabel: intl4.string(_modDef3753.yD8EJS), hideLabel: intl5.string(_modDef3753.nSPGNb), children: closure_20(Stack, obj24) };
-    tmp6Result = null;
+    const obj3 = { title: formatToPlainStringResult, meta: null, superseded: null, expanded: null, onToggleExpanded: null, showLabel: null, hideLabel: null, children: null };
+    let tmp6Result = null;
     if (superseded) {
-      const obj4 = { children: intl3.string(_modDef3753.hF2c41) };
-      const ConjureNativeCollapsibleMeta = ConjureNativeCollapsibleSection.ConjureNativeCollapsibleMeta;
-      intl3 = intl13.intl;
-      tmp6Result = closure_19(ConjureNativeCollapsibleMeta, obj4);
+      const obj4 = { children: null };
+      const intl3 = util.intl;
+      obj4.children = intl3.string(_modDef3753.hF2c41);
+      tmp6Result = closure_1_19(ConjureNativeCollapsibleSection.ConjureNativeCollapsibleMeta, obj4);
     }
-    intl4 = intl13.intl;
-    intl5 = intl13.intl;
+    obj3.meta = tmp6Result;
+    obj3.superseded = superseded;
+    obj3.expanded = flag;
+    obj3.onToggleExpanded = expanded.onToggleExpanded;
+    const intl4 = util.intl;
+    obj3.showLabel = intl4.string(_modDef3753.yD8EJS);
+    const intl5 = util.intl;
+    obj3.hideLabel = intl5.string(_modDef3753.nSPGNb);
     let tmp6Result5 = null;
-    Stack = Stack_Stack.Stack;
     if (null != automod) {
-      tmp6Result5 = closure_19(ConjurePlanAutomodExamples.ConjurePlanAutomodTypeTag, {});
+      tmp6Result5 = closure_1_19(ConjurePlanAutomodExamples.ConjurePlanAutomodTypeTag, {});
     }
     items = [tmp6Result5, , , , , , , , , ];
     let tmp12Result = null;
     if ("" !== str3) {
-      const obj5 = { direction: "vertical", spacing: 4, children: items1 };
-      const Stack5 = Stack_Stack.Stack;
-      const obj6 = { variant: "text-sm/semibold", color: "text-muted", children: intl12.string(_modDef3753.iNS4dl) };
-      const Text8 = Text_Text.Text;
-      intl12 = intl13.intl;
-      items1 = [closure_19(Text8, obj6), ];
+      const obj5 = { direction: "vertical", spacing: 4, children: null };
+      const obj6 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+      const intl12 = util.intl;
+      obj6.children = intl12.string(_modDef3753.iNS4dl);
+      const items1 = [closure_1_19(Text_Text.Text, obj6), ];
       const obj7 = { variant: "text-md/normal", color: "text-default", children: str3 };
-      items1[1] = closure_19(Text_Text.Text, obj7);
-      tmp12Result = closure_20(Stack5, obj5);
+      items1[1] = closure_1_19(Text_Text.Text, obj7);
+      obj5.children = items1;
+      tmp12Result = closure_1_20(Stack_Stack.Stack, obj5);
     }
     items[1] = tmp12Result;
-    let Text = Text_Text.Text;
     if ("" === trimmed) {
-      const intl6 = intl13.intl;
-      stringResult = intl6.string(_modDef3753["0+RUWx"]);
+      const intl6 = util.intl;
+      let stringResult = intl6.string(_modDef3753["0+RUWx"]);
     } else {
+      stringResult = MarkupUtilsDefault.parse(trimmed, true, ConjureNativeMarkdown.CONJURE_MARKUP_OPTIONS);
       const tmp7Result = MarkupUtilsDefault;
-      stringResult = tmp7Result.parse(trimmed, true, ConjureNativeMarkdown.CONJURE_MARKUP_OPTIONS);
     }
     const obj8 = { variant: "text-md/normal", color: "text-default", children: stringResult };
-    items[2] = closure_19(Text, obj8);
+    items[2] = closure_1_19(Text_Text.Text, obj8);
     let tmp6Result6 = null;
     if (null != automod) {
       tmp6Result6 = null;
       if (automod.examples.length > 0) {
         const obj9 = { automod };
-        tmp6Result6 = closure_19(ConjurePlanAutomodExamplesDefault, obj9);
+        tmp6Result6 = closure_1_19(ConjurePlanAutomodExamplesDefault, obj9);
       }
     }
     items[3] = tmp6Result6;
@@ -772,7 +674,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       tmp6Result7 = null;
       if (null != proposal.design_image) {
         const obj10 = { projectId, design: proposal.design_image };
-        tmp6Result7 = closure_19(closure_30, obj10);
+        tmp6Result7 = closure_1_19(closure_30, obj10);
       }
     }
     items[4] = tmp6Result7;
@@ -781,154 +683,139 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       tmp6Result8 = null;
       if (null != conjurePlanWidget) {
         const obj11 = {};
-        const tmp7Result2 = ConjurePlanWidgetDefault;
         const merged = Object.assign(conjurePlanWidget);
-        tmp6Result8 = closure_19(tmp7Result2, obj11);
+        tmp6Result8 = closure_1_19(ConjurePlanWidgetDefault, obj11);
+        const tmp7Result2 = ConjurePlanWidgetDefault;
       }
     }
     items[5] = tmp6Result8;
     let tmp12Result5 = null;
     if (proposal.changes.length > 0) {
-      const obj12 = { direction: "vertical", spacing: 4, children: items2 };
-      const Stack2 = Stack_Stack.Stack;
-      const obj13 = { variant: "text-sm/semibold", color: "text-muted", children: intl7.string(_modDef3753["5+mG1z"]) };
-      const Text2 = Text_Text.Text;
-      intl7 = intl13.intl;
-      items2 = [closure_19(Text2, obj13), ];
+      const obj12 = { direction: "vertical", spacing: 4, children: null };
+      const obj13 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+      const intl7 = util.intl;
+      obj13.children = intl7.string(_modDef3753["5+mG1z"]);
+      const items2 = [closure_1_19(Text_Text.Text, obj13), ];
       const changes = proposal.changes;
-      items2[1] = changes.map((item, index) => {
-        const obj = { variant: "text-sm/normal", color: "text-default", children: "\u2022 " + item };
-        const Text = require("Text/Text").Text;
-        return closure_1_19(Text, obj, index);
-      });
-      tmp12Result5 = closure_20(Stack2, obj12);
+      items2[1] = changes.map((item, index) => closure_1_19(require("Text/Text").Text, { variant: "text-sm/normal", color: "text-default", children: "\u2022 " + item }, index));
+      obj12.children = items2;
+      tmp12Result5 = closure_1_20(Stack_Stack.Stack, obj12);
     }
     items[6] = tmp12Result5;
     let tmp12Result6 = null;
     if (bot_permissions.length > 0) {
-      const obj14 = { direction: "vertical", spacing: 4, children: items3 };
-      const Stack3 = Stack_Stack.Stack;
-      const obj15 = { variant: "text-sm/semibold", color: "text-muted", children: intl8.string(_modDef3753["2UbW6r"]) };
-      const Text3 = Text_Text.Text;
-      intl8 = intl13.intl;
-      items3 = [closure_19(Text3, obj15), ];
+      const obj14 = { direction: "vertical", spacing: 4, children: null };
+      const obj15 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+      const intl8 = util.intl;
+      obj15.children = intl8.string(_modDef3753["2UbW6r"]);
+      const items3 = [closure_1_19(Text_Text.Text, obj15), ];
       const obj16 = { variant: "text-sm/normal", color: "text-default", children: bot_permissions.join(", ") };
-      const Text4 = Text_Text.Text;
-      items3[1] = closure_19(Text4, obj16);
-      tmp12Result6 = closure_20(Stack3, obj14);
+      items3[1] = closure_1_19(Text_Text.Text, obj16);
+      obj14.children = items3;
+      tmp12Result6 = closure_1_20(Stack_Stack.Stack, obj14);
     }
     items[7] = tmp12Result6;
     let tmp12Result7 = null;
     if (privileged_intents.length > 0) {
-      const obj17 = { direction: "vertical", spacing: 4, children: items4 };
-      const Stack4 = Stack_Stack.Stack;
-      const obj18 = { variant: "text-sm/semibold", color: "text-muted", children: intl9.string(_modDef3753["7TKfpj"]) };
-      const Text5 = Text_Text.Text;
-      intl9 = intl13.intl;
-      items4 = [closure_19(Text5, obj18), ];
+      const obj17 = { direction: "vertical", spacing: 4, children: null };
+      const obj18 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+      const intl9 = util.intl;
+      obj18.children = intl9.string(_modDef3753["7TKfpj"]);
+      const items4 = [closure_1_19(Text_Text.Text, obj18), ];
       const obj19 = { variant: "text-sm/normal", color: "text-default", children: privileged_intents.join(", ") };
-      const Text6 = Text_Text.Text;
-      items4[1] = closure_19(Text6, obj19);
-      tmp12Result7 = closure_20(Stack4, obj17);
+      items4[1] = closure_1_19(Text_Text.Text, obj19);
+      obj17.children = items4;
+      tmp12Result7 = closure_1_20(Stack_Stack.Stack, obj17);
     }
     items[8] = tmp12Result7;
     let tmp12Result8 = null;
     if (null != onApprove) {
       tmp12Result8 = null;
       if (!superseded) {
-        const obj20 = { style: tmp.planActions, children: items5 };
-        const obj21 = { text: intl10.string(_modDef3753["6S+wRM"]), variant: "primary", onPress: onApprove };
-        const Button = components_Button_Button.Button;
-        intl10 = intl13.intl;
-        items5 = [closure_19(Button, obj21), ];
-        const obj22 = { variant: "text-sm/normal", color: "text-muted", style: tmp.planReplyHint, children: intl11.string(_modDef3753.IZoqbR) };
-        const Text7 = Text_Text.Text;
-        intl11 = intl13.intl;
-        items5[1] = closure_19(Text7, obj22);
-        tmp12Result8 = closure_20(metroImportAll, obj20);
+        const obj20 = { style: tmp.planActions, children: null };
+        const obj21 = { text: null, variant: "primary", onPress: null };
+        const intl10 = util.intl;
+        obj21.text = intl10.string(_modDef3753["6S+wRM"]);
+        obj21.onPress = onApprove;
+        const items5 = [closure_1_19(components_Button_Button.Button, obj21), ];
+        const obj22 = { variant: "text-sm/normal", color: "text-muted", style: tmp.planReplyHint, children: null };
+        const intl11 = util.intl;
+        obj22.children = intl11.string(_modDef3753.IZoqbR);
+        items5[1] = closure_1_19(Text_Text.Text, obj22);
+        obj20.children = items5;
+        tmp12Result8 = closure_1_20(closure_1_8, obj20);
       }
     }
-    obj24 = { direction: "vertical", spacing: 8, children: items };
+    const obj23 = { children: null };
+    const obj24 = { direction: "vertical", spacing: 8, children: null };
     items[9] = tmp12Result8;
-    const obj23 = { children: closure_19(tmp9, obj3) };
-    return closure_19(tmp8, obj23);
+    obj24.children = items;
+    obj3.children = closure_1_20(Stack_Stack.Stack, obj24);
+    obj23.children = closure_1_19(tmp9, obj3);
+    return closure_1_19(tmp8, obj23);
   }
-  const intl = intl13.intl;
+  const intl = util.intl;
   formatToPlainStringResult = intl.string(_modDef3753["3b6e7o"]);
+  tmp8 = ConjureNativeCardSurfaceDefault;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_32 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let first;
-  let ideas;
-  let intl;
-  let onPick;
-  let tmp10;
-  let obj = onPick(576);
-  const cResult = obj.c(9);
+  const cResult = onPick(576).c(9);
   ({ ideas, onPick } = arg0);
   const tmp4 = closure_29();
-  const ideaCards = tmp4.ideaCards;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj2 = { variant: "text-sm/semibold", color: "text-muted", children: intl.string(_modDef3753["wx/o8Y"]) };
-    const Text = onPick(4892).Text;
-    intl = onPick(1126).intl;
-    const tmp8 = closure_19(Text, obj2);
+    const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+    let intl = onPick(1126).intl;
+    obj2.children = intl.string(_modDef3753["wx/o8Y"]);
+    const tmp8 = closure_19(onPick(4892).Text, obj2);
     cResult[0] = tmp8;
-    first = tmp8;
+    let first = tmp8;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === ideas) {
-    let tmp9;
     if (cResult[2] === onPick) {
-      tmp9 = cResult[3];
-    }
-    if (cResult[6] === tmp4.ideaCards) {
-      let tmp12;
-      if (cResult[7] === tmp9) {
-        tmp12 = cResult[8];
+      if (cResult[6] === tmp4.ideaCards) {
+        if (cResult[7] === tmp9) {
+          let tmp12 = cResult[8];
+        }
+        return tmp12;
       }
-      return tmp12;
+      const obj3 = { style: tmp4.ideaCards, children: null };
+      items = [first, cResult[3]];
+      obj3.children = items;
+      const tmp15 = closure_20(closure_8, obj3);
+      cResult[6] = tmp4.ideaCards;
+      cResult[7] = cResult[3];
+      cResult[8] = tmp15;
+      tmp12 = tmp15;
     }
-    let obj3 = { style: ideaCards, children: items };
-    items = [first, tmp9];
-    const tmp15 = closure_20(closure_8, obj3);
-    cResult[6] = tmp4.ideaCards;
-    cResult[7] = tmp9;
-    cResult[8] = tmp15;
-    tmp12 = tmp15;
   }
   if (cResult[4] !== onPick) {
     const fn = function i(title) {
-      let Stack;
-      let intl;
-      let obj2;
-      let closure_0 = title;
+      closure_0 = title;
       const obj = {
         onPress() {
-          return onPick(title);
+          return onPick(closure_0);
         },
-        accessibilityLabel: intl.formatToPlainString(_modDef3753.H8G39M, obj2),
-        children: closure_1_20(Stack, { direction: "vertical", spacing: 4, children: items })
+        accessibilityLabel: null,
+        children: null
       };
-      const Card = onPick(dependencyMap[29]).Card;
-      intl = onPick(dependencyMap[17]).intl;
-      obj2 = { title: title.title };
-      Stack = onPick(dependencyMap[20]).Stack;
-      items = [, ];
-      const obj3 = { variant: "text-md/semibold", color: "text-default", children: title.title };
-      items[0] = closure_1_19(onPick(dependencyMap[19]).Text, obj3);
+      const intl = onPick(1126).intl;
+      obj.accessibilityLabel = intl.formatToPlainString(_modDef3753.H8G39M, { title: title.title });
+      items = [closure_1_19(onPick(4892).Text, { variant: "text-md/semibold", color: "text-default", children: title.title }), ];
       let tmpResult = null;
       if ("" !== title.value) {
         const obj4 = { variant: "text-sm/normal", color: "text-muted", children: title.value };
-        tmpResult = closure_1_19(onPick(dependencyMap[19]).Text, obj4);
+        tmpResult = closure_1_19(onPick(4892).Text, obj4);
       }
       items[1] = tmpResult;
-      return closure_1_19(Card, obj, title.id);
+      obj.children = closure_1_20(onPick(5600).Stack, { direction: "vertical", spacing: 4, children: items });
+      return closure_1_19(onPick(6002).Card, obj, title.id);
     };
     cResult[4] = onPick;
     cResult[5] = fn;
-    tmp10 = fn;
+    let tmp10 = fn;
   } else {
     tmp10 = cResult[5];
   }
@@ -936,219 +823,169 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = ideas;
   cResult[2] = onPick;
   cResult[3] = mapped;
-  tmp9 = mapped;
+  let obj = onPick(576);
 }) : ((arg0) => {
-  let ideas;
-  let intl;
-  let require;
   ({ ideas, onPick: require } = arg0);
-  let obj = { style: closure_29().ideaCards, children: items };
-  let obj2 = { variant: "text-sm/semibold", color: "text-muted", children: intl.string(_modDef3753["wx/o8Y"]) };
-  const Text = Text_Text.Text;
-  intl = intl13.intl;
+  let obj = { style: closure_29().ideaCards, children: null };
+  const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+  let intl = util.intl;
+  obj2.children = intl.string(_modDef3753["wx/o8Y"]);
   items = [
-    closure_19(Text, obj2),
+    closure_19(Text_Text.Text, obj2),
     ideas.map((title) => {
-      let Stack;
-      let intl;
-      let obj2;
-      const require = title;
+      closure_0 = title;
       const obj = {
         onPress() {
-          return _require(title);
+          return _require(closure_0);
         },
-        accessibilityLabel: intl.formatToPlainString(_modDef3753.H8G39M, obj2),
-        children: closure_1_20(Stack, { direction: "vertical", spacing: 4, children: items })
+        accessibilityLabel: null,
+        children: null
       };
-      const Card = require("Card/Card").Card;
-      intl = require("intl").intl;
-      obj2 = { title: title.title };
-      Stack = require("Stack/Stack").Stack;
-      items = [, ];
-      const obj3 = { variant: "text-md/semibold", color: "text-default", children: title.title };
-      items[0] = closure_1_19(require("Text/Text").Text, obj3);
+      const intl = require("util").intl;
+      obj.accessibilityLabel = intl.formatToPlainString(_modDef3753.H8G39M, { title: title.title });
+      items = [closure_1_19(require("Text/Text").Text, { variant: "text-md/semibold", color: "text-default", children: title.title }), ];
       let tmpResult = null;
       if ("" !== title.value) {
         const obj4 = { variant: "text-sm/normal", color: "text-muted", children: title.value };
         tmpResult = closure_1_19(require("Text/Text").Text, obj4);
       }
       items[1] = tmpResult;
-      return closure_1_19(Card, obj, title.id);
+      obj.children = closure_1_20(require("Stack/Stack").Stack, { direction: "vertical", spacing: 4, children: items });
+      return closure_1_19(require("Card").Card, obj, title.id);
     })
   ];
+  obj.children = items;
   return closure_20(closure_8, obj);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_33 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
-  let closure_2;
-  let tmp3;
-  let tmp5;
-  let obj = projectId(576);
-  const cResult = obj.c(12);
+  const cResult = projectId(attachmentPill[15]).c(12);
   projectId = projectId.projectId;
   const attachments = projectId.attachments;
   const tmp2 = closure_29();
-  let closure_1 = tmp2;
+  closure_1 = tmp2;
   if (cResult[0] !== projectId) {
-    const fn = function n(size) {
-      const promise = unpackModuleId(projectId, size);
-      const nextPromise = promise.then((result) => {
-        const obj = closure_1_1(closure_1_2[30]);
-        return obj.openURL(result);
-      });
-      nextPromise.catch(() => {
+    const fn = function n(arg0) {
+      const promise = closure_2_11(projectId, arg0);
+      closure_2_11(projectId, arg0).then((result) => closure_1_1(attachmentPill[30]).openURL(result)).catch(() => {
 
       });
     };
     cResult[0] = projectId;
     cResult[1] = fn;
-    tmp3 = fn;
+    attachmentPill = fn;
   } else {
-    tmp3 = cResult[1];
+    attachmentPill = cResult[1];
   }
-  dependencyMap = tmp3;
   if (cResult[2] === attachments) {
-    if (cResult[3] === tmp3) {
+    if (cResult[3] === attachmentPill) {
       if (cResult[4] === tmp2.attachmentPill) {
-        tmp5 = cResult[5];
-      }
-      if (cResult[9] === tmp2.attachmentPills) {
-        let tmp8;
-        if (cResult[10] === tmp5) {
-          tmp8 = cResult[11];
+        if (cResult[9] === tmp2.attachmentPills) {
+          if (cResult[10] === tmp4) {
+            let tmp8 = cResult[11];
+          }
+          return tmp8;
         }
-        return tmp8;
+        let obj2 = { style: tmp3, children: cResult[5] };
+        const tmp11 = closure_19(closure_8, obj2);
+        cResult[9] = tmp2.attachmentPills;
+        cResult[10] = cResult[5];
+        cResult[11] = tmp11;
+        tmp8 = tmp11;
       }
-      let obj2 = { style: tmp4, children: tmp5 };
-      const tmp11 = closure_19(closure_8, obj2);
-      cResult[9] = tmp2.attachmentPills;
-      cResult[10] = tmp5;
-      cResult[11] = tmp11;
-      tmp8 = tmp11;
     }
   }
-  if (cResult[6] === tmp3) {
-    let tmp6;
+  if (cResult[6] === attachmentPill) {
     if (cResult[7] === tmp2.attachmentPill) {
-      tmp6 = cResult[8];
+      let tmp5 = cResult[8];
     }
-    const mapped = attachments.map(tmp6);
+    const mapped = attachments.map(tmp5);
     cResult[2] = attachments;
-    cResult[3] = tmp3;
-    cResult[4] = tmp2.attachmentPill;
+    cResult[3] = attachmentPill;
+    attachmentPill = tmp2.attachmentPill;
+    cResult[4] = attachmentPill;
     cResult[5] = mapped;
-    tmp5 = mapped;
   }
   const fn2 = function p(id, arg1) {
-    let Text;
-    let intl;
-    let intl2;
-    let obj2;
-    let obj3;
-    let obj5;
-    let obj6;
-    let tmp12;
     if (null != id.id) {
       const obj = {
         style: closure_1.attachmentPill,
         onPress() {
-            return closure_2(id.id);
+            return attachmentPill(id.id);
           },
-        accessibilityLabel: intl.formatToPlainString(closure_1(closure_2[18]).GtNukg, obj2),
-        children: closure_1_19(projectId(closure_2[19]).Text, obj3)
+        accessibilityLabel: null,
+        children: null
       };
-      const Card = projectId(closure_2[29]).Card;
-      intl = projectId(closure_2[17]).intl;
-      obj2 = { name: id.name };
-      obj3 = { variant: "text-xs/medium", color: "text-default", children: id.name };
-      tmp12 = closure_1_19(Card, obj, id.id);
+      const intl = projectId(attachmentPill[17]).intl;
+      const obj2 = { name: id.name };
+      obj.accessibilityLabel = intl.formatToPlainString(closure_1(attachmentPill[18]).GtNukg, obj2);
+      const obj3 = { variant: "text-xs/medium", color: "text-default", children: id.name };
+      obj.children = closure_1_19(projectId(attachmentPill[19]).Text, obj3);
+      let tmp12 = closure_1_19(projectId(attachmentPill[29]).Card, obj, id.id);
     } else {
-      const obj4 = { style: closure_1.attachmentPill, children: closure_1_19(Text, obj5) };
-      obj5 = { variant: "text-xs/medium", color: "text-muted", children: intl2.formatToPlainString(closure_1(closure_2[18]).nd81jR, obj6) };
-      Text = projectId(closure_2[19]).Text;
-      intl2 = projectId(closure_2[17]).intl;
+      const obj4 = { style: closure_1.attachmentPill, children: null };
+      const obj5 = { variant: "text-xs/medium", color: "text-muted", children: null };
+      const intl2 = projectId(attachmentPill[17]).intl;
+      const obj6 = { name: id.name };
+      obj5.children = intl2.formatToPlainString(closure_1(attachmentPill[18]).nd81jR, obj6);
+      obj4.children = closure_1_19(projectId(attachmentPill[19]).Text, obj5);
       const _HermesInternal = HermesInternal;
-      obj6 = { name: id.name };
       tmp12 = closure_1_19(closure_1_8, obj4, "" + id.name + "-" + arg1);
     }
     return tmp12;
   };
-  cResult[6] = tmp3;
+  cResult[6] = attachmentPill;
   cResult[7] = tmp2.attachmentPill;
   cResult[8] = fn2;
-  tmp6 = fn2;
+  tmp5 = fn2;
+  let obj = projectId(attachmentPill[15]);
 }) : ((projectId) => {
   projectId = projectId.projectId;
   const attachments = projectId.attachments;
   const tmp = closure_29();
-  let closure_1 = tmp;
+  closure_1 = tmp;
   items = [projectId];
-  let closure_2 = react.useCallback((size) => {
-    const promise = unpackModuleId(projectId, size);
-    const nextPromise = promise.then((result) => {
-      const obj = closure_1_1(closure_1_2[30]);
-      return obj.openURL(result);
-    });
-    nextPromise.catch(() => {
+  dependencyMap = noop.useCallback((arg0) => {
+    const promise = closure_2_11(projectId, arg0);
+    closure_2_11(projectId, arg0).then((result) => closure_1_1(dependencyMap[30]).openURL(result)).catch(() => {
 
     });
   }, items);
-  let obj = {
+  return closure_19(closure_8, {
     style: tmp.attachmentPills,
     children: attachments.map((id, index) => {
-      let Text;
-      let intl;
-      let intl2;
-      let obj2;
-      let obj3;
-      let obj5;
-      let obj6;
-      let tmp12;
       if (null != id.id) {
         const obj = {
           style: closure_1.attachmentPill,
           onPress() {
               return closure_2(id.id);
             },
-          accessibilityLabel: intl.formatToPlainString(closure_1(closure_2[18]).GtNukg, obj2),
-          children: closure_1_19(projectId(closure_2[19]).Text, obj3)
+          accessibilityLabel: null,
+          children: null
         };
-        const Card = projectId(closure_2[29]).Card;
-        intl = projectId(closure_2[17]).intl;
-        obj2 = { name: id.name };
-        obj3 = { variant: "text-xs/medium", color: "text-default", children: id.name };
-        tmp12 = closure_1_19(Card, obj, id.id);
+        const intl = projectId(1126).intl;
+        const obj2 = { name: id.name };
+        obj.accessibilityLabel = intl.formatToPlainString(closure_1(3753).GtNukg, obj2);
+        const obj3 = { variant: "text-xs/medium", color: "text-default", children: id.name };
+        obj.children = closure_1_19(projectId(4892).Text, obj3);
+        let tmp12 = closure_1_19(projectId(6002).Card, obj, id.id);
       } else {
-        const obj4 = { style: closure_1.attachmentPill, children: closure_1_19(Text, obj5) };
-        obj5 = { variant: "text-xs/medium", color: "text-muted", children: intl2.formatToPlainString(closure_1(closure_2[18]).nd81jR, obj6) };
-        Text = projectId(closure_2[19]).Text;
-        intl2 = projectId(closure_2[17]).intl;
+        const obj4 = { style: closure_1.attachmentPill, children: null };
+        const obj5 = { variant: "text-xs/medium", color: "text-muted", children: null };
+        const intl2 = projectId(1126).intl;
+        const obj6 = { name: id.name };
+        obj5.children = intl2.formatToPlainString(closure_1(3753).nd81jR, obj6);
+        obj4.children = closure_1_19(projectId(4892).Text, obj5);
         const _HermesInternal = HermesInternal;
-        obj6 = { name: id.name };
         tmp12 = closure_1_19(closure_1_8, obj4, "" + id.name + "-" + index);
       }
       return tmp12;
     })
-  };
-  return closure_19(closure_8, obj);
+  });
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let arr;
-  let closure_0;
-  let crestColor;
-  let detail;
-  let epoch;
-  let inGutter;
-  let live;
-  let node;
-  let obj5;
-  let projectId;
-  let tmp10;
-  let tmp13;
-  let tmpResult2;
-  let obj = require("react");
-  const cResult = obj.c(28);
+  const cResult = require("c").c(28);
   ({ projectId, node, inGutter, live, crestColor, epoch } = arg0);
   let num = 0;
   if (undefined !== epoch) {
@@ -1157,22 +994,22 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const tmp6 = closure_29();
   _require = tmp6;
   if (cResult[0] !== node.attachments) {
-    let tmp8;
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       const fn = function l(id) {
         if (null != id.id) {
           const CONJURE_VIEWABLE_IMAGE_TYPES = closure_0(dependencyMap[31]).CONJURE_VIEWABLE_IMAGE_TYPES;
           if (CONJURE_VIEWABLE_IMAGE_TYPES.has(id.content_type)) {
-            const obj = { id: id.id };
+            const obj = {};
             const merged = Object.assign(id);
+            obj.id = id.id;
             items = [obj];
           }
           return [];
         }
       };
       cResult[2] = fn;
-      tmp8 = fn;
+      let tmp8 = fn;
     } else {
       tmp8 = cResult[2];
     }
@@ -1180,116 +1017,110 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const flatMapResult = attachments.flatMap(tmp8);
     cResult[0] = node.attachments;
     cResult[1] = flatMapResult;
-    arr = flatMapResult;
   } else {
-    arr = cResult[1];
-  }
-  if (cResult[3] !== node) {
-    const tmpResult = require("ConjureTimelineTree");
-    const describeNodeResult = tmpResult.describeNode(node);
-    cResult[3] = node;
-    cResult[4] = describeNodeResult;
-    tmp10 = describeNodeResult;
-  } else {
-    tmp10 = cResult[4];
-  }
-  let str3 = "detail";
-  const status = node.status;
-  if (undefined !== live && live) {
-    str3 = "headline";
-  }
-  if (cResult[5] !== node.durationMs) {
-    let tmp14 = null;
-    if (null != node.durationMs) {
-      const obj2 = { variant: "text-xs/normal", color: "text-subtle", children: tmpResult2.describeDuration(node.durationMs) };
-      let Text = tmp(4892).Text;
-      tmpResult2 = require("ConjureDuration");
-      tmp14 = closure_19(Text, obj2);
+    if (cResult[3] !== node) {
+      const describeNodeResult = tmp(16692).describeNode(node);
+      cResult[3] = node;
+      cResult[4] = describeNodeResult;
+      let tmp11 = describeNodeResult;
+      const tmpResult = tmp(16692);
+    } else {
+      tmp11 = cResult[4];
     }
-    cResult[5] = node.durationMs;
-    cResult[6] = tmp14;
-    tmp13 = tmp14;
-  } else {
-    tmp13 = cResult[6];
-  }
-  if (cResult[7] === crestColor) {
-    if (cResult[8] === num) {
-      if (cResult[9] === (undefined !== inGutter && inGutter)) {
-        if (cResult[10] === (undefined !== live && live)) {
-          if (cResult[11] === tmp10) {
-            if (cResult[12] === (!(undefined !== live && live) && "failed" !== node.status)) {
-              if (cResult[13] === "failed" === status) {
-                if (cResult[14] === str3) {
-                  let tmp17;
-                  if (cResult[15] === tmp13) {
-                    tmp17 = cResult[16];
-                  }
-                  if (cResult[17] === node.detail) {
-                    let tmp19;
-                    if (cResult[18] === tmp6) {
-                      tmp19 = cResult[19];
+    let tmp13 = !tmp5;
+    if (!tmp5) {
+      tmp13 = "failed" !== node.status;
+    }
+    let str3 = "detail";
+    if (tmp5) {
+      str3 = "headline";
+    }
+    if (cResult[5] !== node.durationMs) {
+      let tmp15 = null;
+      if (null != node.durationMs) {
+        const obj2 = { variant: "text-xs/normal", color: "text-subtle", children: tmp(16693).describeDuration(node.durationMs) };
+        tmp15 = closure_19(tmp(4892).Text, obj2);
+        const tmpResult2 = tmp(16693);
+      }
+      cResult[5] = node.durationMs;
+      cResult[6] = tmp15;
+      let tmp14 = tmp15;
+    } else {
+      tmp14 = cResult[6];
+    }
+    if (cResult[7] === crestColor) {
+      if (cResult[8] === num) {
+        if (cResult[9] === tmp4) {
+          if (cResult[10] === tmp5) {
+            if (cResult[11] === tmp11) {
+              if (cResult[12] === tmp13) {
+                if (cResult[13] === tmp17) {
+                  if (cResult[14] === str3) {
+                    if (cResult[15] === tmp14) {
+                      let tmp18 = cResult[16];
                     }
-                    if (cResult[20] === arr) {
-                      if (cResult[21] === projectId) {
-                        let tmp23;
-                        if (cResult[22] === tmp6) {
-                          tmp23 = cResult[23];
-                        }
-                        if (cResult[24] === tmp17) {
-                          if (cResult[25] === tmp19) {
-                            let tmp29;
-                            if (cResult[26] === tmp23) {
-                              tmp29 = cResult[27];
-                            }
-                            return tmp29;
+                    if (cResult[17] === node.detail) {
+                      if (cResult[18] === tmp6) {
+                        let tmp22 = cResult[19];
+                      }
+                      if (cResult[20] === arr) {
+                        if (cResult[21] === projectId) {
+                          if (cResult[22] === tmp6) {
+                            let tmp26 = cResult[23];
                           }
+                          if (cResult[24] === tmp18) {
+                            if (cResult[25] === tmp22) {
+                              if (cResult[26] === tmp26) {
+                                let tmp32 = cResult[27];
+                              }
+                              return tmp32;
+                            }
+                          }
+                          const obj3 = { children: null };
+                          items = [tmp18, tmp22, tmp26];
+                          obj3.children = items;
+                          const tmp35 = closure_20(closure_8, obj3);
+                          cResult[24] = tmp18;
+                          cResult[25] = tmp22;
+                          cResult[26] = tmp26;
+                          cResult[27] = tmp35;
+                          tmp32 = tmp35;
                         }
-                        const obj3 = { children: items };
-                        items = [tmp17, tmp19, tmp23];
-                        const tmp32 = closure_20(closure_8, obj3);
-                        cResult[24] = tmp17;
-                        cResult[25] = tmp19;
-                        cResult[26] = tmp23;
-                        cResult[27] = tmp32;
-                        tmp29 = tmp32;
                       }
-                    }
-                    let tmp25 = null;
-                    if (null != projectId) {
-                      tmp25 = null;
-                      if (arr.length > 0) {
-                        const obj4 = { style: tmp6.stepDetail, children: closure_19(ConjureNativeStepImagesDefault, obj5) };
-                        obj5 = { projectId, images: arr };
-                        tmp25 = closure_19(closure_8, obj4);
+                      let tmp28 = null;
+                      if (null != projectId) {
+                        tmp28 = null;
+                        if (arr.length > 0) {
+                          const obj4 = { style: tmp6.stepDetail, children: null };
+                          const obj5 = { projectId, images: arr };
+                          obj4.children = closure_19(ConjureNativeStepImagesDefault, obj5);
+                          tmp28 = closure_19(closure_8, obj4);
+                        }
                       }
+                      cResult[20] = arr;
+                      cResult[21] = projectId;
+                      cResult[22] = tmp6;
+                      cResult[23] = tmp28;
+                      tmp26 = tmp28;
                     }
-                    cResult[20] = arr;
-                    cResult[21] = projectId;
-                    cResult[22] = tmp6;
-                    cResult[23] = tmp25;
-                    tmp23 = tmp25;
+                    let tmp23 = null;
+                    if (node.detail.length > 0) {
+                      const obj6 = { style: tmp6.stepDetail, children: null };
+                      const detail = node.detail;
+                      obj6.children = detail.map((children, index) => {
+                        let stepCommand;
+                        if (children.startsWith("$ ")) {
+                          stepCommand = closure_0.stepCommand;
+                        }
+                        return closure_2_19(Text_Text.Text, { variant: "text-sm/normal", color: "text-muted", style: stepCommand, children }, index);
+                      });
+                      tmp23 = closure_19(closure_8, obj6);
+                    }
+                    cResult[17] = node.detail;
+                    cResult[18] = tmp6;
+                    cResult[19] = tmp23;
+                    tmp22 = tmp23;
                   }
-                  let tmp20 = null;
-                  if (node.detail.length > 0) {
-                    const obj6 = {
-                      style: tmp6.stepDetail,
-                      children: detail.map((children, index) => {
-                                          const Text = Text_Text.Text;
-                                          let stepCommand;
-                                          if (children.startsWith("$ ")) {
-                                            stepCommand = closure_0.stepCommand;
-                                          }
-                                          const obj = { variant: "text-sm/normal", color: "text-muted", style: stepCommand, children };
-                                          return closure_19(Text, obj, index);
-                                        })
-                    };
-                    detail = node.detail;
-                    tmp20 = closure_19(closure_8, obj6);
-                  }
-                  cResult[17] = node.detail;
-                  cResult[18] = tmp6;
-                  cResult[19] = tmp20;
-                  tmp19 = tmp20;
                 }
               }
             }
@@ -1297,33 +1128,22 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
     }
+    const obj7 = { line: tmp11, live: tmp5, settled: tmp13, failed: "failed" === node.status, presentation: str3, crestColor, inGutter: tmp4, epoch: num, trailing: tmp14 };
+    const tmp21 = closure_19(ConjureNativeStatusLineDefault, obj7);
+    cResult[7] = crestColor;
+    cResult[8] = num;
+    cResult[9] = tmp4;
+    cResult[10] = tmp5;
+    cResult[11] = tmp11;
+    cResult[12] = tmp13;
+    cResult[13] = "failed" === node.status;
+    cResult[14] = str3;
+    cResult[15] = tmp14;
+    cResult[16] = tmp21;
+    tmp18 = tmp21;
   }
-  const tmp18 = closure_19(ConjureNativeStatusLineDefault, { line: tmp10, live: undefined !== live && live, settled: !(undefined !== live && live) && "failed" !== node.status, failed: "failed" === status, presentation: str3, crestColor, inGutter: undefined !== inGutter && inGutter, epoch: num, trailing: tmp13 });
-  cResult[7] = crestColor;
-  cResult[8] = num;
-  cResult[9] = undefined !== inGutter && inGutter;
-  cResult[10] = undefined !== live && live;
-  cResult[11] = tmp10;
-  cResult[12] = !(undefined !== live && live) && "failed" !== node.status;
-  cResult[13] = "failed" === status;
-  cResult[14] = str3;
-  cResult[15] = tmp13;
-  cResult[16] = tmp18;
-  tmp17 = tmp18;
+  let obj = require("c");
 }) : ((live) => {
-  let closure_0;
-  let crestColor;
-  let detail;
-  let epoch;
-  let inGutter;
-  let node;
-  let obj2;
-  let obj6;
-  let projectId;
-  let str2;
-  let tmp4Result;
-  let tmp8Result;
-  let tmp9;
   ({ projectId, node, inGutter } = live);
   if (inGutter === undefined) {
     inGutter = false;
@@ -1343,44 +1163,51 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (null != id.id) {
       const CONJURE_VIEWABLE_IMAGE_TYPES = closure_0(dependencyMap[31]).CONJURE_VIEWABLE_IMAGE_TYPES;
       if (CONJURE_VIEWABLE_IMAGE_TYPES.has(id.content_type)) {
-        const obj = { id: id.id };
+        const obj = {};
         const merged = Object.assign(id);
+        obj.id = id.id;
         items = [obj];
       }
       return [];
     }
   });
-  let obj = { line: obj2.describeNode(node), live: flag, settled: tmp9, failed: "failed" === node.status, presentation: str2, crestColor, inGutter, epoch, trailing: tmp4Result };
+  let obj = { line: null, live: null, settled: null, failed: null, presentation: null, crestColor: null, inGutter: null, epoch: null, trailing: null };
   const tmp7 = ConjureNativeStatusLineDefault;
-  str2 = "detail";
-  obj2 = require("ConjureTimelineTree");
-  tmp9 = !flag && "failed" !== node.status;
+  obj.line = require("ConjureTimelineTree").describeNode(node);
+  obj.live = flag;
+  let tmp9 = !flag;
+  if (!flag) {
+    tmp9 = "failed" !== node.status;
+  }
+  obj.settled = tmp9;
+  obj.failed = "failed" === node.status;
+  let str2 = "detail";
   if (flag) {
     str2 = "headline";
   }
-  tmp4Result = null;
+  obj.presentation = str2;
+  obj.crestColor = crestColor;
+  obj.inGutter = inGutter;
+  obj.epoch = epoch;
+  let tmp4Result = null;
   if (null != node.durationMs) {
-    const obj3 = { variant: "text-xs/normal", color: "text-subtle", children: tmp8Result.describeDuration(node.durationMs) };
-    let Text = tmp8(4892).Text;
-    tmp8Result = require("ConjureDuration");
-    tmp4Result = closure_19(Text, obj3);
+    const obj3 = { variant: "text-xs/normal", color: "text-subtle", children: tmp8(16693).describeDuration(node.durationMs) };
+    tmp4Result = closure_19(tmp8(4892).Text, obj3);
+    const tmp8Result = tmp8(16693);
   }
+  obj.trailing = tmp4Result;
   const children = [closure_19(tmp7, obj), , ];
   let tmp4Result3 = null;
   if (node.detail.length > 0) {
-    const obj4 = {
-      style: tmp.stepDetail,
-      children: detail.map((children, index) => {
-          const Text = Text_Text.Text;
-          let stepCommand;
-          if (children.startsWith("$ ")) {
-            stepCommand = closure_0.stepCommand;
-          }
-          const obj = { variant: "text-sm/normal", color: "text-muted", style: stepCommand, children };
-          return closure_19(Text, obj, index);
-        })
-    };
-    detail = node.detail;
+    const obj4 = { style: tmp.stepDetail, children: null };
+    const detail = node.detail;
+    obj4.children = detail.map((children, index) => {
+      let stepCommand;
+      if (children.startsWith("$ ")) {
+        stepCommand = closure_0.stepCommand;
+      }
+      return closure_2_19(Text_Text.Text, { variant: "text-sm/normal", color: "text-muted", style: stepCommand, children }, index);
+    });
     tmp4Result3 = closure_19(closure_8, obj4);
   }
   children[1] = tmp4Result3;
@@ -1388,39 +1215,30 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (null != projectId) {
     tmp4Result4 = null;
     if (flatMapResult.length > 0) {
-      const obj5 = { style: tmp.stepDetail, children: closure_19(ConjureNativeStepImagesDefault, obj6) };
-      obj6 = { projectId, images: flatMapResult };
+      const obj5 = { style: tmp.stepDetail, children: null };
+      const obj6 = { projectId, images: flatMapResult };
+      obj5.children = closure_19(ConjureNativeStepImagesDefault, obj6);
       tmp4Result4 = closure_19(closure_8, obj5);
     }
   }
   children[2] = tmp4Result4;
   return closure_20(closure_8, { children });
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
-  let describeTurnDurationResult;
-  let epoch;
-  let first;
-  let steps1;
-  let tmp6;
-  let tree;
-  let turn3;
-  let turnActive;
-  let obj = projectId(epoch[15]);
-  const cResult = obj.c(31);
+  const cResult = projectId(epoch[15]).c(31);
   projectId = projectId.projectId;
   ({ tree, turnActive } = projectId);
   epoch = projectId.epoch;
-  const besideAvatar = projectId.besideAvatar;
   const tmp4 = closure_29();
-  const tmp5 = _slicedToArray(react.useState(false), 2);
-  [tmp6, _slicedToArray] = tmp5;
+  let obj = projectId(epoch[15]);
+  [tmp6, _slicedToArray] = noop.useState(false);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function i() {
       return _slicedToArray((arg0) => !arg0);
     };
     cResult[0] = fn;
-    first = fn;
+    let first = fn;
   } else {
     first = cResult[0];
   }
@@ -1428,16 +1246,13 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => 
     if (cResult[2] === tree.tasks) {
       const turn = tree.turn;
       let durationMs;
-      const tmp8 = cResult[3];
       if (turn != null) {
         durationMs = turn.durationMs;
       }
-      if (tmp8 === durationMs) {
-        let tmp12;
-        let tmp23;
+      if (cResult[3] === durationMs) {
         if (cResult[4] === turnActive) {
-          react = cResult[5];
-          tmp12 = cResult[6];
+          noop = cResult[5];
+          let tmp11 = cResult[6];
         }
         if (cResult[9] !== tree.steps) {
           let someResult = tree.steps.length > 1;
@@ -1447,53 +1262,51 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => 
           }
           cResult[9] = tree.steps;
           cResult[10] = someResult;
-          tmp23 = someResult;
+          let tmp22 = someResult;
         } else {
-          tmp23 = cResult[10];
+          tmp22 = cResult[10];
+        }
+        let tmp25;
+        if (projectId.besideAvatar) {
+          tmp25 = null;
         }
         let tmp26;
-        if (besideAvatar) {
-          tmp26 = null;
-        }
-        let tmp27;
-        if (tmp23) {
-          tmp27 = first;
+        if (tmp22) {
+          tmp26 = first;
         }
         if (cResult[11] === epoch) {
           if (cResult[12] === tmp6) {
-            if (cResult[13] === tmp12) {
-              if (cResult[14] === !turnActive) {
-                if (cResult[15] === tmp26) {
-                  if (cResult[16] === tmp27) {
-                    let tmp28;
+            if (cResult[13] === tmp11) {
+              if (cResult[14] === tmp24) {
+                if (cResult[15] === tmp25) {
+                  if (cResult[16] === tmp26) {
                     if (cResult[17] === turnActive) {
-                      tmp28 = cResult[18];
+                      let tmp27 = cResult[18];
                     }
-                    if (cResult[19] === tmp11) {
+                    if (cResult[19] === tmp10) {
                       if (cResult[20] === epoch) {
                         if (cResult[21] === tmp6) {
-                          if (cResult[22] === tmp23) {
+                          if (cResult[22] === tmp22) {
                             if (cResult[23] === projectId) {
                               if (cResult[24] === tmp4) {
                                 if (cResult[25] === tree.steps) {
-                                  let tmp32;
                                   if (cResult[26] === turnActive) {
-                                    tmp32 = cResult[27];
+                                    let tmp31 = cResult[27];
                                   }
-                                  if (cResult[28] === tmp28) {
-                                    let tmp36;
-                                    if (cResult[29] === tmp32) {
-                                      tmp36 = cResult[30];
+                                  if (cResult[28] === tmp27) {
+                                    if (cResult[29] === tmp31) {
+                                      let tmp35 = cResult[30];
                                     }
-                                    return tmp36;
+                                    return tmp35;
                                   }
-                                  const obj2 = { children: items };
-                                  items = [tmp28, tmp32];
-                                  const tmp39 = closure_20(closure_8, obj2);
-                                  cResult[28] = tmp28;
-                                  cResult[29] = tmp32;
-                                  cResult[30] = tmp39;
-                                  tmp36 = tmp39;
+                                  const obj2 = { children: null };
+                                  items = [tmp27, tmp31];
+                                  obj2.children = items;
+                                  const tmp38 = closure_20(closure_8, obj2);
+                                  cResult[28] = tmp27;
+                                  cResult[29] = tmp31;
+                                  cResult[30] = tmp38;
+                                  tmp35 = tmp38;
                                 }
                               }
                             }
@@ -1501,64 +1314,66 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => 
                         }
                       }
                     }
-                    let tmp33 = null;
+                    let tmp32 = null;
                     if (tmp6) {
-                      tmp33 = null;
-                      if (tmp23) {
-                        const obj3 = {
-                          style: tmp4.activityDetail,
-                          children: steps1.map((node) => {
-                                                  let tmp3;
-                                                  const obj = { projectId, node, live: tmp3, epoch };
-                                                  tmp3 = turnActive && node === react;
-                                                  return closure_19(closure_34, obj, node.id);
-                                                })
-                        };
-                        steps1 = tree.steps;
-                        tmp33 = closure_19(closure_8, obj3);
+                      tmp32 = null;
+                      if (tmp22) {
+                        const obj3 = { style: tmp4.activityDetail, children: null };
+                        const steps1 = tree.steps;
+                        obj3.children = steps1.map((node) => {
+                          const obj = { projectId, node, live: null, epoch: null };
+                          let tmp3 = turnActive;
+                          if (turnActive) {
+                            tmp3 = node === currentStepResult;
+                          }
+                          obj.live = tmp3;
+                          obj.epoch = epoch;
+                          return closure_2_19(closure_34, obj, node.id);
+                        });
+                        tmp32 = closure_19(closure_8, obj3);
                       }
                     }
-                    cResult[19] = tmp11;
+                    cResult[19] = tmp10;
                     cResult[20] = epoch;
                     cResult[21] = tmp6;
-                    cResult[22] = tmp23;
+                    cResult[22] = tmp22;
                     cResult[23] = projectId;
                     cResult[24] = tmp4;
                     cResult[25] = tree.steps;
                     cResult[26] = turnActive;
-                    cResult[27] = tmp33;
-                    tmp32 = tmp33;
+                    cResult[27] = tmp32;
+                    tmp31 = tmp32;
                   }
                 }
               }
             }
           }
         }
-        const obj4 = { line: tmp12, live: turnActive, settled: !turnActive, inGutter: true, glyph: tmp26, epoch, expanded: tmp6, onToggle: tmp27 };
-        const tmp31 = closure_19(turnActive(epoch[10]), obj4);
+        const obj4 = { line: tmp11, live: turnActive, settled: !turnActive, inGutter: true, glyph: tmp25, epoch, expanded: tmp6, onToggle: tmp26 };
+        const tmp30 = closure_19(turnActive(tmp2[10]), obj4);
         cResult[11] = epoch;
         cResult[12] = tmp6;
-        cResult[13] = tmp12;
+        cResult[13] = tmp11;
         cResult[14] = !turnActive;
-        cResult[15] = tmp26;
-        cResult[16] = tmp27;
+        cResult[15] = tmp25;
+        cResult[16] = tmp26;
         cResult[17] = turnActive;
-        cResult[18] = tmp31;
-        tmp28 = tmp31;
+        cResult[18] = tmp30;
+        tmp27 = tmp30;
       }
     }
   }
-  const tmpResult = projectId(epoch[32]);
-  const currentStepResult = tmpResult.currentStep(tree.steps);
-  react = currentStepResult;
-  let tmp14;
+  const tmp5 = _slicedToArray(noop.useState(false), 2);
+  const currentStepResult = projectId(epoch[32]).currentStep(tree.steps);
+  noop = currentStepResult;
+  let tmp13;
   if (!turnActive) {
     const turn2 = tree.turn;
     let durationMs1;
     if (turn2 != null) {
       durationMs1 = turn2.durationMs;
     }
-    tmp14 = durationMs1;
+    tmp13 = durationMs1;
   }
   if (cResult[7] !== tree.tasks) {
     const tasks = tree.tasks;
@@ -1569,16 +1384,16 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => 
     }
     cResult[7] = tree.tasks;
     cResult[8] = groupLabel;
-    describeTurnDurationResult = groupLabel;
+    let describeTurnDurationResult = groupLabel;
   } else {
     describeTurnDurationResult = cResult[8];
   }
-  if (null != tmp14) {
-    const tmpResult3 = projectId(epoch[33]);
-    describeTurnDurationResult = tmpResult3.describeTurnDuration(tmp14);
+  if (null != tmp13) {
+    describeTurnDurationResult = tmp(tmp2[33]).describeTurnDuration(tmp13);
+    const tmpResult3 = tmp(tmp2[33]);
   } else if (null != currentStepResult) {
-    const tmpResult4 = projectId(epoch[32]);
-    describeTurnDurationResult = tmpResult4.describeNode(currentStepResult);
+    describeTurnDurationResult = tmp(tmp2[32]).describeNode(currentStepResult);
+    const tmpResult4 = tmp(tmp2[32]);
   } else if (describeTurnDurationResult == null) {
     const intl = tmp(tmp2[17]).intl;
     describeTurnDurationResult = intl.string(turnActive(tmp2[18]).t8skVB);
@@ -1592,31 +1407,19 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => 
   cResult[4] = turnActive;
   cResult[5] = currentStepResult;
   cResult[6] = describeTurnDurationResult;
-  tmp12 = describeTurnDurationResult;
+  tmp11 = describeTurnDurationResult;
+  const tmpResult = projectId(epoch[32]);
 }) : ((epoch) => {
-  let _undefined;
-  let c3;
-  let c4;
-  let projectId;
-  let require;
-  let steps1;
-  let tmp19;
-  let tmp20;
-  let tmp3;
-  let tree;
-  let turnActive;
   ({ projectId: require, tree, turnActive } = epoch);
   epoch = epoch.epoch;
   _slicedToArray = undefined;
-  react = undefined;
-  const besideAvatar = epoch.besideAvatar;
+  noop = undefined;
   const tmp = closure_29();
-  [tmp3, c3] = react.useState(false);
-  _slicedToArray(react.useState(false), 2);
-  const callback = react.useCallback(() => _undefined((arg0) => !arg0), []);
-  let obj = require("ConjureTimelineTree");
-  const currentStepResult = obj.currentStep(tree.steps);
-  react = currentStepResult;
+  [tmp3, c3] = noop.useState(false);
+  const callback = noop.useCallback(() => _undefined((arg0) => !arg0), []);
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  const currentStepResult = require("ConjureTimelineTree").currentStep(tree.steps);
+  noop = currentStepResult;
   let tmp8;
   if (!turnActive) {
     const turn = tree.turn;
@@ -1633,13 +1436,13 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => 
     groupLabel = found.task.groupLabel;
   }
   if (null != tmp8) {
+    groupLabel = require("ConjureDuration").describeTurnDuration(tmp8);
     const tmp5Result = require("ConjureDuration");
-    groupLabel = tmp5Result.describeTurnDuration(tmp8);
   } else if (null != currentStepResult) {
+    groupLabel = require("ConjureTimelineTree").describeNode(currentStepResult);
     const tmp5Result2 = require("ConjureTimelineTree");
-    groupLabel = tmp5Result2.describeNode(currentStepResult);
   } else if (groupLabel == null) {
-    const intl = require("intl").intl;
+    const intl = require("util").intl;
     groupLabel = intl.string(turnActive(tmp6[18]).t8skVB);
   }
   let someResult = tree.steps.length > 1;
@@ -1647,129 +1450,123 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => 
     const steps = tree.steps;
     someResult = steps.some((detail) => detail.detail.length > 0 || detail.attachments.length > 0);
   }
-  const obj2 = { line: groupLabel, live: turnActive, settled: !turnActive, inGutter: true, glyph: tmp19, epoch, expanded: tmp3, onToggle: tmp20 };
-  tmp19 = undefined;
-  const tmp18 = turnActive(epoch[10]);
-  if (besideAvatar) {
+  const obj2 = { line: groupLabel, live: turnActive, settled: !turnActive, inGutter: true, glyph: null, epoch: null, expanded: null, onToggle: null };
+  let tmp19;
+  let obj = require("ConjureTimelineTree");
+  if (epoch.besideAvatar) {
     tmp19 = null;
   }
-  tmp20 = undefined;
+  obj2.glyph = tmp19;
+  obj2.epoch = epoch;
+  obj2.expanded = tmp3;
+  let tmp20;
   if (someResult) {
     tmp20 = callback;
   }
-  const children = [closure_19(tmp18, obj2), ];
+  obj2.onToggle = tmp20;
+  const children = [closure_19(turnActive(epoch[10]), obj2), ];
   let tmp17Result = null;
   if (tmp3) {
     tmp17Result = null;
     if (someResult) {
-      const obj3 = {
-        style: tmp.activityDetail,
-        children: steps1.map((node) => {
-              let tmp3;
-              const obj = { projectId: require, node, live: tmp3, epoch };
-              tmp3 = turnActive && node === c4;
-              return closure_19(closure_34, obj, node.id);
-            })
-      };
-      steps1 = tree.steps;
+      const obj3 = { style: tmp.activityDetail, children: null };
+      const steps1 = tree.steps;
+      obj3.children = steps1.map((node) => {
+        const obj = { projectId, node, live: null, epoch: null };
+        let tmp3 = turnActive;
+        if (turnActive) {
+          tmp3 = node === c4;
+        }
+        obj.live = tmp3;
+        obj.epoch = epoch;
+        return closure_2_19(closure_34, obj, node.id);
+      });
       tmp17Result = closure_19(closure_8, obj3);
     }
   }
   children[1] = tmp17Result;
   return closure_20(closure_8, { children });
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
-  let describeTaskOutcomeResult;
-  let epoch;
-  let first;
-  let items1;
-  let lane;
-  let mark;
-  let tmp6;
-  let turnActive;
-  let obj = projectId(epoch[15]);
-  const cResult = obj.c(33);
+  let obj = projectId;
+  const cResult = projectId(epoch[15]).c(33);
   projectId = projectId.projectId;
   ({ lane, mark } = projectId);
   ({ turnActive, epoch } = projectId);
-  const tmp4 = closure_29();
-  const tmp5 = _slicedToArray(react.useState(false), 2);
-  [tmp6, _slicedToArray] = tmp5;
+  const tmp3 = closure_29();
+  const obj2 = projectId(epoch[15]);
+  [tmp5, _slicedToArray] = noop.useState(false);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function i() {
       return _slicedToArray((arg0) => !arg0);
     };
     cResult[0] = fn;
-    first = fn;
+    let first = fn;
   } else {
     first = cResult[0];
   }
   if (turnActive) {
-    turnActive = tmp8;
+    turnActive = tmp7;
   }
   if (cResult[1] === "running" === lane.task.status) {
     if (cResult[2] === lane.steps) {
       if (cResult[3] === lane.task) {
-        let tmp9;
-        let tmp11;
-        let tmp18;
         if (cResult[4] === turnActive) {
-          tmp9 = cResult[5];
-          react = cResult[6];
-          tmp11 = cResult[7];
-        }
-        const status = lane.task.status;
-        if (cResult[8] !== mark.Illocon) {
-          const tmp20 = closure_19(mark.Illocon, { size: 16, accessible: false });
-          cResult[8] = mark.Illocon;
-          cResult[9] = tmp20;
-          tmp18 = tmp20;
-        } else {
-          tmp18 = cResult[9];
-        }
-        let tmp21;
-        if (tmp9) {
-          tmp21 = first;
-        }
-        if (cResult[10] === epoch) {
-          if (cResult[11] === tmp6) {
-            if (cResult[12] === turnActive) {
-              if (cResult[13] === tmp11) {
-                if (cResult[14] === mark.tint) {
-                  if (cResult[15] === (!turnActive && "failed" !== lane.task.status)) {
-                    if (cResult[16] === "failed" === status) {
-                      if (cResult[17] === tmp18) {
-                        let tmp23;
-                        if (cResult[18] === tmp21) {
-                          tmp23 = cResult[19];
-                        }
-                        if (cResult[20] === epoch) {
-                          if (cResult[21] === tmp6) {
-                            if (cResult[22] === tmp9) {
-                              if (cResult[23] === lane.steps) {
-                                if (cResult[24] === lane.task.detail) {
-                                  if (cResult[25] === tmp10) {
-                                    if (cResult[26] === mark.tint) {
-                                      if (cResult[27] === projectId) {
-                                        let tmp27;
-                                        if (cResult[28] === tmp4) {
-                                          tmp27 = cResult[29];
-                                        }
-                                        if (cResult[30] === tmp23) {
-                                          let tmp31;
-                                          if (cResult[31] === tmp27) {
-                                            tmp31 = cResult[32];
+          noop = tmp9;
+          let tmp18 = !turnActive;
+          if (!turnActive) {
+            tmp18 = "failed" !== lane.task.status;
+          }
+          if (cResult[8] !== mark.Illocon) {
+            const tmp21 = closure_19(mark.Illocon, { size: 16, accessible: false });
+            cResult[8] = mark.Illocon;
+            cResult[9] = tmp21;
+            let tmp19 = tmp21;
+          } else {
+            tmp19 = cResult[9];
+          }
+          let tmp22;
+          if (cResult[5]) {
+            tmp22 = first;
+          }
+          if (cResult[10] === epoch) {
+            if (cResult[11] === tmp5) {
+              if (cResult[12] === turnActive) {
+                if (cResult[13] === tmp10) {
+                  if (cResult[14] === mark.tint) {
+                    if (cResult[15] === tmp18) {
+                      if (cResult[16] === tmp23) {
+                        if (cResult[17] === tmp19) {
+                          if (cResult[18] === tmp22) {
+                            let tmp24 = cResult[19];
+                          }
+                          if (cResult[20] === epoch) {
+                            if (cResult[21] === tmp5) {
+                              if (cResult[22] === tmp8) {
+                                if (cResult[23] === lane.steps) {
+                                  if (cResult[24] === lane.task.detail) {
+                                    if (cResult[25] === tmp9) {
+                                      if (cResult[26] === mark.tint) {
+                                        if (cResult[27] === projectId) {
+                                          if (cResult[28] === tmp3) {
+                                            let tmp28 = cResult[29];
                                           }
-                                          return tmp31;
+                                          if (cResult[30] === tmp24) {
+                                            if (cResult[31] === tmp28) {
+                                              let tmp32 = cResult[32];
+                                            }
+                                            return tmp32;
+                                          }
+                                          const obj3 = { children: null };
+                                          items = [tmp24, tmp28];
+                                          obj3.children = items;
+                                          const tmp35 = closure_20(closure_8, obj3);
+                                          cResult[30] = tmp24;
+                                          cResult[31] = tmp28;
+                                          cResult[32] = tmp35;
+                                          tmp32 = tmp35;
                                         }
-                                        const obj2 = { children: items };
-                                        items = [tmp23, tmp27];
-                                        const tmp34 = closure_20(closure_8, obj2);
-                                        cResult[30] = tmp23;
-                                        cResult[31] = tmp27;
-                                        cResult[32] = tmp34;
-                                        tmp31 = tmp34;
                                       }
                                     }
                                   }
@@ -1777,39 +1574,31 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => 
                               }
                             }
                           }
-                        }
-                        let tmp28 = null;
-                        if (tmp6) {
-                          tmp28 = null;
-                          if (tmp9) {
-                            const detail = lane.task.detail;
-                            const obj3 = { style: tmp4.activityDetail, children: items1 };
-                            items1 = [
-                              detail.map((children, index) => {
-                                                          const obj = { variant: "text-xs/normal", color: "text-feedback-critical", children };
-                                                          return closure_1_19(projectId(epoch[19]).Text, obj, index);
-                                                        }),
-
-                            ];
-                            const steps = lane.steps;
-                            items1[1] = steps.map((node) => {
-                              const obj = { projectId, node, live: node === react, crestColor: mark.tint, epoch };
-                              return closure_19(closure_34, obj, node.id);
-                            });
-                            tmp28 = closure_20(closure_8, obj3);
+                          let tmp29 = null;
+                          if (tmp5) {
+                            tmp29 = null;
+                            if (tmp8) {
+                              const obj4 = { style: tmp3.activityDetail, children: null };
+                              const detail = lane.task.detail;
+                              const items1 = [detail.map((children, index) => closure_1_19(projectId(epoch[19]).Text, { variant: "text-xs/normal", color: "text-feedback-critical", children }, index)), ];
+                              const steps = lane.steps;
+                              items1[1] = steps.map((node) => closure_2_19(closure_34, { projectId, node, live: node === currentStepResult, crestColor: mark.tint, epoch }, node.id));
+                              obj4.children = items1;
+                              tmp29 = closure_20(closure_8, obj4);
+                            }
                           }
+                          cResult[20] = epoch;
+                          cResult[21] = tmp5;
+                          cResult[22] = tmp8;
+                          cResult[23] = lane.steps;
+                          cResult[24] = lane.task.detail;
+                          cResult[25] = tmp9;
+                          cResult[26] = mark.tint;
+                          cResult[27] = projectId;
+                          cResult[28] = tmp3;
+                          cResult[29] = tmp29;
+                          tmp28 = tmp29;
                         }
-                        cResult[20] = epoch;
-                        cResult[21] = tmp6;
-                        cResult[22] = tmp9;
-                        cResult[23] = lane.steps;
-                        cResult[24] = lane.task.detail;
-                        cResult[25] = tmp10;
-                        cResult[26] = mark.tint;
-                        cResult[27] = projectId;
-                        cResult[28] = tmp4;
-                        cResult[29] = tmp28;
-                        tmp27 = tmp28;
                       }
                     }
                   }
@@ -1817,171 +1606,136 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => 
               }
             }
           }
+          const obj5 = { line: cResult[7], live: turnActive, settled: tmp18, failed: "failed" === lane.task.status, glyph: tmp19, crestColor: mark.tint, inGutter: true, epoch, expanded: tmp5, onToggle: tmp22 };
+          const tmp27 = closure_19(mark(epoch[10]), obj5);
+          cResult[10] = epoch;
+          cResult[11] = tmp5;
+          cResult[12] = turnActive;
+          cResult[13] = cResult[7];
+          cResult[14] = mark.tint;
+          cResult[15] = tmp18;
+          cResult[16] = "failed" === lane.task.status;
+          cResult[17] = tmp19;
+          cResult[18] = tmp22;
+          cResult[19] = tmp27;
+          tmp24 = tmp27;
         }
-        const obj4 = { line: tmp11, live: turnActive, settled: !turnActive && "failed" !== lane.task.status, failed: "failed" === status, glyph: tmp18, crestColor: mark.tint, inGutter: true, epoch, expanded: tmp6, onToggle: tmp21 };
-        const tmp26 = closure_19(mark(epoch[10]), obj4);
-        cResult[10] = epoch;
-        cResult[11] = tmp6;
-        cResult[12] = turnActive;
-        cResult[13] = tmp11;
-        cResult[14] = mark.tint;
-        cResult[15] = !turnActive && "failed" !== lane.task.status;
-        cResult[16] = "failed" === status;
-        cResult[17] = tmp18;
-        cResult[18] = tmp21;
-        cResult[19] = tmp26;
-        tmp23 = tmp26;
       }
     }
   }
   let currentStepResult;
   if (turnActive) {
-    const tmpResult = projectId(epoch[32]);
-    currentStepResult = tmpResult.currentStep(lane.steps);
+    currentStepResult = obj(epoch[32]).currentStep(lane.steps);
+    const objResult = obj(epoch[32]);
   }
-  react = currentStepResult;
-  const tmp13 = lane.task.detail.length > 0 || lane.steps.length > 0;
-  if ("running" === lane.task.status) {
-    let describeNodeResult;
-    if (null != currentStepResult) {
-      const tmpResult4 = projectId(epoch[32]);
-      describeNodeResult = tmpResult4.describeNode(currentStepResult);
-    } else {
-      const tmpResult5 = projectId(epoch[35]);
-      describeNodeResult = tmpResult5.taskTitle(lane.task);
-    }
-    describeTaskOutcomeResult = describeNodeResult;
+  noop = currentStepResult;
+  const tmp12 = lane.task.detail.length > 0 || lane.steps.length > 0;
+  if ("running" !== lane.task.status) {
+    const describeTaskOutcomeResult = obj(epoch[35]).describeTaskOutcome(lane.task);
+    cResult[1] = tmp7;
+    cResult[2] = lane.steps;
+    cResult[3] = lane.task;
+    cResult[4] = turnActive;
+    cResult[5] = tmp12;
+    cResult[6] = currentStepResult;
+    cResult[7] = describeTaskOutcomeResult;
+    const objResult3 = obj(epoch[35]);
+  }
+  if (null != currentStepResult) {
+    obj = obj(epoch[32]);
+    obj.describeNode(currentStepResult);
   } else {
-    const tmpResult6 = projectId(epoch[35]);
-    describeTaskOutcomeResult = tmpResult6.describeTaskOutcome(lane.task);
+    obj(epoch[35]).taskTitle(lane.task);
+    const objResult4 = obj(epoch[35]);
   }
-  cResult[1] = "running" === lane.task.status;
-  cResult[2] = lane.steps;
-  cResult[3] = lane.task;
-  cResult[4] = turnActive;
-  cResult[5] = tmp13;
-  cResult[6] = currentStepResult;
-  cResult[7] = describeTaskOutcomeResult;
-  tmp11 = describeTaskOutcomeResult;
-  tmp9 = tmp13;
+  const tmp4 = _slicedToArray(noop.useState(false), 2);
 }) : ((arg0) => {
-  let _undefined;
-  let c3;
-  let c4;
-  let describeTaskOutcomeResult;
-  let epoch;
-  let items1;
-  let lane;
-  let mark;
-  let projectId;
-  let require;
-  let tmp11;
-  let tmp23;
-  let tmp24;
-  let tmp3;
-  let turnActive;
   ({ projectId: require, lane, mark } = arg0);
   ({ turnActive, epoch } = arg0);
   _slicedToArray = undefined;
-  react = undefined;
+  noop = undefined;
   const tmp = closure_29();
-  [tmp3, c3] = react.useState(false);
-  _slicedToArray(react.useState(false), 2);
-  const callback = react.useCallback(() => _undefined((arg0) => !arg0), []);
+  [tmp3, c3] = noop.useState(false);
+  const callback = noop.useCallback(() => _undefined((arg0) => !arg0), []);
   if (turnActive) {
     turnActive = tmp5;
   }
   let currentStepResult;
   if (turnActive) {
-    let obj = require("ConjureTimelineTree");
-    currentStepResult = obj.currentStep(lane.steps);
+    currentStepResult = require("ConjureTimelineTree").currentStep(lane.steps);
+    const obj = require("ConjureTimelineTree");
   }
-  react = currentStepResult;
+  noop = currentStepResult;
   const tmp9 = lane.task.detail.length > 0 || lane.steps.length > 0;
   if ("running" === lane.task.status) {
-    let describeNodeResult;
-    let tmp15;
     if (null != currentStepResult) {
+      let describeNodeResult = require("ConjureTimelineTree").describeNode(currentStepResult);
       const obj4 = require("ConjureTimelineTree");
-      describeNodeResult = obj4.describeNode(currentStepResult);
-      tmp15 = epoch;
     } else {
-      tmp15 = epoch;
+      describeNodeResult = require("ConjureTaskOutcome").taskTitle(lane.task);
       const obj3 = require("ConjureTaskOutcome");
-      describeNodeResult = obj3.taskTitle(lane.task);
     }
-    tmp11 = tmp15;
-    describeTaskOutcomeResult = describeNodeResult;
   } else {
-    tmp11 = epoch;
     const obj2 = require("ConjureTaskOutcome");
-    describeTaskOutcomeResult = obj2.describeTaskOutcome(lane.task);
-  }
-  const obj5 = { line: describeTaskOutcomeResult, live: turnActive, settled: tmp23, failed: "failed" === lane.task.status, glyph: closure_19(mark.Illocon, { size: 16, accessible: false }), crestColor: mark.tint, inGutter: true, epoch, expanded: tmp3, onToggle: tmp24 };
-  tmp23 = !turnActive;
-  const tmp22 = mark(tmp11[10]);
-  if (!turnActive) {
-    tmp23 = "failed" !== lane.task.status;
-  }
-  tmp24 = undefined;
-  if (tmp9) {
-    tmp24 = callback;
-  }
-  const children = [closure_19(tmp22, obj5), ];
-  let tmp19Result = null;
-  if (tmp3) {
-    tmp19Result = null;
-    if (tmp9) {
-      const detail = lane.task.detail;
-      const obj6 = { style: tmp.activityDetail, children: items1 };
-      items1 = [
-        detail.map((children, index) => {
-              const obj = { variant: "text-xs/normal", color: "text-feedback-critical", children };
-              return closure_1_19(require("Text/Text").Text, obj, index);
-            }),
-
-      ];
-      const steps = lane.steps;
-      items1[1] = steps.map((node) => {
-        const obj = { projectId: require, node, live: node === c4, crestColor: mark.tint, epoch };
-        return closure_19(closure_34, obj, node.id);
-      });
-      tmp19Result = closure_20(closure_8, obj6);
+    const obj5 = { line: require("ConjureTaskOutcome").describeTaskOutcome(lane.task), live: turnActive, settled: null, failed: null, glyph: null, crestColor: null, inGutter: true, epoch: null, expanded: null, onToggle: null };
+    let tmp26 = !turnActive;
+    const describeTaskOutcomeResult = require("ConjureTaskOutcome").describeTaskOutcome(lane.task);
+    if (!turnActive) {
+      tmp26 = "failed" !== lane.task.status;
     }
+    obj5.settled = tmp26;
+    obj5.failed = "failed" === lane.task.status;
+    obj5.glyph = closure_19(mark.Illocon, { size: 16, accessible: false });
+    obj5.crestColor = mark.tint;
+    obj5.epoch = epoch;
+    obj5.expanded = tmp3;
+    let tmp27;
+    if (tmp9) {
+      tmp27 = callback;
+    }
+    obj5.onToggle = tmp27;
+    items = [closure_19(mark(epoch[10]), obj5), ];
+    let tmp21Result = null;
+    if (tmp3) {
+      tmp21Result = null;
+      if (tmp9) {
+        const obj6 = { style: tmp.activityDetail, children: null };
+        const detail = lane.task.detail;
+        const items1 = [detail.map((children, index) => closure_1_19(projectId(epoch[19]).Text, { variant: "text-xs/normal", color: "text-feedback-critical", children }, index)), ];
+        const steps = lane.steps;
+        items1[1] = steps.map((node) => closure_2_19(closure_34, { projectId, node, live: node === c4, crestColor: mark.tint, epoch }, node.id));
+        obj6.children = items1;
+        tmp21Result = closure_20(closure_8, obj6);
+      }
+    }
+    const obj7 = { children: null };
+    items[1] = tmp21Result;
+    obj7.children = items;
+    return closure_20(closure_8, obj7);
   }
-  children[1] = tmp19Result;
-  return closure_20(closure_8, { children });
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
-  let length;
-  let tmp6;
-  let tmp7;
-  let tree;
-  let turnActive;
-  let obj = projectId(length[15]);
-  const cResult = obj.c(14);
-  const tmp = projectId;
+  const cResult = projectId(length[15]).c(14);
   projectId = projectId.projectId;
   ({ tree, turnActive } = projectId);
   const besideAvatar = projectId.besideAvatar;
-  let tmp5 = closure_29();
-  const tmp2 = length;
+  let activityBox = closure_29();
+  let num = 0;
   if (0 === tree.steps.length) {
-    if (0 === tree.tasks.length) {
+    if (num === tree.tasks.length) {
       return null;
     }
   }
-  length = tree.tasks.length;
   if (cResult[0] === (undefined !== besideAvatar && besideAvatar)) {
     if (cResult[1] === length) {
       if (cResult[2] === projectId) {
-        if (cResult[3] === tmp5.activityBox) {
+        if (cResult[3] === activityBox.activityBox) {
           if (cResult[4] === tree) {
             if (cResult[5] === turnActive) {
-              tmp6 = cResult[6];
+              return cResult[6];
             }
-            return tmp6;
           }
         }
       }
@@ -1992,29 +1746,27 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => 
       return taskId.taskId;
     };
     cResult[7] = fn;
-    tmp7 = fn;
+    let tmp5 = fn;
   } else {
-    tmp7 = cResult[7];
+    tmp5 = cResult[7];
   }
+  let obj = projectId(length[15]);
   const tasks = tree.tasks;
-  const tmpResult = tmp(tmp2[36]);
-  let closure_3 = tmpResult.subagentIllocons(tasks.map(tmp7));
+  closure_3 = projectId(tree.tasks.length[36]).subagentIllocons(tasks.map(tmp5));
   if (cResult[8] === (undefined !== besideAvatar && besideAvatar)) {
     if (cResult[9] === length) {
       if (cResult[10] === projectId) {
         if (cResult[11] === tree) {
-          let tmp8;
           if (cResult[12] === turnActive) {
-            tmp8 = cResult[13];
+            let tmp6 = cResult[13];
           }
-          let obj2 = { style: tmp5.activityBox, children: items };
-          items = [tmp8, ];
+          let obj2 = { style: activityBox.activityBox, children: null };
+          items = [tmp6, ];
           const tasks1 = tree.tasks;
           items[1] = tasks1.map((task) => {
             let familiarMarkResult;
             if (null != task.task.helperMark) {
-              const obj = ConjureSubagentMark;
-              familiarMarkResult = obj.familiarMark(task.task.helperMark);
+              familiarMarkResult = ConjureSubagentMark.familiarMark(task.task.helperMark);
             }
             if (familiarMarkResult == null) {
               familiarMarkResult = closure_3.get(task.taskId);
@@ -2022,34 +1774,35 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => 
             let tmp5 = null;
             if (null != familiarMarkResult) {
               const obj2 = { projectId, lane: task, mark: familiarMarkResult, turnActive, epoch: length };
-              tmp5 = closure_19(closure_36, obj2, task.taskId);
+              tmp5 = closure_2_19(closure_36, obj2, task.taskId);
             }
             return tmp5;
           });
-          const tmp12 = closure_20(closure_8, obj2);
-          cResult[0] = undefined !== besideAvatar && besideAvatar;
+          obj2.children = items;
+          const tmp10 = closure_20(closure_8, obj2);
+          cResult[num] = tmp4;
           cResult[1] = length;
           cResult[2] = projectId;
-          cResult[3] = tmp5.activityBox;
+          activityBox = activityBox.activityBox;
+          cResult[3] = activityBox;
           cResult[4] = tree;
           cResult[5] = turnActive;
-          cResult[6] = tmp12;
-          tmp6 = tmp12;
+          num = 6;
+          cResult[6] = tmp10;
         }
       }
     }
   }
-  const tmp9 = closure_19(closure_35, { projectId, tree, turnActive, epoch: length, besideAvatar: undefined !== besideAvatar && besideAvatar });
+  const tmp7 = closure_19(closure_35, { projectId, tree, turnActive, epoch: tree.tasks.length, besideAvatar: undefined !== besideAvatar && besideAvatar });
   cResult[8] = undefined !== besideAvatar && besideAvatar;
-  cResult[9] = length;
+  cResult[9] = tree.tasks.length;
   cResult[10] = projectId;
   cResult[11] = tree;
   cResult[12] = turnActive;
-  cResult[13] = tmp9;
-  tmp8 = tmp9;
+  cResult[13] = tmp7;
+  tmp6 = tmp7;
+  const tmpResult = projectId(tree.tasks.length[36]);
 }) : ((projectId) => {
-  let tree;
-  let turnActive;
   projectId = projectId.projectId;
   ({ tree, turnActive } = projectId);
   let flag = projectId.besideAvatar;
@@ -2057,25 +1810,23 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => 
     flag = false;
   }
   let length;
-  let closure_3;
-  const tmp = closure_29();
+  closure_3 = undefined;
   if (0 === tree.steps.length) {
     if (0 === tree.tasks.length) {
       return null;
     }
   }
   length = tree.tasks.length;
-  let obj = projectId(length[36]);
+  const tmp = closure_29();
   const tasks = tree.tasks;
-  closure_3 = obj.subagentIllocons(tasks.map((taskId) => taskId.taskId));
-  let obj2 = { style: tmp.activityBox, children: items };
+  closure_3 = projectId(length[36]).subagentIllocons(tasks.map((taskId) => taskId.taskId));
+  let obj2 = { style: tmp.activityBox, children: null };
   items = [closure_19(closure_35, { projectId, tree, turnActive, epoch: length, besideAvatar: flag }), ];
   const tasks1 = tree.tasks;
   items[1] = tasks1.map((task) => {
     let familiarMarkResult;
     if (null != task.task.helperMark) {
-      const obj = ConjureSubagentMark;
-      familiarMarkResult = obj.familiarMark(task.task.helperMark);
+      familiarMarkResult = ConjureSubagentMark.familiarMark(task.task.helperMark);
     }
     if (familiarMarkResult == null) {
       familiarMarkResult = closure_3.get(task.taskId);
@@ -2083,76 +1834,67 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => 
     let tmp5 = null;
     if (null != familiarMarkResult) {
       const obj2 = { projectId, lane: task, mark: familiarMarkResult, turnActive, epoch: length };
-      tmp5 = closure_19(closure_36, obj2, task.taskId);
+      tmp5 = closure_2_19(closure_36, obj2, task.taskId);
     }
     return tmp5;
   });
+  obj2.children = items;
   return closure_20(closure_8, obj2);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
-  let obj6;
-  let transcript;
-  let transcript2;
-  const obj = react2;
-  const cResult = obj.c(15);
+  const cResult = c.c(15);
   children = children.children;
-  const clearance = children.clearance;
   const tmp3 = closure_29();
-  const obj2 = PlatformUtils;
   if (obj2.isIOS()) {
-    let tmp4;
-    let tmp8;
-    let tmp19;
     ({ transcript, transcript: transcript2 } = tmp3);
     if (cResult[0] !== tmp3.maskSolid) {
       const obj3 = { style: tmp3.maskSolid };
-      const tmp7 = closure_19(metroImportAll, obj3);
+      const tmp7 = closure_1_19(closure_1_8, obj3);
       cResult[0] = tmp3.maskSolid;
       cResult[1] = tmp7;
-      tmp4 = tmp7;
+      let tmp4 = tmp7;
     } else {
       tmp4 = cResult[1];
     }
     if (cResult[2] !== tmp3.maskFade) {
       const obj4 = { style: tmp3.maskFade, colors: items, locations, start, end };
-      const tmp15 = closure_19(LinearGradientDefault, obj4);
+      const tmp15 = closure_1_19(LinearGradientDefault, obj4);
       cResult[2] = tmp3.maskFade;
       cResult[3] = tmp15;
-      tmp8 = tmp15;
+      let tmp8 = tmp15;
     } else {
       tmp8 = cResult[3];
     }
     const _Math = Math;
-    const bound = Math.max(0, clearance - c24);
+    const bound = Math.max(0, children.clearance - c24);
     if (cResult[4] !== bound) {
-      const obj5 = { style: obj6 };
-      obj6 = { height: bound };
-      const tmp22 = closure_19(metroImportAll, obj5);
+      const obj5 = { style: null };
+      const obj6 = { height: bound };
+      obj5.style = obj6;
+      const tmp22 = closure_1_19(closure_1_8, obj5);
       cResult[4] = bound;
       cResult[5] = tmp22;
-      tmp19 = tmp22;
+      let tmp19 = tmp22;
     } else {
       tmp19 = cResult[5];
     }
     if (cResult[6] === tmp3.transcript) {
       if (cResult[7] === tmp4) {
         if (cResult[8] === tmp8) {
-          let tmp23;
           if (cResult[9] === tmp19) {
-            tmp23 = cResult[10];
+            let tmp23 = cResult[10];
           }
           if (cResult[11] === children) {
             if (cResult[12] === tmp3.transcript) {
-              let tmp27;
               if (cResult[13] === tmp23) {
-                tmp27 = cResult[14];
+                let tmp27 = cResult[14];
               }
               return tmp27;
             }
           }
           const obj7 = { style: transcript, maskElement: tmp23, children };
-          const tmp30 = closure_19(_modDef6059, obj7);
+          const tmp30 = closure_1_19(_modDef6059, obj7);
           cResult[11] = children;
           cResult[12] = tmp3.transcript;
           cResult[13] = tmp23;
@@ -2161,9 +1903,10 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
         }
       }
     }
-    const obj8 = { style: transcript2, children: items };
+    const obj8 = { style: transcript2, children: null };
     items = [tmp4, tmp8, tmp19];
-    const tmp26 = closure_20(metroImportAll, obj8);
+    obj8.children = items;
+    const tmp26 = closure_1_20(closure_1_8, obj8);
     cResult[6] = tmp3.transcript;
     cResult[7] = tmp4;
     cResult[8] = tmp8;
@@ -2173,72 +1916,61 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   } else {
     return children;
   }
+  obj2 = PlatformUtils;
 }) : ((children) => {
-  let obj3;
-  let obj7;
   children = children.children;
-  const clearance = children.clearance;
   const tmp = closure_29();
   let tmp3 = children;
-  const obj = PlatformUtils;
   if (obj.isIOS()) {
-    const obj2 = { style: tmp.transcript, maskElement: closure_20(metroImportAll, obj3), children };
-    obj3 = { style: tmp.transcript, children: items };
-    items = [, , ];
+    const obj2 = { style: tmp.transcript, maskElement: null, children: null };
+    const obj3 = { style: tmp.transcript, children: null };
     const obj4 = { style: tmp.maskSolid };
-    const tmp6 = _modDef6059;
-    items[0] = closure_19(metroImportAll, obj4);
+    items = [closure_1_19(closure_1_8, obj4), , ];
     const obj5 = { style: tmp.maskFade, colors: items, locations, start, end };
-    items[1] = closure_19(LinearGradientDefault, obj5);
-    const obj6 = { style: obj7 };
+    items[1] = closure_1_19(LinearGradientDefault, obj5);
+    const obj6 = { style: null };
+    const obj7 = { height: null };
     const _Math = Math;
-    obj7 = { height: Math.max(0, clearance - c24) };
-    items[2] = closure_19(metroImportAll, obj6);
-    tmp3 = closure_19(tmp6, obj2);
+    obj7.height = Math.max(0, children.clearance - c24);
+    obj6.style = obj7;
+    items[2] = closure_1_19(closure_1_8, obj6);
+    obj3.children = items;
+    obj2.maskElement = closure_1_20(closure_1_8, obj3);
+    obj2.children = children;
+    tmp3 = closure_1_19(_modDef6059, obj2);
   }
   return tmp3;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let intl;
-  let intl2;
-  let items1;
-  let obj7;
-  let onRestore;
-  let proposal;
-  let tmp10;
-  let tmp13;
-  let tmp4;
-  let tmp6;
-  const obj = react2;
-  const cResult = obj.c(15);
+  const cResult = c.c(15);
   ({ proposal, onRestore } = arg0);
   if (cResult[0] !== proposal.authored_at) {
-    const tmpResult = ConjureHistoryFormat;
-    const formatAuthoredAtResult = tmpResult.formatAuthoredAt(proposal.authored_at);
+    const formatAuthoredAtResult = ConjureHistoryFormat.formatAuthoredAt(proposal.authored_at);
     cResult[0] = proposal.authored_at;
     cResult[1] = formatAuthoredAtResult;
-    tmp4 = formatAuthoredAtResult;
+    let tmp4 = formatAuthoredAtResult;
+    const tmpResult = ConjureHistoryFormat;
   } else {
     tmp4 = cResult[1];
   }
   const relative = tmp4.relative;
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: intl.string(_modDef3753["t+b0rz"]) };
-    const Text = Text_Text.Text;
-    intl = intl13.intl;
-    const tmp9 = closure_19(Text, obj2);
+    const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+    const intl = util.intl;
+    obj2.children = intl.string(_modDef3753["t+b0rz"]);
+    const tmp9 = closure_1_19(Text_Text.Text, obj2);
     cResult[2] = tmp9;
-    tmp6 = tmp9;
+    let tmp6 = tmp9;
   } else {
     tmp6 = cResult[2];
   }
   if (cResult[3] !== proposal.subject) {
     const obj3 = { variant: "text-md/medium", color: "text-default", children: proposal.subject };
-    const tmp12 = closure_19(Text_Text.Text, obj3);
+    const tmp12 = closure_1_19(Text_Text.Text, obj3);
     cResult[3] = proposal.subject;
     cResult[4] = tmp12;
-    tmp10 = tmp12;
+    let tmp10 = tmp12;
   } else {
     tmp10 = cResult[4];
   }
@@ -2246,123 +1978,89 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     let tmp14 = null;
     if (null != relative) {
       const obj4 = { variant: "text-sm/normal", color: "text-muted", children: relative };
-      tmp14 = closure_19(Text_Text.Text, obj4);
+      tmp14 = closure_1_19(Text_Text.Text, obj4);
     }
     cResult[5] = relative;
     cResult[6] = tmp14;
-    tmp13 = tmp14;
+    let tmp13 = tmp14;
   } else {
     tmp13 = cResult[6];
   }
   if (cResult[7] === tmp10) {
-    let tmp16;
-    let tmp18;
     if (cResult[8] === tmp13) {
-      tmp16 = cResult[9];
+      let tmp16 = cResult[9];
     }
     if (cResult[10] !== onRestore) {
       let tmp19 = null;
       if (null != onRestore) {
-        const obj5 = { text: intl2.string(_modDef3753.H8Jfhu), variant: "secondary", onPress: onRestore };
-        const Button = components_Button_Button.Button;
-        intl2 = intl13.intl;
-        tmp19 = closure_19(Button, obj5);
+        const obj5 = { text: null, variant: "secondary", onPress: null };
+        const intl2 = util.intl;
+        obj5.text = intl2.string(_modDef3753.H8Jfhu);
+        obj5.onPress = onRestore;
+        tmp19 = closure_1_19(components_Button_Button.Button, obj5);
       }
       cResult[10] = onRestore;
       cResult[11] = tmp19;
-      tmp18 = tmp19;
+      let tmp18 = tmp19;
     } else {
       tmp18 = cResult[11];
     }
     if (cResult[12] === tmp16) {
-      let tmp22;
       if (cResult[13] === tmp18) {
-        tmp22 = cResult[14];
+        let tmp22 = cResult[14];
       }
       return tmp22;
     }
-    const obj6 = { children: closure_20(Stack_Stack.Stack, obj7) };
-    obj7 = { direction: "vertical", spacing: 8, children: items };
+    const obj6 = { children: null };
+    const obj7 = { direction: "vertical", spacing: 8, children: null };
     items = [tmp6, tmp16, tmp18];
-    const tmp25 = ConjureNativeCardSurfaceDefault;
-    const tmp27 = closure_19(tmp25, obj6);
+    obj7.children = items;
+    obj6.children = closure_1_20(Stack_Stack.Stack, obj7);
+    const tmp27 = closure_1_19(ConjureNativeCardSurfaceDefault, obj6);
     cResult[12] = tmp16;
     cResult[13] = tmp18;
     cResult[14] = tmp27;
     tmp22 = tmp27;
   }
-  const obj8 = { direction: "vertical", spacing: 4, children: items1 };
-  items1 = [tmp10, tmp13];
-  const tmp17 = closure_20(Stack_Stack.Stack, obj8);
+  const obj8 = { direction: "vertical", spacing: 4, children: null };
+  const items1 = [tmp10, tmp13];
+  obj8.children = items1;
+  const tmp17 = closure_1_20(Stack_Stack.Stack, obj8);
   cResult[7] = tmp10;
   cResult[8] = tmp13;
   cResult[9] = tmp17;
   tmp16 = tmp17;
 }) : ((arg0) => {
-  let intl;
-  let intl2;
-  let onRestore;
-  let proposal;
   ({ proposal, onRestore } = arg0);
-  const obj = ConjureHistoryFormat;
-  const relative = obj.formatAuthoredAt(proposal.authored_at).relative;
-  const tmp5 = ConjureNativeCardSurfaceDefault;
-  const Stack = Stack_Stack.Stack;
-  const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: intl.string(_modDef3753["t+b0rz"]) };
-  const Text = Text_Text.Text;
-  intl = intl13.intl;
-  items = [closure_19(Text, obj2), , ];
-  const Stack2 = Stack_Stack.Stack;
-  const items1 = [, ];
-  const obj3 = { variant: "text-md/medium", color: "text-default", children: proposal.subject };
-  items1[0] = closure_19(Text_Text.Text, obj3);
+  const relative = ConjureHistoryFormat.formatAuthoredAt(proposal.authored_at).relative;
+  const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+  const intl = util.intl;
+  obj2.children = intl.string(_modDef3753["t+b0rz"]);
+  items = [closure_1_19(Text_Text.Text, obj2), , ];
+  const items1 = [closure_1_19(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children: proposal.subject }), ];
   let tmp3Result = null;
   if (null != relative) {
     const obj4 = { variant: "text-sm/normal", color: "text-muted", children: relative };
-    tmp3Result = closure_19(Text_Text.Text, obj4);
+    tmp3Result = closure_1_19(Text_Text.Text, obj4);
   }
   items1[1] = tmp3Result;
-  items[1] = closure_20(Stack2, { direction: "vertical", spacing: 4, children: items1 });
+  items[1] = closure_1_20(Stack_Stack.Stack, { direction: "vertical", spacing: 4, children: items1 });
   let tmp3Result2 = null;
   if (null != onRestore) {
-    const obj5 = { text: intl2.string(_modDef3753.H8Jfhu), variant: "secondary", onPress: onRestore };
-    const Button = components_Button_Button.Button;
-    intl2 = intl13.intl;
-    tmp3Result2 = closure_19(Button, obj5);
+    const obj5 = { text: null, variant: "secondary", onPress: null };
+    const intl2 = util.intl;
+    obj5.text = intl2.string(_modDef3753.H8Jfhu);
+    obj5.onPress = onRestore;
+    tmp3Result2 = closure_1_19(components_Button_Button.Button, obj5);
   }
+  const obj3 = { variant: "text-md/medium", color: "text-default", children: proposal.subject };
+  const tmp5 = ConjureNativeCardSurfaceDefault;
   items[2] = tmp3Result2;
-  const obj6 = { children: closure_20(Stack, { direction: "vertical", spacing: 8, children: items }) };
-  return closure_19(tmp5, obj6);
+  return closure_1_19(tmp5, { children: closure_1_20(Stack_Stack.Stack, { direction: "vertical", spacing: 8, children: items }) });
 });
-let memo = react.memo;
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
-  let checklistExpanded;
-  let checklistSuperseded;
-  let clarificationDismissed;
-  let first;
-  let groupStart;
-  let hostsReminder;
-  let isNewest;
-  let items1;
-  let obj8;
-  let onAnswerClarification;
-  let onApprovePlan;
-  let onAskForIdeas;
-  let onDismissClarification;
-  let onPickIdea;
-  let onToggleChecklist;
-  let onTogglePlan;
-  let planExpanded;
-  let planSuperseded;
-  let planVersion;
-  let reminder;
-  let secretRequestStatus;
-  let tmp5;
-  const tmp = projectId;
-  const tmp2 = groupStart;
-  let obj = projectId(groupStart[15]);
-  const cResult = obj.c(231);
+ReactCompilerGating = fn(558);
+let closure_40 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
+  const cResult = projectId(groupStart[15]).c(231);
   projectId = projectId.projectId;
   const message = projectId.message;
   groupStart = projectId.groupStart;
@@ -2378,65 +2076,51 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
   ({ first, clarificationDismissed } = projectId);
   const tmp4 = closure_29();
   closure_12 = tmp4;
-  let steps = message.steps;
   if (cResult[0] !== message) {
-    let tmp7 = closure_17(message);
+    const tmp7 = closure_17(message);
     cResult[0] = message;
     cResult[1] = tmp7;
-    tmp5 = tmp7;
+    let tmp5 = tmp7;
   } else {
     tmp5 = cResult[1];
   }
   if (cResult[2] === message.steps) {
-    let tmp9;
-    let tmp11;
-    if (cResult[3] === !tmp5) {
-      tmp9 = cResult[4];
+    if (cResult[3] === tmp8) {
+      let tmp9 = cResult[4];
     }
-    let closure_13 = tmp9;
-    const steps2 = message.steps;
+    closure_13 = tmp9;
     if (cResult[5] !== message) {
       const tmp13 = closure_17(message);
       cResult[5] = message;
       cResult[6] = tmp13;
-      tmp11 = tmp13;
+      let tmp11 = tmp13;
     } else {
       tmp11 = cResult[6];
     }
     if (cResult[7] === message.steps) {
-      let tmp15;
-      if (cResult[8] === !tmp11) {
-        tmp15 = cResult[9];
-      }
-      const length = tmp15;
       if (cResult[10] !== message.steps) {
-        const tmpResult = tmp(tmp2[32]);
-        const latestTodosResult = tmpResult.latestTodos(message.steps);
+        const latestTodosResult = tmp(tmp2[32]).latestTodos(message.steps);
         cResult[10] = message.steps;
         cResult[11] = latestTodosResult;
-        let tmp17 = latestTodosResult;
-      } else {
-        tmp17 = cResult[11];
+        const tmpResult = tmp(tmp2[32]);
       }
       if (cResult[12] !== tmp9.tasks) {
-        const tmpResult6 = tmp(tmp2[41]);
+        const runningTodoAgentsResult = tmp(tmp2[41]).runningTodoAgents(tmp9.tasks);
         cResult[12] = tmp9.tasks;
-        cResult[13] = tmpResult6.runningTodoAgents(tmp9.tasks);
-        const runningTodoAgentsResult = tmpResult6.runningTodoAgents(tmp9.tasks);
+        cResult[13] = runningTodoAgentsResult;
+        const tmpResult6 = tmp(tmp2[41]);
       }
       if (cResult[14] === checklistSuperseded) {
         if (cResult[15] === message.render_id) {
           if (cResult[18] === message.render_id) {
             if (cResult[19] === onTogglePlan) {
               if (cResult[22] === onJumpToReplied) {
-                let tmp26;
-                let tmp30;
                 if (cResult[25] !== message.content) {
-                  const tmpResult7 = tmp(tmp2[42]);
-                  const result = tmpResult7.parseConjureDesignRemark(message.content);
+                  const result = tmp(tmp2[42]).parseConjureDesignRemark(message.content);
                   cResult[25] = message.content;
                   cResult[26] = result;
-                  tmp26 = result;
+                  let tmp26 = result;
+                  const tmpResult7 = tmp(tmp2[42]);
                 } else {
                   tmp26 = cResult[26];
                 }
@@ -2451,7 +2135,7 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
                   const trimmed = body.trim();
                   cResult[27] = body;
                   cResult[28] = trimmed;
-                  tmp30 = trimmed;
+                  let tmp30 = trimmed;
                 } else {
                   tmp30 = cResult[28];
                 }
@@ -2463,26 +2147,30 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
                     attachments = message.attachments;
                   }
                 }
+                let rowGroupStart = groupStart;
+                if (groupStart) {
+                  rowGroupStart = !first;
+                }
+                if (rowGroupStart) {
+                  rowGroupStart = tmp4.rowGroupStart;
+                }
                 if (cResult[29] === tmp4.row) {
-                  let tmp34;
-                  if (cResult[30] === (groupStart && !first && tmp4.rowGroupStart)) {
-                    tmp34 = cResult[31];
+                  if (cResult[30] === rowGroupStart) {
+                    let tmp33 = cResult[31];
                   }
                   let user_id;
                   if ("user" === message.role) {
                     user_id = message.user_id;
                   }
                   if (cResult[32] === message) {
-                    let tmp36;
                     if (cResult[33] === onRestoreVersion) {
-                      tmp36 = cResult[34];
+                      let tmp35 = cResult[34];
                     }
-                    closure_17 = tmp36;
+                    closure_17 = tmp35;
                     if (cResult[35] === user_id) {
                       if (cResult[36] === tmp30) {
                         if (cResult[37] === onRestoreVersion) {
-                          const tmp39 = "" !== tmp30;
-                          if (!tmp39) {
+                          if (!tmp38) {
                             if (cResult[40] === onAskForIdeas) {
                               if (cResult[41] === projectId) {
                                 if (cResult[42] === tmp4.avatar) {
@@ -2490,17 +2178,14 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
                                     if (cResult[44] === tmp4.header) {
                                       if (cResult[45] === tmp4.reminderSeparated) {
                                         if (cResult[46] === tmp4.reminderTip) {
-                                          let tmp41;
-                                          let tmp43;
                                           if (cResult[47] === tmp4.spoken) {
-                                            tmp41 = cResult[48];
+                                            let tmp40 = cResult[48];
                                           }
                                           if (cResult[49] === hostsReminder) {
                                             if (cResult[50] === reminder) {
-                                              if (cResult[51] === tmp41) {
-                                                let tmp42;
+                                              if (cResult[51] === tmp40) {
                                                 if (cResult[52] === tmp4.reminderSlot) {
-                                                  tmp42 = cResult[53];
+                                                  let tmp41 = cResult[53];
                                                 }
                                                 if ("user" === message.role) {
                                                   if ("" === tmp30) {
@@ -2511,684 +2196,1449 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
                                                     }
                                                   }
                                                   if (cResult[54] !== message.agentReaction) {
-                                                    const tmpResult8 = tmp(tmp2[50]);
-                                                    const conjureAgentReactionLabel = tmpResult8.getConjureAgentReactionLabel(message.agentReaction);
+                                                    const conjureAgentReactionLabel = tmp(tmp2[50]).getConjureAgentReactionLabel(message.agentReaction);
                                                     class Te {
                                                       constructor(arg0) {
-                                                        let items1;
-                                                        let obj3;
-                                                        let obj4;
-                                                        let obj5;
-                                                        let obj6;
-                                                        let tmp7;
-                                                        if ("outdated" === arg0) {
-                                                          const obj2 = { style: closure_12.reminderTip, children: closure_19(metroImportAll, obj3) };
-                                                          obj3 = { style: closure_12.spoken, children: closure_19(ConjurePublishNoticeLineDefault, obj4) };
-                                                          obj4 = { projectId, notice: "outdated" };
-                                                          return closure_19(metroImportAll, obj2);
-                                                        } else if ("ideas" === arg0) {
-                                                          const obj = { style: closure_12.reminderSeparated, children: closure_19(tmp7, obj5) };
-                                                          obj5 = { style: closure_12.spoken, onAsk: onAskForIdeas, attribution: id(closure_21, obj6) };
-                                                          obj6 = { children: items1 };
-                                                          const obj7 = { style: items, children: closure_19(ConjureMessageAuthor.ConjureAvatar, {}) };
-                                                          items = [, ];
-                                                          ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                                                          tmp7 = ConjureIdeasOfferDefault;
-                                                          items1 = [closure_19(metroImportAll, obj7), ];
-                                                          const obj8 = { style: closure_12.header, children: closure_19(ConjureMessageAuthor.ConjureHeader, {}) };
-                                                          items1[1] = closure_19(metroImportAll, obj8);
-                                                          return closure_19(metroImportAll, obj);
+                                                        if ("outdated" === projectId) {
+                                                          tmp20 = jsx;
+                                                          tmp21 = View;
+                                                          obj1 = { style: null, children: null };
+                                                          tmp22 = closure_12;
+                                                          obj1.style = closure_12.reminderTip;
+                                                          tmp23 = jsx;
+                                                          tmp24 = View;
+                                                          obj9 = { style: null, children: null };
+                                                          obj9.style = closure_12.spoken;
+                                                          tmp25 = jsx;
+                                                          tmp26 = closure_1;
+                                                          tmp27 = closure_2;
+                                                          obj10 = { projectId: null, notice: "outdated" };
+                                                          tmp28 = projectId;
+                                                          obj10.projectId = projectId;
+                                                          obj9.children = jsx(closure_1(closure_2[46]), obj10);
+                                                          obj1.children = jsx(View, obj9);
+                                                          return jsx(View, obj1);
+                                                        } else {
+                                                          str = "ideas";
+                                                          if ("ideas" === projectId) {
+                                                            tmp = jsx;
+                                                            tmp2 = View;
+                                                            obj = { style: null, children: null };
+                                                            tmp3 = closure_12;
+                                                            obj.style = closure_12.reminderSeparated;
+                                                            tmp4 = jsx;
+                                                            tmp5 = closure_1;
+                                                            tmp6 = closure_2;
+                                                            obj11 = { style: null, onAsk: null, attribution: null };
+                                                            obj11.style = closure_12.spoken;
+                                                            tmp8 = onAskForIdeas;
+                                                            obj11.onAsk = onAskForIdeas;
+                                                            tmp9 = jsxs;
+                                                            tmp10 = Fragment;
+                                                            obj12 = { children: null };
+                                                            tmp11 = jsx;
+                                                            tmp12 = View;
+                                                            obj13 = { style: null, children: null };
+                                                            items = [, ];
+                                                            ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
+                                                            obj13.style = items;
+                                                            tmp13 = jsx;
+                                                            tmp14 = closure_0;
+                                                            tmp15 = closure_2;
+                                                            tmp7 = closure_1(closure_2[47]);
+                                                            obj13.children = jsx(closure_0(closure_2[48]).ConjureAvatar, {});
+                                                            items1 = [, ];
+                                                            items1[0] = jsx(View, obj13);
+                                                            tmp16 = jsx;
+                                                            tmp17 = View;
+                                                            obj14 = { style: null, children: null };
+                                                            obj14.style = closure_12.header;
+                                                            tmp18 = jsx;
+                                                            tmp19 = closure_2;
+                                                            obj14.children = jsx(closure_0(closure_2[48]).ConjureHeader, {});
+                                                            items1[1] = jsx(View, obj14);
+                                                            obj12.children = items1;
+                                                            obj11.attribution = jsxs(Fragment, obj12);
+                                                            obj.children = jsx(tmp7, obj11);
+                                                            return jsx(View, obj);
+                                                          } else {
+                                                            return;
+                                                          }
                                                         }
                                                       }
                                                     }
                                                     cResult[54] = message.agentReaction;
                                                     cResult[55] = conjureAgentReactionLabel;
+                                                    const tmpResult8 = tmp(tmp2[50]);
                                                   }
                                                   class Te {
                                                     constructor(arg0) {
-                                                      let items1;
-                                                      let obj3;
-                                                      let obj4;
-                                                      let obj5;
-                                                      let obj6;
-                                                      let tmp7;
-                                                      if ("outdated" === arg0) {
-                                                        const obj2 = { style: closure_12.reminderTip, children: closure_19(metroImportAll, obj3) };
-                                                        obj3 = { style: closure_12.spoken, children: closure_19(ConjurePublishNoticeLineDefault, obj4) };
-                                                        obj4 = { projectId, notice: "outdated" };
-                                                        return closure_19(metroImportAll, obj2);
-                                                      } else if ("ideas" === arg0) {
-                                                        const obj = { style: closure_12.reminderSeparated, children: closure_19(tmp7, obj5) };
-                                                        obj5 = { style: closure_12.spoken, onAsk: onAskForIdeas, attribution: id(closure_21, obj6) };
-                                                        obj6 = { children: items1 };
-                                                        const obj7 = { style: items, children: closure_19(ConjureMessageAuthor.ConjureAvatar, {}) };
-                                                        items = [, ];
-                                                        ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                                                        tmp7 = ConjureIdeasOfferDefault;
-                                                        items1 = [closure_19(metroImportAll, obj7), ];
-                                                        const obj8 = { style: closure_12.header, children: closure_19(ConjureMessageAuthor.ConjureHeader, {}) };
-                                                        items1[1] = closure_19(metroImportAll, obj8);
-                                                        return closure_19(metroImportAll, obj);
-                                                      }
-                                                    }
-                                                  }
-                                                  let tmp89 = null;
-                                                  if (groupStart) {
-                                                    class Te {
-                                                      constructor(arg0) {
-                                                        let items1;
-                                                        let obj3;
-                                                        let obj4;
-                                                        let obj5;
-                                                        let obj6;
-                                                        let tmp7;
-                                                        if ("outdated" === arg0) {
-                                                          const obj2 = { style: closure_12.reminderTip, children: closure_19(metroImportAll, obj3) };
-                                                          obj3 = { style: closure_12.spoken, children: closure_19(ConjurePublishNoticeLineDefault, obj4) };
-                                                          obj4 = { projectId, notice: "outdated" };
-                                                          return closure_19(metroImportAll, obj2);
-                                                        } else if ("ideas" === arg0) {
-                                                          const obj = { style: closure_12.reminderSeparated, children: closure_19(tmp7, obj5) };
-                                                          obj5 = { style: closure_12.spoken, onAsk: onAskForIdeas, attribution: id(closure_21, obj6) };
-                                                          obj6 = { children: items1 };
-                                                          const obj7 = { style: items, children: closure_19(ConjureMessageAuthor.ConjureAvatar, {}) };
+                                                      if ("outdated" === projectId) {
+                                                        tmp20 = jsx;
+                                                        tmp21 = View;
+                                                        obj1 = { style: null, children: null };
+                                                        tmp22 = closure_12;
+                                                        obj1.style = closure_12.reminderTip;
+                                                        tmp23 = jsx;
+                                                        tmp24 = View;
+                                                        obj9 = { style: null, children: null };
+                                                        obj9.style = closure_12.spoken;
+                                                        tmp25 = jsx;
+                                                        tmp26 = closure_1;
+                                                        tmp27 = closure_2;
+                                                        obj10 = { projectId: null, notice: "outdated" };
+                                                        tmp28 = projectId;
+                                                        obj10.projectId = projectId;
+                                                        obj9.children = jsx(closure_1(closure_2[46]), obj10);
+                                                        obj1.children = jsx(View, obj9);
+                                                        return jsx(View, obj1);
+                                                      } else {
+                                                        str = "ideas";
+                                                        if ("ideas" === projectId) {
+                                                          tmp = jsx;
+                                                          tmp2 = View;
+                                                          obj = { style: null, children: null };
+                                                          tmp3 = closure_12;
+                                                          obj.style = closure_12.reminderSeparated;
+                                                          tmp4 = jsx;
+                                                          tmp5 = closure_1;
+                                                          tmp6 = closure_2;
+                                                          obj11 = { style: null, onAsk: null, attribution: null };
+                                                          obj11.style = closure_12.spoken;
+                                                          tmp8 = onAskForIdeas;
+                                                          obj11.onAsk = onAskForIdeas;
+                                                          tmp9 = jsxs;
+                                                          tmp10 = Fragment;
+                                                          obj12 = { children: null };
+                                                          tmp11 = jsx;
+                                                          tmp12 = View;
+                                                          obj13 = { style: null, children: null };
                                                           items = [, ];
                                                           ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                                                          tmp7 = ConjureIdeasOfferDefault;
-                                                          items1 = [closure_19(metroImportAll, obj7), ];
-                                                          const obj8 = { style: closure_12.header, children: closure_19(ConjureMessageAuthor.ConjureHeader, {}) };
-                                                          items1[1] = closure_19(metroImportAll, obj8);
-                                                          return closure_19(metroImportAll, obj);
+                                                          obj13.style = items;
+                                                          tmp13 = jsx;
+                                                          tmp14 = closure_0;
+                                                          tmp15 = closure_2;
+                                                          tmp7 = closure_1(closure_2[47]);
+                                                          obj13.children = jsx(closure_0(closure_2[48]).ConjureAvatar, {});
+                                                          items1 = [, ];
+                                                          items1[0] = jsx(View, obj13);
+                                                          tmp16 = jsx;
+                                                          tmp17 = View;
+                                                          obj14 = { style: null, children: null };
+                                                          obj14.style = closure_12.header;
+                                                          tmp18 = jsx;
+                                                          tmp19 = closure_2;
+                                                          obj14.children = jsx(closure_0(closure_2[48]).ConjureHeader, {});
+                                                          items1[1] = jsx(View, obj14);
+                                                          obj12.children = items1;
+                                                          obj11.attribution = jsxs(Fragment, obj12);
+                                                          obj.children = jsx(tmp7, obj11);
+                                                          return jsx(View, obj);
+                                                        } else {
+                                                          return;
                                                         }
                                                       }
                                                     }
-                                                    tmp92[0] = tmp4.avatar;
+                                                  }
+                                                  let tmp88 = null;
+                                                  if (groupStart) {
+                                                    class Te {
+                                                      constructor(arg0) {
+                                                        if ("outdated" === projectId) {
+                                                          tmp20 = jsx;
+                                                          tmp21 = View;
+                                                          obj1 = { style: null, children: null };
+                                                          tmp22 = closure_12;
+                                                          obj1.style = closure_12.reminderTip;
+                                                          tmp23 = jsx;
+                                                          tmp24 = View;
+                                                          obj9 = { style: null, children: null };
+                                                          obj9.style = closure_12.spoken;
+                                                          tmp25 = jsx;
+                                                          tmp26 = closure_1;
+                                                          tmp27 = closure_2;
+                                                          obj10 = { projectId: null, notice: "outdated" };
+                                                          tmp28 = projectId;
+                                                          obj10.projectId = projectId;
+                                                          obj9.children = jsx(closure_1(closure_2[46]), obj10);
+                                                          obj1.children = jsx(View, obj9);
+                                                          return jsx(View, obj1);
+                                                        } else {
+                                                          str = "ideas";
+                                                          if ("ideas" === projectId) {
+                                                            tmp = jsx;
+                                                            tmp2 = View;
+                                                            obj = { style: null, children: null };
+                                                            tmp3 = closure_12;
+                                                            obj.style = closure_12.reminderSeparated;
+                                                            tmp4 = jsx;
+                                                            tmp5 = closure_1;
+                                                            tmp6 = closure_2;
+                                                            obj11 = { style: null, onAsk: null, attribution: null };
+                                                            obj11.style = closure_12.spoken;
+                                                            tmp8 = onAskForIdeas;
+                                                            obj11.onAsk = onAskForIdeas;
+                                                            tmp9 = jsxs;
+                                                            tmp10 = Fragment;
+                                                            obj12 = { children: null };
+                                                            tmp11 = jsx;
+                                                            tmp12 = View;
+                                                            obj13 = { style: null, children: null };
+                                                            items = [, ];
+                                                            ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
+                                                            obj13.style = items;
+                                                            tmp13 = jsx;
+                                                            tmp14 = closure_0;
+                                                            tmp15 = closure_2;
+                                                            tmp7 = closure_1(closure_2[47]);
+                                                            obj13.children = jsx(closure_0(closure_2[48]).ConjureAvatar, {});
+                                                            items1 = [, ];
+                                                            items1[0] = jsx(View, obj13);
+                                                            tmp16 = jsx;
+                                                            tmp17 = View;
+                                                            obj14 = { style: null, children: null };
+                                                            obj14.style = closure_12.header;
+                                                            tmp18 = jsx;
+                                                            tmp19 = closure_2;
+                                                            obj14.children = jsx(closure_0(closure_2[48]).ConjureHeader, {});
+                                                            items1[1] = jsx(View, obj14);
+                                                            obj12.children = items1;
+                                                            obj11.attribution = jsxs(Fragment, obj12);
+                                                            obj.children = jsx(tmp7, obj11);
+                                                            return jsx(View, obj);
+                                                          } else {
+                                                            return;
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                    tmp91[0] = tmp4.avatar;
                                                     let obj2 = { userId: message.user_id };
-                                                    tmp92[1] = closure_19(tmp(tmp2[48]).ConjureUserAvatar, obj2);
-                                                    tmp89 = closure_19(onJumpToReplied, tmp92);
+                                                    tmp91[1] = closure_19(tmp(tmp2[48]).ConjureUserAvatar, obj2);
+                                                    tmp88 = closure_19(onJumpToReplied, tmp91);
                                                   }
                                                   cResult[56] = groupStart;
                                                   cResult[57] = message.user_id;
                                                   cResult[58] = tmp4.avatar;
-                                                  cResult[59] = tmp89;
+                                                  cResult[59] = tmp88;
                                                 } else {
                                                   if ("publish_notice" === message.kind) {
                                                     if (null != message.publishNotice) {
                                                       if (cResult[85] === message.publishNotice) {
-                                                        let tmp80;
                                                         if (cResult[86] === projectId) {
-                                                          tmp80 = cResult[87];
+                                                          let tmp79 = cResult[87];
                                                         }
-                                                        if (cResult[88] === tmp42) {
-                                                          if (cResult[89] === tmp34) {
-                                                            let tmp83;
-                                                            if (cResult[90] === tmp80) {
-                                                              tmp83 = cResult[91];
+                                                        if (cResult[88] === tmp41) {
+                                                          if (cResult[89] === tmp33) {
+                                                            if (cResult[90] === tmp79) {
+                                                              let tmp82 = cResult[91];
                                                             }
-                                                            return tmp83;
+                                                            return tmp82;
                                                           }
                                                         }
                                                         class Te {
                                                           constructor(arg0) {
-                                                            let items1;
-                                                            let obj3;
-                                                            let obj4;
-                                                            let obj5;
-                                                            let obj6;
-                                                            let tmp7;
-                                                            if ("outdated" === arg0) {
-                                                              const obj2 = { style: closure_12.reminderTip, children: closure_19(metroImportAll, obj3) };
-                                                              obj3 = { style: closure_12.spoken, children: closure_19(ConjurePublishNoticeLineDefault, obj4) };
-                                                              obj4 = { projectId, notice: "outdated" };
-                                                              return closure_19(metroImportAll, obj2);
-                                                            } else if ("ideas" === arg0) {
-                                                              const obj = { style: closure_12.reminderSeparated, children: closure_19(tmp7, obj5) };
-                                                              obj5 = { style: closure_12.spoken, onAsk: onAskForIdeas, attribution: id(closure_21, obj6) };
-                                                              obj6 = { children: items1 };
-                                                              const obj7 = { style: items, children: closure_19(ConjureMessageAuthor.ConjureAvatar, {}) };
-                                                              items = [, ];
-                                                              ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                                                              tmp7 = ConjureIdeasOfferDefault;
-                                                              items1 = [closure_19(metroImportAll, obj7), ];
-                                                              const obj8 = { style: closure_12.header, children: closure_19(ConjureMessageAuthor.ConjureHeader, {}) };
-                                                              items1[1] = closure_19(metroImportAll, obj8);
-                                                              return closure_19(metroImportAll, obj);
+                                                            if ("outdated" === projectId) {
+                                                              tmp20 = jsx;
+                                                              tmp21 = View;
+                                                              obj1 = { style: null, children: null };
+                                                              tmp22 = closure_12;
+                                                              obj1.style = closure_12.reminderTip;
+                                                              tmp23 = jsx;
+                                                              tmp24 = View;
+                                                              obj9 = { style: null, children: null };
+                                                              obj9.style = closure_12.spoken;
+                                                              tmp25 = jsx;
+                                                              tmp26 = closure_1;
+                                                              tmp27 = closure_2;
+                                                              obj10 = { projectId: null, notice: "outdated" };
+                                                              tmp28 = projectId;
+                                                              obj10.projectId = projectId;
+                                                              obj9.children = jsx(closure_1(closure_2[46]), obj10);
+                                                              obj1.children = jsx(View, obj9);
+                                                              return jsx(View, obj1);
+                                                            } else {
+                                                              str = "ideas";
+                                                              if ("ideas" === projectId) {
+                                                                tmp = jsx;
+                                                                tmp2 = View;
+                                                                obj = { style: null, children: null };
+                                                                tmp3 = closure_12;
+                                                                obj.style = closure_12.reminderSeparated;
+                                                                tmp4 = jsx;
+                                                                tmp5 = closure_1;
+                                                                tmp6 = closure_2;
+                                                                obj11 = { style: null, onAsk: null, attribution: null };
+                                                                obj11.style = closure_12.spoken;
+                                                                tmp8 = onAskForIdeas;
+                                                                obj11.onAsk = onAskForIdeas;
+                                                                tmp9 = jsxs;
+                                                                tmp10 = Fragment;
+                                                                obj12 = { children: null };
+                                                                tmp11 = jsx;
+                                                                tmp12 = View;
+                                                                obj13 = { style: null, children: null };
+                                                                items = [, ];
+                                                                ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
+                                                                obj13.style = items;
+                                                                tmp13 = jsx;
+                                                                tmp14 = closure_0;
+                                                                tmp15 = closure_2;
+                                                                tmp7 = closure_1(closure_2[47]);
+                                                                obj13.children = jsx(closure_0(closure_2[48]).ConjureAvatar, {});
+                                                                items1 = [, ];
+                                                                items1[0] = jsx(View, obj13);
+                                                                tmp16 = jsx;
+                                                                tmp17 = View;
+                                                                obj14 = { style: null, children: null };
+                                                                obj14.style = closure_12.header;
+                                                                tmp18 = jsx;
+                                                                tmp19 = closure_2;
+                                                                obj14.children = jsx(closure_0(closure_2[48]).ConjureHeader, {});
+                                                                items1[1] = jsx(View, obj14);
+                                                                obj12.children = items1;
+                                                                obj11.attribution = jsxs(Fragment, obj12);
+                                                                obj.children = jsx(tmp7, obj11);
+                                                                return jsx(View, obj);
+                                                              } else {
+                                                                return;
+                                                              }
                                                             }
                                                           }
                                                         }
-                                                        let obj3 = { style: tmp34, children: items };
-                                                        items = [tmp80, tmp42];
-                                                        const tmp85 = id(onJumpToReplied, obj3);
-                                                        cResult[88] = tmp42;
-                                                        cResult[89] = tmp34;
-                                                        cResult[90] = tmp80;
-                                                        cResult[91] = tmp85;
-                                                        tmp83 = tmp85;
+                                                        let obj3 = { style: tmp33, children: null };
+                                                        items = [tmp79, tmp41];
+                                                        obj3.children = items;
+                                                        const tmp84 = id(onJumpToReplied, obj3);
+                                                        cResult[88] = tmp41;
+                                                        cResult[89] = tmp33;
+                                                        cResult[90] = tmp79;
+                                                        cResult[91] = tmp84;
+                                                        tmp82 = tmp84;
                                                       }
                                                       class Te {
                                                         constructor(arg0) {
-                                                          let items1;
-                                                          let obj3;
-                                                          let obj4;
-                                                          let obj5;
-                                                          let obj6;
-                                                          let tmp7;
-                                                          if ("outdated" === arg0) {
-                                                            const obj2 = { style: closure_12.reminderTip, children: closure_19(metroImportAll, obj3) };
-                                                            obj3 = { style: closure_12.spoken, children: closure_19(ConjurePublishNoticeLineDefault, obj4) };
-                                                            obj4 = { projectId, notice: "outdated" };
-                                                            return closure_19(metroImportAll, obj2);
-                                                          } else if ("ideas" === arg0) {
-                                                            const obj = { style: closure_12.reminderSeparated, children: closure_19(tmp7, obj5) };
-                                                            obj5 = { style: closure_12.spoken, onAsk: onAskForIdeas, attribution: id(closure_21, obj6) };
-                                                            obj6 = { children: items1 };
-                                                            const obj7 = { style: items, children: closure_19(ConjureMessageAuthor.ConjureAvatar, {}) };
-                                                            items = [, ];
-                                                            ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                                                            tmp7 = ConjureIdeasOfferDefault;
-                                                            items1 = [closure_19(metroImportAll, obj7), ];
-                                                            const obj8 = { style: closure_12.header, children: closure_19(ConjureMessageAuthor.ConjureHeader, {}) };
-                                                            items1[1] = closure_19(metroImportAll, obj8);
-                                                            return closure_19(metroImportAll, obj);
+                                                          if ("outdated" === projectId) {
+                                                            tmp20 = jsx;
+                                                            tmp21 = View;
+                                                            obj1 = { style: null, children: null };
+                                                            tmp22 = closure_12;
+                                                            obj1.style = closure_12.reminderTip;
+                                                            tmp23 = jsx;
+                                                            tmp24 = View;
+                                                            obj9 = { style: null, children: null };
+                                                            obj9.style = closure_12.spoken;
+                                                            tmp25 = jsx;
+                                                            tmp26 = closure_1;
+                                                            tmp27 = closure_2;
+                                                            obj10 = { projectId: null, notice: "outdated" };
+                                                            tmp28 = projectId;
+                                                            obj10.projectId = projectId;
+                                                            obj9.children = jsx(closure_1(closure_2[46]), obj10);
+                                                            obj1.children = jsx(View, obj9);
+                                                            return jsx(View, obj1);
+                                                          } else {
+                                                            str = "ideas";
+                                                            if ("ideas" === projectId) {
+                                                              tmp = jsx;
+                                                              tmp2 = View;
+                                                              obj = { style: null, children: null };
+                                                              tmp3 = closure_12;
+                                                              obj.style = closure_12.reminderSeparated;
+                                                              tmp4 = jsx;
+                                                              tmp5 = closure_1;
+                                                              tmp6 = closure_2;
+                                                              obj11 = { style: null, onAsk: null, attribution: null };
+                                                              obj11.style = closure_12.spoken;
+                                                              tmp8 = onAskForIdeas;
+                                                              obj11.onAsk = onAskForIdeas;
+                                                              tmp9 = jsxs;
+                                                              tmp10 = Fragment;
+                                                              obj12 = { children: null };
+                                                              tmp11 = jsx;
+                                                              tmp12 = View;
+                                                              obj13 = { style: null, children: null };
+                                                              items = [, ];
+                                                              ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
+                                                              obj13.style = items;
+                                                              tmp13 = jsx;
+                                                              tmp14 = closure_0;
+                                                              tmp15 = closure_2;
+                                                              tmp7 = closure_1(closure_2[47]);
+                                                              obj13.children = jsx(closure_0(closure_2[48]).ConjureAvatar, {});
+                                                              items1 = [, ];
+                                                              items1[0] = jsx(View, obj13);
+                                                              tmp16 = jsx;
+                                                              tmp17 = View;
+                                                              obj14 = { style: null, children: null };
+                                                              obj14.style = closure_12.header;
+                                                              tmp18 = jsx;
+                                                              tmp19 = closure_2;
+                                                              obj14.children = jsx(closure_0(closure_2[48]).ConjureHeader, {});
+                                                              items1[1] = jsx(View, obj14);
+                                                              obj12.children = items1;
+                                                              obj11.attribution = jsxs(Fragment, obj12);
+                                                              obj.children = jsx(tmp7, obj11);
+                                                              return jsx(View, obj);
+                                                            } else {
+                                                              return;
+                                                            }
                                                           }
                                                         }
                                                       }
                                                       let obj4 = { projectId, notice: message.publishNotice };
-                                                      const tmp82 = closure_19(message(tmp2[46]), obj4);
+                                                      const tmp81 = closure_19(message(tmp2[46]), obj4);
                                                       cResult[85] = message.publishNotice;
                                                       cResult[86] = projectId;
-                                                      cResult[87] = tmp82;
-                                                      tmp80 = tmp82;
+                                                      cResult[87] = tmp81;
+                                                      tmp79 = tmp81;
                                                     }
                                                   }
                                                   class Te {
                                                     constructor(arg0) {
-                                                      let items1;
-                                                      let obj3;
-                                                      let obj4;
-                                                      let obj5;
-                                                      let obj6;
-                                                      let tmp7;
-                                                      if ("outdated" === arg0) {
-                                                        const obj2 = { style: closure_12.reminderTip, children: closure_19(metroImportAll, obj3) };
-                                                        obj3 = { style: closure_12.spoken, children: closure_19(ConjurePublishNoticeLineDefault, obj4) };
-                                                        obj4 = { projectId, notice: "outdated" };
-                                                        return closure_19(metroImportAll, obj2);
-                                                      } else if ("ideas" === arg0) {
-                                                        const obj = { style: closure_12.reminderSeparated, children: closure_19(tmp7, obj5) };
-                                                        obj5 = { style: closure_12.spoken, onAsk: onAskForIdeas, attribution: id(closure_21, obj6) };
-                                                        obj6 = { children: items1 };
-                                                        const obj7 = { style: items, children: closure_19(ConjureMessageAuthor.ConjureAvatar, {}) };
-                                                        items = [, ];
-                                                        ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                                                        tmp7 = ConjureIdeasOfferDefault;
-                                                        items1 = [closure_19(metroImportAll, obj7), ];
-                                                        const obj8 = { style: closure_12.header, children: closure_19(ConjureMessageAuthor.ConjureHeader, {}) };
-                                                        items1[1] = closure_19(metroImportAll, obj8);
-                                                        return closure_19(metroImportAll, obj);
+                                                      if ("outdated" === projectId) {
+                                                        tmp20 = jsx;
+                                                        tmp21 = View;
+                                                        obj1 = { style: null, children: null };
+                                                        tmp22 = closure_12;
+                                                        obj1.style = closure_12.reminderTip;
+                                                        tmp23 = jsx;
+                                                        tmp24 = View;
+                                                        obj9 = { style: null, children: null };
+                                                        obj9.style = closure_12.spoken;
+                                                        tmp25 = jsx;
+                                                        tmp26 = closure_1;
+                                                        tmp27 = closure_2;
+                                                        obj10 = { projectId: null, notice: "outdated" };
+                                                        tmp28 = projectId;
+                                                        obj10.projectId = projectId;
+                                                        obj9.children = jsx(closure_1(closure_2[46]), obj10);
+                                                        obj1.children = jsx(View, obj9);
+                                                        return jsx(View, obj1);
+                                                      } else {
+                                                        str = "ideas";
+                                                        if ("ideas" === projectId) {
+                                                          tmp = jsx;
+                                                          tmp2 = View;
+                                                          obj = { style: null, children: null };
+                                                          tmp3 = closure_12;
+                                                          obj.style = closure_12.reminderSeparated;
+                                                          tmp4 = jsx;
+                                                          tmp5 = closure_1;
+                                                          tmp6 = closure_2;
+                                                          obj11 = { style: null, onAsk: null, attribution: null };
+                                                          obj11.style = closure_12.spoken;
+                                                          tmp8 = onAskForIdeas;
+                                                          obj11.onAsk = onAskForIdeas;
+                                                          tmp9 = jsxs;
+                                                          tmp10 = Fragment;
+                                                          obj12 = { children: null };
+                                                          tmp11 = jsx;
+                                                          tmp12 = View;
+                                                          obj13 = { style: null, children: null };
+                                                          items = [, ];
+                                                          ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
+                                                          obj13.style = items;
+                                                          tmp13 = jsx;
+                                                          tmp14 = closure_0;
+                                                          tmp15 = closure_2;
+                                                          tmp7 = closure_1(closure_2[47]);
+                                                          obj13.children = jsx(closure_0(closure_2[48]).ConjureAvatar, {});
+                                                          items1 = [, ];
+                                                          items1[0] = jsx(View, obj13);
+                                                          tmp16 = jsx;
+                                                          tmp17 = View;
+                                                          obj14 = { style: null, children: null };
+                                                          obj14.style = closure_12.header;
+                                                          tmp18 = jsx;
+                                                          tmp19 = closure_2;
+                                                          obj14.children = jsx(closure_0(closure_2[48]).ConjureHeader, {});
+                                                          items1[1] = jsx(View, obj14);
+                                                          obj12.children = items1;
+                                                          obj11.attribution = jsxs(Fragment, obj12);
+                                                          obj.children = jsx(tmp7, obj11);
+                                                          return jsx(View, obj);
+                                                        } else {
+                                                          return;
+                                                        }
                                                       }
                                                     }
                                                   }
                                                   if (true === message.interrupted) {
-                                                    let tmp61;
-                                                    let tmp65;
-                                                    let tmp71;
                                                     const _Symbol2 = Symbol;
                                                     class Te {
                                                       constructor(arg0) {
-                                                        let items1;
-                                                        let obj3;
-                                                        let obj4;
-                                                        let obj5;
-                                                        let obj6;
-                                                        let tmp7;
-                                                        if ("outdated" === arg0) {
-                                                          const obj2 = { style: closure_12.reminderTip, children: closure_19(metroImportAll, obj3) };
-                                                          obj3 = { style: closure_12.spoken, children: closure_19(ConjurePublishNoticeLineDefault, obj4) };
-                                                          obj4 = { projectId, notice: "outdated" };
-                                                          return closure_19(metroImportAll, obj2);
-                                                        } else if ("ideas" === arg0) {
-                                                          const obj = { style: closure_12.reminderSeparated, children: closure_19(tmp7, obj5) };
-                                                          obj5 = { style: closure_12.spoken, onAsk: onAskForIdeas, attribution: id(closure_21, obj6) };
-                                                          obj6 = { children: items1 };
-                                                          const obj7 = { style: items, children: closure_19(ConjureMessageAuthor.ConjureAvatar, {}) };
-                                                          items = [, ];
-                                                          ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                                                          tmp7 = ConjureIdeasOfferDefault;
-                                                          items1 = [closure_19(metroImportAll, obj7), ];
-                                                          const obj8 = { style: closure_12.header, children: closure_19(ConjureMessageAuthor.ConjureHeader, {}) };
-                                                          items1[1] = closure_19(metroImportAll, obj8);
-                                                          return closure_19(metroImportAll, obj);
-                                                        }
-                                                      }
-                                                    }
-                                                    const activityBox = tmp4.activityBox;
-                                                    if (cResult[92] === Symbol.for("react.memo_cache_sentinel")) {
-                                                      const intl = tmp(tmp2[17]).intl;
-                                                      class Te {
-                                                        constructor(arg0) {
-                                                          let items1;
-                                                          let obj3;
-                                                          let obj4;
-                                                          let obj5;
-                                                          let obj6;
-                                                          let tmp7;
-                                                          if ("outdated" === arg0) {
-                                                            const obj2 = { style: closure_12.reminderTip, children: closure_19(metroImportAll, obj3) };
-                                                            obj3 = { style: closure_12.spoken, children: closure_19(ConjurePublishNoticeLineDefault, obj4) };
-                                                            obj4 = { projectId, notice: "outdated" };
-                                                            return closure_19(metroImportAll, obj2);
-                                                          } else if ("ideas" === arg0) {
-                                                            const obj = { style: closure_12.reminderSeparated, children: closure_19(tmp7, obj5) };
-                                                            obj5 = { style: closure_12.spoken, onAsk: onAskForIdeas, attribution: id(closure_21, obj6) };
-                                                            obj6 = { children: items1 };
-                                                            const obj7 = { style: items, children: closure_19(ConjureMessageAuthor.ConjureAvatar, {}) };
+                                                        if ("outdated" === projectId) {
+                                                          tmp20 = jsx;
+                                                          tmp21 = View;
+                                                          obj1 = { style: null, children: null };
+                                                          tmp22 = closure_12;
+                                                          obj1.style = closure_12.reminderTip;
+                                                          tmp23 = jsx;
+                                                          tmp24 = View;
+                                                          obj9 = { style: null, children: null };
+                                                          obj9.style = closure_12.spoken;
+                                                          tmp25 = jsx;
+                                                          tmp26 = closure_1;
+                                                          tmp27 = closure_2;
+                                                          obj10 = { projectId: null, notice: "outdated" };
+                                                          tmp28 = projectId;
+                                                          obj10.projectId = projectId;
+                                                          obj9.children = jsx(closure_1(closure_2[46]), obj10);
+                                                          obj1.children = jsx(View, obj9);
+                                                          return jsx(View, obj1);
+                                                        } else {
+                                                          str = "ideas";
+                                                          if ("ideas" === projectId) {
+                                                            tmp = jsx;
+                                                            tmp2 = View;
+                                                            obj = { style: null, children: null };
+                                                            tmp3 = closure_12;
+                                                            obj.style = closure_12.reminderSeparated;
+                                                            tmp4 = jsx;
+                                                            tmp5 = closure_1;
+                                                            tmp6 = closure_2;
+                                                            obj11 = { style: null, onAsk: null, attribution: null };
+                                                            obj11.style = closure_12.spoken;
+                                                            tmp8 = onAskForIdeas;
+                                                            obj11.onAsk = onAskForIdeas;
+                                                            tmp9 = jsxs;
+                                                            tmp10 = Fragment;
+                                                            obj12 = { children: null };
+                                                            tmp11 = jsx;
+                                                            tmp12 = View;
+                                                            obj13 = { style: null, children: null };
                                                             items = [, ];
                                                             ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                                                            tmp7 = ConjureIdeasOfferDefault;
-                                                            items1 = [closure_19(metroImportAll, obj7), ];
-                                                            const obj8 = { style: closure_12.header, children: closure_19(ConjureMessageAuthor.ConjureHeader, {}) };
-                                                            items1[1] = closure_19(metroImportAll, obj8);
-                                                            return closure_19(metroImportAll, obj);
+                                                            obj13.style = items;
+                                                            tmp13 = jsx;
+                                                            tmp14 = closure_0;
+                                                            tmp15 = closure_2;
+                                                            tmp7 = closure_1(closure_2[47]);
+                                                            obj13.children = jsx(closure_0(closure_2[48]).ConjureAvatar, {});
+                                                            items1 = [, ];
+                                                            items1[0] = jsx(View, obj13);
+                                                            tmp16 = jsx;
+                                                            tmp17 = View;
+                                                            obj14 = { style: null, children: null };
+                                                            obj14.style = closure_12.header;
+                                                            tmp18 = jsx;
+                                                            tmp19 = closure_2;
+                                                            obj14.children = jsx(closure_0(closure_2[48]).ConjureHeader, {});
+                                                            items1[1] = jsx(View, obj14);
+                                                            obj12.children = items1;
+                                                            obj11.attribution = jsxs(Fragment, obj12);
+                                                            obj.children = jsx(tmp7, obj11);
+                                                            return jsx(View, obj);
+                                                          } else {
+                                                            return;
                                                           }
                                                         }
                                                       }
-                                                      const tmp62Result = tmp62(message(tmp2[18]).oOmBdX);
-                                                      cResult[92] = tmp62Result;
-                                                      tmp61 = tmp62Result;
+                                                    }
+                                                    if (cResult[92] === Symbol.for("react.memo_cache_sentinel")) {
+                                                      class Te {
+                                                        constructor(arg0) {
+                                                          if ("outdated" === projectId) {
+                                                            tmp20 = jsx;
+                                                            tmp21 = View;
+                                                            obj1 = { style: null, children: null };
+                                                            tmp22 = closure_12;
+                                                            obj1.style = closure_12.reminderTip;
+                                                            tmp23 = jsx;
+                                                            tmp24 = View;
+                                                            obj9 = { style: null, children: null };
+                                                            obj9.style = closure_12.spoken;
+                                                            tmp25 = jsx;
+                                                            tmp26 = closure_1;
+                                                            tmp27 = closure_2;
+                                                            obj10 = { projectId: null, notice: "outdated" };
+                                                            tmp28 = projectId;
+                                                            obj10.projectId = projectId;
+                                                            obj9.children = jsx(closure_1(closure_2[46]), obj10);
+                                                            obj1.children = jsx(View, obj9);
+                                                            return jsx(View, obj1);
+                                                          } else {
+                                                            str = "ideas";
+                                                            if ("ideas" === projectId) {
+                                                              tmp = jsx;
+                                                              tmp2 = View;
+                                                              obj = { style: null, children: null };
+                                                              tmp3 = closure_12;
+                                                              obj.style = closure_12.reminderSeparated;
+                                                              tmp4 = jsx;
+                                                              tmp5 = closure_1;
+                                                              tmp6 = closure_2;
+                                                              obj11 = { style: null, onAsk: null, attribution: null };
+                                                              obj11.style = closure_12.spoken;
+                                                              tmp8 = onAskForIdeas;
+                                                              obj11.onAsk = onAskForIdeas;
+                                                              tmp9 = jsxs;
+                                                              tmp10 = Fragment;
+                                                              obj12 = { children: null };
+                                                              tmp11 = jsx;
+                                                              tmp12 = View;
+                                                              obj13 = { style: null, children: null };
+                                                              items = [, ];
+                                                              ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
+                                                              obj13.style = items;
+                                                              tmp13 = jsx;
+                                                              tmp14 = closure_0;
+                                                              tmp15 = closure_2;
+                                                              tmp7 = closure_1(closure_2[47]);
+                                                              obj13.children = jsx(closure_0(closure_2[48]).ConjureAvatar, {});
+                                                              items1 = [, ];
+                                                              items1[0] = jsx(View, obj13);
+                                                              tmp16 = jsx;
+                                                              tmp17 = View;
+                                                              obj14 = { style: null, children: null };
+                                                              obj14.style = closure_12.header;
+                                                              tmp18 = jsx;
+                                                              tmp19 = closure_2;
+                                                              obj14.children = jsx(closure_0(closure_2[48]).ConjureHeader, {});
+                                                              items1[1] = jsx(View, obj14);
+                                                              obj12.children = items1;
+                                                              obj11.attribution = jsxs(Fragment, obj12);
+                                                              obj.children = jsx(tmp7, obj11);
+                                                              return jsx(View, obj);
+                                                            } else {
+                                                              return;
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                      const tmp61Result = tmp61(message(tmp2[18]).oOmBdX);
+                                                      cResult[92] = tmp61Result;
+                                                      let tmp60 = tmp61Result;
                                                     } else {
-                                                      tmp61 = cResult[92];
+                                                      tmp60 = cResult[92];
                                                     }
                                                     const _Symbol3 = Symbol;
                                                     if (cResult[93] === Symbol.for("react.memo_cache_sentinel")) {
                                                       class Te {
                                                         constructor(arg0) {
-                                                          let items1;
-                                                          let obj3;
-                                                          let obj4;
-                                                          let obj5;
-                                                          let obj6;
-                                                          let tmp7;
-                                                          if ("outdated" === arg0) {
-                                                            const obj2 = { style: closure_12.reminderTip, children: closure_19(metroImportAll, obj3) };
-                                                            obj3 = { style: closure_12.spoken, children: closure_19(ConjurePublishNoticeLineDefault, obj4) };
-                                                            obj4 = { projectId, notice: "outdated" };
-                                                            return closure_19(metroImportAll, obj2);
-                                                          } else if ("ideas" === arg0) {
-                                                            const obj = { style: closure_12.reminderSeparated, children: closure_19(tmp7, obj5) };
-                                                            obj5 = { style: closure_12.spoken, onAsk: onAskForIdeas, attribution: id(closure_21, obj6) };
-                                                            obj6 = { children: items1 };
-                                                            const obj7 = { style: items, children: closure_19(ConjureMessageAuthor.ConjureAvatar, {}) };
-                                                            items = [, ];
-                                                            ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                                                            tmp7 = ConjureIdeasOfferDefault;
-                                                            items1 = [closure_19(metroImportAll, obj7), ];
-                                                            const obj8 = { style: closure_12.header, children: closure_19(ConjureMessageAuthor.ConjureHeader, {}) };
-                                                            items1[1] = closure_19(metroImportAll, obj8);
-                                                            return closure_19(metroImportAll, obj);
+                                                          if ("outdated" === projectId) {
+                                                            tmp20 = jsx;
+                                                            tmp21 = View;
+                                                            obj1 = { style: null, children: null };
+                                                            tmp22 = closure_12;
+                                                            obj1.style = closure_12.reminderTip;
+                                                            tmp23 = jsx;
+                                                            tmp24 = View;
+                                                            obj9 = { style: null, children: null };
+                                                            obj9.style = closure_12.spoken;
+                                                            tmp25 = jsx;
+                                                            tmp26 = closure_1;
+                                                            tmp27 = closure_2;
+                                                            obj10 = { projectId: null, notice: "outdated" };
+                                                            tmp28 = projectId;
+                                                            obj10.projectId = projectId;
+                                                            obj9.children = jsx(closure_1(closure_2[46]), obj10);
+                                                            obj1.children = jsx(View, obj9);
+                                                            return jsx(View, obj1);
+                                                          } else {
+                                                            str = "ideas";
+                                                            if ("ideas" === projectId) {
+                                                              tmp = jsx;
+                                                              tmp2 = View;
+                                                              obj = { style: null, children: null };
+                                                              tmp3 = closure_12;
+                                                              obj.style = closure_12.reminderSeparated;
+                                                              tmp4 = jsx;
+                                                              tmp5 = closure_1;
+                                                              tmp6 = closure_2;
+                                                              obj11 = { style: null, onAsk: null, attribution: null };
+                                                              obj11.style = closure_12.spoken;
+                                                              tmp8 = onAskForIdeas;
+                                                              obj11.onAsk = onAskForIdeas;
+                                                              tmp9 = jsxs;
+                                                              tmp10 = Fragment;
+                                                              obj12 = { children: null };
+                                                              tmp11 = jsx;
+                                                              tmp12 = View;
+                                                              obj13 = { style: null, children: null };
+                                                              items = [, ];
+                                                              ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
+                                                              obj13.style = items;
+                                                              tmp13 = jsx;
+                                                              tmp14 = closure_0;
+                                                              tmp15 = closure_2;
+                                                              tmp7 = closure_1(closure_2[47]);
+                                                              obj13.children = jsx(closure_0(closure_2[48]).ConjureAvatar, {});
+                                                              items1 = [, ];
+                                                              items1[0] = jsx(View, obj13);
+                                                              tmp16 = jsx;
+                                                              tmp17 = View;
+                                                              obj14 = { style: null, children: null };
+                                                              obj14.style = closure_12.header;
+                                                              tmp18 = jsx;
+                                                              tmp19 = closure_2;
+                                                              obj14.children = jsx(closure_0(closure_2[48]).ConjureHeader, {});
+                                                              items1[1] = jsx(View, obj14);
+                                                              obj12.children = items1;
+                                                              obj11.attribution = jsxs(Fragment, obj12);
+                                                              obj.children = jsx(tmp7, obj11);
+                                                              return jsx(View, obj);
+                                                            } else {
+                                                              return;
+                                                            }
                                                           }
                                                         }
                                                       }
-                                                      tmp69[0] = tmp61;
+                                                      tmp68[0] = tmp60;
                                                       let obj5 = { size: "refresh_sm", color: message(tmp2[9]).colors.TEXT_MUTED };
-                                                      const tmp68 = message(tmp2[10]);
-                                                      const StopIcon = tmp(tmp2[53]).StopIcon;
-                                                      tmp69[4] = closure_19(StopIcon, obj5);
-                                                      const tmp70 = closure_19(tmp68, tmp69);
-                                                      cResult[93] = tmp70;
-                                                      tmp65 = tmp70;
+                                                      tmp68[4] = closure_19(tmp(tmp2[53]).StopIcon, obj5);
+                                                      const tmp69 = closure_19(message(tmp2[10]), tmp68);
+                                                      cResult[93] = tmp69;
+                                                      let tmp64 = tmp69;
+                                                      const tmp67 = message(tmp2[10]);
                                                     } else {
-                                                      tmp65 = cResult[93];
+                                                      tmp64 = cResult[93];
                                                     }
                                                     if (cResult[94] !== tmp4.activityBox) {
                                                       class Te {
                                                         constructor(arg0) {
-                                                          let items1;
-                                                          let obj3;
-                                                          let obj4;
-                                                          let obj5;
-                                                          let obj6;
-                                                          let tmp7;
-                                                          if ("outdated" === arg0) {
-                                                            const obj2 = { style: closure_12.reminderTip, children: closure_19(metroImportAll, obj3) };
-                                                            obj3 = { style: closure_12.spoken, children: closure_19(ConjurePublishNoticeLineDefault, obj4) };
-                                                            obj4 = { projectId, notice: "outdated" };
-                                                            return closure_19(metroImportAll, obj2);
-                                                          } else if ("ideas" === arg0) {
-                                                            const obj = { style: closure_12.reminderSeparated, children: closure_19(tmp7, obj5) };
-                                                            obj5 = { style: closure_12.spoken, onAsk: onAskForIdeas, attribution: id(closure_21, obj6) };
-                                                            obj6 = { children: items1 };
-                                                            const obj7 = { style: items, children: closure_19(ConjureMessageAuthor.ConjureAvatar, {}) };
-                                                            items = [, ];
-                                                            ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                                                            tmp7 = ConjureIdeasOfferDefault;
-                                                            items1 = [closure_19(metroImportAll, obj7), ];
-                                                            const obj8 = { style: closure_12.header, children: closure_19(ConjureMessageAuthor.ConjureHeader, {}) };
-                                                            items1[1] = closure_19(metroImportAll, obj8);
-                                                            return closure_19(metroImportAll, obj);
-                                                          }
-                                                        }
-                                                      }
-                                                      tmp74[0] = activityBox;
-                                                      tmp74[1] = tmp65;
-                                                      const tmp75 = closure_19(onJumpToReplied, tmp74);
-                                                      cResult[94] = tmp4.activityBox;
-                                                      cResult[95] = tmp75;
-                                                      tmp71 = tmp75;
-                                                    } else {
-                                                      tmp71 = cResult[95];
-                                                    }
-                                                    if (cResult[96] === tmp42) {
-                                                      if (cResult[97] === tmp34) {
-                                                        let tmp76;
-                                                        if (cResult[98] === tmp71) {
-                                                          tmp76 = cResult[99];
-                                                        }
-                                                        return tmp76;
-                                                      }
-                                                    }
-                                                    let obj6 = { style: tmp34, children: items1 };
-                                                    items1 = [tmp71, tmp42];
-                                                    const tmp79 = id(onJumpToReplied, obj6);
-                                                    cResult[96] = tmp42;
-                                                    cResult[97] = tmp34;
-                                                    cResult[98] = tmp71;
-                                                    cResult[99] = tmp79;
-                                                    tmp76 = tmp79;
-                                                  } else {
-                                                    if (cResult[100] !== message.steps) {
-                                                      const _Symbol = Symbol;
-                                                      class Te {
-                                                        constructor(arg0) {
-                                                          let items1;
-                                                          let obj3;
-                                                          let obj4;
-                                                          let obj5;
-                                                          let obj6;
-                                                          let tmp7;
-                                                          if ("outdated" === arg0) {
-                                                            const obj2 = { style: closure_12.reminderTip, children: closure_19(metroImportAll, obj3) };
-                                                            obj3 = { style: closure_12.spoken, children: closure_19(ConjurePublishNoticeLineDefault, obj4) };
-                                                            obj4 = { projectId, notice: "outdated" };
-                                                            return closure_19(metroImportAll, obj2);
-                                                          } else if ("ideas" === arg0) {
-                                                            const obj = { style: closure_12.reminderSeparated, children: closure_19(tmp7, obj5) };
-                                                            obj5 = { style: closure_12.spoken, onAsk: onAskForIdeas, attribution: id(closure_21, obj6) };
-                                                            obj6 = { children: items1 };
-                                                            const obj7 = { style: items, children: closure_19(ConjureMessageAuthor.ConjureAvatar, {}) };
-                                                            items = [, ];
-                                                            ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                                                            tmp7 = ConjureIdeasOfferDefault;
-                                                            items1 = [closure_19(metroImportAll, obj7), ];
-                                                            const obj8 = { style: closure_12.header, children: closure_19(ConjureMessageAuthor.ConjureHeader, {}) };
-                                                            items1[1] = closure_19(metroImportAll, obj8);
-                                                            return closure_19(metroImportAll, obj);
-                                                          }
-                                                        }
-                                                      }
-                                                      if (cResult[102] === Symbol.for("react.memo_cache_sentinel")) {
-                                                        class Me {
-                                                          constructor(kind) {
-                                                            return "error" === kind.kind || "terminal_error" === kind.kind;
-                                                          }
-                                                        }
-                                                        class Te {
-                                                          constructor(arg0) {
-                                                            let items1;
-                                                            let obj3;
-                                                            let obj4;
-                                                            let obj5;
-                                                            let obj6;
-                                                            let tmp7;
-                                                            if ("outdated" === arg0) {
-                                                              const obj2 = { style: closure_12.reminderTip, children: closure_19(metroImportAll, obj3) };
-                                                              obj3 = { style: closure_12.spoken, children: closure_19(ConjurePublishNoticeLineDefault, obj4) };
-                                                              obj4 = { projectId, notice: "outdated" };
-                                                              return closure_19(metroImportAll, obj2);
-                                                            } else if ("ideas" === arg0) {
-                                                              const obj = { style: closure_12.reminderSeparated, children: closure_19(tmp7, obj5) };
-                                                              obj5 = { style: closure_12.spoken, onAsk: onAskForIdeas, attribution: id(closure_21, obj6) };
-                                                              obj6 = { children: items1 };
-                                                              const obj7 = { style: items, children: closure_19(ConjureMessageAuthor.ConjureAvatar, {}) };
+                                                          if ("outdated" === projectId) {
+                                                            tmp20 = jsx;
+                                                            tmp21 = View;
+                                                            obj1 = { style: null, children: null };
+                                                            tmp22 = closure_12;
+                                                            obj1.style = closure_12.reminderTip;
+                                                            tmp23 = jsx;
+                                                            tmp24 = View;
+                                                            obj9 = { style: null, children: null };
+                                                            obj9.style = closure_12.spoken;
+                                                            tmp25 = jsx;
+                                                            tmp26 = closure_1;
+                                                            tmp27 = closure_2;
+                                                            obj10 = { projectId: null, notice: "outdated" };
+                                                            tmp28 = projectId;
+                                                            obj10.projectId = projectId;
+                                                            obj9.children = jsx(closure_1(closure_2[46]), obj10);
+                                                            obj1.children = jsx(View, obj9);
+                                                            return jsx(View, obj1);
+                                                          } else {
+                                                            str = "ideas";
+                                                            if ("ideas" === projectId) {
+                                                              tmp = jsx;
+                                                              tmp2 = View;
+                                                              obj = { style: null, children: null };
+                                                              tmp3 = closure_12;
+                                                              obj.style = closure_12.reminderSeparated;
+                                                              tmp4 = jsx;
+                                                              tmp5 = closure_1;
+                                                              tmp6 = closure_2;
+                                                              obj11 = { style: null, onAsk: null, attribution: null };
+                                                              obj11.style = closure_12.spoken;
+                                                              tmp8 = onAskForIdeas;
+                                                              obj11.onAsk = onAskForIdeas;
+                                                              tmp9 = jsxs;
+                                                              tmp10 = Fragment;
+                                                              obj12 = { children: null };
+                                                              tmp11 = jsx;
+                                                              tmp12 = View;
+                                                              obj13 = { style: null, children: null };
                                                               items = [, ];
                                                               ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                                                              tmp7 = ConjureIdeasOfferDefault;
-                                                              items1 = [closure_19(metroImportAll, obj7), ];
-                                                              const obj8 = { style: closure_12.header, children: closure_19(ConjureMessageAuthor.ConjureHeader, {}) };
-                                                              items1[1] = closure_19(metroImportAll, obj8);
-                                                              return closure_19(metroImportAll, obj);
+                                                              obj13.style = items;
+                                                              tmp13 = jsx;
+                                                              tmp14 = closure_0;
+                                                              tmp15 = closure_2;
+                                                              tmp7 = closure_1(closure_2[47]);
+                                                              obj13.children = jsx(closure_0(closure_2[48]).ConjureAvatar, {});
+                                                              items1 = [, ];
+                                                              items1[0] = jsx(View, obj13);
+                                                              tmp16 = jsx;
+                                                              tmp17 = View;
+                                                              obj14 = { style: null, children: null };
+                                                              obj14.style = closure_12.header;
+                                                              tmp18 = jsx;
+                                                              tmp19 = closure_2;
+                                                              obj14.children = jsx(closure_0(closure_2[48]).ConjureHeader, {});
+                                                              items1[1] = jsx(View, obj14);
+                                                              obj12.children = items1;
+                                                              obj11.attribution = jsxs(Fragment, obj12);
+                                                              obj.children = jsx(tmp7, obj11);
+                                                              return jsx(View, obj);
+                                                            } else {
+                                                              return;
                                                             }
                                                           }
                                                         }
-                                                      } else {
-                                                        class Me {
-                                                          constructor(kind) {
-                                                            return "error" === kind.kind || "terminal_error" === kind.kind;
+                                                      }
+                                                      tmp73[0] = tmp4.activityBox;
+                                                      tmp73[1] = tmp64;
+                                                      const tmp74 = closure_19(onJumpToReplied, tmp73);
+                                                      cResult[94] = tmp4.activityBox;
+                                                      cResult[95] = tmp74;
+                                                      let tmp70 = tmp74;
+                                                    } else {
+                                                      tmp70 = cResult[95];
+                                                    }
+                                                    if (cResult[96] === tmp41) {
+                                                      if (cResult[97] === tmp33) {
+                                                        if (cResult[98] === tmp70) {
+                                                          let tmp75 = cResult[99];
+                                                        }
+                                                        return tmp75;
+                                                      }
+                                                    }
+                                                    let obj6 = { style: tmp33, children: null };
+                                                    let items1 = [tmp70, tmp41];
+                                                    obj6.children = items1;
+                                                    const tmp78 = id(onJumpToReplied, obj6);
+                                                    cResult[96] = tmp41;
+                                                    cResult[97] = tmp33;
+                                                    cResult[98] = tmp70;
+                                                    cResult[99] = tmp78;
+                                                    tmp75 = tmp78;
+                                                  } else if (cResult[100] !== message.steps) {
+                                                    const _Symbol = Symbol;
+                                                    class Te {
+                                                      constructor(arg0) {
+                                                        if ("outdated" === projectId) {
+                                                          tmp20 = jsx;
+                                                          tmp21 = View;
+                                                          obj1 = { style: null, children: null };
+                                                          tmp22 = closure_12;
+                                                          obj1.style = closure_12.reminderTip;
+                                                          tmp23 = jsx;
+                                                          tmp24 = View;
+                                                          obj9 = { style: null, children: null };
+                                                          obj9.style = closure_12.spoken;
+                                                          tmp25 = jsx;
+                                                          tmp26 = closure_1;
+                                                          tmp27 = closure_2;
+                                                          obj10 = { projectId: null, notice: "outdated" };
+                                                          tmp28 = projectId;
+                                                          obj10.projectId = projectId;
+                                                          obj9.children = jsx(closure_1(closure_2[46]), obj10);
+                                                          obj1.children = jsx(View, obj9);
+                                                          return jsx(View, obj1);
+                                                        } else {
+                                                          str = "ideas";
+                                                          if ("ideas" === projectId) {
+                                                            tmp = jsx;
+                                                            tmp2 = View;
+                                                            obj = { style: null, children: null };
+                                                            tmp3 = closure_12;
+                                                            obj.style = closure_12.reminderSeparated;
+                                                            tmp4 = jsx;
+                                                            tmp5 = closure_1;
+                                                            tmp6 = closure_2;
+                                                            obj11 = { style: null, onAsk: null, attribution: null };
+                                                            obj11.style = closure_12.spoken;
+                                                            tmp8 = onAskForIdeas;
+                                                            obj11.onAsk = onAskForIdeas;
+                                                            tmp9 = jsxs;
+                                                            tmp10 = Fragment;
+                                                            obj12 = { children: null };
+                                                            tmp11 = jsx;
+                                                            tmp12 = View;
+                                                            obj13 = { style: null, children: null };
+                                                            items = [, ];
+                                                            ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
+                                                            obj13.style = items;
+                                                            tmp13 = jsx;
+                                                            tmp14 = closure_0;
+                                                            tmp15 = closure_2;
+                                                            tmp7 = closure_1(closure_2[47]);
+                                                            obj13.children = jsx(closure_0(closure_2[48]).ConjureAvatar, {});
+                                                            items1 = [, ];
+                                                            items1[0] = jsx(View, obj13);
+                                                            tmp16 = jsx;
+                                                            tmp17 = View;
+                                                            obj14 = { style: null, children: null };
+                                                            obj14.style = closure_12.header;
+                                                            tmp18 = jsx;
+                                                            tmp19 = closure_2;
+                                                            obj14.children = jsx(closure_0(closure_2[48]).ConjureHeader, {});
+                                                            items1[1] = jsx(View, obj14);
+                                                            obj12.children = items1;
+                                                            obj11.attribution = jsxs(Fragment, obj12);
+                                                            obj.children = jsx(tmp7, obj11);
+                                                            return jsx(View, obj);
+                                                          } else {
+                                                            return;
                                                           }
                                                         }
                                                       }
-                                                      const steps1 = message.steps;
-                                                      const found = steps1.find(Me);
-                                                      cResult[100] = message.steps;
-                                                      cResult[101] = found;
+                                                    }
+                                                    if (cResult[102] === Symbol.for("react.memo_cache_sentinel")) {
+                                                      class Me {
+                                                        constructor(arg0) {
+                                                          tmp = "error" === projectId.kind;
+                                                          if (!tmp) {
+                                                            str = "terminal_error";
+                                                            tmp = "terminal_error" === projectId.kind;
+                                                          }
+                                                          return tmp;
+                                                        }
+                                                      }
+                                                      class Te {
+                                                        constructor(arg0) {
+                                                          if ("outdated" === projectId) {
+                                                            tmp20 = jsx;
+                                                            tmp21 = View;
+                                                            obj1 = { style: null, children: null };
+                                                            tmp22 = closure_12;
+                                                            obj1.style = closure_12.reminderTip;
+                                                            tmp23 = jsx;
+                                                            tmp24 = View;
+                                                            obj9 = { style: null, children: null };
+                                                            obj9.style = closure_12.spoken;
+                                                            tmp25 = jsx;
+                                                            tmp26 = closure_1;
+                                                            tmp27 = closure_2;
+                                                            obj10 = { projectId: null, notice: "outdated" };
+                                                            tmp28 = projectId;
+                                                            obj10.projectId = projectId;
+                                                            obj9.children = jsx(closure_1(closure_2[46]), obj10);
+                                                            obj1.children = jsx(View, obj9);
+                                                            return jsx(View, obj1);
+                                                          } else {
+                                                            str = "ideas";
+                                                            if ("ideas" === projectId) {
+                                                              tmp = jsx;
+                                                              tmp2 = View;
+                                                              obj = { style: null, children: null };
+                                                              tmp3 = closure_12;
+                                                              obj.style = closure_12.reminderSeparated;
+                                                              tmp4 = jsx;
+                                                              tmp5 = closure_1;
+                                                              tmp6 = closure_2;
+                                                              obj11 = { style: null, onAsk: null, attribution: null };
+                                                              obj11.style = closure_12.spoken;
+                                                              tmp8 = onAskForIdeas;
+                                                              obj11.onAsk = onAskForIdeas;
+                                                              tmp9 = jsxs;
+                                                              tmp10 = Fragment;
+                                                              obj12 = { children: null };
+                                                              tmp11 = jsx;
+                                                              tmp12 = View;
+                                                              obj13 = { style: null, children: null };
+                                                              items = [, ];
+                                                              ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
+                                                              obj13.style = items;
+                                                              tmp13 = jsx;
+                                                              tmp14 = closure_0;
+                                                              tmp15 = closure_2;
+                                                              tmp7 = closure_1(closure_2[47]);
+                                                              obj13.children = jsx(closure_0(closure_2[48]).ConjureAvatar, {});
+                                                              items1 = [, ];
+                                                              items1[0] = jsx(View, obj13);
+                                                              tmp16 = jsx;
+                                                              tmp17 = View;
+                                                              obj14 = { style: null, children: null };
+                                                              obj14.style = closure_12.header;
+                                                              tmp18 = jsx;
+                                                              tmp19 = closure_2;
+                                                              obj14.children = jsx(closure_0(closure_2[48]).ConjureHeader, {});
+                                                              items1[1] = jsx(View, obj14);
+                                                              obj12.children = items1;
+                                                              obj11.attribution = jsxs(Fragment, obj12);
+                                                              obj.children = jsx(tmp7, obj11);
+                                                              return jsx(View, obj);
+                                                            } else {
+                                                              return;
+                                                            }
+                                                          }
+                                                        }
+                                                      }
                                                     } else {
                                                       class Me {
-                                                        constructor(kind) {
-                                                          return "error" === kind.kind || "terminal_error" === kind.kind;
+                                                        constructor(arg0) {
+                                                          tmp = "error" === projectId.kind;
+                                                          if (!tmp) {
+                                                            str = "terminal_error";
+                                                            tmp = "terminal_error" === projectId.kind;
+                                                          }
+                                                          return tmp;
                                                         }
+                                                      }
+                                                    }
+                                                    let steps = message.steps;
+                                                    const found = steps.find(Me);
+                                                    cResult[100] = message.steps;
+                                                    cResult[101] = found;
+                                                  } else {
+                                                    class Me {
+                                                      constructor(arg0) {
+                                                        tmp = "error" === projectId.kind;
+                                                        if (!tmp) {
+                                                          str = "terminal_error";
+                                                          tmp = "terminal_error" === projectId.kind;
+                                                        }
+                                                        return tmp;
                                                       }
                                                     }
                                                     class Te {
                                                       constructor(arg0) {
-                                                        let items1;
-                                                        let obj3;
-                                                        let obj4;
-                                                        let obj5;
-                                                        let obj6;
-                                                        let tmp7;
-                                                        if ("outdated" === arg0) {
-                                                          const obj2 = { style: closure_12.reminderTip, children: closure_19(metroImportAll, obj3) };
-                                                          obj3 = { style: closure_12.spoken, children: closure_19(ConjurePublishNoticeLineDefault, obj4) };
-                                                          obj4 = { projectId, notice: "outdated" };
-                                                          return closure_19(metroImportAll, obj2);
-                                                        } else if ("ideas" === arg0) {
-                                                          const obj = { style: closure_12.reminderSeparated, children: closure_19(tmp7, obj5) };
-                                                          obj5 = { style: closure_12.spoken, onAsk: onAskForIdeas, attribution: id(closure_21, obj6) };
-                                                          obj6 = { children: items1 };
-                                                          const obj7 = { style: items, children: closure_19(ConjureMessageAuthor.ConjureAvatar, {}) };
-                                                          items = [, ];
-                                                          ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                                                          tmp7 = ConjureIdeasOfferDefault;
-                                                          items1 = [closure_19(metroImportAll, obj7), ];
-                                                          const obj8 = { style: closure_12.header, children: closure_19(ConjureMessageAuthor.ConjureHeader, {}) };
-                                                          items1[1] = closure_19(metroImportAll, obj8);
-                                                          return closure_19(metroImportAll, obj);
+                                                        if ("outdated" === projectId) {
+                                                          tmp20 = jsx;
+                                                          tmp21 = View;
+                                                          obj1 = { style: null, children: null };
+                                                          tmp22 = closure_12;
+                                                          obj1.style = closure_12.reminderTip;
+                                                          tmp23 = jsx;
+                                                          tmp24 = View;
+                                                          obj9 = { style: null, children: null };
+                                                          obj9.style = closure_12.spoken;
+                                                          tmp25 = jsx;
+                                                          tmp26 = closure_1;
+                                                          tmp27 = closure_2;
+                                                          obj10 = { projectId: null, notice: "outdated" };
+                                                          tmp28 = projectId;
+                                                          obj10.projectId = projectId;
+                                                          obj9.children = jsx(closure_1(closure_2[46]), obj10);
+                                                          obj1.children = jsx(View, obj9);
+                                                          return jsx(View, obj1);
+                                                        } else {
+                                                          str = "ideas";
+                                                          if ("ideas" === projectId) {
+                                                            tmp = jsx;
+                                                            tmp2 = View;
+                                                            obj = { style: null, children: null };
+                                                            tmp3 = closure_12;
+                                                            obj.style = closure_12.reminderSeparated;
+                                                            tmp4 = jsx;
+                                                            tmp5 = closure_1;
+                                                            tmp6 = closure_2;
+                                                            obj11 = { style: null, onAsk: null, attribution: null };
+                                                            obj11.style = closure_12.spoken;
+                                                            tmp8 = onAskForIdeas;
+                                                            obj11.onAsk = onAskForIdeas;
+                                                            tmp9 = jsxs;
+                                                            tmp10 = Fragment;
+                                                            obj12 = { children: null };
+                                                            tmp11 = jsx;
+                                                            tmp12 = View;
+                                                            obj13 = { style: null, children: null };
+                                                            items = [, ];
+                                                            ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
+                                                            obj13.style = items;
+                                                            tmp13 = jsx;
+                                                            tmp14 = closure_0;
+                                                            tmp15 = closure_2;
+                                                            tmp7 = closure_1(closure_2[47]);
+                                                            obj13.children = jsx(closure_0(closure_2[48]).ConjureAvatar, {});
+                                                            items1 = [, ];
+                                                            items1[0] = jsx(View, obj13);
+                                                            tmp16 = jsx;
+                                                            tmp17 = View;
+                                                            obj14 = { style: null, children: null };
+                                                            obj14.style = closure_12.header;
+                                                            tmp18 = jsx;
+                                                            tmp19 = closure_2;
+                                                            obj14.children = jsx(closure_0(closure_2[48]).ConjureHeader, {});
+                                                            items1[1] = jsx(View, obj14);
+                                                            obj12.children = items1;
+                                                            obj11.attribution = jsxs(Fragment, obj12);
+                                                            obj.children = jsx(tmp7, obj11);
+                                                            return jsx(View, obj);
+                                                          } else {
+                                                            return;
+                                                          }
                                                         }
                                                       }
                                                     }
                                                     if ("proposal" === message.kind) {
                                                       class Me {
-                                                        constructor(kind) {
-                                                          return "error" === kind.kind || "terminal_error" === kind.kind;
+                                                        constructor(arg0) {
+                                                          tmp = "error" === projectId.kind;
+                                                          if (!tmp) {
+                                                            str = "terminal_error";
+                                                            tmp = "terminal_error" === projectId.kind;
+                                                          }
+                                                          return tmp;
                                                         }
                                                       }
                                                     }
-                                                    const tmp51 = closure_17(message);
-                                                    if (tmp51) {
+                                                    const tmp50 = closure_17(message);
+                                                    if (tmp50) {
                                                       class Me {
-                                                        constructor(kind) {
-                                                          return "error" === kind.kind || "terminal_error" === kind.kind;
+                                                        constructor(arg0) {
+                                                          tmp = "error" === projectId.kind;
+                                                          if (!tmp) {
+                                                            str = "terminal_error";
+                                                            tmp = "terminal_error" === projectId.kind;
+                                                          }
+                                                          return tmp;
                                                         }
                                                       }
                                                       if (null != message.ideas) {
                                                         class Me {
-                                                          constructor(kind) {
-                                                            return "error" === kind.kind || "terminal_error" === kind.kind;
+                                                          constructor(arg0) {
+                                                            tmp = "error" === projectId.kind;
+                                                            if (!tmp) {
+                                                              str = "terminal_error";
+                                                              tmp = "terminal_error" === projectId.kind;
+                                                            }
+                                                            return tmp;
                                                           }
                                                         }
                                                         class Te {
                                                           constructor(arg0) {
-                                                            let items1;
-                                                            let obj3;
-                                                            let obj4;
-                                                            let obj5;
-                                                            let obj6;
-                                                            let tmp7;
-                                                            if ("outdated" === arg0) {
-                                                              const obj2 = { style: closure_12.reminderTip, children: closure_19(metroImportAll, obj3) };
-                                                              obj3 = { style: closure_12.spoken, children: closure_19(ConjurePublishNoticeLineDefault, obj4) };
-                                                              obj4 = { projectId, notice: "outdated" };
-                                                              return closure_19(metroImportAll, obj2);
-                                                            } else if ("ideas" === arg0) {
-                                                              const obj = { style: closure_12.reminderSeparated, children: closure_19(tmp7, obj5) };
-                                                              obj5 = { style: closure_12.spoken, onAsk: onAskForIdeas, attribution: id(closure_21, obj6) };
-                                                              obj6 = { children: items1 };
-                                                              const obj7 = { style: items, children: closure_19(ConjureMessageAuthor.ConjureAvatar, {}) };
-                                                              items = [, ];
-                                                              ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                                                              tmp7 = ConjureIdeasOfferDefault;
-                                                              items1 = [closure_19(metroImportAll, obj7), ];
-                                                              const obj8 = { style: closure_12.header, children: closure_19(ConjureMessageAuthor.ConjureHeader, {}) };
-                                                              items1[1] = closure_19(metroImportAll, obj8);
-                                                              return closure_19(metroImportAll, obj);
+                                                            if ("outdated" === projectId) {
+                                                              tmp20 = jsx;
+                                                              tmp21 = View;
+                                                              obj1 = { style: null, children: null };
+                                                              tmp22 = closure_12;
+                                                              obj1.style = closure_12.reminderTip;
+                                                              tmp23 = jsx;
+                                                              tmp24 = View;
+                                                              obj9 = { style: null, children: null };
+                                                              obj9.style = closure_12.spoken;
+                                                              tmp25 = jsx;
+                                                              tmp26 = closure_1;
+                                                              tmp27 = closure_2;
+                                                              obj10 = { projectId: null, notice: "outdated" };
+                                                              tmp28 = projectId;
+                                                              obj10.projectId = projectId;
+                                                              obj9.children = jsx(closure_1(closure_2[46]), obj10);
+                                                              obj1.children = jsx(View, obj9);
+                                                              return jsx(View, obj1);
+                                                            } else {
+                                                              str = "ideas";
+                                                              if ("ideas" === projectId) {
+                                                                tmp = jsx;
+                                                                tmp2 = View;
+                                                                obj = { style: null, children: null };
+                                                                tmp3 = closure_12;
+                                                                obj.style = closure_12.reminderSeparated;
+                                                                tmp4 = jsx;
+                                                                tmp5 = closure_1;
+                                                                tmp6 = closure_2;
+                                                                obj11 = { style: null, onAsk: null, attribution: null };
+                                                                obj11.style = closure_12.spoken;
+                                                                tmp8 = onAskForIdeas;
+                                                                obj11.onAsk = onAskForIdeas;
+                                                                tmp9 = jsxs;
+                                                                tmp10 = Fragment;
+                                                                obj12 = { children: null };
+                                                                tmp11 = jsx;
+                                                                tmp12 = View;
+                                                                obj13 = { style: null, children: null };
+                                                                items = [, ];
+                                                                ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
+                                                                obj13.style = items;
+                                                                tmp13 = jsx;
+                                                                tmp14 = closure_0;
+                                                                tmp15 = closure_2;
+                                                                tmp7 = closure_1(closure_2[47]);
+                                                                obj13.children = jsx(closure_0(closure_2[48]).ConjureAvatar, {});
+                                                                items1 = [, ];
+                                                                items1[0] = jsx(View, obj13);
+                                                                tmp16 = jsx;
+                                                                tmp17 = View;
+                                                                obj14 = { style: null, children: null };
+                                                                obj14.style = closure_12.header;
+                                                                tmp18 = jsx;
+                                                                tmp19 = closure_2;
+                                                                obj14.children = jsx(closure_0(closure_2[48]).ConjureHeader, {});
+                                                                items1[1] = jsx(View, obj14);
+                                                                obj12.children = items1;
+                                                                obj11.attribution = jsxs(Fragment, obj12);
+                                                                obj.children = jsx(tmp7, obj11);
+                                                                return jsx(View, obj);
+                                                              } else {
+                                                                return;
+                                                              }
                                                             }
                                                           }
                                                         }
                                                       }
                                                     }
-                                                    if (tmp51) {
+                                                    if (tmp50) {
                                                       class Me {
-                                                        constructor(kind) {
-                                                          return "error" === kind.kind || "terminal_error" === kind.kind;
+                                                        constructor(arg0) {
+                                                          tmp = "error" === projectId.kind;
+                                                          if (!tmp) {
+                                                            str = "terminal_error";
+                                                            tmp = "terminal_error" === projectId.kind;
+                                                          }
+                                                          return tmp;
                                                         }
                                                       }
-                                                      if (tmp54 == null) {
+                                                      if (tmp53 == null) {
                                                         class Me {
-                                                          constructor(kind) {
-                                                            return "error" === kind.kind || "terminal_error" === kind.kind;
+                                                          constructor(arg0) {
+                                                            tmp = "error" === projectId.kind;
+                                                            if (!tmp) {
+                                                              str = "terminal_error";
+                                                              tmp = "terminal_error" === projectId.kind;
+                                                            }
+                                                            return tmp;
                                                           }
                                                         }
                                                       }
                                                       class Te {
                                                         constructor(arg0) {
-                                                          let items1;
-                                                          let obj3;
-                                                          let obj4;
-                                                          let obj5;
-                                                          let obj6;
-                                                          let tmp7;
-                                                          if ("outdated" === arg0) {
-                                                            const obj2 = { style: closure_12.reminderTip, children: closure_19(metroImportAll, obj3) };
-                                                            obj3 = { style: closure_12.spoken, children: closure_19(ConjurePublishNoticeLineDefault, obj4) };
-                                                            obj4 = { projectId, notice: "outdated" };
-                                                            return closure_19(metroImportAll, obj2);
-                                                          } else if ("ideas" === arg0) {
-                                                            const obj = { style: closure_12.reminderSeparated, children: closure_19(tmp7, obj5) };
-                                                            obj5 = { style: closure_12.spoken, onAsk: onAskForIdeas, attribution: id(closure_21, obj6) };
-                                                            obj6 = { children: items1 };
-                                                            const obj7 = { style: items, children: closure_19(ConjureMessageAuthor.ConjureAvatar, {}) };
-                                                            items = [, ];
-                                                            ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                                                            tmp7 = ConjureIdeasOfferDefault;
-                                                            items1 = [closure_19(metroImportAll, obj7), ];
-                                                            const obj8 = { style: closure_12.header, children: closure_19(ConjureMessageAuthor.ConjureHeader, {}) };
-                                                            items1[1] = closure_19(metroImportAll, obj8);
-                                                            return closure_19(metroImportAll, obj);
+                                                          if ("outdated" === projectId) {
+                                                            tmp20 = jsx;
+                                                            tmp21 = View;
+                                                            obj1 = { style: null, children: null };
+                                                            tmp22 = closure_12;
+                                                            obj1.style = closure_12.reminderTip;
+                                                            tmp23 = jsx;
+                                                            tmp24 = View;
+                                                            obj9 = { style: null, children: null };
+                                                            obj9.style = closure_12.spoken;
+                                                            tmp25 = jsx;
+                                                            tmp26 = closure_1;
+                                                            tmp27 = closure_2;
+                                                            obj10 = { projectId: null, notice: "outdated" };
+                                                            tmp28 = projectId;
+                                                            obj10.projectId = projectId;
+                                                            obj9.children = jsx(closure_1(closure_2[46]), obj10);
+                                                            obj1.children = jsx(View, obj9);
+                                                            return jsx(View, obj1);
+                                                          } else {
+                                                            str = "ideas";
+                                                            if ("ideas" === projectId) {
+                                                              tmp = jsx;
+                                                              tmp2 = View;
+                                                              obj = { style: null, children: null };
+                                                              tmp3 = closure_12;
+                                                              obj.style = closure_12.reminderSeparated;
+                                                              tmp4 = jsx;
+                                                              tmp5 = closure_1;
+                                                              tmp6 = closure_2;
+                                                              obj11 = { style: null, onAsk: null, attribution: null };
+                                                              obj11.style = closure_12.spoken;
+                                                              tmp8 = onAskForIdeas;
+                                                              obj11.onAsk = onAskForIdeas;
+                                                              tmp9 = jsxs;
+                                                              tmp10 = Fragment;
+                                                              obj12 = { children: null };
+                                                              tmp11 = jsx;
+                                                              tmp12 = View;
+                                                              obj13 = { style: null, children: null };
+                                                              items = [, ];
+                                                              ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
+                                                              obj13.style = items;
+                                                              tmp13 = jsx;
+                                                              tmp14 = closure_0;
+                                                              tmp15 = closure_2;
+                                                              tmp7 = closure_1(closure_2[47]);
+                                                              obj13.children = jsx(closure_0(closure_2[48]).ConjureAvatar, {});
+                                                              items1 = [, ];
+                                                              items1[0] = jsx(View, obj13);
+                                                              tmp16 = jsx;
+                                                              tmp17 = View;
+                                                              obj14 = { style: null, children: null };
+                                                              obj14.style = closure_12.header;
+                                                              tmp18 = jsx;
+                                                              tmp19 = closure_2;
+                                                              obj14.children = jsx(closure_0(closure_2[48]).ConjureHeader, {});
+                                                              items1[1] = jsx(View, obj14);
+                                                              obj12.children = items1;
+                                                              obj11.attribution = jsxs(Fragment, obj12);
+                                                              obj.children = jsx(tmp7, obj11);
+                                                              return jsx(View, obj);
+                                                            } else {
+                                                              return;
+                                                            }
                                                           }
                                                         }
                                                       }
                                                     }
-                                                    if (tmp51) {
+                                                    if (tmp50) {
                                                       class Me {
-                                                        constructor(kind) {
-                                                          return "error" === kind.kind || "terminal_error" === kind.kind;
+                                                        constructor(arg0) {
+                                                          tmp = "error" === projectId.kind;
+                                                          if (!tmp) {
+                                                            str = "terminal_error";
+                                                            tmp = "terminal_error" === projectId.kind;
+                                                          }
+                                                          return tmp;
                                                         }
                                                       }
-                                                      if (tmp56 == null) {
+                                                      if (tmp55 == null) {
                                                         class Me {
-                                                          constructor(kind) {
-                                                            return "error" === kind.kind || "terminal_error" === kind.kind;
+                                                          constructor(arg0) {
+                                                            tmp = "error" === projectId.kind;
+                                                            if (!tmp) {
+                                                              str = "terminal_error";
+                                                              tmp = "terminal_error" === projectId.kind;
+                                                            }
+                                                            return tmp;
                                                           }
                                                         }
                                                       }
                                                       class Te {
                                                         constructor(arg0) {
-                                                          let items1;
-                                                          let obj3;
-                                                          let obj4;
-                                                          let obj5;
-                                                          let obj6;
-                                                          let tmp7;
-                                                          if ("outdated" === arg0) {
-                                                            const obj2 = { style: closure_12.reminderTip, children: closure_19(metroImportAll, obj3) };
-                                                            obj3 = { style: closure_12.spoken, children: closure_19(ConjurePublishNoticeLineDefault, obj4) };
-                                                            obj4 = { projectId, notice: "outdated" };
-                                                            return closure_19(metroImportAll, obj2);
-                                                          } else if ("ideas" === arg0) {
-                                                            const obj = { style: closure_12.reminderSeparated, children: closure_19(tmp7, obj5) };
-                                                            obj5 = { style: closure_12.spoken, onAsk: onAskForIdeas, attribution: id(closure_21, obj6) };
-                                                            obj6 = { children: items1 };
-                                                            const obj7 = { style: items, children: closure_19(ConjureMessageAuthor.ConjureAvatar, {}) };
-                                                            items = [, ];
-                                                            ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                                                            tmp7 = ConjureIdeasOfferDefault;
-                                                            items1 = [closure_19(metroImportAll, obj7), ];
-                                                            const obj8 = { style: closure_12.header, children: closure_19(ConjureMessageAuthor.ConjureHeader, {}) };
-                                                            items1[1] = closure_19(metroImportAll, obj8);
-                                                            return closure_19(metroImportAll, obj);
+                                                          if ("outdated" === projectId) {
+                                                            tmp20 = jsx;
+                                                            tmp21 = View;
+                                                            obj1 = { style: null, children: null };
+                                                            tmp22 = closure_12;
+                                                            obj1.style = closure_12.reminderTip;
+                                                            tmp23 = jsx;
+                                                            tmp24 = View;
+                                                            obj9 = { style: null, children: null };
+                                                            obj9.style = closure_12.spoken;
+                                                            tmp25 = jsx;
+                                                            tmp26 = closure_1;
+                                                            tmp27 = closure_2;
+                                                            obj10 = { projectId: null, notice: "outdated" };
+                                                            tmp28 = projectId;
+                                                            obj10.projectId = projectId;
+                                                            obj9.children = jsx(closure_1(closure_2[46]), obj10);
+                                                            obj1.children = jsx(View, obj9);
+                                                            return jsx(View, obj1);
+                                                          } else {
+                                                            str = "ideas";
+                                                            if ("ideas" === projectId) {
+                                                              tmp = jsx;
+                                                              tmp2 = View;
+                                                              obj = { style: null, children: null };
+                                                              tmp3 = closure_12;
+                                                              obj.style = closure_12.reminderSeparated;
+                                                              tmp4 = jsx;
+                                                              tmp5 = closure_1;
+                                                              tmp6 = closure_2;
+                                                              obj11 = { style: null, onAsk: null, attribution: null };
+                                                              obj11.style = closure_12.spoken;
+                                                              tmp8 = onAskForIdeas;
+                                                              obj11.onAsk = onAskForIdeas;
+                                                              tmp9 = jsxs;
+                                                              tmp10 = Fragment;
+                                                              obj12 = { children: null };
+                                                              tmp11 = jsx;
+                                                              tmp12 = View;
+                                                              obj13 = { style: null, children: null };
+                                                              items = [, ];
+                                                              ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
+                                                              obj13.style = items;
+                                                              tmp13 = jsx;
+                                                              tmp14 = closure_0;
+                                                              tmp15 = closure_2;
+                                                              tmp7 = closure_1(closure_2[47]);
+                                                              obj13.children = jsx(closure_0(closure_2[48]).ConjureAvatar, {});
+                                                              items1 = [, ];
+                                                              items1[0] = jsx(View, obj13);
+                                                              tmp16 = jsx;
+                                                              tmp17 = View;
+                                                              obj14 = { style: null, children: null };
+                                                              obj14.style = closure_12.header;
+                                                              tmp18 = jsx;
+                                                              tmp19 = closure_2;
+                                                              obj14.children = jsx(closure_0(closure_2[48]).ConjureHeader, {});
+                                                              items1[1] = jsx(View, obj14);
+                                                              obj12.children = items1;
+                                                              obj11.attribution = jsxs(Fragment, obj12);
+                                                              obj.children = jsx(tmp7, obj11);
+                                                              return jsx(View, obj);
+                                                            } else {
+                                                              return;
+                                                            }
                                                           }
                                                         }
                                                       }
                                                     }
                                                     if (cResult[103] === isNewest) {
                                                       class Me {
-                                                        constructor(kind) {
-                                                          return "error" === kind.kind || "terminal_error" === kind.kind;
+                                                        constructor(arg0) {
+                                                          tmp = "error" === projectId.kind;
+                                                          if (!tmp) {
+                                                            str = "terminal_error";
+                                                            tmp = "terminal_error" === projectId.kind;
+                                                          }
+                                                          return tmp;
                                                         }
                                                       }
                                                     }
-                                                    let tmp58;
+                                                    let tmp57;
                                                     if ("open" === secretRequestStatus) {
                                                       class Me {
-                                                        constructor(kind) {
-                                                          return "error" === kind.kind || "terminal_error" === kind.kind;
+                                                        constructor(arg0) {
+                                                          tmp = "error" === projectId.kind;
+                                                          if (!tmp) {
+                                                            str = "terminal_error";
+                                                            tmp = "terminal_error" === projectId.kind;
+                                                          }
+                                                          return tmp;
                                                         }
                                                       }
-                                                      const activeAwaitingUserResult = obj9.activeAwaitingUser(message, isNewest);
                                                       class Te {
                                                         constructor(arg0) {
-                                                          let items1;
-                                                          let obj3;
-                                                          let obj4;
-                                                          let obj5;
-                                                          let obj6;
-                                                          let tmp7;
-                                                          if ("outdated" === arg0) {
-                                                            const obj2 = { style: closure_12.reminderTip, children: closure_19(metroImportAll, obj3) };
-                                                            obj3 = { style: closure_12.spoken, children: closure_19(ConjurePublishNoticeLineDefault, obj4) };
-                                                            obj4 = { projectId, notice: "outdated" };
-                                                            return closure_19(metroImportAll, obj2);
-                                                          } else if ("ideas" === arg0) {
-                                                            const obj = { style: closure_12.reminderSeparated, children: closure_19(tmp7, obj5) };
-                                                            obj5 = { style: closure_12.spoken, onAsk: onAskForIdeas, attribution: id(closure_21, obj6) };
-                                                            obj6 = { children: items1 };
-                                                            const obj7 = { style: items, children: closure_19(ConjureMessageAuthor.ConjureAvatar, {}) };
-                                                            items = [, ];
-                                                            ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                                                            tmp7 = ConjureIdeasOfferDefault;
-                                                            items1 = [closure_19(metroImportAll, obj7), ];
-                                                            const obj8 = { style: closure_12.header, children: closure_19(ConjureMessageAuthor.ConjureHeader, {}) };
-                                                            items1[1] = closure_19(metroImportAll, obj8);
-                                                            return closure_19(metroImportAll, obj);
+                                                          if ("outdated" === projectId) {
+                                                            tmp20 = jsx;
+                                                            tmp21 = View;
+                                                            obj1 = { style: null, children: null };
+                                                            tmp22 = closure_12;
+                                                            obj1.style = closure_12.reminderTip;
+                                                            tmp23 = jsx;
+                                                            tmp24 = View;
+                                                            obj9 = { style: null, children: null };
+                                                            obj9.style = closure_12.spoken;
+                                                            tmp25 = jsx;
+                                                            tmp26 = closure_1;
+                                                            tmp27 = closure_2;
+                                                            obj10 = { projectId: null, notice: "outdated" };
+                                                            tmp28 = projectId;
+                                                            obj10.projectId = projectId;
+                                                            obj9.children = jsx(closure_1(closure_2[46]), obj10);
+                                                            obj1.children = jsx(View, obj9);
+                                                            return jsx(View, obj1);
+                                                          } else {
+                                                            str = "ideas";
+                                                            if ("ideas" === projectId) {
+                                                              tmp = jsx;
+                                                              tmp2 = View;
+                                                              obj = { style: null, children: null };
+                                                              tmp3 = closure_12;
+                                                              obj.style = closure_12.reminderSeparated;
+                                                              tmp4 = jsx;
+                                                              tmp5 = closure_1;
+                                                              tmp6 = closure_2;
+                                                              obj11 = { style: null, onAsk: null, attribution: null };
+                                                              obj11.style = closure_12.spoken;
+                                                              tmp8 = onAskForIdeas;
+                                                              obj11.onAsk = onAskForIdeas;
+                                                              tmp9 = jsxs;
+                                                              tmp10 = Fragment;
+                                                              obj12 = { children: null };
+                                                              tmp11 = jsx;
+                                                              tmp12 = View;
+                                                              obj13 = { style: null, children: null };
+                                                              items = [, ];
+                                                              ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
+                                                              obj13.style = items;
+                                                              tmp13 = jsx;
+                                                              tmp14 = closure_0;
+                                                              tmp15 = closure_2;
+                                                              tmp7 = closure_1(closure_2[47]);
+                                                              obj13.children = jsx(closure_0(closure_2[48]).ConjureAvatar, {});
+                                                              items1 = [, ];
+                                                              items1[0] = jsx(View, obj13);
+                                                              tmp16 = jsx;
+                                                              tmp17 = View;
+                                                              obj14 = { style: null, children: null };
+                                                              obj14.style = closure_12.header;
+                                                              tmp18 = jsx;
+                                                              tmp19 = closure_2;
+                                                              obj14.children = jsx(closure_0(closure_2[48]).ConjureHeader, {});
+                                                              items1[1] = jsx(View, obj14);
+                                                              obj12.children = items1;
+                                                              obj11.attribution = jsxs(Fragment, obj12);
+                                                              obj.children = jsx(tmp7, obj11);
+                                                              return jsx(View, obj);
+                                                            } else {
+                                                              return;
+                                                            }
                                                           }
                                                         }
                                                       }
-                                                      tmp58 = activeAwaitingUserResult;
+                                                      tmp57 = obj9.activeAwaitingUser(message, isNewest);
+                                                      const activeAwaitingUserResult = obj9.activeAwaitingUser(message, isNewest);
                                                     }
                                                     cResult[103] = isNewest;
                                                     cResult[104] = message;
                                                     cResult[105] = secretRequestStatus;
-                                                    cResult[106] = tmp58;
+                                                    cResult[106] = tmp57;
                                                   }
                                                 }
                                               }
@@ -3196,77 +3646,166 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
                                           }
                                           class Te {
                                             constructor(arg0) {
-                                              let items1;
-                                              let obj3;
-                                              let obj4;
-                                              let obj5;
-                                              let obj6;
-                                              let tmp7;
-                                              if ("outdated" === arg0) {
-                                                const obj2 = { style: closure_12.reminderTip, children: closure_19(metroImportAll, obj3) };
-                                                obj3 = { style: closure_12.spoken, children: closure_19(ConjurePublishNoticeLineDefault, obj4) };
-                                                obj4 = { projectId, notice: "outdated" };
-                                                return closure_19(metroImportAll, obj2);
-                                              } else if ("ideas" === arg0) {
-                                                const obj = { style: closure_12.reminderSeparated, children: closure_19(tmp7, obj5) };
-                                                obj5 = { style: closure_12.spoken, onAsk: onAskForIdeas, attribution: id(closure_21, obj6) };
-                                                obj6 = { children: items1 };
-                                                const obj7 = { style: items, children: closure_19(ConjureMessageAuthor.ConjureAvatar, {}) };
-                                                items = [, ];
-                                                ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                                                tmp7 = ConjureIdeasOfferDefault;
-                                                items1 = [closure_19(metroImportAll, obj7), ];
-                                                const obj8 = { style: closure_12.header, children: closure_19(ConjureMessageAuthor.ConjureHeader, {}) };
-                                                items1[1] = closure_19(metroImportAll, obj8);
-                                                return closure_19(metroImportAll, obj);
+                                              if ("outdated" === projectId) {
+                                                tmp20 = jsx;
+                                                tmp21 = View;
+                                                obj1 = { style: null, children: null };
+                                                tmp22 = closure_12;
+                                                obj1.style = closure_12.reminderTip;
+                                                tmp23 = jsx;
+                                                tmp24 = View;
+                                                obj9 = { style: null, children: null };
+                                                obj9.style = closure_12.spoken;
+                                                tmp25 = jsx;
+                                                tmp26 = closure_1;
+                                                tmp27 = closure_2;
+                                                obj10 = { projectId: null, notice: "outdated" };
+                                                tmp28 = projectId;
+                                                obj10.projectId = projectId;
+                                                obj9.children = jsx(closure_1(closure_2[46]), obj10);
+                                                obj1.children = jsx(View, obj9);
+                                                return jsx(View, obj1);
+                                              } else {
+                                                str = "ideas";
+                                                if ("ideas" === projectId) {
+                                                  tmp = jsx;
+                                                  tmp2 = View;
+                                                  obj = { style: null, children: null };
+                                                  tmp3 = closure_12;
+                                                  obj.style = closure_12.reminderSeparated;
+                                                  tmp4 = jsx;
+                                                  tmp5 = closure_1;
+                                                  tmp6 = closure_2;
+                                                  obj11 = { style: null, onAsk: null, attribution: null };
+                                                  obj11.style = closure_12.spoken;
+                                                  tmp8 = onAskForIdeas;
+                                                  obj11.onAsk = onAskForIdeas;
+                                                  tmp9 = jsxs;
+                                                  tmp10 = Fragment;
+                                                  obj12 = { children: null };
+                                                  tmp11 = jsx;
+                                                  tmp12 = View;
+                                                  obj13 = { style: null, children: null };
+                                                  items = [, ];
+                                                  ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
+                                                  obj13.style = items;
+                                                  tmp13 = jsx;
+                                                  tmp14 = closure_0;
+                                                  tmp15 = closure_2;
+                                                  tmp7 = closure_1(closure_2[47]);
+                                                  obj13.children = jsx(closure_0(closure_2[48]).ConjureAvatar, {});
+                                                  items1 = [, ];
+                                                  items1[0] = jsx(View, obj13);
+                                                  tmp16 = jsx;
+                                                  tmp17 = View;
+                                                  obj14 = { style: null, children: null };
+                                                  obj14.style = closure_12.header;
+                                                  tmp18 = jsx;
+                                                  tmp19 = closure_2;
+                                                  obj14.children = jsx(closure_0(closure_2[48]).ConjureHeader, {});
+                                                  items1[1] = jsx(View, obj14);
+                                                  obj12.children = items1;
+                                                  obj11.attribution = jsxs(Fragment, obj12);
+                                                  obj.children = jsx(tmp7, obj11);
+                                                  return jsx(View, obj);
+                                                } else {
+                                                  return;
+                                                }
                                               }
                                             }
                                           }
                                           if (hostsReminder) {
                                             class Me {
-                                              constructor(kind) {
-                                                return "error" === kind.kind || "terminal_error" === kind.kind;
+                                              constructor(arg0) {
+                                                tmp = "error" === projectId.kind;
+                                                if (!tmp) {
+                                                  str = "terminal_error";
+                                                  tmp = "terminal_error" === projectId.kind;
+                                                }
+                                                return tmp;
                                               }
                                             }
                                             class Te {
                                               constructor(arg0) {
-                                                let items1;
-                                                let obj3;
-                                                let obj4;
-                                                let obj5;
-                                                let obj6;
-                                                let tmp7;
-                                                if ("outdated" === arg0) {
-                                                  const obj2 = { style: closure_12.reminderTip, children: closure_19(metroImportAll, obj3) };
-                                                  obj3 = { style: closure_12.spoken, children: closure_19(ConjurePublishNoticeLineDefault, obj4) };
-                                                  obj4 = { projectId, notice: "outdated" };
-                                                  return closure_19(metroImportAll, obj2);
-                                                } else if ("ideas" === arg0) {
-                                                  const obj = { style: closure_12.reminderSeparated, children: closure_19(tmp7, obj5) };
-                                                  obj5 = { style: closure_12.spoken, onAsk: onAskForIdeas, attribution: id(closure_21, obj6) };
-                                                  obj6 = { children: items1 };
-                                                  const obj7 = { style: items, children: closure_19(ConjureMessageAuthor.ConjureAvatar, {}) };
-                                                  items = [, ];
-                                                  ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                                                  tmp7 = ConjureIdeasOfferDefault;
-                                                  items1 = [closure_19(metroImportAll, obj7), ];
-                                                  const obj8 = { style: closure_12.header, children: closure_19(ConjureMessageAuthor.ConjureHeader, {}) };
-                                                  items1[1] = closure_19(metroImportAll, obj8);
-                                                  return closure_19(metroImportAll, obj);
+                                                if ("outdated" === projectId) {
+                                                  tmp20 = jsx;
+                                                  tmp21 = View;
+                                                  obj1 = { style: null, children: null };
+                                                  tmp22 = closure_12;
+                                                  obj1.style = closure_12.reminderTip;
+                                                  tmp23 = jsx;
+                                                  tmp24 = View;
+                                                  obj9 = { style: null, children: null };
+                                                  obj9.style = closure_12.spoken;
+                                                  tmp25 = jsx;
+                                                  tmp26 = closure_1;
+                                                  tmp27 = closure_2;
+                                                  obj10 = { projectId: null, notice: "outdated" };
+                                                  tmp28 = projectId;
+                                                  obj10.projectId = projectId;
+                                                  obj9.children = jsx(closure_1(closure_2[46]), obj10);
+                                                  obj1.children = jsx(View, obj9);
+                                                  return jsx(View, obj1);
+                                                } else {
+                                                  str = "ideas";
+                                                  if ("ideas" === projectId) {
+                                                    tmp = jsx;
+                                                    tmp2 = View;
+                                                    obj = { style: null, children: null };
+                                                    tmp3 = closure_12;
+                                                    obj.style = closure_12.reminderSeparated;
+                                                    tmp4 = jsx;
+                                                    tmp5 = closure_1;
+                                                    tmp6 = closure_2;
+                                                    obj11 = { style: null, onAsk: null, attribution: null };
+                                                    obj11.style = closure_12.spoken;
+                                                    tmp8 = onAskForIdeas;
+                                                    obj11.onAsk = onAskForIdeas;
+                                                    tmp9 = jsxs;
+                                                    tmp10 = Fragment;
+                                                    obj12 = { children: null };
+                                                    tmp11 = jsx;
+                                                    tmp12 = View;
+                                                    obj13 = { style: null, children: null };
+                                                    items = [, ];
+                                                    ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
+                                                    obj13.style = items;
+                                                    tmp13 = jsx;
+                                                    tmp14 = closure_0;
+                                                    tmp15 = closure_2;
+                                                    tmp7 = closure_1(closure_2[47]);
+                                                    obj13.children = jsx(closure_0(closure_2[48]).ConjureAvatar, {});
+                                                    items1 = [, ];
+                                                    items1[0] = jsx(View, obj13);
+                                                    tmp16 = jsx;
+                                                    tmp17 = View;
+                                                    obj14 = { style: null, children: null };
+                                                    obj14.style = closure_12.header;
+                                                    tmp18 = jsx;
+                                                    tmp19 = closure_2;
+                                                    obj14.children = jsx(closure_0(closure_2[48]).ConjureHeader, {});
+                                                    items1[1] = jsx(View, obj14);
+                                                    obj12.children = items1;
+                                                    obj11.attribution = jsxs(Fragment, obj12);
+                                                    obj.children = jsx(tmp7, obj11);
+                                                    return jsx(View, obj);
+                                                  } else {
+                                                    return;
+                                                  }
                                                 }
                                               }
                                             }
-                                            tmp45[0] = tmp4.reminderSlot;
-                                            tmp45[1] = reminder;
-                                            tmp45[2] = tmp41;
-                                            tmp43 = closure_19(message(tmp2[49]), tmp45);
+                                            tmp44[0] = tmp4.reminderSlot;
+                                            tmp44[1] = reminder;
+                                            tmp44[2] = tmp40;
+                                            const tmp42 = closure_19(message(tmp2[49]), tmp44);
                                           }
                                           cResult[49] = hostsReminder;
                                           cResult[50] = reminder;
-                                          cResult[51] = tmp41;
+                                          cResult[51] = tmp40;
                                           cResult[52] = tmp4.reminderSlot;
-                                          cResult[53] = tmp43;
-                                          tmp42 = tmp43;
+                                          cResult[53] = tmp42;
+                                          tmp41 = tmp42;
                                         }
                                       }
                                     }
@@ -3276,29 +3815,71 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
                             }
                             class Te {
                               constructor(arg0) {
-                                let items1;
-                                let obj3;
-                                let obj4;
-                                let obj5;
-                                let obj6;
-                                let tmp7;
-                                if ("outdated" === arg0) {
-                                  const obj2 = { style: closure_12.reminderTip, children: closure_19(metroImportAll, obj3) };
-                                  obj3 = { style: closure_12.spoken, children: closure_19(ConjurePublishNoticeLineDefault, obj4) };
-                                  obj4 = { projectId, notice: "outdated" };
-                                  return closure_19(metroImportAll, obj2);
-                                } else if ("ideas" === arg0) {
-                                  const obj = { style: closure_12.reminderSeparated, children: closure_19(tmp7, obj5) };
-                                  obj5 = { style: closure_12.spoken, onAsk: onAskForIdeas, attribution: id(closure_21, obj6) };
-                                  obj6 = { children: items1 };
-                                  const obj7 = { style: items, children: closure_19(ConjureMessageAuthor.ConjureAvatar, {}) };
-                                  items = [, ];
-                                  ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                                  tmp7 = ConjureIdeasOfferDefault;
-                                  items1 = [closure_19(metroImportAll, obj7), ];
-                                  const obj8 = { style: closure_12.header, children: closure_19(ConjureMessageAuthor.ConjureHeader, {}) };
-                                  items1[1] = closure_19(metroImportAll, obj8);
-                                  return closure_19(metroImportAll, obj);
+                                if ("outdated" === projectId) {
+                                  tmp20 = jsx;
+                                  tmp21 = View;
+                                  obj1 = { style: null, children: null };
+                                  tmp22 = closure_12;
+                                  obj1.style = closure_12.reminderTip;
+                                  tmp23 = jsx;
+                                  tmp24 = View;
+                                  obj9 = { style: null, children: null };
+                                  obj9.style = closure_12.spoken;
+                                  tmp25 = jsx;
+                                  tmp26 = closure_1;
+                                  tmp27 = closure_2;
+                                  obj10 = { projectId: null, notice: "outdated" };
+                                  tmp28 = projectId;
+                                  obj10.projectId = projectId;
+                                  obj9.children = jsx(closure_1(closure_2[46]), obj10);
+                                  obj1.children = jsx(View, obj9);
+                                  return jsx(View, obj1);
+                                } else {
+                                  str = "ideas";
+                                  if ("ideas" === projectId) {
+                                    tmp = jsx;
+                                    tmp2 = View;
+                                    obj = { style: null, children: null };
+                                    tmp3 = closure_12;
+                                    obj.style = closure_12.reminderSeparated;
+                                    tmp4 = jsx;
+                                    tmp5 = closure_1;
+                                    tmp6 = closure_2;
+                                    obj11 = { style: null, onAsk: null, attribution: null };
+                                    obj11.style = closure_12.spoken;
+                                    tmp8 = onAskForIdeas;
+                                    obj11.onAsk = onAskForIdeas;
+                                    tmp9 = jsxs;
+                                    tmp10 = Fragment;
+                                    obj12 = { children: null };
+                                    tmp11 = jsx;
+                                    tmp12 = View;
+                                    obj13 = { style: null, children: null };
+                                    items = [, ];
+                                    ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
+                                    obj13.style = items;
+                                    tmp13 = jsx;
+                                    tmp14 = closure_0;
+                                    tmp15 = closure_2;
+                                    tmp7 = closure_1(closure_2[47]);
+                                    obj13.children = jsx(closure_0(closure_2[48]).ConjureAvatar, {});
+                                    items1 = [, ];
+                                    items1[0] = jsx(View, obj13);
+                                    tmp16 = jsx;
+                                    tmp17 = View;
+                                    obj14 = { style: null, children: null };
+                                    obj14.style = closure_12.header;
+                                    tmp18 = jsx;
+                                    tmp19 = closure_2;
+                                    obj14.children = jsx(closure_0(closure_2[48]).ConjureHeader, {});
+                                    items1[1] = jsx(View, obj14);
+                                    obj12.children = items1;
+                                    obj11.attribution = jsxs(Fragment, obj12);
+                                    obj.children = jsx(tmp7, obj11);
+                                    return jsx(View, obj);
+                                  } else {
+                                    return;
+                                  }
                                 }
                               }
                             }
@@ -3311,43 +3892,43 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
                             cResult[46] = tmp4.reminderTip;
                             cResult[47] = tmp4.spoken;
                             cResult[48] = Te;
-                            tmp41 = Te;
+                            tmp40 = Te;
                           }
+                          tmp38 = "" !== tmp30;
                         }
                       }
                     }
                     function xe() {
+                      const obj2 = { content, userId: user_id, onRestoreVersion: null };
                       let fn;
-                      let obj = { content, userId: user_id, onRestoreVersion: fn };
-                      fn = undefined;
-                      const showConjureMessageActions = ConjureMessageActionSheet.showConjureMessageActions;
-                      ConjureMessageActionSheet;
                       if (null != closure_17) {
                         if (null != onRestoreVersion) {
-                          fn = () => {
-                            const obj = projectId(groupStart[45]);
-                            const obj2 = {
-                              onConfirm() {
-                                return closure_1_11(closure_1_17);
-                              }
-                            };
-                            return obj.confirmRestoreVersion(obj2);
-                          };
+                          fn = () => projectId(groupStart[45]).confirmRestoreVersion({
+                            onConfirm() {
+                              return closure_1_11(closure_1_17);
+                            }
+                          });
                         }
                       }
-                      return showConjureMessageActions(obj);
+                      obj2.onRestoreVersion = fn;
+                      return ConjureMessageActionSheet.showConjureMessageActions(obj2);
                     }
                     cResult[35] = user_id;
                     cResult[36] = tmp30;
                     cResult[37] = onRestoreVersion;
-                    cResult[38] = tmp36;
+                    cResult[38] = tmp35;
                     cResult[39] = xe;
                   }
                   let turnRestoreEntryResult = null;
                   if (null != onRestoreVersion) {
                     class Me {
-                      constructor(kind) {
-                        return "error" === kind.kind || "terminal_error" === kind.kind;
+                      constructor(arg0) {
+                        tmp = "error" === projectId.kind;
+                        if (!tmp) {
+                          str = "terminal_error";
+                          tmp = "terminal_error" === projectId.kind;
+                        }
+                        return tmp;
                       }
                     }
                     turnRestoreEntryResult = obj8.turnRestoreEntry(message);
@@ -3355,13 +3936,13 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
                   cResult[32] = message;
                   cResult[33] = onRestoreVersion;
                   cResult[34] = turnRestoreEntryResult;
-                  tmp36 = turnRestoreEntryResult;
+                  tmp35 = turnRestoreEntryResult;
                 }
-                const items2 = [tmp4.row, groupStart && !first && tmp4.rowGroupStart];
+                const items2 = [tmp4.row, rowGroupStart];
                 cResult[29] = tmp4.row;
-                cResult[30] = groupStart && !first && tmp4.rowGroupStart;
+                cResult[30] = rowGroupStart;
                 cResult[31] = items2;
-                tmp34 = items2;
+                tmp33 = items2;
               }
               cResult[22] = onJumpToReplied;
               cResult[23] = replied;
@@ -3383,63 +3964,20 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
       cResult[17] = ae;
     }
     let obj7 = { turnActive: !tmp11 };
-    const tmpResult9 = tmp(tmp2[32]);
-    const turnSegmentsResult = tmpResult9.turnSegments(steps2, obj7);
+    const turnSegmentsResult = tmp(tmp2[32]).turnSegments(message.steps, obj7);
     cResult[7] = message.steps;
     cResult[8] = !tmp11;
     cResult[9] = turnSegmentsResult;
-    tmp15 = turnSegmentsResult;
+    const tmpResult9 = tmp(tmp2[32]);
   }
-  const tmpResult10 = tmp(tmp2[32]);
-  const timelineTree = tmpResult10.buildTimelineTree(steps, { turnActive: tmp8 });
+  let obj = projectId(groupStart[15]);
+  const timelineTree = projectId(groupStart[32]).buildTimelineTree(message.steps, { turnActive: tmp8 });
   cResult[2] = message.steps;
   cResult[3] = !tmp5;
   cResult[4] = timelineTree;
   tmp9 = timelineTree;
+  const tmpResult10 = projectId(groupStart[32]);
 }) : ((projectId) => {
-  let StopIcon;
-  let Text2;
-  let _undefined;
-  let c20;
-  let checklistExpanded;
-  let checklistSuperseded;
-  let clarificationDismissed;
-  let closure_10;
-  let first;
-  let fn;
-  let hostsReminder;
-  let intl;
-  let intl2;
-  let isNewest;
-  let items11;
-  let items12;
-  let items13;
-  let items14;
-  let items18;
-  let obj14;
-  let obj19;
-  let obj20;
-  let obj27;
-  let obj31;
-  let obj37;
-  let obj7;
-  let obj9;
-  let onAnswerClarification;
-  let onApprovePlan;
-  let onAsk;
-  let onPickIdea;
-  let onRestoreVersion;
-  let onToggleChecklist;
-  let planExpanded;
-  let planVersion;
-  let reminder;
-  let secretRequestStatus;
-  let showsClosingMessage;
-  let tmp16;
-  let tmp38Result5;
-  let tmp38Result6;
-  let tmp52;
-  let tmp91;
   projectId = projectId.projectId;
   const message = projectId.message;
   const groupStart = projectId.groupStart;
@@ -3456,36 +3994,28 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
   let restoreProposal;
   let clarification;
   c20 = undefined;
-  let c21;
+  c21 = undefined;
   let index;
-  let closure_23;
+  closure_23 = undefined;
   let open;
   ({ first, hostsReminder, checklistExpanded, planVersion, planExpanded, onApprovePlan, onPickIdea, onAnswerClarification, clarificationDismissed } = projectId);
-  const tmp = closure_29();
+  let tmp = closure_29();
   closure_12 = tmp;
   items = [message];
   const memo = onToggleChecklist.useMemo(() => {
     const obj = ConjureTimelineTree;
-    const obj2 = { turnActive: !memo5(message) };
-    return obj.buildTimelineTree(message.steps, obj2);
+    return obj.buildTimelineTree(message.steps, { turnActive: !constants(message) });
   }, items);
   let items1 = [message];
   const memo1 = onToggleChecklist.useMemo(() => {
     const obj = ConjureTimelineTree;
-    const obj2 = { turnActive: !memo5(message) };
-    return obj.turnSegments(message.steps, obj2);
+    return obj.turnSegments(message.steps, { turnActive: !constants(message) });
   }, items1);
   const items2 = [message];
-  const memo2 = onToggleChecklist.useMemo(() => {
-    const obj = ConjureTimelineTree;
-    return obj.latestTodos(message.steps);
-  }, items2);
+  const memo2 = onToggleChecklist.useMemo(() => ConjureTimelineTree.latestTodos(message.steps), items2);
   const items3 = [memo];
   const items4 = [onToggleChecklist, message.render_id, checklistSuperseded];
-  const memo3 = onToggleChecklist.useMemo(() => {
-    const obj = ConjureTodoAgents;
-    return obj.runningTodoAgents(memo.tasks);
-  }, items3);
+  const memo3 = onToggleChecklist.useMemo(() => ConjureTodoAgents.runningTodoAgents(memo.tasks), items3);
   const items5 = [onTogglePlan, message.render_id, planSuperseded];
   const callback = onToggleChecklist.useCallback(() => onToggleChecklist(message.render_id, checklistSuperseded), items4);
   const items6 = [onJumpToReplied, replied];
@@ -3498,10 +4028,7 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
       }
     }
   }, items6);
-  const memo4 = onToggleChecklist.useMemo(() => {
-    const obj = ConjureDesignFeedback;
-    return obj.parseConjureDesignRemark(message.content);
-  }, items7);
+  const memo4 = onToggleChecklist.useMemo(() => ConjureDesignFeedback.parseConjureDesignRemark(message.content), items7);
   let body;
   if (memo4 != null) {
     body = memo4.body;
@@ -3517,7 +4044,15 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
       attachments = message.attachments;
     }
   }
-  const items8 = [tmp.row, groupStart && !first && tmp.rowGroupStart];
+  const items8 = [tmp.row, ];
+  let rowGroupStart = groupStart;
+  if (groupStart) {
+    rowGroupStart = !first;
+  }
+  if (rowGroupStart) {
+    rowGroupStart = tmp.rowGroupStart;
+  }
+  items8[1] = rowGroupStart;
   user_id = undefined;
   if ("user" === message.role) {
     user_id = message.user_id;
@@ -3526,32 +4061,25 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
   memo5 = onToggleChecklist.useMemo(() => {
     let turnRestoreEntryResult = null;
     if (null != onRestoreVersion) {
-      const obj = ConjureChatRestore;
-      turnRestoreEntryResult = obj.turnRestoreEntry(message);
+      turnRestoreEntryResult = ConjureChatRestore.turnRestoreEntry(message);
     }
     return turnRestoreEntryResult;
   }, items9);
   const items10 = [trimmed, user_id, memo5, onRestoreVersion];
   const callback3 = onToggleChecklist.useCallback(() => {
+    const obj2 = { content: trimmed, userId: user_id, onRestoreVersion: null };
     let fn;
-    let obj = { content: trimmed, userId: user_id, onRestoreVersion: fn };
-    fn = undefined;
-    const showConjureMessageActions = ConjureMessageActionSheet.showConjureMessageActions;
-    ConjureMessageActionSheet;
     if (null != memo5) {
       if (null != onRestoreVersion) {
-        fn = () => {
-          const obj = projectId(groupStart[45]);
-          const obj2 = {
-            onConfirm() {
-              return closure_1_11(closure_1_17);
-            }
-          };
-          return obj.confirmRestoreVersion(obj2);
-        };
+        fn = () => projectId(groupStart[45]).confirmRestoreVersion({
+          onConfirm() {
+            return closure_1_11(closure_1_17);
+          }
+        });
       }
     }
-    return showConjureMessageActions(obj);
+    obj2.onRestoreVersion = fn;
+    return ConjureMessageActionSheet.showConjureMessageActions(obj2);
   }, items10);
   if ("" === trimmed) {
     let tmp17 = null;
@@ -3560,36 +4088,35 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
         style: tmp.reminderSlot,
         reminder,
         renderReminder(c2) {
-              let items1;
-              let obj3;
-              let obj4;
-              let obj5;
-              let obj6;
-              let tmp7;
               if ("outdated" === c2) {
-                const obj2 = { style: closure_12.reminderTip, children: clarification(metroImportAll, obj3) };
-                obj3 = { style: closure_12.spoken, children: clarification(ConjurePublishNoticeLineDefault, obj4) };
-                obj4 = { projectId, notice: "outdated" };
-                return clarification(metroImportAll, obj2);
+                const obj2 = { style: closure_12.reminderTip, children: null };
+                const obj3 = { style: closure_12.spoken, children: null };
+                const obj4 = { projectId, notice: "outdated" };
+                obj3.children = closure_2_19(ConjurePublishNoticeLineDefault, obj4);
+                obj2.children = closure_2_19(closure_2_8, obj3);
+                return closure_2_19(closure_2_8, obj2);
               } else if ("ideas" === c2) {
-                const obj = { style: closure_12.reminderSeparated, children: clarification(tmp7, obj5) };
-                obj5 = { style: closure_12.spoken, onAsk: AppStateStore, attribution: _undefined(closure_21, obj6) };
-                obj6 = { children: items1 };
-                const obj7 = { style: items, children: clarification(ConjureMessageAuthor.ConjureAvatar, {}) };
+                const obj = { style: closure_12.reminderSeparated, children: null };
+                const obj5 = { style: closure_12.spoken, onAsk, attribution: null };
+                const obj6 = { children: null };
+                const obj7 = { style: null, children: null };
                 items = [, ];
                 ({ avatar: arr[0], avatarSpoken: arr[1] } = closure_12);
-                tmp7 = ConjureIdeasOfferDefault;
-                items1 = [clarification(metroImportAll, obj7), ];
-                const obj8 = { style: closure_12.header, children: clarification(ConjureMessageAuthor.ConjureHeader, {}) };
-                items1[1] = clarification(metroImportAll, obj8);
-                return clarification(metroImportAll, obj);
+                obj7.style = items;
+                obj7.children = closure_2_19(ConjureMessageAuthor.ConjureAvatar, {});
+                const items1 = [closure_2_19(closure_2_8, obj7), ];
+                const obj8 = { style: closure_12.header, children: closure_2_19(ConjureMessageAuthor.ConjureHeader, {}) };
+                items1[1] = closure_2_19(closure_2_8, obj8);
+                obj6.children = items1;
+                obj5.attribution = closure_2_20(guild, obj6);
+                obj.children = closure_2_19(ConjureIdeasOfferDefault, obj5);
+                return closure_2_19(closure_2_8, obj);
               }
             }
       };
       tmp17 = clarification(message(groupStart[49]), obj2);
     }
     if ("user" === message.role) {
-      let tmp101Result;
       if ("" === trimmed) {
         if (null == memo4) {
           if (null == attachments) {
@@ -3597,50 +4124,50 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
           }
         }
       }
-      const obj41 = projectId(groupStart[50]);
-      const conjureAgentReactionLabel = obj41.getConjureAgentReactionLabel(message.agentReaction);
-      let obj5 = { style: items8, onLongPress: tmp16, accessible: false, children: items11 };
+      const conjureAgentReactionLabel = projectId(groupStart[50]).getConjureAgentReactionLabel(message.agentReaction);
+      let obj5 = { style: items8, onLongPress: tmp16, accessible: false, children: null };
       let tmp103 = null;
-      const tmp102 = replied;
       if (groupStart) {
-        let obj6 = { style: tmp.avatar, children: clarification(projectId(groupStart[48]).ConjureUserAvatar, obj7) };
-        obj7 = { userId: message.user_id };
+        let obj6 = { style: tmp.avatar, children: null };
+        let obj7 = { userId: message.user_id };
+        obj6.children = clarification(tmp98(tmp99[48]).ConjureUserAvatar, obj7);
         tmp103 = clarification(onJumpToReplied, obj6);
       }
-      items11 = [tmp103, , , , ];
+      const items11 = [tmp103, , , , ];
       let tmp106 = null;
       if (groupStart) {
-        let obj8 = { style: tmp.header, children: clarification(projectId(groupStart[48]).ConjureUserHeader, obj9) };
-        obj9 = { userId: null, at: null };
+        let obj8 = { style: tmp.header, children: null };
         ({ user_id: obj46.userId, created_at: obj46.at } = message);
+        obj8.children = clarification(tmp98(tmp99[48]).ConjureUserHeader, { userId: null, at: null });
         tmp106 = clarification(onJumpToReplied, obj8);
+        const obj9 = { userId: null, at: null };
       }
       items11[1] = tmp106;
-      if ("" !== trimmed) {
+      if (tmp15) {
         let combined;
-        const Text3 = tmp98(tmp99[19]).Text;
         if (!groupStart) {
           const intl3 = tmp98(tmp99[17]).intl;
           const _HermesInternal = HermesInternal;
           combined = "" + intl3.string(tmp98(tmp99[17]).t.KD6OJJ) + ": " + trimmed;
         }
+        const obj10 = { variant: "text-md/normal", color: "text-default", accessibilityLabel: combined, children: null };
         let tmp112 = null;
-        const obj10 = { variant: "text-md/normal", color: "text-default", accessibilityLabel: combined, children: items12 };
         if (null != memo4) {
           const obj11 = { label: memo4.label, variant: "text-md/medium" };
           tmp112 = clarification(message(tmp99[51]), obj11);
         }
-        items12 = [tmp112, , ];
+        const items12 = [tmp112, , ];
         let str5 = null;
         if (null != memo4) {
           str5 = null;
-          if ("" !== trimmed) {
+          if (tmp15) {
             str5 = " ";
           }
         }
         items12[1] = str5;
         items12[2] = trimmed;
-        tmp101Result = tmp101(Text3, obj10);
+        obj10.children = items12;
+        let tmp101Result = tmp101(tmp98(tmp99[19]).Text, obj10);
       } else {
         tmp101Result = null;
       }
@@ -3655,45 +4182,52 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
       if (null != message.agentReaction) {
         tmp118 = null;
         if (null != conjureAgentReactionLabel) {
-          const obj13 = { style: tmp.agentReaction, accessible: true, accessibilityRole: "image", accessibilityLabel: conjureAgentReactionLabel, children: clarification(message(groupStart[52]), obj14) };
-          obj14 = { name: message.agentReaction, fastImageStyle: tmp.agentReactionEmoji };
+          const obj13 = { style: tmp.agentReaction, accessible: true, accessibilityRole: "image", accessibilityLabel: conjureAgentReactionLabel, children: null };
+          const obj14 = { name: message.agentReaction, fastImageStyle: tmp.agentReactionEmoji };
+          obj13.children = clarification(message(tmp99[52]), obj14);
           tmp118 = clarification(onJumpToReplied, obj13);
         }
       }
       items11[4] = tmp118;
-      return c20(tmp102, obj5);
+      obj5.children = items11;
+      return c20(replied, obj5);
     } else {
       if ("publish_notice" === message.kind) {
         if (null != message.publishNotice) {
-          const obj15 = { style: items8, children: items13 };
+          const obj15 = { style: items8, children: null };
           const obj16 = { projectId, notice: message.publishNotice };
-          items13 = [clarification(message(groupStart[46]), obj16), tmp17];
+          const items13 = [clarification(message(groupStart[46]), obj16), tmp17];
+          obj15.children = items13;
           return c20(onJumpToReplied, obj15);
         }
       }
       if (true === message.interrupted) {
-        const obj17 = { style: items8, children: items14 };
-        const obj18 = { style: tmp.activityBox, children: clarification(tmp91, obj19) };
-        obj19 = { line: intl2.string(message(groupStart[18]).oOmBdX), live: false, settled: true, inGutter: true, glyph: clarification(StopIcon, obj20) };
-        tmp91 = message(groupStart[10]);
-        intl2 = projectId(groupStart[17]).intl;
-        obj20 = { size: "refresh_sm", color: message(groupStart[9]).colors.TEXT_MUTED };
-        StopIcon = projectId(groupStart[53]).StopIcon;
-        items14 = [clarification(onJumpToReplied, obj18), tmp17];
+        const obj17 = { style: items8, children: null };
+        const obj18 = { style: tmp.activityBox, children: null };
+        const obj19 = { line: null, live: false, settled: true, inGutter: true, glyph: null };
+        const intl2 = projectId(groupStart[17]).intl;
+        obj19.line = intl2.string(message(groupStart[18]).oOmBdX);
+        const obj20 = { size: "refresh_sm", color: message(groupStart[9]).colors.TEXT_MUTED };
+        obj19.glyph = clarification(projectId(groupStart[53]).StopIcon, obj20);
+        obj18.children = clarification(message(groupStart[10]), obj19);
+        const items14 = [clarification(onJumpToReplied, obj18), tmp17];
+        obj17.children = items14;
         return c20(onJumpToReplied, obj17);
       } else {
-        let tmp29;
-        let provisionalTodo;
-        let tmp53Result18;
         let steps = message.steps;
-        const found = steps.find((kind) => "error" === kind.kind || "terminal_error" === kind.kind);
+        const found = steps.find((kind) => {
+          let tmp = "error" === kind.kind;
+          if (!tmp) {
+            tmp = "terminal_error" === kind.kind;
+          }
+          return tmp;
+        });
         let proposal;
         if ("proposal" === message.kind) {
           proposal = message.proposal;
         }
         const tmp23 = memo5(message);
         let ideas = null;
-        const tmp22 = memo5;
         if (tmp23) {
           ideas = null;
           if (null != message.ideas) {
@@ -3721,7 +4255,8 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
         }
         if ("open" === secretRequestStatus) {
           let obj3 = projectId(groupStart[54]);
-          tmp29 = obj3.activeAwaitingUser(message, isNewest);
+          const tmp29 = projectId(groupStart[54]).activeAwaitingUser(message, isNewest);
+          const activeAwaitingUserResult = projectId(groupStart[54]).activeAwaitingUser(message, isNewest);
         }
         let tmp33 = null;
         if (tmp23) {
@@ -3762,16 +4297,14 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
         if (null == items19) {
           if (null != message.provisionalTodo) {
             if ("" !== message.provisionalTodo) {
-              provisionalTodo = message.provisionalTodo;
+              const provisionalTodo = message.provisionalTodo;
             }
           }
         }
-        let obj4 = projectId(groupStart[55]);
         const obj21 = { steps: message.steps, content: trimmed, hasProposal: null != proposal, hasAttachments: null != attachments };
-        const turnPresentation = obj4.resolveTurnPresentation(obj21);
+        const turnPresentation = projectId(groupStart[55]).resolveTurnPresentation(obj21);
         ({ showsClosingMessage, replyKey: c20 } = turnPresentation);
         let tmp41 = memo.steps.length > 0;
-        const closingContent = turnPresentation.closingContent;
         if (!tmp41) {
           tmp41 = memo.tasks.length > 0;
         }
@@ -3806,8 +4339,9 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
             }
           }
         }
-        const tmp38Result = projectId(groupStart[55]);
-        const turnLeadsWithStretchResult = tmp38Result.turnLeadsWithStretch(tmp41, turnPresentation);
+        let obj4 = projectId(groupStart[55]);
+        const tmp22 = memo5;
+        const turnLeadsWithStretchResult = projectId(groupStart[55]).turnLeadsWithStretch(tmp41, turnPresentation);
         c21 = turnLeadsWithStretchResult;
         const found1 = memo1.filter((hasWork) => hasWork.hasWork);
         const atResult = found1.at(-1);
@@ -3817,21 +4351,23 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
         }
         const tmp45 = !tmp22(message);
         closure_23 = tmp45;
+        const tmp38Result = projectId(groupStart[55]);
         const obj22 = { turnActive: tmp45 };
-        const tmp38Result4 = projectId(groupStart[32]);
-        open = tmp38Result4.turnLifecycle(memo1, obj22).open;
-        let avatarSpokenReplying = groupStart && null != replied;
+        open = projectId(groupStart[32]).turnLifecycle(memo1, obj22).open;
+        let avatarSpokenReplying = groupStart;
+        if (groupStart) {
+          avatarSpokenReplying = null != replied;
+        }
         let tmp49Result = null;
-        const tmp47 = c21;
         if (avatarSpokenReplying) {
-          const obj23 = { replied, onJump: tmp52 };
-          tmp52 = undefined;
-          const tmp49 = clarification;
-          const tmp51 = message(groupStart[13]);
+          const obj23 = { replied, onJump: null };
+          let tmp52;
           if (null != onJumpToReplied) {
             tmp52 = callback2;
           }
-          tmp49Result = tmp49(tmp51, obj23);
+          obj23.onJump = tmp52;
+          tmp49Result = clarification(message(tmp39[13]), obj23);
+          const tmp51 = message(tmp39[13]);
         }
         const items15 = [tmp49Result, , ];
         const items16 = [, , ];
@@ -3839,17 +4375,20 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
         if (avatarSpokenReplying) {
           avatarSpokenReplying = tmp.avatarSpokenReplying;
         }
-        const obj24 = { children: items15 };
+        const obj24 = { children: null };
+        const obj25 = { style: null, children: null };
         items16[2] = avatarSpokenReplying;
-        const obj25 = { style: items16, children: clarification(projectId(groupStart[48]).ConjureAvatar, {}) };
+        obj25.style = items16;
+        obj25.children = clarification(projectId(groupStart[48]).ConjureAvatar, {});
         items15[1] = clarification(onJumpToReplied, obj25);
-        const obj26 = { style: tmp.header, children: clarification(projectId(groupStart[48]).ConjureHeader, obj27) };
-        obj27 = { at: message.created_at };
+        const obj26 = { style: tmp.header, children: null };
+        const obj27 = { at: message.created_at };
+        obj26.children = clarification(projectId(groupStart[48]).ConjureHeader, obj27);
         items15[2] = clarification(onJumpToReplied, obj26);
-        const tmp46Result = c20(tmp47, obj24);
+        obj24.children = items15;
+        const tmp46Result = c20(c21, obj24);
         const obj28 = { style: items8, onLongPress: tmp16, accessible: false, children: null };
         let tmp53Result = null;
-        const tmp56 = replied;
         if (turnLeadsWithStretchResult) {
           tmp53Result = null;
           if (groupStart) {
@@ -3860,58 +4399,63 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
         const items17 = [
           tmp53Result,
           memo1.map((prose, index) => {
-                  let ConjureRevealedMarkdown;
-                  let obj3;
-                  let steps;
-                  let tasks;
-                  let tmp5;
                   let tmp19Result = null;
-                  const Fragment = react.Fragment;
                   if (null != prose.prose) {
                     tmp19Result = null;
                     if (prose.prose.key !== c20) {
-                      const obj2 = { style: closure_12.spoken, children: clarification(ConjureRevealedMarkdown, obj3) };
-                      obj3 = { source: prose.prose.content, streaming: tmp5 };
-                      tmp5 = closure_23;
-                      ConjureRevealedMarkdown = ConjureNativeMarkdown.ConjureRevealedMarkdown;
+                      const obj2 = { style: closure_12.spoken, children: null };
+                      const obj3 = { source: prose.prose.content, streaming: null };
+                      let tmp5 = closure_23;
                       if (closure_23) {
                         tmp5 = index === memo1.length - 1;
                       }
                       if (tmp5) {
                         tmp5 = !prose.hasWork;
                       }
-                      tmp19Result = clarification(metroImportAll, obj2);
+                      obj3.streaming = tmp5;
+                      obj2.children = closure_2_19(ConjureNativeMarkdown.ConjureRevealedMarkdown, obj3);
+                      tmp19Result = closure_2_19(closure_2_8, obj2);
                     }
                   }
                   const children = [tmp19Result, ];
                   let tmp7Result = null;
                   if (prose.hasWork) {
                     const obj = { projectId, tree: null, turnActive: null, besideAvatar: null };
-                    const obj4 = { steps: steps.filter((segment) => segment.segment === index), tasks: tasks.filter((task) => task.task.segment === index) };
-                    steps = memo.steps;
                     index = prose.index;
-                    tasks = memo.tasks;
-                    if (index === index) {
-                      let obj6;
+                    const obj4 = { steps: null, tasks: null };
+                    const steps = memo.steps;
+                    obj4.steps = steps.filter((segment) => segment.segment === index);
+                    const tasks = memo.tasks;
+                    obj4.tasks = tasks.filter((task) => task.task.segment === index);
+                    if (prose.index === index) {
                       if (null != memo.turn) {
-                        obj6 = { turn: memo.turn };
                         const obj5 = { turn: memo.turn };
+                        let obj6 = obj5;
                       }
                       const merged = Object.assign(obj6);
                       obj.tree = obj4;
                       obj.turnActive = prose.index === open;
-                      let tmp16 = c21 && groupStart && 0 === index;
+                      let tmp16 = c21;
+                      if (c21) {
+                        tmp16 = groupStart;
+                      }
                       if (tmp16) {
-                        tmp16 = null == prose.prose || prose.prose.key === c20;
-                        const tmp17 = null == prose.prose || prose.prose.key === c20;
+                        tmp16 = 0 === index;
+                      }
+                      if (tmp16) {
+                        let tmp17 = null == prose.prose;
+                        if (!tmp17) {
+                          tmp17 = prose.prose.key === c20;
+                        }
+                        tmp16 = tmp17;
                       }
                       obj.besideAvatar = tmp16;
-                      tmp7Result = clarification(closure_37, obj);
+                      tmp7Result = closure_2_19(closure_37, obj);
                     }
                     obj6 = {};
                   }
                   children[1] = tmp7Result;
-                  return _undefined(Fragment, { children }, prose.key);
+                  return closure_2_20(noop.Fragment, { children }, prose.key);
                 }),
   ,
   ,
@@ -3927,23 +4471,23 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
                       if (null == attachments) {
                         if (null == found) {
                           if (null == items19) {
-                            let tmp46Result2;
                             if (null == provisionalTodo) {
-                              tmp46Result2 = null;
+                              let tmp46Result2 = null;
                             }
                             items17[2] = tmp46Result2;
                             let tmp53Result14 = null;
                             if (null != tmp29) {
-                              const obj30 = { style: tmp.spoken, children: clarification(Text2, obj31) };
-                              obj31 = { variant: "text-xs/normal", color: "text-muted", children: intl.string(message(groupStart[18]).YR8A2v) };
-                              Text2 = tmp38(tmp39[19]).Text;
-                              intl = tmp38(tmp39[17]).intl;
+                              const obj30 = { style: tmp.spoken, children: null };
+                              const obj31 = { variant: "text-xs/normal", color: "text-muted", children: null };
+                              const intl = tmp38(tmp39[17]).intl;
+                              obj31.children = intl.string(message(tmp39[18]).YR8A2v);
+                              obj30.children = tmp53(tmp38(tmp39[19]).Text, obj31);
                               tmp53Result14 = tmp53(tmp54, obj30);
                             }
                             items17[3] = tmp53Result14;
                             items17[4] = tmp17;
                             obj28.children = items17;
-                            return c20(tmp56, obj28);
+                            return tmp46(tmp56, obj28);
                           }
                         }
                       }
@@ -3954,27 +4498,26 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
             }
           }
         }
+        const obj32 = { style: tmp.spoken, children: null };
         let tmp59 = null;
-        const obj32 = { style: tmp.spoken, children: items18 };
         if (groupStart) {
           tmp59 = null;
           if (!turnLeadsWithStretchResult) {
             tmp59 = tmp46Result;
           }
         }
-        items18 = [tmp59, , , , , , , , , , , , ];
+        const items18 = [tmp59, , , , , , , , , , , , ];
         let tmp53Result15 = null;
         if (showsClosingMessage) {
-          const obj33 = { source: closingContent };
+          const obj33 = { source: turnPresentation.closingContent };
           tmp53Result15 = tmp53(message(tmp39[26]), obj33);
         }
         items18[1] = tmp53Result15;
         let tmp53Result16 = null;
         if ("side_reply" === message.kind) {
-          const obj34 = { variant: "text-xs/normal", color: "text-muted", children: tmp38Result5.midTurnCaption(message.acknowledges) };
-          const Text = tmp38(tmp39[19]).Text;
-          tmp38Result5 = projectId(groupStart[56]);
-          tmp53Result16 = tmp53(Text, obj34);
+          const obj34 = { variant: "text-xs/normal", color: "text-muted", children: tmp38(tmp39[56]).midTurnCaption(message.acknowledges) };
+          tmp53Result16 = tmp53(tmp38(tmp39[19]).Text, obj34);
+          const tmp38Result5 = tmp38(tmp39[56]);
         }
         items18[2] = tmp53Result16;
         let tmp53Result17 = null;
@@ -3984,15 +4527,20 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
         }
         items18[3] = tmp53Result17;
         if (null != items19) {
-          const tmp67 = message(groupStart[22]);
-          const tmp68 = message(groupStart[57]);
+          const tmp67 = message(tmp39[22]);
           if (items19 == null) {
             items19 = [];
           }
-          const obj36 = { children: clarification(tmp68, obj37) };
-          obj37 = { todos: items19, provisional: provisionalTodo, agents: memo3, live: tmp38Result6.checklistLive(message), superseded: checklistSuperseded, expanded: checklistExpanded, onToggleExpanded: callback };
-          tmp38Result6 = projectId(groupStart[58]);
-          tmp53Result18 = tmp53(tmp67, obj36);
+          const obj36 = { children: null };
+          const obj37 = { todos: items19, provisional: provisionalTodo, agents: memo3, live: null, superseded: null, expanded: null, onToggleExpanded: null };
+          const tmp68 = message(tmp39[57]);
+          obj37.live = tmp38(tmp39[58]).checklistLive(message);
+          obj37.superseded = checklistSuperseded;
+          obj37.expanded = checklistExpanded;
+          obj37.onToggleExpanded = callback;
+          obj36.children = tmp53(tmp68, obj37);
+          let tmp53Result18 = tmp53(tmp67, obj36);
+          const tmp38Result6 = tmp38(tmp39[58]);
         } else {
           tmp53Result18 = null;
         }
@@ -4010,7 +4558,7 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
             clarification,
             onSubmit: onAnswerClarification,
             onDismiss() {
-                      return closure_10(clarification.id);
+                      return closure_1_10(clarification.id);
                     }
           };
           tmp53Result20 = tmp53(message(tmp39[59]), obj39);
@@ -4042,22 +4590,18 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
         items18[10] = tmp53Result24;
         let tmp53Result25 = null;
         if (null != restoreProposal) {
-          const obj45 = { proposal: restoreProposal, onRestore: fn };
-          fn = undefined;
+          const obj45 = { proposal: restoreProposal, onRestore: null };
+          let fn;
           if (isNewest) {
             if (null != onRestoreVersion) {
-              fn = () => {
-                let obj = ConjureVersionRestoreConfirm;
-                const obj2 = {
-                  onConfirm() {
-                    const obj = projectId(groupStart[43]);
-                    return onRestoreVersion(obj.proposalRestoreEntry(restoreProposal));
-                  }
-                };
-                return obj.confirmRestoreVersion(obj2);
-              };
+              fn = () => ConjureVersionRestoreConfirm.confirmRestoreVersion({
+                onConfirm() {
+                  return onRestoreVersion(projectId(groupStart[43]).proposalRestoreEntry(restoreProposal));
+                }
+              });
             }
           }
+          obj45.onRestore = fn;
           tmp53Result25 = tmp53(closure_39, obj45);
         }
         items18[11] = tmp53Result25;
@@ -4070,43 +4614,21 @@ let closure_40 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((projectId
           }
         }
         items18[12] = tmp53Result26;
+        obj32.children = items18;
         tmp46Result2 = tmp46(tmp54, obj32);
+        const tmp38Result4 = projectId(groupStart[32]);
+        tmp56 = replied;
       }
     }
   }
-  tmp16 = callback3;
 }));
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
-  let closure_3;
-  let closure_5;
-  let current;
-  let onDismissClarification;
-  let onJumpToReplied;
-  let onPickIdea;
-  let onRestoreVersion;
-  let onToggleChecklist;
-  let onTogglePlan;
-  let ref;
-  let ref2;
-  let ref3;
-  let ref4;
-  let ref5;
-  let ref6;
-  let ref7;
-  let stateFromStores;
-  let stateFromStores3;
-  let tmp10;
-  let tmp66;
-  let tmp67;
-  let tmp8;
-  let tmp9;
-  let transcriptTopInset;
-  let tmp = projectId;
-  const tmp2 = projectId;
-  let tmp3 = stateFromStores;
-  let obj = projectId(stateFromStores[15]);
-  const cResult = obj.c(254);
+ReactCompilerGating = fn(558);
+let obj16 = { alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_24 };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureNativeChat.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
+  const cResult = projectId(stateFromStores[15]).c(254);
   projectId = projectId.projectId;
   ({ transcriptTopInset, onRestoreVersion } = projectId);
   current();
@@ -4119,81 +4641,73 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     cResult[0] = items;
     cResult[1] = fn;
     cResult[2] = items1;
-    tmp8 = items;
     tmp10 = items1;
+    tmp8 = items;
     tmp9 = fn;
   } else {
     [tmp8, tmp9, tmp10] = cResult;
   }
-  const tmp2Result = tmp2(stateFromStores[63]);
-  stateFromStores = tmp2Result.useStateFromStores(tmp8, tmp9, tmp10);
+  let obj = projectId(stateFromStores[15]);
+  stateFromStores = projectId(stateFromStores[63]).useStateFromStores(tmp8, tmp9, tmp10);
   const bottom = onRestoreVersion(tmp4[64])().bottom;
   if (cResult[3] === stateFromStores) {
-    let tmp13;
-    let tmp14;
-    let tmp19;
-    let tmp22;
-    let tmp26;
-    let tmp28;
     if (cResult[4] === projectId) {
-      tmp13 = cResult[5];
-      tmp14 = cResult[6];
+      let tmp13 = cResult[5];
+      let tmp14 = cResult[6];
     }
-    let obj3 = stateFromStores3;
     const effect = stateFromStores3.useEffect(tmp13, tmp14);
-    let tmp17 = tmp3;
-    const tmp2Result15 = tmp2(stateFromStores[65]);
-    const ackConjureProjectWhileViewing = tmp2Result15.useAckConjureProjectWhileViewing(projectId);
+    const ackConjureProjectWhileViewing = tmp2(tmp4[65]).useAckConjureProjectWhileViewing(projectId);
     const _Symbol = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
       const items2 = [ConjureChatStore];
       cResult[7] = items2;
-      tmp19 = items2;
+      let tmp19 = items2;
     } else {
       tmp19 = cResult[7];
     }
     if (cResult[8] !== projectId) {
       class N {
         constructor() {
-          return ConjureChatStore.getMessages(projectId);
+          return closure_18.getMessages(projectId);
         }
       }
       const items3 = [projectId];
       cResult[8] = projectId;
       cResult[9] = N;
       cResult[10] = items3;
-      tmp22 = items3;
+      let tmp22 = items3;
     } else {
       class N {
         constructor() {
-          return ConjureChatStore.getMessages(projectId);
+          return closure_18.getMessages(projectId);
         }
       }
       tmp22 = cResult[10];
     }
-    const tmp2Result16 = tmp2(stateFromStores[63]);
-    const stateFromStores1 = tmp2Result16.useStateFromStores(tmp19, N, tmp22);
+    let obj3 = stateFromStores3;
+    const tmp2Result15 = tmp2(tmp4[65]);
+    const stateFromStores1 = tmp2(tmp4[63]).useStateFromStores(tmp19, N, tmp22);
     const _Symbol2 = Symbol;
     if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
       class N {
         constructor() {
-          return ConjureChatStore.getMessages(projectId);
+          return closure_18.getMessages(projectId);
         }
       }
       const items4 = [ConjureProjectStore];
       cResult[11] = items4;
-      tmp26 = items4;
+      const tmp26 = items4;
     } else {
       class N {
         constructor() {
-          return ConjureChatStore.getMessages(projectId);
+          return closure_18.getMessages(projectId);
         }
       }
     }
     if (cResult[12] !== projectId) {
       class U {
         constructor() {
-          const publishStatus = ConjureProjectStore.getPublishStatus(projectId);
+          publishStatus = closure_15.getPublishStatus(projectId);
           state = undefined;
           if (publishStatus != null) {
             state = publishStatus.state;
@@ -4208,11 +4722,11 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       cResult[12] = projectId;
       cResult[13] = U;
       cResult[14] = items5;
-      tmp28 = items5;
+      let tmp28 = items5;
     } else {
       class U {
         constructor() {
-          const publishStatus = ConjureProjectStore.getPublishStatus(projectId);
+          publishStatus = closure_15.getPublishStatus(projectId);
           state = undefined;
           if (publishStatus != null) {
             state = publishStatus.state;
@@ -4225,28 +4739,12 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       }
       tmp28 = cResult[14];
     }
-    const tmp2Result17 = tmp2(stateFromStores[63]);
-    const stateFromStores2 = tmp2Result17.useStateFromStores(tmp26, U, tmp28);
+    const tmp2Result16 = tmp2(tmp4[63]);
+    const stateFromStores2 = tmp2(tmp4[63]).useStateFromStores(tmp26, U, tmp28);
     if (cResult[15] === stateFromStores1) {
-      let tmp36;
-      let tmp38;
-      let tmp42;
-      let tmp44;
-      let tmp49;
-      let tmp51;
-      let tmp73;
-      let tmp75;
-      let tmp79;
-      let tmp81;
-      let tmp86;
-      let tmp88;
-      let tmp92;
-      let tmp94;
-      let tmp98;
-      let tmp100;
       class U {
         constructor() {
-          const publishStatus = ConjureProjectStore.getPublishStatus(projectId);
+          publishStatus = closure_15.getPublishStatus(projectId);
           state = undefined;
           if (publishStatus != null) {
             state = publishStatus.state;
@@ -4262,7 +4760,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
         class U {
           constructor() {
-            const publishStatus = ConjureProjectStore.getPublishStatus(projectId);
+            publishStatus = closure_15.getPublishStatus(projectId);
             state = undefined;
             if (publishStatus != null) {
               state = publishStatus.state;
@@ -4275,11 +4773,11 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
         }
         const items6 = [ConjureChatStore];
         cResult[18] = items6;
-        tmp36 = items6;
+        const tmp36 = items6;
       } else {
         class U {
           constructor() {
-            const publishStatus = ConjureProjectStore.getPublishStatus(projectId);
+            publishStatus = closure_15.getPublishStatus(projectId);
             state = undefined;
             if (publishStatus != null) {
               state = publishStatus.state;
@@ -4294,105 +4792,104 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       if (cResult[19] !== projectId) {
         class Y {
           constructor() {
-            return ConjureChatStore.isThinking(projectId);
+            return closure_18.isThinking(projectId);
           }
         }
         const items7 = [projectId];
         cResult[19] = projectId;
         cResult[20] = Y;
         cResult[21] = items7;
-        tmp38 = items7;
+        let tmp38 = items7;
       } else {
         class Y {
           constructor() {
-            return ConjureChatStore.isThinking(projectId);
+            return closure_18.isThinking(projectId);
           }
         }
         tmp38 = cResult[21];
       }
-      const tmp2Result18 = tmp2(stateFromStores[63]);
-      stateFromStores3 = tmp2Result18.useStateFromStores(tmp36, Y, tmp38);
+      stateFromStores3 = tmp2(tmp4[63]).useStateFromStores(tmp36, Y, tmp38);
       const _Symbol4 = Symbol;
       if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
         class Y {
           constructor() {
-            return ConjureChatStore.isThinking(projectId);
+            return closure_18.isThinking(projectId);
           }
         }
         const items8 = [ConjureChatStore];
         cResult[22] = items8;
-        tmp42 = items8;
+        const tmp42 = items8;
       } else {
         class Y {
           constructor() {
-            return ConjureChatStore.isThinking(projectId);
+            return closure_18.isThinking(projectId);
           }
         }
       }
       if (cResult[23] !== projectId) {
         class Y {
           constructor() {
-            return ConjureChatStore.isThinking(projectId);
+            return closure_18.isThinking(projectId);
           }
         }
         const items9 = [projectId];
         cResult[23] = projectId;
         cResult[24] = tmp45;
         cResult[25] = items9;
-        tmp44 = items9;
+        let tmp44 = items9;
       } else {
         class Y {
           constructor() {
-            return ConjureChatStore.isThinking(projectId);
+            return closure_18.isThinking(projectId);
           }
         }
         tmp44 = cResult[25];
       }
-      const tmp2Result19 = tmp2(stateFromStores[63]);
-      const stateFromStores4 = tmp2Result19.useStateFromStores(tmp42, tmp45, tmp44);
+      const tmp2Result18 = tmp2(tmp4[63]);
+      const stateFromStores4 = tmp2(tmp4[63]).useStateFromStores(tmp42, tmp45, tmp44);
       const _Symbol5 = Symbol;
       if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
         class Y {
           constructor() {
-            return ConjureChatStore.isThinking(projectId);
+            return closure_18.isThinking(projectId);
           }
         }
         const items10 = [ConjureChatStore];
         cResult[26] = items10;
-        tmp49 = items10;
+        const tmp49 = items10;
       } else {
         class Y {
           constructor() {
-            return ConjureChatStore.isThinking(projectId);
+            return closure_18.isThinking(projectId);
           }
         }
       }
       if (cResult[27] !== projectId) {
         class Y {
           constructor() {
-            return ConjureChatStore.isThinking(projectId);
+            return closure_18.isThinking(projectId);
           }
         }
         const items11 = [projectId];
         cResult[27] = projectId;
         cResult[28] = tmp52;
         cResult[29] = items11;
-        tmp51 = items11;
+        let tmp51 = items11;
       } else {
         class Y {
           constructor() {
-            return ConjureChatStore.isThinking(projectId);
+            return closure_18.isThinking(projectId);
           }
         }
         tmp51 = cResult[29];
       }
-      const tmp2Result20 = tmp2(stateFromStores[63]);
-      const stateFromStores5 = tmp2Result20.useStateFromStores(tmp49, tmp52, tmp51);
+      const tmp2Result19 = tmp2(tmp4[63]);
+      const stateFromStores5 = tmp2(tmp4[63]).useStateFromStores(tmp49, tmp52, tmp51);
       const _Symbol6 = Symbol;
       if (cResult[30] === Symbol.for("react.memo_cache_sentinel")) {
         class Y {
           constructor() {
-            return ConjureChatStore.isThinking(projectId);
+            return closure_18.isThinking(projectId);
           }
         }
         const items12 = [ConjureChatStore];
@@ -4400,14 +4897,14 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       } else {
         class Y {
           constructor() {
-            return ConjureChatStore.isThinking(projectId);
+            return closure_18.isThinking(projectId);
           }
         }
       }
       if (cResult[31] !== projectId) {
         class Y {
           constructor() {
-            return ConjureChatStore.isThinking(projectId);
+            return closure_18.isThinking(projectId);
           }
         }
         const items13 = [projectId];
@@ -4417,25 +4914,35 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       } else {
         class Y {
           constructor() {
-            return ConjureChatStore.isThinking(projectId);
+            return closure_18.isThinking(projectId);
           }
         }
       }
-      tmp2(stateFromStores[63]);
+      tmp2(tmp4[63]);
       class A {
         constructor() {
-          if (stateFromStores) {
-            authStore(projectId);
+          if (closure_2) {
+            tmp = ensureConnection;
+            tmp2 = projectId;
+            tmp3 = ensureConnection(projectId);
           }
+          return;
         }
       }
+      const tmp2Result20 = tmp2(tmp4[63]);
       [tmp66, tmp67] = obj3.useState(null);
       let tmp68 = null == tmp66;
-      _slicedToArray(obj3.useState(null), 2);
       if (!tmp68) {
         class Y {
           constructor() {
-            return ConjureChatStore.isThinking(projectId);
+            return closure_18.isThinking(projectId);
+          }
+        }
+        if (stateFromStores3) {
+          class Y {
+            constructor() {
+              return closure_18.isThinking(projectId);
+            }
           }
         }
         tmp68 = tmp69;
@@ -4443,14 +4950,14 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       if (!tmp68) {
         class Y {
           constructor() {
-            return ConjureChatStore.isThinking(projectId);
+            return closure_18.isThinking(projectId);
           }
         }
       }
       if (cResult[34] !== projectId) {
         class Y {
           constructor() {
-            return ConjureChatStore.isThinking(projectId);
+            return closure_18.isThinking(projectId);
           }
         }
         cResult[34] = projectId;
@@ -4458,7 +4965,14 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       } else {
         class Y {
           constructor() {
-            return ConjureChatStore.isThinking(projectId);
+            return closure_18.isThinking(projectId);
+          }
+        }
+      }
+      if (stateFromStores3) {
+        class Y {
+          constructor() {
+            return closure_18.isThinking(projectId);
           }
         }
       }
@@ -4466,137 +4980,143 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       if (cResult[36] === Symbol.for("react.memo_cache_sentinel")) {
         class Y {
           constructor() {
-            return ConjureChatStore.isThinking(projectId);
+            return closure_18.isThinking(projectId);
           }
         }
         const items14 = [ConjureConnectionStore];
         cResult[36] = items14;
-        tmp73 = items14;
+        const tmp73 = items14;
       } else {
         class Y {
           constructor() {
-            return ConjureChatStore.isThinking(projectId);
+            return closure_18.isThinking(projectId);
           }
         }
       }
       if (cResult[37] !== projectId) {
         class Se {
           constructor() {
-            return ConjureConnectionStore.getConnState(projectId);
+            return closure_14.getConnState(projectId);
           }
         }
         const items15 = [projectId];
         cResult[37] = projectId;
         cResult[38] = Se;
         cResult[39] = items15;
-        tmp75 = items15;
+        let tmp75 = items15;
       } else {
         class Se {
           constructor() {
-            return ConjureConnectionStore.getConnState(projectId);
+            return closure_14.getConnState(projectId);
           }
         }
         tmp75 = cResult[39];
       }
-      const tmp2Result22 = tmp2(stateFromStores[63]);
-      const stateFromStores6 = tmp2Result22.useStateFromStores(tmp73, Se, tmp75);
+      const tmp65 = _slicedToArray(obj3.useState(null), 2);
+      const stateFromStores6 = tmp2(tmp4[63]).useStateFromStores(tmp73, Se, tmp75);
       const _Symbol8 = Symbol;
       if (cResult[40] === Symbol.for("react.memo_cache_sentinel")) {
         class Se {
           constructor() {
-            return ConjureConnectionStore.getConnState(projectId);
+            return closure_14.getConnState(projectId);
           }
         }
         const items16 = [ConjureConnectionStore];
         cResult[40] = items16;
-        tmp79 = items16;
+        const tmp79 = items16;
       } else {
         class Se {
           constructor() {
-            return ConjureConnectionStore.getConnState(projectId);
+            return closure_14.getConnState(projectId);
           }
         }
       }
       if (cResult[41] !== projectId) {
         class Se {
           constructor() {
-            return ConjureConnectionStore.getConnState(projectId);
+            return closure_14.getConnState(projectId);
           }
         }
         const items17 = [projectId];
         cResult[41] = projectId;
         cResult[42] = tmp82;
         cResult[43] = items17;
-        tmp81 = items17;
+        let tmp81 = items17;
       } else {
         class Se {
           constructor() {
-            return ConjureConnectionStore.getConnState(projectId);
+            return closure_14.getConnState(projectId);
           }
         }
         tmp81 = cResult[43];
       }
-      const tmp2Result23 = tmp2(stateFromStores[63]);
-      const stateFromStores7 = tmp2Result23.useStateFromStores(tmp79, tmp82, tmp81);
+      const tmp2Result22 = tmp2(tmp4[63]);
+      const stateFromStores7 = tmp2(tmp4[63]).useStateFromStores(tmp79, tmp82, tmp81);
       const _Symbol9 = Symbol;
       if (cResult[44] === Symbol.for("react.memo_cache_sentinel")) {
         class Se {
           constructor() {
-            return ConjureConnectionStore.getConnState(projectId);
+            return closure_14.getConnState(projectId);
           }
         }
         const items18 = [ConjureChatStore];
         cResult[44] = items18;
-        tmp86 = items18;
+        const tmp86 = items18;
       } else {
         class Se {
           constructor() {
-            return ConjureConnectionStore.getConnState(projectId);
+            return closure_14.getConnState(projectId);
           }
         }
       }
       if (cResult[45] !== projectId) {
         class Re {
           constructor() {
-            return ConjureChatStore.hasLoadedHistory(projectId);
+            return closure_18.hasLoadedHistory(projectId);
           }
         }
         const items19 = [projectId];
         cResult[45] = projectId;
         cResult[46] = Re;
         cResult[47] = items19;
-        tmp88 = items19;
+        let tmp88 = items19;
       } else {
         class Re {
           constructor() {
-            return ConjureChatStore.hasLoadedHistory(projectId);
+            return closure_18.hasLoadedHistory(projectId);
           }
         }
         tmp88 = cResult[47];
       }
-      const tmp2Result24 = tmp2(stateFromStores[63]);
-      const stateFromStores8 = tmp2Result24.useStateFromStores(tmp86, Re, tmp88);
+      const tmp2Result23 = tmp2(tmp4[63]);
+      const stateFromStores8 = tmp2(tmp4[63]).useStateFromStores(tmp86, Re, tmp88);
       const _Symbol10 = Symbol;
       if (cResult[48] === Symbol.for("react.memo_cache_sentinel")) {
         class Re {
           constructor() {
-            return ConjureChatStore.hasLoadedHistory(projectId);
+            return closure_18.hasLoadedHistory(projectId);
           }
         }
         const items20 = [ConjureChatStore];
         cResult[48] = items20;
-        tmp92 = items20;
+        const tmp92 = items20;
       } else {
         class Re {
           constructor() {
-            return ConjureChatStore.hasLoadedHistory(projectId);
+            return closure_18.hasLoadedHistory(projectId);
           }
         }
       }
       if (cResult[49] !== projectId) {
         class Pe {
           constructor() {
-            const hasLoadedHistoryResult = ConjureChatStore.hasLoadedHistory(projectId) && null != authStore3(projectId);
+            tmp = projectId;
+            hasLoadedHistoryResult = closure_18.hasLoadedHistory(projectId);
+            if (hasLoadedHistoryResult) {
+              tmp3 = getOlderHistoryCursor;
+              tmp4 = null;
+              hasLoadedHistoryResult = null != getOlderHistoryCursor(tmp);
+            }
             return hasLoadedHistoryResult;
           }
         }
@@ -4604,33 +5124,51 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
         cResult[49] = projectId;
         cResult[50] = Pe;
         cResult[51] = items21;
-        tmp94 = items21;
+        let tmp94 = items21;
       } else {
         class Pe {
           constructor() {
-            const hasLoadedHistoryResult = ConjureChatStore.hasLoadedHistory(projectId) && null != authStore3(projectId);
+            tmp = projectId;
+            hasLoadedHistoryResult = closure_18.hasLoadedHistory(projectId);
+            if (hasLoadedHistoryResult) {
+              tmp3 = getOlderHistoryCursor;
+              tmp4 = null;
+              hasLoadedHistoryResult = null != getOlderHistoryCursor(tmp);
+            }
             return hasLoadedHistoryResult;
           }
         }
         tmp94 = cResult[51];
       }
-      const tmp2Result25 = tmp2(stateFromStores[63]);
-      const stateFromStores9 = tmp2Result25.useStateFromStores(tmp92, Pe, tmp94);
+      const tmp2Result24 = tmp2(tmp4[63]);
+      const stateFromStores9 = tmp2(tmp4[63]).useStateFromStores(tmp92, Pe, tmp94);
       const _Symbol11 = Symbol;
       if (cResult[52] === Symbol.for("react.memo_cache_sentinel")) {
         class Pe {
           constructor() {
-            const hasLoadedHistoryResult = ConjureChatStore.hasLoadedHistory(projectId) && null != authStore3(projectId);
+            tmp = projectId;
+            hasLoadedHistoryResult = closure_18.hasLoadedHistory(projectId);
+            if (hasLoadedHistoryResult) {
+              tmp3 = getOlderHistoryCursor;
+              tmp4 = null;
+              hasLoadedHistoryResult = null != getOlderHistoryCursor(tmp);
+            }
             return hasLoadedHistoryResult;
           }
         }
         const items22 = [ConjureChatStore];
         cResult[52] = items22;
-        tmp98 = items22;
+        const tmp98 = items22;
       } else {
         class Pe {
           constructor() {
-            const hasLoadedHistoryResult = ConjureChatStore.hasLoadedHistory(projectId) && null != authStore3(projectId);
+            tmp = projectId;
+            hasLoadedHistoryResult = closure_18.hasLoadedHistory(projectId);
+            if (hasLoadedHistoryResult) {
+              tmp3 = getOlderHistoryCursor;
+              tmp4 = null;
+              hasLoadedHistoryResult = null != getOlderHistoryCursor(tmp);
+            }
             return hasLoadedHistoryResult;
           }
         }
@@ -4638,57 +5176,65 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       if (cResult[53] !== projectId) {
         class De {
           constructor() {
-            return ConjureChatStore.isHistoryUnavailable(projectId);
+            return closure_18.isHistoryUnavailable(projectId);
           }
         }
         const items23 = [projectId];
         cResult[53] = projectId;
         cResult[54] = De;
         cResult[55] = items23;
-        tmp100 = items23;
+        let tmp100 = items23;
       } else {
         class De {
           constructor() {
-            return ConjureChatStore.isHistoryUnavailable(projectId);
+            return closure_18.isHistoryUnavailable(projectId);
           }
         }
         tmp100 = cResult[55];
       }
-      const tmp2Result26 = tmp2(stateFromStores[63]);
-      const stateFromStores10 = tmp2Result26.useStateFromStores(tmp98, De, tmp100);
+      const tmp2Result25 = tmp2(tmp4[63]);
+      const stateFromStores10 = tmp2(tmp4[63]).useStateFromStores(tmp98, De, tmp100);
       if (cResult[56] === stateFromStores6) {
         class De {
           constructor() {
-            return ConjureChatStore.isHistoryUnavailable(projectId);
+            return closure_18.isHistoryUnavailable(projectId);
           }
         }
       }
+      const tmp2Result26 = tmp2(tmp4[63]);
       let obj2 = { historyLoaded: stateFromStores8, historyUnavailable: stateFromStores10, connState: stateFromStores6 };
-      const tmp2Result27 = tmp2(stateFromStores[67]);
+      const chatEmptyStateResult = tmp2(tmp4[67]).chatEmptyState(obj2);
       cResult[56] = stateFromStores6;
       cResult[57] = stateFromStores8;
       cResult[58] = stateFromStores10;
-      cResult[59] = tmp2Result27.chatEmptyState(obj2);
-      const chatEmptyStateResult = tmp2Result27.chatEmptyState(obj2);
+      cResult[59] = chatEmptyStateResult;
+      const tmp2Result27 = tmp2(tmp4[67]);
     }
-    const tmp2Result28 = tmp2(stateFromStores[66]);
+    const tmp2Result17 = tmp2(tmp4[63]);
+    const tmp2Result28 = tmp2(tmp4[66]);
     cResult[15] = stateFromStores1;
     cResult[16] = stateFromStores2;
-    cResult[17] = tmp2Result28.withLivePublishCard(stateFromStores1, stateFromStores2);
-    tmp2Result28.withLivePublishCard(stateFromStores1, stateFromStores2);
+    cResult[17] = tmp2(tmp4[66]).withLivePublishCard(stateFromStores1, stateFromStores2);
     class A {
       constructor() {
-        if (stateFromStores) {
-          authStore(projectId);
+        if (closure_2) {
+          tmp = ensureConnection;
+          tmp2 = projectId;
+          tmp3 = ensureConnection(projectId);
         }
+        return;
       }
     }
+    const withLivePublishCardResult = tmp2(tmp4[66]).withLivePublishCard(stateFromStores1, stateFromStores2);
   }
   class A {
     constructor() {
-      if (stateFromStores) {
-        authStore(projectId);
+      if (closure_2) {
+        tmp = ensureConnection;
+        tmp2 = projectId;
+        tmp3 = ensureConnection(projectId);
       }
+      return;
     }
   }
   const items24 = [stateFromStores, projectId];
@@ -4698,57 +5244,8 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   cResult[6] = items24;
   tmp14 = items24;
   tmp13 = A;
+  const tmp2Result = projectId(stateFromStores[63]);
 }) : ((projectId) => {
-  let FlashList;
-  let Text;
-  let _undefined;
-  let _undefined2;
-  let _undefined3;
-  let _undefined32;
-  let _undefined4;
-  let _undefined5;
-  let _undefined6;
-  let c15;
-  let c16;
-  let c19;
-  let c20;
-  let c28;
-  let c29;
-  let c35;
-  let c36;
-  let c47;
-  let closure_22;
-  let items55;
-  let items56;
-  let items57;
-  let items58;
-  let items59;
-  let obj13;
-  let obj16;
-  let obj19;
-  let obj20;
-  let obj22;
-  let onDismissClarification;
-  let onPickIdea;
-  let tmp106;
-  let tmp17;
-  let tmp18;
-  let tmp2Result29;
-  let tmp39;
-  let tmp40;
-  let tmp55;
-  let tmp67;
-  let tmp92Result;
-  let tmp92Result4;
-  let tmp95;
-  const f126078 = () => {
-    map = new Map();
-    return map;
-  };
-  const f126081 = () => {
-    map = new Map();
-    return map;
-  };
   projectId = projectId.projectId;
   let num = projectId.transcriptTopInset;
   if (num === undefined) {
@@ -4761,22 +5258,21 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   let stateFromStores10;
   let render_id;
   let render_id1;
-  set = undefined;
   let stateFromStores12;
   let memo1;
   c15 = undefined;
   c16 = undefined;
   let onToggleChecklist;
-  let closure_18;
+  closure_18 = undefined;
   c19 = undefined;
   c20 = undefined;
   let onTogglePlan;
   autoscrollToBottomThreshold = undefined;
-  let closure_23;
+  closure_23 = undefined;
   fadingEdgeLength = undefined;
   let conjureReminder;
-  let closure_26;
-  let closure_27;
+  closure_26 = undefined;
+  closure_27 = undefined;
   c28 = undefined;
   c29 = undefined;
   let canSend;
@@ -4787,47 +5283,35 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   c35 = undefined;
   c36 = undefined;
   let bound;
-  let ref2;
-  let ref3;
-  let ref4;
-  let ref5;
   let ref;
   let callback2;
   let callback3;
   c47 = undefined;
-  let ref6;
-  let ref7;
   let callback5;
-  let closure_51;
+  closure_51 = undefined;
   let onJumpToReplied;
   let tmp = c29();
-  let tmp2 = projectId;
-  let tmp3 = stateFromStores;
-  let obj = projectId(stateFromStores[63]);
   items = [stateFromStores10];
-  stateFromStores = obj.useStateFromStores(items, () => "active" === stateFromStores10.getState(), []);
-  let tmp5 = onRestoreVersion;
+  stateFromStores = projectId(stateFromStores[63]).useStateFromStores(items, () => "active" === stateFromStores10.getState(), []);
   let obj2 = stateFromStores2;
   const items1 = [stateFromStores, projectId];
-  const bottom = onRestoreVersion(stateFromStores[64])().bottom;
   const effect = stateFromStores2.useEffect(() => {
     if (stateFromStores) {
-      authStore(projectId);
+      v65535(projectId);
     }
   }, items1);
+  let obj = projectId(stateFromStores[63]);
+  const ackConjureProjectWhileViewing = projectId(stateFromStores[65]).useAckConjureProjectWhileViewing(projectId);
   let obj3 = projectId(stateFromStores[65]);
-  const ackConjureProjectWhileViewing = obj3.useAckConjureProjectWhileViewing(projectId);
-  let tmp8 = closure_18;
   const items2 = [closure_18];
   const items3 = [projectId];
+  const stateFromStores1 = projectId(stateFromStores[63]).useStateFromStores(items2, () => ConjureChatStore.getMessages(projectId), items3);
   const obj4 = projectId(stateFromStores[63]);
-  const stateFromStores1 = obj4.useStateFromStores(items2, () => ConjureChatStore.getMessages(projectId), items3);
   const items4 = [c15];
   const items5 = [projectId];
-  const obj5 = projectId(stateFromStores[63]);
-  stateFromStores2 = obj5.useStateFromStores(items4, () => {
+  stateFromStores2 = projectId(stateFromStores[63]).useStateFromStores(items4, () => {
     const publishStatus = ConjureProjectStore.getPublishStatus(projectId);
-    let state;
+    state = undefined;
     if (publishStatus != null) {
       state = publishStatus.state;
     }
@@ -4837,34 +5321,33 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     return state;
   }, items5);
   const items6 = [stateFromStores1, stateFromStores2];
-  const memo = stateFromStores2.useMemo(() => {
-    const obj = conjurePublishCard;
-    return obj.withLivePublishCard(stateFromStores1, stateFromStores2);
-  }, items6);
+  const memo = stateFromStores2.useMemo(() => conjurePublishCard.withLivePublishCard(stateFromStores1, stateFromStores2), items6);
+  const obj5 = projectId(stateFromStores[63]);
   const items7 = [closure_18];
   const items8 = [projectId];
+  const stateFromStores3 = projectId(stateFromStores[63]).useStateFromStores(items7, () => ConjureChatStore.isThinking(projectId), items8);
   const obj6 = projectId(stateFromStores[63]);
-  const stateFromStores3 = obj6.useStateFromStores(items7, () => ConjureChatStore.isThinking(projectId), items8);
   const items9 = [closure_18];
   const items10 = [projectId];
+  const stateFromStores4 = projectId(stateFromStores[63]).useStateFromStores(items9, () => ConjureChatStore.isCompacting(projectId), items10);
   const obj7 = projectId(stateFromStores[63]);
-  const stateFromStores4 = obj7.useStateFromStores(items9, () => ConjureChatStore.isCompacting(projectId), items10);
   const items11 = [closure_18];
   const items12 = [projectId];
+  const stateFromStores5 = projectId(stateFromStores[63]).useStateFromStores(items11, () => ConjureChatStore.getThinkingActivity(projectId), items12);
   const obj8 = projectId(stateFromStores[63]);
-  const stateFromStores5 = obj8.useStateFromStores(items11, () => ConjureChatStore.getThinkingActivity(projectId), items12);
   const items13 = [closure_18];
   const items14 = [projectId];
+  const stateFromStores6 = projectId(stateFromStores[63]).useStateFromStores(items13, () => ConjureChatStore.getProjectUsage(projectId), items14);
   const obj9 = projectId(stateFromStores[63]);
-  const stateFromStores6 = obj9.useStateFromStores(items13, () => ConjureChatStore.getProjectUsage(projectId), items14);
-  let tmp15 = stateFromStores1;
   [tmp17, tmp18] = stateFromStores1(stateFromStores2.useState(null), 2);
-  let c7 = tmp18;
+  c7 = tmp18;
   let tmp19 = null == tmp17;
-  stateFromStores1(stateFromStores2.useState(null), 2);
   if (!tmp19) {
-    tmp19 = stateFromStores3 && tmp17 === projectId;
-    const tmp20 = stateFromStores3 && tmp17 === projectId;
+    let tmp20 = stateFromStores3;
+    if (stateFromStores3) {
+      tmp20 = tmp17 === projectId;
+    }
+    tmp19 = tmp20;
   }
   if (!tmp19) {
     tmp18(null);
@@ -4881,38 +5364,44 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   if (stateFromStores3) {
     tmp23 = tmp17 === projectId;
   }
+  let tmp16 = stateFromStores1(stateFromStores2.useState(null), 2);
   const items16 = [memo1];
   const items17 = [projectId];
-  const tmp2Result = tmp2(tmp3[63]);
-  const stateFromStores7 = tmp2Result.useStateFromStores(items16, () => ConjureConnectionStore.getConnState(projectId), items17);
+  const stateFromStores7 = projectId(stateFromStores[63]).useStateFromStores(items16, () => ConjureConnectionStore.getConnState(projectId), items17);
+  const tmp24 = memo1;
+  const tmp2Result = projectId(stateFromStores[63]);
   const items18 = [memo1];
   const items19 = [projectId];
-  const tmp2Result17 = tmp2(tmp3[63]);
-  const stateFromStores8 = tmp2Result17.useStateFromStores(items18, () => ConjureConnectionStore.isChatStopped(projectId), items19);
-  const items20 = [tmp8];
+  const stateFromStores8 = projectId(stateFromStores[63]).useStateFromStores(items18, () => ConjureConnectionStore.isChatStopped(projectId), items19);
+  const tmp2Result17 = projectId(stateFromStores[63]);
+  const items20 = [closure_18];
   const items21 = [projectId];
-  const tmp2Result18 = tmp2(tmp3[63]);
-  stateFromStores9 = tmp2Result18.useStateFromStores(items20, () => ConjureChatStore.hasLoadedHistory(projectId), items21);
-  const items22 = [tmp8];
+  stateFromStores9 = projectId(stateFromStores[63]).useStateFromStores(items20, () => ConjureChatStore.hasLoadedHistory(projectId), items21);
+  const tmp2Result18 = projectId(stateFromStores[63]);
+  const items22 = [closure_18];
   const items23 = [projectId];
-  const tmp2Result19 = tmp2(tmp3[63]);
-  stateFromStores10 = tmp2Result19.useStateFromStores(items22, () => {
-    const hasLoadedHistoryResult = ConjureChatStore.hasLoadedHistory(projectId) && null != authStore3(projectId);
+  stateFromStores10 = projectId(stateFromStores[63]).useStateFromStores(items22, () => {
+    let hasLoadedHistoryResult = ConjureChatStore.hasLoadedHistory(projectId);
+    if (hasLoadedHistoryResult) {
+      hasLoadedHistoryResult = null != value2(projectId);
+    }
     return hasLoadedHistoryResult;
   }, items23);
-  const items24 = [tmp8];
+  const tmp2Result19 = projectId(stateFromStores[63]);
+  const items24 = [closure_18];
   const items25 = [projectId];
-  const tmp2Result20 = tmp2(tmp3[63]);
-  const stateFromStores11 = tmp2Result20.useStateFromStores(items24, () => ConjureChatStore.isHistoryUnavailable(projectId), items25);
-  const tmp2Result21 = tmp2(tmp3[67]);
-  const chatEmptyStateResult = tmp2Result21.chatEmptyState({ historyLoaded: stateFromStores9, historyUnavailable: stateFromStores11, connState: stateFromStores7 });
+  const stateFromStores11 = projectId(stateFromStores[63]).useStateFromStores(items24, () => ConjureChatStore.isHistoryUnavailable(projectId), items25);
+  const tmp2Result20 = projectId(stateFromStores[63]);
+  const chatEmptyStateResult = projectId(stateFromStores[67]).chatEmptyState({ historyLoaded: stateFromStores9, historyUnavailable: stateFromStores11, connState: stateFromStores7 });
   render_id = null;
-  const tmp24 = memo1;
   if (memo.length > 0) {
     render_id = memo[memo.length - 1].render_id;
   }
   const findLastResult = memo.findLast((role) => {
-    const tmp = "assistant" === role.role && onToggleChecklist(role);
+    let tmp = "assistant" === role.role;
+    if (tmp) {
+      tmp = onToggleChecklist(role);
+    }
     return tmp;
   });
   render_id1 = undefined;
@@ -4923,14 +5412,11 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     render_id1 = null;
   }
   const items26 = [memo];
-  set = obj2.useMemo(() => {
-    const obj = ConjureTodoState;
-    return obj.supersededChecklists(memo);
-  }, items26);
+  obj2.useMemo(() => ConjureTodoState.supersededChecklists(memo), items26);
+  const tmp2Result21 = projectId(stateFromStores[67]);
   const items27 = [tmp24];
   const items28 = [projectId];
-  const tmp2Result22 = tmp2(tmp3[63]);
-  stateFromStores12 = tmp2Result22.useStateFromStores(items27, () => {
+  stateFromStores12 = projectId(stateFromStores[63]).useStateFromStores(items27, () => {
     const settings = ConjureConnectionStore.getSettings(projectId);
     let secrets;
     if (settings != null) {
@@ -4939,95 +5425,81 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     return secrets;
   }, items28);
   const items29 = [memo, stateFromStores12];
-  memo1 = obj2.useMemo(() => {
-    const obj = ConjureSecretRequestState;
-    return obj.secretRequestStatuses(memo, stateFromStores12);
-  }, items29);
-  [c15, c16] = tmp15(obj2.useState(f126078), 2);
-  tmp15(obj2.useState(f126078), 2);
+  memo1 = obj2.useMemo(() => ConjureSecretRequestState.secretRequestStatuses(memo, stateFromStores12), items29);
+  const tmp2Result22 = projectId(stateFromStores[63]);
+  [c15, c16] = stateFromStores1(obj2.useState(() => new Map()), 2);
   onToggleChecklist = obj2.useCallback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    _undefined2((get) => {
-      const obj = projectId(stateFromStores[58]);
-      return obj.toggleChecklist(get, closure_0, closure_1);
-    });
+    closure_0 = arg0;
+    closure_1 = arg1;
+    _undefined2((get) => projectId(stateFromStores[58]).toggleChecklist(get, closure_0, closure_1));
   }, []);
   const items30 = [memo];
-  closure_18 = obj2.useMemo(() => {
-    const obj = conjurePendingPlan;
-    return obj.planVersions(memo);
-  }, items30);
-  [c19, c20] = tmp15(obj2.useState(f126081), 2);
-  tmp15(obj2.useState(f126081), 2);
+  closure_18 = obj2.useMemo(() => conjurePendingPlan.planVersions(memo), items30);
+  const tmp15Result = stateFromStores1(obj2.useState(() => new Map()), 2);
+  [c19, c20] = stateFromStores1(obj2.useState(() => new Map()), 2);
   onTogglePlan = obj2.useCallback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    _undefined32((get) => {
-      const obj = projectId(stateFromStores[69]);
-      return obj.togglePlanCard(get, closure_0, closure_1);
-    });
+    closure_0 = arg0;
+    closure_1 = arg1;
+    _undefined3((get) => projectId(stateFromStores[69]).togglePlanCard(get, closure_0, closure_1));
   }, []);
   const items31 = [memo];
-  autoscrollToBottomThreshold = obj2.useMemo(() => {
-    let obj = ConjureChatGrouping;
-    return obj.groupChatRows(memo.map((key) => {
-      let str;
-      let tmp3;
-      let user_id;
-      const obj = { key: key.render_id, actor: str, authorId: user_id, boundary: render_id, separate: tmp3 };
-      str = "assistant";
-      if ("user" === key.role) {
-        str = "user";
+  autoscrollToBottomThreshold = obj2.useMemo(() => ConjureChatGrouping.groupChatRows(memo.map((key) => {
+    const obj = { key: key.render_id, actor: null, authorId: null, boundary: null, separate: null };
+    let str = "assistant";
+    if ("user" === key.role) {
+      str = "user";
+    }
+    obj.actor = str;
+    let user_id;
+    if ("user" === key.role) {
+      user_id = key.user_id;
+    }
+    obj.authorId = user_id;
+    render_id = undefined;
+    if ("user" !== key.role) {
+      render_id = key.render_id;
+    }
+    obj.boundary = render_id;
+    let tmp3 = "assistant" === key.role;
+    if (tmp3) {
+      let tmp5 = null != key.proposal || null != key.clarification;
+      if (!tmp5) {
+        tmp5 = "side_reply" === key.kind;
       }
-      user_id = undefined;
-      if ("user" === key.role) {
-        user_id = key.user_id;
+      if (!tmp5) {
+        tmp5 = null != key.in_reply_to;
       }
-      render_id = undefined;
-      if ("user" !== key.role) {
-        render_id = key.render_id;
-      }
-      tmp3 = "assistant" === key.role;
-      if (tmp3) {
-        tmp3 = null != key.proposal || null != key.clarification || "side_reply" === key.kind || null != key.in_reply_to;
-        const tmp5 = null != key.proposal || null != key.clarification || "side_reply" === key.kind || null != key.in_reply_to;
-      }
-      return obj;
-    }));
-  }, items31);
+      tmp3 = tmp5;
+    }
+    obj.separate = tmp3;
+    return obj;
+  })), items31);
   const items32 = [projectId];
   closure_23 = obj2.useCallback(() => {
-    const sendConjureCardReply = conjureAttachmentDrafts.sendConjureCardReply;
-    conjureAttachmentDrafts;
-    const intl = intl13.intl;
-    sendConjureCardReply(projectId, intl.string(_modDef3753.EMgIuY));
+    const intl = util.intl;
+    conjureAttachmentDrafts.sendConjureCardReply(projectId, intl.string(_modDef3753.EMgIuY));
   }, items32);
   const items33 = [projectId];
   fadingEdgeLength = obj2.useCallback((implementation_prompt) => {
-    const obj = conjureAttachmentDrafts;
-    obj.sendConjureCardReply(projectId, implementation_prompt.implementation_prompt);
+    conjureAttachmentDrafts.sendConjureCardReply(projectId, implementation_prompt.implementation_prompt);
   }, items33);
-  [tmp39, tmp40] = tmp15(tmp5(tmp3[72])(projectId), 2);
-  tmp15(tmp5(tmp3[72])(projectId), 2);
-  const tmp2Result23 = tmp2(tmp3[73]);
-  conjureReminder = tmp2Result23.useConjureReminder(projectId, memo, tmp39);
+  const tmp15Result7 = stateFromStores1(obj2.useState(() => new Map()), 2);
+  [tmp39, tmp40] = stateFromStores1(onRestoreVersion(stateFromStores[72])(projectId), 2);
+  const tmp15Result8 = stateFromStores1(onRestoreVersion(stateFromStores[72])(projectId), 2);
+  conjureReminder = projectId(stateFromStores[73]).useConjureReminder(projectId, memo, tmp39);
   const items34 = [projectId];
   closure_26 = obj2.useCallback(() => {
-    const intl = intl13.intl;
-    map1(projectId, intl.string(_modDef3753["t5CN3+"]));
+    const intl = util.intl;
+    __initData2(projectId, intl.string(_modDef3753["t5CN3+"]));
   }, items34);
   const items35 = [projectId];
   closure_27 = obj2.useCallback((implementation_prompt, clarificationAnswers, attachments) => {
-    const obj = conjureAttachmentDrafts;
-    const obj2 = { clarificationAnswers, attachments };
-    obj.sendConjureCardReply(projectId, implementation_prompt, obj2);
+    conjureAttachmentDrafts.sendConjureCardReply(projectId, implementation_prompt, { clarificationAnswers, attachments });
   }, items35);
-  [c28, c29] = tmp15(obj2.useState(null), 2);
+  const tmp2Result23 = projectId(stateFromStores[73]);
+  [c28, c29] = stateFromStores1(obj2.useState(null), 2);
   let tmp44 = tmp43;
-  tmp15(obj2.useState(null), 2);
-  if (!tmp44) {
-    let str = "connecting";
+  if ("open" !== stateFromStores7) {
     tmp44 = "connecting" === stateFromStores7;
   }
   if (tmp44) {
@@ -5035,17 +5507,12 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   }
   canSend = tmp44;
   const items36 = [memo];
-  memo2 = obj2.useMemo(() => {
-    const obj = conjurePendingPlan;
-    return obj.pendingPlanRenderId(memo);
-  }, items36);
-  const arr = Array.from(memo1, (arg0) => {
-    let tmp;
-    let tmp2;
+  memo2 = obj2.useMemo(() => conjurePendingPlan.pendingPlanRenderId(memo), items36);
+  const tmp15Result9 = stateFromStores1(obj2.useState(null), 2);
+  joined = Array.from(memo1, (arg0) => {
     [tmp, tmp2] = arg0;
     return "" + tmp + ":" + tmp2;
-  });
-  joined = arr.join(",");
+  }).join(",");
   const items37 = [conjureReminder, tmp44, memo2, joined];
   const items38 = [memo];
   const memo3 = obj2.useMemo(() => ({ reminder: conjureReminder, canSend, pendingPlanId: memo2, secretStatusesKey: joined }), items37);
@@ -5055,7 +5522,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       while (true) {
         let tmp3 = memo[diff];
         if ("assistant" === tmp3.role) {
-          if (!onToggleChecklist(tmp3)) {
+          if (!constants(tmp3)) {
             break;
           }
         }
@@ -5073,36 +5540,37 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     }
     let timelineTree = null;
     if (null != tmp2) {
-      const obj = ConjureTimelineTree;
-      timelineTree = obj.buildTimelineTree(tmp2.steps, { turnActive: true });
+      timelineTree = ConjureTimelineTree.buildTimelineTree(tmp2.steps, { turnActive: true });
     }
     return timelineTree;
   }, items39);
   let tmp50 = null != memo5;
   if (tmp50) {
     tmp50 = memo5.steps.length > 0 || memo5.tasks.length > 0;
+    const tmp51 = memo5.steps.length > 0 || memo5.tasks.length > 0;
   }
   const items40 = [memo5];
   let memo6 = obj2.useMemo(() => {
     let currentStepResult;
     if (null != memo5) {
-      const obj = ConjureTimelineTree;
-      currentStepResult = obj.currentStep(tmp.steps);
+      currentStepResult = ConjureTimelineTree.currentStep(tmp.steps);
     }
     let describeNodeResult = null;
     if (null != currentStepResult) {
-      const obj2 = ConjureTimelineTree;
-      describeNodeResult = obj2.describeNode(currentStepResult);
+      describeNodeResult = ConjureTimelineTree.describeNode(currentStepResult);
     }
     return describeNodeResult;
   }, items40);
-  [obj19, c35] = tmp15(obj2.useState(null), 2);
-  tmp15(obj2.useState(null), 2);
-  [tmp55, c36] = tmp15(obj2.useState(64), 2);
-  tmp15(obj2.useState(64), 2);
+  const arr = Array.from(memo1, (arg0) => {
+    [tmp, tmp2] = arg0;
+    return "" + tmp + ":" + tmp2;
+  });
+  [obj19, c35] = stateFromStores1(obj2.useState(null), 2);
+  const tmp15Result10 = stateFromStores1(obj2.useState(null), 2);
+  [tmp55, c36] = stateFromStores1(obj2.useState(64), 2);
   const callback1 = obj2.useCallback((nativeEvent) => {
-    let closure_0 = Math.round(nativeEvent.nativeEvent.layout.height);
-    let tmp = _undefined5((arg0) => {
+    closure_0 = Math.round(nativeEvent.nativeEvent.layout.height);
+    _undefined5((arg0) => {
       let tmp = closure_0;
       if (arg0 === closure_0) {
         tmp = arg0;
@@ -5110,18 +5578,18 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       return tmp;
     });
   }, []);
+  const tmp15Result11 = stateFromStores1(obj2.useState(64), 2);
   bound = tmp55;
-  const tmp2Result24 = tmp2(tmp3[37]);
   if (!tmp2Result24.isIOS()) {
     let _Math = Math;
     bound = Math.min(tmp55, fadingEdgeLength);
   }
   obj2.useRef(null);
   obj2.useRef(null);
-  ref2 = obj2.useRef(false);
-  ref3 = obj2.useRef(true);
-  ref4 = obj2.useRef(0);
-  ref5 = obj2.useRef(0);
+  obj2.useRef(false);
+  obj2.useRef(true);
+  obj2.useRef(0);
+  obj2.useRef(0);
   ref = obj2.useRef(false);
   callback2 = obj2.useCallback(() => {
     const animationFrame = requestAnimationFrame(() => {
@@ -5135,12 +5603,12 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   }, []);
   callback3 = obj2.useCallback(() => {
     const timestamp = Date.now();
-    ref4.current = timestamp + c23;
-    ref5.current = timestamp + 2000;
+    closure_42.current = timestamp + c23;
+    closure_43.current = timestamp + 2000;
   }, []);
   const items41 = [projectId, callback3];
   const effect1 = obj2.useEffect(() => {
-    ref3.current = true;
+    closure_41.current = true;
     callback3();
   }, items41);
   const items42 = [stateFromStores9, callback3];
@@ -5161,12 +5629,12 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     }
   }, items43);
   const callback4 = obj2.useCallback(() => {
-    ref3.current = false;
+    closure_41.current = false;
   }, []);
-  [tmp67, c47] = tmp15(obj2.useState(false), 2);
-  tmp15(obj2.useState(false), 2);
-  ref6 = obj2.useRef(null);
-  ref7 = obj2.useRef(0);
+  tmp2Result24 = projectId(stateFromStores[37]);
+  [tmp67, c47] = stateFromStores1(obj2.useState(false), 2);
+  obj2.useRef(null);
+  obj2.useRef(0);
   callback5 = obj2.useCallback(() => {
     const current = ref6.current;
     const current2 = ref.current;
@@ -5177,19 +5645,28 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
         layout = current3.getLayout(current);
       }
     }
-    const tmp5 = null != current2 && null != tmp && tmp.y >= current2.offsetY + current2.viewportHeight - ref7.current;
-    _undefined6(tmp5);
+    let tmp5 = null != current2;
+    if (tmp5) {
+      tmp5 = null != tmp;
+    }
+    if (tmp5) {
+      tmp5 = tmp.y >= current2.offsetY + current2.viewportHeight - ref7.current;
+    }
+    _undefined(tmp5);
   }, []);
   const items44 = [callback5];
   const items45 = [callback2, callback5];
   const callback6 = obj2.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
-    ref.current = { offsetY: nativeEvent.contentOffset.y, viewportHeight: nativeEvent.layoutMeasurement.height, contentHeight: nativeEvent.contentSize.height };
+    closure_39.current = { offsetY: nativeEvent.contentOffset.y, viewportHeight: nativeEvent.layoutMeasurement.height, contentHeight: nativeEvent.contentSize.height };
     callback5();
   }, items44);
   const callback7 = obj2.useCallback((arg0, contentHeight) => {
     const timestamp = Date.now();
-    const current = ref3.current && timestamp < ref4.current;
+    let current = ref3.current;
+    if (current) {
+      current = timestamp < ref4.current;
+    }
     if (current) {
       const _Math = Math;
       ref4.current = Math.min(timestamp + c23, ref5.current);
@@ -5197,15 +5674,17 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     }
     const current2 = ref.current;
     if (null != current2) {
-      let obj;
       if (current2.contentHeight - current2.offsetY - current2.viewportHeight <= c22 * current2.viewportHeight) {
-        const obj2 = { contentHeight, offsetY: Math.max(0, contentHeight - current2.viewportHeight) };
+        const obj2 = {};
         const merged = Object.assign(current2);
+        obj2.contentHeight = contentHeight;
         const _Math2 = Math;
-        obj = obj2;
+        obj2.offsetY = Math.max(0, contentHeight - current2.viewportHeight);
+        let obj = obj2;
       } else {
-        obj = { contentHeight };
+        obj = {};
         const merged1 = Object.assign(current2);
+        obj.contentHeight = contentHeight;
       }
       tmp8.current = obj;
       if (ref2.current) {
@@ -5219,14 +5698,10 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     }
   }, items45);
   const items46 = [callback5];
-  const memo7 = obj2.useMemo(() => {
-    const obj = { itemVisiblePercentThreshold: projectId(stateFromStores[74]).MIN_VISIBLE_PERCENT };
-    return obj;
-  }, []);
-  const callback8 = obj2.useCallback((viewableItems) => {
-    viewableItems = viewableItems.viewableItems;
+  const memo7 = obj2.useMemo(() => ({ itemVisiblePercentThreshold: projectId(stateFromStores[74]).MIN_VISIBLE_PERCENT }), []);
+  const callback8 = obj2.useCallback((arg0) => {
     set = new Set();
-    const iter = viewableItems[Symbol.iterator]();
+    const iter = arg0.viewableItems[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       if (null != nextResult.key) {
@@ -5252,13 +5727,12 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     } else if (null == memo[tmp]) {
       return null;
     } else {
-      const obj = ConjureTimelineTree;
-      let latestTodosResult = obj.latestTodos(tmp3.steps);
+      let latestTodosResult = ConjureTimelineTree.latestTodos(tmp3.steps);
       if (null == latestTodosResult) {
         let todos = null;
-        if (null != memo[tmp].todos) {
+        if (null != tmp3.todos) {
           todos = null;
-          if (memo[tmp].todos.length > 0) {
+          if (tmp3.todos.length > 0) {
             todos = tmp3.todos;
           }
         }
@@ -5272,21 +5746,18 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   }
   let checklistLiveResult = null == tmp74;
   if (!checklistLiveResult) {
+    checklistLiveResult = tmp2(tmp3[58]).checklistLive(tmp74);
     const tmp2Result25 = tmp2(tmp3[58]);
-    checklistLiveResult = tmp2Result25.checklistLive(tmp74);
   }
-  let conjureTurnStartedAtResult;
   if (null != tmp74) {
     const tmp2Result26 = tmp2(tmp3[75]);
-    conjureTurnStartedAtResult = tmp2Result26.conjureTurnStartedAt(tmp74);
+    const conjureTurnStartedAtResult = tmp2(tmp3[75]).conjureTurnStartedAt(tmp74);
   }
   const items48 = [memo5];
   let tmp78;
   const memo9 = obj2.useMemo(() => {
-    let runningTodoAgentsResult;
     if (null != memo5) {
-      const obj = ConjureTodoAgents;
-      runningTodoAgentsResult = obj.runningTodoAgents(tmp.tasks);
+      let runningTodoAgentsResult = ConjureTodoAgents.runningTodoAgents(tmp.tasks);
     } else {
       runningTodoAgentsResult = [];
     }
@@ -5302,7 +5773,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   let tmp81 = null != tmp78;
   if (tmp81) {
     tmp81 = null != obj19 && !obj19.has(tmp78) || tmp67;
-    null != obj19 && !obj19.has(tmp78) || tmp67;
+    const tmp82 = null != obj19 && !obj19.has(tmp78) || tmp67;
   }
   let tmp83 = null;
   if (stateFromStores3) {
@@ -5316,14 +5787,14 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   }
   const items49 = [bound, memo4, callback5];
   const effect4 = obj2.useEffect(() => {
-    ref6.current = memo4;
-    ref7.current = bound;
-    let closure_0 = requestAnimationFrame(callback5);
+    closure_48.current = memo4;
+    closure_49.current = bound;
+    closure_0 = requestAnimationFrame(callback5);
     return () => cancelAnimationFrame(closure_0);
   }, items49);
   const items50 = [memo];
   closure_51 = obj2.useMemo(() => {
-    map = new Map();
+    const map = new Map();
     const iter = memo[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
@@ -5343,10 +5814,10 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   }, items50);
   const items51 = [memo];
   onJumpToReplied = obj2.useCallback((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     const findIndexResult = memo.findIndex((id) => id.id === closure_0);
     if (findIndexResult >= 0) {
-      ref3.current = false;
+      closure_41.current = false;
       const current = ref.current;
       if (current != null) {
         const obj = { index: findIndexResult, animated: true, viewPosition: 0.5 };
@@ -5358,7 +5829,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   const items53 = [projectId];
   const callback9 = obj2.useCallback(() => {
     if (null != memo4) {
-      ref3.current = false;
+      closure_41.current = false;
       const current = ref.current;
       if (current != null) {
         const obj = { index: tmp, animated: true, viewPosition: 1, viewOffset: bound };
@@ -5368,195 +5839,205 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   }, items52);
   const items54 = [projectId];
   const callback10 = obj2.useCallback((arg0, arg1) => {
-    ref2.current = true;
-    map1(projectId, arg0, arg1);
+    closure_40.current = true;
+    __initData2(projectId, arg0, arg1);
   }, items53);
   let connectionLabelResult = null;
   const callback11 = obj2.useCallback(() => {
-    set(projectId);
+    __initData(projectId);
   }, items54);
   if ("open" !== stateFromStores7) {
+    connectionLabelResult = tmp2(tmp3[77]).connectionLabel(stateFromStores7);
     const tmp2Result27 = tmp2(tmp3[77]);
-    connectionLabelResult = tmp2Result27.connectionLabel(stateFromStores7);
   }
-  const obj10 = { style: tmp.container, children: items55 };
-  const tmp2Result28 = tmp2(tmp3[78]);
-  const conjureControlActive = tmp2Result28.useConjureControlActive(projectId);
-  items55 = [c19(tmp5(tmp3[79]), { thinking: stateFromStores3, bleedBottom: bottom }), , ];
-  const obj11 = { style: tmp.transcriptArea, children: items58 };
-  const obj12 = { clearance: tmp55, children: c19(FlashList, obj13) };
-  obj13 = {
-    ref,
-    fadingEdgeLength,
-    removeClippedSubviews: tmp2Result29.isIOS() && undefined,
-    viewabilityConfig: memo7,
-    onViewableItemsChanged: callback8,
-    onScroll: callback6,
-    onScrollBeginDrag: callback4,
-    onContentSizeChange: callback7,
-    scrollEventThrottle: 16,
-    contentInset: tmp95,
-    ListHeaderComponent: tmp92Result,
-    style: items56,
-    contentContainerStyle: items57,
-    data: memo,
-    extraData: memo3,
-    maintainVisibleContentPosition: obj20,
-    keyExtractor(render_id) {
-      return render_id.render_id;
-    },
-    ListEmptyComponent: tmp92Result4,
-    renderItem(arg0) {
-      let flag;
-      let index;
-      let item;
-      let obj3;
-      let planCardExpanded;
-      let str;
-      let superseded;
-      let superseded1;
-      let tmp15;
-      let tmp17;
-      let tmp18;
-      let tmp19;
-      let tmp21;
-      let tmp3;
-      let version;
-      ({ item, index } = arg0);
-      const obj = { projectId, message: item, groupStart: flag, first: 0 === index, isNewest: item.render_id === render_id, hostsReminder: item.render_id === render_id1, reminder: tmp3, checklistSuperseded: set.has(item.render_id), secretRequestStatus: str, checklistExpanded: obj3.checklistExpanded(c15, item.render_id, set.has(item.render_id)), onToggleChecklist, planVersion: version, planSuperseded: true === superseded, planExpanded: planCardExpanded(c19, render_id, true === superseded1), onTogglePlan, replied: closure_51.get(item.render_id), onJumpToReplied, onApprovePlan: tmp15, onPickIdea, onAskForIdeas: tmp17, onAnswerClarification: tmp18, clarificationDismissed: tmp19, onDismissClarification, onRestoreVersion: tmp21 };
-      flag = closure_22[index];
-      if (flag == null) {
-        flag = true;
-      }
-      tmp3 = null;
-      if (item.render_id === render_id1) {
-        tmp3 = conjureReminder;
-      }
-      str = memo1.get(item.render_id);
-      if (str == null) {
-        str = "open";
-      }
-      obj3 = ConjureTodoState;
-      const value = closure_18.get(item.render_id);
-      version = undefined;
-      if (value != null) {
-        version = value.version;
-      }
-      const value3 = closure_18.get(item.render_id);
-      superseded = undefined;
-      if (value3 != null) {
-        superseded = value3.superseded;
-      }
-      planCardExpanded = conjurePendingPlan.planCardExpanded;
-      render_id = item.render_id;
-      conjurePendingPlan;
-      const value4 = closure_18.get(item.render_id);
-      superseded1 = undefined;
-      if (value4 != null) {
-        superseded1 = value4.superseded;
-      }
-      tmp15 = undefined;
-      if (canSend) {
-        if (item.render_id === memo2) {
-          tmp15 = closure_23;
-        }
-      }
-      tmp17 = undefined;
-      if (canSend) {
-        tmp17 = closure_26;
-      }
-      tmp18 = undefined;
-      if (canSend) {
-        tmp18 = closure_27;
-      }
-      tmp21 = undefined;
-      tmp19 = null != item.clarification && item.clarification.id === c28;
-      if (!stateFromStores3) {
-        tmp21 = onRestoreVersion;
-      }
-      return _undefined3(closure_40, obj);
-    }
-  };
-  FlashList = tmp2(tmp3[80]).FlashList;
-  tmp2Result29 = tmp2(tmp3[37]);
-  tmp2Result29.isIOS() && undefined;
-  tmp95 = undefined;
-  const tmp2Result30 = tmp2(tmp3[37]);
+  const tmp15Result12 = stateFromStores1(obj2.useState(false), 2);
+  const obj10 = { style: tmp.container, children: null };
+  const conjureControlActive = projectId(stateFromStores[78]).useConjureControlActive(projectId);
+  const items55 = [c19(onRestoreVersion(stateFromStores[79]), { thinking: stateFromStores3, bleedBottom: onRestoreVersion(stateFromStores[64])().bottom }), , ];
+  const obj11 = { style: tmp.transcriptArea, children: null };
+  const obj12 = { clearance: tmp55, children: null };
+  const obj13 = { ref, fadingEdgeLength, removeClippedSubviews: null, viewabilityConfig: null, onViewableItemsChanged: null, onScroll: null, onScrollBeginDrag: null, onContentSizeChange: null, scrollEventThrottle: 16, contentInset: null, ListHeaderComponent: null, style: null, contentContainerStyle: null, data: null, extraData: null, maintainVisibleContentPosition: null, keyExtractor: null, ListEmptyComponent: null, renderItem: null };
+  const tmp2Result28 = projectId(stateFromStores[78]);
   const tmp93 = ref;
+  const tmp2Result29 = projectId(stateFromStores[37]);
+  obj13.removeClippedSubviews = projectId(stateFromStores[37]).isIOS() && undefined;
+  obj13.viewabilityConfig = memo7;
+  obj13.onViewableItemsChanged = callback8;
+  obj13.onScroll = callback6;
+  obj13.onScrollBeginDrag = callback4;
+  obj13.onContentSizeChange = callback7;
+  const tmp94 = projectId(stateFromStores[37]).isIOS() && undefined;
+  let tmp95;
   if (tmp2Result30.isIOS()) {
-    tmp95 = { top: num };
     const obj14 = { top: num };
+    tmp95 = obj14;
   }
-  tmp92Result = null;
-  const tmp2Result31 = tmp2(tmp3[37]);
+  obj13.contentInset = tmp95;
+  tmp2Result30 = projectId(stateFromStores[37]);
+  let tmp92Result = null;
   if (!tmp2Result31.isIOS()) {
     tmp92Result = null;
     if (num > 0) {
-      const obj15 = { style: obj16 };
-      obj16 = { height: num };
+      const obj15 = { style: null };
+      const obj16 = { height: num };
+      obj15.style = obj16;
       tmp92Result = tmp92(tmp91, obj15);
     }
   }
-  items56 = [tmp.transcript, ];
-  const tmp2Result32 = tmp2(tmp3[37]);
-  let tmp98 = !tmp2Result32.isIOS();
-  tmp2Result32.isIOS();
-  if (tmp98) {
-    tmp98 = { marginBottom: tmp55 - bound };
+  obj13.ListHeaderComponent = tmp92Result;
+  const items56 = [tmp.transcript, ];
+  tmp2Result31 = projectId(stateFromStores[37]);
+  const isIOSResult = projectId(stateFromStores[37]).isIOS();
+  let tmp98 = !isIOSResult;
+  if (!isIOSResult) {
     const obj17 = { marginBottom: tmp55 - bound };
+    tmp98 = obj17;
   }
   items56[1] = tmp98;
-  items57 = [tmp.transcriptContent, { paddingBottom: bound + tmp5(tmp3[9]).space.PX_8 }];
+  obj13.style = items56;
+  const items57 = [tmp.transcriptContent, ];
+  const tmp2Result32 = projectId(stateFromStores[37]);
+  items57[1] = { paddingBottom: bound + onRestoreVersion(stateFromStores[9]).space.PX_8 };
+  obj13.contentContainerStyle = items57;
+  obj13.data = memo;
+  obj13.extraData = memo3;
+  obj13.maintainVisibleContentPosition = { startRenderingFromBottom: true, autoscrollToBottomThreshold };
+  obj13.keyExtractor = function keyExtractor(render_id) {
+    return render_id.render_id;
+  };
   let tmp99 = "loading" === chatEmptyStateResult;
-  tmp92Result4 = null;
-  obj20 = { startRenderingFromBottom: true, autoscrollToBottomThreshold };
-  ({ paddingBottom: bound + tmp5(tmp3[9]).space.PX_8 });
-  if (!tmp99) {
-    let AyiQEp;
-    const obj21 = { style: tmp.placeholder, children: c19(Text, obj22) };
-    Text = tmp2(tmp3[19]).Text;
+  if (tmp99) {
+    obj13.ListEmptyComponent = null;
+    obj13.renderItem = function renderItem(arg0) {
+      ({ item, index } = arg0);
+      const obj = { projectId, message: item, groupStart: null, first: null, isNewest: null, hostsReminder: null, reminder: null, checklistSuperseded: null, secretRequestStatus: null, checklistExpanded: null, onToggleChecklist: null, planVersion: null, planSuperseded: null, planExpanded: null, onTogglePlan: null, replied: null, onJumpToReplied: null, onApprovePlan: null, onPickIdea: null, onAskForIdeas: null, onAnswerClarification: null, clarificationDismissed: null, onDismissClarification: null, onRestoreVersion: null };
+      let flag = closure_22[index];
+      if (flag == null) {
+        flag = true;
+      }
+      obj.groupStart = flag;
+      obj.first = 0 === index;
+      obj.isNewest = item.render_id === render_id;
+      obj.hostsReminder = item.render_id === render_id1;
+      let tmp3 = null;
+      if (item.render_id === render_id1) {
+        tmp3 = conjureReminder;
+      }
+      obj.reminder = tmp3;
+      obj.checklistSuperseded = set.has(item.render_id);
+      let str = memo1.get(item.render_id);
+      if (str == null) {
+        str = "open";
+      }
+      obj.secretRequestStatus = str;
+      obj.checklistExpanded = ConjureTodoState.checklistExpanded(c15, item.render_id, set.has(item.render_id));
+      obj.onToggleChecklist = onToggleChecklist;
+      value = closure_18.get(item.render_id);
+      let version;
+      if (value != null) {
+        version = value.version;
+      }
+      obj.planVersion = version;
+      value3 = closure_18.get(item.render_id);
+      let superseded;
+      if (value3 != null) {
+        superseded = value3.superseded;
+      }
+      obj.planSuperseded = true === superseded;
+      const value4 = closure_18.get(item.render_id);
+      let superseded1;
+      if (value4 != null) {
+        superseded1 = value4.superseded;
+      }
+      obj.planExpanded = conjurePendingPlan.planCardExpanded(c19, item.render_id, true === superseded1);
+      obj.onTogglePlan = onTogglePlan;
+      obj.replied = closure_51.get(item.render_id);
+      obj.onJumpToReplied = onJumpToReplied;
+      let tmp14;
+      if (closure_30) {
+        if (item.render_id === memo2) {
+          tmp14 = closure_23;
+        }
+      }
+      obj.onApprovePlan = tmp14;
+      obj.onPickIdea = onPickIdea;
+      let tmp16;
+      if (closure_30) {
+        tmp16 = closure_26;
+      }
+      obj.onAskForIdeas = tmp16;
+      let tmp17;
+      if (closure_30) {
+        tmp17 = closure_27;
+      }
+      obj.onAnswerClarification = tmp17;
+      let tmp18 = null != item.clarification;
+      if (tmp18) {
+        tmp18 = item.clarification.id === c28;
+      }
+      obj.clarificationDismissed = tmp18;
+      obj.onDismissClarification = onDismissClarification;
+      let tmp20;
+      if (!stateFromStores3) {
+        tmp20 = onRestoreVersion;
+      }
+      obj.onRestoreVersion = tmp20;
+      return closure_2_19(closure_40, obj);
+    };
+    obj12.children = tmp92(tmp2(tmp3[80]).FlashList, obj13);
+    const items58 = [tmp92(tmp93, obj12), , ];
+    let tmp92Result4 = null;
+    if (tmp23) {
+      const obj21 = { projectId };
+      tmp92Result4 = tmp92(tmp5(tmp3[81]), obj21);
+    }
+    items58[1] = tmp92Result4;
+    let tmp92Result5 = null;
+    if (null != tmp83) {
+      const obj22 = { line: tmp83, onJumpToActivity: callback9, bottom: tmp5(tmp3[9]).space.PX_12 + tmp55, todos: memo8, todosLive: checklistLiveResult, agents: memo9 };
+      tmp92Result5 = tmp92(tmp5(tmp3[82]), obj22);
+      const tmp5Result = tmp5(tmp3[82]);
+    }
+    items58[2] = tmp92Result5;
+    obj11.children = items58;
+    items55[1] = tmp90(tmp91, obj11);
+    const obj23 = { style: tmp.bottomStack, onLayout: callback1, children: null };
+    const obj24 = { projectId, thinking: stateFromStores3, turnStartedAt: conjureTurnStartedAtResult, compacting: stateFromStores4, recalling: null, activity: null, projectUsage: null, connLabel: null, controlling: null, connFailed: null, thinkingOpen: null, onToggleThinking: null };
+    if (tmp99) {
+      tmp99 = 0 === memo.length;
+    }
+    obj24.recalling = tmp99;
+    obj24.activity = stateFromStores5;
+    obj24.projectUsage = stateFromStores6;
+    obj24.connLabel = connectionLabelResult;
+    obj24.controlling = conjureControlActive;
+    obj24.connFailed = "failed" === stateFromStores7;
+    obj24.thinkingOpen = tmp23;
+    obj24.onToggleThinking = callback;
+    const items59 = [tmp92(tmp5(tmp3[83]), obj24), ];
+    const obj25 = { projectId, canSend: tmp44, running: stateFromStores3, stopped: stateFromStores8, onSend: callback10, onInterrupt: null, onDraftHasTextChange: null };
+    let tmp106;
+    const tmp5Result3 = tmp5(tmp3[83]);
+    if (stateFromStores3) {
+      tmp106 = callback11;
+    }
+    obj25.onInterrupt = tmp106;
+    obj25.onDraftHasTextChange = tmp40;
+    items59[1] = tmp92(tmp5(tmp3[84]), obj25);
+    obj23.children = items59;
+    items55[2] = tmp90(tmp91, obj23);
+    obj10.children = items55;
+    return tmp90(tmp91, obj10);
+  } else {
+    const obj26 = { style: tmp.placeholder, children: null };
     const intl3 = tmp2(tmp3[17]).intl;
-    const string = intl3.string;
     if ("unavailable" === chatEmptyStateResult) {
-      AyiQEp = tmp5(tmp3[18]).Td4Sf4;
+      let AyiQEp = tmp5(tmp3[18]).Td4Sf4;
     } else {
       AyiQEp = tmp5(tmp3[18]).AyiQEp;
     }
-    obj22 = { variant: "text-sm/normal", color: "text-muted", children: string(AyiQEp) };
-    tmp92Result4 = tmp92(tmp91, obj21);
+    const obj27 = { variant: "text-sm/normal", color: "text-muted", children: intl3.string(AyiQEp) };
+    obj26.children = tmp92(tmp2(tmp3[19]).Text, obj27);
+    tmp92(tmp91, obj26);
   }
-  items58 = [c19(tmp93, obj12), , ];
-  let tmp92Result5 = null;
-  if (tmp23) {
-    const obj23 = { projectId };
-    tmp92Result5 = tmp92(tmp5(tmp3[81]), obj23);
-  }
-  items58[1] = tmp92Result5;
-  let tmp92Result6 = null;
-  if (null != tmp83) {
-    const obj24 = { line: tmp83, onJumpToActivity: callback9, bottom: tmp5(tmp3[9]).space.PX_12 + tmp55, todos: memo8, todosLive: checklistLiveResult, agents: memo9 };
-    const tmp5Result = tmp5(tmp3[82]);
-    tmp92Result6 = tmp92(tmp5Result, obj24);
-  }
-  items58[2] = tmp92Result6;
-  items55[1] = c20(stateFromStores9, obj11);
-  const obj25 = { style: tmp.bottomStack, onLayout: callback1, children: items59 };
-  const obj26 = { projectId, thinking: stateFromStores3, turnStartedAt: conjureTurnStartedAtResult, compacting: stateFromStores4, recalling: tmp99, activity: stateFromStores5, projectUsage: stateFromStores6, connLabel: connectionLabelResult, controlling: conjureControlActive, connFailed: "failed" === stateFromStores7, thinkingOpen: tmp23, onToggleThinking: callback };
-  const tmp5Result3 = tmp5(tmp3[83]);
-  if (tmp99) {
-    tmp99 = 0 === memo.length;
-  }
-  items59 = [c19(tmp5Result3, obj26), ];
-  const obj27 = { projectId, canSend: tmp44, running: stateFromStores3, stopped: stateFromStores8, onSend: callback10, onInterrupt: tmp106, onDraftHasTextChange: tmp40 };
-  tmp106 = undefined;
-  const tmp5Result4 = tmp5(tmp3[84]);
-  if (stateFromStores3) {
-    tmp106 = callback11;
-  }
-  items59[1] = c19(tmp5Result4, obj27);
-  items55[2] = c20(stateFromStores9, obj25);
-  return c20(stateFromStores9, obj10);
 });
-let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureNativeChat.tsx");
-
-export default tmp9;

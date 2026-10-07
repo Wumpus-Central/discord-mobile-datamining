@@ -1,8 +1,8 @@
 // === Module 16330: GuildsBarFooterWrapper ===
 
 // Module 16330 (GuildsBarFooterWrapper)
-import Fragment from "Fragment" /* 21 */;
-import react from "react" /* 576 */;
+import jsxProd from "jsxProd" /* 21 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 4586 */;
 import NativeViewDefault from "NativeView" /* 5983 */;
@@ -12,40 +12,34 @@ import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-let children;
-
-let obj2;
 const GUILD_ITEM_HIT_SLOP = GuildsBarConstants.GUILD_ITEM_HIT_SLOP;
-const jsx = Fragment.jsx;
-let obj = { footerWrapper: obj2 };
-obj2 = { display: "flex", alignSelf: "stretch", alignItems: "center", gap: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING };
+const jsx = jsxProd.jsx;
+let obj = { footerWrapper: { display: "flex", alignSelf: "stretch", alignItems: "center", gap: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING } };
 let closure_5 = createStyles.createStyles(obj);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
-  const obj = react;
-  const cResult = obj.c(9);
+let obj2 = { display: "flex", alignSelf: "stretch", alignItems: "center", gap: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING };
+const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFooterWrapper.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+  const cResult = c.c(9);
   children = children.children;
-  const obj2 = useToken;
-  const token = obj2.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const token = useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
   const tmp5 = closure_5();
-  const obj3 = useHomeDrawerGesture;
-  const isHomeDrawerEnabled = obj3.useIsHomeDrawerEnabled();
+  const isHomeDrawerEnabled = useHomeDrawerGesture.useIsHomeDrawerEnabled();
   if (cResult[0] === isHomeDrawerEnabled) {
-    let tmp7;
     if (cResult[1] === token) {
-      tmp7 = cResult[2];
+      let tmp7 = cResult[2];
     }
     if (cResult[3] === tmp5.footerWrapper) {
-      let tmp10;
       if (cResult[4] === tmp7) {
-        tmp10 = cResult[5];
+        let tmp10 = cResult[5];
       }
       if (cResult[6] === children) {
-        let tmp11;
         if (cResult[7] === tmp10) {
-          tmp11 = cResult[8];
+          let tmp11 = cResult[8];
         }
         return tmp11;
       }
+      const obj4 = { style: tmp10, children };
       const tmp13 = jsx(NativeViewDefault, { style: tmp10, children });
       cResult[6] = children;
       cResult[7] = tmp10;
@@ -60,30 +54,23 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   }
   let tmp8 = null;
   if (!isHomeDrawerEnabled) {
-    tmp8 = { width: token + GUILD_ITEM_HIT_SLOP.left + GUILD_ITEM_HIT_SLOP.right };
     const obj5 = { width: token + GUILD_ITEM_HIT_SLOP.left + GUILD_ITEM_HIT_SLOP.right };
+    tmp8 = obj5;
   }
   cResult[0] = isHomeDrawerEnabled;
   cResult[1] = token;
   cResult[2] = tmp8;
   tmp7 = tmp8;
 }) : ((children) => {
-  children = children.children;
-  const obj = useToken;
-  const token = obj.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const token = useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
   const tmp2 = closure_5();
-  const obj2 = useHomeDrawerGesture;
-  const isHomeDrawerEnabled = obj2.useIsHomeDrawerEnabled();
+  const isHomeDrawerEnabled = useHomeDrawerGesture.useIsHomeDrawerEnabled();
   const style = [tmp2.footerWrapper, ];
   let tmp6 = null;
-  NativeViewDefault;
   if (!isHomeDrawerEnabled) {
-    tmp6 = { width: token + GUILD_ITEM_HIT_SLOP.left + GUILD_ITEM_HIT_SLOP.right };
     const obj3 = { width: token + GUILD_ITEM_HIT_SLOP.left + GUILD_ITEM_HIT_SLOP.right };
+    tmp6 = obj3;
   }
   style[1] = tmp6;
-  return <tmp5 style={style}>{children}</tmp5>;
+  return jsx(NativeViewDefault, { style, children: children.children });
 });
-const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFooterWrapper.tsx");
-
-export default tmp2;

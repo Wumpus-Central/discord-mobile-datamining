@@ -3,7 +3,9 @@
 // Module 18100 (IntentsBindings)
 import size from "module_2" /* 2 */;
 
-const obj = {
+const result = size.fileFinishedImporting("modules/native_intents/IntentsBindings.android.tsx");
+
+export default {
   hasSearch() {
     return false;
   },
@@ -29,6 +31,3 @@ const obj = {
 
   }
 };
-const result = size.fileFinishedImporting("modules/native_intents/IntentsBindings.android.tsx");
-
-export default obj;

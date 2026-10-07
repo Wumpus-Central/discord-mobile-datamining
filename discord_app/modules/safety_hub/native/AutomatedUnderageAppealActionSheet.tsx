@@ -1,91 +1,69 @@
 // === Module 11509: AutomatedUnderageAppealActionSheet ===
 
 // Module 11509 (AutomatedUnderageAppealActionSheet)
-import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import intl8 from "intl" /* 1126 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import Text_Text from "Text/Text" /* 4892 */;
-import TableRow2 from "TableRow" /* 6000 */;
+import TableRow from "TableRow" /* 6000 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8117 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8119 */;
 import SafetyHubActionCreators from "SafetyHubActionCreators" /* 11506 */;
 import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 11508 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 8139 */;
-import SafetyHubConstants from "SafetyHubConstants" /* 8126 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
 
-let BottomSheet, dependencyMap, onClose;
+require = fn;
+let View = fn(17).View;
+const SafetyHubConstants = fn(8126);
+({ AGE_APPEAL_ACTION_SHEET_NAME: metroRequire, SafetyHubLinks: closure_7 } = SafetyHubConstants);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { container: { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8 }, header: { alignItems: "center" }, content: null, moreInfo: null, learnMore: null, footer: null, number: null };
+let obj3 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8 };
+obj2.content = { flex: 1, gap: nativeDefault.space.PX_16 };
+let obj4 = { flex: 1, gap: nativeDefault.space.PX_16 };
+obj2.moreInfo = { gap: nativeDefault.space.PX_4 };
+let obj5 = { gap: nativeDefault.space.PX_4 };
+obj2.learnMore = { marginTop: nativeDefault.space.PX_12, textAlign: "center", paddingBottom: nativeDefault.space.PX_32 };
+let obj6 = { marginTop: nativeDefault.space.PX_12, textAlign: "center", paddingBottom: nativeDefault.space.PX_32 };
+obj2.footer = { marginTop: nativeDefault.space.PX_8 };
+let size = { alignItems: "center", justifyContent: "center", width: 32, height: 32, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+obj2.number = size;
+let closure_10 = createStyles.createStyles(obj2);
+let obj8 = { title: null, description: null };
+let intl = fn(1126).intl;
+obj8.title = intl.string(fn(1126).t["1+E7LP"]);
+let intl2 = fn(1126).intl;
+obj8.description = intl2.string(fn(1126).t["BXiat/"]);
+let items = [obj8, , ];
+let obj9 = { title: null, description: null };
+let intl3 = fn(1126).intl;
+obj9.title = intl3.string(fn(1126).t.iMQXtK);
+let intl4 = fn(1126).intl;
+obj9.description = intl4.string(fn(1126).t.oQ0vwu);
+items[1] = obj9;
+let obj10 = { title: null, description: null };
+let intl5 = fn(1126).intl;
+obj10.title = intl5.string(fn(1126).t["oY/z1Q"]);
+let intl6 = fn(1126).intl;
+obj10.description = intl6.string(fn(1126).t.wtj02W);
+items[2] = obj10;
+const ReactCompilerGating = fn(558);
+let obj7 = { marginTop: nativeDefault.space.PX_8 };
+size = fn(2);
+let result = size.fileFinishedImporting("modules/safety_hub/native/AutomatedUnderageAppealActionSheet.tsx");
 
-let c9;
-let intl;
-let intl2;
-let intl3;
-let intl4;
-let intl5;
-let intl6;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-let obj5;
-let obj6;
-let size;
-const View = react_native.View;
-({ AGE_APPEAL_ACTION_SHEET_NAME: metroRequire, SafetyHubLinks: metroImportDefault } = SafetyHubConstants);
-({ jsx: metroImportAll, jsxs: c9 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { container: obj2, header: { alignItems: "center" }, content: obj3, moreInfo: obj4, learnMore: obj5, footer: obj6, number: size };
-obj2 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8 };
-createStyles = createStyles.createStyles;
-obj3 = { flex: 1, gap: nativeDefault.space.PX_16 };
-obj4 = { gap: nativeDefault.space.PX_4 };
-obj5 = { marginTop: nativeDefault.space.PX_12, textAlign: "center", paddingBottom: nativeDefault.space.PX_32 };
-obj6 = { marginTop: nativeDefault.space.PX_8 };
-size = { alignItems: "center", justifyContent: "center", width: 32, height: 32, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
-let closure_10 = createStyles(obj);
-let obj7 = { title: intl.string(intl8.t["1+E7LP"]), description: intl2.string(intl8.t["BXiat/"]) };
-intl = intl8.intl;
-intl2 = intl8.intl;
-let items = [obj7, , ];
-let obj8 = { title: intl3.string(intl8.t.iMQXtK), description: intl4.string(intl8.t.oQ0vwu) };
-intl3 = intl8.intl;
-intl4 = intl8.intl;
-items[1] = obj8;
-let obj9 = { title: intl5.string(intl8.t["oY/z1Q"]), description: intl6.string(intl8.t.wtj02W) };
-intl5 = intl8.intl;
-intl6 = intl8.intl;
-items[2] = obj9;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
-  let TableRow;
-  let intl;
-  let intl2;
-  let items2;
-  let items3;
-  let items4;
-  let number;
-  let obj7;
-  let tmp10;
-  let tmp5;
-  let tmp6;
-  let tmp9;
-  const tmp = onClose;
-  let obj = onClose(576);
-  const cResult = obj.c(53);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
+  const cResult = onClose(576).c(53);
   onClose = onClose.onClose;
   const classificationId = onClose.classificationId;
   const tmp4 = closure_10();
   dependencyMap = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    items = [L];
+    items = [onComplete];
     const fn = function p() {
-      return L.getAgeVerificationWebviewUrl();
+      return onComplete.getAgeVerificationWebviewUrl();
     };
     cResult[0] = items;
     cResult[1] = fn;
@@ -94,40 +72,41 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const tmpResult = tmp(504);
-  const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
+  let obj = onClose(576);
+  const stateFromStores = onClose(504).useStateFromStores(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const items1 = [L];
+    const items1 = [onComplete];
     class E {
       constructor() {
-        return L.getIsLoadingAgeVerification();
+        return closure_5.getIsLoadingAgeVerification();
       }
     }
     cResult[2] = items1;
     cResult[3] = E;
-    tmp10 = E;
-    tmp9 = items1;
+    let tmp10 = E;
+    let tmp9 = items1;
   } else {
     tmp9 = cResult[2];
     tmp10 = cResult[3];
   }
-  const tmpResult2 = tmp(504);
-  const stateFromStores1 = tmpResult2.useStateFromStores(tmp9, tmp10);
+  const tmpResult = onClose(504);
+  const stateFromStores1 = onClose(504).useStateFromStores(tmp9, tmp10);
   const bottom = classificationId(1618)().bottom;
   if (cResult[4] !== onClose) {
     class T {
       constructor() {
         if (onClose != null) {
-          tmp();
+          tmpResult = tmp();
         }
-        const obj = AutomatedUnderageAppealModalActionCreatorsDefault;
-        obj.close();
+        obj = closure_1(closure_2[12]);
+        closeResult = obj.close();
+        return;
       }
     }
     cResult[4] = onClose;
     class E {
       constructor() {
-        return L.getIsLoadingAgeVerification();
+        return closure_5.getIsLoadingAgeVerification();
       }
     }
     cResult[5] = T;
@@ -135,77 +114,81 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
     class T {
       constructor() {
         if (onClose != null) {
-          tmp();
+          tmpResult = tmp();
         }
-        const obj = AutomatedUnderageAppealModalActionCreatorsDefault;
-        obj.close();
+        obj = closure_1(closure_2[12]);
+        closeResult = obj.close();
+        return;
       }
     }
   }
-  T = tmp14;
-  if (cResult[6] !== tmp14) {
+  View = T;
+  if (cResult[6] !== T) {
     class L {
       constructor() {
-        const obj = AutomatedUnderageAppealModalActionCreatorsDefault;
-        obj.success();
-        T();
-        const obj2 = AutomatedUnderageAppealModalActionCreatorsDefault;
-        const result = obj2.start_verification_check();
+        obj = closure_1(closure_2[12]);
+        successResult = obj.success();
+        tmp2 = closure_4();
+        obj2 = closure_1(closure_2[12]);
+        result = obj2.start_verification_check();
+        return;
       }
     }
-    cResult[6] = tmp14;
+    cResult[6] = T;
     class E {
       constructor() {
-        return L.getIsLoadingAgeVerification();
+        return closure_5.getIsLoadingAgeVerification();
       }
     }
     cResult[7] = L;
   } else {
     class L {
       constructor() {
-        const obj = AutomatedUnderageAppealModalActionCreatorsDefault;
-        obj.success();
-        T();
-        const obj2 = AutomatedUnderageAppealModalActionCreatorsDefault;
-        const result = obj2.start_verification_check();
+        obj = closure_1(closure_2[12]);
+        successResult = obj.success();
+        tmp2 = closure_4();
+        obj2 = closure_1(closure_2[12]);
+        result = obj2.start_verification_check();
+        return;
       }
     }
   }
-  L = tmp15;
-  if (cResult[8] === tmp15) {
+  onComplete = L;
+  if (cResult[8] === L) {
     class L {
       constructor() {
-        const obj = AutomatedUnderageAppealModalActionCreatorsDefault;
-        obj.success();
-        T();
-        const obj2 = AutomatedUnderageAppealModalActionCreatorsDefault;
-        const result = obj2.start_verification_check();
+        obj = closure_1(closure_2[12]);
+        successResult = obj.success();
+        tmp2 = closure_4();
+        obj2 = closure_1(closure_2[12]);
+        result = obj2.start_verification_check();
+        return;
       }
     }
     const effect = stateFromStores.useEffect(R, items4);
     class E {
       constructor() {
-        return L.getIsLoadingAgeVerification();
+        return closure_5.getIsLoadingAgeVerification();
       }
     }
     if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
       class N {
         constructor() {
-          const obj = classificationId(number[16]);
-          return obj.openURL(constants.AGE_VERIFICATION_LINK);
+          obj = classificationId(closure_2[16]);
+          return obj.openURL(closure_1_7.AGE_VERIFICATION_LINK);
         }
       }
       cResult[12] = N;
       class E {
         constructor() {
-          return L.getIsLoadingAgeVerification();
+          return closure_5.getIsLoadingAgeVerification();
         }
       }
     } else {
       class N {
         constructor() {
-          const obj = classificationId(number[16]);
-          return obj.openURL(constants.AGE_VERIFICATION_LINK);
+          obj = classificationId(closure_2[16]);
+          return obj.openURL(closure_1_7.AGE_VERIFICATION_LINK);
         }
       }
     }
@@ -213,128 +196,121 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
     const sum1 = sum + tmp13(587).space.PX_16;
     const sum2 = sum1 + tmp13(587).space.PX_32;
     if (cResult[13] === bottom) {
-      let tmp27;
-      let tmp38;
-      let tmp40;
-      let tmp47;
       class N {
         constructor() {
-          const obj = classificationId(number[16]);
-          return obj.openURL(constants.AGE_VERIFICATION_LINK);
+          obj = classificationId(closure_2[16]);
+          return obj.openURL(closure_1_7.AGE_VERIFICATION_LINK);
         }
       }
       const _Symbol = Symbol;
       class E {
         constructor() {
-          return L.getIsLoadingAgeVerification();
+          return closure_5.getIsLoadingAgeVerification();
         }
       }
       const _Symbol2 = Symbol;
       if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
         class N {
           constructor() {
-            const obj = classificationId(number[16]);
-            return obj.openURL(constants.AGE_VERIFICATION_LINK);
+            obj = classificationId(closure_2[16]);
+            return obj.openURL(closure_1_7.AGE_VERIFICATION_LINK);
           }
         }
-        let obj2 = { variant: "heading-md/medium", color: "text-default", children: obj6.string(tmp(1126).t["yvx//1"]) };
-        const Text = tmp(4892).Text;
+        let obj2 = { variant: "heading-md/medium", color: "text-default", children: null };
         class E {
           constructor() {
-            return L.getIsLoadingAgeVerification();
+            return closure_5.getIsLoadingAgeVerification();
           }
         }
-        const tmp28 = closure_8(Text, obj2);
+        obj2.children = obj6.string(tmp(1126).t["yvx//1"]);
+        const tmp28 = closure_8(tmp(4892).Text, obj2);
         cResult[17] = tmp28;
-        tmp27 = tmp28;
+        const tmp27 = tmp28;
       } else {
         class N {
           constructor() {
-            const obj = classificationId(number[16]);
-            return obj.openURL(constants.AGE_VERIFICATION_LINK);
+            obj = classificationId(closure_2[16]);
+            return obj.openURL(closure_1_7.AGE_VERIFICATION_LINK);
           }
         }
       }
       if (cResult[18] !== tmp4.header) {
         class N {
           constructor() {
-            const obj = classificationId(number[16]);
-            return obj.openURL(constants.AGE_VERIFICATION_LINK);
+            obj = classificationId(closure_2[16]);
+            return obj.openURL(closure_1_7.AGE_VERIFICATION_LINK);
           }
         }
-        let obj3 = { style: null, children: items2 };
+        let obj3 = { style: null, children: null };
         class E {
           constructor() {
-            return L.getIsLoadingAgeVerification();
+            return closure_5.getIsLoadingAgeVerification();
           }
         }
-        items2 = [tmp26, tmp27];
+        const items2 = [tmp26, tmp27];
+        obj3.children = items2;
+        const tmp31 = closure_9(View, obj3);
         cResult[18] = tmp4.header;
-        cResult[19] = closure_9(T, obj3);
-        const tmp31 = closure_9(T, obj3);
+        cResult[19] = tmp31;
       } else {
         class N {
           constructor() {
-            const obj = classificationId(number[16]);
-            return obj.openURL(constants.AGE_VERIFICATION_LINK);
+            obj = classificationId(closure_2[16]);
+            return obj.openURL(closure_1_7.AGE_VERIFICATION_LINK);
           }
         }
       }
       if (cResult[20] !== tmp4.number) {
         class N {
           constructor() {
-            const obj = classificationId(number[16]);
-            return obj.openURL(constants.AGE_VERIFICATION_LINK);
+            obj = classificationId(closure_2[16]);
+            return obj.openURL(closure_1_7.AGE_VERIFICATION_LINK);
           }
         }
         const mapped = items.map((item, index) => {
-          let description;
-          let obj2;
-          let obj3;
-          let title;
           ({ title, description } = item);
-          const obj = { label: title, subLabel: description, icon: metroImportAll(View, obj2) };
-          obj2 = { style: number.number, children: metroImportAll(Text_Text.Text, obj3) };
-          const TableRow = TableRow2.TableRow;
-          obj3 = { variant: "heading-md/semibold", color: "text-brand", children: index + 1 };
-          return metroImportAll(TableRow, obj, index);
+          const obj = { label: title, subLabel: description, icon: null };
+          const obj2 = { style: number.number, children: closure_2_8(Text_Text.Text, { variant: "heading-md/semibold", color: "text-brand", children: index + 1 }) };
+          obj.icon = closure_2_8(View, obj2);
+          return closure_2_8(TableRow.TableRow, obj, index);
         });
         class E {
           constructor() {
-            return L.getIsLoadingAgeVerification();
+            return closure_5.getIsLoadingAgeVerification();
           }
         }
         cResult[21] = mapped;
       } else {
         class N {
           constructor() {
-            const obj = classificationId(number[16]);
-            return obj.openURL(constants.AGE_VERIFICATION_LINK);
+            obj = classificationId(closure_2[16]);
+            return obj.openURL(closure_1_7.AGE_VERIFICATION_LINK);
           }
         }
       }
       if (cResult[22] !== tmp32) {
         class N {
           constructor() {
-            const obj = classificationId(number[16]);
-            return obj.openURL(constants.AGE_VERIFICATION_LINK);
+            obj = classificationId(closure_2[16]);
+            return obj.openURL(closure_1_7.AGE_VERIFICATION_LINK);
           }
         }
-        const obj4 = { children: closure_8(tmp(6081).TableRowGroup, tmp36) };
+        const obj4 = { children: null };
         class E {
           constructor() {
-            return L.getIsLoadingAgeVerification();
+            return closure_5.getIsLoadingAgeVerification();
           }
         }
         tmp36[1] = tmp32;
+        obj4.children = closure_8(tmp(6081).TableRowGroup, tmp36);
+        const tmp37 = closure_8(View, obj4);
         cResult[22] = tmp32;
-        cResult[23] = closure_8(T, obj4);
-        const tmp37 = closure_8(T, obj4);
+        cResult[23] = tmp37;
       } else {
         class N {
           constructor() {
-            const obj = classificationId(number[16]);
-            return obj.openURL(constants.AGE_VERIFICATION_LINK);
+            obj = classificationId(closure_2[16]);
+            return obj.openURL(closure_1_7.AGE_VERIFICATION_LINK);
           }
         }
       }
@@ -343,23 +319,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
       if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
         class N {
           constructor() {
-            const obj = classificationId(number[16]);
-            return obj.openURL(constants.AGE_VERIFICATION_LINK);
+            obj = classificationId(closure_2[16]);
+            return obj.openURL(closure_1_7.AGE_VERIFICATION_LINK);
           }
         }
         const stringResult = obj9.string(tmp(1126).t.WPwp1b);
         class E {
           constructor() {
-            return L.getIsLoadingAgeVerification();
+            return closure_5.getIsLoadingAgeVerification();
           }
         }
         cResult[24] = stringResult;
-        tmp38 = stringResult;
+        const tmp38 = stringResult;
       } else {
         class N {
           constructor() {
-            const obj = classificationId(number[16]);
-            return obj.openURL(constants.AGE_VERIFICATION_LINK);
+            obj = classificationId(closure_2[16]);
+            return obj.openURL(closure_1_7.AGE_VERIFICATION_LINK);
           }
         }
       }
@@ -367,74 +343,77 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
       if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
         class N {
           constructor() {
-            const obj = classificationId(number[16]);
-            return obj.openURL(constants.AGE_VERIFICATION_LINK);
+            obj = classificationId(closure_2[16]);
+            return obj.openURL(closure_1_7.AGE_VERIFICATION_LINK);
           }
         }
-        const obj5 = { title: tmp38, hasIcons: false, children: closure_8(TableRow, obj7) };
+        const obj5 = { title: tmp38, hasIcons: false, children: null };
         class E {
           constructor() {
-            return L.getIsLoadingAgeVerification();
+            return closure_5.getIsLoadingAgeVerification();
           }
         }
-        obj7 = { label: intl.string(tmp(1126).t.N9WJMM), subLabel: intl2.string(tmp(1126).t.NHq382), onPress: tmp18, arrow: true, start: true, end: true };
-        TableRow = tmp(6000).TableRow;
-        intl = tmp(1126).intl;
-        intl2 = tmp(1126).intl;
+        const obj7 = { label: null, subLabel: null, onPress: null, arrow: true, start: true, end: true };
+        const intl = tmp(1126).intl;
+        obj7.label = intl.string(tmp(1126).t.N9WJMM);
+        const intl2 = tmp(1126).intl;
+        obj7.subLabel = intl2.string(tmp(1126).t.NHq382);
+        obj7.onPress = tmp18;
+        obj5.children = closure_8(tmp(6000).TableRow, obj7);
         const tmp42 = closure_8(tmp41, obj5);
         cResult[25] = tmp42;
-        tmp40 = tmp42;
+        const tmp40 = tmp42;
       } else {
         class N {
           constructor() {
-            const obj = classificationId(number[16]);
-            return obj.openURL(constants.AGE_VERIFICATION_LINK);
+            obj = classificationId(closure_2[16]);
+            return obj.openURL(closure_1_7.AGE_VERIFICATION_LINK);
           }
         }
       }
       if (cResult[26] !== tmp4.moreInfo) {
         class N {
           constructor() {
-            const obj = classificationId(number[16]);
-            return obj.openURL(constants.AGE_VERIFICATION_LINK);
+            obj = classificationId(closure_2[16]);
+            return obj.openURL(closure_1_7.AGE_VERIFICATION_LINK);
           }
         }
-        const obj8 = { style: null, children: tmp40 };
+        const obj8 = { style: null, children: null };
         class E {
           constructor() {
-            return L.getIsLoadingAgeVerification();
+            return closure_5.getIsLoadingAgeVerification();
           }
         }
+        obj8.children = tmp40;
+        const tmp45 = closure_8(View, obj8);
         cResult[26] = tmp4.moreInfo;
-        cResult[27] = closure_8(T, obj8);
-        const tmp45 = closure_8(T, obj8);
+        cResult[27] = tmp45;
       } else {
         class N {
           constructor() {
-            const obj = classificationId(number[16]);
-            return obj.openURL(constants.AGE_VERIFICATION_LINK);
+            obj = classificationId(closure_2[16]);
+            return obj.openURL(closure_1_7.AGE_VERIFICATION_LINK);
           }
         }
       }
-      const footer = tmp4.footer;
       if (cResult[28] !== classificationId) {
         class Q {
           constructor() {
-            const obj = SafetyHubActionCreators;
+            obj = closure_0(closure_2[20]);
             return obj.requestSuspendedUserAgeVerification(classificationId);
           }
         }
         cResult[28] = classificationId;
         class E {
           constructor() {
-            return L.getIsLoadingAgeVerification();
+            return closure_5.getIsLoadingAgeVerification();
           }
         }
         cResult[29] = Q;
       } else {
         class Q {
           constructor() {
-            const obj = SafetyHubActionCreators;
+            obj = closure_0(closure_2[20]);
             return obj.requestSuspendedUserAgeVerification(classificationId);
           }
         }
@@ -443,22 +422,22 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
       if (cResult[30] === Symbol.for("react.memo_cache_sentinel")) {
         class Q {
           constructor() {
-            const obj = SafetyHubActionCreators;
+            obj = closure_0(closure_2[20]);
             return obj.requestSuspendedUserAgeVerification(classificationId);
           }
         }
         const stringResult1 = obj13.string(tmp(1126).t["54b8V0"]);
         class E {
           constructor() {
-            return L.getIsLoadingAgeVerification();
+            return closure_5.getIsLoadingAgeVerification();
           }
         }
         cResult[30] = stringResult1;
-        tmp47 = stringResult1;
+        const tmp47 = stringResult1;
       } else {
         class Q {
           constructor() {
-            const obj = SafetyHubActionCreators;
+            obj = closure_0(closure_2[20]);
             return obj.requestSuspendedUserAgeVerification(classificationId);
           }
         }
@@ -466,37 +445,36 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
       if (cResult[31] === stateFromStores1) {
         class Q {
           constructor() {
-            const obj = SafetyHubActionCreators;
+            obj = closure_0(closure_2[20]);
             return obj.requestSuspendedUserAgeVerification(classificationId);
           }
         }
         const _Symbol6 = Symbol;
-        const learnMore = tmp4.learnMore;
         class E {
           constructor() {
-            return L.getIsLoadingAgeVerification();
+            return closure_5.getIsLoadingAgeVerification();
           }
         }
         if (tmp52 === Symbol.for("react.memo_cache_sentinel")) {
           class Q {
             constructor() {
-              const obj = SafetyHubActionCreators;
+              obj = closure_0(closure_2[20]);
               return obj.requestSuspendedUserAgeVerification(classificationId);
             }
           }
-          const format = tmp54.format;
-          const obj10 = { learnMoreLink: constants.LEARN_MORE_UU_APPEAL_LINK };
+          const obj10 = { learnMoreLink: null };
           class E {
             constructor() {
-              return L.getIsLoadingAgeVerification();
+              return closure_5.getIsLoadingAgeVerification();
             }
           }
-          cResult[34] = format(tmp(1126).t.ZbWsOF, obj10);
-          const formatResult = format(tmp(1126).t.ZbWsOF, obj10);
+          obj10.learnMoreLink = constants.LEARN_MORE_UU_APPEAL_LINK;
+          const formatResult = obj15.format(tmp(1126).t.ZbWsOF, obj10);
+          cResult[34] = formatResult;
         } else {
           class Q {
             constructor() {
-              const obj = SafetyHubActionCreators;
+              obj = closure_0(closure_2[20]);
               return obj.requestSuspendedUserAgeVerification(classificationId);
             }
           }
@@ -504,23 +482,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
         if (cResult[35] !== tmp4.learnMore) {
           class Q {
             constructor() {
-              const obj = SafetyHubActionCreators;
+              obj = closure_0(closure_2[20]);
               return obj.requestSuspendedUserAgeVerification(classificationId);
             }
           }
-          const obj11 = { variant: "heading-sm/medium", color: "text-subtle", style: learnMore, children: null };
+          const obj11 = { variant: "heading-sm/medium", color: "text-subtle", style: tmp4.learnMore, children: null };
           class E {
             constructor() {
-              return L.getIsLoadingAgeVerification();
+              return closure_5.getIsLoadingAgeVerification();
             }
           }
+          const tmp56 = closure_8(tmp(4892).Text, obj11);
           cResult[35] = tmp4.learnMore;
-          cResult[36] = closure_8(tmp(4892).Text, obj11);
-          const tmp57 = closure_8(tmp(4892).Text, obj11);
+          cResult[36] = tmp56;
         } else {
           class Q {
             constructor() {
-              const obj = SafetyHubActionCreators;
+              obj = closure_0(closure_2[20]);
               return obj.requestSuspendedUserAgeVerification(classificationId);
             }
           }
@@ -528,200 +506,180 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
         if (cResult[37] === tmp4.footer) {
           class Q {
             constructor() {
-              const obj = SafetyHubActionCreators;
+              obj = closure_0(closure_2[20]);
               return obj.requestSuspendedUserAgeVerification(classificationId);
             }
           }
         }
-        const obj12 = { style: footer, children: items3 };
-        items3 = [tmp49, tmp56];
+        const obj12 = { style: tmp4.footer, children: null };
+        const items3 = [tmp49, tmp55];
+        obj12.children = items3;
+        const tmp60 = closure_9(View, obj12);
         cResult[37] = tmp4.footer;
         cResult[38] = tmp49;
-        cResult[39] = tmp56;
-        cResult[40] = closure_9(T, obj12);
-        const tmp61 = closure_9(T, obj12);
+        cResult[39] = tmp55;
+        cResult[40] = tmp60;
       }
       const obj14 = { onPress: Q, loading: stateFromStores1, disabled: stateFromStores1, text: tmp47 };
-      cResult[31] = stateFromStores1;
       const tmp51 = closure_8(tmp(5601).Button, obj14);
+      cResult[31] = stateFromStores1;
       class R {
         constructor() {
-          if ("" !== stateFromStores) {
-            const obj = { webviewUrl: tmp, onComplete: L, entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS };
-            const showAgeVerification = AgeVerificationActionCreatorsDefault.showAgeVerification;
-            AgeVerificationActionCreatorsDefault;
-            showAgeVerification(obj);
-            const obj2 = ActionSheetActionCreatorsDefault;
-            obj2.hideActionSheet(metroRequire);
+          if ("" !== closure_3) {
+            tmp2 = closure_1;
+            tmp3 = closure_2;
+            obj = closure_1(closure_2[13]);
+            obj1 = { webviewUrl: null, onComplete: null, entryPoint: null };
+            obj1.webviewUrl = tmp;
+            tmp4 = closure_5;
+            obj1.onComplete = closure_5;
+            tmp5 = closure_0;
+            obj1.entryPoint = closure_0(closure_2[14]).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS;
+            showAgeVerificationResult = obj.showAgeVerification(obj1);
+            obj3 = closure_1(closure_2[15]);
+            tmp7 = closure_6;
+            hideActionSheetResult = obj3.hideActionSheet(closure_6);
           }
+          return;
         }
       }
       cResult[33] = tmp51;
     }
-    const obj15 = { paddingBottom: bottom };
+    const obj16 = {};
     const merged = Object.assign(tmp4.content);
+    obj16.paddingBottom = bottom;
     cResult[13] = bottom;
     cResult[14] = tmp4.content;
-    cResult[15] = obj15;
+    cResult[15] = obj16;
   }
   class R {
     constructor() {
-      if ("" !== stateFromStores) {
-        const obj = { webviewUrl: tmp, onComplete: L, entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS };
-        const showAgeVerification = AgeVerificationActionCreatorsDefault.showAgeVerification;
-        AgeVerificationActionCreatorsDefault;
-        showAgeVerification(obj);
-        const obj2 = ActionSheetActionCreatorsDefault;
-        obj2.hideActionSheet(metroRequire);
+      if ("" !== closure_3) {
+        tmp2 = closure_1;
+        tmp3 = closure_2;
+        obj = closure_1(closure_2[13]);
+        obj1 = { webviewUrl: null, onComplete: null, entryPoint: null };
+        obj1.webviewUrl = tmp;
+        tmp4 = closure_5;
+        obj1.onComplete = closure_5;
+        tmp5 = closure_0;
+        obj1.entryPoint = closure_0(closure_2[14]).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS;
+        showAgeVerificationResult = obj.showAgeVerification(obj1);
+        obj3 = closure_1(closure_2[15]);
+        tmp7 = closure_6;
+        hideActionSheetResult = obj3.hideActionSheet(closure_6);
       }
+      return;
     }
   }
-  items4 = [stateFromStores, tmp15];
-  cResult[8] = tmp15;
+  items4 = [stateFromStores, L];
+  cResult[8] = L;
   cResult[9] = stateFromStores;
   cResult[10] = R;
   cResult[11] = items4;
+  const tmpResult2 = onClose(504);
 }) : ((onClose) => {
-  let BottomSheetScrollView;
-  let TableRow;
-  let TableRowGroup;
-  let TableRowGroup2;
-  let intl;
-  let intl2;
-  let intl3;
-  let intl4;
-  let intl5;
-  let intl6;
-  let intl7;
-  let items5;
-  let items6;
-  let items7;
-  let number;
-  let obj11;
-  let obj13;
-  let obj14;
-  let obj18;
-  let obj4;
-  let obj5;
-  let obj6;
-  let sum1;
   onClose = onClose.onClose;
   const classificationId = onClose.classificationId;
   let callback1;
   const tmp = closure_10();
   dependencyMap = tmp;
-  let obj = onClose(504);
   items = [callback1];
-  const stateFromStores = obj.useStateFromStores(items, () => callback1.getAgeVerificationWebviewUrl());
-  let obj2 = onClose(504);
+  const stateFromStores = onClose(504).useStateFromStores(items, () => callback1.getAgeVerificationWebviewUrl());
+  let obj = onClose(504);
   const items1 = [callback1];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => callback1.getIsLoadingAgeVerification());
+  const stateFromStores1 = onClose(504).useStateFromStores(items1, () => callback1.getIsLoadingAgeVerification());
   const bottom = classificationId(1618)().bottom;
   const items2 = [onClose];
   const callback = stateFromStores.useCallback(() => {
     if (onClose != null) {
       tmp();
     }
-    const obj = AutomatedUnderageAppealModalActionCreatorsDefault;
-    obj.close();
+    AutomatedUnderageAppealModalActionCreatorsDefault.close();
   }, items2);
   const items3 = [callback];
   callback1 = stateFromStores.useCallback(() => {
-    const obj = AutomatedUnderageAppealModalActionCreatorsDefault;
-    obj.success();
+    AutomatedUnderageAppealModalActionCreatorsDefault.success();
     callback();
-    const obj2 = AutomatedUnderageAppealModalActionCreatorsDefault;
-    const result = obj2.start_verification_check();
+    const result = AutomatedUnderageAppealModalActionCreatorsDefault.start_verification_check();
   }, items3);
   const items4 = [stateFromStores, callback1];
   const effect = stateFromStores.useEffect(() => {
     if ("" !== stateFromStores) {
-      const obj = { webviewUrl: tmp, onComplete: callback1, entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS };
-      const showAgeVerification = AgeVerificationActionCreatorsDefault.showAgeVerification;
-      AgeVerificationActionCreatorsDefault;
-      showAgeVerification(obj);
-      const obj2 = ActionSheetActionCreatorsDefault;
-      obj2.hideActionSheet(metroRequire);
+      const obj2 = { webviewUrl: tmp, onComplete: callback1, entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS };
+      AgeVerificationActionCreatorsDefault.showAgeVerification(obj2);
+      ActionSheetActionCreatorsDefault.hideActionSheet(timestampProducer);
     }
   }, items4);
-  let obj3 = { scrollable: true, startHeight: sum1 + classificationId(587).space.PX_32, children: closure_8(BottomSheetScrollView, obj4) };
-  BottomSheet = onClose(6652).BottomSheet;
+  let obj3 = { scrollable: true, startHeight: null, children: null };
   const sum = 425 + bottom;
-  sum1 = sum + classificationId(587).space.PX_16;
-  obj4 = { style: tmp.container, children: closure_9(callback, obj5) };
-  obj5 = { style: obj6, children: items6 };
-  obj6 = { paddingBottom: bottom };
-  BottomSheetScrollView = onClose(6119).BottomSheetScrollView;
+  const sum1 = sum + classificationId(587).space.PX_16;
+  obj3.startHeight = sum1 + classificationId(587).space.PX_32;
+  const obj4 = { style: tmp.container, children: null };
+  const obj5 = { style: null, children: null };
+  const obj6 = {};
   const merged = Object.assign(tmp.content);
-  const obj7 = { style: tmp.header, children: items5 };
-  const obj8 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: intl.string(onClose(1126).t["9SDLnj"]) };
-  const Text = onClose(4892).Text;
-  intl = onClose(1126).intl;
-  items5 = [closure_8(Text, obj8), ];
-  const obj9 = { variant: "heading-md/medium", color: "text-default", children: intl2.string(onClose(1126).t["yvx//1"]) };
-  const Text2 = onClose(4892).Text;
-  intl2 = onClose(1126).intl;
-  items5[1] = closure_8(Text2, obj9);
-  items6 = [closure_9(callback, obj7), , , ];
-  const obj10 = { children: closure_8(TableRowGroup, obj11) };
-  obj11 = {
+  obj6.paddingBottom = bottom;
+  obj5.style = obj6;
+  const obj7 = { style: tmp.header, children: null };
+  const obj8 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
+  const intl = onClose(1126).intl;
+  obj8.children = intl.string(onClose(1126).t["9SDLnj"]);
+  const items5 = [closure_8(onClose(4892).Text, obj8), ];
+  const obj9 = { variant: "heading-md/medium", color: "text-default", children: null };
+  const intl2 = onClose(1126).intl;
+  obj9.children = intl2.string(onClose(1126).t["yvx//1"]);
+  items5[1] = closure_8(onClose(4892).Text, obj9);
+  obj7.children = items5;
+  const items6 = [closure_9(callback, obj7), , , ];
+  const obj10 = { children: null };
+  let obj2 = onClose(504);
+  obj10.children = closure_8(onClose(6081).TableRowGroup, {
     hasIcons: true,
     children: items.map((item, index) => {
-      let description;
-      let obj2;
-      let obj3;
-      let title;
       ({ title, description } = item);
-      const obj = { label: title, subLabel: description, icon: metroImportAll(View, obj2) };
-      obj2 = { style: number.number, children: metroImportAll(Text_Text.Text, obj3) };
-      const TableRow = TableRow2.TableRow;
-      obj3 = { variant: "heading-md/semibold", color: "text-brand", children: index + 1 };
-      return metroImportAll(TableRow, obj, index);
+      const obj = { label: title, subLabel: description, icon: null };
+      const obj2 = { style: number.number, children: closure_2_8(Text_Text.Text, { variant: "heading-md/semibold", color: "text-brand", children: index + 1 }) };
+      obj.icon = closure_2_8(View, obj2);
+      return closure_2_8(TableRow.TableRow, obj, index);
     })
-  };
-  TableRowGroup = onClose(6081).TableRowGroup;
+  });
   items6[1] = closure_8(callback, obj10);
-  const obj12 = { style: tmp.moreInfo, children: closure_8(TableRowGroup2, obj13) };
-  obj13 = { title: intl3.string(onClose(1126).t.WPwp1b), hasIcons: false, children: closure_8(TableRow, obj14) };
-  TableRowGroup2 = onClose(6081).TableRowGroup;
-  intl3 = onClose(1126).intl;
-  obj14 = {
-    label: intl4.string(onClose(1126).t.N9WJMM),
-    subLabel: intl5.string(onClose(1126).t.NHq382),
-    onPress() {
-      const obj = classificationId(number[16]);
-      return obj.openURL(constants.AGE_VERIFICATION_LINK);
-    },
-    arrow: true,
-    start: true,
-    end: true
+  const obj12 = { style: tmp.moreInfo, children: null };
+  const obj13 = { title: null, hasIcons: false, children: null };
+  const intl3 = onClose(1126).intl;
+  obj13.title = intl3.string(onClose(1126).t.WPwp1b);
+  const obj14 = { label: null, subLabel: null, onPress: null, arrow: true, start: true, end: true };
+  const intl4 = onClose(1126).intl;
+  obj14.label = intl4.string(onClose(1126).t.N9WJMM);
+  const intl5 = onClose(1126).intl;
+  obj14.subLabel = intl5.string(onClose(1126).t.NHq382);
+  obj14.onPress = function onPress() {
+    return classificationId(number[16]).openURL(constants.AGE_VERIFICATION_LINK);
   };
-  TableRow = onClose(6000).TableRow;
-  intl4 = onClose(1126).intl;
-  intl5 = onClose(1126).intl;
+  obj13.children = closure_8(onClose(6000).TableRow, obj14);
+  obj12.children = closure_8(onClose(6081).TableRowGroup, obj13);
   items6[2] = closure_8(callback, obj12);
-  const obj15 = { style: tmp.footer, children: items7 };
+  const obj15 = { style: tmp.footer, children: null };
   const obj16 = {
     onPress() {
-      const obj = SafetyHubActionCreators;
-      return obj.requestSuspendedUserAgeVerification(classificationId);
+      return SafetyHubActionCreators.requestSuspendedUserAgeVerification(classificationId);
     },
     loading: stateFromStores1,
     disabled: stateFromStores1,
-    text: intl6.string(onClose(1126).t["54b8V0"])
+    text: null
   };
-  const Button = onClose(5601).Button;
-  intl6 = onClose(1126).intl;
-  items7 = [closure_8(Button, obj16), ];
-  const obj17 = { variant: "heading-sm/medium", color: "text-subtle", style: tmp.learnMore, children: intl7.format(onClose(1126).t.ZbWsOF, obj18) };
-  const Text3 = onClose(4892).Text;
-  intl7 = onClose(1126).intl;
-  obj18 = { learnMoreLink: constants.LEARN_MORE_UU_APPEAL_LINK };
-  items7[1] = closure_8(Text3, obj17);
+  const intl6 = onClose(1126).intl;
+  obj16.text = intl6.string(onClose(1126).t["54b8V0"]);
+  const items7 = [closure_8(onClose(5601).Button, obj16), ];
+  const obj17 = { variant: "heading-sm/medium", color: "text-subtle", style: tmp.learnMore, children: null };
+  const intl7 = onClose(1126).intl;
+  obj17.children = intl7.format(onClose(1126).t.ZbWsOF, { learnMoreLink: constants.LEARN_MORE_UU_APPEAL_LINK });
+  items7[1] = closure_8(onClose(4892).Text, obj17);
+  obj15.children = items7;
   items6[3] = closure_9(callback, obj15);
-  return closure_8(BottomSheet, obj3);
+  obj5.children = items6;
+  obj4.children = closure_9(callback, obj5);
+  obj3.children = closure_8(onClose(6119).BottomSheetScrollView, obj4);
+  return closure_8(onClose(6652).BottomSheet, obj3);
 });
-size = size_mod;
-let result = size.fileFinishedImporting("modules/safety_hub/native/AutomatedUnderageAppealActionSheet.tsx");
-
-export default tmp5;

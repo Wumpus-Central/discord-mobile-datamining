@@ -1,211 +1,172 @@
 // === Module 15792: CollectiblesShopViewAllCategoryItemsHeader ===
 
 // Module 15792 (CollectiblesShopViewAllCategoryItemsHeader)
-import react2 from "react" /* 576 */;
-import intl5 from "intl" /* 1126 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import useNavigation from "useNavigation" /* 1490 */;
 import HeaderShared from "HeaderShared" /* 7509 */;
-import AssetRegistryDefault from "AssetRegistry" /* 7512 */;
+import _modDef7512 from "module_7512" /* 7512 */;
 import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 13284 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let c3;
-let closure_4;
-let hasOwnProperty;
-let metroRequire;
-({ Image: c3, View: closure_4 } = react_native);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4896);
 let closure_7 = createStyles.createStyles({ headerContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: 12, paddingLeft: 8 }, backButton: { flex: 1 }, logo: { flex: 2, height: 36 }, dummyRightButton: { flex: 1 } });
+const ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled();
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopViewAllCategoryItemsHeader.tsx");
 
 export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
-  let HeaderIconButton;
-  let buttonColor;
-  let buttonColor2;
-  let categoryName;
-  let categoryName2;
-  let intl;
-  let intl2;
-  let items;
-  let items1;
-  let logoUrl;
-  let logoUrl2;
-  let obj15;
-  let obj17;
-  let obj19;
-  let obj20;
-  let tmp14;
-  let youBarSettingsCustomHeaderPaddingTop1;
   if (closure_8) {
-    const obj11 = react2;
-    const cResult = obj11.c(27);
+    const cResult = c.c(27);
     ({ logoUrl: logoUrl2, buttonColor: buttonColor2, categoryName: categoryName2 } = arg0);
-    const obj12 = useNavigation;
-    const stackNavigation = obj12.useStackNavigation();
-    const tmp20 = closure_7();
-    const obj13 = useYouBarSettingsSafeArea;
-    const youBarSettingsCustomHeaderPaddingTop = obj13.useYouBarSettingsCustomHeaderPaddingTop();
+    const stackNavigation = useNavigation.useStackNavigation();
+    let navigation = stackNavigation;
+    const tmp18 = closure_7();
+    const youBarSettingsCustomHeaderPaddingTop = useYouBarSettingsSafeArea.useYouBarSettingsCustomHeaderPaddingTop();
     if (cResult[0] === youBarSettingsCustomHeaderPaddingTop) {
-      let tmp22;
-      let tmp26;
-      let tmp28;
-      if (cResult[1] === tmp20.headerContainer) {
-        tmp22 = cResult[2];
+      if (cResult[1] === tmp18.headerContainer) {
+        let tmp20 = cResult[2];
       }
       const _Symbol = Symbol;
-      const backButton = tmp20.backButton;
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl3 = intl5.intl;
-        const stringResult = intl3.string(intl5.t["13/7kX"]);
+        const intl3 = util.intl;
+        const stringResult = intl3.string(util.t["13/7kX"]);
         cResult[3] = stringResult;
-        tmp26 = stringResult;
+        let tmp24 = stringResult;
       } else {
-        tmp26 = cResult[3];
+        tmp24 = cResult[3];
       }
       if (cResult[4] !== stackNavigation) {
         const fn = function k() {
-          stackNavigation.goBack();
+          navigation.goBack();
         };
         cResult[4] = stackNavigation;
         cResult[5] = fn;
-        tmp28 = fn;
+        let tmp26 = fn;
       } else {
-        tmp28 = cResult[5];
+        tmp26 = cResult[5];
       }
       if (cResult[6] === buttonColor2) {
-        let tmp29;
-        if (cResult[7] === tmp28) {
-          tmp29 = cResult[8];
+        if (cResult[7] === tmp26) {
+          let tmp27 = cResult[8];
         }
-        if (cResult[9] === tmp20.backButton) {
-          let tmp33;
-          let tmp37;
-          let tmp38;
-          if (cResult[10] === tmp29) {
-            tmp33 = cResult[11];
+        if (cResult[9] === tmp18.backButton) {
+          if (cResult[10] === tmp27) {
+            let tmp31 = cResult[11];
           }
-          const logo = tmp20.logo;
           if (cResult[12] !== logoUrl2) {
             const obj3 = { uri: logoUrl2 };
             cResult[12] = logoUrl2;
             cResult[13] = obj3;
-            tmp37 = obj3;
+            let tmp35 = obj3;
           } else {
-            tmp37 = cResult[13];
+            tmp35 = cResult[13];
           }
           if (cResult[14] !== categoryName2) {
-            const intl4 = intl5.intl;
+            const intl4 = util.intl;
             const obj4 = { category: categoryName2 };
-            const formatToPlainStringResult = intl4.formatToPlainString(intl5.t.FNtLb3, obj4);
+            const formatToPlainStringResult = intl4.formatToPlainString(util.t.FNtLb3, obj4);
             cResult[14] = categoryName2;
             cResult[15] = formatToPlainStringResult;
-            tmp38 = formatToPlainStringResult;
+            let tmp36 = formatToPlainStringResult;
           } else {
-            tmp38 = cResult[15];
+            tmp36 = cResult[15];
           }
-          if (cResult[16] === tmp20.logo) {
-            if (cResult[17] === tmp37) {
-              let tmp40;
-              let tmp44;
-              if (cResult[18] === tmp38) {
-                tmp40 = cResult[19];
+          if (cResult[16] === tmp18.logo) {
+            if (cResult[17] === tmp35) {
+              if (cResult[18] === tmp36) {
+                let tmp38 = cResult[19];
               }
-              if (cResult[20] !== tmp20.dummyRightButton) {
-                const obj5 = { style: tmp20.dummyRightButton };
-                const tmp47 = hasOwnProperty(React3, obj5);
-                cResult[20] = tmp20.dummyRightButton;
-                cResult[21] = tmp47;
-                tmp44 = tmp47;
+              if (cResult[20] !== tmp18.dummyRightButton) {
+                const obj5 = { style: tmp18.dummyRightButton };
+                const tmp45 = hasOwnProperty(React4, obj5);
+                cResult[20] = tmp18.dummyRightButton;
+                cResult[21] = tmp45;
+                let tmp42 = tmp45;
               } else {
-                tmp44 = cResult[21];
+                tmp42 = cResult[21];
               }
-              if (cResult[22] === tmp22) {
-                if (cResult[23] === tmp40) {
-                  if (cResult[24] === tmp44) {
-                    let tmp48;
-                    if (cResult[25] === tmp33) {
-                      tmp48 = cResult[26];
-                    }
-                    tmp14 = tmp48;
+              if (cResult[22] === tmp20) {
+                if (cResult[23] === tmp38) {
+                  if (cResult[24] === tmp42) {
                   }
                 }
               }
-              const obj6 = { style: tmp22, children: items };
-              items = [tmp33, tmp40, tmp44];
-              const tmp51 = metroRequire(React3, obj6);
-              cResult[22] = tmp22;
-              cResult[23] = tmp40;
-              cResult[24] = tmp44;
-              cResult[25] = tmp33;
-              cResult[26] = tmp51;
-              tmp48 = tmp51;
+              const obj6 = { style: tmp20, children: null };
+              const items = [tmp31, tmp38, tmp42];
+              obj6.children = items;
+              const tmp49 = timestampProducer(React4, obj6);
+              cResult[22] = tmp20;
+              cResult[23] = tmp38;
+              cResult[24] = tmp42;
+              cResult[25] = tmp31;
+              cResult[26] = tmp49;
             }
           }
-          const obj7 = { resizeMode: "contain", style: logo, source: tmp37, accessibilityLabel: tmp38, accessibilityRole: "header" };
-          const tmp43 = hasOwnProperty(_false, obj7);
-          cResult[16] = tmp20.logo;
-          cResult[17] = tmp37;
-          cResult[18] = tmp38;
-          cResult[19] = tmp43;
-          tmp40 = tmp43;
+          const obj7 = { resizeMode: "contain", style: tmp18.logo, source: tmp35, accessibilityLabel: tmp36, accessibilityRole: "header" };
+          const tmp41 = hasOwnProperty(React3, obj7);
+          cResult[16] = tmp18.logo;
+          cResult[17] = tmp35;
+          cResult[18] = tmp36;
+          cResult[19] = tmp41;
+          tmp38 = tmp41;
         }
-        const obj8 = { style: backButton, children: tmp29 };
-        const tmp36 = hasOwnProperty(React3, obj8);
-        cResult[9] = tmp20.backButton;
-        cResult[10] = tmp29;
-        cResult[11] = tmp36;
-        tmp33 = tmp36;
+        const obj8 = { style: tmp18.backButton, children: tmp27 };
+        const tmp34 = hasOwnProperty(React4, obj8);
+        cResult[9] = tmp18.backButton;
+        cResult[10] = tmp27;
+        cResult[11] = tmp34;
+        tmp31 = tmp34;
       }
-      const obj9 = { source: AssetRegistryDefault, color: buttonColor2, accessibilityLabel: tmp26, onPress: tmp28 };
-      const HeaderIconButton2 = HeaderShared.HeaderIconButton;
-      const tmp32 = hasOwnProperty(HeaderIconButton2, obj9);
+      const obj9 = { source: _modDef7512, color: buttonColor2, accessibilityLabel: tmp24, onPress: tmp26 };
+      const tmp30 = hasOwnProperty(HeaderShared.HeaderIconButton, obj9);
       cResult[6] = buttonColor2;
-      cResult[7] = tmp28;
-      cResult[8] = tmp32;
-      tmp29 = tmp32;
+      cResult[7] = tmp26;
+      cResult[8] = tmp30;
+      tmp27 = tmp30;
     }
-    const obj10 = { paddingTop: youBarSettingsCustomHeaderPaddingTop };
-    const merged = Object.assign(tmp20.headerContainer);
+    const obj10 = {};
+    const merged = Object.assign(tmp18.headerContainer);
+    obj10.paddingTop = youBarSettingsCustomHeaderPaddingTop;
     cResult[0] = youBarSettingsCustomHeaderPaddingTop;
-    cResult[1] = tmp20.headerContainer;
+    cResult[1] = tmp18.headerContainer;
     cResult[2] = obj10;
-    tmp22 = obj10;
+    tmp20 = obj10;
   } else {
     ({ logoUrl, buttonColor, categoryName } = arg0);
-    const obj = useNavigation;
-    let closure_0 = obj.useStackNavigation();
-    const tmp5 = closure_7();
-    const obj14 = { style: obj15, children: items1 };
-    obj15 = { paddingTop: youBarSettingsCustomHeaderPaddingTop1 };
-    const obj2 = useYouBarSettingsSafeArea;
-    youBarSettingsCustomHeaderPaddingTop1 = obj2.useYouBarSettingsCustomHeaderPaddingTop();
-    const merged1 = Object.assign(tmp5.headerContainer);
-    const obj16 = { style: tmp5.backButton, children: hasOwnProperty(HeaderIconButton, obj17) };
-    obj17 = {
-      source: AssetRegistryDefault,
-      color: buttonColor,
-      accessibilityLabel: intl.string(intl5.t["13/7kX"]),
-      onPress() {
-          navigation.goBack();
-        }
+    navigation = useNavigation.useStackNavigation();
+    const tmp4 = closure_7();
+    const obj14 = { style: null, children: null };
+    const obj15 = {};
+    const youBarSettingsCustomHeaderPaddingTop1 = useYouBarSettingsSafeArea.useYouBarSettingsCustomHeaderPaddingTop();
+    const merged1 = Object.assign(tmp4.headerContainer);
+    obj15.paddingTop = youBarSettingsCustomHeaderPaddingTop1;
+    obj14.style = obj15;
+    const obj16 = { style: tmp4.backButton, children: null };
+    const obj17 = { source: _modDef7512, color: buttonColor, accessibilityLabel: null, onPress: null };
+    const intl = util.intl;
+    obj17.accessibilityLabel = intl.string(util.t["13/7kX"]);
+    obj17.onPress = function onPress() {
+      navigation.goBack();
     };
-    HeaderIconButton = HeaderShared.HeaderIconButton;
-    intl = intl5.intl;
-    items1 = [hasOwnProperty(React3, obj16), , ];
-    const obj18 = { resizeMode: "contain", style: tmp5.logo, source: obj19, accessibilityLabel: intl2.formatToPlainString(intl5.t.FNtLb3, obj20), accessibilityRole: "header" };
-    obj19 = { uri: logoUrl };
-    intl2 = intl5.intl;
-    obj20 = { category: categoryName };
-    items1[1] = hasOwnProperty(_false, obj18);
-    const obj21 = { style: tmp5.dummyRightButton };
-    items1[2] = hasOwnProperty(React3, obj21);
-    tmp14 = metroRequire(React3, obj14);
+    obj16.children = hasOwnProperty(HeaderShared.HeaderIconButton, obj17);
+    const items1 = [hasOwnProperty(React4, obj16), , ];
+    const obj18 = { resizeMode: "contain", style: tmp4.logo, source: null, accessibilityLabel: null, accessibilityRole: "header" };
+    const obj19 = { uri: logoUrl };
+    obj18.source = obj19;
+    const intl2 = util.intl;
+    const obj20 = { category: categoryName };
+    obj18.accessibilityLabel = intl2.formatToPlainString(util.t.FNtLb3, obj20);
+    items1[1] = hasOwnProperty(React3, obj18);
+    const obj21 = { style: tmp4.dummyRightButton };
+    items1[2] = hasOwnProperty(React4, obj21);
+    obj14.children = items1;
+    return timestampProducer(React4, obj14);
   }
-  return tmp14;
 };

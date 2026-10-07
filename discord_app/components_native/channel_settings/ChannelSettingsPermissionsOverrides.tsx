@@ -1,115 +1,70 @@
 // === Module 17034: ChannelSettingsPermissionsOverrides ===
 
 // Module 17034 (ChannelSettingsPermissionsOverrides)
-import get_initialized from "get initialized" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import intl5 from "intl" /* 1126 */;
-import native from "native" /* 1188 */;
-import useNavigation from "useNavigation" /* 1490 */;
+import util from "util" /* 1126 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 2060 */;
-import GuildRecord from "GuildRecord" /* 2070 */;
 import PermissionUtils from "PermissionUtils" /* 4520 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useChannelName from "useChannelName" /* 5049 */;
-import TableRow2 from "TableRow" /* 6000 */;
-import TableRowGroup2 from "TableRowGroup" /* 6081 */;
-import useAppChannelApplication from "useAppChannelApplication" /* 6759 */;
+import TableRowGroup from "TableRowGroup" /* 6081 */;
 import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11245 */;
 import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 17035 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import PermissionStore from "PermissionStore" /* 4515 */;
 import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import Constants from "Constants" /* 1085 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let c4, c5, dependencyMap, description, navigation, permissions;
 
-let closure_16;
-let closure_17;
-let closure_18;
-let closure_19;
-let closure_20;
-let closure_21;
-let metroImportAll;
-let metroImportDefault;
-let obj2;
-let obj3;
-let obj4;
-({ View: metroImportDefault, ScrollView: metroImportAll } = react_native);
-const isGuildOwner = GuildRecord.isGuildOwner;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
+const isGuildOwner = fn(2070).isGuildOwner;
+const Constants = fn(1085);
 ({ PermissionOverrideType: closure_16, HelpdeskArticles: closure_17, Permissions: closure_18 } = Constants);
-({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { container: obj2, containerContent: obj3, section: obj4 };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-createStyles = createStyles.createStyles;
-obj3 = { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_12 };
-obj4 = { marginBottom: nativeDefault.space.PX_16 };
-let closure_22 = createStyles(obj);
+const jsxProd = fn(21);
+({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, containerContent: null, section: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+obj2.containerContent = { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_12 };
+let obj4 = { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_12 };
+obj2.section = { marginBottom: nativeDefault.space.PX_16 };
+let closure_22 = createStyles.createStyles(obj2);
+const size = fn(2);
 let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsPermissionsOverrides.tsx");
 
 export default function ChannelSettingsPermissionsOverrides(fromCreate) {
-  let HelpMessage;
-  let id;
-  let intl;
-  let items5;
-  let items6;
-  let obj11;
-  let obj12;
-  let section;
-  let tmp12Result;
-  let tmp2Result;
-  ({ channelId: require, id } = fromCreate);
+  ({ channelId: closure_0, id } = fromCreate);
   fromCreate = fromCreate.fromCreate;
-  let closure_7;
-  let closure_8;
-  let closure_9;
+  closure_7 = undefined;
+  closure_8 = undefined;
+  closure_9 = undefined;
   let first;
-  let type = fromCreate.type;
   let tmp = closure_22();
   dependencyMap = tmp;
-  let tmp3 = dependencyMap;
-  let obj = useNavigation;
-  navigation = obj.useNavigation();
-  const bottom = id(1618)().bottom;
-  let obj2 = get_initialized;
+  const navigation = require("useNavigation").useNavigation();
+  let obj = require("useNavigation");
   let items = [first];
-  const stateFromStores = obj2.useStateFromStores(items, () => ChannelStore.getChannel(require));
-  let obj3 = useAppChannelApplication;
-  const appChannelApplication = obj3.useAppChannelApplication(stateFromStores);
-  let obj4 = AppChannelPermissionUtils;
-  const appChannelBotUserId = obj4.useAppChannelBotUserId(stateFromStores);
+  let stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(closure_0));
+  let obj2 = require("initialize");
+  const appChannelApplication = require("useAppChannelApplication").useAppChannelApplication(stateFromStores);
+  let obj3 = require("useAppChannelApplication");
+  const appChannelBotUserId = require("AppChannelPermissionUtils").useAppChannelBotUserId(stateFromStores);
   let tmp9 = null;
   if (appChannelBotUserId === id) {
     tmp9 = appChannelApplication;
   }
-  const useCallback = appChannelBotUserId.useCallback;
-  let closure_0 = stateFromStores(function*(arg0, arg1) {
-    let intl;
-    let intl2;
-    let intl3;
-    let intl4;
-    let obj18;
-    let obj4;
-    let obj5;
-    let obj7;
-    closure_0 = arg0;
-    let closure_1 = arg1;
-    if (c5 === 2) {
-      c5 = 3;
+  _require = stateFromStores(function*(arg0, arg1) {
+    if (stateFromStores === 2) {
+      stateFromStores = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp4 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -120,232 +75,235 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
       }
     } else {
       try {
-        let obj10;
-        c5 = 2;
+        stateFromStores = 2;
         if (0 === c4) {
           if (arg0 === 1) {
-            c5 = 3;
+            stateFromStores = 3;
             throw value;
           } else if (arg0 === 2) {
-            c5 = 3;
+            stateFromStores = 3;
             const obj8 = { value, done: true };
             return obj8;
           } else {
-            let closure_3 = tmp4;
-            let closure_2 = tmp;
-            obj10 = undefined;
+            closure_2 = tmp2;
+            closure_130_0 = closure_0;
+            closure_130_1 = undefined;
+            closure_130_2 = undefined;
+            closure_130_3 = undefined;
             let name;
             let user2;
-            id = undefined;
+            let guild2;
             let role2;
-            closure_1 = tmp125;
-            let tmp9 = c5.permissionOverwrites[closure_1];
-            let everyoneOverwrite = tmp9;
-            let tmp5 = null == tmp9;
-            const tmp123 = closure_1;
-            if (tmp5) {
-              tmp5 = tmp125;
+            closure_130_1 = tmp126;
+            let tmp10 = stateFromStores.permissionOverwrites[closure_1];
+            closure_130_2 = tmp10;
+            let tmp6 = null == tmp10;
+            if (tmp6) {
+              tmp6 = tmp126;
             }
-            if (tmp5) {
-              const obj2 = fromCreate(section[20]);
-              everyoneOverwrite = obj2.makeEveryoneOverwrite(tmp123);
-              tmp9 = everyoneOverwrite;
+            if (tmp6) {
+              const everyoneOverwrite = fromCreate(tmp5[20]).makeEveryoneOverwrite(closure_1);
+              closure_130_2 = everyoneOverwrite;
+              tmp10 = everyoneOverwrite;
+              const obj2 = fromCreate(tmp5[20]);
             }
-            obj10 = { deny: obj4.remove(obj10.deny, closure_0), allow: obj5.remove(obj10.allow, closure_0) };
-            const merged = Object.assign(tmp9);
-            obj4 = fromCreate(section[21]);
-            obj5 = fromCreate(section[21]);
-            if (closure_1 === closure_0(section[20]).ALLOW) {
-              const obj9 = fromCreate(section[21]);
-              obj10.allow = obj9.add(obj10.allow, closure_0);
-            } else if (closure_1 === closure_0(section[20]).DENY) {
-              if (null != c5.guild_id) {
-                if (closure_1 === c5.guild_id) {
+            const obj10 = {};
+            const merged = Object.assign(tmp10);
+            closure_130_3 = obj10;
+            obj10.deny = fromCreate(tmp5[21]).remove(obj10.deny, closure_0);
+            const obj4 = fromCreate(tmp5[21]);
+            obj10.allow = fromCreate(tmp5[21]).remove(obj10.allow, closure_0);
+            if (closure_1 === closure_0(tmp5[20]).ALLOW) {
+              obj10.allow = fromCreate(tmp5[21]).add(obj10.allow, closure_0);
+              const obj9 = fromCreate(tmp5[21]);
+            } else if (closure_1 === closure_0(tmp5[20]).DENY) {
+              if (null != stateFromStores.guild_id) {
+                if (tmp126) {
                   c4 = 1;
-                  c5 = 1;
-                  const obj14 = { value: obj7.checkChattableChannelThresholdMetAfterChannelPermissionDeny(c5, closure_0), done: false };
-                  obj7 = closure_0(section[22]);
-                  return obj14;
+                  stateFromStores = 1;
+                  const obj15 = { value: closure_0(tmp5[22]).checkChattableChannelThresholdMetAfterChannelPermissionDeny(stateFromStores, closure_0), done: false };
+                  return obj15;
                 }
               }
             }
-            const obj15 = {};
-            obj15[obj10.id] = obj10;
-            if (PermissionStore.can(closure_0, c5, obj15)) {
-              const obj16 = id(section[23]);
-              const result = obj16.updatePermissionOverwrite(c5.id, obj10);
+            const obj16 = {};
+            obj16[closure_130_3.id] = closure_130_3;
+            if (PermissionStore.can(closure_130_0, stateFromStores, obj16)) {
+              const result = id(tmp5[23]).updatePermissionOverwrite(stateFromStores.id, closure_130_3);
+              stateFromStores = 3;
+              const obj17 = id(tmp5[23]);
+            } else if (PermissionStore.can(closure_130_0, stateFromStores)) {
+              if (!closure_130_1) {
+                if (!obj11.has(closure_130_2.allow, closure_130_0)) {
+                  if (!obj12.has(closure_130_2.deny, closure_130_0)) {
+                    closure_1_7(closure_130_0, closure_0(tmp5[20]).ALLOW);
+                  }
+                  obj12 = fromCreate(tmp5[21]);
+                }
+                obj11 = fromCreate(tmp5[21]);
+              }
+            }
+            const type = closure_130_2.type;
+            if (closure_0(tmp5[24]).PermissionOverwriteType.MEMBER === type) {
+              user2 = user.getUser(closure_130_2.id);
+              if (null != user2) {
+                name = id(tmp5[25]).getName(user2);
+                const obj13 = id(tmp5[25]);
+              }
+            } else if (closure_0(tmp5[24]).PermissionOverwriteType.ROLE === type) {
+              guild2 = guild.getGuild(stateFromStores.guild_id);
+              if (null != guild2) {
+                role2 = role.getRole(guild2.id, closure_130_2.id);
+                if (null != role2) {
+                  name = role2.name;
+                }
+              }
             } else {
-              if (PermissionStore.can(closure_0, c5)) {
-                const tmp44 = closure_1;
-                if (!tmp44) {
-                  const obj11 = fromCreate(section[21]);
-                  if (!obj11.has(everyoneOverwrite.allow, closure_0)) {
-                    const obj12 = fromCreate(section[21]);
-                    if (!obj12.has(everyoneOverwrite.deny, closure_0)) {
-                      closure_1_7(closure_0, closure_0(section[20]).ALLOW);
-                    }
-                  }
-                }
-              }
-              const type = everyoneOverwrite.type;
-              if (closure_0(section[24]).PermissionOverwriteType.MEMBER === type) {
-                user2 = user.getUser(everyoneOverwrite.id);
-                if (null != user2) {
-                  const obj13 = id(section[25]);
-                  name = obj13.getName(user2);
-                }
-              } else if (closure_0(section[24]).PermissionOverwriteType.ROLE === type) {
-                id = guild.getGuild(c5.guild_id);
-                if (null != id) {
-                  role2 = role.getRole(id.id, everyoneOverwrite.id);
-                  if (null != role2) {
-                    name = role2.name;
-                  }
-                }
-              } else {
-                const type2 = everyoneOverwrite.type;
-              }
-              const obj17 = {
-                title: intl.string(closure_0(section[27]).t.vElC9b),
-                body: intl2.format(closure_0(section[27]).t.yslqFM, obj18),
-                cancelText: intl3.string(closure_0(section[27]).t["ETE/oC"]),
-                confirmText: intl4.string(closure_0(section[27]).t.psXQHP),
-                onConfirm() {
-                            const openURL = closure_1_1(closure_1_3[28]).openURL;
-                            closure_1_1(closure_1_3[28]);
-                            const obj = closure_1_1(closure_1_3[29]);
-                            openURL(obj.getArticleURL(constants.PERMISSIONS_TUTORIAL));
-                          }
-              };
-              const show = id(section[26]).show;
-              const tmp93 = id(section[26]);
-              intl = closure_0(section[27]).intl;
-              intl2 = closure_0(section[27]).intl;
-              obj18 = { name };
-              intl3 = closure_0(section[27]).intl;
-              intl4 = closure_0(section[27]).intl;
-              show(obj17);
+              const type2 = closure_130_2.type;
             }
-            c5 = 3;
-            return { value: "IconComponent", done: null };
+            const obj5 = fromCreate(tmp5[21]);
+            const obj18 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null };
+            const intl = closure_0(tmp5[27]).intl;
+            obj18.title = intl.string(closure_0(tmp5[27]).t.vElC9b);
+            const intl2 = closure_0(tmp5[27]).intl;
+            const obj19 = { name };
+            obj18.body = intl2.format(closure_0(tmp5[27]).t.yslqFM, obj19);
+            const intl3 = closure_0(tmp5[27]).intl;
+            obj18.cancelText = intl3.string(closure_0(tmp5[27]).t["ETE/oC"]);
+            const intl4 = closure_0(tmp5[27]).intl;
+            obj18.confirmText = intl4.string(closure_0(tmp5[27]).t.psXQHP);
+            obj18.onConfirm = function onConfirm() {
+              const obj = closure_1_1(4571);
+              obj.openURL(closure_1_1(2115).getArticleURL(constants.PERMISSIONS_TUTORIAL));
+            };
+            id(tmp5[26]).show(obj18);
+            const obj14 = id(tmp5[26]);
           }
         } else if (arg0 === 1) {
-          c5 = 3;
+          stateFromStores = 3;
           throw value;
         } else if (arg0 === 2) {
-          c5 = 3;
+          stateFromStores = 3;
           let obj = { value, done: true };
           return obj;
         } else if (!value) {
-          c5 = 3;
+          stateFromStores = 3;
           return { value: "IconComponent", done: null };
         }
-        const obj6 = fromCreate(section[21]);
-        obj10.deny = obj6.add(obj10.deny, closure_0);
+        closure_130_3.deny = fromCreate(tmp5[21]).add(closure_130_3.deny, closure_130_0);
+        const obj6 = fromCreate(tmp5[21]);
       } catch (tmp117) {
-        c5 = 3;
+        stateFromStores = tmp;
         throw tmp117;
       }
     }
   });
   const items1 = [stateFromStores, id];
-  closure_7 = useCallback(function() {
-    return closure_0(...arguments);
+  closure_7 = appChannelBotUserId.useCallback(function() {
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   }, items1);
   const items2 = [stateFromStores, id, appChannelBotUserId];
   closure_8 = appChannelBotUserId.useCallback((VIEW_CHANNEL) => {
-    const guild = GuildStore.getGuild(stateFromStores.guild_id);
+    guild = GuildStore.getGuild(stateFromStores.guild_id);
     const currentUser = UserStore.getCurrentUser();
     if (null != guild) {
       if (null != currentUser) {
-        let stringResult;
-        const canResult = isGuildOwner(guild, currentUser) || PermissionStore.can(constants.ADMINISTRATOR, guild) || PermissionStore.can(constants.MANAGE_ROLES, stateFromStores, undefined, undefined, true);
+        let canResult = isGuildOwner(guild, currentUser);
+        if (!canResult) {
+          canResult = PermissionStore.can(constants2.ADMINISTRATOR, guild);
+        }
+        if (!canResult) {
+          canResult = PermissionStore.can(constants2.MANAGE_ROLES, stateFromStores, undefined, undefined, true);
+        }
         if (stateFromStores.isGuildStageVoice()) {
           const STAGE_CHANNEL_DISABLED_PERMISSIONS = StageChannelPermissions.STAGE_CHANNEL_DISABLED_PERMISSIONS;
           if (STAGE_CHANNEL_DISABLED_PERMISSIONS.has(VIEW_CHANNEL)) {
-            const intl3 = intl5.intl;
-            stringResult = intl3.string(intl5.t.bTS5lf);
+            const intl3 = util.intl;
+            let stringResult = intl3.string(util.t.bTS5lf);
           }
           return stringResult;
         }
-        const obj2 = AppChannelPermissionUtils;
         if (obj2.isAppChannelFloorPermission(appChannelBotUserId, id, VIEW_CHANNEL)) {
-          const intl2 = intl5.intl;
-          stringResult = intl2.string(intl5.t.yXmgpP);
+          const intl2 = util.intl;
+          stringResult = intl2.string(util.t.yXmgpP);
         } else {
-          stringResult = VIEW_CHANNEL === constants.MANAGE_ROLES && !canResult;
+          stringResult = VIEW_CHANNEL === constants2.MANAGE_ROLES && !canResult;
           if (!stringResult) {
-            stringResult = null != VIEW_CHANNEL && !PermissionStore.can(VIEW_CHANNEL, guild) && !canResult;
-            const tmp19 = null != VIEW_CHANNEL && !PermissionStore.can(VIEW_CHANNEL, guild) && !canResult;
+            let tmp19 = null != VIEW_CHANNEL;
+            if (tmp19) {
+              tmp19 = !PermissionStore.can(VIEW_CHANNEL, guild);
+            }
+            if (tmp19) {
+              tmp19 = !canResult;
+            }
+            stringResult = tmp19;
           }
           if (stringResult) {
-            const intl = intl5.intl;
-            stringResult = intl.string(intl5.t.nOtPMM);
+            const intl = util.intl;
+            stringResult = intl.string(util.t.nOtPMM);
           }
         }
+        obj2 = AppChannelPermissionUtils;
       }
     }
     return false;
   }, items2);
   const items3 = [stateFromStores, id];
-  closure_9 = appChannelBotUserId.useCallback((arg0) => {
-    let ALLOW;
+  closure_9 = appChannelBotUserId.useCallback((VIEW_CHANNEL) => {
     let allow;
-    const has = BigFlagUtilsAll.has;
-    BigFlagUtilsAll;
     if (stateFromStores.permissionOverwrites[id] != null) {
       allow = tmp.allow;
     }
-    if (has(allow, arg0)) {
-      ALLOW = PermissionUtils.ALLOW;
+    if (obj.has(allow, VIEW_CHANNEL)) {
+      let ALLOW = PermissionUtils.ALLOW;
     } else {
       let deny;
-      const has2 = BigFlagUtilsAll.has;
-      BigFlagUtilsAll;
-      if (stateFromStores.permissionOverwrites[id] != null) {
+      if (tmp != null) {
         deny = tmp.deny;
       }
-      const has2Result = has2(deny, arg0);
-      const tmp10 = PermissionUtils;
-      ALLOW = has2Result ? tmp10.DENY : tmp10.PASSTHROUGH;
+      const hasItem = BigFlagUtilsAll.has(deny, VIEW_CHANNEL);
+      const tmp8 = PermissionUtils;
+      ALLOW = hasItem ? tmp8.DENY : tmp8.PASSTHROUGH;
+      const tmp2Result = BigFlagUtilsAll;
     }
     return ALLOW;
   }, items3);
-  let tmp10 = navigation(appChannelBotUserId.useState(() => {
-    const guild_id = stateFromStores.guild_id;
-    const obj = PermissionSpecUtilsDefault;
-    return obj.generateChannelPermissionSpec(stateFromStores.guild_id, stateFromStores, id === guild_id);
-  }), 2);
-  first = tmp10[0];
+  let obj4 = require("AppChannelPermissionUtils");
+  first = navigation(appChannelBotUserId.useState(() => PermissionSpecUtilsDefault.generateChannelPermissionSpec(stateFromStores.guild_id, stateFromStores, id === stateFromStores.guild_id)), 2)[0];
   const items4 = [fromCreate, navigation];
   const effect = appChannelBotUserId.useEffect(() => {
     if (fromCreate) {
       let obj = {
         headerRight() {
-            let intl;
             const obj = {
               onPress() {
                 closure_1_4.pop();
               },
-              label: intl.string(require("intl").t.i4jeWR)
+              label: null
             };
-            const HeaderTextButton = require("HeaderShared").HeaderTextButton;
-            intl = require("intl").intl;
-            return closure_2_19(HeaderTextButton, obj);
+            const intl = closure_0(1126).intl;
+            obj.label = intl.string(closure_0(1126).t.i4jeWR);
+            return closure_2_19(closure_0(7509).HeaderTextButton, obj);
           }
       };
       navigation.setOptions(obj);
     }
   }, items4);
-  let obj5 = { variant: "text-md/medium", color: "text-muted", children: tmp2Result.computeChannelName(stateFromStores, UserStore, RelationshipStore, true) };
-  let Text = Text_Text.Text;
-  tmp2Result = useChannelName;
-  const tmp13 = closure_19(Text, obj5);
-  if (type === constants.MEMBER) {
+  let obj5 = { variant: "text-md/medium", color: "text-muted", children: null };
+  let tmp10 = navigation(appChannelBotUserId.useState(() => PermissionSpecUtilsDefault.generateChannelPermissionSpec(stateFromStores.guild_id, stateFromStores, id === stateFromStores.guild_id)), 2);
+  obj5.children = require("useChannelName").computeChannelName(stateFromStores, UserStore, RelationshipStore, true);
+  const tmp13 = closure_19(require("Text/Text").Text, obj5);
+  if (fromCreate.type === constants.MEMBER) {
     let obj6 = { userId: id, guildId: stateFromStores.guild_id, start: true, end: true, trailing: tmp13 };
-    tmp12Result = closure_19(id(10693), obj6);
+    let tmp12Result = closure_19(id(10693), obj6);
   } else {
-    let TableRow = TableRow2.TableRow;
     const role = GuildRoleStore.getRole(stateFromStores.guild_id, id);
     let str;
     if (role != null) {
@@ -354,78 +312,65 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     if (str == null) {
       str = "";
     }
-    let obj7 = { end: true, label: str, start: true, trailing: tmp13 };
-    tmp12Result = closure_19(TableRow, obj7);
+    const obj7 = { end: true, label: str, start: true, trailing: tmp13 };
+    tmp12Result = closure_19(tmp2(6000).TableRow, obj7);
   }
-  let obj8 = { style: tmp.container, contentContainerStyle: items5, children: items6 };
-  items5 = [tmp.containerContent, { paddingBottom: tmp.containerContent.paddingBottom + bottom }];
-  let obj9 = { style: tmp.section, children: tmp12Result };
-  let tmp19 = closure_7;
-  items6 = [closure_19(closure_7, obj9), , ];
+  let obj8 = { style: tmp.container, contentContainerStyle: null, children: null };
+  const items5 = [tmp.containerContent, { paddingBottom: tmp.containerContent.paddingBottom + id(1618)().bottom }];
+  obj8.contentContainerStyle = items5;
+  const items6 = [closure_19(closure_7, { style: tmp.section, children: tmp12Result }), , ];
   let tmp12Result2 = null;
-  const tmp18 = closure_8;
   if (null != tmp9) {
-    let obj10 = { style: tmp.section, children: closure_19(HelpMessage, obj11) };
-    obj11 = { messageType: native.HelpMessageTypes.INFO, children: intl.format(intl5.t["Xq++FA"], obj12) };
-    HelpMessage = native.HelpMessage;
-    intl = intl5.intl;
-    obj12 = { appName: tmp9.name };
-    tmp12Result2 = closure_19(tmp19, obj10);
+    let obj10 = { style: tmp.section, children: null };
+    let obj11 = { messageType: tmp2(1188).HelpMessageTypes.INFO, children: null };
+    let intl = tmp2(1126).intl;
+    let obj12 = { appName: tmp9.name };
+    obj11.children = intl.format(tmp2(1126).t["Xq++FA"], obj12);
+    obj10.children = closure_19(tmp2(1188).HelpMessage, obj11);
+    tmp12Result2 = closure_19(closure_7, obj10);
   }
   items6[1] = tmp12Result2;
   items6[2] = first.map((permissions, index) => {
-    let TableRowGroup;
-    let obj2;
     permissions = permissions.permissions;
-    let obj = { style: section.section, children: closure_19(TableRowGroup, obj2) };
-    const title = permissions.title;
-    let tmp3;
-    TableRowGroup = TableRowGroup2.TableRowGroup;
+    let obj = { style: section.section, children: null };
+    let title;
     if (first.length > 1) {
-      tmp3 = title;
+      title = permissions.title;
     }
-    obj2 = {
-      title: tmp3,
+    obj.children = closure_2_19(TableRowGroup.TableRowGroup, {
+      title,
       hasIcons: false,
       children: permissions.map((description, index) => {
-        let flag;
-        let obj2;
-        let obj5;
-        let title;
-        let tmp11;
         ({ title, flag } = description);
-        description = description.description;
         const tmp = closure_8(flag);
-        const obj = { variant: "text-xs/medium", color: "text-subtle", children: obj2.renderDescription(description) };
-        const Text = closure_1_0(section[33]).Text;
-        obj2 = closure_1_0(section[39]);
-        const items = [closure_1_19(Text, obj), ];
+        const obj = { variant: "text-xs/medium", color: "text-subtle", children: closure_1_0(17039).renderDescription(description.description) };
+        const items = [closure_1_19(closure_1_0(4892).Text, obj), ];
         let tmp5Result = null;
         if (false !== tmp) {
           tmp5Result = null;
           if ("" !== tmp) {
             const obj3 = { variant: "text-xs/medium", color: "text-feedback-critical", children: tmp };
-            tmp5Result = closure_1_19(closure_1_0(section[33]).Text, obj3);
+            tmp5Result = closure_1_19(closure_1_0(4892).Text, obj3);
           }
         }
         items[1] = tmp5Result;
+        const obj2 = closure_1_0(17039);
         const tmp3Result = closure_1_21(closure_1_20, { children: items });
-        const TableRow = closure_1_0(section[36]).TableRow;
-        const tmp6Result = closure_1_0(section[40]);
-        const obj4 = { accessible: tmp6Result.isAndroid() || undefined, disabled: false !== tmp, label: title, subLabel: tmp3Result, trailing: closure_1_19(tmp11, obj5) };
-        obj5 = {
-          permissionTitle: title,
-          value: closure_9(flag),
-          disabled: false !== tmp,
-          onValueChange(arg0) {
-            closure_2_7(flag, arg0);
-          }
+        const tmp6Result = closure_1_0(1369);
+        const obj4 = { accessible: closure_1_0(1369).isAndroid() || undefined, disabled: false !== tmp, label: title, subLabel: tmp3Result, trailing: null };
+        const obj5 = { permissionTitle: title, value: null, disabled: null, onValueChange: null };
+        const tmp10 = closure_1_0(1369).isAndroid() || undefined;
+        obj5.value = closure_9(flag);
+        obj5.disabled = false !== tmp;
+        obj5.onValueChange = function onValueChange(arg0) {
+          closure_2_7(flag, arg0);
         };
-        tmp11 = id(section[41]);
-        return closure_1_19(TableRow, obj4, "row-" + index);
+        obj4.trailing = closure_1_19(id(17040), obj5);
+        return closure_1_19(closure_1_0(6000).TableRow, obj4, "row-" + index);
       })
-    };
-    return closure_19(metroImportDefault, obj, "section-" + index);
+    });
+    return closure_2_19(React5, obj, "section-" + index);
   });
-  return closure_21(tmp18, obj8);
+  obj8.children = items6;
+  return closure_21(closure_8, obj8);
 };

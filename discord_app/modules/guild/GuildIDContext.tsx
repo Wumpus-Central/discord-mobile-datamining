@@ -1,10 +1,10 @@
-// === Module 5315: react ===
+// === Module 5315: GuildIDContext ===
 
-// Module 5315 (react)
-import react from "react" /* 19 */;
-import size from "module_2" /* 2 */;
+// Module 5315 (GuildIDContext)
+import noop from "module_19" /* 19 */;
 
-const context = react.createContext(undefined);
+const context = noop.createContext(undefined);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/GuildIDContext.tsx");
 
 export default context;

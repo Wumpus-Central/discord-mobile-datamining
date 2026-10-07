@@ -6,20 +6,22 @@ import Server from "Server" /* 1985 */;
 import ActivityApplications from "ActivityApplications" /* 2012 */;
 import size from "module_2" /* 2 */;
 
-let items3;
 const ChannelTypes = Constants.ChannelTypes;
 const items = ["1037680572660727838", "235088799074484224", "1007373802981822582", "1067803140071620628", "1194351737264406548", "1245041113882955918", "1245040907732910201", "1245040436427489471", "1208090049871351890", "1235205910863806484", "1227719606223765687"];
 const items1 = ["1247266306231898122", "1257458870390099989", "1276239071764680926"];
 const obj = { UNLOCKED: 1, [1]: "UNLOCKED", PORTRAIT: 2, [2]: "PORTRAIT", LANDSCAPE: 3, [3]: "LANDSCAPE" };
 const items2 = ["755600276941176913", "880218832743055411", "1050941315912835122", "880218394199220334"];
-const set = new Set(items2);
 const obj2 = { label_type: Server.EmbeddedActivityLabelTypes.NONE, release_phase: "", label_from: null, label_until: null, omit_badge_from_surfaces: [] };
-const obj3 = { application_id: "", requires_age_gate: false, legacy_responsive_aspect_ratio: false, default_orientation_lock_state: obj.UNLOCKED, tablet_default_orientation_lock_state: obj.UNLOCKED, supported_platforms: items3, client_platform_config: { [Server.EmbeddedActivitySupportedPlatforms.WEB]: obj2, [Server.EmbeddedActivitySupportedPlatforms.IOS]: obj2, [Server.EmbeddedActivitySupportedPlatforms.ANDROID]: obj2 }, has_csp_exception: false, displays_advertisements: false, blocked_locales: [], supported_locales: [] };
-items3 = [Server.EmbeddedActivitySupportedPlatforms.WEB];
+const obj3 = { application_id: "", requires_age_gate: false, legacy_responsive_aspect_ratio: false, default_orientation_lock_state: obj.UNLOCKED, tablet_default_orientation_lock_state: obj.UNLOCKED, supported_platforms: null, client_platform_config: null, has_csp_exception: false, displays_advertisements: false, blocked_locales: null, supported_locales: null };
+const items3 = [Server.EmbeddedActivitySupportedPlatforms.WEB];
+obj3.supported_platforms = items3;
+obj3.client_platform_config = { [Server.EmbeddedActivitySupportedPlatforms.WEB]: obj2, [Server.EmbeddedActivitySupportedPlatforms.IOS]: obj2, [Server.EmbeddedActivitySupportedPlatforms.ANDROID]: obj2 };
+obj3.blocked_locales = [];
+obj3.supported_locales = [];
 const items4 = [, , , ];
 ({ GUILD_TEXT: arr5[0], DM: arr5[1], GROUP_DM: arr5[2], GUILD_SPACE: arr5[3] } = ChannelTypes);
 const items5 = [];
-items5[HermesBuiltin.arraySpread(items5, items4, 0)] = ChannelTypes.GUILD_VOICE;
+items5[HermesBuiltin.arraySpread(items4, 0)] = ChannelTypes.GUILD_VOICE;
 const result = size.fileFinishedImporting("modules/activities/Constants.tsx");
 
 export const ACTIVITY_INVITE_COVER_IMAGE_SIZE = 160;
@@ -79,7 +81,7 @@ export const ActivityIntent = { PLAY: 0, [0]: "PLAY", SPECTATE: 1, [1]: "SPECTAT
 export const ActivityPlatform = { DESKTOP: "desktop", MOBILE: "mobile" };
 export const ActivityTooltipName = { BETRAYAL_MARKETING_TOOLTIP: "BETRAYAL_MARKETING_TOOLTIP", FISHINGTON_MARKETING_TOOLTIP: "FISHINGTON_MARKETING_TOOLTIP", POKER_MARKETING_TOOLTIP: "POKER_MARKETING_TOOLTIP", YOUTUBE_MARKETING_TOOLTIP: "YOUTUBE_MARKETING_TOOLTIP" };
 export const OrientationLockState = obj;
-export const APPLICATIONS_WITH_ALLOWED_POPUPS = set;
+export const APPLICATIONS_WITH_ALLOWED_POPUPS = new Set(items2);
 export const ActivityScreenOrientation = { UNHANDLED: -1, [-1]: "UNHANDLED", PORTRAIT: 0, [0]: "PORTRAIT", LANDSCAPE: 1, [1]: "LANDSCAPE" };
 export const ActivityLayoutMode = { FOCUSED: 0, [0]: "FOCUSED", PIP: 1, [1]: "PIP", GRID: 2, [2]: "GRID" };
 export const DEFAULT_EMBEDDED_ACTIVITY_CONFIG = obj3;

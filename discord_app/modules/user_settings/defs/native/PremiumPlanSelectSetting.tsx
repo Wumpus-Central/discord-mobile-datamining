@@ -2,30 +2,27 @@
 
 // Module 14814 (PremiumPlanSelectSetting)
 import Constants from "Constants" /* 1085 */;
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import SettingsConstants from "SettingsConstants" /* 7645 */;
 import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const UserSettingsSections = Constants.UserSettingsSections;
-const obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.u95Dt4);
+    const intl = util.intl;
+    return intl.string(util.t.u95Dt4);
   },
-  parent: MobileUserSettings.PREMIUM,
+  parent: SettingsConstants.MobileUserSettings.PREMIUM,
   unsearchable: true,
   screen: {
-    route: UserSettingsSections.PREMIUM_PLAN_SELECT,
+    route: Constants.UserSettingsSections.PREMIUM_PLAN_SELECT,
     getComponent() {
       return require("PremiumPlanSelectSettingScreen").default;
     }
   }
-};
-const route = SettingBuilders.createRoute(obj);
+});
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/PremiumPlanSelectSetting.tsx");
 
 export default route;

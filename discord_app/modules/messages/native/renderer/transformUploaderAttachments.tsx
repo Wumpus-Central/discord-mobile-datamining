@@ -1,7 +1,7 @@
 // === Module 13037: transformUploaderAttachments ===
 
 // Module 13037 (transformUploaderAttachments)
-import intl3 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import MediaFormatTesters from "MediaFormatTesters" /* 5046 */;
 import CloudUpload from "CloudUpload" /* 7281 */;
 import RowGeneratorConstants from "RowGeneratorConstants" /* 7603 */;
@@ -18,16 +18,6 @@ export default function createUploaderAttachments(uploaderFile) {
   let mapped;
   if (items != null) {
     mapped = items.map((filename) => {
-      let VIDEO;
-      let num5;
-      let num6;
-      let str3;
-      let str5;
-      let string2Result;
-      let stringResult;
-      let tmp8;
-      let tmp9;
-      let uniqueId;
       let str = filename.filename;
       if (str == null) {
         str = "";
@@ -37,13 +27,9 @@ export default function createUploaderAttachments(uploaderFile) {
       if (str2 == null) {
         str2 = "";
       }
-      const obj = MediaFormatTesters;
-      const isImageFileResult = obj.isImageFile(str);
-      const obj2 = MediaFormatTesters;
-      const isVideoFileResult = obj2.isVideoFile(str);
+      const isImageFileResult = MediaFormatTesters.isImageFile(str);
+      const isVideoFileResult = MediaFormatTesters.isVideoFile(str);
       let num = item.progress;
-      const obj3 = MediaFormatTesters;
-      const isAudioFileResult = obj3.isAudioFile(str);
       if (num == null) {
         num = 0;
       }
@@ -60,66 +46,78 @@ export default function createUploaderAttachments(uploaderFile) {
       }
       const rounded = Math.floor(num2 * num3 + num * (0.9 - num3) + 10);
       if (!dependencyMap) {
-        tmp8 = rounded;
+        const tmp7 = rounded;
       }
-      const obj5 = { url: str2, videoUrl: tmp9, filename: str, size: str3, showDescription: false, width: num5, height: num6, hint: stringResult, role: string2Result, attachmentType: VIDEO, progress: tmp8, uploaderId: uploaderFile.id, uploaderItemId: str5, id: uniqueId };
-      tmp9 = undefined;
+      const obj5 = { url: str2, videoUrl: null };
+      let tmp8;
       if (isVideoFileResult) {
-        tmp9 = str2;
+        tmp8 = str2;
       }
-      const tmpResult = ExplicitMediaUtils;
-      const merged = Object.assign(tmpResult.getAttachmentObscurityDefaults());
-      str3 = "";
+      obj5.videoUrl = tmp8;
+      const isAudioFileResult = MediaFormatTesters.isAudioFile(str);
+      const merged = Object.assign(ExplicitMediaUtils.getAttachmentObscurityDefaults());
+      obj5.filename = str;
+      let str3 = "";
       if (null != item.size) {
-        const str4 = item.size;
-        str3 = str4.toString();
+        str3 = item.size.toString();
       }
-      num5 = 0;
-      if (AttachmentType) {
+      obj5.size = str3;
+      obj5.showDescription = false;
+      let num5 = 0;
+      if (closure_1_2) {
         num5 = 0;
         if (null != item.width) {
           num5 = item.width;
         }
       }
-      num6 = 0;
-      if (AttachmentType) {
+      obj5.width = num5;
+      let num6 = 0;
+      if (closure_1_2) {
         num6 = 0;
         if (null != item.height) {
           num6 = item.height;
         }
       }
-      const intl = intl3.intl;
+      obj5.height = num6;
+      const intl = util.intl;
       const string = intl.string;
-      const t = intl3.t;
+      const t = util.t;
       if (isVideoFileResult) {
-        stringResult = string(t["BEWw/7"]);
+        let stringResult = string(t["BEWw/7"]);
       } else {
         stringResult = string(t.IPzNKE);
       }
-      const intl2 = intl3.intl;
+      obj5.hint = stringResult;
+      const intl2 = util.intl;
       const string2 = intl2.string;
-      const t2 = intl3.t;
+      const t2 = util.t;
       if (isVideoFileResult) {
-        string2Result = string2(t2["/SCpvi"]);
+        let string2Result = string2(t2["/SCpvi"]);
       } else {
         string2Result = string2(t2.fKyfca);
       }
+      obj5.role = string2Result;
       if (isImageFileResult) {
-        VIDEO = AttachmentType.IMAGE;
+        let VIDEO = AttachmentType.IMAGE;
       } else if (isVideoFileResult) {
         VIDEO = AttachmentType.VIDEO;
       } else {
         VIDEO = isAudioFileResult ? AttachmentType.AUDIO : AttachmentType.OTHER;
       }
-      str5 = filename.id;
+      obj5.attachmentType = VIDEO;
+      obj5.progress = tmp7;
+      obj5.uploaderId = uploaderFile.id;
+      let str5 = filename.id;
       if (str5 == null) {
         str5 = "";
       }
+      obj5.uploaderItemId = str5;
       ({ durationSecs: obj4.durationSecs, waveform: obj4.waveform } = item);
-      uniqueId = undefined;
+      let uniqueId;
       if (filename instanceof CloudUpload.CloudUpload) {
         uniqueId = filename.uniqueId;
       }
+      obj5.id = uniqueId;
       return obj5;
     });
   }

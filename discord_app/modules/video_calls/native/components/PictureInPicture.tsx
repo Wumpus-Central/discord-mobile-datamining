@@ -1,39 +1,31 @@
 // === Module 9103: PictureInPicture ===
 
 // Module 9103 (PictureInPicture)
-import Fragment from "Fragment" /* 21 */;
-import Constants from "Constants" /* 1085 */;
 import spring from "spring" /* 5604 */;
-import ChannelCallStore from "ChannelCallStore" /* 9086 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import native_mod from "native" /* 1188 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let importDefault, obj1, str, tmp;
 
-let StyleSheet;
-let hasOwnProperty;
-let native;
-let obj2;
-let obj3;
-({ StyleSheet, View: hasOwnProperty } = react_native);
-const toggleFocus = ChannelCallStore.toggleFocus;
-const PictureInPicturePositions = Constants.PictureInPicturePositions;
-const jsx = Fragment.jsx;
-let createStyles = createStyles_mod;
-let obj = { pipOuterContainer: obj2, pipInnerContainer: obj3, elevationShadow: native.generateBoxShadowStyle(native.EIGHT_DP_ELEVATION_SHADOW_PARAMS) };
-obj2 = { alignItems: "baseline" };
-createStyles = createStyles.createStyles;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
+const toggleFocus = fn(9086).toggleFocus;
+const PictureInPicturePositions = fn(1085).PictureInPicturePositions;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj = { pipOuterContainer: null, pipInnerContainer: null, elevationShadow: null };
+let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj3 = { alignItems: "baseline" };
+obj3.alignItems = "baseline";
+obj.pipOuterContainer = obj3;
+let obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-native = native_mod;
-let closure_9 = createStyles(obj);
+obj4.alignItems = "baseline";
+obj.pipInnerContainer = obj4;
+const native = fn(1188);
+obj.elevationShadow = native.generateBoxShadowStyle(fn(1188).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+let closure_9 = createStyles.createStyles(obj);
 function getSpringAnimationConfig(velocity) {
   return { mass: 0.2, damping: 7.5, stiffness: 100, restDisplacementThreshold: 0.1, restSpeedThreshold: 0.1, overshootClamping: true, velocity };
 }
@@ -42,24 +34,12 @@ getSpringAnimationConfig.__workletHash = 6627401186753;
 getSpringAnimationConfig.__initData = { code: "function getSpringAnimationConfig_PictureInPictureTsx1(velocity){return{mass:0.2,damping:7.5,stiffness:100,restDisplacementThreshold:0.1,restSpeedThreshold:0.1,overshootClamping:true,velocity:velocity};}" };
 const __initData = { code: "function PictureInPictureTsx2(){const{insets,withSpring,getSpringAnimationConfig}=this.__closure;return{marginTop:insets.top,marginBottom:withSpring(insets.bottom,getSpringAnimationConfig())};}" };
 const __initData2 = { code: "function PictureInPictureTsx3(){const{insets,withSpring,getSpringAnimationConfig}=this.__closure;return{marginTop:insets.top,marginBottom:withSpring(insets.bottom,getSpringAnimationConfig())};}" };
-let TOP_LEFT = PictureInPicturePositions.TOP_LEFT;
-const memo = react.memo;
-const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((preferredPosition) => {
-  let channel;
-  let children;
-  let draggableGridItemStyles;
-  let gesture;
-  let height;
-  let insets;
-  let ref;
-  let size2;
-  let style;
-  let tmp10;
-  let tmp6;
-  let width;
-  const tmp2 = ref;
-  let obj = insets(ref[9]);
-  const cResult = obj.c(42);
+const ReactCompilerGating = fn(558);
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/PictureInPicture.tsx");
+
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((preferredPosition) => {
+  const cResult = insets(ref[9]).c(42);
   ({ children, style, channel } = preferredPosition);
   if (undefined === preferredPosition.preferredPosition) {
     const TOP_LEFT = PictureInPicturePositions.TOP_LEFT;
@@ -69,37 +49,33 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((preferr
     let obj2 = { channel };
     cResult[0] = channel;
     cResult[1] = obj2;
-    tmp6 = obj2;
+    let tmp6 = obj2;
   } else {
     tmp6 = cResult[1];
   }
-  const tmpResult = insets(tmp2[10]);
-  const shouldForcePipOrientation = tmpResult.useShouldForcePipOrientation(tmp6);
+  let obj = insets(ref[9]);
+  const shouldForcePipOrientation = insets(ref[10]).useShouldForcePipOrientation(tmp6);
+  const tmpResult = insets(ref[10]);
   ({ width, height } = require("useWindowDimensions")());
-  require("useWindowDimensions")();
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { includeKeyboardHeight: true };
     cResult[2] = obj3;
-    tmp10 = obj3;
+    let tmp10 = obj3;
   } else {
     tmp10 = cResult[2];
   }
   insets = require("useSafeAreaInsetsKeyboardAware")(tmp10).insets;
   if (cResult[3] === channel.id) {
-    let tmp11;
     if (cResult[4] === shouldForcePipOrientation) {
-      tmp11 = cResult[5];
+      let tmp11 = cResult[5];
     }
-    size = require("usePipDimensions")(tmp11);
+    let size = require("usePipDimensions")(tmp11);
     if (cResult[6] === height) {
-      let tmp12;
-      let tmp19;
       if (cResult[7] === width) {
-        tmp12 = cResult[8];
+        let tmp12 = cResult[8];
       }
-      [size2, importDefault] = react.useState(tmp12);
-      _slicedToArray(react.useState(tmp12), 2);
-      const tmpResult4 = insets(tmp2[14]);
+      [size2, importDefault] = noop.useState(tmp12);
+      const tmp14 = _slicedToArray(noop.useState(tmp12), 2);
       class H {
         constructor() {
           obj = { marginTop: insets.top, marginBottom: null };
@@ -115,39 +91,36 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((preferr
           }
         }
       }
-      const useAnimatedStyle = tmpResult4.useAnimatedStyle;
-      H.__closure = { insets, withSpring: insets(tmp2[15]).withSpring, getSpringAnimationConfig };
+      const obj4 = { insets, withSpring: tmp(tmp2[15]).withSpring, getSpringAnimationConfig };
+      H.__closure = obj4;
       H.__workletHash = 16677290574613;
       H.__initData = __initData;
-      const obj4 = { insets, withSpring: insets(tmp2[15]).withSpring, getSpringAnimationConfig };
-      const animatedStyle = useAnimatedStyle(H);
+      const animatedStyle = tmp(tmp2[14]).useAnimatedStyle(H);
       if (cResult[9] !== channel.id) {
         const obj5 = { channelId: channel.id };
         cResult[9] = channel.id;
         cResult[10] = obj5;
-        tmp19 = obj5;
+        let tmp18 = obj5;
       } else {
-        tmp19 = cResult[10];
+        tmp18 = cResult[10];
       }
-      const tmpResult5 = insets(tmp2[16]);
-      const isViewingActivity = tmpResult5.useIsViewingActivity(tmp19);
-      let tmp22;
+      const tmpResult4 = tmp(tmp2[14]);
+      const isViewingActivity = tmp(tmp2[16]).useIsViewingActivity(tmp18);
+      let tmp21;
       if (isViewingActivity) {
-        tmp22 = toggleFocus;
+        tmp21 = toggleFocus;
       }
       if (cResult[11] === size2.height) {
         if (cResult[12] === size2.width) {
           if (cResult[13] === size.height) {
             if (cResult[14] === size.width) {
-              if (cResult[15] === !isViewingActivity) {
-                let tmp23;
-                if (cResult[16] === tmp22) {
-                  tmp23 = cResult[17];
+              if (cResult[15] === tmp20) {
+                if (cResult[16] === tmp21) {
+                  let tmp22 = cResult[17];
                 }
-                const tmpResult6 = insets(tmp2[17]);
-                const draggablePip = tmpResult6.useDraggablePip(tmp23);
+                const draggablePip = tmp(tmp2[17]).useDraggablePip(tmp22);
                 ({ gesture, draggableGridItemStyles } = draggablePip);
-                ref = react.useRef(null);
+                ref = noop.useRef(null);
                 class H {
                   constructor() {
                     obj = { marginTop: insets.top, marginBottom: null };
@@ -168,22 +141,26 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((preferr
                 cResult[19] = style;
                 cResult[20] = tmp5.pipOuterContainer;
                 cResult[21] = items;
+                const tmpResult6 = tmp(tmp2[17]);
               }
             }
           }
         }
       }
-      const size1 = { width: null, height: null, containerWidth: null, containerHeight: null, snapToCorners: !isViewingActivity, onPress: tmp22 };
-      ({ width: obj11.width, height: obj11.height } = size);
-      ({ width: obj11.containerWidth, height: obj11.containerHeight } = size2);
+      const size1 = { width: null, height: null, containerWidth: null, containerHeight: null, snapToCorners: null, onPress: null };
+      ({ width: obj12.width, height: obj12.height } = size);
+      ({ width: obj12.containerWidth, height: obj12.containerHeight } = size2);
+      size1.snapToCorners = !isViewingActivity;
+      size1.onPress = tmp21;
       cResult[11] = size2.height;
       cResult[12] = size2.width;
       cResult[13] = size.height;
       cResult[14] = size.width;
       cResult[15] = !isViewingActivity;
-      cResult[16] = tmp22;
+      cResult[16] = tmp21;
       cResult[17] = size1;
-      tmp23 = size1;
+      tmp22 = size1;
+      const tmpResult5 = tmp(tmp2[16]);
     }
     const size3 = { x: 0, y: 0, width, height, pageX: 0, pageY: 0 };
     cResult[6] = height;
@@ -196,16 +173,8 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((preferr
   cResult[4] = shouldForcePipOrientation;
   cResult[5] = obj6;
   tmp11 = obj6;
+  const tmp9 = require("useWindowDimensions")();
 }) : ((preferredPosition) => {
-  let c1;
-  let children;
-  let draggableGridItemStyles;
-  let gesture;
-  let height;
-  let size2;
-  let style;
-  let tmp12;
-  let width;
   ({ children, style } = preferredPosition);
   if (preferredPosition.preferredPosition === undefined) {
     const TOP_LEFT = PictureInPicturePositions.TOP_LEFT;
@@ -215,16 +184,15 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((preferr
   importDefault = undefined;
   let ref;
   const tmp2 = closure_9();
-  const tmp3 = insets;
+  const shouldForcePipOrientation = insets(ref[10]).useShouldForcePipOrientation({ channel });
   let obj = insets(ref[10]);
-  const shouldForcePipOrientation = obj.useShouldForcePipOrientation({ channel });
   ({ width, height } = require("useWindowDimensions")());
-  require("useWindowDimensions")();
   insets = require("useSafeAreaInsetsKeyboardAware")({ includeKeyboardHeight: true }).insets;
+  let size = require("usePipDimensions")({ channelId: channel.id, forcedOrientation: shouldForcePipOrientation });
   let obj2 = { channelId: channel.id, forcedOrientation: shouldForcePipOrientation };
-  size = require("usePipDimensions")(obj2);
-  [size2, c1] = react.useState({ x: 0, y: 0, width, height, pageX: 0, pageY: 0 });
-  _slicedToArray(react.useState({ x: 0, y: 0, width, height, pageX: 0, pageY: 0 }), 2);
+  const tmp7 = require("useWindowDimensions")();
+  [size2, c1] = noop.useState({ x: 0, y: 0, width, height, pageX: 0, pageY: 0 });
+  const tmp8 = _slicedToArray(noop.useState({ x: 0, y: 0, width, height, pageX: 0, pageY: 0 }), 2);
   const fn = function f() {
     const obj = { marginTop: insets.top, marginBottom: null };
     spring;
@@ -240,36 +208,58 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((preferr
   fn.__closure = { insets, withSpring: insets(ref[15]).withSpring, getSpringAnimationConfig };
   fn.__workletHash = 17161470330964;
   fn.__initData = __initData2;
-  ({ insets, withSpring: insets(ref[15]).withSpring, getSpringAnimationConfig });
   const animatedStyle = obj4.useAnimatedStyle(fn);
+  const obj5 = { insets, withSpring: insets(ref[15]).withSpring, getSpringAnimationConfig };
+  const isViewingActivity = insets(ref[16]).useIsViewingActivity({ channelId: channel.id });
   const obj6 = insets(ref[16]);
   const obj7 = { channelId: channel.id };
-  const isViewingActivity = obj6.useIsViewingActivity(obj7);
-  const size1 = { width: size.width, height: size.height, containerWidth: size2.width, containerHeight: size2.height, snapToCorners: !isViewingActivity, onPress: tmp12 };
-  tmp12 = undefined;
-  const useDraggablePip = insets(ref[17]).useDraggablePip;
-  insets(ref[17]);
+  const size1 = { width: size.width, height: size.height, containerWidth: size2.width, containerHeight: size2.height, snapToCorners: !isViewingActivity, onPress: null };
+  let tmp11;
   if (isViewingActivity) {
-    tmp12 = toggleFocus;
+    tmp11 = toggleFocus;
   }
-  const draggablePip = useDraggablePip(size1);
+  size1.onPress = tmp11;
+  const draggablePip = insets(ref[17]).useDraggablePip(size1);
   ({ gesture, draggableGridItemStyles } = draggablePip);
-  ref = react.useRef(null);
+  ref = noop.useRef(null);
+  const obj9 = { style: null, pointerEvents: "box-none", children: null };
   const items = [tmp2.pipOuterContainer, animatedStyle, style];
-  const View = tmp6(tmp4[14]).View;
-  const GestureDetector = tmp3(tmp4[19]).GestureDetector;
+  obj9.style = items;
+  const obj10 = {
+    ref,
+    style: tmp2.pipInnerContainer,
+    pointerEvents: "box-none",
+    onLayout() {
+      if (null != ref.current) {
+        const current = ref.current;
+        current.measure((x, y, width, height, pageX, pageY) => {
+          const size = { x, y, width, height, pageX, pageY };
+          closure_1_1(size);
+        });
+      }
+    },
+    children: null
+  };
+  const obj11 = { gesture, children: null };
   const items1 = [draggableGridItemStyles, ];
-  const View2 = tmp6(tmp4[14]).View;
+  const obj8 = insets(ref[17]);
   let elevationShadow;
-  const tmp3Result = tmp3(ref[18]);
   if (tmp3Result.isIOS()) {
     elevationShadow = tmp2.elevationShadow;
   }
+  tmp3Result = insets(ref[18]);
   items1[1] = elevationShadow;
-  return <View style={items} pointerEvents="box-none">{null}</View>;
+  obj11.children = jsx(require("ReanimatedRexport").View, { style: items1, children: <closure_5>{children}</closure_5> });
+  obj10.children = jsx(insets(ref[19]).GestureDetector, { gesture, children: null });
+  obj9.children = <closure_5 ref={ref} style={tmp2.pipInnerContainer} pointerEvents="box-none" onLayout={function onLayout() {
+    if (null != ref.current) {
+      const current = ref.current;
+      current.measure((x, y, width, height, pageX, pageY) => {
+        const size = { x, y, width, height, pageX, pageY };
+        closure_1_1(size);
+      });
+    }
+  }}>{null}</closure_5>;
+  return jsx(require("ReanimatedRexport").View, { style: null, pointerEvents: "box-none", children: null });
 }));
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/video_calls/native/components/PictureInPicture.tsx");
-
-export default memoResult;
-export const DEFAULT_PIP_POSITION = TOP_LEFT;
+export const DEFAULT_PIP_POSITION = PictureInPicturePositions.TOP_LEFT;

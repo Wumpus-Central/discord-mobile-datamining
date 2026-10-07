@@ -1,41 +1,31 @@
 // === Module 17230: VoicePanelContainer ===
 
 // Module 17230 (VoicePanelContainer)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
-import _slicedToArray from "_slicedToArray" /* 4498 */;
+import c from "c" /* 576 */;
+import _mod4498 from "module_4498" /* 4498 */;
 import native from "native" /* 4595 */;
 import VoicePanelUIDefault from "VoicePanelUI" /* 17231 */;
 import VoicePanelControllerDefault from "VoicePanelController" /* 17392 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import VoicePanelStore from "VoicePanelStore" /* 5104 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-let _require;
-
+require = fn;
 function getChannelKey(arg0) {
   return arg0;
 }
 function renderVoicePanel(arg0, channelId, transitionState, transitionCleanUp) {
   return <closure_7 key={channelId} channelId={channelId} transitionState={transitionState} transitionCleanUp={transitionCleanUp} />;
 }
-const jsx = Fragment.jsx;
-let ReactCompilerGating = ReactCompilerGating_mod;
+const jsx = fn(21).jsx;
+let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
-  let first;
-  let tmp6;
-  let tmp8;
   _require = channelId;
-  const obj = require("react");
-  const cResult = obj.c(7);
-  const tmp = _require;
+  const cResult = require("c").c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -50,39 +40,39 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     };
     cResult[1] = channelId.channelId;
     cResult[2] = fn;
-    tmp6 = fn;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const tmpResult = tmp(504);
-  const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+  const obj = require("c");
+  const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp11 = jsx(VoicePanelUIDefault, {});
     cResult[3] = tmp11;
-    tmp8 = tmp11;
+    let tmp8 = tmp11;
   } else {
     tmp8 = cResult[3];
   }
   if (cResult[4] === stateFromStores) {
-    let tmp12;
     if (cResult[5] === channelId) {
-      tmp12 = cResult[6];
+      let tmp12 = cResult[6];
     }
     return tmp12;
   }
-  VoicePanelControllerDefault;
+  const obj2 = {};
+  const tmpResult = require("initialize");
   const merged = Object.assign(channelId);
-  const tmp15 = <tmp13 guildId={stateFromStores}>{tmp8}</tmp13>;
+  obj2.guildId = stateFromStores;
+  obj2.children = tmp8;
+  const tmp15 = jsx(VoicePanelControllerDefault, {});
   cResult[4] = stateFromStores;
   cResult[5] = channelId;
   cResult[6] = tmp15;
   tmp12 = tmp15;
 }) : ((arg0) => {
-  let channelId;
   _require = arg0;
   const items = [ChannelStore];
-  const obj = require("get initialized");
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(channelId.channelId);
     let guild_id;
     if (channel != null) {
@@ -90,36 +80,40 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     }
     return guild_id;
   });
-  VoicePanelControllerDefault;
+  const obj2 = {};
+  const obj = require("initialize");
   const merged = Object.assign(arg0);
-  return <tmp2 guildId={stateFromStores}>{react.useMemo(() => jsx(VoicePanelUIDefault, {}), [])}</tmp2>;
+  obj2.guildId = stateFromStores;
+  obj2.children = noop.useMemo(() => jsx(VoicePanelUIDefault, {}), []);
+  return jsx(VoicePanelControllerDefault, {});
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  let tmp6;
-  const obj = react2;
-  const cResult = obj.c(3);
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelContainer.tsx");
+
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n(channels) {
       return Array.from(channels.channels);
     };
     cResult[0] = fn;
-    first = fn;
+    let first = fn;
   } else {
     first = cResult[0];
   }
-  const tmp5 = VoicePanelStore(first, _slicedToArray.shallow);
+  const tmp5 = VoicePanelStore(first, _mod4498.shallow);
   if (cResult[1] !== tmp5) {
+    const obj2 = { items: tmp5, getItemKey: getChannelKey, renderItem: renderVoicePanel };
     const tmp10 = jsx(native.TransitionGroup, { items: tmp5, getItemKey: getChannelKey, renderItem: renderVoicePanel });
     cResult[1] = tmp5;
     cResult[2] = tmp10;
-    tmp6 = tmp10;
+    let tmp6 = tmp10;
   } else {
     tmp6 = cResult[2];
   }
   return tmp6;
-}) : (() => jsx(native.TransitionGroup, { items: VoicePanelStore((channels) => Array.from(channels.channels), _slicedToArray.shallow), getItemKey: getChannelKey, renderItem: renderVoicePanel })));
-const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelContainer.tsx");
-
-export default memoResult;
+}) : (() => {
+  const tmp = VoicePanelStore((channels) => Array.from(channels.channels), _mod4498.shallow);
+  return jsx(native.TransitionGroup, { items: VoicePanelStore((channels) => Array.from(channels.channels), _mod4498.shallow), getItemKey: getChannelKey, renderItem: renderVoicePanel });
+}));

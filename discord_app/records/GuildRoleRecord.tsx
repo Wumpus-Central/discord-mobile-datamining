@@ -14,20 +14,16 @@ export const isEveryoneRole = function isEveryoneRole(role) {
   return role.id === role.guildId;
 };
 export const hasPermission = function hasPermission(permissions, VIEW_CHANNEL) {
-  const obj = BigFlagUtils;
-  return obj.has(permissions.permissions, VIEW_CHANNEL);
+  return BigFlagUtils.has(permissions.permissions, VIEW_CHANNEL);
 };
 export const hasAnyPermission = function hasAnyPermission(permissions, RESTRICTED_TO_ADULT) {
-  const obj = BigFlagUtils;
-  return obj.hasAny(permissions.permissions, RESTRICTED_TO_ADULT);
+  return BigFlagUtils.hasAny(permissions.permissions, RESTRICTED_TO_ADULT);
 };
 export const isRoleEqual = function isRoleEqual(found, arg1) {
-  let obj = _modDef12;
-  return obj.isEqualWith(found, arg1, (arg0, arg1, arg2) => {
+  return _modDef12.isEqualWith(found, arg1, (arg0, arg1, arg2) => {
     let equalsResult;
     if ("permissions" === arg2) {
-      const obj = BigFlagUtils;
-      equalsResult = obj.equals(arg0, arg1);
+      equalsResult = BigFlagUtils.equals(arg0, arg1);
     }
     return equalsResult;
   });

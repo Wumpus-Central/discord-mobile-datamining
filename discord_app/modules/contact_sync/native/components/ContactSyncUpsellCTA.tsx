@@ -1,81 +1,65 @@
 // === Module 13686: ContactSyncUpsellCTA ===
 
 // Module 13686 (ContactSyncUpsellCTA)
-import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12340 */;
-import ContactSyncPersistedStore from "ContactSyncPersistedStore" /* 12343 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13687 */;
-import react from "react" /* 19 */;
-import Constants from "Constants" /* 1085 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _modDef13687 from "module_13687" /* 13687 */;
+import noop from "module_19" /* 19 */;
 
-let obj1;
-
-let closure_4;
-let hasOwnProperty;
-let obj2;
-const dismissUpsellCTA = ContactSyncPersistedStore.dismissUpsellCTA;
+require = fn;
+const dismissUpsellCTA = fn(12343).dismissUpsellCTA;
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
-const jsx = Fragment.jsx;
-let obj = { container: obj2 };
-obj2 = { padding: 12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj = { container: { padding: 12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_7 = createStyles.createStyles(obj);
-const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let _location;
-  let obj2;
-  let style;
-  let tmp12;
-  let tmp5;
-  let obj = _location(576);
-  const cResult = obj.c(11);
+const ReactCompilerGating = fn(558);
+let obj3 = { padding: 12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncUpsellCTA.tsx");
+
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = _location(576).c(11);
   ({ style, location: _location } = arg0);
   const tmp4 = closure_7();
   if (cResult[0] !== _location) {
     const fn = function o() {
-      let str2;
+      const obj2 = { type: constants2.CONTACT_SYNC_MODAL, location: null };
       let str = _location;
-      const obj = { type: hasOwnProperty.CONTACT_SYNC_MODAL, location: { page: str2 } };
-      str2 = _location;
-      const track = AnalyticsUtilsDefault.track;
-      const OPEN_MODAL = constants.OPEN_MODAL;
-      AnalyticsUtilsDefault;
+      let str2 = _location;
       if (_location == null) {
         str2 = "Friends List Upsell";
       }
-      track(OPEN_MODAL, obj);
-      const openContactSyncModal = ContactSyncModalActionCreators.openContactSyncModal;
-      ContactSyncModalActionCreators;
+      obj2.location = { page: str2 };
+      AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj2);
       if (str == null) {
         str = "Friends List Upsell";
       }
-      openContactSyncModal({}, { page: str });
+      ContactSyncModalActionCreators.openContactSyncModal({}, { page: str });
     };
     cResult[0] = _location;
     cResult[1] = fn;
-    tmp5 = fn;
+    let tmp5 = fn;
   } else {
     tmp5 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
       constructor() {
-        tmp = location(closure_1_2[10]);
-        obj = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
-        obj1 = { label: null, onPress: null };
-        showSimpleActionSheet = tmp.showSimpleActionSheet;
+        obj = location(closure_1_2[10]);
+        obj1 = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
+        obj4 = { label: null, onPress: null };
         intl = location(closure_1_2[11]).intl;
-        obj1.label = intl.string(location(closure_1_2[11]).t.WAI6xu);
-        obj1.onPress = function onPress() {
+        obj4.label = intl.string(location(closure_1_2[11]).t.WAI6xu);
+        obj4.onPress = function onPress() {
           closure_1_3();
         };
         items = [];
-        items[0] = obj1;
-        obj.options = items;
-        result = showSimpleActionSheet(obj);
+        items[0] = obj4;
+        obj1.options = items;
+        result = obj.showSimpleActionSheet(obj1);
         return;
       }
     }
@@ -83,41 +67,37 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
   } else {
     class S {
       constructor() {
-        tmp = location(closure_1_2[10]);
-        obj = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
-        obj1 = { label: null, onPress: null };
-        showSimpleActionSheet = tmp.showSimpleActionSheet;
+        obj = location(closure_1_2[10]);
+        obj1 = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
+        obj4 = { label: null, onPress: null };
         intl = location(closure_1_2[11]).intl;
-        obj1.label = intl.string(location(closure_1_2[11]).t.WAI6xu);
-        obj1.onPress = function onPress() {
+        obj4.label = intl.string(location(closure_1_2[11]).t.WAI6xu);
+        obj4.onPress = function onPress() {
           closure_1_3();
         };
         items = [];
-        items[0] = obj1;
-        obj.options = items;
-        result = showSimpleActionSheet(obj);
+        items[0] = obj4;
+        obj1.options = items;
+        result = obj.showSimpleActionSheet(obj1);
         return;
       }
     }
   }
   if (cResult[3] === style) {
-    let tmp9;
-    let tmp8;
     class S {
       constructor() {
-        tmp = location(closure_1_2[10]);
-        obj = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
-        obj1 = { label: null, onPress: null };
-        showSimpleActionSheet = tmp.showSimpleActionSheet;
+        obj = location(closure_1_2[10]);
+        obj1 = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
+        obj4 = { label: null, onPress: null };
         intl = location(closure_1_2[11]).intl;
-        obj1.label = intl.string(location(closure_1_2[11]).t.WAI6xu);
-        obj1.onPress = function onPress() {
+        obj4.label = intl.string(location(closure_1_2[11]).t.WAI6xu);
+        obj4.onPress = function onPress() {
           closure_1_3();
         };
         items = [];
-        items[0] = obj1;
-        obj.options = items;
-        result = showSimpleActionSheet(obj);
+        items[0] = obj4;
+        obj1.options = items;
+        result = obj.showSimpleActionSheet(obj1);
         return;
       }
     }
@@ -125,19 +105,18 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
       class S {
         constructor() {
-          tmp = location(closure_1_2[10]);
-          obj = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
-          obj1 = { label: null, onPress: null };
-          showSimpleActionSheet = tmp.showSimpleActionSheet;
+          obj = location(closure_1_2[10]);
+          obj1 = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
+          obj4 = { label: null, onPress: null };
           intl = location(closure_1_2[11]).intl;
-          obj1.label = intl.string(location(closure_1_2[11]).t.WAI6xu);
-          obj1.onPress = function onPress() {
+          obj4.label = intl.string(location(closure_1_2[11]).t.WAI6xu);
+          obj4.onPress = function onPress() {
             closure_1_3();
           };
           items = [];
-          items[0] = obj1;
-          obj.options = items;
-          result = showSimpleActionSheet(obj);
+          items[0] = obj4;
+          obj1.options = items;
+          result = obj.showSimpleActionSheet(obj1);
           return;
         }
       }
@@ -146,24 +125,23 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
       const stringResult1 = intl.string(_location(1126).t.c6KIpg);
       cResult[6] = stringResult;
       cResult[7] = stringResult1;
-      tmp9 = stringResult1;
-      tmp8 = stringResult;
+      let tmp9 = stringResult1;
+      const tmp8 = stringResult;
     } else {
       class S {
         constructor() {
-          tmp = location(closure_1_2[10]);
-          obj = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
-          obj1 = { label: null, onPress: null };
-          showSimpleActionSheet = tmp.showSimpleActionSheet;
+          obj = location(closure_1_2[10]);
+          obj1 = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
+          obj4 = { label: null, onPress: null };
           intl = location(closure_1_2[11]).intl;
-          obj1.label = intl.string(location(closure_1_2[11]).t.WAI6xu);
-          obj1.onPress = function onPress() {
+          obj4.label = intl.string(location(closure_1_2[11]).t.WAI6xu);
+          obj4.onPress = function onPress() {
             closure_1_3();
           };
           items = [];
-          items[0] = obj1;
-          obj.options = items;
-          result = showSimpleActionSheet(obj);
+          items[0] = obj4;
+          obj1.options = items;
+          result = obj.showSimpleActionSheet(obj1);
           return;
         }
       }
@@ -172,26 +150,25 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     if (cResult[8] === tmp5) {
       class S {
         constructor() {
-          tmp = location(closure_1_2[10]);
-          obj = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
-          obj1 = { label: null, onPress: null };
-          showSimpleActionSheet = tmp.showSimpleActionSheet;
+          obj = location(closure_1_2[10]);
+          obj1 = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
+          obj4 = { label: null, onPress: null };
           intl = location(closure_1_2[11]).intl;
-          obj1.label = intl.string(location(closure_1_2[11]).t.WAI6xu);
-          obj1.onPress = function onPress() {
+          obj4.label = intl.string(location(closure_1_2[11]).t.WAI6xu);
+          obj4.onPress = function onPress() {
             closure_1_3();
           };
           items = [];
-          items[0] = obj1;
-          obj.options = items;
-          result = showSimpleActionSheet(obj);
+          items[0] = obj4;
+          obj1.options = items;
+          result = obj.showSimpleActionSheet(obj1);
           return;
         }
       }
       return tmp12;
     }
-    const FormCTA = _location(8924).FormCTA;
-    const tmp15 = <FormCTA onPress={tmp5} onLongPress={S} style={tmp7} iconSource={AssetRegistryDefault} title={tmp8} subtitle={tmp9} />;
+    let obj3 = { onPress: tmp5, onLongPress: S, style: tmp7, iconSource: _modDef13687, title: tmp8, subtitle: tmp9 };
+    const tmp15 = jsx(_location(8924).FormCTA, { onPress: tmp5, onLongPress: S, style: tmp7, iconSource: _modDef13687, title: tmp8, subtitle: tmp9 });
     cResult[8] = tmp5;
     cResult[9] = tmp7;
     cResult[10] = tmp15;
@@ -201,49 +178,77 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
   cResult[3] = style;
   cResult[4] = tmp4.container;
   cResult[5] = items;
+  let obj = _location(576);
 }) : ((location) => {
   location = location.location;
-  const style = location.style;
-  let tmp = closure_7();
-  let items = [tmp.container, style];
-  const FormCTA = location(8924).FormCTA;
-  let intl = location(1126).intl;
-  const intl2 = location(1126).intl;
-  return <FormCTA onPress={function onPress() {
-    let str2;
-    let str = location;
-    const obj = { type: hasOwnProperty.CONTACT_SYNC_MODAL, location: { page: str2 } };
-    str2 = location;
-    const track = AnalyticsUtilsDefault.track;
-    const OPEN_MODAL = constants.OPEN_MODAL;
-    AnalyticsUtilsDefault;
-    if (location == null) {
-      str2 = "Friends List Upsell";
-    }
-    track(OPEN_MODAL, obj);
-    const openContactSyncModal = ContactSyncModalActionCreators.openContactSyncModal;
-    ContactSyncModalActionCreators;
-    if (str == null) {
-      str = "Friends List Upsell";
-    }
-    openContactSyncModal({}, { page: str });
-  }} onLongPress={function onLongPress() {
-    let intl;
-    let items;
-    const obj = { key: "ContactSyncUpsellLongPress", options: items, hasIcons: false };
-    const tmp = location(dependencyMap[10]);
-    const showSimpleActionSheet = tmp.showSimpleActionSheet;
-    const obj2 = {
-      label: intl.string(location(dependencyMap[11]).t.WAI6xu),
-      onPress() {
-        closure_1_3();
+  let obj = {
+    onPress() {
+      const obj2 = { type: constants2.CONTACT_SYNC_MODAL, location: null };
+      let str = location;
+      let str2 = location;
+      if (location == null) {
+        str2 = "Friends List Upsell";
       }
-    };
-    intl = location(dependencyMap[11]).intl;
-    items = [obj2];
-    const result = showSimpleActionSheet(obj);
-  }} style={items} iconSource={AssetRegistryDefault} title={intl.string(location(1126).t.T6Rfd9)} subtitle={intl2.string(location(1126).t.c6KIpg)} />;
+      obj2.location = { page: str2 };
+      AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj2);
+      if (str == null) {
+        str = "Friends List Upsell";
+      }
+      ContactSyncModalActionCreators.openContactSyncModal({}, { page: str });
+    },
+    onLongPress() {
+      const obj2 = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
+      const obj3 = { label: null, onPress: null };
+      const intl = location(1126).intl;
+      obj3.label = intl.string(location(1126).t.WAI6xu);
+      obj3.onPress = function onPress() {
+        closure_1_3();
+      };
+      const items = [obj3];
+      obj2.options = items;
+      const result = location(6700).showSimpleActionSheet(obj2);
+    },
+    style: null,
+    iconSource: _modDef13687,
+    title: null,
+    subtitle: null
+  };
+  let items = [closure_7().container, location.style];
+  obj.style = items;
+  let intl = location(1126).intl;
+  obj.title = intl.string(location(1126).t.T6Rfd9);
+  const intl2 = location(1126).intl;
+  obj.subtitle = intl2.string(location(1126).t.c6KIpg);
+  return jsx(location(8924).FormCTA, {
+    onPress() {
+      const obj2 = { type: constants2.CONTACT_SYNC_MODAL, location: null };
+      let str = location;
+      let str2 = location;
+      if (location == null) {
+        str2 = "Friends List Upsell";
+      }
+      obj2.location = { page: str2 };
+      AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj2);
+      if (str == null) {
+        str = "Friends List Upsell";
+      }
+      ContactSyncModalActionCreators.openContactSyncModal({}, { page: str });
+    },
+    onLongPress() {
+      const obj2 = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
+      const obj3 = { label: null, onPress: null };
+      const intl = location(1126).intl;
+      obj3.label = intl.string(location(1126).t.WAI6xu);
+      obj3.onPress = function onPress() {
+        closure_1_3();
+      };
+      const items = [obj3];
+      obj2.options = items;
+      const result = location(6700).showSimpleActionSheet(obj2);
+    },
+    style: null,
+    iconSource: _modDef13687,
+    title: null,
+    subtitle: null
+  });
 }));
-let result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncUpsellCTA.tsx");
-
-export default memoResult;

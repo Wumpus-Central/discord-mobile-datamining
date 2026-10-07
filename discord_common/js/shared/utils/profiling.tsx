@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("../discord_common/js/shared/utils/pro
 export function mark(type) {
 
 }
-export function measure(arg0, type) {
+export function measure(arg0, arg1) {
 
 }
 export function clearMarks(arg0) {

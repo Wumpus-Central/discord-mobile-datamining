@@ -3,7 +3,6 @@
 // Module 5310 (CheckpointTraitConfig)
 import size from "module_2" /* 2 */;
 
-const set = new Set([1, 6, 9, 11, 13]);
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CheckpointTraitConfig.tsx");
 
 export const CHECKPOINT_BASE_OPTION_TO_RARITY = { 1: "default", 2: "default", 3: "default", 4: "default", 5: "default", 6: "default", 7: "default", 8: "default", 9: "default", 10: "default", 11: "default", 12: "default", 13: "default", 14: "default", 15: "default" };
@@ -14,6 +13,6 @@ export const CHECKPOINT_HAT_OPTION_TO_RARITY = { 8: "default", 2: "default", 3: 
 export const CHECKPOINT_WEARABLE_OPTION_TO_RARITY = { 1: "default", 5: "default", 2: "default", 3: "default", 6: "common", 7: "common", 8: "rare", 4: "rare", 9: "epic", 10: "epic", 11: "ultra", 12: "ultra", 13: "nitro", 14: "nitro" };
 export const CHECKPOINT_AURA_OPTION_TO_RARITY = { 1: "default", 2: "default", 3: "default", 4: "default", 5: "common", 6: "common", 7: "rare", 8: "rare", 9: "epic", 10: "epic", 12: "ultra", 11: "ultra", 13: "nitro", 14: "nitro" };
 export const CHECKPOINT_RARITY_MIN_PERCENTILE = { common: 0, rare: 70, epic: 80, ultra: 95 };
-export const CHECKPOINT_WEARABLE_LAYER_BACKGROUND = set;
+export const CHECKPOINT_WEARABLE_LAYER_BACKGROUND = new Set([1, 6, 9, 11, 13]);
 export const CHECKPOINT_LAYER_DEFAULT_ORDERING = ["base", "outfit", "shoes", "wearable", "face", "hat", "aura"];
 export const CHECKPOINT_LAYER_BACKGROUND_WEARABLE_ORDERING = ["wearable", "base", "outfit", "shoes", "face", "hat", "aura"];

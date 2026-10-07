@@ -1,10 +1,8 @@
 // === Module 15000: QuestDock ===
 
 // Module 15000 (QuestDock)
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1085 */;
-import Constants2 from "Constants" /* 1096 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import native from "native" /* 4595 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
@@ -22,70 +20,55 @@ import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 109
 import QuestHooks from "QuestHooks" /* 14908 */;
 import QuestDockUtils from "QuestDockUtils" /* 14911 */;
 import QuestDockGestureContext from "QuestDockGestureContext" /* 14913 */;
-import reactDefault from "react" /* 14999 */;
 import QuestDockBountyHeaderDefault from "QuestDockBountyHeader" /* 15028 */;
 import QuestDockBountyBodyDefault from "QuestDockBountyBody" /* 15031 */;
 import QuestDockBountyBackgroundDefault from "QuestDockBountyBackground" /* 15033 */;
 import useNoFillDecisionDefault from "useNoFillDecision" /* 15034 */;
-import NoFillQuestDockDefault from "NoFillQuestDock" /* 15036 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import noop from "module_19" /* 19 */;
 import QuestDockStore from "QuestDockStore" /* 14910 */;
-import QuestConstants from "QuestConstants" /* 5630 */;
-import QuestDockConstants from "QuestDockConstants" /* 14912 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-let c2, c3, c5, c6, expandedHeight, importDefault;
-
-let StyleSheet;
-let c10;
-let c9;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_18;
-let closure_19;
-let closure_20;
-let closure_21;
-let closure_24;
-let closure_25;
-let closure_26;
-let map1;
-let obj2;
-let obj3;
-let obj4;
-let obj5;
-let rect;
-let unpackModuleId;
+require = fn;
 let closure_3 = ["mode"];
 let closure_4 = ["mode"];
-({ View: c9, StyleSheet, Pressable: c10, Image: unpackModuleId } = react_native);
+get_ActivityIndicator = fn(17);
+({ View: closure_9, StyleSheet, Pressable: c10, Image: closure_11 } = get_ActivityIndicator);
+const QuestConstants = fn(5630);
 ({ QuestDockMode: map1, QuestsExperimentLocations: closure_14 } = QuestConstants);
+const QuestDockConstants = fn(14912);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_15, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_16, QUEST_DOCK_CONTENT_BORDER_RADII: closure_17, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_18, QUEST_DOCK_COLLAPSED_HEIGHT: closure_19, QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT: closure_20, QUEST_DOCK_PORTRAIT_MEDIA_EXPANDED_HEIGHT: closure_21 } = QuestDockConstants);
-const AnalyticEvents = Constants.AnalyticEvents;
-const ThemeTypes = Constants2.ThemeTypes;
-({ jsx: closure_24, jsxs: closure_25, Fragment: closure_26 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { wrapper: { position: "absolute", left: "50%", bottom: 0, zIndex: 1 }, accessibilityWrapper: obj2, questDockWrapper: rect, questDockContentWrapper: obj3, questDockHeaderBorder: obj4, nestedPressable: obj5 };
-obj2 = { zIndex: 1 };
-createStyles = createStyles.createStyles;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const ThemeTypes = fn(1096).ThemeTypes;
+const jsxProd = fn(21);
+({ jsx: closure_24, jsxs: closure_25, Fragment: closure_26 } = jsxProd);
+let createStyles = fn(4896);
+let obj = { wrapper: { position: "absolute", left: "50%", bottom: 0, zIndex: 1 }, accessibilityWrapper: null, questDockWrapper: null, questDockContentWrapper: null, questDockHeaderBorder: null, nestedPressable: null };
+let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-rect = { position: "absolute", bottom: 0, left: "50%", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.modules.mobile.QUEST_DOCK_BORDER_RADIUS, zIndex: 1 };
-obj3 = { justifyContent: "flex-end", zIndex: 4 };
+obj3.zIndex = 1;
+obj.accessibilityWrapper = obj3;
+const rect = { position: "absolute", bottom: 0, left: "50%", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.modules.mobile.QUEST_DOCK_BORDER_RADIUS, zIndex: 1 };
+obj.questDockWrapper = rect;
+let obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj4 = { bottom: undefined, right: undefined, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, zIndex: 5 };
+obj4.justifyContent = "flex-end";
+obj4.zIndex = 4;
+obj.questDockContentWrapper = obj4;
+let obj5 = {};
 const merged2 = Object.assign(StyleSheet.absoluteFillObject);
-obj5 = { zIndex: 6 };
+obj5.bottom = undefined;
+obj5.right = undefined;
+obj5.borderWidth = 1;
+obj5.borderColor = nativeDefault.colors.BORDER_MUTED;
+obj5.zIndex = 5;
+obj.questDockHeaderBorder = obj5;
+let obj6 = {};
 const merged3 = Object.assign(StyleSheet.absoluteFillObject);
-let closure_27 = createStyles(obj);
+obj6.zIndex = 6;
+obj.nestedPressable = obj6;
+let closure_27 = createStyles.createStyles(obj);
 const __initData = { code: "function QuestDockTsx1(){const{restingQuestDockMode,QuestDockMode}=this.__closure;return restingQuestDockMode.get()===QuestDockMode.EXPANDED;}" };
 const __initData2 = { code: "function QuestDockTsx2(){const{backgroundColor,withSpring,bottomBorderRadius,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,questDockWrapperSpecs,QUEST_DOCK_MODE_CHANGE_PHYSICS,roundToNearestPixel}=this.__closure;return{backgroundColor:backgroundColor,borderBottomRightRadius:withSpring(bottomBorderRadius.get(),QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),borderBottomLeftRadius:withSpring(bottomBorderRadius.get(),QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),height:questDockWrapperSpecs.get().height,width:questDockWrapperSpecs.get().width,opacity:withSpring(1,QUEST_DOCK_MODE_CHANGE_PHYSICS),transform:[{translateX:withSpring(questDockWrapperSpecs.get().x+roundToNearestPixel(questDockWrapperSpecs.get().width/2)*-1,QUEST_DOCK_MODE_CHANGE_PHYSICS)},{translateY:withSpring(questDockWrapperSpecs.get().y,QUEST_DOCK_MODE_CHANGE_PHYSICS)}]};}" };
 const __initData3 = { code: "function QuestDockTsx3(){const{withSpring,interpolate,isPressed,springStandard}=this.__closure;return{transform:[{scale:withSpring(interpolate(isPressed.get(),[1,0],[1,1]),springStandard)}]};}" };
@@ -102,44 +85,27 @@ const __initData13 = { code: "function QuestDockTsx13(){const{activeQuestDockMod
 const __initData14 = { code: "function QuestDockTsx14(){const{questDockWrapperSpecs,windowDimensions,safeAreaTop}=this.__closure;const specs=questDockWrapperSpecs.get();const windowHeight=windowDimensions.get().height;return windowHeight-safeAreaTop-specs.height;}" };
 const __initData15 = { code: "function QuestDockTsx15(){const{withSpring,activeQuestDockMode,QuestDockMode,QUEST_DOCK_MODE_CHANGE_PHYSICS}=this.__closure;return{opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.CLOSED||activeQuestDockMode.get()===QuestDockMode.SOFT_DISMISSED?0:1,QUEST_DOCK_MODE_CHANGE_PHYSICS)};}" };
 const __initData16 = { code: "function QuestDockTsx16(){const{hasInsetHeaderTile,activeQuestDockMode,QuestDockMode,QUEST_DOCK_CONTENT_BORDER_RADII,questDockBorderRadius,bottomBorderRadius,withSpring,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,QUEST_DOCK_COLLAPSED_HEIGHT,questDockWrapperSpecs,QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED}=this.__closure;return{borderTopLeftRadius:hasInsetHeaderTile&&activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:questDockBorderRadius,borderTopRightRadius:hasInsetHeaderTile&&activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:questDockBorderRadius,borderBottomLeftRadius:hasInsetHeaderTile&&activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:bottomBorderRadius.get(),borderBottomRightRadius:hasInsetHeaderTile&&activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:bottomBorderRadius.get(),opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?0:1,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),height:activeQuestDockMode.get()===QuestDockMode.EXPANDED?hasInsetHeaderTile?QUEST_DOCK_COLLAPSED_HEIGHT:questDockWrapperSpecs.get().height:questDockWrapperSpecs.get().height,width:activeQuestDockMode.get()===QuestDockMode.EXPANDED&&hasInsetHeaderTile?questDockWrapperSpecs.get().width-QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED*2:questDockWrapperSpecs.get().width,transform:[{translateX:hasInsetHeaderTile?withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED):0},{translateY:hasInsetHeaderTile?withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED):0}],borderBottomWidth:bottomBorderRadius.get()>0?1:0};}" };
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_44 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColor) => {
-  let accessibilityWrapper;
-  let backgroundContent;
-  let closure_1;
-  let collapsedContent;
-  let expandedContent;
-  let layoutVariant;
-  let questDockExpandHandler;
-  let top;
-  let withAndroidOffscreenAlphaCompositingWorkaround;
-  let wrapper;
-  const tmp = backgroundColor;
-  let obj = backgroundColor(questDockExpandHandler[14]);
-  const cResult = obj.c(83);
+  const cResult = backgroundColor(questDockExpandHandler[14]).c(83);
   backgroundColor = backgroundColor.backgroundColor;
   ({ layoutVariant, expandedHeight, collapsedContent, expandedContent, backgroundContent, withAndroidOffscreenAlphaCompositingWorkaround } = backgroundColor);
-  let tmp4 = undefined !== withAndroidOffscreenAlphaCompositingWorkaround && withAndroidOffscreenAlphaCompositingWorkaround;
-  if (cResult[0] !== tmp4) {
+  if (cResult[0] !== (undefined !== withAndroidOffscreenAlphaCompositingWorkaround && withAndroidOffscreenAlphaCompositingWorkaround)) {
     let isAndroidResult = tmp4;
-    if (isAndroidResult) {
-      const tmpResult = tmp(questDockExpandHandler[15]);
-      isAndroidResult = tmpResult.isAndroid();
+    if (tmp4) {
+      isAndroidResult = tmp(tmp2[15]).isAndroid();
+      const tmpResult = tmp(tmp2[15]);
     }
-    let num = 0;
     cResult[0] = tmp4;
-    let num2 = 1;
     cResult[1] = isAndroidResult;
   }
-  let tmp7 = "insetHeader" === layoutVariant;
   importDefault = tmp7;
-  const tmpResult17 = tmp(questDockExpandHandler[16]);
-  const questDockCreative = tmpResult17.useQuestDockCreative();
-  const tmpResult18 = tmp(questDockExpandHandler[17]);
-  questDockExpandHandler = tmpResult18.useQuestDockExpandHandler(questDockCreative);
+  let obj = backgroundColor(questDockExpandHandler[14]);
+  const questDockCreative = backgroundColor(questDockExpandHandler[16]).useQuestDockCreative();
+  const tmpResult17 = backgroundColor(questDockExpandHandler[16]);
+  questDockExpandHandler = backgroundColor(questDockExpandHandler[17]).useQuestDockExpandHandler(questDockCreative);
   const tmp11 = closure_27();
   const context = top.useContext(tmp(tmp2[18]).QuestDockGestureContext);
-  const questDockWrapperSpecs = context.questDockWrapperSpecs;
   const activeQuestDockMode = context.activeQuestDockMode;
   const windowDimensions = context.windowDimensions;
   const context1 = top.useContext(tmp(tmp2[19]).QuestDockExternalCoordinationContext);
@@ -149,7 +115,8 @@ let closure_44 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColo
   if (cResult[2] !== setRestingQuestDockMode) {
     class A {
       constructor() {
-        setRestingQuestDockMode(map1.COLLAPSED);
+        tmp = setRestingQuestDockMode(QuestDockMode.COLLAPSED);
+        return;
       }
     }
     cResult[2] = setRestingQuestDockMode;
@@ -157,283 +124,257 @@ let closure_44 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColo
   } else {
     class A {
       constructor() {
-        setRestingQuestDockMode(map1.COLLAPSED);
+        tmp = setRestingQuestDockMode(QuestDockMode.COLLAPSED);
+        return;
       }
     }
   }
-  const tmpResult19 = tmp(questDockExpandHandler[17]);
-  const questDockModeAnimatedReaction = tmpResult19.useQuestDockModeAnimatedReaction();
-  const tmpResult20 = tmp(questDockExpandHandler[17]);
-  const questDockDismissalReset = tmpResult20.useQuestDockDismissalReset();
-  const tmpResult21 = tmp(questDockExpandHandler[20]);
-  const isScreenReaderEnabled = tmpResult21.useIsScreenReaderEnabled();
+  const tmpResult18 = backgroundColor(questDockExpandHandler[17]);
+  const questDockModeAnimatedReaction = backgroundColor(questDockExpandHandler[17]).useQuestDockModeAnimatedReaction();
+  const tmpResult19 = backgroundColor(questDockExpandHandler[17]);
+  const questDockDismissalReset = backgroundColor(questDockExpandHandler[17]).useQuestDockDismissalReset();
+  const tmpResult20 = backgroundColor(questDockExpandHandler[17]);
+  const isScreenReaderEnabled = backgroundColor(questDockExpandHandler[20]).useIsScreenReaderEnabled();
+  const tmpResult21 = backgroundColor(questDockExpandHandler[20]);
   function ie() {
-    return restingQuestDockMode.get() === map1.EXPANDED;
+    return restingQuestDockMode.get() === QuestDockMode.EXPANDED;
   }
-  let obj2 = { restingQuestDockMode, QuestDockMode };
-  ie.__closure = obj2;
+  ie.__closure = { restingQuestDockMode, QuestDockMode };
   ie.__workletHash = 2415817673061;
   ie.__initData = __initData;
-  const tmpResult22 = tmp(questDockExpandHandler[21]);
-  const derivedValue = tmpResult22.useDerivedValue(ie);
+  const derivedValue = backgroundColor(questDockExpandHandler[21]).useDerivedValue(ie);
   require("useStateFromSharedValue")(derivedValue);
   top = require("useSafeAreaInsets")().top;
-  const tmpResult23 = tmp(questDockExpandHandler[24]);
-  const youBarTotalHeight = tmpResult23.useYouBarTotalHeight();
-  const tmpResult24 = tmp(questDockExpandHandler[25]);
-  const token = tmpResult24.useToken(require("native").modules.mobile.QUEST_DOCK_BORDER_RADIUS);
+  let obj2 = { restingQuestDockMode, QuestDockMode };
+  const tmp21 = importDefault;
+  const tmpResult22 = backgroundColor(questDockExpandHandler[21]);
+  const youBarTotalHeight = backgroundColor(questDockExpandHandler[24]).useYouBarTotalHeight();
+  const tmpResult23 = backgroundColor(questDockExpandHandler[24]);
+  const token = backgroundColor(questDockExpandHandler[25]).useToken(require("native").modules.mobile.QUEST_DOCK_BORDER_RADIUS);
   const tmp25 = require("useQuestDockAnimatedBorderRadius")(token);
-  let closure_10 = tmp25;
+  closure_10 = tmp25;
+  const tmpResult24 = backgroundColor(questDockExpandHandler[25]);
   function re() {
-    let items;
-    let obj2;
-    let obj3;
-    let obj4;
-    let obj8;
-    let withSpring;
-    let x;
-    size = { backgroundColor, borderBottomRightRadius: obj2.withSpring(closure_10.get(), closure_16), borderBottomLeftRadius: obj3.withSpring(closure_10.get(), closure_16), height: questDockWrapperSpecs.get().height, width: questDockWrapperSpecs.get().width, opacity: obj4.withSpring(1, closure_15), transform: items };
-    obj2 = spring;
-    obj3 = spring;
-    obj4 = spring;
-    const obj = { translateX: withSpring(x + -1 * obj6.roundToNearestPixel(questDockWrapperSpecs.get().width / 2), closure_15) };
-    withSpring = spring.withSpring;
-    spring;
-    x = questDockWrapperSpecs.get().x;
-    items = [obj, ];
-    obj6 = QuestDockUtils;
-    const obj5 = { translateY: obj8.withSpring(questDockWrapperSpecs.get().y, closure_15) };
+    const size = { backgroundColor, borderBottomRightRadius: spring.withSpring(closure_10.get(), QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED), borderBottomLeftRadius: null, height: null, width: null, opacity: null, transform: null };
+    size.borderBottomLeftRadius = spring.withSpring(closure_10.get(), QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
+    size.height = questDockWrapperSpecs.get().height;
+    size.width = questDockWrapperSpecs.get().width;
+    size.opacity = spring.withSpring(1, QUEST_DOCK_MODE_CHANGE_PHYSICS);
+    const obj = { translateX: null };
+    const obj6 = spring;
+    obj.translateX = obj6.withSpring(questDockWrapperSpecs.get().x + -1 * QuestDockUtils.roundToNearestPixel(questDockWrapperSpecs.get().width / 2), QUEST_DOCK_MODE_CHANGE_PHYSICS);
+    const items = [obj, ];
+    const obj5 = { translateY: null };
+    obj5.translateY = spring.withSpring(questDockWrapperSpecs.get().y, QUEST_DOCK_MODE_CHANGE_PHYSICS);
     items[1] = obj5;
-    obj8 = spring;
+    size.transform = items;
     return size;
   }
-  const tmpResult25 = tmp(questDockExpandHandler[21]);
-  let obj3 = { backgroundColor, withSpring: tmp(tmp2[27]).withSpring, bottomBorderRadius: tmp25, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs, QUEST_DOCK_MODE_CHANGE_PHYSICS, roundToNearestPixel: tmp(tmp2[28]).roundToNearestPixel };
-  re.__closure = obj3;
+  const tmpResult25 = backgroundColor(questDockExpandHandler[21]);
+  re.__closure = { backgroundColor, withSpring: backgroundColor(questDockExpandHandler[27]).withSpring, bottomBorderRadius: tmp25, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs: context.questDockWrapperSpecs, QUEST_DOCK_MODE_CHANGE_PHYSICS, roundToNearestPixel: backgroundColor(questDockExpandHandler[28]).roundToNearestPixel };
   re.__workletHash = 9565489600157;
   re.__initData = __initData2;
   const animatedStyle = tmpResult25.useAnimatedStyle(re);
-  const tmpResult26 = tmp(questDockExpandHandler[21]);
-  const sharedValue = tmpResult26.useSharedValue(0);
+  let obj3 = { backgroundColor, withSpring: backgroundColor(questDockExpandHandler[27]).withSpring, bottomBorderRadius: tmp25, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs: context.questDockWrapperSpecs, QUEST_DOCK_MODE_CHANGE_PHYSICS, roundToNearestPixel: backgroundColor(questDockExpandHandler[28]).roundToNearestPixel };
+  const sharedValue = backgroundColor(questDockExpandHandler[21]).useSharedValue(0);
+  const tmpResult26 = backgroundColor(questDockExpandHandler[21]);
   function se() {
-    let interpolateResult;
-    let items;
-    let withSpring;
-    const obj = { transform: items };
-    const obj2 = { scale: withSpring(interpolateResult, springPresets.springStandard) };
-    withSpring = spring.withSpring;
-    spring;
-    const obj3 = ReanimatedRexport;
-    items = [obj2];
-    interpolateResult = obj3.interpolate(sharedValue.get(), [1, 0], [1, 1]);
+    const obj = { transform: null };
+    const obj2 = { scale: null };
+    const obj3 = spring;
+    obj2.scale = obj3.withSpring(ReanimatedRexport.interpolate(sharedValue.get(), [1, 0], [1, 1]), springPresets.springStandard);
+    const items = [obj2];
+    obj.transform = items;
     return obj;
   }
-  const tmpResult27 = tmp(questDockExpandHandler[21]);
-  let obj4 = { withSpring: tmp(tmp2[27]).withSpring, interpolate: tmp(tmp2[21]).interpolate, isPressed: sharedValue, springStandard: tmp(tmp2[29]).springStandard };
-  se.__closure = obj4;
+  const tmpResult27 = backgroundColor(questDockExpandHandler[21]);
+  se.__closure = { withSpring: backgroundColor(questDockExpandHandler[27]).withSpring, interpolate: backgroundColor(questDockExpandHandler[21]).interpolate, isPressed: sharedValue, springStandard: backgroundColor(questDockExpandHandler[29]).springStandard };
   se.__workletHash = 3373473585356;
   se.__initData = __initData3;
   const animatedStyle1 = tmpResult27.useAnimatedStyle(se);
-  const tmp21 = importDefault;
   if (cResult[4] === questDockExpandHandler) {
     class A {
       constructor() {
-        setRestingQuestDockMode(map1.COLLAPSED);
+        tmp = setRestingQuestDockMode(QuestDockMode.COLLAPSED);
+        return;
       }
     }
     if (cResult[7] !== sharedValue) {
       class A {
         constructor() {
-          setRestingQuestDockMode(map1.COLLAPSED);
+          tmp = setRestingQuestDockMode(QuestDockMode.COLLAPSED);
+          return;
         }
       }
-      let num5 = 7;
       cResult[7] = sharedValue;
-      let num6 = 8;
       class Ae {
         constructor() {
-          const withSpring = spring.withSpring;
-          let num = 0;
-          spring;
-          if (activeQuestDockMode.get() === map1.EXPANDED) {
+          obj = closure_0(closure_2[27]);
+          num = 0;
+          if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
             num = 1;
           }
-          const obj = { opacity: withSpring(num, closure_15), height: windowDimensions.get().height };
-          return obj;
+          obj1 = { opacity: obj.withSpring(num, closure_15), height: windowDimensions.get().height };
+          return obj1;
         }
       }
     } else {
       class A {
         constructor() {
-          setRestingQuestDockMode(map1.COLLAPSED);
+          tmp = setRestingQuestDockMode(QuestDockMode.COLLAPSED);
+          return;
         }
       }
     }
     if (cResult[9] !== sharedValue) {
       class Ce {
         constructor() {
-          const result = sharedValue.set(0);
+          result = closure_11.set(0);
+          return;
         }
       }
-      let num7 = 9;
       cResult[9] = sharedValue;
-      let num8 = 10;
       class Ae {
         constructor() {
-          const withSpring = spring.withSpring;
-          let num = 0;
-          spring;
-          if (activeQuestDockMode.get() === map1.EXPANDED) {
+          obj = closure_0(closure_2[27]);
+          num = 0;
+          if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
             num = 1;
           }
-          const obj = { opacity: withSpring(num, closure_15), height: windowDimensions.get().height };
-          return obj;
+          obj1 = { opacity: obj.withSpring(num, closure_15), height: windowDimensions.get().height };
+          return obj1;
         }
       }
     } else {
       class Ce {
         constructor() {
-          const result = sharedValue.set(0);
+          result = closure_11.set(0);
+          return;
         }
       }
     }
-    const tmpResult28 = tmp(questDockExpandHandler[21]);
     class Ae {
       constructor() {
-        const withSpring = spring.withSpring;
-        let num = 0;
-        spring;
-        if (activeQuestDockMode.get() === map1.EXPANDED) {
+        obj = closure_0(closure_2[27]);
+        num = 0;
+        if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
           num = 1;
         }
-        const obj = { opacity: withSpring(num, closure_15), height: windowDimensions.get().height };
-        return obj;
+        obj1 = { opacity: obj.withSpring(num, closure_15), height: windowDimensions.get().height };
+        return obj1;
       }
     }
     let obj5 = { withSpring: tmp(tmp2[27]).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS, windowDimensions };
-    const useAnimatedStyle = tmpResult28.useAnimatedStyle;
     Ae.__closure = obj5;
-    let num9 = 6178969276321;
     Ae.__workletHash = 6178969276321;
     Ae.__initData = __initData4;
-    const animatedStyle2 = useAnimatedStyle(Ae);
-    const tmpResult29 = tmp(questDockExpandHandler[21]);
+    const animatedStyle2 = tmp(tmp2[21]).useAnimatedStyle(Ae);
+    const tmpResult28 = tmp(tmp2[21]);
     class Te {
       constructor() {
-        let pointerEvents = "none";
-        if (activeQuestDockMode.get() === map1.EXPANDED) {
+        pointerEvents = "none";
+        if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
           pointerEvents = "auto";
         }
         return { pointerEvents };
       }
     }
-    obj6 = { activeQuestDockMode, QuestDockMode };
+    let obj6 = { activeQuestDockMode, QuestDockMode };
     Te.__closure = obj6;
     Te.__workletHash = 17271982627769;
     Te.__initData = __initData5;
-    const animatedProps = tmpResult29.useAnimatedProps(Te);
-    const tmpResult30 = tmp(questDockExpandHandler[21]);
+    const animatedProps = tmp(tmp2[21]).useAnimatedProps(Te);
+    const tmpResult29 = tmp(tmp2[21]);
     class Qe {
       constructor() {
-        const value = questDockWrapperSpecs.get();
+        value = questDockWrapperSpecs.get();
         return windowDimensions.get().height - top - value.height;
       }
     }
-    const obj7 = { questDockWrapperSpecs, windowDimensions, safeAreaTop: top };
+    obj7 = { questDockWrapperSpecs, windowDimensions, safeAreaTop: top };
     Qe.__closure = obj7;
     Qe.__workletHash = 8073454569923;
     Qe.__initData = __initData6;
-    const derivedValue1 = tmpResult30.useDerivedValue(Qe);
-    tmp21(questDockExpandHandler[22])(derivedValue1);
-    const tmpResult31 = tmp(questDockExpandHandler[21]);
+    const derivedValue1 = tmp(tmp2[21]).useDerivedValue(Qe);
+    tmp21(tmp2[22])(derivedValue1);
+    const tmpResult30 = tmp(tmp2[21]);
     class Ie {
       constructor() {
-        let num;
-        const withSpring = spring.withSpring;
-        spring;
-        if (activeQuestDockMode.get() === map1.CLOSED) {
+        obj = closure_0(closure_2[27]);
+        obj2 = activeQuestDockMode;
+        if (activeQuestDockMode.get() === QuestDockMode.CLOSED) {
           num = 0;
         } else {
           num = 1;
         }
-        const obj2 = { opacity: withSpring(num, closure_15) };
-        return obj2;
+        obj1 = { opacity: obj.withSpring(num, closure_15) };
+        return obj1;
       }
     }
-    let obj8 = { withSpring: tmp(tmp2[27]).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
-    const useAnimatedStyle2 = tmpResult31.useAnimatedStyle;
+    const obj8 = { withSpring: tmp(tmp2[27]).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
     Ie.__closure = obj8;
     Ie.__workletHash = 6468803634518;
     Ie.__initData = __initData7;
-    const animatedStyle21 = useAnimatedStyle2(Ie);
+    const animatedStyle3 = tmp(tmp2[21]).useAnimatedStyle(Ie);
+    const tmpResult31 = tmp(tmp2[21]);
     function me() {
       if (closure_1) {
-        let tmp4;
-        if (activeQuestDockMode.get() === map1.EXPANDED) {
-          tmp4 = closure_17;
+        if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
+          let tmp4 = QUEST_DOCK_CONTENT_BORDER_RADII;
         }
-        size = { borderTopLeftRadius: tmp4, borderTopRightRadius: null, borderBottomLeftRadius: null, borderBottomRightRadius: null, opacity: null, height: null, width: null, transform: null, borderBottomWidth: null };
+        const size = { borderTopLeftRadius: tmp4, borderTopRightRadius: null, borderBottomLeftRadius: null, borderBottomRightRadius: null, opacity: null, height: null, width: null, transform: null, borderBottomWidth: null };
         if (closure_1) {
-          let tmp7;
-          if (activeQuestDockMode.get() === map1.EXPANDED) {
-            tmp7 = closure_17;
+          if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
+            let tmp7 = QUEST_DOCK_CONTENT_BORDER_RADII;
           }
           size.borderTopRightRadius = tmp7;
           if (closure_1) {
-            let value2;
-            if (activeQuestDockMode.get() === map1.EXPANDED) {
-              value2 = closure_17;
+            if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
+              value2 = QUEST_DOCK_CONTENT_BORDER_RADII;
             }
             size.borderBottomLeftRadius = value2;
             if (closure_1) {
-              let value;
-              if (activeQuestDockMode.get() === map1.EXPANDED) {
-                value = closure_17;
+              if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
+                value = QUEST_DOCK_CONTENT_BORDER_RADII;
               }
               size.borderBottomRightRadius = value;
-              const withSpring = spring.withSpring;
               let num2 = 1;
-              spring;
-              if (activeQuestDockMode.get() === map1.EXPANDED) {
+              if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
                 num2 = 0;
               }
-              size.opacity = withSpring(num2, closure_16);
-              if (activeQuestDockMode.get() === map1.EXPANDED) {
-                let height;
+              size.opacity = spring.withSpring(num2, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
+              if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
                 if (closure_1) {
-                  height = closure_19;
+                  let height = QUEST_DOCK_COLLAPSED_HEIGHT;
                 }
                 size.height = height;
-                if (activeQuestDockMode.get() === map1.EXPANDED) {
-                  let width;
+                if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
                   if (closure_1) {
-                    width = questDockWrapperSpecs.get().width - 2 * authStore4;
+                    let width = questDockWrapperSpecs.get().width - 2 * collapsedCategories;
                   }
                   size.width = width;
                   let num5 = 0;
                   if (closure_1) {
-                    const withSpring2 = spring.withSpring;
                     let num6 = 0;
-                    spring;
-                    if (activeQuestDockMode.get() === map1.EXPANDED) {
-                      num6 = authStore4;
+                    if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
+                      num6 = collapsedCategories;
                     }
-                    num5 = withSpring2(num6, closure_16);
+                    num5 = spring.withSpring(num6, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
+                    const tmp16Result = spring;
                   }
-                  const items = [{ translateX: num5 }, ];
-                  let num7 = 0;
                   const obj = { translateX: num5 };
+                  const items = [obj, ];
+                  let num7 = 0;
                   if (closure_1) {
-                    const withSpring3 = spring.withSpring;
                     let num8 = 0;
-                    spring;
-                    if (activeQuestDockMode.get() === map1.EXPANDED) {
-                      num8 = authStore4;
+                    if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
+                      num8 = collapsedCategories;
                     }
-                    num7 = withSpring3(num8, closure_16);
+                    num7 = spring.withSpring(num8, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
+                    const tmp16Result2 = spring;
                   }
-                  const obj3 = { translateY: num7 };
-                  items[1] = obj3;
+                  const obj4 = { translateY: num7 };
+                  items[1] = obj4;
                   size.transform = items;
                   let num9 = 0;
                   if (closure_10.get() > 0) {
@@ -454,19 +395,17 @@ let closure_44 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColo
       }
       tmp4 = token;
     }
-    const obj9 = { hasInsetHeaderTile: tmp7, activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII, questDockBorderRadius: token, bottomBorderRadius: tmp25, withSpring: tmp(questDockExpandHandler[27]).withSpring, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, QUEST_DOCK_COLLAPSED_HEIGHT, questDockWrapperSpecs, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_18 };
-    const useAnimatedStyle3 = tmp(tmp2[21]).useAnimatedStyle;
-    tmp(questDockExpandHandler[21]);
+    const obj9 = { hasInsetHeaderTile: tmp7, activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII, questDockBorderRadius: token, bottomBorderRadius: tmp25, withSpring: tmp(tmp2[27]).withSpring, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, QUEST_DOCK_COLLAPSED_HEIGHT, questDockWrapperSpecs, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_18 };
     me.__closure = obj9;
     me.__workletHash = 13161475723910;
     me.__initData = __initData8;
-    const animatedStyle3 = useAnimatedStyle3(me);
+    const animatedStyle4 = tmp(tmp2[21]).useAnimatedStyle(me);
     ({ wrapper, accessibilityWrapper } = tmp11);
-    const tmp51 = isScreenReaderEnabled;
-    if (tmp51) {
+    if (tmp48) {
       class Ce {
         constructor() {
-          const result = sharedValue.set(0);
+          result = closure_11.set(0);
+          return;
         }
       }
     }
@@ -474,78 +413,57 @@ let closure_44 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColo
     if (cResult[11] !== diff) {
       class Ce {
         constructor() {
-          const result = sharedValue.set(0);
+          result = closure_11.set(0);
+          return;
         }
       }
-      tmp54[0] = diff;
+      tmp51[0] = diff;
       cResult[11] = diff;
       class Ae {
         constructor() {
-          const withSpring = spring.withSpring;
-          let num = 0;
-          spring;
-          if (activeQuestDockMode.get() === map1.EXPANDED) {
+          obj = closure_0(closure_2[27]);
+          num = 0;
+          if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
             num = 1;
           }
-          const obj = { opacity: withSpring(num, closure_15), height: windowDimensions.get().height };
-          return obj;
+          obj1 = { opacity: obj.withSpring(num, closure_15), height: windowDimensions.get().height };
+          return obj1;
         }
       }
-      cResult[12] = tmp54;
+      cResult[12] = tmp51;
     } else {
       class Ce {
         constructor() {
-          const result = sharedValue.set(0);
+          result = closure_11.set(0);
+          return;
         }
       }
     }
     if (cResult[13] === animatedStyle) {
       class Ce {
         constructor() {
-          const result = sharedValue.set(0);
+          result = closure_11.set(0);
+          return;
         }
       }
     }
-    let items = [tmp11.questDockWrapper, tmp54, animatedStyle];
+    let items = [tmp11.questDockWrapper, tmp51, animatedStyle];
     cResult[13] = animatedStyle;
     cResult[14] = tmp11.questDockWrapper;
-    cResult[15] = tmp54;
+    cResult[15] = tmp51;
     cResult[16] = items;
+    tmp48 = isScreenReaderEnabled;
+    const tmpResult32 = tmp(tmp2[21]);
   }
   function ne() {
-    setRestingQuestDockMode(map1.EXPANDED);
+    setRestingQuestDockMode(QuestDockMode.EXPANDED);
     questDockExpandHandler();
   }
   cResult[4] = questDockExpandHandler;
   cResult[5] = setRestingQuestDockMode;
   cResult[6] = ne;
+  let obj4 = { withSpring: backgroundColor(questDockExpandHandler[27]).withSpring, interpolate: backgroundColor(questDockExpandHandler[21]).interpolate, isPressed: sharedValue, springStandard: backgroundColor(questDockExpandHandler[29]).springStandard };
 }) : ((backgroundColor) => {
-  let AccessibilityViewAnimated;
-  let backgroundContent;
-  let closure_1;
-  let collapsedContent;
-  let expandedContent;
-  let intl;
-  let items10;
-  let items4;
-  let items5;
-  let items6;
-  let items7;
-  let items8;
-  let items9;
-  let layoutVariant;
-  let obj25;
-  let obj27;
-  let obj34;
-  let obj36;
-  let questDockExpandHandler;
-  let str3;
-  let str4;
-  let tmp19Result;
-  let tmp19Result7;
-  let tmp40;
-  let top;
-  let withAndroidOffscreenAlphaCompositingWorkaround;
   backgroundColor = backgroundColor.backgroundColor;
   ({ layoutVariant, withAndroidOffscreenAlphaCompositingWorkaround } = backgroundColor);
   let isAndroidResult = undefined !== withAndroidOffscreenAlphaCompositingWorkaround;
@@ -554,10 +472,9 @@ let closure_44 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColo
     isAndroidResult = withAndroidOffscreenAlphaCompositingWorkaround;
   }
   if (isAndroidResult) {
+    isAndroidResult = backgroundColor(questDockExpandHandler[15]).isAndroid();
     let obj = backgroundColor(questDockExpandHandler[15]);
-    isAndroidResult = obj.isAndroid();
   }
-  let tmp4 = "insetHeader" === layoutVariant;
   importDefault = tmp4;
   let str = "fixed";
   if ("flush" === layoutVariant) {
@@ -567,14 +484,11 @@ let closure_44 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColo
   if ("flush" === layoutVariant) {
     str2 = "default";
   }
-  let tmp7 = questDockExpandHandler;
+  const questDockCreative = backgroundColor(questDockExpandHandler[16]).useQuestDockCreative();
   let obj2 = backgroundColor(questDockExpandHandler[16]);
-  const questDockCreative = obj2.useQuestDockCreative();
-  let obj3 = backgroundColor(questDockExpandHandler[17]);
-  questDockExpandHandler = obj3.useQuestDockExpandHandler(questDockCreative);
+  questDockExpandHandler = backgroundColor(questDockExpandHandler[17]).useQuestDockExpandHandler(questDockCreative);
   const tmp10 = closure_27();
   const context = top.useContext(backgroundColor(questDockExpandHandler[18]).QuestDockGestureContext);
-  const questDockWrapperSpecs = context.questDockWrapperSpecs;
   const activeQuestDockMode = context.activeQuestDockMode;
   const windowDimensions = context.windowDimensions;
   const context1 = top.useContext(backgroundColor(questDockExpandHandler[19]).QuestDockExternalCoordinationContext);
@@ -583,77 +497,74 @@ let closure_44 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColo
   let items = [setRestingQuestDockMode];
   const id = top.useId();
   const callback = top.useCallback(() => {
-    setRestingQuestDockMode(map1.COLLAPSED);
+    setRestingQuestDockMode(QuestDockMode.COLLAPSED);
   }, items);
+  let obj3 = backgroundColor(questDockExpandHandler[17]);
+  const questDockModeAnimatedReaction = backgroundColor(questDockExpandHandler[17]).useQuestDockModeAnimatedReaction();
   let obj4 = backgroundColor(questDockExpandHandler[17]);
-  const questDockModeAnimatedReaction = obj4.useQuestDockModeAnimatedReaction();
+  const questDockDismissalReset = backgroundColor(questDockExpandHandler[17]).useQuestDockDismissalReset();
   let obj5 = backgroundColor(questDockExpandHandler[17]);
-  const questDockDismissalReset = obj5.useQuestDockDismissalReset();
-  obj6 = backgroundColor(questDockExpandHandler[20]);
-  const isScreenReaderEnabled = obj6.useIsScreenReaderEnabled();
-  const obj7 = backgroundColor(questDockExpandHandler[21]);
+  const isScreenReaderEnabled = backgroundColor(questDockExpandHandler[20]).useIsScreenReaderEnabled();
+  let obj6 = backgroundColor(questDockExpandHandler[20]);
   class W {
     constructor() {
-      return restingQuestDockMode.get() === map1.EXPANDED;
+      return restingQuestDockMode.get() === QuestDockMode.EXPANDED;
     }
   }
-  let obj8 = { restingQuestDockMode, QuestDockMode };
-  W.__closure = obj8;
+  W.__closure = { restingQuestDockMode, QuestDockMode };
   W.__workletHash = 7060288082029;
   W.__initData = __initData9;
-  const derivedValue = obj7.useDerivedValue(W);
+  const derivedValue = backgroundColor(questDockExpandHandler[21]).useDerivedValue(W);
   const tmp20 = require("useStateFromSharedValue")(derivedValue);
   top = require("useSafeAreaInsets")().top;
+  obj7 = backgroundColor(questDockExpandHandler[21]);
+  const obj8 = { restingQuestDockMode, QuestDockMode };
+  const youBarTotalHeight = backgroundColor(questDockExpandHandler[24]).useYouBarTotalHeight();
   const obj9 = backgroundColor(questDockExpandHandler[24]);
-  const youBarTotalHeight = obj9.useYouBarTotalHeight();
-  const obj10 = backgroundColor(questDockExpandHandler[25]);
-  const token = obj10.useToken(require("native").modules.mobile.QUEST_DOCK_BORDER_RADIUS);
+  const token = backgroundColor(questDockExpandHandler[25]).useToken(require("native").modules.mobile.QUEST_DOCK_BORDER_RADIUS);
   const tmp23 = require("useQuestDockAnimatedBorderRadius")(token);
-  let closure_10 = tmp23;
-  const obj11 = backgroundColor(questDockExpandHandler[21]);
+  closure_10 = tmp23;
+  const obj10 = backgroundColor(questDockExpandHandler[25]);
   class Z {
     constructor() {
-      let items;
-      let obj2;
-      let obj3;
-      let obj4;
-      let obj8;
-      let withSpring;
-      let x;
-      size = { backgroundColor, borderBottomRightRadius: obj2.withSpring(closure_10.get(), closure_16), borderBottomLeftRadius: obj3.withSpring(closure_10.get(), closure_16), height: questDockWrapperSpecs.get().height, width: questDockWrapperSpecs.get().width, opacity: obj4.withSpring(1, closure_15), transform: items };
-      obj2 = spring;
-      obj3 = spring;
-      obj4 = spring;
-      const obj = { translateX: withSpring(x + -1 * obj6.roundToNearestPixel(questDockWrapperSpecs.get().width / 2), closure_15) };
-      withSpring = spring.withSpring;
-      spring;
-      x = questDockWrapperSpecs.get().x;
-      items = [obj, ];
-      obj6 = QuestDockUtils;
-      const obj5 = { translateY: obj8.withSpring(questDockWrapperSpecs.get().y, closure_15) };
-      items[1] = obj5;
-      obj8 = spring;
+      size = { backgroundColor, borderBottomRightRadius: null, borderBottomLeftRadius: null, height: null, width: null, opacity: null, transform: null };
+      obj2 = closure_0(closure_2[27]);
+      size.borderBottomRightRadius = obj2.withSpring(closure_10.get(), closure_16);
+      obj3 = closure_0(closure_2[27]);
+      size.borderBottomLeftRadius = obj3.withSpring(closure_10.get(), closure_16);
+      size.height = questDockWrapperSpecs.get().height;
+      size.width = questDockWrapperSpecs.get().width;
+      obj4 = closure_0(closure_2[27]);
+      size.opacity = obj4.withSpring(1, closure_15);
+      obj1 = { translateX: null };
+      obj6 = closure_0(closure_2[27]);
+      obj7 = closure_0(closure_2[28]);
+      obj1.translateX = obj6.withSpring(questDockWrapperSpecs.get().x + -1 * obj7.roundToNearestPixel(questDockWrapperSpecs.get().width / 2), closure_15);
+      items = [, ];
+      items[0] = obj1;
+      obj10 = { translateY: null };
+      obj9 = closure_0(closure_2[27]);
+      obj10.translateY = obj9.withSpring(questDockWrapperSpecs.get().y, closure_15);
+      items[1] = obj10;
+      size.transform = items;
       return size;
     }
   }
-  Z.__closure = { backgroundColor, withSpring: backgroundColor(questDockExpandHandler[27]).withSpring, bottomBorderRadius: tmp23, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs, QUEST_DOCK_MODE_CHANGE_PHYSICS, roundToNearestPixel: backgroundColor(questDockExpandHandler[28]).roundToNearestPixel };
+  const obj11 = backgroundColor(questDockExpandHandler[21]);
+  Z.__closure = { backgroundColor, withSpring: backgroundColor(questDockExpandHandler[27]).withSpring, bottomBorderRadius: tmp23, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs: context.questDockWrapperSpecs, QUEST_DOCK_MODE_CHANGE_PHYSICS, roundToNearestPixel: backgroundColor(questDockExpandHandler[28]).roundToNearestPixel };
   Z.__workletHash = 11927010554990;
   Z.__initData = __initData10;
-  ({ backgroundColor, withSpring: backgroundColor(questDockExpandHandler[27]).withSpring, bottomBorderRadius: tmp23, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs, QUEST_DOCK_MODE_CHANGE_PHYSICS, roundToNearestPixel: backgroundColor(questDockExpandHandler[28]).roundToNearestPixel });
   const animatedStyle = obj11.useAnimatedStyle(Z);
+  const obj12 = { backgroundColor, withSpring: backgroundColor(questDockExpandHandler[27]).withSpring, bottomBorderRadius: tmp23, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs: context.questDockWrapperSpecs, QUEST_DOCK_MODE_CHANGE_PHYSICS, roundToNearestPixel: backgroundColor(questDockExpandHandler[28]).roundToNearestPixel };
+  const sharedValue = backgroundColor(questDockExpandHandler[21]).useSharedValue(0);
   const obj13 = backgroundColor(questDockExpandHandler[21]);
-  const sharedValue = obj13.useSharedValue(0);
   function ee() {
-    let interpolateResult;
-    let items;
-    let withSpring;
-    const obj = { transform: items };
-    const obj2 = { scale: withSpring(interpolateResult, springPresets.springStandard) };
-    withSpring = spring.withSpring;
-    spring;
-    const obj3 = ReanimatedRexport;
-    items = [obj2];
-    interpolateResult = obj3.interpolate(sharedValue.get(), [1, 0], [1, 1]);
+    const obj = { transform: null };
+    const obj2 = { scale: null };
+    const obj3 = spring;
+    obj2.scale = obj3.withSpring(ReanimatedRexport.interpolate(sharedValue.get(), [1, 0], [1, 1]), springPresets.springStandard);
+    const items = [obj2];
+    obj.transform = items;
     return obj;
   }
   const obj14 = backgroundColor(questDockExpandHandler[21]);
@@ -661,11 +572,10 @@ let closure_44 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColo
   ee.__workletHash = 5840865258847;
   ee.__initData = __initData11;
   const items1 = [setRestingQuestDockMode, questDockExpandHandler];
-  ({ withSpring: backgroundColor(questDockExpandHandler[27]).withSpring, interpolate: backgroundColor(questDockExpandHandler[21]).interpolate, isPressed: sharedValue, springStandard: backgroundColor(questDockExpandHandler[29]).springStandard });
   const animatedStyle1 = obj14.useAnimatedStyle(ee);
   const items2 = [sharedValue];
   const callback1 = top.useCallback(() => {
-    setRestingQuestDockMode(map1.EXPANDED);
+    setRestingQuestDockMode(QuestDockMode.EXPANDED);
     questDockExpandHandler();
   }, items1);
   const items3 = [sharedValue];
@@ -675,25 +585,23 @@ let closure_44 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColo
   const callback3 = top.useCallback(() => {
     const result = sharedValue.set(0);
   }, items3);
+  const obj15 = { withSpring: backgroundColor(questDockExpandHandler[27]).withSpring, interpolate: backgroundColor(questDockExpandHandler[21]).interpolate, isPressed: sharedValue, springStandard: backgroundColor(questDockExpandHandler[29]).springStandard };
   function te() {
-    const withSpring = spring.withSpring;
     let num = 0;
-    spring;
-    if (activeQuestDockMode.get() === map1.EXPANDED) {
+    if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
       num = 1;
     }
-    const obj = { opacity: withSpring(num, closure_15), height: windowDimensions.get().height };
-    return obj;
+    return { opacity: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS), height: windowDimensions.get().height };
   }
   const obj16 = backgroundColor(questDockExpandHandler[21]);
   te.__closure = { withSpring: backgroundColor(questDockExpandHandler[27]).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS, windowDimensions };
   te.__workletHash = 11488074451286;
   te.__initData = __initData12;
-  ({ withSpring: backgroundColor(questDockExpandHandler[27]).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS, windowDimensions });
   const animatedStyle2 = obj16.useAnimatedStyle(te);
+  const obj17 = { withSpring: backgroundColor(questDockExpandHandler[27]).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS, windowDimensions };
   function oe() {
     let pointerEvents = "none";
-    if (activeQuestDockMode.get() === map1.EXPANDED) {
+    if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
       pointerEvents = "auto";
     }
     return { pointerEvents };
@@ -701,104 +609,90 @@ let closure_44 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColo
   oe.__closure = { activeQuestDockMode, QuestDockMode };
   oe.__workletHash = 6944577019790;
   oe.__initData = __initData13;
+  const animatedProps = backgroundColor(questDockExpandHandler[21]).useAnimatedProps(oe);
   const obj18 = backgroundColor(questDockExpandHandler[21]);
-  const animatedProps = obj18.useAnimatedProps(oe);
   function ie() {
-    const value = questDockWrapperSpecs.get();
+    value = questDockWrapperSpecs.get();
     return windowDimensions.get().height - top - value.height;
   }
-  ie.__closure = { questDockWrapperSpecs, windowDimensions, safeAreaTop: top };
+  ie.__closure = { questDockWrapperSpecs: context.questDockWrapperSpecs, windowDimensions, safeAreaTop: top };
   ie.__workletHash = 14953270062704;
   ie.__initData = __initData14;
+  const derivedValue1 = backgroundColor(questDockExpandHandler[21]).useDerivedValue(ie);
   const obj19 = backgroundColor(questDockExpandHandler[21]);
-  const derivedValue1 = obj19.useDerivedValue(ie);
+  const tmp33 = require("useStateFromSharedValue")(derivedValue1);
   function re() {
-    let num;
-    const withSpring = spring.withSpring;
-    spring;
-    if (activeQuestDockMode.get() === map1.CLOSED) {
-      num = 0;
+    if (activeQuestDockMode.get() === QuestDockMode.CLOSED) {
+      let num = 0;
     } else {
       num = 1;
     }
-    const obj2 = { opacity: withSpring(num, closure_15) };
-    return obj2;
+    return { opacity: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS) };
   }
-  const tmp33 = require("useStateFromSharedValue")(derivedValue1);
   const obj20 = backgroundColor(questDockExpandHandler[21]);
   re.__closure = { withSpring: backgroundColor(questDockExpandHandler[27]).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
   re.__workletHash = 2744133111557;
   re.__initData = __initData15;
-  ({ withSpring: backgroundColor(questDockExpandHandler[27]).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS });
   const animatedStyle3 = obj20.useAnimatedStyle(re);
+  const obj21 = { withSpring: backgroundColor(questDockExpandHandler[27]).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
   function se() {
     if (closure_1) {
-      let tmp4;
-      if (activeQuestDockMode.get() === map1.EXPANDED) {
-        tmp4 = closure_17;
+      if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
+        let tmp4 = QUEST_DOCK_CONTENT_BORDER_RADII;
       }
-      size = { borderTopLeftRadius: tmp4, borderTopRightRadius: null, borderBottomLeftRadius: null, borderBottomRightRadius: null, opacity: null, height: null, width: null, transform: null, borderBottomWidth: null };
+      const size = { borderTopLeftRadius: tmp4, borderTopRightRadius: null, borderBottomLeftRadius: null, borderBottomRightRadius: null, opacity: null, height: null, width: null, transform: null, borderBottomWidth: null };
       if (closure_1) {
-        let tmp7;
-        if (activeQuestDockMode.get() === map1.EXPANDED) {
-          tmp7 = closure_17;
+        if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
+          let tmp7 = QUEST_DOCK_CONTENT_BORDER_RADII;
         }
         size.borderTopRightRadius = tmp7;
         if (closure_1) {
-          let value2;
-          if (activeQuestDockMode.get() === map1.EXPANDED) {
-            value2 = closure_17;
+          if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
+            value2 = QUEST_DOCK_CONTENT_BORDER_RADII;
           }
           size.borderBottomLeftRadius = value2;
           if (closure_1) {
-            let value;
-            if (activeQuestDockMode.get() === map1.EXPANDED) {
-              value = closure_17;
+            if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
+              value = QUEST_DOCK_CONTENT_BORDER_RADII;
             }
             size.borderBottomRightRadius = value;
-            const withSpring = spring.withSpring;
             let num2 = 1;
-            spring;
-            if (activeQuestDockMode.get() === map1.EXPANDED) {
+            if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
               num2 = 0;
             }
-            size.opacity = withSpring(num2, closure_16);
-            if (activeQuestDockMode.get() === map1.EXPANDED) {
-              let height;
+            size.opacity = spring.withSpring(num2, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
+            if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
               if (closure_1) {
-                height = closure_19;
+                let height = QUEST_DOCK_COLLAPSED_HEIGHT;
               }
               size.height = height;
-              if (activeQuestDockMode.get() === map1.EXPANDED) {
-                let width;
+              if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
                 if (closure_1) {
-                  width = questDockWrapperSpecs.get().width - 2 * authStore4;
+                  let width = questDockWrapperSpecs.get().width - 2 * collapsedCategories;
                 }
                 size.width = width;
                 let num5 = 0;
                 if (closure_1) {
-                  const withSpring2 = spring.withSpring;
                   let num6 = 0;
-                  spring;
-                  if (activeQuestDockMode.get() === map1.EXPANDED) {
-                    num6 = authStore4;
+                  if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
+                    num6 = collapsedCategories;
                   }
-                  num5 = withSpring2(num6, closure_16);
+                  num5 = spring.withSpring(num6, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
+                  const tmp16Result = spring;
                 }
-                const items = [{ translateX: num5 }, ];
-                let num7 = 0;
                 const obj = { translateX: num5 };
+                const items = [obj, ];
+                let num7 = 0;
                 if (closure_1) {
-                  const withSpring3 = spring.withSpring;
                   let num8 = 0;
-                  spring;
-                  if (activeQuestDockMode.get() === map1.EXPANDED) {
-                    num8 = authStore4;
+                  if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
+                    num8 = collapsedCategories;
                   }
-                  num7 = withSpring3(num8, closure_16);
+                  num7 = spring.withSpring(num8, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
+                  const tmp16Result2 = spring;
                 }
-                const obj3 = { translateY: num7 };
-                items[1] = obj3;
+                const obj4 = { translateY: num7 };
+                items[1] = obj4;
                 size.transform = items;
                 let num9 = 0;
                 if (closure_10.get() > 0) {
@@ -820,116 +714,120 @@ let closure_44 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColo
     tmp4 = token;
   }
   const obj22 = backgroundColor(questDockExpandHandler[21]);
-  se.__closure = { hasInsetHeaderTile: tmp4, activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII, questDockBorderRadius: token, bottomBorderRadius: tmp23, withSpring: backgroundColor(questDockExpandHandler[27]).withSpring, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, QUEST_DOCK_COLLAPSED_HEIGHT, questDockWrapperSpecs, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_18 };
+  se.__closure = { hasInsetHeaderTile: "insetHeader" === layoutVariant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII, questDockBorderRadius: token, bottomBorderRadius: tmp23, withSpring: backgroundColor(questDockExpandHandler[27]).withSpring, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, QUEST_DOCK_COLLAPSED_HEIGHT, questDockWrapperSpecs: context.questDockWrapperSpecs, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_18 };
   se.__workletHash = 7661128291673;
   se.__initData = __initData16;
-  const obj24 = { style: tmp10.wrapper, pointerEvents: "auto", children: closure_24(AccessibilityViewAnimated, obj25) };
-  ({ hasInsetHeaderTile: tmp4, activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII, questDockBorderRadius: token, bottomBorderRadius: tmp23, withSpring: backgroundColor(questDockExpandHandler[27]).withSpring, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, QUEST_DOCK_COLLAPSED_HEIGHT, questDockWrapperSpecs, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_18 });
+  const obj24 = { style: tmp10.wrapper, pointerEvents: "auto", children: null };
   const animatedStyle4 = obj22.useAnimatedStyle(se);
-  obj25 = { nativeID: id, style: tmp10.accessibilityWrapper, accessibilityViewIsModal: tmp40, onAccessibilityEscape: callback, pointerEvents: "box-none", children: closure_24(tmp19Result, obj34) };
-  tmp40 = isScreenReaderEnabled;
-  AccessibilityViewAnimated = backgroundColor(questDockExpandHandler[36]).AccessibilityViewAnimated;
+  const obj25 = { nativeID: id, style: tmp10.accessibilityWrapper, accessibilityViewIsModal: null, onAccessibilityEscape: null, pointerEvents: "box-none", children: null };
+  let tmp40 = isScreenReaderEnabled;
   if (tmp40) {
     tmp40 = tmp20;
   }
-  const obj26 = { style: animatedStyle1, children: closure_25(tmp19Result7, obj27) };
-  tmp19Result = require("QuestDockGestureDetector");
-  obj27 = { style: items4, layout: backgroundColor(tmp7[28]).dimensionsLayoutTransition, children: items5 };
-  items4 = [tmp10.questDockWrapper, , ];
+  obj25.accessibilityViewIsModal = tmp40;
+  obj25.onAccessibilityEscape = callback;
+  const obj23 = { hasInsetHeaderTile: "insetHeader" === layoutVariant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII, questDockBorderRadius: token, bottomBorderRadius: tmp23, withSpring: backgroundColor(questDockExpandHandler[27]).withSpring, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, QUEST_DOCK_COLLAPSED_HEIGHT, questDockWrapperSpecs: context.questDockWrapperSpecs, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_18 };
+  const obj26 = { style: animatedStyle1, children: null };
+  const tmp19Result = require("QuestDockGestureDetector");
+  const obj27 = { style: null, layout: null, children: null };
+  const items4 = [tmp10.questDockWrapper, { bottom: youBarTotalHeight - 1 }, animatedStyle];
+  obj27.style = items4;
   const obj28 = { bottom: youBarTotalHeight - 1 };
-  items4[1] = obj28;
-  items4[2] = animatedStyle;
   const tmp19Result6 = require("ReanimatedNativeView");
-  tmp19Result7 = require("ReanimatedNativeView");
-  const obj29 = { style: tmp10.nestedPressable, onPressIn: callback2, onPressOut: callback3, onPress: callback1, pointerEvents: str3, accessibilityRole: "button", accessibilityLabel: intl.string(backgroundColor(tmp7[30]).t.rjVPdM), accessibilityHint: str4 };
-  str3 = "auto";
-  const tmp44 = closure_10;
+  obj27.layout = backgroundColor(questDockExpandHandler[28]).dimensionsLayoutTransition;
+  const obj29 = { style: tmp10.nestedPressable, onPressIn: callback2, onPressOut: callback3, onPress: callback1, pointerEvents: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null };
+  let str3 = "auto";
   if (tmp20) {
     str3 = "none";
   }
-  intl = tmp6(tmp7[30]).intl;
-  str4 = "";
+  obj29.pointerEvents = str3;
+  const intl = tmp6(tmp7[30]).intl;
+  obj29.accessibilityLabel = intl.string(backgroundColor(questDockExpandHandler[30]).t.rjVPdM);
+  let str4 = "";
   if (!tmp20) {
     const intl2 = tmp6(tmp7[30]).intl;
     str4 = intl2.string(tmp6(tmp7[30]).t.n0MlOB);
   }
-  items5 = [closure_24(tmp44, obj29), , , ];
-  const obj30 = { style: items6, layout: backgroundColor(tmp7[28]).dimensionsLayoutTransition, pointerEvents: "none" };
-  items6 = [tmp10.questDockHeaderBorder, animatedStyle4];
+  obj29.accessibilityHint = str4;
+  const items5 = [closure_24(closure_10, obj29), , , ];
+  const obj30 = { style: null, layout: null, pointerEvents: "none" };
+  const items6 = [tmp10.questDockHeaderBorder, animatedStyle4];
+  obj30.style = items6;
+  const tmp19Result7 = require("ReanimatedNativeView");
+  obj30.layout = backgroundColor(questDockExpandHandler[28]).dimensionsLayoutTransition;
+  items5[1] = closure_24(require("ReanimatedNativeView"), obj30);
+  const obj31 = { style: null, needsOffscreenAlphaCompositing: isAndroidResult, children: null };
+  const items7 = [tmp10.questDockContentWrapper, animatedStyle3];
+  obj31.style = items7;
+  const obj32 = { style: tmp10.questDockContentWrapper, children: null };
   const tmp19Result8 = require("ReanimatedNativeView");
-  items5[1] = closure_24(tmp19Result8, obj30);
-  const obj31 = { style: items7, needsOffscreenAlphaCompositing: isAndroidResult, children: items9 };
-  items7 = [tmp10.questDockContentWrapper, animatedStyle3];
-  const obj32 = { style: tmp10.questDockContentWrapper, children: items8 };
-  items8 = [, ];
-  const tmp19Result9 = require("ReanimatedNativeView");
-  items8[0] = closure_24(require("QuestDockContentCollapsed"), { hideOnExpand: "flush" === layoutVariant, children: collapsedContent });
-  items8[1] = closure_24(require("QuestDockContentExpanded"), { expandedHeightMode: str, expandedHeight, children: expandedContent });
-  items9 = [closure_25(token, obj32), backgroundContent];
+  const items8 = [closure_24(require("QuestDockContentCollapsed"), { hideOnExpand: "flush" === layoutVariant, children: collapsedContent }), closure_24(require("QuestDockContentExpanded"), { expandedHeightMode: str, expandedHeight, children: expandedContent })];
+  obj32.children = items8;
+  const items9 = [closure_25(token, obj32), backgroundContent];
+  obj31.children = items9;
   let str5 = "no-offscreen-compositing";
   if (isAndroidResult) {
     str5 = "offscreen-compositing";
   }
-  const obj33 = { children: items10 };
-  obj34 = { children: closure_24(tmp19Result6, obj26) };
-  items5[2] = closure_25(tmp19Result9, obj31, str5);
+  const obj33 = { children: null };
+  const obj34 = { children: null };
+  items5[2] = closure_25(require("ReanimatedNativeView"), obj31, str5);
   items5[3] = closure_24(require("QuestDockDragHandle"), { isExpanded: tmp20, variant: str2 });
-  items10 = [closure_24(token, obj24), ];
-  const obj35 = { style: animatedStyle2, animatedProps, children: closure_24(backgroundColor(tmp7[37]).Backdrop, obj36) };
-  obj36 = { onDismiss: callback, accessibleDismissStyle: { height: tmp33 } };
-  const tmp19Result10 = require("ReanimatedNativeView");
-  items10[1] = closure_24(tmp19Result10, obj35);
+  obj27.children = items5;
+  obj26.children = closure_25(tmp19Result7, obj27);
+  obj34.children = closure_24(tmp19Result6, obj26);
+  obj25.children = closure_24(tmp19Result, obj34);
+  obj24.children = closure_24(backgroundColor(questDockExpandHandler[36]).AccessibilityViewAnimated, obj25);
+  const items10 = [closure_24(token, obj24), ];
+  const obj35 = { style: animatedStyle2, animatedProps, children: null };
+  const tmp19Result9 = require("ReanimatedNativeView");
+  obj35.children = closure_24(backgroundColor(questDockExpandHandler[37]).Backdrop, { onDismiss: callback, accessibleDismissStyle: { height: tmp33 } });
+  items10[1] = closure_24(require("ReanimatedNativeView"), obj35);
+  obj33.children = items10;
   return closure_25(closure_26, obj33);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_45 = ReactCompilerGating.isReactCompilerEnabled() ? ((mode) => {
-  let tmp4;
-  let tmp5;
-  const obj = react2;
-  const cResult = obj.c(6);
+  const cResult = c.c(6);
   if (cResult[0] !== mode) {
     mode = mode.mode;
     const tmp8 = _objectWithoutProperties(mode, closure_3);
     cResult[0] = mode;
     cResult[1] = mode;
     cResult[2] = tmp8;
-    tmp5 = tmp8;
-    tmp4 = mode;
+    let tmp5 = tmp8;
+    let tmp4 = mode;
   } else {
     tmp4 = cResult[1];
     tmp5 = cResult[2];
   }
   if (cResult[3] === tmp4) {
-    let tmp9;
     if (cResult[4] === tmp5) {
-      tmp9 = cResult[5];
+      let tmp9 = cResult[5];
     }
-    const tmpResult = hooks_QuestHooks;
-    const questBarOrDockModeChangeTracking = tmpResult.useQuestBarOrDockModeChangeTracking(tmp9);
+    const questBarOrDockModeChangeTracking = hooks_QuestHooks.useQuestBarOrDockModeChangeTracking(tmp9);
     return null;
   }
-  const obj2 = { mode: tmp4, questContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE };
+  const obj2 = { mode: tmp4 };
   const merged = Object.assign(tmp5);
+  obj2.questContent = QuestTypes.QuestContent.QUEST_BAR_MOBILE;
+  obj2.sourceQuestContent = QuestTypes.QuestContent.QUEST_BAR_MOBILE;
   cResult[3] = tmp4;
   cResult[4] = tmp5;
   cResult[5] = obj2;
   tmp9 = obj2;
 }) : ((mode) => {
-  mode = mode.mode;
   const tmp = _objectWithoutProperties(mode, closure_4);
-  const obj = { mode, questContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE };
-  const useQuestBarOrDockModeChangeTracking = hooks_QuestHooks.useQuestBarOrDockModeChangeTracking;
-  hooks_QuestHooks;
+  const obj2 = { mode: mode.mode };
   const merged = Object.assign(tmp);
-  const questBarOrDockModeChangeTracking = useQuestBarOrDockModeChangeTracking(obj);
+  obj2.questContent = QuestTypes.QuestContent.QUEST_BAR_MOBILE;
+  obj2.sourceQuestContent = QuestTypes.QuestContent.QUEST_BAR_MOBILE;
+  const questBarOrDockModeChangeTracking = hooks_QuestHooks.useQuestBarOrDockModeChangeTracking(obj2);
   return null;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_46 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp2;
-  let tmp3;
-  const obj = react2;
-  const cResult = obj.c(2);
+  const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t() {
       const QuestBarRenderedTriggerPoint = require("QuestBarRenderedTriggerPoint").QuestBarRenderedTriggerPoint;
@@ -943,34 +841,31 @@ let closure_46 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp2, tmp3] = cResult;
   }
-  const effect = react.useEffect(tmp2, tmp3);
+  const effect = noop.useEffect(tmp2, tmp3);
   return null;
 }) : (() => {
-  const effect = react.useEffect(() => {
+  const effect = noop.useEffect(() => {
     const QuestBarRenderedTriggerPoint = require("QuestBarRenderedTriggerPoint").QuestBarRenderedTriggerPoint;
     QuestBarRenderedTriggerPoint.trigger();
   }, []);
   return null;
 });
-createStyles = createStyles_mod;
+createStyles = fn(4896);
 let closure_47 = createStyles.createStyles(() => ({ wrapperAnimated: { position: "absolute", bottom: 0, padding: 0, width: "100%" } }));
-let obj6 = { overshootClamping: true, damping: 54 };
-const merged4 = Object.assign(springPresets.SUBTLE_SPRING);
+let obj7 = {};
+const merged4 = Object.assign(fn(5605).SUBTLE_SPRING);
+obj7.overshootClamping = true;
+obj7.damping = 54;
 const constants2 = { PENDING: "pending", SUCCEEDED: "succeeded", FAILED: "failed" };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_50 = ReactCompilerGating.isReactCompilerEnabled() ? ((adCreativeId) => {
-  let backgroundImageUrl;
-  let closure_6;
-  let first;
-  let tmp4;
-  let obj = adCreativeId(backgroundImageUrl[14]);
-  const cResult = obj.c(14);
+  const cResult = adCreativeId(backgroundImageUrl[14]).c(14);
   adCreativeId = adCreativeId.adCreativeId;
   const adCreativeType = adCreativeId.adCreativeType;
   backgroundImageUrl = adCreativeId.backgroundImageUrl;
   const iconUrl = adCreativeId.iconUrl;
   const trackAssetLoadingFailure = adCreativeId.trackAssetLoadingFailure;
-  [first, _slicedToArray] = react.useState(constants2.PENDING);
+  [first, _slicedToArray] = noop.useState(constants2.PENDING);
   if (cResult[0] !== trackAssetLoadingFailure) {
     const fn = function o(arg0) {
       if (trackAssetLoadingFailure != null) {
@@ -979,52 +874,60 @@ let closure_50 = ReactCompilerGating.isReactCompilerEnabled() ? ((adCreativeId) 
     };
     cResult[0] = trackAssetLoadingFailure;
     cResult[1] = fn;
-    tmp4 = fn;
+    let tmp4 = fn;
   } else {
     tmp4 = cResult[1];
   }
-  const effectEvent = react.useEffectEvent(tmp4);
+  const effectEvent = noop.useEffectEvent(tmp4);
   if (cResult[2] === backgroundImageUrl) {
     if (cResult[3] === iconUrl) {
-      let tmp6;
       if (cResult[4] === effectEvent) {
-        tmp6 = cResult[5];
+        let tmp6 = cResult[5];
       }
       if (cResult[6] === backgroundImageUrl) {
-        let tmp7;
         if (cResult[7] === iconUrl) {
-          tmp7 = cResult[8];
+          let tmp7 = cResult[8];
         }
-        const effect = react.useEffect(tmp6, tmp7);
+        const effect = noop.useEffect(tmp6, tmp7);
         if (cResult[9] === adCreativeId) {
           if (cResult[10] === adCreativeType) {
-            let tmp9;
-            let tmp10;
             if (cResult[11] === first) {
-              tmp9 = cResult[12];
-              tmp10 = cResult[13];
+              let tmp9 = cResult[12];
+              let tmp10 = cResult[13];
             }
-            const effect1 = react.useEffect(tmp9, tmp10);
+            const effect1 = noop.useEffect(tmp9, tmp10);
             return first;
           }
         }
         class I {
           constructor() {
-            let items;
-            if (first === constants.FAILED) {
-              const obj = { name: MetricEvents.MetricEvents.QUEST_CONTENT_RENDERING_FAILURE, tags: items };
-              const increment = MonitoringAgentDefault.increment;
-              MonitoringAgentDefault;
-              const _HermesInternal = HermesInternal;
-              items = ["ad_creative_id:" + adCreativeId, , , ];
-              const _HermesInternal2 = HermesInternal;
-              items[1] = "ad_creative_type:" + AdCreativeType.AdCreativeType[adCreativeType];
-              const _HermesInternal3 = HermesInternal;
-              const obj2 = AnalyticsTypes;
-              items[2] = "quest_content:" + obj2.getQuestContentName(QuestTypes.QuestContent.QUEST_BAR_MOBILE);
+            if (closure_5 === closure_49.FAILED) {
+              tmp = closure_1;
+              tmp2 = closure_2;
+              obj = closure_1(closure_2[41]);
+              obj1 = { name: null, tags: null };
+              tmp3 = closure_0;
+              obj1.name = closure_0(closure_2[42]).MetricEvents.QUEST_CONTENT_RENDERING_FAILURE;
+              tmp4 = adCreativeId;
+              tmp5 = globalThis;
+              _HermesInternal = HermesInternal;
+              str = "ad_creative_id:";
+              items = [, , , ];
+              items[0] = "ad_creative_id:" + adCreativeId;
+              tmp6 = adCreativeType;
+              _HermesInternal2 = HermesInternal;
+              str2 = "ad_creative_type:";
+              items[1] = "ad_creative_type:" + closure_0(closure_2[43]).AdCreativeType[adCreativeType];
+              obj3 = closure_0(closure_2[44]);
+              _HermesInternal3 = HermesInternal;
+              str3 = "quest_content:";
+              items[2] = "quest_content:" + obj3.getQuestContentName(closure_0(closure_2[38]).QuestContent.QUEST_BAR_MOBILE);
+              str4 = "reason:asset_loading_error";
               items[3] = "reason:asset_loading_error";
-              increment(obj);
+              obj1.tags = items;
+              incrementResult = obj.increment(obj1);
             }
+            return;
           }
         }
         let items = [first, adCreativeId, adCreativeType];
@@ -1045,12 +948,11 @@ let closure_50 = ReactCompilerGating.isReactCompilerEnabled() ? ((adCreativeId) 
   }
   class T {
     constructor() {
-      closure_0 = closure_5(function*(arg0) {
-        closure_0 = arg0;
+      closure_129_0 = closure_5(function*(arg0) {
         if (c6 === 2) {
           c6 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
+        } else if (tmp6 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
@@ -1060,7 +962,6 @@ let closure_50 = ReactCompilerGating.isReactCompilerEnabled() ? ((adCreativeId) 
             return { value: "IconComponent", done: null };
           }
         } else {
-          let c4;
           try {
             c6 = 2;
             if (0 === c5) {
@@ -1072,17 +973,18 @@ let closure_50 = ReactCompilerGating.isReactCompilerEnabled() ? ((adCreativeId) 
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                let closure_2 = tmp;
-                let closure_1 = tmp4;
+                closure_2 = tmp3;
+                closure_1 = tmp7;
+                closure_129_0 = closure_0;
                 c4 = 1;
                 c5 = 2;
                 c6 = 1;
                 const obj4 = { value: closure_2_11.prefetch(closure_0), done: false };
                 return obj4;
               }
-            } else if (1 === c5) {
+            } else if (1 === tmp7) {
               c4 = 0;
-              closure_1_7(closure_0);
+              effectEvent(closure_129_0);
               c6 = 3;
               return { value: false, done: true };
             } else if (arg0 === 1) {
@@ -1098,25 +1000,22 @@ let closure_50 = ReactCompilerGating.isReactCompilerEnabled() ? ((adCreativeId) 
               c6 = 3;
               return { value: true, done: true };
             }
-          } catch (tmp13) {
-            closure_3 = tmp13;
-            if (0 === c4) {
-              c6 = 3;
-              throw tmp13;
+          } catch (tmp16) {
+            closure_3 = tmp16;
+            if (tmp4 === c4) {
+              c6 = tmp2;
+              throw tmp16;
             } else {
-              c5 = 1;
+              c5 = tmp;
             }
           }
         }
       });
-      prefetchWithErrorReporting = function prefetchWithErrorReporting() {
-        return closure_0(...arguments);
-      };
       closure_0 = closure_5(function*() {
         if (c3 === 2) {
           c3 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
+        } else if (tmp4 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
@@ -1127,7 +1026,6 @@ let closure_50 = ReactCompilerGating.isReactCompilerEnabled() ? ((adCreativeId) 
           }
         } else {
           try {
-            let tmp;
             c3 = 2;
             if (0 === c2) {
               if (arg0 === 1) {
@@ -1138,14 +1036,14 @@ let closure_50 = ReactCompilerGating.isReactCompilerEnabled() ? ((adCreativeId) 
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                let closure_1 = tmp4;
-                tmp = undefined;
+                closure_1 = tmp5;
+                closure_128_0 = undefined;
                 const items = [];
                 if (null != backgroundImageUrl) {
-                  items.push(tmp(tmp22));
+                  items.push(tmp2(tmp24));
                 }
                 if (null != iconUrl) {
-                  items.push(tmp(tmp14));
+                  items.push(tmp2(tmp15));
                 }
                 c2 = 1;
                 c3 = 1;
@@ -1160,25 +1058,30 @@ let closure_50 = ReactCompilerGating.isReactCompilerEnabled() ? ((adCreativeId) 
               const obj = { value, done: true };
               return obj;
             } else {
-              let FAILED;
-              tmp = value;
-              if (tmp.every(function() { /* body not rendered: F155762 */ })) {
-                FAILED = constants.SUCCEEDED;
+              closure_128_0 = value;
+              if (closure_128_0.every(/* F155762 */ function() { ... })) {
+                let FAILED = constants.SUCCEEDED;
               } else {
                 FAILED = constants.FAILED;
               }
               closure_2_6(FAILED);
               c3 = 3;
-              return { value: "IconComponent", done: null };
             }
-          } catch (tmp18) {
-            c3 = 3;
-            throw tmp18;
+          } catch (tmp19) {
+            c3 = tmp;
+            throw tmp19;
           }
         }
       });
       tmp = (function preloadQuestDockAssets() {
-        return closure_0(...arguments);
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
       })();
       return;
     }
@@ -1188,206 +1091,192 @@ let closure_50 = ReactCompilerGating.isReactCompilerEnabled() ? ((adCreativeId) 
   cResult[4] = effectEvent;
   cResult[5] = T;
   tmp6 = T;
+  let obj = adCreativeId(backgroundImageUrl[14]);
 }) : ((adCreativeId) => {
-  let closure_6;
-  let first;
   adCreativeId = adCreativeId.adCreativeId;
   const adCreativeType = adCreativeId.adCreativeType;
   const backgroundImageUrl = adCreativeId.backgroundImageUrl;
   const iconUrl = adCreativeId.iconUrl;
   const trackAssetLoadingFailure = adCreativeId.trackAssetLoadingFailure;
-  [first, _slicedToArray] = react.useState(constants2.PENDING);
-  let closure_7 = react.useEffectEvent((arg0) => {
+  [first, _slicedToArray] = noop.useState(constants2.PENDING);
+  closure_7 = noop.useEffectEvent((arg0) => {
     if (trackAssetLoadingFailure != null) {
       tmp(arg0);
     }
   });
   let items = [backgroundImageUrl, iconUrl];
-  const effect = react.useEffect(() => {
-    function preloadQuestDockAssets() {
-      return obj(...arguments);
-    }
+  const effect = noop.useEffect(() => {
     function prefetchWithErrorReporting(arg0) {
-      return obj(...arguments);
+      const self = this;
+      const apply = closure_1.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     }
-    let obj = function _prefetchWithErrorReporting2() {
-      obj = _asyncToGenerator(async (arg0) => {
-        let closure_0 = arg0;
-        if (c6 === 2) {
-          c6 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj2 = { value, done: true };
-            return obj2;
-          } else {
-            return { value: "IconComponent", done: null };
-          }
+    closure_1 = async function _prefetchWithErrorReporting2(arg0) {
+      if (c6 === 2) {
+        c6 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
-          let c4;
-          try {
-            c6 = 2;
-            if (0 === c5) {
-              if (arg0 === 1) {
-                c6 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c6 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
-              } else {
-                let closure_2 = tmp;
-                let closure_1 = tmp4;
-                c4 = 1;
-                c5 = 2;
-                c6 = 1;
-                const obj4 = { value: closure_2_11.prefetch(closure_0), done: false };
-                return obj4;
-              }
-            } else if (1 === c5) {
-              c4 = 0;
-              closure_1_7(closure_0);
-              c6 = 3;
-              return { value: false, done: true };
-            } else if (arg0 === 1) {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
               c6 = 3;
               throw value;
             } else if (arg0 === 2) {
-              c4 = 0;
               c6 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
-              c4 = 0;
-              c6 = 3;
-              return { value: true, done: true };
+              closure_2 = tmp3;
+              closure_1 = tmp7;
+              closure_129_0 = closure_0;
+              c4 = 1;
+              c5 = 2;
+              c6 = 1;
+              const obj4 = { value: closure_2_11.prefetch(closure_0), done: false };
+              return obj4;
             }
-          } catch (tmp13) {
-            closure_3 = tmp13;
-            if (0 === c4) {
-              c6 = 3;
-              throw tmp13;
-            } else {
-              c5 = 1;
-            }
+          } else if (1 === tmp7) {
+            c4 = 0;
+            closure_1_7(closure_129_0);
+            c6 = 3;
+            return { value: false, done: true };
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 0;
+            c6 = 3;
+            const obj = { value, done: true };
+            return obj;
+          } else {
+            c4 = 0;
+            c6 = 3;
+            return { value: true, done: true };
+          }
+        } catch (tmp16) {
+          closure_3 = tmp16;
+          if (tmp4 === c4) {
+            c6 = tmp2;
+            throw tmp16;
+          } else {
+            c5 = tmp;
           }
         }
-      });
-      return obj(...arguments);
+      }
     };
-    obj = function _preloadQuestDockAssets2() {
-      obj = _asyncToGenerator(async () => {
-        let closure_0;
-        if (c3 === 2) {
-          c3 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj2 = { value, done: true };
-            return obj2;
-          } else {
-            return { value: "IconComponent", done: null };
-          }
+    closure_2 = async function _preloadQuestDockAssets2() {
+      if (c3 === 2) {
+        c3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
-          try {
-            let tmp;
-            c3 = 2;
-            if (0 === c2) {
-              if (arg0 === 1) {
-                c3 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
-              } else {
-                let closure_1 = tmp4;
-                tmp = undefined;
-                const items = [];
-                if (null != c2) {
-                  items.push(prefetchWithErrorReporting(tmp22));
-                }
-                if (null != c3) {
-                  items.push(prefetchWithErrorReporting(tmp14));
-                }
-                c2 = 1;
-                c3 = 1;
-                const obj4 = { value: Promise.all(items), done: false };
-                return obj4;
-              }
-            } else if (arg0 === 1) {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c3 = 2;
+          if (0 === c2) {
+            if (arg0 === 1) {
               c3 = 3;
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
-              let FAILED;
-              tmp = value;
-              if (tmp.every((item) => true === item)) {
-                FAILED = constants.SUCCEEDED;
-              } else {
-                FAILED = constants.FAILED;
+              closure_1 = tmp5;
+              closure_0 = tmp2;
+              closure_128_0 = undefined;
+              const items = [];
+              if (null != c2) {
+                items.push(prefetchWithErrorReporting(tmp24));
               }
-              closure_1_6(FAILED);
-              c3 = 3;
-              return { value: "IconComponent", done: null };
+              if (null != c3) {
+                items.push(prefetchWithErrorReporting(tmp15));
+              }
+              c2 = 1;
+              c3 = 1;
+              const obj4 = { value: Promise.all(items), done: false };
+              return obj4;
             }
-          } catch (tmp18) {
+          } else if (arg0 === 1) {
             c3 = 3;
-            throw tmp18;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj = { value, done: true };
+            return obj;
+          } else {
+            closure_128_0 = value;
+            if (closure_128_0.every((item) => true === item)) {
+              let FAILED = constants.SUCCEEDED;
+            } else {
+              FAILED = constants.FAILED;
+            }
+            closure_1_6(FAILED);
+            c3 = 3;
           }
+        } catch (tmp19) {
+          c3 = tmp;
+          throw tmp19;
         }
-      });
-      return obj(...arguments);
+      }
     };
-    let tmp = !preloadQuestDockAssets();
+    !(function preloadQuestDockAssets() {
+      const self = this;
+      const apply = closure_2.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    })();
   }, items);
   const items1 = [first, adCreativeId, adCreativeType];
-  const effect1 = react.useEffect(() => {
-    let items;
+  const effect1 = noop.useEffect(() => {
     if (first === constants.FAILED) {
-      const obj = { name: MetricEvents.MetricEvents.QUEST_CONTENT_RENDERING_FAILURE, tags: items };
-      const increment = MonitoringAgentDefault.increment;
-      MonitoringAgentDefault;
+      const obj2 = { name: MetricEvents.MetricEvents.QUEST_CONTENT_RENDERING_FAILURE, tags: null };
       const _HermesInternal = HermesInternal;
-      items = ["ad_creative_id:" + adCreativeId, , , ];
+      const items = ["ad_creative_id:" + adCreativeId, , , ];
       const _HermesInternal2 = HermesInternal;
       items[1] = "ad_creative_type:" + AdCreativeType.AdCreativeType[adCreativeType];
+      const obj = MonitoringAgentDefault;
       const _HermesInternal3 = HermesInternal;
-      const obj2 = AnalyticsTypes;
-      items[2] = "quest_content:" + obj2.getQuestContentName(QuestTypes.QuestContent.QUEST_BAR_MOBILE);
+      items[2] = "quest_content:" + AnalyticsTypes.getQuestContentName(QuestTypes.QuestContent.QUEST_BAR_MOBILE);
       items[3] = "reason:asset_loading_error";
-      increment(obj);
+      obj2.tags = items;
+      obj.increment(obj2);
     }
   }, items1);
   return first;
 });
 const __initData17 = { code: "function QuestDockTsx17(){const{withSpring,isRendered,ENTRANCE_ANIMATION_SPING_CONFIG,componentDimensions}=this.__closure;return{opacity:withSpring(isRendered?1:0,ENTRANCE_ANIMATION_SPING_CONFIG,\"animate-always\"),transform:[{translateY:withSpring(isRendered?0:componentDimensions.height,ENTRANCE_ANIMATION_SPING_CONFIG)}]};}" };
 const __initData18 = { code: "function QuestDockTsx18(){const{withSpring,isRendered,ENTRANCE_ANIMATION_SPING_CONFIG,componentDimensions}=this.__closure;return{opacity:withSpring(isRendered?1:0,ENTRANCE_ANIMATION_SPING_CONFIG,'animate-always'),transform:[{translateY:withSpring(isRendered?0:componentDimensions.height,ENTRANCE_ANIMATION_SPING_CONFIG)}]};}" };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_53 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockWithEntranceAnimation(adCreativeId) {
-  let adCreativeType;
-  let backgroundImageUrl;
-  let iconUrl;
-  let layoutVariant;
-  let renderImpressionTracker;
-  let renderModeChangeTracker;
-  let stateFromStores;
-  let tmp10;
-  let tmp14;
-  let tmp17;
-  let tmp6;
-  let tmp7;
-  let trackAssetLoadingFailure;
-  const tmp2 = adCreativeType;
-  let obj = renderModeChangeTracker(adCreativeType[14]);
-  const cResult = obj.c(40);
+  let tmp2 = adCreativeType;
+  const cResult = renderModeChangeTracker(adCreativeType[14]).c(40);
   ({ renderImpressionTracker, renderModeChangeTracker } = adCreativeId);
   adCreativeId = adCreativeId.adCreativeId;
   adCreativeType = adCreativeId.adCreativeType;
@@ -1399,82 +1288,82 @@ let closure_53 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
   const expandedContent = adCreativeId.expandedContent;
   const backgroundContent = adCreativeId.backgroundContent;
   const withAndroidOffscreenAlphaCompositingWorkaround = adCreativeId.withAndroidOffscreenAlphaCompositingWorkaround;
-  let obj2 = expandedContent;
+  let View = adCreativeId;
   const context = expandedContent.useContext(adCreativeId(adCreativeType[45]));
   const isRendered = context.isRendered;
   const isVisibleToUser = context.isVisibleToUser;
-  const tmp4 = adCreativeId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [stateFromStores];
     const fn = function s() {
       return stateFromStores.prevRestingQuestDockMode;
     };
-    let num = 0;
     cResult[0] = items;
-    let num2 = 1;
     cResult[1] = fn;
-    tmp6 = items;
-    tmp7 = fn;
+    tmp5 = items;
+    tmp6 = fn;
   } else {
-    [tmp6, tmp7] = cResult;
+    [tmp5, tmp6] = cResult;
   }
-  const tmpResult = renderModeChangeTracker(tmp2[46]);
-  stateFromStores = tmpResult.useStateFromStores(tmp6, tmp7);
+  let obj = renderModeChangeTracker(adCreativeType[14]);
+  stateFromStores = renderModeChangeTracker(tmp2[46]).useStateFromStores(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function y() {
       return performance.now();
     };
     cResult[2] = fn2;
-    tmp10 = fn2;
+    let tmp9 = fn2;
   } else {
-    tmp10 = cResult[2];
+    tmp9 = cResult[2];
   }
-  const first = expandedHeight(obj2.useState(tmp10), 1)[0];
-  const ref = obj2.useRef(false);
-  const tmp13 = closure_47();
-  const tmp11 = expandedHeight;
+  const first = expandedHeight(obj2.useState(tmp9), 1)[0];
+  expandedContent.useRef(false);
+  const tmp12 = closure_47();
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    size = { width: 0, height: 0 };
+    let size = { width: 0, height: 0 };
     cResult[3] = size;
-    tmp14 = size;
+    let tmp13 = size;
   } else {
-    tmp14 = cResult[3];
+    tmp13 = cResult[3];
   }
-  const tmp11Result = tmp11(obj2.useState(tmp14), 2);
-  const first1 = tmp11Result[0];
-  let closure_16 = tmp11Result[1];
+  const tmp10Result = expandedHeight(expandedContent.useState(tmp13), 2);
+  const first1 = tmp10Result[0];
+  closure_16 = tmp10Result[1];
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult3 = renderModeChangeTracker(tmp2[47]);
-    const isEligibleForQuests = tmpResult3.getIsEligibleForQuests();
+    const isEligibleForQuests = renderModeChangeTracker(tmp2[47]).getIsEligibleForQuests();
     cResult[4] = isEligibleForQuests;
-    tmp17 = isEligibleForQuests;
+    let tmp16 = isEligibleForQuests;
+    const tmpResult3 = renderModeChangeTracker(tmp2[47]);
   } else {
-    tmp17 = cResult[4];
+    tmp16 = cResult[4];
   }
-  const tmpResult4 = renderModeChangeTracker(tmp2[21]);
+  let tmpResult = renderModeChangeTracker(tmp2[46]);
   class V {
     constructor() {
-      let items;
-      let num = 0;
-      const withSpring = spring.withSpring;
-      spring;
+      tmp = closure_0;
+      tmp2 = closure_2;
+      obj = closure_0(closure_2[27]);
+      num = 0;
+      tmp3 = isRendered;
       if (isRendered) {
         num = 1;
       }
-      let num2 = 0;
-      const obj = { opacity: withSpring(num, obj6, "animate-always"), transform: items };
-      const withSpring2 = spring.withSpring;
-      spring;
-      if (!isRendered) {
-        num2 = first1.height;
+      obj1 = { opacity: obj.withSpring(num, closure_48, "animate-always"), transform: null };
+      tmp4 = closure_48;
+      tmpResult = tmp(tmp2[27]);
+      num2 = 0;
+      if (!tmp3) {
+        tmp5 = closure_15;
+        num2 = closure_15.height;
       }
-      items = [{ translateY: withSpring2(num2, obj6) }];
-      ({ translateY: withSpring2(num2, obj6) });
-      return obj;
+      obj5 = { translateY: tmpResult.withSpring(num2, tmp4) };
+      items = [];
+      items[0] = obj5;
+      obj1.transform = items;
+      return obj1;
     }
   }
-  let obj3 = { withSpring: renderModeChangeTracker(tmp2[27]).withSpring, isRendered, ENTRANCE_ANIMATION_SPING_CONFIG: obj6, componentDimensions: first1 };
-  V.__closure = obj3;
+  const tmpResult4 = renderModeChangeTracker(tmp2[21]);
+  V.__closure = { withSpring: renderModeChangeTracker(tmp2[27]).withSpring, isRendered, ENTRANCE_ANIMATION_SPING_CONFIG: obj7, componentDimensions: first1 };
   V.__workletHash = 7000537051560;
   V.__initData = __initData17;
   const animatedStyle = tmpResult4.useAnimatedStyle(V);
@@ -1482,46 +1371,40 @@ let closure_53 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
     if (cResult[6] === adCreativeType) {
       if (cResult[7] === backgroundImageUrl) {
         if (cResult[8] === iconUrl) {
-          let tmp26;
-          let tmp25;
-          let tmp23 = !tmp17;
-          if (tmp17) {
-            tmp23 = tmp22 !== constants2.SUCCEEDED;
+          let tmp22 = !tmp16;
+          if (tmp16) {
+            tmp22 = tmp21 !== constants2.SUCCEEDED;
           }
-          let closure_17 = tmp23;
-          if (cResult[11] !== tmp23) {
+          closure_17 = tmp22;
+          if (cResult[11] !== tmp22) {
             const fn3 = function z() {
-              let obj = QuestActionCreators;
-              const obj2 = { isEligibleToBeVisible: !closure_17 };
-              let result = obj.updateQuestDockVisibilityEligibility(obj2);
+              let result = QuestActionCreators.updateQuestDockVisibilityEligibility({ isEligibleToBeVisible: !closure_17 });
               return () => {
-                const obj = renderModeChangeTracker(adCreativeType[48]);
-                const result = obj.updateQuestDockVisibilityEligibility({ isEligibleToBeVisible: false });
+                const result = renderModeChangeTracker(adCreativeType[48]).updateQuestDockVisibilityEligibility({ isEligibleToBeVisible: false });
               };
             };
-            const items1 = [tmp23];
-            cResult[11] = tmp23;
+            const items1 = [tmp22];
+            cResult[11] = tmp22;
             cResult[12] = fn3;
             cResult[13] = items1;
-            tmp26 = items1;
-            tmp25 = fn3;
+            let tmp25 = items1;
+            let tmp24 = fn3;
           } else {
-            tmp25 = cResult[12];
-            tmp26 = cResult[13];
+            tmp24 = cResult[12];
+            tmp25 = cResult[13];
           }
-          const effect = obj2.useEffect(tmp25, tmp26);
-          let tmp28 = null;
-          if (!tmp23) {
+          const effect = obj2.useEffect(tmp24, tmp25);
+          if (tmp22) {
+            return null;
+          } else {
             if (cResult[14] === animatedStyle) {
-              let tmp29;
-              if (cResult[15] === tmp13.wrapperAnimated) {
-                tmp29 = cResult[16];
+              if (cResult[15] === tmp12.wrapperAnimated) {
+                let tmp28 = cResult[16];
               }
               if (cResult[17] === adCreativeId) {
                 if (cResult[18] === adCreativeType) {
-                  let tmp30;
                   if (cResult[19] === first) {
-                    tmp30 = cResult[20];
+                    let tmp29 = cResult[20];
                   }
                   if (cResult[21] === backgroundColor) {
                     if (cResult[22] === backgroundContent) {
@@ -1532,41 +1415,34 @@ let closure_53 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
                               if (cResult[27] === stateFromStores) {
                                 if (cResult[28] === renderModeChangeTracker) {
                                   if (cResult[29] === theme) {
-                                    let tmp31;
                                     if (cResult[30] === withAndroidOffscreenAlphaCompositingWorkaround) {
-                                      tmp31 = cResult[31];
+                                      let tmp30 = cResult[31];
                                     }
                                     if (cResult[32] === isVisibleToUser) {
                                       if (cResult[33] === renderImpressionTracker) {
-                                        let tmp32;
-                                        if (cResult[34] === tmp31) {
-                                          tmp32 = cResult[35];
+                                        if (cResult[34] === tmp30) {
+                                          let tmp31 = cResult[35];
                                         }
-                                        if (cResult[36] === tmp32) {
-                                          if (cResult[37] === tmp29) {
-                                            let tmp34;
-                                            if (cResult[38] === tmp30) {
-                                              tmp34 = cResult[39];
-                                            }
-                                            tmp28 = tmp34;
+                                        if (cResult[36] === tmp31) {
+                                          if (cResult[37] === tmp28) {
                                           }
                                         }
-                                        let obj4 = { pointerEvents: "box-none", style: tmp29, onLayout: tmp30, children: tmp32 };
-                                        const tmp36 = closure_24(tmp4(tmp2[21]).View, obj4);
-                                        cResult[36] = tmp32;
-                                        cResult[37] = tmp29;
-                                        cResult[38] = tmp30;
-                                        cResult[39] = tmp36;
-                                        tmp34 = tmp36;
+                                        View = View(tmp2[21]).View;
+                                        let obj4 = { pointerEvents: "box-none", style: tmp28, onLayout: tmp29, children: tmp31 };
+                                        tmp2 = closure_24(View, obj4);
+                                        cResult[36] = tmp31;
+                                        cResult[37] = tmp28;
+                                        cResult[38] = tmp29;
+                                        cResult[39] = tmp2;
                                       }
                                     }
-                                    let obj5 = { children: tmp31, overrideVisibility: isVisibleToUser };
+                                    const obj5 = { children: tmp30, overrideVisibility: isVisibleToUser };
                                     let result = renderImpressionTracker(obj5);
                                     cResult[32] = isVisibleToUser;
                                     cResult[33] = renderImpressionTracker;
-                                    cResult[34] = tmp31;
+                                    cResult[34] = tmp30;
                                     cResult[35] = result;
-                                    tmp32 = result;
+                                    tmp31 = result;
                                   }
                                 }
                               }
@@ -1577,22 +1453,14 @@ let closure_53 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
                     }
                   }
                   function de() {
-                    let ThemeContextProvider;
-                    let items;
-                    let obj4;
-                    let obj5;
-                    const obj = { children: items };
-                    items = [, , ];
-                    const obj2 = { mode: stateFromStores };
-                    items[0] = renderModeChangeTracker(obj2);
-                    items[1] = closure_24(closure_46, {});
-                    const obj3 = { expandedHeight, children: closure_24(ThemeContextProvider, obj4) };
-                    const QuestDockGestureContextProvider = QuestDockGestureContext.QuestDockGestureContextProvider;
-                    obj4 = { theme, children: closure_24(closure_44, obj5) };
-                    obj5 = { backgroundColor, layoutVariant, expandedHeight, collapsedContent, expandedContent, backgroundContent, withAndroidOffscreenAlphaCompositingWorkaround };
-                    ThemeContextProvider = native.ThemeContextProvider;
-                    items[2] = closure_24(QuestDockGestureContextProvider, obj3);
-                    return closure_25(prioritySpeakerDucking, obj);
+                    const obj = { children: null };
+                    const items = [renderModeChangeTracker({ mode: stateFromStores }), closure_2_24(closure_46, {}), ];
+                    const obj3 = { expandedHeight, children: null };
+                    const obj4 = { theme, children: closure_2_24(closure_44, { backgroundColor, layoutVariant, expandedHeight, collapsedContent, expandedContent, backgroundContent, withAndroidOffscreenAlphaCompositingWorkaround }) };
+                    obj3.children = closure_2_24(native.ThemeContextProvider, obj4);
+                    items[2] = closure_2_24(QuestDockGestureContext.QuestDockGestureContextProvider, obj3);
+                    obj.children = items;
+                    return closure_2_25(closure_2_26, obj);
                   }
                   cResult[21] = backgroundColor;
                   cResult[22] = backgroundContent;
@@ -1605,12 +1473,11 @@ let closure_53 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
                   cResult[29] = theme;
                   cResult[30] = withAndroidOffscreenAlphaCompositingWorkaround;
                   cResult[31] = de;
-                  tmp31 = de;
+                  tmp30 = de;
                 }
               }
               function ae(height) {
-                let items;
-                size = { height: height.nativeEvent.layout.height, width: height.nativeEvent.layout.width };
+                const size = { height: height.nativeEvent.layout.height, width: height.nativeEvent.layout.width };
                 closure_16(size);
                 if (!ref.current) {
                   tmp2.current = true;
@@ -1619,14 +1486,13 @@ let closure_53 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
                     const _Math2 = Math;
                     const _performance = performance;
                     const rounded = Math.round(performance.now() - first);
-                    const obj = { name: MetricEvents.MetricEvents.QUEST_BAR_MOBILE_TIME_TO_FIRST_PAINT, tags: items };
-                    const distribution = MonitoringAgentDefault.distribution;
-                    MonitoringAgentDefault;
+                    const obj = { name: MetricEvents.MetricEvents.QUEST_BAR_MOBILE_TIME_TO_FIRST_PAINT, tags: null };
                     const _HermesInternal = HermesInternal;
-                    items = ["ad_creative_id:" + adCreativeId, ];
+                    const items = ["ad_creative_id:" + adCreativeId, ];
                     const _HermesInternal2 = HermesInternal;
                     items[1] = "ad_creative_type:" + AdCreativeType.AdCreativeType[adCreativeType];
-                    distribution(obj, rounded);
+                    obj.tags = items;
+                    MonitoringAgentDefault.distribution(obj, rounded);
                   }
                 }
               }
@@ -1634,85 +1500,60 @@ let closure_53 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
               cResult[18] = adCreativeType;
               cResult[19] = first;
               cResult[20] = ae;
-              tmp30 = ae;
+              tmp29 = ae;
             }
-            const items2 = [tmp13.wrapperAnimated, animatedStyle];
+            const items2 = [tmp12.wrapperAnimated, animatedStyle];
             cResult[14] = animatedStyle;
-            cResult[15] = tmp13.wrapperAnimated;
+            cResult[15] = tmp12.wrapperAnimated;
             cResult[16] = items2;
-            tmp29 = items2;
+            tmp28 = items2;
           }
-          return tmp28;
         }
       }
     }
   }
-  obj6 = { adCreativeId, adCreativeType, backgroundImageUrl, iconUrl, trackAssetLoadingFailure };
   cResult[5] = adCreativeId;
   cResult[6] = adCreativeType;
   cResult[7] = backgroundImageUrl;
   cResult[8] = iconUrl;
   cResult[9] = trackAssetLoadingFailure;
-  cResult[10] = obj6;
+  cResult[10] = { adCreativeId, adCreativeType, backgroundImageUrl, iconUrl, trackAssetLoadingFailure };
+  let obj3 = { withSpring: renderModeChangeTracker(tmp2[27]).withSpring, isRendered, ENTRANCE_ANIMATION_SPING_CONFIG: obj7, componentDimensions: first1 };
+  const obj6 = { adCreativeId, adCreativeType, backgroundImageUrl, iconUrl, trackAssetLoadingFailure };
 }) : (function QuestDockWithEntranceAnimation(adCreativeType) {
-  let adCreativeId;
-  let backgroundColor;
-  let backgroundContent;
-  let backgroundImageUrl;
-  let closure_10;
-  let closure_16;
-  let closure_9;
-  let collapsedContent;
-  let componentDimensions;
-  let expandedContent;
-  let iconUrl;
-  let items2;
-  let layoutVariant;
-  let mode;
-  let obj7;
-  let renderImpressionTracker;
-  let require;
-  let theme;
-  let trackAssetLoadingFailure;
   ({ renderModeChangeTracker: require, adCreativeId } = adCreativeType);
   adCreativeType = adCreativeType.adCreativeType;
-  ({ layoutVariant: closure_3, theme: closure_4, backgroundColor: _asyncToGenerator, expandedHeight: _slicedToArray, collapsedContent: _objectWithoutProperties, expandedContent: react, backgroundContent: closure_9, withAndroidOffscreenAlphaCompositingWorkaround: closure_10 } = adCreativeType);
+  ({ layoutVariant: closure_3, theme: closure_4, backgroundColor: asyncGeneratorStep, expandedHeight: _slicedToArray, collapsedContent: _objectWithoutProperties, expandedContent: noop, backgroundContent: closure_9, withAndroidOffscreenAlphaCompositingWorkaround: closure_10 } = adCreativeType);
   ({ renderImpressionTracker, backgroundImageUrl, iconUrl, trackAssetLoadingFailure } = adCreativeType);
-  const tmp2 = adCreativeType;
-  const context = react.useContext(adCreativeId(adCreativeType[45]));
+  const context = noop.useContext(adCreativeId(adCreativeType[45]));
   const isRendered = context.isRendered;
-  const isVisibleToUser = context.isVisibleToUser;
-  let obj2 = require("get initialized");
   let items = [mode];
-  mode = obj2.useStateFromStores(items, () => mode.prevRestingQuestDockMode);
-  let closure_13 = _slicedToArray(react.useState(() => performance.now()), 1)[0];
-  const ref = react.useRef(false);
+  mode = require("initialize").useStateFromStores(items, () => mode.prevRestingQuestDockMode);
+  closure_13 = _slicedToArray(noop.useState(() => performance.now()), 1)[0];
+  noop.useRef(false);
+  let obj2 = require("initialize");
+  const tmp2 = adCreativeType;
+  [componentDimensions, closure_16] = noop.useState({ width: 0, height: 0 });
   const tmp4 = closure_47();
-  [componentDimensions, closure_16] = react.useState({ width: 0, height: 0 });
+  const isEligibleForQuests = require("QuestsEligibility").getIsEligibleForQuests();
   let obj3 = require("QuestsEligibility");
-  const isEligibleForQuests = obj3.getIsEligibleForQuests();
-  let obj4 = require("ReanimatedRexport");
   const fn = function o() {
-    let items;
     let num = 0;
-    const withSpring = spring.withSpring;
-    spring;
     if (isRendered) {
       num = 1;
     }
+    const obj2 = { opacity: spring.withSpring(num, obj7, "animate-always"), transform: null };
     let num2 = 0;
-    const obj = { opacity: withSpring(num, obj6, "animate-always"), transform: items };
-    const withSpring2 = spring.withSpring;
-    spring;
     if (!isRendered) {
       num2 = first.height;
     }
-    items = [{ translateY: withSpring2(num2, obj6) }];
-    ({ translateY: withSpring2(num2, obj6) });
-    return obj;
+    const tmpResult = spring;
+    const items = [{ translateY: spring.withSpring(num2, obj7) }];
+    obj2.transform = items;
+    return obj2;
   };
-  let obj5 = { withSpring: require("spring").withSpring, isRendered, ENTRANCE_ANIMATION_SPING_CONFIG: obj6, componentDimensions };
-  fn.__closure = obj5;
+  let obj4 = require("ReanimatedRexport");
+  fn.__closure = { withSpring: require("spring").withSpring, isRendered, ENTRANCE_ANIMATION_SPING_CONFIG: obj7, componentDimensions };
   fn.__workletHash = 13272356181063;
   fn.__initData = __initData18;
   const animatedStyle = obj4.useAnimatedStyle(fn);
@@ -1720,92 +1561,70 @@ let closure_53 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
   if (isEligibleForQuests) {
     tmp10 = tmp9 !== constants2.SUCCEEDED;
   }
-  let closure_17 = tmp10;
+  closure_17 = tmp10;
   const items1 = [tmp10];
-  const effect = react.useEffect(() => {
-    let obj = QuestActionCreators;
-    const obj2 = { isEligibleToBeVisible: !closure_17 };
-    let result = obj.updateQuestDockVisibilityEligibility(obj2);
+  const effect = noop.useEffect(() => {
+    let result = QuestActionCreators.updateQuestDockVisibilityEligibility({ isEligibleToBeVisible: !closure_17 });
     return () => {
-      const obj = closure_1_0(adCreativeType[48]);
-      const result = obj.updateQuestDockVisibilityEligibility({ isEligibleToBeVisible: false });
+      const result = closure_1_0(adCreativeType[48]).updateQuestDockVisibilityEligibility({ isEligibleToBeVisible: false });
     };
   }, items1);
   let tmp13 = null;
   if (!tmp10) {
-    obj6 = {
-      pointerEvents: "box-none",
-      style: items2,
-      onLayout(height) {
-          let items;
-          size = { height: height.nativeEvent.layout.height, width: height.nativeEvent.layout.width };
-          closure_16(size);
-          if (!ref.current) {
-            tmp2.current = true;
-            const _Math = Math;
-            if (Math.random() < 0.1) {
-              const _Math2 = Math;
-              const _performance = performance;
-              const rounded = Math.round(performance.now() - closure_13);
-              const obj = { name: MetricEvents.MetricEvents.QUEST_BAR_MOBILE_TIME_TO_FIRST_PAINT, tags: items };
-              const distribution = MonitoringAgentDefault.distribution;
-              MonitoringAgentDefault;
-              const _HermesInternal = HermesInternal;
-              items = ["ad_creative_id:" + adCreativeId, ];
-              const _HermesInternal2 = HermesInternal;
-              items[1] = "ad_creative_type:" + AdCreativeType.AdCreativeType[adCreativeType];
-              distribution(obj, rounded);
-            }
-          }
-        },
-      children: renderImpressionTracker(obj7)
+    const obj6 = { pointerEvents: "box-none", style: null, onLayout: null, children: null };
+    const items2 = [tmp4.wrapperAnimated, animatedStyle];
+    obj6.style = items2;
+    obj6.onLayout = function onLayout(height) {
+      const size = { height: height.nativeEvent.layout.height, width: height.nativeEvent.layout.width };
+      closure_16(size);
+      if (!ref.current) {
+        tmp2.current = true;
+        const _Math = Math;
+        if (Math.random() < 0.1) {
+          const _Math2 = Math;
+          const _performance = performance;
+          const rounded = Math.round(performance.now() - closure_13);
+          const obj = { name: MetricEvents.MetricEvents.QUEST_BAR_MOBILE_TIME_TO_FIRST_PAINT, tags: null };
+          const _HermesInternal = HermesInternal;
+          const items = ["ad_creative_id:" + adCreativeId, ];
+          const _HermesInternal2 = HermesInternal;
+          items[1] = "ad_creative_type:" + AdCreativeType.AdCreativeType[adCreativeType];
+          obj.tags = items;
+          MonitoringAgentDefault.distribution(obj, rounded);
+        }
+      }
     };
-    items2 = [tmp4.wrapperAnimated, animatedStyle];
     obj7 = {
       children() {
-          let ThemeContextProvider;
-          let items;
-          let obj4;
-          let obj5;
-          const obj = { children: items };
-          items = [, , ];
-          const obj2 = { mode };
-          items[0] = _require(obj2);
-          items[1] = closure_24(closure_46, {});
-          const obj3 = { expandedHeight: _slicedToArray, children: closure_24(ThemeContextProvider, obj4) };
-          const QuestDockGestureContextProvider = QuestDockGestureContext.QuestDockGestureContextProvider;
-          obj4 = { theme, children: closure_24(closure_44, obj5) };
-          obj5 = { backgroundColor: _asyncToGenerator, layoutVariant, expandedHeight: _slicedToArray, collapsedContent: _objectWithoutProperties, expandedContent: react, backgroundContent, withAndroidOffscreenAlphaCompositingWorkaround: closure_10 };
-          ThemeContextProvider = native.ThemeContextProvider;
-          items[2] = closure_24(QuestDockGestureContextProvider, obj3);
-          return closure_25(prioritySpeakerDucking, obj);
+          const obj = { children: null };
+          const items = [_require({ mode }), closure_2_24(closure_46, {}), ];
+          const obj3 = { expandedHeight, children: null };
+          const obj4 = { theme, children: closure_2_24(closure_44, { backgroundColor, layoutVariant, expandedHeight, collapsedContent, expandedContent, backgroundContent, withAndroidOffscreenAlphaCompositingWorkaround: closure_1_10 }) };
+          obj3.children = closure_2_24(native.ThemeContextProvider, obj4);
+          items[2] = closure_2_24(QuestDockGestureContext.QuestDockGestureContextProvider, obj3);
+          obj.children = items;
+          return closure_2_25(closure_2_26, obj);
         },
-      overrideVisibility: isVisibleToUser
+      overrideVisibility: context.isVisibleToUser
     };
-    const View = adCreativeId(tmp2[21]).View;
-    tmp13 = closure_24(View, obj6);
+    obj6.children = renderImpressionTracker(obj7);
+    tmp13 = closure_24(adCreativeId(tmp2[21]).View, obj6);
   }
   return tmp13;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockQuestContent(quest) {
-  let DARK;
-  let tmp11;
-  let tmp12;
-  let tmp13;
-  let tmp9;
-  let obj = quest(576);
-  const cResult = obj.c(27);
-  const tmp = quest;
+ReactCompilerGating = fn(558);
+let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockQuestContent(quest) {
+  const cResult = quest(576).c(27);
   quest = quest.quest;
-  let obj2 = quest(10924);
-  const questBarImpressionSurvey = obj2.useQuestBarImpressionSurvey(quest);
+  const obj = quest(576);
+  const tmp = quest;
+  const questBarImpressionSurvey = quest(10924).useQuestBarImpressionSurvey(quest);
+  const obj2 = quest(10924);
+  const questDockAppThemedBackgroundColor = quest(14909).useQuestDockAppThemedBackgroundColor();
   const obj3 = quest(14909);
-  const questDockAppThemedBackgroundColor = obj3.useQuestDockAppThemedBackgroundColor();
+  const staticUrl = quest(14908).useQuestDockHeroAsset(quest).staticUrl;
   const obj4 = quest(14908);
-  const staticUrl = obj4.useQuestDockHeroAsset(quest).staticUrl;
-  const obj5 = quest(14908);
-  const questGameLogotypeAssetUrl = obj5.useQuestGameLogotypeAssetUrl(quest);
+  const questGameLogotypeAssetUrl = quest(14908).useQuestGameLogotypeAssetUrl(quest);
   const userStatus = quest.userStatus;
   let enrolledAt;
   if (userStatus != null) {
@@ -1813,13 +1632,11 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockQu
   }
   if (cResult[0] !== quest.id) {
     const fn = function o(asset_id) {
-      const obj = AnalyticsUtilsDefault;
-      const obj2 = { quest_id: quest.id, source: constants.QUESTS_BAR_MOBILE, asset_id };
-      obj.track(AnalyticEvents.QUEST_ASSET_LOADING_FAILURE, obj2);
+      AnalyticsUtilsDefault.track(AnalyticEvents.QUEST_ASSET_LOADING_FAILURE, { quest_id: quest.id, source: constants.QUESTS_BAR_MOBILE, asset_id });
     };
     cResult[0] = quest.id;
     cResult[1] = fn;
-    tmp9 = fn;
+    let tmp9 = fn;
   } else {
     tmp9 = cResult[1];
   }
@@ -1828,71 +1645,67 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockQu
     str = "flush";
   }
   if (null == enrolledAt) {
-    DARK = ThemeTypes.DARK;
+    const DARK = ThemeTypes.DARK;
   }
   if (cResult[2] !== (null != enrolledAt)) {
-    const tmp14Result = closure_24(questBarImpressionSurvey(null != enrolledAt ? 15007 : 15008), {});
-    const tmp14Result3 = closure_24(questBarImpressionSurvey(null != enrolledAt ? 15015 : 15016), {});
+    const tmp14Result = closure_24(questBarImpressionSurvey(tmp8 ? 15007 : 15008), {});
+    const tmp14Result3 = closure_24(questBarImpressionSurvey(tmp8 ? 15015 : 15016), {});
     let tmp14Result4 = null;
-    if (null == enrolledAt) {
+    if (!tmp8) {
       tmp14Result4 = closure_24(tmp15(15018), {});
     }
-    cResult[2] = null != enrolledAt;
+    cResult[2] = tmp8;
     cResult[3] = tmp14Result;
     cResult[4] = tmp14Result3;
     cResult[5] = tmp14Result4;
-    tmp13 = tmp14Result4;
-    tmp12 = tmp14Result3;
-    tmp11 = tmp14Result;
+    let tmp13 = tmp14Result4;
+    let tmp12 = tmp14Result3;
+    let tmp11 = tmp14Result;
   } else {
     tmp11 = cResult[3];
     tmp12 = cResult[4];
     tmp13 = cResult[5];
   }
   if (cResult[6] === questBarImpressionSurvey) {
-    let tmp19;
     if (cResult[7] === quest) {
-      tmp19 = cResult[8];
+      let tmp19 = cResult[8];
     }
     if (cResult[9] !== quest.id) {
       class C {
-        constructor(mode) {
-          const obj = { questId: quest.id, mode: mode.mode };
-          return closure_24(closure_45, obj);
+        constructor(arg0) {
+          obj = { questId: quest.id, mode: quest.mode };
+          return jsx(f69422, obj);
         }
       }
       cResult[9] = quest.id;
       cResult[10] = C;
     } else {
       class C {
-        constructor(mode) {
-          const obj = { questId: quest.id, mode: mode.mode };
-          return closure_24(closure_45, obj);
+        constructor(arg0) {
+          obj = { questId: quest.id, mode: quest.mode };
+          return jsx(f69422, obj);
         }
       }
     }
     if (cResult[11] === questDockAppThemedBackgroundColor) {
       class C {
-        constructor(mode) {
-          const obj = { questId: quest.id, mode: mode.mode };
-          return closure_24(closure_45, obj);
+        constructor(arg0) {
+          obj = { questId: quest.id, mode: quest.mode };
+          return jsx(f69422, obj);
         }
       }
     }
-    obj6 = { adCreativeId: quest.id, adCreativeType: tmp(5637).AdCreativeType.QUEST, backgroundImageUrl: staticUrl, iconUrl: questGameLogotypeAssetUrl, trackAssetLoadingFailure: tmp9, layoutVariant: str, theme: DARK, backgroundColor: questDockAppThemedBackgroundColor, expandedHeight, collapsedContent: tmp11, expandedContent: tmp12, backgroundContent: tmp13, renderImpressionTracker: tmp19, renderModeChangeTracker: C };
+    const obj6 = { adCreativeId: quest.id, adCreativeType: tmp(5637).AdCreativeType.QUEST, backgroundImageUrl: staticUrl, iconUrl: questGameLogotypeAssetUrl, trackAssetLoadingFailure: tmp9, layoutVariant: str, theme: DARK, backgroundColor: questDockAppThemedBackgroundColor, expandedHeight, collapsedContent: tmp11, expandedContent: tmp12, backgroundContent: tmp13, renderImpressionTracker: tmp19, renderModeChangeTracker: C };
+    const tmp25 = closure_24(closure_53, obj6);
     cResult[11] = questDockAppThemedBackgroundColor;
     cResult[12] = staticUrl;
     cResult[13] = questGameLogotypeAssetUrl;
     cResult[14] = quest.id;
-    const tmp25 = closure_24(closure_53, obj6);
     class S {
       constructor(arg0) {
-        let children;
-        let overrideVisibility;
-        ({ children, overrideVisibility } = arg0);
-        const obj = { questOrQuests: quest, overrideVisibility, questContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, onImpression: questBarImpressionSurvey, children };
-        const BillableAdPlacementImpressionTrackerNative = QuestContentImpressionTracker.BillableAdPlacementImpressionTrackerNative;
-        return closure_24(BillableAdPlacementImpressionTrackerNative, obj);
+        ({ children, overrideVisibility } = quest);
+        obj = { questOrQuests: quest, overrideVisibility, questContent: closure_0(closure_2[38]).QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: closure_0(closure_2[38]).QuestContent.QUEST_BAR_MOBILE, onImpression: closure_1, children };
+        return jsx(closure_0(closure_2[57]).BillableAdPlacementImpressionTrackerNative, obj);
       }
     }
     cResult[15] = tmp9;
@@ -1907,110 +1720,98 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockQu
   }
   class S {
     constructor(arg0) {
-      let children;
-      let overrideVisibility;
-      ({ children, overrideVisibility } = arg0);
-      const obj = { questOrQuests: quest, overrideVisibility, questContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, onImpression: questBarImpressionSurvey, children };
-      const BillableAdPlacementImpressionTrackerNative = QuestContentImpressionTracker.BillableAdPlacementImpressionTrackerNative;
-      return closure_24(BillableAdPlacementImpressionTrackerNative, obj);
+      ({ children, overrideVisibility } = quest);
+      obj = { questOrQuests: quest, overrideVisibility, questContent: closure_0(closure_2[38]).QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: closure_0(closure_2[38]).QuestContent.QUEST_BAR_MOBILE, onImpression: closure_1, children };
+      return jsx(closure_0(closure_2[57]).BillableAdPlacementImpressionTrackerNative, obj);
     }
   }
   cResult[6] = questBarImpressionSurvey;
   cResult[7] = quest;
   cResult[8] = S;
   tmp19 = S;
+  const obj5 = quest(14908);
 }) : (function QuestDockQuestContent(quest) {
-  let DARK;
-  let str;
-  let tmp7Result;
   quest = quest.quest;
-  let obj = quest(10924);
-  const onImpression = obj.useQuestBarImpressionSurvey(quest);
-  let obj2 = quest(14909);
-  const questDockAppThemedBackgroundColor = obj2.useQuestDockAppThemedBackgroundColor();
+  const onImpression = quest(10924).useQuestBarImpressionSurvey(quest);
+  const obj = quest(10924);
+  const questDockAppThemedBackgroundColor = quest(14909).useQuestDockAppThemedBackgroundColor();
+  const obj2 = quest(14909);
   const obj3 = quest(14908);
-  const staticUrl = obj3.useQuestDockHeroAsset(quest).staticUrl;
   const userStatus = quest.userStatus;
   let enrolledAt;
-  const obj4 = quest(14908);
-  const questGameLogotypeAssetUrl = obj4.useQuestGameLogotypeAssetUrl(quest);
+  const questGameLogotypeAssetUrl = quest(14908).useQuestGameLogotypeAssetUrl(quest);
   if (userStatus != null) {
     enrolledAt = userStatus.enrolledAt;
   }
-  const obj5 = { quest, children: closure_24(closure_53, obj6) };
-  obj6 = {
+  const obj5 = { quest, children: null };
+  const obj6 = {
     adCreativeId: quest.id,
     adCreativeType: quest(5637).AdCreativeType.QUEST,
-    backgroundImageUrl: staticUrl,
+    backgroundImageUrl: obj3.useQuestDockHeroAsset(quest).staticUrl,
     iconUrl: questGameLogotypeAssetUrl,
     trackAssetLoadingFailure(asset_id) {
-      const obj = AnalyticsUtilsDefault;
-      const obj2 = { quest_id: quest.id, source: constants.QUESTS_BAR_MOBILE, asset_id };
-      obj.track(AnalyticEvents.QUEST_ASSET_LOADING_FAILURE, obj2);
+      AnalyticsUtilsDefault.track(AnalyticEvents.QUEST_ASSET_LOADING_FAILURE, { quest_id: quest.id, source: constants.QUESTS_BAR_MOBILE, asset_id });
     },
-    layoutVariant: str,
-    theme: DARK,
-    backgroundColor: questDockAppThemedBackgroundColor,
-    expandedHeight,
-    collapsedContent: closure_24(onImpression(null != enrolledAt ? 15007 : 15008), {}),
-    expandedContent: closure_24(onImpression(null != enrolledAt ? 15015 : 15016), {}),
-    backgroundContent: tmp7Result,
-    renderImpressionTracker(arg0) {
-      let children;
-      let overrideVisibility;
-      ({ children, overrideVisibility } = arg0);
-      const obj = { questOrQuests: quest, overrideVisibility, questContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, onImpression, children };
-      const BillableAdPlacementImpressionTrackerNative = QuestContentImpressionTracker.BillableAdPlacementImpressionTrackerNative;
-      return closure_24(BillableAdPlacementImpressionTrackerNative, obj);
-    },
-    renderModeChangeTracker(mode) {
-      const obj = { questId: quest.id, mode: mode.mode };
-      return closure_24(closure_45, obj);
-    }
+    layoutVariant: null,
+    theme: null,
+    backgroundColor: null,
+    expandedHeight: null,
+    collapsedContent: null,
+    expandedContent: null,
+    backgroundContent: null,
+    renderImpressionTracker: null,
+    renderModeChangeTracker: null
   };
-  const QuestDockQuestProvider = tmp(14940).QuestDockQuestProvider;
-  str = "insetHeader";
+  let str = "insetHeader";
   if (null != enrolledAt) {
     str = "flush";
   }
-  DARK = undefined;
+  obj6.layoutVariant = str;
+  let DARK;
   if (null == enrolledAt) {
     DARK = ThemeTypes.DARK;
   }
-  tmp7Result = null;
+  obj6.theme = DARK;
+  obj6.backgroundColor = questDockAppThemedBackgroundColor;
+  obj6.expandedHeight = expandedHeight;
+  obj6.collapsedContent = closure_24(onImpression(null != enrolledAt ? 15007 : 15008), {});
+  obj6.expandedContent = closure_24(onImpression(null != enrolledAt ? 15015 : 15016), {});
+  let tmp7Result = null;
   if (null == enrolledAt) {
     tmp7Result = closure_24(tmp11(15018), {});
   }
-  return closure_24(QuestDockQuestProvider, obj5);
+  obj6.backgroundContent = tmp7Result;
+  obj6.renderImpressionTracker = function renderImpressionTracker(arg0) {
+    ({ children, overrideVisibility } = arg0);
+    return closure_2_24(QuestContentImpressionTracker.BillableAdPlacementImpressionTrackerNative, { questOrQuests: quest, overrideVisibility, questContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, onImpression, children });
+  };
+  obj6.renderModeChangeTracker = function renderModeChangeTracker(mode) {
+    return closure_2_24(closure_45, { questId: quest.id, mode: mode.mode });
+  };
+  obj5.children = closure_24(closure_53, obj6);
+  return closure_24(quest(14940).QuestDockQuestProvider, obj5);
 });
-let closure_54 = tmp12;
-ReactCompilerGating = ReactCompilerGating_mod;
+let closure_54 = tmp11;
+ReactCompilerGating = fn(558);
 let closure_55 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockBountyContent(bounty) {
-  let tmp10;
-  let tmp15;
-  let tmp19;
-  let tmp8;
-  let tmp9;
-  let obj = bounty(576);
-  const cResult = obj.c(22);
+  const cResult = bounty(576).c(22);
   bounty = bounty.bounty;
-  let obj2 = bounty(14909);
-  const bountyPreviewImageUrl = obj2.useBountyPreviewImageUrl(bounty);
+  let obj = bounty(576);
+  const bountyPreviewImageUrl = bounty(14909).useBountyPreviewImageUrl(bounty);
+  const obj2 = bounty(14909);
+  const questDockAppThemedBackgroundColor = bounty(14909).useQuestDockAppThemedBackgroundColor();
   const obj3 = bounty(14909);
-  const questDockAppThemedBackgroundColor = obj3.useQuestDockAppThemedBackgroundColor();
+  const questDockBountySmokeCollapsedPlaceholderUrl = bounty(15021).useQuestDockBountySmokeCollapsedPlaceholderUrl();
   const obj4 = bounty(15021);
-  const questDockBountySmokeCollapsedPlaceholderUrl = obj4.useQuestDockBountySmokeCollapsedPlaceholderUrl();
-  const obj5 = bounty(15022);
-  const isBountiesAndroidQuestBarSmokeAnimationEnabled = obj5.useIsBountiesAndroidQuestBarSmokeAnimationEnabled(constants.QUESTS_BAR_MOBILE);
+  const isBountiesAndroidQuestBarSmokeAnimationEnabled = bounty(15022).useIsBountiesAndroidQuestBarSmokeAnimationEnabled(constants.QUESTS_BAR_MOBILE);
   if (cResult[0] !== bounty.id) {
     const fn = function o(asset_id) {
       const obj = AnalyticsUtilsDefault;
-      const obj2 = { source: constants.QUESTS_BAR_MOBILE, ad_creative_id: bounty.id, ad_creative_type: AdCreativeType.AdCreativeType.BOUNTY, asset_id };
-      obj.track(AnalyticEvents.AD_ASSET_LOADING_FAILURE, obj2);
+      obj.track(AnalyticEvents.AD_ASSET_LOADING_FAILURE, { source: constants.QUESTS_BAR_MOBILE, ad_creative_id: bounty.id, ad_creative_type: AdCreativeType.AdCreativeType.BOUNTY, asset_id });
     };
     cResult[0] = bounty.id;
     cResult[1] = fn;
-    tmp8 = fn;
+    let tmp8 = fn;
   } else {
     tmp8 = cResult[1];
   }
@@ -2019,46 +1820,42 @@ let closure_55 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
     const tmp14 = closure_24(QuestDockBountyBodyDefault, {});
     cResult[2] = tmp13;
     cResult[3] = tmp14;
-    tmp10 = tmp14;
-    tmp9 = tmp13;
+    let tmp10 = tmp14;
+    let tmp9 = tmp13;
   } else {
     tmp9 = cResult[2];
     tmp10 = cResult[3];
   }
   if (cResult[4] !== bountyPreviewImageUrl) {
-    obj6 = { previewImageUrl: bountyPreviewImageUrl };
+    const obj6 = { previewImageUrl: bountyPreviewImageUrl };
     const tmp18 = closure_24(QuestDockBountyBackgroundDefault, obj6);
     cResult[4] = bountyPreviewImageUrl;
     cResult[5] = tmp18;
-    tmp15 = tmp18;
+    let tmp15 = tmp18;
   } else {
     tmp15 = cResult[5];
   }
   if (cResult[6] !== bounty.id) {
     const fn2 = function u(arg0) {
-      let children;
-      let overrideVisibility;
       ({ children, overrideVisibility } = arg0);
-      const obj = { adContentId: bounty.id, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, overrideVisibility, questContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, children };
-      const BillableAdPlacementImpressionTrackerNative = QuestContentImpressionTracker.BillableAdPlacementImpressionTrackerNative;
-      return closure_24(BillableAdPlacementImpressionTrackerNative, obj);
+      return closure_2_24(QuestContentImpressionTracker.BillableAdPlacementImpressionTrackerNative, { adContentId: bounty.id, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, overrideVisibility, questContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, children });
     };
     class D {
-      constructor(mode) {
-        const obj = { adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, adContentId: bounty.id, mode: mode.mode };
-        return closure_24(closure_45, obj);
+      constructor(arg0) {
+        obj = { adCreativeType: closure_0(closure_2[43]).AdCreativeType.BOUNTY, adContentId: bounty.id, mode: bounty.mode };
+        return jsx(f69422, obj);
       }
     }
     cResult[6] = bounty.id;
     cResult[7] = fn2;
     cResult[8] = D;
-    tmp19 = fn2;
+    let tmp19 = fn2;
   } else {
     tmp19 = cResult[7];
     class D {
-      constructor(mode) {
-        const obj = { adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, adContentId: bounty.id, mode: mode.mode };
-        return closure_24(closure_45, obj);
+      constructor(arg0) {
+        obj = { adCreativeType: closure_0(closure_2[43]).AdCreativeType.BOUNTY, adContentId: bounty.id, mode: bounty.mode };
+        return jsx(f69422, obj);
       }
     }
   }
@@ -2070,21 +1867,20 @@ let closure_55 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
             if (cResult[14] === tmp8) {
               if (cResult[15] === tmp15) {
                 if (cResult[16] === tmp19) {
-                  let tmp21;
                   if (cResult[17] === D) {
-                    tmp21 = cResult[18];
+                    let tmp21 = cResult[18];
                   }
                   class D {
-                    constructor(mode) {
-                      const obj = { adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, adContentId: bounty.id, mode: mode.mode };
-                      return closure_24(closure_45, obj);
+                    constructor(arg0) {
+                      obj = { adCreativeType: closure_0(closure_2[43]).AdCreativeType.BOUNTY, adContentId: bounty.id, mode: bounty.mode };
+                      return jsx(f69422, obj);
                     }
                   }
-                  const obj7 = { bounty, children: tmp21 };
+                  obj7 = { bounty, children: tmp21 };
+                  const tmp25 = closure_24(tmp(14940).QuestDockBountyProvider, obj7);
                   cResult[19] = bounty;
                   cResult[20] = tmp21;
-                  cResult[21] = closure_24(bounty(14940).QuestDockBountyProvider, obj7);
-                  const tmp25 = closure_24(bounty(14940).QuestDockBountyProvider, obj7);
+                  cResult[21] = tmp25;
                 }
               }
             }
@@ -2093,8 +1889,8 @@ let closure_55 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
       }
     }
   }
-  const obj8 = { adCreativeId: bounty.id, adCreativeType: bounty(5637).AdCreativeType.BOUNTY, backgroundImageUrl: questDockBountySmokeCollapsedPlaceholderUrl, iconUrl: bounty.productIcon, trackAssetLoadingFailure: tmp8, layoutVariant: "insetHeader", theme: ThemeTypes.DARK, backgroundColor: questDockAppThemedBackgroundColor, expandedHeight: expandedHeight2, collapsedContent: tmp9, expandedContent: tmp10, backgroundContent: tmp15, withAndroidOffscreenAlphaCompositingWorkaround: isBountiesAndroidQuestBarSmokeAnimationEnabled, renderImpressionTracker: tmp19, renderModeChangeTracker: D };
-  const tmp22 = closure_24(closure_53, obj8);
+  const obj5 = bounty(15022);
+  const tmp22 = closure_24(closure_53, { adCreativeId: bounty.id, adCreativeType: bounty(5637).AdCreativeType.BOUNTY, backgroundImageUrl: questDockBountySmokeCollapsedPlaceholderUrl, iconUrl: bounty.productIcon, trackAssetLoadingFailure: tmp8, layoutVariant: "insetHeader", theme: ThemeTypes.DARK, backgroundColor: questDockAppThemedBackgroundColor, expandedHeight: expandedHeight2, collapsedContent: tmp9, expandedContent: tmp10, backgroundContent: tmp15, withAndroidOffscreenAlphaCompositingWorkaround: isBountiesAndroidQuestBarSmokeAnimationEnabled, renderImpressionTracker: tmp19, renderModeChangeTracker: D });
   cResult[9] = questDockAppThemedBackgroundColor;
   cResult[10] = bounty.id;
   cResult[11] = bounty.productIcon;
@@ -2106,26 +1902,26 @@ let closure_55 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
   cResult[17] = D;
   cResult[18] = tmp22;
   tmp21 = tmp22;
+  const obj8 = { adCreativeId: bounty.id, adCreativeType: bounty(5637).AdCreativeType.BOUNTY, backgroundImageUrl: questDockBountySmokeCollapsedPlaceholderUrl, iconUrl: bounty.productIcon, trackAssetLoadingFailure: tmp8, layoutVariant: "insetHeader", theme: ThemeTypes.DARK, backgroundColor: questDockAppThemedBackgroundColor, expandedHeight: expandedHeight2, collapsedContent: tmp9, expandedContent: tmp10, backgroundContent: tmp15, withAndroidOffscreenAlphaCompositingWorkaround: isBountiesAndroidQuestBarSmokeAnimationEnabled, renderImpressionTracker: tmp19, renderModeChangeTracker: D };
 }) : (function QuestDockBountyContent(bounty) {
   bounty = bounty.bounty;
+  const bountyPreviewImageUrl = bounty(14909).useBountyPreviewImageUrl(bounty);
   let obj = bounty(14909);
-  const bountyPreviewImageUrl = obj.useBountyPreviewImageUrl(bounty);
-  let obj2 = bounty(14909);
-  const questDockAppThemedBackgroundColor = obj2.useQuestDockAppThemedBackgroundColor();
+  const questDockAppThemedBackgroundColor = bounty(14909).useQuestDockAppThemedBackgroundColor();
+  const obj2 = bounty(14909);
+  const questDockBountySmokeCollapsedPlaceholderUrl = bounty(15021).useQuestDockBountySmokeCollapsedPlaceholderUrl();
   const obj3 = bounty(15021);
-  const questDockBountySmokeCollapsedPlaceholderUrl = obj3.useQuestDockBountySmokeCollapsedPlaceholderUrl();
+  const isBountiesAndroidQuestBarSmokeAnimationEnabled = bounty(15022).useIsBountiesAndroidQuestBarSmokeAnimationEnabled(constants.QUESTS_BAR_MOBILE);
+  const obj5 = { bounty, children: null };
   const obj4 = bounty(15022);
-  const isBountiesAndroidQuestBarSmokeAnimationEnabled = obj4.useIsBountiesAndroidQuestBarSmokeAnimationEnabled(constants.QUESTS_BAR_MOBILE);
-  const obj5 = { bounty, children: closure_24(closure_53, obj6) };
-  obj6 = {
+  obj5.children = closure_24(closure_53, {
     adCreativeId: bounty.id,
     adCreativeType: bounty(5637).AdCreativeType.BOUNTY,
     backgroundImageUrl: questDockBountySmokeCollapsedPlaceholderUrl,
     iconUrl: bounty.productIcon,
     trackAssetLoadingFailure(asset_id) {
       const obj = AnalyticsUtilsDefault;
-      const obj2 = { source: constants.QUESTS_BAR_MOBILE, ad_creative_id: bounty.id, ad_creative_type: AdCreativeType.AdCreativeType.BOUNTY, asset_id };
-      obj.track(AnalyticEvents.AD_ASSET_LOADING_FAILURE, obj2);
+      obj.track(AnalyticEvents.AD_ASSET_LOADING_FAILURE, { source: constants.QUESTS_BAR_MOBILE, ad_creative_id: bounty.id, ad_creative_type: AdCreativeType.AdCreativeType.BOUNTY, asset_id });
     },
     layoutVariant: "insetHeader",
     theme: ThemeTypes.DARK,
@@ -2136,107 +1932,90 @@ let closure_55 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
     backgroundContent: closure_24(QuestDockBountyBackgroundDefault, { previewImageUrl: bountyPreviewImageUrl }),
     withAndroidOffscreenAlphaCompositingWorkaround: isBountiesAndroidQuestBarSmokeAnimationEnabled,
     renderImpressionTracker(arg0) {
-      let children;
-      let overrideVisibility;
       ({ children, overrideVisibility } = arg0);
-      const obj = { adContentId: bounty.id, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, overrideVisibility, questContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, children };
-      const BillableAdPlacementImpressionTrackerNative = QuestContentImpressionTracker.BillableAdPlacementImpressionTrackerNative;
-      return closure_24(BillableAdPlacementImpressionTrackerNative, obj);
+      return closure_2_24(QuestContentImpressionTracker.BillableAdPlacementImpressionTrackerNative, { adContentId: bounty.id, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, overrideVisibility, questContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, children });
     },
     renderModeChangeTracker(mode) {
-      const obj = { adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, adContentId: bounty.id, mode: mode.mode };
-      return closure_24(closure_45, obj);
+      return closure_2_24(closure_45, { adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, adContentId: bounty.id, mode: mode.mode });
     }
-  };
-  const QuestDockBountyProvider = bounty(14940).QuestDockBountyProvider;
-  return closure_24(QuestDockBountyProvider, obj5);
+  });
+  return closure_24(bounty(14940).QuestDockBountyProvider, obj5);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockWithVisibilityContext() {
-  const obj = react2;
-  const cResult = obj.c(13);
-  const obj2 = QuestHooks;
-  const mobileQuestDock = obj2.useMobileQuestDock();
-  const obj3 = QuestHooks;
-  const isMobileQuestDockRenderedBase = obj3.useIsMobileQuestDockRenderedBase(mobileQuestDock);
-  const obj4 = QuestHooks;
-  const isMobileQuestDockVisibleToUser = obj4.useIsMobileQuestDockVisibleToUser(mobileQuestDock, isMobileQuestDockRenderedBase);
+ReactCompilerGating = fn(558);
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDock.tsx");
+
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockWithVisibilityContext() {
+  let tmp2 = dependencyMap;
+  const cResult = c.c(13);
+  const mobileQuestDock = QuestHooks.useMobileQuestDock();
+  const isMobileQuestDockRenderedBase = QuestHooks.useIsMobileQuestDockRenderedBase(mobileQuestDock);
+  const isMobileQuestDockVisibleToUser = QuestHooks.useIsMobileQuestDockVisibleToUser(mobileQuestDock, isMobileQuestDockRenderedBase);
   if (cResult[0] === isMobileQuestDockRenderedBase) {
-    let tmp7;
-    let tmp14;
-    let tmp23;
     if (cResult[1] === isMobileQuestDockVisibleToUser) {
-      tmp7 = cResult[2];
+      let tmp7 = cResult[2];
     }
-    const tmp9 = useNoFillDecisionDefault;
-    const tmp9Result = tmp9(QuestTypes.AdPlacement.MOBILE_HOME_DOCK_AREA, "QuestDockWithVisibilityContext");
-    const tmp11 = useIsWindowLargeDefault();
-    const tmp12 = !tmp11;
-    const tmpResult = QuestHooks;
-    const isMobileQuestDockVisibleToUser1 = tmpResult.useIsMobileQuestDockVisibleToUser(mobileQuestDock, tmp12);
+    let tmp8 = importDefault;
+    let decisionId = useNoFillDecisionDefault(QuestTypes.AdPlacement.MOBILE_HOME_DOCK_AREA, "QuestDockWithVisibilityContext");
+    const tmp10 = useIsWindowLargeDefault();
+    const tmp11 = !tmp10;
+    const isMobileQuestDockVisibleToUser1 = QuestHooks.useIsMobileQuestDockVisibleToUser(mobileQuestDock, tmp11);
     const type = mobileQuestDock.type;
     if (AdCreativeType.AdCreativeType.BOUNTY === type) {
-      let tmp19;
       if (cResult[3] !== mobileQuestDock.bounty) {
         const obj5 = { bounty: mobileQuestDock.bounty };
-        const tmp22 = closure_24(closure_55, obj5);
+        const tmp21 = closure_1_24(closure_55, obj5);
         cResult[3] = mobileQuestDock.bounty;
-        cResult[4] = tmp22;
-        tmp19 = tmp22;
-      } else {
-        tmp19 = cResult[4];
+        cResult[4] = tmp21;
       }
-      tmp14 = tmp19;
-    } else if (AdCreativeType.AdCreativeType.QUEST === type) {
-      let tmp15;
-      if (cResult[5] !== mobileQuestDock.quest) {
-        obj6 = { quest: mobileQuestDock.quest };
-        const tmp18 = closure_24(closure_54, obj6);
-        cResult[5] = mobileQuestDock.quest;
-        cResult[6] = tmp18;
-        tmp15 = tmp18;
-      } else {
-        tmp15 = cResult[6];
-      }
-      tmp14 = tmp15;
-    } else if (AdCreativeType.AdCreativeType.NO_FILL === type) {
-      tmp14 = null;
-    }
-    if (mobileQuestDock.type === AdCreativeType.AdCreativeType.NO_FILL) {
-      let tmp27 = null;
-      if (null != tmp9Result) {
-        tmp27 = null;
-        if (!tmp11) {
-          if (cResult[7] === isMobileQuestDockVisibleToUser1) {
-            let tmp28;
-            if (cResult[8] === tmp9Result.decisionId) {
-              tmp28 = cResult[9];
-            }
-            tmp27 = tmp28;
-          }
-          const obj7 = { decisionId: tmp9Result.decisionId, visible: isMobileQuestDockVisibleToUser1 };
-          const tmp30 = closure_24(NoFillQuestDockDefault, obj7);
-          cResult[7] = isMobileQuestDockVisibleToUser1;
-          cResult[8] = tmp9Result.decisionId;
-          cResult[9] = tmp30;
-          tmp28 = tmp30;
-        }
-      }
-      tmp23 = tmp27;
     } else {
-      if (cResult[10] === tmp14) {
-        if (cResult[11] === tmp7) {
-          tmp23 = cResult[12];
+      if (AdCreativeType.AdCreativeType.QUEST === type) {
+        if (cResult[5] !== mobileQuestDock.quest) {
+          const obj6 = { quest: mobileQuestDock.quest };
+          const tmp17 = closure_1_24(closure_54, obj6);
+          cResult[5] = mobileQuestDock.quest;
+          cResult[6] = tmp17;
+          let tmp14 = tmp17;
+        } else {
+          tmp14 = cResult[6];
         }
+        let tmp13 = tmp14;
+      } else if (AdCreativeType.AdCreativeType.NO_FILL === type) {
+        tmp13 = null;
       }
-      const obj8 = { value: tmp7, children: tmp14 };
-      const tmp25 = closure_24(reactDefault.Provider, obj8);
-      cResult[10] = tmp14;
-      cResult[11] = tmp7;
-      cResult[12] = tmp25;
-      tmp23 = tmp25;
+      if (mobileQuestDock.type === AdCreativeType.AdCreativeType.NO_FILL) {
+        let tmp27 = null;
+        if (null != decisionId) {
+          tmp27 = null;
+          if (!tmp10) {
+            if (cResult[7] === isMobileQuestDockVisibleToUser1) {
+            }
+            tmp8 = tmp8(15036);
+            obj7 = { decisionId: decisionId.decisionId, visible: isMobileQuestDockVisibleToUser1 };
+            tmp2 = closure_1_24(tmp8, obj7);
+            cResult[7] = isMobileQuestDockVisibleToUser1;
+            decisionId = decisionId.decisionId;
+            cResult[8] = decisionId;
+            cResult[9] = tmp2;
+          }
+        }
+        let tmp23 = tmp27;
+      } else {
+        if (cResult[10] === tmp13) {
+          if (cResult[11] === tmp7) {
+            tmp23 = cResult[12];
+          }
+        }
+        const obj8 = { value: tmp7, children: tmp13 };
+        const tmp25 = closure_1_24(tmp8(14999).Provider, obj8);
+        cResult[10] = tmp13;
+        cResult[11] = tmp7;
+        cResult[12] = tmp25;
+        tmp23 = tmp25;
+      }
+      return tmp23;
     }
-    return tmp23;
+    const tmpResult = QuestHooks;
   }
   const obj9 = { isRendered: isMobileQuestDockRenderedBase, isVisibleToUser: isMobileQuestDockVisibleToUser };
   cResult[0] = isMobileQuestDockRenderedBase;
@@ -2244,32 +2023,28 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fu
   cResult[2] = obj9;
   tmp7 = obj9;
 }) : (function QuestDockWithVisibilityContext() {
-  let isMobileQuestDockVisibleToUser;
-  let mobileQuestDock;
-  let tmp14;
+  mobileQuestDock = mobileQuestDock(isMobileQuestDockVisibleToUser[50]).useMobileQuestDock();
   let obj = mobileQuestDock(isMobileQuestDockVisibleToUser[50]);
-  mobileQuestDock = obj.useMobileQuestDock();
+  const isMobileQuestDockRenderedBase = mobileQuestDock(isMobileQuestDockVisibleToUser[50]).useIsMobileQuestDockRenderedBase(mobileQuestDock);
   let obj2 = mobileQuestDock(isMobileQuestDockVisibleToUser[50]);
-  const isMobileQuestDockRenderedBase = obj2.useIsMobileQuestDockRenderedBase(mobileQuestDock);
-  const obj3 = mobileQuestDock(isMobileQuestDockVisibleToUser[50]);
-  isMobileQuestDockVisibleToUser = obj3.useIsMobileQuestDockVisibleToUser(mobileQuestDock, isMobileQuestDockRenderedBase);
+  isMobileQuestDockVisibleToUser = mobileQuestDock(isMobileQuestDockVisibleToUser[50]).useIsMobileQuestDockVisibleToUser(mobileQuestDock, isMobileQuestDockRenderedBase);
   const items = [isMobileQuestDockRenderedBase, isMobileQuestDockVisibleToUser];
-  const memo = react.useMemo(() => ({ isRendered: isMobileQuestDockRenderedBase, isVisibleToUser: isMobileQuestDockVisibleToUser }), items);
-  const tmp7 = isMobileQuestDockRenderedBase(isMobileQuestDockVisibleToUser[63]);
-  const tmp7Result = tmp7(mobileQuestDock(isMobileQuestDockVisibleToUser[38]).AdPlacement.MOBILE_HOME_DOCK_AREA, "QuestDockWithVisibilityContext");
+  const memo = noop.useMemo(() => ({ isRendered: isMobileQuestDockRenderedBase, isVisibleToUser: isMobileQuestDockVisibleToUser }), items);
+  const obj3 = mobileQuestDock(isMobileQuestDockVisibleToUser[50]);
+  const tmp7Result = isMobileQuestDockRenderedBase(isMobileQuestDockVisibleToUser[63])(mobileQuestDock(isMobileQuestDockVisibleToUser[38]).AdPlacement.MOBILE_HOME_DOCK_AREA, "QuestDockWithVisibilityContext");
   const tmp9 = isMobileQuestDockRenderedBase(isMobileQuestDockVisibleToUser[64])();
-  const items1 = [mobileQuestDock];
   const tmp10 = !tmp9;
-  const obj4 = mobileQuestDock(isMobileQuestDockVisibleToUser[50]);
-  const isMobileQuestDockVisibleToUser1 = obj4.useIsMobileQuestDockVisibleToUser(mobileQuestDock, tmp10);
-  const memo1 = react.useMemo(() => {
+  const tmp7 = isMobileQuestDockRenderedBase(isMobileQuestDockVisibleToUser[63]);
+  const items1 = [mobileQuestDock];
+  const isMobileQuestDockVisibleToUser1 = mobileQuestDock(isMobileQuestDockVisibleToUser[50]).useIsMobileQuestDockVisibleToUser(mobileQuestDock, tmp10);
+  const memo1 = noop.useMemo(() => {
     const type = mobileQuestDock.type;
     if (AdCreativeType.AdCreativeType.BOUNTY === type) {
       const obj2 = { bounty: mobileQuestDock.bounty };
-      return closure_24(closure_55, obj2);
+      return closure_2_24(closure_55, obj2);
     } else if (AdCreativeType.AdCreativeType.QUEST === type) {
       const obj = { quest: mobileQuestDock.quest };
-      return closure_24(closure_54, obj);
+      return closure_2_24(closure_54, obj);
     } else if (AdCreativeType.AdCreativeType.NO_FILL === type) {
       return null;
     }
@@ -2283,15 +2058,11 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fu
         tmp16 = closure_24(tmp6(tmp[65]), obj5);
       }
     }
-    tmp14 = tmp16;
+    let tmp14 = tmp16;
   } else {
-    obj6 = { value: memo, children: memo1 };
+    const obj6 = { value: memo, children: memo1 };
     tmp14 = closure_24(tmp6(tmp[45]).Provider, obj6);
   }
   return tmp14;
 }));
-let size = size_mod;
-let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDock.tsx");
-
-export default memoResult;
-export const QuestDockQuestContent = tmp12;
+export const QuestDockQuestContent = tmp11;

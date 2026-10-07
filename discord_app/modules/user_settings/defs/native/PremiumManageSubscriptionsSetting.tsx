@@ -1,31 +1,21 @@
 // === Module 14811: PremiumManageSubscriptionsSetting ===
 
 // Module 14811 (PremiumManageSubscriptionsSetting)
-import react2 from "react" /* 576 */;
-import Constants from "Constants" /* 1085 */;
-import intl2 from "intl" /* 1126 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import PremiumUtils from "PremiumUtils" /* 4534 */;
 import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 6936 */;
 import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11105 */;
-import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 13221 */;
-import SubscriptionIcon from "SubscriptionIcon" /* 14812 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
-
-const UserSettingsSections = Constants.UserSettingsSections;
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+fn(558);
+const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  let obj = react2;
-  const cResult = obj.c(1);
+  const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t() {
-      const obj = BlockedPaymentsCountryExperiment;
-      const isPaymentsBlocked = obj.getIsPaymentsBlocked();
+      const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
       let flag = !isPaymentsBlocked;
       if (isPaymentsBlocked) {
         openBlockedPaymentsCountryActionSheetDefault();
@@ -34,14 +24,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       return flag;
     };
     cResult[0] = fn;
-    first = fn;
+    let first = fn;
   } else {
     first = cResult[0];
   }
   return first;
-}) : (() => react.useCallback(() => {
-  const obj = BlockedPaymentsCountryExperiment;
-  const isPaymentsBlocked = obj.getIsPaymentsBlocked();
+}) : (() => noop.useCallback(() => {
+  const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
   let flag = !isPaymentsBlocked;
   if (isPaymentsBlocked) {
     openBlockedPaymentsCountryActionSheetDefault();
@@ -49,51 +38,65 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   return flag;
 }, []));
-ReactCompilerGating = ReactCompilerGating_mod;
+const SettingBuilders = fn(11142);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  const obj = react2;
-  const cResult = obj.c(1);
-  const obj2 = PremiumUtils;
-  let hasPremiumSubscriptionToDisplay = obj2.useHasPremiumSubscriptionToDisplay();
+  const cResult = c.c(1);
+  let hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { location: "useShowManageSubscriptionsSetting" };
     cResult[0] = obj3;
-    first = obj3;
+    let first = obj3;
   } else {
     first = cResult[0];
   }
-  const tmpResult = MobileNitroManageSubscriptionsSettingsExperiment;
   if (hasPremiumSubscriptionToDisplay) {
     hasPremiumSubscriptionToDisplay = tmpResult.useMobileNitroManageSubscriptionsSettingsExperiment(first);
   }
   return hasPremiumSubscriptionToDisplay;
 }) : (() => {
-  const obj = PremiumUtils;
-  let hasPremiumSubscriptionToDisplay = obj.useHasPremiumSubscriptionToDisplay();
-  const obj2 = MobileNitroManageSubscriptionsSettingsExperiment;
+  let hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
   if (hasPremiumSubscriptionToDisplay) {
     hasPremiumSubscriptionToDisplay = obj2.useMobileNitroManageSubscriptionsSettingsExperiment({ location: "useShowManageSubscriptionsSetting" });
   }
   return hasPremiumSubscriptionToDisplay;
 });
-let obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["z5YcJ+"]);
+    const intl = util.intl;
+    return intl.string(util.t["z5YcJ+"]);
   },
   parent: null,
-  IconComponent: SubscriptionIcon.SubscriptionIcon,
+  IconComponent: fn(14812).SubscriptionIcon,
   usePreNavigationAction: tmp2,
-  usePredicate: tmp3,
+  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(1);
+    let hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
+    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+      const obj3 = { location: "useShowManageSubscriptionsSetting" };
+      cResult[0] = obj3;
+      let first = obj3;
+    } else {
+      first = cResult[0];
+    }
+    if (hasPremiumSubscriptionToDisplay) {
+      hasPremiumSubscriptionToDisplay = tmpResult.useMobileNitroManageSubscriptionsSettingsExperiment(first);
+    }
+    return hasPremiumSubscriptionToDisplay;
+  }) : (() => {
+    let hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
+    if (hasPremiumSubscriptionToDisplay) {
+      hasPremiumSubscriptionToDisplay = obj2.useMobileNitroManageSubscriptionsSettingsExperiment({ location: "useShowManageSubscriptionsSetting" });
+    }
+    return hasPremiumSubscriptionToDisplay;
+  }),
   screen: {
-    route: UserSettingsSections.PREMIUM_MANAGE_PLAN,
+    route: fn(1085).UserSettingsSections.PREMIUM_MANAGE_PLAN,
     getComponent() {
       return require("PremiumManagePlanScreen").default;
     }
   }
-};
-const route = SettingBuilders.createRoute(obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/PremiumManageSubscriptionsSetting.tsx");
 
 export default route;

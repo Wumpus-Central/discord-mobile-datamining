@@ -6,18 +6,18 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/quests/QuestHomeHeroCta.tsx");
 
 export const questHomeHeroCtaFromServer = function questHomeHeroCtaFromServer(cta) {
+  const obj = { url: cta.url, buttonLabel: cta.button_label, android: null, ios: null };
   let tmp;
-  let tmp2;
-  const obj = { url: cta.url, buttonLabel: cta.button_label, android: tmp, ios: tmp2 };
-  tmp = undefined;
   if (null != cta.android) {
-    tmp = { androidAppId: cta.android.android_app_id };
     const obj2 = { androidAppId: cta.android.android_app_id };
+    tmp = obj2;
   }
-  tmp2 = undefined;
+  obj.android = tmp;
+  let tmp2;
   if (null != cta.ios) {
-    tmp2 = { iosAppId: cta.ios.ios_app_id };
     const obj3 = { iosAppId: cta.ios.ios_app_id };
+    tmp2 = obj3;
   }
+  obj.ios = tmp2;
   return obj;
 };

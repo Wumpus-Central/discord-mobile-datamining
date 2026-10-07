@@ -1,111 +1,155 @@
 // === Module 4554: importWithRetry ===
 
 // Module 4554 (importWithRetry)
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import size from "module_2" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let c5;
-
-let obj = function _importWithRetry() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let c0;
-    let c1;
-    let c2;
-    let closure_3;
-    let closure_4;
-    let obj11;
-    let closure_0 = arg0;
-    if (1 === c5) {
-      if (arg0 === 1) {
-        let c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c6 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
-      } else {
-        closure_3 = 500;
-        closure_4 = 0;
-      }
-    } else if (2 === c5) {
-      let c4 = 0;
-      let closure_5 = closure_3;
-      if (webpackId in closure_130_0.cache) {
-        throw closure_5;
-      } else if (closure_4 >= 50) {
-        throw closure_5;
-      } else {
-        c5 = 4;
-        c6 = 1;
-        const obj5 = { value: closure_130_2(closure_3), done: false };
-        return obj5;
-      }
-    } else if (3 === c5) {
-      if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 0;
-        c6 = 3;
-        const obj6 = { value, done: true };
-        return obj6;
-      } else {
-        c4 = 0;
-        c6 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
-      }
-    } else if (4 === c5) {
-      if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c6 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
-      } else {
-        c5 = 5;
-        c6 = 1;
-        const obj9 = { value: closure_130_3(), done: false };
-        return obj9;
-      }
-    } else if (arg0 === 1) {
-      c6 = 3;
+const require = fn;
+let closure_4 = async function _importWithRetry(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      c6 = 3;
-      obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      const _Math = Math;
-      closure_3 = Math.min(5000, 2 * closure_3);
-      closure_4 = closure_4 + 1;
+      return { value: "IconComponent", done: null };
     }
-    const _performance = performance;
-    const obj10 = { detail: obj11 };
-    obj11 = { webpackId, name };
-    performance.mark("importWithRetry:start", obj10);
-    await c0();
-    ({ createPromise: c0, webpackId: c1, name: c2 } = closure_0);
-    return "Reflect";
-  });
-  return obj(...arguments);
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          ({ createPromise: closure_129_0, webpackId: closure_129_1, name: closure_129_2 } = closure_0);
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "Reflect", done: true };
+        }
+      } else {
+        if (1 === tmp7) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_129_3 = 500;
+            closure_129_4 = 0;
+            c4 = 1;
+            const _performance = performance;
+            const obj5 = { detail: null };
+            const obj6 = { webpackId: closure_129_1, name: closure_129_2 };
+            obj5.detail = obj6;
+            performance.mark("importWithRetry:start", obj5);
+            closure_129_0();
+            c5 = 3;
+            c6 = 1;
+          }
+        } else if (2 === tmp7) {
+          c4 = 0;
+          closure_129_5 = closure_3;
+          if (closure_129_1 in closure_130_0.cache) {
+            throw closure_129_5;
+          } else if (closure_129_4 >= 50) {
+            throw closure_129_5;
+          } else {
+            c5 = 4;
+            c6 = 1;
+            const obj7 = { value: closure_130_2(closure_129_3), done: false };
+            return obj7;
+          }
+        } else if (3 === tmp7) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 0;
+            c6 = 3;
+            const obj8 = { value, done: true };
+            return obj8;
+          } else {
+            c4 = 0;
+            c6 = 3;
+            const obj9 = { value, done: true };
+            return obj9;
+          }
+        } else if (4 === tmp7) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj10 = { value, done: true };
+            return obj10;
+          } else {
+            c5 = 5;
+            c6 = 1;
+            const obj11 = { value: closure_130_3(), done: false };
+            return obj11;
+          }
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          const _Math = Math;
+          closure_129_3 = Math.min(5000, 2 * closure_129_3);
+          closure_129_4 = closure_129_4 + 1;
+        }
+        c6 = 3;
+        const obj = { value, done: true };
+        return obj;
+      }
+    } catch (tmp34) {
+      closure_3 = tmp34;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp34;
+      } else {
+        c5 = tmp;
+      }
+    }
+  }
 };
 function pausedPromise(arg0) {
-  let closure_0 = arg0;
-  const promise = new Promise((arg0) => setTimeout(arg0, closure_0));
-  return promise;
+  closure_0 = arg0;
+  return new Promise((arg0) => setTimeout(arg0, closure_0));
 }
-function awaitOnline() {
+let global = function awaitOnline() {
   return Promise.resolve();
-}
+};
+const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/code-splitting/importWithRetry.tsx");
 
-export { awaitOnline };
+export const awaitOnline = global;
 export function setAwaitOnline(arg0) {
-  awaitOnline = arg0;
+  global = arg0;
 }
 export { pausedPromise };
 export const importWithRetry = function importWithRetry() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_4.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

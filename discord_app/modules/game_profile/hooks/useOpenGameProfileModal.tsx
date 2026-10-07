@@ -6,15 +6,12 @@ import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
-  let closure_0;
-  let gameProfileModalChecks;
-  let tmp3;
+const result = size.fileFinishedImporting("modules/game_profile/hooks/useOpenGameProfileModal.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   _require = arg0;
-  let obj = require("react");
-  const cResult = obj.c(7);
+  const cResult = require("c").c(7);
   if (cResult[0] !== arg1) {
     let obj2 = arg1;
     if (undefined === arg1) {
@@ -22,7 +19,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
     cResult[0] = arg1;
     cResult[1] = obj2;
-    tmp3 = obj2;
+    let tmp3 = obj2;
   } else {
     tmp3 = cResult[1];
   }
@@ -35,9 +32,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
       if (cResult[2] === gameId) {
         if (cResult[3] === tmp4) {
           if (cResult[4] === onOpened) {
-            let tmp6;
             if (cResult[5] === arg0) {
-              tmp6 = cResult[6];
+              let tmp6 = cResult[6];
             }
             return tmp6;
           }
@@ -50,11 +46,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
         if (stopPropagation != null) {
           stopPropagation.preventDefault();
         }
-        const obj = { gameId, gameProfileModalChecks };
-        const openGameProfileModal = GameProfileActionCreatorsDefault.openGameProfileModal;
-        GameProfileActionCreatorsDefault;
+        const obj2 = {};
         const merged = Object.assign(closure_0);
-        openGameProfileModal(obj);
+        obj2.gameId = gameId;
+        obj2.gameProfileModalChecks = gameProfileModalChecks;
+        GameProfileActionCreatorsDefault.openGameProfileModal(obj2);
         if (onOpened != null) {
           onOpened();
         }
@@ -68,8 +64,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
   }
 }) : ((arg0) => {
-  let gameProfileModalChecks;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -88,11 +83,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
         if (stopPropagation != null) {
           stopPropagation.preventDefault();
         }
-        const obj = { gameId, gameProfileModalChecks };
-        const openGameProfileModal = GameProfileActionCreatorsDefault.openGameProfileModal;
-        GameProfileActionCreatorsDefault;
+        const obj2 = {};
         const merged = Object.assign(closure_0);
-        openGameProfileModal(obj);
+        obj2.gameId = gameId;
+        obj2.gameProfileModalChecks = gameProfileModalChecks;
+        GameProfileActionCreatorsDefault.openGameProfileModal(obj2);
         if (onOpened != null) {
           onOpened();
         }
@@ -101,6 +96,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   }
   return fn;
 });
-const result = size.fileFinishedImporting("modules/game_profile/hooks/useOpenGameProfileModal.tsx");
-
-export default tmp2;

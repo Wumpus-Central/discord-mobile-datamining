@@ -1,18 +1,15 @@
 // === Module 13171: purchaseExceptionAlerts ===
 
 // Module 13171 (purchaseExceptionAlerts)
-import intl3 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import size from "module_2" /* 2 */;
 
 const re2 = /code:\s*(\d{7})(?!\d)/;
-let obj = { title: intl3.t.ifAVZr, body: intl3.t.meauFg };
 const obj2 = { 4000006: null };
-obj2[4000006] = obj;
+obj2[4000006] = { title: util.t.ifAVZr, body: util.t.meauFg };
 const result = size.fileFinishedImporting("modules/billing/native/apple/purchaseExceptionAlerts.tsx");
 
 export const getPurchaseExceptionAlert = function getPurchaseExceptionAlert(message) {
-  let intl;
-  let intl2;
   if (null != message) {
     if ("" !== message) {
       const match = re2.exec(message);
@@ -23,9 +20,11 @@ export const getPurchaseExceptionAlert = function getPurchaseExceptionAlert(mess
         const tmp8 = obj2[Number(undefined, match[1])];
         let tmp3 = null;
         if (null != tmp8) {
-          const obj = { title: intl.string(tmp8.title), body: intl2.string(tmp8.body) };
-          intl = intl3.intl;
-          intl2 = intl3.intl;
+          const obj = { title: null, body: null };
+          const intl = util.intl;
+          obj.title = intl.string(tmp8.title);
+          const intl2 = util.intl;
+          obj.body = intl2.string(tmp8.body);
           tmp3 = obj;
         }
         return tmp3;

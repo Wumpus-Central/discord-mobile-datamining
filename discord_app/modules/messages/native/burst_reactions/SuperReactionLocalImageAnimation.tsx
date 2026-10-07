@@ -1,25 +1,22 @@
 // === Module 9877: SuperReactionLocalImageAnimation ===
 
 // Module 9877 (SuperReactionLocalImageAnimation)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 7423 */;
 import FadeOutLottieAnimationDefault from "FadeOutLottieAnimation" /* 7466 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
+require = fn;
 let closure_3 = ["localImageSource", "animationSource"];
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let animationSource;
-  let localImageSource;
-  let tmp4;
-  let tmp5;
-  let tmp6;
-  const obj = react2;
-  const cResult = obj.c(10);
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/burst_reactions/SuperReactionLocalImageAnimation.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let tmp2 = dependencyMap;
+  const cResult = c.c(10);
   if (cResult[0] !== arg0) {
     ({ localImageSource, animationSource } = arg0);
     const tmp9 = _objectWithoutProperties(arg0, closure_3);
@@ -27,39 +24,32 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[1] = animationSource;
     cResult[2] = localImageSource;
     cResult[3] = tmp9;
-    tmp6 = tmp9;
-    tmp5 = localImageSource;
-    tmp4 = animationSource;
+    let tmp6 = tmp9;
+    let tmp5 = localImageSource;
+    let tmp4 = animationSource;
   } else {
     tmp4 = cResult[1];
     tmp5 = cResult[2];
     tmp6 = cResult[3];
   }
   if (cResult[4] === tmp4) {
-    let tmp10;
     if (cResult[5] === tmp5) {
-      tmp10 = cResult[6];
+      let tmp10 = cResult[6];
     }
-    const tmpResult = burst_reactions_BurstReactionEffectUtils;
-    const superReactionAnimationSourceFromLocalImage = tmpResult.useSuperReactionAnimationSourceFromLocalImage(tmp10);
-    let tmp12 = null;
-    if (null != superReactionAnimationSourceFromLocalImage) {
+    const superReactionAnimationSourceFromLocalImage = burst_reactions_BurstReactionEffectUtils.useSuperReactionAnimationSourceFromLocalImage(tmp10);
+    if (null == superReactionAnimationSourceFromLocalImage) {
+      return null;
+    } else {
       if (cResult[7] === superReactionAnimationSourceFromLocalImage) {
-        let tmp13;
-        if (cResult[8] === tmp6) {
-          tmp13 = cResult[9];
-        }
-        tmp12 = tmp13;
       }
-      FadeOutLottieAnimationDefault;
+      const obj2 = { loop: true, source: superReactionAnimationSourceFromLocalImage };
       const merged = Object.assign(tmp6);
-      const tmp20 = <tmp16 loop source={superReactionAnimationSourceFromLocalImage} />;
+      tmp2 = jsx(FadeOutLottieAnimationDefault, { loop: true, source: superReactionAnimationSourceFromLocalImage });
       cResult[7] = superReactionAnimationSourceFromLocalImage;
       cResult[8] = tmp6;
-      cResult[9] = tmp20;
-      tmp13 = tmp20;
+      cResult[9] = tmp2;
     }
-    return tmp12;
+    const tmpResult = burst_reactions_BurstReactionEffectUtils;
   }
   const obj3 = { animationSource: tmp4, localImageSource: tmp5 };
   cResult[4] = tmp4;
@@ -67,20 +57,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = obj3;
   tmp10 = obj3;
 }) : ((arg0) => {
-  let animationSource;
-  let localImageSource;
   let tmp = null;
   ({ localImageSource, animationSource } = arg0);
   const merged = Object.assign(arg0, Object.assign({ localImageSource: 0, animationSource: 0 }));
-  const obj = burst_reactions_BurstReactionEffectUtils;
-  const superReactionAnimationSourceFromLocalImage = obj.useSuperReactionAnimationSourceFromLocalImage({ animationSource, localImageSource });
+  const superReactionAnimationSourceFromLocalImage = burst_reactions_BurstReactionEffectUtils.useSuperReactionAnimationSourceFromLocalImage({ animationSource, localImageSource });
   if (null != superReactionAnimationSourceFromLocalImage) {
-    FadeOutLottieAnimationDefault;
+    const obj2 = { loop: true, source: superReactionAnimationSourceFromLocalImage };
     const merged1 = Object.assign(merged);
-    tmp = <tmp7 loop source={superReactionAnimationSourceFromLocalImage} />;
+    tmp = jsx(FadeOutLottieAnimationDefault, { loop: true, source: superReactionAnimationSourceFromLocalImage });
   }
   return tmp;
 });
-const result = size.fileFinishedImporting("modules/messages/native/burst_reactions/SuperReactionLocalImageAnimation.tsx");
-
-export default tmp3;

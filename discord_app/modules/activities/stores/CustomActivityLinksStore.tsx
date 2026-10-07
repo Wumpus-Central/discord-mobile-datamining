@@ -1,42 +1,35 @@
 // === Module 12759: CustomActivityLinksStore ===
 
 // Module 12759 (CustomActivityLinksStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import CustomActivityLinkRecord from "CustomActivityLinkRecord" /* 12760 */;
-import size from "module_2" /* 2 */;
 
-let closure_1;
-
-const Store = get_initializedDefault.Store;
+const dependencyMap = {};
+const Store = initializeDefault.Store;
 class CustomActivityLinksStore extends Store {
-  getOne(id, linkId) {
-    if (null != closure_1[id]) {
-      return closure_1[id][linkId];
-    }
-  }
 }
-const prototype = CustomActivityLinksStore.prototype;
+CustomActivityLinksStore.prototype["getOne"] = function getOne(id, linkId) {
+  if (null != dependencyMap[id]) {
+    return dependencyMap[id][linkId];
+  }
+};
 CustomActivityLinksStore.displayName = "CustomActivityLinksStore";
-const obj = {
+const customActivityLinksStore = new CustomActivityLinksStore(DispatcherDefault, {
   CUSTOM_ACTIVITY_LINK_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
-    let applicationId;
-    let link;
     ({ applicationId, link } = arg0);
-    if (null == closure_1[applicationId]) {
+    if (null == dependencyMap[applicationId]) {
       const _Object = Object;
-      closure_1[applicationId] = Object.create(null);
+      dependencyMap[applicationId] = Object.create(null);
     }
-    const link_id = link.link_id;
-    const tmp3 = closure_1[applicationId];
-    tmp3[link_id] = new CustomActivityLinkRecord(link);
-    new CustomActivityLinkRecord(link);
+    dependencyMap[applicationId][link.link_id] = new CustomActivityLinkRecord(link);
+    const tmp3 = new CustomActivityLinkRecord(link);
   },
   LOGOUT: function handleLogout() {
     closure_1 = {};
   }
-};
-const customActivityLinksStore = new CustomActivityLinksStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/stores/CustomActivityLinksStore.tsx");
 
 export default customActivityLinksStore;

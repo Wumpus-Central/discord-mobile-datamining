@@ -2,7 +2,7 @@
 
 // Module 10899 (openBadgeDirectoryScreen)
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import asyncRequire from "asyncRequire" /* 1987 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
 import useIsWindowLarge from "useIsWindowLarge" /* 6440 */;
 import size from "module_2" /* 2 */;
@@ -12,34 +12,29 @@ const result = size.fileFinishedImporting("modules/badges/native/openBadgeDirect
 
 export const BADGE_DIRECTORY_MODAL_KEY = "badge-directory";
 export const isBadgeDirectoryIOSPageSheet = function isBadgeDirectoryIOSPageSheet() {
-  const obj = PlatformUtils;
-  let isIOSResult = obj.isIOS();
+  let isIOSResult = PlatformUtils.isIOS();
   if (isIOSResult) {
+    isIOSResult = !useIsWindowLarge.getIsWindowLarge();
     const tmpResult = useIsWindowLarge;
-    isIOSResult = !tmpResult.getIsWindowLarge();
   }
   return isIOSResult;
 };
 export const openBadgeDirectoryScreen = function openBadgeDirectoryScreen(arg0) {
-  let obj4;
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
-  const targetUserId = obj.targetUserId;
-  const pushLazy = ModalActionCreatorsDefault.pushLazy;
-  ModalActionCreatorsDefault;
-  const obj2 = { targetUserId };
-  const tmp4 = asyncRequire(10900, dependencyMap.paths);
-  const obj3 = PlatformUtils;
-  if (!obj3.isIOS()) {
-    obj4 = { presentation: "modal" };
+  const obj2 = ModalActionCreatorsDefault;
+  const obj3 = { targetUserId: obj.targetUserId };
+  const tmp3 = asyncRequireImpl(10900, dependencyMap.paths);
+  if (!obj4.isIOS()) {
+    const obj5 = { presentation: "modal" };
   } else {
     useIsWindowLarge;
   }
-  pushLazy(tmp4, obj2, c3, obj4);
+  obj2.pushLazy(tmp3, obj3, c3, obj5);
+  obj4 = PlatformUtils;
 };
 export const closeBadgeDirectoryScreen = function closeBadgeDirectoryScreen() {
-  const obj = ModalActionCreatorsDefault;
-  obj.popWithKey(c3);
+  ModalActionCreatorsDefault.popWithKey(c3);
 };

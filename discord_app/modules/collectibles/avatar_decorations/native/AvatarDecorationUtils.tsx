@@ -3,7 +3,7 @@
 // Module 7839 (avatar_decorations/AvatarDecorationUtils)
 import native from "native" /* 1188 */;
 import AvatarDecorationConstants from "AvatarDecorationConstants" /* 1403 */;
-import asyncRequire from "asyncRequire" /* 1987 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import size from "module_2" /* 2 */;
 
@@ -11,47 +11,42 @@ let closure_3 = AvatarDecorationConstants.DECORATION_TO_AVATAR_RATIO;
 let result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx");
 
 export const getDecorationSizeForAvatarSize = function getDecorationSizeForAvatarSize(NORMAL) {
-  let result;
   if (typeof NORMAL !== "number") {
-    result = native.AVATAR_SIZE_MAP[NORMAL] * closure_3;
+    let result = native.AVATAR_SIZE_MAP[NORMAL] * closure_3;
   } else {
     result = NORMAL * closure_3;
   }
   return result;
 };
 export const getDecorationCutoutForAvatarCutout = function getDecorationCutoutForAvatarCutout(cutout, arg1) {
-  let inset;
-  let mapped;
-  let closure_0 = arg1;
+  closure_0 = arg1;
   let tmp = cutout;
   if (null != cutout) {
-    let obj = { direction: null, radius: null, inset: inset + arg1, imageType: native.CutoutType.RECTANGULAR, nativeCutouts: mapped };
+    let obj = { direction: null, radius: null, inset: null, imageType: null, nativeCutouts: null };
     ({ direction: obj.direction, radius: obj.radius, inset } = cutout);
     if (inset == null) {
       inset = 0;
     }
+    obj.inset = inset + arg1;
+    obj.imageType = native.CutoutType.RECTANGULAR;
     const nativeCutouts = cutout.nativeCutouts;
-    mapped = undefined;
+    let mapped;
     if (nativeCutouts != null) {
       mapped = nativeCutouts.map((item) => {
-        const obj = { x: item.x + closure_0, y: item.y + closure_0 };
+        const obj = {};
         const merged = Object.assign(item);
+        obj.x = item.x + closure_0;
+        obj.y = item.y + closure_0;
         return obj;
       });
     }
+    obj.nativeCutouts = mapped;
     tmp = obj;
   }
   return tmp;
 };
 export const openAvatarDecorationActionSheet = function openAvatarDecorationActionSheet(arg0) {
-  let analyticsLocations;
-  let currentAvatarDecoration;
-  let guildId;
-  let isTryItOut;
-  let user;
   ({ user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations } = arg0);
-  const obj = ActionSheetActionCreatorsDefault;
-  obj.hideActionSheet();
-  const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequire(7840, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
+  ActionSheetActionCreatorsDefault.hideActionSheet();
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7840, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
 };

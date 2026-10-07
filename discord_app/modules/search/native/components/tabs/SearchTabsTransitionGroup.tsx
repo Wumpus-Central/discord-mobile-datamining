@@ -1,19 +1,15 @@
 // === Module 16924: SearchTabsTransitionGroup ===
 
 // Module 16924 (SearchTabsTransitionGroup)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import native from "native" /* 4595 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
 import spring from "spring" /* 5604 */;
 import springPresets from "springPresets" /* 5605 */;
-import Tabs2 from "Tabs" /* 12297 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import Tabs_Tabs from "Tabs/Tabs" /* 12297 */;
+import noop from "module_19" /* 19 */;
 
-let set;
-
+require = fn;
 function getItemKey(items) {
   items = items.items;
   const mapped = items.map((id) => id.id);
@@ -22,53 +18,42 @@ function getItemKey(items) {
 function renderItem(key, state, transitionState, cleanUp) {
   return <closure_17 key={key} state={state} transitionState={transitionState} cleanUp={cleanUp} />;
 }
-const jsx = Fragment.jsx;
-let ReactCompilerGating = ReactCompilerGating_mod;
+const jsx = fn(21).jsx;
+let ReactCompilerGating = fn(558);
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let setting;
-  let tmp3;
+  const cResult = setting(576).c(2);
   let obj = setting(576);
-  const cResult = obj.c(2);
-  const SearchResultExactCountEnabled = setting(2028).SearchResultExactCountEnabled;
-  setting = SearchResultExactCountEnabled.useSetting();
+  setting = setting(2028).SearchResultExactCountEnabled.useSetting();
   if (cResult[0] !== setting) {
     const fn = function t(toLocaleString) {
       if (!setting) {
-        let combined;
         if (toLocaleString > 1000) {
           const _HermesInternal = HermesInternal;
-          const obj = Tabs2;
-          combined = "(" + obj.defaultCountFormatter(1000) + "+)";
+          let combined = "(" + Tabs_Tabs.defaultCountFormatter(1000) + "+)";
         }
         return combined;
       }
-      const obj2 = Tabs2;
-      combined = "(" + obj2.defaultCountFormatter(toLocaleString) + ")";
+      combined = "(" + Tabs_Tabs.defaultCountFormatter(toLocaleString) + ")";
     };
     cResult[0] = setting;
     cResult[1] = fn;
-    tmp3 = fn;
+    let tmp3 = fn;
   } else {
     tmp3 = cResult[1];
   }
   return tmp3;
 }) : (() => {
-  let setting;
-  const SearchResultExactCountEnabled = setting(2028).SearchResultExactCountEnabled;
-  setting = SearchResultExactCountEnabled.useSetting();
+  setting = setting(2028).SearchResultExactCountEnabled.useSetting();
   const items = [setting];
-  return react.useCallback((toLocaleString) => {
+  return noop.useCallback((toLocaleString) => {
     if (!setting) {
-      let combined;
       if (toLocaleString > 1000) {
         const _HermesInternal = HermesInternal;
-        const obj = Tabs2;
-        combined = "(" + obj.defaultCountFormatter(1000) + "+)";
+        let combined = "(" + Tabs_Tabs.defaultCountFormatter(1000) + "+)";
       }
       return combined;
     }
-    const obj2 = Tabs2;
-    combined = "(" + obj2.defaultCountFormatter(toLocaleString) + ")";
+    combined = "(" + Tabs_Tabs.defaultCountFormatter(toLocaleString) + ")";
   }, items);
 });
 const __initData = { code: "function SearchTabsTransitionGroupTsx1(){const{withSpring,opacity,springStandard,transitionState,TransitionStates,runOnJS,cleanUp}=this.__closure;return{opacity:withSpring(opacity.get(),springStandard,\"respect-motion-settings\",function(finished){if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanUp)();}}),position:opacity.get()===1?\"relative\":\"absolute\"};}" };
@@ -81,81 +66,70 @@ let closure_13 = { code: "function SearchTabsTransitionGroupTsx7(finished){const
 const __initData6 = { code: "function SearchTabsTransitionGroupTsx8(){const{swipeForMemberListContext}=this.__closure;var _swipeForMemberListCo;(_swipeForMemberListCo=swipeForMemberListContext)===null||_swipeForMemberListCo===void 0||_swipeForMemberListCo.disallowGesture.set(false);}" };
 const __initData7 = { code: "function SearchTabsTransitionGroupTsx9(){const{state}=this.__closure;return state.scrollOffset.get()>0;}" };
 const __initData8 = { code: "function SearchTabsTransitionGroupTsx10(isOffsetFromStart,prevIsOffsetFromStart){const{swipeForMemberListContext}=this.__closure;if(isOffsetFromStart!==prevIsOffsetFromStart){var _swipeForMemberListCo;(_swipeForMemberListCo=swipeForMemberListContext)===null||_swipeForMemberListCo===void 0||_swipeForMemberListCo.disallowGesture.set(isOffsetFromStart);}}" };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
-  let cleanUp;
-  let tmp = state;
-  let obj = state(cleanUp[3]);
-  const cResult = obj.c(14);
+  const cResult = state(cleanUp[3]).c(14);
   state = state.state;
   const transitionState = state.transitionState;
   cleanUp = state.cleanUp;
-  const useSharedValue = state(cleanUp[6]).useSharedValue;
+  let obj = state(cleanUp[3]);
   let num = 0;
-  state(cleanUp[6]);
   if (transitionState === state(cleanUp[7]).TransitionStates.MOUNTED) {
     num = 1;
   }
-  const sharedValue = useSharedValue(num);
+  const sharedValue = state(cleanUp[6]).useSharedValue(num);
+  let obj2 = state(cleanUp[6]);
   let fn = function _() {
-    let fn;
-    let springStandard;
-    let str;
-    let value;
-    let withSpring;
-    let obj = { opacity: withSpring(value, springStandard, "respect-motion-settings", fn), position: str };
-    let tmp = spring;
-    withSpring = tmp.withSpring;
+    let obj = { opacity: null, position: null };
     value = sharedValue.get();
-    fn = function t(arg0) {
-      const tmp = arg0 && transitionState === state(cleanUp[7]).TransitionStates.YEETED;
+    const fn = function t(arg0) {
+      let tmp = arg0;
+      if (arg0) {
+        tmp = transitionState === state(cleanUp[7]).TransitionStates.YEETED;
+      }
       if (tmp) {
+        state(cleanUp[6]).runOnJS(closure_1_2)();
         const obj = state(cleanUp[6]);
-        obj.runOnJS(closure_1_2)();
       }
     };
-    const obj2 = { transitionState, TransitionStates: native.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, cleanUp };
-    springStandard = springPresets.springStandard;
-    fn.__closure = obj2;
+    const obj2 = spring;
+    fn.__closure = { transitionState, TransitionStates: native.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, cleanUp };
     fn.__workletHash = 15209468679721;
     fn.__initData = __initData;
-    str = "absolute";
+    obj.opacity = obj2.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
+    let str = "absolute";
     if (1 === sharedValue.get()) {
       str = "relative";
     }
+    obj.position = str;
     return obj;
   };
-  const tmpResult = tmp(cleanUp[6]);
-  let obj2 = { withSpring: tmp(tmp2[8]).withSpring, opacity: sharedValue, springStandard: tmp(tmp2[9]).springStandard, transitionState, TransitionStates: tmp(tmp2[7]).TransitionStates, runOnJS: tmp(tmp2[6]).runOnJS, cleanUp };
-  fn.__closure = obj2;
+  const tmpResult = state(cleanUp[6]);
+  fn.__closure = { withSpring: state(cleanUp[8]).withSpring, opacity: sharedValue, springStandard: state(cleanUp[9]).springStandard, transitionState, TransitionStates: state(cleanUp[7]).TransitionStates, runOnJS: state(cleanUp[6]).runOnJS, cleanUp };
   fn.__workletHash = 7055696500315;
   fn.__initData = __initData;
   const animatedStyle = tmpResult.useAnimatedStyle(fn);
   if (cResult[0] === sharedValue) {
-    let tmp7;
-    let tmp8;
-    let tmp17;
     if (cResult[1] === transitionState) {
-      tmp7 = cResult[2];
-      tmp8 = cResult[3];
+      let tmp6 = cResult[2];
+      let tmp7 = cResult[3];
     }
-    const effect = sharedValue.useEffect(tmp7, tmp8);
-    const tmp12 = closure_5();
+    const effect = sharedValue.useEffect(tmp6, tmp7);
+    const tmp11 = closure_5();
     const context = sharedValue.useContext(tmp(tmp2[10]).SwipeForMemberListContext);
     let disallowGesture;
-    const tmp14 = cResult[4];
     if (context != null) {
       disallowGesture = context.disallowGesture;
     }
-    if (tmp14 !== disallowGesture) {
+    if (cResult[4] !== disallowGesture) {
       const fn3 = function v() {
         if (context != null) {
           const disallowGesture = context.disallowGesture;
           const result = disallowGesture.set(false);
         }
       };
-      const obj3 = { swipeForMemberListContext: context };
-      fn3.__closure = obj3;
+      const obj4 = { swipeForMemberListContext: context };
+      fn3.__closure = obj4;
       fn3.__workletHash = 5080152010224;
       fn3.__initData = __initData2;
       let disallowGesture1;
@@ -166,161 +140,150 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
       cResult[5] = fn3;
       class G {
         constructor() {
-          const scrollOffset = state.scrollOffset;
+          scrollOffset = state.scrollOffset;
           return scrollOffset.get() > 0;
         }
       }
     } else {
-      tmp17 = cResult[5];
+      const tmp15 = cResult[5];
     }
-    const tmpResult2 = tmp(cleanUp[6]);
     class G {
       constructor() {
-        const scrollOffset = state.scrollOffset;
+        scrollOffset = state.scrollOffset;
         return scrollOffset.get() > 0;
       }
     }
-    const obj4 = { state };
-    G.__closure = obj4;
+    const obj5 = { state };
+    G.__closure = obj5;
     G.__workletHash = 7791091456487;
     G.__initData = __initData3;
     class L {
       constructor(arg0, arg1) {
-        if (arg0 !== arg1) {
-          if (context != null) {
-            const disallowGesture = context.disallowGesture;
-            const result = disallowGesture.set(arg0);
+        if (state !== arg1) {
+          tmp = null;
+          if (closure_4 != null) {
+            disallowGesture = closure_4.disallowGesture;
+            result = disallowGesture.set(state);
           }
         }
+        return;
       }
     }
-    const obj5 = { swipeForMemberListContext: context };
-    L.__closure = obj5;
+    const obj6 = { swipeForMemberListContext: context };
+    L.__closure = obj6;
     L.__workletHash = 15386779064911;
     L.__initData = __initData4;
-    const animatedReaction = tmpResult2.useAnimatedReaction(G, L);
+    const animatedReaction = tmp(tmp2[6]).useAnimatedReaction(G, L);
     let gesture;
     if (context != null) {
       gesture = context.gesture;
     }
-    let tmp24;
+    let tmp22;
     if (null != context) {
-      tmp24 = tmp17;
+      tmp22 = tmp15;
     }
-    if (cResult[6] === tmp12) {
+    if (cResult[6] === tmp11) {
       if (cResult[7] === state) {
         if (cResult[8] === gesture) {
-          let tmp25;
-          if (cResult[9] === tmp24) {
-            tmp25 = cResult[10];
+          if (cResult[9] === tmp22) {
+            let tmp23 = cResult[10];
           }
           if (cResult[11] === animatedStyle) {
-            let tmp28;
-            if (cResult[12] === tmp25) {
-              tmp28 = cResult[13];
+            if (cResult[12] === tmp23) {
+              const tmp26 = cResult[13];
             }
-            return tmp28;
+            return tmp26;
           }
-          const obj6 = { style: animatedStyle, children: tmp25 };
+          const obj7 = { style: animatedStyle, children: tmp23 };
           cResult[11] = animatedStyle;
-          cResult[12] = tmp25;
-          cResult[13] = context(transitionState(cleanUp[6]).View, obj6);
-          context(transitionState(cleanUp[6]).View, obj6);
+          cResult[12] = tmp23;
+          cResult[13] = context(transitionState(tmp2[6]).View, obj7);
           class G {
             constructor() {
-              const scrollOffset = state.scrollOffset;
+              scrollOffset = state.scrollOffset;
               return scrollOffset.get() > 0;
             }
           }
+          const tmp29 = context(transitionState(tmp2[6]).View, obj7);
         }
       }
     }
-    const obj7 = { state, grow: false, formatCount: tmp12, simultaneousHandlers: gesture, onEndDrag: tmp24 };
-    const tmp27 = context(tmp(cleanUp[5]).Tabs, obj7);
-    cResult[6] = tmp12;
+    const obj8 = { state, grow: false, formatCount: tmp11, simultaneousHandlers: gesture, onEndDrag: tmp22 };
+    const tmp25 = context(tmp(tmp2[5]).Tabs, obj8);
+    cResult[6] = tmp11;
     cResult[7] = state;
     cResult[8] = gesture;
-    cResult[9] = tmp24;
-    cResult[10] = tmp27;
-    tmp25 = tmp27;
+    cResult[9] = tmp22;
+    cResult[10] = tmp25;
+    tmp23 = tmp25;
+    const tmpResult2 = tmp(tmp2[6]);
   }
   const fn2 = function f() {
     let num = 1;
-    set = sharedValue.set;
     if (transitionState === native.TransitionStates.YEETED) {
       num = 0;
     }
-    const result = set(num);
+    const result = sharedValue.set(num);
   };
   const items = [sharedValue, transitionState];
   cResult[0] = sharedValue;
   cResult[1] = transitionState;
   cResult[2] = fn2;
   cResult[3] = items;
-  tmp8 = items;
-  tmp7 = fn2;
+  tmp7 = items;
+  tmp6 = fn2;
+  const obj3 = { withSpring: state(cleanUp[8]).withSpring, opacity: sharedValue, springStandard: state(cleanUp[9]).springStandard, transitionState, TransitionStates: state(cleanUp[7]).TransitionStates, runOnJS: state(cleanUp[6]).runOnJS, cleanUp };
 }) : ((state) => {
-  let Tabs;
-  let gesture;
-  let obj3;
-  let tmp13;
   state = state.state;
   const transitionState = state.transitionState;
   const cleanUp = state.cleanUp;
   let sharedValue;
   let context;
-  let tmp = state;
-  const useSharedValue = state(cleanUp[6]).useSharedValue;
   let num = 0;
-  state(cleanUp[6]);
   if (transitionState === state(cleanUp[7]).TransitionStates.MOUNTED) {
     num = 1;
   }
-  sharedValue = useSharedValue(num);
+  sharedValue = state(cleanUp[6]).useSharedValue(num);
+  let obj = state(cleanUp[6]);
   let fn = function l() {
-    let fn;
-    let springStandard;
-    let str;
-    let value;
-    let withSpring;
-    let obj = { opacity: withSpring(value, springStandard, "respect-motion-settings", fn), position: str };
-    let tmp = spring;
-    withSpring = tmp.withSpring;
+    let obj = { opacity: null, position: null };
     value = sharedValue.get();
-    fn = function t(arg0) {
-      const tmp = arg0 && transitionState === state(cleanUp[7]).TransitionStates.YEETED;
+    const fn = function t(arg0) {
+      let tmp = arg0;
+      if (arg0) {
+        tmp = transitionState === state(cleanUp[7]).TransitionStates.YEETED;
+      }
       if (tmp) {
+        state(cleanUp[6]).runOnJS(closure_1_2)();
         const obj = state(cleanUp[6]);
-        obj.runOnJS(closure_1_2)();
       }
     };
-    const obj2 = { transitionState, TransitionStates: native.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, cleanUp };
-    springStandard = springPresets.springStandard;
-    fn.__closure = obj2;
+    const obj2 = spring;
+    fn.__closure = { transitionState, TransitionStates: native.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, cleanUp };
     fn.__workletHash = 14638126185804;
     fn.__initData = __initData;
-    str = "absolute";
+    obj.opacity = obj2.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
+    let str = "absolute";
     if (1 === sharedValue.get()) {
       str = "relative";
     }
+    obj.position = str;
     return obj;
   };
-  const tmpResult = tmp(cleanUp[6]);
-  let obj = { withSpring: tmp(tmp2[8]).withSpring, opacity: sharedValue, springStandard: tmp(tmp2[9]).springStandard, transitionState, TransitionStates: tmp(tmp2[7]).TransitionStates, runOnJS: tmp(tmp2[6]).runOnJS, cleanUp };
-  fn.__closure = obj;
+  const tmpResult = state(cleanUp[6]);
+  fn.__closure = { withSpring: state(cleanUp[8]).withSpring, opacity: sharedValue, springStandard: state(cleanUp[9]).springStandard, transitionState, TransitionStates: state(cleanUp[7]).TransitionStates, runOnJS: state(cleanUp[6]).runOnJS, cleanUp };
   fn.__workletHash = 2171925322300;
   fn.__initData = __initData5;
   const items = [sharedValue, transitionState];
   const animatedStyle = tmpResult.useAnimatedStyle(fn);
   const effect = sharedValue.useEffect(() => {
     let num = 1;
-    set = sharedValue.set;
     if (transitionState === native.TransitionStates.YEETED) {
       num = 0;
     }
-    const result = set(num);
+    const result = sharedValue.set(num);
   }, items);
-  const tmp7 = closure_5();
+  let obj2 = { withSpring: state(cleanUp[8]).withSpring, opacity: sharedValue, springStandard: state(cleanUp[9]).springStandard, transitionState, TransitionStates: state(cleanUp[7]).TransitionStates, runOnJS: state(cleanUp[6]).runOnJS, cleanUp };
   context = sharedValue.useContext(tmp(tmp2[10]).SwipeForMemberListContext);
   const fn2 = function h() {
     if (context != null) {
@@ -333,10 +296,10 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
   fn2.__initData = __initData6;
   const items1 = [context];
   const callback = sharedValue.useCallback(fn2, items1);
-  const tmpResult2 = tmp(cleanUp[6]);
+  const tmp6 = closure_5();
   class F {
     constructor() {
-      const scrollOffset = state.scrollOffset;
+      scrollOffset = state.scrollOffset;
       return scrollOffset.get() > 0;
     }
   }
@@ -345,52 +308,59 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
   F.__initData = __initData7;
   class C {
     constructor(arg0, arg1) {
-      if (arg0 !== arg1) {
-        if (context != null) {
-          const disallowGesture = context.disallowGesture;
-          const result = disallowGesture.set(arg0);
+      if (state !== arg1) {
+        tmp = null;
+        if (closure_4 != null) {
+          disallowGesture = closure_4.disallowGesture;
+          result = disallowGesture.set(state);
         }
       }
+      return;
     }
   }
   C.__closure = { swipeForMemberListContext: context };
   C.__workletHash = 16575969521243;
   C.__initData = __initData8;
-  const animatedReaction = tmpResult2.useAnimatedReaction(F, C);
-  let obj2 = { style: animatedStyle, children: context(Tabs, obj3) };
-  const View = transitionState(tmp2[6]).View;
-  obj3 = { state, grow: false, formatCount: tmp7, simultaneousHandlers: gesture, onEndDrag: tmp13 };
-  gesture = undefined;
-  Tabs = tmp(tmp2[5]).Tabs;
+  const animatedReaction = state(cleanUp[6]).useAnimatedReaction(F, C);
+  const obj3 = { style: animatedStyle, children: null };
+  const obj4 = { state, grow: false, formatCount: tmp6, simultaneousHandlers: null, onEndDrag: null };
+  let gesture;
   if (context != null) {
     gesture = context.gesture;
   }
-  tmp13 = undefined;
+  obj4.simultaneousHandlers = gesture;
+  let tmp12;
   if (null != context) {
-    tmp13 = callback;
+    tmp12 = callback;
   }
-  return context(View, obj2);
+  obj4.onEndDrag = tmp12;
+  obj3.children = context(state(cleanUp[5]).Tabs, obj4);
+  return context(transitionState(cleanUp[6]).View, obj3);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
-  let tmp4;
-  const obj = react2;
-  const cResult = obj.c(2);
+ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/search/native/components/tabs/SearchTabsTransitionGroup.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
+  const cResult = c.c(2);
   state = state.state;
   if (cResult[0] !== state) {
+    const obj2 = { items: null, getItemKey: null, renderItem: null };
     const items = [state];
-    const tmp8 = jsx(native.TransitionGroup, { items, getItemKey, renderItem });
+    obj2.items = items;
+    obj2.getItemKey = getItemKey;
+    obj2.renderItem = renderItem;
+    const tmp8 = jsx(native.TransitionGroup, { items: null, getItemKey: null, renderItem: null });
     cResult[0] = state;
     cResult[1] = tmp8;
-    tmp4 = tmp8;
+    let tmp4 = tmp8;
   } else {
     tmp4 = cResult[1];
   }
   return tmp4;
 }) : ((state) => {
+  const obj = { items: null, getItemKey, renderItem };
   const items = [state.state];
-  return jsx(native.TransitionGroup, { items, getItemKey, renderItem });
+  obj.items = items;
+  return jsx(native.TransitionGroup, { items: null, getItemKey, renderItem });
 });
-let result = size.fileFinishedImporting("modules/search/native/components/tabs/SearchTabsTransitionGroup.tsx");
-
-export default tmp2;

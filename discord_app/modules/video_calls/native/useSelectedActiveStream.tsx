@@ -3,23 +3,21 @@
 // Module 13620 (useSelectedActiveStream)
 import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
-  let first;
-  let tmp7;
+const require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/useSelectedActiveStream.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   _require = id;
-  const obj = require("react");
-  const cResult = obj.c(3);
-  const tmp = _require;
+  const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelRTCStore, ApplicationStreamingStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -34,18 +32,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     };
     cResult[1] = id.id;
     cResult[2] = fn;
-    tmp7 = fn;
+    let tmp7 = fn;
   } else {
     tmp7 = cResult[2];
   }
-  const tmpResult = tmp(504);
-  return tmpResult.useStateFromStores(first, tmp7);
+  const obj = require("c");
+  return require("initialize").useStateFromStores(first, tmp7);
 }) : ((arg0) => {
-  let id;
   _require = arg0;
   const items = [ChannelRTCStore, ApplicationStreamingStore];
-  const obj = require("get initialized");
-  return obj.useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     const selectedParticipantId = ChannelRTCStore.getSelectedParticipantId(id.id);
     let activeStreamForStreamKey = null;
     if (null != selectedParticipantId) {
@@ -54,6 +50,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     return activeStreamForStreamKey;
   });
 });
-const result = size.fileFinishedImporting("modules/video_calls/native/useSelectedActiveStream.tsx");
-
-export default tmp2;

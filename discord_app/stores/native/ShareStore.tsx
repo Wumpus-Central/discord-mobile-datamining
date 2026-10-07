@@ -1,48 +1,41 @@
 // === Module 14178: ShareStore ===
 
 // Module 14178 (ShareStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import react_nativeDefault from "react-native" /* 8049 */;
+import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8049 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import UserStore from "UserStore" /* 1377 */;
-import size from "module_2" /* 2 */;
 
-let c3, c4, c5;
-
+require = fn;
 function handleTokenUpdated(token) {
   token = token.token;
   return false;
 }
-const AppStates = Constants.AppStates;
-const Store = get_initializedDefault.Store;
+const AppStates = fn(1085).AppStates;
+const Store = initializeDefault.Store;
 class ShareStore extends Store {
-  initialize() {
-    this.waitFor(AuthenticationStore, ChannelStore, GuildStore, SelectedChannelStore, SelectedGuildStore, UserStore);
-  }
 }
-const prototype = ShareStore.prototype;
+ShareStore.prototype["initialize"] = function initialize() {
+  this.waitFor(AuthenticationStore, ChannelStore, GuildStore, SelectedChannelStore, SelectedGuildStore, UserStore);
+};
 ShareStore.displayName = "ShareStore";
-let obj = {
+const shareStore = new ShareStore(DispatcherDefault, {
   CHANNEL_SELECT: function handleChannelSelect(arg0) {
     ({ guildId: c3, channelId: c4 } = arg0);
     return false;
   },
   LOGOUT: function handleLogout() {
-    const obj = react_nativeDefault;
-    obj.setSelectedChannel(null, null);
-    const setAuthenticationToken = react_nativeDefault.setAuthenticationToken;
-    react_nativeDefault;
-    const obj2 = AnalyticsUtilsDefault;
-    const result = setAuthenticationToken(null, obj2.getSuperPropertiesBase64());
+    NativeShareManagerModuleDefault.setSelectedChannel(null, null);
+    const obj2 = NativeShareManagerModuleDefault;
+    const result = obj2.setAuthenticationToken(null, AnalyticsUtilsDefault.getSuperPropertiesBase64());
     c5 = null;
     return false;
   },
@@ -54,11 +47,10 @@ let obj = {
     return false;
   },
   APP_STATE_UPDATE: function handleAppStateUpdate(state) {
-    let mapped;
     state = state.state;
     if (state === AppStates.INACTIVE) {
       if (null != c4) {
-        const guild = GuildStore.getGuild(c3);
+        guild = GuildStore.getGuild(c3);
         let json = null;
         if (null != guild) {
           const _JSON = JSON;
@@ -67,38 +59,34 @@ let obj = {
         const channel = ChannelStore.getChannel(SelectedChannelStore.getChannelId());
         let json1 = null;
         if (null != channel) {
-          const _JSON2 = JSON;
-          const obj = { recipients: mapped.filter(GlobalUtils.isNotNullish) };
+          const obj = {};
           const merged = Object.assign(channel.toJS());
           let recipients = channel.recipients;
           if (recipients == null) {
             recipients = [];
           }
-          mapped = recipients.map(UserStore.getUser);
-          json1 = stringify(obj);
+          const mapped = recipients.map(UserStore.getUser);
+          obj.recipients = mapped.filter(GlobalUtils.isNotNullish);
+          json1 = JSON.stringify(obj);
         }
-        const obj3 = react_nativeDefault;
-        obj3.setSelectedChannel(json1, json);
+        NativeShareManagerModuleDefault.setSelectedChannel(json1, json);
         c3 = null;
         c4 = null;
       }
     }
     if (null != c5) {
       const obj2 = { client_app_state: state };
-      const obj4 = discord_common_AnalyticsUtils;
-      const result = obj4.extendSuperProperties(obj2);
-      const setAuthenticationToken = react_nativeDefault.setAuthenticationToken;
-      react_nativeDefault;
-      const obj6 = AnalyticsUtilsDefault;
-      const result1 = setAuthenticationToken(c5, obj6.getSuperPropertiesBase64());
+      const result = discord_common_AnalyticsUtils.extendSuperProperties(obj2);
+      const obj6 = NativeShareManagerModuleDefault;
+      const result1 = obj6.setAuthenticationToken(c5, AnalyticsUtilsDefault.getSuperPropertiesBase64());
       if (state === AppStates.INACTIVE) {
         c5 = null;
       }
     }
     return false;
   }
-};
-const shareStore = new ShareStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("stores/native/ShareStore.tsx");
 
 export default shareStore;

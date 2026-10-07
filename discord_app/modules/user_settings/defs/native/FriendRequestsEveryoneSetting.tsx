@@ -1,75 +1,78 @@
 // === Module 14801: FriendRequestsEveryoneSetting ===
 
 // Module 14801 (FriendRequestsEveryoneSetting)
-import react2 from "react" /* 576 */;
-import intl2 from "intl" /* 1126 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 6498 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
 import useParentalControlSettings from "useParentalControlSettings" /* 14641 */;
-import react from "react" /* 19 */;
-import Constants from "Constants" /* 1085 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let c3;
-let closure_4;
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
+require = fn;
+const Constants = fn(1085);
 ({ AllFriendSourceFlags: c3, FriendSourceFlags: closure_4 } = Constants);
-let ReactCompilerGating = ReactCompilerGating_mod;
+fn(558);
+let ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
+const SettingBuilders = fn(11142);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp5;
-  const obj = react2;
-  const cResult = obj.c(2);
+  const cResult = c.c(2);
   const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
   const setting = FriendSourceFlagsSetting.useSetting();
   if (cResult[0] !== setting) {
-    const tmpResult = UserSettingsUtils;
-    const flags = tmpResult.computeFlags(setting);
+    const flags = UserSettingsUtils.computeFlags(setting);
     cResult[0] = setting;
     cResult[1] = flags;
-    tmp5 = flags;
+    let tmp5 = flags;
+    const tmpResult = UserSettingsUtils;
   } else {
     tmp5 = cResult[1];
   }
   return tmp5.all;
 }) : (() => {
-  let setting;
   const FriendSourceFlagsSetting = setting(2028).FriendSourceFlagsSetting;
   setting = FriendSourceFlagsSetting.useSetting();
   const items = [setting];
-  return react.useMemo(() => {
-    const obj = UserSettingsUtils;
-    return obj.computeFlags(setting);
-  }, items).all;
+  return noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items).all;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-let obj = {
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.mGr3CX);
+    const intl = util.intl;
+    return intl.string(util.t.mGr3CX);
   },
-  parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue: tmp3,
-  onValueChange: function onFriendRequestsEveryoneSettingValueChange(arg0) {
-    let tmp3;
+  parent: fn(7645).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(2);
     const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
-    const updateSetting = FriendSourceFlagsSetting.updateSetting;
-    if (arg0) {
-      tmp3 = _false;
+    const setting = FriendSourceFlagsSetting.useSetting();
+    if (cResult[0] !== setting) {
+      const flags = UserSettingsUtils.computeFlags(setting);
+      cResult[0] = setting;
+      cResult[1] = flags;
+      let tmp5 = flags;
+      const tmpResult = UserSettingsUtils;
     } else {
-      tmp3 = _false & ~constants.NO_RELATION;
+      tmp5 = cResult[1];
     }
-    updateSetting(tmp3);
+    return tmp5.all;
+  }) : (() => {
+    const FriendSourceFlagsSetting = setting(2028).FriendSourceFlagsSetting;
+    setting = FriendSourceFlagsSetting.useSetting();
+    const items = [setting];
+    return noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items).all;
+  }),
+  onValueChange: function onFriendRequestsEveryoneSettingValueChange(arg0) {
+    const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
+    if (arg0) {
+      let tmp3 = React3;
+    } else {
+      tmp3 = React3 & ~constants.NO_RELATION;
+    }
+    FriendSourceFlagsSetting.updateSetting(tmp3);
   },
-  useIsDisabled: () => {
-    const obj = useParentalControlSettings;
-    return obj.useIsParentallyControlled();
-  }
-};
-const toggle = SettingBuilders.createToggle(obj);
+  useIsDisabled: () => useParentalControlSettings.useIsParentallyControlled()
+});
+const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/FriendRequestsEveryoneSetting.tsx");
 
 export default toggle;

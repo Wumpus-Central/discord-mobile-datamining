@@ -1,42 +1,27 @@
 // === Module 12969: UserProfileIncomingFriendRequest ===
 
 // Module 12969 (UserProfileIncomingFriendRequest)
-import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let importDefault;
 
-let hasOwnProperty;
-let metroRequire;
-let obj2;
-const View = react_native.View;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
-let obj = { container: { rowGap: 16, flexDirection: "column" }, buttons: { flexDirection: "row", columnGap: 12 }, gameIcon: { paddingTop: 2 }, friendRequestNote: obj2 };
-obj2 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };
-let closure_7 = createStyles.createStyles(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let applicationId;
-  let channelId;
-  let gameIcon;
-  let guildId;
-  let isGameRelationship;
-  let items1;
-  let name;
-  let showUserProfile;
-  let style;
-  let trackUserProfileAction;
-  let user;
-  let tmp2 = trackUserProfileAction;
-  let obj = isGameRelationship(trackUserProfileAction[6]);
-  const cResult = obj.c(42);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { container: { rowGap: 16, flexDirection: "column" }, buttons: { flexDirection: "row", columnGap: 12 }, gameIcon: { paddingTop: 2 }, friendRequestNote: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG } };
+let closure_7 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileIncomingFriendRequest.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = isGameRelationship(trackUserProfileAction[6]).c(42);
   ({ user, isGameRelationship, applicationId, style, showUserProfile } = arg0);
   let tmp4 = undefined !== isGameRelationship;
   ({ channelId, guildId } = arg0);
@@ -47,327 +32,342 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const tmp5 = closure_7();
   importDefault = tmp5;
   const tmp7 = require("UserProfileSharedStyles")();
-  const tmpResult = isGameRelationship(tmp2[8]);
-  trackUserProfileAction = tmpResult.useUserProfileAnalyticsContext().trackUserProfileAction;
+  let obj = isGameRelationship(trackUserProfileAction[6]);
+  trackUserProfileAction = isGameRelationship(trackUserProfileAction[8]).useUserProfileAnalyticsContext().trackUserProfileAction;
   const newestAnalyticsLocation = require("useAnalyticsLocations")().newestAnalyticsLocation;
   if (cResult[0] === applicationId) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === newestAnalyticsLocation) {
         if (cResult[3] === showUserProfile) {
-          let tmp8;
           if (cResult[4] === user.id) {
-            tmp8 = cResult[5];
+            let tmp8 = cResult[5];
           }
-          const tmpResult3 = isGameRelationship(tmp2[10]);
-          const friendRequestActions = tmpResult3.useFriendRequestActions(tmp8);
+          const friendRequestActions = tmp(tmp2[10]).useFriendRequestActions(tmp8);
           const acceptFriendRequest = friendRequestActions.acceptFriendRequest;
           const cancelFriendRequest = friendRequestActions.cancelFriendRequest;
-          const tmp6Result = require("NicknameUtils");
-          const name1 = tmp6Result.useName(guildId, channelId, user);
+          const tmpResult3 = tmp(tmp2[10]);
+          let gameIcon = tmp6(tmp2[11]).useName(guildId, channelId, user);
           if (cResult[6] === acceptFriendRequest) {
             if (cResult[7] === tmp4) {
-              let tmp11;
               if (cResult[8] === trackUserProfileAction) {
-                tmp11 = cResult[9];
+                let tmp10 = cResult[9];
               }
               if (cResult[10] === cancelFriendRequest) {
                 if (cResult[11] === tmp4) {
-                  let tmp12;
                   if (cResult[12] === trackUserProfileAction) {
-                    tmp12 = cResult[13];
+                    let tmp11 = cResult[13];
                   }
                   class S {
                     constructor() {
-                      cancelFriendRequest();
-                      let str = "IGNORE_FRIEND_REQUEST";
+                      tmp = cancelFriendRequest();
+                      str = "IGNORE_FRIEND_REQUEST";
+                      tmp2 = trackUserProfileAction;
                       if (isGameRelationship) {
                         str = "IGNORE_GAME_FRIEND_REQUEST";
                       }
-                      trackUserProfileAction({ action: str });
+                      tmp2Result = tmp2({ action: str });
+                      return;
                     }
                   }
-                  const tmpResult4 = isGameRelationship(tmp2[12]);
-                  const getOrFetchApplication = tmpResult4.useGetOrFetchApplication(applicationId);
-                  if (tmp14) {
+                  const getOrFetchApplication = tmp(tmp2[12]).useGetOrFetchApplication(applicationId);
+                  if (tmp13) {
                     if (null == getOrFetchApplication) {
                       return null;
                     }
                   }
                   if (cResult[14] === tmp7.card) {
                     if (cResult[15] === style) {
-                      let tmp16;
-                      let tmp19;
                       if (cResult[16] === tmp5.container) {
-                        tmp16 = cResult[17];
+                        let tmp15 = cResult[17];
                       }
                       if (cResult[18] === getOrFetchApplication) {
                         if (cResult[19] === tmp4) {
-                          if (cResult[20] === name1) {
-                            if (cResult[21] === tmp14) {
-                              let tmp17;
+                          if (cResult[20] === gameIcon) {
+                            if (cResult[21] === tmp13) {
                               if (cResult[22] === tmp5.gameIcon) {
-                                tmp17 = cResult[23];
-                              }
-                              if (cResult[24] === tmp5.friendRequestNote) {
-                                let tmp22;
-                                let tmp27;
-                                let tmp31;
-                                if (cResult[25] === user.id) {
-                                  tmp22 = cResult[26];
-                                }
-                                class S {
-                                  constructor() {
-                                    cancelFriendRequest();
-                                    let str = "IGNORE_FRIEND_REQUEST";
-                                    if (isGameRelationship) {
-                                      str = "IGNORE_GAME_FRIEND_REQUEST";
-                                    }
-                                    trackUserProfileAction({ action: str });
+                                if (cResult[24] === tmp5.friendRequestNote) {
+                                  if (cResult[25] === user.id) {
+                                    let tmp22 = cResult[26];
                                   }
-                                }
-                                let str = "react.memo_cache_sentinel";
-                                const buttons = tmp5.buttons;
-                                if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
-                                  const string = tmp(tmp2[14]).intl.string;
                                   class S {
                                     constructor() {
-                                      cancelFriendRequest();
-                                      let str = "IGNORE_FRIEND_REQUEST";
+                                      tmp = cancelFriendRequest();
+                                      str = "IGNORE_FRIEND_REQUEST";
+                                      tmp2 = trackUserProfileAction;
                                       if (isGameRelationship) {
                                         str = "IGNORE_GAME_FRIEND_REQUEST";
                                       }
-                                      trackUserProfileAction({ action: str });
+                                      tmp2Result = tmp2({ action: str });
+                                      return;
                                     }
                                   }
-                                  cResult[27] = tmp26;
-                                }
-                                if (cResult[28] !== tmp11) {
-                                  let obj2 = { size: "sm", variant: "primary", text: null, onPress: tmp11 };
-                                  class S {
-                                    constructor() {
-                                      cancelFriendRequest();
-                                      let str = "IGNORE_FRIEND_REQUEST";
-                                      if (isGameRelationship) {
-                                        str = "IGNORE_GAME_FRIEND_REQUEST";
-                                      }
-                                      trackUserProfileAction({ action: str });
-                                    }
-                                  }
-                                  const tmp29 = getOrFetchApplication(isGameRelationship(tmp2[18]).Button, obj2);
-                                  cResult[28] = tmp11;
-                                  cResult[29] = tmp29;
-                                  tmp27 = tmp29;
-                                } else {
-                                  tmp27 = cResult[29];
-                                }
-                                const _Symbol = Symbol;
-                                class C {
-                                  constructor() {
-                                    acceptFriendRequest();
-                                    let str = "ACCEPT_FRIEND_REQUEST";
-                                    if (isGameRelationship) {
-                                      str = "ACCEPT_GAME_FRIEND_REQUEST";
-                                    }
-                                    trackUserProfileAction({ action: str });
-                                  }
-                                }
-                                if (cResult[31] !== tmp12) {
-                                  const obj3 = { size: "sm", variant: "secondary", text: null, onPress: tmp12 };
-                                  class S {
-                                    constructor() {
-                                      cancelFriendRequest();
-                                      let str = "IGNORE_FRIEND_REQUEST";
-                                      if (isGameRelationship) {
-                                        str = "IGNORE_GAME_FRIEND_REQUEST";
-                                      }
-                                      trackUserProfileAction({ action: str });
-                                    }
-                                  }
-                                  const tmp33 = getOrFetchApplication(isGameRelationship(tmp2[18]).Button, obj3);
-                                  cResult[31] = tmp12;
-                                  cResult[32] = tmp33;
-                                  tmp31 = tmp33;
-                                } else {
-                                  tmp31 = cResult[32];
-                                }
-                                if (cResult[33] === tmp5.buttons) {
-                                  if (cResult[34] === tmp27) {
-                                    let tmp34;
-                                    if (cResult[35] === tmp31) {
-                                      tmp34 = cResult[36];
-                                    }
-                                    if (cResult[37] === tmp34) {
-                                      if (cResult[38] === tmp16) {
-                                        if (cResult[39] === tmp17) {
-                                          let tmp38;
-                                          if (cResult[40] === tmp22) {
-                                            tmp38 = cResult[41];
-                                          }
-                                          return tmp38;
-                                        }
-                                      }
-                                    }
+                                  if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
+                                    const string = tmp(tmp2[14]).intl.string;
                                     class S {
                                       constructor() {
-                                        cancelFriendRequest();
-                                        let str = "IGNORE_FRIEND_REQUEST";
+                                        tmp = cancelFriendRequest();
+                                        str = "IGNORE_FRIEND_REQUEST";
+                                        tmp2 = trackUserProfileAction;
                                         if (isGameRelationship) {
                                           str = "IGNORE_GAME_FRIEND_REQUEST";
                                         }
-                                        trackUserProfileAction({ action: str });
+                                        tmp2Result = tmp2({ action: str });
+                                        return;
                                       }
                                     }
-                                    let obj4 = { style: tmp16, children: null };
-                                    const items = [tmp17, tmp22, tmp34];
-                                    class C {
+                                    cResult[27] = tmp26;
+                                  }
+                                  if (cResult[28] !== tmp10) {
+                                    let obj2 = { size: "sm", variant: "primary", text: null, onPress: null };
+                                    class S {
                                       constructor() {
-                                        acceptFriendRequest();
-                                        let str = "ACCEPT_FRIEND_REQUEST";
+                                        tmp = cancelFriendRequest();
+                                        str = "IGNORE_FRIEND_REQUEST";
+                                        tmp2 = trackUserProfileAction;
                                         if (isGameRelationship) {
-                                          str = "ACCEPT_GAME_FRIEND_REQUEST";
+                                          str = "IGNORE_GAME_FRIEND_REQUEST";
                                         }
-                                        trackUserProfileAction({ action: str });
+                                        tmp2Result = tmp2({ action: str });
+                                        return;
                                       }
                                     }
-                                    const tmp40 = closure_6(cancelFriendRequest, obj4);
-                                    cResult[37] = tmp34;
-                                    cResult[38] = tmp16;
-                                    cResult[39] = tmp17;
-                                    cResult[40] = tmp22;
-                                    cResult[41] = tmp40;
-                                    tmp38 = tmp40;
+                                    obj2.onPress = tmp10;
+                                    const tmp29 = getOrFetchApplication(tmp(tmp2[18]).Button, obj2);
+                                    cResult[28] = tmp10;
+                                    cResult[29] = tmp29;
+                                    let tmp27 = tmp29;
+                                  } else {
+                                    tmp27 = cResult[29];
+                                  }
+                                  const _Symbol = Symbol;
+                                  class C {
+                                    constructor() {
+                                      tmp = acceptFriendRequest();
+                                      str = "ACCEPT_FRIEND_REQUEST";
+                                      tmp2 = trackUserProfileAction;
+                                      if (isGameRelationship) {
+                                        str = "ACCEPT_GAME_FRIEND_REQUEST";
+                                      }
+                                      tmp2Result = tmp2({ action: str });
+                                      return;
+                                    }
+                                  }
+                                  if (cResult[31] !== tmp11) {
+                                    const obj3 = { size: "sm", variant: "secondary", text: null, onPress: null };
+                                    class S {
+                                      constructor() {
+                                        tmp = cancelFriendRequest();
+                                        str = "IGNORE_FRIEND_REQUEST";
+                                        tmp2 = trackUserProfileAction;
+                                        if (isGameRelationship) {
+                                          str = "IGNORE_GAME_FRIEND_REQUEST";
+                                        }
+                                        tmp2Result = tmp2({ action: str });
+                                        return;
+                                      }
+                                    }
+                                    obj3.onPress = tmp11;
+                                    const tmp33 = getOrFetchApplication(tmp(tmp2[18]).Button, obj3);
+                                    cResult[31] = tmp11;
+                                    cResult[32] = tmp33;
+                                    let tmp31 = tmp33;
+                                  } else {
+                                    tmp31 = cResult[32];
+                                  }
+                                  if (cResult[33] === tmp5.buttons) {
+                                    if (cResult[34] === tmp27) {
+                                      if (cResult[35] === tmp31) {
+                                        let tmp34 = cResult[36];
+                                      }
+                                      if (cResult[37] === tmp34) {
+                                        if (cResult[38] === tmp15) {
+                                          if (cResult[39] === tmp16) {
+                                            if (cResult[40] === tmp22) {
+                                              let tmp38 = cResult[41];
+                                            }
+                                            return tmp38;
+                                          }
+                                        }
+                                      }
+                                      class S {
+                                        constructor() {
+                                          tmp = cancelFriendRequest();
+                                          str = "IGNORE_FRIEND_REQUEST";
+                                          tmp2 = trackUserProfileAction;
+                                          if (isGameRelationship) {
+                                            str = "IGNORE_GAME_FRIEND_REQUEST";
+                                          }
+                                          tmp2Result = tmp2({ action: str });
+                                          return;
+                                        }
+                                      }
+                                      let obj4 = { style: tmp15, children: null };
+                                      const items = [tmp16, tmp22, tmp34];
+                                      class C {
+                                        constructor() {
+                                          tmp = acceptFriendRequest();
+                                          str = "ACCEPT_FRIEND_REQUEST";
+                                          tmp2 = trackUserProfileAction;
+                                          if (isGameRelationship) {
+                                            str = "ACCEPT_GAME_FRIEND_REQUEST";
+                                          }
+                                          tmp2Result = tmp2({ action: str });
+                                          return;
+                                        }
+                                      }
+                                      const tmp40 = closure_6(cancelFriendRequest, obj4);
+                                      cResult[37] = tmp34;
+                                      cResult[38] = tmp15;
+                                      cResult[39] = tmp16;
+                                      cResult[40] = tmp22;
+                                      cResult[41] = tmp40;
+                                      tmp38 = tmp40;
+                                    }
+                                  }
+                                  const obj5 = { style: tmp5.buttons, children: null };
+                                  const items1 = [tmp27, tmp31];
+                                  obj5.children = items1;
+                                  const tmp37 = closure_6(cancelFriendRequest, obj5);
+                                  cResult[33] = tmp5.buttons;
+                                  cResult[34] = tmp27;
+                                  cResult[35] = tmp31;
+                                  cResult[36] = tmp37;
+                                  tmp34 = tmp37;
+                                }
+                                class S {
+                                  constructor() {
+                                    tmp = cancelFriendRequest();
+                                    str = "IGNORE_FRIEND_REQUEST";
+                                    tmp2 = trackUserProfileAction;
+                                    if (isGameRelationship) {
+                                      str = "IGNORE_GAME_FRIEND_REQUEST";
+                                    }
+                                    tmp2Result = tmp2({ action: str });
+                                    return;
                                   }
                                 }
-                                const obj5 = { style: buttons, children: items1 };
-                                items1 = [tmp27, tmp31];
-                                const tmp37 = closure_6(cancelFriendRequest, obj5);
-                                cResult[33] = tmp5.buttons;
-                                cResult[34] = tmp27;
-                                cResult[35] = tmp31;
-                                cResult[36] = tmp37;
-                                tmp34 = tmp37;
-                              }
-                              class S {
-                                constructor() {
-                                  cancelFriendRequest();
-                                  let str = "IGNORE_FRIEND_REQUEST";
-                                  if (isGameRelationship) {
-                                    str = "IGNORE_GAME_FRIEND_REQUEST";
+                                const obj6 = { userId: user.id, styles: tmp5.friendRequestNote, analyticsLocation: "User Profile" };
+                                const tmp23 = getOrFetchApplication(tmp6(tmp2[17]), obj6);
+                                cResult[24] = tmp5.friendRequestNote;
+                                class C {
+                                  constructor() {
+                                    tmp = acceptFriendRequest();
+                                    str = "ACCEPT_FRIEND_REQUEST";
+                                    tmp2 = trackUserProfileAction;
+                                    if (isGameRelationship) {
+                                      str = "ACCEPT_GAME_FRIEND_REQUEST";
+                                    }
+                                    tmp2Result = tmp2({ action: str });
+                                    return;
                                   }
-                                  trackUserProfileAction({ action: str });
                                 }
+                                cResult[26] = tmp23;
+                                tmp22 = tmp23;
                               }
-                              const obj6 = { userId: user.id, styles: tmp5.friendRequestNote, analyticsLocation: "User Profile" };
-                              const tmp23 = getOrFetchApplication(require("FriendRequestNote"), obj6);
-                              cResult[24] = tmp5.friendRequestNote;
-                              class C {
-                                constructor() {
-                                  acceptFriendRequest();
-                                  let str = "ACCEPT_FRIEND_REQUEST";
-                                  if (isGameRelationship) {
-                                    str = "ACCEPT_GAME_FRIEND_REQUEST";
-                                  }
-                                  trackUserProfileAction({ action: str });
-                                }
-                              }
-                              cResult[26] = tmp23;
-                              tmp22 = tmp23;
                             }
                           }
                         }
                       }
                       class S {
                         constructor() {
-                          cancelFriendRequest();
-                          let str = "IGNORE_FRIEND_REQUEST";
+                          tmp = cancelFriendRequest();
+                          str = "IGNORE_FRIEND_REQUEST";
+                          tmp2 = trackUserProfileAction;
                           if (isGameRelationship) {
                             str = "IGNORE_GAME_FRIEND_REQUEST";
                           }
-                          trackUserProfileAction({ action: str });
+                          tmp2Result = tmp2({ action: str });
+                          return;
                         }
                       }
                       const obj7 = { variant: "text-sm/semibold", color: "text-default", children: null };
-                      const Text = tmp(tmp2[13]).Text;
                       const intl = tmp(tmp2[14]).intl;
-                      const format = intl.format;
-                      const t = tmp(tmp2[14]).t;
-                      if (tmp14) {
-                        const obj8 = {
-                          username: name1,
-                          applicationName: name,
-                          applicationIcon() {
-                                                  let obj2;
-                                                  let obj4;
-                                                  let tmp2 = null;
-                                                  if (null != getOrFetchApplication) {
-                                                    const obj = { source: obj2.getApplicationIconSource(obj4), size: native.AvatarSizes.XXSMALL, style: gameIcon.gameIcon };
-                                                    const Avatar = native.Avatar;
-                                                    obj4 = { id: null, icon: null };
-                                                    ({ id: obj3.id, icon: obj3.icon } = getOrFetchApplication);
-                                                    obj2 = AvatarUtilsDefault;
-                                                    tmp2 = hasOwnProperty(Avatar, obj, getOrFetchApplication.id);
-                                                  }
-                                                  return tmp2;
-                                                }
-                        };
+                      let t = tmp(tmp2[14]).t;
+                      if (tmp13) {
+                        const obj8 = { username: gameIcon, applicationName: null, applicationIcon: null };
                         class S {
                           constructor() {
-                            cancelFriendRequest();
-                            let str = "IGNORE_FRIEND_REQUEST";
+                            tmp = cancelFriendRequest();
+                            str = "IGNORE_FRIEND_REQUEST";
+                            tmp2 = trackUserProfileAction;
                             if (isGameRelationship) {
                               str = "IGNORE_GAME_FRIEND_REQUEST";
                             }
-                            trackUserProfileAction({ action: str });
+                            tmp2Result = tmp2({ action: str });
+                            return;
                           }
                         }
-                        const tmp20 = tmp4 ? t.syHjLL : t.V15uUI;
                         if (getOrFetchApplication != null) {
-                          name = getOrFetchApplication.name;
+                          const name = getOrFetchApplication.name;
                         }
-                        obj7.children = format(tmp20, obj8);
-                        tmp19 = obj7;
+                        obj8.applicationName = name;
+                        obj8.applicationIcon = function applicationIcon() {
+                          let tmp2 = null;
+                          if (null != getOrFetchApplication) {
+                            const obj = { source: null, size: null, style: null };
+                            ({ id: obj3.id, icon: obj3.icon } = getOrFetchApplication);
+                            obj.source = AvatarUtilsDefault.getApplicationIconSource({ id: null, icon: null });
+                            obj.size = native.AvatarSizes.XXSMALL;
+                            obj.style = gameIcon.gameIcon;
+                            tmp2 = hasOwnProperty(native.Avatar, obj, getOrFetchApplication.id);
+                            const obj4 = { id: null, icon: null };
+                          }
+                          return tmp2;
+                        };
+                        t = intl.format(tmp4 ? t.syHjLL : t.V15uUI, obj8);
+                        obj7.children = t;
+                        let tmp18 = obj7;
+                        const tmp19 = tmp4 ? t.syHjLL : t.V15uUI;
                       } else {
+                        { username: null }.username = gameIcon;
                         class S {
                           constructor() {
-                            cancelFriendRequest();
-                            let str = "IGNORE_FRIEND_REQUEST";
+                            tmp = cancelFriendRequest();
+                            str = "IGNORE_FRIEND_REQUEST";
+                            tmp2 = trackUserProfileAction;
                             if (isGameRelationship) {
                               str = "IGNORE_GAME_FRIEND_REQUEST";
                             }
-                            trackUserProfileAction({ action: str });
+                            tmp2Result = tmp2({ action: str });
+                            return;
                           }
                         }
-                        tmp19 = obj7;
+                        tmp18 = obj7;
+                        const obj9 = { username: null };
                       }
-                      const tmp18Result = tmp18(Text, tmp19);
+                      const tmp17Result = tmp17(tmp(tmp2[13]).Text, tmp18);
                       class C {
                         constructor() {
-                          acceptFriendRequest();
-                          let str = "ACCEPT_FRIEND_REQUEST";
+                          tmp = acceptFriendRequest();
+                          str = "ACCEPT_FRIEND_REQUEST";
+                          tmp2 = trackUserProfileAction;
                           if (isGameRelationship) {
                             str = "ACCEPT_GAME_FRIEND_REQUEST";
                           }
-                          trackUserProfileAction({ action: str });
+                          tmp2Result = tmp2({ action: str });
+                          return;
                         }
                       }
                       cResult[18] = getOrFetchApplication;
                       cResult[19] = tmp4;
-                      cResult[20] = name1;
-                      cResult[21] = tmp14;
-                      cResult[22] = tmp5.gameIcon;
-                      cResult[23] = tmp18Result;
-                      tmp17 = tmp18Result;
+                      cResult[20] = gameIcon;
+                      cResult[21] = tmp13;
+                      gameIcon = tmp5.gameIcon;
+                      cResult[22] = gameIcon;
+                      cResult[23] = tmp17Result;
                     }
                   }
                   const items2 = [tmp5.container, , ];
                   class C {
                     constructor() {
-                      acceptFriendRequest();
-                      let str = "ACCEPT_FRIEND_REQUEST";
+                      tmp = acceptFriendRequest();
+                      str = "ACCEPT_FRIEND_REQUEST";
+                      tmp2 = trackUserProfileAction;
                       if (isGameRelationship) {
                         str = "ACCEPT_GAME_FRIEND_REQUEST";
                       }
-                      trackUserProfileAction({ action: str });
+                      tmp2Result = tmp2({ action: str });
+                      return;
                     }
                   }
                   items2[2] = style;
@@ -375,17 +375,20 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   cResult[15] = style;
                   cResult[16] = tmp5.container;
                   cResult[17] = items2;
-                  tmp16 = items2;
+                  tmp15 = items2;
+                  const tmpResult4 = tmp(tmp2[12]);
                 }
               }
               class S {
                 constructor() {
-                  cancelFriendRequest();
-                  let str = "IGNORE_FRIEND_REQUEST";
+                  tmp = cancelFriendRequest();
+                  str = "IGNORE_FRIEND_REQUEST";
+                  tmp2 = trackUserProfileAction;
                   if (isGameRelationship) {
                     str = "IGNORE_GAME_FRIEND_REQUEST";
                   }
-                  trackUserProfileAction({ action: str });
+                  tmp2Result = tmp2({ action: str });
+                  return;
                 }
               }
               cResult[10] = cancelFriendRequest;
@@ -393,32 +396,37 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               cResult[12] = trackUserProfileAction;
               class C {
                 constructor() {
-                  acceptFriendRequest();
-                  let str = "ACCEPT_FRIEND_REQUEST";
+                  tmp = acceptFriendRequest();
+                  str = "ACCEPT_FRIEND_REQUEST";
+                  tmp2 = trackUserProfileAction;
                   if (isGameRelationship) {
                     str = "ACCEPT_GAME_FRIEND_REQUEST";
                   }
-                  trackUserProfileAction({ action: str });
+                  tmp2Result = tmp2({ action: str });
+                  return;
                 }
               }
-              tmp12 = S;
+              tmp11 = S;
             }
           }
           class C {
             constructor() {
-              acceptFriendRequest();
-              let str = "ACCEPT_FRIEND_REQUEST";
+              tmp = acceptFriendRequest();
+              str = "ACCEPT_FRIEND_REQUEST";
+              tmp2 = trackUserProfileAction;
               if (isGameRelationship) {
                 str = "ACCEPT_GAME_FRIEND_REQUEST";
               }
-              trackUserProfileAction({ action: str });
+              tmp2Result = tmp2({ action: str });
+              return;
             }
           }
           cResult[6] = acceptFriendRequest;
           cResult[7] = tmp4;
           cResult[8] = trackUserProfileAction;
           cResult[9] = C;
-          tmp11 = C;
+          tmp10 = C;
+          const tmp6Result = tmp6(tmp2[11]);
         }
       }
     }
@@ -431,21 +439,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = user.id;
   cResult[5] = obj10;
   tmp8 = obj10;
+  const tmpResult = isGameRelationship(trackUserProfileAction[8]);
 }) : ((style) => {
-  let applicationId;
-  let channelId;
-  let gameIcon;
-  let guildId;
-  let intl2;
-  let intl3;
-  let isGameRelationship;
-  let items2;
-  let items3;
-  let items4;
-  let name1;
-  let showUserProfile;
-  let tmp13Result;
-  let user;
   ({ user, isGameRelationship } = style);
   ({ channelId, guildId } = style);
   if (isGameRelationship === undefined) {
@@ -453,24 +448,20 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   ({ applicationId, showUserProfile } = style);
   let trackUserProfileAction;
-  style = style.style;
-  const tmp = closure_7();
-  importDefault = tmp;
-  let tmp2 = importDefault;
-  const tmp4 = require("UserProfileSharedStyles")();
+  let items4 = closure_7();
+  let tmp = items4;
+  let userResult = trackUserProfileAction;
+  const tmp3 = items4(trackUserProfileAction[7])();
+  trackUserProfileAction = isGameRelationship(trackUserProfileAction[8]).useUserProfileAnalyticsContext().trackUserProfileAction;
   let obj = isGameRelationship(trackUserProfileAction[8]);
-  trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
-  const newestAnalyticsLocation = require("useAnalyticsLocations")().newestAnalyticsLocation;
   let obj2 = isGameRelationship(trackUserProfileAction[10]);
-  const obj3 = { userId: user.id, applicationId, isGameRelationship, location: newestAnalyticsLocation, onConfirm: showUserProfile, onCancel: showUserProfile };
-  const friendRequestActions = obj2.useFriendRequestActions(obj3);
+  const friendRequestActions = obj2.useFriendRequestActions({ userId: user.id, applicationId, isGameRelationship, location: items4(trackUserProfileAction[9])().newestAnalyticsLocation, onConfirm: showUserProfile, onCancel: showUserProfile });
   const acceptFriendRequest = friendRequestActions.acceptFriendRequest;
   const cancelFriendRequest = friendRequestActions.cancelFriendRequest;
-  let obj4 = require("NicknameUtils");
-  const name = obj4.useName(guildId, channelId, user);
+  const obj3 = { userId: user.id, applicationId, isGameRelationship, location: items4(trackUserProfileAction[9])().newestAnalyticsLocation, onConfirm: showUserProfile, onCancel: showUserProfile };
+  let name = items4(trackUserProfileAction[11]).useName(guildId, channelId, user);
   const items = [acceptFriendRequest, isGameRelationship, trackUserProfileAction];
-  const items1 = [cancelFriendRequest, isGameRelationship, trackUserProfileAction];
-  const callback = acceptFriendRequest.useCallback(() => {
+  let Button = acceptFriendRequest.useCallback(() => {
     acceptFriendRequest();
     let str = "ACCEPT_FRIEND_REQUEST";
     if (isGameRelationship) {
@@ -478,7 +469,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     trackUserProfileAction({ action: str });
   }, items);
-  const callback1 = acceptFriendRequest.useCallback(() => {
+  const items1 = [cancelFriendRequest, isGameRelationship, trackUserProfileAction];
+  let tmp8 = null;
+  const callback = acceptFriendRequest.useCallback(() => {
     cancelFriendRequest();
     let str = "IGNORE_FRIEND_REQUEST";
     if (isGameRelationship) {
@@ -486,67 +479,71 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     trackUserProfileAction({ action: str });
   }, items1);
-  const obj5 = isGameRelationship(trackUserProfileAction[12]);
-  const getOrFetchApplication = obj5.useGetOrFetchApplication(applicationId);
-  if (null == applicationId) {
-    let tmp16;
-    const obj6 = { style: items2, children: items3 };
-    items2 = [tmp.container, tmp4.card, style];
-    const obj7 = { variant: "text-sm/semibold", color: "text-default", children: null };
-    const Text = tmp5(tmp3[13]).Text;
-    const intl = tmp5(tmp3[14]).intl;
-    const format = intl.format;
-    const t = tmp5(tmp3[14]).t;
-    if (null != applicationId) {
-      const obj8 = {
-        username: name,
-        applicationName: name1,
-        applicationIcon() {
-              let obj2;
-              let obj4;
-              let tmp2 = null;
-              if (null != getOrFetchApplication) {
-                const obj = { source: obj2.getApplicationIconSource(obj4), size: native.AvatarSizes.XXSMALL, style: gameIcon.gameIcon };
-                const Avatar = native.Avatar;
-                obj4 = { id: null, icon: null };
-                ({ id: obj3.id, icon: obj3.icon } = getOrFetchApplication);
-                obj2 = AvatarUtilsDefault;
-                tmp2 = hasOwnProperty(Avatar, obj, getOrFetchApplication.id);
-              }
-              return tmp2;
-            }
-      };
-      name1 = undefined;
-      const tmp17 = isGameRelationship ? t.syHjLL : t.V15uUI;
-      if (getOrFetchApplication != null) {
-        name1 = getOrFetchApplication.name;
-      }
-      obj7.children = format(tmp17, obj8);
-      tmp16 = obj7;
-    } else {
-      const obj9 = { username: name };
-      obj7.children = format(t.uIomXw, obj9);
-      tmp16 = obj7;
+  let obj4 = items4(trackUserProfileAction[11]);
+  const getOrFetchApplication = isGameRelationship(trackUserProfileAction[12]).useGetOrFetchApplication(applicationId);
+  if (null != applicationId) {
+    if (tmp8 == getOrFetchApplication) {
+      return null;
     }
-    items3 = [getOrFetchApplication(Text, tmp16), , ];
-    const obj10 = { userId: user.id, styles: tmp.friendRequestNote, analyticsLocation: "User Profile" };
-    items3[1] = getOrFetchApplication(tmp2(trackUserProfileAction[17]), obj10);
-    const obj11 = { style: tmp.buttons, children: items4 };
-    const obj12 = { size: "sm", variant: "primary", text: intl2.string(isGameRelationship(trackUserProfileAction[14]).t.Zcibdf), onPress: callback };
-    const Button = tmp5(tmp3[18]).Button;
-    intl2 = tmp5(tmp3[14]).intl;
-    items4 = [getOrFetchApplication(Button, obj12), ];
-    const obj13 = { size: "sm", variant: "secondary", text: intl3.string(isGameRelationship(trackUserProfileAction[14]).t.xuio0C), onPress: callback1 };
-    const Button2 = tmp5(tmp3[18]).Button;
-    intl3 = tmp5(tmp3[14]).intl;
-    items4[1] = getOrFetchApplication(Button2, obj13);
-    items3[2] = closure_6(cancelFriendRequest, obj11);
-    tmp13Result = closure_6(tmp14, obj6);
-  } else {
-    tmp13Result = null;
   }
-  return tmp13Result;
+  const obj6 = { style: null, children: null };
+  const items2 = [items4.container, tmp3.card, style.style];
+  obj6.style = items2;
+  let Text = tmp4(userResult[13]).Text;
+  let obj7 = { variant: "text-sm/semibold", color: "text-default", children: null };
+  const intl = tmp4(userResult[14]).intl;
+  const format = intl.format;
+  let intl2 = tmp4(userResult[14]).t;
+  if (null != applicationId) {
+    isGameRelationship = isGameRelationship ? intl2.syHjLL : intl2.V15uUI;
+    const obj8 = { username: name, applicationName: null, applicationIcon: null };
+    tmp8 = getOrFetchApplication == tmp8;
+    name = undefined;
+    if (!tmp8) {
+      name = getOrFetchApplication.name;
+    }
+    obj8.applicationName = name;
+    obj8.applicationIcon = function applicationIcon() {
+      let tmp2 = null;
+      if (null != getOrFetchApplication) {
+        const obj = { source: null, size: null, style: null };
+        ({ id: obj3.id, icon: obj3.icon } = getOrFetchApplication);
+        obj.source = AvatarUtilsDefault.getApplicationIconSource({ id: null, icon: null });
+        obj.size = native.AvatarSizes.XXSMALL;
+        obj.style = items4.gameIcon;
+        tmp2 = hasOwnProperty(native.Avatar, obj, getOrFetchApplication.id);
+        const obj4 = { id: null, icon: null };
+      }
+      return tmp2;
+    };
+    obj7.children = format(isGameRelationship, obj8);
+    let tmp15 = obj7;
+  } else {
+    const obj9 = { username: name };
+    obj7.children = format(intl2.uIomXw, obj9);
+    tmp15 = obj7;
+  }
+  const items3 = [getOrFetchApplication(Text, tmp15), getOrFetchApplication(tmp(userResult[17]), { userId: user.id, styles: items4.friendRequestNote, analyticsLocation: "User Profile" }), ];
+  const obj11 = { style: items4.buttons, children: null };
+  const obj12 = { size: "sm", variant: "primary", text: null, onPress: null };
+  intl2 = tmp4(userResult[14]).intl;
+  obj12.text = intl2.string(isGameRelationship(userResult[14]).t.Zcibdf);
+  obj12.onPress = Button;
+  items4 = [getOrFetchApplication(isGameRelationship(userResult[18]).Button, obj12), ];
+  Button = tmp4(userResult[18]).Button;
+  const obj13 = { size: "sm", variant: "secondary", text: null, onPress: null };
+  obj7 = tmp4(userResult[14]).intl;
+  user = obj7.string;
+  userResult = user(tmp4(userResult[14]).t.xuio0C);
+  obj13.text = userResult;
+  obj13.onPress = callback;
+  tmp = tmp14(Button, obj13);
+  items4[1] = tmp;
+  obj11.children = items4;
+  Text = closure_6(tmp13, obj11);
+  items3[2] = Text;
+  obj6.children = items3;
+  closure_6(cancelFriendRequest, obj6);
+  const obj10 = { userId: user.id, styles: items4.friendRequestNote, analyticsLocation: "User Profile" };
+  const obj5 = isGameRelationship(trackUserProfileAction[12]);
 });
-const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileIncomingFriendRequest.tsx");
-
-export default tmp3;

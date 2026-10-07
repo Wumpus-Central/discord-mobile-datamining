@@ -1,26 +1,23 @@
 // === Module 12941: useUserProfileGameFriendApplicationIds ===
 
 // Module 12941 (useUserProfileGameFriendApplicationIds)
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let userId;
-
+const require = fn;
 let closure_5 = [];
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
-  let first;
-  let tmp7;
-  let tmp9;
-  const obj = userId(576);
-  const cResult = obj.c(6);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_relationships/hooks/useUserProfileGameFriendApplicationIds.tsx");
+
+export const useUserProfileGameFriendApplicationIds = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+  const cResult = userId(576).c(6);
   userId = userId.userId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [RelationshipStore, UserStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -39,50 +36,48 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     };
     cResult[1] = userId;
     cResult[2] = fn;
-    tmp7 = fn;
+    let tmp7 = fn;
   } else {
     tmp7 = cResult[2];
   }
+  const obj = userId(576);
+  const stateFromStores = userId(504).useStateFromStores(first, tmp7);
   const tmpResult = userId(504);
-  const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
-  const tmpResult2 = userId(12903);
-  const gameFriendsForUser = tmpResult2.useGameFriendsForUser(userId);
-  if (stateFromStores) {
-    tmp9 = closure_5;
-  } else if (cResult[3] !== gameFriendsForUser) {
-    const _Symbol = Symbol;
-    if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      class I {
-        constructor(applicationId) {
-          return applicationId.applicationId;
+  const gameFriendsForUser = userId(12903).useGameFriendsForUser(userId);
+  if (!stateFromStores) {
+    if (cResult[3] !== gameFriendsForUser) {
+      const _Symbol = Symbol;
+      if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+        class I {
+          constructor(arg0) {
+            return userId.applicationId;
+          }
+        }
+        cResult[5] = I;
+      } else {
+        class I {
+          constructor(arg0) {
+            return userId.applicationId;
+          }
         }
       }
-      cResult[5] = I;
+      const mapped = gameFriendsForUser.map(I);
+      cResult[3] = gameFriendsForUser;
+      cResult[4] = mapped;
     } else {
       class I {
-        constructor(applicationId) {
-          return applicationId.applicationId;
+        constructor(arg0) {
+          return userId.applicationId;
         }
-      }
-    }
-    const mapped = gameFriendsForUser.map(I);
-    cResult[3] = gameFriendsForUser;
-    cResult[4] = mapped;
-    tmp9 = mapped;
-  } else {
-    class I {
-      constructor(applicationId) {
-        return applicationId.applicationId;
       }
     }
   }
-  return tmp9;
+  return closure_5;
 }) : ((userId) => {
   userId = userId.userId;
   let stateFromStores;
   const items = [RelationshipStore, UserStore];
-  const obj = userId(stateFromStores[5]);
-  stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = userId(stateFromStores[5]).useStateFromStores(items, () => {
     let isFriendResult = RelationshipStore.isFriend(userId);
     if (!isFriendResult) {
       const user = UserStore.getUser(userId);
@@ -94,19 +89,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     }
     return isFriendResult;
   });
-  const obj2 = userId(stateFromStores[6]);
-  const gameFriendsForUser = obj2.useGameFriendsForUser(userId);
+  const obj = userId(stateFromStores[5]);
+  const gameFriendsForUser = userId(stateFromStores[6]).useGameFriendsForUser(userId);
   const items1 = [gameFriendsForUser, stateFromStores];
   return gameFriendsForUser.useMemo(() => {
-    let mapped;
     if (stateFromStores) {
-      mapped = closure_5;
+      let mapped = closure_5;
     } else {
       mapped = gameFriendsForUser.map((applicationId) => applicationId.applicationId);
     }
     return mapped;
   }, items1);
 });
-const result = size.fileFinishedImporting("modules/game_relationships/hooks/useUserProfileGameFriendApplicationIds.tsx");
-
-export const useUserProfileGameFriendApplicationIds = tmp2;

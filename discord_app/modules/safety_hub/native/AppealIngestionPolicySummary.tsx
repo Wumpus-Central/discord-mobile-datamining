@@ -1,44 +1,30 @@
 // === Module 11524: AppealIngestionPolicySummary ===
 
 // Module 11524 (AppealIngestionPolicySummary)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import ColorUtils from "ColorUtils" /* 4733 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import SafetyHubUtils from "SafetyHubUtils" /* 8125 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let classification;
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { sectionTitle: { marginBottom: 8 }, policy: { marginBottom: 16 }, borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, userContainer: null };
+let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj2.userContainer = { marginTop: 8, justifyContent: "flex-start", minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 18 };
+let closure_5 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj4 = { marginTop: 8, justifyContent: "flex-start", minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 18 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionPolicySummary.tsx");
 
-let c3;
-let closure_4;
-let obj2;
-let obj3;
-const View = react_native.View;
-({ jsx: c3, jsxs: closure_4 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { sectionTitle: { marginBottom: 8 }, policy: { marginBottom: 16 }, borderColor: obj2, userContainer: obj3 };
-obj2 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createStyles = createStyles.createStyles;
-obj3 = { marginTop: 8, justifyContent: "flex-start", minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 18 };
-let closure_5 = createStyles(obj);
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((classification) => {
-  let items;
-  let policy;
-  let sectionTitle;
-  let tmp10;
-  let tmp12;
-  let tmp15;
-  let tmp6;
-  let tmp8;
-  const obj = react2;
-  const cResult = obj.c(21);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((classification) => {
+  const cResult = c.c(21);
   classification = classification.classification;
   const tmp4 = closure_5();
   let description;
@@ -46,38 +32,38 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((classification) =>
     description = classification.description;
   }
   if (cResult[0] !== description) {
-    const tmpResult = SafetyHubUtils;
-    const capitalizeTextResult = tmpResult.capitalizeText(description);
+    const capitalizeTextResult = SafetyHubUtils.capitalizeText(description);
     cResult[0] = description;
     cResult[1] = capitalizeTextResult;
-    tmp6 = capitalizeTextResult;
+    let tmp6 = capitalizeTextResult;
+    const tmpResult = SafetyHubUtils;
   } else {
     tmp6 = cResult[1];
   }
   if (cResult[2] !== tmp4.borderColor.color) {
-    const tmpResult2 = ColorUtils;
-    const hexWithOpacityResult = tmpResult2.hexWithOpacity(tmp4.borderColor.color, 0.08);
+    const hexWithOpacityResult = ColorUtils.hexWithOpacity(tmp4.borderColor.color, 0.08);
     cResult[2] = tmp4.borderColor.color;
     cResult[3] = hexWithOpacityResult;
-    tmp8 = hexWithOpacityResult;
+    let tmp8 = hexWithOpacityResult;
+    const tmpResult2 = ColorUtils;
   } else {
     tmp8 = cResult[3];
   }
   ({ policy, sectionTitle } = tmp4);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = intl2.intl;
-    const stringResult = intl.string(intl2.t.xsdcxh);
+    const intl = util.intl;
+    const stringResult = intl.string(util.t.xsdcxh);
     cResult[4] = stringResult;
-    tmp10 = stringResult;
+    let tmp10 = stringResult;
   } else {
     tmp10 = cResult[4];
   }
   if (cResult[5] !== tmp4.sectionTitle) {
     const obj2 = { style: sectionTitle, variant: "text-sm/bold", children: tmp10 };
-    const tmp14 = _false(Text_Text.Text, obj2);
+    const tmp14 = React3(Text_Text.Text, obj2);
     cResult[5] = tmp4.sectionTitle;
     cResult[6] = tmp14;
-    tmp12 = tmp14;
+    let tmp12 = tmp14;
   } else {
     tmp12 = cResult[6];
   }
@@ -85,42 +71,39 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((classification) =>
     const obj3 = { borderColor: tmp8 };
     cResult[7] = tmp8;
     cResult[8] = obj3;
-    tmp15 = obj3;
+    let tmp15 = obj3;
   } else {
     tmp15 = cResult[8];
   }
   if (cResult[9] === tmp4.userContainer) {
-    let tmp16;
-    let tmp17;
     if (cResult[10] === tmp15) {
-      tmp16 = cResult[11];
+      let tmp16 = cResult[11];
     }
     if (cResult[12] !== tmp6) {
       const obj4 = { variant: "text-md/semibold", children: tmp6 };
-      const tmp19 = _false(Text_Text.Text, obj4);
+      const tmp19 = React3(Text_Text.Text, obj4);
       cResult[12] = tmp6;
       cResult[13] = tmp19;
-      tmp17 = tmp19;
+      let tmp17 = tmp19;
     } else {
       tmp17 = cResult[13];
     }
     if (cResult[14] === tmp17) {
-      let tmp20;
       if (cResult[15] === tmp16) {
-        tmp20 = cResult[16];
+        let tmp20 = cResult[16];
       }
       if (cResult[17] === tmp4.policy) {
         if (cResult[18] === tmp20) {
-          let tmp24;
           if (cResult[19] === tmp12) {
-            tmp24 = cResult[20];
+            let tmp24 = cResult[20];
           }
           return tmp24;
         }
       }
-      const obj5 = { style: policy, children: items };
-      items = [tmp12, tmp20];
-      const tmp27 = React3(View, obj5);
+      const obj5 = { style: policy, children: null };
+      const items = [tmp12, tmp20];
+      obj5.children = items;
+      const tmp27 = React4(View, obj5);
       cResult[17] = tmp4.policy;
       cResult[18] = tmp20;
       cResult[19] = tmp12;
@@ -128,7 +111,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((classification) =>
       tmp24 = tmp27;
     }
     const obj6 = { style: tmp16, children: tmp17 };
-    const tmp23 = _false(View, obj6);
+    const tmp23 = React3(View, obj6);
     cResult[14] = tmp17;
     cResult[15] = tmp16;
     cResult[16] = tmp23;
@@ -140,30 +123,23 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((classification) =>
   cResult[11] = items1;
   tmp16 = items1;
 }) : ((classification) => {
-  let intl;
-  let items;
-  let items1;
   classification = classification.classification;
   const tmp = closure_5();
   let description;
-  const capitalizeText = SafetyHubUtils.capitalizeText;
-  SafetyHubUtils;
   if (classification != null) {
     description = classification.description;
   }
-  const capitalizeTextResult = capitalizeText(description);
-  const obj = { style: tmp.policy, children: items };
+  const capitalizeTextResult = SafetyHubUtils.capitalizeText(description);
+  const obj2 = { style: tmp.policy, children: null };
   const tmp2Result = ColorUtils;
-  const obj2 = { style: tmp.sectionTitle, variant: "text-sm/bold", children: intl.string(intl2.t.xsdcxh) };
-  const hexWithOpacityResult = tmp2Result.hexWithOpacity(tmp.borderColor.color, 0.08);
-  const Text = Text_Text.Text;
-  intl = intl2.intl;
-  items = [_false(Text, obj2), ];
-  const obj3 = { style: items1, children: _false(Text_Text.Text, { variant: "text-md/semibold", children: capitalizeTextResult }) };
-  items1 = [tmp.userContainer, { borderColor: hexWithOpacityResult }];
-  items[1] = _false(View, obj3);
-  return React3(View, obj);
+  const obj3 = { style: tmp.sectionTitle, variant: "text-sm/bold", children: null };
+  const intl = util.intl;
+  obj3.children = intl.string(util.t.xsdcxh);
+  const items = [React3(Text_Text.Text, obj3), ];
+  const obj4 = { style: null, children: React3(Text_Text.Text, { variant: "text-md/semibold", children: capitalizeTextResult }) };
+  const items1 = [tmp.userContainer, { borderColor: ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08) }];
+  obj4.style = items1;
+  items[1] = React3(View, obj4);
+  obj2.children = items;
+  return React4(View, obj2);
 });
-const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionPolicySummary.tsx");
-
-export default tmp5;

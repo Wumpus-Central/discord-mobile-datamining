@@ -3,63 +3,53 @@
 // Module 16439 (ICYMICustomScoresModal)
 import nativeDefault from "native" /* 587 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import NativeStackView from "NativeStackView" /* 7568 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let _require;
 
-let hasOwnProperty;
-let metroRequire;
-let obj2;
+const require = fn;
 let closure_3 = ["children"];
-({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
-let closure_7 = NativeStackView.createNativeStackNavigator();
-let obj = { header: obj2 };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-let closure_8 = createStyles.createStyles(obj);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let closure_0;
-  let items;
-  let obj = require("react");
-  const cResult = obj.c(7);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const NativeStackNavigator = fn(7568);
+let closure_7 = NativeStackNavigator.createNativeStackNavigator();
+const createStyles = fn(4896);
+let obj3 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
+let closure_8 = createStyles.createStyles(obj3);
+const ReactCompilerGating = fn(558);
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoresModal.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = require("c").c(7);
   const tmp2 = closure_8();
   _require = tmp2;
-  let obj2 = require("Navigator");
-  const accessibilityNativeStackOptions = obj2.useAccessibilityNativeStackOptions();
+  let obj = require("c");
+  const accessibilityNativeStackOptions = require("Navigator").useAccessibilityNativeStackOptions();
   if (cResult[0] === accessibilityNativeStackOptions) {
-    let tmp4;
-    let tmp6;
-    let tmp10;
-    let tmp14;
     if (cResult[1] === tmp2.header) {
-      tmp4 = cResult[2];
+      let tmp4 = cResult[2];
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
       const obj3 = {
         name: "default",
         options(navigation) {
-              let intl;
-              let obj2;
-              const obj = { title: intl.string(closure_0(dependencyMap[10]).t.jVshKt), headerLeft: obj2.getRenderModalCloseImage(navigation) };
-              navigation = navigation.navigation;
-              intl = closure_0(dependencyMap[10]).intl;
-              obj2 = closure_0(dependencyMap[9]);
-              const merged = Object.assign(accessibilityNativeStackOptions(dependencyMap[11])());
+              const obj = { title: null, headerLeft: null };
+              const intl = closure_0(1126).intl;
+              obj.title = intl.string(closure_0(1126).t.jVshKt);
+              obj.headerLeft = closure_0(7509).getRenderModalCloseImage(navigation.navigation);
+              const merged = Object.assign(accessibilityNativeStackOptions(10675)());
               return obj;
             },
         getComponent() {
-              return closure_0(dependencyMap[12]).default;
+              return closure_0(16440).default;
             }
       };
       const tmp9 = closure_5(closure_7.Screen, obj3);
       cResult[3] = tmp9;
-      tmp6 = tmp9;
+      let tmp6 = tmp9;
     } else {
       tmp6 = cResult[3];
     }
@@ -68,115 +58,93 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       const obj4 = {
         name: "guild",
         options(navigation) {
-              let obj2;
-              const obj = { headerLeft: obj2.getRenderModalBackImage(navigation) };
-              navigation = navigation.navigation;
-              obj2 = closure_0(dependencyMap[9]);
+              const obj = { headerLeft: closure_0(7509).getRenderModalBackImage(navigation.navigation) };
               return obj;
             },
         getComponent() {
-              return closure_0(dependencyMap[13]).default;
+              return closure_0(16441).default;
             }
       };
       const tmp13 = closure_5(closure_7.Screen, obj4);
       cResult[4] = tmp13;
-      tmp10 = tmp13;
+      let tmp10 = tmp13;
     } else {
       tmp10 = cResult[4];
     }
     if (cResult[5] !== tmp4) {
-      const obj5 = { screenOptions: tmp4, initialRouteName: "default", children: items };
-      items = [tmp6, tmp10];
+      const obj5 = { screenOptions: tmp4, initialRouteName: "default", children: null };
+      const items = [tmp6, tmp10];
+      obj5.children = items;
       const tmp17 = closure_6(closure_7.Navigator, obj5);
       cResult[5] = tmp4;
       cResult[6] = tmp17;
-      tmp14 = tmp17;
+      let tmp14 = tmp17;
     } else {
       tmp14 = cResult[6];
     }
     return tmp14;
   }
   const fn = function o() {
-    let obj = {
+    let merged = Object.assign(accessibilityNativeStackOptions);
+    return {
       headerStyle: closure_0.header,
       headerTitle(children) {
-        children = children.children;
-        const obj = { title: children };
-        const tmp = closure_1_4(children, closure_1_3);
-        const GenericHeaderTitle = closure_1_0(closure_1_2[9]).GenericHeaderTitle;
-        const merged = Object.assign(tmp);
-        return closure_1_5(GenericHeaderTitle, obj);
+        const merged = Object.assign(closure_1_4(children, closure_1_3));
+        return closure_1_5(closure_1_0(dependencyMap[9]).GenericHeaderTitle, { title: children.children });
       },
       headerTitleAlign: "center"
     };
-    let merged = Object.assign(accessibilityNativeStackOptions);
-    return obj;
   };
   cResult[0] = accessibilityNativeStackOptions;
   cResult[1] = tmp2.header;
   cResult[2] = fn;
   tmp4 = fn;
+  const obj2 = require("Navigator");
 }) : (() => {
-  let closure_0;
-  let items;
   _require = closure_8();
-  let obj = require("Navigator");
-  let closure_1 = obj.useAccessibilityNativeStackOptions();
-  let obj2 = {
+  closure_1 = require("Navigator").useAccessibilityNativeStackOptions();
+  const obj2 = {
     screenOptions() {
-      let obj = {
+      let merged = Object.assign(closure_1);
+      return {
         headerStyle: closure_0.header,
         headerTitle(children) {
-          children = children.children;
           const merged = Object.assign(children, Object.assign({ children: 0 }));
-          const obj = { title: children };
-          const GenericHeaderTitle = closure_1_0(closure_1_2[9]).GenericHeaderTitle;
           const merged1 = Object.assign(merged);
-          return closure_1_5(GenericHeaderTitle, obj);
+          return closure_1_5(closure_1_0(dependencyMap[9]).GenericHeaderTitle, { title: children.children });
         },
         headerTitleAlign: "center"
       };
-      let merged = Object.assign(closure_1);
-      return obj;
     },
     initialRouteName: "default",
-    children: items
+    children: null
   };
-  const Navigator = closure_7.Navigator;
-  items = [, ];
-  const obj3 = {
-    name: "default",
-    options(navigation) {
-      let intl;
-      let obj2;
-      const obj = { title: intl.string(closure_0(dependencyMap[10]).t.jVshKt), headerLeft: obj2.getRenderModalCloseImage(navigation) };
-      navigation = navigation.navigation;
-      intl = closure_0(dependencyMap[10]).intl;
-      obj2 = closure_0(dependencyMap[9]);
-      const merged = Object.assign(closure_1(dependencyMap[11])());
-      return obj;
-    },
-    getComponent() {
-      return closure_0(dependencyMap[12]).default;
-    }
-  };
-  items[0] = closure_5(closure_7.Screen, obj3);
-  const obj4 = {
-    name: "guild",
-    options(navigation) {
-      let obj2;
-      const obj = { headerLeft: obj2.getRenderModalBackImage(navigation) };
-      navigation = navigation.navigation;
-      obj2 = closure_0(dependencyMap[9]);
-      return obj;
-    },
-    getComponent() {
-      return closure_0(dependencyMap[13]).default;
-    }
-  };
-  items[1] = closure_5(closure_7.Screen, obj4);
-  return closure_6(Navigator, obj2);
+  const items = [
+    closure_5(closure_7.Screen, {
+      name: "default",
+      options(navigation) {
+        const obj = { title: null, headerLeft: null };
+        const intl = closure_0(1126).intl;
+        obj.title = intl.string(closure_0(1126).t.jVshKt);
+        obj.headerLeft = closure_0(7509).getRenderModalCloseImage(navigation.navigation);
+        const merged = Object.assign(closure_1(10675)());
+        return obj;
+      },
+      getComponent() {
+        return closure_0(16440).default;
+      }
+    }),
+    closure_5(closure_7.Screen, {
+      name: "guild",
+      options(navigation) {
+        const obj = { headerLeft: closure_0(7509).getRenderModalBackImage(navigation.navigation) };
+        return obj;
+      },
+      getComponent() {
+        return closure_0(16441).default;
+      }
+    })
+  ];
+  obj2.children = items;
+  return closure_6(closure_7.Navigator, obj2);
 });
-const result = size.fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoresModal.tsx");
-
-export default tmp4;

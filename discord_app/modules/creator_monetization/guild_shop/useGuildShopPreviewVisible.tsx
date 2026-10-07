@@ -2,53 +2,49 @@
 
 // Module 6776 (useGuildShopPreviewVisible)
 import PermissionStore from "PermissionStore" /* 4515 */;
-import Constants from "Constants" /* 1085 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, features;
 
-let c3;
-let closure_4;
+const require = fn;
+const Constants = fn(1085);
 ({ Permissions: c3, GuildFeatures: closure_4 } = Constants);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((features) => {
-  let first;
-  let tmp11;
-  let tmp19;
-  let tmp7;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopPreviewVisible.tsx");
+
+export const useGuildShopPreviewVisible = ReactCompilerGating.isReactCompilerEnabled() ? ((features) => {
   _require = features;
-  const tmp = _require;
-  const obj = require("react");
-  const cResult = obj.c(7);
-  const obj2 = require("DismissibleContentUnsafeUtils");
-  const result = obj2.useIsDismissibleContentDismissed_UNSAFE(require("dismissible_content").DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW);
+  const cResult = require("c").c(7);
+  const obj = require("c");
+  const result = require("DismissibleContentUnsafeUtils").useIsDismissibleContentDismissed_UNSAFE(require("dismissible_content").DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [PermissionStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== features) {
     const fn = function o() {
-      const canResult = null != features && PermissionStore.can(constants.ADMINISTRATOR, tmp);
+      let canResult = null != closure_0;
+      if (canResult) {
+        canResult = PermissionStore.can(constants.ADMINISTRATOR, tmp);
+      }
       return canResult;
     };
     cResult[1] = features;
     cResult[2] = fn;
-    tmp7 = fn;
+    let tmp7 = fn;
   } else {
     tmp7 = cResult[2];
   }
+  const obj2 = require("DismissibleContentUnsafeUtils");
   let features1;
-  const tmpResult = tmp(573);
-  const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
-  const tmp9 = cResult[3];
+  const stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp7);
   if (features != null) {
     features1 = features.features;
   }
-  if (tmp9 !== features1) {
+  if (cResult[3] !== features1) {
     let flag;
     if (features != null) {
       features = features.features;
@@ -63,23 +59,21 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((features) => {
     }
     cResult[3] = features2;
     cResult[4] = flag;
-    tmp11 = flag;
+    let tmp10 = flag;
   } else {
-    tmp11 = cResult[4];
+    tmp10 = cResult[4];
   }
+  const tmpResult = require("useStateFromStores");
   let id;
-  const useGuildEligibleForGuildProducts = tmp(6771).useGuildEligibleForGuildProducts;
-  tmp(6771);
   if (features != null) {
     id = features.id;
   }
   let features3;
-  const guildEligibleForGuildProducts = useGuildEligibleForGuildProducts(id);
-  const tmp17 = cResult[5];
+  const guildEligibleForGuildProducts = require("GuildProductsEligibility").useGuildEligibleForGuildProducts(id);
   if (features != null) {
     features3 = features.features;
   }
-  if (tmp17 !== features3) {
+  if (cResult[5] !== features3) {
     const items1 = [, , ];
     ({ CREATOR_MONETIZABLE: arr2[0], CREATOR_MONETIZABLE_PROVISIONAL: arr2[1], ROLE_SUBSCRIPTIONS_ENABLED: arr2[2] } = constants2);
     const someResult = items1.some((item) => {
@@ -96,21 +90,23 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((features) => {
     }
     cResult[5] = features4;
     cResult[6] = someResult;
-    tmp19 = someResult;
+    let tmp16 = someResult;
   } else {
-    tmp19 = cResult[6];
+    tmp16 = cResult[6];
   }
-  return null != features && stateFromStores && !tmp11 && tmp19 && guildEligibleForGuildProducts && !result;
+  return null != features && stateFromStores && !tmp10 && tmp16 && guildEligibleForGuildProducts && !result;
 }) : ((features) => {
   _require = features;
-  const tmp = _require;
+  const result = require("DismissibleContentUnsafeUtils").useIsDismissibleContentDismissed_UNSAFE(require("dismissible_content").DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW);
   const obj = require("DismissibleContentUnsafeUtils");
-  const result = obj.useIsDismissibleContentDismissed_UNSAFE(require("dismissible_content").DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW);
+  const tmp = _require;
   const items = [PermissionStore];
   let flag;
-  const obj2 = require("useStateFromStores");
-  const stateFromStores = obj2.useStateFromStores(items, () => {
-    const canResult = null != features && PermissionStore.can(constants.ADMINISTRATOR, tmp);
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
+    let canResult = null != closure_0;
+    if (canResult) {
+      canResult = PermissionStore.can(constants.ADMINISTRATOR, tmp);
+    }
     return canResult;
   });
   if (features != null) {
@@ -120,41 +116,30 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((features) => {
   if (flag == null) {
     flag = false;
   }
+  const obj2 = require("useStateFromStores");
   let id;
-  const useGuildEligibleForGuildProducts = tmp(6771).useGuildEligibleForGuildProducts;
-  tmp(6771);
   if (features != null) {
     id = features.id;
   }
   const items1 = [, , ];
   ({ CREATOR_MONETIZABLE: arr2[0], CREATOR_MONETIZABLE_PROVISIONAL: arr2[1], ROLE_SUBSCRIPTIONS_ENABLED: arr2[2] } = constants2);
-  const guildEligibleForGuildProducts = useGuildEligibleForGuildProducts(id);
-  let tmp10 = null != features;
-  const someResult = items1.some((item) => {
-    let hasItem;
-    if (closure_0 != null) {
-      features = tmp.features;
-      hasItem = features.has(item);
-    }
-    return hasItem;
-  });
-  if (tmp10) {
-    tmp10 = stateFromStores;
+  const guildEligibleForGuildProducts = tmp(6771).useGuildEligibleForGuildProducts(id);
+  let tmp9 = null != features;
+  const tmpResult = tmp(6771);
+  if (tmp9) {
+    tmp9 = stateFromStores;
   }
-  if (tmp10) {
-    tmp10 = !flag;
+  if (tmp9) {
+    tmp9 = !flag;
   }
-  if (tmp10) {
-    tmp10 = someResult;
+  if (tmp9) {
+    tmp9 = someResult;
   }
-  if (tmp10) {
-    tmp10 = guildEligibleForGuildProducts;
+  if (tmp9) {
+    tmp9 = guildEligibleForGuildProducts;
   }
-  if (tmp10) {
-    tmp10 = !result;
+  if (tmp9) {
+    tmp9 = !result;
   }
-  return tmp10;
+  return tmp9;
 });
-let result = size.fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopPreviewVisible.tsx");
-
-export const useGuildShopPreviewVisible = tmp3;

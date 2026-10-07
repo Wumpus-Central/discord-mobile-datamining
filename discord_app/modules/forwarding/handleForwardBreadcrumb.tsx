@@ -2,29 +2,21 @@
 
 // Module 11555 (handleForwardBreadcrumb)
 import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 6854 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-let c4;
-
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let obj = function _handleForwardBreadcrumb() {
-  let channel;
-  let guild;
-  obj = _asyncToGenerator(async (arg0) => {
-    let did_lurk;
-    let obj2;
-    let obj7;
-    let closure_0 = arg0;
-    if (did_lurk === 2) {
-      did_lurk = 3;
+require = fn;
+let closure_9 = async function _handleForwardBreadcrumb(arg0) {
+  let messageReference = arg0;
+  c4 = 0;
+  c5 = 0;
+  c3 = 0;
+  return (async (arg0) => {
+    if (c5 === 2) {
+      c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -34,117 +26,119 @@ let obj = function _handleForwardBreadcrumb() {
         return { value: "IconComponent", done: null };
       }
     } else {
-      let c3;
       try {
-        let guild_id;
-        let channel_id;
-        let message_id;
-        let welcomeModalChannelId;
-        let channel2;
-        did_lurk = 2;
+        c5 = 2;
         if (0 === c4) {
           if (arg0 === 1) {
-            did_lurk = 3;
+            c5 = 3;
             throw value;
           } else if (arg0 === 2) {
-            did_lurk = 3;
+            c5 = 3;
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            let closure_2 = tmp;
-            let closure_1 = tmp4;
-            guild_id = undefined;
-            channel_id = undefined;
-            message_id = undefined;
-            channel2 = undefined;
-            did_lurk = undefined;
-            welcomeModalChannelId = undefined;
-            if (null != closure_0.messageReference) {
-              guild_id = closure_0.messageReference.guild_id;
-              channel_id = closure_0.messageReference.channel_id;
-              message_id = closure_0.messageReference.message_id;
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            closure_129_0 = messageReference;
+            closure_129_1 = undefined;
+            closure_129_2 = undefined;
+            let message_id;
+            let channel2;
+            closure_129_5 = undefined;
+            closure_129_6 = undefined;
+            if (null != messageReference.messageReference) {
+              const guild_id = messageReference.messageReference.guild_id;
+              closure_129_1 = guild_id;
+              const channel_id = messageReference.messageReference.channel_id;
+              closure_129_2 = channel_id;
+              message_id = messageReference.messageReference.message_id;
               channel2 = channel.getChannel(channel_id);
-              did_lurk = false;
+              closure_129_5 = false;
               if (null == channel2) {
                 if (null != guild_id) {
                   if (null == guild.getGuild(guild_id)) {
                     c3 = 1;
-                    const obj5 = { object: constants.FORWARD_BREADCRUMB };
+                    const obj6 = { object: constants.FORWARD_BREADCRUMB };
                     c4 = 2;
-                    did_lurk = 1;
-                    const obj6 = { value: obj7.startLurking(guild_id, obj5, { shouldNavigate: false }), done: false };
-                    obj7 = GuildDiscoveryUtils;
-                    return obj6;
+                    c5 = 1;
+                    const obj7 = { value: GuildDiscoveryUtils.startLurking(guild_id, obj6, { shouldNavigate: false }), done: false };
+                    return obj7;
                   }
                 }
               }
             }
-            did_lurk = 3;
+            c5 = 3;
             return { value: "IconComponent", done: null };
           }
-        } else if (1 === c4) {
+        } else if (1 === tmp7) {
           c3 = 0;
-        } else if (2 === c4) {
+        } else if (2 === tmp7) {
           if (arg0 === 1) {
-            did_lurk = 3;
+            c5 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 0;
-            did_lurk = 3;
-            const obj8 = { value, done: true };
-            return obj8;
-          } else {
-            c4 = 3;
-            did_lurk = 1;
-            const obj9 = { value: obj2.waitForGuild(guild_id), done: false };
-            obj2 = closure_130_0(closure_130_2[5]);
+            c5 = 3;
+            const obj9 = { value, done: true };
             return obj9;
+          } else {
+            closure_129_5 = true;
+            c4 = 3;
+            c5 = 1;
+            const obj10 = { value: closure_130_0(closure_130_2[5]).waitForGuild(closure_129_1), done: false };
+            return obj10;
           }
         } else if (arg0 === 1) {
-          did_lurk = 3;
+          c5 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 0;
-          did_lurk = 3;
-          obj = { value, done: true };
+          c5 = 3;
+          const obj = { value, done: true };
           return obj;
         } else {
-          channel2 = closure_130_4.getChannel(channel_id);
+          channel2 = closure_130_4.getChannel(closure_129_2);
           c3 = 0;
         }
-        const track = closure_130_1(closure_130_2[6]).track;
-        const FORWARD_BREADCRUMB_CLICKED = closure_130_6.FORWARD_BREADCRUMB_CLICKED;
-        const tmp19 = closure_130_1(closure_130_2[6]);
-        const basicChannel = closure_130_4.getBasicChannel(closure_0.channel_id);
+        const basicChannel = closure_130_4.getBasicChannel(closure_129_0.channel_id);
         let guild_id1;
         if (basicChannel != null) {
           guild_id1 = basicChannel.guild_id;
         }
-        const obj10 = { guild_id: guild_id1, channel_id: closure_0.channel_id, message_id: closure_0.id, breadcrumb_guild_id: guild_id, breadcrumb_channel_id: channel_id, breadcrumb_message_id: message_id, did_lurk };
-        track(FORWARD_BREADCRUMB_CLICKED, obj10);
-        let tmp34;
-        if (did_lurk) {
-          tmp34 = channel_id;
+        const obj11 = { guild_id: guild_id1, channel_id: closure_129_0.channel_id, message_id: closure_129_0.id, breadcrumb_guild_id: closure_129_1, breadcrumb_channel_id: closure_129_2, breadcrumb_message_id: message_id, did_lurk: closure_129_5 };
+        closure_130_1(closure_130_2[6]).track(closure_130_6.FORWARD_BREADCRUMB_CLICKED, obj11);
+        let tmp36;
+        if (closure_129_5) {
+          tmp36 = closure_129_2;
         }
-        welcomeModalChannelId = tmp34;
-        const obj11 = { navigationReplace: false, welcomeModalChannelId };
-        const tmp40 = closure_130_1(closure_130_2[7]);
-        tmp40(closure_130_8.CHANNEL(guild_id, channel_id, message_id), obj11);
-      } catch (tmp50) {
-        if (0 === c3) {
-          did_lurk = 3;
-          throw tmp50;
+        closure_129_6 = tmp36;
+        const obj5 = closure_130_1(closure_130_2[6]);
+        const obj12 = { navigationReplace: false, welcomeModalChannelId: closure_129_6 };
+        closure_130_1(closure_130_2[7])(closure_130_8.CHANNEL(closure_129_1, closure_129_2, message_id), obj12);
+        const tmp42 = closure_130_1(closure_130_2[7]);
+      } catch (tmp52) {
+        if (tmp4 === c3) {
+          c5 = tmp2;
+          throw tmp52;
         } else {
-          c4 = 1;
+          c4 = tmp;
         }
       }
     }
-  });
-  return obj(...arguments);
+  })();
 };
-({ AnalyticEvents: metroRequire, AnalyticsObjects: metroImportDefault, Routes: metroImportAll } = Constants);
+const Constants = fn(1085);
+({ AnalyticEvents: metroRequire, AnalyticsObjects: closure_7, Routes: closure_8 } = Constants);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/handleForwardBreadcrumb.tsx");
 
 export default function handleForwardBreadcrumb() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_9.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

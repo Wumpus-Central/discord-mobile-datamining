@@ -10,7 +10,6 @@ const result = size.fileFinishedImporting("modules/remote_auth/QRLoginUtils.tsx"
 export const findRemoteAuthFingerprint = function findRemoteAuthFingerprint(host, pathname) {
   if (null != host) {
     if (null != pathname) {
-      const obj = URLUtilsDefault;
       if (obj.isDiscordHostname(host)) {
         const match = pathname.match(re2);
         let tmp6 = null;
@@ -19,6 +18,7 @@ export const findRemoteAuthFingerprint = function findRemoteAuthFingerprint(host
         }
         return tmp6;
       }
+      obj = URLUtilsDefault;
     }
   }
   return null;

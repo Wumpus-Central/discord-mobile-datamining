@@ -1,16 +1,14 @@
 // === Module 9335: AudioRouteStore ===
 
 // Module 9335 (AudioRouteStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import VoiceCallTypes from "VoiceCallTypes" /* 9336 */;
-import react_nativeDefault from "react-native" /* 9337 */;
-import react_native from "react-native" /* 17 */;
+import NativeAudioRouteEmitterModuleDefault from "NativeAudioRouteEmitterModule" /* 9337 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import size from "module_2" /* 2 */;
-
-let _null;
 
 function handleAudioRouteChanged(arr) {
   let tmp = arg1;
@@ -35,83 +33,92 @@ function handleAudioRouteChanged(arr) {
   }
   UNKNOWN = VoiceCallTypes.RouteTypes.UNKNOWN;
 }
-const NativeModules = react_native.NativeModules;
-const NativeEventEmitter = react_native.NativeEventEmitter;
+const NativeModules = get_ActivityIndicator.NativeModules;
 let UNKNOWN = VoiceCallTypes.RouteTypes.UNKNOWN;
 let closure_6 = false;
-let c7 = null;
-const nativeEventEmitter = new NativeEventEmitter(NativeModules.AudioRouteEmitter);
-const Store = get_initializedDefault.Store;
+let closure_7 = null;
+const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(NativeModules.AudioRouteEmitter);
+const Store = initializeDefault.Store;
 class AudioRouteStoreClass extends Store {
-  initialize() {
-    this.waitFor(RTCConnectionStore);
-  }
-  getCurrentRouteType() {
-    return UNKNOWN;
-  }
-  getMultipleRoutesAvailable() {
-    return closure_6;
-  }
 }
 const prototype = AudioRouteStoreClass.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(RTCConnectionStore);
+};
+prototype["getCurrentRouteType"] = function getCurrentRouteType() {
+  return UNKNOWN;
+};
+prototype["getMultipleRoutesAvailable"] = function getMultipleRoutesAvailable() {
+  return closure_6;
+};
 AudioRouteStoreClass.displayName = "AudioRouteStore";
-const obj = {
+const audioRouteStoreClass = new AudioRouteStoreClass(DispatcherDefault, {
   RTC_CONNECTION_STATE: function handleConnectionStatusChanged() {
     const isConnectedResult = RTCConnectionStore.isConnected();
-    const tmp2 = _null;
-    if (null === _null) {
+    let tmp3 = null;
+    if (null === closure_7) {
       if (isConnectedResult) {
-        let currentRoute1;
+        let _catch = dependencyMap;
         UNKNOWN = VoiceCallTypes.RouteTypes.UNKNOWN;
         let addListenerResult;
-        if (nativeEventEmitter != null) {
+        if (nativeEventEmitter != tmp3) {
           addListenerResult = nativeEventEmitter.addListener("audio-route-changed", (routeType) => {
             handleAudioRouteChanged(routeType.routeType, routeType.multipleRoutesAvailable);
             audioRouteStoreClass.emitChange();
           });
         }
-        _null = addListenerResult;
-        const tmp10Result = PlatformUtils;
-        if (tmp10Result.isAndroid()) {
-          const obj3 = react_nativeDefault;
+        closure_7 = addListenerResult;
+        if (tmp11Result.isAndroid()) {
+          const obj3 = NativeAudioRouteEmitterModuleDefault;
+          tmp3 = obj3 == tmp3;
           let currentRoute;
-          if (obj3 != null) {
+          if (!tmp3) {
             currentRoute = obj3.getCurrentRoute();
           }
-          currentRoute1 = currentRoute;
+          let currentRoute1 = currentRoute;
         } else {
           const AudioRouteEmitter = NativeModules.AudioRouteEmitter;
           currentRoute1 = AudioRouteEmitter.getCurrentRoute();
         }
+        tmp11Result = PlatformUtils;
         const nextPromise = currentRoute1.then((routeType) => {
           handleAudioRouteChanged(routeType.routeType, routeType.multipleRoutesAvailable);
         });
-        const nextPromise1 = nextPromise.then(() => {
+        _catch = currentRoute1.then((routeType) => {
+          handleAudioRouteChanged(routeType.routeType, routeType.multipleRoutesAvailable);
+        }).then(() => {
+          let emitChangeResult;
+          if (audioRouteStoreClass != null) {
+            emitChangeResult = audioRouteStoreClass.emitChange();
+          }
+          return emitChangeResult;
+        }).catch;
+        _catch(() => {
+
+        });
+        const nextPromise1 = currentRoute1.then((routeType) => {
+          handleAudioRouteChanged(routeType.routeType, routeType.multipleRoutesAvailable);
+        }).then(() => {
           let emitChangeResult;
           if (audioRouteStoreClass != null) {
             emitChangeResult = audioRouteStoreClass.emitChange();
           }
           return emitChangeResult;
         });
-        nextPromise1.catch(() => {
-
-        });
       }
-      return false;
     }
-    const tmp3 = null == tmp2 || isConnectedResult;
-    if (!tmp3) {
+    if (!tmp4) {
       const AudioRoutePicker = NativeModules.AudioRoutePicker;
-      if (AudioRoutePicker != null) {
+      if (AudioRoutePicker != tmp3) {
         AudioRoutePicker.resetPortOverride();
       }
       UNKNOWN = VoiceCallTypes.RouteTypes.UNKNOWN;
-      _null.remove();
-      _null = null;
+      closure_7.remove();
+      closure_7 = tmp3;
     }
+    return false;
   }
-};
-const audioRouteStoreClass = new AudioRouteStoreClass(DispatcherDefault, obj);
+});
 const result = size.fileFinishedImporting("modules/voice_calls/AudioRouteStore.native.tsx");
 
 export default audioRouteStoreClass;

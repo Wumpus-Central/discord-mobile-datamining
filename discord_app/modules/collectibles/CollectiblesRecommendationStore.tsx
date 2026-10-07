@@ -1,36 +1,35 @@
 // === Module 13024: CollectiblesRecommendationStore ===
 
 // Module 13024 (CollectiblesRecommendationStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import size from "module_2" /* 2 */;
 
 const DAY = DurationsDefault.Millis.DAY;
 let c1 = null;
 let c2 = null;
 let c3 = false;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class CollectiblesRecommendationStore extends Store {
-  getRecommendations() {
-    return c1;
-  }
-  shouldFetch() {
-    let tmp = !c3;
-    if (tmp) {
-      let tmp4 = null == c2;
-      if (!tmp4) {
-        const _Date = Date;
-        tmp4 = Date.now() - c2 >= DAY;
-      }
-      tmp = tmp4;
-    }
-    return tmp;
-  }
 }
 const prototype = CollectiblesRecommendationStore.prototype;
+prototype["getRecommendations"] = function getRecommendations() {
+  return c1;
+};
+prototype["shouldFetch"] = function shouldFetch() {
+  let tmp = !c3;
+  if (!c3) {
+    let tmp4 = null == c2;
+    if (!tmp4) {
+      const _Date = Date;
+      tmp4 = Date.now() - c2 >= DAY;
+    }
+    tmp = tmp4;
+  }
+  return tmp;
+};
 CollectiblesRecommendationStore.displayName = "CollectiblesRecommendationStore";
-const obj = {
+const collectiblesRecommendationStore = new CollectiblesRecommendationStore(DispatcherDefault, {
   COLLECTIBLES_RECOMMENDATIONS_FETCH_START: function handleFetchStart() {
     c1 = null;
     c2 = null;
@@ -49,8 +48,8 @@ const obj = {
     c2 = null;
     c3 = false;
   }
-};
-const collectiblesRecommendationStore = new CollectiblesRecommendationStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/CollectiblesRecommendationStore.tsx");
 
 export default collectiblesRecommendationStore;

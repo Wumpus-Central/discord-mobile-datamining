@@ -1,50 +1,40 @@
 // === Module 18138: BundleUpdaterActionCreators ===
 
 // Module 18138 (BundleUpdaterActionCreators)
-import react_native from "react-native" /* 17 */;
-import intl5 from "intl" /* 1126 */;
+import _mod17 from "module_17" /* 17 */;
+import util from "util" /* 1126 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
 import size from "module_2" /* 2 */;
 
-const NativeModules = react_native.NativeModules;
+const NativeModules = _mod17.NativeModules;
 let c4 = false;
-let obj = {
+const result = size.fileFinishedImporting("actions/native/BundleUpdaterActionCreators.tsx");
+
+export default {
   prepareUpdate(versionRequired) {
-    let intl;
-    let intl2;
-    let intl3;
-    let intl4;
-    const tmp = versionRequired;
-    if (tmp) {
-      const obj = {
-        title: intl.string(intl5.t.GQZdmI),
-        body: intl2.string(intl5.t.Fizu9y),
-        confirmText: intl3.string(intl5.t.UefCDS),
-        cancelText: intl4.string(intl5.t["1SzcG6"]),
-        onConfirm() {
-            BundleUpdaterManager = BundleUpdaterManager.BundleUpdaterManager;
-            return BundleUpdaterManager.reload();
-          }
+    if (versionRequired) {
+      const obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
+      const intl = util.intl;
+      obj2.title = intl.string(util.t.GQZdmI);
+      const intl2 = util.intl;
+      obj2.body = intl2.string(util.t.Fizu9y);
+      const intl3 = util.intl;
+      obj2.confirmText = intl3.string(util.t.UefCDS);
+      const intl4 = util.intl;
+      obj2.cancelText = intl4.string(util.t["1SzcG6"]);
+      obj2.onConfirm = function onConfirm() {
+        BundleUpdaterManager = BundleUpdaterManager.BundleUpdaterManager;
+        return BundleUpdaterManager.reload();
       };
-      const show = AlertActionCreatorsDefault.show;
-      AlertActionCreatorsDefault;
-      intl = intl5.intl;
-      intl2 = intl5.intl;
-      intl3 = intl5.intl;
-      intl4 = intl5.intl;
-      show(obj);
+      AlertActionCreatorsDefault.show(obj2);
       c4 = true;
     }
   },
   deferUpdate() {
-    const tmp = c4;
-    if (tmp) {
+    if (c4) {
       c4 = false;
       const BundleUpdaterManager = NativeModules.BundleUpdaterManager;
       BundleUpdaterManager.reload();
     }
   }
 };
-const result = size.fileFinishedImporting("actions/native/BundleUpdaterActionCreators.tsx");
-
-export default obj;

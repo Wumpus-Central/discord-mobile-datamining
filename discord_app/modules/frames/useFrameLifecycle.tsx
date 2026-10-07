@@ -1,190 +1,133 @@
 // === Module 16794: useFrameLifecycle ===
 
 // Module 16794 (useFrameLifecycle)
-import _slicedToArray_mod from "_slicedToArray" /* 32 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import react from "react" /* 19 */;
-import FramesConstants from "FramesConstants" /* 8738 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-let c3;
-
-let metroImportDefault;
-let metroRequire;
+const require = fn;
 function useFrameLifecycleState(applicationId) {
-  let closure_3;
-  let data;
-  let first;
-  let isLoading;
-  let items2;
-  let obj10;
   applicationId = applicationId.applicationId;
   const surface = applicationId.surface;
   _slicedToArray = undefined;
   const items = [applicationId, surface];
-  const memo = react.useMemo(() => metroImportDefault(applicationId, surface), items);
+  const memo = noop.useMemo(() => React5(applicationId, surface), items);
   const items1 = [memo];
-  const memo1 = react.useMemo(() => surface, items1);
+  const memo1 = noop.useMemo(() => surface, items1);
   const tmp3 = surface(memo[7])(memo);
-  const tmp4 = surface(memo[8])(memo);
   const obj = applicationId(memo[9]);
   const application = obj.useApplication(applicationId);
   ({ data, isLoading } = application);
+  const tmp4 = surface(memo[8])(memo);
+  const result = applicationId(memo[10]).isEmbeddedApplication(data);
   const obj2 = applicationId(memo[10]);
-  const result = obj2.isEmbeddedApplication(data);
-  const tmp7 = null != surface(memo[11])(applicationId);
-  [first, _slicedToArray] = react.useState(null);
-  const obj3 = { surface: memo1, setFailed: react.useCallback(() => closure_3(memo), items2), lifecycle: obj10 };
-  items2 = [memo];
+  const tmp8 = _slicedToArray(noop.useState(null), 2);
+  _slicedToArray = tmp8[1];
+  const obj3 = { surface: memo1, setFailed: null, lifecycle: null };
+  const items2 = [memo];
+  obj3.setFailed = noop.useCallback(() => closure_3(memo), items2);
   if (closure_6(tmp3)) {
-    let obj5;
     if (tmp4) {
-      obj5 = { state: obj.RenderingElsewhere };
       const obj4 = { state: obj.RenderingElsewhere };
     } else {
-      obj5 = { state: obj.Launched, frame: tmp3 };
+      const obj5 = { state: obj.Launched, frame: tmp3 };
     }
-    obj10 = obj5;
-  } else if (first === memo) {
-    obj10 = { state: obj.Error };
-    const obj6 = { state: obj.Error };
   } else {
-    let state;
-    if (tmp3 != null) {
-      state = tmp3.state;
-    }
-    if ("loading" === state) {
-      obj10 = { state: obj.Loading, frame: tmp3 };
-      const obj7 = { state: obj.Loading, frame: tmp3 };
-    } else if (isLoading) {
-      obj10 = { state: obj.Loading, frame: "Array" };
-      const obj8 = { state: obj.Loading, frame: "Array" };
+    if (tmp8[0] === memo) {
+      const obj6 = { state: obj.Error };
+      let obj10 = obj6;
     } else {
-      if (null != data) {
-        if (tmp7) {
-          let tmp13;
-          const obj9 = { state: null };
-          if (result) {
-            obj9.state = obj.AwaitingLaunch;
-            tmp13 = obj9;
-          } else {
-            obj9.state = obj.DoesNotSupportSurface;
-            tmp13 = obj9;
-          }
-          obj10 = tmp13;
-        }
+      state = undefined;
+      if (tmp3 != null) {
+        state = tmp3.state;
       }
-      obj10 = { state: obj.NoApplication };
+      if ("loading" === state) {
+        const obj7 = { state: obj.Loading, frame: tmp3 };
+        obj10 = obj7;
+      } else if (isLoading) {
+        const obj8 = { state: obj.Loading, frame: "Array" };
+        obj10 = obj8;
+      } else {
+        if (null != data) {
+          if (tmp7) {
+            const obj9 = { state: null };
+            let AwaitingLaunch = obj;
+            if (result) {
+              AwaitingLaunch = AwaitingLaunch.AwaitingLaunch;
+              obj9.state = AwaitingLaunch;
+            } else {
+              obj9.state = AwaitingLaunch.DoesNotSupportSurface;
+            }
+          }
+        }
+        obj10 = { state: obj.NoApplication };
+      }
     }
+    obj3.lifecycle = obj10;
+    return obj3;
   }
-  return obj3;
 }
-let _slicedToArray = _slicedToArray_mod;
-({ isLaunched: metroRequire, makeFrameId: metroImportDefault } = FramesConstants);
+const FramesConstants = fn(8738);
+({ isLaunched: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const FrameLifecycleState = { Loading: "loading", AwaitingLaunch: "awaiting-launch", Launched: "launched", RenderingElsewhere: "rendering-elsewhere", NoApplication: "no-application", DoesNotSupportSurface: "does-not-support-surface", Error: "error" };
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) => {
-  let AwaitingLaunch;
-  let setFailed;
-  let obj = applicationId(setFailed[5]);
-  const cResult = obj.c(9);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/frames/useFrameLifecycle.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) => {
+  const cResult = applicationId(setFailed[5]).c(9);
   applicationId = applicationId.applicationId;
-  let surface = applicationId.surface;
+  const surface = applicationId.surface;
   if (cResult[0] === surface) {
-    let tmp2;
     if (cResult[1] === applicationId) {
-      tmp2 = cResult[2];
+      let tmp2 = cResult[2];
     }
     const tmp4 = useFrameLifecycleState(tmp2);
     const surface2 = tmp4.surface;
     setFailed = tmp4.setFailed;
     const lifecycle = tmp4.lifecycle;
-    const state = lifecycle.state;
+    state = lifecycle.state;
     if (cResult[3] === applicationId) {
       if (cResult[4] === setFailed) {
         if (cResult[5] === state) {
-          let tmp5;
-          let tmp6;
           if (cResult[6] === surface2) {
-            tmp5 = cResult[7];
-            tmp6 = cResult[8];
+            let tmp5 = cResult[7];
+            let tmp6 = cResult[8];
           }
-          const effect = react.useEffect(tmp5, tmp6);
+          const effect = noop.useEffect(tmp5, tmp6);
           return lifecycle;
         }
       }
     }
     const fn = function p() {
-      function launch() {
-        return closure_0(...arguments);
-      }
       if (state === AwaitingLaunch.AwaitingLaunch) {
-        let closure_0 = _asyncToGenerator(async () => {
-          let obj2;
-          let surface;
-          if (c3 === 2) {
+        closure_0 = asyncGeneratorStep(async () => {
+          applicationId = tmp3;
+          let v0 = 1;
+          await surface2(setFailed[6]).launchFrame({ applicationId, surface });
+          if (1 === tmp7) {
+            v0 = 0;
+            v0();
             c3 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
-          } else {
-            let v0;
-            try {
-              c3 = 2;
-              if (0 === surface) {
-                if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj4 = { value, done: true };
-                  return obj4;
-                } else {
-                  applicationId = tmp;
-                  v0 = 1;
-                  const obj5 = { applicationId, surface };
-                  surface = 2;
-                  c3 = 1;
-                  const obj6 = { value: obj2.launchFrame(obj5), done: false };
-                  obj2 = surface2(setFailed[6]);
-                  return obj6;
-                }
-              } else {
-                if (1 === tmp4) {
-                  v0 = 0;
-                  v0();
-                } else if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  v0 = 0;
-                  c3 = 3;
-                  const obj = { value, done: true };
-                  return obj;
-                } else {
-                  v0 = 0;
-                }
-                c3 = 3;
-                return { value: "IconComponent", done: null };
-              }
-            } catch (tmp12) {
-              if (0 === v0) {
-                c3 = 3;
-                throw tmp12;
-              } else {
-                surface = 1;
-              }
-            }
+          } else if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            v0 = 0;
           }
+          v0 = 0;
+          return value;
         });
-        launch();
+        (function launch() {
+          const self = this;
+          const apply = closure_0.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
+        })();
       }
     };
     const items = [state, applicationId, surface2, setFailed];
@@ -197,99 +140,51 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) => {
     tmp6 = items;
     tmp5 = fn;
   }
-  let obj2 = { applicationId, surface };
+  const obj2 = { applicationId, surface };
   cResult[0] = surface;
   cResult[1] = applicationId;
   cResult[2] = obj2;
   tmp2 = obj2;
+  const obj = applicationId(setFailed[5]);
 }) : ((applicationId) => {
-  let AwaitingLaunch;
   applicationId = applicationId.applicationId;
-  let obj = { applicationId, surface: applicationId.surface };
-  let tmp = useFrameLifecycleState(obj);
-  let surface = tmp.surface;
+  const tmp = useFrameLifecycleState({ applicationId, surface: applicationId.surface });
+  const surface = tmp.surface;
   const setFailed = tmp.setFailed;
   const lifecycle = tmp.lifecycle;
-  const state = lifecycle.state;
+  state = lifecycle.state;
   const items = [state, applicationId, surface, setFailed];
-  const effect = react.useEffect(() => {
-    function launch() {
-      return obj(...arguments);
-    }
-    let obj = function _launch2() {
-      obj = _asyncToGenerator(async () => {
-        let obj2;
-        if (c3 === 2) {
-          c3 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            return { value: "IconComponent", done: null };
-          }
-        } else {
-          let v0;
-          try {
-            c3 = 2;
-            if (0 === surface) {
-              if (arg0 === 1) {
-                c3 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                const obj4 = { value, done: true };
-                return obj4;
-              } else {
-                applicationId = tmp;
-                v0 = 1;
-                const obj5 = { applicationId, surface };
-                surface = 2;
-                c3 = 1;
-                const obj6 = { value: obj2.launchFrame(obj5), done: false };
-                obj2 = closure_2_1(setFailed[6]);
-                return obj6;
-              }
-            } else {
-              if (1 === tmp4) {
-                v0 = 0;
-                v0();
-              } else if (arg0 === 1) {
-                c3 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                v0 = 0;
-                c3 = 3;
-                obj = { value, done: true };
-                return obj;
-              } else {
-                v0 = 0;
-              }
-              c3 = 3;
-              return { value: "IconComponent", done: null };
-            }
-          } catch (tmp12) {
-            if (0 === v0) {
-              c3 = 3;
-              throw tmp12;
-            } else {
-              surface = 1;
-            }
-          }
-        }
-      });
-      return obj(...arguments);
+  const effect = noop.useEffect(() => {
+    closure_0 = async function _launch2() {
+      applicationId = tmp3;
+      let v0 = 1;
+      await closure_2_1(closure_2_2[6]).launchFrame({ applicationId, surface });
+      if (1 === tmp7) {
+        v0 = 0;
+        v0();
+        c3 = 3;
+      } else if (arg0 === 1) {
+        c3 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        v0 = 0;
+      }
+      v0 = 0;
+      return value;
     };
     if (state === AwaitingLaunch.AwaitingLaunch) {
-      const tmp = launch();
+      (function launch() {
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      })();
     }
   }, items);
   return lifecycle;
 });
-let result = size.fileFinishedImporting("modules/frames/useFrameLifecycle.tsx");
-
-export default tmp3;
 export { FrameLifecycleState };

@@ -1,56 +1,50 @@
 // === Module 12460: GuildPromptsStore ===
 
 // Module 12460 (GuildPromptsStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import size from "module_2" /* 2 */;
 
-let set;
-
-const React = {};
-const PersistedStore = get_initializedDefault.PersistedStore;
+const dependencyMap = {};
+const PersistedStore = initializeDefault.PersistedStore;
 class GuildPromptsStore extends PersistedStore {
-  initialize(obj) {
-    for (const key10004 in obj) {
-      let _Set = Set;
-      let self = this;
-      let self2 = this;
-      set = new Set(obj[key10004]);
-      closure_0[key10004] = set;
-      continue;
-    }
-  }
-  hasViewedPrompt(REAL_NAME_PROMPT, id) {
-    const hasItem = null != obj && obj.has(REAL_NAME_PROMPT);
-    return hasItem;
-  }
-  getState() {
-    return closure_0;
-  }
 }
 const prototype = GuildPromptsStore.prototype;
+prototype["initialize"] = function initialize(obj) {
+  for (const key10004 in arg0) {
+    let _Set = Set;
+    let tmp3 = new.target;
+    let tmp4 = new.target;
+    let set = new Set(arg0[key10004]);
+    closure_0[key10004] = set;
+    continue;
+  }
+};
+prototype["hasViewedPrompt"] = function hasViewedPrompt(REAL_NAME_PROMPT, id) {
+  let hasItem = null != obj;
+  if (hasItem) {
+    hasItem = obj.has(REAL_NAME_PROMPT);
+  }
+  return hasItem;
+};
+prototype["getState"] = function getState() {
+  return closure_0;
+};
 GuildPromptsStore.displayName = "GuildPromptsStore";
 GuildPromptsStore.persistKey = "GuildPromptsStore";
-const obj = {
+const guildPromptsStore = new GuildPromptsStore(DispatcherDefault, {
   GUILD_PROMPT_VIEWED: function handleGuildPromptViewed(arg0) {
-    let _prompt;
-    let flag;
-    let guildId;
     ({ prompt: _prompt, guildId } = arg0);
-    if (null == closure_0[guildId]) {
+    if (null == dependencyMap[guildId]) {
       const _Set = Set;
-      const self = this;
-      const self2 = this;
-      closure_0[guildId] = new Set();
-      const obj2 = closure_0[guildId];
-      set = new Set();
-      obj2.add(_prompt);
-      flag = true;
+      const set = new Set();
+      dependencyMap[guildId] = set;
+      dependencyMap[guildId].add(_prompt);
+      let flag = true;
     } else {
       const hasItem = obj.has(_prompt);
       flag = !hasItem;
-      if (flag) {
-        closure_0[guildId].add(_prompt);
+      if (!hasItem) {
+        obj.add(_prompt);
         flag = true;
       }
     }
@@ -58,15 +52,16 @@ const obj = {
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     guild = guild.guild;
-    let flag = null != closure_0[guild.id] && !guild.unavailable;
+    let flag = null != dependencyMap[guild.id] && !guild.unavailable;
     if (flag) {
-      delete closure_0[guild.id];
+      const id = guild.id;
+      delete tmp2[tmp];
       flag = true;
     }
     return flag;
   }
-};
-const guildPromptsStore = new GuildPromptsStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/GuildPromptsStore.tsx");
 
 export default guildPromptsStore;

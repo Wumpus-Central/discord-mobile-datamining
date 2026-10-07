@@ -1,236 +1,152 @@
 // === Module 12429: ChannelPrompt ===
 
 // Module 12429 (ChannelPrompt)
-import intl5 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import NavigatorHeader from "NavigatorHeader" /* 6017 */;
-import NavigatorConstants from "NavigatorConstants" /* 6075 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4513 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import size from "module_2" /* 2 */;
 
-let c4, c5, navigation;
-
-let c10;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let unpackModuleId;
-({ ScrollView: metroRequire, View: metroImportDefault } = react_native);
-({ jsx: c10, jsxs: unpackModuleId } = Fragment);
-let obj = { flex: { flex: 1 }, safePadding: obj2, contentContainer: { paddingHorizontal: 16 }, guildIcon: { alignSelf: "center" }, guildName: { marginTop: 8, textAlign: "center" }, title: { marginTop: 16, textAlign: "center" }, subTitle: { marginTop: 8, textAlign: "center" }, topicInput: { marginTop: 24 }, buttonWrapper: { marginTop: 8 }, error: { marginTop: 4 } };
-obj2 = { marginTop: NavigatorConstants.NAV_BAR_HEIGHT, flex: 1 };
-let closure_12 = createStyles.createStyles(obj);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { flex: { flex: 1 }, safePadding: { marginTop: fn(6075).NAV_BAR_HEIGHT, flex: 1 }, contentContainer: { paddingHorizontal: 16 }, guildIcon: { alignSelf: "center" }, guildName: { marginTop: 8, textAlign: "center" }, title: { marginTop: 16, textAlign: "center" }, subTitle: { marginTop: 8, textAlign: "center" }, topicInput: { marginTop: 24 }, buttonWrapper: { marginTop: 8 }, error: { marginTop: 4 } };
+let closure_12 = createStyles.createStyles(obj2);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf/native/components/ChannelPrompt.tsx");
 
 export default function ChannelPrompt(guildId) {
-  let _undefined;
-  let _undefined2;
-  let anyErrorMessage;
-  let c6;
-  let c7;
-  let first;
-  let firstFieldErrorMessage;
-  let guildIconURL;
-  let intl;
-  let intl2;
-  let intl3;
-  let intl4;
-  let items3;
-  let obj14;
-  let obj2;
-  let obj5;
-  let tmp17;
-  let tmp9;
   guildId = guildId.guildId;
   const hasBack = guildId.hasBack;
-  let hasSkip = guildId.hasSkip;
+  const hasSkip = guildId.hasSkip;
   const onCancel = guildId.onCancel;
   const onSuccess = guildId.onSuccess;
-  let value;
+  value = undefined;
   c6 = undefined;
   c7 = undefined;
-  const buttonText = guildId.buttonText;
   const tmp = closure_12();
-  const tmp3 = hasSkip;
-  let obj = guildId(hasSkip[9]);
   const items = [GuildStore];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId));
+  const stateFromStores = guildId(hasSkip[9]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   const tmp5 = onSuccess(value.useState(""), 2);
   value = tmp5[0];
-  const tmp7 = tmp5[1];
-  const tmp8 = onSuccess(value.useState(false), 2);
-  [tmp9, c6] = tmp8;
+  let obj = guildId(hasSkip[9]);
+  [tmp8, c6] = onSuccess(value.useState(false), 2);
+  const tmp7 = onSuccess(value.useState(false), 2);
   [obj2, c7] = onSuccess(value.useState(null), 2);
-  const tmp10 = onSuccess(value.useState(null), 2);
-  let obj3 = guildId(hasSkip[10]);
-  navigation = obj3.useNavigation();
+  const tmp9 = onSuccess(value.useState(null), 2);
+  const navigation = guildId(hasSkip[10]).useNavigation();
   const items1 = [navigation, hasBack, hasSkip, onCancel, onSuccess];
   const layoutEffect = value.useLayoutEffect(() => {
-    let fn;
-    let fn2;
-    const setOptions = navigation.setOptions;
     if (hasBack) {
-      const obj = NavigatorHeader;
-      fn = obj.getHeaderBackButton(onCancel);
+      let fn = NavigatorHeader.getHeaderBackButton(onCancel);
     } else {
       fn = () => null;
     }
-    const obj2 = { headerLeft: fn, headerRight: fn2 };
+    const obj2 = { headerLeft: fn, headerRight: null };
     if (hasSkip) {
-      const getHeaderTextButton = NavigatorHeader.getHeaderTextButton;
-      NavigatorHeader;
-      const intl = intl5.intl;
-      fn2 = getHeaderTextButton(intl.string(intl5.t["5Wxrcd"]), onSuccess);
+      const intl = util.intl;
+      let fn2 = NavigatorHeader.getHeaderTextButton(intl.string(util.t["5Wxrcd"]), onSuccess);
     } else {
       fn2 = () => null;
     }
-    setOptions(obj2);
+    obj2.headerRight = fn2;
+    navigation.setOptions(obj2);
   }, items1);
   const items2 = [guildId, onSuccess, value];
   const callback = value.useCallback(onCancel(function*() {
-    let closure_0;
-    let closure_1;
-    let closure_2;
-    let defaultChannel;
-    if (c5 === 2) {
+    _undefined2(null);
+    _undefined(true);
+    defaultChannel = defaultChannel.getDefaultChannel(guildId);
+    const intl = guildId(tmp33[12]).intl;
+    if (defaultChannel != null) {
+      const parent_id = defaultChannel.parent_id;
+    }
+    yield tmp3(tmp33[13]).createTextChannel(guildId, topic, parent_id, intl.formatToPlainString(closure_0(tmp33[12]).t.V4lepJ, { topic }));
+    if (1 === tmp7) {
+      c3 = 0;
+      closure_128_0 = tmp33;
+      const aPIError = new guildId(tmp33[14]).APIError(closure_128_0);
+      closure_129_7(aPIError);
+      closure_129_6(false);
       c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      let c3;
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            guildId = tmp4;
-            _undefined2(null);
-            _undefined(true);
-            defaultChannel = defaultChannel.getDefaultChannel(guildId);
-            c3 = 1;
-            const intl = guildId(hasSkip[12]).intl;
-            const obj4 = { topic };
-            const formatToPlainStringResult = intl.formatToPlainString(guildId(hasSkip[12]).t.V4lepJ, obj4);
-            const tmp50 = tmp(hasSkip[13]);
-            let parent_id;
-            const createTextChannel = tmp50.createTextChannel;
-            if (defaultChannel != null) {
-              parent_id = defaultChannel.parent_id;
-            }
-            c4 = 2;
-            c5 = 1;
-            const obj5 = { value: createTextChannel(guildId, topic, parent_id, formatToPlainStringResult), done: false };
-            return obj5;
-          }
-        } else {
-          if (1 === c4) {
-            c3 = 0;
-            guildId = hasSkip;
-            const self = this;
-            const self2 = this;
-            const aPIError = new guildId(hasSkip[14]).APIError(guildId);
-            closure_129_7(aPIError);
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 0;
-            c5 = 3;
-            const obj = { value, done: true };
-            return obj;
-          } else {
-            closure_129_4();
-            c3 = 0;
-          }
-          closure_129_6(false);
-          c5 = 3;
-          return { value: "IconComponent", done: null };
-        }
-      } catch (tmp28) {
-        hasSkip = tmp28;
-        if (0 === c3) {
-          c5 = 3;
-          throw tmp28;
-        } else {
-          c4 = 1;
-        }
-      }
+    } else if (arg0 === 1) {
+      c5 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      closure_129_4();
+      c3 = 0;
     }
+    return value;
   }), items2);
-  let tmp15Result2 = null;
+  let tmp14Result2 = null;
   if (null != stateFromStores) {
-    let obj4 = { top: true, style: tmp.safePadding, children: closure_11(tmp17, obj5) };
-    obj5 = { style: tmp.flex, contentInset: { top: 0 }, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, contentContainerStyle: tmp.contentContainer, children: items3 };
-    const SafeAreaPaddingView = tmp2(tmp3[15]).SafeAreaPaddingView;
-    const obj6 = { style: tmp.guildIcon, value: stateFromStores.name, icon: guildIconURL, selected: true };
-    guildIconURL = null;
-    tmp17 = c6;
-    const tmp19 = hasBack(tmp3[16]);
+    const obj4 = { top: true, style: tmp.safePadding, children: null };
+    const obj5 = { style: tmp.flex, contentInset: { top: 0 }, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, contentContainerStyle: tmp.contentContainer, children: null };
+    const obj6 = { style: tmp.guildIcon, value: stateFromStores.name, icon: null, selected: true };
+    let guildIconURL = null;
     if (null != stateFromStores.icon) {
-      const obj7 = { id: null, icon: null, canAnimate: true, size: 128 };
       ({ id: obj8.id, icon: obj8.icon } = stateFromStores);
-      const tmp18Result = hasBack(tmp3[17]);
-      guildIconURL = tmp18Result.getGuildIconURL(obj7);
+      guildIconURL = tmp17(tmp3[17]).getGuildIconURL({ id: null, icon: null, canAnimate: true, size: 128 });
+      const obj7 = { id: null, icon: null, canAnimate: true, size: 128 };
+      const tmp17Result = tmp17(tmp3[17]);
     }
-    items3 = [closure_10(tmp19, obj6), , , , , , ];
+    obj6.icon = guildIconURL;
+    const items3 = [closure_10(hasBack(tmp3[16]), obj6), , , , , , ];
     const obj9 = { style: tmp.guildName, lineClamp: 1, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: stateFromStores.name };
-    items3[1] = closure_10(guildId(tmp3[18]).Text, obj9);
-    const obj10 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: intl.string(guildId(tmp3[12]).t["8VRa7d"]) };
-    const Text = tmp2(tmp3[18]).Text;
-    intl = tmp2(tmp3[12]).intl;
-    items3[2] = closure_10(Text, obj10);
-    const obj11 = { style: tmp.subTitle, variant: "text-sm/medium", color: "text-default", children: intl2.string(guildId(tmp3[12]).t["+855Pm"]) };
-    const Text2 = tmp2(tmp3[18]).Text;
-    intl2 = tmp2(tmp3[12]).intl;
-    items3[3] = closure_10(Text2, obj11);
-    const obj12 = { style: tmp.topicInput, label: intl3.string(guildId(tmp3[12]).t.bY20tU), value, error: firstFieldErrorMessage, onChangeText: tmp7, onSubmitEditing: callback, maxLength: 100, placeholder: intl4.string(guildId(tmp3[12]).t.xGOYA8), returnKeyType: "done", autoFocus: true };
-    const tmp18Result3 = hasBack(tmp3[19]);
-    intl3 = tmp2(tmp3[12]).intl;
-    firstFieldErrorMessage = undefined;
+    items3[1] = closure_10(tmp2(tmp3[18]).Text, obj9);
+    const obj10 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    let intl = tmp2(tmp3[12]).intl;
+    obj10.children = intl.string(tmp2(tmp3[12]).t["8VRa7d"]);
+    items3[2] = closure_10(tmp2(tmp3[18]).Text, obj10);
+    const obj11 = { style: tmp.subTitle, variant: "text-sm/medium", color: "text-default", children: null };
+    const intl2 = tmp2(tmp3[12]).intl;
+    obj11.children = intl2.string(tmp2(tmp3[12]).t["+855Pm"]);
+    items3[3] = closure_10(tmp2(tmp3[18]).Text, obj11);
+    const obj12 = { style: tmp.topicInput, label: null, value: null, error: null, onChangeText: null, onSubmitEditing: null, maxLength: 100, placeholder: null, returnKeyType: "done", autoFocus: true };
+    const tmp16 = c6;
+    const tmp18 = hasBack(tmp3[16]);
+    const intl3 = tmp2(tmp3[12]).intl;
+    obj12.label = intl3.string(tmp2(tmp3[12]).t.bY20tU);
+    obj12.value = value;
+    let firstFieldErrorMessage;
     if (obj2 != null) {
       firstFieldErrorMessage = obj2.getFirstFieldErrorMessage("name");
     }
-    intl4 = tmp2(tmp3[12]).intl;
-    items3[4] = closure_10(tmp18Result3, obj12);
-    const obj13 = { style: tmp.buttonWrapper, children: closure_10(guildId(tmp3[20]).Button, obj14) };
-    obj14 = { size: "md", text: buttonText, onPress: callback, loading: tmp9, disabled: tmp9, grow: true };
+    obj12.error = firstFieldErrorMessage;
+    obj12.onChangeText = tmp5[1];
+    obj12.onSubmitEditing = callback;
+    const intl4 = tmp2(tmp3[12]).intl;
+    obj12.placeholder = intl4.string(tmp2(tmp3[12]).t.xGOYA8);
+    items3[4] = closure_10(hasBack(tmp3[19]), obj12);
+    const obj13 = { style: tmp.buttonWrapper, children: null };
+    const obj14 = { size: "md", text: guildId.buttonText, onPress: callback, loading: tmp8, disabled: tmp8, grow: true };
+    obj13.children = closure_10(tmp2(tmp3[20]).Button, obj14);
     items3[5] = closure_10(c7, obj13);
     let hasFieldErrorsResult;
     if (obj2 != null) {
       hasFieldErrorsResult = obj2.hasFieldErrors();
     }
-    let tmp15Result = null;
+    let tmp14Result = null;
     if (hasFieldErrorsResult) {
-      const obj15 = { style: tmp.error, children: anyErrorMessage };
-      anyErrorMessage = undefined;
-      const tmp18Result4 = hasBack(tmp3[21]);
+      const obj15 = { style: tmp.error, children: null };
+      let anyErrorMessage;
       if (obj2 != null) {
         anyErrorMessage = obj2.getAnyErrorMessage();
       }
-      tmp15Result = closure_10(tmp18Result4, obj15);
+      obj15.children = anyErrorMessage;
+      tmp14Result = closure_10(tmp17(tmp3[21]), obj15);
+      const tmp17Result4 = tmp17(tmp3[21]);
     }
-    items3[6] = tmp15Result;
-    tmp15Result2 = closure_10(SafeAreaPaddingView, obj4);
+    items3[6] = tmp14Result;
+    obj5.children = items3;
+    obj4.children = closure_11(tmp16, obj5);
+    tmp14Result2 = closure_10(tmp2(tmp3[15]).SafeAreaPaddingView, obj4);
+    const tmp17Result3 = hasBack(tmp3[19]);
   }
-  return tmp15Result2;
+  return tmp14Result2;
 };

@@ -10,7 +10,10 @@ const result = size.fileFinishedImporting("modules/favorites/utils/createFavorit
 export const createFavoritesGuildChannelRecord = function createFavoritesGuildChannelRecord(arg0, order, toJS) {
   const constructor = new toJS.constructor(toJS.toJS());
   constructor.position_ = order.order;
-  const tmp2 = null != order.nickname && toJS.type !== ChannelTypes.DM;
+  let tmp2 = null != order.nickname;
+  if (tmp2) {
+    tmp2 = toJS.type !== ChannelTypes.DM;
+  }
   if (tmp2) {
     constructor.name = order.nickname;
   }

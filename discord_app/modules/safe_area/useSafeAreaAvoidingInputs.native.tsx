@@ -4,18 +4,15 @@
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensions from "useWindowDimensions" /* 1484 */;
 import useKeyboardDuration from "useKeyboardDuration" /* 6479 */;
-import ViewMeasureUtils from "ViewMeasureUtils" /* 10850 */;
-import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
-import react_mod from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-let c3, c4, insets, styles2;
+const require = globalThis.__r;
 
+require = fn;
 function calculateTargetScrollY(scrollView) {
   const sum = scrollView.scrollView.y + scrollView.scrollView.height;
-  obj = useWindowDimensions;
-  const diff = obj.getWindowDimensions({ ignoreKeyboard: true }).height - scrollView.insets.bottom;
+  const diff = useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true }).height - scrollView.insets.bottom;
   if (scrollView.inputInWindow.y + scrollView.inputInWindow.height + scrollView.scrollOffset > diff) {
     const _Math = Math;
     const diff1 = scrollView.scrollView.height - Math.max(0, sum - diff);
@@ -26,97 +23,99 @@ function calculateTargetScrollY(scrollView) {
   }
 }
 function calculateScrollOffset() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_7.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-let obj = function _calculateScrollOffset() {
-  obj = _asyncToGenerator(async (arg0, arg1) => {
-    let extraOffset = arg0;
-    const styles = arg1;
-    let c5 = 0;
-    let c6 = 0;
-    return (async (arg0, value) => {
-      let obj5;
-      if (c6 === 2) {
-        c6 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+let closure_7 = async function _calculateScrollOffset(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
+          c6 = 3;
           throw value;
         } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              return { value, done: true };
-            } else {
-              c4 = 0;
-              styles2 = undefined;
-              closure_3 = undefined;
-              if (null == extraOffset) {
-                c6 = 3;
-                const obj4 = { value: nativeDefault.space.PX_16, done: true };
-                return obj4;
-              } else {
-                const type = iter.type;
-                if ("toRef" === type) {
-                  c5 = 1;
-                  c6 = 1;
-                  const obj6 = { value: obj5.measureViewRefInWindow(extraOffset.ref), done: false };
-                  obj5 = ViewMeasureUtils;
-                  return obj6;
-                } else if ("toValue" === type) {
-                  c6 = 3;
-                  return { value: extraOffset.value, done: true };
-                } else if ("toBottom" === type) {
-                  const _Number = Number;
-                  c6 = 3;
-                  return { value: Number.MAX_SAFE_INTEGER, done: true };
-                } else {
-                  c6 = 3;
-                  return { value: "IconComponent", done: null };
-                }
-              }
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            return { value, done: true };
-          } else {
-            let sum;
-            styles2 = value;
-            extraOffset = extraOffset.extraOffset;
-            let c2 = extraOffset;
-            if (extraOffset == null) {
-              c2 = 0;
-            }
-            closure_3 = c2;
-            if (null == styles2) {
-              sum = closure_132_1(closure_132_2[3]).space.PX_16 + closure_3;
-            } else {
-              sum = styles2.y - (styles.y + styles.height) + styles2.height + closure_3;
-            }
-            c6 = 3;
-            return { value: sum, done: true };
-          }
-        } catch (tmp25) {
           c6 = 3;
-          throw tmp25;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          c4 = 0;
+          closure_3 = tmp2;
+          closure_131_0 = _require;
+          closure_131_1 = closure_1;
+          closure_131_2 = undefined;
+          closure_131_3 = undefined;
+          if (null == _require) {
+            c6 = 3;
+            const obj5 = { value: nativeDefault.space.PX_16, done: true };
+            return obj5;
+          } else {
+            const type = _require.type;
+            if ("toRef" === type) {
+              c5 = 1;
+              c6 = 1;
+              const obj6 = { value: require("ViewMeasureUtils").measureViewRefInWindow(_require.ref), done: false };
+              return obj6;
+            } else if ("toValue" === type) {
+              c6 = 3;
+              const obj7 = { value: _require.value, done: true };
+              return obj7;
+            } else if ("toBottom" === type) {
+              const _Number = Number;
+              c6 = 3;
+              const obj8 = { value: Number.MAX_SAFE_INTEGER, done: true };
+              return obj8;
+            } else {
+              c6 = 3;
+              return { value: "IconComponent", done: null };
+            }
+          }
         }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } else {
+        closure_131_2 = value;
+        const extraOffset = closure_131_0.extraOffset;
+        c2 = extraOffset;
+        if (extraOffset == null) {
+          c2 = 0;
+        }
+        closure_131_3 = c2;
+        if (null == closure_131_2) {
+          const sum = closure_132_1(closure_132_2[3]).space.PX_16 + closure_131_3;
+        } else {
+          const sum1 = closure_131_2.y - (closure_131_1.y + closure_131_1.height) + closure_131_2.height + closure_131_3;
+        }
+        c6 = 3;
       }
-    })();
-  });
-  return obj(...arguments);
+    } catch (tmp27) {
+      c6 = tmp;
+      throw tmp27;
+    }
+  }
 };
 function scrollToTargetY(current, y) {
   current = current.current;
@@ -133,27 +132,23 @@ function scrollToTargetY(current, y) {
     if (current2 != null) {
       const scrollToOffset = current2.scrollToOffset;
       if (scrollToOffset != null) {
-        obj = { offset: y, animated: true };
+        const obj = { offset: y, animated: true };
         scrollToOffset(obj);
       }
     }
   }
 }
-let _asyncToGenerator = _asyncToGenerator_mod;
-let react = react_mod;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((insets) => {
-  let closure_3;
-  let closure_4;
-  let scrollViewRef;
-  let tmp2;
-  let tmp3;
-  obj = insets(scrollViewRef[6]);
-  const cResult = obj.c(11);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safe_area/useSafeAreaAvoidingInputs.native.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((insets) => {
+  const cResult = require("c").c(11);
   insets = insets.insets;
+  _require = insets;
   const inputs = insets.inputs;
   scrollViewRef = insets.scrollViewRef;
-  let obj2 = react;
-  _asyncToGenerator = react.useRef(inputs);
+  asyncGeneratorStep = noop.useRef(inputs);
   if (cResult[0] !== inputs) {
     const fn = function u() {
       closure_3.current = inputs;
@@ -162,34 +157,29 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((insets) => {
     cResult[0] = inputs;
     cResult[1] = fn;
     cResult[2] = items;
-    tmp3 = items;
-    tmp2 = fn;
+    let tmp3 = items;
+    let tmp2 = fn;
   } else {
     tmp2 = cResult[1];
     tmp3 = cResult[2];
   }
   const effect = obj2.useEffect(tmp2, tmp3);
   if (cResult[3] === insets) {
-    let tmp5;
-    let tmp7;
-    let tmp6;
-    let tmp9;
     if (cResult[4] === scrollViewRef) {
-      tmp5 = cResult[5];
+      let tmp5 = cResult[5];
     }
-    react = tmp5;
+    noop = tmp5;
     if (cResult[6] !== tmp5) {
       const fn3 = function y() {
-        obj = useKeyboardDuration;
-        const timeout = setTimeout(closure_4, obj.getKeyboardDuration());
+        const timeout = setTimeout(closure_4, useKeyboardDuration.getKeyboardDuration());
         return () => clearTimeout(closure_0);
       };
       const items1 = [tmp5];
       cResult[6] = tmp5;
       cResult[7] = fn3;
       cResult[8] = items1;
-      tmp7 = items1;
-      tmp6 = fn3;
+      let tmp7 = items1;
+      let tmp6 = fn3;
     } else {
       tmp6 = cResult[7];
       tmp7 = cResult[8];
@@ -199,22 +189,17 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((insets) => {
       let obj3 = { onFocus: tmp5 };
       cResult[9] = tmp5;
       cResult[10] = obj3;
-      tmp9 = obj3;
+      let tmp9 = obj3;
     } else {
       tmp9 = cResult[10];
     }
     return tmp9;
   }
-  let closure_0 = _asyncToGenerator(async () => {
-    let inputInScrollView;
-    let inputInWindow;
-    let obj10;
-    let obj14;
-    let obj7;
-    if (inputInScrollView === 2) {
-      inputInScrollView = 3;
+  _require = asyncGeneratorStep(async () => {
+    if (ref2 === 2) {
+      ref2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
+    } else if (tmp5 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -225,31 +210,29 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((insets) => {
       }
     } else {
       try {
-        let scrollView;
-        let scrollOffset;
-        let closure_6;
-        let current2;
-        let found;
-        inputInScrollView = 2;
-        if (0 === inputInWindow) {
+        ref2 = 2;
+        if (0 === ref) {
           if (arg0 === 1) {
-            inputInScrollView = 3;
+            ref2 = 3;
             throw value;
           } else if (arg0 === 2) {
-            inputInScrollView = 3;
+            ref2 = 3;
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            let closure_1 = tmp;
-            insets = tmp2;
-            inputInWindow = undefined;
-            inputInScrollView = undefined;
-            scrollView = undefined;
-            scrollOffset = undefined;
-            closure_6 = undefined;
-            current2 = inputInWindow.current;
-            const current1 = inputInScrollView.current;
-            found = current1.find((ref) => {
+            closure_1 = tmp2;
+            const insets = tmp3;
+            closure_128_0 = undefined;
+            closure_128_1 = undefined;
+            closure_128_2 = undefined;
+            closure_128_3 = undefined;
+            closure_128_4 = undefined;
+            closure_128_5 = undefined;
+            closure_128_6 = undefined;
+            const current2 = ref.current;
+            closure_128_0 = current2;
+            const current1 = ref2.current;
+            const found = current1.find((ref) => {
               const current = ref.ref.current;
               let isFocusedResult;
               if (current != null) {
@@ -257,123 +240,126 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((insets) => {
               }
               return isFocusedResult;
             });
+            closure_128_1 = found;
             if (null != found) {
               if (null != current2) {
-                inputInWindow = 1;
-                inputInScrollView = 1;
-                const obj4 = { value: obj10.measureViewRefInWindow(found.ref), done: false };
-                obj10 = insets(scrollViewRef[4]);
+                ref = 1;
+                ref2 = 1;
+                const obj4 = { value: insets(scrollViewRef[4]).measureViewRefInWindow(found.ref), done: false };
                 return obj4;
               }
             }
           }
-        } else if (1 === inputInWindow) {
+        } else if (1 === tmp6) {
           if (arg0 === 1) {
-            inputInScrollView = 3;
+            ref2 = 3;
             throw value;
           } else if (arg0 === 2) {
-            inputInScrollView = 3;
+            ref2 = 3;
             const obj5 = { value, done: true };
             return obj5;
           } else {
-            inputInWindow = 2;
-            inputInScrollView = 1;
-            const obj6 = { value: obj7.measureViewRefInView(found.ref, current2), done: false };
-            obj7 = insets(scrollViewRef[4]);
+            closure_128_2 = value;
+            ref = 2;
+            ref2 = 1;
+            const obj6 = { value: insets(scrollViewRef[4]).measureViewRefInView(closure_128_1.ref, closure_128_0), done: false };
             return obj6;
           }
-        } else if (2 === inputInWindow) {
-          if (arg0 === 1) {
-            inputInScrollView = 3;
+        } else {
+          if (2 === tmp6) {
+            if (arg0 === 1) {
+              ref2 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              ref2 = 3;
+              const obj8 = { value, done: true };
+              return obj8;
+            } else {
+              closure_128_3 = value;
+              if (null != closure_128_2) {
+                if (null != closure_128_3) {
+                  ref = 3;
+                  ref2 = 1;
+                  const obj9 = { value: insets(scrollViewRef[4]).measureViewInWindow(closure_128_0), done: false };
+                  return obj9;
+                }
+              }
+            }
+          } else if (3 === tmp6) {
+            if (arg0 === 1) {
+              ref2 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              ref2 = 3;
+              const obj11 = { value, done: true };
+              return obj11;
+            } else {
+              closure_128_4 = value;
+              ref = 4;
+              ref2 = 1;
+              const obj12 = { value: calculateScrollOffset(closure_128_1.offset, closure_128_2), done: false };
+              return obj12;
+            }
+          } else if (arg0 === 1) {
+            ref2 = 3;
             throw value;
           } else if (arg0 === 2) {
-            inputInScrollView = 3;
-            const obj8 = { value, done: true };
-            return obj8;
+            ref2 = 3;
+            const obj13 = { value, done: true };
+            return obj13;
           } else {
-            inputInScrollView = value;
-            if (null != inputInWindow) {
-              if (null != inputInScrollView) {
-                inputInWindow = 3;
-                inputInScrollView = 1;
-                const obj9 = { value: obj14.measureViewInWindow(current2), done: false };
-                obj14 = insets(scrollViewRef[4]);
-                return obj9;
+            closure_128_5 = value;
+            const _Number = Number;
+            if (closure_128_5 === Number.MAX_SAFE_INTEGER) {
+              let current = ref.current;
+              if (current != null) {
+                current.scrollToEnd({ animated: true });
               }
             }
           }
-        } else if (3 === inputInWindow) {
-          if (arg0 === 1) {
-            inputInScrollView = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            inputInScrollView = 3;
-            const obj11 = { value, done: true };
-            return obj11;
-          } else {
-            scrollView = value;
-            inputInWindow = 4;
-            inputInScrollView = 1;
-            const obj12 = { value: calculateScrollOffset(found.offset, inputInWindow), done: false };
-            return obj12;
-          }
-        } else if (arg0 === 1) {
-          inputInScrollView = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          inputInScrollView = 3;
-          const obj13 = { value, done: true };
-          return obj13;
-        } else {
-          scrollOffset = value;
-          const _Number = Number;
-          if (scrollOffset !== Number.MAX_SAFE_INTEGER) {
-            obj = { insets, inputInScrollView, inputInWindow, scrollOffset, scrollView };
-            closure_6 = calculateTargetScrollY(obj);
-            if (null != closure_6) {
-              scrollToTargetY(inputInWindow, closure_6);
-            }
-          } else {
-            let current = inputInWindow.current;
-            if (current != null) {
-              current.scrollToEnd({ animated: true });
-            }
+          const obj = { insets, inputInScrollView: closure_128_3, inputInWindow: closure_128_2, scrollOffset: closure_128_5, scrollView: closure_128_4 };
+          closure_128_6 = calculateTargetScrollY(obj);
+          if (null != closure_128_6) {
+            scrollToTargetY(ref, closure_128_6);
           }
         }
-        inputInScrollView = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp35) {
-        inputInScrollView = 3;
-        throw tmp35;
+        ref2 = 3;
+      } catch (tmp36) {
+        ref2 = tmp;
+        throw tmp36;
       }
     }
   });
   const fn2 = function() {
-    return closure_0(...arguments);
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   };
   cResult[3] = insets;
   cResult[4] = scrollViewRef;
   cResult[5] = fn2;
   tmp5 = fn2;
 }) : ((insets) => {
-  let closure_3;
   insets = insets.insets;
   const inputs = insets.inputs;
   const scrollViewRef = insets.scrollViewRef;
   let onFocus;
-  _asyncToGenerator = onFocus.useRef(inputs);
+  asyncGeneratorStep = onFocus.useRef(inputs);
   const items = [inputs];
   const effect = onFocus.useEffect(() => {
     closure_3.current = inputs;
   }, items);
   const items1 = [insets, scrollViewRef];
-  onFocus = onFocus.useCallback(_asyncToGenerator(async () => {
-    let closure_0;
-    let inputInWindow;
+  onFocus = onFocus.useCallback(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
+    } else if (tmp5 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -384,14 +370,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((insets) => {
       }
     } else {
       try {
-        let inputInScrollView;
-        let scrollView;
-        let scrollOffset;
-        let closure_6;
-        let current2;
-        let found;
         c3 = 2;
-        if (0 === inputInWindow) {
+        if (0 === dependencyMap) {
           if (arg0 === 1) {
             c3 = 3;
             throw value;
@@ -400,15 +380,18 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((insets) => {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            let closure_1 = tmp;
-            inputInWindow = undefined;
-            inputInScrollView = undefined;
-            scrollView = undefined;
-            scrollOffset = undefined;
-            closure_6 = undefined;
-            current2 = scrollViewRef.current;
-            const current1 = inputInScrollView.current;
-            found = current1.find((ref) => {
+            closure_1 = tmp2;
+            closure_128_0 = undefined;
+            closure_128_1 = undefined;
+            closure_128_2 = undefined;
+            closure_128_3 = undefined;
+            closure_128_4 = undefined;
+            closure_128_5 = undefined;
+            closure_128_6 = undefined;
+            const current2 = scrollViewRef.current;
+            closure_128_0 = current2;
+            const current1 = ref.current;
+            const found = current1.find((ref) => {
               const current = ref.ref.current;
               let isFocusedResult;
               if (current != null) {
@@ -416,17 +399,17 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((insets) => {
               }
               return isFocusedResult;
             });
+            closure_128_1 = found;
             if (null != found) {
               if (null != current2) {
-                const obj10 = tmp2(inputInWindow[4]);
-                inputInWindow = 1;
+                dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: obj10.measureViewRefInWindow(found.ref), done: false };
+                const obj4 = { value: tmp3(10850).measureViewRefInWindow(found.ref), done: false };
                 return obj4;
               }
             }
           }
-        } else if (1 === inputInWindow) {
+        } else if (1 === tmp6) {
           if (arg0 === 1) {
             c3 = 3;
             throw value;
@@ -435,87 +418,81 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((insets) => {
             const obj5 = { value, done: true };
             return obj5;
           } else {
-            inputInWindow = value;
-            const obj7 = tmp2(inputInWindow[4]);
-            inputInWindow = 2;
+            closure_128_2 = value;
+            dependencyMap = 2;
             c3 = 1;
-            const obj6 = { value: obj7.measureViewRefInView(found.ref, current2), done: false };
+            const obj6 = { value: tmp3(10850).measureViewRefInView(closure_128_1.ref, closure_128_0), done: false };
             return obj6;
           }
-        } else if (2 === inputInWindow) {
-          if (arg0 === 1) {
+        } else {
+          if (2 === tmp6) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              const obj8 = { value, done: true };
+              return obj8;
+            } else {
+              closure_128_3 = value;
+              if (null != closure_128_2) {
+                if (null != closure_128_3) {
+                  dependencyMap = 3;
+                  c3 = 1;
+                  const obj9 = { value: tmp3(10850).measureViewInWindow(closure_128_0), done: false };
+                  return obj9;
+                }
+              }
+            }
+          } else if (3 === tmp6) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              const obj11 = { value, done: true };
+              return obj11;
+            } else {
+              closure_128_4 = value;
+              dependencyMap = 4;
+              c3 = 1;
+              const obj12 = { value: calculateScrollOffset(closure_128_1.offset, closure_128_2), done: false };
+              return obj12;
+            }
+          } else if (arg0 === 1) {
             c3 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj8 = { value, done: true };
-            return obj8;
+            const obj13 = { value, done: true };
+            return obj13;
           } else {
-            inputInScrollView = value;
-            if (null != inputInWindow) {
-              if (null != inputInScrollView) {
-                const obj14 = tmp2(inputInWindow[4]);
-                inputInWindow = 3;
-                c3 = 1;
-                const obj9 = { value: obj14.measureViewInWindow(current2), done: false };
-                return obj9;
+            closure_128_5 = value;
+            const _Number = Number;
+            if (closure_128_5 === Number.MAX_SAFE_INTEGER) {
+              let current = closure_129_2.current;
+              if (current != null) {
+                current.scrollToEnd({ animated: true });
               }
             }
           }
-        } else if (3 === inputInWindow) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj11 = { value, done: true };
-            return obj11;
-          } else {
-            scrollView = value;
-            inputInWindow = 4;
-            c3 = 1;
-            const obj12 = { value: calculateScrollOffset(found.offset, inputInWindow), done: false };
-            return obj12;
-          }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          const obj13 = { value, done: true };
-          return obj13;
-        } else {
-          scrollOffset = value;
-          const _Number = Number;
-          if (scrollOffset !== Number.MAX_SAFE_INTEGER) {
-            obj = { insets: closure_129_0, inputInScrollView, inputInWindow, scrollOffset, scrollView };
-            closure_6 = scrollOffset(obj);
-            if (null != closure_6) {
-              scrollToTargetY(closure_129_2, closure_6);
-            }
-          } else {
-            let current = closure_129_2.current;
-            if (current != null) {
-              current.scrollToEnd({ animated: true });
-            }
+          const obj = { insets: closure_129_0, inputInScrollView: closure_128_3, inputInWindow: closure_128_2, scrollOffset: closure_128_5, scrollView: closure_128_4 };
+          closure_128_6 = calculateTargetScrollY(obj);
+          if (null != closure_128_6) {
+            scrollToTargetY(closure_129_2, closure_128_6);
           }
         }
         c3 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp35) {
-        c3 = 3;
-        throw tmp35;
+      } catch (tmp36) {
+        c3 = tmp;
+        throw tmp36;
       }
     }
   }), items1);
   const items2 = [onFocus];
   const effect1 = onFocus.useEffect(() => {
-    obj = useKeyboardDuration;
-    const timeout = setTimeout(onFocus, obj.getKeyboardDuration());
+    const timeout = setTimeout(onFocus, useKeyboardDuration.getKeyboardDuration());
     return () => clearTimeout(closure_0);
   }, items2);
   return { onFocus };
 });
-const result = size.fileFinishedImporting("modules/safe_area/useSafeAreaAvoidingInputs.native.tsx");
-
-export default tmp2;

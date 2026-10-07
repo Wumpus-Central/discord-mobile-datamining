@@ -10,10 +10,8 @@ const result = size.fileFinishedImporting("modules/interaction_components/conten
 
 export const isContentInventoryFallbackEmbed = function isContentInventoryFallbackEmbed(flags) {
   let num = flags.flags;
-  const hasFlag = FlagUtils.hasFlag;
-  FlagUtils;
   if (num == null) {
     num = 0;
   }
-  return hasFlag(num, MessageEmbedFlags.IS_CONTENT_INVENTORY_ENTRY);
+  return FlagUtils.hasFlag(num, MessageEmbedFlags.IS_CONTENT_INVENTORY_ENTRY);
 };

@@ -5,8 +5,8 @@ import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5097 *
 import ChannelStore from "ChannelStore" /* 2051 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
-import size from "module_2" /* 2 */;
 
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/toggleVoiceChannelChat.tsx");
 
 export const toggleVoiceChannelChat = function toggleVoiceChannelChat(open) {
@@ -22,9 +22,9 @@ export const toggleVoiceChannelChat = function toggleVoiceChannelChat(open) {
           if (open == null) {
             tmp3 = !ChannelRTCStore.getChatOpen(channelId);
           }
-          const obj3 = ChannelRTCActionCreatorsDefault;
-          obj3.updateChatOpen(channelId, tmp3);
-          return { channelId, chatOpen: tmp3 };
+          ChannelRTCActionCreatorsDefault.updateChatOpen(channelId, tmp3);
+          const obj2 = { channelId, chatOpen: tmp3 };
+          return obj2;
         }
       }
       return null;

@@ -1,68 +1,24 @@
 // === Module 16201: FavoritesGuildCoachmarkMenuItem ===
 
 // Module 16201 (FavoritesGuildCoachmarkMenuItem)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
-import Constants from "Constants" /* 1085 */;
-import intl4 from "intl" /* 1126 */;
-import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import _modDef3395 from "module_3395" /* 3395 */;
-import LayerScope2 from "LayerScope" /* 6658 */;
 import FavoritesDismissibleContent from "FavoritesDismissibleContent" /* 10063 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 2054 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-const ChannelTypes = Constants.ChannelTypes;
-const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
-const jsx = Fragment.jsx;
+const LayerScope2 = LayerScope(6658);
+require = fn;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const jsx = fn(21).jsx;
 let items = [, , ];
-({ GUILD_TEXT: arr[0], GUILD_ANNOUNCEMENT: arr[1], GUILD_FORUM: arr[2] } = ChannelTypes);
+({ GUILD_TEXT: arr[0], GUILD_ANNOUNCEMENT: arr[1], GUILD_FORUM: arr[2] } = fn(1085).ChannelTypes);
 const set = new Set(items);
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const obj = react2;
-  const cResult = obj.c(2);
-  let tmp4 = null;
-  const obj2 = FavoritesDismissibleContent;
-  if (obj2.useShouldRenderFavoritesMenuItemPopover()) {
-    let tmp6;
-    if (cResult[0] !== arg0) {
-      const LayerScope = LayerScope2.LayerScope;
-      const merged = Object.assign(arg0);
-      const tmp12 = <LayerScope zIndex={1}>{null}</LayerScope>;
-      cResult[0] = arg0;
-      cResult[1] = tmp12;
-      tmp6 = tmp12;
-    } else {
-      tmp6 = cResult[1];
-    }
-    tmp4 = tmp6;
-  }
-  return tmp4;
-}) : ((arg0) => {
-  let tmp3 = null;
-  const obj = FavoritesDismissibleContent;
-  if (obj.useShouldRenderFavoritesMenuItemPopover()) {
-    const LayerScope = LayerScope2.LayerScope;
-    const merged = Object.assign(arg0);
-    tmp3 = <LayerScope zIndex={1}>{null}</LayerScope>;
-  }
-  return tmp3;
-});
-ReactCompilerGating = ReactCompilerGating_mod;
+fn(558);
+const ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelType) => {
-  let markPopoverAsDismissed;
-  let shouldShowPopover;
-  let tmp12;
-  let tmp19;
-  let tmp22;
-  let tmp4;
-  let tmp5;
-  let tmp8;
-  const obj = markPopoverAsDismissed(576);
-  const cResult = obj.c(17);
+  const cResult = markPopoverAsDismissed(576).c(17);
   channelType = channelType.channelType;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [FavoriteStore];
@@ -76,18 +32,18 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelType) =>
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const tmpResult = markPopoverAsDismissed(504);
-  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+  const obj = markPopoverAsDismissed(576);
+  const stateFromStores = markPopoverAsDismissed(504).useStateFromStores(tmp4, tmp5);
   if (cResult[2] !== channelType) {
     const hasItem = set.has(channelType);
     cResult[2] = channelType;
     cResult[3] = hasItem;
-    tmp8 = hasItem;
+    let tmp8 = hasItem;
   } else {
     tmp8 = cResult[3];
   }
-  const tmpResult2 = markPopoverAsDismissed(10063);
-  const favoritesMenuItemPopoverDismissibleContent = tmpResult2.useFavoritesMenuItemPopoverDismissibleContent(tmp8);
+  const tmpResult = markPopoverAsDismissed(504);
+  const favoritesMenuItemPopoverDismissibleContent = markPopoverAsDismissed(10063).useFavoritesMenuItemPopoverDismissibleContent(tmp8);
   ({ shouldShowPopover, markPopoverAsDismissed } = favoritesMenuItemPopoverDismissibleContent);
   if (cResult[4] !== markPopoverAsDismissed) {
     const fn2 = function b() {
@@ -95,14 +51,15 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelType) =>
     };
     cResult[4] = markPopoverAsDismissed;
     cResult[5] = fn2;
-    tmp12 = fn2;
+    let tmp12 = fn2;
   } else {
     tmp12 = cResult[5];
   }
   if (cResult[6] !== markPopoverAsDismissed) {
     class T {
       constructor() {
-        markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
+        tmp = markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
+        return;
       }
     }
     cResult[6] = markPopoverAsDismissed;
@@ -110,86 +67,93 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelType) =>
   } else {
     class T {
       constructor() {
-        markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
+        tmp = markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
+        return;
       }
     }
   }
   if (cResult[8] !== stateFromStores) {
     class T {
       constructor() {
-        markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
+        tmp = markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
+        return;
       }
     }
-    const string = tmp15.string;
-    const tmp17 = _modDef3395;
+    const tmp16 = _modDef3395;
+    const stringResult = obj4.string(stateFromStores ? tmp16.TWuDTt : tmp16["25YCHl"]);
     cResult[8] = stateFromStores;
-    cResult[9] = string(stateFromStores ? tmp17.TWuDTt : tmp17["25YCHl"]);
-    const stringResult = string(stateFromStores ? tmp17.TWuDTt : tmp17["25YCHl"]);
+    cResult[9] = stringResult;
   } else {
     class T {
       constructor() {
-        markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
+        tmp = markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
+        return;
       }
     }
+    const _Symbol = Symbol;
+    if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+      class T {
+        constructor() {
+          tmp = markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
+          return;
+        }
+      }
+      const stringResult1 = obj5.string(_modDef3395.Ztl9ht);
+      cResult[10] = stringResult1;
+      const tmp19 = stringResult1;
+    } else {
+      class T {
+        constructor() {
+          tmp = markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
+          return;
+        }
+      }
+    }
+    const _Symbol2 = Symbol;
+    if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+      class T {
+        constructor() {
+          tmp = markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
+          return;
+        }
+      }
+      const stringResult2 = obj6.string(_modDef3395["+h9aza"]);
+      cResult[11] = stringResult2;
+      const tmp22 = stringResult2;
+    } else {
+      class T {
+        constructor() {
+          tmp = markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
+          return;
+        }
+      }
+    }
+    if (cResult[12] === T) {
+      class T {
+        constructor() {
+          tmp = markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
+          return;
+        }
+      }
+    }
+    const obj2 = { visible: shouldShowPopover, position: "bottom", title: tmp14, description: tmp19, onDismiss: tmp12, renderImgComponent: "r", buttonLabel: tmp22, onButtonPress: T };
+    cResult[12] = T;
+    cResult[13] = tmp12;
+    cResult[14] = shouldShowPopover;
+    cResult[15] = tmp14;
+    cResult[16] = obj2;
   }
-  if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-    class T {
-      constructor() {
-        markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
-      }
-    }
-    const stringResult1 = obj4.string(_modDef3395.Ztl9ht);
-    cResult[10] = stringResult1;
-    tmp19 = stringResult1;
-  } else {
-    class T {
-      constructor() {
-        markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
-      }
-    }
-  }
-  if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-    class T {
-      constructor() {
-        markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
-      }
-    }
-    const stringResult2 = obj5.string(_modDef3395["+h9aza"]);
-    cResult[11] = stringResult2;
-    tmp22 = stringResult2;
-  } else {
-    class T {
-      constructor() {
-        markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
-      }
-    }
-  }
-  if (cResult[12] === T) {
-    class T {
-      constructor() {
-        markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
-      }
-    }
-  }
-  const obj2 = { visible: shouldShowPopover, position: "bottom", title: tmp14, description: tmp19, onDismiss: tmp12, renderImgComponent: "r", buttonLabel: tmp22, onButtonPress: T };
-  cResult[12] = T;
-  cResult[13] = tmp12;
-  cResult[14] = shouldShowPopover;
-  cResult[15] = tmp14;
-  cResult[16] = obj2;
+  const tmpResult2 = markPopoverAsDismissed(10063);
 }) : ((arg0) => {
-  let channelType;
-  let targetRef;
   let stateFromStores;
   let markPopoverAsDismissed;
   let onDismiss;
   let callback1;
   ({ targetRef, channelType } = arg0);
-  let obj = stateFromStores(markPopoverAsDismissed[9]);
   const items = [callback1];
-  stateFromStores = obj.useStateFromStores(items, () => callback1.hasStoredFavorites());
-  const obj2 = stateFromStores(markPopoverAsDismissed[7]);
-  const favoritesMenuItemPopoverDismissibleContent = obj2.useFavoritesMenuItemPopoverDismissibleContent(set.has(channelType));
+  stateFromStores = stateFromStores(markPopoverAsDismissed[9]).useStateFromStores(items, () => callback1.hasStoredFavorites());
+  let obj = stateFromStores(markPopoverAsDismissed[9]);
+  const favoritesMenuItemPopoverDismissibleContent = stateFromStores(markPopoverAsDismissed[7]).useFavoritesMenuItemPopoverDismissibleContent(set.has(channelType));
   const shouldShowPopover = favoritesMenuItemPopoverDismissibleContent.shouldShowPopover;
   markPopoverAsDismissed = favoritesMenuItemPopoverDismissibleContent.markPopoverAsDismissed;
   const items1 = [markPopoverAsDismissed];
@@ -202,30 +166,57 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelType) =>
   }, items2);
   const items3 = [shouldShowPopover, stateFromStores, onDismiss, callback1];
   const memo = onDismiss.useMemo(() => {
-    let TWuDTt;
-    let intl2;
-    let intl3;
-    let string;
-    let tmp6;
-    const obj = { visible: shouldShowPopover, position: "bottom", title: string(TWuDTt), description: intl2.string(tmp6(3395).Ztl9ht), onDismiss, renderImgComponent: "r", buttonLabel: intl3.string(tmp6(3395)["+h9aza"]), onButtonPress: callback1 };
-    const intl = intl4.intl;
-    string = intl.string;
+    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "Symbol", onButtonPress: null };
+    const intl = util.intl;
     const tmp4 = _modDef3395;
     if (stateFromStores) {
-      TWuDTt = tmp4.TWuDTt;
-      tmp6 = importDefault;
+      let TWuDTt = tmp4.TWuDTt;
+      let tmp6 = importDefault;
     } else {
       TWuDTt = tmp4["25YCHl"];
       tmp6 = importDefault;
     }
-    intl2 = intl4.intl;
-    intl3 = intl4.intl;
+    obj.title = intl.string(TWuDTt);
+    const intl2 = util.intl;
+    obj.description = intl2.string(tmp6(3395).Ztl9ht);
+    obj.onDismiss = onDismiss;
+    const intl3 = util.intl;
+    obj.buttonLabel = intl3.string(tmp6(3395)["+h9aza"]);
+    obj.onButtonPress = callback1;
     return obj;
   }, items3);
-  const obj3 = stateFromStores(markPopoverAsDismissed[12]);
-  const coachmark = obj3.useCoachmark(targetRef, memo);
+  const obj2 = stateFromStores(markPopoverAsDismissed[7]);
+  const coachmark = stateFromStores(markPopoverAsDismissed[12]).useCoachmark(targetRef, memo);
   return null;
 });
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkMenuItem.tsx");
 
-export default tmp3;
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let LayerScope = require;
+  let tmp = dependencyMap;
+  const cResult = c.c(2);
+  if (!obj2.useShouldRenderFavoritesMenuItemPopover()) {
+    return null;
+  } else if (cResult[0] !== arg0) {
+    LayerScope = LayerScope2.LayerScope;
+    const obj3 = { zIndex: 1, children: null };
+    const obj4 = {};
+    const merged = Object.assign(arg0);
+    obj3.children = <closure_8 />;
+    tmp = <LayerScope zIndex={1}>{null}</LayerScope>;
+    cResult[0] = arg0;
+    cResult[1] = tmp;
+  }
+  obj2 = FavoritesDismissibleContent;
+}) : ((arg0) => {
+  let tmp3 = null;
+  if (obj.useShouldRenderFavoritesMenuItemPopover()) {
+    const obj2 = { zIndex: 1, children: null };
+    const obj3 = {};
+    const merged = Object.assign(arg0);
+    obj2.children = <closure_8 />;
+    tmp3 = jsx(LayerScope2.LayerScope, { zIndex: 1, children: null });
+  }
+  return tmp3;
+});

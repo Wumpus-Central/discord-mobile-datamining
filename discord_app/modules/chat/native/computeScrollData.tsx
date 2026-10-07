@@ -1,40 +1,38 @@
 // === Module 10001: computeScrollData ===
 
 // Module 10001 (computeScrollData)
-import flow_Client from "flow/Client" /* 4793 */;
+import Client from "Client" /* 4793 */;
 import NativeChatUtils from "NativeChatUtils" /* 10002 */;
 import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 7603 */;
-import size from "module_2" /* 2 */;
 
-let c3;
-let closure_4;
+require = fn;
+const RowGeneratorConstants = fn(7603);
 ({ RowType: c3, SeparatorType: closure_4 } = RowGeneratorConstants);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/computeScrollData.tsx");
 
 export default function computeScrollData(shouldInitialScroll) {
-  let animated;
-  let constants2;
-  let focusTargetId;
-  let jumpTargetId;
-  let jumpType;
-  let rows;
-  let scrollPosition;
-  let scrollToMessageId;
-  let scrollToRowIndexOverride;
   ({ rows, scrollToMessageId, jumpTargetId, animated, scrollPosition, focusTargetId, scrollToRowIndexOverride, jumpType } = shouldInitialScroll);
   if (shouldInitialScroll.shouldInitialScroll) {
     if (null == jumpTargetId) {
-      const findIndexResult = rows.findIndex((type) => type.type === constants.SEPARATOR && type.id === constants2.UNREAD);
+      const findIndexResult = rows.findIndex((type) => {
+        let tmp = type.type === constants.SEPARATOR;
+        if (tmp) {
+          tmp = type.id === constants2.UNREAD;
+        }
+        return tmp;
+      });
       let tmp3;
       if (-1 !== findIndexResult) {
         tmp3 = findIndexResult;
       }
       if (null != tmp3) {
-        const obj2 = { type: NativeChatUtils.ChatScrollType.SCROLL, index: tmp3, animate: animated, highlight: false, position: NativeChatUtils.ChatScrollPosition.TOP };
+        const obj2 = { type: NativeChatUtils.ChatScrollType.SCROLL, index: tmp3, animate: null, highlight: false, position: null };
         if (animated) {
           animated = !AccessibilityStore.useReducedMotion;
         }
+        obj2.animate = animated;
+        obj2.position = NativeChatUtils.ChatScrollPosition.TOP;
         return obj2;
       }
     }
@@ -42,7 +40,14 @@ export default function computeScrollData(shouldInitialScroll) {
   let tmp4;
   if (null != scrollToMessageId) {
     if (scrollToRowIndexOverride == null) {
-      const findIndexResult1 = rows.findIndex((message) => null != message.message && message.message.id === focusTargetId);
+      focusTargetId = scrollToMessageId;
+      const findIndexResult1 = rows.findIndex((message) => {
+        let tmp = null != message.message;
+        if (tmp) {
+          tmp = message.message.id === focusTargetId;
+        }
+        return tmp;
+      });
       let tmp6;
       if (-1 !== findIndexResult1) {
         tmp6 = findIndexResult1;
@@ -50,25 +55,38 @@ export default function computeScrollData(shouldInitialScroll) {
       scrollToRowIndexOverride = tmp6;
     }
     if (null != scrollToRowIndexOverride) {
-      const obj = { type: NativeChatUtils.ChatScrollType.SCROLL, index: scrollToRowIndexOverride, animate: !AccessibilityStore.useReducedMotion && jumpType !== flow_Client.JumpType.INSTANT, highlight: scrollToMessageId === jumpTargetId, position: scrollPosition };
-      !AccessibilityStore.useReducedMotion && jumpType !== flow_Client.JumpType.INSTANT;
+      const obj = { type: NativeChatUtils.ChatScrollType.SCROLL, index: scrollToRowIndexOverride, animate: null, highlight: null, position: null };
+      const useReducedMotion = AccessibilityStore.useReducedMotion;
+      let tmp10 = !useReducedMotion;
+      if (!useReducedMotion) {
+        tmp10 = jumpType !== Client.JumpType.INSTANT;
+      }
+      obj.animate = tmp10;
+      obj.highlight = scrollToMessageId === jumpTargetId;
       if (scrollPosition == null) {
         scrollPosition = NativeChatUtils.ChatScrollPosition.TOP;
       }
+      obj.position = scrollPosition;
       tmp4 = obj;
     }
   }
   if (null == tmp4) {
     let tmp11;
     if (null != focusTargetId) {
-      const findIndexResult2 = rows.findIndex((message) => null != message.message && message.message.id === focusTargetId);
+      const findIndexResult2 = rows.findIndex((message) => {
+        let tmp = null != message.message;
+        if (tmp) {
+          tmp = message.message.id === focusTargetId;
+        }
+        return tmp;
+      });
       let tmp13;
       if (-1 !== findIndexResult2) {
         tmp13 = findIndexResult2;
       }
       if (null != tmp13) {
-        tmp11 = { type: NativeChatUtils.ChatScrollType.FOCUS_ONLY, index: tmp13 };
         const obj3 = { type: NativeChatUtils.ChatScrollType.FOCUS_ONLY, index: tmp13 };
+        tmp11 = obj3;
       }
     }
     tmp4 = tmp11;
@@ -76,7 +94,13 @@ export default function computeScrollData(shouldInitialScroll) {
   return tmp4;
 };
 export const findMessageRowIndex = function findMessageRowIndex(previousRows, startMessageId) {
-  let closure_0 = startMessageId;
-  const findIndexResult = previousRows.findIndex((message) => null != message.message && message.message.id === focusTargetId);
+  closure_0 = startMessageId;
+  const findIndexResult = previousRows.findIndex((message) => {
+    let tmp = null != message.message;
+    if (tmp) {
+      tmp = message.message.id === focusTargetId;
+    }
+    return tmp;
+  });
   return -1 !== findIndexResult ? findIndexResult : undefined;
 };

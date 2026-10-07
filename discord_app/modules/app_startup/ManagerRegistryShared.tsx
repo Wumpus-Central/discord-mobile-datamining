@@ -10,45 +10,47 @@ function populateMap(actions) {
     actions = [];
   }
   let obj = actions;
-  const tmp2 = actions.hasStoreChangeListeners || actions.loadAfterConnectionOpen;
-  if (tmp2) {
-    let tmp3 = actions;
+  if (tmp) {
+    let tmp2 = actions;
     if (!actions.includes("POST_CONNECTION_OPEN")) {
       const items = [];
-      items[HermesBuiltin.arraySpread(items, actions, 0)] = "POST_CONNECTION_OPEN";
-      tmp3 = items;
+      items[HermesBuiltin.arraySpread(actions, 0)] = "POST_CONNECTION_OPEN";
+      tmp2 = items;
     }
-    obj = tmp3;
+    obj = tmp2;
   }
-  let tmp6 = obj;
+  let tmp5 = obj;
   if (actions.loadRightBeforeConnectionOpen) {
-    let tmp7 = obj;
+    let tmp6 = obj;
     if (!obj.includes("CONNECTION_OPEN")) {
       const items1 = [];
-      items1[HermesBuiltin.arraySpread(items1, obj, 0)] = "CONNECTION_OPEN";
-      tmp7 = items1;
+      items1[HermesBuiltin.arraySpread(obj, 0)] = "CONNECTION_OPEN";
+      tmp6 = items1;
     }
-    tmp6 = tmp7;
+    tmp5 = tmp6;
   }
-  for (const item10030 of tmp6) {
+  for (const item10030 of tmp5) {
     if (!(item10030 in closure_2)) {
       closure_2[item10030] = [];
     }
     let arr4 = closure_2[item10030];
-    let arr = arr4.push(actions);
+    let arr = arr4.push(arg0);
     continue;
   }
+  tmp = actions.hasStoreChangeListeners || actions.loadAfterConnectionOpen;
 }
 function handleAction(type) {
-  const tmp = "CONNECTION_OPEN" !== type.type && "OVERLAY_INITIALIZE" !== type.type;
-  if (!tmp) {
+  let tmp3 = "CONNECTION_OPEN" !== type.type;
+  if (tmp3) {
+    tmp3 = "OVERLAY_INITIALIZE" !== type.type;
+  }
+  if (!tmp3) {
     c3 = true;
   }
   if (type.type in closure_2) {
     const items = [];
-    for (const item10018 of tmp3) {
-      let tmp6 = c3;
-      if (!tmp6) {
+    for (const item10018 of tmp5) {
+      if (!c3) {
         if (item10018.neverLoadBeforeConnectionOpen) {
           let arr = items.push(item10018);
         }
@@ -60,7 +62,8 @@ function handleAction(type) {
     if (items.length > 0) {
       closure_2[type.type] = items;
     } else {
-      delete closure_2[type.type];
+      type = type.type;
+      delete tmp2[tmp];
     }
   }
   return false;
@@ -70,13 +73,12 @@ let closure_2 = {};
 let c3 = false;
 const result = size.fileFinishedImporting("modules/app_startup/ManagerRegistryShared.tsx");
 
-export const initialize = function initialize(actions) {
-  for (const key10004 in actions) {
-    let tmp3 = actions[key10004];
-    actions = tmp3.actions;
+export const initialize = function initialize(obj) {
+  for (const key10004 in arg0) {
+    let tmp3 = arg0[key10004];
+    let actions = tmp3.actions;
     let tmp5 = populateMap(tmp3);
     continue;
   }
-  const obj = DispatcherDefault;
-  obj.addInterceptor(handleAction);
+  DispatcherDefault.addInterceptor(handleAction);
 };

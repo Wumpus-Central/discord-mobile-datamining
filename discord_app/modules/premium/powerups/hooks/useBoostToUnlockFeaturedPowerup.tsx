@@ -1,47 +1,41 @@
 // === Module 12178: useBoostToUnlockFeaturedPowerup ===
 
 // Module 12178 (useBoostToUnlockFeaturedPowerup)
-import Constants from "Constants" /* 1085 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4774 */;
-import Powerups from "Powerups" /* 4777 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4773 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, tmp3;
 
-let closure_7 = GuildPowerupsConstants.GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS;
-const GuildFeatures = Constants.GuildFeatures;
-let obj = { skuId: Powerups.GUILD_POWERUP_LEVEL_1_SKU_ID, threshold: 1 };
-let items = [obj, , , , , , ];
-let obj2 = { skuId: Powerups.GUILD_POWERUP_LEVEL_2_SKU_ID, threshold: 2 };
-items[1] = obj2;
-items[2] = { skuId: Powerups.GUILD_POWERUP_LEVEL_3_SKU_ID, threshold: 2 };
-({ skuId: Powerups.GUILD_POWERUP_LEVEL_3_SKU_ID, threshold: 2 });
-items[3] = { skuId: Powerups.GUILD_POWERUP_TAG_SKU_ID, threshold: 1 };
-({ skuId: Powerups.GUILD_POWERUP_TAG_SKU_ID, threshold: 1 });
-items[4] = { skuId: Powerups.GUILD_POWERUP_ROLE_COLOR_SKU_ID, threshold: 1 };
-({ skuId: Powerups.GUILD_POWERUP_ROLE_COLOR_SKU_ID, threshold: 1 });
-items[5] = { skuId: Powerups.GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, threshold: 1 };
-({ skuId: Powerups.GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, threshold: 1 });
-items[6] = { skuId: Powerups.GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, threshold: 1 };
-({ skuId: Powerups.GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, threshold: 1 });
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let first;
-  let tmp8;
-  let unlockedPowerups;
+const require = fn;
+let closure_7 = fn(4774).GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS;
+const GuildFeatures = fn(1085).GuildFeatures;
+let items = [{ skuId: fn(4777).GUILD_POWERUP_LEVEL_1_SKU_ID, threshold: 1 }, , , , , , ];
+let obj = { skuId: fn(4777).GUILD_POWERUP_LEVEL_1_SKU_ID, threshold: 1 };
+items[1] = { skuId: fn(4777).GUILD_POWERUP_LEVEL_2_SKU_ID, threshold: 2 };
+const obj2 = { skuId: fn(4777).GUILD_POWERUP_LEVEL_2_SKU_ID, threshold: 2 };
+items[2] = { skuId: fn(4777).GUILD_POWERUP_LEVEL_3_SKU_ID, threshold: 2 };
+const obj3 = { skuId: fn(4777).GUILD_POWERUP_LEVEL_3_SKU_ID, threshold: 2 };
+items[3] = { skuId: fn(4777).GUILD_POWERUP_TAG_SKU_ID, threshold: 1 };
+const obj4 = { skuId: fn(4777).GUILD_POWERUP_TAG_SKU_ID, threshold: 1 };
+items[4] = { skuId: fn(4777).GUILD_POWERUP_ROLE_COLOR_SKU_ID, threshold: 1 };
+const obj5 = { skuId: fn(4777).GUILD_POWERUP_ROLE_COLOR_SKU_ID, threshold: 1 };
+items[5] = { skuId: fn(4777).GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, threshold: 1 };
+const obj6 = { skuId: fn(4777).GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, threshold: 1 };
+items[6] = { skuId: fn(4777).GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, threshold: 1 };
+const ReactCompilerGating = fn(558);
+const obj7 = { skuId: fn(4777).GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, threshold: 1 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useBoostToUnlockFeaturedPowerup.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   _require = arg0;
-  const obj = require("react");
-  const cResult = obj.c(12);
+  const cResult = require("c").c(12);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     items = [GuildPowerupsStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -60,9 +54,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }
-  const tmpResult = require("get initialized");
-  const stateFromStores = tmpResult.useStateFromStores(first, E);
-  const available = unlockedPowerups(7682)(arg0).available;
+  const obj = require("c");
+  const stateFromStores = require("initialize").useStateFromStores(first, E);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class E {
       constructor() {
@@ -71,7 +64,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const items1 = [GuildStore];
     cResult[3] = items1;
-    tmp8 = items1;
+    const tmp8 = items1;
   } else {
     class E {
       constructor() {
@@ -108,8 +101,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }
-  const tmpResult2 = require("get initialized");
-  const stateFromStores1 = tmpResult2.useStateFromStores(tmp8, S);
+  const tmpResult = require("initialize");
+  const stateFromStores1 = require("initialize").useStateFromStores(tmp8, S);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     class R {
       constructor() {
@@ -130,7 +123,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         return Math.random();
       }
     }
-    unlockedPowerups = stateFromStores.unlockedPowerups;
+    const unlockedPowerups = stateFromStores.unlockedPowerups;
     if (cResult[7] === tmp12) {
       class R {
         constructor() {
@@ -140,7 +133,6 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const items2 = [];
     const iter = items[Symbol.iterator]();
-    const nextResult = iter.next();
     while (iter !== undefined) {
       class R {
         constructor() {
@@ -159,24 +151,22 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       continue;
     }
     cResult[7] = tmp12;
-    cResult[8] = available;
+    cResult[8] = unlockedPowerups(7682)(arg0).available;
     cResult[9] = stateFromStores1;
     cResult[10] = unlockedPowerups;
     cResult[11] = items2;
+    nextResult = iter.next();
   }
+  const tmpResult2 = require("initialize");
 }) : ((arg0) => {
-  let available;
-  let closure_0;
-  let first;
   _require = arg0;
   items = [GuildPowerupsStore];
-  const obj = require("get initialized");
-  const stateFromStores = obj.useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
   available = stateFromStores(available[10])(arg0).available;
+  const obj = require("initialize");
   const items1 = [GuildStore];
-  const obj2 = require("get initialized");
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => {
-    const guild = GuildStore.getGuild(closure_0);
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
+    guild = GuildStore.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
@@ -190,14 +180,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (null != stateFromStores) {
       const unlockedPowerups = stateFromStores.unlockedPowerups;
       items = [];
-      const allPowerups = stateFromStores.allPowerups;
       const iter = items[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
         let skuId = nextResult.skuId;
         let tmp5 = skuId;
         let threshold = nextResult.threshold;
-        let tmp6 = allPowerups[skuId];
+        let tmp6 = tmp23[skuId];
         let tmp7 = tmp6;
         if (null != tmp6) {
           if (!stateFromStores1) {
@@ -225,6 +214,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }, items2);
 });
-const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useBoostToUnlockFeaturedPowerup.tsx");
-
-export default tmp2;

@@ -1,104 +1,51 @@
 // === Module 16659: conjureHistoryRestore ===
 
 // Module 16659 (conjureHistoryRestore)
-import ConjureConnectionStore from "ConjureConnectionStore" /* 12923 */;
 import conjureDatabaseLock from "conjureDatabaseLock" /* 16660 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import size from "module_2" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let c4, c5;
-
+require = fn;
 function runConjureDataRewind() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_7.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-let obj = function _runConjureDataRewind() {
-  obj = _asyncToGenerator(async (arg0, arg1) => {
-    let obj3;
-    let value;
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    if (c5 === 2) {
-      c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            let closure_3 = tmp;
-            closure_0 = closure_1;
-            c4 = 1;
-            c5 = 1;
-            const obj5 = {
-              value: obj3.withConjureDatabaseLock(closure_0, () => {
-                        const promise = closure_0();
-                        return promise.catch(() => closure_1_5);
-                      }),
-              done: false
-            };
-            obj3 = conjureDatabaseLock;
-            return obj5;
-          }
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
-        } else {
-          if (value == null) {
-            value = closure_131_5;
-          }
-          c5 = 3;
-          obj = { value, done: true };
-          return obj;
-        }
-      } catch (tmp12) {
-        c5 = 3;
-        throw tmp12;
-      }
-    }
-  });
-  return obj(...arguments);
+let closure_7 = async function _runConjureDataRewind() {
+  closure_3 = tmp2;
+  closure_0 = closure_1;
+  await conjureDatabaseLock.withConjureDatabaseLock(closure_0, () => closure_0().catch(() => closure_1_5));
+  if (value == null) {
+    value = closure_131_5;
+  }
+  return value;
 };
-const restoreDatabaseToPoint = ConjureConnectionStore.restoreDatabaseToPoint;
+const restoreDatabaseToPoint = fn(12923).restoreDatabaseToPoint;
 let closure_5 = { ok: false, code: "failed", message: "" };
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/history/conjureHistoryRestore.tsx");
 
 export { runConjureDataRewind };
-export const rewindDataAfterVersionRestore = function rewindDataAfterVersionRestore(arg0, c1) {
-  let closure_0 = arg0;
-  const promise = runConjureDataRewind(arg0, () => restoreDatabaseToPoint(closure_0, c1.id));
-  return promise.then((ok) => {
-    let stringResult = null;
-    if (!ok.ok) {
-      let Npmmnp;
+export const rewindDataAfterVersionRestore = function rewindDataAfterVersionRestore(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  return runConjureDataRewind(arg0, () => restoreDatabaseToPoint(closure_0, closure_1.id)).then((ok) => {
+    if (ok.ok) {
+      return null;
+    } else {
+      let tmp2 = dependencyMap;
       const intl = closure_0(dependencyMap[3]).intl;
-      const string = intl.string;
       if ("unconfirmed" === ok.code) {
-        Npmmnp = c1(dependencyMap[4]).iqN7YA;
+        tmp2 = closure_1(tmp2[4]);
+        let Npmmnp = tmp2.iqN7YA;
       } else {
-        Npmmnp = c1(dependencyMap[4]).Npmmnp;
+        Npmmnp = closure_1(tmp2[4]).Npmmnp;
       }
-      stringResult = string(Npmmnp);
+      intl.string(Npmmnp);
     }
-    return stringResult;
   });
 };

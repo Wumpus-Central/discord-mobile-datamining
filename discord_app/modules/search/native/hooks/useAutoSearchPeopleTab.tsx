@@ -4,72 +4,61 @@
 import _mod12 from "module_12" /* 12 */;
 import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 9522 */;
 import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11980 */;
-import SearchPlatformConstants from "SearchPlatformConstants" /* 11996 */;
 import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12005 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import SearchQueryStore from "SearchQueryStore" /* 11994 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require;
 
-let closure_5 = SearchPlatformConstants.SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
-  let autocompleteVisible;
-  let closure_0;
+require = fn;
+let closure_5 = fn(11996).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchPeopleTab.tsx");
+
+export const useAutoSearchPeopleTab = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   _require = arg0;
-  let closure_1 = arg1;
-  let obj = require("react");
-  const cResult = obj.c(11);
+  closure_1 = arg1;
+  const cResult = require("c").c(11);
   if (cResult[0] === arg1) {
-    let tmp2;
-    let tmp3;
     if (cResult[1] === arg0) {
-      tmp2 = cResult[2];
-      tmp3 = cResult[3];
+      let tmp2 = cResult[2];
+      let tmp3 = cResult[3];
     }
-    const effect = react.useEffect(tmp2, tmp3);
+    const effect = noop.useEffect(tmp2, tmp3);
     if (cResult[4] === arg1) {
-      let tmp5;
-      let tmp6;
-      let tmp9;
-      let tmp8;
       if (cResult[5] === arg0) {
-        tmp5 = cResult[6];
-        tmp6 = cResult[7];
+        let tmp5 = cResult[6];
+        let tmp6 = cResult[7];
       }
-      const effect1 = react.useEffect(tmp5, tmp6);
+      const effect1 = noop.useEffect(tmp5, tmp6);
       if (cResult[8] !== arg0) {
         const fn3 = function p() {
           return () => {
-            const obj = closure_1(dependencyMap[6]);
-            obj.cleanupPeopleTab(closure_1_0);
+            closure_1(12005).cleanupPeopleTab(closure_1_0);
           };
         };
         const items = [arg0];
         cResult[8] = arg0;
         cResult[9] = fn3;
         cResult[10] = items;
-        tmp9 = items;
-        tmp8 = fn3;
+        let tmp9 = items;
+        let tmp8 = fn3;
       } else {
         tmp8 = cResult[9];
         tmp9 = cResult[10];
       }
-      const effect2 = react.useEffect(tmp8, tmp9);
+      const effect2 = noop.useEffect(tmp8, tmp9);
     }
     const fn2 = function n() {
       if (!closure_1) {
-        let obj = _mod12;
-        const debounceResult = obj.debounce((searchQueryString) => {
+        const debounceResult = _mod12.debounce((searchQueryString) => {
           if (!autocompleteVisible.isAutocompleteVisible(closure_1_0)) {
-            const obj = closure_1(dependencyMap[6]);
-            obj.searchPeopleTab(closure_1_0, searchQueryString);
+            closure_1(12005).searchPeopleTab(closure_1_0, searchQueryString);
+            const obj = closure_1(12005);
           }
         }, closure_5);
-        const obj2 = SearchPlatformUtilsDefault;
-        return obj2.subscribeTextInputValue(closure_0, debounceResult);
+        return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, debounceResult);
       }
     };
     const items1 = [arg0, arg1];
@@ -82,10 +71,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   }
   const fn = function f() {
     if (!closure_1) {
-      const obj = UserAffinitiesActionCreators;
-      const userAffinitiesV2 = obj.fetchUserAffinitiesV2();
-      const obj2 = SearchPlatformActionCreatorsDefault;
-      obj2.searchPeopleTab(closure_0, "");
+      const userAffinitiesV2 = UserAffinitiesActionCreators.fetchUserAffinitiesV2();
+      SearchPlatformActionCreatorsDefault.searchPeopleTab(closure_0, "");
     }
   };
   const items2 = [arg1, arg0];
@@ -95,39 +82,31 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[3] = items2;
   tmp3 = items2;
   tmp2 = fn;
+  let obj = require("c");
 }) : ((arg0, arg1) => {
-  let autocompleteVisible;
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   const items = [arg1, arg0];
-  const effect = react.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (!closure_1) {
-      const obj = UserAffinitiesActionCreators;
-      const userAffinitiesV2 = obj.fetchUserAffinitiesV2();
-      const obj2 = SearchPlatformActionCreatorsDefault;
-      obj2.searchPeopleTab(closure_0, "");
+      const userAffinitiesV2 = UserAffinitiesActionCreators.fetchUserAffinitiesV2();
+      SearchPlatformActionCreatorsDefault.searchPeopleTab(closure_0, "");
     }
   }, items);
   const items1 = [arg0, arg1];
-  const effect1 = react.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     if (!closure_1) {
-      let obj = _mod12;
-      const debounceResult = obj.debounce((searchQueryString) => {
+      const debounceResult = _mod12.debounce((searchQueryString) => {
         if (!autocompleteVisible.isAutocompleteVisible(closure_1_0)) {
-          const obj = closure_1(dependencyMap[6]);
-          obj.searchPeopleTab(closure_1_0, searchQueryString);
+          closure_1(12005).searchPeopleTab(closure_1_0, searchQueryString);
+          const obj = closure_1(12005);
         }
       }, closure_5);
-      const obj2 = SearchPlatformUtilsDefault;
-      return obj2.subscribeTextInputValue(closure_0, debounceResult);
+      return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, debounceResult);
     }
   }, items1);
   const items2 = [arg0];
-  const effect2 = react.useEffect(() => () => {
-    const obj = closure_1(dependencyMap[6]);
-    obj.cleanupPeopleTab(closure_1_0);
+  const effect2 = noop.useEffect(() => () => {
+    closure_1(12005).cleanupPeopleTab(closure_1_0);
   }, items2);
 });
-const result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchPeopleTab.tsx");
-
-export const useAutoSearchPeopleTab = tmp2;

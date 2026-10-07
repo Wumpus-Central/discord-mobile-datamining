@@ -1,41 +1,30 @@
 // === Module 16377: YouBarFloatingShade ===
 
 // Module 16377 (YouBarFloatingShade)
-import react_native from "react-native" /* 17 */;
-import get_initialized from "get initialized" /* 504 */;
-import react2 from "react" /* 576 */;
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import useToken2 from "useToken" /* 4586 */;
+import useToken from "useToken" /* 4586 */;
 import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4702 */;
 import useChatLayoutDefault from "useChatLayout" /* 4745 */;
 import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import YouBarConstants from "YouBarConstants" /* 14915 */;
 import useYouBarTotalHeight from "useYouBarTotalHeight" /* 14917 */;
-import GuildsBarConstants from "GuildsBarConstants" /* 16262 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4703 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
 
-let c9;
-let metroImportAll;
-let metroImportDefault;
-const View = react_native.View;
-let closure_5 = YouBarConstants.YOU_BAR_GRADIENT_EXTRA_HEIGHT;
-const GUILD_LIST_WIDTH = GuildsBarConstants.GUILD_LIST_WIDTH;
-({ jsx: metroImportDefault, Fragment: metroImportAll, jsxs: c9 } = Fragment);
+require = fn;
+const View = fn(17).View;
+let closure_5 = fn(14915).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
+const GUILD_LIST_WIDTH = fn(16262).GUILD_LIST_WIDTH;
+const jsxProd = fn(21);
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4896);
 let closure_10 = createStyles.createStyles({ container: { position: "absolute", bottom: 0, left: 0, right: 0 } });
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let gradientPreset;
-  let tmp4;
-  let tmp5;
-  const obj = react2;
-  const cResult = obj.c(2);
+  const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ClientThemesBackgroundStore];
     const fn = function n() {
@@ -48,50 +37,38 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const tmpResult = get_initialized;
-  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
-  const useToken = useToken2.useToken;
+  const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = initialize;
   let token = null;
-  useToken2;
   if (null != stateFromStores) {
-    token = useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND_SCRIM);
+    token = tmpResult2.useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND_SCRIM);
   }
   return token;
 }) : (() => {
-  let gradientPreset;
   const items = [ClientThemesBackgroundStore];
-  const obj = get_initialized;
-  const stateFromStores = obj.useStateFromStores(items, () => gradientPreset.gradientPreset);
-  const useToken = useToken2.useToken;
+  const stateFromStores = initialize.useStateFromStores(items, () => gradientPreset.gradientPreset);
   let token = null;
-  useToken2;
   if (null != stateFromStores) {
-    token = useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND_SCRIM);
+    token = obj2.useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND_SCRIM);
   }
   return token;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let items1;
-  let items2;
-  let items5;
-  let tmp13;
-  let tmp14;
-  let tmp15;
-  const obj = react2;
-  const cResult = obj.c(36);
+ReactCompilerGating = fn(558);
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarFloatingShade.tsx");
+
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(36);
   const tmp4 = closure_10();
-  const obj2 = useYouBarTotalHeight;
-  const youBarTotalHeight = obj2.useYouBarTotalHeight();
+  const youBarTotalHeight = useYouBarTotalHeight.useYouBarTotalHeight();
   const sum = youBarTotalHeight + closure_5;
   let width = useWindowDimensionsDefault().width;
   if (useChatLayoutDefault().isChatBesideChannelList) {
     width = tmp8 + GUILD_LIST_WIDTH;
   }
+  const gradientValue = client_themes_ClientThemesUtils.useGradientValue(client_themes_ClientThemesUtils.GradientPercentage.END);
   const tmpResult = client_themes_ClientThemesUtils;
-  const gradientValue = tmpResult.useGradientValue(client_themes_ClientThemesUtils.GradientPercentage.END);
-  const tmpResult4 = useToken2;
-  const token = tmpResult4.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWER);
+  const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWER);
   let tmp12 = closure_11();
   if (null == tmp12) {
     tmp12 = token;
@@ -100,26 +77,26 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (()
     }
   }
   if (cResult[0] !== tmp12) {
-    const tmpResult5 = utils_ColorUtils;
-    let str = tmpResult5.hex2rgb(tmp12, 1);
+    let str = utils_ColorUtils.hex2rgb(tmp12, 1);
     if (str == null) {
       str = "transparent";
     }
     cResult[0] = tmp12;
     cResult[1] = str;
-    tmp13 = str;
+    let tmp13 = str;
+    const tmpResult5 = utils_ColorUtils;
   } else {
     tmp13 = cResult[1];
   }
   if (cResult[2] !== tmp12) {
-    const tmpResult6 = utils_ColorUtils;
-    let str2 = tmpResult6.hex2rgb(tmp12, 0);
+    let str2 = utils_ColorUtils.hex2rgb(tmp12, 0);
     if (str2 == null) {
       str2 = "transparent";
     }
     cResult[2] = tmp12;
     cResult[3] = str2;
-    tmp14 = str2;
+    let tmp14 = str2;
+    const tmpResult6 = utils_ColorUtils;
   } else {
     tmp14 = cResult[3];
   }
@@ -127,35 +104,28 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (()
     const obj3 = { height: youBarTotalHeight, opacity: 0 };
     cResult[4] = youBarTotalHeight;
     cResult[5] = obj3;
-    tmp15 = obj3;
+    let tmp15 = obj3;
   } else {
     tmp15 = cResult[5];
   }
   if (cResult[6] === tmp4.container) {
-    let tmp16;
     if (cResult[7] === tmp15) {
-      tmp16 = cResult[8];
+      let tmp16 = cResult[8];
     }
     const result = sum / 2;
     const result1 = sum / 2;
     if (cResult[9] === width) {
       if (cResult[10] === result) {
-        let tmp20;
         if (cResult[11] === result1) {
-          tmp20 = cResult[12];
+          let tmp20 = cResult[12];
         }
         if (cResult[13] === tmp4.container) {
-          let tmp21;
           if (cResult[14] === tmp20) {
-            tmp21 = cResult[15];
+            let tmp21 = cResult[15];
           }
           if (cResult[16] === tmp13) {
-            let tmp22;
-            let tmp26;
-            let tmp25;
-            let tmp24;
             if (cResult[17] === tmp14) {
-              tmp22 = cResult[18];
+              let tmp22 = cResult[18];
             }
             const _Symbol = Symbol;
             if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
@@ -165,59 +135,57 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (()
               cResult[19] = point1;
               cResult[20] = items;
               cResult[21] = point;
-              tmp26 = point;
-              tmp25 = items;
-              tmp24 = point1;
+              let tmp26 = point;
+              let tmp25 = items;
+              let tmp24 = point1;
             } else {
               tmp24 = cResult[19];
               tmp25 = cResult[20];
               tmp26 = cResult[21];
             }
             if (cResult[22] === tmp21) {
-              let tmp27;
               if (cResult[23] === tmp22) {
-                tmp27 = cResult[24];
+                let tmp27 = cResult[24];
               }
               const result2 = sum / 2;
               if (cResult[25] === width) {
                 if (cResult[26] === tmp13) {
-                  let tmp31;
                   if (cResult[27] === result2) {
-                    tmp31 = cResult[28];
+                    let tmp31 = cResult[28];
                   }
                   if (cResult[29] === tmp4.container) {
-                    let tmp32;
                     if (cResult[30] === tmp31) {
-                      tmp32 = cResult[31];
+                      let tmp32 = cResult[31];
                     }
                     if (cResult[32] === tmp27) {
                       if (cResult[33] === tmp32) {
-                        let tmp36;
                         if (cResult[34] === tmp16) {
-                          tmp36 = cResult[35];
+                          let tmp36 = cResult[35];
                         }
                         return tmp36;
                       }
                     }
-                    const obj4 = { children: items1 };
-                    items1 = [tmp16, tmp27, tmp32];
-                    const tmp39 = React4(metroImportAll, obj4);
+                    const obj4 = { children: null };
+                    const items1 = [tmp16, tmp27, tmp32];
+                    obj4.children = items1;
+                    const tmp39 = options(closure_1_8, obj4);
                     cResult[32] = tmp27;
                     cResult[33] = tmp32;
                     cResult[34] = tmp16;
                     cResult[35] = tmp39;
                     tmp36 = tmp39;
                   }
-                  const obj5 = { style: items2 };
-                  items2 = [tmp4.container, tmp31];
-                  const tmp35 = metroImportDefault(View, obj5);
+                  const obj5 = { style: null };
+                  const items2 = [tmp4.container, tmp31];
+                  obj5.style = items2;
+                  const tmp35 = React5(View, obj5);
                   cResult[29] = tmp4.container;
                   cResult[30] = tmp31;
                   cResult[31] = tmp35;
                   tmp32 = tmp35;
                 }
               }
-              size = { width, height: result2, backgroundColor: tmp13 };
+              const size = { width, height: result2, backgroundColor: tmp13 };
               cResult[25] = width;
               cResult[26] = tmp13;
               cResult[27] = result2;
@@ -225,7 +193,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (()
               tmp31 = size;
             }
             const obj6 = { style: tmp21, colors: tmp22, start: tmp26, end: tmp24, locations: tmp25, pointerEvents: "none" };
-            const tmp29 = metroImportDefault(LinearGradientDefault, obj6);
+            const tmp29 = React5(LinearGradientDefault, obj6);
             cResult[22] = tmp21;
             cResult[23] = tmp22;
             cResult[24] = tmp29;
@@ -251,31 +219,26 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (()
     cResult[12] = size1;
     tmp20 = size1;
   }
-  const obj7 = { style: items5, pointerEvents: "box-only" };
-  items5 = [tmp4.container, tmp15];
-  const tmp17 = metroImportDefault(View, obj7);
+  const obj7 = { style: null, pointerEvents: "box-only" };
+  const items5 = [tmp4.container, tmp15];
+  obj7.style = items5;
+  const tmp17 = React5(View, obj7);
   cResult[6] = tmp4.container;
   cResult[7] = tmp15;
   cResult[8] = tmp17;
   tmp16 = tmp17;
+  const tmpResult4 = useToken;
 }) : (() => {
-  let items;
-  let items1;
-  let items2;
-  let items3;
-  let items4;
   const tmp = closure_10();
-  const obj = useYouBarTotalHeight;
-  const youBarTotalHeight = obj.useYouBarTotalHeight();
+  const youBarTotalHeight = useYouBarTotalHeight.useYouBarTotalHeight();
   const sum = youBarTotalHeight + closure_5;
   let width = useWindowDimensionsDefault().width;
   if (useChatLayoutDefault().isChatBesideChannelList) {
     width = tmp7 + GUILD_LIST_WIDTH;
   }
+  const gradientValue = client_themes_ClientThemesUtils.useGradientValue(client_themes_ClientThemesUtils.GradientPercentage.END);
   const tmp2Result = client_themes_ClientThemesUtils;
-  const gradientValue = tmp2Result.useGradientValue(client_themes_ClientThemesUtils.GradientPercentage.END);
-  const tmp2Result4 = useToken2;
-  const token = tmp2Result4.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWER);
+  const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWER);
   let tmp11 = closure_11();
   if (null == tmp11) {
     tmp11 = token;
@@ -283,32 +246,33 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (()
       tmp11 = gradientValue;
     }
   }
-  const tmp2Result5 = utils_ColorUtils;
-  let str = tmp2Result5.hex2rgb(tmp11, 1);
+  const tmp2Result4 = useToken;
+  let str = utils_ColorUtils.hex2rgb(tmp11, 1);
   if (str == null) {
     str = "transparent";
   }
-  const tmp2Result6 = utils_ColorUtils;
-  let str2 = tmp2Result6.hex2rgb(tmp11, 0);
+  const tmp2Result5 = utils_ColorUtils;
+  let str2 = utils_ColorUtils.hex2rgb(tmp11, 0);
   if (str2 == null) {
     str2 = "transparent";
   }
-  const obj3 = { style: items, pointerEvents: "box-only" };
-  items = [tmp.container, { height: youBarTotalHeight, opacity: 0 }];
-  const obj2 = { children: items1 };
-  items1 = [metroImportDefault(View, obj3), , ];
-  const obj4 = { style: items2, colors: items3, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, locations: [0, 1], pointerEvents: "none" };
-  items2 = [tmp.container, ];
-  size = { bottom: sum / 2, height: sum / 2, width };
+  const obj2 = { children: null };
+  const obj3 = { style: null, pointerEvents: "box-only" };
+  const items = [tmp.container, { height: youBarTotalHeight, opacity: 0 }];
+  obj3.style = items;
+  const items1 = [React5(View, obj3), , ];
+  const obj4 = { style: null, colors: null, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, locations: [0, 1], pointerEvents: "none" };
+  const items2 = [tmp.container, ];
+  const size = { bottom: sum / 2, height: sum / 2, width };
   items2[1] = size;
-  items3 = [str2, str];
-  items1[1] = metroImportDefault(LinearGradientDefault, obj4);
-  const obj5 = { style: items4 };
-  items4 = [tmp.container, { width, height: sum / 2, backgroundColor: str }];
-  items1[2] = metroImportDefault(View, obj5);
-  return React4(metroImportAll, obj2);
+  obj4.style = items2;
+  const items3 = [str2, str];
+  obj4.colors = items3;
+  items1[1] = React5(LinearGradientDefault, obj4);
+  const obj5 = { style: null };
+  const items4 = [tmp.container, { width, height: sum / 2, backgroundColor: str }];
+  obj5.style = items4;
+  items1[2] = React5(View, obj5);
+  obj2.children = items1;
+  return options(closure_1_8, obj2);
 }));
-let size = size_mod;
-let result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarFloatingShade.tsx");
-
-export default memoResult;

@@ -1,19 +1,15 @@
 // === Module 5702: SKUStore ===
 
 // Module 5702 (SKUStore)
-import get_initializedAll from "get initialized" /* 504 */;
+import initializeAll from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import SKURecord from "SKURecord" /* 5703 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
-import size from "module_2" /* 2 */;
-
-let locale;
 
 function addSku(sku) {
-  const value = map1.get(sku.id);
+  value = map1.get(sku.id);
   const fromServer = SKURecord.createFromServer(sku);
   if (null != value) {
-    const tmp3 = null == fromServer.price && null != value.price;
     if (tmp3) {
       fromServer.price = value.price;
     }
@@ -26,14 +22,15 @@ function addSku(sku) {
     if (tmp5) {
       fromServer.prices = value.prices;
     }
-    const tmp6 = null == fromServer.orbsReward && null != value.orbsReward;
     if (tmp6) {
       fromServer.orbsReward = value.orbsReward;
     }
-    const tmp7 = 0 === fromServer.eligibleOffers.length && value.eligibleOffers.length > 0;
     if (tmp7) {
       fromServer.eligibleOffers = value.eligibleOffers;
     }
+    tmp3 = null == fromServer.price && null != value.price;
+    tmp6 = null == fromServer.orbsReward && null != value.orbsReward;
+    tmp7 = 0 === fromServer.eligibleOffers.length && value.eligibleOffers.length > 0;
   }
   let result = map1.set(sku.id, fromServer);
   set.delete(sku.id);
@@ -46,13 +43,10 @@ function addSku(sku) {
   }
   if (!map2.has(sku.application_id)) {
     const _Set = Set;
-    const self = this;
-    const self2 = this;
-    const application_id = sku.application_id;
-    set1 = new Set();
-    const result1 = set(application_id, set1);
+    set = new Set();
+    const result1 = map2.set(sku.application_id, set);
   }
-  const value2 = map2.get(sku.application_id);
+  value2 = map2.get(sku.application_id);
   value2.add(sku.id);
 }
 function skuFetchSuccess(sku) {
@@ -89,29 +83,17 @@ function handleUserSettingsStoreUpdate() {
   } else {
     locale = tmp.locale;
     const _Map = Map;
-    const self = this;
-    const self2 = this;
-    new Map();
+    map = new Map();
     const _Set = Set;
-    const self3 = this;
-    const self4 = this;
-    new Set();
+    set = new Set();
     const _Set2 = Set;
-    const self5 = this;
-    const self6 = this;
-    new Set();
+    set1 = new Set();
     const _Map2 = Map;
-    const self7 = this;
-    const self8 = this;
-    new Map();
+    map1 = new Map();
     const _Map3 = Map;
-    const self9 = this;
-    const self10 = this;
-    new Map();
+    map2 = new Map();
     const _Map4 = Map;
-    const self11 = this;
-    const self12 = this;
-    new Map();
+    map3 = new Map();
   }
 }
 let map = new Map();
@@ -120,53 +102,52 @@ let set1 = new Set();
 let map1 = new Map();
 let map2 = new Map();
 let map3 = new Map();
-const Store = get_initializedAll.Store;
+const Store = initializeAll.Store;
 class SKUStore extends Store {
-  initialize() {
-    this.waitFor(LocaleStore);
-    const items = [LocaleStore];
-    this.syncWith(items, handleUserSettingsStoreUpdate);
-    locale = LocaleStore.locale;
-  }
-  get(arg0) {
-    return map1.get(arg0);
-  }
-  getForApplication(arg0) {
-    let items;
-    const value = map2.get(arg0);
-    if (null == value) {
-      items = [];
-    } else {
-      const _Array = Array;
-      const arr = Array.from(value);
-      items = arr.map((item) => map1.get(item));
-    }
-    return items;
-  }
-  isFetching(arg0) {
-    return set.has(arg0);
-  }
-  getFetchingSkuIds() {
-    const items = [...set.keys()];
-    return items;
-  }
-  getSKUs() {
-    return Object.fromEntries(map1);
-  }
-  getParentSKU(arg0) {
-    const value = map.get(arg0);
-    if (null != value) {
-      const self = this;
-      return this.get(value);
-    }
-  }
-  didFetchingSkuFail(skuId) {
-    return set1.has(skuId);
-  }
 }
 const prototype = SKUStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(LocaleStore);
+  const items = [LocaleStore];
+  this.syncWith(items, handleUserSettingsStoreUpdate);
+  locale = LocaleStore.locale;
+};
+prototype["get"] = function get(arg0) {
+  return map1.get(arg0);
+};
+prototype["getForApplication"] = function getForApplication(arg0) {
+  value = map2.get(arg0);
+  if (null == value) {
+    let items = [];
+  } else {
+    const _Array = Array;
+    items = Array.from(value).map((item) => map1.get(item));
+    const arr = Array.from(value);
+  }
+  return items;
+};
+prototype["isFetching"] = function isFetching(arg0) {
+  return set.has(arg0);
+};
+prototype["getFetchingSkuIds"] = function getFetchingSkuIds() {
+  const items = [...set.keys()];
+  return items;
+};
+prototype["getSKUs"] = function getSKUs() {
+  return Object.fromEntries(map1);
+};
+prototype["getParentSKU"] = function getParentSKU(arg0) {
+  value = map.get(arg0);
+  if (null != value) {
+    const self = this;
+    return this.get(value);
+  }
+};
+prototype["didFetchingSkuFail"] = function didFetchingSkuFail(skuId) {
+  return set1.has(skuId);
+};
 SKUStore.displayName = "SKUStore";
-const obj = {
+const sKUStore = new SKUStore(DispatcherDefault, {
   STORE_LISTINGS_FETCH_START: function handleStoreListingsFetchStart(skuId) {
     set.add(skuId.skuId);
   },
@@ -176,11 +157,11 @@ const obj = {
     set1.add(skuId);
   },
   STORE_LISTINGS_FETCH_SUCCESS: function handleStoreListingsFetchSuccess(arg0) {
-    const tmp = arg0.storeListings[Symbol.iterator]();
     while (tmp !== undefined) {
       let tmp4 = handleStoreListing(tmp2);
       continue;
     }
+    tmp = arg0.storeListings[Symbol.iterator]();
   },
   STORE_LISTING_FETCH_SUCCESS: function handleStoreListingFetchSuccess(storeListing) {
     storeListing = storeListing.storeListing;
@@ -218,22 +199,17 @@ const obj = {
     set1.add(skuId);
   },
   SKUS_FETCH_SUCCESS: function handleSkusFetchSuccess(arg0) {
-    let guildId;
-    let skus;
     ({ guildId, skus } = arg0);
-    const tmp = skus[Symbol.iterator]();
     while (tmp !== undefined) {
       let tmp4 = skuFetchSuccess(tmp2);
       continue;
     }
     if (null != guildId) {
       const _Set = Set;
-      const self = this;
-      const self2 = this;
-      set = map3.set;
-      set1 = new Set(skus.map((id) => id.id));
-      const result = set(guildId, set1);
+      set = new Set(skus.map((id) => id.id));
+      const result = map3.set(guildId, set);
     }
+    tmp = skus[Symbol.iterator]();
   },
   ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: handleEntitlementsFetch,
   APPLICATION_STORE_CLEAR_DATA: function handleClearData() {
@@ -246,8 +222,8 @@ const obj = {
   },
   APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: handleEntitlementsFetch,
   ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: handleEntitlementsFetch
-};
-const sKUStore = new SKUStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("stores/game_store/SKUStore.tsx");
 
 export default sKUStore;

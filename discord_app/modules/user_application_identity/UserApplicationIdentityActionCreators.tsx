@@ -1,24 +1,21 @@
 // === Module 8727: UserApplicationIdentityActionCreators ===
 
 // Module 8727 (UserApplicationIdentityActionCreators)
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 8726 */;
-import Constants from "Constants" /* 1085 */;
-import get_initialized from "get initialized" /* 504 */;
-import size from "module_2" /* 2 */;
 
-let c1, c4, c5;
-
+const require = fn;
+const Constants = fn(1085);
 const Endpoints = Constants.Endpoints;
 let obj = {
   fetchUserApplicationIdentitiesWithProfiles(arg0, arg1) {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (tmp6 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -28,10 +25,7 @@ let obj = {
           return { value: "IconComponent", done: null };
         }
       } else {
-        let c3;
         try {
-          let signal;
-          let userId;
           c5 = 2;
           if (0 === c4) {
             if (arg0 === 1) {
@@ -42,27 +36,25 @@ let obj = {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              signal = tmp;
-              userId = undefined;
+              const signal = tmp3;
+              const userId = tmp7;
+              closure_128_0 = undefined;
               const obj5 = { type: "USER_APPLICATION_IDENTITY_FETCH_USER_START", userId };
-              const obj9 = signal(closure_2[3]);
-              obj9.dispatch(obj5);
+              signal(tmp24[3]).dispatch(obj5);
               c3 = 1;
-              const HTTP = userId(closure_2[4]).HTTP;
+              const HTTP = userId(tmp24[4]).HTTP;
               const request = { url: c5.USER_APPLICATION_IDENTITIES(userId), query: { with_profiles: true }, rejectWithError: true, signal };
-              const get = HTTP.get;
               c4 = 2;
               c5 = 1;
-              const obj6 = { value: get(request), done: false };
+              const obj6 = { value: HTTP.get(request), done: false };
               return obj6;
             }
-          } else if (1 === c4) {
+          } else if (1 === tmp7) {
             c3 = 0;
-            signal = closure_2;
+            closure_128_1 = tmp24;
             const obj7 = { type: "USER_APPLICATION_IDENTITY_FETCH_USER_FAILURE", userId: closure_129_0 };
-            const obj4 = signal(closure_2[3]);
-            obj4.dispatch(obj7);
-            throw signal;
+            signal(tmp24[3]).dispatch(obj7);
+            throw closure_128_1;
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
@@ -72,36 +64,33 @@ let obj = {
             const obj8 = { value, done: true };
             return obj8;
           } else {
-            userId = value;
-            const obj10 = { type: "USER_APPLICATION_IDENTITY_FETCH_USER_SUCCESS", userId: closure_129_0, identities: userId.body.identities };
-            obj = signal(closure_2[3]);
-            obj.dispatch(obj10);
+            closure_128_0 = value;
+            const obj10 = { type: "USER_APPLICATION_IDENTITY_FETCH_USER_SUCCESS", userId: closure_129_0, identities: closure_128_0.body.identities };
+            signal(tmp24[3]).dispatch(obj10);
             c3 = 0;
             c5 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp21) {
-          closure_2 = tmp21;
-          if (0 === c3) {
-            c5 = 3;
-            throw tmp21;
+        } catch (tmp24) {
+          if (tmp4 === c3) {
+            c5 = tmp2;
+            throw tmp24;
           } else {
-            c4 = 1;
+            c4 = tmp;
           }
         }
       }
     })();
   },
   updateApplicationIdentityConfig(application_id, provider_issued_user_id, arg2) {
-    let closure_0 = application_id;
-    let closure_1 = provider_issued_user_id;
-    let closure_2 = arg2;
+    closure_0 = application_id;
+    closure_1 = provider_issued_user_id;
+    closure_2 = arg2;
     return (async () => {
-      let v3;
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp2 === 3) {
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -123,11 +112,10 @@ let obj = {
               return obj3;
             } else {
               const HTTP = v3(body[4]).HTTP;
-              const request = { url: Endpoints.SELF_APPLICATION_IDENTITY_CONFIG(application_id, provider_issued_user_id), body, rejectWithError: true };
-              const patch = HTTP.patch;
+              const request = { url: Endpoints.SELF_APPLICATION_IDENTITY_CONFIG(closure_0, closure_1), body, rejectWithError: true };
               c1 = 1;
               v3 = 1;
-              const obj4 = { value: patch(request), done: false };
+              const obj4 = { value: HTTP.patch(request), done: false };
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -141,25 +129,25 @@ let obj = {
             v3 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp10) {
-          v3 = 3;
-          throw tmp10;
+        } catch (tmp11) {
+          v3 = tmp;
+          throw tmp11;
         }
       }
     })();
   }
 };
-const QueryIds = Constants.QueryIds;
-let obj2 = {
-  getQueryId: QueryIds.USER_APPLICATION_IDENTITIES,
+const initialize = fn(504);
+const fetchStore = initialize.createFetchStore(UserApplicationIdentityStore, {
+  getQueryId: Constants.QueryIds.USER_APPLICATION_IDENTITIES,
   get(arg0) {
     return UserApplicationIdentityStore.getUserIdentities(arg0);
   },
   load(arg0) {
     return obj.fetchUserApplicationIdentitiesWithProfiles(arg0);
   }
-};
-const fetchStore = get_initialized.createFetchStore(UserApplicationIdentityStore, obj2);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_application_identity/UserApplicationIdentityActionCreators.tsx");
 
 export default obj;

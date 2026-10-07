@@ -1,8 +1,7 @@
 // === Module 17248: useStableParticipant ===
 
 // Module 17248 (useStableParticipant)
-import shallowEqualDefault from "shallowEqual" /* 568 */;
-import CallConstants from "CallConstants" /* 4917 */;
+import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import NicknameUtils from "NicknameUtils" /* 5048 */;
 import useAvatarDecoration from "useAvatarDecoration" /* 7898 */;
 import participantHasVideoDefault from "participantHasVideo" /* 9154 */;
@@ -10,105 +9,133 @@ import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 import UserStore from "UserStore" /* 1377 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, dependencyMap, id;
 
+require = fn;
 function areStableParticipantsEqual(arg0, arg1) {
   let tmp = arg0 === arg1;
   if (!tmp) {
-    tmp = null != arg0 && null != arg1 && shallowEqualDefault(arg0, arg1);
-    const tmp3 = null != arg0 && null != arg1 && shallowEqualDefault(arg0, arg1);
+    let tmp3 = null != arg0 && null != arg1;
+    if (tmp3) {
+      tmp3 = discord_common_shallowEqualDefault(arg0, arg1);
+    }
+    tmp = tmp3;
   }
   return tmp;
 }
-const ParticipantTypes = CallConstants.ParticipantTypes;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) => {
-  let closure_2;
-  let first;
+const ParticipantTypes = fn(4917).ParticipantTypes;
+const ReactCompilerGating = fn(558);
+function isStableStreamParticipant(participant) {
+  let type;
+  if (participant != null) {
+    type = participant.type;
+  }
+  let tmp3 = type === ParticipantTypes.STREAM;
+  if (!tmp3) {
+    let type1;
+    if (participant != null) {
+      type1 = participant.type;
+    }
+    tmp3 = type1 === tmp2.HIDDEN_STREAM;
+  }
+  return Boolean(tmp3);
+}
+function isStableUserParticipant(type) {
+  type = undefined;
+  if (type != null) {
+    type = type.type;
+  }
+  return Boolean(type === ParticipantTypes.USER);
+}
+function isStableActivityParticipant(participant) {
+  let type;
+  if (participant != null) {
+    type = participant.type;
+  }
+  return Boolean(type === ParticipantTypes.ACTIVITY);
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/utils/useStableParticipant.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) => {
   _require = id;
-  let closure_1 = arg1;
+  closure_1 = arg1;
   dependencyMap = arg2;
-  let obj = require("react");
-  const cResult = obj.c(6);
-  const tmp = _require;
+  const cResult = require("c").c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelRTCStore, UserStore, AuthenticationStore, MediaEngineStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === arg1) {
     if (cResult[2] === arg2) {
-      let tmp9;
-      let tmp10;
       if (cResult[3] === id) {
-        tmp9 = cResult[4];
-        tmp10 = cResult[5];
+        let tmp9 = cResult[4];
+        let tmp10 = cResult[5];
       }
-      let tmp15 = tmp10;
       const tmpResult = tmp(504);
       return tmpResult.useStateFromStores(first, tmp9, tmp10, areStableParticipantsEqual);
     }
   }
   const fn = function v() {
-    let flag;
-    let guildId;
-    let id1;
-    let id4;
-    let id5;
-    let obj5;
-    let obj6;
-    let streamId;
-    let streamId2;
-    let tmp7;
-    let voiceState;
     if (null != id) {
       const participant = ChannelRTCStore.getParticipant(closure_1, id);
       if (null == participant) {
         const user = UserStore.getUser(id);
         if (null != user) {
-          const id3 = user.id;
-          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: obj5.getName(closure_2, closure_1, user), userAvatarDecoration: obj6.getAvatarDecoration(user, closure_2), streamId: "Set", ringing: null, hasVideo: 465.988, isSelf: id3 === id1 };
-          id1 = AuthenticationStore.getId();
-          obj5 = NicknameUtils;
-          obj6 = useAvatarDecoration;
+          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "Set", ringing: null, hasVideo: 465.988, isSelf: -136 };
+          id = AuthenticationStore.getId();
+          obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
+          obj3.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);
+          obj3.isSelf = user.id === id;
           return obj3;
         }
       } else {
         const tmp15 = participantHasVideoDefault(participant);
         const type = participant.type;
         if (ParticipantTypes.ACTIVITY === type) {
-          return { type: participant.type, id, applicationId: participant.applicationId };
+          const obj4 = { type: participant.type, id, applicationId: participant.applicationId };
+          return obj4;
         } else {
           if (ParticipantTypes.STREAM !== type) {
             if (ParticipantTypes.HIDDEN_STREAM !== type) {
               if (ParticipantTypes.USER === type) {
-                id = participant.user.id;
-                const obj = { type: participant.type, id, user: null, selfVideo: flag, userNick: null, userAvatarDecoration: null, streamId, ringing: participant.ringing, hasVideo: tmp15, canRenderVideo: tmp7, isSelf: id === id4 };
+                const obj = { type: participant.type, id, user: null, selfVideo: null, userNick: null, userAvatarDecoration: null, streamId: null, ringing: null, hasVideo: null, canRenderVideo: null, isSelf: null };
                 ({ user: obj.user, voiceState } = participant);
-                flag = undefined;
-                id4 = AuthenticationStore.getId();
+                let flag;
+                const id1 = AuthenticationStore.getId();
                 if (voiceState != null) {
                   flag = voiceState.selfVideo;
                 }
                 if (flag == null) {
                   flag = false;
                 }
+                obj.selfVideo = flag;
                 ({ userNick: obj.userNick, userAvatarDecoration: obj.userAvatarDecoration, streamId } = participant);
-                tmp7 = tmp15 && !MediaEngineStore.isLocalVideoDisabled(participant.user.id);
+                obj.streamId = streamId;
+                obj.ringing = participant.ringing;
+                obj.hasVideo = tmp15;
+                let tmp7 = tmp15;
+                if (tmp15) {
+                  tmp7 = !MediaEngineStore.isLocalVideoDisabled(participant.user.id);
+                }
+                obj.canRenderVideo = tmp7;
+                obj.isSelf = participant.user.id === id1;
                 return obj;
               }
             }
           }
-          const id2 = participant.user.id;
-          const obj9 = { type: participant.type, id, user: null, userNick: null, streamId: streamId2, streamGuildId: guildId, hasVideo: tmp15, isSelf: id2 === id5 };
+          const obj9 = { type: participant.type, id, user: null, userNick: null, streamId: null, streamGuildId: null, hasVideo: null, isSelf: null };
           ({ user: obj2.user, userNick: obj2.userNick, streamId: streamId2 } = participant);
-          id5 = AuthenticationStore.getId();
-          guildId = participant.stream.guildId;
+          const id2 = AuthenticationStore.getId();
+          obj9.streamId = streamId2;
+          const guildId = participant.stream.guildId;
+          obj9.streamGuildId = guildId;
+          obj9.hasVideo = tmp15;
+          obj9.isSelf = participant.user.id === id2;
           return obj9;
         }
       }
@@ -122,116 +149,81 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) =>
   cResult[5] = items1;
   tmp10 = items1;
   tmp9 = fn;
+  let obj = require("c");
+  tmp = _require;
 }) : ((id, arg1, arg2) => {
-  let closure_2;
   _require = id;
-  let closure_1 = arg1;
+  closure_1 = arg1;
   dependencyMap = arg2;
-  let obj = require("get initialized");
   const items = [ChannelRTCStore, UserStore, AuthenticationStore, MediaEngineStore];
   const items1 = [id, arg1, arg2];
-  return obj.useStateFromStores(items, () => {
-    let flag;
-    let guildId;
-    let id1;
-    let id4;
-    let id5;
-    let obj5;
-    let obj6;
-    let streamId;
-    let streamId2;
-    let tmp7;
-    let voiceState;
+  return require("initialize").useStateFromStores(items, () => {
     if (null != id) {
       const participant = ChannelRTCStore.getParticipant(closure_1, id);
       if (null == participant) {
         const user = UserStore.getUser(id);
         if (null != user) {
-          const id3 = user.id;
-          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: obj5.getName(closure_2, closure_1, user), userAvatarDecoration: obj6.getAvatarDecoration(user, closure_2), streamId: "Set", ringing: null, hasVideo: 465.988, isSelf: id3 === id1 };
-          id1 = AuthenticationStore.getId();
-          obj5 = NicknameUtils;
-          obj6 = useAvatarDecoration;
+          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "Set", ringing: null, hasVideo: 465.988, isSelf: -136 };
+          id = AuthenticationStore.getId();
+          obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
+          obj3.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);
+          obj3.isSelf = user.id === id;
           return obj3;
         }
       } else {
         const tmp15 = participantHasVideoDefault(participant);
         const type = participant.type;
         if (ParticipantTypes.ACTIVITY === type) {
-          return { type: participant.type, id, applicationId: participant.applicationId };
+          const obj4 = { type: participant.type, id, applicationId: participant.applicationId };
+          return obj4;
         } else {
           if (ParticipantTypes.STREAM !== type) {
             if (ParticipantTypes.HIDDEN_STREAM !== type) {
               if (ParticipantTypes.USER === type) {
-                id = participant.user.id;
-                const obj = { type: participant.type, id, user: null, selfVideo: flag, userNick: null, userAvatarDecoration: null, streamId, ringing: participant.ringing, hasVideo: tmp15, canRenderVideo: tmp7, isSelf: id === id4 };
+                const obj = { type: participant.type, id, user: null, selfVideo: null, userNick: null, userAvatarDecoration: null, streamId: null, ringing: null, hasVideo: null, canRenderVideo: null, isSelf: null };
                 ({ user: obj.user, voiceState } = participant);
-                flag = undefined;
-                id4 = AuthenticationStore.getId();
+                let flag;
+                const id1 = AuthenticationStore.getId();
                 if (voiceState != null) {
                   flag = voiceState.selfVideo;
                 }
                 if (flag == null) {
                   flag = false;
                 }
+                obj.selfVideo = flag;
                 ({ userNick: obj.userNick, userAvatarDecoration: obj.userAvatarDecoration, streamId } = participant);
-                tmp7 = tmp15 && !MediaEngineStore.isLocalVideoDisabled(participant.user.id);
+                obj.streamId = streamId;
+                obj.ringing = participant.ringing;
+                obj.hasVideo = tmp15;
+                let tmp7 = tmp15;
+                if (tmp15) {
+                  tmp7 = !MediaEngineStore.isLocalVideoDisabled(participant.user.id);
+                }
+                obj.canRenderVideo = tmp7;
+                obj.isSelf = participant.user.id === id1;
                 return obj;
               }
             }
           }
-          const id2 = participant.user.id;
-          const obj9 = { type: participant.type, id, user: null, userNick: null, streamId: streamId2, streamGuildId: guildId, hasVideo: tmp15, isSelf: id2 === id5 };
+          const obj9 = { type: participant.type, id, user: null, userNick: null, streamId: null, streamGuildId: null, hasVideo: null, isSelf: null };
           ({ user: obj2.user, userNick: obj2.userNick, streamId: streamId2 } = participant);
-          id5 = AuthenticationStore.getId();
-          guildId = participant.stream.guildId;
+          const id2 = AuthenticationStore.getId();
+          obj9.streamId = streamId2;
+          const guildId = participant.stream.guildId;
+          obj9.streamGuildId = guildId;
+          obj9.hasVideo = tmp15;
+          obj9.isSelf = participant.user.id === id2;
           return obj9;
         }
       }
     }
   }, items1, areStableParticipantsEqual);
 });
-function isStableStreamParticipant(participant) {
-  let type;
-  const _Boolean = Boolean;
-  if (participant != null) {
-    type = participant.type;
-  }
-  let tmp3 = type === ParticipantTypes.STREAM;
-  if (!tmp3) {
-    let type1;
-    if (participant != null) {
-      type1 = participant.type;
-    }
-    tmp3 = type1 === tmp2.HIDDEN_STREAM;
-  }
-  return _Boolean(tmp3);
-}
-function isStableUserParticipant(type) {
-  type = undefined;
-  const _Boolean = Boolean;
-  if (type != null) {
-    type = type.type;
-  }
-  return _Boolean(type === ParticipantTypes.USER);
-}
-function isStableActivityParticipant(participant) {
-  let type;
-  const _Boolean = Boolean;
-  if (participant != null) {
-    type = participant.type;
-  }
-  return _Boolean(type === ParticipantTypes.ACTIVITY);
-}
-const result = size.fileFinishedImporting("modules/voice_panel/native/utils/useStableParticipant.tsx");
-
-export default tmp2;
 export { isStableStreamParticipant };
 export { isStableUserParticipant };
 export { isStableActivityParticipant };
 export const isStableParticipantWithUser = function isStableParticipantWithUser(participant) {
   let type;
-  const _Boolean = Boolean;
   if (participant != null) {
     type = participant.type;
   }
@@ -243,46 +235,43 @@ export const isStableParticipantWithUser = function isStableParticipantWithUser(
     }
     tmp3 = type1 === ParticipantTypes.HIDDEN_STREAM;
   }
-  let _BooleanResult = _Boolean(tmp3);
-  if (!_BooleanResult) {
+  let BooleanResult = Boolean(tmp3);
+  if (!BooleanResult) {
     let type2;
-    const _Boolean2 = Boolean;
     if (participant != null) {
       type2 = participant.type;
     }
-    _BooleanResult = _Boolean2(type2 === ParticipantTypes.USER);
+    BooleanResult = Boolean(type2 === ParticipantTypes.USER);
   }
-  return _BooleanResult;
+  return BooleanResult;
 };
-export const stableParticipantHasVideo = function stableParticipantHasVideo(type) {
-  type = undefined;
-  const _Boolean = Boolean;
-  if (type != null) {
-    type = type.type;
+export const stableParticipantHasVideo = function stableParticipantHasVideo(arg0) {
+  let streamId = arg0;
+  let type;
+  if (arg0 != null) {
+    type = streamId.type;
   }
-  let tmp4 = !_Boolean(type === ParticipantTypes.ACTIVITY);
-  _Boolean(type === ParticipantTypes.ACTIVITY);
-  if (tmp4) {
-    let selfVideo;
+  const BooleanResult = Boolean(type === ParticipantTypes.ACTIVITY);
+  if (BooleanResult) {
+    return !BooleanResult;
+  } else {
     let type1;
-    const _Boolean2 = Boolean;
-    if (type != null) {
-      type1 = type.type;
+    if (streamId != null) {
+      type1 = streamId.type;
     }
-    let tmp6 = type1 === ParticipantTypes.STREAM;
-    if (!tmp6) {
+    let tmp5 = type1 === ParticipantTypes.STREAM;
+    if (!tmp5) {
       let type2;
-      if (type != null) {
-        type2 = type.type;
+      if (streamId != null) {
+        type2 = streamId.type;
       }
-      tmp6 = type2 === ParticipantTypes.HIDDEN_STREAM;
+      tmp5 = type2 === ParticipantTypes.HIDDEN_STREAM;
     }
-    if (_Boolean2(tmp6)) {
-      selfVideo = null != type.streamId;
+    if (Boolean(tmp5)) {
+      streamId = streamId.streamId;
+      let selfVideo = null != streamId;
     } else {
-      selfVideo = type.selfVideo;
+      selfVideo = streamId.selfVideo;
     }
-    tmp4 = selfVideo;
   }
-  return tmp4;
 };

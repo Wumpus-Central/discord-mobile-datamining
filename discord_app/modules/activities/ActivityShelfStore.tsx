@@ -1,35 +1,33 @@
 // === Module 9015: ActivityShelfStore ===
 
 // Module 9015 (ActivityShelfStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import size from "module_2" /* 2 */;
 
 let closure_0 = { usageByApplicationId: {}, shelfOrder: [] };
-const PersistedStore = get_initializedDefault.PersistedStore;
+const PersistedStore = initializeDefault.PersistedStore;
 class ActivityShelfStore extends PersistedStore {
-  initialize(arg0) {
-    let obj = arg0;
-    const obj2 = { usageByApplicationId: {}, shelfOrder: [] };
-    if (arg0 == null) {
-      obj = {};
-    }
-    const merged = Object.assign(obj);
-    closure_0 = obj2;
-  }
-  getState() {
-    return closure_0;
-  }
 }
 const prototype = ActivityShelfStore.prototype;
+prototype["initialize"] = function initialize(arg0) {
+  let obj = arg0;
+  if (arg0 == null) {
+    obj = {};
+  }
+  const merged = Object.assign(obj);
+  closure_0 = { usageByApplicationId: {}, shelfOrder: [] };
+};
+prototype["getState"] = function getState() {
+  return closure_0;
+};
 ActivityShelfStore.displayName = "ActivityShelfStore";
 ActivityShelfStore.persistKey = "ActivityShelfStore";
-let obj = {
+const activityShelfStore = new ActivityShelfStore(DispatcherDefault, {
   LOGOUT: function reset() {
     closure_0 = { usageByApplicationId: {}, shelfOrder: [] };
   }
-};
-const activityShelfStore = new ActivityShelfStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/ActivityShelfStore.tsx");
 
 export default activityShelfStore;

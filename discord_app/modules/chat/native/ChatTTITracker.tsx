@@ -2,26 +2,17 @@
 
 // Module 11583 (ChatTTITracker)
 import TTITrackerDefault from "TTITracker" /* 9 */;
-import react from "react" /* 576 */;
+import c from "c" /* 576 */;
 import TTIMeasurementView from "TTIMeasurementView" /* 11521 */;
-import Fragment from "Fragment" /* 21 */;
+import jsxProd from "jsxProd" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-let messages;
+({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const result = size.fileFinishedImporting("modules/chat/native/ChatTTITracker.tsx");
 
-let c3;
-let closure_4;
-let hasOwnProperty;
-({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = Fragment);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((messages) => {
-  let first;
-  let items;
-  let tmp10;
-  let tmp5;
-  let tmp6;
-  const obj = react;
-  const cResult = obj.c(11);
+export const ChatTTITracker = ReactCompilerGating.isReactCompilerEnabled() ? ((messages) => {
+  const cResult = c.c(11);
   messages = messages.messages;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function h(nativeEvent) {
@@ -29,7 +20,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((messages) => {
       displayLatestMessages.record(nativeEvent.nativeEvent.timestamp);
     };
     cResult[0] = fn;
-    first = fn;
+    let first = fn;
   } else {
     first = cResult[0];
   }
@@ -39,7 +30,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((messages) => {
       displayMessagesWithCache.record(nativeEvent.nativeEvent.timestamp);
     };
     cResult[1] = fn2;
-    tmp5 = fn2;
+    let tmp5 = fn2;
   } else {
     tmp5 = cResult[1];
   }
@@ -47,30 +38,29 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((messages) => {
     let tmp7 = null;
     if (messages.length > 0) {
       const obj2 = { nativeID: "cached_messages_tti", onMeasurement: tmp5 };
-      tmp7 = _false(TTIMeasurementView.TTIMeasurementView, obj2, "cached_messages_tti");
+      tmp7 = React3(TTIMeasurementView.TTIMeasurementView, obj2, "cached_messages_tti");
     }
     cResult[2] = messages.length;
     cResult[3] = tmp7;
-    tmp6 = tmp7;
+    let tmp6 = tmp7;
   } else {
     tmp6 = cResult[3];
   }
   if (cResult[4] === messages.cached) {
     if (cResult[5] === messages.hasFetched) {
-      let tmp9;
       if (cResult[6] === messages.ready) {
-        tmp9 = cResult[7];
+        let tmp9 = cResult[7];
       }
       if (cResult[8] === tmp6) {
-        let tmp12;
         if (cResult[9] === tmp9) {
-          tmp12 = cResult[10];
+          let tmp12 = cResult[10];
         }
         return tmp12;
       }
-      const obj3 = { children: items };
-      items = [tmp6, tmp9];
-      const tmp15 = hasOwnProperty(React3, obj3);
+      const obj3 = { children: null };
+      const items = [tmp6, tmp9];
+      obj3.children = items;
+      const tmp15 = hasOwnProperty(React4, obj3);
       cResult[8] = tmp6;
       cResult[9] = tmp9;
       cResult[10] = tmp15;
@@ -79,7 +69,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((messages) => {
   }
   if (messages.hasFetched) {
     const obj4 = { nativeID: "latest_messages_tti", onMeasurement: first };
-    tmp10 = _false(TTIMeasurementView.TTIMeasurementView, obj4, "latest_messages_tti");
+    let tmp10 = React3(TTIMeasurementView.TTIMeasurementView, obj4, "latest_messages_tti");
   } else {
     tmp10 = null;
     if (messages.ready) {
@@ -92,7 +82,6 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((messages) => {
   cResult[7] = tmp10;
   tmp9 = tmp10;
 }) : ((messages) => {
-  let tmp7;
   messages = messages.messages;
   let tmp3 = null;
   if (messages.length > 0) {
@@ -103,7 +92,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((messages) => {
           displayMessagesWithCache.record(nativeEvent.nativeEvent.timestamp);
         }
     };
-    tmp3 = _false(TTIMeasurementView.TTIMeasurementView, obj, "cached_messages_tti");
+    tmp3 = React3(TTIMeasurementView.TTIMeasurementView, obj, "cached_messages_tti");
   }
   const children = [tmp3, ];
   if (messages.hasFetched) {
@@ -114,7 +103,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((messages) => {
           displayLatestMessages.record(nativeEvent.nativeEvent.timestamp);
         }
     };
-    tmp7 = _false(TTIMeasurementView.TTIMeasurementView, obj2, "latest_messages_tti");
+    let tmp7 = React3(TTIMeasurementView.TTIMeasurementView, obj2, "latest_messages_tti");
   } else {
     tmp7 = null;
     if (messages.ready) {
@@ -122,8 +111,5 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((messages) => {
     }
   }
   children[1] = tmp7;
-  return hasOwnProperty(React3, { children });
+  return hasOwnProperty(React4, { children });
 });
-const result = size.fileFinishedImporting("modules/chat/native/ChatTTITracker.tsx");
-
-export const ChatTTITracker = tmp3;

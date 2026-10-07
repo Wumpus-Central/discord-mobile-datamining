@@ -2,101 +2,104 @@
 
 // Module 5444 (CallStore)
 import _modDef12 from "module_12" /* 12 */;
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
-import size from "module_2" /* 2 */;
 
+require = fn;
 function callConnect() {
-  let obj;
   let channelId = arg1;
   if (arg1 === undefined) {
     channelId = SelectedChannelStore.getChannelId();
   }
   const channel = ChannelStore.getChannel(channelId);
-  let tmp3 = null == channel || null != channel.getGuildId() || null == channelId;
+  let tmp3 = null == channel;
   if (!tmp3) {
-    tmp3 = null != obj[channelId] && !arg0;
-    const tmp5 = null != obj[channelId] && !arg0;
+    tmp3 = null != channel.getGuildId();
+  }
+  if (!tmp3) {
+    tmp3 = null == channelId;
+  }
+  if (!tmp3) {
+    let tmp5 = null != obj[channelId];
+    if (tmp5) {
+      tmp5 = !arg0;
+    }
+    tmp3 = tmp5;
   }
   let flag = !tmp3;
-  if (flag) {
+  if (!tmp3) {
     let tmp8 = obj[channelId];
-    const tmp7 = obj;
     if (tmp8 == null) {
       obj = { channelId, ringing: [] };
       tmp8 = obj;
     }
-    tmp7[channelId] = tmp8;
+    obj[channelId] = tmp8;
     const obj2 = { type: "CALL_CONNECT", channelId };
-    const obj3 = DispatcherDefault;
-    obj3.dispatch(obj2);
+    DispatcherDefault.dispatch(obj2);
     flag = true;
   }
   return flag;
 }
-const Endpoints = Constants.Endpoints;
+const Endpoints = fn(1085).Endpoints;
 let calls = {};
-const metroImportAll = {};
-const Store = get_initializedDefault.Store;
+const enqueuedRings = {};
+const Store = initializeDefault.Store;
 class CallStore extends Store {
-  initialize() {
-    this.waitFor(ChannelStore, SelectedChannelStore, SelectedGuildStore);
-  }
-  getCall(channelId) {
-    return obj[channelId];
-  }
-  getCalls() {
-    return Object.values(obj);
-  }
-  getMessageId(channelId) {
-    const call = this.getCall(channelId);
-    let messageId = null;
-    if (null != call) {
-      messageId = call.messageId;
-    }
-    return messageId;
-  }
-  isCallActive(channelId, id) {
-    let tmp2 = null != tmp && !tmp.unavailable;
-    if (tmp2) {
-      let tmp4;
-      if (null != id) {
-        tmp4 = tmp.messageId === id;
-      } else {
-        tmp4 = null != tmp.region;
-      }
-      tmp2 = tmp4;
-    }
-    return tmp2;
-  }
-  isCallUnavailable(id) {
-    return null != obj[id] && obj[id].unavailable;
-  }
-  getInternalState() {
-    calls = { calls, enqueuedRings };
-    return calls;
-  }
 }
 const prototype = CallStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(ChannelStore, SelectedChannelStore, SelectedGuildStore);
+};
+prototype["getCall"] = function getCall(channelId) {
+  return obj[channelId];
+};
+prototype["getCalls"] = function getCalls() {
+  return Object.values(obj);
+};
+prototype["getMessageId"] = function getMessageId(channelId) {
+  const call = this.getCall(channelId);
+  let messageId = null;
+  if (null != call) {
+    messageId = call.messageId;
+  }
+  return messageId;
+};
+prototype["isCallActive"] = function isCallActive(channelId, id) {
+  let messageId = obj[channelId];
+  if (!(null != messageId && !messageId.unavailable)) {
+    return tmp;
+  } else if (null != id) {
+    messageId = messageId.messageId;
+    let tmp3 = messageId === id;
+  } else {
+    tmp3 = null != messageId.region;
+  }
+};
+prototype["isCallUnavailable"] = function isCallUnavailable(id) {
+  return null != obj[id] && obj[id].unavailable;
+};
+prototype["getInternalState"] = function getInternalState() {
+  calls = { calls, enqueuedRings };
+  return calls;
+};
 CallStore.displayName = "CallStore";
 calls = {
   CONNECTION_OPEN: function handleConnectionOpen() {
     return callConnect(true);
   },
   CONNECTION_CLOSED: function handleConnectionClosed() {
-    let closure_8 = {};
+    closure_8 = {};
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(callStoreInternalState) {
     callStoreInternalState = callStoreInternalState.callStoreInternalState;
+    const obj = {};
     const merged = Object.assign(callStoreInternalState.calls);
-    const obj2 = {};
     const merged1 = Object.assign(callStoreInternalState.enqueuedRings);
-    let closure_8 = obj2;
+    closure_8 = {};
   },
   CONNECTION_RESUMED: function handleConnectionResumed() {
     return callConnect(true);
@@ -107,86 +110,82 @@ calls = {
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     channel = channel.channel;
     if (null != enqueuedRings[channel.id]) {
-      delete enqueuedRings[channel.id];
+      const id = channel.id;
+      delete tmp4[tmp3];
     }
     if (null == obj[channel.id]) {
       return false;
     } else {
-      delete obj[channel.id];
+      const id2 = channel.id;
+      delete tmp2[tmp];
     }
   },
   CALL_CREATE: function handleCallCreate(channelId) {
-    let obj2;
     channelId = channelId.channelId;
     const obj = { channelId, messageId: channelId.messageId, region: channelId.region, ringing: Object.keys(channelId.ongoingRings), unavailable: false, regionUpdated: false };
     obj[channelId] = obj;
     if (null != enqueuedRings[channelId]) {
-      delete enqueuedRings[channelId];
-      let tmp = arr;
+      delete tmp[tmp2];
+      let tmp3 = arr;
       if (1 !== enqueuedRings[channelId].indexOf("all")) {
-        tmp = null;
+        tmp3 = null;
       }
       const HTTP = HTTPUtils.HTTP;
-      const request = { url: Endpoints.CALL_RING(channelId), body: obj2, oldFormErrors: true, rejectWithError: true };
-      const post = HTTP.post;
-      obj2 = { recipients: tmp };
-      post(request);
+      const request = { url: Endpoints.CALL_RING(channelId), body: null, oldFormErrors: true, rejectWithError: true };
+      const obj2 = { recipients: tmp3 };
+      request.body = obj2;
+      HTTP.post(request);
     }
   },
   CALL_UPDATE: function handleCallUpdate(arg0) {
-    let channelId;
-    let messageId;
-    let obj;
-    let ongoingRings;
-    let region;
     ({ channelId, region } = arg0);
     let tmp2 = null != tmp;
     ({ messageId, ongoingRings } = arg0);
     if (tmp2) {
-      tmp2 = obj[channelId].regionUpdated || obj[channelId].region !== region;
+      tmp2 = tmp.regionUpdated || tmp.region !== region;
+      const tmp3 = tmp.regionUpdated || tmp.region !== region;
     }
-    obj = { messageId, region, ringing: Object.keys(ongoingRings), regionUpdated: tmp2 };
+    const obj = {};
     const merged = Object.assign(obj[channelId]);
+    obj.messageId = messageId;
+    obj.region = region;
+    obj.ringing = Object.keys(ongoingRings);
+    obj.regionUpdated = tmp2;
     obj[channelId] = obj;
   },
   CALL_DELETE: function handleCallDelete(arg0) {
-    let channelId;
-    let obj;
-    let unavailable;
     ({ channelId, unavailable } = arg0);
     if (true === unavailable) {
-      if (null != obj[channelId]) {
-        obj = { unavailable };
-        const merged = Object.assign(tmp);
+      if (null != tmp3) {
+        const obj = {};
+        const merged = Object.assign(tmp3);
+        obj.unavailable = unavailable;
       }
-      tmp2[channelId] = { channelId, ringing: [], messageId: null, region: null, regionUpdated: false, unavailable };
+      tmp4[channelId] = { channelId, ringing: [], messageId: null, region: null, regionUpdated: false, unavailable };
       if (null != enqueuedRings[channelId]) {
-        delete enqueuedRings[channelId];
+        delete tmp[tmp2];
       }
     }
   },
   CALL_ENQUEUE_RING: function handleCallEnqueueRing(arg0) {
-    let channelId;
-    let recipients;
     ({ channelId, recipients } = arg0);
     let items = enqueuedRings[channelId];
-    const union = _modDef12.union;
-    _modDef12;
     if (items == null) {
       items = [];
     }
     if (recipients == null) {
       recipients = ["all"];
     }
-    enqueuedRings[channelId] = union(items, recipients);
+    enqueuedRings[channelId] = _modDef12.union(items, recipients);
   },
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {
     if (null == channelId.channelId) {
-      let closure_8 = {};
+      closure_8 = {};
     }
   }
 };
 const callStore = new CallStore(DispatcherDefault, calls);
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/CallStore.tsx");
 
 export default callStore;

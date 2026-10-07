@@ -1,48 +1,42 @@
 // === Module 14237: MessagesTabLottie ===
 
 // Module 14237 (MessagesTabLottie)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
-import LottieIcon2 from "LottieIcon" /* 9642 */;
-import AssetRegistry from "AssetRegistry" /* 14238 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import c from "c" /* 576 */;
+import LottieIcon from "LottieIcon" /* 9642 */;
+import _mod14238 from "module_14238" /* 14238 */;
+import noop from "module_19" /* 19 */;
 
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
 const layers = ["I"];
 const items = [{ name: "all", start: 0, duration: 67 }];
-const forwardRef = react.forwardRef;
-const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
-  let first;
-  const obj = react2;
-  const cResult = obj.c(4);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/LottieIcon/native/generated/MessagesTabLottie.tsx");
+
+export const MessagesTabLottie = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
+  const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = AssetRegistry;
+    const tmpResult = _mod14238;
     cResult[0] = tmpResult;
-    first = tmpResult;
+    let first = tmpResult;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === arg0) {
-    let tmp6;
     if (cResult[2] === ref) {
-      tmp6 = cResult[3];
+      let tmp6 = cResult[3];
     }
     return tmp6;
   }
-  const LottieIcon = LottieIcon2.LottieIcon;
   const merged = Object.assign(arg0);
-  const tmp8 = <LottieIcon dotLottie={first} animation="all" ref={ref} layers={layers} markers={items} />;
+  const tmp8 = jsx(LottieIcon.LottieIcon, { dotLottie: first, animation: "all", ref, layers, markers: items });
   cResult[1] = arg0;
   cResult[2] = ref;
   cResult[3] = tmp8;
   tmp6 = tmp8;
+  const obj2 = { dotLottie: first, animation: "all", ref, layers, markers: items };
 }) : ((arg0, ref) => {
-  const LottieIcon = LottieIcon2.LottieIcon;
   const merged = Object.assign(arg0);
-  return <LottieIcon dotLottie={AssetRegistry} animation="all" ref={ref} layers={layers} markers={items} />;
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14238, animation: "all", ref, layers, markers: items });
 }));
-const result = size.fileFinishedImporting("design/components/LottieIcon/native/generated/MessagesTabLottie.tsx");
-
-export const MessagesTabLottie = forwardRefResult;

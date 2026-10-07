@@ -1,102 +1,82 @@
 // === Module 15384: ChangeLogModal ===
 
 // Module 15384 (ChangeLogModal)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import ChangelogConstants from "ChangelogConstants" /* 2102 */;
-import native from "native" /* 4595 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
 import FastImageDefault from "FastImage" /* 5981 */;
-import NavigatorHeader2 from "NavigatorHeader" /* 6017 */;
+import NavigatorHeader from "NavigatorHeader" /* 6017 */;
 import Navigator from "Navigator" /* 6503 */;
 import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 7774 */;
-import openMediaModal2 from "openMediaModal" /* 7944 */;
+import openMediaModal from "openMediaModal" /* 7944 */;
 import common_VideoDefault from "common/Video" /* 7993 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 9455 */;
-import AssetRegistryDefault from "AssetRegistry" /* 10136 */;
+import _modDef10136 from "module_10136" /* 10136 */;
 import _modDef15385 from "module_15385" /* 15385 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let navigation;
-
-let metroImportAll;
-let metroImportDefault;
-let obj2;
-let obj4;
-let size;
-let size1;
+require = fn;
 function hideChangeLog() {
-  const obj = ModalActionCreatorsDefault;
-  obj.popWithKey(CHANGELOG_MODAL_KEY);
+  ModalActionCreatorsDefault.popWithKey(CHANGELOG_MODAL_KEY);
 }
-const View = react_native.View;
-const AnalyticEvents = Constants.AnalyticEvents;
-const CHANGELOG_MODAL_KEY = ChangelogConstants.CHANGELOG_MODAL_KEY;
-({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+const View = fn(17).View;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const CHANGELOG_MODAL_KEY = fn(2102).CHANGELOG_MODAL_KEY;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 0.5625;
-let createStyles = createStyles_mod;
-let obj = { video: { alignSelf: "center" }, videoWrapper: { marginBottom: 8 }, videoSpecial: obj2, videoOverlay: { position: "absolute", width: "100%", height: "100%" }, playButton: size, playIcon: { width: 21, height: 21 }, empty: { width: "100%", height: 240, alignItems: "center", paddingTop: 48 } };
-obj2 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
-const createLegacyClassComponentStyles = createStyles.createLegacyClassComponentStyles;
-size = { position: "absolute", top: "50%", left: "50%", marginLeft: -28, marginTop: -28, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, width: 56, height: 56 };
-const authStore = createLegacyClassComponentStyles(obj);
-createStyles = createStyles_mod;
-let obj3 = { bulletPoint: size1, listItem: { flexDirection: "row", marginLeft: 4, marginBottom: 8 }, listText: obj4, listItemContent: { flexDirection: "column", flex: 1 } };
-size1 = { width: 7, height: 7, borderRadius: 3.5, marginRight: 13, marginTop: 7, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
-const createLegacyClassComponentStyles2 = createStyles.createLegacyClassComponentStyles;
-obj4 = { color: nativeDefault.colors.TEXT_DEFAULT, fontSize: 14, lineHeight: 18, flex: 1 };
-const unpackModuleId = createLegacyClassComponentStyles2(obj3);
-const PureComponent = react.PureComponent;
+let createStyles = fn(4896);
+let obj2 = { video: { alignSelf: "center" }, videoWrapper: { marginBottom: 8 }, videoSpecial: { borderRadius: nativeDefault.radii.xs, overflow: "hidden" }, videoOverlay: { position: "absolute", width: "100%", height: "100%" }, playButton: null, playIcon: null, empty: null };
+let size = { position: "absolute", top: "50%", left: "50%", marginLeft: -28, marginTop: -28, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, width: 56, height: 56 };
+obj2.playButton = size;
+obj2.playIcon = { width: 21, height: 21 };
+obj2.empty = { width: "100%", height: 240, alignItems: "center", paddingTop: 48 };
+let closure_10 = createStyles.createLegacyClassComponentStyles(obj2);
+createStyles = fn(4896);
+let obj4 = { bulletPoint: null, listItem: null, listText: null, listItemContent: null };
+let size1 = { width: 7, height: 7, borderRadius: 3.5, marginRight: 13, marginTop: 7, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+obj4.bulletPoint = size1;
+obj4.listItem = { flexDirection: "row", marginLeft: 4, marginBottom: 8 };
+let obj3 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
+obj4.listText = { color: nativeDefault.colors.TEXT_DEFAULT, fontSize: 14, lineHeight: 18, flex: 1 };
+obj4.listItemContent = { flexDirection: "column", flex: 1 };
+let closure_11 = createStyles.createLegacyClassComponentStyles(obj4);
+const PureComponent = noop.PureComponent;
 class ListItem extends PureComponent {
-  render() {
-    let childrenResult;
-    let items;
-    const children = this.props.children;
-    const tmp = closure_11(this.context);
-    const obj = { style: tmp.listItem, children: items };
-    items = [, ];
-    const obj2 = { style: tmp.bulletPoint };
-    items[0] = metroImportDefault(View, obj2);
-    const obj3 = { style: tmp.listText, children: childrenResult };
-    childrenResult = children;
-    if (typeof children === "function") {
-      const obj4 = { style: tmp.listText };
-      childrenResult = children(obj4);
-    }
-    items[1] = metroImportDefault(View, obj3);
-    return metroImportAll(View, obj);
-  }
 }
-const prototype = ListItem.prototype;
-ListItem.contextType = native.ThemeContext;
-const PureComponent2 = react.PureComponent;
+ListItem.prototype["render"] = function render() {
+  const children = this.props.children;
+  const tmp = closure_11(this.context);
+  const obj = { style: tmp.listItem, children: null };
+  const items = [React5(View, { style: tmp.bulletPoint }), ];
+  const obj3 = { style: tmp.listText, children: null };
+  let childrenResult = children;
+  if (typeof children === "function") {
+    const obj4 = { style: tmp.listText };
+    childrenResult = children(obj4);
+  }
+  obj3.children = childrenResult;
+  items[1] = React5(View, obj3);
+  obj.children = items;
+  return closure_1_8(View, obj);
+};
+ListItem.contextType = fn(4595).ThemeContext;
+const PureComponent2 = noop.PureComponent;
 class ChangeLog extends PureComponent2 {
   constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    require = applyArgumentsResult;
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    closure_0 = applyArgumentsResult;
     applyArgumentsResult.mountedAt = 0;
-    applyArgumentsResult.ref = react.createRef();
+    applyArgumentsResult.ref = closure_3.createRef();
     applyArgumentsResult.maxScrolledPercentage = 0;
     applyArgumentsResult.state = { ytVideoReady: false };
     applyArgumentsResult.handleScroll = function handleScroll(contentOffset) {
-      require.maxScrolledPercentage = Math.min(Math.max(require.maxScrolledPercentage, (contentOffset.contentOffset.y + contentOffset.layoutMeasurement.height) / contentOffset.contentSize.height), 1);
+      applyArgumentsResult.maxScrolledPercentage = Math.min(Math.max(applyArgumentsResult.maxScrolledPercentage, (contentOffset.contentOffset.y + contentOffset.layoutMeasurement.height) / contentOffset.contentSize.height), 1);
     };
     applyArgumentsResult.playVideo = function playVideo() {
-      let height;
-      let image;
-      let items;
-      let obj3;
-      let video;
-      let width;
-      const props = require.props;
+      const props = applyArgumentsResult.props;
       ({ video, image } = props.changeLog);
       ({ width, height } = props);
       if (null == video) {
@@ -105,154 +85,138 @@ class ChangeLog extends PureComponent2 {
         }
       }
       if (null != video) {
-        obj3 = { videoURI: video };
         const obj2 = { videoURI: video };
+        let obj3 = obj2;
       } else {
         obj3 = { uri: image };
       }
-      require.track(AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED);
-      const current = require.ref.current;
+      applyArgumentsResult.track(AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED);
+      const current = applyArgumentsResult.ref.current;
       if (null != current) {
-        const obj4 = { initialSources: items, disableDownload: true, shareable: false, analyticsSource: "Change Log", originViewOrOriginLayout: current };
-        const obj5 = { width, height };
-        const openMediaModal = openMediaModal2.openMediaModal;
-        openMediaModal2;
+        const obj5 = { initialSources: null, disableDownload: true, shareable: false, analyticsSource: "Change Log", originViewOrOriginLayout: null };
+        const obj6 = {};
         const merged = Object.assign(obj3);
-        items = [obj5];
-        openMediaModal(obj4);
+        obj6.width = width;
+        obj6.height = height;
+        const items = [obj6];
+        obj5.initialSources = items;
+        obj5.originViewOrOriginLayout = current;
+        openMediaModal.openMediaModal(obj5);
       }
     };
     return applyArgumentsResult;
   }
-  componentDidMount() {
-    this.mountedAt = Date.now();
-    this.track(AnalyticEvents.CHANGE_LOG_OPENED);
-  }
-  componentWillUnmount() {
-    this.track(AnalyticEvents.CHANGE_LOG_CLOSED);
-  }
-  track(arg0) {
-    let maxScrolledPercentage;
-    let obj = arg1;
-    if (arg1 === undefined) {
-      obj = {};
-    }
-    const self = this;
-    const changeLog = this.props.changeLog;
-    if (null != changeLog) {
-      const obj3 = { change_log_id: "" + changeLog.date + ":" + changeLog.revision };
-      const _HermesInternal = HermesInternal;
-      const merged = Object.assign(obj);
-      let tmp10 = obj3;
-      if (arg0 === AnalyticEvents.CHANGE_LOG_CLOSED) {
-        const _Math = Math;
-        const _Date = Date;
-        const _parseInt = parseInt;
-        const obj4 = { seconds_open: Math.round((Date.now() - self.mountedAt) / 1000), max_scrolled_percentage: 100 * parseInt(maxScrolledPercentage.toPrecision(4), 10) };
-        maxScrolledPercentage = self.maxScrolledPercentage;
-        const merged1 = Object.assign(obj3);
-        tmp10 = obj4;
-      }
-      const obj2 = AnalyticsUtilsDefault;
-      obj2.track(arg0, tmp10);
-    }
-  }
-  renderVideo() {
-    let changeLog;
-    let height;
-    let image;
-    let intl;
-    let items;
-    let items1;
-    let obj;
-    let obj10;
-    let obj6;
-    let obj8;
-    let onClose;
-    let tmp15Result;
-    let video;
-    let youtube_video_id;
-    const self = this;
-    const tmp = closure_10(this.context);
-    const props = this.props;
-    ({ changeLog, height, onClose } = props);
-    ({ video, image, youtube_video_id } = changeLog);
-    const width = props.width;
-    if (null != video) {
-      obj = { videoURI: video };
-      const obj2 = { videoURI: video };
-    } else if (null == image) {
-      let tmp4Result = null;
-      if (null != youtube_video_id) {
-        const obj3 = { style: tmp.videoWrapper, onAccessibilityEscape: onClose, children: items };
-        const obj4 = {
-          height,
-          play: false,
-          videoId: youtube_video_id,
-          onReady() {
-                return self.setState({ ytVideoReady: true });
-              },
-          useLocalHTML: true
-        };
-        items = [closure_7(_modDef15385, obj4), ];
-        let tmp6Result = null;
-        if (!tmp2) {
-          const obj5 = { style: tmp.videoOverlay, source: obj6 };
-          const _HermesInternal = HermesInternal;
-          obj6 = { uri: "https://i.ytimg.com/vi/" + youtube_video_id + "/hqdefault.jpg" };
-          const tmp7Result = FastImageDefault;
-          tmp6Result = closure_7(tmp7Result, obj5);
-        }
-        items[1] = tmp6Result;
-        tmp4Result = closure_8(View, obj3);
-      }
-      return tmp4Result;
-    } else {
-      obj = { uri: image };
-    }
-    const obj7 = { style: tmp.videoWrapper, onAccessibilityEscape: onClose, children: closure_8(View, obj8) };
-    obj8 = { ref: self.ref, style: tmp.videoSpecial, children: items1 };
-    size = {
-      style: tmp.video,
-      src: obj,
-      width,
-      height,
-      paused: true,
-      canOpenFullscreen: true,
-      unmutedOnFullScreen: true,
-      accessibilityLabel: intl.string(self(1126).t.zHeo07),
-      onPress() {
-        self.track(AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED);
-      }
-    };
-    const tmp17 = common_VideoDefault;
-    intl = self(1126).intl;
-    items1 = [closure_7(tmp17, size), ];
-    let tmp12Result = null;
-    if (null != video) {
-      const obj9 = { accessibilityLabel: "Play Video", accessibilityRole: "button", style: tmp.videoOverlay, onPress: self.playVideo, children: closure_7(tmp15Result, obj10) };
-      const PressableOpacity = tmp18(5916).PressableOpacity;
-      obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: AssetRegistryDefault, onPress: self.playVideo, style: tmp.playButton, iconSize: self(1188).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
-      tmp15Result = TouchableHitBoxDefault;
-      tmp12Result = closure_7(PressableOpacity, obj9);
-    }
-    items1[1] = tmp12Result;
-    return closure_7(View, obj7);
-  }
-  render() {
-    const obj = { video: this.renderVideo(), onScroll: this.handleScroll };
-    const tmp = ChangeLogStandardTemplateDefault;
-    const merged = Object.assign(this.props);
-    return metroImportDefault(tmp, obj);
-  }
 }
-const prototype2 = ChangeLog.prototype;
-ChangeLog.contextType = native.ThemeContext;
-let ReactCompilerGating = ReactCompilerGating_mod;
+const prototype = ChangeLog.prototype;
+prototype["componentDidMount"] = function componentDidMount() {
+  this.mountedAt = Date.now();
+  this.track(AnalyticEvents.CHANGE_LOG_OPENED);
+};
+prototype["componentWillUnmount"] = function componentWillUnmount() {
+  this.track(AnalyticEvents.CHANGE_LOG_CLOSED);
+};
+prototype["track"] = function track(arg0) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  const self = this;
+  const changeLog = this.props.changeLog;
+  if (null != changeLog) {
+    const obj3 = { change_log_id: null };
+    const _HermesInternal = HermesInternal;
+    obj3.change_log_id = "" + changeLog.date + ":" + changeLog.revision;
+    const merged = Object.assign(obj);
+    let tmp10 = obj3;
+    if (arg0 === AnalyticEvents.CHANGE_LOG_CLOSED) {
+      const obj4 = { seconds_open: null, max_scrolled_percentage: null };
+      const _Math = Math;
+      const _Date = Date;
+      obj4.seconds_open = Math.round((Date.now() - self.mountedAt) / 1000);
+      const _parseInt = parseInt;
+      const maxScrolledPercentage = self.maxScrolledPercentage;
+      obj4.max_scrolled_percentage = 100 * parseInt(maxScrolledPercentage.toPrecision(4), 10);
+      const merged1 = Object.assign(obj3);
+      tmp10 = obj4;
+    }
+    AnalyticsUtilsDefault.track(arg0, tmp10);
+  }
+};
+prototype["renderVideo"] = function renderVideo() {
+  const self = this;
+  const tmp = closure_10(this.context);
+  const props = this.props;
+  ({ changeLog, height, onClose } = props);
+  ({ video, image, youtube_video_id } = changeLog);
+  if (null != video) {
+    const obj2 = { videoURI: video };
+    let obj = obj2;
+  } else if (null == image) {
+    let tmp4Result = null;
+    if (null != youtube_video_id) {
+      const obj3 = { style: tmp.videoWrapper, onAccessibilityEscape: onClose, children: null };
+      const obj4 = {
+        height,
+        play: false,
+        videoId: youtube_video_id,
+        onReady() {
+              return self.setState({ ytVideoReady: true });
+            },
+        useLocalHTML: true
+      };
+      const items = [closure_7(_modDef15385, obj4), ];
+      let tmp6Result = null;
+      if (!tmp2) {
+        const obj5 = { style: tmp.videoOverlay, source: null };
+        const obj6 = { uri: null };
+        const _HermesInternal = HermesInternal;
+        obj6.uri = "https://i.ytimg.com/vi/" + youtube_video_id + "/hqdefault.jpg";
+        obj5.source = obj6;
+        tmp6Result = closure_7(FastImageDefault, obj5);
+        const tmp7Result = FastImageDefault;
+      }
+      items[1] = tmp6Result;
+      obj3.children = items;
+      tmp4Result = closure_8(View, obj3);
+    }
+    return tmp4Result;
+  } else {
+    obj = { uri: image };
+  }
+  const obj7 = { style: tmp.videoWrapper, onAccessibilityEscape: onClose, children: null };
+  const obj8 = { ref: self.ref, style: tmp.videoSpecial, children: null };
+  const size = { style: tmp.video, src: obj, width: props.width, height, paused: true, canOpenFullscreen: true, unmutedOnFullScreen: true, accessibilityLabel: null, onPress: null };
+  const intl = self(1126).intl;
+  size.accessibilityLabel = intl.string(self(1126).t.zHeo07);
+  size.onPress = function onPress() {
+    self.track(AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED);
+  };
+  const items1 = [closure_7(common_VideoDefault, size), ];
+  let tmp12Result = null;
+  if (null != video) {
+    const obj9 = { accessibilityLabel: "Play Video", accessibilityRole: "button", style: tmp.videoOverlay, onPress: self.playVideo, children: null };
+    const obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: _modDef10136, onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1188).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
+    obj9.children = closure_7(TouchableHitBoxDefault, obj10);
+    tmp12Result = closure_7(tmp18(5916).PressableOpacity, obj9);
+    const tmp15Result = TouchableHitBoxDefault;
+  }
+  items1[1] = tmp12Result;
+  obj8.children = items1;
+  obj7.children = closure_8(View, obj8);
+  return closure_7(View, obj7);
+};
+prototype["render"] = function render() {
+  const obj = {};
+  const merged = Object.assign(this.props);
+  obj.video = this.renderVideo();
+  obj.onScroll = this.handleScroll;
+  return React5(ChangeLogStandardTemplateDefault, obj);
+};
+ChangeLog.contextType = fn(4595).ThemeContext;
+let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const obj = react2;
-  const cResult = obj.c(3);
-  size = useWindowDimensionsDefault();
+  const cResult = c.c(3);
+  const size = useWindowDimensionsDefault();
   let diff = size.width - 36;
   const result = diff * c9;
   const result1 = 0.5 * size.height;
@@ -261,9 +225,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     diff = result1 / c9;
   }
   if (cResult[0] === bound) {
-    let tmp7;
     if (cResult[1] === diff) {
-      tmp7 = cResult[2];
+      let tmp7 = cResult[2];
     }
     return tmp7;
   }
@@ -273,263 +236,209 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = size1;
   tmp7 = size1;
 }) : (() => {
-  size = useWindowDimensionsDefault();
+  const size = useWindowDimensionsDefault();
   let diff = size.width - 36;
   const result = diff * c9;
   const result1 = 0.5 * size.height;
-  const size1 = { height: Math.min(result, result1), width: diff };
+  const size1 = { height: Math.min(result, result1), width: null };
   if (result1 < result) {
     diff = result1 / c9;
   }
+  size1.width = diff;
   return size1;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
-  let changelog;
-  let height;
-  let intl;
-  let intl2;
-  let intl3;
-  let width;
-  let obj = changelog(navigation[20]);
-  const cResult = obj.c(24);
+ReactCompilerGating = fn(558);
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
+  const cResult = changelog(navigation[20]).c(24);
   onClose = onClose.onClose;
+  let obj = changelog(navigation[20]);
+  let empty = changelog(navigation[5]).useLegacyClassComponentStyles(closure_10);
   let obj2 = changelog(navigation[5]);
-  const legacyClassComponentStyles = obj2.useLegacyClassComponentStyles(closure_10);
-  let obj3 = changelog(navigation[22]);
-  const currentChangelog = obj3.useCurrentChangelog();
+  const currentChangelog = changelog(navigation[22]).useCurrentChangelog();
   changelog = currentChangelog.changelog;
   const loaded = currentChangelog.loaded;
-  const clientTooOld = currentChangelog.clientTooOld;
+  let obj3 = changelog(navigation[22]);
   ({ width, height } = closure_13());
-  closure_13();
-  const obj4 = changelog(navigation[23]);
-  navigation = obj4.useNavigation();
-  if (null == onClose) {
-    let tmp8;
-    if (cResult[0] !== navigation) {
-      const fn = function l() {
-        return navigation.goBack();
-      };
-      cResult[0] = navigation;
-      cResult[1] = fn;
-      tmp8 = fn;
-    } else {
-      tmp8 = cResult[1];
-    }
-    onClose = tmp8;
-  }
-  if (cResult[2] === changelog) {
-    let tmp9;
-    let tmp10;
-    if (cResult[3] === navigation) {
-      tmp9 = cResult[4];
-      tmp10 = cResult[5];
-    }
-    const effect = react.useEffect(tmp9, tmp10);
-    if (cResult[6] === changelog) {
-      let tmp12;
-      let tmp13;
-      let tmp15;
-      if (cResult[7] === loaded) {
-        tmp12 = cResult[8];
-        tmp13 = cResult[9];
+  const tmp5 = closure_13();
+  navigation = changelog(navigation[23]).useNavigation();
+  if (null != onClose) {
+    if (cResult[2] === changelog) {
+      if (cResult[3] === navigation) {
+        let tmp9 = cResult[4];
+        let tmp10 = cResult[5];
       }
-      const effect1 = react.useEffect(tmp12, tmp13);
-      if (clientTooOld) {
-        let tmp36;
-        let tmp39;
-        const _Symbol3 = Symbol;
-        if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj6 = { variant: "heading-lg/medium", children: intl3.string(changelog(navigation[13]).t.V9ospk) };
-          const Text3 = tmp(tmp2[27]).Text;
-          intl3 = tmp(tmp2[13]).intl;
-          const tmp38 = closure_7(Text3, obj6);
-          cResult[10] = tmp38;
-          tmp36 = tmp38;
-        } else {
-          tmp36 = cResult[10];
+      const effect = noop.useEffect(tmp9, tmp10);
+      if (cResult[6] === changelog) {
+        if (cResult[7] === loaded) {
+          let tmp12 = cResult[8];
+          let tmp13 = cResult[9];
         }
-        if (cResult[11] !== legacyClassComponentStyles.empty) {
-          const obj7 = { style: legacyClassComponentStyles.empty, children: tmp36 };
-          const tmp42 = closure_7(View, obj7);
-          cResult[11] = legacyClassComponentStyles.empty;
-          cResult[12] = tmp42;
-          tmp39 = tmp42;
-        } else {
-          tmp39 = cResult[12];
-        }
-        tmp15 = tmp39;
-      } else if (null == changelog) {
-        let tmp23;
-        if (loaded) {
-          let tmp28;
-          let tmp31;
+        const effect1 = noop.useEffect(tmp12, tmp13);
+        if (currentChangelog.clientTooOld) {
+          const _Symbol3 = Symbol;
+          if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+            const obj6 = { variant: "heading-lg/medium", children: null };
+            const intl3 = tmp(tmp2[13]).intl;
+            obj6.children = intl3.string(tmp(tmp2[13]).t.V9ospk);
+            const tmp40 = closure_7(tmp(tmp2[27]).Text, obj6);
+            cResult[10] = tmp40;
+            let tmp38 = tmp40;
+          } else {
+            tmp38 = cResult[10];
+          }
+          if (cResult[11] !== empty.empty) {
+            const obj7 = { style: empty.empty, children: tmp38 };
+            const tmp44 = closure_7(View, obj7);
+            empty = empty.empty;
+            cResult[11] = empty;
+            cResult[12] = tmp44;
+          }
+        } else if (null == changelog) {
+          if (!loaded) {
+            const _Symbol = Symbol;
+            if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
+              const obj8 = { variant: "text-md/semibold", children: null };
+              let intl = tmp(tmp2[13]).intl;
+              obj8.children = intl.string(tmp(tmp2[13]).t.ZTNur7);
+              const tmp22 = closure_7(tmp(tmp2[27]).Text, obj8);
+              cResult[16] = tmp22;
+              let tmp20 = tmp22;
+            } else {
+              tmp20 = cResult[16];
+            }
+            if (cResult[17] !== empty.empty) {
+              const obj9 = { style: empty.empty, children: tmp20 };
+              const tmp26 = closure_7(View, obj9);
+              cResult[17] = empty.empty;
+              cResult[18] = tmp26;
+            }
+          }
           const _Symbol2 = Symbol;
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj8 = { variant: "text-md/semibold", children: intl2.string(changelog(navigation[13]).t.O1iRT8) };
-            const Text2 = tmp(tmp2[27]).Text;
-            intl2 = tmp(tmp2[13]).intl;
-            const tmp30 = closure_7(Text2, obj8);
+            const obj10 = { variant: "text-md/semibold", children: null };
+            let intl2 = tmp(tmp2[13]).intl;
+            obj10.children = intl2.string(tmp(tmp2[13]).t.O1iRT8);
+            const tmp30 = closure_7(tmp(tmp2[27]).Text, obj10);
             cResult[13] = tmp30;
-            tmp28 = tmp30;
+            let tmp28 = tmp30;
           } else {
             tmp28 = cResult[13];
           }
-          if (cResult[14] !== legacyClassComponentStyles.empty) {
-            const obj9 = { style: legacyClassComponentStyles.empty, children: tmp28 };
-            const tmp34 = closure_7(View, obj9);
-            cResult[14] = legacyClassComponentStyles.empty;
+          if (cResult[14] !== empty.empty) {
+            const obj11 = { style: empty.empty, children: tmp28 };
+            const tmp34 = closure_7(View, obj11);
+            cResult[14] = empty.empty;
             cResult[15] = tmp34;
-            tmp31 = tmp34;
-          } else {
-            tmp31 = cResult[15];
           }
-          tmp23 = tmp31;
         } else {
-          let tmp20;
-          const _Symbol = Symbol;
-          if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj10 = { variant: "text-md/semibold", children: intl.string(changelog(navigation[13]).t.ZTNur7) };
-            const Text = tmp(tmp2[27]).Text;
-            intl = tmp(tmp2[13]).intl;
-            const tmp22 = closure_7(Text, obj10);
-            cResult[16] = tmp22;
-            tmp20 = tmp22;
-          } else {
-            tmp20 = cResult[16];
-          }
-          if (cResult[17] !== legacyClassComponentStyles.empty) {
-            const obj11 = { style: legacyClassComponentStyles.empty, children: tmp20 };
-            const tmp26 = closure_7(View, obj11);
-            cResult[17] = legacyClassComponentStyles.empty;
-            cResult[18] = tmp26;
-            tmp23 = tmp26;
-          } else {
-            tmp23 = cResult[18];
-          }
-        }
-        tmp15 = tmp23;
-      } else {
-        if (cResult[19] === changelog) {
-          if (cResult[20] === height) {
-            if (cResult[21] === onClose) {
-              if (cResult[22] === width) {
-                tmp15 = cResult[23];
+          if (cResult[19] === changelog) {
+            if (cResult[20] === height) {
+              if (cResult[21] === onClose) {
+                if (cResult[22] === width) {
+                  let tmp15 = cResult[23];
+                }
+                return tmp15;
               }
             }
           }
+          const size = { onClose, height, width, changeLog: changelog };
+          const tmp18 = closure_7(ChangeLog, size);
+          cResult[19] = changelog;
+          cResult[20] = height;
+          cResult[21] = onClose;
+          cResult[22] = width;
+          cResult[23] = tmp18;
+          tmp15 = tmp18;
         }
-        size = { onClose, height, width, changeLog: changelog };
-        const tmp18 = closure_7(ChangeLog, size);
-        cResult[19] = changelog;
-        cResult[20] = height;
-        cResult[21] = onClose;
-        cResult[22] = width;
-        cResult[23] = tmp18;
-        tmp15 = tmp18;
       }
-      return tmp15;
-    }
-    const fn3 = function u() {
-      if (loaded) {
-        if (null != changelog) {
-          return () => {
-            const obj = loaded(navigation[26]);
-            return obj.markChangelogAsSeen(changelog.id, changelog.date);
-          };
+      const fn3 = function u() {
+        if (loaded) {
+          if (null != changelog) {
+            return () => loaded(navigation[26]).markChangelogAsSeen(changelog.id, changelog.date);
+          }
         }
+      };
+      const items = [loaded, changelog];
+      cResult[6] = changelog;
+      cResult[7] = loaded;
+      cResult[8] = fn3;
+      cResult[9] = items;
+      tmp13 = items;
+      tmp12 = fn3;
+    }
+    const fn2 = function s() {
+      if (null != changelog) {
+        let obj = {
+          headerTitle() {
+              const obj = { title: null, subtitle: null };
+              const intl = changelog(navigation[13]).intl;
+              obj.title = intl.string(changelog(navigation[13]).t.LRmNAl);
+              const intl2 = changelog(navigation[13]).intl;
+              if (null != date.date) {
+                if ("" !== date.date) {
+                  let toDateResult = loaded(navigation[25])(date.date).toDate();
+                  const obj2 = loaded(navigation[25])(date.date);
+                }
+                const obj3 = { date: toDateResult };
+                obj.subtitle = intl2.formatToPlainString(tmp3, obj3);
+                return closure_2_7(changelog(navigation[24]).NavigatorHeader, obj);
+              }
+              toDateResult = new Date();
+            }
+        };
+        navigation.setOptions(obj);
       }
     };
-    const items = [loaded, changelog];
-    cResult[6] = changelog;
-    cResult[7] = loaded;
-    cResult[8] = fn3;
-    cResult[9] = items;
-    tmp13 = items;
-    tmp12 = fn3;
+    const items1 = [changelog, navigation];
+    cResult[2] = changelog;
+    cResult[3] = navigation;
+    cResult[4] = fn2;
+    cResult[5] = items1;
+    tmp10 = items1;
+    tmp9 = fn2;
+  } else if (cResult[0] !== navigation) {
+    const fn = function l() {
+      return navigation.goBack();
+    };
+    cResult[0] = navigation;
+    cResult[1] = fn;
   }
-  const fn2 = function s() {
-    let date;
-    if (null != changelog) {
-      let obj = {
-        headerTitle() {
-            let intl;
-            const obj = { title: intl.string(changelog(navigation[13]).t.LRmNAl), subtitle: null };
-            const NavigatorHeader = changelog(navigation[24]).NavigatorHeader;
-            intl = changelog(navigation[13]).intl;
-            const intl2 = changelog(navigation[13]).intl;
-            const formatToPlainString = intl2.formatToPlainString;
-            if (null != date.date) {
-              let toDateResult;
-              if ("" !== date.date) {
-                const obj2 = loaded(navigation[25])(date.date);
-                toDateResult = obj2.toDate();
-              }
-              const obj3 = { date: toDateResult };
-              obj.subtitle = formatToPlainString(tmp3, obj3);
-              return closure_2_7(NavigatorHeader, obj);
-            }
-            toDateResult = new Date();
-          }
-      };
-      navigation.setOptions(obj);
-    }
-  };
-  const items1 = [changelog, navigation];
-  cResult[2] = changelog;
-  cResult[3] = navigation;
-  cResult[4] = fn2;
-  cResult[5] = items1;
-  tmp10 = items1;
-  tmp9 = fn2;
+  const obj4 = changelog(navigation[23]);
 }) : ((onClose) => {
-  let Text2;
-  let height;
-  let intl2;
-  let obj5;
-  let tmp12Result;
-  let width;
   let fn = onClose.onClose;
   let changelog;
-  navigation = undefined;
+  let navigation;
+  const legacyClassComponentStyles = changelog(navigation[5]).useLegacyClassComponentStyles(closure_10);
   let obj = changelog(navigation[5]);
-  const legacyClassComponentStyles = obj.useLegacyClassComponentStyles(closure_10);
-  let obj2 = changelog(navigation[22]);
-  const currentChangelog = obj2.useCurrentChangelog();
+  const currentChangelog = changelog(navigation[22]).useCurrentChangelog();
   changelog = currentChangelog.changelog;
   const loaded = currentChangelog.loaded;
-  const clientTooOld = currentChangelog.clientTooOld;
+  let obj2 = changelog(navigation[22]);
   ({ width, height } = closure_13());
-  closure_13();
-  let obj3 = changelog(navigation[23]);
-  navigation = obj3.useNavigation();
+  const tmp5 = closure_13();
+  navigation = changelog(navigation[23]).useNavigation();
   if (null == fn) {
     fn = function o() {
       return navigation.goBack();
     };
   }
   const items = [changelog, navigation];
-  const effect = react.useEffect(() => {
-    let date;
+  const effect = noop.useEffect(() => {
     if (null != changelog) {
       let obj = {
         headerTitle() {
-            let intl;
-            const obj = { title: intl.string(changelog(navigation[13]).t.LRmNAl), subtitle: null };
-            const NavigatorHeader = changelog(navigation[24]).NavigatorHeader;
-            intl = changelog(navigation[13]).intl;
+            const obj = { title: null, subtitle: null };
+            const intl = changelog(navigation[13]).intl;
+            obj.title = intl.string(changelog(navigation[13]).t.LRmNAl);
             const intl2 = changelog(navigation[13]).intl;
-            const formatToPlainString = intl2.formatToPlainString;
             if (null != date.date) {
-              let toDateResult;
               if ("" !== date.date) {
+                let toDateResult = loaded(navigation[25])(date.date).toDate();
                 const obj2 = loaded(navigation[25])(date.date);
-                toDateResult = obj2.toDate();
               }
               const obj3 = { date: toDateResult };
-              obj.subtitle = formatToPlainString(tmp3, obj3);
-              return closure_2_7(NavigatorHeader, obj);
+              obj.subtitle = intl2.formatToPlainString(tmp3, obj3);
+              return closure_2_7(changelog(navigation[24]).NavigatorHeader, obj);
             }
             toDateResult = new Date();
           }
@@ -538,103 +447,92 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
     }
   }, items);
   const items1 = [loaded, changelog];
-  const effect1 = react.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     if (loaded) {
       if (null != changelog) {
-        return () => {
-          const obj = loaded(navigation[26]);
-          return obj.markChangelogAsSeen(changelog.id, changelog.date);
-        };
+        return () => loaded(navigation[26]).markChangelogAsSeen(changelog.id, changelog.date);
       }
     }
   }, items1);
-  if (clientTooOld) {
-    const obj4 = { style: legacyClassComponentStyles.empty, children: closure_7(Text2, obj5) };
-    obj5 = { variant: "heading-lg/medium", children: intl2.string(changelog(navigation[13]).t.V9ospk) };
-    Text2 = tmp(tmp2[27]).Text;
-    intl2 = tmp(tmp2[13]).intl;
-    tmp12Result = closure_7(View, obj4);
+  if (currentChangelog.clientTooOld) {
+    const obj4 = { style: legacyClassComponentStyles.empty, children: null };
+    const obj5 = { variant: "heading-lg/medium", children: null };
+    let intl2 = tmp(tmp2[13]).intl;
+    obj5.children = intl2.string(tmp(tmp2[13]).t.V9ospk);
+    obj4.children = closure_7(tmp(tmp2[27]).Text, obj5);
+    let tmp11 = closure_7(View, obj4);
   } else if (null == changelog) {
-    let tmp14;
     const obj6 = { style: legacyClassComponentStyles.empty, children: null };
     const Text = tmp(tmp2[27]).Text;
-    const obj7 = { variant: "text-md/semibold", children: null };
+    let obj7 = { variant: "text-md/semibold", children: null };
     let intl = tmp(tmp2[13]).intl;
     const string = intl.string;
-    const t = tmp(tmp2[13]).t;
+    let t = tmp(tmp2[13]).t;
     if (loaded) {
-      obj7.children = string(t.O1iRT8);
-      obj6.children = closure_7(Text, obj7);
-      tmp14 = obj6;
+      t = string(t.O1iRT8);
+      obj7.children = t;
+      obj7 = closure_7(Text, obj7);
+      obj6.children = obj7;
+      let tmp14 = obj6;
     } else {
-      obj7.children = string(t.ZTNur7);
+      obj7[1] = string(t.ZTNur7);
       obj6.children = closure_7(Text, obj7);
       tmp14 = obj6;
     }
-    tmp12Result = closure_7(View, tmp14);
+    closure_7(View, tmp14);
   } else {
-    size = { onClose: fn, height, width, changeLog: changelog };
-    tmp12Result = closure_7(ChangeLog, size);
+    const size = { onClose: fn, height, width, changeLog: changelog };
+    tmp11 = closure_7(ChangeLog, size);
   }
-  return tmp12Result;
+  return tmp11;
 });
-let closure_14 = tmp6;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  let obj3;
-  let onClose;
-  let tmp6;
-  let tmpResult;
-  let obj = react2;
-  const cResult = obj.c(2);
+let closure_14 = tmp4;
+ReactCompilerGating = fn(558);
+let obj6 = { color: nativeDefault.colors.TEXT_DEFAULT, fontSize: 14, lineHeight: 18, flex: 1 };
+size = fn(2);
+let result = size.fileFinishedImporting("components_native/ChangeLogModal.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { CHANGELOG: obj3 };
-    obj3 = {
+    const obj2 = { CHANGELOG: null };
+    const obj3 = {
       name: "CHANGELOG",
-      headerLeft: tmpResult.getHeaderCloseButton(hideChangeLog),
+      headerLeft: NavigatorHeader.getHeaderCloseButton(hideChangeLog),
       render() {
-          const obj = { onClose };
-          return closure_1_7(closure_1_14, obj);
+          return closure_1_7(closure_1_14, { onClose });
         }
     };
+    obj2.CHANGELOG = obj3;
     cResult[0] = obj2;
-    first = obj2;
-    tmpResult = NavigatorHeader2;
+    let first = obj2;
+    const tmpResult = NavigatorHeader;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const obj4 = { screens: first, initialRouteName: "CHANGELOG" };
-    const tmp8 = metroImportDefault(Navigator.Navigator, obj4);
+    const tmp8 = React5(Navigator.Navigator, obj4);
     cResult[1] = tmp8;
-    tmp6 = tmp8;
+    let tmp6 = tmp8;
   } else {
     tmp6 = cResult[1];
   }
   return tmp6;
 }) : (() => {
-  const screens = react.useMemo(() => {
-    let obj2;
-    let obj3;
-    let onClose;
-    let obj = { CHANGELOG: obj2 };
-    obj2 = {
+  const screens = noop.useMemo(() => {
+    const obj = { CHANGELOG: null };
+    const obj2 = {
       name: "CHANGELOG",
-      headerLeft: obj3.getHeaderCloseButton(hideChangeLog),
+      headerLeft: NavigatorHeader.getHeaderCloseButton(hideChangeLog),
       render() {
-        const obj = { onClose };
-        return closure_1_7(closure_1_14, obj);
+        return closure_1_7(closure_1_14, { onClose });
       }
     };
-    obj3 = NavigatorHeader2;
+    obj.CHANGELOG = obj2;
     return obj;
   }, []);
-  return metroImportDefault(Navigator.Navigator, { screens, initialRouteName: "CHANGELOG" });
+  return React5(Navigator.Navigator, { screens, initialRouteName: "CHANGELOG" });
 });
-size = size_mod;
-let result = size.fileFinishedImporting("components_native/ChangeLogModal.tsx");
-
-export default tmp7;
 export { ListItem };
-export const ChangeLogScreen = tmp6;
+export const ChangeLogScreen = tmp4;

@@ -6,13 +6,14 @@ import AVErrorContext from "AVErrorContext" /* 18074 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-let hasOwnProperty;
-let metroRequire;
+require = fn;
+const Constants = fn(1085);
 ({ InputModes: hasOwnProperty, RTCConnectionStates: metroRequire } = Constants);
-let obj = {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorNoAudioInputDetected.tsx");
+
+export const AVErrorNoAudioInputDetectedDefinition = {
   getActiveErrors(voiceState) {
     voiceState = voiceState.voiceState;
     const channel = ChannelStore.getChannel(voiceState.voiceChannelId);
@@ -30,15 +31,14 @@ let obj = {
     if (null != channel) {
       if (null != RTCConnectionStore.getMediaSessionId()) {
         if (!MediaEngineStore.getInputDetectedThisConnection()) {
-          if (RTCConnectionStore.getState() === metroRequire.RTC_CONNECTED) {
-            if (MediaEngineStore.getSettings().mode === hasOwnProperty.VOICE_ACTIVITY) {
+          if (RTCConnectionStore.getState() === constants2.RTC_CONNECTED) {
+            if (MediaEngineStore.getSettings().mode === constants.VOICE_ACTIVITY) {
               if (MediaEngineStore.getSettings().silenceWarning) {
                 if (false === MediaEngineStore.getInputDetected()) {
                   if (!isGuildStageVoiceResult) {
                     if (!MediaEngineStore.isSelfMute()) {
                       const obj = { type: AVError.AVError.NO_AUDIO_INPUT_DETECTED };
-                      const obj4 = AVErrorContext;
-                      const merged = Object.assign(obj4.getVoiceChannelErrorContext());
+                      const merged = Object.assign(AVErrorContext.getVoiceChannelErrorContext());
                       const items = [obj];
                       return items;
                     }
@@ -55,6 +55,3 @@ let obj = {
     return "" + mediaSessionId.mediaSessionId + ":" + mediaSessionId.audioInputDeviceName;
   }
 };
-const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorNoAudioInputDetected.tsx");
-
-export const AVErrorNoAudioInputDetectedDefinition = obj;

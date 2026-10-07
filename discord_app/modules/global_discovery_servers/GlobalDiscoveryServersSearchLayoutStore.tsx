@@ -1,28 +1,28 @@
 // === Module 13532: GlobalDiscoveryServersSearchLayoutStore ===
 
 // Module 13532 (GlobalDiscoveryServersSearchLayoutStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 13533 */;
 import GlobalDiscoveryServersSearchCountsStore from "GlobalDiscoveryServersSearchCountsStore" /* 13531 */;
-import GlobalDiscoveryServersSearchResultsStore from "GlobalDiscoveryServersSearchResultsStore" /* 13533 */;
-import size from "module_2" /* 2 */;
 
 function reset() {
   counts = [];
 }
+GlobalDiscoveryServersSearchResultsStoreDefault;
 let counts = [];
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class GlobalDiscoveryServersSearchLayoutStore extends Store {
-  initialize() {
-    this.waitFor(GlobalDiscoveryServersSearchCountsStore, GlobalDiscoveryServersSearchResultsStore);
-  }
-  getVisibleTabs() {
-    return counts;
-  }
 }
 const prototype = GlobalDiscoveryServersSearchLayoutStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(GlobalDiscoveryServersSearchCountsStore, GlobalDiscoveryServersSearchResultsStore);
+};
+prototype["getVisibleTabs"] = function getVisibleTabs() {
+  return counts;
+};
 GlobalDiscoveryServersSearchLayoutStore.displayName = "GlobalDiscoveryServersSearchLayoutStore";
-const obj = {
+const globalDiscoveryServersSearchLayoutStore = new GlobalDiscoveryServersSearchLayoutStore(DispatcherDefault, {
   CONNECTION_OPEN: reset,
   GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: reset,
   GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function handleGlobalDiscoveryServersSearchCountSuccess(query) {
@@ -31,8 +31,8 @@ const obj = {
       return false;
     }
   }
-};
-const globalDiscoveryServersSearchLayoutStore = new GlobalDiscoveryServersSearchLayoutStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersSearchLayoutStore.tsx");
 
 export default globalDiscoveryServersSearchLayoutStore;

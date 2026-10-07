@@ -6,7 +6,13 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/activities/utils/isPartyFull.tsx");
 
 export const isPartyFull = function isPartyFull(partySize) {
-  let maxPartySize;
   ({ partySize, maxPartySize } = partySize);
-  return partySize > -1 && maxPartySize > 0 && partySize >= maxPartySize;
+  let tmp = partySize > -1;
+  if (tmp) {
+    tmp = maxPartySize > 0;
+  }
+  if (tmp) {
+    tmp = partySize >= maxPartySize;
+  }
+  return tmp;
 };

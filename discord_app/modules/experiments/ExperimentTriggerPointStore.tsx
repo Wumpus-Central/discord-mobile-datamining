@@ -1,36 +1,36 @@
 // === Module 13516: ExperimentTriggerPointStore ===
 
 // Module 13516 (ExperimentTriggerPointStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import Dispatcher2 from "Dispatcher" /* 584 */;
 import ConnectionOpenTriggerPoint2 from "ConnectionOpenTriggerPoint" /* 13518 */;
 import ExperimentStore from "ExperimentStore" /* 4782 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import DebugExperiment from "DebugExperiment" /* 13517 */;
-import size from "module_2" /* 2 */;
 
 const Dispatcher = Dispatcher2;
 
+require = fn;
 function handleConnectionOpen() {
   const ConnectionOpenTriggerPoint = ConnectionOpenTriggerPoint2.ConnectionOpenTriggerPoint;
   ConnectionOpenTriggerPoint.trigger();
 }
-const Store = get_initializedDefault.Store;
+const DebugExperiment = fn(13517);
+const Store = initializeDefault.Store;
 class ExperimentTriggerPointStore extends Store {
   constructor() {
-    const obj = { CONNECTION_OPEN: handleConnectionOpen };
-    const tmp2 = Dispatcher;
-    const tmp3 = new tmp(tmp2, obj, Dispatcher2.DispatchBand.Early, handleConnectionOpen, new.target);
-    return tmp3;
-  }
-  initialize() {
-    this.waitFor(ExperimentStore, ApexExperimentStore);
+    tmp2 = closure_1(closure_2[5]);
+    obj = { CONNECTION_OPEN: handleConnectionOpen };
+    tmp1 = new tmp(tmp2, obj, closure_0(closure_2[5]).DispatchBand.Early, handleConnectionOpen, new.target);
+    return tmp1;
   }
 }
 const prototype = ExperimentTriggerPointStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(ExperimentStore, ApexExperimentStore);
+};
 ExperimentTriggerPointStore.displayName = "ExperimentTriggerPointStore";
 let obj = { CONNECTION_OPEN: handleConnectionOpen };
-const tmp4 = new "initialize"(Dispatcher, obj, Dispatcher2.DispatchBand.Early, prototype, ExperimentTriggerPointStore, "initialize", Dispatcher, obj);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/ExperimentTriggerPointStore.tsx");
 
-export default tmp4;
+export default new "initialize"(Dispatcher, obj, fn(584).DispatchBand.Early, prototype, ExperimentTriggerPointStore, "initialize", Dispatcher, obj);

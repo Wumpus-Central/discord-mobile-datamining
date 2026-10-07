@@ -1,16 +1,12 @@
 // === Module 8459: SKUPreview ===
 
 // Module 8459 (SKUPreview)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1085 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
 import useToken from "useToken" /* 4586 */;
 import ThemeAwareNitroWishlistingWumpusRive from "ThemeAwareNitroWishlistingWumpusRive" /* 4698 */;
-import CollectiblesItemRecord from "CollectiblesItemRecord" /* 7070 */;
 import useShopProductItems from "useShopProductItems" /* 7853 */;
 import WishlistItemCardBase from "WishlistItemCardBase" /* 8460 */;
 import BundleSampleV2Default from "BundleSampleV2" /* 8486 */;
@@ -19,33 +15,33 @@ import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8499 *
 import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8511 */;
 import NameplateCardPreviewDefault from "NameplateCardPreview" /* 8513 */;
 import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8514 */;
-import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-const View = react_native.View;
-let closure_5 = CollectiblesItemRecord.transformSKUToCollectiblesItem;
-const SKUProductLines = Constants.SKUProductLines;
-const jsx = Fragment.jsx;
+require = fn;
+const View = fn(17).View;
+let closure_5 = fn(7070).transformSKUToCollectiblesItem;
+const SKUProductLines = fn(1085).SKUProductLines;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_8 = createStyles.createStyles((width, height) => {
-  let items;
-  const obj = { container: { width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center" }, scaler: size, bundleContainer: { paddingTop: 20 }, socialLayerStorefrontContainer: { width, height }, profileFrameContainer: { padding: nativeDefault.space.PX_8 }, premiumRiveContainer: { width, height } };
-  size = { width: WishlistItemCardBase.DEFAULT_ITEM_SIZE, height: WishlistItemCardBase.DEFAULT_ITEM_SIZE, justifyContent: "center", alignItems: "center", transform: items };
-  items = [{ scaleX: width / WishlistItemCardBase.DEFAULT_ITEM_SIZE }, ];
-  ({ scaleX: width / WishlistItemCardBase.DEFAULT_ITEM_SIZE });
+  const obj = { container: { width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center" }, scaler: null, bundleContainer: null, socialLayerStorefrontContainer: null, profileFrameContainer: null, premiumRiveContainer: null };
+  size = { width: WishlistItemCardBase.DEFAULT_ITEM_SIZE, height: WishlistItemCardBase.DEFAULT_ITEM_SIZE, justifyContent: "center", alignItems: "center", transform: null };
+  const items = [{ scaleX: width / WishlistItemCardBase.DEFAULT_ITEM_SIZE }, ];
+  const obj2 = { scaleX: width / WishlistItemCardBase.DEFAULT_ITEM_SIZE };
   items[1] = { scaleY: height / WishlistItemCardBase.DEFAULT_ITEM_SIZE };
-  ({ scaleY: height / WishlistItemCardBase.DEFAULT_ITEM_SIZE });
-  ({ padding: nativeDefault.space.PX_8 });
+  size.transform = items;
+  obj.scaler = size;
+  obj.bundleContainer = { paddingTop: 20 };
+  obj.socialLayerStorefrontContainer = { width, height };
+  const obj3 = { scaleY: height / WishlistItemCardBase.DEFAULT_ITEM_SIZE };
+  obj.profileFrameContainer = { padding: nativeDefault.space.PX_8 };
+  obj.premiumRiveContainer = { width, height };
   return obj;
 });
-let size = { width: WishlistItemCardBase.DEFAULT_ITEM_SIZE, height: WishlistItemCardBase.DEFAULT_ITEM_SIZE };
-let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
-  let collectiblesItemData;
-  let size2;
-  const obj = react2;
-  const cResult = obj.c(53);
+let size = { width: fn(8460).DEFAULT_ITEM_SIZE, height: fn(8460).DEFAULT_ITEM_SIZE };
+let ReactCompilerGating = fn(558);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(53);
   ({ collectiblesItemData, size } = arg0);
   if (undefined === size) {
     size = WishlistItemCardBase.DEFAULT_ITEM_SIZE;
@@ -58,139 +54,137 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
     }
     cResult[0] = size;
     cResult[1] = tmp4;
-    size2 = tmp4;
+    let size2 = tmp4;
   } else {
     size2 = cResult[1];
   }
   const tmp5 = closure_8(size2.width, size2.height);
   if ("bundle" === collectiblesItemData.type) {
-    let tmp57;
     if (cResult[2] !== collectiblesItemData.items) {
-      const self = this;
-      const self2 = this;
       const itemsSortingHat = new useShopProductItems.ItemsSortingHat(collectiblesItemData.items);
       cResult[2] = collectiblesItemData.items;
       cResult[3] = itemsSortingHat;
-      tmp57 = itemsSortingHat;
+      let tmp57 = itemsSortingHat;
     } else {
       tmp57 = cResult[3];
     }
     if (cResult[4] === tmp5.bundleContainer) {
-      let tmp60;
       if (cResult[5] === tmp5.scaler) {
-        tmp60 = cResult[6];
+        let tmp62 = cResult[6];
       }
       if (cResult[7] === collectiblesItemData.previewAssets) {
         if (cResult[8] === tmp57.firstAvatarDecoration) {
           if (cResult[9] === tmp57.firstNameplate) {
-            let tmp61;
             if (cResult[10] === tmp57.firstProfileEffect) {
-              tmp61 = cResult[11];
+              let tmp63 = cResult[11];
             }
-            if (cResult[12] === tmp60) {
-              let tmp66;
-              if (cResult[13] === tmp61) {
-                tmp66 = cResult[14];
+            if (cResult[12] === tmp62) {
+              if (cResult[13] === tmp63) {
+                let tmp68 = cResult[14];
               }
               if (cResult[15] === tmp5.container) {
-                let tmp70;
-                if (cResult[16] === tmp66) {
-                  tmp70 = cResult[17];
+                if (cResult[16] === tmp68) {
+                  let tmp72 = cResult[17];
                 }
-                return tmp70;
+                return tmp72;
               }
-              const tmp73 = <View style={tmp5.container}>{tmp66}</View>;
+              const obj2 = { style: tmp5.container, children: tmp68 };
+              const tmp75 = <View style={tmp5.container}>{tmp68}</View>;
               cResult[15] = tmp5.container;
-              cResult[16] = tmp66;
-              cResult[17] = tmp73;
-              tmp70 = tmp73;
+              cResult[16] = tmp68;
+              cResult[17] = tmp75;
+              tmp72 = tmp75;
             }
-            const tmp69 = <View style={tmp60}>{tmp61}</View>;
-            cResult[12] = tmp60;
-            cResult[13] = tmp61;
-            cResult[14] = tmp69;
-            tmp66 = tmp69;
+            const obj3 = { style: tmp62, children: tmp63 };
+            const tmp71 = <View style={tmp62}>{tmp63}</View>;
+            cResult[12] = tmp62;
+            cResult[13] = tmp63;
+            cResult[14] = tmp71;
+            tmp68 = tmp71;
           }
         }
       }
+      const obj4 = { deco: null, pfx: null, nameplate: null, size: "small", previewAssets: null, disableStaticBackground: true, targetSize: null };
       ({ firstAvatarDecoration: obj14.deco, firstProfileEffect: obj14.pfx, firstNameplate: obj14.nameplate } = tmp57);
-      const tmp65 = jsx(BundleSampleV2Default, { deco: null, pfx: null, nameplate: null, size: "small", previewAssets: collectiblesItemData.previewAssets, disableStaticBackground: true, targetSize: size });
+      obj4.previewAssets = collectiblesItemData.previewAssets;
+      obj4.targetSize = size;
+      const tmp67 = jsx(BundleSampleV2Default, { deco: null, pfx: null, nameplate: null, size: "small", previewAssets: null, disableStaticBackground: true, targetSize: null });
       cResult[7] = collectiblesItemData.previewAssets;
       cResult[8] = tmp57.firstAvatarDecoration;
       cResult[9] = tmp57.firstNameplate;
       cResult[10] = tmp57.firstProfileEffect;
-      cResult[11] = tmp65;
-      tmp61 = tmp65;
+      cResult[11] = tmp67;
+      tmp63 = tmp67;
     }
     const items = [, ];
     ({ scaler: arr2[0], bundleContainer: arr2[1] } = tmp5);
     cResult[4] = tmp5.bundleContainer;
     cResult[5] = tmp5.scaler;
     cResult[6] = items;
-    tmp60 = items;
+    tmp62 = items;
   } else {
     const type = collectiblesItemData.item.type;
     if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
-      let tmp45;
       if (cResult[18] !== collectiblesItemData.item) {
+        const obj5 = { item: collectiblesItemData.item, size: 100 };
         const tmp48 = jsx(AvatarDecorationSampleV2Default, { item: collectiblesItemData.item, size: 100 });
         cResult[18] = collectiblesItemData.item;
         cResult[19] = tmp48;
-        tmp45 = tmp48;
+        let tmp45 = tmp48;
       } else {
         tmp45 = cResult[19];
       }
       if (cResult[20] === tmp5.scaler) {
-        let tmp49;
         if (cResult[21] === tmp45) {
-          tmp49 = cResult[22];
+          let tmp49 = cResult[22];
         }
         if (cResult[23] === tmp5.container) {
-          let tmp53;
           if (cResult[24] === tmp49) {
-            tmp53 = cResult[25];
+            let tmp53 = cResult[25];
           }
           return tmp53;
         }
+        const obj6 = { style: tmp5.container, children: tmp49 };
         const tmp56 = <View style={tmp5.container}>{tmp49}</View>;
         cResult[23] = tmp5.container;
         cResult[24] = tmp49;
         cResult[25] = tmp56;
         tmp53 = tmp56;
       }
+      const obj7 = { style: tmp5.scaler, children: tmp45 };
       const tmp52 = <View style={tmp5.scaler}>{tmp45}</View>;
       cResult[20] = tmp5.scaler;
       cResult[21] = tmp45;
       cResult[22] = tmp52;
       tmp49 = tmp52;
     } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
-      let tmp33;
       if (cResult[26] !== collectiblesItemData.item) {
+        const obj8 = { item: collectiblesItemData.item, hideBackground: true };
         const tmp36 = jsx(ProfileEffectSampleV2Default, { item: collectiblesItemData.item, hideBackground: true });
         cResult[26] = collectiblesItemData.item;
         cResult[27] = tmp36;
-        tmp33 = tmp36;
+        let tmp33 = tmp36;
       } else {
         tmp33 = cResult[27];
       }
       if (cResult[28] === tmp5.scaler) {
-        let tmp37;
         if (cResult[29] === tmp33) {
-          tmp37 = cResult[30];
+          let tmp37 = cResult[30];
         }
         if (cResult[31] === tmp5.container) {
-          let tmp41;
           if (cResult[32] === tmp37) {
-            tmp41 = cResult[33];
+            let tmp41 = cResult[33];
           }
           return tmp41;
         }
+        const obj9 = { style: tmp5.container, children: tmp37 };
         const tmp44 = <View style={tmp5.container}>{tmp37}</View>;
         cResult[31] = tmp5.container;
         cResult[32] = tmp37;
         cResult[33] = tmp44;
         tmp41 = tmp44;
       }
+      const obj10 = { style: tmp5.scaler, children: tmp33 };
       const tmp40 = <View style={tmp5.scaler}>{tmp33}</View>;
       cResult[28] = tmp5.scaler;
       cResult[29] = tmp33;
@@ -198,38 +192,36 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
       tmp37 = tmp40;
     } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
       if (cResult[34] === tmp5.profileFrameContainer) {
-        let tmp19;
-        let tmp20;
         if (cResult[35] === tmp5.scaler) {
-          tmp19 = cResult[36];
+          let tmp19 = cResult[36];
         }
         if (cResult[37] !== collectiblesItemData.item) {
-          ProfileFrameSamplePreviewDefault;
-          const tmp24 = <tmp23 profileFrame={collectiblesItemData.item} previewWidth={WishlistItemCardBase.DEFAULT_ITEM_SIZE - nativeDefault.space.PX_48} previewHeight={WishlistItemCardBase.DEFAULT_ITEM_SIZE} />;
+          const obj11 = { profileFrame: collectiblesItemData.item, previewWidth: WishlistItemCardBase.DEFAULT_ITEM_SIZE - nativeDefault.space.PX_48, previewHeight: WishlistItemCardBase.DEFAULT_ITEM_SIZE };
+          const tmp24 = jsx(ProfileFrameSamplePreviewDefault, { profileFrame: collectiblesItemData.item, previewWidth: WishlistItemCardBase.DEFAULT_ITEM_SIZE - nativeDefault.space.PX_48, previewHeight: WishlistItemCardBase.DEFAULT_ITEM_SIZE });
           cResult[37] = collectiblesItemData.item;
           cResult[38] = tmp24;
-          tmp20 = tmp24;
+          let tmp20 = tmp24;
         } else {
           tmp20 = cResult[38];
         }
         if (cResult[39] === tmp19) {
-          let tmp25;
           if (cResult[40] === tmp20) {
-            tmp25 = cResult[41];
+            let tmp25 = cResult[41];
           }
           if (cResult[42] === tmp5.container) {
-            let tmp29;
             if (cResult[43] === tmp25) {
-              tmp29 = cResult[44];
+              let tmp29 = cResult[44];
             }
             return tmp29;
           }
+          const obj12 = { style: tmp5.container, children: tmp25 };
           const tmp32 = <View style={tmp5.container}>{tmp25}</View>;
           cResult[42] = tmp5.container;
           cResult[43] = tmp25;
           cResult[44] = tmp32;
           tmp29 = tmp32;
         }
+        const obj13 = { style: tmp19, children: tmp20 };
         const tmp28 = <View style={tmp19}>{tmp20}</View>;
         cResult[39] = tmp19;
         cResult[40] = tmp20;
@@ -243,33 +235,33 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
       cResult[36] = items1;
       tmp19 = items1;
     } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
-      let tmp7;
       if (cResult[45] !== collectiblesItemData.item) {
+        const obj15 = { item: collectiblesItemData.item };
         const tmp10 = jsx(NameplateCardPreviewDefault, { item: collectiblesItemData.item });
         cResult[45] = collectiblesItemData.item;
         cResult[46] = tmp10;
-        tmp7 = tmp10;
+        let tmp7 = tmp10;
       } else {
         tmp7 = cResult[46];
       }
       if (cResult[47] === tmp5.scaler) {
-        let tmp11;
         if (cResult[48] === tmp7) {
-          tmp11 = cResult[49];
+          let tmp11 = cResult[49];
         }
         if (cResult[50] === tmp5.container) {
-          let tmp15;
           if (cResult[51] === tmp11) {
-            tmp15 = cResult[52];
+            let tmp15 = cResult[52];
           }
           return tmp15;
         }
+        const obj16 = { style: tmp5.container, children: tmp11 };
         const tmp18 = <View style={tmp5.container}>{tmp11}</View>;
         cResult[50] = tmp5.container;
         cResult[51] = tmp11;
         cResult[52] = tmp18;
         tmp15 = tmp18;
       }
+      const obj17 = { style: tmp5.scaler, children: tmp7 };
       const tmp14 = <View style={tmp5.scaler}>{tmp7}</View>;
       cResult[47] = tmp5.scaler;
       cResult[48] = tmp7;
@@ -279,8 +271,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
       return null;
     }
   }
-}) : (function(arg0) {
-  let collectiblesItemData;
+}) : ((arg0) => {
   ({ collectiblesItemData, size } = arg0);
   if (size === undefined) {
     size = WishlistItemCardBase.DEFAULT_ITEM_SIZE;
@@ -292,26 +283,51 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
   }
   const tmp3 = closure_8(size2.width, size2.height);
   if ("bundle" === collectiblesItemData.type) {
-    const self = this;
-    const self2 = this;
     const itemsSortingHat = new useShopProductItems.ItemsSortingHat(collectiblesItemData.items);
+    const obj2 = { style: tmp3.container, children: null };
+    const obj3 = { style: null, children: null };
     const items = [, ];
     ({ scaler: arr2[0], bundleContainer: arr2[1] } = tmp3);
+    obj3.style = items;
+    const obj4 = { deco: null, pfx: null, nameplate: null, size: "small", previewAssets: null, disableStaticBackground: true, targetSize: null };
     ({ firstAvatarDecoration: obj15.deco, firstProfileEffect: obj15.pfx, firstNameplate: obj15.nameplate } = itemsSortingHat);
+    obj4.previewAssets = collectiblesItemData.previewAssets;
+    obj4.targetSize = size;
+    obj3.children = jsx(BundleSampleV2Default, { deco: null, pfx: null, nameplate: null, size: "small", previewAssets: null, disableStaticBackground: true, targetSize: null });
+    obj2.children = <View style={null}>{null}</View>;
     return <View style={tmp3.container}>{null}</View>;
   } else {
     const type = collectiblesItemData.item.type;
     if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
+      const obj5 = { style: tmp3.container, children: null };
+      const obj6 = { style: tmp3.scaler, children: null };
+      const obj7 = { item: collectiblesItemData.item, size: 100 };
+      obj6.children = jsx(AvatarDecorationSampleV2Default, { item: collectiblesItemData.item, size: 100 });
+      obj5.children = <View style={tmp3.scaler}>{null}</View>;
       return <View style={tmp3.container}>{null}</View>;
     } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
+      const obj8 = { style: tmp3.container, children: null };
+      const obj9 = { style: tmp3.scaler, children: null };
+      const obj10 = { item: collectiblesItemData.item, hideBackground: true };
+      obj9.children = jsx(ProfileEffectSampleV2Default, { item: collectiblesItemData.item, hideBackground: true });
+      obj8.children = <View style={tmp3.scaler}>{null}</View>;
       return <View style={tmp3.container}>{null}</View>;
     } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
+      const obj11 = { style: tmp3.container, children: null };
+      const obj12 = { style: null, children: null };
       const items1 = [, ];
       ({ scaler: arr[0], profileFrameContainer: arr[1] } = tmp3);
-      ({ profileFrame: collectiblesItemData.item, previewWidth: WishlistItemCardBase.DEFAULT_ITEM_SIZE - nativeDefault.space.PX_48, previewHeight: WishlistItemCardBase.DEFAULT_ITEM_SIZE });
-      ProfileFrameSamplePreviewDefault;
+      obj12.style = items1;
+      const obj13 = { profileFrame: collectiblesItemData.item, previewWidth: WishlistItemCardBase.DEFAULT_ITEM_SIZE - nativeDefault.space.PX_48, previewHeight: WishlistItemCardBase.DEFAULT_ITEM_SIZE };
+      obj12.children = jsx(ProfileFrameSamplePreviewDefault, { profileFrame: collectiblesItemData.item, previewWidth: WishlistItemCardBase.DEFAULT_ITEM_SIZE - nativeDefault.space.PX_48, previewHeight: WishlistItemCardBase.DEFAULT_ITEM_SIZE });
+      obj11.children = <View style={null}>{null}</View>;
       return <View style={tmp3.container}>{null}</View>;
     } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
+      const obj = { style: tmp3.container, children: null };
+      const obj14 = { style: tmp3.scaler, children: null };
+      const obj16 = { item: collectiblesItemData.item };
+      obj14.children = jsx(NameplateCardPreviewDefault, { item: collectiblesItemData.item });
+      obj.children = <View style={tmp3.scaler}>{null}</View>;
       return <View style={tmp3.container}>{null}</View>;
     } else {
       return null;
@@ -319,12 +335,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
   }
 });
 let closure_10 = tmp2;
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let sku;
-  let tmp4;
-  const obj = react2;
-  const cResult = obj.c(5);
+  const cResult = c.c(5);
   ({ sku, size } = arg0);
   if (undefined === size) {
     size = WishlistItemCardBase.DEFAULT_ITEM_SIZE;
@@ -333,26 +346,21 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const tmp6 = closure_5(sku);
     cResult[0] = sku;
     cResult[1] = tmp6;
-    tmp4 = tmp6;
+    let tmp4 = tmp6;
   } else {
     tmp4 = cResult[1];
   }
-  let tmp7 = null;
-  if (null != tmp4) {
+  if (null == tmp4) {
+    return null;
+  } else {
     if (cResult[2] === tmp4) {
-      let tmp8;
-      if (cResult[3] === size) {
-        tmp8 = cResult[4];
-      }
-      tmp7 = tmp8;
     }
-    const tmp11 = <closure_10 collectiblesItemData={tmp4} size={size} />;
+    const obj2 = { collectiblesItemData: tmp4, size };
+    const tmp10 = <closure_10 collectiblesItemData={tmp4} size={size} />;
     cResult[2] = tmp4;
     cResult[3] = size;
-    cResult[4] = tmp11;
-    tmp8 = tmp11;
+    cResult[4] = tmp10;
   }
-  return tmp7;
 }) : ((sku) => {
   sku = sku.sku;
   let DEFAULT_ITEM_SIZE = sku.size;
@@ -360,19 +368,17 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     DEFAULT_ITEM_SIZE = sku(8460).DEFAULT_ITEM_SIZE;
   }
   const items = [sku];
-  const memo = react.useMemo(() => closure_5(sku), items);
+  const memo = noop.useMemo(() => closure_5(sku), items);
   let tmp4 = null;
   if (null != memo) {
+    const obj = { collectiblesItemData: memo, size: DEFAULT_ITEM_SIZE };
     tmp4 = <closure_10 collectiblesItemData={memo} size={DEFAULT_ITEM_SIZE} />;
   }
   return tmp4;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let size2;
-  let sku;
-  const obj = react2;
-  const cResult = obj.c(5);
+  const cResult = c.c(5);
   ({ sku, size } = arg0);
   if (undefined === size) {
     size = WishlistItemCardBase.DEFAULT_ITEM_SIZE;
@@ -385,15 +391,14 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     cResult[0] = size;
     cResult[1] = tmp4;
-    size2 = tmp4;
+    let size2 = tmp4;
   } else {
     size2 = cResult[1];
   }
   const tmp5 = closure_8(size2.width, size2.height);
   if (cResult[2] === sku) {
-    let tmp6;
     if (cResult[3] === tmp5.socialLayerStorefrontContainer) {
-      tmp6 = cResult[4];
+      let tmp6 = cResult[4];
     }
     return tmp6;
   }
@@ -402,9 +407,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = tmp5.socialLayerStorefrontContainer;
   cResult[4] = tmp7;
   tmp6 = tmp7;
+  const obj2 = { sku, containerStyle: tmp5.socialLayerStorefrontContainer };
 }) : ((size) => {
   let DEFAULT_ITEM_SIZE = size.size;
-  const sku = size.sku;
   if (DEFAULT_ITEM_SIZE === undefined) {
     DEFAULT_ITEM_SIZE = WishlistItemCardBase.DEFAULT_ITEM_SIZE;
   }
@@ -413,14 +418,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const size1 = { width: DEFAULT_ITEM_SIZE, height: DEFAULT_ITEM_SIZE };
     size = size1;
   }
-  return jsx(SlayerStorefrontItemCardDefault, { sku, containerStyle: closure_8(size.width, size.height).socialLayerStorefrontContainer });
+  const tmp3 = closure_8(size.width, size.height);
+  return jsx(SlayerStorefrontItemCardDefault, { sku: size.sku, containerStyle: closure_8(size.width, size.height).socialLayerStorefrontContainer });
 });
 let closure_12 = tmp3;
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((size) => {
-  let tmp7;
-  const obj = react2;
-  const cResult = obj.c(7);
+  const cResult = c.c(7);
   let DEFAULT_ITEM_SIZE = size.size;
   if (undefined === DEFAULT_ITEM_SIZE) {
     DEFAULT_ITEM_SIZE = WishlistItemCardBase.DEFAULT_ITEM_SIZE;
@@ -438,21 +442,21 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((size) => {
     size = cResult[1];
   }
   const tmp5 = closure_8(size.width, size.height);
-  const tmpResult = useToken;
-  const token = tmpResult.useToken(nativeDefault.colors.TEXT_DEFAULT);
+  const token = useToken.useToken(nativeDefault.colors.TEXT_DEFAULT);
   if (cResult[2] !== token) {
+    const obj2 = { dataBinding: null };
     const obj3 = { logoColor: token };
-    const tmp9 = jsx(ThemeAwareNitroWishlistingWumpusRive.ThemeAwareNitroWishlistingWumpusRive, { dataBinding: obj3 });
+    obj2.dataBinding = obj3;
+    const tmp9 = jsx(ThemeAwareNitroWishlistingWumpusRive.ThemeAwareNitroWishlistingWumpusRive, { dataBinding: null });
     cResult[2] = token;
     cResult[3] = tmp9;
-    tmp7 = tmp9;
+    let tmp7 = tmp9;
   } else {
     tmp7 = cResult[3];
   }
   if (cResult[4] === tmp5.premiumRiveContainer) {
-    let tmp10;
     if (cResult[5] === tmp7) {
-      tmp10 = cResult[6];
+      let tmp10 = cResult[6];
     }
     return tmp10;
   }
@@ -461,6 +465,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((size) => {
   cResult[5] = tmp7;
   cResult[6] = tmp11;
   tmp10 = tmp11;
+  const obj4 = { style: tmp5.premiumRiveContainer, children: tmp7 };
+  const tmpResult = useToken;
 }) : ((size) => {
   let DEFAULT_ITEM_SIZE = size.size;
   if (DEFAULT_ITEM_SIZE === undefined) {
@@ -472,16 +478,18 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((size) => {
     size = size1;
   }
   const tmp3 = closure_8(size.width, size.height);
-  const obj = useToken;
-  const token = obj.useToken(nativeDefault.colors.TEXT_DEFAULT);
+  const obj2 = { style: tmp3.premiumRiveContainer, children: null };
+  const token = useToken.useToken(nativeDefault.colors.TEXT_DEFAULT);
+  obj2.children = jsx(ThemeAwareNitroWishlistingWumpusRive.ThemeAwareNitroWishlistingWumpusRive, { dataBinding: { logoColor: token } });
   return <View style={tmp3.premiumRiveContainer}>{null}</View>;
 });
 let closure_13 = tmp4;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let sku;
-  const obj = react2;
-  const cResult = obj.c(8);
+ReactCompilerGating = fn(558);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/skus/native/SKUPreview.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(8);
   ({ sku, size } = arg0);
   if (undefined === size) {
     size = WishlistItemCardBase.DEFAULT_ITEM_SIZE;
@@ -489,12 +497,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const productLine = sku.productLine;
   if (SKUProductLines.COLLECTIBLES === productLine) {
     if (cResult[0] === size) {
-      let tmp15;
       if (cResult[1] === sku) {
-        tmp15 = cResult[2];
+        let tmp15 = cResult[2];
       }
       return tmp15;
     }
+    const obj2 = { sku, size };
     const tmp18 = <closure_11 sku={sku} size={size} />;
     cResult[0] = size;
     cResult[1] = sku;
@@ -502,24 +510,24 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp15 = tmp18;
   } else if (SKUProductLines.SOCIAL_LAYER_GAME_ITEM === productLine) {
     if (cResult[3] === size) {
-      let tmp11;
       if (cResult[4] === sku) {
-        tmp11 = cResult[5];
+        let tmp11 = cResult[5];
       }
       return tmp11;
     }
+    const obj3 = { sku, size };
     const tmp14 = <closure_12 sku={sku} size={size} />;
     cResult[3] = size;
     cResult[4] = sku;
     cResult[5] = tmp14;
     tmp11 = tmp14;
   } else if (SKUProductLines.PREMIUM === productLine) {
-    let tmp7;
     if (cResult[6] !== size) {
+      const obj4 = { size };
       const tmp10 = <closure_13 size={size} />;
       cResult[6] = size;
       cResult[7] = tmp10;
-      tmp7 = tmp10;
+      let tmp7 = tmp10;
     } else {
       tmp7 = cResult[7];
     }
@@ -529,8 +537,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (SKUProductLines.BOOST !== productLine) {
         if (SKUProductLines.GUILD_ROLE !== productLine) {
           if (SKUProductLines.GUILD_PRODUCT !== productLine) {
+            GlobalUtils.assertNever(sku.productLine);
             const tmpResult = GlobalUtils;
-            tmpResult.assertNever(sku.productLine);
           }
         }
       }
@@ -538,25 +546,26 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return null;
   }
 }) : ((arg0) => {
-  let sku;
   ({ sku, size } = arg0);
   if (size === undefined) {
     size = WishlistItemCardBase.DEFAULT_ITEM_SIZE;
   }
   const productLine = sku.productLine;
   if (SKUProductLines.COLLECTIBLES === productLine) {
+    const obj2 = { sku, size };
     return <closure_11 sku={sku} size={size} />;
   } else if (SKUProductLines.SOCIAL_LAYER_GAME_ITEM === productLine) {
+    const obj3 = { sku, size };
     return <closure_12 sku={sku} size={size} />;
   } else if (SKUProductLines.PREMIUM === productLine) {
+    const obj4 = { size };
     return <closure_13 size={size} />;
   } else {
     if (SKUProductLines.APPLICATION !== productLine) {
       if (SKUProductLines.BOOST !== productLine) {
         if (SKUProductLines.GUILD_ROLE !== productLine) {
           if (SKUProductLines.GUILD_PRODUCT !== productLine) {
-            const obj = GlobalUtils;
-            obj.assertNever(sku.productLine);
+            GlobalUtils.assertNever(sku.productLine);
           }
         }
       }
@@ -564,10 +573,6 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return null;
   }
 });
-size = size_mod;
-const result = size.fileFinishedImporting("modules/skus/native/SKUPreview.tsx");
-
-export default tmp5;
 export const CollectiblesPreview = tmp2;
 export const SocialLayerStorefrontSKUPreview = tmp3;
 export const PremiumSKUPreview = tmp4;

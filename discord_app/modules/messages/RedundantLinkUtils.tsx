@@ -32,30 +32,28 @@ export const hasOnlySimpleEmbed = function hasOnlySimpleEmbed(embeds) {
     const first = embeds[0];
     let hasItem = SIMPLE_EMBED_TYPES.has(first.type);
     if (hasItem) {
-      const obj = EmbedUtils;
-      hasItem = obj.isEmbedInline(first);
+      hasItem = EmbedUtils.isEmbedInline(first);
     }
     return hasItem;
   }
 };
 export const isSingleLinkContent = function isSingleLinkContent(contentLinks) {
-  const onlyLinks = contentLinks.onlyLinks && 1 === tmp;
+  let onlyLinks = contentLinks.onlyLinks;
+  if (onlyLinks) {
+    onlyLinks = 1 === tmp;
+  }
   return onlyLinks;
 };
 export const isRedundantLink = function isRedundantLink(target, arg1) {
-  let onlyLinkContent;
-  let stripGameServerShareLinks;
   ({ onlyLinkContent, stripGameServerShareLinks } = arg1);
   let tmp = !onlyLinkContent;
   if (onlyLinkContent) {
-    const obj = findCodedLinks;
-    tmp = null == obj.parseQuestsEmbedCode(target);
+    tmp = null == findCodedLinks.parseQuestsEmbedCode(target);
   }
   let tmp5 = !tmp;
   if (tmp) {
     if (stripGameServerShareLinks) {
-      const obj2 = findCodedLinks;
-      stripGameServerShareLinks = null != obj2.parseGameServerShareCode(target);
+      stripGameServerShareLinks = null != findCodedLinks.parseGameServerShareCode(target);
     }
     tmp5 = stripGameServerShareLinks;
   }

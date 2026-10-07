@@ -1,68 +1,52 @@
 // === Module 14889: usePopularOrbShopProducts ===
 
 // Module 14889 (usePopularOrbShopProducts)
-import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
-import size from "module_2" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let c5, closure_3;
-
-let react = react_mod;
-let constants = CollectiblesShopConstants.CollectiblesMobileShopScreen;
+const require = fn;
+let constants = fn(1087).CollectiblesMobileShopScreen;
 let closure_6 = 10 * DurationsDefault.Millis.SECOND;
 let closure_7 = 10 * DurationsDefault.Millis.SECOND;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/hooks/usePopularOrbShopProducts.tsx");
 
 export const MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL = 3;
 export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enabled) {
-  let closure_4;
-  let closure_5;
-  let tmp18;
-  let tmp6;
-  let tmp7;
   enabled = enabled.enabled;
   let first1;
-  react = undefined;
+  noop = undefined;
   let POPULARITY;
   let collectiblesShopProducts;
   let filteredAndSortedProducts;
-  let obj = react;
-  const sortType = enabled.sortType;
-  let tmp = first1(react.useState([]), 2);
+  let tmp = first1(noop.useState([]), 2);
   const first = tmp[0];
-  let closure_2 = tmp[1];
-  const tmp2 = first1(react.useState(false), 2);
+  closure_2 = tmp[1];
+  const tmp2 = first1(noop.useState(false), 2);
   first1 = tmp2[0];
-  react = tmp2[1];
-  const tmp4 = first1(react.useState(false), 2);
+  noop = tmp2[1];
+  const tmp4 = first1(noop.useState(false), 2);
   constants = tmp4[1];
-  const first2 = tmp4[0];
-  if ("recency" === sortType) {
+  if ("recency" === enabled.sortType) {
     POPULARITY = enabled(first[5]).CollectibleSearchSortType.RECENCY;
-    tmp7 = first;
-    tmp6 = enabled;
+    let tmp6 = first;
+    let tmp5 = enabled;
   } else {
-    tmp6 = enabled;
-    tmp7 = first;
+    tmp5 = enabled;
+    tmp6 = first;
     POPULARITY = enabled(first[5]).CollectibleSearchSortType.POPULARITY;
   }
   const items = [enabled, POPULARITY];
   const effect = obj.useEffect(() => {
-    let _true;
-    function fetchSearchResults() {
-      return obj(...arguments);
-    }
-    let obj = function _fetchSearchResults() {
-      let timeout;
-      obj = _asyncToGenerator(async () => {
-        let sort_type;
+    closure_1 = function _fetchSearchResults() {
+      const self = this;
+      const tmp = asyncGeneratorStep(async () => {
         if (sort_type === 2) {
           sort_type = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
+        } else if (tmp7 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
@@ -72,9 +56,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
             return { value: "IconComponent", done: null };
           }
         } else {
-          let v0;
           try {
-            let skus;
             sort_type = 2;
             if (0 === c5) {
               if (arg0 === 1) {
@@ -85,30 +67,27 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                let closure_1 = tmp4;
-                skus = undefined;
-                v0 = 2;
-                const obj4 = { item_types: [], colors: [], themes: [], orbs_eligible: true, currency: _true(closure_2_1[7]).CollectibleSearchCurrencyFilter.ORBS, offset: 0, limit: 10, sort_type, sort_direction: _true(closure_2_1[8]).CollectibleSearchSortDirection.DESC };
-                const search = _true(closure_2_1[6]).search;
-                const tmp39 = _true(closure_2_1[6]);
-                const obj5 = { timeout };
+                closure_1 = tmp8;
+                closure_129_0 = undefined;
+                let v0 = 2;
+                const obj4 = { item_types: [], colors: [], themes: [], orbs_eligible: true, currency: _true(14891).CollectibleSearchCurrencyFilter.ORBS, offset: 0, limit: 10, sort_type, sort_direction: _true(1091).CollectibleSearchSortDirection.DESC };
+                const obj6 = { timeout };
                 c5 = 3;
                 sort_type = 1;
-                const obj6 = { value: search(obj4, obj5), done: false };
-                return obj6;
+                const obj7 = { value: _true(14890).search(obj4, obj6), done: false };
+                return obj7;
               }
-            } else if (1 === c5) {
+            } else if (1 === tmp8) {
               v0 = 0;
-              const tmp25 = closure_3;
               if (!closure_130_0) {
                 v0(true);
               }
-              throw tmp25;
+              throw closure_3;
             } else {
-              if (2 === c5) {
+              if (2 === tmp8) {
                 v0 = 1;
                 if (!closure_130_0) {
-                  tmp([]);
+                  tmp4([]);
                 }
               } else if (arg0 === 1) {
                 sort_type = 3;
@@ -119,13 +98,17 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                   v0(true);
                 }
                 sort_type = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               } else {
-                skus = value;
+                closure_129_0 = value;
                 if (!closure_130_0) {
-                  skus = skus.skus ?? [];
-                  tmp(skus);
+                  const skus = closure_129_0.skus;
+                  closure_0 = skus;
+                  if (skus == null) {
+                    closure_0 = [];
+                  }
+                  tmp4(closure_0);
                 }
                 v0 = 1;
               }
@@ -136,40 +119,52 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
               sort_type = 3;
               return { value: "IconComponent", done: null };
             }
-          } catch (tmp30) {
-            closure_3 = tmp30;
-            if (0 === v0) {
-              sort_type = 3;
-              throw tmp30;
-            } else if (1 === tmp32) {
-              c5 = 1;
+          } catch (tmp34) {
+            closure_3 = tmp34;
+            if (tmp5 === v0) {
+              sort_type = tmp3;
+              throw tmp34;
+            } else if (tmp2 === tmp36) {
+              c5 = tmp2;
             } else {
-              c5 = 2;
+              c5 = tmp;
             }
           }
         }
       });
-      return obj(...arguments);
+      dependencyMap = tmp;
+      const apply = tmp.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     };
-    const tmp = c0;
-    if (tmp) {
+    if (c0) {
       c0 = false;
       closure_4(false);
-      fetchSearchResults();
+      (function fetchSearchResults() {
+        const self = this;
+        const apply = closure_1.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      })();
       return () => {
-        let c0 = true;
+        c0 = true;
       };
     } else {
-      const tmp3 = closure_2([]);
+      closure_2([]);
       closure_4(false);
     }
   }, items);
   const items1 = [enabled, first1, first];
   const effect1 = obj.useEffect(() => {
-    let closure_0;
-    let timeout;
-    const tmp = timeout;
-    if (tmp) {
+    if (timeout) {
       if (first1) {
         closure_5(false);
         const _setTimeout = setTimeout;
@@ -179,8 +174,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
     }
     closure_5(false);
   }, items1);
-  const tmp6Result = tmp6(tmp7[9]);
-  collectiblesShopProducts = tmp6Result.useCollectiblesShopProducts(first, { needsCategory: false, flattenVariants: true });
+  collectiblesShopProducts = tmp5(tmp6[9]).useCollectiblesShopProducts(first, { needsCategory: false, flattenVariants: true });
   const items2 = [first, collectiblesShopProducts];
   const memo = obj.useMemo(() => {
     const mapped = first.map((item) => {
@@ -193,38 +187,39 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
     return mapped.filter((item) => null != item);
   }, items2);
   const someResult = first.some((item) => {
-    let state;
+    state = undefined;
     if (collectiblesShopProducts[item] != null) {
       state = tmp.state;
     }
     return "loading" === state;
   });
-  let obj2 = { products: memo, screen: constants.ORBS, bypassAndroidUnsyncedFilter: true };
-  const tmp6Result2 = tmp6(tmp7[10]);
-  filteredAndSortedProducts = tmp6Result2.useFilteredAndSortedProducts(obj2);
+  const tmp5Result = tmp5(tmp6[9]);
+  filteredAndSortedProducts = tmp5(tmp6[10]).useFilteredAndSortedProducts({ products: memo, screen: constants.ORBS, bypassAndroidUnsyncedFilter: true });
   const items3 = [filteredAndSortedProducts];
   const memo1 = obj.useMemo(() => filteredAndSortedProducts.slice(0, 10), items3);
-  let tmp16 = first1;
-  if (tmp16) {
-    tmp16 = first.length >= 3;
+  let tmp15 = first1;
+  if (first1) {
+    tmp15 = first.length >= 3;
   }
-  let obj3 = { products: memo1, isSearchingSkuIds: tmp18, isLoadingProducts: someResult, showPlaceholderCarousel: enabled };
-  tmp18 = enabled;
-  const tmp17 = memo1.length >= 3;
+  let obj3 = { products: memo1, isSearchingSkuIds: null, isLoadingProducts: null, showPlaceholderCarousel: null };
+  let tmp17 = enabled;
   if (enabled) {
-    tmp18 = !first1;
+    tmp17 = !first1;
+  }
+  obj3.isSearchingSkuIds = tmp17;
+  obj3.isLoadingProducts = someResult;
+  if (enabled) {
+    enabled = tmp15;
   }
   if (enabled) {
-    enabled = tmp16;
-  }
-  if (enabled) {
-    enabled = !tmp17;
+    enabled = !tmp16;
   }
   if (enabled) {
     enabled = someResult;
   }
   if (enabled) {
-    enabled = !first2;
+    enabled = !tmp4[0];
   }
+  obj3.showPlaceholderCarousel = enabled;
   return obj3;
 };

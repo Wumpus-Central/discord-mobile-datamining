@@ -8,12 +8,11 @@ const items = [, , , ];
 ({ DISCORD_EMPLOYEE_ASKED_ME_TO: arr[0], SOMEONE_ASKED_ME_TO: arr[1], NEW_EMAIL: arr[2], SOMETHING_ELSE: arr[3] } = obj);
 const items1 = [, ];
 ({ DISCORD_EMPLOYEE_ASKED_ME_TO: arr2[0], SOMEONE_ASKED_ME_TO: arr2[1] } = obj);
-const set = new Set(items1);
 const result = size.fileFinishedImporting("modules/verification/VerificationConstants.tsx");
 
 export const ChangeEmailReasons = obj;
 export const CHANGE_EMAIL_REASONS_ORDER = items;
-export const SUSPICIOUS_CHANGE_EMAIL_REASONS = set;
+export const SUSPICIOUS_CHANGE_EMAIL_REASONS = new Set(items1);
 export const COMMON_SCAMS_EDUCATION_HC_ARTICLE = "https://discord.com/safety/understanding-and-avoiding-common-scams";
 export const FREE_TEXT_RESPONSE_MAX_LENGTH = 1024;
 export const VERIFICATION_LAYER_KEY = "verification";

@@ -1,75 +1,62 @@
 // === Module 10673: useNavigatorBackHandler ===
 
 // Module 10673 (useNavigatorBackHandler)
-import react_mod from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let navigation;
-
-let react = react_mod;
+const require = fn;
 let closure_3 = {};
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_2;
-  let onBeforeGoBack;
-  let tmp6;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Navigator/native/useNavigatorBackHandler.native.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let tmp = arg0;
-  let obj = onBeforeGoBack(navigation[2]);
-  const cResult = obj.c(8);
-  const tmp2 = onBeforeGoBack;
-  const tmp3 = navigation;
+  const cResult = onBeforeGoBack(navigation[2]).c(8);
   if (undefined === arg0) {
     tmp = closure_3;
   }
   onBeforeGoBack = tmp.onBeforeGoBack;
-  const tmp2Result = tmp2(tmp3[3]);
-  navigation = tmp2Result.useNavigation();
-  const obj3 = react;
-  react = react.useRef(true);
+  let obj = onBeforeGoBack(navigation[2]);
+  navigation = onBeforeGoBack(navigation[3]).useNavigation();
+  noop = noop.useRef(true);
   if (cResult[0] !== navigation) {
     const fn = function o(arg0) {
-      const tmp = undefined !== arg0 && arg0;
-      closure_2.current = tmp;
+      closure_2.current = undefined !== arg0 && arg0;
       navigation.goBack();
     };
     cResult[0] = navigation;
     cResult[1] = fn;
-    tmp6 = fn;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[1];
   }
   if (cResult[2] === navigation) {
-    let tmp7;
-    let tmp8;
-    let tmp10;
     if (cResult[3] === onBeforeGoBack) {
-      tmp7 = cResult[4];
-      tmp8 = cResult[5];
+      let tmp7 = cResult[4];
+      let tmp8 = cResult[5];
     }
-    const effect = obj3.useEffect(tmp7, tmp8);
+    const effect = noop.useEffect(tmp7, tmp8);
     if (cResult[6] !== tmp6) {
       let obj2 = { onGoBack: tmp6 };
       cResult[6] = tmp6;
       cResult[7] = obj2;
-      tmp10 = obj2;
+      let tmp10 = obj2;
     } else {
       tmp10 = cResult[7];
     }
     return tmp10;
   }
   const fn2 = function s() {
-    let ref;
     return navigation.addListener("beforeRemove", (data) => {
       if (ref.current) {
         let isIOSResult = "POP" === data.data.action.type;
         if (isIOSResult) {
+          isIOSResult = onBeforeGoBack(navigation[4]).isIOS();
           const obj = onBeforeGoBack(navigation[4]);
-          isIOSResult = obj.isIOS();
         }
         if (data != null) {
-          let obj2;
           if (isIOSResult) {
-            obj2 = { preventable: false };
+            let obj2 = { preventable: false };
           } else {
             obj2 = {
               preventable: true,
@@ -94,20 +81,18 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp8 = items;
   tmp7 = fn2;
 }) : (() => {
-  let closure_2;
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = closure_3;
   }
   const onBeforeGoBack = tmp.onBeforeGoBack;
-  navigation = undefined;
-  react = undefined;
-  let obj = onBeforeGoBack(navigation[3]);
-  navigation = obj.useNavigation();
-  react = react.useRef(true);
+  let navigation;
+  noop = undefined;
+  navigation = onBeforeGoBack(navigation[3]).useNavigation();
+  noop = noop.useRef(true);
   const items = [navigation];
   const items1 = [navigation, onBeforeGoBack];
-  const onGoBack = react.useCallback(() => {
+  const onGoBack = noop.useCallback(() => {
     let flag = arg0;
     if (arg0 === undefined) {
       flag = false;
@@ -115,37 +100,30 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     closure_2.current = flag;
     navigation.goBack();
   }, items);
-  const effect = react.useEffect(() => {
-    let ref;
-    return navigation.addListener("beforeRemove", (data) => {
-      if (ref.current) {
-        let isIOSResult = "POP" === data.data.action.type;
-        if (isIOSResult) {
-          const obj = onBeforeGoBack(navigation[4]);
-          isIOSResult = obj.isIOS();
-        }
-        if (data != null) {
-          let obj2;
-          if (isIOSResult) {
-            obj2 = { preventable: false };
-          } else {
-            obj2 = {
-              preventable: true,
-              preventDefault() {
-                      return data.preventDefault();
-                    },
-              goBack() {
-                      return navigation.goBack();
-                    }
-            };
-          }
-          tmp4(obj2);
-        }
+  const effect = noop.useEffect(() => navigation.addListener("beforeRemove", (data) => {
+    if (ref.current) {
+      let isIOSResult = "POP" === data.data.action.type;
+      if (isIOSResult) {
+        isIOSResult = onBeforeGoBack(navigation[4]).isIOS();
+        const obj = onBeforeGoBack(navigation[4]);
       }
-    });
-  }, items1);
+      if (data != null) {
+        if (isIOSResult) {
+          let obj2 = { preventable: false };
+        } else {
+          obj2 = {
+            preventable: true,
+            preventDefault() {
+                    return data.preventDefault();
+                  },
+            goBack() {
+                    return navigation.goBack();
+                  }
+          };
+        }
+        tmp4(obj2);
+      }
+    }
+  }), items1);
   return { onGoBack };
 });
-const result = size.fileFinishedImporting("design/components/Navigator/native/useNavigatorBackHandler.native.tsx");
-
-export default tmp2;

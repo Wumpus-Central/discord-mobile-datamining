@@ -6,8 +6,9 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import VoiceStateStore from "VoiceStateStore" /* 4915 */;
-import size from "module_2" /* 2 */;
 
+require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/isVoiceEmbeddedActivity.tsx");
 
 export default function isVoiceEmbeddedActivity(arg0) {

@@ -7,17 +7,11 @@ import MemberVerificationTypes from "MemberVerificationTypes" /* 4708 */;
 import MemberVerificationConstants from "MemberVerificationConstants" /* 5850 */;
 import size from "module_2" /* 2 */;
 
-let has;
-
-let c2;
-let c3;
 ({ AUTOMATIC_APPROVAL_FORM_FIELDS: c2, MANUAL_APPROVAL_FORM_FIELDS: c3 } = MemberVerificationConstants);
 const GuildFeatures = Constants.GuildFeatures;
 const result = size.fileFinishedImporting("modules/guild_member_verification/MemberVerificationUtils.tsx");
 
 export const isValidFormResponse = function isValidFormResponse(required) {
-  let field_type;
-  let response;
   ({ response, field_type } = required);
   if (required.required) {
     if (null == response) {
@@ -30,8 +24,7 @@ export const isValidFormResponse = function isValidFormResponse(required) {
               if (MemberVerificationTypes.VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
                 return typeof response === "number";
               } else {
-                const tmp4Result = GlobalUtils;
-                return tmp4Result.assertNever(field_type);
+                return GlobalUtils.assertNever(field_type);
               }
             }
           }
@@ -54,19 +47,17 @@ export const removeInternalFields = function removeInternalFields(arr) {
 };
 export const isAutomaticApprovalFormField = function isAutomaticApprovalFormField(field_type) {
   field_type = undefined;
-  has = has.has;
   if (field_type != null) {
     field_type = field_type.field_type;
   }
-  return has(field_type);
+  return set.has(field_type);
 };
 export const isManualApprovalFormField = function isManualApprovalFormField(field_type) {
   field_type = undefined;
-  has = has2.has;
   if (field_type != null) {
     field_type = field_type.field_type;
   }
-  return has(field_type);
+  return set2.has(field_type);
 };
 export const guildHasVerificationGate = function guildHasVerificationGate(guild) {
   let hasItem = null != guild;

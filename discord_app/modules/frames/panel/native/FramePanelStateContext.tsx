@@ -1,11 +1,10 @@
 // === Module 17223: FramePanelStateContext ===
 
 // Module 17223 (FramePanelStateContext)
-import ActivityPanelStateContext from "ActivityPanelStateContext" /* 17197 */;
-import react from "react" /* 19 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-const context = react.createContext(ActivityPanelStateContext.activityPanelStateContextDefault);
+const context = noop.createContext(fn(17197).activityPanelStateContextDefault);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelStateContext.tsx");
 
 export default context;

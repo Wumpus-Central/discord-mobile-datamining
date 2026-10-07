@@ -1,134 +1,115 @@
 // === Module 11754: AppLauncherGlobalSearchOnboardingBanner ===
 
 // Module 11754 (AppLauncherGlobalSearchOnboardingBanner)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1489 */;
-import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import AppsIcon2 from "AppsIcon" /* 5897 */;
-import react from "react" /* 19 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import AppsIcon from "AppsIcon" /* 5897 */;
+import noop from "module_19" /* 19 */;
 
-let dependencyMap, markAsDismissed;
+require = fn;
+const View = fn(17).View;
+const DEFAULT_CONTENT_PADDING = fn(1489).DEFAULT_CONTENT_PADDING;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { appsIcon: null, appsIconImage: null };
+let size = { height: 40, width: 40, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
+obj2.appsIcon = size;
+let size1 = { height: 24, width: 24, tintColor: nativeDefault.unsafe_rawColors.WHITE };
+obj2.appsIconImage = size1;
+let closure_8 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppLauncherGlobalSearchOnboardingBanner.tsx");
 
-let size;
-let size1;
-const View = react_native.View;
-const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
-const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
-const jsx = Fragment.jsx;
-let createStyles = createStyles_mod;
-let obj = { appsIcon: size, appsIconImage: size1 };
-size = { height: 40, width: 40, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
-createStyles = createStyles.createStyles;
-size1 = { height: 24, width: 24, tintColor: nativeDefault.unsafe_rawColors.WHITE };
-let closure_8 = createStyles(obj);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => {
-  let appsIconImage;
-  let obj = markAsDismissed(576);
-  const cResult = obj.c(21);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => {
+  let Coachmark = markAsDismissed;
+  let tmp = dependencyMap;
+  const cResult = markAsDismissed(576).c(21);
   markAsDismissed = markAsDismissed.markAsDismissed;
   const visible = markAsDismissed.visible;
   const windowDimensions = markAsDismissed.windowDimensions;
-  const tmp4 = closure_8();
-  dependencyMap = tmp4;
+  const tmp3 = closure_8();
+  dependencyMap = tmp3;
   const diff = windowDimensions.width - 2 * DEFAULT_CONTENT_PADDING;
   if (cResult[0] === markAsDismissed) {
-    let tmp6;
-    let tmp7;
     if (cResult[1] === visible) {
-      tmp6 = cResult[2];
-      tmp7 = cResult[3];
+      let tmp5 = cResult[2];
+      let tmp6 = cResult[3];
     }
-    const effect = react.useEffect(tmp6, tmp7);
-    if (cResult[4] === tmp4.appsIcon) {
-      let tmp10;
-      if (cResult[5] === tmp4.appsIconImage) {
-        tmp10 = cResult[6];
+    const effect = noop.useEffect(tmp5, tmp6);
+    if (cResult[4] === tmp3.appsIcon) {
+      if (cResult[5] === tmp3.appsIconImage) {
+        let tmp9 = cResult[6];
       }
-      let tmp11 = null;
-      if (visible) {
-        let tmp14;
-        let tmp13;
-        let tmp17;
-        let tmp18;
+      if (!visible) {
+        return null;
+      } else {
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(1126).intl;
-          const stringResult = intl.string(markAsDismissed(1126).t.bCPN5y);
-          const intl2 = tmp(1126).intl;
-          const stringResult1 = intl2.string(markAsDismissed(1126).t["0TBExc"]);
+          const intl = Coachmark(1126).intl;
+          const stringResult = intl.string(Coachmark(1126).t.bCPN5y);
+          const intl2 = Coachmark(1126).intl;
+          const stringResult1 = intl2.string(Coachmark(1126).t["0TBExc"]);
           cResult[7] = stringResult;
           cResult[8] = stringResult1;
-          tmp14 = stringResult1;
-          tmp13 = stringResult;
+          let tmp13 = stringResult1;
+          let tmp12 = stringResult;
         } else {
-          tmp13 = cResult[7];
-          tmp14 = cResult[8];
+          tmp12 = cResult[7];
+          tmp13 = cResult[8];
         }
         if (cResult[9] !== markAsDismissed) {
           const fn3 = function w() {
-            const obj = { actionType: ContentDismissActionType.TAKE_ACTION };
-            markAsDismissed(obj);
+            markAsDismissed({ actionType: ContentDismissActionType.TAKE_ACTION });
           };
           cResult[9] = markAsDismissed;
           cResult[10] = fn3;
-          tmp17 = fn3;
+          let tmp16 = fn3;
         } else {
-          tmp17 = cResult[10];
+          tmp16 = cResult[10];
         }
         if (cResult[11] !== diff) {
-          size = { x: 0, y: -40, width: diff, height: 40 };
+          const size = { x: 0, y: -40, width: diff, height: 40 };
           cResult[11] = diff;
           cResult[12] = size;
-          tmp18 = size;
+          let tmp17 = size;
         } else {
-          tmp18 = cResult[12];
+          tmp17 = cResult[12];
         }
         if (cResult[13] === diff) {
-          let tmp19;
           if (cResult[14] === windowDimensions.height) {
-            tmp19 = cResult[15];
+            let tmp18 = cResult[15];
           }
-          if (cResult[16] === tmp10) {
-            if (cResult[17] === tmp17) {
-              if (cResult[18] === tmp18) {
-                let tmp20;
-                if (cResult[19] === tmp19) {
-                  tmp20 = cResult[20];
-                }
-                tmp11 = tmp20;
+          if (cResult[16] === tmp9) {
+            if (cResult[17] === tmp16) {
+              if (cResult[18] === tmp17) {
               }
             }
           }
-          const tmp22 = jsx(markAsDismissed(9903).Coachmark, { renderImgComponent: tmp10, title: tmp13, description: tmp14, onDismiss: tmp17, targetMeasurements: tmp18, surfaceMeasurements: tmp19, position: "bottom" });
-          cResult[16] = tmp10;
-          cResult[17] = tmp17;
-          cResult[18] = tmp18;
-          cResult[19] = tmp19;
-          cResult[20] = tmp22;
-          tmp20 = tmp22;
+          Coachmark = Coachmark(9903).Coachmark;
+          const obj2 = { renderImgComponent: tmp9, title: tmp12, description: tmp13, onDismiss: tmp16, targetMeasurements: tmp17, surfaceMeasurements: tmp18, position: "bottom" };
+          tmp = <Coachmark renderImgComponent={tmp9} title={tmp12} description={tmp13} onDismiss={tmp16} targetMeasurements={tmp17} surfaceMeasurements={tmp18} position="bottom" />;
+          cResult[16] = tmp9;
+          cResult[17] = tmp16;
+          cResult[18] = tmp17;
+          cResult[19] = tmp18;
+          cResult[20] = tmp;
         }
         const size1 = { x: -140, y: -40, width: diff, height: windowDimensions.height };
         cResult[13] = diff;
         cResult[14] = windowDimensions.height;
         cResult[15] = size1;
-        tmp19 = size1;
+        tmp18 = size1;
       }
-      return tmp11;
     }
     const fn2 = function u() {
-      ({ style: appsIconImage.appsIconImage, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE });
-      const AppsIcon = AppsIcon2.AppsIcon;
-      return <View style={closure_2.appsIcon}>{null}</View>;
+      const obj = { style: closure_2.appsIcon, children: jsx(AppsIcon.AppsIcon, { style: closure_2.appsIconImage, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE }) };
+      return <View style={closure_2.appsIcon}>{jsx(AppsIcon.AppsIcon, { style: closure_2.appsIconImage, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE })}</View>;
     };
-    cResult[4] = tmp4.appsIcon;
-    cResult[5] = tmp4.appsIconImage;
+    cResult[4] = tmp3.appsIcon;
+    cResult[5] = tmp3.appsIconImage;
     cResult[6] = fn2;
-    tmp10 = fn2;
+    tmp9 = fn2;
   }
   const fn = function h() {
     return () => {
@@ -143,17 +124,17 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => 
   cResult[1] = visible;
   cResult[2] = fn;
   cResult[3] = items;
-  tmp7 = items;
-  tmp6 = fn;
+  tmp6 = items;
+  tmp5 = fn;
+  let obj = markAsDismissed(576);
 }) : ((markAsDismissed) => {
-  let appsIconImage;
   markAsDismissed = markAsDismissed.markAsDismissed;
   const visible = markAsDismissed.visible;
   const windowDimensions = markAsDismissed.windowDimensions;
   dependencyMap = closure_8();
   const diff = windowDimensions.width - 2 * DEFAULT_CONTENT_PADDING;
   const items = [markAsDismissed, visible];
-  const effect = react.useEffect(() => () => {
+  const effect = noop.useEffect(() => () => {
     if (visible) {
       const obj = { actionType: constants.USER_DISMISS };
       markAsDismissed(obj);
@@ -161,23 +142,41 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => 
   }, items);
   let tmp3 = null;
   if (visible) {
-    const Coachmark = markAsDismissed(9903).Coachmark;
+    let obj = {
+      renderImgComponent: function appsIcon() {
+          const obj = { style: closure_2.appsIcon, children: jsx(AppsIcon.AppsIcon, { style: closure_2.appsIconImage, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE }) };
+          return <View style={closure_2.appsIcon}>{jsx(AppsIcon.AppsIcon, { style: closure_2.appsIconImage, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE })}</View>;
+        },
+      title: null,
+      description: null,
+      onDismiss: null,
+      targetMeasurements: null,
+      surfaceMeasurements: null,
+      position: "bottom"
+    };
     const intl = markAsDismissed(1126).intl;
+    obj.title = intl.string(markAsDismissed(1126).t.bCPN5y);
     const intl2 = markAsDismissed(1126).intl;
-    size = { x: 0, y: -40, width: diff, height: 40 };
+    obj.description = intl2.string(markAsDismissed(1126).t["0TBExc"]);
+    obj.onDismiss = function onDismiss() {
+      markAsDismissed({ actionType: ContentDismissActionType.TAKE_ACTION });
+    };
+    const size = { x: 0, y: -40, width: diff, height: 40 };
+    obj.targetMeasurements = size;
     const size1 = { x: -140, y: -40, width: diff, height: windowDimensions.height };
-    tmp3 = <Coachmark renderImgComponent={function appsIcon() {
-      ({ style: appsIconImage.appsIconImage, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE });
-      const AppsIcon = AppsIcon2.AppsIcon;
-      return <View style={closure_2.appsIcon}>{null}</View>;
-    }} title={intl.string(markAsDismissed(1126).t.bCPN5y)} description={intl2.string(markAsDismissed(1126).t["0TBExc"])} onDismiss={function onDismiss() {
-      const obj = { actionType: ContentDismissActionType.TAKE_ACTION };
-      markAsDismissed(obj);
-    }} targetMeasurements={size} surfaceMeasurements={size1} position="bottom" />;
+    obj.surfaceMeasurements = size1;
+    tmp3 = jsx(markAsDismissed(9903).Coachmark, {
+      renderImgComponent: function appsIcon() {
+          const obj = { style: closure_2.appsIcon, children: jsx(AppsIcon.AppsIcon, { style: closure_2.appsIconImage, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE }) };
+          return <View style={closure_2.appsIcon}>{jsx(AppsIcon.AppsIcon, { style: closure_2.appsIconImage, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE })}</View>;
+        },
+      title: null,
+      description: null,
+      onDismiss: null,
+      targetMeasurements: null,
+      surfaceMeasurements: null,
+      position: "bottom"
+    });
   }
   return tmp3;
 });
-size = size_mod;
-const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppLauncherGlobalSearchOnboardingBanner.tsx");
-
-export default tmp3;

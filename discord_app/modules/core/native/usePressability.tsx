@@ -1,9 +1,9 @@
 // === Module 16275: usePressability ===
 
 // Module 16275 (usePressability)
-import usePressabilityDefault from "usePressability" /* 301 */;
+import _modDef301 from "module_301" /* 301 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/core/native/usePressability.tsx");
 
-export default usePressabilityDefault;
+export default _modDef301;

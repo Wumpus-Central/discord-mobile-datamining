@@ -6,9 +6,8 @@ import ChannelSafeAreaBottomAnimatedDefault from "ChannelSafeAreaBottomAnimated"
 import AnimatedKeyboardExperiment from "AnimatedKeyboardExperiment" /* 9783 */;
 import size from "module_2" /* 2 */;
 
-let importDefaultResult;
 if (AnimatedKeyboardExperiment.isAnimatedAndroidKeyboard()) {
-  importDefaultResult = ChannelSafeAreaBottomNoopDefault;
+  let importDefaultResult = ChannelSafeAreaBottomNoopDefault;
 } else {
   importDefaultResult = ChannelSafeAreaBottomAnimatedDefault;
 }

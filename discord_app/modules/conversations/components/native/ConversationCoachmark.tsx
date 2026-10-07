@@ -1,242 +1,228 @@
 // === Module 13115: ConversationCoachmark ===
 
 // Module 13115 (ConversationCoachmark)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl3 from "intl" /* 1126 */;
-import dismissible_content from "dismissible_content" /* 2036 */;
-import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
+import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 4892 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
-let obj2;
-let obj3;
-const View = react_native.View;
-const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
-const jsx = Fragment.jsx;
-const TOPICAL_NAVIGATION_HEADER_COACHMARK = dismissible_content.DismissibleContent.TOPICAL_NAVIGATION_HEADER_COACHMARK;
+require = fn;
+const View = fn(17).View;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const jsx = fn(21).jsx;
+const TOPICAL_NAVIGATION_HEADER_COACHMARK = fn(2036).DismissibleContent.TOPICAL_NAVIGATION_HEADER_COACHMARK;
 let items = [TOPICAL_NAVIGATION_HEADER_COACHMARK];
-let createStyles = createStyles_mod;
-let obj = { badge: obj2, coachmarkWrapper: obj3 };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, paddingVertical: 2, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round };
-createStyles = createStyles.createStyles;
-obj3 = { marginRight: nativeDefault.space.PX_12 };
-let closure_9 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+const createStyles = fn(4896);
+let obj2 = { badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, paddingVertical: 2, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round }, coachmarkWrapper: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, paddingVertical: 2, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round };
+obj2.coachmarkWrapper = { marginRight: nativeDefault.space.PX_12 };
+let closure_9 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  let tmp8;
-  const obj = react2;
-  const cResult = obj.c(3);
+  const cResult = c.c(3);
   const tmp4 = closure_9();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const Text = Text_Text.Text;
-    const intl = intl3.intl;
-    const tmp7 = <Text variant="text-sm/bold" color="text-default">{intl.string(intl3.t.c2GSIl)}</Text>;
+    const obj2 = { variant: "text-sm/bold", color: "text-default", children: null };
+    const intl = util.intl;
+    obj2.children = intl.string(util.t.c2GSIl);
+    const tmp7 = jsx(Text_Text.Text, { variant: "text-sm/bold", color: "text-default", children: null });
     cResult[0] = tmp7;
-    first = tmp7;
+    let first = tmp7;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== tmp4.badge) {
+    const obj3 = { style: tmp4.badge, children: first };
     const tmp11 = <View style={tmp4.badge}>{first}</View>;
     cResult[1] = tmp4.badge;
     cResult[2] = tmp11;
-    tmp8 = tmp11;
+    let tmp8 = tmp11;
   } else {
     tmp8 = cResult[2];
   }
   return tmp8;
 }) : (() => {
-  let intl;
-  ({ variant: "text-sm/bold", color: "text-default", children: intl.string(intl3.t.c2GSIl) });
-  const Text = Text_Text.Text;
-  intl = intl3.intl;
+  const obj = { style: closure_9().badge, children: null };
+  const obj2 = { variant: "text-sm/bold", color: "text-default", children: null };
+  const intl = util.intl;
+  obj2.children = intl.string(util.t.c2GSIl);
+  obj.children = jsx(Text_Text.Text, { variant: "text-sm/bold", color: "text-default", children: null });
   return <View style={closure_9().badge}>{null}</View>;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
-  let closure_0;
-  let obj5;
-  let tmp10;
-  let tmp14;
-  let tmp25;
-  let tmp9;
-  const obj = require("react");
-  const cResult = obj.c(18);
+ReactCompilerGating = fn(558);
+let obj4 = { marginRight: nativeDefault.space.PX_12 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationCoachmark.tsx");
+
+export const ConversationCoachmark = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+  const cResult = require("c").c(18);
   children = children.children;
-  const isLast = children.isLast;
   closure_9();
-  const ref = react.useRef(null);
-  const obj2 = require("useSelectedDismissibleContent");
-  const tmp6 = _slicedToArray(obj2.useSelectedDismissibleContent(items), 2);
-  _require = tmp8;
-  const first = tmp6[0];
+  const ref = noop.useRef(null);
+  const obj = require("c");
+  const tmp6 = _slicedToArray(require("useSelectedDismissibleContent").useSelectedDismissibleContent(items), 2);
+  _require = tmp7;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1126).intl;
-    const stringResult = intl.string(require("intl").t.UcQjDe);
+    const stringResult = intl.string(tmp(1126).t.UcQjDe);
     const intl2 = tmp(1126).intl;
-    const stringResult1 = intl2.string(require("intl").t.QeJIbA);
+    const stringResult1 = intl2.string(tmp(1126).t.QeJIbA);
     cResult[0] = stringResult;
     cResult[1] = stringResult1;
-    tmp10 = stringResult1;
-    tmp9 = stringResult;
+    tmp8 = stringResult;
+    tmp9 = stringResult1;
   } else {
-    [tmp9, tmp10] = cResult;
+    [tmp8, tmp9] = cResult;
   }
   if (cResult[2] !== tmp6[1]) {
     const fn = function x() {
       closure_0(ContentDismissActionType.USER_DISMISS);
     };
-    cResult[2] = tmp6[1];
+    cResult[2] = tmp7;
     cResult[3] = fn;
-    tmp14 = fn;
+    let tmp13 = fn;
   } else {
-    tmp14 = cResult[3];
+    tmp13 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     class E {
       constructor() {
-        return <closure_1_10 />;
+        return closure_1_6(closure_1_10, {});
       }
     }
     cResult[4] = E;
   } else {
     class E {
       constructor() {
-        return <closure_1_10 />;
+        return closure_1_6(closure_1_10, {});
       }
     }
   }
-  if (cResult[5] === first === TOPICAL_NAVIGATION_HEADER_COACHMARK) {
+  if (cResult[5] === tmp6[0] === TOPICAL_NAVIGATION_HEADER_COACHMARK) {
     class E {
       constructor() {
-        return <closure_1_10 />;
+        return closure_1_6(closure_1_10, {});
       }
     }
-    const tmpResult = require("useCoachmark");
-    const coachmark = tmpResult.useCoachmark(ref, obj5);
-    if (cResult[8] !== tmp6[1]) {
+    const coachmark = tmp(9895).useCoachmark(ref, obj5);
+    if (cResult[8] !== tmp7) {
       class O {
         constructor() {
-          closure_0(ContentDismissActionType.USER_DISMISS);
+          tmp = closure_0(ContentDismissActionType.USER_DISMISS);
+          return;
         }
       }
-      cResult[8] = tmp6[1];
+      cResult[8] = tmp7;
       cResult[9] = O;
     } else {
       class O {
         constructor() {
-          closure_0(ContentDismissActionType.USER_DISMISS);
+          tmp = closure_0(ContentDismissActionType.USER_DISMISS);
+          return;
         }
       }
     }
-    if (!isLast) {
+    if (!children.isLast) {
       class O {
         constructor() {
-          closure_0(ContentDismissActionType.USER_DISMISS);
+          tmp = closure_0(ContentDismissActionType.USER_DISMISS);
+          return;
         }
       }
     }
     if (cResult[10] === children) {
       class O {
         constructor() {
-          closure_0(ContentDismissActionType.USER_DISMISS);
+          tmp = closure_0(ContentDismissActionType.USER_DISMISS);
+          return;
         }
       }
-      if (cResult[13] !== tmp20) {
+      if (cResult[13] !== tmp19) {
         class O {
           constructor() {
-            closure_0(ContentDismissActionType.USER_DISMISS);
+            tmp = closure_0(ContentDismissActionType.USER_DISMISS);
+            return;
           }
         }
-        const tmp24 = <View ref={ref}>{tmp20}</View>;
-        cResult[13] = tmp20;
-        cResult[14] = tmp24;
+        const obj3 = { ref, children: tmp19 };
+        const tmp23 = <View ref={ref}>{tmp19}</View>;
+        cResult[13] = tmp19;
+        cResult[14] = tmp23;
       } else {
         class O {
           constructor() {
-            closure_0(ContentDismissActionType.USER_DISMISS);
+            tmp = closure_0(ContentDismissActionType.USER_DISMISS);
+            return;
           }
         }
       }
-      if (cResult[15] === tmp22) {
+      if (cResult[15] === tmp21) {
         class O {
           constructor() {
-            closure_0(ContentDismissActionType.USER_DISMISS);
+            tmp = closure_0(ContentDismissActionType.USER_DISMISS);
+            return;
           }
         }
-        return tmp25;
+        return tmp24;
       }
-      const tmp28 = <View style={tmp19}>{tmp22}</View>;
-      cResult[15] = tmp22;
-      cResult[16] = tmp19;
-      cResult[17] = tmp28;
-      tmp25 = tmp28;
+      const obj4 = { style: tmp18, children: tmp21 };
+      const tmp27 = <View style={tmp18}>{tmp21}</View>;
+      cResult[15] = tmp21;
+      cResult[16] = tmp18;
+      cResult[17] = tmp27;
+      tmp24 = tmp27;
     }
+    const childrenResult = children(O);
     cResult[10] = children;
     cResult[11] = O;
-    cResult[12] = children(O);
-    const childrenResult = children(O);
+    cResult[12] = childrenResult;
+    const tmpResult = tmp(9895);
   }
-  obj5 = { title: tmp9, description: tmp10, position: "bottom", visible: first === TOPICAL_NAVIGATION_HEADER_COACHMARK, onDismiss: tmp14, renderImgComponent: E };
-  cResult[5] = first === TOPICAL_NAVIGATION_HEADER_COACHMARK;
-  cResult[6] = tmp14;
+  obj5 = { title: tmp8, description: tmp9, position: "bottom", visible: tmp6[0] === TOPICAL_NAVIGATION_HEADER_COACHMARK, onDismiss: tmp13, renderImgComponent: E };
+  cResult[5] = tmp6[0] === TOPICAL_NAVIGATION_HEADER_COACHMARK;
+  cResult[6] = tmp13;
   cResult[7] = obj5;
+  const obj2 = require("useSelectedDismissibleContent");
 }) : ((arg0) => {
-  let children;
-  let closure_1;
-  let isLast;
   let first;
   ({ children, isLast } = arg0);
+  const ref = noop.useRef(null);
   const tmp = closure_9();
-  const ref = react.useRef(null);
-  let obj = first(6901);
-  const tmp3 = _slicedToArray(obj.useSelectedDismissibleContent(items), 2);
+  const tmp3 = _slicedToArray(first(6901).useSelectedDismissibleContent(items), 2);
   first = tmp3[0];
   dependencyMap = tmp5;
   items = [tmp3[1], first];
-  const memo = react.useMemo(() => {
-    let intl;
-    let intl2;
-    const obj = {
-      title: intl.string(intl3.t.UcQjDe),
-      description: intl2.string(intl3.t.QeJIbA),
-      position: "bottom",
-      visible: first === TOPICAL_NAVIGATION_HEADER_COACHMARK,
-      onDismiss() {
-        closure_1_1(constants.USER_DISMISS);
-      },
-      renderImgComponent() {
-        return closure_1_6(closure_1_10, {});
-      }
+  const memo = noop.useMemo(() => {
+    const obj = { title: null, description: null, position: "bottom", visible: null, onDismiss: null, renderImgComponent: null };
+    const intl = util.intl;
+    obj.title = intl.string(util.t.UcQjDe);
+    const intl2 = util.intl;
+    obj.description = intl2.string(util.t.QeJIbA);
+    obj.visible = first === TOPICAL_NAVIGATION_HEADER_COACHMARK;
+    obj.onDismiss = function onDismiss() {
+      closure_1_1(constants.USER_DISMISS);
     };
-    intl = intl3.intl;
-    intl2 = intl3.intl;
+    obj.renderImgComponent = function renderImgComponent() {
+      return closure_1_6(closure_1_10, {});
+    };
     return obj;
   }, items);
-  const obj2 = first(9895);
-  const coachmark = obj2.useCoachmark(ref, memo);
+  let obj = first(6901);
+  const coachmark = first(9895).useCoachmark(ref, memo);
   const items1 = [tmp3[1]];
   let coachmarkWrapper;
-  const callback = react.useCallback(() => {
+  const callback = noop.useCallback(() => {
     closure_1(ContentDismissActionType.USER_DISMISS);
   }, items1);
   if (!isLast) {
     coachmarkWrapper = tmp.coachmarkWrapper;
   }
-  ({ ref, children: children(callback) });
+  const obj3 = { style: coachmarkWrapper, children: null };
+  const obj2 = first(9895);
+  obj3.children = <View ref={ref}>{children(callback)}</View>;
   return <View style={coachmarkWrapper}>{null}</View>;
 });
-const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationCoachmark.tsx");
-
-export const ConversationCoachmark = tmp3;

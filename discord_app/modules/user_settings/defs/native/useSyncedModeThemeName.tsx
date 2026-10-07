@@ -1,46 +1,40 @@
 // === Module 15139: useSyncedModeThemeName ===
 
 // Module 15139 (useSyncedModeThemeName)
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
-import ClientThemesConstants from "ClientThemesConstants" /* 1240 */;
 import _modDef2751 from "module_2751" /* 2751 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require;
 
-let closure_4 = ClientThemesConstants.BACKGROUND_GRADIENT_PRESETS_MAP;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let first;
-  let tmp6;
+require = fn;
+let closure_4 = fn(1240).BACKGROUND_GRADIENT_PRESETS_MAP;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/useSyncedModeThemeName.tsx");
+
+export const useSyncedModeThemeName = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   _require = arg0;
-  let obj = require("react");
-  const cResult = obj.c(3);
-  const tmp = _require;
+  const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ThemeStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
     const fn = function o() {
-      let stringResult;
       const syncedClientTheme = ThemeStore.getSyncedClientTheme(closure_0);
-      const obj = ClientThemesUtils;
-      const themeName = obj.getThemeName(ThemeStore.themePreferenceForSystemTheme(closure_0));
+      const themeName = ClientThemesUtils.getThemeName(ThemeStore.themePreferenceForSystemTheme(closure_0));
       let prop;
       if (syncedClientTheme != null) {
         prop = syncedClientTheme.customUserThemeSettings;
       }
       if (null != prop) {
-        const intl = intl2.intl;
-        stringResult = intl.string(_modDef2751.yl1iMm);
+        const intl = util.intl;
+        let stringResult = intl.string(_modDef2751.yl1iMm);
       } else {
         let prop1;
         if (syncedClientTheme != null) {
@@ -65,29 +59,25 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    tmp6 = fn;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const tmpResult = tmp(504);
-  return tmpResult.useStateFromStores(first, tmp6);
+  const obj = require("c");
+  return require("initialize").useStateFromStores(first, tmp6);
 }) : ((arg0) => {
-  let closure_0;
   _require = arg0;
-  let obj = require("get initialized");
   const items = [ThemeStore];
-  return obj.useStateFromStores(items, () => {
-    let stringResult;
+  return require("initialize").useStateFromStores(items, () => {
     const syncedClientTheme = ThemeStore.getSyncedClientTheme(closure_0);
-    const obj = ClientThemesUtils;
-    const themeName = obj.getThemeName(ThemeStore.themePreferenceForSystemTheme(closure_0));
+    const themeName = ClientThemesUtils.getThemeName(ThemeStore.themePreferenceForSystemTheme(closure_0));
     let prop;
     if (syncedClientTheme != null) {
       prop = syncedClientTheme.customUserThemeSettings;
     }
     if (null != prop) {
-      const intl = intl2.intl;
-      stringResult = intl.string(_modDef2751.yl1iMm);
+      const intl = util.intl;
+      let stringResult = intl.string(_modDef2751.yl1iMm);
     } else {
       let prop1;
       if (syncedClientTheme != null) {
@@ -111,6 +101,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return stringResult;
   });
 });
-const result = size.fileFinishedImporting("modules/user_settings/defs/native/useSyncedModeThemeName.tsx");
-
-export const useSyncedModeThemeName = tmp2;

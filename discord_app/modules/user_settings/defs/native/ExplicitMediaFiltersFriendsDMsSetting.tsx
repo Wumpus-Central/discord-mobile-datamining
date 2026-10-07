@@ -1,8 +1,8 @@
 // === Module 14648: ExplicitMediaFiltersFriendsDMsSetting ===
 
 // Module 14648 (ExplicitMediaFiltersFriendsDMsSetting)
-import react from "react" /* 576 */;
-import intl4 from "intl" /* 1126 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 6811 */;
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7122 */;
 import SettingsConstants from "SettingsConstants" /* 7645 */;
@@ -14,71 +14,73 @@ import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
+function getTitle() {
+  const intl = util.intl;
+  return intl.string(util.t["+uI23H"]);
+}
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp4;
-  const obj = react;
-  const cResult = obj.c(2);
-  const obj2 = useExplicitContentSettingsOrDefault;
-  const explicitContentFriendDm = obj2.useExplicitContentSettingOrDefault().explicitContentFriendDm;
+  const cResult = c.c(2);
+  const explicitContentFriendDm = useExplicitContentSettingsOrDefault.useExplicitContentSettingOrDefault().explicitContentFriendDm;
   if (cResult[0] !== explicitContentFriendDm) {
-    const tmpResult = ExplicitMediaRedactionUtils;
-    const tmp5 = tmpResult.redactionSettingToRenderedString(explicitContentFriendDm)();
+    const tmp5 = ExplicitMediaRedactionUtils.redactionSettingToRenderedString(explicitContentFriendDm)();
     cResult[0] = explicitContentFriendDm;
     cResult[1] = tmp5;
-    tmp4 = tmp5;
+    let tmp4 = tmp5;
+    const tmpResult = ExplicitMediaRedactionUtils;
   } else {
     tmp4 = cResult[1];
   }
   return tmp4;
 }) : (() => {
   const obj = useExplicitContentSettingsOrDefault;
-  const explicitContentFriendDm = obj.useExplicitContentSettingOrDefault().explicitContentFriendDm;
-  const obj2 = ExplicitMediaRedactionUtils;
-  return obj2.redactionSettingToRenderedString(explicitContentFriendDm)();
+  return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentFriendDm)();
 });
-function getTitle() {
-  const intl = intl4.intl;
-  return intl.string(intl4.t["+uI23H"]);
-}
-let obj = {
+const pressable = SettingBuilders.createPressable({
   useTitle: getTitle,
   parent() {
     return MobileUserSettings.SENSITIVE_CONTENT_FILTERS;
   },
-  useTrailing: tmp2,
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(2);
+    const explicitContentFriendDm = useExplicitContentSettingsOrDefault.useExplicitContentSettingOrDefault().explicitContentFriendDm;
+    if (cResult[0] !== explicitContentFriendDm) {
+      const tmp5 = ExplicitMediaRedactionUtils.redactionSettingToRenderedString(explicitContentFriendDm)();
+      cResult[0] = explicitContentFriendDm;
+      cResult[1] = tmp5;
+      let tmp4 = tmp5;
+      const tmpResult = ExplicitMediaRedactionUtils;
+    } else {
+      tmp4 = cResult[1];
+    }
+    return tmp4;
+  }) : (() => {
+    const obj = useExplicitContentSettingsOrDefault;
+    return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentFriendDm)();
+  }),
   onPress: function onObscuredContentFriendsDmOnPress() {
-    let intl2;
-    let obj = SensitiveMediaExplicitRedactionSettingsUtils;
-    const explicitContentFriendDm = obj.getExplicitContentSettingOrDefault().explicitContentFriendDm;
-    const intl = intl4.intl;
-    const stringResult = intl.string(intl4.t.GYpoAq);
-    let obj2 = {
-      title: stringResult,
-      subtitle: intl2.string(intl4.t["+uI23H"]),
-      handlePress(explicitContentFriendDm) {
-        const obj = SensitiveMediaExplicitRedactionSettingsUtils;
-        const obj2 = { explicitContentFriendDm };
-        return obj.updateExplicitContentSetting(obj2);
-      },
-      currentValue: explicitContentFriendDm
+    const intl = util.intl;
+    const obj = SensitiveMediaExplicitRedactionSettingsUtils;
+    const stringResult = intl.string(util.t.GYpoAq);
+    const obj3 = { title: stringResult, subtitle: null, handlePress: null, currentValue: null };
+    const intl2 = util.intl;
+    obj3.subtitle = intl2.string(util.t["+uI23H"]);
+    obj3.handlePress = function handlePress(explicitContentFriendDm) {
+      return SensitiveMediaExplicitRedactionSettingsUtils.updateExplicitContentSetting({ explicitContentFriendDm });
     };
-    const handleSensitiveMediaFilterPress = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress;
-    ExplicitMediaRedactionNativeUtils;
-    intl2 = intl4.intl;
-    const result = handleSensitiveMediaFilterPress(obj2);
+    obj3.currentValue = obj.getExplicitContentSettingOrDefault().explicitContentFriendDm;
+    const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj3);
   },
   useSearchTerms: function getSearchTerms() {
-    const intl = intl4.intl;
-    const items = [intl.string(intl4.t["N/oRI+"]), , ];
-    const intl2 = intl4.intl;
-    items[1] = intl2.string(intl4.t.QVdYsK);
-    const intl3 = intl4.intl;
-    items[2] = intl3.string(intl4.t["5mnTa7"]);
+    const intl = util.intl;
+    const items = [intl.string(util.t["N/oRI+"]), , ];
+    const intl2 = util.intl;
+    items[1] = intl2.string(util.t.QVdYsK);
+    const intl3 = util.intl;
+    items[2] = intl3.string(util.t["5mnTa7"]);
     return items;
   },
   useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled
-};
-const pressable = SettingBuilders.createPressable(obj);
+});
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/ExplicitMediaFiltersFriendsDMsSetting.tsx");
 
 export default pressable;

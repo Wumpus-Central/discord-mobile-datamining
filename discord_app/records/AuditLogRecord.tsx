@@ -5,16 +5,10 @@ import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import _modDef4467 from "module_4467" /* 4467 */;
 import Record from "Record" /* 1392 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-let c2;
-let c3;
-let closure_4;
 function getTargetType(action) {
-  let CHANNEL;
   if (action === constants2.ALL) {
-    CHANNEL = constants.ALL;
+    let CHANNEL = constants.ALL;
   } else if (action <= constants2.GUILD_UPDATE) {
     CHANNEL = constants.GUILD;
   } else {
@@ -81,8 +75,7 @@ function getTargetType(action) {
                                     CHANNEL = constants.GUILD;
                                   } else {
                                     const _HermesInternal = HermesInternal;
-                                    const obj = SentryUtilsDefault;
-                                    obj.captureMessage("Unknown target type for: " + action);
+                                    SentryUtilsDefault.captureMessage("Unknown target type for: " + action);
                                     CHANNEL = constants.UNKNOWN;
                                   }
                                 }
@@ -273,59 +266,58 @@ function getActionType(action) {
   }
   return constants3.CREATE;
 }
+const Constants = fn(1085);
 ({ AuditLogTargetTypes: c2, AuditLogActions: c3, AuditLogActionTypes: closure_4 } = Constants);
-class AuditLogRecord extends Record {
-  constructor(timestampEnd) {
-    let changes;
-    let timestampStart;
-    const tmp5 = new AuditLogRecord(tmp4, tmp3, tmp2, tmp, new.target);
-    ({ id: tmp5.id, action: tmp5.action } = timestampEnd);
-    tmp5.actionType = getActionType(tmp5.action);
-    ({ targetId: tmp5.targetId, timestampStart } = timestampEnd);
-    if (timestampStart == null) {
-      const tmp8 = _modDef4467;
-      const obj = SnowflakeUtilsDefault;
-      timestampStart = tmp8(obj.extractTimestamp(tmp5.id));
-    }
-    tmp5.timestampStart = timestampStart;
-    let timestampStart2 = timestampEnd.timestampEnd;
-    if (timestampStart2 == null) {
-      timestampStart2 = tmp5.timestampStart;
-    }
-    tmp5.timestampEnd = timestampStart2;
-    ({ userId: tmp5.userId, changes } = timestampEnd);
-    if (changes == null) {
-      changes = [];
-    }
-    tmp5.changes = changes;
-    tmp5.targetType = getTargetType(tmp5.action);
-    let options = timestampEnd.options;
-    if (options == null) {
-      options = {};
-    }
-    tmp5.options = options;
-    let id = timestampEnd.target;
-    if (id == null) {
-      id = timestampEnd.id;
-    }
-    tmp5.target = id;
-    let user = timestampEnd.user;
-    if (user == null) {
-      user = null;
-    }
-    tmp5.user = user;
-    return tmp5;
+const prototype = function AuditLogRecord(timestampEnd) {
+  const tmp5 = new prototype(tmp4, tmp3, tmp2, tmp, new.target);
+  ({ id: tmp5.id, action: tmp5.action } = timestampEnd);
+  tmp5.actionType = getActionType(tmp5.action);
+  ({ targetId: tmp5.targetId, timestampStart } = timestampEnd);
+  if (timestampStart == null) {
+    const tmp8 = _modDef4467;
+    timestampStart = tmp8(SnowflakeUtilsDefault.extractTimestamp(tmp5.id));
   }
+  tmp5.timestampStart = timestampStart;
+  let timestampStart2 = timestampEnd.timestampEnd;
+  if (timestampStart2 == null) {
+    timestampStart2 = tmp5.timestampStart;
+  }
+  tmp5.timestampEnd = timestampStart2;
+  ({ userId: tmp5.userId, changes } = timestampEnd);
+  if (changes == null) {
+    changes = [];
+  }
+  tmp5.changes = changes;
+  tmp5.targetType = getTargetType(tmp5.action);
+  options = timestampEnd.options;
+  if (options == null) {
+    options = {};
+  }
+  tmp5.options = options;
+  let id = timestampEnd.target;
+  if (id == null) {
+    id = timestampEnd.id;
+  }
+  tmp5.target = id;
+  let user = timestampEnd.user;
+  if (user == null) {
+    user = null;
+  }
+  tmp5.user = user;
+  return tmp5;
+}.prototype;
+class prototype extends tmp2 {
 }
+const size = fn(2);
 const result = size.fileFinishedImporting("records/AuditLogRecord.tsx");
 
-export default AuditLogRecord;
+export default prototype;
 export { getTargetType };
 export { getActionType };
-export function AuditLogChange(key, items2, added) {
+export const AuditLogChange = function AuditLogChange(key, items2, added) {
   const obj = Object.create(new.target.prototype);
   obj.key = key;
   obj.oldValue = items2;
   obj.newValue = added;
   return obj;
-}
+}.prototype;

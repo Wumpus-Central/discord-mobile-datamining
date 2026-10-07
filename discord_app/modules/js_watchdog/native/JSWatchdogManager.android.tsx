@@ -5,22 +5,18 @@ import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 6997 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import Constants from "Constants" /* 1085 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
-import size from "module_2" /* 2 */;
 
-let c2, c4, c5, closure_2;
-
-let closure_4;
-let hasOwnProperty;
+require = fn;
+const Constants = fn(1085);
 ({ AppStates: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
-const tmp3 = new LoggerDefault("JSWatchdogManager");
-const metroRequire = tmp3;
+const logger = new LoggerDefault("JSWatchdogManager");
 const HALF_SECOND = DurationsDefault.Millis.HALF_SECOND;
-class JSWatchdogManager extends AutomaticLifecycleManager {
+class JSWatchdogManager extends tmp4 {
   constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    closure_0 = applyArgumentsResult;
     applyArgumentsResult._enabled = true;
     applyArgumentsResult._timeoutId = null;
     applyArgumentsResult._analyticsReportsRemaining = 3;
@@ -29,220 +25,290 @@ class JSWatchdogManager extends AutomaticLifecycleManager {
     applyArgumentsResult._pingCompleted = true;
     applyArgumentsResult.actions = {
       APP_STATE_UPDATE(arg0) {
-        applyArgumentsResult.handleAppStateUpdate(arg0);
-      },
+            applyArgumentsResult.handleAppStateUpdate(arg0);
+          },
       CONNECTION_OPEN_SUPPLEMENTAL() {
-        const result = applyArgumentsResult.handleConnectionOpenSupplemental();
-      }
+            const result = applyArgumentsResult.handleConnectionOpenSupplemental();
+          }
     };
     return applyArgumentsResult;
   }
-  handleAppStateUpdate(state) {
-    const self = this;
-    if (state.state === constants.ACTIVE) {
-      self.startWatchdog();
-    } else {
-      self.stopWatchdog();
-    }
+}
+const prototype = JSWatchdogManager.prototype;
+prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
+  const self = this;
+  if (state.state === constants.ACTIVE) {
+    self.startWatchdog();
+  } else {
+    self.stopWatchdog();
   }
-  handleConnectionOpenSupplemental() {
-    const self = this;
-    const timerId = setTimeout(() => {
-      self.startWatchdog();
-    }, 0);
+};
+prototype["handleConnectionOpenSupplemental"] = function handleConnectionOpenSupplemental() {
+  const self = this;
+  const timerId = setTimeout(() => {
+    self.startWatchdog();
+  }, 0);
+};
+prototype["ping"] = function ping() {
+  let flag = arg0;
+  if (arg0 === undefined) {
+    flag = false;
   }
-  ping() {
-    let flag = arg0;
-    if (arg0 === undefined) {
-      flag = false;
-    }
-    const self = this;
-    return (async () => {
-      let closure_1;
-      if (c5 === 2) {
-        c5 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+  const self = this;
+  return (async () => {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        let c3;
-        try {
-          let _lastSessionId;
-          let c1;
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj5 = { value, done: true };
-              return obj5;
-            } else {
-              _lastSessionId = undefined;
-              c1 = undefined;
-              self._pingCompleted = false;
-              c3 = 2;
-              c4 = 3;
-              c5 = 1;
-              const obj6 = { value: self.getCurrentSessionId(), done: false };
-              return obj6;
-            }
-          } else if (1 === c4) {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            closure_0 = tmp8;
+            closure_128_0 = undefined;
+            closure_128_1 = undefined;
+            self._pingCompleted = false;
+            c3 = 2;
+            c4 = 3;
+            c5 = 1;
+            const obj6 = { value: self.getCurrentSessionId(), done: false };
+            return obj6;
+          }
+        } else if (1 === tmp8) {
+          c3 = 0;
+          closure_129_1._pingCompleted = true;
+          throw tmp84;
+        } else {
+          if (2 === tmp8) {
+            c3 = 1;
+            closure_128_2 = tmp84;
+            tmp4(tmp84[6]).captureException(closure_128_2);
             c3 = 0;
             closure_129_1._pingCompleted = true;
-            throw closure_2;
-          } else {
-            if (2 === c4) {
-              c3 = 1;
-              const obj8 = tmp(closure_2[6]);
-              obj8.captureException(closure_2);
-            } else if (3 === c4) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c3 = 0;
-                closure_129_1._pingCompleted = true;
-                c5 = 3;
-                const obj7 = { value, done: true };
-                return obj7;
-              } else {
-                _lastSessionId = value;
-                if (null == _lastSessionId) {
-                  if (closure_129_1._enabled) {
-                    const _setTimeout2 = setTimeout;
-                    const timerId = setTimeout(() => closure_1_1.ping(), HALF_SECOND);
-                    closure_129_1._timeoutId = timerId;
-                  }
-                  c3 = 0;
-                  closure_129_1._pingCompleted = true;
-                  c5 = 3;
-                  const obj9 = { value: undefined, done: true };
-                  return obj9;
-                } else {
-                  const obj4 = tmp(closure_2[5]);
-                  let pingResult;
-                  if (obj4 != null) {
-                    const _Date = Date;
-                    pingResult = obj4.ping(Date.now(), _lastSessionId, closure_129_0, false);
-                  }
-                  c4 = 4;
-                  c5 = 1;
-                  const obj10 = { value: pingResult, done: false };
-                  return obj10;
-                }
-              }
-            } else if (arg0 === 1) {
+            c5 = 3;
+            const obj8 = tmp4(tmp84[6]);
+          } else if (3 === tmp8) {
+            if (arg0 === 1) {
               c5 = 3;
               throw value;
             } else if (arg0 === 2) {
               c3 = 0;
               closure_129_1._pingCompleted = true;
               c5 = 3;
-              const obj11 = { value, done: true };
-              return obj11;
+              const obj7 = { value, done: true };
+              return obj7;
             } else {
-              if (value) {
-                const obj = tmp(closure_2[5]);
-                let checkForStallReportResult;
-                if (obj != null) {
-                  checkForStallReportResult = obj.checkForStallReport();
+              closure_128_0 = value;
+              if (null == closure_128_0) {
+                if (closure_129_1._enabled) {
+                  const _setTimeout2 = setTimeout;
+                  const timerId = setTimeout(() => closure_1_1.ping(), HALF_SECOND);
+                  closure_129_1._timeoutId = timerId;
                 }
-                c1 = checkForStallReportResult;
-                if (null != c1) {
-                  if (closure_129_1._lastSessionId !== _lastSessionId) {
-                    closure_129_1._lastSessionId = _lastSessionId;
-                    closure_129_1._analyticsReportsRemaining = 3;
-                  }
-                  closure_129_1._analyticsReportsRemaining = +closure_129_1._analyticsReportsRemaining - 1;
-                  if (+closure_129_1._analyticsReportsRemaining > 0) {
-                    closure_129_1.reportStall(c1, _lastSessionId, false, closure_129_1._analyticsReportsRemaining);
-                  }
-                  if (0 === closure_129_1._analyticsReportsRemaining) {
-                    closure_129_1.stopWatchdog();
-                    const obj2 = tmp(closure_2[5]);
-                    if (obj2 != null) {
-                      obj2.disable();
-                    }
-                  }
+                c3 = 0;
+                closure_129_1._pingCompleted = true;
+                c5 = 3;
+                const obj9 = { value: undefined, done: true };
+                return obj9;
+              } else {
+                const obj4 = tmp4(tmp84[5]);
+                let pingResult;
+                if (obj4 != null) {
+                  const _Date = Date;
+                  pingResult = obj4.ping(Date.now(), closure_128_0, closure_129_0, false);
                 }
-              }
-              if (closure_129_1._enabled) {
-                const _setTimeout = setTimeout;
-                closure_129_1._timeoutId = setTimeout(() => closure_1_1.ping(), HALF_SECOND);
-              }
-              c3 = 1;
-            }
-            c3 = 0;
-            closure_129_1._pingCompleted = true;
-            c5 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp80) {
-          closure_2 = tmp80;
-          if (0 === c3) {
-            c5 = 3;
-            throw tmp80;
-          } else if (1 === tmp82) {
-            c4 = 1;
-          } else {
-            c4 = 2;
-          }
-        }
-      }
-    })();
-  }
-  startWatchdog() {
-    const self = this;
-    return (async () => {
-      let closure_1;
-      if (c3 === 2) {
-        c3 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          let closure_0;
-          let c1;
-          c3 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              let c0 = 0;
-              closure_0 = undefined;
-              c1 = undefined;
-              if (null == self._timeoutId) {
-                if (null != tmp(c2[5])) {
-                  c2 = 1;
-                  c3 = 1;
-                  const obj4 = { value: self.getCurrentSessionId(), done: false };
-                  return obj4;
-                }
+                c4 = 4;
+                c5 = 1;
+                const obj10 = { value: pingResult, done: false };
+                return obj10;
               }
             }
           } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            if (value) {
+              const obj = tmp4(tmp84[5]);
+              let checkForStallReportResult;
+              if (obj != null) {
+                checkForStallReportResult = obj.checkForStallReport();
+              }
+              closure_128_1 = checkForStallReportResult;
+              if (null != closure_128_1) {
+                if (closure_129_1._lastSessionId !== closure_128_0) {
+                  closure_129_1._lastSessionId = closure_128_0;
+                  closure_129_1._analyticsReportsRemaining = 3;
+                }
+                closure_129_1._analyticsReportsRemaining = +closure_129_1._analyticsReportsRemaining - 1;
+                if (+closure_129_1._analyticsReportsRemaining > 0) {
+                  closure_129_1.reportStall(closure_128_1, closure_128_0, false, closure_129_1._analyticsReportsRemaining);
+                }
+                if (0 === closure_129_1._analyticsReportsRemaining) {
+                  closure_129_1.stopWatchdog();
+                  const obj2 = tmp4(tmp84[5]);
+                  if (obj2 != null) {
+                    obj2.disable();
+                  }
+                }
+              }
+            }
+            if (closure_129_1._enabled) {
+              const _setTimeout = setTimeout;
+              closure_129_1._timeoutId = setTimeout(() => closure_1_1.ping(), HALF_SECOND);
+            }
+            c3 = 1;
+          }
+          c3 = 0;
+          closure_129_1._pingCompleted = true;
+          c5 = 3;
+          const obj11 = { value, done: true };
+          return obj11;
+        }
+      } catch (tmp84) {
+        if (tmp5 === c3) {
+          c5 = tmp3;
+          throw tmp84;
+        } else if (tmp2 === tmp86) {
+          c4 = tmp2;
+        } else {
+          c4 = tmp;
+        }
+      }
+    }
+  })();
+};
+prototype["startWatchdog"] = function startWatchdog() {
+  const self = this;
+  return (async () => {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c3 = 2;
+        if (0 === dependencyMap) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            c0 = 0;
+            closure_128_0 = undefined;
+            closure_128_1 = undefined;
+            if (null == self._timeoutId) {
+              if (null != tmp2(17589)) {
+                dependencyMap = 1;
+                c3 = 1;
+                const obj4 = { value: self.getCurrentSessionId(), done: false };
+                return obj4;
+              }
+            }
+            c3 = 3;
+          }
+        } else if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_128_0 = value;
+          if (null != closure_128_0) {
+            if (closure_129_0._lastSessionId !== closure_128_0) {
+              logger.info("startWatchdog()");
+              closure_129_0._enabled = true;
+              if (closure_129_0._pingCompleted) {
+                let checkForStallReportResult;
+                const obj = tmp2(17589);
+                if (obj != null) {
+                  checkForStallReportResult = obj.checkForStallReport();
+                }
+                closure_128_1 = checkForStallReportResult;
+                if (null != closure_128_1) {
+                  closure_129_0.reportStall(closure_128_1, closure_128_0, true, -1);
+                }
+              }
+              closure_129_0.ping(true);
+            }
+          }
+        }
+        c3 = 3;
+        const obj5 = { value, done: true };
+        return obj5;
+      } catch (tmp32) {
+        c3 = tmp;
+        throw tmp32;
+      }
+    }
+  })();
+};
+prototype["stopWatchdog"] = function stopWatchdog() {
+  logger.info("stopWatchdog()");
+  this._enabled = false;
+  clearTimeout(this._timeoutId);
+  this._timeoutId = null;
+};
+prototype["reportStall"] = function reportStall(stallTime, arg1, is_previous, _analyticsReportsRemaining) {
+  const obj2 = {};
+  const obj = AnalyticsUtilsDefault;
+  const merged = Object.assign(TTIAnalyticsUtils.getDeviceMetadata());
+  obj2.version = 1;
+  obj2.stall_time = stallTime.stallTime;
+  obj2.is_previous = is_previous;
+  obj2.reports_remaining = _analyticsReportsRemaining;
+  let sessionId = null;
+  if (stallTime.sessionId !== arg1) {
+    sessionId = stallTime.sessionId;
+  }
+  obj2.stall_session_id = sessionId;
+  obj2.trace = null;
+  obj.track(constants2.APP_JS_STALLED, obj2);
+};
+prototype["getCurrentSessionId"] = function getCurrentSessionId() {
+  const self = this;
+  return (async () => {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj4 = { value, done: true };
+        return obj4;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c3 = 2;
+        if (0 === dependencyMap) {
+          if (arg0 === 1) {
             c3 = 3;
             throw value;
           } else if (arg0 === 2) {
@@ -250,123 +316,44 @@ class JSWatchdogManager extends AutomaticLifecycleManager {
             const obj5 = { value, done: true };
             return obj5;
           } else {
-            closure_0 = value;
-            if (null != closure_0) {
-              if (closure_129_0._lastSessionId !== closure_0) {
-                logger.info("startWatchdog()");
-                closure_129_0._enabled = true;
-                if (closure_129_0._pingCompleted) {
-                  let checkForStallReportResult;
-                  const obj = tmp(c2[5]);
-                  if (obj != null) {
-                    checkForStallReportResult = obj.checkForStallReport();
-                  }
-                  c1 = checkForStallReportResult;
-                  if (null != c1) {
-                    closure_129_0.reportStall(c1, closure_0, true, -1);
-                  }
-                }
-                closure_129_0.ping(true);
+            closure_1 = tmp5;
+            closure_128_0 = undefined;
+            if (null != self._cachedSession) {
+              if (!obj2.isSessionExpired(self._cachedSession)) {
+                const uuid = closure_129_0._cachedSession.uuid;
+                c3 = 3;
               }
+              obj2 = tmp2(6993);
             }
+            dependencyMap = 1;
+            c3 = 1;
+            const obj6 = { value: tmp2(6983).getSession(), done: false };
+            return obj6;
           }
+        } else if (arg0 === 1) {
           c3 = 3;
-          return { value: "IconComponent", done: null };
-        } catch (tmp31) {
-          c3 = 3;
-          throw tmp31;
-        }
-      }
-    })();
-  }
-  stopWatchdog() {
-    logger.info("stopWatchdog()");
-    this._enabled = false;
-    clearTimeout(this._timeoutId);
-    this._timeoutId = null;
-  }
-  reportStall(c1, value, is_previous, _analyticsReportsRemaining) {
-    let sessionId;
-    const obj = { version: 1, stall_time: importDefault.stallTime, is_previous, reports_remaining: _analyticsReportsRemaining, stall_session_id: sessionId, trace: null };
-    const track = AnalyticsUtilsDefault.track;
-    const APP_JS_STALLED = hasOwnProperty.APP_JS_STALLED;
-    AnalyticsUtilsDefault;
-    const obj2 = TTIAnalyticsUtils;
-    const merged = Object.assign(obj2.getDeviceMetadata());
-    sessionId = null;
-    if (importDefault.sessionId !== value) {
-      sessionId = importDefault.sessionId;
-    }
-    track(APP_JS_STALLED, obj);
-  }
-  getCurrentSessionId() {
-    const self = this;
-    return (async () => {
-      if (c3 === 2) {
-        c3 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          const obj3 = { value, done: true };
-          return obj3;
+          c3 = 3;
+          const obj = { value, done: true };
+          return obj;
         } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          let _cachedSession;
-          c3 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              const obj5 = { value, done: true };
-              return obj5;
-            } else {
-              let closure_1 = tmp4;
-              _cachedSession = undefined;
-              if (null != self._cachedSession) {
-                _cachedSession(c2[9]);
-              }
-              const obj4 = _cachedSession(c2[10]);
-              c2 = 1;
-              c3 = 1;
-              const obj6 = { value: obj4.getSession(), done: false };
-              return obj6;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj = { value, done: true };
-            return obj;
-          } else {
-            _cachedSession = value;
-            if (null == _cachedSession) {
-              c3 = 3;
-              return { value: null, done: true };
-            } else {
-              closure_129_0._cachedSession = _cachedSession;
-            }
+          closure_128_0 = value;
+          if (null != closure_128_0) {
+            closure_129_0._cachedSession = closure_128_0;
           }
-          c3 = 3;
-          const obj7 = { value: closure_129_0._cachedSession.uuid, done: true };
-          return obj7;
-        } catch (tmp19) {
-          c3 = 3;
-          throw tmp19;
         }
+        c3 = 3;
+        return { value: null, done: true };
+      } catch (tmp20) {
+        c3 = tmp;
+        throw tmp20;
       }
-    })();
-  }
-}
-const prototype = JSWatchdogManager.prototype;
+    }
+  })();
+};
 const jSWatchdogManager = new JSWatchdogManager();
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/js_watchdog/native/JSWatchdogManager.android.tsx");
 
 export default jSWatchdogManager;

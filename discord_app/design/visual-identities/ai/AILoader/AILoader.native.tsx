@@ -1,32 +1,18 @@
 // === Module 14227: AILoader ===
 
 // Module 14227 (AILoader)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
 import timing from "timing" /* 4897 */;
 import AIGlyphText from "AIGlyphText" /* 14229 */;
-import react from "react" /* 19 */;
-import AILoaderConstants from "AILoaderConstants" /* 14228 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let dependencyMap, set;
-
-let AI_LOADER_REST_FRACTION;
-let AI_LOADER_STEP_FRACTION;
-let c10;
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let unpackModuleId;
-let View = react_native.View;
-({ AI_LOADER_CYCLE_MS: hasOwnProperty, AI_LOADER_GAP_EM: metroRequire, AI_LOADER_GLYPHS: metroImportDefault, AI_LOADER_REDUCED_MOTION_CYCLE_MS: metroImportAll, AI_LOADER_REST_FRACTION } = AILoaderConstants);
-({ AI_LOADER_SLOT_COUNT: c10, AI_LOADER_SLOT_STAGGER_MS: unpackModuleId, AI_LOADER_STEP_FRACTION } = AILoaderConstants);
+require = fn;
+const View = fn(17).View;
+const AILoaderConstants = fn(14228);
+({ AI_LOADER_CYCLE_MS: hasOwnProperty, AI_LOADER_GAP_EM: metroRequire, AI_LOADER_GLYPHS: closure_7, AI_LOADER_REDUCED_MOTION_CYCLE_MS: closure_8, AI_LOADER_REST_FRACTION } = AILoaderConstants);
+({ AI_LOADER_SLOT_COUNT: c10, AI_LOADER_SLOT_STAGGER_MS: closure_11, AI_LOADER_STEP_FRACTION } = AILoaderConstants);
 const AI_LOADER_TRACK_STEPS = AILoaderConstants.AI_LOADER_TRACK_STEPS;
-const jsx = Fragment.jsx;
+const jsx = fn(21).jsx;
 function trackStepAt(arg0) {
   if (arg0 < AI_LOADER_REST_FRACTION) {
     return AI_LOADER_TRACK_STEPS[0];
@@ -39,100 +25,110 @@ function trackStepAt(arg0) {
 trackStepAt.__closure = { AI_LOADER_REST_FRACTION, AI_LOADER_TRACK_STEPS, AI_LOADER_STEP_FRACTION };
 trackStepAt.__workletHash = 2403964493846;
 trackStepAt.__initData = { code: "function trackStepAt_AILoaderNativeTsx1(progress){const{AI_LOADER_REST_FRACTION,AI_LOADER_TRACK_STEPS,AI_LOADER_STEP_FRACTION}=this.__closure;if(progress<AI_LOADER_REST_FRACTION)return AI_LOADER_TRACK_STEPS[0];const step=Math.floor((progress-AI_LOADER_REST_FRACTION)/AI_LOADER_STEP_FRACTION)+1;return AI_LOADER_TRACK_STEPS[Math.min(step,AI_LOADER_TRACK_STEPS.length-1)];}" };
+const createStyles = fn(4896);
 let closure_16 = createStyles.createStyles((width) => {
-  const obj = { loader: obj2, slot: { width, height: width, overflow: "hidden" }, glyph: { height: width } };
+  const obj = { loader: { flexDirection: "row", gap: width * timestampProducer }, slot: { width, height: width, overflow: "hidden" }, glyph: { height: width } };
   return obj;
 });
 const __initData = { code: "function AILoaderNativeTsx2(){const{trackStepAt,progress,size}=this.__closure;return{transform:[{translateY:-trackStepAt(progress.get())*size}]};}" };
 const __initData2 = { code: "function AILoaderNativeTsx3(){const{trackStepAt,progress,size}=this.__closure;return{transform:[{translateY:-trackStepAt(progress.get())*size}]};}" };
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
-  let color;
-  const tmp2 = color;
-  let obj = index(color[6]);
-  const cResult = obj.c(16);
-  const tmp = index;
+  const cResult = index(color[6]).c(16);
   index = index.index;
-  size = index.size;
+  const size = index.size;
   color = index.color;
   const cycle = index.cycle;
   const stagger = index.stagger;
   const tmp4 = closure_16(size);
   const glyph = tmp4;
-  let obj2 = index(color[7]);
-  const sharedValue = obj2.useSharedValue(0);
+  let obj = index(color[6]);
+  const tmp = index;
+  const sharedValue = index(color[7]).useSharedValue(0);
   if (cResult[0] === cycle) {
     if (cResult[1] === index) {
       if (cResult[2] === sharedValue) {
-        let tmp6;
-        let tmp7;
         if (cResult[3] === stagger) {
-          tmp6 = cResult[4];
-          tmp7 = cResult[5];
+          let tmp6 = cResult[4];
+          let tmp7 = cResult[5];
         }
         const effect = cycle.useEffect(tmp6, tmp7);
-        const tmpResult = tmp(tmp2[7]);
         class O {
           constructor() {
-            let items;
-            const value = sharedValue.get();
+            value = closure_6.get();
             if (typeof trackStepAt === "function") {
-              let first;
               if (value < AI_LOADER_REST_FRACTION) {
+                tmp7 = AI_LOADER_TRACK_STEPS;
                 first = AI_LOADER_TRACK_STEPS[0];
               } else {
-                const _Math = Math;
-                const _Math2 = Math;
+                tmp3 = globalThis;
+                _Math = Math;
+                tmp4 = AI_LOADER_STEP_FRACTION;
+                num = 1;
+                tmp5 = AI_LOADER_TRACK_STEPS;
+                _Math2 = Math;
                 first = AI_LOADER_TRACK_STEPS[Math.min(Math, Math.floor(Math, (value - tmp2) / AI_LOADER_STEP_FRACTION) + 1, AI_LOADER_TRACK_STEPS.length - 1)];
               }
-              const obj = { transform: items };
-              items = [{ translateY: -first * size }];
+              obj = { transform: null };
+              obj1 = { translateY: null };
+              tmp8 = size;
+              obj1.translateY = -first * size;
+              items = [];
+              items[0] = obj1;
+              obj.transform = items;
               return obj;
             } else {
+              str = "Trying to call a non-function";
               throw new TypeError("Trying to call a non-function");
             }
           }
         }
-        const obj3 = { trackStepAt, progress: sharedValue, size };
+        let obj3 = { trackStepAt, progress: sharedValue, size };
         O.__closure = obj3;
         O.__workletHash = 16632594382704;
         O.__initData = __initData;
-        const animatedStyle = tmpResult.useAnimatedStyle(O);
+        const animatedStyle = tmp(tmp2[7]).useAnimatedStyle(O);
         if (cResult[6] === color) {
           if (cResult[7] === size) {
-            let tmp14;
             if (cResult[8] === tmp4.glyph) {
-              tmp14 = cResult[9];
+              let tmp14 = cResult[9];
             }
             if (cResult[10] === tmp14) {
-              let tmp17;
               if (cResult[11] === animatedStyle) {
-                tmp17 = cResult[12];
+                let tmp17 = cResult[12];
               }
               if (cResult[13] === tmp4.slot) {
-                let tmp22;
                 if (cResult[14] === tmp17) {
-                  tmp22 = cResult[15];
+                  let tmp22 = cResult[15];
                 }
                 return tmp22;
               }
               class O {
                 constructor() {
-                  let items;
-                  const value = sharedValue.get();
+                  value = closure_6.get();
                   if (typeof trackStepAt === "function") {
-                    let first;
                     if (value < AI_LOADER_REST_FRACTION) {
+                      tmp7 = AI_LOADER_TRACK_STEPS;
                       first = AI_LOADER_TRACK_STEPS[0];
                     } else {
-                      const _Math = Math;
-                      const _Math2 = Math;
+                      tmp3 = globalThis;
+                      _Math = Math;
+                      tmp4 = AI_LOADER_STEP_FRACTION;
+                      num = 1;
+                      tmp5 = AI_LOADER_TRACK_STEPS;
+                      _Math2 = Math;
                       first = AI_LOADER_TRACK_STEPS[Math.min(Math, Math.floor(Math, (value - tmp2) / AI_LOADER_STEP_FRACTION) + 1, AI_LOADER_TRACK_STEPS.length - 1)];
                     }
-                    const obj = { transform: items };
-                    items = [{ translateY: -first * size }];
+                    obj = { transform: null };
+                    obj1 = { translateY: null };
+                    tmp8 = size;
+                    obj1.translateY = -first * size;
+                    items = [];
+                    items[0] = obj1;
+                    obj.transform = items;
                     return obj;
                   } else {
+                    str = "Trying to call a non-function";
                     throw new TypeError("Trying to call a non-function");
                   }
                 }
@@ -147,21 +143,30 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
             }
             class O {
               constructor() {
-                let items;
-                const value = sharedValue.get();
+                value = closure_6.get();
                 if (typeof trackStepAt === "function") {
-                  let first;
                   if (value < AI_LOADER_REST_FRACTION) {
+                    tmp7 = AI_LOADER_TRACK_STEPS;
                     first = AI_LOADER_TRACK_STEPS[0];
                   } else {
-                    const _Math = Math;
-                    const _Math2 = Math;
+                    tmp3 = globalThis;
+                    _Math = Math;
+                    tmp4 = AI_LOADER_STEP_FRACTION;
+                    num = 1;
+                    tmp5 = AI_LOADER_TRACK_STEPS;
+                    _Math2 = Math;
                     first = AI_LOADER_TRACK_STEPS[Math.min(Math, Math.floor(Math, (value - tmp2) / AI_LOADER_STEP_FRACTION) + 1, AI_LOADER_TRACK_STEPS.length - 1)];
                   }
-                  const obj = { transform: items };
-                  items = [{ translateY: -first * size }];
+                  obj = { transform: null };
+                  obj1 = { translateY: null };
+                  tmp8 = size;
+                  obj1.translateY = -first * size;
+                  items = [];
+                  items[0] = obj1;
+                  obj.transform = items;
                   return obj;
                 } else {
+                  str = "Trying to call a non-function";
                   throw new TypeError("Trying to call a non-function");
                 }
               }
@@ -181,24 +186,18 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
         cResult[8] = tmp4.glyph;
         cResult[9] = mapped;
         tmp14 = mapped;
+        const tmpResult = tmp(tmp2[7]);
       }
     }
   }
   const fn = function n() {
     const result = sharedValue.set(0);
-    set = sharedValue.set;
-    const withDelay = ReanimatedRexport.withDelay;
     const result1 = index * stagger;
-    ReanimatedRexport;
-    const withRepeat = ReanimatedRexport.withRepeat;
-    ReanimatedRexport;
-    let obj = timing;
-    const obj2 = { duration: cycle, easing: ReanimatedRexport.Easing.linear };
-    const result2 = set(withDelay(result1, withRepeat(obj.withTiming(1, obj2, "animate-always"), -1)));
-    return () => {
-      const obj = index(color[7]);
-      return obj.cancelAnimation(sharedValue);
-    };
+    const obj = ReanimatedRexport;
+    const obj2 = ReanimatedRexport;
+    const obj3 = timing;
+    const result2 = sharedValue.set(obj.withDelay(result1, obj2.withRepeat(obj3.withTiming(1, { duration: cycle, easing: ReanimatedRexport.Easing.linear }, "animate-always"), -1)));
+    return () => index(color[7]).cancelAnimation(sharedValue);
   };
   let items = [cycle, index, sharedValue, stagger];
   cResult[0] = cycle;
@@ -209,78 +208,73 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
   cResult[5] = items;
   tmp7 = items;
   tmp6 = fn;
+  let obj2 = index(color[7]);
 }) : ((index) => {
-  let color;
-  let cycle;
   index = index.index;
-  size = index.size;
+  const size = index.size;
   ({ color: dependencyMap, cycle } = index);
   const stagger = index.stagger;
   const tmp = closure_16(size);
   const glyph = tmp;
-  let obj = index(4618);
-  const sharedValue = obj.useSharedValue(0);
+  const sharedValue = index(4618).useSharedValue(0);
   let items = [cycle, index, sharedValue, stagger];
   const effect = cycle.useEffect(() => {
     const result = sharedValue.set(0);
-    set = sharedValue.set;
-    const withDelay = ReanimatedRexport.withDelay;
     const result1 = index * stagger;
-    ReanimatedRexport;
-    const withRepeat = ReanimatedRexport.withRepeat;
-    ReanimatedRexport;
-    let obj = timing;
-    const obj2 = { duration: cycle, easing: ReanimatedRexport.Easing.linear };
-    const result2 = set(withDelay(result1, withRepeat(obj.withTiming(1, obj2, "animate-always"), -1)));
-    return () => {
-      const obj = index(dependencyMap[7]);
-      return obj.cancelAnimation(sharedValue);
-    };
+    const obj = ReanimatedRexport;
+    const obj2 = ReanimatedRexport;
+    const obj3 = timing;
+    const result2 = sharedValue.set(obj.withDelay(result1, obj2.withRepeat(obj3.withTiming(1, { duration: cycle, easing: ReanimatedRexport.Easing.linear }, "animate-always"), -1)));
+    return () => index(color[7]).cancelAnimation(sharedValue);
   }, items);
-  let obj2 = index(4618);
+  let obj = index(4618);
   class R {
     constructor() {
-      let items;
-      const value = sharedValue.get();
+      value = closure_6.get();
       if (typeof trackStepAt === "function") {
-        let first;
         if (value < AI_LOADER_REST_FRACTION) {
+          tmp7 = AI_LOADER_TRACK_STEPS;
           first = AI_LOADER_TRACK_STEPS[0];
         } else {
-          const _Math = Math;
-          const _Math2 = Math;
+          tmp3 = globalThis;
+          _Math = Math;
+          tmp4 = AI_LOADER_STEP_FRACTION;
+          num = 1;
+          tmp5 = AI_LOADER_TRACK_STEPS;
+          _Math2 = Math;
           first = AI_LOADER_TRACK_STEPS[Math.min(Math, Math.floor(Math, (value - tmp2) / AI_LOADER_STEP_FRACTION) + 1, AI_LOADER_TRACK_STEPS.length - 1)];
         }
-        const obj = { transform: items };
-        items = [{ translateY: -first * size }];
+        obj = { transform: null };
+        obj1 = { translateY: null };
+        tmp8 = size;
+        obj1.translateY = -first * size;
+        items = [];
+        items[0] = obj1;
+        obj.transform = items;
         return obj;
       } else {
+        str = "Trying to call a non-function";
         throw new TypeError("Trying to call a non-function");
       }
     }
   }
-  const obj3 = { trackStepAt, progress: sharedValue, size };
-  R.__closure = obj3;
+  R.__closure = { trackStepAt, progress: sharedValue, size };
   R.__workletHash = 6102802507505;
   R.__initData = __initData2;
-  const animatedStyle = obj2.useAnimatedStyle(R);
-  ({ style: animatedStyle, children: closure_7.map((children) => jsx(AIGlyphText.AIGlyphText, { size, color: dependencyMap, allowFontScaling: false, style: glyph.glyph, children }, children)) });
-  View = size(4618).View;
+  const obj4 = { style: tmp.slot, children: null };
+  const animatedStyle = index(4618).useAnimatedStyle(R);
+  let obj2 = index(4618);
+  let obj3 = { trackStepAt, progress: sharedValue, size };
+  obj4.children = jsx(size(4618).View, { style: animatedStyle, children: closure_7.map((children) => jsx(AIGlyphText.AIGlyphText, { size, color, allowFontScaling: false, style: glyph.glyph, children }, children)) });
   return <stagger style={tmp.slot}>{null}</stagger>;
 });
-const memo = react.memo;
-ReactCompilerGating = ReactCompilerGating_mod;
-const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let accessibilityLabel;
-  let color;
-  let cycle;
-  let num;
-  let num2;
-  let style;
-  const obj = num(576);
-  const cResult = obj.c(16);
+ReactCompilerGating = fn(558);
+let size = fn(2);
+let result = size.fileFinishedImporting("design/visual-identities/ai/AILoader/AILoader.native.tsx");
+
+export const AILoader = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = num(576).c(16);
   ({ size, color, accessibilityLabel, style } = arg0);
-  const tmp = num;
   num = 16;
   if (undefined !== size) {
     num = size;
@@ -290,7 +284,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
     str = color;
   }
   const tmp4 = closure_16(num);
-  const reducedMotion = num2.useContext(tmp(4595).AccessibilityPreferencesContext).reducedMotion;
+  const reducedMotion = num2.useContext(num(4595).AccessibilityPreferencesContext).reducedMotion;
   const tmp5 = reducedMotion.enabled ? closure_8 : closure_5;
   dependencyMap = tmp5;
   num2 = 0;
@@ -298,30 +292,27 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
     num2 = closure_11;
   }
   if (cResult[0] === style) {
-    let tmp7;
     if (cResult[1] === tmp4.loader) {
-      tmp7 = cResult[2];
+      let tmp7 = cResult[2];
     }
     let str3 = "no-hide-descendants";
-    if (null != accessibilityLabel) {
+    if (tmp6) {
       str3 = "yes";
     }
     if (cResult[3] === str) {
       if (cResult[4] === tmp5) {
         if (cResult[5] === num) {
-          let tmp8;
           if (cResult[6] === num2) {
-            tmp8 = cResult[7];
+            let tmp8 = cResult[7];
           }
           if (cResult[8] === accessibilityLabel) {
-            if (cResult[9] === null != accessibilityLabel) {
+            if (cResult[9] === tmp6) {
               if (cResult[10] === tmp7) {
                 if (cResult[11] === str2) {
-                  if (cResult[12] === null == accessibilityLabel) {
+                  if (cResult[12] === tmp12) {
                     if (cResult[13] === str3) {
-                      let tmp13;
                       if (cResult[14] === tmp8) {
-                        tmp13 = cResult[15];
+                        let tmp13 = cResult[15];
                       }
                       return tmp13;
                     }
@@ -330,12 +321,13 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
               }
             }
           }
-          const tmp16 = <View style={tmp7} accessible={null != accessibilityLabel} accessibilityRole={str2} accessibilityLabel={accessibilityLabel} accessibilityElementsHidden={null == accessibilityLabel} importantForAccessibility={str3}>{tmp8}</View>;
+          const obj2 = { style: tmp7, accessible: tmp6, accessibilityRole: str2, accessibilityLabel, accessibilityElementsHidden: !tmp6, importantForAccessibility: str3, children: tmp8 };
+          const tmp16 = <View style={tmp7} accessible={tmp6} accessibilityRole={str2} accessibilityLabel={accessibilityLabel} accessibilityElementsHidden={!tmp6} importantForAccessibility={str3}>{tmp8}</View>;
           cResult[8] = accessibilityLabel;
-          cResult[9] = null != accessibilityLabel;
+          cResult[9] = tmp6;
           cResult[10] = tmp7;
           cResult[11] = str2;
-          cResult[12] = null == accessibilityLabel;
+          cResult[12] = !tmp6;
           cResult[13] = str3;
           cResult[14] = tmp8;
           cResult[15] = tmp16;
@@ -358,8 +350,8 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
   cResult[1] = tmp4.loader;
   cResult[2] = items;
   tmp7 = items;
+  const obj = num(576);
 }) : ((size) => {
-  let cycle;
   let num = size.size;
   if (num === undefined) {
     num = 16;
@@ -370,27 +362,27 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
   }
   const accessibilityLabel = size.accessibilityLabel;
   let num2;
-  const style = size.style;
-  const tmp = closure_16(num);
   const reducedMotion = num2.useContext(num(4595).AccessibilityPreferencesContext).reducedMotion;
   dependencyMap = reducedMotion.enabled ? closure_8 : closure_5;
   num2 = 0;
   if (!reducedMotion.enabled) {
     num2 = closure_11;
   }
-  const items = [tmp.loader, style];
+  const obj = { style: null, accessible: null != accessibilityLabel, accessibilityRole: null, accessibilityLabel: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
+  const items = [closure_16(num).loader, size.style];
+  obj.style = items;
   let str2;
   if (null != accessibilityLabel) {
     str2 = "image";
   }
+  obj.accessibilityRole = str2;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.accessibilityElementsHidden = null == accessibilityLabel;
   let str3 = "no-hide-descendants";
   if (null != accessibilityLabel) {
     str3 = "yes";
   }
-  const obj2 = { length: closure_10 };
-  return <View style={items} accessible={tmp2} accessibilityRole={str2} accessibilityLabel={accessibilityLabel} accessibilityElementsHidden={null == accessibilityLabel} importantForAccessibility={str3}>{Array.from(obj2, (arg0, index) => <closure_19 key={index} index={index} size={num} color={str} cycle={cycle} stagger={num2} />)}</View>;
+  obj.importantForAccessibility = str3;
+  obj.children = Array.from({ length: closure_10 }, (arg0, index) => <closure_19 key={index} index={index} size={num} color={str} cycle={cycle} stagger={num2} />);
+  return <View style={null} accessible={null != accessibilityLabel} accessibilityRole={null} accessibilityLabel={null} accessibilityElementsHidden={null} importantForAccessibility={null}>{null}</View>;
 }));
-let size = size_mod;
-let result = size.fileFinishedImporting("design/visual-identities/ai/AILoader/AILoader.native.tsx");
-
-export const AILoader = memoResult;

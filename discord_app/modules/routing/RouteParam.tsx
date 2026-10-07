@@ -9,7 +9,9 @@ import size from "module_2" /* 2 */;
 
 const PSEUDO_GUILD_IDS = RouteConstants.PSEUDO_GUILD_IDS;
 const StaticChannelRoutes = ChannelConstants.StaticChannelRoutes;
-let obj = {
+const result = size.fileFinishedImporting("modules/routing/RouteParam.tsx");
+
+export const RouteParam = {
   guildId() {
     let obj = arg0;
     if (arg0 === undefined) {
@@ -29,13 +31,11 @@ let obj = {
     if (flag2 === undefined) {
       flag2 = false;
     }
-    const UnescapedPathParam = utils_PathUtils.UnescapedPathParam;
     let str2 = "";
-    const tmp4 = escapeRegExpDefault(str);
     if (flag2) {
       str2 = "?";
     }
-    const unescapedPathParam = new UnescapedPathParam(":" + tmp4 + "(" + combined + ")" + str2);
+    const unescapedPathParam = new utils_PathUtils.UnescapedPathParam(":" + escapeRegExpDefault(str) + "(" + combined + ")" + str2);
     return unescapedPathParam;
   },
   channelId() {
@@ -58,16 +58,11 @@ let obj = {
     if (flag2 === undefined) {
       flag2 = false;
     }
-    const UnescapedPathParam = utils_PathUtils.UnescapedPathParam;
     let str2 = "";
-    const tmp4 = escapeRegExpDefault(str);
     if (flag2) {
       str2 = "?";
     }
-    const unescapedPathParam = new UnescapedPathParam(":" + tmp4 + "(" + combined + ")" + str2);
+    const unescapedPathParam = new utils_PathUtils.UnescapedPathParam(":" + escapeRegExpDefault(str) + "(" + combined + ")" + str2);
     return unescapedPathParam;
   }
 };
-const result = size.fileFinishedImporting("modules/routing/RouteParam.tsx");
-
-export const RouteParam = obj;

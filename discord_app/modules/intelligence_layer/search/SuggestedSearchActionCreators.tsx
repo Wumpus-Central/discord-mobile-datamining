@@ -4,183 +4,249 @@
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import SmartSearchExperiments from "SmartSearchExperiments" /* 12020 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SuggestedSearchStore from "SuggestedSearchStore" /* 11981 */;
-import SmartSearchConstants from "SmartSearchConstants" /* 11982 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-let c2, c3;
-
-let SUGGESTED_SEARCHES_RETRY_MAX_MS;
-let SUGGESTED_SEARCHES_RETRY_MIN_MS;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
+require = fn;
 function canFetchSuggestedSearches(guildId) {
-  obj = SmartSearchExperiments;
-  let isNlpSearchEnabledResult = obj.isNlpSearchEnabled(guildId.guildId, "suggested_searches");
+  let isNlpSearchEnabledResult = SmartSearchExperiments.isNlpSearchEnabled(guildId.guildId, "suggested_searches");
   if (isNlpSearchEnabledResult) {
     const result = SuggestedSearchStore.isLoadingSuggestedSearches(guildId);
-    isNlpSearchEnabledResult = !result && !closure_8.pending;
-    const tmp4 = !result && !closure_8.pending;
+    let tmp4 = !result;
+    if (!result) {
+      tmp4 = !closure_8.pending;
+    }
+    isNlpSearchEnabledResult = tmp4;
   }
   return isNlpSearchEnabledResult;
 }
 function performSuggestedSearchesFetch() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_11.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-let obj = function _performSuggestedSearchesFetch() {
-  obj = _asyncToGenerator(async (arg0, arg1) => {
-    let closure_0;
-    let closure_4;
-    let obj7;
-    let responseStatusCode;
-    let windowSize;
-    let closure_1 = arg1;
-    const guildId = smartSearchQuery.guildId;
-    const channelIds = smartSearchQuery.channelIds;
-    const obj12 = closure_133_1(closure_133_2[6]);
-    let parentSuggestedSearch = obj12.getParentSuggestedSearch();
-    const obj6 = { type: "SUGGESTED_SEARCHES_FETCH_START", scope: smartSearchQuery };
-    const obj13 = closure_133_1(closure_133_2[7]);
-    obj13.dispatch(obj6);
-    const _performance3 = performance;
-    let closure_6 = performance.now();
-    const HTTP = closure_133_0(closure_133_2[8]).HTTP;
-    const request = { url: closure_133_6.SUGGESTED_SEARCHES(guildId), body: obj7, oldFormErrors: true, rejectWithError: true };
-    const post = HTTP.post;
-    obj7 = { channel_ids: channelIds, limit: closure_133_5 };
-    await post(request);
-    if (2 === c8) {
-      let c7 = 0;
-      closure_133_8.fail(closure_133_7);
-      const obj10 = { type: "SUGGESTED_SEARCHES_FETCH_FAILURE", scope: smartSearchQuery, windowSize };
-      const obj2 = closure_133_1(closure_133_2[7]);
-      obj2.dispatch(obj10);
-      const obj11 = { smartSearchQuery, requestId: null, durationMs: performance.now() - closure_6, responseStatusCode, suggestedSearches: [], parentSuggestedSearch };
-      const _performance = performance;
-      const trackSuggestedSearchesReturned = closure_133_1(closure_133_2[6]).trackSuggestedSearchesReturned;
-      let status;
-      if (status != null) {
-        status = status.status;
-      }
-      responseStatusCode = status;
-      if (status == null) {
-        responseStatusCode = null;
-      }
-      const result = trackSuggestedSearchesReturned(obj11, closure_1);
-    } else if (arg0 === 1) {
-      let c9 = 3;
+let closure_11 = async function _performSuggestedSearchesFetch(arg0) {
+  if (c9 === 2) {
+    c9 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      c7 = 0;
-      c9 = 3;
-      obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
-      let closure_7 = value;
-      closure_133_8.succeed();
-      const suggestions = closure_7.body.suggestions;
-      const suggestedSearches = suggestions.map((suggestionId) => ({ suggestionId: suggestionId.suggestion_id, suggestedSearchText: suggestionId.suggested_search_text }));
-      const obj14 = { type: "SUGGESTED_SEARCHES_FETCH_SUCCESS", scope: smartSearchQuery, requestId: closure_7.body.request_id, suggestedSearches, windowSize };
-      const obj9 = closure_133_1(closure_133_2[7]);
-      obj9.dispatch(obj14);
-      const obj15 = { smartSearchQuery, requestId: closure_7.body.request_id, durationMs: performance.now() - closure_6, responseStatusCode: closure_7.status, suggestedSearches, parentSuggestedSearch };
-      const _performance2 = performance;
-      const trackSuggestedSearchesReturned2 = closure_133_1(closure_133_2[6]).trackSuggestedSearchesReturned;
-      const result1 = trackSuggestedSearchesReturned2(obj15, closure_1);
-      c7 = 0;
+      return { value: "IconComponent", done: null };
     }
-    await "IconComponent";
-    parentSuggestedSearch = tmp;
-    let tmp30 = closure_2;
-    if (closure_2 === undefined) {
-      tmp30 = null;
-    }
-    windowSize = tmp30;
-    return "Reflect";
-  });
-  return obj(...arguments);
-};
-obj = function _fetchInitialSuggestedSearches() {
-  obj = _asyncToGenerator(async (arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    if (c2 === 2) {
-      c2 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp2 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c2 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c2 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else if (!SuggestedSearchStore.hasSuggestions(closure_0)) {
-            if (canFetchSuggestedSearches(closure_0)) {
-              c3 = 1;
-              c2 = 1;
-              const obj4 = { value: performSuggestedSearchesFetch(closure_0, closure_1), done: false };
-              return obj4;
-            }
+  } else {
+    try {
+      c9 = 2;
+      if (0 === c8) {
+        if (arg0 === 1) {
+          c9 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c9 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_5 = tmp3;
+          closure_4 = tmp7;
+          closure_132_2 = undefined;
+          closure_132_0 = closure_0;
+          closure_132_1 = closure_1;
+          let tmp32 = closure_2;
+          if (closure_2 === undefined) {
+            tmp32 = null;
           }
+          closure_132_2 = tmp32;
+          let guildId;
+          let channelIds;
+          let parentSuggestedSearch;
+          closure_132_6 = undefined;
+          closure_132_7 = undefined;
+          closure_132_8 = undefined;
+          c8 = 1;
+          c9 = 1;
+          return { value: "Reflect", done: true };
+        }
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
+          c9 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c9 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          guildId = closure_132_0.guildId;
+          channelIds = closure_132_0.channelIds;
+          parentSuggestedSearch = closure_133_1(closure_133_2[6]).getParentSuggestedSearch();
+          const obj14 = closure_133_1(closure_133_2[6]);
+          const obj7 = { type: "SUGGESTED_SEARCHES_FETCH_START", scope: closure_132_0 };
+          closure_133_1(closure_133_2[7]).dispatch(obj7);
+          const _performance3 = performance;
+          closure_132_6 = performance.now();
+          c7 = 1;
+          const HTTP = closure_133_0(closure_133_2[8]).HTTP;
+          const request = { url: closure_133_6.SUGGESTED_SEARCHES(guildId), body: null, oldFormErrors: true, rejectWithError: true };
+          const obj8 = { channel_ids: channelIds, limit: closure_133_5 };
+          request.body = obj8;
+          c8 = 3;
+          c9 = 1;
+          const obj9 = { value: HTTP.post(request), done: false };
+          return obj9;
+        }
+      } else {
+        if (2 === tmp7) {
+          c7 = 0;
+          closure_132_9 = closure_6;
+          closure_133_8.fail(closure_133_7);
+          const obj11 = { type: "SUGGESTED_SEARCHES_FETCH_FAILURE", scope: closure_132_0, windowSize: closure_132_2 };
+          closure_133_1(closure_133_2[7]).dispatch(obj11);
+          const obj2 = closure_133_1(closure_133_2[7]);
+          const obj13 = { smartSearchQuery: closure_132_0, requestId: null, durationMs: null, responseStatusCode: null, suggestedSearches: null, parentSuggestedSearch: null };
+          const _performance = performance;
+          obj13.durationMs = performance.now() - closure_132_6;
+          let status;
+          if (closure_132_9 != null) {
+            status = closure_132_9.status;
+          }
+          let responseStatusCode = status;
+          if (status == null) {
+            responseStatusCode = null;
+          }
+          obj13.responseStatusCode = responseStatusCode;
+          obj13.suggestedSearches = [];
+          obj13.parentSuggestedSearch = parentSuggestedSearch;
+          const result = closure_133_1(closure_133_2[6]).trackSuggestedSearchesReturned(obj13, closure_132_1);
+          c9 = 3;
+          const obj4 = closure_133_1(closure_133_2[6]);
         } else if (arg0 === 1) {
+          c9 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_132_7 = value;
+          closure_133_8.succeed();
+          const suggestions = closure_132_7.body.suggestions;
+          closure_132_8 = suggestions.map((suggestionId) => ({ suggestionId: suggestionId.suggestion_id, suggestedSearchText: suggestionId.suggested_search_text }));
+          const obj16 = { type: "SUGGESTED_SEARCHES_FETCH_SUCCESS", scope: closure_132_0, requestId: closure_132_7.body.request_id, suggestedSearches: closure_132_8, windowSize: closure_132_2 };
+          closure_133_1(closure_133_2[7]).dispatch(obj16);
+          const obj10 = closure_133_1(closure_133_2[7]);
+          const obj17 = { smartSearchQuery: closure_132_0, requestId: closure_132_7.body.request_id, durationMs: null, responseStatusCode: null, suggestedSearches: null, parentSuggestedSearch: null };
+          const _performance2 = performance;
+          obj17.durationMs = performance.now() - closure_132_6;
+          obj17.responseStatusCode = closure_132_7.status;
+          obj17.suggestedSearches = closure_132_8;
+          obj17.parentSuggestedSearch = parentSuggestedSearch;
+          const result1 = closure_133_1(closure_133_2[6]).trackSuggestedSearchesReturned(obj17, closure_132_1);
+          c7 = 0;
+          const obj12 = closure_133_1(closure_133_2[6]);
+        }
+        c7 = 0;
+        c9 = 3;
+        const obj = { value, done: true };
+        return obj;
+      }
+    } catch (tmp33) {
+      closure_6 = tmp33;
+      if (tmp4 === c7) {
+        c9 = tmp2;
+        throw tmp33;
+      } else {
+        c8 = tmp;
+      }
+    }
+  }
+};
+let closure_12 = async function _fetchInitialSuggestedSearches(arg0) {
+  if (c2 === 2) {
+    c2 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c2 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
           c2 = 3;
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else if (!SuggestedSearchStore.hasSuggestions(closure_0)) {
+          if (canFetchSuggestedSearches(closure_0)) {
+            c3 = 1;
+            c2 = 1;
+            const obj4 = { value: performSuggestedSearchesFetch(closure_0, closure_1), done: false };
+            return obj4;
+          }
         }
+      } else if (arg0 === 1) {
         c2 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp9) {
+        throw value;
+      } else if (arg0 === 2) {
         c2 = 3;
-        throw tmp9;
+        const obj = { value, done: true };
+        return obj;
       }
+      c2 = 3;
+      return { value: "IconComponent", done: null };
+    } catch (tmp10) {
+      c2 = tmp;
+      throw tmp10;
     }
-  });
-  return obj(...arguments);
+  }
 };
+const SmartSearchConstants = fn(11982);
 ({ SUGGESTED_SEARCHES_REQUEST_LIMIT: hasOwnProperty, SUGGESTED_SEARCHES_RETRY_MIN_MS, SUGGESTED_SEARCHES_RETRY_MAX_MS } = SmartSearchConstants);
-({ Endpoints: metroRequire, NOOP: metroImportDefault } = Constants);
-let tmp4 = new BackoffDefault(SUGGESTED_SEARCHES_RETRY_MIN_MS, SUGGESTED_SEARCHES_RETRY_MAX_MS, true);
-let closure_8 = tmp4;
+const Constants = fn(1085);
+({ Endpoints: metroRequire, NOOP: closure_7 } = Constants);
+let closure_8 = new BackoffDefault(SUGGESTED_SEARCHES_RETRY_MIN_MS, SUGGESTED_SEARCHES_RETRY_MAX_MS, true);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/SuggestedSearchActionCreators.tsx");
 
 export const fetchInitialSuggestedSearches = function fetchInitialSuggestedSearches() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_12.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const advanceSuggestedSearches = function advanceSuggestedSearches(smartSearchQuery, arg1, windowSize) {
   if (!SuggestedSearchStore.isLoadingSuggestedSearches(smartSearchQuery)) {
     if (SuggestedSearchStore.willExhaustSuggestedSearches(smartSearchQuery, windowSize)) {
-      const obj2 = SmartSearchExperiments;
-      let isNlpSearchEnabledResult = obj2.isNlpSearchEnabled(smartSearchQuery.guildId, "suggested_searches");
+      let isNlpSearchEnabledResult = SmartSearchExperiments.isNlpSearchEnabled(smartSearchQuery.guildId, "suggested_searches");
       if (isNlpSearchEnabledResult) {
         const result = SuggestedSearchStore.isLoadingSuggestedSearches(smartSearchQuery);
-        isNlpSearchEnabledResult = !result && !closure_8.pending;
-        const tmp6 = !result && !closure_8.pending;
+        let tmp6 = !result;
+        if (!result) {
+          tmp6 = !closure_8.pending;
+        }
+        isNlpSearchEnabledResult = tmp6;
       }
       if (isNlpSearchEnabledResult) {
         performSuggestedSearchesFetch(smartSearchQuery, arg1, windowSize);
       }
     }
     const obj4 = { type: "SUGGESTED_SEARCH_ADVANCE", scope: smartSearchQuery, windowSize };
-    const obj3 = DispatcherDefault;
-    obj3.dispatch(obj4);
+    DispatcherDefault.dispatch(obj4);
   }
 };

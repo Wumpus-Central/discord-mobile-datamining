@@ -5,12 +5,12 @@ import size from "module_2" /* 2 */;
 
 class ROBLOX_PROTOCOL_URL {
   constructor(arg0) {
-    return "roblox://placeId=" + arg0;
+    return "roblox://placeId=" + global;
   }
 }
 class ROBLOX_WEB_URL {
   constructor(arg0) {
-    return "https://www.roblox.com/games/start?placeId=" + arg0;
+    return "https://www.roblox.com/games/start?placeId=" + global;
   }
 }
 const result = size.fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgameTypes.tsx");

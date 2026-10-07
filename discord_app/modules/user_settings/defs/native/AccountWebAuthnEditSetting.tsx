@@ -2,30 +2,27 @@
 
 // Module 14617 (AccountWebAuthnEditSetting)
 import Constants from "Constants" /* 1085 */;
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import SettingsConstants from "SettingsConstants" /* 7645 */;
 import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const UserSettingsSections = Constants.UserSettingsSections;
-const obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.UBBwwF);
+    const intl = util.intl;
+    return intl.string(util.t.UBBwwF);
   },
-  parent: MobileUserSettings.ACCOUNT_WEB_AUTHN_VIEW,
+  parent: SettingsConstants.MobileUserSettings.ACCOUNT_WEB_AUTHN_VIEW,
   unsearchable: true,
   screen: {
-    route: UserSettingsSections.WEBAUTHN_EDIT,
+    route: Constants.UserSettingsSections.WEBAUTHN_EDIT,
     getComponent() {
       return require("WebAuthnEditStep").default;
     }
   }
-};
-const route = SettingBuilders.createRoute(obj);
+});
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountWebAuthnEditSetting.tsx");
 
 export default route;

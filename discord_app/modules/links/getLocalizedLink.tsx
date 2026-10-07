@@ -1,13 +1,12 @@
 // === Module 4497: getLocalizedLink ===
 
 // Module 4497 (getLocalizedLink)
-import intl from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/links/getLocalizedLink.tsx");
 
 export default function getLocalizedLink(arg0) {
-  const str = intl.intl.currentLocale;
-  const formatted = str.toLowerCase();
+  const formatted = util.intl.currentLocale.toLowerCase();
   return formatted in arg0 ? arg0[formatted] : arg0.default;
 };

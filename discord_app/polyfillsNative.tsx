@@ -1,14 +1,14 @@
 // === Module 14075: polyfillsNative ===
 
 // Module 14075 (polyfillsNative)
-import _mod1248 from "module_1248" /* 1248 */;
+import q from "q" /* 1248 */;
 import Buffer from "Buffer" /* 1263 */;
 import _mod14170 from "module_14170" /* 14170 */;
 import Logger from "Logger" /* 3 */;
 import module_14076 from "module_14076" /* 14076 */;
-import react_native from "react-native" /* 14146 */;
-import getPluralRules from "getPluralRules" /* 14164 */;
-import module_14167 from "module_14167" /* 14167 */;
+import get_ActivityIndicator from "module_14146" /* 14146 */;
+import _typeof from "module_14164" /* 14164 */;
+import GetOption from "module_14167" /* 14167 */;
 import size from "module_2" /* 2 */;
 
 if (typeof process === "undefined") {
@@ -46,6 +46,6 @@ if (tmp7) {
   tmp7 = null != window.TextDecoder;
 }
 if (!tmp7) {
-  const _module6 = _mod1248;
+  const _module6 = q;
 }
 const result = size.fileFinishedImporting("polyfillsNative.tsx");

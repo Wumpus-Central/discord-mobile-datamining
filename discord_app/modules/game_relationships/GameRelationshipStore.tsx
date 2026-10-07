@@ -1,23 +1,16 @@
 // === Module 7155: GameRelationshipStore ===
 
 // Module 7155 (GameRelationshipStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
-import SecondaryIndexMap from "SecondaryIndexMap" /* 4510 */;
 import RelationshipStore from "RelationshipStore" /* 4525 */;
-import size from "module_2" /* 2 */;
-
-let closure_2;
 
 function recountRelationshipTypes() {
-  let c0 = 0;
-  let c1 = 0;
-  let c2 = 0;
+  c0 = 0;
+  c1 = 0;
+  c2 = 0;
   const values = secondaryIndexMap.values();
   const item = values.forEach((item) => {
-    let id;
-    let type;
     ({ type, id } = item);
     if (type === RelationshipTypes.FRIEND) {
       closure_2 = closure_2 + 1;
@@ -31,9 +24,9 @@ function recountRelationshipTypes() {
       }
     }
   });
-  let closure_7 = c0;
-  let closure_8 = c1;
-  let closure_9 = c2;
+  closure_7 = c0;
+  closure_8 = c1;
+  closure_9 = c2;
 }
 function remove(arg0, arg1) {
   if (typeof GAME_RELATIONSHIP_KEY === "function") {
@@ -43,7 +36,7 @@ function remove(arg0, arg1) {
     throw new TypeError("Trying to call a non-function");
   }
 }
-const RelationshipTypes = Constants.RelationshipTypes;
+const RelationshipTypes = fn(1085).RelationshipTypes;
 function GAME_RELATIONSHIP_KEY(arg0, arg1) {
 
 }
@@ -56,7 +49,7 @@ function GameRelationshipIndexes_BY_USER_ID(arg0) {
 function GameRelationshipIndexes_BY_RELATIONSHIP_TYPE(arg0) {
 
 }
-const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap(function gameRelationshipsIndex(arg0) {
+const secondaryIndexMap = new fn(4510).SecondaryIndexMap(function gameRelationshipsIndex(arg0) {
   const items = [];
   if (typeof GameRelationshipIndexes_BY_APPLICATION_ID === "function") {
     const _HermesInternal = HermesInternal;
@@ -81,85 +74,82 @@ const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap(function gameR
 let c7 = 0;
 let c8 = 0;
 let c9 = 0;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class GameRelationshipStore extends Store {
-  initialize() {
-    this.waitFor(RelationshipStore);
-  }
-  getPendingIncomingCount() {
-    return c7;
-  }
-  getPendingOutgoingCount() {
-    return c8;
-  }
-  getGameFriendCount() {
-    return c9;
-  }
-  getGameFriendsForApplication(arg0) {
-    if (typeof GameRelationshipIndexes_BY_APPLICATION_ID === "function") {
-      const _HermesInternal = HermesInternal;
-      const tmp2Result = tmp2("application-id-" + arg0, true);
-      return tmp2Result.filter((type) => type.type === constants.FRIEND);
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-  getGameRelationshipsForUser(id) {
-    if (typeof GameRelationshipIndexes_BY_USER_ID === "function") {
-      const _HermesInternal = HermesInternal;
-      return tmp2("user-id-" + id, true);
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-  getGameRelationshipsForUserByType(id, FRIEND) {
-    let closure_0 = FRIEND;
-    const gameRelationshipsForUser = this.getGameRelationshipsForUser(id);
-    return gameRelationshipsForUser.filter((type) => type.type === FRIEND);
-  }
-  getGameFriendsForUser(id) {
-    return this.getGameRelationshipsForUserByType(id, RelationshipTypes.FRIEND);
-  }
-  getGameRelationshipCount() {
-    return secondaryIndexMap.size();
-  }
-  getGameRelationships() {
-    return secondaryIndexMap;
-  }
-  getGameRelationshipsByType(PENDING_INCOMING) {
-    if (typeof GameRelationshipIndexes_BY_RELATIONSHIP_TYPE === "function") {
-      const _HermesInternal = HermesInternal;
-      return tmp2("relationship-type-" + PENDING_INCOMING, true);
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-  getGameRelationshipsVersion() {
-    return secondaryIndexMap.version;
-  }
 }
 const prototype = GameRelationshipStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(RelationshipStore);
+};
+prototype["getPendingIncomingCount"] = function getPendingIncomingCount() {
+  return c7;
+};
+prototype["getPendingOutgoingCount"] = function getPendingOutgoingCount() {
+  return c8;
+};
+prototype["getGameFriendCount"] = function getGameFriendCount() {
+  return c9;
+};
+prototype["getGameFriendsForApplication"] = function getGameFriendsForApplication(arg0) {
+  if (typeof GameRelationshipIndexes_BY_APPLICATION_ID === "function") {
+    const _HermesInternal = HermesInternal;
+    return tmp2("application-id-" + arg0, true).filter((type) => type.type === constants.FRIEND);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
+prototype["getGameRelationshipsForUser"] = function getGameRelationshipsForUser(id) {
+  if (typeof GameRelationshipIndexes_BY_USER_ID === "function") {
+    const _HermesInternal = HermesInternal;
+    return tmp2("user-id-" + id, true);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
+prototype["getGameRelationshipsForUserByType"] = function getGameRelationshipsForUserByType(id, FRIEND) {
+  closure_0 = FRIEND;
+  const gameRelationshipsForUser = this.getGameRelationshipsForUser(id);
+  return gameRelationshipsForUser.filter((type) => type.type === closure_0);
+};
+prototype["getGameFriendsForUser"] = function getGameFriendsForUser(id) {
+  return this.getGameRelationshipsForUserByType(id, RelationshipTypes.FRIEND);
+};
+prototype["getGameRelationshipCount"] = function getGameRelationshipCount() {
+  return secondaryIndexMap.size();
+};
+prototype["getGameRelationships"] = function getGameRelationships() {
+  return secondaryIndexMap;
+};
+prototype["getGameRelationshipsByType"] = function getGameRelationshipsByType(PENDING_INCOMING) {
+  if (typeof GameRelationshipIndexes_BY_RELATIONSHIP_TYPE === "function") {
+    const _HermesInternal = HermesInternal;
+    return tmp2("relationship-type-" + PENDING_INCOMING, true);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
+prototype["getGameRelationshipsVersion"] = function getGameRelationshipsVersion() {
+  return secondaryIndexMap.version;
+};
 GameRelationshipStore.displayName = "GameRelationshipStore";
-let obj = {
+const gameRelationshipStore = new GameRelationshipStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(gameRelationships) {
     secondaryIndexMap.clear();
     gameRelationships = gameRelationships.gameRelationships;
     const item = gameRelationships.forEach((id) => {
-      const obj = { id: id.id, applicationId: id.application_id, type: id.type, since: id.since, dmAccessType: id.dm_access_type };
       if (typeof c2 === "function") {
         const _HermesInternal = HermesInternal;
         tmp2("" + tmp4 + "-" + tmp3, obj);
       } else {
         throw new TypeError("Trying to call a non-function");
       }
+      obj = { id: id.id, applicationId: id.application_id, type: id.type, since: id.since, dmAccessType: id.dm_access_type };
     });
-    let c0 = 0;
-    let c1 = 0;
-    let c2 = 0;
+    c0 = 0;
+    c1 = 0;
+    c2 = 0;
     const values = secondaryIndexMap.values();
     const item1 = values.forEach((item) => {
-      let id;
-      let type;
       ({ type, id } = item);
       if (type === RelationshipTypes.FRIEND) {
         closure_2 = closure_2 + 1;
@@ -173,22 +163,19 @@ let obj = {
         }
       }
     });
-    let closure_7 = c0;
-    let closure_8 = c1;
-    let closure_9 = c2;
+    closure_7 = c0;
+    closure_8 = c1;
+    closure_9 = c2;
   },
   GAME_RELATIONSHIP_ADD: function handleGameRelationshipAdd(gameRelationship) {
-    gameRelationship = gameRelationship.gameRelationship;
     if (typeof c2 === "function") {
       const _HermesInternal = HermesInternal;
-      tmp("" + tmp3 + "-" + tmp2, gameRelationship);
-      let c0 = 0;
-      let c1 = 0;
+      tmp("" + tmp3 + "-" + tmp2, gameRelationship.gameRelationship);
+      c0 = 0;
+      c1 = 0;
       c2 = 0;
       const values = secondaryIndexMap.values();
       const item = values.forEach((item) => {
-        let id;
-        let type;
         ({ type, id } = item);
         if (type === RelationshipTypes.FRIEND) {
           closure_2 = closure_2 + 1;
@@ -202,9 +189,9 @@ let obj = {
           }
         }
       });
-      let closure_7 = c0;
-      let closure_8 = c1;
-      let closure_9 = c2;
+      closure_7 = c0;
+      closure_8 = c1;
+      closure_9 = c2;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -213,13 +200,11 @@ let obj = {
     if (typeof closure_2 === "function") {
       const _HermesInternal = HermesInternal;
       tmp3("" + tmp2 + "-" + tmp);
-      let closure_0 = 0;
-      let closure_1 = 0;
+      closure_0 = 0;
+      closure_1 = 0;
       closure_2 = 0;
       const values = secondaryIndexMap.values();
       const item = values.forEach((item) => {
-        let id;
-        let type;
         ({ type, id } = item);
         if (type === RelationshipTypes.FRIEND) {
           closure_2 = closure_2 + 1;
@@ -233,9 +218,9 @@ let obj = {
           }
         }
       });
-      let closure_7 = closure_0;
-      let closure_8 = closure_1;
-      let closure_9 = closure_2;
+      closure_7 = closure_0;
+      closure_8 = closure_1;
+      closure_9 = closure_2;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -249,7 +234,10 @@ let obj = {
         let tmp4 = nextResult;
         let values = secondaryIndexMap.values(GameRelationshipIndexes_BY_APPLICATION_ID(nextResult));
         for (const item10018 of values) {
-          let tmp12 = item10018.type !== RelationshipTypes.PENDING_INCOMING && item10018.type !== tmp11.PENDING_OUTGOING;
+          let tmp12 = item10018.type !== RelationshipTypes.PENDING_INCOMING;
+          if (tmp12) {
+            tmp12 = item10018.type !== tmp11.PENDING_OUTGOING;
+          }
           if (!tmp12) {
             let tmp17 = remove(item10018.id, tmp4);
           }
@@ -260,8 +248,8 @@ let obj = {
       recountRelationshipTypes();
     }
   }
-};
-const gameRelationshipStore = new GameRelationshipStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_relationships/GameRelationshipStore.tsx");
 
 export default gameRelationshipStore;

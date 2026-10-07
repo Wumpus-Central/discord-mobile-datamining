@@ -3,27 +3,22 @@
 // Module 15626 (startFrameMonitor)
 import size from "module_2" /* 2 */;
 
-let closure_3, closure_4;
-
 let c0 = 16.666666666666668;
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/startFrameMonitor.tsx");
 
 export const FRAME_BUDGET_MS = 16.666666666666668;
 export const startFrameMonitor = function startFrameMonitor() {
-  let nowResult;
-  let worstMs;
-  let closure_1 = performance.now();
-  let c2 = false;
+  closure_1 = performance.now();
+  c2 = false;
   const frames = 0;
   const dropped = 0;
-  let c5 = 0;
-  let closure_6 = 0;
-  let c7 = false;
+  c5 = 0;
+  closure_6 = 0;
+  c7 = false;
   function tick() {
-    let closure_1 = performance.now();
-    const tmp2 = c2;
-    if (tmp2) {
-      const diff = closure_1 - closure_1;
+    nowResult = performance.now();
+    if (c2) {
+      const diff = nowResult - nowResult;
       closure_3 = closure_3 + 1;
       closure_6 = closure_6 + diff;
       if (diff > c5) {
@@ -37,23 +32,22 @@ export const startFrameMonitor = function startFrameMonitor() {
     }
     closure_0 = requestAnimationFrame(tick);
   }
-  let closure_0 = requestAnimationFrame(tick);
-  let obj = {
+  closure_0 = requestAnimationFrame(tick);
+  return {
     stop() {
-      let num;
-      const tmp = c7;
-      if (!tmp) {
+      if (!c7) {
         const _cancelAnimationFrame = cancelAnimationFrame;
         cancelAnimationFrame(closure_0);
         c7 = true;
       }
-      const obj = { frames, dropped, meanMs: num, worstMs };
-      num = 0;
+      const obj = { frames, dropped, meanMs: null, worstMs: null };
+      let num = 0;
       if (frames > 0) {
-        num = closure_6 / tmp5;
+        num = closure_6 / tmp4;
       }
+      obj.meanMs = num;
+      obj.worstMs = worstMs;
       return obj;
     }
   };
-  return obj;
 };

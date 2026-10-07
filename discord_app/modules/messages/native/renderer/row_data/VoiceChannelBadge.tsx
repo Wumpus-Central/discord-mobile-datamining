@@ -1,7 +1,7 @@
 // === Module 13040: VoiceChannelBadge ===
 
 // Module 13040 (VoiceChannelBadge)
-import react_native from "react-native" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1085 */;
 import AgeGateUtils from "AgeGateUtils" /* 5106 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
@@ -11,52 +11,50 @@ import PermissionStore from "PermissionStore" /* 4515 */;
 import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import size from "module_2" /* 2 */;
 
-const Image = react_native.Image;
+const Image = _mod17.Image;
 const Permissions = Constants.Permissions;
 let result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx");
 
 export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guildId1) {
   const guildId = guildId1;
-  const getVoiceChannelBadgeExperiment = VoiceChannelBadgeExperiment.getVoiceChannelBadgeExperiment;
-  VoiceChannelBadgeExperiment;
-  if (getVoiceChannelBadgeExperiment({ guildId, location: "VoiceChannelBadgeNative" }).enabled) {
+  if (obj.getVoiceChannelBadgeExperiment({ guildId, location: "VoiceChannelBadgeNative" }).enabled) {
     if (null != guildId1) {
       const discoverableVoiceState = VoiceStateStore.getDiscoverableVoiceState(guildId1, id);
       if (null != discoverableVoiceState) {
         let channelId;
-        const getChannel = ChannelStore.getChannel;
         if (discoverableVoiceState != null) {
           channelId = discoverableVoiceState.channelId;
         }
-        const channel = getChannel(channelId);
+        const channel = ChannelStore.getChannel(channelId);
         if (null != channel) {
-          const resolveAssetSource = Image.resolveAssetSource;
-          const tmpResult = utils_ChannelUtils;
-          const assetSource = resolveAssetSource(tmpResult.getChannelIcon(channel));
+          const assetSource = Image.resolveAssetSource(utils_ChannelUtils.getChannelIcon(channel));
           let uri;
           if (assetSource != null) {
             uri = assetSource.uri;
           }
           if (null != uri) {
-            const tmpResult3 = AgeGateUtils;
-            let result = tmpResult3.shouldAgeVerifyForAgeGate();
+            let result = AgeGateUtils.shouldAgeVerifyForAgeGate();
             if (result) {
+              result = AgeGateUtils.shouldShowAgeGateForChannelId(channel.id);
               const tmpResult4 = AgeGateUtils;
-              result = tmpResult4.shouldShowAgeGateForChannelId(channel.id);
             }
             let isPrivateResult = channel.isPrivate();
             if (!isPrivateResult) {
               isPrivateResult = PermissionStore.can(Permissions.VIEW_CHANNEL, channel) && PermissionStore.can(Permissions.CONNECT, channel);
-              PermissionStore.can(Permissions.VIEW_CHANNEL, channel) && PermissionStore.can(Permissions.CONNECT, channel);
+              const tmp9 = PermissionStore.can(Permissions.VIEW_CHANNEL, channel) && PermissionStore.can(Permissions.CONNECT, channel);
             }
             if (!result) {
               if (isPrivateResult) {
-                return { channelId: channel.id, channelIconUrl: uri };
+                const obj2 = { channelId: channel.id, channelIconUrl: uri };
+                return obj2;
               }
             }
+            const tmpResult3 = AgeGateUtils;
           }
+          const tmpResult = utils_ChannelUtils;
         }
       }
     }
   }
+  obj = VoiceChannelBadgeExperiment;
 };

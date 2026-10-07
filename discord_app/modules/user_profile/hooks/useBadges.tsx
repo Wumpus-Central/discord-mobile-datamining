@@ -2,24 +2,21 @@
 
 // Module 7925 (useBadges)
 import useStateFromStores from "useStateFromStores" /* 573 */;
-import react from "react" /* 576 */;
+import c from "c" /* 576 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import StreamerModeStore from "StreamerModeStore" /* 4729 */;
 import UserStore from "UserStore" /* 1377 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
+require = fn;
 const legacy_username = "legacy_username";
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((getBadges, arg1) => {
-  let currentUser;
-  let tmp10;
-  let tmp5;
-  let tmp6;
-  let tmp9;
-  let obj = react;
-  const cResult = obj.c(12);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useBadges.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((getBadges, arg1) => {
+  const cResult = c.c(12);
   const LegacyUsernameDisabled = UserSettings.LegacyUsernameDisabled;
   let setting = LegacyUsernameDisabled.useSetting();
   if (undefined !== arg1) {
@@ -37,8 +34,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((getBadges, arg1) =
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const tmpResult = useStateFromStores;
-  const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
+  const stateFromStores = useStateFromStores.useStateFromStores(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [StreamerModeStore];
     const fn2 = function v() {
@@ -46,32 +42,30 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((getBadges, arg1) =
     };
     cResult[2] = items1;
     cResult[3] = fn2;
-    tmp10 = fn2;
-    tmp9 = items1;
+    let tmp10 = fn2;
+    let tmp9 = items1;
   } else {
     tmp9 = cResult[2];
     tmp10 = cResult[3];
   }
-  const tmpResult2 = useStateFromStores;
-  const stateFromStores1 = tmpResult2.useStateFromStores(tmp9, tmp10);
+  const tmpResult = useStateFromStores;
+  const stateFromStores1 = useStateFromStores.useStateFromStores(tmp9, tmp10);
   if (null == getBadges) {
-    let tmp17;
     const _Symbol2 = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
       const items2 = [];
       cResult[4] = items2;
-      tmp17 = items2;
+      let tmp19 = items2;
     } else {
-      tmp17 = cResult[4];
+      tmp19 = cResult[4];
     }
-    return tmp17;
+    return tmp19;
   } else {
     if (cResult[5] === stateFromStores) {
       if (cResult[6] === setting) {
         if (cResult[7] === getBadges) {
-          let tmp13;
           if (cResult[8] === stateFromStores1) {
-            tmp13 = cResult[9];
+            let tmp13 = cResult[9];
           }
           return tmp13;
         }
@@ -84,89 +78,97 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((getBadges, arg1) =
     if (badges == null) {
       badges = [];
     }
-    let found = badges;
+    let arr4 = badges;
     if (null != stateFromStores) {
-      found = badges;
+      arr4 = badges;
       if (stateFromStores.id === getBadges.userId) {
-        found = badges;
+        arr4 = badges;
         if (setting) {
           const _Symbol = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
             class E {
-              constructor(id) {
-                return id.id !== legacy_username;
+              constructor(arg0) {
+                return getBadges.id !== closure_1_4;
               }
             }
             cResult[10] = E;
           } else {
             class E {
-              constructor(id) {
-                return id.id !== legacy_username;
+              constructor(arg0) {
+                return getBadges.id !== closure_1_4;
               }
             }
           }
-          found = badges.filter(E);
+          const found = badges.filter(E);
         }
       }
     }
-    let mapped = found;
-    if (stateFromStores1) {
+    if (!stateFromStores1) {
       class E {
-        constructor(id) {
-          return id.id !== legacy_username;
+        constructor(arg0) {
+          return getBadges.id !== closure_1_4;
+        }
+      }
+      cResult[5] = stateFromStores;
+      cResult[6] = setting;
+      cResult[7] = getBadges;
+      cResult[8] = stateFromStores1;
+      cResult[9] = arr4;
+      tmp13 = arr4;
+    } else {
+      class E {
+        constructor(arg0) {
+          return getBadges.id !== closure_1_4;
         }
       }
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
         class F {
-          constructor(id) {
-            let description;
-            const obj = { description };
-            const merged = Object.assign(id);
-            if (id.id === legacy_username) {
-              const intl = require("intl").intl;
-              description = intl.string(require("intl").t.Br1ls3);
+          constructor(arg0) {
+            obj = {};
+            merged = Object.assign(getBadges);
+            if (getBadges.id === closure_1_4) {
+              tmp2 = closure_1_0;
+              tmp3 = closure_1_1;
+              intl = closure_1_0(closure_1_1[6]).intl;
+              description = intl.string(closure_1_0(closure_1_1[6]).t.Br1ls3);
             } else {
-              description = id.description;
+              description = getBadges.description;
             }
+            obj.description = description;
             return obj;
           }
         }
         cResult[11] = F;
       } else {
         class F {
-          constructor(id) {
-            let description;
-            const obj = { description };
-            const merged = Object.assign(id);
-            if (id.id === legacy_username) {
-              const intl = require("intl").intl;
-              description = intl.string(require("intl").t.Br1ls3);
+          constructor(arg0) {
+            obj = {};
+            merged = Object.assign(getBadges);
+            if (getBadges.id === closure_1_4) {
+              tmp2 = closure_1_0;
+              tmp3 = closure_1_1;
+              intl = closure_1_0(closure_1_1[6]).intl;
+              description = intl.string(closure_1_0(closure_1_1[6]).t.Br1ls3);
             } else {
-              description = id.description;
+              description = getBadges.description;
             }
+            obj.description = description;
             return obj;
           }
         }
       }
-      mapped = found.map(F);
+      const mapped = arr4.map(F);
     }
-    cResult[5] = stateFromStores;
-    cResult[6] = setting;
-    cResult[7] = getBadges;
-    cResult[8] = stateFromStores1;
-    cResult[9] = mapped;
-    tmp13 = mapped;
   }
+  const tmpResult2 = useStateFromStores;
 }) : ((getBadges, arg1) => {
-  let currentUser;
   const LegacyUsernameDisabled = UserSettings.LegacyUsernameDisabled;
   let setting = LegacyUsernameDisabled.useSetting();
   if (undefined !== arg1) {
     setting = arg1;
   }
   const items = [UserStore];
-  const tmpResult = useStateFromStores;
-  const stateFromStores = tmpResult.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = useStateFromStores.useStateFromStores(items, () => currentUser.getCurrentUser());
   useStateFromStores;
   [][0] = StreamerModeStore;
   if (null == getBadges) {
@@ -180,29 +182,26 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((getBadges, arg1) =
       badges = [];
     }
     let found = badges;
-    const tmp7 = null != stateFromStores && stateFromStores.id === getBadges.userId && setting;
     if (tmp7) {
       found = badges.filter((id) => id.id !== legacy_username);
     }
     let mapped = found;
     if (tmp6) {
       mapped = found.map((id) => {
-        let description;
-        const obj = { description };
+        const obj = {};
         const merged = Object.assign(id);
         if (id.id === legacy_username) {
-          const intl = require("intl").intl;
-          description = intl.string(require("intl").t.Br1ls3);
+          const intl = require("util").intl;
+          let description = intl.string(require("util").t.Br1ls3);
         } else {
           description = id.description;
         }
+        obj.description = description;
         return obj;
       });
     }
     return mapped;
   }
+  const tmpResult = useStateFromStores;
 });
-const result = size.fileFinishedImporting("modules/user_profile/hooks/useBadges.tsx");
-
-export default tmp2;
 export const QUEST_COMPLETED_BADGE = "quest_completed";

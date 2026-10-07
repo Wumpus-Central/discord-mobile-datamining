@@ -1,10 +1,9 @@
 // === Module 12238: GuildPowerupsLevelCard ===
 
 // Module 12238 (GuildPowerupsLevelCard)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BoostGemIcon2 from "BoostGemIcon" /* 4832 */;
+import BoostGemIcon from "BoostGemIcon" /* 4832 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import LinearGradientDefault from "LinearGradient" /* 5612 */;
 import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6477 */;
@@ -12,197 +11,175 @@ import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12174 */;
 import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12191 */;
 import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12196 */;
 import GuildBoostingMarketingUtils from "GuildBoostingMarketingUtils" /* 12199 */;
-import GuildBoostingMarketingConstants from "GuildBoostingMarketingConstants" /* 12239 */;
 import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12240 */;
 import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12241 */;
-import react from "react" /* 19 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4774 */;
-import Constants from "Constants" /* 1085 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
-let importDefault;
-
-let c10;
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let obj10;
-let obj11;
-let obj2;
-let obj3;
-let obj4;
-let obj5;
-let obj6;
-let obj7;
-let obj8;
-let obj9;
-let size;
-let size1;
-let unpackModuleId;
-const View = react_native.View;
+require = fn;
+const View = fn(17).View;
+const GuildPowerupsConstants = fn(4774);
 ({ LevelCardPosition: hasOwnProperty, PowerupActiveStatusType: metroRequire } = GuildPowerupsConstants);
-({ BoostedGuildTiers: metroImportDefault, HorizontalGradient: metroImportAll } = Constants);
-const TIER_CARDS = GuildBoostingMarketingConstants.TIER_CARDS;
-({ jsx: c10, jsxs: unpackModuleId } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { cardContainer: { flex: 1 }, card: { padding: 0, overflow: "hidden", flex: 1 }, progressContainer: obj2, progress: obj3, progressStart: obj4, progressEnd: obj5, boostContainerBackground: size, boostContainer: size1, boostContainerActive: obj6, boostContainerInactive: obj7, contentContainer: obj8, perkRowContainer: obj9, perkRow: { flexDirection: "row", alignItems: "center" }, perkRowStyle: { flexDirection: "row", alignItems: "center" }, perkText: obj10, footerContainer: obj11 };
-obj2 = { marginVertical: nativeDefault.space.PX_24, position: "relative" };
-createStyles = createStyles.createStyles;
-obj3 = { height: 6, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
-obj4 = { marginStart: nativeDefault.space.PX_16 };
-obj5 = { marginEnd: nativeDefault.space.PX_16, borderTopEndRadius: nativeDefault.radii.round, borderBottomEndRadius: nativeDefault.radii.round };
-size = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, width: 28, height: 28, start: nativeDefault.space.PX_16 - 2, top: -11 };
-size1 = { padding: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, position: "absolute", width: 24, height: 24, top: -9, start: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
-obj6 = { backgroundColor: nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK };
-obj7 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
-obj8 = { padding: nativeDefault.space.PX_16, paddingTop: 0, flex: 1 };
-obj9 = { flexDirection: "column", marginTop: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
-obj10 = { marginStart: nativeDefault.space.PX_8 };
-obj11 = { marginTop: "auto", paddingTop: nativeDefault.space.PX_16 };
-let closure_12 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+const Constants = fn(1085);
+({ BoostedGuildTiers: closure_7, HorizontalGradient: closure_8 } = Constants);
+const TIER_CARDS = fn(12239).TIER_CARDS;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { cardContainer: { flex: 1 }, card: { padding: 0, overflow: "hidden", flex: 1 }, progressContainer: { marginVertical: nativeDefault.space.PX_24, position: "relative" }, progress: null, progressStart: null, progressEnd: null, boostContainerBackground: null, boostContainer: null, boostContainerActive: null, boostContainerInactive: null, contentContainer: null, perkRowContainer: null, perkRow: null, perkRowStyle: null, perkText: null, footerContainer: null };
+let obj3 = { marginVertical: nativeDefault.space.PX_24, position: "relative" };
+obj2.progress = { height: 6, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+let obj4 = { height: 6, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+obj2.progressStart = { marginStart: nativeDefault.space.PX_16 };
+let obj5 = { marginStart: nativeDefault.space.PX_16 };
+obj2.progressEnd = { marginEnd: nativeDefault.space.PX_16, borderTopEndRadius: nativeDefault.radii.round, borderBottomEndRadius: nativeDefault.radii.round };
+let size = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, width: 28, height: 28, start: nativeDefault.space.PX_16 - 2, top: -11 };
+obj2.boostContainerBackground = size;
+const size1 = { padding: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, position: "absolute", width: 24, height: 24, top: -9, start: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+obj2.boostContainer = size1;
+let obj6 = { marginEnd: nativeDefault.space.PX_16, borderTopEndRadius: nativeDefault.radii.round, borderBottomEndRadius: nativeDefault.radii.round };
+obj2.boostContainerActive = { backgroundColor: nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK };
+let obj7 = { backgroundColor: nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK };
+obj2.boostContainerInactive = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+let obj8 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+obj2.contentContainer = { padding: nativeDefault.space.PX_16, paddingTop: 0, flex: 1 };
+let obj9 = { padding: nativeDefault.space.PX_16, paddingTop: 0, flex: 1 };
+obj2.perkRowContainer = { flexDirection: "column", marginTop: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
+obj2.perkRow = { flexDirection: "row", alignItems: "center" };
+obj2.perkRowStyle = { flexDirection: "row", alignItems: "center" };
+const obj10 = { flexDirection: "column", marginTop: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
+obj2.perkText = { marginStart: nativeDefault.space.PX_8 };
+let obj11 = { marginStart: nativeDefault.space.PX_8 };
+obj2.footerContainer = { marginTop: "auto", paddingTop: nativeDefault.space.PX_16 };
+let closure_12 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let active;
-  let items1;
-  let items3;
-  let nextActive;
-  let position;
-  let tmp5;
-  const obj = react2;
-  const cResult = obj.c(30);
+  const cResult = c.c(30);
   ({ active, nextActive, position } = arg0);
   const tmp4 = closure_12();
   if (active) {
     if (false !== nextActive) {
-      let tmp7;
       if (cResult[0] !== tmp4.boostContainerActive.backgroundColor) {
         const items = [tmp4.boostContainerActive.backgroundColor, tmp4.boostContainerActive.backgroundColor];
         cResult[0] = tmp4.boostContainerActive.backgroundColor;
         cResult[1] = items;
-        tmp7 = items;
-      } else {
-        tmp7 = cResult[1];
       }
-      tmp5 = tmp7;
     }
-    const progressStart = position === hasOwnProperty.START && tmp4.progressStart;
+  }
+  if (active) {
+    if (false === nextActive) {
+      if (cResult[2] === tmp4.boostContainerActive.backgroundColor) {
+        if (cResult[3] === tmp4.boostContainerInactive.backgroundColor) {
+          let tmp6 = cResult[4];
+        }
+        let tmp5 = tmp6;
+      }
+      const items1 = [tmp4.boostContainerActive.backgroundColor, tmp4.boostContainerInactive.backgroundColor];
+      cResult[2] = tmp4.boostContainerActive.backgroundColor;
+      cResult[3] = tmp4.boostContainerInactive.backgroundColor;
+      cResult[4] = items1;
+      tmp6 = items1;
+    }
+    let progressStart = position === constants.START;
+    if (progressStart) {
+      progressStart = tmp4.progressStart;
+    }
     if (cResult[7] === tmp4.progress) {
       if (cResult[8] === progressStart) {
-        let tmp10;
-        if (cResult[9] === (position === hasOwnProperty.END && tmp4.progressEnd)) {
-          tmp10 = cResult[10];
+        if (cResult[9] === tmp10) {
+          let tmp11 = cResult[10];
         }
         if (cResult[11] === tmp5) {
-          let tmp11;
-          if (cResult[12] === tmp10) {
-            tmp11 = cResult[13];
+          if (cResult[12] === tmp11) {
+            let tmp12 = cResult[13];
           }
           if (cResult[14] === tmp4.boostContainer) {
-            let tmp16;
             if (cResult[15] === tmp4.boostContainerBackground) {
-              tmp16 = cResult[16];
+              let tmp17 = cResult[16];
+            }
+            let boostContainerActive = active;
+            if (active) {
+              boostContainerActive = tmp4.boostContainerActive;
             }
             if (cResult[17] === tmp4.boostContainer) {
-              let tmp21;
-              let tmp24;
-              if (cResult[18] === (active && tmp4.boostContainerActive)) {
-                tmp21 = cResult[19];
+              if (cResult[18] === boostContainerActive) {
+                let tmp21 = cResult[19];
               }
               const colors = nativeDefault.colors;
               const tmp23 = active ? colors.WHITE : colors.TEXT_MUTED;
               if (cResult[20] !== tmp23) {
                 const obj3 = { size: "xs", color: tmp23 };
-                const tmp26 = authStore(BoostGemIcon2.BoostGemIcon, obj3);
+                const tmp26 = v65535(BoostGemIcon.BoostGemIcon, obj3);
                 cResult[20] = tmp23;
                 cResult[21] = tmp26;
-                tmp24 = tmp26;
+                let tmp24 = tmp26;
               } else {
                 tmp24 = cResult[21];
               }
               if (cResult[22] === tmp21) {
-                let tmp27;
                 if (cResult[23] === tmp24) {
-                  tmp27 = cResult[24];
+                  let tmp27 = cResult[24];
                 }
                 if (cResult[25] === tmp4.progressContainer) {
                   if (cResult[26] === tmp27) {
-                    if (cResult[27] === tmp11) {
-                      let tmp31;
-                      if (cResult[28] === tmp16) {
-                        tmp31 = cResult[29];
+                    if (cResult[27] === tmp12) {
+                      if (cResult[28] === tmp17) {
+                        let tmp31 = cResult[29];
                       }
                       return tmp31;
                     }
                   }
                 }
-                const obj4 = { style: tmp4.progressContainer, children: items1 };
-                items1 = [tmp11, tmp16, tmp27];
-                const tmp34 = unpackModuleId(View, obj4);
+                const obj4 = { style: tmp4.progressContainer, children: null };
+                const items2 = [tmp12, tmp17, tmp27];
+                obj4.children = items2;
+                const tmp34 = closure_1_11(View, obj4);
                 cResult[25] = tmp4.progressContainer;
                 cResult[26] = tmp27;
-                cResult[27] = tmp11;
-                cResult[28] = tmp16;
+                cResult[27] = tmp12;
+                cResult[28] = tmp17;
                 cResult[29] = tmp34;
                 tmp31 = tmp34;
               }
               const obj5 = { style: tmp21, children: tmp24 };
-              const tmp30 = authStore(View, obj5);
+              const tmp30 = v65535(View, obj5);
               cResult[22] = tmp21;
               cResult[23] = tmp24;
               cResult[24] = tmp30;
               tmp27 = tmp30;
             }
-            const items2 = [tmp4.boostContainer, active && tmp4.boostContainerActive];
+            const items3 = [tmp4.boostContainer, boostContainerActive];
             cResult[17] = tmp4.boostContainer;
-            cResult[18] = active && tmp4.boostContainerActive;
-            cResult[19] = items2;
-            tmp21 = items2;
+            cResult[18] = boostContainerActive;
+            cResult[19] = items3;
+            tmp21 = items3;
           }
-          const obj6 = { style: items3 };
-          items3 = [, ];
+          const obj6 = { style: null };
+          const items4 = [, ];
           ({ boostContainer: arr5[0], boostContainerBackground: arr5[1] } = tmp4);
-          const tmp19 = authStore(View, obj6);
+          obj6.style = items4;
+          const tmp20 = v65535(View, obj6);
           cResult[14] = tmp4.boostContainer;
           cResult[15] = tmp4.boostContainerBackground;
-          cResult[16] = tmp19;
-          tmp16 = tmp19;
+          cResult[16] = tmp20;
+          tmp17 = tmp20;
         }
-        const obj11 = { start: null, end: null, colors: tmp5, style: tmp10 };
-        ({ START: obj2.start, END: obj2.end } = metroImportAll);
-        const tmp15 = authStore(LinearGradientDefault, obj11);
+        const obj11 = { start: null, end: null, colors: null, style: null };
+        ({ START: obj2.start, END: obj2.end } = closure_1_8);
+        obj11.colors = tmp5;
+        obj11.style = tmp11;
+        const tmp16 = v65535(LinearGradientDefault, obj11);
         cResult[11] = tmp5;
-        cResult[12] = tmp10;
-        cResult[13] = tmp15;
-        tmp11 = tmp15;
+        cResult[12] = tmp11;
+        cResult[13] = tmp16;
+        tmp12 = tmp16;
       }
     }
-    const items4 = [tmp4.progress, progressStart, position === hasOwnProperty.END && tmp4.progressEnd];
+    const items5 = [tmp4.progress, progressStart, position === constants.END && tmp4.progressEnd];
     cResult[7] = tmp4.progress;
     cResult[8] = progressStart;
-    cResult[9] = position === hasOwnProperty.END && tmp4.progressEnd;
-    cResult[10] = items4;
-    tmp10 = items4;
-  }
-  if (active) {
-    if (false === nextActive) {
-      if (cResult[2] === tmp4.boostContainerActive.backgroundColor) {
-        let tmp6;
-        if (cResult[3] === tmp4.boostContainerInactive.backgroundColor) {
-          tmp6 = cResult[4];
-        }
-        tmp5 = tmp6;
-      }
-      const items5 = [tmp4.boostContainerActive.backgroundColor, tmp4.boostContainerInactive.backgroundColor];
-      cResult[2] = tmp4.boostContainerActive.backgroundColor;
-      cResult[3] = tmp4.boostContainerInactive.backgroundColor;
-      cResult[4] = items5;
-      tmp6 = items5;
-    }
+    cResult[9] = position === constants.END && tmp4.progressEnd;
+    cResult[10] = items5;
+    tmp11 = items5;
   }
   if (cResult[5] !== tmp4.boostContainerInactive.backgroundColor) {
     const items6 = [tmp4.boostContainerInactive.backgroundColor, tmp4.boostContainerInactive.backgroundColor];
@@ -213,47 +190,45 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp5 = cResult[6];
   }
 }) : ((arg0) => {
-  let BoostGemIcon;
-  let active;
-  let items1;
-  let items2;
-  let items3;
-  let items6;
-  let nextActive;
-  let obj9;
-  let position;
   ({ active, nextActive, position } = arg0);
   const tmp = closure_12();
   if (active) {
     if (false !== nextActive) {
       const items = [tmp.boostContainerActive.backgroundColor, tmp.boostContainerActive.backgroundColor];
-      items6 = items;
+      let items6 = items;
     }
-    const obj = { style: tmp.progressContainer, children: items2 };
-    const obj3 = { start: null, end: null, colors: items6, style: items1 };
-    ({ START: obj2.start, END: obj2.end } = metroImportAll);
-    items1 = [tmp.progress, , ];
-    let progressStart = position === hasOwnProperty.START;
-    const tmp7 = LinearGradientDefault;
+    const obj = { style: tmp.progressContainer, children: null };
+    const obj3 = { start: null, end: null, colors: null, style: null };
+    ({ START: obj2.start, END: obj2.end } = closure_1_8);
+    obj3.colors = items6;
+    const items1 = [tmp.progress, , ];
+    let progressStart = position === constants.START;
     if (progressStart) {
       progressStart = tmp.progressStart;
     }
     items1[1] = progressStart;
-    items1[2] = position === hasOwnProperty.END && tmp.progressEnd;
-    items2 = [authStore(tmp7, obj3), , ];
-    const obj4 = { style: items3 };
-    items3 = [, ];
+    items1[2] = position === constants.END && tmp.progressEnd;
+    obj3.style = items1;
+    const items2 = [v65535(LinearGradientDefault, obj3), , ];
+    const obj4 = { style: null };
+    const items3 = [, ];
     ({ boostContainer: arr6[0], boostContainerBackground: arr6[1] } = tmp);
-    items2[1] = authStore(View, obj4);
+    obj4.style = items3;
+    items2[1] = v65535(View, obj4);
     const items4 = [tmp.boostContainer, ];
-    const tmp10 = active && tmp.boostContainerActive;
-    items4[1] = tmp10;
-    const obj5 = { style: items4, children: authStore(BoostGemIcon, obj9) };
-    BoostGemIcon = BoostGemIcon2.BoostGemIcon;
+    let boostContainerActive = active;
+    if (active) {
+      boostContainerActive = tmp.boostContainerActive;
+    }
+    const obj5 = { style: null, children: null };
+    items4[1] = boostContainerActive;
+    obj5.style = items4;
     const colors = nativeDefault.colors;
-    obj9 = { size: "xs", color: active ? colors.WHITE : colors.TEXT_MUTED };
-    items2[2] = authStore(View, obj5);
-    return unpackModuleId(View, obj);
+    const obj9 = { size: "xs", color: active ? colors.WHITE : colors.TEXT_MUTED };
+    obj5.children = v65535(BoostGemIcon.BoostGemIcon, obj9);
+    items2[2] = v65535(View, obj5);
+    obj.children = items2;
+    return closure_1_11(View, obj);
   }
   if (active) {
     if (false === nextActive) {
@@ -263,41 +238,27 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   items6 = [tmp.boostContainerInactive.backgroundColor, tmp.boostContainerInactive.backgroundColor];
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
-  let closure_1;
-  let first;
-  let items1;
-  let manaTypeConsolidationExperiment;
-  let perkRow;
-  let perkRowContainer;
-  let tmp14;
-  let obj = index(manaTypeConsolidationExperiment[9]);
-  const cResult = obj.c(21);
-  index = index.index;
-  const isActive = index.isActive;
+ReactCompilerGating = fn(558);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
+  const cResult = perks(manaTypeConsolidationExperiment[9]).c(21);
+  perks = index.index;
   const tmp4 = closure_12();
   importDefault = tmp4;
-  let obj2 = index(manaTypeConsolidationExperiment[12]);
-  manaTypeConsolidationExperiment = obj2.useManaTypeConsolidationExperiment("GuildPowerupLevelBody");
-  const tmp7 = require("useGuildPowerupColorConfig")(isActive);
+  const obj = perks(manaTypeConsolidationExperiment[9]);
+  manaTypeConsolidationExperiment = perks(manaTypeConsolidationExperiment[12]).useManaTypeConsolidationExperiment("GuildPowerupLevelBody");
+  const tmp7 = require("useGuildPowerupColorConfig")(index.isActive);
   const textColor = tmp7.textColor;
   const iconColor = tmp7.iconColor;
-  const tmp6 = importDefault;
-  if (null != TIER_CARDS[index]) {
-    let substr;
+  let tier = TIER_CARDS[perks];
+  let tmp8 = null;
+  if (null != tier) {
     if (cResult[1] === iconColor) {
-      if (cResult[2] === index) {
+      if (cResult[2] === perks) {
         if (cResult[3] === manaTypeConsolidationExperiment) {
           if (cResult[4] === tmp4.perkRowStyle) {
             if (cResult[5] === tmp4.perkText) {
               if (cResult[6] === textColor) {
-                if (cResult[7] === TIER_CARDS[index].perks) {
-                  let tmp11;
-                  if (cResult[8] === TIER_CARDS[index].tier) {
-                    tmp11 = cResult[9];
-                  }
-                  first = tmp11;
+                if (cResult[7] === tier.perks) {
                 }
               }
             }
@@ -305,157 +266,142 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
         }
       }
     }
-    if (TIER_CARDS[index].tier === TIER_3.TIER_3) {
-      const perks = tmp8.perks;
-      substr = perks.slice(0, -1);
+    if (tier.tier === TIER_3.TIER_3) {
+      const perks1 = tier.perks;
+      let substr = perks1.slice(0, -1);
     } else {
-      substr = tmp8.perks;
+      substr = tier.perks;
     }
+    tmp8 = substr == tmp8;
     let mapped;
-    if (substr != null) {
+    if (!tmp8) {
       mapped = substr.map((perkIcon, index) => {
-        let items;
-        let str;
-        const obj2 = { style: closure_1.perkRowStyle, children: items };
-        items = [, ];
-        const obj = GuildBoostingMarketingUtils;
-        const obj3 = { color: iconColor, size: "sm" };
-        items[0] = authStore(obj.getIconForPerk(perkIcon.perkIcon), obj3);
-        const obj4 = { color: textColor, style: closure_1.perkText, variant: str, children: perkIcon.getCopy() };
-        str = "text-sm/medium";
-        const Text = Text_Text.Text;
+        const obj2 = { style: closure_1.perkRowStyle, children: null };
+        const items = [v65535(GuildBoostingMarketingUtils.getIconForPerk(perkIcon.perkIcon), { color: iconColor, size: "sm" }), ];
+        const obj4 = { color: textColor, style: closure_1.perkText, variant: null, children: null };
+        let str = "text-sm/medium";
         if (manaTypeConsolidationExperiment) {
           str = "experimental/body-sm/normal";
         }
-        items[1] = authStore(Text, obj4);
-        return unpackModuleId(View, obj2, "perk-" + index + "-" + index);
+        obj4.variant = str;
+        obj4.children = perkIcon.getCopy();
+        items[1] = v65535(Text_Text.Text, obj4);
+        obj2.children = items;
+        return closure_2_11(View, obj2, "perk-" + perks + "-" + index);
       });
     }
     cResult[1] = iconColor;
-    cResult[2] = index;
+    cResult[2] = perks;
     cResult[3] = manaTypeConsolidationExperiment;
     cResult[4] = tmp4.perkRowStyle;
     cResult[5] = tmp4.perkText;
     cResult[6] = textColor;
-    cResult[7] = TIER_CARDS[index].perks;
-    cResult[8] = TIER_CARDS[index].tier;
+    perks = tier.perks;
+    cResult[7] = perks;
+    tier = tier.tier;
+    cResult[8] = tier;
     cResult[9] = mapped;
-    tmp11 = mapped;
   } else {
     const _Symbol = Symbol;
-    let str = "react.memo_cache_sentinel";
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       let items = [];
       cResult[0] = items;
-      first = items;
+      let first = items;
     } else {
       first = cResult[0];
     }
-  }
-  let str2 = "text-sm/medium";
-  ({ perkRowContainer, perkRow } = tmp4);
-  if (manaTypeConsolidationExperiment) {
-    str2 = "experimental/body-sm/normal";
-  }
-  if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(tmp2[16]).intl;
-    const stringResult = intl.string(tmp6(manaTypeConsolidationExperiment[17]).nIj3LZ);
-    cResult[10] = stringResult;
-    tmp14 = stringResult;
-  } else {
-    tmp14 = cResult[10];
-  }
-  if (cResult[11] === str2) {
-    let tmp16;
-    if (cResult[12] === textColor) {
-      tmp16 = cResult[13];
+    let str2 = "text-sm/medium";
+    ({ perkRowContainer, perkRow } = tmp4);
+    if (manaTypeConsolidationExperiment) {
+      str2 = "experimental/body-sm/normal";
     }
-    if (cResult[14] === tmp4.perkRow) {
-      let tmp18;
-      if (cResult[15] === tmp16) {
-        tmp18 = cResult[16];
+    const _Symbol2 = Symbol;
+    if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+      const intl = tmp(tmp2[16]).intl;
+      const stringResult = intl.string(tmp6(tmp2[17]).nIj3LZ);
+      cResult[10] = stringResult;
+      let tmp16 = stringResult;
+    } else {
+      tmp16 = cResult[10];
+    }
+    if (cResult[11] === str2) {
+      if (cResult[12] === textColor) {
+        let tmp18 = cResult[13];
       }
-      if (cResult[17] === first) {
-        if (cResult[18] === tmp4.perkRowContainer) {
-          let tmp22;
-          if (cResult[19] === tmp18) {
-            tmp22 = cResult[20];
-          }
-          return tmp22;
+      if (cResult[14] === tmp4.perkRow) {
+        if (cResult[15] === tmp18) {
+          let tmp21 = cResult[16];
         }
+        if (cResult[17] === first) {
+          if (cResult[18] === tmp4.perkRowContainer) {
+            if (cResult[19] === tmp21) {
+              let tmp25 = cResult[20];
+            }
+            return tmp25;
+          }
+        }
+        const obj3 = { style: perkRowContainer, children: null };
+        const items1 = [first, tmp21];
+        obj3.children = items1;
+        const tmp28 = closure_11(iconColor, obj3);
+        cResult[17] = first;
+        cResult[18] = tmp4.perkRowContainer;
+        cResult[19] = tmp21;
+        cResult[20] = tmp28;
+        tmp25 = tmp28;
       }
-      let obj3 = { style: perkRowContainer, children: items1 };
-      items1 = [first, tmp18];
-      const tmp25 = closure_11(iconColor, obj3);
-      cResult[17] = first;
-      cResult[18] = tmp4.perkRowContainer;
-      cResult[19] = tmp18;
-      cResult[20] = tmp25;
-      tmp22 = tmp25;
+      let obj4 = { style: perkRow, children: tmp18 };
+      const tmp24 = closure_10(iconColor, obj4);
+      cResult[14] = tmp4.perkRow;
+      cResult[15] = tmp18;
+      cResult[16] = tmp24;
+      tmp21 = tmp24;
     }
-    let obj4 = { style: perkRow, children: tmp16 };
-    const tmp21 = closure_10(iconColor, obj4);
-    cResult[14] = tmp4.perkRow;
-    cResult[15] = tmp16;
-    cResult[16] = tmp21;
-    tmp18 = tmp21;
+    const obj5 = { color: textColor, variant: str2, children: tmp16 };
+    const tmp20 = closure_10(tmp(tmp2[15]).Text, obj5);
+    cResult[11] = str2;
+    cResult[12] = textColor;
+    cResult[13] = tmp20;
+    tmp18 = tmp20;
   }
-  const tmp17 = closure_10(index(manaTypeConsolidationExperiment[15]).Text, { color: textColor, variant: str2, children: tmp14 });
-  cResult[11] = str2;
-  cResult[12] = textColor;
-  cResult[13] = tmp17;
-  tmp16 = tmp17;
+  let obj2 = perks(manaTypeConsolidationExperiment[12]);
+  tmp6 = importDefault;
 }) : ((index) => {
-  let Text;
-  let closure_1;
-  let intl;
-  let items1;
-  let obj4;
-  let str;
-  let tmp5;
   index = index.index;
   let manaTypeConsolidationExperiment;
-  const isActive = index.isActive;
   const tmp = closure_12();
   importDefault = tmp;
-  let obj = index(manaTypeConsolidationExperiment[12]);
-  manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("GuildPowerupLevelBody");
-  const tmp6 = require("useGuildPowerupColorConfig")(isActive);
+  manaTypeConsolidationExperiment = index(manaTypeConsolidationExperiment[12]).useManaTypeConsolidationExperiment("GuildPowerupLevelBody");
+  const tmp6 = require("useGuildPowerupColorConfig")(index.isActive);
   const textColor = tmp6.textColor;
   const iconColor = tmp6.iconColor;
   let items = [index, iconColor, textColor, tmp, manaTypeConsolidationExperiment];
-  let obj2 = { style: tmp.perkRowContainer, children: items1 };
-  items1 = [
+  let obj2 = { style: tmp.perkRowContainer, children: null };
+  const items1 = [
     textColor.useMemo(() => {
-      let color;
-      let color2;
       if (null == TIER_CARDS[index]) {
         return [];
       } else {
-        let substr;
-        if (TIER_CARDS[index].tier === metroImportDefault.TIER_3) {
+        if (tmp.tier === React5.TIER_3) {
           const perks = tmp.perks;
-          substr = perks.slice(0, -1);
+          let substr = perks.slice(0, -1);
         } else {
           substr = tmp.perks;
         }
         let mapped;
         if (substr != null) {
           mapped = substr.map((perkIcon, index) => {
-            let items;
-            let str;
-            const obj2 = { style: closure_1_1.perkRowStyle, children: items };
-            items = [, ];
-            const obj = index(manaTypeConsolidationExperiment[14]);
-            const obj3 = { color: color2, size: "sm" };
-            items[0] = closure_2_10(obj.getIconForPerk(perkIcon.perkIcon), obj3);
-            const obj4 = { color, style: closure_1_1.perkText, variant: str, children: perkIcon.getCopy() };
-            str = "text-sm/medium";
-            const Text = index(manaTypeConsolidationExperiment[15]).Text;
+            const obj2 = { style: closure_1_1.perkRowStyle, children: null };
+            const items = [closure_2_10(index(manaTypeConsolidationExperiment[14]).getIconForPerk(perkIcon.perkIcon), { color: color2, size: "sm" }), ];
+            const obj4 = { color, style: closure_1_1.perkText, variant: null, children: null };
+            let str = "text-sm/medium";
             if (closure_1_2) {
               str = "experimental/body-sm/normal";
             }
-            items[1] = closure_2_10(Text, obj4);
+            obj4.variant = str;
+            obj4.children = perkIcon.getCopy();
+            items[1] = closure_2_10(index(manaTypeConsolidationExperiment[15]).Text, obj4);
+            obj2.children = items;
             return closure_2_11(iconColor, obj2, "perk-" + closure_1_0 + "-" + index);
           });
         }
@@ -464,67 +410,55 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
     }, items),
 
   ];
-  let obj3 = { style: tmp.perkRow, children: closure_10(Text, obj4) };
-  obj4 = { color: textColor, variant: str, children: intl.string(tmp5(manaTypeConsolidationExperiment[17]).nIj3LZ) };
-  str = "text-sm/medium";
-  Text = index(manaTypeConsolidationExperiment[15]).Text;
-  const tmp2 = index;
-  tmp5 = importDefault;
+  const obj3 = { style: tmp.perkRow, children: null };
+  let obj4 = { color: textColor, variant: null, children: null };
+  let str = "text-sm/medium";
   if (manaTypeConsolidationExperiment) {
     str = "experimental/body-sm/normal";
   }
-  intl = tmp2(tmp3[16]).intl;
+  obj4.variant = str;
+  const intl = index(tmp3[16]).intl;
+  obj4.children = intl.string(require("module_2553").nIj3LZ);
+  obj3.children = closure_10(index(manaTypeConsolidationExperiment[15]).Text, obj4);
   items1[1] = closure_10(iconColor, obj3);
+  obj2.children = items1;
   return closure_11(iconColor, obj2);
 });
-let closure_14 = tmp6;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let MIDDLE;
-  let guildId;
-  let index;
-  let isScrollingRef;
-  let items;
-  let items1;
-  let nextPowerup;
-  let powerup;
-  let obj = react2;
-  const cResult = obj.c(32);
+let closure_14 = tmp5;
+ReactCompilerGating = fn(558);
+const obj12 = { marginTop: "auto", paddingTop: nativeDefault.space.PX_16 };
+size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsLevelCard.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(32);
   ({ guildId, powerup, nextPowerup, index, isScrollingRef } = arg0);
   const tmp4 = closure_12();
-  let obj2 = ManaTypeConsolidationExperiment;
-  const manaTypeConsolidationExperiment = obj2.useManaTypeConsolidationExperiment("GuildPowerupsLevelCard");
+  const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("GuildPowerupsLevelCard");
   const tmp7 = usePowerupActiveStatusDefault(guildId, powerup);
   const tmp8 = usePowerupActiveStatusDefault(guildId, nextPowerup);
-  let obj3 = useCalculatePowerupCardStatus;
-  const calculatePowerupCardStatus = obj3.useCalculatePowerupCardStatus(powerup, tmp7, false);
-  const type = tmp7.type;
-  const INACTIVE = metroRequire.INACTIVE;
-  const type2 = tmp8.type;
-  const INACTIVE2 = metroRequire.INACTIVE;
+  const calculatePowerupCardStatus = useCalculatePowerupCardStatus.useCalculatePowerupCardStatus(powerup, tmp7, false);
   const tmp10 = useGuildPowerupOnShowMoreDefault(guildId, powerup);
-  let closure_1 = tmp10;
+  closure_1 = tmp10;
   if (0 === index) {
-    MIDDLE = hasOwnProperty.START;
+    let MIDDLE = constants.START;
   } else if (null == nextPowerup) {
-    MIDDLE = hasOwnProperty.END;
+    MIDDLE = constants.END;
   } else {
-    MIDDLE = hasOwnProperty.MIDDLE;
+    MIDDLE = constants.MIDDLE;
   }
   if (cResult[0] === isScrollingRef) {
-    let tmp15;
     if (cResult[1] === tmp10) {
-      tmp15 = cResult[2];
+      let tmp15 = cResult[2];
     }
     let tmp17;
     if (null != nextPowerup) {
-      tmp17 = type2 !== INACTIVE2;
+      tmp17 = tmp8.type !== constants2.INACTIVE;
     }
-    if (cResult[3] === type !== INACTIVE) {
+    if (cResult[3] === tmp7.type !== constants2.INACTIVE) {
       if (cResult[4] === MIDDLE) {
-        let tmp19;
         if (cResult[5] === tmp17) {
-          tmp19 = cResult[6];
+          let tmp19 = cResult[6];
         }
         let str;
         if (manaTypeConsolidationExperiment) {
@@ -536,40 +470,34 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
         if (cResult[7] === powerup.title) {
           if (cResult[8] === str) {
-            let tmp23;
             if (cResult[9] === str2) {
-              tmp23 = cResult[10];
+              let tmp23 = cResult[10];
             }
             if (cResult[11] === index) {
-              let tmp26;
-              if (cResult[12] === type !== INACTIVE) {
-                tmp26 = cResult[13];
+              if (cResult[12] === tmp18) {
+                let tmp26 = cResult[13];
               }
               if (cResult[14] === powerup.cost) {
-                let tmp30;
                 if (cResult[15] === calculatePowerupCardStatus) {
-                  tmp30 = cResult[16];
+                  let tmp30 = cResult[16];
                 }
                 if (cResult[17] === tmp4.footerContainer) {
-                  let tmp33;
                   if (cResult[18] === tmp30) {
-                    tmp33 = cResult[19];
+                    let tmp33 = cResult[19];
                   }
                   if (cResult[20] === tmp4.contentContainer) {
                     if (cResult[21] === tmp23) {
                       if (cResult[22] === tmp26) {
-                        let tmp37;
                         if (cResult[23] === tmp33) {
-                          tmp37 = cResult[24];
+                          let tmp37 = cResult[24];
                         }
                         if (cResult[25] === tmp15) {
                           if (cResult[26] === calculatePowerupCardStatus) {
                             if (cResult[27] === tmp4.card) {
                               if (cResult[28] === tmp4.cardContainer) {
                                 if (cResult[29] === tmp37) {
-                                  let tmp41;
                                   if (cResult[30] === tmp19) {
-                                    tmp41 = cResult[31];
+                                    let tmp41 = cResult[31];
                                   }
                                   return tmp41;
                                 }
@@ -577,10 +505,13 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                             }
                           }
                         }
-                        let obj4 = { containerStyle: null, style: null, onPress: tmp15, status: calculatePowerupCardStatus, children: items };
+                        const obj4 = { containerStyle: null, style: null, onPress: null, status: null, children: null };
                         ({ cardContainer: obj10.containerStyle, card: obj10.style } = tmp4);
-                        items = [tmp19, tmp37];
-                        const tmp43 = unpackModuleId(GuildPowerupsCardDefault, obj4);
+                        obj4.onPress = tmp15;
+                        obj4.status = calculatePowerupCardStatus;
+                        const items = [tmp19, tmp37];
+                        obj4.children = items;
+                        const tmp43 = closure_1_11(GuildPowerupsCardDefault, obj4);
                         cResult[25] = tmp15;
                         cResult[26] = calculatePowerupCardStatus;
                         cResult[27] = tmp4.card;
@@ -592,9 +523,10 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                       }
                     }
                   }
-                  let obj5 = { style: tmp4.contentContainer, children: items1 };
-                  items1 = [tmp23, tmp26, tmp33];
-                  const tmp40 = unpackModuleId(View, obj5);
+                  const obj5 = { style: tmp4.contentContainer, children: null };
+                  const items1 = [tmp23, tmp26, tmp33];
+                  obj5.children = items1;
+                  const tmp40 = closure_1_11(View, obj5);
                   cResult[20] = tmp4.contentContainer;
                   cResult[21] = tmp23;
                   cResult[22] = tmp26;
@@ -602,30 +534,30 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   cResult[24] = tmp40;
                   tmp37 = tmp40;
                 }
-                let obj6 = { style: tmp4.footerContainer, children: tmp30 };
-                const tmp36 = authStore(View, obj6);
+                const obj6 = { style: tmp4.footerContainer, children: tmp30 };
+                const tmp36 = v65535(View, obj6);
                 cResult[17] = tmp4.footerContainer;
                 cResult[18] = tmp30;
                 cResult[19] = tmp36;
                 tmp33 = tmp36;
               }
-              let obj7 = { cost: powerup.cost, status: calculatePowerupCardStatus };
-              const tmp32 = authStore(GuildPowerupsCardFooter.GuildPowerupsCardFooter, obj7);
+              const obj7 = { cost: powerup.cost, status: calculatePowerupCardStatus };
+              const tmp32 = v65535(GuildPowerupsCardFooter.GuildPowerupsCardFooter, obj7);
               cResult[14] = powerup.cost;
               cResult[15] = calculatePowerupCardStatus;
               cResult[16] = tmp32;
               tmp30 = tmp32;
             }
-            let obj8 = { isActive: type !== INACTIVE, index };
-            const tmp29 = authStore(closure_14, obj8);
+            const obj8 = { isActive: tmp18, index };
+            const tmp29 = v65535(closure_14, obj8);
             cResult[11] = index;
-            cResult[12] = type !== INACTIVE;
+            cResult[12] = tmp18;
             cResult[13] = tmp29;
             tmp26 = tmp29;
           }
         }
-        let obj9 = { color: str, variant: str2, children: powerup.title };
-        const tmp25 = authStore(Text_Text.Text, obj9);
+        const obj9 = { color: str, variant: str2, children: powerup.title };
+        const tmp25 = v65535(Text_Text.Text, obj9);
         cResult[7] = powerup.title;
         cResult[8] = str;
         cResult[9] = str2;
@@ -633,9 +565,9 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         tmp23 = tmp25;
       }
     }
-    const obj17 = { position: MIDDLE, active: type !== INACTIVE, nextActive: tmp17 };
-    const tmp22 = authStore(closure_13, obj17);
-    cResult[3] = type !== INACTIVE;
+    const obj17 = { position: MIDDLE, active: tmp7.type !== constants2.INACTIVE, nextActive: tmp17 };
+    const tmp22 = v65535(closure_13, obj17);
+    cResult[3] = tmp7.type !== constants2.INACTIVE;
     cResult[4] = MIDDLE;
     cResult[5] = tmp17;
     cResult[6] = tmp22;
@@ -651,72 +583,53 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = fn;
   tmp15 = fn;
 }) : ((arg0) => {
-  let MIDDLE;
-  let guildId;
-  let index;
-  let isScrollingRef;
-  let items1;
-  let items2;
-  let nextPowerup;
-  let obj8;
-  let powerup;
-  let str2;
-  let tmp20;
   ({ guildId, powerup, nextPowerup, index, isScrollingRef } = arg0);
   const tmp = closure_12();
-  const obj = ManaTypeConsolidationExperiment;
-  const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("GuildPowerupsLevelCard");
+  const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("GuildPowerupsLevelCard");
   const tmp6 = usePowerupActiveStatusDefault(guildId, powerup);
   const tmp7 = usePowerupActiveStatusDefault(guildId, nextPowerup);
-  const obj2 = useCalculatePowerupCardStatus;
-  const calculatePowerupCardStatus = obj2.useCalculatePowerupCardStatus(powerup, tmp6, false);
-  const type = tmp6.type;
-  const INACTIVE = metroRequire.INACTIVE;
-  const type2 = tmp7.type;
-  const INACTIVE2 = metroRequire.INACTIVE;
+  const calculatePowerupCardStatus = useCalculatePowerupCardStatus.useCalculatePowerupCardStatus(powerup, tmp6, false);
   const tmp9 = useGuildPowerupOnShowMoreDefault(guildId, powerup);
-  let closure_1 = tmp9;
+  closure_1 = tmp9;
   if (0 === index) {
-    MIDDLE = hasOwnProperty.START;
+    let MIDDLE = constants.START;
   } else if (null == nextPowerup) {
-    MIDDLE = hasOwnProperty.END;
+    MIDDLE = constants.END;
   } else {
-    MIDDLE = hasOwnProperty.MIDDLE;
+    MIDDLE = constants.MIDDLE;
   }
   const items = [isScrollingRef, tmp9];
-  const callback = react.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (!isScrollingRef.current) {
       closure_1();
     }
   }, items);
-  const obj4 = { position: MIDDLE, active: type !== INACTIVE, nextActive: tmp20 };
-  tmp20 = undefined;
-  const obj3 = { containerStyle: tmp.cardContainer, style: tmp.card, onPress: callback, status: calculatePowerupCardStatus, children: items1 };
-  const tmp5Result = GuildPowerupsCardDefault;
+  const obj3 = { containerStyle: tmp.cardContainer, style: tmp.card, onPress: callback, status: calculatePowerupCardStatus, children: null };
+  const obj4 = { position: MIDDLE, active: tmp6.type !== constants2.INACTIVE, nextActive: null };
+  let tmp20;
   if (null != nextPowerup) {
-    tmp20 = type2 !== INACTIVE2;
+    tmp20 = tmp7.type !== constants2.INACTIVE;
   }
-  items1 = [authStore(closure_13, obj4), ];
+  obj4.nextActive = tmp20;
+  const items1 = [v65535(closure_13, obj4), ];
+  const obj5 = { style: tmp.contentContainer, children: null };
   let str;
-  const obj5 = { style: tmp.contentContainer, children: items2 };
-  const Text = Text_Text.Text;
   if (manaTypeConsolidationExperiment) {
     str = "text-strong";
   }
-  const obj6 = { color: str, variant: str2, children: powerup.title };
-  str2 = "heading-lg/semibold";
+  const obj6 = { color: str, variant: null, children: null };
+  let str2 = "heading-lg/semibold";
   if (manaTypeConsolidationExperiment) {
     str2 = "experimental/heading-md/semibold";
   }
-  items2 = [authStore(Text, obj6), authStore(closure_14, { isActive: type !== INACTIVE, index }), ];
-  const obj7 = { style: tmp.footerContainer, children: authStore(GuildPowerupsCardFooter.GuildPowerupsCardFooter, obj8) };
-  obj8 = { cost: powerup.cost, status: calculatePowerupCardStatus };
-  items2[2] = authStore(View, obj7);
-  items1[1] = unpackModuleId(View, obj5);
-  return unpackModuleId(tmp5Result, obj3);
+  obj6.variant = str2;
+  obj6.children = powerup.title;
+  const items2 = [v65535(Text_Text.Text, obj6), v65535(closure_14, { isActive: tmp6.type !== constants2.INACTIVE, index }), ];
+  const obj7 = { style: tmp.footerContainer, children: v65535(GuildPowerupsCardFooter.GuildPowerupsCardFooter, { cost: powerup.cost, status: calculatePowerupCardStatus }) };
+  items2[2] = v65535(View, obj7);
+  obj5.children = items2;
+  items1[1] = closure_1_11(View, obj5);
+  obj3.children = items1;
+  return closure_1_11(GuildPowerupsCardDefault, obj3);
 });
-size = size_mod;
-const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsLevelCard.tsx");
-
-export default tmp7;
-export const GuildPowerupLevelBody = tmp6;
+export const GuildPowerupLevelBody = tmp5;

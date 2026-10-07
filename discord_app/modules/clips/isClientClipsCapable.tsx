@@ -14,9 +14,14 @@ export default function isClientClipsCapable(getMediaEngine) {
   let ignorePlatformRestriction = ClipsExperiment.getConfig({ location: "isClipsClientCapable" }).ignorePlatformRestriction;
   const mediaEngine = getMediaEngine.getMediaEngine();
   if (!ignorePlatformRestriction) {
-    const obj2 = PlatformUtilsAll;
-    ignorePlatformRestriction = obj2.isDesktop() && mediaEngine.supports(Features.CLIPS) && mediaEngine.hasClipsV3Support();
-    const isDesktopResult = obj2.isDesktop() && mediaEngine.supports(Features.CLIPS) && mediaEngine.hasClipsV3Support();
+    let isDesktopResult = PlatformUtilsAll.isDesktop();
+    if (isDesktopResult) {
+      isDesktopResult = mediaEngine.supports(Features.CLIPS);
+    }
+    if (isDesktopResult) {
+      isDesktopResult = mediaEngine.hasClipsV3Support();
+    }
+    ignorePlatformRestriction = isDesktopResult;
   }
   return ignorePlatformRestriction;
 };

@@ -2,8 +2,7 @@
 
 // Module 17468 (logThirdPartyImportsDone)
 import LoggerDefault from "Logger" /* 3 */;
-import size from "module_2" /* 2 */;
 
-const obj = new LoggerDefault("app");
-obj.log("Finished loading third party imports");
+new LoggerDefault("app").log("Finished loading third party imports");
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/debug/logThirdPartyImportsDone.tsx");

@@ -1,6 +1,6 @@
-// === Module 4793: flow/Client ===
+// === Module 4793: Client ===
 
-// Module 4793 (flow/Client)
+// Module 4793 (Client)
 import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
 import size from "module_2" /* 2 */;
 

@@ -6,89 +6,35 @@ import size from "module_2" /* 2 */;
 let result = size.fileFinishedImporting("../discord_common/js/packages/backoff/Backoff.tsx");
 class Backoff {
   constructor() {
-    let num = SECOND;
-    if (SECOND === undefined) {
+    num = global;
+    if (global === undefined) {
       num = 500;
     }
-    let result = MINUTE;
-    if (MINUTE === undefined) {
+    result = require;
+    if (require === undefined) {
       result = null;
     }
-    let flag = arg2;
-    if (arg2 === undefined) {
+    flag = importDefault;
+    if (importDefault === undefined) {
       flag = true;
     }
     if (num <= 0) {
-      const _Error = Error;
+      tmp5 = globalThis;
+      _Error = Error;
+      str = "Backoff min value must be greater than zero or backoff will never back-off.";
       throw Error("Backoff min value must be greater than zero or backoff will never back-off.");
     } else {
-      const merged = Object.assign({ _fails: 0 });
+      merged = Object.assign({ _fails: 0 });
       merged.min = num;
+      tmp4 = null;
       if (null == result) {
+        num2 = 10;
         result = 10 * num;
       }
       merged.max = result;
       merged.jitter = flag;
       merged._current = num;
       return merged;
-    }
-  }
-  succeed() {
-    this.cancel();
-    this._fails = 0;
-    this._current = this.min;
-  }
-  fail(_callback, arg1) {
-    const self = this;
-    let closure_0 = _callback;
-    this._fails = this._fails + 1;
-    const result = 2 * this._current;
-    let result1 = result;
-    if (this.jitter) {
-      const _Math = Math;
-      result1 = result * Math.random();
-    }
-    let _current = arg1;
-    self._current = Math.min(self._current + result1, self.max);
-    if (null == arg1) {
-      _current = self._current;
-    }
-    if (null != _callback) {
-      if (null != self._timeoutId) {
-        if (self._callback !== _callback) {
-          const _Error = Error;
-          const self2 = this;
-          const self3 = this;
-          const error = new Error("callback already pending");
-          const tmp6 = error;
-          throw error;
-        } else {
-          self.cancel();
-        }
-      }
-      self._callback = _callback;
-      const _setTimeout = setTimeout;
-      self._timeoutId = setTimeout(() => {
-        try {
-          if (null != _callback) {
-            tmp();
-          }
-          self.cancel();
-        } catch (tmp6) {
-          self.cancel();
-          throw tmp6;
-        }
-      }, _current);
-    }
-    return _current;
-  }
-  cancel() {
-    const self = this;
-    this._callback = null;
-    if (null != this._timeoutId) {
-      const _clearTimeout = clearTimeout;
-      clearTimeout(self._timeoutId);
-      self._timeoutId = null;
     }
   }
 }
@@ -111,5 +57,60 @@ Object.defineProperty(prototype, "pending", {
   },
   set: undefined
 });
+prototype["succeed"] = function succeed() {
+  this.cancel();
+  this._fails = 0;
+  this._current = this.min;
+};
+prototype["fail"] = function fail(_callback, arg1) {
+  const self = this;
+  closure_0 = _callback;
+  this._fails = this._fails + 1;
+  const result = 2 * this._current;
+  let result1 = result;
+  if (this.jitter) {
+    const _Math = Math;
+    result1 = result * Math.random();
+  }
+  let _current = arg1;
+  self._current = Math.min(self._current + result1, self.max);
+  if (null == arg1) {
+    _current = self._current;
+  }
+  if (null != _callback) {
+    if (null != self._timeoutId) {
+      if (self._callback !== _callback) {
+        const _Error = Error;
+        const error = new Error("callback already pending");
+        throw error;
+      } else {
+        self.cancel();
+      }
+    }
+    self._callback = _callback;
+    const _setTimeout = setTimeout;
+    self._timeoutId = setTimeout(() => {
+      try {
+        if (null != closure_0) {
+          tmp();
+        }
+        self.cancel();
+      } catch (tmp6) {
+        self.cancel();
+        throw tmp6;
+      }
+    }, _current);
+  }
+  return _current;
+};
+prototype["cancel"] = function cancel() {
+  const self = this;
+  this._callback = null;
+  if (null != this._timeoutId) {
+    const _clearTimeout = clearTimeout;
+    clearTimeout(self._timeoutId);
+    self._timeoutId = null;
+  }
+};
 
 export default Backoff;

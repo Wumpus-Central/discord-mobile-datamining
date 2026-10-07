@@ -1,20 +1,18 @@
 // === Module 9951: useMaybeAddPollsMarketingEasterEggNote ===
 
 // Module 9951 (useMaybeAddPollsMarketingEasterEggNote)
-import get_initialized from "get initialized" /* 504 */;
-import react from "react" /* 576 */;
-import intl2 from "intl" /* 1126 */;
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let locale;
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/polls/useMaybeAddPollsMarketingEasterEggNote.tsx");
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((emojiName) => {
-  let tmp4;
-  let tmp5;
-  const obj = react;
-  const cResult = obj.c(5);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((emojiName) => {
+  const cResult = c.c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [LocaleStore];
     const fn = function l() {
@@ -28,12 +26,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((emojiName) => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const tmpResult = get_initialized;
-  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+  const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
   if (cResult[2] === emojiName) {
-    let tmp8;
     if (cResult[3] === stateFromStores) {
-      tmp8 = cResult[4];
+      let tmp8 = cResult[4];
     }
     return tmp8;
   }
@@ -41,29 +37,27 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((emojiName) => {
   if (":pizza:" === emojiName) {
     formatToPlainStringResult = emojiName;
     if (stateFromStores) {
-      const intl = intl2.intl;
+      const intl = util.intl;
       const obj2 = { emojiName };
-      formatToPlainStringResult = intl.formatToPlainString(intl2.t["1knDPI"], obj2);
+      formatToPlainStringResult = intl.formatToPlainString(util.t["1knDPI"], obj2);
     }
   }
   cResult[2] = emojiName;
   cResult[3] = stateFromStores;
   cResult[4] = formatToPlainStringResult;
   tmp8 = formatToPlainStringResult;
+  const tmpResult = initialize;
 }) : ((emojiName) => {
-  get_initialized;
+  initialize;
   [][0] = LocaleStore;
   let formatToPlainStringResult = emojiName;
   if (":pizza:" === emojiName) {
     formatToPlainStringResult = emojiName;
     if (tmp4) {
-      const intl = intl2.intl;
+      const intl = util.intl;
       const obj = { emojiName };
-      formatToPlainStringResult = intl.formatToPlainString(intl2.t["1knDPI"], obj);
+      formatToPlainStringResult = intl.formatToPlainString(util.t["1knDPI"], obj);
     }
   }
   return formatToPlainStringResult;
 });
-const result = size.fileFinishedImporting("modules/polls/useMaybeAddPollsMarketingEasterEggNote.tsx");
-
-export default tmp2;

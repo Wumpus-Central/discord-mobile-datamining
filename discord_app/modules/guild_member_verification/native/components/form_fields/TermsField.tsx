@@ -1,31 +1,24 @@
 // === Module 5993: TermsField ===
 
 // Module 5993 (TermsField)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
-import intl2 from "intl" /* 1126 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import TermsFieldListDefault from "TermsFieldList" /* 5994 */;
-import TableCheckboxRow2 from "TableCheckboxRow" /* 5997 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 5997 */;
+import noop from "module_19" /* 19 */;
 
-let closure_4;
-let hasOwnProperty;
-const View = react_native.View;
-({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4896);
 let closure_6 = createStyles.createStyles({ container: { marginVertical: 12, flexDirection: "column" } });
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let field;
-  let items;
-  let onChange;
-  let response;
-  let rulesChannelId;
-  let values;
-  const obj = react2;
-  const cResult = obj.c(11);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/TermsField.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(11);
   ({ field, onChange, rulesChannelId } = arg0);
   const tmp4 = closure_6();
   ({ values, response } = field);
@@ -33,36 +26,33 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     response = false;
   }
   if (cResult[0] === rulesChannelId) {
-    let tmp6;
-    let tmp9;
     if (cResult[1] === values) {
-      tmp6 = cResult[2];
+      let tmp6 = cResult[2];
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = intl2.intl;
-      const stringResult = intl.string(intl2.t["2EXfGJ"]);
+      const intl = util.intl;
+      const stringResult = intl.string(util.t["2EXfGJ"]);
       cResult[3] = stringResult;
-      tmp9 = stringResult;
+      let tmp9 = stringResult;
     } else {
       tmp9 = cResult[3];
     }
     if (cResult[4] === response) {
-      let tmp11;
       if (cResult[5] === onChange) {
-        tmp11 = cResult[6];
+        let tmp11 = cResult[6];
       }
       if (cResult[7] === tmp4.container) {
         if (cResult[8] === tmp6) {
-          let tmp14;
           if (cResult[9] === tmp11) {
-            tmp14 = cResult[10];
+            let tmp14 = cResult[10];
           }
           return tmp14;
         }
       }
-      const obj2 = { style: tmp5, children: items };
-      items = [tmp6, tmp11];
+      const obj2 = { style: tmp5, children: null };
+      const items = [tmp6, tmp11];
+      obj2.children = items;
       const tmp17 = hasOwnProperty(View, obj2);
       cResult[7] = tmp4.container;
       cResult[8] = tmp6;
@@ -71,36 +61,31 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       tmp14 = tmp17;
     }
     const obj3 = { start: true, end: true, checked: response, label: tmp9, onPress: onChange };
-    const tmp13 = React3(TableCheckboxRow2.TableCheckboxRow, obj3);
+    const tmp13 = React4(TableCheckboxRow.TableCheckboxRow, obj3);
     cResult[4] = response;
     cResult[5] = onChange;
     cResult[6] = tmp13;
     tmp11 = tmp13;
   }
-  const tmp7 = React3(TermsFieldListDefault, { rules: values, rulesChannelId });
+  const tmp7 = React4(TermsFieldListDefault, { rules: values, rulesChannelId });
   cResult[0] = rulesChannelId;
   cResult[1] = values;
   cResult[2] = tmp7;
   tmp6 = tmp7;
 }) : ((field) => {
-  let intl;
-  let items;
-  let onChange;
-  let rulesChannelId;
   field = field.field;
   ({ onChange, rulesChannelId } = field);
   let flag = field.response;
-  const obj = { style: closure_6().container, children: items };
-  items = [React3(TermsFieldListDefault, { rules: field.values, rulesChannelId }), ];
-  const TableCheckboxRow = TableCheckboxRow2.TableCheckboxRow;
+  const obj = { style: closure_6().container, children: null };
+  const items = [React4(TermsFieldListDefault, { rules: field.values, rulesChannelId }), ];
   if (flag == null) {
     flag = false;
   }
-  const obj2 = { start: true, end: true, checked: flag, label: intl.string(intl2.t["2EXfGJ"]), onPress: onChange };
-  intl = intl2.intl;
-  items[1] = React3(TableCheckboxRow, obj2);
+  const obj2 = { start: true, end: true, checked: flag, label: null, onPress: null };
+  const intl = util.intl;
+  obj2.label = intl.string(util.t["2EXfGJ"]);
+  obj2.onPress = onChange;
+  items[1] = React4(TableCheckboxRow.TableCheckboxRow, obj2);
+  obj.children = items;
   return hasOwnProperty(View, obj);
 });
-const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/TermsField.tsx");
-
-export default tmp4;

@@ -1,23 +1,21 @@
 // === Module 15305: EmojiReactionsOnMessagesSetting ===
 
 // Module 15305 (EmojiReactionsOnMessagesSetting)
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import SettingsConstants from "SettingsConstants" /* 7645 */;
 import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const obj = {
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["zge/fP"]);
+    const intl = util.intl;
+    return intl.string(util.t["zge/fP"]);
   },
-  parent: MobileUserSettings.CHAT,
+  parent: SettingsConstants.MobileUserSettings.CHAT,
   useValue: UserSettings.RenderReactions.useSetting,
   onValueChange: UserSettings.RenderReactions.updateSetting
-};
-const toggle = SettingBuilders.createToggle(obj);
+});
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/EmojiReactionsOnMessagesSetting.tsx");
 
 export default toggle;

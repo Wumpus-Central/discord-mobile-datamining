@@ -1,28 +1,23 @@
 // === Module 13254: PromotionStringUtils ===
 
 // Module 13254 (PromotionStringUtils)
-import get_initialized from "get initialized" /* 504 */;
-import react from "react" /* 576 */;
-import intl2 from "intl" /* 1126 */;
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
 import PriceUtils from "PriceUtils" /* 6750 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4539 */;
-import PremiumConstants from "PremiumConstants" /* 1379 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let closure_4;
-let hasOwnProperty;
+require = fn;
+const PremiumConstants = fn(1379);
 ({ PremiumSubscriptionSKUs: closure_4, SubscriptionPlans: hasOwnProperty } = PremiumConstants);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
-  let TIER_2;
-  let loadedForSKU;
-  let tmp11;
-  let tmp4;
-  let tmp5;
-  const obj = react;
-  const cResult = obj.c(3);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/promotions/PromotionStringUtils.tsx");
+
+export const useFormatStringWithCommonPremiumParams = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
+  const cResult = c.c(3);
   let str = "...";
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SubscriptionPlanStore];
@@ -36,15 +31,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const tmpResult = get_initialized;
-  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+  const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
   if (-1 !== arr.indexOf("{price}")) {
     if (stateFromStores) {
       try {
-        const obj3 = PremiumUtilsDefault;
-        const defaultPrice = obj3.getDefaultPrice(hasOwnProperty.PREMIUM_MONTH_TIER_2);
+        const defaultPrice = PremiumUtilsDefault.getDefaultPrice(hasOwnProperty.PREMIUM_MONTH_TIER_2);
+        str = PriceUtils.formatPrice(defaultPrice.amount, defaultPrice.currency);
         const tmpResult2 = PriceUtils;
-        str = tmpResult2.formatPrice(defaultPrice.amount, defaultPrice.currency);
       } catch (err) {
       }
     }
@@ -52,36 +45,28 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp12 = /\{price\}/g;
     cResult[2] = tmp12;
-    tmp11 = tmp12;
+    let tmp11 = tmp12;
   } else {
     tmp11 = cResult[2];
   }
   return arr.replace(tmp11, str);
 }) : ((arr) => {
-  let TIER_2;
-  let loadedForSKU;
   let str = "...";
   const items = [SubscriptionPlanStore];
-  const obj = get_initialized;
-  const stateFromStores = obj.useStateFromStores(items, () => loadedForSKU.isLoadedForSKU(TIER_2.TIER_2));
+  const stateFromStores = initialize.useStateFromStores(items, () => loadedForSKU.isLoadedForSKU(TIER_2.TIER_2));
   if (-1 !== arr.indexOf("{price}")) {
     if (stateFromStores) {
       try {
-        const obj2 = PremiumUtilsDefault;
-        const defaultPrice = obj2.getDefaultPrice(hasOwnProperty.PREMIUM_MONTH_TIER_2);
+        const defaultPrice = PremiumUtilsDefault.getDefaultPrice(hasOwnProperty.PREMIUM_MONTH_TIER_2);
+        str = PriceUtils.formatPrice(defaultPrice.amount, defaultPrice.currency);
         const tmpResult = PriceUtils;
-        str = tmpResult.formatPrice(defaultPrice.amount, defaultPrice.currency);
       } catch (err) {
       }
     }
   }
   return arr.replace(/\{price\}/g, str);
 });
-const result = size.fileFinishedImporting("modules/premium/promotions/PromotionStringUtils.tsx");
-
-export const useFormatStringWithCommonPremiumParams = tmp3;
 export const getHelpArticleLinkProps = function getHelpArticleLinkProps(helpArticle, helpArticleId) {
-  let obj2;
   let id1;
   if (helpArticle != null) {
     id1 = helpArticle.id;
@@ -101,15 +86,13 @@ export const getHelpArticleLinkProps = function getHelpArticleLinkProps(helpArti
       linkText1 = helpArticle.linkText;
     }
     if (null != linkText1) {
-      let linkText;
       if ("" !== helpArticle.linkText) {
-        linkText = helpArticle.linkText;
+        let linkText = helpArticle.linkText;
       }
-      const obj = { url: obj2.getArticleURL(id), linkText };
-      obj2 = HelpdeskUtilsDefault;
+      const obj = { url: HelpdeskUtilsDefault.getArticleURL(id), linkText };
       return obj;
     }
-    const intl = intl2.intl;
-    linkText = intl.string(intl2.t["sBp+u0"]);
+    const intl = util.intl;
+    linkText = intl.string(util.t["sBp+u0"]);
   }
 };

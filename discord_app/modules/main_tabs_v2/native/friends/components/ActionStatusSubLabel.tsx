@@ -3,25 +3,21 @@
 // Module 16422 (ActionStatusSubLabel)
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
-import Text_Text from "Text/Text" /* 4892 */;
 import timing from "timing" /* 4897 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
-let c3;
-let closure_4;
+require = fn;
 function announceActioned(intl) {
   const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(intl);
 }
-({ jsx: c3, jsxs: closure_4 } = Fragment);
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4896);
 let closure_5 = createStyles.createStyles(() => ({ container: { overflow: "hidden" }, actionStatus: { position: "absolute" } }));
-let closure_7 = ReanimatedRexport.createAnimatedComponent(Text_Text.Text);
+let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(4892).Text);
 const __initData = { code: "function ActionStatusSubLabelTsx1(){const{hasSecondLine,actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const currentlyHasSecondLine=hasSecondLine&&!actioned.get();const lineHeightValue=lineHeight*fontScale;const currentLineHeightValue=currentlyHasSecondLine?lineHeightValue*2:lineHeightValue;return{height:!animate||!actioned.get()?currentLineHeightValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[currentlyHasSecondLine?lineHeightValue*2:lineHeightValue,lineHeightValue]))};}" };
 const __initData2 = { code: "function ActionStatusSubLabelTsx2(){const{actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const translateYValue=actioned.get()?lineHeight*fontScale:0;return{transform:[{translateY:!animate?translateYValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[0,translateYValue]))}]};}" };
 const __initData3 = { code: "function ActionStatusSubLabelTsx3(){const{actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const translateYValue_0=actioned.get()?0:-lineHeight*fontScale;return{transform:[{translateY:!animate?translateYValue_0:withTiming(interpolate(actioned.get()?1:0,[0,1],[translateYValue_0,0]))}],opacity:!animate?actioned.get()?1:0:withTiming(actioned.get()?1:0)};}" };
@@ -32,19 +28,13 @@ const __initData7 = { code: "function ActionStatusSubLabelTsx7(){const{actioned,
 const __initData8 = { code: "function ActionStatusSubLabelTsx8(){const{actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const translateYValue_0=actioned.get()?0:-lineHeight*fontScale;return{transform:[{translateY:!animate?translateYValue_0:withTiming(interpolate(actioned.get()?1:0,[0,1],[translateYValue_0,0]))}],opacity:!animate?actioned.get()?1:0:withTiming(actioned.get()?1:0)};}" };
 const __initData9 = { code: "function ActionStatusSubLabelTsx9(){const{actioned}=this.__closure;return actioned.get();}" };
 const __initData10 = { code: "function ActionStatusSubLabelTsx10(actioned_0,actionedPrev){const{actionStatusAccessibilityLabel,runOnJS,announceActioned}=this.__closure;const isActioned=actioned_0&&actionedPrev===false;if(!isActioned||actionStatusAccessibilityLabel==null){return;}runOnJS(announceActioned)(actionStatusAccessibilityLabel);}" };
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let actionStatus;
-  let actionStatusAccessibilityLabel;
-  let actioned;
-  let animate;
-  let items;
-  let label;
-  let lineHeight;
-  let maxFontSizeMultiplier;
-  let secondaryLabel;
-  let textVariant;
-  let obj = actioned(animate[7]);
-  const cResult = obj.c(27);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ActionStatusSubLabel.tsx");
+
+export const ACTION_STATUS_SUB_LABEL_LINE_HEIGHT = 16;
+export const ActionStatusSubLabel = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = actioned(animate[7]).c(27);
   ({ lineHeight, textVariant, actioned } = arg0);
   ({ label, secondaryLabel, actionStatus, actionStatusAccessibilityLabel } = arg0);
   ({ maxFontSizeMultiplier, animate } = arg0);
@@ -56,12 +46,16 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (undefined !== textVariant) {
     str = textVariant;
   }
-  let closure_4 = tmp4;
-  const tmpResult = actioned(animate[8]);
-  const fontScale = tmpResult.useFontScale();
+  closure_4 = tmp4;
+  let obj = actioned(animate[7]);
+  const fontScale = actioned(animate[8]).useFontScale();
   const tmp6 = fontScale();
+  const tmpResult = actioned(animate[8]);
   const fn = function f() {
-    const tmp = closure_4 && !actioned.get();
+    let tmp = closure_4;
+    if (closure_4) {
+      tmp = !actioned.get();
+    }
     const result = num * fontScale;
     let result1 = result;
     if (tmp) {
@@ -71,11 +65,8 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (animate) {
       height = result1;
       if (actioned.get()) {
-        const withTiming = timing.withTiming;
-        timing;
-        const interpolate = ReanimatedRexport2.interpolate;
+        const obj2 = timing;
         let num2 = 0;
-        ReanimatedRexport2;
         if (actioned.get()) {
           num2 = 1;
         }
@@ -84,91 +75,82 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           result2 = 2 * result;
         }
         const items = [result2, result];
-        height = withTiming(interpolate(num2, [0, 1], items));
+        height = obj2.withTiming(ReanimatedRexport2.interpolate(num2, [0, 1], items));
       }
     }
     return { height };
   };
   const tmpResult5 = actioned(animate[4]);
-  let obj2 = { hasSecondLine: tmp4, actioned, lineHeight: num, fontScale, animate, withTiming: actioned(animate[9]).withTiming, interpolate: actioned(animate[4]).interpolate };
-  fn.__closure = obj2;
+  fn.__closure = { hasSecondLine: null != secondaryLabel, actioned, lineHeight: num, fontScale, animate, withTiming: actioned(animate[9]).withTiming, interpolate: actioned(animate[4]).interpolate };
   fn.__workletHash = 14210085997091;
   fn.__initData = __initData;
   const animatedStyle = tmpResult5.useAnimatedStyle(fn);
+  let obj2 = { hasSecondLine: null != secondaryLabel, actioned, lineHeight: num, fontScale, animate, withTiming: actioned(animate[9]).withTiming, interpolate: actioned(animate[4]).interpolate };
   const fn2 = function b() {
-    let items1;
     num = 0;
     if (actioned.get()) {
       num = num * fontScale;
     }
     let withTimingResult = num;
     if (animate) {
-      const withTiming = timing.withTiming;
-      timing;
-      const interpolate = ReanimatedRexport2.interpolate;
+      const obj2 = timing;
       let num2 = 0;
-      ReanimatedRexport2;
       if (actioned.get()) {
         num2 = 1;
       }
       const items = [0, num];
-      withTimingResult = withTiming(interpolate(num2, [0, 1], items));
+      withTimingResult = obj2.withTiming(ReanimatedRexport2.interpolate(num2, [0, 1], items));
     }
-    const obj2 = { transform: items1 };
-    items1 = [{ translateY: withTimingResult }];
-    return obj2;
+    const obj4 = { transform: null };
+    const items1 = [{ translateY: withTimingResult }];
+    obj4.transform = items1;
+    return obj4;
   };
   const tmpResult6 = actioned(animate[4]);
   fn2.__closure = { actioned, lineHeight: num, fontScale, animate, withTiming: actioned(animate[9]).withTiming, interpolate: actioned(animate[4]).interpolate };
   fn2.__workletHash = 1040596522101;
   fn2.__initData = __initData2;
-  ({ actioned, lineHeight: num, fontScale, animate, withTiming: actioned(animate[9]).withTiming, interpolate: actioned(animate[4]).interpolate });
   const animatedStyle1 = tmpResult6.useAnimatedStyle(fn2);
+  let obj3 = { actioned, lineHeight: num, fontScale, animate, withTiming: actioned(animate[9]).withTiming, interpolate: actioned(animate[4]).interpolate };
   const fn3 = function p() {
-    let items1;
-    let num3;
     num = 0;
     if (!actioned.get()) {
       num = -num * fontScale;
     }
     let withTimingResult = num;
     if (animate) {
-      const withTiming = timing.withTiming;
-      timing;
-      const interpolate = ReanimatedRexport2.interpolate;
+      const obj2 = timing;
       let num2 = 0;
-      ReanimatedRexport2;
       if (actioned.get()) {
         num2 = 1;
       }
       const items = [num, 0];
-      withTimingResult = withTiming(interpolate(num2, [0, 1], items));
+      withTimingResult = obj2.withTiming(ReanimatedRexport2.interpolate(num2, [0, 1], items));
     }
-    const obj2 = { transform: items1, opacity: num3 };
-    items1 = [{ translateY: withTimingResult }];
+    const obj4 = { transform: null, opacity: null };
+    const items1 = [{ translateY: withTimingResult }];
+    obj4.transform = items1;
     if (animate) {
-      const withTiming2 = timing.withTiming;
       let num4 = 0;
-      timing;
       if (actioned.get()) {
         num4 = 1;
       }
-      num3 = withTiming2(num4);
+      let num3 = timing.withTiming(num4);
     } else {
       num3 = 0;
       if (actioned.get()) {
         num3 = 1;
       }
     }
-    return obj2;
+    obj4.opacity = num3;
+    return obj4;
   };
   const tmpResult7 = actioned(animate[4]);
   fn3.__closure = { actioned, lineHeight: num, fontScale, animate, withTiming: actioned(animate[9]).withTiming, interpolate: actioned(animate[4]).interpolate };
   fn3.__workletHash = 9519694880373;
   fn3.__initData = __initData3;
-  ({ actioned, lineHeight: num, fontScale, animate, withTiming: actioned(animate[9]).withTiming, interpolate: actioned(animate[4]).interpolate });
   const animatedStyle2 = tmpResult7.useAnimatedStyle(fn3);
-  const tmpResult8 = actioned(animate[4]);
+  let obj4 = { actioned, lineHeight: num, fontScale, animate, withTiming: actioned(animate[9]).withTiming, interpolate: actioned(animate[4]).interpolate };
   class A {
     constructor() {
       return actioned.get();
@@ -179,63 +161,73 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   A.__initData = __initData4;
   class H {
     constructor(arg0, arg1) {
-      const tmp = arg0 && false === arg1 && null != actionStatusAccessibilityLabel;
-      if (tmp) {
-        const obj = ReanimatedRexport2;
-        obj.runOnJS(announceActioned)(actionStatusAccessibilityLabel);
+      tmp = arg0;
+      if (arg0) {
+        tmp2 = arg1;
+        flag = false;
+        tmp = false === arg1;
       }
+      if (tmp) {
+        tmp3 = closure_1;
+        tmp4 = null;
+        tmp = null != closure_1;
+      }
+      if (tmp) {
+        tmp5 = closure_0;
+        tmp6 = closure_2;
+        obj = closure_0(closure_2[4]);
+        tmp7 = announceActioned;
+        tmp8 = closure_1;
+        tmp9 = obj.runOnJS(announceActioned)(closure_1);
+      }
+      return;
     }
   }
+  const tmpResult8 = actioned(animate[4]);
   H.__closure = { actionStatusAccessibilityLabel, runOnJS: actioned(animate[4]).runOnJS, announceActioned };
   H.__workletHash = 14569076805033;
   H.__initData = __initData5;
-  ({ actionStatusAccessibilityLabel, runOnJS: actioned(animate[4]).runOnJS, announceActioned });
   const animatedReaction = tmpResult8.useAnimatedReaction(A, H);
   if (cResult[0] === animatedStyle) {
-    let tmp11;
     if (cResult[1] === tmp6.container) {
-      tmp11 = cResult[2];
+      let tmp11 = cResult[2];
     }
     if (cResult[3] === label) {
       if (cResult[4] === animatedStyle1) {
         if (cResult[5] === maxFontSizeMultiplier) {
-          let tmp12;
           if (cResult[6] === str) {
-            tmp12 = cResult[7];
+            let tmp12 = cResult[7];
           }
-          if (cResult[8] === null != secondaryLabel) {
+          if (cResult[8] === tmp4) {
             if (cResult[9] === animatedStyle1) {
               if (cResult[10] === maxFontSizeMultiplier) {
                 if (cResult[11] === secondaryLabel) {
-                  let tmp16;
                   if (cResult[12] === str) {
-                    tmp16 = cResult[13];
+                    let tmp16 = cResult[13];
                   }
                   if (cResult[14] === animatedStyle2) {
-                    let tmp20;
                     if (cResult[15] === tmp6.actionStatus) {
-                      tmp20 = cResult[16];
+                      let tmp20 = cResult[16];
                     }
                     if (cResult[17] === actionStatus) {
                       if (cResult[18] === maxFontSizeMultiplier) {
                         if (cResult[19] === tmp20) {
-                          let tmp21;
                           if (cResult[20] === str) {
-                            tmp21 = cResult[21];
+                            let tmp21 = cResult[21];
                           }
                           if (cResult[22] === tmp11) {
                             if (cResult[23] === tmp12) {
                               if (cResult[24] === tmp16) {
-                                let tmp25;
                                 if (cResult[25] === tmp21) {
-                                  tmp25 = cResult[26];
+                                  let tmp25 = cResult[26];
                                 }
                                 return tmp25;
                               }
                             }
                           }
-                          const obj6 = { style: tmp11, children: items };
-                          items = [tmp12, tmp16, tmp21];
+                          const obj6 = { style: tmp11, children: null };
+                          let items = [tmp12, tmp16, tmp21];
+                          obj6.children = items;
                           const tmp28 = closure_4(actionStatusAccessibilityLabel(animate[4]).View, obj6);
                           cResult[22] = tmp11;
                           cResult[23] = tmp12;
@@ -265,11 +257,11 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             }
           }
           let tmp17 = tmp4;
-          if (tmp17) {
+          if (tmp4) {
             const obj8 = { variant: str, maxFontSizeMultiplier, style: animatedStyle1, color: "text-default", lineClamp: 1, children: secondaryLabel };
             tmp17 = num(closure_7, obj8);
           }
-          cResult[8] = null != secondaryLabel;
+          cResult[8] = tmp4;
           cResult[9] = animatedStyle1;
           cResult[10] = maxFontSizeMultiplier;
           cResult[11] = secondaryLabel;
@@ -281,11 +273,8 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const obj9 = { variant: str, maxFontSizeMultiplier, color: "text-default", style: animatedStyle1, lineClamp: 1, children: label };
     const tmp15 = num(closure_7, obj9);
-    let num2 = 3;
     cResult[3] = label;
-    let num3 = 4;
     cResult[4] = animatedStyle1;
-    let num4 = 5;
     cResult[5] = maxFontSizeMultiplier;
     cResult[6] = str;
     cResult[7] = tmp15;
@@ -296,16 +285,8 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp6.container;
   cResult[2] = items2;
   tmp11 = items2;
+  let obj5 = { actionStatusAccessibilityLabel, runOnJS: actioned(animate[4]).runOnJS, announceActioned };
 }) : ((lineHeight) => {
-  let actionStatus;
-  let actionStatusAccessibilityLabel;
-  let animate;
-  let items;
-  let items1;
-  let items2;
-  let label;
-  let maxFontSizeMultiplier;
-  let secondaryLabel;
   let num = lineHeight.lineHeight;
   if (num === undefined) {
     num = 16;
@@ -318,14 +299,16 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   ({ secondaryLabel, actionStatusAccessibilityLabel } = lineHeight);
   ({ maxFontSizeMultiplier, animate } = lineHeight);
   let tmp = null != secondaryLabel;
-  let closure_4 = tmp;
+  closure_4 = tmp;
   ({ label, actionStatus } = lineHeight);
-  let obj = num(actionStatusAccessibilityLabel[8]);
-  const fontScale = obj.useFontScale();
+  const fontScale = num(actionStatusAccessibilityLabel[8]).useFontScale();
   const tmp3 = fontScale();
-  let obj2 = num(actionStatusAccessibilityLabel[4]);
+  let obj = num(actionStatusAccessibilityLabel[8]);
   const fn = function x() {
-    const tmp = closure_4 && !actioned.get();
+    let tmp = closure_4;
+    if (closure_4) {
+      tmp = !actioned.get();
+    }
     const result = num * fontScale;
     let result1 = result;
     if (tmp) {
@@ -335,11 +318,8 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (animate) {
       height = result1;
       if (actioned.get()) {
-        const withTiming = timing.withTiming;
-        timing;
-        const interpolate = ReanimatedRexport2.interpolate;
+        const obj2 = timing;
         let num2 = 0;
-        ReanimatedRexport2;
         if (actioned.get()) {
           num2 = 1;
         }
@@ -348,92 +328,99 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           result2 = 2 * result;
         }
         const items = [result2, result];
-        height = withTiming(interpolate(num2, [0, 1], items));
+        height = obj2.withTiming(ReanimatedRexport2.interpolate(num2, [0, 1], items));
       }
     }
     return { height };
   };
+  let obj2 = num(actionStatusAccessibilityLabel[4]);
   fn.__closure = { hasSecondLine: tmp, actioned, lineHeight: num, fontScale, animate, withTiming: num(actionStatusAccessibilityLabel[9]).withTiming, interpolate: num(actionStatusAccessibilityLabel[4]).interpolate };
   fn.__workletHash = 9804318235876;
   fn.__initData = __initData6;
-  ({ hasSecondLine: tmp, actioned, lineHeight: num, fontScale, animate, withTiming: num(actionStatusAccessibilityLabel[9]).withTiming, interpolate: num(actionStatusAccessibilityLabel[4]).interpolate });
   const animatedStyle = obj2.useAnimatedStyle(fn);
+  let obj3 = { hasSecondLine: tmp, actioned, lineHeight: num, fontScale, animate, withTiming: num(actionStatusAccessibilityLabel[9]).withTiming, interpolate: num(actionStatusAccessibilityLabel[4]).interpolate };
   const fn2 = function y() {
-    let items1;
     num = 0;
     if (actioned.get()) {
       num = num * fontScale;
     }
     let withTimingResult = num;
     if (animate) {
-      const withTiming = timing.withTiming;
-      timing;
-      const interpolate = ReanimatedRexport2.interpolate;
+      const obj2 = timing;
       let num2 = 0;
-      ReanimatedRexport2;
       if (actioned.get()) {
         num2 = 1;
       }
       const items = [0, num];
-      withTimingResult = withTiming(interpolate(num2, [0, 1], items));
+      withTimingResult = obj2.withTiming(ReanimatedRexport2.interpolate(num2, [0, 1], items));
     }
-    const obj2 = { transform: items1 };
-    items1 = [{ translateY: withTimingResult }];
-    return obj2;
+    const obj4 = { transform: null };
+    const items1 = [{ translateY: withTimingResult }];
+    obj4.transform = items1;
+    return obj4;
   };
-  const obj4 = num(actionStatusAccessibilityLabel[4]);
+  let obj4 = num(actionStatusAccessibilityLabel[4]);
   fn2.__closure = { actioned, lineHeight: num, fontScale, animate, withTiming: num(actionStatusAccessibilityLabel[9]).withTiming, interpolate: num(actionStatusAccessibilityLabel[4]).interpolate };
   fn2.__workletHash = 11945556935472;
   fn2.__initData = __initData7;
-  ({ actioned, lineHeight: num, fontScale, animate, withTiming: num(actionStatusAccessibilityLabel[9]).withTiming, interpolate: num(actionStatusAccessibilityLabel[4]).interpolate });
   const animatedStyle1 = obj4.useAnimatedStyle(fn2);
-  const obj6 = num(actionStatusAccessibilityLabel[4]);
+  let obj5 = { actioned, lineHeight: num, fontScale, animate, withTiming: num(actionStatusAccessibilityLabel[9]).withTiming, interpolate: num(actionStatusAccessibilityLabel[4]).interpolate };
   class V {
     constructor() {
-      let items1;
-      let num3;
+      obj = actioned;
       num = 0;
       if (!actioned.get()) {
-        num = -num * fontScale;
+        tmp = c0;
+        tmp2 = closure_5;
+        num = -c0 * closure_5;
       }
-      let withTimingResult = num;
+      withTimingResult = num;
+      tmp3 = animate;
       if (animate) {
-        const withTiming = timing.withTiming;
-        timing;
-        const interpolate = ReanimatedRexport2.interpolate;
-        let num2 = 0;
-        ReanimatedRexport2;
-        if (actioned.get()) {
+        tmp5 = closure_0;
+        tmp6 = closure_2;
+        obj2 = closure_0(closure_2[9]);
+        tmp7 = closure_0;
+        tmp8 = closure_2;
+        obj3 = closure_0(closure_2[4]);
+        num2 = 0;
+        if (obj.get()) {
           num2 = 1;
         }
-        const items = [num, 0];
-        withTimingResult = withTiming(interpolate(num2, [0, 1], items));
+        items = [, ];
+        items[0] = num;
+        items[1] = 0;
+        withTimingResult = obj2.withTiming(obj3.interpolate(num2, [0, 1], items));
       }
-      const obj2 = { transform: items1, opacity: num3 };
-      items1 = [{ translateY: withTimingResult }];
-      if (animate) {
-        const withTiming2 = timing.withTiming;
-        let num4 = 0;
-        timing;
-        if (actioned.get()) {
+      obj1 = { transform: null, opacity: null };
+      items1 = [];
+      items1[0] = { translateY: withTimingResult };
+      obj1.transform = items1;
+      if (tmp3) {
+        tmp9 = closure_0;
+        tmp10 = closure_2;
+        obj5 = closure_0(closure_2[9]);
+        num4 = 0;
+        if (obj.get()) {
           num4 = 1;
         }
-        num3 = withTiming2(num4);
+        num3 = obj5.withTiming(num4);
       } else {
         num3 = 0;
-        if (actioned.get()) {
+        if (obj.get()) {
           num3 = 1;
         }
       }
-      return obj2;
+      obj1.opacity = num3;
+      return obj1;
     }
   }
+  const obj6 = num(actionStatusAccessibilityLabel[4]);
   V.__closure = { actioned, lineHeight: num, fontScale, animate, withTiming: num(actionStatusAccessibilityLabel[9]).withTiming, interpolate: num(actionStatusAccessibilityLabel[4]).interpolate };
   V.__workletHash = 15212560434750;
   V.__initData = __initData8;
-  ({ actioned, lineHeight: num, fontScale, animate, withTiming: num(actionStatusAccessibilityLabel[9]).withTiming, interpolate: num(actionStatusAccessibilityLabel[4]).interpolate });
   const animatedStyle2 = obj6.useAnimatedStyle(V);
-  const obj8 = num(actionStatusAccessibilityLabel[4]);
+  const obj7 = { actioned, lineHeight: num, fontScale, animate, withTiming: num(actionStatusAccessibilityLabel[9]).withTiming, interpolate: num(actionStatusAccessibilityLabel[4]).interpolate };
   class Y {
     constructor() {
       return actioned.get();
@@ -443,33 +430,35 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   Y.__workletHash = 6264362886136;
   Y.__initData = __initData9;
   const fn3 = function v(arg0, arg1) {
-    const tmp = arg0 && false === arg1 && null != actionStatusAccessibilityLabel;
+    let tmp = arg0;
+    if (arg0) {
+      tmp = false === arg1;
+    }
     if (tmp) {
-      const obj = ReanimatedRexport2;
-      obj.runOnJS(announceActioned)(actionStatusAccessibilityLabel);
+      tmp = null != actionStatusAccessibilityLabel;
+    }
+    if (tmp) {
+      ReanimatedRexport2.runOnJS(announceActioned)(actionStatusAccessibilityLabel);
     }
   };
+  const obj8 = num(actionStatusAccessibilityLabel[4]);
   fn3.__closure = { actionStatusAccessibilityLabel, runOnJS: num(actionStatusAccessibilityLabel[4]).runOnJS, announceActioned };
   fn3.__workletHash = 11344856974461;
   fn3.__initData = __initData10;
-  ({ actionStatusAccessibilityLabel, runOnJS: num(actionStatusAccessibilityLabel[4]).runOnJS, announceActioned });
   const animatedReaction = obj8.useAnimatedReaction(Y, fn3);
-  const tmp8 = closure_4;
-  const obj10 = { style: items, children: items1 };
-  items = [tmp3.container, animatedStyle];
-  const View = actioned(actionStatusAccessibilityLabel[4]).View;
-  items1 = [animate(closure_7, { variant: str, maxFontSizeMultiplier, color: "text-default", style: animatedStyle1, lineClamp: 1, children: label }), , ];
+  const obj10 = { style: null, children: null };
+  let items = [tmp3.container, animatedStyle];
+  obj10.style = items;
+  let items1 = [animate(closure_7, { variant: str, maxFontSizeMultiplier, color: "text-default", style: animatedStyle1, lineClamp: 1, children: label }), , ];
   if (tmp) {
     const obj11 = { variant: str, maxFontSizeMultiplier, style: animatedStyle1, color: "text-default", lineClamp: 1, children: secondaryLabel };
     tmp = animate(closure_7, obj11);
   }
   items1[1] = tmp;
-  const obj12 = { variant: str, maxFontSizeMultiplier, color: "text-default", style: items2, lineClamp: 1, children: actionStatus };
-  items2 = [tmp3.actionStatus, animatedStyle2];
+  const obj12 = { variant: str, maxFontSizeMultiplier, color: "text-default", style: null, lineClamp: 1, children: actionStatus };
+  const items2 = [tmp3.actionStatus, animatedStyle2];
+  obj12.style = items2;
   items1[2] = animate(closure_7, obj12);
-  return tmp8(View, obj10);
+  obj10.children = items1;
+  return closure_4(actioned(actionStatusAccessibilityLabel[4]).View, obj10);
 });
-let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ActionStatusSubLabel.tsx");
-
-export const ACTION_STATUS_SUB_LABEL_LINE_HEIGHT = 16;
-export const ActionStatusSubLabel = tmp4;

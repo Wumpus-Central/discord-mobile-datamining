@@ -1,65 +1,42 @@
 // === Module 9624: GlobalStatusIndicator ===
 
 // Module 9624 (GlobalStatusIndicator)
-import get_initialized from "get initialized" /* 504 */;
-import react2 from "react" /* 576 */;
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 5103 */;
 import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 9620 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4567 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
 import NativeMenuStore from "NativeMenuStore" /* 9625 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
-import Fragment from "Fragment" /* 21 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-let current, importDefault;
-
-let NativeEventEmitter;
-let NativeModules;
-let closure_12;
-let closure_14;
-let closure_4;
-let hasOwnProperty;
-let map1;
-let metroRequire;
-({ View: closure_4, StyleSheet: hasOwnProperty, TouchableWithoutFeedback: metroRequire, NativeEventEmitter, NativeModules } = react_native);
-({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = Fragment);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet: hasOwnProperty, TouchableWithoutFeedback: metroRequire, NativeEventEmitter, NativeModules } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.DCDStatusBarOverlayViewManager);
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
-  let first;
-  let stateFromStores;
-  let tmp10;
-  let tmp12;
-  let tmp14;
-  let tmp16;
-  let tmp17;
-  const tmp2 = stateFromStores;
-  let obj = onPress(stateFromStores[9]);
-  const cResult = obj.c(25);
+  const cResult = onPress(stateFromStores[9]).c(25);
   onPress = onPress.onPress;
   const tmp5 = require("useVoiceStateForRemoteSession")();
-  const tmp4 = importDefault;
   importDefault = tmp5;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [RTCConnectionStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   let channelId;
-  const tmp8 = cResult[1];
   if (tmp5 != null) {
     channelId = tmp5.channelId;
   }
-  if (tmp8 !== channelId) {
+  if (cResult[1] !== channelId) {
     let channelId1;
     if (tmp5 != null) {
       channelId1 = tmp5.channelId;
@@ -76,26 +53,27 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
     };
     cResult[1] = channelId1;
     cResult[2] = fn;
-    tmp10 = fn;
+    let tmp9 = fn;
   } else {
-    tmp10 = cResult[2];
+    tmp9 = cResult[2];
   }
   if (cResult[3] !== tmp5) {
     const items1 = [tmp5];
     cResult[3] = tmp5;
     cResult[4] = items1;
-    tmp12 = items1;
+    let tmp11 = items1;
   } else {
-    tmp12 = cResult[4];
+    tmp11 = cResult[4];
   }
-  const tmpResult = onPress(tmp2[11]);
-  stateFromStores = tmpResult.useStateFromStores(first, tmp10, tmp12);
+  let obj = onPress(stateFromStores[9]);
+  const tmp4 = importDefault;
+  stateFromStores = onPress(stateFromStores[11]).useStateFromStores(first, tmp9, tmp11);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [ChannelStore];
     cResult[5] = items2;
-    tmp14 = items2;
+    let tmp13 = items2;
   } else {
-    tmp14 = cResult[5];
+    tmp13 = cResult[5];
   }
   if (cResult[6] !== stateFromStores) {
     const fn2 = function _() {
@@ -105,41 +83,41 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
     cResult[6] = stateFromStores;
     cResult[7] = fn2;
     cResult[8] = items3;
-    tmp17 = items3;
-    tmp16 = fn2;
+    let tmp16 = items3;
+    let tmp15 = fn2;
   } else {
-    tmp16 = cResult[7];
-    tmp17 = cResult[8];
+    tmp15 = cResult[7];
+    tmp16 = cResult[8];
   }
-  const tmpResult3 = onPress(tmp2[11]);
-  const stateFromStores1 = tmpResult3.useStateFromStores(tmp14, tmp16, tmp17);
-  const tmpResult4 = onPress(tmp2[12]);
-  const voiceChatNavigationContext = tmpResult4.useVoiceChatNavigationContext();
+  const tmpResult = onPress(stateFromStores[11]);
+  const stateFromStores1 = onPress(stateFromStores[11]).useStateFromStores(tmp13, tmp15, tmp16);
+  const tmpResult3 = onPress(stateFromStores[11]);
+  const voiceChatNavigationContext = onPress(stateFromStores[12]).useVoiceChatNavigationContext();
   let openVoice;
   if (voiceChatNavigationContext != null) {
     openVoice = voiceChatNavigationContext.openVoice;
   }
   if (cResult[9] === stateFromStores1) {
     if (cResult[10] === onPress) {
-      let tmp21;
-      let tmp30;
       if (cResult[11] === openVoice) {
-        tmp21 = cResult[12];
+        let tmp20 = cResult[12];
       }
-      current = tmp21;
-      let closure_6 = stateFromStores1.useRef(tmp21);
-      if (cResult[13] !== tmp21) {
+      current = tmp20;
+      closure_6 = stateFromStores1.useRef(tmp20);
+      if (cResult[13] !== tmp20) {
         class T {
           constructor() {
-            closure_6.current = current;
+            closure_6.current = closure_5;
+            return;
           }
         }
-        cResult[13] = tmp21;
+        cResult[13] = tmp20;
         cResult[14] = T;
       } else {
         class T {
           constructor() {
-            closure_6.current = current;
+            closure_6.current = closure_5;
+            return;
           }
         }
       }
@@ -186,9 +164,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
             };
           }
         }
-        tmp26[0] = stateFromStores;
+        tmp25[0] = stateFromStores;
         cResult[16] = stateFromStores;
-        cResult[17] = tmp26;
+        cResult[17] = tmp25;
       } else {
         class O {
           constructor() {
@@ -203,7 +181,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
           }
         }
       }
-      const effect1 = obj5.useEffect(O, tmp26);
+      const effect1 = obj5.useEffect(O, tmp25);
       if (null != stateFromStores1) {
         class O {
           constructor() {
@@ -219,7 +197,6 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
         }
       }
       if (cResult[18] !== stateFromStores1) {
-        let stringResult;
         class O {
           constructor() {
             closure_0 = closure_1_15.addListener("StatusBarTapped", () => {
@@ -245,7 +222,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
               };
             }
           }
-          stringResult = obj6.string(onPress(tmp2[14]).t.GaCMgX);
+          const stringResult = obj6.string(tmp(tmp2[14]).t.GaCMgX);
         }
         cResult[18] = stateFromStores1;
         cResult[19] = stringResult;
@@ -278,9 +255,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
           }
         }
         const obj2 = { children: closure_12(tmp4(tmp2[15]), {}) };
-        const tmp32 = closure_12(openVoice, obj2);
-        cResult[20] = tmp32;
-        tmp30 = tmp32;
+        const tmp31 = closure_12(openVoice, obj2);
+        cResult[20] = tmp31;
+        const tmp29 = tmp31;
       } else {
         class O {
           constructor() {
@@ -295,7 +272,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
           }
         }
       }
-      if (cResult[21] === tmp21) {
+      if (cResult[21] === tmp20) {
         class O {
           constructor() {
             closure_0 = closure_1_15.addListener("StatusBarTapped", () => {
@@ -309,51 +286,52 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
           }
         }
       }
-      const obj3 = { accessibilityRole: "text", accessibilityHint: tmp28, onPress: tmp21, children: tmp30 };
-      cResult[21] = tmp21;
+      const obj3 = { accessibilityRole: "text", accessibilityHint: tmp27, onPress: tmp20, children: tmp29 };
+      const tmp35 = closure_12(closure_6, obj3);
+      cResult[21] = tmp20;
       cResult[22] = "text";
-      cResult[23] = tmp28;
-      cResult[24] = closure_12(closure_6, obj3);
-      const tmp36 = closure_12(closure_6, obj3);
+      cResult[23] = tmp27;
+      cResult[24] = tmp35;
     }
   }
   class V {
     constructor() {
-      if (null != stateFromStores1) {
+      tmp = closure_3;
+      if (null != closure_3) {
         if (null != openVoice) {
-          if (ChannelRTCStore.getChatOpen(stateFromStores1.id)) {
-            tmp2();
+          tmp3 = closure_8;
+          if (closure_8.getChatOpen(tmp.id)) {
+            tmp2Result = tmp2();
           }
           if (onPress != null) {
-            tmp8();
+            tmp8Result = tmp8();
           }
         }
-        const obj = PrivateChannelCallUtils;
-        const result = obj.navigateToVoiceChannel(stateFromStores1, "RTC Panel");
+        tmp4 = closure_0;
+        tmp5 = closure_2;
+        obj = closure_0(closure_2[13]);
+        str = "RTC Panel";
+        result = obj.navigateToVoiceChannel(tmp, "RTC Panel");
       }
+      return;
     }
   }
   cResult[9] = stateFromStores1;
   cResult[10] = onPress;
   cResult[11] = openVoice;
   cResult[12] = V;
-  tmp21 = V;
+  tmp20 = V;
+  const tmpResult4 = onPress(stateFromStores[12]);
 }) : ((onPress) => {
-  let callback;
-  let obj5;
-  let stringResult;
   importDefault = undefined;
   let stateFromStores;
   onPress = undefined;
-  let closure_6;
-  const tmp2 = stateFromStores;
+  closure_6 = undefined;
   const tmp3 = require("useVoiceStateForRemoteSession")();
-  const tmp = importDefault;
   importDefault = tmp3;
-  let obj = onPress(stateFromStores[11]);
   const items = [RTCConnectionStore];
   const items1 = [tmp3];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = onPress(stateFromStores[11]).useStateFromStores(items, () => {
     channelId = undefined;
     if (channelId != null) {
       channelId = channelId.channelId;
@@ -363,12 +341,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
     }
     return channelId;
   }, items1);
+  let obj = onPress(stateFromStores[11]);
+  const tmp = importDefault;
   const items2 = [ChannelStore];
   const items3 = [stateFromStores];
+  const stateFromStores1 = onPress(stateFromStores[11]).useStateFromStores(items2, () => ChannelStore.getChannel(stateFromStores), items3);
   const obj2 = onPress(stateFromStores[11]);
-  const stateFromStores1 = obj2.useStateFromStores(items2, () => ChannelStore.getChannel(stateFromStores), items3);
-  const obj3 = onPress(stateFromStores[12]);
-  const voiceChatNavigationContext = obj3.useVoiceChatNavigationContext();
+  const voiceChatNavigationContext = onPress(stateFromStores[12]).useVoiceChatNavigationContext();
   let openVoice;
   if (voiceChatNavigationContext != null) {
     openVoice = voiceChatNavigationContext.openVoice;
@@ -384,8 +363,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
           tmp8();
         }
       }
-      const obj = PrivateChannelCallUtils;
-      const result = obj.navigateToVoiceChannel(stateFromStores1, "RTC Panel");
+      const result = PrivateChannelCallUtils.navigateToVoiceChannel(stateFromStores1, "RTC Panel");
     }
   }, items4);
   closure_6 = stateFromStores1.useRef(onPress);
@@ -394,8 +372,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
   });
   const items5 = [stateFromStores];
   const effect1 = stateFromStores1.useEffect(() => {
-    let ref;
-    let closure_0 = nativeEventEmitter.addListener("StatusBarTapped", () => {
+    closure_0 = nativeEventEmitter.addListener("StatusBarTapped", () => {
       ref.current();
     });
     return () => {
@@ -405,38 +382,37 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
     };
   }, items5);
   let str = "text";
-  const tmp13 = closure_6;
   if (null != stateFromStores1) {
     str = "button";
   }
-  const obj4 = { accessibilityRole: str, accessibilityHint: stringResult, onPress, children: closure_12(openVoice, obj5) };
-  stringResult = undefined;
+  const obj4 = { accessibilityRole: str, accessibilityHint: null, onPress: null, children: null };
+  let stringResult;
   if (null != stateFromStores1) {
     const intl = tmp4(tmp2[14]).intl;
     stringResult = intl.string(tmp4(tmp2[14]).t.GaCMgX);
   }
-  obj5 = { children: closure_12(tmp(tmp2[15]), {}) };
+  obj4.accessibilityHint = stringResult;
+  obj4.onPress = onPress;
+  const obj3 = onPress(stateFromStores[12]);
+  const tmp13 = closure_6;
+  obj4.children = closure_12(openVoice, { children: closure_12(tmp(stateFromStores[15]), {}) });
   return closure_12(tmp13, obj4);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+fn(558);
+ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((height) => {
-  let closure_0 = height;
-  const obj = react2;
-  const cResult = obj.c(4);
-  const obj2 = ReanimatedRexport;
-  const sharedValue = obj2.useSharedValue(height.height);
+  const cResult = c.c(4);
+  const sharedValue = ReanimatedRexport.useSharedValue(height.height);
   if (cResult[0] === height.height) {
-    let tmp3;
-    let tmp4;
     if (cResult[1] === sharedValue) {
-      tmp3 = cResult[2];
-      tmp4 = cResult[3];
+      let tmp3 = cResult[2];
+      let tmp4 = cResult[3];
     }
-    const effect = react.useEffect(tmp3, tmp4);
+    const effect = noop.useEffect(tmp3, tmp4);
     return sharedValue;
   }
   const fn = function l() {
-    const result = sharedValue.set(styles.height);
+    const result = sharedValue.set(height.height);
   };
   const items = [height.height, sharedValue];
   cResult[0] = height.height;
@@ -446,35 +422,21 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((height) => {
   tmp4 = items;
   tmp3 = fn;
 }) : ((height) => {
-  let closure_0 = height;
-  const obj = ReanimatedRexport;
-  const sharedValue = obj.useSharedValue(height.height);
+  const sharedValue = ReanimatedRexport.useSharedValue(height.height);
   const items = [height.height, sharedValue];
-  const effect = react.useEffect(() => {
-    const result = sharedValue.set(styles.height);
+  const effect = noop.useEffect(() => {
+    const result = sharedValue.set(height.height);
   }, items);
   return sharedValue;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let children;
-  let content;
-  let forceHide;
-  let items3;
-  let onPress;
-  let open;
-  let showWhenParticipantOnScreen;
-  let tmp11;
-  let tmp12;
-  let tmp16;
-  let tmp7;
-  let tmp8;
-  const obj = react2;
-  const cResult = obj.c(17);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/connectivity/native/components/GlobalStatusIndicator.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(17);
   ({ children, showWhenParticipantOnScreen, forceHide, onPress } = arg0);
   const tmp4 = undefined !== showWhenParticipantOnScreen && showWhenParticipantOnScreen;
-  const tmpResult = useGlobalStatusIndicatorState;
-  const globalStatusIndicatorState = tmpResult.useGlobalStatusIndicatorState(tmp4);
+  const globalStatusIndicatorState = useGlobalStatusIndicatorState.useGlobalStatusIndicatorState(tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ActionSheetStore];
     const fn = function o() {
@@ -487,80 +449,81 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     [tmp7, tmp8] = cResult;
   }
-  const tmpResult3 = get_initialized;
-  const stateFromStores = tmpResult3.useStateFromStores(tmp7, tmp8);
+  const tmpResult = useGlobalStatusIndicatorState;
+  const stateFromStores = initialize.useStateFromStores(tmp7, tmp8);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [NativeMenuStore];
     class I {
       constructor() {
-        return open.isOpen();
+        return closure_1_9.isOpen();
       }
     }
     cResult[2] = items1;
     cResult[3] = I;
-    tmp12 = I;
-    tmp11 = items1;
+    let tmp12 = I;
+    let tmp11 = items1;
   } else {
     tmp11 = cResult[2];
     tmp12 = cResult[3];
   }
+  const tmpResult3 = initialize;
   let isVisible = globalStatusIndicatorState.isVisible;
-  const tmpResult4 = get_initialized;
-  const stateFromStores1 = tmpResult4.useStateFromStores(tmp11, tmp12);
-  const height = globalStatusIndicatorState.height;
+  const stateFromStores1 = initialize.useStateFromStores(tmp11, tmp12);
   if (isVisible) {
     isVisible = !tmp5;
   }
+  let tmp15 = stateFromStores;
+  if (!stateFromStores) {
+    tmp15 = stateFromStores1;
+  }
   let str;
-  if (stateFromStores || stateFromStores1) {
+  if (tmp15) {
     str = "no-hide-descendants";
   }
   let num5 = 0;
   if (!(undefined !== forceHide && forceHide)) {
-    num5 = height;
+    num5 = globalStatusIndicatorState.height;
   }
   if (cResult[4] !== num5) {
-    const items2 = [hasOwnProperty.absoluteFill, ];
+    const items2 = [current.absoluteFill, ];
     class I {
       constructor() {
-        return open.isOpen();
+        return closure_1_9.isOpen();
       }
     }
     tmp18[0] = num5;
     items2[1] = tmp18;
     cResult[4] = num5;
     cResult[5] = items2;
-    tmp16 = items2;
+    let tmp16 = items2;
   } else {
     tmp16 = cResult[5];
   }
   if (cResult[6] === children) {
-    if (cResult[7] === (stateFromStores || stateFromStores1)) {
+    if (cResult[7] === tmp15) {
       if (cResult[8] === str) {
-        let tmp19;
         if (cResult[9] === tmp16) {
-          tmp19 = cResult[10];
+          let tmp19 = cResult[10];
         }
         if (cResult[11] === isVisible) {
-          let tmp21;
           if (cResult[12] === onPress) {
-            tmp21 = cResult[13];
+            let tmp21 = cResult[13];
           }
           if (cResult[14] === tmp19) {
-            let tmp23;
             if (cResult[15] === tmp21) {
-              tmp23 = cResult[16];
+              let tmp23 = cResult[16];
             }
             return tmp23;
           }
           class I {
             constructor() {
-              return open.isOpen();
+              return closure_1_9.isOpen();
             }
           }
-          const obj2 = { children: items3 };
-          items3 = [tmp19, tmp21];
-          const tmp25 = authStore2(map1, obj2);
+          const obj2 = { children: null };
+          const items3 = [tmp19, tmp21];
+          obj2.children = items3;
+          const tmp25 = state(__initData2, obj2);
           cResult[14] = tmp19;
           cResult[15] = tmp21;
           cResult[16] = tmp25;
@@ -568,7 +531,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
         class I {
           constructor() {
-            return open.isOpen();
+            return closure_1_9.isOpen();
           }
         }
         cResult[11] = isVisible;
@@ -578,16 +541,15 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }
-  const tmp20 = closure_12(React3, { importantForAccessibility: str, accessibilityElementsHidden: stateFromStores || stateFromStores1, style: tmp16, children });
+  const tmp20 = __initData(React4, { importantForAccessibility: str, accessibilityElementsHidden: tmp15, style: tmp16, children });
   cResult[6] = children;
-  cResult[7] = stateFromStores || stateFromStores1;
+  cResult[7] = tmp15;
   cResult[8] = str;
   cResult[9] = tmp16;
   cResult[10] = tmp20;
   tmp19 = tmp20;
+  const tmpResult4 = initialize;
 }) : ((children) => {
-  let content;
-  let open;
   children = children.children;
   let flag = children.showWhenParticipantOnScreen;
   if (flag === undefined) {
@@ -598,46 +560,46 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     flag2 = false;
   }
   const onPress = children.onPress;
-  let accessibilityElementsHidden;
+  const globalStatusIndicatorState = children(onPress[17]).useGlobalStatusIndicatorState(flag);
   let obj = children(onPress[17]);
-  const globalStatusIndicatorState = obj.useGlobalStatusIndicatorState(flag);
-  let obj2 = children(onPress[11]);
   let items = [ActionSheetStore];
-  const stateFromStores = obj2.useStateFromStores(items, () => null != content.getContent());
+  const stateFromStores = children(onPress[11]).useStateFromStores(items, () => null != content.getContent());
+  let obj2 = children(onPress[11]);
   const items1 = [NativeMenuStore];
   const height = globalStatusIndicatorState.height;
   let isVisible = globalStatusIndicatorState.isVisible;
-  const obj3 = children(onPress[11]);
-  const stateFromStores1 = obj3.useStateFromStores(items1, () => open.isOpen());
+  let stateFromStores1 = children(onPress[11]).useStateFromStores(items1, () => open.isOpen());
   if (isVisible) {
     isVisible = !flag2;
   }
-  accessibilityElementsHidden = tmp4;
-  const items2 = [children, stateFromStores || stateFromStores1, isVisible, onPress, height, flag2];
+  let tmp4 = stateFromStores;
+  if (!stateFromStores) {
+    tmp4 = stateFromStores1;
+  }
+  stateFromStores1 = tmp4;
+  const items2 = [children, tmp4, isVisible, onPress, height, flag2];
   return height.useMemo(() => {
-    let items;
     let str;
-    if (accessibilityElementsHidden) {
+    if (stateFromStores1) {
       str = "no-hide-descendants";
     }
-    const obj = { importantForAccessibility: str, accessibilityElementsHidden, style: items, children };
-    items = [hasOwnProperty.absoluteFill, ];
+    const obj = { importantForAccessibility: str, accessibilityElementsHidden: stateFromStores1, style: null, children: null };
+    const items = [current.absoluteFill, ];
     let num = 0;
     if (!flag2) {
       num = height;
     }
     items[1] = { marginTop: num, overflow: "hidden" };
-    children = [closure_12(React3, obj), ];
+    obj.style = items;
+    obj.children = children;
+    children = [__initData(React4, obj), ];
     let tmp3Result = null;
     if (isVisible) {
       const obj2 = { onPress };
-      tmp3Result = closure_12(closure_16, obj2);
+      tmp3Result = __initData(closure_16, obj2);
     }
     children[1] = tmp3Result;
-    return authStore2(map1, { children });
+    return state(__initData2, { children });
   }, items2);
 });
-let result = size.fileFinishedImporting("modules/connectivity/native/components/GlobalStatusIndicator.tsx");
-
-export default tmp6;
 export const useGlobalStatusIndicatorHeightSharedValue = tmp5;

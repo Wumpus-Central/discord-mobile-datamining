@@ -1,36 +1,34 @@
 // === Module 15140: SettingsAppearanceLightModeThemePickerScreen ===
 
 // Module 15140 (SettingsAppearanceLightModeThemePickerScreen)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
-import intl2 from "intl" /* 1126 */;
-import ThemeConstants from "ThemeConstants" /* 1196 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import SettingsAppearanceThemePickerScreenDefault from "SettingsAppearanceThemePickerScreen" /* 15101 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-const SystemTheme = ThemeConstants.SystemTheme;
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  const obj = react2;
-  const cResult = obj.c(1);
+require = fn;
+const SystemTheme = fn(1196).SystemTheme;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceLightModeThemePickerScreen.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    SettingsAppearanceThemePickerScreenDefault;
-    const intl = intl2.intl;
-    const tmp9 = <tmp7 mode={SystemTheme.LIGHT} themeSelector="nitro" headerTitle={intl.string(intl2.t.NoFvjZ)} />;
+    const obj2 = { mode: SystemTheme.LIGHT, themeSelector: "nitro", headerTitle: null };
+    const intl = util.intl;
+    obj2.headerTitle = intl.string(util.t.NoFvjZ);
+    const tmp9 = jsx(SettingsAppearanceThemePickerScreenDefault, { mode: SystemTheme.LIGHT, themeSelector: "nitro", headerTitle: null });
     cResult[0] = tmp9;
-    first = tmp9;
+    let first = tmp9;
   } else {
     first = cResult[0];
   }
   return first;
 }) : (() => {
-  SettingsAppearanceThemePickerScreenDefault;
-  const intl = intl2.intl;
-  return <tmp mode={SystemTheme.LIGHT} themeSelector="nitro" headerTitle={intl.string(intl2.t.NoFvjZ)} />;
+  const obj = { mode: SystemTheme.LIGHT, themeSelector: "nitro", headerTitle: null };
+  const intl = util.intl;
+  obj.headerTitle = intl.string(util.t.NoFvjZ);
+  return jsx(SettingsAppearanceThemePickerScreenDefault, { mode: SystemTheme.LIGHT, themeSelector: "nitro", headerTitle: null });
 });
-const result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceLightModeThemePickerScreen.tsx");
-
-export default tmp3;

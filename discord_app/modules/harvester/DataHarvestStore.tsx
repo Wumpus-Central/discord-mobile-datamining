@@ -1,13 +1,12 @@
 // === Module 13539: DataHarvestStore ===
 
 // Module 13539 (DataHarvestStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import size from "module_2" /* 2 */;
 
 let c0 = false;
 let c1;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class DataHarvestStore extends Store {
 }
 const prototype = DataHarvestStore.prototype;
@@ -24,7 +23,7 @@ Object.defineProperty(prototype, "requestingHarvest", {
   set: undefined
 });
 DataHarvestStore.displayName = "DataHarvestStore";
-const obj = {
+const dataHarvestStore = new DataHarvestStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     c1 = undefined;
   },
@@ -42,8 +41,8 @@ const obj = {
     c0 = false;
     c1 = null;
   }
-};
-const dataHarvestStore = new DataHarvestStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/harvester/DataHarvestStore.tsx");
 
 export default dataHarvestStore;

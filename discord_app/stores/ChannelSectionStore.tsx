@@ -2,13 +2,10 @@
 
 // Module 6793 (ChannelSectionStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants2 from "Constants" /* 1096 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
-import ChannelRecord from "ChannelRecord" /* 2055 */;
-import shared_PlatformUtils from "shared/PlatformUtils" /* 5328 */;
 import SidebarActionTypes from "SidebarActionTypes" /* 6795 */;
 import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 6796 */;
 import ExperimentStore from "ExperimentStore" /* 4782 */;
@@ -19,16 +16,9 @@ import PermissionStore from "PermissionStore" /* 4515 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import UserStore from "UserStore" /* 1377 */;
-import Constants from "Constants" /* 1085 */;
-import ChannelConstants from "ChannelConstants" /* 2058 */;
-import size from "module_2" /* 2 */;
 
-let closure_12;
-let closure_14;
-let closure_15;
-let map1;
+require = fn;
 function toggleSection(c17, arg1) {
-  let tmp12;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -39,41 +29,49 @@ function toggleSection(c17, arg1) {
     flag2 = true;
   }
   const channelId = SelectedChannelStore.getChannelId();
-  let tmp2 = null;
+  let tmp4 = null;
   if (null != channelId) {
-    tmp2 = channelId;
-    if (authStore2(channelId)) {
+    tmp4 = channelId;
+    if (state(channelId)) {
       const guildId = SelectedGuildStore.getGuildId();
-      let tmp6 = null;
+      let tmp8 = null;
       if (null != guildId) {
-        tmp6 = closure_15(channelId, guildId);
+        tmp8 = closure_1_15(channelId, guildId);
       }
-      tmp2 = tmp6;
+      tmp4 = tmp8;
     }
   }
-  const tmp8 = null != tmp2 && tmp2 in sidebars;
-  if (tmp8) {
-    delete sidebars[tmp2];
+  let tmp10 = null != tmp4;
+  if (tmp10) {
+    tmp10 = tmp4 in sidebars;
+  }
+  if (tmp10) {
+    delete tmp[tmp2];
     flag2 = true;
   }
-  let sidebarEnabled = flag && closure_21;
+  let sidebarEnabled = flag;
+  if (flag) {
+    sidebarEnabled = closure_21;
+  }
   if (sidebarEnabled) {
-    const obj = FriendsSidebarExperimentDefault;
-    sidebarEnabled = obj.getConfig({ location: "ChannelSectionStore" }).sidebarEnabled;
+    sidebarEnabled = FriendsSidebarExperimentDefault.getConfig({ location: "ChannelSectionStore" }).sidebarEnabled;
   }
   if (sidebarEnabled) {
     flag2 = true;
   }
   if (!flag2) {
-    tmp12 = !c17;
+    let tmp15 = !c17;
   } else {
-    tmp12 = c17;
+    tmp15 = c17;
   }
-  const tmp13 = tmp12 && flag;
-  if (tmp13) {
+  let tmp16 = tmp15;
+  if (tmp15) {
+    tmp16 = flag;
+  }
+  if (tmp16) {
     closure_21 = false;
   }
-  return tmp12;
+  return tmp15;
 }
 function handlePermissionsChange() {
   let flag = false;
@@ -82,18 +80,20 @@ function handlePermissionsChange() {
   if (keys !== undefined) {
     flag2 = flag;
     while (keys[tmp] !== undefined) {
-      let tmp12 = sidebars[tmp4];
-      let tmp10 = tmp4;
-      if (tmp12.type !== SidebarActionTypes.SidebarType.VIEW_CHANNEL) {
+      let tmp15 = sidebars[tmp6];
+      if (tmp15.type !== SidebarActionTypes.SidebarType.VIEW_CHANNEL) {
         continue;
       } else {
-        let channel = ChannelStore.getChannel(tmp12.channelId);
-        let canResult = null != channel && PermissionStore.can(Permissions.VIEW_CHANNEL, channel);
-        flag = tmp3;
+        let channel = ChannelStore.getChannel(tmp15.channelId);
+        let canResult = null != channel;
+        if (canResult) {
+          canResult = PermissionStore.can(Permissions.VIEW_CHANNEL, channel);
+        }
+        flag = tmp5;
         if (canResult) {
           continue;
         } else {
-          delete sidebars[tmp10];
+          delete tmp2[tmp3];
           flag = true;
           continue;
         }
@@ -104,12 +104,14 @@ function handlePermissionsChange() {
   }
   return flag2;
 }
-const isChannelChatInSidebar = ChannelRecord.isChannelChatInSidebar;
+const isChannelChatInSidebar = fn(2055).isChannelChatInSidebar;
+const Constants = fn(1085);
 ({ ChannelSections: closure_12, ComponentActions: map1 } = Constants);
+const ChannelConstants = fn(2058);
 ({ isStaticChannelRoute: closure_14, buildGuildStaticChannelId: closure_15 } = ChannelConstants);
-const Permissions = Constants2.Permissions;
+const Permissions = fn(1096).Permissions;
 let c17 = false;
-const authStore4 = false;
+let c18 = false;
 let c19 = false;
 const isProfileOpen = true;
 const isFriendsOpen = true;
@@ -118,227 +120,217 @@ let sidebars = {};
 let guildSidebars = {};
 let c25 = false;
 let searchContextId = null;
-const PersistedStore = get_initializedDefault.PersistedStore;
+const PersistedStore = initializeDefault.PersistedStore;
 class ChannelSectionStore extends PersistedStore {
-  initialize(isMembersOpen) {
-    if (null != isMembersOpen) {
-      let flag = isMembersOpen.isMembersOpen;
-      if (flag == null) {
-        flag = false;
-      }
-      let c17 = flag;
-      let flag2 = isMembersOpen.isSummariesOpen;
-      if (flag2 == null) {
-        flag2 = false;
-      }
-      let c18 = flag2;
-      let flag3 = isMembersOpen.isProfileOpen;
-      if (flag3 == null) {
-        flag3 = true;
-      }
-      let closure_20 = flag3;
-      let flag4 = isMembersOpen.isFriendsOpen;
-      if (flag4 == null) {
-        flag4 = true;
-      }
-      let closure_21 = flag4;
-      sidebars = isMembersOpen.sidebars;
-      if (sidebars == null) {
-        sidebars = {};
-      }
-      guildSidebars = isMembersOpen.guildSidebars;
-      if (guildSidebars == null) {
-        guildSidebars = {};
-      }
-    }
-    const items = [PermissionStore];
-    this.syncWith(items, handlePermissionsChange);
-    this.waitFor(ChannelStore, ExperimentStore, ApexExperiment.ApexExperimentStore, GuildStore, PermissionStore, SearchMessageStore, SelectedChannelStore, SelectedGuildStore, UserStore);
-  }
-  getState() {
-    return { isMembersOpen, isSummariesOpen, isProfileOpen, isFriendsOpen, sidebars, guildSidebars };
-  }
-  getSection(arg0, arg1) {
-    if (c25) {
-      return constants.SEARCH;
-    } else {
-      let MEMBERS;
-      let tmp4 = null;
-      if (null != arg0) {
-        tmp4 = arg0;
-        if (authStore2(arg0)) {
-          const guildId = SelectedGuildStore.getGuildId();
-          let tmp8 = null;
-          if (null != guildId) {
-            tmp8 = closure_15(arg0, guildId);
-          }
-          tmp4 = tmp8;
-        }
-      }
-      if (null != tmp4) {
-        if (null != sidebars[tmp4]) {
-          MEMBERS = constants.SIDEBAR_CHAT;
-        }
-        return MEMBERS;
-      }
-      if (isFriendsOpen) {
-        const obj = FriendsSidebarExperimentDefault;
-        if (obj.getConfig({ location: "ChannelSectionStore" }).sidebarEnabled) {
-          MEMBERS = constants.FRIENDS;
-        }
-      }
-      const tmp14 = arg1;
-      if (tmp14) {
-        if (isProfileOpen) {
-          MEMBERS = constants.PROFILE;
-        }
-      }
-      if (c18) {
-        MEMBERS = constants.SUMMARIES;
-      } else {
-        if (c17) {
-          if (!arg1) {
-            MEMBERS = constants.MEMBERS;
-          }
-        }
-        MEMBERS = c19 ? constants.CONVERSATIONS : constants.NONE;
-      }
-    }
-  }
-  getSidebarState(channelId) {
-    let tmp = null;
-    if (null != channelId) {
-      tmp = channelId;
-      if (authStore2(channelId)) {
-        const guildId = SelectedGuildStore.getGuildId();
-        let tmp5 = null;
-        if (null != guildId) {
-          tmp5 = closure_15(channelId, guildId);
-        }
-        tmp = tmp5;
-      }
-    }
-    let tmp7;
-    if (null != tmp) {
-      tmp7 = sidebars[tmp];
-    }
-    return tmp7;
-  }
-  getGuildSidebarState(arg0) {
-    let tmp;
-    if (null != arg0) {
-      tmp = guildSidebars[arg0];
-    }
-    return tmp;
-  }
-  isFriendsSidebarAvailable() {
-    return available;
-  }
-  getCurrentSidebarChannelId(channelId) {
-    let tmp = null;
-    if (null != channelId) {
-      tmp = channelId;
-      if (authStore2(channelId)) {
-        const guildId = SelectedGuildStore.getGuildId();
-        let tmp5 = null;
-        if (null != guildId) {
-          tmp5 = closure_15(channelId, guildId);
-        }
-        tmp = tmp5;
-      }
-    }
-    if (null == tmp) {
-      return null;
-    } else if (c25) {
-      return null;
-    } else {
-      let tmp10 = null;
-      if (null != sidebars[tmp]) {
-        if (sidebars[tmp].type === SidebarActionTypes.SidebarType.VIEW_CHANNEL) {
-          channelId = tmp9.channelId;
-        } else {
-          channelId = null;
-        }
-        tmp10 = channelId;
-      }
-      return tmp10;
-    }
-  }
-  getCurrentSidebarMessageId(channelId) {
-    let tmp = null;
-    if (null != channelId) {
-      tmp = channelId;
-      if (authStore2(channelId)) {
-        const guildId = SelectedGuildStore.getGuildId();
-        let tmp5 = null;
-        if (null != guildId) {
-          tmp5 = closure_15(channelId, guildId);
-        }
-        tmp = tmp5;
-      }
-    }
-    if (null == tmp) {
-      return null;
-    } else if (c25) {
-      return null;
-    } else {
-      let tmp9 = null;
-      if (null != sidebars[tmp]) {
-        let tmp12;
-        if (sidebars[tmp].type === SidebarActionTypes.SidebarType.VIEW_CHANNEL) {
-          const details = tmp8.details;
-          let initialMessageId;
-          if (details != null) {
-            initialMessageId = details.initialMessageId;
-          }
-          tmp12 = initialMessageId;
-        } else {
-          tmp12 = null;
-        }
-        tmp9 = tmp12;
-      }
-      return tmp9;
-    }
-  }
-  getCurrentSearchContextId() {
-    return searchContextId;
-  }
 }
 const prototype = ChannelSectionStore.prototype;
+prototype["initialize"] = function initialize(isMembersOpen) {
+  if (null != isMembersOpen) {
+    let flag = isMembersOpen.isMembersOpen;
+    if (flag == null) {
+      flag = false;
+    }
+    c17 = flag;
+    let flag2 = isMembersOpen.isSummariesOpen;
+    if (flag2 == null) {
+      flag2 = false;
+    }
+    c18 = flag2;
+    let flag3 = isMembersOpen.isProfileOpen;
+    if (flag3 == null) {
+      flag3 = true;
+    }
+    closure_20 = flag3;
+    let flag4 = isMembersOpen.isFriendsOpen;
+    if (flag4 == null) {
+      flag4 = true;
+    }
+    closure_21 = flag4;
+    sidebars = isMembersOpen.sidebars;
+    if (sidebars == null) {
+      sidebars = {};
+    }
+    guildSidebars = isMembersOpen.guildSidebars;
+    if (guildSidebars == null) {
+      guildSidebars = {};
+    }
+  }
+  const items = [PermissionStore];
+  this.syncWith(items, handlePermissionsChange);
+  this.waitFor(ChannelStore, ExperimentStore, ApexExperiment.ApexExperimentStore, GuildStore, PermissionStore, SearchMessageStore, SelectedChannelStore, SelectedGuildStore, UserStore);
+};
+prototype["getState"] = function getState() {
+  return { isMembersOpen, isSummariesOpen, isProfileOpen, isFriendsOpen, sidebars, guildSidebars };
+};
+prototype["getSection"] = function getSection(arg0, arg1) {
+  if (c25) {
+    return constants.SEARCH;
+  } else {
+    let tmp3 = null;
+    if (null != arg0) {
+      tmp3 = arg0;
+      if (state(arg0)) {
+        const guildId = SelectedGuildStore.getGuildId();
+        let tmp7 = null;
+        if (null != guildId) {
+          tmp7 = closure_1_15(arg0, guildId);
+        }
+        tmp3 = tmp7;
+      }
+    }
+    if (null != tmp3) {
+      if (null != sidebars[tmp3]) {
+        let MEMBERS = constants.SIDEBAR_CHAT;
+      }
+      return MEMBERS;
+    }
+    if (closure_21) {
+      if (obj.getConfig({ location: "ChannelSectionStore" }).sidebarEnabled) {
+        MEMBERS = constants.FRIENDS;
+      }
+      obj = FriendsSidebarExperimentDefault;
+    }
+    if (arg1) {
+      if (closure_20) {
+        MEMBERS = constants.PROFILE;
+      }
+    }
+    if (c18) {
+      MEMBERS = constants.SUMMARIES;
+    } else if (c17) {
+      if (!arg1) {
+        MEMBERS = constants.MEMBERS;
+      }
+    }
+  }
+};
+prototype["getSidebarState"] = function getSidebarState(channelId) {
+  let tmp = null;
+  if (null != channelId) {
+    tmp = channelId;
+    if (state(channelId)) {
+      const guildId = SelectedGuildStore.getGuildId();
+      let tmp5 = null;
+      if (null != guildId) {
+        tmp5 = closure_1_15(channelId, guildId);
+      }
+      tmp = tmp5;
+    }
+  }
+  let tmp7;
+  if (null != tmp) {
+    tmp7 = sidebars[tmp];
+  }
+  return tmp7;
+};
+prototype["getGuildSidebarState"] = function getGuildSidebarState(arg0) {
+  let tmp;
+  if (null != arg0) {
+    tmp = guildSidebars[arg0];
+  }
+  return tmp;
+};
+prototype["isFriendsSidebarAvailable"] = function isFriendsSidebarAvailable() {
+  return available;
+};
+prototype["getCurrentSidebarChannelId"] = function getCurrentSidebarChannelId(channelId) {
+  let tmp = null;
+  if (null != channelId) {
+    tmp = channelId;
+    if (state(channelId)) {
+      const guildId = SelectedGuildStore.getGuildId();
+      let tmp5 = null;
+      if (null != guildId) {
+        tmp5 = closure_1_15(channelId, guildId);
+      }
+      tmp = tmp5;
+    }
+  }
+  if (null == tmp) {
+    return null;
+  } else if (c25) {
+    return null;
+  } else {
+    let tmp10 = null;
+    if (null != sidebars[tmp]) {
+      if (tmp9.type === SidebarActionTypes.SidebarType.VIEW_CHANNEL) {
+        channelId = tmp9.channelId;
+      } else {
+        channelId = null;
+      }
+      tmp10 = channelId;
+    }
+    return tmp10;
+  }
+};
+prototype["getCurrentSidebarMessageId"] = function getCurrentSidebarMessageId(channelId) {
+  let tmp = null;
+  if (null != channelId) {
+    tmp = channelId;
+    if (state(channelId)) {
+      const guildId = SelectedGuildStore.getGuildId();
+      let tmp5 = null;
+      if (null != guildId) {
+        tmp5 = closure_1_15(channelId, guildId);
+      }
+      tmp = tmp5;
+    }
+  }
+  if (null == tmp) {
+    return null;
+  } else if (c25) {
+    return null;
+  } else {
+    let tmp9 = null;
+    if (null != sidebars[tmp]) {
+      if (tmp8.type === SidebarActionTypes.SidebarType.VIEW_CHANNEL) {
+        const details = tmp8.details;
+        let initialMessageId;
+        if (details != null) {
+          initialMessageId = details.initialMessageId;
+        }
+        let tmp12 = initialMessageId;
+      } else {
+        tmp12 = null;
+      }
+      tmp9 = tmp12;
+    }
+    return tmp9;
+  }
+};
+prototype["getCurrentSearchContextId"] = function getCurrentSearchContextId() {
+  return searchContextId;
+};
 ChannelSectionStore.displayName = "ChannelSectionStore";
 ChannelSectionStore.persistKey = "ChannelSectionStore2";
 let items = [
   (sidebars) => {
-    let entries1;
-    let fromEntries;
-    const obj = {
-      sidebars: fromEntries(entries1.filter((item) => {
-        let tmp;
-        [, tmp] = item;
-        let type;
-        if (tmp != null) {
-          type = tmp.type;
-        }
-        return 1 !== type;
-      }))
-    };
+    const obj = {};
     const merged = Object.assign(sidebars);
     sidebars = sidebars.sidebars;
-    const _Object = Object;
-    fromEntries = Object.fromEntries;
-    const _Object2 = Object;
     if (sidebars == null) {
       sidebars = {};
     }
-    entries1 = entries(sidebars);
+    const entries = Object.entries(sidebars);
+    obj.sidebars = Object.fromEntries(entries.filter((item) => {
+      [, tmp] = item;
+      let type;
+      if (tmp != null) {
+        type = tmp.type;
+      }
+      return 1 !== type;
+    }));
     return obj;
   }
 ];
 ChannelSectionStore.migrations = items;
-let obj = {
+const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
   SIDEBAR_SET_SELECTED_SEARCH_CONTEXT: function handleSetSelectedSearchContext(searchContextId) {
     searchContextId = searchContextId.searchContextId;
-    const hasSearchStateResult = null != searchContextId && SearchMessageStore.hasSearchState(searchContextId);
+    let hasSearchStateResult = null != searchContextId;
+    if (hasSearchStateResult) {
+      hasSearchStateResult = SearchMessageStore.hasSearchState(searchContextId);
+    }
     let flag = hasSearchStateResult !== c25;
     if (flag) {
       c25 = hasSearchStateResult;
@@ -353,7 +345,7 @@ let obj = {
       let hasItem = ids.includes(searchContextId);
       if (hasItem) {
         let flag = !c25;
-        if (flag) {
+        if (!c25) {
           c25 = true;
           flag = true;
         }
@@ -386,21 +378,20 @@ let obj = {
   CHANNEL_TOGGLE_MEMBERS_SECTION: function handleChannelToggleMembersSection() {
     if (c25) {
       const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-      ComponentDispatch.dispatch(map1.SEARCH_RESULTS_CLOSE);
+      ComponentDispatch.dispatch(constants2.SEARCH_RESULTS_CLOSE);
     }
     if (c18) {
-      c18 = toggleSection(tmp6);
+      c18 = toggleSection(tmp5);
     }
     if (c19) {
-      c19 = toggleSection(tmp8);
+      c19 = toggleSection(tmp7);
     }
     c17 = toggleSection(c17, true);
   },
   USER_PROFILE_SIDEBAR_TOGGLE_SECTION: function handleUserProfileSidebarToggleSection() {
-    const tmp = closure_20;
-    if (!tmp) {
+    if (!closure_20) {
       const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-      ComponentDispatch.dispatch(map1.SEARCH_RESULTS_CLOSE);
+      ComponentDispatch.dispatch(constants2.SEARCH_RESULTS_CLOSE);
     }
     closure_20 = toggleSection(closure_20, true);
   },
@@ -416,43 +407,39 @@ let obj = {
   CHANNEL_TOGGLE_CONVERSATIONS_SECTION: function handleChannelToggleConversationsSection() {
     if (c25) {
       const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-      ComponentDispatch.dispatch(map1.SEARCH_RESULTS_CLOSE);
+      ComponentDispatch.dispatch(constants2.SEARCH_RESULTS_CLOSE);
     }
-    let c17 = false;
-    let c18 = false;
+    c17 = false;
+    c18 = false;
     c19 = toggleSection(c19, true);
   },
   CHANNEL_OPEN_CONVERSATIONS_SECTION: function handleChannelOpenConversationsSection() {
     let flag = !c19;
-    if (flag) {
+    if (!c19) {
       if (c25) {
         const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-        ComponentDispatch.dispatch(map1.SEARCH_RESULTS_CLOSE);
+        ComponentDispatch.dispatch(constants2.SEARCH_RESULTS_CLOSE);
       }
-      let c17 = false;
-      let c18 = false;
+      c17 = false;
+      c18 = false;
       c19 = true;
-      let closure_21 = false;
+      closure_21 = false;
       flag = true;
     }
     return flag;
   },
   SIDEBAR_VIEW_CHANNEL: function handleSidebarViewChannel(arg0) {
-    let baseChannelId;
-    let channelId;
-    let details;
-    let sidebarType;
     ({ sidebarType, baseChannelId } = arg0);
     c25 = false;
     let tmp = null;
     ({ channelId, details } = arg0);
     if (null != baseChannelId) {
       tmp = baseChannelId;
-      if (authStore2(baseChannelId)) {
+      if (state(baseChannelId)) {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp5 = null;
         if (null != guildId) {
-          tmp5 = closure_15(baseChannelId, guildId);
+          tmp5 = closure_1_15(baseChannelId, guildId);
         }
         tmp = tmp5;
       }
@@ -463,8 +450,9 @@ let obj = {
       const obj = { type: sidebarType, channelId, details };
       let tmp9 = obj;
       if (sidebarType === SidebarActionTypes.SidebarType.VIEW_MOD_REPORT) {
-        const obj2 = { baseChannelId };
+        const obj2 = {};
         const merged = Object.assign(obj);
+        obj2.baseChannelId = baseChannelId;
         tmp9 = obj2;
       }
       sidebars[tmp] = tmp9;
@@ -472,21 +460,17 @@ let obj = {
     }
   },
   SIDEBAR_VIEW_GUILD: function handleSidebarViewGuild(arg0) {
-    let baseChannelId;
-    let details;
-    let guildId;
-    let sidebarType;
     ({ guildId, baseChannelId } = arg0);
     c25 = false;
     let tmp = null;
     ({ sidebarType, details } = arg0);
     if (null != baseChannelId) {
       tmp = baseChannelId;
-      if (authStore2(baseChannelId)) {
+      if (state(baseChannelId)) {
         const guildId1 = SelectedGuildStore.getGuildId();
         let tmp5 = null;
         if (null != guildId1) {
-          tmp5 = closure_15(baseChannelId, guildId1);
+          tmp5 = closure_1_15(baseChannelId, guildId1);
         }
         tmp = tmp5;
       }
@@ -500,56 +484,59 @@ let obj = {
     return flag;
   },
   SIDEBAR_CREATE_THREAD: function handleCreateThread(parentChannelId) {
-    let _location;
-    let parentMessageId;
     parentChannelId = parentChannelId.parentChannelId;
     c25 = false;
     let tmp = null;
     ({ parentMessageId, location: _location } = parentChannelId);
     if (null != parentChannelId) {
       tmp = parentChannelId;
-      if (authStore2(parentChannelId)) {
+      if (state(parentChannelId)) {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp5 = null;
         if (null != guildId) {
-          tmp5 = closure_15(parentChannelId, guildId);
+          tmp5 = closure_1_15(parentChannelId, guildId);
         }
         tmp = tmp5;
       }
     }
     if (null != tmp) {
-      sidebars[tmp] = { type: SidebarActionTypes.SidebarType.CREATE_THREAD, parentChannelId, parentMessageId, location: _location };
       const obj = { type: SidebarActionTypes.SidebarType.CREATE_THREAD, parentChannelId, parentMessageId, location: _location };
+      sidebars[tmp] = obj;
     }
   },
   SIDEBAR_CLOSE: function handleCloseSidebar(baseChannelId) {
     baseChannelId = baseChannelId.baseChannelId;
-    let tmp = null;
+    let tmp3 = null;
     if (null != baseChannelId) {
-      tmp = baseChannelId;
-      if (authStore2(baseChannelId)) {
+      tmp3 = baseChannelId;
+      if (state(baseChannelId)) {
         const guildId = SelectedGuildStore.getGuildId();
-        let tmp5 = null;
+        let tmp7 = null;
         if (null != guildId) {
-          tmp5 = closure_15(baseChannelId, guildId);
+          tmp7 = closure_1_15(baseChannelId, guildId);
         }
-        tmp = tmp5;
+        tmp3 = tmp7;
       }
     }
-    if (null != tmp) {
-      delete sidebars[tmp];
-      const hasSearchStateResult = null != searchContextId && SearchMessageStore.hasSearchState(searchContextId);
+    if (null != tmp3) {
+      delete tmp[tmp2];
+      let hasSearchStateResult = null != searchContextId;
+      if (hasSearchStateResult) {
+        hasSearchStateResult = SearchMessageStore.hasSearchState(searchContextId);
+      }
       if (hasSearchStateResult !== c25) {
         c25 = hasSearchStateResult;
       }
     }
   },
-  SIDEBAR_CLOSE_GUILD: function handleGuildCloseSidebar(guildId) {
-    guildId = guildId.guildId;
-    let flag = null != guildSidebars[guildId];
+  SIDEBAR_CLOSE_GUILD: function handleGuildCloseSidebar(arg0) {
+    let flag = null != guildSidebars[arg0.guildId];
     if (flag) {
-      delete guildSidebars[guildId];
-      const hasSearchStateResult = null != searchContextId && SearchMessageStore.hasSearchState(searchContextId);
+      delete tmp[tmp2];
+      let hasSearchStateResult = null != searchContextId;
+      if (hasSearchStateResult) {
+        hasSearchStateResult = SearchMessageStore.hasSearchState(searchContextId);
+      }
       flag = true;
       if (hasSearchStateResult !== c25) {
         c25 = hasSearchStateResult;
@@ -560,16 +547,14 @@ let obj = {
   },
   FRIENDS_SIDEBAR_SET_COLLAPSED: function handleSetFriendsSidebarCollapsed(collapsed) {
     collapsed = collapsed.collapsed;
-    let closure_21 = !collapsed;
-    if (closure_21) {
-      const channelId = SelectedChannelStore.getChannelId();
-      if (null != channelId) {
-        delete sidebars[tmp2];
+    closure_21 = !collapsed;
+    if (!collapsed) {
+      if (null != SelectedChannelStore.getChannelId()) {
+        delete tmp[tmp2];
       }
-      const tmp4 = c25;
-      if (tmp4) {
+      if (c25) {
         const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-        ComponentDispatch.dispatch(map1.SEARCH_RESULTS_CLOSE);
+        ComponentDispatch.dispatch(constants2.SEARCH_RESULTS_CLOSE);
         c25 = false;
       }
     }
@@ -586,47 +571,43 @@ let obj = {
     channel = channel.channel;
     let flag = false;
     if (channel.id in sidebars) {
-      delete sidebars[channel.id];
+      const id = channel.id;
+      delete tmp3[tmp2];
       flag = true;
     }
     let flag2 = flag;
-    let tmp2 = flag;
+    let tmp7 = flag;
     const keys = Object.keys();
     if (keys !== undefined) {
-      tmp2 = flag2;
+      tmp7 = flag2;
       while (keys[tmp] !== undefined) {
-        let tmp11 = sidebars[tmp5];
-        let hasItem = null != tmp11;
-        let tmp9 = tmp5;
+        let tmp17 = sidebars[tmp10];
+        let hasItem = null != tmp17;
         if (hasItem) {
           let items = [SidebarActionTypes.SidebarType.VIEW_CHANNEL, SidebarActionTypes.SidebarType.VIEW_MESSAGE_REQUEST, SidebarActionTypes.SidebarType.VIEW_MOD_REPORT];
-          hasItem = items.includes(tmp11.type);
+          hasItem = items.includes(tmp17.type);
         }
         if (hasItem) {
-          hasItem = tmp11.channelId === channel.id;
+          hasItem = tmp17.channelId === channel.id;
         }
         if (!hasItem) {
           continue;
         } else {
-          delete sidebars[tmp9];
+          delete tmp4[tmp5];
           flag2 = true;
           continue;
         }
         continue;
       }
     }
-    return tmp2;
+    return tmp7;
   },
   CHANNEL_SELECT: function handleChannelSelect(arg0) {
-    let channelId;
-    let messageId;
-    let obj2;
     ({ channelId, messageId } = arg0);
     let flag = false;
-    const tmp3 = shared_PlatformUtils.isMobile && c17;
     if (tmp3) {
       c17 = false;
-      let c18 = false;
+      c18 = false;
       c19 = false;
       flag = true;
     }
@@ -637,7 +618,7 @@ let obj = {
           type = tmp10.type;
         }
         if (type === SidebarActionTypes.SidebarType.VIEW_CHANNEL) {
-          if (sidebars[channelId].channelId === channelId) {
+          if (tmp10.channelId === channelId) {
             return flag;
           }
         }
@@ -646,10 +627,11 @@ let obj = {
         if (null != channel) {
           flag2 = flag;
           if (isChannelChatInSidebar(channel.type)) {
-            const obj = { type: SidebarActionTypes.SidebarType.VIEW_CHANNEL, channelId, details: obj2 };
+            const obj = { type: SidebarActionTypes.SidebarType.VIEW_CHANNEL, channelId, details: null };
+            const obj2 = { type: SidebarActionTypes.ViewChannelDetailType.CHAT, initialMessageId: messageId };
+            obj.details = obj2;
             sidebars[channelId] = obj;
             flag2 = true;
-            obj2 = { type: SidebarActionTypes.ViewChannelDetailType.CHAT, initialMessageId: messageId };
           }
         }
         return flag2;
@@ -658,28 +640,27 @@ let obj = {
     return flag;
   },
   THREAD_CREATE: function handleThreadCreate(channel) {
-    let obj3;
     channel = channel.channel;
-    const ownerId = channel.ownerId;
     const currentUser = UserStore.getCurrentUser();
     let id;
     if (currentUser != null) {
       id = currentUser.id;
     }
-    if (ownerId === id) {
+    if (channel.ownerId === id) {
       return false;
     } else {
-      let tmp5 = null != tmp12 && tmp12.type === SidebarActionTypes.SidebarType.CREATE_THREAD;
+      let tmp5 = null != tmp12;
       if (tmp5) {
-        const parentMessageId = tmp12.parentMessageId;
-        const obj = SnowflakeUtilsDefault;
-        tmp5 = parentMessageId === obj.castChannelIdAsMessageId(channel.id);
+        tmp5 = tmp12.type === SidebarActionTypes.SidebarType.CREATE_THREAD;
       }
       if (tmp5) {
-        const parent_id = channel.parent_id;
-        const obj2 = { type: SidebarActionTypes.SidebarType.VIEW_CHANNEL, channelId: channel.id, details: obj3 };
-        sidebars[parent_id] = obj2;
-        obj3 = { type: SidebarActionTypes.ViewChannelDetailType.CHAT };
+        tmp5 = tmp12.parentMessageId === SnowflakeUtilsDefault.castChannelIdAsMessageId(channel.id);
+      }
+      if (tmp5) {
+        const obj2 = { type: SidebarActionTypes.SidebarType.VIEW_CHANNEL, channelId: channel.id, details: null };
+        const obj3 = { type: SidebarActionTypes.ViewChannelDetailType.CHAT };
+        obj2.details = obj3;
+        sidebars[channel.parent_id] = obj2;
       }
     }
   },
@@ -687,16 +668,17 @@ let obj = {
     channel = channel.channel;
     if (null != sidebars[channel.parent_id]) {
       const items = [SidebarActionTypes.SidebarType.VIEW_CHANNEL, SidebarActionTypes.SidebarType.VIEW_MESSAGE_REQUEST, SidebarActionTypes.SidebarType.VIEW_MOD_REPORT];
-      if (items.includes(sidebars[channel.parent_id].type)) {
-        if (sidebars[channel.parent_id].channelId === channel.id) {
-          delete sidebars[channel.parent_id];
+      if (items.includes(tmp3.type)) {
+        if (tmp3.channelId === channel.id) {
+          const parent_id = channel.parent_id;
+          delete tmp2[tmp];
         }
       }
     }
     return false;
   }
-};
-const channelSectionStore = new ChannelSectionStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/ChannelSectionStore.tsx");
 
 export default channelSectionStore;

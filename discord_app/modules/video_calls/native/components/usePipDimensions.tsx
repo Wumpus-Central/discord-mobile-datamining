@@ -1,27 +1,24 @@
 // === Module 9107: usePipDimensions ===
 
 // Module 9107 (usePipDimensions)
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
 import DeviceOrientation from "DeviceOrientation" /* 8018 */;
 import useIsViewingActivity from "useIsViewingActivity" /* 9108 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
+require = fn;
 let c4 = 0.5625;
 let c5 = 0.25;
 let c6 = 0.5;
 let c7 = 400;
 let c8 = 300;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let channelId;
-  let forcedOrientation;
-  let height;
-  let tmp5;
-  let width;
-  const obj = react2;
-  const cResult = obj.c(5);
+const ReactCompilerGating = fn(558);
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/usePipDimensions.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(5);
   ({ channelId, forcedOrientation } = arg0);
   let tmp4 = null;
   if (undefined !== forcedOrientation) {
@@ -31,19 +28,21 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj2 = { channelId };
     cResult[0] = channelId;
     cResult[1] = obj2;
-    tmp5 = obj2;
+    let tmp5 = obj2;
   } else {
     tmp5 = cResult[1];
   }
+  const isViewingActivity = useIsViewingActivity.useIsViewingActivity(tmp5);
   const tmpResult = useIsViewingActivity;
-  const isViewingActivity = tmpResult.useIsViewingActivity(tmp5);
   ({ width, height } = useWindowDimensionsDefault());
   let tmp8 = width > height;
-  useWindowDimensionsDefault();
   let tmp9 = tmp4 === DeviceOrientation.OrientationType.LANDSCAPE;
   if (!tmp9) {
-    tmp9 = tmp8 && tmp4 !== DeviceOrientation.OrientationType.PORTRAIT;
-    tmp8 && tmp4 !== DeviceOrientation.OrientationType.PORTRAIT;
+    let tmp10 = tmp8;
+    if (tmp8) {
+      tmp10 = tmp4 !== DeviceOrientation.OrientationType.PORTRAIT;
+    }
+    tmp9 = tmp10;
   }
   let num3 = 96;
   let num4 = 96;
@@ -85,27 +84,25 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   if (cResult[2] === num3) {
-    let tmp31;
     if (cResult[3] === num4) {
-      tmp31 = cResult[4];
+      let tmp31 = cResult[4];
     }
     return tmp31;
   }
-  size = { height: num3, width: num4 };
+  const size = { height: num3, width: num4 };
   cResult[2] = num3;
   cResult[3] = num4;
   cResult[4] = size;
   tmp31 = size;
-}) : ((forcedOrientation) => {
-  forcedOrientation = forcedOrientation.forcedOrientation;
-  const channelId = forcedOrientation.channelId;
+  const tmp7 = useWindowDimensionsDefault();
+}) : ((channelId) => {
+  let forcedOrientation = channelId.forcedOrientation;
   if (forcedOrientation === undefined) {
     forcedOrientation = null;
   }
   let width;
-  const obj = forcedOrientation(width[3]);
-  const isViewingActivity = obj.useIsViewingActivity({ channelId });
-  size = isViewingActivity(width[4])();
+  const isViewingActivity = forcedOrientation(width[3]).useIsViewingActivity({ channelId: channelId.channelId });
+  const size = isViewingActivity(width[4])();
   width = size.width;
   let height = size.height;
   const items = [height, width, forcedOrientation, isViewingActivity];
@@ -113,8 +110,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     let tmp3 = width > height;
     let tmp7 = forcedOrientation === DeviceOrientation.OrientationType.LANDSCAPE;
     if (!tmp7) {
-      tmp7 = tmp3 && forcedOrientation !== DeviceOrientation.OrientationType.PORTRAIT;
-      tmp3 && forcedOrientation !== DeviceOrientation.OrientationType.PORTRAIT;
+      let tmp8 = tmp3;
+      if (tmp3) {
+        tmp8 = forcedOrientation !== DeviceOrientation.OrientationType.PORTRAIT;
+      }
+      tmp7 = tmp8;
     }
     height = 96;
     width = 96;
@@ -158,7 +158,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return { height, width };
   }, items);
 });
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/video_calls/native/components/usePipDimensions.tsx");
-
-export default tmp2;

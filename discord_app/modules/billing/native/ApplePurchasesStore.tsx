@@ -1,32 +1,34 @@
 // === Module 13211: ApplePurchasesStore ===
 
 // Module 13211 (ApplePurchasesStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import size from "module_2" /* 2 */;
 
-const React = null;
+let c0 = null;
 let c1 = false;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class ApplePurchasesStore extends Store {
-  hasOwnership(prop) {
-    let closure_0 = prop;
-    const someResult = null == prop || null == _null || _null.some((originalTransactionIdentifierIOS) => {
-      const StringResult = String(originalTransactionIdentifierIOS.originalTransactionIdentifierIOS);
-      return StringResult === String(closure_0);
-    });
-    return someResult;
-  }
-  getPurchases() {
-    return c0;
-  }
-  isFetching() {
-    return c1;
-  }
 }
 const prototype = ApplePurchasesStore.prototype;
+prototype["hasOwnership"] = function hasOwnership(prop) {
+  closure_0 = prop;
+  let someResult = null == prop;
+  if (!someResult) {
+    someResult = null == _null;
+  }
+  if (!someResult) {
+    someResult = _null.some((originalTransactionIdentifierIOS) => String(originalTransactionIdentifierIOS.originalTransactionIdentifierIOS) === String(closure_0));
+  }
+  return someResult;
+};
+prototype["getPurchases"] = function getPurchases() {
+  return c0;
+};
+prototype["isFetching"] = function isFetching() {
+  return c1;
+};
 ApplePurchasesStore.displayName = "ApplePurchasesStore";
-const obj = {
+const applePurchasesStore = new ApplePurchasesStore(DispatcherDefault, {
   APPLE_PURCHASES_FETCH_START: function handleFetchStart() {
     c1 = true;
   },
@@ -38,11 +40,11 @@ const obj = {
     c1 = false;
   },
   LOGOUT: function handleLogout() {
-    let c0 = null;
+    c0 = null;
     c1 = false;
   }
-};
-const applePurchasesStore = new ApplePurchasesStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/native/ApplePurchasesStore.tsx");
 
 export default applePurchasesStore;

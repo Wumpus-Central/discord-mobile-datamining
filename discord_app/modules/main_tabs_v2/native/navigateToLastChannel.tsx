@@ -2,15 +2,14 @@
 
 // Module 11009 (navigateToLastChannel)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
-import transitionToChannel2 from "transitionToChannel" /* 4907 */;
+import transitionToChannel from "transitionToChannel" /* 4907 */;
 import getNavigatorCurrentRouteDefault from "getNavigatorCurrentRoute" /* 11010 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/navigateToLastChannel.tsx");
 
 export default function navigateToLastChannel() {
-  const obj = NavigationRouteUtils;
-  const coerceGuildsRouteResult = obj.coerceGuildsRoute(getNavigatorCurrentRouteDefault());
+  const coerceGuildsRouteResult = NavigationRouteUtils.coerceGuildsRoute(getNavigatorCurrentRouteDefault());
   let tmp4 = null != coerceGuildsRouteResult;
   if (tmp4) {
     const params = coerceGuildsRouteResult.params;
@@ -23,11 +22,10 @@ export default function navigateToLastChannel() {
   if (tmp4) {
     const params2 = coerceGuildsRouteResult.params;
     let channelId1;
-    const transitionToChannel = transitionToChannel2.transitionToChannel;
-    transitionToChannel2;
     if (params2 != null) {
       channelId1 = params2.channelId;
     }
-    transitionToChannel(channelId1);
+    transitionToChannel.transitionToChannel(channelId1);
+    const tmpResult = transitionToChannel;
   }
 };

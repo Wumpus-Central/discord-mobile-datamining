@@ -2,37 +2,26 @@
 
 // Module 15074 (useEmojiByIdOrName)
 import EmojiStore from "EmojiStore" /* 5645 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-let _require, dependencyMap;
-
+const require = fn;
+const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
-  let closure_0;
-  let closure_1;
-  let first;
   _require = arg0;
   dependencyMap = arg1;
-  const obj = require("react");
-  const cResult = obj.c(5);
-  const tmp = _require;
+  const cResult = require("c").c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [EmojiStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === arg0) {
-    let tmp6;
-    let tmp7;
     if (cResult[2] === arg1) {
-      tmp6 = cResult[3];
-      tmp7 = cResult[4];
+      let tmp6 = cResult[3];
+      let tmp7 = cResult[4];
     }
-    const tmpResult = tmp(504);
-    return tmpResult.useStateFromStores(first, tmp6, tmp7);
+    return tmp(504).useStateFromStores(first, tmp6, tmp7);
   }
   const fn = function l() {
     if (null == closure_1) {
@@ -53,15 +42,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[4] = items1;
   tmp7 = items1;
   tmp6 = fn;
+  const obj = require("c");
+  tmp = _require;
 }) : ((arg0, arg1) => {
-  let closure_0;
-  let closure_1;
   _require = arg0;
   dependencyMap = arg1;
   const items = [EmojiStore];
   const items1 = [arg0, arg1];
-  const obj = require("get initialized");
-  return obj.useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     if (null == closure_1) {
       return null;
     } else {
@@ -74,6 +62,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
   }, items1);
 });
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useEmojiByIdOrName.tsx");
 
 export default tmp2;

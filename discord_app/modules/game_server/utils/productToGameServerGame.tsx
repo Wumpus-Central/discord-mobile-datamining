@@ -6,29 +6,23 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/game_server/utils/productToGameServerGame.tsx");
 
 export const productToGameServerGame = function productToGameServerGame(id) {
-  let can_market;
-  let disabled;
-  let early_access;
-  let provider;
-  let str;
   const skus = id.skus;
   const mapped = skus.map((id) => {
     const plan_features = id.tenant_metadata.plan_features;
-    const obj = { id: id.id, name: id.name, cost: id.tenant_metadata.boost_price, specifications: plan_features.map((title) => ({ title: title.title, description: title.description })) };
-    return obj;
+    return { id: id.id, name: id.name, cost: id.tenant_metadata.boost_price, specifications: plan_features.map((title) => ({ title: title.title, description: title.description })) };
   });
   const sorted = mapped.sort((cost, cost2) => cost2.cost - cost.cost);
   let num = 0;
   if (sorted.length > 0) {
     const _Math = Math;
     const items = [];
-    HermesBuiltin.arraySpread(items, sorted.map((cost) => cost.cost), 0);
+    HermesBuiltin.arraySpread(sorted.map((cost) => cost.cost), 0);
     const _Math2 = Math;
-    num = HermesBuiltin.apply(min, items, Math);
+    num = HermesBuiltin.apply(items, Math);
   }
-  let obj = { id: id.id, name: id.name, gameId: str, provider, plans: sorted, baseCost: num, disabled, early_access, can_market };
+  const obj = { id: id.id, name: id.name, gameId: null, provider: null, plans: null, baseCost: null, disabled: null, early_access: null, can_market: null };
   const tenant_metadata = id.tenant_metadata;
-  str = undefined;
+  let str;
   if (tenant_metadata != null) {
     const guild_monetization = tenant_metadata.guild_monetization;
     if (guild_monetization != null) {
@@ -41,8 +35,9 @@ export const productToGameServerGame = function productToGameServerGame(id) {
   if (str == null) {
     str = "";
   }
+  obj.gameId = str;
   const tenant_metadata2 = id.tenant_metadata;
-  provider = undefined;
+  let provider;
   if (tenant_metadata2 != null) {
     const guild_monetization2 = tenant_metadata2.guild_monetization;
     if (guild_monetization2 != null) {
@@ -52,8 +47,11 @@ export const productToGameServerGame = function productToGameServerGame(id) {
       }
     }
   }
+  obj.provider = provider;
+  obj.plans = sorted;
+  obj.baseCost = num;
   const tenant_metadata3 = id.tenant_metadata;
-  disabled = undefined;
+  let disabled;
   if (tenant_metadata3 != null) {
     const guild_monetization3 = tenant_metadata3.guild_monetization;
     if (guild_monetization3 != null) {
@@ -63,8 +61,9 @@ export const productToGameServerGame = function productToGameServerGame(id) {
       }
     }
   }
+  obj.disabled = disabled;
   const tenant_metadata4 = id.tenant_metadata;
-  early_access = undefined;
+  let early_access;
   if (tenant_metadata4 != null) {
     const guild_monetization4 = tenant_metadata4.guild_monetization;
     if (guild_monetization4 != null) {
@@ -74,8 +73,9 @@ export const productToGameServerGame = function productToGameServerGame(id) {
       }
     }
   }
+  obj.early_access = early_access;
   const tenant_metadata5 = id.tenant_metadata;
-  can_market = undefined;
+  let can_market;
   if (tenant_metadata5 != null) {
     const guild_monetization5 = tenant_metadata5.guild_monetization;
     if (guild_monetization5 != null) {
@@ -85,5 +85,6 @@ export const productToGameServerGame = function productToGameServerGame(id) {
       }
     }
   }
+  obj.can_market = can_market;
   return obj;
 };

@@ -4,12 +4,11 @@
 import ApplicationStore from "ApplicationStore" /* 5124 */;
 import UserProfileStore from "UserProfileStore" /* 7124 */;
 import UserStore from "UserStore" /* 1377 */;
-import size from "module_2" /* 2 */;
 
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_dms/getAppDMApplication.tsx");
 
 export const getAppDMApplication = function getAppDMApplication(channel) {
-  let tmp7;
   let recipientId;
   if (channel.isPrivate()) {
     recipientId = channel.getRecipientId();
@@ -33,11 +32,10 @@ export const getAppDMApplication = function getAppDMApplication(channel) {
         id = application.id;
       }
     }
-    tmp7 = id;
+    const tmp6 = id;
   }
-  const getApplication = ApplicationStore.getApplication;
   if (appIdForBotUserId == null) {
-    appIdForBotUserId = tmp7;
+    appIdForBotUserId = tmp6;
   }
-  return getApplication(appIdForBotUserId);
+  return ApplicationStore.getApplication(appIdForBotUserId);
 };

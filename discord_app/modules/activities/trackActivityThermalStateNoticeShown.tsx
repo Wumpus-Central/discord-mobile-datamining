@@ -1,27 +1,24 @@
 // === Module 17394: trackActivityThermalStateNoticeShown ===
 
 // Module 17394 (trackActivityThermalStateNoticeShown)
-import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4504 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import size from "module_2" /* 2 */;
 
-const AnalyticEvents = Constants.AnalyticEvents;
+require = fn;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/trackActivityThermalStateNoticeShown.tsx");
 
 export const trackActivityThermalStateNoticeShown = function trackActivityThermalStateNoticeShown() {
-  let guild_id;
   const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   let _location;
-  const getEmbeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId;
-  embeddedActivityLocationUtils;
   if (currentEmbeddedActivity != null) {
     _location = currentEmbeddedActivity.location;
   }
-  const embeddedActivityLocationChannelId = getEmbeddedActivityLocationChannelId(_location);
+  const embeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(_location);
   const basicChannel = ChannelStore.getBasicChannel(embeddedActivityLocationChannelId);
   let compositeInstanceId;
   if (currentEmbeddedActivity != null) {
@@ -31,13 +28,12 @@ export const trackActivityThermalStateNoticeShown = function trackActivityTherma
   if (currentEmbeddedActivity != null) {
     applicationId = currentEmbeddedActivity.applicationId;
   }
-  const obj = { channel_id: embeddedActivityLocationChannelId, application_id: applicationId, activity_session_id: compositeInstanceId, guild_id, media_session_id: RTCConnectionStore.getMediaSessionId() };
-  guild_id = undefined;
-  const track = AnalyticsUtilsDefault.track;
-  const ACTIVITY_THERMAL_STATE_NOTICE_SHOWN = AnalyticEvents.ACTIVITY_THERMAL_STATE_NOTICE_SHOWN;
-  AnalyticsUtilsDefault;
+  const obj3 = { channel_id: embeddedActivityLocationChannelId, application_id: applicationId, activity_session_id: compositeInstanceId, guild_id: null, media_session_id: null };
+  let guild_id;
   if (basicChannel != null) {
     guild_id = basicChannel.guild_id;
   }
-  track(ACTIVITY_THERMAL_STATE_NOTICE_SHOWN, obj);
+  obj3.guild_id = guild_id;
+  obj3.media_session_id = RTCConnectionStore.getMediaSessionId();
+  AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_THERMAL_STATE_NOTICE_SHOWN, obj3);
 };

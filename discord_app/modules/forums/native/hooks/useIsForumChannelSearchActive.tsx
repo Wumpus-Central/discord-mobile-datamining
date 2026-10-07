@@ -2,20 +2,20 @@
 
 // Module 13135 (useIsForumChannelSearchActive)
 import ForumSearchStore from "ForumSearchStore" /* 7277 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
+const require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/hooks/useIsForumChannelSearchActive.tsx");
+
+export const useIsForumChannelSearchActive = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   _require = arg0;
+  const cResult = require("c").c(4);
+  const obj = require("c");
   const tmp = _require;
-  const obj = require("react");
-  const cResult = obj.c(4);
-  const obj2 = require("useCanSearchForumPostsByChannelId");
-  let canSearchForumPostsByChannelId = obj2.useCanSearchForumPostsByChannelId(arg0);
+  let canSearchForumPostsByChannelId = require("useCanSearchForumPostsByChannelId").useCanSearchForumPostsByChannelId(arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ForumSearchStore];
     cResult[0] = items;
@@ -42,17 +42,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   return canSearchForumPostsByChannelId;
 }) : ((arg0) => {
-  let closure_0;
   _require = arg0;
-  const obj = require("useCanSearchForumPostsByChannelId");
-  let canSearchForumPostsByChannelId = obj.useCanSearchForumPostsByChannelId(arg0);
-  require("get initialized");
+  let canSearchForumPostsByChannelId = require("useCanSearchForumPostsByChannelId").useCanSearchForumPostsByChannelId(arg0);
+  require("initialize");
   [][0] = arg0;
   if (canSearchForumPostsByChannelId) {
     canSearchForumPostsByChannelId = null != tmp3;
   }
   return canSearchForumPostsByChannelId;
 });
-const result = size.fileFinishedImporting("modules/forums/native/hooks/useIsForumChannelSearchActive.tsx");
-
-export const useIsForumChannelSearchActive = tmp2;

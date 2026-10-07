@@ -1,20 +1,17 @@
 // === Module 10616: getPrivateChannelCall ===
 
 // Module 10616 (getPrivateChannelCall)
-import Constants from "Constants" /* 1085 */;
 import CallsUtils from "CallsUtils" /* 9334 */;
 import VoiceStateStore from "VoiceStateStore" /* 4915 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require;
 
-const NOOP_NULL = Constants.NOOP_NULL;
+require = fn;
+const NOOP_NULL = fn(1085).NOOP_NULL;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/getPrivateChannelCall.tsx");
 
 export default function getPrivateChannelCall(id) {
-  let stringResult;
-  let tmp9Result;
   _require = id;
   let flag = arg1;
   if (arg1 === undefined) {
@@ -29,11 +26,10 @@ export default function getPrivateChannelCall(id) {
     handleJoinCall = require("PrivateChannelCallUtils").handleJoinCall;
   }
   const isInChannelResult = handleStartCall.isInChannel(id.id);
-  let obj = require("useIsCallActive");
-  const checkIsCallActiveResult = obj.checkIsCallActive(id.id);
+  const obj = require("useIsCallActive");
   if (id.isSystemDM()) {
     const C = handleJoinCall;
-    tmp9Result = null;
+    let tmp9Result = null;
   } else if (isInChannelResult) {
     if (!flag) {
       const string2 = tmp6(tmp7[4]).intl.string;
@@ -87,14 +83,17 @@ export default function getPrivateChannelCall(id) {
     const string = intl2.string;
     const t = tmp6(tmp7[4]).t;
     if (flag) {
-      stringResult = string(t.oCqlGG);
+      let stringResult = string(t.oCqlGG);
     } else {
       stringResult = string(t.focH1t);
     }
   }
-  const obj2 = { text: tmp9Result, accessibilityHint: stringResult, inCall: isInChannelResult, onPress: C };
+  const obj2 = { text: tmp9Result, accessibilityHint: null, inCall: null, onPress: null };
   if (stringResult == null) {
     stringResult = tmp9Result;
   }
+  obj2.accessibilityHint = stringResult;
+  obj2.inCall = isInChannelResult;
+  obj2.onPress = C;
   return obj2;
 };

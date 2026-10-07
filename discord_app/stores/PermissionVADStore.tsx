@@ -1,7 +1,7 @@
 // === Module 14179: PermissionVADStore ===
 
 // Module 14179 (PermissionVADStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
@@ -9,25 +9,24 @@ import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 import PermissionStore from "PermissionStore" /* 4515 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import VoiceStateStore from "VoiceStateStore" /* 4915 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-let c9;
-let metroImportAll;
 function handleUpdateVADPermission() {
   const channelId = RTCConnectionStore.getChannelId();
   flag = true;
   if (null != channelId) {
     const channel = ChannelStore.getChannel(channelId);
     let guildId;
-    const getVoiceState = VoiceStateStore.getVoiceState;
     if (channel != null) {
       guildId = channel.getGuildId();
     }
-    const voiceState = getVoiceState(guildId, AuthenticationStore.getId());
-    let canResult = MediaEngineStore.getMode() !== metroImportAll.VOICE_ACTIVITY || null == channel || channel.isPrivate() || channel.isGuildStageVoice() || PermissionStore.can(constants2.USE_VAD, channel);
+    const voiceState = VoiceStateStore.getVoiceState(guildId, AuthenticationStore.getId());
+    let canResult = MediaEngineStore.getMode() !== constants.VOICE_ACTIVITY || null == channel || channel.isPrivate() || channel.isGuildStageVoice();
+    if (!canResult) {
+      canResult = PermissionStore.can(constants2.USE_VAD, channel);
+    }
     if (!canResult) {
       canResult = null == voiceState || voiceState.suppress || null != voiceState.requestToSpeakTimestamp;
+      const tmp12 = null == voiceState || voiceState.suppress || null != voiceState.requestToSpeakTimestamp;
     }
     flag = canResult;
   }
@@ -35,30 +34,29 @@ function handleUpdateVADPermission() {
   if (flag2) {
     c11 = flag;
     const obj = { type: "SET_VAD_PERMISSION", hasPermission: flag };
-    const obj2 = DispatcherDefault;
-    obj2.dispatch(obj);
+    DispatcherDefault.dispatch(obj);
     flag2 = true;
   }
   return flag2;
 }
-({ InputModes: metroImportAll, Permissions: c9 } = Constants);
-let flag = true;
+const Constants = fn(1085);
+({ InputModes: closure_8, Permissions: closure_9 } = Constants);
 let c11 = true;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class PermissionVADStore extends Store {
-  initialize() {
-    this.waitFor(AuthenticationStore, ChannelStore, MediaEngineStore, PermissionStore, RTCConnectionStore, VoiceStateStore);
-  }
-  shouldShowWarning() {
-    return !c11;
-  }
-  canUseVoiceActivity() {
-    return flag;
-  }
 }
 const prototype = PermissionVADStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(AuthenticationStore, ChannelStore, MediaEngineStore, PermissionStore, RTCConnectionStore, VoiceStateStore);
+};
+prototype["shouldShowWarning"] = function shouldShowWarning() {
+  return !c11;
+};
+prototype["canUseVoiceActivity"] = function canUseVoiceActivity() {
+  return flag;
+};
 PermissionVADStore.displayName = "PermissionVADStore";
-let obj = {
+const permissionVADStore = new PermissionVADStore(DispatcherDefault, {
   RTC_CONNECTION_STATE: handleUpdateVADPermission,
   MEDIA_ENGINE_SET_AUDIO_ENABLED: handleUpdateVADPermission,
   AUDIO_SET_MODE: handleUpdateVADPermission,
@@ -69,10 +67,12 @@ let obj = {
   IMPERSONATE_UPDATE: handleUpdateVADPermission,
   IMPERSONATE_STOP: handleUpdateVADPermission,
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
-    let id;
     voiceStates = voiceStates.voiceStates;
     return voiceStates.some((userId) => {
-      const tmp = userId.userId === id.getId() && handleUpdateVADPermission();
+      let tmp = userId.userId === id.getId();
+      if (tmp) {
+        tmp = handleUpdateVADPermission();
+      }
       return tmp;
     });
   },
@@ -82,8 +82,8 @@ let obj = {
   PERMISSION_CLEAR_VAD_WARNING: function handleClearWarning() {
     c11 = true;
   }
-};
-const permissionVADStore = new PermissionVADStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/PermissionVADStore.tsx");
 
 export default permissionVADStore;

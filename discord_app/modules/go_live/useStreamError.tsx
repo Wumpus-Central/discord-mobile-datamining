@@ -1,41 +1,43 @@
 // === Module 9138: useStreamError ===
 
 // Module 9138 (useStreamError)
-import AVError from "AVError" /* 9131 */;
 import AVErrorStore from "AVErrorStore" /* 9130 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let id;
+const require = fn;
+let closure_3 = { [fn(9131).AVError.STREAM_SOUNDSHARE_FAILED]: 0, [fn(9131).AVError.STREAM_SEND_HIGH_PACKET_LOSS]: 1, [fn(9131).AVError.STREAM_VIEW_HIGH_PACKET_LOSS]: 1, [fn(9131).AVError.STREAM_SEND_LOW_FPS]: 2, [fn(9131).AVError.STREAM_VIEW_LOW_FPS]: 2, [fn(9131).AVError.STREAM_BAD_NETWORK_QUALITY]: 3 };
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/go_live/useStreamError.tsx");
 
-let closure_3 = { [AVError.AVError.STREAM_SOUNDSHARE_FAILED]: 0, [AVError.AVError.STREAM_SEND_HIGH_PACKET_LOSS]: 1, [AVError.AVError.STREAM_VIEW_HIGH_PACKET_LOSS]: 1, [AVError.AVError.STREAM_SEND_LOW_FPS]: 2, [AVError.AVError.STREAM_VIEW_LOW_FPS]: 2, [AVError.AVError.STREAM_BAD_NETWORK_QUALITY]: 3 };
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
-  let first;
-  let tmp6;
-  let tmp7;
-  const tmp = id;
-  const obj = id(576);
-  const cResult = obj.c(4);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+  const cResult = id(576).c(4);
   id = id.id;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AVErrorStore];
-    let num = 0;
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== id) {
     const fn = function s() {
       const activeErrors = AVErrorStore.getActiveErrors();
-      const arr = Array.from(activeErrors.values());
-      const found = arr.filter((streamKey) => "streamKey" in streamKey && streamKey.streamKey === id && null != closure_2_3[streamKey.type]);
+      const found = Array.from(activeErrors.values()).filter((streamKey) => {
+        let tmp = "streamKey" in streamKey;
+        if (tmp) {
+          tmp = streamKey.streamKey === id;
+        }
+        if (tmp) {
+          tmp = null != closure_2_3[streamKey.type];
+        }
+        return tmp;
+      });
       const first = found.sort((arg0, arg1) => {
-        let num = closure_1_3[arg0.type];
+        let num = dependencyMap[arg0.type];
         if (num == null) {
           num = 0;
         }
-        let num2 = closure_1_3[arg1.type];
+        let num2 = dependencyMap[arg1.type];
         if (num2 == null) {
           num2 = 0;
         }
@@ -48,33 +50,39 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
       return type;
     };
     const items1 = [id];
-    let num2 = 1;
     cResult[1] = id;
     cResult[2] = fn;
     cResult[3] = items1;
-    tmp7 = items1;
-    tmp6 = fn;
+    let tmp7 = items1;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  const tmpResult = tmp(504);
-  return tmpResult.useStateFromStores(first, tmp6, tmp7);
+  const obj = id(576);
+  return id(504).useStateFromStores(first, tmp6, tmp7);
 }) : ((id) => {
   id = id.id;
   const items = [AVErrorStore];
   const items1 = [id];
-  const obj = id(504);
-  return obj.useStateFromStores(items, () => {
+  return id(504).useStateFromStores(items, () => {
     const activeErrors = AVErrorStore.getActiveErrors();
-    const arr = Array.from(activeErrors.values());
-    const found = arr.filter((streamKey) => "streamKey" in streamKey && streamKey.streamKey === id && null != closure_2_3[streamKey.type]);
+    const found = Array.from(activeErrors.values()).filter((streamKey) => {
+      let tmp = "streamKey" in streamKey;
+      if (tmp) {
+        tmp = streamKey.streamKey === id;
+      }
+      if (tmp) {
+        tmp = null != closure_2_3[streamKey.type];
+      }
+      return tmp;
+    });
     const first = found.sort((arg0, arg1) => {
-      let num = closure_1_3[arg0.type];
+      let num = dependencyMap[arg0.type];
       if (num == null) {
         num = 0;
       }
-      let num2 = closure_1_3[arg1.type];
+      let num2 = dependencyMap[arg1.type];
       if (num2 == null) {
         num2 = 0;
       }
@@ -87,6 +95,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     return type;
   }, items1);
 });
-const result = size.fileFinishedImporting("modules/go_live/useStreamError.tsx");
-
-export default tmp2;

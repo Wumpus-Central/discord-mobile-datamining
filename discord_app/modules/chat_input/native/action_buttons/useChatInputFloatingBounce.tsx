@@ -2,33 +2,24 @@
 
 // Module 11891 (useChatInputFloatingBounce)
 import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import ChatInputConstants from "ChatInputConstants" /* 11589 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let num4, num5, num6, obj1, set, set2, set2Result, set3, set3Result, set4, set4Result, str, str2, str3, str4, tmp11, tmp14, tmp15, tmp16, tmp17, tmp19, tmp2, tmp20, tmp22, tmp23, tmp24, tmp25, tmp26, tmp27, tmp28, tmp30, tmp31, tmp33, tmp34, tmp36, tmp37, tmp38, tmp40, tmp42, tmp43, tmp6, tmp8, visible;
-
-let closure_4;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-({ CHAT_INPUT_FLOATING_BOUNCE_SPRING_CONFIG: closure_4, CHAT_INPUT_FLOATING_COLLAPSED_SCALE: hasOwnProperty, CHAT_INPUT_FLOATING_ENTER_OPACITY_TIMING_CONFIG: metroRequire, CHAT_INPUT_FLOATING_EXIT_TIMING_CONFIG: metroImportDefault } = ChatInputConstants);
+require = fn;
+const ChatInputConstants = fn(11589);
+({ CHAT_INPUT_FLOATING_BOUNCE_SPRING_CONFIG: closure_4, CHAT_INPUT_FLOATING_COLLAPSED_SCALE: hasOwnProperty, CHAT_INPUT_FLOATING_ENTER_OPACITY_TIMING_CONFIG: metroRequire, CHAT_INPUT_FLOATING_EXIT_TIMING_CONFIG: closure_7 } = ChatInputConstants);
 const __initData = { code: "function useChatInputFloatingBounceTsx1(finished){const{runOnJS,setEnterFinished}=this.__closure;if(finished===true){runOnJS(setEnterFinished)(true);}}" };
 const __initData2 = { code: "function useChatInputFloatingBounceTsx2(finished_0){const{runOnJS,handleExitFinished}=this.__closure;if(finished_0===true){runOnJS(handleExitFinished)();}}" };
 let closure_10 = { code: "function useChatInputFloatingBounceTsx3(){const{opacity,scale}=this.__closure;return{opacity:opacity.get(),transform:[{scale:scale.get()}]};}" };
 let closure_11 = { code: "function useChatInputFloatingBounceTsx4(finished){const{runOnJS,setEnterFinished}=this.__closure;if(finished===true){runOnJS(setEnterFinished)(true);}}" };
 let closure_12 = { code: "function useChatInputFloatingBounceTsx5(finished_0){const{runOnJS,handleExitFinished}=this.__closure;if(finished_0===true){runOnJS(handleExitFinished)();}}" };
 const __initData3 = { code: "function useChatInputFloatingBounceTsx6(){const{opacity,scale}=this.__closure;return{opacity:opacity.get(),transform:[{scale:scale.get()}]};}" };
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
-  let enterDelayMs;
-  let initiallyVisible;
-  let onExitComplete;
-  let tmp18;
-  let tmp = visible;
-  let obj = visible(onExitComplete[4]);
-  const cResult = obj.c(12);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/chat_input/native/action_buttons/useChatInputFloatingBounce.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
+  const cResult = visible(onExitComplete[4]).c(12);
   visible = visible.visible;
   ({ initiallyVisible, enterDelayMs, onExitComplete } = visible);
   const interactiveDuringEnter = visible.interactiveDuringEnter;
@@ -39,33 +30,35 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
   if (undefined !== enterDelayMs) {
     num = enterDelayMs;
   }
-  let num2 = 0;
+  let obj = visible(onExitComplete[4]);
   const tmp4 = undefined !== interactiveDuringEnter && interactiveDuringEnter;
-  const useSharedValue = tmp(onExitComplete[5]).useSharedValue;
-  tmp(onExitComplete[5]);
+  let num2 = 0;
   if (initiallyVisible) {
     num2 = 1;
   }
-  const sharedValue = useSharedValue(num2);
+  const sharedValue = visible(onExitComplete[5]).useSharedValue(num2);
+  const tmpResult = visible(onExitComplete[5]);
   let num3 = 1;
-  const useSharedValue2 = tmp(onExitComplete[5]).useSharedValue;
-  tmp(onExitComplete[5]);
   if (!initiallyVisible) {
     num3 = setEnterFinished;
   }
-  const sharedValue2 = useSharedValue2(num3);
-  let obj2 = sharedValue;
-  const tmp9 = num(sharedValue.useState(initiallyVisible), 2);
-  setEnterFinished = tmp11;
-  const first = tmp9[0];
-  const tmp12 = num(sharedValue.useState(visible), 2);
-  if (visible !== tmp12[0]) {
-    tmp12[1](visible);
+  const sharedValue1 = visible(onExitComplete[5]).useSharedValue(num3);
+  const tmp7 = num(sharedValue.useState(initiallyVisible), 2);
+  setEnterFinished = tmp8;
+  const tmp9 = num(sharedValue.useState(visible), 2);
+  if (visible !== tmp9[0]) {
+    tmp9[1](visible);
     if (!visible) {
-      tmp9[1](false);
+      tmp8(false);
     }
   }
-  let closure_6 = obj2.useRef(onExitComplete);
+  if (!tmp4) {
+    let first = visible;
+    if (visible) {
+      first = tmp7[0];
+    }
+  }
+  closure_6 = obj4.useRef(onExitComplete);
   if (cResult[0] !== onExitComplete) {
     class P {
       constructor() {
@@ -77,7 +70,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
     cResult[0] = onExitComplete;
     cResult[1] = P;
     cResult[2] = items;
-    tmp18 = items;
+    let tmp15 = items;
   } else {
     class P {
       constructor() {
@@ -85,9 +78,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
         return;
       }
     }
-    tmp18 = cResult[2];
+    tmp15 = cResult[2];
   }
-  const effect = obj2.useEffect(P, tmp18);
+  const effect = obj4.useEffect(P, tmp15);
   if (cResult[3] === num) {
     class P {
       constructor() {
@@ -98,106 +91,99 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
   }
   class L {
     constructor() {
-      handleExitFinished = function handleExitFinished() { /* body not rendered: F142122 */ };
-      tmp = handleExitFinished;
-      if (tmp) {
-        tmp19 = visible;
-        tmp20 = onExitComplete;
-        tmp21 = visible(onExitComplete[6]);
-        tmp22 = closure_6;
-        fn2 = function n() { /* body not rendered: F142123 */ };
+      handleExitFinished = function handleExitFinished() { ... };
+      if (handleExitFinished) {
+        tmp17 = visible;
+        tmp18 = onExitComplete;
+        obj4 = visible(onExitComplete[6]);
+        tmp19 = closure_6;
+        fn2 = function n() { ... };
         obj1 = { runOnJS: null, setEnterFinished: null };
-        tmp23 = visible;
-        tmp24 = onExitComplete;
-        withTiming2 = tmp21.withTiming;
+        tmp20 = visible;
+        tmp21 = onExitComplete;
         obj1.runOnJS = visible(onExitComplete[5]).runOnJS;
-        tmp25 = closure_5;
+        tmp22 = closure_5;
         obj1.setEnterFinished = closure_5;
         fn2.__closure = obj1;
         num3 = 9490441890617;
         fn2.__workletHash = 9490441890617;
-        tmp26 = closure_1_8;
+        tmp23 = closure_1_8;
         fn2.__initData = closure_1_8;
         str3 = "respect-motion-settings";
         num4 = 1;
-        tmp27 = tmp21;
+        tmp24 = obj4;
         num5 = 1;
         str4 = "respect-motion-settings";
-        tmp28 = fn2;
-        withTiming2Result = withTiming2(1, closure_6, "respect-motion-settings", fn2);
-        tmp31 = enterDelayMs;
+        tmp25 = fn2;
+        withTimingResult = obj4.withTiming(1, closure_6, "respect-motion-settings", fn2);
+        tmp28 = enterDelayMs;
         num6 = 0;
-        withDelayResult = withTiming2Result;
-        tmp30 = closure_3;
-        set3 = closure_3.set;
+        withDelayResult = withTimingResult;
+        tmp27 = closure_3;
         if (enterDelayMs > 0) {
-          tmp33 = visible;
-          tmp34 = onExitComplete;
-          obj4 = visible(onExitComplete[5]);
-          withDelayResult = obj4.withDelay(tmp31, withTiming2Result);
-        }
-        set3Result = set3(withDelayResult);
-        tmp36 = visible;
-        tmp37 = onExitComplete;
-        obj5 = visible(onExitComplete[7]);
-        tmp38 = closure_4;
-        withSpringResult = obj5.withSpring(1, closure_4, "respect-motion-settings");
-        withDelayResult1 = withSpringResult;
-        tmp40 = closure_4;
-        set4 = closure_4.set;
-        if (tmp31 > 0) {
-          tmp42 = visible;
-          tmp43 = onExitComplete;
+          tmp30 = visible;
+          tmp31 = onExitComplete;
           obj6 = visible(onExitComplete[5]);
-          withDelayResult1 = obj6.withDelay(tmp31, withSpringResult);
+          withDelayResult = obj6.withDelay(tmp28, withTimingResult);
         }
-        set4Result = set4(withDelayResult1);
+        result = closure_3.set(withDelayResult);
+        tmp33 = visible;
+        tmp34 = onExitComplete;
+        obj7 = visible(onExitComplete[7]);
+        tmp35 = closure_4;
+        withSpringResult = obj7.withSpring(1, closure_4, "respect-motion-settings");
+        withDelayResult1 = withSpringResult;
+        tmp37 = closure_4;
+        if (tmp28 > 0) {
+          tmp39 = visible;
+          tmp40 = onExitComplete;
+          obj8 = visible(onExitComplete[5]);
+          withDelayResult1 = obj8.withDelay(tmp28, withSpringResult);
+        }
+        result1 = closure_4.set(withDelayResult1);
       } else {
-        tmp2 = closure_3;
-        tmp3 = visible;
-        tmp4 = onExitComplete;
-        set = closure_3.set;
-        tmp5 = visible(onExitComplete[6]);
-        tmp6 = closure_1_7;
-        fn = function t() { /* body not rendered: F142124 */ };
-        obj = { runOnJS: null, handleExitFinished: null };
-        tmp7 = visible;
-        tmp8 = onExitComplete;
-        withTiming = tmp5.withTiming;
-        obj.runOnJS = visible(onExitComplete[5]).runOnJS;
-        obj.handleExitFinished = handleExitFinished;
-        fn.__closure = obj;
+        tmp = closure_3;
+        tmp2 = visible;
+        tmp3 = onExitComplete;
+        obj = visible(onExitComplete[6]);
+        tmp4 = closure_1_7;
+        fn = function t() { ... };
+        obj9 = { runOnJS: null, handleExitFinished: null };
+        tmp5 = visible;
+        tmp6 = onExitComplete;
+        obj9.runOnJS = visible(onExitComplete[5]).runOnJS;
+        obj9.handleExitFinished = handleExitFinished;
+        fn.__closure = obj9;
         num = 415624141708;
         fn.__workletHash = 415624141708;
-        tmp9 = closure_1_9;
+        tmp7 = closure_1_9;
         fn.__initData = closure_1_9;
         str = "respect-motion-settings";
         num2 = 0;
-        tmp10 = tmp5;
-        tmp11 = closure_1_7;
+        tmp8 = obj;
+        tmp9 = closure_1_7;
         str2 = "respect-motion-settings";
-        tmp12 = fn;
-        result = set(withTiming(0, closure_1_7, "respect-motion-settings", fn));
-        tmp14 = closure_4;
-        tmp15 = visible;
-        tmp16 = onExitComplete;
-        set2 = closure_4.set;
-        obj2 = visible(onExitComplete[6]);
-        tmp17 = closure_5;
-        set2Result = set2(obj2.withTiming(closure_5, closure_1_7, "respect-motion-settings"));
+        tmp10 = fn;
+        result2 = closure_3.set(obj.withTiming(0, closure_1_7, "respect-motion-settings", fn));
+        tmp12 = closure_4;
+        tmp13 = visible;
+        tmp14 = onExitComplete;
+        obj3 = visible(onExitComplete[6]);
+        tmp15 = closure_5;
+        result3 = closure_4.set(obj3.withTiming(closure_5, closure_1_7, "respect-motion-settings"));
       }
       return;
     }
   }
-  const items1 = [visible, num, sharedValue, sharedValue2];
+  const items1 = [visible, num, sharedValue, sharedValue1];
   cResult[3] = num;
   cResult[4] = sharedValue;
-  cResult[5] = sharedValue2;
+  cResult[5] = sharedValue1;
   cResult[6] = visible;
   cResult[7] = L;
   cResult[8] = items1;
+  const tmpResult2 = visible(onExitComplete[5]);
 }) : ((visible) => {
-  let tmpResult2;
   visible = visible.visible;
   let initiallyVisible = visible.initiallyVisible;
   if (initiallyVisible === undefined) {
@@ -213,46 +199,44 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
     flag = false;
   }
   let sharedValue;
-  let sharedValue2;
+  let sharedValue1;
   setEnterFinished = undefined;
-  let closure_6;
-  let tmp = visible;
+  closure_6 = undefined;
   let num2 = 0;
-  const useSharedValue = visible(num[5]).useSharedValue;
-  visible(num[5]);
   if (initiallyVisible) {
     num2 = 1;
   }
-  sharedValue = useSharedValue(num2);
+  sharedValue = visible(num[5]).useSharedValue(num2);
+  let obj = visible(num[5]);
   let num3 = 1;
-  const useSharedValue2 = tmp(num[5]).useSharedValue;
-  tmp(num[5]);
   if (!initiallyVisible) {
     num3 = setEnterFinished;
   }
-  sharedValue2 = useSharedValue2(num3);
-  let obj = sharedValue;
-  const tmp7 = onExitComplete(sharedValue.useState(initiallyVisible), 2);
-  setEnterFinished = tmp9;
-  const first = tmp7[0];
-  const tmp10 = onExitComplete(sharedValue.useState(visible), 2);
-  if (visible !== tmp10[0]) {
-    tmp10[1](visible);
+  sharedValue1 = visible(num[5]).useSharedValue(num3);
+  const tmp5 = onExitComplete(sharedValue.useState(initiallyVisible), 2);
+  setEnterFinished = tmp6;
+  const tmp7 = onExitComplete(sharedValue.useState(visible), 2);
+  if (visible !== tmp7[0]) {
+    tmp7[1](visible);
     if (!visible) {
-      tmp7[1](false);
+      tmp6(false);
     }
   }
-  let tmp13 = visible;
+  let tmp10 = visible;
   if (!flag) {
-    tmp13 = visible && first;
+    let first = visible;
+    if (visible) {
+      first = tmp5[0];
+    }
+    tmp10 = first;
   }
-  closure_6 = obj.useRef(onExitComplete);
+  closure_6 = obj3.useRef(onExitComplete);
   let items = [onExitComplete];
-  const effect = obj.useEffect(() => {
+  const effect = obj3.useEffect(() => {
     closure_6.current = onExitComplete;
   }, items);
-  const items1 = [visible, num, sharedValue, sharedValue2];
-  const effect1 = obj.useEffect(() => {
+  const items1 = [visible, num, sharedValue, sharedValue1];
+  const effect1 = obj3.useEffect(() => {
     function handleExitFinished() {
       const current = ref.current;
       let currentResult;
@@ -261,74 +245,65 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
       }
       return currentResult;
     }
-    const tmp = handleExitFinished;
-    if (tmp) {
+    if (handleExitFinished) {
+      const obj4 = visible(num[6]);
       const fn2 = function f(arg0) {
         if (true === arg0) {
+          visible(num[5]).runOnJS(setEnterFinished)(true);
           const obj = visible(num[5]);
-          obj.runOnJS(setEnterFinished)(true);
         }
       };
-      const tmp21 = visible(num[6]);
-      const withTiming2 = tmp21.withTiming;
-      fn2.__closure = { runOnJS: visible(num[5]).runOnJS, setEnterFinished };
+      const obj2 = { runOnJS: visible(num[5]).runOnJS, setEnterFinished };
+      fn2.__closure = obj2;
       fn2.__workletHash = 9427689669436;
       fn2.__initData = __initData;
-      const obj3 = { runOnJS: visible(num[5]).runOnJS, setEnterFinished };
-      const withTiming2Result = withTiming2(1, ref, "respect-motion-settings", fn2);
-      let withDelayResult = withTiming2Result;
-      set3 = sharedValue.set;
+      const withTimingResult = obj4.withTiming(1, ref, "respect-motion-settings", fn2);
+      let withDelayResult = withTimingResult;
       if (num > 0) {
-        const obj4 = visible(num[5]);
-        withDelayResult = obj4.withDelay(tmp31, withTiming2Result);
-      }
-      set3(withDelayResult);
-      const obj5 = visible(num[7]);
-      const withSpringResult = obj5.withSpring(1, sharedValue2, "respect-motion-settings");
-      let withDelayResult1 = withSpringResult;
-      set4 = sharedValue2.set;
-      if (num > 0) {
+        withDelayResult = visible(num[5]).withDelay(tmp28, withTimingResult);
         const obj6 = visible(num[5]);
-        withDelayResult1 = obj6.withDelay(tmp31, withSpringResult);
       }
-      set4(withDelayResult1);
+      const result = sharedValue.set(withDelayResult);
+      const withSpringResult = visible(num[7]).withSpring(1, sharedValue1, "respect-motion-settings");
+      let withDelayResult1 = withSpringResult;
+      if (num > 0) {
+        withDelayResult1 = visible(num[5]).withDelay(tmp28, withSpringResult);
+        const obj8 = visible(num[5]);
+      }
+      const result1 = sharedValue1.set(withDelayResult1);
+      const obj7 = visible(num[7]);
     } else {
-      set = sharedValue.set;
+      let obj = visible(num[6]);
       const fn = function l(arg0) {
         if (true === arg0) {
-          const obj = ReanimatedRexport;
-          obj.runOnJS(handleExitFinished)();
+          ReanimatedRexport.runOnJS(handleExitFinished)();
         }
       };
-      const tmp5 = visible(num[6]);
-      let obj = { runOnJS: visible(num[5]).runOnJS, handleExitFinished };
-      const withTiming = tmp5.withTiming;
-      fn.__closure = obj;
-      num = 7653642511115;
+      const obj5 = { runOnJS: visible(num[5]).runOnJS, handleExitFinished };
+      fn.__closure = obj5;
       fn.__workletHash = 7653642511115;
       fn.__initData = __initData2;
-      const result = set(withTiming(0, closure_1_7, "respect-motion-settings", fn));
-      set2 = sharedValue2.set;
-      const obj2 = visible(num[6]);
-      set2(obj2.withTiming(setEnterFinished, closure_1_7, "respect-motion-settings"));
+      const result2 = sharedValue.set(obj.withTiming(0, closure_1_7, "respect-motion-settings", fn));
+      const result3 = sharedValue1.set(visible(7653642511115[6]).withTiming(setEnterFinished, closure_1_7, "respect-motion-settings"));
+      const obj3 = visible(7653642511115[6]);
     }
   }, items1);
-  let obj2 = { animatedStyle: tmpResult2.useAnimatedStyle(D), isInteractive: tmp13 };
-  tmpResult2 = tmp(num[5]);
+  let obj2 = { animatedStyle: null, isInteractive: null };
+  const tmpResult = visible(num[5]);
   class D {
     constructor() {
-      let items;
-      const obj = { opacity: sharedValue.get(), transform: items };
-      items = [{ scale: sharedValue2.get() }];
-      ({ scale: sharedValue2.get() });
+      obj = { opacity: closure_3.get(), transform: null };
+      obj1 = { scale: closure_4.get() };
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
       return obj;
     }
   }
-  D.__closure = { opacity: sharedValue, scale: sharedValue2 };
+  D.__closure = { opacity: sharedValue, scale: sharedValue1 };
   D.__workletHash = 8572799637180;
   D.__initData = __initData3;
+  obj2.animatedStyle = visible(num[5]).useAnimatedStyle(D);
+  obj2.isInteractive = tmp10;
   return obj2;
 });
-let result = size.fileFinishedImporting("modules/chat_input/native/action_buttons/useChatInputFloatingBounce.tsx");
-
-export default tmp3;

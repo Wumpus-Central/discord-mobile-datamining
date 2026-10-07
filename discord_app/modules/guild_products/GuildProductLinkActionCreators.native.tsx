@@ -1,19 +1,17 @@
 // === Module 12762: GuildProductLinkActionCreators ===
 
 // Module 12762 (GuildProductLinkActionCreators)
-import intl3 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_products/GuildProductLinkActionCreators.native.tsx");
 
 export const openGuildProductLink = function openGuildProductLink() {
-  let intl;
-  let intl2;
-  const obj = { body: intl.string(intl3.t["mYlo/T"]), confirmText: intl2.string(intl3.t.BddRzS) };
-  const show = actions_AlertActionCreatorsDefault.show;
-  actions_AlertActionCreatorsDefault;
-  intl = intl3.intl;
-  intl2 = intl3.intl;
-  show(obj);
+  const obj2 = { body: null, confirmText: null };
+  const intl = util.intl;
+  obj2.body = intl.string(util.t["mYlo/T"]);
+  const intl2 = util.intl;
+  obj2.confirmText = intl2.string(util.t.BddRzS);
+  actions_AlertActionCreatorsDefault.show(obj2);
 };

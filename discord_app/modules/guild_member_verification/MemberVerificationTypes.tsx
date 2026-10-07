@@ -13,9 +13,18 @@ export const UserVerificationFieldPlatforms = { EMAIL: "email", PHONE: "phone" }
 export const GuildJoinRequestSortOrders = { TIMESTAMP_DESC: "NEWEST", TIMESTAMP_ASC: "OLDEST" };
 export const GuildJoinRequestApplicationStatuses = { STARTED: "STARTED", SUBMITTED: "SUBMITTED", REJECTED: "REJECTED", APPROVED: "APPROVED" };
 export const isTermsFormField = function isTermsFormField(field_type) {
-  return null != field_type && field_type.field_type === obj.TERMS;
+  let tmp = null != field_type;
+  if (tmp) {
+    tmp = field_type.field_type === obj.TERMS;
+  }
+  return tmp;
 };
 export const hasNonTermsFormField = function hasNonTermsFormField(formFields) {
-  const tmp = null != formFields && formFields.some((field_type) => !(null != field_type && field_type.field_type === constants.TERMS));
-  return tmp;
+  return null != formFields && formFields.some((field_type) => {
+    let tmp = null != field_type;
+    if (tmp) {
+      tmp = field_type.field_type === constants.TERMS;
+    }
+    return !tmp;
+  });
 };

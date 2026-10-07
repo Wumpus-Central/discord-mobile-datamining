@@ -2,15 +2,15 @@
 
 // Module 6092 (PushNotificationConstants)
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import react_native_mod from "react-native" /* 1368 */;
+import ClientInfoUtils_mod from "ClientInfoUtils" /* 1368 */;
 import MetaQuestUtils_mod from "MetaQuestUtils" /* 1615 */;
 import size from "module_2" /* 2 */;
 
-let react_native = react_native_mod;
-react_native = react_native.getConstants();
+let ClientInfoUtils = ClientInfoUtils_mod;
+ClientInfoUtils = ClientInfoUtils.getConstants();
 let str;
-if (react_native != null) {
-  str = react_native.Identifier;
+if (ClientInfoUtils != null) {
+  str = ClientInfoUtils.Identifier;
 }
 if (str == null) {
   str = "";
@@ -45,15 +45,14 @@ export const DEVICE_PUSH_PROVIDER_META_HORIZON = "meta_horizon";
 export const DEVICE_PUSH_PROVIDER_IOS = str2;
 export const DEVICE_PUSH_VOIP_PROVIDER = str4;
 export const getDevicePushProvider = function getDevicePushProvider() {
-  let str;
   if (MetaQuestUtils) {
-    str = meta_horizon;
+    let str = meta_horizon;
   } else {
     str = "gcm";
-    const obj = PlatformUtils;
     if (!obj.isAndroid()) {
       str = str2;
     }
+    obj = PlatformUtils;
   }
   return str;
 };

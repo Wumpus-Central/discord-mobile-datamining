@@ -1,24 +1,39 @@
 // === Module 16388: NotificationCenterActionButton ===
 
 // Module 16388 (NotificationCenterActionButton)
-import Fragment from "Fragment" /* 21 */;
-import intl2 from "intl" /* 1126 */;
-import IconButton2 from "IconButton" /* 7586 */;
-import AssetRegistryDefault from "AssetRegistry" /* 7589 */;
-import react from "react" /* 19 */;
-import size from "module_2" /* 2 */;
+import util from "util" /* 1126 */;
+import IconButton from "IconButton" /* 7586 */;
+import _modDef7589 from "module_7589" /* 7589 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/native/NotificationCenterActionButton.tsx");
 
 export default function NotificationCenterActionButton() {
-  let paths;
-  const IconButton = IconButton2.IconButton;
-  const intl = intl2.intl;
-  return <IconButton variant="tertiary" size="sm" icon={AssetRegistryDefault} onPress={function onPress() {
-    const obj = require("ActionSheetActionCreators");
-    return obj.openLazy(require("asyncRequire")(paths[5], paths.paths), "NotificationCenterActionSheet");
-  }} accessibilityLabel={intl.string(intl2.t["UKOtz+"])} maxFontSizeMultiplier={2} />;
+  const obj = {
+    variant: "tertiary",
+    size: "sm",
+    icon: _modDef7589,
+    onPress() {
+      return require("ActionSheetActionCreators").openLazy(require("asyncRequireImpl")(paths[5], paths.paths), "NotificationCenterActionSheet");
+    },
+    accessibilityLabel: null,
+    maxFontSizeMultiplier: 2
+  };
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t["UKOtz+"]);
+  return jsx(IconButton.IconButton, {
+    variant: "tertiary",
+    size: "sm",
+    icon: _modDef7589,
+    onPress() {
+      return require("ActionSheetActionCreators").openLazy(require("asyncRequireImpl")(paths[5], paths.paths), "NotificationCenterActionSheet");
+    },
+    accessibilityLabel: null,
+    maxFontSizeMultiplier: 2
+  });
 };

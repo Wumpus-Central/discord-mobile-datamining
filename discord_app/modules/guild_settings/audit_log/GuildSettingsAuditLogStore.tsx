@@ -1,209 +1,22 @@
 // === Module 17759: GuildSettingsAuditLogStore ===
 
 // Module 17759 (GuildSettingsAuditLogStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelRecord from "ChannelRecord" /* 2055 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 2107 */;
-import AuditLogRecord2 from "AuditLogRecord" /* 17760 */;
+import AuditLogRecord from "AuditLogRecord" /* 17760 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import Constants from "Constants" /* 1085 */;
 import BigFlagUtils from "BigFlagUtils" /* 1097 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-const AuditLogRecord = AuditLogRecord2;
-let importDefault, roles;
 
-let Permissions;
-let c10;
-let closure_12;
-let closure_14;
-let map1;
-let unpackModuleId;
-const f131946 = function(id) {
-  function shouldMergeEntries(items, action2, c1) {
-    let isEqualResult = null != items && items.action === action2.action && items.targetId === action2.targetId && items.userId === action2.userId;
-    if (isEqualResult) {
-      const obj = items(closure_1_1[8]);
-      isEqualResult = obj.isEqual(items.options, action2.options);
-    }
-    if (isEqualResult) {
-      const timestampStart = action2.timestampStart;
-      isEqualResult = timestampStart.diff(items.timestampStart, "minutes") < num;
-    }
-    if (isEqualResult) {
-      isEqualResult = c1 < num2;
-    }
-    if (isEqualResult) {
-      isEqualResult = action2.targetType !== constants2.INVITE;
-    }
-    if (isEqualResult) {
-      isEqualResult = action2.action !== constants.MESSAGE_DELETE;
-    }
-    if (isEqualResult) {
-      isEqualResult = action2.action !== constants.MESSAGE_BULK_DELETE;
-    }
-    if (isEqualResult) {
-      isEqualResult = action2.action !== constants.MESSAGE_PIN;
-    }
-    if (isEqualResult) {
-      isEqualResult = action2.action !== constants.MESSAGE_UNPIN;
-    }
-    if (isEqualResult) {
-      isEqualResult = action2.action !== constants.MEMBER_MOVE;
-    }
-    if (isEqualResult) {
-      isEqualResult = action2.action !== constants.MEMBER_DISCONNECT;
-    }
-    if (isEqualResult) {
-      isEqualResult = action2.action !== constants.CHANNEL_POSITION_UPDATE;
-    }
-    if (isEqualResult) {
-      isEqualResult = action2.action !== constants.ROLE_POSITION_UPDATE;
-    }
-    if (isEqualResult) {
-      isEqualResult = action2.action !== constants.BOT_ADD;
-    }
-    if (isEqualResult) {
-      isEqualResult = action2.action !== constants.APPLICATION_COMMAND_PERMISSION_UPDATE;
-    }
-    if (isEqualResult) {
-      isEqualResult = action2.action !== constants.MEMBER_PRUNE;
-    }
-    return isEqualResult;
-  }
-  items = [];
-  let tmp = null;
-  let tmp2 = null;
-  let tmp3 = null;
-  if (null != id.reason) {
-    const self = this;
-    const self2 = this;
-    const push = items.push;
-    const tmp7 = new AuditLogChange(constants2.REASON, null, id.reason);
-    push(tmp7);
-  }
-  if (null != id.changes) {
-    const changes = id.changes;
-    for (const item10022 of changes) {
-      let self3 = this;
-      let self4 = this;
-      let tmp12 = new AuditLogChange(item10022.key, item10022.old_value, item10022.new_value);
-      let tmp13 = tmp12;
-      let tmp14 = tmp12;
-      let arr3 = items.push(tmp12);
-      if (tmp12.key === constants2.NAME) {
-        tmp = tmp13;
-      } else if (tmp14.key === constants2.TYPE) {
-        tmp3 = tmp13;
-      } else if (tmp14.key === constants2.TITLE) {
-        tmp2 = tmp13;
-      }
-      continue;
-    }
-  }
-  if (id.action_type === AuditLogActions.MEMBER_PRUNE) {
-    const num = 1;
-    let num2 = 1;
-    if (null != id) {
-      num2 = 1;
-      if (null != id.options) {
-        num2 = 1;
-        if (null != id.options.delete_member_days) {
-          num2 = id.options.delete_member_days;
-        }
-      }
-    }
-    const self5 = this;
-    const self6 = this;
-    const tmp26 = new AuditLogChange(constants2.PRUNE_DELETE_DAYS, null, num2);
-    items.push(tmp26);
-  }
-  let tmp29 = id.action_type === AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE;
-  if (tmp29) {
-    const options = id.options;
-    let prop;
-    if (options != null) {
-      prop = options.auto_moderation_rule_name;
-    }
-    tmp29 = null != prop;
-  }
-  if (tmp29) {
-    const self7 = this;
-    const self8 = this;
-    const push2 = items.push;
-    const tmp34 = new AuditLogChange(constants2.AUTO_MODERATION_TRIGGERED_RULE_NAME, null, id.options.auto_moderation_rule_name);
-    push2(tmp34);
-  }
-  let tmp37 = id.action_type === AuditLogActions.VOICE_CHANNEL_STATUS_CREATE;
-  if (tmp37) {
-    const options2 = id.options;
-    let status;
-    if (options2 != null) {
-      status = options2.status;
-    }
-    tmp37 = null != status;
-  }
-  if (tmp37) {
-    const self9 = this;
-    const self10 = this;
-    const push3 = items.push;
-    const tmp42 = new AuditLogChange(constants2.STATUS, null, id.options.status);
-    push3(tmp42);
-  }
-  let obj = { id: id.id, action: id.action_type, targetId: id.target_id, userId: id.user_id, changes: items, options: id.options };
-  const self11 = this;
-  const tmp45 = new AuditLogRecord(obj);
-  const first = items[0];
-  if (shouldMergeEntries(first, tmp45, c1)) {
-    const obj2 = { changes: items1, timestampEnd: tmp45.timestampStart };
-    items1 = [];
-    const merge = first.merge;
-    HermesBuiltin.arraySpread(items1, tmp45.changes, HermesBuiltin.arraySpread(items1, first.changes, 0));
-    items[0] = merge(obj2);
-    c1 = c1 + 1;
-  } else {
-    if (tmp45.actionType === constants.DELETE) {
-      if (null != tmp) {
-        let oldValue;
-        if (tmp != null) {
-          oldValue = tmp.oldValue;
-        }
-        if (oldValue == null) {
-          let oldValue1;
-          if (tmp2 != null) {
-            oldValue1 = tmp2.oldValue;
-          }
-          oldValue = oldValue1;
-        }
-        let combined = oldValue;
-        const tmp53 = tmp45.targetType !== unpackModuleId.CHANNEL && tmp45.targetType !== tmp52.CHANNEL_OVERWRITE || null === tmp3 || !closure_4(tmp3.oldValue);
-        if (!tmp53) {
-          const _HermesInternal = HermesInternal;
-          combined = "#" + oldValue;
-        }
-        if (null == closure_33[tmp45.targetType]) {
-          const obj3 = {};
-          obj3[tmp45.targetId] = combined;
-          closure_33[tmp45.targetType] = obj3;
-        } else {
-          closure_33[tmp45.targetType][tmp45.targetId] = combined;
-        }
-      }
-    }
-    c1 = 0;
-    items.unshift(tmp45);
-  }
-};
-const f131948 = (userId) => userId.userId;
-const AuditLogChange = AuditLogRecord2.AuditLogChange;
-let closure_4 = ChannelRecord.isGuildSelectableChannelType;
-const hasAnyPermission = GuildRoleRecord.hasAnyPermission;
+const AuditLogChange = fn(17760).AuditLogChange;
+let closure_4 = fn(2055).isGuildSelectableChannelType;
+const hasAnyPermission = fn(2107).hasAnyPermission;
+const Constants = fn(1085);
 const AuditLogActions = Constants.AuditLogActions;
-({ AuditLogActionTypes: c10, AuditLogTargetTypes: unpackModuleId, AuditLogChangeKeys: closure_12, AUDIT_LOG_PAGE_LIMIT: map1, GuildSettingsSections: closure_14, Permissions } = Constants);
+({ AuditLogActionTypes: c10, AuditLogTargetTypes: closure_11, AuditLogChangeKeys: closure_12, AUDIT_LOG_PAGE_LIMIT: map1, GuildSettingsSections: closure_14, Permissions } = Constants);
 let closure_15 = BigFlagUtils.combine(Permissions.KICK_MEMBERS, Permissions.BAN_MEMBERS, Permissions.ADMINISTRATOR, Permissions.MANAGE_CHANNELS, Permissions.MANAGE_GUILD, Permissions.MANAGE_MESSAGES, Permissions.MANAGE_NICKNAMES, Permissions.MANAGE_ROLES, Permissions.MANAGE_WEBHOOKS, Permissions.MANAGE_GUILD_EXPRESSIONS, Permissions.MOVE_MEMBERS, Permissions.MUTE_MEMBERS, Permissions.DEAFEN_MEMBERS);
 let c16 = null;
 let closure_17 = [];
@@ -224,13 +37,13 @@ let ALL = AuditLogActions.ALL;
 let c32 = null;
 let closure_33 = {};
 let c34 = 0;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class GuildSettingsAuditLogStore extends Store {
-  initialize() {
-    this.waitFor(GuildStore, GuildRoleStore, GuildMemberStore);
-  }
 }
 const prototype = GuildSettingsAuditLogStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(GuildStore, GuildRoleStore, GuildMemberStore);
+};
 Object.defineProperty(prototype, "logs", {
   get: function logs() {
     return closure_17;
@@ -340,12 +153,11 @@ Object.defineProperty(prototype, "groupedFetchCount", {
   set: undefined
 });
 GuildSettingsAuditLogStore.displayName = "GuildSettingsAuditLogStore";
-let obj = {
+const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefault, {
   AUDIT_LOG_FETCH_START: function handleStartFetchingLogs() {
     c26 = true;
   },
   AUDIT_LOG_FETCH_SUCCESS: function handleFetchedLogs(logs) {
-    let automodRules;
     c34 = 0;
     c25 = false;
     c26 = false;
@@ -353,9 +165,176 @@ let obj = {
     c29 = false;
     logs = logs.logs;
     const items = [];
-    let c1 = 0;
+    c1 = 0;
     const reversed = logs.reverse();
-    const item = reversed.forEach(f131946);
+    const item = reversed.forEach((id) => {
+      items = [];
+      let tmp = null;
+      let tmp2 = null;
+      let tmp3 = null;
+      if (null != id.reason) {
+        const tmp9 = new AuditLogChange(constants3.REASON, null, id.reason);
+        items.push(tmp9);
+      }
+      if (null != id.changes) {
+        const changes = id.changes;
+        for (const item10022 of changes) {
+          let tmp14 = new.target;
+          let tmp15 = new.target;
+          let tmp16 = new AuditLogChange(item10022.key, item10022.old_value, item10022.new_value);
+          let tmp17 = tmp16;
+          let tmp18 = tmp16;
+          let arr3 = items.push(tmp16);
+          if (tmp16.key === constants3.NAME) {
+            tmp = tmp17;
+          } else if (tmp18.key === constants3.TYPE) {
+            tmp3 = tmp17;
+          } else if (tmp18.key === constants3.TITLE) {
+            tmp2 = tmp17;
+          }
+          continue;
+        }
+      }
+      if (id.action_type === AuditLogActions.MEMBER_PRUNE) {
+        let num2 = 1;
+        if (null != id) {
+          num2 = 1;
+          if (null != id.options) {
+            num2 = 1;
+            if (null != id.options.delete_member_days) {
+              num2 = id.options.delete_member_days;
+            }
+          }
+        }
+        const tmp32 = new AuditLogChange(constants3.PRUNE_DELETE_DAYS, null, num2);
+        items.push(tmp32);
+      }
+      let tmp35 = id.action_type === AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE;
+      if (tmp35) {
+        options = id.options;
+        let prop;
+        if (options != null) {
+          prop = options.auto_moderation_rule_name;
+        }
+        tmp35 = null != prop;
+      }
+      if (tmp35) {
+        const tmp42 = new AuditLogChange(constants3.AUTO_MODERATION_TRIGGERED_RULE_NAME, null, id.options.auto_moderation_rule_name);
+        items.push(tmp42);
+      }
+      let tmp45 = id.action_type === AuditLogActions.VOICE_CHANNEL_STATUS_CREATE;
+      if (tmp45) {
+        const options2 = id.options;
+        let status;
+        if (options2 != null) {
+          status = options2.status;
+        }
+        tmp45 = null != status;
+      }
+      if (tmp45) {
+        const tmp52 = new AuditLogChange(constants3.STATUS, null, id.options.status);
+        items.push(tmp52);
+      }
+      const tmp55 = new AuditLogRecord({ id: id.id, action: id.action_type, targetId: id.target_id, userId: id.user_id, changes: items, options: id.options });
+      const first = items[0];
+      if ((function shouldMergeEntries(items, action2, c1) {
+        let isEqualResult = null != items && items.action === action2.action && items.targetId === action2.targetId && items.userId === action2.userId;
+        if (isEqualResult) {
+          isEqualResult = items(dependencyMap[8]).isEqual(items.options, action2.options);
+          const obj = items(dependencyMap[8]);
+        }
+        if (isEqualResult) {
+          const timestampStart = action2.timestampStart;
+          isEqualResult = timestampStart.diff(items.timestampStart, "minutes") < num;
+        }
+        if (isEqualResult) {
+          isEqualResult = c1 < num2;
+        }
+        if (isEqualResult) {
+          isEqualResult = action2.targetType !== constants2.INVITE;
+        }
+        if (isEqualResult) {
+          isEqualResult = action2.action !== constants.MESSAGE_DELETE;
+        }
+        if (isEqualResult) {
+          isEqualResult = action2.action !== constants.MESSAGE_BULK_DELETE;
+        }
+        if (isEqualResult) {
+          isEqualResult = action2.action !== constants.MESSAGE_PIN;
+        }
+        if (isEqualResult) {
+          isEqualResult = action2.action !== constants.MESSAGE_UNPIN;
+        }
+        if (isEqualResult) {
+          isEqualResult = action2.action !== constants.MEMBER_MOVE;
+        }
+        if (isEqualResult) {
+          isEqualResult = action2.action !== constants.MEMBER_DISCONNECT;
+        }
+        if (isEqualResult) {
+          isEqualResult = action2.action !== constants.CHANNEL_POSITION_UPDATE;
+        }
+        if (isEqualResult) {
+          isEqualResult = action2.action !== constants.ROLE_POSITION_UPDATE;
+        }
+        if (isEqualResult) {
+          isEqualResult = action2.action !== constants.BOT_ADD;
+        }
+        if (isEqualResult) {
+          isEqualResult = action2.action !== constants.APPLICATION_COMMAND_PERMISSION_UPDATE;
+        }
+        if (isEqualResult) {
+          isEqualResult = action2.action !== constants.MEMBER_PRUNE;
+        }
+        return isEqualResult;
+      })(first, tmp55, c1)) {
+        const obj2 = { changes: null, timestampEnd: null };
+        items1 = [];
+        HermesBuiltin.arraySpread(tmp55.changes, HermesBuiltin.arraySpread(first.changes, 0));
+        obj2.changes = items1;
+        obj2.timestampEnd = tmp55.timestampStart;
+        arr2[0] = first.merge(obj2);
+        c1 = c1 + 1;
+      } else {
+        if (tmp55.actionType === constants.DELETE) {
+          if (null != tmp) {
+            let oldValue;
+            if (tmp != null) {
+              oldValue = tmp.oldValue;
+            }
+            if (oldValue == null) {
+              let oldValue1;
+              if (tmp2 != null) {
+                oldValue1 = tmp2.oldValue;
+              }
+              oldValue = oldValue1;
+            }
+            let tmp62 = tmp55.targetType !== constants2.CHANNEL && tmp55.targetType !== tmp61.CHANNEL_OVERWRITE;
+            if (!tmp62) {
+              tmp62 = null === tmp3;
+            }
+            if (!tmp62) {
+              tmp62 = !closure_4(tmp3.oldValue);
+            }
+            let combined = oldValue;
+            if (!tmp62) {
+              const _HermesInternal = HermesInternal;
+              combined = "#" + oldValue;
+            }
+            if (null == dependencyMap[tmp55.targetType]) {
+              const obj3 = {};
+              obj3[tmp55.targetId] = combined;
+              dependencyMap[tmp55.targetType] = obj3;
+            } else {
+              dependencyMap[tmp55.targetType][tmp55.targetId] = combined;
+            }
+          }
+        }
+        c1 = 0;
+        arr2.unshift(tmp55);
+      }
+      let obj = { id: id.id, action: id.action_type, targetId: id.target_id, userId: id.user_id, changes: items, options: id.options };
+    });
     ({ integrations: closure_18, webhooks: closure_20, guildScheduledEvents: closure_21, automodRules } = logs);
     if (automodRules == null) {
       automodRules = [];
@@ -380,19 +359,187 @@ let obj = {
     logs = logs.logs;
     c27 = false;
     ({ integrations: closure_18, webhooks: closure_20, guildScheduledEvents: closure_21, automodRules: closure_22, threads: closure_23, applicationCommands: closure_24 } = logs);
-    let tmp2 = 0 === logs.length || logs.length < closure_13;
-    if (tmp2) {
+    let tmp = 0 === logs.length;
+    if (!tmp) {
+      tmp = logs.length < closure_13;
+    }
+    if (tmp) {
       c28 = false;
     }
     if (logs.length > 0) {
       let items = [];
-      let c1 = 0;
+      c1 = 0;
       const reversed = logs.reverse();
-      const item = reversed.forEach(f131946);
+      const item = reversed.forEach((id) => {
+        items = [];
+        let tmp = null;
+        let tmp2 = null;
+        let tmp3 = null;
+        if (null != id.reason) {
+          const tmp9 = new AuditLogChange(constants3.REASON, null, id.reason);
+          items.push(tmp9);
+        }
+        if (null != id.changes) {
+          const changes = id.changes;
+          for (const item10022 of changes) {
+            let tmp14 = new.target;
+            let tmp15 = new.target;
+            let tmp16 = new AuditLogChange(item10022.key, item10022.old_value, item10022.new_value);
+            let tmp17 = tmp16;
+            let tmp18 = tmp16;
+            let arr3 = items.push(tmp16);
+            if (tmp16.key === constants3.NAME) {
+              tmp = tmp17;
+            } else if (tmp18.key === constants3.TYPE) {
+              tmp3 = tmp17;
+            } else if (tmp18.key === constants3.TITLE) {
+              tmp2 = tmp17;
+            }
+            continue;
+          }
+        }
+        if (id.action_type === AuditLogActions.MEMBER_PRUNE) {
+          let num2 = 1;
+          if (null != id) {
+            num2 = 1;
+            if (null != id.options) {
+              num2 = 1;
+              if (null != id.options.delete_member_days) {
+                num2 = id.options.delete_member_days;
+              }
+            }
+          }
+          const tmp32 = new AuditLogChange(constants3.PRUNE_DELETE_DAYS, null, num2);
+          items.push(tmp32);
+        }
+        let tmp35 = id.action_type === AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE;
+        if (tmp35) {
+          options = id.options;
+          let prop;
+          if (options != null) {
+            prop = options.auto_moderation_rule_name;
+          }
+          tmp35 = null != prop;
+        }
+        if (tmp35) {
+          const tmp42 = new AuditLogChange(constants3.AUTO_MODERATION_TRIGGERED_RULE_NAME, null, id.options.auto_moderation_rule_name);
+          items.push(tmp42);
+        }
+        let tmp45 = id.action_type === AuditLogActions.VOICE_CHANNEL_STATUS_CREATE;
+        if (tmp45) {
+          const options2 = id.options;
+          let status;
+          if (options2 != null) {
+            status = options2.status;
+          }
+          tmp45 = null != status;
+        }
+        if (tmp45) {
+          const tmp52 = new AuditLogChange(constants3.STATUS, null, id.options.status);
+          items.push(tmp52);
+        }
+        const tmp55 = new AuditLogRecord({ id: id.id, action: id.action_type, targetId: id.target_id, userId: id.user_id, changes: items, options: id.options });
+        const first = items[0];
+        if ((function shouldMergeEntries(items, action2, c1) {
+          let isEqualResult = null != items && items.action === action2.action && items.targetId === action2.targetId && items.userId === action2.userId;
+          if (isEqualResult) {
+            isEqualResult = items(dependencyMap[8]).isEqual(items.options, action2.options);
+            const obj = items(dependencyMap[8]);
+          }
+          if (isEqualResult) {
+            const timestampStart = action2.timestampStart;
+            isEqualResult = timestampStart.diff(items.timestampStart, "minutes") < num;
+          }
+          if (isEqualResult) {
+            isEqualResult = c1 < num2;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.targetType !== constants2.INVITE;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MESSAGE_DELETE;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MESSAGE_BULK_DELETE;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MESSAGE_PIN;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MESSAGE_UNPIN;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MEMBER_MOVE;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MEMBER_DISCONNECT;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.CHANNEL_POSITION_UPDATE;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.ROLE_POSITION_UPDATE;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.BOT_ADD;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.APPLICATION_COMMAND_PERMISSION_UPDATE;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MEMBER_PRUNE;
+          }
+          return isEqualResult;
+        })(first, tmp55, c1)) {
+          const obj2 = { changes: null, timestampEnd: null };
+          items1 = [];
+          HermesBuiltin.arraySpread(tmp55.changes, HermesBuiltin.arraySpread(first.changes, 0));
+          obj2.changes = items1;
+          obj2.timestampEnd = tmp55.timestampStart;
+          arr2[0] = first.merge(obj2);
+          c1 = c1 + 1;
+        } else {
+          if (tmp55.actionType === constants.DELETE) {
+            if (null != tmp) {
+              let oldValue;
+              if (tmp != null) {
+                oldValue = tmp.oldValue;
+              }
+              if (oldValue == null) {
+                let oldValue1;
+                if (tmp2 != null) {
+                  oldValue1 = tmp2.oldValue;
+                }
+                oldValue = oldValue1;
+              }
+              let tmp62 = tmp55.targetType !== constants2.CHANNEL && tmp55.targetType !== tmp61.CHANNEL_OVERWRITE;
+              if (!tmp62) {
+                tmp62 = null === tmp3;
+              }
+              if (!tmp62) {
+                tmp62 = !closure_4(tmp3.oldValue);
+              }
+              let combined = oldValue;
+              if (!tmp62) {
+                const _HermesInternal = HermesInternal;
+                combined = "#" + oldValue;
+              }
+              if (null == dependencyMap[tmp55.targetType]) {
+                const obj3 = {};
+                obj3[tmp55.targetId] = combined;
+                dependencyMap[tmp55.targetType] = obj3;
+              } else {
+                dependencyMap[tmp55.targetType][tmp55.targetId] = combined;
+              }
+            }
+          }
+          c1 = 0;
+          arr2.unshift(tmp55);
+        }
+        let obj = { id: id.id, action: id.action_type, targetId: id.target_id, userId: id.user_id, changes: items, options: id.options };
+      });
       let items1 = [];
-      let num = 0;
-      let tmp7 = items1;
-      HermesBuiltin.arraySpread(items1, items, HermesBuiltin.arraySpread(items1, items1, 0));
+      HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(items1, 0));
     }
   },
   AUDIT_LOG_FETCH_NEXT_PAGE_FAIL: function handleFetchNextPageFail() {
@@ -408,7 +555,6 @@ let obj = {
     targetId = targetId.targetId;
   },
   GUILD_SETTINGS_SET_SECTION: function handleSettingsSetSection(section) {
-    let closure_0;
     importDefault = undefined;
     let unsafeMutableRoles;
     if (section.section !== constants4.AUDIT_LOG) {
@@ -420,30 +566,33 @@ let obj = {
       if (null != c16) {
         unsafeMutableRoles = GuildRoleStore.getUnsafeMutableRoles(c16);
       }
-      const arr = require("module_12")(members);
-      const found = arr.filter((roles) => {
+      const found = require("module_12")(members).filter((roles) => {
+        const userId = roles;
         roles = roles.roles;
         return roles.some((item) => {
-          if (null != roles) {
-            if (roles.userId === tmp.ownerId) {
+          if (null != userId) {
+            if (userId.userId === tmp.ownerId) {
               return true;
             } else {
               let tmp4;
               if (unsafeMutableRoles != null) {
                 tmp4 = tmp3[item];
               }
-              const tmp6 = null != tmp4 && hasAnyPermission(tmp4, closure_15);
+              let tmp6 = null != tmp4;
+              if (tmp6) {
+                tmp6 = hasAnyPermission(tmp4, closure_15);
+              }
               return tmp6;
             }
           }
         });
       });
-      const iter = found.map(f131948);
-      closure_19 = iter.value();
+      const arr = require("module_12")(members);
+      closure_19 = found.map((userId) => userId.userId).value();
+      const iter = found.map((userId) => userId.userId);
     }
   },
   GUILD_SETTINGS_INIT: function handleSettingsInit(guildId) {
-    let closure_0;
     guildId = guildId.guildId;
     c32 = null;
     importDefault = undefined;
@@ -455,27 +604,30 @@ let obj = {
       if (null != guildId) {
         unsafeMutableRoles = GuildRoleStore.getUnsafeMutableRoles(guildId);
       }
-      let tmp4 = importDefault;
-      const arr = require("module_12")(members);
-      const found = arr.filter((roles) => {
+      const found = require("module_12")(members).filter((roles) => {
+        const userId = roles;
         roles = roles.roles;
         return roles.some((item) => {
-          if (null != roles) {
-            if (roles.userId === tmp.ownerId) {
+          if (null != userId) {
+            if (userId.userId === tmp.ownerId) {
               return true;
             } else {
               let tmp4;
               if (unsafeMutableRoles != null) {
                 tmp4 = tmp3[item];
               }
-              const tmp6 = null != tmp4 && hasAnyPermission(tmp4, closure_15);
+              let tmp6 = null != tmp4;
+              if (tmp6) {
+                tmp6 = hasAnyPermission(tmp4, closure_15);
+              }
               return tmp6;
             }
           }
         });
       });
-      const iter = found.map(f131948);
-      closure_19 = iter.value();
+      const arr = require("module_12")(members);
+      closure_19 = found.map((userId) => userId.userId).value();
+      const iter = found.map((userId) => userId.userId);
     }
     return false;
   },
@@ -494,8 +646,8 @@ let obj = {
     closure_22 = [];
     closure_23 = [];
   }
-};
-const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/audit_log/GuildSettingsAuditLogStore.tsx");
 
 export default guildSettingsAuditLogStore;

@@ -1,89 +1,81 @@
 // === Module 5437: DimensionStore ===
 
 // Module 5437 (DimensionStore)
-import get_initializedDefault from "get initialized" /* 504 */;
-import shallowEqualDefault from "shallowEqual" /* 568 */;
+import initializeDefault from "initialize" /* 504 */;
+import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import size from "module_2" /* 2 */;
 
-const React2 = {};
-const _false = {};
+const dependencyMap = {};
+const dependencyMap2 = {};
 let closure_4 = { scrollTop: 0 };
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class DimensionStore extends Store {
-  percentageScrolled(arg0) {
-    if (null != closure_2[arg0]) {
-      return closure_2[arg0].scrollTop / closure_2[arg0].scrollHeight;
-    } else {
-      return 1;
-    }
-  }
-  getChannelDimensions(arg0) {
-    return closure_2[arg0];
-  }
-  getGuildDimensions(guildId) {
-    let tmp = closure_3[guildId];
-    if (tmp == null) {
-      tmp = { guildId, scrollTop: null, scrollTo: null };
-      const obj = { guildId, scrollTop: null, scrollTo: null };
-    }
-    return tmp;
-  }
-  getGuildListDimensions() {
-    return closure_4;
-  }
-  isAtBottom(channelId) {
-    let tmp;
-    if (null != closure_2[channelId]) {
-      tmp = tmp2.scrollTop === tmp2.scrollHeight - tmp2.offsetHeight;
-    }
-    return tmp;
-  }
 }
 const prototype = DimensionStore.prototype;
+prototype["percentageScrolled"] = function percentageScrolled(arg0) {
+  if (null != dependencyMap[arg0]) {
+    return dependencyMap[arg0].scrollTop / dependencyMap[arg0].scrollHeight;
+  } else {
+    return 1;
+  }
+};
+prototype["getChannelDimensions"] = function getChannelDimensions(arg0) {
+  return dependencyMap[arg0];
+};
+prototype["getGuildDimensions"] = function getGuildDimensions(guildId) {
+  let tmp = dependencyMap2[guildId];
+  if (tmp == null) {
+    const obj = { guildId, scrollTop: null, scrollTo: null };
+    tmp = obj;
+  }
+  return tmp;
+};
+prototype["getGuildListDimensions"] = function getGuildListDimensions() {
+  return closure_4;
+};
+prototype["isAtBottom"] = function isAtBottom(channelId) {
+  let tmp;
+  if (null != dependencyMap[channelId]) {
+    tmp = tmp2.scrollTop === tmp2.scrollHeight - tmp2.offsetHeight;
+  }
+  return tmp;
+};
 DimensionStore.displayName = "DimensionStore";
-let obj = {
+const dimensionStore = new DimensionStore(DispatcherDefault, {
   UPDATE_CHANNEL_DIMENSIONS: function handleChannelScroll(arg0) {
-    let channelId;
-    let offsetHeight;
-    let scrollHeight;
-    let scrollTop;
     ({ channelId, scrollTop, scrollHeight, offsetHeight } = arg0);
     if (null != scrollTop) {
       if (null != scrollHeight) {
         if (null != offsetHeight) {
           const obj = { channelId, scrollTop, scrollHeight, offsetHeight };
-          if (null != closure_2[channelId]) {
-            if (shallowEqualDefault(closure_2[channelId], obj)) {
+          if (null != tmp4) {
+            if (discord_common_shallowEqualDefault(tmp4, obj)) {
               return false;
             }
           }
-          closure_2[channelId] = obj;
+          tmp3[channelId] = obj;
         }
       }
     }
-    if (null == closure_2[channelId]) {
+    if (null == dependencyMap[channelId]) {
       return false;
     } else {
-      delete closure_2[channelId];
+      delete tmp[tmp2];
     }
   },
   UPDATE_CHANNEL_LIST_DIMENSIONS: function handleGuildUpdate(arg0) {
-    let guildId;
-    let scrollTo;
-    let scrollTop;
     ({ guildId, scrollTop, scrollTo } = arg0);
-    if (null == closure_3[guildId]) {
+    if (null == dependencyMap2[guildId]) {
       const obj = { guildId, scrollTop: null, scrollTo: null };
-      closure_3[guildId] = obj;
+      dependencyMap2[guildId] = obj;
     }
     if (undefined !== scrollTop) {
-      closure_3[guildId].scrollTop = scrollTop;
+      dependencyMap2[guildId].scrollTop = scrollTop;
     }
     let flag = false;
     if (undefined !== scrollTo) {
-      flag = closure_3[guildId].scrollTo !== scrollTo;
-      closure_3[guildId].scrollTo = scrollTo;
+      flag = dependencyMap2[guildId].scrollTo !== scrollTo;
+      dependencyMap2[guildId].scrollTo = scrollTo;
     }
     return null != scrollTo || flag;
   },
@@ -92,16 +84,16 @@ let obj = {
   },
   CALL_CREATE: function handleCallCreate(channelId) {
     channelId = channelId.channelId;
-    let tmp2;
-    if (null != closure_2[channelId]) {
-      tmp2 = tmp3.scrollTop === tmp3.scrollHeight - tmp3.offsetHeight;
+    let tmp3;
+    if (null != dependencyMap[channelId]) {
+      tmp3 = tmp4.scrollTop === tmp4.scrollHeight - tmp4.offsetHeight;
     }
-    if (tmp2) {
-      delete closure_2[channelId];
+    if (tmp3) {
+      delete tmp[tmp2];
     }
   }
-};
-const dimensionStore = new DimensionStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/DimensionStore.tsx");
 
 export default dimensionStore;

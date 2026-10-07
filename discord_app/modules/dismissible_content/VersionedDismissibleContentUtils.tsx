@@ -9,8 +9,9 @@ import AppLauncherBadgeUtils from "AppLauncherBadgeUtils" /* 13822 */;
 import WideBannerDismissibleContentVersion from "WideBannerDismissibleContentVersion" /* 13823 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 7107 */;
-import size from "module_2" /* 2 */;
 
+require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/dismissible_content/VersionedDismissibleContentUtils.tsx");
 
 export const getVersionedDismissibleContentCurrentVersion = function getVersionedDismissibleContentCurrentVersion(id) {
@@ -26,15 +27,12 @@ export const getVersionedDismissibleContentCurrentVersion = function getVersione
     return num5;
   } else if (dismissible_content.DismissibleContent.ACTIVITIES_VOICE_LAUNCHER_BADGE === id) {
     const obj = { storeState: EmbeddedActivitiesStore.getState(), surface: Server.EmbeddedActivitySurfaces.VOICE_LAUNCHER };
-    const getNewestBadgeableVersion = AppLauncherBadgeUtils.getNewestBadgeableVersion;
-    AppLauncherBadgeUtils;
-    return getNewestBadgeableVersion(obj);
+    return AppLauncherBadgeUtils.getNewestBadgeableVersion(obj);
   } else {
     if (dismissible_content.DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK !== id) {
       if (dismissible_content.DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE !== id) {
         if (dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_WIDE_BANNER === id) {
-          const tmpResult3 = WideBannerDismissibleContentVersion;
-          return tmpResult3.getWideBannerDismissibleContentVersion();
+          return WideBannerDismissibleContentVersion.getWideBannerDismissibleContentVersion();
         } else {
           if (dismissible_content.DismissibleContent.GAME_SHOP_ANNOUNCEMENT_MODAL !== id) {
             if (dismissible_content.DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE !== id) {
@@ -42,8 +40,7 @@ export const getVersionedDismissibleContentCurrentVersion = function getVersione
                 if (dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_GAME_SERVER_HOSTING_BANNER === id) {
                   return 0;
                 } else {
-                  const tmpResult4 = TypeUtils;
-                  tmpResult4.assertUnreachable(id, { andFail: false });
+                  TypeUtils.assertUnreachable(id, { andFail: false });
                   return 0;
                 }
               }

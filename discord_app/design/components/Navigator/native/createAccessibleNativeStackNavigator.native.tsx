@@ -1,60 +1,51 @@
 // === Module 14288: createAccessibleNativeStackNavigator ===
 
 // Module 14288 (createAccessibleNativeStackNavigator)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import Link from "Link" /* 1491 */;
 import Navigator from "Navigator" /* 6503 */;
-import NativeStackView2 from "NativeStackView" /* 7568 */;
+import NativeStackNavigator from "NativeStackNavigator" /* 7568 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
+require = fn;
 let closure_2 = ["id", "initialRouteName", "UNSTABLE_routeNamesChangeBehavior", "children", "layout", "screenListeners", "screenOptions", "screenLayout", "UNSTABLE_router"];
-const jsx = Fragment.jsx;
-let ReactCompilerGating = ReactCompilerGating_mod;
+const jsx = fn(21).jsx;
+let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((obj) => {
-  obj = react2;
+  obj = c;
   const cResult = obj.c(3);
-  const obj2 = Navigator;
-  const accessibilityNativeStackOptions = obj2.useAccessibilityNativeStackOptions();
-  let tmp3 = obj;
-  if (null != accessibilityNativeStackOptions) {
+  const accessibilityNativeStackOptions = Navigator.useAccessibilityNativeStackOptions();
+  if (null == accessibilityNativeStackOptions) {
+    return obj;
+  } else {
     if (cResult[0] === accessibilityNativeStackOptions) {
-      let tmp4;
-      if (cResult[1] === obj) {
-        tmp4 = cResult[2];
-      }
-      tmp3 = tmp4;
     }
     const obj3 = {};
-    for (const key10021 in obj) {
-      let tmp16 = obj[key10021];
-      let tmp14 = tmp16;
+    for (const key10021 in arg0) {
+      let tmp16 = arg0[key10021];
+      let tmp13 = tmp16;
       if ("none" !== tmp16.options.animation) {
-        let obj4 = { options: obj5 };
+        let obj4 = {};
         let merged = Object.assign(tmp16);
         let obj5 = {};
         let merged1 = Object.assign(tmp16.options);
         let merged2 = Object.assign(accessibilityNativeStackOptions);
-        tmp14 = obj4;
+        obj4.options = obj5;
+        tmp13 = obj4;
       }
-      obj3[key10021] = tmp14;
+      obj3[key10021] = tmp13;
       continue;
     }
     cResult[0] = accessibilityNativeStackOptions;
     cResult[1] = obj;
     cResult[2] = obj3;
-    tmp4 = obj3;
   }
-  return tmp3;
 }) : ((arg0) => {
-  let closure_0 = arg0;
-  let obj = Navigator;
-  const accessibilityNativeStackOptions = obj.useAccessibilityNativeStackOptions();
+  closure_0 = arg0;
+  const accessibilityNativeStackOptions = Navigator.useAccessibilityNativeStackOptions();
   const items = [arg0, accessibilityNativeStackOptions];
-  return react.useMemo(() => {
+  return noop.useMemo(() => {
     if (null == accessibilityNativeStackOptions) {
       return closure_0;
     } else {
@@ -63,11 +54,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((obj) => {
         let tmp14 = closure_0[key10006];
         let tmp10 = tmp14;
         if ("none" !== tmp14.options.animation) {
-          let obj2 = { options: obj3 };
+          let obj2 = {};
           let merged = Object.assign(tmp14);
           let obj3 = {};
           let merged1 = Object.assign(tmp14.options);
           let merged2 = Object.assign(accessibilityNativeStackOptions);
+          obj2.options = obj3;
           tmp10 = obj2;
         }
         obj[key10006] = tmp10;
@@ -78,32 +70,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((obj) => {
   }, items);
 });
 let closure_6 = tmp2;
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let NavigationContent;
-  let UNSTABLE_routeNamesChangeBehavior;
-  let UNSTABLE_router;
-  let children;
-  let describe;
-  let id;
-  let initialRouteName;
-  let layout;
-  let screenLayout;
-  let screenListeners;
-  let screenOptions;
-  let state;
-  let tmp10;
-  let tmp11;
-  let tmp12;
-  let tmp13;
-  let tmp4;
-  let tmp5;
-  let tmp6;
-  let tmp7;
-  let tmp8;
-  let tmp9;
-  const obj = react2;
-  const cResult = obj.c(30);
+  const cResult = c.c(30);
   if (cResult[0] !== arg0) {
     ({ id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router } = arg0);
     const tmp16 = _objectWithoutProperties(arg0, closure_2);
@@ -118,16 +87,16 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[8] = screenLayout;
     cResult[9] = screenListeners;
     cResult[10] = screenOptions;
-    tmp13 = screenOptions;
-    tmp12 = screenListeners;
-    tmp11 = screenLayout;
-    tmp10 = tmp16;
-    tmp9 = layout;
-    tmp8 = initialRouteName;
-    tmp7 = id;
-    tmp6 = children;
-    tmp5 = UNSTABLE_router;
-    tmp4 = UNSTABLE_routeNamesChangeBehavior;
+    let tmp13 = screenOptions;
+    let tmp12 = screenListeners;
+    let tmp11 = screenLayout;
+    let tmp10 = tmp16;
+    let tmp9 = layout;
+    let tmp8 = initialRouteName;
+    let tmp7 = id;
+    let tmp6 = children;
+    let tmp5 = UNSTABLE_router;
+    let tmp4 = UNSTABLE_routeNamesChangeBehavior;
   } else {
     tmp4 = cResult[1];
     tmp5 = cResult[2];
@@ -148,29 +117,26 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             if (cResult[16] === tmp9) {
               if (cResult[17] === tmp11) {
                 if (cResult[18] === tmp12) {
-                  let tmp17;
                   if (cResult[19] === tmp13) {
-                    tmp17 = cResult[20];
+                    let tmp17 = cResult[20];
                   }
-                  const tmpResult = Link;
-                  const navigationBuilder = tmpResult.useNavigationBuilder(Link.StackRouter, tmp17);
+                  const navigationBuilder = Link.useNavigationBuilder(Link.StackRouter, tmp17);
                   ({ state, describe, navigation, NavigationContent } = navigationBuilder);
                   const tmp20 = closure_6(navigationBuilder.descriptors);
                   if (cResult[21] === describe) {
                     if (cResult[22] === navigation) {
                       if (cResult[23] === tmp20) {
                         if (cResult[24] === tmp10) {
-                          let tmp21;
                           if (cResult[25] === state) {
-                            tmp21 = cResult[26];
+                            let tmp21 = cResult[26];
                           }
                           if (cResult[27] === NavigationContent) {
-                            let tmp27;
                             if (cResult[28] === tmp21) {
-                              tmp27 = cResult[29];
+                              let tmp27 = cResult[29];
                             }
                             return tmp27;
                           }
+                          const obj2 = { children: tmp21 };
                           const tmp29 = <NavigationContent>{tmp21}</NavigationContent>;
                           cResult[27] = NavigationContent;
                           cResult[28] = tmp21;
@@ -180,9 +146,13 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                       }
                     }
                   }
-                  const NativeStackView = NativeStackView2.NativeStackView;
+                  const obj3 = {};
                   const merged = Object.assign(tmp10);
-                  const tmp26 = <NativeStackView state={state} navigation={navigation} descriptors={tmp20} describe={describe} />;
+                  obj3.state = state;
+                  obj3.navigation = navigation;
+                  obj3.descriptors = tmp20;
+                  obj3.describe = describe;
+                  const tmp26 = jsx(NativeStackNavigator.NativeStackView, {});
                   cResult[21] = describe;
                   cResult[22] = navigation;
                   cResult[23] = tmp20;
@@ -190,6 +160,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   cResult[25] = state;
                   cResult[26] = tmp26;
                   tmp21 = tmp26;
+                  const tmpResult = Link;
                 }
               }
             }
@@ -211,32 +182,24 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[20] = obj4;
   tmp17 = obj4;
 }) : ((arg0) => {
-  let NavigationContent;
-  let UNSTABLE_routeNamesChangeBehavior;
-  let UNSTABLE_router;
-  let children;
-  let describe;
-  let id;
-  let initialRouteName;
-  let layout;
-  let screenLayout;
-  let screenListeners;
-  let screenOptions;
-  let state;
   ({ id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router } = arg0);
   const merged = Object.assign(arg0, Object.assign({ id: 0, initialRouteName: 0, UNSTABLE_routeNamesChangeBehavior: 0, children: 0, layout: 0, screenListeners: 0, screenOptions: 0, screenLayout: 0, UNSTABLE_router: 0 }));
-  const obj = Link;
-  const navigationBuilder = obj.useNavigationBuilder(Link.StackRouter, { id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router });
+  const navigationBuilder = Link.useNavigationBuilder(Link.StackRouter, { id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router });
   ({ state, describe, navigation, NavigationContent } = navigationBuilder);
-  const tmp3 = closure_6(navigationBuilder.descriptors);
-  const NativeStackView = NativeStackView2.NativeStackView;
+  const obj2 = { children: null };
+  const obj3 = {};
   const merged1 = Object.assign(merged);
+  obj3.state = state;
+  obj3.navigation = navigation;
+  obj3.descriptors = closure_6(navigationBuilder.descriptors);
+  obj3.describe = describe;
+  obj2.children = jsx(NativeStackNavigator.NativeStackView, {});
   return <NavigationContent>{null}</NavigationContent>;
 });
+const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/createAccessibleNativeStackNavigator.native.tsx");
 
 export default function createAccessibleNativeStackNavigator(arg0) {
-  const obj = Link;
-  return obj.createNavigatorFactory(closure_7)(arg0);
+  return Link.createNavigatorFactory(closure_7)(arg0);
 };
 export const useAccessibilityPatchedDescriptors = tmp2;

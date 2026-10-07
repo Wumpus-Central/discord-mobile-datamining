@@ -1,23 +1,18 @@
 // === Module 10642: ActivityEmoji ===
 
 // Module 10642 (ActivityEmoji)
-import Fragment from "Fragment" /* 21 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import EmojiDefault from "Emoji" /* 6632 */;
-import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4896 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let importDefault;
-
-const jsx = Fragment.jsx;
+const require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_5 = createStyles.createStyles({ emoji: { flexShrink: 0, width: "100%", height: "100%" }, text: { textAlign: "center", fontFamily: "System" } });
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/ActivityEmoji.tsx");
 
 export default function ActivityEmoji(emoji) {
-  let style;
-  let tmp9;
-  let withPlaceholder;
   emoji = emoji.emoji;
   ({ size, style, withPlaceholder } = emoji);
   if (withPlaceholder === undefined) {
@@ -29,11 +24,10 @@ export default function ActivityEmoji(emoji) {
   }
   importDefault = undefined;
   const tmp = closure_5();
+  let ReactionIcon = emoji;
   const AnimateEmoji = emoji(2028).AnimateEmoji;
   let animated;
   const setting = AnimateEmoji.useSetting();
-  const _Boolean = Boolean;
-  const tmp2 = emoji;
   if (emoji != null) {
     animated = emoji.animated;
   }
@@ -43,30 +37,44 @@ export default function ActivityEmoji(emoji) {
   if (animated) {
     animated = flag;
   }
-  const _BooleanResult = _Boolean(animated);
-  importDefault = _BooleanResult;
+  const BooleanResult = Boolean(animated);
+  importDefault = BooleanResult;
   let id;
   if (emoji != null) {
     id = emoji.id;
   }
-  const items = [id, _BooleanResult];
-  if (null != emoji) {
-    let tmp11;
-    if (null == emoji) {
-      tmp11 = jsx(tmp2(8444).ReactionIcon, { style, size: "sm" });
-    } else {
-      const items1 = [style, ];
-      const size1 = { width: size, height: size };
-      items1[1] = size1;
-      const items2 = [, , ];
-      ({ emoji: arr3[0], text: arr3[1] } = tmp);
-      const obj3 = { fontSize: size };
-      items2[2] = obj3;
-      tmp11 = jsx(EmojiDefault, { src: tmp8, name: emoji.name, style: items1, textEmojiStyle: items2, fastImageStyle: tmp.emoji, adjustsFontSizeToFit: true });
+  const items = [id, BooleanResult];
+  const memo = noop.useMemo(() => {
+    let id;
+    if (emoji != null) {
+      id = emoji.id;
     }
-    tmp9 = tmp11;
-  } else {
-    tmp9 = null;
+    if (null != id) {
+      const obj2 = { id: emoji.id, size: 48, animated };
+      return AvatarUtilsDefault.getEmojiURL(obj2);
+    }
+  }, items);
+  if (null == emoji) {
+    if (!withPlaceholder) {
+      return null;
+    }
   }
-  return tmp9;
+  if (null == emoji) {
+    ReactionIcon = ReactionIcon(8444).ReactionIcon;
+    const obj = { style, size: "sm" };
+    <ReactionIcon style={style} size="sm" />;
+  } else {
+    let obj2 = { src: memo, name: emoji.name, style: null, textEmojiStyle: null, fastImageStyle: null, adjustsFontSizeToFit: true };
+    const items1 = [style, ];
+    const size1 = { width: size, height: size };
+    items1[1] = size1;
+    obj2.style = items1;
+    const items2 = [, , ];
+    ({ emoji: arr3[0], text: arr3[1] } = tmp);
+    const obj3 = { fontSize: size };
+    items2[2] = obj3;
+    obj2.textEmojiStyle = items2;
+    obj2.fastImageStyle = tmp.emoji;
+    jsx(EmojiDefault, { src: memo, name: emoji.name, style: null, textEmojiStyle: null, fastImageStyle: null, adjustsFontSizeToFit: true });
+  }
 };

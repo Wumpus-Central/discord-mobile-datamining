@@ -1,35 +1,28 @@
 // === Module 5600: Stack/Stack ===
 
 // Module 5600 (Stack/Stack)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
-import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import c from "c" /* 576 */;
+import noop from "module_19" /* 19 */;
 
-const View = react_native.View;
-const jsx = Fragment.jsx;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_4 = createStyles.createStyles((gap, arg1, alignItems, justifyContent) => {
-  let str;
-  const stack = { width: "100%", gap, alignItems, justifyContent, flexDirection: str };
-  str = "column";
+  const stack = { width: "100%", gap, alignItems, justifyContent, flexDirection: null };
+  let str = "column";
   if ("horizontal" === arg1) {
     str = "row";
   }
+  stack.flexDirection = str;
   return { stack };
 });
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let align;
-  let children;
-  let direction;
-  let justify;
-  let onLayout;
-  let spacing;
-  let style;
-  const obj = react2;
-  const cResult = obj.c(7);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Stack/native/Stack.native.tsx");
+
+export const Stack = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(7);
   ({ spacing, direction, align, justify, children, style, onLayout } = arg0);
   let num = 8;
   if (undefined !== spacing) {
@@ -49,19 +42,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const tmp2Result = closure_4(num, str, str2, str3);
   if (cResult[0] === style) {
-    let tmp4;
     if (cResult[1] === tmp2Result.stack) {
-      tmp4 = cResult[2];
+      let tmp4 = cResult[2];
     }
     if (cResult[3] === children) {
       if (cResult[4] === onLayout) {
-        let tmp5;
         if (cResult[5] === tmp4) {
-          tmp5 = cResult[6];
+          let tmp5 = cResult[6];
         }
         return tmp5;
       }
     }
+    const obj2 = { style: tmp4, onLayout, children };
     const tmp8 = <View style={tmp4} onLayout={onLayout}>{children}</View>;
     cResult[3] = children;
     cResult[4] = onLayout;
@@ -75,9 +67,6 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = items;
   tmp4 = items;
 }) : ((spacing) => {
-  let children;
-  let onLayout;
-  let style;
   spacing = spacing.spacing;
   let num = 8;
   if (undefined !== spacing) {
@@ -99,9 +88,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     str3 = justify;
   }
   ({ children, style, onLayout } = spacing);
+  const obj = { style: null, onLayout: null, children: null };
   const items = [closure_4(num, str, str2, str3).stack, style];
-  return <View style={items} onLayout={onLayout}>{children}</View>;
+  obj.style = items;
+  obj.onLayout = onLayout;
+  obj.children = children;
+  return <View style={null} onLayout={null}>{null}</View>;
 });
-const result = size.fileFinishedImporting("design/components/Stack/native/Stack.native.tsx");
-
-export const Stack = tmp3;

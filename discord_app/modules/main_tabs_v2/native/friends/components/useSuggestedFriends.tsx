@@ -3,27 +3,22 @@
 // Module 16012 (useSuggestedFriends)
 import _modDef12 from "module_12" /* 12 */;
 import useStateFromStores from "useStateFromStores" /* 573 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import UserUtilsDefault from "UserUtils" /* 4728 */;
-import FriendsScreenConstants from "FriendsScreenConstants" /* 12363 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import FriendSuggestionStore from "FriendSuggestionStore" /* 7159 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-const SuggestedFriendSource = FriendsScreenConstants.SuggestedFriendSource;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let arr4;
-  let arr5;
-  let suggestions;
-  let tmp4;
-  let tmp5;
-  let tmp7;
-  let tmp9;
+require = fn;
+const SuggestedFriendSource = fn(12363).SuggestedFriendSource;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let obj = arg0;
-  let obj2 = react2;
-  const cResult = obj2.c(15);
+  let sorted = dependencyMap;
+  const cResult = c.c(15);
   if (arg0 == null) {
     obj = {};
   }
@@ -40,40 +35,32 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const tmpResult = useStateFromStores;
-  const stateFromStoresArray = tmpResult.useStateFromStoresArray(tmp4, tmp5);
+  const stateFromStoresArray = useStateFromStores.useStateFromStoresArray(tmp4, tmp5);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [];
     cResult[2] = items1;
-    tmp7 = items1;
+    let tmp7 = items1;
   } else {
     tmp7 = cResult[2];
   }
-  [arr4, tmp9] = react.useState(tmp7);
-  _slicedToArray(react.useState(tmp7), 2);
+  const tmpResult = useStateFromStores;
+  [arr4, tmp9] = noop.useState(tmp7);
   if (flag == null) {
     flag = true;
   }
   if (flag) {
-    if (cResult[4] === arr4) {
-      let tmp11;
-      if (cResult[5] === stateFromStoresArray) {
-        tmp11 = cResult[6];
-      }
-      arr5 = tmp11;
-    }
     const _Symbol = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
       class G {
-        constructor(source) {
-          return source.source === constants.USER_SUGGESTIONS;
+        constructor(arg0) {
+          return arg0.source === closure_1_6.USER_SUGGESTIONS;
         }
       }
       cResult[7] = G;
     } else {
       class G {
-        constructor(source) {
-          return source.source === constants.USER_SUGGESTIONS;
+        constructor(arg0) {
+          return arg0.source === closure_1_6.USER_SUGGESTIONS;
         }
       }
     }
@@ -81,20 +68,24 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const found = arr4.filter(G);
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
       class U {
-        constructor(user) {
-          let name;
-          const obj = { user: user.user, friendSuggestionName: name, source: constants.USER_SUGGESTIONS, contactNames: user.contactNames };
-          name = user.name;
+        constructor(arg0) {
+          obj = { user: arg0.user, friendSuggestionName: null, source: null, contactNames: null };
+          name = arg0.name;
+          obj.friendSuggestionName = name;
+          obj.source = closure_1_6.USER_SUGGESTIONS;
+          obj.contactNames = arg0.contactNames;
           return obj;
         }
       }
       cResult[8] = U;
     } else {
       class U {
-        constructor(user) {
-          let name;
-          const obj = { user: user.user, friendSuggestionName: name, source: constants.USER_SUGGESTIONS, contactNames: user.contactNames };
-          name = user.name;
+        constructor(arg0) {
+          obj = { user: arg0.user, friendSuggestionName: null, source: null, contactNames: null };
+          name = arg0.name;
+          obj.friendSuggestionName = name;
+          obj.source = closure_1_6.USER_SUGGESTIONS;
+          obj.contactNames = arg0.contactNames;
           return obj;
         }
       }
@@ -103,141 +94,122 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const mapped = stateFromStoresArray.map(U);
     if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
       class C {
-        constructor(user) {
-          return user.user.id;
+        constructor(arg0) {
+          return arg0.user.id;
         }
       }
       cResult[9] = C;
     } else {
       class C {
-        constructor(user) {
-          return user.user.id;
+        constructor(arg0) {
+          return arg0.user.id;
         }
       }
     }
     const _Symbol4 = Symbol;
     if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
       class I {
-        constructor(user, user2) {
-          const obj = UserUtilsDefault;
-          const name = obj.getName(user.user);
-          const localeCompare = name.localeCompare;
-          const obj2 = UserUtilsDefault;
-          return localeCompare(obj2.getName(user2.user));
+        constructor(arg0, arg1) {
+          obj = closure_1_1(closure_1_2[7]);
+          name = obj.getName(arg0.user);
+          obj3 = closure_1_1(closure_1_2[7]);
+          return name.localeCompare(obj3.getName(arg1.user));
         }
       }
       cResult[10] = I;
     } else {
       class I {
-        constructor(user, user2) {
-          const obj = UserUtilsDefault;
-          const name = obj.getName(user.user);
-          const localeCompare = name.localeCompare;
-          const obj2 = UserUtilsDefault;
-          return localeCompare(obj2.getName(user2.user));
+        constructor(arg0, arg1) {
+          obj = closure_1_1(closure_1_2[7]);
+          name = obj.getName(arg0.user);
+          obj3 = closure_1_1(closure_1_2[7]);
+          return name.localeCompare(obj3.getName(arg1.user));
         }
       }
     }
-    const obj4 = _modDef12;
-    const unionByResult = obj4.unionBy(found, mapped, C);
-    const sorted = unionByResult.sort(I);
+    sorted = _modDef12.unionBy(found, mapped, C).sort(I);
     cResult[4] = arr4;
     cResult[5] = stateFromStoresArray;
     cResult[6] = sorted;
-    tmp11 = sorted;
+    const unionByResult = _modDef12.unionBy(found, mapped, C);
   } else {
     class I {
-      constructor(user, user2) {
-        const obj = UserUtilsDefault;
-        const name = obj.getName(user.user);
-        const localeCompare = name.localeCompare;
-        const obj2 = UserUtilsDefault;
-        return localeCompare(obj2.getName(user2.user));
+      constructor(arg0, arg1) {
+        obj = closure_1_1(closure_1_2[7]);
+        name = obj.getName(arg0.user);
+        obj3 = closure_1_1(closure_1_2[7]);
+        return name.localeCompare(obj3.getName(arg1.user));
       }
     }
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
       class I {
-        constructor(user, user2) {
-          const obj = UserUtilsDefault;
-          const name = obj.getName(user.user);
-          const localeCompare = name.localeCompare;
-          const obj2 = UserUtilsDefault;
-          return localeCompare(obj2.getName(user2.user));
+        constructor(arg0, arg1) {
+          obj = closure_1_1(closure_1_2[7]);
+          name = obj.getName(arg0.user);
+          obj3 = closure_1_1(closure_1_2[7]);
+          return name.localeCompare(obj3.getName(arg1.user));
         }
       }
       cResult[3] = tmp10;
-      arr5 = tmp10;
     } else {
       class I {
-        constructor(user, user2) {
-          const obj = UserUtilsDefault;
-          const name = obj.getName(user.user);
-          const localeCompare = name.localeCompare;
-          const obj2 = UserUtilsDefault;
-          return localeCompare(obj2.getName(user2.user));
+        constructor(arg0, arg1) {
+          obj = closure_1_1(closure_1_2[7]);
+          name = obj.getName(arg0.user);
+          obj3 = closure_1_1(closure_1_2[7]);
+          return name.localeCompare(obj3.getName(arg1.user));
         }
       }
     }
-  }
-  const tmp20 = flag ? arr5.length : stateFromStoresArray.length;
-  if (cResult[11] === arr4) {
-    class I {
-      constructor(user, user2) {
-        const obj = UserUtilsDefault;
-        const name = obj.getName(user.user);
-        const localeCompare = name.localeCompare;
-        const obj2 = UserUtilsDefault;
-        return localeCompare(obj2.getName(user2.user));
+    const tmp20 = flag ? tmp10.length : stateFromStoresArray.length;
+    if (cResult[11] === arr4) {
+      class I {
+        constructor(arg0, arg1) {
+          obj = closure_1_1(closure_1_2[7]);
+          name = obj.getName(arg0.user);
+          obj3 = closure_1_1(closure_1_2[7]);
+          return name.localeCompare(obj3.getName(arg1.user));
+        }
       }
     }
+    const obj3 = { added: arr4, setAdded: tmp9, friendSuggestions: tmp10, numFriendSuggestions: tmp20 };
+    cResult[11] = arr4;
+    cResult[12] = tmp10;
+    cResult[13] = tmp20;
+    cResult[14] = obj3;
   }
-  const obj3 = { added: arr4, setAdded: tmp9, friendSuggestions: arr5, numFriendSuggestions: tmp20 };
-  cResult[11] = arr4;
-  cResult[12] = arr5;
-  cResult[13] = tmp20;
-  cResult[14] = obj3;
+  const tmp8 = _slicedToArray(noop.useState(tmp7), 2);
 }) : ((arg0) => {
-  let added;
-  let stateFromStoresArray;
-  let suggestions;
-  let tmp3;
   let obj = arg0;
   if (arg0 == null) {
     obj = {};
   }
   let flag = obj.isConnected;
-  let obj2 = stateFromStoresArray(flag[6]);
   const items = [FriendSuggestionStore];
-  stateFromStoresArray = obj2.useStateFromStoresArray(items, () => suggestions.getSuggestions());
-  [added, tmp3] = react.useState([]);
+  stateFromStoresArray = stateFromStoresArray(flag[6]).useStateFromStoresArray(items, () => suggestions.getSuggestions());
+  const tmp = _slicedToArray(noop.useState([]), 2);
+  const added = tmp[0];
   if (flag == null) {
     flag = true;
   }
   const items1 = [added, stateFromStoresArray, flag];
-  const memo = react.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (flag) {
       const found = first.filter((source) => source.source === constants.USER_SUGGESTIONS);
       const mapped = stateFromStoresArray.map((user) => {
-        let name;
-        const obj = { user: user.user, friendSuggestionName: name, source: constants.USER_SUGGESTIONS, contactNames: user.contactNames };
-        name = user.name;
+        const obj = { user: user.user, friendSuggestionName: null, source: constants.USER_SUGGESTIONS, contactNames: user.contactNames };
+        const name = user.name;
+        obj.friendSuggestionName = name;
         return obj;
       });
-      let obj = _modDef12;
-      const unionByResult = obj.unionBy(found, mapped, (user) => user.user.id);
-      return unionByResult.sort((user, user2) => {
-        const obj = added(flag[7]);
-        const name = obj.getName(user.user);
-        const localeCompare = name.localeCompare;
-        const obj2 = added(flag[7]);
-        return localeCompare(obj2.getName(user2.user));
+      return _modDef12.unionBy(found, mapped, (user) => user.user.id).sort((user, user2) => {
+        const name = added(4728).getName(user.user);
+        const obj = added(4728);
+        return name.localeCompare(added(4728).getName(user2.user));
       });
     } else {
       return [];
     }
   }, items1);
-  return { added, setAdded: tmp3, friendSuggestions: memo, numFriendSuggestions: flag ? memo.length : stateFromStoresArray.length };
+  return { added, setAdded: tmp[1], friendSuggestions: memo, numFriendSuggestions: flag ? memo.length : stateFromStoresArray.length };
 });
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");
-
-export default tmp2;

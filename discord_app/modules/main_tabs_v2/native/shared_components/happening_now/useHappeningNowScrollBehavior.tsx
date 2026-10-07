@@ -1,30 +1,27 @@
 // === Module 16032: useHappeningNowScrollBehavior ===
 
 // Module 16032 (useHappeningNowScrollBehavior)
-import react2 from "react" /* 576 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import c from "c" /* 576 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
-  let closure_129_2;
-  let tmp3;
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  const obj = react2;
-  const cResult = obj.c(6);
-  [tmp3, closure_129_2] = _slicedToArray(react.useState(false), 2);
-  const tmp2 = _slicedToArray(react.useState(false), 2);
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/useHappeningNowScrollBehavior.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  const cResult = c.c(6);
+  [tmp3, _slicedToArray] = noop.useState(false);
   if (cResult[0] === arg0) {
-    let tmp4;
     if (cResult[1] === arg1) {
-      tmp4 = cResult[2];
+      let tmp4 = cResult[2];
     }
     if (cResult[3] === tmp3) {
-      let tmp5;
       if (cResult[4] === tmp4) {
-        tmp5 = cResult[5];
+        let tmp5 = cResult[5];
       }
       return tmp5;
     }
@@ -35,7 +32,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     tmp5 = items;
   }
   const fn = function s(nativeEvent) {
-    closure_1_2(nativeEvent.nativeEvent.contentOffset.x < closure_0);
+    _slicedToArray(nativeEvent.nativeEvent.contentOffset.x < closure_0);
     closure_1(nativeEvent.nativeEvent.contentOffset.x, nativeEvent.nativeEvent.layoutMeasurement.width);
   };
   cResult[0] = arg0;
@@ -43,24 +40,20 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[2] = fn;
   tmp4 = fn;
 }) : ((arg0, arg1) => {
-  let closure_2;
-  let first;
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  [first, closure_2] = react.useState(false);
+  closure_0 = arg0;
+  closure_1 = arg1;
+  const tmp = _slicedToArray(noop.useState(false), 2);
+  closure_2 = tmp[1];
   const items = [arg0, arg1];
   const items1 = [
-    react.useCallback((nativeEvent) => {
+    noop.useCallback((nativeEvent) => {
       closure_2(nativeEvent.nativeEvent.contentOffset.x < closure_0);
       closure_1(nativeEvent.nativeEvent.contentOffset.x, nativeEvent.nativeEvent.layoutMeasurement.width);
     }, items),
-    first
+    tmp[0]
   ];
   return items1;
 });
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/useHappeningNowScrollBehavior.tsx");
-
-export default tmp2;
 export const useHappeningNowScrollSnapping = function useHappeningNowScrollSnapping(listRef) {
   const current = listRef.current;
   let num;

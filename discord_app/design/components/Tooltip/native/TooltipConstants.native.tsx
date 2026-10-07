@@ -13,19 +13,15 @@ export const tooltipEnterExitAnimation = function tooltipEnterExitAnimation(posi
   if ("top" === position) {
     num = 8;
   }
-  const fn = function o(targetHeight, fn) {
-    let items;
-    let tmpResult;
-    const withSpring = spring.withSpring;
-    const obj = { transform: items, opacity: tmpResult.withSpring(targetHeight, TOOLTIP_SPRING, "respect-motion-settings", fn) };
-    spring;
-    items = [{ translateY: withSpring(0, TOOLTIP_SPRING, "respect-motion-settings", fn) }];
-    ({ translateY: withSpring(0, TOOLTIP_SPRING, "respect-motion-settings", fn) });
-    tmpResult = spring;
-    return obj;
+  const fn = function o(value, fn) {
+    const obj2 = { transform: null, opacity: null };
+    const items = [{ translateY: spring.withSpring(0, closure_2, "respect-motion-settings", fn) }];
+    obj2.transform = items;
+    const obj3 = { translateY: spring.withSpring(0, closure_2, "respect-motion-settings", fn) };
+    obj2.opacity = spring.withSpring(value, closure_2, "respect-motion-settings", fn);
+    return obj2;
   };
-  let obj = { withSpring: num(5604).withSpring, translateY: num, TOOLTIP_SPRING };
-  fn.__closure = obj;
+  fn.__closure = { withSpring: num(5604).withSpring, translateY: num, TOOLTIP_SPRING };
   fn.__workletHash = 7727487832145;
   fn.__initData = __initData;
   return fn;

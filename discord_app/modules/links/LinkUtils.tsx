@@ -1,21 +1,15 @@
 // === Module 5050: LinkUtils ===
 
 // Module 5050 (LinkUtils)
-import ChannelConstants from "ChannelConstants" /* 2058 */;
 import RegexUtilsDefault from "RegexUtils" /* 4880 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import PermissionStore from "PermissionStore" /* 4515 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
+const Constants = fn(1085);
 const ME = Constants.ME;
 const Permissions = Constants.Permissions;
-const arr = Array.from(ChannelConstants.StaticChannelRoutes);
-const mapped = arr.map((item) => {
-  const obj = RegexUtilsDefault;
-  return obj.escape(item);
-});
+const mapped = Array.from(fn(2058).StaticChannelRoutes).map((item) => RegexUtilsDefault.escape(item));
 const joined = mapped.join("|");
 const regExp = new RegExp("^/channels/(\\d+|" + ME + ")(?:/)?(\\d+|" + joined + ")?");
 const regExp1 = new RegExp("^/channels/(\\d+|" + ME + ")(?:/)(\\d+|" + joined + ")(?:/)(\\d+)");
@@ -26,34 +20,34 @@ const re12 = /^\/users\/(\d+)\/?$/;
 const regExp5 = new RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?");
 const regExp6 = new RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+|" + ME + ")(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?");
 const regExp7 = new RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)");
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/links/LinkUtils.tsx");
 
 export const CHANNEL_OR_MESSAGES_URL_RE = regExp6;
 export const MEDIA_POST_URL_RE = regExp7;
 export const tryParseChannelPath = function tryParseChannelPath(pathname) {
-  let tmp6;
   if (null == pathname) {
     return null;
   } else {
     const match = pathname.match(regExp1);
     if (null != match) {
       if (match.length > 3) {
-        return { guildId: match[1], channelId: match[2], messageId: match[3] };
+        const obj2 = { guildId: match[1], channelId: match[2], messageId: match[3] };
+        return obj2;
       }
     }
     const match1 = pathname.match(regExp2);
     if (null != match1) {
       if (match1.length > 4) {
-        return { guildId: match1[1], channelId: match1[2], threadId: match1[3], messageId: match1[4] };
+        const obj3 = { guildId: match1[1], channelId: match1[2], threadId: match1[3], messageId: match1[4] };
+        return obj3;
       }
     }
     const match2 = pathname.match(regExp);
     if (null != match2) {
-      let tmp5;
       if (match2.length > 1) {
-        const obj = { guildId: match2[1], channelId: tmp6 };
-        tmp5 = obj;
-        tmp6 = match2[2];
+        const obj = { guildId: match2[1], channelId: match2[2] };
+        let tmp5 = obj;
       }
       return tmp5;
     }
@@ -70,8 +64,8 @@ export const tryParseEventDetailsPath = function tryParseEventDetailsPath(pathna
     if (null != match) {
       tmp2 = null;
       if (match.length > 1) {
-        tmp2 = { guildId: match[1], guildEventId: match[2], recurrenceId: match[4] };
         const obj = { guildId: match[1], guildEventId: match[2], recurrenceId: match[4] };
+        tmp2 = obj;
       }
     }
     return tmp2;
@@ -93,12 +87,13 @@ export const tryParseUserProfilePath = function tryParseUserProfilePath(pathname
   return tmp;
 };
 export const canViewChannel = function canViewChannel(channel) {
-  const canResult = channel.isPrivate() || PermissionStore.can(Permissions.VIEW_CHANNEL, channel);
+  let canResult = channel.isPrivate();
+  if (!canResult) {
+    canResult = PermissionStore.can(Permissions.VIEW_CHANNEL, channel);
+  }
   return canResult;
 };
 export const isAccessibleChannelPath = function isAccessibleChannelPath(arg0) {
-  let channelId;
-  let guildId;
   ({ guildId, channelId } = arg0);
   if (null == GuildStore.getGuild(guildId)) {
     if (guildId !== ME) {
@@ -111,15 +106,16 @@ export const isAccessibleChannelPath = function isAccessibleChannelPath(arg0) {
     const channel = ChannelStore.getChannel(channelId);
     let tmp3 = null != channel;
     if (tmp3) {
-      tmp3 = channel.isPrivate() || PermissionStore.can(Permissions.VIEW_CHANNEL, channel);
-      const canResult = channel.isPrivate() || PermissionStore.can(Permissions.VIEW_CHANNEL, channel);
+      let canResult = channel.isPrivate();
+      if (!canResult) {
+        canResult = PermissionStore.can(Permissions.VIEW_CHANNEL, channel);
+      }
+      tmp3 = canResult;
     }
     return tmp3;
   }
 };
 export const tryParseDiceRollLink = function tryParseDiceRollLink(pathname) {
-  let num2;
-  let num5;
   if (null == pathname) {
     return null;
   } else {
@@ -128,17 +124,19 @@ export const tryParseDiceRollLink = function tryParseDiceRollLink(pathname) {
     if (null != match) {
       tmp = null;
       if (match.length > 2) {
-        const obj = { guildId: match[1], channelId: match[2], diceCount: num2, diceSides: num5 };
-        num2 = 1;
+        const obj = { guildId: match[1], channelId: match[2], diceCount: null, diceSides: null };
+        let num2 = 1;
         if (5 === match.length) {
           const _parseInt = parseInt;
           num2 = parseInt(match[3], 10);
         }
-        num5 = 6;
+        obj.diceCount = num2;
+        let num5 = 6;
         if (5 === match.length) {
           const _parseInt2 = parseInt;
           num5 = parseInt(match[4], 10);
         }
+        obj.diceSides = num5;
         tmp = obj;
       }
     }

@@ -5,16 +5,16 @@ import FavoritesUtils from "FavoritesUtils" /* 2077 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
-let c2;
-let c3;
 ({ GuildFeatures: c2, ME: c3 } = Constants);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/guildHasOnboardingHome.tsx");
 
 export default function guildHasOnboardingHome(id) {
-  let isFavoritesGuildIdResult = null == id || id.id === _false;
+  let isFavoritesGuildIdResult = null == id;
   if (!isFavoritesGuildIdResult) {
-    const obj = FavoritesUtils;
-    isFavoritesGuildIdResult = obj.isFavoritesGuildId(id.id);
+    isFavoritesGuildIdResult = id.id === React3;
+  }
+  if (!isFavoritesGuildIdResult) {
+    isFavoritesGuildIdResult = FavoritesUtils.isFavoritesGuildId(id.id);
   }
   if (!isFavoritesGuildIdResult) {
     const features = id.features;

@@ -2,7 +2,7 @@
 
 // Module 6818 (ForumActivePostStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ThreadSortOrder from "ThreadSortOrder" /* 2061 */;
 import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 2063 */;
@@ -14,11 +14,9 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import ReadStateStore from "ReadStateStore" /* 4911 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import module_12_mod from "module_12" /* 12 */;
-import size from "module_2" /* 2 */;
+import apply_mod from "module_12" /* 12 */;
 
-let c3, count;
-
+require = fn;
 function maybeRebuildState() {
   const channelId = SelectedChannelStore.getChannelId();
   if (null != channelId) {
@@ -39,10 +37,8 @@ function maybeRebuildState() {
   MATCH_SOME = ThreadSearchTagSetting.ThreadSearchTagSetting.MATCH_SOME;
   closure_16 = 0;
   closure_19 = [];
-  const obj2 = module_12;
-  closure_20 = obj2.chain(items);
-  const obj3 = module_12;
-  closure_21 = obj3.chain(items);
+  closure_20 = apply.chain(items);
+  closure_21 = apply.chain(items);
   set2.clear();
   set1.clear();
   return false;
@@ -58,8 +54,7 @@ function rebuildState(refreshThreadIds) {
       const _Object = Object;
       let values = Object.values(ActiveThreadsStore.getThreadsForParent(channel.guild_id, channel.id));
       closure_19 = values.map((id) => id.id);
-      let c16 = 0;
-      let flag = true;
+      c16 = 0;
       c18 = true;
     }
     if (0 !== set1.size) {
@@ -70,11 +65,9 @@ function rebuildState(refreshThreadIds) {
       const _Array = Array;
       const _Set = Set;
       items = [];
-      HermesBuiltin.arraySpread(items, set2, HermesBuiltin.arraySpread(items, closure_19, 0));
-      const self = this;
-      const self2 = this;
+      HermesBuiltin.arraySpread(set2, HermesBuiltin.arraySpread(closure_19, 0));
       set = new Set(items);
-      closure_19 = from(set);
+      closure_19 = Array.from(set);
       set2.clear();
     }
     let refreshThreadIds1;
@@ -89,93 +82,78 @@ function rebuildState(refreshThreadIds) {
       refreshThreadIds1 = sortThreadIds;
     }
     if (refreshThreadIds1) {
-      const obj3 = module_12;
-      const sort = obj3.chain(closure_19).sort;
-      obj3.chain(closure_19);
       LATEST_ACTIVITY = LATEST_ACTIVITY(2061).ThreadSortOrder.LATEST_ACTIVITY;
-      closure_21 = sort((id, id2) => {
+      closure_21 = apply.chain(closure_19).sort((id, id) => {
+        let compare = dependencyMap;
         let num = -1;
-        const obj = ForumUtils;
         if (!obj.isForumPostPinned(id)) {
-          let num2 = 1;
-          const tmpResult = ForumUtils;
-          if (!tmpResult.isForumPostPinned(id)) {
-            let compareResult;
-            if (closure_0 === ThreadSortOrder.ThreadSortOrder.LATEST_ACTIVITY) {
-              const compare = SnowflakeUtilsDefault.compare;
-              SnowflakeUtilsDefault;
-              let lastMessageIdResult = ReadStateStore.lastMessageId(id);
-              if (lastMessageIdResult == null) {
-                lastMessageIdResult = id;
-              }
-              let lastMessageIdResult1 = ReadStateStore.lastMessageId(id);
-              if (lastMessageIdResult1 == null) {
-                lastMessageIdResult1 = id;
-              }
-              compareResult = compare(lastMessageIdResult, lastMessageIdResult1);
-            } else {
-              const obj3 = SnowflakeUtilsDefault;
-              compareResult = obj3.compare(id, id);
+          let lastMessageIdResult1 = id;
+          if (tmpResult.isForumPostPinned(id)) {
+            num = 1;
+          } else if (closure_0 === ThreadSortOrder.ThreadSortOrder.LATEST_ACTIVITY) {
+            compare = SnowflakeUtilsDefault.compare;
+            let lastMessageIdResult = ReadStateStore.lastMessageId(lastMessageIdResult1);
+            if (lastMessageIdResult == null) {
+              lastMessageIdResult = lastMessageIdResult1;
             }
-            num2 = compareResult;
+            lastMessageIdResult1 = ReadStateStore.lastMessageId(id);
+            if (lastMessageIdResult1 == null) {
+              lastMessageIdResult1 = id;
+            }
+            let compareResult = compare(lastMessageIdResult, lastMessageIdResult1);
+          } else {
+            compareResult = SnowflakeUtilsDefault.compare(lastMessageIdResult1, id);
           }
-          num = num2;
+          tmpResult = ForumUtils;
         }
         return num;
       });
-      const obj4 = module_12;
-      const sort2 = obj4.chain(closure_19).sort;
-      obj4.chain(closure_19);
+      const chainResult = apply.chain(closure_19);
       const CREATION_DATE = LATEST_ACTIVITY(2061).ThreadSortOrder.CREATION_DATE;
-      closure_20 = sort2((id, id2) => {
+      closure_20 = apply.chain(closure_19).sort((id, id) => {
+        let compare = dependencyMap;
         let num = -1;
-        const obj = ForumUtils;
         if (!obj.isForumPostPinned(id)) {
-          let num2 = 1;
-          const tmpResult = ForumUtils;
-          if (!tmpResult.isForumPostPinned(id)) {
-            let compareResult;
-            if (closure_0 === ThreadSortOrder.ThreadSortOrder.LATEST_ACTIVITY) {
-              const compare = SnowflakeUtilsDefault.compare;
-              SnowflakeUtilsDefault;
-              let lastMessageIdResult = ReadStateStore.lastMessageId(id);
-              if (lastMessageIdResult == null) {
-                lastMessageIdResult = id;
-              }
-              let lastMessageIdResult1 = ReadStateStore.lastMessageId(id);
-              if (lastMessageIdResult1 == null) {
-                lastMessageIdResult1 = id;
-              }
-              compareResult = compare(lastMessageIdResult, lastMessageIdResult1);
-            } else {
-              const obj3 = SnowflakeUtilsDefault;
-              compareResult = obj3.compare(id, id);
+          let lastMessageIdResult1 = id;
+          if (tmpResult.isForumPostPinned(id)) {
+            num = 1;
+          } else if (closure_0 === ThreadSortOrder.ThreadSortOrder.LATEST_ACTIVITY) {
+            compare = SnowflakeUtilsDefault.compare;
+            let lastMessageIdResult = ReadStateStore.lastMessageId(lastMessageIdResult1);
+            if (lastMessageIdResult == null) {
+              lastMessageIdResult = lastMessageIdResult1;
             }
-            num2 = compareResult;
+            lastMessageIdResult1 = ReadStateStore.lastMessageId(id);
+            if (lastMessageIdResult1 == null) {
+              lastMessageIdResult1 = id;
+            }
+            let compareResult = compare(lastMessageIdResult, lastMessageIdResult1);
+          } else {
+            compareResult = SnowflakeUtilsDefault.compare(lastMessageIdResult1, id);
           }
-          num = num2;
+          tmpResult = ForumUtils;
         }
         return num;
       });
+      const chainResult1 = apply.chain(closure_19);
     }
-    const iter = LATEST_ACTIVITY === LATEST_ACTIVITY(2061).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20;
-    const valueResult = iter.value();
+    const valueResult = LATEST_ACTIVITY === LATEST_ACTIVITY(2061).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20.value();
     let found = valueResult;
     if (0 !== set.size) {
-      let closure_0 = set;
-      let closure_1 = MATCH_SOME;
+      closure_130_0 = set;
+      closure_130_1 = MATCH_SOME;
       found = valueResult.filter((item) => {
-        channel = channel.getChannel(item);
+        const channel = ChannelStore.getChannel(item);
         let appliedTags;
         if (channel != null) {
           appliedTags = channel.appliedTags;
         }
         if (null != appliedTags) {
           if (0 !== appliedTags.length) {
-            if (closure_1 === LATEST_ACTIVITY(dependencyMap[7]).ThreadSearchTagSetting.MATCH_SOME) {
+            if (importDefault === ThreadSearchTagSetting.ThreadSearchTagSetting.MATCH_SOME) {
               return appliedTags.some((item) => set.has(item));
             } else {
-              const values = set.values();
+              const values = LATEST_ACTIVITY.values();
               for (const item10014 of values) {
                 if (appliedTags.includes(item10014)) {
                   continue;
@@ -194,78 +172,81 @@ function rebuildState(refreshThreadIds) {
     }
     let found1 = found.find((item) => {
       count = count.getCount(item);
-      return null === count || 0 === count;
+      let tmp2 = null === count;
+      if (!tmp2) {
+        tmp2 = 0 === count;
+      }
+      return tmp2;
     });
-    let tmp34 = null;
+    let tmp33 = null;
     if (null != found1) {
-      tmp34 = found1;
+      tmp33 = found1;
     }
-    found1 = tmp34;
+    found1 = tmp33;
+    const iter = LATEST_ACTIVITY === LATEST_ACTIVITY(2061).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20;
   }
 }
 let items = [];
 let id = null;
 let c12 = null;
 let set = new Set();
-let LATEST_ACTIVITY = ThreadSortOrder.ThreadSortOrder.LATEST_ACTIVITY;
-let MATCH_SOME = ThreadSearchTagSetting.ThreadSearchTagSetting.MATCH_SOME;
+let LATEST_ACTIVITY = fn(2061).ThreadSortOrder.LATEST_ACTIVITY;
+let MATCH_SOME = fn(2063).ThreadSearchTagSetting.MATCH_SOME;
 let closure_16 = 0;
 let closure_17 = [];
 let c18 = false;
 let closure_19 = [];
-let module_12 = module_12_mod;
-let closure_20 = module_12.chain(items);
-module_12 = module_12_mod;
-let closure_21 = module_12.chain(items);
+let apply = apply_mod;
+let closure_20 = apply.chain(items);
+let apply = apply_mod;
+let closure_21 = apply.chain(items);
 const set1 = new Set();
 const set2 = new Set();
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class ForumActivePostStore extends Store {
-  initialize() {
-    this.waitFor(ActiveThreadsStore, AuthenticationStore, ChannelStore, ReadStateStore, SelectedChannelStore, ThreadMessageStore);
-  }
-  getNewThreadCount() {
-    return closure_16;
-  }
-  getCanAckThreads() {
-    return c18;
-  }
-  getThreadIds(id, sortOrder, tagFilter, tagSetting) {
-    const obj = SetUtils;
-    const areSetsEqualResult = obj.areSetsEqual(tagFilter, set);
-    let tmp2 = !areSetsEqualResult;
-    c12 = id;
-    LATEST_ACTIVITY = sortOrder;
-    MATCH_SOME = tagSetting;
-    set = tagFilter;
-    if (id !== c12) {
-      rebuildState({ refreshThreadIds: true });
-    } else if (sortOrder !== tmp3) {
-      rebuildState({ sortThreadIds: true });
-    } else {
-      if (areSetsEqualResult) {
-        tmp2 = tagSetting !== tmp4;
-      }
-      if (tmp2) {
-        rebuildState();
-      }
-    }
-    return closure_17;
-  }
-  getCurrentThreadIds() {
-    return closure_17;
-  }
-  getAndDeleteMostRecentUserCreatedThreadId() {
-    id = null;
-    return id;
-  }
-  getFirstNoReplyThreadId() {
-    return c3;
-  }
 }
 const prototype = ForumActivePostStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(ActiveThreadsStore, AuthenticationStore, ChannelStore, ReadStateStore, SelectedChannelStore, ThreadMessageStore);
+};
+prototype["getNewThreadCount"] = function getNewThreadCount() {
+  return closure_16;
+};
+prototype["getCanAckThreads"] = function getCanAckThreads() {
+  return c18;
+};
+prototype["getThreadIds"] = function getThreadIds(id, sortOrder, tagFilter, tagSetting) {
+  const areSetsEqualResult = SetUtils.areSetsEqual(tagFilter, tagFilter);
+  let tmp2 = !areSetsEqualResult;
+  c12 = id;
+  LATEST_ACTIVITY = sortOrder;
+  MATCH_SOME = tagSetting;
+  if (id !== c12) {
+    rebuildState({ refreshThreadIds: true });
+  } else if (sortOrder !== tmp3) {
+    rebuildState({ sortThreadIds: true });
+  } else {
+    if (areSetsEqualResult) {
+      tmp2 = tagSetting !== tmp4;
+    }
+    if (tmp2) {
+      rebuildState();
+    }
+  }
+  return closure_17;
+};
+prototype["getCurrentThreadIds"] = function getCurrentThreadIds() {
+  return closure_17;
+};
+prototype["getAndDeleteMostRecentUserCreatedThreadId"] = function getAndDeleteMostRecentUserCreatedThreadId() {
+  id = null;
+  return id;
+};
+prototype["getFirstNoReplyThreadId"] = function getFirstNoReplyThreadId() {
+  return c3;
+};
 ForumActivePostStore.displayName = "ForumActivePostStore";
-let obj = {
+const forumActivePostStore = new ForumActivePostStore(DispatcherDefault, {
   CONNECTION_OPEN: maybeRebuildState,
   OVERLAY_INITIALIZE: maybeRebuildState,
   GUILD_CREATE: maybeRebuildState,
@@ -278,17 +259,13 @@ let obj = {
         c3 = null;
         c12 = null;
         const _Set = Set;
-        const self = this;
-        const self2 = this;
-        new Set();
         LATEST_ACTIVITY = ThreadSortOrder.ThreadSortOrder.LATEST_ACTIVITY;
         MATCH_SOME = ThreadSearchTagSetting.ThreadSearchTagSetting.MATCH_SOME;
         closure_16 = 0;
         closure_19 = [];
-        const obj = module_12;
-        closure_20 = obj.chain(items);
-        const obj2 = module_12;
-        closure_21 = obj2.chain(items);
+        set = new Set();
+        closure_20 = apply.chain(items);
+        closure_21 = apply.chain(items);
         set2.clear();
         set1.clear();
       }
@@ -313,19 +290,18 @@ let obj = {
   THREAD_CREATE: function handleThreadCreate(channel) {
     channel = channel.channel;
     let tmp = null != channel.parent_id;
-    const isNewlyCreated = channel.isNewlyCreated;
     if (tmp) {
       tmp = channel.parent_id === c12;
     }
     if (tmp) {
-      if (isNewlyCreated) {
-        if (channel.ownerId !== AuthenticationStore.getId()) {
-          closure_16 = tmp6 + 1;
-        } else {
-          id = channel.id;
-        }
+      const isNewlyCreated = channel.isNewlyCreated;
+      if (!isNewlyCreated) {
+        tmp = isNewlyCreated;
+      } else if (channel.ownerId !== AuthenticationStore.getId()) {
+        closure_16 = tmp6 + 1;
+      } else {
+        id = channel.id;
       }
-      tmp = tmp3;
     }
     return tmp;
   },
@@ -333,8 +309,7 @@ let obj = {
     channel = channel.channel;
     if (null != channel.parent_id) {
       if (channel.parent_id === c12) {
-        const obj = ForumUtils;
-        const isForumPostPinnedResult = obj.isForumPostPinned(channel.id);
+        const isForumPostPinnedResult = ForumUtils.isForumPostPinned(channel.id);
         const hasItem = set2.has(channel.id);
         if (isForumPostPinnedResult) {
           if (!hasItem) {
@@ -381,8 +356,8 @@ let obj = {
     }
     return false;
   }
-};
-const forumActivePostStore = new ForumActivePostStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/ForumActivePostStore.tsx");
 
 export default forumActivePostStore;
@@ -394,34 +369,29 @@ export const computeThreadIdsSnapshot = function computeThreadIdsSnapshot(id) {
     const _Object = Object;
     const values = Object.values(ActiveThreadsStore.getThreadsForParent(channel.guild_id, channel.id));
     const mapped = values.map((id) => id.id);
-    let closure_0 = LATEST_ACTIVITY;
-    items = mapped.sort((id, id2) => {
+    closure_0 = LATEST_ACTIVITY;
+    items = mapped.sort((id, id) => {
+      let compare = dependencyMap;
       let num = -1;
-      const obj = ForumUtils;
       if (!obj.isForumPostPinned(id)) {
-        let num2 = 1;
-        const tmpResult = ForumUtils;
-        if (!tmpResult.isForumPostPinned(id)) {
-          let compareResult;
-          if (closure_0 === ThreadSortOrder.ThreadSortOrder.LATEST_ACTIVITY) {
-            const compare = SnowflakeUtilsDefault.compare;
-            SnowflakeUtilsDefault;
-            let lastMessageIdResult = ReadStateStore.lastMessageId(id);
-            if (lastMessageIdResult == null) {
-              lastMessageIdResult = id;
-            }
-            let lastMessageIdResult1 = ReadStateStore.lastMessageId(id);
-            if (lastMessageIdResult1 == null) {
-              lastMessageIdResult1 = id;
-            }
-            compareResult = compare(lastMessageIdResult, lastMessageIdResult1);
-          } else {
-            const obj3 = SnowflakeUtilsDefault;
-            compareResult = obj3.compare(id, id);
+        let lastMessageIdResult1 = id;
+        if (tmpResult.isForumPostPinned(id)) {
+          num = 1;
+        } else if (closure_0 === ThreadSortOrder.ThreadSortOrder.LATEST_ACTIVITY) {
+          compare = SnowflakeUtilsDefault.compare;
+          let lastMessageIdResult = ReadStateStore.lastMessageId(lastMessageIdResult1);
+          if (lastMessageIdResult == null) {
+            lastMessageIdResult = lastMessageIdResult1;
           }
-          num2 = compareResult;
+          lastMessageIdResult1 = ReadStateStore.lastMessageId(id);
+          if (lastMessageIdResult1 == null) {
+            lastMessageIdResult1 = id;
+          }
+          let compareResult = compare(lastMessageIdResult, lastMessageIdResult1);
+        } else {
+          compareResult = SnowflakeUtilsDefault.compare(lastMessageIdResult1, id);
         }
-        num = num2;
+        tmpResult = ForumUtils;
       }
       return num;
     });

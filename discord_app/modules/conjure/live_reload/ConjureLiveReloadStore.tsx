@@ -1,29 +1,26 @@
 // === Module 12926: ConjureLiveReloadStore ===
 
 // Module 12926 (ConjureLiveReloadStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import size from "module_2" /* 2 */;
 
 const map = new Map();
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class ConjureLiveReloadStore extends Store {
-  getLiveReload(arg0) {
-    let value = map.get(arg0);
-    if (value == null) {
-      value = null;
-    }
-    return value;
-  }
 }
-const prototype = ConjureLiveReloadStore.prototype;
-let obj = {
-  CONJURE_LIVE_RELOAD_SET: function handleLiveReloadSet(enabled) {
-    const obj = { enabled: enabled.enabled, error: enabled.error, phase: enabled.phase, step: enabled.step };
-    const result = map.set(enabled.projectId, obj);
+ConjureLiveReloadStore.prototype["getLiveReload"] = function getLiveReload(arg0) {
+  value = map.get(arg0);
+  if (value == null) {
+    value = null;
   }
+  return value;
 };
-const conjureLiveReloadStore = new ConjureLiveReloadStore(DispatcherDefault, obj);
+const conjureLiveReloadStore = new ConjureLiveReloadStore(DispatcherDefault, {
+  CONJURE_LIVE_RELOAD_SET: function handleLiveReloadSet(enabled) {
+    const result = map.set(enabled.projectId, { enabled: enabled.enabled, error: enabled.error, phase: enabled.phase, step: enabled.step });
+  }
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/live_reload/ConjureLiveReloadStore.tsx");
 
 export default conjureLiveReloadStore;

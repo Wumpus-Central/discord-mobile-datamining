@@ -1,29 +1,17 @@
 // === Module 11015: useVirtualCurrencyBalanceAnimationData ===
 
 // Module 11015 (useVirtualCurrencyBalanceAnimationData)
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let initialRenderedBalance, num, tmp3;
+const require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/virtual_currency/hooks/native/useVirtualCurrencyBalanceAnimationData.tsx");
 
-let react = react_mod;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((initialRenderedBalance) => {
-  let closure_11;
-  let closure_4;
-  let closure_7;
-  let first;
-  let stateFromStores;
-  let tmp19;
-  let tmp4;
-  let tmp5;
-  let useReducedMotion;
-  let tmp2 = stateFromStores;
-  const obj = initialRenderedBalance(stateFromStores[4]);
-  const cResult = obj.c(29);
-  const tmp = initialRenderedBalance;
+export const useVirtualCurrencyBalanceAnimationData = ReactCompilerGating.isReactCompilerEnabled() ? ((initialRenderedBalance) => {
+  const cResult = initialRenderedBalance(stateFromStores[4]).c(29);
   initialRenderedBalance = initialRenderedBalance.initialRenderedBalance;
   const balance = initialRenderedBalance.balance;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -38,52 +26,52 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((initialRenderedBalan
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const tmpResult = tmp(tmp2[5]);
-  stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
-  const tmp8 = first(react.useState(null), 2);
+  const obj = initialRenderedBalance(stateFromStores[4]);
+  stateFromStores = initialRenderedBalance(stateFromStores[5]).useStateFromStores(tmp4, tmp5);
+  const tmp8 = first(noop.useState(null), 2);
   first = tmp8[0];
-  react = tmp8[1];
-  useReducedMotion = react.useRef(null);
-  const ref = react.useRef(null);
-  [r10045, closure_7] = first(react.useState(null != initialRenderedBalance), 2);
-  first(react.useState(null != initialRenderedBalance), 2);
-  const tmp12 = first(react.useState(null == initialRenderedBalance), 2);
+  noop = tmp8[1];
+  useReducedMotion = noop.useRef(null);
+  noop.useRef(null);
+  const tmpResult = initialRenderedBalance(stateFromStores[5]);
+  [r10045, closure_7] = first(noop.useState(null != initialRenderedBalance), 2);
+  const tmp12 = first(noop.useState(null == initialRenderedBalance), 2);
   const first1 = tmp12[0];
-  let closure_9 = tmp12[1];
-  let closure_10 = balance(tmp2[6])(balance);
-  balance(tmp2[6])(balance);
+  closure_9 = tmp12[1];
+  const tmp11 = first(noop.useState(null != initialRenderedBalance), 2);
+  closure_10 = balance(stateFromStores[6])(balance);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
       constructor() {
-
+        return;
       }
     }
     cResult[2] = S;
   } else {
     class S {
       constructor() {
-
+        return;
       }
     }
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
       constructor() {
-
+        return;
       }
     }
     cResult[3] = tmp17;
   } else {
     class S {
       constructor() {
-
+        return;
       }
     }
   }
   if (cResult[4] !== first) {
     class S {
       constructor() {
-
+        return;
       }
     }
     cResult[4] = first;
@@ -91,15 +79,14 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((initialRenderedBalan
   } else {
     class S {
       constructor() {
-
+        return;
       }
     }
   }
-  tmp19 = tmp18;
   if (cResult[6] === balance) {
     class S {
       constructor() {
-
+        return;
       }
     }
   }
@@ -109,7 +96,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((initialRenderedBalan
         tmp = balance;
         if (null !== balance) {
           tmp2 = closure_8;
-          if (!tmp2) {
+          if (!closure_8) {
             tmp3 = globalThis;
             _setTimeout = setTimeout;
             num = 1250;
@@ -135,41 +122,38 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((initialRenderedBalan
   cResult[10] = stateFromStores;
   cResult[11] = O;
   cResult[12] = items1;
+  const tmp14 = balance(stateFromStores[6])(balance);
 }) : ((initialRenderedBalance) => {
-  let c7;
-  let closure_4;
-  let tmp6;
   initialRenderedBalance = initialRenderedBalance.initialRenderedBalance;
   const balance = initialRenderedBalance.balance;
   let stateFromStores;
   let currentAnimationType;
-  react = undefined;
+  noop = undefined;
   let useReducedMotion;
   c7 = undefined;
   const items = [useReducedMotion];
-  const obj = initialRenderedBalance(stateFromStores[5]);
-  stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let tmp2 = currentAnimationType(react.useState(null), 2);
+  stateFromStores = initialRenderedBalance(stateFromStores[5]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  let tmp2 = currentAnimationType(noop.useState(null), 2);
   currentAnimationType = tmp2[0];
-  react = tmp2[1];
-  useReducedMotion = react.useRef(null);
-  const lottieRef = react.useRef(null);
-  [tmp6, c7] = currentAnimationType(react.useState(null != initialRenderedBalance), 2);
-  const tmp5 = currentAnimationType(react.useState(null != initialRenderedBalance), 2);
-  const tmp7 = currentAnimationType(react.useState(null == initialRenderedBalance), 2);
+  noop = tmp2[1];
+  useReducedMotion = noop.useRef(null);
+  const lottieRef = noop.useRef(null);
+  const obj = initialRenderedBalance(stateFromStores[5]);
+  [tmp6, c7] = currentAnimationType(noop.useState(null != initialRenderedBalance), 2);
+  const tmp7 = currentAnimationType(noop.useState(null == initialRenderedBalance), 2);
   const first1 = tmp7[0];
-  let closure_9 = tmp7[1];
+  closure_9 = tmp7[1];
   const tmp9 = balance(stateFromStores[6])(balance);
-  let closure_10 = tmp9;
-  const onValueChange = react.useCallback(() => {
+  closure_10 = tmp9;
+  const onValueChange = noop.useCallback(() => {
 
   }, []);
   const items1 = [currentAnimationType];
-  const onValueReached = react.useCallback(() => {
-    useReducedMotion.current = null;
+  const onValueReached = noop.useCallback(() => {
+    closure_5.current = null;
     closure_4(null);
   }, []);
-  const callback2 = react.useCallback((arg0) => {
+  const callback2 = noop.useCallback((arg0) => {
     if (0 !== arg0) {
       let str = "spend";
       if (arg0 > 0) {
@@ -187,9 +171,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((initialRenderedBalan
     }
   }, items1);
   const items2 = [initialRenderedBalance, balance, first1, stateFromStores, callback2];
-  const effect = react.useEffect(() => {
-    let closure_0;
-    let timeout;
+  const effect = noop.useEffect(() => {
     if (null != timeout) {
       if (null !== balance) {
         if (!first1) {
@@ -207,14 +189,23 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((initialRenderedBalan
     }
   }, items2);
   const items3 = [balance, tmp9, currentAnimationType, first1, stateFromStores, callback2];
-  const effect1 = react.useEffect(() => {
-    const tmp2 = null !== balance && null !== closure_10 && balance !== closure_10 && first1 && !stateFromStores;
+  const effect1 = noop.useEffect(() => {
+    let tmp2 = null !== balance;
+    if (tmp2) {
+      tmp2 = null !== closure_10;
+    }
+    if (tmp2) {
+      tmp2 = balance !== closure_10;
+    }
+    if (tmp2) {
+      tmp2 = first1;
+    }
+    if (tmp2) {
+      tmp2 = !stateFromStores;
+    }
     if (tmp2) {
       callback2(balance - closure_10);
     }
   }, items3);
   return { onValueChange, onValueReached, showInitialRenderedBalance, currentAnimationType, lottieRef };
 });
-const result = size.fileFinishedImporting("modules/virtual_currency/hooks/native/useVirtualCurrencyBalanceAnimationData.tsx");
-
-export const useVirtualCurrencyBalanceAnimationData = tmp2;

@@ -1,28 +1,28 @@
 // === Module 15985: useGuildsRouteGuildId ===
 
 // Module 15985 (useGuildsRouteGuildId)
-import react from "react" /* 576 */;
+import c from "c" /* 576 */;
 import Link from "Link" /* 1491 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
-ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = ReactCompilerGating_mod;
 const fn = () => {
-  const obj = Link;
-  const params = obj.useRoute().params;
+  const params = Link.useRoute().params;
   let guildId;
   if (params != null) {
     guildId = params.guildId;
   }
   return guildId;
 };
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const obj = react;
-  const cResult = obj.c(3);
-  const obj2 = Link;
-  const route = obj2.useRoute();
+const result1 = size.fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");
+
+export default fn;
+export const useGuildsRouteGuildAndChannelId = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(3);
+  const route = Link.useRoute();
   let guildId;
   if (route != null) {
     const params = route.params;
@@ -38,9 +38,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   if (cResult[0] === guildId) {
-    let tmp5;
     if (cResult[1] === channelId) {
-      tmp5 = cResult[2];
+      let tmp5 = cResult[2];
     }
     return tmp5;
   }
@@ -50,8 +49,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = items;
   tmp5 = items;
 }) : (() => {
-  const obj = Link;
-  const route = obj.useRoute();
+  const route = Link.useRoute();
   let guildId;
   if (route != null) {
     const params = route.params;
@@ -70,7 +68,3 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   items[1] = channelId;
   return items;
 });
-const result1 = size.fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");
-
-export default fn;
-export const useGuildsRouteGuildAndChannelId = tmp3;

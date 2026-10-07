@@ -1,17 +1,14 @@
 // === Module 10082: ExpressionPickerHandlers ===
 
 // Module 10082 (ExpressionPickerHandlers)
-import react2 from "react" /* 576 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import c from "c" /* 576 */;
+import noop from "module_19" /* 19 */;
 
-let selection;
-
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+fn(558);
+const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((selection) => {
-  let obj = react2;
-  const cResult = obj.c(13);
+  const cResult = c.c(13);
   selection = selection.selection;
   const draftContent = selection.draftContent;
   const handleTextChange = selection.handleTextChange;
@@ -21,64 +18,59 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((selection) => {
     if (cResult[1] === focusTextInput) {
       if (cResult[2] === handleTextChange) {
         if (cResult[3] === selection) {
-          let tmp2;
           if (cResult[4] === setSelection) {
-            tmp2 = cResult[5];
+            let tmp2 = cResult[5];
           }
-          let closure_5 = react.useRef(tmp2);
+          noop.useRef(tmp2);
           if (cResult[6] === draftContent) {
             if (cResult[7] === focusTextInput) {
               if (cResult[8] === handleTextChange) {
                 if (cResult[9] === selection) {
-                  let tmp3;
-                  let tmp6;
                   if (cResult[10] === setSelection) {
-                    tmp3 = cResult[11];
+                    let tmp3 = cResult[11];
                   }
-                  const effect = react.useEffect(tmp3);
+                  const effect = noop.useEffect(tmp3);
                   const _Symbol = Symbol;
                   class C {
                     constructor() {
-                      const obj = { selection, draftContent, handleTextChange, focusTextInput, setSelection };
-                      ref.current = obj;
+                      obj = { selection, draftContent, handleTextChange, focusTextInput, setSelection };
+                      closure_5.current = obj;
+                      return;
                     }
                   }
                   if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
                     const fn = function x(id) {
-                      let length;
                       const current = ref.current;
                       ({ selection, draftContent, handleTextChange } = current);
                       ({ focusTextInput, setSelection } = current);
                       const substr = draftContent.substring(0, selection.start);
                       let start = selection.end;
-                      const substring = draftContent.substring;
                       if (start == null) {
                         start = selection.start;
                       }
-                      const substr1 = substring(start);
+                      const substr1 = draftContent.substring(start);
                       if (null == id.id) {
                         if (null != id.surrogates) {
                           handleTextChange(substr + id.surrogates + substr1);
-                          length = (substr + id.surrogates).length;
+                          let length = substr + id.surrogates.length;
                         }
                         const obj = { start: length, end: length };
                         setSelection(obj);
                         focusTextInput();
                       }
                       if (null != id.uniqueName) {
-                        let name;
                         if ("" !== id.uniqueName) {
-                          name = id.uniqueName;
+                          let name = id.uniqueName;
                         }
                         const _HermesInternal = HermesInternal;
                         handleTextChange(substr + ":" + name + ": " + substr1);
                         const _HermesInternal2 = HermesInternal;
-                        length = (substr + ":" + name + ": ").length;
+                        length = substr + ":" + name + ": ".length;
                       }
                       name = id.name;
                     };
                     cResult[12] = fn;
-                    tmp6 = fn;
+                    let tmp6 = fn;
                   } else {
                     tmp6 = cResult[12];
                   }
@@ -89,8 +81,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((selection) => {
           }
           class C {
             constructor() {
-              const obj = { selection, draftContent, handleTextChange, focusTextInput, setSelection };
-              ref.current = obj;
+              obj = { selection, draftContent, handleTextChange, focusTextInput, setSelection };
+              closure_5.current = obj;
+              return;
             }
           }
           cResult[6] = draftContent;
@@ -118,49 +111,47 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((selection) => {
   const handleTextChange = selection.handleTextChange;
   const focusTextInput = selection.focusTextInput;
   const setSelection = selection.setSelection;
-  let closure_5 = react.useRef({ selection, draftContent, handleTextChange, focusTextInput, setSelection });
-  const effect = react.useEffect(() => {
-    const obj = { selection, draftContent, handleTextChange, focusTextInput, setSelection };
-    ref.current = obj;
+  noop.useRef({ selection, draftContent, handleTextChange, focusTextInput, setSelection });
+  const effect = noop.useEffect(() => {
+    closure_5.current = { selection, draftContent, handleTextChange, focusTextInput, setSelection };
   });
-  return react.useCallback((id) => {
-    let length;
+  return noop.useCallback((id) => {
     const current = ref.current;
     ({ selection, draftContent, handleTextChange } = current);
     ({ focusTextInput, setSelection } = current);
     const substr = draftContent.substring(0, selection.start);
     let start = selection.end;
-    const substring = draftContent.substring;
     if (start == null) {
       start = selection.start;
     }
-    const substr1 = substring(start);
+    const substr1 = draftContent.substring(start);
     if (null == id.id) {
       if (null != id.surrogates) {
         handleTextChange(substr + id.surrogates + substr1);
-        length = (substr + id.surrogates).length;
+        let length = substr + id.surrogates.length;
       }
       const obj = { start: length, end: length };
       setSelection(obj);
       focusTextInput();
     }
     if (null != id.uniqueName) {
-      let name;
       if ("" !== id.uniqueName) {
-        name = id.uniqueName;
+        let name = id.uniqueName;
       }
       const _HermesInternal = HermesInternal;
       handleTextChange(substr + ":" + name + ": " + substr1);
       const _HermesInternal2 = HermesInternal;
-      length = (substr + ":" + name + ": ").length;
+      length = substr + ":" + name + ": ".length;
     }
     name = id.name;
   }, []);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((selection) => {
-  const obj = react2;
-  const cResult = obj.c(7);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/composer/hooks/ExpressionPickerHandlers.tsx");
+
+export const usePressEmojiHandler = tmp2;
+export const usePressGIFHandler = ReactCompilerGating.isReactCompilerEnabled() ? ((selection) => {
+  const cResult = c.c(7);
   selection = selection.selection;
   const draftContent = selection.draftContent;
   const handleTextChange = selection.handleTextChange;
@@ -171,9 +162,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((selection) => {
       if (cResult[2] === handleTextChange) {
         if (cResult[3] === selection.end) {
           if (cResult[4] === selection.start) {
-            let tmp2;
             if (cResult[5] === setSelection) {
-              tmp2 = cResult[6];
+              let tmp2 = cResult[6];
             }
             return tmp2;
           }
@@ -182,23 +172,21 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((selection) => {
     }
   }
   const fn = function n(url) {
-    let length;
     url = url.url;
     const substr = draftContent.substring(0, selection.start);
     let start = selection.end;
-    const substring = draftContent.substring;
     if (start == null) {
       start = selection.start;
     }
-    const substr1 = substring(start);
+    const substr1 = draftContent.substring(start);
     if (substr.endsWith(" ")) {
       handleTextChange(substr + url + substr1);
-      length = (substr + url).length;
+      let length = substr + url.length;
     } else {
       const _HermesInternal = HermesInternal;
       handleTextChange(substr + " " + url + substr1);
       const _HermesInternal2 = HermesInternal;
-      length = (substr + " " + url).length;
+      length = substr + " " + url.length;
     }
     setSelection({ start: length, end: length });
     focusTextInput();
@@ -220,30 +208,24 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((selection) => {
   const items = [draftContent, focusTextInput, handleTextChange, , , ];
   ({ end: arr[3], start: arr[4] } = selection);
   items[5] = setSelection;
-  return react.useCallback((url) => {
-    let length;
+  return noop.useCallback((url) => {
     url = url.url;
     const substr = draftContent.substring(0, selection.start);
     let start = selection.end;
-    const substring = draftContent.substring;
     if (start == null) {
       start = selection.start;
     }
-    const substr1 = substring(start);
+    const substr1 = draftContent.substring(start);
     if (substr.endsWith(" ")) {
       handleTextChange(substr + url + substr1);
-      length = (substr + url).length;
+      let length = substr + url.length;
     } else {
       const _HermesInternal = HermesInternal;
       handleTextChange(substr + " " + url + substr1);
       const _HermesInternal2 = HermesInternal;
-      length = (substr + " " + url).length;
+      length = substr + " " + url.length;
     }
     setSelection({ start: length, end: length });
     focusTextInput();
   }, items);
 });
-const result = size.fileFinishedImporting("modules/forums/native/composer/hooks/ExpressionPickerHandlers.tsx");
-
-export const usePressEmojiHandler = tmp2;
-export const usePressGIFHandler = tmp3;

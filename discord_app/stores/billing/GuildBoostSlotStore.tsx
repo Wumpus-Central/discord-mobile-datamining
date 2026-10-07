@@ -1,12 +1,9 @@
 // === Module 6918: GuildBoostSlotStore ===
 
 // Module 6918 (GuildBoostSlotStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import SubscriptionStore from "SubscriptionStore" /* 4540 */;
-import size from "module_2" /* 2 */;
-
-let closure_3;
 
 function handleGuildBoostsUpdate(guildBoostSlot) {
   guildBoostSlot = guildBoostSlot.guildBoostSlot;
@@ -27,18 +24,15 @@ function handleSubscriptionStoreUpdate() {
 }
 let c1 = false;
 let c2 = false;
-const _false = {};
-const Store = get_initializedDefault.Store;
+let closure_3 = {};
+const Store = initializeDefault.Store;
 class GuildBoostSlotStore extends Store {
-  initialize() {
-    const items = [SubscriptionStore];
-    this.syncWith(items, handleSubscriptionStoreUpdate);
-  }
-  getGuildBoostSlot(arg0) {
-    return closure_3[arg0];
-  }
 }
 const prototype = GuildBoostSlotStore.prototype;
+prototype["initialize"] = function initialize() {
+  const items = [SubscriptionStore];
+  this.syncWith(items, handleSubscriptionStoreUpdate);
+};
 Object.defineProperty(prototype, "hasFetched", {
   get: function hasFetched() {
     return c1;
@@ -57,8 +51,11 @@ Object.defineProperty(prototype, "boostSlots", {
   },
   set: undefined
 });
+prototype["getGuildBoostSlot"] = function getGuildBoostSlot(arg0) {
+  return closure_3[arg0];
+};
 GuildBoostSlotStore.displayName = "GuildBoostSlotStore";
-let obj = {
+const guildBoostSlotStore = new GuildBoostSlotStore(DispatcherDefault, {
   GUILD_BOOST_SLOTS_FETCH: function handleGuildBoostsFetch() {
     c2 = true;
   },
@@ -79,8 +76,8 @@ let obj = {
     c1 = false;
     c2 = false;
   }
-};
-const guildBoostSlotStore = new GuildBoostSlotStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/billing/GuildBoostSlotStore.tsx");
 
 export default guildBoostSlotStore;

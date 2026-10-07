@@ -1,36 +1,24 @@
 // === Module 4672: CameraRive ===
 
 // Module 4672 (CameraRive)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
-import BaseRive2 from "BaseRive" /* 4612 */;
-import RiveErrorBoundary2 from "RiveErrorBoundary" /* 4665 */;
+import c from "c" /* 576 */;
+import BaseRive from "BaseRive" /* 4612 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4665 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
-let dataBinding, importDefault, reducedMotionEnabled, tmp3, tmp5;
-
+require = fn;
 let closure_3 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];
 let closure_4 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];
-const jsx = Fragment.jsx;
+const jsx = fn(21).jsx;
 const artboardProperties = { "Icon Camera": { reducedMotion: "boolean", fill: "color", on: "boolean" }, "Animation Main": {} };
 const artboardViewModelInstances = { "Icon Camera": ["CamOff", "CamOn"], "Animation Main": [] };
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let obj = {
   "Icon Camera": ReactCompilerGating.isReactCompilerEnabled() ? ((reducedMotionEnabled) => {
-    let instance;
-    let onDataBindingChange;
-    let playIfNeeded;
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    reducedMotionEnabled = reducedMotionEnabled.reducedMotionEnabled;
-    obj = BaseRive2;
-    const booleanBinding = obj.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
     let fill;
-    const useColorBinding = BaseRive2.useColorBinding;
-    BaseRive2;
     if (dataBinding != null) {
       fill = dataBinding.fill;
     }
@@ -38,10 +26,8 @@ let obj = {
     if (onDataBindingChange != null) {
       fill1 = onDataBindingChange.fill;
     }
-    const colorBinding = useColorBinding("fill", instance, fill, fill1, playIfNeeded);
+    const colorBinding = BaseRive.useColorBinding("fill", instance, fill, fill1, playIfNeeded);
     let on;
-    const useBooleanBinding = BaseRive2.useBooleanBinding;
-    BaseRive2;
     if (dataBinding != null) {
       on = dataBinding.on;
     }
@@ -49,19 +35,12 @@ let obj = {
     if (onDataBindingChange != null) {
       on1 = onDataBindingChange.on;
     }
-    const booleanBinding1 = useBooleanBinding("on", instance, on, on1, playIfNeeded);
+    const booleanBinding1 = BaseRive.useBooleanBinding("on", instance, on, on1, playIfNeeded);
     return null;
   }) : ((reducedMotionEnabled) => {
-    let instance;
-    let onDataBindingChange;
-    let playIfNeeded;
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    reducedMotionEnabled = reducedMotionEnabled.reducedMotionEnabled;
-    obj = BaseRive2;
-    const booleanBinding = obj.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
     let fill;
-    const useColorBinding = BaseRive2.useColorBinding;
-    BaseRive2;
     if (dataBinding != null) {
       fill = dataBinding.fill;
     }
@@ -69,10 +48,8 @@ let obj = {
     if (onDataBindingChange != null) {
       fill1 = onDataBindingChange.fill;
     }
-    const colorBinding = useColorBinding("fill", instance, fill, fill1, playIfNeeded);
+    const colorBinding = BaseRive.useColorBinding("fill", instance, fill, fill1, playIfNeeded);
     let on;
-    const useBooleanBinding = BaseRive2.useBooleanBinding;
-    BaseRive2;
     if (dataBinding != null) {
       on = dataBinding.on;
     }
@@ -80,27 +57,13 @@ let obj = {
     if (onDataBindingChange != null) {
       on1 = onDataBindingChange.on;
     }
-    const booleanBinding1 = useBooleanBinding("on", instance, on, on1, playIfNeeded);
+    const booleanBinding1 = BaseRive.useBooleanBinding("on", instance, on, on1, playIfNeeded);
     return null;
   })
 };
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_11 = react.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
-  let _require;
-  let artboard;
-  let defaultViewModelInstance;
-  let fallback;
-  let onDataBindingChange;
-  let stateMachine;
-  let str;
-  let tmp6;
-  let tmp7;
-  let tmp8;
-  let tmp9;
-  let tmp2 = str;
-  obj = require("react");
-  const cResult = obj.c(18);
-  const tmp = _require;
+ReactCompilerGating = fn(558);
+let closure_11 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
+  const cResult = require("c").c(18);
   if (cResult[0] !== arg0) {
     ({ fallback, artboard, stateMachine, defaultViewModelInstance, dataBinding, onDataBindingChange } = arg0);
     const tmp12 = _objectWithoutProperties(arg0, closure_3);
@@ -131,10 +94,10 @@ let closure_11 = react.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ?
     cResult[4] = stateMachine;
     cResult[5] = artboard;
     cResult[6] = defaultViewModelInstance;
-    tmp9 = defaultViewModelInstance;
-    tmp8 = artboard;
-    tmp7 = stateMachine;
-    tmp6 = tmp12;
+    let tmp9 = defaultViewModelInstance;
+    let tmp8 = artboard;
+    let tmp7 = stateMachine;
+    let tmp6 = tmp12;
   } else {
     _require = cResult[1];
     importDefault = cResult[2];
@@ -153,18 +116,16 @@ let closure_11 = react.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ?
   }
   if (cResult[7] === str) {
     if (cResult[8] === dataBinding) {
-      let tmp13;
       if (cResult[9] === onDataBindingChange) {
-        tmp13 = cResult[10];
+        let tmp13 = cResult[10];
       }
       if (cResult[11] === str) {
         if (cResult[12] === str2) {
           if (cResult[13] === ref) {
             if (cResult[14] === tmp13) {
               if (cResult[15] === tmp6) {
-                let tmp15;
                 if (cResult[16] === tmp7) {
-                  tmp15 = cResult[17];
+                  let tmp15 = cResult[17];
                 }
                 return tmp15;
               }
@@ -172,7 +133,7 @@ let closure_11 = react.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ?
           }
         }
       }
-      const BaseRive = tmp(tmp2[4]).BaseRive;
+      const obj2 = { ref, src: require("module_4673"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: null, stateMachine: null, renderDataBinding: null };
       class E {
         constructor(arg0) {
           tmp = closure_10[closure_2];
@@ -192,8 +153,10 @@ let closure_11 = react.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ?
           return tmp2;
         }
       }
+      obj2.stateMachine = tmp7;
+      obj2.renderDataBinding = tmp13;
       let merged = Object.assign(tmp6);
-      const tmp23 = <BaseRive ref={ref} src={require("module_4673")} artboard={str} artboardProperties={artboardProperties} artboardViewModelInstances={artboardViewModelInstances} defaultViewModelInstance={null} stateMachine={tmp7} renderDataBinding={tmp13} />;
+      const tmp23 = jsx(tmp(tmp2[4]).BaseRive, { ref, src: require("module_4673"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: null, stateMachine: null, renderDataBinding: null });
       cResult[11] = str;
       cResult[12] = str2;
       cResult[13] = ref;
@@ -228,9 +191,9 @@ let closure_11 = react.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ?
   cResult[9] = onDataBindingChange;
   cResult[10] = E;
   tmp13 = E;
+  obj = require("c");
+  tmp = _require;
 }) : ((defaultViewModelInstance, ref) => {
-  let artboard;
-  let fallback;
   ({ fallback, artboard } = defaultViewModelInstance);
   let str = "Icon Camera";
   if (undefined !== artboard) {
@@ -238,43 +201,45 @@ let closure_11 = react.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ?
   }
   defaultViewModelInstance = defaultViewModelInstance.defaultViewModelInstance;
   let str2 = "CamOff";
-  const stateMachine = defaultViewModelInstance.stateMachine;
   if (undefined !== defaultViewModelInstance) {
     str2 = defaultViewModelInstance;
   }
   dataBinding = defaultViewModelInstance.dataBinding;
   const onDataBindingChange = defaultViewModelInstance.onDataBindingChange;
   const items = [str, dataBinding, onDataBindingChange];
-  const tmp = _objectWithoutProperties(defaultViewModelInstance, closure_4);
-  const callback = react.useCallback((arg0) => {
+  const callback = noop.useCallback((arg0) => {
     let tmp2 = null;
     if (null != obj[str]) {
+      obj = {};
       const merged = Object.assign(arg0);
-      tmp2 = <tmp dataBinding={dataBinding} onDataBindingChange={onDataBindingChange} />;
+      obj.dataBinding = dataBinding;
+      obj.onDataBindingChange = onDataBindingChange;
+      tmp2 = <tmp />;
     }
     return tmp2;
   }, items);
-  const BaseRive = str(onDataBindingChange[4]).BaseRive;
+  const tmp = _objectWithoutProperties(defaultViewModelInstance, closure_4);
   let merged = Object.assign(tmp);
-  return <BaseRive ref={ref} src={dataBinding(onDataBindingChange[6])} artboard={str} artboardProperties={artboardProperties} artboardViewModelInstances={artboardViewModelInstances} defaultViewModelInstance={str2} stateMachine={stateMachine} renderDataBinding={callback} />;
+  return jsx(str(onDataBindingChange[4]).BaseRive, { ref, src: dataBinding(onDataBindingChange[6]), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: defaultViewModelInstance.stateMachine, renderDataBinding: callback });
 }));
-ReactCompilerGating = ReactCompilerGating_mod;
-const forwardRefResult = react.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((fallback, ref) => {
-  obj = react2;
-  const cResult = obj.c(6);
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/CameraRive.tsx");
+
+export const CameraRive = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((fallback, ref) => {
+  const cResult = c.c(6);
   if (cResult[0] === fallback) {
-    let tmp4;
     if (cResult[1] === ref) {
-      tmp4 = cResult[2];
+      let tmp4 = cResult[2];
     }
     if (cResult[3] === fallback.fallback) {
-      let tmp7;
       if (cResult[4] === tmp4) {
-        tmp7 = cResult[5];
+        let tmp7 = cResult[5];
       }
       return tmp7;
     }
-    const tmp9 = jsx(RiveErrorBoundary2.RiveErrorBoundary, { fallback: fallback.fallback, children: tmp4 });
+    const obj2 = { fallback: fallback.fallback, children: tmp4 };
+    const tmp9 = jsx(RiveErrorBoundary.RiveErrorBoundary, { fallback: fallback.fallback, children: tmp4 });
     cResult[3] = fallback.fallback;
     cResult[4] = tmp4;
     cResult[5] = tmp9;
@@ -286,11 +251,10 @@ const forwardRefResult = react.forwardRef(ReactCompilerGating.isReactCompilerEna
   cResult[1] = ref;
   cResult[2] = tmp6;
   tmp4 = tmp6;
+  const obj3 = { ref };
 }) : ((fallback, ref) => {
-  const RiveErrorBoundary = RiveErrorBoundary2.RiveErrorBoundary;
+  obj = { fallback: fallback.fallback, children: null };
   const merged = Object.assign(fallback);
-  return <RiveErrorBoundary fallback={fallback.fallback}>{null}</RiveErrorBoundary>;
+  obj.children = <closure_11 ref={ref} />;
+  return jsx(RiveErrorBoundary.RiveErrorBoundary, { fallback: fallback.fallback, children: null });
 }));
-const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/CameraRive.tsx");
-
-export const CameraRive = forwardRefResult;

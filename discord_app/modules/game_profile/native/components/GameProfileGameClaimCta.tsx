@@ -1,33 +1,31 @@
 // === Module 8594: GameProfileGameClaimCta ===
 
 // Module 8594 (GameProfileGameClaimCta)
-import Fragment from "Fragment" /* 21 */;
-import Constants from "Constants" /* 1085 */;
 import MobileWebHandoffLinkingDefault from "MobileWebHandoffLinking" /* 6830 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-let c1, trackAction;
+const require = globalThis.__r;
 
-const RelativeMarketingURLs = Constants.RelativeMarketingURLs;
-const jsx = Fragment.jsx;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((trackAction) => {
-  let tmp4;
-  let tmp7;
-  let obj = trackAction(576);
-  const cResult = obj.c(5);
+const require = fn;
+const RelativeMarketingURLs = fn(1085).RelativeMarketingURLs;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileGameClaimCta.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((trackAction) => {
+  let Button = _require;
+  let tmp = dependencyMap;
+  const cResult = require("c").c(5);
   trackAction = trackAction.trackAction;
-  const game = trackAction.game;
+  _require = trackAction;
   if (cResult[0] !== trackAction) {
-    let closure_0 = _asyncToGenerator(async () => {
-      let obj5;
-      let v3;
+    _require = asyncGeneratorStep(async () => {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp2 === 3) {
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -48,11 +46,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((trackAction) => {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              v3(v3(dependencyMap[6]).GameProfileTrackActionActions.ClaimGame);
+              v3(v3(8352).GameProfileTrackActionActions.ClaimGame);
               c1 = 1;
               v3 = 1;
-              const obj4 = { value: obj5.redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(dependencyMap[8]).LoginHandoffSource.GAME_CLAIM), done: false };
-              obj5 = MobileWebHandoffLinkingDefault;
+              const obj4 = { value: MobileWebHandoffLinkingDefault.redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(6834).LoginHandoffSource.GAME_CLAIM), done: false };
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -66,64 +63,64 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((trackAction) => {
             v3 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp4) {
-          v3 = 3;
-          throw tmp4;
+        } catch (tmp5) {
+          v3 = tmp;
+          throw tmp5;
         }
       }
     });
     const fn = function() {
-      return closure_0(...arguments);
+      const self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     };
     cResult[0] = trackAction;
     cResult[1] = fn;
-    tmp4 = fn;
+    let tmp3 = fn;
   } else {
-    tmp4 = cResult[1];
+    tmp3 = cResult[1];
   }
-  const linkedApplications = game.linkedApplications;
+  const linkedApplications = trackAction.game.linkedApplications;
   let someResult;
   if (linkedApplications != null) {
-    someResult = linkedApplications.some((type) => type.type === trackAction(dependencyMap[9]).GameLinkTypes.OFFICIAL);
+    someResult = linkedApplications.some((type) => type.type === closure_0(1985).GameLinkTypes.OFFICIAL);
   }
-  if (someResult == null) {
-    let tmp9;
-    let tmp11;
-    const _Symbol = Symbol;
-    if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = tmp(1126).intl;
-      const stringResult = intl.string(trackAction(1126).t["mqg+to"]);
-      cResult[2] = stringResult;
-      tmp9 = stringResult;
-    } else {
-      tmp9 = cResult[2];
+  if (someResult != null) {
+    if (someResult) {
+      return null;
     }
-    if (cResult[3] !== tmp4) {
-      const tmp13 = jsx(trackAction(5601).Button, { variant: "secondary", size: "md", text: tmp9, onPress: tmp4 });
-      cResult[3] = tmp4;
-      cResult[4] = tmp13;
-      tmp11 = tmp13;
-    } else {
-      tmp11 = cResult[4];
-    }
-    tmp7 = tmp11;
+  }
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl = Button(1126).intl;
+    const stringResult = intl.string(Button(1126).t["mqg+to"]);
+    cResult[2] = stringResult;
+    let tmp7 = stringResult;
   } else {
-    tmp7 = null;
+    tmp7 = cResult[2];
   }
-  return tmp7;
+  if (cResult[3] !== tmp3) {
+    Button = Button(5601).Button;
+    let obj2 = { variant: "secondary", size: "md", text: tmp7, onPress: tmp3 };
+    tmp = <Button variant="secondary" size="md" text={tmp7} onPress={tmp3} />;
+    cResult[3] = tmp3;
+    cResult[4] = tmp;
+  }
+  let obj = require("c");
 }) : ((trackAction) => {
-  let tmp3;
   trackAction = trackAction.trackAction;
   const items = [trackAction];
   const linkedApplications = trackAction.game.linkedApplications;
   let someResult;
-  const callback = react.useCallback(_asyncToGenerator(async () => {
-    let v1;
-    let v3;
+  const callback = noop.useCallback(asyncGeneratorStep(async () => {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp2 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -144,11 +141,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((trackAction) => {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            trackAction(v3(dependencyMap[6]).GameProfileTrackActionActions.ClaimGame);
-            const obj5 = v1(dependencyMap[7]);
+            trackAction(v3(8352).GameProfileTrackActionActions.ClaimGame);
             v1 = 1;
             v3 = 1;
-            const obj4 = { value: obj5.redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(dependencyMap[8]).LoginHandoffSource.GAME_CLAIM), done: false };
+            const obj4 = { value: v1(6830).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(6834).LoginHandoffSource.GAME_CLAIM), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -162,9 +158,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((trackAction) => {
           v3 = 3;
           return { value: "IconComponent", done: null };
         }
-      } catch (tmp4) {
-        v3 = 3;
-        throw tmp4;
+      } catch (tmp5) {
+        v3 = tmp;
+        throw tmp5;
       }
     }
   }), items);
@@ -172,14 +168,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((trackAction) => {
     someResult = linkedApplications.some((type) => type.type === trackAction(dependencyMap[9]).GameLinkTypes.OFFICIAL);
   }
   if (someResult == null) {
-    const Button = trackAction(5601).Button;
+    let obj = { variant: "secondary", size: "md", text: null, onPress: null };
     const intl = trackAction(1126).intl;
-    tmp3 = <Button variant="secondary" size="md" text={intl.string(trackAction(1126).t["mqg+to"])} onPress={callback} />;
+    obj.text = intl.string(trackAction(1126).t["mqg+to"]);
+    obj.onPress = callback;
+    let tmp3 = jsx(trackAction(5601).Button, { variant: "secondary", size: "md", text: null, onPress: null });
   } else {
     tmp3 = null;
   }
   return tmp3;
 });
-const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileGameClaimCta.tsx");
-
-export default tmp2;

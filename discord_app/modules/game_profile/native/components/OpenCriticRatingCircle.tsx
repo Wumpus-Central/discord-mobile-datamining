@@ -1,19 +1,19 @@
 // === Module 8416: OpenCriticRatingCircle ===
 
 // Module 8416 (OpenCriticRatingCircle)
-import Fragment from "Fragment" /* 21 */;
-import react from "react" /* 576 */;
+import jsxProd from "jsxProd" /* 21 */;
+import c from "c" /* 576 */;
 import inlineStyles from "inlineStyles" /* 8169 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import size from "module_2" /* 2 */;
 
 const inlineStylesDefault = inlineStyles;
 
-const jsx = Fragment.jsx;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((rating) => {
-  let strokeColor;
-  const obj = react;
-  const cResult = obj.c(10);
+const jsx = jsxProd.jsx;
+let result = size.fileFinishedImporting("modules/game_profile/native/components/OpenCriticRatingCircle.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((rating) => {
+  const cResult = c.c(10);
   ({ strokeColor, size } = rating);
   const result = size / 2;
   const result1 = (size - 4) / 2;
@@ -26,17 +26,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((rating) => {
       if (cResult[2] === result1) {
         if (cResult[3] === strokeColor) {
           if (cResult[4] === result3) {
-            let tmp10;
             if (cResult[5] === combined) {
-              tmp10 = cResult[6];
+              let tmp10 = cResult[6];
             }
             if (cResult[7] === size) {
-              let tmp12;
               if (cResult[8] === tmp10) {
-                tmp12 = cResult[9];
+                let tmp12 = cResult[9];
               }
               return tmp12;
             }
+            const size1 = { width: size, height: size, children: tmp10 };
             const tmp15 = jsx(inlineStylesDefault, { width: size, height: size, children: tmp10 });
             cResult[7] = size;
             cResult[8] = tmp10;
@@ -57,20 +56,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((rating) => {
   cResult[6] = tmp11;
   tmp10 = tmp11;
 }) : ((size) => {
-  let diff;
   size = size.size;
   const result = size / 2;
   const result1 = (size - 4) / 2;
   const result2 = 2 * Math.PI * result1;
-  const strokeColor = size.strokeColor;
   const result3 = Math.min(Math.max(size.rating, 0), 100) / 100;
-  ({ transform: "rotate(" + 360 * diff / 2 + " " + result + " " + result + ")", cx: result, cy: result, r: result1, stroke: strokeColor, strokeWidth: 2, fill: "none", strokeDasharray: result2, strokeDashoffset: result2 * diff });
-  diff = 1 - result3;
-  inlineStylesDefault;
-  const Circle = inlineStyles.Circle;
-  return <tmp5 width={size} height={size}>{null}</tmp5>;
+  const size1 = { width: size, height: size, children: null };
+  const obj = { transform: null, cx: result, cy: result, r: result1, stroke: size.strokeColor, strokeWidth: 2, fill: "none", strokeDasharray: result2, strokeDashoffset: null };
+  const diff = 1 - result3;
+  obj.transform = "rotate(" + 360 * diff / 2 + " " + result + " " + result + ")";
+  obj.strokeDashoffset = result2 * diff;
+  size1.children = jsx(inlineStyles.Circle, { transform: null, cx: result, cy: result, r: result1, stroke: size.strokeColor, strokeWidth: 2, fill: "none", strokeDasharray: result2, strokeDashoffset: null });
+  return jsx(inlineStylesDefault, { width: size, height: size, children: null });
 });
-let size = size_mod;
-let result = size.fileFinishedImporting("modules/game_profile/native/components/OpenCriticRatingCircle.tsx");
-
-export default tmp2;

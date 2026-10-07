@@ -18,12 +18,8 @@ export const describeMessageTime = function describeMessageTime(at) {
   let calendarFormatResult = null;
   if (isFiniteResult) {
     const _Date = Date;
-    const self = this;
-    const self2 = this;
-    const calendarFormat = DateUtils.calendarFormat;
-    DateUtils;
     const date = new Date(at);
-    calendarFormatResult = calendarFormat(date, true);
+    calendarFormatResult = DateUtils.calendarFormat(date, true);
   }
   return calendarFormatResult;
 };

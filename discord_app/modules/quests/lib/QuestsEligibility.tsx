@@ -7,6 +7,5 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/quests/lib/QuestsEligibility.tsx");
 
 export const getIsEligibleForQuests = function getIsEligibleForQuests() {
-  const obj = MetaQuestUtils;
-  return !obj.isMetaQuest();
+  return !MetaQuestUtils.isMetaQuest();
 };

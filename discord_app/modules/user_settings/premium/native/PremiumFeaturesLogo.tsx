@@ -1,48 +1,42 @@
 // === Module 8916: PremiumFeaturesLogo ===
 
 // Module 8916 (PremiumFeaturesLogo)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
-import PremiumConstants from "PremiumConstants" /* 1379 */;
+import c from "c" /* 576 */;
 import PremiumUtils from "PremiumUtils" /* 4534 */;
-import AssetRegistryDefault from "AssetRegistry" /* 6954 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 8917 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _modDef6954 from "module_6954" /* 6954 */;
+import _modDef8917 from "module_8917" /* 8917 */;
+import noop from "module_19" /* 19 */;
 
-const PremiumTypes = PremiumConstants.PremiumTypes;
-const jsx = Fragment.jsx;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let premiumType;
-  let style;
-  let tmp5;
-  let tmp6;
-  let tmp8;
-  const obj = react2;
-  const cResult = obj.c(6);
+require = fn;
+const PremiumTypes = fn(1379).PremiumTypes;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesLogo.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(6);
   ({ premiumType, style } = arg0);
   if (premiumType === PremiumTypes.TIER_0) {
-    tmp5 = AssetRegistryDefault2;
-    tmp6 = importDefault;
+    let tmp5 = _modDef8917;
+    let tmp6 = importDefault;
   } else {
-    tmp5 = AssetRegistryDefault;
+    tmp5 = _modDef6954;
     tmp6 = importDefault;
   }
   if (cResult[0] !== premiumType) {
-    const tmpResult = PremiumUtils;
-    const premiumTypeDisplayName = tmpResult.getPremiumTypeDisplayName(premiumType);
+    const premiumTypeDisplayName = PremiumUtils.getPremiumTypeDisplayName(premiumType);
     cResult[0] = premiumType;
     cResult[1] = premiumTypeDisplayName;
-    tmp8 = premiumTypeDisplayName;
+    let tmp8 = premiumTypeDisplayName;
+    const tmpResult = PremiumUtils;
   } else {
     tmp8 = cResult[1];
   }
   if (cResult[2] === tmp5) {
     if (cResult[3] === style) {
-      let tmp10;
       if (cResult[4] === tmp8) {
-        tmp10 = cResult[5];
+        let tmp10 = cResult[5];
       }
       return tmp10;
     }
@@ -54,21 +48,18 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp11;
   tmp10 = tmp11;
 }) : ((premiumType) => {
-  let tmp;
-  let tmp3;
   premiumType = premiumType.premiumType;
-  const style = premiumType.style;
   if (premiumType === PremiumTypes.TIER_0) {
-    tmp3 = AssetRegistryDefault2;
-    tmp = importDefault;
+    let tmp3 = _modDef8917;
+    let tmp = importDefault;
   } else {
     tmp = importDefault;
-    tmp3 = AssetRegistryDefault;
+    tmp3 = _modDef6954;
   }
-  tmp(5981);
-  const obj2 = PremiumUtils;
-  return <tmpResult accessible accessibilityLabel={obj2.getPremiumTypeDisplayName(premiumType)} accessibilityRole="header" style={style} resizeMode="contain" source={tmp3} />;
+  const obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", style: null, resizeMode: "contain", source: null };
+  const tmpResult = tmp(5981);
+  obj.accessibilityLabel = PremiumUtils.getPremiumTypeDisplayName(premiumType);
+  obj.style = premiumType.style;
+  obj.source = tmp3;
+  return <tmpResult accessible accessibilityLabel={null} accessibilityRole="header" style={null} resizeMode="contain" source={null} />;
 });
-const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesLogo.tsx");
-
-export default tmp3;

@@ -1,7 +1,7 @@
 // === Module 7710: StageSpeakerSystemMessage ===
 
 // Module 7710 (StageSpeakerSystemMessage)
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7630 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7632 */;
 import createCommonMessageDefault from "createCommonMessage" /* 7634 */;
@@ -9,19 +9,12 @@ import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/StageSpeakerSystemMessage.tsx");
 
-export const createStageSpeakerSystemMessage = function createStageSpeakerSystemMessage(message) {
-  let V4uCm4;
-  let formatToParts;
-  let obj3;
-  message = message.message;
-  const roleStyle = message.roleStyle;
-  const obj = useAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  const obj2 = { content: formatToParts(V4uCm4, obj3) };
-  const intl = intl2.intl;
-  formatToParts = intl.formatToParts;
-  obj3 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle }) };
-  V4uCm4 = intl2.t.V4uCm4;
-  const merged = Object.assign(createCommonMessageDefault(message));
+export const createStageSpeakerSystemMessage = function createStageSpeakerSystemMessage(roleStyle) {
+  const message = roleStyle.message;
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
+  const obj2 = { content: null };
+  const intl = util.intl;
+  obj2.content = intl.formatToParts(util.t.V4uCm4, { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) });
+  const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return obj2;
 };

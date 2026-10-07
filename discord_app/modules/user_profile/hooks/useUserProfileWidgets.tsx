@@ -4,51 +4,40 @@
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserProfileStore from "UserProfileStore" /* 7124 */;
 import WidgetStore from "WidgetStore" /* 8623 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let first;
-  let pendingWidgets;
-  let tmp10;
-  let tmp13;
-  let tmp15;
-  let tmp16;
-  let tmp6;
-  let tmp7;
-  let tmp9;
+const require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileWidgets.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   _require = arg0;
-  let tmp = _require;
-  const obj = require("react");
-  const cResult = obj.c(10);
+  const cResult = require("c").c(10);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AuthenticationStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
     const fn = function l() {
-      const tmp = null != closure_0 && AuthenticationStore.getId() === closure_0;
-      return tmp;
+      return null != closure_0 && AuthenticationStore.getId() === closure_0;
     };
     const items1 = [arg0];
     cResult[1] = arg0;
     cResult[2] = fn;
     cResult[3] = items1;
-    tmp7 = items1;
-    tmp6 = fn;
+    let tmp7 = items1;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  const tmpResult = tmp(504);
-  const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
+  const obj = require("c");
+  const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [WidgetStore];
     const fn2 = function v() {
@@ -56,18 +45,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[4] = items2;
     cResult[5] = fn2;
-    tmp10 = fn2;
-    tmp9 = items2;
+    let tmp10 = fn2;
+    let tmp9 = items2;
   } else {
     tmp9 = cResult[4];
     tmp10 = cResult[5];
   }
-  const tmpResult3 = tmp(504);
-  const stateFromStores1 = tmpResult3.useStateFromStores(tmp9, tmp10);
+  const tmpResult = require("initialize");
+  const stateFromStores1 = require("initialize").useStateFromStores(tmp9, tmp10);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const items3 = [UserProfileStore];
     cResult[6] = items3;
-    tmp13 = items3;
+    let tmp13 = items3;
   } else {
     tmp13 = cResult[6];
   }
@@ -91,14 +80,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[7] = arg0;
     cResult[8] = fn3;
     cResult[9] = items4;
-    tmp16 = items4;
-    tmp15 = fn3;
+    let tmp16 = items4;
+    let tmp15 = fn3;
   } else {
     tmp15 = cResult[8];
     tmp16 = cResult[9];
   }
-  const tmpResult4 = tmp(504);
-  const stateFromStoresArray = tmpResult4.useStateFromStoresArray(tmp13, tmp15, tmp16);
+  const tmpResult3 = require("initialize");
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp13, tmp15, tmp16);
   let tmp18 = stateFromStoresArray;
   if (stateFromStores) {
     tmp18 = stateFromStoresArray;
@@ -108,23 +97,17 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   return tmp18;
 }) : ((arg0) => {
-  let closure_0;
-  let pendingWidgets;
   _require = arg0;
   const items = [AuthenticationStore];
   const items1 = [arg0];
-  const obj = require("get initialized");
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    const tmp = null != closure_0 && AuthenticationStore.getId() === closure_0;
-    return tmp;
-  }, items1);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => null != closure_0 && AuthenticationStore.getId() === closure_0, items1);
+  const obj = require("initialize");
   const items2 = [WidgetStore];
-  const obj2 = require("get initialized");
-  const stateFromStores1 = obj2.useStateFromStores(items2, () => pendingWidgets.getPendingWidgets());
+  const stateFromStores1 = require("initialize").useStateFromStores(items2, () => pendingWidgets.getPendingWidgets());
+  const obj2 = require("initialize");
   const items3 = [UserProfileStore];
   const items4 = [arg0];
-  const obj3 = require("get initialized");
-  const stateFromStoresArray = obj3.useStateFromStoresArray(items3, () => {
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items3, () => {
     if (null == closure_0) {
       return [];
     } else {
@@ -148,6 +131,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   return tmp4;
 });
-const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileWidgets.tsx");
-
-export default tmp2;

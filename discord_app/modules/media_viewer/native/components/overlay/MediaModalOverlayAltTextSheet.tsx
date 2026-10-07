@@ -1,47 +1,42 @@
 // === Module 11165: MediaModalOverlayAltTextSheet ===
 
 // Module 11165 (MediaModalOverlayAltTextSheet)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import useIsScreenLandscape from "useIsScreenLandscape" /* 5919 */;
-import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6651 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6651 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
 import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11166 */;
-import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let BottomSheet, description;
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { container: { padding: nativeDefault.space.PX_16 } };
+let closure_3 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { padding: nativeDefault.space.PX_16 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayAltTextSheet.tsx");
 
-let obj2;
-const jsx = Fragment.jsx;
-let obj = { container: obj2 };
-obj2 = { padding: nativeDefault.space.PX_16 };
-let closure_3 = createStyles.createStyles(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((description) => {
-  let first;
-  let tmp9;
-  const obj = react2;
-  const cResult = obj.c(11);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((description) => {
+  const cResult = c.c(11);
   description = description.description;
   const tmp4 = closure_3();
-  const obj2 = useMessagePreviewHeight;
-  const messagePreviewCollapsedheight = obj2.useMessagePreviewCollapsedheight();
+  const messagePreviewCollapsedheight = useMessagePreviewHeight.useMessagePreviewCollapsedheight();
   let num = 70;
-  const obj3 = useIsScreenLandscape;
   if (!obj3.useIsScreenLandscape()) {
     num = messagePreviewCollapsedheight + 20 + 50;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const BottomSheetTitleHeader = BottomSheetTitleHeader2.BottomSheetTitleHeader;
-    const intl = intl2.intl;
-    const tmp8 = <BottomSheetTitleHeader title={intl.string(intl2.t.J3IOO1)} />;
+    const obj4 = { title: null };
+    const intl = util.intl;
+    obj4.title = intl.string(util.t.J3IOO1);
+    const tmp8 = jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: null });
     cResult[0] = tmp8;
-    first = tmp8;
+    let first = tmp8;
   } else {
     first = cResult[0];
   }
@@ -49,31 +44,30 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((description) => {
     const obj5 = { minHeight: num };
     cResult[1] = num;
     cResult[2] = obj5;
-    tmp9 = obj5;
+    let tmp9 = obj5;
   } else {
     tmp9 = cResult[2];
   }
   if (cResult[3] === tmp4.container) {
-    let tmp10;
-    let tmp11;
     if (cResult[4] === tmp9) {
-      tmp10 = cResult[5];
+      let tmp10 = cResult[5];
     }
     if (cResult[6] !== description) {
+      const obj6 = { accessibilityRole: "text", variant: "text-md/normal", children: description };
       const tmp13 = jsx(Text_Text.Text, { accessibilityRole: "text", variant: "text-md/normal", children: description });
       cResult[6] = description;
       cResult[7] = tmp13;
-      tmp11 = tmp13;
+      let tmp11 = tmp13;
     } else {
       tmp11 = cResult[7];
     }
     if (cResult[8] === tmp10) {
-      let tmp14;
       if (cResult[9] === tmp11) {
-        tmp14 = cResult[10];
+        let tmp14 = cResult[10];
       }
       return tmp14;
     }
+    const obj7 = { header: first, contentStyles: tmp10, children: tmp11 };
     const tmp16 = jsx(Sheet_BottomSheet.BottomSheet, { header: first, contentStyles: tmp10, children: tmp11 });
     cResult[8] = tmp10;
     cResult[9] = tmp11;
@@ -85,24 +79,21 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((description) => {
   cResult[4] = tmp9;
   cResult[5] = items;
   tmp10 = items;
-}) : ((description) => {
-  let intl;
-  description = description.description;
+  obj3 = useIsScreenLandscape;
+}) : ((children) => {
   const tmp = closure_3();
-  const obj = useMessagePreviewHeight;
-  const messagePreviewCollapsedheight = obj.useMessagePreviewCollapsedheight();
+  const messagePreviewCollapsedheight = useMessagePreviewHeight.useMessagePreviewCollapsedheight();
   let num = 70;
-  const obj2 = useIsScreenLandscape;
   if (!obj2.useIsScreenLandscape()) {
     num = messagePreviewCollapsedheight + 20 + 50;
   }
-  BottomSheet = Sheet_BottomSheet.BottomSheet;
-  ({ title: intl.string(intl2.t.J3IOO1) });
-  const BottomSheetTitleHeader = BottomSheetTitleHeader2.BottomSheetTitleHeader;
-  intl = intl2.intl;
+  const obj3 = { header: null, contentStyles: null, children: null };
+  const obj4 = { title: null };
+  const intl = util.intl;
+  obj4.title = intl.string(util.t.J3IOO1);
+  obj3.header = jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: null });
   const items = [tmp.container, { minHeight: num }];
-  return <BottomSheet header={null} contentStyles={items}>{null}</BottomSheet>;
+  obj3.contentStyles = items;
+  obj3.children = jsx(Text_Text.Text, { accessibilityRole: "text", variant: "text-md/normal", children: children.description });
+  return jsx(Sheet_BottomSheet.BottomSheet, { header: null, contentStyles: null, children: null });
 });
-const result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayAltTextSheet.tsx");
-
-export default tmp3;

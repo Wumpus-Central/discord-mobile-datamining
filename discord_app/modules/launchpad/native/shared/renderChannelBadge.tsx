@@ -1,24 +1,19 @@
-// === Module 17428: renderChannelBadge ===
+// === Module 17428: shared/renderChannelBadge ===
 
-// Module 17428 (renderChannelBadge)
-import Fragment from "Fragment" /* 21 */;
-import intl2 from "intl" /* 1126 */;
+// Module 17428 (shared/renderChannelBadge)
+import util from "util" /* 1126 */;
 import native from "native" /* 1188 */;
 import NumberUtils from "NumberUtils" /* 1888 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import NewBadgeDefault from "NewBadge" /* 11938 */;
-import react from "react" /* 19 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/renderChannelBadge.tsx");
 
 export default function renderChannelBadge(newChannel) {
-  let eventsMentionCount;
-  let newPostCount;
-  let obj5;
-  let postsWithUnreadsCount;
-  let tmp2;
   let flag = newChannel.newChannel;
   if (flag === undefined) {
     flag = false;
@@ -28,10 +23,10 @@ export default function renderChannelBadge(newChannel) {
     num = 0;
   }
   ({ postsWithUnreadsCount, newPostCount, eventsMentionCount } = newChannel);
-  const locale = newChannel.locale;
   if (null != num) {
     if (num > 0) {
-      tmp2 = jsx(native.Badge, { value: num, isMentionLowImportance: tmp });
+      const obj2 = { value: num, isMentionLowImportance: tmp };
+      let tmp2 = jsx(native.Badge, { value: num, isMentionLowImportance: tmp });
     }
     return tmp2;
   }
@@ -40,17 +35,16 @@ export default function renderChannelBadge(newChannel) {
   } else {
     if (null != newPostCount) {
       if (newPostCount > 0) {
-        const Text = Text_Text.Text;
-        const intl = intl2.intl;
-        const format = intl.format;
-        const obj4 = { count: obj5.humanizeValue(newPostCount, locale) };
-        const GkAbqY = intl2.t.GkAbqY;
-        tmp2 = <Text variant="text-xs/bold" color="text-brand">{format(GkAbqY, obj4)}</Text>;
-        obj5 = NumberUtils;
+        const obj3 = { variant: "text-xs/bold", color: "text-brand", children: null };
+        const intl = util.intl;
+        const obj4 = { count: NumberUtils.humanizeValue(newPostCount, newChannel.locale) };
+        obj3.children = intl.format(util.t.GkAbqY, obj4);
+        tmp2 = jsx(Text_Text.Text, { variant: "text-xs/bold", color: "text-brand", children: null });
       }
     }
     if (null != postsWithUnreadsCount) {
       if (postsWithUnreadsCount > 0) {
+        const obj6 = { variant: "text-xs/bold", color: "text-muted", children: postsWithUnreadsCount };
         tmp2 = jsx(Text_Text.Text, { variant: "text-xs/bold", color: "text-muted", children: postsWithUnreadsCount });
       }
     }
@@ -58,6 +52,7 @@ export default function renderChannelBadge(newChannel) {
     if (null != eventsMentionCount) {
       tmp2 = null;
       if (eventsMentionCount > 0) {
+        const obj = { value: eventsMentionCount, eventsMentionBadge: true };
         tmp2 = jsx(native.Badge, { value: eventsMentionCount, eventsMentionBadge: true });
       }
     }

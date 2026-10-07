@@ -1,24 +1,23 @@
 // === Module 16312: GuildMediaStateShadowCompare ===
 
 // Module 16312 (GuildMediaStateShadowCompare)
-import logger_Logger from "logger/Logger" /* 4 */;
 import LastFewActionsAll from "LastFewActions" /* 509 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import GuildMediaStateStore from "GuildMediaStateStore" /* 13536 */;
-import size from "module_2" /* 2 */;
 
-const logger = new logger_Logger.Logger("GuildMediaStateShadowCompare");
+const logger = new fn(4).Logger("GuildMediaStateShadowCompare");
 let closure_5 = ["audio", "video", "screenshare", "liveStage", "activeEvent", "activity", "isCurrentUserConnected"];
 let closure_6 = 0;
 let closure_7 = 0;
 const map = new Map();
 const set = new Set();
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/GuildMediaStateShadowCompare.tsx");
 
 export const compareGuildMediaState = function compareGuildMediaState(guildId, fromHook, stateFromStores) {
-  let obj12;
-  let obj6;
-  const f123941 = (item) => {
+  closure_0 = fromHook;
+  let guildMediaState = stateFromStores;
+  const found = closure_5.filter((item) => {
     let flag = closure_0[item];
     if (flag == null) {
       flag = false;
@@ -28,32 +27,37 @@ export const compareGuildMediaState = function compareGuildMediaState(guildId, f
       flag2 = false;
     }
     return flag !== flag2;
-  };
-  let closure_0 = fromHook;
-  let guildMediaState = stateFromStores;
-  const found = closure_5.filter(f123941);
+  });
   if (0 !== found.length) {
     closure_0 = fromHook;
     guildMediaState = GuildMediaStateStore.getGuildMediaState(guildId);
-    const length = closure_5.filter(f123941).length;
-    const obj8 = LastFewActionsAll;
-    let str = obj8.last();
+    let str = LastFewActionsAll.last();
     if (str == null) {
       str = "unknown";
     }
+    const tmp = 0 === closure_5.filter((item) => {
+      let flag = closure_0[item];
+      if (flag == null) {
+        flag = false;
+      }
+      let flag2 = closure_1[item];
+      if (flag2 == null) {
+        flag2 = false;
+      }
+      return flag !== flag2;
+    }).length;
     const joined = found.join(",");
     let str3 = "persistent";
     let str4 = "persistent";
-    if (0 === length) {
+    if (tmp) {
       str4 = "transient";
     }
     const _HermesInternal = HermesInternal;
     const combined = "" + str + ":" + joined + ":" + str4;
     let flag = false;
     if (!set.has(combined)) {
-      let tmp9;
-      if (0 === length) {
-        tmp9 = closure_7 >= 15;
+      if (tmp) {
+        let tmp9 = closure_7 >= 15;
       } else {
         tmp9 = closure_6 >= 15;
       }
@@ -67,19 +71,17 @@ export const compareGuildMediaState = function compareGuildMediaState(guildId, f
         if (!num5) {
           set.add(combined);
           const result = map.set(str, num3 + 1);
-          if (0 === length) {
-            closure_7 = closure_7 + 1;
-            num5 = 0;
-          } else {
+          if (!tmp) {
             closure_6 = closure_6 + 1;
             num5 = 0;
           }
         }
-        flag = !num5;
+        closure_7 = closure_7 + 1;
+        num5 = 0;
       }
     }
     if (flag) {
-      const obj3 = { guildId, lastAction: str, mismatchedFields: found, fromHook, fromStore: stateFromStores, isTransient: 0 === length };
+      const obj3 = { guildId, lastAction: str, mismatchedFields: found, fromHook, fromStore: stateFromStores, isTransient: tmp };
       if (obj3.isTransient) {
         str3 = "transient";
       }
@@ -88,12 +90,13 @@ export const compareGuildMediaState = function compareGuildMediaState(guildId, f
       const combined1 = "GuildMediaStateStore diverged from useGuildMediaState after " + obj3.lastAction + " (" + str3 + "): ";
       const sum = combined1 + mismatchedFields.join(", ");
       logger.warn(sum, obj3);
-      const obj5 = { tags: obj6, extra: obj12 };
-      obj12 = { guildId: null, mismatchedFields: null, fromHook: null, fromStore: null };
-      obj6 = { app_context: "guild_media_state_shadow", divergence_severity: str3, divergence_action: obj3.lastAction };
+      const obj5 = { tags: null, extra: null };
+      const obj6 = { app_context: "guild_media_state_shadow", divergence_severity: str3, divergence_action: obj3.lastAction };
+      obj5.tags = obj6;
       ({ guildId: obj7.guildId, mismatchedFields: obj7.mismatchedFields, fromHook: obj7.fromHook, fromStore: obj7.fromStore } = obj3);
-      const obj4 = SentryUtilsDefault;
-      obj4.captureMessage(sum, obj5);
+      obj5.extra = { guildId: null, mismatchedFields: null, fromHook: null, fromStore: null };
+      SentryUtilsDefault.captureMessage(sum, obj5);
+      const obj12 = { guildId: null, mismatchedFields: null, fromHook: null, fromStore: null };
     }
   }
 };

@@ -1,61 +1,55 @@
 // === Module 16232: ServerOnboardingSetupProgressSkipStore ===
 
 // Module 16232 (ServerOnboardingSetupProgressSkipStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require;
 
-let set = new Set();
-let _Set1 = set;
-const PersistedStore = get_initializedDefault.PersistedStore;
+const require = fn;
+const set = new Set();
+const PersistedStore = initializeDefault.PersistedStore;
 class ServerOnboardingSetupProgressSkipStore extends PersistedStore {
-  initialize(skippedGuildIds) {
-    skippedGuildIds = undefined;
-    const _Set = Set;
-    if (skippedGuildIds != null) {
-      skippedGuildIds = skippedGuildIds.skippedGuildIds;
-    }
-    if (skippedGuildIds == null) {
-      skippedGuildIds = [];
-    }
-    _Set1 = new _Set(skippedGuildIds);
-  }
-  getState() {
-    const obj = { skippedGuildIds: Array.from(_Set1) };
-    return obj;
-  }
-  isSkipped(arg0) {
-    return _Set1.has(arg0);
-  }
 }
 const prototype = ServerOnboardingSetupProgressSkipStore.prototype;
+prototype["initialize"] = function initialize(skippedGuildIds) {
+  skippedGuildIds = undefined;
+  if (skippedGuildIds != null) {
+    skippedGuildIds = skippedGuildIds.skippedGuildIds;
+  }
+  if (skippedGuildIds == null) {
+    skippedGuildIds = [];
+  }
+  closure_3 = new Set(skippedGuildIds);
+};
+prototype["getState"] = function getState() {
+  return { skippedGuildIds: Array.from(closure_3) };
+};
+prototype["isSkipped"] = function isSkipped(arg0) {
+  return set.has(arg0);
+};
 ServerOnboardingSetupProgressSkipStore.displayName = "ServerOnboardingSetupProgressSkipStore";
 ServerOnboardingSetupProgressSkipStore.persistKey = "ServerOnboardingSetupProgressSkippedGuildIds";
-let obj = {
+const serverOnboardingSetupProgressSkipStore = new ServerOnboardingSetupProgressSkipStore(DispatcherDefault, {
   SERVER_ONBOARDING_SETUP_PROGRESS_SKIP: function handleSkip(guildId) {
-    guildId = guildId.guildId;
-    set = new Set(_Set1);
-    _Set1 = set.add(guildId);
+    closure_3 = new Set(closure_3).add(guildId.guildId);
   }
+});
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding_home/ServerOnboardingSetupProgressSkipStore.tsx");
+
+export default serverOnboardingSetupProgressSkipStore;
+export const skipServerOnboardingSetupProgress = function skipServerOnboardingSetupProgress(guildId) {
+  DispatcherDefault.dispatch({ type: "SERVER_ONBOARDING_SETUP_PROGRESS_SKIP", guildId });
 };
-const serverOnboardingSetupProgressSkipStore = new ServerOnboardingSetupProgressSkipStore(DispatcherDefault, obj);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let first;
-  let tmp6;
-  let tmp7;
+export const useIsServerOnboardingSetupProgressSkipped = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   _require = arg0;
-  const obj = require("react");
-  const cResult = obj.c(4);
-  const tmp = _require;
+  const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [serverOnboardingSetupProgressSkipStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -67,28 +61,17 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[1] = arg0;
     cResult[2] = fn;
     cResult[3] = items1;
-    tmp7 = items1;
-    tmp6 = fn;
+    let tmp7 = items1;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  const tmpResult = tmp(504);
-  return tmpResult.useStateFromStores(first, tmp6, tmp7);
+  const obj = require("c");
+  return require("initialize").useStateFromStores(first, tmp6, tmp7);
 }) : ((arg0) => {
-  let closure_0;
   _require = arg0;
   const items = [serverOnboardingSetupProgressSkipStore];
   const items1 = [arg0];
-  const obj = require("get initialized");
-  return obj.useStateFromStores(items, () => serverOnboardingSetupProgressSkipStore.isSkipped(closure_0), items1);
+  return require("initialize").useStateFromStores(items, () => serverOnboardingSetupProgressSkipStore.isSkipped(closure_0), items1);
 });
-const result = size.fileFinishedImporting("modules/guild_onboarding_home/ServerOnboardingSetupProgressSkipStore.tsx");
-
-export default serverOnboardingSetupProgressSkipStore;
-export const skipServerOnboardingSetupProgress = function skipServerOnboardingSetupProgress(guildId) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "SERVER_ONBOARDING_SETUP_PROGRESS_SKIP", guildId };
-  obj.dispatch(obj2);
-};
-export const useIsServerOnboardingSetupProgressSkipped = tmp4;

@@ -8,13 +8,10 @@ const result = size.fileFinishedImporting("modules/favorites/native/openFavorite
 
 export default function openFavoritesGuildCategoryActionSheet(categoryId) {
   const combined = "FavoritesGuildCategoryLongPress-" + categoryId;
-  let obj = ActionSheetActionCreatorsDefault;
-  const obj2 = {
+  ActionSheetActionCreatorsDefault.openLazy(combined(1987)(16075, dependencyMap.paths), combined, {
     categoryId,
     onClose() {
-      const obj = ActionSheetActionCreatorsDefault;
-      obj.hideActionSheet(combined);
+      ActionSheetActionCreatorsDefault.hideActionSheet(combined);
     }
-  };
-  obj.openLazy(combined(1987)(16075, dependencyMap.paths), combined, obj2);
+  });
 };

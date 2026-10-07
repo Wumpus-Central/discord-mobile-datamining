@@ -6,19 +6,13 @@ import MFA from "MFA" /* 15524 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require;
 
 const SELECT_NAMES = MFAConstants.SELECT_NAMES;
 const result = size.fileFinishedImporting("modules/mfa/MFAActionCreators.tsx");
 
 export const openMFAModal = function openMFAModal(methods, arg1, cancel) {
-  let closure_0;
   _require = arg1;
   methods = methods.methods;
   methods.methods = methods.filter((type) => Object.hasOwn(SELECT_NAMES, type.type));
-  let obj = require("MFAModal");
-  obj.openMFAModal(methods, (arg0) => {
-    const obj = MFA;
-    return obj.trySubmit(arg0, closure_0);
-  }, cancel);
+  require("MFAModal").openMFAModal(methods, (arg0) => MFA.trySubmit(arg0, closure_0), cancel);
 };

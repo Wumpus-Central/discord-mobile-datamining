@@ -4,16 +4,15 @@
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import DatabaseManagerDefault from "DatabaseManager" /* 2095 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import size from "module_2" /* 2 */;
 
+require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/useNativeAndroidEmojiPickerEnabled.tsx");
 
 export default function useNativeAndroidEmojiPickerEnabled() {
-  const obj = PlatformUtils;
-  let isAndroidResult = obj.isAndroid();
+  let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {
-    const obj2 = DatabaseManagerDefault;
-    isAndroidResult = null != obj2.database(AuthenticationStore.getId());
+    isAndroidResult = null != DatabaseManagerDefault.database(AuthenticationStore.getId());
   }
   return isAndroidResult;
 };

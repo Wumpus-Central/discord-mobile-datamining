@@ -9,8 +9,7 @@ import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const UserSettingsSections = Constants.UserSettingsSections;
-const obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
     return "Design System";
   },
@@ -18,13 +17,12 @@ const obj = {
   IconComponent: PaintPaletteIcon.PaintPaletteIcon,
   usePredicate: useDesignSystemsSettingPredicate.useDesignSystemsSettingPredicate,
   screen: {
-    route: UserSettingsSections.DESIGN_SYSTEM,
+    route: Constants.UserSettingsSections.DESIGN_SYSTEM,
     getComponent() {
       return require("UserSettingsDesignSystemsScreen").default;
     }
   }
-};
-const route = SettingBuilders.createRoute(obj);
+});
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsSetting.tsx");
 
 export default route;

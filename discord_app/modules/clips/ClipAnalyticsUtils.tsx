@@ -1,38 +1,32 @@
 // === Module 7243: ClipAnalyticsUtils ===
 
 // Module 7243 (ClipAnalyticsUtils)
-import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
-import isEqualDefault from "isEqual" /* 5016 */;
+import _modDef5016 from "module_5016" /* 5016 */;
 import VideoQualityStats from "VideoQualityStats" /* 7245 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4942 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4935 */;
 import ClipsStore from "ClipsStore" /* 2005 */;
-import ClipsConstants from "ClipsConstants" /* 7244 */;
-import size from "module_2" /* 2 */;
 
-let map;
-
-let c9;
-let metroImportAll;
+require = fn;
 function getClipSignalTypes(arg0) {
   const items = [];
   const iter = arg0.timeline[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let type = nextResult.signal.type;
-    if (metroImportAll.MANUAL === type) {
+    if (constants.MANUAL === type) {
       let arr = items.push("manual");
-    } else if (metroImportAll.DISTRIBUTED === type) {
+    } else if (constants.DISTRIBUTED === type) {
       let arr6 = items.push("distributed");
-    } else if (metroImportAll.LAUGHTER === type) {
+    } else if (constants.LAUGHTER === type) {
       let arr7 = items.push("laughter");
-    } else if (metroImportAll.SHOUTING === type) {
+    } else if (constants.SHOUTING === type) {
       let arr8 = items.push("shouting");
-    } else if (metroImportAll.GAME_EVENT === type) {
+    } else if (constants.GAME_EVENT === type) {
       let _HermesInternal = HermesInternal;
       let arr9 = items.push("game_event:" + tmp2.signal.eventType);
     }
@@ -41,76 +35,74 @@ function getClipSignalTypes(arg0) {
   return items;
 }
 function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
-  let num10;
-  let num11;
-  let num12;
-  let num16;
-  let num17;
-  let num18;
-  let num2;
-  let num3;
-  let num4;
-  let num5;
-  let num6;
-  let num7;
-  let num8;
-  let num9;
-  let sum1;
-  map = new Map();
-  for (const key10011 in framesEncodedByEncoder.framesEncodedByEncoder) {
-    let tmp8 = framesEncodedByEncoder.framesEncodedByEncoder[key10011];
+  const map = new Map();
+  for (const key10011 in arg1.framesEncodedByEncoder) {
     let obj3 = VideoQualityStats;
     let parseEncoderResult = obj3.parseEncoder(key10011);
-    let num = map.get(parseEncoderResult) ?? 0;
-    let result = map.set(parseEncoderResult, num + tmp8);
+    let num = map.get(parseEncoderResult);
+    if (num == null) {
+      num = 0;
+    }
+    let result = map.set(parseEncoderResult, num + arg1.framesEncodedByEncoder[key10011]);
     continue;
   }
-  const obj = { frames_encoded_nvidia_cuda: num2, frames_encoded_nvidia_direct3d: num3, frames_encoded_openh264: num4, frames_encoded_videotoolbox: num5, frames_encoded_amd_direct3d: num6, frames_encoded_amd_vaapi: num7, frames_encoded_intel: num8, frames_encoded_intel_direct3d: num9, frames_encoded_wmf_direct3d_intel: num10, frames_encoded_wmf_direct3d_nvidia: num11, frames_encoded_wmf_direct3d_amd: num12, frames_encoded_wmf_direct3d: sum1 + num16, frames_encoded_uncategorized: num17, frames_encoded_unknown: num18, clip_duration_setting: ClipsStore.getSettings().clipsLength, target_fps: ApplicationStreamingSettingsStore.getState().fps };
+  const obj = {};
   const merged = Object.assign(arg0);
-  num2 = map.get(VideoQualityStats.Encoders.NVIDIA_CUDA);
+  let num2 = map.get(VideoQualityStats.Encoders.NVIDIA_CUDA);
   if (num2 == null) {
     num2 = 0;
   }
-  num3 = map.get(VideoQualityStats.Encoders.NVIDIA_DIRECT_3D);
+  obj.frames_encoded_nvidia_cuda = num2;
+  let num3 = map.get(VideoQualityStats.Encoders.NVIDIA_DIRECT_3D);
   if (num3 == null) {
     num3 = 0;
   }
-  num4 = map.get(VideoQualityStats.Encoders.OPENH264);
+  obj.frames_encoded_nvidia_direct3d = num3;
+  let num4 = map.get(VideoQualityStats.Encoders.OPENH264);
   if (num4 == null) {
     num4 = 0;
   }
-  num5 = map.get(VideoQualityStats.Encoders.VIDEOTOOLBOX);
+  obj.frames_encoded_openh264 = num4;
+  let num5 = map.get(VideoQualityStats.Encoders.VIDEOTOOLBOX);
   if (num5 == null) {
     num5 = 0;
   }
-  num6 = map.get(VideoQualityStats.Encoders.AMD_DIRECT_3D);
+  obj.frames_encoded_videotoolbox = num5;
+  let num6 = map.get(VideoQualityStats.Encoders.AMD_DIRECT_3D);
   if (num6 == null) {
     num6 = 0;
   }
-  num7 = map.get(VideoQualityStats.Encoders.AMD_VAAPI);
+  obj.frames_encoded_amd_direct3d = num6;
+  let num7 = map.get(VideoQualityStats.Encoders.AMD_VAAPI);
   if (num7 == null) {
     num7 = 0;
   }
-  num8 = map.get(VideoQualityStats.Encoders.INTEL);
+  obj.frames_encoded_amd_vaapi = num7;
+  let num8 = map.get(VideoQualityStats.Encoders.INTEL);
   if (num8 == null) {
     num8 = 0;
   }
-  num9 = map.get(VideoQualityStats.Encoders.INTEL_DIRECT_3D);
+  obj.frames_encoded_intel = num8;
+  let num9 = map.get(VideoQualityStats.Encoders.INTEL_DIRECT_3D);
   if (num9 == null) {
     num9 = 0;
   }
-  num10 = map.get(VideoQualityStats.Encoders.WMF_DIRECT_3D_INTEL);
+  obj.frames_encoded_intel_direct3d = num9;
+  let num10 = map.get(VideoQualityStats.Encoders.WMF_DIRECT_3D_INTEL);
   if (num10 == null) {
     num10 = 0;
   }
-  num11 = map.get(VideoQualityStats.Encoders.WMF_DIRECT_3D_NVIDIA);
+  obj.frames_encoded_wmf_direct3d_intel = num10;
+  let num11 = map.get(VideoQualityStats.Encoders.WMF_DIRECT_3D_NVIDIA);
   if (num11 == null) {
     num11 = 0;
   }
-  num12 = map.get(VideoQualityStats.Encoders.WMF_DIRECT_3D_AMD);
+  obj.frames_encoded_wmf_direct3d_nvidia = num11;
+  let num12 = map.get(VideoQualityStats.Encoders.WMF_DIRECT_3D_AMD);
   if (num12 == null) {
     num12 = 0;
   }
+  obj.frames_encoded_wmf_direct3d_amd = num12;
   let num13 = map.get(VideoQualityStats.Encoders.WMF_DIRECT_3D);
   if (num13 == null) {
     num13 = 0;
@@ -124,26 +116,33 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
   if (num15 == null) {
     num15 = 0;
   }
-  sum1 = sum + num15;
-  num16 = map.get(VideoQualityStats.Encoders.WMF_DIRECT_3D_AMD);
+  const sum1 = sum + num15;
+  let num16 = map.get(VideoQualityStats.Encoders.WMF_DIRECT_3D_AMD);
   if (num16 == null) {
     num16 = 0;
   }
-  num17 = map.get(VideoQualityStats.Encoders.UNCATEGORIZED);
+  obj.frames_encoded_wmf_direct3d = sum1 + num16;
+  let num17 = map.get(VideoQualityStats.Encoders.UNCATEGORIZED);
   if (num17 == null) {
     num17 = 0;
   }
-  num18 = map.get(VideoQualityStats.Encoders.UNKNOWN);
+  obj.frames_encoded_uncategorized = num17;
+  let num18 = map.get(VideoQualityStats.Encoders.UNKNOWN);
   if (num18 == null) {
     num18 = 0;
   }
+  obj.frames_encoded_unknown = num18;
   ({ framesSubmitted: obj2.frames_submitted, framesSubmittedDuringClip: obj2.frames_submitted_during_clip, framesEncoded: obj2.frames_encoded, framesEncodedDuringClip: obj2.frames_encoded_during_clip, framesDropped: obj2.frames_dropped, framesDroppedDuringClip: obj2.frames_dropped_during_clip } = framesEncodedByEncoder);
+  obj.clip_duration_setting = ClipsStore.getSettings().clipsLength;
   ({ clipDuration: obj2.clip_duration, clipResolutionWidth: obj2.clip_resolution_width, clipResolutionHeight: obj2.clip_resolution_height, minFps: obj2.min_fps, maxFps: obj2.max_fps, submittedFps: obj2.submitted_fps } = framesEncodedByEncoder);
+  obj.target_fps = ApplicationStreamingSettingsStore.getState().fps;
   ({ audioTrackCount: obj2.audio_track_count, savedAt: obj2.saved_at } = framesEncodedByEncoder);
   return obj;
 }
-({ ClipSignalTypes: metroImportAll, CLIP_RUNTIME: c9 } = ClipsConstants);
-const AnalyticEvents = Constants.AnalyticEvents;
+const ClipsConstants = fn(7244);
+({ ClipSignalTypes: closure_8, CLIP_RUNTIME: closure_9 } = ClipsConstants);
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/clips/ClipAnalyticsUtils.tsx");
 
 export const getClipType = function getClipType(decision) {
@@ -155,14 +154,14 @@ export const getClipType = function getClipType(decision) {
       type = signal.type;
     }
   }
-  if (metroImportAll.MANUAL === type) {
+  if (constants.MANUAL === type) {
     return "manual";
-  } else if (metroImportAll.DISTRIBUTED === type) {
+  } else if (constants.DISTRIBUTED === type) {
     return "distributed";
   } else {
-    if (metroImportAll.LAUGHTER !== type) {
-      if (metroImportAll.SHOUTING !== type) {
-        if (metroImportAll.GAME_EVENT !== type) {
+    if (constants.LAUGHTER !== type) {
+      if (constants.SHOUTING !== type) {
+        if (constants.GAME_EVENT !== type) {
           return "unknown";
         }
       }
@@ -180,11 +179,11 @@ export const getClipBaseProperties = function getClipBaseProperties(clip) {
     }
   }
   let str = "manual";
-  if (metroImportAll.MANUAL !== type) {
+  if (constants.MANUAL !== type) {
     str = "distributed";
-    if (metroImportAll.DISTRIBUTED !== type) {
-      if (metroImportAll.LAUGHTER !== type) {
-        if (metroImportAll.SHOUTING !== type) {
+    if (constants.DISTRIBUTED !== type) {
+      if (constants.LAUGHTER !== type) {
+        if (constants.SHOUTING !== type) {
           str = "unknown";
         }
       }
@@ -194,26 +193,21 @@ export const getClipBaseProperties = function getClipBaseProperties(clip) {
   return { clip_type: str, num_clip_participants: clip.users.length, clip_session_id: clip.gameSessionId, is_candidate: clip.isCandidate };
 };
 export const getClipContextProperties = function getClipContextProperties() {
-  let id;
-  const obj = { clip_runtime, current_clip_session_id: id };
+  const obj = { clip_runtime, current_clip_session_id: null };
   const activeClipsSession = ClipsStore.getActiveClipsSession();
-  id = undefined;
+  let id;
   if (activeClipsSession != null) {
     id = activeClipsSession.id;
   }
+  obj.current_clip_session_id = id;
   return obj;
 };
 export { getClipSignalTypes };
 export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision) {
-  let id;
-  let mediaSessionId;
-  let rTCConnectionId;
   const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
   let rTCConnection = null;
   if (null != currentUserActiveStream) {
-    const getRTCConnection = StreamRTCConnectionStore.getRTCConnection;
-    const obj = StreamKeyUtils;
-    rTCConnection = getRTCConnection(obj.encodeStreamKey(currentUserActiveStream));
+    rTCConnection = StreamRTCConnectionStore.getRTCConnection(StreamKeyUtils.encodeStreamKey(currentUserActiveStream));
   }
   decision = decision.decision;
   let type;
@@ -224,36 +218,40 @@ export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision
     }
   }
   let str = "manual";
-  if (metroImportAll.MANUAL !== type) {
+  if (constants.MANUAL !== type) {
     str = "distributed";
-    if (metroImportAll.DISTRIBUTED !== type) {
-      if (metroImportAll.LAUGHTER !== type) {
-        if (metroImportAll.SHOUTING !== type) {
+    if (constants.DISTRIBUTED !== type) {
+      if (constants.LAUGHTER !== type) {
+        if (constants.SHOUTING !== type) {
           str = "unknown";
         }
       }
       str = "auto_ml";
     }
   }
-  const obj3 = { rtc_connection_id: rTCConnectionId, media_session_id: mediaSessionId, parent_media_session_id: RTCConnectionStore.getMediaSessionId(), clip_event_timeline_size: decision.timeline.length };
-  const obj4 = { clip_type: str, num_clip_participants: decision.users.length, clip_session_id: decision.gameSessionId, is_candidate: decision.isCandidate };
-  const merged = Object.assign(obj4);
-  const obj7 = { clip_runtime, current_clip_session_id: id };
+  const obj3 = {};
+  const merged = Object.assign({ clip_type: str, num_clip_participants: decision.users.length, clip_session_id: decision.gameSessionId, is_candidate: decision.isCandidate });
+  const obj7 = { clip_runtime, current_clip_session_id: null };
   const activeClipsSession = ClipsStore.getActiveClipsSession();
-  id = undefined;
+  let id;
   if (activeClipsSession != null) {
     id = activeClipsSession.id;
   }
+  obj7.current_clip_session_id = id;
   const merged1 = Object.assign(obj7);
-  rTCConnectionId = undefined;
+  let rTCConnectionId;
   if (rTCConnection != null) {
     rTCConnectionId = rTCConnection.getRTCConnectionId();
   }
-  mediaSessionId = undefined;
+  obj3.rtc_connection_id = rTCConnectionId;
+  let mediaSessionId;
   if (rTCConnection != null) {
     mediaSessionId = rTCConnection.getMediaSessionId();
   }
+  obj3.media_session_id = mediaSessionId;
+  obj3.parent_media_session_id = RTCConnectionStore.getMediaSessionId();
   ({ guildId: obj2.guild_id, channelId: obj2.channel_id, applicationId: obj2.application_id, applicationName: obj2.application_name, id: obj2.clip_uuid } = decision);
+  obj3.clip_event_timeline_size = decision.timeline.length;
   return obj3;
 };
 export { getPostSaveClipAnalytics };
@@ -273,119 +271,111 @@ export const getClipSaveFailureAnalytics = function getClipSaveFailureAnalytics(
   return tmp;
 };
 export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite) {
-  let applicationAudio;
-  let end;
-  let id;
-  let length;
-  let preset;
-  let soundboardAudio;
-  let start;
-  let tmp11;
-  let tmp15;
-  let tmp19;
-  let tmp23;
-  let tmp27;
-  let tmp31;
-  let voiceAudio;
   isFavorite = isFavorite.isFavorite;
   let tmp2;
   if (null != isFavorite) {
-    if (!isEqualDefault(isFavorite, tmp)) {
+    if (!_modDef5016(isFavorite, tmp)) {
       tmp2 = isFavorite;
     }
   }
-  const obj = { is_favorite: tmp2, title_length: length, edit_start_time: tmp11, edit_end_time: tmp15, application_audio_enabled: tmp19, voice_audio_enabled: tmp23, soundboard_audio_enabled: tmp27, crop: tmp31 };
+  const obj = { is_favorite: tmp2, title_length: null, edit_start_time: null, edit_end_time: null, application_audio_enabled: null, voice_audio_enabled: null, soundboard_audio_enabled: null, crop: null };
   const name = isFavorite.name;
   let tmp6;
   if (null != name) {
-    if (!isEqualDefault(name, tmp5)) {
+    if (!_modDef5016(name, tmp5)) {
       tmp6 = name;
     }
   }
-  length = undefined;
+  let length;
   if (tmp6 != null) {
     length = tmp6.length;
   }
+  obj.title_length = length;
   editMetadata = editMetadata.editMetadata;
   if (editMetadata != null) {
-    start = editMetadata.start;
+    const start = editMetadata.start;
   }
   const editMetadata2 = isFavorite.editMetadata;
   let start1;
   if (editMetadata2 != null) {
     start1 = editMetadata2.start;
   }
-  tmp11 = undefined;
+  let tmp11;
   if (null != start1) {
-    if (!isEqualDefault(start1, start)) {
+    if (!_modDef5016(start1, start)) {
       tmp11 = start1;
     }
   }
+  obj.edit_start_time = tmp11;
   const editMetadata3 = editMetadata.editMetadata;
   if (editMetadata3 != null) {
-    end = editMetadata3.end;
+    const end = editMetadata3.end;
   }
   const editMetadata4 = isFavorite.editMetadata;
   let end1;
   if (editMetadata4 != null) {
     end1 = editMetadata4.end;
   }
-  tmp15 = undefined;
+  let tmp15;
   if (null != end1) {
-    if (!isEqualDefault(end1, end)) {
+    if (!_modDef5016(end1, end)) {
       tmp15 = end1;
     }
   }
+  obj.edit_end_time = tmp15;
   const editMetadata5 = editMetadata.editMetadata;
   if (editMetadata5 != null) {
-    applicationAudio = editMetadata5.applicationAudio;
+    const applicationAudio = editMetadata5.applicationAudio;
   }
   const editMetadata6 = isFavorite.editMetadata;
   let applicationAudio1;
   if (editMetadata6 != null) {
     applicationAudio1 = editMetadata6.applicationAudio;
   }
-  tmp19 = undefined;
+  let tmp19;
   if (null != applicationAudio1) {
-    if (!isEqualDefault(applicationAudio1, applicationAudio)) {
+    if (!_modDef5016(applicationAudio1, applicationAudio)) {
       tmp19 = applicationAudio1;
     }
   }
+  obj.application_audio_enabled = tmp19;
   const editMetadata7 = editMetadata.editMetadata;
   if (editMetadata7 != null) {
-    voiceAudio = editMetadata7.voiceAudio;
+    const voiceAudio = editMetadata7.voiceAudio;
   }
   const editMetadata8 = isFavorite.editMetadata;
   let voiceAudio1;
   if (editMetadata8 != null) {
     voiceAudio1 = editMetadata8.voiceAudio;
   }
-  tmp23 = undefined;
+  let tmp23;
   if (null != voiceAudio1) {
-    if (!isEqualDefault(voiceAudio1, voiceAudio)) {
+    if (!_modDef5016(voiceAudio1, voiceAudio)) {
       tmp23 = voiceAudio1;
     }
   }
+  obj.voice_audio_enabled = tmp23;
   const editMetadata9 = editMetadata.editMetadata;
   if (editMetadata9 != null) {
-    soundboardAudio = editMetadata9.soundboardAudio;
+    const soundboardAudio = editMetadata9.soundboardAudio;
   }
   const editMetadata10 = isFavorite.editMetadata;
   let soundboardAudio1;
   if (editMetadata10 != null) {
     soundboardAudio1 = editMetadata10.soundboardAudio;
   }
-  tmp27 = undefined;
+  let tmp27;
   if (null != soundboardAudio1) {
-    if (!isEqualDefault(soundboardAudio1, soundboardAudio)) {
+    if (!_modDef5016(soundboardAudio1, soundboardAudio)) {
       tmp27 = soundboardAudio1;
     }
   }
+  obj.soundboard_audio_enabled = tmp27;
   const editMetadata11 = editMetadata.editMetadata;
   if (editMetadata11 != null) {
     const crop = editMetadata11.crop;
     if (crop != null) {
-      preset = crop.preset;
+      const preset = crop.preset;
     }
   }
   const editMetadata12 = isFavorite.editMetadata;
@@ -396,26 +386,26 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
       preset1 = crop2.preset;
     }
   }
-  tmp31 = undefined;
+  let tmp31;
   if (null != preset1) {
-    if (!isEqualDefault(preset1, preset)) {
+    if (!_modDef5016(preset1, preset)) {
       tmp31 = preset1;
     }
   }
+  obj.crop = tmp31;
   const values = Object.values(obj);
   if (!values.every((item) => null == item)) {
-    const obj2 = { clip_runtime, current_clip_session_id: id };
-    const track = AnalyticsUtilsDefault.track;
-    const CLIP_EDITED = AnalyticEvents.CLIP_EDITED;
-    AnalyticsUtilsDefault;
+    const obj2 = { clip_runtime, current_clip_session_id: null };
     const activeClipsSession = ClipsStore.getActiveClipsSession();
-    id = undefined;
+    let id;
     if (activeClipsSession != null) {
       id = activeClipsSession.id;
     }
-    const obj3 = { clip_uuid: editMetadata.id };
+    const obj4 = {};
+    obj2.current_clip_session_id = id;
     const merged = Object.assign(obj2);
+    obj4.clip_uuid = editMetadata.id;
     const merged1 = Object.assign(obj);
-    track(CLIP_EDITED, obj3);
+    AnalyticsUtilsDefault.track(AnalyticEvents.CLIP_EDITED, obj4);
   }
 };

@@ -15,8 +15,8 @@ export const createPurchaseNotificationSystemMessage = function createPurchaseNo
   }
   let guildProductPurchaseSystemMessage = null;
   if (type === Server.PurchaseNotificationType.GUILD_PRODUCT) {
+    guildProductPurchaseSystemMessage = GuildProductPurchaseSystemMessage.createGuildProductPurchaseSystemMessage(message);
     const tmp2Result = GuildProductPurchaseSystemMessage;
-    guildProductPurchaseSystemMessage = tmp2Result.createGuildProductPurchaseSystemMessage(message);
   }
   return guildProductPurchaseSystemMessage;
 };

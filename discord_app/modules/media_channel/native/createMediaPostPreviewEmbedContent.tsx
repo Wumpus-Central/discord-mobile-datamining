@@ -2,7 +2,7 @@
 
 // Module 13103 (createMediaPostPreviewEmbedContent)
 import nativeDefault from "native" /* 587 */;
-import intl7 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 5044 */;
 import MediaPostThumbnailUtils from "MediaPostThumbnailUtils" /* 5045 */;
 import MediaFormatTesters from "MediaFormatTesters" /* 5046 */;
@@ -12,7 +12,7 @@ import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7122 */
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7630 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7632 */;
 import MediaPostEmbedStore2 from "MediaPostEmbedStore" /* 11098 */;
-import react_native from "react-native" /* 17 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 import DevSettingsStore from "DevSettingsStore" /* 4895 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
@@ -22,25 +22,16 @@ import size from "module_2" /* 2 */;
 
 const MediaPostEmbedStore = MediaPostEmbedStore2;
 
-let c3;
-let closure_4;
-({ Image: c3, processColor: closure_4 } = react_native);
+({ Image: c3, processColor: closure_4 } = get_ActivityIndicator);
 const FetchState = MediaPostEmbedStore2.FetchState;
 let result = size.fileFinishedImporting("modules/media_channel/native/createMediaPostPreviewEmbedContent.tsx");
 
 export default function createMediaPostPreviewEmbedContent(message, roleStyle, url) {
-  let obj4;
-  let str10;
-  let str6;
-  let str7;
-  let str9;
-  let tmpResult14;
   let flag = arg3;
   if (arg3 === undefined) {
     flag = false;
   }
-  const obj = MediaPostEmbedUtils;
-  const mediaPostEmbedChannelId = obj.getMediaPostEmbedChannelId(url);
+  const mediaPostEmbedChannelId = MediaPostEmbedUtils.getMediaPostEmbedChannelId(url);
   if (null == mediaPostEmbedChannelId) {
     return null;
   } else if (MediaPostEmbedStore.getEmbedFetchState(mediaPostEmbedChannelId) !== FetchState.FETCHED) {
@@ -54,113 +45,135 @@ export default function createMediaPostPreviewEmbedContent(message, roleStyle, u
     if (null == media) {
       return null;
     } else {
-      const guild = GuildStore.getGuild(media.guild_id);
+      guild = GuildStore.getGuild(media.guild_id);
       const user = UserStore.getUser(media.author_id);
       const channel = ChannelStore.getChannel(media.parent_channel_id);
       const channel1 = ChannelStore.getChannel(media.channel_id);
       let canViewChannelResult = null != channel;
       const guildId = SelectedGuildStore.getGuildId();
       if (canViewChannelResult) {
+        canViewChannelResult = LinkUtils.canViewChannel(channel);
         const tmpResult = LinkUtils;
-        canViewChannelResult = tmpResult.canViewChannel(channel);
       }
       const obj2 = { mediaPostEmbedData: media, guild, parentChannel: channel, postThread: channel1, user, selectedGuildId: guildId, canAccess: canViewChannelResult };
-      const tmpResult8 = MediaPostEmbedUtils;
-      const mediaPostEmbedCommonData = tmpResult8.getMediaPostEmbedCommonData(obj2);
+      const mediaPostEmbedCommonData = MediaPostEmbedUtils.getMediaPostEmbedCommonData(obj2);
       if (null == mediaPostEmbedCommonData) {
         return null;
       } else {
         if (null != mediaPostEmbedCommonData.authorName) {
           if (null != mediaPostEmbedCommonData.channelName) {
-            let formatToPartsResult;
-            let tmp11;
-            let tmp10;
             if (null != user) {
+              const userAuthorWithProcessedColor = useAuthorWithProcessedColor.getUserAuthorWithProcessedColor(user, mediaPostEmbedCommonData.postThread);
+              const intl6 = util.intl;
+              const obj3 = { username: mediaPostEmbedCommonData.authorName, usernameOnClick: null, channelName: null };
+              const obj4 = { userId: user.id, message, author: userAuthorWithProcessedColor, roleStyle, messageChannelId: mediaPostEmbedCommonData.threadId };
+              obj3.usernameOnClick = formatUsernameOnClickDefault(obj4);
+              obj3.channelName = mediaPostEmbedCommonData.channelName;
+              let formatToPartsResult = intl6.formatToParts(util.t.mCytFr, obj3);
               const tmpResult9 = useAuthorWithProcessedColor;
-              const userAuthorWithProcessedColor = tmpResult9.getUserAuthorWithProcessedColor(user, mediaPostEmbedCommonData.postThread);
-              const intl6 = intl7.intl;
-              const formatToParts = intl6.formatToParts;
-              const obj3 = { username: mediaPostEmbedCommonData.authorName, usernameOnClick: formatUsernameOnClickDefault(obj4), channelName: mediaPostEmbedCommonData.channelName };
-              const mCytFr = intl7.t.mCytFr;
-              obj4 = { userId: user.id, message, author: userAuthorWithProcessedColor, roleStyle, messageChannelId: mediaPostEmbedCommonData.threadId };
-              formatToPartsResult = formatToParts(mCytFr, obj3);
             }
             if (false === mediaPostEmbedCommonData.canAccess) {
-              tmp11 = React3(nativeDefault.unsafe_rawColors.TEAL_430);
-              tmp10 = importDefault;
+              let tmp11 = React4(nativeDefault.unsafe_rawColors.TEAL_430);
+              let tmp10 = importDefault;
             } else {
               tmp10 = importDefault;
-              tmp11 = React3(nativeDefault.unsafe_rawColors.BRAND_500);
+              tmp11 = React4(nativeDefault.unsafe_rawColors.BRAND_500);
             }
             let isAnimatedImageUrlResult = null != mediaPostEmbedCommonData.coverImage;
             if (isAnimatedImageUrlResult) {
+              isAnimatedImageUrlResult = MediaFormatTesters.isAnimatedImageUrl(mediaPostEmbedCommonData.coverImage);
               const tmpResult10 = MediaFormatTesters;
-              isAnimatedImageUrlResult = tmpResult10.isAnimatedImageUrl(mediaPostEmbedCommonData.coverImage);
             }
-            const tmp15 = null != mediaPostEmbedCommonData.coverImage && !mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage && isAnimatedImageUrlResult && flag;
             if (tmp15) {
               const _HermesInternal = HermesInternal;
               mediaPostEmbedCommonData.coverImage = "" + mediaPostEmbedCommonData.coverImage + "?format=webp";
             }
             if (mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage) {
-              const obj5 = { blurredCoverImage: _false.resolveAssetSource(tmp10(13104)).uri, footer: formatToPartsResult, ctaButtonColor: tmp11 };
+              const obj5 = {};
               const merged = Object.assign(mediaPostEmbedCommonData);
+              obj5.blurredCoverImage = React3.resolveAssetSource(tmp10(13104)).uri;
+              obj5.footer = formatToPartsResult;
+              obj5.ctaButtonColor = tmp11;
               return obj5;
             } else {
-              const value = DevSettingsStore.get("obscure_blur_effect_explicit_content_enabled") || DevSettingsStore.get("obscure_blur_effect_gore_content_enabled") || DevSettingsStore.get("obscure_blur_effect_self_harm_content_enabled");
-              const tmpResult11 = ExplicitMediaRedactionUtils;
-              const isPendingScanVersionResult = tmpResult11.isPendingScanVersion(mediaPostEmbedCommonData.contentScanVersion);
+              value = DevSettingsStore.get("obscure_blur_effect_explicit_content_enabled");
+              if (!value) {
+                value = DevSettingsStore.get("obscure_blur_effect_gore_content_enabled");
+              }
+              if (!value) {
+                value = DevSettingsStore.get("obscure_blur_effect_self_harm_content_enabled");
+              }
+              const isPendingScanVersionResult = ExplicitMediaRedactionUtils.isPendingScanVersion(mediaPostEmbedCommonData.contentScanVersion);
               let result = value;
-              if (result) {
+              if (value) {
+                result = ExplicitMediaRedactionUtils.shouldAgeVerifyForExplicitMedia();
                 const tmpResult12 = ExplicitMediaRedactionUtils;
-                result = tmpResult12.shouldAgeVerifyForExplicitMedia();
               }
               let isVerifiedTeenResult = value;
-              if (isVerifiedTeenResult) {
+              if (value) {
+                isVerifiedTeenResult = AgeVerificationUtils.isVerifiedTeen();
                 const tmpResult13 = AgeVerificationUtils;
-                isVerifiedTeenResult = tmpResult13.isVerifiedTeen();
               }
               if (mediaPostEmbedCommonData.shouldContainMediaWithBackground) {
-                let obj8;
                 if (null != mediaPostEmbedCommonData.coverImage) {
-                  const obj6 = { footer: formatToPartsResult, spoiler: str10, obscure: str9, obscureAwaitingScan: isPendingScanVersionResult, verifyAge: result, obscureHideControls: isVerifiedTeenResult, obscureIsOpaque: value, ctaButtonColor: tmp11, backgroundImage: tmpResult14.getBackgroundImageUrl(mediaPostEmbedCommonData.coverImage) };
+                  const obj6 = {};
                   const merged1 = Object.assign(mediaPostEmbedCommonData);
-                  str9 = "";
-                  str10 = "";
+                  obj6.footer = formatToPartsResult;
+                  let str9 = "";
+                  let str10 = "";
                   if (true === mediaPostEmbedCommonData.shouldSpoiler) {
-                    const intl4 = intl7.intl;
-                    const str11 = intl4.string(intl7.t["F+x38C"]);
-                    str10 = str11.toUpperCase();
+                    const intl4 = util.intl;
+                    str10 = intl4.string(util.t["F+x38C"]).toUpperCase();
+                    const str11 = intl4.string(util.t["F+x38C"]);
                   }
+                  obj6.spoiler = str10;
                   if (value) {
-                    const intl5 = intl7.intl;
-                    str9 = intl5.string(intl7.t.SpxcUR);
+                    const intl5 = util.intl;
+                    str9 = intl5.string(util.t.SpxcUR);
                   }
-                  obj8 = obj6;
-                  tmpResult14 = MediaPostThumbnailUtils;
+                  obj6.obscure = str9;
+                  obj6.obscureAwaitingScan = isPendingScanVersionResult;
+                  obj6.verifyAge = result;
+                  obj6.obscureHideControls = isVerifiedTeenResult;
+                  obj6.obscureIsOpaque = value;
+                  obj6.ctaButtonColor = tmp11;
+                  obj6.backgroundImage = MediaPostThumbnailUtils.getBackgroundImageUrl(mediaPostEmbedCommonData.coverImage);
+                  let obj8 = obj6;
+                  const tmpResult14 = MediaPostThumbnailUtils;
                 }
                 return obj8;
               }
-              obj8 = { footer: formatToPartsResult, spoiler: str7, obscure: str6, obscureAwaitingScan: isPendingScanVersionResult, verifyAge: result, obscureHideControls: isVerifiedTeenResult, obscureIsOpaque: value, ctaButtonColor: tmp11 };
+              obj8 = {};
               const merged2 = Object.assign(mediaPostEmbedCommonData);
-              str6 = "";
-              str7 = "";
+              obj8.footer = formatToPartsResult;
+              let str6 = "";
+              let str7 = "";
               if (true === mediaPostEmbedCommonData.shouldSpoiler) {
-                const intl2 = intl7.intl;
-                const str8 = intl2.string(intl7.t["F+x38C"]);
-                str7 = str8.toUpperCase();
+                const intl2 = util.intl;
+                str7 = intl2.string(util.t["F+x38C"]).toUpperCase();
+                const str8 = intl2.string(util.t["F+x38C"]);
               }
+              obj8.spoiler = str7;
               if (value) {
-                const intl3 = intl7.intl;
-                str6 = intl3.string(intl7.t.SpxcUR);
+                const intl3 = util.intl;
+                str6 = intl3.string(util.t.SpxcUR);
               }
+              obj8.obscure = str6;
+              obj8.obscureAwaitingScan = isPendingScanVersionResult;
+              obj8.verifyAge = result;
+              obj8.obscureHideControls = isVerifiedTeenResult;
+              obj8.obscureIsOpaque = value;
+              obj8.ctaButtonColor = tmp11;
+              const tmpResult11 = ExplicitMediaRedactionUtils;
             }
+            tmp15 = null != mediaPostEmbedCommonData.coverImage && !mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage && isAnimatedImageUrlResult && flag;
           }
         }
-        const intl = intl7.intl;
+        const intl = util.intl;
         const obj9 = { guildName: mediaPostEmbedCommonData.guildName };
-        formatToPartsResult = intl.formatToParts(intl7.t.p4VdWJ, obj9);
+        formatToPartsResult = intl.formatToParts(util.t.p4VdWJ, obj9);
       }
+      const tmpResult8 = MediaPostEmbedUtils;
     }
   }
 };

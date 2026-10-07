@@ -1,7 +1,7 @@
 // === Module 7040: AutomodFeedback ===
 
 // Module 7040 (AutomodFeedback)
-import intl3 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import size from "module_2" /* 2 */;
 
 const Feedback = { BUG: "BUG", ALLOWED: "ALLOWED", MENTION_RAID_REMOVE_RESTRICTION: "MENTION_RAID_REMOVE_RESTRICTION" };
@@ -10,23 +10,23 @@ const result = size.fileFinishedImporting("modules/guild_automod/AutomodFeedback
 
 export { Feedback };
 export const generateFeedbackOptions = function generateFeedbackOptions() {
-  let intl;
-  let intl2;
-  let obj;
-  obj = { name: intl.string(intl3.t["+MbOX4"]), value: obj.BUG };
-  intl = intl3.intl;
+  const obj = { name: null, value: null };
+  const intl = util.intl;
+  obj.name = intl.string(util.t["+MbOX4"]);
+  obj.value = obj.BUG;
   const items = [obj, ];
-  obj2 = { name: intl2.string(intl3.t.CRsCRC), value: obj.ALLOWED };
-  intl2 = intl3.intl;
+  obj2 = { name: null, value: null };
+  const intl2 = util.intl;
+  obj2.name = intl2.string(util.t.CRsCRC);
+  obj2.value = obj.ALLOWED;
   items[1] = obj2;
   return items;
 };
 export const RaidAlertType = { JOIN_RAID: "JOIN_RAID", MENTION_RAID: "MENTION_RAID" };
 export const RaidResolutionType = obj2;
 export const getMostImportantRaidResolutionType = function getMostImportantRaidResolutionType(c3) {
-  let DM_SPAM;
   if (obj2.includes(obj2.LEGITIMATE_ACTIVITY)) {
-    DM_SPAM = obj2.LEGITIMATE_ACTIVITY;
+    let DM_SPAM = obj2.LEGITIMATE_ACTIVITY;
   } else if (obj2.includes(obj2.DM_SPAM)) {
     DM_SPAM = obj2.DM_SPAM;
   } else {

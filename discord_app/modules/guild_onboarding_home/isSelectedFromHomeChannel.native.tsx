@@ -1,32 +1,30 @@
 // === Module 9776: isSelectedFromHomeChannel ===
 
 // Module 9776 (isSelectedFromHomeChannel)
-import ChannelConstants from "ChannelConstants" /* 2058 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
 import RootNavigationRef from "RootNavigationRef" /* 4743 */;
 import ChannelSectionStore from "ChannelSectionStore" /* 6793 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import size from "module_2" /* 2 */;
 
-const isGuildHomeChannel = ChannelConstants.isGuildHomeChannel;
+require = fn;
+const isGuildHomeChannel = fn(2058).isGuildHomeChannel;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/isSelectedFromHomeChannel.native.tsx");
 
 export default function isSelectedFromHomeChannel(id) {
   let coerceChannelRouteResult1;
-  const obj = RootNavigationRef;
-  const rootNavigationRef = obj.getRootNavigationRef();
+  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       const rootState = rootNavigationRef.getRootState();
       if (null == rootState) {
         return false;
       } else {
-        const tmpResult = NavigationRouteUtils;
-        const coerceMainRouteResult = tmpResult.coerceMainRoute(rootState.routes[rootState.index]);
+        const coerceMainRouteResult = NavigationRouteUtils.coerceMainRoute(rootState.routes[rootState.index]);
         if (null == coerceMainRouteResult) {
           return false;
         } else {
-          const state = coerceMainRouteResult.state;
+          state = coerceMainRouteResult.state;
           if (null == state) {
             return false;
           } else {
@@ -49,12 +47,16 @@ export default function isSelectedFromHomeChannel(id) {
                 }
                 index = index - 1;
               }
-              const tmp10 = coerceChannelRouteResult1.params.guildId === id.guild_id && isGuildHomeChannel(coerceChannelRouteResult1.params.channelId);
+              let tmp10 = coerceChannelRouteResult1.params.guildId === id.guild_id;
+              if (tmp10) {
+                tmp10 = isGuildHomeChannel(coerceChannelRouteResult1.params.channelId);
+              }
               return tmp10;
             }
             return false;
           }
         }
+        const tmpResult = NavigationRouteUtils;
       }
     }
   }

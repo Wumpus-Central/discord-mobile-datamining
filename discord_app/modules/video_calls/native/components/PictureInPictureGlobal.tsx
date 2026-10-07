@@ -1,112 +1,92 @@
 // === Module 17116: PictureInPictureGlobal ===
 
 // Module 17116 (PictureInPictureGlobal)
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1085 */;
+import native2 from "native" /* 1188 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
 import timing from "timing" /* 4897 */;
-import CallConstants from "CallConstants" /* 4917 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 5103 */;
 import NavigatorConstants from "NavigatorConstants" /* 6075 */;
 import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9049 */;
 import transitionToActivityDefault from "transitionToActivity" /* 9085 */;
-import useChatBottomManagerUIStore from "useChatBottomManagerUIStore" /* 9100 */;
 import PictureInPictureDefault from "PictureInPicture" /* 9103 */;
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 9105 */;
 import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 17117 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import native_mod from "native" /* 1188 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let channel, importDefault;
 
-let closure_15;
-let closure_16;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-let native;
-let obj2;
-let obj3;
-({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: metroImportDefault } = react_native);
-let closure_10 = useChatBottomManagerUIStore.useBestActiveChatInputContainerHeight;
-const PictureInPicturePositions = Constants.PictureInPicturePositions;
-const ParticipantTypes = CallConstants.ParticipantTypes;
-({ jsx: closure_15, jsxs: closure_16 } = Fragment);
+const usePipDimensionsDefault = tmp5(9107);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: closure_7 } = get_ActivityIndicator);
+let closure_10 = fn(9100).useBestActiveChatInputContainerHeight;
+const PictureInPicturePositions = fn(1085).PictureInPicturePositions;
+const ParticipantTypes = fn(4917).ParticipantTypes;
+const jsxProd = fn(21);
+({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 12;
-let createStyles = createStyles_mod;
-let obj = { container: { flex: 1, marginLeft: 12, marginRight: 12 }, elevationShadow: native.generateBoxShadowStyle(native.EIGHT_DP_ELEVATION_SHADOW_PARAMS), pip: obj2, background: obj3 };
-createStyles = createStyles.createStyles;
-native = native_mod;
-obj2 = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
-obj3 = { backgroundColor: nativeDefault.colors.BLACK, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
-let closure_18 = createStyles(obj);
-let memo = react.memo;
-let ReactCompilerGating = ReactCompilerGating_mod;
-let closure_19 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
-  let closure_1;
-  let first;
-  let height;
-  let tmp10;
-  let tmp12;
-  let width;
-  const tmp = channel;
-  let tmp2 = M;
-  let obj = channel(M[15]);
-  const cResult = obj.c(64);
+const createStyles = fn(4896);
+let obj = { container: { flex: 1, marginLeft: 12, marginRight: 12 }, elevationShadow: null, pip: null, background: null };
+const native = fn(1188);
+obj.elevationShadow = native.generateBoxShadowStyle(fn(1188).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+obj.pip = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
+let obj3 = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
+obj.background = { backgroundColor: nativeDefault.colors.BLACK, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
+let closure_18 = createStyles.createStyles(obj);
+let ReactCompilerGating = fn(558);
+let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+  const cResult = channel(576).c(64);
   channel = channel.channel;
-  let tmp4 = closure_18();
-  const tmp6 = require("usePipVideoOrStream")(channel.id);
+  closure_18();
+  const tmp6 = usePipVideoOrStreamDefault(channel.id);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelRTCStore, AuthenticationStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== channel.id) {
     const fn = function o() {
-      let id;
       const streamParticipants = ChannelRTCStore.getStreamParticipants(channel.id);
       return streamParticipants.find((user) => user.user.id === id.getId());
     };
     cResult[1] = channel.id;
     cResult[2] = fn;
-    tmp10 = fn;
+    let tmp10 = fn;
   } else {
     tmp10 = cResult[2];
   }
-  const tmpResult = tmp(tmp2[17]);
-  const stateFromStores = tmpResult.useStateFromStores(first, tmp10);
+  let obj = channel(576);
+  const stateFromStores = channel(504).useStateFromStores(first, tmp10);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [ChannelRTCStore, EmbeddedActivitiesStore];
     cResult[3] = items1;
-    tmp12 = items1;
+    let tmp12 = items1;
   } else {
     tmp12 = cResult[3];
   }
   if (cResult[4] !== channel.id) {
     class R {
       constructor() {
-        const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
-        let participant = null;
+        currentEmbeddedActivity = closure_8.getCurrentEmbeddedActivity();
+        participant = null;
         if (null != currentEmbeddedActivity) {
-          const getParticipant = ChannelRTCStore.getParticipant;
-          const id = channel.id;
-          const obj3 = { applicationId: null, instanceId: null };
+          tmp3 = closure_9;
+          tmp4 = channel;
+          tmp5 = closure_0;
+          tmp6 = closure_2;
+          obj = closure_0(closure_2[18]);
+          obj1 = { applicationId: null, instanceId: null };
           ({ applicationId: obj2.applicationId, compositeInstanceId: obj2.instanceId } = currentEmbeddedActivity);
-          const obj = ChannelRTCParticipants;
-          participant = getParticipant(id, obj.getEmbeddedActivityParticipantId(obj3));
+          participant = closure_9.getParticipant(channel.id, obj.getEmbeddedActivityParticipantId(obj1));
         }
         return participant;
       }
@@ -116,38 +96,38 @@ let closure_19 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) 
   } else {
     class R {
       constructor() {
-        const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
-        let participant = null;
+        currentEmbeddedActivity = closure_8.getCurrentEmbeddedActivity();
+        participant = null;
         if (null != currentEmbeddedActivity) {
-          const getParticipant = ChannelRTCStore.getParticipant;
-          const id = channel.id;
-          const obj3 = { applicationId: null, instanceId: null };
+          tmp3 = closure_9;
+          tmp4 = channel;
+          tmp5 = closure_0;
+          tmp6 = closure_2;
+          obj = closure_0(closure_2[18]);
+          obj1 = { applicationId: null, instanceId: null };
           ({ applicationId: obj2.applicationId, compositeInstanceId: obj2.instanceId } = currentEmbeddedActivity);
-          const obj = ChannelRTCParticipants;
-          participant = getParticipant(id, obj.getEmbeddedActivityParticipantId(obj3));
+          participant = closure_9.getParticipant(channel.id, obj.getEmbeddedActivityParticipantId(obj1));
         }
         return participant;
       }
     }
   }
-  const tmpResult6 = tmp(tmp2[17]);
-  const stateFromStores1 = tmpResult6.useStateFromStores(tmp12, R);
+  const tmpResult = channel(504);
+  const stateFromStores1 = channel(504).useStateFromStores(tmp12, R);
   if (cResult[6] === stateFromStores1) {
-    let tmp20;
-    let tmp22;
-    let tmp24;
-    let tmp28;
     class R {
       constructor() {
-        const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
-        let participant = null;
+        currentEmbeddedActivity = closure_8.getCurrentEmbeddedActivity();
+        participant = null;
         if (null != currentEmbeddedActivity) {
-          const getParticipant = ChannelRTCStore.getParticipant;
-          const id = channel.id;
-          const obj3 = { applicationId: null, instanceId: null };
+          tmp3 = closure_9;
+          tmp4 = channel;
+          tmp5 = closure_0;
+          tmp6 = closure_2;
+          obj = closure_0(closure_2[18]);
+          obj1 = { applicationId: null, instanceId: null };
           ({ applicationId: obj2.applicationId, compositeInstanceId: obj2.instanceId } = currentEmbeddedActivity);
-          const obj = ChannelRTCParticipants;
-          participant = getParticipant(id, obj.getEmbeddedActivityParticipantId(obj3));
+          participant = closure_9.getParticipant(channel.id, obj.getEmbeddedActivityParticipantId(obj1));
         }
         return participant;
       }
@@ -155,15 +135,17 @@ let closure_19 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) 
     if (tmp17) {
       class R {
         constructor() {
-          const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
-          let participant = null;
+          currentEmbeddedActivity = closure_8.getCurrentEmbeddedActivity();
+          participant = null;
           if (null != currentEmbeddedActivity) {
-            const getParticipant = ChannelRTCStore.getParticipant;
-            const id = channel.id;
-            const obj3 = { applicationId: null, instanceId: null };
+            tmp3 = closure_9;
+            tmp4 = channel;
+            tmp5 = closure_0;
+            tmp6 = closure_2;
+            obj = closure_0(closure_2[18]);
+            obj1 = { applicationId: null, instanceId: null };
             ({ applicationId: obj2.applicationId, compositeInstanceId: obj2.instanceId } = currentEmbeddedActivity);
-            const obj = ChannelRTCParticipants;
-            participant = getParticipant(id, obj.getEmbeddedActivityParticipantId(obj3));
+            participant = closure_9.getParticipant(channel.id, obj.getEmbeddedActivityParticipantId(obj1));
           }
           return participant;
         }
@@ -174,34 +156,38 @@ let closure_19 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) 
     if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
       class R {
         constructor() {
-          const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
-          let participant = null;
+          currentEmbeddedActivity = closure_8.getCurrentEmbeddedActivity();
+          participant = null;
           if (null != currentEmbeddedActivity) {
-            const getParticipant = ChannelRTCStore.getParticipant;
-            const id = channel.id;
-            const obj3 = { applicationId: null, instanceId: null };
+            tmp3 = closure_9;
+            tmp4 = channel;
+            tmp5 = closure_0;
+            tmp6 = closure_2;
+            obj = closure_0(closure_2[18]);
+            obj1 = { applicationId: null, instanceId: null };
             ({ applicationId: obj2.applicationId, compositeInstanceId: obj2.instanceId } = currentEmbeddedActivity);
-            const obj = ChannelRTCParticipants;
-            participant = getParticipant(id, obj.getEmbeddedActivityParticipantId(obj3));
+            participant = closure_9.getParticipant(channel.id, obj.getEmbeddedActivityParticipantId(obj1));
           }
           return participant;
         }
       }
       const items2 = [MediaEngineStore];
       cResult[9] = items2;
-      tmp20 = items2;
+      const tmp20 = items2;
     } else {
       class R {
         constructor() {
-          const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
-          let participant = null;
+          currentEmbeddedActivity = closure_8.getCurrentEmbeddedActivity();
+          participant = null;
           if (null != currentEmbeddedActivity) {
-            const getParticipant = ChannelRTCStore.getParticipant;
-            const id = channel.id;
-            const obj3 = { applicationId: null, instanceId: null };
+            tmp3 = closure_9;
+            tmp4 = channel;
+            tmp5 = closure_0;
+            tmp6 = closure_2;
+            obj = closure_0(closure_2[18]);
+            obj1 = { applicationId: null, instanceId: null };
             ({ applicationId: obj2.applicationId, compositeInstanceId: obj2.instanceId } = currentEmbeddedActivity);
-            const obj = ChannelRTCParticipants;
-            participant = getParticipant(id, obj.getEmbeddedActivityParticipantId(obj3));
+            participant = closure_9.getParticipant(channel.id, obj.getEmbeddedActivityParticipantId(obj1));
           }
           return participant;
         }
@@ -210,7 +196,11 @@ let closure_19 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) 
     if (cResult[10] !== tmp18) {
       class C {
         constructor() {
-          const isLocalVideoDisabledResult = null != importDefault && MediaEngineStore.isLocalVideoDisabled(tmp.id);
+          isLocalVideoDisabledResult = null != closure_1;
+          if (isLocalVideoDisabledResult) {
+            tmp3 = closure_12;
+            isLocalVideoDisabledResult = closure_12.isLocalVideoDisabled(tmp.id);
+          }
           return isLocalVideoDisabledResult;
         }
       }
@@ -218,33 +208,44 @@ let closure_19 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) 
       cResult[10] = tmp18;
       cResult[11] = C;
       cResult[12] = items3;
-      tmp22 = items3;
+      let tmp22 = items3;
     } else {
       class C {
         constructor() {
-          const isLocalVideoDisabledResult = null != importDefault && MediaEngineStore.isLocalVideoDisabled(tmp.id);
+          isLocalVideoDisabledResult = null != closure_1;
+          if (isLocalVideoDisabledResult) {
+            tmp3 = closure_12;
+            isLocalVideoDisabledResult = closure_12.isLocalVideoDisabled(tmp.id);
+          }
           return isLocalVideoDisabledResult;
         }
       }
       tmp22 = cResult[12];
     }
-    const tmpResult7 = tmp(tmp2[17]);
-    const stateFromStores2 = tmpResult7.useStateFromStores(tmp20, C, tmp22);
+    const stateFromStores2 = tmp(504).useStateFromStores(tmp20, C, tmp22);
     const _Symbol2 = Symbol;
     if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
       class C {
         constructor() {
-          const isLocalVideoDisabledResult = null != importDefault && MediaEngineStore.isLocalVideoDisabled(tmp.id);
+          isLocalVideoDisabledResult = null != closure_1;
+          if (isLocalVideoDisabledResult) {
+            tmp3 = closure_12;
+            isLocalVideoDisabledResult = closure_12.isLocalVideoDisabled(tmp.id);
+          }
           return isLocalVideoDisabledResult;
         }
       }
       const items4 = [ChannelRTCStore, AuthenticationStore];
       cResult[13] = items4;
-      tmp24 = items4;
+      const tmp24 = items4;
     } else {
       class C {
         constructor() {
-          const isLocalVideoDisabledResult = null != importDefault && MediaEngineStore.isLocalVideoDisabled(tmp.id);
+          isLocalVideoDisabledResult = null != closure_1;
+          if (isLocalVideoDisabledResult) {
+            tmp3 = closure_12;
+            isLocalVideoDisabledResult = closure_12.isLocalVideoDisabled(tmp.id);
+          }
           return isLocalVideoDisabledResult;
         }
       }
@@ -252,9 +253,10 @@ let closure_19 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) 
     if (cResult[14] !== channel.id) {
       class B {
         constructor() {
-          const participant = ChannelRTCStore.getParticipant(channel.id, AuthenticationStore.getId());
-          let tmp2 = null;
+          participant = closure_9.getParticipant(channel.id, closure_11.getId());
+          tmp2 = null;
           if (null != participant) {
+            tmp3 = ParticipantTypes;
             tmp2 = null;
             if (participant.type === ParticipantTypes.USER) {
               tmp2 = null;
@@ -271,9 +273,10 @@ let closure_19 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) 
     } else {
       class B {
         constructor() {
-          const participant = ChannelRTCStore.getParticipant(channel.id, AuthenticationStore.getId());
-          let tmp2 = null;
+          participant = closure_9.getParticipant(channel.id, closure_11.getId());
+          tmp2 = null;
           if (null != participant) {
+            tmp3 = ParticipantTypes;
             tmp2 = null;
             if (participant.type === ParticipantTypes.USER) {
               tmp2 = null;
@@ -286,32 +289,34 @@ let closure_19 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) 
         }
       }
     }
-    const tmpResult8 = tmp(tmp2[17]);
-    const stateFromStores3 = tmpResult8.useStateFromStores(tmp24, B);
+    const tmpResult7 = tmp(504);
+    const stateFromStores3 = tmp(504).useStateFromStores(tmp24, B);
     if (cResult[16] !== channel) {
       class M {
         constructor() {
-          const obj = PrivateChannelCallUtils;
-          obj.openGuildVoiceModal(channel, "PIP");
+          obj = closure_0(closure_2[20]);
+          openGuildVoiceModalResult = obj.openGuildVoiceModal(channel, "PIP");
+          return;
         }
       }
       cResult[16] = channel;
       cResult[17] = M;
-      tmp28 = M;
     } else {
       class M {
         constructor() {
-          const obj = PrivateChannelCallUtils;
-          obj.openGuildVoiceModal(channel, "PIP");
+          obj = closure_0(closure_2[20]);
+          openGuildVoiceModalResult = obj.openGuildVoiceModal(channel, "PIP");
+          return;
         }
       }
     }
-    M = tmp28;
+    dependencyMap = M;
     if (cResult[18] !== channel) {
       class M {
         constructor() {
-          const obj = PrivateChannelCallUtils;
-          obj.openGuildVoiceModal(channel, "PIP");
+          obj = closure_0(closure_2[20]);
+          openGuildVoiceModalResult = obj.openGuildVoiceModal(channel, "PIP");
+          return;
         }
       }
       tmp30[0] = channel;
@@ -320,71 +325,80 @@ let closure_19 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) 
     } else {
       class M {
         constructor() {
-          const obj = PrivateChannelCallUtils;
-          obj.openGuildVoiceModal(channel, "PIP");
+          obj = closure_0(closure_2[20]);
+          openGuildVoiceModalResult = obj.openGuildVoiceModal(channel, "PIP");
+          return;
         }
       }
     }
-    const tmpResult9 = tmp(tmp2[21]);
-    const shouldForcePipOrientation = tmpResult9.useShouldForcePipOrientation(tmp30);
-    tmp(tmp2[22]);
+    const tmpResult8 = tmp(504);
+    const shouldForcePipOrientation = tmp(9104).useShouldForcePipOrientation(tmp30);
+    tmp(5919);
     if (cResult[20] === channel.id) {
       class M {
         constructor() {
-          const obj = PrivateChannelCallUtils;
-          obj.openGuildVoiceModal(channel, "PIP");
+          obj = closure_0(closure_2[20]);
+          openGuildVoiceModalResult = obj.openGuildVoiceModal(channel, "PIP");
+          return;
         }
       }
-      ({ width, height } = require("usePipDimensions")(tmp34));
-      require("usePipDimensions")(tmp34);
+      ({ width, height } = usePipDimensionsDefault(tmp34));
       if (tmp33) {
         class M {
           constructor() {
-            const obj = PrivateChannelCallUtils;
-            obj.openGuildVoiceModal(channel, "PIP");
+            obj = closure_0(closure_2[20]);
+            openGuildVoiceModalResult = obj.openGuildVoiceModal(channel, "PIP");
+            return;
           }
         }
       } else {
         class M {
           constructor() {
-            const obj = PrivateChannelCallUtils;
-            obj.openGuildVoiceModal(channel, "PIP");
+            obj = closure_0(closure_2[20]);
+            openGuildVoiceModalResult = obj.openGuildVoiceModal(channel, "PIP");
+            return;
           }
         }
       }
       if (cResult[23] === height) {
         class M {
           constructor() {
-            const obj = PrivateChannelCallUtils;
-            obj.openGuildVoiceModal(channel, "PIP");
+            obj = closure_0(closure_2[20]);
+            openGuildVoiceModalResult = obj.openGuildVoiceModal(channel, "PIP");
+            return;
           }
         }
       }
-      size = { height, width, flexDirection: tmp36 };
+      const size = { height, width, flexDirection: tmp36 };
       cResult[23] = height;
       cResult[24] = width;
       cResult[25] = tmp36;
       cResult[26] = size;
+      const tmp35 = usePipDimensionsDefault(tmp34);
     }
     const obj2 = { channelId: channel.id, forcedOrientation: shouldForcePipOrientation };
     cResult[20] = channel.id;
     cResult[21] = shouldForcePipOrientation;
     cResult[22] = obj2;
+    tmp34 = obj2;
+    const tmpResult9 = tmp(9104);
   }
   let tmp19 = stateFromStores1;
   if (null != tmp6) {
     class M {
       constructor() {
-        const obj = PrivateChannelCallUtils;
-        obj.openGuildVoiceModal(channel, "PIP");
+        obj = closure_0(closure_2[20]);
+        openGuildVoiceModalResult = obj.openGuildVoiceModal(channel, "PIP");
+        return;
       }
     }
     tmp19 = stateFromStores1;
     if (tmp6.user.id !== AuthenticationStore.getId()) {
       class M {
         constructor() {
-          const obj = PrivateChannelCallUtils;
-          obj.openGuildVoiceModal(channel, "PIP");
+          obj = closure_0(closure_2[20]);
+          openGuildVoiceModalResult = obj.openGuildVoiceModal(channel, "PIP");
+          return;
         }
       }
     }
@@ -392,11 +406,8 @@ let closure_19 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) 
   cResult[6] = stateFromStores1;
   cResult[7] = tmp6;
   cResult[8] = tmp19;
+  const tmpResult6 = channel(504);
 }) : ((channel) => {
-  let callback;
-  let items7;
-  let items8;
-  let obj11;
   channel = channel.channel;
   let stateFromStores1;
   let onDoubleTap;
@@ -405,32 +416,26 @@ let closure_19 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) 
   let width;
   let height;
   const tmp = closure_18();
-  let tmp2 = stateFromStores1;
   let tmp4 = stateFromStores1(onDoubleTap[16])(channel.id);
-  let obj = channel(onDoubleTap[17]);
   const items = [ChannelRTCStore, AuthenticationStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    let id;
+  const stateFromStores = channel(onDoubleTap[17]).useStateFromStores(items, () => {
     const streamParticipants = ChannelRTCStore.getStreamParticipants(channel.id);
     return streamParticipants.find((user) => user.user.id === id.getId());
   });
-  let obj3 = channel(onDoubleTap[17]);
+  let obj = channel(onDoubleTap[17]);
   const items1 = [ChannelRTCStore, EmbeddedActivitiesStore];
-  stateFromStores1 = obj3.useStateFromStores(items1, () => {
+  stateFromStores1 = channel(onDoubleTap[17]).useStateFromStores(items1, () => {
     const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
     let participant = null;
     if (null != currentEmbeddedActivity) {
-      const getParticipant = ChannelRTCStore.getParticipant;
-      const id = channel.id;
-      const obj3 = { applicationId: null, instanceId: null };
       ({ applicationId: obj2.applicationId, compositeInstanceId: obj2.instanceId } = currentEmbeddedActivity);
-      const obj = ChannelRTCParticipants;
-      participant = getParticipant(id, obj.getEmbeddedActivityParticipantId(obj3));
+      participant = ChannelRTCStore.getParticipant(channel.id, ChannelRTCParticipants.getEmbeddedActivityParticipantId({ applicationId: null, instanceId: null }));
+      const obj3 = { applicationId: null, instanceId: null };
     }
     return participant;
   });
   let tmp10 = stateFromStores1;
-  const tmp9 = stateFromStores1(onDoubleTap[19])(channel.id);
+  let obj3 = channel(onDoubleTap[17]);
   if (null != tmp4) {
     tmp10 = stateFromStores1;
     if (tmp4.user.id !== AuthenticationStore.getId()) {
@@ -441,16 +446,19 @@ let closure_19 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) 
     tmp10 = stateFromStores1;
   }
   stateFromStores1 = tmp10;
+  tmp9 = stateFromStores1(onDoubleTap[19])(channel.id);
   const items2 = [MediaEngineStore];
   const items3 = [tmp10];
-  const tmp5Result = channel(onDoubleTap[17]);
-  const stateFromStores2 = tmp5Result.useStateFromStores(items2, () => {
-    const isLocalVideoDisabledResult = null != stateFromStores1 && MediaEngineStore.isLocalVideoDisabled(tmp.id);
+  const stateFromStores2 = channel(onDoubleTap[17]).useStateFromStores(items2, () => {
+    let isLocalVideoDisabledResult = null != stateFromStores1;
+    if (isLocalVideoDisabledResult) {
+      isLocalVideoDisabledResult = MediaEngineStore.isLocalVideoDisabled(tmp.id);
+    }
     return isLocalVideoDisabledResult;
   }, items3);
+  const tmp5Result = channel(onDoubleTap[17]);
   const items4 = [ChannelRTCStore, AuthenticationStore];
-  const tmp5Result4 = channel(onDoubleTap[17]);
-  const stateFromStores3 = tmp5Result4.useStateFromStores(items4, () => {
+  const stateFromStores3 = channel(onDoubleTap[17]).useStateFromStores(items4, () => {
     const participant = ChannelRTCStore.getParticipant(channel.id, AuthenticationStore.getId());
     let tmp2 = null;
     if (null != participant) {
@@ -466,48 +474,45 @@ let closure_19 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) 
   });
   const items5 = [channel];
   onDoubleTap = isScreenLandscape.useCallback(() => {
-    const obj = PrivateChannelCallUtils;
-    obj.openGuildVoiceModal(channel, "PIP");
+    PrivateChannelCallUtils.openGuildVoiceModal(channel, "PIP");
   }, items5);
+  const tmp5Result4 = channel(onDoubleTap[17]);
+  shouldForcePipOrientation = channel(onDoubleTap[21]).useShouldForcePipOrientation({ channel });
   const tmp5Result5 = channel(onDoubleTap[21]);
-  shouldForcePipOrientation = tmp5Result5.useShouldForcePipOrientation({ channel });
-  const tmp5Result6 = channel(onDoubleTap[22]);
-  isScreenLandscape = tmp5Result6.useIsScreenLandscape();
-  const obj4 = { channelId: channel.id, forcedOrientation: shouldForcePipOrientation };
-  size = tmp2(tmp3[23])(obj4);
+  isScreenLandscape = channel(onDoubleTap[22]).useIsScreenLandscape();
+  let size = tmp2(tmp3[23])({ channelId: channel.id, forcedOrientation: shouldForcePipOrientation });
   width = size.width;
   height = size.height;
   const items6 = [shouldForcePipOrientation, isScreenLandscape, height, width];
   let type;
   const memo = isScreenLandscape.useMemo(() => {
-    let str;
-    size = { height, width, flexDirection: str };
+    const size = { height, width, flexDirection: null };
     if (isScreenLandscape) {
-      str = "row";
+      let str = "row";
     } else {
       str = "column";
     }
+    size.flexDirection = str;
     return size;
   }, items6);
   if (tmp10 != null) {
     type = tmp10.type;
   }
-  const tmp19 = type === ParticipantTypes.ACTIVITY && tmp2(onDoubleTap[25])(tmp10.applicationId) && null == stateFromStores;
+  const tmp19 = type === ParticipantTypes.ACTIVITY && stateFromStores1(onDoubleTap[25])(tmp10.applicationId) && null == stateFromStores;
   let type1;
   if (tmp10 != null) {
     type1 = tmp10.type;
   }
   if (ParticipantTypes.HIDDEN_STREAM !== type1) {
-    let tmp21;
     if (ParticipantTypes.STREAM !== type1) {
       if (ParticipantTypes.USER === type1) {
         let tmp22 = null;
         if (!stateFromStores2) {
-          const obj5 = { participant: tmp10, avatarSize: channel(onDoubleTap[12]).AvatarSizes.PROFILE, resizeMode: channel(onDoubleTap[27]).ResizeMode.COVER, onSingleTap: onDoubleTap, onDoubleTap };
-          const tmp2Result = tmp2(onDoubleTap[28]);
-          tmp22 = closure_15(tmp2Result, obj5);
+          const obj5 = { participant: tmp10, avatarSize: tmp5(tmp3[12]).AvatarSizes.PROFILE, resizeMode: tmp5(tmp3[27]).ResizeMode.COVER, onSingleTap: onDoubleTap, onDoubleTap };
+          tmp22 = closure_15(tmp2(tmp3[28]), obj5);
+          const tmp2Result = tmp2(tmp3[28]);
         }
-        tmp21 = tmp22;
+        let tmp21 = tmp22;
       } else {
         tmp21 = null;
         if (ParticipantTypes.ACTIVITY === type1) {
@@ -518,12 +523,10 @@ let closure_19 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) 
                       const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
                       if (null != currentEmbeddedActivity) {
                         let _location;
-                        const guild_id = channel.guild_id;
-                        const tmp4 = transitionToActivityDefault;
                         if (currentEmbeddedActivity != null) {
                           _location = currentEmbeddedActivity.location;
                         }
-                        tmp4(guild_id, _location);
+                        transitionToActivityDefault(channel.guild_id, _location);
                       }
                       callback();
                     }
@@ -532,180 +535,165 @@ let closure_19 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) 
         }
       }
     }
-    const obj8 = { style: items7, children: items8 };
-    items7 = [, , ];
+    const obj7 = { style: tmp.background, children: null };
+    const obj8 = { style: null, children: null };
+    const items7 = [, , ];
     ({ pip: arr8[0], elevationShadow: arr8[1] } = tmp);
     items7[2] = memo;
-    let tmp26Result = null != stateFromStores3 && !tmp19;
-    const obj7 = { style: tmp.background, children: closure_15(closure_7, obj11) };
+    obj8.style = items7;
+    let tmp26Result = null != stateFromStores3;
     if (tmp26Result) {
-      const obj9 = { participant: stateFromStores3, avatarSize: channel(onDoubleTap[12]).AvatarSizes.PROFILE, resizeMode: channel(onDoubleTap[27]).ResizeMode.COVER, onSingleTap: onDoubleTap };
-      const tmp2Result3 = tmp2(onDoubleTap[28]);
-      tmp26Result = closure_15(tmp2Result3, obj9);
+      tmp26Result = !tmp19;
     }
-    items8 = [tmp26Result, , ];
+    if (tmp26Result) {
+      const obj9 = { participant: stateFromStores3, avatarSize: tmp5(tmp3[12]).AvatarSizes.PROFILE, resizeMode: tmp5(tmp3[27]).ResizeMode.COVER, onSingleTap: onDoubleTap };
+      tmp26Result = closure_15(tmp2(tmp3[28]), obj9);
+      const tmp2Result3 = tmp2(tmp3[28]);
+    }
+    const items8 = [tmp26Result, , ];
     let tmp26Result2 = null != stateFromStores && !tmp19;
     if (tmp26Result2) {
       const obj10 = { onSingleTap: onDoubleTap };
       tmp26Result2 = closure_15(tmp2(tmp3[31]), obj10);
     }
     items8[1] = tmp26Result2;
-    const tmp33 = (null == stateFromStores3 || null == stateFromStores || null == stateFromStores1) && tmp21;
-    items8[2] = tmp33;
-    obj11 = { activeOpacity: 0.7, children: closure_16(width, obj8) };
+    const obj11 = { activeOpacity: 0.7, children: null };
+    items8[2] = (null == stateFromStores3 || null == stateFromStores || null == stateFromStores1) && tmp21;
+    obj8.children = items8;
+    obj11.children = closure_16(width, obj8);
+    obj7.children = closure_15(closure_7, obj11);
     return closure_15(width, obj7);
   }
-  const obj12 = { resizeMode: channel(onDoubleTap[27]).ResizeMode.CONTAIN, participant: tmp10, onSingleTap: onDoubleTap, onDoubleTap };
-  const tmp2Result4 = tmp2(onDoubleTap[26]);
-  tmp21 = closure_15(tmp2Result4, obj12);
+  const obj12 = { resizeMode: null, participant: null, onSingleTap: null, onDoubleTap: null };
+  const obj4 = { channelId: channel.id, forcedOrientation: shouldForcePipOrientation };
+  const tmp5Result6 = channel(onDoubleTap[22]);
+  obj12.resizeMode = channel(onDoubleTap[27]).ResizeMode.CONTAIN;
+  obj12.participant = tmp10;
+  obj12.onSingleTap = onDoubleTap;
+  obj12.onDoubleTap = onDoubleTap;
+  tmp21 = closure_15(stateFromStores1(onDoubleTap[26]), obj12);
+  const tmp2Result4 = stateFromStores1(onDoubleTap[26]);
 }));
-const memo2 = react.memo;
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_20 = memo2(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
-  let first;
-  let tmp5;
-  let tmp6;
-  let tmp7;
-  const obj = react2;
-  const cResult = obj.c(7);
+ReactCompilerGating = fn(558);
+let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+  const cResult = c.c(7);
   channel = channel.channel;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function l() {
       return constants.TOP_RIGHT;
     };
     cResult[0] = fn;
-    first = fn;
+    let first = fn;
   } else {
     first = cResult[0];
   }
-  [tmp5, tmp6] = react.useState(first);
-  _slicedToArray(react.useState(first), 2);
+  [tmp5, tmp6] = noop.useState(first);
   if (cResult[1] !== channel) {
     const obj2 = { channel };
-    const tmp10 = closure_15(closure_19, obj2);
+    const tmp10 = closure_1_15(closure_19, obj2);
     cResult[1] = channel;
     cResult[2] = tmp10;
-    tmp7 = tmp10;
+    let tmp7 = tmp10;
   } else {
     tmp7 = cResult[2];
   }
   if (cResult[3] === channel) {
     if (cResult[4] === tmp5) {
-      let tmp11;
       if (cResult[5] === tmp7) {
-        tmp11 = cResult[6];
+        let tmp11 = cResult[6];
       }
       return tmp11;
     }
   }
-  const tmp12 = closure_15(PictureInPictureDefault, { channel, preferredPosition: tmp5, onMove: tmp6, children: tmp7 });
+  const tmp12 = closure_1_15(PictureInPictureDefault, { channel, preferredPosition: tmp5, onMove: tmp6, children: tmp7 });
   cResult[3] = channel;
   cResult[4] = tmp5;
   cResult[5] = tmp7;
   cResult[6] = tmp12;
   tmp11 = tmp12;
+  const tmp4 = _slicedToArray(noop.useState(first), 2);
 }) : ((channel) => {
-  let tmp2;
-  let tmp3;
-  const f128673 = () => constants.TOP_RIGHT;
   channel = channel.channel;
-  [tmp2, tmp3] = react.useState(f128673);
-  const obj = { channel, preferredPosition: tmp2, onMove: tmp3, children: closure_15(closure_19, { channel }) };
-  _slicedToArray(react.useState(f128673), 2);
-  const tmp4 = PictureInPictureDefault;
-  return closure_15(tmp4, obj);
+  [tmp2, tmp3] = noop.useState(() => constants.TOP_RIGHT);
+  const obj = { channel, preferredPosition: tmp2, onMove: tmp3, children: null };
+  const tmp = _slicedToArray(noop.useState(() => constants.TOP_RIGHT), 2);
+  obj.children = closure_1_15(closure_19, { channel });
+  return closure_1_15(PictureInPictureDefault, obj);
 }));
 const __initData = { code: "function PictureInPictureGlobalTsx1(){const{withTiming,drawerState,STANDARD_EASING}=this.__closure;return withTiming(drawerState,{easing:STANDARD_EASING,duration:250});}" };
 const __initData2 = { code: "function PictureInPictureGlobalTsx2(){const{interpolate,animatedDrawerState,NAV_BAR_HEIGHT,PADDING,chatInputContainerHeight,PIP_AVOIDANCE_TAB_BAR_HEIGHT}=this.__closure;return{marginTop:interpolate(animatedDrawerState.get(),[0,1],[NAV_BAR_HEIGHT+PADDING,PADDING]),marginBottom:interpolate(animatedDrawerState.get(),[0,1],[chatInputContainerHeight+PADDING,PIP_AVOIDANCE_TAB_BAR_HEIGHT+PADDING])};}" };
 const __initData3 = { code: "function PictureInPictureGlobalTsx3(){const{withTiming,drawerState,STANDARD_EASING}=this.__closure;return withTiming(drawerState,{easing:STANDARD_EASING,duration:250});}" };
 const __initData4 = { code: "function PictureInPictureGlobalTsx4(){const{interpolate,animatedDrawerState,NAV_BAR_HEIGHT,PADDING,chatInputContainerHeight,PIP_AVOIDANCE_TAB_BAR_HEIGHT}=this.__closure;return{marginTop:interpolate(animatedDrawerState.get(),[0,1],[NAV_BAR_HEIGHT+PADDING,PADDING]),marginBottom:interpolate(animatedDrawerState.get(),[0,1],[chatInputContainerHeight+PADDING,PIP_AVOIDANCE_TAB_BAR_HEIGHT+PADDING])};}" };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
-  let closure_1;
-  let derivedValue;
-  let left;
-  let num;
-  let right;
-  const tmp = num;
-  let obj = num(derivedValue[15]);
-  const cResult = obj.c(14);
+ReactCompilerGating = fn(558);
+let obj5 = { backgroundColor: nativeDefault.colors.BLACK, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/PictureInPictureGlobal.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+  const cResult = num(derivedValue[15]).c(14);
   channel = channel.channel;
   const tmp4 = closure_18();
-  let obj2 = num(derivedValue[33]);
+  let obj = num(derivedValue[15]);
   num = 1;
   if (obj2.useIsChannelFocused()) {
     num = 0;
   }
   const tmp5 = closure_10();
   importDefault = tmp5;
+  obj2 = num(derivedValue[33]);
   const fn = function n() {
     const obj = timing;
-    const obj2 = { easing: native.STANDARD_EASING, duration: 250 };
-    return obj.withTiming(num, obj2);
+    return obj.withTiming(num, { easing: native2.STANDARD_EASING, duration: 250 });
   };
-  const tmpResult = tmp(derivedValue[34]);
-  fn.__closure = { withTiming: tmp(derivedValue[35]).withTiming, drawerState: num, STANDARD_EASING: tmp(derivedValue[12]).STANDARD_EASING };
+  const tmpResult = num(derivedValue[34]);
+  fn.__closure = { withTiming: num(derivedValue[35]).withTiming, drawerState: num, STANDARD_EASING: num(derivedValue[12]).STANDARD_EASING };
   fn.__workletHash = 5168896066356;
   fn.__initData = __initData;
-  ({ withTiming: tmp(derivedValue[35]).withTiming, drawerState: num, STANDARD_EASING: tmp(derivedValue[12]).STANDARD_EASING });
   derivedValue = tmpResult.useDerivedValue(fn);
+  const obj3 = { withTiming: num(derivedValue[35]).withTiming, drawerState: num, STANDARD_EASING: num(derivedValue[12]).STANDARD_EASING };
   const fn2 = function o() {
-    let interpolate;
-    let interpolate2;
-    let items;
-    let items1;
-    let value;
-    let value2;
-    const obj = { marginTop: interpolate(value, [0, 1], items), marginBottom: interpolate2(value2, [0, 1], items1) };
-    interpolate = ReanimatedRexport.interpolate;
-    ReanimatedRexport;
+    const obj = { marginTop: null, marginBottom: null };
     value = derivedValue.get();
-    items = [NavigatorConstants.NAV_BAR_HEIGHT + c17, c17];
-    interpolate2 = ReanimatedRexport.interpolate;
-    items1 = [closure_1 + c17, ];
-    ReanimatedRexport;
+    const items = [NavigatorConstants.NAV_BAR_HEIGHT + c17, c17];
+    obj.marginTop = ReanimatedRexport.interpolate(value, [0, 1], items);
+    const items1 = [closure_1 + c17, ];
     value2 = derivedValue.get();
     items1[1] = getPIPBottomOffsetForPIPMode.PIP_AVOIDANCE_TAB_BAR_HEIGHT + c17;
+    obj.marginBottom = ReanimatedRexport.interpolate(value2, [0, 1], items1);
     return obj;
   };
-  const tmpResult2 = tmp(derivedValue[34]);
-  fn2.__closure = { interpolate: tmp(derivedValue[34]).interpolate, animatedDrawerState: derivedValue, NAV_BAR_HEIGHT: tmp(derivedValue[36]).NAV_BAR_HEIGHT, PADDING, chatInputContainerHeight: tmp5, PIP_AVOIDANCE_TAB_BAR_HEIGHT: tmp(derivedValue[37]).PIP_AVOIDANCE_TAB_BAR_HEIGHT };
+  const tmpResult2 = num(derivedValue[34]);
+  fn2.__closure = { interpolate: num(derivedValue[34]).interpolate, animatedDrawerState: derivedValue, NAV_BAR_HEIGHT: num(derivedValue[36]).NAV_BAR_HEIGHT, PADDING, chatInputContainerHeight: tmp5, PIP_AVOIDANCE_TAB_BAR_HEIGHT: num(derivedValue[37]).PIP_AVOIDANCE_TAB_BAR_HEIGHT };
   fn2.__workletHash = 8833756900366;
   fn2.__initData = __initData2;
-  ({ interpolate: tmp(derivedValue[34]).interpolate, animatedDrawerState: derivedValue, NAV_BAR_HEIGHT: tmp(derivedValue[36]).NAV_BAR_HEIGHT, PADDING, chatInputContainerHeight: tmp5, PIP_AVOIDANCE_TAB_BAR_HEIGHT: tmp(derivedValue[37]).PIP_AVOIDANCE_TAB_BAR_HEIGHT });
   const animatedStyle = tmpResult2.useAnimatedStyle(fn2);
-  ({ left, right } = require("useSafeAreaInsets")());
-  require("useSafeAreaInsets")();
+  const obj4 = { interpolate: num(derivedValue[34]).interpolate, animatedDrawerState: derivedValue, NAV_BAR_HEIGHT: num(derivedValue[36]).NAV_BAR_HEIGHT, PADDING, chatInputContainerHeight: tmp5, PIP_AVOIDANCE_TAB_BAR_HEIGHT: num(derivedValue[37]).PIP_AVOIDANCE_TAB_BAR_HEIGHT };
   const tmp8 = importDefault;
+  ({ left, right } = require("useSafeAreaInsets")());
   if (cResult[0] === left) {
-    let tmp10;
     if (cResult[1] === right) {
-      tmp10 = cResult[2];
+      let tmp10 = cResult[2];
     }
     if (cResult[3] === animatedStyle) {
-      let tmp11;
-      let tmp12;
       if (cResult[4] === tmp4.container) {
-        tmp11 = cResult[5];
+        let tmp11 = cResult[5];
       }
       if (cResult[6] !== channel) {
         const obj5 = { channel };
         const tmp15 = closure_15(closure_20, obj5);
         cResult[6] = channel;
         cResult[7] = tmp15;
-        tmp12 = tmp15;
+        let tmp12 = tmp15;
       } else {
         tmp12 = cResult[7];
       }
       if (cResult[8] === tmp11) {
-        let tmp16;
         if (cResult[9] === tmp12) {
-          tmp16 = cResult[10];
+          let tmp16 = cResult[10];
         }
         if (cResult[11] === tmp10) {
-          let tmp19;
           if (cResult[12] === tmp16) {
-            tmp19 = cResult[13];
+            let tmp19 = cResult[13];
           }
           return tmp19;
         }
@@ -717,7 +705,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
         tmp19 = tmp22;
       }
       const obj7 = { style: tmp11, pointerEvents: "box-none", children: tmp12 };
-      const tmp18 = closure_15(tmp8(derivedValue[34]).View, obj7);
+      const tmp18 = closure_15(tmp8(tmp2[34]).View, obj7);
       cResult[8] = tmp11;
       cResult[9] = tmp12;
       cResult[10] = tmp18;
@@ -734,70 +722,51 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[1] = right;
   cResult[2] = items1;
   tmp10 = items1;
+  const tmp9 = require("useSafeAreaInsets")();
 }) : ((channel) => {
-  let View;
-  let closure_1;
-  let items;
-  let items1;
-  let obj5;
-  let num;
   importDefault = undefined;
   let derivedValue;
-  channel = channel.channel;
-  const tmp3 = derivedValue;
   const tmp = closure_18();
-  let obj = num(derivedValue[33]);
-  num = 1;
+  let num = 1;
   if (obj.useIsChannelFocused()) {
     num = 0;
   }
   const tmp4 = closure_10();
   importDefault = tmp4;
+  obj = num(derivedValue[33]);
   const fn = function n() {
     const obj = timing;
-    const obj2 = { easing: native.STANDARD_EASING, duration: 250 };
-    return obj.withTiming(num, obj2);
+    return obj.withTiming(num, { easing: native2.STANDARD_EASING, duration: 250 });
   };
-  const tmp2Result = num(tmp3[34]);
-  let obj2 = { withTiming: tmp2(tmp3[35]).withTiming, drawerState: num, STANDARD_EASING: tmp2(tmp3[12]).STANDARD_EASING };
-  fn.__closure = obj2;
+  const tmp2Result = num(derivedValue[34]);
+  fn.__closure = { withTiming: num(derivedValue[35]).withTiming, drawerState: num, STANDARD_EASING: num(derivedValue[12]).STANDARD_EASING };
   fn.__workletHash = 13687629306038;
   fn.__initData = __initData3;
   derivedValue = tmp2Result.useDerivedValue(fn);
+  let obj2 = { withTiming: num(derivedValue[35]).withTiming, drawerState: num, STANDARD_EASING: num(derivedValue[12]).STANDARD_EASING };
   const fn2 = function o() {
-    let interpolate;
-    let interpolate2;
-    let items;
-    let items1;
-    let value;
-    let value2;
-    const obj = { marginTop: interpolate(value, [0, 1], items), marginBottom: interpolate2(value2, [0, 1], items1) };
-    interpolate = ReanimatedRexport.interpolate;
-    ReanimatedRexport;
+    const obj = { marginTop: null, marginBottom: null };
     value = derivedValue.get();
-    items = [NavigatorConstants.NAV_BAR_HEIGHT + c17, c17];
-    interpolate2 = ReanimatedRexport.interpolate;
-    items1 = [closure_1 + c17, ];
-    ReanimatedRexport;
+    const items = [NavigatorConstants.NAV_BAR_HEIGHT + c17, c17];
+    obj.marginTop = ReanimatedRexport.interpolate(value, [0, 1], items);
+    const items1 = [closure_1 + c17, ];
     value2 = derivedValue.get();
     items1[1] = getPIPBottomOffsetForPIPMode.PIP_AVOIDANCE_TAB_BAR_HEIGHT + c17;
+    obj.marginBottom = ReanimatedRexport.interpolate(value2, [0, 1], items1);
     return obj;
   };
-  const tmp2Result2 = num(tmp3[34]);
-  fn2.__closure = { interpolate: num(tmp3[34]).interpolate, animatedDrawerState: derivedValue, NAV_BAR_HEIGHT: num(tmp3[36]).NAV_BAR_HEIGHT, PADDING, chatInputContainerHeight: tmp4, PIP_AVOIDANCE_TAB_BAR_HEIGHT: num(tmp3[37]).PIP_AVOIDANCE_TAB_BAR_HEIGHT };
+  const tmp2Result2 = num(derivedValue[34]);
+  fn2.__closure = { interpolate: num(derivedValue[34]).interpolate, animatedDrawerState: derivedValue, NAV_BAR_HEIGHT: num(derivedValue[36]).NAV_BAR_HEIGHT, PADDING, chatInputContainerHeight: tmp4, PIP_AVOIDANCE_TAB_BAR_HEIGHT: num(derivedValue[37]).PIP_AVOIDANCE_TAB_BAR_HEIGHT };
   fn2.__workletHash = 5941339218056;
   fn2.__initData = __initData4;
-  ({ interpolate: num(tmp3[34]).interpolate, animatedDrawerState: derivedValue, NAV_BAR_HEIGHT: num(tmp3[36]).NAV_BAR_HEIGHT, PADDING, chatInputContainerHeight: tmp4, PIP_AVOIDANCE_TAB_BAR_HEIGHT: num(tmp3[37]).PIP_AVOIDANCE_TAB_BAR_HEIGHT });
   const animatedStyle = tmp2Result2.useAnimatedStyle(fn2);
   const rect = require("useSafeAreaInsets")();
-  const obj4 = { style: items, pointerEvents: "box-none", children: closure_15(View, obj5) };
-  items = [closure_6.absoluteFill, { paddingLeft: rect.left, paddingRight: rect.right }];
-  obj5 = { style: items1, pointerEvents: "box-none", children: closure_15(closure_20, { channel }) };
-  items1 = [tmp.container, animatedStyle];
-  View = require("ReanimatedRexport").View;
+  const obj4 = { style: null, pointerEvents: "box-none", children: null };
+  let items = [closure_6.absoluteFill, { paddingLeft: rect.left, paddingRight: rect.right }];
+  obj4.style = items;
+  const obj5 = { style: null, pointerEvents: "box-none", children: closure_15(closure_20, { channel: channel.channel }) };
+  let items1 = [tmp.container, animatedStyle];
+  obj5.style = items1;
+  obj4.children = closure_15(require("ReanimatedRexport").View, obj5);
   return closure_15(closure_5, obj4);
 });
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/video_calls/native/components/PictureInPictureGlobal.tsx");
-
-export default tmp6;

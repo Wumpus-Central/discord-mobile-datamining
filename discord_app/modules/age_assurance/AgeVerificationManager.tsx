@@ -3,25 +3,19 @@
 // Module 17480 (AgeVerificationManager)
 import LoggerDefault from "Logger" /* 3 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1107 */;
-import UserStore2 from "UserStore" /* 1377 */;
 import Server from "Server" /* 1985 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 5108 */;
 import ChannelMessagesDefault from "ChannelMessages" /* 5438 */;
 import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5587 */;
 import AgeGatedFeature from "AgeGatedFeature" /* 5588 */;
-import Constants2 from "Constants" /* 8108 */;
 import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8307 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import MessageStore from "MessageStore" /* 5116 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import Constants from "Constants" /* 1085 */;
+import UserStore from "UserStore" /* 1377 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
-import size from "module_2" /* 2 */;
 
-const UserStore = UserStore2;
-
-let c9;
-let metroImportAll;
+require = fn;
 function handleMessageCreate(channelId) {
   const message = MessageStore.getMessage(channelId.channelId, channelId.message.id);
   let type;
@@ -53,112 +47,108 @@ function handleMessageCreate(channelId) {
       rawValue = found.rawValue;
     }
     if (rawValue === AgeVerificationUtils.AgeVerificationSystemNotificationContentType.MANUAL_REVIEW_SUBMITTED) {
+      const result = ManualReviewActionCreators.invalidateAgeVerificationCaches();
       const tmp4Result = ManualReviewActionCreators;
-      const result = tmp4Result.invalidateAgeVerificationCaches();
     }
   }
 }
-const transformUser = UserStore2.transformUser;
-({ ChannelTypes: metroImportAll, MAX_MESSAGES_PER_CHANNEL: c9 } = Constants);
-const SafetyToastType = Constants2.SafetyToastType;
-let tmp3 = new LoggerDefault("AgeVerificationManager");
-let closure_10 = tmp3;
-class AgeVerificationManager extends AutomaticLifecycleManager {
-  constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    require = applyArgumentsResult;
-    applyArgumentsResult._previousAgeVerificationStatus = null;
-    applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
-      const currentUser = UserStore.getCurrentUser();
-      let prop;
-      if (currentUser != null) {
-        prop = currentUser.ageVerificationStatus;
-      }
-      if (prop == null) {
-        prop = null;
-      }
-      require._previousAgeVerificationStatus = prop;
-    };
-    applyArgumentsResult.handleCurrentUserUpdate = function handleCurrentUserUpdate(user) {
-      let limit;
-      function handleLoadChannelMessages(channelId) {
-        const obj = closure_1_1(closure_1_2[10]);
-        const obj2 = { channelId, limit };
-        const messages = obj.fetchMessages(obj2);
-      }
-      function handleLoadForumPosts(arg0) {
-        const channel = closure_1_3.getChannel(arg0);
-        let type;
-        if (channel != null) {
-          type = channel.type;
-        }
-        let tmp4 = type !== constants.GUILD_FORUM;
-        if (tmp4) {
-          let type1;
-          if (channel != null) {
-            type1 = channel.type;
-          }
-          tmp4 = type1 !== tmp3.GUILD_MEDIA;
-        }
-        if (!tmp4) {
-          const obj = closure_1_0(closure_1_2[11]);
-          obj.preloadForumThreads(channel);
-        }
-      }
-      let channelId;
-      let c1;
-      let prop = transformUser(user.user).ageVerificationStatus;
-      if (prop == null) {
-        prop = null;
-      }
-      const tmp3 = require._previousAgeVerificationStatus !== prop;
-      let isFeatureAgeGatedResult = tmp3 && prop === Server.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
+const transformUser = fn(1377).transformUser;
+const Constants = fn(1085);
+({ ChannelTypes: closure_8, MAX_MESSAGES_PER_CHANNEL: closure_9 } = Constants);
+const SafetyToastType = fn(8108).SafetyToastType;
+let closure_10 = new LoggerDefault("AgeVerificationManager");
+const prototype = function AgeVerificationManager() {
+  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+  require = applyArgumentsResult;
+  applyArgumentsResult._previousAgeVerificationStatus = null;
+  applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
+    const currentUser = UserStore.getCurrentUser();
+    let prop;
+    if (currentUser != null) {
+      prop = currentUser.ageVerificationStatus;
+    }
+    if (prop == null) {
+      prop = null;
+    }
+    applyArgumentsResult._previousAgeVerificationStatus = prop;
+  };
+  applyArgumentsResult.handleCurrentUserUpdate = function handleCurrentUserUpdate(user) {
+    let channelId;
+    c1 = undefined;
+    let prop = transformUser(user.user).ageVerificationStatus;
+    if (prop == null) {
+      prop = null;
+    }
+    let isFeatureAgeGatedResult = tmp5;
+    if (applyArgumentsResult._previousAgeVerificationStatus !== prop) {
+      isFeatureAgeGatedResult = prop === Server.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
+    }
+    if (isFeatureAgeGatedResult) {
+      isFeatureAgeGatedResult = RegionalFeatureConfigUtils.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES);
+    }
+    if (applyArgumentsResult._previousAgeVerificationStatus !== prop) {
+      const result = ManualReviewActionCreators.invalidateManualReviewCache();
+    }
+    try {
       if (isFeatureAgeGatedResult) {
-        let obj = RegionalFeatureConfigUtils;
-        isFeatureAgeGatedResult = obj.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES);
-      }
-      if (tmp3) {
-        let obj2 = ManualReviewActionCreators;
-        const result = obj2.invalidateManualReviewCache();
-      }
-      try {
-        if (isFeatureAgeGatedResult) {
-          channelId = SelectedChannelStore.getChannelId();
-          c1 = false;
-          const arr = ChannelMessagesDefault;
-          const item = arr.forEach((channelId) => {
-            channelId = channelId.channelId;
-            const channel = closure_2_3.getChannel(channelId);
-            let nsfw;
-            if (channel != null) {
-              nsfw = channel.nsfw;
-            }
-            if (nsfw) {
-              const obj = closure_2_1(closure_2_2[16]);
-              obj.clear(channelId);
-              if (channelId === channelId) {
-                c1 = true;
-              }
-            }
-          });
-          const tmp18 = c1 && null != tmp14;
-          if (tmp18) {
-            handleLoadChannelMessages(channelId);
-            handleLoadForumPosts(channelId);
+        channelId = SelectedChannelStore.getChannelId();
+        c1 = false;
+        const item = ChannelMessagesDefault.forEach((channelId) => {
+          channelId = channelId.channelId;
+          channel = channel.getChannel(channelId);
+          let nsfw;
+          if (channel != null) {
+            nsfw = channel.nsfw;
           }
+          if (nsfw) {
+            ChannelMessagesDefault.clear(channelId);
+            if (channelId === channelId) {
+              c1 = true;
+            }
+          }
+        });
+        let tmp20 = c1;
+        if (c1) {
+          tmp20 = null != tmp16;
         }
-        require._previousAgeVerificationStatus = prop;
-      } catch (tmp23) {
-        require._previousAgeVerificationStatus = prop;
-        throw tmp23;
+        if (tmp20) {
+          (function handleLoadChannelMessages(channelId) {
+            const messages = _true(6978).fetchMessages({ channelId, limit });
+          })(tmp16);
+          (function handleLoadForumPosts(arg0) {
+            channel = channel.getChannel(arg0);
+            let type;
+            if (channel != null) {
+              type = channel.type;
+            }
+            let tmp4 = type !== constants.GUILD_FORUM;
+            if (tmp4) {
+              let type1;
+              if (channel != null) {
+                type1 = channel.type;
+              }
+              tmp4 = type1 !== tmp3.GUILD_MEDIA;
+            }
+            if (!tmp4) {
+              channelId(6817).preloadForumThreads(channel);
+              const obj = channelId(6817);
+            }
+          })(tmp16);
+        }
       }
-    };
-    let obj = { POST_CONNECTION_OPEN: applyArgumentsResult.handlePostConnectionOpen, CURRENT_USER_UPDATE: applyArgumentsResult.handleCurrentUserUpdate, MESSAGE_CREATE: handleMessageCreate };
-    applyArgumentsResult.actions = obj;
-    return applyArgumentsResult;
-  }
+      applyArgumentsResult._previousAgeVerificationStatus = prop;
+    } catch (tmp25) {
+      tmp._previousAgeVerificationStatus = tmp2;
+      throw tmp25;
+    }
+  };
+  applyArgumentsResult.actions = { POST_CONNECTION_OPEN: applyArgumentsResult.handlePostConnectionOpen, CURRENT_USER_UPDATE: applyArgumentsResult.handleCurrentUserUpdate, MESSAGE_CREATE: handleMessageCreate };
+  return applyArgumentsResult;
+}.prototype;
+class prototype extends tmp4 {
 }
-const ageVerificationManager = new AgeVerificationManager();
+const prototype1 = new prototype();
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationManager.tsx");
 
-export default ageVerificationManager;
+export default prototype1;

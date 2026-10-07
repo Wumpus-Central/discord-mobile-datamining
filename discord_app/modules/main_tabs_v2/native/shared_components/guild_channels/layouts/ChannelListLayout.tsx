@@ -7,7 +7,7 @@ import CozyDrawer from "CozyDrawer" /* 11713 */;
 import Compact from "Compact" /* 11715 */;
 import Cozy from "Cozy" /* 11716 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import size from "module_2" /* 2 */;
 
 function getLayoutStyles(layout) {
   let flag = launchpad;
@@ -32,36 +32,6 @@ function getLayoutStyles(layout) {
 function isLayoutCompact(messagesTabLayout) {
   return messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT;
 }
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let COZY;
-  const ChannelListLayoutSetting = UserSettings.ChannelListLayoutSetting;
-  const setting = ChannelListLayoutSetting.useSetting();
-  const ChannelListLayoutTypes = ChannelListLayoutTypes2.ChannelListLayoutTypes;
-  const tmp4 = arg0;
-  if (tmp4) {
-    COZY = ChannelListLayoutTypes.COZY_DRAWER_SMOL;
-  } else if (setting === ChannelListLayoutTypes.COMPACT) {
-    COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT;
-  } else {
-    COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY;
-  }
-  return COZY;
-}) : ((arg0) => {
-  let COZY;
-  const ChannelListLayoutSetting = UserSettings.ChannelListLayoutSetting;
-  const setting = ChannelListLayoutSetting.useSetting();
-  const ChannelListLayoutTypes = ChannelListLayoutTypes2.ChannelListLayoutTypes;
-  const tmp4 = arg0;
-  if (tmp4) {
-    COZY = ChannelListLayoutTypes.COZY_DRAWER_SMOL;
-  } else if (setting === ChannelListLayoutTypes.COMPACT) {
-    COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT;
-  } else {
-    COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY;
-  }
-  return COZY;
-});
-let size = size_mod;
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx");
 
 export { getLayoutStyles };
@@ -71,29 +41,50 @@ export function makeSizeStyle(size) {
 }
 export { isLayoutCompact };
 export const isLayoutCozy = function isLayoutCozy(messagesTabLayout) {
-  const tmp3 = messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY || messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER || messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER_SMOL;
-  return tmp3;
+  return messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY || messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER || messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER_SMOL;
 };
-export const useMessagesTabLayout = tmp2;
-export const getScaledChannelRowHeight = function getScaledChannelRowHeight(arg0, layout) {
-  let marginVertical;
-  let paddingVertical;
-  let flag = arg2;
-  if (arg2 === undefined) {
+export const useMessagesTabLayout = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const ChannelListLayoutSetting = UserSettings.ChannelListLayoutSetting;
+  const setting = ChannelListLayoutSetting.useSetting();
+  const ChannelListLayoutTypes = ChannelListLayoutTypes2.ChannelListLayoutTypes;
+  if (arg0) {
+    let COZY = ChannelListLayoutTypes.COZY_DRAWER_SMOL;
+  } else if (setting === ChannelListLayoutTypes.COMPACT) {
+    COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT;
+  } else {
+    COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY;
+  }
+  return COZY;
+}) : ((arg0) => {
+  const ChannelListLayoutSetting = UserSettings.ChannelListLayoutSetting;
+  const setting = ChannelListLayoutSetting.useSetting();
+  const ChannelListLayoutTypes = ChannelListLayoutTypes2.ChannelListLayoutTypes;
+  if (arg0) {
+    let COZY = ChannelListLayoutTypes.COZY_DRAWER_SMOL;
+  } else if (setting === ChannelListLayoutTypes.COMPACT) {
+    COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT;
+  } else {
+    COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY;
+  }
+  return COZY;
+});
+export const getScaledChannelRowHeight = function getScaledChannelRowHeight(fontScale, layout) {
+  let flag = isThreadResult;
+  if (isThreadResult === undefined) {
     flag = false;
   }
   const tmp = getLayoutStyles(layout);
   const container = tmp.container;
-  const bound = Math.max(Math.max(arg0, 1) * (tmp.channelName.height + (tmp.messagePreview.margin.marginTop + tmp.messagePreview.height)), tmp.icon.wrapper.size);
+  const bound = Math.max(Math.max(fontScale, 1) * (tmp.channelName.height + (tmp.messagePreview.margin.marginTop + tmp.messagePreview.height)), tmp.icon.wrapper.size);
   if (flag) {
-    paddingVertical = container.paddingThread.paddingVertical;
+    let paddingVertical = container.paddingThread.paddingVertical;
   } else {
     paddingVertical = container.padding.paddingVertical;
   }
   layout = tmp.layout;
   const sum = bound + 2 * paddingVertical;
   if (flag) {
-    marginVertical = layout.marginThread.marginVertical;
+    let marginVertical = layout.marginThread.marginVertical;
   } else {
     marginVertical = layout.margin.marginVertical;
   }

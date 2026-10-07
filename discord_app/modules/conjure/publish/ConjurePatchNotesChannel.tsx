@@ -2,11 +2,9 @@
 
 // Module 16590 (ConjurePatchNotesChannel)
 import Storage3 from "Storage" /* 510 */;
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import _modDef3753 from "module_3753" /* 3753 */;
 import size from "module_2" /* 2 */;
-
-let set;
 
 const VibegrationsPatchNotesLastChannelsByApp = "VibegrationsPatchNotesLastChannelsByApp";
 const combined = "<#" + "9".repeat(20) + ">";
@@ -14,13 +12,12 @@ let result = size.fileFinishedImporting("modules/conjure/publish/ConjurePatchNot
 
 export const PLAY_LINE_CHANNEL_PLACEHOLDER = combined;
 export const formatPlaySuffix = function formatPlaySuffix(PLAY_LINE_CHANNEL_PLACEHOLDER) {
-  const intl = intl2.intl;
-  const obj = { channel: PLAY_LINE_CHANNEL_PLACEHOLDER };
-  return "\n\n" + intl.formatToPlainString(_modDef3753["2ECgBx"], obj);
+  const intl = util.intl;
+  return "\n\n" + intl.formatToPlainString(_modDef3753["2ECgBx"], { channel: PLAY_LINE_CHANNEL_PLACEHOLDER });
 };
 export const lastPatchNotesChannel = function lastPatchNotesChannel(applicationId) {
   const Storage = Storage3.Storage;
-  const value = Storage.get(VibegrationsPatchNotesLastChannelsByApp);
+  value = Storage.get(VibegrationsPatchNotesLastChannelsByApp);
   let tmp2;
   if (value != null) {
     tmp2 = value[applicationId];
@@ -30,9 +27,8 @@ export const lastPatchNotesChannel = function lastPatchNotesChannel(applicationI
 export const rememberPatchNotesChannel = function rememberPatchNotesChannel(arg0, id) {
   const Storage = Storage3.Storage;
   const obj = {};
-  set = Storage.set;
   const Storage2 = Storage3.Storage;
   const merged = Object.assign(Storage2.get(VibegrationsPatchNotesLastChannelsByApp));
   obj[arg0] = id;
-  const result = set(VibegrationsPatchNotesLastChannelsByApp, obj);
+  const result = Storage.set(VibegrationsPatchNotesLastChannelsByApp, obj);
 };

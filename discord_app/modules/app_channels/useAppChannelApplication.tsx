@@ -6,10 +6,10 @@ import ApplicationActionCreators from "ApplicationActionCreators" /* 6665 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-let type;
-
 const ChannelTypes = Constants.ChannelTypes;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
+const result = size.fileFinishedImporting("modules/app_channels/useAppChannelApplication.tsx");
+
+export const useAppChannelApplication = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
   type = undefined;
   if (type != null) {
     type = type.type;
@@ -18,8 +18,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
   if (type === ChannelTypes.GUILD_APP) {
     application_id = type.application_id;
   }
-  const obj = ApplicationActionCreators;
-  return obj.useApplication(application_id).data;
+  return ApplicationActionCreators.useApplication(application_id).data;
 }) : ((type) => {
   type = undefined;
   if (type != null) {
@@ -29,9 +28,5 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
   if (type === ChannelTypes.GUILD_APP) {
     application_id = type.application_id;
   }
-  const obj = ApplicationActionCreators;
-  return obj.useApplication(application_id).data;
+  return ApplicationActionCreators.useApplication(application_id).data;
 });
-const result = size.fileFinishedImporting("modules/app_channels/useAppChannelApplication.tsx");
-
-export const useAppChannelApplication = tmp2;

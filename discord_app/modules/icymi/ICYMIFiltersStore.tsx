@@ -1,47 +1,47 @@
 // === Module 8033: ICYMIFiltersStore ===
 
 // Module 8033 (ICYMIFiltersStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ICYMITypes from "ICYMITypes" /* 8034 */;
-import size from "module_2" /* 2 */;
 
+require = fn;
 let filters = {};
-const DeviceSettingsStore = get_initializedDefault.DeviceSettingsStore;
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class ICYMIFiltersStore extends DeviceSettingsStore {
-  initialize(arg0) {
-    let obj = arg0;
-    if (arg0 == null) {
-      obj = {};
-    }
-    filters = obj;
-  }
-  filterStaffContent() {
-    return true === filters.filterStaffContent;
-  }
-  getDoubleTapBehavior() {
-    let DEFAULT = filters.doubleTapBehavior;
-    if (DEFAULT == null) {
-      DEFAULT = ICYMITypes.GravityICYMIDoubleTapBehavior.DEFAULT;
-    }
-    return DEFAULT;
-  }
-  getState() {
-    return filters;
-  }
-  getUserAgnosticState() {
-    return filters;
-  }
 }
 const prototype = ICYMIFiltersStore.prototype;
+prototype["initialize"] = function initialize(arg0) {
+  let obj = arg0;
+  if (arg0 == null) {
+    obj = {};
+  }
+  filters = obj;
+};
+prototype["filterStaffContent"] = function filterStaffContent() {
+  return true === filters.filterStaffContent;
+};
+prototype["getDoubleTapBehavior"] = function getDoubleTapBehavior() {
+  let DEFAULT = filters.doubleTapBehavior;
+  if (DEFAULT == null) {
+    DEFAULT = ICYMITypes.GravityICYMIDoubleTapBehavior.DEFAULT;
+  }
+  return DEFAULT;
+};
+prototype["getState"] = function getState() {
+  return filters;
+};
+prototype["getUserAgnosticState"] = function getUserAgnosticState() {
+  return filters;
+};
 ICYMIFiltersStore.displayName = "ICYMIFiltersStore";
 ICYMIFiltersStore.persistKey = "ICYMIFiltersStore";
-let obj = {
+const iCYMIFiltersStore = new ICYMIFiltersStore(DispatcherDefault, {
   SET_ICYMI_FILTERS: function handleFilters(filters) {
     filters = filters.filters;
   }
-};
-const iCYMIFiltersStore = new ICYMIFiltersStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/ICYMIFiltersStore.tsx");
 
 export default iCYMIFiltersStore;

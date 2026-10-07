@@ -3,129 +3,50 @@
 // Module 7694 (AutoModerationActionSystemMessage)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
-import intl19 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1405 */;
 import _modDef4467 from "module_4467" /* 4467 */;
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4502 */;
 import DateUtils from "DateUtils" /* 4558 */;
 import shared from "shared" /* 4735 */;
-import AssetRegistryDefault from "AssetRegistry" /* 4808 */;
+import _modDef4808 from "module_4808" /* 4808 */;
 import useChannelName from "useChannelName" /* 5049 */;
 import useMessageAuthor from "useMessageAuthor" /* 5311 */;
 import AutomodMessageUtils from "AutomodMessageUtils" /* 7030 */;
-import react_native from "react-native" /* 7606 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7606 */;
 import createCommonMessageDefault from "createCommonMessage" /* 7634 */;
 import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 7661 */;
 import AutomodRaidAlertTypes from "AutomodRaidAlertTypes" /* 7695 */;
 import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 7696 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 7700 */;
+import _modDef7700 from "module_7700" /* 7700 */;
 import getRoleIcon from "getRoleIcon" /* 7701 */;
-import react_native2 from "react-native" /* 17 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import PermissionStore from "PermissionStore" /* 4515 */;
 import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import module_12 from "module_12" /* 12 */;
+import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 
-let c3;
-let closure_4;
-({ processColor: c3, Image: closure_4 } = react_native2);
+({ processColor: c3, Image: closure_4 } = get_ActivityIndicator);
 const Permissions = Constants.Permissions;
-let closure_11 = module_12.memoize((arg0) => {
-  let tmp4;
-  let tmpResult;
-  const obj = shared;
-  const isThemeDarkResult = obj.isThemeDark(arg0);
+let closure_11 = apply.memoize((arg0) => {
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  const obj2 = { defaultUsernameColor: tmpResult.processColorOrThrow(tmp4) };
-  tmp4 = isThemeDarkResult ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_630;
-  tmpResult = react_native;
+  const obj2 = { defaultUsernameColor: null };
+  const isThemeDarkResult = shared.isThemeDark(arg0);
+  const tmp4 = shared.isThemeDark(arg0) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_630;
+  obj2.defaultUsernameColor = RowGeneratorStyleSheet.processColorOrThrow(tmp4);
   return obj2;
 });
 let result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/AutoModerationActionSystemMessage.tsx");
 
 export const createAutoModerationActionSystemMessage = function createAutoModerationActionSystemMessage(message) {
-  let avatar1;
-  let channelName;
-  let colorString;
-  let content;
-  let embedChannel;
-  let embedChannelId;
-  let ensureAvatarSource2;
-  let ensureAvatarSourceResult;
-  let flaggedMessageId;
-  let formatToPlainString2Result;
-  let guildMemberAvatar;
-  let iconRoleId;
-  let id;
-  let interactionUserId;
-  let internal;
-  let internal2;
-  let internal3;
-  let internal4;
-  let internal5;
-  let internal6;
-  let internal7;
-  let internal8;
-  let intl11;
-  let intl12;
-  let intl14;
-  let intl17;
-  let intl18;
-  let intl2;
-  let intl3;
-  let intl4;
-  let intl5;
-  let intl6;
-  let intl9;
-  let keyword;
-  let makeSource;
-  let obj12;
-  let obj15;
-  let obj18;
-  let obj19;
-  let obj9;
-  let processColorOrThrow;
-  let processColorOrThrow2;
-  let processColorOrThrow3;
-  let processColorOrThrow4;
-  let processColorOrThrow5;
-  let processColorOrThrow6;
-  let processColorOrThrow7;
-  let processColorOrThrow8;
-  let quarantineType;
-  let resolveAssetSource;
-  let resolveAssetSource2;
-  let resolveAssetSource3;
-  let resolveAssetSource4;
-  let resolveAssetSource5;
-  let roleStyle;
-  let ruleName;
-  let str3;
-  let string2Result;
-  let stringResult1;
-  let theme;
-  let tmp35;
-  let tmp67Result2;
-  let tmp73;
-  let tmpResult37;
-  let tmpResult43;
-  let tmpResult46;
-  let tmpResult49;
-  let tmpResult57;
-  let tmpResult59;
-  let tmpResult60;
-  let tmpResult61;
-  let tmpResult62;
   ({ message, theme, roleStyle } = message);
   const defaultUsernameColor = closure_11(theme).defaultUsernameColor;
-  const obj = AutomodMessageUtils;
   if (obj.isAutomodMessageRecord(message)) {
-    const tmpResult = AutomodMessageUtils;
-    const result = tmpResult.extractAutomodMessageFields(message);
+    const result = AutomodMessageUtils.extractAutomodMessageFields(message);
     ({ keyword, embedChannel, flaggedMessageId, quarantineType } = result);
     ({ ruleName, content, embedChannelId, interactionUserId } = result);
     const channel = ChannelStore.getChannel(message.getChannelId());
@@ -133,50 +54,48 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
     if (channel != null) {
       guildId = channel.getGuildId();
     }
-    const tmpResult32 = useMessageAuthor;
-    const messageAuthor = tmpResult32.getMessageAuthor(message);
+    const tmpResult = AutomodMessageUtils;
+    const messageAuthor = useMessageAuthor.getMessageAuthor(message);
     ({ guildMemberAvatar, colorString, iconRoleId } = messageAuthor);
     const author = message.author;
-    const nick = messageAuthor.nick;
+    const tmpResult31 = useMessageAuthor;
     const canResult = PermissionStore.can(Permissions.VIEW_CHANNEL, embedChannel);
-    const tmpResult33 = AutomodMessageUtils;
-    let str = tmpResult33.getActionHeaderTextMobile(message, author, interactionUserId);
-    const intl = intl19.intl;
-    const stringResult = intl.string(intl19.t["94JbM3"]);
-    const tmpResult34 = AutomodMessageUtils;
-    const result1 = tmpResult34.isAutomodNotification(message);
+    let str = AutomodMessageUtils.getActionHeaderTextMobile(message, author, interactionUserId);
+    const intl = util.intl;
+    const stringResult = intl.string(util.t["94JbM3"]);
+    const tmpResult32 = AutomodMessageUtils;
+    const result1 = AutomodMessageUtils.isAutomodNotification(message);
     let tmp14 = null;
-    let raidAlertResolveCTAText = stringResult;
+    let tmp15 = stringResult;
     if (result1) {
-      let formatToPlainStringResult;
-      const tmpResult35 = AutomodMessageUtils;
-      const result2 = tmpResult35.extractAutomodNotificationFields(message);
-      const notificationType = result2.notificationType;
+      let resolvedReason = AutomodMessageUtils.extractAutomodNotificationFields(message);
+      const notificationType = resolvedReason.notificationType;
       if (AutomodMessageUtils.IS_BACKWARDS_COMPAT_RAID_TYPE !== notificationType) {
         if (AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.RAID !== notificationType) {
           if (AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.MENTION_RAID === notificationType) {
             let fromNowResult;
-            if (null != result2.raidDatetime) {
-              const obj13 = _modDef4467(result2.raidDatetime);
-              fromNowResult = obj13.fromNow();
+            if (null != resolvedReason.raidDatetime) {
+              fromNowResult = _modDef4467(resolvedReason.raidDatetime).fromNow();
+              const obj17 = _modDef4467(resolvedReason.raidDatetime);
             }
-            const obj2 = { subtitleLeft: fromNowResult, header: intl5.string(intl19.t.C2uIXE), headerColor: processColorOrThrow3(internal3.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL)), headerIconURL: resolveAssetSource2(tmpResult37.makeSource(AssetRegistryDefault)).uri, headerIconColor: processColorOrThrow4(internal4.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL)), body: intl6.string(intl19.t.SWIWEV), shouldShowActions: false };
-            intl5 = intl19.intl;
-            processColorOrThrow3 = react_native.processColorOrThrow;
-            react_native;
-            internal3 = nativeDefault.internal;
-            resolveAssetSource2 = React3.resolveAssetSource;
-            tmpResult37 = AvatarUtils;
-            processColorOrThrow4 = react_native.processColorOrThrow;
-            react_native;
-            internal4 = nativeDefault.internal;
-            intl6 = intl19.intl;
+            const obj2 = { subtitleLeft: fromNowResult, header: null, headerColor: null, headerIconURL: null, headerIconColor: null, body: null, shouldShowActions: false };
+            const intl5 = util.intl;
+            obj2.header = intl5.string(util.t.C2uIXE);
+            const internal3 = nativeDefault.internal;
+            obj2.headerColor = RowGeneratorStyleSheet.processColorOrThrow(internal3.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL));
+            const tmpResult35 = RowGeneratorStyleSheet;
+            obj2.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef4808)).uri;
+            const tmpResult36 = AvatarUtils;
+            const internal4 = nativeDefault.internal;
+            obj2.headerIconColor = RowGeneratorStyleSheet.processColorOrThrow(internal4.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL));
+            const intl6 = util.intl;
+            obj2.body = intl6.string(util.t.SWIWEV);
             str = "";
             tmp14 = obj2;
-            raidAlertResolveCTAText = stringResult;
+            tmp15 = stringResult;
+            const tmpResult37 = RowGeneratorStyleSheet;
           } else if (AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED === notificationType) {
-            const tmpResult39 = AutomodMessageUtils;
-            const userIdOfAutomodAction = tmpResult39.getUserIdOfAutomodAction(message);
+            const userIdOfAutomodAction = AutomodMessageUtils.getUserIdOfAutomodAction(message);
             const user = UserStore.getUser(userIdOfAutomodAction);
             let member = null;
             if (null != userIdOfAutomodAction) {
@@ -185,233 +104,265 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
                 member = GuildMemberStore.getMember(guildId, userIdOfAutomodAction);
               }
             }
-            let nick1;
+            let nick;
             if (member != null) {
-              nick1 = member.nick;
+              nick = member.nick;
             }
-            if (nick1 == null) {
+            if (nick == null) {
               let username;
               if (user != null) {
                 username = user.username;
               }
-              nick1 = username;
+              nick = username;
             }
+            const tmpResult38 = AutomodMessageUtils;
             let avatar;
-            const ensureAvatarSource = utils_AvatarUtils.ensureAvatarSource;
-            utils_AvatarUtils;
             if (member != null) {
               avatar = member.avatar;
             }
             if (null != avatar) {
-              let guildMemberAvatarSource;
               if (null != guildId) {
-                const obj3 = { userId: author.id, avatar: avatar1, guildId };
-                avatar1 = undefined;
-                const getGuildMemberAvatarSource = AvatarUtils.getGuildMemberAvatarSource;
-                AvatarUtils;
+                const obj3 = { userId: author.id, avatar: null, guildId: null };
+                let avatar1;
                 if (member != null) {
                   avatar1 = member.avatar;
                 }
-                guildMemberAvatarSource = getGuildMemberAvatarSource(obj3, author);
+                obj3.avatar = avatar1;
+                obj3.guildId = guildId;
+                let guildMemberAvatarSource = AvatarUtils.getGuildMemberAvatarSource(obj3, author);
+                const tmpResult40 = AvatarUtils;
               }
-              const obj4 = { header: intl2.string(intl19.t.lVLiFp), headerColor: processColorOrThrow(internal.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_POSITIVE)), headerIconURL: resolveAssetSource(tmpResult43.makeSource(AssetRegistryDefault2)).uri, headerIconColor: processColorOrThrow2(internal2.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_POSITIVE)), body: intl3.string(intl19.t["QV/8u5"]), shouldShowActions: false, subtitleRight: obj12.fromNow(), subtitleLeft: intl4.string(intl19.t.qlFrXW), enabledByAvatarURL: ensureAvatarSourceResult.uri, enabledByUsername: nick1, enabledByColor: tmp35 };
-              ensureAvatarSourceResult = ensureAvatarSource(guildMemberAvatarSource);
-              intl2 = intl19.intl;
-              processColorOrThrow = react_native.processColorOrThrow;
-              react_native;
-              internal = nativeDefault.internal;
-              resolveAssetSource = React3.resolveAssetSource;
-              tmpResult43 = AvatarUtils;
-              processColorOrThrow2 = react_native.processColorOrThrow;
-              react_native;
-              internal2 = nativeDefault.internal;
-              intl3 = intl19.intl;
-              obj12 = _modDef4467(message.timestamp);
-              intl4 = intl19.intl;
+              const obj4 = { header: null, headerColor: null, headerIconURL: null, headerIconColor: null, body: null, shouldShowActions: false, subtitleRight: null, subtitleLeft: null, enabledByAvatarURL: null, enabledByUsername: null, enabledByColor: null };
+              const intl2 = util.intl;
+              obj4.header = intl2.string(util.t.lVLiFp);
+              const ensureAvatarSourceResult = tmpResult39.ensureAvatarSource(guildMemberAvatarSource);
+              const internal = nativeDefault.internal;
+              obj4.headerColor = RowGeneratorStyleSheet.processColorOrThrow(internal.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_POSITIVE));
+              const tmpResult41 = RowGeneratorStyleSheet;
+              obj4.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef7700)).uri;
+              const tmpResult42 = AvatarUtils;
+              const internal2 = nativeDefault.internal;
+              obj4.headerIconColor = RowGeneratorStyleSheet.processColorOrThrow(internal2.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_POSITIVE));
+              const intl3 = util.intl;
+              obj4.body = intl3.string(util.t["QV/8u5"]);
+              const tmpResult43 = RowGeneratorStyleSheet;
+              obj4.subtitleRight = _modDef4467(message.timestamp).fromNow();
+              const intl4 = util.intl;
+              obj4.subtitleLeft = intl4.string(util.t.qlFrXW);
+              obj4.enabledByAvatarURL = ensureAvatarSourceResult.uri;
+              obj4.enabledByUsername = nick;
               let colorString1;
               if (member != null) {
                 colorString1 = member.colorString;
               }
-              tmp35 = undefined;
+              let tmp30;
               if (null != colorString1) {
-                tmp35 = _false(member.colorString);
+                tmp30 = React3(member.colorString);
               }
+              obj4.enabledByColor = tmp30;
               str = "";
               tmp14 = obj4;
-              raidAlertResolveCTAText = stringResult;
+              tmp15 = stringResult;
+              const obj16 = _modDef4467(message.timestamp);
             }
             guildMemberAvatarSource = author.getAvatarSource(undefined, false, 16);
+            tmpResult39 = utils_AvatarUtils;
           } else {
-            const obj5 = { header: intl17.string(intl19.t.VdZCcC), headerColor: processColorOrThrow7(internal7.resolveSemanticColor(theme, nativeDefault.colors.TEXT_SUBTLE)), headerIconURL: resolveAssetSource5(tmpResult46.makeSource(AssetRegistryDefault)).uri, headerIconColor: processColorOrThrow8(internal8.resolveSemanticColor(theme, nativeDefault.colors.TEXT_SUBTLE)), body: intl18.string(intl19.t["NxHYX/"]), shouldShowActions: false };
-            intl17 = intl19.intl;
-            processColorOrThrow7 = react_native.processColorOrThrow;
-            react_native;
-            internal7 = nativeDefault.internal;
-            resolveAssetSource5 = React3.resolveAssetSource;
-            tmpResult46 = AvatarUtils;
-            processColorOrThrow8 = react_native.processColorOrThrow;
-            react_native;
-            internal8 = nativeDefault.internal;
-            intl18 = intl19.intl;
+            const obj5 = { header: null, headerColor: null, headerIconURL: null, headerIconColor: null, body: null, shouldShowActions: false };
+            const intl17 = util.intl;
+            obj5.header = intl17.string(util.t.VdZCcC);
+            const internal7 = nativeDefault.internal;
+            obj5.headerColor = RowGeneratorStyleSheet.processColorOrThrow(internal7.resolveSemanticColor(theme, nativeDefault.colors.TEXT_SUBTLE));
+            const tmpResult44 = RowGeneratorStyleSheet;
+            obj5.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef4808)).uri;
+            const tmpResult45 = AvatarUtils;
+            const internal8 = nativeDefault.internal;
+            obj5.headerIconColor = RowGeneratorStyleSheet.processColorOrThrow(internal8.resolveSemanticColor(theme, nativeDefault.colors.TEXT_SUBTLE));
+            const intl18 = util.intl;
+            obj5.body = intl18.string(util.t["NxHYX/"]);
             str = "";
             tmp14 = obj5;
-            raidAlertResolveCTAText = stringResult;
+            tmp15 = stringResult;
+            const tmpResult46 = RowGeneratorStyleSheet;
           }
         }
       }
       let fromNowResult1;
-      if (null != result2.raidDatetime) {
-        const obj16 = _modDef4467(result2.raidDatetime);
-        fromNowResult1 = obj16.fromNow();
+      if (null != resolvedReason.raidDatetime) {
+        fromNowResult1 = _modDef4467(resolvedReason.raidDatetime).fromNow();
+        const obj22 = _modDef4467(resolvedReason.raidDatetime);
       }
-      const raidType = result2.raidType;
       let str2 = "";
-      const DM_RAID = AutomodRaidAlertTypes.AutomodRaidAlertTypes.DM_RAID;
-      if (null != result2.raidDatetime) {
+      if (null != resolvedReason.raidDatetime) {
         const _Date = Date;
-        const self = this;
-        const self2 = this;
-        const toLocaleString = new Date(result2.raidDatetime).toLocaleString;
-        const date = new Date(result2.raidDatetime);
-        str2 = toLocaleString(intl19.intl.currentLocale, GuildAntiRaidUtils.DATE_CONFIG);
+        const date = new Date(resolvedReason.raidDatetime);
+        str2 = date.toLocaleString(util.intl.currentLocale, GuildAntiRaidUtils.DATE_CONFIG);
       }
-      const intl7 = intl19.intl;
+      const tmp42 = resolvedReason.raidType === AutomodRaidAlertTypes.AutomodRaidAlertTypes.DM_RAID;
+      const intl7 = util.intl;
       const formatToPlainString = intl7.formatToPlainString;
-      const t = intl19.t;
-      if (raidType === DM_RAID) {
-        const obj6 = { dmsSent: result2.dmsSent };
-        formatToPlainStringResult = formatToPlainString(t["5C8Mh3"], obj6);
+      const t = util.t;
+      if (tmp42) {
+        const obj6 = { dmsSent: resolvedReason.dmsSent };
+        let formatToPlainStringResult = formatToPlainString(t["5C8Mh3"], obj6);
       } else {
-        const obj7 = { joinCount: result2.joinAttempts };
+        const obj7 = { joinCount: resolvedReason.joinAttempts };
         formatToPlainStringResult = formatToPlainString(t["4ylIiu"], obj7);
       }
-      const obj8 = { subtitleLeft: formatToPlainStringResult, severity: formatToPlainStringResult, subtitleRight: fromNowResult1, startTime: fromNowResult1, header: stringResult1, headerColor: processColorOrThrow5(internal5.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL)), headerIconURL: resolveAssetSource3(tmpResult49.makeSource(importDefault(raidType === DM_RAID ? 7699 : 4808))).uri, headerIconColor: processColorOrThrow6(internal6.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL)), body: intl9.formatToPlainString(intl19.t["4QIIZl"], obj9), shouldShowActions: true };
-      const intl8 = intl19.intl;
+      const obj8 = { subtitleLeft: formatToPlainStringResult, severity: formatToPlainStringResult, subtitleRight: fromNowResult1, startTime: fromNowResult1, header: null, headerColor: null, headerIconURL: null, headerIconColor: null, body: null, shouldShowActions: true };
+      const intl8 = util.intl;
       const string = intl8.string;
-      const t2 = intl19.t;
-      if (raidType === DM_RAID) {
-        stringResult1 = string(t2["8+lHUb"]);
+      const t2 = util.t;
+      if (tmp42) {
+        let stringResult1 = string(t2["8+lHUb"]);
       } else {
         stringResult1 = string(t2.xMwcwV);
       }
-      processColorOrThrow5 = react_native.processColorOrThrow;
-      react_native;
-      internal5 = nativeDefault.internal;
-      resolveAssetSource3 = React3.resolveAssetSource;
-      tmpResult49 = AvatarUtils;
-      processColorOrThrow6 = react_native.processColorOrThrow;
-      react_native;
+      obj8.header = stringResult1;
+      const tmpResult34 = AutomodMessageUtils;
+      const internal5 = nativeDefault.internal;
+      obj8.headerColor = RowGeneratorStyleSheet.processColorOrThrow(internal5.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL));
+      let getRaidAlertResolveCTAText = React4.resolveAssetSource;
+      let internal6 = AvatarUtils;
+      let intl9 = internal6.makeSource;
+      obj8.headerIconURL = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 7699 : 4808))).uri;
+      const tmpResult47 = RowGeneratorStyleSheet;
       internal6 = nativeDefault.internal;
-      intl9 = intl19.intl;
-      obj9 = { dateTime: str2 };
-      const intl10 = intl19.intl;
-      str = intl10.string(intl19.t.ufawcw);
-      const tmpResult51 = AutomodMessageUtils;
-      raidAlertResolveCTAText = tmpResult51.getRaidAlertResolveCTAText(result2.resolvedReason);
-      tmp14 = obj8;
+      obj8.headerIconColor = RowGeneratorStyleSheet.processColorOrThrow(internal6.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL));
+      intl9 = util.intl;
+      const obj9 = { dateTime: str2 };
+      obj8.body = intl9.formatToPlainString(util.t["4QIIZl"], obj9);
+      const intl10 = util.intl;
+      intl10.string(util.t.ufawcw);
+      const tmpResult49 = AutomodMessageUtils;
+      getRaidAlertResolveCTAText = tmpResult49.getRaidAlertResolveCTAText;
+      resolvedReason = resolvedReason.resolvedReason;
+      const raidAlertResolveCTAText = getRaidAlertResolveCTAText(resolvedReason);
+      const tmpResult48 = RowGeneratorStyleSheet;
     }
-    let uri = null;
-    if (null != guildId) {
-      utils_AvatarUtils;
-      if (null != guildMemberAvatar) {
-        let guildMemberAvatarSource1;
-        if (null != guildId) {
-          const obj10 = { userId: author.id, avatar: guildMemberAvatar, guildId };
-          const tmpResult53 = AvatarUtils;
-          guildMemberAvatarSource1 = tmpResult53.getGuildMemberAvatarSource(obj10, author);
-        }
-        uri = tmp57(guildMemberAvatarSource1).uri;
-      }
-      guildMemberAvatarSource1 = author.getAvatarSource(undefined);
-    }
-    let member1 = null;
-    if (null != guildId) {
-      member1 = GuildMemberStore.getMember(guildId, author.id);
-    }
-    let roleIcon;
-    if (null != iconRoleId) {
+    if (null == guildId) {
+      let member1 = null;
       if (null != guildId) {
-        const obj11 = { guildId, roleId: iconRoleId, size: 18 };
-        const tmpResult54 = getRoleIcon;
-        roleIcon = tmpResult54.getRoleIcon(obj11);
+        member1 = GuildMemberStore.getMember(guildId, author.id);
       }
-    }
-    const obj14 = { roleIcon, authorId: author.id, username: intl11.string(intl19.t.hG1StD), avatarURL: ensureAvatarSource2(makeSource(tmpResult57.getAutomodAvatarURL())).uri, colorString: _false(colorString), autoModerationContext: obj15 };
-    const merged = Object.assign(createCommonMessageDefault(message));
-    intl11 = intl19.intl;
-    ensureAvatarSource2 = utils_AvatarUtils.ensureAvatarSource;
-    utils_AvatarUtils;
-    makeSource = AvatarUtils.makeSource;
-    AvatarUtils;
-    tmpResult57 = utils_AvatarUtils;
-    obj15 = { headerText: str, headerBadgeText: intl12.string(intl19.t["70CJbT"]), keywordDisplayText: str3, message: obj18, notification: tmp14, ruleDisplayText: intl14.formatToPlainString(intl19.t.ZoOyKB, obj19), reasonDisplayText: formatToPlainString2Result, actionsIconURL: resolveAssetSource4(tmpResult62.makeSource(importDefault(result1 ? 7702 : 7703))).uri, actionsText: string2Result, feedbackText: raidAlertResolveCTAText };
-    intl12 = intl19.intl;
-    str3 = "";
-    if (null != keyword) {
-      const intl13 = intl19.intl;
-      const obj17 = { keyword };
-      str3 = intl13.formatToPlainString(intl19.t.SYIUTR, obj17);
-    }
-    if (flaggedMessageId == null) {
-      flaggedMessageId = message.id;
-    }
-    obj18 = { id: flaggedMessageId, channelId: id, guildId, userId: author.id, channelName, username: nick, usernameColor: tmp73, roleColor: _false(colorString), shouldShowRoleDot: "dot" === roleStyle && null != colorString, colorString: tmp67Result2, avatarURL: uri, content, communicationDisabled: tmpResult59.isMemberCommunicationDisabled(member1), timestamp: tmpResult60.accessibilityLabelCalendarFormat(message.timestamp) };
-    id = undefined;
-    if (embedChannel != null) {
-      id = embedChannel.id;
-    }
-    if (id == null) {
-      id = embedChannelId;
-    }
-    if (id == null) {
-      id = message.channel_id;
-    }
-    channelName = undefined;
-    if (canResult) {
-      if (null == quarantineType) {
-        if (null != embedChannel) {
-          const tmpResult58 = useChannelName;
-          channelName = tmpResult58.computeChannelName(embedChannel, UserStore, RelationshipStore);
+      let roleIcon;
+      if (null != iconRoleId) {
+        if (null != guildId) {
+          const obj10 = { guildId, roleId: iconRoleId, size: 18 };
+          roleIcon = getRoleIcon.getRoleIcon(obj10);
+          const tmpResult50 = getRoleIcon;
         }
       }
-    }
-    tmp73 = defaultUsernameColor;
-    if ("username" === roleStyle) {
-      let tmp67Result = _false(colorString);
-      if (tmp67Result == null) {
-        tmp67Result = defaultUsernameColor;
+      const obj11 = {};
+      const merged = Object.assign(createCommonMessageDefault(message));
+      obj11.roleIcon = roleIcon;
+      obj11.authorId = author.id;
+      const intl11 = util.intl;
+      obj11.username = intl11.string(util.t.hG1StD);
+      const tmpResult51 = utils_AvatarUtils;
+      const tmpResult52 = AvatarUtils;
+      obj11.avatarURL = tmpResult51.ensureAvatarSource(tmpResult52.makeSource(utils_AvatarUtils.getAutomodAvatarURL())).uri;
+      obj11.colorString = React3(colorString);
+      const obj12 = { headerText: str, headerBadgeText: null, keywordDisplayText: null, message: null, notification: null, ruleDisplayText: null, reasonDisplayText: null, actionsIconURL: null, actionsText: null, feedbackText: null };
+      const intl12 = util.intl;
+      obj12.headerBadgeText = intl12.string(util.t["70CJbT"]);
+      let str3 = "";
+      if (null != keyword) {
+        const intl13 = util.intl;
+        const obj13 = { keyword };
+        str3 = intl13.formatToPlainString(util.t.SYIUTR, obj13);
       }
-      tmp73 = tmp67Result;
-    }
-    tmp67Result2 = _false(colorString);
-    if (tmp67Result2 == null) {
-      tmp67Result2 = defaultUsernameColor;
-    }
-    tmpResult59 = CommunicationDisabledUtils;
-    tmpResult60 = DateUtils;
-    intl14 = intl19.intl;
-    formatToPlainString2Result = null;
-    obj19 = { ruleName };
-    if (null != quarantineType) {
-      const intl15 = intl19.intl;
-      const formatToPlainString2 = intl15.formatToPlainString;
-      const obj20 = { reason: tmpResult61.getQuarantineReasonString(quarantineType) };
-      const v26bB2M = intl19.t["26bB2M"];
-      tmpResult61 = AutomodMessageUtils;
-      formatToPlainString2Result = formatToPlainString2(v26bB2M, obj20);
-    }
-    resolveAssetSource4 = React3.resolveAssetSource;
-    tmpResult62 = AvatarUtils;
-    const intl16 = intl19.intl;
-    const string2 = intl16.string;
-    const t3 = intl19.t;
-    if (result1) {
-      string2Result = string2(t3.UgXhdn);
+      obj12.keywordDisplayText = str3;
+      if (flaggedMessageId == null) {
+        flaggedMessageId = message.id;
+      }
+      const obj14 = { id: flaggedMessageId, channelId: null, guildId: null, userId: null, channelName: null, username: null, usernameColor: null, roleColor: null, shouldShowRoleDot: null, colorString: null, avatarURL: null, content: null, communicationDisabled: null, timestamp: null };
+      let id;
+      if (embedChannel != null) {
+        id = embedChannel.id;
+      }
+      if (id == null) {
+        id = embedChannelId;
+      }
+      if (id == null) {
+        id = message.channel_id;
+      }
+      obj14.channelId = id;
+      obj14.guildId = guildId;
+      obj14.userId = author.id;
+      let channelName;
+      if (canResult) {
+        if (null == quarantineType) {
+          if (null != embedChannel) {
+            channelName = useChannelName.computeChannelName(embedChannel, UserStore, RelationshipStore);
+            const tmpResult54 = useChannelName;
+          }
+        }
+      }
+      obj14.channelName = channelName;
+      obj14.username = messageAuthor.nick;
+      let tmp66 = defaultUsernameColor;
+      if ("username" === roleStyle) {
+        let tmp60Result = React3(colorString);
+        if (tmp60Result == null) {
+          tmp60Result = defaultUsernameColor;
+        }
+        tmp66 = tmp60Result;
+      }
+      obj14.usernameColor = tmp66;
+      obj14.roleColor = React3(colorString);
+      obj14.shouldShowRoleDot = "dot" === roleStyle && null != colorString;
+      let tmp60Result2 = React3(colorString);
+      if (tmp60Result2 == null) {
+        tmp60Result2 = defaultUsernameColor;
+      }
+      obj14.colorString = tmp60Result2;
+      obj14.avatarURL = null;
+      obj14.content = content;
+      const tmpResult53 = utils_AvatarUtils;
+      obj14.communicationDisabled = CommunicationDisabledUtils.isMemberCommunicationDisabled(member1);
+      const tmpResult55 = CommunicationDisabledUtils;
+      obj14.timestamp = DateUtils.accessibilityLabelCalendarFormat(message.timestamp);
+      obj12.message = obj14;
+      obj12.notification = tmp14;
+      const intl14 = util.intl;
+      const obj15 = { ruleName };
+      obj12.ruleDisplayText = intl14.formatToPlainString(util.t.ZoOyKB, obj15);
+      let formatToPlainStringResult1 = null;
+      if (null != quarantineType) {
+        const intl15 = util.intl;
+        const obj18 = { reason: AutomodMessageUtils.getQuarantineReasonString(quarantineType) };
+        formatToPlainStringResult1 = intl15.formatToPlainString(util.t["26bB2M"], obj18);
+        const tmpResult57 = AutomodMessageUtils;
+      }
+      obj12.reasonDisplayText = formatToPlainStringResult1;
+      const tmpResult56 = DateUtils;
+      obj12.actionsIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(importDefault(result1 ? 7702 : 7703))).uri;
+      const intl16 = util.intl;
+      const string2 = intl16.string;
+      const t3 = util.t;
+      if (result1) {
+        let string2Result = string2(t3.UgXhdn);
+      } else {
+        string2Result = string2(t3.DEoVWZ);
+      }
+      obj12.actionsText = string2Result;
+      obj12.feedbackText = tmp15;
+      obj11.autoModerationContext = obj12;
+      return obj11;
     } else {
-      string2Result = string2(t3.DEoVWZ);
+      utils_AvatarUtils;
+      if (null == guildMemberAvatar) {
+        let avatarSource = author.getAvatarSource(undefined);
+        const uri = tmp52(avatarSource).uri;
+      }
+      const obj19 = { userId: author.id, avatar: guildMemberAvatar, guildId };
+      avatarSource = AvatarUtils.getGuildMemberAvatarSource(obj19, author);
+      const tmpResult60 = AvatarUtils;
     }
-    return obj14;
+    const tmpResult33 = AutomodMessageUtils;
   } else {
     return null;
   }
+  obj = AutomodMessageUtils;
 };

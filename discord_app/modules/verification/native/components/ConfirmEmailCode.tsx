@@ -2,81 +2,50 @@
 
 // Module 6103 (ConfirmEmailCode)
 import nativeDefault from "native" /* 587 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import _slicedToArray_mod from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import ChangeEmailStore from "ChangeEmailStore" /* 6016 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import size from "module_2" /* 2 */;
 
-let c4;
-
-let c10;
-let c9;
-let closure_12;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-let unpackModuleId;
-let _slicedToArray = _slicedToArray_mod;
-let react = react_mod;
-({ View: metroRequire, ScrollView: metroImportDefault } = react_native);
-({ useChangeEmailError: c9, ChangeEmailFields: c10 } = ChangeEmailStore);
-({ jsx: unpackModuleId, jsxs: closure_12 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { background: obj2, title: { textAlign: "center" }, prompt: { marginTop: 8, lineHeight: 18, textAlign: "center" }, input: obj3, contentContainer: obj4 };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
-createStyles = createStyles.createStyles;
-obj3 = { marginTop: nativeDefault.space.PX_24 };
-obj4 = { gap: nativeDefault.space.PX_24 };
-let closure_13 = createStyles(obj);
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+const ChangeEmailStore = fn(6016);
+({ useChangeEmailError: closure_9, ChangeEmailFields: c10 } = ChangeEmailStore);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 }, title: { textAlign: "center" }, prompt: { marginTop: 8, lineHeight: 18, textAlign: "center" }, input: null, contentContainer: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.input = { marginTop: nativeDefault.space.PX_24 };
+let obj4 = { marginTop: nativeDefault.space.PX_24 };
+obj2.contentContainer = { gap: nativeDefault.space.PX_24 };
+let closure_13 = createStyles.createStyles(obj2);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/ConfirmEmailCode.tsx");
 
 export default function ConfirmEmailCode(onFormSubmit) {
-  let c5;
-  let closure_4;
-  let confirmButtonText;
-  let currentUser;
-  let first1;
-  let headerText;
-  let intl;
-  let intl2;
-  let intl3;
-  let items2;
-  let items3;
-  let tmp10;
-  let tmp12;
-  let tmp7;
-  let value;
   onFormSubmit = onFormSubmit.onFormSubmit;
   const onSuccess = onFormSubmit.onSuccess;
-  let onResend = onFormSubmit.onResend;
-  value = undefined;
-  react = undefined;
+  const onResend = onFormSubmit.onResend;
+  _slicedToArray = undefined;
+  noop = undefined;
   ({ headerText, confirmButtonText } = onFormSubmit);
   const tmp = closure_13();
-  const tmp3 = onResend;
-  let obj = onFormSubmit(onResend[9]);
   const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  [value, tmp7] = react.useState("");
-  [first1, tmp10] = closure_9(constants.EMAIL_TOKEN);
-  _slicedToArray = tmp10;
-  [tmp12, c5] = _slicedToArray(react.useState(false), 2);
-  const items1 = [value, tmp10, onFormSubmit, onSuccess];
-  const tmp11 = _slicedToArray(react.useState(false), 2);
-  const callback = react.useCallback(value(function*() {
-    let closure_2;
-    let v3;
-    if (v3 === 2) {
-      v3 = 3;
+  const stateFromStores = onFormSubmit(onResend[9]).useStateFromStores(items, () => currentUser.getCurrentUser());
+  const tmp5 = _slicedToArray(noop.useState(""), 2);
+  value = tmp5[0];
+  const tmp7 = _slicedToArray(closure_9(constants.EMAIL_TOKEN), 2);
+  _slicedToArray = tmp8;
+  let obj = onFormSubmit(onResend[9]);
+  [tmp10, c5] = noop.useState(false);
+  const items1 = [value, tmp7[1], onFormSubmit, onSuccess];
+  const callback = noop.useCallback(value(function*() {
+    if (v32 === 2) {
+      v32 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp7 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -86,185 +55,127 @@ export default function ConfirmEmailCode(onFormSubmit) {
         return { value: "IconComponent", done: null };
       }
     } else {
-      let c3;
       try {
-        let user;
-        let anyErrorMessage;
-        v3 = 2;
+        v32 = 2;
         if (0 === c4) {
           if (arg0 === 1) {
-            v3 = 3;
+            v32 = 3;
             throw value;
           } else if (arg0 === 2) {
-            v3 = 3;
+            v32 = 3;
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            user = undefined;
-            anyErrorMessage = undefined;
+            closure_0 = tmp8;
+            closure_128_0 = undefined;
+            closure_128_1 = undefined;
             c3 = 2;
-            v2(null);
-            v3(true);
+            v3(null);
+            v32(true);
             c4 = 3;
-            v3 = 1;
+            v32 = 1;
             const obj4 = { value: onFormSubmit(first), done: false };
             return obj4;
           }
-        } else if (1 === c4) {
+        } else if (1 === tmp8) {
           c3 = 0;
           closure_129_5(false);
-          throw onResend;
+          throw tmp45;
         } else {
-          if (2 === c4) {
+          if (2 === tmp8) {
             c3 = 1;
-            const self = this;
-            const self2 = this;
-            const tmp20 = new anyErrorMessage(onResend[10])(onResend);
-            anyErrorMessage = tmp20;
-            closure_129_4(anyErrorMessage.getAnyErrorMessage());
-          } else if (arg0 === 1) {
-            v3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
+            closure_128_2 = tmp45;
+            const tmp26 = new tmp4(tmp45[10])(closure_128_2);
+            closure_128_1 = tmp26;
+            closure_129_4(closure_128_1.getAnyErrorMessage());
             c3 = 0;
             closure_129_5(false);
-            v3 = 3;
-            const obj = { value, done: true };
-            return obj;
-          } else {
-            user = value;
+            v32 = 3;
+          } else if (arg0 === 1) {
+            v32 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_128_0 = value;
             let token;
-            if (user != null) {
-              token = user.token;
+            if (closure_128_0 != null) {
+              token = closure_128_0.token;
             }
             closure_129_1(token);
             c3 = 1;
           }
           c3 = 0;
           closure_129_5(false);
-          v3 = 3;
-          return { value: "IconComponent", done: null };
+          v32 = 3;
+          const obj = { value, done: true };
+          return obj;
         }
-      } catch (tmp39) {
-        onResend = tmp39;
-        if (0 === c3) {
-          v3 = 3;
-          throw tmp39;
-        } else if (1 === tmp41) {
-          c4 = 1;
+      } catch (tmp45) {
+        if (tmp5 === c3) {
+          v32 = tmp3;
+          throw tmp45;
+        } else if (tmp2 === tmp47) {
+          c4 = tmp2;
         } else {
-          c4 = 2;
+          c4 = tmp;
         }
       }
     }
   }), items1);
-  let tmp15 = null;
-  const tmp13 = value;
+  let tmp13 = null;
   if (null != stateFromStores) {
-    let obj3 = { style: null, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, contentContainerStyle: null, children: items3 };
+    let obj3 = { style: null, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, contentContainerStyle: null, children: null };
     ({ background: obj2.style, contentContainer: obj2.contentContainerStyle } = tmp);
-    let obj4 = { children: items2 };
-    let obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: headerText };
-    items2 = [closure_11(onFormSubmit(tmp3[11]).Text, obj5), , , ];
-    let obj6 = { style: tmp.prompt, variant: "text-sm/medium", color: "text-default", children: intl.string(onFormSubmit(tmp3[12]).t.SZJowy) };
-    const Text = tmp2(tmp3[11]).Text;
-    intl = tmp2(tmp3[12]).intl;
-    items2[1] = closure_11(Text, obj6);
-    let tmp20 = onSuccess;
-    let obj7 = { style: tmp.input, label: intl2.string(onFormSubmit(tmp3[12]).t["8mZX6M"]), textContentType: "emailAddress", keyboardType: "email-address", value, onChangeText: tmp7, onSubmitEditing: callback, returnKeyType: "done", autoCapitalize: "none", error: first1, autoFocus: true };
-    const tmp21 = onSuccess(tmp3[13]);
-    intl2 = tmp2(tmp3[12]).intl;
-    items2[2] = closure_11(tmp21, obj7);
-    let obj8 = {
-      text: intl3.string(onFormSubmit(tmp3[12]).t.K0NPQ6),
-      variant: "text-sm/medium",
-      onPress: tmp13(function*() {
-          let closure_1;
-          let closure_2;
-          let intl;
-          if (c5 === 2) {
-            c5 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              const obj2 = { value, done: true };
-              return obj2;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
-          } else {
-            let c3;
-            try {
-              let content;
-              c5 = 2;
-              if (0 === c4) {
-                if (arg0 === 1) {
-                  c5 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c5 = 3;
-                  const obj5 = { value, done: true };
-                  return obj5;
-                } else {
-                  content = undefined;
-                  c3 = 1;
-                  c4 = 2;
-                  c5 = 1;
-                  const obj6 = { value: onResend(), done: false };
-                  return obj6;
-                }
-              } else {
-                if (1 === c4) {
-                  c3 = 0;
-                  const self = this;
-                  const self2 = this;
-                  const obj3 = new onResend(onResend[10])(onResend);
-                  content = obj3.getAnyErrorMessage();
-                  if (null != content) {
-                    const obj7 = { key: "CONFIRM_EMAIL_ERROR", content };
-                    const obj4 = onResend(onResend[15]);
-                    obj4.open(obj7);
-                  }
-                } else if (arg0 === 1) {
-                  c5 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 0;
-                  c5 = 3;
-                  const obj8 = { value, done: true };
-                  return obj8;
-                } else {
-                  const obj = { key: "USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT", content: intl.string(content(onResend[12]).t["84yeoz"]) };
-                  const open = tmp(onResend[15]).open;
-                  const tmp8 = tmp(onResend[15]);
-                  intl = content(onResend[12]).intl;
-                  open(obj);
-                  c3 = 0;
-                }
-                c5 = 3;
-                return { value: "IconComponent", done: null };
-              }
-            } catch (tmp29) {
-              onResend = tmp29;
-              if (0 === c3) {
-                c5 = 3;
-                throw tmp29;
-              } else {
-                c4 = 1;
-              }
-            }
-          }
-        })
-    };
-    const LinkButton = tmp2(tmp3[14]).LinkButton;
-    intl3 = tmp2(tmp3[12]).intl;
-    items2[3] = closure_11(LinkButton, obj8);
-    items3 = [closure_12(closure_6, obj4), ];
-    const obj15 = { text: confirmButtonText, onPress: callback, loading: tmp12, disabled: "" === value };
-    items3[1] = closure_11(onFormSubmit(tmp3[16]).Button, obj15);
-    tmp15 = closure_12(closure_7, obj3);
+    let obj4 = { children: null };
+    const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: headerText };
+    const items2 = [closure_11(tmp2(tmp3[11]).Text, obj5), , , ];
+    const obj6 = { style: tmp.prompt, variant: "text-sm/medium", color: "text-default", children: null };
+    let intl = tmp2(tmp3[12]).intl;
+    obj6.children = intl.string(tmp2(tmp3[12]).t.SZJowy);
+    items2[1] = closure_11(tmp2(tmp3[11]).Text, obj6);
+    const obj7 = { style: tmp.input, label: null, textContentType: "emailAddress", keyboardType: "email-address", value: null, onChangeText: null, onSubmitEditing: null, returnKeyType: "done", autoCapitalize: "none", error: null, autoFocus: true };
+    const intl2 = tmp2(tmp3[12]).intl;
+    obj7.label = intl2.string(tmp2(tmp3[12]).t["8mZX6M"]);
+    obj7.value = value;
+    obj7.onChangeText = tmp5[1];
+    obj7.onSubmitEditing = callback;
+    obj7.error = tmp7[0];
+    items2[2] = closure_11(onSuccess(tmp3[13]), obj7);
+    let obj8 = { text: null, variant: "text-sm/medium", onPress: null };
+    const intl3 = tmp2(tmp3[12]).intl;
+    obj8.text = intl3.string(tmp2(tmp3[12]).t.K0NPQ6);
+    obj8.onPress = value(function*() {
+      yield onResend();
+      if (1 === tmp7) {
+        c3 = 0;
+        closure_128_1 = tmp33;
+        const anyErrorMessage = new tmp3(tmp33[10])(closure_128_1).getAnyErrorMessage();
+        if (null != anyErrorMessage) {
+          tmp3(tmp33[15]).open({ key: "CONFIRM_EMAIL_ERROR", content: anyErrorMessage });
+          tmp3(tmp33[15]);
+        }
+        c5 = 3;
+        new tmp3(tmp33[10])(closure_128_1);
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        const obj8 = { key: "USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT", content: null };
+        const intl = onFormSubmit(tmp33[12]).intl;
+        obj8.content = intl.string(onFormSubmit(tmp33[12]).t["84yeoz"]);
+        tmp3(tmp33[15]).open(obj8);
+        c3 = 0;
+        tmp3(tmp33[15]);
+      }
+      return value;
+    });
+    items2[3] = closure_11(tmp2(tmp3[14]).LinkButton, obj8);
+    obj4.children = items2;
+    const items3 = [closure_12(closure_6, obj4), ];
+    const obj15 = { text: confirmButtonText, onPress: callback, loading: tmp10, disabled: "" === value };
+    items3[1] = closure_11(tmp2(tmp3[16]).Button, obj15);
+    obj3.children = items3;
+    tmp13 = closure_12(closure_7, obj3);
+    const tmp19 = onSuccess(tmp3[13]);
   }
-  return tmp15;
+  return tmp13;
 };

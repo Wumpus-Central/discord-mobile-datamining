@@ -42,165 +42,119 @@ import GuildSpaceSystemMessage from "GuildSpaceSystemMessage" /* 7768 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
-let c2;
-let c3;
 ({ MessageTypes: c2, BoostedGuildTiers: c3 } = Constants);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/SystemMessage.tsx");
 
 export const createSystemMessageContent = function createSystemMessageContent(message) {
   const type = message.message.type;
   if (constants.RECIPIENT_ADD === type) {
-    const obj44 = AddRecipientSystemMessage;
-    return obj44.createAddRecipientSystemMessage(message);
+    return AddRecipientSystemMessage.createAddRecipientSystemMessage(message);
   } else if (constants.RECIPIENT_REMOVE === type) {
-    const obj43 = RemoveRecipientSystemMessage;
-    return obj43.createRemoveRecipientSystemMessage(message);
+    return RemoveRecipientSystemMessage.createRemoveRecipientSystemMessage(message);
   } else if (constants.CALL === type) {
-    const obj42 = CallSystemMessage;
-    return obj42.createCallSystemMessage(message);
+    return CallSystemMessage.createCallSystemMessage(message);
   } else if (constants.CHANNEL_NAME_CHANGE === type) {
-    const obj41 = ChangeChannelNameSystemMessage;
-    return obj41.createChangeChannelNameSystemMessage(message);
+    return ChangeChannelNameSystemMessage.createChangeChannelNameSystemMessage(message);
   } else if (constants.CHANNEL_ICON_CHANGE === type) {
-    const obj40 = ChangeChannelIconSystemMessage;
-    return obj40.createChangeChannelIconSystemMessage(message);
+    return ChangeChannelIconSystemMessage.createChangeChannelIconSystemMessage(message);
   } else if (constants.CHANNEL_PINNED_MESSAGE === type) {
-    const obj39 = ChannelPinnedMessageSystemMessage;
-    return obj39.createChannelPinnedMessageSystemMessage(message);
+    return ChannelPinnedMessageSystemMessage.createChannelPinnedMessageSystemMessage(message);
   } else if (constants.USER_JOIN === type) {
-    const obj38 = UserJoinSystemMessage;
-    return obj38.createUserJoinSystemMessage(message);
+    return UserJoinSystemMessage.createUserJoinSystemMessage(message);
   } else if (constants.GUILD_BOOST === type) {
-    const obj37 = UserPremiumGuildSubscriptionSystemMessage;
-    return obj37.createUserPremiumGuildSubscriptionSystemMessage(message);
+    return UserPremiumGuildSubscriptionSystemMessage.createUserPremiumGuildSubscriptionSystemMessage(message);
   } else if (constants.GUILD_BOOST_TIER_1 === type) {
-    const obj36 = UserPremiumGuildSubscriptionTierAchievedSystemMessage;
-    return obj36.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, _false.TIER_1);
+    return UserPremiumGuildSubscriptionTierAchievedSystemMessage.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, React3.TIER_1);
   } else if (constants.GUILD_BOOST_TIER_2 === type) {
-    const obj35 = UserPremiumGuildSubscriptionTierAchievedSystemMessage;
-    return obj35.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, _false.TIER_2);
+    return UserPremiumGuildSubscriptionTierAchievedSystemMessage.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, React3.TIER_2);
   } else if (constants.GUILD_BOOST_TIER_3 === type) {
-    const obj34 = UserPremiumGuildSubscriptionTierAchievedSystemMessage;
-    return obj34.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, _false.TIER_3);
+    return UserPremiumGuildSubscriptionTierAchievedSystemMessage.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, React3.TIER_3);
   } else if (constants.CHANNEL_FOLLOW_ADD === type) {
-    const obj33 = ChannelFollowAddSystemMessage;
-    return obj33.createChannelFollowAddSystemMessage(message);
+    return ChannelFollowAddSystemMessage.createChannelFollowAddSystemMessage(message);
   } else if (constants.GUILD_STREAM === type) {
-    const obj32 = GuildStreamSystemMessage;
-    return obj32.createGuildStreamSystemMessage(message);
+    return GuildStreamSystemMessage.createGuildStreamSystemMessage(message);
   } else if (constants.GUILD_DISCOVERY_DISQUALIFIED === type) {
-    const obj31 = GuildDiscoverySystemMessage;
-    return obj31.createGuildDiscoveryDisqualifiedSystemMessage(message);
+    return GuildDiscoverySystemMessage.createGuildDiscoveryDisqualifiedSystemMessage(message);
   } else if (constants.GUILD_DISCOVERY_REQUALIFIED === type) {
-    const obj30 = GuildDiscoverySystemMessage;
-    return obj30.createGuildDiscoveryRequalifiedSystemMessage(message);
+    return GuildDiscoverySystemMessage.createGuildDiscoveryRequalifiedSystemMessage(message);
   } else if (constants.GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING === type) {
-    const obj29 = GuildDiscoverySystemMessage;
-    return obj29.createGuildDiscoveryGracePeriodInitialWarningSystemMessage(message);
+    return GuildDiscoverySystemMessage.createGuildDiscoveryGracePeriodInitialWarningSystemMessage(message);
   } else if (constants.GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING === type) {
-    const obj28 = GuildDiscoverySystemMessage;
-    return obj28.createGuildDiscoveryGracePeriodFinalWarningSystemMessage(message);
+    return GuildDiscoverySystemMessage.createGuildDiscoveryGracePeriodFinalWarningSystemMessage(message);
   } else {
     if (constants.CHAT_INPUT_COMMAND !== type) {
       if (constants.CONTEXT_MENU_COMMAND !== type) {
         if (constants.GUILD_INVITE_REMINDER === type) {
           return null;
         } else if (constants.THREAD_CREATED === type) {
-          const obj26 = NewThreadSystemMessage;
-          return obj26.createNewThreadSystemMessage(message);
+          return NewThreadSystemMessage.createNewThreadSystemMessage(message);
         } else if (constants.THREAD_STARTER_MESSAGE === type) {
-          const obj25 = ThreadStarterSystemMessage;
-          return obj25.createThreadStarterSystemMessage(message);
+          return ThreadStarterSystemMessage.createThreadStarterSystemMessage(message);
         } else if (constants.AUTO_MODERATION_ACTION === type) {
-          const obj24 = AutoModerationActionSystemMessage;
-          return obj24.createAutoModerationActionSystemMessage(message);
+          return AutoModerationActionSystemMessage.createAutoModerationActionSystemMessage(message);
         } else if (constants.ROLE_SUBSCRIPTION_PURCHASE === type) {
-          const obj23 = RoleSubscriptionPurchaseSystemMessage;
-          return obj23.createRoleSubscriptionPurchaseSystemMessage(message);
+          return RoleSubscriptionPurchaseSystemMessage.createRoleSubscriptionPurchaseSystemMessage(message);
         } else if (constants.PURCHASE_NOTIFICATION === type) {
-          const obj22 = PurchaseNotificationSystemMessage;
-          return obj22.createPurchaseNotificationSystemMessage(message);
+          return PurchaseNotificationSystemMessage.createPurchaseNotificationSystemMessage(message);
         } else if (constants.STAGE_START === type) {
-          const obj21 = StageStartSystemMessage;
-          return obj21.createStageStartSystemMessage(message);
+          return StageStartSystemMessage.createStageStartSystemMessage(message);
         } else if (constants.STAGE_END === type) {
-          const obj20 = StageEndSystemMessage;
-          return obj20.createStageEndSystemMessage(message);
+          return StageEndSystemMessage.createStageEndSystemMessage(message);
         } else if (constants.STAGE_TOPIC === type) {
-          const obj19 = StageTopicSystemMessage;
-          return obj19.createStageTopicSystemMessage(message);
+          return StageTopicSystemMessage.createStageTopicSystemMessage(message);
         } else if (constants.STAGE_SPEAKER === type) {
-          const obj18 = StageSpeakerSystemMessage;
-          return obj18.createStageSpeakerSystemMessage(message);
+          return StageSpeakerSystemMessage.createStageSpeakerSystemMessage(message);
         } else if (constants.STAGE_RAISE_HAND === type) {
-          const obj17 = StageRaiseHandSystemMessage;
-          return obj17.createStageRaiseHandSystemMessage(message);
+          return StageRaiseHandSystemMessage.createStageRaiseHandSystemMessage(message);
         } else if (constants.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION === type) {
-          const obj16 = ApplicationSubscriptionPurchaseSystemMessage;
-          return obj16.createApplicationSubscriptionPurchaseSystemMessage(message);
+          return ApplicationSubscriptionPurchaseSystemMessage.createApplicationSubscriptionPurchaseSystemMessage(message);
         } else {
           if (constants.PRIVATE_CHANNEL_INTEGRATION_ADDED !== type) {
             if (constants.PRIVATE_CHANNEL_INTEGRATION_REMOVED !== type) {
               if (constants.GUILD_INCIDENT_ALERT_MODE_ENABLED === type) {
-                const obj14 = GuildAlertModeSystemMessage;
-                return obj14.createGuildAlertModeEnabledSystemMessage(message);
+                return GuildAlertModeSystemMessage.createGuildAlertModeEnabledSystemMessage(message);
               } else if (constants.GUILD_INCIDENT_ALERT_MODE_DISABLED === type) {
-                const obj13 = GuildAlertModeSystemMessage;
-                return obj13.createGuildAlertModeDisabledSystemMessage(message);
+                return GuildAlertModeSystemMessage.createGuildAlertModeDisabledSystemMessage(message);
               } else if (constants.GUILD_INCIDENT_REPORT_RAID === type) {
-                const obj12 = GuildReportRaidSystemMessage;
-                return obj12.createGuildReportRaidSystemMessage(message);
+                return GuildReportRaidSystemMessage.createGuildReportRaidSystemMessage(message);
               } else if (constants.GUILD_INCIDENT_REPORT_FALSE_ALARM === type) {
-                const obj11 = GuildReportFalseAlarmSystemMessage;
-                return obj11.createGuildReportFalseAlarmSystemMessage(message);
+                return GuildReportFalseAlarmSystemMessage.createGuildReportFalseAlarmSystemMessage(message);
               } else if (constants.POLL_RESULT === type) {
-                const obj10 = PollResultSystemMessage;
-                return obj10.createPollResultSystemMessage(message);
+                return PollResultSystemMessage.createPollResultSystemMessage(message);
               } else if (constants.CHANNEL_LINKED_TO_LOBBY === type) {
-                const obj9 = ChannelLinkedToLobbySystemMessage;
-                return obj9.createChannelLinkedToLobbySystemMessage(message);
+                return ChannelLinkedToLobbySystemMessage.createChannelLinkedToLobbySystemMessage(message);
               } else if (constants.IN_GAME_MESSAGE_NUX === type) {
-                const obj8 = InGameMessageNuxSystemMessage;
-                return obj8.createInGameMessageNuxSystemMessage(message);
+                return InGameMessageNuxSystemMessage.createInGameMessageNuxSystemMessage(message);
               } else {
                 if (constants.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION !== type) {
                   if (constants.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION !== type) {
                     if (constants.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION !== type) {
                       if (constants.PREMIUM_GROUP_INVITE === type) {
-                        const obj6 = PremiumGroupInviteSystemMessage;
-                        return obj6.createPremiumGroupInviteSystemMessage(message);
+                        return PremiumGroupInviteSystemMessage.createPremiumGroupInviteSystemMessage(message);
                       } else if (constants.PREMIUM_REFERRAL === type) {
-                        const obj5 = ReferralSystemMessage;
-                        return obj5.createReferralSystemMessage(message);
+                        return ReferralSystemMessage.createReferralSystemMessage(message);
                       } else if (constants.VOICE_SESSION === type) {
-                        const obj4 = VoiceSessionSystemMessage;
-                        return obj4.createVoiceSessionSystemMessage(message);
+                        return VoiceSessionSystemMessage.createVoiceSessionSystemMessage(message);
                       } else if (constants.FRIEND_REQUEST_ACCEPTED === type) {
-                        const obj3 = FriendRequestAcceptedSystemMessage;
-                        return obj3.createFriendRequestAcceptedSystemMessage(message);
+                        return FriendRequestAcceptedSystemMessage.createFriendRequestAcceptedSystemMessage(message);
                       } else if (constants.GIFTING_PROMPT === type) {
-                        const obj2 = GiftIntentSystemMessage;
-                        return obj2.createGiftIntentSystemMessage(message);
+                        return GiftIntentSystemMessage.createGiftIntentSystemMessage(message);
                       } else if (constants.GUILD_SPACE_MESSAGE === type) {
-                        const obj = GuildSpaceSystemMessage;
-                        return obj.createGuildSpaceSystemMessage(message);
+                        return GuildSpaceSystemMessage.createGuildSpaceSystemMessage(message);
                       } else {
                         return null;
                       }
                     }
                   }
                 }
-                const obj7 = JoinRequestNotificationSystemMessage;
-                return obj7.createJoinRequestNotificationSystemMessage(message);
+                return JoinRequestNotificationSystemMessage.createJoinRequestNotificationSystemMessage(message);
               }
             }
           }
-          const obj15 = PrivateChannelIntegrationSystemMessage;
-          return obj15.createPrivateChannelIntegrationSystemMessage(message, message.message.type);
+          return PrivateChannelIntegrationSystemMessage.createPrivateChannelIntegrationSystemMessage(message, message.message.type);
         }
       }
     }
-    const obj27 = ApplicationCommandSourceSystemMessage;
-    return obj27.createApplicationCommandSourceSystemMessage(message);
+    return ApplicationCommandSourceSystemMessage.createApplicationCommandSourceSystemMessage(message);
   }
 };

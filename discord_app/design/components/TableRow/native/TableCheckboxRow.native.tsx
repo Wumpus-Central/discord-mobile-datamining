@@ -1,40 +1,27 @@
 // === Module 5997: TableCheckboxRow ===
 
 // Module 5997 (TableCheckboxRow)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import native from "native" /* 4588 */;
-import react_native from "react-native" /* 4600 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4600 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
 import FormCheckbox from "FormCheckbox" /* 5998 */;
-import TableRow2 from "TableRow" /* 6000 */;
+import TableRow from "TableRow" /* 6000 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let checked, dependencyMap;
-
+require = fn;
 let closure_2 = ["checked", "label", "subLabel", "disabled", "onPress", "accessibilityHint"];
-const jsx = Fragment.jsx;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((checked) => {
-  let accessibilityRole;
-  let accessibilityState;
-  let disabled;
-  let label;
-  let onPress;
-  let subLabel;
-  let tmp10;
-  let tmp16;
-  let tmp4;
-  let tmp6;
-  let tmp8;
-  let tmp9;
-  const obj = react2;
-  const cResult = obj.c(35);
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("design/components/TableRow/native/TableCheckboxRow.native.tsx");
+
+export const TableCheckboxRow = ReactCompilerGating.isReactCompilerEnabled() ? ((checked) => {
+  const cResult = c.c(35);
   if (cResult[0] !== checked) {
     checked = checked.checked;
-    let closure_0 = checked;
+    closure_0 = checked;
     ({ label, subLabel, disabled, onPress } = checked);
     dependencyMap = onPress;
     const accessibilityHint = checked.accessibilityHint;
@@ -43,8 +30,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((checked) => {
     cResult[1] = accessibilityHint;
     class T {
       constructor() {
-        const result = sharedValue.set(0);
-        closure_1(!closure_0);
+        result = closure_2.set(0);
+        tmp2 = closure_1(!closure_0);
+        return;
       }
     }
     cResult[2] = checked;
@@ -53,11 +41,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((checked) => {
     cResult[5] = tmp13;
     cResult[6] = subLabel;
     cResult[7] = disabled;
-    tmp10 = disabled;
-    tmp9 = subLabel;
-    tmp8 = tmp13;
-    tmp6 = label;
-    tmp4 = accessibilityHint;
+    let tmp9 = subLabel;
+    let tmp8 = tmp13;
+    let tmp6 = label;
+    let tmp4 = accessibilityHint;
   } else {
     tmp4 = cResult[1];
     closure_0 = cResult[2];
@@ -65,54 +52,46 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((checked) => {
     dependencyMap = cResult[4];
     tmp8 = cResult[5];
     tmp9 = cResult[6];
-    tmp10 = cResult[7];
   }
-  const tmpResult = ReanimatedRexport;
-  const sharedValue = tmpResult.useSharedValue(0);
+  const sharedValue = ReanimatedRexport.useSharedValue(0);
   if (cResult[8] !== sharedValue) {
     const fn = function x() {
       const result = sharedValue.set(1);
     };
     cResult[8] = sharedValue;
     cResult[9] = fn;
-    tmp16 = fn;
+    let tmp16 = fn;
   } else {
     tmp16 = cResult[9];
   }
   if (cResult[10] === tmp5) {
     if (cResult[11] === onPress) {
-      let tmp17;
-      let tmp18;
-      let str;
       if (cResult[12] === sharedValue) {
-        tmp17 = cResult[13];
+        let tmp17 = cResult[13];
       }
       if (cResult[14] !== tmp6) {
-        const tmpResult4 = native;
-        const nodeText = tmpResult4.getNodeText(tmp6);
+        const nodeText = native.getNodeText(tmp6);
         cResult[14] = tmp6;
         cResult[15] = nodeText;
-        tmp18 = nodeText;
+        let tmp18 = nodeText;
+        const tmpResult4 = native;
       } else {
         tmp18 = cResult[15];
       }
       if (cResult[16] !== tmp9) {
-        const tmpResult5 = native;
-        const nodeText1 = tmpResult5.getNodeText(tmp9);
+        const nodeText1 = native.getNodeText(tmp9);
         cResult[16] = tmp9;
         cResult[17] = nodeText1;
-        str = nodeText1;
+        let str = nodeText1;
+        const tmpResult5 = native;
       } else {
         str = cResult[17];
       }
       if (cResult[18] === tmp5) {
-        let tmp21;
-        let tmp26;
-        if (cResult[19] === (undefined !== tmp10 && tmp10)) {
-          tmp21 = cResult[20];
+        if (cResult[19] === tmp14) {
+          let tmp21 = cResult[20];
         }
-        const tmpResult6 = react_native;
-        const checkboxA11yNative = tmpResult6.useCheckboxA11yNative(tmp21);
+        const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative(tmp21);
         ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
         if (str == null) {
           str = "";
@@ -120,26 +99,26 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((checked) => {
         const _HermesInternal = HermesInternal;
         const combined = "" + tmp18 + ", " + str;
         if (cResult[21] !== tmp5) {
+          const obj2 = { checked: tmp5 };
           const tmp28 = jsx(FormCheckbox.FormCheckbox, { checked: tmp5 });
           cResult[21] = tmp5;
           cResult[22] = tmp28;
-          tmp26 = tmp28;
+          let tmp26 = tmp28;
         } else {
           tmp26 = cResult[22];
         }
         if (cResult[23] === tmp4) {
           if (cResult[24] === accessibilityRole) {
             if (cResult[25] === accessibilityState) {
-              if (cResult[26] === (undefined !== tmp10 && tmp10)) {
+              if (cResult[26] === tmp14) {
                 if (cResult[27] === tmp16) {
                   if (cResult[28] === tmp17) {
                     if (cResult[29] === tmp6) {
                       if (cResult[30] === tmp8) {
                         if (cResult[31] === tmp9) {
                           if (cResult[32] === combined) {
-                            let tmp29;
                             if (cResult[33] === tmp26) {
-                              tmp29 = cResult[34];
+                              let tmp29 = cResult[34];
                             }
                             return tmp29;
                           }
@@ -154,16 +133,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((checked) => {
         }
         class T {
           constructor() {
-            const result = sharedValue.set(0);
-            closure_1(!closure_0);
+            result = closure_2.set(0);
+            tmp2 = closure_1(!closure_0);
+            return;
           }
         }
-        const TableRow = TableRow2.TableRow;
         const merged = Object.assign(tmp8);
         tmp31.arrow = false;
         tmp31.label = tmp6;
         tmp31.subLabel = tmp9;
-        tmp31.disabled = undefined !== tmp10 && tmp10;
+        tmp31.disabled = tmp14;
         tmp31.accessibilityState = accessibilityState;
         tmp31.accessible = true;
         tmp31.accessibilityRole = accessibilityRole;
@@ -172,11 +151,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((checked) => {
         tmp31.onPressIn = tmp16;
         tmp31.onPress = tmp17;
         tmp31.trailing = tmp26;
-        const tmp35 = <TableRow {...tmp31} />;
+        const tmp35 = jsx(TableRow.TableRow, tmp31);
         cResult[23] = tmp4;
         cResult[24] = accessibilityRole;
         cResult[25] = accessibilityState;
-        cResult[26] = undefined !== tmp10 && tmp10;
+        cResult[26] = tmp14;
         cResult[27] = tmp16;
         cResult[28] = tmp17;
         cResult[29] = tmp6;
@@ -186,18 +165,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((checked) => {
         cResult[33] = tmp26;
         cResult[34] = tmp35;
         tmp29 = tmp35;
+        const tmpResult6 = useA11yRolesNative;
       }
-      const obj3 = { checked: tmp5, disabled: undefined !== tmp10 && tmp10 };
+      const obj3 = { checked: tmp5, disabled: tmp14 };
       cResult[18] = tmp5;
-      cResult[19] = undefined !== tmp10 && tmp10;
+      cResult[19] = tmp14;
       cResult[20] = obj3;
       tmp21 = obj3;
     }
   }
   class T {
     constructor() {
-      const result = sharedValue.set(0);
-      closure_1(!closure_0);
+      result = closure_2.set(0);
+      tmp2 = closure_1(!closure_0);
+      return;
     }
   }
   cResult[10] = tmp5;
@@ -205,46 +186,46 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((checked) => {
   cResult[12] = sharedValue;
   cResult[13] = T;
   tmp17 = T;
+  const tmpResult = ReanimatedRexport;
 }) : ((checked) => {
-  let accessibilityRole;
-  let accessibilityState;
-  let disabled;
-  let label;
-  let subLabel;
   checked = checked.checked;
   ({ label, subLabel, disabled } = checked);
   if (disabled === undefined) {
     disabled = false;
   }
   const onPress = checked.onPress;
-  const accessibilityHint = checked.accessibilityHint;
   const merged = Object.assign(checked, Object.assign({ checked: 0, label: 0, subLabel: 0, disabled: 0, onPress: 0, accessibilityHint: 0 }));
-  const obj = ReanimatedRexport;
-  const sharedValue = obj.useSharedValue(0);
+  const sharedValue = ReanimatedRexport.useSharedValue(0);
   const items = [sharedValue];
   const items1 = [onPress, sharedValue, checked];
-  const callback = react.useCallback(() => {
+  const callback = noop.useCallback(() => {
     const result = sharedValue.set(1);
   }, items);
-  const callback1 = react.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     const result = sharedValue.set(0);
     onPress(!checked);
   }, items1);
-  const obj2 = native;
-  const nodeText = obj2.getNodeText(label);
-  const obj3 = native;
-  const nodeText1 = obj3.getNodeText(subLabel);
-  const obj4 = react_native;
-  const checkboxA11yNative = obj4.useCheckboxA11yNative({ checked, disabled });
+  const nodeText = native.getNodeText(label);
+  const nodeText1 = native.getNodeText(subLabel);
+  const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative({ checked, disabled });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
-  const TableRow = TableRow2.TableRow;
+  const obj5 = {};
   const merged1 = Object.assign(merged);
+  obj5.arrow = false;
+  obj5.label = label;
+  obj5.subLabel = subLabel;
+  obj5.disabled = disabled;
+  obj5.accessibilityState = accessibilityState;
+  obj5.accessible = true;
+  obj5.accessibilityRole = accessibilityRole;
   let str = nodeText1;
   if (nodeText1 == null) {
     str = "";
   }
-  return <TableRow arrow={false} label={label} subLabel={subLabel} disabled={disabled} accessibilityState={accessibilityState} accessible accessibilityRole={accessibilityRole} accessibilityLabel={"" + nodeText + ", " + str} accessibilityHint={accessibilityHint} onPressIn={callback} onPress={callback1} trailing={jsx(FormCheckbox.FormCheckbox, { checked })} />;
+  obj5.accessibilityLabel = "" + nodeText + ", " + str;
+  obj5.accessibilityHint = checked.accessibilityHint;
+  obj5.onPressIn = callback;
+  obj5.onPress = callback1;
+  obj5.trailing = jsx(FormCheckbox.FormCheckbox, { checked });
+  return jsx(TableRow.TableRow, {});
 });
-let result = size.fileFinishedImporting("design/components/TableRow/native/TableCheckboxRow.native.tsx");
-
-export const TableCheckboxRow = tmp2;

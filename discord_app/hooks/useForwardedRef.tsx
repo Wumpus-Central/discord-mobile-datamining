@@ -1,23 +1,24 @@
-// === Module 16228: react ===
+// === Module 16228: useForwardedRef ===
 
-// Module 16228 (react)
-import react from "react" /* 19 */;
-import size from "module_2" /* 2 */;
+// Module 16228 (useForwardedRef)
+import noop from "module_19" /* 19 */;
 
+const size = fn(2);
 const result = size.fileFinishedImporting("hooks/useForwardedRef.tsx");
 
 export default function useForwardedRef(arg0) {
-  let closure_0 = arg0;
-  const ref = react.useRef(null);
+  closure_0 = arg0;
+  const ref = noop.useRef(null);
   const items = [arg0];
   const items1 = [
     ref,
-    react.useCallback((current) => {
+    noop.useCallback((current) => {
+      let tmp = closure_0;
       if (null != closure_0) {
-        if (typeof closure_0 === "function") {
-          closure_0(current);
+        if (typeof tmp === "function") {
+          tmp = tmp(current);
         } else {
-          closure_0.current = current;
+          tmp.current = current;
         }
         ref.current = current;
       }

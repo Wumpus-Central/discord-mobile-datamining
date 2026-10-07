@@ -1,12 +1,11 @@
 // === Module 16955: getFriendStatusCounts ===
 
 // Module 16955 (getFriendStatusCounts)
-import Constants from "Constants" /* 1085 */;
 import PresenceStore from "PresenceStore" /* 4936 */;
 import RelationshipStore from "RelationshipStore" /* 4525 */;
-import size from "module_2" /* 2 */;
 
-const StatusTypes = Constants.StatusTypes;
+const StatusTypes = fn(1085).StatusTypes;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/friends/getFriendStatusCounts.tsx");
 
 export default function getFriendStatusCounts() {
@@ -14,7 +13,6 @@ export default function getFriendStatusCounts() {
   let num_friends_idle = 0;
   let num_friends_dnd = 0;
   const friendIDs = RelationshipStore.getFriendIDs();
-  const tmp2 = friendIDs[Symbol.iterator]();
   while (tmp2 !== undefined) {
     let status = PresenceStore.getStatus(tmp3);
     if (StatusTypes.ONLINE === status) {

@@ -2,139 +2,130 @@
 
 // Module 13513 (ConnectivityIndicatorStateStore)
 import LoggerDefault from "Logger" /* 3 */;
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
 import NetworkUtilsDefault from "NetworkUtils" /* 1468 */;
 import CacheStore from "CacheStore" /* 6998 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MessageStore from "MessageStore" /* 5116 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import AppStateStore from "AppStateStore" /* 1986 */;
-import size from "module_2" /* 2 */;
-
-let c16, closure_13, delayMs;
 
 function updateState() {
-  let immediate;
-  let obj;
-  let obj12;
-  let obj15;
-  let obj19;
-  let obj3;
-  let obj7;
-  let timeout;
-  let tmp19;
-  let tmp24;
-  const tmp = immediate;
   if (!c19) {
     if (AppStateStore.getState() !== AppStates.BACKGROUND) {
       if (null != closure_16) {
-        let UNKNOWN;
-        let tmp10;
         if (null != closure_15) {
           if (closure_16) {
-            UNKNOWN = constants.OFFLINE;
-            tmp10 = constants;
+            let UNKNOWN = constants.OFFLINE;
+            let tmp9 = constants;
           } else if (!closure_15) {
-            tmp10 = constants;
+            tmp9 = constants;
             UNKNOWN = constants.ONLINE;
           } else {
             UNKNOWN = constants.CONNECTING;
-            tmp10 = constants;
+            tmp9 = constants;
           }
         }
         if (obj.HIDDEN === tmp) {
-          if (tmp10.OFFLINE === UNKNOWN) {
-            const obj2 = { delayed: obj3 };
-            obj3 = { state: obj.NO_CONNECTION, delayMs: delayMs2 };
+          if (tmp9.OFFLINE === UNKNOWN) {
+            const obj2 = { delayed: null };
+            const obj3 = { state: tmp13.NO_CONNECTION, delayMs: delayMs2 };
+            obj2.delayed = obj3;
             obj = obj2;
-          } else if (tmp10.CONNECTING === UNKNOWN) {
-            const obj4 = { state: obj.WAITING_FOR_NETWORK, delayMs: tmp24 };
+          } else if (tmp9.CONNECTING === UNKNOWN) {
+            const obj4 = { state: tmp13.WAITING_FOR_NETWORK, delayMs: null };
             if (CacheStore.hasCache()) {
-              const obj16 = state(13514);
-              let num2 = obj16.getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
+              let num2 = state(13514).getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
               if (num2 == null) {
                 num2 = 10000;
               }
-              tmp24 = num2;
+              let tmp23 = num2;
+              const obj16 = state(13514);
             } else {
-              tmp24 = delayMs2;
+              tmp23 = delayMs2;
             }
-            obj = { delayed: obj4 };
-            const obj5 = { delayed: obj4 };
+            const obj5 = { delayed: null };
+            obj4.delayMs = tmp23;
+            obj5.delayed = obj4;
+            obj = obj5;
           } else {
-            if (tmp10.ONLINE !== UNKNOWN) {
-              const UNKNOWN4 = tmp10.UNKNOWN;
+            if (tmp9.ONLINE !== UNKNOWN) {
+              const UNKNOWN4 = tmp9.UNKNOWN;
             }
             obj = {};
           }
-        } else if (obj.BACK_ONLINE === tmp) {
-          if (tmp10.OFFLINE === UNKNOWN) {
-            const obj6 = { delayed: obj7 };
-            obj7 = { state: obj.NO_CONNECTION, delayMs: delayMs2 };
+        } else if (tmp13.BACK_ONLINE === tmp) {
+          if (tmp9.OFFLINE === UNKNOWN) {
+            const obj6 = { delayed: null };
+            const obj7 = { state: tmp13.NO_CONNECTION, delayMs: delayMs2 };
+            obj6.delayed = obj7;
             obj = obj6;
-          } else if (tmp10.CONNECTING === UNKNOWN) {
-            const obj8 = { state: obj.WAITING_FOR_NETWORK, delayMs: tmp19 };
+          } else if (tmp9.CONNECTING === UNKNOWN) {
+            const obj8 = { state: tmp13.WAITING_FOR_NETWORK, delayMs: null };
             if (CacheStore.hasCache()) {
-              const obj11 = state(13514);
-              let num = obj11.getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
+              let num = state(13514).getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
               if (num == null) {
                 num = 10000;
               }
-              tmp19 = num;
+              let tmp18 = num;
+              const obj11 = state(13514);
             } else {
-              tmp19 = delayMs2;
+              tmp18 = delayMs2;
             }
-            obj = { delayed: obj8 };
-            const obj9 = { delayed: obj8 };
+            const obj9 = { delayed: null };
+            obj8.delayMs = tmp18;
+            obj9.delayed = obj8;
+            obj = obj9;
           } else {
-            if (tmp10.ONLINE !== UNKNOWN) {
-              if (tmp10.UNKNOWN !== UNKNOWN) {
+            if (tmp9.ONLINE !== UNKNOWN) {
+              if (tmp9.UNKNOWN !== UNKNOWN) {
                 obj = {};
               }
             }
-            const obj10 = { delayed: obj12 };
-            obj12 = { state: obj.HIDDEN, delayMs };
+            const obj10 = { delayed: null };
+            const obj12 = { state: tmp13.HIDDEN, delayMs };
+            obj10.delayed = obj12;
             obj = obj10;
           }
-        } else if (obj.WAITING_FOR_NETWORK === tmp) {
-          if (tmp10.OFFLINE === UNKNOWN) {
-            const obj13 = { immediate: obj.NO_CONNECTION };
+        } else if (tmp13.WAITING_FOR_NETWORK === tmp) {
+          if (tmp9.OFFLINE === UNKNOWN) {
+            const obj13 = { immediate: tmp13.NO_CONNECTION };
             obj = obj13;
-          } else if (tmp10.ONLINE === UNKNOWN) {
-            const obj14 = { immediate: obj.BACK_ONLINE, delayed: obj15 };
-            obj15 = { state: obj.HIDDEN, delayMs };
+          } else if (tmp9.ONLINE === UNKNOWN) {
+            const obj14 = { immediate: tmp13.BACK_ONLINE, delayed: null };
+            const obj15 = { state: tmp13.HIDDEN, delayMs };
+            obj14.delayed = obj15;
             obj = obj14;
           } else {
-            if (tmp10.CONNECTING !== UNKNOWN) {
-              const UNKNOWN3 = tmp10.UNKNOWN;
+            if (tmp9.CONNECTING !== UNKNOWN) {
+              const UNKNOWN3 = tmp9.UNKNOWN;
             }
             obj = {};
           }
-        } else if (obj.NO_CONNECTION === tmp) {
-          if (tmp10.CONNECTING === UNKNOWN) {
-            const obj17 = { immediate: obj.WAITING_FOR_NETWORK };
+        } else if (tmp13.NO_CONNECTION === tmp) {
+          if (tmp9.CONNECTING === UNKNOWN) {
+            const obj17 = { immediate: tmp13.WAITING_FOR_NETWORK };
             obj = obj17;
-          } else if (tmp10.ONLINE === UNKNOWN) {
-            const obj18 = { immediate: obj.BACK_ONLINE, delayed: obj19 };
-            obj19 = { state: obj.HIDDEN, delayMs };
+          } else if (tmp9.ONLINE === UNKNOWN) {
+            const obj18 = { immediate: tmp13.BACK_ONLINE, delayed: null };
+            const obj19 = { state: tmp13.HIDDEN, delayMs };
+            obj18.delayed = obj19;
             obj = obj18;
           } else {
-            if (tmp10.OFFLINE !== UNKNOWN) {
-              const UNKNOWN2 = tmp10.UNKNOWN;
+            if (tmp9.OFFLINE !== UNKNOWN) {
+              const UNKNOWN2 = tmp9.UNKNOWN;
             }
             obj = {};
           }
         }
       }
       UNKNOWN = constants.UNKNOWN;
-      tmp10 = constants;
+      tmp9 = constants;
     }
     if (null != obj.immediate) {
-      immediate = obj.immediate;
-      const tmp29 = null !== c14 && c14 === immediate;
-      if (tmp29) {
+      const immediate = obj.immediate;
+      if (tmp28) {
         if (null != timeout) {
           closure_8.verbose("clearing pending state update timer");
           const _clearTimeout = clearTimeout;
@@ -150,11 +141,11 @@ function updateState() {
           connectivityIndicatorStateStore.emitChange();
         }
       }
+      tmp28 = null !== c14 && c14 === immediate;
     }
     if (null != obj.delayed) {
       const delayed = obj.delayed;
       state = delayed.state;
-      delayMs = delayed.delayMs;
       if (null != timeout) {
         closure_8.verbose("clearing existing state update timer because we're scheduling a new one");
         const _clearTimeout3 = clearTimeout;
@@ -173,7 +164,7 @@ function updateState() {
             connectivityIndicatorStateStore.emitChange();
           }
         }
-      }, delayMs);
+      }, delayed.delayMs);
     } else {
       if (null != timeout) {
         closure_8.verbose("clearing pending state update timer");
@@ -184,8 +175,8 @@ function updateState() {
       c14 = null;
     }
   }
+  obj = { immediate: obj.HIDDEN };
   const obj20 = { immediate: obj.HIDDEN };
-  obj = obj20;
 }
 function handleConnectionClosed() {
   c17 = false;
@@ -214,7 +205,6 @@ function handleAuthStoreChanged() {
   return false;
 }
 function handleAppStateUpdate() {
-  let timeout;
   state = AppStateStore.getState();
   if (AppStates.ACTIVE === state) {
     if (state === AppStates.BACKGROUND) {
@@ -242,7 +232,7 @@ function handleAppStateUpdate() {
   updateState();
   return false;
 }
-const AppStates = Constants.AppStates;
+const AppStates = fn(1085).AppStates;
 let closure_8 = new LoggerDefault("ConnectivityIndicatorStateStore");
 const ConnectivityIndicatorState = { HIDDEN: "hidden", WAITING_FOR_NETWORK: "waiting_for_network", NO_CONNECTION: "no_connection", BACK_ONLINE: "back_online" };
 const constants = { UNKNOWN: "unknown", ONLINE: "online", OFFLINE: "offline", CONNECTING: "connecting" };
@@ -259,39 +249,35 @@ let state = null;
 let c21 = null;
 let c22 = null;
 let connectivityIndicatorStateStore = null;
-new LoggerDefault("ConnectivityIndicatorStateStore");
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class ConnectivityIndicatorStateStore extends Store {
-  initialize() {
-    this.waitFor(AuthenticationStore, CacheStore, MessageStore, SelectedChannelStore, AppStateStore);
-    const items = [MessageStore];
-    this.syncWith(items, handleLoadingMessagesChanged);
-    const items1 = [AuthenticationStore];
-    this.syncWith(items1, handleAuthStoreChanged);
-    const items2 = [AppStateStore];
-    this.syncWith(items2, handleAppStateUpdate);
-    const obj = NetworkUtilsDefault;
-    obj.addOfflineCallback(() => {
-      c16 = true;
-      updateState();
-    });
-    const obj2 = NetworkUtilsDefault;
-    obj2.addOnlineCallback(() => {
-      c16 = false;
-      updateState();
-    });
-    const obj3 = NetworkUtilsDefault;
-    closure_16 = !obj3.isOnline();
-    closure_15 = AuthenticationStore.isAuthenticated();
-    updateState();
-  }
-  getState() {
-    return closure_13;
-  }
 }
 const prototype = ConnectivityIndicatorStateStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(AuthenticationStore, CacheStore, MessageStore, SelectedChannelStore, AppStateStore);
+  const items = [MessageStore];
+  this.syncWith(items, handleLoadingMessagesChanged);
+  const items1 = [AuthenticationStore];
+  this.syncWith(items1, handleAuthStoreChanged);
+  const items2 = [AppStateStore];
+  this.syncWith(items2, handleAppStateUpdate);
+  NetworkUtilsDefault.addOfflineCallback(() => {
+    c16 = true;
+    updateState();
+  });
+  NetworkUtilsDefault.addOnlineCallback(() => {
+    c16 = false;
+    updateState();
+  });
+  closure_16 = !NetworkUtilsDefault.isOnline();
+  closure_15 = AuthenticationStore.isAuthenticated();
+  updateState();
+};
+prototype["getState"] = function getState() {
+  return closure_13;
+};
 ConnectivityIndicatorStateStore.displayName = "ConnectivityIndicatorStateStore";
-let obj2 = {
+connectivityIndicatorStateStore = new ConnectivityIndicatorStateStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     c17 = true;
     updateState();
@@ -304,8 +290,8 @@ let obj2 = {
   },
   CONNECTION_CLOSED: handleConnectionClosed,
   CONNECTION_INTERRUPTED: handleConnectionClosed
-};
-connectivityIndicatorStateStore = new ConnectivityIndicatorStateStore(DispatcherDefault, obj2);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/connectivity/native/ConnectivityIndicatorStateStore.tsx");
 
 export default connectivityIndicatorStateStore;

@@ -6,15 +6,12 @@ import HTTPUtils from "HTTPUtils" /* 1282 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;
-let obj = {
-  updateNote(id, note) {
-    let obj;
+const result = size.fileFinishedImporting("actions/NoteActionCreators.tsx");
+
+export default {
+  updateNote(userId, note) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: Endpoints.NOTE(id), body: obj, oldFormErrors: true, rejectWithError: true };
-    obj = { note };
+    const request = { url: Endpoints.NOTE(userId), body: { note }, oldFormErrors: true, rejectWithError: true };
     return HTTP.put(request);
   }
 };
-const result = size.fileFinishedImporting("actions/NoteActionCreators.tsx");
-
-export default obj;

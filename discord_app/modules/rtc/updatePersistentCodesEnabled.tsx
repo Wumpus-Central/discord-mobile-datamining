@@ -2,293 +2,292 @@
 
 // Module 15798 (updatePersistentCodesEnabled)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
-import intl4 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import SecureFramesUtils from "SecureFramesUtils" /* 9378 */;
-import SecureFramesConstants from "SecureFramesConstants" /* 9380 */;
 import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9383 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import VoiceStateStore from "VoiceStateStore" /* 4915 */;
-import size from "module_2" /* 2 */;
 
-let body, c0, c1, c2, closure_4, closure_5, dispatchResult, getChannel, id, persistentCodesEnabled, voiceStateForUser;
-
+require = fn;
 function savePersistentCodesEnabled() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_10.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-let obj = function _savePersistentCodesEnabled() {
-  obj = _asyncToGenerator(async (persistentCodesEnabled, arg1) => {
-    let closure_1 = arg1;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
-    return (async function(arg0, value) {
-      let intl;
-      if (c8 === 2) {
-        c8 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          let aPIError;
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              return { value, done: true };
-            } else {
-              closure_4 = tmp;
-              persistentCodesEnabled = closure_1;
-              aPIError = undefined;
-              const obj5 = { type: "SECURE_FRAMES_SETTINGS_UPDATE", persistentCodesEnabled };
-              const obj8 = DispatcherDefault;
-              dispatchResult = obj8.dispatch(obj5);
-              if (persistentCodesEnabled) {
-                c6 = 1;
-                dispatchResult = SecureFramesUtils;
-                c7 = 2;
-                c8 = 1;
-                const obj6 = { value: dispatchResult.ensureCurrentUserPublicKey(closure_2_7), done: false };
-                return obj6;
-              } else if (closure_1 != null) {
-                closure_1();
-              }
-            }
-          } else if (1 === tmp4) {
-            c6 = 0;
-            body = closure_5;
-            const self = this;
-            const self2 = this;
-            aPIError = new closure_132_0(closure_132_2[8]).APIError(body);
-            const obj2 = closure_132_1(closure_132_2[6]);
-            obj2.dispatch({ type: "SECURE_FRAMES_SETTINGS_UPDATE", persistentCodesEnabled: false });
-            dispatchResult = closure_132_1(closure_132_2[9]);
-            const show = dispatchResult.show;
-            const obj7 = { title: intl.string(closure_132_0(closure_132_2[10]).t.R0RpRX), body };
-            intl = closure_132_0(closure_132_2[10]).intl;
-            const anyErrorMessage = aPIError.getAnyErrorMessage();
-            body = anyErrorMessage;
-            if (anyErrorMessage == null) {
-              const intl2 = closure_132_0(closure_132_2[10]).intl;
-              body = intl2.string(closure_132_0(closure_132_2[10]).t.eAn6z2);
-            }
-            show(obj7);
-          } else if (arg0 === 1) {
-            c8 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 0;
-            c8 = 3;
-            return { value, done: true };
-          } else {
-            if (persistentCodesEnabled != null) {
-              persistentCodesEnabled();
-            }
-            c6 = 0;
-          }
-          c8 = 3;
-          return { value: "IconComponent", done: null };
-        } catch (tmp38) {
-          closure_5 = tmp38;
-          if (0 === c6) {
-            c8 = 3;
-            throw tmp38;
-          } else {
-            c7 = 1;
-          }
-        }
-      }
-    })();
-  });
-  return obj(...arguments);
-};
-obj = function _updatePersistentCodesEnabled() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let intl3;
-    let string2Result;
-    function getCurrentUserSelectedVoiceChannelId() {
-      voiceStateForUser = voiceStateForUser.getVoiceStateForUser(id.getId());
-      let channelId;
-      getChannel = getChannel.getChannel;
-      obj = id;
-      if (voiceStateForUser != null) {
-        channelId = voiceStateForUser.channelId;
-      }
-      const channel = getChannel(channelId);
-      let sessionId1;
-      const sessionId = obj.getSessionId();
-      if (voiceStateForUser != null) {
-        sessionId1 = voiceStateForUser.sessionId;
-      }
-      id = null;
-      if (sessionId === sessionId1) {
-        id = null;
-        if (null != channel) {
-          id = null;
-          if (channel.type !== constants.GUILD_STAGE_VOICE) {
-            id = channel.id;
-          }
-        }
-      }
-      return id;
-    }
-    let closure_0 = arg0;
-    if (c1 === 2) {
-      c1 = 3;
-      const str = "Generator functions may not be called on executing generators";
+let closure_10 = async function _savePersistentCodesEnabled() {
+  closure_1 = arg1;
+  c7 = 0;
+  c8 = 0;
+  c6 = 0;
+  return (async (arg0, value) => {
+    if (c8 === 2) {
+      c8 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp2 === 3) {
+    } else if (tmp7 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj2 = { value, done: true };
-        return obj2;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
         return { value: "IconComponent", done: null };
       }
     } else {
       try {
-        c1 = 2;
-        if (0 === c2) {
+        c8 = 2;
+        if (0 === c7) {
           if (arg0 === 1) {
-            c1 = 3;
+            c8 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c1 = 3;
-            let obj3 = { value, done: true };
-            return obj3;
+            c8 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
-            const tmp19 = getCurrentUserSelectedVoiceChannelId();
-            let closure_2 = tmp19;
-            if (null != tmp19) {
-              let stringResult;
-              let tmp10;
-              const tmp7 = SecureFramesPlatformUtilsDefault;
-              const openSecureFramesUpdateConfirmation = tmp7.openSecureFramesUpdateConfirmation;
-              const intl = intl4.intl;
-              const string = intl.string;
-              const t = intl4.t;
-              if (closure_0) {
-                stringResult = string(t.DRFN1B);
-                tmp10 = require;
-              } else {
-                stringResult = string(t.q29xJz);
-                tmp10 = require;
-              }
-              let obj4 = {
-                title: stringResult,
-                subtitle: string2Result,
-                confirmText: intl3.string(tmp10(dependencyMap[10]).t.aTuFYT),
-                onConfirm: function() {
-                            return closure_1(...arguments);
-                          }
-              };
-              const intl2 = tmp10(dependencyMap[10]).intl;
-              const string2 = intl2.string;
-              const t2 = tmp10(dependencyMap[10]).t;
-              if (closure_0) {
-                string2Result = string2(t2.y015ZY);
-              } else {
-                string2Result = string2(t2.E66FQn);
-              }
-              intl3 = tmp10(dependencyMap[10]).intl;
-              let closure_1 = _asyncToGenerator(async () => {
-                if (c0 === 2) {
-                  c0 = 3;
-                  throw new TypeError("Generator functions may not be called on executing generators");
-                } else if (tmp2 === 3) {
-                  if (arg0 === 1) {
-                    throw value;
-                  } else if (arg0 === 2) {
-                    let obj2 = { value, done: true };
-                    return obj2;
-                  } else {
-                    return { value: "IconComponent", done: null };
-                  }
-                } else {
-                  try {
-                    c0 = 2;
-                    if (0 === c1) {
-                      if (arg0 === 1) {
-                        c0 = 3;
-                        throw value;
-                      } else if (arg0 === 2) {
-                        c0 = 3;
-                        const obj3 = { value, done: true };
-                        return obj3;
-                      } else {
-                        c1 = 1;
-                        c0 = 1;
-                        const obj4 = {
-                          value: closure_1_9(closure_0, () => {
-                                    obj = c1(closure_2_2[12]);
-                                    obj.disconnect();
-                                    const obj2 = c1(closure_2_2[12]);
-                                    const voiceChannel = obj2.selectVoiceChannel(closure_1_2);
-                                  }),
-                          done: false
-                        };
-                        return obj4;
-                      }
-                    } else if (arg0 === 1) {
-                      c0 = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      c0 = 3;
-                      obj = { value, done: true };
-                      return obj;
-                    } else {
-                      c0 = 3;
-                      return { value: "IconComponent", done: null };
-                    }
-                  } catch (tmp6) {
-                    c0 = 3;
-                    throw tmp6;
-                  }
-                }
-              });
-              const result = openSecureFramesUpdateConfirmation(obj4);
-            } else {
-              c2 = 1;
-              c1 = 1;
-              const obj5 = { value: savePersistentCodesEnabled(closure_0), done: false };
-              return obj5;
+            closure_4 = tmp3;
+            closure_3 = tmp5;
+            closure_131_0 = closure_1;
+            closure_131_1 = undefined;
+            const obj7 = { type: "SECURE_FRAMES_SETTINGS_UPDATE", persistentCodesEnabled };
+            DispatcherDefault.dispatch(obj7);
+            if (persistentCodesEnabled) {
+              c6 = 1;
+              c7 = 2;
+              c8 = 1;
+              const obj8 = { value: SecureFramesUtils.ensureCurrentUserPublicKey(closure_2_7), done: false };
+              return obj8;
+            } else if (closure_1 != null) {
+              closure_1();
             }
           }
-        } else if (arg0 === 1) {
+        } else {
+          if (1 === tmp8) {
+            c6 = 0;
+            closure_131_2 = closure_5;
+            const aPIError = new closure_132_0(closure_132_2[8]).APIError(closure_131_2);
+            closure_131_1 = aPIError;
+            closure_132_1(closure_132_2[6]).dispatch({ type: "SECURE_FRAMES_SETTINGS_UPDATE", persistentCodesEnabled: false });
+            const obj2 = closure_132_1(closure_132_2[6]);
+            const obj10 = { title: null, body: null };
+            const intl = closure_132_0(closure_132_2[10]).intl;
+            obj10.title = intl.string(closure_132_0(closure_132_2[10]).t.R0RpRX);
+            const anyErrorMessage = closure_131_1.getAnyErrorMessage();
+            body = anyErrorMessage;
+            if (anyErrorMessage == null) {
+              const intl2 = closure_132_0(closure_132_2[10]).intl;
+              body = intl2.string(closure_132_0(closure_132_2[10]).t.eAn6z2);
+            }
+            obj10.body = body;
+            closure_132_1(closure_132_2[9]).show(obj10);
+            const obj3 = closure_132_1(closure_132_2[9]);
+          } else if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            if (closure_131_0 != null) {
+              closure_131_0();
+            }
+            c6 = 0;
+          }
+          c6 = 0;
+          c8 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+        c8 = 3;
+      } catch (tmp44) {
+        closure_5 = tmp44;
+        if (tmp4 === c6) {
+          c8 = tmp2;
+          throw tmp44;
+        } else {
+          c7 = tmp;
+        }
+      }
+    }
+  })();
+};
+let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c1 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
           c1 = 3;
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj4 = { value, done: true };
+          return obj4;
+        } else {
+          const tmp18 = (function getCurrentUserSelectedVoiceChannelId() {
+            voiceStateForUser = voiceStateForUser.getVoiceStateForUser(id.getId());
+            let channelId;
+            if (voiceStateForUser != null) {
+              channelId = voiceStateForUser.channelId;
+            }
+            channel = channel.getChannel(channelId);
+            let sessionId1;
+            const sessionId = id.getSessionId();
+            if (voiceStateForUser != null) {
+              sessionId1 = voiceStateForUser.sessionId;
+            }
+            id = null;
+            if (sessionId === sessionId1) {
+              id = null;
+              if (null != channel) {
+                id = null;
+                if (channel.type !== constants.GUILD_STAGE_VOICE) {
+                  id = channel.id;
+                }
+              }
+            }
+            return id;
+          })();
+          closure_2 = tmp18;
+          if (null != tmp18) {
+            const intl = util.intl;
+            const string = intl.string;
+            const t = util.t;
+            if (closure_0) {
+              let stringResult = string(t.DRFN1B);
+              let tmp10 = require;
+            } else {
+              stringResult = string(t.q29xJz);
+              tmp10 = require;
+            }
+            let obj5 = { title: stringResult, subtitle: null, confirmText: null, onConfirm: null };
+            const intl2 = tmp10(1126).intl;
+            const string2 = intl2.string;
+            let intl3 = tmp10(1126).t;
+            if (closure_0) {
+              let string2Result = string2(intl3.y015ZY);
+            } else {
+              string2Result = string2(intl3.E66FQn);
+            }
+            obj5.subtitle = string2Result;
+            intl3 = tmp10(1126).intl;
+            obj5.confirmText = intl3.string(tmp10(1126).t.aTuFYT);
+            closure_1 = asyncGeneratorStep(async () => {
+              if (c0 === 2) {
+                c0 = 3;
+                throw new TypeError("Generator functions may not be called on executing generators");
+              } else if (tmp3 === 3) {
+                if (arg0 === 1) {
+                  throw value;
+                } else if (arg0 === 2) {
+                  const obj2 = { value, done: true };
+                  return obj2;
+                } else {
+                  return { value: "IconComponent", done: null };
+                }
+              } else {
+                try {
+                  c0 = 2;
+                  if (0 === c1) {
+                    if (arg0 === 1) {
+                      c0 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c0 = 3;
+                      const obj3 = { value, done: true };
+                      return obj3;
+                    } else {
+                      c1 = 1;
+                      c0 = 1;
+                      const obj4 = {
+                        value: closure_1_9(closure_0, () => {
+                                  c1(5575).disconnect();
+                                  const obj = c1(5575);
+                                  const voiceChannel = c1(5575).selectVoiceChannel(dependencyMap);
+                                }),
+                        done: false
+                      };
+                      return obj4;
+                    }
+                  } else if (arg0 === 1) {
+                    c0 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c0 = 3;
+                    let obj = { value, done: true };
+                    return obj;
+                  } else {
+                    c0 = 3;
+                    return { value: "IconComponent", done: null };
+                  }
+                } catch (tmp7) {
+                  c0 = tmp;
+                  throw tmp7;
+                }
+              }
+            });
+            obj5.onConfirm = function() {
+              const self = this;
+              const apply = closure_1.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
+              }
+              return applyArgumentsResult;
+            };
+            obj5 = SecureFramesPlatformUtilsDefault.openSecureFramesUpdateConfirmation(obj5);
+          } else {
+            c2 = 1;
+            c1 = 1;
+            const obj6 = { value: savePersistentCodesEnabled(closure_0), done: false };
+            return obj6;
+          }
         }
+      } else if (arg0 === 1) {
+        c1 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
         c1 = 3;
         return { value: "IconComponent", done: null };
-      } catch (tmp14) {
+      } else {
         c1 = 3;
-        throw tmp14;
+        let obj = { value, done: true };
+        return obj;
       }
+    } catch (tmp12) {
+      c1 = tmp;
+      throw tmp12;
     }
-  });
-  return obj(...arguments);
+  }
 };
-let closure_7 = SecureFramesConstants.SECURE_FRAMES_PUBLIC_KEY_VERSION;
-const ChannelTypes = Constants.ChannelTypes;
-let result = size.fileFinishedImporting("modules/rtc/updatePersistentCodesEnabled.tsx");
+let closure_7 = fn(9380).SECURE_FRAMES_PUBLIC_KEY_VERSION;
+const ChannelTypes = fn(1085).ChannelTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rtc/updatePersistentCodesEnabled.tsx");
 
 export const updatePersistentCodesEnabled = function updatePersistentCodesEnabled() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_11.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

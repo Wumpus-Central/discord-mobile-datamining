@@ -1,54 +1,53 @@
 // === Module 8041: LabFeatureStore ===
 
 // Module 8041 (LabFeatureStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import LabFeaturesDefault from "LabFeatures" /* 8042 */;
-import size from "module_2" /* 2 */;
 
-const React2 = {};
-const DeviceSettingsStore = get_initializedDefault.DeviceSettingsStore;
+let toggleStates = {};
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class LabFeatureStore extends DeviceSettingsStore {
-  getUserAgnosticState() {
-    return { toggleStates };
-  }
-  initialize(toggleStates) {
-    for (const key10008 in LabFeaturesDefault) {
-      let flag;
+}
+const prototype = LabFeatureStore.prototype;
+prototype["getUserAgnosticState"] = function getUserAgnosticState() {
+  return { toggleStates };
+};
+prototype["initialize"] = function initialize(toggleStates) {
+  for (const key10008 in LabFeaturesDefault) {
+    let flag;
+    if (arg0 != null) {
+      toggleStates = arg0.toggleStates;
       if (toggleStates != null) {
-        toggleStates = toggleStates.toggleStates;
-        if (toggleStates != null) {
-          flag = toggleStates[key10008];
-        }
+        flag = toggleStates[key10008];
       }
-      if (flag == null) {
-        flag = false;
-      }
-      closure_2[key10008] = flag;
-      continue;
     }
-  }
-  get(arg0) {
-    let flag = toggleStates[arg0];
     if (flag == null) {
       flag = false;
     }
-    return flag;
-  }
-  set(arg0, arg1) {
-    toggleStates[arg0] = arg1;
-    return arg1;
-  }
-}
-const prototype = LabFeatureStore.prototype;
-LabFeatureStore.displayName = "LabFeatureStore";
-LabFeatureStore.persistKey = "LabFeatureStore";
-const obj = {
-  LAB_FEATURE_TOGGLE: function handleLabFeatureToggleSet(labFeature) {
-    toggleStates[labFeature.labFeature] = labFeature.enabled;
+    closure_2[key10008] = flag;
+    continue;
   }
 };
-const labFeatureStore = new LabFeatureStore(DispatcherDefault, obj);
+prototype["get"] = function get(arg0) {
+  let flag = toggleStates[arg0];
+  if (flag == null) {
+    flag = false;
+  }
+  return flag;
+};
+prototype["set"] = function set(arg0, arg1) {
+  closure_2[arg0] = arg1;
+  return arg1;
+};
+LabFeatureStore.displayName = "LabFeatureStore";
+LabFeatureStore.persistKey = "LabFeatureStore";
+const labFeatureStore = new LabFeatureStore(DispatcherDefault, {
+  LAB_FEATURE_TOGGLE: function handleLabFeatureToggleSet(labFeature) {
+    closure_2[labFeature.labFeature] = labFeature.enabled;
+  }
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/labs/LabFeatureStore.tsx");
 
 export default labFeatureStore;

@@ -1,43 +1,20 @@
 // === Module 9131: AVError ===
 
 // Module 9131 (AVError)
-import _mod2 from "module_2" /* 2 */;
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
-let obj10;
-let obj11;
-let obj12;
-let obj13;
-let obj14;
-let obj15;
-let obj16;
-let obj17;
-let obj18;
-let obj19;
-let obj20;
-let obj21;
-let obj22;
-let obj23;
-let obj24;
-let obj25;
-let obj26;
-let obj27;
-let obj28;
-let obj5;
-let obj6;
-let obj7;
-let obj8;
-let obj9;
 let closure_2 = ["type"];
-const tmp2 = new LoggerDefault("AVError");
-const logger = tmp2;
-let obj = { STREAM_FAILED_TO_START: "stream-failed-to-start", NO_INPUT_DEVICES: "no-input-devices", NO_AUDIO_INPUT_DETECTED: "no-audio-input-detected", DEBUG_LOG_UPLOAD_FAILED: "debug-log-upload-failed", STREAM_VIEW_LOW_FPS: "stream-view-low-fps", STREAM_VIEW_HIGH_PACKET_LOSS: "stream-view-high-packet-loss", STREAM_SEND_LOW_FPS: "stream-send-low-encode-fps", STREAM_SEND_HIGH_PACKET_LOSS: "stream-send-high-packet-loss", STREAM_BAD_NETWORK_QUALITY: "stream-send-network-quality", STREAM_SOUNDSHARE_FAILED: "stream-soundshare-failed", NOISE_CANCELLER_ERROR: "noise-canceller-error", SCREENSHARE_OS_NOT_SUPPORTED: "screenshare-min-os-requirement", STREAM_RECONNECTING: "stream-reconnecting", VIDEO_DECODE_ERROR: "video-decode-error", VIDEO_ENCODE_ERROR: "video-encode-error", STREAM_FULL: "stream-full", AUDIO_CAPTURE_SAMPLE_RATE_MISMATCH: "audio-capture-sample-rate-mismatch", VIDEO_STREAM_SENDER_READY_TIMEOUT: "video-stream-sender-ready-timeout", VIDEO_STREAM_RECEIVER_READY_TIMEOUT: "video-stream-receiver-ready-timeout", VIDEO_STREAM_SENDER_READY_TIMEOUT_NO_STREAM: "video-stream-sender-ready-timeout-no-stream", VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM: "video-stream-receiver-ready-timeout-no-stream", CAMERA_SEND_LOW_FPS: "camera-send-low-encode-fps", SCREENSHARE_OS_ERROR: "screenshare-os-error", VIDEO_BACKGROUND_UNAVAILABLE: "video-background-unavailable" };
-let obj2 = { Audio: "audio", Video: "video", Devices: "devices", Debug: "debug" };
+const logger = new LoggerDefault("AVError");
+const obj = { STREAM_FAILED_TO_START: "stream-failed-to-start", NO_INPUT_DEVICES: "no-input-devices", NO_AUDIO_INPUT_DETECTED: "no-audio-input-detected", DEBUG_LOG_UPLOAD_FAILED: "debug-log-upload-failed", STREAM_VIEW_LOW_FPS: "stream-view-low-fps", STREAM_VIEW_HIGH_PACKET_LOSS: "stream-view-high-packet-loss", STREAM_SEND_LOW_FPS: "stream-send-low-encode-fps", STREAM_SEND_HIGH_PACKET_LOSS: "stream-send-high-packet-loss", STREAM_BAD_NETWORK_QUALITY: "stream-send-network-quality", STREAM_SOUNDSHARE_FAILED: "stream-soundshare-failed", NOISE_CANCELLER_ERROR: "noise-canceller-error", SCREENSHARE_OS_NOT_SUPPORTED: "screenshare-min-os-requirement", STREAM_RECONNECTING: "stream-reconnecting", VIDEO_DECODE_ERROR: "video-decode-error", VIDEO_ENCODE_ERROR: "video-encode-error", STREAM_FULL: "stream-full", AUDIO_CAPTURE_SAMPLE_RATE_MISMATCH: "audio-capture-sample-rate-mismatch", VIDEO_STREAM_SENDER_READY_TIMEOUT: "video-stream-sender-ready-timeout", VIDEO_STREAM_RECEIVER_READY_TIMEOUT: "video-stream-receiver-ready-timeout", VIDEO_STREAM_SENDER_READY_TIMEOUT_NO_STREAM: "video-stream-sender-ready-timeout-no-stream", VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM: "video-stream-receiver-ready-timeout-no-stream", CAMERA_SEND_LOW_FPS: "camera-send-low-encode-fps", SCREENSHARE_OS_ERROR: "screenshare-os-error", VIDEO_BACKGROUND_UNAVAILABLE: "video-background-unavailable" };
+const obj2 = { Audio: "audio", Video: "video", Devices: "devices", Debug: "debug" };
 const obj3 = { Critical: "critical", Warning: "warning", Info: "info" };
 const obj4 = { [obj.STREAM_SOUNDSHARE_FAILED]: obj5, [obj.NOISE_CANCELLER_ERROR]: obj6, [obj.AUDIO_CAPTURE_SAMPLE_RATE_MISMATCH]: obj7, [obj.STREAM_FAILED_TO_START]: obj8, [obj.STREAM_VIEW_LOW_FPS]: obj9, [obj.STREAM_VIEW_HIGH_PACKET_LOSS]: obj10, [obj.STREAM_SEND_HIGH_PACKET_LOSS]: obj11, [obj.STREAM_SEND_LOW_FPS]: obj12, [obj.STREAM_BAD_NETWORK_QUALITY]: obj13, [obj.STREAM_RECONNECTING]: obj14, [obj.VIDEO_DECODE_ERROR]: obj15, [obj.VIDEO_ENCODE_ERROR]: obj16, [obj.STREAM_FULL]: obj17, [obj.VIDEO_STREAM_SENDER_READY_TIMEOUT]: obj18, [obj.VIDEO_STREAM_RECEIVER_READY_TIMEOUT]: obj19, [obj.CAMERA_SEND_LOW_FPS]: obj20, [obj.VIDEO_STREAM_SENDER_READY_TIMEOUT_NO_STREAM]: obj21, [obj.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM]: obj22, [obj.VIDEO_BACKGROUND_UNAVAILABLE]: obj23, [obj.NO_INPUT_DEVICES]: obj24, [obj.NO_AUDIO_INPUT_DETECTED]: obj25, [obj.SCREENSHARE_OS_NOT_SUPPORTED]: obj26, [obj.SCREENSHARE_OS_ERROR]: obj27, [obj.DEBUG_LOG_UPLOAD_FAILED]: obj28 };
-let closure_1;
+let closure_129_1;
+const values = Object.values(obj4);
+const mapped = values.map((errorCode) => errorCode.errorCode);
+let closure_129_0 = mapped;
 obj10 = { errorCode: 2003, severity: obj3.Warning, category: obj2.Video, isErrorOutbound: false };
 obj11 = { errorCode: 2004, severity: obj3.Warning, category: obj2.Video, isErrorOutbound: true };
 obj12 = { errorCode: 2005, severity: obj3.Warning, category: obj2.Video, isErrorOutbound: true };
@@ -62,33 +39,25 @@ obj6 = { errorCode: 1002, severity: obj3.Warning, category: obj2.Audio, isErrorO
 obj7 = { errorCode: 1003, severity: obj3.Warning, category: obj2.Audio, isErrorOutbound: true };
 obj8 = { errorCode: 2001, severity: obj3.Critical, category: obj2.Video, isErrorOutbound: true };
 obj9 = { errorCode: 2002, severity: obj3.Warning, category: obj2.Video, isErrorOutbound: false };
-const values = Object.values(obj4);
-const mapped = values.map((errorCode) => errorCode.errorCode);
-const set = new Set(mapped);
+const tmp2 = new LoggerDefault("AVError");
 if (mapped.length !== set.size) {
-  closure_1 = mapped.filter((item, index) => mapped.indexOf(item) !== index);
+  closure_129_1 = mapped.filter((item, index) => importDefault.indexOf(item) !== index);
   const _Object = Object;
   const entries = Object.entries(obj4);
   const found = entries.filter((item) => {
-    let tmp;
     [, tmp] = item;
-    return closure_1.includes(tmp.errorCode);
+    return dependencyMap.includes(tmp.errorCode);
   });
   const mapped1 = found.map((item) => {
-    let tmp;
-    let tmp2;
     [tmp, tmp2] = item;
     return "" + tmp + ": " + tmp2.errorCode;
   });
   const _Error = Error;
   const _HermesInternal = HermesInternal;
-  const self = this;
-  const self2 = this;
   const error = new Error("Duplicate AV error codes found:\n" + mapped1.join("\n"));
   throw error;
 } else {
-  const _module = _mod2;
-  const result = _module.fileFinishedImporting("modules/errors/av_errors/AVError.tsx");
+  const result = fn(2).fileFinishedImporting("modules/errors/av_errors/AVError.tsx");
   exports.AVError = obj;
   exports.AVErrorCategory = obj2;
   exports.AVErrorSeverity = obj3;
@@ -96,11 +65,10 @@ if (mapped.length !== set.size) {
   exports.reportAVError = function reportAVError(context) {
     const type = context.type;
     logger.error("AV error reported: " + type + " " + JSON.stringify(_objectWithoutProperties(context, closure_2)));
-    const obj = DispatcherDefault;
-    const obj2 = { type: "REPORT_AV_ERROR", error: type, errorCode: obj4[type].errorCode, severity: obj4[type].severity, category: obj4[type].category, context };
-    obj.dispatch(obj2);
+    DispatcherDefault.dispatch({ type: "REPORT_AV_ERROR", error: type, errorCode: obj4[type].errorCode, severity: obj4[type].severity, category: obj4[type].category, context });
   };
   exports.getErrorInfo = function getErrorInfo(STREAM_FAILED_TO_START) {
     return obj4[STREAM_FAILED_TO_START];
   };
 }
+set = new Set(mapped);

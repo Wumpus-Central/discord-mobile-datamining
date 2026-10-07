@@ -1,11 +1,9 @@
 // === Module 13582: RTCConnectionDesyncStore ===
 
 // Module 13582 (RTCConnectionDesyncStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import CachedEntriesMapDefault from "CachedEntriesMap" /* 2025 */;
-import CallConstants from "CallConstants" /* 4917 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4951 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
 import useAvatarDecoration from "useAvatarDecoration" /* 7898 */;
@@ -14,11 +12,8 @@ import ChannelStore from "ChannelStore" /* 2051 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import UserStore from "UserStore" /* 1377 */;
 import VoiceStateStore from "VoiceStateStore" /* 4915 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-let c10;
-let c9;
+require = fn;
 function retryFailedUsers() {
   const channelId = RTCConnectionStore.getChannelId();
   if (null == channelId) {
@@ -29,68 +24,64 @@ function retryFailedUsers() {
     if (channel != null) {
       guildId = channel.getGuildId();
     }
-    let c2 = false;
-    const item = set.forEach(function(item) {
-      let obj2;
-      let obj3;
+    c2 = false;
+    const item = set.forEach((item) => {
       if (null == VoiceStateStore.getVoiceStateForChannel(channelId, item)) {
         const user = UserStore.getUser(item);
         if (null != user) {
           c2 = true;
           set.delete(item);
-          const self = this;
-          const self2 = this;
           const obj4 = { userId: user.id, channelId };
-          const tmp21 = new VoiceStateRecord(obj4);
+          const tmp23 = new VoiceStateRecord(obj4);
           let tmp6 = guildId;
           if (guildId == null) {
-            tmp6 = React4;
+            tmp6 = options;
           }
-          const result = closure_12.set(user.id, makeSortedVoiceState(tmp21, tmp6, user.id));
-          const obj = { type: ParticipantTypes.USER, user, id: user.id, streamId: null, voiceState: tmp21, voicePlatform: null, speaking: false, lastSpoke: 0, soundsharing: false, ringing: false, userNick: obj2.getName(guildId, channelId, user), userAvatarDecoration: obj3.getAvatarDecoration(user, guildId), localVideoDisabled: false, isPoppedOut: false };
-          obj2 = NicknameUtilsDefault;
-          obj3 = useAvatarDecoration;
-          const result1 = set2.set(user.id, obj);
+          const result = closure_12.set(user.id, makeSortedVoiceState(tmp23, tmp6, user.id));
+          const obj = { type: ParticipantTypes.USER, user, id: user.id, streamId: null, voiceState: tmp23, voicePlatform: null, speaking: false, lastSpoke: 0, soundsharing: false, ringing: false, userNick: NicknameUtilsDefault.getName(guildId, channelId, user), userAvatarDecoration: null, localVideoDisabled: false, isPoppedOut: false };
+          obj.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, guildId);
+          const result1 = closure_13.set(user.id, obj);
         }
       } else {
         set.delete(item);
       }
     });
-    let tmp6 = c2;
     return c2;
   }
 }
-const makeSortedVoiceState = SortedVoiceStateStore.makeSortedVoiceState;
-({ ME: c9, RTCConnectionStates: c10 } = Constants);
-const ParticipantTypes = CallConstants.ParticipantTypes;
-const tmp3 = new CachedEntriesMapDefault();
+const makeSortedVoiceState = fn(4920).makeSortedVoiceState;
+const Constants = fn(1085);
+({ ME: closure_9, RTCConnectionStates: c10 } = Constants);
+const ParticipantTypes = fn(4917).ParticipantTypes;
 new CachedEntriesMapDefault();
+const tmp3 = new CachedEntriesMapDefault();
 const set = new Set();
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class RTCConnectionDesyncStore extends Store {
-  initialize() {
-    this.waitFor(VoiceStateStore, UserStore, ChannelStore, RTCConnectionStore);
-    const items = [UserStore];
-    this.syncWith(items, retryFailedUsers);
-  }
-  getDesyncedUserIds() {
-    return set.keys();
-  }
-  getDesyncedVoiceStates() {
-    return set.values();
-  }
-  getDesyncedParticipants() {
-    return set2.values();
-  }
 }
-Object.defineProperty(RTCConnectionDesyncStore.prototype, "desyncedVoiceStatesCount", {
+const prototype = RTCConnectionDesyncStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(VoiceStateStore, UserStore, ChannelStore, RTCConnectionStore);
+  const items = [UserStore];
+  this.syncWith(items, retryFailedUsers);
+};
+Object.defineProperty(prototype, "desyncedVoiceStatesCount", {
   get: function desyncedVoiceStatesCount() {
     return set.size();
   },
   set: undefined
 });
+prototype["getDesyncedUserIds"] = function getDesyncedUserIds() {
+  return set.keys();
+};
+prototype["getDesyncedVoiceStates"] = function getDesyncedVoiceStates() {
+  return set.values();
+};
+prototype["getDesyncedParticipants"] = function getDesyncedParticipants() {
+  return set2.values();
+};
 RTCConnectionDesyncStore.displayName = "RTCConnectionDesyncStore";
-let obj = {
+const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     set.clear();
     set2.clear();
@@ -102,8 +93,6 @@ let obj = {
     set.clear();
   },
   RTC_CONNECTION_STATE: function handleRTCConnectionState(arg0) {
-    let context;
-    let state;
     ({ state, context } = arg0);
     let tmp = context === BaseConnectionEvent.MediaEngineContextTypes.DEFAULT;
     if (tmp) {
@@ -119,59 +108,54 @@ let obj = {
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
     const channelId = RTCConnectionStore.getChannelId();
-    const reduced = null != channelId && voiceStates.reduce((acc, userId) => {
-      userId = userId.userId;
-      let tmp = userId.channelId === channelId;
-      if (tmp) {
-        let deleteResult = set.delete(userId);
-        const deleteResult1 = set2.delete(userId);
-        const deleteResult2 = set.delete(userId);
-        if (!deleteResult) {
-          deleteResult = deleteResult1;
+    let reduced = null != channelId;
+    if (reduced) {
+      reduced = voiceStates.reduce((acc, userId) => {
+        userId = userId.userId;
+        let tmp = userId.channelId === channelId;
+        if (tmp) {
+          let deleteResult = set.delete(userId);
+          const deleteResult1 = set2.delete(userId);
+          if (!deleteResult) {
+            deleteResult = deleteResult1;
+          }
+          if (!deleteResult) {
+            deleteResult = deleteResult2;
+          }
+          tmp = deleteResult;
+          deleteResult2 = set.delete(userId);
         }
-        if (!deleteResult) {
-          deleteResult = deleteResult2;
+        if (!tmp) {
+          tmp = acc;
         }
-        tmp = deleteResult;
-      }
-      if (!tmp) {
-        tmp = acc;
-      }
-      return tmp;
-    }, false);
+        return tmp;
+      }, false);
+    }
     return reduced;
   },
   RTC_CONNECTION_CLIENT_CONNECT: function handleRTCConnectionClientConnect(context) {
-    let userIds;
     ({ userIds, guildId: require, channelId: importDefault } = context);
     let reduced = context.context === BaseConnectionEvent.MediaEngineContextTypes.DEFAULT;
     if (reduced) {
-      let flag = false;
-      reduced = userIds.reduce(function(acc, item) {
-        let obj2;
-        let obj3;
-        if (null != VoiceStateStore.getVoiceStateForChannel(importDefault, item)) {
+      reduced = userIds.reduce((acc, item) => {
+        if (null != VoiceStateStore.getVoiceStateForChannel(channelId, item)) {
           return acc;
         } else {
-          let flag;
           const user = UserStore.getUser(item);
           if (null == user) {
             set.add(item);
-            flag = acc;
+            let flag = acc;
           } else {
-            const self = this;
-            const self2 = this;
-            const obj4 = { userId: user.id, channelId: importDefault };
-            const tmp19 = new VoiceStateRecord(obj4);
-            let tmp2 = require;
-            if (require == null) {
-              tmp2 = React4;
+            const obj4 = { userId: user.id, channelId };
+            const tmp21 = new VoiceStateRecord(obj4);
+            let tmp2 = closure_1_0;
+            if (closure_1_0 == null) {
+              tmp2 = options;
             }
-            const result = closure_12.set(user.id, makeSortedVoiceState(tmp19, tmp2, user.id));
-            const obj = { type: ParticipantTypes.USER, user, id: user.id, streamId: null, voiceState: tmp19, voicePlatform: null, speaking: false, lastSpoke: 0, soundsharing: false, ringing: false, userNick: obj2.getName(require, importDefault, user), userAvatarDecoration: obj3.getAvatarDecoration(user, require), localVideoDisabled: false, isPoppedOut: false };
-            obj2 = NicknameUtilsDefault;
-            obj3 = useAvatarDecoration;
-            const result1 = set2.set(user.id, obj);
+            const result = closure_12.set(user.id, makeSortedVoiceState(tmp21, tmp2, user.id));
+            const obj = { type: ParticipantTypes.USER, user, id: user.id, streamId: null, voiceState: tmp21, voicePlatform: null, speaking: false, lastSpoke: 0, soundsharing: false, ringing: false, userNick: NicknameUtilsDefault.getName(closure_1_0, channelId, user), userAvatarDecoration: null, localVideoDisabled: false, isPoppedOut: false };
+            obj.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_1_0);
+            const result1 = closure_13.set(user.id, obj);
             flag = true;
           }
           return flag;
@@ -186,7 +170,6 @@ let obj = {
     if (tmp) {
       let deleteResult = set.delete(userId);
       const deleteResult1 = set2.delete(userId);
-      const deleteResult2 = set.delete(userId);
       if (!deleteResult) {
         deleteResult = deleteResult1;
       }
@@ -194,11 +177,12 @@ let obj = {
         deleteResult = deleteResult2;
       }
       tmp = deleteResult;
+      deleteResult2 = set.delete(userId);
     }
     return tmp;
   }
-};
-const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("stores/RTCConnectionDesyncStore.tsx");
 
 export default rTCConnectionDesyncStore;

@@ -9,7 +9,7 @@ import size from "module_2" /* 2 */;
 
 const ComponentActionsKeyed = Constants.ComponentActionsKeyed;
 const warn = new LoggerDefault("ComponentDispatchUtils");
-let obj = {
+const componentDispatcher = new utils_ComponentDispatchUtils.ComponentDispatcher({
   maxListeners: 100,
   enableDevtools: false,
   logger: {
@@ -19,19 +19,15 @@ let obj = {
     }
   },
   devtoolsReporter: function reportDevtoolsEvent(fullActionName, actionData, durationMs) {
-    let closure_0 = fullActionName;
+    closure_0 = fullActionName;
     const values = Object.values(ComponentActionsKeyed);
     let found = values.find((item) => closure_0.startsWith(item));
     if (found == null) {
       found = fullActionName;
     }
-    const obj = DevtoolsExtensionAll;
-    const obj2 = { type: "ComponentDispatch", description: found, data: { actionData, fullActionName }, durationMs };
-    obj.reportEvent(obj2);
+    DevtoolsExtensionAll.reportEvent({ type: "ComponentDispatch", description: found, data: { actionData, fullActionName }, durationMs });
   }
-};
-new LoggerDefault("ComponentDispatchUtils");
-const componentDispatcher = new utils_ComponentDispatchUtils.ComponentDispatcher(obj);
+});
 const result = size.fileFinishedImporting("utils/ComponentDispatchUtils.tsx");
 
 export const ComponentDispatcher = utils_ComponentDispatchUtils.ComponentDispatcher;

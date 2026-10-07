@@ -1,22 +1,18 @@
 // === Module 6933: useStoreConnectionErrorAlert ===
 
 // Module 6933 (useStoreConnectionErrorAlert)
-import intl3 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import IAPStore from "IAPStore" /* 6931 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let stateFromStores;
-  let tmp4;
-  let tmp5;
-  let tmp8;
-  let tmp9;
-  let obj = stateFromStores(576);
-  const cResult = obj.c(5);
-  const tmp = stateFromStores;
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/useStoreConnectionErrorAlert.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = stateFromStores(576).c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [IAPStore];
     const fn = function s() {
@@ -29,51 +25,43 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const tmpResult = tmp(504);
-  stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+  let obj = stateFromStores(576);
+  stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
   if (cResult[2] !== stateFromStores) {
     const fn2 = function c() {
-      let intl;
-      let intl2;
       if (stateFromStores) {
-        const obj = { title: intl.string(intl3.t["U+H+kd"]), body: intl2.string(intl3.t.Q9OYlM) };
-        const show = AlertActionCreatorsDefault.show;
-        AlertActionCreatorsDefault;
-        intl = intl3.intl;
-        intl2 = intl3.intl;
-        show(obj);
+        const obj2 = { title: null, body: null };
+        const intl = util.intl;
+        obj2.title = intl.string(util.t["U+H+kd"]);
+        const intl2 = util.intl;
+        obj2.body = intl2.string(util.t.Q9OYlM);
+        AlertActionCreatorsDefault.show(obj2);
       }
     };
     const items1 = [stateFromStores];
     cResult[2] = stateFromStores;
     cResult[3] = fn2;
     cResult[4] = items1;
-    tmp9 = items1;
-    tmp8 = fn2;
+    let tmp9 = items1;
+    let tmp8 = fn2;
   } else {
     tmp8 = cResult[3];
     tmp9 = cResult[4];
   }
-  const effect = react.useEffect(tmp8, tmp9);
+  const effect = noop.useEffect(tmp8, tmp9);
+  const tmpResult = stateFromStores(504);
 }) : (() => {
-  let stateFromStores;
-  let obj = stateFromStores(504);
   const items = [IAPStore];
-  stateFromStores = obj.useStateFromStores(items, () => IAPStore.hasConnectionError());
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => IAPStore.hasConnectionError());
   const items1 = [stateFromStores];
-  const effect = react.useEffect(() => {
-    let intl;
-    let intl2;
+  const effect = noop.useEffect(() => {
     if (stateFromStores) {
-      const obj = { title: intl.string(intl3.t["U+H+kd"]), body: intl2.string(intl3.t.Q9OYlM) };
-      const show = AlertActionCreatorsDefault.show;
-      AlertActionCreatorsDefault;
-      intl = intl3.intl;
-      intl2 = intl3.intl;
-      show(obj);
+      const obj2 = { title: null, body: null };
+      const intl = util.intl;
+      obj2.title = intl.string(util.t["U+H+kd"]);
+      const intl2 = util.intl;
+      obj2.body = intl2.string(util.t.Q9OYlM);
+      AlertActionCreatorsDefault.show(obj2);
     }
   }, items1);
 });
-const result = size.fileFinishedImporting("modules/premium/native/useStoreConnectionErrorAlert.tsx");
-
-export default tmp2;

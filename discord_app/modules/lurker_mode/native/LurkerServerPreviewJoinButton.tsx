@@ -1,41 +1,30 @@
 // === Module 16119: LurkerServerPreviewJoinButton ===
 
 // Module 16119 (LurkerServerPreviewJoinButton)
-import Fragment from "Fragment" /* 21 */;
-import Constants from "Constants" /* 1085 */;
-import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import LurkingStore from "LurkingStore" /* 4516 */;
-import size from "module_2" /* 2 */;
 
-let c4, c5;
+const require = fn;
+const JoinGuildSources = fn(1085).JoinGuildSources;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/lurker_mode/native/LurkerServerPreviewJoinButton.tsx");
 
-let _asyncToGenerator = _asyncToGenerator_mod;
-const JoinGuildSources = Constants.JoinGuildSources;
-const jsx = Fragment.jsx;
-const memoResult = react.memo(function LurkerServerPreviewJoinButton(guildId) {
-  let closure_3;
-  let loading;
+export default noop.memo(function LurkerServerPreviewJoinButton(guildId) {
   guildId = guildId.guildId;
   const joinSource = guildId.joinSource;
   loading = undefined;
-  _asyncToGenerator = undefined;
-  [loading, _asyncToGenerator] = react.useState(false);
+  asyncGeneratorStep = undefined;
+  [loading, asyncGeneratorStep] = noop.useState(false);
   const items = [guildId, joinSource, loading];
-  const callback = react.useCallback(_asyncToGenerator(async () => {
-    let channel;
-    let closure_0;
-    let closure_1;
-    let closure_2;
-    let lurkingSourceForGuild;
-    let obj2;
-    let obj7;
+  const callback = noop.useCallback(asyncGeneratorStep(async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp7 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -45,7 +34,6 @@ const memoResult = react.memo(function LurkerServerPreviewJoinButton(guildId) {
         return { value: "IconComponent", done: null };
       }
     } else {
-      let c3;
       try {
         c5 = 2;
         if (0 === c4) {
@@ -57,8 +45,10 @@ const memoResult = react.memo(function LurkerServerPreviewJoinButton(guildId) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            guildId = tmp4;
-            if (!first) {
+            guildId = tmp8;
+            if (first) {
+              c5 = 3;
+            } else {
               lurkingSourceForGuild = lurkingSourceForGuild.getLurkingSourceForGuild(guildId);
               let type;
               if (lurkingSourceForGuild != null) {
@@ -67,10 +57,9 @@ const memoResult = react.memo(function LurkerServerPreviewJoinButton(guildId) {
               if (type === constants.DIRECTORY_ENTRY) {
                 channel = channel.getChannel(lurkingSourceForGuild.directoryChannelId);
                 if (null != channel) {
-                  const setHubProgressActionComplete = guildId(loading[7]).setHubProgressActionComplete;
-                  const tmp39 = guildId(loading[7]);
                   guildId = channel.getGuildId();
-                  const result = setHubProgressActionComplete(guildId, guildId(loading[8]).HubProgressStep.JOIN_GUILD);
+                  const result = guildId(tmp53[7]).setHubProgressActionComplete(guildId, guildId(tmp53[8]).HubProgressStep.JOIN_GUILD);
+                  const obj7 = guildId(tmp53[7]);
                 }
               }
               v0(true);
@@ -78,22 +67,17 @@ const memoResult = react.memo(function LurkerServerPreviewJoinButton(guildId) {
               const obj6 = { source: joinSource };
               c4 = 3;
               c5 = 1;
-              const obj8 = { value: obj7.joinGuild(guildId, obj6), done: false };
-              obj7 = tmp(loading[9]);
-              return obj8;
+              const obj9 = { value: tmp4(tmp53[9]).joinGuild(guildId, obj6), done: false };
+              return obj9;
             }
           }
-        } else if (1 === c4) {
-          c3 = 0;
-          closure_129_3(false);
-          throw loading;
-        } else {
-          if (2 === c4) {
+        } else if (1 !== tmp8) {
+          if (2 === tmp8) {
             c3 = 1;
-            guildId = loading;
-            const obj5 = guildId(loading[10]);
-            const result1 = obj5.ignoreJoinGuildRefused(guildId);
-          } else if (3 === c4) {
+            closure_128_0 = tmp53;
+            const result1 = guildId(tmp53[10]).ignoreJoinGuildRefused(closure_128_0);
+            const obj5 = guildId(tmp53[10]);
+          } else if (3 === tmp8) {
             if (arg0 === 1) {
               c5 = 3;
               throw value;
@@ -101,14 +85,13 @@ const memoResult = react.memo(function LurkerServerPreviewJoinButton(guildId) {
               c3 = 0;
               closure_129_3(false);
               c5 = 3;
-              const obj9 = { value, done: true };
-              return obj9;
+              const obj10 = { value, done: true };
+              return obj10;
             } else {
               c4 = 4;
               c5 = 1;
-              const obj10 = { value: obj2.waitForGuild(closure_129_0), done: false };
-              obj2 = tmp(loading[9]);
-              return obj10;
+              const obj11 = { value: tmp4(tmp53[9]).waitForGuild(closure_129_0), done: false };
+              return obj11;
             }
           } else if (arg0 === 1) {
             c5 = 3;
@@ -125,25 +108,24 @@ const memoResult = react.memo(function LurkerServerPreviewJoinButton(guildId) {
           c3 = 0;
           closure_129_3(false);
         }
-        c5 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp50) {
-        loading = tmp50;
-        if (0 === c3) {
-          c5 = 3;
-          throw tmp50;
-        } else if (1 === tmp52) {
-          c4 = 1;
+        c3 = 0;
+        closure_129_3(false);
+        throw tmp53;
+      } catch (tmp53) {
+        if (tmp5 === c3) {
+          c5 = tmp3;
+          throw tmp53;
+        } else if (tmp2 === tmp55) {
+          c4 = tmp2;
         } else {
-          c4 = 2;
+          c4 = tmp;
         }
       }
     }
   }), items);
-  const Button = guildId(loading[11]).Button;
+  let obj = { grow: true, variant: "primary", size: "md", loading, text: null, onPress: null };
   const intl = guildId(loading[12]).intl;
-  return <Button grow variant="primary" size="md" loading={loading} text={intl.string(guildId(loading[12]).t.RLch70)} onPress={callback} />;
+  obj.text = intl.string(guildId(loading[12]).t.RLch70);
+  obj.onPress = callback;
+  return jsx(guildId(loading[11]).Button, { grow: true, variant: "primary", size: "md", loading, text: null, onPress: null });
 });
-let result = size.fileFinishedImporting("modules/lurker_mode/native/LurkerServerPreviewJoinButton.tsx");
-
-export default memoResult;

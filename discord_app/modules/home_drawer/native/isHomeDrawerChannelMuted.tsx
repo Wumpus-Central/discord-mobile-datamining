@@ -1,26 +1,22 @@
 // === Module 16298: isHomeDrawerChannelMuted ===
 
 // Module 16298 (isHomeDrawerChannelMuted)
-import get_initialized from "get initialized" /* 504 */;
-import react from "react" /* 576 */;
-import ChannelRecord from "ChannelRecord" /* 2055 */;
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4517 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-const isThread = ChannelRecord.isThread;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp4;
-  let tmp5;
-  let tmp6;
-  const obj = react;
-  const cResult = obj.c(3);
+require = fn;
+const isThread = fn(2055).isThread;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelMuted.tsx");
+
+export const useIsHomeDrawerChannelMuted = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [JoinedThreadsStore, UserGuildSettingsStore];
     const fn = function s() {
-      let guildOrCategoryOrChannelMuted;
-      let muted;
       return (type) => {
         const tmp = closure_1_3(type.type);
         if (tmp) {
@@ -29,7 +25,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           }
         }
         const tmp3 = tmp ? type.parent_id : type.id;
-        const result = null != tmp3 && guildOrCategoryOrChannelMuted.isGuildOrCategoryOrChannelMuted(type.guild_id, tmp3);
+        let result = null != tmp3;
+        if (result) {
+          result = guildOrCategoryOrChannelMuted.isGuildOrCategoryOrChannelMuted(type.guild_id, tmp3);
+        }
         return result;
       };
     };
@@ -43,27 +42,21 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5, tmp6] = cResult;
   }
-  const tmpResult = get_initialized;
-  return tmpResult.useStateFromStores(tmp4, tmp5, tmp6, get_initialized.statesWillNeverBeEqual);
+  return initialize.useStateFromStores(tmp4, tmp5, tmp6, initialize.statesWillNeverBeEqual);
 }) : (() => {
   const items = [JoinedThreadsStore, UserGuildSettingsStore];
-  const obj = get_initialized;
-  return obj.useStateFromStores(items, () => {
-    let guildOrCategoryOrChannelMuted;
-    let muted;
-    return (type) => {
-      const tmp = closure_1_3(type.type);
-      if (tmp) {
-        if (muted.isMuted(type.id)) {
-          return true;
-        }
+  return initialize.useStateFromStores(items, () => (type) => {
+    const tmp = closure_1_3(type.type);
+    if (tmp) {
+      if (muted.isMuted(type.id)) {
+        return true;
       }
-      const tmp3 = tmp ? type.parent_id : type.id;
-      const result = null != tmp3 && guildOrCategoryOrChannelMuted.isGuildOrCategoryOrChannelMuted(type.guild_id, tmp3);
-      return result;
-    };
-  }, [], get_initialized.statesWillNeverBeEqual);
+    }
+    const tmp3 = tmp ? type.parent_id : type.id;
+    let result = null != tmp3;
+    if (result) {
+      result = guildOrCategoryOrChannelMuted.isGuildOrCategoryOrChannelMuted(type.guild_id, tmp3);
+    }
+    return result;
+  }, [], initialize.statesWillNeverBeEqual);
 });
-let result = size.fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelMuted.tsx");
-
-export const useIsHomeDrawerChannelMuted = tmp2;

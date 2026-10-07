@@ -1,65 +1,65 @@
 // === Module 6666: ApplicationDirectoryApplicationsStore ===
 
 // Module 6666 (ApplicationDirectoryApplicationsStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ApplicationRecord from "ApplicationRecord" /* 2009 */;
-import size from "module_2" /* 2 */;
 
 let obj = { FETCHING: 0, [0]: "FETCHING", FETCHED: 1, [1]: "FETCHED", ERROR: 2, [2]: "ERROR" };
 obj = {};
 obj = {};
 let set = new Set();
-let obj3 = {};
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class ApplicationDirectoryApplicationsStore extends Store {
-  getApplication(arg0) {
-    if (null != arg0) {
-      return obj[arg0];
-    }
-  }
-  getApplicationRecord(arg0) {
-    if (null != arg0) {
-      if (null != obj[arg0]) {
-        return ApplicationRecord.createFromServer(obj[arg0]);
-      }
-    }
-  }
-  getApplications() {
-    return obj;
-  }
-  getApplicationFetchState(applicationId) {
-    if (null != applicationId) {
-      return obj[applicationId];
-    }
-  }
-  getApplicationFetchStates() {
-    return obj;
-  }
-  isInvalidApplication(applicationId) {
-    const hasItem = null != applicationId && set.has(applicationId);
-    return hasItem;
-  }
-  getInvalidApplicationIds() {
-    return set;
-  }
-  isFetching(applicationId) {
-    return this.getApplicationFetchState(applicationId) === obj.FETCHING;
-  }
-  getApplicationLastFetchTime(applicationId) {
-    if (null != applicationId) {
-      return obj3[applicationId];
-    }
-  }
 }
 const prototype = ApplicationDirectoryApplicationsStore.prototype;
+prototype["getApplication"] = function getApplication(arg0) {
+  if (null != arg0) {
+    return obj[arg0];
+  }
+};
+prototype["getApplicationRecord"] = function getApplicationRecord(arg0) {
+  if (null != arg0) {
+    if (null != obj[arg0]) {
+      return ApplicationRecord.createFromServer(tmp2);
+    }
+  }
+};
+prototype["getApplications"] = function getApplications() {
+  return obj;
+};
+prototype["getApplicationFetchState"] = function getApplicationFetchState(applicationId) {
+  if (null != applicationId) {
+    return obj[applicationId];
+  }
+};
+prototype["getApplicationFetchStates"] = function getApplicationFetchStates() {
+  return obj;
+};
+prototype["isInvalidApplication"] = function isInvalidApplication(applicationId) {
+  let hasItem = null != applicationId;
+  if (hasItem) {
+    hasItem = set.has(applicationId);
+  }
+  return hasItem;
+};
+prototype["getInvalidApplicationIds"] = function getInvalidApplicationIds() {
+  return set;
+};
+prototype["isFetching"] = function isFetching(applicationId) {
+  return this.getApplicationFetchState(applicationId) === obj.FETCHING;
+};
+prototype["getApplicationLastFetchTime"] = function getApplicationLastFetchTime(arg0) {
+  if (null != arg0) {
+    return obj3[arg0];
+  }
+};
 ApplicationDirectoryApplicationsStore.displayName = "ApplicationDirectoryApplicationsStore";
-let obj2 = {
+const applicationDirectoryApplicationsStore = new ApplicationDirectoryApplicationsStore(DispatcherDefault, {
   APPLICATION_DIRECTORY_FETCH_APPLICATION: function handleFetchAppDirectoryApplication(applicationId) {
     obj = {};
-    applicationId = applicationId.applicationId;
     const merged = Object.assign(obj);
-    obj[applicationId] = obj.FETCHING;
+    obj[applicationId.applicationId] = obj.FETCHING;
   },
   APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS: function handleFetchAppDirectoryAppSuccess(application) {
     application = application.application;
@@ -77,27 +77,22 @@ let obj2 = {
     if (set.has(application.id)) {
       set.delete(application.id);
       const _Set = Set;
-      const self = this;
-      const self2 = this;
       set = new Set(set);
     }
   },
   APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE: function handleFetchAppDirectoryAppFailure(applicationId) {
     applicationId = applicationId.applicationId;
     obj = {};
-    const isInvalidApplication = applicationId.isInvalidApplication;
     const merged = Object.assign(obj);
     obj[applicationId] = obj.ERROR;
-    if (isInvalidApplication) {
+    if (applicationId.isInvalidApplication) {
       set.add(applicationId);
       const _Set = Set;
-      const self = this;
-      const self2 = this;
       set = new Set(set);
     }
   }
-};
-const applicationDirectoryApplicationsStore = new ApplicationDirectoryApplicationsStore(DispatcherDefault, obj2);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectoryApplicationsStore.tsx");
 
 export default applicationDirectoryApplicationsStore;

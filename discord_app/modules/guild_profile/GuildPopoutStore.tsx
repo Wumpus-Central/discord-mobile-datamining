@@ -1,63 +1,69 @@
 // === Module 13802: GuildPopoutStore ===
 
 // Module 13802 (GuildPopoutStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 6854 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import size from "module_2" /* 2 */;
 
-const _false = { UNSET: "unset", FETCHING: "fetching", FAILED: "failed", SUCCEEDED: "succeeded" };
-const React3 = { guilds: {} };
-const Store = get_initializedDefault.Store;
+require = fn;
+const constants = { UNSET: "unset", FETCHING: "fetching", FAILED: "failed", SUCCEEDED: "succeeded" };
+let closure_4 = { guilds: {} };
+const Store = initializeDefault.Store;
 class GuildPopoutStore extends Store {
-  initialize() {
-    this.waitFor(AuthenticationStore);
-  }
-  isFetchingGuild(arg0) {
-    return null != tmp && tmp.fetchState === constants.FETCHING;
-  }
-  getGuild(arg0) {
-    let guild = null;
-    if (null != closure_4.guilds[arg0]) {
-      guild = tmp.guild;
-    }
-    return guild;
-  }
-  hasFetchFailed(arg0) {
-    return null != tmp && tmp.fetchState === constants.FAILED;
-  }
 }
 const prototype = GuildPopoutStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(AuthenticationStore);
+};
+prototype["isFetchingGuild"] = function isFetchingGuild(arg0) {
+  let tmp2 = null != tmp;
+  if (tmp2) {
+    tmp2 = tmp.fetchState === constants.FETCHING;
+  }
+  return tmp2;
+};
+prototype["getGuild"] = function getGuild(arg0) {
+  guild = null;
+  if (null != closure_4.guilds[arg0]) {
+    guild = tmp.guild;
+  }
+  return guild;
+};
+prototype["hasFetchFailed"] = function hasFetchFailed(arg0) {
+  let tmp2 = null != tmp;
+  if (tmp2) {
+    tmp2 = tmp.fetchState === constants.FAILED;
+  }
+  return tmp2;
+};
 GuildPopoutStore.displayName = "GuildPopoutStore";
-let obj = {
+const guildPopoutStore = new GuildPopoutStore(DispatcherDefault, {
   GUILD_POPOUT_FETCH_START: function handleFetchStart(guildId) {
     guildId = guildId.guildId;
-    const guilds = closure_4.guilds;
-    const obj = { fetchState: constants.FETCHING };
+    const obj = {};
     const merged = Object.assign(closure_4.guilds[guildId]);
-    guilds[guildId] = obj;
+    obj.fetchState = constants.FETCHING;
+    closure_4.guilds[guildId] = obj;
   },
   GUILD_POPOUT_FETCH_SUCCESS: function handleFetchSuccess(guildId) {
-    let discoverableGuild;
     guildId = guildId.guildId;
-    const guild = guildId.guild;
-    const obj2 = { guild: discoverableGuild, fetchState: constants.SUCCEEDED };
-    const obj = GuildDiscoveryUtils;
-    discoverableGuild = obj.makeDiscoverableGuild(guild);
-    const guilds = closure_4.guilds;
+    const obj2 = {};
+    const discoverableGuild = GuildDiscoveryUtils.makeDiscoverableGuild(guildId.guild);
     const merged = Object.assign(closure_4.guilds[guildId]);
-    guilds[guildId] = obj2;
+    obj2.guild = discoverableGuild;
+    obj2.fetchState = constants.SUCCEEDED;
+    closure_4.guilds[guildId] = obj2;
   },
   GUILD_POPOUT_FETCH_FAILURE: function handleFetchFailure(guildId) {
     guildId = guildId.guildId;
-    const guilds = closure_4.guilds;
-    const obj = { fetchState: constants.FAILED };
+    const obj = {};
     const merged = Object.assign(closure_4.guilds[guildId]);
-    guilds[guildId] = obj;
+    obj.fetchState = constants.FAILED;
+    closure_4.guilds[guildId] = obj;
   }
-};
-const guildPopoutStore = new GuildPopoutStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/GuildPopoutStore.tsx");
 
 export default guildPopoutStore;

@@ -1,29 +1,28 @@
 // === Module 14701: useRefreshLinkCodeOnExpiry ===
 
 // Module 14701 (useRefreshLinkCodeOnExpiry)
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import useStableCallbackDefault from "useStableCallback" /* 6459 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
-  let closure_0 = arg0;
-  const obj = react2;
-  const cResult = obj.c(4);
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useRefreshLinkCodeOnExpiry.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  closure_0 = arg0;
+  const cResult = c.c(4);
   const tmp2 = useStableCallbackDefault(arg1);
-  let closure_1 = tmp2;
+  closure_1 = tmp2;
   if (cResult[0] === arg0) {
-    let tmp3;
-    let tmp4;
     if (cResult[1] === tmp2) {
-      tmp3 = cResult[2];
-      tmp4 = cResult[3];
+      let tmp3 = cResult[2];
+      let tmp4 = cResult[3];
     }
-    const effect = react.useEffect(tmp3, tmp4);
+    const effect = noop.useEffect(tmp3, tmp4);
   }
   const fn = function u() {
-    let timeout;
     if (null != timeout) {
       const _Date = Date;
       const diff = tmp - Date.now();
@@ -44,12 +43,11 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp4 = items;
   tmp3 = fn;
 }) : ((arg0, arg1) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const tmp = useStableCallbackDefault(arg1);
-  let closure_1 = tmp;
+  closure_1 = tmp;
   const items = [arg0, tmp];
-  const effect = react.useEffect(() => {
-    let timeout;
+  const effect = noop.useEffect(() => {
     if (null != timeout) {
       const _Date = Date;
       const diff = tmp - Date.now();
@@ -63,6 +61,3 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
   }, items);
 });
-const result = size.fileFinishedImporting("modules/parent_tools/hooks/useRefreshLinkCodeOnExpiry.tsx");
-
-export default tmp2;

@@ -1,9 +1,9 @@
 // === Module 12472: NavigationPathUtils ===
 
 // Module 12472 (NavigationPathUtils)
-import react from "react" /* 576 */;
+import c from "c" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import MemoryRouter from "MemoryRouter" /* 4716 */;
+import _mod4716 from "module_4716" /* 4716 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,12 +14,14 @@ function getSelectedSpecialNavigationPath(pathname) {
     return obj.FRIENDS;
   }
 }
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp3;
-  const obj = react;
+const result = size.fileFinishedImporting("modules/navbars/native/NavigationPathUtils.tsx");
+
+export { SpecialNavigationPath };
+export { getSelectedSpecialNavigationPath };
+export const useSelectedSpecialNavigationPath = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const obj = c;
   const cResult = obj.c(2);
-  const obj2 = MemoryRouter;
-  const _location = obj2.useLocation();
+  const _location = _mod4716.useLocation();
   if (cResult[0] !== _location) {
     let FRIENDS;
     if (_location.pathname === Routes.FRIENDS) {
@@ -27,21 +29,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     cResult[0] = _location;
     cResult[1] = FRIENDS;
-    tmp3 = FRIENDS;
+    let tmp3 = FRIENDS;
   } else {
     tmp3 = cResult[1];
   }
   return tmp3;
 }) : (() => {
-  const obj = MemoryRouter;
+  const obj = _mod4716;
   let FRIENDS;
   if (obj.useLocation().pathname === Routes.FRIENDS) {
     FRIENDS = obj.FRIENDS;
   }
   return FRIENDS;
 });
-const result = size.fileFinishedImporting("modules/navbars/native/NavigationPathUtils.tsx");
-
-export { SpecialNavigationPath };
-export { getSelectedSpecialNavigationPath };
-export const useSelectedSpecialNavigationPath = tmp2;

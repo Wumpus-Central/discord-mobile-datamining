@@ -10,11 +10,13 @@ export default function getFrameSurfaceQueryParams(type) {
   const StringResult = String(type.type);
   type = type.type;
   if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
-    return { surface: StringResult };
+    const obj2 = { surface: StringResult };
+    return obj2;
   } else {
     if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {
       if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
-        return { surface: StringResult };
+        const obj = { surface: StringResult };
+        return obj;
       }
     }
     const obj3 = { surface: StringResult };

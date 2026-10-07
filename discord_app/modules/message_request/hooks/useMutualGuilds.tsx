@@ -2,29 +2,24 @@
 
 // Module 17086 (useMutualGuilds)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import UserProfileStore from "UserProfileStore" /* 7124 */;
 import UserStore from "UserStore" /* 1377 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let first;
-  let stateFromStoresArray;
-  let tmp6;
-  let tmp8;
+const require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/message_request/hooks/useMutualGuilds.tsx");
+
+export const useMutualGuildsForMessageRequests = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   _require = arg0;
-  let tmp = _require;
-  let obj = require("react");
-  const cResult = obj.c(11);
+  const cResult = require("c").c(11);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -34,24 +29,24 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    tmp6 = fn;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const tmpResult = tmp(stateFromStoresArray[5]);
-  const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+  let obj = require("c");
+  const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [UserProfileStore];
     cResult[3] = items1;
-    tmp8 = items1;
+    let tmp8 = items1;
   } else {
     tmp8 = cResult[3];
   }
   if (cResult[4] !== arg0) {
     class M {
       constructor() {
-        const mutualGuilds = UserProfileStore.getMutualGuilds(closure_0);
-        let mapped;
+        mutualGuilds = closure_4.getMutualGuilds(closure_0);
+        mapped = undefined;
         if (mutualGuilds != null) {
           mapped = mutualGuilds.map((guild) => guild.guild);
         }
@@ -66,8 +61,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     class M {
       constructor() {
-        const mutualGuilds = UserProfileStore.getMutualGuilds(closure_0);
-        let mapped;
+        mutualGuilds = closure_4.getMutualGuilds(closure_0);
+        mapped = undefined;
         if (mutualGuilds != null) {
           mapped = mutualGuilds.map((guild) => guild.guild);
         }
@@ -78,13 +73,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }
-  const tmpResult2 = tmp(stateFromStoresArray[5]);
-  stateFromStoresArray = tmpResult2.useStateFromStoresArray(tmp8, M);
+  const tmpResult = require("initialize");
+  stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp8, M);
   if (cResult[6] === stateFromStoresArray) {
     class M {
       constructor() {
-        const mutualGuilds = UserProfileStore.getMutualGuilds(closure_0);
-        let mapped;
+        mutualGuilds = closure_4.getMutualGuilds(closure_0);
+        mapped = undefined;
         if (mutualGuilds != null) {
           mapped = mutualGuilds.map((guild) => guild.guild);
         }
@@ -96,10 +91,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   const fn2 = function _() {
-    const tmp = 0 === stateFromStoresArray.length && null != stateFromStores && null == UserProfileStore.getMutualGuilds(closure_0);
+    let tmp = 0 === stateFromStoresArray.length;
     if (tmp) {
-      const obj = DispatcherDefault;
-      obj.wait(() => stateFromStores(stateFromStoresArray[7])(closure_1_0, undefined, { withMutualGuilds: true }));
+      tmp = null != stateFromStores;
+    }
+    if (tmp) {
+      tmp = null == UserProfileStore.getMutualGuilds(closure_0);
+    }
+    if (tmp) {
+      DispatcherDefault.wait(() => stateFromStores(stateFromStoresArray[7])(closure_1_0, undefined, { withMutualGuilds: true }));
     }
   };
   const items2 = [stateFromStoresArray, stateFromStores, arg0];
@@ -108,16 +108,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[8] = arg0;
   cResult[9] = fn2;
   cResult[10] = items2;
+  const tmpResult2 = require("initialize");
 }) : ((arg0) => {
-  let closure_0;
-  let stateFromStoresArray;
   _require = arg0;
-  let obj = require("get initialized");
   const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(closure_0));
+  const stateFromStores = require("initialize").useStateFromStores(items, () => UserStore.getUser(closure_0));
+  let obj = require("initialize");
   const items1 = [UserProfileStore];
-  const obj2 = require("get initialized");
-  stateFromStoresArray = obj2.useStateFromStoresArray(items1, () => {
+  stateFromStoresArray = require("initialize").useStateFromStoresArray(items1, () => {
     const mutualGuilds = UserProfileStore.getMutualGuilds(closure_0);
     let mapped;
     if (mutualGuilds != null) {
@@ -129,15 +127,17 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return mapped;
   });
   const items2 = [stateFromStoresArray, stateFromStores, arg0];
-  const effect = react.useEffect(() => {
-    const tmp = 0 === stateFromStoresArray.length && null != stateFromStores && null == UserProfileStore.getMutualGuilds(closure_0);
+  const effect = noop.useEffect(() => {
+    let tmp = 0 === stateFromStoresArray.length;
     if (tmp) {
-      const obj = DispatcherDefault;
-      obj.wait(() => stateFromStores(stateFromStoresArray[7])(closure_1_0, undefined, { withMutualGuilds: true }));
+      tmp = null != stateFromStores;
+    }
+    if (tmp) {
+      tmp = null == UserProfileStore.getMutualGuilds(closure_0);
+    }
+    if (tmp) {
+      DispatcherDefault.wait(() => stateFromStores(stateFromStoresArray[7])(closure_1_0, undefined, { withMutualGuilds: true }));
     }
   }, items2);
   return stateFromStoresArray;
 });
-const result = size.fileFinishedImporting("modules/message_request/hooks/useMutualGuilds.tsx");
-
-export const useMutualGuildsForMessageRequests = tmp2;

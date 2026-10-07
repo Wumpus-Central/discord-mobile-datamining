@@ -1,92 +1,83 @@
 // === Module 16564: StandaloneMembersView ===
 
 // Module 16564 (StandaloneMembersView)
-import Fragment from "Fragment" /* 21 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9282 */;
 import GuildSettingsModalMemberEdit from "GuildSettingsModalMemberEdit" /* 11460 */;
 import KickConfirmDefault from "KickConfirm" /* 11474 */;
 import BanConfirmDefault from "BanConfirm" /* 11476 */;
 import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 16565 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let dependencyMap, guildId, importDefault, navigation;
 
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
 const constants = { MAIN: "MAIN", MEMBER_EDIT: "MEMBER_EDIT", MEMBER_KICK: "MEMBER_KICK", MEMBER_BAN: "MEMBER_BAN" };
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
-  let closure_2;
-  let obj4;
-  let tmp10;
-  let tmp12;
-  let tmp5;
-  let tmp6;
-  let tmp9;
-  const tmp = guildId;
-  let obj = guildId(576);
-  const cResult = obj.c(30);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/native/StandaloneMembersView.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+  const cResult = guildId(576).c(30);
   guildId = guildId.guildId;
-  const obj2 = guildId(1490);
-  navigation = obj2.useNavigation();
-  const bottom = navigation(1618)().bottom;
+  let obj = guildId(576);
+  const tmp = guildId;
+  const navigation = guildId(1490).useNavigation();
   if (cResult[0] !== guildId) {
     const fn = function u() {
-      const obj = GuildSettingsActionCreatorsDefault;
-      obj.init(guildId);
+      GuildSettingsActionCreatorsDefault.init(guildId);
     };
     const items = [guildId];
     cResult[0] = guildId;
     cResult[1] = fn;
     cResult[2] = items;
-    tmp6 = items;
-    tmp5 = fn;
+    let tmp6 = items;
+    let tmp5 = fn;
   } else {
     tmp5 = cResult[1];
     tmp6 = cResult[2];
   }
-  const effect = react.useEffect(tmp5, tmp6);
-  const sum = 16 + bottom;
+  const effect = noop.useEffect(tmp5, tmp6);
+  const sum = 16 + navigation(1618)().bottom;
   if (cResult[3] !== sum) {
-    const obj3 = { contentContainerStyle: obj4 };
-    obj4 = { paddingBottom: sum };
+    const obj3 = { contentContainerStyle: null };
+    const obj4 = { paddingBottom: sum };
+    obj3.contentContainerStyle = obj4;
     cResult[3] = sum;
     cResult[4] = obj3;
-    tmp9 = obj3;
+    let tmp9 = obj3;
   } else {
     tmp9 = cResult[4];
   }
   dependencyMap = tmp9;
   if (cResult[5] !== navigation) {
-    const tmpResult = tmp(6017);
-    const headerCloseButton = tmpResult.getHeaderCloseButton(() => navigation.goBack());
+    const headerCloseButton = tmp(6017).getHeaderCloseButton(() => navigation.goBack());
     cResult[5] = navigation;
     cResult[6] = headerCloseButton;
-    tmp10 = headerCloseButton;
+    let tmp10 = headerCloseButton;
+    const tmpResult = tmp(6017);
   } else {
     tmp10 = cResult[6];
   }
   if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function f() {
-      const NavigatorHeader = guildId(closure_2[7]).NavigatorHeader;
-      const intl = guildId(closure_2[8]).intl;
-      return <NavigatorHeader title={intl.string(guildId(closure_2[8]).t["9Oq93m"])} />;
+      const obj = { title: null };
+      const intl = guildId(1126).intl;
+      obj.title = intl.string(guildId(1126).t["9Oq93m"]);
+      return jsx(guildId(6017).NavigatorHeader, { title: null });
     };
     cResult[7] = fn2;
-    tmp12 = fn2;
+    let tmp12 = fn2;
   } else {
     tmp12 = cResult[7];
   }
   if (cResult[8] === guildId) {
-    let tmp13;
     if (cResult[9] === tmp10) {
-      tmp13 = cResult[10];
+      let tmp13 = cResult[10];
     }
     if (cResult[11] === guildId) {
-      let tmp14;
       if (cResult[12] === tmp9) {
-        tmp14 = cResult[13];
+        let tmp14 = cResult[13];
       }
       const _Symbol = Symbol;
       if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
@@ -151,10 +142,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         const obj6 = {
           headerTitle: tmp18,
           render(arg0) {
-                  BanConfirmDefault;
                   const merged = Object.assign(arg0);
                   const merged1 = Object.assign(closure_2);
-                  return <tmp guildId={guildId} />;
+                  return jsx(BanConfirmDefault, { guildId });
                 }
         };
         cResult[19] = guildId;
@@ -164,10 +154,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       const obj7 = {
         headerTitle: R,
         render(arg0) {
-              KickConfirmDefault;
               const merged = Object.assign(arg0);
               const merged1 = Object.assign(closure_2);
-              return <tmp guildId={guildId} />;
+              return jsx(KickConfirmDefault, { guildId });
             }
       };
       cResult[15] = guildId;
@@ -176,10 +165,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
     const obj8 = {
       render(arg0) {
-          const GuildSettingsModalMemberEditScene = GuildSettingsModalMemberEdit.GuildSettingsModalMemberEditScene;
           const merged = Object.assign(arg0);
           const merged1 = Object.assign(closure_2);
-          return <GuildSettingsModalMemberEditScene guildId={guildId} />;
+          return jsx(GuildSettingsModalMemberEdit.GuildSettingsModalMemberEditScene, { guildId });
         }
     };
     cResult[11] = guildId;
@@ -198,41 +186,37 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[9] = tmp10;
   cResult[10] = obj9;
   tmp13 = obj9;
+  const obj2 = guildId(1490);
 }) : ((guildId) => {
-  let obj3;
-  let obj6;
   guildId = guildId.guildId;
   let obj2;
-  let obj = guildId(obj2[4]);
-  importDefault = obj.useNavigation();
+  importDefault = guildId(obj2[4]).useNavigation();
   const items = [guildId];
-  const bottom = require("useSafeAreaInsets")().bottom;
-  const effect = react.useEffect(() => {
-    const obj = GuildSettingsActionCreatorsDefault;
-    obj.init(guildId);
+  const effect = noop.useEffect(() => {
+    GuildSettingsActionCreatorsDefault.init(guildId);
   }, items);
-  obj2 = { contentContainerStyle: obj3 };
+  obj2 = { contentContainerStyle: null };
+  let obj = guildId(obj2[4]);
+  obj2.contentContainerStyle = { paddingBottom: 16 + require("useSafeAreaInsets")().bottom };
   const obj4 = {};
-  obj3 = { paddingBottom: 16 + bottom };
-  const MAIN = constants.MAIN;
-  const obj5 = {
-    headerLeft: obj6.getHeaderCloseButton(() => navigation.goBack()),
-    headerTitle() {
-      const NavigatorHeader = guildId(obj2[7]).NavigatorHeader;
-      const intl = guildId(obj2[8]).intl;
-      return <NavigatorHeader title={intl.string(guildId(obj2[8]).t["9Oq93m"])} />;
-    },
-    render() {
-      return jsx(GuildSettingsModalMembersWithTabsDefault, { guildId });
-    }
+  const obj5 = { headerLeft: null, headerTitle: null, render: null };
+  const obj3 = { paddingBottom: 16 + require("useSafeAreaInsets")().bottom };
+  obj5.headerLeft = guildId(obj2[7]).getHeaderCloseButton(() => navigation.goBack());
+  obj5.headerTitle = function headerTitle() {
+    const obj = { title: null };
+    const intl = guildId(obj2[8]).intl;
+    obj.title = intl.string(guildId(obj2[8]).t["9Oq93m"]);
+    return jsx(guildId(obj2[7]).NavigatorHeader, { title: null });
   };
-  obj4[MAIN] = obj5;
+  obj5.render = function render() {
+    return jsx(GuildSettingsModalMembersWithTabsDefault, { guildId });
+  };
+  obj4[constants.MAIN] = obj5;
   obj4[constants.MEMBER_EDIT] = {
     render(arg0) {
-      const GuildSettingsModalMemberEditScene = GuildSettingsModalMemberEdit.GuildSettingsModalMemberEditScene;
       const merged = Object.assign(arg0);
       const merged1 = Object.assign(obj2);
-      return <GuildSettingsModalMemberEditScene guildId={guildId} />;
+      return jsx(GuildSettingsModalMemberEdit.GuildSettingsModalMemberEditScene, { guildId });
     }
   };
   obj4[constants.MEMBER_KICK] = {
@@ -240,10 +224,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       return null;
     },
     render(arg0) {
-      KickConfirmDefault;
       const merged = Object.assign(arg0);
       const merged1 = Object.assign(obj2);
-      return <tmp guildId={guildId} />;
+      return jsx(KickConfirmDefault, { guildId });
     }
   };
   obj4[constants.MEMBER_BAN] = {
@@ -251,17 +234,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       return null;
     },
     render(arg0) {
-      BanConfirmDefault;
       const merged = Object.assign(arg0);
       const merged1 = Object.assign(obj2);
-      return <tmp guildId={guildId} />;
+      return jsx(BanConfirmDefault, { guildId });
     }
   };
-  obj6 = guildId(obj2[7]);
-  const Navigator = guildId(obj2[13]).Navigator;
+  const obj7 = { screens: obj4, initialRouteName: constants.MAIN, headerBackTitle: null };
   let intl = guildId(obj2[8]).intl;
-  return <Navigator screens={obj4} initialRouteName={constants.MAIN} headerBackTitle={intl.string(guildId(obj2[8]).t["13/7kX"])} />;
+  obj7.headerBackTitle = intl.string(guildId(obj2[8]).t["13/7kX"]);
+  return jsx(guildId(obj2[13]).Navigator, { screens: obj4, initialRouteName: constants.MAIN, headerBackTitle: null });
 });
-const result = size.fileFinishedImporting("modules/guild_settings/native/StandaloneMembersView.tsx");
-
-export default tmp2;

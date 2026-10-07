@@ -1,15 +1,13 @@
 // === Module 7873: UserProfileAnalyticsUtils ===
 
 // Module 7873 (UserProfileAnalyticsUtils)
-import Constants2 from "Constants" /* 1096 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
-import AuthorizedAppsStore2 from "AuthorizedAppsStore" /* 6609 */;
-import Constants3 from "Constants" /* 7865 */;
 import useDisplayProfile from "useDisplayProfile" /* 7868 */;
 import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 7880 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7874 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6609 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7156 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
@@ -17,118 +15,88 @@ import PresenceStore from "PresenceStore" /* 4936 */;
 import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import UserProfileStore from "UserProfileStore" /* 7124 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-const AuthorizedAppsStore = AuthorizedAppsStore2;
-
-let closure_14;
-let closure_15;
+require = fn;
 function getProfileProperties(guildMemberProfile) {
-  let guildMember;
-  let user;
-  let userProfile;
   ({ user, userProfile, guildMember } = guildMemberProfile);
   if (userProfile == null) {
     userProfile = guildMemberProfile.guildMemberProfile;
   }
   let nick;
-  const _Boolean = Boolean;
   if (guildMember != null) {
     nick = guildMember.nick;
   }
   const items = [];
-  if (_Boolean(nick)) {
+  if (Boolean(nick)) {
     items.push(constants.NICKNAME);
   }
   let pronouns;
-  const _Boolean2 = Boolean;
   if (userProfile != null) {
     pronouns = userProfile.pronouns;
   }
-  if (_Boolean2(pronouns)) {
+  if (Boolean(pronouns)) {
     items.push(constants.PRONOUNS);
   }
   let avatar;
-  const _Boolean3 = Boolean;
   if (user != null) {
     avatar = user.avatar;
   }
-  if (_Boolean3(avatar)) {
+  if (!Boolean(avatar)) {
+    let banner;
+    if (userProfile != null) {
+      banner = userProfile.banner;
+    }
+    if (!Boolean(banner)) {
+      let bio;
+      if (userProfile != null) {
+        bio = userProfile.bio;
+      }
+      if (Boolean(bio)) {
+        items.push(constants.BIO);
+      }
+      let themeColors;
+      if (userProfile != null) {
+        themeColors = userProfile.themeColors;
+      }
+      let tmp23 = null != themeColors;
+      if (tmp23) {
+        const themeColors1 = userProfile.themeColors;
+        tmp23 = undefined !== themeColors1.find((item) => null !== item);
+      }
+      if (tmp23) {
+        items.push(constants.THEME);
+      }
+      let avatarDecoration;
+      if (user != null) {
+        avatarDecoration = user.avatarDecoration;
+      }
+      if (null != avatarDecoration) {
+        items.push(constants.AVATAR_DECORATION);
+      }
+      let profileEffect;
+      if (userProfile != null) {
+        profileEffect = userProfile.profileEffect;
+      }
+      if (null != profileEffect) {
+        items.push(constants.PROFILE_EFFECT);
+      }
+      return items;
+    } else {
+      let banner1;
+      if (userProfile != null) {
+        banner1 = userProfile.banner;
+      }
+      items.push(AvatarUtils.isAnimatedIconHash(banner1) ? constants.ANIMATED_BANNER : constants.BANNER);
+    }
+  } else {
     let avatar1;
-    const isAnimatedIconHash = AvatarUtils.isAnimatedIconHash;
-    AvatarUtils;
     if (user != null) {
       avatar1 = user.avatar;
     }
-    items.push(isAnimatedIconHash(avatar1) ? constants.ANIMATED_AVATAR : constants.AVATAR);
+    items.push(AvatarUtils.isAnimatedIconHash(avatar1) ? constants.ANIMATED_AVATAR : constants.AVATAR);
   }
-  let banner;
-  const _Boolean4 = Boolean;
-  if (userProfile != null) {
-    banner = userProfile.banner;
-  }
-  if (_Boolean4(banner)) {
-    let banner1;
-    const isAnimatedIconHash2 = AvatarUtils.isAnimatedIconHash;
-    AvatarUtils;
-    if (userProfile != null) {
-      banner1 = userProfile.banner;
-    }
-    items.push(isAnimatedIconHash2(banner1) ? constants.ANIMATED_BANNER : constants.BANNER);
-  }
-  let bio;
-  const _Boolean5 = Boolean;
-  if (userProfile != null) {
-    bio = userProfile.bio;
-  }
-  if (_Boolean5(bio)) {
-    items.push(constants.BIO);
-  }
-  let themeColors;
-  if (userProfile != null) {
-    themeColors = userProfile.themeColors;
-  }
-  let tmp25 = null != themeColors;
-  if (tmp25) {
-    const themeColors1 = userProfile.themeColors;
-    tmp25 = undefined !== themeColors1.find((item) => null !== item);
-  }
-  if (tmp25) {
-    items.push(constants.THEME);
-  }
-  let avatarDecoration;
-  if (user != null) {
-    avatarDecoration = user.avatarDecoration;
-  }
-  if (null != avatarDecoration) {
-    items.push(constants.AVATAR_DECORATION);
-  }
-  let profileEffect;
-  if (userProfile != null) {
-    profileEffect = userProfile.profileEffect;
-  }
-  if (null != profileEffect) {
-    items.push(constants.PROFILE_EFFECT);
-  }
-  return items;
 }
 function getTrackUserProfileProperties(dependencyMap) {
-  let _guildMemberProfile;
-  let _userProfile;
-  let found;
-  let guildId;
-  let layout;
-  let mapped;
-  let obj2;
-  let obj3;
-  let sessionId;
-  let showGuildProfile;
-  let skuId;
-  let skuId1;
-  let skuId2;
-  let sourceSessionId;
-  let userId;
   ({ guildId, showGuildProfile } = dependencyMap);
   ({ layout, userId, sessionId, sourceSessionId } = dependencyMap);
   if (showGuildProfile === undefined) {
@@ -138,10 +106,7 @@ function getTrackUserProfileProperties(dependencyMap) {
   if (null == user) {
     return {};
   } else {
-    let combined;
     let id1;
-    const getDisplayProfile = useDisplayProfile.getDisplayProfile;
-    useDisplayProfile;
     if (user != null) {
       id1 = user.id;
     }
@@ -149,33 +114,37 @@ function getTrackUserProfileProperties(dependencyMap) {
     if (showGuildProfile) {
       tmp3 = guildId;
     }
-    const displayProfile = getDisplayProfile(id1, tmp3);
+    const displayProfile = useDisplayProfile.getDisplayProfile(id1, tmp3);
     let member = null;
     if (showGuildProfile) {
       member = null;
       if (null != guildId) {
         let id2;
-        const getMember = GuildMemberStore.getMember;
         if (user != null) {
           id2 = user.id;
         }
-        member = getMember(guildId, id2);
+        member = GuildMemberStore.getMember(guildId, id2);
       }
     }
-    const obj = { profile_layout: layout, profile_session_id: sessionId, source_profile_session_id: sourceSessionId, profile_properties: getProfileProperties(obj2), guild_profile_properties: getProfileProperties(obj3), profile_activity_types: mapped.filter((item) => undefined !== item), profile_badges: found, avatar_decoration_sku_id: skuId, profile_effect_sku_id: skuId1, profile_frame_sku_id: skuId2, user_status: null, is_guild_profile: null, is_bot_profile: null, is_private_to_viewer: null };
-    obj2 = { user, userProfile: _userProfile };
-    _userProfile = undefined;
+    const obj = { profile_layout: layout, profile_session_id: sessionId, source_profile_session_id: sourceSessionId, profile_properties: null, guild_profile_properties: null, profile_activity_types: null, profile_badges: null, avatar_decoration_sku_id: null, profile_effect_sku_id: null, profile_frame_sku_id: null, user_status: null, is_guild_profile: null, is_bot_profile: null, is_private_to_viewer: null };
+    const obj2 = { user, userProfile: null };
+    let _userProfile;
     if (displayProfile != null) {
       _userProfile = displayProfile._userProfile;
     }
-    obj3 = { guildMember: member, guildMemberProfile: _guildMemberProfile };
-    _guildMemberProfile = undefined;
+    obj2.userProfile = _userProfile;
+    obj.profile_properties = getProfileProperties(obj2);
+    const obj3 = { guildMember: member, guildMemberProfile: null };
+    let _guildMemberProfile;
     if (displayProfile != null) {
       _guildMemberProfile = displayProfile._guildMemberProfile;
     }
+    obj3.guildMemberProfile = _guildMemberProfile;
+    obj.guild_profile_properties = getProfileProperties(obj3);
     const activities = PresenceStore.getActivities(user.id);
-    mapped = activities.map((type) => type.type);
-    found = undefined;
+    const mapped = activities.map((type) => type.type);
+    obj.profile_activity_types = mapped.filter((item) => undefined !== item);
+    let found;
     if (displayProfile != null) {
       const badges = displayProfile.getBadges();
       if (badges != null) {
@@ -186,31 +155,35 @@ function getTrackUserProfileProperties(dependencyMap) {
     if (found == null) {
       found = [];
     }
+    obj.profile_badges = found;
     const avatarDecoration = user.avatarDecoration;
-    skuId = undefined;
+    let skuId;
     if (avatarDecoration != null) {
       skuId = avatarDecoration.skuId;
     }
-    skuId1 = undefined;
+    obj.avatar_decoration_sku_id = skuId;
+    let skuId1;
     if (displayProfile != null) {
       const profileEffect = displayProfile.profileEffect;
       if (profileEffect != null) {
         skuId1 = profileEffect.skuId;
       }
     }
-    skuId2 = undefined;
+    obj.profile_effect_sku_id = skuId1;
+    let skuId2;
     if (displayProfile != null) {
       const profileFrame = displayProfile.profileFrame;
       if (profileFrame != null) {
         skuId2 = profileFrame.skuId;
       }
     }
+    obj.profile_frame_sku_id = skuId2;
     const id = user.id;
     const status = PresenceStore.getStatus(id);
     if (status === StatusTypes.ONLINE) {
       if (PresenceStore.isMobileOnline(id)) {
         const _HermesInternal2 = HermesInternal;
-        combined = "" + status + "-mobile";
+        let combined = "" + status + "-mobile";
       }
       obj.user_status = combined;
       let guildId1;
@@ -237,76 +210,70 @@ function getTrackUserProfileProperties(dependencyMap) {
   }
 }
 function trackUserProfileAction(dependencyMap) {
-  let action;
-  let analyticsLocations;
-  let channelId;
-  let communicationRank;
-  let guildId;
-  let length;
-  let messageId;
-  let obj4;
-  let prop;
-  let roleId;
-  let section;
-  let tmp9;
-  let widgetType;
   const applicationId = dependencyMap.applicationId;
   ({ guildId, channelId, messageId, roleId, widgetType, analyticsLocations, action, section } = dependencyMap);
-  const obj = { location_stack: analyticsLocations, profile_action: action, profile_section: section, source_message_id: messageId, source_role_id: roleId, widget_type: widgetType };
-  const track = AnalyticsUtilsDefault.track;
-  const USER_PROFILE_ACTION = constants3.USER_PROFILE_ACTION;
-  AnalyticsUtilsDefault;
-  const obj2 = AppAnalyticsUtils;
-  const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(guildId));
-  const obj3 = AppAnalyticsUtils;
-  const merged1 = Object.assign(obj3.collectChannelAnalyticsMetadataFromId(channelId));
+  const obj2 = {};
+  const obj = AnalyticsUtilsDefault;
+  const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
+  const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadataFromId(channelId));
   const merged2 = Object.assign(getTrackUserProfileProperties(dependencyMap));
   const userId = dependencyMap.userId;
   if (null == userId) {
-    obj4 = {};
+    let obj5 = {};
   } else {
     const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId);
-    obj4 = { related_user_id: userId, relationship_type: RelationshipStore.getRelationshipType(userId), related_since: RelationshipStore.getSince(userId), num_mutual_friends: UserProfileStore.getMutualFriendsCount(userId), num_mutual_guilds: length, communication_probability: prop, communication_rank: communicationRank };
+    obj5 = { related_user_id: userId, relationship_type: RelationshipStore.getRelationshipType(userId), related_since: RelationshipStore.getSince(userId), num_mutual_friends: UserProfileStore.getMutualFriendsCount(userId), num_mutual_guilds: null, communication_probability: null, communication_rank: null };
     const mutualGuilds = UserProfileStore.getMutualGuilds(userId);
-    length = undefined;
+    let length;
     if (mutualGuilds != null) {
       length = mutualGuilds.length;
     }
-    prop = undefined;
+    obj5.num_mutual_guilds = length;
+    let prop;
     if (userAffinity != null) {
       prop = userAffinity.communicationProbability;
     }
-    communicationRank = undefined;
+    obj5.communication_probability = prop;
+    let communicationRank;
     if (userAffinity != null) {
       communicationRank = userAffinity.communicationRank;
     }
+    obj5.communication_rank = communicationRank;
   }
-  const merged3 = Object.assign(obj4);
-  const obj5 = { application_id: applicationId, application_linked: tmp9 };
-  tmp9 = null;
+  const merged3 = Object.assign(obj5);
+  const obj6 = { application_id: applicationId, application_linked: null };
+  let tmp8 = null;
   if (null != applicationId) {
-    tmp9 = null;
+    tmp8 = null;
     if (AuthorizedAppsStore.getFetchStateForApplication(applicationId) === FetchState.FETCHED) {
-      tmp9 = null != AuthorizedAppsStore.getNewestTokenForApplication(applicationId);
+      tmp8 = null != AuthorizedAppsStore.getNewestTokenForApplication(applicationId);
     }
   }
-  const merged4 = Object.assign(obj5);
-  track(USER_PROFILE_ACTION, obj);
+  obj6.application_linked = tmp8;
+  const merged4 = Object.assign(obj6);
+  obj2.location_stack = analyticsLocations;
+  obj2.profile_action = action;
+  obj2.profile_section = section;
+  obj2.source_message_id = messageId;
+  obj2.source_role_id = roleId;
+  obj2.widget_type = widgetType;
+  obj.track(constants3.USER_PROFILE_ACTION, obj2);
 }
-const FetchState = AuthorizedAppsStore2.FetchState;
-const constants = Constants3.TrackUserProfileProperties;
+const FetchState = fn(6609).FetchState;
+const constants = fn(7865).TrackUserProfileProperties;
+const Constants = fn(1085);
 ({ ActivityTypes: closure_14, AnalyticEvents: closure_15 } = Constants);
-const StatusTypes = Constants2.StatusTypes;
+const StatusTypes = fn(1096).StatusTypes;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/UserProfileAnalyticsUtils.tsx");
 
 export { getProfileProperties };
 export const getUserStatus = function getUserStatus(id) {
-  let combined;
   const status = PresenceStore.getStatus(id);
   if (status === StatusTypes.ONLINE) {
     if (PresenceStore.isMobileOnline(id)) {
       const _HermesInternal2 = HermesInternal;
-      combined = "" + status + "-mobile";
+      let combined = "" + status + "-mobile";
     }
     return combined;
   }
@@ -323,8 +290,8 @@ export const getActivityType = function getActivityType(arg0) {
     if ("VOICE" !== arg0) {
       const _Object = Object;
       const _Object2 = Object;
-      const keys = Object.keys(closure_14);
-      const values = Object.values(closure_14);
+      const keys = Object.keys(constants2);
+      const values = Object.values(constants2);
       str = keys[values.indexOf(values, arg0)];
     }
     tmp = str;
@@ -332,46 +299,33 @@ export const getActivityType = function getActivityType(arg0) {
   return tmp;
 };
 export const getTrackUserRelationshipProperties = function getTrackUserRelationshipProperties(userId) {
-  let communicationRank;
-  let length;
-  let prop;
   userId = userId.userId;
   if (null == userId) {
     return {};
   } else {
     const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId);
-    const obj = { related_user_id: userId, relationship_type: RelationshipStore.getRelationshipType(userId), related_since: RelationshipStore.getSince(userId), num_mutual_friends: UserProfileStore.getMutualFriendsCount(userId), num_mutual_guilds: length, communication_probability: prop, communication_rank: communicationRank };
+    const obj = { related_user_id: userId, relationship_type: RelationshipStore.getRelationshipType(userId), related_since: RelationshipStore.getSince(userId), num_mutual_friends: UserProfileStore.getMutualFriendsCount(userId), num_mutual_guilds: null, communication_probability: null, communication_rank: null };
     const mutualGuilds = UserProfileStore.getMutualGuilds(userId);
-    length = undefined;
+    let length;
     if (mutualGuilds != null) {
       length = mutualGuilds.length;
     }
-    prop = undefined;
+    obj.num_mutual_guilds = length;
+    let prop;
     if (userAffinity != null) {
       prop = userAffinity.communicationProbability;
     }
-    communicationRank = undefined;
+    obj.communication_probability = prop;
+    let communicationRank;
     if (userAffinity != null) {
       communicationRank = userAffinity.communicationRank;
     }
+    obj.communication_rank = communicationRank;
     return obj;
   }
 };
 export { trackUserProfileAction };
 export const maybeTrackUserProfileUiViewed = function maybeTrackUserProfileUiViewed(userId) {
-  let analyticsLocations;
-  let channelId;
-  let communicationRank;
-  let fetchStartedAt;
-  let guildId;
-  let length;
-  let profileUi;
-  let prop;
-  let timeToFetchMs;
-  let timeToInteractiveMs;
-  let timeToLoadMs;
-  let viewStartedAt;
-  const obj = UserProfilePerformanceAnalyticsExperiment;
   if (obj.isUserProfilePerformanceAnalyticsEnabled("UserProfileAnalyticsUtils")) {
     ({ timeToInteractiveMs, timeToLoadMs, timeToFetchMs } = userId);
     let num = timeToInteractiveMs;
@@ -395,169 +349,147 @@ export const maybeTrackUserProfileUiViewed = function maybeTrackUserProfileUiVie
       tmp5 = num4 <= 0;
     }
     if (!tmp5) {
-      let obj3;
-      const obj2 = { location_stack: analyticsLocations, profile_ui: profileUi, view_started_at: viewStartedAt, fetch_started_at: fetchStartedAt, time_to_interactive_ms: timeToInteractiveMs, time_to_load_ms: timeToLoadMs, time_to_fetch_ms: timeToFetchMs };
-      const track = AnalyticsUtilsDefault.track;
-      const USER_PROFILE_UI_VIEWED = constants3.USER_PROFILE_UI_VIEWED;
-      AnalyticsUtilsDefault;
+      let obj3 = {};
+      const obj2 = AnalyticsUtilsDefault;
+      const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
       const tmpResult = AppAnalyticsUtils;
-      const merged = Object.assign(tmpResult.collectGuildAnalyticsMetadata(guildId));
-      const tmpResult2 = AppAnalyticsUtils;
-      const merged1 = Object.assign(tmpResult2.collectChannelAnalyticsMetadataFromId(channelId));
+      const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadataFromId(channelId));
       const merged2 = Object.assign(getTrackUserProfileProperties(userId));
       userId = userId.userId;
       if (null == userId) {
-        obj3 = {};
+        let obj4 = {};
       } else {
         const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId);
-        obj3 = { related_user_id: userId, relationship_type: RelationshipStore.getRelationshipType(userId), related_since: RelationshipStore.getSince(userId), num_mutual_friends: UserProfileStore.getMutualFriendsCount(userId), num_mutual_guilds: length, communication_probability: prop, communication_rank: communicationRank };
+        obj4 = { related_user_id: userId, relationship_type: RelationshipStore.getRelationshipType(userId), related_since: RelationshipStore.getSince(userId), num_mutual_friends: UserProfileStore.getMutualFriendsCount(userId), num_mutual_guilds: null, communication_probability: null, communication_rank: null };
         const mutualGuilds = UserProfileStore.getMutualGuilds(userId);
-        length = undefined;
+        let length;
         if (mutualGuilds != null) {
           length = mutualGuilds.length;
         }
-        prop = undefined;
+        obj4.num_mutual_guilds = length;
+        let prop;
         if (userAffinity != null) {
           prop = userAffinity.communicationProbability;
         }
-        communicationRank = undefined;
+        obj4.communication_probability = prop;
+        let communicationRank;
         if (userAffinity != null) {
           communicationRank = userAffinity.communicationRank;
         }
+        obj4.communication_rank = communicationRank;
       }
-      const merged3 = Object.assign(obj3);
-      track(USER_PROFILE_UI_VIEWED, obj2);
+      const merged3 = Object.assign(obj4);
+      obj3.location_stack = analyticsLocations;
+      obj3.profile_ui = profileUi;
+      obj3.view_started_at = viewStartedAt;
+      obj3.fetch_started_at = fetchStartedAt;
+      obj3.time_to_interactive_ms = timeToInteractiveMs;
+      obj3.time_to_load_ms = timeToLoadMs;
+      obj3.time_to_fetch_ms = timeToFetchMs;
+      obj3 = obj2.track(constants3.USER_PROFILE_UI_VIEWED, obj3);
+      const tmpResult2 = AppAnalyticsUtils;
     }
   }
+  obj = UserProfilePerformanceAnalyticsExperiment;
 };
 export const trackUserProfileActivityJoined = function trackUserProfileActivityJoined(userId) {
-  let activityName;
-  let activityPlatform;
-  let activitySessionId;
-  let activityType;
-  let analyticsLocations;
-  let applicationId;
-  let channelId;
-  let communicationRank;
-  let guildId;
-  let length;
-  let obj4;
-  let prop;
-  let str;
-  let voiceChannelId;
   ({ activityType, voiceChannelId } = userId);
   ({ guildId, channelId, analyticsLocations, activityName, activityPlatform, activitySessionId, applicationId } = userId);
-  const obj = { location_stack: analyticsLocations, activity_type: str, activity_name: activityName, activity_platform: activityPlatform, activity_session_id: activitySessionId, application_id: applicationId, voice_channel_id: voiceChannelId };
-  const track = AnalyticsUtilsDefault.track;
-  const USER_PROFILE_ACTIVITY_JOINED = constants3.USER_PROFILE_ACTIVITY_JOINED;
-  AnalyticsUtilsDefault;
-  const obj2 = AppAnalyticsUtils;
-  const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(guildId));
-  const obj3 = AppAnalyticsUtils;
-  const merged1 = Object.assign(obj3.collectChannelAnalyticsMetadataFromId(channelId));
+  const obj2 = {};
+  const obj = AnalyticsUtilsDefault;
+  const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
+  const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadataFromId(channelId));
   const merged2 = Object.assign(getTrackUserProfileProperties(userId));
   userId = userId.userId;
   if (null == userId) {
-    obj4 = {};
+    let obj5 = {};
   } else {
     const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId);
-    obj4 = { related_user_id: userId, relationship_type: RelationshipStore.getRelationshipType(userId), related_since: RelationshipStore.getSince(userId), num_mutual_friends: UserProfileStore.getMutualFriendsCount(userId), num_mutual_guilds: length, communication_probability: prop, communication_rank: communicationRank };
+    obj5 = { related_user_id: userId, relationship_type: RelationshipStore.getRelationshipType(userId), related_since: RelationshipStore.getSince(userId), num_mutual_friends: UserProfileStore.getMutualFriendsCount(userId), num_mutual_guilds: null, communication_probability: null, communication_rank: null };
     const mutualGuilds = UserProfileStore.getMutualGuilds(userId);
-    length = undefined;
+    let length;
     if (mutualGuilds != null) {
       length = mutualGuilds.length;
     }
-    prop = undefined;
+    obj5.num_mutual_guilds = length;
+    let prop;
     if (userAffinity != null) {
       prop = userAffinity.communicationProbability;
     }
-    communicationRank = undefined;
+    obj5.communication_probability = prop;
+    let communicationRank;
     if (userAffinity != null) {
       communicationRank = userAffinity.communicationRank;
     }
+    obj5.communication_rank = communicationRank;
   }
-  const merged3 = Object.assign(obj4);
-  str = "VOICE";
+  const merged3 = Object.assign(obj5);
+  obj2.location_stack = analyticsLocations;
+  let str = "VOICE";
   if (null == voiceChannelId) {
-    let tmp9 = activityType;
+    let tmp8 = activityType;
     if (null != activityType) {
       let str2 = "VOICE";
       if ("VOICE" !== activityType) {
         const _Object = Object;
         const _Object2 = Object;
-        const keys = Object.keys(closure_14);
-        const values = Object.values(closure_14);
+        const keys = Object.keys(constants2);
+        const values = Object.values(constants2);
         str2 = keys[values.indexOf(values, activityType)];
       }
-      tmp9 = str2;
+      tmp8 = str2;
     }
-    str = tmp9;
+    str = tmp8;
   }
-  track(USER_PROFILE_ACTIVITY_JOINED, obj);
+  obj2.activity_type = str;
+  obj2.activity_name = activityName;
+  obj2.activity_platform = activityPlatform;
+  obj2.activity_session_id = activitySessionId;
+  obj2.application_id = applicationId;
+  obj2.voice_channel_id = voiceChannelId;
+  obj.track(constants3.USER_PROFILE_ACTIVITY_JOINED, obj2);
 };
 export const trackUserProfileActivityAction = function trackUserProfileActivityAction(userId) {
-  let action;
-  let activity;
-  let analyticsLocations;
-  let application_id;
-  let author_id;
-  let channelId;
-  let communicationRank;
-  let display;
-  let entry;
-  let guildId;
-  let id;
-  let length;
-  let mapped;
-  let mapped1;
-  let name;
-  let obj4;
-  let outbox;
-  let platform;
-  let prop;
-  let session_id;
-  let stream;
-  let tmp10;
-  let type;
-  let voiceChannelId;
   ({ activity, entry, outbox } = userId);
   ({ guildId, channelId, analyticsLocations, action, display, stream, voiceChannelId } = userId);
-  const obj = { location_stack: analyticsLocations, activity_action: action, activity_display: display, activity_type: tmp10, activity_name: name, activity_platform: platform, activity_session_id: session_id, activity_application_id: application_id, item_id: id, author_id_v2: author_id, item_ids: mapped, author_ids_v2: mapped1, voice_channel_id: voiceChannelId };
-  const track = AnalyticsUtilsDefault.track;
-  const USER_PROFILE_ACTIVITY_ACTION = constants3.USER_PROFILE_ACTIVITY_ACTION;
-  AnalyticsUtilsDefault;
-  const obj2 = AppAnalyticsUtils;
-  const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(guildId));
-  const obj3 = AppAnalyticsUtils;
-  const merged1 = Object.assign(obj3.collectChannelAnalyticsMetadataFromId(channelId));
+  const obj2 = {};
+  const obj = AnalyticsUtilsDefault;
+  const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
+  const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadataFromId(channelId));
   const merged2 = Object.assign(getTrackUserProfileProperties(userId));
   userId = userId.userId;
   if (null == userId) {
-    obj4 = {};
+    let obj5 = {};
   } else {
     const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId);
-    obj4 = { related_user_id: userId, relationship_type: RelationshipStore.getRelationshipType(userId), related_since: RelationshipStore.getSince(userId), num_mutual_friends: UserProfileStore.getMutualFriendsCount(userId), num_mutual_guilds: length, communication_probability: prop, communication_rank: communicationRank };
+    obj5 = { related_user_id: userId, relationship_type: RelationshipStore.getRelationshipType(userId), related_since: RelationshipStore.getSince(userId), num_mutual_friends: UserProfileStore.getMutualFriendsCount(userId), num_mutual_guilds: null, communication_probability: null, communication_rank: null };
     const mutualGuilds = UserProfileStore.getMutualGuilds(userId);
-    length = undefined;
+    let length;
     if (mutualGuilds != null) {
       length = mutualGuilds.length;
     }
-    prop = undefined;
+    obj5.num_mutual_guilds = length;
+    let prop;
     if (userAffinity != null) {
       prop = userAffinity.communicationProbability;
     }
-    communicationRank = undefined;
+    obj5.communication_probability = prop;
+    let communicationRank;
     if (userAffinity != null) {
       communicationRank = userAffinity.communicationRank;
     }
+    obj5.communication_rank = communicationRank;
   }
-  const merged3 = Object.assign(obj4);
+  const merged3 = Object.assign(obj5);
+  obj2.location_stack = analyticsLocations;
+  obj2.activity_action = action;
+  obj2.activity_display = display;
   if (null != stream) {
-    type = constants2.STREAMING;
+    let type = constants2.STREAMING;
   } else if (activity != null) {
     type = activity.type;
   }
-  tmp10 = type;
+  let tmp9 = type;
   if (null != type) {
     let str = "VOICE";
     if ("VOICE" !== type) {
@@ -567,55 +499,55 @@ export const trackUserProfileActivityAction = function trackUserProfileActivityA
       const values = Object.values(constants2);
       str = keys[values.indexOf(values, type)];
     }
-    tmp10 = str;
+    tmp9 = str;
   }
-  name = undefined;
+  obj2.activity_type = tmp9;
+  let name;
   if (activity != null) {
     name = activity.name;
   }
-  platform = undefined;
+  obj2.activity_name = name;
+  let platform;
   if (activity != null) {
     platform = activity.platform;
   }
-  session_id = undefined;
+  obj2.activity_platform = platform;
+  let session_id;
   if (activity != null) {
     session_id = activity.session_id;
   }
-  application_id = undefined;
+  obj2.activity_session_id = session_id;
+  let application_id;
   if (activity != null) {
     application_id = activity.application_id;
   }
-  id = undefined;
+  obj2.activity_application_id = application_id;
+  let id;
   if (entry != null) {
     id = entry.id;
   }
-  author_id = undefined;
+  obj2.item_id = id;
+  let author_id;
   if (entry != null) {
     author_id = entry.author_id;
   }
-  mapped = undefined;
+  obj2.author_id_v2 = author_id;
+  let mapped;
   if (outbox != null) {
     const entries = outbox.entries;
     mapped = entries.map((id) => id.id);
   }
-  mapped1 = undefined;
+  obj2.item_ids = mapped;
+  let mapped1;
   if (outbox != null) {
     const entries1 = outbox.entries;
     mapped1 = entries1.map((author_id) => author_id.author_id);
   }
-  track(USER_PROFILE_ACTIVITY_ACTION, obj);
+  obj2.author_ids_v2 = mapped1;
+  obj2.voice_channel_id = voiceChannelId;
+  obj.track(constants3.USER_PROFILE_ACTIVITY_ACTION, obj2);
 };
 export const trackUserProfileBadgeAction = function trackUserProfileBadgeAction(userId) {
-  let analyticsLocations;
-  let badgeAction;
-  let badgeId;
-  let channelId;
-  let communicationRank;
-  let guildId;
-  let length;
-  let obj4;
-  let position;
-  let prop;
   ({ badgeId, userId } = userId);
   let tmp;
   ({ guildId, channelId, analyticsLocations, badgeAction, position } = userId);
@@ -629,70 +561,64 @@ export const trackUserProfileBadgeAction = function trackUserProfileBadgeAction(
       tmp = current_tier;
     }
   }
-  const obj = { location_stack: analyticsLocations, badge_action: badgeAction, badge_id: badgeId, badge_tier: tmp, position };
-  const track = AnalyticsUtilsDefault.track;
-  const USER_PROFILE_BADGE_ACTION = constants3.USER_PROFILE_BADGE_ACTION;
-  AnalyticsUtilsDefault;
-  const obj2 = AppAnalyticsUtils;
-  const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(guildId));
-  const obj3 = AppAnalyticsUtils;
-  const merged1 = Object.assign(obj3.collectChannelAnalyticsMetadataFromId(channelId));
+  const obj2 = {};
+  const obj = AnalyticsUtilsDefault;
+  const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
+  const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadataFromId(channelId));
   const merged2 = Object.assign(getTrackUserProfileProperties(userId));
   const userId2 = userId.userId;
   if (null == userId2) {
-    obj4 = {};
+    let obj5 = {};
   } else {
     const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId2);
-    obj4 = { related_user_id: userId2, relationship_type: RelationshipStore.getRelationshipType(userId2), related_since: RelationshipStore.getSince(userId2), num_mutual_friends: UserProfileStore.getMutualFriendsCount(userId2), num_mutual_guilds: length, communication_probability: prop, communication_rank: communicationRank };
+    obj5 = { related_user_id: userId2, relationship_type: RelationshipStore.getRelationshipType(userId2), related_since: RelationshipStore.getSince(userId2), num_mutual_friends: UserProfileStore.getMutualFriendsCount(userId2), num_mutual_guilds: null, communication_probability: null, communication_rank: null };
     const mutualGuilds = UserProfileStore.getMutualGuilds(userId2);
-    length = undefined;
+    let length;
     if (mutualGuilds != null) {
       length = mutualGuilds.length;
     }
-    prop = undefined;
+    obj5.num_mutual_guilds = length;
+    let prop;
     if (userAffinity != null) {
       prop = userAffinity.communicationProbability;
     }
-    communicationRank = undefined;
+    obj5.communication_probability = prop;
+    let communicationRank;
     if (userAffinity != null) {
       communicationRank = userAffinity.communicationRank;
     }
+    obj5.communication_rank = communicationRank;
   }
-  const merged3 = Object.assign(obj4);
-  track(USER_PROFILE_BADGE_ACTION, obj);
+  const merged3 = Object.assign(obj5);
+  obj2.location_stack = analyticsLocations;
+  obj2.badge_action = badgeAction;
+  obj2.badge_id = badgeId;
+  obj2.badge_tier = tmp;
+  obj2.position = position;
+  obj.track(constants3.USER_PROFILE_BADGE_ACTION, obj2);
 };
 export const trackDmProfileToggled = function trackDmProfileToggled(displayProfile) {
-  let _Boolean;
-  let hasThemeColorsResult;
-  let large_image;
-  let prop;
-  let result;
   displayProfile = displayProfile.displayProfile;
   let userId;
-  const isProfileOpen = displayProfile.isProfileOpen;
   if (displayProfile != null) {
     userId = displayProfile.userId;
   }
   let findActivityResult = null;
   if (null != userId) {
     findActivityResult = PresenceStore.findActivity(userId, (type) => {
-      let tmp2;
       type = type.type;
       if (null != ApplicationStreamingStore.getAnyStreamForUser(userId)) {
-        tmp2 = type === constants.PLAYING;
+        let tmp2 = type === constants2.PLAYING;
       } else {
-        tmp2 = type !== constants.CUSTOM_STATUS;
+        tmp2 = type !== constants2.CUSTOM_STATUS;
       }
       return tmp2;
     });
   }
-  const obj = { is_profile_open: isProfileOpen, has_images: _Boolean(large_image), is_friend: RelationshipStore.isFriend(userId), viewed_profile_user_id: userId, profile_has_nitro_customization: result, profile_has_theme_color_customized: hasThemeColorsResult, profile_has_theme_animation: null != prop };
-  const track = AnalyticsUtilsDefault.track;
-  const DM_PROFILE_TOGGLED = constants3.DM_PROFILE_TOGGLED;
-  AnalyticsUtilsDefault;
+  const obj2 = {};
   const merged = Object.assign(getTrackUserProfileProperties({ userId }));
-  large_image = undefined;
-  _Boolean = Boolean;
+  obj2.is_profile_open = displayProfile.isProfileOpen;
+  let large_image;
   if (findActivityResult != null) {
     const assets = findActivityResult.assets;
     if (assets != null) {
@@ -709,108 +635,98 @@ export const trackDmProfileToggled = function trackDmProfileToggled(displayProfi
     }
     large_image = small_image;
   }
-  result = undefined;
+  obj2.has_images = Boolean(large_image);
+  obj2.is_friend = RelationshipStore.isFriend(userId);
+  obj2.viewed_profile_user_id = userId;
+  let result;
   if (displayProfile != null) {
     result = displayProfile.hasPremiumCustomization();
   }
-  hasThemeColorsResult = undefined;
+  obj2.profile_has_nitro_customization = result;
+  let hasThemeColorsResult;
   if (displayProfile != null) {
     hasThemeColorsResult = displayProfile.hasThemeColors();
   }
-  prop = undefined;
+  obj2.profile_has_theme_color_customized = hasThemeColorsResult;
+  let prop;
   if (displayProfile != null) {
     prop = displayProfile.popoutAnimationParticleType;
   }
-  track(DM_PROFILE_TOGGLED, obj);
+  obj2.profile_has_theme_animation = null != prop;
+  AnalyticsUtilsDefault.track(constants3.DM_PROFILE_TOGGLED, obj2);
 };
 export const trackUserProfileEditAction = function trackUserProfileEditAction(dependencyMap) {
-  let action;
-  let analyticsLocations;
-  let applicationId;
-  let channelId;
-  let gameId;
-  let guildId;
-  let numCharacters;
-  let numResults;
-  let tmp7;
-  let widgetEdited;
   ({ action, applicationId } = dependencyMap);
-  const obj = { action };
+  const obj = {};
   ({ guildId, channelId, analyticsLocations, widgetEdited, gameId, numResults, numCharacters } = dependencyMap);
   const merged = Object.assign(dependencyMap);
+  obj.action = action;
   trackUserProfileAction(obj);
-  const obj2 = { location_stack: analyticsLocations, edit_action: action, widget_edited: widgetEdited, game_id: gameId, num_results: numResults, num_characters: numCharacters, application_id: applicationId };
-  const track = AnalyticsUtilsDefault.track;
-  const USER_PROFILE_EDIT_ACTION = constants3.USER_PROFILE_EDIT_ACTION;
-  AnalyticsUtilsDefault;
-  const obj3 = AppAnalyticsUtils;
-  const merged1 = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
-  const obj4 = AppAnalyticsUtils;
-  const merged2 = Object.assign(obj4.collectChannelAnalyticsMetadataFromId(channelId));
+  const obj3 = {};
+  const obj2 = AnalyticsUtilsDefault;
+  const merged1 = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
+  const merged2 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadataFromId(channelId));
   const merged3 = Object.assign(getTrackUserProfileProperties(dependencyMap));
-  const obj5 = { application_id: applicationId, application_linked: tmp7 };
-  tmp7 = null;
+  const obj6 = { application_id: applicationId, application_linked: null };
+  let tmp6 = null;
   if (null != applicationId) {
-    tmp7 = null;
+    tmp6 = null;
     if (AuthorizedAppsStore.getFetchStateForApplication(applicationId) === FetchState.FETCHED) {
-      tmp7 = null != AuthorizedAppsStore.getNewestTokenForApplication(applicationId);
+      tmp6 = null != AuthorizedAppsStore.getNewestTokenForApplication(applicationId);
     }
   }
-  const merged4 = Object.assign(obj5);
-  track(USER_PROFILE_EDIT_ACTION, obj2);
+  obj6.application_linked = tmp6;
+  const merged4 = Object.assign(obj6);
+  obj3.location_stack = analyticsLocations;
+  obj3.edit_action = action;
+  obj3.widget_edited = widgetEdited;
+  obj3.game_id = gameId;
+  obj3.num_results = numResults;
+  obj3.num_characters = numCharacters;
+  obj3.application_id = applicationId;
+  obj2.track(constants3.USER_PROFILE_EDIT_ACTION, obj3);
 };
 export const trackUserProfileEditSaved = function trackUserProfileEditSaved(dependencyMap) {
-  let analyticsLocations;
-  let channelId;
-  let gameIds;
-  let guildId;
-  let isWidgetRemoved;
-  let numCharactersCommentary;
-  let tags;
-  let widgetEdited;
-  const obj = { action: "EDIT_SAVED" };
+  const obj = {};
   ({ guildId, channelId, analyticsLocations, widgetEdited, gameIds, tags, numCharactersCommentary, isWidgetRemoved } = dependencyMap);
   const merged = Object.assign(dependencyMap);
+  obj.action = "EDIT_SAVED";
   trackUserProfileAction(obj);
-  const obj2 = { location_stack: analyticsLocations, widget_edited: widgetEdited, game_ids: gameIds, tags, num_characters_commentary: numCharactersCommentary, is_widget_removed: isWidgetRemoved };
-  const track = AnalyticsUtilsDefault.track;
-  const USER_PROFILE_EDIT_SAVED = constants3.USER_PROFILE_EDIT_SAVED;
-  AnalyticsUtilsDefault;
-  const obj3 = AppAnalyticsUtils;
-  const merged1 = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
-  const obj4 = AppAnalyticsUtils;
-  const merged2 = Object.assign(obj4.collectChannelAnalyticsMetadataFromId(channelId));
+  const obj3 = {};
+  const obj2 = AnalyticsUtilsDefault;
+  const merged1 = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
+  const merged2 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadataFromId(channelId));
   const merged3 = Object.assign(getTrackUserProfileProperties(dependencyMap));
-  track(USER_PROFILE_EDIT_SAVED, obj2);
+  obj3.location_stack = analyticsLocations;
+  obj3.widget_edited = widgetEdited;
+  obj3.game_ids = gameIds;
+  obj3.tags = tags;
+  obj3.num_characters_commentary = numCharactersCommentary;
+  obj3.is_widget_removed = isWidgetRemoved;
+  obj2.track(constants3.USER_PROFILE_EDIT_SAVED, obj3);
 };
 export const trackUserProfileWishlistAction = function trackUserProfileWishlistAction(dependencyMap) {
-  let action;
-  let analyticsLocations;
-  let channelId;
-  let guildId;
-  let items;
-  let productLines;
-  let skuId;
-  let wishlistId;
   ({ action, productLines } = dependencyMap);
-  const obj = { action };
+  const obj = {};
   ({ guildId, channelId, analyticsLocations, wishlistId, skuId } = dependencyMap);
   const merged = Object.assign(dependencyMap);
+  obj.action = action;
   trackUserProfileAction(obj);
-  const obj2 = { location_stack: analyticsLocations, action_type: action, wishlist_id: wishlistId, sku_id: skuId, product_lines: items };
-  const track = AnalyticsUtilsDefault.track;
-  const USER_PROFILE_WISHLIST_ACTION = constants3.USER_PROFILE_WISHLIST_ACTION;
-  AnalyticsUtilsDefault;
-  const obj3 = AppAnalyticsUtils;
-  const merged1 = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
-  const obj4 = AppAnalyticsUtils;
-  const merged2 = Object.assign(obj4.collectChannelAnalyticsMetadataFromId(channelId));
+  const obj3 = {};
+  const obj2 = AnalyticsUtilsDefault;
+  const merged1 = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
+  const merged2 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadataFromId(channelId));
   const merged3 = Object.assign(getTrackUserProfileProperties(dependencyMap));
+  obj3.location_stack = analyticsLocations;
+  obj3.action_type = action;
+  obj3.wishlist_id = wishlistId;
+  obj3.sku_id = skuId;
   if (null != productLines) {
     const _Array = Array;
-    items = Array.from(productLines);
+    let items = Array.from(productLines);
   } else {
     items = [];
   }
-  track(USER_PROFILE_WISHLIST_ACTION, obj2);
+  obj3.product_lines = items;
+  obj2.track(constants3.USER_PROFILE_WISHLIST_ACTION, obj3);
 };

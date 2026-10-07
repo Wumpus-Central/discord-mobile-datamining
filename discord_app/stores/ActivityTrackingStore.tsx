@@ -1,10 +1,9 @@
 // === Module 13570: ActivityTrackingStore ===
 
 // Module 13570 (ActivityTrackingStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import GameAnalyticsUtils from "GameAnalyticsUtils" /* 5025 */;
 import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11146 */;
@@ -15,25 +14,25 @@ import DetectableGameStore from "DetectableGameStore" /* 2024 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 6912 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-let _require, set;
-
-function stopActivity(arg0) {
+require = fn;
+function stopActivity(applicationId) {
+  if (flag === undefined) {
+    flag = true;
+  }
   if (flag) {
-    updateActivity(arg0, true);
+    updateActivity(applicationId, true);
   }
-  if (null != closure_15[arg0.applicationId]) {
-    closure_15[arg0.applicationId].stop();
-    delete tmp3[arg0.applicationId];
+  if (null != dependencyMap[applicationId.applicationId]) {
+    obj.stop();
+    applicationId = applicationId.applicationId;
+    delete tmp3[tmp2];
   }
-  delete closure_15[arg0.applicationId][arg0.applicationId];
+  delete tmp3[tmp];
   const Storage = Storage2.Storage;
-  const result = Storage.set(ActivityTrackingStore_str, obj);
+  const result = Storage.set(ActivityTrackingStore, obj);
 }
 function updateActivity(applicationId) {
-  let distributor;
   _require = applicationId;
   let flag = arg1;
   if (arg1 === undefined) {
@@ -52,37 +51,42 @@ function updateActivity(applicationId) {
   const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
   const sessionId = AuthenticationStore.getSessionId();
   const mediaSessionId = RTCConnectionStore.getMediaSessionId();
-  const obj2 = { applicationId: applicationId.applicationId, distributor, shareActivity: result, token: applicationId.token, duration: Math.floor(num / 1000), closed: flag, exePath: applicationId.exePath, voiceChannelId, sessionId, mediaSessionId };
-  updateActivity = ActivitiesActionCreatorsDefault.updateActivity;
-  ActivitiesActionCreatorsDefault;
+  const obj3 = { applicationId: applicationId.applicationId, distributor: null, shareActivity: null, token: null, duration: null, closed: null, exePath: null, voiceChannelId: null, sessionId: null, mediaSessionId: null };
   if (applicationId.isDiscordApplication) {
-    distributor = Distributors.DISCORD;
+    let distributor = Distributors.DISCORD;
   } else {
     distributor = applicationId.distributor;
   }
-  updateActivity(obj2);
+  obj3.distributor = distributor;
+  obj3.shareActivity = result;
+  obj3.token = applicationId.token;
+  obj3.duration = Math.floor(num / 1000);
+  obj3.closed = flag;
+  obj3.exePath = applicationId.exePath;
+  obj3.voiceChannelId = voiceChannelId;
+  obj3.sessionId = sessionId;
+  obj3.mediaSessionId = mediaSessionId;
+  ActivitiesActionCreatorsDefault.updateActivity(obj3);
   applicationId.updatedAt = timestamp;
-  if (null == closure_15[applicationId.applicationId]) {
-    applicationId = applicationId.applicationId;
-    const self = this;
-    const self2 = this;
+  if (null == dependencyMap[applicationId.applicationId]) {
     const interval = new tmp3(2046).Interval();
-    tmp12[applicationId] = interval;
+    tmp11[applicationId.applicationId] = interval;
     interval.start(closure_12, () => {
-      updateActivity(applicationId);
+      updateActivity(closure_0);
     });
   }
   if (!flag) {
     obj[applicationId.applicationId] = applicationId;
     const Storage = tmp3(510).Storage;
-    const result1 = Storage.set(ActivityTrackingStore_str, obj);
+    const result1 = Storage.set(ActivityTrackingStore, obj);
   }
 }
 function handleRunningGamesChange() {
-  let removeExecutablePathPrefix;
-  let str;
+  if (flag === undefined) {
+    flag = true;
+  }
   const visibleRunningGames = RunningGameStore.getVisibleRunningGames();
-  set = new Set();
+  const set = new Set();
   const iter = visibleRunningGames[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -92,14 +96,17 @@ function handleRunningGamesChange() {
     if (null != findGameResult) {
       let addResult = set.add(tmp6.id);
       if (!(tmp6.id in obj)) {
-        obj = { applicationId: tmp6.id, updatedAt: Date.now(), distributor: tmp3.distributor, exePath: removeExecutablePathPrefix(str) };
+        obj = { applicationId: null, updatedAt: null, distributor: null, exePath: null };
+        obj.applicationId = tmp6.id;
         let _Date = Date;
-        let tmp12 = GameAnalyticsUtils;
-        str = tmp3.exePath;
-        removeExecutablePathPrefix = tmp12.removeExecutablePathPrefix;
+        obj.updatedAt = Date.now();
+        obj.distributor = tmp3.distributor;
+        let obj3 = GameAnalyticsUtils;
+        let str = tmp3.exePath;
         if (str == null) {
           str = "";
         }
+        obj.exePath = obj3.removeExecutablePathPrefix(str);
         let tmp7Result = updateActivity(obj);
       }
     }
@@ -108,58 +115,57 @@ function handleRunningGamesChange() {
   const keys = Object.keys(obj);
   for (const item10052 of keys) {
     if (!set.has(item10052)) {
-      let tmp19 = stopActivity(obj[item10052], flag);
+      let tmp18 = stopActivity(obj[item10052], flag);
     }
     continue;
   }
 }
 function handleLogout() {
   const keys = Object.keys(obj);
-  const tmp2 = keys[Symbol.iterator]();
   while (tmp2 !== undefined) {
     let tmp6 = stopActivity(obj[tmp3]);
     continue;
   }
   c16 = false;
+  tmp2 = keys[Symbol.iterator]();
 }
-const Distributors = Constants.Distributors;
-const ActivityTrackingStore_str = "ActivityTrackingStore";
+const Distributors = fn(1085).Distributors;
+const ActivityTrackingStore = "ActivityTrackingStore";
 let closure_12 = 30 * DurationsDefault.Millis.MINUTE;
 let closure_13 = 5 * DurationsDefault.Millis.MINUTE;
-let Storage = Storage2.Storage;
+let Storage = fn(510).Storage;
 let obj = Storage.get("ActivityTrackingStore");
 if (obj == null) {
   obj = {};
 }
-let closure_15 = {};
+const dependencyMap = {};
 let c16 = false;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class ActivityTrackingStore extends Store {
-  initialize() {
-    this.waitFor(AuthenticationStore, DetectableGameStore, LibraryApplicationStore, RTCConnectionStore, RunningGameStore, SelectedChannelStore, UserSettingsProtoStore);
-    const items = [UserSettingsProtoStore];
-    this.syncWith(items, handleRunningGamesChange);
-  }
-  getActivities() {
-    return obj;
-  }
 }
 const prototype = ActivityTrackingStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(AuthenticationStore, DetectableGameStore, LibraryApplicationStore, RTCConnectionStore, RunningGameStore, SelectedChannelStore, UserSettingsProtoStore);
+  const items = [UserSettingsProtoStore];
+  this.syncWith(items, handleRunningGamesChange);
+};
+prototype["getActivities"] = function getActivities() {
+  return obj;
+};
 ActivityTrackingStore.displayName = "ActivityTrackingStore";
-let obj2 = {
+const activityTrackingStore = new ActivityTrackingStore(DispatcherDefault, {
   RUNNING_GAMES_CHANGE() {
     handleRunningGamesChange();
   },
   CONNECTION_OPEN: function handleConnectionOpen() {
-    const tmp = c16;
-    if (tmp) {
+    if (c16) {
       return false;
     } else {
       const _Object = Object;
       const keys = Object.keys(obj);
-      const tmp6 = keys[Symbol.iterator]();
-      while (tmp6 !== undefined) {
-        let tmp12 = updateActivity(obj[tmp8]);
+      const tmp5 = keys[Symbol.iterator]();
+      while (tmp5 !== undefined) {
+        let tmp11 = updateActivity(obj[tmp7]);
         continue;
       }
       handleRunningGamesChange(false);
@@ -176,23 +182,23 @@ let obj2 = {
     if (null == obj[arg0.applicationId]) {
       return false;
     } else {
-      obj[arg0.applicationId].token = tmp;
+      tmp3.token = tmp;
       const Storage = Storage2.Storage;
-      const result = Storage.set(ActivityTrackingStore_str, tmp2);
+      const result = Storage.set(ActivityTrackingStore, tmp2);
     }
   },
   ACTIVITY_UPDATE_FAIL: function handleActivityUpdateFail(arg0) {
     if (null == obj[arg0.applicationId]) {
       return false;
     } else {
-      obj[arg0.applicationId].token = null;
-      obj[arg0.applicationId].updatedAt = null;
+      tmp2.token = null;
+      tmp2.updatedAt = null;
       const Storage = Storage2.Storage;
-      const result = Storage.set(ActivityTrackingStore_str, tmp);
+      const result = Storage.set(ActivityTrackingStore, tmp);
     }
   }
-};
-const activityTrackingStore = new ActivityTrackingStore(DispatcherDefault, obj2);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("stores/ActivityTrackingStore.tsx");
 
 export default activityTrackingStore;

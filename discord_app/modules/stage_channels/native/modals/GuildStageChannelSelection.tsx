@@ -1,77 +1,64 @@
 // === Module 9491: GuildStageChannelSelection ===
 
 // Module 9491 (GuildStageChannelSelection)
-import Fragment from "Fragment" /* 21 */;
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1881 */;
-import asyncRequire from "asyncRequire" /* 1987 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import Text_Text from "Text/Text" /* 4892 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import createStyles from "createStyles" /* 4896 */;
-import size from "module_2" /* 2 */;
 
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_7 = createStyles.createStyles({ channelText: { marginTop: 8, flexDirection: "row" } });
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/modals/GuildStageChannelSelection.tsx");
 
 export default function GuildStageChannelSelection(channel) {
-  let tmp5;
   channel = channel.channel;
   const onChangeChannel = channel.onChangeChannel;
   function handleSelectChannel() {
-    let id;
-    let intl;
-    let obj = KeyboardManagerUtilsAll;
-    const result = obj.dismissGlobalKeyboard();
+    const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
     const mapped = channelsUserCanStartStageIn.map((id) => {
-      let obj2;
-      const obj = { value: id.id, label: obj2.computeChannelName(id, closure_1_5, closure_1_4, true) };
-      obj2 = channel(handleSelectChannel[6]);
+      const obj = { value: id.id, label: channel(handleSelectChannel[6]).computeChannelName(id, closure_1_5, closure_1_4, true) };
       return obj;
     });
-    const openLazy = ActionSheetActionCreatorsDefault.openLazy;
-    let obj2 = {
-      title: intl.string(intl2.t["bxw/f7"]),
-      items: mapped,
-      onItemSelect(arg0) {
-        let closure_0 = arg0;
-        const found = channelsUserCanStartStageIn.find((id) => id.id === closure_0);
-        if (null != found) {
-          closure_1_1(found);
-        }
-        const obj = onChangeChannel(handleSelectChannel[8]);
-        obj.hideActionSheet();
-      },
-      selectedItem: id,
-      hasIcons: false
+    const obj3 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+    const obj2 = ActionSheetActionCreatorsDefault;
+    const intl = util.intl;
+    obj3.title = intl.string(util.t["bxw/f7"]);
+    obj3.items = mapped;
+    obj3.onItemSelect = function onItemSelect(arg0) {
+      closure_0 = arg0;
+      const found = channelsUserCanStartStageIn.find((id) => id.id === closure_0);
+      if (null != found) {
+        closure_1_1(found);
+      }
+      onChangeChannel(handleSelectChannel[8]).hideActionSheet();
+      const obj = onChangeChannel(handleSelectChannel[8]);
     };
-    const tmp4 = asyncRequire(8978, dependencyMap.paths);
-    intl = intl2.intl;
-    id = undefined;
+    let id;
     if (channel != null) {
       id = channel.id;
     }
-    openLazy(tmp4, "SelectUpdatesChannel", obj2);
+    obj3.selectedItem = id;
+    obj2.openLazy(asyncRequireImpl(8978, dependencyMap.paths), "SelectUpdatesChannel", obj3);
   }
   function renderChannelHook(children, id) {
     return jsx(channel(handleSelectChannel[12]).Text, { variant: "text-sm/bold", color: "mobile-text-heading-primary", children }, id);
   }
-  const guild = channel.guild;
   const tmp = closure_7();
-  let obj = channel(handleSelectChannel[5]);
-  const channelsUserCanStartStageIn = obj.useChannelsUserCanStartStageIn(guild);
-  const tmp2 = channelsUserCanStartStageIn.length > 1;
-  let tmp3 = onChangeChannel(handleSelectChannel[6])(channel);
+  const channelsUserCanStartStageIn = channel(handleSelectChannel[5]).useChannelsUserCanStartStageIn(channel.guild);
+  const tmp3 = onChangeChannel(handleSelectChannel[6])(channel);
   let obj2 = { style: tmp.channelText, variant: "text-xs/medium", color: "text-default", children: null };
-  const Text = channel(handleSelectChannel[12]).Text;
   let intl = channel(handleSelectChannel[11]).intl;
   const format = intl.format;
   const t = channel(handleSelectChannel[11]).t;
   if (tmp2) {
-    const obj3 = {
+    let obj3 = {
       stageName: tmp3,
       stageHook: renderChannelHook,
       changeHook(children, key) {
@@ -79,11 +66,11 @@ export default function GuildStageChannelSelection(channel) {
         }
     };
     obj2.children = format(t.AkzLcV, obj3);
-    tmp5 = obj2;
+    let tmp5 = obj2;
   } else {
     const obj4 = { stageName: tmp3, stageHook: renderChannelHook };
     obj2.children = format(t["S+9O7g"], obj4);
     tmp5 = obj2;
   }
-  return <Text {...tmp5} />;
+  return jsx(channel(handleSelectChannel[12]).Text, tmp5);
 };

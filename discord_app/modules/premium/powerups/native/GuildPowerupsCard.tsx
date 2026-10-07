@@ -1,55 +1,44 @@
 // === Module 12241: GuildPowerupsCard ===
 
 // Module 12241 (GuildPowerupsCard)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Card_Card from "Card/Card" /* 6002 */;
+import Card from "Card" /* 6002 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import module_683_mod from "module_683" /* 683 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
+import n_mod from "module_683" /* 683 */;
 
-let alphaResult;
-let alphaResult1;
-let alphaResult2;
-let obj2;
-let obj3;
-let obj4;
+require = fn;
 let closure_2 = ["children", "containerStyle", "status", "style"];
-const View = react_native.View;
-const jsx = Fragment.jsx;
-let createStyles = createStyles_mod;
-let obj = { cardActive: obj2, cardExpiring: obj3, cardRemoving: obj4 };
-obj2 = { borderColor: alphaResult.hex() };
-createStyles = createStyles.createStyles;
-let module_683 = module_683_mod;
-const importDefaultResultResult = module_683(nativeDefault.unsafe_rawColors.GREEN_360);
-alphaResult = importDefaultResultResult.alpha(0.35);
-obj3 = { borderColor: alphaResult1.hex() };
-module_683 = module_683_mod;
-const importDefaultResult1Result = module_683(nativeDefault.unsafe_rawColors.YELLOW_300);
-alphaResult1 = importDefaultResult1Result.alpha(0.35);
-obj4 = { borderColor: alphaResult2.hex() };
-module_683 = module_683_mod;
-const importDefaultResult2Result = module_683(nativeDefault.unsafe_rawColors.YELLOW_300);
-alphaResult2 = importDefaultResult2Result.alpha(0.35);
-let closure_6 = createStyles(obj);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let children;
-  let containerStyle;
-  let status;
-  let style;
-  let tmp4;
-  let tmp5;
-  let tmp6;
-  let tmp7;
-  let tmp8;
-  const obj = react2;
-  const cResult = obj.c(18);
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { cardActive: null, cardExpiring: null, cardRemoving: null };
+let obj3 = { borderColor: null };
+let n = n_mod;
+const importDefaultResultResult = n(nativeDefault.unsafe_rawColors.GREEN_360);
+obj3.borderColor = n(nativeDefault.unsafe_rawColors.GREEN_360).alpha(0.35).hex();
+obj2.cardActive = obj3;
+const obj4 = { borderColor: null };
+let n = n_mod;
+const alphaResult = n(nativeDefault.unsafe_rawColors.GREEN_360).alpha(0.35);
+const importDefaultResult1Result = n(nativeDefault.unsafe_rawColors.YELLOW_300);
+obj4.borderColor = n(nativeDefault.unsafe_rawColors.YELLOW_300).alpha(0.35).hex();
+obj2.cardExpiring = obj4;
+const obj5 = { borderColor: null };
+let n = n_mod;
+const alphaResult1 = n(nativeDefault.unsafe_rawColors.YELLOW_300).alpha(0.35);
+const importDefaultResult2Result = n(nativeDefault.unsafe_rawColors.YELLOW_300);
+obj5.borderColor = n(nativeDefault.unsafe_rawColors.YELLOW_300).alpha(0.35).hex();
+obj2.cardRemoving = obj5;
+let closure_6 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+const alphaResult2 = n(nativeDefault.unsafe_rawColors.YELLOW_300).alpha(0.35);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsCard.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(18);
   if (cResult[0] !== arg0) {
     ({ children, containerStyle, status, style } = arg0);
     const tmp11 = _objectWithoutProperties(arg0, closure_2);
@@ -59,11 +48,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[3] = tmp11;
     cResult[4] = status;
     cResult[5] = style;
-    tmp8 = style;
-    tmp7 = status;
-    tmp6 = tmp11;
-    tmp5 = containerStyle;
-    tmp4 = children;
+    let tmp8 = style;
+    let tmp7 = status;
+    let tmp6 = tmp11;
+    let tmp5 = containerStyle;
+    let tmp4 = children;
   } else {
     tmp4 = cResult[1];
     tmp5 = cResult[2];
@@ -85,25 +74,23 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     type2 = tmp7.type;
   }
   if (cResult[6] === tmp8) {
-    if (cResult[7] === ("active" === type && tmp12.cardActive)) {
-      if (cResult[8] === ("expiring" === type1 && tmp12.cardExpiring)) {
-        let tmp19;
-        if (cResult[9] === ("removing" === type2 && tmp12.cardRemoving)) {
-          tmp19 = cResult[10];
+    if (cResult[7] === tmp14) {
+      if (cResult[8] === tmp16) {
+        if (cResult[9] === tmp18) {
+          let tmp19 = cResult[10];
         }
         if (cResult[11] === tmp4) {
           if (cResult[12] === tmp6) {
-            let tmp20;
             if (cResult[13] === tmp19) {
-              tmp20 = cResult[14];
+              let tmp20 = cResult[14];
             }
             if (cResult[15] === tmp5) {
-              let tmp26;
               if (cResult[16] === tmp20) {
-                tmp26 = cResult[17];
+                let tmp26 = cResult[17];
               }
               return tmp26;
             }
+            const obj2 = { style: tmp5, children: tmp20 };
             const tmp29 = <View style={tmp5}>{tmp20}</View>;
             cResult[15] = tmp5;
             cResult[16] = tmp20;
@@ -111,9 +98,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             tmp26 = tmp29;
           }
         }
-        const Card = Card_Card.Card;
+        const obj3 = { border: "faint", radius: 16, shadow: "none" };
         const merged = Object.assign(tmp6);
-        const tmp25 = <Card border="faint" radius={16} shadow="none" style={tmp19}>{tmp4}</Card>;
+        obj3.style = tmp19;
+        obj3.children = tmp4;
+        const tmp25 = jsx(Card.Card, { border: "faint", radius: 16, shadow: "none" });
         cResult[11] = tmp4;
         cResult[12] = tmp6;
         cResult[13] = tmp19;
@@ -130,22 +119,18 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[10] = items;
   tmp19 = items;
 }) : ((status) => {
-  let children;
-  let containerStyle;
-  let style;
   status = status.status;
   ({ children, containerStyle, style } = status);
   const merged = Object.assign(status, Object.assign({ children: 0, containerStyle: 0, status: 0, style: 0 }));
   const tmp2 = closure_6();
-  const Card = Card_Card.Card;
+  const obj = { style: containerStyle, children: null };
+  const obj2 = { border: "faint", radius: 16, shadow: "none" };
   const merged1 = Object.assign(merged);
   let type;
   if (status != null) {
     type = status.type;
   }
-  const items = [, , , ];
-  const tmp7 = "active" === type && tmp2.cardActive;
-  items[0] = tmp7;
+  const items = ["active" === type && tmp2.cardActive, , , ];
   let type1;
   if (status != null) {
     type1 = status.type;
@@ -157,8 +142,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   items[2] = "removing" === type2 && tmp2.cardRemoving;
   items[3] = style;
+  obj2.style = items;
+  obj2.children = children;
+  obj.children = jsx(Card.Card, { border: "faint", radius: 16, shadow: "none" });
   return <View style={containerStyle}>{null}</View>;
 });
-const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsCard.tsx");
-
-export default tmp7;

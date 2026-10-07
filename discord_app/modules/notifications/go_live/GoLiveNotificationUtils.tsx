@@ -14,7 +14,5 @@ const result = size.fileFinishedImporting("modules/notifications/go_live/GoLiveN
 export const onNotifyServerMembersOnGoLiveSettingsChanged = function onNotifyServerMembersOnGoLiveSettingsChanged(notify_server_members_on_go_live) {
   const NotifyServerMembersOnGoLive = UserSettings.NotifyServerMembersOnGoLive;
   NotifyServerMembersOnGoLive.updateSetting(notify_server_members_on_go_live);
-  const obj = AnalyticsUtilsDefault;
-  const obj2 = { update_type: constants.ACCOUNT, notify_server_members_on_go_live };
-  obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj2);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, { update_type: constants.ACCOUNT, notify_server_members_on_go_live });
 };

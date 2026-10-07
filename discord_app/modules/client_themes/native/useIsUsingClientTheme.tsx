@@ -9,7 +9,4 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/client_themes/native/useIsUsingClientTheme.tsx");
 
-export default () => {
-  const obj = useActiveTheme;
-  return obj.useIsClientThemeOrCustomThemeActive();
-};
+export default () => useActiveTheme.useIsClientThemeOrCustomThemeActive();

@@ -1,7 +1,7 @@
 // === Module 7842: UserProfileSettingsStore ===
 
 // Module 7842 (UserProfileSettingsStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import RouteConstants from "RouteConstants" /* 1086 */;
 import FavoritesConstants from "FavoritesConstants" /* 2065 */;
@@ -10,115 +10,113 @@ import BioMaxLengthExperiment from "BioMaxLengthExperiment" /* 7844 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
-let c3;
-let closure_4;
 function handleFormOpen() {
-  CLOSED = FormStates.OPEN;
+  OPEN = FormStates.OPEN;
   closure_13 = {};
 }
 function handleReset() {
   closure_9 = {};
   closure_13 = {};
-  CLOSED = FormStates.CLOSED;
+  OPEN = FormStates.CLOSED;
   closure_13 = {};
 }
 const FormStates = Constants.FormStates;
 ({ ME: c3, UserSettingsSections: closure_4 } = Constants);
-const FAVORITES_RAW_GUILD_ID = FavoritesConstants.FAVORITES_RAW_GUILD_ID;
 let closure_5 = {};
 let obj = {};
 let closure_7 = {};
-let items = [...RouteConstants.PSEUDO_GUILD_IDS, FAVORITES_RAW_GUILD_ID, NotificationsInboxConstants.NOTIFICATIONS_INBOX_RAW_GUILD_ID];
+let items = [...RouteConstants.PSEUDO_GUILD_IDS, FavoritesConstants.FAVORITES_RAW_GUILD_ID, NotificationsInboxConstants.NOTIFICATIONS_INBOX_RAW_GUILD_ID];
 const set = new Set(items);
-let closure_9 = {};
+const dependencyMap = {};
 let guildId;
-let CLOSED = FormStates.CLOSED;
+let OPEN = FormStates.CLOSED;
 let closure_13 = {};
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class UserProfileSettingsStore extends Store {
-  getFormState() {
-    return CLOSED;
-  }
-  getErrors(arg0) {
-    let tmp = arg0;
-    if (arg0 == null) {
-      tmp = _false;
-    }
-    let tmp3 = closure_13[tmp];
-    if (tmp3 == null) {
-      tmp3 = closure_7;
-    }
-    return tmp3;
-  }
-  getPendingChanges(guildId) {
-    let tmp = guildId;
-    if (guildId == null) {
-      tmp = _false;
-    }
-    let tmp3 = closure_9[tmp];
-    if (tmp3 == null) {
-      tmp3 = closure_5;
-    }
-    return tmp3;
-  }
-  getTryItOutChanges() {
-    return obj;
-  }
-  hasTryItOutChanges() {
-    const values = Object.values(obj);
-    return values.some((item) => undefined !== item);
-  }
-  hasUnsavedChanges() {
-    let values = Object.values(closure_9);
-    return values.some((item) => {
-      const values = Object.values(item);
-      return values.some((item) => undefined !== item);
-    });
-  }
-  showNotice() {
-    const self = this;
-    const values = Object.values(this.getPendingChanges(_false));
-    let someResult = values.some((item) => undefined !== item);
-    if (!someResult) {
-      const _Object = Object;
-      const values2 = Object.values(self.getPendingChanges(guildId));
-      someResult = values2.some((item) => undefined !== item);
-    }
-    return someResult;
-  }
-  canSubmit() {
-    const self = this;
-    BioMaxLengthExperiment;
-    const items = [_false, guildId];
-    for (const item10016 of items) {
-      let pendingChanges = self.getPendingChanges(item10016);
-      if (undefined !== pendingChanges.pendingBio) {
-        if (tmp4.pendingBio.length > tmp2) {
-          obj.return();
-          let flag = false;
-          return false;
-        }
-      }
-      continue;
-    }
-    return true;
-  }
 }
-Object.defineProperty(UserProfileSettingsStore.prototype, "selectedGuildId", {
+const prototype = UserProfileSettingsStore.prototype;
+Object.defineProperty(prototype, "selectedGuildId", {
   get: function selectedGuildId() {
     return guildId;
   },
   set: undefined
 });
+prototype["getFormState"] = function getFormState() {
+  return OPEN;
+};
+prototype["getErrors"] = function getErrors(arg0) {
+  let tmp = arg0;
+  if (arg0 == null) {
+    tmp = React3;
+  }
+  let tmp3 = closure_13[tmp];
+  if (tmp3 == null) {
+    tmp3 = closure_7;
+  }
+  return tmp3;
+};
+prototype["getPendingChanges"] = function getPendingChanges(guildId) {
+  let tmp = guildId;
+  if (guildId == null) {
+    tmp = React3;
+  }
+  let tmp3 = dependencyMap[tmp];
+  if (tmp3 == null) {
+    tmp3 = closure_5;
+  }
+  return tmp3;
+};
+prototype["getTryItOutChanges"] = function getTryItOutChanges() {
+  return obj;
+};
+prototype["hasTryItOutChanges"] = function hasTryItOutChanges() {
+  const values = Object.values(obj);
+  return values.some((item) => undefined !== item);
+};
+prototype["hasUnsavedChanges"] = function hasUnsavedChanges() {
+  let values = Object.values(closure_9);
+  return values.some((item) => {
+    const values = Object.values(item);
+    return values.some((item) => undefined !== item);
+  });
+};
+prototype["showNotice"] = function showNotice() {
+  const self = this;
+  const values = Object.values(this.getPendingChanges(React3));
+  let someResult = values.some((item) => undefined !== item);
+  if (!someResult) {
+    const _Object = Object;
+    const values2 = Object.values(self.getPendingChanges(guildId));
+    someResult = values2.some((item) => undefined !== item);
+  }
+  return someResult;
+};
+prototype["canSubmit"] = function canSubmit() {
+  const self = this;
+  BioMaxLengthExperiment;
+  const items = [React3, guildId];
+  for (const item10016 of items) {
+    let pendingChanges = self.getPendingChanges(item10016);
+    if (undefined !== pendingChanges.pendingBio) {
+      if (tmp4.pendingBio.length > tmp2) {
+        obj.return();
+        let flag = false;
+        return false;
+      }
+    }
+    continue;
+  }
+  return true;
+};
 UserProfileSettingsStore.displayName = "UserProfileSettingsStore";
-let obj2 = {
+const userProfileSettingsStore = new UserProfileSettingsStore(DispatcherDefault, {
   USER_SETTINGS_MODAL_INIT: handleFormOpen,
   USER_SETTINGS_MODAL_OPEN: handleFormOpen,
   USER_SETTINGS_MODAL_SET_SECTION: function handleSectionChange(section) {
     if (section.section !== constants.ACCOUNT) {
       return false;
     } else {
-      CLOSED = FormStates.OPEN;
+      OPEN = FormStates.OPEN;
       closure_13 = {};
     }
   },
@@ -131,7 +129,7 @@ let obj2 = {
       }
     }
     guildId = tmp;
-    CLOSED = FormStates.OPEN;
+    OPEN = FormStates.OPEN;
     closure_13 = {};
   },
   USER_PROFILE_SETTINGS_SET_GUILD: function handleSetGuild(guildId) {
@@ -146,35 +144,34 @@ let obj2 = {
     closure_13 = {};
   },
   USER_PROFILE_SETTINGS_CLOSE: function handleFormClose() {
-    CLOSED = FormStates.CLOSED;
+    OPEN = FormStates.CLOSED;
     closure_13 = {};
   },
   USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM: handleReset,
   USER_PROFILE_SETTINGS_SUBMIT: function handleFormSubmit() {
-    CLOSED = FormStates.SUBMITTING;
+    OPEN = FormStates.SUBMITTING;
     closure_13 = {};
   },
   USER_PROFILE_SETTINGS_SUBMIT_SUCCESS: function handleFormSubmitSuccess(guildId) {
     guildId = guildId.guildId;
-    if (CLOSED !== FormStates.SUBMITTING) {
+    if (OPEN !== FormStates.SUBMITTING) {
       return false;
     } else {
-      CLOSED = tmp.OPEN;
+      OPEN = tmp.OPEN;
       if (guildId == null) {
-        guildId = _false;
+        guildId = React3;
       }
       closure_13[guildId] = closure_7;
     }
   },
   USER_PROFILE_SETTINGS_SUBMIT_FAILURE: function handleFormSubmitFailure(arg0) {
-    let errors;
     ({ guildId, errors } = arg0);
-    if (CLOSED !== FormStates.SUBMITTING) {
+    if (OPEN !== FormStates.SUBMITTING) {
       return false;
     } else {
-      CLOSED = tmp.OPEN;
+      OPEN = tmp.OPEN;
       if (guildId == null) {
-        guildId = _false;
+        guildId = React3;
       }
       if (errors == null) {
         errors = closure_7;
@@ -183,98 +180,107 @@ let obj2 = {
     }
   },
   USER_PROFILE_SETTINGS_SET_PENDING_CHANGES: function handleSetPendingChanges(arg0) {
-    let type;
     ({ type, guildId } = arg0);
     const merged = Object.assign(arg0, Object.assign({ type: 0, guildId: 0 }));
     let tmp3 = guildId;
     if (guildId == null) {
-      tmp3 = _false;
+      tmp3 = React3;
     }
     if (guildId == null) {
-      guildId = _false;
+      guildId = React3;
     }
-    obj = {};
-    const merged1 = Object.assign(closure_9[guildId]);
+    const merged1 = Object.assign(dependencyMap[guildId]);
     const merged2 = Object.assign(merged);
-    closure_9[tmp3] = obj;
+    dependencyMap[tmp3] = {};
+    obj = {};
   },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR: function handleSetTryItOutAvatar(avatar) {
-    obj = { tryItOutAvatar: avatar };
-    avatar = avatar.avatar;
+    obj = {};
     const merged = Object.assign(obj);
+    obj.tryItOutAvatar = avatar.avatar;
   },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION: function handleSetTryItOutAvatarDecoration(avatarDecoration) {
-    obj = { tryItOutAvatarDecoration: avatarDecoration };
-    avatarDecoration = avatarDecoration.avatarDecoration;
+    obj = {};
     const merged = Object.assign(obj);
+    obj.tryItOutAvatarDecoration = avatarDecoration.avatarDecoration;
   },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT: function handleSetTryItOutProfileEffect(profileEffect) {
-    obj = { tryItOutProfileEffect: profileEffect };
-    profileEffect = profileEffect.profileEffect;
+    obj = {};
     const merged = Object.assign(obj);
+    obj.tryItOutProfileEffect = profileEffect.profileEffect;
   },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER: function handleSetTryItOutBanner(banner) {
-    obj = { tryItOutBanner: banner };
-    banner = banner.banner;
+    obj = {};
     const merged = Object.assign(obj);
+    obj.tryItOutBanner = banner.banner;
   },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS: function handleSetTryItOutThemeColors(themeColors) {
-    obj = { tryItOutThemeColors: themeColors };
-    themeColors = themeColors.themeColors;
+    obj = {};
     const merged = Object.assign(obj);
+    obj.tryItOutThemeColors = themeColors.themeColors;
   },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES: function handleSetTryItOutDisplayNameStyles(displayNameStyles) {
-    obj = { tryItOutDisplayNameStyles: displayNameStyles };
-    displayNameStyles = displayNameStyles.displayNameStyles;
+    obj = {};
     const merged = Object.assign(obj);
+    obj.tryItOutDisplayNameStyles = displayNameStyles.displayNameStyles;
   },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_CUSTOM_TYPING_INDICATOR_STYLE: function handleSetTryItOutCustomTypingIndicatorStyle(customTypingIndicatorStyle) {
-    obj = { tryItOutCustomTypingIndicatorStyle: customTypingIndicatorStyle };
-    customTypingIndicatorStyle = customTypingIndicatorStyle.customTypingIndicatorStyle;
+    obj = {};
     const merged = Object.assign(obj);
+    obj.tryItOutCustomTypingIndicatorStyle = customTypingIndicatorStyle.customTypingIndicatorStyle;
   },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET: function handleSetTryItOutPreset(arg0) {
-    let avatarDecoration;
-    let banner;
-    let displayNameStyles;
-    let lastPreset;
-    let themeColors;
     ({ lastPreset, avatarDecoration } = arg0);
-    obj = { tryItOutLastPreset: lastPreset, tryItOutBanner: banner, tryItOutThemeColors: themeColors, tryItOutAvatarDecoration: avatarDecoration, tryItOutDisplayNameStyles: displayNameStyles };
+    obj = {};
     ({ banner, themeColors, displayNameStyles } = arg0);
     const merged = Object.assign(obj);
     if (undefined === lastPreset) {
       lastPreset = obj.tryItOutLastPreset;
     }
+    obj.tryItOutLastPreset = lastPreset;
+    obj.tryItOutBanner = banner;
+    obj.tryItOutThemeColors = themeColors;
     if (undefined === avatarDecoration) {
       avatarDecoration = obj.tryItOutAvatarDecoration;
     }
+    obj.tryItOutAvatarDecoration = avatarDecoration;
+    obj.tryItOutDisplayNameStyles = displayNameStyles;
   },
   USER_PROFILE_SETTINGS_CLEAR_ERRORS: function handleResetErrors() {
     closure_13 = {};
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: function handleResetPendingAccountChanges() {
     const entries = Object.entries(closure_9);
-    closure_9 = fromEntries(entries.map((item) => {
-      let tmp;
-      let tmp2;
+    closure_9 = Object.fromEntries(entries.map((item) => {
       [tmp, tmp2] = item;
       const items = [tmp, ];
-      obj = { pendingGlobalName: undefined, pendingNickname: undefined, pendingDisplayNameStyles: undefined, pendingCustomTypingIndicatorStyle: undefined, pendingAvatar: undefined, pendingAvatarDecoration: undefined, pendingNameplate: undefined };
+      obj = {};
       const merged = Object.assign(tmp2);
+      obj.pendingGlobalName = undefined;
+      obj.pendingNickname = undefined;
+      obj.pendingDisplayNameStyles = undefined;
+      obj.pendingCustomTypingIndicatorStyle = undefined;
+      obj.pendingAvatar = undefined;
+      obj.pendingAvatarDecoration = undefined;
+      obj.pendingNameplate = undefined;
       items[1] = obj;
       return items;
     }));
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES: function handleResetPendingProfileChanges() {
     const entries = Object.entries(closure_9);
-    closure_9 = fromEntries(entries.map((item) => {
-      let tmp;
-      let tmp2;
+    closure_9 = Object.fromEntries(entries.map((item) => {
       [tmp, tmp2] = item;
       const items = [tmp, ];
-      obj = { pendingPronouns: undefined, pendingProfileEffect: undefined, pendingProfileFrame: undefined, pendingBanner: undefined, pendingAccentColor: undefined, pendingThemeColors: undefined, pendingBio: undefined };
+      obj = {};
       const merged = Object.assign(tmp2);
+      obj.pendingPronouns = undefined;
+      obj.pendingProfileEffect = undefined;
+      obj.pendingProfileFrame = undefined;
+      obj.pendingBanner = undefined;
+      obj.pendingAccentColor = undefined;
+      obj.pendingThemeColors = undefined;
+      obj.pendingBio = undefined;
       items[1] = obj;
       return items;
     }));
@@ -287,7 +293,7 @@ let obj2 = {
 
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED: function handleResetPendingLegacyUsernameDisabled() {
-    obj = closure_9[_false];
+    obj = dependencyMap[React3];
     if (obj == null) {
       obj = {};
     }
@@ -298,13 +304,14 @@ let obj2 = {
     if (undefined === prop) {
       return false;
     } else {
-      const obj2 = { pendingLegacyUsernameDisabled: undefined };
-      const merged = Object.assign(closure_9[_false]);
-      closure_9[_false] = obj2;
+      const obj2 = {};
+      const merged = Object.assign(dependencyMap[React3]);
+      obj2.pendingLegacyUsernameDisabled = undefined;
+      dependencyMap[React3] = obj2;
     }
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: function handleResetPendingPrimaryGuildChanges() {
-    obj = closure_9[_false];
+    obj = dependencyMap[React3];
     if (obj == null) {
       obj = {};
     }
@@ -315,17 +322,17 @@ let obj2 = {
     if (undefined === prop) {
       return false;
     } else {
-      const obj2 = { pendingPrimaryGuildId: undefined };
-      const merged = Object.assign(closure_9[_false]);
-      closure_9[_false] = obj2;
+      const obj2 = {};
+      const merged = Object.assign(dependencyMap[React3]);
+      obj2.pendingPrimaryGuildId = undefined;
+      dependencyMap[React3] = obj2;
     }
   },
   USER_PROFILE_UPDATE_FAILURE: function handleProfileUpdateFailure(arg0) {
-    let errors;
     ({ guildId, errors } = arg0);
-    CLOSED = FormStates.OPEN;
+    OPEN = FormStates.OPEN;
     if (guildId == null) {
-      guildId = _false;
+      guildId = React3;
     }
     if (errors == null) {
       errors = closure_7;
@@ -333,8 +340,7 @@ let obj2 = {
     closure_13[guildId] = errors;
   },
   LOGOUT: handleReset
-};
-const userProfileSettingsStore = new UserProfileSettingsStore(DispatcherDefault, obj2);
+});
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileSettingsStore.tsx");
 
 export default userProfileSettingsStore;

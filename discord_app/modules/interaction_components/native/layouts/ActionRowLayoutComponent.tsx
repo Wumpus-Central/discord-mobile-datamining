@@ -1,40 +1,33 @@
 // === Module 17567: ActionRowLayoutComponent ===
 
 // Module 17567 (ActionRowLayoutComponent)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import c from "c" /* 576 */;
+import noop from "module_19" /* 19 */;
 
-const View = react_native.View;
-const jsx = Fragment.jsx;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let components;
-  let renderComponents;
-  const obj = react2;
-  const cResult = obj.c(5);
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/interaction_components/native/layouts/ActionRowLayoutComponent.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(5);
   ({ components, renderComponents } = arg0);
   let tmp2 = null;
   if (null != components) {
     tmp2 = null;
     if (0 !== components.length) {
       if (cResult[0] === components) {
-        let tmp3;
-        let tmp5;
         if (cResult[1] === renderComponents) {
-          tmp3 = cResult[2];
+          let tmp3 = cResult[2];
         }
         if (cResult[3] !== tmp3) {
+          const obj2 = { children: tmp3 };
           const tmp8 = <View>{tmp3}</View>;
           cResult[3] = tmp3;
           cResult[4] = tmp8;
-          tmp5 = tmp8;
-        } else {
-          tmp5 = cResult[4];
         }
-        tmp2 = tmp5;
       }
       const renderComponentsResult = renderComponents(components);
       cResult[0] = components;
@@ -50,11 +43,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (null != components) {
     tmp2 = null;
     if (0 !== components.length) {
+      const obj = { children: tmp(components) };
       tmp2 = <View>{tmp(components)}</View>;
     }
   }
   return tmp2;
 });
-const result = size.fileFinishedImporting("modules/interaction_components/native/layouts/ActionRowLayoutComponent.tsx");
-
-export default tmp3;

@@ -1,27 +1,23 @@
 // === Module 10565: useSubscriptionSelection ===
 
 // Module 10565 (useSubscriptionSelection)
-import react2 from "react" /* 576 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import c from "c" /* 576 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp3;
-  let tmp4;
-  let tmp6;
-  let tmp7;
-  const obj = react2;
-  const cResult = obj.c(3);
-  [tmp3, tmp4] = react.useState(undefined);
-  _slicedToArray(react.useState(undefined), 2);
-  [tmp6, tmp7] = react.useState(undefined);
-  _slicedToArray(react.useState(undefined), 2);
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/payments/hooks/useSubscriptionSelection.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(3);
+  [tmp3, tmp4] = noop.useState(undefined);
+  const tmp2 = _slicedToArray(noop.useState(undefined), 2);
+  [tmp6, tmp7] = noop.useState(undefined);
   if (cResult[0] === tmp6) {
-    let tmp8;
     if (cResult[1] === tmp3) {
-      tmp8 = cResult[2];
+      let tmp8 = cResult[2];
     }
     return tmp8;
   }
@@ -31,13 +27,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = obj2;
   tmp8 = obj2;
 }) : (() => {
-  let tmp2;
-  let tmp3;
-  [tmp2, tmp3] = react.useState(undefined);
-  _slicedToArray(react.useState(undefined), 2);
-  const tmp4 = _slicedToArray(react.useState(undefined), 2);
+  [tmp2, tmp3] = noop.useState(undefined);
+  const tmp4 = _slicedToArray(noop.useState(undefined), 2);
   return { selectedSkuId: tmp2, setSelectedSkuId: tmp3, selectedPlanId: tmp4[0], setSelectedPlanId: tmp4[1] };
 });
-const result = size.fileFinishedImporting("modules/payments/hooks/useSubscriptionSelection.tsx");
-
-export default tmp2;

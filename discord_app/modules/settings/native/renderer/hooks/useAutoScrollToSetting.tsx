@@ -1,24 +1,21 @@
 // === Module 14523: useAutoScrollToSetting ===
 
 // Module 14523 (useAutoScrollToSetting)
-import SettingRendererConstants from "SettingRendererConstants" /* 11143 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import UserSettingSearchStore from "UserSettingSearchStore" /* 14517 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, dependencyMap, navigation;
 
-const NodeType = SettingRendererConstants.NodeType;
+const require = fn;
+const NodeType = fn(11143).NodeType;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx");
 
 export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearchResultSetting(ref, memo, scrollTarget) {
   _require = ref;
   dependencyMap = memo;
   let current = ref.useField("selected");
-  let obj = require("useNavigation");
-  navigation = obj.useNavigation();
-  let obj2 = navigation;
+  const navigation = require("useNavigation").useNavigation();
   ref = navigation.useRef(scrollTarget);
   if (current == null) {
     current = ref.current;
@@ -26,19 +23,21 @@ export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearch
   let flag = false;
   if (null != current) {
     flag = false;
-    if (require("SettingsRendererConfig").SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
-      const tmpResult = require("SettingRendererUtils");
-      let initialScrollIndex = tmpResult.getInitialScrollIndex(current, memo);
-      flag = 0 !== initialScrollIndex && 1 !== initialScrollIndex;
-      const tmp7 = 0 !== initialScrollIndex && 1 !== initialScrollIndex;
+    if (tmp(14425).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
+      let initialScrollIndex = tmp(14519).getInitialScrollIndex(current, memo);
+      let tmp7 = 0 !== initialScrollIndex;
+      if (tmp7) {
+        tmp7 = 1 !== initialScrollIndex;
+      }
+      flag = tmp7;
+      const tmpResult = tmp(14519);
     }
   }
   const items = [memo, flag, ref, navigation, current];
-  const effect = obj2.useEffect(() => {
-    ref = navigation.addListener("transitionEnd", () => {
+  const effect = navigation.useEffect(() => {
+    navigation.addListener("transitionEnd", () => {
       if (flag) {
-        const obj = ref(closure_1[4]);
-        const initialScrollIndex = obj.getInitialScrollIndex(closure_1_4, closure_1_1);
+        const initialScrollIndex = ref(dependencyMap[4]).getInitialScrollIndex(closure_1_4, memo);
         if (null != initialScrollIndex) {
           if (ref != null) {
             current = ref.current;
@@ -48,6 +47,7 @@ export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearch
             }
           }
         }
+        const obj = ref(dependencyMap[4]);
       }
       closure_1_3.current = undefined;
     });

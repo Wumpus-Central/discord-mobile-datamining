@@ -1,50 +1,48 @@
 // === Module 9050: VideoStreamStore ===
 
 // Module 9050 (VideoStreamStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import Constants2 from "Constants" /* 4921 */;
 import size from "module_2" /* 2 */;
 
-let closure_4, closure_5;
-
 function makeTimeoutKey(arg0, arg1) {
   return "" + arg0 + ":" + arg1;
 }
 function clearUser(arg0, arg1) {
-  let tmp = arg2;
+  let tmp4 = arg2;
   if (arg2 === undefined) {
-    tmp = null;
+    tmp4 = null;
   }
-  if (null != closure_4[arg0]) {
-    let tmp15 = arg1;
-    let tmp3 = arg1;
+  if (null != dependencyMap[arg0]) {
+    let tmp19 = arg1;
+    let tmp6 = arg1;
     if (arg1 == null) {
-      tmp3 = NULL_STRING_GUILD_ID;
+      tmp6 = NULL_STRING_GUILD_ID;
     }
-    if (null != closure_4[arg0][tmp3]) {
+    if (null != tmp5[tmp6]) {
       const _Object = Object;
       const values = Object.values(MediaEngineContextTypes);
       const iter = values[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
-        let tmp9 = tmp !== nextResult && null != tmp;
-        if (!tmp9) {
-          delete tmp4[tmp6];
-          let tmp12 = tmp;
-          if (tmp == null) {
-            tmp12 = nextResult;
+        let tmp12 = tmp4 !== nextResult && null != tmp4;
+        if (!tmp12) {
+          delete tmp[tmp2];
+          let tmp16 = tmp4;
+          if (tmp4 == null) {
+            tmp16 = nextResult;
           }
-          delete closure_5[makeTimeoutKey(0, tmp12, arg0)];
+          let tmp15Result = makeTimeoutKey(tmp16, arg0);
+          delete tmp3[tmp2];
         }
         continue;
       }
-      const tmp14 = closure_4[arg0];
-      if (tmp15 == null) {
-        tmp15 = NULL_STRING_GUILD_ID;
+      if (tmp19 == null) {
+        tmp19 = NULL_STRING_GUILD_ID;
       }
-      tmp14[tmp15] = closure_4[arg0][tmp3];
+      dependencyMap[arg0][tmp19] = tmp7;
     }
   }
 }
@@ -52,56 +50,56 @@ const NULL_STRING_GUILD_ID = Constants.NULL_STRING_GUILD_ID;
 const MediaEngineContextTypes = Constants2.MediaEngineContextTypes;
 let id = null;
 let sessionId = null;
-const React3 = {};
-const hasOwnProperty = {};
-const Store = get_initializedDefault.Store;
+const dependencyMap = {};
+const dependencyMap2 = {};
+const Store = initializeDefault.Store;
 class VideoStreamStore extends Store {
-  getStreamId(arg0, arg1) {
-    let DEFAULT = arg2;
-    if (arg2 === undefined) {
-      DEFAULT = MediaEngineContextTypes.DEFAULT;
-    }
-    let streamId;
-    if (closure_4[arg0] != null) {
-      let tmp4 = arg1;
-      if (arg1 == null) {
-        tmp4 = NULL_STRING_GUILD_ID;
-      }
-      if (closure_4[arg0][tmp4] != null) {
-        if (closure_4[arg0][tmp4][DEFAULT] != null) {
-          streamId = tmp6.streamId;
-        }
-      }
-    }
-    return streamId;
-  }
-  getUserStreamData(userId, guildId) {
-    let DEFAULT = STREAM;
-    if (STREAM === undefined) {
-      DEFAULT = MediaEngineContextTypes.DEFAULT;
-    }
-    let tmp3;
-    if (closure_4[userId] != null) {
-      let tmp4 = guildId;
-      if (guildId == null) {
-        tmp4 = NULL_STRING_GUILD_ID;
-      }
-      if (closure_4[userId][tmp4] != null) {
-        tmp3 = tmp5[DEFAULT];
-      }
-    }
-    return tmp3;
-  }
-  getTimedoutVideos() {
-    return closure_5;
-  }
-  getTimedoutVideo(arg0, arg1) {
-    return closure_5["" + arg0 + ":" + arg1];
-  }
 }
 const prototype = VideoStreamStore.prototype;
+prototype["getStreamId"] = function getStreamId(arg0, arg1) {
+  let DEFAULT = arg2;
+  if (arg2 === undefined) {
+    DEFAULT = MediaEngineContextTypes.DEFAULT;
+  }
+  let streamId;
+  if (dependencyMap[arg0] != null) {
+    let tmp4 = arg1;
+    if (arg1 == null) {
+      tmp4 = NULL_STRING_GUILD_ID;
+    }
+    if (tmp2[tmp4] != null) {
+      if (tmp5[DEFAULT] != null) {
+        streamId = tmp6.streamId;
+      }
+    }
+  }
+  return streamId;
+};
+prototype["getUserStreamData"] = function getUserStreamData(userId, guildId) {
+  let DEFAULT = STREAM;
+  if (STREAM === undefined) {
+    DEFAULT = MediaEngineContextTypes.DEFAULT;
+  }
+  let tmp3;
+  if (dependencyMap[userId] != null) {
+    let tmp4 = guildId;
+    if (guildId == null) {
+      tmp4 = NULL_STRING_GUILD_ID;
+    }
+    if (tmp2[tmp4] != null) {
+      tmp3 = tmp5[DEFAULT];
+    }
+  }
+  return tmp3;
+};
+prototype["getTimedoutVideos"] = function getTimedoutVideos() {
+  return closure_5;
+};
+prototype["getTimedoutVideo"] = function getTimedoutVideo(arg0, arg1) {
+  return dependencyMap2["" + arg0 + ":" + arg1];
+};
 VideoStreamStore.displayName = "VideoStreamStore";
-let obj = {
+const videoStreamStore = new VideoStreamStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(user) {
     id = user.user.id;
     sessionId = user.sessionId;
@@ -111,26 +109,20 @@ let obj = {
     sessionId = user.sessionId;
   },
   RTC_CONNECTION_VIDEO: function handleVideo(arg0) {
-    let context;
-    let guildId;
-    let streamId;
-    let userId;
     ({ userId, guildId, streamId, context } = arg0);
     if (null != streamId) {
-      if (!(userId in closure_4)) {
-        closure_4[userId] = {};
+      if (!(userId in dependencyMap)) {
+        dependencyMap[userId] = {};
       }
-      let tmp7 = guildId;
-      const tmp6 = closure_4[userId];
+      let tmp8 = guildId;
       if (guildId == null) {
-        tmp7 = NULL_STRING_GUILD_ID;
+        tmp8 = NULL_STRING_GUILD_ID;
       }
-      let obj = tmp6[tmp7];
+      let obj = dependencyMap[userId][tmp8];
       if (obj == null) {
         obj = {};
       }
       let tmp10 = guildId;
-      const tmp9 = closure_4[userId];
       if (guildId == null) {
         tmp10 = NULL_STRING_GUILD_ID;
       }
@@ -138,9 +130,10 @@ let obj = {
       const merged = Object.assign(obj);
       const obj3 = { streamId };
       obj2[context] = obj3;
-      tmp9[tmp10] = obj2;
+      dependencyMap[userId][tmp10] = obj2;
       const _HermesInternal = HermesInternal;
-      delete closure_5["" + context + ":" + userId];
+      const combined = "" + context + ":" + userId;
+      delete tmp2[tmp];
     } else {
       clearUser(userId, guildId, context);
     }
@@ -148,9 +141,6 @@ let obj = {
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
     return voiceStates.reduce((acc, item) => {
-      let channelId;
-      let guildId;
-      let userId;
       ({ userId, channelId, guildId } = item);
       if (null == channelId) {
         if (userId === id) {
@@ -180,24 +170,18 @@ let obj = {
     }, false);
   },
   VIDEO_STREAM_READY_TIMEOUT: function handleVideoStreamReadyTimeout(arg0) {
-    let mediaContext;
-    let streamKey;
-    let userId;
-    let videoStreamId;
     ({ userId, mediaContext } = arg0);
     ({ videoStreamId, streamKey } = arg0);
     closure_5["" + mediaContext + ":" + userId] = { videoStreamId, userId, streamKey, mediaContext };
   },
-  CLEAR_VIDEO_STREAM_READY_TIMEOUT: function handleClearVideoStreamTimeout(mediaContext) {
-    const combined = "" + mediaContext.mediaContext + ":" + mediaContext.userId;
-    if (null == closure_5[combined]) {
+  CLEAR_VIDEO_STREAM_READY_TIMEOUT: function handleClearVideoStreamTimeout(arg0) {
+    if (null == dependencyMap2["" + arg0.mediaContext + ":" + arg0.userId]) {
       return false;
     } else {
-      delete closure_5[tmp];
+      delete tmp[tmp2];
     }
   }
-};
-const videoStreamStore = new VideoStreamStore(DispatcherDefault, obj);
+});
 const result = size.fileFinishedImporting("stores/VideoStreamStore.tsx");
 
 export default videoStreamStore;

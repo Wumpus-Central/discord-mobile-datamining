@@ -10,16 +10,11 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/keyboard/native/openCustomKeyboard.android.tsx");
 
 export default function openCustomKeyboard(secondaryTextFieldRef) {
-  let keyboardParams;
-  let ref;
-  let ref2;
   ({ channelId: require, chatInputRef: importDefault, chatInputNativeRef: dependencyMap, keyboardParams } = secondaryTextFieldRef);
   secondaryTextFieldRef = secondaryTextFieldRef.secondaryTextFieldRef;
-  let obj = KeyboardUIStore;
-  obj.setKeyboardType(keyboardParams);
-  let obj2 = RunAfterInteractionsUtils;
-  obj2.runAfterInteractions(() => {
-    const current = importDefault.current;
+  KeyboardUIStore.setKeyboardType(keyboardParams);
+  RunAfterInteractionsUtils.runAfterInteractions(() => {
+    const current = ref.current;
     current.blur();
     if (secondaryTextFieldRef != null) {
       const current2 = secondaryTextFieldRef.current;
@@ -27,9 +22,7 @@ export default function openCustomKeyboard(secondaryTextFieldRef) {
         current2.blur();
       }
     }
-    const obj = PortalKeyboardUIStore;
-    obj.openPortalKeyboard(keyboardParams.type, require, importDefault);
-    const obj2 = ChatInputNativeCommandsDefault;
-    obj2.openCustomKeyboard(dependencyMap.current);
+    PortalKeyboardUIStore.openPortalKeyboard(keyboardParams.type, closure_1_0, ref);
+    ChatInputNativeCommandsDefault.openCustomKeyboard(ref2.current);
   });
 };

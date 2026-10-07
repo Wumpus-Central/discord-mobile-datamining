@@ -1,61 +1,45 @@
 // === Module 11224: useMemberListAction ===
 
 // Module 11224 (useMemberListAction)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1881 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4704 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9494 */;
-import UsersFastListConstants from "UsersFastListConstants" /* 10612 */;
 import openGroupDMAddMembers from "openGroupDMAddMembers" /* 11225 */;
 import showChatGDMUpsellActionSheetDefault from "showChatGDMUpsellActionSheet" /* 11237 */;
 import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11243 */;
-import _slicedToArray_mod from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import PermissionStore from "PermissionStore" /* 4515 */;
-import RelationshipStore_mod from "RelationshipStore" /* 4525 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import Constants from "Constants" /* 1085 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 const openGroupDMAddMembersDefault = openGroupDMAddMembers;
-let channel, closure_1, constants, importDefault;
 
-let c10;
-let closure_12;
-let unpackModuleId;
-let _slicedToArray = _slicedToArray_mod;
-let react = react_mod;
-const View = react_native.View;
-let RelationshipStore = RelationshipStore_mod;
-const USERS_LIST_PADDING_BETWEEN_SECTIONS = UsersFastListConstants.USERS_LIST_PADDING_BETWEEN_SECTIONS;
-({ Permissions: c10, AnalyticsSections: unpackModuleId, InstantInviteSources: closure_12 } = Constants);
-const jsx = Fragment.jsx;
+require = fn;
+const View = fn(17).View;
+const Constants = fn(1085);
+({ Permissions: c10, AnalyticsSections: closure_11, InstantInviteSources: closure_12 } = Constants);
+const jsx = fn(21).jsx;
 let closure_14 = { listActionRenderer: "start", listActionHeight: "unicodeVersion" };
-let obj = { wrapper: { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS } };
-let closure_15 = createStyles.createStyles(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
-  let first;
-  let obj3;
-  let onClick;
-  let tmp10;
-  let tmp8;
-  let tmp = channel;
-  let obj = channel(576);
-  const cResult = obj.c(40);
+const createStyles = fn(4896);
+let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10612).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
+const ReactCompilerGating = fn(558);
+let obj2 = { wrapper: { paddingTop: fn(10612).USERS_LIST_PADDING_BETWEEN_SECTIONS } };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+  const cResult = channel(576).c(40);
   channel = channel.channel;
   const disable = channel.disable;
-  const tmp4 = undefined !== disable && disable;
   closure_15();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -78,38 +62,37 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     };
     cResult[1] = channel;
     cResult[2] = fn;
-    tmp8 = fn;
+    let tmp8 = fn;
   } else {
     tmp8 = cResult[2];
   }
-  const tmpResult = tmp(573);
-  const stateFromStores = tmpResult.useStateFromStores(first, tmp8);
+  let obj = channel(576);
+  const tmp4 = undefined !== disable && disable;
+  const stateFromStores = channel(573).useStateFromStores(first, tmp8);
   if (cResult[3] !== channel) {
     const canResult = PermissionStore.can(constants.MANAGE_ROLES, channel);
     cResult[3] = channel;
     cResult[4] = canResult;
-    tmp10 = canResult;
+    let tmp10 = canResult;
   } else {
     tmp10 = cResult[4];
   }
   if (cResult[5] === tmp10) {
-    let tmp14;
     if (cResult[6] === channel) {
-      tmp14 = cResult[7];
+      let tmp14 = cResult[7];
     }
     let tmp17 = null != channel && !tmp4;
     if (tmp17) {
-      let tmp18 = tmp14;
-      if (!tmp18) {
-        let isFriendResult;
-        if (channel.isDM()) {
-          isFriendResult = RelationshipStore.isFriend(channel.getRecipientId());
-        } else {
-          isFriendResult = channel.isMultiUserDM() || PermissionStore.can(constants.CREATE_INSTANT_INVITE, channel);
+      if (tmp14) {
+        tmp17 = tmp14;
+      } else if (channel.isDM()) {
+        let isFriendResult = RelationshipStore.isFriend(channel.getRecipientId());
+      } else {
+        isFriendResult = channel.isMultiUserDM();
+        if (!isFriendResult) {
+          isFriendResult = PermissionStore.can(constants.CREATE_INSTANT_INVITE, channel);
         }
-        tmp18 = isFriendResult;
       }
-      tmp17 = tmp18;
     }
     if (cResult[8] !== channel) {
       let flag;
@@ -138,9 +121,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       id = channel.id;
     }
     id(6553)();
-    [r10095, dependencyMap] = react.useState(undefined);
+    [r10096, dependencyMap] = noop.useState(undefined);
     const _Symbol = Symbol;
-    _slicedToArray(react.useState(undefined), 2);
     if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
       class F {
         constructor(arg0) {
@@ -186,7 +168,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
         }
       }
       cResult[13] = id;
-      cResult[14] = tmp33;
+      cResult[14] = tmp34;
     } else {
       class F {
         constructor(arg0) {
@@ -202,7 +184,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
         }
       }
     }
-    _slicedToArray = tmp33;
+    _slicedToArray = tmp34;
     if (null != id) {
       class F {
         constructor(arg0) {
@@ -217,11 +199,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
           return;
         }
       }
-      return closure_14;
     }
+    return closure_14;
   }
   let result = tmp10;
-  if (result) {
+  if (tmp10) {
     class F {
       constructor(arg0) {
         height = channel.nativeEvent.layout.height;
@@ -241,12 +223,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[6] = channel;
   cResult[7] = result;
   tmp14 = result;
+  const tmpResult = channel(573);
 }) : ((channel) => {
-  let c3;
-  let c4;
-  let closure_10;
-  let closure_8;
-  let first;
   channel = channel.channel;
   let flag = channel.disable;
   if (flag === undefined) {
@@ -254,7 +232,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   }
   let stateFromStores;
   _slicedToArray = undefined;
-  react = undefined;
+  noop = undefined;
   let flag2;
   let flag3;
   let id;
@@ -265,10 +243,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   let callback1;
   let tmp = closure_15();
   importDefault = tmp;
-  let tmp2 = channel;
-  let obj = channel(stateFromStores[13]);
   const items = [first];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = channel(stateFromStores[13]).useStateFromStores(items, () => {
     let isDMResult;
     if (channel != null) {
       isDMResult = channel.isDM();
@@ -284,29 +260,23 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
     return tmp2;
   });
-  let obj2 = id;
   let canResult = id.can(constants.MANAGE_ROLES, channel);
-  const tmp5 = constants;
   if (canResult) {
-    const tmp2Result = tmp2(stateFromStores[14]);
-    canResult = tmp2Result.isPrivateGuildChannel(channel);
+    canResult = channel(tmp3[14]).isPrivateGuildChannel(channel);
+    const tmp2Result = channel(tmp3[14]);
   }
   _slicedToArray = canResult;
   let tmp7 = null != channel && !flag;
   if (tmp7) {
-    let tmp8 = canResult;
-    if (!tmp8) {
-      let isFriendResult;
-      if (channel.isDM()) {
-        isFriendResult = RelationshipStore.isFriend(channel.getRecipientId());
-      } else {
-        isFriendResult = channel.isMultiUserDM() || obj2.can(tmp5.CREATE_INSTANT_INVITE, channel);
-      }
-      tmp8 = isFriendResult;
+    if (canResult) {
+      tmp7 = canResult;
+    } else if (channel.isDM()) {
+      let isFriendResult = RelationshipStore.isFriend(channel.getRecipientId());
+    } else {
+      isFriendResult = channel.isMultiUserDM() || id.can(constants.CREATE_INSTANT_INVITE, channel);
     }
-    tmp7 = tmp8;
   }
-  react = tmp7;
+  noop = tmp7;
   flag2 = undefined;
   if (channel != null) {
     flag2 = channel.isDM();
@@ -325,12 +295,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   if (channel != null) {
     id = channel.id;
   }
-  let tmp12 = require("useScaledRowHeight")();
-  RelationshipStore = tmp12;
-  [first, constants] = react.useState(undefined);
-  onLayout = react.useCallback((nativeEvent) => {
+  const tmp13 = require("useScaledRowHeight")();
+  RelationshipStore = tmp13;
+  [first, constants] = noop.useState(undefined);
+  onLayout = noop.useCallback((nativeEvent) => {
     const height = nativeEvent.nativeEvent.layout.height;
-    let tmp = closure_10((arg0) => {
+    closure_10((arg0) => {
       let tmp = arg0;
       if (arg0 == null) {
         tmp = height;
@@ -339,34 +309,28 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     });
   }, []);
   const items1 = [id];
-  callback1 = react.useCallback(() => {
+  callback1 = noop.useCallback(() => {
     if (null != id) {
-      openGroupDMAddMembersDefault(tmp, unpackModuleId.MEMBER_LIST);
+      openGroupDMAddMembersDefault(tmp, constants2.MEMBER_LIST);
     }
   }, items1);
-  const items2 = [canResult, id, callback1, flag2, flag3, first, onLayout, stateFromStores, tmp12, tmp7, tmp];
-  return react.useMemo(() => {
-    let IconComponent;
-    let formatToPlainStringResult;
-    let handlePress;
-    let iconSource;
-    let intl4;
-    let label;
-    let onClick;
-    let sublabel;
+  const items2 = [canResult, id, callback1, flag2, flag3, first, onLayout, stateFromStores, tmp13, tmp7, tmp];
+  return noop.useMemo(() => {
     if (null != id) {
       if (c4) {
-        let tmp12;
         if (flag2) {
-          let obj2 = { iconSource: closure_1(stateFromStores[17]), IconComponent: channel(stateFromStores[18]).ChatPlusIcon, label: intl4.string(channel(stateFromStores[19]).t["3hF1W4"]), sublabel: formatToPlainStringResult, handlePress: callback1 };
-          intl4 = channel(stateFromStores[19]).intl;
-          formatToPlainStringResult = undefined;
+          let obj2 = { iconSource: closure_1(stateFromStores[17]), IconComponent: channel(stateFromStores[18]).ChatPlusIcon, label: null, sublabel: null, handlePress: null };
+          const intl4 = channel(stateFromStores[19]).intl;
+          obj2.label = intl4.string(channel(stateFromStores[19]).t["3hF1W4"]);
+          let formatToPlainStringResult;
           if (null != stateFromStores) {
             const intl5 = channel(stateFromStores[19]).intl;
             let obj3 = { recipient: tmp35 };
             formatToPlainStringResult = intl5.formatToPlainString(channel(stateFromStores[19]).t["Sh/xNN"], obj3);
           }
-          tmp12 = obj2;
+          obj2.sublabel = formatToPlainStringResult;
+          obj2.handlePress = callback1;
+          let tmp12 = obj2;
         } else {
           let obj = { iconSource: null, IconComponent: null, label: null, handlePress: null };
           if (flag3) {
@@ -376,59 +340,66 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
             obj.label = intl3.string(channel(stateFromStores[19]).t["LR+Ptf"]);
             obj.handlePress = function handlePress() {
               if (null != flag3.getChannel(id)) {
-                const obj4 = channel(stateFromStores[16]);
-                const groupDMAddMembersAction = obj4.getGroupDMAddMembersAction(id, callback.MEMBER_LIST);
+                const groupDMAddMembersAction = channel(stateFromStores[16]).getGroupDMAddMembersAction(id, callback.MEMBER_LIST);
                 if ("open" === groupDMAddMembersAction) {
-                  const tmp8Result = channel(stateFromStores[22]);
                   if (tmp8Result.UNSAFE_isDismissibleContentDismissed(channel(stateFromStores[23]).DismissibleContent.GDM_INVITE_REMINDER)) {
                     onClick();
                   } else {
                     const obj = { onClick };
                     closure_1(stateFromStores[24])(obj);
                   }
+                  tmp8Result = channel(stateFromStores[22]);
                 } else {
+                  const result = channel(stateFromStores[16]).showGroupDMAddMembersRoadblock(groupDMAddMembersAction, callback.MEMBER_LIST);
                   const tmp8Result2 = channel(stateFromStores[16]);
-                  const result = tmp8Result2.showGroupDMAddMembersRoadblock(groupDMAddMembersAction, callback.MEMBER_LIST);
                 }
+                const obj4 = channel(stateFromStores[16]);
               }
             };
             tmp12 = obj;
           } else if (c3) {
-            obj.iconSource = closure_1(stateFromStores[25]);
+            obj.iconSource = tmp4(stateFromStores[25]);
             obj.IconComponent = channel(stateFromStores[26]).SettingsIcon;
             const intl2 = channel(stateFromStores[19]).intl;
             obj.label = intl2.string(channel(stateFromStores[19]).t.z9Mqln);
             obj.handlePress = function handlePress() {
               channel = flag3.getChannel(id);
               if (null != channel) {
+                const result = channel(stateFromStores[27]).openChannelMembersActionSheet(channel.id, channel.guild_id);
                 const obj = channel(stateFromStores[27]);
-                const result = obj.openChannelMembersActionSheet(channel.id, channel.guild_id);
               }
             };
             tmp12 = obj;
           } else {
-            obj.iconSource = closure_1(stateFromStores[20]);
+            obj.iconSource = tmp4(stateFromStores[20]);
             obj.IconComponent = channel(stateFromStores[21]).GroupPlusIcon;
             const intl = channel(stateFromStores[19]).intl;
             obj.label = intl.string(channel(stateFromStores[19]).t["Ab/6S0"]);
             obj.handlePress = function handlePress() {
               channel = flag3.getChannel(id);
               if (null != channel) {
+                const result = channel(stateFromStores[28]).dismissGlobalKeyboard();
                 const obj = channel(stateFromStores[28]);
-                const result = obj.dismissGlobalKeyboard();
                 const obj3 = { source: callback1.CHAT_SIDEBAR };
+                const result1 = channel(stateFromStores[29]).showInstantInviteActionSheet(channel, obj3);
                 const obj2 = channel(stateFromStores[29]);
-                const result1 = obj2.showInstantInviteActionSheet(channel, obj3);
               }
             };
             tmp12 = obj;
           }
         }
+        let obj4 = { style: closure_1.wrapper, onLayout, children: null };
         ({ label, iconSource, IconComponent, handlePress, sublabel } = tmp12);
-        const RowButton = channel(stateFromStores[30]).RowButton;
-        let closure_0 = <flag2 style={closure_1.wrapper} onLayout={onLayout}>{null}</flag2>;
+        const obj5 = { icon: null, onPress: null, label: null, subLabel: null, arrow: true };
+        const obj6 = { source: iconSource, IconComponent };
+        obj5.icon = jsx(channel(stateFromStores[30]).RowButton.Icon, { source: iconSource, IconComponent });
+        obj5.onPress = handlePress;
+        obj5.label = label;
+        obj5.subLabel = sublabel;
+        obj4.children = jsx(channel(stateFromStores[30]).RowButton, { icon: null, onPress: null, label: null, subLabel: null, arrow: true });
+        closure_0 = <flag2 style={closure_1.wrapper} onLayout={onLayout}>{null}</flag2>;
         closure_1 = closure_8 + closure_1.wrapper.paddingTop;
-        return {
+        const obj7 = {
           listActionRenderer() {
                 return closure_0;
               },
@@ -440,11 +411,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
                 return tmp;
               }
         };
+        return obj7;
       }
     }
     return closure_1_14;
   }, items2);
 });
-let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
-
-export default tmp3;

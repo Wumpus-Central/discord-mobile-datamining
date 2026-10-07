@@ -1,8 +1,7 @@
 // === Module 17418: LaunchPad ===
 
 // Module 17418 (LaunchPad)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
@@ -12,19 +11,17 @@ import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
 import ChatInputUtils from "ChatInputUtils" /* 4751 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import Pressables from "Pressables" /* 5916 */;
-import _mod9509 from "module_9509" /* 9509 */;
 import AutocompleterDefault from "Autocompleter" /* 9510 */;
 import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9518 */;
 import hideLaunchPadDefault from "hideLaunchPad" /* 10715 */;
 import RouteManagerDefault from "RouteManager" /* 12572 */;
 import DevToolsNavigator from "DevToolsNavigator" /* 14422 */;
-import _slicedToArray_mod from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
-import ActionSheetStore_mod from "ActionSheetStore" /* 4567 */;
-import ChannelListStore_mod from "ChannelListStore" /* 7049 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ActionSheetStore from "ActionSheetStore" /* 4567 */;
+import ChannelListStore from "ChannelListStore" /* 7049 */;
 import NavigationHistoryStore_mod from "NavigationHistoryStore" /* 6841 */;
 import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5698 */;
-import ChannelRecord from "ChannelRecord" /* 2055 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7217 */;
@@ -35,28 +32,10 @@ import ReadStateStore from "ReadStateStore" /* 4911 */;
 import SortedGuildStore from "SortedGuildStore" /* 5623 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
 import VoiceStateStore from "VoiceStateStore" /* 4915 */;
-import Constants from "Constants" /* 1085 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, basicChannel, dependencyMap, tab, text;
 
-let c10;
-let c9;
-let closure_14;
-let closure_25;
-let closure_26;
-let closure_27;
-let closure_28;
-let map1;
-let metroImportAll;
-let obj2;
-let obj3;
-let obj4;
-let size;
+require = fn;
 function createAndAppendChannel(item10022, set, items) {
   if (!set.has(item10022)) {
     const tmp3 = createAutocompleterResultForChannelIdDefault(item10022);
@@ -72,39 +51,37 @@ function useInitialResults(disabled) {
   let selectedGuildFromRoute;
   let selectedUnreadGuild;
   let stateFromStores1;
+  selectedGuildFromRoute = disabled(selectedGuildFromRoute[38]).getSelectedGuildFromRoute();
   let obj = disabled(selectedGuildFromRoute[38]);
-  selectedGuildFromRoute = obj.getSelectedGuildFromRoute();
-  const obj2 = disabled(selectedGuildFromRoute[38]);
-  const selectedChannelFromRoute = obj2.getSelectedChannelFromRoute();
+  const selectedChannelFromRoute = disabled(selectedGuildFromRoute[38]).getSelectedChannelFromRoute();
   const tmp3 = selectedChannelFromRoute(selectedUnreadGuild.useState(undefined), 2);
   selectedUnreadGuild = tmp3[0];
-  let closure_5 = tmp5;
+  closure_5 = tmp5;
   items = [visible];
   const effect = selectedUnreadGuild.useEffect(() => {
     if (!visible) {
       closure_5(undefined);
     }
   }, items);
-  const ref = selectedUnreadGuild.useRef([]);
-  let obj3 = disabled(selectedGuildFromRoute[26]);
+  selectedUnreadGuild.useRef([]);
+  const obj2 = disabled(selectedGuildFromRoute[38]);
   let items1 = [PrivateChannelReadStateStore];
-  const stateFromStores = obj3.useStateFromStores(items1, () => {
-    let current;
+  const stateFromStores = disabled(selectedGuildFromRoute[26]).useStateFromStores(items1, () => {
     if (visible) {
-      current = PrivateChannelReadStateStore.getUnreadPrivateChannelIds();
+      let current = PrivateChannelReadStateStore.getUnreadPrivateChannelIds();
     } else {
       current = ref.current;
     }
     return current;
   });
   const effect1 = selectedUnreadGuild.useEffect(() => {
-    ref.current = stateFromStores;
+    closure_6.current = stateFromStores;
   });
-  const ref2 = selectedUnreadGuild.useRef([]);
+  selectedUnreadGuild.useRef([]);
+  let obj3 = disabled(selectedGuildFromRoute[26]);
   let items2 = [SortedGuildStore, GuildReadStateStore, GuildStore];
   let items3 = [visible, selectedGuildFromRoute];
-  const obj4 = disabled(selectedGuildFromRoute[26]);
-  const stateFromStoresArray = obj4.useStateFromStoresArray(items2, () => {
+  const stateFromStoresArray = disabled(selectedGuildFromRoute[26]).useStateFromStoresArray(items2, () => {
     if (visible) {
       items = [];
       const items1 = [];
@@ -112,26 +89,25 @@ function useInitialResults(disabled) {
       const iter = flattenedGuildIds[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
-        let tmp11 = nextResult;
+        let tmp9 = nextResult;
         if (nextResult !== selectedGuildFromRoute) {
-          let hasUnreadResult = GuildReadStateStore.getMentionCount(tmp11) > 0;
-          let tmp33 = hasUnreadResult;
-          if (!tmp33) {
-            hasUnreadResult = GuildReadStateStore.hasUnread(tmp11);
+          let hasUnreadResult = GuildReadStateStore.getMentionCount(tmp9) > 0;
+          let tmp31 = hasUnreadResult;
+          if (!hasUnreadResult) {
+            hasUnreadResult = GuildReadStateStore.hasUnread(tmp9);
           }
           if (hasUnreadResult) {
-            let guild = GuildStore.getGuild(tmp11);
+            guild = GuildStore.getGuild(tmp9);
             let hasItem;
             if (guild != null) {
               let features = guild.features;
-              hasItem = features.has(constants.HUB);
+              hasItem = features.has(constants2.HUB);
             }
             if (!hasItem) {
-              let tmp20 = tmp33;
-              if (tmp20) {
-                let arr = items.push(tmp11);
+              if (tmp31) {
+                let arr = items.push(tmp9);
               } else {
-                let arr2 = items1.push(tmp11);
+                let arr2 = items1.push(tmp9);
               }
             }
           }
@@ -140,37 +116,34 @@ function useInitialResults(disabled) {
       }
       const push = items.push;
       const items2 = [];
-      HermesBuiltin.arraySpread(items2, items1, 0);
-      HermesBuiltin.apply(push, items2, items);
+      HermesBuiltin.arraySpread(items1, 0);
+      HermesBuiltin.apply(items2, items);
       return items;
     } else {
       return ref2.current;
     }
   }, items3);
   const effect2 = selectedUnreadGuild.useEffect(() => {
-    ref2.current = stateFromStoresArray;
+    closure_8.current = stateFromStoresArray;
   });
-  const ref3 = selectedUnreadGuild.useRef([]);
+  selectedUnreadGuild.useRef([]);
+  const obj4 = disabled(selectedGuildFromRoute[26]);
   let items4 = [stateFromStores, VoiceStateStore, ReadStateStore, UserGuildSettingsStore, stateFromStores1];
   let items5 = [disabled, selectedGuildFromRoute, visible, selectedUnreadGuild];
-  const obj5 = disabled(selectedGuildFromRoute[26]);
-  const stateFromStoresArray1 = obj5.useStateFromStoresArray(items4, () => {
-    let channelMuted;
-    let mentionCount;
-    let voiceStatesForChannel;
-    let tmp2 = first;
+  const stateFromStoresArray1 = disabled(selectedGuildFromRoute[26]).useStateFromStoresArray(items4, () => {
+    let tmp = first;
     if (first == null) {
-      tmp2 = selectedGuildFromRoute;
+      tmp = selectedGuildFromRoute;
     }
     if (!disabled) {
-      if (null != tmp2) {
+      if (null != tmp) {
         if (visible) {
           items = [];
           const items1 = [];
           const items2 = [];
           const items3 = [];
           const _Object = Object;
-          const values = Object.values(ActiveJoinedThreadsStore.getActiveJoinedUnreadThreadsForGuild(tmp2));
+          const values = Object.values(ActiveJoinedThreadsStore.getActiveJoinedUnreadThreadsForGuild(tmp));
           for (const item10020 of values) {
             for (const key10024 in item10020) {
               let arr = items1.push(key10024);
@@ -178,7 +151,7 @@ function useInitialResults(disabled) {
             }
             continue;
           }
-          const guildChannels = ChannelListStore.getGuild(tmp2).guildChannels;
+          const guildChannels = ChannelListStore.getGuild(tmp).guildChannels;
           guildChannels.forEachChannel((type) => {
             const tmp2 = memo(type.type);
             if (tmp2) {
@@ -188,10 +161,10 @@ function useInitialResults(disabled) {
                     items.push(type.id);
                   } else {
                     if (!tmp2) {
-                      const obj3 = disabled(selectedGuildFromRoute[39]);
                       if (obj3.getHasImportantUnread(type)) {
                         items1.push(type.id);
                       }
+                      obj3 = disabled(selectedGuildFromRoute[39]);
                     }
                     if (tmp2) {
                       const keys = Object.keys();
@@ -210,16 +183,16 @@ function useInitialResults(disabled) {
           }, { ignoreRecents: true, withThreads: true });
           const push = items.push;
           const items4 = [];
-          HermesBuiltin.arraySpread(items4, items1, 0);
-          HermesBuiltin.apply(push, items4, items);
+          HermesBuiltin.arraySpread(items1, 0);
+          HermesBuiltin.apply(items4, items);
           const push2 = items.push;
           const items5 = [];
-          HermesBuiltin.arraySpread(items5, items3, 0);
-          HermesBuiltin.apply(push2, items5, items);
+          HermesBuiltin.arraySpread(items3, 0);
+          HermesBuiltin.apply(items5, items);
           const push3 = items.push;
           const items6 = [];
-          HermesBuiltin.arraySpread(items6, items2, 0);
-          HermesBuiltin.apply(push3, items6, items);
+          HermesBuiltin.arraySpread(items2, 0);
+          HermesBuiltin.apply(items6, items);
           return items;
         } else {
           return ref3.current;
@@ -229,51 +202,46 @@ function useInitialResults(disabled) {
     return [];
   }, items5);
   const effect3 = selectedUnreadGuild.useEffect(() => {
-    ref3.current = stateFromStoresArray1;
+    closure_10.current = stateFromStoresArray1;
   });
+  const obj5 = disabled(selectedGuildFromRoute[26]);
   let items6 = [stateFromStoresArray1];
-  const obj6 = disabled(selectedGuildFromRoute[26]);
-  stateFromStores1 = obj6.useStateFromStores(items6, () => stateFromStoresArray1.getState().history);
-  const ref4 = selectedUnreadGuild.useRef([]);
+  stateFromStores1 = disabled(selectedGuildFromRoute[26]).useStateFromStores(items6, () => stateFromStoresArray1.getState().history);
+  selectedUnreadGuild.useRef([]);
   const items7 = [disabled, visible, selectedGuildFromRoute, stateFromStoresArray, stateFromStores1];
-  const memo = selectedUnreadGuild.useMemo(function() {
+  const memo = selectedUnreadGuild.useMemo(() => {
     if (!disabled) {
       if (visible) {
         const _Set = Set;
-        const self = this;
-        const self2 = this;
-        set = new Set(stateFromStoresArray);
+        const set = new Set(stateFromStoresArray);
         if (null != selectedGuildFromRoute) {
-          set.add(tmp6);
+          set.add(tmp7);
         }
         items = [];
         const _Set2 = Set;
-        const self3 = this;
-        const self4 = this;
         const set1 = new Set();
         let diff = stateFromStores1.length - 1;
         if (0 <= diff) {
           while (null != stateFromStores1[diff]) {
-            let tmp14;
-            if (obj3.startsWith(metroImportAll)) {
-              let channel = ChannelStore.getChannel(React4(obj3));
+            if (obj3.startsWith(closure_2_8)) {
+              let channel = ChannelStore.getChannel(options(obj3));
               let guild_id;
               if (channel != null) {
                 guild_id = channel.guild_id;
               }
-              tmp14 = guild_id;
+              let tmp17 = guild_id;
             } else {
-              tmp14 = React4(obj3);
+              tmp17 = options(obj3);
             }
-            let guild = GuildStore.getGuild(tmp14);
-            let hasItem = null == tmp14 || set.has(tmp14) || set1.has(tmp14) || null == guild;
+            guild = GuildStore.getGuild(tmp17);
+            let hasItem = null == tmp17 || set.has(tmp17) || set1.has(tmp17) || null == guild;
             if (!hasItem) {
               let features = guild.features;
-              hasItem = features.has(constants.HUB);
+              hasItem = features.has(constants2.HUB);
             }
             if (!hasItem) {
-              let addResult1 = set1.add(tmp14);
-              let arr = items.push(tmp14);
+              let addResult1 = set1.add(tmp17);
+              let arr = items.push(tmp17);
             }
             if (items.length >= 20) {
               break;
@@ -291,118 +259,102 @@ function useInitialResults(disabled) {
     return ref4.current;
   }, items7);
   const effect4 = selectedUnreadGuild.useEffect(() => {
-    ref4.current = memo;
+    closure_13.current = memo;
   });
-  const ref5 = selectedUnreadGuild.useRef(undefined);
+  selectedUnreadGuild.useRef(undefined);
   const items8 = [disabled, visible, stateFromStoresArray1, selectedChannelFromRoute, selectedUnreadGuild, stateFromStores1];
-  const memo1 = selectedUnreadGuild.useMemo(function() {
-    let guild;
-    function getChannelHistory(stateFromStores1, selectedChannelFromRoute) {
-      let combined;
-      if (null != selectedChannelFromRoute) {
-        const _HermesInternal = HermesInternal;
-        combined = "" + ref2 + selectedChannelFromRoute;
-      }
-      items = [];
-      let diff = stateFromStores1.length - 1;
-      if (0 <= diff) {
-        while (null != stateFromStores1[diff]) {
-          if (!obj.startsWith(ref3)) {
-            if (obj !== combined) {
-              let tmp8 = stateFromStoresArray(obj);
-              basicChannel = basicChannel.getBasicChannel(tmp8);
-              if (null != basicChannel) {
-                if (null == basicChannel.guild_id) {
-                  let arr = items.push(tmp8);
-                  if (items.length >= 20) {
-                    break;
-                  }
-                }
-              }
-              break;
-            }
-          }
-          diff = diff - 1;
-          if (0 > diff) {
-            break;
-          }
-        }
-      }
-      return items;
-    }
+  const memo1 = selectedUnreadGuild.useMemo(() => {
     if (!disabled) {
       if (visible) {
-        let tmp24;
+        const tmp5 = (function getChannelHistory(stateFromStores1, selectedChannelFromRoute) {
+          if (null != selectedChannelFromRoute) {
+            const _HermesInternal = HermesInternal;
+            const combined = "" + ref2 + selectedChannelFromRoute;
+          }
+          items = [];
+          let diff = stateFromStores1.length - 1;
+          if (0 <= diff) {
+            while (null != stateFromStores1[diff]) {
+              if (!obj.startsWith(ref3)) {
+                if (obj !== combined) {
+                  let tmp8 = stateFromStoresArray(obj);
+                  basicChannel = basicChannel.getBasicChannel(tmp8);
+                  if (null != basicChannel) {
+                    if (null == basicChannel.guild_id) {
+                      let arr = items.push(tmp8);
+                      if (items.length >= 20) {
+                        break;
+                      }
+                    }
+                  }
+                  break;
+                }
+              }
+              diff = diff - 1;
+              if (0 > diff) {
+                break;
+              }
+            }
+          }
+          return items;
+        })(stateFromStores1, selectedChannelFromRoute);
         items = [];
-        let tmp8 = null;
-        const tmp6 = getChannelHistory(stateFromStores1, selectedChannelFromRoute);
         if (null == first) {
-          let tmp9 = globalThis;
           const _Set = Set;
-          const self = this;
-          const self2 = this;
-          set = new Set();
-          for (const item10022 of tmp6) {
-            let tmp15 = createAndAppendChannel(item10022, set, items);
+          const set = new Set();
+          for (const item10022 of tmp5) {
+            let tmp16 = createAndAppendChannel(item10022, set, items);
             continue;
           }
         }
         const items1 = [];
         const _Set2 = Set;
-        const self3 = this;
-        const self4 = this;
         const set1 = new Set();
         if (stateFromStoresArray1.length > 0) {
-          for (const item10040 of stateFromStoresArray1) {
-            let tmp23 = createAndAppendChannel(item10040, set1, items1);
+          for (const item10040 of tmp22) {
+            let tmp26 = createAndAppendChannel(item10040, set1, items1);
             continue;
           }
         }
         if (items.length > 0) {
           const obj = { channelHistory: items, unreads: items1 };
-          tmp24 = obj;
+          const tmp27 = obj;
         }
-        return tmp24;
+        return tmp27;
       } else {
         return ref5.current;
       }
     }
   }, items8);
   const effect5 = selectedUnreadGuild.useEffect(() => {
-    ref5.current = memo1;
+    closure_15.current = memo1;
   });
-  const obj7 = { initialResults: selectedUnreadGuild.useDeferredValue(memo1), unreadPrivateChannelIds: stateFromStores, unreadGuilds: stateFromStoresArray, guildHistory: memo, selectedUnreadGuild, setSelectedUnreadGuild: tmp3[1] };
-  return obj7;
+  const obj6 = disabled(selectedGuildFromRoute[26]);
+  return { initialResults: selectedUnreadGuild.useDeferredValue(memo1), unreadPrivateChannelIds: stateFromStores, unreadGuilds: stateFromStoresArray, guildHistory: memo, selectedUnreadGuild, setSelectedUnreadGuild: tmp3[1] };
 }
-let _slicedToArray = _slicedToArray_mod;
-let react = react_mod;
-const View = react_native.View;
-let ActionSheetStore = ActionSheetStore_mod;
-let ChannelListStore = ChannelListStore_mod;
+const View = fn(17).View;
+let NavigationHistoryStore = fn(6841);
+({ CHANNEL_PREFIX: closure_8, getIdFromHistoryItem: closure_9, GUILD_PREFIX: c10 } = NavigationHistoryStore);
 let NavigationHistoryStore = NavigationHistoryStore_mod;
-({ CHANNEL_PREFIX: metroImportAll, getIdFromHistoryItem: c9, GUILD_PREFIX: c10 } = NavigationHistoryStore);
-NavigationHistoryStore = NavigationHistoryStore_mod;
+const ChannelRecord = fn(2055);
 ({ isGuildSelectableChannelType: map1, isGuildVocalChannelType: closure_14 } = ChannelRecord);
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_25, GuildFeatures: closure_26 } = Constants);
-({ jsx: closure_27, jsxs: closure_28 } = Fragment);
+const jsxProd = fn(21);
+({ jsx: closure_27, jsxs: closure_28 } = jsxProd);
 const md = nativeDefault.radii.md;
-let createStyles = createStyles_mod;
-let obj = { wrapper: obj2, launchPadContent: { flex: -1, overflow: "hidden", borderBottomLeftRadius: 24, borderBottomRightRadius: 24 }, header: { paddingHorizontal: 16, paddingTop: 16, flexDirection: "row", flexShrink: 0, flexGrow: 0 }, subheader: { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", alignSelf: "center", paddingStart: 8 }, tabs: obj3, tab: size, tabSelected: obj4 };
-obj2 = { flexGrow: 0, marginHorizontal: 16, marginBottom: 16, flexShrink: 1, borderRadius: 24, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", justifyContent: "flex-start", alignItems: "stretch", overflow: "hidden" };
-createStyles = createStyles.createStyles;
-obj3 = { marginStart: 8, flexDirection: "row", flexShrink: 0, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: md, padding: 5, alignItems: "stretch", justifyContent: "center", gap: 5, borderWidth: 1, borderColor: nativeDefault.colors.INPUT_BORDER_DEFAULT };
-size = { width: 32, height: 32, borderRadius: md - 5, alignItems: "center", justifyContent: "center" };
-obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-let closure_29 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+const createStyles = fn(4896);
+let obj = { wrapper: { flexGrow: 0, marginHorizontal: 16, marginBottom: 16, flexShrink: 1, borderRadius: 24, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", justifyContent: "flex-start", alignItems: "stretch", overflow: "hidden" }, launchPadContent: { flex: -1, overflow: "hidden", borderBottomLeftRadius: 24, borderBottomRightRadius: 24 }, header: { paddingHorizontal: 16, paddingTop: 16, flexDirection: "row", flexShrink: 0, flexGrow: 0 }, subheader: { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", alignSelf: "center", paddingStart: 8 }, tabs: null, tab: null, tabSelected: null };
+let obj3 = { flexGrow: 0, marginHorizontal: 16, marginBottom: 16, flexShrink: 1, borderRadius: 24, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", justifyContent: "flex-start", alignItems: "stretch", overflow: "hidden" };
+obj.tabs = { marginStart: 8, flexDirection: "row", flexShrink: 0, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: md, padding: 5, alignItems: "stretch", justifyContent: "center", gap: 5, borderWidth: 1, borderColor: nativeDefault.colors.INPUT_BORDER_DEFAULT };
+let size = { width: 32, height: 32, borderRadius: md - 5, alignItems: "center", justifyContent: "center" };
+obj.tab = size;
+let obj4 = { marginStart: 8, flexDirection: "row", flexShrink: 0, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: md, padding: 5, alignItems: "stretch", justifyContent: "center", gap: 5, borderWidth: 1, borderColor: nativeDefault.colors.INPUT_BORDER_DEFAULT };
+obj.tabSelected = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let closure_29 = createStyles.createStyles(obj);
+let ReactCompilerGating = fn(558);
 let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let accessibilityLabel;
-  let icon;
-  let onPress;
-  let selected;
-  let style;
-  const obj = react2;
-  const cResult = obj.c(15);
+  const cResult = c.c(15);
   ({ onPress, icon, accessibilityLabel, selected, style } = arg0);
   const tmp4 = closure_29();
   let tabSelected;
@@ -411,33 +363,29 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   if (cResult[0] === style) {
     if (cResult[1] === tmp4.tab) {
-      let tmp6;
-      let tmp7;
       if (cResult[2] === tabSelected) {
-        tmp6 = cResult[3];
+        let tmp6 = cResult[3];
       }
       if (cResult[4] !== selected) {
         const obj2 = { selected };
         cResult[4] = selected;
         cResult[5] = obj2;
-        tmp7 = obj2;
+        let tmp7 = obj2;
       } else {
         tmp7 = cResult[5];
       }
       const colors = nativeDefault.colors;
       const tmp9 = selected ? colors.INTERACTIVE_TEXT_ACTIVE : colors.INTERACTIVE_TEXT_DEFAULT;
       if (cResult[6] === icon) {
-        let tmp10;
         if (cResult[7] === tmp9) {
-          tmp10 = cResult[8];
+          let tmp10 = cResult[8];
         }
         if (cResult[9] === accessibilityLabel) {
           if (cResult[10] === onPress) {
             if (cResult[11] === tmp6) {
               if (cResult[12] === tmp7) {
-                let tmp12;
                 if (cResult[13] === tmp10) {
-                  tmp12 = cResult[14];
+                  let tmp12 = cResult[14];
                 }
                 return tmp12;
               }
@@ -445,7 +393,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
         }
         const obj3 = { onPress, style: tmp6, accessibilityLabel, accessibilityRole: "tab", accessibilityState: tmp7, children: tmp10 };
-        const tmp14 = closure_27(Pressables.PressableHighlight, obj3);
+        const tmp14 = closure_1_27(Pressables.PressableHighlight, obj3);
         cResult[9] = accessibilityLabel;
         cResult[10] = onPress;
         cResult[11] = tmp6;
@@ -468,74 +416,57 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = items;
   tmp6 = items;
 }) : ((selected) => {
-  let accessibilityLabel;
-  let colors;
-  let icon;
-  let onPress;
-  let style;
   selected = selected.selected;
   ({ onPress, icon, accessibilityLabel, style } = selected);
   const tmp = closure_29();
-  const obj = { onPress, style: items, accessibilityLabel, accessibilityRole: "tab", accessibilityState: { selected }, children: icon(selected ? colors.INTERACTIVE_TEXT_ACTIVE : colors.INTERACTIVE_TEXT_DEFAULT) };
+  const obj = { onPress, style: null, accessibilityLabel: null, accessibilityRole: "tab", accessibilityState: null, children: null };
   items = [tmp.tab, style, ];
   let tabSelected;
-  const PressableHighlight = Pressables.PressableHighlight;
   if (selected) {
     tabSelected = tmp.tabSelected;
   }
   items[2] = tabSelected;
-  colors = nativeDefault.colors;
-  return closure_27(PressableHighlight, obj);
+  obj.style = items;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.accessibilityState = { selected };
+  const colors = nativeDefault.colors;
+  obj.children = icon(selected ? colors.INTERACTIVE_TEXT_ACTIVE : colors.INTERACTIVE_TEXT_DEFAULT);
+  return closure_1_27(Pressables.PressableHighlight, obj);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
-  const obj = react2;
-  const cResult = obj.c(3);
+  const cResult = c.c(3);
   text = text.text;
   const tmp4 = closure_29();
   if (cResult[0] === tmp4.subheader) {
-    let tmp5;
     if (cResult[1] === text) {
-      tmp5 = cResult[2];
+      let tmp5 = cResult[2];
     }
     return tmp5;
   }
-  const obj2 = { style: tmp4.subheader, variant: "heading-md/extrabold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: text };
-  const tmp6 = closure_27(Text_Text.Text, obj2);
+  const tmp6 = closure_1_27(Text_Text.Text, { style: tmp4.subheader, variant: "heading-md/extrabold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: text });
   cResult[0] = tmp4.subheader;
   cResult[1] = text;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-}) : ((text) => {
-  text = text.text;
-  const obj = { style: closure_29().subheader, variant: "heading-md/extrabold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: text };
-  return closure_27(Text_Text.Text, obj);
+  const obj2 = { style: tmp4.subheader, variant: "heading-md/extrabold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: text };
+}) : ((children) => {
+  const tmp = closure_29();
+  return closure_1_27(Text_Text.Text, { style: closure_29().subheader, variant: "heading-md/extrabold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: children.text });
 });
 const constants3 = { SEARCH: 0, [0]: "SEARCH", MEMBERS: 1, [1]: "MEMBERS", NOTIFICATIONS: 2, [2]: "NOTIFICATIONS", DEV_TOOLS: 3, [3]: "DEV_TOOLS" };
 const __initData = { code: "function LaunchPadTsx1(){const{sharedState}=this.__closure;return sharedState.get();}" };
 const __initData2 = { code: "function LaunchPadTsx2(sharedState_0){const{keyboardShown,runOnJS,setFocused}=this.__closure;if(!keyboardShown.get()&&sharedState_0>0.75){runOnJS(setFocused)(true);}else{if(keyboardShown.get()&&sharedState_0<=0){runOnJS(setFocused)(false);}}}" };
 const __initData3 = { code: "function LaunchPadTsx3(){const{sharedState}=this.__closure;return sharedState.get();}" };
 const __initData4 = { code: "function LaunchPadTsx4(sharedState_0){const{keyboardShown,runOnJS,setFocused}=this.__closure;if(!keyboardShown.get()&&sharedState_0>0.75){runOnJS(setFocused)(true);}else if(keyboardShown.get()&&sharedState_0<=0){runOnJS(setFocused)(false);}}" };
-let memo = react.memo;
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_37 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tab) => {
-  let closure_7;
-  let isDeveloper;
-  let ref;
-  let ref2;
-  let sharedState;
-  let tmp10;
-  let tmp5;
-  let tmp6;
-  let updateQuery;
-  let tmp = tab;
-  let obj = tab(sharedState[23]);
-  const cResult = obj.c(52);
+ReactCompilerGating = fn(558);
+let closure_37 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tab) => {
+  const cResult = tab(sharedState[23]).c(52);
   tab = tab.tab;
   const setTab = tab.setTab;
   ({ updateQuery, sharedState } = tab);
   const searchRef = tab.searchRef;
-  const tmp4 = closure_29();
+  let obj = tab(sharedState[23]);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     items = [DeveloperExperimentStore];
     const fn = function l() {
@@ -548,30 +479,26 @@ let closure_37 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tab) => {
   } else {
     [tmp5, tmp6] = cResult;
   }
-  let tmpResult = tmp(sharedState[26]);
-  const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
-  let obj3 = react;
-  react = react.useRef(false);
-  const tmpResult4 = tmp(sharedState[27]);
-  const sharedValue = tmpResult4.useSharedValue(false);
-  ActionSheetStore = react.useRef(tab);
+  const tmp4 = closure_29();
+  const stateFromStores = tab(sharedState[26]).useStateFromStores(tmp5, tmp6);
+  noop = noop.useRef(false);
+  let tmpResult = tab(sharedState[26]);
+  const sharedValue = tab(sharedState[27]).useSharedValue(false);
+  ActionSheetStore = noop.useRef(tab);
   if (cResult[2] !== tab) {
     const fn2 = function v() {
-      ref2.current = tab;
+      closure_6.current = tab;
     };
     cResult[2] = tab;
     cResult[3] = fn2;
-    tmp10 = fn2;
+    let tmp10 = fn2;
   } else {
     tmp10 = cResult[3];
   }
   const effect = obj3.useEffect(tmp10);
   if (cResult[4] === sharedValue) {
-    let tmp12;
-    let tmp14;
-    let tmp13;
     if (cResult[5] === searchRef) {
-      tmp12 = cResult[6];
+      let tmp12 = cResult[6];
     }
     ChannelListStore = tmp12;
     const _Symbol = Symbol;
@@ -579,283 +506,399 @@ let closure_37 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tab) => {
       const items1 = [ActionSheetStore];
       class A {
         constructor() {
-          return ref2.isOpen();
+          return closure_6.isOpen();
         }
       }
       cResult[7] = items1;
       cResult[8] = A;
-      tmp14 = A;
+      let tmp14 = A;
       class H {
         constructor() {
-          closure_7(!stateFromStores1, stateFromStores1);
+          tmp = closure_7(!closure_8, closure_8);
+          return;
         }
       }
     } else {
       tmp14 = cResult[8];
-      tmp13 = cResult[7];
+      const tmp13 = cResult[7];
     }
-    const tmpResult5 = tmp(sharedState[26]);
-    const stateFromStores1 = tmpResult5.useStateFromStores(tmp13, tmp14);
+    const stateFromStores1 = tmp(sharedState[26]).useStateFromStores(tmp13, tmp14);
     if (cResult[9] === stateFromStores1) {
-      let tmp17;
-      let tmp18;
       if (cResult[10] === tmp12) {
-        tmp17 = cResult[11];
-        tmp18 = cResult[12];
+        let tmp17 = cResult[11];
+        let tmp18 = cResult[12];
       }
       const effect1 = obj3.useEffect(tmp17, tmp18);
       if (cResult[13] === tmp12) {
         if (cResult[14] === sharedState) {
-          let tmp20;
-          let tmp21;
-          let tmp31;
           if (cResult[15] === tab) {
-            tmp20 = cResult[16];
-            tmp21 = cResult[17];
+            let tmp20 = cResult[16];
+            let tmp21 = cResult[17];
           }
           const effect2 = obj3.useEffect(tmp21, tmp20);
-          const tmpResult6 = tmp(sharedState[27]);
           class D {
             constructor() {
-              const tmp = tab === constants.SEARCH && 1 === sharedState.get();
+              tmp = tab === closure_32.SEARCH;
               if (tmp) {
-                closure_7(true);
+                tmp2 = sharedState;
+                num = 1;
+                tmp = 1 === sharedState.get();
               }
+              if (tmp) {
+                tmp3 = closure_7;
+                flag = true;
+                tmp4 = closure_7(true);
+              }
+              return;
             }
           }
           let obj2 = { sharedState };
-          tmp24.__closure = obj2;
-          tmp24.__workletHash = 17067823098320;
+          tmp23.__closure = obj2;
+          tmp23.__workletHash = 17067823098320;
           class H {
             constructor() {
-              closure_7(!stateFromStores1, stateFromStores1);
+              tmp = closure_7(!closure_8, closure_8);
+              return;
             }
           }
-          tmp24.__initData = __initData;
+          tmp23.__initData = __initData;
           class L {
             constructor(arg0) {
-              if (!sharedValue.get()) {
-                if (arg0 > 0.75) {
-                  const obj2 = ReanimatedRexport;
-                  obj2.runOnJS(closure_7)(true);
+              obj = closure_5;
+              if (!closure_5.get()) {
+                num = 0.75;
+                if (tab > 0.75) {
+                  tmp = closure_0;
+                  tmp2 = closure_2;
+                  obj2 = closure_0(closure_2[27]);
+                  tmp3 = closure_7;
+                  flag = true;
+                  tmp4 = obj2.runOnJS(closure_7)(true);
                 }
+                return;
               }
-              const value = sharedValue.get() && arg0 <= 0;
+              value = obj.get();
               if (value) {
-                const obj3 = ReanimatedRexport;
-                obj3.runOnJS(closure_7)(false);
+                num2 = 0;
+                value = tab <= 0;
               }
+              if (value) {
+                tmp6 = closure_0;
+                tmp7 = closure_2;
+                obj3 = closure_0(closure_2[27]);
+                tmp8 = closure_7;
+                flag2 = false;
+                tmp9 = obj3.runOnJS(closure_7)(false);
+              }
+              return;
             }
           }
-          const useAnimatedReaction = tmpResult6.useAnimatedReaction;
-          L.__closure = { keyboardShown: sharedValue, runOnJS: tmp(sharedState[27]).runOnJS, setFocused: tmp12 };
+          const obj4 = { keyboardShown: sharedValue, runOnJS: tmp(sharedState[27]).runOnJS, setFocused: tmp12 };
+          L.__closure = obj4;
           L.__workletHash = 15266113312724;
           L.__initData = __initData2;
-          const obj4 = { keyboardShown: sharedValue, runOnJS: tmp(sharedState[27]).runOnJS, setFocused: tmp12 };
-          const animatedReaction = useAnimatedReaction(tmp24, L);
+          const animatedReaction = tmp(sharedState[27]).useAnimatedReaction(tmp23, L);
           if (cResult[18] === searchRef) {
             if (cResult[19] === tab) {
-              let tmp39;
-              let tmp38;
-              const _Symbol2 = Symbol;
-              const tabs = tmp4.tabs;
-              class D {
-                constructor() {
-                  const tmp = tab === constants.SEARCH && 1 === sharedState.get();
-                  if (tmp) {
-                    closure_7(true);
-                  }
-                }
-              }
-              if (tmp37 === Symbol.for("react.memo_cache_sentinel")) {
-                const fn4 = function z(color) {
-                  const obj = { size: "sm", color };
-                  return closure_1_27(tab(sharedState[31]).FlashIcon, obj);
-                };
-                const string = tmp(sharedState[30]).intl.string;
+              if (cResult[20] === updateQuery) {
+                const _Symbol2 = Symbol;
+                const tabs = tmp4.tabs;
                 class D {
                   constructor() {
-                    const tmp = tab === constants.SEARCH && 1 === sharedState.get();
+                    tmp = tab === closure_32.SEARCH;
                     if (tmp) {
-                      closure_7(true);
+                      tmp2 = sharedState;
+                      num = 1;
+                      tmp = 1 === sharedState.get();
                     }
+                    if (tmp) {
+                      tmp3 = closure_7;
+                      flag = true;
+                      tmp4 = closure_7(true);
+                    }
+                    return;
                   }
                 }
-                cResult[22] = fn4;
+                if (tmp37 === Symbol.for("react.memo_cache_sentinel")) {
+                  const fn4 = function z(color) {
+                    return closure_1_27(tab(sharedState[31]).FlashIcon, { size: "sm", color });
+                  };
+                  const string = tmp(sharedState[30]).intl.string;
+                  class D {
+                    constructor() {
+                      tmp = tab === closure_32.SEARCH;
+                      if (tmp) {
+                        tmp2 = sharedState;
+                        num = 1;
+                        tmp = 1 === sharedState.get();
+                      }
+                      if (tmp) {
+                        tmp3 = closure_7;
+                        flag = true;
+                        tmp4 = closure_7(true);
+                      }
+                      return;
+                    }
+                  }
+                  cResult[22] = fn4;
+                  class X {
+                    constructor() {
+                      tmp = setTab(closure_32.SEARCH);
+                      current = searchRef.current;
+                      if (current != null) {
+                        focusResult = current.focus();
+                      }
+                      return;
+                    }
+                  }
+                  cResult[23] = tmp40;
+                  let tmp39 = tmp40;
+                  class H {
+                    constructor() {
+                      tmp = closure_7(!closure_8, closure_8);
+                      return;
+                    }
+                  }
+                } else {
+                  tmp39 = cResult[23];
+                  const tmp38 = cResult[22];
+                }
+                if (cResult[24] === searchRef) {
+                  if (cResult[25] === setTab) {
+                    let tmp41 = cResult[26];
+                  }
+                  class D {
+                    constructor() {
+                      tmp = tab === closure_32.SEARCH;
+                      if (tmp) {
+                        tmp2 = sharedState;
+                        num = 1;
+                        tmp = 1 === sharedState.get();
+                      }
+                      if (tmp) {
+                        tmp3 = closure_7;
+                        flag = true;
+                        tmp4 = closure_7(true);
+                      }
+                      return;
+                    }
+                  }
+                  class X {
+                    constructor() {
+                      tmp = setTab(closure_32.SEARCH);
+                      current = searchRef.current;
+                      if (current != null) {
+                        focusResult = current.focus();
+                      }
+                      return;
+                    }
+                  }
+                  tmp47[0] = tmp38;
+                  tmp47[1] = tmp39;
+                  class H {
+                    constructor() {
+                      tmp = closure_7(!closure_8, closure_8);
+                      return;
+                    }
+                  }
+                  tmp47[3] = tab === constants3.SEARCH;
+                  class L {
+                    constructor(arg0) {
+                      obj = closure_5;
+                      if (!closure_5.get()) {
+                        num = 0.75;
+                        if (tab > 0.75) {
+                          tmp = closure_0;
+                          tmp2 = closure_2;
+                          obj2 = closure_0(closure_2[27]);
+                          tmp3 = closure_7;
+                          flag = true;
+                          tmp4 = obj2.runOnJS(closure_7)(true);
+                        }
+                        return;
+                      }
+                      value = obj.get();
+                      if (value) {
+                        num2 = 0;
+                        value = tab <= 0;
+                      }
+                      if (value) {
+                        tmp6 = closure_0;
+                        tmp7 = closure_2;
+                        obj3 = closure_0(closure_2[27]);
+                        tmp8 = closure_7;
+                        flag2 = false;
+                        tmp9 = obj3.runOnJS(closure_7)(false);
+                      }
+                      return;
+                    }
+                  }
+                  cResult[27] = tmp41;
+                  cResult[28] = tab === constants3.SEARCH;
+                  cResult[29] = tmp48;
+                }
                 class X {
                   constructor() {
-                    setTab(constants.SEARCH);
-                    const current = searchRef.current;
+                    tmp = setTab(closure_32.SEARCH);
+                    current = searchRef.current;
                     if (current != null) {
-                      current.focus();
+                      focusResult = current.focus();
                     }
+                    return;
                   }
                 }
-                cResult[23] = tmp40;
-                tmp39 = tmp40;
+                cResult[24] = searchRef;
                 class H {
                   constructor() {
-                    closure_7(!stateFromStores1, stateFromStores1);
+                    tmp = closure_7(!closure_8, closure_8);
+                    return;
                   }
                 }
-              } else {
-                tmp39 = cResult[23];
-                tmp38 = cResult[22];
-              }
-              if (cResult[24] === searchRef) {
-                let tmp41;
-                if (cResult[25] === setTab) {
-                  tmp41 = cResult[26];
-                }
-                class D {
-                  constructor() {
-                    const tmp = tab === constants.SEARCH && 1 === sharedState.get();
-                    if (tmp) {
-                      closure_7(true);
-                    }
-                  }
-                }
-                class X {
-                  constructor() {
-                    setTab(constants.SEARCH);
-                    const current = searchRef.current;
-                    if (current != null) {
-                      current.focus();
-                    }
-                  }
-                }
-                tmp47[0] = tmp38;
-                tmp47[1] = tmp39;
-                class H {
-                  constructor() {
-                    closure_7(!stateFromStores1, stateFromStores1);
-                  }
-                }
-                tmp47[3] = tab === constants3.SEARCH;
+                cResult[25] = setTab;
                 class L {
                   constructor(arg0) {
-                    if (!sharedValue.get()) {
-                      if (arg0 > 0.75) {
-                        const obj2 = ReanimatedRexport;
-                        obj2.runOnJS(closure_7)(true);
+                    obj = closure_5;
+                    if (!closure_5.get()) {
+                      num = 0.75;
+                      if (tab > 0.75) {
+                        tmp = closure_0;
+                        tmp2 = closure_2;
+                        obj2 = closure_0(closure_2[27]);
+                        tmp3 = closure_7;
+                        flag = true;
+                        tmp4 = obj2.runOnJS(closure_7)(true);
                       }
+                      return;
                     }
-                    const value = sharedValue.get() && arg0 <= 0;
+                    value = obj.get();
                     if (value) {
-                      const obj3 = ReanimatedRexport;
-                      obj3.runOnJS(closure_7)(false);
+                      num2 = 0;
+                      value = tab <= 0;
                     }
-                  }
-                }
-                cResult[27] = tmp41;
-                cResult[28] = tab === constants3.SEARCH;
-                cResult[29] = tmp48;
-              }
-              class X {
-                constructor() {
-                  setTab(constants.SEARCH);
-                  const current = searchRef.current;
-                  if (current != null) {
-                    current.focus();
-                  }
-                }
-              }
-              cResult[24] = searchRef;
-              class H {
-                constructor() {
-                  closure_7(!stateFromStores1, stateFromStores1);
-                }
-              }
-              cResult[25] = setTab;
-              class L {
-                constructor(arg0) {
-                  if (!sharedValue.get()) {
-                    if (arg0 > 0.75) {
-                      const obj2 = ReanimatedRexport;
-                      obj2.runOnJS(closure_7)(true);
+                    if (value) {
+                      tmp6 = closure_0;
+                      tmp7 = closure_2;
+                      obj3 = closure_0(closure_2[27]);
+                      tmp8 = closure_7;
+                      flag2 = false;
+                      tmp9 = obj3.runOnJS(closure_7)(false);
                     }
-                  }
-                  const value = sharedValue.get() && arg0 <= 0;
-                  if (value) {
-                    const obj3 = ReanimatedRexport;
-                    obj3.runOnJS(closure_7)(false);
+                    return;
                   }
                 }
+                cResult[26] = X;
+                tmp41 = X;
               }
-              cResult[26] = X;
-              tmp41 = X;
             }
           }
           if (tab === constants3.SEARCH) {
             const obj5 = { size: "md", returnKeyType: "done", ref: searchRef, onChange: null, autoComplete: "off", spellCheck: false, autoFocus: false };
             class D {
               constructor() {
-                const tmp = tab === constants.SEARCH && 1 === sharedState.get();
+                tmp = tab === closure_32.SEARCH;
                 if (tmp) {
-                  closure_7(true);
+                  tmp2 = sharedState;
+                  num = 1;
+                  tmp = 1 === sharedState.get();
                 }
+                if (tmp) {
+                  tmp3 = closure_7;
+                  flag = true;
+                  tmp4 = closure_7(true);
+                }
+                return;
               }
             }
-            tmp31 = closure_27(tmp(sharedState[29]).SearchField, obj5);
+            let tmp30 = closure_27(tmp(sharedState[29]).SearchField, obj5);
           } else if (tab === constants3.MEMBERS) {
-            ({ text: obj11.string(tmp(sharedState[30]).t["9Oq93m"]) });
             class D {
               constructor() {
-                const tmp = tab === constants.SEARCH && 1 === sharedState.get();
+                tmp = tab === closure_32.SEARCH;
                 if (tmp) {
-                  closure_7(true);
+                  tmp2 = sharedState;
+                  num = 1;
+                  tmp = 1 === sharedState.get();
                 }
+                if (tmp) {
+                  tmp3 = closure_7;
+                  flag = true;
+                  tmp4 = closure_7(true);
+                }
+                return;
               }
             }
+            { text: null }.text = obj12.string(tmp(sharedState[30]).t["9Oq93m"]);
             class X {
               constructor() {
-                setTab(constants.SEARCH);
-                const current = searchRef.current;
+                tmp = setTab(closure_32.SEARCH);
+                current = searchRef.current;
                 if (current != null) {
-                  current.focus();
+                  focusResult = current.focus();
                 }
+                return;
               }
             }
+            const obj6 = { text: null };
           } else if (tab === constants3.NOTIFICATIONS) {
-            ({ text: obj9.string(tmp(sharedState[30]).t.HcoRu0) });
             class D {
               constructor() {
-                const tmp = tab === constants.SEARCH && 1 === sharedState.get();
+                tmp = tab === closure_32.SEARCH;
                 if (tmp) {
-                  closure_7(true);
+                  tmp2 = sharedState;
+                  num = 1;
+                  tmp = 1 === sharedState.get();
                 }
+                if (tmp) {
+                  tmp3 = closure_7;
+                  flag = true;
+                  tmp4 = closure_7(true);
+                }
+                return;
               }
             }
+            { text: null }.text = obj10.string(tmp(sharedState[30]).t.HcoRu0);
             class X {
               constructor() {
-                setTab(constants.SEARCH);
-                const current = searchRef.current;
+                tmp = setTab(closure_32.SEARCH);
+                current = searchRef.current;
                 if (current != null) {
-                  current.focus();
+                  focusResult = current.focus();
                 }
+                return;
               }
             }
+            const obj7 = { text: null };
           } else {
-            tmp31 = closure_27(closure_31, { text: "Dev Tools" });
+            tmp30 = closure_27(closure_31, { text: "Dev Tools" });
           }
           cResult[18] = searchRef;
           cResult[19] = tab;
           cResult[20] = updateQuery;
-          cResult[21] = tmp31;
+          cResult[21] = tmp30;
+          const tmpResult6 = tmp(sharedState[27]);
         }
       }
       class D {
         constructor() {
-          const tmp = tab === constants.SEARCH && 1 === sharedState.get();
+          tmp = tab === closure_32.SEARCH;
           if (tmp) {
-            closure_7(true);
+            tmp2 = sharedState;
+            num = 1;
+            tmp = 1 === sharedState.get();
           }
+          if (tmp) {
+            tmp3 = closure_7;
+            flag = true;
+            tmp4 = closure_7(true);
+          }
+          return;
         }
       }
       const items2 = [tab, , tmp12];
       class H {
         constructor() {
-          closure_7(!stateFromStores1, stateFromStores1);
+          tmp = closure_7(!closure_8, closure_8);
+          return;
         }
       }
       cResult[15] = tab;
@@ -866,7 +909,8 @@ let closure_37 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tab) => {
     }
     class H {
       constructor() {
-        closure_7(!stateFromStores1, stateFromStores1);
+        tmp = closure_7(!closure_8, closure_8);
+        return;
       }
     }
     const items3 = [, tmp12];
@@ -876,13 +920,12 @@ let closure_37 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tab) => {
     cResult[12] = items3;
     tmp18 = items3;
     tmp17 = H;
+    const tmpResult5 = tmp(sharedState[26]);
   }
   const fn3 = function y(arg0, arg1) {
-    const tmp = arg0;
-    if (tmp) {
+    if (arg0) {
       if (ref2.current === constants.SEARCH) {
-        const obj3 = ChatInputUtils;
-        const bestActiveInput = obj3.getBestActiveInput();
+        const bestActiveInput = ChatInputUtils.getBestActiveInput();
         let isFocusedResult;
         if (bestActiveInput != null) {
           isFocusedResult = bestActiveInput.isFocused();
@@ -890,7 +933,7 @@ let closure_37 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tab) => {
         ref.current = true === isFocusedResult;
         if (null != searchRef.current) {
           const result = sharedValue.set(true);
-          const current3 = tmp20.current;
+          const current3 = tmp19.current;
           if (current3 != null) {
             current3.focus();
           }
@@ -898,10 +941,12 @@ let closure_37 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tab) => {
       }
     }
     if (!arg0) {
-      const current = ref.current && !arg1;
+      let current = ref.current;
       if (current) {
-        const obj = ChatInputUtils;
-        const bestActiveInput1 = obj.getBestActiveInput();
+        current = !arg1;
+      }
+      if (current) {
+        const bestActiveInput1 = ChatInputUtils.getBestActiveInput();
         if (bestActiveInput1 != null) {
           bestActiveInput1.focus();
         }
@@ -918,41 +963,27 @@ let closure_37 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tab) => {
   cResult[5] = searchRef;
   cResult[6] = fn3;
   tmp12 = fn3;
+  const tmpResult4 = tab(sharedState[27]);
 }) : ((tab) => {
-  let intl;
-  let intl2;
-  let intl3;
-  let intl4;
-  let isDeveloper;
-  let items5;
-  let items6;
-  let ref;
-  let sharedState;
-  let tmp17;
-  let tmp18;
   tab = tab.tab;
   ({ setTab: importDefault, sharedState } = tab);
   const searchRef = tab.searchRef;
-  react = undefined;
-  const updateQuery = tab.updateQuery;
+  noop = undefined;
   let tmp = closure_29();
-  let obj = tab(sharedState[26]);
   items = [DeveloperExperimentStore];
-  const stateFromStores = obj.useStateFromStores(items, () => isDeveloper.isDeveloper);
-  react = react.useRef(false);
-  let obj2 = tab(sharedState[27]);
-  const sharedValue = obj2.useSharedValue(false);
-  const ref2 = react.useRef(tab);
-  const effect = react.useEffect(() => {
-    ref2.current = tab;
+  const stateFromStores = tab(sharedState[26]).useStateFromStores(items, () => isDeveloper.isDeveloper);
+  noop = noop.useRef(false);
+  let obj = tab(sharedState[26]);
+  const sharedValue = tab(sharedState[27]).useSharedValue(false);
+  const ref2 = noop.useRef(tab);
+  const effect = noop.useEffect(() => {
+    closure_6.current = tab;
   });
   const items1 = [sharedValue, searchRef];
-  const setFocused = react.useCallback((arg0, arg1) => {
-    const tmp = arg0;
-    if (tmp) {
+  const setFocused = noop.useCallback((arg0, arg1) => {
+    if (arg0) {
       if (ref2.current === constants.SEARCH) {
-        const obj3 = ChatInputUtils;
-        const bestActiveInput = obj3.getBestActiveInput();
+        const bestActiveInput = ChatInputUtils.getBestActiveInput();
         let isFocusedResult;
         if (bestActiveInput != null) {
           isFocusedResult = bestActiveInput.isFocused();
@@ -960,7 +991,7 @@ let closure_37 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tab) => {
         ref.current = true === isFocusedResult;
         if (null != searchRef.current) {
           const result = sharedValue.set(true);
-          const current3 = tmp20.current;
+          const current3 = tmp19.current;
           if (current3 != null) {
             current3.focus();
           }
@@ -968,10 +999,12 @@ let closure_37 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tab) => {
       }
     }
     if (!arg0) {
-      const current = ref.current && !arg1;
+      let current = ref.current;
       if (current) {
-        const obj = ChatInputUtils;
-        const bestActiveInput1 = obj.getBestActiveInput();
+        current = !arg1;
+      }
+      if (current) {
+        const bestActiveInput1 = ChatInputUtils.getBestActiveInput();
         if (bestActiveInput1 != null) {
           bestActiveInput1.focus();
         }
@@ -984,20 +1017,24 @@ let closure_37 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tab) => {
       const result1 = sharedValue.set(false);
     }
   }, items1);
-  let obj3 = tab(sharedState[26]);
+  let obj2 = tab(sharedState[27]);
   const items2 = [ref2];
-  const stateFromStores1 = obj3.useStateFromStores(items2, () => ref2.isOpen());
+  const stateFromStores1 = tab(sharedState[26]).useStateFromStores(items2, () => ref2.isOpen());
   const items3 = [stateFromStores1, setFocused];
-  const effect1 = react.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     callback(!stateFromStores1, stateFromStores1);
   }, items3);
   const items4 = [tab, sharedState, setFocused];
-  const effect2 = react.useEffect(() => {
-    const tmp = tab === constants.SEARCH && 1 === sharedState.get();
+  const effect2 = noop.useEffect(() => {
+    let tmp = tab === constants.SEARCH;
+    if (tmp) {
+      tmp = 1 === sharedState.get();
+    }
     if (tmp) {
       callback(true);
     }
   }, items4);
+  let obj3 = tab(sharedState[26]);
   const fn = function y() {
     return sharedState.get();
   };
@@ -1007,130 +1044,133 @@ let closure_37 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tab) => {
   const fn2 = function v(arg0) {
     if (!sharedValue.get()) {
       if (arg0 > 0.75) {
-        const obj2 = ReanimatedRexport;
-        obj2.runOnJS(callback)(true);
+        ReanimatedRexport.runOnJS(callback)(true);
       }
     }
-    const value = sharedValue.get() && arg0 <= 0;
+    value = sharedValue.get();
     if (value) {
-      const obj3 = ReanimatedRexport;
-      obj3.runOnJS(callback)(false);
+      value = arg0 <= 0;
+    }
+    if (value) {
+      ReanimatedRexport.runOnJS(callback)(false);
     }
   };
   const obj4 = tab(sharedState[27]);
   fn2.__closure = { keyboardShown: sharedValue, runOnJS: tab(sharedState[27]).runOnJS, setFocused };
   fn2.__workletHash = 7976600027348;
   fn2.__initData = __initData4;
-  ({ keyboardShown: sharedValue, runOnJS: tab(sharedState[27]).runOnJS, setFocused });
   const animatedReaction = obj4.useAnimatedReaction(fn, fn2);
-  const obj6 = { style: tmp.header, children: items5 };
+  const obj6 = { style: tmp.header, children: null };
   if (tab === constants3.SEARCH) {
-    const obj7 = { size: "md", returnKeyType: "done", ref: searchRef, onChange: updateQuery, autoComplete: "off", spellCheck: false, autoFocus: false };
-    tmp18 = closure_27(tmp2(sharedState[29]).SearchField, obj7);
-    tmp17 = closure_27;
+    const obj7 = { size: "md", returnKeyType: "done", ref: searchRef, onChange: tab.updateQuery, autoComplete: "off", spellCheck: false, autoFocus: false };
+    let tmp18 = closure_27(tmp2(sharedState[29]).SearchField, obj7);
+    let tmp17 = closure_27;
   } else if (tab === constants3.MEMBERS) {
-    const obj8 = { text: intl2.string(tab(sharedState[30]).t["9Oq93m"]) };
-    intl2 = tmp2(sharedState[30]).intl;
+    const obj8 = { text: null };
+    const intl2 = tmp2(sharedState[30]).intl;
+    obj8.text = intl2.string(tmp2(sharedState[30]).t["9Oq93m"]);
     tmp18 = closure_27(closure_31, obj8);
     tmp17 = closure_27;
   } else if (tab === constants3.NOTIFICATIONS) {
-    const obj9 = { text: intl.string(tab(sharedState[30]).t.HcoRu0) };
-    intl = tmp2(sharedState[30]).intl;
+    const obj9 = { text: null };
+    const intl = tmp2(sharedState[30]).intl;
+    obj9.text = intl.string(tmp2(sharedState[30]).t.HcoRu0);
     tmp18 = closure_27(closure_31, obj9);
     tmp17 = closure_27;
   } else {
     tmp17 = closure_27;
     tmp18 = closure_27(closure_31, { text: "Dev Tools" });
   }
-  items5 = [tmp18, ];
-  const obj10 = { style: tmp.tabs, children: items6 };
+  const items5 = [tmp18, ];
+  const obj10 = { style: tmp.tabs, children: null };
   const obj11 = {
     icon(color) {
-      const obj = { size: "sm", color };
-      return closure_1_27(tab(sharedState[31]).FlashIcon, obj);
+      return closure_1_27(tab(sharedState[31]).FlashIcon, { size: "sm", color });
     },
-    accessibilityLabel: intl3.string(tab(sharedState[30]).t.JqV7IC),
-    onPress() {
-      importDefault(constants.SEARCH);
-      const current = searchRef.current;
-      if (current != null) {
-        current.focus();
-      }
-    },
-    selected: tab === constants3.SEARCH
+    accessibilityLabel: null,
+    onPress: null,
+    selected: null
   };
-  intl3 = tmp2(sharedState[30]).intl;
-  items6 = [tmp17(closure_30, obj11), , ];
+  const intl3 = tmp2(sharedState[30]).intl;
+  obj11.accessibilityLabel = intl3.string(tab(sharedState[30]).t.JqV7IC);
+  obj11.onPress = function onPress() {
+    importDefault(constants.SEARCH);
+    const current = searchRef.current;
+    if (current != null) {
+      current.focus();
+    }
+  };
+  obj11.selected = tab === constants3.SEARCH;
+  const items6 = [tmp17(closure_30, obj11), , ];
   const obj12 = {
     icon(color) {
-      const obj = { size: "sm", color };
-      return closure_1_27(tab(sharedState[32]).BellIcon, obj);
+      return closure_1_27(tab(sharedState[32]).BellIcon, { size: "sm", color });
     },
-    accessibilityLabel: intl4.string(tab(sharedState[30]).t.HcoRu0),
-    onPress() {
-      importDefault(constants.NOTIFICATIONS);
-      const current = searchRef.current;
-      if (current != null) {
-        current.blur();
-      }
-    },
-    selected: tab === constants3.NOTIFICATIONS
+    accessibilityLabel: null,
+    onPress: null,
+    selected: null
   };
-  intl4 = tmp2(sharedState[30]).intl;
+  const intl4 = tmp2(sharedState[30]).intl;
+  obj12.accessibilityLabel = intl4.string(tab(sharedState[30]).t.HcoRu0);
+  obj12.onPress = function onPress() {
+    importDefault(constants.NOTIFICATIONS);
+    const current = searchRef.current;
+    if (current != null) {
+      current.blur();
+    }
+  };
+  obj12.selected = tab === constants3.NOTIFICATIONS;
   items6[1] = tmp17(closure_30, obj12);
   let tmp17Result = null;
   if (stateFromStores) {
     const obj13 = {
       icon(color) {
-          const obj = { size: "sm", color };
-          return closure_1_27(tab(sharedState[33]).StaffBadgeIcon, obj);
+          return closure_1_27(tab(sharedState[33]).StaffBadgeIcon, { size: "sm", color });
         },
       accessibilityLabel: "Dev Tools",
       selected: tab === constants3.DEV_TOOLS,
       onPress() {
-          const obj = PlatformUtils;
           if (obj.isAndroid()) {
-            const tmpResult = DevToolsNavigator;
-            tmpResult.navigateToDevTools();
+            DevToolsNavigator.navigateToDevTools();
             hideLaunchPadDefault();
+            const tmpResult = DevToolsNavigator;
           } else {
-            importDefault(constants.DEV_TOOLS);
+            closure_1_1(constants.DEV_TOOLS);
           }
           const current = searchRef.current;
           if (current != null) {
             current.blur();
           }
+          obj = PlatformUtils;
         }
     };
     tmp17Result = tmp17(closure_30, obj13);
   }
   items6[2] = tmp17Result;
+  obj10.children = items6;
   items5[1] = closure_28(sharedValue, obj10);
+  obj6.children = items5;
   return closure_28(sharedValue, obj6);
 }));
 const results = [];
-let items = [_mod9509.AutocompleterResultTypes.GUILD, _mod9509.AutocompleterResultTypes.TEXT_CHANNEL, _mod9509.AutocompleterResultTypes.GROUP_DM, _mod9509.AutocompleterResultTypes.VOICE_CHANNEL, _mod9509.AutocompleterResultTypes.USER];
-ReactCompilerGating = ReactCompilerGating_mod;
+let items = [fn(9509).AutocompleterResultTypes.GUILD, fn(9509).AutocompleterResultTypes.TEXT_CHANNEL, fn(9509).AutocompleterResultTypes.GROUP_DM, fn(9509).AutocompleterResultTypes.VOICE_CHANNEL, fn(9509).AutocompleterResultTypes.USER];
+ReactCompilerGating = fn(558);
 let closure_42 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp4;
-  const obj = react2;
-  const cResult = obj.c(5);
+  const cResult = c.c(5);
   const tmp2 = closure_29();
-  const height = useWindowDimensionsDefault().height;
   const rect = useSafeAreaInsetsDefault();
-  const diff = height - rect.top - rect.bottom - 16;
+  const diff = useWindowDimensionsDefault().height - rect.top - rect.bottom - 16;
   if (cResult[0] !== diff) {
     const obj2 = { maxHeight: diff };
     cResult[0] = diff;
     cResult[1] = obj2;
-    tmp4 = obj2;
+    let tmp4 = obj2;
   } else {
     tmp4 = cResult[1];
   }
   if (cResult[2] === tmp2.wrapper) {
-    let tmp5;
     if (cResult[3] === tmp4) {
-      tmp5 = cResult[4];
+      let tmp5 = cResult[4];
     }
     return tmp5;
   }
@@ -1141,42 +1181,29 @@ let closure_42 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   tmp5 = items;
 }) : (() => {
   const tmp = closure_29();
-  let closure_0 = tmp;
+  const wrapper = tmp;
   const height = useWindowDimensionsDefault().height;
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
   const bottom = rect.bottom;
   items = [height, top, bottom, tmp];
-  return react.useMemo(() => {
-    items = [wrapper.wrapper, ];
-    const obj = { maxHeight: height - top - bottom - 16 };
-    items[1] = obj;
+  return noop.useMemo(() => {
+    items = [wrapper.wrapper, { maxHeight: height - top - bottom - 16 }];
     return items;
   }, items);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_43 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let first;
-  let first1;
-  let id;
-  let items2;
-  let tmp10;
-  let tmp13;
-  let tmp4;
-  let tmp6;
-  let tmp9;
   _require = arg0;
-  let obj = require("react");
-  const cResult = obj.c(17);
-  [tmp4, importDefault] = first1(react.useState(""), 2);
-  const tmp3 = first1(react.useState(""), 2);
-  [tmp6, dependencyMap] = first1(react.useState(closure_40), 2);
-  first1(react.useState(closure_40), 2);
+  const cResult = require("c").c(17);
+  const obj = require("c");
   const tmp2 = first1;
+  [tmp4, importDefault] = first1(noop.useState(""), 2);
+  const tmp3 = first1(noop.useState(""), 2);
+  [tmp6, dependencyMap] = first1(noop.useState(closure_40), 2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function u() {
-      const tmp = new AutocompleterDefault((arg0, str) => {
+      return new AutocompleterDefault((arg0, str) => {
         str = str.trim();
         if ("" === str.trim()) {
           closure_1_2(results);
@@ -1184,14 +1211,13 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           closure_1_2(arg0);
         }
       }, items, undefined, { frecencyBoosters: true });
-      return tmp;
     };
     cResult[0] = fn;
-    first = fn;
+    let first = fn;
   } else {
     first = cResult[0];
   }
-  first1 = tmp2(react.useState(first), 1)[0];
+  first1 = tmp2(noop.useState(first), 1)[0];
   if (cResult[1] !== first1) {
     const fn2 = function v() {
       return () => first1.clean();
@@ -1200,23 +1226,21 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[1] = first1;
     cResult[2] = fn2;
     cResult[3] = items;
-    tmp10 = items;
-    tmp9 = fn2;
+    let tmp10 = items;
+    let tmp9 = fn2;
   } else {
     tmp9 = cResult[2];
     tmp10 = cResult[3];
   }
-  const effect = react.useEffect(tmp9, tmp10);
+  const effect = noop.useEffect(tmp9, tmp10);
   if (cResult[4] !== first1) {
     class E {
       constructor() {
-        let options;
-        const obj = RouteManagerDefault;
+        obj = closure_1(closure_2[44]);
         return obj.addRouteChangeListener(() => {
           items = ["user:" + id.getId()];
-          set = new Set(items);
-          const obj2 = closure_0(dependencyMap[38]);
-          const selectedGuildFromRoute = obj2.getSelectedGuildFromRoute();
+          const set = new Set(items);
+          const selectedGuildFromRoute = closure_0(dependencyMap[38]).getSelectedGuildFromRoute();
           if (null != selectedGuildFromRoute) {
             const _HermesInternal = HermesInternal;
             set.add("guild:" + selectedGuildFromRoute);
@@ -1229,17 +1253,15 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[4] = first1;
     cResult[5] = E;
     cResult[6] = items1;
-    tmp13 = items1;
+    let tmp13 = items1;
   } else {
     class E {
       constructor() {
-        let options;
-        const obj = RouteManagerDefault;
+        obj = closure_1(closure_2[44]);
         return obj.addRouteChangeListener(() => {
           items = ["user:" + id.getId()];
-          set = new Set(items);
-          const obj2 = closure_0(dependencyMap[38]);
-          const selectedGuildFromRoute = obj2.getSelectedGuildFromRoute();
+          const set = new Set(items);
+          const selectedGuildFromRoute = closure_0(dependencyMap[38]).getSelectedGuildFromRoute();
           if (null != selectedGuildFromRoute) {
             const _HermesInternal = HermesInternal;
             set.add("guild:" + selectedGuildFromRoute);
@@ -1250,17 +1272,15 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     tmp13 = cResult[6];
   }
-  const effect1 = react.useEffect(E, tmp13);
+  const effect1 = noop.useEffect(E, tmp13);
   if (cResult[7] === first1) {
     class E {
       constructor() {
-        let options;
-        const obj = RouteManagerDefault;
+        obj = closure_1(closure_2[44]);
         return obj.addRouteChangeListener(() => {
           items = ["user:" + id.getId()];
-          set = new Set(items);
-          const obj2 = closure_0(dependencyMap[38]);
-          const selectedGuildFromRoute = obj2.getSelectedGuildFromRoute();
+          const set = new Set(items);
+          const selectedGuildFromRoute = closure_0(dependencyMap[38]).getSelectedGuildFromRoute();
           if (null != selectedGuildFromRoute) {
             const _HermesInternal = HermesInternal;
             set.add("guild:" + selectedGuildFromRoute);
@@ -1269,12 +1289,13 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         });
       }
     }
-    const effect2 = react.useEffect(T, items2);
+    const effect2 = noop.useEffect(T, items2);
     if (cResult[11] !== first1) {
       class I {
         constructor(arg0) {
-          importDefault(arg0);
-          first1.search(arg0);
+          tmp = closure_1(arg0);
+          searchResult = closure_3.search(arg0);
+          return;
         }
       }
       cResult[11] = first1;
@@ -1282,16 +1303,18 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     } else {
       class I {
         constructor(arg0) {
-          importDefault(arg0);
-          first1.search(arg0);
+          tmp = closure_1(arg0);
+          searchResult = closure_3.search(arg0);
+          return;
         }
       }
     }
     if (cResult[13] === tmp4) {
       class I {
         constructor(arg0) {
-          importDefault(arg0);
-          first1.search(arg0);
+          tmp = closure_1(arg0);
+          searchResult = closure_3.search(arg0);
+          return;
         }
       }
     }
@@ -1303,11 +1326,13 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   class T {
     constructor() {
+      obj = closure_3;
       if (closure_0) {
-        first1.resume();
+        resumeResult = obj.resume();
       } else {
-        first1.pause();
+        pauseResult = obj.pause();
       }
+      return;
     }
   }
   items2 = [arg0, first1];
@@ -1315,85 +1340,61 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[8] = arg0;
   cResult[9] = T;
   cResult[10] = items2;
+  const tmp5 = first1(noop.useState(closure_40), 2);
 }) : ((arg0) => {
-  let first1;
-  let id;
-  let items3;
-  let tmp4;
-  let closure_0 = arg0;
-  let tmp = first1(react.useState(""), 2);
-  let closure_1 = tmp[1];
-  const first = tmp[0];
-  [tmp4, dependencyMap] = first1(react.useState(closure_40), 2);
-  const tmp3 = first1(react.useState(closure_40), 2);
-  first1 = first1(react.useState(() => {
-    const tmp = new AutocompleterDefault((arg0, str) => {
-      str = str.trim();
-      if ("" === str.trim()) {
-        closure_1_2(results);
-      } else {
-        closure_1_2(arg0);
-      }
-    }, items, undefined, { frecencyBoosters: true });
-    return tmp;
-  }), 1)[0];
-  items = [first1];
-  const effect = react.useEffect(() => () => first1.clean(), items);
-  const items1 = [first1];
-  const effect1 = react.useEffect(() => {
-    let options;
-    const obj = RouteManagerDefault;
-    return obj.addRouteChangeListener(() => {
-      items = ["user:" + id.getId()];
-      set = new Set(items);
-      const obj2 = closure_0(dependencyMap[38]);
-      const selectedGuildFromRoute = obj2.getSelectedGuildFromRoute();
-      if (null != selectedGuildFromRoute) {
-        const _HermesInternal = HermesInternal;
-        set.add("guild:" + selectedGuildFromRoute);
-      }
-      options.setOptions({ blacklist: set }, true);
-    });
-  }, items1);
-  const items2 = [arg0, first1];
-  const effect2 = react.useEffect(() => {
-    if (closure_0) {
-      first1.resume();
+  closure_0 = arg0;
+  const tmp = first(noop.useState(""), 2);
+  closure_1 = tmp[1];
+  [tmp3, dependencyMap] = first(noop.useState(closure_40), 2);
+  first = first(noop.useState(() => new AutocompleterDefault((arg0, str) => {
+    str = str.trim();
+    if ("" === str.trim()) {
+      closure_1_2(results);
     } else {
-      first1.pause();
+      closure_1_2(arg0);
+    }
+  }, items, undefined, { frecencyBoosters: true })), 1)[0];
+  items = [first];
+  const effect = noop.useEffect(() => () => first.clean(), items);
+  const items1 = [first];
+  const effect1 = noop.useEffect(() => RouteManagerDefault.addRouteChangeListener(() => {
+    items = ["user:" + id.getId()];
+    const set = new Set(items);
+    const selectedGuildFromRoute = closure_0(dependencyMap[38]).getSelectedGuildFromRoute();
+    if (null != selectedGuildFromRoute) {
+      const _HermesInternal = HermesInternal;
+      set.add("guild:" + selectedGuildFromRoute);
+    }
+    options.setOptions({ blacklist: set }, true);
+  }), items1);
+  const items2 = [arg0, first];
+  const effect2 = noop.useEffect(() => {
+    if (closure_0) {
+      first.resume();
+    } else {
+      first.pause();
     }
   }, items2);
-  let obj = {
-    queryResults: tmp4,
-    query: first,
-    updateQuery: react.useCallback((arg0) => {
-      closure_1(arg0);
-      first1.search(arg0);
-    }, items3)
-  };
-  items3 = [first1];
+  const obj = { queryResults: tmp3, query: tmp[0], updateQuery: null };
+  const items3 = [first];
+  obj.updateQuery = noop.useCallback((arg0) => {
+    closure_1(arg0);
+    first.search(arg0);
+  }, items3);
   return obj;
 });
 const __initData5 = { code: "function LaunchPadTsx5(){const{sharedState}=this.__closure;return sharedState.get()===0;}" };
 const __initData6 = { code: "function LaunchPadTsx6(hidden,prevHidden){const{runOnJS,clearQuery,cancelTimeout}=this.__closure;if(hidden===prevHidden){return;}if(hidden&&hidden!==prevHidden){runOnJS(clearQuery)();}else{if(!hidden&&hidden!==prevHidden){runOnJS(cancelTimeout)();}}}" };
 const __initData7 = { code: "function LaunchPadTsx7(){const{sharedState}=this.__closure;return sharedState.get()===0;}" };
 const __initData8 = { code: "function LaunchPadTsx8(hidden,prevHidden){const{runOnJS,clearQuery,cancelTimeout}=this.__closure;if(hidden===prevHidden)return;if(hidden&&hidden!==prevHidden){runOnJS(clearQuery)();}else if(!hidden&&hidden!==prevHidden){runOnJS(cancelTimeout)();}}" };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_48 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, sharedState) => {
-  let clearQuery;
-  let closure_0;
-  let tmp4;
-  let tmp5;
   _require = arg0;
-  let closure_1 = arg1;
+  closure_1 = arg1;
   dependencyMap = sharedState;
-  let tmp2 = dependencyMap;
-  let obj = require("react");
-  const cResult = obj.c(2);
-  let obj2 = clearQuery;
-  const ref = clearQuery.useRef(-1);
+  const cResult = require("c").c(2);
+  clearQuery.useRef(-1);
   clearQuery = function clearQuery() {
-    let ref2;
     clearTimeout(ref.current);
     ref.current = setTimeout(() => {
       clearTimeout(ref2.current);
@@ -1419,7 +1420,8 @@ let closure_48 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, sh
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const effect = obj2.useEffect(tmp4, tmp5);
+  const effect = clearQuery.useEffect(tmp4, tmp5);
+  let obj = require("c");
   const fn2 = function c() {
     return 0 === sharedState.get();
   };
@@ -1429,15 +1431,16 @@ let closure_48 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, sh
   const fn3 = function o(arg0, arg1) {
     if (arg0 !== arg1) {
       if (arg0) {
-        if (arg0 !== arg1) {
-          const obj2 = ReanimatedRexport;
-          obj2.runOnJS(clearQuery)();
+        if (tmp) {
+          ReanimatedRexport.runOnJS(clearQuery)();
         }
       }
-      const tmp2 = arg0 || arg0 === arg1;
+      let tmp2 = arg0;
+      if (!arg0) {
+        tmp2 = arg0 === arg1;
+      }
       if (!tmp2) {
-        const obj = ReanimatedRexport;
-        obj.runOnJS(cancelTimeout)();
+        ReanimatedRexport.runOnJS(cancelTimeout)();
       }
     }
   };
@@ -1445,18 +1448,14 @@ let closure_48 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, sh
   fn3.__closure = { runOnJS: require("ReanimatedRexport").runOnJS, clearQuery, cancelTimeout };
   fn3.__workletHash = 1856708820062;
   fn3.__initData = __initData6;
-  ({ runOnJS: require("ReanimatedRexport").runOnJS, clearQuery, cancelTimeout });
   const animatedReaction = tmpResult.useAnimatedReaction(fn2, fn3);
 }) : ((arg0, arg1, sharedState) => {
-  let clearQuery;
-  let closure_0;
   _require = arg0;
-  let closure_1 = arg1;
+  closure_1 = arg1;
   dependencyMap = sharedState;
-  const ref = clearQuery.useRef(-1);
+  clearQuery.useRef(-1);
   items = [arg0, arg1];
   clearQuery = clearQuery.useCallback(() => {
-    let ref2;
     clearTimeout(ref.current);
     ref.current = setTimeout(() => {
       clearTimeout(ref2.current);
@@ -1471,7 +1470,6 @@ let closure_48 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, sh
     clearTimeout(ref.current);
   }, []);
   const effect = clearQuery.useEffect(() => () => clearTimeout(ref.current), []);
-  let obj = require("ReanimatedRexport");
   const fn = function l() {
     return 0 === sharedState.get();
   };
@@ -1481,111 +1479,86 @@ let closure_48 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, sh
   const fn2 = function i(arg0, arg1) {
     if (arg0 !== arg1) {
       if (arg0) {
-        if (arg0 !== arg1) {
-          const obj2 = ReanimatedRexport;
-          obj2.runOnJS(callback)();
+        if (tmp) {
+          ReanimatedRexport.runOnJS(callback)();
         }
       }
-      const tmp2 = arg0 || arg0 === arg1;
+      let tmp2 = arg0;
+      if (!arg0) {
+        tmp2 = arg0 === arg1;
+      }
       if (!tmp2) {
-        const obj = ReanimatedRexport;
-        obj.runOnJS(callback1)();
+        ReanimatedRexport.runOnJS(callback1)();
       }
     }
   };
-  let obj2 = { runOnJS: require("ReanimatedRexport").runOnJS, clearQuery, cancelTimeout: callback1 };
-  fn2.__closure = obj2;
+  let obj = require("ReanimatedRexport");
+  fn2.__closure = { runOnJS: require("ReanimatedRexport").runOnJS, clearQuery, cancelTimeout: callback1 };
   fn2.__workletHash = 997415543952;
   fn2.__initData = __initData8;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let arr;
-  let channelHistory2;
-  let closure_3;
-  let first;
-  let first1;
-  let first2;
-  let guildHistory;
-  let initialResults;
-  let queryResults;
-  let require;
-  let selectedUnreadGuild;
-  let setSelectedUnreadGuild;
-  let sharedState;
-  let tmp22;
-  let tmp7;
-  let unreadGuilds;
-  let unreadPrivateChannelIds;
-  let unreads2;
-  let updateQuery;
-  let visible;
-  let obj = require("react");
-  const cResult = obj.c(44);
+ReactCompilerGating = fn(558);
+let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+size = fn(2);
+let result = size.fileFinishedImporting("modules/launchpad/native/LaunchPad.tsx");
+
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = require("c").c(44);
   ({ visible, sharedState } = arg0);
   const tmp4 = closure_29();
-  [tmp7, require] = react.useState(false);
-  _slicedToArray(react.useState(false), 2);
+  let obj = require("c");
+  [tmp7, require] = noop.useState(false);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function i() {
       return _require((arg0) => !arg0);
     };
     cResult[0] = fn;
-    first = fn;
+    let first = fn;
   } else {
     first = cResult[0];
   }
-  const ref = react.useRef(null);
+  const ref = noop.useRef(null);
   const tmp10 = closure_43(visible);
-  const str = tmp10.query;
   ({ updateQuery, queryResults } = tmp10);
-  if (cResult[1] !== str) {
+  if (cResult[1] !== tmp10.query) {
     const trimmed = str.trim();
     cResult[1] = str;
     cResult[2] = trimmed;
-    arr = trimmed;
+    let arr = trimmed;
   } else {
     arr = cResult[2];
   }
   if (cResult[3] === arr.length > 0) {
-    let tmp13;
     if (cResult[4] === visible) {
-      tmp13 = cResult[5];
+      let tmp13 = cResult[5];
     }
     ({ initialResults, unreadPrivateChannelIds, unreadGuilds, guildHistory, selectedUnreadGuild, setSelectedUnreadGuild } = useInitialResults(tmp13));
-    useInitialResults(tmp13);
-    const tmp5Result = _slicedToArray(react.useState(false), 2);
+    const tmp5Result = tmp5(noop.useState(false), 2);
     first1 = tmp5Result[0];
     _slicedToArray = tmp18;
-    [first2, tmp22] = react.useState(constants3.SEARCH);
-    const tmp24 = closure_42();
+    const tmp5Result2 = tmp5(noop.useState(constants3.SEARCH), 2);
+    const first2 = tmp5Result2[0];
+    const tmp23 = closure_42();
     if (cResult[6] === str.length) {
-      let tmp25;
       if (cResult[7] === first1) {
-        tmp25 = cResult[8];
+        let tmp24 = cResult[8];
       }
       if (cResult[9] === str) {
-        let tmp26;
-        let arr3;
         if (cResult[10] === first1) {
-          tmp26 = cResult[11];
+          let tmp25 = cResult[11];
         }
-        const effect = react.useEffect(tmp25, tmp26);
+        const effect = noop.useEffect(tmp24, tmp25);
         closure_48(updateQuery, ref, sharedState);
         if (cResult[12] !== str) {
           const trimmed1 = str.trim();
           cResult[12] = str;
           cResult[13] = trimmed1;
-          arr3 = trimmed1;
-        } else {
-          arr3 = cResult[13];
         }
         if (cResult[14] === sharedState) {
           if (cResult[15] === first2) {
-            let tmp32;
             if (cResult[16] === updateQuery) {
-              tmp32 = cResult[17];
+              let tmp31 = cResult[17];
             }
             if (cResult[18] === guildHistory) {
               if (cResult[19] === str) {
@@ -1594,77 +1567,82 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
                     if (cResult[22] === first2) {
                       if (cResult[23] === unreadGuilds) {
                         if (cResult[24] === unreadPrivateChannelIds) {
-                          let tmp36;
-                          let tmp44;
-                          let tmp52Result;
                           if (cResult[25] === visible) {
-                            tmp36 = cResult[26];
+                            let tmp35 = cResult[26];
                           }
                           if (cResult[27] === tmp7) {
                             let channelHistory;
-                            const tmp40 = cResult[28];
                             if (initialResults != null) {
                               channelHistory = initialResults.channelHistory;
                             }
-                            if (tmp40 === channelHistory) {
+                            if (cResult[28] === channelHistory) {
                               let unreads;
-                              const tmp42 = cResult[29];
                               if (initialResults != null) {
                                 unreads = initialResults.unreads;
                               }
-                              if (tmp42 === unreads) {
-                                if (cResult[30] === arr3.length > 0) {
+                              if (cResult[29] === unreads) {
+                                if (cResult[30] === tmp30) {
                                   if (cResult[31] === str) {
                                     if (cResult[32] === queryResults) {
                                       if (cResult[33] === selectedUnreadGuild) {
                                         if (cResult[34] === first2) {
-                                          tmp44 = cResult[35];
+                                          let tmp41 = cResult[35];
                                         }
                                         if (cResult[36] === tmp4.launchPadContent) {
-                                          let tmp59;
-                                          if (cResult[37] === tmp44) {
-                                            tmp59 = cResult[38];
+                                          if (cResult[37] === tmp41) {
+                                            let tmp56 = cResult[38];
                                           }
-                                          if (cResult[39] === tmp59) {
-                                            if (cResult[40] === tmp32) {
-                                              if (cResult[41] === tmp36) {
-                                                let tmp63;
-                                                if (cResult[42] === tmp24) {
-                                                  tmp63 = cResult[43];
+                                          if (cResult[39] === tmp56) {
+                                            if (cResult[40] === tmp31) {
+                                              if (cResult[41] === tmp35) {
+                                                if (cResult[42] === tmp23) {
+                                                  let tmp60 = cResult[43];
                                                 }
-                                                return tmp63;
+                                                return tmp60;
                                               }
                                             }
                                           }
-                                          const obj3 = { style: tmp24, children: items };
-                                          items = [tmp32, tmp36, tmp59];
-                                          cResult[39] = tmp59;
-                                          cResult[40] = tmp32;
-                                          cResult[41] = tmp36;
-                                          cResult[42] = tmp24;
-                                          const tmp66 = closure_28(View, obj3);
+                                          const obj3 = { style: tmp23, children: null };
+                                          items = [tmp31, tmp35, tmp56];
+                                          obj3.children = items;
+                                          cResult[39] = tmp56;
+                                          cResult[40] = tmp31;
+                                          cResult[41] = tmp35;
+                                          cResult[42] = tmp23;
                                           class O {
                                             constructor() {
-                                              if (str.length > 0) {
-                                                if (!first1) {
-                                                  const obj = AnalyticsUtilsDefault;
-                                                  obj.track(constants.LAUNCHPAD_SEARCHED);
-                                                  closure_3(true);
+                                              arr = query;
+                                              if (query.length > 0) {
+                                                tmp = closure_2;
+                                                if (!closure_2) {
+                                                  tmp2 = closure_1;
+                                                  tmp3 = closure_2;
+                                                  obj = closure_1(closure_2[45]);
+                                                  tmp4 = AnalyticEvents;
+                                                  trackResult = obj.track(AnalyticEvents.LAUNCHPAD_SEARCHED);
+                                                  tmp6 = closure_3;
+                                                  flag = true;
+                                                  tmp7 = closure_3(true);
                                                 }
+                                                return;
                                               }
-                                              if (0 === str.length) {
-                                                closure_3(false);
+                                              if (0 === arr.length) {
+                                                tmp8 = closure_3;
+                                                flag2 = false;
+                                                tmp9 = closure_3(false);
                                               }
+                                              return;
                                             }
                                           }
-                                          tmp63 = tmp66;
+                                          tmp60 = closure_28(View, obj3);
+                                          const tmp63 = closure_28(View, obj3);
                                         }
-                                        const obj4 = { style: tmp4.launchPadContent, children: tmp44 };
-                                        const tmp62 = closure_27(View, obj4);
+                                        const obj4 = { style: tmp4.launchPadContent, children: tmp41 };
+                                        const tmp59 = closure_27(View, obj4);
                                         cResult[36] = tmp4.launchPadContent;
-                                        cResult[37] = tmp44;
-                                        cResult[38] = tmp62;
-                                        tmp59 = tmp62;
+                                        cResult[37] = tmp41;
+                                        cResult[38] = tmp59;
+                                        tmp56 = tmp59;
                                       }
                                     }
                                   }
@@ -1673,14 +1651,13 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
                             }
                           }
                           if (first2 === constants3.SEARCH) {
-                            if (arr3.length > 0) {
-                              let tmp56 = queryResults;
-                              const SearchResults = require("LaunchPadSearchResults").SearchResults;
+                            if (tmp30) {
+                              let tmp53 = queryResults;
                               if (queryResults == null) {
-                                tmp56 = closure_40;
+                                tmp53 = closure_40;
                               }
-                              const obj5 = { results: tmp56, query: str };
-                              tmp52Result = closure_27(SearchResults, obj5);
+                              const obj5 = { results: tmp53, query: str };
+                              let tmp49Result = closure_27(require("LaunchPadSearchResults").SearchResults, obj5);
                             }
                             cResult[27] = tmp7;
                             let channelHistory1;
@@ -1693,52 +1670,66 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
                               unreads1 = initialResults.unreads;
                             }
                             cResult[29] = unreads1;
-                            cResult[30] = arr3.length > 0;
+                            cResult[30] = tmp30;
                             cResult[31] = str;
                             cResult[32] = queryResults;
                             cResult[33] = selectedUnreadGuild;
                             cResult[34] = first2;
                             class O {
                               constructor() {
-                                if (str.length > 0) {
-                                  if (!first1) {
-                                    const obj = AnalyticsUtilsDefault;
-                                    obj.track(constants.LAUNCHPAD_SEARCHED);
-                                    closure_3(true);
+                                arr = query;
+                                if (query.length > 0) {
+                                  tmp = closure_2;
+                                  if (!closure_2) {
+                                    tmp2 = closure_1;
+                                    tmp3 = closure_2;
+                                    obj = closure_1(closure_2[45]);
+                                    tmp4 = AnalyticEvents;
+                                    trackResult = obj.track(AnalyticEvents.LAUNCHPAD_SEARCHED);
+                                    tmp6 = closure_3;
+                                    flag = true;
+                                    tmp7 = closure_3(true);
                                   }
+                                  return;
                                 }
-                                if (0 === str.length) {
-                                  closure_3(false);
+                                if (0 === arr.length) {
+                                  tmp8 = closure_3;
+                                  flag2 = false;
+                                  tmp9 = closure_3(false);
                                 }
+                                return;
                               }
                             }
-                            cResult[35] = tmp52Result;
-                            tmp44 = tmp52Result;
+                            cResult[35] = tmp49Result;
+                            tmp41 = tmp49Result;
                           }
                           if (first2 === constants3.SEARCH) {
-                            const obj6 = { selectedGuildId: selectedUnreadGuild, unreads: unreads2, history: channelHistory2, expandedHistory: tmp7, toggleExpandedHistory: first };
-                            unreads2 = undefined;
-                            const InitialResults = require("LaunchPadSearchResults").InitialResults;
+                            const obj6 = { selectedGuildId: selectedUnreadGuild, unreads: null, history: null, expandedHistory: null, toggleExpandedHistory: null };
+                            let unreads2;
                             if (initialResults != null) {
                               unreads2 = initialResults.unreads;
                             }
                             if (unreads2 == null) {
                               unreads2 = closure_40;
                             }
-                            channelHistory2 = undefined;
+                            obj6.unreads = unreads2;
+                            let channelHistory2;
                             if (initialResults != null) {
                               channelHistory2 = initialResults.channelHistory;
                             }
                             if (channelHistory2 == null) {
                               channelHistory2 = closure_40;
                             }
-                            tmp52Result = closure_27(InitialResults, obj6);
+                            obj6.history = channelHistory2;
+                            obj6.expandedHistory = tmp7;
+                            obj6.toggleExpandedHistory = first;
+                            tmp49Result = closure_27(require("LaunchPadSearchResults").InitialResults, obj6);
                           } else if (first2 === constants3.DEV_TOOLS) {
-                            tmp52Result = closure_27(str(tmp2[48]), {});
+                            tmp49Result = closure_27(str(tmp2[48]), {});
                           } else if (first2 === constants3.MEMBERS) {
-                            tmp52Result = closure_27(str(tmp2[49]), {});
+                            tmp49Result = closure_27(str(tmp2[49]), {});
                           } else {
-                            tmp52Result = closure_27(str(tmp2[50]), {});
+                            tmp49Result = closure_27(str(tmp2[50]), {});
                           }
                         }
                       }
@@ -1747,10 +1738,10 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
                 }
               }
             }
-            let tmp37 = 0 === str.trim().length && first2 === constants3.SEARCH;
-            if (tmp37) {
+            let tmp36 = 0 === str.trim().length && first2 === constants3.SEARCH;
+            if (tmp36) {
               const obj7 = { selectedGuildId: selectedUnreadGuild, setSelectedGuild: setSelectedUnreadGuild, unreadPrivateChannelIds, unreadGuilds, guildHistory, visible };
-              tmp37 = closure_27(str(tmp2[46]), obj7);
+              tmp36 = closure_27(str(tmp2[46]), obj7);
             }
             cResult[18] = guildHistory;
             cResult[19] = str;
@@ -1762,120 +1753,132 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
             cResult[25] = visible;
             class O {
               constructor() {
-                if (str.length > 0) {
-                  if (!first1) {
-                    const obj = AnalyticsUtilsDefault;
-                    obj.track(constants.LAUNCHPAD_SEARCHED);
-                    closure_3(true);
+                arr = query;
+                if (query.length > 0) {
+                  tmp = closure_2;
+                  if (!closure_2) {
+                    tmp2 = closure_1;
+                    tmp3 = closure_2;
+                    obj = closure_1(closure_2[45]);
+                    tmp4 = AnalyticEvents;
+                    trackResult = obj.track(AnalyticEvents.LAUNCHPAD_SEARCHED);
+                    tmp6 = closure_3;
+                    flag = true;
+                    tmp7 = closure_3(true);
                   }
+                  return;
                 }
-                if (0 === str.length) {
-                  closure_3(false);
+                if (0 === arr.length) {
+                  tmp8 = closure_3;
+                  flag2 = false;
+                  tmp9 = closure_3(false);
                 }
+                return;
               }
             }
-            tmp36 = tmp37;
+            tmp35 = tmp36;
           }
         }
-        const obj8 = { tab: first2, setTab: tmp22, updateQuery, searchRef: ref, sharedState };
-        const tmp35 = closure_27(closure_37, obj8);
+        const obj8 = { tab: first2, setTab: tmp5Result2[1], updateQuery, searchRef: ref, sharedState };
+        const tmp34 = closure_27(closure_37, obj8);
         cResult[14] = sharedState;
         cResult[15] = first2;
         class O {
           constructor() {
-            if (str.length > 0) {
-              if (!first1) {
-                const obj = AnalyticsUtilsDefault;
-                obj.track(constants.LAUNCHPAD_SEARCHED);
-                closure_3(true);
+            arr = query;
+            if (query.length > 0) {
+              tmp = closure_2;
+              if (!closure_2) {
+                tmp2 = closure_1;
+                tmp3 = closure_2;
+                obj = closure_1(closure_2[45]);
+                tmp4 = AnalyticEvents;
+                trackResult = obj.track(AnalyticEvents.LAUNCHPAD_SEARCHED);
+                tmp6 = closure_3;
+                flag = true;
+                tmp7 = closure_3(true);
               }
+              return;
             }
-            if (0 === str.length) {
-              closure_3(false);
+            if (0 === arr.length) {
+              tmp8 = closure_3;
+              flag2 = false;
+              tmp9 = closure_3(false);
             }
+            return;
           }
         }
-        cResult[17] = tmp35;
-        tmp32 = tmp35;
+        cResult[17] = tmp34;
+        tmp31 = tmp34;
       }
-      const items1 = [str, tmp5Result[1], first1];
+      const items1 = [str, tmp18, first1];
       cResult[9] = str;
       cResult[10] = first1;
       cResult[11] = items1;
-      tmp26 = items1;
+      tmp25 = items1;
     }
     class O {
       constructor() {
-        if (str.length > 0) {
-          if (!first1) {
-            const obj = AnalyticsUtilsDefault;
-            obj.track(constants.LAUNCHPAD_SEARCHED);
-            closure_3(true);
+        arr = query;
+        if (query.length > 0) {
+          tmp = closure_2;
+          if (!closure_2) {
+            tmp2 = closure_1;
+            tmp3 = closure_2;
+            obj = closure_1(closure_2[45]);
+            tmp4 = AnalyticEvents;
+            trackResult = obj.track(AnalyticEvents.LAUNCHPAD_SEARCHED);
+            tmp6 = closure_3;
+            flag = true;
+            tmp7 = closure_3(true);
           }
+          return;
         }
-        if (0 === str.length) {
-          closure_3(false);
+        if (0 === arr.length) {
+          tmp8 = closure_3;
+          flag2 = false;
+          tmp9 = closure_3(false);
         }
+        return;
       }
     }
     cResult[6] = str.length;
     cResult[7] = first1;
     cResult[8] = O;
-    tmp25 = O;
+    tmp24 = O;
+    const tmp15 = useInitialResults(tmp13);
   }
   const obj9 = { disabled: arr.length > 0, visible };
   cResult[3] = arr.length > 0;
   cResult[4] = visible;
   cResult[5] = obj9;
   tmp13 = obj9;
+  const tmp6 = _slicedToArray(noop.useState(false), 2);
 }) : ((arg0) => {
-  let _undefined;
-  let c0;
-  let channelHistory;
-  let closure_3;
-  let first;
-  let guildHistory;
-  let initialResults;
-  let queryResults;
-  let selectedUnreadGuild;
-  let setSelectedUnreadGuild;
-  let sharedState;
-  let tmp21Result2;
-  let tmp3;
-  let unreadGuilds;
-  let unreadPrivateChannelIds;
-  let unreads;
-  let updateQuery;
-  let visible;
   ({ visible, sharedState } = arg0);
   _require = undefined;
-  first = undefined;
   _slicedToArray = undefined;
   const tmp = closure_29();
-  [tmp3, c0] = react.useState(false);
-  _slicedToArray(react.useState(false), 2);
-  const callback = react.useCallback(() => _undefined((arg0) => !arg0), []);
-  const ref = react.useRef(null);
+  [tmp3, c0] = noop.useState(false);
+  const callback = noop.useCallback(() => _undefined((arg0) => !arg0), []);
+  const ref = noop.useRef(null);
   const tmp6 = closure_43(visible);
   const str = tmp6.query;
   ({ updateQuery, queryResults } = tmp6);
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
   let obj = { disabled: str.trim().length > 0, visible };
-  ({ initialResults, selectedUnreadGuild, unreadPrivateChannelIds, unreadGuilds, guildHistory, setSelectedUnreadGuild } = useInitialResults(obj));
-  const tmp7 = useInitialResults(obj);
-  [first, items[1]] = react.useState(false);
+  ({ initialResults, selectedUnreadGuild, unreadPrivateChannelIds, unreadGuilds, guildHistory, setSelectedUnreadGuild } = useInitialResults({ disabled: str.trim().length > 0, visible }));
+  const tmp8 = _slicedToArray(noop.useState(false), 2);
+  const first = tmp8[0];
   _slicedToArray = tmp10;
-  const tmp12 = _slicedToArray(react.useState(constants3.SEARCH), 2);
+  const tmp12 = _slicedToArray(noop.useState(constants3.SEARCH), 2);
   const first1 = tmp12[0];
-  items = [, , ];
-  const tmp14 = tmp12[1];
-  items[0] = str;
-  items[2] = first;
-  const tmp15 = closure_42();
-  const effect = react.useEffect(() => {
+  items = [str, tmp8[1], first];
+  const tmp7 = useInitialResults({ disabled: str.trim().length > 0, visible });
+  const effect = noop.useEffect(() => {
     if (str.length > 0) {
       if (!first) {
-        const obj = AnalyticsUtilsDefault;
-        obj.track(constants.LAUNCHPAD_SEARCHED);
+        AnalyticsUtilsDefault.track(constants.LAUNCHPAD_SEARCHED);
         closure_3(true);
       }
     }
@@ -1884,55 +1887,53 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     }
   }, items);
   closure_48(updateQuery, ref, sharedState);
-  const obj2 = { style: tmp15, children: null };
-  const items1 = [, , ];
-  const tmp18 = str.trim().length > 0;
-  items1[0] = closure_27(closure_37, { tab: first1, setTab: tmp14, updateQuery, searchRef: ref, sharedState });
-  let tmp21Result = 0 === str.trim().length && first1 === constants3.SEARCH;
-  if (tmp21Result) {
+  const obj2 = { style: closure_42(), children: null };
+  const tmp14 = closure_42();
+  const items1 = [closure_27(closure_37, { tab: first1, setTab: tmp12[1], updateQuery, searchRef: ref, sharedState }), , ];
+  let tmp20Result = 0 === str.trim().length && first1 === constants3.SEARCH;
+  if (tmp20Result) {
     const obj3 = { selectedGuildId: selectedUnreadGuild, setSelectedGuild: setSelectedUnreadGuild, unreadPrivateChannelIds, unreadGuilds, guildHistory, visible };
-    tmp21Result = closure_27(str(first[46]), obj3);
+    tmp20Result = closure_27(str(first[46]), obj3);
   }
-  items1[1] = tmp21Result;
+  items1[1] = tmp20Result;
   const obj4 = { style: tmp.launchPadContent, children: null };
   if (first1 === constants3.SEARCH) {
-    if (tmp18) {
+    if (tmp17) {
       const obj5 = { results, query: str };
-      const SearchResults = require("LaunchPadSearchResults").SearchResults;
-      tmp21Result2 = closure_27(SearchResults, obj5);
+      let tmp20Result2 = closure_27(require("LaunchPadSearchResults").SearchResults, obj5);
     }
-    obj4.children = tmp21Result2;
+    obj4.children = tmp20Result2;
     items1[2] = closure_27(View, obj4);
     obj2.children = items1;
     return closure_28(View, obj2);
   }
   if (first1 === constants3.SEARCH) {
-    const obj6 = { selectedGuildId: selectedUnreadGuild, unreads, history: channelHistory, expandedHistory: tmp3, toggleExpandedHistory: callback };
-    unreads = undefined;
-    const InitialResults = require("LaunchPadSearchResults").InitialResults;
+    const obj6 = { selectedGuildId: selectedUnreadGuild, unreads: null, history: null, expandedHistory: null, toggleExpandedHistory: null };
+    let unreads;
     if (initialResults != null) {
       unreads = initialResults.unreads;
     }
     if (unreads == null) {
       unreads = results;
     }
-    channelHistory = undefined;
+    obj6.unreads = unreads;
+    let channelHistory;
     if (initialResults != null) {
       channelHistory = initialResults.channelHistory;
     }
     if (channelHistory == null) {
       channelHistory = results;
     }
-    tmp21Result2 = closure_27(InitialResults, obj6);
+    obj6.history = channelHistory;
+    obj6.expandedHistory = tmp3;
+    obj6.toggleExpandedHistory = callback;
+    tmp20Result2 = closure_27(require("LaunchPadSearchResults").InitialResults, obj6);
   } else if (first1 === constants3.DEV_TOOLS) {
-    tmp21Result2 = closure_27(str(first[48]), {});
+    tmp20Result2 = closure_27(str(first[48]), {});
   } else if (first1 === constants3.MEMBERS) {
-    tmp21Result2 = closure_27(str(first[49]), {});
+    tmp20Result2 = closure_27(str(first[49]), {});
   } else {
-    tmp21Result2 = closure_27(str(first[50]), {});
+    tmp20Result2 = closure_27(str(first[50]), {});
   }
+  tmp17 = str.trim().length > 0;
 }));
-size = size_mod;
-let result = size.fileFinishedImporting("modules/launchpad/native/LaunchPad.tsx");
-
-export default memoResult;

@@ -1,49 +1,36 @@
 // === Module 11319: ForwardModalUtils ===
 
 // Module 11319 (ForwardModalUtils)
-import Fragment from "Fragment" /* 21 */;
-import asyncRequire from "asyncRequire" /* 1987 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
 import useAlertStore from "useAlertStore" /* 5716 */;
 import showSearchableDestinationListModalDefault from "showSearchableDestinationListModal" /* 10720 */;
 import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 11320 */;
-import react from "react" /* 19 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
 let c5 = "forward-modal";
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/native/ForwardModalUtils.tsx");
 
 export const FORWARD_MODAL_KEY = "forward-modal";
 export const openForwardModal = function openForwardModal(arg0) {
-  let customSendHandler;
-  let forwardOptions;
-  let initialSelectedDestinations;
-  let message;
-  let source;
   ({ message, source, initialSelectedDestinations } = arg0);
   if (initialSelectedDestinations === undefined) {
     initialSelectedDestinations = [];
   }
   ({ forwardOptions, customSendHandler } = arg0);
-  const obj = ForwardingAnalyticsUtils;
-  obj.trackForwardStart(message.channel_id, message.id, source);
-  const tmp2 = showSearchableDestinationListModalDefault;
-  tmp2(asyncRequire(11321, dependencyMap.paths), { message, initialSelectedDestinations, forwardOptions, source, customSendHandler }, c5);
+  ForwardingAnalyticsUtils.trackForwardStart(message.channel_id, message.id, source);
+  showSearchableDestinationListModalDefault(asyncRequireImpl(11321, dependencyMap.paths), { message, initialSelectedDestinations, forwardOptions, source, customSendHandler }, c5);
 };
 export const closeForwardModal = function closeForwardModal() {
-  const obj = ModalActionCreatorsDefault;
-  obj.popWithKey(c5);
+  ModalActionCreatorsDefault.popWithKey(c5);
 };
 export const showForwardFailedAlertModal = function showForwardFailedAlertModal(arg0) {
-  let failedDestinations;
-  let forwardOptions;
-  let message;
-  let paths;
   ({ message, failedDestinations, forwardOptions } = arg0);
-  react.lazy(() => require("asyncRequire")(paths[7], paths.paths));
-  const obj = useAlertStore;
-  obj.openAlert("forward-failed-alert-modal", <lazyResult message={message} failedDestinations={failedDestinations} forwardOptions={forwardOptions} />);
+  const lazyResult = noop.lazy(() => require("asyncRequireImpl")(paths[7], paths.paths));
+  useAlertStore.openAlert("forward-failed-alert-modal", <lazyResult message={message} failedDestinations={failedDestinations} forwardOptions={forwardOptions} />);
 };

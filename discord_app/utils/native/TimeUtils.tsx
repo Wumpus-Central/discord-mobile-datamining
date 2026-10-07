@@ -13,19 +13,17 @@ export const getTimeFormat = function getTimeFormat(playableDuration, padMinutes
   const result = tmp % 60;
   const result1 = (tmp - result) / 60;
   if (padMinutes != null) {
-    let combined;
     if (padMinutes) {
       const _String = String;
       const _String2 = String;
       const StringResult = String(result1);
+      const padStartResult = String(result1).padStart(2, "0");
       const _HermesInternal = HermesInternal;
-      const padStartResult = StringResult.padStart(2, "0");
+      let combined = "" + padStartResult + ":" + String(result).padStart(2, "0");
       const StringResult1 = String(result);
-      combined = "" + padStartResult + ":" + StringResult1.padStart(2, "0");
     }
     return combined;
   }
   const StringResult2 = String(result1);
-  const StringResult3 = String(result);
-  combined = "" + StringResult2 + ":" + StringResult3.padStart(2, "0");
+  combined = "" + StringResult2 + ":" + String(result).padStart(2, "0");
 };

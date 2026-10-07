@@ -1,22 +1,19 @@
 // === Module 13511: AdPersonalizationStore ===
 
 // Module 13511 (AdPersonalizationStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import size from "module_2" /* 2 */;
 
 function reset() {
 
 }
-let flag = false;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class AdPersonalizationStore extends Store {
-  isTogglesDisabled() {
-    return flag;
-  }
 }
-const prototype = AdPersonalizationStore.prototype;
-const obj = {
+AdPersonalizationStore.prototype["isTogglesDisabled"] = function isTogglesDisabled() {
+  return flag;
+};
+const adPersonalizationStore = new AdPersonalizationStore(DispatcherDefault, {
   AD_PERSONALIZATION_TOGGLES_RESTRICTED: function handleAdPersonalizationTogglesRestricted(disabled) {
     flag = disabled.disabled;
     if (flag == null) {
@@ -25,8 +22,8 @@ const obj = {
   },
   CONNECTION_OPEN: reset,
   LOGOUT: reset
-};
-const adPersonalizationStore = new AdPersonalizationStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/AdPersonalizationStore.tsx");
 
 export default adPersonalizationStore;

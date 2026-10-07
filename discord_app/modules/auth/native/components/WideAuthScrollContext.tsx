@@ -1,12 +1,12 @@
-// === Module 6468: react ===
+// === Module 6468: WideAuthScrollContext ===
 
-// Module 6468 (react)
-import react from "react" /* 19 */;
-import size from "module_2" /* 2 */;
+// Module 6468 (WideAuthScrollContext)
+import noop from "module_19" /* 19 */;
 
-const context = react.createContext(() => {
+const context = noop.createContext(() => {
 
 });
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/WideAuthScrollContext.tsx");
 
 export const WideAuthScrollContext = context;

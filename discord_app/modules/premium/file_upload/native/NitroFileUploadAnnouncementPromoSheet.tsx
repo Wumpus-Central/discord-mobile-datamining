@@ -1,39 +1,29 @@
 // === Module 17159: NitroFileUploadAnnouncementPromoSheet ===
 
 // Module 17159 (NitroFileUploadAnnouncementPromoSheet)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
 import _modDef2621 from "module_2621" /* 2621 */;
-import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let dependencyMap, importDefault, markAsDismissed;
 
-let obj2;
-const View = react_native.View;
-const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
-const jsx = Fragment.jsx;
-let obj = { illustration: obj2 };
-obj2 = { paddingTop: nativeDefault.space.PX_12 };
-let closure_7 = createStyles.createStyles(obj);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => {
-  let closure_2;
-  let ref;
-  let tmp10;
-  let tmp16;
-  let tmp20;
-  let tmp5;
-  const tmp = markAsDismissed;
-  const obj = markAsDismissed(576);
-  const cResult = obj.c(18);
+const require = fn;
+const View = fn(17).View;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { illustration: { paddingTop: nativeDefault.space.PX_12 } };
+let closure_7 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { paddingTop: nativeDefault.space.PX_12 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/file_upload/native/NitroFileUploadAnnouncementPromoSheet.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => {
+  const cResult = markAsDismissed(576).c(18);
   markAsDismissed = markAsDismissed.markAsDismissed;
   const tmp4 = closure_7();
-  importDefault = react.useRef(false);
+  importDefault = noop.useRef(false);
   if (cResult[0] !== markAsDismissed) {
     const fn = function u(arg0) {
       if (!ref.current) {
@@ -43,7 +33,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
     };
     cResult[0] = markAsDismissed;
     cResult[1] = fn;
-    tmp5 = fn;
+    let tmp5 = fn;
   } else {
     tmp5 = cResult[1];
   }
@@ -51,7 +41,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
   if (cResult[2] !== tmp5) {
     class I {
       constructor() {
-        closure_2(ContentDismissActionType.AUTO_DISMISS);
+        tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+        return;
       }
     }
     cResult[2] = tmp5;
@@ -59,16 +50,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
   } else {
     class I {
       constructor() {
-        closure_2(ContentDismissActionType.AUTO_DISMISS);
+        tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+        return;
       }
     }
   }
-  const tmpResult = tmp(5597);
-  const unmountEffect = tmpResult.useUnmountEffect(I);
+  const obj = markAsDismissed(576);
+  const unmountEffect = markAsDismissed(5597).useUnmountEffect(I);
   if (cResult[4] !== tmp5) {
     class I {
       constructor() {
-        closure_2(ContentDismissActionType.AUTO_DISMISS);
+        tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+        return;
       }
     }
     cResult[4] = tmp5;
@@ -76,46 +69,53 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
   } else {
     class I {
       constructor() {
-        closure_2(ContentDismissActionType.AUTO_DISMISS);
+        tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+        return;
       }
     }
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     class I {
       constructor() {
-        closure_2(ContentDismissActionType.AUTO_DISMISS);
+        tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+        return;
       }
     }
     const tmp11 = jsx(tmp(17160).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
     cResult[6] = tmp11;
-    tmp10 = tmp11;
+    const tmp10 = tmp11;
   } else {
     class I {
       constructor() {
-        closure_2(ContentDismissActionType.AUTO_DISMISS);
+        tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+        return;
       }
     }
   }
   if (cResult[7] !== tmp4.illustration) {
     class I {
       constructor() {
-        closure_2(ContentDismissActionType.AUTO_DISMISS);
+        tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+        return;
       }
     }
+    const obj2 = { style: tmp4.illustration, children: tmp10 };
     const tmp14 = <View style={tmp4.illustration}>{tmp10}</View>;
     cResult[7] = tmp4.illustration;
     cResult[8] = tmp14;
   } else {
     class I {
       constructor() {
-        closure_2(ContentDismissActionType.AUTO_DISMISS);
+        tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+        return;
       }
     }
   }
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
     class I {
       constructor() {
-        closure_2(ContentDismissActionType.AUTO_DISMISS);
+        tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+        return;
       }
     }
     const stringResult = obj4.string(_modDef2621.IyCdAU);
@@ -123,11 +123,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
     const stringResult1 = intl.string(_modDef2621.LhfXZN);
     cResult[9] = stringResult;
     cResult[10] = stringResult1;
-    tmp16 = stringResult1;
+    let tmp16 = stringResult1;
+    const tmp15 = stringResult;
   } else {
     class I {
       constructor() {
-        closure_2(ContentDismissActionType.AUTO_DISMISS);
+        tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+        return;
       }
     }
     tmp16 = cResult[10];
@@ -135,76 +137,84 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
   if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
     class I {
       constructor() {
-        closure_2(ContentDismissActionType.AUTO_DISMISS);
+        tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+        return;
       }
     }
     const stringResult2 = obj5.string(tmp(1126).t["NX+WJN"]);
     cResult[11] = stringResult2;
-    tmp20 = stringResult2;
+    const tmp20 = stringResult2;
   } else {
     class I {
       constructor() {
-        closure_2(ContentDismissActionType.AUTO_DISMISS);
+        tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+        return;
       }
     }
   }
   if (cResult[12] !== tmp9) {
     class I {
       constructor() {
-        closure_2(ContentDismissActionType.AUTO_DISMISS);
+        tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+        return;
       }
     }
-    cResult[12] = tmp9;
-    cResult[13] = jsx(tmp(5601).Button, { grow: true, size: "lg", variant: "primary", text: tmp20, onPress: tmp9 });
+    const obj3 = { grow: true, size: "lg", variant: "primary", text: tmp20, onPress: tmp9 };
     const tmp23 = jsx(tmp(5601).Button, { grow: true, size: "lg", variant: "primary", text: tmp20, onPress: tmp9 });
+    cResult[12] = tmp9;
+    cResult[13] = tmp23;
   } else {
     class I {
       constructor() {
-        closure_2(ContentDismissActionType.AUTO_DISMISS);
+        tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+        return;
       }
     }
   }
   if (cResult[14] === tmp9) {
     class I {
       constructor() {
-        closure_2(ContentDismissActionType.AUTO_DISMISS);
+        tmp = closure_2(ContentDismissActionType.AUTO_DISMISS);
+        return;
       }
     }
   }
+  const tmpResult = markAsDismissed(5597);
   cResult[14] = tmp9;
   cResult[15] = tmp12;
   cResult[16] = tmp22;
-  cResult[17] = jsx(tmp(10058).PromoSheet, { illustration: tmp12, title: tmp15, description: tmp16, onDismiss: tmp9, actions: tmp22 });
-  jsx(tmp(10058).PromoSheet, { illustration: tmp12, title: tmp15, description: tmp16, onDismiss: tmp9, actions: tmp22 });
+  cResult[17] = jsx(markAsDismissed(10058).PromoSheet, { illustration: tmp12, title: tmp15, description: tmp16, onDismiss: tmp9, actions: tmp22 });
+  const tmp24 = jsx(markAsDismissed(10058).PromoSheet, { illustration: tmp12, title: tmp15, description: tmp16, onDismiss: tmp9, actions: tmp22 });
 }) : ((markAsDismissed) => {
-  let intl3;
-  let ref;
   markAsDismissed = markAsDismissed.markAsDismissed;
-  const tmp = closure_7();
-  importDefault = react.useRef(false);
+  importDefault = noop.useRef(false);
   const items = [markAsDismissed];
-  const callback = react.useCallback((arg0) => {
+  const callback = noop.useCallback((arg0) => {
     if (!ref.current) {
       tmp.current = true;
       markAsDismissed(arg0);
     }
   }, items);
-  const obj = markAsDismissed(callback[8]);
-  const unmountEffect = obj.useUnmountEffect(() => {
+  const tmp = closure_7();
+  const unmountEffect = markAsDismissed(callback[8]).useUnmountEffect(() => {
     callback(ContentDismissActionType.AUTO_DISMISS);
   });
   const items1 = [callback];
-  const callback1 = react.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     callback(ContentDismissActionType.USER_DISMISS);
   }, items1);
-  const PromoSheet = markAsDismissed(callback[13]).PromoSheet;
+  const obj2 = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
+  const obj = markAsDismissed(callback[8]);
+  obj2.illustration = <View style={tmp.illustration}>{jsx(markAsDismissed(callback[9]).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" })}</View>;
   const intl = markAsDismissed(callback[10]).intl;
+  obj2.title = intl.string(require("module_2621").IyCdAU);
   const intl2 = markAsDismissed(callback[10]).intl;
-  ({ grow: true, size: "lg", variant: "primary", text: intl3.string(markAsDismissed(callback[10]).t["NX+WJN"]), onPress: callback1 });
-  const Button = markAsDismissed(callback[12]).Button;
-  intl3 = markAsDismissed(callback[10]).intl;
-  return <PromoSheet illustration={null} title={intl.string(require("module_2621").IyCdAU)} description={intl2.string(require("module_2621").LhfXZN)} onDismiss={callback1} actions={null} />;
+  obj2.description = intl2.string(require("module_2621").LhfXZN);
+  obj2.onDismiss = callback1;
+  const obj4 = { grow: true, size: "lg", variant: "primary", text: null, onPress: null };
+  const intl3 = markAsDismissed(callback[10]).intl;
+  obj4.text = intl3.string(markAsDismissed(callback[10]).t["NX+WJN"]);
+  obj4.onPress = callback1;
+  obj2.actions = jsx(markAsDismissed(callback[12]).Button, { grow: true, size: "lg", variant: "primary", text: null, onPress: null });
+  return jsx(markAsDismissed(callback[13]).PromoSheet, { illustration: null, title: null, description: null, onDismiss: null, actions: null });
 });
-const result = size.fileFinishedImporting("modules/premium/file_upload/native/NitroFileUploadAnnouncementPromoSheet.tsx");
-
-export default tmp2;

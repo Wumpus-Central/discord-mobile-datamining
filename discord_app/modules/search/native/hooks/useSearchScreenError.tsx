@@ -1,49 +1,35 @@
 // === Module 16895: useSearchScreenError ===
 
 // Module 16895 (useSearchScreenError)
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import AssetRegistryDefault from "AssetRegistry" /* 4814 */;
-import SearchConstants from "SearchConstants" /* 7524 */;
+import _modDef4814 from "module_4814" /* 4814 */;
 import SearchUtils from "SearchUtils" /* 11987 */;
-import react from "react" /* 19 */;
-import SearchMessageStore_mod from "SearchMessageStore" /* 6794 */;
+import noop from "module_19" /* 19 */;
+import SearchMessageStore from "SearchMessageStore" /* 6794 */;
 import SearchQueryStore from "SearchQueryStore" /* 11994 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-let content, searchContext;
-
-let SearchMessageStore = SearchMessageStore_mod;
-let closure_6 = SearchConstants.SEARCH_MESSAGE_TAB_SENTINEL;
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
-  let first;
-  let ref;
-  let stateFromStores;
-  const tmp = searchContext;
-  const tmp2 = stateFromStores;
-  let obj = searchContext(stateFromStores[5]);
-  const cResult = obj.c(15);
+require = fn;
+let closure_6 = fn(7524).SEARCH_MESSAGE_TAB_SENTINEL;
+fn(558);
+const ReactCompilerGating = fn(558);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+  const cResult = searchContext(stateFromStores[5]).c(15);
   searchContext = searchContext.searchContext;
   const tab = searchContext.tab;
   const hasListItems = searchContext.hasListItems;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SearchQueryStore, SearchMessageStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === searchContext) {
-    let tmp7;
-    let tmp8;
     if (cResult[2] === tab) {
-      tmp7 = cResult[3];
+      let tmp7 = cResult[3];
     }
-    const tmpResult = tmp(tmp2[7]);
-    stateFromStores = tmpResult.useStateFromStores(first, tmp7);
+    stateFromStores = tmp(tmp2[7]).useStateFromStores(first, tmp7);
     if (cResult[4] !== stateFromStores) {
       let anyErrorMessage;
       if (stateFromStores != null) {
@@ -55,40 +41,43 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
       }
       cResult[4] = stateFromStores;
       cResult[5] = anyErrorMessage;
-      tmp8 = anyErrorMessage;
+      let tmp8 = anyErrorMessage;
     } else {
       tmp8 = cResult[5];
     }
     content = tmp8;
     SearchMessageStore = content.useRef(null);
     if (cResult[6] === stateFromStores) {
-      let tmp13;
       if (cResult[7] === tmp8) {
-        tmp13 = cResult[8];
+        let tmp13 = cResult[8];
       }
       if (cResult[9] === tmp8) {
         if (cResult[10] === tmp13) {
-          if (cResult[11] === null != stateFromStores) {
-            if (cResult[12] === (null != stateFromStores && !hasListItems)) {
-              let tmp17;
-              if (cResult[13] === (null != stateFromStores && hasListItems)) {
-                tmp17 = cResult[14];
+          if (cResult[11] === tmp14) {
+            if (cResult[12] === tmp15) {
+              if (cResult[13] === tmp16) {
+                let tmp17 = cResult[14];
               }
               return tmp17;
             }
           }
         }
       }
-      const obj2 = { hasError: null != stateFromStores, errorText: tmp8, isErrorFullscreen: null != stateFromStores && !hasListItems, isErrorToast: null != stateFromStores && hasListItems, showErrorToast: null };
+      let obj2 = { hasError: null != stateFromStores, errorText: tmp8, isErrorFullscreen: null != stateFromStores && !hasListItems, isErrorToast: null != stateFromStores && hasListItems, showErrorToast: null };
       class R {
         constructor() {
-          if (stateFromStores !== ref.current) {
-            const obj = { key: "SEARCH_ERROR_TOAST", icon: AssetRegistryDefault, content };
-            const open = ToastActionCreatorsDefault.open;
-            ToastActionCreatorsDefault;
-            open(obj);
+          if (closure_2 !== closure_4.current) {
+            tmp3 = closure_1;
+            tmp4 = closure_2;
+            obj = closure_1(closure_2[9]);
+            obj1 = { key: "SEARCH_ERROR_TOAST", icon: null, content: null };
+            obj1.icon = closure_1(closure_2[10]);
+            tmp5 = closure_3;
+            obj1.content = closure_3;
+            openResult = obj.open(obj1);
             tmp2.current = tmp;
           }
+          return;
         }
       }
       cResult[9] = tmp8;
@@ -101,90 +90,89 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
     }
     class R {
       constructor() {
-        if (stateFromStores !== ref.current) {
-          const obj = { key: "SEARCH_ERROR_TOAST", icon: AssetRegistryDefault, content };
-          const open = ToastActionCreatorsDefault.open;
-          ToastActionCreatorsDefault;
-          open(obj);
+        if (closure_2 !== closure_4.current) {
+          tmp3 = closure_1;
+          tmp4 = closure_2;
+          obj = closure_1(closure_2[9]);
+          obj1 = { key: "SEARCH_ERROR_TOAST", icon: null, content: null };
+          obj1.icon = closure_1(closure_2[10]);
+          tmp5 = closure_3;
+          obj1.content = closure_3;
+          openResult = obj.open(obj1);
           tmp2.current = tmp;
         }
+        return;
       }
     }
     cResult[6] = stateFromStores;
     cResult[7] = tmp8;
     cResult[8] = R;
     tmp13 = R;
+    const tmpResult = tmp(tmp2[7]);
   }
   const fn = function l() {
     const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(searchContext);
-    const obj = SearchUtils;
-    return SearchMessageStore.getError(obj.getSearchTabFetchId(searchContext, tab, searchResultsQuery));
+    return SearchMessageStore.getError(SearchUtils.getSearchTabFetchId(searchContext, tab, searchResultsQuery));
   };
   cResult[1] = searchContext;
   cResult[2] = tab;
   cResult[3] = fn;
   tmp7 = fn;
+  let obj = searchContext(stateFromStores[5]);
 }) : ((arg0) => {
-  let callback;
-  let hasListItems;
-  let tmp5;
   ({ searchContext: require, tab: importDefault, hasListItems } = arg0);
   let stateFromStores;
   let ref;
-  const tmp2 = stateFromStores;
-  let obj = require("get initialized");
   const items = [SearchQueryStore, ref];
-  stateFromStores = obj.useStateFromStores(items, () => {
-    const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(require);
-    const obj = SearchUtils;
-    return SearchMessageStore.getError(obj.getSearchTabFetchId(require, importDefault, searchResultsQuery));
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
+    const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(closure_1_0);
+    return SearchMessageStore.getError(SearchUtils.getSearchTabFetchId(closure_1_0, importDefault, searchResultsQuery));
   });
   let anyErrorMessage;
   if (stateFromStores != null) {
     anyErrorMessage = stateFromStores.getAnyErrorMessage();
   }
   if (anyErrorMessage == null) {
-    const intl = require("intl").intl;
-    anyErrorMessage = intl.string(require("intl").t.uvDZBZ);
+    const intl = require("util").intl;
+    anyErrorMessage = intl.string(require("util").t.uvDZBZ);
   }
   ref = anyErrorMessage.useRef(null);
   const items1 = [stateFromStores, anyErrorMessage];
-  const obj2 = { hasError: null != stateFromStores, errorText: anyErrorMessage, isErrorFullscreen: tmp5, isErrorToast: null != stateFromStores && hasListItems, showErrorToast: callback };
-  tmp5 = null != stateFromStores;
-  callback = anyErrorMessage.useCallback(() => {
+  let obj2 = { hasError: null != stateFromStores, errorText: anyErrorMessage, isErrorFullscreen: null, isErrorToast: null, showErrorToast: null };
+  let tmp5 = null != stateFromStores;
+  const callback = anyErrorMessage.useCallback(() => {
     if (stateFromStores !== ref.current) {
-      const obj = { key: "SEARCH_ERROR_TOAST", icon: AssetRegistryDefault, content: anyErrorMessage };
-      const open = ToastActionCreatorsDefault.open;
-      ToastActionCreatorsDefault;
-      open(obj);
+      const obj2 = { key: "SEARCH_ERROR_TOAST", icon: _modDef4814, content: anyErrorMessage };
+      ToastActionCreatorsDefault.open(obj2);
       tmp2.current = tmp;
     }
   }, items1);
   if (tmp5) {
     tmp5 = !hasListItems;
   }
+  obj2.isErrorFullscreen = tmp5;
+  obj2.isErrorToast = null != stateFromStores && hasListItems;
+  obj2.showErrorToast = callback;
   return obj2;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
-  let first;
-  let tmp7;
-  let obj = searchContext(576);
-  const cResult = obj.c(3);
-  const tmp = searchContext;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/hooks/useSearchScreenError.tsx");
+
+export const useMessageSearchErrorScreen = tmp2;
+export const useMessageTabCountsErrorText = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+  const cResult = searchContext(576).c(3);
   searchContext = searchContext.searchContext;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SearchQueryStore, SearchMessageStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== searchContext) {
     const fn = function l() {
       const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(searchContext);
-      const obj = SearchUtils;
-      const searchTabFetchId = obj.getSearchTabFetchId(searchContext, closure_6, searchResultsQuery);
+      const searchTabFetchId = SearchUtils.getSearchTabFetchId(searchContext, closure_6, searchResultsQuery);
       if (SearchMessageStore.getIsInitialFetchComplete(searchTabFetchId)) {
         if (null != SearchMessageStore.getTotalCount(searchTabFetchId)) {
           return null;
@@ -194,8 +182,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => 
           if (null != error) {
             let anyErrorMessage = error.getAnyErrorMessage();
             if (anyErrorMessage == null) {
-              const intl = intl2.intl;
-              anyErrorMessage = intl.string(intl2.t.uvDZBZ);
+              const intl = util.intl;
+              anyErrorMessage = intl.string(util.t.uvDZBZ);
             }
             tmp5 = anyErrorMessage;
           }
@@ -207,20 +195,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => 
     };
     cResult[1] = searchContext;
     cResult[2] = fn;
-    tmp7 = fn;
+    let tmp7 = fn;
   } else {
     tmp7 = cResult[2];
   }
-  const tmpResult = tmp(504);
-  return tmpResult.useStateFromStores(first, tmp7);
+  let obj = searchContext(576);
+  return searchContext(504).useStateFromStores(first, tmp7);
 }) : ((searchContext) => {
   searchContext = searchContext.searchContext;
-  let obj = searchContext(504);
   const items = [SearchQueryStore, SearchMessageStore];
-  return obj.useStateFromStores(items, () => {
+  return searchContext(504).useStateFromStores(items, () => {
     const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(searchContext);
-    const obj = SearchUtils;
-    const searchTabFetchId = obj.getSearchTabFetchId(searchContext, closure_6, searchResultsQuery);
+    const searchTabFetchId = SearchUtils.getSearchTabFetchId(searchContext, closure_6, searchResultsQuery);
     if (SearchMessageStore.getIsInitialFetchComplete(searchTabFetchId)) {
       if (null != SearchMessageStore.getTotalCount(searchTabFetchId)) {
         return null;
@@ -230,8 +216,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => 
         if (null != error) {
           let anyErrorMessage = error.getAnyErrorMessage();
           if (anyErrorMessage == null) {
-            const intl = intl2.intl;
-            anyErrorMessage = intl.string(intl2.t.uvDZBZ);
+            const intl = util.intl;
+            anyErrorMessage = intl.string(util.t.uvDZBZ);
           }
           tmp5 = anyErrorMessage;
         }
@@ -242,7 +228,3 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => 
     }
   });
 });
-const result = size.fileFinishedImporting("modules/search/native/hooks/useSearchScreenError.tsx");
-
-export const useMessageSearchErrorScreen = tmp2;
-export const useMessageTabCountsErrorText = tmp3;

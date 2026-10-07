@@ -1,14 +1,14 @@
 // === Module 12753: GuildVerificationUtils ===
 
 // Module 12753 (GuildVerificationUtils)
-import Constants from "Constants" /* 1085 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4708 */;
 import transitionToMemberVerification from "transitionToMemberVerification" /* 5923 */;
 import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5967 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4706 */;
-import size from "module_2" /* 2 */;
 
-const GuildFeatures = Constants.GuildFeatures;
+require = fn;
+const GuildFeatures = fn(1085).GuildFeatures;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_verification/GuildVerificationUtils.tsx");
 
 export const inviteGuildHasPendingMemberDisabledVerification = function inviteGuildHasPendingMemberDisabledVerification(guild) {
@@ -31,10 +31,9 @@ export const openVerificationModalOrTransitionToApplication = function openVerif
   const request = UserGuildJoinRequestStore.getRequest(id);
   if (null != request) {
     if (request.applicationStatus !== MemberVerificationTypes.GuildJoinRequestApplicationStatuses.STARTED) {
+      const result = transitionToMemberVerification.transitionToMemberVerification(id);
       const tmp2Result = transitionToMemberVerification;
-      const result = tmp2Result.transitionToMemberVerification(id);
     }
   }
-  const obj = MemberVerificationModalActionCreators;
-  const result1 = obj.openMemberVerificationModal(id);
+  const result1 = MemberVerificationModalActionCreators.openMemberVerificationModal(id);
 };

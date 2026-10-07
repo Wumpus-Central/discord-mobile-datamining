@@ -1,50 +1,35 @@
 // === Module 12456: useCreateGameInvitePost ===
 
 // Module 12456 (useCreateGameInvitePost)
-import Constants from "Constants" /* 1085 */;
-import ChannelConstants from "ChannelConstants" /* 2058 */;
 import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6785 */;
-import SlowmodeStore2 from "SlowmodeStore" /* 7184 */;
 import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11406 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import LocalActivityStore from "LocalActivityStore" /* 11129 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5445 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import SlowmodeStore from "SlowmodeStore" /* 7184 */;
 
-const SlowmodeStore = SlowmodeStore2;
-let c1, c3, parentChannel, tmp10, tmp11, tmp3, tmp4, tmp6;
+require = fn;
+const SlowmodeType = fn(7184).SlowmodeType;
+const ActivityActionTypes = fn(1085).ActivityActionTypes;
+const ChannelFlags = fn(2058).ChannelFlags;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_invite_channels/useCreateGameInvitePost.tsx");
 
-let react = react_mod;
-const SlowmodeType = SlowmodeStore2.SlowmodeType;
-const ActivityActionTypes = Constants.ActivityActionTypes;
-const ChannelFlags = ChannelConstants.ChannelFlags;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => {
-  let applicationIdsForGame;
-  let appliedTagIds;
-  let first;
-  let noMicTag;
-  let onThreadCreated;
-  let tmp9;
-  let upload;
-  let voiceChatEnabled;
-  let voiceToggleDisabled;
-  const tmp2 = applicationIdsForGame;
-  let obj = parentChannel(applicationIdsForGame[9]);
-  const cResult = obj.c(47);
+export const useCreateGameInvitePost = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => {
+  const cResult = parentChannel(applicationIdsForGame[9]).c(47);
   parentChannel = parentChannel.parentChannel;
   const description = parentChannel.description;
   ({ appliedTagIds, upload, onThreadCreated } = parentChannel);
+  let obj = parentChannel(applicationIdsForGame[9]);
   let obj2 = parentChannel(applicationIdsForGame[10]);
-  const application = obj2.useGameInvitesChannelOfficialApplication(parentChannel.id).application;
-  const obj3 = parentChannel(applicationIdsForGame[11]);
-  applicationIdsForGame = obj3.useApplicationIdsForGame(parentChannel.gameId);
+  applicationIdsForGame = parentChannel(applicationIdsForGame[11]).useApplicationIdsForGame(parentChannel.gameId);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [LocalActivityStore, SelfPresenceStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -78,7 +63,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => {
     cResult[1] = applicationIdsForGame;
     cResult[2] = C;
     cResult[3] = items1;
-    tmp9 = items1;
+    let tmp9 = items1;
   } else {
     class C {
       constructor() {
@@ -107,8 +92,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => {
     }
     tmp9 = cResult[3];
   }
-  const tmpResult = parentChannel(tmp2[13]);
-  const stateFromStores = tmpResult.useStateFromStores(first, C, tmp9);
+  let obj3 = parentChannel(applicationIdsForGame[11]);
+  const stateFromStores = parentChannel(applicationIdsForGame[13]).useStateFromStores(first, C, tmp9);
   if (cResult[4] !== parentChannel.availableTags) {
     class C {
       constructor() {
@@ -191,10 +176,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => {
       }
     }
   }
-  const tmpResult2 = parentChannel(tmp2[10]);
-  const gameInviteVoiceChatState = tmpResult2.useGameInviteVoiceChatState(tmp12, appliedTagIds);
+  const tmpResult = parentChannel(applicationIdsForGame[13]);
+  const gameInviteVoiceChatState = parentChannel(applicationIdsForGame[10]).useGameInviteVoiceChatState(tmp12, appliedTagIds);
   ({ noMicTag, voiceChatEnabled, voiceToggleDisabled } = gameInviteVoiceChatState);
-  let tmp15;
   if (null != stateFromStores) {
     class C {
       constructor() {
@@ -247,7 +231,6 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => {
           return null;
         }
       }
-      tmp15 = tmp16;
     }
   }
   if (cResult[8] !== description) {
@@ -276,9 +259,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => {
         return null;
       }
     }
-    cResult[8] = description;
-    cResult[9] = obj7.deriveThreadName(description);
     const deriveThreadNameResult = obj7.deriveThreadName(description);
+    cResult[8] = description;
+    cResult[9] = deriveThreadNameResult;
   } else {
     class C {
       constructor() {
@@ -306,7 +289,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => {
       }
     }
   }
-  if (application != null) {
+  if (obj2.useGameInvitesChannelOfficialApplication(parentChannel.id).application != null) {
     class C {
       constructor() {
         tmp = closure_2;
@@ -333,7 +316,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => {
       }
     }
   }
-  if (cResult[10] === tmp15) {
+  if (cResult[10] === undefined) {
     class C {
       constructor() {
         tmp = closure_2;
@@ -360,51 +343,35 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => {
       }
     }
   }
-  const obj4 = { parentChannel, name: tmp17, appliedTags: appliedTagIds, activityAction: tmp15, applicationId: undefined, voiceChatEnabled, upload, onThreadCreated };
-  cResult[10] = tmp15;
+  cResult[10] = undefined;
   cResult[11] = onThreadCreated;
   cResult[12] = parentChannel;
-  cResult[13] = tmp17;
+  cResult[13] = tmp18;
   cResult[14] = appliedTagIds;
   cResult[15] = undefined;
   cResult[16] = upload;
   cResult[17] = voiceChatEnabled;
-  cResult[18] = obj4;
+  cResult[18] = { parentChannel, name: tmp18, appliedTags: appliedTagIds, activityAction: undefined, applicationId: undefined, voiceChatEnabled, upload, onThreadCreated };
+  let obj4 = { parentChannel, name: tmp18, appliedTags: appliedTagIds, activityAction: undefined, applicationId: undefined, voiceChatEnabled, upload, onThreadCreated };
+  const tmpResult2 = parentChannel(applicationIdsForGame[10]);
 }) : ((parentChannel) => {
-  let _undefined;
-  let _undefined2;
-  let c6;
-  let c7;
-  let callback;
-  let closure_5;
-  let id;
-  let noMicTag;
-  let onThreadCreated;
-  let tmp17;
-  let tmp19;
-  let tmpResult4;
-  let upload;
-  let voiceToggleDisabled;
   parentChannel = parentChannel.parentChannel;
   const str = parentChannel.description;
   const appliedTagIds = parentChannel.appliedTagIds;
   let applicationIdsForGame;
   let createForumPostCommon;
-  react = undefined;
+  noop = undefined;
   c6 = undefined;
   c7 = undefined;
-  let closure_8;
-  const tmp = parentChannel;
-  const tmp2 = applicationIdsForGame;
+  closure_8 = undefined;
   ({ upload, onThreadCreated } = parentChannel);
+  const application = parentChannel(applicationIdsForGame[10]).useGameInvitesChannelOfficialApplication(parentChannel.id).application;
   let obj = parentChannel(applicationIdsForGame[10]);
-  const application = obj.useGameInvitesChannelOfficialApplication(parentChannel.id).application;
+  applicationIdsForGame = parentChannel(applicationIdsForGame[11]).useApplicationIdsForGame(parentChannel.gameId);
   let obj2 = parentChannel(applicationIdsForGame[11]);
-  applicationIdsForGame = obj2.useApplicationIdsForGame(parentChannel.gameId);
-  let obj3 = parentChannel(applicationIdsForGame[13]);
   const items = [c6, c7];
   const items1 = [applicationIdsForGame];
-  const stateFromStores = obj3.useStateFromStores(items, () => {
+  const stateFromStores = parentChannel(applicationIdsForGame[13]).useStateFromStores(items, () => {
     const obj = applicationIdsForGame[Symbol.iterator]();
     while (obj !== undefined) {
       let tmp7 = getCurrentUserPresenceActivityDefault(LocalActivityStore, SelfPresenceStore, tmp2);
@@ -419,62 +386,80 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => {
     }
     return null;
   }, items1);
+  let obj3 = parentChannel(applicationIdsForGame[13]);
   let availableTags = parentChannel.availableTags;
-  const useGameInviteVoiceChatState = parentChannel(applicationIdsForGame[10]).useGameInviteVoiceChatState;
-  const tmp5 = parentChannel(applicationIdsForGame[10]);
   if (availableTags == null) {
     availableTags = [];
   }
-  const gameInviteVoiceChatState = useGameInviteVoiceChatState(availableTags, appliedTagIds);
+  const gameInviteVoiceChatState = parentChannel(applicationIdsForGame[10]).useGameInviteVoiceChatState(availableTags, appliedTagIds);
   const voiceChatEnabled = gameInviteVoiceChatState.voiceChatEnabled;
-  let obj4 = react;
   const items2 = [stateFromStores];
   ({ noMicTag, voiceToggleDisabled } = gameInviteVoiceChatState);
-  const memo = react.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (null != stateFromStores) {
-      const obj = GameInvitesChannelUtils;
       if (obj.canInviteToActivity(stateFromStores)) {
-        return { type: ActivityActionTypes.JOIN, activity: stateFromStores };
+        const obj2 = { type: ActivityActionTypes.JOIN, activity: stateFromStores };
+        return obj2;
       }
+      obj = GameInvitesChannelUtils;
     }
   }, items2);
-  const obj5 = { parentChannel, name: tmpResult4.deriveThreadName(str), appliedTags: appliedTagIds, activityAction: memo, applicationId: id, voiceChatEnabled, upload, onThreadCreated };
-  const useCreateForumPostCommon = tmp(tmp2[14]).useCreateForumPostCommon;
-  tmp(tmp2[14]);
-  id = undefined;
-  tmpResult4 = tmp(tmp2[10]);
+  let obj4 = parentChannel(applicationIdsForGame[10]);
+  const obj6 = { parentChannel, name: null, appliedTags: null, activityAction: null, applicationId: null, voiceChatEnabled: null, upload: null, onThreadCreated: null };
+  const tmpResult = parentChannel(applicationIdsForGame[14]);
+  obj6.name = parentChannel(applicationIdsForGame[10]).deriveThreadName(str);
+  obj6.appliedTags = appliedTagIds;
+  obj6.activityAction = memo;
+  let id;
   if (application != null) {
     id = application.id;
   }
-  createForumPostCommon = useCreateForumPostCommon(obj5);
+  obj6.applicationId = id;
+  obj6.voiceChatEnabled = voiceChatEnabled;
+  obj6.upload = upload;
+  obj6.onThreadCreated = onThreadCreated;
+  createForumPostCommon = tmpResult.useCreateForumPostCommon(obj6);
   const hasFlagResult = parentChannel.hasFlag(ChannelFlags.REQUIRE_TAG);
-  let tmp12 = hasFlagResult;
-  if (tmp12) {
-    tmp12 = 0 === appliedTagIds.size;
+  let tmp10 = hasFlagResult;
+  if (hasFlagResult) {
+    tmp10 = 0 === appliedTagIds.size;
   }
-  react = tmp12;
+  noop = tmp10;
   const rateLimitPerUser = parentChannel.rateLimitPerUser;
+  const tmpResult4 = parentChannel(applicationIdsForGame[10]);
   const items3 = [closure_8];
-  const tmpResult5 = tmp(tmp2[13]);
-  const stateFromStores1 = tmpResult5.useStateFromStores(items3, () => SlowmodeStore.getSlowmodeCooldownGuess(parentChannel.id, SlowmodeType.CreateThread));
-  const tmpResult6 = tmp(tmp2[15]);
-  const canBypassSlowmode = tmpResult6.useCanBypassSlowmode(parentChannel);
-  const tmp16 = createForumPostCommon(obj4.useState(false), 2);
-  [tmp17, c6] = tmp16;
-  [tmp19, c7] = createForumPostCommon(obj4.useState(false), 2);
-  const tmp18 = createForumPostCommon(obj4.useState(false), 2);
-  let tmp20 = !tmp17 && str.trim().length > 0 && str.length <= tmp(tmp2[10]).GAME_INVITE_POST_MESSAGE_MAX_LENGTH;
-  if (tmp20) {
-    tmp20 = !(tmp13 && !canBypassSlowmode && stateFromStores1 > 0);
+  const stateFromStores1 = parentChannel(applicationIdsForGame[13]).useStateFromStores(items3, () => SlowmodeStore.getSlowmodeCooldownGuess(parentChannel.id, SlowmodeType.CreateThread));
+  const tmpResult5 = parentChannel(applicationIdsForGame[13]);
+  const canBypassSlowmode = parentChannel(applicationIdsForGame[15]).useCanBypassSlowmode(parentChannel);
+  const tmpResult6 = parentChannel(applicationIdsForGame[15]);
+  [tmp15, c6] = createForumPostCommon(noop.useState(false), 2);
+  const tmp14 = createForumPostCommon(noop.useState(false), 2);
+  [tmp17, c7] = createForumPostCommon(noop.useState(false), 2);
+  let tmp18 = !tmp15;
+  if (!tmp15) {
+    tmp18 = str.trim().length > 0;
   }
-  closure_8 = tmp20;
-  const items4 = [tmp20, tmp12, createForumPostCommon, str];
-  const obj6 = { application, noMicTag, voiceChatEnabled, voiceToggleDisabled, isTagRequired: hasFlagResult, hasTagRequiredError: tmp19, isSlowmodeEnabled: rateLimitPerUser > 0, rateLimitPerUser, slowmodeCooldownGuess: stateFromStores1, isBypassSlowmode: canBypassSlowmode, submitting: tmp17, canSubmit: tmp20, submit: callback };
-  callback = obj4.useCallback(stateFromStores(function*() {
+  if (tmp18) {
+    tmp18 = str.length <= tmp(tmp2[10]).GAME_INVITE_POST_MESSAGE_MAX_LENGTH;
+  }
+  if (tmp18) {
+    let tmp19 = tmp11;
+    if (tmp11) {
+      tmp19 = !canBypassSlowmode;
+    }
+    if (tmp19) {
+      tmp19 = stateFromStores1 > 0;
+    }
+    tmp18 = !tmp19;
+  }
+  closure_8 = tmp18;
+  const items4 = [tmp18, tmp10, createForumPostCommon, str];
+  const obj7 = { application, noMicTag, voiceChatEnabled, voiceToggleDisabled, isTagRequired: hasFlagResult, hasTagRequiredError: null, isSlowmodeEnabled: null, rateLimitPerUser: null, slowmodeCooldownGuess: null, isBypassSlowmode: null, submitting: null, canSubmit: null, submit: null };
+  const callback = obj5.useCallback(stateFromStores(function*() {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -484,7 +469,6 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => {
         return { value: "IconComponent", done: null };
       }
     } else {
-      let c2;
       try {
         c3 = 2;
         if (0 === c1) {
@@ -496,7 +480,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            let closure_0 = tmp;
+            closure_0 = tmp3;
             if (closure_8) {
               if (closure_5) {
                 _undefined2(true);
@@ -510,34 +494,39 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => {
               }
             }
           }
-        } else if (1 === tmp4) {
-          c2 = 0;
-          closure_128_6(false);
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw value;
-        } else if (arg0 === 2) {
+        } else {
+          if (1 === tmp7) {
+            c2 = 0;
+            closure_128_6(false);
+          } else if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            c2 = 0;
+          }
           c2 = 0;
           c3 = 3;
           const obj = { value, done: true };
           return obj;
-        } else {
-          c2 = 0;
         }
         c3 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp16) {
-        if (0 === c2) {
-          c3 = 3;
-          throw tmp16;
+      } catch (tmp19) {
+        if (tmp4 === c2) {
+          c3 = tmp2;
+          throw tmp19;
         } else {
-          c1 = 1;
+          c1 = tmp;
         }
       }
     }
   }), items4);
-  return obj6;
+  obj7.hasTagRequiredError = tmp17;
+  obj7.isSlowmodeEnabled = rateLimitPerUser > 0;
+  obj7.rateLimitPerUser = rateLimitPerUser;
+  obj7.slowmodeCooldownGuess = stateFromStores1;
+  obj7.isBypassSlowmode = canBypassSlowmode;
+  obj7.submitting = tmp15;
+  obj7.canSubmit = tmp18;
+  obj7.submit = callback;
+  return obj7;
 });
-const result = size.fileFinishedImporting("modules/game_invite_channels/useCreateGameInvitePost.tsx");
-
-export const useCreateGameInvitePost = tmp2;

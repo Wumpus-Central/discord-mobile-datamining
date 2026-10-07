@@ -1,19 +1,16 @@
 // === Module 10934: AppStoreMetadataActionCreators ===
 
 // Module 10934 (AppStoreMetadataActionCreators)
-import Constants from "Constants" /* 1085 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import Dispatcher from "Dispatcher" /* 584 */;
-import size from "module_2" /* 2 */;
 
-let c5, constants;
-
+const require = fn;
 function clearRetryState(arg0) {
   map2.delete(arg0);
   map3.delete(arg0);
 }
-const Endpoints = Constants.Endpoints;
+const Endpoints = fn(1085).Endpoints;
 let closure_5 = 10 * DurationsDefault.Millis.SECOND;
 let closure_6 = 5 * DurationsDefault.Millis.MINUTE;
 const map = new Map();
@@ -25,6 +22,7 @@ const subscription = Dispatcher.subscribe("LOGOUT", () => {
   map1.clear();
   map3.clear();
 });
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreMetadataActionCreators.tsx");
 
 export const getAppStoreMetadataCacheKey = function getAppStoreMetadataCacheKey(os) {
@@ -35,14 +33,13 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
   const storeAppId = os.storeAppId;
   const combined = "" + os + "#" + storeAppId;
   if (map.has(combined)) {
-    let value = map.get(combined);
+    value = map.get(combined);
     if (value == null) {
       value = null;
     }
-    return resolve(value);
+    return Promise.resolve(value);
   } else {
-    const value3 = map1.get(combined);
-    const tmp3 = null;
+    value3 = map1.get(combined);
     if (null != value3) {
       return value3;
     } else {
@@ -53,16 +50,11 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
           return Promise.reject(value4.error);
         }
       }
-      const tmp7 = (async function() {
-        let closure_0;
-        let closure_1;
-        let error;
-        let obj4;
-        let timestamp;
+      const tmp7 = (async () => {
         if (c5 === 2) {
           c5 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
+        } else if (tmp7 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
@@ -72,10 +64,7 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
             return { value: "IconComponent", done: null };
           }
         } else {
-          let c3;
           try {
-            let body;
-            let tmp;
             c5 = 2;
             if (0 === constants) {
               if (arg0 === 1) {
@@ -86,25 +75,27 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                os = tmp4;
-                body = undefined;
-                tmp = undefined;
+                os = tmp8;
+                let body;
+                closure_128_1 = undefined;
                 c3 = 2;
-                const HTTP = os(error[4]).HTTP;
-                const request = { url: constants.QUESTS_APP_STORE_METADATA, query: obj4, rejectWithError: true };
-                obj4 = { os, app_id: storeAppId };
+                const HTTP = os(tmp71[4]).HTTP;
+                const request = { url: constants.QUESTS_APP_STORE_METADATA, query: null, rejectWithError: true };
+                const obj4 = { os, app_id: storeAppId };
+                request.query = obj4;
                 constants = 3;
                 c5 = 1;
                 const obj5 = { value: HTTP.get(request), done: false };
                 return obj5;
               }
-            } else if (1 === constants) {
+            } else if (1 === tmp8) {
               c3 = 0;
               set.delete(closure_129_2);
-              throw error;
-            } else if (2 === constants) {
+              throw tmp71;
+            } else if (2 === tmp8) {
               c3 = 1;
-              if (404 === error.status) {
+              closure_128_2 = tmp71;
+              if (404 === closure_128_2.status) {
                 const result = map.set(closure_129_2, null);
                 clearRetryState(closure_129_2);
                 c3 = 0;
@@ -112,19 +103,19 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
                 c5 = 3;
                 return { value: null, done: true };
               } else {
-                tmp = map2.get(closure_129_2);
-                if (null == tmp) {
-                  const self = this;
-                  const self2 = this;
-                  const tmp33 = new tmp(error[5])(c5, closure_1_6);
-                  tmp = tmp33;
-                  const result1 = map2.set(closure_129_2, tmp);
+                closure_128_1 = map2.get(closure_129_2);
+                if (null == closure_128_1) {
+                  const tmp39 = new tmp4(tmp71[5])(c5, closure_1_6);
+                  closure_128_1 = tmp39;
+                  const result1 = map2.set(closure_129_2, closure_128_1);
                 }
-                const obj6 = { retryAt: timestamp + tmp.fail(), error };
+                const obj6 = { retryAt: null, error: null };
                 const _Date = Date;
-                timestamp = Date.now();
-                const result2 = set(closure_129_2, obj6);
-                throw error;
+                const timestamp = Date.now();
+                obj6.retryAt = timestamp + closure_128_1.fail();
+                obj6.error = closure_128_2;
+                const result2 = map3.set(closure_129_2, obj6);
+                throw closure_128_2;
               }
             } else if (arg0 === 1) {
               c5 = 3;
@@ -145,15 +136,14 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
               const obj = { value: body, done: true };
               return obj;
             }
-          } catch (tmp65) {
-            error = tmp65;
-            if (0 === c3) {
-              c5 = 3;
-              throw tmp65;
-            } else if (1 === tmp67) {
-              constants = 1;
+          } catch (tmp71) {
+            if (tmp5 === c3) {
+              c5 = tmp3;
+              throw tmp71;
+            } else if (tmp2 === tmp73) {
+              constants = tmp2;
             } else {
-              constants = 2;
+              constants = tmp;
             }
           }
         }

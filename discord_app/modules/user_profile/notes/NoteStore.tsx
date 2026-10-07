@@ -6,28 +6,27 @@ import LibdiscoreStore2 from "LibdiscoreStore" /* 2075 */;
 import PlainRecord from "PlainRecord" /* 2067 */;
 import size from "module_2" /* 2 */;
 
-let TypeTag;
-let _window;
-({ TypeTag, constructInPlace: _window } = PlainRecord);
+({ TypeTag, constructInPlace: closure_0 } = PlainRecord);
 const LibdiscoreStore = LibdiscoreStore2.LibdiscoreStore;
 const Note = "Note";
 class NoteStore extends LibdiscoreStore {
   constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     applyArgumentsResult.database = applyArgumentsResult.addKVDatabase("notes");
     return applyArgumentsResult;
   }
-  getNote(arg0) {
-    const database = this.database;
-    return database.get(arg0);
-  }
-  stateWrapper() {
-    return this.database;
-  }
 }
 const prototype = NoteStore.prototype;
+prototype["getNote"] = function getNote(arg0) {
+  const database = this.database;
+  return database.get(arg0);
+};
+prototype["stateWrapper"] = function stateWrapper() {
+  return this.database;
+};
 NoteStore.displayName = "NoteStore";
-let obj = {
+const LibdiscoreBatchStoreRefactorExperiment = libdiscoreExperiments.LibdiscoreBatchStoreRefactorExperiment;
+const noteStore = new NoteStore({
   LOGOUT(arg0, clear) {
     return clear.clear();
   },
@@ -41,15 +40,12 @@ let obj = {
     return clear.clear();
   },
   USER_NOTE_UPDATE(note, set) {
-    const obj = { loading: false, note: note.note };
-    const result = set.set(note.id, React(Note, obj));
+    const result = set.set(note.id, React(Note, { loading: false, note: note.note }));
   },
   USER_NOTE_LOAD_START(userId, set) {
     const result = set.set(userId.userId, React(Note, { loading: true, note: null }));
   }
-};
-const LibdiscoreBatchStoreRefactorExperiment = libdiscoreExperiments.LibdiscoreBatchStoreRefactorExperiment;
-const noteStore = new NoteStore(obj, LibdiscoreBatchStoreRefactorExperiment.getCachedBridgedStoreMode());
+}, LibdiscoreBatchStoreRefactorExperiment.getCachedBridgedStoreMode());
 let result = size.fileFinishedImporting("modules/user_profile/notes/NoteStore.tsx");
 
 export default noteStore;

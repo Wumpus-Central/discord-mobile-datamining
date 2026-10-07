@@ -2,93 +2,90 @@
 
 // Module 7137 (NotificationCenterItemsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 5118 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7050 */;
 import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7138 */;
 import NotificationCenterUtils from "NotificationCenterUtils" /* 7139 */;
 import ExperimentStore from "ExperimentStore" /* 4782 */;
 import MessageRecord from "MessageRecord" /* 4526 */;
 import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import size from "module_2" /* 2 */;
 
-let set;
+require = fn;
 function _validate(id) {
   return null != id.id && null != id.type;
 }
 function toNotificationCenterItem(item_enum) {
-  let id;
-  let messageRecord;
-  const tmp3 = item_enum.item_enum === NotificationCenterItemsTypes.ItemEnum.FIRST_MESSAGE && item_enum.type === NotificationCenterItemsTypes.NotificationCenterItems.LIFECYCLE_ITEM;
+  let tmp3 = item_enum.item_enum === NotificationCenterItemsTypes.ItemEnum.FIRST_MESSAGE;
+  if (tmp3) {
+    tmp3 = item_enum.type === NotificationCenterItemsTypes.NotificationCenterItems.LIFECYCLE_ITEM;
+  }
   if (tmp3) {
     item_enum.deeplink = "https://discord.com/feature/composeMessage";
   }
-  obj = { kind: "notification-center-item", message: messageRecord, applicationId: id };
+  obj = {};
   const merged = Object.assign(item_enum);
-  messageRecord = undefined;
+  obj.kind = "notification-center-item";
+  let messageRecord;
   if (null != item_enum.message) {
+    messageRecord = MessageRecordUtils.createMessageRecord(item_enum.message);
     const tmpResult = MessageRecordUtils;
-    messageRecord = tmpResult.createMessageRecord(item_enum.message);
   }
-  id = undefined;
+  obj.message = messageRecord;
+  let id;
   if (null != item_enum.application) {
     id = item_enum.application.id;
   }
+  obj.applicationId = id;
   return obj;
 }
 function handleAddItem(type) {
-  let id;
-  let item;
-  let messageRecord;
   if ("NOTIFICATION_CENTER_ITEM_CREATE" === type.type) {
     const item2 = type.item;
-    const tmp4 = item2.item_enum === NotificationCenterItemsTypes.ItemEnum.FIRST_MESSAGE && item2.type === NotificationCenterItemsTypes.NotificationCenterItems.LIFECYCLE_ITEM;
-    if (tmp4) {
+    let tmp3 = item2.item_enum === NotificationCenterItemsTypes.ItemEnum.FIRST_MESSAGE;
+    if (tmp3) {
+      tmp3 = item2.type === NotificationCenterItemsTypes.NotificationCenterItems.LIFECYCLE_ITEM;
+    }
+    if (tmp3) {
       item2.deeplink = "https://discord.com/feature/composeMessage";
     }
-    obj = { kind: "notification-center-item", message: messageRecord, applicationId: id };
+    obj = {};
     const merged = Object.assign(item2);
-    messageRecord = undefined;
+    obj.kind = "notification-center-item";
+    let messageRecord;
     if (null != item2.message) {
-      const tmp2Result = MessageRecordUtils;
-      messageRecord = tmp2Result.createMessageRecord(item2.message);
+      messageRecord = MessageRecordUtils.createMessageRecord(item2.message);
+      const tmpResult = MessageRecordUtils;
     }
-    id = undefined;
+    obj.message = messageRecord;
+    let id;
     if (null != item2.application) {
       id = item2.application.id;
     }
-    item = obj;
+    obj.applicationId = id;
+    let item = obj;
   } else {
     item = type.item;
   }
   if (obj.initialized) {
-    const tmp12 = null != item.id && null != item.type;
-    if (tmp12) {
+    if (tmp11) {
       const notifCenterIds = obj.notifCenterIds;
       if (!notifCenterIds.has(item.id)) {
         const notifCenterIds2 = obj.notifCenterIds;
         notifCenterIds2.add(item.id);
         const items = [item];
-        HermesBuiltin.arraySpread(items, obj.notifCenterItems, 1);
+        HermesBuiltin.arraySpread(obj.notifCenterItems, 1);
         obj.notifCenterItems = items;
         const notifCenterItems = obj.notifCenterItems;
-        const sorted = notifCenterItems.sort((id, id2) => {
-          obj = SnowflakeUtilsDefault;
-          return obj.compare(id2.id, id.id);
-        });
+        const sorted = notifCenterItems.sort((id, id2) => SnowflakeUtilsDefault.compare(id2.id, id.id));
       }
     }
+    tmp11 = null != item.id && null != item.type;
   }
   return false;
 }
 function handleRelationshipAddOrUpdate(relationship) {
-  let c1;
-  let type;
-  let user;
-  let userIgnored;
   relationship = relationship.relationship;
   c1 = undefined;
   user = undefined;
@@ -97,33 +94,29 @@ function handleRelationshipAddOrUpdate(relationship) {
   if (type === RelationshipTypes.PENDING_INCOMING) {
     if (!relationship.isSpamRequest) {
       if (!userIgnored) {
-        let tmp4 = null;
         if (null == since) {
           return null;
         } else if (null != user) {
           const user1 = UserStore.getUser(user.id);
           if (null != user1) {
-            let tmp7 = obj;
             const items = [];
-            let tmp10 = relationship;
-            const arraySpreadResult = HermesBuiltin.arraySpread(items, obj.notifCenterLocalItems, 0);
             obj = relationship(user[8]);
-            items[arraySpreadResult] = obj.incomingFriendRequestLocalItem(user1, since, tmp2);
+            items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingFriendRequestLocalItem(user1, since, tmp);
             obj.notifCenterLocalItems = items;
+            const arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0);
           }
         }
       }
     }
   }
-  let tmp12 = type !== RelationshipTypes.FRIEND;
-  if (!tmp12) {
-    let tmp13 = null;
-    tmp12 = null == relationship.user;
+  let tmp11 = type !== RelationshipTypes.FRIEND;
+  if (!tmp11) {
+    tmp11 = null == relationship.user;
   }
-  if (!tmp12) {
-    tmp12 = userIgnored;
+  if (!tmp11) {
+    tmp11 = userIgnored;
   }
-  if (!tmp12) {
+  if (!tmp11) {
     const prop = obj.notifCenterLocalItems;
     obj.notifCenterLocalItems = prop.map((type) => {
       let tmp4 = type.type === NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS;
@@ -137,16 +130,19 @@ function handleRelationshipAddOrUpdate(relationship) {
       }
       let tmp7 = type;
       if (tmp4) {
-        obj = { acked: true, forceUnacked: false, local_id: "incoming_friend_requests_accepted_" + user.id + "_" + type.id, type: NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED };
+        obj = {};
         const merged = Object.assign(type);
+        obj.acked = true;
+        obj.forceUnacked = false;
         const _HermesInternal = HermesInternal;
+        obj.local_id = "incoming_friend_requests_accepted_" + user.id + "_" + type.id;
+        obj.type = NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED;
         tmp7 = obj;
       }
       return tmp7;
     });
   }
-  const tmp15 = type === RelationshipTypes.BLOCKED || userIgnored;
-  if (tmp15) {
+  if (tmp14) {
     const prop1 = obj.notifCenterLocalItems;
     obj.notifCenterLocalItems = prop1.filter((type) => {
       let tmp4 = type.type === NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS;
@@ -197,58 +193,59 @@ function handleRelationshipAddOrUpdate(relationship) {
       return !tmp4;
     });
   }
+  tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = GuildScheduledEventStore.isGuildEventEnded;
-const RelationshipTypes = Constants.RelationshipTypes;
-let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: set, notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "Set", notifCenterActive: "none", notifCenterTabFocused: "URL" };
-set = new Set();
-const PersistedStore = get_initializedDefault.PersistedStore;
+const isGuildEventEnded = fn(7050).isGuildEventEnded;
+const RelationshipTypes = fn(1085).RelationshipTypes;
+let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "Set", notifCenterActive: "none", notifCenterTabFocused: "URL" };
+const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {
-  initialize(notifCenterItems) {
-    this.waitFor(UserStore, RelationshipStore, ExperimentStore);
-    if (null != notifCenterItems) {
-      notifCenterItems = notifCenterItems.notifCenterItems;
-      const mapped = notifCenterItems.map(function(message) {
-        let tmp2;
-        obj = { message: tmp2 };
-        const merged = Object.assign(message);
-        tmp2 = undefined;
-        if (null != message.message) {
-          const self = this;
-          const self2 = this;
-          tmp2 = new MessageRecord(message.message);
-        }
-        return obj;
-      });
-      if (mapped.length > 0) {
-        obj = { initialized: true, isDataStale: true, notifCenterItems: [], staleNotifCenterItems: mapped };
-        let tmp2 = obj;
-        let merged = Object.assign(obj);
-      }
-    }
-  }
-  getState() {
-    let notifCenterItems;
-    let prop;
-    function pack(message) {
-      let toJSResult;
-      obj = { message: toJSResult };
-      const merged = Object.assign(message);
-      toJSResult = undefined;
-      if (null != message.message) {
-        message = message.message;
-        toJSResult = message.toJS();
-      }
-      return obj;
-    }
-    obj = { notifCenterItems: notifCenterItems.map(pack), staleNotifCenterItems: prop.map(pack) };
-    let merged = Object.assign(obj);
-    notifCenterItems = obj.notifCenterItems;
-    prop = obj.staleNotifCenterItems;
-    return obj;
-  }
 }
 const prototype = NotificationCenterItemsStore.prototype;
+prototype["initialize"] = function initialize(notifCenterItems) {
+  this.waitFor(UserStore, RelationshipStore, ExperimentStore);
+  if (null != notifCenterItems) {
+    notifCenterItems = notifCenterItems.notifCenterItems;
+    const mapped = notifCenterItems.map((message) => {
+      obj = {};
+      const merged = Object.assign(message);
+      let tmp2;
+      if (null != message.message) {
+        tmp2 = new MessageRecord(message.message);
+      }
+      obj.message = tmp2;
+      return obj;
+    });
+    if (mapped.length > 0) {
+      obj = {};
+      let merged = Object.assign(obj);
+      obj.initialized = true;
+      obj.isDataStale = true;
+      obj.notifCenterItems = [];
+      obj.staleNotifCenterItems = mapped;
+    }
+  }
+};
+prototype["getState"] = function getState() {
+  function pack(message) {
+    obj = {};
+    const merged = Object.assign(message);
+    let toJSResult;
+    if (null != message.message) {
+      message = message.message;
+      toJSResult = message.toJS();
+    }
+    obj.message = toJSResult;
+    return obj;
+  }
+  obj = {};
+  let merged = Object.assign(obj);
+  const notifCenterItems = obj.notifCenterItems;
+  obj.notifCenterItems = notifCenterItems.map(pack);
+  const prop = obj.staleNotifCenterItems;
+  obj.staleNotifCenterItems = prop.map(pack);
+  return obj;
+};
 Object.defineProperty(prototype, "loading", {
   get: function loading() {
     return obj.loading;
@@ -305,18 +302,12 @@ Object.defineProperty(prototype, "tabFocused", {
 });
 NotificationCenterItemsStore.displayName = "NotificationCenterItemsStore";
 NotificationCenterItemsStore.persistKey = "NotificationCenterItemsStore_v2";
-const obj2 = {
+const notificationCenterItemsStore = new NotificationCenterItemsStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(relationships) {
     const items = [];
-    set = new Set();
+    const set = new Set();
     relationships = relationships.relationships;
     let item = relationships.forEach((item) => {
-      let id;
-      let is_spam_request;
-      let origin_application_id;
-      let since;
-      let type;
-      let user_ignored;
       ({ id, since, user_ignored, type, is_spam_request, origin_application_id } = item);
       if (user_ignored) {
         set.add(id);
@@ -329,9 +320,7 @@ const obj2 = {
               if (null == user) {
                 return null;
               } else {
-                const push = items.push;
-                obj = NotificationCenterUtils;
-                push(obj.incomingFriendRequestLocalItem(user, since, origin_application_id));
+                items.push(NotificationCenterUtils.incomingFriendRequestLocalItem(user, since, origin_application_id));
               }
             }
           }
@@ -346,9 +335,7 @@ const obj2 = {
         if (!set.has(id)) {
           const user = UserStore.getUser(id);
           if (null != user) {
-            const push = items.push;
-            obj = NotificationCenterUtils;
-            push(obj.incomingGameFriendRequestLocalItem(user, tmp2, tmp));
+            items.push(NotificationCenterUtils.incomingGameFriendRequestLocalItem(user, tmp2, tmp));
           }
         }
       }
@@ -356,17 +343,17 @@ const obj2 = {
     const guilds = relationships.guilds;
     const item2 = guilds.forEach((guild_scheduled_events) => {
       const prop = guild_scheduled_events.guild_scheduled_events;
-      let item = prop.forEach((item) => {
+      const item = prop.forEach((item) => {
         if (closure_4(item)) {
-          let tmp = notifCenterItems;
           notifCenterItems = notifCenterItems.notifCenterItems;
           notifCenterItems.notifCenterItems = notifCenterItems.map((type) => {
             let tmp = type;
             if (type.type === items(closure_2_2[6]).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED) {
               tmp = type;
               if (type.guild_scheduled_event_id === item.id) {
-                obj = { disable_action: true };
+                obj = {};
                 const merged = Object.assign(type);
+                obj.disable_action = true;
                 tmp = obj;
               }
             }
@@ -378,28 +365,28 @@ const obj2 = {
     obj.notifCenterLocalItems = items;
   },
   LOGOUT() {
-    let prop;
     let flag = {}.keepLocalItems;
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: prop, paginationHasMore: true, paginationCursor: "Set", notifCenterActive: "none", notifCenterTabFocused: "URL" };
-    new Set();
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "Set", notifCenterActive: "none", notifCenterTabFocused: "URL" };
     if (flag) {
-      prop = obj.notifCenterLocalItems;
+      let prop = obj.notifCenterLocalItems;
     } else {
       prop = [];
     }
+    obj.notifCenterLocalItems = prop;
   },
   NOTIFICATION_CENTER_ITEMS_ACK: function handleAck(ids) {
     ids = ids.ids;
-    let c1 = true;
+    c1 = true;
     const notifCenterItems = obj.notifCenterItems;
     const mapped = notifCenterItems.map((id) => {
       let tmp = id;
       if (ids.includes(id.id)) {
-        obj = { acked };
+        obj = {};
         const merged = Object.assign(id);
+        obj.acked = acked;
         tmp = obj;
       }
       return tmp;
@@ -408,13 +395,14 @@ const obj2 = {
   },
   NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: function handleAckFailure(ids) {
     ids = ids.ids;
-    let c1 = false;
+    c1 = false;
     const notifCenterItems = obj.notifCenterItems;
     const mapped = notifCenterItems.map((id) => {
       let tmp = id;
       if (ids.includes(id.id)) {
-        obj = { acked };
+        obj = {};
         const merged = Object.assign(id);
+        obj.acked = acked;
         tmp = obj;
       }
       return tmp;
@@ -430,8 +418,9 @@ const obj2 = {
         if (type.type === items(closure_2_2[6]).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED) {
           tmp = type;
           if (type.guild_scheduled_event_id === item.id) {
-            obj = { disable_action: true };
+            obj = {};
             const merged = Object.assign(type);
+            obj.disable_action = true;
             tmp = obj;
           }
         }
@@ -462,8 +451,6 @@ const obj2 = {
     obj.errored = true;
   },
   LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: function handleLoadSuccess(arg0) {
-    let cursor;
-    let items;
     ({ items, cursor } = arg0);
     if (obj.loading) {
       obj.loading = false;
@@ -476,46 +463,45 @@ const obj2 = {
         hasItem = notifCenterIds.has(cursor);
       }
       if (!hasItem) {
-        const tmp11 = items.length > 0 && tmp2;
-        obj.paginationHasMore = tmp11;
-        let tmp13;
-        if (items.length > 0) {
-          tmp13 = cursor;
+        let tmp10 = items.length > 0;
+        if (tmp10) {
+          tmp10 = tmp;
         }
-        obj.paginationCursor = tmp13;
+        obj.paginationHasMore = tmp10;
+        let tmp12;
+        if (items.length > 0) {
+          tmp12 = cursor;
+        }
+        obj.paginationCursor = tmp12;
       }
       const items1 = [];
-      const arraySpreadResult = HermesBuiltin.arraySpread(items1, obj.notifCenterItems, 0);
       const mapped = items.map(toNotificationCenterItem);
-      HermesBuiltin.arraySpread(items1, mapped.filter((id) => {
+      HermesBuiltin.arraySpread(mapped.filter((id) => {
         const notifCenterIds = obj.notifCenterIds;
         return !notifCenterIds.has(id.id);
-      }), arraySpreadResult);
+      }), HermesBuiltin.arraySpread(obj.notifCenterItems, 0));
       obj.notifCenterItems = items1;
       const notifCenterItems = obj.notifCenterItems;
-      const sorted = notifCenterItems.sort((id, id2) => {
-        obj = SnowflakeUtilsDefault;
-        return obj.compare(id2.id, id.id);
-      });
+      const sorted = notifCenterItems.sort((id, id2) => SnowflakeUtilsDefault.compare(id2.id, id.id));
       const item = items.forEach((id) => {
         const notifCenterIds = obj.notifCenterIds;
         return notifCenterIds.add(id.id);
       });
+      const arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterItems, 0);
     }
   },
   RESET_NOTIFICATION_CENTER() {
-    let prop;
     let flag = { keepLocalItems: true }.keepLocalItems;
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: prop, paginationHasMore: true, paginationCursor: "Set", notifCenterActive: "none", notifCenterTabFocused: "URL" };
-    new Set();
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "Set", notifCenterActive: "none", notifCenterTabFocused: "URL" };
     if (flag) {
-      prop = obj.notifCenterLocalItems;
+      let prop = obj.notifCenterLocalItems;
     } else {
       prop = [];
     }
+    obj.notifCenterLocalItems = prop;
   },
   NOTIFICATION_CENTER_SET_ACTIVE: function handleSetActive(active) {
     obj.notifCenterActive = active.active;
@@ -526,7 +512,7 @@ const obj2 = {
   RELATIONSHIP_ADD: handleRelationshipAddOrUpdate,
   RELATIONSHIP_UPDATE: handleRelationshipAddOrUpdate,
   RELATIONSHIP_REMOVE: function handleRelationshipRemove(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     const prop = obj.notifCenterLocalItems;
     obj.notifCenterLocalItems = prop.filter((type) => {
       let tmp4 = type.type === NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS;
@@ -539,7 +525,7 @@ const obj2 = {
         tmp4 = id === tmp3;
       }
       let tmp7 = !tmp4;
-      if (tmp7) {
+      if (!tmp4) {
         let tmp9 = type.type === NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED;
         if (tmp9) {
           const other_user2 = type.other_user;
@@ -555,9 +541,6 @@ const obj2 = {
     });
   },
   GAME_RELATIONSHIP_ADD: function handleGameRelationshipAddOrUpdate(gameRelationship) {
-    let applicationId;
-    let since;
-    let type;
     gameRelationship = gameRelationship.gameRelationship;
     applicationId = undefined;
     let id = gameRelationship.id;
@@ -566,19 +549,17 @@ const obj2 = {
       return false;
     } else if (type === RelationshipTypes.PENDING_INCOMING) {
       const user = UserStore.getUser(id);
-      const tmp7 = null != since && null != user;
-      if (tmp7) {
-        let tmp8 = obj;
+      if (tmp6) {
         const items = [];
-        const arraySpreadResult = HermesBuiltin.arraySpread(items, obj.notifCenterLocalItems, 0);
         obj = id(7139);
-        items[arraySpreadResult] = obj.incomingGameFriendRequestLocalItem(user, since, applicationId);
+        items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(user, since, applicationId);
         obj.notifCenterLocalItems = items;
+        const arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0);
       }
-    } else if (type !== tmp2.FRIEND) {
+      tmp6 = null != since && null != user;
+    } else if (type !== tmp.FRIEND) {
       return false;
     } else {
-      const tmp3 = obj;
       const prop = obj.notifCenterLocalItems;
       obj.notifCenterLocalItems = prop.map((type) => {
         let tmp5 = type.type === NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS;
@@ -595,9 +576,13 @@ const obj2 = {
         }
         let tmp8 = type;
         if (tmp5) {
-          obj = { acked: true, forceUnacked: false, local_id: "incoming_game_friend_requests_accepted_" + id + "_" + type.id, type: NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED };
+          obj = {};
           const merged = Object.assign(type);
+          obj.acked = true;
+          obj.forceUnacked = false;
           const _HermesInternal = HermesInternal;
+          obj.local_id = "incoming_game_friend_requests_accepted_" + tmp3 + "_" + type.id;
+          obj.type = NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED;
           tmp8 = obj;
         }
         return tmp8;
@@ -615,13 +600,13 @@ const obj2 = {
         if (other_user != null) {
           id = other_user.id;
         }
-        tmp5 = id === require;
+        tmp5 = id === closure_1_0;
       }
       if (tmp5) {
         tmp5 = type.applicationId === importDefault;
       }
       let tmp8 = !tmp5;
-      if (tmp8) {
+      if (!tmp5) {
         let tmp9 = type.type === NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED;
         if (tmp9) {
           const other_user2 = type.other_user;
@@ -629,7 +614,7 @@ const obj2 = {
           if (other_user2 != null) {
             id1 = other_user2.id;
           }
-          tmp9 = id1 === require;
+          tmp9 = id1 === closure_1_0;
         }
         if (tmp9) {
           tmp9 = type.applicationId === importDefault;
@@ -645,8 +630,10 @@ const obj2 = {
     const mapped = notifCenterItems.map((item_enum) => {
       let tmp = item_enum;
       if (item_enum.item_enum === item_enum) {
-        obj = { completed: true, acked: true };
+        obj = {};
         const merged = Object.assign(item_enum);
+        obj.completed = true;
+        obj.acked = true;
         tmp = obj;
       }
       return tmp;
@@ -654,22 +641,21 @@ const obj2 = {
     obj.notifCenterItems = mapped.filter(_validate);
   },
   SET_RECENT_MENTIONS_FILTER() {
-    let prop;
     let flag = { keepLocalItems: true }.keepLocalItems;
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: prop, paginationHasMore: true, paginationCursor: "Set", notifCenterActive: "none", notifCenterTabFocused: "URL" };
-    new Set();
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "Set", notifCenterActive: "none", notifCenterTabFocused: "URL" };
     if (flag) {
-      prop = obj.notifCenterLocalItems;
+      let prop = obj.notifCenterLocalItems;
     } else {
       prop = [];
     }
+    obj.notifCenterLocalItems = prop;
   },
   MOBILE_NATIVE_UPDATE_CHECK_FINISHED: function handleMobileNativeUpdate(newBuild) {
     newBuild = newBuild.newBuild;
-    let c0;
+    c0 = undefined;
     if (null !== newBuild) {
       obj = NotificationCenterUtils;
       const result = obj.mobileNativeUpdateAvailableLocalItem(newBuild);
@@ -678,29 +664,29 @@ const obj2 = {
       if (undefined === prop.find((local_id) => local_id.local_id === _undefined.local_id)) {
         const prop1 = obj.notifCenterLocalItems;
         const items = [];
-        items[HermesBuiltin.arraySpread(items, prop1.filter((type) => type.type !== closure_0.type), 0)] = result;
+        items[HermesBuiltin.arraySpread(prop1.filter((type) => type.type !== _undefined.type), 0)] = result;
         obj.notifCenterLocalItems = items;
       }
     }
   },
   APPLICATIONS_FETCH_SUCCESS: function handleFetchApplicationsSuccess(unknownApplicationIds) {
     unknownApplicationIds = unknownApplicationIds.unknownApplicationIds;
-    set = undefined;
+    let set;
     if (null != unknownApplicationIds) {
-      let tmp = globalThis;
       const _Set = Set;
-      const self = this;
-      const self2 = this;
       set = new Set(unknownApplicationIds);
       const prop = obj.notifCenterLocalItems;
       obj.notifCenterLocalItems = prop.filter((applicationId) => {
-        const tmp = null == applicationId.applicationId || !set.has(applicationId.applicationId);
+        let tmp = null == applicationId.applicationId;
+        if (!tmp) {
+          tmp = !set.has(applicationId.applicationId);
+        }
         return tmp;
       });
     }
   }
-};
-const notificationCenterItemsStore = new NotificationCenterItemsStore(DispatcherDefault, obj2);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/notification_center/NotificationCenterItemsStore.tsx");
 
 export default notificationCenterItemsStore;

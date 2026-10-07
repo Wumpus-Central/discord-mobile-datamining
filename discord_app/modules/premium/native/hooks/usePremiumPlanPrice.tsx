@@ -1,43 +1,24 @@
 // === Module 8898: usePremiumPlanPrice ===
 
 // Module 8898 (usePremiumPlanPrice)
-import Constants from "Constants" /* 1096 */;
 import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 6770 */;
-import react_mod from "react" /* 19 */;
-import SubscriptionPlanStore_mod from "SubscriptionPlanStore" /* 4539 */;
-import SubscriptionStore_mod from "SubscriptionStore" /* 4540 */;
+import noop from "module_19" /* 19 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4539 */;
+import SubscriptionStore from "SubscriptionStore" /* 4540 */;
 import IAPStore from "IAPStore" /* 6931 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, failResult, num, succeedResult, tmp10, tmp3;
 
-let react = react_mod;
-let SubscriptionPlanStore = SubscriptionPlanStore_mod;
-let SubscriptionStore = SubscriptionStore_mod;
-const PaymentGateways = Constants.PaymentGateways;
+require = fn;
+const PaymentGateways = fn(1096).PaymentGateways;
 const PremiumPlanPriceSource = { IAP: "IAP", API: "API" };
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let closure_5;
-  let fetchingForPremiumSKUs;
-  let mobileStoreFront;
-  let price;
-  let priceState;
-  let tmp11;
-  let tmp13;
-  let tmp14;
-  let tmp18;
-  let tmp20;
-  let tmp21;
-  let tmp4;
-  let tmp5;
-  let tmp8;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/hooks/usePremiumPlanPrice.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   _require = arg0;
-  let tmp = _require;
-  let obj = require("react");
-  const cResult = obj.c(34);
+  const cResult = require("c").c(34);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SubscriptionStore];
     class S {
@@ -51,23 +32,23 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const tmpResult = tmp(priceState[7]);
-  const stateFromStores = tmpResult.useStateFromStores(tmp4, S);
+  let obj = require("c");
+  const stateFromStores = require("initialize").useStateFromStores(tmp4, S);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { location: "usePremiumPlanPrice" };
-    cResult[2] = obj2;
+    cResult[2] = { location: "usePremiumPlanPrice" };
     class S {
       constructor() {
         return closure_5.getPremiumTypeSubscription();
       }
     }
+    const obj2 = { location: "usePremiumPlanPrice" };
   } else {
-    tmp8 = cResult[2];
+    const tmp8 = cResult[2];
   }
   const NitroACOMSubscriptionExperiment = tmp(priceState[8]).NitroACOMSubscriptionExperiment;
   const enabled = NitroACOMSubscriptionExperiment.useConfig(tmp8).enabled;
-  const obj4 = mobileStoreFront(priceState[9]);
-  mobileStoreFront = obj4.useMobileStoreFront();
+  const tmpResult = require("initialize");
+  mobileStoreFront = mobileStoreFront(priceState[9]).useMobileStoreFront();
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [SubscriptionPlanStore];
     class S {
@@ -76,13 +57,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     cResult[3] = items1;
-    tmp11 = items1;
+    let tmp11 = items1;
   } else {
     tmp11 = cResult[3];
   }
   if (cResult[4] !== arg0) {
     const fn = function p() {
-      let value = null;
+      value = null;
       if (null != closure_0) {
         value = SubscriptionPlanStore.get(tmp);
       }
@@ -97,21 +78,21 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[4] = arg0;
     cResult[5] = fn;
     cResult[6] = items2;
-    tmp14 = items2;
-    tmp13 = fn;
+    let tmp14 = items2;
+    let tmp13 = fn;
   } else {
     tmp13 = cResult[5];
     tmp14 = cResult[6];
   }
-  const tmpResult4 = tmp(priceState[7]);
-  const stateFromStores1 = tmpResult4.useStateFromStores(tmp11, tmp13, tmp14);
-  const tmp16 = mobileStoreFront(priceState[10])(stateFromStores1, mobileStoreFront);
-  ({ price, priceState } = tmp16);
+  const obj4 = mobileStoreFront(priceState[9]);
+  const stateFromStores1 = require("initialize").useStateFromStores(tmp11, tmp13, tmp14);
+  const tmpResult4 = require("initialize");
+  ({ price, priceState } = mobileStoreFront(priceState[10])(stateFromStores1, mobileStoreFront));
   let tmp17 = null;
   if (null != arg0) {
     tmp17 = tmp(priceState[11]).BasePlanIdToProductId[arg0];
   }
-  let closure_3 = tmp17;
+  closure_3 = tmp17;
   if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
     const items3 = [IAPStore];
     class S {
@@ -120,7 +101,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     cResult[7] = items3;
-    tmp18 = items3;
+    let tmp18 = items3;
   } else {
     tmp18 = cResult[7];
   }
@@ -141,14 +122,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[8] = tmp17;
     cResult[9] = fn2;
     cResult[10] = items4;
-    tmp21 = items4;
-    tmp20 = fn2;
+    let tmp21 = items4;
+    let tmp20 = fn2;
   } else {
     tmp20 = cResult[9];
     tmp21 = cResult[10];
   }
-  const tmpResult5 = tmp(priceState[7]);
-  const stateFromStores2 = tmpResult5.useStateFromStores(tmp18, tmp20, tmp21);
+  const tmp16 = mobileStoreFront(priceState[10])(stateFromStores1, mobileStoreFront);
+  const stateFromStores2 = require("initialize").useStateFromStores(tmp18, tmp20, tmp21);
   if (cResult[11] === enabled) {
     if (stateFromStores != null) {
       const isACOM = stateFromStores.isACOM;
@@ -163,7 +144,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
       class U {
         constructor() {
-          const tmp = new mobileStoreFront(priceState[13])(500, 10000);
+          tmp = new closure_1(priceState[13])(500, 10000);
           return tmp;
         }
       }
@@ -176,49 +157,48 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     } else {
       class U {
         constructor() {
-          const tmp = new mobileStoreFront(priceState[13])(500, 10000);
+          tmp = new closure_1(priceState[13])(500, 10000);
           return tmp;
         }
       }
     }
-    const tmp28 = mobileStoreFront(priceState[14])(tmp27);
+    const tmp28 = tmp9(priceState[14])(tmp27);
     SubscriptionStore = tmp28;
     if (cResult[15] === priceState) {
       class U {
         constructor() {
-          const tmp = new mobileStoreFront(priceState[13])(500, 10000);
+          tmp = new closure_1(priceState[13])(500, 10000);
           return tmp;
         }
       }
     }
     class V {
       constructor() {
-        tmp = closure_4;
-        if (tmp) {
-          tmp2 = priceState;
-          tmp3 = closure_0;
-          tmp4 = priceState;
+        if (closure_4) {
+          tmp = priceState;
+          tmp2 = closure_0;
+          tmp3 = priceState;
           if (priceState !== closure_0(priceState[10]).PriceStates.PRICE_AVAILABLE) {
-            if (tmp2 === tmp3(tmp4[10]).PriceStates.MISMATCHING_COUNTRIES) {
-              tmp7 = closure_1;
-              tmp8 = null;
+            if (tmp === tmp2(tmp3[10]).PriceStates.MISMATCHING_COUNTRIES) {
+              tmp6 = closure_1;
+              tmp7 = null;
               country = undefined;
               if (closure_1 != null) {
-                country = tmp7.country;
+                country = tmp6.country;
               }
               if (null != country) {
                 obj = closure_5;
                 if (!closure_5.pending) {
-                  tmp10 = closure_4;
+                  tmp9 = closure_4;
                   if (!closure_4.isFetchingForPremiumSKUs()) {
                     num = 3;
                     if (obj.fails < 3) {
-                      country = tmp7.country;
+                      country = tmp6.country;
                       failResult = obj.fail(() => {
                         if (!SubscriptionPlanStore.isFetchingForPremiumSKUs()) {
                           const obj = SubscriptionPlanActionCreators;
-                          const premiumSubscriptionPlans = obj.fetchPremiumSubscriptionPlans(country2, undefined, undefined, PaymentGateways.APPLE_ADVANCED_COMMERCE);
-                          premiumSubscriptionPlans.catch(function() { /* body not rendered: F151739 */ });
+                          const premiumSubscriptionPlans = obj.fetchPremiumSubscriptionPlans(country, undefined, undefined, PaymentGateways.APPLE_ADVANCED_COMMERCE);
+                          premiumSubscriptionPlans.catch(/* F151739 */ function() { ... });
                         }
                       });
                       return () => {
@@ -230,7 +210,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
             }
           } else {
-            tmp5 = closure_5;
+            tmp4 = closure_5;
             succeedResult = closure_5.succeed();
           }
         }
@@ -245,26 +225,26 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[19] = V;
     cResult[20] = items5;
   }
-  const tmpResult6 = tmp(priceState[12]);
-  let isIOSResult = tmpResult6.isIOS();
+  const tmpResult5 = require("initialize");
+  let isIOSResult = require("PlatformUtils").isIOS();
   if (isIOSResult) {
     class U {
       constructor() {
-        const tmp = new mobileStoreFront(priceState[13])(500, 10000);
+        tmp = new closure_1(priceState[13])(500, 10000);
         return tmp;
       }
     }
-    if (!tmp26) {
+    if (!enabled) {
       class U {
         constructor() {
-          const tmp = new mobileStoreFront(priceState[13])(500, 10000);
+          tmp = new closure_1(priceState[13])(500, 10000);
           return tmp;
         }
       }
       if (stateFromStores != null) {
         class U {
           constructor() {
-            const tmp = new mobileStoreFront(priceState[13])(500, 10000);
+            tmp = new closure_1(priceState[13])(500, 10000);
             return tmp;
           }
         }
@@ -281,65 +261,59 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (stateFromStores != null) {
     class U {
       constructor() {
-        const tmp = new mobileStoreFront(priceState[13])(500, 10000);
+        tmp = new closure_1(priceState[13])(500, 10000);
         return tmp;
       }
     }
   }
   cResult[12] = undefined;
   cResult[13] = isIOSResult;
+  const tmpResult6 = require("PlatformUtils");
 }) : ((arg0) => {
-  let closure_0;
-  let closure_3;
-  let country;
-  let country1;
-  let mobileStoreFront;
-  let price;
-  let priceState;
-  let tmpResult4;
   _require = arg0;
-  let tmp = _require;
-  let obj = require("get initialized");
+  let formatPrice = _require;
+  let amount = priceState;
+  let obj = require("initialize");
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_5.getPremiumTypeSubscription());
   const NitroACOMSubscriptionExperiment = require("ACOMExperiments").NitroACOMSubscriptionExperiment;
   let enabled = NitroACOMSubscriptionExperiment.useConfig({ location: "usePremiumPlanPrice" }).enabled;
+  mobileStoreFront = mobileStoreFront(priceState[9]).useMobileStoreFront();
   const obj2 = mobileStoreFront(priceState[9]);
-  const tmp4 = mobileStoreFront;
-  mobileStoreFront = obj2.useMobileStoreFront();
+  const tmp2 = mobileStoreFront;
   const items1 = [SubscriptionPlanStore];
   const items2 = [arg0];
-  const obj3 = require("get initialized");
-  const stateFromStores1 = obj3.useStateFromStores(items1, () => {
-    let value = null;
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
+    value = null;
     if (null != closure_0) {
       value = SubscriptionPlanStore.get(tmp);
     }
     return value;
   }, items2);
-  const tmp7 = mobileStoreFront(priceState[10])(stateFromStores1, mobileStoreFront);
-  ({ price, priceState } = tmp7);
-  let tmp8 = null;
+  const obj3 = require("initialize");
+  ({ price, priceState } = mobileStoreFront(priceState[10])(stateFromStores1, mobileStoreFront));
+  let tmp6 = null;
+  let tmp7 = null;
   if (null != arg0) {
-    tmp8 = tmp(tmp2[11]).BasePlanIdToProductId[arg0];
+    tmp7 = formatPrice(amount[11]).BasePlanIdToProductId[arg0];
   }
-  react = tmp8;
+  noop = tmp7;
+  const tmp5 = mobileStoreFront(priceState[10])(stateFromStores1, mobileStoreFront);
   const items3 = [IAPStore];
-  const items4 = [tmp8];
-  const tmpResult = tmp(priceState[7]);
-  const stateFromStores2 = tmpResult.useStateFromStores(items3, () => {
+  const items4 = [tmp7];
+  const stateFromStores2 = formatPrice(amount[7]).useStateFromStores(items3, () => {
     let product = null;
     if (null != closure_3) {
       product = IAPStore.getProduct(tmp);
     }
     return product;
   }, items4);
-  const tmpResult3 = tmp(priceState[12]);
-  let isIOSResult = tmpResult3.isIOS();
+  const formatPriceResult = formatPrice(amount[7]);
+  let isIOSResult = formatPrice(amount[12]).isIOS();
   if (isIOSResult) {
     if (!enabled) {
       let isACOM;
-      if (stateFromStores != null) {
+      if (stateFromStores != tmp6) {
         isACOM = stateFromStores.isACOM;
       }
       enabled = true === isACOM;
@@ -347,13 +321,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     isIOSResult = enabled;
   }
   SubscriptionPlanStore = isIOSResult;
-  const tmp12 = tmp4(priceState[14])(() => {
-    const tmp = new mobileStoreFront(priceState[13])(500, 10000);
-    return tmp;
-  });
-  closure_5 = tmp12;
-  const items5 = [isIOSResult, priceState, mobileStoreFront, tmp12];
-  const effect = react.useEffect(() => {
+  const tmp11 = tmp2(amount[14])(() => new mobileStoreFront(priceState[13])(500, 10000));
+  closure_5 = tmp11;
+  const items5 = [isIOSResult, priceState, mobileStoreFront, tmp11];
+  const effect = noop.useEffect(() => {
     if (closure_4) {
       if (priceState !== closure_0(priceState[10]).PriceStates.PRICE_AVAILABLE) {
         if (priceState === closure_0(priceState[10]).PriceStates.MISMATCHING_COUNTRIES) {
@@ -363,13 +334,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
           if (null != country) {
             if (!closure_5.pending) {
-              if (!SubscriptionPlanStore.isFetchingForPremiumSKUs()) {
+              if (!isIOSResult.isFetchingForPremiumSKUs()) {
                 if (closure_5.fails < 3) {
-                  const country2 = mobileStoreFront.country;
+                  country = mobileStoreFront.country;
                   closure_5.fail(() => {
                     if (!SubscriptionPlanStore.isFetchingForPremiumSKUs()) {
                       const obj = SubscriptionPlanActionCreators;
-                      const premiumSubscriptionPlans = obj.fetchPremiumSubscriptionPlans(country2, undefined, undefined, PaymentGateways.APPLE_ADVANCED_COMMERCE);
+                      const premiumSubscriptionPlans = obj.fetchPremiumSubscriptionPlans(country, undefined, undefined, PaymentGateways.APPLE_ADVANCED_COMMERCE);
                       premiumSubscriptionPlans.catch(() => {
 
                       });
@@ -388,45 +359,40 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }, items5);
-  let tmp14 = null;
-  if (null != arg0) {
-    let tmp15;
-    if (isIOSResult) {
-      let tmp18 = null;
-      if (priceState === tmp(priceState[10]).PriceStates.PRICE_AVAILABLE) {
-        tmp18 = null;
-        if (null != price) {
-          ({ amount: obj7.price, currency: obj7.currency } = price);
-          const obj4 = { price: null, currency: null, countryCode: country, priceString: tmpResult4.formatPrice(price.amount, price.currency), source: obj.API };
-          country = undefined;
-          if (mobileStoreFront != null) {
-            country = mobileStoreFront.country;
-          }
-          tmp18 = obj4;
-          tmpResult4 = tmp(priceState[16]);
+  if (tmp6 == arg0) {
+    return null;
+  } else if (isIOSResult) {
+    if (priceState === formatPrice(amount[10]).PriceStates.PRICE_AVAILABLE) {
+      if (tmp6 != price) {
+        const obj4 = { price: null, currency: null, countryCode: null, priceString: null, source: null };
+        ({ amount: obj7.price, currency: obj7.currency } = price);
+        tmp6 = mobileStoreFront == tmp6;
+        let country;
+        if (!tmp6) {
+          country = mobileStoreFront.country;
         }
-      }
-      tmp15 = tmp18;
-    } else {
-      tmp15 = null;
-      if (null != stateFromStores2) {
-        const obj5 = { price: null, currency: null, countryCode: country1, priceString: stateFromStores2.priceString, source: obj.IAP };
-        ({ price: obj6.price, currencyCode: obj6.currency } = stateFromStores2);
-        country1 = undefined;
-        if (mobileStoreFront != null) {
-          country1 = mobileStoreFront.country;
-        }
-        if (country1 == null) {
-          country1 = stateFromStores2.countryCode;
-        }
-        tmp15 = obj5;
+        obj4.countryCode = country;
+        priceState = formatPrice(amount[16]);
+        formatPrice = priceState.formatPrice;
+        amount = price.amount;
+        price = formatPrice(amount, price.currency);
+        obj4.priceString = price;
+        obj4.source = obj.API;
       }
     }
-    tmp14 = tmp15;
+  } else if (tmp6 != stateFromStores2) {
+    const obj5 = { price: null, currency: null, countryCode: null, priceString: null, source: null };
+    ({ price: obj6.price, currencyCode: obj6.currency } = stateFromStores2);
+    let country1;
+    if (mobileStoreFront != tmp6) {
+      country1 = mobileStoreFront.country;
+    }
+    if (country1 == tmp6) {
+      country1 = stateFromStores2.countryCode;
+    }
+    obj5.countryCode = country1;
+    obj5.priceString = stateFromStores2.priceString;
+    obj5.source = obj.IAP;
   }
-  return tmp14;
 });
-const result = size.fileFinishedImporting("modules/premium/native/hooks/usePremiumPlanPrice.tsx");
-
-export default tmp2;
 export { PremiumPlanPriceSource };

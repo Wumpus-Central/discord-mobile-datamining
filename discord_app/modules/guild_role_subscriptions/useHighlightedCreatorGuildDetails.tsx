@@ -1,49 +1,41 @@
 // === Module 17951: useHighlightedCreatorGuildDetails ===
 
 // Module 17951 (useHighlightedCreatorGuildDetails)
-import react2 from "react" /* 576 */;
-import Constants from "Constants" /* 1085 */;
+import c from "c" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import useFetchHighlightedCreatorGuildDetailsDefault from "useFetchHighlightedCreatorGuildDetails" /* 17952 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let roles, set;
+require = fn;
+const MarketingURLs = fn(1085).MarketingURLs;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx");
 
-const MarketingURLs = Constants.MarketingURLs;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, size) => {
-  let error;
-  let highlightedCreatorDetails;
-  let isLoading;
-  const obj = react2;
-  const cResult = obj.c(28);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, size) => {
+  const cResult = c.c(28);
   ({ isLoading, error, highlightedCreatorDetails } = useFetchHighlightedCreatorGuildDetailsDefault(id));
   let store_page;
-  useFetchHighlightedCreatorGuildDetailsDefault(id);
   if (highlightedCreatorDetails != null) {
     store_page = highlightedCreatorDetails.store_page;
   }
   let benefit_emojis;
-  const first = cResult[0];
   if (store_page != null) {
     const role_subscription = store_page.role_subscription;
     if (role_subscription != null) {
       benefit_emojis = role_subscription.benefit_emojis;
     }
   }
-  if (first === benefit_emojis) {
-    let arr;
+  if (cResult[0] === benefit_emojis) {
     let group_listings;
-    const tmp8 = cResult[1];
     if (store_page != null) {
       const role_subscription2 = store_page.role_subscription;
       if (role_subscription2 != null) {
         group_listings = role_subscription2.group_listings;
       }
     }
-    if (tmp8 === group_listings) {
-      arr = cResult[2];
+    if (cResult[1] === group_listings) {
+      let arr = cResult[2];
     }
     let icon_hash;
     if (store_page != null) {
@@ -51,29 +43,19 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, size) => {
     }
     if (cResult[3] === icon_hash) {
       if (cResult[4] === size) {
-        let tmp19;
-        let tmp27;
-        let subscriber_count;
-        let tmp32;
         if (cResult[5] === id) {
-          tmp19 = cResult[6];
+          let tmp17 = cResult[6];
         }
-        let tmp22 = arr;
+        let tmp20 = arr;
         if (null != arr) {
-          tmp22 = arr;
+          tmp20 = arr;
           if (arr.length > arg1) {
             if (cResult[7] === arr) {
-              let tmp23;
-              if (cResult[8] === arg1) {
-                tmp23 = cResult[9];
-              }
-              tmp22 = tmp23;
             }
             const substr = arr.slice(0, arg1);
             cResult[7] = arr;
             cResult[8] = arg1;
             cResult[9] = substr;
-            tmp23 = substr;
           }
         }
         let diff = null;
@@ -94,91 +76,93 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, size) => {
           }
           cResult[10] = slug;
           cResult[11] = result;
-          tmp27 = result;
+          let tmp26 = result;
         } else {
-          tmp27 = cResult[11];
+          tmp26 = cResult[11];
         }
-        let name;
         if (store_page != null) {
-          const guild = store_page.guild;
+          guild = store_page.guild;
           if (guild != null) {
-            name = guild.name;
+            const name = guild.name;
           }
         }
         if (store_page != null) {
           const role_subscription7 = store_page.role_subscription;
           if (role_subscription7 != null) {
-            subscriber_count = role_subscription7.subscriber_count;
+            const subscriber_count = role_subscription7.subscriber_count;
           }
         }
-        if (!isLoading && null != name && null != icon_hash && null != tmp19) {
-          if (cResult[16] === tmp22) {
-            if (cResult[17] === tmp19) {
+        let tmp29 = !isLoading;
+        if (!isLoading) {
+          tmp29 = null != name;
+        }
+        if (tmp29) {
+          tmp29 = null != icon_hash;
+        }
+        if (tmp29) {
+          tmp29 = null != tmp17;
+        }
+        if (tmp29) {
+          if (cResult[16] === tmp20) {
+            if (cResult[17] === tmp17) {
               if (cResult[18] === icon_hash) {
                 if (cResult[19] === name) {
                   if (cResult[20] === diff) {
-                    if (cResult[21] === tmp27) {
-                      let tmp33;
+                    if (cResult[21] === tmp26) {
                       if (cResult[22] === subscriber_count) {
-                        tmp33 = cResult[23];
+                        let tmp31 = cResult[23];
                       }
-                      if (cResult[24] === (!isLoading && null != name && null != icon_hash && null != tmp19)) {
+                      if (cResult[24] === tmp29) {
                         if (cResult[25] === isLoading) {
-                          let tmp34;
-                          if (cResult[26] === tmp33) {
-                            tmp34 = cResult[27];
-                          }
-                          tmp32 = tmp34;
                         }
                       }
-                      const obj2 = { hasAllImperativeDetails: !isLoading && null != name && null != icon_hash && null != tmp19, isLoading, details: tmp33 };
-                      cResult[24] = !isLoading && null != name && null != icon_hash && null != tmp19;
+                      const obj2 = { hasAllImperativeDetails: tmp29, isLoading, details: tmp31 };
+                      cResult[24] = tmp29;
                       cResult[25] = isLoading;
-                      cResult[26] = tmp33;
+                      cResult[26] = tmp31;
                       cResult[27] = obj2;
-                      tmp34 = obj2;
                     }
                   }
                 }
               }
             }
           }
-          const obj3 = { guildName: name, guildIcon: icon_hash, guildAvatarUrl: tmp19, storePageUrl: tmp27, subscriberCount: subscriber_count, emojisToShow: tmp22, notShownEmojiCount: diff };
-          cResult[16] = tmp22;
-          cResult[17] = tmp19;
+          const obj3 = { guildName: name, guildIcon: icon_hash, guildAvatarUrl: tmp17, storePageUrl: tmp26, subscriberCount: subscriber_count, emojisToShow: tmp20, notShownEmojiCount: diff };
+          cResult[16] = tmp20;
+          cResult[17] = tmp17;
           cResult[18] = icon_hash;
           cResult[19] = name;
           cResult[20] = diff;
-          cResult[21] = tmp27;
+          cResult[21] = tmp26;
           cResult[22] = subscriber_count;
           cResult[23] = obj3;
-          tmp33 = obj3;
+          tmp31 = obj3;
         } else {
           if (cResult[12] === error) {
-            if (cResult[13] === (!isLoading && null != name && null != icon_hash && null != tmp19)) {
+            if (cResult[13] === tmp29) {
               if (cResult[14] === isLoading) {
-                tmp32 = cResult[15];
+                let tmp30 = cResult[15];
               }
+              return tmp30;
             }
           }
-          const obj4 = { hasAllImperativeDetails: !isLoading && null != name && null != icon_hash && null != tmp19, isLoading, error };
+          const obj4 = { hasAllImperativeDetails: tmp29, isLoading, error };
           cResult[12] = error;
-          cResult[13] = !isLoading && null != name && null != icon_hash && null != tmp19;
+          cResult[13] = tmp29;
           cResult[14] = isLoading;
           cResult[15] = obj4;
-          tmp32 = obj4;
+          tmp30 = obj4;
         }
-        return tmp32;
       }
     }
     const obj5 = { id, icon: icon_hash, size };
-    const tmp3Result = AvatarUtilsDefault;
-    const guildIconURL = tmp3Result.getGuildIconURL(obj5);
+    const guildIconURL = AvatarUtilsDefault.getGuildIconURL(obj5);
     cResult[3] = icon_hash;
     cResult[4] = size;
     cResult[5] = id;
     cResult[6] = guildIconURL;
-    tmp19 = guildIconURL;
+    tmp17 = guildIconURL;
+    const tmp3Result = AvatarUtilsDefault;
   }
   let group_listings1;
   if (store_page != null) {
@@ -187,7 +171,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, size) => {
       group_listings1 = role_subscription3.group_listings;
     }
   }
-  set = new Set();
+  new Set();
   if (group_listings1 != null) {
     const item = group_listings1.forEach((subscription_listings) => {
       const prop = subscription_listings.subscription_listings;
@@ -230,32 +214,21 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, size) => {
   cResult[1] = group_listings2;
   cResult[2] = found;
   arr = found;
+  const tmp4 = useFetchHighlightedCreatorGuildDetailsDefault(id);
 }) : ((id, arg1, size) => {
-  let highlightedCreatorDetails;
-  let isLoading;
-  let memo;
-  let obj4;
-  let obj5;
-  let result;
-  let store_page;
-  let subscriber_count;
-  let closure_0 = arg1;
-  const tmp2 = memo;
+  closure_0 = arg1;
   const tmp3 = store_page(memo[4])(id);
   ({ isLoading, highlightedCreatorDetails } = tmp3);
-  const tmp = store_page;
   store_page = undefined;
-  const error = tmp3.error;
   if (highlightedCreatorDetails != null) {
     store_page = highlightedCreatorDetails.store_page;
   }
   let role_subscription1;
-  const useMemo = react.useMemo;
   if (store_page != null) {
     role_subscription1 = store_page.role_subscription;
   }
   const items = [role_subscription1];
-  memo = useMemo(() => {
+  memo = noop.useMemo(() => {
     let group_listings;
     if (store_page != null) {
       const role_subscription = store_page.role_subscription;
@@ -263,7 +236,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, size) => {
         group_listings = role_subscription.group_listings;
       }
     }
-    set = new Set();
+    new Set();
     if (group_listings != null) {
       let item = group_listings.forEach((subscription_listings) => {
         const prop = subscription_listings.subscription_listings;
@@ -294,12 +267,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, size) => {
   if (store_page != null) {
     icon_hash = store_page.guild.icon_hash;
   }
-  const obj2 = { id, icon: icon_hash, size };
-  const tmpResult = tmp(tmp2[5]);
-  const guildIconURL = tmpResult.getGuildIconURL(obj2);
+  const guildIconURL = store_page(memo[5]).getGuildIconURL({ id, icon: icon_hash, size });
   const items1 = [memo, arg1];
   let diff = null;
-  const memo1 = react.useMemo(() => {
+  const memo1 = noop.useMemo(() => {
     let substr = memo;
     if (null != memo) {
       substr = memo;
@@ -320,30 +291,37 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, size) => {
     slug = highlightedCreatorDetails.slug;
   }
   if (null != slug) {
-    result = MarketingURLs.ROLE_SUBSCRIPTION_STORE_PAGE(slug);
+    const result = MarketingURLs.ROLE_SUBSCRIPTION_STORE_PAGE(slug);
   }
-  let name;
   if (store_page != null) {
-    const guild = store_page.guild;
+    guild = store_page.guild;
     if (guild != null) {
-      name = guild.name;
+      const name = guild.name;
     }
   }
   if (store_page != null) {
     let role_subscription = store_page.role_subscription;
     if (role_subscription != null) {
-      subscriber_count = role_subscription.subscriber_count;
+      const subscriber_count = role_subscription.subscriber_count;
     }
   }
-  if (!isLoading && null != name && null != icon_hash && null != guildIconURL) {
-    const obj3 = { hasAllImperativeDetails: !isLoading && null != name && null != icon_hash && null != guildIconURL, isLoading, details: obj4 };
-    obj5 = obj3;
-    obj4 = { guildName: name, guildIcon: icon_hash, guildAvatarUrl: guildIconURL, storePageUrl: result, subscriberCount: subscriber_count, emojisToShow: memo1, notShownEmojiCount: diff };
+  let tmp13 = !isLoading;
+  if (!isLoading) {
+    tmp13 = null != name;
+  }
+  if (tmp13) {
+    tmp13 = null != icon_hash;
+  }
+  if (tmp13) {
+    tmp13 = null != guildIconURL;
+  }
+  if (tmp13) {
+    const obj3 = { hasAllImperativeDetails: tmp13, isLoading, details: null };
+    const obj4 = { guildName: name, guildIcon: icon_hash, guildAvatarUrl: guildIconURL, storePageUrl: result, subscriberCount: subscriber_count, emojisToShow: memo1, notShownEmojiCount: diff };
+    obj3.details = obj4;
+    let obj5 = obj3;
   } else {
-    obj5 = { hasAllImperativeDetails: !isLoading && null != name && null != icon_hash && null != guildIconURL, isLoading, error };
+    obj5 = { hasAllImperativeDetails: tmp13, isLoading, error: tmp3.error };
   }
   return obj5;
 });
-let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx");
-
-export default tmp2;

@@ -1,136 +1,116 @@
 // === Module 11285: PublicGuildAnnouncementProfile ===
 
 // Module 11285 (PublicGuildAnnouncementProfile)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl4 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import native from "native" /* 1188 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import FastImageDefault from "FastImage" /* 5981 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
 import PublicGuildsUtils from "PublicGuildsUtils" /* 7716 */;
-import AssetRegistryDefault from "AssetRegistry" /* 11286 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import _modDef11286 from "module_11286" /* 11286 */;
+import noop from "module_19" /* 19 */;
 
-let BottomSheet;
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { content: { padding: 16 }, avatar: null, nameWrapper: null, headerText: null, description: null };
+let size = { borderRadius: nativeDefault.radii.lg, height: 80, width: 80, marginVertical: 16 };
+obj2.avatar = size;
+obj2.nameWrapper = { flexDirection: "row", alignItems: "center" };
+obj2.headerText = { marginLeft: 8 };
+obj2.description = { marginTop: 8 };
+let closure_6 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/public_guilds/native/components/PublicGuildAnnouncementProfile.tsx");
 
-let closure_4;
-let hasOwnProperty;
-let size;
-const View = react_native.View;
-({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
-let obj = { content: { padding: 16 }, avatar: size, nameWrapper: { flexDirection: "row", alignItems: "center" }, headerText: { marginLeft: 8 }, description: { marginTop: 8 } };
-size = { borderRadius: nativeDefault.radii.lg, height: 80, width: 80, marginVertical: 16 };
-let closure_6 = createStyles.createStyles(obj);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let avatar;
-  let content;
-  let first;
-  let items;
-  let items1;
-  let obj8;
-  let tmp11;
-  let tmp15;
-  let tmp17;
-  let tmp7;
-  const obj = react2;
-  const cResult = obj.c(22);
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(22);
   const tmp4 = closure_6();
   ({ content, avatar } = tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = PublicGuildsUtils;
-    const publicSystemMessageAvatar = tmpResult.getPublicSystemMessageAvatar();
+    const publicSystemMessageAvatar = PublicGuildsUtils.getPublicSystemMessageAvatar();
     cResult[0] = publicSystemMessageAvatar;
-    first = publicSystemMessageAvatar;
+    let first = publicSystemMessageAvatar;
+    const tmpResult = PublicGuildsUtils;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== tmp4.avatar) {
     const obj2 = { style: avatar, source: first };
-    const tmp10 = React3(FastImageDefault, obj2);
+    const tmp10 = React4(FastImageDefault, obj2);
     cResult[1] = tmp4.avatar;
     cResult[2] = tmp10;
-    tmp7 = tmp10;
+    let tmp7 = tmp10;
   } else {
     tmp7 = cResult[2];
   }
-  const nameWrapper = tmp4.nameWrapper;
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { source: AssetRegistryDefault, disableColor: true };
-    const Icon = native.Icon;
-    const tmp14 = React3(Icon, obj3);
+    const obj3 = { source: _modDef11286, disableColor: true };
+    const tmp14 = React4(native.Icon, obj3);
     cResult[3] = tmp14;
-    tmp11 = tmp14;
+    let tmp11 = tmp14;
   } else {
     tmp11 = cResult[3];
   }
-  const headerText = tmp4.headerText;
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = intl4.intl;
-    const stringResult = intl.string(intl4.t.xfAlNx);
+    const intl = util.intl;
+    const stringResult = intl.string(util.t.xfAlNx);
     cResult[4] = stringResult;
-    tmp15 = stringResult;
+    let tmp15 = stringResult;
   } else {
     tmp15 = cResult[4];
   }
   if (cResult[5] !== tmp4.headerText) {
-    const obj4 = { style: headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp15 };
-    const tmp19 = React3(Text_Text.Text, obj4);
+    const obj4 = { style: tmp4.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp15 };
+    const tmp19 = React4(Text_Text.Text, obj4);
     cResult[5] = tmp4.headerText;
     cResult[6] = tmp19;
-    tmp17 = tmp19;
+    let tmp17 = tmp19;
   } else {
     tmp17 = cResult[6];
   }
   if (cResult[7] === tmp4.nameWrapper) {
-    let tmp20;
-    let tmp22;
-    let tmp24;
-    let tmp27;
-    let tmp29;
     if (cResult[8] === tmp17) {
-      tmp20 = cResult[9];
+      let tmp20 = cResult[9];
     }
     const _Symbol = Symbol;
-    const description = tmp4.description;
     if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl2 = intl4.intl;
-      const stringResult1 = intl2.string(intl4.t.BUZ0sl);
+      const intl2 = util.intl;
+      const stringResult1 = intl2.string(util.t.BUZ0sl);
       cResult[10] = stringResult1;
-      tmp22 = stringResult1;
+      let tmp22 = stringResult1;
     } else {
       tmp22 = cResult[10];
     }
     if (cResult[11] !== tmp4.description) {
-      const obj5 = { style: description, variant: "text-sm/medium", color: "text-default", children: tmp22 };
-      const tmp26 = React3(Text_Text.Text, obj5);
+      const obj5 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: tmp22 };
+      const tmp26 = React4(Text_Text.Text, obj5);
       cResult[11] = tmp4.description;
       cResult[12] = tmp26;
-      tmp24 = tmp26;
+      let tmp24 = tmp26;
     } else {
       tmp24 = cResult[12];
     }
     const _Symbol2 = Symbol;
-    const description2 = tmp4.description;
     if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl3 = intl4.intl;
-      const stringResult2 = intl3.string(intl4.t.w5beJH);
+      const intl3 = util.intl;
+      const stringResult2 = intl3.string(util.t.w5beJH);
       cResult[13] = stringResult2;
-      tmp27 = stringResult2;
+      let tmp27 = stringResult2;
     } else {
       tmp27 = cResult[13];
     }
     if (cResult[14] !== tmp4.description) {
-      const obj6 = { style: description2, variant: "text-sm/medium", color: "text-default", children: tmp27 };
-      const tmp31 = React3(Text_Text.Text, obj6);
+      const obj6 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: tmp27 };
+      const tmp31 = React4(Text_Text.Text, obj6);
       cResult[14] = tmp4.description;
       cResult[15] = tmp31;
-      tmp29 = tmp31;
+      let tmp29 = tmp31;
     } else {
       tmp29 = cResult[15];
     }
@@ -138,20 +118,20 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       if (cResult[17] === tmp24) {
         if (cResult[18] === tmp29) {
           if (cResult[19] === tmp7) {
-            let tmp32;
             if (cResult[20] === tmp20) {
-              tmp32 = cResult[21];
+              let tmp32 = cResult[21];
             }
             return tmp32;
           }
         }
       }
     }
-    const obj7 = { startExpanded: true, children: hasOwnProperty(View, obj8) };
-    obj8 = { style: content, children: items };
-    items = [tmp7, tmp20, tmp24, tmp29];
-    BottomSheet = Sheet_BottomSheet.BottomSheet;
-    const tmp36 = React3(BottomSheet, obj7);
+    const obj7 = { startExpanded: true, children: null };
+    const obj8 = { style: content, children: null };
+    const items = [tmp7, tmp20, tmp24, tmp29];
+    obj8.children = items;
+    obj7.children = hasOwnProperty(View, obj8);
+    const tmp36 = React4(Sheet_BottomSheet.BottomSheet, obj7);
     cResult[16] = tmp4.content;
     cResult[17] = tmp24;
     cResult[18] = tmp29;
@@ -160,49 +140,39 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[21] = tmp36;
     tmp32 = tmp36;
   }
-  const obj9 = { style: nameWrapper, children: items1 };
-  items1 = [tmp11, tmp17];
+  const obj9 = { style: tmp4.nameWrapper, children: null };
+  const items1 = [tmp11, tmp17];
+  obj9.children = items1;
   const tmp21 = hasOwnProperty(View, obj9);
   cResult[7] = tmp4.nameWrapper;
   cResult[8] = tmp17;
   cResult[9] = tmp21;
   tmp20 = tmp21;
 }) : (() => {
-  let intl;
-  let intl2;
-  let intl3;
-  let items;
-  let items1;
-  let obj2;
-  let obj4;
   const tmp = closure_6();
-  const obj = { startExpanded: true, children: hasOwnProperty(View, obj2) };
-  obj2 = { style: tmp.content, children: items };
-  BottomSheet = Sheet_BottomSheet.BottomSheet;
-  const obj3 = { style: tmp.avatar, source: obj4.getPublicSystemMessageAvatar() };
+  const obj = { startExpanded: true, children: null };
+  const obj2 = { style: tmp.content, children: null };
+  const obj3 = { style: tmp.avatar, source: null };
   const tmp2 = FastImageDefault;
-  obj4 = PublicGuildsUtils;
-  items = [React3(tmp2, obj3), , , ];
-  const obj5 = { style: tmp.nameWrapper, children: items1 };
-  const obj6 = { source: AssetRegistryDefault, disableColor: true };
-  const Icon = native.Icon;
-  items1 = [React3(Icon, obj6), ];
-  const obj7 = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: intl.string(intl4.t.xfAlNx) };
-  const Text = Text_Text.Text;
-  intl = intl4.intl;
-  items1[1] = React3(Text, obj7);
+  obj3.source = PublicGuildsUtils.getPublicSystemMessageAvatar();
+  const items = [React4(tmp2, obj3), , , ];
+  const obj5 = { style: tmp.nameWrapper, children: null };
+  const items1 = [React4(native.Icon, { source: _modDef11286, disableColor: true }), ];
+  const obj7 = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const intl = util.intl;
+  obj7.children = intl.string(util.t.xfAlNx);
+  items1[1] = React4(Text_Text.Text, obj7);
+  obj5.children = items1;
   items[1] = hasOwnProperty(View, obj5);
-  const obj8 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: intl2.string(intl4.t.BUZ0sl) };
-  const Text2 = Text_Text.Text;
-  intl2 = intl4.intl;
-  items[2] = React3(Text2, obj8);
-  const obj9 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: intl3.string(intl4.t.w5beJH) };
-  const Text3 = Text_Text.Text;
-  intl3 = intl4.intl;
-  items[3] = React3(Text3, obj9);
-  return React3(BottomSheet, obj);
+  const obj8 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const intl2 = util.intl;
+  obj8.children = intl2.string(util.t.BUZ0sl);
+  items[2] = React4(Text_Text.Text, obj8);
+  const obj9 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const intl3 = util.intl;
+  obj9.children = intl3.string(util.t.w5beJH);
+  items[3] = React4(Text_Text.Text, obj9);
+  obj2.children = items;
+  obj.children = hasOwnProperty(View, obj2);
+  return React4(Sheet_BottomSheet.BottomSheet, obj);
 });
-size = size_mod;
-const result = size.fileFinishedImporting("modules/public_guilds/native/components/PublicGuildAnnouncementProfile.tsx");
-
-export default tmp4;

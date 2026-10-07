@@ -1,50 +1,34 @@
 // === Module 15367: AppIconRows ===
 
 // Module 15367 (AppIconRows)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 19 */;
-import get_initialized from "get initialized" /* 504 */;
-import react3 from "react" /* 576 */;
-import intl3 from "intl" /* 1126 */;
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1976 */;
 import AppIconTypes from "AppIconTypes" /* 8859 */;
 import AppIconUtils from "AppIconUtils" /* 13280 */;
 import AppIconRowDefault from "AppIconRow" /* 15368 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import _slicedToArray from "module_32" /* 32 */;
 import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 11884 */;
+import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-const react = react2;
-let dependencyMap, onSelect;
-
-let c10;
-let c9;
-let unpackModuleId;
-const View = react_native.View;
-const createElement = react2.createElement;
-({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = Fragment);
+require = fn;
+const View = fn(17).View;
+const createElement = fn(19).createElement;
+const jsxProd = fn(21);
+({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4896);
 let closure_12 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let icons;
-  let obj2;
-  let onLongPress;
-  let showEasterEgg;
-  let title;
-  let tmp10;
-  let tmp = obj2;
-  const obj = obj2(576);
-  const cResult = obj.c(11);
+  const cResult = merged(576).c(11);
   _objectDestructuringEmpty(arg0);
-  obj2 = assign({}, arg0);
+  merged = Object.assign({}, arg0);
   const tmp6 = closure_12();
-  [importDefault, dependencyMap] = onLongPress(react.useState(false), 2);
-  ({ icons, title } = obj2);
-  onLongPress(react.useState(false), 2);
+  let obj = merged(576);
+  [importDefault, dependencyMap] = onLongPress(noop.useState(false), 2);
+  ({ icons, title } = merged);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function p(arg0) {
       let tmp = null;
@@ -58,39 +42,40 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     onLongPress = cResult[0];
   }
-  const container = tmp6.container;
   const TableRowGroup = tmp(6081).TableRowGroup;
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1126).intl;
     const stringResult = intl.string(tmp(1126).t.N4YDao);
     cResult[1] = stringResult;
-    tmp10 = stringResult;
+    let tmp10 = stringResult;
   } else {
     tmp10 = cResult[1];
   }
   const mapped = icons.map((id) => {
-    AppIconRowDefault;
-    const merged = Object.assign(obj2);
-    return <tmp key={id.id} icon={id} showEasterEgg={importDefault} onLongPress={onLongPress} />;
+    const obj = {};
+    merged = Object.assign(merged);
+    obj.key = id.id;
+    obj.icon = id;
+    obj.showEasterEgg = showEasterEgg;
+    obj.onLongPress = onLongPress;
+    return createElement(AppIconRowDefault, {});
   });
   if (cResult[2] === TableRowGroup) {
     if (cResult[3] === tmp10) {
       if (cResult[4] === mapped) {
-        let tmp13;
         if (cResult[5] === title) {
-          tmp13 = cResult[6];
+          let tmp13 = cResult[6];
         }
         if (cResult[7] === View) {
           if (cResult[8] === tmp6.container) {
-            let tmp15;
             if (cResult[9] === tmp13) {
-              tmp15 = cResult[10];
+              let tmp15 = cResult[10];
             }
             return tmp15;
           }
         }
-        const obj4 = { style: container, children: tmp13 };
-        const tmp17 = closure_9(View, obj4);
+        const obj2 = { style: tmp6.container, children: tmp13 };
+        const tmp17 = closure_9(View, obj2);
         cResult[7] = View;
         cResult[8] = tmp6.container;
         cResult[9] = tmp13;
@@ -106,67 +91,50 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = title;
   cResult[6] = tmp14;
   tmp13 = tmp14;
+  const tmp7 = onLongPress(noop.useState(false), 2);
 }) : ((arg0) => {
-  let TableRowGroup;
-  let _undefined;
-  let c1;
-  let c2;
-  let intl;
-  let obj2;
-  let showEasterEgg;
   if (arg0 == null) {
     throw new TypeError("Cannot destructure 'undefined' or 'null'.");
   } else {
-    let tmp = arg0;
     let merged = Object.assign(arg0, undefined);
     c1 = undefined;
     dependencyMap = undefined;
-    function onLongPress(react) {
+    function onLongPress(noop) {
       let tmp = null;
-      if (react === AppIconTypes.FreemiumAppIconIds.DEFAULT) {
+      if (noop === AppIconTypes.FreemiumAppIconIds.DEFAULT) {
         tmp = _undefined(true);
       }
       return tmp;
     }
     const tmp4 = closure_12();
-    [c1, c2] = onLongPress(react.useState(false), 2);
+    [c1, c2] = onLongPress(noop.useState(false), 2);
     const icons = merged.icons;
-    const obj = { style: tmp4.container, children: closure_9(TableRowGroup, obj2) };
-    obj2 = {
-      title: merged.title,
-      accessibilityRole: "radiogroup",
-      accessibilityLabel: intl.string(merged(1126).t.N4YDao),
-      hasIcons: true,
-      children: icons.map((id) => {
-          AppIconRowDefault;
-          merged = Object.assign(merged);
-          return <tmp key={id.id} icon={id} showEasterEgg={showEasterEgg} onLongPress={onLongPress} />;
-        })
-    };
-    onLongPress(react.useState(false), 2);
-    TableRowGroup = merged(6081).TableRowGroup;
-    intl = merged(1126).intl;
+    let obj = { style: tmp4.container, children: null };
+    const obj2 = { title: merged.title, accessibilityRole: "radiogroup", accessibilityLabel: null, hasIcons: true, children: null };
+    const intl = merged(1126).intl;
+    obj2.accessibilityLabel = intl.string(merged(1126).t.N4YDao);
+    obj2.children = icons.map((id) => {
+      const obj = {};
+      merged = Object.assign(merged);
+      obj.key = id.id;
+      obj.icon = id;
+      obj.showEasterEgg = showEasterEgg;
+      obj.onLongPress = onLongPress;
+      return createElement(AppIconRowDefault, {});
+    });
+    obj.children = closure_9(merged(6081).TableRowGroup, obj2);
     return closure_9(View, obj);
   }
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((onSelect) => {
-  let currentAppIcon;
-  let currentUser;
-  let intl;
-  let items1;
-  let limitedTimeAppIcons;
-  let officialAppIcons;
-  let tmp10;
-  let tmp12;
-  let tmp6;
-  let tmp7;
-  const obj = react3;
-  const cResult = obj.c(26);
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_icons/native/AppIconRows.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSelect) => {
+  const cResult = c.c(26);
   onSelect = onSelect.onSelect;
   const tmp4 = closure_12();
-  const obj2 = AppIconUtils;
-  const appIcons = obj2.useAppIcons();
+  const appIcons = AppIconUtils.useAppIcons();
   ({ officialAppIcons, limitedTimeAppIcons, currentAppIcon } = appIcons);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -180,14 +148,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((onSelect) => {
   } else {
     [tmp6, tmp7] = cResult;
   }
-  const tmpResult = get_initialized;
-  const stateFromStores = tmpResult.useStateFromStores(tmp6, tmp7);
+  const stateFromStores = initialize.useStateFromStores(tmp6, tmp7);
   if (cResult[2] !== stateFromStores) {
-    const tmpResult2 = PremiumTypeUtils;
-    const isPremiumResult = tmpResult2.isPremium(stateFromStores);
+    const isPremiumResult = PremiumTypeUtils.isPremium(stateFromStores);
     cResult[2] = stateFromStores;
     cResult[3] = isPremiumResult;
-    tmp10 = isPremiumResult;
+    let tmp10 = isPremiumResult;
+    const tmpResult2 = PremiumTypeUtils;
   } else {
     tmp10 = cResult[3];
   }
@@ -195,7 +162,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((onSelect) => {
     const tmp13 = limitedTimeAppIcons.length > 0 && limitedTimeAppIcons.filter((isHidden) => !isHidden.isHidden).length > 0;
     cResult[4] = limitedTimeAppIcons;
     cResult[5] = tmp13;
-    tmp12 = tmp13;
+    let tmp12 = tmp13;
   } else {
     tmp12 = cResult[5];
   }
@@ -203,79 +170,81 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((onSelect) => {
     if (cResult[7] === tmp12) {
       if (cResult[8] === tmp10) {
         if (cResult[9] === limitedTimeAppIcons) {
-          let tmp14;
-          let tmp19;
           if (cResult[10] === onSelect) {
-            tmp14 = cResult[11];
+            let tmp14 = cResult[11];
+          }
+          let bottomUpsellPadding = !tmp10;
+          if (!tmp10) {
+            bottomUpsellPadding = tmp4.bottomUpsellPadding;
           }
           if (cResult[12] !== tmp12) {
             let stringResult;
             if (tmp12) {
-              const intl2 = intl3.intl;
-              stringResult = intl2.string(intl3.t.Ipxkog);
+              const intl2 = util.intl;
+              stringResult = intl2.string(util.t.Ipxkog);
             }
             cResult[12] = tmp12;
             cResult[13] = stringResult;
-            tmp19 = stringResult;
+            let tmp18 = stringResult;
           } else {
-            tmp19 = cResult[13];
+            tmp18 = cResult[13];
           }
           if (cResult[14] === currentAppIcon) {
             if (cResult[15] === tmp10) {
               if (cResult[16] === officialAppIcons) {
                 if (cResult[17] === onSelect) {
-                  let tmp21;
-                  if (cResult[18] === tmp19) {
-                    tmp21 = cResult[19];
+                  if (cResult[18] === tmp18) {
+                    let tmp20 = cResult[19];
                   }
-                  if (cResult[20] === (!tmp10 && tmp4.bottomUpsellPadding)) {
-                    let tmp25;
-                    if (cResult[21] === tmp21) {
-                      tmp25 = cResult[22];
+                  if (cResult[20] === bottomUpsellPadding) {
+                    if (cResult[21] === tmp20) {
+                      let tmp24 = cResult[22];
                     }
                     if (cResult[23] === tmp14) {
-                      let tmp29;
-                      if (cResult[24] === tmp25) {
-                        tmp29 = cResult[25];
+                      if (cResult[24] === tmp24) {
+                        let tmp28 = cResult[25];
                       }
-                      return tmp29;
+                      return tmp28;
                     }
-                    const obj3 = { children: items1 };
-                    items1 = [tmp14, tmp25];
-                    const tmp32 = unpackModuleId(authStore, obj3);
+                    const obj3 = { children: null };
+                    const items1 = [tmp14, tmp24];
+                    obj3.children = items1;
+                    const tmp31 = closure_1_11(v65535, obj3);
                     cResult[23] = tmp14;
-                    cResult[24] = tmp25;
-                    cResult[25] = tmp32;
-                    tmp29 = tmp32;
+                    cResult[24] = tmp24;
+                    cResult[25] = tmp31;
+                    tmp28 = tmp31;
                   }
-                  const obj4 = { style: !tmp10 && tmp4.bottomUpsellPadding, children: tmp21 };
-                  const tmp28 = React4(View, obj4);
-                  cResult[20] = !tmp10 && tmp4.bottomUpsellPadding;
-                  cResult[21] = tmp21;
-                  cResult[22] = tmp28;
-                  tmp25 = tmp28;
+                  const obj4 = { style: bottomUpsellPadding, children: tmp20 };
+                  const tmp27 = options(View, obj4);
+                  cResult[20] = bottomUpsellPadding;
+                  cResult[21] = tmp20;
+                  cResult[22] = tmp27;
+                  tmp24 = tmp27;
                 }
               }
             }
           }
-          const obj5 = { hasNitro: tmp10, icons: officialAppIcons, currentAppIcon, title: tmp19, onSelect };
-          const tmp24 = React4(closure_13, obj5);
+          const obj5 = { hasNitro: tmp10, icons: officialAppIcons, currentAppIcon, title: tmp18, onSelect };
+          const tmp23 = options(closure_13, obj5);
           cResult[14] = currentAppIcon;
           cResult[15] = tmp10;
           cResult[16] = officialAppIcons;
           cResult[17] = onSelect;
-          cResult[18] = tmp19;
-          cResult[19] = tmp24;
-          tmp21 = tmp24;
+          cResult[18] = tmp18;
+          cResult[19] = tmp23;
+          tmp20 = tmp23;
         }
       }
     }
   }
   let tmp15 = null;
   if (tmp12) {
-    const obj6 = { hasNitro: tmp10, icons: limitedTimeAppIcons, currentAppIcon, title: intl.string(intl3.t.anqaFd), onSelect };
-    intl = intl3.intl;
-    tmp15 = React4(closure_13, obj6);
+    const obj6 = { hasNitro: tmp10, icons: limitedTimeAppIcons, currentAppIcon, title: null, onSelect: null };
+    const intl = util.intl;
+    obj6.title = intl.string(util.t.anqaFd);
+    obj6.onSelect = onSelect;
+    tmp15 = options(closure_13, obj6);
   }
   cResult[6] = currentAppIcon;
   cResult[7] = tmp12;
@@ -284,44 +253,41 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((onSelect) => {
   cResult[10] = onSelect;
   cResult[11] = tmp15;
   tmp14 = tmp15;
+  const tmpResult = initialize;
 }) : ((onSelect) => {
-  let currentAppIcon;
-  let currentUser;
-  let intl;
-  let limitedTimeAppIcons;
-  let obj6;
-  let officialAppIcons;
-  let stringResult;
   onSelect = onSelect.onSelect;
   const tmp = closure_12();
-  const obj = AppIconUtils;
-  const appIcons = obj.useAppIcons();
+  const appIcons = AppIconUtils.useAppIcons();
   ({ limitedTimeAppIcons, currentAppIcon, officialAppIcons } = appIcons);
   const items = [UserStore];
-  const obj2 = get_initialized;
-  const stateFromStores = obj2.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj3 = PremiumTypeUtils;
-  const isPremiumResult = obj3.isPremium(stateFromStores);
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const isPremiumResult = PremiumTypeUtils.isPremium(stateFromStores);
   const tmp7 = limitedTimeAppIcons.length > 0 && limitedTimeAppIcons.filter((isHidden) => !isHidden.isHidden).length > 0;
   let tmp10 = null;
   if (tmp7) {
-    const obj4 = { hasNitro: isPremiumResult, icons: limitedTimeAppIcons, currentAppIcon, title: intl.string(intl3.t.anqaFd), onSelect };
-    intl = intl3.intl;
-    tmp10 = React4(closure_13, obj4);
+    const obj4 = { hasNitro: isPremiumResult, icons: limitedTimeAppIcons, currentAppIcon, title: null, onSelect: null };
+    const intl = util.intl;
+    obj4.title = intl.string(util.t.anqaFd);
+    obj4.onSelect = onSelect;
+    tmp10 = options(closure_13, obj4);
   }
   const items1 = [tmp10, ];
-  const bottomUpsellPadding = !isPremiumResult && tmp.bottomUpsellPadding;
-  const obj5 = { style: bottomUpsellPadding, children: React4(closure_13, obj6) };
-  obj6 = { hasNitro: isPremiumResult, icons: officialAppIcons, currentAppIcon, title: stringResult, onSelect };
-  stringResult = undefined;
-  if (tmp7) {
-    const intl2 = intl3.intl;
-    stringResult = intl2.string(intl3.t.Ipxkog);
+  let bottomUpsellPadding = !isPremiumResult;
+  if (!isPremiumResult) {
+    bottomUpsellPadding = tmp.bottomUpsellPadding;
   }
-  const obj7 = { children: items1 };
-  items1[1] = React4(View, obj5);
-  return unpackModuleId(authStore, obj7);
+  const obj5 = { style: bottomUpsellPadding, children: null };
+  const obj6 = { hasNitro: isPremiumResult, icons: officialAppIcons, currentAppIcon, title: null, onSelect: null };
+  let stringResult;
+  if (tmp7) {
+    const intl2 = util.intl;
+    stringResult = intl2.string(util.t.Ipxkog);
+  }
+  const obj7 = { children: null };
+  obj6.title = stringResult;
+  obj6.onSelect = onSelect;
+  obj5.children = options(closure_13, obj6);
+  items1[1] = options(View, obj5);
+  obj7.children = items1;
+  return closure_1_11(v65535, obj7);
 });
-const result = size.fileFinishedImporting("modules/app_icons/native/AppIconRows.tsx");
-
-export default tmp3;

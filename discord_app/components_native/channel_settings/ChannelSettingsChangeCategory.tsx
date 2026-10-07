@@ -3,336 +3,291 @@
 // Module 17058 (ChannelSettingsChangeCategory)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1085 */;
-import intl5 from "intl" /* 1126 */;
-import native from "native" /* 4595 */;
+import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import useChannelName from "useChannelName" /* 5049 */;
 import Stack_Stack from "Stack/Stack" /* 5600 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
 import TableRow from "TableRow" /* 6000 */;
-import TableRowGroup2 from "TableRowGroup" /* 6081 */;
-import Form2 from "Form" /* 8924 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import TableRowGroup from "TableRowGroup" /* 6081 */;
+import Form from "Form" /* 8924 */;
+import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 729 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildCategoryStore_mod from "GuildCategoryStore" /* 6613 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 6613 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import PermissionStore from "PermissionStore" /* 4515 */;
 import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-let _require, channelId, navigation;
-
-let closure_14;
-let map1;
-let obj2;
-let obj3;
-let GuildCategoryStore = GuildCategoryStore_mod;
-const Permissions = Constants.Permissions;
-({ jsx: map1, jsxs: closure_14 } = Fragment);
-let obj = { screenContainer: obj2, stackPadding: obj3 };
-obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: nativeDefault.space.PX_16 };
-const createLegacyClassComponentStyles = createStyles.createLegacyClassComponentStyles;
-obj3 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
-let closure_15 = createLegacyClassComponentStyles(obj);
-const Component = react.Component;
+require = fn;
+const Permissions = fn(1085).Permissions;
+const jsxProd = fn(21);
+({ jsx: map1, jsxs: closure_14 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { screenContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: nativeDefault.space.PX_16 }, stackPadding: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: nativeDefault.space.PX_16 };
+obj2.stackPadding = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
+let closure_15 = createStyles.createLegacyClassComponentStyles(obj2);
+const Component = noop.Component;
 class ChannelSettingsChangeCategory extends Component {
-  constructor(channel) {
-    let closure_0;
-    let mapped;
-    const tmp3 = new ChannelSettingsChangeCategory(channel, tmp2, tmp);
-    channel = channel.channel;
-    const guild = GuildStore.getGuild(channel.getGuildId());
-    const channel2 = channel.channel;
-    const obj = {
-      category: ChannelStore.getChannel(channel.channel.parent_id),
-      categories: mapped.filter((id) => {
-        let canResult = "null" === id.id && PermissionStore.can(Permissions.MANAGE_CHANNELS, closure_0);
-        if (!canResult) {
-          canResult = PermissionStore.can(Permissions.MANAGE_CHANNELS, id) && PermissionStore.can(Permissions.VIEW_CHANNEL, id);
-          const canResult1 = PermissionStore.can(Permissions.MANAGE_CHANNELS, id) && PermissionStore.can(Permissions.VIEW_CHANNEL, id);
-        }
-        return canResult;
-      }),
-      submitting: false
-    };
-    const categories = GuildCategoryStore.getCategories(channel2.getGuildId());
-    const _categories = categories._categories;
+  constructor(arg0) {
+    tmp3 = new ChannelSettingsChangeCategory(global, tmp2, tmp);
+    channel = global.channel;
+    closure_0 = closure_8.getGuild(channel.getGuildId());
+    channel2 = global.channel;
+    obj = { category: null, categories: null, submitting: false };
+    categories = closure_7.getCategories(channel2.getGuildId());
+    obj.category = closure_6.getChannel(global.channel.parent_id);
+    _categories = categories._categories;
     mapped = _categories.map((channel) => channel.channel);
+    obj.categories = mapped.filter((id) => {
+      let canResult = "null" === id.id;
+      if (canResult) {
+        canResult = PermissionStore.can(Permissions.MANAGE_CHANNELS, closure_0);
+      }
+      if (!canResult) {
+        let canResult1 = PermissionStore.can(Permissions.MANAGE_CHANNELS, id);
+        if (canResult1) {
+          canResult1 = PermissionStore.can(Permissions.VIEW_CHANNEL, id);
+        }
+        canResult = canResult1;
+      }
+      return canResult;
+    });
     tmp3.state = obj;
     return tmp3;
   }
-  shouldComponentUpdate() {
-    return !this.state.submitting;
-  }
-  handleSetCategory(id) {
-    let obj7;
-    let parent_id;
-    const f148095 = () => closure_1_2.pop();
-    let self = this;
-    _require = id;
-    function saveUpdates() {
-      if (null == guildId) {
-        const _Error = Error;
-        const self = this;
-        const self2 = this;
-        const error = new Error("ChannelSettingsChangeCategory.handleSetCategory: Invalid guild_id");
-        throw error;
-      } else {
-        const obj = GuildActionCreatorsDefault;
-        const batchChannelUpdateResult = obj.batchChannelUpdate(tmp, GuildCategoryStore);
-        return batchChannelUpdateResult.then(f148095);
-      }
-    }
-    const props = this.props;
-    const channel = props.channel;
-    navigation = props.navigation;
-    let obj = obj7;
-    const channel1 = obj7.getChannel(id);
-    const guildId = channel.getGuildId();
-    if (null == guildId) {
-      const _Error2 = Error;
-      const self4 = this;
-      const self5 = this;
-      let error = new Error("ChannelSettingsChangeCategory.handleSetCategory: Invalid guild_id");
-      throw error;
-    } else {
-      let tmp3 = null;
-      if ("null" !== id) {
-        tmp3 = id;
-      }
-      _require = tmp3;
-      const categories = GuildCategoryStore.getCategories(channel.getGuildId());
-      let arr = channel(channel1[14])(categories._categories, categories, (channel) => channel.channel.type === channel.type);
-      const found = arr.find((channel) => channel.channel.id === channel.id);
-      const tmp6 = channel;
-      if (null == found) {
-        let _Error = Error;
-        let self2 = this;
-        const str = "ChannelSettingsChangeCategory.handleSetCategory: Could not find original channel.";
-        const self3 = this;
-        const error1 = new Error("ChannelSettingsChangeCategory.handleSetCategory: Could not find original channel.");
-        throw error1;
-      } else {
-        let obj2 = {};
-        const _categories = categories._categories;
-        const item = _categories.forEach((channel) => {
-          const items = [];
-          obj2[channel.channel.id] = items;
-          return items;
-        });
-        const item1 = arr.forEach((channel) => {
-          let tmp = channel.channel.id !== channel.id;
-          if (tmp) {
-            const _String = String;
-            const arr = obj2[String(undefined, channel.channel.parent_id)];
-            let arr2;
-            if (arr != null) {
-              arr2 = arr.push(channel);
-            }
-            tmp = arr2;
-          }
-          return tmp;
-        });
-        let _String = String;
-        const arr3 = obj2[String(undefined, tmp3)];
-        let arr2 = arr3.push(found);
-        let obj5 = {
-          oldOrdering: arr,
-          newOrdering: tmp6(channel1[14])(categories._categories, obj2),
-          idGetter(channel) {
-                return channel.channel.id;
-              },
-          existingPositionGetter(channel) {
-                return channel.channel.position;
-              }
-        };
-        const tmp24 = tmp6(channel1[14])(categories._categories, obj2);
-        const obj6 = require("DragAndDropUtils");
-        const result = obj6.calculatePositionDeltas(obj5);
-        GuildCategoryStore = result;
-        if (result.length > 0) {
-          const found1 = result.find((id) => {
-            let flag = id.id === channel.id;
-            if (flag) {
-              id.parent_id = parent_id;
-              flag = true;
-            }
-            return flag;
-          });
-        } else {
-          obj7 = { id: channel.id, parent_id: tmp3 };
-          result.push(obj7);
-        }
-        const appChannelBotUserId = self.props.appChannelBotUserId;
-        let obj3 = navigation(tmp7[16]);
-        let closure_8 = obj3.areChannelsLocked(channel, channel1, appChannelBotUserId);
-        let obj4 = navigation(tmp7[16]);
-        let closure_9 = obj4.areChannelsLocked(channel, obj.getChannel(channel.parent_id), appChannelBotUserId);
-        self.setState({ submitting: true }, function() {
-          let format;
-          let intl;
-          let intl3;
-          let intl4;
-          let obj3;
-          let obj4;
-          let prop;
-          if (null != channel1) {
-            if (closure_9) {
-              if (!closure_8) {
-                let obj = {
-                  title: intl.string(intl5.t.YWMtRe),
-                  body: format(prop, obj2),
-                  confirmText: intl3.string(intl5.t.eW8Gy4),
-                  cancelText: intl4.string(intl5.t.s4uM3b),
-                  onConfirm() {
-                          obj7.lock_permissions = true;
-                          if (null == guildId) {
-                            const _Error = Error;
-                            const self = this;
-                            const self2 = this;
-                            const error = new Error("ChannelSettingsChangeCategory.handleSetCategory: Invalid guild_id");
-                            throw error;
-                          } else {
-                            const obj = channel(channel1[17]);
-                            const batchChannelUpdateResult = obj.batchChannelUpdate(tmp, closure_1_7);
-                            batchChannelUpdateResult.then(f148095);
-                          }
-                        },
-                  onCancel: saveUpdates,
-                  isDismissable: false
-                };
-                const show = AlertActionCreatorsDefault.show;
-                AlertActionCreatorsDefault;
-                intl = intl5.intl;
-                const intl2 = intl5.intl;
-                format = intl2.format;
-                obj2 = { channelName: obj3.computeChannelName(channel, UserStore, RelationshipStore, true), categoryName: obj4.computeChannelName(tmp, UserStore, RelationshipStore) };
-                prop = intl5.t["iKW+jY"];
-                obj3 = useChannelName;
-                obj4 = useChannelName;
-                intl3 = intl5.intl;
-                intl4 = intl5.intl;
-                show(obj);
-              }
-            }
-          }
-          if (null == guildId) {
-            let _Error = Error;
-            let self = this;
-            let self2 = this;
-            let error = new Error("ChannelSettingsChangeCategory.handleSetCategory: Invalid guild_id");
-            throw error;
-          } else {
-            const obj5 = GuildActionCreatorsDefault;
-            let batchChannelUpdateResult = obj5.batchChannelUpdate(tmp26, GuildCategoryStore);
-            batchChannelUpdateResult.then(f148095);
-          }
-        });
-      }
-    }
-  }
-  renderCategory(label) {
-    const self = this;
-    let closure_0 = label;
-    const obj = {
-      label: label.name,
-      onPress() {
-        return self.handleSetCategory(id.id);
-      }
-    };
-    return map1(TableRow.TableRow, obj, label.id);
-  }
-  renderCategories() {
-    const self = this;
-    const arr = _toArray(this.state.categories);
-    const substr = arr.slice(0);
-    const category = this.state.category;
-    if (null != category) {
-      substr.splice(substr.indexOf(category), 1);
-    }
-    const tmp2 = null != substr[0] && "null" === substr[0].id;
-    if (tmp2) {
-      substr.shift();
-    }
-    const mapped = substr.map(self.renderCategory, self);
-    let tmp4 = null;
-    if (mapped.length > 0) {
-      const obj = { hasIcons: false, children: mapped };
-      tmp4 = map1(TableRowGroup2.TableRowGroup, obj);
-    }
-    return tmp4;
-  }
-  render() {
-    let Stack;
-    let items;
-    let name;
-    let obj2;
-    let obj5;
-    const self = this;
-    const category = this.state.category;
-    const first = _slicedToArray(this.state.categories, 1)[0];
-    const tmp2 = closure_15(this.context);
-    const obj = { style: tmp2.screenContainer, children: authStore2(Stack, obj2) };
-    const Form = Form2.Form;
-    obj2 = { style: tmp2.stackPadding, spacing: nativeDefault.space.PX_24, children: items };
-    Stack = Stack_Stack.Stack;
-    const Text = Text_Text.Text;
-    const intl = intl5.intl;
-    const formatToPlainString = intl.formatToPlainString;
-    const OqccVl = intl5.t.OqccVl;
-    if (null != category) {
-      name = category.name;
-    } else {
-      const intl2 = intl5.intl;
-      name = intl2.string(intl5.t.GSfOoo);
-    }
-    items = [, , ];
-    const obj3 = { variant: "text-md/medium", color: "text-muted", children: formatToPlainString(OqccVl, { categoryName: name }) };
-    items[0] = map1(Text, obj3);
-    let tmp3Result = null;
-    if (null != first) {
-      tmp3Result = null;
-      if ("null" === first.id) {
-        tmp3Result = null;
-        if (null != category) {
-          const obj4 = { hasIcons: false, children: map1(TableRow.TableRow, obj5, first.id) };
-          const TableRowGroup = TableRowGroup2.TableRowGroup;
-          obj5 = {
-            label: first.name,
-            onPress() {
-                    return self.handleSetCategory(first.id);
-                  }
-          };
-          tmp3Result = map1(TableRowGroup, obj4);
-        }
-      }
-    }
-    items[1] = tmp3Result;
-    items[2] = self.renderCategories();
-    return map1(Form, obj);
-  }
 }
 const prototype = ChannelSettingsChangeCategory.prototype;
-ChannelSettingsChangeCategory.contextType = native.ThemeContext;
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
-  let first;
-  let tmp6;
-  const obj = channelId(576);
-  const cResult = obj.c(7);
+prototype["shouldComponentUpdate"] = function shouldComponentUpdate() {
+  return !this.state.submitting;
+};
+prototype["handleSetCategory"] = function handleSetCategory(id) {
+  const self = this;
+  _require = id;
+  function saveUpdates() {
+    if (null == guildId) {
+      const _Error = Error;
+      const error = new Error("ChannelSettingsChangeCategory.handleSetCategory: Invalid guild_id");
+      throw error;
+    } else {
+      return GuildActionCreatorsDefault.batchChannelUpdate(tmp, result).then(() => closure_1_2.pop());
+    }
+  }
+  const props = this.props;
+  const channel = props.channel;
+  const navigation = props.navigation;
+  const channel1 = ChannelStore.getChannel(id);
+  const guildId = channel.getGuildId();
+  if (null == guildId) {
+    const _Error2 = Error;
+    let error = new Error("ChannelSettingsChangeCategory.handleSetCategory: Invalid guild_id");
+    throw error;
+  } else {
+    let tmp3 = null;
+    if ("null" !== id) {
+      tmp3 = id;
+    }
+    _require = tmp3;
+    const categories = GuildCategoryStore.getCategories(channel.getGuildId());
+    let arr = channel(channel1[14])(categories._categories, categories, (channel) => channel.channel.type === channel.type);
+    const found = arr.find((channel) => channel.channel.id === channel.id);
+    if (null == found) {
+      let _Error = Error;
+      const error1 = new Error("ChannelSettingsChangeCategory.handleSetCategory: Could not find original channel.");
+      throw error1;
+    } else {
+      let obj2 = {};
+      const _categories = categories._categories;
+      const item = _categories.forEach((channel) => {
+        const items = [];
+        obj2[channel.channel.id] = items;
+        return items;
+      });
+      const item1 = arr.forEach((channel) => {
+        let tmp = channel.channel.id !== channel.id;
+        if (tmp) {
+          const _String = String;
+          const arr = obj2[String(undefined, channel.channel.parent_id)];
+          let arr2;
+          if (arr != null) {
+            arr2 = arr.push(channel);
+          }
+          tmp = arr2;
+        }
+        return tmp;
+      });
+      let _String = String;
+      obj2[String(undefined, tmp3)].push(found);
+      const arr3 = obj2[String(undefined, tmp3)];
+      const tmp28 = tmp6(tmp7[14])(categories._categories, obj2);
+      let obj5 = {
+        oldOrdering: arr,
+        newOrdering: tmp28,
+        idGetter(channel) {
+              return channel.channel.id;
+            },
+        existingPositionGetter(channel) {
+              return channel.channel.position;
+            }
+      };
+      const result = require("DragAndDropUtils").calculatePositionDeltas(obj5);
+      GuildCategoryStore = result;
+      if (result.length > 0) {
+        const found1 = result.find((id) => {
+          let flag = id.id === channel.id;
+          if (flag) {
+            id.parent_id = parent_id;
+            closure_6 = id;
+            flag = true;
+          }
+          return flag;
+        });
+      } else {
+        const obj7 = { id: channel.id, parent_id: tmp3 };
+        ChannelStore = obj7;
+        result.push(ChannelStore);
+      }
+      const appChannelBotUserId = self.props.appChannelBotUserId;
+      let obj6 = require("DragAndDropUtils");
+      closure_8 = navigation(tmp7[16]).areChannelsLocked(channel, channel1, appChannelBotUserId);
+      let obj3 = navigation(tmp7[16]);
+      closure_9 = navigation(tmp7[16]).areChannelsLocked(channel, obj.getChannel(channel.parent_id), appChannelBotUserId);
+      self.setState({ submitting: true }, () => {
+        if (null != channel1) {
+          if (closure_9) {
+            if (!closure_8) {
+              obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, isDismissable: false };
+              const intl = util.intl;
+              obj2.title = intl.string(util.t.YWMtRe);
+              const intl2 = util.intl;
+              const obj3 = { channelName: null, categoryName: null };
+              const obj4 = useChannelName;
+              obj3.channelName = obj4.computeChannelName(channel, UserStore, RelationshipStore, true);
+              let obj = AlertActionCreatorsDefault;
+              obj3.categoryName = useChannelName.computeChannelName(tmp, UserStore, RelationshipStore);
+              obj2.body = intl2.format(util.t["iKW+jY"], obj3);
+              const intl3 = util.intl;
+              obj2.confirmText = intl3.string(util.t.eW8Gy4);
+              const intl4 = util.intl;
+              obj2.cancelText = intl4.string(util.t.s4uM3b);
+              obj2.onConfirm = function onConfirm() {
+                id.lock_permissions = true;
+                if (null == guildId) {
+                  const _Error = Error;
+                  const error = new Error("ChannelSettingsChangeCategory.handleSetCategory: Invalid guild_id");
+                  throw error;
+                } else {
+                  const obj = channel(channel1[17]);
+                  channel(channel1[17]).batchChannelUpdate(tmp, closure_1_7).then(() => closure_1_2.pop());
+                  const batchChannelUpdateResult = channel(channel1[17]).batchChannelUpdate(tmp, closure_1_7);
+                }
+              };
+              obj2.onCancel = saveUpdates;
+              obj.show(obj2);
+            }
+          }
+        }
+        if (null == guildId) {
+          let _Error = Error;
+          let error = new Error("ChannelSettingsChangeCategory.handleSetCategory: Invalid guild_id");
+          throw error;
+        } else {
+          GuildActionCreatorsDefault.batchChannelUpdate(tmp24, result).then(() => closure_1_2.pop());
+          let batchChannelUpdateResult = GuildActionCreatorsDefault.batchChannelUpdate(tmp24, result);
+        }
+      });
+    }
+    tmp6 = channel;
+  }
+  obj = ChannelStore;
+};
+prototype["renderCategory"] = function renderCategory(label) {
+  const self = this;
+  return __initData2(TableRow.TableRow, {
+    label: label.name,
+    onPress() {
+      return self.handleSetCategory(label.id);
+    }
+  }, label.id);
+};
+prototype["renderCategories"] = function renderCategories() {
+  const self = this;
+  const substr = _toArray(this.state.categories).slice(0);
+  const category = this.state.category;
+  if (null != category) {
+    substr.splice(substr.indexOf(category), 1);
+  }
+  let tmp2 = null != substr[0];
+  if (tmp2) {
+    tmp2 = "null" === substr[0].id;
+  }
+  if (tmp2) {
+    substr.shift();
+  }
+  const mapped = substr.map(self.renderCategory, self);
+  let tmp4 = null;
+  if (mapped.length > 0) {
+    const obj = { hasIcons: false, children: mapped };
+    tmp4 = __initData2(TableRowGroup.TableRowGroup, obj);
+  }
+  return tmp4;
+};
+prototype["render"] = function render() {
+  const self = this;
+  const category = this.state.category;
+  const first = _slicedToArray(this.state.categories, 1)[0];
+  const tmp2 = closure_15(this.context);
+  const obj = { style: tmp2.screenContainer, children: null };
+  const obj2 = { style: tmp2.stackPadding, spacing: nativeDefault.space.PX_24, children: null };
+  const intl = util.intl;
+  if (null != category) {
+    let name = category.name;
+  } else {
+    const intl2 = util.intl;
+    name = intl2.string(util.t.GSfOoo);
+  }
+  const items = [__initData2(Text_Text.Text, { variant: "text-md/medium", color: "text-muted", children: intl.formatToPlainString(util.t.OqccVl, { categoryName: name }) }), , ];
+  let tmp3Result = null;
+  if (null != first) {
+    tmp3Result = null;
+    if ("null" === first.id) {
+      tmp3Result = null;
+      if (null != category) {
+        const obj4 = { hasIcons: false, children: null };
+        const obj5 = {
+          label: first.name,
+          onPress() {
+                  return self.handleSetCategory(first.id);
+                }
+        };
+        obj4.children = __initData2(TableRow.TableRow, obj5, first.id);
+        tmp3Result = __initData2(TableRowGroup.TableRowGroup, obj4);
+      }
+    }
+  }
+  items[1] = tmp3Result;
+  items[2] = self.renderCategories();
+  obj2.children = items;
+  obj.children = state(Stack_Stack.Stack, obj2);
+  return __initData2(Form.Form, obj);
+};
+ChannelSettingsChangeCategory.contextType = fn(4595).ThemeContext;
+const ReactCompilerGating = fn(558);
+let obj4 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
+const size = fn(2);
+let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeCategory.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+  const cResult = channelId(576).c(7);
   channelId = channelId.channelId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -342,22 +297,21 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     };
     cResult[1] = channelId;
     cResult[2] = fn;
-    tmp6 = fn;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
+  const obj = channelId(576);
+  const stateFromStores = channelId(504).useStateFromStores(first, tmp6);
   const tmpResult = channelId(504);
-  const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+  const navigation = channelId(1490).useNavigation();
   const tmpResult3 = channelId(1490);
-  navigation = tmpResult3.useNavigation();
-  const tmpResult4 = channelId(11245);
-  const appChannelBotUserId = tmpResult4.useAppChannelBotUserId(stateFromStores);
+  const appChannelBotUserId = channelId(11245).useAppChannelBotUserId(stateFromStores);
   _modDef38(null != stateFromStores, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   if (cResult[3] === appChannelBotUserId) {
     if (cResult[4] === stateFromStores) {
-      let tmp11;
       if (cResult[5] === navigation) {
-        tmp11 = cResult[6];
+        let tmp11 = cResult[6];
       }
       return tmp11;
     }
@@ -368,18 +322,15 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   cResult[5] = navigation;
   cResult[6] = tmp12;
   tmp11 = tmp12;
+  const tmpResult4 = channelId(11245);
 }) : ((channelId) => {
   channelId = channelId.channelId;
   const items = [ChannelStore];
+  const channel = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const obj = channelId(504);
-  const channel = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  const navigation = channelId(1490).useNavigation();
   const obj2 = channelId(1490);
-  navigation = obj2.useNavigation();
-  const obj3 = channelId(11245);
-  const appChannelBotUserId = obj3.useAppChannelBotUserId(channel);
+  const appChannelBotUserId = channelId(11245).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 });
-let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeCategory.tsx");
-
-export default tmp5;

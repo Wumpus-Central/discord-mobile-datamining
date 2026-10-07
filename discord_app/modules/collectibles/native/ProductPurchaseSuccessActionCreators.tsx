@@ -2,29 +2,24 @@
 
 // Module 10826 (ProductPurchaseSuccessActionCreators)
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import size from "module_2" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
 
+const require = fn;
 const ShopProductPurchaseSuccessModal = "ShopProductPurchaseSuccessModal";
-let obj = {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/ProductPurchaseSuccessActionCreators.tsx");
+
+export default {
   open(merged) {
-    let paths;
-    const obj = ModalActionCreatorsDefault;
-    obj.pushLazy(_asyncToGenerator(async () => {
-      let c0;
-      let c1;
-      await require("asyncRequire")(paths[2], paths.paths);
+    ModalActionCreatorsDefault.pushLazy(asyncGeneratorStep(async () => {
+      await require("asyncRequireImpl")(paths[2], paths.paths);
       return value.default;
     }), merged, ShopProductPurchaseSuccessModal);
   },
   close() {
-    const obj = ModalActionCreatorsDefault;
-    obj.popWithKey(ShopProductPurchaseSuccessModal);
+    ModalActionCreatorsDefault.popWithKey(ShopProductPurchaseSuccessModal);
   }
 };
-const result = size.fileFinishedImporting("modules/collectibles/native/ProductPurchaseSuccessActionCreators.tsx");
-
-export default obj;
 export const MODAL_KEY = "ShopProductPurchaseSuccessModal";

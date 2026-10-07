@@ -1,7 +1,6 @@
 // === Module 16064: MessagesFlashList ===
 
 // Module 16064 (MessagesFlashList)
-import Fragment from "Fragment" /* 21 */;
 import MessagesItemChannel from "MessagesItemChannel" /* 15996 */;
 import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 16006 */;
 import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16008 */;
@@ -11,35 +10,17 @@ import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 16058 */;
 import MessagesItemSeparatorDefault from "MessagesItemSeparator" /* 16059 */;
 import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 16060 */;
 import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 16061 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let item, obj1, obj5, obj6, str, str2, str3, str4, str5, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp3, tmp6, tmp8;
+require = fn;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesFlashList.tsx");
 
-const jsx = Fragment.jsx;
-const memoResult = react.memo(react.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((listItemSuggestedFriendHeight, arg1) => {
-  let accessibilityLabel;
-  let data;
-  let friendsHeaderIndex;
-  let friendsHeaderOffset;
-  let handleScrollAnimated;
-  let insetEnd;
-  let listItemHeight;
-  let listLeft;
-  let listRefHappeningNow;
-  let listTop;
-  let renderFooter;
-  let renderHeader;
-  let scrollIndicatorInsetBottom;
-  let scrollPosition;
-  let setAddedFriendSuggestions;
-  let tmp4;
-  let tmp7;
-  let tmp = listLeft;
-  let obj = listItemHeight(listLeft[4]);
-  const cResult = obj.c(45);
+export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((listItemSuggestedFriendHeight, arg1) => {
+  const cResult = listItemHeight(listLeft[4]).c(45);
   ({ accessibilityLabel, data, handleScrollAnimated, insetEnd, listItemHeight } = listItemSuggestedFriendHeight);
   listItemSuggestedFriendHeight = listItemSuggestedFriendHeight.listItemSuggestedFriendHeight;
   listLeft = listItemSuggestedFriendHeight.listLeft;
@@ -47,23 +28,23 @@ const memoResult = react.memo(react.forwardRef(ReactCompilerGating.isReactCompil
   ({ scrollIndicatorInsetBottom, scrollPosition } = listItemSuggestedFriendHeight);
   const friendSuggestions = data.friendSuggestions;
   ({ renderHeader, renderFooter, setAddedFriendSuggestions } = data);
-  const ref = scrollPosition.useRef(null);
+  scrollPosition.useRef(null);
   if (cResult[0] !== listItemHeight) {
-    const obj3 = { listItemHeight };
+    let obj3 = { listItemHeight };
     cResult[0] = listItemHeight;
     cResult[1] = obj3;
-    tmp4 = obj3;
+    let tmp4 = obj3;
   } else {
     tmp4 = cResult[1];
   }
-  const tmp5 = listItemSuggestedFriendHeight(tmp[5])(data, tmp4);
+  const tmp5 = listItemSuggestedFriendHeight(listLeft[5])(data, tmp4);
   const listData = tmp5.listData;
   ({ friendsHeaderIndex, friendsHeaderOffset } = tmp5);
   const listHeaderHeight = tmp5.listHeaderHeight;
   if (cResult[2] !== listHeaderHeight) {
     class A {
       constructor() {
-        obj = { scrollToTop() { /* body not rendered: F145678 */ } };
+        obj = { scrollToTop() { ... } };
         return obj;
       }
     }
@@ -71,11 +52,11 @@ const memoResult = react.memo(react.forwardRef(ReactCompilerGating.isReactCompil
     cResult[2] = listHeaderHeight;
     cResult[3] = A;
     cResult[4] = items;
-    tmp7 = items;
+    let tmp7 = items;
   } else {
     class A {
       constructor() {
-        obj = { scrollToTop() { /* body not rendered: F145678 */ } };
+        obj = { scrollToTop() { ... } };
         return obj;
       }
     }
@@ -85,7 +66,7 @@ const memoResult = react.memo(react.forwardRef(ReactCompilerGating.isReactCompil
   if (cResult[5] === friendSuggestions) {
     class A {
       constructor() {
-        obj = { scrollToTop() { /* body not rendered: F145678 */ } };
+        obj = { scrollToTop() { ... } };
         return obj;
       }
     }
@@ -165,11 +146,8 @@ const memoResult = react.memo(react.forwardRef(ReactCompilerGating.isReactCompil
   cResult[11] = scrollPosition;
   cResult[12] = setAddedFriendSuggestions;
   cResult[13] = E;
+  let obj = listItemHeight(listLeft[4]);
 }) : ((listItemHeight, arg1) => {
-  let accessibilityLabel;
-  let data;
-  let handleScrollAnimated;
-  let insetEnd;
   ({ data, insetEnd } = listItemHeight);
   listItemHeight = listItemHeight.listItemHeight;
   const listItemSuggestedFriendHeight = listItemHeight.listItemSuggestedFriendHeight;
@@ -190,23 +168,19 @@ const memoResult = react.memo(react.forwardRef(ReactCompilerGating.isReactCompil
   const extraData = tmp2.friendsHeaderOffset;
   const listHeaderHeight = tmp2.listHeaderHeight;
   let items = [listHeaderHeight];
-  const imperativeHandle = listRefHappeningNow.useImperativeHandle(arg1, () => {
-    let offset;
-    let obj = {
-      scrollToTop() {
-        let flag = arg0;
-        if (arg0 === undefined) {
-          flag = false;
-        }
-        const current = ref.current;
-        if (current != null) {
-          const obj = { offset, animated: flag };
-          current.scrollToOffset(obj);
-        }
+  const imperativeHandle = listRefHappeningNow.useImperativeHandle(arg1, () => ({
+    scrollToTop() {
+      let flag = arg0;
+      if (arg0 === undefined) {
+        flag = false;
       }
-    };
-    return obj;
-  }, items);
+      const current = ref.current;
+      if (current != null) {
+        const obj = { offset, animated: flag };
+        current.scrollToOffset(obj);
+      }
+    }
+  }), items);
   const items1 = [listItemHeight, scrollPosition, extraData, listTop, listLeft, listItemSuggestedFriendHeight, friendSuggestions, setAddedFriendSuggestions];
   const renderItem = listRefHappeningNow.useCallback((item) => {
     item = item.item;
@@ -216,10 +190,13 @@ const memoResult = react.memo(react.forwardRef(ReactCompilerGating.isReactCompil
         if ("separator" === kind) {
           return jsx(MessagesItemSeparatorDefault, {});
         } else if ("friendsHeader" === kind) {
+          const obj2 = { scrollPosition, stickyAt: extraData, stickyTop: listTop, stickyLeft: listLeft };
           return jsx(MessagesItemSuggestedFriendsHeaderDefault, { scrollPosition, stickyAt: extraData, stickyTop: listTop, stickyLeft: listLeft });
         } else if ("suggestedFriend" === kind) {
+          const obj3 = { height: listItemSuggestedFriendHeight, suggestedFriend: friendSuggestions[item.row], onAddFriendSuggestions: setAddedFriendSuggestions };
           return jsx(MessagesItemSuggestedFriend.MessagesItemSuggestedFriendFlash, { height: listItemSuggestedFriendHeight, suggestedFriend: friendSuggestions[item.row], onAddFriendSuggestions: setAddedFriendSuggestions });
         } else if ("placeholder" === kind) {
+          const obj = { row: item.row, height: listItemHeight };
           return jsx(MessagesItemPlaceholderDefault, { row: item.row, height: listItemHeight });
         }
       }
@@ -259,6 +236,7 @@ const memoResult = react.memo(react.forwardRef(ReactCompilerGating.isReactCompil
   const items4 = [renderFooter];
   const ListHeaderComponent = listRefHappeningNow.useMemo(() => {
     if (useMessagesData.MessagesDataHeader.HappeningNow === renderHeader) {
+      const obj = { listRef: listRefHappeningNow };
       return jsx(MessagesItemHappeningNowDefault, { listRef: listRefHappeningNow });
     } else if (useMessagesData.MessagesDataHeader.EmptyState === renderHeader) {
       return jsx(MessagesItemEmptyStateDefault, {});
@@ -275,7 +253,7 @@ const memoResult = react.memo(react.forwardRef(ReactCompilerGating.isReactCompil
   }, items4);
   const tmp9 = listLeft(listRefHappeningNow.useState(null), 2);
   const first = tmp9[0];
-  let closure_18 = tmp9[1];
+  closure_18 = tmp9[1];
   const items5 = [data2];
   const onCommitLayoutEffect = listRefHappeningNow.useCallback(() => closure_18(data2), items5);
   const items6 = [first, data2, friendsHeaderIndex];
@@ -295,6 +273,3 @@ const memoResult = react.memo(react.forwardRef(ReactCompilerGating.isReactCompil
   const scrollIndicatorInsets = listRefHappeningNow.useMemo(() => ({ bottom: scrollIndicatorInsetBottom }), items8);
   return listTop(insetEnd(listItemSuggestedFriendHeight[15]).AnimatedFlashList, { ref, accessibilityLabel, contentContainerStyle, data: data2, extraData, getItemType, keyExtractor, ListFooterComponent, ListHeaderComponent, onCommitLayoutEffect, onLoad: onCommitLayoutEffect, onScroll, renderItem, scrollIndicatorInsets, stickyHeaderIndices });
 })));
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesFlashList.tsx");
-
-export default memoResult;

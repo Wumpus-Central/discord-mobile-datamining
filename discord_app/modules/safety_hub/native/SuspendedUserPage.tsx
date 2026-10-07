@@ -1,53 +1,41 @@
 // === Module 17114: SuspendedUserPage ===
 
 // Module 17114 (SuspendedUserPage)
-import react_native from "react-native" /* 17 */;
-import get_initialized from "get initialized" /* 504 */;
-import react2 from "react" /* 576 */;
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl4 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import LinkingDefault from "Linking" /* 4571 */;
-import AssetRegistryDefault from "AssetRegistry" /* 4815 */;
+import _modDef4815 from "module_4815" /* 4815 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6089 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
-import IconButton2 from "IconButton" /* 7586 */;
+import IconButton from "IconButton" /* 7586 */;
 import SafetyHubPageDefault from "SafetyHubPage" /* 14567 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 8139 */;
-import SafetyHubConstants from "SafetyHubConstants" /* 8126 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-const View = react_native.View;
+require = fn;
+const View = fn(17).View;
+const SafetyHubConstants = fn(8126);
 ({ AgeCheckStatus: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
-({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { container: obj2, header: obj3, text: obj4, link: { textDecorationLine: "underline" } };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", height: "100%" };
-createStyles = createStyles.createStyles;
-obj3 = { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT, flexDirection: "row", paddingVertical: nativeDefault.space.PX_8, alignItems: "center" };
-obj4 = { marginRight: nativeDefault.space.PX_8, textAlign: "left", flexShrink: 1 };
-let closure_9 = createStyles(obj);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let ageCheckStatus;
-  let intl;
-  let intl3;
-  let items1;
-  let items2;
-  let tmp5;
-  let tmp6;
-  let obj = react2;
-  const cResult = obj.c(13);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", height: "100%" }, header: null, text: null, link: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", height: "100%" };
+obj2.header = { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT, flexDirection: "row", paddingVertical: nativeDefault.space.PX_8, alignItems: "center" };
+let obj4 = { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT, flexDirection: "row", paddingVertical: nativeDefault.space.PX_8, alignItems: "center" };
+obj2.text = { marginRight: nativeDefault.space.PX_8, textAlign: "left", flexShrink: 1 };
+obj2.link = { textDecorationLine: "underline" };
+let closure_9 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj5 = { marginRight: nativeDefault.space.PX_8, textAlign: "left", flexShrink: 1 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/native/SuspendedUserPage.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(13);
   const tmp4 = closure_9();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SafetyHubStore];
@@ -61,129 +49,124 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const tmpResult = get_initialized;
-  const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
-  const VERIFIED = hasOwnProperty.VERIFIED;
+  const stateFromStores = initialize.useStateFromStores(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
       constructor() {
-        const obj = AuthenticationActionCreatorsDefault;
-        obj.closeSuspendedUser();
+        obj = closure_1_1(closure_1_2[10]);
+        closeSuspendedUserResult = obj.closeSuspendedUser();
+        return;
       }
     }
     cResult[2] = S;
   } else {
     class S {
       constructor() {
-        const obj = AuthenticationActionCreatorsDefault;
-        obj.closeSuspendedUser();
+        obj = closure_1_1(closure_1_2[10]);
+        closeSuspendedUserResult = obj.closeSuspendedUser();
+        return;
       }
     }
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
       constructor() {
-        const obj = AuthenticationActionCreatorsDefault;
-        obj.closeSuspendedUser();
+        obj = closure_1_1(closure_1_2[10]);
+        closeSuspendedUserResult = obj.closeSuspendedUser();
+        return;
       }
     }
     cResult[3] = tmp11;
   } else {
     class S {
       constructor() {
-        const obj = AuthenticationActionCreatorsDefault;
-        obj.closeSuspendedUser();
+        obj = closure_1_1(closure_1_2[10]);
+        closeSuspendedUserResult = obj.closeSuspendedUser();
+        return;
       }
     }
   }
-  if (cResult[4] === stateFromStores !== VERIFIED) {
+  if (cResult[4] === stateFromStores !== constants.VERIFIED) {
     class S {
       constructor() {
-        const obj = AuthenticationActionCreatorsDefault;
-        obj.closeSuspendedUser();
+        obj = closure_1_1(closure_1_2[10]);
+        closeSuspendedUserResult = obj.closeSuspendedUser();
+        return;
       }
     }
   }
   let tmp13 = tmp12;
-  if (tmp13) {
+  if (stateFromStores !== constants.VERIFIED) {
     class S {
       constructor() {
-        const obj = AuthenticationActionCreatorsDefault;
-        obj.closeSuspendedUser();
+        obj = closure_1_1(closure_1_2[10]);
+        closeSuspendedUserResult = obj.closeSuspendedUser();
+        return;
       }
     }
-    const obj2 = { style: tmp4.header, children: items1 };
-    const obj3 = { variant: "destructive", accessibilityLabel: intl.string(intl4.t.cpT0Cq), onPress: S, icon: AssetRegistryDefault };
-    const IconButton = IconButton2.IconButton;
-    intl = intl4.intl;
-    items1 = [metroImportDefault(IconButton, obj3), ];
-    const obj4 = { style: tmp4.text, onPress: tmp11, variant: "text-xs/medium", color: "control-critical-primary-text-default", children: items2 };
-    const Text = Text_Text.Text;
-    const intl2 = intl4.intl;
-    items2 = [intl2.string(intl4.t["MG+Bzb"]), " ", ];
-    const obj5 = { style: tmp4.link, variant: "text-xs/medium", color: "control-critical-primary-text-default", children: intl3.string(intl4.t["9JceHN"]) };
-    const Text2 = Text_Text.Text;
-    intl3 = intl4.intl;
-    items2[2] = metroImportDefault(Text2, obj5);
-    items1[1] = metroImportAll(Text, obj4);
-    tmp13 = metroImportAll(View, obj2);
+    const obj2 = { style: tmp4.header, children: null };
+    const obj3 = { variant: "destructive", accessibilityLabel: null, onPress: null, icon: null };
+    const intl = util.intl;
+    obj3.accessibilityLabel = intl.string(util.t.cpT0Cq);
+    obj3.onPress = S;
+    obj3.icon = _modDef4815;
+    const items1 = [React5(IconButton.IconButton, obj3), ];
+    const obj4 = { style: tmp4.text, onPress: tmp11, variant: "text-xs/medium", color: "control-critical-primary-text-default", children: null };
+    const intl2 = util.intl;
+    const items2 = [intl2.string(util.t["MG+Bzb"]), " ", ];
+    const obj5 = { style: tmp4.link, variant: "text-xs/medium", color: "control-critical-primary-text-default", children: null };
+    const intl3 = util.intl;
+    obj5.children = intl3.string(util.t["9JceHN"]);
+    items2[2] = React5(Text_Text.Text, obj5);
+    obj4.children = items2;
+    items1[1] = closure_1_8(Text_Text.Text, obj4);
+    obj2.children = items1;
+    tmp13 = closure_1_8(View, obj2);
   }
-  cResult[4] = stateFromStores !== VERIFIED;
+  cResult[4] = stateFromStores !== constants.VERIFIED;
   cResult[5] = tmp4.header;
   cResult[6] = tmp4.link;
   cResult[7] = tmp4.text;
   cResult[8] = tmp13;
+  const tmpResult = initialize;
 }) : (() => {
-  let ageCheckStatus;
-  let intl;
-  let intl3;
-  let items1;
-  let items2;
-  let items3;
   const tmp = closure_9();
-  let obj = get_initialized;
   const items = [SafetyHubStore];
-  let tmp6Result = obj.useStateFromStores(items, () => ageCheckStatus.getAgeCheckStatus()) !== hasOwnProperty.VERIFIED;
-  const obj2 = { style: tmp.container, children: items3 };
-  const SafeAreaPaddingView = common_SafeAreaView.SafeAreaPaddingView;
+  let tmp6Result = initialize.useStateFromStores(items, () => ageCheckStatus.getAgeCheckStatus()) !== constants.VERIFIED;
+  const obj2 = { style: tmp.container, children: null };
   if (tmp6Result) {
-    const obj3 = { style: tmp.header, children: items1 };
-    const obj4 = {
-      variant: "destructive",
-      accessibilityLabel: intl.string(intl4.t.cpT0Cq),
-      onPress() {
-          const obj = AuthenticationActionCreatorsDefault;
-          obj.closeSuspendedUser();
-        },
-      icon: AssetRegistryDefault
+    const obj3 = { style: tmp.header, children: null };
+    const obj4 = { variant: "destructive", accessibilityLabel: null, onPress: null, icon: null };
+    const intl = util.intl;
+    obj4.accessibilityLabel = intl.string(util.t.cpT0Cq);
+    obj4.onPress = function onPress() {
+      AuthenticationActionCreatorsDefault.closeSuspendedUser();
     };
-    const IconButton = IconButton2.IconButton;
-    intl = intl4.intl;
-    items1 = [metroImportDefault(IconButton, obj4), ];
+    obj4.icon = _modDef4815;
+    const items1 = [React5(IconButton.IconButton, obj4), ];
     const obj5 = {
       style: tmp.text,
       onPress() {
-          const obj = LinkingDefault;
-          obj.openURL(constants.WARNING_SYSTEM_HELPCENTER_LINK);
+          LinkingDefault.openURL(constants.WARNING_SYSTEM_HELPCENTER_LINK);
         },
       variant: "text-xs/medium",
       color: "control-critical-primary-text-default",
-      children: items2
+      children: null
     };
-    const Text = Text_Text.Text;
-    const intl2 = intl4.intl;
-    items2 = [intl2.string(intl4.t["MG+Bzb"]), " ", ];
-    const obj6 = { style: tmp.link, variant: "text-xs/medium", color: "control-critical-primary-text-default", children: intl3.string(intl4.t["9JceHN"]) };
-    const Text2 = Text_Text.Text;
-    intl3 = intl4.intl;
-    items2[2] = metroImportDefault(Text2, obj6);
-    items1[1] = metroImportAll(Text, obj5);
-    tmp6Result = metroImportAll(View, obj3);
+    const intl2 = util.intl;
+    const items2 = [intl2.string(util.t["MG+Bzb"]), " ", ];
+    const obj6 = { style: tmp.link, variant: "text-xs/medium", color: "control-critical-primary-text-default", children: null };
+    const intl3 = util.intl;
+    obj6.children = intl3.string(util.t["9JceHN"]);
+    items2[2] = React5(Text_Text.Text, obj6);
+    obj5.children = items2;
+    items1[1] = closure_1_8(Text_Text.Text, obj5);
+    obj3.children = items1;
+    tmp6Result = closure_1_8(View, obj3);
   }
-  const rect = { top: true, right: true, left: true, children: metroImportAll(View, obj2) };
-  items3 = [tmp6Result, metroImportDefault(SafetyHubPageDefault, { visible: true })];
-  return metroImportDefault(SafeAreaPaddingView, rect);
+  const rect = { top: true, right: true, left: true, children: null };
+  const items3 = [tmp6Result, React5(SafetyHubPageDefault, { visible: true })];
+  obj2.children = items3;
+  rect.children = closure_1_8(View, obj2);
+  return React5(common_SafeAreaView.SafeAreaPaddingView, rect);
 });
-const result = size.fileFinishedImporting("modules/safety_hub/native/SuspendedUserPage.tsx");
-
-export default tmp6;

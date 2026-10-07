@@ -1,106 +1,93 @@
 // === Module 8556: CollectiblesShopPricePlaceholder ===
 
 // Module 8556 (CollectiblesShopPricePlaceholder)
-import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
 import timing from "timing" /* 4897 */;
-import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
-let set, style;
 
-let obj2;
-const jsx = Fragment.jsx;
-let obj = { skeletonContainer: obj2 };
-obj2 = { height: 16, flex: 1, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
-let closure_5 = createStyles.createStyles(obj);
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { skeletonContainer: { height: 16, flex: 1, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND } };
+let closure_5 = createStyles.createStyles(obj2);
 const __initData = { code: "function CollectiblesShopPricePlaceholderTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
 const __initData2 = { code: "function CollectiblesShopPricePlaceholderTsx2(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
-  let sharedValue;
-  let tmp6;
-  let tmp7;
-  const tmp = sharedValue;
-  let obj = sharedValue(576);
-  const cResult = obj.c(7);
+const ReactCompilerGating = fn(558);
+let obj3 = { height: 16, flex: 1, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopPricePlaceholder.tsx");
+
+export const CollectiblesShopPricePlaceholder = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+  const cResult = sharedValue(576).c(7);
   style = style.style;
   const tmp4 = closure_5();
-  const obj2 = sharedValue(4618);
-  sharedValue = obj2.useSharedValue(0.3);
+  let obj = sharedValue(576);
+  const tmp = sharedValue;
+  sharedValue = sharedValue(4618).useSharedValue(0.3);
   if (cResult[0] !== sharedValue) {
     const fn = function n() {
-      set = sharedValue.set;
-      const withRepeat = ReanimatedRexport.withRepeat;
-      ReanimatedRexport;
-      const obj = timing;
-      const result = set(withRepeat(obj.withTiming(1, { duration: 650 }), -1, true));
+      const obj = ReanimatedRexport;
+      const result = sharedValue.set(obj.withRepeat(timing.withTiming(1, { duration: 650 }), -1, true));
     };
     const items = [sharedValue];
     cResult[0] = sharedValue;
     cResult[1] = fn;
     cResult[2] = items;
-    tmp7 = items;
-    tmp6 = fn;
+    let tmp7 = items;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[1];
     tmp7 = cResult[2];
   }
-  const effect = react.useEffect(tmp6, tmp7);
+  const effect = noop.useEffect(tmp6, tmp7);
+  const obj2 = sharedValue(4618);
   const fn2 = function f() {
-    const obj = { opacity: sharedValue.get() };
-    return obj;
+    return { opacity: sharedValue.get() };
   };
   fn2.__closure = { opacity: sharedValue };
   fn2.__workletHash = 10107093534072;
   fn2.__initData = __initData;
-  const tmpResult = tmp(4618);
-  const animatedStyle = tmpResult.useAnimatedStyle(fn2);
+  const animatedStyle = tmp(4618).useAnimatedStyle(fn2);
   if (cResult[3] === animatedStyle) {
     if (cResult[4] === style) {
-      let tmp10;
       if (cResult[5] === tmp4.skeletonContainer) {
-        tmp10 = cResult[6];
+        let tmp10 = cResult[6];
       }
       return tmp10;
     }
   }
+  const obj3 = { style: null };
   const items1 = [tmp4.skeletonContainer, style, animatedStyle];
-  const tmp11 = jsx(ReanimatedRexportDefault.View, { style: items1 });
+  obj3.style = items1;
+  const tmp11 = jsx(ReanimatedRexportDefault.View, { style: null });
   cResult[3] = animatedStyle;
   cResult[4] = style;
   cResult[5] = tmp4.skeletonContainer;
   cResult[6] = tmp11;
   tmp10 = tmp11;
+  const tmpResult = tmp(4618);
 }) : ((style) => {
   let sharedValue;
-  style = style.style;
   const tmp = closure_5();
-  let obj = sharedValue(4618);
-  sharedValue = obj.useSharedValue(0.3);
+  sharedValue = sharedValue(4618).useSharedValue(0.3);
   const items = [sharedValue];
-  const effect = react.useEffect(() => {
-    set = sharedValue.set;
-    const withRepeat = ReanimatedRexport.withRepeat;
-    ReanimatedRexport;
-    const obj = timing;
-    const result = set(withRepeat(obj.withTiming(1, { duration: 650 }), -1, true));
+  const effect = noop.useEffect(() => {
+    const obj = ReanimatedRexport;
+    const result = sharedValue.set(obj.withRepeat(timing.withTiming(1, { duration: 650 }), -1, true));
   }, items);
+  let obj = sharedValue(4618);
   const fn = function _() {
-    const obj = { opacity: sharedValue.get() };
-    return obj;
+    return { opacity: sharedValue.get() };
   };
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 5265836727291;
   fn.__initData = __initData2;
-  const obj2 = sharedValue(4618);
-  const animatedStyle = obj2.useAnimatedStyle(fn);
-  const items1 = [tmp.skeletonContainer, style, animatedStyle];
-  return jsx(ReanimatedRexportDefault.View, { style: items1 });
+  const animatedStyle = sharedValue(4618).useAnimatedStyle(fn);
+  const obj3 = { style: null };
+  const items1 = [tmp.skeletonContainer, style.style, animatedStyle];
+  obj3.style = items1;
+  return jsx(ReanimatedRexportDefault.View, { style: null });
 });
-let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopPricePlaceholder.tsx");
-
-export const CollectiblesShopPricePlaceholder = tmp2;

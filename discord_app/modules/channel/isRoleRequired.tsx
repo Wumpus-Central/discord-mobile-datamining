@@ -7,7 +7,7 @@ import ChannelRecord from "ChannelRecord" /* 2055 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
 import size from "module_2" /* 2 */;
 
-const set = ChannelRecord.GUILD_NON_CATEGORY_CHANNEL_TYPES;
+ChannelRecord.GUILD_NON_CATEGORY_CHANNEL_TYPES;
 const Permissions = Constants.Permissions;
 const result = size.fileFinishedImporting("modules/channel/isRoleRequired.tsx");
 
@@ -18,15 +18,14 @@ export default function isRoleRequired(guild_id) {
     if (null != guild_id.guild_id) {
       if (set.has(tmp9)) {
         if (guild_id.isGuildVocal()) {
-          const obj = PermissionUtilsAll;
           if (!obj.canEveryoneRole(Permissions.CONNECT, guild_id)) {
             return true;
           }
+          obj = PermissionUtilsAll;
         }
         let hasItem = null != tmp4;
         if (hasItem) {
-          const obj2 = BigFlagUtilsAll;
-          hasItem = obj2.has(tmp4.deny, Permissions.VIEW_CHANNEL);
+          hasItem = BigFlagUtilsAll.has(tmp4.deny, Permissions.VIEW_CHANNEL);
         }
         return hasItem;
       }

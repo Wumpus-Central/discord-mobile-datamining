@@ -1,39 +1,47 @@
 // === Module 16998: DisplayNameStylesFlywheelProfileCoachmark ===
 
 // Module 16998 (DisplayNameStylesFlywheelProfileCoachmark)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
-import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
+import c from "c" /* 576 */;
 import _modDef2911 from "module_2911" /* 2911 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
 import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 16999 */;
-import react_mod from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let dependencyMap;
-
-let react = react_mod;
-const View = react_native.View;
-const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
-const jsx = Fragment.jsx;
+require = fn;
+const View = fn(17).View;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_8 = createStyles.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" } });
-let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let currentUser;
-  let markAsDismissed;
-  let tmp11;
-  let tmp15;
-  let tmp19;
-  let tmp4;
-  let tmp5;
-  let tmp8;
-  let visible;
-  const obj = markAsDismissed(576);
-  const cResult = obj.c(16);
+fn(558);
+const ReactCompilerGating = fn(558);
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(3);
+  const tmp4 = closure_8();
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const tmp7 = jsx(DisplayNameLockeAbstractUI.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" });
+    cResult[0] = tmp7;
+    let first = tmp7;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== tmp4.coachmarkImageContainer) {
+    const obj2 = { style: tmp4.coachmarkImageContainer, children: first };
+    const tmp11 = <View style={tmp4.coachmarkImageContainer}>{first}</View>;
+    cResult[1] = tmp4.coachmarkImageContainer;
+    cResult[2] = tmp11;
+    let tmp8 = tmp11;
+  } else {
+    tmp8 = cResult[2];
+  }
+  return tmp8;
+}) : (() => <View style={closure_8().coachmarkImageContainer}>{jsx(DisplayNameLockeAbstractUI.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" })}</View>);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesFlywheelProfileCoachmark.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = markAsDismissed(576).c(16);
   ({ visible, markAsDismissed } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -47,109 +55,97 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const tmpResult = markAsDismissed(504);
-  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+  const obj = markAsDismissed(576);
+  const stateFromStores = markAsDismissed(504).useStateFromStores(tmp4, tmp5);
   if (cResult[2] !== stateFromStores) {
-    const obj3 = PremiumUtilsDefault;
-    const result = obj3.canUsePremiumProfileCustomization(stateFromStores);
+    const result = PremiumUtilsDefault.canUsePremiumProfileCustomization(stateFromStores);
     cResult[2] = stateFromStores;
     cResult[3] = result;
-    tmp8 = result;
+    let tmp8 = result;
   } else {
     tmp8 = cResult[3];
   }
   if (cResult[4] !== tmp8) {
-    let stringResult;
     const intl = markAsDismissed(1126).intl;
     const string = intl.string;
-    const tmp13 = _modDef2911;
+    let h6sykk = _modDef2911;
     if (tmp8) {
-      stringResult = string(tmp13.h6sykk);
+      h6sykk = h6sykk.h6sykk;
+      let stringResult = string(h6sykk);
     } else {
-      stringResult = string(tmp13.M5amXH);
+      stringResult = string(h6sykk.M5amXH);
     }
     cResult[4] = tmp8;
     cResult[5] = stringResult;
-    tmp11 = stringResult;
-  } else {
-    tmp11 = cResult[5];
-  }
-  if (cResult[6] !== tmp8) {
-    let string2Result;
+  } else if (cResult[6] !== tmp8) {
     const intl2 = markAsDismissed(1126).intl;
     const string2 = intl2.string;
-    const tmp17 = _modDef2911;
+    let TyUdka = _modDef2911;
     if (tmp8) {
-      string2Result = string2(tmp17.TyUdka);
+      TyUdka = TyUdka.TyUdka;
+      let string2Result = string2(TyUdka);
     } else {
-      string2Result = string2(tmp17.dluV0R);
+      string2Result = string2(TyUdka.dluV0R);
     }
     cResult[6] = tmp8;
     cResult[7] = string2Result;
-    tmp15 = string2Result;
   } else {
-    tmp15 = cResult[7];
-  }
-  if (cResult[8] !== markAsDismissed) {
-    const fn2 = function _() {
-      markAsDismissed(ContentDismissActionType.USER_DISMISS);
-    };
-    cResult[8] = markAsDismissed;
-    cResult[9] = fn2;
-    tmp19 = fn2;
-  } else {
-    tmp19 = cResult[9];
-  }
-  if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-    class U {
-      constructor() {
-        return <closure_1_9 />;
+    if (cResult[8] !== markAsDismissed) {
+      const fn2 = function _() {
+        markAsDismissed(ContentDismissActionType.USER_DISMISS);
+      };
+      cResult[8] = markAsDismissed;
+      cResult[9] = fn2;
+      let tmp19 = fn2;
+    } else {
+      tmp19 = cResult[9];
+    }
+    const _Symbol = Symbol;
+    if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+      class U {
+        constructor() {
+          return closure_1_7(closure_1_9, {});
+        }
+      }
+      cResult[10] = U;
+    } else {
+      class U {
+        constructor() {
+          return closure_1_7(closure_1_9, {});
+        }
       }
     }
-    cResult[10] = U;
-  } else {
-    class U {
-      constructor() {
-        return <closure_1_9 />;
+    if (cResult[11] === cResult[7]) {
+      class U {
+        constructor() {
+          return closure_1_7(closure_1_9, {});
+        }
       }
     }
+    const obj2 = { title: tmp11, description: cResult[7], visible, position: "bottom", onDismiss: tmp19, renderImgComponent: U };
+    cResult[11] = cResult[7];
+    cResult[12] = tmp19;
+    cResult[13] = tmp11;
+    cResult[14] = visible;
+    cResult[15] = obj2;
   }
-  if (cResult[11] === tmp15) {
-    class U {
-      constructor() {
-        return <closure_1_9 />;
-      }
-    }
-  }
-  const obj2 = { title: tmp11, description: tmp15, visible, position: "bottom", onDismiss: tmp19, renderImgComponent: U };
-  cResult[11] = tmp15;
-  cResult[12] = tmp19;
-  cResult[13] = tmp11;
-  cResult[14] = visible;
-  cResult[15] = obj2;
+  const tmpResult = markAsDismissed(504);
 }) : ((visible) => {
-  let currentUser;
-  let description;
-  let string2Result;
-  let stringResult;
-  let title;
   visible = visible.visible;
   const markAsDismissed = visible.markAsDismissed;
   dependencyMap = undefined;
-  react = undefined;
+  noop = undefined;
   let onDismiss;
-  const targetRef = visible.targetRef;
   const items = [UserStore];
+  const stateFromStores = visible(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = visible(504);
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj2 = markAsDismissed(4534);
-  const result = obj2.canUsePremiumProfileCustomization(stateFromStores);
+  const tmp4 = markAsDismissed;
+  const result = markAsDismissed(4534).canUsePremiumProfileCustomization(stateFromStores);
   const intl = visible(1126).intl;
   const string = intl.string;
   const tmp6 = markAsDismissed(2911);
-  const tmp4 = markAsDismissed;
   if (result) {
-    stringResult = string(tmp6.h6sykk);
+    let stringResult = string(tmp6.h6sykk);
   } else {
     stringResult = string(tmp6.M5amXH);
   }
@@ -158,17 +154,17 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const string2 = intl2.string;
   const tmp4Result = tmp4(2911);
   if (result) {
-    string2Result = string2(tmp4Result.TyUdka);
+    let string2Result = string2(tmp4Result.TyUdka);
   } else {
     string2Result = string2(tmp4Result.dluV0R);
   }
-  react = string2Result;
+  noop = string2Result;
   const items1 = [markAsDismissed];
-  onDismiss = react.useCallback(() => {
+  onDismiss = noop.useCallback(() => {
     markAsDismissed(ContentDismissActionType.USER_DISMISS);
   }, items1);
   const items2 = [stringResult, string2Result, visible, onDismiss];
-  const memo = react.useMemo(() => ({
+  const memo = noop.useMemo(() => ({
     title,
     description,
     visible,
@@ -178,34 +174,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       return closure_1_7(closure_1_9, {});
     }
   }), items2);
-  const tmpResult = visible(9895);
-  const coachmark = tmpResult.useCoachmark(targetRef, memo);
+  const obj2 = markAsDismissed(4534);
+  const coachmark = visible(9895).useCoachmark(visible.targetRef, memo);
   return null;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  let tmp8;
-  const obj = react2;
-  const cResult = obj.c(3);
-  const tmp4 = closure_8();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp7 = jsx(DisplayNameLockeAbstractUI.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" });
-    cResult[0] = tmp7;
-    first = tmp7;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== tmp4.coachmarkImageContainer) {
-    const tmp11 = <View style={tmp4.coachmarkImageContainer}>{first}</View>;
-    cResult[1] = tmp4.coachmarkImageContainer;
-    cResult[2] = tmp11;
-    tmp8 = tmp11;
-  } else {
-    tmp8 = cResult[2];
-  }
-  return tmp8;
-}) : (() => <View style={closure_8().coachmarkImageContainer}>{jsx(DisplayNameLockeAbstractUI.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" })}</View>);
-let result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesFlywheelProfileCoachmark.tsx");
-
-export default tmp2;

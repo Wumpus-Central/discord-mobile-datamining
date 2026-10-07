@@ -2,319 +2,259 @@
 
 // Module 12114 (NewChannelFollower)
 import nativeDefault from "native" /* 587 */;
-import intl10 from "intl" /* 1126 */;
-import asyncRequire from "asyncRequire" /* 1987 */;
-import ChannelRecord from "ChannelRecord" /* 2055 */;
-import GuildChannelStore2 from "GuildChannelStore" /* 4513 */;
+import util from "util" /* 1126 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 11309 */;
 import openChannelPickerDefault from "openChannelPicker" /* 12117 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildChannelStore from "GuildChannelStore" /* 4513 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import PermissionStore from "PermissionStore" /* 4515 */;
 import SortedGuildStore from "SortedGuildStore" /* 5623 */;
-import Constants from "Constants" /* 1085 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let BottomSheet, arr, guild;
 
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let hasOwnProperty;
-let metroRequire;
-let obj2;
-let obj3;
+require = fn;
 function canFollowIntoChannel(channel) {
   channel = channel.channel;
-  const hasItem = set.has(channel.type) && PermissionStore.can(constants.MANAGE_WEBHOOKS, channel);
+  let hasItem = set.has(channel.type);
+  if (hasItem) {
+    hasItem = PermissionStore.can(constants.MANAGE_WEBHOOKS, channel);
+  }
   return hasItem;
 }
-({ View: hasOwnProperty, ImageBackground: metroRequire } = react_native);
-const set = ChannelRecord.GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
-let closure_10 = GuildChannelStore2.GUILD_SELECTABLE_CHANNELS_KEY;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, ImageBackground: metroRequire } = get_ActivityIndicator);
+fn(2055).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
+let closure_10 = fn(4513).GUILD_SELECTABLE_CHANNELS_KEY;
+const Constants = fn(1085);
 ({ AbortCodes: closure_14, Permissions: closure_15 } = Constants);
-({ jsx: closure_16, jsxs: closure_17 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 24 }, header: { flex: 1, flexDirection: "row", justifyContent: "center", alignItems: "center", height: 96 }, headerGuildIcon: { width: 40, marginRight: 16 }, headerChannelContainer: obj2, headerChannel: obj3, headerChannelIcon: { height: 20, width: 20, marginRight: 8, opacity: 0.6 }, ctaHeader: { flex: 1, textAlign: "center", marginBottom: 8 }, ctaSubhead: { flex: 1, textAlign: "center", marginBottom: 8 }, channelIcon: { height: 16, width: 16, opacity: 0.6 } };
-obj2 = { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, height: 32 };
-createStyles = createStyles.createStyles;
-obj3 = { flex: 1, flexDirection: "row", minWidth: 160, paddingHorizontal: 8, paddingVertical: 6, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
-let closure_18 = createStyles(obj);
+const jsxProd = fn(21);
+({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 24 }, header: { flex: 1, flexDirection: "row", justifyContent: "center", alignItems: "center", height: 96 }, headerGuildIcon: { width: 40, marginRight: 16 }, headerChannelContainer: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, height: 32 }, headerChannel: null, headerChannelIcon: null, ctaHeader: null, ctaSubhead: null, channelIcon: null };
+let obj3 = { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, height: 32 };
+obj2.headerChannel = { flex: 1, flexDirection: "row", minWidth: 160, paddingHorizontal: 8, paddingVertical: 6, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
+obj2.headerChannelIcon = { height: 20, width: 20, marginRight: 8, opacity: 0.6 };
+obj2.ctaHeader = { flex: 1, textAlign: "center", marginBottom: 8 };
+obj2.ctaSubhead = { flex: 1, textAlign: "center", marginBottom: 8 };
+obj2.channelIcon = { height: 16, width: 16, opacity: 0.6 };
+let closure_18 = createStyles.createStyles(obj2);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_following/native/components/NewChannelFollower.tsx");
 
 export default function NewChannelFollower(targetChannelId) {
-  let TableRow;
-  let TableRow2;
-  let c7;
-  let channelIcon;
-  let closure_5;
-  let intl;
-  let intl2;
-  let intl3;
-  let intl5;
-  let intl7;
-  let intl8;
-  let intl9;
-  let items2;
-  let items3;
-  let items5;
-  let items7;
-  let items8;
-  let name;
-  let obj15;
-  let obj18;
-  let obj6;
-  let obj9;
-  let sourceChannel;
-  let sourceGuild;
-  let targetChannel;
-  let targetGuild;
-  let targetGuildId;
-  let tmp19Result;
-  let tmp19Result3;
-  let tmp5;
-  let tmp6Result4;
-  let tmp9Result;
   ({ sourceGuildId: require, sourceChannelId: importDefault, targetGuildId } = targetChannelId);
   targetChannelId = targetChannelId.targetChannelId;
-  ({ reopenActionSheetWithTarget: react, onSuccess: closure_5 } = targetChannelId);
+  ({ reopenActionSheetWithTarget: noop, onSuccess: closure_5 } = targetChannelId);
   c7 = undefined;
   targetChannel = undefined;
-  const onCancel = targetChannelId.onCancel;
   let tmp = closure_18();
-  let tmp2 = targetChannelId(react.useState(false), 2);
-  let closure_6 = tmp2[1];
-  const first = tmp2[0];
-  let tmp4 = targetChannelId(react.useState(null), 2);
-  [tmp5, c7] = tmp4;
-  let obj = require("useBottomSheetRef");
-  const bottomSheetRef1 = obj.useBottomSheetRef();
+  const tmp2 = targetChannelId(noop.useState(false), 2);
+  closure_6 = tmp2[1];
+  [tmp4, c7] = targetChannelId(noop.useState(null), 2);
+  const tmp3 = targetChannelId(noop.useState(null), 2);
+  const bottomSheetRef1 = require("useBottomSheetRef").useBottomSheetRef();
   const bottomSheetRef = bottomSheetRef1.bottomSheetRef;
-  const bottomSheetClose = bottomSheetRef1.bottomSheetClose;
+  let obj = require("useBottomSheetRef");
+  const tmp9 = require("useTheme")();
   const items = [GuildStore];
-  const tmp10 = require("useTheme")();
-  const obj2 = require("get initialized");
-  const stateFromStoresObject = obj2.useStateFromStoresObject(items, () => {
-    const obj = { sourceGuild: GuildStore.getGuild(require), targetGuild: GuildStore.getGuild(targetGuildId) };
-    return obj;
-  });
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ sourceGuild: GuildStore.getGuild(require), targetGuild: GuildStore.getGuild(targetGuildId) }));
   ({ targetGuild, sourceGuild } = stateFromStoresObject);
+  let obj2 = require("initialize");
   const items1 = [bottomSheetRef];
-  const obj3 = require("get initialized");
-  const stateFromStoresObject1 = obj3.useStateFromStoresObject(items1, () => {
-    const obj = { sourceChannel: ChannelStore.getChannel(importDefault), targetChannel: ChannelStore.getChannel(targetChannelId) };
-    return obj;
-  });
+  const stateFromStoresObject1 = require("initialize").useStateFromStoresObject(items1, () => ({ sourceChannel: ChannelStore.getChannel(importDefault), targetChannel: ChannelStore.getChannel(targetChannelId) }));
   ({ sourceChannel, targetChannel } = stateFromStoresObject1);
-  const tmp13 = require("useChannelName")(sourceChannel);
-  const tmp14 = require("useChannelName")(targetChannel);
-  const channelType = tmp15;
+  const obj3 = require("initialize");
+  const tmp13 = require("useChannelName")(targetChannel);
+  const channelType = tmp14;
   require("useMountEffect")(() => {
-    if (channelType) {
+    if (closure_10) {
       const current = bottomSheetRef.current;
       if (current != null) {
         current.expandActionSheet();
       }
     }
   });
-  const tmp6Result = require("shared");
-  if (tmp6Result.isThemeDark(tmp10)) {
-    tmp9Result = require("AssetRegistry");
+  const tmp12 = require("useChannelName")(sourceChannel);
+  if (tmp5Result.isThemeDark(tmp9)) {
+    let tmp8Result = require("module_12115");
   } else {
-    tmp9Result = require("AssetRegistry");
+    tmp8Result = require("module_12116");
   }
-  const obj4 = { handleDisabled: true, startExpanded: true, scrollable: true, ref: bottomSheetRef, children: items8 };
-  BottomSheet = require("Sheet/BottomSheet").BottomSheet;
-  const obj5 = { source: tmp9Result, style: tmp.header, children: closure_17(closure_5, obj6) };
-  obj6 = { style: tmp.header, children: items2 };
-  const BottomSheetScrollView = require("BottomSheetModal").BottomSheetScrollView;
-  items2 = [, ];
-  const obj7 = { style: tmp.headerGuildIcon, guild: sourceGuild };
-  items2[0] = closure_16(require("GuildIcon"), obj7);
-  const obj8 = { style: tmp.headerChannelContainer, children: closure_17(closure_5, obj9) };
-  obj9 = { style: tmp.headerChannel, children: items3 };
-  const obj10 = { size: require("native").Icon.Sizes.CUSTOM, source: channelIcon, style: tmp.headerChannelIcon };
-  const Icon = require("native").Icon;
-  channelIcon = null;
-  const tmp20 = closure_6;
+  const obj4 = { handleDisabled: true, startExpanded: true, scrollable: true, ref: bottomSheetRef, children: null };
+  const obj5 = { source: tmp8Result, style: tmp.header, children: null };
+  const obj6 = { style: tmp.header, children: null };
+  const items2 = [closure_16(require("GuildIcon"), { style: tmp.headerGuildIcon, guild: sourceGuild }), ];
+  const obj8 = { style: tmp.headerChannelContainer, children: null };
+  const obj9 = { style: tmp.headerChannel, children: null };
+  const obj10 = { size: require("native").Icon.Sizes.CUSTOM, source: null, style: null };
+  let channelIcon = null;
   if (null != sourceChannel) {
-    const tmp6Result3 = require("utils/ChannelUtils");
-    channelIcon = tmp6Result3.getChannelIcon(sourceChannel);
+    channelIcon = require("utils/ChannelUtils").getChannelIcon(sourceChannel);
+    const tmp5Result3 = require("utils/ChannelUtils");
   }
-  items3 = [closure_16(Icon, obj10), closure_16(require("Text/Text").Text, { lineClamp: 1, variant: "text-sm/medium", children: tmp13 })];
+  obj10.source = channelIcon;
+  obj10.style = tmp.headerChannelIcon;
+  const items3 = [closure_16(require("native").Icon, obj10), closure_16(require("Text/Text").Text, { lineClamp: 1, variant: "text-sm/medium", children: tmp12 })];
+  obj9.children = items3;
+  obj8.children = closure_17(closure_5, obj9);
   items2[1] = closure_16(closure_5, obj8);
-  const items4 = [closure_16(tmp20, obj5), ];
-  const obj11 = { style: tmp.container, children: items5 };
-  const obj12 = { style: tmp.ctaHeader, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: intl.string(require("intl").t.mvPFbA) };
-  const Text = require("Text/Text").Text;
-  intl = require("intl").intl;
-  items5 = [closure_16(Text, obj12), , , , , ];
-  const obj13 = { style: tmp.ctaSubhead, variant: "text-sm/medium", color: "text-default", children: intl2.string(require("intl").t.kbpkxJ) };
-  const Text2 = require("Text/Text").Text;
-  intl2 = require("intl").intl;
-  items5[1] = closure_16(Text2, obj13);
-  const Stack = require("Stack/Stack").Stack;
-  const obj14 = { title: intl3.string(require("intl").t.xFn72s), hasIcons: true, children: closure_16(TableRow, obj15) };
-  const TableRowGroup = require("TableRowGroup").TableRowGroup;
-  intl3 = require("intl").intl;
-  TableRow = require("TableRow").TableRow;
+  obj6.children = items2;
+  obj5.children = closure_17(closure_5, obj6);
+  const items4 = [closure_16(closure_6, obj5), ];
+  const obj11 = { style: tmp.container, children: null };
+  const obj12 = { style: tmp.ctaHeader, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  let intl = require("util").intl;
+  obj12.children = intl.string(require("util").t.mvPFbA);
+  const items5 = [closure_16(require("Text/Text").Text, obj12), , , , , ];
+  const obj13 = { style: tmp.ctaSubhead, variant: "text-sm/medium", color: "text-default", children: null };
+  let intl2 = require("util").intl;
+  obj13.children = intl2.string(require("util").t.kbpkxJ);
+  items5[1] = closure_16(require("Text/Text").Text, obj13);
+  const obj14 = { title: null, hasIcons: true, children: null };
+  const intl3 = require("util").intl;
+  obj14.title = intl3.string(require("util").t.xFn72s);
   if (null != targetGuild) {
-    name = targetGuild.name;
+    let name = targetGuild.name;
   } else {
-    const intl4 = require("intl").intl;
-    name = intl4.string(require("intl").t.XqMe3N);
+    const intl4 = require("util").intl;
+    name = intl4.string(require("util").t.XqMe3N);
   }
-  obj15 = {
-    label: name,
-    icon: tmp19Result,
-    arrow: true,
-    onPress() {
-      let array;
-      let intl;
-      let reduce;
-      const openLazy = ActionSheetActionCreatorsDefault.openLazy;
-      let obj = {
-        title: intl.string(intl10.t.etZ9tX),
-        items: reduce((arr, arg1) => {
-          guild = guild.getGuild(arg1);
-          const canResult = null != guild && closure_1_12.can(constants.MANAGE_WEBHOOKS, guild);
-          if (canResult) {
-            const obj = { label: null, value: null };
-            ({ name: obj.label, id: obj.value } = guild);
-            arr = arr.push(obj);
-          }
-          return arr;
-        }, array),
-        selectedItem: targetGuildId,
-        onItemSelect(arg0) {
-          const firstChannelOfType = targetChannel.getFirstChannelOfType(arg0, canFollowIntoChannel, channelType);
-          let id;
-          if (firstChannelOfType != null) {
-            id = firstChannelOfType.id;
-          }
-          closure_1_4(arg0, id);
-        },
-        onClose() {
-          closure_1_4(targetGuildId, targetChannelId);
-        },
-        hasIcons: false
-      };
-      const tmp2 = asyncRequire(8978, dependencyMap.paths);
-      intl = intl10.intl;
-      const flattenedGuildIds = SortedGuildStore.getFlattenedGuildIds();
-      reduce = flattenedGuildIds.reduce;
-      array = new Array();
-      openLazy(tmp2, "NewChannelFollowerGuildPicker", obj);
-    }
-  };
-  tmp19Result = null;
+  const obj15 = { label: name, icon: null, arrow: true, onPress: null };
+  let tmp18Result = null;
   if (null != targetGuild) {
     const obj16 = { guild: targetGuild, size: require("GuildIcon").GuildIconSizes.XSMALL };
-    const tmp9Result2 = require("GuildIcon");
-    tmp19Result = closure_16(tmp9Result2, obj16);
+    tmp18Result = closure_16(require("GuildIcon"), obj16);
+    const tmp8Result2 = require("GuildIcon");
   }
-  const items6 = [closure_16(TableRowGroup, obj14), ];
-  const obj17 = { title: intl5.string(require("intl").t.PDn2fR), hasIcons: true, children: closure_16(TableRow2, obj18) };
-  const TableRowGroup2 = require("TableRowGroup").TableRowGroup;
-  intl5 = require("intl").intl;
-  let stringResult = tmp14;
-  TableRow2 = require("TableRow").TableRow;
-  if (tmp14 == null) {
-    const intl6 = require("intl").intl;
-    stringResult = intl6.string(require("intl").t.XqMe3N);
-  }
-  obj18 = {
-    label: stringResult,
-    disabled: null == targetGuildId,
-    icon: tmp19Result3,
-    arrow: true,
-    onPress() {
-      let tmp5;
-      if (null != targetGuildId) {
-        const obj = {
-          guildId: tmp,
-          selectedChannel: tmp5,
-          channelType,
-          filterFn: canFollowIntoChannel,
-          onSelect(id) {
-              closure_1_4(targetGuildId, id.id);
-            },
-          onClose() {
-              closure_1_4(targetGuildId, targetChannelId);
-            }
-        };
-        tmp5 = targetChannel;
-        const tmp4 = openChannelPickerDefault;
-        if (targetChannel == null) {
-          tmp5 = null;
-        }
-        tmp4(obj);
+  obj15.icon = tmp18Result;
+  obj15.onPress = function onPress() {
+    const obj2 = { title: null, items: null, selectedItem: null, onItemSelect: null, onClose: null, hasIcons: false };
+    let obj = ActionSheetActionCreatorsDefault;
+    const intl = util.intl;
+    obj2.title = intl.string(util.t.etZ9tX);
+    const flattenedGuildIds = SortedGuildStore.getFlattenedGuildIds();
+    const array = new Array();
+    obj2.items = flattenedGuildIds.reduce((arr, item) => {
+      guild = guild.getGuild(item);
+      let canResult = null != guild;
+      if (canResult) {
+        canResult = closure_1_12.can(constants.MANAGE_WEBHOOKS, guild);
       }
-    }
+      if (canResult) {
+        const obj = { label: null, value: null };
+        ({ name: obj.label, id: obj.value } = guild);
+        arr = arr.push(obj);
+      }
+      return arr;
+    }, array);
+    obj2.selectedItem = targetGuildId;
+    obj2.onItemSelect = function onItemSelect(arg0) {
+      const firstChannelOfType = targetChannel.getFirstChannelOfType(arg0, canFollowIntoChannel, closure_10);
+      let id;
+      if (firstChannelOfType != null) {
+        id = firstChannelOfType.id;
+      }
+      closure_1_4(arg0, id);
+    };
+    obj2.onClose = function onClose() {
+      closure_1_4(targetGuildId, targetChannelId);
+    };
+    obj.openLazy(asyncRequireImpl(8978, dependencyMap.paths), "NewChannelFollowerGuildPicker", obj2);
+    const tmp = asyncRequireImpl(8978, dependencyMap.paths);
   };
-  tmp19Result3 = null;
+  obj14.children = closure_16(require("TableRow").TableRow, obj15);
+  const items6 = [closure_16(require("TableRowGroup").TableRowGroup, obj14), ];
+  const obj17 = { title: null, hasIcons: true, children: null };
+  const intl5 = require("util").intl;
+  obj17.title = intl5.string(require("util").t.PDn2fR);
+  let stringResult = tmp13;
+  if (tmp13 == null) {
+    const intl6 = require("util").intl;
+    stringResult = intl6.string(require("util").t.XqMe3N);
+  }
+  const obj18 = { label: stringResult, disabled: null == targetGuildId, icon: null, arrow: true, onPress: null };
+  let tmp18Result3 = null;
   if (null != targetChannel) {
-    const obj19 = { size: require("native").Icon.Sizes.CUSTOM, source: tmp6Result4.getChannelIcon(targetChannel), style: tmp.channelIcon };
-    const Icon2 = require("native").Icon;
-    tmp6Result4 = require("utils/ChannelUtils");
-    tmp19Result3 = closure_16(Icon2, obj19);
+    const obj19 = { size: require("native").Icon.Sizes.CUSTOM, source: require("utils/ChannelUtils").getChannelIcon(targetChannel), style: tmp.channelIcon };
+    tmp18Result3 = closure_16(require("native").Icon, obj19);
+    const tmp5Result4 = require("utils/ChannelUtils");
   }
-  const obj20 = { spacing: 16, children: items6 };
-  items6[1] = closure_16(TableRowGroup2, obj17);
-  items5[2] = closure_17(Stack, obj20);
-  const obj21 = { inset: true, children: intl7.string(require("intl").t.Z0quyN) };
-  const FormHint = require("Form").FormHint;
-  intl7 = require("intl").intl;
-  items5[3] = closure_16(FormHint, obj21);
-  let tmp19Result4 = null;
-  if (null != tmp5) {
-    const obj22 = { inset: true, children: tmp5 };
-    tmp19Result4 = closure_16(require("Form").FormHint, obj22);
-  }
-  const obj23 = { children: items4 };
-  items5[4] = tmp19Result4;
-  const obj24 = { children: items7 };
-  const ButtonGroup = require("ButtonGroup").ButtonGroup;
-  const obj25 = {
-    text: intl8.string(require("intl").t["3aOv+h"]),
-    disabled: !(null != targetGuildId && null != targetChannelId),
-    loading: first,
-    onPress() {
-      if (null != targetChannelId) {
-        closure_6(true);
-        const obj = ChannelFollowerActionCreatorsDefault;
-        const channelFollower = obj.createChannelFollower(tmp, importDefault);
-        const nextPromise = channelFollower.then(closure_5);
-        nextPromise.catch((error) => {
-          closure_1_6(false);
-          if (error.body.code === constants.TOO_MANY_WEBHOOKS) {
-            const intl2 = require("intl").intl;
-            closure_1_7(intl2.string(require("intl").t["1eZ4aB"]));
-          } else {
-            const intl = require("intl").intl;
-            closure_1_7(intl.string(require("intl").t.LgwhuN));
-          }
-        });
+  const obj20 = { spacing: 16, children: null };
+  obj18.icon = tmp18Result3;
+  obj18.onPress = function onPress() {
+    if (null != targetGuildId) {
+      const obj = { guildId: tmp, selectedChannel: null, channelType: null, filterFn: null, onSelect: null, onClose: null };
+      let tmp5 = targetChannel;
+      if (targetChannel == null) {
+        tmp5 = null;
       }
+      obj.selectedChannel = tmp5;
+      obj.channelType = channelType;
+      obj.filterFn = canFollowIntoChannel;
+      obj.onSelect = function onSelect(id) {
+        closure_1_4(targetGuildId, id.id);
+      };
+      obj.onClose = function onClose() {
+        closure_1_4(targetGuildId, targetChannelId);
+      };
+      openChannelPickerDefault(obj);
     }
   };
-  const Button = require("components/Button/Button").Button;
-  intl8 = require("intl").intl;
-  items7 = [closure_16(Button, obj25), ];
-  const obj26 = { text: intl9.string(require("intl").t["ETE/oC"]), variant: "secondary", onPress: onCancel };
-  const Button2 = require("components/Button/Button").Button;
-  intl9 = require("intl").intl;
-  items7[1] = closure_16(Button2, obj26);
-  items5[5] = closure_17(ButtonGroup, obj24);
+  obj17.children = closure_16(require("TableRow").TableRow, obj18);
+  items6[1] = closure_16(require("TableRowGroup").TableRowGroup, obj17);
+  obj20.children = items6;
+  items5[2] = closure_17(require("Stack/Stack").Stack, obj20);
+  const obj21 = { inset: true, children: null };
+  const intl7 = require("util").intl;
+  obj21.children = intl7.string(require("util").t.Z0quyN);
+  items5[3] = closure_16(require("Form").FormHint, obj21);
+  let tmp18Result4 = null;
+  if (null != tmp4) {
+    const obj22 = { inset: true, children: tmp4 };
+    tmp18Result4 = closure_16(require("Form").FormHint, obj22);
+  }
+  const obj23 = { children: null };
+  items5[4] = tmp18Result4;
+  const obj24 = { children: null };
+  const obj25 = { text: null, disabled: null, loading: null, onPress: null };
+  const intl8 = require("util").intl;
+  obj25.text = intl8.string(require("util").t["3aOv+h"]);
+  obj25.disabled = !(null != targetGuildId && null != targetChannelId);
+  obj25.loading = tmp2[0];
+  obj25.onPress = function onPress() {
+    if (null != targetChannelId) {
+      closure_6(true);
+      const channelFollower = ChannelFollowerActionCreatorsDefault.createChannelFollower(tmp, closure_1_1);
+      channelFollower.then(closure_1_5).catch((error) => {
+        closure_1_6(false);
+        if (error.body.code === constants.TOO_MANY_WEBHOOKS) {
+          const intl2 = require("util").intl;
+          closure_1_7(intl2.string(require("util").t["1eZ4aB"]));
+        } else {
+          const intl = require("util").intl;
+          closure_1_7(intl.string(require("util").t.LgwhuN));
+        }
+      });
+      const nextPromise = channelFollower.then(closure_1_5);
+    }
+  };
+  const items7 = [closure_16(require("components/Button/Button").Button, obj25), ];
+  const obj26 = { text: null, variant: "secondary", onPress: null };
+  const intl9 = require("util").intl;
+  obj26.text = intl9.string(require("util").t["ETE/oC"]);
+  obj26.onPress = targetChannelId.onCancel;
+  items7[1] = closure_16(require("components/Button/Button").Button, obj26);
+  obj24.children = items7;
+  items5[5] = closure_17(require("ButtonGroup").ButtonGroup, obj24);
+  obj11.children = items5;
   items4[1] = closure_17(closure_5, obj11);
-  items8 = [closure_17(BottomSheetScrollView, obj23), closure_16(require("ActionSheetHeaderBar").ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose })];
-  return closure_17(BottomSheet, obj4);
+  obj23.children = items4;
+  const items8 = [closure_17(require("BottomSheetModal").BottomSheetScrollView, obj23), closure_16(require("ActionSheetHeaderBar").ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetRef1.bottomSheetClose })];
+  obj4.children = items8;
+  return closure_17(require("Sheet/BottomSheet").BottomSheet, obj4);
 };

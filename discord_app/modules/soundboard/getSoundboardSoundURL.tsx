@@ -8,10 +8,9 @@ const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("modules/soundboard/getSoundboardSoundURL.tsx");
 
 export default function getSoundboardSoundURL(arg0) {
-  let combined;
   if ("development" !== window.GLOBAL_ENV.PROJECT_ENV) {
     const _HermesInternal2 = HermesInternal;
-    combined = "https://" + tmp + Endpoints.SOUNDBOARD_SOUND(arg0);
+    let combined = "https://" + tmp + Endpoints.SOUNDBOARD_SOUND(arg0);
   } else {
     const _location = location;
     const _window = window;

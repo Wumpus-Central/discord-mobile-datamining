@@ -1,7 +1,7 @@
 // === Module 17545: ? ===
 
 // Module 17545
-import intl14 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
 import GameConsoleConstants from "GameConsoleConstants" /* 8781 */;
 import size from "module_2" /* 2 */;
@@ -10,90 +10,73 @@ const constants = GameConsoleConstants.GameConsoleCommandResultErrorCodes;
 const result = size.fileFinishedImporting("modules/game_console/getErrorMessageForCommandResult.tsx");
 
 export default function getErrorMessageForCommandResult(device, result, code) {
-  let intl;
-  let intl10;
-  let intl11;
-  let intl12;
-  let intl13;
-  let intl2;
-  let intl3;
-  let intl4;
-  let intl5;
-  let intl6;
-  let intl7;
-  let intl8;
-  let name;
-  let obj10;
-  let obj12;
-  let obj13;
-  let obj15;
-  let obj16;
-  let obj3;
-  let obj5;
-  let obj6;
-  let obj8;
-  let obj9;
-  let platform;
-  let tmp;
   if ("failed" === result) {
-    let obj11;
     code = code.code;
     ({ platform, name } = device);
     if (constants.CONSOLE_DEVICE_COMMUNICATION_RESTRICTED === code) {
-      const obj2 = { title: intl7.string(intl14.t["GSZ+HI"]), body: intl8.formatToPlainString(intl14.t["cYX/3E"], obj3) };
-      intl7 = intl14.intl;
-      intl8 = intl14.intl;
-      obj11 = obj2;
-      obj3 = { deviceType: platform };
+      const obj2 = { title: null, body: null };
+      const intl7 = util.intl;
+      obj2.title = intl7.string(util.t["GSZ+HI"]);
+      const intl8 = util.intl;
+      const obj3 = { deviceType: platform };
+      obj2.body = intl8.formatToPlainString(util.t["cYX/3E"], obj3);
+      let obj10 = obj2;
     } else if (constants.CONSOLE_DEVICE_INVALID_POWER_MODE === code) {
-      const obj4 = { title: intl5.formatToPlainString(intl14.t.akd6Sx, obj5), body: intl6.formatToPlainString(intl14.t.RyOvpJ, obj6) };
-      intl5 = intl14.intl;
-      obj5 = { deviceType: platform };
-      intl6 = intl14.intl;
-      obj11 = obj4;
-      obj6 = { deviceName: name };
-    } else if (constants.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS === code) {
-      const obj7 = { title: intl3.formatToPlainString(intl14.t.M6Vzat, obj8), body: intl4.formatToPlainString(intl14.t.InKtnC, obj9) };
-      intl3 = intl14.intl;
-      obj8 = { deviceType: platform };
-      intl4 = intl14.intl;
-      obj11 = obj7;
-      obj9 = { deviceName: name };
-    } else if (constants.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR === code) {
-      const obj = { title: intl.string(intl14.t.QL1y93), body: intl2.formatToPlainString(intl14.t.D18eZu, obj10), isAccountLinkError: true };
-      intl = intl14.intl;
-      intl2 = intl14.intl;
-      obj11 = obj;
-      obj10 = { deviceType: platform };
+      const obj4 = { title: null, body: null };
+      const intl5 = util.intl;
+      const obj5 = { deviceType: platform };
+      obj4.title = intl5.formatToPlainString(util.t.akd6Sx, obj5);
+      const intl6 = util.intl;
+      const obj6 = { deviceName: name };
+      obj4.body = intl6.formatToPlainString(util.t.RyOvpJ, obj6);
+      obj10 = obj4;
     } else {
-      obj11 = { title: intl12.string(intl14.t.QL1y93), body: intl13.formatToPlainString(intl14.t["6ZyNH/"], obj12) };
-      intl12 = intl14.intl;
-      intl13 = intl14.intl;
-      obj12 = { deviceName: name };
-    }
-    tmp = obj11;
-  } else {
-    tmp = null;
-    if ("n/a" === result) {
-      let tmp18 = null;
-      if (code.code === constants.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED) {
-        const obj14 = { title: intl10.formatToPlainString(intl14.t.KchfhO, obj15), body: intl11.formatToPlainString(intl14.t["21ndz7"], obj16) };
-        intl10 = intl14.intl;
-        obj15 = { deviceType: tmp15 };
-        intl11 = intl14.intl;
-        tmp18 = obj14;
-        obj16 = { deviceName: tmp16 };
+      if (constants.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS === code) {
+        const obj7 = { title: null, body: null };
+        const intl3 = util.intl;
+        const obj8 = { deviceType: platform };
+        obj7.title = intl3.formatToPlainString(util.t.M6Vzat, obj8);
+        const intl4 = util.intl;
+        const obj9 = { deviceName: name };
+        obj7.body = intl4.formatToPlainString(util.t.InKtnC, obj9);
+        obj10 = obj7;
+      } else if (constants.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR !== code) {
+        obj10 = { title: null, body: null };
+        const intl12 = util.intl;
+        obj10.title = intl12.string(util.t.QL1y93);
+        const intl13 = util.intl;
+        const obj11 = { deviceName: name };
+        obj10.body = intl13.formatToPlainString(util.t["6ZyNH/"], obj11);
       }
-      tmp = tmp18;
+      const obj = { title: null, body: null, isAccountLinkError: true };
+      const intl = util.intl;
+      obj.title = intl.string(util.t.QL1y93);
+      const intl2 = util.intl;
+      const obj12 = { deviceType: platform };
+      obj.body = intl2.formatToPlainString(util.t.D18eZu, obj12);
+      obj10 = obj;
     }
+  } else {
+    let tmp = null;
+    if ("n/a" === result) {
+      let tmp19 = null;
+      if (code.code === constants.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED) {
+        const obj14 = { title: null, body: null };
+        const intl10 = util.intl;
+        const obj15 = { deviceType: tmp16 };
+        obj14.title = intl10.formatToPlainString(util.t.KchfhO, obj15);
+        const intl11 = util.intl;
+        const obj16 = { deviceName: tmp17 };
+        obj14.body = intl11.formatToPlainString(util.t["21ndz7"], obj16);
+        tmp19 = obj14;
+      }
+      tmp = tmp19;
+    }
+    if (null != tmp) {
+      const intl9 = util.intl;
+      const obj17 = { supportURL: HelpdeskUtilsDefault.getSubmitRequestURL(), errorCode: code.code };
+      tmp.errorCodeMessage = intl9.format(util.t["1Bi9Cf"], obj17);
+    }
+    return tmp;
   }
-  if (null != tmp) {
-    const intl9 = intl14.intl;
-    const format = intl9.format;
-    const obj17 = { supportURL: obj13.getSubmitRequestURL(), errorCode: code.code };
-    const v1Bi9Cf = intl14.t["1Bi9Cf"];
-    obj13 = HelpdeskUtilsDefault;
-    tmp.errorCodeMessage = format(v1Bi9Cf, obj17);
-  }
-  return tmp;
 };

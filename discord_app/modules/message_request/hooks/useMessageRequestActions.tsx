@@ -1,70 +1,56 @@
 // === Module 12099: useMessageRequestActions ===
 
 // Module 12099 (useMessageRequestActions)
-import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import ReportModals from "ReportModals" /* 8312 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import _slicedToArray_mod from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import UserProfileStore from "UserProfileStore" /* 7124 */;
-import MessageRequestConstants from "MessageRequestConstants" /* 12100 */;
-import size from "module_2" /* 2 */;
 
-let c1, c2;
-
-let metroImportAll;
-let metroImportDefault;
-let _slicedToArray = _slicedToArray_mod;
-let react = react_mod;
-({ MessageRequestAnalyticsAction: metroImportDefault, BATCH_REJECT_LIMIT: metroImportAll } = MessageRequestConstants);
-const AnalyticEvents = Constants.AnalyticEvents;
+require = fn;
+const MessageRequestConstants = fn(12100);
+({ MessageRequestAnalyticsAction: closure_7, BATCH_REJECT_LIMIT: closure_8 } = MessageRequestConstants);
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/message_request/hooks/useMessageRequestActions.tsx");
 
 export const useMessageRequestActions = function useMessageRequestActions(user) {
-  let c4;
-  let c5;
-  let c6;
-  let c7;
-  let closure_8;
-  let isOptimisticRejected;
-  let tmp3;
-  let tmp5;
-  let tmp7;
-  let tmp9;
   user = user.user;
-  const onAcceptSuccess = user.onAcceptSuccess;
-  const onRejectSuccess = user.onRejectSuccess;
+  closure_0 = user;
+  let onAcceptSuccess = user.onAcceptSuccess;
+  let onRejectSuccess = user.onRejectSuccess;
   const onError = user.onError;
   _slicedToArray = undefined;
-  react = undefined;
+  noop = undefined;
   c6 = undefined;
   c7 = undefined;
-  closure_8 = undefined;
   let isUserProfileLoading;
-  let obj = react;
+  let acceptMessageRequest;
   let tmp = onAcceptSuccess(onRejectSuccess[6])();
-  const tmp2 = _slicedToArray(react.useState(false), 2);
-  [tmp3, c4] = tmp2;
-  let tmp4 = _slicedToArray(react.useState(false), 2);
-  [tmp5, c5] = tmp4;
-  let tmp6 = _slicedToArray(react.useState(false), 2);
-  [tmp7, c6] = tmp6;
-  let tmp8 = _slicedToArray(react.useState(false), 2);
-  [tmp9, c7] = tmp8;
-  [isOptimisticRejected, closure_8] = react.useState(false);
-  let tmp12 = isAcceptLoading || isRejectLoading || isUserProfileLoading;
-  isUserProfileLoading = tmp12;
-  const useCallback = obj.useCallback;
+  [tmp3, c4] = noop.useState(false);
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  [tmp5, c5] = noop.useState(false);
+  let tmp4 = _slicedToArray(noop.useState(false), 2);
+  [tmp7, c6] = noop.useState(false);
+  let tmp6 = _slicedToArray(noop.useState(false), 2);
+  [tmp9, c7] = noop.useState(false);
+  const isOptimisticRejected = _slicedToArray(noop.useState(false), 2);
+  closure_8 = isOptimisticRejected[1];
+  let tmp11 = isAcceptLoading;
+  if (!isAcceptLoading) {
+    tmp11 = isRejectLoading;
+  }
+  if (!tmp11) {
+    tmp11 = isUserProfileLoading;
+  }
+  isUserProfileLoading = tmp11;
   onError(function*(arg0) {
-    let obj2;
-    let v0;
-    closure_0 = arg0;
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp7 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -75,8 +61,6 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
       }
     } else {
       try {
-        let closure_1;
-        let aPIError;
         c6 = 2;
         if (0 === c5) {
           if (arg0 === 1) {
@@ -87,32 +71,28 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            let closure_2 = tmp;
-            closure_1 = tmp4;
-            aPIError = undefined;
-            if (!isUserProfileLoading) {
+            closure_2 = tmp4;
+            onAcceptSuccess = tmp8;
+            closure_129_0 = undefined;
+            if (isUserProfileLoading) {
+              c6 = 3;
+            } else {
               v0(true);
               v0 = 2;
               c5 = 3;
               c6 = 1;
-              const obj5 = { value: obj2.acceptMessageRequest(tmp33), done: false };
-              obj2 = closure_0(onRejectSuccess[7]);
+              const obj5 = { value: closure_0(onRejectSuccess[7]).acceptMessageRequest(tmp39), done: false };
               return obj5;
             }
           }
-        } else if (1 === c5) {
-          v0 = 0;
-          v0(false);
-          throw closure_3;
-        } else {
-          if (2 === c5) {
+        } else if (1 !== tmp8) {
+          if (2 === tmp8) {
             v0 = 1;
-            closure_1 = closure_3;
-            const self = this;
-            const self2 = this;
-            aPIError = new closure_0(onRejectSuccess[8]).APIError(closure_1);
+            closure_129_1 = closure_3;
+            const aPIError = new closure_0(onRejectSuccess[8]).APIError(closure_129_1);
+            closure_129_0 = aPIError;
             if (closure_3 != null) {
-              tmp21(aPIError);
+              tmp27(closure_129_0);
             }
           } else if (arg0 === 1) {
             c6 = 3;
@@ -124,44 +104,47 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
             const obj = { value, done: true };
             return obj;
           } else {
-            closure_1_7(true);
-            if (closure_1 != null) {
-              closure_1();
+            _undefined2(true);
+            if (onAcceptSuccess != null) {
+              onAcceptSuccess();
             }
             v0 = 1;
           }
           v0 = 0;
           v0(false);
         }
-        c6 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp39) {
-        closure_3 = tmp39;
-        if (0 === v0) {
-          c6 = 3;
-          throw tmp39;
-        } else if (1 === tmp41) {
-          c5 = 1;
+        v0 = 0;
+        v0(false);
+        throw closure_3;
+      } catch (tmp45) {
+        closure_3 = tmp45;
+        if (tmp5 === v0) {
+          c6 = tmp3;
+          throw tmp45;
+        } else if (tmp2 === tmp47) {
+          c5 = tmp2;
         } else {
-          c5 = 2;
+          c5 = tmp;
         }
       }
     }
   });
-  let items = [tmp12, onAcceptSuccess, onError];
-  let acceptMessageRequest = useCallback(function() {
-    return closure_0(...arguments);
+  let items = [tmp11, onAcceptSuccess, onError];
+  acceptMessageRequest = obj.useCallback(function() {
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   }, items);
-  const useCallback2 = obj.useCallback;
   onError(function*(arg0) {
-    let closure_2;
-    let obj2;
-    let v2;
-    closure_0 = arg0;
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp7 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -172,10 +155,8 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
       }
     } else {
       try {
-        let closure_1;
-        let aPIError;
         c6 = 2;
-        if (0 === v2) {
+        if (0 === v3) {
           if (arg0 === 1) {
             c6 = 3;
             throw value;
@@ -184,74 +165,75 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            closure_1 = tmp4;
-            aPIError = undefined;
-            if (!isUserProfileLoading) {
-              v2(true);
+            closure_1 = tmp8;
+            closure_129_0 = undefined;
+            if (isUserProfileLoading) {
+              c6 = 3;
+            } else {
+              v3(true);
               c4 = 2;
-              v2 = 3;
+              v3 = 3;
               c6 = 1;
-              const obj5 = { value: obj2.rejectMessageRequest(tmp33), done: false };
-              obj2 = closure_0(onRejectSuccess[7]);
+              const obj5 = { value: closure_0(onRejectSuccess[7]).rejectMessageRequest(tmp39), done: false };
               return obj5;
             }
           }
-        } else if (1 === v2) {
-          c4 = 0;
-          v2(false);
-          throw closure_3;
-        } else {
-          if (2 === v2) {
+        } else if (1 !== tmp8) {
+          if (2 === tmp8) {
             c4 = 1;
-            closure_1 = closure_3;
-            const self = this;
-            const self2 = this;
-            aPIError = new closure_0(onRejectSuccess[8]).APIError(closure_1);
+            closure_129_1 = closure_3;
+            const aPIError = new closure_0(onRejectSuccess[8]).APIError(closure_129_1);
+            closure_129_0 = aPIError;
             if (closure_3 != null) {
-              tmp21(aPIError);
+              tmp27(closure_129_0);
             }
           } else if (arg0 === 1) {
             c6 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 0;
-            v2(false);
+            v3(false);
             c6 = 3;
             const obj = { value, done: true };
             return obj;
           } else {
             closure_1_8(true);
-            if (tmp != null) {
-              tmp();
+            if (tmp4 != null) {
+              tmp4();
             }
             c4 = 1;
           }
           c4 = 0;
-          v2(false);
+          v3(false);
         }
-        c6 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp39) {
-        closure_3 = tmp39;
-        if (0 === c4) {
-          c6 = 3;
-          throw tmp39;
-        } else if (1 === tmp41) {
-          v2 = 1;
+        c4 = 0;
+        v3(false);
+        throw closure_3;
+      } catch (tmp45) {
+        closure_3 = tmp45;
+        if (tmp5 === c4) {
+          c6 = tmp3;
+          throw tmp45;
+        } else if (tmp2 === tmp47) {
+          v3 = tmp2;
         } else {
-          v2 = 2;
+          v3 = tmp;
         }
       }
     }
   });
-  const items1 = [tmp12, onRejectSuccess, onError];
-  const rejectMessageRequest = useCallback2(function() {
-    return closure_0(...arguments);
+  const items1 = [tmp11, onRejectSuccess, onError];
+  const rejectMessageRequest = obj.useCallback(function() {
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   }, items1);
-  const useCallback3 = obj.useCallback;
   onError(function*(arg0) {
-    let v3;
-    closure_0 = arg0;
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -266,10 +248,6 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
       }
     } else {
       while (true) {
-        let closure_3;
-        let aPIError;
-        let closure_2;
-        let closure_1;
         v3 = 2;
         let tmp4 = c7;
         if (0 === c7) {
@@ -281,301 +259,309 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
             let obj4 = { value, done: true };
             return obj4;
           } else {
-            let closure_4 = tmp;
+            closure_4 = tmp;
             closure_3 = tmp4;
-            let c0;
-            aPIError = undefined;
-            if (!isUserProfileLoading) {
-              let tmp28 = closure_1_5(true);
-              let tmp32 = onAcceptSuccess(onRejectSuccess[9])(tmp56, closure_2_8);
+            closure_131_0 = undefined;
+            closure_131_1 = undefined;
+            if (isUserProfileLoading) {
+              v3 = 3;
+              return { value: "IconComponent", done: null };
+            } else {
+              let tmp30 = _undefined(true);
+              let tmp34 = onAcceptSuccess(onRejectSuccess[9])(tmp58, closure_8);
               c6 = 2;
-              closure_2 = tmp32;
-              closure_1 = tmp32[Symbol.iterator]();
-              if (closure_1 === undefined) {
-                let tmp44 = v3(true);
-                if (closure_2 != null) {
-                  let tmp45 = closure_2();
+              onRejectSuccess = tmp34;
+              onAcceptSuccess = tmp34[Symbol.iterator]();
+              if (onAcceptSuccess === undefined) {
+                let tmp46 = v3(true);
+                if (onRejectSuccess != null) {
+                  let tmp47 = onRejectSuccess();
                 }
-                c6 = 1;
+                c6 = 0;
+                let tmp50 = _undefined(false);
               } else {
                 c6 = 3;
-                c0 = tmp36;
+                closure_131_0 = tmp38;
                 let obj2 = closure_0(onRejectSuccess[7]);
                 c7 = 4;
                 v3 = 1;
-                let obj5 = { value: obj2.rejectMessageRequestBatch(c0), done: false };
+                let obj5 = { value: obj2.rejectMessageRequestBatch(closure_131_0), done: false };
                 return obj5;
               }
             }
+          }
+        } else if (1 !== tmp4) {
+          if (2 === tmp4) {
+            c6 = 1;
+            closure_131_2 = _undefined;
+            let tmp19 = new.target;
+            let tmp20 = new.target;
+            let aPIError = new closure_0(onRejectSuccess[8]).APIError(closure_131_2);
+            closure_131_1 = aPIError;
+            if (closure_3 != null) {
+              let tmp23Result = tmp23(closure_131_1);
+            }
+          } else if (3 === tmp4) {
+            c6 = 2;
+            onAcceptSuccess.return();
+            throw _undefined;
+          } else if (arg0 === 1) {
             v3 = 3;
-            return { value: "IconComponent", done: null };
+            throw value;
+          } else if (arg0 === 2) {
+            onAcceptSuccess.return();
+            c6 = 0;
+            let tmp8 = _undefined(false);
+            v3 = 3;
+            let obj = { value, done: true };
+            return obj;
+          } else {
+            c6 = 2;
           }
-        } else if (1 === tmp4) {
-          c6 = 0;
-          let tmp26 = closure_1_5(false);
-          throw closure_1_5;
-        } else if (2 === tmp4) {
-          c6 = 1;
-          closure_2 = closure_1_5;
-          let self = this;
-          let self2 = this;
-          aPIError = new closure_0(onRejectSuccess[8]).APIError(closure_2);
-          if (closure_3 != null) {
-            let tmp21Result = tmp21(aPIError);
-          }
-        } else if (3 === tmp4) {
-          c6 = 2;
-          closure_1.return();
-          throw closure_1_5;
-        } else if (arg0 === 1) {
-          v3 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          closure_1.return();
-          c6 = 0;
-          let tmp8 = closure_1_5(false);
-          v3 = 3;
-          let obj = { value, done: true };
-          return obj;
-        } else {
-          c6 = 2;
         }
         c6 = 0;
-        let tmp48 = closure_1_5(false);
+        let tmp28 = _undefined(false);
+        throw _undefined;
       }
     }
   });
-  const items2 = [tmp12, onRejectSuccess, onError];
-  const rejectAll = useCallback3(function() {
-    return closure_0(...arguments);
+  const items2 = [tmp11, onRejectSuccess, onError];
+  const rejectAll = obj.useCallback(function() {
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   }, items2);
-  const useCallback4 = obj.useCallback;
-  let closure_0 = onError((channelId) => {
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      let channel_id;
-      let tmp27Result;
-      if (v3 === 2) {
-        v3 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          let obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+  closure_0 = onError(function*(arg0) {
+    if (mutualGuilds === 2) {
+      mutualGuilds = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp8 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj4 = { value, done: true };
+        return obj4;
       } else {
-        try {
-          let obj;
-          v3 = 2;
-          const tmp4 = c5;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              v3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              v3 = 3;
-              let obj4 = { value, done: true };
-              return obj4;
-            } else {
-              closure_2 = tmp;
-              closure_1 = tmp27Result;
-              obj = function _onConfirm() {
-                obj = closure_3(function*() {
-                  let id;
-                  let mutual_guild_ids;
-                  if (c1 === 2) {
-                    c1 = 3;
-                    throw new TypeError("Generator functions may not be called on executing generators");
-                  } else if (tmp2 === 3) {
-                    if (arg0 === 1) {
-                      throw value;
-                    } else if (arg0 === 2) {
-                      const obj2 = { value, done: true };
-                      return obj2;
-                    } else {
-                      return { value: "IconComponent", done: null };
-                    }
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        mutualGuilds = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            mutualGuilds = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            mutualGuilds = 3;
+            let obj5 = { value, done: true };
+            return obj5;
+          } else {
+            closure_2 = tmp4;
+            closure_1 = tmp6;
+            closure_129_0 = channel_id;
+            closure_129_1 = function _onConfirm() {
+              const self = this;
+              const tmp = onError(function*() {
+                if (c1 === 2) {
+                  c1 = 3;
+                  throw new TypeError("Generator functions may not be called on executing generators");
+                } else if (tmp3 === 3) {
+                  if (arg0 === 1) {
+                    throw value;
+                  } else if (arg0 === 2) {
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
-                    try {
-                      c1 = 2;
-                      if (0 === c2) {
-                        if (arg0 === 1) {
-                          c1 = 3;
-                          throw value;
-                        } else if (arg0 === 2) {
-                          c1 = 3;
-                          const obj3 = { value, done: true };
-                          return obj3;
-                        } else {
-                          let items;
-                          if (null != mutual_guild_ids) {
-                            mutualGuilds = mutualGuilds.getMutualGuilds(tmp20.id);
-                            let mapped;
-                            if (mutualGuilds != null) {
-                              mapped = mutualGuilds.map((guild) => guild.guild.id);
-                            }
-                            items = mapped;
-                          } else {
-                            items = [];
-                          }
-                          const obj4 = { action: constants.ACCEPT_CONFIRMATION_PROMPT, channel_id, mutual_guild_ids, other_user_id: id };
-                          mutual_guild_ids = items;
-                          const track = closure_2_1(closure_2_2[11]).track;
-                          const MESSAGE_REQUEST_ACTION = constants2.MESSAGE_REQUEST_ACTION;
-                          const tmp8 = closure_2_1(closure_2_2[11]);
-                          if (items == null) {
-                            mutual_guild_ids = [];
-                          }
-                          id = undefined;
-                          if (mutual_guild_ids != null) {
-                            id = tmp20.id;
-                          }
-                          track(MESSAGE_REQUEST_ACTION, obj4);
-                          c2 = 1;
-                          c1 = 1;
-                          const obj5 = { value: closure_1_10(channel_id), done: false };
-                          return obj5;
-                        }
-                      } else if (arg0 === 1) {
+                    return { value: "IconComponent", done: null };
+                  }
+                } else {
+                  try {
+                    c1 = 2;
+                    if (0 === c2) {
+                      if (arg0 === 1) {
                         c1 = 3;
                         throw value;
                       } else if (arg0 === 2) {
                         c1 = 3;
-                        obj = { value, done: true };
-                        return obj;
+                        const obj4 = { value, done: true };
+                        return obj4;
                       } else {
-                        c1 = 3;
-                        return { value: "IconComponent", done: null };
+                        if (null != mutual_guild_ids) {
+                          mutualGuilds = mutualGuilds.getMutualGuilds(tmp21.id);
+                          let mapped;
+                          if (mutualGuilds != null) {
+                            mapped = mutualGuilds.map((guild) => guild.guild.id);
+                          }
+                          let items = mapped;
+                        } else {
+                          items = [];
+                        }
+                        const obj5 = { action: constants.ACCEPT_CONFIRMATION_PROMPT, channel_id, mutual_guild_ids: null, other_user_id: null };
+                        mutual_guild_ids = items;
+                        if (items == null) {
+                          mutual_guild_ids = [];
+                        }
+                        obj5.mutual_guild_ids = mutual_guild_ids;
+                        let id;
+                        if (mutual_guild_ids != null) {
+                          id = tmp21.id;
+                        }
+                        obj5.other_user_id = id;
+                        closure_2_1(closure_2_2[11]).track(constants2.MESSAGE_REQUEST_ACTION, obj5);
+                        c2 = 1;
+                        c1 = 1;
+                        const obj6 = { value: closure_1_10(channel_id), done: false };
+                        return obj6;
                       }
-                    } catch (tmp16) {
+                    } else if (arg0 === 1) {
                       c1 = 3;
-                      throw tmp16;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c1 = 3;
+                      const obj = { value, done: true };
+                      return obj;
+                    } else {
+                      c1 = 3;
+                      return { value: "IconComponent", done: null };
                     }
-                  }
-                });
-                return obj(...arguments);
-              };
-              if (!constants2) {
-                tmp27Result = channelId;
-                if (null != channelId) {
-                  if (null == closure_2_6.getMutualGuilds(tmp27Result.id)) {
-                    v3(true);
-                    c4 = 2;
-                    const tmp27 = onAcceptSuccess(onRejectSuccess[10]);
-                    tmp27Result = tmp27(tmp27Result.id, tmp27Result.getAvatarURL(undefined, 80), { withMutualGuilds: true, withMutualFriendsCount: true });
-                    c5 = 3;
-                    v3 = 1;
-                    let obj5 = { value: tmp27Result, done: false };
-                    return obj5;
+                  } catch (tmp16) {
+                    c1 = tmp;
+                    throw tmp16;
                   }
                 }
+              });
+              closure_1 = tmp;
+              const apply = tmp.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
               }
-              v3 = 3;
-              return { value: "IconComponent", done: null };
+              return applyArgumentsResult;
+            };
+            if (!isUserProfileLoading) {
+              mutualGuilds(true);
+              c4 = 2;
+              c5 = 3;
+              mutualGuilds = 1;
+              let obj6 = { value: onAcceptSuccess(onRejectSuccess[10])(channel_id.id, channel_id.getAvatarURL(undefined, 80), { withMutualGuilds: true, withMutualFriendsCount: true }), done: false };
+              return obj6;
             }
-          } else if (1 === tmp4) {
-            c4 = 0;
-            tmp27Result = v3(false);
-            throw closure_3;
-          } else {
-            if (2 === tmp4) {
-              let tmp8 = closure_3;
-              c4 = 1;
-            } else if (arg0 === 1) {
-              v3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 0;
-              v3(false);
-              v3 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              c4 = 1;
-            }
-            c4 = 0;
-            v3(false);
+            mutualGuilds = 3;
           }
-          let obj3 = channelId(onRejectSuccess[12]);
-          const obj6 = {
-            channelId,
-            onConfirm() {
-                  return closure_1_1(...arguments);
-                },
-            onCancel() {
-                  let id;
-                  let items;
-                  if (null != channelId) {
-                    const mutualGuilds = closure_3_6.getMutualGuilds(channelId.id);
-                    let mapped;
-                    if (mutualGuilds != null) {
-                      mapped = mutualGuilds.map((guild) => guild.guild.id);
-                    }
-                    items = mapped;
-                  } else {
-                    items = [];
-                  }
-                  const obj = { action: constants.DISMISS_CONFIRMATION_PROMPT, channel_id, mutual_guild_ids: items, other_user_id: id };
-                  const track = onAcceptSuccess(onRejectSuccess[11]).track;
-                  const MESSAGE_REQUEST_ACTION = constants2.MESSAGE_REQUEST_ACTION;
-                  onAcceptSuccess(onRejectSuccess[11]);
-                  if (items == null) {
-                    items = [];
-                  }
-                  id = undefined;
-                  if (channelId != null) {
-                    id = channelId.id;
-                  }
-                  track(MESSAGE_REQUEST_ACTION, obj);
+        } else if (1 === tmp9) {
+          c4 = 0;
+          mutualGuilds(false);
+          throw closure_3;
+        } else {
+          if (2 === tmp9) {
+            c4 = 1;
+          } else if (arg0 === 1) {
+            mutualGuilds = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 0;
+            mutualGuilds(false);
+            mutualGuilds = 3;
+            let obj = { value, done: true };
+            return obj;
+          } else {
+            c4 = 1;
+          }
+          c4 = 0;
+          mutualGuilds(false);
+        }
+        const obj7 = {
+          channelId: closure_129_0,
+          onConfirm() {
+                const self = this;
+                const apply = closure_1.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
                 }
-          };
-          const result = obj3.openAcceptMessageRequestConfirmModal(obj6);
-        } catch (tmp28) {
-          closure_3 = tmp28;
-          if (0 === c4) {
-            v3 = 3;
-            throw tmp28;
-          } else if (1 === tmp30) {
-            c5 = 1;
-          } else {
-            c5 = 2;
-          }
+                return applyArgumentsResult;
+              },
+          onCancel() {
+                if (null != user) {
+                  mutualGuilds = mutualGuilds.getMutualGuilds(user.id);
+                  let mapped;
+                  if (mutualGuilds != null) {
+                    mapped = mutualGuilds.map((guild) => guild.guild.id);
+                  }
+                  let items = mapped;
+                } else {
+                  items = [];
+                }
+                const obj2 = { action: constants.DISMISS_CONFIRMATION_PROMPT, channel_id, mutual_guild_ids: null, other_user_id: null };
+                if (items == null) {
+                  items = [];
+                }
+                obj2.mutual_guild_ids = items;
+                let id;
+                if (user != null) {
+                  id = user.id;
+                }
+                obj2.other_user_id = id;
+                onAcceptSuccess(onRejectSuccess[11]).track(isUserProfileLoading.MESSAGE_REQUEST_ACTION, obj2);
+                const obj = onAcceptSuccess(onRejectSuccess[11]);
+              }
+        };
+        const result = channel_id(onRejectSuccess[12]).openAcceptMessageRequestConfirmModal(obj7);
+        let obj3 = channel_id(onRejectSuccess[12]);
+      } catch (tmp34) {
+        closure_3 = tmp34;
+        if (tmp5 === c4) {
+          mutualGuilds = tmp3;
+          throw tmp34;
+        } else if (tmp2 === tmp36) {
+          c5 = tmp2;
+        } else {
+          c5 = tmp;
         }
       }
-    })();
+    }
   });
-  const items3 = [acceptMessageRequest, tmp12, user];
+  const items3 = [acceptMessageRequest, tmp11, user];
   const items4 = [acceptMessageRequest];
-  const callback4 = useCallback4(function(arg0) {
-    return closure_0(...arguments);
+  const callback3 = obj.useCallback(function(arg0) {
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   }, items3);
   const markAsNotSpam = obj.useCallback((channel, arg1, arg2) => {
-    let closure_1 = arg1;
-    let closure_2 = arg2;
+    const user = channel;
+    closure_1 = arg1;
+    closure_2 = arg2;
     function onConfirm_0(setting, is_dont_show_again_checked) {
-      const tmp = is_dont_show_again_checked;
-      if (tmp) {
+      if (is_dont_show_again_checked) {
         const NonSpamRetrainingOptIn = UserSettings.NonSpamRetrainingOptIn;
         NonSpamRetrainingOptIn.updateSetting(setting);
       }
-      const tmp5 = setting && null != closure_1;
-      if (tmp5) {
-        const obj = ReportModals;
-        const result = obj.submitHamReportForFirstDM(closure_1);
+      let tmp4 = setting;
+      if (setting) {
+        tmp4 = null != closure_1;
       }
-      acceptMessageRequest(channel.id);
-      const obj2 = AnalyticsUtilsDefault;
-      const obj3 = { action: metroImportDefault.ACCEPT_HAM_CONFIRMATION_PROMPT, channel_id: channel.id, is_dont_show_again_checked, non_spam_retraining_opt_in: setting };
-      obj2.track(AnalyticEvents.MESSAGE_REQUEST_ACTION, obj3);
+      if (tmp4) {
+        const result = ReportModals.submitHamReportForFirstDM(closure_1);
+      }
+      acceptMessageRequest(user.id);
+      AnalyticsUtilsDefault.track(AnalyticEvents.MESSAGE_REQUEST_ACTION, { action: constants.ACCEPT_HAM_CONFIRMATION_PROMPT, channel_id: user.id, is_dont_show_again_checked, non_spam_retraining_opt_in: setting });
       if (null != closure_2) {
         closure_2();
       }
+      const obj3 = { action: constants.ACCEPT_HAM_CONFIRMATION_PROMPT, channel_id: user.id, is_dont_show_again_checked, non_spam_retraining_opt_in: setting };
     }
     let NonSpamRetrainingOptIn = user(onRejectSuccess[13]).NonSpamRetrainingOptIn;
     const setting = NonSpamRetrainingOptIn.getSetting();
@@ -584,19 +570,18 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
         channel,
         onConfirm: onConfirm_0,
         onCancel: function onCancel_0() {
-            const obj = AnalyticsUtilsDefault;
-            const obj2 = { action: metroImportDefault.DISMISS_HAM_CONFIRMATION_PROMPT, channel_id: channel.id };
-            obj.track(AnalyticEvents.MESSAGE_REQUEST_ACTION, obj2);
+            AnalyticsUtilsDefault.track(AnalyticEvents.MESSAGE_REQUEST_ACTION, { action: constants.DISMISS_HAM_CONFIRMATION_PROMPT, channel_id: user.id });
           }
       };
-      const tmpResult = user(onRejectSuccess[12]);
-      let result = tmpResult.onMarkAsNotSpamConfirmationModal(obj);
+      let result = tmp(onRejectSuccess[12]).onMarkAsNotSpamConfirmationModal(obj);
+      const tmpResult = tmp(onRejectSuccess[12]);
     } else {
       onConfirm_0(setting);
     }
+    tmp = user;
   }, items4);
   if (tmp) {
-    acceptMessageRequest = callback4;
+    acceptMessageRequest = callback3;
   }
-  return { acceptMessageRequest, rejectMessageRequest, rejectAll, markAsNotSpam, isAcceptLoading, isRejectLoading, isUserProfileLoading, isOptimisticAccepted, isOptimisticRejected };
+  return { acceptMessageRequest, rejectMessageRequest, rejectAll, markAsNotSpam, isAcceptLoading, isRejectLoading, isUserProfileLoading, isOptimisticAccepted, isOptimisticRejected: isOptimisticRejected[0] };
 };

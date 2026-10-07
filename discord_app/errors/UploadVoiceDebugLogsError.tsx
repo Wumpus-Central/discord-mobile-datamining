@@ -7,9 +7,9 @@ const require = globalThis.__r;
 
 const UploadErrorCodes = { GENERAL: 0, [0]: "GENERAL", NO_FILE: 1, [1]: "NO_FILE", PROGRESS: 2, [2]: "PROGRESS", UPLOAD: 3, [3]: "UPLOAD", READ: 4, [4]: "READ" };
 class UploadVoiceDebugLogsError {
-  constructor(PROGRESS) {
-    const obj = Object.create(new.target.prototype);
-    obj.code = PROGRESS;
+  constructor(arg0) {
+    obj = Object.create(new.target.prototype);
+    obj.code = global;
     return obj;
   }
 }
@@ -17,21 +17,21 @@ Object.defineProperty(UploadVoiceDebugLogsError.prototype, "displayMessage", {
   get: function displayMessage() {
     const code = this.code;
     if (obj.NO_FILE === code) {
-      const intl5 = require("intl").intl;
-      return intl5.string(require("intl").t.dDMp2Z);
+      const intl5 = require("util").intl;
+      return intl5.string(require("util").t.dDMp2Z);
     } else if (obj.PROGRESS === code) {
-      const intl4 = require("intl").intl;
-      return intl4.string(require("intl").t.XBxyvo);
+      const intl4 = require("util").intl;
+      return intl4.string(require("util").t.XBxyvo);
     } else if (obj.UPLOAD === code) {
-      const intl3 = require("intl").intl;
-      return intl3.string(require("intl").t["6b6rwk"]);
+      const intl3 = require("util").intl;
+      return intl3.string(require("util").t["6b6rwk"]);
     } else if (obj.READ === code) {
-      const intl2 = require("intl").intl;
-      return intl2.string(require("intl").t.VUc3ti);
+      const intl2 = require("util").intl;
+      return intl2.string(require("util").t.VUc3ti);
     } else {
       const GENERAL = obj.GENERAL;
-      const intl = require("intl").intl;
-      return intl.string(require("intl").t.VzHcSm);
+      const intl = require("util").intl;
+      return intl.string(require("util").t.VzHcSm);
     }
   },
   set: undefined

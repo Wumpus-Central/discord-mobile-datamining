@@ -1,36 +1,30 @@
 // === Module 8791: XboxLinkError ===
 
 // Module 8791 (XboxLinkError)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
-import intl3 from "intl" /* 1126 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import useNavigation from "useNavigation" /* 1490 */;
-import XboxLinkConstants from "XboxLinkConstants" /* 8767 */;
 import useConnectRetry from "useConnectRetry" /* 8792 */;
-import TwoWayLinkError2 from "TwoWayLinkError" /* 8793 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import TwoWayLinkError from "TwoWayLinkError" /* 8793 */;
+import noop from "module_19" /* 19 */;
 
-let navigation, onClose;
+require = fn;
+const XboxLinkModalScenes = fn(8767).XboxLinkModalScenes;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkError.tsx");
 
-const XboxLinkModalScenes = XboxLinkConstants.XboxLinkModalScenes;
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
-  let tmp6;
-  let tmp7;
-  const obj = react2;
-  const cResult = obj.c(5);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
+  const cResult = c.c(5);
   onClose = onClose.onClose;
-  const obj2 = useNavigation;
-  navigation = obj2.useNavigation();
-  const obj3 = useConnectRetry;
-  const connectRetry = obj3.useConnectRetry(navigation, XboxLinkModalScenes.PRE_CONNECT);
+  const navigation = useNavigation.useNavigation();
+  const connectRetry = useConnectRetry.useConnectRetry(navigation, XboxLinkModalScenes.PRE_CONNECT);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = intl3.intl;
-    const stringResult = intl.string(intl3.t.INwPCV);
-    const intl2 = intl3.intl;
-    const stringResult1 = intl2.string(intl3.t.GyXRRz);
+    const intl = util.intl;
+    const stringResult = intl.string(util.t.INwPCV);
+    const intl2 = util.intl;
+    const stringResult1 = intl2.string(util.t.GyXRRz);
     cResult[0] = stringResult;
     cResult[1] = stringResult1;
     tmp6 = stringResult;
@@ -39,28 +33,25 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
     [tmp6, tmp7] = cResult;
   }
   if (cResult[2] === onClose) {
-    let tmp10;
     if (cResult[3] === connectRetry) {
-      tmp10 = cResult[4];
+      let tmp10 = cResult[4];
     }
     return tmp10;
   }
-  const tmp11 = jsx(TwoWayLinkError2.TwoWayLinkError, { title: tmp6, body: tmp7, onClose, onRetry: connectRetry });
+  const tmp11 = jsx(TwoWayLinkError.TwoWayLinkError, { title: tmp6, body: tmp7, onClose, onRetry: connectRetry });
   cResult[2] = onClose;
   cResult[3] = connectRetry;
   cResult[4] = tmp11;
   tmp10 = tmp11;
 }) : ((onClose) => {
-  onClose = onClose.onClose;
-  const obj = useNavigation;
-  navigation = obj.useNavigation();
-  const obj2 = useConnectRetry;
-  const connectRetry = obj2.useConnectRetry(navigation, XboxLinkModalScenes.PRE_CONNECT);
-  const TwoWayLinkError = TwoWayLinkError2.TwoWayLinkError;
-  const intl = intl3.intl;
-  const intl2 = intl3.intl;
-  return <TwoWayLinkError title={intl.string(intl3.t.INwPCV)} body={intl2.string(intl3.t.GyXRRz)} onClose={onClose} onRetry={connectRetry} />;
+  const navigation = useNavigation.useNavigation();
+  const connectRetry = useConnectRetry.useConnectRetry(navigation, XboxLinkModalScenes.PRE_CONNECT);
+  const obj3 = { title: null, body: null, onClose: null, onRetry: null };
+  const intl = util.intl;
+  obj3.title = intl.string(util.t.INwPCV);
+  const intl2 = util.intl;
+  obj3.body = intl2.string(util.t.GyXRRz);
+  obj3.onClose = onClose.onClose;
+  obj3.onRetry = connectRetry;
+  return jsx(TwoWayLinkError.TwoWayLinkError, { title: null, body: null, onClose: null, onRetry: null });
 });
-const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkError.tsx");
-
-export default tmp3;

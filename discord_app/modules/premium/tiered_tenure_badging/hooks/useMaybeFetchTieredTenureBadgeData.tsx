@@ -1,24 +1,20 @@
 // === Module 13285: useMaybeFetchTieredTenureBadgeData ===
 
 // Module 13285 (useMaybeFetchTieredTenureBadgeData)
-import PremiumConstants from "PremiumConstants" /* 1379 */;
 import useMountEffectDefault from "useMountEffect" /* 5597 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7869 */;
 import UserStore from "UserStore" /* 1377 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, importDefault;
 
-const PremiumTypes = PremiumConstants.PremiumTypes;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let currentUser;
-  let stateFromStores;
-  let tmp4;
-  let tmp5;
-  const obj = stateFromStores(576);
-  const cResult = obj.c(5);
+const require = fn;
+const PremiumTypes = fn(1379).PremiumTypes;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useMaybeFetchTieredTenureBadgeData.tsx");
+
+export const useMaybeFetchTieredTenureBadgeData = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = stateFromStores(576).c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     const fn = function n() {
@@ -31,14 +27,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
+  const obj = stateFromStores(576);
+  stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
   const tmpResult = stateFromStores(504);
-  stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
-  const tmpResult2 = stateFromStores(10860);
-  const isPremiumSubscriber = tmpResult2.useIsPremiumSubscriber(PremiumTypes.TIER_2);
+  const isPremiumSubscriber = stateFromStores(10860).useIsPremiumSubscriber(PremiumTypes.TIER_2);
   if (cResult[2] === stateFromStores) {
-    let tmp9;
     if (cResult[3] === isPremiumSubscriber) {
-      tmp9 = cResult[4];
+      let tmp9 = cResult[4];
     }
     isPremiumSubscriber(5597)(tmp9);
   }
@@ -47,35 +42,29 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     if (stateFromStores != null) {
       id = stateFromStores.id;
     }
-    const tmp3 = null != id && isPremiumSubscriber;
     if (tmp3) {
       maybeFetchUserProfileDefault(stateFromStores.id);
     }
+    tmp3 = null != id && isPremiumSubscriber;
   };
   cResult[2] = stateFromStores;
   cResult[3] = isPremiumSubscriber;
   cResult[4] = fn2;
   tmp9 = fn2;
+  const tmpResult2 = stateFromStores(10860);
 }) : (() => {
-  let closure_1;
-  let currentUser;
-  let user;
   const items = [UserStore];
-  const obj = require("get initialized");
-  _require = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj2 = require("useIsPremiumSubscriber");
-  importDefault = obj2.useIsPremiumSubscriber(PremiumTypes.TIER_2);
+  _require = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = require("initialize");
+  importDefault = require("useIsPremiumSubscriber").useIsPremiumSubscriber(PremiumTypes.TIER_2);
   useMountEffectDefault(() => {
     let id;
     if (user != null) {
       id = user.id;
     }
-    const tmp3 = null != id && closure_1;
     if (tmp3) {
       maybeFetchUserProfileDefault(user.id);
     }
+    tmp3 = null != id && closure_1;
   });
 });
-const result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useMaybeFetchTieredTenureBadgeData.tsx");
-
-export const useMaybeFetchTieredTenureBadgeData = tmp2;

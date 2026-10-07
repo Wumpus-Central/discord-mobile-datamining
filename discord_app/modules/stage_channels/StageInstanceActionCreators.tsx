@@ -1,62 +1,57 @@
 // === Module 8115: StageInstanceActionCreators ===
 
 // Module 8115 (StageInstanceActionCreators)
-import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import size from "module_2" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let obj = function _startStageInstance() {
-  obj = _asyncToGenerator(async (channel_id, topic, privacy_level, send_start_notification, guild_scheduled_event_id) => {
-    let c6 = 0;
-    let c5 = 0;
-    return (async (arg0, value, arg2, arg3, arg4) => {
-      let obj4;
-      let obj8;
-      const HTTP = HTTPUtils.HTTP;
-      const request = { url: constants.STAGE_INSTANCES, body: obj4, rejectWithError: obj8.rejectWithMigratedError() };
-      const post = HTTP.post;
-      obj4 = { channel_id, topic, privacy_level, guild_scheduled_event_id, send_start_notification };
-      obj8 = HTTPUtils;
-      await post(request);
-      return value.body;
-    })();
-  });
-  return obj(...arguments);
+require = fn;
+let closure_4 = async function _startStageInstance() {
+  c6 = 0;
+  c5 = 0;
+  return (async (arg0, value, arg2, arg3, arg4) => {
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: constants.STAGE_INSTANCES, body: { channel_id, topic, privacy_level, guild_scheduled_event_id, send_start_notification }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    await HTTP.post(request);
+    return value.body;
+  })();
 };
-obj = function _updateStageInstance() {
-  obj = _asyncToGenerator(async (arg0, topic, privacy_level) => {
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c3 = 0;
-    return (async (arg0, value, arg2) => {
-      let obj4;
-      let obj8;
-      const HTTP = HTTPUtils.HTTP;
-      const request = { url: Endpoints.STAGE_INSTANCE(closure_0), body: obj4, rejectWithError: obj8.rejectWithMigratedError() };
-      const patch = HTTP.patch;
-      obj4 = { topic, privacy_level };
-      obj8 = HTTPUtils;
-      await patch(request);
-      return value.body;
-    })();
-  });
-  return obj(...arguments);
+let closure_5 = async function _updateStageInstance(arg0) {
+  closure_0 = arg0;
+  c4 = 0;
+  c3 = 0;
+  return (async (arg0, value, arg2) => {
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: Endpoints.STAGE_INSTANCE(closure_0), body: { topic, privacy_level }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    await HTTP.patch(request);
+    return value.body;
+  })();
 };
-const Endpoints = Constants.Endpoints;
+const Endpoints = fn(1085).Endpoints;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageInstanceActionCreators.tsx");
 
 export const startStageInstance = function startStageInstance() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_4.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const updateStageInstance = function updateStageInstance() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_5.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const endStageInstance = function endStageInstance(id) {
-  let obj2;
   const HTTP = HTTPUtils.HTTP;
-  const del = HTTP.del;
-  obj = { url: Endpoints.STAGE_INSTANCE(id), rejectWithError: obj2.rejectWithMigratedError() };
-  obj2 = HTTPUtils;
-  return del(obj);
+  const obj = { url: Endpoints.STAGE_INSTANCE(id), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+  return HTTP.del(obj);
 };

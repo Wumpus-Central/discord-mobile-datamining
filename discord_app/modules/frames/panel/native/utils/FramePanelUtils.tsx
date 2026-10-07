@@ -1,27 +1,36 @@
 // === Module 17586: FramePanelUtils ===
 
 // Module 17586 (FramePanelUtils)
-import get_initialized from "get initialized" /* 504 */;
-import react from "react" /* 576 */;
-import FramesConstants from "FramesConstants" /* 8738 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 9001 */;
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
 import FramesStore from "FramesStore" /* 9000 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-const asLaunched = FramesConstants.asLaunched;
-const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let mainFrame;
-  let tmp4;
-  let tmp5;
-  const obj = react;
-  const cResult = obj.c(2);
+require = fn;
+const asLaunched = fn(8738).asLaunched;
+const ActivityPanelModes = fn(9001).ActivityPanelModes;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/frames/panel/native/utils/FramePanelUtils.tsx");
+
+export const isFramePanelFullscreen = function isFramePanelFullscreen() {
+  const tmp = asLaunched(FramesStore.getMainFrame());
+  let tmp2 = null != tmp;
+  if (tmp2) {
+    tmp2 = tmp.data.activityPanelMode === ActivityPanelModes.PANEL;
+  }
+  return tmp2;
+};
+export const useIsActivityPanelFullscreen = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [FramesStore];
     const fn = function u() {
       const tmp = asLaunched(mainFrame.getMainFrame());
-      return null != tmp && tmp.data.activityPanelMode === constants.PANEL;
+      let tmp2 = null != tmp;
+      if (tmp2) {
+        tmp2 = tmp.data.activityPanelMode === constants.PANEL;
+      }
+      return tmp2;
     };
     cResult[0] = items;
     cResult[1] = fn;
@@ -30,21 +39,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const tmpResult = get_initialized;
-  return tmpResult.useStateFromStores(tmp4, tmp5);
+  return initialize.useStateFromStores(tmp4, tmp5);
 }) : (() => {
-  let mainFrame;
   const items = [FramesStore];
-  const obj = get_initialized;
-  return obj.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     const tmp = asLaunched(mainFrame.getMainFrame());
-    return null != tmp && tmp.data.activityPanelMode === constants.PANEL;
+    let tmp2 = null != tmp;
+    if (tmp2) {
+      tmp2 = tmp.data.activityPanelMode === constants.PANEL;
+    }
+    return tmp2;
   });
 });
-const result = size.fileFinishedImporting("modules/frames/panel/native/utils/FramePanelUtils.tsx");
-
-export const isFramePanelFullscreen = function isFramePanelFullscreen() {
-  const tmp = asLaunched(FramesStore.getMainFrame());
-  return null != tmp && tmp.data.activityPanelMode === ActivityPanelModes.PANEL;
-};
-export const useIsActivityPanelFullscreen = tmp2;

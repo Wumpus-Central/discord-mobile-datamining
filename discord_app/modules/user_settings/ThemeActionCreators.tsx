@@ -2,62 +2,45 @@
 
 // Module 4732 (ThemeActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ThemeConstants from "ThemeConstants" /* 1196 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1230 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
-import size from "module_2" /* 2 */;
 
-const SystemThemeState = ThemeConstants.SystemThemeState;
+const SystemThemeState = fn(1196).SystemThemeState;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/ThemeActionCreators.tsx");
 
 export const setSystemTheme = function setSystemTheme(DARK) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "SYSTEM_THEME_CHANGE", systemTheme: DARK };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "SYSTEM_THEME_CHANGE", systemTheme: DARK });
 };
 export const setSystemThemeIfNeeded = function setSystemThemeIfNeeded() {
   if (UnsyncedUserSettingsStore.useSystemTheme !== SystemThemeState.OFF) {
-    const obj2 = { type: "SYSTEM_THEME_CHANGE", systemTheme: getSystemThemeDefault() };
-    const obj = DispatcherDefault;
-    obj.dispatch(obj2);
+    const tmp3 = getSystemThemeDefault();
+    const obj2 = { type: "SYSTEM_THEME_CHANGE", systemTheme: tmp3 };
+    DispatcherDefault.dispatch(obj2);
   }
 };
 export const setUseSystemTheme = function setUseSystemTheme(OFF) {
-  let obj3;
-  const obj2 = { type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: obj3 };
-  obj3 = { useSystemTheme: OFF };
-  const obj = DispatcherDefault;
-  obj.dispatch(obj2);
+  const obj2 = { type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { useSystemTheme: OFF } };
+  DispatcherDefault.dispatch(obj2);
 };
 export const updateThemePreferences = function updateThemePreferences(preferences) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "UPDATE_THEME_PREFERENCES", preferences };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "UPDATE_THEME_PREFERENCES", preferences });
 };
 export const updateSyncedClientTheme = function updateSyncedClientTheme(systemTheme, clientTheme) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "UPDATE_SYNCED_CLIENT_THEME", systemTheme, clientTheme };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "UPDATE_SYNCED_CLIENT_THEME", systemTheme, clientTheme });
 };
 export const clearSyncedClientThemes = function clearSyncedClientThemes() {
-  const obj = DispatcherDefault;
-  obj.dispatch({ type: "CLEAR_SYNCED_CLIENT_THEMES" });
+  DispatcherDefault.dispatch({ type: "CLEAR_SYNCED_CLIENT_THEMES" });
 };
 export const setSameAsDeviceThemeEnabled = function setSameAsDeviceThemeEnabled(enabled) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "SET_SAME_AS_DEVICE_THEME_ENABLED", enabled };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "SET_SAME_AS_DEVICE_THEME_ENABLED", enabled });
 };
 export const setThemeOverride = function setThemeOverride(theme) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "SET_THEME_OVERRIDE", theme };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "SET_THEME_OVERRIDE", theme });
 };
 export const clearThemeOverride = function clearThemeOverride() {
-  const obj = DispatcherDefault;
-  obj.dispatch({ type: "CLEAR_THEME_OVERRIDE" });
+  DispatcherDefault.dispatch({ type: "CLEAR_THEME_OVERRIDE" });
 };
 export const refreshTheme = function refreshTheme() {
-  const obj = DispatcherDefault;
-  obj.dispatch({ type: "REFRESH_THEME" });
+  DispatcherDefault.dispatch({ type: "REFRESH_THEME" });
 };

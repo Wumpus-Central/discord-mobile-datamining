@@ -4,52 +4,31 @@
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import Constants from "Constants" /* 6714 */;
-import ColorConstants from "ColorConstants" /* 6951 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let _require;
 
-let c3;
-let closure_4;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-({ View: c3, ScrollView: closure_4 } = react_native);
-const PROFILE_SIDE_PADDING = Constants.PROFILE_SIDE_PADDING;
-const Gradients = ColorConstants.Gradients;
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { upsellButton: obj2, titleContainer: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 4 }, linearGradient: { width: "100%", height: "100%", position: "absolute", overflow: "hidden" }, outer: obj3, scroll: obj4, inner: { paddingVertical: 12, paddingHorizontal: 14 } };
-obj2 = { marginTop: 8, flexShrink: 0, borderRadius: nativeDefault.radii.round, gap: 4 };
-createStyles = createStyles.createStyles;
-obj3 = { marginHorizontal: PROFILE_SIDE_PADDING - 1 };
-obj4 = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-let closure_8 = createStyles(obj);
-const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let cardStyle;
-  let children;
-  let closure_0;
-  let contentStyle;
-  let ctaStyle;
-  let ctaText;
-  let disabled;
-  let headerText;
-  let items1;
-  let onPress;
-  let showLinearGradient;
-  let style;
-  let tmp = _require;
-  let obj = require("react");
-  const cResult = obj.c(34);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
+const Gradients = fn(6951).Gradients;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { upsellButton: { marginTop: 8, flexShrink: 0, borderRadius: nativeDefault.radii.round, gap: 4 }, titleContainer: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 4 }, linearGradient: { width: "100%", height: "100%", position: "absolute", overflow: "hidden" }, outer: null, scroll: null, inner: null };
+let obj3 = { marginTop: 8, flexShrink: 0, borderRadius: nativeDefault.radii.round, gap: 4 };
+obj2.outer = { marginHorizontal: fn(6714).PROFILE_SIDE_PADDING - 1 };
+let obj4 = { marginHorizontal: fn(6714).PROFILE_SIDE_PADDING - 1 };
+obj2.scroll = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.inner = { paddingVertical: 12, paddingHorizontal: 14 };
+let closure_8 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj5 = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileUpsellCard.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = require("c").c(34);
   ({ style, children, ctaText, headerText, showLinearGradient, cardStyle, contentStyle, ctaStyle, disabled, onPress } = arg0);
   const tmp4 = closure_8();
   _require = tmp4;
@@ -58,9 +37,8 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (cResult[6] === contentStyle) {
         if (cResult[9] === headerText) {
           if (cResult[12] === ctaStyle) {
-            let tmp13;
             if (cResult[13] === tmp4.upsellButton) {
-              tmp13 = cResult[14];
+              let tmp13 = cResult[14];
             }
             const _Symbol = Symbol;
             if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
@@ -91,14 +69,13 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 }
               }
               const obj2 = { style: tmp13, disabled, onPress, text: ctaText, color: tmp(1188).ButtonColors.GREEN, renderIcon: G, renderLinearGradient: tmp16 };
-              const ShinyButton = tmp(1188).ShinyButton;
+              const tmp20 = closure_6(tmp(1188).ShinyButton, obj2);
               cResult[19] = ctaText;
               cResult[20] = disabled;
               cResult[21] = onPress;
               cResult[22] = tmp13;
               cResult[23] = tmp16;
-              cResult[24] = closure_6(ShinyButton, obj2);
-              const tmp20 = closure_6(ShinyButton, obj2);
+              cResult[24] = tmp20;
             }
             if (showLinearGradient) {
               class G {
@@ -124,12 +101,12 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               return closure_1_6(closure_0(closure_1_2[9]).NitroWheelIcon, { color: "white", size: "xs" });
             }
           }
-          const obj3 = { style: tmp4.titleContainer, children: items1 };
+          const obj3 = { style: tmp4.titleContainer, children: null };
           const obj4 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
-          const NitroWheelIcon = tmp(8346).NitroWheelIcon;
-          items1 = [closure_6(NitroWheelIcon, obj4), ];
+          const items1 = [closure_6(tmp(8346).NitroWheelIcon, obj4), ];
           const obj5 = { variant: "heading-sm/bold", children: headerText };
           items1[1] = closure_6(tmp(4892).Text, obj5);
+          obj3.children = items1;
           tmp9 = closure_7(closure_3, obj3);
         }
         cResult[9] = headerText;
@@ -150,48 +127,33 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[0] = style;
   cResult[1] = tmp4.outer;
   cResult[2] = items4;
+  let obj = require("c");
 }) : ((headerText) => {
-  let cardStyle;
-  let children;
-  let closure_0;
-  let contentStyle;
-  let ctaStyle;
-  let ctaText;
-  let disabled;
-  let fn;
-  let items;
-  let items1;
-  let items2;
-  let items3;
-  let items4;
-  let items5;
-  let obj2;
-  let onPress;
-  let showLinearGradient;
-  let style;
   headerText = headerText.headerText;
   ({ style, children, ctaText, showLinearGradient, cardStyle, contentStyle, ctaStyle, disabled, onPress } = headerText);
-  let tmp = closure_8();
+  const tmp = closure_8();
   _require = tmp;
-  let obj = { borderWidth: 1, style: items, direction: require("native").GradientBorder.Direction.HORIZONTAL, colors: Gradients.PREMIUM_TIER_2, borderRadius: nativeDefault.radii.lg, children: closure_7(closure_4, obj2) };
-  items = [tmp.outer, style];
-  const GradientBorder = require("native").GradientBorder;
-  obj2 = { bounces: false, style: items1, contentContainerStyle: items2, children: items4 };
-  items1 = [tmp.scroll, cardStyle];
-  items2 = [tmp.inner, contentStyle];
+  let obj = { borderWidth: 1, style: null, direction: require("native").GradientBorder.Direction.HORIZONTAL, colors: Gradients.PREMIUM_TIER_2, borderRadius: nativeDefault.radii.lg, children: null };
+  let items = [tmp.outer, style];
+  obj.style = items;
+  const obj2 = { bounces: false, style: null, contentContainerStyle: null, children: null };
+  const items1 = [tmp.scroll, cardStyle];
+  obj2.style = items1;
+  const items2 = [tmp.inner, contentStyle];
+  obj2.contentContainerStyle = items2;
   let tmp6Result = null;
   if (null != headerText) {
-    const obj3 = { style: tmp.titleContainer, children: items3 };
+    const obj3 = { style: tmp.titleContainer, children: null };
     const obj4 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
-    const NitroWheelIcon = tmp3(8346).NitroWheelIcon;
-    items3 = [closure_6(NitroWheelIcon, obj4), ];
+    const items3 = [closure_6(tmp3(8346).NitroWheelIcon, obj4), ];
     const obj5 = { variant: "heading-sm/bold", children: headerText };
-    items3[1] = closure_6(require("Text/Text").Text, obj5);
+    items3[1] = closure_6(tmp3(4892).Text, obj5);
+    obj3.children = items3;
     tmp6Result = closure_7(closure_3, obj3);
   }
-  items4 = [tmp6Result, children, ];
+  const items4 = [tmp6Result, children, ];
   const obj6 = {
-    style: items5,
+    style: null,
     disabled,
     onPress,
     text: ctaText,
@@ -199,23 +161,22 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     renderIcon() {
       return closure_1_6(closure_0(dependencyMap[9]).NitroWheelIcon, { color: "white", size: "xs" });
     },
-    renderLinearGradient: fn
+    renderLinearGradient: null
   };
-  items5 = [tmp.upsellButton, ctaStyle];
-  const ShinyButton = tmp3(1188).ShinyButton;
-  fn = undefined;
+  const items5 = [tmp.upsellButton, ctaStyle];
+  obj6.style = items5;
+  let fn;
   if (showLinearGradient) {
     fn = () => {
-      let items;
-      const obj = { style: items, start: ConstantsIOS.HorizontalGradient.START, end: ConstantsIOS.HorizontalGradient.END, colors: Gradients.PREMIUM_TIER_2_TRI_COLOR };
-      items = [closure_0.linearGradient];
-      const tmp = LinearGradientDefault;
-      return metroRequire(tmp, obj);
+      const obj = { style: null, start: ConstantsIOS.HorizontalGradient.START, end: ConstantsIOS.HorizontalGradient.END, colors: Gradients.PREMIUM_TIER_2_TRI_COLOR };
+      const items = [closure_0.linearGradient];
+      obj.style = items;
+      return timestampProducer(LinearGradientDefault, obj);
     };
   }
-  items4[2] = closure_6(ShinyButton, obj6);
-  return closure_6(GradientBorder, obj);
+  obj6.renderLinearGradient = fn;
+  items4[2] = closure_6(require("native").ShinyButton, obj6);
+  obj2.children = items4;
+  obj.children = closure_7(closure_4, obj2);
+  return closure_6(require("native").GradientBorder, obj);
 });
-const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileUpsellCard.tsx");
-
-export default tmp6;

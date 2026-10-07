@@ -1,7 +1,7 @@
 // === Module 16598: ConjureModelLabels ===
 
 // Module 16598 (ConjureModelLabels)
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import _modDef3753 from "module_3753" /* 3753 */;
 import size from "module_2" /* 2 */;
 
@@ -19,11 +19,8 @@ export const modelTierMessage = function modelTierMessage(value) {
   }
 };
 export const tierTooltip = function tierTooltip(title, arg1) {
-  let intl;
-  let obj;
-  let prop;
   if ("simple" === arg1) {
-    prop = _modDef3753["/tlOR5"];
+    let prop = _modDef3753["/tlOR5"];
   } else if ("balanced" === arg1) {
     prop = _modDef3753.wNhuGQ;
   } else {
@@ -33,9 +30,10 @@ export const tierTooltip = function tierTooltip(title, arg1) {
     }
   }
   if (null != prop) {
-    const obj2 = { title, body: intl.string(prop) };
-    intl = intl2.intl;
-    obj = obj2;
+    const obj2 = { title, body: null };
+    const intl = util.intl;
+    obj2.body = intl.string(prop);
+    let obj = obj2;
   } else {
     obj = { body: title };
   }

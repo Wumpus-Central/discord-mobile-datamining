@@ -5,29 +5,26 @@ import CaptchaConstants from "CaptchaConstants" /* 5422 */;
 import CaptchaStore from "CaptchaStore" /* 5415 */;
 import size from "module_2" /* 2 */;
 
-let _window;
-let c2;
-let map;
-({ incrementCaptchaServeVolume: _window, flushCaptchaServeVolume: map, isCaptchaStoreVolumeEmpty: c2 } = CaptchaStore);
+({ incrementCaptchaServeVolume: closure_0, flushCaptchaServeVolume: closure_1, isCaptchaStoreVolumeEmpty: c2 } = CaptchaStore);
 let closure_3 = CaptchaConstants.CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS;
-class CaptchaCancelError extends Error {
-  constructor() {
-    const tmp2 = new tmp("Captcha cancelled", new.target);
-    return tmp2;
-  }
+const prototype = function CaptchaCancelError() {
+  return new tmp("Captcha cancelled", new.target);
+}.prototype;
+class prototype extends Error {
 }
 const result = size.fileFinishedImporting("modules/captcha/SharedCaptchaUtils.tsx");
 
 export const CaptchaError = { CANCEL: "cancel", ERROR: "error", EXPIRED: "expired" };
 export const extractCaptchaPropsFromResponse = function extractCaptchaPropsFromResponse(body) {
-  let flag;
-  let obj2;
-  const obj = { captchaService: body.captcha_service, sitekey: body.captcha_sitekey, captchaSessionId: body.captcha_session_id, options: obj2 };
-  obj2 = { rqdata: body.captcha_rqdata, rqtoken: body.captcha_rqtoken, serveInvisible: flag, userflow: body.user_flow };
-  flag = body.should_serve_invisible;
+  const obj = { captchaService: body.captcha_service, sitekey: body.captcha_sitekey, captchaSessionId: body.captcha_session_id, options: null };
+  const obj2 = { rqdata: body.captcha_rqdata, rqtoken: body.captcha_rqtoken, serveInvisible: null, userflow: null };
+  let flag = body.should_serve_invisible;
   if (flag == null) {
     flag = false;
   }
+  obj2.serveInvisible = flag;
+  obj2.userflow = body.user_flow;
+  obj.options = obj2;
   return obj;
 };
 export const emitCaptchaDistributionMetric = function emitCaptchaDistributionMetric(userflow) {
@@ -37,4 +34,4 @@ export const emitCaptchaDistributionMetric = function emitCaptchaDistributionMet
   }
   React(userflow);
 };
-export { CaptchaCancelError };
+export const CaptchaCancelError = prototype;

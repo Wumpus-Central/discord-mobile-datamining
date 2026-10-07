@@ -4,17 +4,15 @@
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import Storage6 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import Timers from "Timers" /* 2046 */;
 import DiscordNativeDefault from "DiscordNative" /* 4496 */;
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4890 */;
-import SystemAnalyticsStore from "SystemAnalyticsStore" /* 4941 */;
 import DesktopNativeUtilsDefault from "DesktopNativeUtils" /* 5962 */;
 import AVError from "AVError" /* 9131 */;
 import ExternalPipDefault from "ExternalPip" /* 9145 */;
@@ -22,13 +20,10 @@ import MediaEngineActionCreators from "MediaEngineActionCreators" /* 9633 */;
 import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 9673 */;
 import getEffectiveNoiseCancellationDefault from "getEffectiveNoiseCancellation" /* 9688 */;
 import VideoGuardExperiment2 from "VideoGuardExperiment" /* 13120 */;
-import isClipsEnabled from "isClipsEnabled" /* 13501 */;
 import KrispUtilsDefault from "KrispUtils" /* 13638 */;
 import NativeMuteManagerDefault from "NativeMuteManager" /* 13644 */;
 import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 13655 */;
 import trackVideoToggleDefault from "trackVideoToggle" /* 13656 */;
-import SpatialAudioConstants from "SpatialAudioConstants" /* 13833 */;
-import UserSettingsVoiceAndVideoConstants from "UserSettingsVoiceAndVideoConstants" /* 13834 */;
 import GoLiveHdrExperiment from "GoLiveHdrExperiment" /* 13835 */;
 import StreamZeroVadLeadingExperiment2 from "StreamZeroVadLeadingExperiment" /* 13836 */;
 import AGC2MobileExperimentDefault from "AGC2MobileExperiment" /* 13837 */;
@@ -45,12 +40,11 @@ import AudioEffectsExperimentDefault from "AudioEffectsExperiment" /* 13902 */;
 import queryAudioEffectsDefault from "queryAudioEffects" /* 13903 */;
 import IOSAudioInterruptExperiment from "IOSAudioInterruptExperiment" /* 13905 */;
 import KrispNCModels from "KrispNCModels" /* 13906 */;
-import NvencReconstructedFrameExperiment from "NvencReconstructedFrameExperiment" /* 13908 */;
+import InputWatcherDefault from "InputWatcher" /* 13907 */;
 import VideoCaptureDeviceNoReuse from "VideoCaptureDeviceNoReuse" /* 13909 */;
 import DisableCameraSimulcastExperiment2 from "DisableCameraSimulcastExperiment" /* 13910 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import injectMediaEngine from "injectMediaEngine" /* 2000 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ClipsStore from "ClipsStore" /* 2005 */;
 import ExperimentStore from "ExperimentStore" /* 4782 */;
 import RunningGameStore from "RunningGameStore" /* 2006 */;
@@ -62,149 +56,121 @@ import ChannelStore from "ChannelStore" /* 2051 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import UserStore from "UserStore" /* 1377 */;
 import VideoQualityModeStore from "VideoQualityModeStore" /* 13832 */;
-import Constants_mod from "Constants" /* 1085 */;
-import Constants_mod2 from "Constants" /* 4938 */;
-import NativePermissionConstants from "NativePermissionConstants" /* 5105 */;
-import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
-import Constants_mod3 from "Constants" /* 4921 */;
-import BaseConnectionEvent_mod from "BaseConnectionEvent" /* 4951 */;
 import NativePermissionUtils_mod from "NativePermissionUtils" /* 7288 */;
-import size_mod from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-let _false, _null, _require, c1, c5, c6, c73, closure_1_83, closure_67, closure_82, closure_90, connection, goLiveSource, navigation, setLocalMute, setLocalVideoDisabled, status;
-
-let DEFAULT_DEVICE_ID;
-let Features;
-let InputModes;
-let NativePermissionTypes;
-let closure_18;
-let closure_19;
-let closure_21;
-let closure_22;
-let closure_23;
-let closure_24;
-let closure_25;
-let closure_26;
-let closure_27;
-let closure_28;
-let closure_29;
-let closure_30;
-let closure_31;
-let closure_32;
-let closure_35;
-let closure_36;
-let closure_38;
-let closure_39;
-let closure_40;
-let closure_41;
-let closure_45;
-let closure_50;
-let closure_51;
-let closure_52;
-let closure_53;
-let closure_54;
-let closure_55;
-let closure_56;
-let obj = function _detectH265HardwareDecode() {
-  obj = _asyncToGenerator(async () => {
-    if (c3 === 2) {
-      c3 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp2 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+require = fn;
+let closure_141 = async function _detectH265HardwareDecode() {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj2 = { value, done: true };
+      return obj2;
     } else {
-      let c2;
-      try {
-        let closure_0;
-        c3 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_0 = undefined;
-            const _window = window;
-            if (typeof window !== "undefined") {
-              const _navigator3 = navigator;
-              if (typeof navigator !== "undefined") {
-                const _navigator4 = navigator;
-                if ("mediaCapabilities" in navigator) {
-                  const _navigator = navigator;
-                  if (null != navigator.mediaCapabilities) {
-                    c2 = 1;
-                    const _navigator2 = navigator;
-                    const obj4 = { type: "file", video: { contentType: "video/mp4; codecs=\"hev1.1.6.L153.B0\"", width: 1920, height: 1080, bitrate: 2000000, framerate: 30 } };
-                    c1 = 2;
-                    c3 = 1;
-                    const obj5 = { value: mediaCapabilities.decodingInfo(obj4), done: false };
-                    return obj5;
-                  }
-                }
-              }
-            }
-            c3 = 3;
-            return { value: false, done: true };
-          }
-        } else if (1 === c1) {
-          c2 = 0;
-          c3 = 3;
-          return { value: false, done: true };
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c1) {
+        if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c2 = 0;
           c3 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          closure_0 = value;
-          const powerEfficient = closure_0.supported && closure_0.powerEfficient;
-          c2 = 0;
+          closure_0 = tmp6;
+          closure_128_0 = undefined;
+          const _window = window;
+          if (typeof window !== "undefined") {
+            const _navigator3 = navigator;
+            if (typeof navigator !== "undefined") {
+              const _navigator4 = navigator;
+              if ("mediaCapabilities" in navigator) {
+                const _navigator = navigator;
+                if (null != navigator.mediaCapabilities) {
+                  c2 = 1;
+                  const _navigator2 = navigator;
+                  const obj4 = { type: "file", video: { contentType: "video/mp4; codecs=\"hev1.1.6.L153.B0\"", width: 1920, height: 1080, bitrate: 2000000, framerate: 30 } };
+                  c1 = 2;
+                  c3 = 1;
+                  const obj5 = { value: mediaCapabilities.decodingInfo(obj4), done: false };
+                  return obj5;
+                }
+              }
+            }
+          }
           c3 = 3;
-          obj = { value: powerEfficient, done: true };
-          return obj;
+          return { value: false, done: true };
         }
-      } catch (tmp8) {
-        if (0 === c2) {
-          c3 = 3;
-          throw tmp8;
-        } else {
-          c1 = 1;
+      } else if (1 === tmp6) {
+        c2 = 0;
+        c3 = 3;
+        return { value: false, done: true };
+      } else if (arg0 === 1) {
+        c3 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c2 = 0;
+        c3 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } else {
+        closure_128_0 = value;
+        let powerEfficient = closure_128_0.supported;
+        if (powerEfficient) {
+          powerEfficient = closure_128_0.powerEfficient;
         }
+        c2 = 0;
+        c3 = 3;
+        const obj = { value: powerEfficient, done: true };
+        return obj;
+      }
+    } catch (tmp11) {
+      if (tmp3 === c2) {
+        c3 = tmp2;
+        throw tmp11;
+      } else {
+        c1 = tmp;
       }
     }
-  });
-  return obj(...arguments);
+  }
 };
 function startH265HardwareDetection() {
-  let resolved;
-  function detectH265HardwareDecode() {
-    return obj(...arguments);
-  }
   if (null != nextPromise) {
-    resolved = nextPromise;
+    let resolved = nextPromise;
   } else {
     const _window = window;
     if (typeof window !== "undefined") {
-      const promise = detectH265HardwareDecode();
-      nextPromise = promise.then((result) => {
-        let closure_1_123 = result;
+      nextPromise = (function detectH265HardwareDecode() {
+        const self = this;
+        const apply = closure_1_141.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      })().then((result) => {
+        closure_123 = result;
         return result;
       });
       resolved = nextPromise;
+      const promise = (function detectH265HardwareDecode() {
+        const self = this;
+        const apply = closure_1_141.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      })();
     } else {
       resolved = Promise.resolve(false);
     }
@@ -212,38 +178,49 @@ function startH265HardwareDetection() {
   return resolved;
 }
 function getSettings() {
-  let num;
-  let obj3;
-  let obj5;
-  let obj7;
   let DEFAULT = arg0;
   if (arg0 === undefined) {
     DEFAULT = MediaEngineContextTypes.DEFAULT;
   }
-  let DEFAULT2 = DEFAULT;
+  DEFAULT2 = DEFAULT;
   if (DEFAULT === undefined) {
     DEFAULT2 = MediaEngineContextTypes.DEFAULT;
   }
   let tmp3 = settingsByContext[DEFAULT2];
   if (null == tmp3) {
-    obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj3, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-    obj = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-    obj3 = {};
-    PlatformUtils.isPlatformEmbedded || false;
+    obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+    modeOptions = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+    obj2.modeOptions = modeOptions;
+    obj2.localMutes = {};
+    obj2.disabledLocalVideos = {};
+    obj2.videoToggleStateMap = {};
+    obj2.localVolumes = {};
+    const obj3 = {};
     const merged = Object.assign(closure_34);
+    obj2.audioMixerSettings = obj3;
+    obj2.localPans = {};
+    obj2.inputVolume = outputVolume;
+    obj2.outputVolume = outputVolume;
+    obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+    obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+    obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+    obj2.videoHook = result.supports(Features.VIDEO_HOOK);
     settingsByContext[DEFAULT2] = obj2;
     tmp3 = obj2;
+    const tmp4 = PlatformUtils.isPlatformEmbedded || false;
   }
   if (DEFAULT === MediaEngineContextTypes.STREAM) {
-    const obj4 = { modeOptions: obj5 };
+    const obj4 = {};
     const merged1 = Object.assign(tmp3);
-    obj5 = { vadLeading: num };
+    const obj5 = {};
     const merged2 = Object.assign(tmp3.modeOptions);
     const StreamZeroVadLeadingExperiment = StreamZeroVadLeadingExperiment2.StreamZeroVadLeadingExperiment;
-    num = 0;
+    let num = 0;
     if (!StreamZeroVadLeadingExperiment.getConfig({ location: "MediaEngineStore.getSettings" }).enabled) {
       num = tmp3.modeOptions.vadLeading;
     }
+    obj5.vadLeading = num;
+    obj4.modeOptions = obj5;
     return obj4;
   } else {
     let CUSTOM = tmp3.activeInputProfile;
@@ -251,11 +228,11 @@ function getSettings() {
       CUSTOM = InputProfile.CUSTOM;
     }
     const tmp17 = c110 ? closure_71 : closure_140;
-    let modeOptions = tmp3.modeOptions;
+    modeOptions = tmp3.modeOptions;
     if (modeOptions == null) {
       modeOptions = {};
     }
-    const obj6 = { vadKrispActivationThreshold: obj7.getConfig({ location: "getSettings" }).vadKrispActivationThreshold };
+    const obj6 = {};
     const merged3 = Object.assign(modeOptions);
     let modeOptions1 = tmp14.modeOptions;
     if (modeOptions1 == null) {
@@ -268,38 +245,38 @@ function getSettings() {
     }
     const merged5 = Object.assign(modeOptions2);
     if (null != obj6.vadKrispActivationThreshold) {
-      const obj8 = { modeOptions: obj6 };
+      const obj8 = {};
       const merged6 = Object.assign(tmp3);
       const merged7 = Object.assign(tmp14);
       const merged8 = Object.assign(tmp17);
+      obj8.modeOptions = obj6;
       return obj8;
     }
-    obj7 = AGC2MobileExperimentDefault;
+    obj6.vadKrispActivationThreshold = AGC2MobileExperimentDefault.getConfig({ location: "getSettings" }).vadKrispActivationThreshold;
   }
 }
 function setInputMode(context) {
-  let num;
-  let vadUseKrisp;
   const tmp = getSettings(context.context);
-  const mode = tmp.mode;
   if (context.context === MediaEngineContextTypes.DEFAULT) {
-    obj = MediaEngineActionCreators;
-    obj.setPushToTalkState(false, false);
+    MediaEngineActionCreators.setPushToTalkState(false, false);
   }
-  obj2 = { vadThreshold: tmp.modeOptions.threshold, vadAutoThreshold: tmp.modeOptions.autoThreshold, vadUseKrisp, vadKrispActivationThreshold: num, vadLeading: tmp.modeOptions.vadLeading, vadTrailing: tmp.modeOptions.vadTrailing, pttReleaseDelay: Math.round(tmp.modeOptions.delay) };
-  vadUseKrisp = tmp.modeOptions.vadUseKrisp;
-  setInputMode = context.setInputMode;
+  obj2 = { vadThreshold: tmp.modeOptions.threshold, vadAutoThreshold: tmp.modeOptions.autoThreshold, vadUseKrisp: null, vadKrispActivationThreshold: null, vadLeading: null, vadTrailing: null, pttReleaseDelay: null };
+  let vadUseKrisp = tmp.modeOptions.vadUseKrisp;
   if (vadUseKrisp) {
     vadUseKrisp = !c110;
   }
-  num = tmp.modeOptions.vadKrispActivationThreshold;
+  obj2.vadUseKrisp = vadUseKrisp;
+  let num = tmp.modeOptions.vadKrispActivationThreshold;
   if (num == null) {
     num = 0.5;
   }
-  setInputMode(mode, obj2);
+  obj2.vadKrispActivationThreshold = num;
+  obj2.vadLeading = tmp.modeOptions.vadLeading;
+  obj2.vadTrailing = tmp.modeOptions.vadTrailing;
+  obj2.pttReleaseDelay = Math.round(tmp.modeOptions.delay);
+  context.setInputMode(tmp.mode, obj2);
 }
 function updateConnectionMuteDeaf(context) {
-  let flag;
   const tmp = getSettings(context.context);
   let deaf = !c79;
   if (c79) {
@@ -310,12 +287,20 @@ function updateConnectionMuteDeaf(context) {
   }
   context = context.context;
   if (MediaEngineContextTypes.DEFAULT === context) {
-    let tmp3 = deaf || c90 || mute || closure_92;
-    if (!tmp3) {
-      obj = NativePermissionUtils;
-      tmp3 = !obj.didHavePermission(NativePermissionTypes.AUDIO);
+    let tmp3 = deaf;
+    if (!deaf) {
+      tmp3 = c90;
     }
-    flag = tmp3;
+    if (!tmp3) {
+      tmp3 = mute;
+    }
+    if (!tmp3) {
+      tmp3 = closure_92;
+    }
+    if (!tmp3) {
+      tmp3 = !NativePermissionUtils.didHavePermission(NativePermissionTypes.AUDIO);
+    }
+    let flag = tmp3;
   } else {
     flag = true;
     if (MediaEngineContextTypes.STREAM !== context) {
@@ -326,217 +311,211 @@ function updateConnectionMuteDeaf(context) {
   context.setSelfMute(flag);
   context.setSelfDeaf(tmp.deaf);
   if (context.context === MediaEngineContextTypes.DEFAULT) {
-    obj2 = MuteAwareNoiseCancellationExperiment;
-    enabled = obj2.getMuteAwareNoiseCancellationConfig({ location: "updateConnectionMuteDeaf" }).enabled;
-    const setSkipNoiseCancellationIfMuted = context.setSkipNoiseCancellationIfMuted;
+    enabled = MuteAwareNoiseCancellationExperiment.getMuteAwareNoiseCancellationConfig({ location: "updateConnectionMuteDeaf" }).enabled;
     if (enabled) {
       enabled = flag;
     }
-    result = setSkipNoiseCancellationIfMuted(enabled);
-    const obj3 = NativeMuteManagerDefault;
-    obj3.updateNativeMute();
+    result = context.setSkipNoiseCancellationIfMuted(enabled);
+    NativeMuteManagerDefault.updateNativeMute();
   }
 }
 function updateVideo() {
-  let isMacResult;
-  let minCaptureHeight;
-  let minCaptureWidth;
-  let str;
-  let tmp71Result6;
-  let tmp71Result8;
   let tmp = enabled;
   if (enabled === undefined) {
     tmp = closure_94;
   }
   let tmp2 = arg1;
   if (arg1 === undefined) {
-    tmp2 = goLiveSource;
+    tmp2 = closure_74;
   }
   let desktopSource1;
-  if (goLiveSource != null) {
+  if (closure_74 != null) {
     desktopSource1 = tmp3.desktopSource;
   }
   let tmp5 = null != desktopSource1;
   if (tmp5) {
-    let id1;
-    const id = tmp3.desktopSource.id;
+    let id;
     if (tmp2 != null) {
       const desktopSource = tmp2.desktopSource;
       if (desktopSource != null) {
-        id1 = desktopSource.id;
+        id = desktopSource.id;
       }
     }
-    tmp5 = id !== id1;
+    tmp5 = tmp3.desktopSource.id !== id;
   }
-  if (tmp5) {
-    if (null != goLiveSource.desktopSource.soundshareId) {
-      obj = PlatformUtils;
-      if (obj.isWindows()) {
-        const obj3 = HookAll;
-        result = obj3.cancelAttachToProcess(tmp3.desktopSource.soundshareId);
-      }
-      result.setGoLiveSource(null, STREAM);
+  if (!tmp5) {
+    let cameraSource1;
+    if (tmp3 != null) {
+      cameraSource1 = tmp3.cameraSource;
     }
-    const videoHook = null != tmp3.desktopSource.sourcePid && getSettings().videoHook;
-    if (videoHook) {
-      obj2 = HookAll;
-      const result1 = obj2.cancelAttachToProcess(tmp3.desktopSource.sourcePid);
-    }
-  }
-  let cameraSource1;
-  if (goLiveSource != null) {
-    cameraSource1 = tmp3.cameraSource;
-  }
-  let tmp19 = null == cameraSource1;
-  if (!tmp19) {
-    let videoDeviceGuid1;
-    const videoDeviceGuid = tmp3.cameraSource.videoDeviceGuid;
-    if (tmp2 != null) {
-      const cameraSource = tmp2.cameraSource;
-      if (cameraSource != null) {
-        videoDeviceGuid1 = cameraSource.videoDeviceGuid;
-      }
-    }
-    let tmp21 = videoDeviceGuid === videoDeviceGuid1;
-    if (tmp21) {
-      let audioDeviceGuid1;
-      const audioDeviceGuid = tmp3.cameraSource.audioDeviceGuid;
+    let tmp18 = null == cameraSource1;
+    if (!tmp18) {
+      let videoDeviceGuid;
       if (tmp2 != null) {
-        const cameraSource2 = tmp2.cameraSource;
-        if (cameraSource2 != null) {
-          audioDeviceGuid1 = cameraSource2.audioDeviceGuid;
+        const cameraSource = tmp2.cameraSource;
+        if (cameraSource != null) {
+          videoDeviceGuid = cameraSource.videoDeviceGuid;
         }
       }
-      tmp21 = audioDeviceGuid === audioDeviceGuid1;
+      let tmp20 = tmp3.cameraSource.videoDeviceGuid === videoDeviceGuid;
+      if (tmp20) {
+        let audioDeviceGuid;
+        if (tmp2 != null) {
+          const cameraSource2 = tmp2.cameraSource;
+          if (cameraSource2 != null) {
+            audioDeviceGuid = cameraSource2.audioDeviceGuid;
+          }
+        }
+        tmp20 = tmp3.cameraSource.audioDeviceGuid === audioDeviceGuid;
+      }
+      tmp18 = tmp20;
     }
-    tmp19 = tmp21;
-  }
-  if (!tmp19) {
-    result.setGoLiveSource(null, STREAM);
-  }
-  const tmp26 = closure_94;
-  if (tmp26) {
-    const videoDeviceId = getSettings().videoDeviceId;
-    const tmp28 = closure_94;
-    if (tmp28) {
+    if (!tmp18) {
+      result.setGoLiveSource(null, DEFAULT2);
+    }
+    if (!closure_94) {
+      if (!tmp) {
+        closure_74 = tmp2;
+        if (null != tmp2) {
+          const obj5 = { resolution: tmp2.quality.resolution, frameRate: tmp2.quality.frameRate };
+          if (null != tmp2.desktopSource) {
+            const videoHook2 = getSettings().videoHook;
+            const obj20 = GoLiveHdrExperiment;
+            let isWindowsResult = PlatformUtils.isWindows();
+            if (isWindowsResult) {
+              const tmp41 = DiscordNativeDefault;
+              let release;
+              if (tmp41 != null) {
+                release = tmp41.os.release;
+              }
+              isWindowsResult = _modDef13847.satisfies(release, closure_1_29);
+            }
+            if (!isWindowsResult) {
+              let isWindowsResult1 = PlatformUtils.isWindows();
+              if (isWindowsResult1) {
+                isWindowsResult1 = 0 >= closure_1_26;
+              }
+              let flag = false;
+              if (isWindowsResult1) {
+                enabled = true === c132;
+                if (!enabled) {
+                  const WGCDirtyRegionsAllExperiment = WGCDirtyRegionsAllExperiment2.WGCDirtyRegionsAllExperiment;
+                  enabled = WGCDirtyRegionsAllExperiment.getConfig({ location: "updateVideo" }).enabled;
+                }
+                flag = enabled;
+              }
+              let enabled2 = videoHook2;
+              if (videoHook2) {
+                const VideoHookDX12Experiment = VideoHookDX12Experiment2.VideoHookDX12Experiment;
+                enabled2 = VideoHookDX12Experiment.getConfig({ location: "updateVideo" }).enabled;
+              }
+              const UpscaleSmallCapturedFramesExperiment = UpscaleSmallCapturedFramesExperiment2.UpscaleSmallCapturedFramesExperiment;
+              const config = UpscaleSmallCapturedFramesExperiment.getConfig({ location: "updateVideo" });
+              const obj7 = { id: tmp2.desktopSource.id, soundshareId: tmp2.desktopSource.soundshareId, useVideoHook: videoHook2, useGraphicsCapture: isWindowsResult, useGraphicsCaptureApiLevel: 0, useCaptureDeviceForEncode: null, useLoopback: null, useQuartzCapturer: true, allowScreenCaptureKit: null, videoHookStaleFrameTimeoutMs: 500, graphicsCaptureStaleFrameTimeoutMs: null, hdrCaptureMode: null, enableGlobalFramePoolLock: null, useGraphicsCaptureDirtyRegions: null, videoHookAllowDx12: null, minCaptureWidth: null, minCaptureHeight: null };
+              ({ minCaptureWidth, minCaptureHeight } = config);
+              const obj10 = result;
+              const tmp68Result = PlatformUtils;
+              obj7.useCaptureDeviceForEncode = PlatformUtils.isWindows();
+              obj7.useLoopback = mediaEngineStore.getExperimentalSoundshare();
+              const tmp68Result5 = PlatformUtils;
+              let isMacResult = PlatformUtils.isMac();
+              if (isMacResult) {
+                isMacResult = obj10.supports(Features.SCREEN_CAPTURE_KIT);
+              }
+              if (isMacResult) {
+                const tmp59 = DiscordNativeDefault;
+                let release1;
+                if (tmp59 != null) {
+                  release1 = tmp59.os.release;
+                }
+                isMacResult = _modDef13847.satisfies(release1, closure_1_24);
+              }
+              const obj9 = { desktopDescription: null, quality: null };
+              obj7.allowScreenCaptureKit = isMacResult;
+              obj7.graphicsCaptureStaleFrameTimeoutMs = graphicsCaptureStaleFrameTimeoutMs;
+              obj7.hdrCaptureMode = obj20.getGoLiveHdrConfig({ location: "MediaEngineStore go live" }).hdrCaptureMode;
+              const tmp68Result6 = PlatformUtils;
+              obj7.enableGlobalFramePoolLock = GlobalFramePoolLockExperiment.getGlobalFramePoolLockExperimentConfig({ location: "updateVideo" }).enabled;
+              obj7.useGraphicsCaptureDirtyRegions = flag;
+              obj7.videoHookAllowDx12 = enabled2;
+              obj7.minCaptureWidth = minCaptureWidth;
+              obj7.minCaptureHeight = minCaptureHeight;
+              obj9.desktopDescription = obj7;
+              obj9.quality = obj5;
+              result.setGoLiveSource(obj9, DEFAULT2);
+              const tmp68Result7 = GlobalFramePoolLockExperiment;
+            } else {
+              let isWindowsResult2 = PlatformUtils.isWindows();
+              if (isWindowsResult2) {
+                const tmp47 = DiscordNativeDefault;
+                let release2;
+                if (tmp47 != null) {
+                  release2 = tmp47.os.release;
+                }
+                isWindowsResult2 = _modDef13847.satisfies(release2, closure_1_27);
+              }
+              const tmp68Result8 = PlatformUtils;
+            }
+          }
+          if (null != tmp2.cameraSource) {
+            const obj11 = { videoDeviceGuid: tmp2.cameraSource.videoDeviceGuid, audioDeviceGuid: null };
+            let str = "";
+            if (false !== tmp2.cameraSource.sound) {
+              str = tmp2.cameraSource.audioDeviceGuid;
+            }
+            const obj12 = { cameraDescription: null, quality: null };
+            obj11.audioDeviceGuid = str;
+            obj12.cameraDescription = obj11;
+            obj12.quality = obj5;
+            result.setGoLiveSource(obj12, DEFAULT2);
+          }
+        }
+      }
+    }
+    videoDeviceId = getSettings().videoDeviceId;
+    if (closure_94) {
       if (videoDeviceId === DEFAULT_DEVICE_ID) {
-        let id2;
-        let tmp32;
-        if (DISABLED_DEVICE_ID === tmp29) {
-          id2 = DISABLED_DEVICE_ID;
+        if (videoDeviceId === tmp28) {
+          let setVideoInputDevice = closure_95;
         }
         closure_94 = tmp;
-        if (closure_94) {
-          let firstResult = closure_88[id2];
+        if (tmp) {
+          let firstResult = dependencyMap[setVideoInputDevice];
           if (firstResult == null) {
-            firstResult = closure_88[DEFAULT_DEVICE_ID];
+            firstResult = dependencyMap[DEFAULT_DEVICE_ID];
           }
           if (firstResult == null) {
-            const obj4 = _modDef12(closure_88);
-            const values = obj4.values();
+            const values = _modDef12(dependencyMap).values();
             firstResult = values.first();
+            const obj4 = _modDef12(dependencyMap);
           }
           if (null != firstResult) {
-            id2 = firstResult.id;
+            setVideoInputDevice = firstResult.id;
           }
-          tmp32 = id2;
+          let tmp31 = setVideoInputDevice;
         } else {
-          tmp32 = DISABLED_DEVICE_ID;
+          tmp31 = DISABLED_DEVICE_ID;
         }
-        DISABLED_DEVICE_ID = tmp32;
-        result.setVideoInputDevice(DISABLED_DEVICE_ID);
+        closure_95 = tmp31;
+        setVideoInputDevice = result.setVideoInputDevice;
+        setVideoInputDevice(closure_95);
       }
     }
-    DISABLED_DEVICE_ID = videoDeviceId;
-    id2 = videoDeviceId;
-  }
-  goLiveSource = tmp2;
-  if (null != tmp2) {
-    const obj5 = { resolution: tmp2.quality.resolution, frameRate: tmp2.quality.frameRate };
-    if (null != tmp2.desktopSource) {
-      const obj17 = GoLiveHdrExperiment;
-      const hdrCaptureMode = obj17.getGoLiveHdrConfig({ location: "MediaEngineStore go live" }).hdrCaptureMode;
-      const videoHook2 = getSettings().videoHook;
-      const obj18 = PlatformUtils;
-      let isWindowsResult = obj18.isWindows();
-      if (isWindowsResult) {
-        const satisfies = _modDef13847.satisfies;
-        _modDef13847;
-        const tmp43 = DiscordNativeDefault;
-        let release;
-        if (tmp43 != null) {
-          release = tmp43.os.release;
-        }
-        isWindowsResult = satisfies(release, set);
+    setVideoInputDevice = videoDeviceId;
+  } else {
+    if (null == tmp3.desktopSource.soundshareId) {
+      let videoHook = null != tmp3.desktopSource.sourcePid;
+      if (videoHook) {
+        videoHook = getSettings().videoHook;
       }
-      let num3 = 0;
-      if (isWindowsResult) {
-        const tmp71Result = PlatformUtils;
-        let isWindowsResult1 = tmp71Result.isWindows();
-        if (isWindowsResult1) {
-          const satisfies2 = _modDef13847.satisfies;
-          _modDef13847;
-          const tmp50 = DiscordNativeDefault;
-          let release1;
-          if (tmp50 != null) {
-            release1 = tmp50.os.release;
-          }
-          isWindowsResult1 = satisfies2(release1, closure_27);
-        }
-        num3 = isWindowsResult1 ? prioritySpeakerDucking : closure_28;
+      if (videoHook) {
+        result = HookAll.cancelAttachToProcess(tmp3.desktopSource.sourcePid);
       }
-      const tmp71Result5 = PlatformUtils;
-      let flag = false;
-      const isWindowsResult2 = tmp71Result5.isWindows() && num3 >= prioritySpeakerDucking;
-      if (isWindowsResult2) {
-        enabled = true === c132;
-        if (!enabled) {
-          const WGCDirtyRegionsAllExperiment = WGCDirtyRegionsAllExperiment2.WGCDirtyRegionsAllExperiment;
-          enabled = WGCDirtyRegionsAllExperiment.getConfig({ location: "updateVideo" }).enabled;
-        }
-        flag = enabled;
-      }
-      let enabled2 = videoHook2;
-      if (enabled2) {
-        const VideoHookDX12Experiment = VideoHookDX12Experiment2.VideoHookDX12Experiment;
-        enabled2 = VideoHookDX12Experiment.getConfig({ location: "updateVideo" }).enabled;
-      }
-      const UpscaleSmallCapturedFramesExperiment = UpscaleSmallCapturedFramesExperiment2.UpscaleSmallCapturedFramesExperiment;
-      const config = UpscaleSmallCapturedFramesExperiment.getConfig({ location: "updateVideo" });
-      const obj6 = { id: tmp2.desktopSource.id, soundshareId: tmp2.desktopSource.soundshareId, useVideoHook: videoHook2, useGraphicsCapture: isWindowsResult, useGraphicsCaptureApiLevel: num3, useCaptureDeviceForEncode: tmp71Result6.isWindows(), useLoopback: mediaEngineStore.getExperimentalSoundshare(), useQuartzCapturer: true, allowScreenCaptureKit: isMacResult, videoHookStaleFrameTimeoutMs: 500, graphicsCaptureStaleFrameTimeoutMs, hdrCaptureMode, enableGlobalFramePoolLock: tmp71Result8.getGlobalFramePoolLockExperimentConfig({ location: "updateVideo" }).enabled, useGraphicsCaptureDirtyRegions: flag, videoHookAllowDx12: enabled2, minCaptureWidth, minCaptureHeight };
-      ({ minCaptureWidth, minCaptureHeight } = config);
-      const setGoLiveSource = result.setGoLiveSource;
-      tmp71Result6 = PlatformUtils;
-      const tmp71Result7 = PlatformUtils;
-      isMacResult = tmp71Result7.isMac();
-      const obj8 = result;
-      if (isMacResult) {
-        isMacResult = obj8.supports(Features.SCREEN_CAPTURE_KIT);
-      }
-      if (isMacResult) {
-        const satisfies3 = _modDef13847.satisfies;
-        _modDef13847;
-        const tmp62 = DiscordNativeDefault;
-        let release2;
-        if (tmp62 != null) {
-          release2 = tmp62.os.release;
-        }
-        isMacResult = satisfies3(release2, closure_24);
-      }
-      const obj7 = { desktopDescription: obj6, quality: obj5 };
-      tmp71Result8 = GlobalFramePoolLockExperiment;
-      setGoLiveSource(obj7, STREAM);
+      result.setGoLiveSource(null, DEFAULT2);
+    } else {
+      PlatformUtils;
     }
-    if (null != tmp2.cameraSource) {
-      const obj9 = { videoDeviceGuid: tmp2.cameraSource.videoDeviceGuid, audioDeviceGuid: str };
-      str = "";
-      const setGoLiveSource2 = result.setGoLiveSource;
-      if (false !== tmp2.cameraSource.sound) {
-        str = tmp2.cameraSource.audioDeviceGuid;
-      }
-      const obj10 = { cameraDescription: obj9, quality: obj5 };
-      setGoLiveSource2(obj10, STREAM);
-    }
+    const result1 = HookAll.cancelAttachToProcess(tmp3.desktopSource.soundshareId);
   }
 }
 function noiseCancellerErrorToAVUnderlyingError(noise_canceller_error) {
@@ -577,168 +556,156 @@ function handleSpatialAudioStatus(arg0) {
 function handleVoiceProcessingError(noise_canceller_error, voiceProcessingErrorDetails) {
   obj.warn("Voice processing error: " + noise_canceller_error);
   obj = AVError;
+  obj.reportAVError({ type: AVError.AVError.NOISE_CANCELLER_ERROR, underlyingError: noiseCancellerErrorToAVUnderlyingError(noise_canceller_error), voiceProcessingErrorDetails });
   obj2 = { type: AVError.AVError.NOISE_CANCELLER_ERROR, underlyingError: noiseCancellerErrorToAVUnderlyingError(noise_canceller_error), voiceProcessingErrorDetails };
-  obj.reportAVError(obj2);
-  const obj3 = AnalyticsUtilsDefault;
-  const obj4 = { noise_canceller_error };
-  obj3.track(constants.VOICE_PROCESSING, obj4);
+  AnalyticsUtilsDefault.track(constants.VOICE_PROCESSING, { noise_canceller_error });
   if (set3.has(noise_canceller_error)) {
-    let c110 = true;
+    c110 = true;
   } else if (noise_canceller_error === NoiseCancellerError.KRISP_VAD_CPU_OVERUSE) {
     const obj5 = { type: "MEDIA_ENGINE_VOICE_ACTIVITY_DETECTION_ERROR", code: noise_canceller_error };
+    DispatcherDefault.dispatch(obj5);
     const tmp4Result = DispatcherDefault;
-    tmp4Result.dispatch(obj5);
   } else {
     c117 = true;
     const obj6 = { type: "MEDIA_ENGINE_NOISE_CANCELLATION_ERROR", code: noise_canceller_error };
+    DispatcherDefault.dispatch(obj6);
     const tmp4Result2 = DispatcherDefault;
-    tmp4Result2.dispatch(obj6);
   }
+  const obj4 = { noise_canceller_error };
 }
 function handleVideoFilterError(code, arg1) {
-  let VideoBackgroundInitFailed;
   let str = "preview";
   let str2 = "preview";
-  const warn = obj.warn;
   if (arg1 === constants10.LIVE) {
     str2 = "live";
   }
-  warn("Video filter error: " + code + " (" + str2 + ")");
-  if (arg1 === constants10.LIVE) {
-    obj = { type: AVError.AVError.VIDEO_BACKGROUND_UNAVAILABLE, underlyingError: VideoBackgroundInitFailed };
-    const reportAVError = AVError.reportAVError;
-    AVError;
+  obj.warn("Video filter error: " + code + " (" + str2 + ")");
+  if (arg1 !== constants10.LIVE) {
+    obj2 = { type: "MEDIA_ENGINE_VIDEO_FILTER_ERROR", code, target: null };
+    if (tmp) {
+      str = "live";
+    }
+    obj2.target = str;
+    DispatcherDefault.dispatch(obj2);
+  } else {
+    let AVUnderlyingError = dependencyMap;
+    obj = AVError;
+    let obj4 = { type: AVError.AVError.VIDEO_BACKGROUND_UNAVAILABLE, underlyingError: null };
     if (constants9.UNSUPPORTED === code) {
-      VideoBackgroundInitFailed = AVError.AVUnderlyingError.VideoBackgroundUnsupported;
-    } else if (tmp7.INIT_FAILED === code) {
+      AVUnderlyingError = AVError.AVUnderlyingError;
+      let VideoBackgroundInitFailed = AVUnderlyingError.VideoBackgroundUnsupported;
+    } else if (tmp5.INIT_FAILED === code) {
       VideoBackgroundInitFailed = AVError.AVUnderlyingError.VideoBackgroundInitFailed;
     }
-    reportAVError(obj);
+    obj4.underlyingError = VideoBackgroundInitFailed;
+    obj4 = obj.reportAVError(obj4);
   }
-  obj2 = { type: "MEDIA_ENGINE_VIDEO_FILTER_ERROR", code, target: str };
-  const dispatch = DispatcherDefault.dispatch;
-  DispatcherDefault;
-  if (arg1 === constants10.LIVE) {
-    str = "live";
-  }
-  dispatch(obj2);
 }
 function updateConnectionVoiceProcessing(setEchoCancellation) {
-  let defaultConfig;
-  let defaultConfig2;
-  let tmp10;
   const tmp2 = getSettings();
   const inputDeviceId = tmp2.inputDeviceId;
-  setEchoCancellation = setEchoCancellation.setEchoCancellation;
+  setEchoCancellation.setEchoCancellation(CertifiedDeviceStore.hasEchoCancellation(inputDeviceId) || tmp2.echoCancellation);
   const tmp3 = CertifiedDeviceStore.hasEchoCancellation(inputDeviceId) || tmp2.echoCancellation;
-  setEchoCancellation(tmp3);
-  const setNoiseSuppression = setEchoCancellation.setNoiseSuppression;
-  const tmp5 = CertifiedDeviceStore.hasNoiseSuppression(inputDeviceId) || tmp2.noiseSuppression;
-  setNoiseSuppression(tmp5);
+  setEchoCancellation.setNoiseSuppression(CertifiedDeviceStore.hasNoiseSuppression(inputDeviceId) || tmp2.noiseSuppression);
   const tmp7 = CertifiedDeviceStore.hasAutomaticGainControl(inputDeviceId) || tmp2.automaticGainControl;
-  const setAutomaticGainControl = setEchoCancellation.setAutomaticGainControl;
-  obj2 = { enabled: tmp7 };
   const obj3 = AGC2MobileExperimentDefault;
   if (tmp7) {
-    defaultConfig = obj3.getConfig({ location: "getAutomaticGainControlConfig" });
-    tmp10 = importDefault;
+    let defaultConfig = obj3.getConfig({ location: "getAutomaticGainControlConfig" });
+    let tmp10 = importDefault;
   } else {
     defaultConfig = obj3.definition.defaultConfig;
     tmp10 = importDefault;
   }
-  const tmp12 = defaultConfig.agc2Enabled ? closure_59 : { useAGC2: false };
-  const merged = Object.assign(tmp12);
-  result = setAutomaticGainControl(obj2);
+  const merged = Object.assign(defaultConfig.agc2Enabled ? closure_59 : { useAGC2: false });
+  result = setEchoCancellation.setAutomaticGainControl({ enabled: tmp7 });
   const noiseCancellation = tmp2.noiseCancellation;
-  const tmp10Result = tmp10(9688);
-  const tmp10ResultResult = tmp10Result(noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
+  obj2 = { enabled: tmp7 };
+  const tmp12 = defaultConfig.agc2Enabled ? closure_59 : { useAGC2: false };
+  const tmp5 = CertifiedDeviceStore.hasNoiseSuppression(inputDeviceId) || tmp2.noiseSuppression;
+  const tmp10ResultResult = tmp10(9688)(noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
   if (tmp10ResultResult !== noiseCancellation) {
     CertifiedDeviceStore.info("Falling back to system noise suppression.");
   }
   setEchoCancellation.setNoiseCancellation(tmp10ResultResult);
   const tmp10Result6 = tmp10(13837);
   if (tmp10ResultResult) {
-    defaultConfig2 = tmp10Result6.getConfig({ location: "setNoiseCancellation" });
+    let defaultConfig2 = tmp10Result6.getConfig({ location: "setNoiseCancellation" });
   } else {
     defaultConfig2 = tmp10Result6.definition.defaultConfig;
   }
   const result1 = setEchoCancellation.setNoiseCancellationDuringProcessing(defaultConfig2.noiseCancellationDuringProcessing);
-  const setSpatialAudioEnabled = setEchoCancellation.setSpatialAudioEnabled;
-  const audioMixerSettings = tmp2.audioMixerSettings;
-  const tmp10Result7 = tmp10(13655);
-  const supportsResult = true === audioMixerSettings.enabled && tmp10Result7.getConfig({ location: "MediaEngineStore" }).enabled && result.supports(Features.SPATIAL_AUDIO);
-  const result2 = setSpatialAudioEnabled(supportsResult);
+  const tmp10Result = tmp10(9688);
+  let supportsResult = true === tmp2.audioMixerSettings.enabled && tmp10(13655).getConfig({ location: "MediaEngineStore" }).enabled;
+  if (supportsResult) {
+    supportsResult = result.supports(Features.SPATIAL_AUDIO);
+  }
+  const result2 = setEchoCancellation.setSpatialAudioEnabled(supportsResult);
   const tmpResult = getSettings();
   const inputDeviceId2 = tmpResult.inputDeviceId;
+  const tmp10Result7 = tmp10(13655);
   const tmp26 = CertifiedDeviceStore.hasEchoCancellation(inputDeviceId2) || tmpResult.echoCancellation;
   const tmp27 = CertifiedDeviceStore.hasNoiseSuppression(inputDeviceId2) || tmpResult.noiseSuppression;
   const tmp10Result8 = tmp10(9688);
-  const tmp10Result3Result = tmp10Result8(tmpResult.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
-  const obj7 = AudioFidelityExperiment;
-  const voiceFidelityCaps = obj7.getVoiceFidelityCaps({ location: "updateVoiceFidelityCaps" }, { krispEnabled: tmp10Result3Result, noiseSuppressionEnabled: tmp27, echoCancellationEnabled: tmp26 });
-  const maxChannelCount = voiceFidelityCaps.maxChannelCount;
+  const tmp10Result3Result = tmp10(9688)(tmpResult.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
+  const voiceFidelityCaps = AudioFidelityExperiment.getVoiceFidelityCaps({ location: "updateVoiceFidelityCaps" }, { krispEnabled: tmp10Result3Result, noiseSuppressionEnabled: tmp27, echoCancellationEnabled: tmp26 });
   const result3 = result.setVoiceSampleRateCap(voiceFidelityCaps.maxSampleRateHz);
-  const result4 = result.setVoiceChannelCountCap(maxChannelCount);
-  const obj8 = PlatformUtils;
-  let isWindowsResult = obj8.isWindows();
+  const result4 = result.setVoiceChannelCountCap(voiceFidelityCaps.maxChannelCount);
+  let isWindowsResult = PlatformUtils.isWindows();
   if (isWindowsResult) {
-    const satisfies = tmp10(13847).satisfies;
-    tmp10(13847);
     const tmp10Result10 = tmp10(4496);
     let release;
     if (tmp10Result10 != null) {
       release = tmp10Result10.os.release;
     }
-    isWindowsResult = satisfies(release, c153);
+    isWindowsResult = tmp10(13847).satisfies(release, c153);
+    const tmp10Result9 = tmp10(13847);
   }
   if (isWindowsResult) {
     if (setEchoCancellation.context === MediaEngineContextTypes.DEFAULT) {
-      const tmp30Result = SystemwideEchoCancellationExperiment;
-      const systemwideEchoCancellationExperimentConfig = tmp30Result.getSystemwideEchoCancellationExperimentConfig({ location: "updateConnectionVoiceProcessing" });
-      const tmp53 = inputDevices[mediaEngineStore.getInputDeviceId(mediaEngineStore)];
+      const systemwideEchoCancellationExperimentConfig = SystemwideEchoCancellationExperiment.getSystemwideEchoCancellationExperimentConfig({ location: "updateConnectionVoiceProcessing" });
+      const tmp52 = inputDevices[mediaEngineStore.getInputDeviceId(mediaEngineStore)];
       let windowsDeviceService;
-      if (tmp53 != null) {
-        windowsDeviceService = tmp53.windowsDeviceService;
+      if (tmp52 != null) {
+        windowsDeviceService = tmp52.windowsDeviceService;
       }
-      let tmp42 = "voicemodvad" === windowsDeviceService;
-      if (!tmp42) {
+      let tmp41 = "voicemodvad" === windowsDeviceService;
+      if (!tmp41) {
         let hasItem;
-        if (tmp53 != null) {
-          if (tmp53.name != null) {
+        if (tmp52 != null) {
+          if (tmp52.name != null) {
             const formatted = str3.toLowerCase();
             hasItem = formatted.includes("voicemod");
           }
         }
-        tmp42 = true === hasItem;
+        tmp41 = true === hasItem;
       }
-      if (!tmp42) {
-        const tmp45 = outputDevices[mediaEngineStore.getOutputDeviceId(mediaEngineStore)];
+      if (!tmp41) {
+        const tmp44 = outputDevices[mediaEngineStore.getOutputDeviceId(mediaEngineStore)];
         let windowsDeviceService1;
-        if (tmp45 != null) {
-          windowsDeviceService1 = tmp45.windowsDeviceService;
+        if (tmp44 != null) {
+          windowsDeviceService1 = tmp44.windowsDeviceService;
         }
-        let tmp47 = "voicemodvad" === windowsDeviceService1;
-        if (!tmp47) {
+        let tmp46 = "voicemodvad" === windowsDeviceService1;
+        if (!tmp46) {
           let hasItem1;
-          if (tmp45 != null) {
-            if (tmp45.name != null) {
+          if (tmp44 != null) {
+            if (tmp44.name != null) {
               const formatted1 = str5.toLowerCase();
               hasItem1 = formatted1.includes("voicemod");
             }
           }
-          tmp47 = true === hasItem1;
+          tmp46 = true === hasItem1;
         }
-        tmp42 = tmp47;
+        tmp41 = tmp46;
       }
       let str7 = "mix";
-      const setEchoReferenceMode = setEchoCancellation.setEchoReferenceMode;
-      if (!tmp42) {
+      if (!tmp41) {
         str7 = systemwideEchoCancellationExperimentConfig.echoReferenceMode;
       }
-      setEchoReferenceMode(str7);
+      setEchoCancellation.setEchoReferenceMode(str7);
+      const tmp30Result = SystemwideEchoCancellationExperiment;
     }
   }
-  const tmp30Result2 = PlatformUtils;
   if (tmp30Result2.isWeb()) {
     let num = -100;
     if (tmp2.noiseCancellation) {
@@ -746,10 +713,9 @@ function updateConnectionVoiceProcessing(setEchoCancellation) {
     }
     setEchoCancellation.setSilenceThreshold(num);
   }
+  tmp30Result2 = PlatformUtils;
 }
 function mergeSettings(arg0) {
-  let DEFAULT;
-  let obj3;
   if (DEFAULT === undefined) {
     DEFAULT = MediaEngineContextTypes.DEFAULT;
   }
@@ -762,18 +728,31 @@ function mergeSettings(arg0) {
   }
   let tmp3 = settingsByContext[DEFAULT];
   if (null == tmp3) {
-    obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj3, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-    obj = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-    obj3 = {};
-    PlatformUtils.isPlatformEmbedded || false;
+    obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+    modeOptions = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+    obj2.modeOptions = modeOptions;
+    obj2.localMutes = {};
+    obj2.disabledLocalVideos = {};
+    obj2.videoToggleStateMap = {};
+    obj2.localVolumes = {};
+    const obj3 = {};
     const merged = Object.assign(closure_34);
+    obj2.audioMixerSettings = obj3;
+    obj2.localPans = {};
+    obj2.inputVolume = outputVolume;
+    obj2.outputVolume = outputVolume;
+    obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+    obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+    obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+    obj2.videoHook = result.supports(Features.VIDEO_HOOK);
     settingsByContext[DEFAULT] = obj2;
     tmp3 = obj2;
+    const tmp4 = PlatformUtils.isPlatformEmbedded || false;
   }
   const merged1 = Object.assign(tmp3, arg0);
   if (flag) {
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
   }
   return tmp3;
 }
@@ -782,7 +761,6 @@ function applySettings() {
   const inputDeviceId = tmp.inputDeviceId;
   result.setAudioInputDevice(inputDeviceId);
   maybeProbeAudioEffects(inputDeviceId);
-  obj2 = PlatformUtils;
   if (obj2.isWindows()) {
     let guid;
     if (inputDevices[inputDeviceId] != null) {
@@ -800,8 +778,8 @@ function applySettings() {
   result.setAudioOutputDevice(tmp.outputDeviceId);
   updateVideo();
   result.setInputVolume(tmp.inputVolume);
+  obj2 = PlatformUtils;
   const setOutputVolume = obj.setOutputVolume;
-  const obj4 = MobileAudioOutputExperimentDefault;
   if (obj4.getConfig({ location: "MediaEngineStore.applySettings" }).audioOutputPresent) {
     setOutputVolume(tmp.outputVolume);
   } else {
@@ -811,7 +789,7 @@ function applySettings() {
   const result1 = obj.setSidechainCompression(tmp.sidechainCompression);
   const result2 = obj.setSidechainCompressionStrength(tmp.sidechainCompressionStrength);
   const result3 = obj.setAudioInputBypassSystemProcessing(tmp.bypassSystemInputProcessing);
-  const tmp4Result2 = PlatformUtils;
+  obj4 = MobileAudioOutputExperimentDefault;
   if (tmp4Result2.isLinux()) {
     const tmp14Result = DesktopNativeUtilsDefault;
     if (tmp14Result != null) {
@@ -822,99 +800,104 @@ function applySettings() {
     }
   }
   const audioMixerSettings = tmp.audioMixerSettings;
-  const tmp14Result2 = SpatialAudioForVoiceExperimentDefault;
-  _false = true === audioMixerSettings.enabled && tmp14Result2.getConfig({ location: "MediaEngineStore" }).enabled && obj.supports(Features.SPATIAL_AUDIO);
+  tmp4Result2 = PlatformUtils;
+  let supportsResult = true === audioMixerSettings.enabled && SpatialAudioForVoiceExperimentDefault.getConfig({ location: "MediaEngineStore" }).enabled;
+  if (supportsResult) {
+    supportsResult = obj.supports(Features.SPATIAL_AUDIO);
+  }
+  enabled = supportsResult;
   const distanceAttenuationEnabled = audioMixerSettings.distanceAttenuationEnabled;
-  const obj3 = { isSpatial: _false, enabled: _false, binaural: { spatialBlend: audioMixerSettings.spatialBlend }, distanceAttenuation: { enabled: distanceAttenuationEnabled }, airAbsorption: { enabled: distanceAttenuationEnabled }, reflections: { enabled: audioMixerSettings.reflectionsEnabled } };
-  const supportsResult = true === audioMixerSettings.enabled && tmp14Result2.getConfig({ location: "MediaEngineStore" }).enabled && obj.supports(Features.SPATIAL_AUDIO);
-  result.setAudioMixerOptions(obj3);
+  result.setAudioMixerOptions({ isSpatial: enabled, enabled, binaural: { spatialBlend: audioMixerSettings.spatialBlend }, distanceAttenuation: { enabled: distanceAttenuationEnabled }, airAbsorption: { enabled: distanceAttenuationEnabled }, reflections: { enabled: audioMixerSettings.reflectionsEnabled } });
+  const obj3 = { isSpatial: enabled, enabled, binaural: { spatialBlend: audioMixerSettings.spatialBlend }, distanceAttenuation: { enabled: distanceAttenuationEnabled }, airAbsorption: { enabled: distanceAttenuationEnabled }, reflections: { enabled: audioMixerSettings.reflectionsEnabled } };
+  const tmp14Result2 = SpatialAudioForVoiceExperimentDefault;
 }
 function maybeProbeAudioEffects() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_158.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-obj = function _maybeProbeAudioEffects() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let closure_0 = arg0;
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_158 = async function _maybeProbeAudioEffects(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
-      let c4;
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            let closure_2 = tmp;
-            let closure_1 = tmp4;
-            const obj6 = require("PlatformUtils");
-            if (obj6.isWindows()) {
-              obj2 = AudioEffectsExperimentDefault;
-              if (obj2.getConfig({ location: "MediaEngineStore.setInputDevice" }).probeAudioEffects) {
-                let guid;
-                if (inputDevices[closure_0] != null) {
-                  guid = tmp14.guid;
-                }
-                if (null != guid) {
-                  c4 = 1;
-                  c5 = 2;
-                  c6 = 1;
-                  const obj5 = { value: queryAudioEffectsDefault(inputDevices[closure_0].guid, closure_0, result), done: false };
-                  return obj5;
-                }
-              }
-            }
-          }
-        } else if (1 === c5) {
-          c4 = 0;
-          closure_0 = closure_3;
-          closure_130_57.warn("Unable to query audio effects", closure_0);
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c4 = 0;
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          if (obj6.isWindows()) {
+            if (obj2.getConfig({ location: "MediaEngineStore.setInputDevice" }).probeAudioEffects) {
+              let guid;
+              if (inputDevices[closure_0] != null) {
+                guid = tmp17.guid;
+              }
+              if (null != guid) {
+                c4 = 1;
+                c5 = 2;
+                c6 = 1;
+                const obj5 = { value: queryAudioEffectsDefault(tmp17.guid, closure_0, constants2), done: false };
+                return obj5;
+              }
+            }
+            obj2 = AudioEffectsExperimentDefault;
+          }
+          obj6 = require("PlatformUtils");
+        }
+      } else {
+        if (1 === tmp7) {
+          c4 = 0;
+          closure_129_0 = closure_3;
+          closure_130_57.warn("Unable to query audio effects", closure_129_0);
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
           c4 = 0;
         }
+        c4 = 0;
         c6 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp17) {
-        closure_3 = tmp17;
-        if (0 === c4) {
-          c6 = 3;
-          throw tmp17;
-        } else {
-          c5 = 1;
-        }
+        const obj = { value, done: true };
+        return obj;
+      }
+      c6 = 3;
+    } catch (tmp20) {
+      closure_3 = tmp20;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp20;
+      } else {
+        c5 = tmp;
       }
     }
-  });
-  return obj(...arguments);
+  }
 };
 function hasHapticsOverAudioOutputDevices(arg0) {
   const values = Object.values(arg0);
   return values.some((name) => {
-    const str = name.name;
-    const formatted = str.toLowerCase();
+    const formatted = name.name.toLowerCase();
     return formatted.includes("dualsense");
   });
 }
@@ -923,70 +906,54 @@ function applyRemoteSettings(arg0) {
   if (arg0 === undefined) {
     flag = false;
   }
-  let closure_2;
+  closure_2 = undefined;
   let audioContextSettings = UserSettingsProtoStore.settings.audioContextSettings;
   if (audioContextSettings == null) {
-    obj = { user: {}, stream: {} };
+    let obj = { user: {}, stream: {} };
     audioContextSettings = obj;
   }
   function _loop() {
-    let tmp3;
-    function _loop3(item10056) {
-      let closure_0 = item10056;
-      if (null != obj[item10056]) {
-        return 1;
-      } else {
-        delete localMutes[item10056];
-        delete localVolumes[item10056];
-        closure_1_72.eachConnection((setLocalVolume) => {
-          setLocalVolume.setLocalVolume(item10056, closure_1);
-          setLocalVolume.setLocalMute(item10056, false);
-        }, closure_0);
-      }
-    }
-    if (closure_2 === constants.USER) {
-      STREAM = MediaEngineContextTypes.DEFAULT;
-      tmp3 = MediaEngineContextTypes;
+    if (closure_2 === constants6.USER) {
+      let STREAM = MediaEngineContextTypes.DEFAULT;
+      let tmp2 = MediaEngineContextTypes;
     } else {
-      tmp3 = MediaEngineContextTypes;
+      tmp2 = MediaEngineContextTypes;
       STREAM = MediaEngineContextTypes.STREAM;
     }
-    let closure_1 = STREAM === tmp3.STREAM ? set2 : BottomSheet;
-    obj = audioContextSettings[closure_2];
+    closure_1 = STREAM === tmp2.STREAM ? closure_2_41 : BottomSheet;
+    let obj = audioContextSettings[closure_2];
     if (obj == null) {
       obj = {};
     }
-    const tmp5 = getSettings(STREAM);
-    const localMutes = tmp5.localMutes;
-    const localVolumes = tmp5.localVolumes;
+    const tmp4 = getSettings(STREAM);
+    const localMutes = tmp4.localMutes;
+    const localVolumes = tmp4.localVolumes;
     function _loop2(arg0, muted) {
-      let closure_0 = arg0;
-      closure_1 = muted;
-      obj = flag(closure_2_3[67]);
+      closure_0 = arg0;
       if (null != obj.getPendingAudioSettings(STREAM, arg0)) {
         return 1;
       } else {
         if (muted.muted) {
-          localMutes[arg0] = true;
+          tmp4[arg0] = true;
         } else {
-          delete localMutes[arg0];
+          delete tmp2[tmp];
         }
-        if (muted.volume !== closure_1) {
+        if (muted.volume !== muted) {
           localVolumes[arg0] = muted.volume;
         } else {
-          delete localVolumes[arg0];
+          delete tmp2[tmp];
         }
         closure_2_72.eachConnection((setLocalVolume) => {
-          setLocalVolume.setLocalVolume(closure_0, closure_1.volume);
-          setLocalVolume.setLocalMute(closure_0, closure_1.muted);
+          setLocalVolume.setLocalVolume(closure_0, muted.volume);
+          setLocalVolume.setLocalMute(closure_0, muted.muted);
         }, STREAM);
       }
+      obj = flag(dependencyMap[67]);
     }
     const entries = Object.entries(obj);
-    const tmp7 = entries[Symbol.iterator]();
-    while (tmp7 !== undefined) {
-      let tmp10 = _slicedToArray(tmp8, 2);
-      let _loop2Result = _loop2(tmp10[0], tmp10[1]);
+    while (tmp6 !== undefined) {
+      let tmp9 = _slicedToArray(tmp7, 2);
+      let _loop2Result = _loop2(tmp9[0], tmp9[1]);
       continue;
     }
     if (flag) {
@@ -994,17 +961,28 @@ function applyRemoteSettings(arg0) {
       const _Object = Object;
       const items = [];
       const _Object2 = Object;
-      const arraySpreadResult = HermesBuiltin.arraySpread(items, Object.keys(localMutes), 0);
-      HermesBuiltin.arraySpread(items, Object.keys(localVolumes), arraySpreadResult);
-      const self = this;
-      const self2 = this;
+      HermesBuiltin.arraySpread(Object.keys(localVolumes), HermesBuiltin.arraySpread(Object.keys(localMutes), 0));
       set = new Set(items);
       for (const item10056 of set) {
-        let tmp21 = _loop3(item10056);
+        let tmp21 = (function _loop3(item10056) {
+          closure_0 = item10056;
+          if (null != obj[item10056]) {
+            return 1;
+          } else {
+            delete tmp[tmp2];
+            delete tmp[tmp2];
+            closure_1_72.eachConnection((setLocalVolume) => {
+              setLocalVolume.setLocalVolume(closure_0, closure_1);
+              setLocalVolume.setLocalMute(closure_0, false);
+            }, closure_0);
+          }
+        })(item10056);
         continue;
       }
+      const arraySpreadResult = HermesBuiltin.arraySpread(Object.keys(localMutes), 0);
     }
     mergeSettings({ localMutes, localVolumes }, STREAM);
+    tmp6 = entries[Symbol.iterator]();
   }
   const keys = Object.keys(audioContextSettings);
   const iter = keys[Symbol.iterator]();
@@ -1014,57 +992,55 @@ function applyRemoteSettings(arg0) {
     continue;
   }
 }
-function maybeTryHookProcess(pidFromDesktopSource, sound2) {
-  let soundshareId;
-  let soundshareSession;
-  const tmp = sound2;
-  if (tmp) {
-    let obj5;
+function maybeTryHookProcess(pidFromDesktopSource, sound) {
+  if (sound) {
     if (null != mediaEngineStore) {
       let audioPid = pidFromDesktopSource;
       if (!mediaEngineStore.getExperimentalSoundshare()) {
-        const obj3 = CrossPlatformNativeUtilsDefault;
-        audioPid = obj3.getAudioPid(pidFromDesktopSource);
+        audioPid = CrossPlatformNativeUtilsDefault.getAudioPid(pidFromDesktopSource);
       }
       let str2 = "";
       if (null != audioPid) {
-        const obj4 = CrossPlatformNativeUtilsDefault;
-        str2 = obj4.generateSessionFromPid(audioPid);
+        str2 = CrossPlatformNativeUtilsDefault.generateSessionFromPid(audioPid);
       }
       obj2 = { soundshareId: audioPid, soundshareSession: str2 };
-      obj5 = obj2;
+      let obj5 = obj2;
     } else {
       mediaEngineStore.info("Error: trying to get soundshare id before MediaEngineStore is instantiated.");
       obj5 = { soundshareId: null, soundshareSession: "" };
     }
     ({ soundshareId, soundshareSession } = obj5);
     if (null != soundshareId) {
-      const obj7 = soundshareId(1369);
-      const isWindowsResult = obj7.isWindows() && soundshareId > 1;
+      let isWindowsResult = soundshareId(1369).isWindows();
+      if (isWindowsResult) {
+        isWindowsResult = soundshareId > 1;
+      }
       if (isWindowsResult) {
         const obj9 = { soundshare_session: soundshareSession };
-        const obj8 = HookAll;
-        const attachToProcessResult = obj8.attachToProcess(soundshareId, obj9);
-        attachToProcessResult.then((result) => {
-          let closure_0 = result;
-          result = null == result || RunningGameStore.shouldContinueWithoutElevatedProcessForPID(soundshareId);
+        HookAll.attachToProcess(soundshareId, obj9).then((result) => {
+          const errorMessage = result;
+          result = null == result;
           if (!result) {
-            obj = DispatcherDefault;
-            obj.wait(() => {
-              obj = closure_2_1(closure_2_3[43]);
-              obj2 = { type: "MEDIA_ENGINE_SOUNDSHARE_FAILED", errorMessage };
-              obj.dispatch(obj2);
+            result = RunningGameStore.shouldContinueWithoutElevatedProcessForPID(soundshareId);
+          }
+          if (!result) {
+            DispatcherDefault.wait(() => {
+              DispatcherDefault.dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_FAILED", errorMessage });
             });
           }
         });
+        const attachToProcessResult = HookAll.attachToProcess(soundshareId, obj9);
       }
-      return { soundshareId, soundshareSession };
+      const obj10 = { soundshareId, soundshareSession };
+      return obj10;
     }
   }
-  const videoHook = null != pidFromDesktopSource && getSettings().videoHook;
+  let videoHook = null != pidFromDesktopSource;
   if (videoHook) {
-    const obj6 = HookAll;
-    obj6.attachToProcess(pidFromDesktopSource);
+    videoHook = getSettings().videoHook;
+  }
+  if (videoHook) {
+    HookAll.attachToProcess(pidFromDesktopSource);
   }
   return { soundshareId: null, soundshareSession: null };
 }
@@ -1072,15 +1048,16 @@ function resetProbingState() {
   const DEFAULT = MediaEngineContextTypes.DEFAULT;
   const videoToggleStateMap = getSettings(DEFAULT).videoToggleStateMap;
   const entries = Object.entries(videoToggleStateMap);
-  const tmp2 = entries[Symbol.iterator]();
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    if (tmp5[1] === constants5.AUTO_PROBING) {
-      delete videoToggleStateMap[tmp5[0]];
+  while (tmp4 !== undefined) {
+    let tmp7 = _slicedToArray(tmp5, 2);
+    if (tmp7[1] === constants5.AUTO_PROBING) {
+      let first = tmp7[0];
+      delete tmp[tmp2];
     }
     continue;
   }
   mergeSettings({ videoToggleStateMap }, DEFAULT, false);
+  tmp4 = entries[Symbol.iterator]();
 }
 function trackVoiceProcessing(location) {
   const tmp = getSettings();
@@ -1092,9 +1069,9 @@ function trackVoiceProcessing(location) {
     firstResult = inputDevices[DEFAULT_DEVICE_ID];
   }
   if (firstResult == null) {
-    obj = _modDef12(inputDevices);
-    const values = obj.values();
+    const values = _modDef12(inputDevices).values();
     firstResult = values.first();
+    const obj = _modDef12(inputDevices);
   }
   if (null != firstResult) {
     id = firstResult.id;
@@ -1103,453 +1080,423 @@ function trackVoiceProcessing(location) {
   if (inputDevices[id] != null) {
     name = tmp9.name;
   }
-  const tmp11 = getEffectiveNoiseCancellationDefault;
-  obj2 = { echo_cancellation: tmp.echoCancellation, noise_cancellation: tmp.noiseCancellation, noise_suppression: tmp.noiseSuppression, automatic_gain_control: tmp.automaticGainControl, location, bypass_system_input_processing: tmp.bypassSystemInputProcessing, audio_subsystem: audioSubsystem, audio_layer: audioLayer, input_device: name, effective_noise_cancellation: tmp11(tmp.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode()) };
-  const obj3 = AnalyticsUtilsDefault;
-  obj3.track(constants.VOICE_PROCESSING, obj2);
+  const tmp11Result = getEffectiveNoiseCancellationDefault(tmp.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
+  AnalyticsUtilsDefault.track(constants.VOICE_PROCESSING, { echo_cancellation: tmp.echoCancellation, noise_cancellation: tmp.noiseCancellation, noise_suppression: tmp.noiseSuppression, automatic_gain_control: tmp.automaticGainControl, location, bypass_system_input_processing: tmp.bypassSystemInputProcessing, audio_subsystem: audioSubsystem, audio_layer: audioLayer, input_device: name, effective_noise_cancellation: tmp11Result });
+  obj2 = { echo_cancellation: tmp.echoCancellation, noise_cancellation: tmp.noiseCancellation, noise_suppression: tmp.noiseSuppression, automatic_gain_control: tmp.automaticGainControl, location, bypass_system_input_processing: tmp.bypassSystemInputProcessing, audio_subsystem: audioSubsystem, audio_layer: audioLayer, input_device: name, effective_noise_cancellation: tmp11Result };
 }
 function setLoopback() {
-  let defaultConfig;
-  let tmp10;
   const tmp2 = getSettings();
   const inputDeviceId = tmp2.inputDeviceId;
   const tmp4 = CertifiedDeviceStore.hasEchoCancellation(inputDeviceId) || tmp2.echoCancellation;
-  const tmp5 = CertifiedDeviceStore.hasNoiseSuppression(inputDeviceId) || tmp2.noiseSuppression;
   const tmp6 = CertifiedDeviceStore.hasAutomaticGainControl(inputDeviceId) || tmp2.automaticGainControl;
-  obj2 = { enabled: tmp6 };
   const obj3 = AGC2MobileExperimentDefault;
   if (tmp6) {
-    defaultConfig = obj3.getConfig({ location: "getAutomaticGainControlConfig" });
-    tmp10 = importDefault;
+    let defaultConfig = obj3.getConfig({ location: "getAutomaticGainControlConfig" });
+    let tmp10 = importDefault;
   } else {
     defaultConfig = obj3.definition.defaultConfig;
     tmp10 = importDefault;
   }
+  const merged = Object.assign(defaultConfig.agc2Enabled ? closure_59 : { useAGC2: false });
+  obj2 = { enabled: tmp6 };
   const tmp11 = defaultConfig.agc2Enabled ? closure_59 : { useAGC2: false };
   const tmp12 = set2.size <= 0;
-  const merged = Object.assign(tmp11);
-  const obj5 = { echoCancellation: tmp4, echoCancellationPreEcho: tmp12, noiseSuppression: tmp5, automaticGainControlConfig: obj2, noiseCancellation: tmp2.noiseCancellation };
-  result.setLoopback(set2.size > 0, obj5);
+  const tmp5 = CertifiedDeviceStore.hasNoiseSuppression(inputDeviceId) || tmp2.noiseSuppression;
+  result.setLoopback(set2.size > 0, { echoCancellation: tmp4, echoCancellationPreEcho: set2.size <= 0, noiseSuppression: CertifiedDeviceStore.hasNoiseSuppression(inputDeviceId) || tmp2.noiseSuppression, automaticGainControlConfig: { enabled: tmp6 }, noiseCancellation: tmp2.noiseCancellation });
   const tmpResult = getSettings();
   const inputDeviceId2 = tmpResult.inputDeviceId;
+  const obj5 = { echoCancellation: tmp4, echoCancellationPreEcho: set2.size <= 0, noiseSuppression: CertifiedDeviceStore.hasNoiseSuppression(inputDeviceId) || tmp2.noiseSuppression, automaticGainControlConfig: { enabled: tmp6 }, noiseCancellation: tmp2.noiseCancellation };
   const tmp16 = CertifiedDeviceStore.hasEchoCancellation(inputDeviceId2) || tmpResult.echoCancellation;
   const tmp17 = CertifiedDeviceStore.hasNoiseSuppression(inputDeviceId2) || tmpResult.noiseSuppression;
   const tmp10Result = tmp10(9688);
-  const tmp10ResultResult = tmp10Result(tmpResult.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
-  const obj6 = AudioFidelityExperiment;
-  const voiceFidelityCaps = obj6.getVoiceFidelityCaps({ location: "updateVoiceFidelityCaps" }, { krispEnabled: tmp10ResultResult, noiseSuppressionEnabled: tmp17, echoCancellationEnabled: tmp16 });
-  const maxChannelCount = voiceFidelityCaps.maxChannelCount;
+  const tmp10ResultResult = tmp10(9688)(tmpResult.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
+  const voiceFidelityCaps = AudioFidelityExperiment.getVoiceFidelityCaps({ location: "updateVoiceFidelityCaps" }, { krispEnabled: tmp10ResultResult, noiseSuppressionEnabled: tmp17, echoCancellationEnabled: tmp16 });
   result = obj4.setVoiceSampleRateCap(voiceFidelityCaps.maxSampleRateHz);
-  const result1 = obj4.setVoiceChannelCountCap(maxChannelCount);
+  const result1 = obj4.setVoiceChannelCountCap(voiceFidelityCaps.maxChannelCount);
 }
-obj = function _setGamescopeVaapiEnabled() {
-  obj = _asyncToGenerator(async () => {
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_165 = async function _setGamescopeVaapiEnabled() {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        let closure_0;
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            let closure_2 = tmp4;
-            let closure_1 = tmp;
-            closure_0 = undefined;
-            if (result.supports(constants.VAAPI)) {
-              const _window = window;
-              let getSystemInfo;
-              if (DiscordNative != null) {
-                const processUtils = DiscordNative.processUtils;
-                if (processUtils != null) {
-                  getSystemInfo = processUtils.getSystemInfo;
-                }
-              }
-              if (null != getSystemInfo) {
-                const _window2 = window;
-                const processUtils2 = window.DiscordNative.processUtils;
-                c3 = 1;
-                c4 = 1;
-                const obj4 = { value: processUtils2.getSystemInfo(), done: false };
-                return obj4;
-              }
-            }
-          }
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          closure_0 = value;
-          const electronGPUInfo = closure_0.electronGPUInfo;
-          let gpuDevice;
-          if (electronGPUInfo != null) {
-            gpuDevice = electronGPUInfo.gpuDevice;
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          if (constants2.supports(constants.VAAPI)) {
+            const _window = window;
+            let getSystemInfo;
+            if (DiscordNative != null) {
+              const processUtils = DiscordNative.processUtils;
+              if (processUtils != null) {
+                getSystemInfo = processUtils.getSystemInfo;
+              }
+            }
+            if (null != getSystemInfo) {
+              const _window2 = window;
+              c3 = 1;
+              c4 = 1;
+              const obj4 = { value: processUtils2.getSystemInfo(), done: false };
+              return obj4;
+            }
           }
-          closure_0 = gpuDevice;
-          if (gpuDevice == null) {
-            closure_0 = [];
-          }
-          if (closure_0.some((vendorId) => 4098 === vendorId.vendorId)) {
-            c138 = true;
-            let closure_137 = closure_130_72.supports(constants.GAMESCOPE_CAPTURE);
-          }
+          c4 = 3;
         }
+      } else if (arg0 === 1) {
         c4 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp13) {
-        c4 = 3;
-        throw tmp13;
-      }
-    }
-  });
-  return obj(...arguments);
-};
-obj = function _setupKrispNativeModule() {
-  obj = _asyncToGenerator(async () => {
-    let obj10;
-    let obj3;
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
         throw value;
-      } else if (arg0 === 2) {
-        obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
+      } else if (arg0 !== 2) {
+        closure_129_0 = value;
+        const electronGPUInfo = closure_129_0.electronGPUInfo;
+        let gpuDevice;
+        if (electronGPUInfo != null) {
+          gpuDevice = electronGPUInfo.gpuDevice;
+        }
+        _require = gpuDevice;
+        if (gpuDevice == null) {
+          _require = [];
+        }
+        if (_require.some((vendorId) => 4098 === vendorId.vendorId)) {
+          closure_130_138 = true;
+          closure_130_137 = closure_130_72.supports(closure_130_46.GAMESCOPE_CAPTURE);
+        }
       }
+      c4 = 3;
+      const obj = { value, done: true };
+      return obj;
+    } catch (tmp14) {
+      c4 = tmp;
+      throw tmp14;
+    }
+  }
+};
+let closure_166 = async function _setupKrispNativeModule() {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj2 = { value, done: true };
+      return obj2;
     } else {
-      let c4;
-      let closure_3;
-      try {
-        let v100;
-        let setupKrispPath;
-        let KRISP_INIT_ERROR;
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            let closure_2 = tmp;
-            v100 = undefined;
-            setupKrispPath = undefined;
-            KRISP_INIT_ERROR = undefined;
-            closure_3 = undefined;
-            c4 = 2;
-            c5 = 3;
-            c6 = 1;
-            const obj5 = { value: obj10.ensureModule("discord_krisp"), done: false };
-            obj10 = DesktopNativeUtilsDefault;
-            return obj5;
-          }
-        } else if (1 === c5) {
-          c4 = 0;
-          c108 = false;
-          throw closure_3;
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          if (2 === c5) {
-            c4 = 1;
-            let closure_4 = closure_3;
-            const _HermesInternal = HermesInternal;
-            logger.warn("Failed to load Krisp module: " + closure_4.message);
-            const obj6 = closure_130_1(closure_130_3[74]);
-            obj6.captureException(closure_4);
-            KRISP_INIT_ERROR = constants2.KRISP_INIT_ERROR;
-            const message = closure_4.message;
-            if (message.includes(": ")) {
-              const _parseInt = parseInt;
-              const message1 = closure_4.message;
-              const str = closure_4.message;
-              closure_3 = parseInt(str.substring(message1.indexOf(": ") + 1));
-              const _isNaN = isNaN;
-              if (!isNaN(closure_3)) {
-                if (0 !== closure_3) {
-                  KRISP_INIT_ERROR = closure_3;
-                }
+          closure_2 = tmp4;
+          closure_1 = tmp8;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          let KRISP_INIT_ERROR2;
+          closure_129_3 = undefined;
+          c4 = 2;
+          c5 = 3;
+          c6 = 1;
+          const obj5 = { value: DesktopNativeUtilsDefault.ensureModule("discord_krisp"), done: false };
+          return obj5;
+        }
+      } else if (1 === tmp8) {
+        c4 = 0;
+        closure_130_108 = false;
+        throw closure_3;
+      } else {
+        if (2 === tmp8) {
+          c4 = 1;
+          closure_129_4 = closure_3;
+          const _HermesInternal = HermesInternal;
+          closure_130_57.warn("Failed to load Krisp module: " + closure_129_4.message);
+          closure_130_1(closure_130_3[74]).captureException(closure_129_4);
+          KRISP_INIT_ERROR2 = closure_130_48.KRISP_INIT_ERROR;
+          const message = closure_129_4.message;
+          if (!message.includes(": ")) {
+            const obj8 = { type: closure_130_0(closure_130_3[41]).AVError.NOISE_CANCELLER_ERROR, underlyingError: closure_130_147(KRISP_INIT_ERROR2) };
+            closure_130_0(closure_130_3[41]).reportAVError(obj8);
+            const obj7 = closure_130_0(closure_130_3[41]);
+            const obj10 = { noise_canceller_error: KRISP_INIT_ERROR2 };
+            closure_130_1(closure_130_3[42]).track(closure_130_18.VOICE_PROCESSING, obj10);
+            c4 = 0;
+            closure_130_108 = false;
+            c6 = 3;
+            const obj9 = closure_130_1(closure_130_3[42]);
+          } else {
+            const _parseInt = parseInt;
+            const message1 = closure_129_4.message;
+            closure_129_3 = parseInt(closure_129_4.message.substring(message1.indexOf(": ") + 1));
+            const _isNaN = isNaN;
+            if (!isNaN(closure_129_3)) {
+              if (0 !== closure_129_3) {
+                let KRISP_INIT_ERROR = closure_129_3;
               }
-              KRISP_INIT_ERROR = constants2.KRISP_INIT_ERROR;
+              KRISP_INIT_ERROR2 = KRISP_INIT_ERROR;
             }
-            const obj7 = { type: closure_130_0(closure_130_3[41]).AVError.NOISE_CANCELLER_ERROR, underlyingError: closure_130_147(KRISP_INIT_ERROR) };
-            const reportAVError = closure_130_0(closure_130_3[41]).reportAVError;
-            const tmp53 = closure_130_0(closure_130_3[41]);
-            reportAVError(obj7);
-            const obj9 = { noise_canceller_error: KRISP_INIT_ERROR };
-            const obj8 = closure_130_1(closure_130_3[42]);
-            obj8.track(constants.VOICE_PROCESSING, obj9);
-          } else if (3 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 0;
-              c108 = false;
-              c6 = 3;
-              const obj11 = { value, done: true };
-              return obj11;
-            } else {
-              const obj14 = closure_130_1(closure_130_3[62]);
-              v100 = obj14.requireModule("discord_krisp");
-              let c109 = true;
-              const getSdkVersion = v100.getSdkVersion;
-              let sdkVersion;
-              if (getSdkVersion != null) {
-                sdkVersion = getSdkVersion();
-              }
-              const getSuppressionLevel = v100.getSuppressionLevel;
-              let suppressionLevel;
-              if (getSuppressionLevel != null) {
-                suppressionLevel = getSuppressionLevel();
-              }
-              let c0 = suppressionLevel;
-              if (suppressionLevel == null) {
-                c0 = 100;
-              }
-              let closure_112 = c0;
-              const getNcModels = v100.getNcModels;
-              if (getNcModels != null) {
-                const ncModels = getNcModels();
-                ncModels.then((result) => {
-                  let closure_1_114 = result;
-                  closure_1_69.emitChange();
-                });
-              }
-              const emitChangeResult = closure_130_69.emitChange();
-              c5 = 4;
-              c6 = 1;
-              const obj12 = { value: obj3.ensureModule("discord_voice"), done: false };
-              obj3 = closure_130_1(closure_130_3[62]);
-              return obj12;
-            }
-          } else if (arg0 === 1) {
+            KRISP_INIT_ERROR = closure_130_48.KRISP_INIT_ERROR;
+          }
+          const obj6 = closure_130_1(closure_130_3[74]);
+        } else if (3 === tmp8) {
+          if (arg0 === 1) {
             c6 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 0;
-            c108 = false;
+            closure_130_108 = false;
             c6 = 3;
-            const obj13 = { value, done: true };
-            return obj13;
+            const obj12 = { value, done: true };
+            return obj12;
           } else {
-            obj = closure_130_1(closure_130_3[62]);
-            setupKrispPath = obj.requireModule("discord_voice");
-            setupKrispPath = setupKrispPath.setupKrispPath;
-            if (setupKrispPath != null) {
-              setupKrispPath();
+            closure_129_0 = closure_130_1(closure_130_3[62]).requireModule("discord_krisp");
+            closure_130_109 = true;
+            const getSdkVersion = closure_129_0.getSdkVersion;
+            let sdkVersion;
+            if (getSdkVersion != null) {
+              sdkVersion = getSdkVersion();
             }
-            c4 = 1;
+            closure_130_111 = sdkVersion;
+            const getSuppressionLevel = closure_129_0.getSuppressionLevel;
+            let suppressionLevel;
+            if (getSuppressionLevel != null) {
+              suppressionLevel = getSuppressionLevel();
+            }
+            c0 = suppressionLevel;
+            if (suppressionLevel == null) {
+              c0 = 100;
+            }
+            closure_130_112 = c0;
+            const getNcModels = closure_129_0.getNcModels;
+            if (getNcModels != null) {
+              const ncModels = getNcModels();
+              ncModels.then((result) => {
+                closure_114 = result;
+                closure_1_69.emitChange();
+              });
+            }
+            closure_130_69.emitChange();
+            const obj15 = closure_130_1(closure_130_3[62]);
+            c5 = 4;
+            c6 = 1;
+            const obj13 = { value: closure_130_1(closure_130_3[62]).ensureModule("discord_voice"), done: false };
+            return obj13;
           }
-          c4 = 0;
-          c108 = false;
+        } else if (arg0 === 1) {
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_129_1 = closure_130_1(closure_130_3[62]).requireModule("discord_voice");
+          const setupKrispPath = closure_129_1.setupKrispPath;
+          if (setupKrispPath != null) {
+            setupKrispPath();
+          }
+          c4 = 1;
+          const obj = closure_130_1(closure_130_3[62]);
         }
-      } catch (tmp69) {
-        closure_3 = tmp69;
-        if (0 === c4) {
-          c6 = 3;
-          throw tmp69;
-        } else if (1 === tmp71) {
-          c5 = 1;
-        } else {
-          c5 = 2;
-        }
+        c4 = 0;
+        closure_130_108 = false;
+        c6 = 3;
+        const obj14 = { value, done: true };
+        return obj14;
+      }
+    } catch (tmp72) {
+      closure_3 = tmp72;
+      if (tmp5 === c4) {
+        c6 = tmp3;
+        throw tmp72;
+      } else if (tmp2 === tmp74) {
+        c5 = tmp2;
+      } else {
+        c5 = tmp;
       }
     }
-  });
-  return obj(...arguments);
+  }
 };
-obj = function _downloadOpenH() {
-  let logger;
-  obj = _asyncToGenerator(async () => {
-    let obj5;
-    if (c5 === 2) {
-      c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_167 = async function _downloadOpenH() {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj2 = { value, done: true };
+      return obj2;
     } else {
-      let c3;
-      try {
-        let success;
-        let replaced;
-        let closure_5;
-        let message;
-        let fetchedFromNetwork;
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            let closure_1 = tmp;
-            let closure_0 = tmp4;
-            success = undefined;
-            replaced = undefined;
-            closure_5 = undefined;
-            c3 = 1;
-            message = "";
-            fetchedFromNetwork = false;
-            const _URL = URL;
-            const parsed = URL.parse(closure_2_65);
-            if (null === parsed) {
-              const logResult = logger.log("OpenH264 URL ", parsed, " is invalid");
-              c3 = 0;
-              c5 = 3;
-              const obj6 = { value: undefined, done: true };
-              return obj6;
-            } else {
-              const str10 = parsed.pathname;
-              const parts = str10.split("/");
-              const str11 = parts[parts.length - 1];
-              replaced = str11.replace(".bz2", "");
-              c3 = 2;
-              const obj11 = DesktopNativeUtilsDefault;
-              c4 = 3;
-              c5 = 1;
-              const obj7 = {
-                value: obj11.downloadOpenH264(closure_2_65, replaced, d828a944d4d2bb64195ada89cf2cde9bc41733b1547d0788ef49fb8cb231b76f, (arg0) => {
-                            logger.log("OpenH264 download status", arg0);
-                          }),
-                done: false
-              };
-              return obj7;
-            }
-          }
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          if (1 === c4) {
+          closure_1 = tmp4;
+          closure_0 = tmp8;
+          closure_128_0 = undefined;
+          closure_128_3 = undefined;
+          closure_128_4 = undefined;
+          closure_128_5 = undefined;
+          c3 = 1;
+          let message = "";
+          let fetchedFromNetwork = false;
+          const _URL = URL;
+          const parsed = URL.parse(closure_2_65);
+          if (null === parsed) {
+            logger.log("OpenH264 URL ", parsed, " is invalid");
             c3 = 0;
-            let closure_7 = closure_2;
-            closure_129_57.error("OpenH264 download failed", closure_7);
+            c5 = 3;
+            const obj6 = { value: undefined, done: true };
+            return obj6;
           } else {
-            if (2 === c4) {
-              c3 = 1;
-              message = closure_2;
-              closure_129_57.error("OpenH264 download failed", message);
-              message = message.message;
-              success = false;
-            } else {
-              if (3 === c4) {
-                if (arg0 === 1) {
-                  c5 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 0;
-                  c5 = 3;
-                  const obj8 = { value, done: true };
-                  return obj8;
-                } else {
-                  fetchedFromNetwork = value;
-                  closure_129_57.log("OpenH264 is ready", fetchedFromNetwork);
-                  fetchedFromNetwork = fetchedFromNetwork.fetchedFromNetwork;
-                  success = true;
-                  c3 = 1;
-                }
-              } else if (arg0 === 1) {
+            const parts = parsed.pathname.split("/");
+            const replaced = parts[parts.length - 1].replace(".bz2", "");
+            closure_128_3 = replaced;
+            c3 = 2;
+            const obj11 = DesktopNativeUtilsDefault;
+            c4 = 3;
+            c5 = 1;
+            const obj7 = {
+              value: obj11.downloadOpenH264(closure_2_65, replaced, closure_2_66, (arg0) => {
+                          logger.log("OpenH264 download status", arg0);
+                        }),
+              done: false
+            };
+            return obj7;
+          }
+        }
+      } else {
+        if (1 === tmp8) {
+          c3 = 0;
+          closure_128_7 = closure_2;
+          closure_129_57.error("OpenH264 download failed", closure_128_7);
+          c5 = 3;
+        } else {
+          if (2 === tmp8) {
+            c3 = 1;
+            closure_128_6 = closure_2;
+            closure_129_57.error("OpenH264 download failed", closure_128_6);
+            message = closure_128_6.message;
+            closure_128_0 = false;
+          } else {
+            if (3 === tmp8) {
+              if (arg0 === 1) {
                 c5 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 c3 = 0;
                 c5 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj8 = { value, done: true };
+                return obj8;
               } else {
-                closure_5 = value;
-                closure_129_57.log("OpenH264 cleanup", closure_5);
+                closure_128_4 = value;
+                closure_129_57.log("OpenH264 is ready", closure_128_4);
+                fetchedFromNetwork = closure_128_4.fetchedFromNetwork;
+                closure_128_0 = true;
+                c3 = 1;
               }
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
               c3 = 0;
+              c5 = 3;
+              const obj = { value, done: true };
+              return obj;
+            } else {
+              closure_128_5 = value;
+              closure_129_57.log("OpenH264 cleanup", closure_128_5);
             }
-            const obj9 = { success, fetched_from_network: fetchedFromNetwork, error_message: message };
-            const obj3 = closure_129_1(closure_129_3[42]);
-            obj3.track(closure_129_18.VIDEO_OPENH264_DOWNLOADED, obj9);
-            const tmp33 = success;
-            if (tmp33) {
-              const items = [replaced];
-              c4 = 4;
-              c5 = 1;
-              const obj10 = { value: obj5.cleanupUnusedOpenH264Files(items), done: false };
-              obj5 = closure_129_1(closure_129_3[62]);
-              return obj10;
-            }
+            c3 = 0;
           }
-          c5 = 3;
-          return { value: "IconComponent", done: null };
+          const obj9 = { success: closure_128_0, fetched_from_network: fetchedFromNetwork, error_message: message };
+          closure_129_1(closure_129_3[42]).track(closure_129_18.VIDEO_OPENH264_DOWNLOADED, obj9);
+          const obj3 = closure_129_1(closure_129_3[42]);
         }
-      } catch (tmp48) {
-        closure_2 = tmp48;
-        if (0 === c3) {
-          c5 = 3;
-          throw tmp48;
-        } else if (1 === tmp50) {
-          c4 = 1;
-        } else {
-          c4 = 2;
-        }
+        const items = [closure_128_3];
+        c4 = 4;
+        c5 = 1;
+        const obj10 = { value: closure_129_1(closure_129_3[62]).cleanupUnusedOpenH264Files(items), done: false };
+        return obj10;
+      }
+    } catch (tmp52) {
+      closure_2 = tmp52;
+      if (tmp5 === c3) {
+        c5 = tmp3;
+        throw tmp52;
+      } else if (tmp2 === tmp54) {
+        c4 = tmp2;
+      } else {
+        c4 = tmp;
       }
     }
-  });
-  return obj(...arguments);
+  }
 };
 function setAudioSubsystem(arg0) {
-  let obj3;
-  let obj4;
-  let obj6;
   if (arg0 === constants8.AUTOMATIC) {
-    let DEFAULT2 = MediaEngineContextTypes.DEFAULT;
+    DEFAULT2 = MediaEngineContextTypes.DEFAULT;
     if (DEFAULT2 === undefined) {
       DEFAULT2 = MediaEngineContextTypes.DEFAULT;
     }
     let tmp24 = settingsByContext[DEFAULT2];
     if (null == tmp24) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj4 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = obj3;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj4 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj4;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT2] = obj2;
       tmp24 = obj2;
+      const tmp26 = PlatformUtils.isPlatformEmbedded || false;
     }
     const _Object2 = Object;
     const merged1 = Object.assign(tmp24, { automaticAudioSubsystem: true });
     const Storage2 = Storage6.Storage;
-    result = Storage2.set(MediaEngineStore_str, settingsByContext);
+    result = Storage2.set(MediaEngineStore, settingsByContext);
     result.queueAudioSubsystem(tmp.EXPERIMENTAL);
   } else {
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
@@ -1558,101 +1505,115 @@ function setAudioSubsystem(arg0) {
     }
     let tmp3 = settingsByContext[DEFAULT];
     if (null == tmp3) {
-      const obj5 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj6, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj6 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      const obj5 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      modeOptions = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj5.modeOptions = modeOptions;
+      obj5.localMutes = {};
+      obj5.disabledLocalVideos = {};
+      obj5.videoToggleStateMap = {};
+      obj5.localVolumes = {};
+      const obj6 = {};
       const merged2 = Object.assign(closure_34);
+      obj5.audioMixerSettings = obj6;
+      obj5.localPans = {};
+      obj5.inputVolume = outputVolume;
+      obj5.outputVolume = outputVolume;
+      obj5.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj5.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj5.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj5.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj5;
       tmp3 = obj5;
+      const tmp5 = PlatformUtils.isPlatformEmbedded || false;
     }
     const _Object = Object;
     const merged3 = Object.assign(tmp3, { automaticAudioSubsystem: false });
     const Storage = Storage6.Storage;
-    const result1 = Storage.set(MediaEngineStore_str, settingsByContext);
+    const result1 = Storage.set(MediaEngineStore, settingsByContext);
     result.setAudioSubsystem(arg0);
   }
 }
 function handleUserSettingsModal(section) {
   if (section.section === constants4.VOICE) {
     if (!c79) {
+      result.enable().then(() => disabledLocalVideos(dependencyMap[43]).dispatch({ type: "MEDIA_ENGINE_SET_AUDIO_ENABLED", enabled: true, unmute: false }));
       const enableResult = result.enable();
-      enableResult.then(() => {
-        obj = disabledLocalVideos(dependencyMap[43]);
-        return obj.dispatch({ type: "MEDIA_ENGINE_SET_AUDIO_ENABLED", enabled: true, unmute: false });
-      });
     }
   }
   return false;
 }
 function processQueueMetricsForAnalytics(taskMetrics) {
   let num2;
-  let sorted;
-  let taskMetrics1;
   if (null != taskMetrics.taskMetrics) {
     if (0 !== taskMetrics.taskMetrics.length) {
       if (1 === taskMetrics.taskMetrics.length) {
         return null;
       } else {
-        obj = { metrics_period_ms: null, total_tasks: taskMetrics.reduce((acc, count) => acc + count.count, 0), total_exec_time_ns: taskMetrics1.reduce((acc, totalExecTimeNs) => acc + totalExecTimeNs.totalExecTimeNs, 0), queue_name: null, full_task_report: JSON.stringify(sorted) };
+        const obj = { metrics_period_ms: null, total_tasks: 0, total_exec_time_ns: 0, queue_name: null };
         ({ periodMs: obj.metrics_period_ms, queueName: obj.queue_name, taskMetrics } = taskMetrics);
-        taskMetrics1 = taskMetrics.taskMetrics;
+        obj.total_tasks = taskMetrics.reduce((acc, count) => acc + count.count, 0);
+        const taskMetrics1 = taskMetrics.taskMetrics;
+        obj.total_exec_time_ns = taskMetrics1.reduce((acc, totalExecTimeNs) => acc + totalExecTimeNs.totalExecTimeNs, 0);
         const items = [];
-        HermesBuiltin.arraySpread(items, taskMetrics.taskMetrics, 0);
-        sorted = items.sort((longestExecTimeNs, longestExecTimeNs2) => longestExecTimeNs2.longestExecTimeNs - longestExecTimeNs.longestExecTimeNs);
+        HermesBuiltin.arraySpread(taskMetrics.taskMetrics, 0);
+        const sorted = items.sort((longestExecTimeNs, longestExecTimeNs2) => longestExecTimeNs2.longestExecTimeNs - longestExecTimeNs.longestExecTimeNs);
         const items1 = [];
-        HermesBuiltin.arraySpread(items1, taskMetrics.taskMetrics, 0);
+        HermesBuiltin.arraySpread(taskMetrics.taskMetrics, 0);
         const sorted1 = items1.sort((longestQueueTimeNs, longestQueueTimeNs2) => longestQueueTimeNs2.longestQueueTimeNs - longestQueueTimeNs.longestQueueTimeNs);
         let num = 0;
         do {
           if (num < sorted.length) {
-            let tmp3 = sorted[num];
+            let tmp2 = sorted[num];
             let _HermesInternal = HermesInternal;
-            obj["slow_task_" + num + "_name"] = tmp3.name;
+            obj["slow_task_" + num + "_name"] = tmp2.name;
             let _HermesInternal2 = HermesInternal;
-            obj["slow_task_" + num + "_longest_exec_time_ns"] = tmp3.longestExecTimeNs;
+            obj["slow_task_" + num + "_longest_exec_time_ns"] = tmp2.longestExecTimeNs;
           }
           num = num + 1;
           num2 = 0;
         } while (num < 3);
         do {
           if (num2 < sorted1.length) {
-            let tmp5 = sorted1[num2];
+            let tmp4 = sorted1[num2];
             let _HermesInternal3 = HermesInternal;
-            obj["delayed_task_" + num2 + "_name"] = tmp5.name;
+            obj["delayed_task_" + num2 + "_name"] = tmp4.name;
             let _HermesInternal4 = HermesInternal;
-            obj["delayed_task_" + num2 + "_longest_queue_time_ns"] = tmp5.longestQueueTimeNs;
+            obj["delayed_task_" + num2 + "_longest_queue_time_ns"] = tmp4.longestQueueTimeNs;
           }
           num2 = num2 + 1;
         } while (num2 < 3);
         const _JSON = JSON;
+        obj.full_task_report = JSON.stringify(sorted);
         return obj;
       }
     }
   }
   return null;
 }
-const getSystemAnalyticsInfo = SystemAnalyticsStore.getSystemAnalyticsInfo;
-let Constants = Constants_mod2;
+const injectMediaEngine = fn(2000);
+const getSystemAnalyticsInfo = fn(4941).getSystemAnalyticsInfo;
+let Constants = fn(1085);
 ({ AnalyticEvents: closure_18, AppStates: closure_19, InputModes } = Constants);
 ({ RTCConnectionStates: closure_21, UserSettingsSections: closure_22, VideoToggleState: closure_23 } = Constants);
-Constants = Constants_mod2;
-({ DARWIN_SCKIT_VERSION: closure_24, DARWIN_SCKIT_AUDIO_VERSION: closure_25, WINDOWS_GRAPHICS_CAPTURE_NEW_APIS_BUILD: closure_26, WINDOWS_GRAPHICS_CAPTURE_NEW_APIS_SEMVER: closure_27, WINDOWS_GRAPHICS_CAPTURE_BUILD: closure_28, WINDOWS_GRAPHICS_CAPTURE_SEMVER: closure_29, WINDOWS_SOUNDSHARE_HOOK_VERSION: closure_30, WINDOWS_SOUNDSHARE_NONHOOK_VERSION: closure_31 } = Constants);
+Constants = fn(4938);
+({ DARWIN_SCKIT_VERSION: closure_24, DARWIN_SCKIT_AUDIO_VERSION: closure_25, WINDOWS_GRAPHICS_CAPTURE_NEW_APIS_BUILD: closure_26, WINDOWS_GRAPHICS_CAPTURE_NEW_APIS_SEMVER: closure_27, WINDOWS_GRAPHICS_CAPTURE_BUILD: closure_28, WINDOWS_GRAPHICS_CAPTURE_SEMVER: closure_29, WINDOWS_SOUNDSHARE_HOOK_VERSION: closure_30, WINDOWS_SOUNDSHARE_NONHOOK_VERSION: items } = Constants);
+const NativePermissionConstants = fn(5105);
 ({ NativePermissionStates: closure_32, NativePermissionTypes } = NativePermissionConstants);
-let closure_34 = SpatialAudioConstants.DEFAULT_AUDIO_MIXER_SETTINGS;
+let closure_34 = fn(13833).DEFAULT_AUDIO_MIXER_SETTINGS;
+const UserSettingsConstants = fn(1095);
 ({ ProtoAudioSettingsContextTypes: closure_35, UserSettingsTypes: closure_36 } = UserSettingsConstants);
-const InputProfile = UserSettingsVoiceAndVideoConstants.InputProfile;
-Constants = Constants_mod2;
+const InputProfile = fn(13834).InputProfile;
+Constants = fn(4921);
 ({ AudioSubsystems: closure_38, DARWIN_H265_VERSION: closure_39, DEFAULT_VOLUME: closure_40, DEFAULT_STREAM_VOLUME: closure_41, DEFAULT_DEVICE_ID } = Constants);
 const DeviceTypes = Constants.DeviceTypes;
-let DISABLED_DEVICE_ID = Constants.DISABLED_DEVICE_ID;
+const DISABLED_DEVICE_ID = Constants.DISABLED_DEVICE_ID;
 ({ ExperimentFlags: closure_45, Features } = Constants);
 const MediaEngineContextTypes = Constants.MediaEngineContextTypes;
 const NoiseCancellerError = Constants.NoiseCancellerError;
 const SpatialAudioStatus = Constants.SpatialAudioStatus;
 ({ VideoFilterError: closure_50, VideoFilterTarget: closure_51, MediaTypes: closure_52, QUEUE_METRICS_INTERVAL_MS: closure_53, VideoToggleReason: closure_54, SIMULCAST_HQ_QUALITY: closure_55, SIMULCAST_LQ_QUALITY: closure_56 } = Constants);
-obj = new LoggerDefault("MediaEngineStore");
-const MediaEngineStore_str = "MediaEngineStore";
+let modeOptions = new LoggerDefault("MediaEngineStore");
+const MediaEngineStore = "MediaEngineStore";
 let closure_59 = { useAGC2: true, enableAnalog: false, enableDigital: true, headroom_db: 5, max_gain_db: 50, initial_gain_db: 15, max_gain_change_db_per_second: 6, max_output_noise_level_dbfs: -50, fixed_gain_db: 0 };
 let closure_60 = { left: 1, right: 1 };
 const graphicsCaptureStaleFrameTimeoutMs = 5 * DurationsDefault.Millis.SECOND;
@@ -1660,42 +1621,39 @@ let closure_62 = 2 * DurationsDefault.Millis.SECOND;
 let closure_63 = 30 * DurationsDefault.Millis.SECOND;
 const deep_noise_suppression = "deep_noise_suppression";
 let c65 = "https://ciscobinary.openh264.org/libopenh264-2.5.1-linux64.7.so.bz2";
-const d828a944d4d2bb64195ada89cf2cde9bc41733b1547d0788ef49fb8cb231b76f = "d828a944d4d2bb64195ada89cf2cde9bc41733b1547d0788ef49fb8cb231b76f";
+let c66 = "d828a944d4d2bb64195ada89cf2cde9bc41733b1547d0788ef49fb8cb231b76f";
 let c67 = 0;
 let obj2 = { WEBCAM: "WEBCAM", INTEGRATED: "INTEGRATED", BLUETOOTH: "BLUETOOTH", AIRPLAY: "AIRPLAY", HEADSET: "HEADSET" };
-let obj3 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: { threshold: -84, autoThreshold: false, vadUseKrisp: false }, echoCancellation: false, noiseSuppression: false, automaticGainControl: false, noiseCancellation: false, bypassSystemInputProcessing: true };
-let closure_70 = { [InputProfile.CUSTOM]: {}, [InputProfile.VOICE_ISOLATION]: { modeOptions: { autoThreshold: true, vadUseKrisp: true }, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true }, [InputProfile.STUDIO]: obj3 };
+let closure_70 = { [InputProfile.CUSTOM]: {}, [InputProfile.VOICE_ISOLATION]: { modeOptions: { autoThreshold: true, vadUseKrisp: true }, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true }, [InputProfile.STUDIO]: { mode: InputModes.VOICE_ACTIVITY, modeOptions: { threshold: -84, autoThreshold: false, vadUseKrisp: false }, echoCancellation: false, noiseSuppression: false, automaticGainControl: false, noiseCancellation: false, bypassSystemInputProcessing: true } };
 let closure_71 = { modeOptions: { vadUseKrisp: false }, noiseCancellation: false, noiseSuppression: true };
-let BaseConnectionEvent = BaseConnectionEvent_mod;
-const initializeMediaEngine = BaseConnectionEvent.initializeMediaEngine;
-BaseConnectionEvent = BaseConnectionEvent_mod;
-let result = initializeMediaEngine(BaseConnectionEvent.determineMediaEngine());
-obj.enableNativeLogger(true);
-const internalBinaryWrite7 = {};
-let items = [MediaEngineContextTypes.DEFAULT];
+fn(4951);
+const BaseConnectionEvent = fn(4951);
+let result = BaseConnectionEvent.initializeMediaEngine(BaseConnectionEvent.determineMediaEngine());
+modeOptions.enableNativeLogger(true);
+const settingsByContext = {};
+items = [MediaEngineContextTypes.DEFAULT];
 let set = new Set(items);
 let c79 = result.supports(Features.AUTO_ENABLE);
 let required = false;
-let STREAM = MediaEngineContextTypes.STREAM;
+let DEFAULT2 = MediaEngineContextTypes.STREAM;
 let c82 = 0;
 let c83 = false;
 let closure_84 = performance.now();
 let c85 = null;
-let obj4 = { id: DEFAULT_DEVICE_ID, deviceType: DeviceTypes.AUDIO_INPUT, index: 0, name: "No Input Devices", disabled: true, guid: "emoji", hardwareId: "Date", containerId: "toCharArray$esjava$1" };
-const inputDevices = { [DEFAULT_DEVICE_ID]: obj4 };
-let obj5 = { id: DEFAULT_DEVICE_ID, deviceType: DeviceTypes.AUDIO_OUTPUT, index: 0, name: "No Output Devices", disabled: true, guid: "filter", hardwareId: "start", containerId: "T" };
-const outputDevices = { [DEFAULT_DEVICE_ID]: obj5 };
-let obj6 = { id: DEFAULT_DEVICE_ID, deviceType: DeviceTypes.VIDEO_INPUT, index: 0, name: "No Video Devices", disabled: true, guid: "unicodeVersion", hardwareId: "height", containerId: "toCharArray$esjava$1" };
-let closure_88 = { [DEFAULT_DEVICE_ID]: obj6 };
-const timeout = new Timers.Timeout();
+const inputDevices = { [DEFAULT_DEVICE_ID]: { id: DEFAULT_DEVICE_ID, deviceType: DeviceTypes.AUDIO_INPUT, index: 0, name: "No Input Devices", disabled: true, guid: "emoji", hardwareId: "Date", containerId: "toCharArray$esjava$1" } };
+const outputDevices = { [DEFAULT_DEVICE_ID]: { id: DEFAULT_DEVICE_ID, deviceType: DeviceTypes.AUDIO_OUTPUT, index: 0, name: "No Output Devices", disabled: true, guid: "filter", hardwareId: "start", containerId: "T" } };
+let dependencyMap = { [DEFAULT_DEVICE_ID]: { id: DEFAULT_DEVICE_ID, deviceType: DeviceTypes.VIDEO_INPUT, index: 0, name: "No Video Devices", disabled: true, guid: "unicodeVersion", hardwareId: "height", containerId: "toCharArray$esjava$1" } };
+const timeout = new fn(2046).Timeout();
 let c90 = false;
 let mute = false;
 let closure_92 = false;
 let c93 = false;
 let closure_94 = false;
+let closure_95 = DISABLED_DEVICE_ID;
+let videoDeviceId = DISABLED_DEVICE_ID;
 let c97 = false;
 let c98 = false;
-const timeout1 = new Timers.Timeout();
+const timeout1 = new fn(2046).Timeout();
 let c100 = false;
 let c101 = false;
 let c102 = false;
@@ -1719,11 +1677,10 @@ let c120 = false;
 let UNKNOWN = SpatialAudioStatus.UNKNOWN;
 let closure_122 = {};
 let c123 = null;
-let nextPromise = null;
 let c125 = false;
 let NativePermissionUtils = NativePermissionUtils_mod;
 NativePermissionUtils.hasPermission(NativePermissionTypes.AUDIO, { showAuthorizationError: false });
-NativePermissionUtils = NativePermissionUtils_mod;
+let NativePermissionUtils = NativePermissionUtils_mod;
 NativePermissionUtils.hasPermission(NativePermissionTypes.CAMERA, { showAuthorizationError: false });
 const set1 = new Set();
 let c127 = true;
@@ -1735,7 +1692,7 @@ let c132 = null;
 let c133 = null;
 let c134 = false;
 let enabled = true;
-let c136 = false;
+let global = false;
 let c137 = false;
 let c138 = false;
 let c139 = false;
@@ -1745,1690 +1702,1719 @@ let items1 = [, , , , , , , , , ];
 const set3 = new Set(items1);
 let c153 = ">=10.0.15063";
 const re156 = /^HDAUDIO\\(?:SUB)?FUNC_\d+&VEN_(?:8086|1002|10DE)/;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class MediaEngineStore extends Store {
-  initialize() {
-    let bitrate;
-    let closure_76;
-    let everyResult;
-    let logger;
-    let mode;
-    let obj6;
-    let obj7;
-    let pollMetrics;
-    function setGamescopeVaapiEnabled() {
-      return obj(...arguments);
-    }
-    function setupKrispNativeModule() {
-      return obj(...arguments);
-    }
-    function downloadOpenH264() {
-      return obj(...arguments);
-    }
-    let self = this;
-    if (navigation == null) {
-      let tmp = obj;
-      let self2 = this;
-      const self3 = this;
-      const tmp4 = self;
-      const tmp5 = new obj(13907)(closure_72, self);
-      let tmp6 = tmp5;
-      navigation = tmp5;
-    }
-    timeout.start(closure_63, () => {
-      logger.error("Device enumeration timed out");
-      obj = obj(dependencyMap[42]);
-      obj.track(constants.DEVICE_ENUMERATION_TIMEOUT, {});
-    });
-    obj = closure_72;
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.Connection, (setAttenuation) => {
-      pollMetrics = setAttenuation;
-      closure_164();
-      closure_144(setAttenuation);
-      closure_145(setAttenuation);
-      closure_152(setAttenuation);
-      const tmp6 = closure_143();
-      setAttenuation.setAttenuation(tmp6.attenuation, tmp6.attenuateWhileSpeakingSelf, tmp6.attenuateWhileSpeakingOthers);
-      setAttenuation.setQoS(tmp6.qos);
-      obj = pollMetrics(status[24]);
-      if (!obj.isWindows()) {
-        const tmp9Result = pollMetrics(status[24]);
-        if (!tmp9Result.isLinux()) {
-          const tmp9Result19 = pollMetrics(status[24]);
-          if (tmp9Result19.isMac()) {
-            setAttenuation.setExperimentFlag(closure_45.H265_HARDWARE_DECODE_AVAILABLE, true);
-          }
+}
+const prototype = MediaEngineStore.prototype;
+prototype["initialize"] = function initialize() {
+  let self = this;
+  if (navigation == null) {
+    const tmp7 = new InputWatcherDefault(closure_72, self);
+    navigation = tmp7;
+  }
+  timeout.start(closure_63, () => {
+    logger.error("Device enumeration timed out");
+    closure_1(1252).track(constants.DEVICE_ENUMERATION_TIMEOUT, {});
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.Connection, (setAttenuation) => {
+    pollMetrics = setAttenuation;
+    closure_164();
+    closure_144(setAttenuation);
+    closure_145(setAttenuation);
+    closure_152(setAttenuation);
+    const tmp6 = closure_143();
+    setAttenuation.setAttenuation(tmp6.attenuation, tmp6.attenuateWhileSpeakingSelf, tmp6.attenuateWhileSpeakingOthers);
+    setAttenuation.setQoS(tmp6.qos);
+    if (!obj.isWindows()) {
+      if (!tmp9Result.isLinux()) {
+        if (tmp9Result19.isMac()) {
+          setAttenuation.setExperimentFlag(closure_45.H265_HARDWARE_DECODE_AVAILABLE, true);
         }
-        const tmp9Result20 = pollMetrics(status[24]);
-        const tmp14 = tmp9Result20.isLinux() && tmp6.openH264Enabled;
-        if (tmp14) {
-          setAttenuation.setExperimentFlag(closure_45.USE_LIBOPENH264_DECODER, true);
-        }
-        const tmp9Result21 = pollMetrics(status[47]);
-        if (tmp9Result21.getLowLatencyRateControlExperimentConfig({ location: "setupMediaEngine" }).enabled) {
-          setAttenuation.setExperimentFlag(closure_45.LOW_LATENCY_RATE_CONTROL, true);
-        }
-        setAttenuation.setExperimentFlag(closure_45.RESET_DECODER_ON_ERRORS, true);
-        setAttenuation.setExperimentFlag(closure_45.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS, true);
-        const obj6 = obj(status[48]);
-        if (obj6.getConfig({ location: "MediaEngineStore" }).swallowVolumeOnlySpeakingEvents) {
-          setAttenuation.setExperimentFlag(closure_45.SWALLOW_VOLUME_ONLY_SPEAKING_EVENTS, true);
-        }
-        result = setAttenuation.setMinimumJitterBufferLevel(80);
-        if (setAttenuation.context === constants4.STREAM) {
-          const result1 = setAttenuation.setSoundshareDiscardRearChannels(closure_159(closure_87));
-        }
-        const tmp9Result22 = pollMetrics(status[24]);
-        if (tmp9Result22.isWindows()) {
-          setAttenuation.setExperimentFlag(closure_45.SIGNAL_AV1_ENCODE, true);
+        tmp9Result19 = tmp9(1369);
+      }
+      tmp9Result = tmp9(1369);
+      const tmp9Result20 = tmp9(1369);
+      if (tmp14) {
+        setAttenuation.setExperimentFlag(closure_45.USE_LIBOPENH264_DECODER, true);
+      }
+      tmp14 = tmp9(1369).isLinux() && tmp6.openH264Enabled;
+      if (tmp9Result21.getLowLatencyRateControlExperimentConfig({ location: "setupMediaEngine" }).enabled) {
+        setAttenuation.setExperimentFlag(closure_45.LOW_LATENCY_RATE_CONTROL, true);
+      }
+      setAttenuation.setExperimentFlag(closure_45.RESET_DECODER_ON_ERRORS, true);
+      setAttenuation.setExperimentFlag(closure_45.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS, true);
+      tmp9Result21 = tmp9(13846);
+      if (obj6.getConfig({ location: "MediaEngineStore" }).swallowVolumeOnlySpeakingEvents) {
+        setAttenuation.setExperimentFlag(closure_45.SWALLOW_VOLUME_ONLY_SPEAKING_EVENTS, true);
+      }
+      result = setAttenuation.setMinimumJitterBufferLevel(80);
+      if (setAttenuation.context === constants4.STREAM) {
+        const result1 = setAttenuation.setSoundshareDiscardRearChannels(closure_159(closure_87));
+      }
+      obj6 = closure_1(5584);
+      if (tmp9Result22.isWindows()) {
+        setAttenuation.setExperimentFlag(closure_45.SIGNAL_AV1_ENCODE, true);
+        setAttenuation.setExperimentFlag(closure_45.SIGNAL_AV1_DECODE, true);
+        setAttenuation.setExperimentFlag(closure_45.SIGNAL_AV1_HARDWARE_DECODE, true);
+      } else {
+        if (tmp9Result23.isMac()) {
           setAttenuation.setExperimentFlag(closure_45.SIGNAL_AV1_DECODE, true);
           setAttenuation.setExperimentFlag(closure_45.SIGNAL_AV1_HARDWARE_DECODE, true);
-        } else {
-          const tmp9Result23 = pollMetrics(status[24]);
-          if (tmp9Result23.isMac()) {
-            setAttenuation.setExperimentFlag(closure_45.SIGNAL_AV1_DECODE, true);
-            setAttenuation.setExperimentFlag(closure_45.SIGNAL_AV1_HARDWARE_DECODE, true);
-            let arch;
-            const setExperimentFlag = setAttenuation.setExperimentFlag;
-            const H265_DISABLE_ENCODE = closure_45.H265_DISABLE_ENCODE;
+          let arch;
+          if (window != null) {
+            if (DiscordNative != null) {
+              arch = DiscordNative.os.arch;
+            }
+          }
+          let satisfiesResult = "arm64" === arch;
+          if (satisfiesResult) {
+            let release;
             if (window != null) {
-              if (DiscordNative != null) {
-                arch = DiscordNative.os.arch;
+              if (DiscordNative2 != null) {
+                release = DiscordNative2.os.release;
               }
             }
-            let satisfiesResult = "arm64" === arch;
-            if (satisfiesResult) {
-              let release;
-              const satisfies = obj(status[49]).satisfies;
-              obj(status[49]);
-              if (window != null) {
-                const DiscordNative2 = window.DiscordNative;
-                if (DiscordNative2 != null) {
-                  release = DiscordNative2.os.release;
-                }
-              }
-              satisfiesResult = satisfies(release, closure_39);
-            }
-            setExperimentFlag(H265_DISABLE_ENCODE, !satisfiesResult);
-          } else {
-            const tmp9Result24 = pollMetrics(status[24]);
-            if (tmp9Result24.isLinux()) {
-              const tmp9Result25 = pollMetrics(status[50]);
-              if (tmp9Result25.getAV1EncodeExperimentLinuxConfig("MediaEngineStore").enabled) {
-                setAttenuation.setExperimentFlag(closure_45.SIGNAL_AV1_ENCODE, true);
-              }
-              setAttenuation.setExperimentFlag(closure_45.SIGNAL_AV1_DECODE, true);
-            } else {
-              const tmp9Result26 = pollMetrics(status[24]);
-              let isIOSResult = tmp9Result26.isIOS();
-              if (!isIOSResult) {
-                const tmp9Result27 = pollMetrics(status[24]);
-                isIOSResult = tmp9Result27.isAndroid();
-              }
-              if (isIOSResult) {
-                setAttenuation.setExperimentFlag(closure_45.SIGNAL_AV1_DECODE, true);
-                setAttenuation.setExperimentFlag(closure_45.SIGNAL_AV1_HARDWARE_DECODE, true);
-                setAttenuation.setExperimentFlag(closure_45.H265_HARDWARE_DECODE_AVAILABLE, true);
-              }
-            }
+            satisfiesResult = closure_1(13847).satisfies(release, closure_39);
+            const tmp22Result = closure_1(13847);
           }
-        }
-        const tmp9Result28 = pollMetrics(status[24]);
-        if (tmp9Result28.isWeb()) {
-          const tmp22Result2 = obj(status[51]);
-          setAttenuation.setExperimentFlag(closure_45.BROWSER_HEVC, tmp22Result2.getConfig({ location: "MediaEngineStore" }).enabled);
-        }
-        const tmp9Result29 = pollMetrics(status[24]);
-        enabled = tmp9Result29.isWindows();
-        if (enabled) {
-          let startsWithResult;
-          if (closure_131 != null) {
-            startsWithResult = closure_131.startsWith("AMD");
-          }
-          enabled = startsWithResult;
-        }
-        if (enabled) {
-          const tmp9Result30 = pollMetrics(status[52]);
-          enabled = tmp9Result30.getWmfGpuEncode("MediaEngineStore").enabled;
-        }
-        if (enabled) {
-          setAttenuation.setExperimentFlag(closure_45.WMF_GPU_ENCODE, true);
-        }
-        const tmp9Result31 = pollMetrics(status[24]);
-        let enabled2 = tmp9Result31.isWindows();
-        if (enabled2) {
-          let startsWithResult1;
-          if (closure_131 != null) {
-            startsWithResult1 = closure_131.startsWith("Intel");
-          }
-          enabled2 = startsWithResult1;
-        }
-        if (enabled2) {
-          enabled2 = true === closure_132;
-        }
-        if (enabled2) {
-          enabled2 = 1 === closure_133;
-        }
-        if (enabled2) {
-          const tmp9Result32 = pollMetrics(status[53]);
-          enabled2 = tmp9Result32.getWmfGpuEncodeIntel("MediaEngineStore").enabled;
-        }
-        if (enabled2) {
-          setAttenuation.setExperimentFlag(closure_45.WMF_GPU_ENCODE, true);
-          setAttenuation.setExperimentFlag(closure_45.INTEL_GPU_DISABLE, true);
-        }
-        const tmp9Result33 = pollMetrics(status[24]);
-        let enabled3 = tmp9Result33.isWindows();
-        if (enabled3) {
-          let startsWithResult2;
-          if (closure_131 != null) {
-            startsWithResult2 = closure_131.startsWith("Intel");
-          }
-          enabled3 = startsWithResult2;
-        }
-        if (enabled3) {
-          enabled3 = true === closure_132;
-        }
-        if (enabled3) {
-          enabled3 = 1 === closure_133;
-        }
-        if (enabled3) {
-          const tmp9Result34 = pollMetrics(status[54]);
-          enabled3 = tmp9Result34.getWmfCpuEncodeIntel("MediaEngineStore").enabled;
-        }
-        if (enabled3) {
-          setAttenuation.setExperimentFlag(closure_45.INTEL_GPU_DISABLE, true);
-        }
-        const tmp9Result35 = pollMetrics(status[24]);
-        let enabled4 = tmp9Result35.isWindows();
-        if (enabled4) {
-          let startsWithResult3;
-          if (closure_131 != null) {
-            startsWithResult3 = closure_131.startsWith("Qualcomm");
-          }
-          enabled4 = startsWithResult3;
-        }
-        if (enabled4) {
-          const tmp9Result36 = pollMetrics(status[52]);
-          enabled4 = tmp9Result36.getWmfGpuEncode("MediaEngineStore").enabled;
-        }
-        if (enabled4) {
-          setAttenuation.setExperimentFlag(closure_45.WMF_GPU_ENCODE, true);
-        }
-        const result2 = closure_72.setHasFullbandPerformance(tmp22(status[55])());
-        const result3 = setAttenuation.setRemoteAudioHistory(1000);
-        const tmp5Result = closure_143(setAttenuation.context);
-        const result4 = setAttenuation.setPostponeDecodeLevel(100);
-        const _Object = Object;
-        const keys = Object.keys(tmp5Result.localMutes);
-        for (const item10291 of keys) {
-          if (item10291 !== closure_11.getId()) {
-            let setLocalMuteResult = setAttenuation.setLocalMute(item10291, tmp5Result.localMutes[item10291]);
-          }
-          continue;
-        }
-        const _Object2 = Object;
-        const keys1 = Object.keys(tmp5Result.localVolumes);
-        for (const item10310 of keys1) {
-          if (item10310 !== closure_11.getId()) {
-            let setLocalVolumeResult = setAttenuation.setLocalVolume(item10310, tmp5Result.localVolumes[item10310]);
-          }
-          continue;
-        }
-        const _Object3 = Object;
-        const keys2 = Object.keys(tmp5Result.localPans);
-        for (const item10329 of keys2) {
-          let rect = tmp5Result.localPans[item10329];
-          let setLocalPanResult = setAttenuation.setLocalPan(item10329, rect.left, rect.right);
-          continue;
-        }
-        const _Object4 = Object;
-        const keys3 = Object.keys(tmp5Result.disabledLocalVideos);
-        for (const item10345 of keys3) {
-          let result5 = setAttenuation.setLocalVideoDisabled(item10345, tmp5Result.disabledLocalVideos[item10345]);
-          continue;
-        }
-        setAttenuation.on(pollMetrics(status[25]).BaseConnectionEvent.Speaking, (userId, speakingFlags, arg2, voiceDb) => {
-          obj = obj(dependencyMap[43]);
-          obj2 = { type: "SPEAKING", context: setAttenuation.context, userId, speakingFlags, voiceDb };
-          obj.dispatch(obj2);
-        });
-        if (setAttenuation.context === constants4.DEFAULT) {
-          c98 = false;
-          setAttenuation.on(pollMetrics(status[25]).BaseConnectionEvent.SpeakingWhileMuted, () => {
-            c98 = true;
-            if (!c98) {
-              closure_1_69.emitChange();
-            }
-            closure_1_99.start(closure_1_62, () => {
-              c98 = false;
-              closure_1_69.emitChange();
-            });
-          });
-        }
-        setAttenuation.on(pollMetrics(status[25]).BaseConnectionEvent.DesktopSourceEnd, (endReason, errorCode) => {
-          obj = obj(dependencyMap[43]);
-          obj2 = { type: "MEDIA_ENGINE_SET_GO_LIVE_SOURCE", settings: obj3, endReason, errorCode };
-          obj3 = { context: setAttenuation.context };
-          obj.dispatch(obj2);
-        });
-        setAttenuation.on(pollMetrics(status[25]).BaseConnectionEvent.InteractionRequired, (required) => {
-          obj = closure_1_1(status[43]);
-          obj2 = { type: "MEDIA_ENGINE_INTERACTION_REQUIRED", required };
-          obj.dispatch(obj2);
-        });
-        setAttenuation.on(pollMetrics(status[25]).BaseConnectionEvent.VideoHookInitialize, (backend, format, framebuffer_format, sample_count, success, reinitialization) => {
-          desktopSource = undefined;
-          if (closure_1_74 != null) {
-            desktopSource = closure_1_74.desktopSource;
-          }
-          if (null != desktopSource) {
-            obj = { backend, format, framebuffer_format, sample_count, success, reinitialization };
-            const track = closure_1_1(status[42]).track;
-            const VIDEOHOOK_INITIALIZED = constants.VIDEOHOOK_INITIALIZED;
-            let desktopSource1;
-            closure_1_1(status[42]);
-            const tmp16 = closure_1_1(status[56]);
-            if (closure_1_74 != null) {
-              desktopSource1 = closure_1_74.desktopSource;
-            }
-            const merged = Object.assign(tmp16(desktopSource1));
-            track(VIDEOHOOK_INITIALIZED, obj);
-          }
-        });
-        setAttenuation.on(pollMetrics(status[25]).BaseConnectionEvent.NoiseCancellationError, closure_150);
-        setAttenuation.on(pollMetrics(status[25]).BaseConnectionEvent.VoiceActivityDetectorError, closure_150);
-        setAttenuation.on(pollMetrics(status[25]).BaseConnectionEvent.SdpError, (operation, error, type, sdp) => {
-          obj = closure_1_1(status[42]);
-          obj2 = { operation, error, type, sdp };
-          obj.track(constants.SDP_ERROR, obj2);
-        });
-        setAttenuation.on(pollMetrics(status[25]).BaseConnectionEvent.VideoState, (videoState) => {
-          obj = obj(dependencyMap[43]);
-          obj2 = { type: "MEDIA_ENGINE_VIDEO_STATE_CHANGED", videoState, context: setAttenuation.context };
-          obj.dispatch(obj2);
-        });
-        setAttenuation.setBitRate(bitrate.bitrate);
-        const result6 = setAttenuation.applyVideoQualityMode(mode.mode);
-        const tmp94Result = pollMetrics(status[24]);
-        const isWindowsResult = tmp94Result.isWindows() && closure_72.supports(constants3.ASYNC_VIDEO_INPUT_DEVICE_INIT);
-        if (isWindowsResult) {
-          const result7 = closure_72.setAsyncVideoInputDeviceInit(true);
-        }
-      }
-      const promise = closure_142();
-      promise.then((result) => {
-        setAttenuation.setExperimentFlag(closure_2_45.H265_HARDWARE_DECODE_AVAILABLE, result);
-      });
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.DeviceChange, (inputDevices, outputDevices, videoDevices) => {
-      timeout.stop();
-      obj = obj(dependencyMap[43]);
-      obj2 = { type: "MEDIA_ENGINE_DEVICES", inputDevices, outputDevices, videoDevices };
-      obj.dispatch(obj2);
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.VolumeChange, (inputVolume, outputVolume) => {
-      obj = obj(dependencyMap[43]);
-      obj2 = { type: "AUDIO_VOLUME_CHANGE", inputVolume, outputVolume };
-      obj.dispatch(obj2);
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.DesktopSourceEnd, (endReason, errorCode) => {
-      obj = obj(dependencyMap[43]);
-      obj2 = { type: "MEDIA_ENGINE_SET_GO_LIVE_SOURCE", settings: null, endReason, errorCode };
-      obj.dispatch(obj2);
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.AudioPermission, (granted) => {
-      c125 = true;
-      obj = obj(dependencyMap[43]);
-      obj2 = { type: "MEDIA_ENGINE_PERMISSION", kind: "audio", granted };
-      obj.dispatch(obj2);
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.VideoPermission, (granted) => {
-      obj = obj(dependencyMap[43]);
-      obj2 = { type: "MEDIA_ENGINE_PERMISSION", kind: "video", granted };
-      obj.dispatch(obj2);
-    });
-    const on = closure_72.on;
-    on(pollMetrics(4951).MediaEngineEvent.WatchdogTimeout, _asyncToGenerator(async () => {
-      let closure_2;
-      let closure_3;
-      let obj5;
-      let obj8;
-      if (c6 === 2) {
-        c6 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          obj2 = { value, done: true };
-          return obj2;
+          setAttenuation.setExperimentFlag(closure_45.H265_DISABLE_ENCODE, !satisfiesResult);
         } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        let c4;
-        try {
-          let will_restart;
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj3 = { value, done: true };
-              return obj3;
-            } else {
-              status = undefined;
-              will_restart = undefined;
-              const _window = window;
-              if ("canary" === window.GLOBAL_ENV.RELEASE_CHANNEL) {
-                c4 = 1;
-                const obj4 = { message: { message: "Voice Watchdog Timeout" } };
-                c5 = 2;
-                c6 = 1;
-                const obj6 = { value: obj8.submitLiveCrashReport(obj4), done: false };
-                obj8 = obj(dependencyMap[57]);
-                return obj6;
-              }
+          if (tmp9Result24.isLinux()) {
+            if (tmp9Result25.getAV1EncodeExperimentLinuxConfig("MediaEngineStore").enabled) {
+              setAttenuation.setExperimentFlag(closure_45.SIGNAL_AV1_ENCODE, true);
             }
-          } else if (1 === c5) {
-            c4 = 0;
-            if (typeof status.status === "number") {
-              status = tmp.status;
-            }
-          } else if (2 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 0;
-              c6 = 3;
-              const obj7 = { value, done: true };
-              return obj7;
-            } else {
-              c4 = 0;
-            }
+            setAttenuation.setExperimentFlag(closure_45.SIGNAL_AV1_DECODE, true);
+            tmp9Result25 = tmp9(13892);
           } else {
-            if (3 === c5) {
-              c4 = 0;
-              closure_130_57.error("Failed to flush voice watchdog timeout analytics event", status);
-            } else {
-              if (4 === c5) {
-                if (arg0 === 1) {
-                  c6 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c4 = 0;
-                  c6 = 3;
-                  const obj9 = { value, done: true };
-                  return obj9;
-                } else {
-                  c4 = 0;
-                }
-              } else if (arg0 === 1) {
-                c6 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c6 = 3;
-                obj = { value, done: true };
-                return obj;
-              } else {
-                const Storage = closure_130_0(closure_130_3[59]).Storage;
-                const _Date = Date;
-                set = Storage.set;
-                const str = Date.now();
-                result = set("discord_watchdog_restart_timestamp", str.toString());
-                const app = closure_130_1(closure_130_3[58]).app;
-                app.relaunch();
-              }
-              c6 = 3;
-              return { value: "IconComponent", done: null };
+            let isIOSResult = tmp9(1369).isIOS();
+            if (!isIOSResult) {
+              isIOSResult = tmp9(1369).isAndroid();
+              const tmp9Result27 = tmp9(1369);
             }
-            const tmp20 = will_restart;
-            if (tmp20) {
+            if (isIOSResult) {
+              setAttenuation.setExperimentFlag(closure_45.SIGNAL_AV1_DECODE, true);
+              setAttenuation.setExperimentFlag(closure_45.SIGNAL_AV1_HARDWARE_DECODE, true);
+              setAttenuation.setExperimentFlag(closure_45.H265_HARDWARE_DECODE_AVAILABLE, true);
+            }
+            const tmp9Result26 = tmp9(1369);
+          }
+          tmp9Result24 = tmp9(1369);
+        }
+        tmp9Result23 = tmp9(1369);
+      }
+      tmp9Result22 = tmp9(1369);
+      if (tmp9Result28.isWeb()) {
+        setAttenuation.setExperimentFlag(closure_45.BROWSER_HEVC, closure_1(13893).getConfig({ location: "MediaEngineStore" }).enabled);
+        const tmp22Result2 = closure_1(13893);
+      }
+      tmp9Result28 = tmp9(1369);
+      enabled = tmp9(1369).isWindows();
+      if (enabled) {
+        let startsWithResult;
+        if (closure_131 != null) {
+          startsWithResult = closure_131.startsWith("AMD");
+        }
+        enabled = startsWithResult;
+      }
+      if (enabled) {
+        enabled = tmp9(13894).getWmfGpuEncode("MediaEngineStore").enabled;
+        const tmp9Result30 = tmp9(13894);
+      }
+      if (enabled) {
+        setAttenuation.setExperimentFlag(closure_45.WMF_GPU_ENCODE, true);
+      }
+      const tmp9Result29 = tmp9(1369);
+      let enabled2 = tmp9(1369).isWindows();
+      if (enabled2) {
+        let startsWithResult1;
+        if (closure_131 != null) {
+          startsWithResult1 = closure_131.startsWith("Intel");
+        }
+        enabled2 = startsWithResult1;
+      }
+      if (enabled2) {
+        enabled2 = true === closure_132;
+      }
+      if (enabled2) {
+        enabled2 = 1 === closure_133;
+      }
+      if (enabled2) {
+        enabled2 = tmp9(13895).getWmfGpuEncodeIntel("MediaEngineStore").enabled;
+        const tmp9Result32 = tmp9(13895);
+      }
+      if (enabled2) {
+        setAttenuation.setExperimentFlag(closure_45.WMF_GPU_ENCODE, true);
+        setAttenuation.setExperimentFlag(closure_45.INTEL_GPU_DISABLE, true);
+      }
+      const tmp9Result31 = tmp9(1369);
+      let enabled3 = tmp9(1369).isWindows();
+      if (enabled3) {
+        let startsWithResult2;
+        if (closure_131 != null) {
+          startsWithResult2 = closure_131.startsWith("Intel");
+        }
+        enabled3 = startsWithResult2;
+      }
+      if (enabled3) {
+        enabled3 = true === closure_132;
+      }
+      if (enabled3) {
+        enabled3 = 1 === closure_133;
+      }
+      if (enabled3) {
+        enabled3 = tmp9(13896).getWmfCpuEncodeIntel("MediaEngineStore").enabled;
+        const tmp9Result34 = tmp9(13896);
+      }
+      if (enabled3) {
+        setAttenuation.setExperimentFlag(closure_45.INTEL_GPU_DISABLE, true);
+      }
+      const tmp9Result33 = tmp9(1369);
+      let enabled4 = tmp9(1369).isWindows();
+      if (enabled4) {
+        let startsWithResult3;
+        if (closure_131 != null) {
+          startsWithResult3 = closure_131.startsWith("Qualcomm");
+        }
+        enabled4 = startsWithResult3;
+      }
+      if (enabled4) {
+        enabled4 = tmp9(13894).getWmfGpuEncode("MediaEngineStore").enabled;
+        const tmp9Result36 = tmp9(13894);
+      }
+      if (enabled4) {
+        setAttenuation.setExperimentFlag(closure_45.WMF_GPU_ENCODE, true);
+      }
+      const result2 = closure_72.setHasFullbandPerformance(closure_1(13897)());
+      const result3 = setAttenuation.setRemoteAudioHistory(1000);
+      const tmp5Result = closure_143(setAttenuation.context);
+      const result4 = setAttenuation.setPostponeDecodeLevel(100);
+      const _Object = Object;
+      const keys = Object.keys(tmp5Result.localMutes);
+      for (const item10291 of keys) {
+        if (item10291 !== closure_11.getId()) {
+          let setLocalMuteResult = arg0.setLocalMute(item10291, tmp5Result.localMutes[item10291]);
+        }
+        continue;
+      }
+      const _Object2 = Object;
+      const keys1 = Object.keys(tmp5Result.localVolumes);
+      for (const item10310 of keys1) {
+        if (item10310 !== closure_11.getId()) {
+          let setLocalVolumeResult = arg0.setLocalVolume(item10310, tmp5Result.localVolumes[item10310]);
+        }
+        continue;
+      }
+      const _Object3 = Object;
+      const keys2 = Object.keys(tmp5Result.localPans);
+      for (const item10329 of keys2) {
+        let rect = tmp5Result.localPans[item10329];
+        let setLocalPanResult = arg0.setLocalPan(item10329, rect.left, rect.right);
+        continue;
+      }
+      const _Object4 = Object;
+      const keys3 = Object.keys(tmp5Result.disabledLocalVideos);
+      for (const item10345 of keys3) {
+        let result5 = arg0.setLocalVideoDisabled(item10345, tmp5Result.disabledLocalVideos[item10345]);
+        continue;
+      }
+      setAttenuation.on(pollMetrics(4951).BaseConnectionEvent.Speaking, (userId, speakingFlags, arg2, voiceDb) => {
+        closure_1(584).dispatch({ type: "SPEAKING", context: setAttenuation.context, userId, speakingFlags, voiceDb });
+      });
+      if (setAttenuation.context === constants4.DEFAULT) {
+        c98 = false;
+        setAttenuation.on(tmp93(4951).BaseConnectionEvent.SpeakingWhileMuted, () => {
+          c98 = true;
+          if (!c98) {
+            closure_1_69.emitChange();
+          }
+          closure_1_99.start(closure_1_62, () => {
+            c98 = false;
+            closure_1_69.emitChange();
+          });
+        });
+      }
+      setAttenuation.on(pollMetrics(4951).BaseConnectionEvent.DesktopSourceEnd, (endReason, errorCode) => {
+        obj2 = { type: "MEDIA_ENGINE_SET_GO_LIVE_SOURCE", settings: { context: setAttenuation.context }, endReason, errorCode };
+        closure_1(584).dispatch(obj2);
+      });
+      setAttenuation.on(pollMetrics(4951).BaseConnectionEvent.InteractionRequired, (required) => {
+        closure_1_1(584).dispatch({ type: "MEDIA_ENGINE_INTERACTION_REQUIRED", required });
+      });
+      setAttenuation.on(pollMetrics(4951).BaseConnectionEvent.VideoHookInitialize, (backend, format, framebuffer_format, sample_count, success, reinitialization) => {
+        desktopSource = undefined;
+        if (closure_1_74 != null) {
+          desktopSource = closure_1_74.desktopSource;
+        }
+        if (null != desktopSource) {
+          obj2 = { backend, format, framebuffer_format, sample_count, success, reinitialization };
+          let desktopSource1;
+          const obj = closure_1_1(1252);
+          if (closure_1_74 != null) {
+            desktopSource1 = closure_1_74.desktopSource;
+          }
+          const merged = Object.assign(closure_1_1(5031)(desktopSource1));
+          obj.track(constants.VIDEOHOOK_INITIALIZED, obj2);
+          const tmp15 = closure_1_1(5031);
+        }
+      });
+      setAttenuation.on(pollMetrics(4951).BaseConnectionEvent.NoiseCancellationError, closure_150);
+      setAttenuation.on(pollMetrics(4951).BaseConnectionEvent.VoiceActivityDetectorError, closure_150);
+      setAttenuation.on(pollMetrics(4951).BaseConnectionEvent.SdpError, (operation, error, type, sdp) => {
+        closure_1_1(1252).track(constants.SDP_ERROR, { operation, error, type, sdp });
+      });
+      setAttenuation.on(pollMetrics(4951).BaseConnectionEvent.VideoState, (videoState) => {
+        closure_1(584).dispatch({ type: "MEDIA_ENGINE_VIDEO_STATE_CHANGED", videoState, context: setAttenuation.context });
+      });
+      setAttenuation.setBitRate(bitrate.bitrate);
+      const result6 = setAttenuation.applyVideoQualityMode(mode.mode);
+      const tmp9Result35 = tmp9(1369);
+      let isWindowsResult = pollMetrics(1369).isWindows();
+      if (isWindowsResult) {
+        isWindowsResult = closure_72.supports(constants3.ASYNC_VIDEO_INPUT_DEVICE_INIT);
+      }
+      if (isWindowsResult) {
+        const result7 = closure_72.setAsyncVideoInputDeviceInit(true);
+      }
+      const tmp93Result = pollMetrics(1369);
+    }
+    obj = pollMetrics(1369);
+    closure_142().then((result) => {
+      setAttenuation.setExperimentFlag(closure_2_45.H265_HARDWARE_DECODE_AVAILABLE, result);
+    });
+    const promise = closure_142();
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.DeviceChange, (inputDevices, outputDevices, videoDevices) => {
+    timeout.stop();
+    closure_1(584).dispatch({ type: "MEDIA_ENGINE_DEVICES", inputDevices, outputDevices, videoDevices });
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.VolumeChange, (inputVolume, outputVolume) => {
+    closure_1(584).dispatch({ type: "AUDIO_VOLUME_CHANGE", inputVolume, outputVolume });
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.DesktopSourceEnd, (endReason, errorCode) => {
+    closure_1(584).dispatch({ type: "MEDIA_ENGINE_SET_GO_LIVE_SOURCE", settings: null, endReason, errorCode });
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.AudioPermission, (granted) => {
+    c125 = true;
+    closure_1(584).dispatch({ type: "MEDIA_ENGINE_PERMISSION", kind: "audio", granted });
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.VideoPermission, (granted) => {
+    closure_1(584).dispatch({ type: "MEDIA_ENGINE_PERMISSION", kind: "video", granted });
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.WatchdogTimeout, asyncGeneratorStep(async () => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            let status;
+            closure_129_1 = undefined;
+            const _window = window;
+            if ("canary" === window.GLOBAL_ENV.RELEASE_CHANNEL) {
+              c4 = 1;
+              const obj4 = { message: { message: "Voice Watchdog Timeout" } };
+              c5 = 2;
+              c6 = 1;
+              const obj6 = { value: closure_1(4890).submitLiveCrashReport(obj4), done: false };
+              return obj6;
+            }
+          }
+        } else if (1 === tmp7) {
+          c4 = 0;
+          closure_129_2 = closure_3;
+          if (typeof closure_129_2.status === "number") {
+            status = closure_129_2.status;
+          }
+        } else if (2 === tmp7) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 0;
+            c6 = 3;
+            const obj7 = { value, done: true };
+            return obj7;
+          } else {
+            c4 = 0;
+          }
+        } else {
+          if (3 === tmp7) {
+            c4 = 0;
+            closure_129_3 = closure_3;
+            closure_130_57.error("Failed to flush voice watchdog timeout analytics event", closure_129_3);
+            if (closure_129_1) {
               closure_130_57.info("Relaunching app due to voice watchdog timeout");
               const processUtils = closure_130_1(closure_130_3[58]).processUtils;
               c5 = 5;
               c6 = 1;
-              const obj10 = { value: processUtils.setCrashReason("voice-watchdog-timeout"), done: false };
+              const obj9 = { value: processUtils.setCrashReason("voice-watchdog-timeout"), done: false };
+              return obj9;
+            } else {
+              c6 = 3;
+            }
+          } else if (4 === tmp7) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 0;
+              c6 = 3;
+              const obj10 = { value, done: true };
               return obj10;
+            } else {
+              c4 = 0;
             }
-          }
-          let c0 = status;
-          const warn = closure_130_57.warn;
-          if (status == null) {
-            c0 = 200;
-          }
-          const _HermesInternal = HermesInternal;
-          warn("Watchdog timeout, report submission status: " + c0);
-          will_restart = null != closure_130_1(closure_130_3[58]).processUtils.setCrashReason;
-          c4 = 2;
-          const obj11 = { minidump_submission_error: status, will_restart };
-          c5 = 4;
-          c6 = 1;
-          const obj12 = { value: obj5.track(closure_130_18.VOICE_WATCHDOG_TIMEOUT, obj11, { flush: true }), done: false };
-          obj5 = closure_130_1(closure_130_3[42]);
-          return obj12;
-        } catch (tmp49) {
-          status = tmp49;
-          if (0 === c4) {
+          } else if (arg0 === 1) {
             c6 = 3;
-            throw tmp49;
-          } else if (1 === tmp51) {
-            c5 = 1;
-          } else {
-            c5 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            const Storage = closure_130_0(closure_130_3[59]).Storage;
+            const _Date = Date;
+            result = Storage.set("discord_watchdog_restart_timestamp", Date.now().toString());
+            const app = closure_130_1(closure_130_3[58]).app;
+            app.relaunch();
+            const str = Date.now();
           }
-        }
-      }
-    }));
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.VideoInputInitialized, (description) => {
-      let rounded;
-      const tmp = obj;
-      const tmp3 = obj(dependencyMap[42]);
-      obj = { device_name: description.description.name, time_to_first_frame_ms: rounded, timed_out: null, activity: null, media_session_id: RTCConnectionStore.getMediaSessionId(), rtc_connection_id: RTCConnectionStore.getRTCConnectionId() };
-      rounded = null;
-      const track = tmp3.track;
-      const VIDEO_INPUT_INITIALIZED = constants.VIDEO_INPUT_INITIALIZED;
-      if (!description.initializationTimerExpired) {
-        const _Math = Math;
-        rounded = Math.round(description.timeToFirstFrame * tmp(dependencyMap[23]).Millis.SECOND);
-      }
-      ({ initializationTimerExpired: obj.timed_out, entropy: obj.activity } = description);
-      track(VIDEO_INPUT_INITIALIZED, obj);
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.AudioInputInitialized, (description) => {
-      const tmp = obj(dependencyMap[42]);
-      obj = { device_name: description.description.name, time_to_initialized_ms: Math.round(description.timeToInitialized * obj(dependencyMap[23]).Millis.SECOND), rtc_connection_id: RTCConnectionStore.getRTCConnectionId() };
-      const track = tmp.track;
-      const AUDIO_INPUT_INITIALIZED = constants.AUDIO_INPUT_INITIALIZED;
-      track(AUDIO_INPUT_INITIALIZED, obj);
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.ClipsRecordingRestartNeeded, () => {
-      obj = obj(dependencyMap[43]);
-      obj.dispatch({ type: "CLIPS_RESTART" });
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.ClipsInitFailure, (errMsg, applicationName) => {
-      let closure_2 = closure_82 < 3;
-      closure_82 = closure_82 + 1;
-      obj = applicationName(status[43]);
-      obj.wait(() => {
-        const tmp = obj;
-        obj = obj(dependencyMap[43]);
-        obj2 = { type: "CLIPS_INIT_FAILURE", errMsg, applicationName };
-        obj.dispatch(obj2);
-        if (closure_2) {
-          const tmpResult = tmp(dependencyMap[43]);
-          tmpResult.dispatch({ type: "CLIPS_RESTART" });
-        } else {
-          const _HermesInternal = HermesInternal;
-          logger.warn("Clips init failure budget exhausted (" + c82 + " consecutive unhealthy attempts); skipping auto-restart. A settings flip / game change / app restart will retry.");
-        }
-      });
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.ClipsRecordingHealthy, () => {
-      if (0 !== c82) {
-        const _HermesInternal = HermesInternal;
-        logger.info("Clips bridge reported healthy; resetting restart budget (was " + c82 + ").");
-        c82 = 0;
-      }
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.ClipsRecordingReadyChanged, (arg0) => {
-      if (closure_1_83 !== arg0) {
-        const _HermesInternal = HermesInternal;
-        logger.info("Clips recorder ready changed: " + arg0);
-        closure_1_83 = arg0;
-      }
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.ClipsBridgeIdleShutdown, () => {
-      logger.info("Clips bridge idle shutdown");
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.ClipsRecordingEnded, (arg0, soundshareId) => {
-      let id;
-      if (_null != null) {
-        desktopSource = _null.desktopSource;
-        if (desktopSource != null) {
-          id = desktopSource.id;
-        }
-      }
-      if (id === arg0) {
-        let tmp3 = null != soundshareId;
-        if (tmp3) {
-          soundshareId = undefined;
-          if (desktopSource != null) {
-            const desktopSource2 = desktopSource.desktopSource;
-            if (desktopSource2 != null) {
-              soundshareId = desktopSource2.soundshareId;
-            }
-          }
-          tmp3 = soundshareId !== soundshareId;
-        }
-        if (tmp3) {
-          obj = HookAll;
-          result = obj.cancelAttachToProcess(soundshareId);
-        }
-        _null = null;
-      }
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.NativeScreenSharePickerUpdate, (existing, content) => {
-      obj = obj(dependencyMap[43]);
-      obj2 = { type: "NATIVE_SCREEN_SHARE_PICKER_UPDATE", existing, content };
-      obj.dispatch(obj2);
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.NativeScreenSharePickerCancel, (existing) => {
-      obj = obj(dependencyMap[43]);
-      obj2 = { type: "NATIVE_SCREEN_SHARE_PICKER_CANCEL", existing };
-      obj.dispatch(obj2);
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.NativeScreenSharePickerError, (error) => {
-      obj = obj(dependencyMap[43]);
-      obj2 = { type: "NATIVE_SCREEN_SHARE_PICKER_ERROR", error };
-      obj.dispatch(obj2);
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.AudioDeviceModuleError, (audio_device_module, code, device_name) => {
-      obj = obj(dependencyMap[42]);
-      obj2 = { audio_device_module, code, device_name };
-      obj.track(constants.AUDIO_DEVICE_MODULE_ERROR, obj2);
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.VideoCodecError, (mode) => {
-      let VIDEO_DECODE_ERROR;
-      let tmp2;
-      let tmp3;
-      if ("encode" === mode.mode) {
-        VIDEO_DECODE_ERROR = pollMetrics(dependencyMap[41]).AVError.VIDEO_ENCODE_ERROR;
-        tmp2 = dependencyMap;
-        tmp3 = pollMetrics;
-      } else {
-        tmp2 = dependencyMap;
-        VIDEO_DECODE_ERROR = pollMetrics(dependencyMap[41]).AVError.VIDEO_DECODE_ERROR;
-        tmp3 = pollMetrics;
-      }
-      obj = { videoCodec: mode.codecStandard, errorMessage: mode.message };
-      const reportAVError = tmp3(tmp2[41]).reportAVError;
-      tmp3(tmp2[41]);
-      if (VIDEO_DECODE_ERROR === tmp3(tmp2[41]).AVError.VIDEO_ENCODE_ERROR) {
-        obj2 = { type: VIDEO_DECODE_ERROR, videoEncoder: mode.implName };
-        const merged = Object.assign(obj);
-        obj3 = obj2;
-      } else {
-        obj3 = { type: VIDEO_DECODE_ERROR, videoDecoder: mode.implName };
-        const merged1 = Object.assign(obj);
-      }
-      reportAVError(obj3);
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.ConnectionStats, (arr) => {
-      obj = obj(dependencyMap[43]);
-      obj2 = {
-        type: "MEDIA_ENGINE_CONNECTION_STATS",
-        connectionStats: arr.map((connection) => {
-          connection = connection.connection;
-          obj = { stats: connection.stats, mediaEngineConnectionId: connection.mediaEngineConnectionId, version: +closure_67, context: connection.context };
-          closure_67 = tmp + 1;
+          c6 = 3;
+          const obj = { value, done: true };
           return obj;
-        })
-      };
-      obj.dispatch(obj2);
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.VoiceProcessingError, handleVoiceProcessingError);
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.VideoFilterError, handleVideoFilterError);
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.SpatialAudioStatus, handleSpatialAudioStatus);
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.VoiceQueueMetrics, (taskMetrics) => {
-      const tmp = processQueueMetricsForAnalytics(taskMetrics);
-      if (null !== tmp) {
-        obj = obj(dependencyMap[42]);
-        obj.track(constants.VOICE_QUEUE_METRICS, tmp);
-      }
-    });
-    result = closure_72.setOnVideoContainerResized((streamId, width, height) => {
-      obj = width(status[43]);
-      obj.wait(() => {
-        obj = obj(dependencyMap[43]);
-        obj2 = { type: "VIDEO_SIZE_UPDATE", streamId, dimensions: size };
-        size = { width, height };
-        return obj.dispatch(obj2);
-      });
-    });
-    setGamescopeVaapiEnabled();
-    navigation.reset();
-    let promise = getSystemAnalyticsInfo();
-    promise.then((result) => {
-      let closure_1_131;
-      let closure_1_132;
-      let closure_1_133;
-      let gpus;
-      if (null != result) {
-        ({ gpu_brand: closure_1_131, has_intel_hybrid_igpu: closure_1_132, gpu_count: closure_1_133, gpus } = result);
-        if (gpus == null) {
-          gpus = [];
         }
-        gpus.length > 0 && gpus.every((vendor_id) => "10de" === vendor_id.vendor_id);
+        c0 = status;
+        if (status == null) {
+          c0 = 200;
+        }
+        const _HermesInternal = HermesInternal;
+        closure_130_57.warn("Watchdog timeout, report submission status: " + c0);
+        closure_129_1 = null != closure_130_1(closure_130_3[58]).processUtils.setCrashReason;
+        c4 = 2;
+        const obj11 = { minidump_submission_error: status, will_restart: closure_129_1 };
+        c5 = 4;
+        c6 = 1;
+        const obj12 = { value: closure_130_1(closure_130_3[42]).track(closure_130_18.VOICE_WATCHDOG_TIMEOUT, obj11, { flush: true }), done: false };
+        return obj12;
+      } catch (tmp52) {
+        closure_3 = tmp52;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp52;
+        } else if (tmp === tmp54) {
+          c5 = tmp;
+        } else {
+          c5 = tmp2;
+        }
       }
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.DeviceHardwareMutedChange, (deviceGuid, hardwareMuted) => {
-      obj = obj(dependencyMap[43]);
-      obj2 = { type: "AUDIO_INPUT_DEVICE_HARDWARE_MUTED_CHANGED", deviceGuid, hardwareMuted };
-      obj.dispatch(obj2);
-    });
-    closure_72.on(pollMetrics(4951).MediaEngineEvent.SystemMicrophoneModeChange, (arg0) => {
-      let closure_1_129 = arg0;
-      closure_1_72.eachConnection(updateConnectionVoiceProcessing);
-      mediaEngineStore.emitChange();
-    });
-    let Storage = pollMetrics(510).Storage;
-    const value = Storage.get("audio");
-    if (null != value) {
-      const Storage2 = tmp8(510).Storage;
-      obj2 = {};
-      obj2[MediaEngineContextTypes.DEFAULT] = value;
-      let result1 = Storage2.set(MediaEngineStore_str, obj2);
-      const Storage3 = tmp8(510).Storage;
-      Storage3.remove("audio");
     }
-    const Storage4 = tmp8(510).Storage;
-    let value2 = Storage4.get(MediaEngineStore_str);
-    if (value2 == null) {
-      value2 = {};
+  }));
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.VideoInputInitialized, (description) => {
+    obj3 = { device_name: description.description.name, time_to_first_frame_ms: null, timed_out: null, activity: null, media_session_id: null, rtc_connection_id: null };
+    let rounded = null;
+    if (!description.initializationTimerExpired) {
+      const _Math = Math;
+      rounded = Math.round(description.timeToFirstFrame * closure_1(1102).Millis.SECOND);
     }
-    let obj4 = obj(12);
-    obj4.each(value2, (modeOptions) => {
-      const tmp2 = obj(dependencyMap[33]);
-      obj = { mode: constants2.VOICE_ACTIVITY, modeOptions: { threshold: -60, autoThreshold: pollMetrics(dependencyMap[24]).isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" }, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj2, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: videoDeviceId, outputDeviceId: videoDeviceId, videoDeviceId, qos: false, qosMigrated: false, videoHook: closure_1_72.supports(constants3.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      const defaultsDeep = tmp2.defaultsDeep;
-      obj2 = {};
-      pollMetrics(dependencyMap[24]).isPlatformEmbedded || false;
-      const merged = Object.assign(closure_1_34);
-      defaultsDeep(modeOptions, obj);
-      const tmp9 = null != modeOptions.modeOptions && typeof modeOptions.modeOptions.shortcut === "string";
-      if (tmp9) {
-        modeOptions = modeOptions.modeOptions;
-        const tmp3Result = pollMetrics(dependencyMap[60]);
-        modeOptions.shortcut = tmp3Result.toCombo(modeOptions.modeOptions.shortcut);
+    obj3.time_to_first_frame_ms = rounded;
+    ({ initializationTimerExpired: obj2.timed_out, entropy: obj2.activity } = description);
+    obj3.media_session_id = RTCConnectionStore.getMediaSessionId();
+    obj3.rtc_connection_id = RTCConnectionStore.getRTCConnectionId();
+    closure_1(1252).track(constants.VIDEO_INPUT_INITIALIZED, obj3);
+    const obj = closure_1(1252);
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.AudioInputInitialized, (description) => {
+    const obj = closure_1(1252);
+    obj.track(constants.AUDIO_INPUT_INITIALIZED, { device_name: description.description.name, time_to_initialized_ms: Math.round(description.timeToInitialized * closure_1(1102).Millis.SECOND), rtc_connection_id: RTCConnectionStore.getRTCConnectionId() });
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.ClipsRecordingRestartNeeded, () => {
+    closure_1(584).dispatch({ type: "CLIPS_RESTART" });
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.ClipsInitFailure, (errMsg, applicationName) => {
+    closure_2 = closure_82 < 3;
+    closure_82 = closure_82 + 1;
+    applicationName(584).wait(() => {
+      applicationName(584).dispatch({ type: "CLIPS_INIT_FAILURE", errMsg, applicationName });
+      if (closure_2) {
+        applicationName(584).dispatch({ type: "CLIPS_RESTART" });
+        const tmpResult = applicationName(584);
+      } else {
+        const _HermesInternal = HermesInternal;
+        logger.warn("Clips init failure budget exhausted (" + c82 + " consecutive unhealthy attempts); skipping auto-restart. A settings flip / game change / app restart will retry.");
       }
-      const tmp10 = null != modeOptions.modeOptions && 4 !== modeOptions.vadUseKrispSettingVersion;
-      if (tmp10) {
-        modeOptions.vadUseKrispSettingVersion = 4;
-        modeOptions.modeOptions.vadUseKrisp = true;
+      const obj = applicationName(584);
+      obj2 = { type: "CLIPS_INIT_FAILURE", errMsg, applicationName };
+    });
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.ClipsRecordingHealthy, () => {
+    if (0 !== c82) {
+      const _HermesInternal = HermesInternal;
+      logger.info("Clips bridge reported healthy; resetting restart budget (was " + c82 + ").");
+      c82 = 0;
+    }
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.ClipsRecordingReadyChanged, (arg0) => {
+    if (closure_83 !== arg0) {
+      const _HermesInternal = HermesInternal;
+      logger.info("Clips recorder ready changed: " + arg0);
+      closure_83 = arg0;
+    }
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.ClipsBridgeIdleShutdown, () => {
+    logger.info("Clips bridge idle shutdown");
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.ClipsRecordingEnded, (arg0, soundshareId) => {
+    let id;
+    if (_null != null) {
+      desktopSource = _null.desktopSource;
+      if (desktopSource != null) {
+        id = desktopSource.id;
       }
-      if (!modeOptions.qosMigrated) {
-        modeOptions.qosMigrated = true;
-        modeOptions.qos = false;
-      }
-      if (!modeOptions.vadThrehsoldMigrated) {
-        modeOptions.vadThrehsoldMigrated = true;
-        const modeOptions2 = modeOptions.modeOptions;
-        let threshold;
-        if (modeOptions2 != null) {
-          threshold = modeOptions2.threshold;
+    }
+    if (id === arg0) {
+      let tmp3 = null != soundshareId;
+      if (tmp3) {
+        soundshareId = undefined;
+        if (desktopSource != null) {
+          const desktopSource2 = desktopSource.desktopSource;
+          if (desktopSource2 != null) {
+            soundshareId = desktopSource2.soundshareId;
+          }
         }
-        if (-40 === threshold) {
-          modeOptions.modeOptions.threshold = -60;
-        }
+        tmp3 = soundshareId !== soundshareId;
       }
-      const supportsResult = closure_1_72.supports(constants3.SIDECHAIN_COMPRESSION) && modeOptions.sidechainCompressionSettingVersion < 1;
-      if (supportsResult) {
-        modeOptions.sidechainCompressionSettingVersion = 1;
-        modeOptions.sidechainCompression = true;
+      if (tmp3) {
+        result = HookAll.cancelAttachToProcess(soundshareId);
       }
-      if (modeOptions.audioMixerSettingsVersion < 3) {
-        modeOptions.audioMixerSettingsVersion = 3;
-        const obj4 = {};
-        const merged1 = Object.assign(closure_1_34);
-        modeOptions.audioMixerSettings = obj4;
+      _null = null;
+    }
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.NativeScreenSharePickerUpdate, (existing, content) => {
+    closure_1(584).dispatch({ type: "NATIVE_SCREEN_SHARE_PICKER_UPDATE", existing, content });
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.NativeScreenSharePickerCancel, (existing) => {
+    closure_1(584).dispatch({ type: "NATIVE_SCREEN_SHARE_PICKER_CANCEL", existing });
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.NativeScreenSharePickerError, (error) => {
+    closure_1(584).dispatch({ type: "NATIVE_SCREEN_SHARE_PICKER_ERROR", error });
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.AudioDeviceModuleError, (audio_device_module, code, device_name) => {
+    closure_1(1252).track(constants.AUDIO_DEVICE_MODULE_ERROR, { audio_device_module, code, device_name });
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.VideoCodecError, (mode) => {
+    if ("encode" === mode.mode) {
+      let VIDEO_DECODE_ERROR = pollMetrics(9131).AVError.VIDEO_ENCODE_ERROR;
+      let tmp3 = pollMetrics;
+    } else {
+      VIDEO_DECODE_ERROR = pollMetrics(9131).AVError.VIDEO_DECODE_ERROR;
+      tmp3 = pollMetrics;
+    }
+    const obj = { videoCodec: mode.codecStandard, errorMessage: mode.message };
+    if (VIDEO_DECODE_ERROR === tmp3(9131).AVError.VIDEO_ENCODE_ERROR) {
+      obj2 = { type: VIDEO_DECODE_ERROR };
+      const merged = Object.assign(obj);
+      obj2.videoEncoder = mode.implName;
+      obj3 = obj2;
+    } else {
+      obj3 = { type: VIDEO_DECODE_ERROR };
+      const merged1 = Object.assign(obj);
+      obj3.videoDecoder = mode.implName;
+    }
+    tmp3(9131).reportAVError(obj3);
+    const tmp3Result = tmp3(9131);
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.ConnectionStats, (arr) => {
+    let obj = closure_1(584);
+    obj.dispatch({
+      type: "MEDIA_ENGINE_CONNECTION_STATS",
+      connectionStats: arr.map((connection) => {
+        connection = connection.connection;
+        const obj = { stats: connection.stats, mediaEngineConnectionId: connection.mediaEngineConnectionId, version: null, context: connection.context };
+        closure_67 = tmp + 1;
+        obj.version = +closure_67;
+        return obj;
+      })
+    });
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.VoiceProcessingError, handleVoiceProcessingError);
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.VideoFilterError, handleVideoFilterError);
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.SpatialAudioStatus, handleSpatialAudioStatus);
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.VoiceQueueMetrics, (taskMetrics) => {
+    const tmp = processQueueMetricsForAnalytics(taskMetrics);
+    if (null !== tmp) {
+      closure_1(1252).track(constants.VOICE_QUEUE_METRICS, tmp);
+      const obj = closure_1(1252);
+    }
+  });
+  result = closure_72.setOnVideoContainerResized((streamId, width, height) => {
+    width(584).wait(() => {
+      obj2 = { type: "VIDEO_SIZE_UPDATE", streamId, dimensions: null };
+      const size = { width, height };
+      obj2.dimensions = size;
+      return width(584).dispatch(obj2);
+    });
+  });
+  (function setGamescopeVaapiEnabled() {
+    const self = this;
+    const apply = closure_1_165.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  })();
+  navigation.reset();
+  getSystemAnalyticsInfo().then((result) => {
+    if (null != result) {
+      ({ gpu_brand: closure_1_131, has_intel_hybrid_igpu: closure_1_132, gpu_count: closure_1_133, gpus } = result);
+      if (gpus == null) {
+        gpus = [];
       }
-      const tmp3Result2 = pollMetrics(dependencyMap[24]);
-      if (tmp3Result2.isWeb()) {
-        if (1 !== modeOptions.ncUseKrispjsSettingVersion) {
-          modeOptions.ncUseKrispjsSettingVersion = 1;
-          modeOptions.noiseSuppression = false;
-          modeOptions.noiseCancellation = true;
-        }
-      } else if (1 !== modeOptions.ncUseKrispSettingVersion) {
-        modeOptions.ncUseKrispSettingVersion = 1;
+      everyResult = gpus.length > 0;
+      if (everyResult) {
+        everyResult = gpus.every((vendor_id) => "10de" === vendor_id.vendor_id);
+      }
+    }
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.DeviceHardwareMutedChange, (deviceGuid, hardwareMuted) => {
+    closure_1(584).dispatch({ type: "AUDIO_INPUT_DEVICE_HARDWARE_MUTED_CHANGED", deviceGuid, hardwareMuted });
+  });
+  closure_72.on(pollMetrics(4951).MediaEngineEvent.SystemMicrophoneModeChange, (arg0) => {
+    closure_129 = arg0;
+    closure_1_72.eachConnection(updateConnectionVoiceProcessing);
+    mediaEngineStore.emitChange();
+  });
+  let Storage = pollMetrics(510).Storage;
+  value = Storage.get("audio");
+  if (null != value) {
+    const Storage2 = tmp10(510).Storage;
+    obj2 = {};
+    obj2[MediaEngineContextTypes.DEFAULT] = value;
+    let result1 = Storage2.set(MediaEngineStore, obj2);
+    const Storage3 = tmp10(510).Storage;
+    Storage3.remove("audio");
+  }
+  const Storage4 = tmp10(510).Storage;
+  value2 = Storage4.get(MediaEngineStore);
+  if (value2 == null) {
+    value2 = {};
+  }
+  let promise = getSystemAnalyticsInfo();
+  _modDef12.each(value2, (modeOptions) => {
+    obj2 = { mode: constants2.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+    const obj = closure_1(12);
+    obj2.modeOptions = { threshold: -60, autoThreshold: pollMetrics(1369).isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+    obj2.localMutes = {};
+    obj2.disabledLocalVideos = {};
+    obj2.videoToggleStateMap = {};
+    obj2.localVolumes = {};
+    const merged = Object.assign(closure_1_34);
+    obj2.audioMixerSettings = {};
+    obj2.localPans = {};
+    obj2.inputVolume = outputVolume;
+    obj2.outputVolume = outputVolume;
+    obj2.inputDeviceId = videoDeviceId;
+    obj2.outputDeviceId = videoDeviceId;
+    obj2.videoDeviceId = videoDeviceId;
+    obj2.videoHook = closure_1_72.supports(constants3.VIDEO_HOOK);
+    obj.defaultsDeep(modeOptions, obj2);
+    if (tmp8) {
+      modeOptions.modeOptions.shortcut = pollMetrics(13898).toCombo(modeOptions.modeOptions.shortcut);
+      const tmp2Result = pollMetrics(13898);
+    }
+    let tmp9 = null != modeOptions.modeOptions;
+    if (tmp9) {
+      tmp9 = 4 !== modeOptions.vadUseKrispSettingVersion;
+    }
+    if (tmp9) {
+      modeOptions.vadUseKrispSettingVersion = 4;
+      modeOptions.modeOptions.vadUseKrisp = true;
+    }
+    if (!modeOptions.qosMigrated) {
+      modeOptions.qosMigrated = true;
+      modeOptions.qos = false;
+    }
+    if (!modeOptions.vadThrehsoldMigrated) {
+      modeOptions.vadThrehsoldMigrated = true;
+      modeOptions = modeOptions.modeOptions;
+      let threshold;
+      if (modeOptions != null) {
+        threshold = modeOptions.threshold;
+      }
+      if (-40 === threshold) {
+        modeOptions.modeOptions.threshold = -60;
+      }
+    }
+    let supportsResult = closure_1_72.supports(constants3.SIDECHAIN_COMPRESSION);
+    if (supportsResult) {
+      supportsResult = modeOptions.sidechainCompressionSettingVersion < 1;
+    }
+    if (supportsResult) {
+      modeOptions.sidechainCompressionSettingVersion = 1;
+      modeOptions.sidechainCompression = true;
+    }
+    if (modeOptions.audioMixerSettingsVersion < 3) {
+      modeOptions.audioMixerSettingsVersion = 3;
+      const obj5 = {};
+      const merged1 = Object.assign(closure_1_34);
+      modeOptions.audioMixerSettings = obj5;
+    }
+    obj3 = {};
+    const tmp3 = pollMetrics(1369).isPlatformEmbedded || false;
+    tmp8 = null != modeOptions.modeOptions && typeof modeOptions.modeOptions.shortcut === "string";
+    if (tmp2Result2.isWeb()) {
+      if (1 !== modeOptions.ncUseKrispjsSettingVersion) {
+        modeOptions.ncUseKrispjsSettingVersion = 1;
         modeOptions.noiseSuppression = false;
         modeOptions.noiseCancellation = true;
       }
-    });
-    applySettings();
-    const tmp8Result = pollMetrics(1369);
-    let isWindowsResult = tmp8Result.isWindows();
-    if (!isWindowsResult) {
-      const tmp8Result8 = pollMetrics(1369);
-      isWindowsResult = tmp8Result8.isLinux();
+    } else if (1 !== modeOptions.ncUseKrispSettingVersion) {
+      modeOptions.ncUseKrispSettingVersion = 1;
+      modeOptions.noiseSuppression = false;
+      modeOptions.noiseCancellation = true;
     }
-    if (!isWindowsResult) {
-      const tmp8Result9 = pollMetrics(1369);
-      isWindowsResult = tmp8Result9.isMac();
-    }
-    if (isWindowsResult) {
-      const tmp50 = c108;
-      if (!tmp50) {
-        const tmp51 = c109;
-        if (!tmp51) {
-          c108 = true;
-          setupKrispNativeModule();
-        }
-        const tmp8Result10 = pollMetrics(1369);
-        if (tmp8Result10.isLinux()) {
-          downloadOpenH264();
-        }
-        resetProbingState();
-        const tmp8Result11 = pollMetrics(1369);
-        if (tmp8Result11.isDesktop()) {
-          if (pollMetrics(1369).isPlatformEmbedded) {
-            const tmp73 = c139;
-            if (!tmp73) {
-              pollMetrics = function pollMetrics() {
-                return obj(...arguments);
-              };
-              obj = function _pollMetrics() {
-                obj = _asyncToGenerator(async function() {
-                  let closure_1;
-                  if (c3 === 2) {
-                    c3 = 3;
-                    throw new TypeError("Generator functions may not be called on executing generators");
-                  } else if (tmp2 === 3) {
-                    if (arg0 === 1) {
-                      throw value;
-                    } else if (arg0 === 2) {
-                      obj2 = { value, done: true };
-                      return obj2;
-                    } else {
-                      return { value: "IconComponent", done: null };
-                    }
-                  } else {
-                    try {
-                      let closure_0;
-                      let tmp3;
-                      c3 = 2;
-                      if (0 === c2) {
-                        if (arg0 === 1) {
-                          c3 = 3;
-                          throw value;
-                        } else if (arg0 === 2) {
-                          c3 = 3;
-                          obj3 = { value, done: true };
-                          return obj3;
-                        } else {
-                          let c0 = 0;
-                          closure_0 = undefined;
-                          tmp3 = undefined;
-                          const self = this;
-                          const self2 = this;
-                          const promise = new Promise((arg0) => {
-                            let closure_0 = arg0;
-                            obj = closure_1_1(closure_1_3[62]);
-                            obj.pollQueueMetrics((arg0) => {
-                              closure_0(arg0);
-                            });
-                          });
-                          c2 = 1;
-                          c3 = 1;
-                          const obj4 = { value: promise, done: false };
-                          return obj4;
-                        }
-                      } else if (arg0 === 1) {
-                        c3 = 3;
-                        throw value;
-                      } else if (arg0 === 2) {
-                        c3 = 3;
-                        const obj5 = { value, done: true };
-                        return obj5;
-                      } else {
-                        closure_0 = value;
-                        closure_0.periodMs = periodMs;
-                        tmp3 = closure_1_169(closure_0);
-                        if (null !== tmp3) {
-                          obj = tmp3(c3[42]);
-                          obj.track(constants.VOICE_QUEUE_METRICS, tmp3);
-                        }
-                        const _setTimeout = setTimeout;
-                        const timerId = setTimeout(closure_129_0, periodMs);
-                        c3 = 3;
-                        return { value: "IconComponent", done: null };
-                      }
-                    } catch (tmp19) {
-                      c3 = 3;
-                      throw tmp19;
-                    }
-                  }
-                });
-                return obj(...arguments);
-              };
-              c139 = true;
-              let _setTimeout = setTimeout;
-              let timerId = setTimeout(pollMetrics, closure_53);
-            }
-          }
-        }
-        const tmp8Result12 = pollMetrics(1369);
-        const tmp77 = tmp8Result12.isWindows() && pollMetrics(1369).isPlatformEmbedded;
-        if (tmp77) {
-          if (null === c85) {
-            const codecSurvey = obj.getCodecSurvey();
-            const nextPromise1 = codecSurvey.then(function(result) {
-              try {
-                const _JSON = JSON;
-                const parsed = JSON.parse(result);
-                if (null != parsed) {
-                  if (null != tmp4.available_video_decoders) {
-                    const available_video_decoders = parsed.available_video_decoders;
-                    c85 = available_video_decoders.some((item) => "MediaFoundation H.264" === item);
-                  }
-                }
-                const _Error = Error;
-                const self = this;
-                const self2 = this;
-                const error = new Error("decoder survey is not available");
-                throw error;
-              } catch (tmp9) {
-                logger.error("Failed to parse codec survey", tmp9);
-                c85 = false;
-              }
-            });
-            const catchPromise = nextPromise1.catch((error) => {
-              logger.error("Failed to get codec survey", error);
-              c85 = false;
-            });
-            catchPromise.finally(() => {
-              obj = obj(dependencyMap[43]);
-              obj.dispatch({ type: "MEDIA_ENGINE_MF_AVAILABILITY_CHECKED" });
-            });
-          }
-        }
-        let obj3 = {};
-        obj3[Features.VIDEO] = obj.supports(Features.VIDEO);
-        obj3[Features.DESKTOP_CAPTURE] = obj.supports(Features.DESKTOP_CAPTURE);
-        obj3[Features.HYBRID_VIDEO] = obj.supports(Features.HYBRID_VIDEO);
-        self.waitFor(AuthenticationStore, BitRateStore, CertifiedDeviceStore, ChannelStore, ClipsStore, ExperimentStore, RTCConnectionStore, RunningGameStore, UserSettingsProtoStore, UserStore, VideoQualityModeStore);
-      }
-    }
-    const tmp8Result13 = pollMetrics(1369);
-    if (tmp8Result13.isWeb()) {
-      if (obj.supports(Features.NOISE_CANCELLATION)) {
-        c109 = true;
-        const emitChangeResult = mediaEngineStore.emitChange();
-      }
-    }
-    const tmp8Result14 = pollMetrics(1369);
-    if (tmp8Result14.isWeb()) {
-      let DEFAULT = MediaEngineContextTypes.DEFAULT;
-      if (DEFAULT === undefined) {
-        DEFAULT = MediaEngineContextTypes.DEFAULT;
-      }
-      let tmp55 = value2[DEFAULT];
-      if (null == tmp55) {
-        let obj5 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj6, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj7, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: obj.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-        obj6 = { threshold: -60, autoThreshold: pollMetrics(1369).isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-        obj7 = {};
-        const tmp56 = pollMetrics(1369).isPlatformEmbedded || false;
-        let merged = Object.assign(closure_34);
-        value2[DEFAULT] = obj5;
-        tmp55 = obj5;
-      }
-      let _Object = Object;
-      let merged1 = Object.assign(tmp55, { noiseCancellation: false });
-      const Storage5 = tmp8(510).Storage;
-      let result2 = Storage5.set(MediaEngineStore_str, value2);
-    }
-  }
-  supports(arg0) {
-    let tmp = arg0 === Features.VIDEO;
-    if (tmp) {
-      const VideoGuardExperiment = VideoGuardExperiment2.VideoGuardExperiment;
-      tmp = !VideoGuardExperiment.getConfig({ location: "MediaEngineStore.supports" }).videoEnabled;
-    }
-    const supportsResult = !tmp && result.supports(arg0);
-    return supportsResult;
-  }
-  supportsInApp(arg0) {
-    let tmp = arg0 === Features.VIDEO;
-    if (tmp) {
-      const VideoGuardExperiment = VideoGuardExperiment2.VideoGuardExperiment;
-      tmp = !VideoGuardExperiment.getConfig({ location: "MediaEngineStore.supportsInApp" }).videoEnabled;
-    }
-    let tmp4 = !tmp;
-    if (tmp4) {
-      tmp4 = appSupported[arg0] || result.supports(arg0);
-      const supportsResult = appSupported[arg0] || result.supports(arg0);
-    }
-    return tmp4;
-  }
-  isSupported() {
-    return result.supported();
-  }
-  isNoiseSuppressionSupported() {
-    return result.supports(Features.NOISE_SUPPRESSION);
-  }
-  isNoiseCancellationSupported() {
-    return !c110;
-  }
-  isNoiseCancellationError() {
-    return c117;
-  }
-  isAutomaticGainControlSupported() {
-    return result.supports(Features.AUTOMATIC_GAIN_CONTROL);
-  }
-  shouldOfferManualSubsystemSelection() {
-    let tmp3 = !result.supports(Features.AUDIO_BYPASS_SYSTEM_INPUT_PROCESSING);
-    result.supports(Features.AUDIO_BYPASS_SYSTEM_INPUT_PROCESSING);
-    if (tmp3) {
-      tmp3 = result.supports(Features.LEGACY_AUDIO_SUBSYSTEM) || result.supports(Features.EXPERIMENTAL_AUDIO_SUBSYSTEM);
-      result.supports(Features.LEGACY_AUDIO_SUBSYSTEM) || result.supports(Features.EXPERIMENTAL_AUDIO_SUBSYSTEM);
-    }
-    return tmp3;
-  }
-  showBypassSystemInputProcessing() {
-    const supportsResult = result.supports(Features.AUDIO_BYPASS_SYSTEM_INPUT_PROCESSING) && "experimental" === result.getAudioSubsystem();
-    return supportsResult;
-  }
-  isAdvancedVoiceActivitySupported() {
-    return !c110;
-  }
-  isAecDumpSupported() {
-    return result.supports(Features.AEC_DUMP);
-  }
-  isSimulcastSupported() {
-    const tmp2 = result.supports(Features.VIDEO) && result.supports(Features.SIMULCAST);
-    return tmp2;
-  }
-  getAecDump() {
-    return getSettings().aecDumpEnabled;
-  }
-  getMediaEngine() {
-    return result;
-  }
-  getVideoComponent() {
-    return result.Video;
-  }
-  getCameraComponent() {
-    return result.Camera;
-  }
-  getKrispSuppressionLevel() {
-    let num = level;
-    if (level == null) {
-      num = 100;
-    }
-    return num;
-  }
-  getKrispEnableStats() {
-    return enabled;
-  }
-  isEnabled() {
-    return c79;
-  }
-  isMute() {
-    const tmp = this.isSelfMute() || c90;
-    return tmp;
-  }
-  isDeaf() {
-    const tmp = this.isSelfDeaf() || c93;
-    return tmp;
-  }
-  isServerMute() {
-    return c90;
-  }
-  isServerDeaf() {
-    return c93;
-  }
-  getAudioMixerSettings() {
-    return getSettings().audioMixerSettings;
-  }
-  isSpatialAudioEnabled() {
-    return true === this.getAudioMixerSettings().enabled;
-  }
-  isSpatialAudioRequested() {
-    return c120;
-  }
-  getSpatialAudioStatus() {
-    return UNKNOWN;
-  }
-  hasContext(arg0) {
-    return null != settingsByContext[arg0];
-  }
-  isSelfMutedTemporarily() {
-    let DEFAULT;
-    if (DEFAULT === undefined) {
-      DEFAULT = MediaEngineContextTypes.DEFAULT;
-    }
-    return DEFAULT === MediaEngineContextTypes.DEFAULT && mute;
-  }
-  isSelfMute() {
-    let DEFAULT;
-    if (DEFAULT === undefined) {
-      DEFAULT = MediaEngineContextTypes.DEFAULT;
-    }
-    const self = this;
-    const isEnabledResult = this.isEnabled();
-    mute = !isEnabledResult;
-    if (isEnabledResult) {
-      mute = getSettings(DEFAULT).mute;
-    }
-    if (!mute) {
-      obj = NativePermissionUtils;
-      mute = !obj.didHavePermission(NativePermissionTypes.AUDIO);
-    }
-    if (!mute) {
-      mute = self.isSelfDeaf(DEFAULT);
-    }
-    if (!mute) {
-      mute = DEFAULT === MediaEngineContextTypes.DEFAULT && closure_92;
-    }
-    return mute;
-  }
-  shouldSkipMuteUnmuteSound() {
-    return c97;
-  }
-  notifyMuteUnmuteSoundWasSkipped() {
-    c97 = false;
-  }
-  isHardwareMute() {
-    let DEFAULT;
-    if (DEFAULT === undefined) {
-      DEFAULT = MediaEngineContextTypes.DEFAULT;
-    }
-    const self = this;
-    const isMuteResult = this.isMute();
-    const isHardwareMuteResult = !isMuteResult && !self.isSelfMutedTemporarily(DEFAULT) && CertifiedDeviceStore.isHardwareMute(self.getInputDeviceId());
-    return isHardwareMuteResult;
-  }
-  isHardwareMuteNoticeEnabled() {
-    return enabled;
-  }
-  isSelfDeaf() {
-    let DEFAULT;
-    if (DEFAULT === undefined) {
-      DEFAULT = MediaEngineContextTypes.DEFAULT;
-    }
-    const isSupportedResult = this.isSupported();
-    let deaf = !isSupportedResult;
-    if (isSupportedResult) {
-      deaf = getSettings(DEFAULT).deaf;
-    }
-    return deaf;
-  }
-  isVideoEnabled() {
-    return closure_94 && c101;
-  }
-  isVideoAvailable() {
-    const values = Object.values(closure_88);
-    return values.some((disabled) => !disabled.disabled);
-  }
-  hasVideoDevice() {
-    return c101;
-  }
-  isScreenSharing() {
-    STREAM = arg0;
-    if (arg0 === undefined) {
-      STREAM = MediaEngineContextTypes.STREAM;
-    }
-    return STREAM === STREAM && null != goLiveSource;
-  }
-  isSoundSharing() {
-    STREAM = arg0;
-    if (arg0 === undefined) {
-      STREAM = MediaEngineContextTypes.STREAM;
-    }
-    let tmp2 = STREAM === STREAM && null != goLiveSource;
-    if (tmp2) {
-      const desktopSource = goLiveSource.desktopSource;
-      let soundshareId;
-      if (desktopSource != null) {
-        soundshareId = desktopSource.soundshareId;
-      }
-      tmp2 = null != soundshareId;
-    }
-    return tmp2;
-  }
-  isLocalMute(id) {
-    let DEFAULT = context;
-    if (context === undefined) {
-      DEFAULT = MediaEngineContextTypes.DEFAULT;
-    }
-    let tmp2 = id !== AuthenticationStore.getId();
-    if (tmp2) {
-      tmp2 = getSettings(DEFAULT).localMutes[id] || false;
-      getSettings(DEFAULT).localMutes[id] || false;
-    }
-    return tmp2;
-  }
-  supportsDisableLocalVideo() {
-    return result.supports(Features.DISABLE_VIDEO);
-  }
-  isLocalVideoDisabled(id) {
-    let DEFAULT;
-    if (DEFAULT === undefined) {
-      DEFAULT = MediaEngineContextTypes.DEFAULT;
-    }
-    let flag = getSettings(DEFAULT).disabledLocalVideos[id];
-    if (flag == null) {
-      flag = false;
-    }
-    return flag;
-  }
-  getVideoToggleState(arg0) {
-    let DEFAULT;
-    if (DEFAULT === undefined) {
-      DEFAULT = MediaEngineContextTypes.DEFAULT;
-    }
-    let NONE = getSettings(DEFAULT).videoToggleStateMap[arg0];
-    if (NONE == null) {
-      NONE = constants5.NONE;
-    }
-    return NONE;
-  }
-  isLocalVideoAutoDisabled(id) {
-    let DEFAULT = arg1;
-    if (arg1 === undefined) {
-      DEFAULT = MediaEngineContextTypes.DEFAULT;
-    }
-    const hasItem = DEFAULT === MediaEngineContextTypes.DEFAULT && set1.has(id);
-    return hasItem;
-  }
-  isAnyLocalVideoAutoDisabled() {
-    let DEFAULT = arg0;
-    if (arg0 === undefined) {
-      DEFAULT = MediaEngineContextTypes.DEFAULT;
-    }
-    return DEFAULT === MediaEngineContextTypes.DEFAULT && set1.size > 0;
-  }
-  isMediaFilterSettingLoading() {
-    return c118;
-  }
-  isNativeAudioPermissionReady() {
-    return c125;
-  }
-  getGoLiveSource() {
-    return goLiveSource;
-  }
-  getGoLiveContext() {
-    return STREAM;
-  }
-  getLastAudioInputDeviceChangeTimestamp() {
-    return closure_84;
-  }
-  isH264MfDecodeAvailable() {
-    return c85;
-  }
-  getLocalPan(id) {
-    let DEFAULT = arg1;
-    if (arg1 === undefined) {
-      DEFAULT = MediaEngineContextTypes.DEFAULT;
-    }
-    let tmp2 = getSettings(DEFAULT).localPans[id];
-    if (null == tmp2) {
-      tmp2 = closure_60;
-    }
-    return tmp2;
-  }
-  getLocalVolume(arg0) {
-    let DEFAULT = arg1;
-    if (arg1 === undefined) {
-      DEFAULT = MediaEngineContextTypes.DEFAULT;
-    }
-    let tmp2 = DEFAULT === MediaEngineContextTypes.STREAM ? set2 : BottomSheet;
-    const tmp3 = getSettings(DEFAULT).localVolumes[arg0];
-    if (null != tmp3) {
-      tmp2 = tmp3;
-    }
-    return tmp2;
-  }
-  getInputVolume() {
-    return getSettings().inputVolume;
-  }
-  getOutputVolume() {
-    let outputVolume;
-    obj = MobileAudioOutputExperimentDefault;
-    if (obj.getConfig({ location: "MediaEngineStore.getOutputVolume" }).audioOutputPresent) {
-      outputVolume = getSettings().outputVolume;
-    } else {
-      outputVolume = BottomSheet;
-    }
-    return outputVolume;
-  }
-  getMode() {
-    let DEFAULT = arg0;
-    if (arg0 === undefined) {
-      DEFAULT = MediaEngineContextTypes.DEFAULT;
-    }
-    return getSettings(DEFAULT).mode;
-  }
-  getModeOptions() {
-    let DEFAULT;
-    if (DEFAULT === undefined) {
-      DEFAULT = MediaEngineContextTypes.DEFAULT;
-    }
-    return getSettings(DEFAULT).modeOptions;
-  }
-  getShortcuts() {
-    obj = {};
-    obj2 = _modDef12;
-    obj2.each(closure_77, (mode, arg1) => {
-      let hasItem = mode.mode === InputModes.PUSH_TO_TALK;
-      const shortcut = mode.modeOptions.shortcut;
-      if (hasItem) {
-        hasItem = set.has(arg1);
-      }
-      if (hasItem) {
-        obj[arg1] = shortcut;
-      }
-    });
-    return obj;
-  }
-  getInputDeviceId() {
-    let id = getSettings().inputDeviceId;
-    let firstResult = inputDevices[id];
-    if (firstResult == null) {
-      firstResult = inputDevices[DEFAULT_DEVICE_ID];
-    }
-    if (firstResult == null) {
-      obj = _modDef12(inputDevices);
-      const values = obj.values();
-      firstResult = values.first();
-    }
-    if (null != firstResult) {
-      id = firstResult.id;
-    }
-    return id;
-  }
-  getOutputDeviceId() {
-    let id = getSettings().outputDeviceId;
-    let firstResult = outputDevices[id];
-    if (firstResult == null) {
-      firstResult = outputDevices[DEFAULT_DEVICE_ID];
-    }
-    if (firstResult == null) {
-      obj = _modDef12(outputDevices);
-      const values = obj.values();
-      firstResult = values.first();
-    }
-    if (null != firstResult) {
-      id = firstResult.id;
-    }
-    return id;
-  }
-  getVideoDeviceId() {
-    let id = getSettings().videoDeviceId;
-    let firstResult = closure_88[id];
-    if (firstResult == null) {
-      firstResult = closure_88[DEFAULT_DEVICE_ID];
-    }
-    if (firstResult == null) {
-      obj = _modDef12(closure_88);
-      const values = obj.values();
-      firstResult = values.first();
-    }
-    if (null != firstResult) {
-      id = firstResult.id;
-    }
-    return id;
-  }
-  getInputDevices() {
-    return inputDevices;
-  }
-  getOutputDevices() {
-    return outputDevices;
-  }
-  getVideoDevices() {
-    return closure_88;
-  }
-  getEchoCancellation() {
-    const tmp = getSettings();
-    const tmp2 = CertifiedDeviceStore.hasEchoCancellation(tmp.inputDeviceId) || tmp.echoCancellation;
-    return tmp2;
-  }
-  getSidechainCompression() {
-    const sidechainCompression = result.supports(Features.SIDECHAIN_COMPRESSION) && getSettings().sidechainCompression;
-    return sidechainCompression;
-  }
-  getSidechainCompressionStrength() {
-    return getSettings().sidechainCompressionStrength;
-  }
-  getH265Enabled() {
-    return getSettings().h265Enabled;
-  }
-  hasH265HardwareDecode() {
-    return null !== c123 && c123;
-  }
-  getOpenH264Enabled() {
-    obj = PlatformUtils;
-    const openH264Enabled = obj.isLinux() && getSettings().openH264Enabled;
-    return openH264Enabled;
-  }
-  getLoopback() {
-    return set2.size > 0;
-  }
-  getLoopbackReasons() {
-    return set2;
-  }
-  getNoiseSuppression() {
-    const tmp = getSettings();
-    const tmp2 = CertifiedDeviceStore.hasNoiseSuppression(tmp.inputDeviceId) || tmp.noiseSuppression;
-    return tmp2;
-  }
-  getAutomaticGainControl() {
-    const tmp = getSettings();
-    const tmp2 = CertifiedDeviceStore.hasAutomaticGainControl(tmp.inputDeviceId) || tmp.automaticGainControl;
-    return tmp2;
-  }
-  getBypassSystemInputProcessing() {
-    return getSettings().bypassSystemInputProcessing;
-  }
-  getNoiseCancellation() {
-    return getSettings().noiseCancellation;
-  }
-  getHardwareEncoding() {
-    return true;
-  }
-  getEnableSilenceWarning() {
-    return getSettings().silenceWarning;
-  }
-  getDebugLogging() {
-    return result.getDebugLogging();
-  }
-  getQoS() {
-    return getSettings().qos;
-  }
-  getAttenuation() {
-    return getSettings().attenuation;
-  }
-  getAttenuateWhileSpeakingSelf() {
-    return getSettings().attenuateWhileSpeakingSelf;
-  }
-  getAttenuateWhileSpeakingOthers() {
-    return getSettings().attenuateWhileSpeakingOthers;
-  }
-  getAudioSubsystem() {
-    obj = PlatformUtils;
-    const isWindowsResult = obj.isWindows() && result.supports(Features.AUTOMATIC_AUDIO_SUBSYSTEM) && result.supports(Features.AUDIO_SUBSYSTEM_DEFERRED_SWITCH);
-    if (isWindowsResult) {
-      let AUTOMATIC;
-      if (getSettings().automaticAudioSubsystem) {
-        AUTOMATIC = constants8.AUTOMATIC;
-      }
-      return AUTOMATIC;
-    }
-    AUTOMATIC = result.getAudioSubsystem();
-  }
-  getMLSSigningKey(arg0, arg1) {
-    return result.getMLSSigningKey(arg0, arg1);
-  }
-  getActiveInputProfile() {
-    return getSettings().activeInputProfile;
-  }
-  isInputProfileCustom() {
-    const activeInputProfile = this.getActiveInputProfile();
-    return null == activeInputProfile || activeInputProfile === InputProfile.CUSTOM;
-  }
-  getSettings() {
-    let DEFAULT = arg0;
-    if (arg0 === undefined) {
-      DEFAULT = MediaEngineContextTypes.DEFAULT;
-    }
-    return getSettings(DEFAULT);
-  }
-  getState() {
-    return { settingsByContext, inputDevices, outputDevices, appSupported, krispModuleLoaded, krispFatalError, krispVersion, krispSuppressionLevel: level, goLiveSource, goLiveContext: STREAM };
-  }
-  getInputDetectedThisConnection() {
-    return c102;
-  }
-  getInputDetected() {
-    return navigation.inputDetected;
-  }
-  getLastInputDetectedUpdateTime() {
-    return navigation.lastUpdateTime;
-  }
-  getNoInputDetectedNotice() {
-    return closure_103;
-  }
-  getInputDeviceOSMuted() {
-    return c104;
-  }
-  getInputDeviceHardwareMuted() {
-    return hardwareMuted;
-  }
-  getInputDeviceOSVolume() {
-    return c105;
-  }
-  getPacketDelay() {
-    let DEFAULT = context;
-    if (context === undefined) {
-      DEFAULT = MediaEngineContextTypes.DEFAULT;
-    }
-    let num = 0;
-    if (!PlatformUtils.isPlatformEmbedded) {
-      const self = this;
-      num = 0;
-      if (this.getMode(DEFAULT) === InputModes.VOICE_ACTIVITY) {
-        num = self.getModeOptions(DEFAULT).vadLeading;
-      }
-    }
-    return num;
-  }
-  setCanHavePriority(arg0, arg1) {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    result.eachConnection((setCanHavePriority) => setCanHavePriority.setCanHavePriority(closure_0, closure_1));
-  }
-  isInteractionRequired() {
-    return required;
-  }
-  getVideoHook() {
-    return getSettings().videoHook;
-  }
-  supportsVideoHook() {
-    return result.supports(Features.VIDEO_HOOK);
-  }
-  getExperimentalSoundshare() {
-    const self = this;
-    let flag = getSettings().experimentalSoundshare2;
-    result = this.supportsExperimentalSoundshare();
-    if (result) {
-      if (flag == null) {
-        flag = true;
-      }
-      if (!flag) {
-        flag = !self.supportsHookSoundshare();
-      }
-      result = flag;
-    }
-    return result;
-  }
-  supportsExperimentalSoundshare() {
-    let supportsResult = result.supports(Features.EXPERIMENTAL_SOUNDSHARE);
-    if (supportsResult) {
-      const satisfies = _modDef13847.satisfies;
-      _modDef13847;
-      const tmp5 = DiscordNativeDefault;
-      let release;
-      if (tmp5 != null) {
-        release = tmp5.os.release;
-      }
-      supportsResult = satisfies(release, closure_31);
-    }
-    return supportsResult;
-  }
-  supportsHookSoundshare() {
-    obj = PlatformUtils;
-    let isWindowsResult = obj.isWindows() && result.supports(Features.SOUNDSHARE);
-    if (isWindowsResult) {
-      const satisfies = _modDef13847.satisfies;
-      _modDef13847;
-      const tmp7 = DiscordNativeDefault;
-      let release;
-      if (tmp7 != null) {
-        release = tmp7.os.release;
-      }
-      isWindowsResult = satisfies(release, __initData);
-    }
-    return isWindowsResult;
-  }
-  getUseSystemScreensharePicker() {
-    result = this.supportsSystemScreensharePicker();
-    let useSystemScreensharePicker = getSettings().useSystemScreensharePicker;
-    PlatformUtils;
-    if (result) {
-      if (useSystemScreensharePicker == null) {
-        useSystemScreensharePicker = tmp3;
-      }
-      result = useSystemScreensharePicker;
-    }
-    return result;
-  }
-  supportsSystemScreensharePicker() {
-    return result.supports(Features.NATIVE_SCREENSHARE_PICKER);
-  }
-  getUseVaapiEncoder() {
-    return c138;
-  }
-  getVideoEncoderExperiments(STREAM, streamer) {
-    const arr = new Array("unk");
-    arr.push("nvNewPresets");
-    if (STREAM === MediaEngineContextTypes.STREAM) {
-      arr.push("nvRelaxRc=250");
-    } else {
-      arr.push("nvRelaxRc=75");
-    }
-    if (this.getUseVaapiEncoder()) {
-      arr.push("vaapi");
-    }
-    obj = NvencReconstructedFrameExperiment;
-    if (obj.getNvencReconstructedFrameExperimentConfig({ location: "getVideoEncoderExperiments" }).enabled) {
-      arr.push("nvReconFrames");
-    }
-    let isWindowsResult = STREAM === MediaEngineContextTypes.STREAM && "streamer" === streamer;
-    if (isWindowsResult) {
-      const tmp6Result = PlatformUtils;
-      isWindowsResult = tmp6Result.isWindows();
-    }
-    if (isWindowsResult) {
-      arr.push("useCaptureDeviceForEncode");
-      const VideoCaptureDeviceNoReuseExperiment = VideoCaptureDeviceNoReuse.VideoCaptureDeviceNoReuseExperiment;
-      if (VideoCaptureDeviceNoReuseExperiment.getConfig({ location: "handleReady" }).overrideDeviceReuse) {
-        arr.push("videoCaptureDeviceOverrideReuse");
-      }
-    }
-    arr.push("linux-vulkan");
-    return arr.join(",");
-  }
-  getUseGamescopeCapture() {
-    return c137;
-  }
-  getSpeakingWhileMuted() {
-    return c98;
-  }
-  getKrispModelOverride() {
-    return model;
-  }
-  getKrispModels() {
-    return closure_114;
-  }
-  getKrispVadActivationThreshold() {
-    let num = getSettings().modeOptions.vadKrispActivationThreshold;
-    if (num == null) {
-      num = 0.5;
-    }
-    return num;
-  }
-  hasActiveCallKitCall() {
-    return c136;
-  }
-  setHasActiveCallKitCall(arg0) {
-    c136 = arg0;
-  }
-  supportsScreenSoundshare() {
-    let supportsResult2;
-    obj = PlatformUtils;
-    if (obj.isMac()) {
-      let supportsResult = result.supports(Features.SOUNDSHARE);
-      if (supportsResult) {
-        const satisfies = _modDef13847.satisfies;
-        _modDef13847;
-        const tmp13 = DiscordNativeDefault;
-        let release;
-        if (tmp13 != null) {
-          release = tmp13.os.release;
-        }
-        supportsResult = satisfies(release, closure_25);
-      }
-      if (supportsResult) {
-        const tmpResult = PlatformUtils;
-        let satisfies2Result = tmpResult.isMac() && result.supports(Features.SCREEN_CAPTURE_KIT);
-        if (satisfies2Result) {
-          const satisfies2 = _modDef13847.satisfies;
-          _modDef13847;
-          const tmp20 = DiscordNativeDefault;
-          let release1;
-          if (tmp20 != null) {
-            release1 = tmp20.os.release;
-          }
-          satisfies2Result = satisfies2(release1, closure_24);
-        }
-        supportsResult = satisfies2Result;
-      }
-      supportsResult2 = supportsResult;
-    } else {
-      const tmpResult3 = PlatformUtils;
-      if (tmpResult3.isWindows()) {
-        let supportsResult1 = result.supports(Features.SCREEN_SOUNDSHARE);
-        if (supportsResult1) {
+    tmp2Result2 = pollMetrics(1369);
+  });
+  applySettings();
+  let isWindowsResult = pollMetrics(1369).isWindows();
+  if (!isWindowsResult) {
+    isWindowsResult = tmp10(1369).isLinux();
+    const tmp10Result8 = tmp10(1369);
+  }
+  if (!isWindowsResult) {
+    isWindowsResult = tmp10(1369).isMac();
+    const tmp10Result9 = tmp10(1369);
+  }
+  if (isWindowsResult) {
+    if (!c108) {
+      if (!c109) {
+        c108 = true;
+        (function setupKrispNativeModule() {
           const self = this;
-          supportsResult1 = this.getExperimentalSoundshare();
-        }
-        supportsResult2 = supportsResult1;
-      } else {
-        const tmpResult4 = PlatformUtils;
-        supportsResult2 = tmpResult4.isLinux() && result.supports(Features.SCREEN_SOUNDSHARE);
+          const apply = closure_1_166.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
+        })();
       }
-    }
-    return supportsResult2;
-  }
-  getSystemMicrophoneMode() {
-    obj = PlatformUtils;
-    if (obj.isWindows()) {
-      const self = this;
-      if (!this.getBypassSystemInputProcessing()) {
-        const tmp5 = closure_122[self.getInputDeviceId(self)];
-        let found;
-        if (tmp5 != null) {
-          const active = tmp5.active;
-          if (active != null) {
-            found = active.find((item) => item === deep_noise_suppression);
+      if (tmp10Result10.isLinux()) {
+        (function downloadOpenH264() {
+          const self = this;
+          const apply = closure_1_167.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
+        })();
+      }
+      resetProbingState();
+      tmp10Result10 = tmp10(1369);
+      if (tmp10Result11.isDesktop()) {
+        if (tmp10(1369).isPlatformEmbedded) {
+          if (!c139) {
+            pollMetrics = function pollMetrics() {
+              const self = this;
+              const apply = closure_1.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
+              }
+              return applyArgumentsResult;
+            };
+            importDefault = async function _pollMetrics(dependencyMap) {
+              if (dependencyMap === 2) {
+                dependencyMap = 3;
+                throw new TypeError("Generator functions may not be called on executing generators");
+              } else if (tmp3 === 3) {
+                if (dependencyMap === 1) {
+                  throw value;
+                } else if (dependencyMap === 2) {
+                  obj2 = { value, done: true };
+                  return obj2;
+                } else {
+                  return { value: "IconComponent", done: null };
+                }
+              } else {
+                try {
+                  dependencyMap = 2;
+                  if (0 === c2) {
+                    if (dependencyMap === 1) {
+                      dependencyMap = 3;
+                      throw value;
+                    } else if (dependencyMap === 2) {
+                      dependencyMap = 3;
+                      obj3 = { value, done: true };
+                      return obj3;
+                    } else {
+                      c0 = 0;
+                      closure_128_0 = undefined;
+                      closure_128_1 = undefined;
+                      const promise = new Promise((arg0) => {
+                        closure_0 = arg0;
+                        closure_1_1(closure_1_3[62]).pollQueueMetrics((arg0) => {
+                          closure_0(arg0);
+                        });
+                      });
+                      c2 = 1;
+                      dependencyMap = 1;
+                      const obj4 = { value: promise, done: false };
+                      return obj4;
+                    }
+                  } else if (dependencyMap === 1) {
+                    dependencyMap = 3;
+                    throw value;
+                  } else if (dependencyMap === 2) {
+                    dependencyMap = 3;
+                    const obj5 = { value, done: true };
+                    return obj5;
+                  } else {
+                    closure_128_0 = value;
+                    closure_128_0.periodMs = periodMs;
+                    closure_128_1 = processQueueMetricsForAnalytics(closure_128_0);
+                    if (null !== closure_128_1) {
+                      tmp4(dependencyMap[42]).track(constants.VOICE_QUEUE_METRICS, closure_128_1);
+                      const obj = tmp4(dependencyMap[42]);
+                    }
+                    const _setTimeout = setTimeout;
+                    const timerId = setTimeout(closure_129_0, periodMs);
+                    dependencyMap = 3;
+                    return { value: "IconComponent", done: null };
+                  }
+                } catch (tmp22) {
+                  dependencyMap = tmp;
+                  throw tmp22;
+                }
+              }
+            };
+            c139 = true;
+            let _setTimeout = setTimeout;
+            let timerId = setTimeout(pollMetrics, closure_53);
           }
         }
-        return found;
       }
-    } else {
-      const tmpResult = PlatformUtils;
-      if (!tmpResult.isMac()) {
-        PlatformUtils;
+      tmp10Result11 = tmp10(1369);
+      const tmp10Result12 = tmp10(1369);
+      if (tmp79) {
+        if (null === c85) {
+          const codecSurvey = closure_72.getCodecSurvey();
+          const nextPromise1 = codecSurvey.then((result) => {
+            try {
+              const _JSON = JSON;
+              const parsed = JSON.parse(result);
+              if (null != parsed) {
+                if (null != tmp4.available_video_decoders) {
+                  const available_video_decoders = parsed.available_video_decoders;
+                  c85 = available_video_decoders.some((item) => "MediaFoundation H.264" === item);
+                }
+              }
+              const _Error = Error;
+              const error = new Error("decoder survey is not available");
+              throw error;
+            } catch (tmp11) {
+              logger.error("Failed to parse codec survey", tmp11);
+              c85 = false;
+            }
+          });
+          codecSurvey.then((result) => {
+            try {
+              const _JSON = JSON;
+              const parsed = JSON.parse(result);
+              if (null != parsed) {
+                if (null != tmp4.available_video_decoders) {
+                  const available_video_decoders = parsed.available_video_decoders;
+                  c85 = available_video_decoders.some((item) => "MediaFoundation H.264" === item);
+                }
+              }
+              const _Error = Error;
+              const error = new Error("decoder survey is not available");
+              throw error;
+            } catch (tmp11) {
+              logger.error("Failed to parse codec survey", tmp11);
+              c85 = false;
+            }
+          }).catch((error) => {
+            logger.error("Failed to get codec survey", error);
+            c85 = false;
+          }).finally(() => {
+            closure_1(584).dispatch({ type: "MEDIA_ENGINE_MF_AVAILABILITY_CHECKED" });
+          });
+          const catchPromise = codecSurvey.then((result) => {
+            try {
+              const _JSON = JSON;
+              const parsed = JSON.parse(result);
+              if (null != parsed) {
+                if (null != tmp4.available_video_decoders) {
+                  const available_video_decoders = parsed.available_video_decoders;
+                  c85 = available_video_decoders.some((item) => "MediaFoundation H.264" === item);
+                }
+              }
+              const _Error = Error;
+              const error = new Error("decoder survey is not available");
+              throw error;
+            } catch (tmp11) {
+              logger.error("Failed to parse codec survey", tmp11);
+              c85 = false;
+            }
+          }).catch((error) => {
+            logger.error("Failed to get codec survey", error);
+            c85 = false;
+          });
+        }
       }
-      return c129;
+      let obj3 = {};
+      obj3[Features.VIDEO] = closure_72.supports(Features.VIDEO);
+      obj3[Features.DESKTOP_CAPTURE] = closure_72.supports(Features.DESKTOP_CAPTURE);
+      obj3[Features.HYBRID_VIDEO] = closure_72.supports(Features.HYBRID_VIDEO);
+      self.waitFor(AuthenticationStore, BitRateStore, CertifiedDeviceStore, ChannelStore, ClipsStore, ExperimentStore, RTCConnectionStore, RunningGameStore, UserSettingsProtoStore, UserStore, VideoQualityModeStore);
+      tmp79 = tmp10(1369).isWindows() && tmp10(1369).isPlatformEmbedded;
     }
   }
-  getVideoStreamParameters() {
-    let items1;
-    let DEFAULT = context;
-    if (context === undefined) {
+  const tmp10Result = pollMetrics(1369);
+  if (tmp10Result13.isWeb()) {
+    if (closure_72.supports(Features.NOISE_CANCELLATION)) {
+      c109 = true;
+      mediaEngineStore.emitChange();
+    }
+  }
+  tmp10Result13 = pollMetrics(1369);
+  if (tmp10Result14.isWeb()) {
+    let DEFAULT = MediaEngineContextTypes.DEFAULT;
+    if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
-    const self = this;
-    if (this.supports(Features.VIDEO)) {
-      let SCREEN;
-      if (DEFAULT === MediaEngineContextTypes.DEFAULT) {
-        SCREEN = constants11.VIDEO;
-      } else {
-        SCREEN = constants11.SCREEN;
-      }
-      const items = [{ rid: "100", type: SCREEN, quality }];
-      items1 = items;
-      obj = { rid: "100", type: SCREEN, quality };
-    } else {
-      items1 = [];
+    let tmp57 = value2[DEFAULT];
+    if (null == tmp57) {
+      let obj5 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      let obj6 = { threshold: -60, autoThreshold: tmp10(1369).isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj5.modeOptions = obj6;
+      obj5.localMutes = {};
+      obj5.disabledLocalVideos = {};
+      obj5.videoToggleStateMap = {};
+      obj5.localVolumes = {};
+      let obj7 = {};
+      let merged = Object.assign(closure_34);
+      obj5.audioMixerSettings = obj7;
+      obj5.localPans = {};
+      obj5.inputVolume = outputVolume;
+      obj5.outputVolume = outputVolume;
+      obj5.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj5.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj5.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj5.videoHook = closure_72.supports(Features.VIDEO_HOOK);
+      value2[DEFAULT] = obj5;
+      tmp57 = obj5;
+      const tmp58 = tmp10(1369).isPlatformEmbedded || false;
     }
-    let enableSimulcast = self.isSimulcastSupported() && DEFAULT === MediaEngineContextTypes.DEFAULT;
+    let _Object = Object;
+    let merged1 = Object.assign(tmp57, { noiseCancellation: false });
+    const Storage5 = tmp10(510).Storage;
+    let result2 = Storage5.set(MediaEngineStore, value2);
+  }
+  tmp10Result14 = pollMetrics(1369);
+};
+prototype["supports"] = function supports(arg0) {
+  let tmp = arg0 === Features.VIDEO;
+  if (tmp) {
+    const VideoGuardExperiment = VideoGuardExperiment2.VideoGuardExperiment;
+    tmp = !VideoGuardExperiment.getConfig({ location: "MediaEngineStore.supports" }).videoEnabled;
+  }
+  let supportsResult = !tmp;
+  if (!tmp) {
+    supportsResult = result.supports(arg0);
+  }
+  return supportsResult;
+};
+prototype["supportsInApp"] = function supportsInApp(arg0) {
+  let tmp = arg0 === Features.VIDEO;
+  if (tmp) {
+    const VideoGuardExperiment = VideoGuardExperiment2.VideoGuardExperiment;
+    tmp = !VideoGuardExperiment.getConfig({ location: "MediaEngineStore.supportsInApp" }).videoEnabled;
+  }
+  let tmp4 = !tmp;
+  if (!tmp) {
+    let supportsResult = appSupported[arg0];
+    if (!supportsResult) {
+      supportsResult = result.supports(arg0);
+    }
+    tmp4 = supportsResult;
+  }
+  return tmp4;
+};
+prototype["isSupported"] = function isSupported() {
+  return result.supported();
+};
+prototype["isNoiseSuppressionSupported"] = function isNoiseSuppressionSupported() {
+  return result.supports(Features.NOISE_SUPPRESSION);
+};
+prototype["isNoiseCancellationSupported"] = function isNoiseCancellationSupported() {
+  return !c110;
+};
+prototype["isNoiseCancellationError"] = function isNoiseCancellationError() {
+  return c117;
+};
+prototype["isAutomaticGainControlSupported"] = function isAutomaticGainControlSupported() {
+  return result.supports(Features.AUTOMATIC_GAIN_CONTROL);
+};
+prototype["shouldOfferManualSubsystemSelection"] = function shouldOfferManualSubsystemSelection() {
+  const supportsResult = result.supports(Features.AUDIO_BYPASS_SYSTEM_INPUT_PROCESSING);
+  let tmp3 = !supportsResult;
+  if (!supportsResult) {
+    tmp3 = result.supports(Features.LEGACY_AUDIO_SUBSYSTEM) || result.supports(Features.EXPERIMENTAL_AUDIO_SUBSYSTEM);
+    const tmp4 = result.supports(Features.LEGACY_AUDIO_SUBSYSTEM) || result.supports(Features.EXPERIMENTAL_AUDIO_SUBSYSTEM);
+  }
+  return tmp3;
+};
+prototype["showBypassSystemInputProcessing"] = function showBypassSystemInputProcessing() {
+  let supportsResult = result.supports(Features.AUDIO_BYPASS_SYSTEM_INPUT_PROCESSING);
+  if (supportsResult) {
+    supportsResult = "experimental" === result.getAudioSubsystem();
+  }
+  return supportsResult;
+};
+prototype["isAdvancedVoiceActivitySupported"] = function isAdvancedVoiceActivitySupported() {
+  return !c110;
+};
+prototype["isAecDumpSupported"] = function isAecDumpSupported() {
+  return result.supports(Features.AEC_DUMP);
+};
+prototype["isSimulcastSupported"] = function isSimulcastSupported() {
+  return result.supports(Features.VIDEO) && result.supports(Features.SIMULCAST);
+};
+prototype["getAecDump"] = function getAecDump() {
+  return getSettings().aecDumpEnabled;
+};
+prototype["getMediaEngine"] = function getMediaEngine() {
+  return result;
+};
+prototype["getVideoComponent"] = function getVideoComponent() {
+  return result.Video;
+};
+prototype["getCameraComponent"] = function getCameraComponent() {
+  return result.Camera;
+};
+prototype["getKrispSuppressionLevel"] = function getKrispSuppressionLevel() {
+  let num = level;
+  if (level == null) {
+    num = 100;
+  }
+  return num;
+};
+prototype["getKrispEnableStats"] = function getKrispEnableStats() {
+  return enabled;
+};
+prototype["isEnabled"] = function isEnabled() {
+  return c79;
+};
+prototype["isMute"] = function isMute() {
+  return this.isSelfMute() || c90;
+};
+prototype["isDeaf"] = function isDeaf() {
+  return this.isSelfDeaf() || c93;
+};
+prototype["isServerMute"] = function isServerMute() {
+  return c90;
+};
+prototype["isServerDeaf"] = function isServerDeaf() {
+  return c93;
+};
+prototype["getAudioMixerSettings"] = function getAudioMixerSettings() {
+  return getSettings().audioMixerSettings;
+};
+prototype["isSpatialAudioEnabled"] = function isSpatialAudioEnabled() {
+  return true === this.getAudioMixerSettings().enabled;
+};
+prototype["isSpatialAudioRequested"] = function isSpatialAudioRequested() {
+  return c120;
+};
+prototype["getSpatialAudioStatus"] = function getSpatialAudioStatus() {
+  return UNKNOWN;
+};
+prototype["hasContext"] = function hasContext(arg0) {
+  return null != settingsByContext[arg0];
+};
+prototype["isSelfMutedTemporarily"] = function isSelfMutedTemporarily() {
+  if (DEFAULT === undefined) {
+    DEFAULT = MediaEngineContextTypes.DEFAULT;
+  }
+  return DEFAULT === MediaEngineContextTypes.DEFAULT && mute;
+};
+prototype["isSelfMute"] = function isSelfMute() {
+  if (DEFAULT === undefined) {
+    DEFAULT = MediaEngineContextTypes.DEFAULT;
+  }
+  const self = this;
+  const isEnabledResult = this.isEnabled();
+  mute = !isEnabledResult;
+  if (isEnabledResult) {
+    mute = getSettings(DEFAULT).mute;
+  }
+  if (!mute) {
+    mute = !NativePermissionUtils.didHavePermission(NativePermissionTypes.AUDIO);
+  }
+  if (!mute) {
+    mute = self.isSelfDeaf(DEFAULT);
+  }
+  if (!mute) {
+    mute = DEFAULT === MediaEngineContextTypes.DEFAULT && closure_92;
+    const tmp8 = DEFAULT === MediaEngineContextTypes.DEFAULT && closure_92;
+  }
+  return mute;
+};
+prototype["shouldSkipMuteUnmuteSound"] = function shouldSkipMuteUnmuteSound() {
+  return c97;
+};
+prototype["notifyMuteUnmuteSoundWasSkipped"] = function notifyMuteUnmuteSoundWasSkipped() {
+  c97 = false;
+};
+prototype["isHardwareMute"] = function isHardwareMute() {
+  if (DEFAULT === undefined) {
+    DEFAULT = MediaEngineContextTypes.DEFAULT;
+  }
+  const self = this;
+  const isMuteResult = this.isMute();
+  let isHardwareMuteResult = !isMuteResult;
+  if (!isMuteResult) {
+    isHardwareMuteResult = !self.isSelfMutedTemporarily(DEFAULT);
+  }
+  if (isHardwareMuteResult) {
+    isHardwareMuteResult = CertifiedDeviceStore.isHardwareMute(self.getInputDeviceId());
+  }
+  return isHardwareMuteResult;
+};
+prototype["isHardwareMuteNoticeEnabled"] = function isHardwareMuteNoticeEnabled() {
+  return enabled;
+};
+prototype["isSelfDeaf"] = function isSelfDeaf() {
+  if (DEFAULT === undefined) {
+    DEFAULT = MediaEngineContextTypes.DEFAULT;
+  }
+  const isSupportedResult = this.isSupported();
+  let deaf = !isSupportedResult;
+  if (isSupportedResult) {
+    deaf = getSettings(DEFAULT).deaf;
+  }
+  return deaf;
+};
+prototype["isVideoEnabled"] = function isVideoEnabled() {
+  let tmp = closure_94;
+  if (closure_94) {
+    tmp = c101;
+  }
+  return tmp;
+};
+prototype["isVideoAvailable"] = function isVideoAvailable() {
+  const values = Object.values(closure_88);
+  return values.some((disabled) => !disabled.disabled);
+};
+prototype["hasVideoDevice"] = function hasVideoDevice() {
+  return c101;
+};
+prototype["isScreenSharing"] = function isScreenSharing() {
+  let STREAM = arg0;
+  if (arg0 === undefined) {
+    STREAM = MediaEngineContextTypes.STREAM;
+  }
+  let tmp2 = DEFAULT2 === STREAM;
+  if (tmp2) {
+    tmp2 = null != closure_74;
+  }
+  return tmp2;
+};
+prototype["isSoundSharing"] = function isSoundSharing() {
+  let STREAM = arg0;
+  if (arg0 === undefined) {
+    STREAM = MediaEngineContextTypes.STREAM;
+  }
+  let tmp2 = DEFAULT2 === STREAM;
+  if (tmp2) {
+    tmp2 = null != goLiveSource;
+  }
+  if (tmp2) {
+    const desktopSource = goLiveSource.desktopSource;
+    let soundshareId;
+    if (desktopSource != null) {
+      soundshareId = desktopSource.soundshareId;
+    }
+    tmp2 = null != soundshareId;
+  }
+  return tmp2;
+};
+prototype["isLocalMute"] = function isLocalMute(id) {
+  let DEFAULT = context;
+  if (context === undefined) {
+    DEFAULT = MediaEngineContextTypes.DEFAULT;
+  }
+  let tmp2 = id !== AuthenticationStore.getId();
+  if (tmp2) {
+    tmp2 = getSettings(DEFAULT).localMutes[id] || false;
+    const tmp4 = getSettings(DEFAULT).localMutes[id] || false;
+  }
+  return tmp2;
+};
+prototype["supportsDisableLocalVideo"] = function supportsDisableLocalVideo() {
+  return result.supports(Features.DISABLE_VIDEO);
+};
+prototype["isLocalVideoDisabled"] = function isLocalVideoDisabled(id) {
+  if (DEFAULT === undefined) {
+    DEFAULT = MediaEngineContextTypes.DEFAULT;
+  }
+  let flag = getSettings(DEFAULT).disabledLocalVideos[id];
+  if (flag == null) {
+    flag = false;
+  }
+  return flag;
+};
+prototype["getVideoToggleState"] = function getVideoToggleState(arg0) {
+  if (DEFAULT === undefined) {
+    DEFAULT = MediaEngineContextTypes.DEFAULT;
+  }
+  let NONE = getSettings(DEFAULT).videoToggleStateMap[arg0];
+  if (NONE == null) {
+    NONE = constants5.NONE;
+  }
+  return NONE;
+};
+prototype["isLocalVideoAutoDisabled"] = function isLocalVideoAutoDisabled(id) {
+  let DEFAULT = arg1;
+  if (arg1 === undefined) {
+    DEFAULT = MediaEngineContextTypes.DEFAULT;
+  }
+  let hasItem = DEFAULT === MediaEngineContextTypes.DEFAULT;
+  if (hasItem) {
+    hasItem = set1.has(id);
+  }
+  return hasItem;
+};
+prototype["isAnyLocalVideoAutoDisabled"] = function isAnyLocalVideoAutoDisabled() {
+  let DEFAULT = arg0;
+  if (arg0 === undefined) {
+    DEFAULT = MediaEngineContextTypes.DEFAULT;
+  }
+  let tmp2 = DEFAULT === MediaEngineContextTypes.DEFAULT;
+  if (tmp2) {
+    tmp2 = set1.size > 0;
+  }
+  return tmp2;
+};
+prototype["isMediaFilterSettingLoading"] = function isMediaFilterSettingLoading() {
+  return c118;
+};
+prototype["isNativeAudioPermissionReady"] = function isNativeAudioPermissionReady() {
+  return c125;
+};
+prototype["getGoLiveSource"] = function getGoLiveSource() {
+  return closure_74;
+};
+prototype["getGoLiveContext"] = function getGoLiveContext() {
+  return DEFAULT2;
+};
+prototype["getLastAudioInputDeviceChangeTimestamp"] = function getLastAudioInputDeviceChangeTimestamp() {
+  return closure_84;
+};
+prototype["isH264MfDecodeAvailable"] = function isH264MfDecodeAvailable() {
+  return c85;
+};
+prototype["getLocalPan"] = function getLocalPan(id) {
+  let DEFAULT = arg1;
+  if (arg1 === undefined) {
+    DEFAULT = MediaEngineContextTypes.DEFAULT;
+  }
+  let tmp2 = getSettings(DEFAULT).localPans[id];
+  if (null == tmp2) {
+    tmp2 = closure_60;
+  }
+  return tmp2;
+};
+prototype["getLocalVolume"] = function getLocalVolume(arg0) {
+  let DEFAULT = arg1;
+  if (arg1 === undefined) {
+    DEFAULT = MediaEngineContextTypes.DEFAULT;
+  }
+  let tmp2 = DEFAULT === MediaEngineContextTypes.STREAM ? closure_1_41 : BottomSheet;
+  const tmp3 = getSettings(DEFAULT).localVolumes[arg0];
+  if (null != tmp3) {
+    tmp2 = tmp3;
+  }
+  return tmp2;
+};
+prototype["getInputVolume"] = function getInputVolume() {
+  return getSettings().inputVolume;
+};
+prototype["getOutputVolume"] = function getOutputVolume() {
+  if (obj.getConfig({ location: "MediaEngineStore.getOutputVolume" }).audioOutputPresent) {
+    let outputVolume = getSettings().outputVolume;
+  } else {
+    outputVolume = BottomSheet;
+  }
+  return outputVolume;
+};
+prototype["getMode"] = function getMode() {
+  let DEFAULT = arg0;
+  if (arg0 === undefined) {
+    DEFAULT = MediaEngineContextTypes.DEFAULT;
+  }
+  return getSettings(DEFAULT).mode;
+};
+prototype["getModeOptions"] = function getModeOptions() {
+  if (DEFAULT === undefined) {
+    DEFAULT = MediaEngineContextTypes.DEFAULT;
+  }
+  return getSettings(DEFAULT).modeOptions;
+};
+prototype["getShortcuts"] = function getShortcuts() {
+  const obj = {};
+  _modDef12.each(closure_77, (mode, arg1) => {
+    let hasItem = mode.mode === InputModes.PUSH_TO_TALK;
+    if (hasItem) {
+      hasItem = set.has(arg1);
+    }
+    if (hasItem) {
+      obj[arg1] = mode.modeOptions.shortcut;
+    }
+  });
+  return obj;
+};
+prototype["getInputDeviceId"] = function getInputDeviceId() {
+  let id = getSettings().inputDeviceId;
+  let firstResult = inputDevices[id];
+  if (firstResult == null) {
+    firstResult = inputDevices[DEFAULT_DEVICE_ID];
+  }
+  if (firstResult == null) {
+    const values = _modDef12(inputDevices).values();
+    firstResult = values.first();
+    const obj = _modDef12(inputDevices);
+  }
+  if (null != firstResult) {
+    id = firstResult.id;
+  }
+  return id;
+};
+prototype["getOutputDeviceId"] = function getOutputDeviceId() {
+  let id = getSettings().outputDeviceId;
+  let firstResult = outputDevices[id];
+  if (firstResult == null) {
+    firstResult = outputDevices[DEFAULT_DEVICE_ID];
+  }
+  if (firstResult == null) {
+    const values = _modDef12(outputDevices).values();
+    firstResult = values.first();
+    const obj = _modDef12(outputDevices);
+  }
+  if (null != firstResult) {
+    id = firstResult.id;
+  }
+  return id;
+};
+prototype["getVideoDeviceId"] = function getVideoDeviceId() {
+  let id = getSettings().videoDeviceId;
+  let firstResult = dependencyMap[id];
+  if (firstResult == null) {
+    firstResult = dependencyMap[DEFAULT_DEVICE_ID];
+  }
+  if (firstResult == null) {
+    const values = _modDef12(dependencyMap).values();
+    firstResult = values.first();
+    const obj = _modDef12(dependencyMap);
+  }
+  if (null != firstResult) {
+    id = firstResult.id;
+  }
+  return id;
+};
+prototype["getInputDevices"] = function getInputDevices() {
+  return closure_86;
+};
+prototype["getOutputDevices"] = function getOutputDevices() {
+  return closure_87;
+};
+prototype["getVideoDevices"] = function getVideoDevices() {
+  return closure_88;
+};
+prototype["getEchoCancellation"] = function getEchoCancellation() {
+  const tmp = getSettings();
+  return CertifiedDeviceStore.hasEchoCancellation(tmp.inputDeviceId) || tmp.echoCancellation;
+};
+prototype["getSidechainCompression"] = function getSidechainCompression() {
+  let sidechainCompression = result.supports(Features.SIDECHAIN_COMPRESSION);
+  if (sidechainCompression) {
+    sidechainCompression = getSettings().sidechainCompression;
+  }
+  return sidechainCompression;
+};
+prototype["getSidechainCompressionStrength"] = function getSidechainCompressionStrength() {
+  return getSettings().sidechainCompressionStrength;
+};
+prototype["getH265Enabled"] = function getH265Enabled() {
+  return getSettings().h265Enabled;
+};
+prototype["hasH265HardwareDecode"] = function hasH265HardwareDecode() {
+  return null !== c123 && c123;
+};
+prototype["getOpenH264Enabled"] = function getOpenH264Enabled() {
+  let openH264Enabled = PlatformUtils.isLinux();
+  if (openH264Enabled) {
+    openH264Enabled = getSettings().openH264Enabled;
+  }
+  return openH264Enabled;
+};
+prototype["getLoopback"] = function getLoopback() {
+  return set2.size > 0;
+};
+prototype["getLoopbackReasons"] = function getLoopbackReasons() {
+  return set2;
+};
+prototype["getNoiseSuppression"] = function getNoiseSuppression() {
+  const tmp = getSettings();
+  return CertifiedDeviceStore.hasNoiseSuppression(tmp.inputDeviceId) || tmp.noiseSuppression;
+};
+prototype["getAutomaticGainControl"] = function getAutomaticGainControl() {
+  const tmp = getSettings();
+  return CertifiedDeviceStore.hasAutomaticGainControl(tmp.inputDeviceId) || tmp.automaticGainControl;
+};
+prototype["getBypassSystemInputProcessing"] = function getBypassSystemInputProcessing() {
+  return getSettings().bypassSystemInputProcessing;
+};
+prototype["getNoiseCancellation"] = function getNoiseCancellation() {
+  return getSettings().noiseCancellation;
+};
+prototype["getHardwareEncoding"] = function getHardwareEncoding() {
+  return true;
+};
+prototype["getEnableSilenceWarning"] = function getEnableSilenceWarning() {
+  return getSettings().silenceWarning;
+};
+prototype["getDebugLogging"] = function getDebugLogging() {
+  return result.getDebugLogging();
+};
+prototype["getQoS"] = function getQoS() {
+  return getSettings().qos;
+};
+prototype["getAttenuation"] = function getAttenuation() {
+  return getSettings().attenuation;
+};
+prototype["getAttenuateWhileSpeakingSelf"] = function getAttenuateWhileSpeakingSelf() {
+  return getSettings().attenuateWhileSpeakingSelf;
+};
+prototype["getAttenuateWhileSpeakingOthers"] = function getAttenuateWhileSpeakingOthers() {
+  return getSettings().attenuateWhileSpeakingOthers;
+};
+prototype["getAudioSubsystem"] = function getAudioSubsystem() {
+  let isWindowsResult = PlatformUtils.isWindows();
+  if (isWindowsResult) {
+    isWindowsResult = result.supports(Features.AUTOMATIC_AUDIO_SUBSYSTEM);
+  }
+  if (isWindowsResult) {
+    isWindowsResult = result.supports(Features.AUDIO_SUBSYSTEM_DEFERRED_SWITCH);
+  }
+  if (isWindowsResult) {
+    if (getSettings().automaticAudioSubsystem) {
+      let AUTOMATIC = constants8.AUTOMATIC;
+    }
+    return AUTOMATIC;
+  }
+  AUTOMATIC = result.getAudioSubsystem();
+};
+prototype["getMLSSigningKey"] = function getMLSSigningKey(arg0, arg1) {
+  return result.getMLSSigningKey(arg0, arg1);
+};
+prototype["getActiveInputProfile"] = function getActiveInputProfile() {
+  return getSettings().activeInputProfile;
+};
+prototype["isInputProfileCustom"] = function isInputProfileCustom() {
+  const activeInputProfile = this.getActiveInputProfile();
+  let tmp2 = null == activeInputProfile;
+  if (!tmp2) {
+    tmp2 = activeInputProfile === InputProfile.CUSTOM;
+  }
+  return tmp2;
+};
+prototype["getSettings"] = function getSettings() {
+  let DEFAULT = arg0;
+  if (arg0 === undefined) {
+    DEFAULT = MediaEngineContextTypes.DEFAULT;
+  }
+  return getSettings(DEFAULT);
+};
+prototype["getState"] = function getState() {
+  return { settingsByContext, inputDevices, outputDevices, appSupported, krispModuleLoaded, krispFatalError, krispVersion, krispSuppressionLevel: level, goLiveSource, goLiveContext: DEFAULT2 };
+};
+prototype["getInputDetectedThisConnection"] = function getInputDetectedThisConnection() {
+  return c102;
+};
+prototype["getInputDetected"] = function getInputDetected() {
+  return navigation.inputDetected;
+};
+prototype["getLastInputDetectedUpdateTime"] = function getLastInputDetectedUpdateTime() {
+  return navigation.lastUpdateTime;
+};
+prototype["getNoInputDetectedNotice"] = function getNoInputDetectedNotice() {
+  return closure_103;
+};
+prototype["getInputDeviceOSMuted"] = function getInputDeviceOSMuted() {
+  return c104;
+};
+prototype["getInputDeviceHardwareMuted"] = function getInputDeviceHardwareMuted() {
+  return hardwareMuted;
+};
+prototype["getInputDeviceOSVolume"] = function getInputDeviceOSVolume() {
+  return c105;
+};
+prototype["getPacketDelay"] = function getPacketDelay() {
+  let DEFAULT = context;
+  if (context === undefined) {
+    DEFAULT = MediaEngineContextTypes.DEFAULT;
+  }
+  let num = 0;
+  if (!PlatformUtils.isPlatformEmbedded) {
+    const self = this;
+    num = 0;
+    if (this.getMode(DEFAULT) === InputModes.VOICE_ACTIVITY) {
+      num = self.getModeOptions(DEFAULT).vadLeading;
+    }
+  }
+  return num;
+};
+prototype["setCanHavePriority"] = function setCanHavePriority(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  result.eachConnection((setCanHavePriority) => setCanHavePriority.setCanHavePriority(closure_0, closure_1));
+};
+prototype["isInteractionRequired"] = function isInteractionRequired() {
+  return required;
+};
+prototype["getVideoHook"] = function getVideoHook() {
+  return getSettings().videoHook;
+};
+prototype["supportsVideoHook"] = function supportsVideoHook() {
+  return result.supports(Features.VIDEO_HOOK);
+};
+prototype["getExperimentalSoundshare"] = function getExperimentalSoundshare() {
+  const self = this;
+  let flag = getSettings().experimentalSoundshare2;
+  result = this.supportsExperimentalSoundshare();
+  if (result) {
+    if (flag == null) {
+      flag = true;
+    }
+    if (!flag) {
+      flag = !self.supportsHookSoundshare();
+    }
+    result = flag;
+  }
+  return result;
+};
+prototype["supportsExperimentalSoundshare"] = function supportsExperimentalSoundshare() {
+  let supportsResult = result.supports(Features.EXPERIMENTAL_SOUNDSHARE);
+  if (supportsResult) {
+    const tmp4 = DiscordNativeDefault;
+    let release;
+    if (tmp4 != null) {
+      release = tmp4.os.release;
+    }
+    supportsResult = _modDef13847.satisfies(release, __initData4);
+  }
+  return supportsResult;
+};
+prototype["supportsHookSoundshare"] = function supportsHookSoundshare() {
+  let isWindowsResult = PlatformUtils.isWindows();
+  if (isWindowsResult) {
+    isWindowsResult = result.supports(Features.SOUNDSHARE);
+  }
+  if (isWindowsResult) {
+    const tmp6 = DiscordNativeDefault;
+    let release;
+    if (tmp6 != null) {
+      release = tmp6.os.release;
+    }
+    isWindowsResult = _modDef13847.satisfies(release, __initData3);
+  }
+  return isWindowsResult;
+};
+prototype["getUseSystemScreensharePicker"] = function getUseSystemScreensharePicker() {
+  result = this.supportsSystemScreensharePicker();
+  let useSystemScreensharePicker = getSettings().useSystemScreensharePicker;
+  PlatformUtils;
+  if (result) {
+    if (useSystemScreensharePicker == null) {
+      useSystemScreensharePicker = tmp3;
+    }
+    result = useSystemScreensharePicker;
+  }
+  return result;
+};
+prototype["supportsSystemScreensharePicker"] = function supportsSystemScreensharePicker() {
+  return result.supports(Features.NATIVE_SCREENSHARE_PICKER);
+};
+prototype["getUseVaapiEncoder"] = function getUseVaapiEncoder() {
+  return c138;
+};
+prototype["getVideoEncoderExperiments"] = function getVideoEncoderExperiments(STREAM, streamer) {
+  const arr = new Array("unk");
+  arr.push("nvNewPresets");
+  if (STREAM === MediaEngineContextTypes.STREAM) {
+    arr.push("nvRelaxRc=250");
+  } else {
+    arr.push("nvRelaxRc=75");
+  }
+  if (this.getUseVaapiEncoder()) {
+    arr.push("vaapi");
+  }
+  if (obj.getNvencReconstructedFrameExperimentConfig({ location: "getVideoEncoderExperiments" }).enabled) {
+    arr.push("nvReconFrames");
+  }
+  let isWindowsResult = STREAM === MediaEngineContextTypes.STREAM;
+  if (isWindowsResult) {
+    isWindowsResult = "streamer" === streamer;
+  }
+  if (isWindowsResult) {
+    isWindowsResult = PlatformUtils.isWindows();
+    const tmp6Result = PlatformUtils;
+  }
+  if (isWindowsResult) {
+    arr.push("useCaptureDeviceForEncode");
+    const VideoCaptureDeviceNoReuseExperiment = VideoCaptureDeviceNoReuse.VideoCaptureDeviceNoReuseExperiment;
+    if (VideoCaptureDeviceNoReuseExperiment.getConfig({ location: "handleReady" }).overrideDeviceReuse) {
+      arr.push("videoCaptureDeviceOverrideReuse");
+    }
+  }
+  arr.push("linux-vulkan");
+  return arr.join(",");
+};
+prototype["getUseGamescopeCapture"] = function getUseGamescopeCapture() {
+  return c137;
+};
+prototype["getSpeakingWhileMuted"] = function getSpeakingWhileMuted() {
+  return c98;
+};
+prototype["getKrispModelOverride"] = function getKrispModelOverride() {
+  return model;
+};
+prototype["getKrispModels"] = function getKrispModels() {
+  return closure_114;
+};
+prototype["getKrispVadActivationThreshold"] = function getKrispVadActivationThreshold() {
+  let num = getSettings().modeOptions.vadKrispActivationThreshold;
+  if (num == null) {
+    num = 0.5;
+  }
+  return num;
+};
+prototype["hasActiveCallKitCall"] = function hasActiveCallKitCall() {
+  return global;
+};
+prototype["setHasActiveCallKitCall"] = function setHasActiveCallKitCall(arg0) {
+  global = arg0;
+};
+prototype["supportsScreenSoundshare"] = function supportsScreenSoundshare() {
+  if (obj.isMac()) {
+    let supportsResult = result.supports(Features.SOUNDSHARE);
+    if (supportsResult) {
+      const tmp12 = DiscordNativeDefault;
+      let release;
+      if (tmp12 != null) {
+        release = tmp12.os.release;
+      }
+      supportsResult = _modDef13847.satisfies(release, closure_1_25);
+    }
+    if (supportsResult) {
+      let satisfiesResult = PlatformUtils.isMac() && result.supports(Features.SCREEN_CAPTURE_KIT);
+      if (satisfiesResult) {
+        const tmp18 = DiscordNativeDefault;
+        let release1;
+        if (tmp18 != null) {
+          release1 = tmp18.os.release;
+        }
+        satisfiesResult = _modDef13847.satisfies(release1, closure_1_24);
+      }
+      supportsResult = satisfiesResult;
+      const tmpResult = PlatformUtils;
+    }
+    let supportsResult2 = supportsResult;
+  } else {
+    if (tmpResult3.isWindows()) {
+      let supportsResult1 = result.supports(Features.SCREEN_SOUNDSHARE);
+      if (supportsResult1) {
+        const self = this;
+        supportsResult1 = this.getExperimentalSoundshare();
+      }
+      supportsResult2 = supportsResult1;
+    } else {
+      supportsResult2 = PlatformUtils.isLinux();
+      if (supportsResult2) {
+        supportsResult2 = result.supports(Features.SCREEN_SOUNDSHARE);
+      }
+      const tmpResult4 = PlatformUtils;
+    }
+    tmpResult3 = PlatformUtils;
+  }
+  return supportsResult2;
+};
+prototype["getSystemMicrophoneMode"] = function getSystemMicrophoneMode() {
+  if (obj.isWindows()) {
+    const self = this;
+    if (!this.getBypassSystemInputProcessing()) {
+      const tmp5 = closure_122[self.getInputDeviceId(self)];
+      let found;
+      if (tmp5 != null) {
+        const active = tmp5.active;
+        if (active != null) {
+          found = active.find((item) => item === deep_noise_suppression);
+        }
+      }
+      return found;
+    }
+  } else {
+    if (!tmpResult.isMac()) {
+      PlatformUtils;
+    }
+    return c129;
+  }
+  obj = PlatformUtils;
+};
+prototype["getVideoStreamParameters"] = function getVideoStreamParameters() {
+  let DEFAULT = context;
+  if (context === undefined) {
+    DEFAULT = MediaEngineContextTypes.DEFAULT;
+  }
+  const self = this;
+  if (this.supports(Features.VIDEO)) {
+    if (DEFAULT === MediaEngineContextTypes.DEFAULT) {
+      let SCREEN = constants11.VIDEO;
+    } else {
+      SCREEN = constants11.SCREEN;
+    }
+    const obj = { rid: "100", type: SCREEN, quality };
+    const items = [obj];
+  } else {
+    const items1 = [];
+    let enableSimulcast = self.isSimulcastSupported();
+    if (enableSimulcast) {
+      enableSimulcast = DEFAULT === MediaEngineContextTypes.DEFAULT;
+    }
     if (enableSimulcast) {
       const DisableCameraSimulcastExperiment = DisableCameraSimulcastExperiment2.DisableCameraSimulcastExperiment;
       enableSimulcast = DisableCameraSimulcastExperiment.getConfig({ location: "MediaEngineStore.getVideoStreamParameters" }).enableSimulcast;
@@ -3439,68 +3425,60 @@ class MediaEngineStore extends Store {
     }
     return items1;
   }
-  fetchAsyncResources() {
-    obj = { fetchDave: obj2.isWeb() };
-    obj2 = PlatformUtils;
-    return result.fetchAsyncResources(obj);
-  }
-  startDavePreload() {
-    let logger;
-    const tmp = c119;
-    if (!tmp) {
-      c119 = true;
-      obj = PlatformUtils;
-      if (obj.isWeb()) {
-        const asyncResources = result.fetchAsyncResources({ fetchDave: true });
-        asyncResources.catch((error) => {
-          logger.warn("DAVE preload failed:", error);
-          obj = SentryUtilsDefault;
-          obj.captureException(error);
-        });
-      }
+};
+prototype["fetchAsyncResources"] = function fetchAsyncResources() {
+  const obj = { fetchDave: PlatformUtils.isWeb() };
+  return result.fetchAsyncResources(obj);
+};
+prototype["startDavePreload"] = function startDavePreload() {
+  if (!c119) {
+    c119 = true;
+    if (obj.isWeb()) {
+      const asyncResources = result.fetchAsyncResources({ fetchDave: true });
+      asyncResources.catch((error) => {
+        logger.warn("DAVE preload failed:", error);
+        SentryUtilsDefault.captureException(error);
+      });
     }
+    obj = PlatformUtils;
   }
-  getSupportedSecureFramesProtocolVersion() {
-    return result.getSupportedSecureFramesProtocolVersion();
-  }
-  hasClipsSource() {
-    return null != c75;
-  }
-  isClipsRecordingReady() {
-    return c83;
-  }
-  isClipsRecordingReadySignalSupported() {
-    return result.supports(Features.CLIPS_RECORDING_READY_EVENTS);
-  }
-  getGpuBrand() {
-    return c131;
-  }
-  getHasNvidiaGpu() {
-    let tmp = c134;
-    if (!tmp) {
-      const _window = window;
-      let LIBVA_DRIVER_NAME;
-      if (DiscordNative != null) {
-        const _process = DiscordNative.process;
-        if (_process != null) {
-          const env = _process.env;
-          if (env != null) {
-            LIBVA_DRIVER_NAME = env.LIBVA_DRIVER_NAME;
-          }
+};
+prototype["getSupportedSecureFramesProtocolVersion"] = function getSupportedSecureFramesProtocolVersion() {
+  return result.getSupportedSecureFramesProtocolVersion();
+};
+prototype["hasClipsSource"] = function hasClipsSource() {
+  return null != c75;
+};
+prototype["isClipsRecordingReady"] = function isClipsRecordingReady() {
+  return c83;
+};
+prototype["isClipsRecordingReadySignalSupported"] = function isClipsRecordingReadySignalSupported() {
+  return result.supports(Features.CLIPS_RECORDING_READY_EVENTS);
+};
+prototype["getGpuBrand"] = function getGpuBrand() {
+  return c131;
+};
+prototype["getHasNvidiaGpu"] = function getHasNvidiaGpu() {
+  let tmp = c134;
+  if (!c134) {
+    const _window = window;
+    let LIBVA_DRIVER_NAME;
+    if (DiscordNative != null) {
+      const _process = DiscordNative.process;
+      if (_process != null) {
+        const env = _process.env;
+        if (env != null) {
+          LIBVA_DRIVER_NAME = env.LIBVA_DRIVER_NAME;
         }
       }
-      tmp = "nvidia" === LIBVA_DRIVER_NAME;
     }
-    return tmp;
+    tmp = "nvidia" === LIBVA_DRIVER_NAME;
   }
-}
-const prototype = MediaEngineStore.prototype;
+  return tmp;
+};
 MediaEngineStore.displayName = "MediaEngineStore";
-let obj7 = {
+const mediaEngineStore = new MediaEngineStore(DispatcherDefault, {
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(currentVoiceChannelId) {
-    let channelId;
-    let guildId;
-    let obj3;
     ({ channelId, guildId } = currentVoiceChannelId);
     if (currentVoiceChannelId.currentVoiceChannelId !== channelId) {
       updateVideo(tmp, null);
@@ -3510,11 +3488,9 @@ let obj7 = {
     }
     if (null == guildId) {
       if (null != channelId) {
-        const tmp6 = c107;
-        if (!tmp6) {
+        if (!c107) {
           c107 = true;
           const tmp8 = getSettings();
-          const tmp9 = tmp8.mute || tmp8.deaf;
           if (tmp9) {
             let DEFAULT = MediaEngineContextTypes.DEFAULT;
             if (DEFAULT === undefined) {
@@ -3522,36 +3498,58 @@ let obj7 = {
             }
             let tmp11 = settingsByContext[DEFAULT];
             if (null == tmp11) {
-              obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj3, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-              obj = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-              obj3 = {};
-              PlatformUtils.isPlatformEmbedded || false;
+              obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+              modeOptions = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+              obj2.modeOptions = modeOptions;
+              obj2.localMutes = {};
+              obj2.disabledLocalVideos = {};
+              obj2.videoToggleStateMap = {};
+              obj2.localVolumes = {};
+              const obj3 = {};
               const merged = Object.assign(closure_34);
+              obj2.audioMixerSettings = obj3;
+              obj2.localPans = {};
+              obj2.inputVolume = outputVolume;
+              obj2.outputVolume = outputVolume;
+              obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+              obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+              obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+              obj2.videoHook = result.supports(Features.VIDEO_HOOK);
               settingsByContext[DEFAULT] = obj2;
               tmp11 = obj2;
+              const tmp12 = PlatformUtils.isPlatformEmbedded || false;
             }
             const _Object = Object;
             const merged1 = Object.assign(tmp11, { deaf: false, mute: false });
             const Storage = Storage6.Storage;
-            result = Storage.set(MediaEngineStore_str, settingsByContext);
+            result = Storage.set(MediaEngineStore, settingsByContext);
             result.eachConnection(updateConnectionMuteDeaf);
           }
+          tmp9 = tmp8.mute || tmp8.deaf;
         }
       }
     }
     c107 = false;
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
-    let id;
     voiceStates = voiceStates.voiceStates;
     return voiceStates.reduce((acc, sessionId) => {
       if (closure_1_73 === sessionId.sessionId) {
         closure_90 = sessionId.mute || sessionId.suppress;
         deaf = sessionId.deaf;
         closure_1_72.eachConnection(updateConnectionMuteDeaf);
-        const tmp13 = null != sessionId.guildId && null != sessionId.channelId && null != channelId && channelId !== sessionId.channelId;
+        let tmp13 = null != sessionId.guildId && null != sessionId.channelId;
+        if (tmp13) {
+          tmp13 = null != channelId;
+        }
+        if (tmp13) {
+          tmp13 = channelId !== sessionId.channelId;
+        }
+        let tmp17 = !closure_1_107;
+        if (!closure_1_107) {
+          tmp17 = null == sessionId.channelId;
+        }
         let tmp19 = !tmp13;
-        const tmp17 = !closure_1_107 && null == sessionId.channelId;
         if (!tmp13) {
           tmp19 = !tmp17;
         }
@@ -3562,7 +3560,10 @@ let obj7 = {
         channelId = sessionId.channelId;
         return true;
       } else {
-        const tmp2 = sessionId.userId === id.getId() && null == channelId.getChannelId();
+        let tmp2 = sessionId.userId === id.getId();
+        if (tmp2) {
+          tmp2 = null == channelId.getChannelId();
+        }
         if (tmp2) {
           updateVideo(false, null);
         }
@@ -3575,29 +3576,33 @@ let obj7 = {
     c90 = false;
     c93 = false;
     const tmp = getSettings();
-    obj = PlatformUtils;
-    const isWindowsResult = obj.isWindows() && result.supports(Features.AUTOMATIC_AUDIO_SUBSYSTEM) && result.supports(Features.AUDIO_SUBSYSTEM_DEFERRED_SWITCH);
+    let isWindowsResult = PlatformUtils.isWindows();
     if (isWindowsResult) {
-      obj2 = result;
+      isWindowsResult = result.supports(Features.AUTOMATIC_AUDIO_SUBSYSTEM);
+    }
+    if (isWindowsResult) {
+      isWindowsResult = result.supports(Features.AUDIO_SUBSYSTEM_DEFERRED_SWITCH);
+    }
+    if (isWindowsResult) {
       if (result.supports(Features.AUDIO_BYPASS_SYSTEM_INPUT_PROCESSING)) {
         setAudioSubsystem(constants8.AUTOMATIC);
       } else if (tmp.automaticAudioSubsystem) {
         obj2.queueAudioSubsystem(constants8.EXPERIMENTAL);
       }
+      obj2 = result;
     }
     if (result.supports(Features.OFFLOAD_ADM_CONTROLS)) {
       result = obj3.setOffloadAdmControls(true);
     }
-    const tmp2Result = PlatformUtils;
-    enabled = tmp2Result.isIOS();
+    enabled = PlatformUtils.isIOS();
     if (enabled) {
+      enabled = IOSAudioInterruptExperiment.getIOSAudioInterruptExperimentConfig("handleConnectionOpen").enabled;
       const tmp2Result3 = IOSAudioInterruptExperiment;
-      enabled = tmp2Result3.getIOSAudioInterruptExperimentConfig("handleConnectionOpen").enabled;
     }
     if (enabled) {
-      result.updateFieldTrial("WebRTC-Audio-iOS-Holding", "Enabled");
+      obj3.updateFieldTrial("WebRTC-Audio-iOS-Holding", "Enabled");
     }
-    const tmp2Result4 = PlatformUtils;
+    const tmp2Result = PlatformUtils;
     if (tmp2Result4.isIOS()) {
       const setNcModels = obj3.setNcModels;
       if (setNcModels != null) {
@@ -3607,53 +3612,49 @@ let obj7 = {
     }
     maybeProbeAudioEffects(tmp.inputDeviceId);
     applyRemoteSettings();
+    tmp2Result4 = PlatformUtils;
   },
   CONNECTION_CLOSED: function handleConnectionClosed() {
     c73 = null;
   },
   POST_CONNECTION_OPEN: function handlePostConnectionOpen() {
-    obj = PlatformUtils;
     if (obj.isWeb()) {
       mediaEngineStore.startDavePreload();
     }
     return false;
   },
   RTC_CONNECTION_STATE: function handleRTCConnectionStateUpdate(state) {
-    let obj4;
     state = state.state;
     if (constants3.CONNECTING === state) {
       if (!c79) {
+        closure_72.enable().then(() => disabledLocalVideos(dependencyMap[43]).dispatch({ type: "MEDIA_ENGINE_SET_AUDIO_ENABLED", enabled: true, unmute: false }));
         const enableResult = closure_72.enable();
-        enableResult.then(() => {
-          obj = disabledLocalVideos(dependencyMap[43]);
-          return obj.dispatch({ type: "MEDIA_ENGINE_SET_AUDIO_ENABLED", enabled: true, unmute: false });
-        });
       }
     } else if (constants3.RTC_CONNECTING === state) {
-      let c103 = false;
+      c103 = false;
       c104 = undefined;
       c105 = undefined;
-      let c106;
+      c106 = undefined;
       c102 = false;
       navigation.reset();
     } else if (constants3.RTC_CONNECTED === state) {
       updateVideo();
     } else if (constants3.DISCONNECTED === state) {
       closure_140 = {};
-      let DEFAULT2;
+      DEFAULT2 = undefined;
       let disabledLocalVideos;
       if (0 !== set1.size) {
         DEFAULT2 = MediaEngineContextTypes.DEFAULT;
         disabledLocalVideos = getSettings(DEFAULT2).disabledLocalVideos;
         const item = set1.forEach((item) => {
-          let closure_0 = item;
+          closure_0 = item;
           _modDef38(disabledLocalVideos[item], "If you are auto-disabled, then you are also disabled.");
-          delete disabledLocalVideos[item];
+          delete tmp[tmp2];
           result.eachConnection((setLocalVideoDisabled) => setLocalVideoDisabled.setLocalVideoDisabled(closure_0, false), DEFAULT2);
         });
         set1.clear();
-        let DEFAULT = DEFAULT2;
         obj2 = { disabledLocalVideos };
+        let DEFAULT = DEFAULT2;
         if (DEFAULT2 === undefined) {
           DEFAULT = MediaEngineContextTypes.DEFAULT;
         }
@@ -3662,13 +3663,26 @@ let obj7 = {
         }
         let tmp3 = settingsByContext[DEFAULT];
         if (null == tmp3) {
-          const obj3 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: closure_72.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-          obj = { threshold: -60, autoThreshold: DEFAULT2(1369).isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-          obj4 = {};
-          DEFAULT2(1369).isPlatformEmbedded || false;
+          const obj3 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+          modeOptions = { threshold: -60, autoThreshold: DEFAULT2(1369).isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+          obj3.modeOptions = modeOptions;
+          obj3.localMutes = {};
+          obj3.disabledLocalVideos = {};
+          obj3.videoToggleStateMap = {};
+          obj3.localVolumes = {};
+          const obj4 = {};
           const merged = Object.assign(closure_34);
+          obj3.audioMixerSettings = obj4;
+          obj3.localPans = {};
+          obj3.inputVolume = outputVolume;
+          obj3.outputVolume = outputVolume;
+          obj3.inputDeviceId = DEFAULT_DEVICE_ID;
+          obj3.outputDeviceId = DEFAULT_DEVICE_ID;
+          obj3.videoDeviceId = DEFAULT_DEVICE_ID;
+          obj3.videoHook = closure_72.supports(Features.VIDEO_HOOK);
           settingsByContext[DEFAULT] = obj3;
           tmp3 = obj3;
+          const tmp5 = DEFAULT2(1369).isPlatformEmbedded || false;
         }
         const _Object = Object;
         const merged1 = Object.assign(tmp3, obj2);
@@ -3681,24 +3695,23 @@ let obj7 = {
     result.eachConnection(updateConnectionMuteDeaf);
   },
   AUDIO_TOGGLE_SELF_MUTE: function handleToggleSelfMute(context) {
-    let obj3;
-    let obj4;
     context = context.context;
-    const playSoundEffect = context.playSoundEffect;
     const tmp = getSettings(context);
     let flag = tmp.deaf;
-    mute = tmp.mute;
     if (context === MediaEngineContextTypes.DEFAULT) {
-      obj = NativePermissionUtils;
-      const permission = obj.requestPermission(NativePermissionTypes.AUDIO);
+      const permission = NativePermissionUtils.requestPermission(NativePermissionTypes.AUDIO);
       if (closure_92) {
         return false;
       }
     }
-    if (!(!flag && !mute)) {
+    let tmp8 = !flag;
+    if (!flag) {
+      tmp8 = !tmp.mute;
+    }
+    if (!tmp8) {
       flag = false;
     }
-    if (!playSoundEffect) {
+    if (!context.playSoundEffect) {
       c97 = true;
     }
     let DEFAULT = context;
@@ -3710,25 +3723,34 @@ let obj7 = {
     }
     let tmp9 = settingsByContext[DEFAULT];
     if (null == tmp9) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj4 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = obj3;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj4 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj4;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp9 = obj2;
+      const tmp10 = PlatformUtils.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp9, { mute: tmp8, deaf: flag });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
     result.eachConnection(updateConnectionMuteDeaf);
   },
   AUDIO_SET_SELF_MUTE: function handleSetSelfMute(context) {
-    let obj3;
-    let obj4;
     let DEFAULT = context.context;
-    const playSoundEffect = context.playSoundEffect;
-    obj = { mute: context.mute };
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
@@ -3737,28 +3759,39 @@ let obj7 = {
     }
     let tmp3 = settingsByContext[DEFAULT];
     if (null == tmp3) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj4 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = obj3;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj4 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj4;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp3 = obj2;
+      const tmp4 = PlatformUtils.isPlatformEmbedded || false;
     }
-    const merged1 = Object.assign(tmp3, obj);
+    const merged1 = Object.assign(tmp3, { mute: context.mute });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
-    if (!playSoundEffect) {
+    result = Storage.set(MediaEngineStore, settingsByContext);
+    if (!context.playSoundEffect) {
       c97 = true;
     }
     result.eachConnection(updateConnectionMuteDeaf);
+    const obj = { mute: context.mute };
   },
   AUDIO_TOGGLE_SELF_DEAF: function handleToggleSelfDeafen(context) {
-    let obj3;
-    let obj4;
     context = context.context;
     let DEFAULT = context;
-    obj = { deaf: !getSettings(context).deaf };
     if (context === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
@@ -3767,281 +3800,331 @@ let obj7 = {
     }
     let tmp3 = settingsByContext[DEFAULT];
     if (null == tmp3) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj4 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = obj3;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj4 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj4;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp3 = obj2;
+      const tmp4 = PlatformUtils.isPlatformEmbedded || false;
     }
-    const merged1 = Object.assign(tmp3, obj);
+    const merged1 = Object.assign(tmp3, { deaf: !getSettings(context).deaf });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
     result.eachConnection(updateConnectionMuteDeaf);
+    const obj = { deaf: !getSettings(context).deaf };
   },
   AUDIO_TOGGLE_LOCAL_MUTE: function handleToggleLocalMute(arg0) {
-    let context;
-    let obj3;
-    let obj4;
-    let userId;
     ({ context, userId } = arg0);
     let localMutes;
     if (userId !== AuthenticationStore.getId()) {
       localMutes = getSettings(context).localMutes;
       if (localMutes[userId]) {
-        delete localMutes[userId];
+        delete tmp[tmp2];
       } else {
-        let flag = true;
         localMutes[userId] = true;
       }
+      const obj = { localMutes };
       let DEFAULT = context;
-      obj = { localMutes };
       if (context === undefined) {
         DEFAULT = MediaEngineContextTypes.DEFAULT;
       }
       if (DEFAULT === undefined) {
         DEFAULT = MediaEngineContextTypes.DEFAULT;
       }
-      let tmp4 = settingsByContext[DEFAULT];
-      if (null == tmp4) {
-        obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-        obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-        obj4 = {};
-        PlatformUtils.isPlatformEmbedded || false;
+      let tmp6 = settingsByContext[DEFAULT];
+      if (null == tmp6) {
+        obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+        const obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+        obj2.modeOptions = obj3;
+        obj2.localMutes = {};
+        obj2.disabledLocalVideos = {};
+        obj2.videoToggleStateMap = {};
+        obj2.localVolumes = {};
+        const obj4 = {};
         const merged = Object.assign(closure_34);
+        obj2.audioMixerSettings = obj4;
+        obj2.localPans = {};
+        obj2.inputVolume = outputVolume;
+        obj2.outputVolume = outputVolume;
+        obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+        obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+        obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+        obj2.videoHook = result.supports(Features.VIDEO_HOOK);
         settingsByContext[DEFAULT] = obj2;
-        tmp4 = obj2;
+        tmp6 = obj2;
+        const tmp8 = PlatformUtils.isPlatformEmbedded || false;
       }
       const _Object = Object;
-      const merged1 = Object.assign(tmp4, obj);
+      const merged1 = Object.assign(tmp6, obj);
       const Storage = Storage6.Storage;
-      result = Storage.set(MediaEngineStore_str, settingsByContext);
+      result = Storage.set(MediaEngineStore, settingsByContext);
       result.eachConnection((setLocalMute) => {
         let flag = localMutes[userId];
-        setLocalMute = setLocalMute.setLocalMute;
         if (!flag) {
           flag = false;
         }
-        return setLocalMute(userId, flag);
+        return setLocalMute.setLocalMute(userId, flag);
       }, context);
     }
   },
   AUDIO_SET_LOCAL_VIDEO_DISABLED: function handleSetLocalVideoDisabled(arg0) {
-    let context;
-    let isAutomatic;
-    let obj4;
-    let obj5;
-    let obj6;
-    let obj8;
-    let obj9;
-    let persist;
-    let userId;
-    let videoToggleState;
     ({ context, userId } = arg0);
     ({ videoToggleState, persist, isAutomatic } = arg0);
     let disabledLocalVideos;
-    let tmp4 = persist;
-    const tmp3 = _modDef38;
+    let tmp6 = persist;
     if (persist) {
-      tmp4 = isAutomatic;
+      tmp6 = isAutomatic;
     }
-    tmp3(!tmp4, "These are not allowed to both be true.");
-    const DISABLED = constants5.DISABLED;
+    _modDef38(!tmp6, "These are not allowed to both be true.");
     disabledLocalVideos = getSettings(context).disabledLocalVideos;
     let flag = disabledLocalVideos[userId];
     if (flag == null) {
       flag = false;
     }
     const hasItem = set1.has(userId);
-    set1.info("disableVideo=" + videoToggleState === DISABLED + " currentlyDisabled=" + flag + " currentlyAutoDisabled=" + hasItem + ", isVideoShown=" + videoToggleState === constants5.AUTO_ENABLED || videoToggleState === constants5.MANUAL_ENABLED);
-    let tmp13 = hasItem;
-    const tmpResult = _modDef38;
+    set1.info("disableVideo=" + videoToggleState === constants5.DISABLED + " currentlyDisabled=" + flag + " currentlyAutoDisabled=" + hasItem + ", isVideoShown=" + videoToggleState === constants5.AUTO_ENABLED || videoToggleState === constants5.MANUAL_ENABLED);
+    let tmp15 = hasItem;
     if (hasItem) {
-      tmp13 = !flag;
+      tmp15 = !flag;
     }
-    tmpResult(!tmp13, "If you are auto-disabled, then you are also disabled.");
-    const DEFAULT = MediaEngineContextTypes.DEFAULT;
-    if (isAutomatic) {
-      isAutomatic = tmp15;
-    }
-    let tmp17 = context === DEFAULT;
+    _modDef38(!tmp15, "If you are auto-disabled, then you are also disabled.");
     if (isAutomatic) {
       isAutomatic = tmp17;
     }
-    set1.info("changed=" + videoToggleState === DISABLED !== flag + " isDefaultContext=" + tmp17 + " isUpdateCausedByVideoHealthManager=" + isAutomatic + " isManualToggleByUser=" + persist && videoToggleState === DISABLED !== flag && tmp17);
-    const videoToggleStateMap = getSettings(context).videoToggleStateMap;
-    const tmp20 = videoToggleStateMap[userId] === constants5.AUTO_PROBING && videoToggleState === constants5.AUTO_ENABLED;
+    let tmp19 = context === MediaEngineContextTypes.DEFAULT;
+    if (isAutomatic) {
+      isAutomatic = tmp19;
+    }
+    let tmp20 = persist;
+    if (persist) {
+      tmp20 = tmp17;
+    }
     if (tmp20) {
-      trackVideoToggleDefault(userId, videoToggleState === DISABLED ? constants12.AUTO_DISABLE : constants12.AUTO_ENABLE, videoToggleState === constants5.AUTO_ENABLED || videoToggleState === constants5.MANUAL_ENABLED);
+      tmp20 = tmp19;
     }
-    videoToggleStateMap[userId] = videoToggleState;
-    let DEFAULT2 = context;
-    if (context === undefined) {
-      DEFAULT2 = MediaEngineContextTypes.DEFAULT;
-    }
-    let flag2 = persist;
-    if (persist === undefined) {
-      flag2 = true;
-    }
-    if (DEFAULT2 === undefined) {
-      DEFAULT2 = MediaEngineContextTypes.DEFAULT;
-    }
-    let tmp25 = settingsByContext[DEFAULT2];
-    if (null == tmp25) {
-      const obj3 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj4, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj5, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj4 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj5 = {};
-      PlatformUtils.isPlatformEmbedded || false;
-      const merged = Object.assign(closure_34);
-      settingsByContext[DEFAULT2] = obj3;
-      tmp25 = obj3;
-    }
-    const merged1 = Object.assign(tmp25, { videoToggleStateMap });
-    if (flag2) {
-      const Storage = Storage6.Storage;
-      result = Storage.set(MediaEngineStore_str, settingsByContext);
-    }
-    if (videoToggleState === constants5.AUTO_PROBING) {
-      const rTCConnection = RTCConnectionStore.getRTCConnection();
-      obj6 = RTCConnectionStore;
-      if (rTCConnection != null) {
-        const result1 = rTCConnection.pauseStatsCollectionForUser(userId, true);
-        obj6 = RTCConnectionStore;
+    set1.info("changed=" + videoToggleState === constants5.DISABLED !== flag + " isDefaultContext=" + tmp19 + " isUpdateCausedByVideoHealthManager=" + isAutomatic + " isManualToggleByUser=" + tmp20);
+    const videoToggleStateMap = getSettings(context).videoToggleStateMap;
+    if (!tmp22) {
+      videoToggleStateMap[userId] = videoToggleState;
+      const obj3 = { videoToggleStateMap };
+      let DEFAULT = context;
+      if (context === undefined) {
+        DEFAULT = MediaEngineContextTypes.DEFAULT;
       }
-    } else {
-      const rTCConnection1 = RTCConnectionStore.getRTCConnection();
-      obj6 = RTCConnectionStore;
-      if (rTCConnection1 != null) {
-        const result2 = rTCConnection1.pauseStatsCollectionForUser(userId, false);
-        obj6 = RTCConnectionStore;
+      let flag2 = persist;
+      if (persist === undefined) {
+        flag2 = true;
       }
-    }
-    const tmp44 = c127;
-    if (!tmp44) {
-      const _HermesInternal = HermesInternal;
-      set1.info("isAutoDisableAllowed=" + c127 + " - disabling VideoHealthManager");
-      const rTCConnection2 = obj6.getRTCConnection();
-      if (rTCConnection2 != null) {
-        const videoHealthManager = rTCConnection2.getVideoHealthManager();
-        if (videoHealthManager != null) {
-          videoHealthManager.disable();
+      if (DEFAULT === undefined) {
+        DEFAULT = MediaEngineContextTypes.DEFAULT;
+      }
+      let tmp28 = settingsByContext[DEFAULT];
+      if (null == tmp28) {
+        const obj4 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+        const obj5 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+        obj4.modeOptions = obj5;
+        obj4.localMutes = {};
+        obj4.disabledLocalVideos = {};
+        obj4.videoToggleStateMap = {};
+        obj4.localVolumes = {};
+        const obj6 = {};
+        const merged = Object.assign(closure_34);
+        obj4.audioMixerSettings = obj6;
+        obj4.localPans = {};
+        obj4.inputVolume = outputVolume;
+        obj4.outputVolume = outputVolume;
+        obj4.inputDeviceId = DEFAULT_DEVICE_ID;
+        obj4.outputDeviceId = DEFAULT_DEVICE_ID;
+        obj4.videoDeviceId = DEFAULT_DEVICE_ID;
+        obj4.videoHook = result.supports(Features.VIDEO_HOOK);
+        settingsByContext[DEFAULT] = obj4;
+        tmp28 = obj4;
+        const tmp29 = PlatformUtils.isPlatformEmbedded || false;
+      }
+      const _Object = Object;
+      const merged1 = Object.assign(tmp28, obj3);
+      if (flag2) {
+        const Storage = Storage6.Storage;
+        result = Storage.set(MediaEngineStore, settingsByContext);
+      }
+      if (videoToggleState === constants5.AUTO_PROBING) {
+        const rTCConnection = RTCConnectionStore.getRTCConnection();
+        let obj7 = RTCConnectionStore;
+        if (rTCConnection != null) {
+          const result1 = rTCConnection.pauseStatsCollectionForUser(userId, true);
+          obj7 = RTCConnectionStore;
+        }
+      } else {
+        const rTCConnection1 = RTCConnectionStore.getRTCConnection();
+        obj7 = RTCConnectionStore;
+        if (rTCConnection1 != null) {
+          const result2 = rTCConnection1.pauseStatsCollectionForUser(userId, false);
+          obj7 = RTCConnectionStore;
         }
       }
-    }
-    if (isAutomatic) {
-      trackVideoToggleDefault(userId, videoToggleState === DISABLED ? constants12.AUTO_DISABLE : constants12.AUTO_ENABLE, videoToggleState === constants5.AUTO_ENABLED || videoToggleState === constants5.MANUAL_ENABLED);
-      if (videoToggleState === DISABLED) {
-        set1.add(userId);
-      } else {
+      if (!c127) {
+        const _HermesInternal = HermesInternal;
+        set1.info("isAutoDisableAllowed=" + c127 + " - disabling VideoHealthManager");
+        const rTCConnection2 = obj7.getRTCConnection();
+        if (rTCConnection2 != null) {
+          const videoHealthManager = rTCConnection2.getVideoHealthManager();
+          if (videoHealthManager != null) {
+            videoHealthManager.disable();
+          }
+        }
+      }
+      if (isAutomatic) {
+        trackVideoToggleDefault(userId, tmp12 ? constants12.AUTO_DISABLE : constants12.AUTO_ENABLE, tmp11);
+        if (tmp12) {
+          set1.add(userId);
+        } else {
+          set1.delete(userId);
+        }
+      } else if (tmp20) {
+        if (hasItem) {
+          if (!tmp12) {
+            set1.info("disallowing auto-disable for this session because of manual override by user");
+            c127 = false;
+            const rTCConnection3 = obj7.getRTCConnection();
+            if (rTCConnection3 != null) {
+              const videoHealthManager1 = rTCConnection3.getVideoHealthManager();
+              if (videoHealthManager1 != null) {
+                videoHealthManager1.disable();
+              }
+            }
+            trackVideoToggleDefault(userId, constants12.MANUAL_REENABLE, tmp11);
+          }
+        }
+        trackVideoToggleDefault(userId, tmp12 ? constants12.MANUAL_DISABLE : constants12.MANUAL_ENABLE, tmp11);
+      }
+      if (tmp19) {
+        tmp19 = !tmp12;
+      }
+      if (tmp19) {
         set1.delete(userId);
       }
-    } else if (persist && videoToggleState === DISABLED !== flag && tmp17) {
-      if (hasItem) {
-        if (videoToggleState !== DISABLED) {
-          set1.info("disallowing auto-disable for this session because of manual override by user");
-          c127 = false;
-          const rTCConnection3 = obj6.getRTCConnection();
-          if (rTCConnection3 != null) {
-            const videoHealthManager1 = rTCConnection3.getVideoHealthManager();
-            if (videoHealthManager1 != null) {
-              videoHealthManager1.disable();
-            }
-          }
-          trackVideoToggleDefault(userId, constants12.MANUAL_REENABLE, videoToggleState === constants5.AUTO_ENABLED || videoToggleState === constants5.MANUAL_ENABLED);
+      if (tmp12) {
+        disabledLocalVideos[userId] = true;
+      } else {
+        delete tmp[tmp2];
+      }
+      const obj8 = { disabledLocalVideos };
+      DEFAULT2 = context;
+      if (context === undefined) {
+        DEFAULT2 = MediaEngineContextTypes.DEFAULT;
+      }
+      if (persist === undefined) {
+        persist = true;
+      }
+      if (DEFAULT2 === undefined) {
+        DEFAULT2 = MediaEngineContextTypes.DEFAULT;
+      }
+      let tmp64 = settingsByContext[DEFAULT2];
+      if (null == tmp64) {
+        const obj9 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+        const obj10 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+        obj9.modeOptions = obj10;
+        obj9.localMutes = {};
+        obj9.disabledLocalVideos = {};
+        obj9.videoToggleStateMap = {};
+        obj9.localVolumes = {};
+        const obj11 = {};
+        const merged2 = Object.assign(closure_34);
+        obj9.audioMixerSettings = obj11;
+        obj9.localPans = {};
+        obj9.inputVolume = outputVolume;
+        obj9.outputVolume = outputVolume;
+        obj9.inputDeviceId = DEFAULT_DEVICE_ID;
+        obj9.outputDeviceId = DEFAULT_DEVICE_ID;
+        obj9.videoDeviceId = DEFAULT_DEVICE_ID;
+        obj9.videoHook = result.supports(Features.VIDEO_HOOK);
+        settingsByContext[DEFAULT2] = obj9;
+        tmp64 = obj9;
+        const tmp65 = PlatformUtils.isPlatformEmbedded || false;
+      }
+      const _Object2 = Object;
+      const merged3 = Object.assign(tmp64, obj8);
+      if (persist) {
+        const Storage2 = Storage6.Storage;
+        const result3 = Storage2.set(MediaEngineStore, settingsByContext);
+      }
+      result.eachConnection((setLocalVideoDisabled) => {
+        let flag = disabledLocalVideos[userId];
+        if (flag == null) {
+          flag = false;
         }
-      }
-      trackVideoToggleDefault(userId, videoToggleState === DISABLED ? constants12.MANUAL_DISABLE : constants12.MANUAL_ENABLE, videoToggleState === constants5.AUTO_ENABLED || videoToggleState === constants5.MANUAL_ENABLED);
-    }
-    if (tmp17) {
-      tmp17 = !tmp10;
-    }
-    if (tmp17) {
-      set1.delete(userId);
-    }
-    if (videoToggleState === DISABLED) {
-      disabledLocalVideos[userId] = true;
+        return setLocalVideoDisabled.setLocalVideoDisabled(userId, flag);
+      }, context);
     } else {
-      delete disabledLocalVideos[userId];
+      trackVideoToggleDefault(userId, tmp12 ? constants12.AUTO_DISABLE : constants12.AUTO_ENABLE, tmp11);
     }
-    let DEFAULT3 = context;
-    if (context === undefined) {
-      DEFAULT3 = MediaEngineContextTypes.DEFAULT;
-    }
-    if (persist === undefined) {
-      persist = true;
-    }
-    if (DEFAULT3 === undefined) {
-      DEFAULT3 = MediaEngineContextTypes.DEFAULT;
-    }
-    let tmp60 = settingsByContext[DEFAULT3];
-    if (null == tmp60) {
-      const obj7 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj8, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj9, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj8 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj9 = {};
-      PlatformUtils.isPlatformEmbedded || false;
-      const merged2 = Object.assign(closure_34);
-      settingsByContext[DEFAULT3] = obj7;
-      tmp60 = obj7;
-    }
-    const merged3 = Object.assign(tmp60, { disabledLocalVideos });
-    if (persist) {
-      const Storage2 = Storage6.Storage;
-      const result3 = Storage2.set(MediaEngineStore_str, settingsByContext);
-    }
-    result.eachConnection((setLocalVideoDisabled) => {
-      let flag = disabledLocalVideos[userId];
-      setLocalVideoDisabled = setLocalVideoDisabled.setLocalVideoDisabled;
-      if (flag == null) {
-        flag = false;
-      }
-      return setLocalVideoDisabled(userId, flag);
-    }, context);
+    tmp22 = videoToggleStateMap[userId] === constants5.AUTO_PROBING && videoToggleState === constants5.AUTO_ENABLED;
+    const tmp3Result = _modDef38;
   },
   AUDIO_SET_LOCAL_VOLUME: function handleSetLocalVolume(volume) {
-    let context;
-    let obj3;
-    let obj4;
-    let userId;
     ({ context, userId } = volume);
     volume = volume.volume;
     if (userId !== AuthenticationStore.getId()) {
-      const tmp = context === MediaEngineContextTypes.STREAM ? set2 : outputVolume;
       const localVolumes = getSettings(context).localVolumes;
-      if (volume === tmp) {
-        delete localVolumes[userId];
+      if (volume === tmp3) {
+        delete tmp[tmp2];
       } else {
         localVolumes[userId] = volume;
       }
+      const obj = { localVolumes };
       let DEFAULT = context;
-      obj = { localVolumes };
       if (context === undefined) {
         DEFAULT = MediaEngineContextTypes.DEFAULT;
       }
       if (DEFAULT === undefined) {
         DEFAULT = MediaEngineContextTypes.DEFAULT;
       }
-      let tmp4 = settingsByContext[DEFAULT];
-      if (null == tmp4) {
-        obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-        obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-        obj4 = {};
-        PlatformUtils.isPlatformEmbedded || false;
+      let tmp6 = settingsByContext[DEFAULT];
+      if (null == tmp6) {
+        obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+        const obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+        obj2.modeOptions = obj3;
+        obj2.localMutes = {};
+        obj2.disabledLocalVideos = {};
+        obj2.videoToggleStateMap = {};
+        obj2.localVolumes = {};
+        const obj4 = {};
         const merged = Object.assign(closure_34);
+        obj2.audioMixerSettings = obj4;
+        obj2.localPans = {};
+        obj2.inputVolume = outputVolume;
+        obj2.outputVolume = outputVolume;
+        obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+        obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+        obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+        obj2.videoHook = result.supports(Features.VIDEO_HOOK);
         settingsByContext[DEFAULT] = obj2;
-        tmp4 = obj2;
+        tmp6 = obj2;
+        const tmp8 = PlatformUtils.isPlatformEmbedded || false;
       }
       const _Object = Object;
-      const merged1 = Object.assign(tmp4, obj);
+      const merged1 = Object.assign(tmp6, obj);
       const Storage = Storage6.Storage;
-      result = Storage.set(MediaEngineStore_str, settingsByContext);
+      result = Storage.set(MediaEngineStore, settingsByContext);
       result.eachConnection((setLocalVolume) => setLocalVolume.setLocalVolume(userId, volume), context);
+      tmp3 = context === MediaEngineContextTypes.STREAM ? closure_1_41 : outputVolume;
     }
   },
   AUDIO_SET_AUDIO_MIXER_SETTINGS: function handleSetAudioMixerSettings(arg0) {
-    let context;
-    let obj5;
-    let settings;
     ({ context, settings } = arg0);
     if (context === undefined) {
       context = MediaEngineContextTypes.DEFAULT;
@@ -4051,34 +4134,44 @@ let obj7 = {
     }
     let tmp3 = settingsByContext[context];
     if (null == tmp3) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj5, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj5 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      modeOptions = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = modeOptions;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj5 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj5;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[context] = obj2;
       tmp3 = obj2;
+      const tmp4 = PlatformUtils.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp3, { audioMixerSettings: settings });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
-    const obj3 = SpatialAudioForVoiceExperimentDefault;
-    _false = true === settings.enabled && obj3.getConfig({ location: "MediaEngineStore" }).enabled && result.supports(Features.SPATIAL_AUDIO);
+    result = Storage.set(MediaEngineStore, settingsByContext);
+    let supportsResult = true === settings.enabled && SpatialAudioForVoiceExperimentDefault.getConfig({ location: "MediaEngineStore" }).enabled;
+    if (supportsResult) {
+      supportsResult = result.supports(Features.SPATIAL_AUDIO);
+    }
+    enabled = supportsResult;
     const distanceAttenuationEnabled = settings.distanceAttenuationEnabled;
-    const obj6 = { isSpatial: _false, enabled: _false, binaural: { spatialBlend: settings.spatialBlend }, distanceAttenuation: { enabled: distanceAttenuationEnabled }, airAbsorption: { enabled: distanceAttenuationEnabled }, reflections: { enabled: settings.reflectionsEnabled } };
-    const supportsResult = true === settings.enabled && obj3.getConfig({ location: "MediaEngineStore" }).enabled && result.supports(Features.SPATIAL_AUDIO);
-    result.setAudioMixerOptions(obj6);
-    const obj4 = result;
-    const tmp19 = _false;
-    if (!tmp19) {
+    result.setAudioMixerOptions({ isSpatial: enabled, enabled, binaural: { spatialBlend: settings.spatialBlend }, distanceAttenuation: { enabled: distanceAttenuationEnabled }, airAbsorption: { enabled: distanceAttenuationEnabled }, reflections: { enabled: settings.reflectionsEnabled } });
+    if (!enabled) {
       UNKNOWN = SpatialAudioStatus.UNKNOWN;
     }
-    obj4.eachConnection((setSpatialAudioEnabled) => setSpatialAudioEnabled.setSpatialAudioEnabled(_false), MediaEngineContextTypes.DEFAULT);
+    result.eachConnection((setSpatialAudioEnabled) => setSpatialAudioEnabled.setSpatialAudioEnabled(closure_1_120), MediaEngineContextTypes.DEFAULT);
+    const obj6 = { isSpatial: enabled, enabled, binaural: { spatialBlend: settings.spatialBlend }, distanceAttenuation: { enabled: distanceAttenuationEnabled }, airAbsorption: { enabled: distanceAttenuationEnabled }, reflections: { enabled: settings.reflectionsEnabled } };
   },
   AUDIO_SET_LOCAL_PAN: function handleSetLocalPan(left) {
-    let context;
-    let obj3;
-    let userId;
     ({ context, userId } = left);
     left = left.left;
     const right = left.right;
@@ -4093,26 +4186,39 @@ let obj7 = {
     }
     let tmp3 = settingsByContext[DEFAULT];
     if (null == tmp3) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj3, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj3 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      modeOptions = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = modeOptions;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj3 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj3;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp3 = obj2;
+      const tmp4 = PlatformUtils.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp3, { localPans });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
     result.eachConnection((setLocalPan) => setLocalPan.setLocalPan(userId, left, right), context);
   },
   AUDIO_SET_MODE: function handleAudioSetMode(context) {
-    let obj4;
-    let obj5;
     let DEFAULT = context.context;
-    obj = { mode: context.mode, modeOptions: obj2 };
-    obj2 = { updatedAt: Date.now() };
+    const obj = { mode: context.mode, modeOptions: null };
+    obj2 = {};
     const merged = Object.assign(context.options);
+    obj2.updatedAt = Date.now();
+    obj.modeOptions = obj2;
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
@@ -4121,46 +4227,68 @@ let obj7 = {
     }
     let tmp4 = settingsByContext[DEFAULT];
     if (null == tmp4) {
-      const obj3 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj4, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj5, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj4 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj5 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      const obj3 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj4 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj3.modeOptions = obj4;
+      obj3.localMutes = {};
+      obj3.disabledLocalVideos = {};
+      obj3.videoToggleStateMap = {};
+      obj3.localVolumes = {};
+      const obj5 = {};
       const merged1 = Object.assign(closure_34);
+      obj3.audioMixerSettings = obj5;
+      obj3.localPans = {};
+      obj3.inputVolume = outputVolume;
+      obj3.outputVolume = outputVolume;
+      obj3.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj3.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj3.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj3.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj3;
       tmp4 = obj3;
+      const tmp5 = PlatformUtils.isPlatformEmbedded || false;
     }
     const merged2 = Object.assign(tmp4, obj);
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
     result.eachConnection(setInputMode);
   },
   AUDIO_SET_INPUT_VOLUME: function handleAudioSetInputVolume(volume) {
-    let obj4;
-    let obj5;
     volume = volume.volume;
-    obj = { inputVolume: obj2.clamp(volume, 0, BottomSheet) };
+    const obj = { inputVolume: _modDef12.clamp(volume, 0, BottomSheet) };
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
-    obj2 = _modDef12;
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
     let tmp3 = settingsByContext[DEFAULT];
     if (null == tmp3) {
-      const obj3 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj4, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj5, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: BottomSheet, outputVolume: BottomSheet, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj4 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj5 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      const obj3 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj4 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj3.modeOptions = obj4;
+      obj3.localMutes = {};
+      obj3.disabledLocalVideos = {};
+      obj3.videoToggleStateMap = {};
+      obj3.localVolumes = {};
+      const obj5 = {};
       const merged = Object.assign(closure_34);
+      obj3.audioMixerSettings = obj5;
+      obj3.localPans = {};
+      obj3.inputVolume = BottomSheet;
+      obj3.outputVolume = BottomSheet;
+      obj3.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj3.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj3.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj3.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj3;
       tmp3 = obj3;
+      const tmp4 = PlatformUtils.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp3, obj);
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
     result.setInputVolume(volume);
   },
   AUDIO_SET_OUTPUT_VOLUME: function handleAudioSetOutputVolume(volume) {
-    let obj3;
     volume = volume.volume;
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
     if (DEFAULT === undefined) {
@@ -4168,31 +4296,42 @@ let obj7 = {
     }
     let tmp = settingsByContext[DEFAULT];
     if (null == tmp) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj3, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj3 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      modeOptions = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = modeOptions;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj3 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj3;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp = obj2;
+      const tmp2 = PlatformUtils.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp, { outputVolume: volume });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
     result.setOutputVolume(volume);
   },
   AUDIO_SET_INPUT_DEVICE: function handleSetInputDevice(id) {
-    let obj3;
-    let obj4;
     id = id.id;
     let firstResult = inputDevices[id];
     if (firstResult == null) {
       firstResult = inputDevices[DEFAULT_DEVICE_ID];
     }
     if (firstResult == null) {
-      obj = _modDef12(inputDevices);
-      const values = obj.values();
+      const values = _modDef12(inputDevices).values();
       firstResult = values.first();
+      const obj = _modDef12(inputDevices);
     }
     if (null != firstResult) {
       id = firstResult.id;
@@ -4204,20 +4343,32 @@ let obj7 = {
     }
     let tmp6 = settingsByContext[DEFAULT];
     if (null == tmp6) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj4 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = obj3;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj4 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj4;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp6 = obj2;
+      const tmp7 = PlatformUtils.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp6, { inputDeviceId: id });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
     result.setAudioInputDevice(id);
     maybeProbeAudioEffects(id);
-    const obj6 = PlatformUtils;
     if (obj6.isWindows()) {
       let guid;
       if (inputDevices[id] != null) {
@@ -4238,19 +4389,18 @@ let obj7 = {
     hardwareMuted = undefined;
     c102 = false;
     navigation.reset();
+    obj6 = PlatformUtils;
   },
   AUDIO_SET_OUTPUT_DEVICE: function handleSetOutputDevice(id) {
-    let obj3;
-    let obj4;
     id = id.id;
     let firstResult = outputDevices[id];
     if (firstResult == null) {
       firstResult = outputDevices[DEFAULT_DEVICE_ID];
     }
     if (firstResult == null) {
-      obj = _modDef12(outputDevices);
-      const values = obj.values();
+      const values = _modDef12(outputDevices).values();
       firstResult = values.first();
+      const obj = _modDef12(outputDevices);
     }
     if (null != firstResult) {
       id = firstResult.id;
@@ -4261,120 +4411,178 @@ let obj7 = {
     }
     let tmp6 = settingsByContext[DEFAULT];
     if (null == tmp6) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj4 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = obj3;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj4 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj4;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp6 = obj2;
+      const tmp7 = PlatformUtils.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp6, { outputDeviceId: id });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
     result.setAudioOutputDevice(id);
     result.eachConnection(updateConnectionVoiceProcessing);
   },
   AUDIO_SET_ACTIVE_INPUT_PROFILE: function handleSetActiveInputProfile(activeInputProfile) {
-    let obj3;
-    let obj4;
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
-    obj = { activeInputProfile: activeInputProfile.inputProfile };
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
     let tmp = settingsByContext[DEFAULT];
     if (null == tmp) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj4 = {};
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = obj3;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj4 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj4;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp = obj2;
+      const tmp2 = PlatformUtils.isPlatformEmbedded || false;
     }
-    const merged1 = Object.assign(tmp, obj);
+    const merged1 = Object.assign(tmp, { activeInputProfile: activeInputProfile.inputProfile });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
-    const tmp13 = getSettings();
+    result = Storage.set(MediaEngineStore, settingsByContext);
     result.eachConnection((setEchoCancellation) => {
       setInputMode(setEchoCancellation);
       updateConnectionVoiceProcessing(setEchoCancellation);
     });
-    const result1 = result.setAudioInputBypassSystemProcessing(tmp13.bypassSystemInputProcessing);
+    const result1 = result.setAudioInputBypassSystemProcessing(getSettings().bypassSystemInputProcessing);
     setLoopback();
+    const obj = { activeInputProfile: activeInputProfile.inputProfile };
+    const tmp13 = getSettings();
   },
   AUDIO_SET_ECHO_CANCELLATION: function handleSetEchoCancellation(echoCancellation) {
-    let obj3;
-    let obj4;
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
-    obj = { echoCancellation: echoCancellation.enabled };
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
     let tmp = settingsByContext[DEFAULT];
     if (null == tmp) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj4 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = obj3;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj4 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj4;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp = obj2;
+      const tmp2 = PlatformUtils.isPlatformEmbedded || false;
     }
-    const merged1 = Object.assign(tmp, obj);
+    const merged1 = Object.assign(tmp, { echoCancellation: echoCancellation.enabled });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
-    let closure_0 = CertifiedDeviceStore.hasEchoCancellation(tmp.inputDeviceId) || tmp.echoCancellation;
-    CertifiedDeviceStore.hasEchoCancellation(tmp.inputDeviceId) || tmp.echoCancellation;
+    result = Storage.set(MediaEngineStore, settingsByContext);
+    closure_0 = CertifiedDeviceStore.hasEchoCancellation(tmp.inputDeviceId) || tmp.echoCancellation;
     result.eachConnection((setEchoCancellation) => setEchoCancellation.setEchoCancellation(closure_0));
     setLoopback();
     trackVoiceProcessing(echoCancellation.location);
+    const obj = { echoCancellation: echoCancellation.enabled };
+    const tmp13 = CertifiedDeviceStore.hasEchoCancellation(tmp.inputDeviceId) || tmp.echoCancellation;
   },
   AUDIO_SET_SIDECHAIN_COMPRESSION: function handleSetSidechainCompression(enabled) {
-    let obj3;
-    let obj4;
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
-    obj = { sidechainCompression: enabled.enabled };
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
     let tmp = settingsByContext[DEFAULT];
     if (null == tmp) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj4 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = obj3;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj4 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj4;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp = obj2;
+      const tmp2 = PlatformUtils.isPlatformEmbedded || false;
     }
-    const merged1 = Object.assign(tmp, obj);
+    const merged1 = Object.assign(tmp, { sidechainCompression: enabled.enabled });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
     const result1 = result.setSidechainCompression(tmp.sidechainCompression);
+    const obj = { sidechainCompression: enabled.enabled };
   },
   AUDIO_SET_SIDECHAIN_COMPRESSION_STRENGTH: function handleSetSidechainCompressionStrength(sidechainCompressionStrength) {
-    let obj3;
-    let obj4;
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
-    obj = { sidechainCompressionStrength: sidechainCompressionStrength.strength };
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
     let tmp = settingsByContext[DEFAULT];
     if (null == tmp) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj4 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = obj3;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj4 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj4;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp = obj2;
+      const tmp2 = PlatformUtils.isPlatformEmbedded || false;
     }
-    const merged1 = Object.assign(tmp, obj);
+    const merged1 = Object.assign(tmp, { sidechainCompressionStrength: sidechainCompressionStrength.strength });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
     const result1 = result.setSidechainCompressionStrength(tmp.sidechainCompressionStrength);
+    const obj = { sidechainCompressionStrength: sidechainCompressionStrength.strength };
   },
   AUDIO_SET_LOOPBACK: function handleSetLoopback(loopbackReason) {
     loopbackReason = loopbackReason.loopbackReason;
@@ -4386,106 +4594,132 @@ let obj7 = {
     setLoopback();
   },
   AUDIO_SET_NOISE_SUPPRESSION: function handleSetNoiseSuppression(enabled) {
-    let obj3;
-    let obj4;
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
-    obj = { noiseSuppression: enabled.enabled };
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
     let tmp = settingsByContext[DEFAULT];
     if (null == tmp) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj4 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = obj3;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj4 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj4;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp = obj2;
+      const tmp2 = PlatformUtils.isPlatformEmbedded || false;
     }
-    const merged1 = Object.assign(tmp, obj);
+    const merged1 = Object.assign(tmp, { noiseSuppression: enabled.enabled });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
-    let closure_0 = CertifiedDeviceStore.hasNoiseSuppression(tmp.inputDeviceId) || tmp.noiseSuppression;
-    CertifiedDeviceStore.hasNoiseSuppression(tmp.inputDeviceId) || tmp.noiseSuppression;
+    result = Storage.set(MediaEngineStore, settingsByContext);
+    closure_0 = CertifiedDeviceStore.hasNoiseSuppression(tmp.inputDeviceId) || tmp.noiseSuppression;
     result.eachConnection((setNoiseSuppression) => setNoiseSuppression.setNoiseSuppression(closure_0));
     setLoopback();
     trackVoiceProcessing(enabled.location);
+    const obj = { noiseSuppression: enabled.enabled };
+    const tmp13 = CertifiedDeviceStore.hasNoiseSuppression(tmp.inputDeviceId) || tmp.noiseSuppression;
   },
   AUDIO_SET_AUTOMATIC_GAIN_CONTROL: function handleSetAutomaticGainControl(automaticGainControl) {
-    let obj3;
-    let obj4;
-    obj = { automaticGainControl: automaticGainControl.enabled };
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
     let tmp = settingsByContext[DEFAULT];
     if (null == tmp) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: closure_72.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj3 = { threshold: -60, autoThreshold: obj2(1369).isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj4 = {};
-      obj2(1369).isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj3 = { threshold: -60, autoThreshold: obj2(1369).isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = obj3;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj4 = {};
       let merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj4;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = closure_72.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp = obj2;
+      const tmp2 = obj2(1369).isPlatformEmbedded || false;
     }
-    const merged1 = Object.assign(tmp, obj);
+    const merged1 = Object.assign(tmp, { automaticGainControl: automaticGainControl.enabled });
     const Storage = obj2(510).Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
     obj2 = tmp;
     closure_72.eachConnection((setAutomaticGainControl) => {
-      let defaultConfig;
       const automaticGainControl = obj2.automaticGainControl;
-      setAutomaticGainControl = setAutomaticGainControl.setAutomaticGainControl;
-      obj = { enabled: automaticGainControl };
       obj2 = AGC2MobileExperimentDefault;
       if (automaticGainControl) {
-        defaultConfig = obj2.getConfig({ location: "getAutomaticGainControlConfig" });
+        let defaultConfig = obj2.getConfig({ location: "getAutomaticGainControlConfig" });
       } else {
         defaultConfig = obj2.definition.defaultConfig;
       }
-      const tmp = defaultConfig.agc2Enabled ? closure_59 : { useAGC2: false };
-      const merged = Object.assign(tmp);
-      result = setAutomaticGainControl(obj);
+      const merged = Object.assign(defaultConfig.agc2Enabled ? closure_59 : { useAGC2: false });
+      result = setAutomaticGainControl.setAutomaticGainControl({ enabled: automaticGainControl });
     });
     setLoopback();
     trackVoiceProcessing(automaticGainControl.location);
+    const obj = { automaticGainControl: automaticGainControl.enabled };
   },
   AUDIO_SET_NOISE_CANCELLATION: function handleSetNoiseCancellation(enabled) {
-    let obj3;
-    let obj4;
-    obj = { noiseCancellation: enabled.enabled };
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
     let tmp = settingsByContext[DEFAULT];
     if (null == tmp) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: closure_72.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj3 = { threshold: -60, autoThreshold: obj2(1369).isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj4 = {};
-      obj2(1369).isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj3 = { threshold: -60, autoThreshold: obj2(1369).isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = obj3;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj4 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj4;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = closure_72.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp = obj2;
+      const tmp2 = obj2(1369).isPlatformEmbedded || false;
     }
-    const merged1 = Object.assign(tmp, obj);
+    const merged1 = Object.assign(tmp, { noiseCancellation: enabled.enabled });
     const Storage = obj2(510).Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
     obj2 = tmp;
     closure_72.eachConnection((setNoiseCancellation) => {
-      let defaultConfig;
       const noiseCancellation = obj2.noiseCancellation;
-      const tmp3 = getEffectiveNoiseCancellationDefault;
-      const tmp3Result = tmp3(noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
+      const tmp3Result = getEffectiveNoiseCancellationDefault(noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
       if (tmp3Result !== noiseCancellation) {
         obj.info("Falling back to system noise suppression.");
       }
       setNoiseCancellation.setNoiseCancellation(tmp3Result);
       const tmpResult = AGC2MobileExperimentDefault;
       if (tmp3Result) {
-        defaultConfig = tmpResult.getConfig({ location: "setNoiseCancellation" });
+        let defaultConfig = tmpResult.getConfig({ location: "setNoiseCancellation" });
       } else {
         defaultConfig = tmpResult.definition.defaultConfig;
       }
@@ -4493,45 +4727,54 @@ let obj7 = {
     });
     setLoopback();
     trackVoiceProcessing(enabled.location);
+    const obj = { noiseCancellation: enabled.enabled };
   },
   AUDIO_SET_KRISP_MODEL_OVERRIDE: function handleSetKrispModelOverride(model) {
-    obj = KrispUtilsDefault;
-    result = obj.setKrispModelOverride(model.model);
+    result = KrispUtilsDefault.setKrispModelOverride(model.model);
     model = model.model;
     setLoopback();
   },
   AUDIO_SET_DISPLAY_SILENCE_WARNING: function handleSetSilenceWarning(enabled) {
-    let obj3;
-    let obj4;
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
-    obj = { silenceWarning: enabled.enabled };
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
     let tmp = settingsByContext[DEFAULT];
     if (null == tmp) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj4 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = obj3;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj4 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj4;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp = obj2;
+      const tmp2 = PlatformUtils.isPlatformEmbedded || false;
     }
-    const merged1 = Object.assign(tmp, obj);
+    const merged1 = Object.assign(tmp, { silenceWarning: enabled.enabled });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
+    const obj = { silenceWarning: enabled.enabled };
   },
   AUDIO_SET_DEBUG_LOGGING: function handleSetDebugLogging(enabled) {
     result.setDebugLogging(enabled.enabled);
   },
   AUDIO_SET_KRISP_SUPPRESSION_LEVEL: function handleSetKrispSuppressionLevel(level) {
     level = level.level;
-    obj = KrispUtilsDefault;
-    result = obj.setKrispSuppressionLevel(level);
+    result = KrispUtilsDefault.setKrispSuppressionLevel(level);
   },
   AUDIO_SET_NOISE_CANCELLATION_ENABLE_STATS: function handleSetNoiseCancellationEnableStats(enabled) {
-    obj = PlatformUtils;
     if (!obj.isWeb()) {
       enabled = enabled.enabled;
       const setNoiseCancellationEnableStats = result.setNoiseCancellationEnableStats;
@@ -4541,98 +4784,141 @@ let obj7 = {
     }
   },
   MEDIA_ENGINE_SET_VIDEO_HOOK: function handleSetVideoHook(enabled) {
-    let obj3;
-    let obj4;
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
-    obj = { videoHook: enabled.enabled };
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
     let tmp = settingsByContext[DEFAULT];
     if (null == tmp) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj4 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = obj3;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj4 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj4;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp = obj2;
+      const tmp2 = PlatformUtils.isPlatformEmbedded || false;
     }
-    const merged1 = Object.assign(tmp, obj);
+    const merged1 = Object.assign(tmp, { videoHook: enabled.enabled });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
+    const obj = { videoHook: enabled.enabled };
   },
   MEDIA_ENGINE_SET_EXPERIMENTAL_SOUNDSHARE: function handleSetExperimentalSoundshare(enabled) {
-    let obj3;
-    let obj4;
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
-    obj = { experimentalSoundshare2: enabled.enabled };
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
     let tmp = settingsByContext[DEFAULT];
     if (null == tmp) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj4 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = obj3;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj4 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj4;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp = obj2;
+      const tmp2 = PlatformUtils.isPlatformEmbedded || false;
     }
-    const merged1 = Object.assign(tmp, obj);
+    const merged1 = Object.assign(tmp, { experimentalSoundshare2: enabled.enabled });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
+    const obj = { experimentalSoundshare2: enabled.enabled };
   },
   MEDIA_ENGINE_SET_USE_SYSTEM_SCREENSHARE_PICKER: function handleSetUseSystemScreensharePicker(enabled) {
-    let obj3;
-    let obj4;
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
-    obj = { useSystemScreensharePicker: enabled.enabled };
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
     let tmp = settingsByContext[DEFAULT];
     if (null == tmp) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj4 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = obj3;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj4 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj4;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp = obj2;
+      const tmp2 = PlatformUtils.isPlatformEmbedded || false;
     }
-    const merged1 = Object.assign(tmp, obj);
+    const merged1 = Object.assign(tmp, { useSystemScreensharePicker: enabled.enabled });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
+    const obj = { useSystemScreensharePicker: enabled.enabled };
   },
   AUDIO_SET_ATTENUATION: function handleSetAttenuation(attenuation) {
-    let obj3;
-    let obj4;
     obj2 = undefined;
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
-    obj = { attenuation: attenuation.attenuation, attenuateWhileSpeakingSelf: attenuation.attenuateWhileSpeakingSelf, attenuateWhileSpeakingOthers: attenuation.attenuateWhileSpeakingOthers };
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
     let tmp = settingsByContext[DEFAULT];
     if (null == tmp) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj4 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = obj3;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj4 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj4;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp = obj2;
+      const tmp2 = PlatformUtils.isPlatformEmbedded || false;
     }
-    const merged1 = Object.assign(tmp, obj);
+    const merged1 = Object.assign(tmp, { attenuation: attenuation.attenuation, attenuateWhileSpeakingSelf: attenuation.attenuateWhileSpeakingSelf, attenuateWhileSpeakingOthers: attenuation.attenuateWhileSpeakingOthers });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
     obj2 = tmp;
     result.eachConnection((setAttenuation) => setAttenuation.setAttenuation(obj2.attenuation, obj2.attenuateWhileSpeakingSelf, obj2.attenuateWhileSpeakingOthers));
+    const obj = { attenuation: attenuation.attenuation, attenuateWhileSpeakingSelf: attenuation.attenuateWhileSpeakingSelf, attenuateWhileSpeakingOthers: attenuation.attenuateWhileSpeakingOthers };
   },
   AUDIO_SET_QOS: function handleSetQoS(enabled) {
-    let obj3;
     enabled = enabled.enabled;
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
     if (DEFAULT === undefined) {
@@ -4640,118 +4926,165 @@ let obj7 = {
     }
     let tmp = settingsByContext[DEFAULT];
     if (null == tmp) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj3, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj3 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      modeOptions = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = modeOptions;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj3 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj3;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp = obj2;
+      const tmp2 = PlatformUtils.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp, { qos: enabled });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
     result.eachConnection((setQoS) => setQoS.setQoS(enabled));
   },
   MEDIA_ENGINE_DEVICES: function handleDevices(videoDevices) {
-    let regex;
-    let tmp5;
-    let valueResult;
-    let valueResult3;
-    let valueResult4;
-    const f85620 = (id) => {
-      const f85619 = (containerId) => {
-        let tmp = null != containerId.containerId && containerId.containerId === closure_0.containerId;
-        if (!tmp) {
-          tmp = null != containerId.hardwareId && containerId.hardwareId === closure_0.hardwareId;
-          const tmp3 = null != containerId.hardwareId && containerId.hardwareId === closure_0.hardwareId;
-        }
-        if (!tmp) {
-          tmp = null != containerId.originalId && containerId.originalId === closure_0.originalId;
-          const tmp5 = null != containerId.originalId && containerId.originalId === closure_0.originalId;
-        }
-        return tmp;
-      };
-      obj = { id: id.id, deviceType: VIDEO_INPUT, index: id.index, name: id.name, disabled: false, facing: id.facing, guid: id.originalId, hardwareId: id.hardwareId, containerId: id.containerId, effects: id.effects, formFactor: null, windowsDeviceService: null, windowsDeviceDescription: null, windowsDeviceInterfaceFriendlyName: null };
-      ({ inputDevices, outputDevices, videoDevices } = closure_0);
-      if ("videoinput" === id.type !== true) {
-        let WEBCAM;
-        closure_0 = id;
-        if (null != videoDevices.find(f85619) !== true) {
-          const items = ["builtin", "displayport", "hdmi"];
-          let str = id.macosTransportType;
-          const includes = items.includes;
-          if (str == null) {
-            str = "";
-          }
-          if (includes(str) !== true) {
-            const isMatch = null != id.hardwareId && regex.test(id.hardwareId);
-            if (isMatch !== true) {
-              obj2 = AUDIO_INPUT(dependencyMap[33])(id.hardwareId);
-              if (obj2.startsWith("BTHENUM") !== true) {
-                const items1 = ["bluetooth", "bluetoothle"];
-                let str2 = id.macosTransportType;
-                const includes2 = items1.includes;
-                if (str2 == null) {
-                  str2 = "";
-                }
-                if (includes2(str2) !== true) {
-                  const items2 = ["airplay", "continuitycapturewireless"];
-                  let str3 = id.macosTransportType;
-                  const includes3 = items2.includes;
-                  if (str3 == null) {
-                    str3 = "";
+    const AUDIO_INPUT = DeviceTypes.AUDIO_INPUT;
+    const intl = require("util").intl;
+    _require = videoDevices;
+    const arr = videoDevices[{ audioinput: "inputDevices", audiooutput: "outputDevices", videoinput: "videoDevices" }[AUDIO_INPUT]];
+    if (0 === arr.length) {
+      let obj = { id: DEFAULT_DEVICE_ID, deviceType: AUDIO_INPUT, index: 0, name: tmp5, disabled: true, guid: "filter", hardwareId: "ks", containerId: "flex" };
+      obj2 = {};
+      obj2[obj.id] = obj;
+      let valueResult = obj2;
+    } else {
+      const mapped = AUDIO_INPUT(12)(arr).map((id) => {
+        const obj = { id: id.id, deviceType: AUDIO_INPUT, index: id.index, name: id.name, disabled: false, facing: id.facing, guid: id.originalId, hardwareId: id.hardwareId, containerId: id.containerId, effects: id.effects, formFactor: null, windowsDeviceService: null, windowsDeviceDescription: null, windowsDeviceInterfaceFriendlyName: null };
+        ({ inputDevices, outputDevices, videoDevices } = id);
+        if ("videoinput" === id.type !== true) {
+          if (null != videoDevices.find((containerId) => {
+            let tmp = null != containerId.containerId;
+            if (tmp) {
+              tmp = containerId.containerId === id.containerId;
+            }
+            if (!tmp) {
+              let tmp3 = null != containerId.hardwareId;
+              if (tmp3) {
+                tmp3 = containerId.hardwareId === id.hardwareId;
+              }
+              tmp = tmp3;
+            }
+            if (!tmp) {
+              let tmp5 = null != containerId.originalId;
+              if (tmp5) {
+                tmp5 = containerId.originalId === id.originalId;
+              }
+              tmp = tmp5;
+            }
+            return tmp;
+          }) !== true) {
+            const items = ["builtin", "displayport", "hdmi"];
+            let str = id.macosTransportType;
+            if (str == null) {
+              str = "";
+            }
+            if (items.includes(str) !== true) {
+              let isMatch = null != id.hardwareId;
+              if (isMatch) {
+                isMatch = re156.test(id.hardwareId);
+              }
+              if (isMatch !== true) {
+                obj2 = _modDef12(id.hardwareId);
+                if (obj2.startsWith("BTHENUM") !== true) {
+                  const items1 = ["bluetooth", "bluetoothle"];
+                  let str2 = id.macosTransportType;
+                  if (str2 == null) {
+                    str2 = "";
                   }
-                  if (includes3(str3) === true) {
-                    WEBCAM = constants2.AIRPLAY;
-                  } else {
-                    let tmp3 = "audioinput" === id.type;
-                    if (tmp3) {
-                      closure_0 = id;
-                      tmp3 = null != outputDevices.find(f85619);
+                  if (items1.includes(str2) !== true) {
+                    const items2 = ["airplay", "continuitycapturewireless"];
+                    let str3 = id.macosTransportType;
+                    if (str3 == null) {
+                      str3 = "";
                     }
-                    if (tmp3 === true) {
-                      WEBCAM = constants2.HEADSET;
+                    if (items2.includes(str3) === true) {
+                      let WEBCAM = obj2.AIRPLAY;
                     } else {
-                      let tmp4 = "audiooutput" === id.type;
-                      if (tmp4) {
-                        closure_0 = id;
-                        tmp4 = null != inputDevices.find(f85619);
+                      let tmp3 = "audioinput" === id.type;
+                      if (tmp3) {
+                        tmp3 = null != outputDevices.find((containerId) => {
+                          let tmp = null != containerId.containerId;
+                          if (tmp) {
+                            tmp = containerId.containerId === id.containerId;
+                          }
+                          if (!tmp) {
+                            let tmp3 = null != containerId.hardwareId;
+                            if (tmp3) {
+                              tmp3 = containerId.hardwareId === id.hardwareId;
+                            }
+                            tmp = tmp3;
+                          }
+                          if (!tmp) {
+                            let tmp5 = null != containerId.originalId;
+                            if (tmp5) {
+                              tmp5 = containerId.originalId === id.originalId;
+                            }
+                            tmp = tmp5;
+                          }
+                          return tmp;
+                        });
+                      }
+                      if (tmp3 === true) {
+                        WEBCAM = obj2.HEADSET;
+                      } else {
+                        let tmp4 = "audiooutput" === id.type;
+                        if (tmp4) {
+                          tmp4 = null != inputDevices.find((containerId) => {
+                            let tmp = null != containerId.containerId;
+                            if (tmp) {
+                              tmp = containerId.containerId === id.containerId;
+                            }
+                            if (!tmp) {
+                              let tmp3 = null != containerId.hardwareId;
+                              if (tmp3) {
+                                tmp3 = containerId.hardwareId === id.hardwareId;
+                              }
+                              tmp = tmp3;
+                            }
+                            if (!tmp) {
+                              let tmp5 = null != containerId.originalId;
+                              if (tmp5) {
+                                tmp5 = containerId.originalId === id.originalId;
+                              }
+                              tmp = tmp5;
+                            }
+                            return tmp;
+                          });
+                        }
                       }
                     }
                   }
                 }
+                WEBCAM = obj2.BLUETOOTH;
               }
-              WEBCAM = constants2.BLUETOOTH;
             }
+            WEBCAM = obj2.INTEGRATED;
           }
-          WEBCAM = constants2.INTEGRATED;
+          obj.formFactor = WEBCAM;
+          ({ windowsDeviceService: obj.windowsDeviceService, windowsDeviceDescription: obj.windowsDeviceDescription, windowsDeviceInterfaceFriendlyName: obj.windowsDeviceInterfaceFriendlyName } = id);
+          return obj;
         }
-        obj.formFactor = WEBCAM;
-        ({ windowsDeviceService: obj.windowsDeviceService, windowsDeviceDescription: obj.windowsDeviceDescription, windowsDeviceInterfaceFriendlyName: obj.windowsDeviceInterfaceFriendlyName } = id);
-        return obj;
-      }
-      WEBCAM = constants2.WEBCAM;
-    };
-    const AUDIO_INPUT = DeviceTypes.AUDIO_INPUT;
-    let tmp3 = _require;
-    let tmp = valueResult;
-    const intl = require("intl").intl;
-    _require = videoDevices;
-    const arr = videoDevices[{ audioinput: "inputDevices", audiooutput: "outputDevices", videoinput: "videoDevices" }[AUDIO_INPUT]];
-    if (0 === arr.length) {
-      obj = { id: DEFAULT_DEVICE_ID, deviceType: AUDIO_INPUT, index: 0, name: tmp5, disabled: true, guid: "filter", hardwareId: "ks", containerId: "flex" };
-      obj2 = {};
-      obj2[obj.id] = obj;
-      valueResult = obj2;
-    } else {
+        WEBCAM = obj2.WEBCAM;
+      });
       const arr2 = AUDIO_INPUT(12)(arr);
-      const mapped = arr2.map(f85620);
-      let str = "id";
+      valueResult = mapped.keyBy("id").value();
       const iter = mapped.keyBy("id");
-      valueResult = iter.value();
     }
-    const obj4 = AUDIO_INPUT(12);
     if (!obj4.isEqual(valueResult, tmp)) {
       let id = getSettings().inputDeviceId;
       let firstResult = valueResult[id];
@@ -4759,16 +5092,15 @@ let obj7 = {
         firstResult = tmp11[DEFAULT_DEVICE_ID];
       }
       if (firstResult == null) {
-        const obj5 = AUDIO_INPUT(12)(valueResult);
-        const values = obj5.values();
+        const values = tmp9(12)(tmp11).values();
         firstResult = values.first();
+        const obj5 = tmp9(12)(tmp11);
       }
       if (null != firstResult) {
         id = firstResult.id;
       }
       closure_72.setAudioInputDevice(id);
       maybeProbeAudioEffects(id);
-      const tmp3Result = tmp3(1369);
       if (tmp3Result.isWindows()) {
         let guid;
         if (valueResult[id] != null) {
@@ -4784,24 +5116,143 @@ let obj7 = {
         tmp3(1369);
       }
       closure_72.eachConnection(updateConnectionVoiceProcessing);
+      tmp3Result = tmp3(1369);
     }
     const AUDIO_OUTPUT = DeviceTypes.AUDIO_OUTPUT;
     const intl2 = tmp3(1126).intl;
-    _require = videoDevices;
+    closure_129_0 = videoDevices;
+    closure_129_1 = AUDIO_OUTPUT;
     const arr3 = videoDevices[{ audioinput: "inputDevices", audiooutput: "outputDevices", videoinput: "videoDevices" }[AUDIO_OUTPUT]];
     if (0 === arr3.length) {
       const obj3 = { id: DEFAULT_DEVICE_ID, deviceType: AUDIO_OUTPUT, index: 0, name: tmp25, disabled: true, guid: "filter", hardwareId: "ks", containerId: "flex" };
       const obj6 = {};
       obj6[obj3.id] = obj3;
-      valueResult3 = obj6;
+      let valueResult3 = obj6;
     } else {
-      const arr4 = AUDIO_INPUT(12)(arr3);
-      const mapped1 = arr4.map(f85620);
-      let str2 = "id";
+      const mapped1 = tmp9(12)(arr3).map((id) => {
+        const obj = { id: id.id, deviceType: AUDIO_INPUT, index: id.index, name: id.name, disabled: false, facing: id.facing, guid: id.originalId, hardwareId: id.hardwareId, containerId: id.containerId, effects: id.effects, formFactor: null, windowsDeviceService: null, windowsDeviceDescription: null, windowsDeviceInterfaceFriendlyName: null };
+        ({ inputDevices, outputDevices, videoDevices } = id);
+        if ("videoinput" === id.type !== true) {
+          if (null != videoDevices.find((containerId) => {
+            let tmp = null != containerId.containerId;
+            if (tmp) {
+              tmp = containerId.containerId === id.containerId;
+            }
+            if (!tmp) {
+              let tmp3 = null != containerId.hardwareId;
+              if (tmp3) {
+                tmp3 = containerId.hardwareId === id.hardwareId;
+              }
+              tmp = tmp3;
+            }
+            if (!tmp) {
+              let tmp5 = null != containerId.originalId;
+              if (tmp5) {
+                tmp5 = containerId.originalId === id.originalId;
+              }
+              tmp = tmp5;
+            }
+            return tmp;
+          }) !== true) {
+            const items = ["builtin", "displayport", "hdmi"];
+            let str = id.macosTransportType;
+            if (str == null) {
+              str = "";
+            }
+            if (items.includes(str) !== true) {
+              let isMatch = null != id.hardwareId;
+              if (isMatch) {
+                isMatch = re156.test(id.hardwareId);
+              }
+              if (isMatch !== true) {
+                obj2 = _modDef12(id.hardwareId);
+                if (obj2.startsWith("BTHENUM") !== true) {
+                  const items1 = ["bluetooth", "bluetoothle"];
+                  let str2 = id.macosTransportType;
+                  if (str2 == null) {
+                    str2 = "";
+                  }
+                  if (items1.includes(str2) !== true) {
+                    const items2 = ["airplay", "continuitycapturewireless"];
+                    let str3 = id.macosTransportType;
+                    if (str3 == null) {
+                      str3 = "";
+                    }
+                    if (items2.includes(str3) === true) {
+                      let WEBCAM = obj2.AIRPLAY;
+                    } else {
+                      let tmp3 = "audioinput" === id.type;
+                      if (tmp3) {
+                        tmp3 = null != outputDevices.find((containerId) => {
+                          let tmp = null != containerId.containerId;
+                          if (tmp) {
+                            tmp = containerId.containerId === id.containerId;
+                          }
+                          if (!tmp) {
+                            let tmp3 = null != containerId.hardwareId;
+                            if (tmp3) {
+                              tmp3 = containerId.hardwareId === id.hardwareId;
+                            }
+                            tmp = tmp3;
+                          }
+                          if (!tmp) {
+                            let tmp5 = null != containerId.originalId;
+                            if (tmp5) {
+                              tmp5 = containerId.originalId === id.originalId;
+                            }
+                            tmp = tmp5;
+                          }
+                          return tmp;
+                        });
+                      }
+                      if (tmp3 === true) {
+                        WEBCAM = obj2.HEADSET;
+                      } else {
+                        let tmp4 = "audiooutput" === id.type;
+                        if (tmp4) {
+                          tmp4 = null != inputDevices.find((containerId) => {
+                            let tmp = null != containerId.containerId;
+                            if (tmp) {
+                              tmp = containerId.containerId === id.containerId;
+                            }
+                            if (!tmp) {
+                              let tmp3 = null != containerId.hardwareId;
+                              if (tmp3) {
+                                tmp3 = containerId.hardwareId === id.hardwareId;
+                              }
+                              tmp = tmp3;
+                            }
+                            if (!tmp) {
+                              let tmp5 = null != containerId.originalId;
+                              if (tmp5) {
+                                tmp5 = containerId.originalId === id.originalId;
+                              }
+                              tmp = tmp5;
+                            }
+                            return tmp;
+                          });
+                        }
+                      }
+                    }
+                  }
+                }
+                WEBCAM = obj2.BLUETOOTH;
+              }
+            }
+            WEBCAM = obj2.INTEGRATED;
+          }
+          obj.formFactor = WEBCAM;
+          ({ windowsDeviceService: obj.windowsDeviceService, windowsDeviceDescription: obj.windowsDeviceDescription, windowsDeviceInterfaceFriendlyName: obj.windowsDeviceInterfaceFriendlyName } = id);
+          return obj;
+        }
+        WEBCAM = obj2.WEBCAM;
+      });
+      const arr4 = tmp9(12)(arr3);
+      valueResult3 = mapped1.keyBy("id").value();
       const iter2 = mapped1.keyBy("id");
-      valueResult3 = iter2.value();
     }
-    const tmp9Result = AUDIO_INPUT(12);
+    obj4 = AUDIO_INPUT(12);
+    tmp = valueResult;
     if (!tmp9Result.isEqual(valueResult3, valueResult3)) {
       let id2 = getSettings().outputDeviceId;
       let firstResult1 = valueResult3[id2];
@@ -4809,9 +5260,9 @@ let obj7 = {
         firstResult1 = tmp29[DEFAULT_DEVICE_ID];
       }
       if (firstResult1 == null) {
-        const obj14 = AUDIO_INPUT(12)(valueResult3);
-        const values4 = obj14.values();
+        const values4 = tmp9(12)(tmp29).values();
         firstResult1 = values4.first();
+        const obj14 = tmp9(12)(tmp29);
       }
       if (null != firstResult1) {
         id2 = firstResult1.id;
@@ -4821,106 +5272,236 @@ let obj7 = {
       const _Object = Object;
       const values5 = Object.values(tmp24);
       const _Object2 = Object;
-      const someResult = values5.some((name) => {
-        const str = name.name;
-        const formatted = str.toLowerCase();
-        return formatted.includes("dualsense");
-      });
       const values6 = Object.values(valueResult3);
       const someResult1 = values6.some((name) => {
-        const str = name.name;
-        const formatted = str.toLowerCase();
+        const formatted = name.name.toLowerCase();
         return formatted.includes("dualsense");
       });
       if (someResult !== someResult1) {
+        closure_130_0 = someResult1;
         closure_72.eachConnection((context) => {
-          if (context.context === constants.STREAM) {
-            result = context.setSoundshareDiscardRearChannels(someResult1);
+          if (context.context === MediaEngineContextTypes.STREAM) {
+            result = context.setSoundshareDiscardRearChannels(closure_0);
           }
         });
       }
+      someResult = values5.some((name) => {
+        const formatted = name.name.toLowerCase();
+        return formatted.includes("dualsense");
+      });
     }
-    let closure_101 = videoDevices.videoDevices.length > 0;
+    closure_101 = videoDevices.videoDevices.length > 0;
     const VIDEO_INPUT = DeviceTypes.VIDEO_INPUT;
     const intl3 = tmp3(1126).intl;
-    _require = videoDevices;
+    closure_131_0 = videoDevices;
+    closure_131_1 = VIDEO_INPUT;
     const arr5 = videoDevices[{ audioinput: "inputDevices", audiooutput: "outputDevices", videoinput: "videoDevices" }[VIDEO_INPUT]];
     if (0 === arr5.length) {
       const obj8 = { id: DEFAULT_DEVICE_ID, deviceType: VIDEO_INPUT, index: 0, name: tmp42, disabled: true, guid: "filter", hardwareId: "ks", containerId: "flex" };
       const obj9 = {};
       obj9[obj8.id] = obj8;
-      valueResult4 = obj9;
+      let valueResult4 = obj9;
     } else {
-      const arr6 = AUDIO_INPUT(12)(arr5);
-      const mapped2 = arr6.map(f85620);
-      let str3 = "id";
+      const mapped2 = tmp9(12)(arr5).map((id) => {
+        const obj = { id: id.id, deviceType: AUDIO_INPUT, index: id.index, name: id.name, disabled: false, facing: id.facing, guid: id.originalId, hardwareId: id.hardwareId, containerId: id.containerId, effects: id.effects, formFactor: null, windowsDeviceService: null, windowsDeviceDescription: null, windowsDeviceInterfaceFriendlyName: null };
+        ({ inputDevices, outputDevices, videoDevices } = id);
+        if ("videoinput" === id.type !== true) {
+          if (null != videoDevices.find((containerId) => {
+            let tmp = null != containerId.containerId;
+            if (tmp) {
+              tmp = containerId.containerId === id.containerId;
+            }
+            if (!tmp) {
+              let tmp3 = null != containerId.hardwareId;
+              if (tmp3) {
+                tmp3 = containerId.hardwareId === id.hardwareId;
+              }
+              tmp = tmp3;
+            }
+            if (!tmp) {
+              let tmp5 = null != containerId.originalId;
+              if (tmp5) {
+                tmp5 = containerId.originalId === id.originalId;
+              }
+              tmp = tmp5;
+            }
+            return tmp;
+          }) !== true) {
+            const items = ["builtin", "displayport", "hdmi"];
+            let str = id.macosTransportType;
+            if (str == null) {
+              str = "";
+            }
+            if (items.includes(str) !== true) {
+              let isMatch = null != id.hardwareId;
+              if (isMatch) {
+                isMatch = re156.test(id.hardwareId);
+              }
+              if (isMatch !== true) {
+                obj2 = _modDef12(id.hardwareId);
+                if (obj2.startsWith("BTHENUM") !== true) {
+                  const items1 = ["bluetooth", "bluetoothle"];
+                  let str2 = id.macosTransportType;
+                  if (str2 == null) {
+                    str2 = "";
+                  }
+                  if (items1.includes(str2) !== true) {
+                    const items2 = ["airplay", "continuitycapturewireless"];
+                    let str3 = id.macosTransportType;
+                    if (str3 == null) {
+                      str3 = "";
+                    }
+                    if (items2.includes(str3) === true) {
+                      let WEBCAM = obj2.AIRPLAY;
+                    } else {
+                      let tmp3 = "audioinput" === id.type;
+                      if (tmp3) {
+                        tmp3 = null != outputDevices.find((containerId) => {
+                          let tmp = null != containerId.containerId;
+                          if (tmp) {
+                            tmp = containerId.containerId === id.containerId;
+                          }
+                          if (!tmp) {
+                            let tmp3 = null != containerId.hardwareId;
+                            if (tmp3) {
+                              tmp3 = containerId.hardwareId === id.hardwareId;
+                            }
+                            tmp = tmp3;
+                          }
+                          if (!tmp) {
+                            let tmp5 = null != containerId.originalId;
+                            if (tmp5) {
+                              tmp5 = containerId.originalId === id.originalId;
+                            }
+                            tmp = tmp5;
+                          }
+                          return tmp;
+                        });
+                      }
+                      if (tmp3 === true) {
+                        WEBCAM = obj2.HEADSET;
+                      } else {
+                        let tmp4 = "audiooutput" === id.type;
+                        if (tmp4) {
+                          tmp4 = null != inputDevices.find((containerId) => {
+                            let tmp = null != containerId.containerId;
+                            if (tmp) {
+                              tmp = containerId.containerId === id.containerId;
+                            }
+                            if (!tmp) {
+                              let tmp3 = null != containerId.hardwareId;
+                              if (tmp3) {
+                                tmp3 = containerId.hardwareId === id.hardwareId;
+                              }
+                              tmp = tmp3;
+                            }
+                            if (!tmp) {
+                              let tmp5 = null != containerId.originalId;
+                              if (tmp5) {
+                                tmp5 = containerId.originalId === id.originalId;
+                              }
+                              tmp = tmp5;
+                            }
+                            return tmp;
+                          });
+                        }
+                      }
+                    }
+                  }
+                }
+                WEBCAM = obj2.BLUETOOTH;
+              }
+            }
+            WEBCAM = obj2.INTEGRATED;
+          }
+          obj.formFactor = WEBCAM;
+          ({ windowsDeviceService: obj.windowsDeviceService, windowsDeviceDescription: obj.windowsDeviceDescription, windowsDeviceInterfaceFriendlyName: obj.windowsDeviceInterfaceFriendlyName } = id);
+          return obj;
+        }
+        WEBCAM = obj2.WEBCAM;
+      });
+      const arr6 = tmp9(12)(arr5);
+      valueResult4 = mapped2.keyBy("id").value();
       const iter3 = mapped2.keyBy("id");
-      valueResult4 = iter3.value();
     }
     if (closure_94) {
-      const tmp9Result2 = AUDIO_INPUT(12);
-      if (!tmp9Result2.isEqual(valueResult4, valueResult4)) {
-        let tmp51 = DISABLED_DEVICE_ID === DEFAULT_DEVICE_ID;
-        const tmp49 = valueResult4[DISABLED_DEVICE_ID];
-        if (tmp51) {
+      if (!tmp9Result2.isEqual(valueResult4, tmp41)) {
+        let tmp49 = closure_95 === DEFAULT_DEVICE_ID;
+        if (tmp49) {
           let disabled;
-          if (valueResult4[DEFAULT_DEVICE_ID] != null) {
-            disabled = tmp52.disabled;
+          if (tmp41[DEFAULT_DEVICE_ID] != null) {
+            disabled = tmp50.disabled;
           }
-          tmp51 = disabled;
+          tmp49 = disabled;
         }
-        let tmp55 = "Firefox" === tmp9(5410).name;
-        if (tmp55) {
-          tmp55 = "" === DISABLED_DEVICE_ID;
+        let tmp53 = "Firefox" === tmp9(5410).name;
+        if (tmp53) {
+          tmp53 = "" === closure_95;
         }
-        if (tmp55) {
+        if (tmp53) {
           let name;
-          if (valueResult4[DISABLED_DEVICE_ID] != null) {
-            name = tmp58.name;
+          if (tmp41[closure_95] != null) {
+            name = tmp56.name;
           }
-          tmp55 = "Default" === name;
+          tmp53 = "Default" === name;
         }
-        if (tmp55) {
+        if (tmp53) {
           let disabled1;
-          if (valueResult4[DISABLED_DEVICE_ID] != null) {
-            disabled1 = tmp62.disabled;
+          if (tmp41[closure_95] != null) {
+            disabled1 = tmp60.disabled;
           }
-          tmp55 = !disabled1;
+          tmp53 = !disabled1;
         }
-        const tmp65 = undefined !== tmp49 || tmp51 || tmp55;
-        updateVideo(tmp65);
+        let tmp63 = undefined !== valueResult4[closure_95];
+        if (!tmp63) {
+          tmp63 = tmp49;
+        }
+        if (!tmp63) {
+          tmp63 = tmp53;
+        }
+        updateVideo(tmp63);
       }
+      tmp9Result2 = tmp9(12);
     }
+    tmp9Result = AUDIO_INPUT(12);
   },
   AUDIO_VOLUME_CHANGE: function handleVolumeChange(arg0) {
-    let inputVolume;
-    let obj4;
-    let obj5;
-    let outputVolume;
-    obj = { inputVolume: obj2.clamp(inputVolume, 0, BottomSheet), outputVolume };
+    const obj = { inputVolume: _modDef12.clamp(inputVolume, 0, BottomSheet), outputVolume };
     ({ inputVolume, outputVolume } = arg0);
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
-    obj2 = _modDef12;
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
     let tmp3 = settingsByContext[DEFAULT];
     if (null == tmp3) {
-      const obj3 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj4, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj5, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: BottomSheet, outputVolume: BottomSheet, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj4 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj5 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      const obj3 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj4 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj3.modeOptions = obj4;
+      obj3.localMutes = {};
+      obj3.disabledLocalVideos = {};
+      obj3.videoToggleStateMap = {};
+      obj3.localVolumes = {};
+      const obj5 = {};
       const merged = Object.assign(closure_34);
+      obj3.audioMixerSettings = obj5;
+      obj3.localPans = {};
+      obj3.inputVolume = BottomSheet;
+      obj3.outputVolume = BottomSheet;
+      obj3.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj3.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj3.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj3.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj3;
       tmp3 = obj3;
+      const tmp4 = PlatformUtils.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp3, obj);
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
   },
   AUDIO_RESET: function handleReset() {
     const Storage = Storage6.Storage;
-    Storage.remove(MediaEngineStore_str);
+    Storage.remove(MediaEngineStore);
   },
   AUDIO_INPUT_DETECTED: function handleInputDetected(inputDetected) {
     inputDetected = inputDetected.inputDetected;
@@ -4938,16 +5519,15 @@ let obj7 = {
   },
   AUDIO_INPUT_DEVICE_HARDWARE_MUTED_CHANGED: function handleDeviceHardwareMutedChanged(hardwareMuted) {
     hardwareMuted = hardwareMuted.hardwareMuted;
-    const deviceGuid = hardwareMuted.deviceGuid;
     let id = getSettings().inputDeviceId;
     let firstResult = inputDevices[id];
     if (firstResult == null) {
       firstResult = inputDevices[DEFAULT_DEVICE_ID];
     }
     if (firstResult == null) {
-      obj = _modDef12(inputDevices);
-      const values = obj.values();
+      const values = _modDef12(inputDevices).values();
       firstResult = values.first();
+      const obj = _modDef12(inputDevices);
     }
     if (null != firstResult) {
       id = firstResult.id;
@@ -4956,25 +5536,21 @@ let obj7 = {
     if (inputDevices[id] != null) {
       guid = tmp6.guid;
     }
-    if (deviceGuid !== guid) {
+    if (hardwareMuted.deviceGuid !== guid) {
       return false;
     } else {
       let name;
-      const track = AnalyticsUtilsDefault.track;
-      const HARDWARE_MUTE_DETECTED = constants.HARDWARE_MUTE_DETECTED;
-      AnalyticsUtilsDefault;
-      if (inputDevices[id] != null) {
+      if (tmp6 != null) {
         name = tmp6.name;
       }
       obj2 = { input_device_name: name, hardware_muted: hardwareMuted };
-      track(HARDWARE_MUTE_DETECTED, obj2);
+      AnalyticsUtilsDefault.track(constants.HARDWARE_MUTE_DETECTED, obj2);
     }
   },
   AUDIO_SET_SUBSYSTEM: function handleSetAudioSubsystem(subsystem) {
     setAudioSubsystem(subsystem.subsystem);
   },
   AUDIO_SET_BYPASS_SYSTEM_INPUT_PROCESSING: function handleBypassSystemInputProcessing(bypassEnabled) {
-    let obj5;
     bypassEnabled = bypassEnabled.bypassEnabled;
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
     if (DEFAULT === undefined) {
@@ -4982,33 +5558,43 @@ let obj7 = {
     }
     let tmp = settingsByContext[DEFAULT];
     if (null == tmp) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj5, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj5 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      modeOptions = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = modeOptions;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj5 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj5;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp = obj2;
+      const tmp2 = PlatformUtils.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp, { bypassSystemInputProcessing: bypassEnabled });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
     const result1 = result.setAudioInputBypassSystemProcessing(bypassEnabled);
     const tmp16 = getSettings();
     const inputDeviceId = tmp16.inputDeviceId;
     const tmp17 = CertifiedDeviceStore.hasEchoCancellation(inputDeviceId) || tmp16.echoCancellation;
     const tmp18 = CertifiedDeviceStore.hasNoiseSuppression(inputDeviceId) || tmp16.noiseSuppression;
-    const tmp19 = getEffectiveNoiseCancellationDefault;
-    const tmp19Result = tmp19(tmp16.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
-    const tmp12Result = AudioFidelityExperiment;
-    const voiceFidelityCaps = tmp12Result.getVoiceFidelityCaps({ location: "updateVoiceFidelityCaps" }, { krispEnabled: tmp19Result, noiseSuppressionEnabled: tmp18, echoCancellationEnabled: tmp17 });
-    const maxChannelCount = voiceFidelityCaps.maxChannelCount;
+    const tmp19Result = getEffectiveNoiseCancellationDefault(tmp16.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
+    const voiceFidelityCaps = AudioFidelityExperiment.getVoiceFidelityCaps({ location: "updateVoiceFidelityCaps" }, { krispEnabled: tmp19Result, noiseSuppressionEnabled: tmp18, echoCancellationEnabled: tmp17 });
     const result2 = obj3.setVoiceSampleRateCap(voiceFidelityCaps.maxSampleRateHz);
-    const result3 = obj3.setVoiceChannelCountCap(maxChannelCount);
+    const result3 = obj3.setVoiceChannelCountCap(voiceFidelityCaps.maxChannelCount);
     trackVoiceProcessing(bypassEnabled.location);
+    const tmp12Result = AudioFidelityExperiment;
   },
   MEDIA_ENGINE_SET_AUDIO_ENABLED: function handleSetAudioEnabled(enabled) {
-    let obj3;
     enabled = enabled.enabled;
     if (enabled.unmute) {
       let DEFAULT = MediaEngineContextTypes.DEFAULT;
@@ -5017,26 +5603,37 @@ let obj7 = {
       }
       let tmp2 = settingsByContext[DEFAULT];
       if (null == tmp2) {
-        obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj3, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-        obj = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-        obj3 = {};
-        PlatformUtils.isPlatformEmbedded || false;
+        obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+        modeOptions = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+        obj2.modeOptions = modeOptions;
+        obj2.localMutes = {};
+        obj2.disabledLocalVideos = {};
+        obj2.videoToggleStateMap = {};
+        obj2.localVolumes = {};
+        const obj3 = {};
         const merged = Object.assign(closure_34);
+        obj2.audioMixerSettings = obj3;
+        obj2.localPans = {};
+        obj2.inputVolume = outputVolume;
+        obj2.outputVolume = outputVolume;
+        obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+        obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+        obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+        obj2.videoHook = result.supports(Features.VIDEO_HOOK);
         settingsByContext[DEFAULT] = obj2;
         tmp2 = obj2;
+        const tmp4 = PlatformUtils.isPlatformEmbedded || false;
       }
       const _Object = Object;
       const merged1 = Object.assign(tmp2, { mute: false, deaf: false });
       const Storage = Storage6.Storage;
-      result = Storage.set(MediaEngineStore_str, settingsByContext);
+      result = Storage.set(MediaEngineStore, settingsByContext);
     }
     result.eachConnection(updateConnectionMuteDeaf);
   },
   MEDIA_ENGINE_SET_VIDEO_ENABLED: function handleSetVideoEnabled(enabled) {
-    enabled = enabled.enabled;
-    obj = NativePermissionUtils;
-    const permission = obj.requestPermission(NativePermissionTypes.CAMERA);
-    updateVideo(enabled);
+    const permission = NativePermissionUtils.requestPermission(NativePermissionTypes.CAMERA);
+    updateVideo(enabled.enabled);
   },
   MEDIA_ENGINE_PERMISSION: function handlePermission(kind) {
     kind = kind.kind;
@@ -5050,14 +5647,6 @@ let obj7 = {
     }
   },
   MEDIA_ENGINE_SET_GO_LIVE_SOURCE: function handleSetGoLiveSource(settings) {
-    let audioDeviceGuid;
-    let obj3;
-    let obj7;
-    let obj8;
-    let sound;
-    let soundshareId;
-    let soundshareSession;
-    let videoDeviceGuid;
     settings = settings.settings;
     let desktopSettings1;
     if (settings != null) {
@@ -5066,8 +5655,7 @@ let obj7 = {
     if (null != desktopSettings1) {
       const desktopSettings = settings.desktopSettings;
       const sourceId = desktopSettings.sourceId;
-      let DEFAULT2 = settings.context;
-      const sound2 = desktopSettings.sound;
+      DEFAULT2 = settings.context;
       if (DEFAULT2 == null) {
         DEFAULT2 = MediaEngineContextTypes.DEFAULT;
       }
@@ -5075,26 +5663,29 @@ let obj7 = {
       if (qualityOptions == null) {
         qualityOptions = { resolution: 720, frameRate: 30 };
       }
-      const obj6 = CrossPlatformNativeUtilsDefault;
-      const pidFromDesktopSource = obj6.getPidFromDesktopSource(sourceId);
+      const pidFromDesktopSource = CrossPlatformNativeUtilsDefault.getPidFromDesktopSource(sourceId);
       soundshareSession = null;
       soundshareId = null;
       if (PlatformUtils.isPlatformEmbedded) {
-        ({ soundshareId, soundshareSession } = maybeTryHookProcess(pidFromDesktopSource, sound2));
-        maybeTryHookProcess(pidFromDesktopSource, sound2);
+        ({ soundshareId, soundshareSession } = maybeTryHookProcess(pidFromDesktopSource, desktopSettings.sound));
+        const tmp17 = maybeTryHookProcess(pidFromDesktopSource, desktopSettings.sound);
       }
-      if (DEFAULT2 !== STREAM) {
-        if (null != goLiveSource) {
-          result.setGoLiveSource(null, STREAM);
+      if (DEFAULT2 !== DEFAULT2) {
+        if (null != closure_74) {
+          result.setGoLiveSource(null, DEFAULT2);
         }
-        STREAM = DEFAULT2;
       }
-      obj = { desktopSource: obj2, quality: obj3 };
+      let tmp25 = DEFAULT2 === MediaEngineContextTypes.STREAM;
+      if (tmp25) {
+        tmp25 = closure_94;
+      }
+      const obj = { desktopSource: null, quality: null };
       obj2 = { id: sourceId, sourcePid: pidFromDesktopSource, soundshareId, soundshareSession };
-      obj3 = { resolution: null, frameRate: null };
-      const tmp25 = DEFAULT2 === MediaEngineContextTypes.STREAM && closure_94;
+      obj.desktopSource = obj2;
       ({ resolution: obj9.resolution, frameRate: obj9.frameRate } = qualityOptions);
+      obj.quality = { resolution: null, frameRate: null };
       updateVideo(tmp25, obj);
+      const obj3 = { resolution: null, frameRate: null };
     } else {
       let cameraSettings;
       if (settings != null) {
@@ -5114,28 +5705,28 @@ let obj7 = {
         if (qualityOptions1 == null) {
           qualityOptions1 = { resolution: 720, frameRate: 30 };
         }
-        const obj5 = { cameraSource: obj7, quality: obj8 };
-        obj7 = { videoDeviceGuid, audioDeviceGuid, sound };
-        obj8 = { resolution: null, frameRate: null };
+        const obj5 = { cameraSource: null, quality: null };
+        const obj7 = { videoDeviceGuid, audioDeviceGuid, sound };
+        obj5.cameraSource = obj7;
         ({ resolution: obj4.resolution, frameRate: obj4.frameRate } = qualityOptions1);
+        obj5.quality = { resolution: null, frameRate: null };
         updateVideo(tmp8, obj5);
+        const obj8 = { resolution: null, frameRate: null };
       } else {
         updateVideo(closure_94, null);
       }
     }
   },
   MEDIA_ENGINE_SET_VIDEO_DEVICE: function handleSetVideoDevice(id) {
-    let obj3;
-    let obj4;
     id = id.id;
-    let firstResult = closure_88[id];
+    let firstResult = dependencyMap[id];
     if (firstResult == null) {
-      firstResult = closure_88[DEFAULT_DEVICE_ID];
+      firstResult = dependencyMap[DEFAULT_DEVICE_ID];
     }
     if (firstResult == null) {
-      obj = _modDef12(closure_88);
-      const values = obj.values();
+      const values = _modDef12(dependencyMap).values();
       firstResult = values.first();
+      const obj = _modDef12(dependencyMap);
     }
     if (null != firstResult) {
       id = firstResult.id;
@@ -5146,17 +5737,30 @@ let obj7 = {
     }
     let tmp6 = settingsByContext[DEFAULT];
     if (null == tmp6) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj4 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = obj3;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj4 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj4;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp6 = obj2;
+      const tmp7 = PlatformUtils.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp6, { videoDeviceId: id });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
     updateVideo();
   },
   MEDIA_ENGINE_INTERACTION_REQUIRED: function handleInteractionRequired(required) {
@@ -5184,14 +5788,7 @@ let obj7 = {
     set.delete(application.application.id);
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(mediaEngineState) {
-    let c109;
-    let c110;
-    let c111;
-    let closure_130;
-    let closure_77;
-    let closure_86;
-    let closure_87;
-    ({ settingsByContext: closure_77, inputDevices: closure_86, outputDevices: closure_87, appSupported: closure_130, krispModuleLoaded: c109, krispFatalError: c110, krispVersion: c111, goLiveContext: STREAM } = mediaEngineState.mediaEngineState);
+    ({ settingsByContext: closure_77, inputDevices: closure_86, outputDevices: closure_87, appSupported: closure_130, krispModuleLoaded: c109, krispFatalError: c110, krispVersion: c111, goLiveContext: DEFAULT2 } = mediaEngineState.mediaEngineState);
   },
   APP_STATE_UPDATE: function handleFocus(state) {
     state = state.state;
@@ -5206,8 +5803,7 @@ let obj7 = {
       }
     }
     if (state === constants2.ACTIVE) {
-      const tmp7 = c100;
-      if (tmp7) {
+      if (c100) {
         c100 = false;
         updateVideo(true);
       }
@@ -5215,7 +5811,7 @@ let obj7 = {
     return false;
   },
   SET_CHANNEL_BITRATE: function handleSetChannelBitrate(arg0) {
-    let closure_0 = arg0;
+    const bitrate = arg0;
     result.eachConnection((setBitRate) => setBitRate.setBitRate(bitrate.bitrate));
   },
   SET_VAD_PERMISSION: function handleVADPermissionChange(hasPermission) {
@@ -5232,7 +5828,10 @@ let obj7 = {
       c125 = true;
       result.eachConnection(updateConnectionMuteDeaf);
     } else if (tmp3.CAMERA === permissionType) {
-      const tmp5 = tmp !== tmp2 && closure_94;
+      let tmp5 = !tmp4;
+      if (tmp !== tmp2) {
+        tmp5 = closure_94;
+      }
       if (tmp5) {
         updateVideo(false);
       }
@@ -5241,34 +5840,44 @@ let obj7 = {
     }
   },
   SET_CHANNEL_VIDEO_QUALITY_MODE: function handleSetChannelVideoQualityMode(arg0) {
-    let closure_0 = arg0;
+    const mode = arg0;
     result.eachConnection((applyVideoQualityMode) => applyVideoQualityMode.applyVideoQualityMode(mode.mode));
   },
   MEDIA_ENGINE_SET_AEC_DUMP: function handleSetAecDump(aecDumpEnabled) {
-    let obj3;
-    let obj4;
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
-    obj = { aecDumpEnabled: aecDumpEnabled.enabled };
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
     let tmp = settingsByContext[DEFAULT];
     if (null == tmp) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj3, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj4, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj4 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      const obj3 = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = obj3;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj4 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj4;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp = obj2;
+      const tmp2 = PlatformUtils.isPlatformEmbedded || false;
     }
-    const merged1 = Object.assign(tmp, obj);
+    const merged1 = Object.assign(tmp, { aecDumpEnabled: aecDumpEnabled.enabled });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
     result.setAecDump(tmp.aecDumpEnabled);
+    const obj = { aecDumpEnabled: aecDumpEnabled.enabled };
   },
   MEDIA_ENGINE_SET_OPENH264_ENABLED: function handleSetOpenH264Enabled(enabled) {
-    let obj3;
     enabled = enabled.enabled;
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
     if (DEFAULT === undefined) {
@@ -5276,17 +5885,30 @@ let obj7 = {
     }
     let tmp = settingsByContext[DEFAULT];
     if (null == tmp) {
-      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: obj, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj3, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
-      obj3 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+      obj2 = { mode: InputModes.VOICE_ACTIVITY, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
+      modeOptions = { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" };
+      obj2.modeOptions = modeOptions;
+      obj2.localMutes = {};
+      obj2.disabledLocalVideos = {};
+      obj2.videoToggleStateMap = {};
+      obj2.localVolumes = {};
+      const obj3 = {};
       const merged = Object.assign(closure_34);
+      obj2.audioMixerSettings = obj3;
+      obj2.localPans = {};
+      obj2.inputVolume = outputVolume;
+      obj2.outputVolume = outputVolume;
+      obj2.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj2.videoHook = result.supports(Features.VIDEO_HOOK);
       settingsByContext[DEFAULT] = obj2;
       tmp = obj2;
+      const tmp2 = PlatformUtils.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp, { openH264Enabled: enabled });
     const Storage = Storage6.Storage;
-    result = Storage.set(MediaEngineStore_str, settingsByContext);
+    result = Storage.set(MediaEngineStore, settingsByContext);
     const tmp13 = DesktopNativeUtilsDefault;
     if (tmp13 != null) {
       const setOpenH264Enabled = tmp13.setOpenH264Enabled;
@@ -5298,18 +5920,25 @@ let obj7 = {
   MEDIA_ENGINE_RESET_SETTINGS: function handleResetSettings(overrides) {
     overrides = overrides.overrides;
     const values = Object.values(MediaEngineContextTypes);
-    let closure_77 = values.reduce((acc, item) => {
-      obj = { mode: InputModes.VOICE_ACTIVITY, modeOptions: { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" }, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: obj2, audioMixerSettingsVersion: 0, localPans: {}, inputVolume: outputVolume, outputVolume, inputDeviceId: DEFAULT_DEVICE_ID, outputDeviceId: DEFAULT_DEVICE_ID, videoDeviceId: DEFAULT_DEVICE_ID, qos: false, qosMigrated: false, videoHook: result.supports(Features.VIDEO_HOOK), experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
-      obj2 = {};
-      PlatformUtils.isPlatformEmbedded || false;
+    closure_77 = values.reduce((acc, item) => {
+      const obj = { mode: InputModes.VOICE_ACTIVITY, modeOptions: { threshold: -60, autoThreshold: PlatformUtils.isPlatformEmbedded || false, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: [], updatedAt: "IconComponent" }, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: {}, disabledLocalVideos: {}, videoToggleStateMap: {}, localVolumes: {}, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       const merged = Object.assign(closure_34);
-      const obj3 = _modDef12;
-      acc[item] = obj3.merge(obj, overrides[item]);
+      obj.audioMixerSettings = {};
+      obj.localPans = {};
+      obj.inputVolume = outputVolume;
+      obj.outputVolume = outputVolume;
+      obj.inputDeviceId = DEFAULT_DEVICE_ID;
+      obj.outputDeviceId = DEFAULT_DEVICE_ID;
+      obj.videoDeviceId = DEFAULT_DEVICE_ID;
+      obj.videoHook = result.supports(Features.VIDEO_HOOK);
+      obj2 = {};
+      const tmp2 = PlatformUtils.isPlatformEmbedded || false;
+      acc[item] = _modDef12.merge(obj, overrides[item]);
       return acc;
     }, {});
     const Storage = overrides(510).Storage;
-    result = Storage.set(MediaEngineStore_str, closure_77);
-    const tmp2 = applySettings();
+    result = Storage.set(MediaEngineStore, closure_77);
+    applySettings();
   },
   CHANNEL_DELETE: function handleChannelDelete() {
     if (closure_94) {
@@ -5325,17 +5954,15 @@ let obj7 = {
       closure_140.noiseSuppression = true;
       let noiseCancellation = getSettings();
       closure_72.eachConnection((setNoiseCancellation) => {
-        let defaultConfig;
         noiseCancellation = noiseCancellation.noiseCancellation;
-        const tmp3 = getEffectiveNoiseCancellationDefault;
-        const tmp3Result = tmp3(noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
+        const tmp3Result = getEffectiveNoiseCancellationDefault(noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
         if (tmp3Result !== noiseCancellation) {
           obj.info("Falling back to system noise suppression.");
         }
         setNoiseCancellation.setNoiseCancellation(tmp3Result);
         const tmpResult = AGC2MobileExperimentDefault;
         if (tmp3Result) {
-          defaultConfig = tmpResult.getConfig({ location: "setNoiseCancellation" });
+          let defaultConfig = tmpResult.getConfig({ location: "setNoiseCancellation" });
         } else {
           defaultConfig = tmpResult.definition.defaultConfig;
         }
@@ -5391,15 +6018,7 @@ let obj7 = {
     return false;
   },
   CLIPS_INIT: function handleClipsInit(applicationName) {
-    let isMacResult;
-    let isWindowsResult;
-    let minCaptureHeight;
-    let minCaptureWidth;
-    let obj5;
-    let sourceId;
     ({ sourceId, quality } = applicationName);
-    applicationName = applicationName.applicationName;
-    obj = isClipsEnabled;
     if (obj.isClipsEnabled()) {
       if (null != DiscordNativeDefault) {
         let id;
@@ -5413,77 +6032,92 @@ let obj7 = {
         }
         if (null != _null) {
           result.setClipsSource(null);
-          const tmpResult = PlatformUtils;
           if (tmpResult.isWindows()) {
             if (null != _null.desktopSource.soundshareId) {
-              const obj3 = HookAll;
-              result = obj3.cancelAttachToProcess(_null.desktopSource.soundshareId);
+              result = HookAll.cancelAttachToProcess(_null.desktopSource.soundshareId);
             } else {
-              const videoHook = null != _null.desktopSource.sourcePid && getSettings().videoHook;
+              let videoHook = null != _null.desktopSource.sourcePid;
               if (videoHook) {
-                obj2 = HookAll;
-                const result1 = obj2.cancelAttachToProcess(_null.desktopSource.sourcePid);
+                videoHook = getSettings().videoHook;
+              }
+              if (videoHook) {
+                const result1 = HookAll.cancelAttachToProcess(_null.desktopSource.sourcePid);
               }
             }
           }
+          tmpResult = PlatformUtils;
         }
+        const pidFromDesktopSource = CrossPlatformNativeUtilsDefault.getPidFromDesktopSource(sourceId);
         const tmp3Result = CrossPlatformNativeUtilsDefault;
-        const pidFromDesktopSource = tmp3Result.getPidFromDesktopSource(sourceId);
-        const obj4 = { desktopSource: obj5, quality };
-        obj5 = { id: sourceId, sourcePid: pidFromDesktopSource, soundshareId: null, soundshareSession: null };
+        const obj4 = { desktopSource: null, quality: null };
+        const obj5 = { id: sourceId, sourcePid: pidFromDesktopSource, soundshareId: null, soundshareSession: null };
         ({ soundshareId: obj6.soundshareId, soundshareSession: obj6.soundshareSession } = maybeTryHookProcess(pidFromDesktopSource, true));
+        obj4.desktopSource = obj5;
+        obj4.quality = quality;
         _null = obj4;
-        maybeTryHookProcess(pidFromDesktopSource, true);
-        const tmpResult4 = GoLiveHdrExperiment;
-        const hdrCaptureMode = tmpResult4.getGoLiveHdrConfig({ location: "MediaEngineStore clips" }).hdrCaptureMode;
+        const tmp19 = maybeTryHookProcess(pidFromDesktopSource, true);
         const videoHook2 = getSettings().videoHook;
         enabled = videoHook2;
-        if (enabled) {
+        if (videoHook2) {
           const VideoHookDX12Experiment = VideoHookDX12Experiment2.VideoHookDX12Experiment;
           enabled = VideoHookDX12Experiment.getConfig({ location: "handleClipsInit" }).enabled;
         }
         const UpscaleSmallCapturedFramesExperiment = UpscaleSmallCapturedFramesExperiment2.UpscaleSmallCapturedFramesExperiment;
         const config = UpscaleSmallCapturedFramesExperiment.getConfig({ location: "handleClipsInit" });
-        const obj7 = { id: _null.desktopSource.id, soundshareId: _null.desktopSource.soundshareId, useVideoHook: videoHook2, useGraphicsCapture: isWindowsResult, useCaptureDeviceForEncode: false, useLoopback: mediaEngineStore.getExperimentalSoundshare(), useQuartzCapturer: true, allowScreenCaptureKit: isMacResult, videoHookStaleFrameTimeoutMs: 500, graphicsCaptureStaleFrameTimeoutMs, hdrCaptureMode, videoHookAllowDx12: enabled, minCaptureWidth, minCaptureHeight };
+        const obj7 = { id: _null.desktopSource.id, soundshareId: _null.desktopSource.soundshareId, useVideoHook: videoHook2, useGraphicsCapture: null, useCaptureDeviceForEncode: false, useLoopback: null, useQuartzCapturer: true, allowScreenCaptureKit: null, videoHookStaleFrameTimeoutMs: 500, graphicsCaptureStaleFrameTimeoutMs: null, hdrCaptureMode: null, videoHookAllowDx12: null, minCaptureWidth: null, minCaptureHeight: null };
         ({ minCaptureWidth, minCaptureHeight } = config);
-        const setClipsSource = result.setClipsSource;
-        const tmpResult5 = PlatformUtils;
-        isWindowsResult = tmpResult5.isWindows();
         const obj8 = result;
+        const tmpResult4 = GoLiveHdrExperiment;
+        let isWindowsResult = PlatformUtils.isWindows();
         if (isWindowsResult) {
-          const satisfies = _modDef13847.satisfies;
-          _modDef13847;
           const tmp3Result6 = DiscordNativeDefault;
           let release;
           if (tmp3Result6 != null) {
             release = tmp3Result6.os.release;
           }
-          isWindowsResult = satisfies(release, set);
+          isWindowsResult = _modDef13847.satisfies(release, closure_1_29);
+          const tmp3Result5 = _modDef13847;
         }
-        const tmpResult6 = PlatformUtils;
-        isMacResult = tmpResult6.isMac() && obj8.supports(Features.SCREEN_CAPTURE_KIT);
+        obj7.useGraphicsCapture = isWindowsResult;
+        obj7.useLoopback = mediaEngineStore.getExperimentalSoundshare();
+        const tmpResult5 = PlatformUtils;
+        let isMacResult = PlatformUtils.isMac();
         if (isMacResult) {
-          const satisfies2 = _modDef13847.satisfies;
-          _modDef13847;
+          isMacResult = obj8.supports(Features.SCREEN_CAPTURE_KIT);
+        }
+        if (isMacResult) {
           const tmp3Result8 = DiscordNativeDefault;
           let release1;
           if (tmp3Result8 != null) {
             release1 = tmp3Result8.os.release;
           }
-          isMacResult = satisfies2(release1, closure_24);
+          isMacResult = _modDef13847.satisfies(release1, closure_1_24);
+          const tmp3Result7 = _modDef13847;
         }
-        const obj9 = { desktopDescription: obj7, quality, bitratePercent: quality.bitratePercent, applicationName, videoEncoderExperiments: mediaEngineStore.getVideoEncoderExperiments(MediaEngineContextTypes.STREAM, "streamer") };
-        setClipsSource(obj9);
+        const obj9 = { desktopDescription: null, quality: null, bitratePercent: null, applicationName: null, videoEncoderExperiments: null };
+        obj7.allowScreenCaptureKit = isMacResult;
+        obj7.graphicsCaptureStaleFrameTimeoutMs = graphicsCaptureStaleFrameTimeoutMs;
+        obj7.hdrCaptureMode = tmpResult4.getGoLiveHdrConfig({ location: "MediaEngineStore clips" }).hdrCaptureMode;
+        obj7.videoHookAllowDx12 = enabled;
+        obj7.minCaptureWidth = minCaptureWidth;
+        obj7.minCaptureHeight = minCaptureHeight;
+        obj9.desktopDescription = obj7;
+        obj9.quality = quality;
+        obj9.bitratePercent = quality.bitratePercent;
+        obj9.applicationName = applicationName.applicationName;
+        obj9.videoEncoderExperiments = mediaEngineStore.getVideoEncoderExperiments(MediaEngineContextTypes.STREAM, "streamer");
+        result.setClipsSource(obj9);
+        const tmpResult6 = PlatformUtils;
       }
     }
     return false;
   },
   CLIPS_RESTART: function handleClipsRestart() {
-    let c75 = null;
+    c75 = null;
   },
   CLIPS_SETTINGS_UPDATE: function handleClipsSettingsUpdate(settings) {
     if (false === settings.settings.clipsEnabled) {
-      let c75 = null;
+      c75 = null;
       result.setClipsSource(null);
     }
   },
@@ -5496,17 +6130,13 @@ let obj7 = {
     const inputDeviceId = tmp.inputDeviceId;
     const tmp2 = CertifiedDeviceStore.hasEchoCancellation(inputDeviceId) || tmp.echoCancellation;
     const tmp3 = CertifiedDeviceStore.hasNoiseSuppression(inputDeviceId) || tmp.noiseSuppression;
-    const tmp4 = getEffectiveNoiseCancellationDefault;
-    const tmp4Result = tmp4(tmp.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
-    obj2 = AudioFidelityExperiment;
-    const voiceFidelityCaps = obj2.getVoiceFidelityCaps({ location: "updateVoiceFidelityCaps" }, { krispEnabled: tmp4Result, noiseSuppressionEnabled: tmp3, echoCancellationEnabled: tmp2 });
-    const maxChannelCount = voiceFidelityCaps.maxChannelCount;
+    const tmp4Result = getEffectiveNoiseCancellationDefault(tmp.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
+    const voiceFidelityCaps = AudioFidelityExperiment.getVoiceFidelityCaps({ location: "updateVoiceFidelityCaps" }, { krispEnabled: tmp4Result, noiseSuppressionEnabled: tmp3, echoCancellationEnabled: tmp2 });
     result = result.setVoiceSampleRateCap(voiceFidelityCaps.maxSampleRateHz);
-    const result1 = result.setVoiceChannelCountCap(maxChannelCount);
+    const result1 = result.setVoiceChannelCountCap(voiceFidelityCaps.maxChannelCount);
   }
-};
-const mediaEngineStore = new MediaEngineStore(DispatcherDefault, obj7);
-let size = size_mod;
+});
+let size = fn(2);
 let result1 = size.fileFinishedImporting("stores/MediaEngineStore.tsx");
 
 export default mediaEngineStore;

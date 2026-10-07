@@ -1,99 +1,121 @@
 // === Module 15592: RevenueSmokeTestModal ===
 
 // Module 15592 (RevenueSmokeTestModal)
-import Fragment from "Fragment" /* 21 */;
 import HeaderShared from "HeaderShared" /* 7509 */;
 import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10675 */;
 import BillingFlowsDefault from "BillingFlows" /* 15593 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
-import NativeStackView from "NativeStackView" /* 7568 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let _require;
 
+require = fn;
 let closure_3 = ["children"];
-const jsx = Fragment.jsx;
-let Screen = NativeStackView.createNativeStackNavigator();
-const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let accessibilityNativeStackOptions;
-  let first;
-  let tmp12;
-  let tmp6;
-  let tmp = accessibilityNativeStackOptions;
+const jsx = fn(21).jsx;
+const NativeStackNavigator = fn(7568);
+let closure_6 = NativeStackNavigator.createNativeStackNavigator();
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/billing/native/RevenueSmokeTestModal.tsx");
+
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = accessibilityNativeStackOptions(576).c(6);
   let obj = accessibilityNativeStackOptions(576);
-  const cResult = obj.c(6);
-  let obj2 = accessibilityNativeStackOptions(6503);
-  accessibilityNativeStackOptions = obj2.useAccessibilityNativeStackOptions();
+  const tmp = accessibilityNativeStackOptions;
+  accessibilityNativeStackOptions = accessibilityNativeStackOptions(6503).useAccessibilityNativeStackOptions();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== accessibilityNativeStackOptions) {
     const fn = function s(navigation) {
-      let obj2;
-      let obj = {
+      const obj = {
         headerTitle(children) {
-          children = children.children;
-          const obj = { title: children };
-          const tmp = closure_1_4(children, closure_1_3);
-          const GenericHeaderTitle = accessibilityNativeStackOptions(closure_1_2[7]).GenericHeaderTitle;
-          const merged = Object.assign(tmp);
-          return closure_1_5(GenericHeaderTitle, obj);
+          const merged = Object.assign(closure_1_4(children, closure_1_3));
+          return closure_1_5(accessibilityNativeStackOptions(closure_1_2[7]).GenericHeaderTitle, { title: children.children });
         },
-        headerLeft: obj2.getRenderModalCloseImage(navigation),
+        headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
         headerTitleAlign: "center"
       };
-      navigation = navigation.navigation;
-      obj2 = HeaderShared;
       let merged = Object.assign(accessibilityNativeStackOptions);
       const merged1 = Object.assign(getNavigationModalPresentationDefault());
       return obj;
     };
     cResult[1] = accessibilityNativeStackOptions;
     cResult[2] = fn;
-    tmp6 = fn;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    Screen = Screen.Screen;
-    const tmp11 = <Screen name="RunAllFlows" options={function options() {
+    const obj3 = {
+      name: "RunAllFlows",
+      options() {
+          return { title: "Run All Payment Flows" };
+        },
+      component: BillingFlowsDefault.RunAllFlows
+    };
+    const tmp11 = <closure_6.Screen name="RunAllFlows" options={function options() {
       return { title: "Run All Payment Flows" };
     }} component={BillingFlowsDefault.RunAllFlows} />;
     cResult[3] = tmp11;
+    let tmp7 = tmp11;
+  } else {
+    tmp7 = cResult[3];
   }
   if (cResult[4] !== tmp6) {
-    const NativePaymentContextProvider = tmp(10564).NativePaymentContextProvider;
-    const tmp15 = <NativePaymentContextProvider skuIDs={first} activeSubscription={null}>{null}</NativePaymentContextProvider>;
+    const obj4 = { skuIDs: first, activeSubscription: null, children: null };
+    const obj5 = { screenOptions: tmp6, children: tmp7 };
+    obj4.children = <closure_6.Navigator screenOptions={tmp6}>{tmp7}</closure_6.Navigator>;
+    const tmp15 = jsx(tmp(10564).NativePaymentContextProvider, { skuIDs: first, activeSubscription: null, children: null });
     cResult[4] = tmp6;
     cResult[5] = tmp15;
-    tmp12 = tmp15;
+    let tmp12 = tmp15;
   } else {
     tmp12 = cResult[5];
   }
   return tmp12;
 }) : (() => {
-  let Navigator;
-  let closure_0;
-  let obj = require("Navigator");
-  _require = obj.useAccessibilityNativeStackOptions();
-  ({
-    name: "RunAllFlows",
-    options() {
-      return { title: "Run All Payment Flows" };
+  _require = require("Navigator").useAccessibilityNativeStackOptions();
+  const obj2 = { skuIDs: [], activeSubscription: null, children: null };
+  const obj3 = {
+    screenOptions(navigation) {
+      const obj = {
+        headerTitle(children) {
+          const merged = Object.assign(children, Object.assign({ children: 0 }));
+          const merged1 = Object.assign(merged);
+          return closure_1_5(closure_1_0(closure_1_2[7]).GenericHeaderTitle, { title: children.children });
+        },
+        headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
+        headerTitleAlign: "center"
+      };
+      let merged = Object.assign(closure_0);
+      let merged1 = Object.assign(getNavigationModalPresentationDefault());
+      return obj;
     },
-    component: BillingFlowsDefault.RunAllFlows
-  });
-  const NativePaymentContextProvider = require("NativePaymentContext").NativePaymentContextProvider;
+    children: null
+  };
+  let obj = require("Navigator");
   ({ Navigator, Screen } = closure_6);
-  return <NativePaymentContextProvider skuIDs={[]} activeSubscription={null}>{null}</NativePaymentContextProvider>;
+  obj3.children = <Screen name="RunAllFlows" options={function options() {
+    return { title: "Run All Payment Flows" };
+  }} component={BillingFlowsDefault.RunAllFlows} />;
+  obj2.children = <Navigator screenOptions={function screenOptions(navigation) {
+    const obj = {
+      headerTitle(children) {
+        const merged = Object.assign(children, Object.assign({ children: 0 }));
+        const merged1 = Object.assign(merged);
+        return closure_1_5(closure_1_0(closure_1_2[7]).GenericHeaderTitle, { title: children.children });
+      },
+      headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
+      headerTitleAlign: "center"
+    };
+    let merged = Object.assign(closure_0);
+    let merged1 = Object.assign(getNavigationModalPresentationDefault());
+    return obj;
+  }}>{null}</Navigator>;
+  return jsx(require("NativePaymentContext").NativePaymentContextProvider, { skuIDs: [], activeSubscription: null, children: null });
 }));
-const result = size.fileFinishedImporting("modules/user_settings/billing/native/RevenueSmokeTestModal.tsx");
-
-export default memoResult;

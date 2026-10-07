@@ -4,8 +4,6 @@
 import conjurePreviewControlLease from "conjurePreviewControlLease" /* 9006 */;
 import size from "module_2" /* 2 */;
 
-let map;
-
 function bestEffort(arg0, fn) {
   try {
     fn();
@@ -15,40 +13,36 @@ function bestEffort(arg0, fn) {
 let result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewOperationSurfaces.tsx");
 
 export const createPreviewOperationSurfaces = function createPreviewOperationSurfaces(arg0) {
-  let closure_0 = arg0;
-  map = new Map();
-  let obj = {
-    begin(Stack2) {
-      let closure_1;
-      let obj = Stack2(map[0]);
-      let result = obj.beginConjureControlOperation(Stack2);
-      const tmp2 = Stack2(Stack2);
-      map = tmp2;
+  closure_0 = arg0;
+  let map = new Map();
+  return {
+    begin(TableRowGroup) {
+      let result = TableRowGroup(map[0]).beginConjureControlOperation(TableRowGroup);
+      const tmp2 = TableRowGroup(TableRowGroup);
       if (null != tmp2) {
-        let obj2 = map;
-        let value = map.get(Stack2);
+        value = map.get(TableRowGroup);
+        closure_2 = value;
         if (null != value) {
-          obj2.delete(Stack2);
+          obj2.delete(TableRowGroup);
           bestEffort(0, () => value.end());
         }
         bestEffort(0, () => closure_1.dismiss());
         bestEffort(0, () => {
           const openResult = map.open();
-          Stack2 = openResult;
-          let obj = Stack2(map[0]);
-          map = obj.subscribeConjureControl(() => {
-            const obj = openResult(map[0]);
+          TableRowGroup = openResult;
+          map = TableRowGroup(map[0]).subscribeConjureControl(() => {
             if (!obj.isConjureControlActive(openResult)) {
-              value = map.get(openResult);
+              value = map.get(tmp);
               if (null != value) {
-                map.delete(openResult);
+                map.delete(tmp);
                 closure_1_2(0, () => value.end());
               }
-              const obj3 = openResult(map[0]);
-              const result = obj3.endConjureControlOperation(openResult);
+              const result = value(map[0]).endConjureControlOperation(tmp);
+              const obj3 = value(map[0]);
             }
+            obj = openResult(map[0]);
           });
-          const obj2 = {
+          let result = map.set(TableRowGroup, {
             iframeId: openResult.iframeId,
             drain() {
               return openResult.drain();
@@ -57,22 +51,23 @@ export const createPreviewOperationSurfaces = function createPreviewOperationSur
               map();
               openResult.end();
             }
-          };
-          let result = map.set(Stack2, obj2);
+          });
         });
+        obj2 = map;
       }
+      let obj = TableRowGroup(map[0]);
     },
     end(openResult) {
-      const value = map.get(openResult);
+      value = map.get(openResult);
+      closure_0 = value;
       if (null != value) {
         map.delete(openResult);
         bestEffort(0, () => value.end());
       }
-      const obj2 = conjurePreviewControlLease;
-      const result = obj2.endConjureControlOperation(openResult);
+      const result = conjurePreviewControlLease.endConjureControlOperation(openResult);
     },
     drain(arg0) {
-      const value = map.get(arg0);
+      value = map.get(arg0);
       let drainResult;
       if (value != null) {
         drainResult = value.drain();
@@ -83,5 +78,4 @@ export const createPreviewOperationSurfaces = function createPreviewOperationSur
       return drainResult;
     }
   };
-  return obj;
 };

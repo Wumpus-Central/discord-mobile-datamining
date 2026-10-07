@@ -1,22 +1,19 @@
 // === Module 9806: useSafetyAlertsSettingOrDefault ===
 
 // Module 9806 (useSafetyAlertsSettingOrDefault)
-import get_initialized from "get initialized" /* 504 */;
-import react from "react" /* 576 */;
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
 import useUserIsTeen from "useUserIsTeen" /* 8327 */;
-import InappropriateConversationsDefaultOn from "InappropriateConversationsDefaultOn" /* 9807 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import UserStore from "UserStore" /* 1377 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let settings;
-  let tmp4;
-  let tmp5;
-  let tmp9;
-  const obj = react;
-  const cResult = obj.c(3);
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx");
+
+export const useSafetyAlertsSettingOrDefault = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(3);
   const currentUser = UserStore.getCurrentUser();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserSettingsProtoStore];
@@ -40,19 +37,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const tmpResult = get_initialized;
-  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
-  const tmpResult3 = useUserIsTeen;
-  let userIsTeen = tmpResult3.useUserIsTeen();
+  const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = initialize;
+  let userIsTeen = useUserIsTeen.useUserIsTeen();
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { location: "useSafetyAlertsSettingOrDefault" };
     cResult[2] = obj2;
-    tmp9 = obj2;
+    let tmp9 = obj2;
   } else {
     tmp9 = cResult[2];
   }
+  const tmpResult3 = useUserIsTeen;
   let tmp10 = !userIsTeen;
-  const tmpResult4 = InappropriateConversationsDefaultOn;
   if (userIsTeen) {
     tmp10 = !tmpResult4.useIsEligibleForInappropriateConversationDefaultOn(tmp9);
   }
@@ -63,7 +59,6 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       if (currentUser != null) {
         isStaffResult = currentUser.isStaff();
       }
-      let flag = true;
       userIsTeen = true === isStaffResult;
     }
     if (userIsTeen) {
@@ -73,11 +68,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   return tmp11;
 }) : (() => {
-  let settings;
   const currentUser = UserStore.getCurrentUser();
   const items = [UserSettingsProtoStore];
-  const obj2 = get_initialized;
-  const stateFromStores = obj2.useStateFromStores(items, () => {
+  const stateFromStores = initialize.useStateFromStores(items, () => {
     const privacy = settings.settings.privacy;
     let flag;
     if (privacy != null) {
@@ -90,10 +83,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     return flag;
   });
-  const obj3 = useUserIsTeen;
-  let userIsTeen = obj3.useUserIsTeen();
+  let userIsTeen = useUserIsTeen.useUserIsTeen();
   let tmp3 = !userIsTeen;
-  const obj4 = InappropriateConversationsDefaultOn;
   if (userIsTeen) {
     tmp3 = !obj4.useIsEligibleForInappropriateConversationDefaultOn({ location: "useSafetyAlertsSettingOrDefault" });
   }
@@ -104,7 +95,6 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       if (currentUser != null) {
         isStaffResult = currentUser.isStaff();
       }
-      let flag = true;
       userIsTeen = true === isStaffResult;
     }
     if (userIsTeen) {
@@ -114,6 +104,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   return tmp4;
 });
-const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx");
-
-export const useSafetyAlertsSettingOrDefault = tmp2;

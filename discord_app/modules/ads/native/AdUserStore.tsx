@@ -1,21 +1,15 @@
 // === Module 7232: AdUserStore ===
 
 // Module 7232 (AdUserStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import size from "module_2" /* 2 */;
-
-let closure_0;
 
 let c1 = false;
 let c2 = false;
 let c3 = null;
 let closure_4 = null;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class AdUserStore extends Store {
-  setFetchPromise(arg0) {
-    c3 = arg0;
-  }
 }
 const prototype = AdUserStore.prototype;
 Object.defineProperty(prototype, "adUser", {
@@ -59,8 +53,11 @@ Object.defineProperty(prototype, "hasFetchedRecently", {
   },
   set: undefined
 });
+prototype["setFetchPromise"] = function setFetchPromise(arg0) {
+  c3 = arg0;
+};
 AdUserStore.displayName = "AdUserStore";
-const obj = {
+const adUserStore = new AdUserStore(DispatcherDefault, {
   POST_CONNECTION_OPEN: function handlePostConnectionOpen() {
 
   },
@@ -79,8 +76,8 @@ const obj = {
     c2 = true;
     c3 = null;
   }
-};
-const adUserStore = new AdUserStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/native/AdUserStore.tsx");
 
 export default adUserStore;

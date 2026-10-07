@@ -1,14 +1,13 @@
 // === Module 9939: PortalKeyboardModalContext ===
 
 // Module 9939 (PortalKeyboardModalContext)
-import react from "react" /* 19 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-const context = react.createContext(false);
-let ReactCompilerGating = ReactCompilerGating_mod;
+const context = noop.createContext(false);
+let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
+const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboardModalContext.tsx");
 
 export const PortalKeyboardInModalContext = context;
-export const useIsPortalKeyboardInModal = () => react.useContext(context);
+export const useIsPortalKeyboardInModal = () => noop.useContext(context);

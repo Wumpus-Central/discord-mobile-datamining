@@ -3,46 +3,45 @@
 // Module 17686 (UserSettingsManager)
 import UserSettings from "UserSettings" /* 2028 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
-import size from "module_2" /* 2 */;
 
+require = fn;
 let c2 = false;
-class UserSettingsManager extends AutomaticLifecycleManager {
+class UserSettingsManager extends tmp2 {
   constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    closure_0 = applyArgumentsResult;
     applyArgumentsResult.actions = {
       POST_CONNECTION_OPEN() {
-        applyArgumentsResult.setVerifyTimezone();
-      },
+            applyArgumentsResult.setVerifyTimezone();
+          },
       OVERLAY_INITIALIZE: applyArgumentsResult.setVerifyTimezone,
       USER_SETTINGS_PROTO_UPDATE: applyArgumentsResult.ensureTimezoneUpdated
     };
     return applyArgumentsResult;
   }
-  setVerifyTimezone() {
-    c2 = true;
-  }
-  ensureTimezoneUpdated() {
-    const tmp = c2;
-    if (tmp) {
-      c2 = false;
-      const _Date = Date;
-      const self = this;
-      const self2 = this;
-      const date = new Date();
-      const timezoneOffset = date.getTimezoneOffset();
-      let TimezoneOffset = timezoneOffset(2028).TimezoneOffset;
-      if (TimezoneOffset.getSetting() !== timezoneOffset) {
-        const _setImmediate = setImmediate;
-        setImmediate(() => {
-          const TimezoneOffset = UserSettings.TimezoneOffset;
-          return TimezoneOffset.updateSetting(timezoneOffset);
-        });
-      }
-    }
-  }
 }
 const prototype = UserSettingsManager.prototype;
+prototype["setVerifyTimezone"] = function setVerifyTimezone() {
+  c2 = true;
+};
+prototype["ensureTimezoneUpdated"] = function ensureTimezoneUpdated() {
+  if (c2) {
+    c2 = false;
+    const _Date = Date;
+    const date = new Date();
+    const timezoneOffset = date.getTimezoneOffset();
+    let TimezoneOffset = timezoneOffset(2028).TimezoneOffset;
+    if (TimezoneOffset.getSetting() !== timezoneOffset) {
+      const _setImmediate = setImmediate;
+      setImmediate(() => {
+        const TimezoneOffset = UserSettings.TimezoneOffset;
+        return TimezoneOffset.updateSetting(timezoneOffset);
+      });
+    }
+  }
+};
 const userSettingsManager = new UserSettingsManager();
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/UserSettingsManager.tsx");
 
 export default userSettingsManager;

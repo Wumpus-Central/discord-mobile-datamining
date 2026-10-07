@@ -21,13 +21,6 @@ export const getThumbnailSrc = function getThumbnailSrc(thumbnailSrc) {
   return thumbnailSrc;
 };
 export const convertCarouselItemsToMediaItems = function convertCarouselItemsToMediaItems(carouselItems, applicationId, stateFromStores2, heroWidth) {
-  let assetURL;
-  let assetURL1;
-  let assetURL2;
-  let assetURL3;
-  let obj2;
-  let obj6;
-  let obj7;
   heroWidth = heroWidth.heroWidth;
   const items = [];
   const items1 = [];
@@ -47,38 +40,45 @@ export const convertCarouselItemsToMediaItems = function convertCarouselItemsToM
           let mime_type = tmp7.mime_type;
           let push = items1.push;
           if (mime_type.startsWith("video/")) {
-            let obj3 = { type: "video", src: obj6.getAssetURL(applicationId, tmp5, heroWidth, "mp4"), videoThumbnailSrc: obj7.getAssetURL(applicationId, tmp5, heroWidth, "webp"), thumbnailSrc: assetURL, backgroundSrc: assetURL1 };
-            obj6 = StoreUtils;
+            let obj3 = { type: "video", src: null, videoThumbnailSrc: null, thumbnailSrc: null, backgroundSrc: null };
+            let obj6 = StoreUtils;
             let str3 = "mp4";
-            obj7 = StoreUtils;
+            obj3.src = obj6.getAssetURL(applicationId, tmp5, heroWidth, "mp4");
+            let obj7 = StoreUtils;
             let str4 = "webp";
-            assetURL = undefined;
+            obj3.videoThumbnailSrc = obj7.getAssetURL(applicationId, tmp5, heroWidth, "webp");
+            let assetURL;
             if (null != tmp4.thumbnailAssetId) {
               let tmp26Result = StoreUtils;
               let str5 = "webp";
               assetURL = tmp26Result.getAssetURL(applicationId, tmp4.thumbnailAssetId, 112, "webp");
             }
-            assetURL1 = undefined;
+            obj3.thumbnailSrc = assetURL;
+            let assetURL1;
             if (null != tmp4.backgroundAssetId) {
               let tmp26Result2 = StoreUtils;
               assetURL1 = tmp26Result2.getAssetURL(applicationId, tmp4.backgroundAssetId, heroWidth, SlayerStorefrontUtils.LARGE_ASSET_FORMAT);
             }
+            obj3.backgroundSrc = assetURL1;
             let arr2 = push(obj3);
           } else {
-            let obj = { type: "image", src: obj2.getAssetURL(applicationId, tmp7, heroWidth, "webp"), thumbnailSrc: assetURL2, backgroundSrc: assetURL3 };
-            obj2 = StoreUtils;
+            let obj = { type: "image", src: null, thumbnailSrc: null, backgroundSrc: null };
+            let obj2 = StoreUtils;
             let str = "webp";
-            assetURL2 = undefined;
+            obj.src = obj2.getAssetURL(applicationId, tmp7, heroWidth, "webp");
+            let assetURL2;
             if (null != tmp4.thumbnailAssetId) {
               let tmp8Result = StoreUtils;
               let str2 = "webp";
               assetURL2 = tmp8Result.getAssetURL(applicationId, tmp4.thumbnailAssetId, 112, "webp");
             }
-            assetURL3 = undefined;
+            obj.thumbnailSrc = assetURL2;
+            let assetURL3;
             if (null != tmp4.backgroundAssetId) {
               let tmp8Result2 = StoreUtils;
               assetURL3 = tmp8Result2.getAssetURL(applicationId, tmp4.backgroundAssetId, heroWidth, SlayerStorefrontUtils.LARGE_ASSET_FORMAT);
             }
+            obj.backgroundSrc = assetURL3;
             let arr3 = push(obj);
           }
         }

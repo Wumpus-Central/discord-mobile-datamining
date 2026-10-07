@@ -1,43 +1,39 @@
 // === Module 14321: ConjureBuilderPreviewStore ===
 
 // Module 14321 (ConjureBuilderPreviewStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 2011 */;
 import FramesStore from "FramesStore" /* 9000 */;
-import size from "module_2" /* 2 */;
 
-const OrientationLockState = Constants.OrientationLockState;
+const OrientationLockState = fn(2011).OrientationLockState;
 let applicationId = null;
 let enabled = false;
 let closure_5 = false;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class ConjureBuilderPreviewStore extends Store {
-  initialize() {
-    this.waitFor(FramesStore);
-  }
-  getBuilderPreviewApplicationId() {
-    return applicationId;
-  }
-  getPhoneLensApplicationId() {
-    return applicationId;
-  }
-  isBuilderPreviewMobile() {
-    return enabled;
-  }
-  isBuilderPreviewLandscape() {
-    return closure_5;
-  }
 }
 const prototype = ConjureBuilderPreviewStore.prototype;
-const obj = {
+prototype["initialize"] = function initialize() {
+  this.waitFor(FramesStore);
+};
+prototype["getBuilderPreviewApplicationId"] = function getBuilderPreviewApplicationId() {
+  return applicationId;
+};
+prototype["getPhoneLensApplicationId"] = function getPhoneLensApplicationId() {
+  return applicationId;
+};
+prototype["isBuilderPreviewMobile"] = function isBuilderPreviewMobile() {
+  return enabled;
+};
+prototype["isBuilderPreviewLandscape"] = function isBuilderPreviewLandscape() {
+  return closure_5;
+};
+const conjureBuilderPreviewStore = new ConjureBuilderPreviewStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     if (null == applicationId) {
       if (null == applicationId) {
-        const tmp2 = enabled;
-        if (!tmp2) {
-          const tmp3 = closure_5;
-          if (!tmp3) {
+        if (!enabled) {
+          if (!closure_5) {
             return false;
           }
         }
@@ -69,13 +65,12 @@ const obj = {
   },
   FRAME_SET_ORIENTATION_LOCK_STATE: function handleFrameSetOrientationLockState(lockState) {
     lockState = lockState.lockState;
-    const frameId = lockState.frameId;
     if (lockState !== OrientationLockState.LANDSCAPE) {
       if (lockState !== OrientationLockState.PORTRAIT) {
         return false;
       }
     }
-    const frame = FramesStore.getFrame(frameId);
+    const frame = FramesStore.getFrame(lockState.frameId);
     if (null != frame) {
       if (frame.applicationId === applicationId) {
         if (closure_5 === (lockState === OrientationLockState.LANDSCAPE)) {
@@ -87,8 +82,8 @@ const obj = {
     }
     return false;
   }
-};
-const conjureBuilderPreviewStore = new ConjureBuilderPreviewStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/ConjureBuilderPreviewStore.tsx");
 
 export default conjureBuilderPreviewStore;

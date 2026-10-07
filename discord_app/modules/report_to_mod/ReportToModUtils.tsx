@@ -5,7 +5,6 @@ import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
 import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 6778 */;
 import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 6779 */;
-import ReportToModConstants from "ReportToModConstants" /* 6801 */;
 import ReportUtils from "ReportUtils" /* 6802 */;
 import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 6803 */;
 import SelfModUtils from "SelfModUtils" /* 6804 */;
@@ -17,45 +16,42 @@ import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import MessageStore from "MessageStore" /* 5116 */;
 import UserStore from "UserStore" /* 1377 */;
-import size from "module_2" /* 2 */;
 
-const ReportToModPermissions = ReportToModConstants.ReportToModPermissions;
+require = fn;
+const ReportToModPermissions = fn(6801).ReportToModPermissions;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");
 
 export const canReportMessageToMods = function canReportMessageToMods(message) {
-  const obj = ReportUtils;
   if (obj.canReportUser(message.author)) {
     const channel = ChannelStore.getChannel(message.channel_id);
     if (null == channel) {
       return false;
     } else {
-      const guild = GuildStore.getGuild(channel.guild_id);
+      guild = GuildStore.getGuild(channel.guild_id);
       if (null == guild) {
         return false;
       } else {
-        const tmp8 = getGuildModeratorReportingEnabledDefault(guild) && null != getGuildModeratorReportChannelIdDefault(guild);
-        return tmp8;
+        return getGuildModeratorReportingEnabledDefault(guild) && null != getGuildModeratorReportChannelIdDefault(guild);
       }
     }
   } else {
     return false;
   }
+  obj = ReportUtils;
 };
 export const canAccessReportsChannel = function canAccessReportsChannel(arg0) {
-  let items;
   let tmp = items;
   if (items === undefined) {
     items = [GuildStore, UserStore];
     tmp = items;
   }
-  const obj = MemberSafetyPermissionsUtils;
-  const contextForPermission = obj.getContextForPermission(arg0, tmp);
+  const contextForPermission = MemberSafetyPermissionsUtils.getContextForPermission(arg0, tmp);
   if (null == contextForPermission) {
     return false;
   } else {
-    const guild = contextForPermission.guild;
+    guild = contextForPermission.guild;
     let tmp7 = null == guild;
-    const user = contextForPermission.user;
     if (!tmp7) {
       tmp7 = !getGuildModeratorReportingEnabledDefault(guild);
     }
@@ -63,18 +59,16 @@ export const canAccessReportsChannel = function canAccessReportsChannel(arg0) {
       tmp7 = null == getGuildModeratorReportChannelIdDefault(guild);
     }
     let hasAnyResult = !tmp7;
-    if (hasAnyResult) {
-      const hasAny = BigFlagUtilsAll.hasAny;
-      BigFlagUtilsAll;
-      const obj3 = { user, context: guild, checkElevated: false };
-      const obj2 = PermissionUtilsAll;
-      hasAnyResult = hasAny(obj2.computePermissions(obj3), ReportToModPermissions);
+    if (!tmp7) {
+      const obj2 = BigFlagUtilsAll;
+      const obj4 = { user: contextForPermission.user, context: guild, checkElevated: false };
+      hasAnyResult = obj2.hasAny(PermissionUtilsAll.computePermissions(obj4), ReportToModPermissions);
     }
     return hasAnyResult;
   }
 };
 export const getReportToModChannelId = function getReportToModChannelId(arg0) {
-  const guild = GuildStore.getGuild(arg0);
+  guild = GuildStore.getGuild(arg0);
   let tmp2 = null;
   if (null != guild) {
     tmp2 = getGuildModeratorReportChannelIdDefault(guild);
@@ -88,13 +82,13 @@ export const isModeratorReportOrPostChannelId = function isModeratorReportOrPost
     let tmp2 = null != channel;
     if (tmp2) {
       tmp2 = channel.isModeratorReportChannel() && channel.isForumChannel();
-      channel.isModeratorReportChannel() && channel.isForumChannel();
+      const tmp3 = channel.isModeratorReportChannel() && channel.isForumChannel();
     }
     if (!tmp2) {
       let tmp4 = null != channel;
       if (tmp4) {
         tmp4 = channel.isModeratorReportChannel() && channel.isForumPost();
-        channel.isModeratorReportChannel() && channel.isForumPost();
+        const tmp5 = channel.isModeratorReportChannel() && channel.isForumPost();
       }
       tmp2 = tmp4;
     }
@@ -107,7 +101,7 @@ export const isModeratorReportChannelId = function isModeratorReportChannelId(ar
   let tmp = null != channel;
   if (tmp) {
     tmp = channel.isModeratorReportChannel() && channel.isForumChannel();
-    channel.isModeratorReportChannel() && channel.isForumChannel();
+    const tmp2 = channel.isModeratorReportChannel() && channel.isForumChannel();
   }
   return tmp;
 };
@@ -115,7 +109,7 @@ export const isModeratorReportChannel = function isModeratorReportChannel(isMode
   let tmp = null != isModeratorReportChannel;
   if (tmp) {
     tmp = isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumChannel();
-    isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumChannel();
+    const tmp2 = isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumChannel();
   }
   return tmp;
 };
@@ -124,7 +118,7 @@ export const isModeratorReportPostChannelId = function isModeratorReportPostChan
   let tmp = null != channel;
   if (tmp) {
     tmp = channel.isModeratorReportChannel() && channel.isForumPost();
-    channel.isModeratorReportChannel() && channel.isForumPost();
+    const tmp2 = channel.isModeratorReportChannel() && channel.isForumPost();
   }
   return tmp;
 };
@@ -132,7 +126,7 @@ export const isModeratorReportPostChannel = function isModeratorReportPostChanne
   let tmp = null != isModeratorReportChannel;
   if (tmp) {
     tmp = isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumPost();
-    isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumPost();
+    const tmp2 = isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumPost();
   }
   return tmp;
 };
@@ -142,13 +136,13 @@ export const isModeratorReportOrPostChannel = function isModeratorReportOrPostCh
     let tmp2 = null != isModeratorReportChannel;
     if (tmp2) {
       tmp2 = isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumChannel();
-      isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumChannel();
+      const tmp3 = isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumChannel();
     }
     if (!tmp2) {
       let tmp4 = null != isModeratorReportChannel;
       if (tmp4) {
         tmp4 = isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumPost();
-        isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumPost();
+        const tmp5 = isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumPost();
       }
       tmp2 = tmp4;
     }
@@ -157,12 +151,9 @@ export const isModeratorReportOrPostChannel = function isModeratorReportOrPostCh
   return tmp;
 };
 export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransitionToReportForCurrentUser(arg0) {
-  let firstMessage;
-  let loaded;
   if (null == arg0) {
     return true;
   } else {
-    const obj3 = SelfModUtils;
     if (obj3.isCurrentUserTeen()) {
       const channel = ChannelStore.getChannel(arg0);
       let tmp2 = null != channel;
@@ -170,13 +161,13 @@ export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransit
         let tmp3 = null != channel;
         if (tmp3) {
           tmp3 = channel.isModeratorReportChannel() && channel.isForumChannel();
-          channel.isModeratorReportChannel() && channel.isForumChannel();
+          const tmp4 = channel.isModeratorReportChannel() && channel.isForumChannel();
         }
         if (!tmp3) {
           let tmp5 = null != channel;
           if (tmp5) {
             tmp5 = channel.isModeratorReportChannel() && channel.isForumPost();
-            channel.isModeratorReportChannel() && channel.isForumPost();
+            const tmp6 = channel.isModeratorReportChannel() && channel.isForumPost();
           }
           tmp3 = tmp5;
         }
@@ -190,8 +181,8 @@ export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransit
           tmp9 = null == firstMessage;
         }
         if (!tmp9) {
+          tmp9 = !ObscuredMediaUtils.messageHasObscurableMediaForBitmask(firstMessage, HarmTypeConfiguration.ContentHarmTypeBitMask.EXPLICIT);
           const tmp10Result = ObscuredMediaUtils;
-          tmp9 = !tmp10Result.messageHasObscurableMediaForBitmask(firstMessage, HarmTypeConfiguration.ContentHarmTypeBitMask.EXPLICIT);
         }
         return tmp9;
       } else {
@@ -200,6 +191,7 @@ export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransit
     } else {
       return true;
     }
+    obj3 = SelfModUtils;
   }
 };
 export const isModeratorReportThreadStarterMessage = function isModeratorReportThreadStarterMessage(isFirstMessageInForumPost, isModeratorReportChannel) {
@@ -209,11 +201,11 @@ export const isModeratorReportThreadStarterMessage = function isModeratorReportT
     tmp2 = !isFirstMessageInForumPost.isSystemDM();
   }
   let tmp3 = !tmp2;
-  if (tmp3) {
+  if (!tmp2) {
     let tmp5 = null != isModeratorReportChannel;
     if (tmp5) {
       tmp5 = isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumPost();
-      isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumPost();
+      const tmp6 = isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumPost();
     }
     tmp3 = tmp5;
   }

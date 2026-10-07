@@ -1,29 +1,28 @@
 // === Module 17828: GuildRoleConnectionsConfigurationStore ===
 
 // Module 17828 (GuildRoleConnectionsConfigurationStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import size from "module_2" /* 2 */;
 
 const map = new Map();
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class GuildRoleConnectionsConfigurationStore extends Store {
-  initialize() {
-    this.waitFor(GuildStore);
-  }
-  getGuildRoleConnectionsConfiguration(arg0) {
-    return map.get(arg0);
-  }
 }
 const prototype = GuildRoleConnectionsConfigurationStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(GuildStore);
+};
+prototype["getGuildRoleConnectionsConfiguration"] = function getGuildRoleConnectionsConfiguration(arg0) {
+  return map.get(arg0);
+};
 GuildRoleConnectionsConfigurationStore.displayName = "GuildRoleConnectionsConfigurationStore";
-const obj = {
+const guildRoleConnectionsConfigurationStore = new GuildRoleConnectionsConfigurationStore(DispatcherDefault, {
   GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: function handleFetchSuccess(roleId) {
     const result = map.set(roleId.roleId, roleId.roleConnectionConfigurations);
   }
-};
-const guildRoleConnectionsConfigurationStore = new GuildRoleConnectionsConfigurationStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/connections/GuildRoleConnectionsConfigurationStore.tsx");
 
 export default guildRoleConnectionsConfigurationStore;

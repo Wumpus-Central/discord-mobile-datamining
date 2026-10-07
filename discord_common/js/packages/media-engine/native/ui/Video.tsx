@@ -6,7 +6,7 @@ import size from "module_2" /* 2 */;
 
 class Video {
   constructor(arg0) {
-    return DirectVideoDefault(arg0, Video.onContainerResized);
+    return closure_0(closure_1[0])(global, Video.onContainerResized);
   }
 }
 Video.onContainerResized = () => {

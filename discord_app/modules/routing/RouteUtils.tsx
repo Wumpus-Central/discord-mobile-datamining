@@ -10,16 +10,18 @@ const PSEUDO_GUILD_IDS = RouteConstants.PSEUDO_GUILD_IDS;
 const isStaticChannelRoute = ChannelConstants.isStaticChannelRoute;
 const re2 = /^\d+$/;
 const result = size.fileFinishedImporting("modules/routing/RouteUtils.tsx");
-const RouteParam_export = RouteParam.RouteParam;
 
-export { RouteParam_export as RouteParam };
+export const RouteParam = RouteParam.RouteParam;
 export const isPseudoGuildId = function isPseudoGuildId(guildId) {
   return PSEUDO_GUILD_IDS.includes(guildId);
 };
 export const isValidGuildId = function isValidGuildId(guildId) {
   let tmp = null != guildId;
   if (tmp) {
-    const hasItem = PSEUDO_GUILD_IDS.includes(guildId) || re2.test(guildId);
+    let hasItem = PSEUDO_GUILD_IDS.includes(guildId);
+    if (!hasItem) {
+      hasItem = re2.test(guildId);
+    }
     tmp = hasItem;
   }
   return tmp;
@@ -27,7 +29,10 @@ export const isValidGuildId = function isValidGuildId(guildId) {
 export const isValidChannelId = function isValidChannelId(channelId) {
   let tmp = null == channelId;
   if (!tmp) {
-    const isMatch = re2.test(channelId) || isStaticChannelRoute(channelId);
+    let isMatch = re2.test(channelId);
+    if (!isMatch) {
+      isMatch = isStaticChannelRoute(channelId);
+    }
     tmp = isMatch;
   }
   return tmp;

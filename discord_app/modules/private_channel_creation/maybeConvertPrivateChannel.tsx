@@ -4,8 +4,9 @@
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
 import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6736 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import size from "module_2" /* 2 */;
 
+require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/private_channel_creation/maybeConvertPrivateChannel.tsx");
 
 export default function maybeConvertPrivateChannel(arg0) {
@@ -15,8 +16,7 @@ export default function maybeConvertPrivateChannel(arg0) {
     const channel = ChannelStore.getChannel(arg0);
     let ensurePrivateChannelResult = null;
     if (null != channel) {
-      const obj = ChannelActionCreatorsDefault;
-      ensurePrivateChannelResult = obj.ensurePrivateChannel(channel.recipients);
+      ensurePrivateChannelResult = ChannelActionCreatorsDefault.ensurePrivateChannel(channel.recipients);
     }
     return ensurePrivateChannelResult;
   }

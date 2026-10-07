@@ -1,10 +1,9 @@
 // === Module 9507: InviteSuggestionsStore ===
 
 // Module 9507 (InviteSuggestionsStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import sortByMatchScoreDefault from "sortByMatchScore" /* 5710 */;
-import Constants2 from "Constants" /* 7239 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5710 */;
 import InstantInviteUtils from "InstantInviteUtils" /* 9496 */;
 import QuickSwitcherStore from "QuickSwitcherStore" /* 9508 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7156 */;
@@ -13,13 +12,8 @@ import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5590 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import PermissionStore from "PermissionStore" /* 4515 */;
 import RelationshipStore from "RelationshipStore" /* 4525 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-let channelHistory;
-
-let closure_16;
-let closure_17;
+require = fn;
 function compareRowsByMatchScore(score, score2) {
   let num = 0;
   if (null != score.score) {
@@ -27,7 +21,7 @@ function compareRowsByMatchScore(score, score2) {
     if (null != score2.score) {
       const obj = { score: score.score };
       const obj2 = { score: score2.score };
-      num = sortByMatchScoreDefault(obj, obj2);
+      num = autocompleter_sortByMatchScoreDefault(obj, obj2);
     }
   }
   return num;
@@ -49,59 +43,56 @@ function getOmitGuildId() {
   }
   return id;
 }
+const Constants = fn(1085);
 ({ ChannelTypes: closure_16, Permissions: closure_17 } = Constants);
-const InviteTargetTypes = Constants2.InviteTargetTypes;
+const InviteTargetTypes = fn(7239).InviteTargetTypes;
 let set = new Set();
 let rows = [];
 let map = new Map();
 let counts = { numFriends: 0, numDms: 0, numGroupDms: 0, numChannels: 0 };
 let query = "";
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class InviteSuggestionsStore extends Store {
-  initialize() {
-    this.waitFor(ChannelStore, GuildMemberRequesterStore, GuildMemberStore, PermissionStore, QuickSwitcherStore, RelationshipStore, UserAffinitiesV2Store);
-  }
-  getInviteSuggestionRows() {
-    return rows;
-  }
-  getTotalSuggestionsCount() {
-    return length;
-  }
-  getInitialCounts() {
-    return counts;
-  }
-  getSelectedInviteMetadata(row) {
-    const value = map.get(row);
-    const userAffinities = UserAffinitiesV2Store.getUserAffinities();
-    if (null != value) {
-      return { rowNum: value.index, isAffinitySuggestion: row.isSuggested, numTotal: rows.length, numAffinityConnections: arr.length, isFiltered };
-    }
-  }
 }
 const prototype = InviteSuggestionsStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(ChannelStore, GuildMemberRequesterStore, GuildMemberStore, PermissionStore, QuickSwitcherStore, RelationshipStore, UserAffinitiesV2Store);
+};
+prototype["getInviteSuggestionRows"] = function getInviteSuggestionRows() {
+  return rows;
+};
+prototype["getTotalSuggestionsCount"] = function getTotalSuggestionsCount() {
+  return length;
+};
+prototype["getInitialCounts"] = function getInitialCounts() {
+  return counts;
+};
+prototype["getSelectedInviteMetadata"] = function getSelectedInviteMetadata(row) {
+  value = map.get(row);
+  const userAffinities = UserAffinitiesV2Store.getUserAffinities();
+  if (null != value) {
+    const obj = { rowNum: value.index, isAffinitySuggestion: row.isSuggested, numTotal: rows.length, numAffinityConnections: arr.length, isFiltered };
+    return obj;
+  }
+};
 InviteSuggestionsStore.displayName = "InviteSuggestionsStore";
-let obj = {
+const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
   LOAD_INVITE_SUGGESTIONS: function refreshInviteSuggestions(arg0) {
-    let closure_1_5;
-    let closure_1_6;
-    let closure_1_7;
     ({ inviteTargetType, guild: closure_1_5, channel: closure_1_6, applicationId: closure_1_7 } = arg0);
     query = "";
     const blockedOrIgnoredIDs = RelationshipStore.getBlockedOrIgnoredIDs();
-    const obj = InstantInviteUtils;
-    const obj2 = { channel, applicationId, inviteTargetType };
-    const usersAlreadyJoined = obj.getUsersAlreadyJoined(obj2);
+    const usersAlreadyJoined = InstantInviteUtils.getUsersAlreadyJoined({ channel, applicationId, inviteTargetType });
     const items = [...usersAlreadyJoined];
     new Set(items);
-    let closure_4 = "" !== query;
+    closure_4 = "" !== query;
     const tmp4 = (function _computeRows(query) {
-      let constants2;
-      let set1;
       set = new Set();
       const tmp = closure_25();
-      const obj2 = set1(closure_2[9]);
-      const mostRecentDMedUser = obj2.getMostRecentDMedUser(omitUserIds, tmp);
-      const isBlockedOrIgnoredResult = null == mostRecentDMedUser || blockedOrIgnored.isBlockedOrIgnored(mostRecentDMedUser.id);
+      const mostRecentDMedUser = set1(9496).getMostRecentDMedUser(omitUserIds, tmp);
+      let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
+      if (!isBlockedOrIgnoredResult) {
+        isBlockedOrIgnoredResult = blockedOrIgnored.isBlockedOrIgnored(mostRecentDMedUser.id);
+      }
       if (!isBlockedOrIgnoredResult) {
         set.add(mostRecentDMedUser.id);
       }
@@ -114,25 +105,22 @@ let obj = {
       if (inviteTargetType === constants.EMBEDDED_APPLICATION) {
         channelHistory = channelHistory.getChannelHistory();
         const mapped = channelHistory.map((item) => channel.getChannel(item));
-        const found = mapped.filter(set1(closure_2[11]).isNotNullish);
+        const found = mapped.filter(set1(1375).isNotNullish);
         const found1 = found.filter((type) => type.type === constants.GUILD_TEXT);
         const found2 = found1.filter((item) => closure_1_14.can(constants2.SEND_MESSAGES, item));
         const substr = found2.slice(0, 3);
         const item = substr.forEach((id) => set1.add(id.id));
       }
-      const obj = { query, omitUserIds, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: tmp, suggestedChannelIds: set1, inviteTargetType };
-      const obj3 = set1(closure_2[9]);
-      return obj3.generateRowsForQuery(obj);
+      const obj2 = set1(9496);
+      return set1(9496).generateRowsForQuery({ query, omitUserIds, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: tmp, suggestedChannelIds: set1, inviteTargetType });
     })(query);
     rows = tmp4.rows;
-    counts = tmp4.counts;
     if (closure_4) {
       const sorted = rows.sort(compareRowsByMatchScore);
     }
     new Map();
     const item = rows.forEach((item, index) => {
-      const obj = { index };
-      const result = map.set(item, obj);
+      const result = map.set(item, { index });
     });
     (function requestMembership(rows) {
       const tmp = getOmitGuildId();
@@ -141,9 +129,9 @@ let obj = {
         const nextResult = iter.next();
         while (iter !== undefined) {
           let tmp5 = nextResult;
-          let tmp8 = nextResult.type !== InstantInviteUtils.RowTypes.DM;
+          let tmp8 = nextResult.type !== id(9496).RowTypes.DM;
           if (tmp8) {
-            tmp8 = tmp5.type !== InstantInviteUtils.RowTypes.FRIEND;
+            tmp8 = tmp5.type !== id(9496).RowTypes.FRIEND;
           }
           if (!tmp8) {
             let member = GuildMemberRequesterStore.requestMember(tmp, tmp5.item.id);
@@ -152,18 +140,20 @@ let obj = {
         }
       }
     })(rows);
+    counts = tmp4.counts;
+    const obj2 = { channel, applicationId, inviteTargetType };
   },
   INVITE_SUGGESTIONS_SEARCH: function handleSearch(query) {
     query = query.query;
-    let closure_4 = "" !== query;
+    closure_4 = "" !== query;
     ({ rows, counts } = (function _computeRows(query) {
-      let constants2;
-      let set1;
       set = new Set();
       const tmp = closure_25();
-      const obj2 = set1(closure_2[9]);
-      const mostRecentDMedUser = obj2.getMostRecentDMedUser(omitUserIds, tmp);
-      const isBlockedOrIgnoredResult = null == mostRecentDMedUser || blockedOrIgnored.isBlockedOrIgnored(mostRecentDMedUser.id);
+      const mostRecentDMedUser = set1(9496).getMostRecentDMedUser(omitUserIds, tmp);
+      let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
+      if (!isBlockedOrIgnoredResult) {
+        isBlockedOrIgnoredResult = blockedOrIgnored.isBlockedOrIgnored(mostRecentDMedUser.id);
+      }
       if (!isBlockedOrIgnoredResult) {
         set.add(mostRecentDMedUser.id);
       }
@@ -176,54 +166,21 @@ let obj = {
       if (inviteTargetType === constants.EMBEDDED_APPLICATION) {
         channelHistory = channelHistory.getChannelHistory();
         const mapped = channelHistory.map((item) => channel.getChannel(item));
-        const found = mapped.filter(set1(closure_2[11]).isNotNullish);
+        const found = mapped.filter(set1(1375).isNotNullish);
         const found1 = found.filter((type) => type.type === constants.GUILD_TEXT);
         const found2 = found1.filter((item) => closure_1_14.can(constants2.SEND_MESSAGES, item));
         const substr = found2.slice(0, 3);
         const item = substr.forEach((id) => set1.add(id.id));
       }
-      const obj = { query, omitUserIds, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: tmp, suggestedChannelIds: set1, inviteTargetType };
-      const obj3 = set1(closure_2[9]);
-      return obj3.generateRowsForQuery(obj);
+      const obj2 = set1(9496);
+      return set1(9496).generateRowsForQuery({ query, omitUserIds, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: tmp, suggestedChannelIds: set1, inviteTargetType });
     })(query));
-    (function _computeRows(query) {
-      let constants2;
-      let set1;
-      set = new Set();
-      const tmp = closure_25();
-      const obj2 = set1(closure_2[9]);
-      const mostRecentDMedUser = obj2.getMostRecentDMedUser(omitUserIds, tmp);
-      const isBlockedOrIgnoredResult = null == mostRecentDMedUser || blockedOrIgnored.isBlockedOrIgnored(mostRecentDMedUser.id);
-      if (!isBlockedOrIgnoredResult) {
-        set.add(mostRecentDMedUser.id);
-      }
-      userAffinities = userAffinities.getUserAffinities();
-      for (const item10031 of userAffinities) {
-        let addResult1 = set.add(item10031.otherUserId);
-        continue;
-      }
-      set1 = new Set();
-      if (inviteTargetType === constants.EMBEDDED_APPLICATION) {
-        channelHistory = channelHistory.getChannelHistory();
-        const mapped = channelHistory.map((item) => channel.getChannel(item));
-        const found = mapped.filter(set1(closure_2[11]).isNotNullish);
-        const found1 = found.filter((type) => type.type === constants.GUILD_TEXT);
-        const found2 = found1.filter((item) => closure_1_14.can(constants2.SEND_MESSAGES, item));
-        const substr = found2.slice(0, 3);
-        const item = substr.forEach((id) => set1.add(id.id));
-      }
-      const obj = { query, omitUserIds, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: tmp, suggestedChannelIds: set1, inviteTargetType };
-      const obj3 = set1(closure_2[9]);
-      return obj3.generateRowsForQuery(obj);
-    })(query);
-    const tmp2 = closure_4;
-    if (tmp2) {
+    if (closure_4) {
       const sorted = rows.sort(compareRowsByMatchScore);
     }
     new Map();
     const item = rows.forEach((item, index) => {
-      const obj = { index };
-      const result = map.set(item, obj);
+      const result = map.set(item, { index });
     });
     (function requestMembership(rows) {
       const tmp = getOmitGuildId();
@@ -232,9 +189,9 @@ let obj = {
         const nextResult = iter.next();
         while (iter !== undefined) {
           let tmp5 = nextResult;
-          let tmp8 = nextResult.type !== InstantInviteUtils.RowTypes.DM;
+          let tmp8 = nextResult.type !== id(9496).RowTypes.DM;
           if (tmp8) {
-            tmp8 = tmp5.type !== InstantInviteUtils.RowTypes.FRIEND;
+            tmp8 = tmp5.type !== id(9496).RowTypes.FRIEND;
           }
           if (!tmp8) {
             let member = GuildMemberRequesterStore.requestMember(tmp, tmp5.item.id);
@@ -243,10 +200,37 @@ let obj = {
         }
       }
     })(rows);
+    const tmp = (function _computeRows(query) {
+      set = new Set();
+      const tmp = closure_25();
+      const mostRecentDMedUser = set1(9496).getMostRecentDMedUser(omitUserIds, tmp);
+      let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
+      if (!isBlockedOrIgnoredResult) {
+        isBlockedOrIgnoredResult = blockedOrIgnored.isBlockedOrIgnored(mostRecentDMedUser.id);
+      }
+      if (!isBlockedOrIgnoredResult) {
+        set.add(mostRecentDMedUser.id);
+      }
+      userAffinities = userAffinities.getUserAffinities();
+      for (const item10031 of userAffinities) {
+        let addResult1 = set.add(item10031.otherUserId);
+        continue;
+      }
+      set1 = new Set();
+      if (inviteTargetType === constants.EMBEDDED_APPLICATION) {
+        channelHistory = channelHistory.getChannelHistory();
+        const mapped = channelHistory.map((item) => channel.getChannel(item));
+        const found = mapped.filter(set1(1375).isNotNullish);
+        const found1 = found.filter((type) => type.type === constants.GUILD_TEXT);
+        const found2 = found1.filter((item) => closure_1_14.can(constants2.SEND_MESSAGES, item));
+        const substr = found2.slice(0, 3);
+        const item = substr.forEach((id) => set1.add(id.id));
+      }
+      const obj2 = set1(9496);
+      return set1(9496).generateRowsForQuery({ query, omitUserIds, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: tmp, suggestedChannelIds: set1, inviteTargetType });
+    })(query);
   },
   GUILD_MEMBERS_CHUNK_BATCH: function handleGuildMembersChunkBatch(chunks) {
-    let blockedOrIgnored;
-    let omitUserIds;
     chunks = chunks.chunks;
     set = undefined;
     let id = null;
@@ -267,8 +251,6 @@ let obj = {
       return false;
     } else {
       const _Set = Set;
-      const self3 = this;
-      const self4 = this;
       set = new Set(rows.map((item) => item.item.id));
       if (chunks.some((guildId) => {
         let someResult = guildId.guildId === id;
@@ -278,15 +260,15 @@ let obj = {
         }
         return someResult;
       })) {
-        let closure_4 = "" !== query;
-        let tmp8 = (function _computeRows(query) {
-          let constants2;
-          let set1;
+        closure_4 = "" !== query;
+        ({ rows, counts } = (function _computeRows(query) {
           set = new Set();
           const tmp = closure_25();
-          const obj2 = set1(closure_2[9]);
-          const mostRecentDMedUser = obj2.getMostRecentDMedUser(omitUserIds, tmp);
-          const isBlockedOrIgnoredResult = null == mostRecentDMedUser || blockedOrIgnored.isBlockedOrIgnored(mostRecentDMedUser.id);
+          const mostRecentDMedUser = set1(9496).getMostRecentDMedUser(omitUserIds, tmp);
+          let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
+          if (!isBlockedOrIgnoredResult) {
+            isBlockedOrIgnoredResult = blockedOrIgnored.isBlockedOrIgnored(mostRecentDMedUser.id);
+          }
           if (!isBlockedOrIgnoredResult) {
             set.add(mostRecentDMedUser.id);
           }
@@ -299,28 +281,50 @@ let obj = {
           if (inviteTargetType === constants.EMBEDDED_APPLICATION) {
             channelHistory = channelHistory.getChannelHistory();
             const mapped = channelHistory.map((item) => channel.getChannel(item));
-            const found = mapped.filter(set1(closure_2[11]).isNotNullish);
+            const found = mapped.filter(set1(1375).isNotNullish);
             const found1 = found.filter((type) => type.type === constants.GUILD_TEXT);
             const found2 = found1.filter((item) => closure_1_14.can(constants2.SEND_MESSAGES, item));
             const substr = found2.slice(0, 3);
             const item = substr.forEach((id) => set1.add(id.id));
           }
-          const obj = { query, omitUserIds, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: tmp, suggestedChannelIds: set1, inviteTargetType };
-          const obj3 = set1(closure_2[9]);
-          return obj3.generateRowsForQuery(obj);
-        })(query);
-        ({ rows, counts } = tmp8);
-        let tmp9 = closure_4;
-        if (tmp9) {
+          const obj2 = set1(9496);
+          return set1(9496).generateRowsForQuery({ query, omitUserIds, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: tmp, suggestedChannelIds: set1, inviteTargetType });
+        })(query));
+        if (closure_4) {
           const sorted = rows.sort(compareRowsByMatchScore);
         }
         const _Map = Map;
-        const self = this;
-        const self2 = this;
-        map = new Map();
+        let tmp8 = (function _computeRows(query) {
+          set = new Set();
+          const tmp = closure_25();
+          const mostRecentDMedUser = set1(9496).getMostRecentDMedUser(omitUserIds, tmp);
+          let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
+          if (!isBlockedOrIgnoredResult) {
+            isBlockedOrIgnoredResult = blockedOrIgnored.isBlockedOrIgnored(mostRecentDMedUser.id);
+          }
+          if (!isBlockedOrIgnoredResult) {
+            set.add(mostRecentDMedUser.id);
+          }
+          userAffinities = userAffinities.getUserAffinities();
+          for (const item10031 of userAffinities) {
+            let addResult1 = set.add(item10031.otherUserId);
+            continue;
+          }
+          set1 = new Set();
+          if (inviteTargetType === constants.EMBEDDED_APPLICATION) {
+            channelHistory = channelHistory.getChannelHistory();
+            const mapped = channelHistory.map((item) => channel.getChannel(item));
+            const found = mapped.filter(set1(1375).isNotNullish);
+            const found1 = found.filter((type) => type.type === constants.GUILD_TEXT);
+            const found2 = found1.filter((item) => closure_1_14.can(constants2.SEND_MESSAGES, item));
+            const substr = found2.slice(0, 3);
+            const item = substr.forEach((id) => set1.add(id.id));
+          }
+          const obj2 = set1(9496);
+          return set1(9496).generateRowsForQuery({ query, omitUserIds, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: tmp, suggestedChannelIds: set1, inviteTargetType });
+        })(query);
         let item = rows.forEach((item, index) => {
-          const obj = { index };
-          const result = map.set(item, obj);
+          const result = map.set(item, { index });
         });
         (function requestMembership(rows) {
           const tmp = getOmitGuildId();
@@ -329,9 +333,9 @@ let obj = {
             const nextResult = iter.next();
             while (iter !== undefined) {
               let tmp5 = nextResult;
-              let tmp8 = nextResult.type !== InstantInviteUtils.RowTypes.DM;
+              let tmp8 = nextResult.type !== id(9496).RowTypes.DM;
               if (tmp8) {
-                tmp8 = tmp5.type !== InstantInviteUtils.RowTypes.FRIEND;
+                tmp8 = tmp5.type !== id(9496).RowTypes.FRIEND;
               }
               if (!tmp8) {
                 let member = GuildMemberRequesterStore.requestMember(tmp, tmp5.item.id);
@@ -340,13 +344,14 @@ let obj = {
             }
           }
         })(rows);
+        map = new Map();
       } else {
         return false;
       }
     }
   }
-};
-const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("stores/InviteSuggestionsStore.tsx");
 
 export default inviteSuggestionsStore;

@@ -1,11 +1,9 @@
 // === Module 11461: GuildSettingsModalMembersStore ===
 
 // Module 11461 (GuildSettingsModalMembersStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import size from "module_2" /* 2 */;
 
 function handleStopEditingRoles() {
   SUBMITTING = null;
@@ -17,19 +15,19 @@ function handleStopEditingRoles() {
 function handleChangeNicknameSuccess() {
   error = null;
 }
-const FormStates = Constants.FormStates;
+const FormStates = fn(1085).FormStates;
 let SUBMITTING = null;
 let c3 = false;
 let error = null;
 let userId = null;
 let found = null;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class GuildSettingsModalMembersStore extends Store {
-  initialize() {
-    this.waitFor(GuildMemberStore);
-  }
 }
 const prototype = GuildSettingsModalMembersStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(GuildMemberStore);
+};
 Object.defineProperty(prototype, "isSubmitting", {
   get: function isSubmitting() {
     return SUBMITTING === FormStates.SUBMITTING;
@@ -61,7 +59,7 @@ Object.defineProperty(prototype, "nicknameError", {
   set: undefined
 });
 GuildSettingsModalMembersStore.displayName = "GuildSettingsModalMembersStore";
-const obj = {
+const guildSettingsModalMembersStore = new GuildSettingsModalMembersStore(DispatcherDefault, {
   GUILD_SETTINGS_MODAL_MEMBERS_START_EDITING: function handleStartEditingRoles(userId) {
     userId = userId.userId;
     const member = GuildMemberStore.getMember(userId.guildId, userId);
@@ -79,9 +77,9 @@ const obj = {
     roleId = roleId.roleId;
     if (null == found) {
       return false;
-    } else if (tmp2) {
+    } else if (tmp) {
       const items = [];
-      items[HermesBuiltin.arraySpread(items, found, 0)] = roleId;
+      items[HermesBuiltin.arraySpread(arr, 0)] = roleId;
       found = items;
     } else {
       found = arr.filter((item) => item !== roleId);
@@ -95,8 +93,8 @@ const obj = {
   GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME_FAILURE: function handleChangeNicknameFailure(error) {
     error = error.error;
   }
-};
-const guildSettingsModalMembersStore = new GuildSettingsModalMembersStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsModalMembersStore.tsx");
 
 export default guildSettingsModalMembersStore;

@@ -1,38 +1,27 @@
 // === Module 17721: AutomodStore ===
 
 // Module 17721 (AutomodStore)
-import react2 from "react" /* 576 */;
-import Constants from "Constants" /* 1085 */;
-import _slicedToArray2 from "_slicedToArray" /* 4498 */;
-import Constants2 from "Constants" /* 11487 */;
+import _mod4498 from "module_4498" /* 4498 */;
 import SystemRulesUtils from "SystemRulesUtils" /* 17722 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import react from "react" /* 19 */;
-import module_1254 from "module_1254" /* 1254 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-let _require, c0, c1, c6, c7, closure_5;
+const require = globalThis.__r;
 
-const f131795 = (arg0) => {
-  const items = [, ];
-  ({ syncRules: arr[0], fetching: arr[1] } = arg0);
-  return items;
-};
-const AutomodTriggerType = Constants2.AutomodTriggerType;
-const EMPTY_STRING_SNOWFLAKE_ID = Constants.EMPTY_STRING_SNOWFLAKE_ID;
+require = fn;
+const AutomodTriggerType = fn(11487).AutomodTriggerType;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
 let closure_7 = {};
-const withEqualityFn = module_1254.createWithEqualityFn((arg0, arg1) => {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+const identity = fn(1254);
+const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
+  closure_0 = arg0;
+  dependencyMap = arg1;
   let obj = {
     rules: {},
     fetching: false,
     error: null,
     updateRule(guildId) {
-      let mapped;
-      let triggerType;
       guildId = guildId.guildId;
       ({ id: closure_2, triggerType } = guildId);
       const rules = guildId().rules;
@@ -44,10 +33,8 @@ const withEqualityFn = module_1254.createWithEqualityFn((arg0, arg1) => {
       if (items == null) {
         items = [];
       }
-      const someResult = items.some((id) => id.id === closure_2);
       const found = items.filter((id) => {
-        obj = SystemRulesUtils;
-        const isDefaultRuleIdResult = obj.isDefaultRuleId(id.id);
+        const isDefaultRuleIdResult = SystemRulesUtils.isDefaultRuleId(id.id);
         let tmp2 = !isDefaultRuleIdResult;
         if (isDefaultRuleIdResult) {
           tmp2 = id.triggerType !== triggerType;
@@ -55,37 +42,37 @@ const withEqualityFn = module_1254.createWithEqualityFn((arg0, arg1) => {
         return tmp2;
       });
       if (someResult) {
-        mapped = found.map((id) => {
+        let mapped = found.map((id) => {
           let tmp = id;
-          if (id.id === closure_2) {
-            tmp = guildId;
+          if (id.id === closure_1_2) {
+            tmp = closure_0;
           }
           return tmp;
         });
       } else {
         mapped = [];
-        mapped[HermesBuiltin.arraySpread(mapped, found, 0)] = guildId;
+        mapped[HermesBuiltin.arraySpread(found, 0)] = guildId;
       }
-      let obj2 = guildId(closure_1[7]);
-      obj2.batchUpdates(() => {
-        let obj2;
-        obj = { rules: obj2, error: null };
-        obj2 = {};
+      someResult = items.some((id) => id.id === closure_1_2);
+      guildId(1259).batchUpdates(() => {
+        obj = { rules: null, error: null };
+        const obj2 = {};
         const merged = Object.assign(rules);
         const obj3 = {};
         const merged1 = Object.assign(obj);
         obj3[triggerType] = mapped;
         obj2[guildId] = obj3;
+        obj.rules = obj2;
         guildId(obj);
       });
     },
     removeRule(arg0, arg1) {
       closure_0 = arg0;
-      closure_1 = arg1;
-      const rules = closure_1().rules;
-      let closure_3 = tmp;
+      dependencyMap = arg1;
+      const rules = dependencyMap().rules;
+      closure_3 = tmp;
       const keys = Object.keys(tmp);
-      let closure_4 = keys.reduce((acc, item) => {
+      closure_4 = keys.reduce((acc, item) => {
         const NumberResult = Number(item);
         let items = closure_3[NumberResult];
         if (items == null) {
@@ -94,36 +81,22 @@ const withEqualityFn = module_1254.createWithEqualityFn((arg0, arg1) => {
         acc[NumberResult] = items.filter((id) => id.id !== closure_1_0);
         return acc;
       }, {});
-      let obj = closure_0(closure_1[7]);
-      obj.batchUpdates(() => {
-        let obj2;
-        const obj = { rules: obj2, error: null };
-        obj2 = {};
+      closure_0(1259).batchUpdates(() => {
+        const obj = { rules: null, error: null };
+        const obj2 = {};
         const merged = Object.assign(rules);
         obj2[closure_1] = closure_4;
+        obj.rules = obj2;
         closure_0(obj);
       });
     },
-    syncRules: function() {
-      return closure_2(...arguments);
-    }
+    syncRules: null
   };
-  let closure_2 = _asyncToGenerator(async function(arg0) {
-    let closure_3;
-    let obj4;
-    function isSyncNeeded(arg0) {
-      let num = closure_1_7[arg0];
-      const timestamp = Date.now();
-      if (num == null) {
-        num = 0;
-      }
-      return timestamp - num > 20000;
-    }
-    closure_0 = arg0;
+  closure_2 = asyncGeneratorStep(async (arg0) => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -133,10 +106,7 @@ const withEqualityFn = module_1254.createWithEqualityFn((arg0, arg1) => {
         return { value: "IconComponent", done: null };
       }
     } else {
-      let c4;
       try {
-        let convertToRulesByTriggerType;
-        let num = 2;
         c7 = 2;
         if (0 === c6) {
           if (arg0 === 1) {
@@ -147,104 +117,116 @@ const withEqualityFn = module_1254.createWithEqualityFn((arg0, arg1) => {
             const obj5 = { value, done: true };
             return obj5;
           } else {
-            const error = tmp;
-            closure_2 = tmp4;
-            closure_1 = undefined;
+            const error = tmp3;
+            closure_2 = tmp7;
+            closure_130_0 = closure_0;
+            closure_130_1 = undefined;
             let rules;
-            let aPIError;
-            if (isSyncNeeded(closure_0)) {
+            closure_130_3 = undefined;
+            if ((function isSyncNeeded(arg0) {
+              let num = closure_1_7[arg0];
+              const timestamp = Date.now();
+              if (num == null) {
+                num = 0;
+              }
+              return timestamp - num > 20000;
+            })(closure_0)) {
               const _Date = Date;
               c7[closure_0] = Date.now();
               c4 = 1;
-              convertToRulesByTriggerType = function convertToRulesByTriggerType(arr) {
+              function convertToRulesByTriggerType(arr) {
                 const obj = { [closure_1_5.KEYWORD]: [], [closure_1_5.ML_SPAM]: [], [closure_1_5.DEFAULT_KEYWORD_LIST]: [], [closure_1_5.MENTION_SPAM]: [], [closure_1_5.USER_PROFILE]: [], [closure_1_5.SERVER_POLICY]: [], [closure_1_5.APPLICATION]: [] };
                 const item = arr.forEach((item) => {
                   if (obj[item.triggerType] != null) {
-                    obj[item.triggerType].push(item);
+                    arr.push(item);
                   }
                 });
                 return obj;
-              };
+              }
               c6 = 2;
               c7 = 1;
-              const obj6 = { value: obj4.fetchAutomodRules(closure_0), done: false };
-              obj4 = closure_0(convertToRulesByTriggerType[8]);
+              const obj6 = { value: closure_0(convertToRulesByTriggerType[8]).fetchAutomodRules(closure_0), done: false };
               return obj6;
             }
           }
-        } else if (1 === c6) {
-          c4 = 0;
-          let closure_4 = closure_5;
-          const self = this;
-          const self2 = this;
-          aPIError = new closure_0(convertToRulesByTriggerType[9]).APIError(closure_4);
-          const obj3 = closure_0(convertToRulesByTriggerType[7]);
-          obj3.batchUpdates(() => {
-            const obj = { error };
-            closure_0(obj);
-          });
-        } else if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
+        } else {
+          if (1 === tmp7) {
+            c4 = 0;
+            closure_130_4 = closure_5;
+            const aPIError = new closure_0(convertToRulesByTriggerType[9]).APIError(closure_130_4);
+            closure_130_3 = aPIError;
+            closure_0(convertToRulesByTriggerType[7]).batchUpdates(() => {
+              closure_0({ error });
+            });
+            const obj3 = closure_0(convertToRulesByTriggerType[7]);
+          } else if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_130_1 = convertToRulesByTriggerType(value);
+            rules = closure_131_1().rules;
+            closure_0(convertToRulesByTriggerType[7]).batchUpdates(() => {
+              const obj = { rules: null, error: null };
+              const obj2 = {};
+              const merged = Object.assign(closure_1_2);
+              obj2[closure_1_0] = convertToRulesByTriggerType;
+              obj.rules = obj2;
+              closure_0(obj);
+            });
+            c4 = 0;
+            let obj = closure_0(convertToRulesByTriggerType[7]);
+          }
           c4 = 0;
           c7 = 3;
           const obj7 = { value, done: true };
           return obj7;
-        } else {
-          closure_1 = convertToRulesByTriggerType(value);
-          rules = closure_131_1().rules;
-          let obj = closure_0(convertToRulesByTriggerType[7]);
-          obj.batchUpdates(() => {
-            let obj2;
-            const obj = { rules: obj2, error: null };
-            obj2 = {};
-            const merged = Object.assign(closure_1_2);
-            obj2[closure_1_0] = convertToRulesByTriggerType;
-            closure_0(obj);
-          });
-          c4 = 0;
         }
         c7 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp27) {
-        closure_5 = tmp27;
-        if (0 === c4) {
-          c7 = 3;
-          throw tmp27;
+      } catch (tmp32) {
+        closure_5 = tmp32;
+        if (tmp4 === c4) {
+          c7 = tmp2;
+          throw tmp32;
         } else {
-          c6 = 1;
+          c6 = tmp;
         }
       }
     }
   });
+  obj.syncRules = function() {
+    const self = this;
+    const apply = closure_2.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  };
   return obj;
 });
-let ReactCompilerGating = ReactCompilerGating_mod;
+fn(558);
+const ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let closure_1;
+  const cResult = require("c").c(8);
+  _require = arg0;
   let first;
-  let first1;
-  let tmp10;
-  let tmp6;
-  let tmp8;
-  let tmp9;
-  let obj = react2;
-  const cResult = obj.c(8);
-  tmp9 = arg0;
-  closure_1 = undefined;
-  first1 = undefined;
-  [first, closure_1] = react.useState(false);
-  [first1, tmp6] = withEqualityFn(f131795, _slicedToArray2.shallow);
-  let closure_3 = tmp6;
-  const items = [first, ];
-  const items1 = [arg0, tmp6, first1];
-  items[1] = react.useCallback(_asyncToGenerator(async () => {
+  const tmp2 = first(noop.useState(false), 2);
+  dependencyMap = tmp2[1];
+  const tmp3 = first(withEqualityFn((arg0) => {
+    const items = [, ];
+    ({ syncRules: arr[0], fetching: arr[1] } = arg0);
+    return items;
+  }, require("module_4498").shallow), 2);
+  first = tmp3[0];
+  asyncGeneratorStep = tmp5;
+  const items = [tmp2[0], ];
+  const items1 = [arg0, tmp3[1], first];
+  items[1] = noop.useCallback(asyncGeneratorStep(async () => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -254,7 +236,6 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         return { value: "IconComponent", done: null };
       }
     } else {
-      let c3;
       try {
         c4 = 2;
         if (0 === c1) {
@@ -266,58 +247,56 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            closure_0 = tmp;
+            closure_0 = tmp3;
             if (!closure_3) {
               if (null != closure_0) {
                 c3 = 1;
-                v1(true);
+                v2(true);
                 c1 = 2;
                 c4 = 1;
-                const obj4 = { value: first1(tmp17), done: false };
+                const obj4 = { value: first(tmp20), done: false };
                 return obj4;
               }
             }
+            c4 = 3;
           }
-        } else if (1 === tmp4) {
+        } else if (1 === tmp7) {
           c3 = 0;
           closure_128_1(false);
           throw closure_2;
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
-        } else if (arg0 === 2) {
-          c3 = 0;
-          closure_128_1(false);
-          c4 = 3;
-          const obj = { value, done: true };
-          return obj;
-        } else {
+        } else if (arg0 !== 2) {
           c3 = 0;
           closure_128_1(false);
         }
+        c3 = 0;
+        closure_128_1(false);
         c4 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp21) {
-        closure_2 = tmp21;
-        if (0 === c3) {
-          c4 = 3;
-          throw tmp21;
+        const obj = { value, done: true };
+        return obj;
+      } catch (tmp24) {
+        closure_2 = tmp24;
+        if (tmp4 === c3) {
+          c4 = tmp2;
+          throw tmp24;
         } else {
-          c1 = 1;
+          c1 = tmp;
         }
       }
     }
   }), items1);
-  [tmp8, tmp9] = _slicedToArray(items, 2);
-  const require = tmp9;
-  const tmp7 = _slicedToArray(items, 2);
-  if (cResult[0] !== tmp9) {
+  let obj = require("c");
+  [tmp7, tmp8] = first(items, 2);
+  _require = tmp8;
+  if (cResult[0] !== tmp8) {
     const fn = function n() {
       (async () => {
         if (c0 === 2) {
           c0 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp2 === 3) {
+        } else if (tmp3 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
@@ -340,7 +319,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               } else {
                 c1 = 1;
                 c0 = 1;
-                const obj4 = { value: tmp9(), done: false };
+                const obj4 = { value: closure_2_0(), done: false };
                 return obj4;
               }
             } else if (arg0 === 1) {
@@ -354,61 +333,60 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               c0 = 3;
               return { value: "IconComponent", done: null };
             }
-          } catch (tmp5) {
-            c0 = 3;
-            throw tmp5;
+          } catch (tmp6) {
+            c0 = tmp;
+            throw tmp6;
           }
         }
       })();
     };
-    cResult[0] = tmp9;
+    cResult[0] = tmp8;
     cResult[1] = fn;
-    tmp10 = fn;
+    let tmp9 = fn;
   } else {
-    tmp10 = cResult[1];
+    tmp9 = cResult[1];
   }
   if (cResult[2] === arg0) {
-    let tmp11;
-    if (cResult[3] === tmp9) {
-      tmp11 = cResult[4];
+    if (cResult[3] === tmp8) {
+      let tmp10 = cResult[4];
     }
-    const effect = react.useEffect(tmp10, tmp11);
-    if (cResult[5] === tmp8) {
-      let tmp13;
-      if (cResult[6] === tmp9) {
-        tmp13 = cResult[7];
+    const effect = noop.useEffect(tmp9, tmp10);
+    if (cResult[5] === tmp7) {
+      if (cResult[6] === tmp8) {
+        let tmp12 = cResult[7];
       }
-      return tmp13;
+      return tmp12;
     }
-    const items2 = [tmp8, tmp9];
-    cResult[5] = tmp8;
-    cResult[6] = tmp9;
+    const items2 = [tmp7, tmp8];
+    cResult[5] = tmp7;
+    cResult[6] = tmp8;
     cResult[7] = items2;
-    tmp13 = items2;
+    tmp12 = items2;
   }
-  const items3 = [arg0, tmp9];
+  const items3 = [arg0, tmp8];
   cResult[2] = arg0;
-  cResult[3] = tmp9;
+  cResult[3] = tmp8;
   cResult[4] = items3;
-  tmp11 = items3;
+  tmp10 = items3;
+  const tmp6 = first(items, 2);
 }) : ((arg0) => {
-  let closure_1;
-  let first;
-  let first1;
-  let first2;
-  let tmp5;
-  let tmp8;
   _require = arg0;
-  [first, closure_1] = react.useState(false);
-  [first1, tmp5] = withEqualityFn(f131795, require("_slicedToArray").shallow);
-  let closure_3 = tmp5;
-  let items = [first, ];
-  const items1 = [arg0, tmp5, first1];
-  items[1] = react.useCallback(_asyncToGenerator(async () => {
+  const tmp = first(noop.useState(false), 2);
+  dependencyMap = tmp[1];
+  const tmp2 = first(withEqualityFn((arg0) => {
+    const items = [, ];
+    ({ syncRules: arr[0], fetching: arr[1] } = arg0);
+    return items;
+  }, require("module_4498").shallow), 2);
+  first = tmp2[0];
+  asyncGeneratorStep = tmp4;
+  let items = [tmp[0], ];
+  const items1 = [arg0, tmp2[1], first];
+  items[1] = noop.useCallback(asyncGeneratorStep(async () => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -418,7 +396,6 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         return { value: "IconComponent", done: null };
       }
     } else {
-      let c3;
       try {
         c4 = 2;
         if (0 === c1) {
@@ -430,57 +407,55 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            closure_0 = tmp;
+            closure_0 = tmp3;
             if (!closure_3) {
               if (null != closure_0) {
                 c3 = 1;
-                v1(true);
+                v2(true);
                 c1 = 2;
                 c4 = 1;
-                const obj4 = { value: first1(tmp17), done: false };
+                const obj4 = { value: first(tmp20), done: false };
                 return obj4;
               }
             }
+            c4 = 3;
           }
-        } else if (1 === tmp4) {
+        } else if (1 === tmp7) {
           c3 = 0;
           closure_128_1(false);
           throw closure_2;
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
-        } else if (arg0 === 2) {
-          c3 = 0;
-          closure_128_1(false);
-          c4 = 3;
-          const obj = { value, done: true };
-          return obj;
-        } else {
+        } else if (arg0 !== 2) {
           c3 = 0;
           closure_128_1(false);
         }
+        c3 = 0;
+        closure_128_1(false);
         c4 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp21) {
-        closure_2 = tmp21;
-        if (0 === c3) {
-          c4 = 3;
-          throw tmp21;
+        const obj = { value, done: true };
+        return obj;
+      } catch (tmp24) {
+        closure_2 = tmp24;
+        if (tmp4 === c3) {
+          c4 = tmp2;
+          throw tmp24;
         } else {
-          c1 = 1;
+          c1 = tmp;
         }
       }
     }
   }), items1);
-  [first2, tmp8] = items;
-  _require = tmp8;
-  const items2 = [arg0, tmp8];
-  const effect = react.useEffect(() => {
+  const tmp5 = first(items, 2);
+  _require = tmp6;
+  const items2 = [arg0, tmp5[1]];
+  const effect = noop.useEffect(() => {
     (async () => {
       if (c0 === 2) {
         c0 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp2 === 3) {
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -517,75 +492,34 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             c0 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp5) {
-          c0 = 3;
-          throw tmp5;
+        } catch (tmp6) {
+          c0 = tmp;
+          throw tmp6;
         }
       }
     })();
   }, items2);
-  const items3 = [first2, tmp8];
+  const items3 = [tmp5[0], tmp5[1]];
   return items3;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let tmp4;
-  _require = arg0;
-  let tmp = _require;
-  let obj = require("react");
-  const cResult = obj.c(2);
-  if (cResult[0] !== arg0) {
-    const fn = function u(rules) {
-      let tmp = closure_0;
-      rules = rules.rules;
-      if (closure_0 == null) {
-        tmp = EMPTY_STRING_SNOWFLAKE_ID;
-      }
-      let obj = rules[tmp];
-      if (obj == null) {
-        obj = {};
-      }
-      return { rulesByTriggerType: obj, updateRule: rules.updateRule, removeRule: rules.removeRule };
-    };
-    cResult[0] = arg0;
-    cResult[1] = fn;
-    tmp4 = fn;
-  } else {
-    tmp4 = cResult[1];
-  }
-  return withEqualityFn(tmp4, tmp(4498).shallow);
-}) : ((arg0) => {
-  let closure_0;
-  _require = arg0;
-  return withEqualityFn((rules) => {
-    let tmp = closure_0;
-    rules = rules.rules;
-    if (closure_0 == null) {
-      tmp = EMPTY_STRING_SNOWFLAKE_ID;
-    }
-    let obj = rules[tmp];
-    if (obj == null) {
-      obj = {};
-    }
-    return { rulesByTriggerType: obj, updateRule: rules.updateRule, removeRule: rules.removeRule };
-  }, require("_slicedToArray").shallow);
-});
 function useSyncAutomodRules(arg0) {
-  let closure_1;
-  let first;
-  let closure_0 = arg0;
-  [first, closure_1] = react.useState(false);
-  const tmp3 = _slicedToArray(withEqualityFn(f131795, _slicedToArray2.shallow), 2);
-  const first1 = tmp3[0];
-  let closure_3 = tmp5;
-  const items = [first, ];
-  const items1 = [arg0, tmp3[1], first1];
-  items[1] = react.useCallback(_asyncToGenerator(async () => {
+  closure_0 = arg0;
+  const tmp = _slicedToArray(noop.useState(false), 2);
+  closure_1 = tmp[1];
+  const tmp2 = _slicedToArray(withEqualityFn((arg0) => {
+    const items = [, ];
+    ({ syncRules: arr[0], fetching: arr[1] } = arg0);
+    return items;
+  }, _mod4498.shallow), 2);
+  const first = tmp2[0];
+  closure_3 = tmp4;
+  const items = [tmp[0], ];
+  const items1 = [arg0, tmp2[1], first];
+  items[1] = noop.useCallback(asyncGeneratorStep(async () => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -595,7 +529,6 @@ function useSyncAutomodRules(arg0) {
         return { value: "IconComponent", done: null };
       }
     } else {
-      let c3;
       try {
         c4 = 2;
         if (0 === c1) {
@@ -607,50 +540,49 @@ function useSyncAutomodRules(arg0) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            closure_0 = tmp;
+            closure_0 = tmp3;
             if (!closure_3) {
               if (null != closure_0) {
                 c3 = 1;
-                v1(true);
+                v2(true);
                 c1 = 2;
                 c4 = 1;
-                const obj4 = { value: first1(tmp17), done: false };
+                const obj4 = { value: first(tmp20), done: false };
                 return obj4;
               }
             }
+            c4 = 3;
           }
-        } else if (1 === tmp4) {
+        } else if (1 === tmp7) {
           c3 = 0;
           closure_128_1(false);
           throw closure_2;
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
-        } else if (arg0 === 2) {
-          c3 = 0;
-          closure_128_1(false);
-          c4 = 3;
-          const obj = { value, done: true };
-          return obj;
-        } else {
+        } else if (arg0 !== 2) {
           c3 = 0;
           closure_128_1(false);
         }
+        c3 = 0;
+        closure_128_1(false);
         c4 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp21) {
-        closure_2 = tmp21;
-        if (0 === c3) {
-          c4 = 3;
-          throw tmp21;
+        const obj = { value, done: true };
+        return obj;
+      } catch (tmp24) {
+        closure_2 = tmp24;
+        if (tmp4 === c3) {
+          c4 = tmp2;
+          throw tmp24;
         } else {
-          c1 = 1;
+          c1 = tmp;
         }
       }
     }
   }), items1);
   return items;
 }
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodStore.tsx");
 
 export const useAutomodStore = withEqualityFn;
@@ -667,4 +599,39 @@ export const getRuleCountByTriggerType = function getRuleCountByTriggerType(guil
 };
 export { useSyncAutomodRules };
 export const useSyncAutomodRulesEffect = tmp3;
-export const useAutomodRulesList = tmp4;
+export const useAutomodRulesList = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  _require = arg0;
+  const cResult = require("c").c(2);
+  if (cResult[0] !== arg0) {
+    const fn = function u(updateRule) {
+      let tmp = closure_0;
+      if (closure_0 == null) {
+        tmp = EMPTY_STRING_SNOWFLAKE_ID;
+      }
+      let obj = updateRule.rules[tmp];
+      if (obj == null) {
+        obj = {};
+      }
+      return { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
+    };
+    cResult[0] = arg0;
+    cResult[1] = fn;
+    let tmp4 = fn;
+  } else {
+    tmp4 = cResult[1];
+  }
+  return withEqualityFn(tmp4, require("module_4498").shallow);
+}) : ((arg0) => {
+  _require = arg0;
+  return withEqualityFn((updateRule) => {
+    let tmp = closure_0;
+    if (closure_0 == null) {
+      tmp = EMPTY_STRING_SNOWFLAKE_ID;
+    }
+    let obj = updateRule.rules[tmp];
+    if (obj == null) {
+      obj = {};
+    }
+    return { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
+  }, require("module_4498").shallow);
+});

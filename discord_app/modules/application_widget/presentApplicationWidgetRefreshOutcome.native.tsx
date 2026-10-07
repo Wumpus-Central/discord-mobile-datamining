@@ -14,11 +14,9 @@ export default function presentApplicationWidgetRefreshOutcome(arg0) {
   const text = tmp3.text;
   if (tmp3.ok) {
     const obj2 = { key: "APPLICATION_WIDGET_REFRESH", content: text, IconComponent: RetryIcon.RetryIcon };
-    const open = ToastActionCreatorsDefault.open;
-    ToastActionCreatorsDefault;
-    open(obj2);
+    ToastActionCreatorsDefault.open(obj2);
+    const tmpResult = ToastActionCreatorsDefault;
   } else {
-    const obj = ToastUtils;
-    obj.presentError(text);
+    ToastUtils.presentError(text);
   }
 };

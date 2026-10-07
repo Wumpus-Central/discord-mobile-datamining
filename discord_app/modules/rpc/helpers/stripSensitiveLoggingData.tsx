@@ -9,53 +9,51 @@ let c1 = "<removed>";
 const result = size.fileFinishedImporting("modules/rpc/helpers/stripSensitiveLoggingData.tsx");
 
 export default function stripSensitiveLoggingData(arg0) {
-  let obj4;
-  let obj7;
-  const obj = {};
+  let obj = {};
   const merged = Object.assign(arg0);
   const args = obj.args;
   let tmp2 = typeof args === "object";
   if (typeof args === "object") {
     tmp2 = typeof obj.cmd === "string";
   }
-  let tmp3 = obj;
-  if (tmp2) {
+  let merged3 = obj;
+  if (!tmp2) {
+    const data = merged3.data;
+    let tmp13 = typeof data === "object";
+    if (typeof data === "object") {
+      tmp13 = typeof merged3.cmd === "string";
+    }
+    if (!tmp13) {
+      return merged3;
+    } else {
+      const cmd2 = merged3.cmd;
+      if (RPCCommands.AUTHENTICATE !== cmd2) {
+        if (RPCCommands.GET_PROVIDER_ACCESS_TOKEN !== cmd2) {
+          const obj2 = {};
+          const merged1 = Object.assign(merged3);
+        }
+      }
+      const obj3 = {};
+      const merged2 = Object.assign(merged3);
+      const obj4 = {};
+      merged3 = Object.assign(merged3.data);
+      obj4.access_token = access_token;
+      obj3.data = obj4;
+    }
+  } else {
     const cmd = obj.cmd;
     if (RPCCommands.AUTHENTICATE !== cmd) {
-      let obj2;
       if (RPCCommands.GET_PROVIDER_ACCESS_TOKEN !== cmd) {
-        obj2 = {};
-        const merged1 = Object.assign(obj);
+        const obj5 = {};
+        const merged4 = Object.assign(obj);
       }
-      tmp3 = obj2;
     }
-    const obj3 = { args: obj4 };
-    const merged2 = Object.assign(obj);
-    obj4 = { access_token };
-    const merged3 = Object.assign(obj.args);
-    obj2 = obj3;
+    const obj6 = {};
+    const merged5 = Object.assign(obj);
+    const obj7 = {};
+    const merged6 = Object.assign(obj.args);
+    obj = access_token;
+    obj7.access_token = access_token;
+    obj6.args = obj7;
   }
-  const data = tmp3.data;
-  let tmp13 = typeof data === "object";
-  if (typeof data === "object") {
-    tmp13 = typeof tmp3.cmd === "string";
-  }
-  let tmp14 = tmp3;
-  if (tmp13) {
-    const cmd2 = tmp3.cmd;
-    if (RPCCommands.AUTHENTICATE !== cmd2) {
-      let obj5;
-      if (RPCCommands.GET_PROVIDER_ACCESS_TOKEN !== cmd2) {
-        obj5 = {};
-        const merged4 = Object.assign(tmp3);
-      }
-      tmp14 = obj5;
-    }
-    const obj6 = { data: obj7 };
-    const merged5 = Object.assign(tmp3);
-    obj7 = { access_token };
-    const merged6 = Object.assign(tmp3.data);
-    obj5 = obj6;
-  }
-  return tmp14;
 };

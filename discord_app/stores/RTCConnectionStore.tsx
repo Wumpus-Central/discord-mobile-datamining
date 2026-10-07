@@ -2,10 +2,8 @@
 
 // Module 4919 (RTCConnectionStore)
 import LoggerDefault from "Logger" /* 3 */;
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import asyncRequire from "asyncRequire" /* 1987 */;
-import Constants2 from "Constants" /* 4921 */;
 import TimeUtils from "TimeUtils" /* 4925 */;
 import VoiceStateAnalyticsDefault from "VoiceStateAnalytics" /* 13653 */;
 import useSpatialAudioControlState from "useSpatialAudioControlState" /* 13654 */;
@@ -13,52 +11,31 @@ import trackVideoToggle from "trackVideoToggle" /* 13656 */;
 import GameConsoleStore from "GameConsoleStore" /* 4913 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-let _require, closure_18, closure_3, config, joinVoiceId, redux, voiceStateAnalytics;
-
-let c10;
-let c9;
-let metroImportAll;
+require = fn;
 function createRTCConnection(guildId, channelId, createdTime) {
-  let _default;
   if (null == sessionId) {
-    const tmp = globalThis;
     const _Error = Error;
-    const self = this;
-    const self2 = this;
     const error = new Error("Creating RTCConnection without session.");
     throw error;
   } else {
     const id = AuthenticationStore.getId();
     let obj = { userId: id, sessionId, guildId, channelId, joinVoiceId, createdTime };
-    const self3 = this;
-    const self4 = this;
     _default = new _default(4923).default(obj);
     _default.on(_default(4950).RTCConnectionEvent.State, (state, arg1, arg2) => {
-      const dispatch = DispatcherDefault.dispatch;
-      const obj = { type: "RTC_CONNECTION_STATE", state };
-      DispatcherDefault;
       const merged = Object.assign(arg1);
       const merged1 = Object.assign(arg2);
-      dispatch(obj);
+      DispatcherDefault.dispatch({ type: "RTC_CONNECTION_STATE", state });
     });
     _default.on(_default(4950).RTCConnectionEvent.Video, (guildId, channelId, userId, streamId, rtcServerId) => {
       const obj = DispatcherDefault;
-      obj2 = { type: "RTC_CONNECTION_VIDEO", guildId, channelId, userId, streamId, rtcServerId, context: MediaEngineContextTypes.DEFAULT, mediaEngineConnectionId: _default.getMediaEngineConnectionId() };
-      obj.dispatch(obj2);
+      obj.dispatch({ type: "RTC_CONNECTION_VIDEO", guildId, channelId, userId, streamId, rtcServerId, context: MediaEngineContextTypes.DEFAULT, mediaEngineConnectionId: _default.getMediaEngineConnectionId() });
     });
     _default.on(_default(4950).RTCConnectionEvent.Ping, (pings, quality) => {
-      const obj = DispatcherDefault;
-      obj2 = { type: "RTC_CONNECTION_PING", pings, quality };
-      obj.dispatch(obj2);
+      DispatcherDefault.dispatch({ type: "RTC_CONNECTION_PING", pings, quality });
     });
     _default.on(_default(4950).RTCConnectionEvent.OutboundLossRate, (lossRate) => {
-      const obj = DispatcherDefault;
-      obj2 = { type: "RTC_CONNECTION_LOSS_RATE", lossRate };
-      obj.dispatch(obj2);
+      DispatcherDefault.dispatch({ type: "RTC_CONNECTION_LOSS_RATE", lossRate });
     });
     _default.on(_default(4950).RTCConnectionEvent.Speaking, (userId, speaking) => {
       if (speaking != null) {
@@ -66,52 +43,35 @@ function createRTCConnection(guildId, channelId, createdTime) {
       }
     });
     _default.on(_default(4950).RTCConnectionEvent.Flags, (userId, flags) => {
-      const obj = DispatcherDefault;
-      obj2 = { type: "RTC_CONNECTION_FLAGS", flags, userId, guildId: _default.guildId, channelId: _default.channelId, context: _default.context };
-      obj.dispatch(obj2);
+      DispatcherDefault.dispatch({ type: "RTC_CONNECTION_FLAGS", flags, userId, guildId: _default.guildId, channelId: _default.channelId, context: _default.context });
     });
     _default.on(_default(4950).RTCConnectionEvent.UsersMerged, (userIds, context) => {
-      const obj = DispatcherDefault;
-      obj2 = { type: "RTC_CONNECTION_USERS_MERGED", userIds, context };
-      obj.dispatch(obj2);
+      DispatcherDefault.dispatch({ type: "RTC_CONNECTION_USERS_MERGED", userIds, context });
     });
     _default.on(_default(4950).RTCConnectionEvent.ClientConnect, (userIds) => {
-      const obj = DispatcherDefault;
-      obj2 = { type: "RTC_CONNECTION_CLIENT_CONNECT", userIds, guildId: _default.guildId, channelId: _default.channelId, context: _default.context };
-      obj.dispatch(obj2);
+      DispatcherDefault.dispatch({ type: "RTC_CONNECTION_CLIENT_CONNECT", userIds, guildId: _default.guildId, channelId: _default.channelId, context: _default.context });
     });
     _default.on(_default(4950).RTCConnectionEvent.ClientDisconnect, (userId) => {
-      const obj = DispatcherDefault;
-      obj2 = { type: "RTC_CONNECTION_CLIENT_DISCONNECT", userId, guildId: _default.guildId, channelId: _default.channelId, context: _default.context };
-      obj.dispatch(obj2);
+      DispatcherDefault.dispatch({ type: "RTC_CONNECTION_CLIENT_DISCONNECT", userId, guildId: _default.guildId, channelId: _default.channelId, context: _default.context });
     });
     _default.on(_default(4950).RTCConnectionEvent.Platform, (userId, platform, channelId) => {
-      const obj = DispatcherDefault;
-      obj2 = { type: "RTC_CONNECTION_PLATFORM", platform, userId, channelId };
-      obj.dispatch(obj2);
+      DispatcherDefault.dispatch({ type: "RTC_CONNECTION_PLATFORM", platform, userId, channelId });
     });
     _default.on(_default(4950).RTCConnectionEvent.SecureFramesUpdate, () => {
-      const obj = DispatcherDefault;
-      obj.dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
+      DispatcherDefault.dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
     });
     _default.on(_default(4950).RTCConnectionEvent.RosterMapUpdate, (userIds) => {
-      const obj = DispatcherDefault;
-      obj2 = { type: "RTC_CONNECTION_ROSTER_MAP_UPDATE", userIds };
-      obj.dispatch(obj2);
+      DispatcherDefault.dispatch({ type: "RTC_CONNECTION_ROSTER_MAP_UPDATE", userIds });
     });
-    const self5 = this;
-    const self6 = this;
-    const tmp28 = VoiceStateAnalyticsDefault;
-    const speaking = new tmp28(AuthenticationStore.getId(), channelId);
-    let c15 = null;
-    let c18 = false;
-    let c19 = false;
-    const tmp282 = new tmp28(AuthenticationStore.getId(), channelId);
+    const tmp322 = new VoiceStateAnalyticsDefault(AuthenticationStore.getId(), channelId);
+    const speaking = tmp322;
+    c15 = null;
+    c18 = false;
+    c19 = false;
     return _default;
   }
 }
 function destroyRTCConnection(arg0) {
-  let mediaSessionId;
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
@@ -119,15 +79,19 @@ function destroyRTCConnection(arg0) {
   if (null == redux) {
     return false;
   } else {
-    ({ duration: redux.getDuration(), mediaSessionId, rtcConnectionId: redux.getRTCConnectionId(), wasEverMultiParticipant, wasEverRtcConnected, voiceStateAnalytics, channelId: redux.channelId });
-    mediaSessionId = redux.getMediaSessionId();
+    obj2 = { duration: redux.getDuration(), mediaSessionId: null, rtcConnectionId: null, wasEverMultiParticipant: null, wasEverRtcConnected: null, voiceStateAnalytics: null, channelId: null };
+    let mediaSessionId = redux.getMediaSessionId();
     if (mediaSessionId == null) {
       mediaSessionId = null;
     }
-    const obj = { type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET", mediaEngineConnectionId: redux.getMediaEngineConnectionId() };
-    const dispatch = DispatcherDefault.dispatch;
-    DispatcherDefault;
-    dispatch(obj);
+    obj2.mediaSessionId = mediaSessionId;
+    obj2.rtcConnectionId = redux.getRTCConnectionId();
+    obj2.wasEverMultiParticipant = wasEverMultiParticipant;
+    obj2.wasEverRtcConnected = wasEverRtcConnected;
+    obj2.voiceStateAnalytics = voiceStateAnalytics;
+    obj2.channelId = redux.channelId;
+    const obj3 = { type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET", mediaEngineConnectionId: redux.getMediaEngineConnectionId() };
+    DispatcherDefault.dispatch(obj3);
     redux.destroy();
     redux = null;
     voiceStateAnalytics = null;
@@ -151,13 +115,12 @@ function handleChannelDelete(arg0) {
 function handleRtcAction() {
   return true;
 }
-({ RTCConnectionStates: metroImportAll, AppStates: c9, RTCConnectionQuality: c10 } = Constants);
-const MediaEngineContextTypes = Constants2.MediaEngineContextTypes;
-let tmp3 = new LoggerDefault("RTCConnectionStore");
-let closure_12 = tmp3;
+const Constants = fn(1085);
+({ RTCConnectionStates: closure_8, AppStates: closure_9, RTCConnectionQuality: c10 } = Constants);
+const MediaEngineContextTypes = fn(4921).MediaEngineContextTypes;
+let closure_12 = new LoggerDefault("RTCConnectionStore");
 let closure_13 = [];
 let c14 = null;
-let obj2 = null;
 let c16 = null;
 let c17 = null;
 const wasEverMultiParticipant = false;
@@ -167,228 +130,224 @@ let closure_21 = null;
 let c22 = false;
 let c23 = null;
 let c24 = null;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class RTCConnectionStore extends Store {
-  initialize() {
-    this.waitFor(AuthenticationStore, GameConsoleStore, SortedVoiceStateStore);
-    const obj = trackVideoToggle;
-    const result = obj.setVideoToggleAnalyticsParams(this.getRTCConnectionId, this.getMediaSessionId);
-  }
-  getRTCConnection() {
-    return redux;
-  }
-  getState() {
-    let DISCONNECTED;
-    if (null != redux) {
-      DISCONNECTED = redux.state;
-    } else {
-      DISCONNECTED = metroImportAll.DISCONNECTED;
-    }
-    return DISCONNECTED;
-  }
-  isConnected() {
-    return this.getState() === metroImportAll.RTC_CONNECTED;
-  }
-  isDisconnected() {
-    return this.getState() === metroImportAll.DISCONNECTED;
-  }
-  getRemoteDisconnectVoiceChannelId() {
-    return c14;
-  }
-  getLastSessionVoiceChannelId() {
-    return c16;
-  }
-  setLastSessionVoiceChannelId(arg0) {
-    c16 = arg0;
-  }
-  getGuildId() {
-    let guildId;
-    if (redux != null) {
-      guildId = redux.guildId;
-    }
-    return guildId;
-  }
-  getChannelId() {
-    let channelId;
-    if (redux != null) {
-      channelId = redux.channelId;
-    }
-    return channelId;
-  }
-  getHostname() {
-    let str = "";
-    if (null != redux) {
-      str = redux.hostname;
-    }
-    return str;
-  }
-  getQuality() {
-    let UNKNOWN;
-    if (null != redux) {
-      UNKNOWN = redux.quality;
-    } else {
-      UNKNOWN = constants3.UNKNOWN;
-    }
-    return UNKNOWN;
-  }
-  getPings() {
-    let pings;
-    if (null != redux) {
-      pings = redux.getPings();
-    } else {
-      pings = closure_13;
-    }
-    return pings;
-  }
-  getAveragePing() {
-    let num = 0;
-    if (null != redux) {
-      let averagePing;
-      if (redux != null) {
-        averagePing = redux.getAveragePing();
-      }
-      num = averagePing;
-    }
-    return num;
-  }
-  getLastPing() {
-    let lastPing;
-    if (redux != null) {
-      lastPing = redux.getLastPing();
-    }
-    return lastPing;
-  }
-  getOutboundLossRate() {
-    let outboundLossRate;
-    if (redux != null) {
-      outboundLossRate = redux.getOutboundLossRate();
-    }
-    return outboundLossRate;
-  }
-  getMediaSessionId() {
-    let mediaSessionId;
-    if (redux != null) {
-      mediaSessionId = redux.getMediaSessionId();
-    }
-    return mediaSessionId;
-  }
-  getRTCConnectionId() {
-    let rTCConnectionId;
-    if (redux != null) {
-      rTCConnectionId = redux.getRTCConnectionId();
-    }
-    return rTCConnectionId;
-  }
-  getDuration() {
-    let duration;
-    if (redux != null) {
-      duration = redux.getDuration();
-    }
-    if (duration == null) {
-      let duration1;
-      if (obj2 != null) {
-        duration1 = obj2.duration;
-      }
-      duration = duration1;
-    }
-    return duration;
-  }
-  getLastRTCConnectionState() {
-    return obj2;
-  }
-  getPacketStats() {
-    let packetStats;
-    if (redux != null) {
-      packetStats = redux.getPacketStats();
-    }
-    return packetStats;
-  }
-  getVoiceStateStats() {
-    let stats;
-    if (voiceStateAnalytics != null) {
-      stats = voiceStateAnalytics.getStats();
-    }
-    return stats;
-  }
-  getUserVoiceSettingsStats(arg0) {
-    let userVoiceSettingsStats;
-    if (voiceStateAnalytics != null) {
-      userVoiceSettingsStats = voiceStateAnalytics.getUserVoiceSettingsStats(arg0);
-    }
-    return userVoiceSettingsStats;
-  }
-  getWasEverMultiParticipant() {
-    return wasEverMultiParticipant;
-  }
-  getWasEverRtcConnected() {
-    return c19;
-  }
-  getUserIds() {
-    let userIds;
-    if (redux != null) {
-      userIds = redux.getUserIds();
-    }
-    return userIds;
-  }
-  getJoinVoiceId() {
-    return c23;
-  }
-  isUserConnected(arg0) {
-    let isUserConnected;
-    if (redux != null) {
-      isUserConnected = redux.getIsUserConnected(arg0);
-    }
-    return isUserConnected;
-  }
-  getSecureFramesState() {
-    let secureFramesState;
-    if (redux != null) {
-      secureFramesState = redux.getSecureFramesState();
-    }
-    return secureFramesState;
-  }
-  getSecureFramesRosterMapEntry(arg0) {
-    let secureFramesRosterMap;
-    if (redux != null) {
-      secureFramesRosterMap = redux.getSecureFramesRosterMap();
-    }
-    let value;
-    if (secureFramesRosterMap != null) {
-      value = secureFramesRosterMap.get(arg0);
-    }
-    return value;
-  }
-  getLastNonZeroRemoteVideoSinkWantsTime() {
-    return closure_21;
-  }
-  getWasMoved() {
-    return c22;
-  }
 }
 const prototype = RTCConnectionStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(AuthenticationStore, GameConsoleStore, SortedVoiceStateStore);
+  const result = trackVideoToggle.setVideoToggleAnalyticsParams(this.getRTCConnectionId, this.getMediaSessionId);
+};
+prototype["getRTCConnection"] = function getRTCConnection() {
+  return closure_3;
+};
+prototype["getState"] = function getState() {
+  if (null != redux) {
+    let DISCONNECTED = redux.state;
+  } else {
+    DISCONNECTED = constants.DISCONNECTED;
+  }
+  return DISCONNECTED;
+};
+prototype["isConnected"] = function isConnected() {
+  return this.getState() === constants.RTC_CONNECTED;
+};
+prototype["isDisconnected"] = function isDisconnected() {
+  return this.getState() === constants.DISCONNECTED;
+};
+prototype["getRemoteDisconnectVoiceChannelId"] = function getRemoteDisconnectVoiceChannelId() {
+  return c14;
+};
+prototype["getLastSessionVoiceChannelId"] = function getLastSessionVoiceChannelId() {
+  return c16;
+};
+prototype["setLastSessionVoiceChannelId"] = function setLastSessionVoiceChannelId(arg0) {
+  c16 = arg0;
+};
+prototype["getGuildId"] = function getGuildId() {
+  let guildId;
+  if (redux != null) {
+    guildId = redux.guildId;
+  }
+  return guildId;
+};
+prototype["getChannelId"] = function getChannelId() {
+  let channelId;
+  if (redux != null) {
+    channelId = redux.channelId;
+  }
+  return channelId;
+};
+prototype["getHostname"] = function getHostname() {
+  let str = "";
+  if (null != redux) {
+    str = redux.hostname;
+  }
+  return str;
+};
+prototype["getQuality"] = function getQuality() {
+  if (null != redux) {
+    let UNKNOWN = redux.quality;
+  } else {
+    UNKNOWN = constants3.UNKNOWN;
+  }
+  return UNKNOWN;
+};
+prototype["getPings"] = function getPings() {
+  if (null != redux) {
+    let pings = redux.getPings();
+  } else {
+    pings = closure_13;
+  }
+  return pings;
+};
+prototype["getAveragePing"] = function getAveragePing() {
+  let num = 0;
+  if (null != authStore) {
+    let averagePing;
+    if (authStore != null) {
+      averagePing = authStore.getAveragePing();
+    }
+    num = averagePing;
+  }
+  return num;
+};
+prototype["getLastPing"] = function getLastPing() {
+  let lastPing;
+  if (authStore != null) {
+    lastPing = authStore.getLastPing();
+  }
+  return lastPing;
+};
+prototype["getOutboundLossRate"] = function getOutboundLossRate() {
+  let outboundLossRate;
+  if (authStore != null) {
+    outboundLossRate = authStore.getOutboundLossRate();
+  }
+  return outboundLossRate;
+};
+prototype["getMediaSessionId"] = function getMediaSessionId() {
+  let mediaSessionId;
+  if (authStore != null) {
+    mediaSessionId = authStore.getMediaSessionId();
+  }
+  return mediaSessionId;
+};
+prototype["getRTCConnectionId"] = function getRTCConnectionId() {
+  let rTCConnectionId;
+  if (authStore != null) {
+    rTCConnectionId = authStore.getRTCConnectionId();
+  }
+  return rTCConnectionId;
+};
+prototype["getDuration"] = function getDuration() {
+  let duration;
+  if (authStore != null) {
+    duration = authStore.getDuration();
+  }
+  if (duration == null) {
+    let duration1;
+    if (obj2 != null) {
+      duration1 = obj2.duration;
+    }
+    duration = duration1;
+  }
+  return duration;
+};
+prototype["getLastRTCConnectionState"] = function getLastRTCConnectionState() {
+  return obj2;
+};
+prototype["getPacketStats"] = function getPacketStats() {
+  let packetStats;
+  if (authStore != null) {
+    packetStats = authStore.getPacketStats();
+  }
+  return packetStats;
+};
+prototype["getVoiceStateStats"] = function getVoiceStateStats() {
+  let stats;
+  if (voiceStateAnalytics != null) {
+    stats = voiceStateAnalytics.getStats();
+  }
+  return stats;
+};
+prototype["getUserVoiceSettingsStats"] = function getUserVoiceSettingsStats(arg0) {
+  let userVoiceSettingsStats;
+  if (voiceStateAnalytics != null) {
+    userVoiceSettingsStats = voiceStateAnalytics.getUserVoiceSettingsStats(arg0);
+  }
+  return userVoiceSettingsStats;
+};
+prototype["getWasEverMultiParticipant"] = function getWasEverMultiParticipant() {
+  return closure_18;
+};
+prototype["getWasEverRtcConnected"] = function getWasEverRtcConnected() {
+  return c19;
+};
+prototype["getUserIds"] = function getUserIds() {
+  let userIds;
+  if (authStore != null) {
+    userIds = authStore.getUserIds();
+  }
+  return userIds;
+};
+prototype["getJoinVoiceId"] = function getJoinVoiceId() {
+  return c23;
+};
+prototype["isUserConnected"] = function isUserConnected(arg0) {
+  let isUserConnected;
+  if (authStore != null) {
+    isUserConnected = authStore.getIsUserConnected(arg0);
+  }
+  return isUserConnected;
+};
+prototype["getSecureFramesState"] = function getSecureFramesState() {
+  let secureFramesState;
+  if (authStore != null) {
+    secureFramesState = authStore.getSecureFramesState();
+  }
+  return secureFramesState;
+};
+prototype["getSecureFramesRosterMapEntry"] = function getSecureFramesRosterMapEntry(arg0) {
+  let secureFramesRosterMap;
+  if (authStore != null) {
+    secureFramesRosterMap = authStore.getSecureFramesRosterMap();
+  }
+  value = undefined;
+  if (secureFramesRosterMap != null) {
+    value = secureFramesRosterMap.get(arg0);
+  }
+  return value;
+};
+prototype["getLastNonZeroRemoteVideoSinkWantsTime"] = function getLastNonZeroRemoteVideoSinkWantsTime() {
+  return closure_21;
+};
+prototype["getWasMoved"] = function getWasMoved() {
+  return c22;
+};
 RTCConnectionStore.displayName = "RTCConnectionStore";
-let obj = {
+const rTCConnectionStore = new RTCConnectionStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(sessionId) {
     sessionId = sessionId.sessionId;
     c14 = null;
     c16 = null;
     destroyRTCConnection(false);
-    if (null != config) {
-      const timeout = config.timeout;
+    if (null != _null) {
+      const timeout = _null.timeout;
       timeout.stop();
-      config = null;
+      _null = null;
     }
     return false;
   },
   CONNECTION_CLOSED: function handleConnectionClosed() {
-    let c4 = null;
+    c4 = null;
     c14 = null;
     c16 = null;
     destroyRTCConnection(false);
-    if (null != config) {
-      const timeout = config.timeout;
+    if (null != _null) {
+      const timeout = _null.timeout;
       timeout.stop();
-      config = null;
+      _null = null;
     }
   },
   LOGOUT: function handleLogout() {
@@ -396,25 +355,23 @@ let obj = {
     return false;
   },
   RTC_CONNECTION_STATE: function handleRTCConnectionState(state) {
-    if (state.state === metroImportAll.RTC_CONNECTED) {
-      let c19 = true;
-      if (null != redux) {
-        const obj = TimeUtils;
-        closure_20 = obj.now();
+    if (state.state === constants.RTC_CONNECTED) {
+      c19 = true;
+      if (null != closure_3) {
+        closure_20 = TimeUtils.now();
       }
     }
     return true;
   },
   RTC_CONNECTION_PING: function handleRtcConnectionPing() {
-    if (null != redux) {
-      const obj = TimeUtils;
-      closure_20 = obj.now();
+    if (null != closure_3) {
+      closure_20 = TimeUtils.now();
     }
     return true;
   },
   RTC_CONNECTION_LOSS_RATE: handleRtcAction,
   RTC_CONNECTION_UPDATE_ID: function handleRtcConnectionUpdateId(connection) {
-    return connection.connection === redux;
+    return connection.connection === closure_3;
   },
   RTC_CONNECTION_SECURE_FRAMES_UPDATE: handleRtcAction,
   RTC_CONNECTION_CLIENT_CONNECT: handleRtcAction,
@@ -422,14 +379,15 @@ let obj = {
   RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: function handleRtcConnectionRemoteVideoSinkWants(context) {
     let tmp2 = context.context === MediaEngineContextTypes.DEFAULT;
     if (tmp2) {
-      const tmp3 = globalThis;
       const _Object = Object;
       const entries = Object.entries(tmp);
       const someResult = entries.some((item) => {
-        let tmp;
-        let tmp2;
         [tmp, tmp2] = item;
-        return "any" !== tmp && 0 !== tmp2;
+        let tmp3 = "any" !== tmp;
+        if (tmp3) {
+          tmp3 = 0 !== tmp2;
+        }
+        return tmp3;
       });
       if (someResult) {
         const _performance = performance;
@@ -440,20 +398,18 @@ let obj = {
     return tmp2;
   },
   VIDEO_SIZE_UPDATE: function handleVideoSizeUpdate(arg0) {
-    if (redux != null) {
-      redux.setVideoSize(tmp, tmp2, tmp3);
+    if (authStore != null) {
+      authStore.setVideoSize(tmp, tmp2, tmp3);
     }
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(arg0) {
-    let require;
-    let voiceStates;
     ({ voiceStates, receivedAt: require } = arg0);
     return voiceStates.reduce((acc, userId) => {
       if (c17 != null) {
         c17.updateVoiceStates(userId.userId, userId.channelId);
       }
       let tmp2 = closure_18;
-      if (!tmp2) {
+      if (!closure_18) {
         let num;
         if (c17 != null) {
           num = c17.getStats().max_voice_state_count;
@@ -467,7 +423,11 @@ let obj = {
       if (AuthenticationStore.getId() !== userId.userId) {
         return acc;
       } else {
-        if (null != config && userId.channelId === config.channelId) {
+        let tmp4 = null != config;
+        if (tmp4) {
+          tmp4 = userId.channelId === config.channelId;
+        }
+        if (tmp4) {
           if (null != config) {
             const timeout = config.timeout;
             timeout.stop();
@@ -477,7 +437,6 @@ let obj = {
         if (null != closure_3) {
           if (userId.sessionId === c4) {
             if (null == userId.guildId) {
-              const tmp26 = userId.guildId !== closure_3.guildId && null == userId.channelId;
               if (!tmp26) {
                 destroyRTCConnection();
               }
@@ -494,36 +453,33 @@ let obj = {
                 }
                 closure_18 = num9 > 1;
               }
+              tmp26 = userId.guildId !== closure_3.guildId && null == userId.channelId;
             }
             if (null == userId.channelId) {
               destroyRTCConnection();
             } else {
               closure_3.setNextChannelId(userId.channelId);
               c22 = true;
-              let c23 = null;
+              c23 = null;
               closure_3.clearJoinVoiceId();
             }
           } else if (userId.guildId === closure_3.guildId) {
-            const tmp19 = null != GameConsoleStore.getAwaitingRemoteSessionInfo() && null != GameConsoleStore.getRemoteSessionId();
             if (!tmp19) {
               channelId = closure_3.channelId;
             }
             destroyRTCConnection();
+            tmp19 = null != GameConsoleStore.getAwaitingRemoteSessionInfo() && null != GameConsoleStore.getRemoteSessionId();
           }
         } else {
           if (userId.sessionId === c4) {
             if (null != userId.channelId) {
-              if (!(null != config && userId.channelId === config.channelId)) {
+              if (!tmp4) {
                 if (null != closure_20) {
-                  const obj3 = TimeUtils;
                   if (obj3.now() - closure_20 >= 300000) {
-                    const obj4 = DispatcherDefault;
-                    obj4.wait(() => {
-                      const _default = closure_1_0(closure_1_2[12]).default;
-                      return _default.disconnect();
-                    });
+                    DispatcherDefault.wait(() => closure_1_0(closure_1_2[12]).default.disconnect());
                     return acc;
                   }
+                  obj3 = TimeUtils;
                 }
               }
               channelId = null;
@@ -546,12 +502,13 @@ let obj = {
     }, false);
   },
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {
-    let logger;
-    let obj;
     let tmp = null == redux;
     if (!tmp) {
-      tmp = null != channelId.channelId && redux.channelId === channelId.channelId;
-      const tmp2 = null != channelId.channelId && redux.channelId === channelId.channelId;
+      let tmp2 = null != channelId.channelId;
+      if (tmp2) {
+        tmp2 = redux.channelId === channelId.channelId;
+      }
+      tmp = tmp2;
     }
     if (!tmp) {
       destroyRTCConnection();
@@ -564,21 +521,19 @@ let obj = {
       obj = null;
     }
     if (null != channelId.channelId) {
-      const self = this;
-      const self2 = this;
       const timeout1 = new require("Timers").Timeout();
       timeout1.start(30000, () => {
-        obj = { joinVoiceId: channelId.joinVoiceId, channelId: channelId.channelId, guildId: channelId.guildId };
-        logger.warn("No VOICE_STATE_UPDATE received within 30000ms of VOICE_CHANNEL_SELECT", obj);
-        let c24 = null;
+        logger.warn("No VOICE_STATE_UPDATE received within 30000ms of VOICE_CHANNEL_SELECT", { joinVoiceId: channelId.joinVoiceId, channelId: channelId.channelId, guildId: channelId.guildId });
+        c24 = null;
       });
-      obj = { joinVoiceId: null, channelId: null, guildId: null, timeout: timeout1 };
+      obj = { joinVoiceId: null, channelId: null, guildId: null, timeout: null };
       ({ joinVoiceId: obj2.joinVoiceId, channelId: obj2.channelId, guildId: obj2.guildId } = channelId);
+      obj.timeout = timeout1;
     }
   },
   AUDIO_SET_NOISE_CANCELLATION: function handleAudioSetNoiseCancellation(enabled) {
-    if (redux != null) {
-      const result = redux.setNoiseCancellationEnabled(enabled.enabled);
+    if (authStore != null) {
+      const result = authStore.setNoiseCancellationEnabled(enabled.enabled);
     }
   },
   AUDIO_SET_AUDIO_MIXER_SETTINGS: function handleAudioSetAudioMixerSettings(context) {
@@ -590,20 +545,25 @@ let obj = {
         flag = false;
       }
       if (flag) {
-        const obj = useSpatialAudioControlState;
-        flag = obj.isSpatialAudioEligible("RTCConnectionStore");
+        flag = useSpatialAudioControlState.isSpatialAudioEligible("RTCConnectionStore");
       }
-      if (redux != null) {
-        const result = redux.setSpatialAudioEnabled(flag);
+      if (authStore != null) {
+        const result = authStore.setSpatialAudioEnabled(flag);
       }
     }
   },
   VOICE_SERVER_UPDATE: function handleVoiceServerUpdate(guildId) {
     let tmp = null != redux;
     if (tmp) {
-      let tmp3 = null == guildId.guildId || guildId.guildId === redux.guildId;
+      let tmp3 = null == guildId.guildId;
+      if (!tmp3) {
+        tmp3 = guildId.guildId === redux.guildId;
+      }
       if (tmp3) {
-        const tmp5 = null == guildId.channelId || guildId.channelId === redux.getNextChannelId();
+        let tmp5 = null == guildId.channelId;
+        if (!tmp5) {
+          tmp5 = guildId.channelId === redux.getNextChannelId();
+        }
         if (tmp5) {
           redux.connect(guildId.endpoint, guildId.token);
         }
@@ -637,26 +597,314 @@ let obj = {
     return false;
   },
   APP_STATE_UPDATE: function handleFocus(state) {
-    const tmp = state.state === constants2.ACTIVE && null != redux;
+    let tmp = state.state === constants2.ACTIVE;
+    if (tmp) {
+      tmp = null != redux;
+    }
     if (tmp) {
       redux.resetBackoff("App state is active");
     }
     return false;
   },
   RTC_DEBUG_SET_SIMULCAST_OVERRIDE: function handleSimulcastDebugOverrideChanged(arg0) {
-    if (redux != null) {
-      const result = redux.setSimulcastDebugOverride(tmp, tmp2, tmp3);
+    if (authStore != null) {
+      const result = authStore.setSimulcastDebugOverride(tmp, tmp2, tmp3);
+    }
+  }
+});
+let obj = {
+  CONNECTION_OPEN: function handleConnectionOpen(sessionId) {
+    sessionId = sessionId.sessionId;
+    c14 = null;
+    c16 = null;
+    destroyRTCConnection(false);
+    if (null != _null) {
+      const timeout = _null.timeout;
+      timeout.stop();
+      _null = null;
+    }
+    return false;
+  },
+  CONNECTION_CLOSED: function handleConnectionClosed() {
+    c4 = null;
+    c14 = null;
+    c16 = null;
+    destroyRTCConnection(false);
+    if (null != _null) {
+      const timeout = _null.timeout;
+      timeout.stop();
+      _null = null;
+    }
+  },
+  LOGOUT: function handleLogout() {
+    closure_20 = null;
+    return false;
+  },
+  RTC_CONNECTION_STATE: function handleRTCConnectionState(state) {
+    if (state.state === constants.RTC_CONNECTED) {
+      c19 = true;
+      if (null != closure_3) {
+        closure_20 = TimeUtils.now();
+      }
+    }
+    return true;
+  },
+  RTC_CONNECTION_PING: function handleRtcConnectionPing() {
+    if (null != closure_3) {
+      closure_20 = TimeUtils.now();
+    }
+    return true;
+  },
+  RTC_CONNECTION_LOSS_RATE: handleRtcAction,
+  RTC_CONNECTION_UPDATE_ID: function handleRtcConnectionUpdateId(connection) {
+    return connection.connection === closure_3;
+  },
+  RTC_CONNECTION_SECURE_FRAMES_UPDATE: handleRtcAction,
+  RTC_CONNECTION_CLIENT_CONNECT: handleRtcAction,
+  RTC_CONNECTION_CLIENT_DISCONNECT: handleRtcAction,
+  RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: function handleRtcConnectionRemoteVideoSinkWants(context) {
+    let tmp2 = context.context === MediaEngineContextTypes.DEFAULT;
+    if (tmp2) {
+      const _Object = Object;
+      const entries = Object.entries(tmp);
+      const someResult = entries.some((item) => {
+        [tmp, tmp2] = item;
+        let tmp3 = "any" !== tmp;
+        if (tmp3) {
+          tmp3 = 0 !== tmp2;
+        }
+        return tmp3;
+      });
+      if (someResult) {
+        const _performance = performance;
+        closure_21 = performance.now();
+      }
+      tmp2 = someResult;
+    }
+    return tmp2;
+  },
+  VIDEO_SIZE_UPDATE: function handleVideoSizeUpdate(arg0) {
+    if (authStore != null) {
+      authStore.setVideoSize(tmp, tmp2, tmp3);
+    }
+  },
+  VOICE_STATE_UPDATES: function handleVoiceStateUpdates(arg0) {
+    ({ voiceStates, receivedAt: require } = arg0);
+    return voiceStates.reduce((acc, userId) => {
+      if (c17 != null) {
+        c17.updateVoiceStates(userId.userId, userId.channelId);
+      }
+      let tmp2 = closure_18;
+      if (!closure_18) {
+        let num;
+        if (c17 != null) {
+          num = c17.getStats().max_voice_state_count;
+        }
+        if (num == null) {
+          num = 0;
+        }
+        tmp2 = num > 1;
+      }
+      closure_18 = tmp2;
+      if (AuthenticationStore.getId() !== userId.userId) {
+        return acc;
+      } else {
+        let tmp4 = null != config;
+        if (tmp4) {
+          tmp4 = userId.channelId === config.channelId;
+        }
+        if (tmp4) {
+          if (null != config) {
+            const timeout = config.timeout;
+            timeout.stop();
+            config = null;
+          }
+        }
+        if (null != closure_3) {
+          if (userId.sessionId === c4) {
+            if (null == userId.guildId) {
+              if (!tmp26) {
+                destroyRTCConnection();
+              }
+              if (null != userId.channelId) {
+                let channelId = null;
+                c16 = null;
+                closure_3 = createRTCConnection(userId.guildId, userId.channelId, _require);
+                let num9;
+                if (c17 != null) {
+                  num9 = c17.getStats().max_voice_state_count;
+                }
+                if (num9 == null) {
+                  num9 = 0;
+                }
+                closure_18 = num9 > 1;
+              }
+              tmp26 = userId.guildId !== closure_3.guildId && null == userId.channelId;
+            }
+            if (null == userId.channelId) {
+              destroyRTCConnection();
+            } else {
+              closure_3.setNextChannelId(userId.channelId);
+              c22 = true;
+              c23 = null;
+              closure_3.clearJoinVoiceId();
+            }
+          } else if (userId.guildId === closure_3.guildId) {
+            if (!tmp19) {
+              channelId = closure_3.channelId;
+            }
+            destroyRTCConnection();
+            tmp19 = null != GameConsoleStore.getAwaitingRemoteSessionInfo() && null != GameConsoleStore.getRemoteSessionId();
+          }
+        } else {
+          if (userId.sessionId === c4) {
+            if (null != userId.channelId) {
+              if (!tmp4) {
+                if (null != closure_20) {
+                  if (obj3.now() - closure_20 >= 300000) {
+                    DispatcherDefault.wait(() => closure_1_0(closure_1_2[12]).default.disconnect());
+                    return acc;
+                  }
+                  obj3 = TimeUtils;
+                }
+              }
+              channelId = null;
+              c16 = null;
+              closure_3 = createRTCConnection(userId.guildId, userId.channelId, _require);
+              let num5;
+              if (c17 != null) {
+                num5 = c17.getStats().max_voice_state_count;
+              }
+              if (num5 == null) {
+                num5 = 0;
+              }
+              closure_18 = num5 > 1;
+            }
+          }
+          return acc;
+        }
+        return true;
+      }
+    }, false);
+  },
+  VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {
+    let tmp = null == redux;
+    if (!tmp) {
+      let tmp2 = null != channelId.channelId;
+      if (tmp2) {
+        tmp2 = redux.channelId === channelId.channelId;
+      }
+      tmp = tmp2;
+    }
+    if (!tmp) {
+      destroyRTCConnection();
+    }
+    joinVoiceId = channelId.joinVoiceId;
+    _require = channelId;
+    if (null != obj) {
+      const timeout = obj.timeout;
+      timeout.stop();
+      obj = null;
+    }
+    if (null != channelId.channelId) {
+      const timeout1 = new require("Timers").Timeout();
+      timeout1.start(30000, () => {
+        logger.warn("No VOICE_STATE_UPDATE received within 30000ms of VOICE_CHANNEL_SELECT", { joinVoiceId: channelId.joinVoiceId, channelId: channelId.channelId, guildId: channelId.guildId });
+        c24 = null;
+      });
+      obj = { joinVoiceId: null, channelId: null, guildId: null, timeout: null };
+      ({ joinVoiceId: obj2.joinVoiceId, channelId: obj2.channelId, guildId: obj2.guildId } = channelId);
+      obj.timeout = timeout1;
+    }
+  },
+  AUDIO_SET_NOISE_CANCELLATION: function handleAudioSetNoiseCancellation(enabled) {
+    if (authStore != null) {
+      const result = authStore.setNoiseCancellationEnabled(enabled.enabled);
+    }
+  },
+  AUDIO_SET_AUDIO_MIXER_SETTINGS: function handleAudioSetAudioMixerSettings(context) {
+    if (context.context !== MediaEngineContextTypes.DEFAULT) {
+      return false;
+    } else {
+      let flag = context.settings.enabled;
+      if (flag == null) {
+        flag = false;
+      }
+      if (flag) {
+        flag = useSpatialAudioControlState.isSpatialAudioEligible("RTCConnectionStore");
+      }
+      if (authStore != null) {
+        const result = authStore.setSpatialAudioEnabled(flag);
+      }
+    }
+  },
+  VOICE_SERVER_UPDATE: function handleVoiceServerUpdate(guildId) {
+    let tmp = null != redux;
+    if (tmp) {
+      let tmp3 = null == guildId.guildId;
+      if (!tmp3) {
+        tmp3 = guildId.guildId === redux.guildId;
+      }
+      if (tmp3) {
+        let tmp5 = null == guildId.channelId;
+        if (!tmp5) {
+          tmp5 = guildId.channelId === redux.getNextChannelId();
+        }
+        if (tmp5) {
+          redux.connect(guildId.endpoint, guildId.token);
+        }
+        tmp3 = tmp5;
+      }
+      tmp = tmp3;
+    }
+    return tmp;
+  },
+  CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: handleClearRemoteDisconnectVoiceChannelId,
+  REMOTE_SESSION_CONNECT: handleClearRemoteDisconnectVoiceChannelId,
+  CLEAR_LAST_SESSION_VOICE_CHANNEL_ID: function handleClearLastSessionVoiceChannelId() {
+    c16 = null;
+  },
+  GUILD_DELETE: function handleGuildDelete(arg0) {
+    if (null != redux) {
+      if (redux.guildId === tmp.id) {
+        destroyRTCConnection();
+      }
+    }
+    return false;
+  },
+  CHANNEL_DELETE: handleChannelDelete,
+  THREAD_DELETE: handleChannelDelete,
+  CALL_DELETE: function handleCallDelete(arg0) {
+    if (null != redux) {
+      if (redux.channelId === tmp) {
+        destroyRTCConnection();
+      }
+    }
+    return false;
+  },
+  APP_STATE_UPDATE: function handleFocus(state) {
+    let tmp = state.state === constants2.ACTIVE;
+    if (tmp) {
+      tmp = null != redux;
+    }
+    if (tmp) {
+      redux.resetBackoff("App state is active");
+    }
+    return false;
+  },
+  RTC_DEBUG_SET_SIMULCAST_OVERRIDE: function handleSimulcastDebugOverrideChanged(arg0) {
+    if (authStore != null) {
+      const result = authStore.setSimulcastDebugOverride(tmp, tmp2, tmp3);
     }
   }
 };
-const rTCConnectionStore = new RTCConnectionStore(DispatcherDefault, obj);
-const promise = asyncRequire(1252, dependencyMap.paths);
-promise.then((addExtraAnalyticsDecorator) => {
-  let state;
+let tmp3 = new LoggerDefault("RTCConnectionStore");
+fn(1987)(1252, dependencyMap.paths).then((addExtraAnalyticsDecorator) => {
   const result = addExtraAnalyticsDecorator.addExtraAnalyticsDecorator((arg0) => {
     arg0.client_rtc_state = state.getState();
   });
 });
+const size = fn(2);
 let result = size.fileFinishedImporting("stores/RTCConnectionStore.tsx");
 
 export default rTCConnectionStore;

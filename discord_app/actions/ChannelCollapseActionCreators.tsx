@@ -4,23 +4,18 @@
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 6618 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
-import size from "module_2" /* 2 */;
 
-let obj = {
+const size = fn(2);
+let result = size.fileFinishedImporting("actions/ChannelCollapseActionCreators.tsx");
+
+export default {
   update(channelId) {
-    const obj = DispatcherDefault;
-    const obj2 = { type: "CHANNEL_COLLAPSE", channelId };
-    obj.dispatch(obj2);
+    DispatcherDefault.dispatch({ type: "CHANNEL_COLLAPSE", channelId });
   },
   toggleCollapseGuild(id) {
     const obj = UserGuildSettingsManagerDefault;
+    const result = obj.saveUserGuildSettings(id, { hide_muted_channels: !UserGuildSettingsStore.isGuildCollapsed(id) });
     const obj2 = { hide_muted_channels: !UserGuildSettingsStore.isGuildCollapsed(id) };
-    const result = obj.saveUserGuildSettings(id, obj2);
-    const obj3 = DispatcherDefault;
-    const obj4 = { type: "GUILD_TOGGLE_COLLAPSE_MUTED", guildId: id };
-    obj3.dispatch(obj4);
+    DispatcherDefault.dispatch({ type: "GUILD_TOGGLE_COLLAPSE_MUTED", guildId: id });
   }
 };
-let result = size.fileFinishedImporting("actions/ChannelCollapseActionCreators.tsx");
-
-export default obj;

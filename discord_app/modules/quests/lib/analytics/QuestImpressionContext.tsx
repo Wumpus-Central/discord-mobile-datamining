@@ -1,10 +1,10 @@
-// === Module 10930: react ===
+// === Module 10930: QuestImpressionContext ===
 
-// Module 10930 (react)
-import react from "react" /* 19 */;
-import size from "module_2" /* 2 */;
+// Module 10930 (QuestImpressionContext)
+import noop from "module_19" /* 19 */;
 
-const context = react.createContext(undefined);
+const context = noop.createContext(undefined);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/lib/analytics/QuestImpressionContext.tsx");
 
 export const QuestImpressionContext = context;

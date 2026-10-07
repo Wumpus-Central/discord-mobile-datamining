@@ -1,9 +1,9 @@
 // === Module 15083: VoiceSensitivitySetting ===
 
 // Module 15083 (VoiceSensitivitySetting)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import intl2 from "intl" /* 1126 */;
+import _mod17 from "module_17" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import util from "util" /* 1126 */;
 import SettingsConstants from "SettingsConstants" /* 7645 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 8079 */;
 import VoiceSensitivityDefault from "VoiceSensitivity" /* 9677 */;
@@ -13,26 +13,16 @@ import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
-const View = react_native.View;
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const jsx = Fragment.jsx;
+const View = _mod17.View;
+const jsx = jsxProd.jsx;
 let closure_6 = createStyles.createStyles({ slider: { marginTop: 8 } });
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let inputMode;
-  let tmp5;
-  let tmp6;
-  let tmp9;
-  let vadAutoThreshold;
-  let vadThreshold;
-  let obj = inputMode(576);
-  const cResult = obj.c(11);
+  const cResult = inputMode(576).c(11);
   const tmp4 = closure_6();
-  const tmp = inputMode;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MediaEngineStore];
     const fn = function n() {
-      const obj = { inputMode: MediaEngineStore.getMode(), vadThreshold: MediaEngineStore.getModeOptions().threshold, vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold };
-      return obj;
+      return { inputMode: MediaEngineStore.getMode(), vadThreshold: MediaEngineStore.getModeOptions().threshold, vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold };
     };
     cResult[0] = items;
     cResult[1] = fn;
@@ -41,35 +31,32 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const tmpResult = tmp(504);
-  const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp5, tmp6);
+  const obj = inputMode(576);
+  const stateFromStoresObject = inputMode(504).useStateFromStoresObject(tmp5, tmp6);
   inputMode = stateFromStoresObject.inputMode;
   ({ vadThreshold, vadAutoThreshold } = stateFromStoresObject);
   if (cResult[2] !== inputMode) {
     const fn2 = function v(threshold) {
-      const obj = AudioActionCreatorsDefault;
-      const obj2 = { threshold };
-      return obj.setMode(inputMode, obj2);
+      return AudioActionCreatorsDefault.setMode(inputMode, { threshold });
     };
     cResult[2] = inputMode;
     cResult[3] = fn2;
-    tmp9 = fn2;
+    let tmp9 = fn2;
   } else {
     tmp9 = cResult[3];
   }
   if (cResult[4] === tmp9) {
     if (cResult[5] === vadAutoThreshold) {
-      let tmp10;
       if (cResult[6] === vadThreshold) {
-        tmp10 = cResult[7];
+        let tmp10 = cResult[7];
       }
       if (cResult[8] === tmp4.slider) {
-        let tmp12;
         if (cResult[9] === tmp10) {
-          tmp12 = cResult[10];
+          let tmp12 = cResult[10];
         }
         return tmp12;
       }
+      const obj2 = { style: tmp4.slider, children: tmp10 };
       const tmp15 = <View style={tmp4.slider}>{tmp10}</View>;
       cResult[8] = tmp4.slider;
       cResult[9] = tmp10;
@@ -83,35 +70,212 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[6] = vadThreshold;
   cResult[7] = tmp11;
   tmp10 = tmp11;
+  const tmpResult = inputMode(504);
 }) : (() => {
-  let inputMode;
-  let vadAutoThreshold;
-  let vadThreshold;
   const tmp = closure_6();
-  let obj = inputMode(504);
   const items = [MediaEngineStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    const obj = { inputMode: MediaEngineStore.getMode(), vadThreshold: MediaEngineStore.getModeOptions().threshold, vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold };
-    return obj;
-  });
+  const stateFromStoresObject = inputMode(504).useStateFromStoresObject(items, () => ({ inputMode: MediaEngineStore.getMode(), vadThreshold: MediaEngineStore.getModeOptions().threshold, vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold }));
   inputMode = stateFromStoresObject.inputMode;
+  const obj2 = {
+    style: tmp.slider,
+    children: jsx(VoiceSensitivityDefault, {
+      auto: vadAutoThreshold,
+      threshold: vadThreshold,
+      onThresholdChange(threshold) {
+        return AudioActionCreatorsDefault.setMode(inputMode, { threshold });
+      }
+    })
+  };
   ({ vadThreshold, vadAutoThreshold } = stateFromStoresObject);
-  return <View style={tmp.slider}>{null}</View>;
+  return <View style={tmp.slider}>{jsx(VoiceSensitivityDefault, {
+    auto: vadAutoThreshold,
+    threshold: vadThreshold,
+    onThresholdChange(threshold) {
+      return AudioActionCreatorsDefault.setMode(inputMode, { threshold });
+    }
+  })}</View>;
 });
 let obj = {
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["sqUm+k"]);
+    const intl = util.intl;
+    return intl.string(util.t["sqUm+k"]);
   },
-  parent: MobileUserSettings.VOICE,
-  useDescription: tmp2,
+  parent: SettingsConstants.MobileUserSettings.VOICE,
+  useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = inputMode(576).c(11);
+    const tmp4 = closure_6();
+    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+      const items = [MediaEngineStore];
+      const fn = function n() {
+        return { inputMode: MediaEngineStore.getMode(), vadThreshold: MediaEngineStore.getModeOptions().threshold, vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold };
+      };
+      cResult[0] = items;
+      cResult[1] = fn;
+      tmp5 = items;
+      tmp6 = fn;
+    } else {
+      [tmp5, tmp6] = cResult;
+    }
+    const obj = inputMode(576);
+    const stateFromStoresObject = inputMode(504).useStateFromStoresObject(tmp5, tmp6);
+    inputMode = stateFromStoresObject.inputMode;
+    ({ vadThreshold, vadAutoThreshold } = stateFromStoresObject);
+    if (cResult[2] !== inputMode) {
+      const fn2 = function v(threshold) {
+        return AudioActionCreatorsDefault.setMode(inputMode, { threshold });
+      };
+      cResult[2] = inputMode;
+      cResult[3] = fn2;
+      let tmp9 = fn2;
+    } else {
+      tmp9 = cResult[3];
+    }
+    if (cResult[4] === tmp9) {
+      if (cResult[5] === vadAutoThreshold) {
+        if (cResult[6] === vadThreshold) {
+          let tmp10 = cResult[7];
+        }
+        if (cResult[8] === tmp4.slider) {
+          if (cResult[9] === tmp10) {
+            let tmp12 = cResult[10];
+          }
+          return tmp12;
+        }
+        const obj2 = { style: tmp4.slider, children: tmp10 };
+        const tmp15 = <View style={tmp4.slider}>{tmp10}</View>;
+        cResult[8] = tmp4.slider;
+        cResult[9] = tmp10;
+        cResult[10] = tmp15;
+        tmp12 = tmp15;
+      }
+    }
+    const tmp11 = jsx(VoiceSensitivityDefault, { auto: vadAutoThreshold, threshold: vadThreshold, onThresholdChange: tmp9 });
+    cResult[4] = tmp9;
+    cResult[5] = vadAutoThreshold;
+    cResult[6] = vadThreshold;
+    cResult[7] = tmp11;
+    tmp10 = tmp11;
+    const tmpResult = inputMode(504);
+  }) : (() => {
+    const tmp = closure_6();
+    const items = [MediaEngineStore];
+    const stateFromStoresObject = inputMode(504).useStateFromStoresObject(items, () => ({ inputMode: MediaEngineStore.getMode(), vadThreshold: MediaEngineStore.getModeOptions().threshold, vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold }));
+    inputMode = stateFromStoresObject.inputMode;
+    const obj2 = {
+      style: tmp.slider,
+      children: jsx(VoiceSensitivityDefault, {
+        auto: vadAutoThreshold,
+        threshold: vadThreshold,
+        onThresholdChange(threshold) {
+          return AudioActionCreatorsDefault.setMode(inputMode, { threshold });
+        }
+      })
+    };
+    ({ vadThreshold, vadAutoThreshold } = stateFromStoresObject);
+    return <View style={tmp.slider}>{jsx(VoiceSensitivityDefault, {
+      auto: vadAutoThreshold,
+      threshold: vadThreshold,
+      onThresholdChange(threshold) {
+        return AudioActionCreatorsDefault.setMode(inputMode, { threshold });
+      }
+    })}</View>;
+  }),
   useSearchTerms() {
-    const intl = intl2.intl;
-    const items = [intl.string(intl2.t.nuFtHH)];
+    const intl = util.intl;
+    const items = [intl.string(util.t.nuFtHH)];
     return items;
   }
 };
-const createStaticResult = SettingBuilders.createStatic(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/VoiceSensitivitySetting.tsx");
 
-export default createStaticResult;
+export default SettingBuilders.createStatic({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(util.t["sqUm+k"]);
+  },
+  parent: SettingsConstants.MobileUserSettings.VOICE,
+  useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = inputMode(576).c(11);
+    const tmp4 = closure_6();
+    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+      const items = [MediaEngineStore];
+      const fn = function n() {
+        return { inputMode: MediaEngineStore.getMode(), vadThreshold: MediaEngineStore.getModeOptions().threshold, vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold };
+      };
+      cResult[0] = items;
+      cResult[1] = fn;
+      tmp5 = items;
+      tmp6 = fn;
+    } else {
+      [tmp5, tmp6] = cResult;
+    }
+    const obj = inputMode(576);
+    const stateFromStoresObject = inputMode(504).useStateFromStoresObject(tmp5, tmp6);
+    inputMode = stateFromStoresObject.inputMode;
+    ({ vadThreshold, vadAutoThreshold } = stateFromStoresObject);
+    if (cResult[2] !== inputMode) {
+      const fn2 = function v(threshold) {
+        return AudioActionCreatorsDefault.setMode(inputMode, { threshold });
+      };
+      cResult[2] = inputMode;
+      cResult[3] = fn2;
+      let tmp9 = fn2;
+    } else {
+      tmp9 = cResult[3];
+    }
+    if (cResult[4] === tmp9) {
+      if (cResult[5] === vadAutoThreshold) {
+        if (cResult[6] === vadThreshold) {
+          let tmp10 = cResult[7];
+        }
+        if (cResult[8] === tmp4.slider) {
+          if (cResult[9] === tmp10) {
+            let tmp12 = cResult[10];
+          }
+          return tmp12;
+        }
+        const obj2 = { style: tmp4.slider, children: tmp10 };
+        const tmp15 = <View style={tmp4.slider}>{tmp10}</View>;
+        cResult[8] = tmp4.slider;
+        cResult[9] = tmp10;
+        cResult[10] = tmp15;
+        tmp12 = tmp15;
+      }
+    }
+    const tmp11 = jsx(VoiceSensitivityDefault, { auto: vadAutoThreshold, threshold: vadThreshold, onThresholdChange: tmp9 });
+    cResult[4] = tmp9;
+    cResult[5] = vadAutoThreshold;
+    cResult[6] = vadThreshold;
+    cResult[7] = tmp11;
+    tmp10 = tmp11;
+    const tmpResult = inputMode(504);
+  }) : (() => {
+    const tmp = closure_6();
+    const items = [MediaEngineStore];
+    const stateFromStoresObject = inputMode(504).useStateFromStoresObject(items, () => ({ inputMode: MediaEngineStore.getMode(), vadThreshold: MediaEngineStore.getModeOptions().threshold, vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold }));
+    inputMode = stateFromStoresObject.inputMode;
+    const obj2 = {
+      style: tmp.slider,
+      children: jsx(VoiceSensitivityDefault, {
+        auto: vadAutoThreshold,
+        threshold: vadThreshold,
+        onThresholdChange(threshold) {
+          return AudioActionCreatorsDefault.setMode(inputMode, { threshold });
+        }
+      })
+    };
+    ({ vadThreshold, vadAutoThreshold } = stateFromStoresObject);
+    return <View style={tmp.slider}>{jsx(VoiceSensitivityDefault, {
+      auto: vadAutoThreshold,
+      threshold: vadThreshold,
+      onThresholdChange(threshold) {
+        return AudioActionCreatorsDefault.setMode(inputMode, { threshold });
+      }
+    })}</View>;
+  }),
+  useSearchTerms() {
+    const intl = util.intl;
+    const items = [intl.string(util.t.nuFtHH)];
+    return items;
+  }
+});

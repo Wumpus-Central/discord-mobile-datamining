@@ -3,137 +3,100 @@
 // Module 12052 (ApplicationCommandDiscovery)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import native from "native" /* 1188 */;
 import Server from "Server" /* 1985 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
 import useFontScale from "useFontScale" /* 5609 */;
 import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 8833 */;
-import ApplicationCommandsConstants from "ApplicationCommandsConstants" /* 10085 */;
-import AssetRegistryDefault from "AssetRegistry" /* 10160 */;
-import ApplicationCommandsCategoriesConstants from "ApplicationCommandsCategoriesConstants" /* 12053 */;
+import _modDef10160 from "module_10160" /* 10160 */;
 import ApplicationSectionHeader from "ApplicationSectionHeader" /* 12054 */;
 import ApplicationCommandDiscoveryManager from "ApplicationCommandDiscoveryManager" /* 12055 */;
 import ApplicationCommandsCategoriesDefault from "ApplicationCommandsCategories" /* 12058 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5795 */;
-import Constants from "Constants" /* 1085 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 const ApplicationSectionHeaderDefault = ApplicationSectionHeader;
-let dependencyMap;
 
-let c9;
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_16;
-let map1;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-({ View: metroRequire, SectionList: metroImportDefault } = react_native);
-({ BuiltInSectionId: metroImportAll, DISCOVERY_COMMANDS_QUERY_LIMIT: c9 } = ApplicationCommandConstants);
-const ITEM_HEIGHT = ApplicationCommandsCategoriesConstants.ITEM_HEIGHT;
-const AUTOCOMPLETE_ROW_HEIGHT = ApplicationCommandsConstants.AUTOCOMPLETE_ROW_HEIGHT;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, SectionList: closure_7 } = get_ActivityIndicator);
+const ApplicationCommandConstants = fn(5795);
+({ BuiltInSectionId: closure_8, DISCOVERY_COMMANDS_QUERY_LIMIT: closure_9 } = ApplicationCommandConstants);
+const ITEM_HEIGHT = fn(12053).ITEM_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(10085).AUTOCOMPLETE_ROW_HEIGHT;
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, SectionListElementType: map1 } = Constants);
-({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = Fragment);
-let obj = { discoveryWrapper: { flex: 1 }, noCommandsImage: { height: 50, width: 50, marginBottom: 16 }, noCommandsContainer: { padding: 0, height: 100 }, commandsList: obj2 };
-obj2 = { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
-let closure_17 = createStyles.createStyles(obj);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
-  let closure_18;
-  let closure_3;
-  let closure_6;
-  let commandsByActiveSection;
-  let filteredSectionId;
-  let first;
-  let loading;
-  let onPressSlashItem;
-  let ref;
-  let sectionDescriptors;
-  let style;
-  let sum;
-  let tmp11;
-  let tmp12;
-  let tmp35;
-  let tmp8;
-  let tmp2 = dependencyMap;
-  let obj = onPressSlashItem(576);
-  const cResult = obj.c(78);
+const jsxProd = fn(21);
+({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { discoveryWrapper: { flex: 1 }, noCommandsImage: { height: 50, width: 50, marginBottom: 16 }, noCommandsContainer: { padding: 0, height: 100 }, commandsList: { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND } };
+let closure_17 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandDiscovery.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
+  const cResult = onPressSlashItem(576).c(78);
   ({ style, onPressSlashItem } = onHeightChange);
   onHeightChange = onHeightChange.onHeightChange;
   const channel = onHeightChange.channel;
   const canOnlyUseTextCommands = onHeightChange.canOnlyUseTextCommands;
   let tmp4 = sum();
   dependencyMap = tmp4;
-  const obj2 = onPressSlashItem(5609);
-  const bound = Math.max(obj2.useFontScale() * commandsByActiveSection, commandsByActiveSection);
-  let obj3 = ref;
+  let obj = onPressSlashItem(576);
+  const bound = Math.max(onPressSlashItem(5609).useFontScale() * commandsByActiveSection, commandsByActiveSection);
   ref = ref.useRef(null);
-  let tmp7 = bound(ref.useState(0), 2);
-  [r10036, tmp8] = tmp7;
+  let obj2 = onPressSlashItem(5609);
+  [r10036, tmp8] = bound(ref.useState(0), 2);
   ref = ref.useRef(false);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function l(initialSectionId) {
       return initialSectionId.initialSectionId;
     };
     cResult[0] = fn;
-    first = fn;
+    let first = fn;
   } else {
     first = cResult[0];
   }
-  let tmpResult = onPressSlashItem(12055);
-  const commandDiscoveryManager = tmpResult.useCommandDiscoveryManager(first);
+  let tmp7 = bound(ref.useState(0), 2);
+  const commandDiscoveryManager = onPressSlashItem(12055).useCommandDiscoveryManager(first);
   if (cResult[1] !== channel) {
     const obj4 = { channel, type: "channel" };
-    let num = 1;
     cResult[1] = channel;
     cResult[2] = obj4;
-    tmp11 = obj4;
+    let tmp11 = obj4;
   } else {
     tmp11 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [onPressSlashItem(1985).ApplicationCommandType.CHAT];
-    let num2 = 3;
     cResult[3] = items;
-    tmp12 = items;
+    let tmp12 = items;
   } else {
     tmp12 = cResult[3];
   }
   const BuiltInCommandFilter = onPressSlashItem(8833).BuiltInCommandFilter;
   let tmp13 = canOnlyUseTextCommands ? BuiltInCommandFilter.ONLY_TEXT : BuiltInCommandFilter.ALLOW;
-  let tmp14 = !canOnlyUseTextCommands;
   if (cResult[4] === tmp13) {
-    let tmp15;
-    let tmp16;
     if (cResult[5] === tmp14) {
-      tmp15 = cResult[6];
+      let tmp15 = cResult[6];
     }
     const _Symbol = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
       let obj5 = { placeholderCount: 3, limit: sectionDescriptors, includeFrecency: true };
-      let num3 = 7;
       cResult[7] = obj5;
-      tmp16 = obj5;
+      let tmp16 = obj5;
     } else {
       tmp16 = cResult[7];
     }
     if (cResult[8] === tmp11) {
-      let tmp18;
       if (cResult[9] === tmp15) {
-        tmp18 = cResult[10];
+        let tmp18 = cResult[10];
       }
-      const obj9 = channel(8968);
-      const discovery = obj9.useDiscovery(tmp18);
+      const discovery = channel(8968).useDiscovery(tmp18);
       sectionDescriptors = discovery.sectionDescriptors;
       const activeSections = discovery.activeSections;
       commandsByActiveSection = discovery.commandsByActiveSection;
@@ -143,34 +106,27 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
       const filterSection = discovery.filterSection;
       if (cResult[11] === filterSection) {
         if (cResult[12] === commandDiscoveryManager) {
-          let tmp21;
-          let tmp22;
-          let tmp25;
-          let tmp24;
           if (cResult[13] === sectionDescriptors) {
-            tmp21 = cResult[14];
-            tmp22 = cResult[15];
+            let tmp21 = cResult[14];
+            let tmp22 = cResult[15];
           }
           const effect = obj3.useEffect(tmp22, tmp21);
           const _Symbol2 = Symbol;
           if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
             const fn2 = function j() {
-              const AccessibilityAnnouncer = onPressSlashItem(closure_3[18]).AccessibilityAnnouncer;
-              const announce = AccessibilityAnnouncer.announce;
-              const intl = onPressSlashItem(closure_3[19]).intl;
-              announce(intl.string(onPressSlashItem(closure_3[19]).t["2wfLMm"]));
-              let obj = onPressSlashItem(closure_3[20]);
-              obj.trackWithMetadata(hasMoreAfter.APPLICATION_COMMAND_BROWSER_OPENED);
+              const AccessibilityAnnouncer = onPressSlashItem(4596).AccessibilityAnnouncer;
+              const intl = onPressSlashItem(1126).intl;
+              AccessibilityAnnouncer.announce(intl.string(onPressSlashItem(1126).t["2wfLMm"]));
+              onPressSlashItem(5076).trackWithMetadata(hasMoreAfter.APPLICATION_COMMAND_BROWSER_OPENED);
               return () => {
-                const obj = onPressSlashItem(closure_1_3[14]);
-                const result = obj.updateInitialSectionId(undefined);
+                const result = onPressSlashItem(dependencyMap[14]).updateInitialSectionId(undefined);
               };
             };
             const items1 = [];
             cResult[16] = fn2;
             cResult[17] = items1;
-            tmp25 = items1;
-            tmp24 = fn2;
+            let tmp25 = items1;
+            let tmp24 = fn2;
           } else {
             tmp24 = cResult[16];
             tmp25 = cResult[17];
@@ -178,22 +134,18 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
           const effect1 = obj3.useEffect(tmp24, tmp25);
           if (cResult[18] === commandsByActiveSection) {
             if (cResult[19] === onHeightChange) {
-              let tmp27;
-              let tmp28;
               if (cResult[20] === bound) {
-                tmp27 = cResult[21];
-                tmp28 = cResult[22];
+                let tmp27 = cResult[21];
+                let tmp28 = cResult[22];
               }
               const effect2 = obj3.useEffect(tmp27, tmp28);
               if (cResult[23] === filterSection) {
                 if (cResult[24] === filteredSectionId) {
-                  let items2;
                   const _Symbol3 = Symbol;
                   if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
                     function re() {
-                      ref.current = true;
-                      const obj = AppAnalyticsUtils;
-                      obj.trackWithMetadata(hasMoreAfter.APPLICATION_COMMAND_BROWSER_SCROLLED);
+                      closure_7.current = true;
+                      AppAnalyticsUtils.trackWithMetadata(constants2.APPLICATION_COMMAND_BROWSER_SCROLLED);
                     }
                     cResult[27] = re;
                   }
@@ -202,13 +154,12 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
                     function le(nativeEvent) {
                       nativeEvent = nativeEvent.nativeEvent;
                       const targetContentOffset = nativeEvent.targetContentOffset;
-                      let y1;
-                      const y = nativeEvent.contentOffset.y;
+                      let y;
                       if (targetContentOffset != null) {
-                        y1 = targetContentOffset.y;
+                        y = targetContentOffset.y;
                       }
-                      if (y === y1) {
-                        ref.current = false;
+                      if (nativeEvent.contentOffset.y === y) {
+                        closure_7.current = false;
                       }
                     }
                     cResult[28] = le;
@@ -216,7 +167,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
                   const _Symbol5 = Symbol;
                   if (cResult[29] === Symbol.for("react.memo_cache_sentinel")) {
                     function se(arg0) {
-                      ref.current = false;
+                      closure_7.current = false;
                     }
                     cResult[29] = se;
                   }
@@ -224,16 +175,12 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
                   if (cResult[30] === commandsByActiveSection) {
                     if (cResult[31] === bound) {
                       if (cResult[32] === sectionDescriptors) {
-                        let tmp40;
                         if (cResult[33] === sum) {
-                          items2 = cResult[34];
+                          let items2 = cResult[34];
                           sum = cResult[35];
                         }
                         if (cResult[36] !== tmp35) {
-                          let tmp41 = onHeightChange;
-                          let tmp42 = dependencyMap;
-                          const obj10 = onHeightChange(12);
-                          const throttleResult = obj10.throttle((arg0) => {
+                          const throttleResult = onHeightChange(12).throttle((arg0) => {
                             let num = 0;
                             if (0 < tmp35.length) {
                               let num2 = 0;
@@ -267,11 +214,12 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
                           }, 100);
                           cResult[36] = tmp35;
                           cResult[37] = throttleResult;
-                          tmp40 = throttleResult;
+                          let tmp40 = throttleResult;
+                          const obj10 = onHeightChange(12);
                         } else {
                           tmp40 = cResult[37];
                         }
-                        let closure_19 = tmp40;
+                        closure_19 = tmp40;
                         if (cResult[38] === activeSections) {
                           if (cResult[39] === commandsByActiveSection) {
                             if (cResult[40] === hasMoreAfter) {
@@ -279,176 +227,316 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
                                 if (cResult[42] === scrollDown) {
                                   if (cResult[45] !== bound) {
                                     class Se {
-                                      constructor(arg0, index) {
-                                        if (null == arg0) {
-                                          return { length: 0, offset: 0, index };
+                                      constructor(arg0, arg1) {
+                                        if (null == onHeightChange) {
+                                          obj1 = { length: 0, offset: 0, index: null };
+                                          obj1.index = arg1;
+                                          return obj1;
                                         } else {
-                                          let num = 0;
-                                          let num2 = 0;
-                                          let num3 = 0;
-                                          let ROW = map1.ROW;
-                                          const iter = arg0[Symbol.iterator]();
-                                          const nextResult = iter.next();
+                                          num = 0;
+                                          num2 = 0;
+                                          num3 = 0;
+                                          tmp36 = SectionListElementType;
+                                          tmp37 = SectionListElementType;
+                                          ROW = SectionListElementType.ROW;
+                                          tmp38 = onHeightChange;
+                                          iter = onHeightChange[Symbol.iterator]();
+                                          num5 = 1;
+                                          tmp = onHeightChange;
+                                          nextResult = iter.next();
+                                          tmp3 = iter;
                                           while (iter !== undefined) {
-                                            let num4;
-                                            let tmp4 = nextResult;
-                                            if (num + num2 + nextResult.data.length + num3 + 1 >= index) {
-                                              if (index === num + num2 + num3) {
-                                                ROW = map1.HEADER;
-                                              } else if (index === num + num2 + tmp4.data.length + num3 + 1) {
-                                                num = num + 1;
-                                                num2 = num2 + nextResult.data.length;
-                                                ROW = map1.FOOTER;
+                                            tmp4 = nextResult;
+                                            tmp5 = num;
+                                            tmp6 = num2;
+                                            tmp7 = num3;
+                                            if (num + num2 + nextResult.data.length + num3 + 1 >= arg1) {
+                                              tmp12 = num;
+                                              tmp13 = num2;
+                                              tmp14 = num3;
+                                              if (arg1 === num + num2 + num3) {
+                                                tmp24 = SectionListElementType;
+                                                tmp25 = SectionListElementType;
+                                                ROW = SectionListElementType.HEADER;
                                               } else {
-                                                sum = num + 1;
-                                                num = sum;
-                                                num2 = num2 + (index - sum - num2 - num3);
-                                                ROW = map1.ROW;
+                                                tmp39 = num;
+                                                tmp40 = num2;
+                                                tmp41 = nextResult;
+                                                tmp42 = num3;
+                                                if (arg1 === num + num2 + tmp4.data.length + num3 + 1) {
+                                                  tmp20 = num;
+                                                  num = num + 1;
+                                                  tmp21 = num2;
+                                                  num2 = num2 + nextResult.data.length;
+                                                  tmp22 = SectionListElementType;
+                                                  tmp23 = SectionListElementType;
+                                                  ROW = SectionListElementType.FOOTER;
+                                                } else {
+                                                  tmp15 = num2;
+                                                  tmp16 = num;
+                                                  sum = num + 1;
+                                                  num = sum;
+                                                  num2 = num2 + (arg1 - sum - num2 - num3);
+                                                  tmp18 = SectionListElementType;
+                                                  tmp19 = SectionListElementType;
+                                                  ROW = SectionListElementType.ROW;
+                                                }
                                               }
+                                              tmp26 = iter;
                                               iter.return();
                                               break;
                                             } else {
+                                              tmp8 = num;
                                               num = num + 1;
+                                              tmp9 = num2;
+                                              tmp10 = nextResult;
                                               num2 = num2 + tmp4.data.length;
+                                              tmp11 = num3;
                                               num3 = num3 + 1;
                                               continue;
                                             }
-                                            if (map1.ROW === ROW) {
-                                              num4 = bound;
-                                            } else if (tmp29.HEADER === ROW) {
-                                              num4 = ApplicationSectionHeader.APPLICATION_SECTION_HEADER_HEIGHT;
+                                            tmp27 = ROW;
+                                            tmp28 = SectionListElementType;
+                                            if (SectionListElementType.ROW === ROW) {
+                                              num4 = closure_4;
                                             } else {
-                                              let FOOTER = map1.FOOTER;
-                                              num4 = 0;
+                                              tmp30 = tmp28;
+                                              if (tmp29.HEADER === ROW) {
+                                                tmp31 = closure_0;
+                                                tmp32 = closure_3;
+                                                num4 = closure_0(closure_3[8]).APPLICATION_SECTION_HEADER_HEIGHT;
+                                              } else {
+                                                FOOTER = tmp28.FOOTER;
+                                                num4 = 0;
+                                              }
                                             }
-                                            let obj = { length: num4, offset: num * ApplicationSectionHeader.APPLICATION_SECTION_HEADER_HEIGHT + num2 * bound, index };
+                                            obj = { length: null, offset: null, index: null };
+                                            obj.length = num4;
+                                            tmp33 = closure_0;
+                                            tmp34 = closure_3;
+                                            tmp35 = closure_4;
+                                            obj.offset = num * closure_0(closure_3[8]).APPLICATION_SECTION_HEADER_HEIGHT + num2 * closure_4;
+                                            obj.index = arg1;
                                             return obj;
                                           }
                                         }
+                                        return;
                                       }
                                     }
                                     cResult[45] = bound;
                                     cResult[46] = Se;
                                   } else {
                                     class Se {
-                                      constructor(arg0, index) {
-                                        if (null == arg0) {
-                                          return { length: 0, offset: 0, index };
+                                      constructor(arg0, arg1) {
+                                        if (null == onHeightChange) {
+                                          obj1 = { length: 0, offset: 0, index: null };
+                                          obj1.index = arg1;
+                                          return obj1;
                                         } else {
-                                          let num = 0;
-                                          let num2 = 0;
-                                          let num3 = 0;
-                                          let ROW = map1.ROW;
-                                          const iter = arg0[Symbol.iterator]();
-                                          const nextResult = iter.next();
+                                          num = 0;
+                                          num2 = 0;
+                                          num3 = 0;
+                                          tmp36 = SectionListElementType;
+                                          tmp37 = SectionListElementType;
+                                          ROW = SectionListElementType.ROW;
+                                          tmp38 = onHeightChange;
+                                          iter = onHeightChange[Symbol.iterator]();
+                                          num5 = 1;
+                                          tmp = onHeightChange;
+                                          nextResult = iter.next();
+                                          tmp3 = iter;
                                           while (iter !== undefined) {
-                                            let num4;
-                                            let tmp4 = nextResult;
-                                            if (num + num2 + nextResult.data.length + num3 + 1 >= index) {
-                                              if (index === num + num2 + num3) {
-                                                ROW = map1.HEADER;
-                                              } else if (index === num + num2 + tmp4.data.length + num3 + 1) {
-                                                num = num + 1;
-                                                num2 = num2 + nextResult.data.length;
-                                                ROW = map1.FOOTER;
+                                            tmp4 = nextResult;
+                                            tmp5 = num;
+                                            tmp6 = num2;
+                                            tmp7 = num3;
+                                            if (num + num2 + nextResult.data.length + num3 + 1 >= arg1) {
+                                              tmp12 = num;
+                                              tmp13 = num2;
+                                              tmp14 = num3;
+                                              if (arg1 === num + num2 + num3) {
+                                                tmp24 = SectionListElementType;
+                                                tmp25 = SectionListElementType;
+                                                ROW = SectionListElementType.HEADER;
                                               } else {
-                                                sum = num + 1;
-                                                num = sum;
-                                                num2 = num2 + (index - sum - num2 - num3);
-                                                ROW = map1.ROW;
+                                                tmp39 = num;
+                                                tmp40 = num2;
+                                                tmp41 = nextResult;
+                                                tmp42 = num3;
+                                                if (arg1 === num + num2 + tmp4.data.length + num3 + 1) {
+                                                  tmp20 = num;
+                                                  num = num + 1;
+                                                  tmp21 = num2;
+                                                  num2 = num2 + nextResult.data.length;
+                                                  tmp22 = SectionListElementType;
+                                                  tmp23 = SectionListElementType;
+                                                  ROW = SectionListElementType.FOOTER;
+                                                } else {
+                                                  tmp15 = num2;
+                                                  tmp16 = num;
+                                                  sum = num + 1;
+                                                  num = sum;
+                                                  num2 = num2 + (arg1 - sum - num2 - num3);
+                                                  tmp18 = SectionListElementType;
+                                                  tmp19 = SectionListElementType;
+                                                  ROW = SectionListElementType.ROW;
+                                                }
                                               }
+                                              tmp26 = iter;
                                               iter.return();
                                               break;
                                             } else {
+                                              tmp8 = num;
                                               num = num + 1;
+                                              tmp9 = num2;
+                                              tmp10 = nextResult;
                                               num2 = num2 + tmp4.data.length;
+                                              tmp11 = num3;
                                               num3 = num3 + 1;
                                               continue;
                                             }
-                                            if (map1.ROW === ROW) {
-                                              num4 = bound;
-                                            } else if (tmp29.HEADER === ROW) {
-                                              num4 = ApplicationSectionHeader.APPLICATION_SECTION_HEADER_HEIGHT;
+                                            tmp27 = ROW;
+                                            tmp28 = SectionListElementType;
+                                            if (SectionListElementType.ROW === ROW) {
+                                              num4 = closure_4;
                                             } else {
-                                              let FOOTER = map1.FOOTER;
-                                              num4 = 0;
+                                              tmp30 = tmp28;
+                                              if (tmp29.HEADER === ROW) {
+                                                tmp31 = closure_0;
+                                                tmp32 = closure_3;
+                                                num4 = closure_0(closure_3[8]).APPLICATION_SECTION_HEADER_HEIGHT;
+                                              } else {
+                                                FOOTER = tmp28.FOOTER;
+                                                num4 = 0;
+                                              }
                                             }
-                                            let obj = { length: num4, offset: num * ApplicationSectionHeader.APPLICATION_SECTION_HEADER_HEIGHT + num2 * bound, index };
+                                            obj = { length: null, offset: null, index: null };
+                                            obj.length = num4;
+                                            tmp33 = closure_0;
+                                            tmp34 = closure_3;
+                                            tmp35 = closure_4;
+                                            obj.offset = num * closure_0(closure_3[8]).APPLICATION_SECTION_HEADER_HEIGHT + num2 * closure_4;
+                                            obj.index = arg1;
                                             return obj;
                                           }
                                         }
+                                        return;
                                       }
                                     }
                                   }
                                   if (cResult[47] === channel.guild_id) {
                                     class Se {
-                                      constructor(arg0, index) {
-                                        if (null == arg0) {
-                                          return { length: 0, offset: 0, index };
+                                      constructor(arg0, arg1) {
+                                        if (null == onHeightChange) {
+                                          obj1 = { length: 0, offset: 0, index: null };
+                                          obj1.index = arg1;
+                                          return obj1;
                                         } else {
-                                          let num = 0;
-                                          let num2 = 0;
-                                          let num3 = 0;
-                                          let ROW = map1.ROW;
-                                          const iter = arg0[Symbol.iterator]();
-                                          const nextResult = iter.next();
+                                          num = 0;
+                                          num2 = 0;
+                                          num3 = 0;
+                                          tmp36 = SectionListElementType;
+                                          tmp37 = SectionListElementType;
+                                          ROW = SectionListElementType.ROW;
+                                          tmp38 = onHeightChange;
+                                          iter = onHeightChange[Symbol.iterator]();
+                                          num5 = 1;
+                                          tmp = onHeightChange;
+                                          nextResult = iter.next();
+                                          tmp3 = iter;
                                           while (iter !== undefined) {
-                                            let num4;
-                                            let tmp4 = nextResult;
-                                            if (num + num2 + nextResult.data.length + num3 + 1 >= index) {
-                                              if (index === num + num2 + num3) {
-                                                ROW = map1.HEADER;
-                                              } else if (index === num + num2 + tmp4.data.length + num3 + 1) {
-                                                num = num + 1;
-                                                num2 = num2 + nextResult.data.length;
-                                                ROW = map1.FOOTER;
+                                            tmp4 = nextResult;
+                                            tmp5 = num;
+                                            tmp6 = num2;
+                                            tmp7 = num3;
+                                            if (num + num2 + nextResult.data.length + num3 + 1 >= arg1) {
+                                              tmp12 = num;
+                                              tmp13 = num2;
+                                              tmp14 = num3;
+                                              if (arg1 === num + num2 + num3) {
+                                                tmp24 = SectionListElementType;
+                                                tmp25 = SectionListElementType;
+                                                ROW = SectionListElementType.HEADER;
                                               } else {
-                                                sum = num + 1;
-                                                num = sum;
-                                                num2 = num2 + (index - sum - num2 - num3);
-                                                ROW = map1.ROW;
+                                                tmp39 = num;
+                                                tmp40 = num2;
+                                                tmp41 = nextResult;
+                                                tmp42 = num3;
+                                                if (arg1 === num + num2 + tmp4.data.length + num3 + 1) {
+                                                  tmp20 = num;
+                                                  num = num + 1;
+                                                  tmp21 = num2;
+                                                  num2 = num2 + nextResult.data.length;
+                                                  tmp22 = SectionListElementType;
+                                                  tmp23 = SectionListElementType;
+                                                  ROW = SectionListElementType.FOOTER;
+                                                } else {
+                                                  tmp15 = num2;
+                                                  tmp16 = num;
+                                                  sum = num + 1;
+                                                  num = sum;
+                                                  num2 = num2 + (arg1 - sum - num2 - num3);
+                                                  tmp18 = SectionListElementType;
+                                                  tmp19 = SectionListElementType;
+                                                  ROW = SectionListElementType.ROW;
+                                                }
                                               }
+                                              tmp26 = iter;
                                               iter.return();
                                               break;
                                             } else {
+                                              tmp8 = num;
                                               num = num + 1;
+                                              tmp9 = num2;
+                                              tmp10 = nextResult;
                                               num2 = num2 + tmp4.data.length;
+                                              tmp11 = num3;
                                               num3 = num3 + 1;
                                               continue;
                                             }
-                                            if (map1.ROW === ROW) {
-                                              num4 = bound;
-                                            } else if (tmp29.HEADER === ROW) {
-                                              num4 = ApplicationSectionHeader.APPLICATION_SECTION_HEADER_HEIGHT;
+                                            tmp27 = ROW;
+                                            tmp28 = SectionListElementType;
+                                            if (SectionListElementType.ROW === ROW) {
+                                              num4 = closure_4;
                                             } else {
-                                              let FOOTER = map1.FOOTER;
-                                              num4 = 0;
+                                              tmp30 = tmp28;
+                                              if (tmp29.HEADER === ROW) {
+                                                tmp31 = closure_0;
+                                                tmp32 = closure_3;
+                                                num4 = closure_0(closure_3[8]).APPLICATION_SECTION_HEADER_HEIGHT;
+                                              } else {
+                                                FOOTER = tmp28.FOOTER;
+                                                num4 = 0;
+                                              }
                                             }
-                                            let obj = { length: num4, offset: num * ApplicationSectionHeader.APPLICATION_SECTION_HEADER_HEIGHT + num2 * bound, index };
+                                            obj = { length: null, offset: null, index: null };
+                                            obj.length = num4;
+                                            tmp33 = closure_0;
+                                            tmp34 = closure_3;
+                                            tmp35 = closure_4;
+                                            obj.offset = num * closure_0(closure_3[8]).APPLICATION_SECTION_HEADER_HEIGHT + num2 * closure_4;
+                                            obj.index = arg1;
                                             return obj;
                                           }
                                         }
+                                        return;
                                       }
                                     }
                                   }
                                   function renderSectionHeader(section) {
-                                    let intl;
-                                    let obj5;
                                     section = section.section;
-                                    const children = [, ];
-                                    const obj = { section: section.section, guildId: channel.guild_id };
-                                    children[0] = authStore2(ApplicationSectionHeaderDefault, obj, section.section.id);
+                                    const children = [state(ApplicationSectionHeaderDefault, { section: section.section, guildId: channel.guild_id }, section.section.id), ];
                                     let tmp3Result = 0 === section.data.length;
                                     if (tmp3Result) {
-                                      const obj3 = { lightSource: AssetRegistryDefault, darkSource: AssetRegistryDefault, body: intl.format(intl2.t.WoQXT6, obj5), containerStyle: null, imageStyle: null };
-                                      const ThemedEmptyState = native.ThemedEmptyState;
-                                      intl = intl2.intl;
-                                      obj5 = { applicationName: section.section.name };
+                                      const obj3 = { lightSource: _modDef10160, darkSource: _modDef10160, body: null, containerStyle: null, imageStyle: null };
+                                      const intl = util.intl;
+                                      const obj5 = { applicationName: section.section.name };
+                                      obj3.body = intl.format(util.t.WoQXT6, obj5);
                                       ({ noCommandsContainer: obj2.containerStyle, noCommandsImage: obj2.imageStyle } = closure_3);
-                                      tmp3Result = authStore2(ThemedEmptyState, obj3);
+                                      tmp3Result = state(native.ThemedEmptyState, obj3);
                                     }
                                     children[1] = tmp3Result;
-                                    return authStore3(closure_15, { children });
+                                    return value2(closure_2_15, { children });
                                   }
                                   cResult[47] = channel.guild_id;
                                   cResult[48] = tmp4.noCommandsContainer;
@@ -460,31 +548,35 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
                           }
                         }
                         function onScroll(nativeEvent) {
-                          let contentInset;
-                          let contentSize;
-                          let layoutMeasurement;
                           nativeEvent = nativeEvent.nativeEvent;
                           ({ layoutMeasurement, contentSize, contentInset } = nativeEvent);
                           const y = nativeEvent.contentOffset.y;
                           closure_19(y);
-                          const tmp2 = !ref.current && activeSections.length > 0;
+                          const current = ref.current;
+                          let tmp2 = !current;
+                          if (!current) {
+                            tmp2 = activeSections.length > 0;
+                          }
                           if (tmp2) {
                             if (y < contentInset.top) {
-                              const current = ref.current;
-                              if (current != null) {
-                                current.scrollToLocation({ sectionIndex: 0, itemIndex: 0, viewPosition: 0, animated: false });
-                              }
-                            } else if (y > contentSize.height - layoutMeasurement.height - contentInset.bottom) {
                               const current2 = ref.current;
                               if (current2 != null) {
+                                current2.scrollToLocation({ sectionIndex: 0, itemIndex: 0, viewPosition: 0, animated: false });
+                              }
+                            } else if (y > contentSize.height - layoutMeasurement.height - contentInset.bottom) {
+                              const current3 = ref.current;
+                              if (current3 != null) {
+                                const obj = { sectionIndex: activeSections.length - 1, itemIndex: null, viewPosition: 1, animated: false };
                                 const _Math = Math;
-                                const scrollToLocation = current2.scrollToLocation;
-                                const obj = { sectionIndex: activeSections.length - 1, itemIndex: Math.max(commandsByActiveSection[commandsByActiveSection.length - 1].data.length - 1, 0), viewPosition: 1, animated: false };
-                                scrollToLocation(obj);
+                                obj.itemIndex = Math.max(commandsByActiveSection[commandsByActiveSection.length - 1].data.length - 1, 0);
+                                current3.scrollToLocation(obj);
                               }
                             }
                           }
-                          const tmp7 = hasMoreAfter && y + layoutMeasurement.height >= contentSize.height - 3 * bound;
+                          let tmp7 = hasMoreAfter;
+                          if (hasMoreAfter) {
+                            tmp7 = y + layoutMeasurement.height >= contentSize.height - 3 * bound;
+                          }
                           if (tmp7) {
                             scrollDown();
                           }
@@ -497,15 +589,20 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
                         cResult[43] = tmp40;
                         class X {
                           constructor() {
-                            if (null != commandDiscoveryManager) {
-                              filterSection(tmp);
-                              const findIndexResult = sectionDescriptors.findIndex((id) => id.id === commandDiscoveryManager);
-                              let num2 = 0;
+                            if (null != closure_8) {
+                              tmp2 = filterSection;
+                              tmp3 = filterSection(tmp);
+                              tmp4 = sectionDescriptors;
+                              findIndexResult = sectionDescriptors.findIndex((id) => id.id === commandDiscoveryManager);
+                              num = -1;
+                              num2 = 0;
+                              tmp6 = closure_6;
                               if (-1 !== findIndexResult) {
                                 num2 = findIndexResult;
                               }
-                              tmp8(num2);
+                              tmp6Result = tmp6(num2);
                             }
+                            return;
                           }
                         }
                       }
@@ -514,52 +611,100 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
                   items2 = [];
                   for (const item10189 of sectionDescriptors) {
                     class Se {
-                      constructor(arg0, index) {
+                      constructor(arg0, arg1) {
                         if (null == arg0) {
-                          return { length: 0, offset: 0, index };
+                          obj1 = { length: 0, offset: 0, index: null };
+                          obj1.index = arg1;
+                          return obj1;
                         } else {
-                          let num = 0;
-                          let num2 = 0;
-                          let num3 = 0;
-                          let ROW = map1.ROW;
-                          const iter = arg0[Symbol.iterator]();
-                          const nextResult = iter.next();
+                          num = 0;
+                          num2 = 0;
+                          num3 = 0;
+                          tmp36 = SectionListElementType;
+                          tmp37 = SectionListElementType;
+                          ROW = SectionListElementType.ROW;
+                          tmp38 = arg0;
+                          iter = arg0[Symbol.iterator]();
+                          num5 = 1;
+                          tmp = arg0;
+                          nextResult = iter.next();
+                          tmp3 = iter;
                           while (iter !== undefined) {
-                            let num4;
-                            let tmp4 = nextResult;
-                            if (num + num2 + nextResult.data.length + num3 + 1 >= index) {
-                              if (index === num + num2 + num3) {
-                                ROW = map1.HEADER;
-                              } else if (index === num + num2 + tmp4.data.length + num3 + 1) {
-                                num = num + 1;
-                                num2 = num2 + nextResult.data.length;
-                                ROW = map1.FOOTER;
+                            tmp4 = nextResult;
+                            tmp5 = num;
+                            tmp6 = num2;
+                            tmp7 = num3;
+                            if (num + num2 + nextResult.data.length + num3 + 1 >= arg1) {
+                              tmp12 = num;
+                              tmp13 = num2;
+                              tmp14 = num3;
+                              if (arg1 === num + num2 + num3) {
+                                tmp24 = SectionListElementType;
+                                tmp25 = SectionListElementType;
+                                ROW = SectionListElementType.HEADER;
                               } else {
-                                sum = num + 1;
-                                num = sum;
-                                num2 = num2 + (index - sum - num2 - num3);
-                                ROW = map1.ROW;
+                                tmp39 = num;
+                                tmp40 = num2;
+                                tmp41 = nextResult;
+                                tmp42 = num3;
+                                if (arg1 === num + num2 + tmp4.data.length + num3 + 1) {
+                                  tmp20 = num;
+                                  num = num + 1;
+                                  tmp21 = num2;
+                                  num2 = num2 + nextResult.data.length;
+                                  tmp22 = SectionListElementType;
+                                  tmp23 = SectionListElementType;
+                                  ROW = SectionListElementType.FOOTER;
+                                } else {
+                                  tmp15 = num2;
+                                  tmp16 = num;
+                                  sum = num + 1;
+                                  num = sum;
+                                  num2 = num2 + (arg1 - sum - num2 - num3);
+                                  tmp18 = SectionListElementType;
+                                  tmp19 = SectionListElementType;
+                                  ROW = SectionListElementType.ROW;
+                                }
                               }
+                              tmp26 = iter;
                               iter.return();
                               break;
                             } else {
+                              tmp8 = num;
                               num = num + 1;
+                              tmp9 = num2;
+                              tmp10 = nextResult;
                               num2 = num2 + tmp4.data.length;
+                              tmp11 = num3;
                               num3 = num3 + 1;
                               continue;
                             }
-                            if (map1.ROW === ROW) {
-                              num4 = bound;
-                            } else if (tmp29.HEADER === ROW) {
-                              num4 = ApplicationSectionHeader.APPLICATION_SECTION_HEADER_HEIGHT;
+                            tmp27 = ROW;
+                            tmp28 = SectionListElementType;
+                            if (SectionListElementType.ROW === ROW) {
+                              num4 = closure_4;
                             } else {
-                              let FOOTER = map1.FOOTER;
-                              num4 = 0;
+                              tmp30 = tmp28;
+                              if (tmp29.HEADER === ROW) {
+                                tmp31 = closure_0;
+                                tmp32 = closure_3;
+                                num4 = closure_0(closure_3[8]).APPLICATION_SECTION_HEADER_HEIGHT;
+                              } else {
+                                FOOTER = tmp28.FOOTER;
+                                num4 = 0;
+                              }
                             }
-                            let obj = { length: num4, offset: num * ApplicationSectionHeader.APPLICATION_SECTION_HEADER_HEIGHT + num2 * bound, index };
+                            obj = { length: null, offset: null, index: null };
+                            obj.length = num4;
+                            tmp33 = closure_0;
+                            tmp34 = closure_3;
+                            tmp35 = closure_4;
+                            obj.offset = num * closure_0(closure_3[8]).APPLICATION_SECTION_HEADER_HEIGHT + num2 * closure_4;
+                            obj.index = arg1;
                             return obj;
                           }
                         }
+                        return;
                       }
                     }
                     continue;
@@ -567,34 +712,35 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
                   cResult[30] = commandsByActiveSection;
                   class X {
                     constructor() {
-                      if (null != commandDiscoveryManager) {
-                        filterSection(tmp);
-                        const findIndexResult = sectionDescriptors.findIndex((id) => id.id === commandDiscoveryManager);
-                        let num2 = 0;
+                      if (null != closure_8) {
+                        tmp2 = filterSection;
+                        tmp3 = filterSection(tmp);
+                        tmp4 = sectionDescriptors;
+                        findIndexResult = sectionDescriptors.findIndex((id) => id.id === commandDiscoveryManager);
+                        num = -1;
+                        num2 = 0;
+                        tmp6 = closure_6;
                         if (-1 !== findIndexResult) {
                           num2 = findIndexResult;
                         }
-                        tmp8(num2);
+                        tmp6Result = tmp6(num2);
                       }
+                      return;
                     }
                   }
                   cResult[32] = sectionDescriptors;
                   cResult[33] = sum;
                   cResult[34] = items2;
-                  let tmp39 = sum;
                   cResult[35] = sum;
-                  tmp35 = items2;
                 }
               }
               const fn4 = function q(arg0) {
-                let tmp8;
                 if (sectionDescriptors[arg0].id !== filteredSectionId) {
-                  if (sectionDescriptors[arg0].id !== metroImportAll.FRECENCY) {
-                    filterSection(sectionDescriptors[arg0].id);
+                  if (tmp.id !== constants.FRECENCY) {
+                    filterSection(tmp.id);
                     tmp8(arg0);
                   }
-                  const obj = ApplicationCommandDiscoveryManager;
-                  const result = obj.updateInitialSectionId(undefined);
+                  const result = ApplicationCommandDiscoveryManager.updateInitialSectionId(undefined);
                 }
                 filterSection(null);
                 tmp8 = tmp8(0);
@@ -607,15 +753,14 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
           }
           const fn3 = function z() {
             if (onHeightChange != null) {
-              let closure_0 = bound;
+              closure_0 = bound;
               let num2 = 0;
               if (0 !== commandsByActiveSection.length) {
                 num2 = commandsByActiveSection.reduce((acc, data) => {
-                  let sum;
                   if (0 === data.data.length) {
-                    sum = closure_2_0(closure_2_3[8]).APPLICATION_SECTION_HEADER_HEIGHT + 160;
+                    let sum = require("ApplicationSectionHeader").APPLICATION_SECTION_HEADER_HEIGHT + 160;
                   } else {
-                    sum = acc + (closure_2_0(closure_2_3[8]).APPLICATION_SECTION_HEADER_HEIGHT + (closure_0 + sectionDescriptors) * data.data.length);
+                    sum = acc + (require("ApplicationSectionHeader").APPLICATION_SECTION_HEADER_HEIGHT + (closure_0 + sectionDescriptors) * data.data.length);
                   }
                   return sum;
                 }, 0);
@@ -630,15 +775,20 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
           cResult[21] = fn3;
           class X {
             constructor() {
-              if (null != commandDiscoveryManager) {
-                filterSection(tmp);
-                const findIndexResult = sectionDescriptors.findIndex((id) => id.id === commandDiscoveryManager);
-                let num2 = 0;
+              if (null != closure_8) {
+                tmp2 = filterSection;
+                tmp3 = filterSection(tmp);
+                tmp4 = sectionDescriptors;
+                findIndexResult = sectionDescriptors.findIndex((id) => id.id === commandDiscoveryManager);
+                num = -1;
+                num2 = 0;
+                tmp6 = closure_6;
                 if (-1 !== findIndexResult) {
                   num2 = findIndexResult;
                 }
-                tmp8(num2);
+                tmp6Result = tmp6(num2);
               }
+              return;
             }
           }
           cResult[22] = items3;
@@ -648,15 +798,20 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
       }
       class X {
         constructor() {
-          if (null != commandDiscoveryManager) {
-            filterSection(tmp);
-            const findIndexResult = sectionDescriptors.findIndex((id) => id.id === commandDiscoveryManager);
-            let num2 = 0;
+          if (null != closure_8) {
+            tmp2 = filterSection;
+            tmp3 = filterSection(tmp);
+            tmp4 = sectionDescriptors;
+            findIndexResult = sectionDescriptors.findIndex((id) => id.id === commandDiscoveryManager);
+            num = -1;
+            num2 = 0;
+            tmp6 = closure_6;
             if (-1 !== findIndexResult) {
               num2 = findIndexResult;
             }
-            tmp8(num2);
+            tmp6Result = tmp6(num2);
           }
+          return;
         }
       }
       const items4 = [filterSection, commandDiscoveryManager, tmp8, sectionDescriptors];
@@ -667,38 +822,21 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
       cResult[15] = X;
       tmp22 = X;
       tmp21 = items4;
+      const obj9 = channel(8968);
     }
     const obj6 = { context: tmp11, filters: tmp15, options: tmp16, allowFetch: true };
-    let num4 = 8;
     cResult[8] = tmp11;
     cResult[9] = tmp15;
     cResult[10] = obj6;
     tmp18 = obj6;
   }
-  const obj7 = { commandTypes: tmp12, builtIns: tmp13, applicationCommands: tmp14 };
+  const obj7 = { commandTypes: tmp12, builtIns: tmp13, applicationCommands: !canOnlyUseTextCommands };
   cResult[4] = tmp13;
-  cResult[5] = tmp14;
+  cResult[5] = !canOnlyUseTextCommands;
   cResult[6] = obj7;
   tmp15 = obj7;
+  let tmpResult = onPressSlashItem(12055);
 }) : (function ApplicationCommandDiscovery(channel) {
-  let BuiltInCommandFilter;
-  let _undefined;
-  let _undefined2;
-  let c11;
-  let c13;
-  let c15;
-  let closure_3;
-  let commandsByActiveSection;
-  let filterSection;
-  let filteredSectionId;
-  let items;
-  let items8;
-  let items9;
-  let obj5;
-  let obj6;
-  let obj9;
-  let onHeightChange;
-  let require;
   ({ onPressSlashItem: require, onHeightChange } = channel);
   channel = channel.channel;
   const canOnlyUseTextCommands = channel.canOnlyUseTextCommands;
@@ -710,34 +848,30 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
   c15 = undefined;
   filterSection = undefined;
   let onPressSection;
-  const style = channel.style;
   let tmp = onPressSection();
   dependencyMap = tmp;
-  let obj = useFontScale;
-  const bound = Math.max(obj.useFontScale() * c11, c11);
-  const obj2 = ref;
+  const bound = Math.max(useFontScale.useFontScale() * c11, c11);
   ref = ref.useRef(null);
   let tmp4 = bound(ref.useState(0), 2);
   const selectedIndex = tmp4[0];
-  let tmp6 = tmp4[1];
-  let closure_7 = tmp6;
+  closure_7 = tmp6;
   ref = ref.useRef(false);
-  let obj3 = ApplicationCommandDiscoveryManager;
-  const commandDiscoveryManager = obj3.useCommandDiscoveryManager((initialSectionId) => initialSectionId.initialSectionId);
-  let tmp8 = channel(8968);
-  const obj4 = { context: { channel, type: "channel" }, filters: obj5, options: obj6, allowFetch: true };
-  obj5 = { commandTypes: items, builtIns: canOnlyUseTextCommands ? BuiltInCommandFilter.ONLY_TEXT : BuiltInCommandFilter.ALLOW, applicationCommands: !canOnlyUseTextCommands };
-  const useDiscovery = tmp8.useDiscovery;
-  items = [Server.ApplicationCommandType.CHAT];
-  BuiltInCommandFilter = ApplicationCommandQueryTypes.BuiltInCommandFilter;
-  obj6 = { placeholderCount: 3, limit: commandDiscoveryManager, includeFrecency: true };
-  const discovery = useDiscovery(obj4);
+  const commandDiscoveryManager = ApplicationCommandDiscoveryManager.useCommandDiscoveryManager((initialSectionId) => initialSectionId.initialSectionId);
+  let obj5 = { context: { channel, type: "channel" }, filters: null, options: null, allowFetch: true };
+  const obj6 = { commandTypes: null, builtIns: null, applicationCommands: null };
+  let items = [Server.ApplicationCommandType.CHAT];
+  obj6.commandTypes = items;
+  const BuiltInCommandFilter = ApplicationCommandQueryTypes.BuiltInCommandFilter;
+  obj6.builtIns = canOnlyUseTextCommands ? BuiltInCommandFilter.ONLY_TEXT : BuiltInCommandFilter.ALLOW;
+  obj6.applicationCommands = !canOnlyUseTextCommands;
+  obj5.filters = obj6;
+  obj5.options = { placeholderCount: 3, limit: commandDiscoveryManager, includeFrecency: true };
+  const discovery = channel(8968).useDiscovery(obj5);
   const sectionDescriptors = discovery.sectionDescriptors;
   ({ activeSections: c11, commandsByActiveSection } = discovery);
   ({ hasMoreAfter: c13, filteredSectionId } = discovery);
   ({ scrollDown: c15, filterSection } = discovery);
-  const items1 = [filterSection, commandDiscoveryManager, tmp6, sectionDescriptors];
-  const loading = discovery.loading;
+  const items1 = [filterSection, commandDiscoveryManager, tmp4[1], sectionDescriptors];
   const effect = obj2.useEffect(() => {
     if (null != commandDiscoveryManager) {
       filterSection(tmp);
@@ -751,28 +885,24 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
   }, items1);
   const effect1 = obj2.useEffect(() => {
     const AccessibilityAnnouncer = require("AccessibilityAnnouncer").AccessibilityAnnouncer;
-    const announce = AccessibilityAnnouncer.announce;
-    const intl = require("intl").intl;
-    announce(intl.string(require("intl").t["2wfLMm"]));
-    let obj = require("AppAnalyticsUtils");
-    obj.trackWithMetadata(commandsByActiveSection.APPLICATION_COMMAND_BROWSER_OPENED);
+    const intl = require("util").intl;
+    AccessibilityAnnouncer.announce(intl.string(require("util").t["2wfLMm"]));
+    require("AppAnalyticsUtils").trackWithMetadata(commandsByActiveSection.APPLICATION_COMMAND_BROWSER_OPENED);
     return () => {
-      const obj = closure_1_0(closure_1_3[14]);
-      const result = obj.updateInitialSectionId(undefined);
+      const result = closure_1_0(dependencyMap[14]).updateInitialSectionId(undefined);
     };
   }, []);
   const items2 = [commandsByActiveSection, onHeightChange, bound];
   const effect2 = obj2.useEffect(() => {
     if (onHeightChange != null) {
-      let closure_0 = bound;
+      closure_0 = bound;
       let num2 = 0;
       if (0 !== commandsByActiveSection.length) {
         num2 = commandsByActiveSection.reduce((acc, data) => {
-          let sum;
           if (0 === data.data.length) {
-            sum = closure_2_0(closure_2_3[8]).APPLICATION_SECTION_HEADER_HEIGHT + 160;
+            let sum = require("ApplicationSectionHeader").APPLICATION_SECTION_HEADER_HEIGHT + 160;
           } else {
-            sum = acc + (closure_2_0(closure_2_3[8]).APPLICATION_SECTION_HEADER_HEIGHT + (closure_0 + sectionDescriptors) * data.data.length);
+            sum = acc + (require("ApplicationSectionHeader").APPLICATION_SECTION_HEADER_HEIGHT + (closure_0 + sectionDescriptors) * data.data.length);
           }
           return sum;
         }, 0);
@@ -783,121 +913,113 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
   const items3 = [sectionDescriptors, filterSection, filteredSectionId];
   onPressSection = obj2.useCallback((arg0) => {
     if (sectionDescriptors[arg0].id !== filteredSectionId) {
-      if (sectionDescriptors[arg0].id !== metroImportAll.FRECENCY) {
-        filterSection(sectionDescriptors[arg0].id);
+      if (tmp.id !== constants.FRECENCY) {
+        filterSection(tmp.id);
         closure_7(arg0);
       }
-      const obj = ApplicationCommandDiscoveryManager;
-      const result = obj.updateInitialSectionId(undefined);
+      const result = ApplicationCommandDiscoveryManager.updateInitialSectionId(undefined);
     }
     filterSection(null);
     closure_7(0);
   }, items3);
   const callback1 = obj2.useCallback(() => {
-    ref.current = true;
-    const obj = AppAnalyticsUtils;
-    obj.trackWithMetadata(commandsByActiveSection.APPLICATION_COMMAND_BROWSER_SCROLLED);
+    closure_8.current = true;
+    AppAnalyticsUtils.trackWithMetadata(constants2.APPLICATION_COMMAND_BROWSER_SCROLLED);
   }, []);
   const callback2 = obj2.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
     const targetContentOffset = nativeEvent.targetContentOffset;
-    let y1;
-    const y = nativeEvent.contentOffset.y;
+    let y;
     if (targetContentOffset != null) {
-      y1 = targetContentOffset.y;
+      y = targetContentOffset.y;
     }
-    if (y === y1) {
-      ref.current = false;
+    if (nativeEvent.contentOffset.y === y) {
+      closure_8.current = false;
     }
   }, []);
   const items4 = [sectionDescriptors, commandsByActiveSection, bound];
   const callback3 = obj2.useCallback((arg0) => {
-    ref.current = false;
+    closure_8.current = false;
   }, []);
   const memo = obj2.useMemo(() => {
-    function _loop2(item10008) {
-      let closure_0 = item10008;
-      const findIndexResult = commandsByActiveSection.findIndex((section) => section.section.id === id.id);
-      if (findIndexResult >= 0) {
-        const result = commandsByActiveSection[findIndexResult].data.length * bound;
-        const sum = result + ApplicationSectionHeader.APPLICATION_SECTION_HEADER_HEIGHT + c0;
-        items.push(sum);
-        c0 = sum;
-      } else {
-        items.push(c0);
-      }
-    }
-    let c0 = 0;
+    c0 = 0;
     const items = [];
     for (const item10008 of sectionDescriptors) {
-      let tmp = _loop2(item10008);
+      let tmp = (function _loop2(item10008) {
+        const findIndexResult = commandsByActiveSection.findIndex((section) => section.section.id === item10008.id);
+        if (findIndexResult >= 0) {
+          const result = commandsByActiveSection[findIndexResult].data.length * bound;
+          const sum = result + ApplicationSectionHeader.APPLICATION_SECTION_HEADER_HEIGHT + c0;
+          items.push(sum);
+          c0 = sum;
+        } else {
+          items.push(c0);
+        }
+      })(item10008);
       continue;
     }
     return items;
   }, items4);
   const items5 = [memo];
-  let closure_19 = obj2.useMemo(() => {
-    const obj = _modDef12;
-    return obj.throttle((arg0) => {
-      let num = 0;
-      if (0 < memo.length) {
-        let num2 = 0;
-        let num3 = 0;
-        if (0 === memo[0]) {
-          const sum = num3 + 1;
-          const sum1 = num2 + 1;
-          num = sum;
-          while (sum1 < memo.length) {
+  closure_19 = obj2.useMemo(() => _modDef12.throttle((arg0) => {
+    let num = 0;
+    if (0 < memo.length) {
+      let num2 = 0;
+      let num3 = 0;
+      if (0 === memo[0]) {
+        const sum = num3 + 1;
+        const sum1 = num2 + 1;
+        num = sum;
+        while (sum1 < memo.length) {
+          num2 = sum1;
+          num3 = sum;
+          if (0 === memo[sum1]) {
+            continue;
+          } else {
             num2 = sum1;
             num3 = sum;
-            if (0 === memo[sum1]) {
-              continue;
-            } else {
-              num2 = sum1;
-              num3 = sum;
-              num = sum;
-              if (arg0 < memo[sum1]) {
-                break;
-              }
+            num = sum;
+            if (arg0 < memo[sum1]) {
+              break;
             }
-            continue;
           }
-        } else {
-          num2 = 0;
-          num3 = 0;
-          num = 0;
+          continue;
         }
+      } else {
+        num2 = 0;
+        num3 = 0;
+        num = 0;
       }
-      closure_1_7(num);
-    }, 100);
-  }, items5);
+    }
+    closure_1_7(num);
+  }, 100), items5);
   const items6 = [bound];
   const items7 = [channel.guild_id, onPressSection, sectionDescriptors, selectedIndex];
   const callback4 = obj2.useCallback((arg0, index) => {
     if (null == arg0) {
-      return { length: 0, offset: 0, index };
+      const obj2 = { length: 0, offset: 0, index };
+      return obj2;
     } else {
       let num = 0;
       let num2 = 0;
       let num3 = 0;
-      let ROW = map1.ROW;
+      let ROW = constants3.ROW;
       const iter = arg0[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
-        let num4;
         let tmp4 = nextResult;
         if (num + num2 + nextResult.data.length + num3 + 1 >= index) {
           if (index === num + num2 + num3) {
-            ROW = map1.HEADER;
+            ROW = constants3.HEADER;
           } else if (index === num + num2 + tmp4.data.length + num3 + 1) {
             num = num + 1;
             num2 = num2 + nextResult.data.length;
-            ROW = map1.FOOTER;
+            ROW = constants3.FOOTER;
           } else {
             let sum = num + 1;
             num = sum;
             num2 = num2 + (index - sum - num2 - num3);
-            ROW = map1.ROW;
+            ROW = constants3.ROW;
           }
           iter.return();
           break;
@@ -907,12 +1029,12 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
           num3 = num3 + 1;
           continue;
         }
-        if (map1.ROW === ROW) {
-          num4 = bound;
+        if (constants3.ROW === ROW) {
+          let num4 = bound;
         } else if (tmp29.HEADER === ROW) {
           num4 = ApplicationSectionHeader.APPLICATION_SECTION_HEADER_HEIGHT;
         } else {
-          let FOOTER = map1.FOOTER;
+          let FOOTER = constants3.FOOTER;
           num4 = 0;
         }
         let obj = { length: num4, offset: num * ApplicationSectionHeader.APPLICATION_SECTION_HEADER_HEIGHT + num2 * bound, index };
@@ -920,9 +1042,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
       }
     }
   }, items6);
-  const obj7 = { style: items8, children: items9 };
-  items8 = [tmp.discoveryWrapper, style];
-  const obj8 = {
+  const obj8 = { style: null, children: null };
+  const items8 = [tmp.discoveryWrapper, channel.style];
+  obj8.style = items8;
+  const obj9 = {
     ref,
     sections: commandsByActiveSection,
     style: tmp.commandsList,
@@ -930,31 +1053,35 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
     onScrollEndDrag: callback2,
     onMomentumScrollEnd: callback3,
     onScroll(nativeEvent) {
-      let contentInset;
-      let contentSize;
-      let layoutMeasurement;
       nativeEvent = nativeEvent.nativeEvent;
       ({ layoutMeasurement, contentSize, contentInset } = nativeEvent);
       const y = nativeEvent.contentOffset.y;
       closure_19(y);
-      const tmp2 = !ref.current && _undefined.length > 0;
+      const current = ref.current;
+      let tmp2 = !current;
+      if (!current) {
+        tmp2 = _undefined.length > 0;
+      }
       if (tmp2) {
         if (y < contentInset.top) {
-          const current = ref.current;
-          if (current != null) {
-            current.scrollToLocation({ sectionIndex: 0, itemIndex: 0, viewPosition: 0, animated: false });
-          }
-        } else if (y > contentSize.height - layoutMeasurement.height - contentInset.bottom) {
           const current2 = ref.current;
           if (current2 != null) {
+            current2.scrollToLocation({ sectionIndex: 0, itemIndex: 0, viewPosition: 0, animated: false });
+          }
+        } else if (y > contentSize.height - layoutMeasurement.height - contentInset.bottom) {
+          const current3 = ref.current;
+          if (current3 != null) {
+            const obj = { sectionIndex: _undefined.length - 1, itemIndex: null, viewPosition: 1, animated: false };
             const _Math = Math;
-            const scrollToLocation = current2.scrollToLocation;
-            const obj = { sectionIndex: _undefined.length - 1, itemIndex: Math.max(commandsByActiveSection[commandsByActiveSection.length - 1].data.length - 1, 0), viewPosition: 1, animated: false };
-            scrollToLocation(obj);
+            obj.itemIndex = Math.max(commandsByActiveSection[commandsByActiveSection.length - 1].data.length - 1, 0);
+            current3.scrollToLocation(obj);
           }
         }
       }
-      const tmp7 = c13 && y + layoutMeasurement.height >= contentSize.height - 3 * bound;
+      let tmp7 = c13;
+      if (c13) {
+        tmp7 = y + layoutMeasurement.height >= contentSize.height - 3 * bound;
+      }
       if (tmp7) {
         _undefined2();
       }
@@ -963,68 +1090,59 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onHeightChange) => {
     keyExtractor(id) {
       return id.id;
     },
-    maintainVisibleContentPosition: obj9,
-    renderItem(item) {
-      item = item.item;
-      const section = item.section;
-      let found;
-      if (item.inputType === require("ApplicationCommandTypes").ApplicationCommandInputType.PLACEHOLDER) {
-        return filteredSectionId(onHeightChange(closure_3[25]), {});
-      } else {
-        found = sectionDescriptors.find((id) => id.id === item.applicationId);
-        const obj = {
-          command: item,
-          onPress() {
-              let tmpResult;
-              if (_require != null) {
-                tmpResult = tmp(item, found, section.section);
-              }
-              return tmpResult;
-            },
-          section: found,
-          showIcon: item.applicationId !== section.section.id,
-          guildId: found.guild_id
-        };
-        return filteredSectionId(onHeightChange(closure_3[26]), obj);
-      }
-    },
-    renderSectionHeader(section) {
-      let intl;
-      let obj5;
-      section = section.section;
-      const children = [, ];
-      const obj = { section: section.section, guildId: channel.guild_id };
-      children[0] = authStore2(ApplicationSectionHeaderDefault, obj, section.section.id);
-      let tmp3Result = 0 === section.data.length;
-      if (tmp3Result) {
-        const obj3 = { lightSource: AssetRegistryDefault, darkSource: AssetRegistryDefault, body: intl.format(intl2.t.WoQXT6, obj5), containerStyle: null, imageStyle: null };
-        const ThemedEmptyState = native.ThemedEmptyState;
-        intl = intl2.intl;
-        obj5 = { applicationName: section.section.name };
-        ({ noCommandsContainer: obj2.containerStyle, noCommandsImage: obj2.imageStyle } = closure_3);
-        tmp3Result = authStore2(ThemedEmptyState, obj3);
-      }
-      children[1] = tmp3Result;
-      return authStore3(closure_15, { children });
-    },
-    getItemLayout: callback4,
+    maintainVisibleContentPosition: null,
+    renderItem: null,
+    renderSectionHeader: null,
+    getItemLayout: null,
     stickySectionHeadersEnabled: true
   };
-  obj9 = null;
-  const memo1 = obj2.useMemo(() => {
-    const obj = { onPressSection, sections: sectionDescriptors, selectedIndex, guildId: channel.guild_id };
-    return authStore2(ApplicationCommandsCategoriesDefault, obj);
-  }, items7);
-  let tmp20 = filterSection;
-  let tmp21 = selectedIndex;
-  const tmp22 = filteredSectionId;
-  const tmp23 = closure_7;
-  if (loading) {
-    obj9 = { minIndexForVisible: 1 };
+  let obj10 = null;
+  const memo1 = obj2.useMemo(() => state(ApplicationCommandsCategoriesDefault, { onPressSection, sections: sectionDescriptors, selectedIndex, guildId: channel.guild_id }), items7);
+  if (discovery.loading) {
+    obj10 = { minIndexForVisible: 1 };
   }
-  items9 = [tmp22(tmp23, obj8), memo1];
-  return tmp20(tmp21, obj7);
+  obj9.maintainVisibleContentPosition = obj10;
+  obj9.renderItem = function renderItem(item) {
+    item = item.item;
+    const section = item.section;
+    let found;
+    if (item.inputType === require("ApplicationCommandTypes").ApplicationCommandInputType.PLACEHOLDER) {
+      return filteredSectionId(onHeightChange(12056), {});
+    } else {
+      found = sectionDescriptors.find((id) => id.id === item.applicationId);
+      const obj = {
+        command: item,
+        onPress() {
+            let tmpResult;
+            if (_require != null) {
+              tmpResult = tmp(item, found, section.section);
+            }
+            return tmpResult;
+          },
+        section: found,
+        showIcon: item.applicationId !== section.section.id,
+        guildId: found.guild_id
+      };
+      return filteredSectionId(onHeightChange(12057), obj);
+    }
+  };
+  obj9.renderSectionHeader = function renderSectionHeader(section) {
+    section = section.section;
+    const children = [state(ApplicationSectionHeaderDefault, { section: section.section, guildId: channel.guild_id }, section.section.id), ];
+    let tmp3Result = 0 === section.data.length;
+    if (tmp3Result) {
+      const obj3 = { lightSource: _modDef10160, darkSource: _modDef10160, body: null, containerStyle: null, imageStyle: null };
+      const intl = util.intl;
+      const obj5 = { applicationName: section.section.name };
+      obj3.body = intl.format(util.t.WoQXT6, obj5);
+      ({ noCommandsContainer: obj2.containerStyle, noCommandsImage: obj2.imageStyle } = closure_3);
+      tmp3Result = state(native.ThemedEmptyState, obj3);
+    }
+    children[1] = tmp3Result;
+    return value2(closure_2_15, { children });
+  };
+  obj9.getItemLayout = callback4;
+  const items9 = [filteredSectionId(closure_7, obj9), memo1];
+  obj8.children = items9;
+  return filterSection(selectedIndex, obj8);
 });
-let result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandDiscovery.tsx");
-
-export default tmp6;

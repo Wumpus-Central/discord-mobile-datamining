@@ -3,59 +3,44 @@
 // Module 10570 (useSyncGiftOptionsToOrder)
 import LoggerDefault from "Logger" /* 3 */;
 import BillingUtils from "BillingUtils" /* 4549 */;
-import NativeCheckoutStore from "NativeCheckoutStore" /* 6943 */;
 import useGiftOptionsSyncDebounceDefault from "useGiftOptionsSyncDebounce" /* 10445 */;
-import _slicedToArray_mod from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let _require, cleanupPromise, clearTimeoutResult, dependencyMap, flag, flag2, flag3, importDefault, num, num2, obj1, obj4, ref3, ref4, tmp11, tmp14, tmp17, tmp18, tmp20, tmp21, tmp22, tmp24, tmp25, tmp6;
 
-let _slicedToArray = _slicedToArray_mod;
-let react = react_mod;
-let ref = NativeCheckoutStore.useNativeCheckoutStoreOrNull;
+require = fn;
+fn(6943).useNativeCheckoutStoreOrNull;
+const ReactCompilerGating = fn(558);
 const tmp2 = new LoggerDefault("useSyncGiftOptionsToOrder");
-let ref2 = tmp2;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current) => {
-  let closure_0;
-  let closure_10;
-  let first;
-  let ref5;
-  let ref7;
-  let ref8;
-  let tmp10;
-  let tmp4;
-  let tmp5;
-  let tmp9;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/checkout/native/useSyncGiftOptionsToOrder.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current) => {
   _require = arg0;
   importDefault = current;
-  let tmp = dependencyMap;
-  let obj = require("react");
-  const cResult = obj.c(22);
-  let obj2 = react;
-  dependencyMap = react.useRef(null);
-  _slicedToArray = react.useRef(null);
-  react = react.useRef(false);
-  ref = react.useRef(undefined);
-  ref2 = react.useRef(null);
-  const ref6 = react.useRef(0);
-  ref3 = react.useRef(null);
-  ref4 = react.useRef(null);
-  const tmp3 = _slicedToArray(react.useState(0), 2);
-  [tmp4, tmp5] = tmp3;
+  const cResult = require("c").c(22);
+  dependencyMap = noop.useRef(null);
+  _slicedToArray = noop.useRef(null);
+  noop = noop.useRef(false);
+  let obj = require("c");
+  noop.useRef(null);
+  noop.useRef(0);
+  noop.useRef(null);
+  noop.useRef(null);
+  ref = noop.useRef(undefined);
+  [tmp4, tmp5] = noop.useState(0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function o(setOrderRevision) {
       return setOrderRevision.setOrderRevision;
     };
     cResult[0] = fn;
-    first = fn;
+    let first = fn;
   } else {
     first = cResult[0];
   }
   let tmp7 = ref(first);
-  let closure_11 = tmp7;
+  closure_11 = tmp7;
   let tmp8 = useGiftOptionsSyncDebounceDefault(tmp5);
   const waitForPause = tmp8.waitForPause;
   const flush = tmp8.flush;
@@ -73,8 +58,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current) => {
     const items = [];
     cResult[1] = fn2;
     cResult[2] = items;
-    tmp10 = items;
-    tmp9 = fn2;
+    let tmp10 = items;
+    let tmp9 = fn2;
   } else {
     tmp9 = cResult[1];
     tmp10 = cResult[2];
@@ -84,32 +69,28 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current) => {
     if (cResult[4] === arg0) {
       if (cResult[5] === resolveSyncs) {
         if (cResult[6] === tmp7) {
-          let tmp12;
           if (cResult[7] === waitForPause) {
-            tmp12 = cResult[8];
+            let tmp12 = cResult[8];
           }
           if (cResult[9] === current) {
             if (cResult[10] === arg0) {
               if (cResult[11] === resolveSyncs) {
                 if (cResult[12] === tmp7) {
                   if (cResult[13] === tmp4) {
-                    let tmp13;
                     if (cResult[14] === waitForPause) {
-                      tmp13 = cResult[15];
+                      let tmp13 = cResult[15];
                     }
                     const effect1 = obj2.useEffect(tmp12, tmp13);
                     if (cResult[16] === flush) {
                       if (cResult[17] === arg0) {
-                        let tmp15;
-                        let tmp16;
                         if (cResult[18] === waitForSync) {
-                          tmp15 = cResult[19];
+                          let tmp15 = cResult[19];
                         }
                         if (cResult[20] !== tmp15) {
-                          let obj3 = { awaitSync: tmp15 };
+                          const obj3 = { awaitSync: tmp15 };
                           cResult[20] = tmp15;
                           cResult[21] = obj3;
-                          tmp16 = obj3;
+                          let tmp16 = obj3;
                         } else {
                           tmp16 = cResult[21];
                         }
@@ -122,16 +103,15 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current) => {
                           if (ref6.current >= 3) {
                             tmp3.current = 0;
                           }
-                          current = ref3.current;
                           const tmp5 = flush(tmp2.current);
-                          const tmp7 = waitForSync();
+                          current = ref3.current;
                           if (!current) {
                             current = null != ref8.current;
                           }
                           if (!current) {
                             tmp5((arg0) => arg0 + 1);
                           }
-                          return tmp7;
+                          return waitForSync();
                         }
                       }
                       return Promise.resolve(true);
@@ -225,24 +205,21 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current) => {
               updateOrderResult = obj.updateOrder(obj1);
               nextPromise = updateOrderResult.then((current) => {
                 if (logger.current === id) {
-                  const tmp5 = null == ref3.current || current > ref3.current;
                   if (tmp5) {
                     ref3.current = current;
                   }
-                  ref.current = current;
-                  ref6.current = 0;
+                  closure_2.current = current;
+                  closure_7.current = 0;
                   if (closure_11 != null) {
                     tmp9(tmp, current);
                   }
+                  tmp5 = null == ref3.current || current > ref3.current;
                 }
               });
               catchPromise = nextPromise.catch((error) => {
                 ref4.current = ref4.current + 1;
-                const obj = { error, orderId: id };
-                logger.error("Failed to sync gift customization to order", obj);
-                const obj2 = BillingUtils;
-                const obj3 = { tags: { source: "useSyncGiftOptionsToOrder" }, extra: { orderId: id } };
-                const result = obj2.captureBillingException(error, obj3);
+                logger.error("Failed to sync gift customization to order", { error, orderId: id });
+                const result = BillingUtils.captureBillingException(error, { tags: { source: "useSyncGiftOptionsToOrder" }, extra: { orderId: id } });
               });
               cleanupPromise = catchPromise.finally(() => {
                 ref3.current = false;
@@ -251,7 +228,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current) => {
                     closure_1_10((arg0) => arg0 + 1);
                   } else if (ref4.current < 3) {
                     const _setTimeout = setTimeout;
-                    ref8.current = setTimeout(() => closure_1_10(() => { /* body not rendered: F154975 */ }), 500 * 2 ** (ref4.current - 1));
+                    ref8.current = setTimeout(() => closure_1_10(() => { ... }), 500 * 2 ** (ref4.current - 1));
                   } else {
                     resolveSyncs(false);
                   }
@@ -282,41 +259,33 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current) => {
   cResult[8] = E;
   tmp12 = E;
 }) : ((arg0, current) => {
-  let first;
-  let tmp3;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   importDefault = current;
-  dependencyMap = react.useRef(null);
-  _slicedToArray = react.useRef(null);
-  react = react.useRef(false);
-  ref = react.useRef(undefined);
-  const ref5 = react.useRef(null);
-  const ref6 = react.useRef(0);
-  const ref7 = react.useRef(null);
-  const ref8 = react.useRef(null);
-  [first, tmp3] = react.useState(0);
-  let closure_10 = tmp3;
-  const tmp4 = ref((setOrderRevision) => setOrderRevision.setOrderRevision);
-  let closure_11 = tmp4;
-  let tmp5 = useGiftOptionsSyncDebounceDefault(tmp3);
-  const waitForPause = tmp5.waitForPause;
-  const flush = tmp5.flush;
-  const waitForSync = tmp5.waitForSync;
-  const resolveSyncs = tmp5.resolveSyncs;
-  const effect = react.useEffect(() => () => {
+  dependencyMap = noop.useRef(null);
+  _slicedToArray = noop.useRef(null);
+  noop = noop.useRef(false);
+  noop.useRef(null);
+  noop.useRef(0);
+  noop.useRef(null);
+  noop.useRef(null);
+  const tmp = _slicedToArray(noop.useState(0), 2);
+  closure_10 = tmp2;
+  const tmp3 = noop.useRef(undefined)((setOrderRevision) => setOrderRevision.setOrderRevision);
+  closure_11 = tmp3;
+  const tmp4 = useGiftOptionsSyncDebounceDefault(tmp[1]);
+  const waitForPause = tmp4.waitForPause;
+  const flush = tmp4.flush;
+  const waitForSync = tmp4.waitForSync;
+  const resolveSyncs = tmp4.resolveSyncs;
+  const effect = noop.useEffect(() => () => {
     if (null != ref.current) {
       const _clearTimeout = clearTimeout;
       clearTimeout(tmp.current);
     }
   }, []);
-  const items = [arg0, current, first, resolveSyncs, tmp4, waitForPause];
-  const effect1 = react.useEffect(() => {
-    let id;
-    let logger;
-    let obj5;
-    const tmp = id;
+  const items = [arg0, current, tmp[0], resolveSyncs, tmp3, waitForPause];
+  const effect1 = noop.useEffect(() => {
     if (null != id) {
-      let tmp8;
       id = tmp.id;
       ref2.current = current;
       if (ref5.current !== id) {
@@ -325,21 +294,24 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current) => {
         ref.current = null;
         ref7.current = null;
         ref4.current = 0;
-        tmp8 = ref4;
+        let tmp8 = ref4;
       } else {
         tmp8 = ref4;
-        const tmp7 = null == ref4.current || tmp.revision > ref4.current;
         if (tmp7) {
           ref4.current = tmp.revision;
           tmp8 = ref4;
         }
+        tmp7 = null == ref4.current || tmp.revision > ref4.current;
       }
       if (ref7.current !== current) {
         ref4.current = 0;
       }
       if (!ref3.current) {
         if (ref.current !== current) {
-          const tmp19 = null != ref7.current && ref7.current !== current && waitForPause(current);
+          let tmp19 = null != ref7.current && ref7.current !== current;
+          if (tmp19) {
+            tmp19 = waitForPause(current);
+          }
           if (!tmp19) {
             if (null != ref8.current) {
               const _clearTimeout = clearTimeout;
@@ -348,33 +320,43 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current) => {
             }
             tmp15.current = true;
             ref7.current = current;
-            let obj = closure_0(ref[7]);
-            let obj2 = { orderId: id, giftInfo: obj5, expectedRevision: tmp8.current };
-            obj5 = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
+            const obj2 = { orderId: id, giftInfo: null, expectedRevision: null };
             ({ recipient_id: obj3.recipient_id, gift_style: obj3.gift_style, emoji_id: obj3.emoji_id, emoji_name: obj3.emoji_name, sound_id: obj3.sound_id, reward_sku_ids: obj3.reward_sku_ids, custom_message: obj3.custom_message_contents } = current);
-            const updateOrderResult = obj.updateOrder(obj2);
-            const nextPromise = updateOrderResult.then((current) => {
+            obj2.giftInfo = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
+            obj2.expectedRevision = tmp8.current;
+            const obj = closure_0(ref[7]);
+            const obj5 = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
+            const updateOrderResult = closure_0(ref[7]).updateOrder(obj2);
+            const nextPromise = closure_0(ref[7]).updateOrder(obj2).then((current) => {
               if (logger.current === id) {
-                const tmp5 = null == ref3.current || current > ref3.current;
                 if (tmp5) {
                   ref3.current = current;
                 }
-                ref.current = current;
-                ref6.current = 0;
+                closure_2.current = current;
+                closure_7.current = 0;
                 if (closure_11 != null) {
                   tmp9(tmp, current);
                 }
+                tmp5 = null == ref3.current || current > ref3.current;
               }
             });
-            const catchPromise = nextPromise.catch((error) => {
+            closure_0(ref[7]).updateOrder(obj2).then((current) => {
+              if (logger.current === id) {
+                if (tmp5) {
+                  ref3.current = current;
+                }
+                closure_2.current = current;
+                closure_7.current = 0;
+                if (closure_11 != null) {
+                  tmp9(tmp, current);
+                }
+                tmp5 = null == ref3.current || current > ref3.current;
+              }
+            }).catch((error) => {
               ref4.current = ref4.current + 1;
-              const obj = { error, orderId: id };
-              logger.error("Failed to sync gift customization to order", obj);
-              const obj2 = BillingUtils;
-              const obj3 = { tags: { source: "useSyncGiftOptionsToOrder" }, extra: { orderId: id } };
-              const result = obj2.captureBillingException(error, obj3);
-            });
-            catchPromise.finally(() => {
+              logger.error("Failed to sync gift customization to order", { error, orderId: id });
+              const result = BillingUtils.captureBillingException(error, { tags: { source: "useSyncGiftOptionsToOrder" }, extra: { orderId: id } });
+            }).finally(() => {
               ref3.current = false;
               if (ref.current !== ref2.current) {
                 if (0 === ref4.current) {
@@ -389,6 +371,23 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current) => {
                 resolveSyncs(true);
               }
             });
+            const catchPromise = closure_0(ref[7]).updateOrder(obj2).then((current) => {
+              if (logger.current === id) {
+                if (tmp5) {
+                  ref3.current = current;
+                }
+                closure_2.current = current;
+                closure_7.current = 0;
+                if (closure_11 != null) {
+                  tmp9(tmp, current);
+                }
+                tmp5 = null == ref3.current || current > ref3.current;
+              }
+            }).catch((error) => {
+              ref4.current = ref4.current + 1;
+              logger.error("Failed to sync gift customization to order", { error, orderId: id });
+              const result = BillingUtils.captureBillingException(error, { tags: { source: "useSyncGiftOptionsToOrder" }, extra: { orderId: id } });
+            });
           }
         } else {
           resolveSyncs(true);
@@ -399,7 +398,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current) => {
     }
   }, items);
   const items1 = [arg0, flush, waitForSync];
-  const awaitSync = react.useCallback(() => {
+  const awaitSync = noop.useCallback(() => {
     if (null != closure_0) {
       if (ref.current !== ref2.current) {
         if (ref6.current >= 3) {
@@ -407,21 +406,17 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current) => {
         }
         flush(tmp2.current);
         current = ref3.current;
-        const tmp7 = waitForSync();
         if (!current) {
           current = null != ref8.current;
         }
         if (!current) {
           closure_10((arg0) => arg0 + 1);
         }
-        return tmp7;
+        return waitForSync();
       }
     }
     return Promise.resolve(true);
   }, items1);
   const items2 = [awaitSync];
-  return react.useMemo(() => ({ awaitSync }), items2);
+  return noop.useMemo(() => ({ awaitSync }), items2);
 });
-let result = size.fileFinishedImporting("modules/checkout/native/useSyncGiftOptionsToOrder.tsx");
-
-export default tmp3;

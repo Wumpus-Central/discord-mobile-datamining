@@ -2,7 +2,7 @@
 
 // Module 13799 (GuildReportRaidModalConstants)
 import Constants from "Constants" /* 1085 */;
-import intl6 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
 import size from "module_2" /* 2 */;
 
@@ -13,27 +13,26 @@ const items = [, , , , ];
 const result = size.fileFinishedImporting("modules/guild_antiraid/GuildReportRaidModalConstants.tsx");
 
 export const getReportRaidHelpArticleURL = function getReportRaidHelpArticleURL() {
-  const obj = HelpdeskUtilsDefault;
-  return obj.getArticleURL(HelpdeskArticles.GUILD_RAID);
+  return HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.GUILD_RAID);
 };
 export { ReportRaidTypes };
 export const REPORT_RAID_OPTIONS = items;
 export const getReportRaidTypeLabel = function getReportRaidTypeLabel(arg0) {
   if (obj.DM_SPAM === arg0) {
-    const intl5 = intl6.intl;
-    return intl5.string(intl6.t["9CYNmS"]);
+    const intl5 = util.intl;
+    return intl5.string(util.t["9CYNmS"]);
   } else if (obj.MENTION_SPAM === arg0) {
-    const intl4 = intl6.intl;
-    return intl4.string(intl6.t["hR/IdO"]);
+    const intl4 = util.intl;
+    return intl4.string(util.t["hR/IdO"]);
   } else if (obj.MESSAGE_SPAM === arg0) {
-    const intl3 = intl6.intl;
-    return intl3.string(intl6.t.fwloj2);
+    const intl3 = util.intl;
+    return intl3.string(util.t.fwloj2);
   } else if (obj.SETTINGS_SPAM === arg0) {
-    const intl2 = intl6.intl;
-    return intl2.string(intl6.t.ETFVFw);
+    const intl2 = util.intl;
+    return intl2.string(util.t.ETFVFw);
   } else if (obj.SUSPICIOUS_USERS === arg0) {
-    const intl = intl6.intl;
-    return intl.string(intl6.t["lKXu+n"]);
+    const intl = util.intl;
+    return intl.string(util.t["lKXu+n"]);
   } else {
     return null;
   }

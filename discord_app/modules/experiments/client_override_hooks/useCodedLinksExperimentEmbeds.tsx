@@ -1,27 +1,22 @@
 // === Module 11151: useCodedLinksExperimentEmbeds ===
 
 // Module 11151 (useCodedLinksExperimentEmbeds)
-import get_initialized from "get initialized" /* 504 */;
-import react2 from "react" /* 576 */;
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
 import useLegacyExperiments from "useLegacyExperiments" /* 11152 */;
 import useApexExperiments from "useApexExperiments" /* 11153 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import ExperimentStore from "ExperimentStore" /* 4782 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require;
 
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp4;
-  let tmp5;
-  const obj = react2;
-  const cResult = obj.c(2);
+require = fn;
+let ReactCompilerGating = fn(558);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [UserStore];
     const fn = function s() {
@@ -49,12 +44,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const tmpResult = get_initialized;
-  return tmpResult.useStateFromStores(tmp4, tmp5);
+  return initialize.useStateFromStores(tmp4, tmp5);
 }) : (() => {
   let items = [UserStore];
-  const obj = get_initialized;
-  return obj.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     const items = [UserStore];
     const first = _slicedToArray(items, 1)[0];
     const currentUser = first.getCurrentUser();
@@ -80,7 +73,7 @@ let closure_10 = {};
 let closure_11 = {};
 let closure_12 = {};
 let closure_13 = { legacyExperiments: {}, legacyOverridesInfo: {}, apexExperiments: {}, apexOverridesInfo: {} };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 function canSeeExperimentEmbeds() {
   let tmp = arg0;
   if (arg0 === undefined) {
@@ -103,70 +96,68 @@ function canSeeExperimentEmbeds() {
   }
   return isStaffResult;
 }
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let closure_0;
-  let first;
-  let tmp13;
-  let tmp16;
-  let tmp20;
-  let tmp7;
-  let tmp9;
-  const obj = require("react");
-  const cResult = obj.c(22);
-  const tmp4 = closure_7();
-  _require = tmp4;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/experiments/client_override_hooks/useCodedLinksExperimentEmbeds.tsx");
+
+export { canSeeExperimentEmbeds };
+export const useCanSeeExperimentEmbeds = tmp2;
+export const useCodedLinksExperimentEmbeds = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let obj = _require;
+  let apexExperimentOverridesInfo = dependencyMap;
+  const cResult = require("c").c(22);
+  const tmp3 = closure_7();
+  _require = tmp3;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ExperimentStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
-  if (cResult[1] !== tmp4) {
+  if (cResult[1] !== tmp3) {
     const fn = function s() {
-      let registeredExperiments;
       if (closure_0) {
-        registeredExperiments = ExperimentStore.getRegisteredExperiments();
+        let registeredExperiments = ExperimentStore.getRegisteredExperiments();
       } else {
         registeredExperiments = closure_8;
       }
       return registeredExperiments;
     };
-    cResult[1] = tmp4;
+    cResult[1] = tmp3;
     cResult[2] = fn;
-    tmp7 = fn;
+    let tmp6 = fn;
   } else {
-    tmp7 = cResult[2];
+    tmp6 = cResult[2];
   }
-  const tmpResult = require("get initialized");
-  const stateFromStoresObject = tmpResult.useStateFromStoresObject(first, tmp7);
+  const obj2 = require("c");
+  const stateFromStoresObject = obj(504).useStateFromStoresObject(first, tmp6);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [ExperimentStore];
     cResult[3] = items1;
-    tmp9 = items1;
+    let tmp8 = items1;
   } else {
-    tmp9 = cResult[3];
+    tmp8 = cResult[3];
   }
-  if (cResult[4] !== tmp4) {
+  if (cResult[4] !== tmp3) {
     class O {
       constructor() {
-        let allExperimentOverrideDescriptors;
         if (closure_0) {
-          allExperimentOverrideDescriptors = ExperimentStore.getAllExperimentOverrideDescriptors();
+          tmp2 = closure_5;
+          allExperimentOverrideDescriptors = closure_5.getAllExperimentOverrideDescriptors();
         } else {
           allExperimentOverrideDescriptors = closure_9;
         }
         return allExperimentOverrideDescriptors;
       }
     }
-    cResult[4] = tmp4;
+    cResult[4] = tmp3;
     cResult[5] = O;
   } else {
     class O {
       constructor() {
-        let allExperimentOverrideDescriptors;
         if (closure_0) {
-          allExperimentOverrideDescriptors = ExperimentStore.getAllExperimentOverrideDescriptors();
+          tmp2 = closure_5;
+          allExperimentOverrideDescriptors = closure_5.getAllExperimentOverrideDescriptors();
         } else {
           allExperimentOverrideDescriptors = closure_9;
         }
@@ -174,14 +165,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
   }
-  const tmpResult9 = require("get initialized");
-  const stateFromStoresObject1 = tmpResult9.useStateFromStoresObject(tmp9, O);
+  const objResult = obj(504);
+  const stateFromStoresObject1 = obj(504).useStateFromStoresObject(tmp8, O);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     class O {
       constructor() {
-        let allExperimentOverrideDescriptors;
         if (closure_0) {
-          allExperimentOverrideDescriptors = ExperimentStore.getAllExperimentOverrideDescriptors();
+          tmp2 = closure_5;
+          allExperimentOverrideDescriptors = closure_5.getAllExperimentOverrideDescriptors();
         } else {
           allExperimentOverrideDescriptors = closure_9;
         }
@@ -190,13 +181,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     const items2 = [ApexExperimentStore];
     cResult[6] = items2;
-    tmp13 = items2;
+    const tmp12 = items2;
   } else {
     class O {
       constructor() {
-        let allExperimentOverrideDescriptors;
         if (closure_0) {
-          allExperimentOverrideDescriptors = ExperimentStore.getAllExperimentOverrideDescriptors();
+          tmp2 = closure_5;
+          allExperimentOverrideDescriptors = closure_5.getAllExperimentOverrideDescriptors();
         } else {
           allExperimentOverrideDescriptors = closure_9;
         }
@@ -204,26 +195,26 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
   }
-  if (cResult[7] !== tmp4) {
+  if (cResult[7] !== tmp3) {
     class F {
       constructor() {
-        let experimentsMetadata;
         if (closure_0) {
-          experimentsMetadata = ApexExperimentStore.getExperimentsMetadata();
+          tmp2 = closure_6;
+          experimentsMetadata = closure_6.getExperimentsMetadata();
         } else {
           experimentsMetadata = closure_10;
         }
         return experimentsMetadata;
       }
     }
-    cResult[7] = tmp4;
+    cResult[7] = tmp3;
     cResult[8] = F;
   } else {
     class F {
       constructor() {
-        let experimentsMetadata;
         if (closure_0) {
-          experimentsMetadata = ApexExperimentStore.getExperimentsMetadata();
+          tmp2 = closure_6;
+          experimentsMetadata = closure_6.getExperimentsMetadata();
         } else {
           experimentsMetadata = closure_10;
         }
@@ -231,14 +222,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
   }
-  const tmpResult10 = require("get initialized");
-  const stateFromStores = tmpResult10.useStateFromStores(tmp13, F);
+  const objResult8 = obj(504);
+  const stateFromStores = obj(504).useStateFromStores(tmp12, F);
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
     class F {
       constructor() {
-        let experimentsMetadata;
         if (closure_0) {
-          experimentsMetadata = ApexExperimentStore.getExperimentsMetadata();
+          tmp2 = closure_6;
+          experimentsMetadata = closure_6.getExperimentsMetadata();
         } else {
           experimentsMetadata = closure_10;
         }
@@ -247,13 +238,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     const items3 = [ApexExperimentStore];
     cResult[9] = items3;
-    tmp16 = items3;
+    const tmp15 = items3;
   } else {
     class F {
       constructor() {
-        let experimentsMetadata;
         if (closure_0) {
-          experimentsMetadata = ApexExperimentStore.getExperimentsMetadata();
+          tmp2 = closure_6;
+          experimentsMetadata = closure_6.getExperimentsMetadata();
         } else {
           experimentsMetadata = closure_10;
         }
@@ -261,26 +252,26 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
   }
-  if (cResult[10] !== tmp4) {
+  if (cResult[10] !== tmp3) {
     class F {
       constructor() {
-        let experimentsMetadata;
         if (closure_0) {
-          experimentsMetadata = ApexExperimentStore.getExperimentsMetadata();
+          tmp2 = closure_6;
+          experimentsMetadata = closure_6.getExperimentsMetadata();
         } else {
           experimentsMetadata = closure_10;
         }
         return experimentsMetadata;
       }
     }
-    cResult[10] = tmp4;
-    cResult[11] = tmp18;
+    cResult[10] = tmp3;
+    cResult[11] = tmp17;
   } else {
     class F {
       constructor() {
-        let experimentsMetadata;
         if (closure_0) {
-          experimentsMetadata = ApexExperimentStore.getExperimentsMetadata();
+          tmp2 = closure_6;
+          experimentsMetadata = closure_6.getExperimentsMetadata();
         } else {
           experimentsMetadata = closure_10;
         }
@@ -288,14 +279,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
   }
-  const tmpResult11 = require("get initialized");
-  const stateFromStores1 = tmpResult11.useStateFromStores(tmp16, tmp18);
+  const objResult9 = obj(504);
+  const stateFromStores1 = obj(504).useStateFromStores(tmp15, tmp17);
   if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
     class F {
       constructor() {
-        let experimentsMetadata;
         if (closure_0) {
-          experimentsMetadata = ApexExperimentStore.getExperimentsMetadata();
+          tmp2 = closure_6;
+          experimentsMetadata = closure_6.getExperimentsMetadata();
         } else {
           experimentsMetadata = closure_10;
         }
@@ -304,13 +295,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     const items4 = [ApexExperimentStore];
     cResult[12] = items4;
-    tmp20 = items4;
+    const tmp19 = items4;
   } else {
     class F {
       constructor() {
-        let experimentsMetadata;
         if (closure_0) {
-          experimentsMetadata = ApexExperimentStore.getExperimentsMetadata();
+          tmp2 = closure_6;
+          experimentsMetadata = closure_6.getExperimentsMetadata();
         } else {
           experimentsMetadata = closure_10;
         }
@@ -318,26 +309,26 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
   }
-  if (cResult[13] !== tmp4) {
+  if (cResult[13] !== tmp3) {
     class F {
       constructor() {
-        let experimentsMetadata;
         if (closure_0) {
-          experimentsMetadata = ApexExperimentStore.getExperimentsMetadata();
+          tmp2 = closure_6;
+          experimentsMetadata = closure_6.getExperimentsMetadata();
         } else {
           experimentsMetadata = closure_10;
         }
         return experimentsMetadata;
       }
     }
-    cResult[13] = tmp4;
-    cResult[14] = tmp22;
+    cResult[13] = tmp3;
+    cResult[14] = tmp21;
   } else {
     class F {
       constructor() {
-        let experimentsMetadata;
         if (closure_0) {
-          experimentsMetadata = ApexExperimentStore.getExperimentsMetadata();
+          tmp2 = closure_6;
+          experimentsMetadata = closure_6.getExperimentsMetadata();
         } else {
           experimentsMetadata = closure_10;
         }
@@ -345,14 +336,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
   }
-  const tmpResult12 = require("get initialized");
-  const stateFromStores2 = tmpResult12.useStateFromStores(tmp20, tmp22);
+  const objResult10 = obj(504);
+  const stateFromStores2 = obj(504).useStateFromStores(tmp19, tmp21);
   if (cResult[15] === stateFromStores2) {
     class F {
       constructor() {
-        let experimentsMetadata;
         if (closure_0) {
-          experimentsMetadata = ApexExperimentStore.getExperimentsMetadata();
+          tmp2 = closure_6;
+          experimentsMetadata = closure_6.getExperimentsMetadata();
         } else {
           experimentsMetadata = closure_10;
         }
@@ -360,32 +351,33 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
   }
-  if (tmp4) {
+  if (tmp3) {
     class F {
       constructor() {
-        let experimentsMetadata;
         if (closure_0) {
-          experimentsMetadata = ApexExperimentStore.getExperimentsMetadata();
+          tmp2 = closure_6;
+          experimentsMetadata = closure_6.getExperimentsMetadata();
         } else {
           experimentsMetadata = closure_10;
         }
         return experimentsMetadata;
       }
     }
-    const tmpResult13 = require("useLegacyExperiments");
-    tmp25[0] = tmpResult13.parseRegisteredExperiments(stateFromStoresObject);
-    const tmpResult14 = require("useLegacyExperiments");
-    tmp25[1] = tmpResult14.getLegacyOverridesInfo(stateFromStoresObject1);
-    const tmpResult15 = require("useApexExperiments");
-    tmp25[2] = tmpResult15.mergeApexExperiments(stateFromStores, stateFromStores1);
-    const tmpResult16 = require("useApexExperiments");
-    tmp25[3] = tmpResult16.getApexExperimentOverridesInfo(stateFromStores2);
+    tmp24[0] = obj(11152).parseRegisteredExperiments(stateFromStoresObject);
+    const objResult12 = obj(11152);
+    tmp24[1] = obj(11152).getLegacyOverridesInfo(stateFromStoresObject1);
+    const objResult13 = obj(11152);
+    tmp24[2] = obj(11153).mergeApexExperiments(stateFromStores, stateFromStores1);
+    obj = obj(11153);
+    apexExperimentOverridesInfo = obj.getApexExperimentOverridesInfo(stateFromStores2);
+    tmp24[3] = apexExperimentOverridesInfo;
+    const objResult14 = obj(11153);
   } else {
     class F {
       constructor() {
-        let experimentsMetadata;
         if (closure_0) {
-          experimentsMetadata = ApexExperimentStore.getExperimentsMetadata();
+          tmp2 = closure_6;
+          experimentsMetadata = closure_6.getExperimentsMetadata();
         } else {
           experimentsMetadata = closure_10;
         }
@@ -396,66 +388,58 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[15] = stateFromStores2;
   cResult[16] = stateFromStores;
   cResult[17] = stateFromStores1;
-  cResult[18] = tmp4;
+  cResult[18] = tmp3;
   cResult[19] = stateFromStoresObject1;
   cResult[20] = stateFromStoresObject;
-  cResult[21] = tmp25;
+  cResult[21] = tmp24;
+  const objResult11 = obj(504);
 }) : (() => {
-  let closure_0;
-  let stateFromStores2;
-  let stateFromStoresObject;
-  const tmp = closure_7();
+  let tmp = closure_7();
   _require = tmp;
-  let obj = require("get initialized");
   const items = [stateFromStores2];
-  stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    let registeredExperiments;
+  stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     if (closure_0) {
-      registeredExperiments = ExperimentStore.getRegisteredExperiments();
+      let registeredExperiments = ExperimentStore.getRegisteredExperiments();
     } else {
       registeredExperiments = closure_8;
     }
     return registeredExperiments;
   });
-  let obj2 = require("get initialized");
+  let obj = require("initialize");
   const items1 = [stateFromStores2];
-  const stateFromStoresObject1 = obj2.useStateFromStoresObject(items1, () => {
-    let allExperimentOverrideDescriptors;
+  const stateFromStoresObject1 = require("initialize").useStateFromStoresObject(items1, () => {
     if (closure_0) {
-      allExperimentOverrideDescriptors = ExperimentStore.getAllExperimentOverrideDescriptors();
+      let allExperimentOverrideDescriptors = ExperimentStore.getAllExperimentOverrideDescriptors();
     } else {
       allExperimentOverrideDescriptors = closure_9;
     }
     return allExperimentOverrideDescriptors;
   });
-  let obj3 = require("get initialized");
+  let obj2 = require("initialize");
   const items2 = [ApexExperimentStore];
-  const stateFromStores = obj3.useStateFromStores(items2, () => {
-    let experimentsMetadata;
+  const stateFromStores = require("initialize").useStateFromStores(items2, () => {
     if (closure_0) {
-      experimentsMetadata = ApexExperimentStore.getExperimentsMetadata();
+      let experimentsMetadata = ApexExperimentStore.getExperimentsMetadata();
     } else {
       experimentsMetadata = closure_10;
     }
     return experimentsMetadata;
   });
-  let obj4 = require("get initialized");
+  let obj3 = require("initialize");
   const items3 = [ApexExperimentStore];
-  const stateFromStores1 = obj4.useStateFromStores(items3, () => {
-    let registeredExperiments;
+  const stateFromStores1 = require("initialize").useStateFromStores(items3, () => {
     if (closure_0) {
-      registeredExperiments = ApexExperimentStore.getRegisteredExperiments();
+      let registeredExperiments = ApexExperimentStore.getRegisteredExperiments();
     } else {
       registeredExperiments = closure_11;
     }
     return registeredExperiments;
   });
-  let obj5 = require("get initialized");
+  let obj4 = require("initialize");
   const items4 = [ApexExperimentStore];
-  stateFromStores2 = obj5.useStateFromStores(items4, () => {
-    let clientOverrides;
+  stateFromStores2 = require("initialize").useStateFromStores(items4, () => {
     if (closure_0) {
-      clientOverrides = ApexExperimentStore.getClientOverrides();
+      let clientOverrides = ApexExperimentStore.getClientOverrides();
     } else {
       clientOverrides = closure_12;
     }
@@ -463,26 +447,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   });
   const items5 = [tmp, stateFromStoresObject, stateFromStoresObject1, stateFromStores, stateFromStores1, stateFromStores2];
   return stateFromStores.useMemo(() => {
-    let obj2;
-    let obj3;
-    let obj4;
-    let obj5;
-    let tmp2;
     if (closure_0) {
-      const obj = { legacyExperiments: obj2.parseRegisteredExperiments(stateFromStoresObject), legacyOverridesInfo: obj3.getLegacyOverridesInfo(stateFromStoresObject1), apexExperiments: obj4.mergeApexExperiments(stateFromStores, stateFromStores1), apexOverridesInfo: obj5.getApexExperimentOverridesInfo(stateFromStores2) };
-      obj2 = useLegacyExperiments;
-      obj3 = useLegacyExperiments;
-      obj4 = useApexExperiments;
-      tmp2 = obj;
-      obj5 = useApexExperiments;
+      const obj = { legacyExperiments: useLegacyExperiments.parseRegisteredExperiments(stateFromStoresObject), legacyOverridesInfo: null, apexExperiments: null, apexOverridesInfo: null };
+      obj.legacyOverridesInfo = useLegacyExperiments.getLegacyOverridesInfo(stateFromStoresObject1);
+      obj.apexExperiments = useApexExperiments.mergeApexExperiments(stateFromStores, stateFromStores1);
+      obj.apexOverridesInfo = useApexExperiments.getApexExperimentOverridesInfo(stateFromStores2);
+      let tmp = obj;
     } else {
-      tmp2 = closure_13;
+      tmp = closure_13;
     }
-    return tmp2;
+    return tmp;
   }, items5);
 });
-const result = size.fileFinishedImporting("modules/experiments/client_override_hooks/useCodedLinksExperimentEmbeds.tsx");
-
-export { canSeeExperimentEmbeds };
-export const useCanSeeExperimentEmbeds = tmp2;
-export const useCodedLinksExperimentEmbeds = tmp3;

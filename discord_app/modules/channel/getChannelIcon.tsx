@@ -1,14 +1,14 @@
 // === Module 12872: getChannelIcon ===
 
 // Module 12872 (getChannelIcon)
-import Constants from "Constants" /* 1085 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1377 */;
-import size from "module_2" /* 2 */;
 
-const ChannelTypes = Constants.ChannelTypes;
+require = fn;
+const ChannelTypes = fn(1085).ChannelTypes;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/getChannelIcon.tsx");
 
 export const getChannelIconURL = function getChannelIconURL(type) {
@@ -27,11 +27,11 @@ export const getChannelIconURL = function getChannelIconURL(type) {
     }
     return avatarURL;
   } else if (tmp.GROUP_DM === type) {
-    const obj = { id: null, icon: null, applicationId: type.getApplicationId(), size: num };
-    ({ id: obj.id, icon: obj.icon } = type);
-    const getChannelIconURL = AvatarUtilsDefault.getChannelIconURL;
-    AvatarUtilsDefault;
-    return getChannelIconURL(obj);
+    const obj3 = { id: null, icon: null, applicationId: null, size: null };
+    ({ id: obj2.id, icon: obj2.icon } = type);
+    obj3.applicationId = type.getApplicationId();
+    obj3.size = num;
+    return AvatarUtilsDefault.getChannelIconURL(obj3);
   }
 };
 export const getChannelIconSource = function getChannelIconSource(type) {
@@ -46,10 +46,9 @@ export const getChannelIconSource = function getChannelIconSource(type) {
     }
     return avatarSource;
   } else if (tmp.GROUP_DM === type) {
-    const obj = { id: null, icon: null, applicationId: type.getApplicationId(), size: 128 };
-    ({ id: obj.id, icon: obj.icon } = type);
-    const getChannelIconSource = AvatarUtilsDefault.getChannelIconSource;
-    AvatarUtilsDefault;
-    return getChannelIconSource(obj);
+    const obj3 = { id: null, icon: null, applicationId: null, size: 128 };
+    ({ id: obj2.id, icon: obj2.icon } = type);
+    obj3.applicationId = type.getApplicationId();
+    return AvatarUtilsDefault.getChannelIconSource(obj3);
   }
 };

@@ -1,58 +1,31 @@
 // === Module 6104: FreeFormInputGroup ===
 
 // Module 6104 (FreeFormInputGroup)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import native from "native" /* 1188 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import RedesignCompat from "RedesignCompat" /* 6080 */;
-import TextInput_TextInput from "TextInput/TextInput" /* 6105 */;
+import TextInput from "TextInput" /* 6105 */;
 import FreeFormLabelDefault from "FreeFormLabel" /* 6432 */;
 import FreeFormTextInputDefault from "FreeFormTextInput" /* 6433 */;
 import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 6435 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let metroImportAll;
-let metroImportDefault;
+require = fn;
 let closure_3 = ["style", "label", "error", "value", "hint", "textStyle", "enableAndroidSanitizedInputWorkaround", "secureTextEntry", "keyboardType", "accessibilityLabel"];
-const View = react_native.View;
-({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4896);
 let closure_9 = createStyles.createStyles({ label: { marginBottom: 8 }, input: { flexGrow: 1, marginBottom: 8 }, error: { marginBottom: 8 }, hint: { marginBottom: 8 } });
-const forwardRef = react.forwardRef;
-const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
-  let accessibilityLabel;
-  let clearButtonVisibility;
-  let enableAndroidSanitizedInputWorkaround;
-  let error;
-  let hint;
-  let items;
-  let keyboardType;
-  let label;
-  let onChangeText;
-  let placeholder;
-  let secureTextEntry;
-  let style;
-  let textStyle;
-  let tmp10;
-  let tmp11;
-  let tmp12;
-  let tmp13;
-  let tmp14;
-  let tmp4;
-  let tmp5;
-  let tmp6;
-  let tmp7;
-  let tmp8;
-  let tmp9;
-  let value;
-  const obj = react2;
-  const cResult = obj.c(56);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FreeFormInputGroup.tsx");
+
+export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
+  const cResult = c.c(56);
   if (cResult[0] !== arg0) {
     ({ style, label, error, value, hint, textStyle, enableAndroidSanitizedInputWorkaround, secureTextEntry, keyboardType, accessibilityLabel } = arg0);
     const tmp17 = _objectWithoutProperties(arg0, closure_3);
@@ -68,17 +41,17 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
     cResult[9] = enableAndroidSanitizedInputWorkaround;
     cResult[10] = textStyle;
     cResult[11] = value;
-    tmp14 = value;
-    tmp13 = textStyle;
-    tmp12 = enableAndroidSanitizedInputWorkaround;
-    tmp11 = style;
-    tmp10 = secureTextEntry;
-    tmp9 = tmp17;
-    tmp8 = label;
-    tmp7 = keyboardType;
-    tmp6 = hint;
-    tmp5 = error;
-    tmp4 = accessibilityLabel;
+    let tmp14 = value;
+    let tmp13 = textStyle;
+    let tmp12 = enableAndroidSanitizedInputWorkaround;
+    let tmp11 = style;
+    let tmp10 = secureTextEntry;
+    let tmp9 = tmp17;
+    let tmp8 = label;
+    let tmp7 = keyboardType;
+    let tmp6 = hint;
+    let tmp5 = error;
+    let tmp4 = accessibilityLabel;
   } else {
     tmp4 = cResult[1];
     tmp5 = cResult[2];
@@ -94,19 +67,17 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
   }
   const tmp19 = closure_9();
   if (cResult[12] === (undefined !== tmp12 && tmp12)) {
-    let tmp20;
-    let str;
     if (cResult[13] === tmp10) {
-      tmp20 = cResult[14];
+      let tmp20 = cResult[14];
     }
-    if (!(undefined !== tmp12 && tmp12)) {
-      str = tmp7;
+    if (!tmp18) {
+      let str = tmp7;
     } else {
       PlatformUtils;
       str = "visible-password";
     }
-    const context = react.useContext(RedesignCompat.RedesignCompatContext);
-    const id = react.useId();
+    const context = noop.useContext(RedesignCompat.RedesignCompatContext);
+    const id = noop.useId();
     if (context) {
       ({ placeholder, onChangeText, clearButtonVisibility } = tmp9);
       const tmp53 = clearButtonVisibility !== native.ClearButtonVisibility.WITH_CONTENT;
@@ -120,9 +91,8 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
                     if (cResult[22] === tmp9.autoCapitalize) {
                       if (cResult[23] === tmp11) {
                         if (cResult[24] === tmp53) {
-                          let tmp54;
                           if (cResult[25] === tmp14) {
-                            tmp54 = cResult[26];
+                            let tmp54 = cResult[26];
                           }
                           return tmp54;
                         }
@@ -136,7 +106,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const obj2 = { containerStyle: tmp11, value: tmp14, label: tmp8, errorMessage: tmp5, description: tmp6, placeholder, onChange: onChangeText, clearable: tmp53, keyboardType: str, secureTextEntry: tmp20, autoCapitalize: tmp9.autoCapitalize };
-      const tmp56 = metroImportDefault(TextInput_TextInput.TextInput, obj2);
+      const tmp56 = React5(TextInput.TextInput, obj2);
       cResult[15] = str;
       cResult[16] = tmp20;
       cResult[17] = tmp5;
@@ -153,23 +123,20 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
     } else {
       if (cResult[27] === tmp8) {
         if (cResult[28] === id) {
-          let tmp25;
           if (cResult[29] === tmp19.label) {
-            tmp25 = cResult[30];
+            let tmp25 = cResult[30];
           }
           if (tmp4 == null) {
-            let tmp30;
             if (null == tmp8) {
-              tmp30 = tmp8;
+              const tmp30 = tmp8;
             } else {
               PlatformUtils;
             }
             tmp4 = tmp30;
           }
           if (cResult[31] === tmp19.input) {
-            let tmp32;
             if (cResult[32] === tmp13) {
-              tmp32 = cResult[33];
+              let tmp32 = cResult[33];
             }
             if (cResult[34] === str) {
               if (cResult[35] === tmp20) {
@@ -177,38 +144,35 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[37] === ref) {
                     if (cResult[38] === tmp9) {
                       if (cResult[39] === tmp4) {
-                        if (cResult[40] === null != tmp5) {
+                        if (cResult[40] === tmp31) {
                           if (cResult[41] === tmp32) {
-                            let tmp34;
                             if (cResult[42] === tmp14) {
-                              tmp34 = cResult[43];
+                              let tmp34 = cResult[43];
                             }
                             if (cResult[44] === tmp5) {
-                              let tmp42;
                               if (cResult[45] === tmp19.error) {
-                                tmp42 = cResult[46];
+                                let tmp42 = cResult[46];
                               }
                               if (cResult[47] === tmp6) {
-                                let tmp46;
                                 if (cResult[48] === tmp19.hint) {
-                                  tmp46 = cResult[49];
+                                  let tmp46 = cResult[49];
                                 }
                                 if (cResult[50] === tmp11) {
                                   if (cResult[51] === tmp25) {
                                     if (cResult[52] === tmp34) {
                                       if (cResult[53] === tmp42) {
-                                        let tmp49;
                                         if (cResult[54] === tmp46) {
-                                          tmp49 = cResult[55];
+                                          let tmp49 = cResult[55];
                                         }
                                         return tmp49;
                                       }
                                     }
                                   }
                                 }
-                                const obj3 = { style: tmp11, children: items };
-                                items = [tmp25, tmp34, tmp42, tmp46];
-                                const tmp52 = metroImportAll(View, obj3);
+                                const obj3 = { style: tmp11, children: null };
+                                const items = [tmp25, tmp34, tmp42, tmp46];
+                                obj3.children = items;
+                                const tmp52 = closure_1_8(View, obj3);
                                 cResult[50] = tmp11;
                                 cResult[51] = tmp25;
                                 cResult[52] = tmp34;
@@ -220,7 +184,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
                               let tmp47 = null;
                               if (null != tmp6) {
                                 const obj4 = { style: tmp19.hint, variant: "text-xs/medium", color: "text-muted", children: tmp6 };
-                                tmp47 = metroImportDefault(Text_Text.Text, obj4);
+                                tmp47 = React5(Text_Text.Text, obj4);
                               }
                               cResult[47] = tmp6;
                               cResult[48] = tmp19.hint;
@@ -230,7 +194,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
                             let tmp43 = null;
                             if (null != tmp5) {
                               const obj5 = { style: tmp19.error, children: tmp5 };
-                              tmp43 = metroImportDefault(FreeFormErrorLabelDefault, obj5);
+                              tmp43 = React5(FreeFormErrorLabelDefault, obj5);
                             }
                             cResult[44] = tmp5;
                             cResult[45] = tmp19.error;
@@ -244,17 +208,24 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            const obj6 = { accessibilityLabel: tmp4, accessibilityLabelledBy: id, error: null != tmp5, ref, value: tmp14, secureTextEntry: tmp20, keyboardType: str, style: tmp32 };
-            const tmp37 = FreeFormTextInputDefault;
+            const obj6 = {};
             const merged = Object.assign(tmp9);
-            const tmp41 = metroImportDefault(tmp37, obj6);
+            obj6.accessibilityLabel = tmp4;
+            obj6.accessibilityLabelledBy = id;
+            obj6.error = tmp31;
+            obj6.ref = ref;
+            obj6.value = tmp14;
+            obj6.secureTextEntry = tmp20;
+            obj6.keyboardType = str;
+            obj6.style = tmp32;
+            const tmp41 = React5(FreeFormTextInputDefault, obj6);
             cResult[34] = str;
             cResult[35] = tmp20;
             cResult[36] = id;
             cResult[37] = ref;
             cResult[38] = tmp9;
             cResult[39] = tmp4;
-            cResult[40] = null != tmp5;
+            cResult[40] = tmp31;
             cResult[41] = tmp32;
             cResult[42] = tmp14;
             cResult[43] = tmp41;
@@ -270,7 +241,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
       let tmp26 = null;
       if (null != tmp8) {
         const obj7 = { style: tmp19.label, nativeID: id, children: tmp8 };
-        tmp26 = metroImportDefault(FreeFormLabelDefault, obj7);
+        tmp26 = React5(FreeFormLabelDefault, obj7);
       }
       cResult[27] = tmp8;
       cResult[28] = id;
@@ -280,9 +251,9 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
     }
   }
   let isAndroidResult = tmp18;
-  if (isAndroidResult) {
+  if (undefined !== tmp12 && tmp12) {
+    isAndroidResult = PlatformUtils.isAndroid();
     const tmpResult4 = PlatformUtils;
-    isAndroidResult = tmpResult4.isAndroid();
   }
   if (!isAndroidResult) {
     isAndroidResult = tmp10;
@@ -291,61 +262,43 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
   cResult[13] = tmp10;
   cResult[14] = isAndroidResult;
   tmp20 = isAndroidResult;
-}) : ((textStyle, ref) => {
-  let clearButtonVisibility;
-  let enableAndroidSanitizedInputWorkaround;
-  let error;
-  let hint;
-  let items;
-  let items1;
-  let keyboardType;
-  let label;
-  let onChangeText;
-  let placeholder;
-  let secureTextEntry;
-  let str;
-  let style;
-  let value;
-  ({ style, label, error, value, hint, enableAndroidSanitizedInputWorkaround } = textStyle);
-  textStyle = textStyle.textStyle;
+}) : ((accessibilityLabel, ref) => {
+  ({ style, label, error, value, hint, enableAndroidSanitizedInputWorkaround } = accessibilityLabel);
   if (enableAndroidSanitizedInputWorkaround === undefined) {
     enableAndroidSanitizedInputWorkaround = false;
   }
-  let accessibilityLabel = textStyle.accessibilityLabel;
-  ({ secureTextEntry, keyboardType } = textStyle);
-  const merged = Object.assign(textStyle, Object.assign({ style: 0, label: 0, error: 0, value: 0, hint: 0, textStyle: 0, enableAndroidSanitizedInputWorkaround: 0, secureTextEntry: 0, keyboardType: 0, accessibilityLabel: 0 }));
+  accessibilityLabel = accessibilityLabel.accessibilityLabel;
+  ({ secureTextEntry, keyboardType } = accessibilityLabel);
+  const merged = Object.assign(accessibilityLabel, Object.assign({ style: 0, label: 0, error: 0, value: 0, hint: 0, textStyle: 0, enableAndroidSanitizedInputWorkaround: 0, secureTextEntry: 0, keyboardType: 0, accessibilityLabel: 0 }));
   const tmp2 = closure_9();
   let isAndroidResult = enableAndroidSanitizedInputWorkaround;
-  if (isAndroidResult) {
-    const obj = PlatformUtils;
-    isAndroidResult = obj.isAndroid();
+  if (enableAndroidSanitizedInputWorkaround) {
+    isAndroidResult = PlatformUtils.isAndroid();
   }
   if (!isAndroidResult) {
     isAndroidResult = secureTextEntry;
   }
   if (!enableAndroidSanitizedInputWorkaround) {
-    str = keyboardType;
+    let str = keyboardType;
   } else {
     PlatformUtils;
     str = "visible-password";
   }
-  const context = react.useContext(RedesignCompat.RedesignCompatContext);
-  const id = react.useId();
+  const context = noop.useContext(RedesignCompat.RedesignCompatContext);
+  const id = noop.useId();
   if (context) {
     ({ placeholder, onChangeText, clearButtonVisibility } = merged);
     const obj3 = { containerStyle: style, value, label, errorMessage: error, description: hint, placeholder, onChange: onChangeText, clearable: clearButtonVisibility !== native.ClearButtonVisibility.WITH_CONTENT, keyboardType: str, secureTextEntry: isAndroidResult, autoCapitalize: merged.autoCapitalize };
-    const TextInput = TextInput_TextInput.TextInput;
-    return metroImportDefault(TextInput, obj3);
+    return React5(TextInput.TextInput, obj3);
   } else {
+    const obj4 = { style, children: null };
     let tmp14 = null;
-    const obj4 = { style, children: items };
     if (null != label) {
       const obj5 = { style: tmp2.label, nativeID: id, children: label };
-      tmp14 = metroImportDefault(FreeFormLabelDefault, obj5);
+      tmp14 = React5(FreeFormLabelDefault, obj5);
     }
-    items = [tmp14, , , ];
-    const obj6 = { accessibilityLabel, accessibilityLabelledBy: id, error: null != error, ref, value, secureTextEntry: isAndroidResult, keyboardType: str, style: items1 };
-    const tmp19 = FreeFormTextInputDefault;
+    const items = [tmp14, , , ];
+    const obj6 = {};
     const merged1 = Object.assign(merged);
     if (accessibilityLabel == null) {
       if (null != label) {
@@ -353,23 +306,29 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
       }
       accessibilityLabel = label;
     }
-    items1 = [tmp2.input, textStyle];
-    items[1] = metroImportDefault(tmp19, obj6);
+    obj6.accessibilityLabel = accessibilityLabel;
+    obj6.accessibilityLabelledBy = id;
+    obj6.error = null != error;
+    obj6.ref = ref;
+    obj6.value = value;
+    obj6.secureTextEntry = isAndroidResult;
+    obj6.keyboardType = str;
+    const items1 = [tmp2.input, accessibilityLabel.textStyle];
+    obj6.style = items1;
+    items[1] = React5(FreeFormTextInputDefault, obj6);
     let tmp17Result = null;
     if (null != error) {
       const obj7 = { style: tmp2.error, children: error };
-      tmp17Result = metroImportDefault(FreeFormErrorLabelDefault, obj7);
+      tmp17Result = React5(FreeFormErrorLabelDefault, obj7);
     }
     items[2] = tmp17Result;
     let tmp17Result2 = null;
     if (null != hint) {
       const obj8 = { style: tmp2.hint, variant: "text-xs/medium", color: "text-muted", children: hint };
-      tmp17Result2 = metroImportDefault(Text_Text.Text, obj8);
+      tmp17Result2 = React5(Text_Text.Text, obj8);
     }
     items[3] = tmp17Result2;
-    return metroImportAll(View, obj4);
+    obj4.children = items;
+    return closure_1_8(View, obj4);
   }
 }));
-const result = size.fileFinishedImporting("design/void/Form/native/FreeFormInputGroup.tsx");
-
-export default forwardRefResult;

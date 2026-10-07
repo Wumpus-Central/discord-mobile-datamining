@@ -1,29 +1,19 @@
 // === Module 12076: RegionalTeenUtils ===
 
 // Module 12076 (RegionalTeenUtils)
-import react2 from "react" /* 576 */;
-import CountryCodes from "CountryCodes" /* 5113 */;
+import c from "c" /* 576 */;
 import useUserIsTeen from "useUserIsTeen" /* 8327 */;
 import MessageRequestActionCreators from "MessageRequestActionCreators" /* 9841 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5110 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let userCountryCode;
-
-let items = ["GB", "AU", ...CountryCodes.CountryCodesSets.EU_COUNTRIES];
+require = fn;
+let items = ["GB", "AU"];
+HermesBuiltin.arraySpread(fn(5113).CountryCodesSets.EU_COUNTRIES, 2);
 const set = new Set(items);
-let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let stateFromStores;
-  let tmp4;
-  let tmp5;
-  let tmp8;
-  let tmp9;
-  let obj = stateFromStores(576);
-  const cResult = obj.c(5);
-  const tmp = stateFromStores;
+let ReactCompilerGating = fn(558);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = stateFromStores(576).c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [RegionalFeatureConfigStore];
     const fn = function s() {
@@ -36,59 +26,58 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const tmpResult = tmp(504);
-  stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+  let obj = stateFromStores(576);
+  stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
   if (cResult[2] !== stateFromStores) {
     const fn2 = function l() {
       if (null == stateFromStores) {
-        const obj = MessageRequestActionCreators;
-        userCountryCode = obj.fetchUserCountryCode();
+        userCountryCode = MessageRequestActionCreators.fetchUserCountryCode();
       }
     };
     const items1 = [stateFromStores];
     cResult[2] = stateFromStores;
     cResult[3] = fn2;
     cResult[4] = items1;
-    tmp9 = items1;
-    tmp8 = fn2;
+    let tmp9 = items1;
+    let tmp8 = fn2;
   } else {
     tmp8 = cResult[3];
     tmp9 = cResult[4];
   }
-  const effect = react.useEffect(tmp8, tmp9);
+  const effect = noop.useEffect(tmp8, tmp9);
   return stateFromStores;
 }) : (() => {
-  let stateFromStores;
-  let obj = stateFromStores(504);
   const items = [RegionalFeatureConfigStore];
-  stateFromStores = obj.useStateFromStores(items, () => userCountryCode.getUserCountryCode());
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => userCountryCode.getUserCountryCode());
   const items1 = [stateFromStores];
-  const effect = react.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null == stateFromStores) {
-      const obj = MessageRequestActionCreators;
-      userCountryCode = obj.fetchUserCountryCode();
+      userCountryCode = MessageRequestActionCreators.fetchUserCountryCode();
     }
   }, items1);
   return stateFromStores;
 });
-let closure_5 = tmp3;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((has) => {
-  const obj = react2;
-  const cResult = obj.c(4);
+let closure_5 = tmp4;
+ReactCompilerGating = fn(558);
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((has) => {
+  const cResult = c.c(4);
   const tmp2 = closure_5();
-  const obj2 = useUserIsTeen;
-  const userIsTeen = obj2.useUserIsTeen();
+  const userIsTeen = useUserIsTeen.useUserIsTeen();
   if (cResult[0] === has) {
     if (cResult[1] === tmp2) {
-      let tmp4;
       if (cResult[2] === userIsTeen) {
-        tmp4 = cResult[3];
+        let tmp4 = cResult[3];
       }
       return tmp4;
     }
   }
-  const hasItem = userIsTeen && null != tmp2 && has.has(tmp2.alpha2);
+  let hasItem = userIsTeen;
+  if (userIsTeen) {
+    hasItem = null != tmp2;
+  }
+  if (hasItem) {
+    hasItem = has.has(tmp2.alpha2);
+  }
   cResult[0] = has;
   cResult[1] = tmp2;
   cResult[2] = userIsTeen;
@@ -96,15 +85,21 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((has) => {
   tmp4 = hasItem;
 }) : ((has) => {
   const tmp = closure_5();
-  const obj = useUserIsTeen;
-  const userIsTeen = obj.useUserIsTeen() && null != tmp && has.has(tmp.alpha2);
+  let userIsTeen = useUserIsTeen.useUserIsTeen();
+  if (userIsTeen) {
+    userIsTeen = null != tmp;
+  }
+  if (userIsTeen) {
+    userIsTeen = has.has(tmp.alpha2);
+  }
   return userIsTeen;
 });
-let closure_6 = tmp4;
-ReactCompilerGating = ReactCompilerGating_mod;
+let closure_6 = tmp5;
+ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
+const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/regional_feature_config/RegionalTeenUtils.tsx");
 
-export const useUserCountryCode = tmp3;
-export const useIsTeenInCountrySet = tmp4;
+export const useUserCountryCode = tmp4;
+export const useIsTeenInCountrySet = tmp5;
 export const useIsTeenInStrictCountry = () => closure_6(set);

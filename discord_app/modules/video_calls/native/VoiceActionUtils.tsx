@@ -12,7 +12,6 @@ const result = size.fileFinishedImporting("modules/video_calls/native/VoiceActio
 
 export { DominantMuteState };
 export const createMuteHandler = function createMuteHandler(muteStates) {
-  let onPress;
   let flag = stateFromStores;
   if (stateFromStores === undefined) {
     flag = false;
@@ -22,7 +21,7 @@ export const createMuteHandler = function createMuteHandler(muteStates) {
     dominantMuteState = obj.SELF_MUTE;
   }
   if (flag) {
-    onPress = NOOP;
+    let onPress = NOOP;
   } else {
     onPress = CallsUtils.handleToggleSelfMute;
   }

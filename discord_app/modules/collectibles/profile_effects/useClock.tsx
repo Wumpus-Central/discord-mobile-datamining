@@ -2,16 +2,14 @@
 
 // Module 8495 (useClock)
 import _modDef38 from "module_38" /* 38 */;
-import react from "react" /* 19 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let importDefault;
 
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_effects/useClock.tsx");
 
 export default function _default(arg0) {
-  let closure_0;
   importDefault = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
@@ -28,15 +26,15 @@ export default function _default(arg0) {
   if (num2 === undefined) {
     num2 = 3000;
   }
-  const ref = allowableMinInterval.useRef(num);
-  const ref2 = allowableMinInterval.useRef(0);
-  const ref3 = allowableMinInterval.useRef(undefined);
-  const ref4 = allowableMinInterval.useRef(undefined);
+  allowableMinInterval.useRef(num);
+  allowableMinInterval.useRef(0);
+  allowableMinInterval.useRef(undefined);
+  allowableMinInterval.useRef(undefined);
   const ticking = allowableMinInterval.useRef(true);
-  const ref5 = allowableMinInterval.useRef(0);
-  const ref6 = allowableMinInterval.useRef(undefined);
+  allowableMinInterval.useRef(0);
+  allowableMinInterval.useRef(undefined);
   const callback = allowableMinInterval.useCallback(() => {
-    ref5.current = 0;
+    closure_11.current = 0;
     if (null != ref6.current) {
       const _clearTimeout = clearTimeout;
       clearTimeout(ref6.current);
@@ -60,18 +58,17 @@ export default function _default(arg0) {
       const diff = current - ref4.current;
       num = allowableMinInterval;
       const diff1 = current - ref3.current;
-      const _Math = Math;
       if (allowableMinInterval == null) {
         num = 120;
       }
-      if (diff1 > 1.5 * min(num, ref.current)) {
+      if (diff1 > 1.5 * Math.min(num, ref.current)) {
         ref5.current = ref5.current + 1;
         if (null != ref6.current) {
           const _clearTimeout = clearTimeout;
           clearTimeout(ref6.current);
         }
         const _setTimeout = setTimeout;
-        ref6.current = setTimeout(callback, 1.5);
+        ref6.current = setTimeout(callback, num2);
         if (null != droppedFramesCallbackThreshold) {
           if (ref5.current > tmp12) {
             _modDef38(null != droppedFramesCallback, "useClock - If you set a dropped frames threshold, you must provide a droppedFramesCallback to do something when that threshold is hit");
@@ -87,22 +84,22 @@ export default function _default(arg0) {
         closure_0(diff);
       }
       const _requestAnimationFrame = requestAnimationFrame;
-      ref2.current = requestAnimationFrame(callback2);
+      closure_7.current = requestAnimationFrame(callback2);
     }
   }, items);
   const items1 = [callback2];
   const items2 = [num];
   const reset = allowableMinInterval.useCallback(() => {
     ticking.current = true;
-    ref4.current = undefined;
+    closure_9.current = undefined;
     cancelAnimationFrame(ref2.current);
     ref2.current = requestAnimationFrame(callback2);
   }, items1);
   const effect = allowableMinInterval.useEffect(() => {
-    ref.current = num;
+    closure_6.current = num;
   }, items2);
   require("useMountEffect")(() => {
-    ref2.current = requestAnimationFrame(callback2);
+    closure_7.current = requestAnimationFrame(callback2);
     return () => stop();
   });
   return { stop, reset, ticking };

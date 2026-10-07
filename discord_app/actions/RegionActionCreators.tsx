@@ -7,34 +7,20 @@ import HTTPUtils from "HTTPUtils" /* 1282 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require;
 
 const Endpoints = Constants.Endpoints;
-let obj = {
+const result = size.fileFinishedImporting("actions/RegionActionCreators.tsx");
+
+export default {
   fetchRegions(id) {
-    let guildId;
     _require = id;
     const HTTP = require("HTTPUtils").HTTP;
-    let obj = { url: Endpoints.REGIONS(id), retries: 1, oldFormErrors: true, rejectWithError: true };
-    const value = HTTP.get(obj);
-    value.then((body) => {
-      const obj = DispatcherDefault;
-      const obj2 = { type: "LOAD_REGIONS", regions: body.body, guildId };
-      return obj.dispatch(obj2);
-    }, () => {
-      const obj = DispatcherDefault;
-      const obj2 = { type: "LOAD_REGIONS", regions: [], guildId };
-      return obj.dispatch(obj2);
-    });
+    value = HTTP.get({ url: Endpoints.REGIONS(id), retries: 1, oldFormErrors: true, rejectWithError: true });
+    value.then((body) => DispatcherDefault.dispatch({ type: "LOAD_REGIONS", regions: body.body, guildId }), () => DispatcherDefault.dispatch({ type: "LOAD_REGIONS", regions: [], guildId }));
   },
   changeCallRegion(id, region) {
-    let obj;
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: Endpoints.CALL(id), body: obj, oldFormErrors: true, rejectWithError: true };
-    obj = { region };
+    const request = { url: Endpoints.CALL(id), body: { region }, oldFormErrors: true, rejectWithError: true };
     HTTP.patch(request);
   }
 };
-const result = size.fileFinishedImporting("actions/RegionActionCreators.tsx");
-
-export default obj;

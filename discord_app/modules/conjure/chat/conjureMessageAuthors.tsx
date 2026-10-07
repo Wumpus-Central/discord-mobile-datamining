@@ -3,22 +3,19 @@
 // Module 16674 (conjureMessageAuthors)
 import UserActionCreatorsAll from "UserActionCreators" /* 7863 */;
 import UserStore from "UserStore" /* 1377 */;
-import size from "module_2" /* 2 */;
-
-let importAll;
 
 const set = new Set();
 const map = new Map();
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/conjureMessageAuthors.tsx");
 
 export const resolveMessageAuthor = function resolveMessageAuthor(arg0, user, currentUser) {
-  let tmp;
   if (null == arg0) {
     let tmp2 = currentUser;
     if (currentUser == null) {
       tmp2 = null;
     }
-    tmp = tmp2;
+    let tmp = tmp2;
   } else {
     tmp = user;
     if (user == null) {
@@ -39,12 +36,11 @@ export const requestMessageAuthor = function requestMessageAuthor(userId) {
         if (num < 3) {
           const result = map.set(userId, num + 1);
           set.add(userId);
-          const obj = UserActionCreatorsAll;
-          const user = obj.getUser(userId);
-          const cleanupPromise = user.finally(() => set.delete(userId));
-          cleanupPromise.catch(() => {
+          const user = UserActionCreatorsAll.getUser(userId);
+          user.finally(() => set.delete(closure_0)).catch(() => {
 
           });
+          const cleanupPromise = user.finally(() => set.delete(closure_0));
         }
       }
     }

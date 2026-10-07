@@ -1,95 +1,63 @@
 // === Module 8125: SafetyHubUtils ===
 
 // Module 8125 (SafetyHubUtils)
-import get_initialized from "get initialized" /* 504 */;
-import react from "react" /* 576 */;
-import intl5 from "intl" /* 1126 */;
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import _modDef4467 from "module_4467" /* 4467 */;
 import MediaFormatTesters from "MediaFormatTesters" /* 5046 */;
 import SafetyHubModels from "SafetyHubModels" /* 8127 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SafetyHubConstants from "SafetyHubConstants" /* 8126 */;
-import Constants from "Constants" /* 1085 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let closure_4;
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
+require = fn;
 function parseMessageEmbedForProps(fields) {
-  let _parseFloat;
-  let num;
-  let parts;
-  let str2;
   if (null != fields.fields) {
     fields = fields.fields;
     const reduced = fields.reduce((acc, rawName) => {
       acc[rawName.rawName] = rawName.rawValue;
       return acc;
     }, {});
-    let str = reduced[metroRequire.HEADER];
+    let str = reduced[constants3.HEADER];
     if (str == null) {
       str = "";
     }
-    const obj = { header: str, icon: reduced[metroRequire.ICON_TYPE], body: str2, ctas: parts.filter((item) => "" !== item), timestamp: _parseFloat(num), theme: reduced[metroRequire.THEME], learn_more_link: reduced[metroRequire.LEARN_MORE_LINK], classification_id: reduced[metroRequire.CLASSIFICATION_ID] };
-    str2 = reduced[metroRequire.BODY];
+    const obj = { header: str, icon: reduced[constants3.ICON_TYPE], body: null, ctas: null, timestamp: null, theme: null, learn_more_link: null, classification_id: null };
+    let str2 = reduced[constants3.BODY];
     if (str2 == null) {
       str2 = "";
     }
-    let str3 = reduced[metroRequire.CTAS];
+    obj.body = str2;
+    let str3 = reduced[constants3.CTAS];
     if (str3 == null) {
       str3 = "";
     }
-    parts = str3.split(",");
-    num = reduced[metroRequire.TIMESTAMP];
-    _parseFloat = parseFloat;
+    const parts = str3.split(",");
+    obj.ctas = parts.filter((item) => "" !== item);
+    let num = reduced[constants3.TIMESTAMP];
     if (num == null) {
       num = 0;
     }
+    obj.timestamp = parseFloat(num);
+    obj.theme = reduced[constants3.THEME];
+    obj.learn_more_link = reduced[constants3.LEARN_MORE_LINK];
+    obj.classification_id = reduced[constants3.CLASSIFICATION_ID];
     return obj;
   }
 }
+const SafetyHubConstants = fn(8126);
 ({ AppealIngestionSignal: closure_4, SafetySystemNotificationCtaType: hasOwnProperty, SafetySystemNotificationEmbedKeys: metroRequire } = SafetyHubConstants);
-({ AbortCodes: metroImportDefault, MessageAttachmentFlags: metroImportAll } = Constants);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let suspendedUserToken;
-  let tmp4;
-  let tmp5;
-  const obj = react;
-  const cResult = obj.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [AuthenticationStore];
-    const fn = function s() {
-      return suspendedUserToken.getSuspendedUserToken();
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  const tmpResult = get_initialized;
-  return null != tmpResult.useStateFromStores(tmp4, tmp5);
-}) : (() => {
-  let suspendedUserToken;
-  const items = [AuthenticationStore];
-  const obj = get_initialized;
-  return null != obj.useStateFromStores(items, () => suspendedUserToken.getSuspendedUserToken());
-});
+const Constants = fn(1085);
+({ AbortCodes: closure_7, MessageAttachmentFlags: closure_8 } = Constants);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
 export const getClassificationRelativeIncidentTime = function getClassificationRelativeIncidentTime(timestamp) {
-  const obj = _modDef4467();
-  return obj.to(_modDef4467(timestamp));
+  return _modDef4467().to(_modDef4467(timestamp));
 };
 export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachment(filename) {
-  let num;
-  const obj = MediaFormatTesters;
   if (obj.isImageFile(filename.filename)) {
-    num = metroImportAll.IS_SPOILER;
+    let num = constants5.IS_SPOILER;
   } else {
     MediaFormatTesters;
     num = 0;
@@ -101,48 +69,51 @@ export const parseMessageForProps = function parseMessageForProps(message) {
 };
 export { parseMessageEmbedForProps };
 export const mapCtaToNativeData = function mapCtaToNativeData(arg0, learn_more_link, classification_id) {
-  let intl;
-  let intl2;
-  if (hasOwnProperty.LEARN_MORE_LINK === arg0) {
+  if (constants2.LEARN_MORE_LINK === arg0) {
     let str2 = learn_more_link;
-    const obj2 = { text: intl2.string(intl5.t["8/GdRB"]), type: hasOwnProperty.LEARN_MORE_LINK, key: str2 };
-    intl2 = intl5.intl;
+    const obj2 = { text: null, type: null, key: null };
+    const intl2 = util.intl;
+    obj2.text = intl2.string(util.t["8/GdRB"]);
+    obj2.type = constants2.LEARN_MORE_LINK;
     if (learn_more_link == null) {
       str2 = "";
     }
+    obj2.key = str2;
     return obj2;
-  } else if (hasOwnProperty.POLICY_VIOLATION_DETAIL === arg0) {
+  } else if (constants2.POLICY_VIOLATION_DETAIL === arg0) {
     let str = classification_id;
-    const obj = { text: intl.string(intl5.t.QsqdXC), type: hasOwnProperty.POLICY_VIOLATION_DETAIL, key: str };
-    intl = intl5.intl;
+    const obj = { text: null, type: null, key: null };
+    const intl = util.intl;
+    obj.text = intl.string(util.t.QsqdXC);
+    obj.type = constants2.POLICY_VIOLATION_DETAIL;
     if (classification_id == null) {
       str = "";
     }
+    obj.key = str;
     return obj;
   }
 };
 export const isFlaggedContentEmpty = function isFlaggedContentEmpty(type) {
   let tmp = type.type !== SafetyHubModels.ContentIdType.MESSAGE;
   if (!tmp) {
-    tmp = "" === type.content && 0 === type.attachments.length;
-    const tmp2 = "" === type.content && 0 === type.attachments.length;
+    let tmp2 = "" === type.content;
+    if (tmp2) {
+      tmp2 = 0 === type.attachments.length;
+    }
+    tmp = tmp2;
   }
   return tmp;
 };
 export const getAppealSignalDisplayText = function getAppealSignalDisplayText(signal) {
   const obj = {};
-  const DIDNT_VIOLATE_POLICY = constants.DIDNT_VIOLATE_POLICY;
-  const intl = intl5.intl;
-  obj[DIDNT_VIOLATE_POLICY] = intl.string(intl5.t.mZffAi);
-  const TOO_STRICT_UNFAIR = constants.TOO_STRICT_UNFAIR;
-  const intl2 = intl5.intl;
-  obj[TOO_STRICT_UNFAIR] = intl2.string(intl5.t.wgZVAn);
-  const DONT_AGREE_PENALTY = constants.DONT_AGREE_PENALTY;
-  const intl3 = intl5.intl;
-  obj[DONT_AGREE_PENALTY] = intl3.string(intl5.t.eu8G4k);
-  const SOMETHING_ELSE = constants.SOMETHING_ELSE;
-  const intl4 = intl5.intl;
-  obj[SOMETHING_ELSE] = intl4.string(intl5.t.XU3s6r);
+  const intl = util.intl;
+  obj[constants.DIDNT_VIOLATE_POLICY] = intl.string(util.t.mZffAi);
+  const intl2 = util.intl;
+  obj[constants.TOO_STRICT_UNFAIR] = intl2.string(util.t.wgZVAn);
+  const intl3 = util.intl;
+  obj[constants.DONT_AGREE_PENALTY] = intl3.string(util.t.eu8G4k);
+  const intl4 = util.intl;
+  obj[constants.SOMETHING_ELSE] = intl4.string(util.t.XU3s6r);
   return obj[signal];
 };
 export const capitalizeText = function capitalizeText(description) {
@@ -150,16 +121,14 @@ export const capitalizeText = function capitalizeText(description) {
   if (null != description) {
     str = "";
     if (0 !== description.length) {
-      let formatted;
       if (1 === description.length) {
-        formatted = description.toUpperCase();
+        let formatted = description.toUpperCase();
       } else {
-        const str2 = description.charAt(0);
-        const formatted1 = str2.toUpperCase();
+        const formatted1 = description.charAt(0).toUpperCase();
         const _HermesInternal = HermesInternal;
         formatted = "" + formatted1 + description.slice(1);
+        const str2 = description.charAt(0);
       }
-      str = formatted;
     }
   }
   return str;
@@ -168,13 +137,12 @@ export const isGuildClassification = function isGuildClassification(stateFromSto
   return null != stateFromStores && null != stateFromStores.guild_metadata;
 };
 export const getRequestReviewErrorFromCode = function getRequestReviewErrorFromCode(code) {
-  let stringResult;
-  if (code === metroImportDefault.DSA_APPEAL_REQUEST_DEFLECTION) {
-    const intl2 = intl5.intl;
-    stringResult = intl2.string(intl5.t["0qyXXH"]);
+  if (code === constants4.DSA_APPEAL_REQUEST_DEFLECTION) {
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t["0qyXXH"]);
   } else {
-    const intl = intl5.intl;
-    stringResult = intl.string(intl5.t.aPmsx3);
+    const intl = util.intl;
+    stringResult = intl.string(util.t.aPmsx3);
   }
   return stringResult;
 };
@@ -188,19 +156,35 @@ export const getClassificationAccountStatusExpiration = function getClassificati
       if (true !== classification.has_indefinite_suspension) {
         try {
           const _Date = Date;
-          const self = this;
-          const self2 = this;
           const date = new Date(max_expiration_time);
           return date;
         } catch (err) {
-          return null;
+          return tmp;
         }
       }
     }
     return null;
   }
 };
-export const useIsSuspendedUser = tmp4;
+export const useIsSuspendedUser = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [AuthenticationStore];
+    const fn = function s() {
+      return suspendedUserToken.getSuspendedUserToken();
+    };
+    cResult[0] = items;
+    cResult[1] = fn;
+    tmp4 = items;
+    tmp5 = fn;
+  } else {
+    [tmp4, tmp5] = cResult;
+  }
+  return null != initialize.useStateFromStores(tmp4, tmp5);
+}) : (() => {
+  const items = [AuthenticationStore];
+  return null != initialize.useStateFromStores(items, () => suspendedUserToken.getSuspendedUserToken());
+});
 export const isCurrentUserSuspended = function isCurrentUserSuspended() {
   return null != AuthenticationStore.getSuspendedUserToken();
 };

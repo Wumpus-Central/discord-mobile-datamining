@@ -11,11 +11,9 @@ export { DomainMigrationMessageFrom };
 export const DOMAIN_MIGRATION_SUCCESS_KEY = "domainMigrationSuccess";
 export const DOMAIN_MIGRATION_FAILED_KEY = "domainMigrationFailed";
 export const sendPostMessage = function sendPostMessage(domainMigrationEvent, postMessage, arg2) {
-  let MIGRATION_SOURCE_ORIGIN;
-  let obj;
   if (arg2 === obj.MIGRATION_SOURCE_DOMAIN) {
     const _window2 = window;
-    MIGRATION_SOURCE_ORIGIN = window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN;
+    let MIGRATION_SOURCE_ORIGIN = window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN;
   } else {
     const _window = window;
     MIGRATION_SOURCE_ORIGIN = window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN;
@@ -24,16 +22,18 @@ export const sendPostMessage = function sendPostMessage(domainMigrationEvent, po
   postMessage.postMessage(obj, MIGRATION_SOURCE_ORIGIN);
 };
 export const extractMessage = function extractMessage(origin, arg1) {
-  let MIGRATION_SOURCE_ORIGIN;
   if (arg1 === obj.MIGRATION_SOURCE_DOMAIN) {
     const _window2 = window;
-    MIGRATION_SOURCE_ORIGIN = window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN;
+    let MIGRATION_SOURCE_ORIGIN = window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN;
   } else {
     const _window = window;
     MIGRATION_SOURCE_ORIGIN = window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN;
   }
+  let tmp3 = origin.origin === MIGRATION_SOURCE_ORIGIN;
+  if (tmp3) {
+    tmp3 = null != origin.data.domainMigrationEvent;
+  }
   let tmp5 = null;
-  const tmp3 = origin.origin === MIGRATION_SOURCE_ORIGIN && null != origin.data.domainMigrationEvent;
   if (tmp3) {
     const data = origin.data;
     let domainMigrationEvent;

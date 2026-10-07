@@ -1,51 +1,33 @@
 // === Module 14422: DevToolsNavigator ===
 
 // Module 14422 (DevToolsNavigator)
-import react_native from "react-native" /* 17 */;
 import Types from "Types" /* 4750 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
 import HeaderShared from "HeaderShared" /* 7509 */;
 import SettingHookHarnessDefault from "SettingHookHarness" /* 14423 */;
 import DevToolsContentDefault from "DevToolsContent" /* 15639 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import NativeStackView from "NativeStackView" /* 7568 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
-let _require;
-
-let c9;
-let metroImportAll;
-let metroImportDefault;
+require = fn;
 let closure_3 = ["children"];
-const View = react_native.View;
-({ jsx: metroImportDefault, jsxs: metroImportAll, Fragment: c9 } = Fragment);
-let closure_10 = NativeStackView.createNativeStackNavigator();
-const memo = react.memo;
-let closure_11 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((screenKey) => {
-  let accessibilityNativeStackOptions;
-  let first;
-  let items;
-  let items1;
-  let tmp10;
-  let tmp11;
-  let tmp12;
-  let tmp9;
-  let tmp = accessibilityNativeStackOptions;
-  let obj = accessibilityNativeStackOptions(576);
-  const cResult = obj.c(9);
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+const NativeStackNavigator = fn(7568);
+let closure_10 = NativeStackNavigator.createNativeStackNavigator();
+const ReactCompilerGating = fn(558);
+let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((screenKey) => {
+  const cResult = accessibilityNativeStackOptions(576).c(9);
   let str = screenKey.screenKey;
-  let obj2 = accessibilityNativeStackOptions(6503);
-  accessibilityNativeStackOptions = obj2.useAccessibilityNativeStackOptions();
+  let obj = accessibilityNativeStackOptions(576);
+  accessibilityNativeStackOptions = accessibilityNativeStackOptions(6503).useAccessibilityNativeStackOptions();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp8 = closure_7(SettingHookHarnessDefault, {});
     cResult[0] = tmp8;
-    first = tmp8;
+    let first = tmp8;
   } else {
     first = cResult[0];
   }
@@ -54,228 +36,210 @@ let closure_11 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((screenKey
   }
   if (cResult[1] !== accessibilityNativeStackOptions) {
     const fn = function f(navigation) {
-      let obj2;
-      let obj = {
+      const obj = {
         headerTitle(children) {
-          children = children.children;
-          const obj = { title: children };
-          const tmp = closure_1_5(children, closure_1_3);
-          const GenericHeaderTitle = accessibilityNativeStackOptions(closure_1_2[10]).GenericHeaderTitle;
-          const merged = Object.assign(tmp);
-          return closure_1_7(GenericHeaderTitle, obj);
+          const merged = Object.assign(closure_1_5(children, closure_1_3));
+          return closure_1_7(accessibilityNativeStackOptions(closure_1_2[10]).GenericHeaderTitle, { title: children.children });
         },
-        headerLeft: obj2.getRenderModalCloseImage(navigation),
+        headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
         headerTitleAlign: "center"
       };
-      navigation = navigation.navigation;
-      obj2 = HeaderShared;
       let merged = Object.assign(accessibilityNativeStackOptions);
       return obj;
     };
     cResult[1] = accessibilityNativeStackOptions;
     cResult[2] = fn;
-    tmp9 = fn;
+    let tmp9 = fn;
   } else {
     tmp9 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj3 = {
+    const obj3 = {
       name: "home",
       component: DevToolsContentDefault,
       options() {
-          let obj = {
+          return {
             headerTitle() {
-              let items;
-              let obj3;
-              const obj = { style: { flexDirection: "row" }, children: items };
-              items = [closure_1_7(accessibilityNativeStackOptions(closure_1_2[12]).HammerIcon, { size: "sm" }), ];
-              const obj2 = { style: obj3, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
-              obj3 = { marginLeft: closure_1_1(closure_1_2[14]).space.PX_8 };
-              const Text = accessibilityNativeStackOptions(closure_1_2[13]).Text;
-              items[1] = closure_1_7(Text, obj2);
+              const obj = { style: { flexDirection: "row" }, children: null };
+              const items = [closure_1_7(accessibilityNativeStackOptions(8985).HammerIcon, { size: "sm" }), ];
+              const obj2 = { style: { marginLeft: closure_1_1(587).space.PX_8 }, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
+              items[1] = closure_1_7(accessibilityNativeStackOptions(4892).Text, obj2);
+              obj.children = items;
               return closure_1_8(closure_1_6, obj);
             },
             title: "DevTools"
           };
-          return obj;
         }
     };
-    const Screen = closure_10.Screen;
-    const tmp16 = closure_7(Screen, obj3);
+    const tmp16 = closure_7(closure_10.Screen, obj3);
     const _Object = Object;
     const obj4 = {};
     let merged = Object.assign(tmp(15424).DevToolsScreens);
     const merged1 = Object.assign(tmp(15424).PerformanceTestingScreens);
-    const entries1 = entries(obj4);
-    const mapped = entries1.map((item) => {
-      let tmp2;
-      let tmp3;
+    const entries = Object.entries(obj4);
+    const mapped = entries.map((item) => {
       [tmp2, tmp3] = item;
       const headerTitle = tmp3.headerTitle;
-      const obj = {
+      return closure_1_7(closure_1_10.Screen, {
         name: tmp2,
         children: tmp3.render,
         options() {
           return { title: headerTitle };
         }
-      };
-      _slicedToArray(item, 2);
-      return closure_1_7(closure_1_10.Screen, obj, tmp2);
+      }, tmp2);
     });
-    let tmpResult = tmp(14519);
-    const designSystemScreens = tmpResult.getDesignSystemScreens();
+    const designSystemScreens = tmp(14519).getDesignSystemScreens();
     const mapped1 = designSystemScreens.map((item) => {
-      let tmp2;
       [accessibilityNativeStackOptions, tmp2] = closure_4(item, 2);
-      let obj = {
+      return closure_7(closure_10.Screen, {
         name: tmp2.route,
         getComponent: tmp2.getComponent,
         options(navigation) {
-          let tmpResult;
-          navigation = navigation.navigation;
-          const obj = accessibilityNativeStackOptions(dependencyMap[9]);
-          let str = obj.getCachedSettingTitle(accessibilityNativeStackOptions);
+          let str = accessibilityNativeStackOptions(dependencyMap[9]).getCachedSettingTitle(closure_1_0);
           if (str == null) {
             str = "Design System";
           }
-          const obj2 = { title: str, headerLeft: tmpResult.getRenderModalBackImage(navigation) };
-          tmpResult = accessibilityNativeStackOptions(dependencyMap[10]);
+          const obj2 = { title: str, headerLeft: null };
+          const obj = accessibilityNativeStackOptions(dependencyMap[9]);
+          obj2.headerLeft = accessibilityNativeStackOptions(dependencyMap[10]).getRenderModalBackImage(navigation.navigation);
           return obj2;
         }
-      };
-      closure_4(item, 2);
-      return closure_7(closure_10.Screen, obj, tmp2.route);
+      }, tmp2.route);
     });
     cResult[3] = tmp16;
     cResult[4] = mapped;
     cResult[5] = mapped1;
-    tmp12 = mapped1;
-    tmp11 = mapped;
-    tmp10 = tmp16;
+    let tmp12 = mapped1;
+    let tmp11 = mapped;
+    let tmp10 = tmp16;
+    const tmpResult = tmp(14519);
   } else {
     tmp10 = cResult[3];
     tmp11 = cResult[4];
     tmp12 = cResult[5];
   }
   if (cResult[6] === str) {
-    let tmp23;
     if (cResult[7] === tmp9) {
-      tmp23 = cResult[8];
+      let tmp23 = cResult[8];
     }
     return tmp23;
   }
-  const obj5 = { children: items };
-  items = [first, ];
-  const obj6 = { initialRouteName: str, screenOptions: tmp9, children: items1 };
-  items1 = [tmp10, tmp11, tmp12];
+  const obj5 = { children: null };
+  let items = [first, ];
+  const obj6 = { initialRouteName: str, screenOptions: tmp9, children: null };
+  const items1 = [tmp10, tmp11, tmp12];
+  obj6.children = items1;
   items[1] = closure_8(closure_10.Navigator, obj6);
+  obj5.children = items;
   const tmp24 = closure_8(closure_9, obj5);
   cResult[6] = str;
   cResult[7] = tmp9;
   cResult[8] = tmp24;
   tmp23 = tmp24;
+  let obj2 = accessibilityNativeStackOptions(6503);
 }) : ((screenKey) => {
-  let closure_0;
-  let items1;
   let str = screenKey.screenKey;
   _require = undefined;
-  const tmp = _require;
-  let obj = require("Navigator");
-  _require = obj.useAccessibilityNativeStackOptions();
+  _require = require("Navigator").useAccessibilityNativeStackOptions();
   let items = [closure_7(SettingHookHarnessDefault, {}), ];
-  const Navigator = closure_10.Navigator;
   if (str == null) {
     str = "home";
   }
-  let obj2 = { children: items };
-  let obj3 = {
+  let obj2 = { children: null };
+  const obj3 = {
     initialRouteName: str,
     screenOptions(navigation) {
-      let obj2;
-      let obj = {
+      const obj = {
         headerTitle(children) {
-          children = children.children;
           const merged = Object.assign(children, Object.assign({ children: 0 }));
-          const obj = { title: children };
-          const GenericHeaderTitle = closure_1_0(closure_1_2[10]).GenericHeaderTitle;
           const merged1 = Object.assign(merged);
-          return closure_1_7(GenericHeaderTitle, obj);
+          return closure_1_7(closure_1_0(closure_1_2[10]).GenericHeaderTitle, { title: children.children });
         },
-        headerLeft: obj2.getRenderModalCloseImage(navigation),
+        headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
         headerTitleAlign: "center"
       };
-      navigation = navigation.navigation;
-      obj2 = HeaderShared;
       let merged = Object.assign(closure_0);
       return obj;
     },
-    children: items1
+    children: null
   };
-  items1 = [, , ];
-  const obj4 = {
-    name: "home",
-    component: DevToolsContentDefault,
-    options() {
-      let obj = {
-        headerTitle() {
-          let items;
-          let obj3;
-          const obj = { style: { flexDirection: "row" }, children: items };
-          items = [closure_1_7(closure_1_0(closure_1_2[12]).HammerIcon, { size: "sm" }), ];
-          const obj2 = { style: obj3, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
-          obj3 = { marginLeft: closure_1_1(closure_1_2[14]).space.PX_8 };
-          const Text = closure_1_0(closure_1_2[13]).Text;
-          items[1] = closure_1_7(Text, obj2);
-          return closure_1_8(closure_1_6, obj);
-        },
-        title: "DevTools"
-      };
-      return obj;
-    }
-  };
-  items1[0] = closure_7(closure_10.Screen, obj4);
-  const obj5 = {};
+  let obj = require("Navigator");
+  const items1 = [
+    closure_7(closure_10.Screen, {
+      name: "home",
+      component: DevToolsContentDefault,
+      options() {
+        return {
+          headerTitle() {
+            const obj = { style: { flexDirection: "row" }, children: null };
+            const items = [closure_1_7(closure_1_0(8985).HammerIcon, { size: "sm" }), ];
+            const obj2 = { style: { marginLeft: closure_1_1(587).space.PX_8 }, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
+            items[1] = closure_1_7(closure_1_0(4892).Text, obj2);
+            obj.children = items;
+            return closure_1_8(closure_1_6, obj);
+          },
+          title: "DevTools"
+        };
+      }
+    }),
+  ,
+
+  ];
   let merged = Object.assign(tmp(15424).DevToolsScreens);
   let merged1 = Object.assign(tmp(15424).PerformanceTestingScreens);
-  const entries1 = entries(obj5);
-  items1[1] = entries1.map((item) => {
-    let tmp;
+  const entries = Object.entries({});
+  items1[1] = entries.map((item) => {
     [tmp, ] = item;
-    const obj = {
+    return closure_1_7(closure_1_10.Screen, {
       name: tmp,
       children: tmp2,
       options() {
         return { title };
       }
-    };
-    return closure_1_7(closure_1_10.Screen, obj, tmp);
+    }, tmp);
   });
-  let tmpResult = tmp(14519);
-  const designSystemScreens = tmpResult.getDesignSystemScreens();
+  const obj4 = {
+    name: "home",
+    component: DevToolsContentDefault,
+    options() {
+      return {
+        headerTitle() {
+          const obj = { style: { flexDirection: "row" }, children: null };
+          const items = [closure_1_7(closure_1_0(8985).HammerIcon, { size: "sm" }), ];
+          const obj2 = { style: { marginLeft: closure_1_1(587).space.PX_8 }, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
+          items[1] = closure_1_7(closure_1_0(4892).Text, obj2);
+          obj.children = items;
+          return closure_1_8(closure_1_6, obj);
+        },
+        title: "DevTools"
+      };
+    }
+  };
+  const obj5 = {};
+  const designSystemScreens = require("SettingRendererUtils").getDesignSystemScreens();
   items1[2] = designSystemScreens.map((item) => {
-    let tmp;
     [, tmp] = item;
-    let obj = {
+    return closure_7(closure_10.Screen, {
       name: tmp.route,
       getComponent: tmp.getComponent,
       options(navigation) {
-        let tmpResult;
-        navigation = navigation.navigation;
-        const obj = closure_0(dependencyMap[9]);
-        let str = obj.getCachedSettingTitle(closure_1_0);
+        let str = closure_0(dependencyMap[9]).getCachedSettingTitle(closure_1_0);
         if (str == null) {
           str = "Design System";
         }
-        const obj2 = { title: str, headerLeft: tmpResult.getRenderModalBackImage(navigation) };
-        tmpResult = closure_0(dependencyMap[10]);
+        const obj2 = { title: str, headerLeft: null };
+        const obj = closure_0(dependencyMap[9]);
+        obj2.headerLeft = closure_0(dependencyMap[10]).getRenderModalBackImage(navigation.navigation);
         return obj2;
       }
-    };
-    return closure_7(closure_10.Screen, obj, tmp.route);
+    }, tmp.route);
   });
-  items[1] = closure_8(Navigator, obj3);
+  obj3.children = items1;
+  items[1] = closure_8(closure_10.Navigator, obj3);
+  obj2.children = items;
   return closure_8(closure_9, obj2);
 }));
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/native/components/DevToolsNavigator.tsx");
 
 export const navigateToDevTools = function navigateToDevTools(arg0) {
@@ -283,11 +247,8 @@ export const navigateToDevTools = function navigateToDevTools(arg0) {
   if (arg0 === undefined) {
     obj = {};
   }
-  const screenKey = obj.screenKey;
-  const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.hideActionSheet();
+  ActionSheetActionCreatorsDefault.hideActionSheet();
   const obj3 = ModalActionCreatorsDefault;
-  const obj4 = { screenKey };
-  const obj5 = { trigger: Types.ModalOpenTrigger.USER_INTERACTION };
-  obj3.pushLazy(() => Promise.resolve(closure_1_11), obj4, "DevToolsNavigator", obj5);
+  const obj4 = { screenKey: obj.screenKey };
+  obj3.pushLazy(() => Promise.resolve(closure_1_11), obj4, "DevToolsNavigator", { trigger: Types.ModalOpenTrigger.USER_INTERACTION });
 };

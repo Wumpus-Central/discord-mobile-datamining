@@ -1,54 +1,15 @@
 // === Module 10067: markChannelUnread ===
 
 // Module 10067 (markChannelUnread)
-import ReadStateStore2 from "ReadStateStore" /* 4911 */;
 import markUnreadDefault from "markUnread" /* 10068 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import ReadStateStore from "ReadStateStore" /* 4911 */;
 
 const require = globalThis.__r;
-const ReadStateStore = ReadStateStore2;
-let _require;
 
-const ReadState = ReadStateStore2.ReadState;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let first;
-  let id;
-  let tmp6;
-  _require = arg0;
-  let tmp = _require;
-  const obj = require("react");
-  const cResult = obj.c(3);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ReadStateStore];
-    cResult[0] = items;
-    first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const fn = function o() {
-      const tmp = ReadStateStore.canBeUnread(id.id) && ReadStateStore.hasLastMessage(id.id) && !id.isCategory();
-      return tmp;
-    };
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    tmp6 = fn;
-  } else {
-    tmp6 = cResult[2];
-  }
-  const tmpResult = tmp(504);
-  return tmpResult.useStateFromStores(first, tmp6);
-}) : ((arg0) => {
-  let id;
-  _require = arg0;
-  const items = [ReadStateStore];
-  const obj = require("get initialized");
-  return obj.useStateFromStores(items, () => {
-    const tmp = ReadStateStore.canBeUnread(id.id) && ReadStateStore.hasLastMessage(id.id) && !id.isCategory();
-    return tmp;
-  });
-});
+const require = fn;
+const ReadState = fn(4911).ReadState;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/markChannelUnread.tsx");
 
 export default function markChannelUnread(arg0) {
@@ -57,4 +18,30 @@ export default function markChannelUnread(arg0) {
     markUnreadDefault(arg0, lastMessageId);
   }
 };
-export const useCanMarkChannelUnread = tmp2;
+export const useCanMarkChannelUnread = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  _require = arg0;
+  const cResult = require("c").c(3);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [ReadStateStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== arg0) {
+    const fn = function o() {
+      return ReadStateStore.canBeUnread(id.id) && ReadStateStore.hasLastMessage(id.id) && !id.isCategory();
+    };
+    cResult[1] = arg0;
+    cResult[2] = fn;
+    let tmp6 = fn;
+  } else {
+    tmp6 = cResult[2];
+  }
+  const obj = require("c");
+  return require("initialize").useStateFromStores(first, tmp6);
+}) : ((arg0) => {
+  _require = arg0;
+  const items = [ReadStateStore];
+  return require("initialize").useStateFromStores(items, () => ReadStateStore.canBeUnread(id.id) && ReadStateStore.hasLastMessage(id.id) && !id.isCategory());
+});

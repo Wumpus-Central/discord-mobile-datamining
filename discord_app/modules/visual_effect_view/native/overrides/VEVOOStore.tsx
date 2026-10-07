@@ -1,13 +1,12 @@
 // === Module 5781: VEVOOStore ===
 
 // Module 5781 (VEVOOStore)
-import react_native from "react-native" /* 1259 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require;
 
 let closure_2 = {};
 const state = module_570.create(() => closure_2);
@@ -20,12 +19,9 @@ export const getVisualEffectViewOverrides = function getVisualEffectViewOverride
   return state.getState();
 };
 export const setVisualEffectViewOverides = function setVisualEffectViewOverides(arg0) {
-  let closure_0;
   _require = arg0;
-  const obj = require("react-native");
-  obj.batchUpdates(() => state.setState(closure_0));
+  require("ReactBatchUpdates").batchUpdates(() => state.setState(closure_0));
 };
 export const clearVisualEffectViewOverrides = function clearVisualEffectViewOverrides() {
-  const obj = react_native;
-  obj.batchUpdates(() => state.setState(closure_1_2));
+  ReactBatchUpdates.batchUpdates(() => state.setState(closure_1_2));
 };

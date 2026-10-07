@@ -2,12 +2,12 @@
 
 // Module 7690 (ApplicationCommandSourceSystemMessage)
 import Constants from "Constants" /* 1085 */;
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5796 */;
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7630 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7632 */;
 import createCommonMessageDefault from "createCommonMessage" /* 7634 */;
-import _slicedToArray from "_slicedToArray" /* 7691 */;
+import ApplicationCommands from "ApplicationCommands" /* 7691 */;
 import size from "module_2" /* 2 */;
 
 const MessageTypes = Constants.MessageTypes;
@@ -15,33 +15,29 @@ const COMMAND_SENTINEL = ChannelAutocompleteConstants.COMMAND_SENTINEL;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/ApplicationCommandSourceSystemMessage.tsx");
 
 export const createApplicationCommandSourceSystemMessage = function createApplicationCommandSourceSystemMessage(message) {
-  let name;
-  let name2;
-  let obj3;
   message = message.message;
-  const roleStyle = message.roleStyle;
-  const obj = _slicedToArray;
-  const applicationCommand = obj.getApplicationCommand(message.content);
+  const applicationCommand = ApplicationCommands.getApplicationCommand(message.content);
   const application = message.application;
   if (application != null) {
-    name = application.name;
+    const name = application.name;
   }
   if (null != applicationCommand) {
     if (null != name) {
-      const tmpResult = useAuthorWithProcessedColor;
-      const messageAuthorWithProcessedColor = tmpResult.getMessageAuthorWithProcessedColor(message);
-      const intl = intl2.intl;
-      const formatToParts = intl.formatToParts;
-      const obj2 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault(obj3), commandName: name2, applicationName: name };
-      const prop = intl2.t["1Zm+zw"];
-      obj3 = { message, author: messageAuthorWithProcessedColor, roleStyle };
+      const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
+      const intl = util.intl;
+      const obj2 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null, commandName: null, applicationName: null };
+      const obj3 = { message, author: messageAuthorWithProcessedColor, roleStyle: message.roleStyle };
+      obj2.usernameOnClick = formatUsernameOnClickDefault(obj3);
       if (message.type === MessageTypes.CHAT_INPUT_COMMAND) {
         const _HermesInternal = HermesInternal;
-        name2 = "" + COMMAND_SENTINEL + applicationCommand.name;
+        let name2 = "" + COMMAND_SENTINEL + applicationCommand.name;
       } else {
         name2 = applicationCommand.name;
       }
-      const obj4 = { content: formatToParts(prop, obj2) };
+      const obj4 = { content: null };
+      obj2.commandName = name2;
+      obj2.applicationName = name;
+      obj4.content = intl.formatToParts(util.t["1Zm+zw"], obj2);
       const merged = Object.assign(createCommonMessageDefault(message));
       return obj4;
     }

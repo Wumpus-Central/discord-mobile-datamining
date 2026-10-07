@@ -1,39 +1,25 @@
 // === Module 11527: AppealIngestionFreeTextAppealReasonActionSheet ===
 
 // Module 11527 (AppealIngestionFreeTextAppealReasonActionSheet)
-import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 8139 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let BottomSheet, onSave;
+const require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { footerText: { textAlign: "center" }, textArea: { marginTop: -16, marginBottom: 36 }, separator: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginHorizontal: -16 }, closeIcon: { alignSelf: "flex-end", flexDirection: "row", marginBottom: -26 } };
+let closure_8 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginHorizontal: -16 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionFreeTextAppealReasonActionSheet.tsx");
 
-let metroImportDefault;
-let metroRequire;
-let obj2;
-const View = react_native.View;
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
-let obj = { footerText: { textAlign: "center" }, textArea: { marginTop: -16, marginBottom: 36 }, separator: obj2, closeIcon: { alignSelf: "flex-end", flexDirection: "row", marginBottom: -26 } };
-obj2 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginHorizontal: -16 };
-let closure_8 = createStyles.createStyles(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((onSave) => {
-  let freeTextAppealReason;
-  let items1;
-  let obj7;
-  let tmp11;
-  let tmp12;
-  let tmp14;
-  let tmp16;
-  let tmp5;
-  let tmp6;
-  let value;
-  const obj = onSave(value[8]);
-  const cResult = obj.c(33);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSave) => {
+  const cResult = onSave(value[8]).c(33);
   onSave = onSave.onSave;
   const onClose = onSave.onClose;
   const tmp4 = closure_8();
@@ -49,246 +35,224 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((onSave) => {
   } else {
     [tmp5, tmp6] = cResult;
   }
+  const obj = onSave(value[8]);
+  const stateFromStores = onSave(value[9]).useStateFromStores(tmp5, tmp6);
+  let num3 = 2;
   const tmpResult = onSave(value[9]);
-  const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
-  [value, tmp11] = react.useState(stateFromStores);
+  value = _slicedToArray(noop.useState(stateFromStores), 2)[0];
   if (cResult[2] !== stateFromStores) {
-    let stringResult;
     if ("" === stateFromStores) {
       const intl2 = tmp(tmp2[10]).intl;
-      stringResult = intl2.string(tmp(tmp2[10]).t.uoQFIp);
+      let stringResult = intl2.string(tmp(tmp2[10]).t.uoQFIp);
     } else {
       const intl = tmp(tmp2[10]).intl;
       stringResult = intl.string(tmp(tmp2[10]).t.tnE3bZ);
     }
-    cResult[2] = stateFromStores;
+    cResult[num3] = stateFromStores;
+    num3 = 3;
     cResult[3] = stringResult;
-    tmp12 = stringResult;
   } else {
-    tmp12 = cResult[3];
-  }
-  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl3 = tmp(tmp2[10]).intl;
-    const stringResult1 = intl3.string(onSave(value[10]).t["Rk+uJx"]);
-    cResult[4] = stringResult1;
-    tmp14 = stringResult1;
-  } else {
-    tmp14 = cResult[4];
-  }
-  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp18 = closure_6(onSave(value[11]).XSmallIcon, { size: "md" });
-    cResult[5] = tmp18;
-    tmp16 = tmp18;
-  } else {
-    tmp16 = cResult[5];
-  }
-  if (cResult[6] === onClose) {
-    let tmp19;
-    let tmp21;
-    if (cResult[7] === tmp4.closeIcon) {
-      tmp19 = cResult[8];
-    }
-    if (cResult[9] !== tmp12) {
-      const obj2 = { headerText: tmp12, subHeaderText: tmp14 };
-      const tmp23 = closure_6(onSave(value[13]).AppealIngestionModalHeader, obj2);
-      cResult[9] = tmp12;
-      cResult[10] = tmp23;
-      tmp21 = tmp23;
-    } else {
-      tmp21 = cResult[10];
-    }
     const _Symbol = Symbol;
-    if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl4 = tmp(tmp2[10]).intl;
-      cResult[11] = intl4.string(onSave(value[10]).t.bQrZIN);
-      const stringResult2 = intl4.string(onSave(value[10]).t.bQrZIN);
+    if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+      const intl3 = tmp(tmp2[10]).intl;
+      const stringResult1 = intl3.string(tmp(tmp2[10]).t["Rk+uJx"]);
+      cResult[4] = stringResult1;
+      let tmp15 = stringResult1;
+    } else {
+      tmp15 = cResult[4];
     }
-    if (cResult[12] === tmp4.textArea) {
-      let tmp26;
-      let tmp29;
-      let tmp33;
-      let tmp35;
-      if (cResult[13] === value) {
-        tmp26 = cResult[14];
+    const _Symbol2 = Symbol;
+    if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+      const tmp19 = closure_6(tmp(tmp2[11]).XSmallIcon, { size: "md" });
+      cResult[5] = tmp19;
+      let tmp17 = tmp19;
+    } else {
+      tmp17 = cResult[5];
+    }
+    if (cResult[6] === onClose) {
+      if (cResult[7] === tmp4.closeIcon) {
+        let tmp20 = cResult[8];
       }
-      if (cResult[15] !== tmp4.separator) {
-        const obj3 = { style: tmp4.separator };
-        cResult[15] = tmp4.separator;
-        const tmp32 = closure_6(View, obj3);
-        class Z {
-          constructor() {
-            return onSave(first);
-          }
-        }
-        tmp29 = tmp32;
+      if (cResult[9] !== tmp12) {
+        const obj2 = { headerText: tmp12, subHeaderText: tmp15 };
+        const tmp24 = closure_6(tmp(tmp2[13]).AppealIngestionModalHeader, obj2);
+        cResult[9] = tmp12;
+        cResult[10] = tmp24;
+        let tmp22 = tmp24;
       } else {
-        tmp29 = cResult[16];
+        tmp22 = cResult[10];
       }
-      const _Symbol2 = Symbol;
-      const footerText = tmp4.footerText;
-      if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl5 = tmp(tmp2[10]).intl;
-        const stringResult3 = intl5.string(onSave(value[10]).t.xfNY3L);
-        cResult[17] = stringResult3;
-        tmp33 = stringResult3;
-      } else {
-        tmp33 = cResult[17];
+      const _Symbol3 = Symbol;
+      if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+        const intl4 = tmp(tmp2[10]).intl;
+        const stringResult2 = intl4.string(tmp(tmp2[10]).t.bQrZIN);
+        cResult[11] = stringResult2;
       }
-      if (cResult[18] !== tmp4.footerText) {
-        const obj4 = { variant: "text-xs/medium", color: "text-default", style: footerText, children: tmp33 };
-        cResult[18] = tmp4.footerText;
-        const tmp37 = closure_6(onSave(value[15]).Text, obj4);
-        class Z {
-          constructor() {
-            return onSave(first);
-          }
+      if (cResult[12] === tmp4.textArea) {
+        if (cResult[13] === value) {
+          let tmp27 = cResult[14];
         }
-        tmp35 = tmp37;
-      } else {
-        tmp35 = cResult[19];
-      }
-      if (cResult[20] === onSave) {
-        let tmp38;
-        let tmp39;
-        let tmp41;
-        if (cResult[21] === value) {
-          tmp38 = cResult[22];
-        }
-        const _Symbol3 = Symbol;
-        if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl6 = tmp(tmp2[10]).intl;
-          const stringResult4 = intl6.string(onSave(value[10]).t["R3BPH+"]);
-          cResult[23] = stringResult4;
-          tmp39 = stringResult4;
-        } else {
-          tmp39 = cResult[23];
-        }
-        if (cResult[24] !== tmp38) {
-          const obj5 = { onPress: tmp38, text: tmp39 };
-          cResult[24] = tmp38;
-          const tmp43 = closure_6(onSave(value[16]).Button, obj5);
+        if (cResult[15] !== tmp4.separator) {
+          const obj3 = { style: tmp4.separator };
+          cResult[15] = tmp4.separator;
           class Z {
             constructor() {
-              return onSave(first);
+              return onSave(closure_1);
             }
           }
-          tmp41 = tmp43;
+          let tmp30 = closure_6(View, obj3);
+          const tmp33 = closure_6(View, obj3);
         } else {
-          tmp41 = cResult[25];
+          tmp30 = cResult[16];
         }
-        if (cResult[26] === tmp29) {
-          if (cResult[27] === tmp35) {
-            if (cResult[28] === tmp41) {
-              if (cResult[29] === tmp19) {
-                if (cResult[30] === tmp21) {
-                  let tmp44;
-                  if (cResult[31] === tmp26) {
-                    tmp44 = cResult[32];
+        const _Symbol4 = Symbol;
+        if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
+          const intl5 = tmp(tmp2[10]).intl;
+          const stringResult3 = intl5.string(tmp(tmp2[10]).t.xfNY3L);
+          cResult[17] = stringResult3;
+          let tmp34 = stringResult3;
+        } else {
+          tmp34 = cResult[17];
+        }
+        if (cResult[18] !== tmp4.footerText) {
+          const obj4 = { variant: "text-xs/medium", color: "text-default", style: tmp4.footerText, children: tmp34 };
+          cResult[18] = tmp4.footerText;
+          class Z {
+            constructor() {
+              return onSave(closure_1);
+            }
+          }
+          let tmp36 = closure_6(tmp(tmp2[15]).Text, obj4);
+          const tmp38 = closure_6(tmp(tmp2[15]).Text, obj4);
+        } else {
+          tmp36 = cResult[19];
+        }
+        if (cResult[20] === onSave) {
+          if (cResult[21] === value) {
+            let tmp39 = cResult[22];
+          }
+          const _Symbol5 = Symbol;
+          if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
+            const intl6 = tmp(tmp2[10]).intl;
+            const stringResult4 = intl6.string(tmp(tmp2[10]).t["R3BPH+"]);
+            cResult[23] = stringResult4;
+            let tmp40 = stringResult4;
+          } else {
+            tmp40 = cResult[23];
+          }
+          if (cResult[24] !== tmp39) {
+            const obj5 = { onPress: tmp39, text: tmp40 };
+            cResult[24] = tmp39;
+            class Z {
+              constructor() {
+                return onSave(closure_1);
+              }
+            }
+            let tmp42 = closure_6(tmp(tmp2[16]).Button, obj5);
+            const tmp44 = closure_6(tmp(tmp2[16]).Button, obj5);
+          } else {
+            tmp42 = cResult[25];
+          }
+          if (cResult[26] === tmp30) {
+            if (cResult[27] === tmp36) {
+              if (cResult[28] === tmp42) {
+                if (cResult[29] === tmp20) {
+                  if (cResult[30] === tmp22) {
+                    if (cResult[31] === tmp27) {
+                      let tmp45 = cResult[32];
+                    }
+                    return tmp45;
                   }
-                  return tmp44;
                 }
               }
             }
           }
+          const obj6 = { startExpanded: true, children: null };
+          class Z {
+            constructor() {
+              return onSave(closure_1);
+            }
+          }
+          const obj7 = { spacing: 16, children: null };
+          const items1 = [tmp20, tmp22, tmp27, tmp30, tmp36, tmp42];
+          obj7.children = items1;
+          obj6.children = closure_7(tmp(tmp2[18]).Stack, obj7);
+          const tmp47 = closure_6(tmp(tmp2[17]).BottomSheet, obj6);
+          cResult[26] = tmp30;
+          cResult[27] = tmp36;
+          cResult[28] = tmp42;
+          cResult[29] = tmp20;
+          cResult[30] = tmp22;
+          cResult[31] = tmp27;
+          cResult[32] = tmp47;
+          tmp45 = tmp47;
         }
-        const obj6 = { startExpanded: true, children: closure_7(onSave(value[18]).Stack, obj7) };
         class Z {
           constructor() {
-            return onSave(first);
+            return onSave(closure_1);
           }
         }
-        BottomSheet = tmp(tmp2[17]).BottomSheet;
-        obj7 = { spacing: 16, children: items1 };
-        items1 = [tmp19, tmp21, tmp26, tmp29, tmp35, tmp41];
-        const tmp46 = closure_6(BottomSheet, obj6);
-        cResult[26] = tmp29;
-        cResult[27] = tmp35;
-        cResult[28] = tmp41;
-        cResult[29] = tmp19;
-        cResult[30] = tmp21;
-        cResult[31] = tmp26;
-        cResult[32] = tmp46;
-        tmp44 = tmp46;
+        cResult[20] = onSave;
+        cResult[21] = value;
+        cResult[22] = Z;
+        tmp39 = Z;
       }
-      class Z {
-        constructor() {
-          return onSave(first);
-        }
-      }
-      cResult[20] = onSave;
-      cResult[21] = value;
-      cResult[22] = Z;
-      tmp38 = Z;
+      const obj8 = { maxLength: 1024, placeholder: null, containerStyle: tmp4.textArea, value, onChange: tmp11 };
+      const tmp29 = closure_6(tmp(tmp2[14]).TextArea, obj8);
+      cResult[12] = tmp4.textArea;
+      cResult[13] = value;
+      cResult[14] = tmp29;
+      tmp27 = tmp29;
     }
-    const obj8 = { maxLength: 1024, placeholder: null, containerStyle: tmp4.textArea, value, onChange: tmp11 };
-    const tmp28 = closure_6(onSave(value[14]).TextArea, obj8);
-    cResult[12] = tmp4.textArea;
-    cResult[13] = value;
-    cResult[14] = tmp28;
-    tmp26 = tmp28;
+    const obj9 = { onPress: onClose, style: tmp4.closeIcon, children: tmp17 };
+    const tmp21 = closure_6(tmp(tmp2[12]).PressableOpacity, obj9);
+    cResult[6] = onClose;
+    cResult[7] = tmp4.closeIcon;
+    cResult[8] = tmp21;
+    tmp20 = tmp21;
   }
-  const obj9 = { onPress: onClose, style: tmp4.closeIcon, children: tmp16 };
-  const tmp20 = closure_6(onSave(value[12]).PressableOpacity, obj9);
-  cResult[6] = onClose;
-  cResult[7] = tmp4.closeIcon;
-  cResult[8] = tmp20;
-  tmp19 = tmp20;
-}) : ((onSave) => {
-  let Stack;
-  let freeTextAppealReason;
-  let intl4;
-  let intl5;
-  let intl6;
-  let items1;
-  let obj3;
-  let stringResult;
-  let tmp7;
-  let value;
-  onSave = onSave.onSave;
+  const tmp9 = _slicedToArray(noop.useState(stateFromStores), 2);
+}) : ((onPress) => {
+  const onSave = onPress.onSave;
   value = undefined;
-  const onClose = onSave.onClose;
   const tmp = closure_8();
   const items = [SafetyHubStore];
-  const obj = onSave(value[9]);
-  const stateFromStores = obj.useStateFromStores(items, () => freeTextAppealReason.getFreeTextAppealReason());
-  [value, tmp7] = react.useState(stateFromStores);
+  const stateFromStores = onSave(value[9]).useStateFromStores(items, () => freeTextAppealReason.getFreeTextAppealReason());
+  [value, obj5.onChange] = noop.useState(stateFromStores);
   if ("" === stateFromStores) {
     const intl2 = tmp2(tmp3[10]).intl;
-    stringResult = intl2.string(tmp2(tmp3[10]).t.uoQFIp);
+    let stringResult = intl2.string(tmp2(tmp3[10]).t.uoQFIp);
   } else {
     const intl = tmp2(tmp3[10]).intl;
     stringResult = intl.string(tmp2(tmp3[10]).t.tnE3bZ);
   }
   const intl3 = tmp2(tmp3[10]).intl;
-  const obj2 = { startExpanded: true, children: closure_7(Stack, obj3) };
+  const obj = onSave(value[9]);
+  const obj2 = { startExpanded: true, children: null };
+  const obj3 = { spacing: 16, children: null };
   const stringResult1 = intl3.string(onSave(value[10]).t["Rk+uJx"]);
-  BottomSheet = tmp2(tmp3[17]).BottomSheet;
-  obj3 = { spacing: 16, children: items1 };
-  Stack = tmp2(tmp3[18]).Stack;
-  const obj4 = { onPress: onClose, style: tmp.closeIcon, children: closure_6(onSave(value[11]).XSmallIcon, { size: "md" }) };
-  const PressableOpacity = tmp2(tmp3[12]).PressableOpacity;
-  items1 = [closure_6(PressableOpacity, obj4), closure_6(onSave(value[13]).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , , ];
-  const obj5 = { maxLength: 1024, placeholder: intl4.string(onSave(value[10]).t.bQrZIN), containerStyle: tmp.textArea, value, onChange: tmp7 };
-  const TextArea = tmp2(tmp3[14]).TextArea;
-  intl4 = tmp2(tmp3[10]).intl;
-  items1[2] = closure_6(TextArea, obj5);
-  const obj6 = { style: tmp.separator };
-  items1[3] = closure_6(View, obj6);
-  const obj7 = { variant: "text-xs/medium", color: "text-default", style: tmp.footerText, children: intl5.string(onSave(value[10]).t.xfNY3L) };
-  const Text = tmp2(tmp3[15]).Text;
-  intl5 = tmp2(tmp3[10]).intl;
-  items1[4] = closure_6(Text, obj7);
+  const items1 = [closure_6(onSave(value[12]).PressableOpacity, { onPress: onPress.onClose, style: tmp.closeIcon, children: closure_6(onSave(value[11]).XSmallIcon, { size: "md" }) }), closure_6(onSave(value[13]).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , , ];
+  const obj5 = { maxLength: 1024, placeholder: null, containerStyle: null, value: null, onChange: null };
+  const intl4 = tmp2(tmp3[10]).intl;
+  obj5.placeholder = intl4.string(onSave(value[10]).t.bQrZIN);
+  obj5.containerStyle = tmp.textArea;
+  obj5.value = value;
+  items1[2] = closure_6(onSave(value[14]).TextArea, obj5);
+  items1[3] = closure_6(View, { style: tmp.separator });
+  const obj7 = { variant: "text-xs/medium", color: "text-default", style: tmp.footerText, children: null };
+  const intl5 = tmp2(tmp3[10]).intl;
+  obj7.children = intl5.string(onSave(value[10]).t.xfNY3L);
+  items1[4] = closure_6(onSave(value[15]).Text, obj7);
   const obj8 = {
     onPress() {
       return onSave(first);
     },
-    text: intl6.string(onSave(value[10]).t["R3BPH+"])
+    text: null
   };
-  const Button = tmp2(tmp3[16]).Button;
-  intl6 = tmp2(tmp3[10]).intl;
-  items1[5] = closure_6(Button, obj8);
-  return closure_6(BottomSheet, obj2);
+  const intl6 = tmp2(tmp3[10]).intl;
+  obj8.text = intl6.string(onSave(value[10]).t["R3BPH+"]);
+  items1[5] = closure_6(onSave(value[16]).Button, obj8);
+  obj3.children = items1;
+  obj2.children = closure_7(onSave(value[18]).Stack, obj3);
+  return closure_6(onSave(value[17]).BottomSheet, obj2);
 });
-const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionFreeTextAppealReasonActionSheet.tsx");
-
-export default tmp3;

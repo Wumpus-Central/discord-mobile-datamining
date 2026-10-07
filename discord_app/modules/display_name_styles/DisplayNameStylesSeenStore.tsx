@@ -1,98 +1,93 @@
 // === Module 15175: DisplayNameStylesSeenStore ===
 
 // Module 15175 (DisplayNameStylesSeenStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import size from "module_2" /* 2 */;
 
-let set;
-let obj = { seenFontIds: set, seenEffectIds: new Set(), newFontsBadgeDismissed: false, newEffectsBadgeDismissed: false };
-set = new Set();
-new Set();
-const PersistedStore = get_initializedDefault.PersistedStore;
+let obj = { seenFontIds: new Set(), seenEffectIds: null, newFontsBadgeDismissed: false, newEffectsBadgeDismissed: false };
+let set = new Set();
+obj.seenEffectIds = new Set();
+const PersistedStore = initializeDefault.PersistedStore;
 class DisplayNameStylesSeenStore extends PersistedStore {
-  initialize(seenFontIds) {
-    let _Set1;
-    let _Set21;
-    let flag;
-    let flag2;
-    seenFontIds = undefined;
-    const _Set = Set;
-    if (seenFontIds != null) {
-      seenFontIds = seenFontIds.seenFontIds;
-    }
-    if (seenFontIds == null) {
-      seenFontIds = [];
-    }
-    obj = { seenFontIds: _Set1, seenEffectIds: _Set21, newFontsBadgeDismissed: flag, newEffectsBadgeDismissed: flag2 };
-    _Set1 = new _Set(seenFontIds);
-    let seenEffectIds;
-    const _Set2 = Set;
-    if (seenFontIds != null) {
-      seenEffectIds = seenFontIds.seenEffectIds;
-    }
-    if (seenEffectIds == null) {
-      seenEffectIds = [];
-    }
-    _Set21 = new _Set2(seenEffectIds);
-    flag = undefined;
-    if (seenFontIds != null) {
-      flag = seenFontIds.newFontsBadgeDismissed;
-    }
-    if (flag == null) {
-      flag = false;
-    }
-    flag2 = undefined;
-    if (seenFontIds != null) {
-      flag2 = seenFontIds.newEffectsBadgeDismissed;
-    }
-    if (flag2 == null) {
-      flag2 = false;
-    }
-  }
-  getState() {
-    obj = { seenFontIds: Array.from(obj.seenFontIds), seenEffectIds: Array.from(obj.seenEffectIds), newFontsBadgeDismissed: obj.newFontsBadgeDismissed, newEffectsBadgeDismissed: obj.newEffectsBadgeDismissed };
-    return obj;
-  }
-  getSeenFonts() {
-    return obj.seenFontIds;
-  }
-  getSeenEffects() {
-    return obj.seenEffectIds;
-  }
-  getNewFontsBadgeDismissed() {
-    return obj.newFontsBadgeDismissed;
-  }
-  getNewEffectsBadgeDismissed() {
-    return obj.newEffectsBadgeDismissed;
-  }
 }
 const prototype = DisplayNameStylesSeenStore.prototype;
+prototype["initialize"] = function initialize(seenFontIds) {
+  seenFontIds = undefined;
+  if (seenFontIds != null) {
+    seenFontIds = seenFontIds.seenFontIds;
+  }
+  if (seenFontIds == null) {
+    seenFontIds = [];
+  }
+  obj = { seenFontIds: new Set(seenFontIds), seenEffectIds: null, newFontsBadgeDismissed: null, newEffectsBadgeDismissed: null };
+  let seenEffectIds;
+  if (seenFontIds != null) {
+    seenEffectIds = seenFontIds.seenEffectIds;
+  }
+  if (seenEffectIds == null) {
+    seenEffectIds = [];
+  }
+  const set = new Set(seenFontIds);
+  obj.seenEffectIds = new Set(seenEffectIds);
+  let flag;
+  if (seenFontIds != null) {
+    flag = seenFontIds.newFontsBadgeDismissed;
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  obj.newFontsBadgeDismissed = flag;
+  let flag2;
+  if (seenFontIds != null) {
+    flag2 = seenFontIds.newEffectsBadgeDismissed;
+  }
+  if (flag2 == null) {
+    flag2 = false;
+  }
+  obj.newEffectsBadgeDismissed = flag2;
+};
+prototype["getState"] = function getState() {
+  obj = { seenFontIds: Array.from(obj.seenFontIds), seenEffectIds: Array.from(obj.seenEffectIds), newFontsBadgeDismissed: obj.newFontsBadgeDismissed, newEffectsBadgeDismissed: obj.newEffectsBadgeDismissed };
+  return obj;
+};
+prototype["getSeenFonts"] = function getSeenFonts() {
+  return obj.seenFontIds;
+};
+prototype["getSeenEffects"] = function getSeenEffects() {
+  return obj.seenEffectIds;
+};
+prototype["getNewFontsBadgeDismissed"] = function getNewFontsBadgeDismissed() {
+  return obj.newFontsBadgeDismissed;
+};
+prototype["getNewEffectsBadgeDismissed"] = function getNewEffectsBadgeDismissed() {
+  return obj.newEffectsBadgeDismissed;
+};
 DisplayNameStylesSeenStore.displayName = "DisplayNameStylesSeenStore";
 DisplayNameStylesSeenStore.persistKey = "DisplayNameStylesSeenStore";
 let items = [
   (arg0) => {
-    obj = { newFontsBadgeDismissed: false, newEffectsBadgeDismissed: false };
+    obj = {};
     const merged = Object.assign(arg0);
+    obj.newFontsBadgeDismissed = false;
+    obj.newEffectsBadgeDismissed = false;
     return obj;
   }
 ];
 DisplayNameStylesSeenStore.migrations = items;
-const obj2 = {
+const displayNameStylesSeenStore = new DisplayNameStylesSeenStore(DispatcherDefault, {
   DISPLAY_NAME_STYLES_MARK_FONT_SEEN: function handleMarkFontSeen(fontId) {
     fontId = fontId.fontId;
     const seenFontIds = obj.seenFontIds;
     if (seenFontIds.has(fontId)) {
       return false;
     } else {
-      obj = { seenFontIds: set };
+      obj = {};
       const merged = Object.assign(obj);
       const _Set = Set;
       const items = [];
-      items[HermesBuiltin.arraySpread(items, obj.seenFontIds, 0)] = fontId;
-      const self = this;
-      const self2 = this;
-      set = new Set(items);
+      items[HermesBuiltin.arraySpread(obj.seenFontIds, 0)] = fontId;
+      const set = new Set(items);
+      obj.seenFontIds = set;
     }
   },
   DISPLAY_NAME_STYLES_MARK_EFFECT_SEEN: function handleMarkEffectSeen(effectId) {
@@ -101,34 +96,35 @@ const obj2 = {
     if (seenEffectIds.has(effectId)) {
       return false;
     } else {
-      obj = { seenEffectIds: set };
+      obj = {};
       const merged = Object.assign(obj);
       const _Set = Set;
       const items = [];
-      items[HermesBuiltin.arraySpread(items, obj.seenEffectIds, 0)] = effectId;
-      const self = this;
-      const self2 = this;
-      set = new Set(items);
+      items[HermesBuiltin.arraySpread(obj.seenEffectIds, 0)] = effectId;
+      const set = new Set(items);
+      obj.seenEffectIds = set;
     }
   },
   DISPLAY_NAME_STYLES_MARK_NEW_FONTS_BADGE_DISMISSED: function handleMarkNewFontsBadgeDismissed() {
     if (obj.newFontsBadgeDismissed) {
       return false;
     } else {
-      obj = { newFontsBadgeDismissed: true };
+      obj = {};
       const merged = Object.assign(obj);
+      obj.newFontsBadgeDismissed = true;
     }
   },
   DISPLAY_NAME_STYLES_MARK_NEW_EFFECTS_BADGE_DISMISSED: function handleMarkNewEffectsBadgeDismissed() {
     if (obj.newEffectsBadgeDismissed) {
       return false;
     } else {
-      obj = { newEffectsBadgeDismissed: true };
+      obj = {};
       const merged = Object.assign(obj);
+      obj.newEffectsBadgeDismissed = true;
     }
   }
-};
-const displayNameStylesSeenStore = new DisplayNameStylesSeenStore(DispatcherDefault, obj2);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesSeenStore.tsx");
 
 export default displayNameStylesSeenStore;

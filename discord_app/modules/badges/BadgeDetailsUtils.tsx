@@ -1,9 +1,8 @@
 // === Module 10910: BadgeDetailsUtils ===
 
 // Module 10910 (BadgeDetailsUtils)
-import intl5 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import StringUtils from "StringUtils" /* 2018 */;
 import BadgeId from "BadgeId" /* 7866 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7874 */;
 import BadgeIdResolution from "BadgeIdResolution" /* 7875 */;
@@ -26,7 +25,7 @@ export const getBadgeArtUrls = function getBadgeArtUrls(badge, displayTier, stat
     }
     prop2 = prop;
   }
-  const obj = { animatedUrl: prop2, imageUrl: prop2 };
+  const obj = { animatedUrl: prop2, imageUrl: null };
   if (prop2 == null) {
     let prop1;
     if (displayTier != null) {
@@ -47,17 +46,14 @@ export const getBadgeArtUrls = function getBadgeArtUrls(badge, displayTier, stat
   if (prop2 == null) {
     prop2 = badge.simple_icon_url;
   }
+  obj.imageUrl = prop2;
   return obj;
 };
 export const getBadgeTitle = function getBadgeTitle(badge, displayTier) {
-  let combined;
-  let name;
-  let name2;
-  let obj;
   const tmp3 = badge.badge_id === BadgeId.BadgeId.PREMIUM_TENURE;
   if (tmp3) {
     let name1;
-    if (displayTier != null) {
+    if (!tmp4) {
       name1 = displayTier.name;
     }
     if (name1 == null) {
@@ -67,29 +63,30 @@ export const getBadgeTitle = function getBadgeTitle(badge, displayTier) {
       }
       name1 = key;
     }
-    name = name1;
-  } else if (displayTier != null) {
+    let name = name1;
+  } else if (!tmp4) {
     name = displayTier.name;
   }
   if (tmp3) {
-    const intl = intl5.intl;
-    name2 = intl.string(intl5.t.Ipxkog);
+    const intl = util.intl;
+    let name2 = intl.string(util.t.Ipxkog);
   } else {
     name2 = badge.name;
   }
   if (tmp3) {
-    const obj2 = { isNitro: tmp3, eyebrow: "Array", displayName: combined };
-    combined = name2;
+    const obj2 = { isNitro: tmp3, eyebrow: "Array", displayName: "function pnpm_presetsTs1(event){return{transform:[{translateX:event.translationX}]};}" };
+    let combined = name2;
     if (null != name) {
       const _HermesInternal = HermesInternal;
       combined = "" + name2 + " " + name;
     }
-    obj = obj2;
+    obj2.displayName = combined;
+    let obj = obj2;
   } else {
     if (null != name) {
       if (badge.owned) {
-        obj = { isNitro: tmp3, eyebrow: name2, displayName: name };
         const obj3 = { isNitro: tmp3, eyebrow: name2, displayName: name };
+        obj = obj3;
       }
     }
     obj = { isNitro: tmp3, eyebrow: "Array", displayName: name2 };
@@ -97,63 +94,54 @@ export const getBadgeTitle = function getBadgeTitle(badge, displayTier) {
   return obj;
 };
 export const isLegacyDisplayBadge = function isLegacyDisplayBadge(badge) {
-  const obj = BadgeIdResolution;
-  const tmp3 = obj.isLegacyBadgeId(badge.badge_id) && !badge.is_earnable && badge.badge_id !== BadgeId.BadgeId.STAFF;
+  let tmp3 = BadgeIdResolution.isLegacyBadgeId(badge.badge_id) && !badge.is_earnable;
+  if (tmp3) {
+    tmp3 = badge.badge_id !== BadgeId.BadgeId.STAFF;
+  }
   return tmp3;
 };
 export const getBadgeStatusText = function getBadgeStatusText(badge, arg1) {
-  let date;
-  let stringResult1;
   const tmp = getObtainedAtFromBadge(badge);
   if (badge.owned) {
-    let stringResult;
+    let v5LcHT0 = dependencyMap;
     if (badge.badge_id === BadgeId.BadgeId.APRIL_FOOLS_2026) {
-      const intl4 = intl5.intl;
-      stringResult = intl4.string(intl5.t["5LcHT0"]);
+      const intl4 = util.intl;
+      v5LcHT0 = util.t["5LcHT0"];
+      let stringResult = intl4.string(v5LcHT0);
     } else {
-      const tmp5Result = BadgeIdResolution;
-      const tmp7 = tmp5Result.isLegacyBadgeId(badge.badge_id) && !badge.is_earnable && badge.badge_id !== BadgeId.BadgeId.STAFF;
-      if (!tmp7) {
-        if (null != tmp) {
-          let formatToPlainStringResult;
-          if (badge.badge_id !== BadgeId.BadgeId.STAFF) {
-            const intl3 = intl5.intl;
-            const formatToPlainString = intl3.formatToPlainString;
-            const _Date = Date;
-            const self = this;
-            const self2 = this;
-            const obj = { date };
-            const XmaiRQ = intl5.t.XmaiRQ;
-            date = new Date(tmp);
-            formatToPlainStringResult = formatToPlainString(XmaiRQ, obj);
-          }
-          stringResult = formatToPlainStringResult;
-        }
-        const intl2 = intl5.intl;
-        formatToPlainStringResult = intl2.string(intl5.t.sTFApF);
-      } else {
+      let tmp6 = BadgeIdResolution.isLegacyBadgeId(badge.badge_id) && !badge.is_earnable;
+      if (tmp6) {
+        tmp6 = badge.badge_id !== BadgeId.BadgeId.STAFF;
+      }
+      if (tmp6) {
         stringResult = arg1;
       }
+      if (null == tmp) {
+        const intl2 = util.intl;
+        let stringResult1 = intl2.string(util.t.sTFApF);
+      }
+      const intl3 = util.intl;
+      const obj = { date: null };
+      const _Date = Date;
+      const date = new Date(tmp);
+      obj.date = date;
+      stringResult1 = intl3.formatToPlainString(util.t.XmaiRQ, obj);
+      const tmp4Result = BadgeIdResolution;
     }
-    stringResult1 = stringResult;
   } else {
-    const intl = intl5.intl;
-    stringResult1 = intl.string(intl5.t.uHtDcT);
+    const intl = util.intl;
+    return intl.string(util.t.uHtDcT);
   }
-  return stringResult1;
 };
 export const isUpgradeableNitroViewer = function isUpgradeableNitroViewer(badge, stateFromStores1) {
   let tmp = badge.badge_id === BadgeId.BadgeId.PREMIUM_TENURE;
   if (tmp) {
     tmp = stateFromStores1 === PremiumTypes.TIER_0 || stateFromStores1 === PremiumTypes.TIER_1;
+    const tmp3 = stateFromStores1 === PremiumTypes.TIER_0 || stateFromStores1 === PremiumTypes.TIER_1;
   }
   return tmp;
 };
 export const getBadgeDescriptionText = function getBadgeDescriptionText(arg0) {
-  let badge;
-  let isViewerOnUpgradeableNitro;
-  let stringResult1;
-  let viewerBadge;
   ({ viewerBadge, isViewerOnUpgradeableNitro, badge } = arg0);
   if (!isViewerOnUpgradeableNitro) {
     let owned;
@@ -170,28 +158,25 @@ export const getBadgeDescriptionText = function getBadgeDescriptionText(arg0) {
         num = 0;
       }
       if (num > 0) {
-        let stringResult;
         if (null == viewerBadge.next_tier) {
-          const intl = intl5.intl;
-          stringResult = intl.string(intl5.t.jY5xAL);
+          const intl = util.intl;
+          return intl.string(util.t.jY5xAL);
         }
-        return stringResult;
       }
     }
   }
   if (isViewerOnUpgradeableNitro) {
-    const intl2 = intl5.intl;
-    stringResult1 = intl2.string(intl5.t.qkwSSp);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.qkwSSp);
   } else {
-    stringResult1 = undefined;
+    stringResult = undefined;
     if (viewerBadge != null) {
-      stringResult1 = viewerBadge.description;
+      stringResult = viewerBadge.description;
     }
-    if (stringResult1 == null) {
-      stringResult1 = badge.description;
+    if (stringResult == null) {
+      stringResult = badge.description;
     }
   }
-  stringResult = stringResult1;
 };
 export const getBadgeCtaVariant = function getBadgeCtaVariant(isViewerOnUpgradeableNitro) {
   let str = "expressive";
@@ -209,9 +194,6 @@ export const getBadgeCtaVariant = function getBadgeCtaVariant(isViewerOnUpgradea
   return str;
 };
 export const shouldShowLegacyUnavailableNotice = function shouldShowLegacyUnavailableNotice(arg0) {
-  let badge;
-  let isViewingOtherUser;
-  let viewerOwnsBadge;
   ({ badge, isViewingOtherUser, viewerOwnsBadge } = arg0);
   if (isViewingOtherUser) {
     isViewingOtherUser = !badge.is_earnable;
@@ -225,25 +207,19 @@ export const shouldShowLegacyUnavailableNotice = function shouldShowLegacyUnavai
   return isViewingOtherUser;
 };
 export const getBadgeProgressDisplay = function getBadgeProgressDisplay(badge, viewerBadge) {
-  let simple_icon_url;
-  let simple_icon_url1;
-  let threshold;
-  let tmp16;
   let tmp = viewerBadge;
   if (viewerBadge == null) {
     tmp = badge;
   }
-  const obj = BadgeUtils;
-  const findTierResult = obj.findTier(tmp, tmp.current_tier);
-  const obj2 = BadgeUtils;
-  const findTierResult1 = obj2.findTier(tmp, tmp.next_tier);
+  const findTierResult = BadgeUtils.findTier(tmp, tmp.current_tier);
+  const findTierResult1 = BadgeUtils.findTier(tmp, tmp.next_tier);
   const progress = tmp.progress;
   let first;
   if (progress != null) {
     first = progress[0];
   }
-  const obj3 = { progress: first, threshold, currentArtUrl: simple_icon_url, nextArtUrl: simple_icon_url1, helperText: tmp16 };
-  threshold = undefined;
+  const obj3 = { progress: first, threshold: null, currentArtUrl: null, nextArtUrl: null, helperText: null };
+  let threshold;
   if (first != null) {
     threshold = first.threshold;
   }
@@ -260,7 +236,8 @@ export const getBadgeProgressDisplay = function getBadgeProgressDisplay(badge, v
   if (threshold == null) {
     threshold = null;
   }
-  simple_icon_url = undefined;
+  obj3.threshold = threshold;
+  let simple_icon_url;
   if (findTierResult != null) {
     simple_icon_url = findTierResult.simple_icon_url;
   }
@@ -271,7 +248,8 @@ export const getBadgeProgressDisplay = function getBadgeProgressDisplay(badge, v
     }
     simple_icon_url = prop;
   }
-  simple_icon_url1 = undefined;
+  obj3.currentArtUrl = simple_icon_url;
+  let simple_icon_url1;
   if (findTierResult1 != null) {
     simple_icon_url1 = findTierResult1.simple_icon_url;
   }
@@ -282,19 +260,19 @@ export const getBadgeProgressDisplay = function getBadgeProgressDisplay(badge, v
     }
     simple_icon_url1 = prop1;
   }
+  obj3.nextArtUrl = simple_icon_url1;
   let progress_helper_text;
-  const isNullOrEmpty = StringUtils.isNullOrEmpty;
-  StringUtils;
   if (first != null) {
     progress_helper_text = first.progress_helper_text;
   }
-  tmp16 = undefined;
-  if (!isNullOrEmpty(progress_helper_text)) {
+  let tmp15;
+  if (!tmp2Result.isNullOrEmpty(progress_helper_text)) {
     let progress_helper_text1;
     if (first != null) {
       progress_helper_text1 = first.progress_helper_text;
     }
-    tmp16 = progress_helper_text1;
+    tmp15 = progress_helper_text1;
   }
+  obj3.helperText = tmp15;
   return obj3;
 };

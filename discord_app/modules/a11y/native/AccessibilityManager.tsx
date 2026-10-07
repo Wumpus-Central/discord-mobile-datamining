@@ -2,58 +2,46 @@
 
 // Module 14218 (AccessibilityManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
-import ThemeConstants from "ThemeConstants" /* 1196 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ThemeActionCreators from "ThemeActionCreators" /* 4732 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9787 */;
 import AccessibilitySystemFeaturesDefault from "AccessibilitySystemFeatures" /* 14219 */;
 import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 14220 */;
-import react_native from "react-native" /* 14296 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import react_native2 from "react-native" /* 17 */;
+import updateSaturation from "updateSaturation" /* 14296 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import size from "module_2" /* 2 */;
 
-let c2, c3, set;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ AccessibilityInfo: closure_4, Appearance: hasOwnProperty } = get_ActivityIndicator);
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const SystemTheme = fn(1196).SystemTheme;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/a11y/native/AccessibilityManager.tsx");
 
-let closure_4;
-let hasOwnProperty;
-({ AccessibilityInfo: closure_4, Appearance: hasOwnProperty } = react_native2);
-const AnalyticEvents = Constants.AnalyticEvents;
-const SystemTheme = ThemeConstants.SystemTheme;
-let obj = {
+export default {
   init() {
-    let colorblindMode;
     const self = this;
-    let obj = AccessibilitySystemFeaturesDefault;
-    obj.init();
+    AccessibilitySystemFeaturesDefault.init();
     this.updateNativeColors();
     this.updateMotionSettings();
     AccessibilityStore.addChangeListener(this.updateNativeColors);
     AccessibilityStore.addChangeListener(this.updateMotionSettings);
-    let obj2 = DispatcherDefault;
-    const subscription = obj2.subscribe("CONNECTION_OPEN", this.updateMotionSettings);
+    const subscription = DispatcherDefault.subscribe("CONNECTION_OPEN", this.updateMotionSettings);
     closure_5.addChangeListener(this.updateSystemAppearance);
     const listener = closure_4.addEventListener("screenReaderChanged", (event) => {
       const result = self.updateScreenReaderEnabled(event);
     });
-    const obj3 = DispatcherDefault;
-    const subscription1 = obj3.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
-      const obj = AnalyticsUtilsDefault;
-      const obj2 = { colorblind_enabled: colorblindMode.colorblindMode };
-      obj.track(constants.LOCAL_SETTINGS_UPDATED, obj2);
+    const subscription1 = DispatcherDefault.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
+      AnalyticsUtilsDefault.track(constants.LOCAL_SETTINGS_UPDATED, { colorblind_enabled: colorblindMode.colorblindMode });
     });
     let result = this.startAnnouncementQueue();
   },
   updateNativeColors() {
-    const obj = react_native;
-    obj.updateSaturation(AccessibilityStore.saturation);
+    updateSaturation.updateSaturation(AccessibilityStore.saturation);
   },
   updateMotionSettings() {
-    const obj = { reduceMotion: AccessibilityStore.useReducedMotion, prefersCrossfades: AccessibilityStore.systemPrefersCrossfades };
-    const tmp = updateSharedValueIfChangedDefault;
-    tmp(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, obj);
+    updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, { reduceMotion: AccessibilityStore.useReducedMotion, prefersCrossfades: AccessibilityStore.systemPrefersCrossfades });
   },
   checkScreenreaderEnabled() {
     const self = this;
@@ -61,7 +49,7 @@ let obj = {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -72,7 +60,6 @@ let obj = {
         }
       } else {
         try {
-          let closure_0;
           c3 = 2;
           if (0 === c2) {
             if (arg0 === 1) {
@@ -83,8 +70,9 @@ let obj = {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              let closure_1 = tmp4;
-              closure_0 = undefined;
+              closure_1 = tmp5;
+              closure_0 = tmp2;
+              closure_128_0 = undefined;
               c2 = 1;
               c3 = 1;
               const obj4 = { value: screenReaderEnabled.isScreenReaderEnabled(), done: false };
@@ -98,22 +86,20 @@ let obj = {
             const obj = { value, done: true };
             return obj;
           } else {
-            closure_0 = value;
-            const result = closure_129_0.updateScreenReaderEnabled(closure_0);
+            closure_128_0 = value;
+            const result = closure_129_0.updateScreenReaderEnabled(closure_128_0);
             c3 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp11) {
-          c3 = 3;
-          throw tmp11;
+        } catch (tmp12) {
+          c3 = tmp;
+          throw tmp12;
         }
       }
     })();
   },
   updateScreenReaderEnabled(screenReaderEnabled) {
-    const obj = { screenReaderEnabled };
-    const tmp = updateSharedValueIfChangedDefault;
-    tmp(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, obj);
+    updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, { screenReaderEnabled });
   },
   updateSystemAppearance(colorScheme) {
     let DARK = SystemTheme.NO_PREFERENCE;
@@ -123,20 +109,18 @@ let obj = {
     } else if ("dark" === colorScheme) {
       DARK = SystemTheme.DARK;
     }
-    const obj = ThemeActionCreators;
-    obj.setSystemTheme(DARK);
+    ThemeActionCreators.setSystemTheme(DARK);
   },
   startAnnouncementQueue() {
-    set = new Set();
+    const set = new Set();
     const listener = closure_4.addEventListener("announcementFinished", (event) => {
-      let closure_0 = event;
       if (!event.success) {
         if (!set.has(event.announcement)) {
           set.add(event.announcement);
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => {
-            const AccessibilityAnnouncer = set(closure_2_2[12]).AccessibilityAnnouncer;
-            AccessibilityAnnouncer.announce(announcement.announcement);
+            const AccessibilityAnnouncer = set(dependencyMap[12]).AccessibilityAnnouncer;
+            AccessibilityAnnouncer.announce(event.announcement);
           }, 150);
         }
       }
@@ -144,6 +128,3 @@ let obj = {
     });
   }
 };
-let result = size.fileFinishedImporting("modules/a11y/native/AccessibilityManager.tsx");
-
-export default obj;

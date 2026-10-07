@@ -1,26 +1,21 @@
 // === Module 5124: ApplicationStore ===
 
 // Module 5124 (ApplicationStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import _slicedToArray from "module_32" /* 32 */;
 import ApplicationRecord from "ApplicationRecord" /* 2009 */;
-import size from "module_2" /* 2 */;
-
-let attachments;
 
 function addApplication(fromServer) {
-  const value = map.get(fromServer.id);
+  value = map.get(fromServer.id);
   const result = map4.set(fromServer.id, Date.now());
   let result1 = fromServer;
   if (null != value) {
     result1 = value.mergeFromApplicationUpdate(fromServer);
   }
   const result2 = map.set(fromServer.id, result1);
-  const str = fromServer.name;
-  const result3 = map3.set(str.toLowerCase(), result1);
-  const aliases = fromServer.aliases;
-  for (const item10031 of aliases) {
+  const result3 = map3.set(fromServer.name.toLowerCase(), result1);
+  for (const item10031 of tmp5) {
     let result4 = map3.set(item10031.toLowerCase(), result1);
     continue;
   }
@@ -29,17 +24,17 @@ function addApplication(fromServer) {
     const iter = linkedGames[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp11 = nextResult;
-      if (null != nextResult.application) {
-        let application;
-        if (tmp11.application instanceof ApplicationRecord) {
-          application = tmp11.application;
+      let tmp12 = nextResult;
+      if (null == nextResult.application) {
+        continue;
+      } else {
+        if (tmp12.application instanceof ApplicationRecord) {
+          let application = tmp12.application;
         } else {
-          application = ApplicationRecord.createFromServer(tmp11.application);
+          application = ApplicationRecord.createFromServer(tmp12.application);
         }
-        let tmp12Result = addApplication(application);
+        let tmp13Result = addApplication(application);
       }
-      continue;
     }
   }
   map5.delete(fromServer.id);
@@ -57,35 +52,22 @@ function handleWishlistAction(wishlistData) {
   return false;
 }
 function handleAppWithBot(arg0) {
-  let applicationId;
-  let num;
-  let obj;
-  let userId;
   ({ userId, applicationId } = arg0);
-  const botUserIdToAppUsage = closure_10.botUserIdToAppUsage;
+  let num = closure_10.botUserIdToAppUsage;
   if (null == closure_10.botUserIdToAppUsage[userId]) {
+    const obj2 = { applicationId, lastUsedMs: null };
     const _Date = Date;
-    obj = { applicationId, lastUsedMs: Date.now() };
-    const obj2 = { applicationId, lastUsedMs: Date.now() };
+    obj2.lastUsedMs = Date.now();
+    let obj = obj2;
   } else {
-    obj = { applicationId, lastUsedMs: closure_10.botUserIdToAppUsage[userId].lastUsedMs };
+    obj = { applicationId, lastUsedMs: tmp2.lastUsedMs };
   }
-  botUserIdToAppUsage[userId] = obj;
-  map = new Map();
+  num[userId] = obj;
+  new Map();
   const entries = Object.entries(closure_10.botUserIdToAppUsage);
-  const tmp5 = entries[Symbol.iterator]();
-  while (tmp5 !== undefined) {
-    let tmp8 = _slicedToArray(tmp6, 2);
-    let result = map.set(tmp8[0], tmp8[1]);
-    continue;
-  }
-  const arr2 = Array.from(map.entries());
-  const sorted = arr2.sort((arg0, arg1) => arg1[1].lastUsedMs - arg0[1].lastUsedMs);
-  for (let num = 0; num < sorted.length; num = num + 1) {
-    if (10 <= num) {
-      delete closure_10.botUserIdToAppUsage[arr[num][0]];
-    }
-  }
+  applicationId = entries;
+  userId = entries[Symbol.iterator]();
+  num = 2;
 }
 function handleApplicationWidgetConfigFetchSuccess(applications) {
   applications = applications.applications;
@@ -133,115 +115,121 @@ const map3 = new Map();
 const map4 = new Map();
 const map5 = new Map();
 let set = new Set();
-const authStore = { botUserIdToAppUsage: {} };
-const PersistedStore = get_initializedDefault.PersistedStore;
+let closure_10 = { botUserIdToAppUsage: {} };
+const PersistedStore = initializeDefault.PersistedStore;
 class ApplicationStore extends PersistedStore {
-  initialize(botUserIdToAppUsage) {
-    let applicationId;
-    let lastUsedMs;
-    if (null != botUserIdToAppUsage) {
-      if (typeof botUserIdToAppUsage.botUserIdToAppUsage === "object") {
-        for (const key10002 in botUserIdToAppUsage.botUserIdToAppUsage) {
-          ({ applicationId, lastUsedMs } = botUserIdToAppUsage.botUserIdToAppUsage[key10002]);
-          let tmp = typeof applicationId === "string" && applicationId.length > 0 && typeof lastUsedMs === "number" && lastUsedMs > 0;
-          if (!tmp) {
-            continue;
-          } else {
-            let obj = { applicationId, lastUsedMs };
-            closure_10.botUserIdToAppUsage[key10002] = obj;
-            continue;
-          }
-          continue;
+}
+const prototype = ApplicationStore.prototype;
+prototype["initialize"] = function initialize(botUserIdToAppUsage) {
+  if (null != botUserIdToAppUsage) {
+    if (typeof botUserIdToAppUsage.botUserIdToAppUsage === "object") {
+      for (const key10002 in arg0.botUserIdToAppUsage) {
+        ({ applicationId, lastUsedMs } = arg0.botUserIdToAppUsage[key10002]);
+        let tmp = typeof applicationId === "string";
+        if (typeof applicationId === "string") {
+          tmp = applicationId.length > 0;
         }
-      }
-    }
-  }
-  getState() {
-    return closure_10;
-  }
-  _getAllApplications() {
-    return Array.from(map.values());
-  }
-  getGuildApplication(arg0, arg1) {
-    if (null != arg0) {
-      const values = map.values();
-      for (const item10011 of values) {
-        if (item10011.guildId === arg0) {
-          if (tmp5.type === arg1) {
-            obj.return();
-            return item10011;
-          }
+        if (tmp) {
+          tmp = typeof lastUsedMs === "number";
+        }
+        if (tmp) {
+          tmp = lastUsedMs > 0;
+        }
+        if (!tmp) {
+          continue;
+        } else {
+          let obj = { applicationId, lastUsedMs };
+          closure_10.botUserIdToAppUsage[key10002] = obj;
+          continue;
         }
         continue;
       }
     }
   }
-  getGuildApplicationIds(arg0) {
-    let value;
-    if (null == arg0) {
-      value = closure_2;
-    } else {
-      value = map1.get(arg0);
-      if (value == null) {
-        value = closure_2;
+};
+prototype["getState"] = function getState() {
+  return closure_10;
+};
+prototype["_getAllApplications"] = function _getAllApplications() {
+  return Array.from(map.values());
+};
+prototype["getGuildApplication"] = function getGuildApplication(arg0, arg1) {
+  if (null != arg0) {
+    const values = map.values();
+    for (const item10011 of values) {
+      if (item10011.guildId === arg0) {
+        if (tmp5.type === arg1) {
+          obj.return();
+          return item10011;
+        }
       }
+      continue;
+    }
+  }
+};
+prototype["getGuildApplicationIds"] = function getGuildApplicationIds(arg0) {
+  if (null == arg0) {
+    value = closure_2;
+  } else {
+    value = map1.get(arg0);
+    if (value == null) {
+      value = closure_2;
+    }
+  }
+  return value;
+};
+prototype["getGuildEmbeddedApplications"] = function getGuildEmbeddedApplications(arg0, arg1) {
+  if (null != arg0) {
+    value = map2.get(arg0);
+    value2 = undefined;
+    if (value != null) {
+      value2 = value.get(arg1);
+    }
+    return value2;
+  }
+};
+prototype["getApplication"] = function getApplication(arg0) {
+  if (null != arg0) {
+    return map.get(arg0);
+  }
+};
+prototype["getApplicationByName"] = function getApplicationByName(name) {
+  if (null != name) {
+    const formatted = name.toLowerCase();
+    value = undefined;
+    if (map3.has(formatted)) {
+      value = map3.get(formatted);
     }
     return value;
   }
-  getGuildEmbeddedApplications(arg0, arg1) {
-    if (null != arg0) {
-      const value = map2.get(arg0);
-      let value2;
-      if (value != null) {
-        value2 = value.get(arg1);
-      }
-      return value2;
+};
+prototype["getApplicationLastUpdated"] = function getApplicationLastUpdated(arg0) {
+  return map4.get(arg0);
+};
+prototype["isFetchingApplication"] = function isFetchingApplication(application_id) {
+  return true === map5.get(application_id);
+};
+prototype["isHydrated"] = function isHydrated(applicationId) {
+  return set.has(applicationId);
+};
+prototype["didFetchingApplicationFail"] = function didFetchingApplicationFail(application_id) {
+  return false === map5.get(application_id);
+};
+prototype["getFetchingOrFailedFetchingIds"] = function getFetchingOrFailedFetchingIds() {
+  return Array.from(map5.keys());
+};
+prototype["getAppIdForBotUserId"] = function getAppIdForBotUserId(id) {
+  if (null != id) {
+    let applicationId;
+    if (closure_10.botUserIdToAppUsage[id] != null) {
+      applicationId = tmp2.applicationId;
     }
+    return applicationId;
   }
-  getApplication(arg0) {
-    if (null != arg0) {
-      return map.get(arg0);
-    }
-  }
-  getApplicationByName(name) {
-    if (null != name) {
-      const formatted = name.toLowerCase();
-      let value;
-      if (map3.has(formatted)) {
-        value = map3.get(formatted);
-      }
-      return value;
-    }
-  }
-  getApplicationLastUpdated(arg0) {
-    return map4.get(arg0);
-  }
-  isFetchingApplication(application_id) {
-    return true === map5.get(application_id);
-  }
-  isHydrated(applicationId) {
-    return set.has(applicationId);
-  }
-  didFetchingApplicationFail(application_id) {
-    return false === map5.get(application_id);
-  }
-  getFetchingOrFailedFetchingIds() {
-    return Array.from(map5.keys());
-  }
-  getAppIdForBotUserId(id) {
-    if (null != id) {
-      let applicationId;
-      if (closure_10.botUserIdToAppUsage[id] != null) {
-        applicationId = tmp2.applicationId;
-      }
-      return applicationId;
-    }
-  }
-}
-const prototype = ApplicationStore.prototype;
+};
 ApplicationStore.displayName = "ApplicationStore";
 ApplicationStore.persistKey = "ApplicationStore";
-let obj = {
+const applicationStore = new ApplicationStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     map.clear();
     map1.clear();
@@ -255,16 +243,16 @@ let obj = {
     const iter = arg0.applications[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let self = this;
-      let self2 = this;
-      let tmp5 = new ApplicationRecord(nextResult);
-      let tmp7 = addApplication(tmp5);
+      let tmp4 = new.target;
+      let tmp5 = new.target;
+      let tmp7 = new ApplicationRecord(nextResult);
+      let tmp9 = addApplication(tmp7);
       continue;
     }
   },
   APPLICATION_FETCH: function handleApplicationFetch(applicationId) {
     applicationId = applicationId.applicationId;
-    const value = map5.get(applicationId);
+    value = map5.get(applicationId);
     const result = map5.set(applicationId, true);
     return true !== value;
   },
@@ -277,7 +265,7 @@ let obj = {
   },
   APPLICATION_FETCH_FAIL: function handleApplicationFetchFail(applicationId) {
     applicationId = applicationId.applicationId;
-    const value = map5.get(applicationId);
+    value = map5.get(applicationId);
     const result = map5.set(applicationId, false);
     return false !== value;
   },
@@ -286,31 +274,29 @@ let obj = {
     const iter = arg0.applicationIds[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let value = map5.get(nextResult);
+      value = map5.get(nextResult);
       let result = map5.set(nextResult, true);
       flag = true !== value;
       continue;
     }
     return flag;
   },
-  APPLICATIONS_FETCH_SUCCESS: function handleApplicationsFetchSuccess(isHydrated) {
-    isHydrated = isHydrated.isHydrated;
-    const iter = isHydrated.applications[Symbol.iterator]();
+  APPLICATIONS_FETCH_SUCCESS: function handleApplicationsFetchSuccess(arg0) {
+    const iter = arg0.applications[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp2 = nextResult;
-      if (true === isHydrated) {
-        let addResult = set.add(tmp2.id);
+      let tmp3 = nextResult;
+      if (true === tmp) {
+        let addResult = set.add(tmp3.id);
       }
-      let tmp9 = addApplication(ApplicationRecord.createFromServer(tmp2));
+      let tmp10 = addApplication(ApplicationRecord.createFromServer(tmp3));
       continue;
     }
   },
-  APPLICATIONS_FETCH_FAIL: function handleApplicationsFetchFail(applicationIds) {
-    applicationIds = applicationIds.applicationIds;
+  APPLICATIONS_FETCH_FAIL: function handleApplicationsFetchFail(arg0) {
     let flag = false;
-    for (const item10008 of applicationIds) {
-      let value = map5.get(item10008);
+    for (const item10008 of tmp) {
+      value = map5.get(item10008);
       let result = map5.set(item10008, false);
       flag = false !== value;
       continue;
@@ -325,7 +311,6 @@ let obj = {
   ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: handleEntitlementsFetched,
   GUILD_APPLICATIONS_FETCH_SUCCESS: function handleGuildApplicationsFetchSuccess(guildId) {
     const items = [];
-    guildId = guildId.guildId;
     const iter = guildId.applications[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
@@ -333,14 +318,11 @@ let obj = {
       let tmp5 = addApplication(ApplicationRecord.createFromServer(nextResult));
       continue;
     }
-    const result = map1.set(guildId, items);
+    const result = map1.set(guildId.guildId, items);
   },
   GUILD_EMBEDDED_APPLICATIONS_FETCH_SUCCESS: function handleGuildEmbeddedApplicationsFetchSuccess(surface) {
-    let guildId;
-    let items;
     ({ guildId, items } = surface);
     const items1 = [];
-    surface = surface.surface;
     const iter = items[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
@@ -350,25 +332,22 @@ let obj = {
       let tmp5 = addApplication(ApplicationRecord.createFromServer(application));
       continue;
     }
-    let value = map2.get(guildId);
+    value = map2.get(guildId);
     if (null == value) {
       const _Map = Map;
-      const self = this;
-      const self2 = this;
       map = new Map();
       const result = map2.set(guildId, map);
       value = map;
     }
-    const result1 = value.set(surface, items1);
+    const result1 = value.set(surface.surface, items1);
   },
   GUILD_INTEGRATIONS_UPDATE: handleIntegrationsChanged,
   INTEGRATION_CREATE: handleIntegrationsChanged,
   INTEGRATION_UPDATE: handleIntegrationsChanged,
   INTEGRATION_DELETE: handleIntegrationsChanged,
-  BILLING_PAYMENTS_FETCH_SUCCESS: function handleFetchPayments(payments) {
-    payments = payments.payments;
+  BILLING_PAYMENTS_FETCH_SUCCESS: function handleFetchPayments(arg0) {
     set = new Set();
-    const iter = payments[Symbol.iterator]();
+    const iter = arg0.payments[Symbol.iterator]();
     while (iter !== undefined) {
       let sku = iter.next().sku;
       let application;
@@ -422,11 +401,11 @@ let obj = {
     }
   },
   LIBRARY_FETCH_SUCCESS: function handleLibraryApplicationsFetch(arg0) {
-    const tmp = arg0.libraryApplications[Symbol.iterator]();
     while (tmp !== undefined) {
       let tmp5 = addApplication(ApplicationRecord.createFromServer(tmp2.application));
       continue;
     }
+    tmp = arg0.libraryApplications[Symbol.iterator]();
   },
   STORE_LISTING_FETCH_SUCCESS: function handleStoreListingFetch(storeListing) {
     storeListing = storeListing.storeListing;
@@ -450,10 +429,11 @@ let obj = {
     });
   },
   USER_PROFILE_FETCH_SUCCESS: function handleProfileFetchSuccess(userProfile) {
-    let application;
-    let user;
     ({ user, application } = userProfile.userProfile);
-    const bot = user.bot && null != application;
+    let bot = user.bot;
+    if (bot) {
+      bot = null != application;
+    }
     if (bot) {
       const obj = { userId: user.id, applicationId: application.id };
       handleAppWithBot(obj);
@@ -462,11 +442,11 @@ let obj = {
   APP_DM_OPEN: function handleAppDMOpen(botUserId) {
     botUserId = botUserId.botUserId;
     if (null != closure_10.botUserIdToAppUsage[botUserId]) {
-      const botUserIdToAppUsage = closure_10.botUserIdToAppUsage;
-      const obj = { lastUsedMs: Date.now() };
+      const obj = {};
       const merged = Object.assign(tmp);
       const _Date = Date;
-      botUserIdToAppUsage[botUserId] = obj;
+      obj.lastUsedMs = Date.now();
+      closure_10.botUserIdToAppUsage[botUserId] = obj;
     }
   },
   USER_AUTHORIZED_APPS_UPDATE: function handleAuthorizedAppsUpdate(tokens) {
@@ -479,7 +459,9 @@ let obj = {
         let tmp7 = addApplication(ApplicationRecord.createFromServer(tmp3.application));
         let bot = tmp3.application.bot;
         if (null != bot) {
-          let obj = { userId: tmp8.id, applicationId: tmp3.application.id };
+          let obj = { userId: null, applicationId: null };
+          obj.userId = tmp8.id;
+          obj.applicationId = tmp3.application.id;
           let tmp12 = handleAppWithBot(obj);
         }
       }
@@ -523,8 +505,8 @@ let obj = {
   APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: handleApplicationWidgetConfigFetchSuccess,
   APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: handleApplicationWidgetConfigFetchSuccess,
   APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: handleApplicationWidgetConfigFetchSuccess
-};
-const applicationStore = new ApplicationStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/ApplicationStore.tsx");
 
 export default applicationStore;

@@ -12,12 +12,11 @@ export default function combineMarkupRules(items) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     for (const key10012 in nextResult) {
-      let tmp8;
       let obj2 = {};
       if (key10012 in obj) {
         let merged = Object.assign(obj[key10012]);
         let merged1 = Object.assign(tmp2[key10012]);
-        tmp8 = obj2;
+        let tmp8 = obj2;
       } else {
         let merged2 = Object.assign(tmp2[key10012]);
         tmp8 = obj2;

@@ -1,51 +1,46 @@
 // === Module 17066: SearchNavigatorPreviewScreen ===
 
 // Module 17066 (SearchNavigatorPreviewScreen)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import Constants from "Constants" /* 1085 */;
 import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12001 */;
-import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let navigation;
-
-const ScrollView = react_native.ScrollView;
-const SearchTypes = Constants.SearchTypes;
-const jsx = Fragment.jsx;
+const require = fn;
+const ScrollView = fn(17).ScrollView;
+const SearchTypes = fn(1085).SearchTypes;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_7 = createStyles.createStyles({ container: { flex: 1 } });
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let searchContext;
-  let obj = navigation(searchContext[6]);
-  const cResult = obj.c(14);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorPreviewScreen.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = navigation(searchContext[6]).c(14);
   const tmp3 = closure_7();
+  let obj = navigation(searchContext[6]);
+  navigation = navigation(searchContext[7]).useNavigation();
   let obj2 = navigation(searchContext[7]);
-  navigation = obj2.useNavigation();
-  const obj3 = navigation(searchContext[8]);
-  const route = obj3.useRoute();
+  const route = navigation(searchContext[8]).useRoute();
   const channelId = route.params.channelId;
   searchContext = route.params.searchContext;
   const onBeforeJumpToMessage = route.params.onBeforeJumpToMessage;
   if (cResult[0] === channelId) {
     if (cResult[1] === navigation) {
       if (cResult[2] === onBeforeJumpToMessage) {
-        let tmp6;
         if (cResult[3] === searchContext) {
-          tmp6 = cResult[4];
+          let tmp6 = cResult[4];
         }
         let type = searchContext.type;
         if (SearchTypes.CHANNEL !== type) {
           if (SearchTypes.GUILD_CHANNEL !== type) {
             if (cResult[11] === channelId) {
-              let tmp7;
               if (cResult[12] === tmp6) {
-                tmp7 = cResult[13];
+                let tmp7 = cResult[13];
               }
               return tmp7;
             }
-            const tmp10 = jsx(channelId(searchContext[10]), { channelId, onBeforeJumpToMessage: tmp6 });
+            const obj4 = { channelId, onBeforeJumpToMessage: tmp6 };
+            const tmp10 = jsx(channelId(tmp[10]), { channelId, onBeforeJumpToMessage: tmp6 });
             cResult[11] = channelId;
             cResult[12] = tmp6;
             cResult[13] = tmp10;
@@ -53,24 +48,24 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           }
         }
         if (cResult[5] === channelId) {
-          let tmp11;
           if (cResult[6] === tmp6) {
-            tmp11 = cResult[7];
+            let tmp11 = cResult[7];
           }
           if (cResult[8] === tmp3.container) {
-            let tmp15;
             if (cResult[9] === tmp11) {
-              tmp15 = cResult[10];
+              let tmp15 = cResult[10];
             }
             return tmp15;
           }
+          const obj5 = { horizontal: true, scrollEnabled: false, bounces: false, contentContainerStyle: tmp3.container, children: tmp11 };
           const tmp18 = <ScrollView horizontal scrollEnabled={false} bounces={false} contentContainerStyle={tmp3.container}>{tmp11}</ScrollView>;
           cResult[8] = tmp3.container;
           cResult[9] = tmp11;
           cResult[10] = tmp18;
           tmp15 = tmp18;
         }
-        const tmp14 = jsx(channelId(searchContext[10]), { channelId, onBeforeJumpToMessage: tmp6 });
+        const obj6 = { channelId, onBeforeJumpToMessage: tmp6 };
+        const tmp14 = jsx(channelId(tmp[10]), { channelId, onBeforeJumpToMessage: tmp6 });
         cResult[5] = channelId;
         cResult[6] = tmp6;
         cResult[7] = tmp14;
@@ -79,9 +74,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   const fn = function n() {
-    const obj = search_tracking_TrackingDefault;
-    const obj2 = { searchContext, channelId };
-    const result = obj.trackSearchJumpToMessage(obj2);
+    const result = search_tracking_TrackingDefault.trackSearchJumpToMessage({ searchContext, channelId });
     if (onBeforeJumpToMessage != null) {
       onBeforeJumpToMessage();
     }
@@ -90,6 +83,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     if (null != parent) {
       parent.goBack();
     }
+    const obj2 = { searchContext, channelId };
   };
   cResult[0] = channelId;
   cResult[1] = navigation;
@@ -97,21 +91,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[3] = searchContext;
   cResult[4] = fn;
   tmp6 = fn;
+  const obj3 = navigation(searchContext[8]);
 }) : (() => {
-  let searchContext;
   const tmp = closure_7();
+  navigation = navigation(searchContext[7]).useNavigation();
   let obj = navigation(searchContext[7]);
-  navigation = obj.useNavigation();
-  let obj2 = navigation(searchContext[8]);
-  const route = obj2.useRoute();
+  const route = navigation(searchContext[8]).useRoute();
   const channelId = route.params.channelId;
   searchContext = route.params.searchContext;
   const onBeforeJumpToMessage = route.params.onBeforeJumpToMessage;
   const items = [searchContext, channelId, onBeforeJumpToMessage, navigation];
   const callback = onBeforeJumpToMessage.useCallback(() => {
-    const obj = search_tracking_TrackingDefault;
-    const obj2 = { searchContext, channelId };
-    const result = obj.trackSearchJumpToMessage(obj2);
+    const result = search_tracking_TrackingDefault.trackSearchJumpToMessage({ searchContext, channelId });
     if (onBeforeJumpToMessage != null) {
       onBeforeJumpToMessage();
     }
@@ -120,15 +111,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     if (null != parent) {
       parent.goBack();
     }
+    const obj2 = { searchContext, channelId };
   }, items);
   let type = searchContext.type;
   if (SearchTypes.CHANNEL !== type) {
     if (SearchTypes.GUILD_CHANNEL !== type) {
-      return jsx(channelId(searchContext[10]), { channelId, onBeforeJumpToMessage: callback });
+      const obj3 = { channelId, onBeforeJumpToMessage: callback };
+      return jsx(channelId(tmp2[10]), { channelId, onBeforeJumpToMessage: callback });
     }
   }
+  let obj2 = navigation(searchContext[8]);
   return <ScrollView horizontal scrollEnabled={false} bounces={false} contentContainerStyle={tmp.container}>{jsx(channelId(searchContext[10]), { channelId, onBeforeJumpToMessage: callback })}</ScrollView>;
 });
-let result = size.fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorPreviewScreen.tsx");
-
-export default tmp2;

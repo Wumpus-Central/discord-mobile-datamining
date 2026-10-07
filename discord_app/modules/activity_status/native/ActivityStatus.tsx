@@ -1,69 +1,44 @@
 // === Module 10622: ActivityStatus ===
 
 // Module 10622 (ActivityStatus)
-import react_native from "react-native" /* 17 */;
-import Constants from "Constants" /* 1085 */;
-import ActivityStatusConstants from "ActivityStatusConstants" /* 10623 */;
 import ApplicationStreamActivityStatusDefault from "ApplicationStreamActivityStatus" /* 10627 */;
 import ActivityStatusTextDefault from "ActivityStatusText" /* 10631 */;
 import isGameActivityDefault from "isGameActivity" /* 10632 */;
 import PresenceActivityStatusDefault from "PresenceActivityStatus" /* 10633 */;
 import VoiceActivityStatusDefault from "VoiceActivityStatus" /* 10640 */;
 import ActivityEmojiDefault from "ActivityEmoji" /* 10642 */;
-import react from "react" /* 19 */;
-import PresenceStore_mod from "PresenceStore" /* 4936 */;
+import noop from "module_19" /* 19 */;
+import PresenceStore from "PresenceStore" /* 4936 */;
 import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore_mod from "UserStore" /* 1377 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import UserStore from "UserStore" /* 1377 */;
 
-let arr3, arr5, constants, hideText, obj1, tmp10, tmp11, tmp12, tmp15, tmp17, tmp18, tmp19, tmp20, tmp21, tmp23, tmp24, tmp27, tmp29, tmp30, tmp31, tmp33, tmp34, tmp5, tmp7, tmp8, type, userId;
-
-let c10;
-let closure_12;
-let unpackModuleId;
-const View = react_native.View;
-let PresenceStore = PresenceStore_mod;
-let UserStore = UserStore_mod;
-const DOT_UNICODE = ActivityStatusConstants.DOT_UNICODE;
-const ActivityTypes = Constants.ActivityTypes;
-({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = Fragment);
+const require = fn;
+const View = fn(17).View;
+const DOT_UNICODE = fn(10623).DOT_UNICODE;
+const ActivityTypes = fn(1085).ActivityTypes;
+const jsxProd = fn(21);
+({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4896);
 let hideIcon = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center", gap: 4 }, icon: { marginTop: 1 }, emoji: { marginRight: 0 } });
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
-  let animate;
-  let closure_7;
-  let emojiSize;
-  let first;
-  let guildId;
-  let hideEmoji;
-  let iconStyle;
-  let maxFontSizeMultiplier;
-  let obj2;
-  let textStyle;
-  let tmp9;
-  let tmp2 = textStyle;
-  let obj = userId(textStyle[10]);
-  const cResult = obj.c(47);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activity_status/native/ActivityStatus.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+  const cResult = userId(textStyle[10]).c(47);
   userId = userId.userId;
   ({ guildId, iconStyle } = userId);
   textStyle = userId.textStyle;
   ({ emojiSize, maxFontSizeMultiplier } = userId);
   ({ animate, hideEmoji } = userId);
-  let num = 14;
-  if (undefined !== emojiSize) {
-    num = emojiSize;
-  }
   PresenceStore = undefined === animate || animate;
-  let closure_6 = undefined !== hideEmoji && hideEmoji;
+  closure_6 = undefined !== hideEmoji && hideEmoji;
   const tmp4 = hideIcon();
   UserStore = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let tmp6 = UserStore;
     let items = [UserStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -82,8 +57,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
       }
     }
   }
-  const tmpResult = userId(tmp2[11]);
-  const stateFromStores = tmpResult.useStateFromStores(first, T);
+  let obj = userId(textStyle[10]);
+  const stateFromStores = userId(textStyle[11]).useStateFromStores(first, T);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class T {
       constructor() {
@@ -92,7 +67,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     }
     let items1 = [PresenceStore];
     cResult[3] = items1;
-    tmp9 = items1;
+    const tmp9 = items1;
   } else {
     class T {
       constructor() {
@@ -115,13 +90,11 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
       }
     }
   }
-  const tmpResult4 = userId(tmp2[11]);
-  const stateFromStores1 = tmpResult4.useStateFromStores(tmp9, G);
-  const tmp13 = iconStyle(tmp2[12])(userId);
+  const tmpResult = userId(textStyle[11]);
+  const stateFromStores1 = userId(textStyle[11]).useStateFromStores(tmp9, G);
+  const tmp13 = iconStyle(textStyle[12])(userId);
   constants = tmp13;
   if (cResult[6] === guildId) {
-    let tmp14;
-    let tmp25;
     class G {
       constructor() {
         return closure_5.getActivities(userId);
@@ -186,7 +159,6 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
       }
       cResult[9] = stateFromStores1;
       cResult[10] = tmp16;
-      tmp14 = tmp16;
     } else {
       class G {
         constructor() {
@@ -194,9 +166,6 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
         }
       }
     }
-    let closure_11 = tmp14;
-    const useGameMentionsAsPlainText = tmp(tmp2[14]).useGameMentionsAsPlainText;
-    userId(tmp2[14]);
     if (tmp14 != null) {
       class G {
         constructor() {
@@ -204,7 +173,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
         }
       }
     }
-    const gameMentionsAsPlainText = useGameMentionsAsPlainText(tmp23);
+    const gameMentionsAsPlainText = tmp(tmp2[14]).useGameMentionsAsPlainText(tmp22);
     const _Symbol = Symbol;
     if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
       class G {
@@ -214,7 +183,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
       }
       let items2 = [closure_6];
       cResult[11] = items2;
-      tmp25 = items2;
+      const tmp24 = items2;
     } else {
       class G {
         constructor() {
@@ -229,7 +198,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
         }
       }
       cResult[12] = userId;
-      cResult[13] = tmp27;
+      cResult[13] = tmp26;
     } else {
       class G {
         constructor() {
@@ -237,8 +206,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
         }
       }
     }
-    const tmpResult6 = userId(tmp2[11]);
-    if (tmpResult6.useStateFromStores(tmp25, tmp27)) {
+    tmp20 = tmp14;
+    const tmpResult5 = tmp(tmp2[14]);
+    if (tmpResult6.useStateFromStores(tmp24, tmp26)) {
       class G {
         constructor() {
           return closure_5.getActivities(userId);
@@ -257,7 +227,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
           }
         }
       }
-      hideIcon = tmp29;
+      hideIcon = tmp28;
       if (tmp14 != null) {
         class G {
           constructor() {
@@ -265,7 +235,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
           }
         }
       }
-      hideText = tmp31;
+      hideText = tmp30;
       if (cResult[14] === stateFromStores1) {
         class G {
           constructor() {
@@ -308,7 +278,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
             arr5 = closure_8;
             found1 = undefined;
             if (closure_8 != null) {
-              found1 = arr5.find(() => { /* body not rendered: F140790 */ });
+              found1 = arr5.find(() => { ... });
             }
             if (null != found1) {
               tmp13 = jsx;
@@ -361,7 +331,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
         }
       }
       cResult[14] = stateFromStores1;
-      cResult[15] = true === tmp28;
+      cResult[15] = true === tmp27;
       cResult[16] = null != undefined;
       cResult[17] = iconStyle;
       cResult[18] = maxFontSizeMultiplier;
@@ -371,46 +341,38 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
       cResult[22] = voiceChannel;
       cResult[23] = L;
     }
+    tmpResult6 = tmp(tmp2[11]);
   }
   obj2 = { userId, guildId };
   cResult[6] = guildId;
   cResult[7] = userId;
   cResult[8] = obj2;
-}) : ((userId) => {
-  let animate;
-  let emojiSize;
-  let iconStyle;
-  let items4;
-  let items5;
-  let items6;
-  let items8;
-  let maxFontSizeMultiplier;
-  let textStyle;
-  userId = userId.userId;
-  ({ iconStyle, textStyle, emojiSize } = userId);
-  const guildId = userId.guildId;
+  const tmpResult4 = userId(textStyle[11]);
+}) : ((guildId) => {
+  const userId = guildId.userId;
+  ({ iconStyle, textStyle, emojiSize } = guildId);
   if (emojiSize === undefined) {
     emojiSize = 14;
   }
-  ({ maxFontSizeMultiplier, animate } = userId);
+  ({ maxFontSizeMultiplier, animate } = guildId);
   if (animate === undefined) {
     animate = true;
   }
-  let flag = userId.hideEmoji;
+  let flag = guildId.hideEmoji;
   if (flag === undefined) {
     flag = false;
   }
   const tmp = hideIcon();
   const items = [UserStore];
+  const stateFromStores = userId(504).useStateFromStores(items, () => UserStore.getUser(userId));
   const obj = userId(504);
-  const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(userId));
+  const tmp2 = userId;
   const items1 = [PresenceStore];
+  const stateFromStores1 = userId(504).useStateFromStores(items1, () => PresenceStore.getActivities(userId));
   const obj2 = userId(504);
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => PresenceStore.getActivities(userId));
-  const tmp6 = stateFromStores1(10624)(userId);
-  const voiceChannel = stateFromStores1(10625)({ userId, guildId }).voiceChannel;
+  const voiceChannel = stateFromStores1(10625)({ userId, guildId: guildId.guildId }).voiceChannel;
   const items2 = [stateFromStores1];
-  const memo = react.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let found;
     if (stateFromStores1 != null) {
       found = stateFromStores1.find((type) => type.type === constants.CUSTOM_STATUS);
@@ -418,7 +380,6 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     if (null == found) {
       return null;
     } else {
-      let tmp4;
       let trimmed;
       if (found.state != null) {
         trimmed = str.trim();
@@ -431,27 +392,24 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
         tmp3 = trimmed;
       }
       if (null != tmp3) {
-        tmp4 = found;
+        let tmp4 = found;
       } else {
         tmp4 = null;
       }
       return tmp4;
     }
   }, items2);
-  let state;
-  const useGameMentionsAsPlainText = userId(10626).useGameMentionsAsPlainText;
-  userId(10626);
-  const tmp2 = userId;
+  const tmp6 = stateFromStores1(10624)(userId);
+  state = undefined;
   if (memo != null) {
     state = memo.state;
   }
-  const gameMentionsAsPlainText = useGameMentionsAsPlainText(state);
+  const gameMentionsAsPlainText = userId(10626).useGameMentionsAsPlainText(state);
+  const obj3 = userId(10626);
   const items3 = [RelationshipStore];
-  const tmp2Result = tmp2(504);
   if (tmp2Result.useStateFromStores(items3, () => RelationshipStore.isBlockedOrIgnored(userId))) {
     return null;
   } else {
-    let tmp19Result;
     let bot;
     if (stateFromStores != null) {
       bot = stateFromStores.bot;
@@ -462,13 +420,18 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     }
     if (null != tmp6) {
       let found;
-      const tmp5Result = stateFromStores1(10627);
       if (stateFromStores1 != null) {
         found = stateFromStores1.find(tmp5(10632));
       }
-      const obj3 = { game: found, iconStyle: items4, textStyle, maxFontSizeMultiplier, hideIcon: true === bot, hideText: null != state1 };
-      items4 = [tmp.icon, iconStyle];
-      tmp19Result = closure_10(tmp5Result, obj3);
+      const obj4 = { game: found, iconStyle: null, textStyle: null, maxFontSizeMultiplier: null, hideIcon: null, hideText: null };
+      const items4 = [tmp.icon, iconStyle];
+      obj4.iconStyle = items4;
+      obj4.textStyle = textStyle;
+      obj4.maxFontSizeMultiplier = maxFontSizeMultiplier;
+      obj4.hideIcon = tmp12;
+      obj4.hideText = tmp13;
+      let tmp18Result = closure_10(tmp5(10627), obj4);
+      const tmp5Result = tmp5(10627);
     } else {
       let found1;
       if (stateFromStores1 != null) {
@@ -478,51 +441,67 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
         });
       }
       if (null != found1) {
-        const obj4 = { activity: found1, iconStyle: items5, textStyle, maxFontSizeMultiplier, hideIcon: true === bot, hideText: null != state1 };
-        items5 = [tmp.icon, iconStyle];
-        tmp19Result = closure_10(tmp5(10633), obj4);
+        const obj5 = { activity: found1, iconStyle: null, textStyle: null, maxFontSizeMultiplier: null, hideIcon: null, hideText: null };
+        const items5 = [tmp.icon, iconStyle];
+        obj5.iconStyle = items5;
+        obj5.textStyle = textStyle;
+        obj5.maxFontSizeMultiplier = maxFontSizeMultiplier;
+        obj5.hideIcon = tmp12;
+        obj5.hideText = tmp13;
+        tmp18Result = closure_10(tmp5(10633), obj5);
       } else {
-        tmp19Result = null;
+        tmp18Result = null;
         if (null != voiceChannel) {
-          const obj5 = { channel: voiceChannel, iconStyle: items6, textStyle, maxFontSizeMultiplier, hideIcon: true === bot, hideText: null != state1 };
-          items6 = [tmp.icon, iconStyle];
-          tmp19Result = closure_10(tmp5(10640), obj5);
+          const obj6 = { channel: voiceChannel, iconStyle: null, textStyle: null, maxFontSizeMultiplier: null, hideIcon: null, hideText: null };
+          const items6 = [tmp.icon, iconStyle];
+          obj6.iconStyle = items6;
+          obj6.textStyle = textStyle;
+          obj6.maxFontSizeMultiplier = maxFontSizeMultiplier;
+          obj6.hideIcon = tmp12;
+          obj6.hideText = tmp13;
+          tmp18Result = closure_10(tmp5(10640), obj6);
         }
       }
     }
-    let tmp22 = null;
+    let tmp21 = null;
     if (null != memo) {
-      let tmp24Result = null;
+      let tmp23Result = null;
       if (null != memo) {
-        let tmp26 = null != memo.emoji && !flag;
-        if (tmp26) {
-          const obj6 = { emoji: memo.emoji, size: emojiSize, animate, style: tmp.emoji };
-          tmp26 = closure_10(tmp5(10642), obj6);
+        let tmp25 = null != memo.emoji;
+        if (tmp25) {
+          tmp25 = !flag;
         }
-        const items7 = [tmp26, ];
-        let tmp28 = null != memo.state;
-        if (tmp28) {
-          const obj7 = { variant: "text-xs/normal", style: textStyle, maxFontSizeMultiplier, children: gameMentionsAsPlainText };
-          tmp28 = closure_10(tmp5(10631), obj7);
+        if (tmp25) {
+          const obj7 = { emoji: memo.emoji, size: emojiSize, animate, style: tmp.emoji };
+          tmp25 = closure_10(tmp5(10642), obj7);
         }
-        const obj8 = { children: items7 };
-        items7[1] = tmp28;
-        tmp24Result = closure_12(closure_11, obj8);
+        const items7 = [tmp25, ];
+        let tmp27 = null != memo.state;
+        if (tmp27) {
+          const obj8 = { variant: "text-xs/normal", style: textStyle, maxFontSizeMultiplier, children: gameMentionsAsPlainText };
+          tmp27 = closure_10(tmp5(10631), obj8);
+        }
+        const obj9 = { children: null };
+        items7[1] = tmp27;
+        obj9.children = items7;
+        tmp23Result = closure_12(closure_11, obj9);
       }
-      tmp22 = tmp24Result;
+      tmp21 = tmp23Result;
     }
-    const obj9 = { style: tmp.container, children: items8 };
-    items8 = [tmp19Result, , ];
-    let tmp32 = null != tmp19Result && null != tmp22;
-    if (tmp32) {
-      const obj10 = { variant: "text-xs/normal", style: textStyle, maxFontSizeMultiplier, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: DOT_UNICODE };
-      tmp32 = closure_10(tmp5(10631), obj10);
+    const obj10 = { style: tmp.container, children: null };
+    const items8 = [tmp18Result, , ];
+    let tmp31 = null != tmp18Result;
+    if (tmp31) {
+      tmp31 = null != tmp21;
     }
-    items8[1] = tmp32;
-    items8[2] = tmp22;
-    return closure_12(View, obj9);
+    if (tmp31) {
+      const obj11 = { variant: "text-xs/normal", style: textStyle, maxFontSizeMultiplier, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: DOT_UNICODE };
+      tmp31 = closure_10(tmp5(10631), obj11);
+    }
+    items8[1] = tmp31;
+    items8[2] = tmp21;
+    obj10.children = items8;
+    return closure_12(View, obj10);
   }
+  tmp2Result = tmp2(504);
 });
-const result = size.fileFinishedImporting("modules/activity_status/native/ActivityStatus.tsx");
-
-export default tmp3;

@@ -1,25 +1,18 @@
 // === Module 11413: ApplyBuildOverrideUtils ===
 
 // Module 11413 (ApplyBuildOverrideUtils)
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import BuildOverrideUtils from "BuildOverrideUtils" /* 1366 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import size from "module_2" /* 2 */;
 
-let c1, c6, c7;
-
-let obj = function _applyStaffBuildOverride() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let closure_0;
-    let obj11;
-    let obj4;
-    let obj5;
-    let value;
+let closure_6 = async function _applyStaffBuildOverride() {
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0) => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -40,32 +33,32 @@ let obj = function _applyStaffBuildOverride() {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            let closure_3 = tmp;
-            let closure_2 = tmp4;
-            value = undefined;
+            closure_3 = tmp3;
+            closure_2 = tmp7;
+            closure_130_0 = undefined;
             c5 = 1;
-            const HTTP = HTTPUtils.HTTP;
-            const request = { url: obj11.getAPIEndpoint(closure_2_5), body: obj4, headers: obj5, oldFormErrors: true, rejectWithError: false };
-            const put = HTTP.put;
-            obj11 = BuildOverrideUtils;
-            obj4 = { overrides: value, version: BuildOverrideUtils.APP_VERSION };
+            const HTTP = closure_2_0(1282).HTTP;
+            const request = { url: closure_2_0(1366).getAPIEndpoint(closure_2_5), body: null, headers: null, oldFormErrors: true, rejectWithError: false };
+            const obj4 = { overrides, version: closure_2_0(1366).APP_VERSION };
+            request.body = obj4;
             token = token.getToken();
-            let Authorization = token;
+            Authorization = token;
             if (token == null) {
               Authorization = "";
             }
-            obj5 = { Authorization };
+            const obj5 = { Authorization };
+            request.headers = obj5;
             c6 = 2;
             c7 = 1;
-            const obj6 = { value: put(request), done: false };
+            const obj6 = { value: HTTP.put(request), done: false };
             return obj6;
           }
-        } else if (1 === c6) {
+        } else if (1 === tmp7) {
           c5 = 0;
           c7 = 3;
           const obj7 = { value, done: true };
           return obj7;
-        } else if (2 === c6) {
+        } else if (2 === tmp7) {
           if (arg0 === 1) {
             c7 = 3;
             throw value;
@@ -75,9 +68,10 @@ let obj = function _applyStaffBuildOverride() {
             const obj8 = { value, done: true };
             return obj8;
           } else {
+            closure_130_0 = value;
             c6 = 3;
             c7 = 1;
-            const obj9 = { value: closure_131_2(value), done: false };
+            const obj9 = { value: closure_131_2(closure_130_0), done: false };
             return obj9;
           }
         } else if (arg0 === 1) {
@@ -91,33 +85,30 @@ let obj = function _applyStaffBuildOverride() {
         } else {
           c5 = 0;
           c7 = 3;
-          obj = { value, done: true };
+          const obj = { value: closure_130_0, done: true };
           return obj;
         }
-      } catch (tmp12) {
-        value = tmp12;
-        if (0 === c5) {
-          c7 = 3;
-          throw tmp12;
+      } catch (tmp15) {
+        value = tmp15;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp15;
         } else {
-          c6 = 1;
+          c6 = tmp;
         }
       }
     }
-  });
-  return obj(...arguments);
+  })();
 };
-obj = function _applyPublicBuildOverride() {
-  let token;
-  obj = _asyncToGenerator(async (arg0) => {
-    let closure_0;
-    let obj10;
-    let obj4;
-    let value;
+let closure_7 = async function _applyPublicBuildOverride() {
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  return (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -127,7 +118,6 @@ obj = function _applyPublicBuildOverride() {
         return { value: "IconComponent", done: null };
       }
     } else {
-      let c4;
       try {
         c6 = 2;
         if (0 === c5) {
@@ -139,26 +129,25 @@ obj = function _applyPublicBuildOverride() {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            let closure_2 = tmp;
-            let closure_1 = tmp4;
-            value = undefined;
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            closure_129_0 = undefined;
             c4 = 1;
-            const HTTP = HTTPUtils.HTTP;
-            const request = { url: obj10.getAPIEndpoint("/__development/link"), body: obj4, oldFormErrors: true, rejectWithError: false };
-            const put = HTTP.put;
-            obj10 = BuildOverrideUtils;
-            obj4 = { payload: value, token: token.getToken(), version: BuildOverrideUtils.APP_VERSION };
+            const HTTP = closure_2_0(1282).HTTP;
+            const request = { url: closure_2_0(1366).getAPIEndpoint("/__development/link"), body: null, oldFormErrors: true, rejectWithError: false };
+            const obj4 = { payload, token: token.getToken(), version: closure_2_0(1366).APP_VERSION };
+            request.body = obj4;
             c5 = 2;
             c6 = 1;
-            const obj5 = { value: put(request), done: false };
+            const obj5 = { value: HTTP.put(request), done: false };
             return obj5;
           }
-        } else if (1 === c5) {
+        } else if (1 === tmp7) {
           c4 = 0;
           c6 = 3;
           const obj6 = { value, done: true };
           return obj6;
-        } else if (2 === c5) {
+        } else if (2 === tmp7) {
           if (arg0 === 1) {
             c6 = 3;
             throw value;
@@ -168,9 +157,10 @@ obj = function _applyPublicBuildOverride() {
             const obj7 = { value, done: true };
             return obj7;
           } else {
+            closure_129_0 = value;
             c5 = 3;
             c6 = 1;
-            const obj8 = { value: closure_130_2(value), done: false };
+            const obj8 = { value: closure_130_2(closure_129_0), done: false };
             return obj8;
           }
         } else if (arg0 === 1) {
@@ -184,46 +174,35 @@ obj = function _applyPublicBuildOverride() {
         } else {
           c4 = 0;
           c6 = 3;
-          obj = { value, done: true };
+          const obj = { value: closure_129_0, done: true };
           return obj;
         }
-      } catch (tmp11) {
-        value = tmp11;
-        if (0 === c4) {
-          c6 = 3;
-          throw tmp11;
+      } catch (tmp14) {
+        value = tmp14;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp14;
         } else {
-          c5 = 1;
+          c5 = tmp;
         }
       }
     }
-  });
-  return obj(...arguments);
+  })();
 };
-obj = function _clearBuildOverride() {
-  obj = _asyncToGenerator(async () => {
-    let c2;
-    let c3;
-    let closure_1;
-    let obj9;
-    const value = tmp4;
-    const HTTP = HTTPUtils.HTTP;
-    const obj4 = { url: obj9.getAPIEndpoint(closure_2_5), oldFormErrors: true, rejectWithError: false };
-    const del = HTTP.del;
-    obj9 = BuildOverrideUtils;
-    await del(obj4);
-    await closure_129_2(value);
-    return value;
-  });
-  return obj(...arguments);
+let closure_8 = async function _clearBuildOverride() {
+  closure_1 = tmp2;
+  const HTTP = React(1282).HTTP;
+  await HTTP.del({ url: closure_2_0(1366).getAPIEndpoint(closure_2_5), oldFormErrors: true, rejectWithError: false });
+  closure_128_0 = value;
+  await closure_129_2(closure_128_0);
+  return closure_128_0;
 };
 let c5 = "/__development/build_overrides";
-let closure_0 = _asyncToGenerator(async (arg0) => {
-  closure_0 = arg0;
-  if (c1 === 2) {
-    c1 = 3;
+let closure_0 = asyncGeneratorStep(async (arg0) => {
+  if (dependencyMap === 2) {
+    dependencyMap = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp2 === 3) {
+  } else if (tmp3 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
@@ -234,72 +213,98 @@ let closure_0 = _asyncToGenerator(async (arg0) => {
     }
   } else {
     try {
-      c1 = 2;
+      dependencyMap = 2;
       if (0 === c2) {
         if (arg0 === 1) {
-          c1 = 3;
+          dependencyMap = 3;
           throw value;
         } else if (arg0 === 2) {
-          c1 = 3;
+          dependencyMap = 3;
           const obj3 = { value, done: true };
           return obj3;
         } else {
           c2 = 1;
-          const _default = closure_0(c1[2]).default;
-          c1 = 1;
-          const obj4 = { value: _default.setBuildOverrideCookieHeader(closure_0.headers["set-cookie"]), done: false };
+          dependencyMap = 1;
+          const obj4 = { value: closure_0(dependencyMap[2]).default.setBuildOverrideCookieHeader(closure_0.headers["set-cookie"]), done: false };
           return obj4;
         }
       } else if (arg0 === 1) {
-        c1 = 3;
+        dependencyMap = 3;
         throw value;
       } else if (arg0 === 2) {
-        c1 = 3;
-        obj = { value, done: true };
+        dependencyMap = 3;
+        const obj = { value, done: true };
         return obj;
       } else {
-        c1 = 3;
+        dependencyMap = 3;
         return { value: "IconComponent", done: null };
       }
-    } catch (tmp7) {
-      c1 = 3;
-      throw tmp7;
+    } catch (tmp8) {
+      dependencyMap = tmp;
+      throw tmp8;
     }
   }
 });
 const f107706 = function() {
-  return closure_0(...arguments);
+  const self = this;
+  const apply = closure_0.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/build_overrides/ApplyBuildOverrideUtils.tsx");
 
 export const applyStaffBuildOverride = function applyStaffBuildOverride() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_6.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const applyPublicBuildOverride = function applyPublicBuildOverride() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_7.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const clearBuildOverride = function clearBuildOverride() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_8.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const getPublicBuildOverrideLink = function getPublicBuildOverrideLink(body) {
-  let obj2;
-  let str;
-  const HTTP = HTTPUtils.HTTP;
-  const request = { url: obj2.getAPIEndpoint("/__development/create_build_override_link"), body, headers: { Authorization: str }, oldFormErrors: true, rejectWithError: false };
-  const post = HTTP.post;
-  obj2 = BuildOverrideUtils;
-  str = AuthenticationStore.getToken();
+  const HTTP = closure_0(1282).HTTP;
+  const request = { url: closure_0(1366).getAPIEndpoint("/__development/create_build_override_link"), body, headers: null, oldFormErrors: true, rejectWithError: false };
+  let str = AuthenticationStore.getToken();
   if (str == null) {
     str = "";
   }
-  const postResult = post(request);
-  return postResult.then((body) => ({ url: body.body.url, error: false }), (status) => {
+  request.headers = { Authorization: str };
+  let obj2 = closure_0(1366);
+  return HTTP.post(request).then((body) => ({ url: body.body.url, error: false }), (status) => {
     if (400 === status.status) {
-      obj = { url: false, error: status.body };
       const obj2 = { url: false, error: status.body };
+      let obj = obj2;
     } else {
-      obj = { url: false, error: "Error making API request (" + status.status + ")" };
+      obj = { url: false, error: null };
       const _HermesInternal = HermesInternal;
+      obj.error = "Error making API request (" + status.status + ")";
     }
     return obj;
   });

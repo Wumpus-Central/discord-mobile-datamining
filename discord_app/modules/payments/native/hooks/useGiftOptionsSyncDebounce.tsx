@@ -3,71 +3,57 @@
 // Module 10445 (useGiftOptionsSyncDebounce)
 import _modDef12 from "module_12" /* 12 */;
 import useInitialValueDefault from "useInitialValue" /* 5991 */;
-import react_mod from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let _require, dependencyMap, importDefault;
 
-let react = react_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let closure_1;
-  let first;
-  let obj3;
-  let ref;
-  let ref2;
-  let tmp10;
-  let tmp11;
-  let tmp4;
-  let tmp6;
-  let tmp7;
-  let tmp8;
+const require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/payments/native/hooks/useGiftOptionsSyncDebounce.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   _require = arg0;
-  let obj = require("react");
-  const cResult = obj.c(16);
-  importDefault = react.useRef(null);
-  dependencyMap = react.useRef(null);
+  const cResult = require("c").c(16);
+  importDefault = noop.useRef(null);
+  dependencyMap = noop.useRef(null);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
-  react = obj2.useRef(first);
+  noop = obj2.useRef(first);
   if (cResult[1] !== arg0) {
     const fn = function o() {
-      const obj = _modDef12;
-      return obj.debounce(() => {
+      return _modDef12.debounce(() => {
         closure_1_2.current = ref.current;
         closure_1_0((arg0) => arg0 + 1);
       }, 500);
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    tmp4 = fn;
+    let tmp4 = fn;
   } else {
     tmp4 = cResult[2];
   }
   const tmp5 = useInitialValueDefault(tmp4);
-  let closure_4 = tmp5;
+  closure_4 = tmp5;
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function v(arg0) {
-      const current = ref2.current;
-      ref2.current = [];
-      for (const item10008 of current) {
+      closure_3.current = [];
+      for (const item10008 of tmp) {
         let item10008Result = item10008(arg0);
         continue;
       }
     };
     cResult[3] = fn2;
-    tmp6 = fn2;
+    let tmp6 = fn2;
   } else {
     tmp6 = cResult[3];
   }
-  let closure_5 = tmp6;
+  closure_5 = tmp6;
   if (cResult[4] !== tmp5) {
     const fn3 = function y() {
       return () => {
@@ -79,8 +65,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[4] = tmp5;
     cResult[5] = fn3;
     cResult[6] = items1;
-    tmp8 = items1;
-    tmp7 = fn3;
+    let tmp8 = items1;
+    let tmp7 = fn3;
   } else {
     tmp7 = cResult[5];
     tmp8 = cResult[6];
@@ -98,25 +84,25 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[7] = tmp5;
     cResult[8] = fn4;
-    tmp10 = fn4;
+    let tmp10 = fn4;
   } else {
     tmp10 = cResult[8];
   }
   if (cResult[9] !== tmp5) {
     const fn5 = function w(current) {
       closure_4.cancel();
-      ref.current = current;
+      closure_2.current = current;
     };
     cResult[9] = tmp5;
     cResult[10] = fn5;
-    tmp11 = fn5;
+    let tmp11 = fn5;
   } else {
     tmp11 = cResult[10];
   }
   if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
     class R {
       constructor() {
-        const promise = new Promise((arg0) => {
+        promise = new Promise((arg0) => {
           const current = ref.current;
           return current.push(arg0);
         });
@@ -127,7 +113,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     class R {
       constructor() {
-        const promise = new Promise((arg0) => {
+        promise = new Promise((arg0) => {
           const current = ref.current;
           return current.push(arg0);
         });
@@ -138,21 +124,21 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
     class C {
       constructor() {
-        return ref2.current.length > 0;
+        return closure_3.current.length > 0;
       }
     }
     cResult[12] = C;
   } else {
     class C {
       constructor() {
-        return ref2.current.length > 0;
+        return closure_3.current.length > 0;
       }
     }
   }
   if (cResult[13] === tmp11) {
     class C {
       constructor() {
-        return ref2.current.length > 0;
+        return closure_3.current.length > 0;
       }
     }
     return obj3;
@@ -161,38 +147,32 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[13] = tmp11;
   cResult[14] = tmp10;
   cResult[15] = obj3;
+  const obj = require("c");
 }) : ((arg0) => {
-  let closure_1;
-  let ref;
-  let ref2;
-  let closure_0 = arg0;
-  importDefault = react.useRef(null);
-  dependencyMap = react.useRef(null);
-  react = react.useRef([]);
-  const tmp = useInitialValueDefault(() => {
-    const obj = _modDef12;
-    return obj.debounce(() => {
-      closure_1_2.current = ref.current;
-      closure_1_0((arg0) => arg0 + 1);
-    }, 500);
-  });
-  let closure_4 = tmp;
-  const resolveSyncs = react.useCallback((arg0) => {
-    const current = ref2.current;
-    ref2.current = [];
-    for (const item10008 of current) {
+  closure_0 = arg0;
+  importDefault = noop.useRef(null);
+  dependencyMap = noop.useRef(null);
+  noop = noop.useRef([]);
+  const tmp = useInitialValueDefault(() => _modDef12.debounce(() => {
+    closure_1_2.current = ref.current;
+    closure_1_0((arg0) => arg0 + 1);
+  }, 500));
+  closure_4 = tmp;
+  const resolveSyncs = noop.useCallback((arg0) => {
+    closure_3.current = [];
+    for (const item10008 of tmp) {
       let item10008Result = item10008(arg0);
       continue;
     }
   }, []);
   const items = [tmp, resolveSyncs];
-  const effect = react.useEffect(() => () => {
+  const effect = noop.useEffect(() => () => {
     closure_1_4.cancel();
     resolveSyncs(false);
   }, items);
   const items1 = [tmp];
   const items2 = [tmp];
-  const callback1 = react.useCallback((current) => {
+  const callback1 = noop.useCallback((current) => {
     closure_1.current = current;
     let flag = ref.current !== current;
     if (flag) {
@@ -201,20 +181,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     return flag;
   }, items1);
-  const callback2 = react.useCallback((current) => {
+  const callback2 = noop.useCallback((current) => {
     closure_4.cancel();
-    ref.current = current;
+    closure_2.current = current;
   }, items2);
-  const callback3 = react.useCallback(() => {
-    const promise = new Promise((arg0) => {
-      const current = ref.current;
-      return current.push(arg0);
-    });
-    return promise;
-  }, []);
-  let obj = { waitForPause: callback1, flush: callback2, waitForSync: callback3, resolveSyncs, isAwaitingSync: react.useCallback(() => ref2.current.length > 0, []) };
-  return obj;
+  const callback3 = noop.useCallback(() => new Promise((arg0) => {
+    const current = ref.current;
+    return current.push(arg0);
+  }), []);
+  return { waitForPause: callback1, flush: callback2, waitForSync: callback3, resolveSyncs, isAwaitingSync: noop.useCallback(() => ref2.current.length > 0, []) };
 });
-const result = size.fileFinishedImporting("modules/payments/native/hooks/useGiftOptionsSyncDebounce.tsx");
-
-export default tmp2;

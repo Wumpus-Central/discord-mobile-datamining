@@ -2,200 +2,168 @@
 
 // Module 2295
 import AssetJsonUtils from "AssetJsonUtils" /* 1130 */;
-import AssetRegistry from "AssetRegistry" /* 2296 */;
-import AssetRegistry2 from "AssetRegistry" /* 2297 */;
-import AssetRegistry3 from "AssetRegistry" /* 2298 */;
-import AssetRegistry4 from "AssetRegistry" /* 2299 */;
-import AssetRegistry5 from "AssetRegistry" /* 2300 */;
-import AssetRegistry6 from "AssetRegistry" /* 2301 */;
-import AssetRegistry7 from "AssetRegistry" /* 2302 */;
-import AssetRegistry8 from "AssetRegistry" /* 2303 */;
-import AssetRegistry9 from "AssetRegistry" /* 2304 */;
-import AssetRegistry10 from "AssetRegistry" /* 2305 */;
-import AssetRegistry11 from "AssetRegistry" /* 2306 */;
-import AssetRegistry12 from "AssetRegistry" /* 2307 */;
-import AssetRegistry13 from "AssetRegistry" /* 2308 */;
-import AssetRegistry14 from "AssetRegistry" /* 2309 */;
-import AssetRegistry15 from "AssetRegistry" /* 2310 */;
-import AssetRegistry16 from "AssetRegistry" /* 2311 */;
-import AssetRegistry17 from "AssetRegistry" /* 2312 */;
-import AssetRegistry18 from "AssetRegistry" /* 2313 */;
-import AssetRegistry19 from "AssetRegistry" /* 2314 */;
-import AssetRegistry20 from "AssetRegistry" /* 2315 */;
-import AssetRegistry21 from "AssetRegistry" /* 2316 */;
-import AssetRegistry22 from "AssetRegistry" /* 2317 */;
-import AssetRegistry23 from "AssetRegistry" /* 2318 */;
-import AssetRegistry24 from "AssetRegistry" /* 2319 */;
-import AssetRegistry25 from "AssetRegistry" /* 2320 */;
-import AssetRegistry26 from "AssetRegistry" /* 2321 */;
-import AssetRegistry27 from "AssetRegistry" /* 2322 */;
-import AssetRegistry28 from "AssetRegistry" /* 2323 */;
-import AssetRegistry29 from "AssetRegistry" /* 2324 */;
-import AssetRegistry30 from "AssetRegistry" /* 2325 */;
-import AssetRegistry31 from "AssetRegistry" /* 2326 */;
+import _mod2296 from "module_2296" /* 2296 */;
+import _mod2297 from "module_2297" /* 2297 */;
+import _mod2298 from "module_2298" /* 2298 */;
+import _mod2299 from "module_2299" /* 2299 */;
+import _mod2300 from "module_2300" /* 2300 */;
+import _mod2301 from "module_2301" /* 2301 */;
+import _mod2302 from "module_2302" /* 2302 */;
+import _mod2303 from "module_2303" /* 2303 */;
+import _mod2304 from "module_2304" /* 2304 */;
+import _mod2305 from "module_2305" /* 2305 */;
+import _mod2306 from "module_2306" /* 2306 */;
+import _mod2307 from "module_2307" /* 2307 */;
+import _mod2308 from "module_2308" /* 2308 */;
+import _mod2309 from "module_2309" /* 2309 */;
+import _mod2310 from "module_2310" /* 2310 */;
+import _mod2311 from "module_2311" /* 2311 */;
+import _mod2312 from "module_2312" /* 2312 */;
+import _mod2313 from "module_2313" /* 2313 */;
+import _mod2314 from "module_2314" /* 2314 */;
+import _mod2315 from "module_2315" /* 2315 */;
+import _mod2316 from "module_2316" /* 2316 */;
+import _mod2317 from "module_2317" /* 2317 */;
+import _mod2318 from "module_2318" /* 2318 */;
+import _mod2319 from "module_2319" /* 2319 */;
+import _mod2320 from "module_2320" /* 2320 */;
+import _mod2321 from "module_2321" /* 2321 */;
+import _mod2322 from "module_2322" /* 2322 */;
+import _mod2323 from "module_2323" /* 2323 */;
+import _mod2324 from "module_2324" /* 2324 */;
+import _mod2325 from "module_2325" /* 2325 */;
+import _mod2326 from "module_2326" /* 2326 */;
 import module_1165_mod from "module_1165" /* 1165 */;
 import size from "module_2" /* 2 */;
 
-let obj = {
+let module_1165 = module_1165_mod;
+const loader = module_1165.createLoader({
   bg() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2296);
     return jsonAsset.then((result) => ({ default: result }));
   },
   cs() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry2);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2297);
     return jsonAsset.then((result) => ({ default: result }));
   },
   da() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry3);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2298);
     return jsonAsset.then((result) => ({ default: result }));
   },
   de() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry4);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2299);
     return jsonAsset.then((result) => ({ default: result }));
   },
   el() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry5);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2300);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  "en-GB": () => {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry6);
+  () => {
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2301);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  "es-419": () => {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry7);
+  () => {
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2302);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  "es-ES": () => {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry8);
+  () => {
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2303);
     return jsonAsset.then((result) => ({ default: result }));
   },
   fi() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry9);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2304);
     return jsonAsset.then((result) => ({ default: result }));
   },
   fr() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry10);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2305);
     return jsonAsset.then((result) => ({ default: result }));
   },
   hi() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry11);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2306);
     return jsonAsset.then((result) => ({ default: result }));
   },
   hr() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry12);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2307);
     return jsonAsset.then((result) => ({ default: result }));
   },
   hu() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry13);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2308);
     return jsonAsset.then((result) => ({ default: result }));
   },
   it() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry14);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2309);
     return jsonAsset.then((result) => ({ default: result }));
   },
   ja() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry15);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2310);
     return jsonAsset.then((result) => ({ default: result }));
   },
   ko() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry16);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2311);
     return jsonAsset.then((result) => ({ default: result }));
   },
   lt() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry17);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2312);
     return jsonAsset.then((result) => ({ default: result }));
   },
   nl() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry18);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2313);
     return jsonAsset.then((result) => ({ default: result }));
   },
   no() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry19);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2314);
     return jsonAsset.then((result) => ({ default: result }));
   },
   pl() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry20);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2315);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  "pt-BR": () => {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry21);
+  () => {
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2316);
     return jsonAsset.then((result) => ({ default: result }));
   },
   ro() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry22);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2317);
     return jsonAsset.then((result) => ({ default: result }));
   },
   ru() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry23);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2318);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  "sv-SE": () => {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry24);
+  () => {
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2319);
     return jsonAsset.then((result) => ({ default: result }));
   },
   th() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry25);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2320);
     return jsonAsset.then((result) => ({ default: result }));
   },
   tr() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry26);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2321);
     return jsonAsset.then((result) => ({ default: result }));
   },
   uk() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry27);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2322);
     return jsonAsset.then((result) => ({ default: result }));
   },
   vi() {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry28);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2323);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  "zh-CN": () => {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry29);
+  () => {
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2324);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  "zh-TW": () => {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry30);
+  () => {
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2325);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  "en-US": () => {
-    const obj = AssetJsonUtils;
-    const jsonAsset = obj.loadJsonAsset(AssetRegistry31);
+  () => {
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2326);
     return jsonAsset.then((result) => ({ default: result }));
   }
-};
+}, "en-US");
 let module_1165 = module_1165_mod;
-const loader = module_1165.createLoader(obj, "en-US");
-module_1165 = module_1165_mod;
 const messagesProxy = module_1165.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/go_live/web/modal/GoLiveModal.messages.js");
 

@@ -17,11 +17,10 @@ export const shouldAnimate = function shouldAnimate(entering, current) {
       if (undefined !== entering.loopDelay) {
         if (entering.loopDelay > 0) {
           let loopDelay;
-          const duration = entering.duration;
           if (entering != null) {
             loopDelay = entering.loopDelay;
           }
-          if ((current - entering.start) % (duration + loopDelay) > entering.duration) {
+          if ((current - entering.start) % (entering.duration + loopDelay) > entering.duration) {
             return false;
           }
         }
@@ -33,6 +32,5 @@ export const shouldAnimate = function shouldAnimate(entering, current) {
   }
 };
 export const calculateProfileEffectHeight = function calculateProfileEffectHeight(layerConfig, width) {
-  const obj = getAssetWHRatio;
-  return width / obj.getAssetWHRatio(layerConfig);
+  return width / getAssetWHRatio.getAssetWHRatio(layerConfig);
 };

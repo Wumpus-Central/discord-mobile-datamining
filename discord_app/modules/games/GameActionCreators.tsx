@@ -2,157 +2,98 @@
 
 // Module 6823 (GameActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import Timers from "Timers" /* 2046 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GameStore from "GameStore" /* 2007 */;
-import size from "module_2" /* 2 */;
-
-let c4, c5;
 
 function requestGames() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_7.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-let obj = function _requestGames() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let closure_0;
-    let obj5;
-    if (c5 === 2) {
+let closure_7 = async function _requestGames() {
+  c4 = 0;
+  c5 = 0;
+  c3 = 0;
+  return (async (arg0) => {
+    closure_2 = tmp3;
+    closure_129_0 = game_ids;
+    const HTTP = closure_2_0(dependencyMap[3]).HTTP;
+    const request = { url: constants.GAMES, query: { game_ids }, rejectWithError: true };
+    await HTTP.get(request);
+    if (1 === tmp7) {
+      c3 = 0;
+      closure_130_1(closure_130_2[4]).dispatch({ type: "GAME_FETCH_FAILURE", gameIds: closure_129_0 });
       c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      let c3;
-      try {
-        let body;
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            let closure_2 = tmp;
-            let closure_1 = tmp4;
-            body = undefined;
-            c3 = 1;
-            const HTTP = HTTPUtils.HTTP;
-            const request = { url: constants.GAMES, query: obj5, rejectWithError: true };
-            obj5 = { game_ids: gameIds };
-            c4 = 2;
-            c5 = 1;
-            const obj6 = { value: HTTP.get(request), done: false };
-            return obj6;
-          }
-        } else {
-          if (1 === c4) {
-            c3 = 0;
-            const obj7 = { type: "GAME_FETCH_FAILURE", gameIds };
-            const obj4 = closure_130_1(closure_130_2[4]);
-            obj4.dispatch(obj7);
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 0;
-            c5 = 3;
-            const obj8 = { value, done: true };
-            return obj8;
-          } else {
-            body = value.body;
-            const obj9 = { type: "GAME_FETCH_SUCCESS", gameIds, games: body };
-            obj = closure_130_1(closure_130_2[4]);
-            obj.dispatch(obj9);
-            c3 = 0;
-          }
-          c5 = 3;
-          return { value: "IconComponent", done: null };
-        }
-      } catch (tmp18) {
-        if (0 === c3) {
-          c5 = 3;
-          throw tmp18;
-        } else {
-          c4 = 1;
-        }
-      }
+      closure_130_1(closure_130_2[4]);
+    } else if (arg0 === 1) {
+      c5 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      const body = value.body;
+      closure_130_1(closure_130_2[4]).dispatch({ type: "GAME_FETCH_SUCCESS", gameIds: closure_129_0, games: body });
+      c3 = 0;
+      closure_130_1(closure_130_2[4]);
     }
-  });
-  return obj(...arguments);
+    return value;
+  })();
 };
-obj = function _fetchGamesWithSupplementalData() {
-  obj = _asyncToGenerator(async (arg0) => {
-    const length = arg0;
-    let c2 = 0;
-    let c1 = 0;
-    return (async (arg0) => {
-      if (c1 === 2) {
-        c1 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp2 === 3) {
+let closure_9 = async function _fetchGamesWithSupplementalData(arg0) {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c1 = 2;
+      if (0 === c2) {
         if (arg0 === 1) {
+          c1 = 3;
           throw value;
         } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c1 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c1 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c1 = 3;
-              return { value, done: true };
-            } else if (0 !== length.length) {
-              c2 = 1;
-              c1 = 1;
-              const obj4 = { value: batchInvocationManager.queue(tmp4), done: false };
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            c1 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c1 = 3;
-            return { value, done: true };
-          }
           c1 = 3;
-          return { value: "IconComponent", done: null };
-        } catch (tmp6) {
-          c1 = 3;
-          throw tmp6;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else if (0 !== length.length) {
+          c2 = 1;
+          c1 = 1;
+          const obj4 = { value: batchInvocationManager.queue(tmp5), done: false };
+          return obj4;
         }
+      } else if (arg0 === 1) {
+        c1 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c1 = 3;
+        const obj = { value, done: true };
+        return obj;
       }
-    })();
-  });
-  return obj(...arguments);
+      c1 = 3;
+      return { value: "IconComponent", done: null };
+    } catch (tmp7) {
+      c1 = tmp;
+      throw tmp7;
+    }
+  }
 };
-const Endpoints = Constants.Endpoints;
-const BatchInvocationManager = Timers.BatchInvocationManager;
-let closure_0 = _asyncToGenerator(async (arg0) => {
-  let chunkResult;
-  let v3;
-  closure_0 = arg0;
+const Endpoints = fn(1085).Endpoints;
+let closure_0 = asyncGeneratorStep(async (arg0) => {
   if (v3 === 2) {
     v3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp2 === 3) {
+  } else if (tmp3 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
@@ -164,7 +105,7 @@ let closure_0 = _asyncToGenerator(async (arg0) => {
   } else {
     try {
       v3 = 2;
-      if (0 === c2) {
+      if (0 === dependencyMap) {
         if (arg0 === 1) {
           v3 = 3;
           throw value;
@@ -173,11 +114,10 @@ let closure_0 = _asyncToGenerator(async (arg0) => {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          const obj2 = v3(c2[6]);
-          c2 = 1;
+          const obj2 = v3(dependencyMap[6]);
+          dependencyMap = 1;
           v3 = 1;
-          const obj5 = { value: all(chunkResult.map(requestGames)), done: false };
-          chunkResult = obj2.chunk(closure_0, 20);
+          const obj5 = { value: Promise.all(v3(dependencyMap[6]).chunk(closure_0, 20).map(requestGames)), done: false };
           return obj5;
         }
       } else if (arg0 === 1) {
@@ -185,38 +125,48 @@ let closure_0 = _asyncToGenerator(async (arg0) => {
         throw value;
       } else if (arg0 === 2) {
         v3 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         v3 = 3;
         return { value: "IconComponent", done: null };
       }
-    } catch (tmp9) {
-      v3 = 3;
-      throw tmp9;
+    } catch (tmp10) {
+      v3 = tmp;
+      throw tmp10;
     }
   }
 });
-obj = {
+const batchInvocationManager = new fn(2046).BatchInvocationManager(function() {
+  const self = this;
+  const apply = closure_0.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}, {
   predicate(item) {
     return !GameStore.hasNoData(item);
   },
   onQueued(gameIds) {
-    obj = DispatcherDefault;
-    const obj2 = { type: "GAME_FETCH", gameIds };
-    return obj.dispatch(obj2);
+    return DispatcherDefault.dispatch({ type: "GAME_FETCH", gameIds });
   },
   onCancelled(gameIds) {
-    obj = DispatcherDefault;
-    const obj2 = { type: "GAME_FETCH_CANCELLED", gameIds };
-    return obj.dispatch(obj2);
+    return DispatcherDefault.dispatch({ type: "GAME_FETCH_CANCELLED", gameIds });
   }
-};
-const batchInvocationManager = new BatchInvocationManager(function() {
-  return closure_0(...arguments);
-}, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/GameActionCreators.tsx");
 
 export const fetchGamesWithSupplementalData = function fetchGamesWithSupplementalData() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_9.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

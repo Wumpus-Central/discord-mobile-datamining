@@ -1,26 +1,17 @@
 // === Module 9057: PostMessageTransport ===
 
 // Module 9057 (PostMessageTransport)
-import _mod580 from "module_580" /* 580 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import Constants2 from "Constants" /* 5323 */;
 import RPCOpcodesDefault from "RPCOpcodes" /* 9058 */;
 import RPCErrorDefault from "RPCError" /* 9059 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-let _require, c6, closure_0, closure_4, closure_6, json_str, selfEmbeddedActivities, user;
-
-let c10;
-let c9;
-let metroImportAll;
-let metroImportDefault;
-const RPC_EMBEDDED_APP_SCOPE = Constants2.RPC_EMBEDDED_APP_SCOPE;
-({ AnalyticEvents: metroImportDefault, ComponentActions: metroImportAll, RPCCloseCodes: c9, RPCErrors: c10 } = Constants);
+const require = fn;
+const RPC_EMBEDDED_APP_SCOPE = fn(5323).RPC_EMBEDDED_APP_SCOPE;
+const Constants = fn(1085);
+({ AnalyticEvents: closure_7, ComponentActions: closure_8, RPCCloseCodes: closure_9, RPCErrors: c10 } = Constants);
 let closure_11 = 10 * DurationsDefault.Millis.SECOND;
 const map = new Map();
 const set = new Set();
@@ -28,93 +19,81 @@ function postClose(source, arg1, postMessageToRPCClient) {
   const items = [RPCOpcodesDefault.CLOSE, arg1];
   postMessageToRPCClient(items, source.origin);
 }
-const EventEmitter = _mod580.EventEmitter;
+const EventEmitter = fn(580).EventEmitter;
 class PostMessageTransport extends EventEmitter {
-  constructor(validateSocketClient, logger, createPostMessageProxySocket, onFrameHandled) {
-    let tmp;
-    let tmp2;
-    const tmp4 = new PostMessageTransport(tmp3, tmp2, tmp);
+  constructor(arg0, arg1, arg2, arg3) {
+    tmp4 = new PostMessageTransport(tmp3, tmp2, tmp);
+    closure_0 = tmp4;
     tmp4.disconnectSocket = function disconnectSocket(value, message, arg2) {
       let flag = arg2;
       if (arg2 === undefined) {
         flag = false;
       }
       let tmp2;
-      const emit = closure_0.emit;
       if (!flag) {
         tmp2 = message;
       }
-      emit("disconnect", value, tmp2);
+      closure_0.emit("disconnect", value, tmp2);
       if (!flag) {
         let str = message.message;
-        const close = value.close;
-        const code = message.code;
         if (str == null) {
           str = "Unknown";
         }
-        close(code, str);
+        value.close(message.code, str);
       }
       map.delete(value.source.iframeId);
     };
     tmp4.handleIFrameMount = function handleIFrameMount(id) {
       set.add(id.id);
       closure_0.handshakeFailureTimeoutId = setTimeout(() => {
-        let timeout_ms;
         selfEmbeddedActivities = selfEmbeddedActivities.getSelfEmbeddedActivities();
-        const fromResult = from(selfEmbeddedActivities.entries());
-        const item = fromResult.forEach((item) => {
-          let obj2;
-          let obj3;
-          let tmp;
-          let tmp2;
+        const item = Array.from(selfEmbeddedActivities.entries()).forEach((item) => {
           [tmp, tmp2] = item;
-          const obj = { application_id: tmp, channel_id: obj2.getEmbeddedActivityLocationChannelId(tmp2.location), guild_id: obj3.getEmbeddedActivityLocationGuildId(tmp2.location), timeout_ms };
-          const track = closure_1_1(closure_1_2[9]).track;
-          const ACTIVITY_HANDSHAKE_TIMED_OUT = constants.ACTIVITY_HANDSHAKE_TIMED_OUT;
-          closure_1_1(closure_1_2[9]);
-          obj2 = closure_1_0(closure_1_2[10]);
-          obj3 = closure_1_0(closure_1_2[10]);
-          track(ACTIVITY_HANDSHAKE_TIMED_OUT, obj);
+          const obj2 = { application_id: tmp, channel_id: null, guild_id: null, timeout_ms: null };
+          const obj = closure_1_1(1252);
+          obj2.channel_id = closure_1_0(4504).getEmbeddedActivityLocationChannelId(tmp2.location);
+          const obj3 = closure_1_0(4504);
+          obj2.guild_id = closure_1_0(4504).getEmbeddedActivityLocationGuildId(tmp2.location);
+          obj2.timeout_ms = timeout_ms;
+          obj.track(constants.ACTIVITY_HANDSHAKE_TIMED_OUT, obj2);
         });
       }, closure_11);
     };
     tmp4.handleIFrameUnmount = function handleIFrameUnmount(id) {
       id = id.id;
       set.delete(id);
-      const value = map.get(id);
+      value = map.get(id);
       if (null != value) {
-        const obj = { code: constants.CLOSE_NORMAL, message: "iFrame gone" };
+        const obj = { code: constants2.CLOSE_NORMAL, message: "iFrame gone" };
         closure_0.disconnectSocket(value, obj, true);
       }
     };
-    tmp4.handleMessage = function handleMessage(arg0, iframeId, postMessageToRPCClient) {
-      const value = map.get(iframeId.iframeId);
+    tmp4.handleMessage = function handleMessage(arg0, iframeId, arg2) {
+      value = map.get(iframeId.iframeId);
       try {
-        closure_0.routeEvent(value, iframeId, arg0, postMessageToRPCClient);
-      } catch (tmp9) {
-        if (tmp9 instanceof RPCErrorDefault) {
-          if (tmp9.errorCode === constants2.INVALID_PAYLOAD) {
-            throw tmp9;
+        closure_0.routeEvent(value, iframeId, arg0, arg2);
+      } catch (tmp12) {
+        if (tmp12 instanceof RPCErrorDefault) {
+          if (tmp12.errorCode === constants3.INVALID_PAYLOAD) {
+            throw tmp12;
           }
         }
-        if (null != value) {
+        if (null != tmp) {
+          ({ code: obj2.code, message: obj2.message } = tmp12);
+          closure_0.disconnectSocket(tmp, { code: null, message: null }, true);
           const obj3 = { code: null, message: null };
-          ({ code: obj2.code, message: obj2.message } = tmp9);
-          closure_0.disconnectSocket(value, obj3, true);
         } else {
           const obj = { code: null, message: null };
-          ({ code: obj.code, message: obj.message } = tmp9);
-          postClose(iframeId, obj, postMessageToRPCClient);
+          ({ code: obj.code, message: obj.message } = tmp12);
+          postClose(tmp3, obj, tmp2);
         }
       }
     };
     tmp4.handleFrame = function handleFrame(origin, source, str) {
       if (origin.origin !== source.source.origin) {
-        const self3 = this;
-        const self4 = this;
-        const obj2 = { closeCode: constants.INVALID_ORIGIN };
-        const tmp19 = new RPCErrorDefault(obj2, "Origin has changed");
-        throw tmp19;
+        const obj2 = { closeCode: constants2.INVALID_ORIGIN };
+        const tmp24 = new RPCErrorDefault(obj2, "Origin has changed");
+        throw tmp24;
       } else {
         try {
           let parsed = str;
@@ -124,213 +103,220 @@ class PostMessageTransport extends EventEmitter {
           }
           const onFrameHandled = closure_0.onFrameHandled;
           if (onFrameHandled != null) {
-            onFrameHandled(parsed, closure_0.logger, source);
+            onFrameHandled(tmp4, closure_0.logger, source);
           }
           closure_0.emit("request", source, parsed);
         } catch (err) {
-          const self = this;
-          const self2 = this;
-          const obj3 = { closeCode: constants.CLOSE_UNSUPPORTED };
-          const tmp13 = new RPCErrorDefault(obj3, "Payload not recognized encoding");
-          throw tmp13;
+          const obj3 = { closeCode: constants2.CLOSE_UNSUPPORTED };
+          const tmp16 = new RPCErrorDefault(obj3, "Payload not recognized encoding");
+          throw tmp16;
         }
       }
     };
-    _asyncToGenerator(async (source, arg1, postMessageToRPCClient) => {
-      let closure_5;
+    closure_129_0 = undefined;
+    closure_129_1 = tmp4;
+    closure_129_0 = closure_3(async (arg0, arg1, arg2) => {
+      closure_0 = arg0;
       closure_1 = arg1;
-      let c8 = 0;
-      let c9 = 0;
-      let c7 = 0;
-      return (async function(arg0, value, arg2) {
-        let equalResult;
-        let maxResult;
-        let stringResult1;
-        let stringResult2;
-        let stringResult3;
-        if (c9 === 2) {
-          c9 = 3;
+      const paths = arg2;
+      c8 = 0;
+      c9 = 0;
+      c7 = 0;
+      return (async (arg0, value, arg2) => {
+        if (constants2 === 2) {
+          constants2 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
+        } else if (tmp8 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            return { value, done: true };
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "IconComponent", done: null };
           }
         } else {
           try {
-            let tmp;
-            let frame_id;
-            c9 = 2;
+            constants2 = 2;
             if (0 === c8) {
               if (arg0 === 1) {
-                c9 = 3;
+                constants2 = 3;
                 throw value;
               } else if (arg0 === 2) {
-                c9 = 3;
-                return { value, done: true };
+                constants2 = 3;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
-                json_str = undefined;
-                user = undefined;
-                tmp = undefined;
-                frame_id = undefined;
-                if (null != closure_1.handshakeFailureTimeoutId) {
+                closure_5 = tmp4;
+                closure_4 = tmp9;
+                closure_132_0 = closure_0;
+                closure_132_1 = closure_1;
+                closure_132_2 = paths;
+                closure_132_3 = undefined;
+                closure_132_4 = undefined;
+                closure_132_5 = undefined;
+                let frame_id;
+                if (null != importDefault.handshakeFailureTimeoutId) {
                   const _clearTimeout = clearTimeout;
-                  clearTimeout(closure_1.handshakeFailureTimeoutId);
+                  clearTimeout(importDefault.handshakeFailureTimeoutId);
                 }
                 c8 = 1;
-                c9 = 1;
-                const obj5 = { value: source(postMessageToRPCClient[13])(postMessageToRPCClient[12], postMessageToRPCClient.paths), done: false };
+                constants2 = 1;
+                const obj5 = { value: closure_0(paths[13])(paths[12], paths.paths), done: false };
                 return obj5;
               }
-            } else if (1 === c8) {
+            } else if (1 === tmp9) {
               if (arg0 === 1) {
-                c9 = 3;
+                constants2 = 3;
                 throw value;
               } else if (arg0 === 2) {
-                c9 = 3;
-                return { value, done: true };
+                constants2 = 3;
+                const obj6 = { value, done: true };
+                return obj6;
               } else {
-                json_str = value.default;
-                const assert = json_str.assert;
-                const obj13 = closure_1(postMessageToRPCClient[14])(json_str);
-                const obj7 = { v: maxResult.required(), encoding: equalResult.optional(), client_id: stringResult1.required(), frame_id: stringResult2.required(), sdk_version: stringResult3.optional() };
-                const keys = obj13.required().keys;
-                obj13.required();
-                const numberResult = json_str.number();
-                const minResult = numberResult.min(1);
-                maxResult = minResult.max(1);
-                const stringResult = json_str.string();
-                equalResult = stringResult.equal("json");
-                stringResult1 = json_str.string();
-                stringResult2 = json_str.string();
-                stringResult3 = json_str.string();
-                assert(closure_1, keys(obj7));
-                c7 = 0;
-                tmp = closure_1;
-                frame_id = tmp.frame_id;
-                if (frame_id === source.iframeId) {
-                  if (set.has(source.iframeId)) {
-                    if (null != tmp.sdk_version) {
-                      const obj8 = { application_id: tmp.client_id, sdk_version: tmp.sdk_version };
-                      const obj4 = closure_1(postMessageToRPCClient[9]);
-                      obj4.track(c7.ACTIVITY_HANDSHAKE, obj8);
+                closure_132_3 = value.default;
+                constants = 1;
+                const obj13 = closure_1(paths[14])(closure_132_3);
+                const obj7 = { v: null, encoding: null, client_id: null, frame_id: null, sdk_version: null };
+                const requiredResult = closure_1(paths[14])(closure_132_3).required();
+                const numberResult = closure_132_3.number();
+                const minResult = closure_132_3.number().min(1);
+                obj7.v = closure_132_3.number().min(1).max(1).required();
+                const maxResult = closure_132_3.number().min(1).max(1);
+                const stringResult = closure_132_3.string();
+                obj7.encoding = closure_132_3.string().equal("json").optional();
+                const equalResult = closure_132_3.string().equal("json");
+                obj7.client_id = closure_132_3.string().required();
+                const stringResult1 = closure_132_3.string();
+                obj7.frame_id = closure_132_3.string().required();
+                const stringResult2 = closure_132_3.string();
+                obj7.sdk_version = closure_132_3.string().optional();
+                closure_132_3.assert(closure_132_1, requiredResult.keys(obj7));
+                constants = 0;
+                closure_132_5 = closure_132_1;
+                frame_id = closure_132_5.frame_id;
+                if (frame_id === closure_132_0.iframeId) {
+                  if (set.has(closure_132_0.iframeId)) {
+                    if (null != closure_132_5.sdk_version) {
+                      const obj8 = { application_id: closure_132_5.client_id, sdk_version: closure_132_5.sdk_version };
+                      closure_1(paths[9]).track(constants.ACTIVITY_HANDSHAKE, obj8);
+                      const obj4 = closure_1(paths[9]);
                     }
-                    c7 = 2;
+                    constants = 2;
+                    const obj9 = { source: closure_132_0, postMessageToRPCClient: closure_132_2, version: null, logger: null, postClose: null, encoding: null };
                     const _Number = Number;
-                    const createPostMessageProxySocket = closure_133_1.createPostMessageProxySocket;
-                    const encoding = tmp.encoding;
-                    const obj9 = { source, postMessageToRPCClient, version: Number(tmp.v), logger: closure_133_1.logger, postClose, encoding: json_str };
-                    json_str = encoding;
+                    obj9.version = Number(closure_132_5.v);
+                    obj9.logger = closure_133_1.logger;
+                    obj9.postClose = postClose;
+                    const encoding = closure_132_5.encoding;
+                    json = encoding;
                     if (encoding == null) {
-                      json_str = "json";
+                      json = "json";
                     }
-                    user = createPostMessageProxySocket(obj9);
+                    obj9.encoding = json;
+                    closure_132_4 = closure_133_1.createPostMessageProxySocket(obj9);
+                    constants = 0;
                     const logger5 = closure_133_1.logger;
                     const _HermesInternal6 = HermesInternal;
-                    logger5.info("Socket Opened: " + user.id);
-                    c7 = 3;
+                    logger5.info("Socket Opened: " + closure_132_4.id);
+                    constants = 3;
                     c8 = 5;
-                    c9 = 1;
-                    const obj10 = { value: closure_133_1.validateSocketClient(user, source.origin, tmp.client_id), done: false };
+                    constants2 = 1;
+                    const obj10 = { value: closure_133_1.validateSocketClient(closure_132_4, closure_132_0.origin, closure_132_5.client_id), done: false };
                     return obj10;
                   }
                 }
                 const logger6 = closure_133_1.logger;
                 const _HermesInternal7 = HermesInternal;
-                logger6.error("Unrecognized iframe ID: reported " + frame_id + ", expected " + source.iframeId);
+                logger6.error("Unrecognized iframe ID: reported " + frame_id + ", expected " + closure_132_0.iframeId);
+                const obj11 = { closeCode: constants2.CLOSE_UNSUPPORTED };
                 const _HermesInternal8 = HermesInternal;
-                const self5 = this;
-                const self6 = this;
-                const obj11 = { closeCode: c9.CLOSE_UNSUPPORTED };
-                const tmp100 = closure_1(postMessageToRPCClient[11]);
-                const tmp1002 = new tmp100(obj11, "Unrecognized iframe ID " + frame_id);
-                throw tmp1002;
+                const stringResult3 = closure_132_3.string();
+                const tmp1092 = new closure_1(paths[11])(obj11, "Unrecognized iframe ID " + frame_id);
+                throw tmp1092;
               }
-            } else if (2 === c8) {
-              c7 = 0;
-              let closure_7 = closure_6;
-              const self3 = this;
-              const self4 = this;
-              const obj12 = { closeCode: c9.CLOSE_UNSUPPORTED };
-              const tmp58 = new closure_1(postMessageToRPCClient[11])(obj12, closure_7.message);
-              throw tmp58;
-            } else if (3 === c8) {
-              c7 = 0;
-              let closure_8 = closure_6;
+            } else if (2 === tmp9) {
+              constants = 0;
+              closure_132_7 = closure_6;
+              const obj12 = { closeCode: constants2.CLOSE_UNSUPPORTED };
+              const tmp67 = new closure_1(paths[11])(obj12, closure_132_7.message);
+              throw tmp67;
+            } else if (3 === tmp9) {
+              constants = 0;
+              closure_132_8 = closure_6;
               const logger4 = closure_133_1.logger;
               const _HermesInternal5 = HermesInternal;
-              logger4.error("Error opening window socket " + closure_8);
-              throw closure_8;
-            } else if (4 === c8) {
-              c7 = 0;
-              let closure_9 = closure_6;
+              logger4.error("Error opening window socket " + closure_132_8);
+              throw closure_132_8;
+            } else if (4 === tmp9) {
+              constants = 0;
+              closure_132_9 = closure_6;
               const logger3 = closure_133_1.logger;
               const _HermesInternal4 = HermesInternal;
-              logger3.info("Socket Closed: " + user.id + ", " + closure_9.message);
-              throw closure_9;
+              logger3.info("Socket Closed: " + closure_132_4.id + ", " + closure_132_9.message);
+              throw closure_132_9;
             } else if (arg0 === 1) {
-              c9 = 3;
+              constants2 = 3;
               throw value;
             } else if (arg0 === 2) {
-              c7 = 0;
-              c9 = 3;
-              return { value, done: true };
-            } else if (set.has(source.iframeId)) {
-              const result = closure_1_12.set(source.iframeId, user);
-              set.delete(source.iframeId);
-              const scopes = user.authorization.scopes;
+              constants = 0;
+              constants2 = 3;
+              const obj14 = { value, done: true };
+              return obj14;
+            } else if (set.has(closure_132_0.iframeId)) {
+              const result = closure_1_12.set(closure_132_0.iframeId, closure_132_4);
+              set.delete(closure_132_0.iframeId);
+              const scopes = closure_132_4.authorization.scopes;
               scopes.push(closure_6);
-              closure_133_1.emit("connect", user);
+              closure_133_1.emit("connect", closure_132_4);
               const logger2 = closure_133_1.logger;
               const _HermesInternal3 = HermesInternal;
-              logger2.info("Socket Validated: " + user.id);
-              c7 = 0;
-              c9 = 3;
+              logger2.info("Socket Validated: " + closure_132_4.id);
+              constants = 0;
+              constants2 = 3;
               return { value: "IconComponent", done: null };
             } else {
               const logger = closure_133_1.logger;
               const _HermesInternal = HermesInternal;
-              logger.error("Iframe ID " + source.iframeId + " no longer exists");
+              logger.error("Iframe ID " + closure_132_0.iframeId + " no longer exists");
+              const obj = { closeCode: constants2.CLOSE_UNSUPPORTED };
               const _HermesInternal2 = HermesInternal;
-              const self = this;
-              const self2 = this;
-              const obj = { closeCode: c9.CLOSE_UNSUPPORTED };
-              const tmp10 = closure_1(postMessageToRPCClient[11]);
-              const tmp104 = new tmp10(obj, "Unrecognized iframe ID " + source.iframeId);
-              throw tmp104;
+              const tmp151 = new closure_1(paths[11])(obj, "Unrecognized iframe ID " + closure_132_0.iframeId);
+              throw tmp151;
             }
-          } catch (tmp112) {
-            closure_6 = tmp112;
-            if (0 === c7) {
-              c9 = 3;
-              throw tmp112;
-            } else if (1 === c7) {
-              c8 = 2;
-            } else if (2 === c7) {
-              c8 = 3;
+          } catch (tmp123) {
+            closure_6 = tmp123;
+            if (tmp5 === constants) {
+              constants2 = tmp3;
+              throw tmp123;
+            } else if (tmp2 === tmp125) {
+              c8 = tmp;
+            } else if (tmp === tmp125) {
+              c8 = tmp3;
             } else {
-              c8 = 4;
+              c8 = tmp6;
             }
           }
         }
       })();
     });
     tmp4.handleHandshake = function() {
-      return closure_0(...arguments);
+      const self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     };
-    let closure_1 = tmp4;
-    _require = _asyncToGenerator(async function(arg0, arg1) {
-      let stringResult;
-      let validResult;
-      closure_0 = arg0;
-      closure_1 = arg1;
+    closure_130_0 = undefined;
+    closure_130_1 = tmp4;
+    closure_130_0 = closure_3(async (arg0, arg1) => {
       if (c7 === 2) {
         c7 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (tmp6 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -340,10 +326,7 @@ class PostMessageTransport extends EventEmitter {
           return { value: "IconComponent", done: null };
         }
       } else {
-        let c5;
         try {
-          let message;
-          let closure_2;
           c7 = 2;
           if (0 === c6) {
             if (arg0 === 1) {
@@ -354,14 +337,17 @@ class PostMessageTransport extends EventEmitter {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              message = tmp;
-              closure_2 = undefined;
+              closure_3 = tmp3;
+              const paths = tmp7;
+              closure_130_0 = closure_0;
+              closure_130_1 = closure_1;
+              closure_130_2 = undefined;
               c6 = 1;
               c7 = 1;
-              const obj4 = { value: closure_0(closure_2[13])(closure_2[12], closure_2.paths), done: false };
+              const obj4 = { value: closure_0(paths[13])(paths[12], paths.paths), done: false };
               return obj4;
             }
-          } else if (1 === c6) {
+          } else if (1 === tmp7) {
             if (arg0 === 1) {
               c7 = 3;
               throw value;
@@ -370,103 +356,98 @@ class PostMessageTransport extends EventEmitter {
               const obj5 = { value, done: true };
               return obj5;
             } else {
-              closure_2 = value.default;
-              const assert = closure_2.assert;
-              const obj6 = closure_1(closure_2[14])(closure_2);
-              const obj7 = { code: validResult.required(), message: stringResult.optional() };
-              const keys = obj6.required().keys;
-              const requiredResult = obj6.required();
+              closure_130_2 = value.default;
+              c5 = 1;
+              const obj6 = closure_1(paths[14])(closure_130_2);
+              const obj7 = { code: null, message: null };
+              const requiredResult = closure_1(paths[14])(closure_130_2).required();
               const _Object = Object;
-              const numberResult = closure_2.number();
-              validResult = numberResult.valid(Object.values(constants));
-              stringResult = closure_2.string();
-              assert(closure_1, keys(obj7));
+              const numberResult = closure_130_2.number();
+              obj7.code = closure_130_2.number().valid(Object.values(constants)).required();
+              const validResult = closure_130_2.number().valid(Object.values(constants));
+              obj7.message = closure_130_2.string().optional();
+              closure_130_2.assert(closure_130_1, requiredResult.keys(obj7));
               c5 = 0;
-              closure_131_1.disconnectSocket(closure_0, closure_1);
+              closure_131_1.disconnectSocket(closure_130_0, closure_130_1);
               c7 = 3;
               return { value: "IconComponent", done: null };
             }
           } else {
             c5 = 0;
-            message = closure_4;
+            closure_130_3 = closure_4;
             const obj = { closeCode: constants.CLOSE_UNSUPPORTED };
-            const self = this;
-            const self2 = this;
-            const tmp14 = new closure_1(closure_2[11])(obj, message.message);
-            throw tmp14;
+            const tmp19 = new closure_1(paths[11])(obj, closure_130_3.message);
+            throw tmp19;
           }
-        } catch (tmp22) {
-          closure_4 = tmp22;
-          if (0 === c5) {
-            c7 = 3;
-            throw tmp22;
+        } catch (tmp27) {
+          closure_4 = tmp27;
+          if (tmp4 === c5) {
+            c7 = tmp2;
+            throw tmp27;
           } else {
-            c6 = 2;
+            c6 = tmp;
           }
         }
       }
     });
     tmp4.handleClose = function() {
-      return closure_0(...arguments);
+      const self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     };
-    const ComponentDispatch = require("ComponentDispatchUtils").ComponentDispatch;
-    const subscription = ComponentDispatch.subscribe(constants.IFRAME_MOUNT, tmp4.handleIFrameMount);
-    const ComponentDispatch2 = require("ComponentDispatchUtils").ComponentDispatch;
-    const subscription1 = ComponentDispatch2.subscribe(constants.IFRAME_UNMOUNT, tmp4.handleIFrameUnmount);
-    tmp4.validateSocketClient = validateSocketClient;
-    tmp4.logger = logger;
-    tmp4.createPostMessageProxySocket = createPostMessageProxySocket;
-    tmp4.onFrameHandled = onFrameHandled;
+    ComponentDispatch = closure_0(closure_2[8]).ComponentDispatch;
+    subscription = ComponentDispatch.subscribe(ComponentActions.IFRAME_MOUNT, tmp4.handleIFrameMount);
+    ComponentDispatch2 = closure_0(closure_2[8]).ComponentDispatch;
+    subscription1 = ComponentDispatch2.subscribe(ComponentActions.IFRAME_UNMOUNT, tmp4.handleIFrameUnmount);
+    tmp4.validateSocketClient = global;
+    tmp4.logger = fn;
+    tmp4.createPostMessageProxySocket = importDefault;
+    tmp4.onFrameHandled = importAll;
     return tmp4;
   }
-  routeEvent(value, iframeId, arg2, postMessageToRPCClient) {
-    let tmp5;
-    let tmp6;
-    if (Array.isArray(arg2)) {
-      const self = this;
-      [tmp5, tmp6] = arg2;
-      _slicedToArray(arg2, 2);
-      if (RPCOpcodesDefault.HANDSHAKE === tmp5) {
-        if (null != value) {
-          const self8 = this;
-          const self9 = this;
-          const obj2 = { closeCode: constants2.CLOSE_UNSUPPORTED };
-          const tmp27 = new RPCErrorDefault(obj2, "Already connected");
-          throw tmp27;
-        } else {
-          return self.handleHandshake(iframeId, tmp6, postMessageToRPCClient);
-        }
-      } else if (RPCOpcodesDefault.FRAME === tmp5) {
-        if (null == value) {
-          const self6 = this;
-          const self7 = this;
-          const obj3 = { closeCode: constants2.CLOSE_UNSUPPORTED };
-          const tmp21 = new RPCErrorDefault(obj3, "Not connected");
-          throw tmp21;
-        } else {
-          return self.handleFrame(iframeId, value, tmp6);
-        }
-      } else if (RPCOpcodesDefault.CLOSE === tmp5) {
-        if (null == value) {
-          const self4 = this;
-          const self5 = this;
-          const obj4 = { closeCode: constants2.CLOSE_UNSUPPORTED };
-          const tmp16 = new RPCErrorDefault(obj4, "Not connected");
-          throw tmp16;
-        } else {
-          return self.handleClose(value, tmp6);
-        }
-      } else {
-        const self2 = this;
-        const self3 = this;
-        const obj = { closeCode: constants2.CLOSE_UNSUPPORTED };
-        const tmp11 = new RPCErrorDefault(obj, "Invalid opcode");
-        throw tmp11;
-      }
-    }
-  }
 }
-const prototype = PostMessageTransport.prototype;
+PostMessageTransport.prototype["routeEvent"] = function routeEvent(value, iframeId, arg2, arg3) {
+  if (Array.isArray(arg2)) {
+    const self = this;
+    [tmp5, tmp6] = arg2;
+    if (RPCOpcodesDefault.HANDSHAKE === tmp5) {
+      if (null != value) {
+        const obj2 = { closeCode: constants2.CLOSE_UNSUPPORTED };
+        const tmp35 = new RPCErrorDefault(obj2, "Already connected");
+        throw tmp35;
+      } else {
+        return self.handleHandshake(iframeId, tmp6, arg3);
+      }
+    } else if (RPCOpcodesDefault.FRAME === tmp5) {
+      if (null == value) {
+        const obj3 = { closeCode: constants2.CLOSE_UNSUPPORTED };
+        const tmp27 = new RPCErrorDefault(obj3, "Not connected");
+        throw tmp27;
+      } else {
+        return self.handleFrame(iframeId, value, tmp6);
+      }
+    } else if (RPCOpcodesDefault.CLOSE === tmp5) {
+      if (null == value) {
+        const obj4 = { closeCode: constants2.CLOSE_UNSUPPORTED };
+        const tmp20 = new RPCErrorDefault(obj4, "Not connected");
+        throw tmp20;
+      } else {
+        return self.handleClose(value, tmp6);
+      }
+    } else {
+      const obj = { closeCode: constants2.CLOSE_UNSUPPORTED };
+      const tmp13 = new RPCErrorDefault(obj, "Invalid opcode");
+      throw tmp13;
+    }
+    const tmp4 = _slicedToArray(arg2, 2);
+  }
+};
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/transports/PostMessageTransport.tsx");
 
 export default PostMessageTransport;

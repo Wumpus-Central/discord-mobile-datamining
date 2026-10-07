@@ -12,12 +12,12 @@ export const splitQuery = function splitQuery(query) {
   const items = [];
   const items1 = [];
   const item = mapped.forEach((item) => {
-    const obj = ApplicationCommandUtils;
     if (obj.isSnowflake(item)) {
       items.push(item);
     } else {
       items1.push(item);
     }
+    obj = ApplicationCommandUtils;
   });
   const items2 = [items1, items];
   return items2;

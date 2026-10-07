@@ -1,45 +1,32 @@
 // === Module 16622: useConjurePreviewMode ===
 
 // Module 16622 (useConjurePreviewMode)
-import get_initialized from "get initialized" /* 504 */;
-import react2 from "react" /* 576 */;
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
 import ApplicationActionCreators from "ApplicationActionCreators" /* 6665 */;
 import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 8712 */;
 import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 9027 */;
 import useUserApplicationWidgetDataDefault from "useUserApplicationWidgetData" /* 16623 */;
 import conjurePreviewModes from "conjurePreviewModes" /* 16624 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let applicationId;
-  let data2;
-  let declaredActivity;
-  let installScope;
-  let isLoading;
-  let mainCardOnly;
-  let ownerAuthorizationRevoked;
-  let previewApplicationId;
-  let tmp12;
-  let tmp13;
-  let tmp21;
-  let tmp22;
-  let tmp6;
-  let tmp7;
-  const obj = react2;
-  const cResult = obj.c(7);
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/conjure/preview/useConjurePreviewMode.tsx");
+
+export const useConjurePreviewMode = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(7);
   ({ applicationId, previewApplicationId, declaredActivity, mainCardOnly } = arg0);
   let tmp4 = undefined !== mainCardOnly;
   ({ installScope, ownerAuthorizationRevoked } = arg0);
   if (tmp4) {
     tmp4 = mainCardOnly;
   }
-  [tmp6, tmp7] = react.useState(null);
-  _slicedToArray(react.useState(null), 2);
-  const tmp8 = _slicedToArray(react.useState(applicationId), 2);
+  [tmp6, tmp7] = noop.useState(null);
+  const tmp8 = _slicedToArray(noop.useState(applicationId), 2);
   if (tmp8[0] !== applicationId) {
     tmp8[1](applicationId);
     tmp7(null);
@@ -63,100 +50,87 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     [tmp12, tmp13] = cResult;
   }
-  const tmpResult = get_initialized;
-  const stateFromStores = tmpResult.useStateFromStores(tmp12, tmp13);
-  const tmp16 = useUserApplicationWidgetDataDefault;
-  const applicationWidgetConfig = tmp16(stateFromStores, tmp11).applicationWidgetConfig;
+  const tmp5 = _slicedToArray(noop.useState(null), 2);
+  const stateFromStores = initialize.useStateFromStores(tmp12, tmp13);
+  const tmp17 = tmp11;
+  const tmpResult = initialize;
+  const applicationWidgetConfig = useUserApplicationWidgetDataDefault(stateFromStores, tmp17).applicationWidgetConfig;
   let surfaces;
   if (applicationWidgetConfig != null) {
     surfaces = applicationWidgetConfig.surfaces;
   }
+  let tmp19;
+  if (surfaces != null) {
+    tmp19 = surfaces[ApplicationWidgetConfigSurface.ApplicationWidgetConfigSurface.WIDGET_TOP];
+  }
+  const obj2 = { widgetTop: null != tmp19, widgetBottom: null, miniProfile: null };
   let tmp20;
-  const profileSurfaceAvailability = conjurePreviewModes.profileSurfaceAvailability;
-  conjurePreviewModes;
   if (surfaces != null) {
-    tmp20 = surfaces[ApplicationWidgetConfigSurface.ApplicationWidgetConfigSurface.WIDGET_TOP];
+    tmp20 = surfaces[ApplicationWidgetConfigSurface.ApplicationWidgetConfigSurface.WIDGET_BOTTOM];
   }
-  const obj2 = { widgetTop: null != tmp20, widgetBottom: null != tmp21, miniProfile: null != tmp22 };
-  tmp21 = undefined;
+  obj2.widgetBottom = null != tmp20;
+  let tmp21;
   if (surfaces != null) {
-    tmp21 = surfaces[ApplicationWidgetConfigSurface.ApplicationWidgetConfigSurface.WIDGET_BOTTOM];
+    tmp21 = surfaces[ApplicationWidgetConfigSurface.ApplicationWidgetConfigSurface.MINI_PROFILE];
   }
-  tmp22 = undefined;
-  if (surfaces != null) {
-    tmp22 = surfaces[ApplicationWidgetConfigSurface.ApplicationWidgetConfigSurface.MINI_PROFILE];
-  }
-  const result = profileSurfaceAvailability(obj2);
-  const tmp24 = null != tmp11 && (tmp4 ? result.hasMainCard : result.hasAny);
-  const useApplication = ApplicationActionCreators.useApplication;
-  ApplicationActionCreators;
-  const data = useApplication(previewApplicationId).data;
-  let tmp27 = null != previewApplicationId;
-  if (tmp27) {
-    let id;
-    if (data != null) {
-      const bot = data.bot;
-      if (bot != null) {
-        id = bot.id;
-      }
-    }
-    tmp27 = null != id;
-  }
-  const useApplication2 = ApplicationActionCreators.useApplication;
-  ApplicationActionCreators;
-  const application2 = useApplication2(applicationId);
-  ({ data: data2, isLoading } = application2);
-  if (!declaredActivity) {
-    const tmpResult10 = canLaunchContextlessFrame;
-    declaredActivity = tmpResult10.canLaunchContextlessFrame(data2);
-  }
-  const tmpResult11 = conjurePreviewModes;
-  const result1 = tmpResult11.previewModeAvailability({ installScope, hasFrame: declaredActivity, hasProfileWidget: tmp24, hasBotDm: tmp27, ownerAuthorizationRevoked });
-  let previewMode = null;
-  if (!(null != applicationId && isLoading && null == data2)) {
-    const tmpResult12 = conjurePreviewModes;
-    previewMode = tmpResult12.resolvePreviewMode(tmp6, result1);
-  }
-  if (cResult[2] === result1) {
-    if (cResult[3] === (null != applicationId && isLoading && null == data2)) {
-      if (cResult[4] === previewMode) {
-        let tmp35;
-        if (cResult[5] === tmp11) {
-          tmp35 = cResult[6];
+  obj2.miniProfile = null != tmp21;
+  const result = conjurePreviewModes.profileSurfaceAvailability(obj2);
+  if (null == tmp11) {
+    const data = ApplicationActionCreators.useApplication(previewApplicationId).data;
+    let tmp26 = null != previewApplicationId;
+    if (tmp26) {
+      let id;
+      if (data != null) {
+        const bot = data.bot;
+        if (bot != null) {
+          id = bot.id;
         }
-        return tmp35;
+      }
+      tmp26 = null != id;
+    }
+    const tmpResult8 = ApplicationActionCreators;
+    const application = ApplicationActionCreators.useApplication(applicationId);
+    ({ data: data2, isLoading } = application);
+    if (!declaredActivity) {
+      declaredActivity = canLaunchContextlessFrame.canLaunchContextlessFrame(data2);
+      const tmpResult10 = canLaunchContextlessFrame;
+    }
+    const tmpResult9 = ApplicationActionCreators;
+    const obj3 = { installScope, hasFrame: declaredActivity, hasProfileWidget: tmp23, hasBotDm: tmp26, ownerAuthorizationRevoked };
+    const result1 = conjurePreviewModes.previewModeAvailability(obj3);
+    let previewMode = null;
+    if (!(null != applicationId && isLoading && null == data2)) {
+      previewMode = conjurePreviewModes.resolvePreviewMode(tmp6, result1);
+      const tmpResult12 = conjurePreviewModes;
+    }
+    if (cResult[2] === result1) {
+      if (cResult[3] === tmp30) {
+        if (cResult[4] === previewMode) {
+          if (cResult[5] === tmp11) {
+            let tmp33 = cResult[6];
+          }
+          return tmp33;
+        }
       }
     }
+    const obj4 = { availability: result1, isResolving: null != applicationId && isLoading && null == data2, activeMode: previewMode, setMode: tmp7, widgetApplicationId: tmp11 };
+    cResult[2] = result1;
+    cResult[3] = null != applicationId && isLoading && null == data2;
+    cResult[4] = previewMode;
+    cResult[5] = tmp11;
+    cResult[6] = obj4;
+    tmp33 = obj4;
+    const tmpResult11 = conjurePreviewModes;
   }
-  const obj3 = { availability: result1, isResolving: null != applicationId && isLoading && null == data2, activeMode: previewMode, setMode: tmp7, widgetApplicationId: tmp11 };
-  cResult[2] = result1;
-  cResult[3] = null != applicationId && isLoading && null == data2;
-  cResult[4] = previewMode;
-  cResult[5] = tmp11;
-  cResult[6] = obj3;
-  tmp35 = obj3;
+  const tmpResult7 = conjurePreviewModes;
 }) : ((arg0) => {
-  let applicationId;
-  let data2;
-  let declaredActivity;
-  let installScope;
-  let isLoading;
-  let mainCardOnly;
-  let ownerAuthorizationRevoked;
-  let previewApplicationId;
-  let previewMode;
-  let tmp16;
-  let tmp17;
-  let tmp2;
-  let tmp3;
   ({ applicationId, previewApplicationId, declaredActivity, mainCardOnly } = arg0);
   ({ installScope, ownerAuthorizationRevoked } = arg0);
   if (mainCardOnly === undefined) {
     mainCardOnly = false;
   }
-  [tmp2, tmp3] = react.useState(null);
-  _slicedToArray(react.useState(null), 2);
-  const tmp4 = _slicedToArray(react.useState(applicationId), 2);
+  [tmp2, tmp3] = noop.useState(null);
+  const tmp4 = _slicedToArray(noop.useState(applicationId), 2);
   if (tmp4[0] !== applicationId) {
     tmp4[1](applicationId);
     tmp3(null);
@@ -168,64 +142,64 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       tmp7 = previewApplicationId;
     }
   }
+  const tmp = _slicedToArray(noop.useState(null), 2);
   const items = [AuthenticationStore];
-  const obj = get_initialized;
-  const stateFromStores = obj.useStateFromStores(items, () => id.getId());
-  const tmp11 = useUserApplicationWidgetDataDefault;
-  const applicationWidgetConfig = tmp11(stateFromStores, tmp7).applicationWidgetConfig;
+  const stateFromStores = initialize.useStateFromStores(items, () => id.getId());
+  const tmp12 = tmp7;
+  const applicationWidgetConfig = useUserApplicationWidgetDataDefault(stateFromStores, tmp12).applicationWidgetConfig;
   let surfaces;
   if (applicationWidgetConfig != null) {
     surfaces = applicationWidgetConfig.surfaces;
   }
+  let tmp14;
+  if (surfaces != null) {
+    tmp14 = surfaces[ApplicationWidgetConfigSurface.ApplicationWidgetConfigSurface.WIDGET_TOP];
+  }
+  const obj2 = { widgetTop: null != tmp14, widgetBottom: null, miniProfile: null };
   let tmp15;
-  const profileSurfaceAvailability = conjurePreviewModes.profileSurfaceAvailability;
-  conjurePreviewModes;
   if (surfaces != null) {
-    tmp15 = surfaces[ApplicationWidgetConfigSurface.ApplicationWidgetConfigSurface.WIDGET_TOP];
+    tmp15 = surfaces[ApplicationWidgetConfigSurface.ApplicationWidgetConfigSurface.WIDGET_BOTTOM];
   }
-  const obj2 = { widgetTop: null != tmp15, widgetBottom: null != tmp16, miniProfile: null != tmp17 };
-  tmp16 = undefined;
+  obj2.widgetBottom = null != tmp15;
+  let tmp16;
   if (surfaces != null) {
-    tmp16 = surfaces[ApplicationWidgetConfigSurface.ApplicationWidgetConfigSurface.WIDGET_BOTTOM];
+    tmp16 = surfaces[ApplicationWidgetConfigSurface.ApplicationWidgetConfigSurface.MINI_PROFILE];
   }
-  tmp17 = undefined;
-  if (surfaces != null) {
-    tmp17 = surfaces[ApplicationWidgetConfigSurface.ApplicationWidgetConfigSurface.MINI_PROFILE];
-  }
-  const result = profileSurfaceAvailability(obj2);
-  const tmp19 = null != tmp7 && (mainCardOnly ? result.hasMainCard : result.hasAny);
-  const useApplication = ApplicationActionCreators.useApplication;
-  ApplicationActionCreators;
-  const data = useApplication(previewApplicationId).data;
-  let tmp22 = null != previewApplicationId;
-  if (tmp22) {
-    let id;
-    if (data != null) {
-      const bot = data.bot;
-      if (bot != null) {
-        id = bot.id;
+  obj2.miniProfile = null != tmp16;
+  const result = conjurePreviewModes.profileSurfaceAvailability(obj2);
+  if (null == tmp7) {
+    const data = ApplicationActionCreators.useApplication(previewApplicationId).data;
+    let tmp21 = null != previewApplicationId;
+    if (tmp21) {
+      let id;
+      if (data != null) {
+        const bot = data.bot;
+        if (bot != null) {
+          id = bot.id;
+        }
       }
+      tmp21 = null != id;
     }
-    tmp22 = null != id;
+    const tmp8Result6 = ApplicationActionCreators;
+    const application = ApplicationActionCreators.useApplication(applicationId);
+    ({ data: data2, isLoading } = application);
+    if (!declaredActivity) {
+      declaredActivity = canLaunchContextlessFrame.canLaunchContextlessFrame(data2);
+      const tmp8Result8 = canLaunchContextlessFrame;
+    }
+    const tmp8Result7 = ApplicationActionCreators;
+    const obj3 = { installScope, hasFrame: declaredActivity, hasProfileWidget: tmp18, hasBotDm: tmp21, ownerAuthorizationRevoked };
+    const result1 = conjurePreviewModes.previewModeAvailability(obj3);
+    const obj4 = { availability: result1, isResolving: null != applicationId && isLoading && null == data2, activeMode: null, setMode: null, widgetApplicationId: null };
+    let previewMode = null;
+    if (!(null != applicationId && isLoading && null == data2)) {
+      previewMode = conjurePreviewModes.resolvePreviewMode(tmp2, result1);
+      const tmp8Result10 = conjurePreviewModes;
+    }
+    obj4.activeMode = previewMode;
+    obj4.setMode = tmp3;
+    obj4.widgetApplicationId = tmp7;
+    return obj4;
   }
-  const useApplication2 = ApplicationActionCreators.useApplication;
-  ApplicationActionCreators;
-  const application2 = useApplication2(applicationId);
-  ({ data: data2, isLoading } = application2);
-  if (!declaredActivity) {
-    const tmp8Result8 = canLaunchContextlessFrame;
-    declaredActivity = tmp8Result8.canLaunchContextlessFrame(data2);
-  }
-  const tmp8Result9 = conjurePreviewModes;
-  const result1 = tmp8Result9.previewModeAvailability({ installScope, hasFrame: declaredActivity, hasProfileWidget: tmp19, hasBotDm: tmp22, ownerAuthorizationRevoked });
-  const obj3 = { availability: result1, isResolving: null != applicationId && isLoading && null == data2, activeMode: previewMode, setMode: tmp3, widgetApplicationId: tmp7 };
-  previewMode = null;
-  if (!(null != applicationId && isLoading && null == data2)) {
-    const tmp8Result10 = conjurePreviewModes;
-    previewMode = tmp8Result10.resolvePreviewMode(tmp2, result1);
-  }
-  return obj3;
+  const tmp8Result = conjurePreviewModes;
 });
-let result = size.fileFinishedImporting("modules/conjure/preview/useConjurePreviewMode.tsx");
-
-export const useConjurePreviewMode = tmp2;

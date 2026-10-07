@@ -1,7 +1,7 @@
 // === Module 16654: conjurePublishFailureMessage ===
 
 // Module 16654 (conjurePublishFailureMessage)
-import intl3 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import _modDef3753 from "module_3753" /* 3753 */;
 import size from "module_2" /* 2 */;
 
@@ -13,14 +13,13 @@ export default function conjurePublishFailureMessage(detail) {
     trimmed = str.trim();
   }
   if (null != trimmed) {
-    let formatToPlainStringResult;
     if ("" !== trimmed) {
-      const intl2 = intl3.intl;
+      const intl2 = util.intl;
       const obj = { reason: trimmed };
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef3753["7ZsIF1"], obj);
+      let formatToPlainStringResult = intl2.formatToPlainString(_modDef3753["7ZsIF1"], obj);
     }
     return formatToPlainStringResult;
   }
-  const intl = intl3.intl;
+  const intl = util.intl;
   formatToPlainStringResult = intl.string(_modDef3753.gMWZeG);
 };

@@ -1,80 +1,64 @@
 // === Module 12219: GuildPowerupsDisabledWarning ===
 
 // Module 12219 (GuildPowerupsDisabledWarning)
-import react_native from "react-native" /* 17 */;
-import react from "react" /* 576 */;
+import _mod17 from "module_17" /* 17 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import WarningIcon2 from "WarningIcon" /* 4809 */;
+import WarningIcon from "WarningIcon" /* 4809 */;
 import Text_Text from "Text/Text" /* 4892 */;
-import Fragment from "Fragment" /* 21 */;
+import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-let text;
-
-let closure_4;
-let hasOwnProperty;
-let obj2;
-const View = react_native.View;
-({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
-let obj = { container: obj2, text: { flex: 1 } };
-obj2 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, borderColor: nativeDefault.colors.STATUS_WARNING_BACKGROUND, borderWidth: 1, borderRadius: nativeDefault.radii.lg, padding: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING };
+const View = _mod17.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+let obj = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, borderColor: nativeDefault.colors.STATUS_WARNING_BACKGROUND, borderWidth: 1, borderRadius: nativeDefault.radii.lg, padding: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING }, text: { flex: 1 } };
 let closure_6 = createStyles.createStyles(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
-  let first;
-  let items;
-  const obj = react;
-  const cResult = obj.c(7);
+let obj2 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, borderColor: nativeDefault.colors.STATUS_WARNING_BACKGROUND, borderWidth: 1, borderRadius: nativeDefault.radii.lg, padding: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING };
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsDisabledWarning.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
+  const cResult = c.c(7);
   text = text.text;
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { color: nativeDefault.colors.TEXT_FEEDBACK_WARNING, size: "md" };
-    const WarningIcon = WarningIcon2.WarningIcon;
-    const tmp8 = React3(WarningIcon, obj2);
+    const tmp8 = React4(WarningIcon.WarningIcon, obj2);
     cResult[0] = tmp8;
-    first = tmp8;
+    let first = tmp8;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === tmp4.text) {
-    let tmp9;
     if (cResult[2] === text) {
-      tmp9 = cResult[3];
+      let tmp9 = cResult[3];
     }
     if (cResult[4] === tmp4.container) {
-      let tmp11;
       if (cResult[5] === tmp9) {
-        tmp11 = cResult[6];
+        let tmp11 = cResult[6];
       }
       return tmp11;
     }
-    const obj3 = { style: tmp4.container, children: items };
-    items = [first, tmp9];
+    const obj3 = { style: tmp4.container, children: null };
+    const items = [first, tmp9];
+    obj3.children = items;
     const tmp14 = hasOwnProperty(View, obj3);
     cResult[4] = tmp4.container;
     cResult[5] = tmp9;
     cResult[6] = tmp14;
     tmp11 = tmp14;
   }
-  const obj4 = { style: tmp4.text, variant: "text-md/semibold", color: "text-feedback-warning", children: text };
-  const tmp10 = React3(Text_Text.Text, obj4);
+  const tmp10 = React4(Text_Text.Text, { style: tmp4.text, variant: "text-md/semibold", color: "text-feedback-warning", children: text });
   cResult[1] = tmp4.text;
   cResult[2] = text;
   cResult[3] = tmp10;
   tmp9 = tmp10;
-}) : ((text) => {
-  let items;
-  text = text.text;
+  const obj4 = { style: tmp4.text, variant: "text-md/semibold", color: "text-feedback-warning", children: text };
+}) : ((children) => {
   const tmp = closure_6();
-  const obj = { style: tmp.container, children: items };
-  const obj2 = { color: nativeDefault.colors.TEXT_FEEDBACK_WARNING, size: "md" };
-  const WarningIcon = WarningIcon2.WarningIcon;
-  items = [React3(WarningIcon, obj2), ];
-  const obj3 = { style: tmp.text, variant: "text-md/semibold", color: "text-feedback-warning", children: text };
-  items[1] = React3(Text_Text.Text, obj3);
+  const obj = { style: tmp.container, children: null };
+  const items = [React4(WarningIcon.WarningIcon, { color: nativeDefault.colors.TEXT_FEEDBACK_WARNING, size: "md" }), React4(Text_Text.Text, { style: tmp.text, variant: "text-md/semibold", color: "text-feedback-warning", children: children.text })];
+  obj.children = items;
   return hasOwnProperty(View, obj);
 });
-const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsDisabledWarning.tsx");
-
-export default tmp3;

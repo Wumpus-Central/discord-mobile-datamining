@@ -7,15 +7,14 @@ import GuildInviteFlags from "GuildInviteFlags" /* 8078 */;
 import size from "module_2" /* 2 */;
 
 const GuildMemberFlags = GuildMemberConstants.GuildMemberFlags;
-const obj = {
+const result = size.fileFinishedImporting("modules/guests/GuestUtils.tsx");
+
+export default {
   canAcceptInvite(items, guild) {
-    let obj;
     [obj] = items;
     guild = guild.guild;
     let tmp = null == guild;
     if (!tmp) {
-      const hasFlag = FlagUtils.hasFlag;
-      FlagUtils;
       const selfMember = obj.getSelfMember(guild.id);
       let num;
       if (selfMember != null) {
@@ -24,22 +23,18 @@ const obj = {
       if (num == null) {
         num = 0;
       }
-      const hasFlagResult = hasFlag(num, GuildMemberFlags.IS_GUEST);
-      let hasFlag2Result = !hasFlagResult;
+      const hasFlagResult = FlagUtils.hasFlag(num, GuildMemberFlags.IS_GUEST);
+      let hasFlagResult1 = !hasFlagResult;
       if (hasFlagResult) {
         let num2 = guild.flags;
-        const hasFlag2 = FlagUtils.hasFlag;
-        FlagUtils;
         if (num2 == null) {
           num2 = 0;
         }
-        hasFlag2Result = hasFlag2(num2, GuildInviteFlags.GuildInviteFlags.IS_GUEST_INVITE);
+        hasFlagResult1 = FlagUtils.hasFlag(num2, GuildInviteFlags.GuildInviteFlags.IS_GUEST_INVITE);
+        const tmp2Result = FlagUtils;
       }
-      tmp = hasFlag2Result;
+      tmp = hasFlagResult1;
     }
     return tmp;
   }
 };
-const result = size.fileFinishedImporting("modules/guests/GuestUtils.tsx");
-
-export default obj;

@@ -1,240 +1,201 @@
 // === Module 13132: GuildActionSheetMemberCount ===
 
 // Module 13132 (GuildActionSheetMemberCount)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl3 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 4892 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import PlatformUtils from "utils/PlatformUtils" /* 1370 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let c3;
-let closure_4;
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4896);
+let obj = { wrapper: { flexDirection: "row", alignItems: "center" }, dot: null, dotContainer: null, onlineDot: null, offlineDot: null, refreshText: null };
+let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.sm };
+obj.dot = size;
+obj.dotContainer = { alignItems: "center", justifyContent: "center", marginRight: 4 };
+obj.onlineDot = { backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
+let obj3 = { backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
+obj.offlineDot = { backgroundColor: nativeDefault.colors.TEXT_STATUS_OFFLINE };
+const PlatformUtils = fn(1370);
 let num;
-let obj2;
-let obj3;
-let size;
-const View = react_native.View;
-({ jsx: c3, jsxs: closure_4 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { wrapper: { flexDirection: "row", alignItems: "center" }, dot: size, dotContainer: { alignItems: "center", justifyContent: "center", marginRight: 4 }, onlineDot: obj2, offlineDot: obj3, refreshText: { textAlignVertical: "center", lineHeight: num } };
-size = { width: 8, height: 8, borderRadius: nativeDefault.radii.sm };
-createStyles = createStyles.createStyles;
-obj2 = { backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
-obj3 = { backgroundColor: nativeDefault.colors.TEXT_STATUS_OFFLINE };
-num = undefined;
 if (PlatformUtils.isAndroid()) {
   num = 14;
 }
-let closure_5 = createStyles(obj);
-const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let color;
-  let count;
-  let dotContainerWidth;
-  let items;
-  let items1;
-  let textVariant;
-  let tmp10;
-  let tmp4;
-  let type;
-  const obj = react2;
-  const cResult = obj.c(25);
+obj.refreshText = { textAlignVertical: "center", lineHeight: num };
+let closure_5 = createStyles.createStyles(obj);
+const ReactCompilerGating = fn(558);
+let obj4 = { backgroundColor: nativeDefault.colors.TEXT_STATUS_OFFLINE };
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx");
+
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(25);
   ({ type, count, color, dotContainerWidth, textVariant } = arg0);
   if (null == count) {
-    let tmp6;
-    if (cResult[0] !== type) {
-      let v3DzP7x;
-      const intl2 = intl3.intl;
-      const string = intl2.string;
-      if ("online" === type) {
-        v3DzP7x = intl3.t["3DzP7x"];
-      } else {
-        v3DzP7x = intl3.t["5SWsJX"];
-      }
-      const stringResult = string(v3DzP7x);
-      cResult[0] = type;
-      cResult[1] = stringResult;
-      tmp6 = stringResult;
+    const intl2 = util.intl;
+    if ("online" === type) {
+      let v3DzP7x = util.t["3DzP7x"];
     } else {
-      tmp6 = cResult[1];
+      v3DzP7x = util.t["5SWsJX"];
     }
-    tmp4 = tmp6;
+    const stringResult = intl2.string(v3DzP7x);
+    cResult[0] = type;
+    cResult[1] = stringResult;
   } else {
-    let etqpUG;
     if (cResult[2] === count) {
       if (cResult[3] === type) {
-        tmp4 = cResult[4];
+        const tmp12 = closure_5();
+        if (cResult[5] !== dotContainerWidth) {
+          let tmp14 = null != dotContainerWidth;
+          if (tmp14) {
+            const obj2 = { width: dotContainerWidth };
+            tmp14 = obj2;
+          }
+          cResult[5] = dotContainerWidth;
+          cResult[6] = tmp14;
+          let tmp13 = tmp14;
+        } else {
+          tmp13 = cResult[6];
+        }
+        if (cResult[7] === tmp12.dotContainer) {
+          if (cResult[8] === tmp13) {
+            let tmp15 = cResult[9];
+          }
+          const tmp16 = "online" === type ? tmp12.onlineDot : tmp12.offlineDot;
+          if (cResult[10] === tmp12.dot) {
+            if (cResult[11] === tmp16) {
+              let tmp17 = cResult[12];
+            }
+            if (cResult[13] === tmp15) {
+              if (cResult[14] === tmp17) {
+                let tmp21 = cResult[15];
+              }
+              if (textVariant == null) {
+                textVariant = "text-sm/normal";
+              }
+              if (color == null) {
+                color = "text-default";
+              }
+              if (cResult[16] === tmp12.refreshText) {
+                if (cResult[17] === textVariant) {
+                  if (cResult[18] === color) {
+                    if (cResult[19] === tmp4) {
+                      let tmp25 = cResult[20];
+                    }
+                    if (cResult[21] === tmp12.wrapper) {
+                      if (cResult[22] === tmp21) {
+                        if (cResult[23] === tmp25) {
+                          let tmp28 = cResult[24];
+                        }
+                        return tmp28;
+                      }
+                    }
+                    const obj3 = { style: tmp12.wrapper, children: null };
+                    const items = [tmp21, tmp25];
+                    obj3.children = items;
+                    const tmp31 = React4(View, obj3);
+                    cResult[21] = tmp12.wrapper;
+                    cResult[22] = tmp21;
+                    cResult[23] = tmp25;
+                    cResult[24] = tmp31;
+                    tmp28 = tmp31;
+                  }
+                }
+              }
+              const obj4 = { variant: textVariant, color, lineClamp: 1, style: tmp12.refreshText, children: tmp4 };
+              const tmp27 = React3(Text_Text.Text, obj4);
+              cResult[16] = tmp12.refreshText;
+              cResult[17] = textVariant;
+              cResult[18] = color;
+              cResult[19] = tmp4;
+              cResult[20] = tmp27;
+              tmp25 = tmp27;
+            }
+            const obj5 = { style: tmp15, children: tmp17 };
+            const tmp24 = React3(View, obj5);
+            cResult[13] = tmp15;
+            cResult[14] = tmp17;
+            cResult[15] = tmp24;
+            tmp21 = tmp24;
+          }
+          const obj6 = { style: null };
+          const items1 = [tmp12.dot, tmp16];
+          obj6.style = items1;
+          const tmp20 = React3(View, obj6);
+          cResult[10] = tmp12.dot;
+          cResult[11] = tmp16;
+          cResult[12] = tmp20;
+          tmp17 = tmp20;
+        }
+        const items2 = [tmp12.dotContainer, tmp13];
+        cResult[7] = tmp12.dotContainer;
+        cResult[8] = tmp13;
+        cResult[9] = items2;
+        tmp15 = items2;
       }
     }
-    const intl = intl3.intl;
-    const format = intl.format;
+    const intl = util.intl;
     if ("online" === type) {
-      etqpUG = intl3.t.PIikks;
+      let etqpUG = util.t.PIikks;
     } else {
-      etqpUG = intl3.t.etqpUG;
+      etqpUG = util.t.etqpUG;
     }
-    const obj2 = { count };
-    const formatResult = format(etqpUG, obj2);
+    const obj7 = { count };
+    const formatResult = intl.format(etqpUG, obj7);
     cResult[2] = count;
     cResult[3] = type;
     cResult[4] = formatResult;
-    tmp4 = formatResult;
   }
-  const tmp9 = closure_5();
-  if (cResult[5] !== dotContainerWidth) {
-    let tmp11 = null != dotContainerWidth;
-    if (tmp11) {
-      tmp11 = { width: dotContainerWidth };
-      const obj3 = { width: dotContainerWidth };
-    }
-    cResult[5] = dotContainerWidth;
-    cResult[6] = tmp11;
-    tmp10 = tmp11;
-  } else {
-    tmp10 = cResult[6];
-  }
-  if (cResult[7] === tmp9.dotContainer) {
-    let tmp12;
-    if (cResult[8] === tmp10) {
-      tmp12 = cResult[9];
-    }
-    const tmp13 = "online" === type ? tmp9.onlineDot : tmp9.offlineDot;
-    if (cResult[10] === tmp9.dot) {
-      let tmp14;
-      if (cResult[11] === tmp13) {
-        tmp14 = cResult[12];
-      }
-      if (cResult[13] === tmp12) {
-        let tmp18;
-        if (cResult[14] === tmp14) {
-          tmp18 = cResult[15];
-        }
-        if (textVariant == null) {
-          textVariant = "text-sm/normal";
-        }
-        if (color == null) {
-          color = "text-default";
-        }
-        if (cResult[16] === tmp9.refreshText) {
-          if (cResult[17] === textVariant) {
-            if (cResult[18] === color) {
-              let tmp22;
-              if (cResult[19] === tmp4) {
-                tmp22 = cResult[20];
-              }
-              if (cResult[21] === tmp9.wrapper) {
-                if (cResult[22] === tmp18) {
-                  let tmp25;
-                  if (cResult[23] === tmp22) {
-                    tmp25 = cResult[24];
-                  }
-                  return tmp25;
-                }
-              }
-              const obj4 = { style: tmp9.wrapper, children: items };
-              items = [tmp18, tmp22];
-              const tmp28 = React3(View, obj4);
-              cResult[21] = tmp9.wrapper;
-              cResult[22] = tmp18;
-              cResult[23] = tmp22;
-              cResult[24] = tmp28;
-              tmp25 = tmp28;
-            }
-          }
-        }
-        const obj5 = { variant: textVariant, color, lineClamp: 1, style: tmp9.refreshText, children: tmp4 };
-        const tmp24 = _false(Text_Text.Text, obj5);
-        cResult[16] = tmp9.refreshText;
-        cResult[17] = textVariant;
-        cResult[18] = color;
-        cResult[19] = tmp4;
-        cResult[20] = tmp24;
-        tmp22 = tmp24;
-      }
-      const obj6 = { style: tmp12, children: tmp14 };
-      const tmp21 = _false(View, obj6);
-      cResult[13] = tmp12;
-      cResult[14] = tmp14;
-      cResult[15] = tmp21;
-      tmp18 = tmp21;
-    }
-    const obj7 = { style: items1 };
-    items1 = [tmp9.dot, tmp13];
-    const tmp17 = _false(View, obj7);
-    cResult[10] = tmp9.dot;
-    cResult[11] = tmp13;
-    cResult[12] = tmp17;
-    tmp14 = tmp17;
-  }
-  const items2 = [tmp9.dotContainer, tmp10];
-  cResult[7] = tmp9.dotContainer;
-  cResult[8] = tmp10;
-  cResult[9] = items2;
-  tmp12 = items2;
 }) : ((arg0) => {
-  let color;
-  let count;
-  let dotContainerWidth;
-  let items1;
-  let items2;
-  let stringResult;
-  let textVariant;
-  let tmp4;
-  let type;
   ({ type, count, color, dotContainerWidth, textVariant } = arg0);
   if (null == count) {
-    let v3DzP7x;
-    const intl2 = intl3.intl;
-    const string = intl2.string;
+    const intl2 = util.intl;
     if ("online" === type) {
-      v3DzP7x = intl3.t["3DzP7x"];
+      let v3DzP7x = util.t["3DzP7x"];
     } else {
-      v3DzP7x = intl3.t["5SWsJX"];
+      v3DzP7x = util.t["5SWsJX"];
     }
-    stringResult = string(v3DzP7x);
-    tmp4 = require;
+    intl2.string(v3DzP7x);
   } else {
-    let etqpUG;
-    const intl = intl3.intl;
-    const format = intl.format;
+    const intl = util.intl;
     if ("online" === type) {
-      etqpUG = intl3.t.PIikks;
+      let etqpUG = util.t.PIikks;
     } else {
-      etqpUG = intl3.t.etqpUG;
+      etqpUG = util.t.etqpUG;
     }
     const obj = { count };
-    stringResult = format(etqpUG, obj);
-    tmp4 = require;
+    const tmp12 = closure_5();
+    const obj2 = { style: tmp12.wrapper, children: null };
+    const items = [tmp12.dotContainer, ];
+    let tmp16 = null != dotContainerWidth;
+    if (tmp16) {
+      const obj3 = { width: dotContainerWidth };
+      tmp16 = obj3;
+    }
+    const obj4 = { style: null, children: null };
+    items[1] = tmp16;
+    obj4.style = items;
+    const items1 = [tmp12.dot, ];
+    const obj5 = { style: null };
+    items1[1] = "online" === type ? tmp12.onlineDot : tmp12.offlineDot;
+    obj5.style = items1;
+    obj4.children = React3(View, obj5);
+    const items2 = [React3(View, obj4), ];
+    if (textVariant == null) {
+      textVariant = "text-sm/normal";
+    }
+    const obj6 = { variant: textVariant, color: null, lineClamp: 1, style: null, children: null };
+    if (color == null) {
+      color = "text-default";
+    }
+    obj6.color = color;
+    obj6.style = tmp12.refreshText;
+    obj6.children = intl.format(etqpUG, obj);
+    items2[1] = React3(Text_Text.Text, obj6);
+    obj2.children = items2;
+    return React4(View, obj2);
   }
-  const tmp8 = closure_5();
-  const items = [tmp8.dotContainer, ];
-  let tmp12 = null != dotContainerWidth;
-  const obj2 = { style: tmp8.wrapper, children: items2 };
-  if (tmp12) {
-    tmp12 = { width: dotContainerWidth };
-    const obj3 = { width: dotContainerWidth };
-  }
-  items[1] = tmp12;
-  const obj4 = { style: items, children: _false(View, { style: items1 }) };
-  items1 = [tmp8.dot, "online" === type ? tmp8.onlineDot : tmp8.offlineDot];
-  items2 = [_false(View, obj4), ];
-  const Text = tmp4(4892).Text;
-  if (textVariant == null) {
-    textVariant = "text-sm/normal";
-  }
-  const obj5 = { variant: textVariant, color, lineClamp: 1, style: tmp8.refreshText, children: stringResult };
-  if (color == null) {
-    color = "text-default";
-  }
-  items2[1] = _false(Text, obj5);
-  return React3(View, obj2);
 }));
-size = size_mod;
-const result = size.fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx");
-
-export default memoResult;

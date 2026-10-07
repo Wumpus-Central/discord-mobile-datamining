@@ -1,23 +1,18 @@
 // === Module 12246: GuildPowerupsMultiPerkCard ===
 
 // Module 12246 (GuildPowerupsMultiPerkCard)
-import Fragment from "Fragment" /* 21 */;
 import openGuildPowerupsMultiPerkBottomSheetDefault from "openGuildPowerupsMultiPerkBottomSheet" /* 12220 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let guildId;
+const require = fn;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMultiPerkCard.tsx");
 
-const jsx = Fragment.jsx;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
-  let tmp6;
-  let tmp7;
-  let useReducedMotion;
-  let obj = guildId(576);
-  const cResult = obj.c(17);
-  const tmp = guildId;
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+  const cResult = guildId(576).c(17);
   guildId = guildId.guildId;
   const listing = guildId.listing;
   const tmp5 = listing(12223)(guildId, listing);
@@ -31,17 +26,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   } else {
     [tmp6, tmp7] = cResult;
   }
-  tmp(504);
+  guildId(504);
   if (cResult[2] === guildId) {
-    let tmp11;
     if (cResult[3] === listing.powerups) {
-      tmp11 = cResult[4];
+      let tmp11 = cResult[4];
     }
-    const tmp12 = listing(12247)(tmp11);
+    const tmp12 = tmp4(12247)(tmp11);
     if (cResult[5] === guildId) {
-      let tmp13;
       if (cResult[6] === listing) {
-        tmp13 = cResult[7];
+        let tmp13 = cResult[7];
       }
       if (null != tmp12) {
         if (null != tmp5) {
@@ -54,9 +47,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                   if (cResult[12] === tmp12.cost) {
                     if (cResult[13] === tmp12.costDecorator) {
                       if (cResult[14] === tmp12.status) {
-                        let tmp16;
                         if (cResult[15] === tmp15) {
-                          tmp16 = cResult[16];
+                          let tmp16 = cResult[16];
                         }
                         return tmp16;
                       }
@@ -66,9 +58,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
               }
             }
           }
+          const obj2 = { title: null, description: null, cost: null, imageUrl: null, status: null, costDecorator: null, onPress: null, badge: null };
           ({ title: obj3.title, description: obj3.description } = tmp5);
+          obj2.cost = tmp12.cost;
+          obj2.imageUrl = tmp15;
           ({ status: obj3.status, costDecorator: obj3.costDecorator } = tmp12);
-          const tmp18 = jsx(listing(12245), { title: null, description: null, cost: tmp12.cost, imageUrl: tmp15, status: null, costDecorator: null, onPress: tmp13, badge: tmp5.badge });
+          obj2.onPress = tmp13;
+          obj2.badge = tmp5.badge;
+          const tmp18 = jsx(tmp4(12245), { title: null, description: null, cost: null, imageUrl: null, status: null, costDecorator: null, onPress: null, badge: null });
           cResult[8] = tmp5.badge;
           cResult[9] = tmp5.description;
           cResult[10] = tmp5.title;
@@ -84,8 +81,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       return null;
     }
     const fn2 = function w() {
-      const obj = { guildId, listing };
-      openGuildPowerupsMultiPerkBottomSheetDefault(obj);
+      openGuildPowerupsMultiPerkBottomSheetDefault({ guildId, listing });
     };
     cResult[5] = guildId;
     cResult[6] = listing;
@@ -97,30 +93,31 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[3] = listing.powerups;
   cResult[4] = obj5;
   tmp11 = obj5;
+  const obj = guildId(576);
 }) : ((guildId) => {
-  let useReducedMotion;
   guildId = guildId.guildId;
   const listing = guildId.listing;
-  const tmp3 = listing(12223)(guildId, listing);
-  let obj = guildId(504);
+  let badge = listing(12223)(guildId, listing);
   const items = [AccessibilityStore];
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const obj2 = { guildId, powerups: listing.powerups };
-  const tmp5 = listing(12247)(obj2);
+  const stateFromStores = guildId(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  costDecorator = listing(12247)({ guildId, powerups: listing.powerups });
   const items1 = [guildId, listing];
-  let tmp8Result = null;
-  const tmp = listing;
-  if (null != tmp5) {
-    tmp8Result = null;
-    if (null != tmp3) {
-      ({ title: obj3.title, description: obj3.description } = tmp3);
-      const image = tmp3.image;
-      ({ status: obj3.status, costDecorator: obj3.costDecorator } = tmp5);
-      tmp8Result = jsx(tmp(12245), { title: null, description: null, cost: tmp5.cost, imageUrl: stateFromStores ? image.staticUrl : image.animatedUrl, status: null, costDecorator: null, onPress: tmp6, badge: tmp3.badge });
+  let tmp5 = null;
+  if (null != costDecorator) {
+    tmp5 = null;
+    if (null != badge) {
+      const obj5 = { title: null, description: null, cost: null, imageUrl: null, status: null, costDecorator: null, onPress: null, badge: null };
+      ({ title: obj3.title, description: obj3.description } = badge);
+      obj5.cost = costDecorator.cost;
+      const image = badge.image;
+      obj5.imageUrl = stateFromStores ? image.staticUrl : image.animatedUrl;
+      ({ status: obj3.status, costDecorator } = costDecorator);
+      obj5.costDecorator = costDecorator;
+      obj5.onPress = tmp4;
+      badge = badge.badge;
+      obj5.badge = badge;
+      jsx(listing(12245), { title: null, description: null, cost: null, imageUrl: null, status: null, costDecorator: null, onPress: null, badge: null });
     }
   }
-  return tmp8Result;
+  return tmp5;
 });
-const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMultiPerkCard.tsx");
-
-export default tmp2;

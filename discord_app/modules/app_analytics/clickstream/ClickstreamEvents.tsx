@@ -4,13 +4,11 @@
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
-let timestamp;
-
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/app_analytics/clickstream/ClickstreamEvents.tsx");
 
 export const getClickstreamDrainEvent = function getClickstreamDrainEvent(arg0, arr) {
-  const date = new Date();
+  new Date();
   if (AnalyticEvents.GUILD_VIEWED_CLICKSTREAM === arg0) {
     const obj2 = {
       time_minus: arr.map((timestamp) => {
@@ -64,8 +62,6 @@ export const getClickstreamDrainEvent = function getClickstreamDrainEvent(arg0, 
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const self = this;
-    const self2 = this;
     const error = new Error("getClickstreamDrainEvent: Unknown event: " + arg0);
     throw error;
   }

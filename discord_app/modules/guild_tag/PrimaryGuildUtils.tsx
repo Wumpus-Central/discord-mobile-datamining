@@ -7,9 +7,8 @@ const result = size.fileFinishedImporting("modules/guild_tag/PrimaryGuildUtils.t
 
 export const isUserPrimaryGuildEqual = function isUserPrimaryGuildEqual(primaryGuild, primary_guild) {
   if (null != primaryGuild) {
-    let tmp;
     if (null != primary_guild) {
-      tmp = primaryGuild.identityGuildId === primary_guild.identityGuildId && primaryGuild.identityEnabled === primary_guild.identityEnabled && primaryGuild.tag === primary_guild.tag && primaryGuild.badge === primary_guild.badge;
+      let tmp = primaryGuild.identityGuildId === primary_guild.identityGuildId && primaryGuild.identityEnabled === primary_guild.identityEnabled && primaryGuild.tag === primary_guild.tag && primaryGuild.badge === primary_guild.badge;
     }
     return tmp;
   }

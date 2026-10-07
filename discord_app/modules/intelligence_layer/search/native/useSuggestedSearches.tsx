@@ -1,147 +1,196 @@
 // === Module 16826: useSuggestedSearches ===
 
 // Module 16826 (useSuggestedSearches)
-import SuggestedSearchStore2 from "SuggestedSearchStore" /* 11981 */;
-import SmartSearchConstants from "SmartSearchConstants" /* 11982 */;
 import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12002 */;
 import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 12004 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
+import SuggestedSearchStore from "SuggestedSearchStore" /* 11981 */;
 
 const require = globalThis.__r;
-const SuggestedSearchStore = SuggestedSearchStore2;
-let dependencyMap, guildId, suggestedSearches;
 
-const EMPTY_SUGGESTED_SEARCHES = SuggestedSearchStore2.EMPTY_SUGGESTED_SEARCHES;
-let closure_6 = SmartSearchConstants.SUGGESTED_SEARCHES_WINDOW_SIZE;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, source) => {
-  let closure_2;
-  let first;
-  let stateFromStoresArray;
+const require = fn;
+const EMPTY_SUGGESTED_SEARCHES = fn(11981).EMPTY_SUGGESTED_SEARCHES;
+let closure_6 = fn(11982).SUGGESTED_SEARCHES_WINDOW_SIZE;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSuggestedSearches.tsx");
+
+export const useSuggestedSearches = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, source) => {
   const _require = guildId;
-  let tmp = _require;
-  let tmp2 = dependencyMap;
-  let obj = require("react");
-  const cResult = obj.c(19);
+  const cResult = require("c").c(19);
   source = source.source;
   const trackShown = source.trackShown;
   dependencyMap = tmp4;
+  let obj = require("c");
   guildId = undefined;
-  const useIsNlpSearchEnabled = tmp(12020).useIsNlpSearchEnabled;
-  tmp(12020);
   if (guildId != null) {
     guildId = guildId.guildId;
   }
-  const isNlpSearchEnabled = useIsNlpSearchEnabled(guildId, source);
+  const isNlpSearchEnabled = require("SmartSearchExperiments").useIsNlpSearchEnabled(guildId, source);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [stateFromStoresArray];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === isNlpSearchEnabled) {
-    let tmp10;
-    let tmp11;
-    let tmp13;
     if (cResult[2] === guildId) {
-      tmp10 = cResult[3];
-      tmp11 = cResult[4];
+      let tmp9 = cResult[3];
+      let tmp10 = cResult[4];
     }
-    const tmpResult3 = tmp(504);
-    stateFromStoresArray = tmpResult3.useStateFromStoresArray(first, tmp10, tmp11);
+    stateFromStoresArray = tmp(504).useStateFromStoresArray(first, tmp9, tmp10);
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
       const items1 = [stateFromStoresArray];
       cResult[5] = items1;
-      tmp13 = items1;
+      let tmp12 = items1;
     } else {
-      tmp13 = cResult[5];
+      tmp12 = cResult[5];
     }
     if (cResult[6] === isNlpSearchEnabled) {
-      let tmp15;
-      let tmp16;
       if (cResult[7] === guildId) {
-        tmp15 = cResult[8];
-        tmp16 = cResult[9];
+        let tmp14 = cResult[8];
+        let tmp15 = cResult[9];
       }
-      const tmpResult4 = tmp(504);
-      const stateFromStores = tmpResult4.useStateFromStores(tmp13, tmp15, tmp16);
+      const stateFromStores = tmp(504).useStateFromStores(tmp12, tmp14, tmp15);
       if (cResult[10] === guildId) {
         if (cResult[11] === source) {
           if (cResult[12] === stateFromStoresArray) {
-            let tmp18;
-            let tmp19;
-            if (cResult[13] === (undefined !== trackShown && trackShown)) {
-              tmp18 = cResult[14];
-              tmp19 = cResult[15];
+            if (cResult[13] === tmp4) {
+              let tmp17 = cResult[14];
+              let tmp18 = cResult[15];
             }
-            const effect = isNlpSearchEnabled.useEffect(tmp18, tmp19);
+            const effect = isNlpSearchEnabled.useEffect(tmp17, tmp18);
             if (cResult[16] === stateFromStores) {
-              let tmp22;
               if (cResult[17] === stateFromStoresArray) {
-                tmp22 = cResult[18];
+                let tmp21 = cResult[18];
               }
-              return tmp22;
+              return tmp21;
             }
             class F {
               constructor() {
-                const tmp = closure_2 && null != smartSearchQuery && 0 !== stateFromStoresArray.length;
-                if (tmp) {
-                  const obj2 = { smartSearchQuery, suggestedSearches: stateFromStoresArray, suggestionSource: source };
-                  const obj = SmartSearchAnalyticsManagerDefault;
-                  const result = obj.trackSuggestedSearchesShownDeduped(obj2, SearchSessionAnalyticsManagerDefault);
+                tmp = trackShown;
+                if (trackShown) {
+                  tmp2 = closure_0;
+                  tmp3 = null;
+                  tmp = null != closure_0;
                 }
+                if (tmp) {
+                  tmp4 = closure_4;
+                  num = 0;
+                  tmp = 0 !== closure_4.length;
+                }
+                if (tmp) {
+                  tmp5 = closure_1;
+                  tmp6 = closure_2;
+                  obj = closure_1(closure_2[7]);
+                  obj1 = { smartSearchQuery: null, suggestedSearches: null, suggestionSource: null };
+                  tmp7 = closure_0;
+                  obj1.smartSearchQuery = closure_0;
+                  tmp8 = closure_4;
+                  obj1.suggestedSearches = closure_4;
+                  tmp9 = source;
+                  obj1.suggestionSource = source;
+                  result = obj.trackSuggestedSearchesShownDeduped(obj1, closure_1(closure_2[8]));
+                }
+                return;
               }
             }
-            tmp23[0] = stateFromStoresArray;
-            tmp23[1] = stateFromStores;
+            tmp22[0] = stateFromStoresArray;
+            tmp22[1] = stateFromStores;
             class I {
               constructor() {
-                const tmp2 = null == smartSearchQuery || !isNlpSearchEnabled;
-                const result = !tmp2 && SuggestedSearchStore.isLoadingSuggestedSearches(smartSearchQuery);
+                tmp2 = null == closure_0;
+                tmp = closure_0;
+                if (!tmp2) {
+                  tmp3 = closure_3;
+                  tmp2 = !closure_3;
+                }
+                result = !tmp2;
+                if (!tmp2) {
+                  tmp5 = closure_4;
+                  result = closure_4.isLoadingSuggestedSearches(tmp);
+                }
                 return result;
               }
             }
             cResult[17] = stateFromStoresArray;
-            cResult[18] = tmp23;
-            tmp22 = tmp23;
+            cResult[18] = tmp22;
+            tmp21 = tmp22;
           }
         }
       }
       class F {
         constructor() {
-          const tmp = closure_2 && null != smartSearchQuery && 0 !== stateFromStoresArray.length;
-          if (tmp) {
-            const obj2 = { smartSearchQuery, suggestedSearches: stateFromStoresArray, suggestionSource: source };
-            const obj = SmartSearchAnalyticsManagerDefault;
-            const result = obj.trackSuggestedSearchesShownDeduped(obj2, SearchSessionAnalyticsManagerDefault);
+          tmp = trackShown;
+          if (trackShown) {
+            tmp2 = closure_0;
+            tmp3 = null;
+            tmp = null != closure_0;
           }
+          if (tmp) {
+            tmp4 = closure_4;
+            num = 0;
+            tmp = 0 !== closure_4.length;
+          }
+          if (tmp) {
+            tmp5 = closure_1;
+            tmp6 = closure_2;
+            obj = closure_1(closure_2[7]);
+            obj1 = { smartSearchQuery: null, suggestedSearches: null, suggestionSource: null };
+            tmp7 = closure_0;
+            obj1.smartSearchQuery = closure_0;
+            tmp8 = closure_4;
+            obj1.suggestedSearches = closure_4;
+            tmp9 = source;
+            obj1.suggestionSource = source;
+            result = obj.trackSuggestedSearchesShownDeduped(obj1, closure_1(closure_2[8]));
+          }
+          return;
         }
       }
       const items2 = [stateFromStoresArray, guildId, , ];
       class I {
         constructor() {
-          const tmp2 = null == smartSearchQuery || !isNlpSearchEnabled;
-          const result = !tmp2 && SuggestedSearchStore.isLoadingSuggestedSearches(smartSearchQuery);
+          tmp2 = null == closure_0;
+          tmp = closure_0;
+          if (!tmp2) {
+            tmp3 = closure_3;
+            tmp2 = !closure_3;
+          }
+          result = !tmp2;
+          if (!tmp2) {
+            tmp5 = closure_4;
+            result = closure_4.isLoadingSuggestedSearches(tmp);
+          }
           return result;
         }
       }
-      items2[3] = undefined !== trackShown && trackShown;
+      items2[3] = tmp4;
       cResult[10] = guildId;
       cResult[11] = source;
       cResult[12] = stateFromStoresArray;
-      cResult[13] = undefined !== trackShown && trackShown;
+      cResult[13] = tmp4;
       cResult[14] = F;
       cResult[15] = items2;
-      tmp19 = items2;
-      tmp18 = F;
+      tmp18 = items2;
+      tmp17 = F;
+      const tmpResult4 = tmp(504);
     }
     class I {
       constructor() {
-        const tmp2 = null == smartSearchQuery || !isNlpSearchEnabled;
-        const result = !tmp2 && SuggestedSearchStore.isLoadingSuggestedSearches(smartSearchQuery);
+        tmp2 = null == closure_0;
+        tmp = closure_0;
+        if (!tmp2) {
+          tmp3 = closure_3;
+          tmp2 = !closure_3;
+        }
+        result = !tmp2;
+        if (!tmp2) {
+          tmp5 = closure_4;
+          result = closure_4.isLoadingSuggestedSearches(tmp);
+        }
         return result;
       }
     }
@@ -150,14 +199,14 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, source) => 
     cResult[7] = guildId;
     cResult[8] = I;
     cResult[9] = items3;
-    tmp16 = items3;
-    tmp15 = I;
+    tmp15 = items3;
+    tmp14 = I;
+    const tmpResult3 = tmp(504);
   }
   const fn = function l() {
-    if (null != smartSearchQuery) {
-      let nextSuggestions;
+    if (null != closure_0) {
       if (isNlpSearchEnabled) {
-        nextSuggestions = SuggestedSearchStore.getNextSuggestions(tmp, closure_6);
+        let nextSuggestions = SuggestedSearchStore.getNextSuggestions(tmp, closure_6);
       }
       return nextSuggestions;
     }
@@ -168,55 +217,57 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, source) => 
   cResult[2] = guildId;
   cResult[3] = fn;
   cResult[4] = items4;
-  tmp11 = items4;
-  tmp10 = fn;
+  tmp10 = items4;
+  tmp9 = fn;
 }) : ((guildId, source) => {
-  let closure_2;
   const _require = guildId;
   source = source.source;
   const trackShown = source.trackShown;
-  let tmp = undefined !== trackShown && trackShown;
   dependencyMap = tmp;
-  let tmp2 = _require;
   guildId = undefined;
-  const useIsNlpSearchEnabled = require("SmartSearchExperiments").useIsNlpSearchEnabled;
-  require("SmartSearchExperiments");
   if (guildId != null) {
     guildId = guildId.guildId;
   }
-  const isNlpSearchEnabled = useIsNlpSearchEnabled(guildId, source);
+  const isNlpSearchEnabled = require("SmartSearchExperiments").useIsNlpSearchEnabled(guildId, source);
+  let obj = require("SmartSearchExperiments");
   const items = [suggestedSearches];
   const items1 = [guildId, isNlpSearchEnabled];
-  const tmp2Result = tmp2(504);
-  suggestedSearches = tmp2Result.useStateFromStoresArray(items, () => {
-    if (null != smartSearchQuery) {
-      let nextSuggestions;
+  suggestedSearches = require("initialize").useStateFromStoresArray(items, () => {
+    if (null != closure_0) {
       if (isNlpSearchEnabled) {
-        nextSuggestions = SuggestedSearchStore.getNextSuggestions(tmp, closure_6);
+        let nextSuggestions = SuggestedSearchStore.getNextSuggestions(tmp, closure_6);
       }
       return nextSuggestions;
     }
     nextSuggestions = EMPTY_SUGGESTED_SEARCHES;
   }, items1);
+  const tmp2Result = require("initialize");
   const items2 = [suggestedSearches];
   const items3 = [guildId, isNlpSearchEnabled];
-  const items4 = [suggestedSearches, guildId, source, tmp];
-  const tmp2Result2 = tmp2(504);
-  const isLoadingSuggestedSearches = tmp2Result2.useStateFromStores(items2, () => {
-    const tmp2 = null == smartSearchQuery || !isNlpSearchEnabled;
-    const result = !tmp2 && SuggestedSearchStore.isLoadingSuggestedSearches(smartSearchQuery);
+  const items4 = [suggestedSearches, guildId, source, undefined !== trackShown && trackShown];
+  const isLoadingSuggestedSearches = require("initialize").useStateFromStores(items2, () => {
+    let tmp2 = null == closure_0;
+    if (!tmp2) {
+      tmp2 = !isNlpSearchEnabled;
+    }
+    let result = !tmp2;
+    if (!tmp2) {
+      result = SuggestedSearchStore.isLoadingSuggestedSearches(closure_0);
+    }
     return result;
   }, items3);
   const effect = isNlpSearchEnabled.useEffect(() => {
-    const tmp = closure_2 && null != smartSearchQuery && 0 !== suggestedSearches.length;
+    let tmp = closure_2;
+    if (closure_2) {
+      tmp = null != smartSearchQuery;
+    }
+    if (tmp) {
+      tmp = 0 !== suggestedSearches.length;
+    }
     if (tmp) {
       const obj2 = { smartSearchQuery, suggestedSearches, suggestionSource: source };
-      const obj = SmartSearchAnalyticsManagerDefault;
-      const result = obj.trackSuggestedSearchesShownDeduped(obj2, SearchSessionAnalyticsManagerDefault);
+      const result = SmartSearchAnalyticsManagerDefault.trackSuggestedSearchesShownDeduped(obj2, SearchSessionAnalyticsManagerDefault);
     }
   }, items4);
   return { suggestedSearches, isLoadingSuggestedSearches };
 });
-let result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSuggestedSearches.tsx");
-
-export const useSuggestedSearches = tmp2;

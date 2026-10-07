@@ -11,14 +11,6 @@ const result = size.fileFinishedImporting("modules/connections/fetchConnectedAcc
 
 export const fetchConnectedAccounts = function fetchConnectedAccounts() {
   const HTTP = HTTPUtils.HTTP;
-  let obj = { url: Endpoints.CONNECTIONS, oldFormErrors: true, rejectWithError: true };
-  const value = HTTP.get(obj);
-  return value.then((accounts) => {
-    const obj = DispatcherDefault;
-    const obj2 = { type: "USER_CONNECTIONS_UPDATE", local: true, accounts: accounts.body };
-    return obj.dispatch(obj2);
-  }, () => {
-    const obj = DispatcherDefault;
-    return obj.dispatch({ type: "USER_CONNECTIONS_UPDATE", local: true, accounts: [] });
-  });
+  value = HTTP.get({ url: Endpoints.CONNECTIONS, oldFormErrors: true, rejectWithError: true });
+  return value.then((accounts) => DispatcherDefault.dispatch({ type: "USER_CONNECTIONS_UPDATE", local: true, accounts: accounts.body }), () => DispatcherDefault.dispatch({ type: "USER_CONNECTIONS_UPDATE", local: true, accounts: [] }));
 };

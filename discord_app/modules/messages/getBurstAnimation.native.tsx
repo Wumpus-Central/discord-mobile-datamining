@@ -1,266 +1,268 @@
 // === Module 7424: getBurstAnimation ===
 
 // Module 7424 (getBurstAnimation)
-import _asyncToGeneratorDefault from "_asyncToGenerator" /* 5 */;
-import size from "module_2" /* 2 */;
+import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
 
-const require = globalThis.__r;
-let closure_5;
-
-const obj = {
-  load() {
-    return require("module_7425");
-  }
-};
 const items = [
-  obj,
   {
     load() {
-      return require("module_7426");
+      return closure_0(7425);
     }
   },
   {
     load() {
-      return require("module_7427");
+      return closure_0(7426);
     }
   },
   {
     load() {
-      return require("module_7428");
+      return closure_0(7427);
     }
   },
   {
     load() {
-      return require("module_7429");
+      return closure_0(7428);
     }
   },
   {
     load() {
-      return require("module_7430");
+      return closure_0(7429);
     }
   },
   {
     load() {
-      return require("module_7431");
+      return closure_0(7430);
     }
   },
   {
     load() {
-      return require("module_7432");
+      return closure_0(7431);
     }
   },
   {
     load() {
-      return require("module_7433");
+      return closure_0(7432);
     }
   },
   {
     load() {
-      return require("module_7434");
+      return closure_0(7433);
     }
   },
   {
     load() {
-      return require("module_7435");
+      return closure_0(7434);
     }
   },
   {
     load() {
-      return require("module_7436");
+      return closure_0(7435);
     }
   },
   {
     load() {
-      return require("module_7437");
+      return closure_0(7436);
     }
   },
   {
     load() {
-      return require("module_7438");
+      return closure_0(7437);
     }
   },
   {
     load() {
-      return require("module_7439");
+      return closure_0(7438);
     }
   },
   {
     load() {
-      return require("module_7440");
+      return closure_0(7439);
     }
   },
   {
     load() {
-      return require("module_7441");
+      return closure_0(7440);
     }
   },
   {
     load() {
-      return require("module_7442");
+      return closure_0(7441);
+    }
+  },
+  {
+    load() {
+      return closure_0(7442);
     }
   }
 ];
-const obj2 = {
-  load() {
-    return require("module_7443");
-  }
-};
 const items1 = [
-  obj2,
   {
     load() {
-      return require("module_7444");
+      return closure_0(7443);
     }
   },
   {
     load() {
-      return require("module_7445");
+      return closure_0(7444);
     }
   },
   {
     load() {
-      return require("module_7446");
+      return closure_0(7445);
     }
   },
   {
     load() {
-      return require("module_7447");
+      return closure_0(7446);
     }
   },
   {
     load() {
-      return require("module_7448");
+      return closure_0(7447);
     }
   },
   {
     load() {
-      return require("module_7449");
+      return closure_0(7448);
     }
   },
   {
     load() {
-      return require("module_7450");
+      return closure_0(7449);
     }
   },
   {
     load() {
-      return require("module_7451");
+      return closure_0(7450);
     }
   },
   {
     load() {
-      return require("module_7452");
+      return closure_0(7451);
     }
   },
   {
     load() {
-      return require("module_7453");
+      return closure_0(7452);
     }
   },
   {
     load() {
-      return require("module_7454");
+      return closure_0(7453);
     }
   },
   {
     load() {
-      return require("module_7455");
+      return closure_0(7454);
     }
   },
   {
     load() {
-      return require("module_7456");
+      return closure_0(7455);
     }
   },
   {
     load() {
-      return require("module_7457");
+      return closure_0(7456);
     }
   },
   {
     load() {
-      return require("module_7458");
+      return closure_0(7457);
     }
   },
   {
     load() {
-      return require("module_7459");
+      return closure_0(7458);
     }
   },
   {
     load() {
-      return require("module_7460");
+      return closure_0(7459);
+    }
+  },
+  {
+    load() {
+      return closure_0(7460);
     }
   }
 ];
-let closure_0 = _asyncToGeneratorDefault((arg0, arg1, arg2) => {
-  let closure_4;
-  closure_0 = arg0;
-  let closure_1 = arg1;
-  let closure_2 = arg2;
-  const length = arg3;
-  let c6 = 0;
-  let c7 = 0;
-  const iter = (function*(arg0, value, arg2) {
-    if (c7 === 2) {
-      c7 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        return { value, done: true };
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_0 = asyncGeneratorStepDefault(function*(arg0, arg1, arg2) {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        let flag;
-        c7 = 2;
-        if (0 === c6) {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            return { value, done: true };
-          } else {
-            closure_5 = tmp4;
-            let burstAnimationHash = tmp;
-            flag = length;
-            if (length === undefined) {
-              flag = false;
-            }
-            burstAnimationHash = undefined;
-            c6 = 1;
-            c7 = 1;
-            return { value: "Reflect", done: true };
-          }
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === c6) {
+        if (arg0 === 1) {
           c7 = 3;
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          return { value, done: true };
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          const _HermesInternal = HermesInternal;
-          const obj6 = closure_0(closure_1[37]);
-          burstAnimationHash = obj6.getBurstAnimationHash("" + closure_0 + closure_1 + closure_2);
-          c7 = 3;
-          const obj5 = { value: obj.load(), done: true };
-          return obj5;
+          closure_5 = tmp5;
+          closure_4 = tmp2;
+          closure_132_3 = undefined;
+          closure_132_0 = closure_0;
+          closure_132_1 = dependencyMap;
+          closure_132_2 = closure_2;
+          let flag = length;
+          if (length === undefined) {
+            flag = false;
+          }
+          closure_132_3 = flag;
+          let burstAnimationHash;
+          c6 = 1;
+          c7 = 1;
+          return { value: "Reflect", done: true };
         }
-      } catch (tmp14) {
+      } else if (arg0 === 1) {
         c7 = 3;
-        throw tmp14;
+        throw value;
+      } else if (arg0 === 2) {
+        c7 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
+      } else {
+        const _HermesInternal = HermesInternal;
+        burstAnimationHash = closure_0(dependencyMap[37]).getBurstAnimationHash("" + closure_132_0 + closure_132_1 + closure_132_2);
+        if (closure_132_3) {
+          let tmp6 = closure_2;
+        } else {
+          tmp6 = length;
+        }
+        tmp6[burstAnimationHash % length.length].load();
+        c7 = 3;
+        const obj5 = closure_0(dependencyMap[37]);
       }
+    } catch (tmp16) {
+      c7 = tmp;
+      throw tmp16;
     }
-  })();
-  iter.next();
-  return iter;
+  }
 });
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/getBurstAnimation.native.tsx");
 
 export const getBurstAnimation = function() {
-  return closure_0(...arguments);
+  const self = this;
+  const apply = closure_0.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

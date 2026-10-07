@@ -1,76 +1,52 @@
 // === Module 18125: AppStoreParentalRevocationScreen ===
 
 // Module 18125 (AppStoreParentalRevocationScreen)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl5 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import _modDef2815 from "module_2815" /* 2815 */;
 import LinkingDefault from "Linking" /* 4571 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import Stack_Stack from "Stack/Stack" /* 5600 */;
-import ModalScreen2 from "ModalScreen" /* 8128 */;
-import ModalContent2 from "ModalContent" /* 8129 */;
-import LinkExternalSmallIcon2 from "LinkExternalSmallIcon" /* 8296 */;
-import ModalActionButton2 from "ModalActionButton" /* 10742 */;
-import ModalFooter2 from "ModalFooter" /* 11549 */;
+import ModalScreen from "ModalScreen" /* 8128 */;
+import ModalContent from "ModalContent" /* 8129 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8296 */;
+import ModalActionButton from "ModalActionButton" /* 10742 */;
+import ModalFooter from "ModalFooter" /* 11549 */;
 import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 18111 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let hasOwnProperty;
-let metroRequire;
-let obj2;
-const View = react_native.View;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = "https://support.discord.com/hc/en-us/articles/42855178312087";
-let obj = { content: { flexGrow: 1, width: "100%" }, upperHalf: { flex: 1, justifyContent: "flex-end", alignItems: "center" }, lowerHalf: { flex: 1 }, text: { textAlign: "center" }, body: obj2 };
-obj2 = { paddingHorizontal: nativeDefault.space.PX_16 };
-let closure_8 = createStyles.createStyles(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let LinkExternalSmallIcon;
-  let body;
-  let content;
-  let first;
-  let intl4;
-  let items;
-  let items1;
-  let items2;
-  let items3;
-  let items4;
-  let obj11;
-  let obj8;
-  let text;
-  let text2;
-  let tmp12;
-  let tmp15;
-  let tmp18;
-  let tmp21;
-  let tmp6;
-  let tmp9;
-  let upperHalf;
-  let obj = react2;
-  const cResult = obj.c(30);
+const createStyles = fn(4896);
+let obj2 = { content: { flexGrow: 1, width: "100%" }, upperHalf: { flex: 1, justifyContent: "flex-end", alignItems: "center" }, lowerHalf: { flex: 1 }, text: { textAlign: "center" }, body: { paddingHorizontal: nativeDefault.space.PX_16 } };
+let closure_8 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_flows/native/tasks/AppStoreParentalRevocationScreen.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(30);
   const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t() {
-      const obj = LinkingDefault;
-      obj.openURL(closure_1_7);
+      LinkingDefault.openURL(closure_1_7);
     };
     cResult[0] = fn;
-    first = fn;
+    let first = fn;
   } else {
     first = cResult[0];
   }
   ({ content, upperHalf, text } = tmp4);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = intl5.intl;
+    const intl = util.intl;
     const stringResult = intl.string(_modDef2815.Z87TFb);
     cResult[1] = stringResult;
-    tmp6 = stringResult;
+    let tmp6 = stringResult;
   } else {
     tmp6 = cResult[1];
   }
@@ -79,16 +55,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const tmp11 = hasOwnProperty(Text_Text.Text, obj2);
     cResult[2] = tmp4.text;
     cResult[3] = tmp11;
-    tmp9 = tmp11;
+    let tmp9 = tmp11;
   } else {
     tmp9 = cResult[3];
   }
   ({ body, text: text2 } = tmp4);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl2 = intl5.intl;
+    const intl2 = util.intl;
     const stringResult1 = intl2.string(_modDef2815.VS98dM);
     cResult[4] = stringResult1;
-    tmp12 = stringResult1;
+    let tmp12 = stringResult1;
   } else {
     tmp12 = cResult[4];
   }
@@ -97,106 +73,100 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const tmp17 = hasOwnProperty(Text_Text.Text, obj3);
     cResult[5] = tmp4.text;
     cResult[6] = tmp17;
-    tmp15 = tmp17;
+    let tmp15 = tmp17;
   } else {
     tmp15 = cResult[6];
   }
-  const text3 = tmp4.text;
   if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl3 = intl5.intl;
+    const intl3 = util.intl;
     const stringResult2 = intl3.string(_modDef2815.BaI6L4);
     cResult[7] = stringResult2;
-    tmp18 = stringResult2;
+    let tmp18 = stringResult2;
   } else {
     tmp18 = cResult[7];
   }
   if (cResult[8] !== tmp4.text) {
-    const obj4 = { variant: "text-md/medium", color: "text-subtle", style: text3, children: tmp18 };
+    const obj4 = { variant: "text-md/medium", color: "text-subtle", style: tmp4.text, children: tmp18 };
     const tmp23 = hasOwnProperty(Text_Text.Text, obj4);
     cResult[8] = tmp4.text;
     cResult[9] = tmp23;
-    tmp21 = tmp23;
+    let tmp21 = tmp23;
   } else {
     tmp21 = cResult[9];
   }
   if (cResult[10] === tmp4.body) {
     if (cResult[11] === tmp21) {
-      let tmp24;
       if (cResult[12] === tmp15) {
-        tmp24 = cResult[13];
+        let tmp24 = cResult[13];
       }
       if (cResult[14] === tmp24) {
-        let tmp26;
         if (cResult[15] === tmp9) {
-          tmp26 = cResult[16];
+          let tmp26 = cResult[16];
         }
         if (cResult[17] === tmp4.upperHalf) {
-          let tmp30;
-          let tmp34;
           if (cResult[18] === tmp26) {
-            tmp30 = cResult[19];
+            let tmp30 = cResult[19];
           }
           if (cResult[20] !== tmp4.lowerHalf) {
             const obj5 = { style: tmp4.lowerHalf };
             const tmp37 = hasOwnProperty(View, obj5);
             cResult[20] = tmp4.lowerHalf;
             cResult[21] = tmp37;
-            tmp34 = tmp37;
+            let tmp34 = tmp37;
           } else {
             tmp34 = cResult[21];
           }
           if (cResult[22] === tmp4.content) {
             if (cResult[23] === tmp30) {
-              let tmp38;
-              let tmp43;
-              let tmp47;
-              let tmp52;
               if (cResult[24] === tmp34) {
-                tmp38 = cResult[25];
+                let tmp38 = cResult[25];
               }
               const _Symbol = Symbol;
               if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
                 const tmp46 = hasOwnProperty(LogOutDisclaimerDefault, {});
                 cResult[26] = tmp46;
-                tmp43 = tmp46;
+                let tmp43 = tmp46;
               } else {
                 tmp43 = cResult[26];
               }
               const _Symbol2 = Symbol;
               if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
-                const obj6 = { children: items };
-                items = [tmp43, ];
-                const ModalFooter = ModalFooter2.ModalFooter;
-                const obj7 = { variant: "primary", text: intl4.string(_modDef2815["6FXIU6"]), icon: hasOwnProperty(LinkExternalSmallIcon, obj8), iconPosition: "end", onPress: first };
-                const ModalActionButton = ModalActionButton2.ModalActionButton;
-                intl4 = intl5.intl;
-                obj8 = { color: nativeDefault.colors.WHITE };
-                LinkExternalSmallIcon = LinkExternalSmallIcon2.LinkExternalSmallIcon;
-                items[1] = hasOwnProperty(ModalActionButton, obj7);
-                const tmp51 = metroRequire(ModalFooter, obj6);
+                const obj6 = { children: null };
+                const items = [tmp43, ];
+                const obj7 = { variant: "primary", text: null, icon: null, iconPosition: "end", onPress: null };
+                const intl4 = util.intl;
+                obj7.text = intl4.string(_modDef2815["6FXIU6"]);
+                const obj8 = { color: nativeDefault.colors.WHITE };
+                obj7.icon = hasOwnProperty(LinkExternalSmallIcon.LinkExternalSmallIcon, obj8);
+                obj7.onPress = first;
+                items[1] = hasOwnProperty(ModalActionButton.ModalActionButton, obj7);
+                obj6.children = items;
+                const tmp51 = timestampProducer(ModalFooter.ModalFooter, obj6);
                 cResult[27] = tmp51;
-                tmp47 = tmp51;
+                let tmp47 = tmp51;
               } else {
                 tmp47 = cResult[27];
               }
               if (cResult[28] !== tmp38) {
-                const obj9 = { children: items1 };
-                items1 = [tmp38, tmp47];
-                const tmp54 = metroRequire(ModalScreen2.ModalScreen, obj9);
+                const obj9 = { children: null };
+                const items1 = [tmp38, tmp47];
+                obj9.children = items1;
+                const tmp54 = timestampProducer(ModalScreen.ModalScreen, obj9);
                 cResult[28] = tmp38;
                 cResult[29] = tmp54;
-                tmp52 = tmp54;
+                let tmp52 = tmp54;
               } else {
                 tmp52 = cResult[29];
               }
               return tmp52;
             }
           }
-          const obj10 = { children: metroRequire(View, obj11) };
-          obj11 = { style: content, children: items2 };
-          items2 = [tmp30, tmp34];
-          const ModalContent = ModalContent2.ModalContent;
-          const tmp42 = hasOwnProperty(ModalContent, obj10);
+          const obj10 = { children: null };
+          const obj11 = { style: content, children: null };
+          const items2 = [tmp30, tmp34];
+          obj11.children = items2;
+          obj10.children = timestampProducer(View, obj11);
+          const tmp42 = hasOwnProperty(ModalContent.ModalContent, obj10);
           cResult[22] = tmp4.content;
           cResult[23] = tmp30;
           cResult[24] = tmp34;
@@ -210,84 +180,66 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         cResult[19] = tmp33;
         tmp30 = tmp33;
       }
-      const obj13 = { align: "center", spacing: nativeDefault.space.PX_16, children: items3 };
-      const Stack2 = Stack_Stack.Stack;
-      items3 = [tmp9, tmp24];
-      const tmp29 = metroRequire(Stack2, obj13);
+      const obj13 = { align: "center", spacing: nativeDefault.space.PX_16, children: null };
+      const items3 = [tmp9, tmp24];
+      obj13.children = items3;
+      const tmp29 = timestampProducer(Stack_Stack.Stack, obj13);
       cResult[14] = tmp24;
       cResult[15] = tmp9;
       cResult[16] = tmp29;
       tmp26 = tmp29;
     }
   }
-  const obj14 = { align: "center", spacing: nativeDefault.space.PX_16, style: body, children: items4 };
-  const Stack = Stack_Stack.Stack;
-  items4 = [tmp15, tmp21];
-  const tmp25 = metroRequire(Stack, obj14);
+  const obj14 = { align: "center", spacing: nativeDefault.space.PX_16, style: body, children: null };
+  const items4 = [tmp15, tmp21];
+  obj14.children = items4;
+  const tmp25 = timestampProducer(Stack_Stack.Stack, obj14);
   cResult[10] = tmp4.body;
   cResult[11] = tmp21;
   cResult[12] = tmp15;
   cResult[13] = tmp25;
   tmp24 = tmp25;
 }) : (() => {
-  let LinkExternalSmallIcon;
-  let Stack;
-  let intl;
-  let intl2;
-  let intl3;
-  let intl4;
-  let items;
-  let items1;
-  let items2;
-  let items3;
-  let items4;
-  let obj13;
-  let obj3;
-  let obj5;
   const tmp = closure_8();
-  const callback = react.useCallback(() => {
-    const obj = LinkingDefault;
-    obj.openURL(closure_1_7);
+  const callback = noop.useCallback(() => {
+    LinkingDefault.openURL(closure_1_7);
   }, []);
-  let obj = { children: items3 };
-  const ModalScreen = ModalScreen2.ModalScreen;
-  const obj2 = { children: metroRequire(View, obj3) };
-  obj3 = { style: tmp.content, children: items2 };
-  const obj4 = { style: tmp.upperHalf, children: metroRequire(Stack, obj5) };
-  const ModalContent = ModalContent2.ModalContent;
-  obj5 = { align: "center", spacing: nativeDefault.space.PX_16, children: items };
-  Stack = Stack_Stack.Stack;
-  const obj6 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.text, children: intl.string(_modDef2815.Z87TFb) };
-  const Text = Text_Text.Text;
-  intl = intl5.intl;
-  items = [hasOwnProperty(Text, obj6), ];
-  const obj7 = { align: "center", spacing: nativeDefault.space.PX_16, style: tmp.body, children: items1 };
-  const Stack2 = Stack_Stack.Stack;
-  const obj8 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: intl2.string(_modDef2815.VS98dM) };
-  const Text2 = Text_Text.Text;
-  intl2 = intl5.intl;
-  items1 = [hasOwnProperty(Text2, obj8), ];
-  const obj9 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: intl3.string(_modDef2815.BaI6L4) };
-  const Text3 = Text_Text.Text;
-  intl3 = intl5.intl;
-  items1[1] = hasOwnProperty(Text3, obj9);
-  items[1] = metroRequire(Stack2, obj7);
-  items2 = [hasOwnProperty(View, obj4), ];
-  const obj10 = { style: tmp.lowerHalf };
-  items2[1] = hasOwnProperty(View, obj10);
-  items3 = [hasOwnProperty(ModalContent, obj2), ];
-  const obj11 = { children: items4 };
-  const ModalFooter = ModalFooter2.ModalFooter;
-  items4 = [hasOwnProperty(LogOutDisclaimerDefault, {}), ];
-  const obj12 = { variant: "primary", text: intl4.string(_modDef2815["6FXIU6"]), icon: hasOwnProperty(LinkExternalSmallIcon, obj13), iconPosition: "end", onPress: callback };
-  const ModalActionButton = ModalActionButton2.ModalActionButton;
-  intl4 = intl5.intl;
-  obj13 = { color: nativeDefault.colors.WHITE };
-  LinkExternalSmallIcon = LinkExternalSmallIcon2.LinkExternalSmallIcon;
-  items4[1] = hasOwnProperty(ModalActionButton, obj12);
-  items3[1] = metroRequire(ModalFooter, obj11);
-  return metroRequire(ModalScreen, obj);
+  const obj = { children: null };
+  const obj2 = { children: null };
+  const obj3 = { style: tmp.content, children: null };
+  const obj4 = { style: tmp.upperHalf, children: null };
+  const obj5 = { align: "center", spacing: nativeDefault.space.PX_16, children: null };
+  const obj6 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+  const intl = util.intl;
+  obj6.children = intl.string(_modDef2815.Z87TFb);
+  const items = [hasOwnProperty(Text_Text.Text, obj6), ];
+  const obj7 = { align: "center", spacing: nativeDefault.space.PX_16, style: tmp.body, children: null };
+  const obj8 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
+  const intl2 = util.intl;
+  obj8.children = intl2.string(_modDef2815.VS98dM);
+  const items1 = [hasOwnProperty(Text_Text.Text, obj8), ];
+  const obj9 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
+  const intl3 = util.intl;
+  obj9.children = intl3.string(_modDef2815.BaI6L4);
+  items1[1] = hasOwnProperty(Text_Text.Text, obj9);
+  obj7.children = items1;
+  items[1] = timestampProducer(Stack_Stack.Stack, obj7);
+  obj5.children = items;
+  obj4.children = timestampProducer(Stack_Stack.Stack, obj5);
+  const items2 = [hasOwnProperty(View, obj4), hasOwnProperty(View, { style: tmp.lowerHalf })];
+  obj3.children = items2;
+  obj2.children = timestampProducer(View, obj3);
+  const items3 = [hasOwnProperty(ModalContent.ModalContent, obj2), ];
+  const obj11 = { children: null };
+  const items4 = [hasOwnProperty(LogOutDisclaimerDefault, {}), ];
+  const obj12 = { variant: "primary", text: null, icon: null, iconPosition: "end", onPress: null };
+  const intl4 = util.intl;
+  obj12.text = intl4.string(_modDef2815["6FXIU6"]);
+  obj12.icon = hasOwnProperty(LinkExternalSmallIcon.LinkExternalSmallIcon, { color: nativeDefault.colors.WHITE });
+  obj12.onPress = callback;
+  items4[1] = hasOwnProperty(ModalActionButton.ModalActionButton, obj12);
+  obj11.children = items4;
+  items3[1] = timestampProducer(ModalFooter.ModalFooter, obj11);
+  obj.children = items3;
+  return timestampProducer(ModalScreen.ModalScreen, obj);
 });
-const result = size.fileFinishedImporting("modules/safety_flows/native/tasks/AppStoreParentalRevocationScreen.tsx");
-
-export default tmp3;

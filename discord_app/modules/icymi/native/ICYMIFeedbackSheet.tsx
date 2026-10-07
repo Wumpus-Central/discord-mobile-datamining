@@ -1,127 +1,157 @@
 // === Module 16459: ICYMIFeedbackSheet ===
 
 // Module 16459 (ICYMIFeedbackSheet)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
-import intl8 from "intl" /* 1126 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8039 */;
 import FeedbackActionSheetDefault from "FeedbackActionSheet" /* 11283 */;
 import ICYMIAnalytics2 from "ICYMIAnalytics" /* 14183 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  let intl4;
-  let intl5;
-  let intl6;
-  let intl7;
-  let tmp11;
-  let tmp6;
-  let tmp7;
-  let tmp8;
-  let obj = react2;
-  const cResult = obj.c(5);
+require = fn;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/icymi/native/ICYMIFeedbackSheet.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = intl8.intl;
-    const stringResult = intl.string(intl8.t["ppfH9+"]);
+    const intl = util.intl;
+    const stringResult = intl.string(util.t["ppfH9+"]);
     cResult[0] = stringResult;
-    first = stringResult;
+    let first = stringResult;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl2 = intl8.intl;
-    const stringResult1 = intl2.string(intl8.t["ePk/Cf"]);
-    const intl3 = intl8.intl;
-    const stringResult2 = intl3.string(intl8.t.sBOuOf);
-    let obj2 = { label: intl4.string(intl8.t.F6TmZA), value: "irrelevant_content" };
-    intl4 = intl8.intl;
+    const intl2 = util.intl;
+    const stringResult1 = intl2.string(util.t["ePk/Cf"]);
+    const intl3 = util.intl;
+    const stringResult2 = intl3.string(util.t.sBOuOf);
+    let obj2 = { label: null, value: "irrelevant_content" };
+    const intl4 = util.intl;
+    obj2.label = intl4.string(util.t.F6TmZA);
     let items = [obj2, , , , ];
-    const obj3 = { label: intl5.string(intl8.t.voWAzi), value: "not_enough_content" };
-    intl5 = intl8.intl;
+    const obj3 = { label: null, value: "not_enough_content" };
+    const intl5 = util.intl;
+    obj3.label = intl5.string(util.t.voWAzi);
     items[1] = obj3;
-    const obj4 = { label: intl6.string(intl8.t.Ay8iwx), value: "too_much_content" };
-    intl6 = intl8.intl;
+    const obj4 = { label: null, value: "too_much_content" };
+    const intl6 = util.intl;
+    obj4.label = intl6.string(util.t.Ay8iwx);
     items[2] = obj4;
-    const obj5 = { label: intl7.string(intl8.t["Yu+52W"]), value: "laggy" };
-    intl7 = intl8.intl;
+    const obj5 = { label: null, value: "laggy" };
+    const intl7 = util.intl;
+    obj5.label = intl7.string(util.t["Yu+52W"]);
     items[3] = obj5;
     items[4] = { label: "Other", value: "other" };
     cResult[1] = stringResult1;
     cResult[2] = stringResult2;
     cResult[3] = items;
-    tmp8 = items;
-    tmp7 = stringResult2;
-    tmp6 = stringResult1;
+    let tmp8 = items;
+    let tmp7 = stringResult2;
+    let tmp6 = stringResult1;
   } else {
     tmp6 = cResult[1];
     tmp7 = cResult[2];
     tmp8 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    FeedbackActionSheetDefault;
-    const tmp15 = <tmp14 headerLabel={first} showHeaderCloseButton hideDontShowAgainCheckbox ratingsBodyLabel={tmp6} reasonsHeaderLabel={tmp7} reasons={tmp8} otherKey="other" trackOpen={ICYMIAnalytics2.ICYMIAnalytics.trackFeedFeedbackPromptViewed} feedbackReasons={["other"]} trackReport={function trackReport(reason) {
-      let rating;
-      const obj = ICYMIActionCreatorsDefault;
-      obj.giveFeedback();
-      const ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
-      let tmp2;
-      const trackFeedFeedbackSubmitted = ICYMIAnalytics.trackFeedFeedbackSubmitted;
-      if (null != reason.reason) {
-        const items = [reason.reason.value];
-        tmp2 = items;
-      }
-      const obj2 = { reason_descriptions: tmp2, rating, user_feedback: reason.feedback };
-      rating = reason.rating;
-      const result = trackFeedFeedbackSubmitted(obj2);
-    }} />;
+    const obj6 = {
+      headerLabel: first,
+      showHeaderCloseButton: true,
+      hideDontShowAgainCheckbox: true,
+      ratingsBodyLabel: tmp6,
+      reasonsHeaderLabel: tmp7,
+      reasons: tmp8,
+      otherKey: "other",
+      trackOpen: ICYMIAnalytics2.ICYMIAnalytics.trackFeedFeedbackPromptViewed,
+      feedbackReasons: ["other"],
+      trackReport(reason) {
+          ICYMIActionCreatorsDefault.giveFeedback();
+          const ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
+          let tmp2;
+          if (null != reason.reason) {
+            const items = [reason.reason.value];
+            tmp2 = items;
+          }
+          const obj2 = { reason_descriptions: tmp2, rating: null, user_feedback: reason.feedback };
+          const rating = reason.rating;
+          obj2.rating = rating;
+          const result = ICYMIAnalytics.trackFeedFeedbackSubmitted(obj2);
+        }
+    };
+    const tmp15 = jsx(FeedbackActionSheetDefault, {
+      headerLabel: first,
+      showHeaderCloseButton: true,
+      hideDontShowAgainCheckbox: true,
+      ratingsBodyLabel: tmp6,
+      reasonsHeaderLabel: tmp7,
+      reasons: tmp8,
+      otherKey: "other",
+      trackOpen: ICYMIAnalytics2.ICYMIAnalytics.trackFeedFeedbackPromptViewed,
+      feedbackReasons: ["other"],
+      trackReport(reason) {
+          ICYMIActionCreatorsDefault.giveFeedback();
+          const ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
+          let tmp2;
+          if (null != reason.reason) {
+            const items = [reason.reason.value];
+            tmp2 = items;
+          }
+          const obj2 = { reason_descriptions: tmp2, rating: null, user_feedback: reason.feedback };
+          const rating = reason.rating;
+          obj2.rating = rating;
+          const result = ICYMIAnalytics.trackFeedFeedbackSubmitted(obj2);
+        }
+    });
     cResult[4] = tmp15;
-    tmp11 = tmp15;
+    let tmp11 = tmp15;
   } else {
     tmp11 = cResult[4];
   }
   return tmp11;
 }) : (() => {
-  let intl4;
-  let intl5;
-  let intl6;
-  let intl7;
-  FeedbackActionSheetDefault;
-  const intl = intl8.intl;
-  const intl2 = intl8.intl;
-  const intl3 = intl8.intl;
-  let obj2 = { label: intl4.string(intl8.t.F6TmZA), value: "irrelevant_content" };
-  intl4 = intl8.intl;
+  const obj = { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, otherKey: "other", trackOpen: null, feedbackReasons: null, trackReport: null };
+  const intl = util.intl;
+  obj.headerLabel = intl.string(util.t["ppfH9+"]);
+  const intl2 = util.intl;
+  obj.ratingsBodyLabel = intl2.string(util.t["ePk/Cf"]);
+  const intl3 = util.intl;
+  obj.reasonsHeaderLabel = intl3.string(util.t.sBOuOf);
+  let obj2 = { label: null, value: "irrelevant_content" };
+  const intl4 = util.intl;
+  obj2.label = intl4.string(util.t.F6TmZA);
   let items = [obj2, , , , ];
-  const obj3 = { label: intl5.string(intl8.t.voWAzi), value: "not_enough_content" };
-  intl5 = intl8.intl;
+  const obj3 = { label: null, value: "not_enough_content" };
+  const intl5 = util.intl;
+  obj3.label = intl5.string(util.t.voWAzi);
   items[1] = obj3;
-  const obj4 = { label: intl6.string(intl8.t.Ay8iwx), value: "too_much_content" };
-  intl6 = intl8.intl;
+  const obj4 = { label: null, value: "too_much_content" };
+  const intl6 = util.intl;
+  obj4.label = intl6.string(util.t.Ay8iwx);
   items[2] = obj4;
-  const obj5 = { label: intl7.string(intl8.t["Yu+52W"]), value: "laggy" };
-  intl7 = intl8.intl;
+  const obj5 = { label: null, value: "laggy" };
+  const intl7 = util.intl;
+  obj5.label = intl7.string(util.t["Yu+52W"]);
   items[3] = obj5;
   items[4] = { label: "Other", value: "other" };
-  return <tmp headerLabel={intl.string(intl8.t["ppfH9+"])} showHeaderCloseButton hideDontShowAgainCheckbox ratingsBodyLabel={intl2.string(intl8.t["ePk/Cf"])} reasonsHeaderLabel={intl3.string(intl8.t.sBOuOf)} reasons={items} otherKey="other" trackOpen={ICYMIAnalytics2.ICYMIAnalytics.trackFeedFeedbackPromptViewed} feedbackReasons={["other"]} trackReport={function trackReport(reason) {
-    let rating;
-    const obj = ICYMIActionCreatorsDefault;
-    obj.giveFeedback();
+  obj.reasons = items;
+  obj.trackOpen = ICYMIAnalytics2.ICYMIAnalytics.trackFeedFeedbackPromptViewed;
+  obj.feedbackReasons = ["other"];
+  obj.trackReport = function trackReport(reason) {
+    ICYMIActionCreatorsDefault.giveFeedback();
     const ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
     let tmp2;
-    const trackFeedFeedbackSubmitted = ICYMIAnalytics.trackFeedFeedbackSubmitted;
     if (null != reason.reason) {
       const items = [reason.reason.value];
       tmp2 = items;
     }
-    const obj2 = { reason_descriptions: tmp2, rating, user_feedback: reason.feedback };
-    rating = reason.rating;
-    const result = trackFeedFeedbackSubmitted(obj2);
-  }} />;
+    const obj2 = { reason_descriptions: tmp2, rating: null, user_feedback: reason.feedback };
+    const rating = reason.rating;
+    obj2.rating = rating;
+    const result = ICYMIAnalytics.trackFeedFeedbackSubmitted(obj2);
+  };
+  return jsx(FeedbackActionSheetDefault, { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, otherKey: "other", trackOpen: null, feedbackReasons: null, trackReport: null });
 });
-let result = size.fileFinishedImporting("modules/icymi/native/ICYMIFeedbackSheet.tsx");
-
-export default tmp3;

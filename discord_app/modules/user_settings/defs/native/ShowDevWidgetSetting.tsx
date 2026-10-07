@@ -1,22 +1,16 @@
 // === Module 15419: ShowDevWidgetSetting ===
 
 // Module 15419 (ShowDevWidgetSetting)
-import get_initialized from "get initialized" /* 504 */;
-import react from "react" /* 576 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14666 */;
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
 import DevToolsActionCreators from "DevToolsActionCreators" /* 15420 */;
-import StaffBadgeIcon from "StaffBadgeIcon" /* 15421 */;
 import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7216 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import size from "module_2" /* 2 */;
 
+require = fn;
+const ReactCompilerGating = fn(558);
+const SettingBuilders = fn(11142);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let showDevWidget;
-  let tmp4;
-  let tmp5;
-  const obj = react;
-  const cResult = obj.c(2);
+  const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [DevToolsSettingsStore];
     const fn = function n() {
@@ -29,29 +23,42 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const tmpResult = get_initialized;
-  return tmpResult.useStateFromStores(tmp4, tmp5);
+  return initialize.useStateFromStores(tmp4, tmp5);
 }) : (() => {
-  let showDevWidget;
   const items = [DevToolsSettingsStore];
-  const obj = get_initialized;
-  return obj.useStateFromStores(items, () => showDevWidget.showDevWidget);
+  return initialize.useStateFromStores(items, () => showDevWidget.showDevWidget);
 });
-let obj = {
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     return "Show Dev Tools Widget";
   },
   parent: null,
-  IconComponent: StaffBadgeIcon.StaffBadgeIcon,
+  IconComponent: fn(15421).StaffBadgeIcon,
   onValueChange: function handleShowDevWidgetSettingToggle(showDevWidget) {
-    const obj = DevToolsActionCreators;
-    const obj2 = { showDevWidget };
-    const result = obj.updateDevToolsSettings(obj2);
+    const result = DevToolsActionCreators.updateDevToolsSettings({ showDevWidget });
   },
-  useValue: tmp2,
-  usePredicate: useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate
-};
-const toggle = SettingBuilders.createToggle(obj);
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(2);
+    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+      const items = [DevToolsSettingsStore];
+      const fn = function n() {
+        return showDevWidget.showDevWidget;
+      };
+      cResult[0] = items;
+      cResult[1] = fn;
+      tmp4 = items;
+      tmp5 = fn;
+    } else {
+      [tmp4, tmp5] = cResult;
+    }
+    return initialize.useStateFromStores(tmp4, tmp5);
+  }) : (() => {
+    const items = [DevToolsSettingsStore];
+    return initialize.useStateFromStores(items, () => showDevWidget.showDevWidget);
+  }),
+  usePredicate: fn(14666).useStaffOrDeveloperSettingPredicate
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/ShowDevWidgetSetting.tsx");
 
 export default toggle;

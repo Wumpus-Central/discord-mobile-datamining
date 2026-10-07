@@ -2,29 +2,23 @@
 
 // Module 18038 (useInviteApplicationBypassInfo)
 import PermissionStore from "PermissionStore" /* 4515 */;
-import Constants from "Constants" /* 1085 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, features;
 
-let c3;
-let closure_4;
+const require = fn;
+const Constants = fn(1085);
 ({ GuildFeatures: c3, Permissions: closure_4 } = Constants);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let first;
-  let obj2;
-  let tmp7;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/instant_invite/useInviteApplicationBypassInfo.tsx");
+
+export const useInviteApplicationBypassInfo = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   _require = arg0;
-  const obj = require("react");
-  const cResult = obj.c(9);
-  const tmp = _require;
+  const cResult = require("c").c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [PermissionStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -38,7 +32,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[1] = arg0;
     cResult[2] = E;
     cResult[3] = items1;
-    tmp7 = items1;
+    let tmp7 = items1;
   } else {
     class E {
       constructor() {
@@ -47,9 +41,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     tmp7 = cResult[3];
   }
-  const tmpResult = tmp(504);
-  const stateFromStores = tmpResult.useStateFromStores(first, E, tmp7);
-  const tmp9 = cResult[4];
+  const obj = require("c");
+  const stateFromStores = require("initialize").useStateFromStores(first, E, tmp7);
   if (arg0 != null) {
     class E {
       constructor() {
@@ -57,8 +50,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }
-  if (tmp9 !== undefined) {
-    let hasItem;
+  if (cResult[4] !== undefined) {
     class E {
       constructor() {
         return closure_2.can(Permissions.KICK_MEMBERS, closure_0);
@@ -70,10 +62,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           return closure_2.can(Permissions.KICK_MEMBERS, closure_0);
         }
       }
-      hasItem = obj3.has(constants.MEMBER_VERIFICATION_MANUAL_APPROVAL);
+      let hasItem = obj3.has(constants.MEMBER_VERIFICATION_MANUAL_APPROVAL);
     }
     if (hasItem) {
-      let hasItem1;
       class E {
         constructor() {
           return closure_2.can(Permissions.KICK_MEMBERS, closure_0);
@@ -85,7 +76,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             return closure_2.can(Permissions.KICK_MEMBERS, closure_0);
           }
         }
-        hasItem1 = obj4.has(constants.MEMBER_VERIFICATION_GATE_ENABLED);
+        const hasItem1 = obj4.has(constants.MEMBER_VERIFICATION_GATE_ENABLED);
       }
       hasItem = hasItem1;
     }
@@ -98,6 +89,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     cResult[4] = undefined;
     cResult[5] = hasItem;
+    const tmp9 = hasItem;
   } else {
     class E {
       constructor() {
@@ -105,7 +97,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }
-  if (cResult[6] === tmp10) {
+  if (tmp9) {
+    class E {
+      constructor() {
+        return closure_2.can(Permissions.KICK_MEMBERS, closure_0);
+      }
+    }
+  }
+  if (cResult[6] === tmp9) {
     class E {
       constructor() {
         return closure_2.can(Permissions.KICK_MEMBERS, closure_0);
@@ -113,17 +112,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     return obj2;
   }
-  obj2 = { canCreateApplicationBypassInvites: tmp10 && stateFromStores, isManualApprovalGuild: tmp10 };
-  cResult[6] = tmp10;
-  cResult[7] = tmp10 && stateFromStores;
+  obj2 = { canCreateApplicationBypassInvites: tmp9, isManualApprovalGuild: tmp9 };
+  cResult[6] = tmp9;
+  cResult[7] = tmp9;
   cResult[8] = obj2;
+  const tmpResult = require("initialize");
 }) : ((features) => {
   _require = features;
   const items = [PermissionStore];
   const items1 = [features];
   let hasItem;
-  const obj = require("get initialized");
-  const stateFromStores = obj.useStateFromStores(items, () => PermissionStore.can(constants.KICK_MEMBERS, features), items1);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => PermissionStore.can(constants2.KICK_MEMBERS, closure_0), items1);
   if (features != null) {
     features = features.features;
     hasItem = features.has(constants.MEMBER_VERIFICATION_MANUAL_APPROVAL);
@@ -138,9 +137,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp4 = !hasItem1;
   }
   const isManualApprovalGuild = !tmp4;
-  const canCreateApplicationBypassInvites = isManualApprovalGuild && stateFromStores;
+  let canCreateApplicationBypassInvites = isManualApprovalGuild;
+  if (isManualApprovalGuild) {
+    canCreateApplicationBypassInvites = stateFromStores;
+  }
   return { canCreateApplicationBypassInvites, isManualApprovalGuild };
 });
-const result = size.fileFinishedImporting("modules/instant_invite/useInviteApplicationBypassInfo.tsx");
-
-export const useInviteApplicationBypassInfo = tmp3;

@@ -1,23 +1,22 @@
 // === Module 17958: useCreatorMonetizationIneligibleReasons ===
 
 // Module 17958 (useCreatorMonetizationIneligibleReasons)
-import react from "react" /* 576 */;
+import c from "c" /* 576 */;
 import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 17930 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let tmp2;
-  const obj = react;
-  const cResult = obj.c(2);
+const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationIneligibleReasons.tsx");
+
+export const useCreatorMonetizationIneligibleReasons = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(2);
   const obj2 = useCreatorMonetizationEligibilityItemsDefault(arg0);
   if (cResult[0] !== obj2) {
     let flatMapResult;
     if (obj2 != null) {
       flatMapResult = obj2.flatMap((checked) => {
-        let items;
         if (checked.checked) {
-          items = [];
+          let items = [];
         } else {
           items = [checked.key];
         }
@@ -26,7 +25,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     cResult[0] = obj2;
     cResult[1] = flatMapResult;
-    tmp2 = flatMapResult;
+    let tmp2 = flatMapResult;
   } else {
     tmp2 = cResult[1];
   }
@@ -39,9 +38,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let flatMapResult;
   if (obj != null) {
     flatMapResult = obj.flatMap((checked) => {
-      let items;
       if (checked.checked) {
-        items = [];
+        let items = [];
       } else {
         items = [checked.key];
       }
@@ -53,6 +51,3 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   return flatMapResult;
 });
-const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationIneligibleReasons.tsx");
-
-export const useCreatorMonetizationIneligibleReasons = tmp2;

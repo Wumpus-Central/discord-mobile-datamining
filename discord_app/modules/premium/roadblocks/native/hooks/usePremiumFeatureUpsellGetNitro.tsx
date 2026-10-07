@@ -1,32 +1,24 @@
 // === Module 9658: usePremiumFeatureUpsellGetNitro ===
 
 // Module 9658 (usePremiumFeatureUpsellGetNitro)
-import Constants from "Constants" /* 1085 */;
-import PremiumConstants from "PremiumConstants" /* 1379 */;
 import ChatInputUtils from "ChatInputUtils" /* 4751 */;
 import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5411 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6664 */;
 import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 6941 */;
 import UserOfferActionCreators from "UserOfferActionCreators" /* 7744 */;
-import _slicedToArray_mod from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 4540 */;
 import UserOfferStore from "UserOfferStore" /* 6972 */;
-import size from "module_2" /* 2 */;
 
-let dependencyMap, importDefault;
-
-let _slicedToArray = _slicedToArray_mod;
-const PremiumTypes = PremiumConstants.PremiumTypes;
-const AnalyticsObjectTypes = Constants.AnalyticsObjectTypes;
+require = fn;
+const PremiumTypes = fn(1379).PremiumTypes;
+const AnalyticsObjectTypes = fn(1085).AnalyticsObjectTypes;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx");
 
 export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) {
-  let closure_1;
-  let closure_3;
-  let closure_4;
-  let loading;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   importDefault = arg1;
   dependencyMap = arg3;
   let items = arg4;
@@ -35,12 +27,12 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) 
   }
   _slicedToArray = undefined;
   let analyticsLocations;
-  [loading, _slicedToArray] = analyticsLocations.useState(false);
+  const loading = _slicedToArray(analyticsLocations.useState(false), 2);
+  _slicedToArray = loading[1];
   analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
-  const ref = analyticsLocations.useRef(0);
+  analyticsLocations.useRef(0);
   const items1 = [page, analyticsLocations, arg1, arg0, arg3];
   const onPress = analyticsLocations.useCallback(() => {
-    let obj6;
     const premiumTypeSubscription = SubscriptionStore.getPremiumTypeSubscription(false);
     const result = SubscriptionStore.hasFetchedSubscriptions();
     let tmp3 = null == premiumTypeSubscription;
@@ -49,55 +41,60 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) 
       tmp3 = 0 === Object.keys(premiumTypeSubscription).length;
     }
     const tmp5 = UserOfferStore.hasFetchedOffer() && !UserOfferStore.hasAnyUnexpiredOffer();
-    const isFetchingOfferResult = UserOfferStore.isFetchingOffer();
     if (result) {
       if (tmp3) {
         if (tmp5) {
-          const obj5 = { analyticsLocation: obj6, analyticsLocations, premiumType: closure_0 ? PremiumTypes.TIER_0 : PremiumTypes.TIER_2 };
-          obj6 = { page, objectType: AnalyticsObjectTypes.BUY };
-          openPremiumPlanSelectionActionSheetDefault(obj5, closure_3);
+          const obj5 = { analyticsLocation: null, analyticsLocations: null, premiumType: null };
+          const obj6 = { page, objectType: AnalyticsObjectTypes.BUY };
+          obj5.analyticsLocation = obj6;
+          obj5.analyticsLocations = analyticsLocations;
+          obj5.premiumType = closure_0 ? PremiumTypes.TIER_0 : PremiumTypes.TIER_2;
+          openPremiumPlanSelectionActionSheetDefault(obj5, dependencyMap);
         }
       }
     }
     if (!result) {
       if (ref.current < 5) {
-        let resolved;
-        let resolved1;
         closure_4(true);
         if (result) {
-          resolved = Promise.resolve();
+          let resolved = Promise.resolve();
         } else {
-          const obj2 = actions_BillingActionCreators;
-          resolved = obj2.fetchSubscriptions();
+          resolved = actions_BillingActionCreators.fetchSubscriptions();
         }
         const items = [resolved, ];
         if (isFetchingOfferResult) {
-          resolved1 = Promise.resolve();
+          let resolved1 = Promise.resolve();
         } else {
-          const obj3 = UserOfferActionCreators;
-          resolved1 = obj3.fetchUserOffer("usePremiumFeatureUpsellGetNitro");
+          resolved1 = UserOfferActionCreators.fetchUserOffer("usePremiumFeatureUpsellGetNitro");
         }
         items[1] = resolved1;
-        const allResult = all(items);
-        const nextPromise = allResult.then(() => {
+        const allPromises = Promise.all(items);
+        const nextPromise = Promise.all(items).then(() => {
           ref.current = ref.current + 1;
           onPress();
         });
-        const catchPromise = nextPromise.catch(() => {
-          const presentFailedToast = page(closure_1_3[10]).presentFailedToast;
-          page(closure_1_3[10]);
-          const intl = closure_1_0(closure_1_3[11]).intl;
-          presentFailedToast(intl.string(closure_1_0(closure_1_3[11]).t.R0RpRX));
+        Promise.all(items).then(() => {
+          ref.current = ref.current + 1;
+          onPress();
+        }).catch(() => {
+          const intl = closure_1_0(1126).intl;
+          page(4573).presentFailedToast(intl.string(closure_1_0(1126).t.R0RpRX));
+        }).finally(() => closure_1_4(false));
+        const catchPromise = Promise.all(items).then(() => {
+          ref.current = ref.current + 1;
+          onPress();
+        }).catch(() => {
+          const intl = closure_1_0(1126).intl;
+          page(4573).presentFailedToast(intl.string(closure_1_0(1126).t.R0RpRX));
         });
-        catchPromise.finally(() => closure_1_4(false));
       }
     }
     closure_1();
-    const obj4 = ChatInputUtils;
-    const bestActiveInput = obj4.getBestActiveInput();
+    isFetchingOfferResult = UserOfferStore.isFetchingOffer();
+    const bestActiveInput = ChatInputUtils.getBestActiveInput();
     if (bestActiveInput != null) {
       bestActiveInput.closeCustomKeyboard();
     }
   }, items1);
-  return { loading, onPress };
+  return { loading: loading[0], onPress };
 };

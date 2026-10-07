@@ -2,49 +2,49 @@
 
 // Module 15408 (ShareLogsButton)
 import LogAggregator from "LogAggregator" /* 7 */;
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
-import intl2 from "intl" /* 1126 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import Pressables from "Pressables" /* 5916 */;
-import showShareActionSheet2 from "showShareActionSheet" /* 8048 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import showShareActionSheet from "showShareActionSheet" /* 8048 */;
+import ShareIcon from "ShareIcon" /* 12730 */;
+import noop from "module_19" /* 19 */;
 
-const jsx = Fragment.jsx;
-const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  let obj = react2;
-  const cResult = obj.c(1);
+require = fn;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/debug/native/ShareLogsButton.tsx");
+
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const PressableOpacity = Pressables.PressableOpacity;
-    const intl = intl2.intl;
-    const tmp6 = <PressableOpacity accessibilityLabel={intl.string(intl2.t["Aw+09z"])} onPress={function onPress() {
-      let obj2;
-      const obj = { message: obj2.stringify() };
-      const showShareActionSheet = showShareActionSheet2.showShareActionSheet;
-      showShareActionSheet2;
-      obj2 = LogAggregator;
-      return showShareActionSheet(obj, "Debug Logs");
-    }}>{null}</PressableOpacity>;
+    let obj2 = { accessibilityLabel: null, onPress: null, children: null };
+    const intl = util.intl;
+    obj2.accessibilityLabel = intl.string(util.t["Aw+09z"]);
+    obj2.onPress = function onPress() {
+      const obj2 = { message: null };
+      const obj = showShareActionSheet;
+      obj2.message = LogAggregator.stringify();
+      return obj.showShareActionSheet(obj2, "Debug Logs");
+    };
+    obj2.children = jsx(ShareIcon.ShareIcon, {});
+    const tmp6 = jsx(Pressables.PressableOpacity, { accessibilityLabel: null, onPress: null, children: null });
     cResult[0] = tmp6;
-    first = tmp6;
+    let first = tmp6;
   } else {
     first = cResult[0];
   }
   return first;
 }) : (() => {
-  const PressableOpacity = Pressables.PressableOpacity;
-  const intl = intl2.intl;
-  return <PressableOpacity accessibilityLabel={intl.string(intl2.t["Aw+09z"])} onPress={function onPress() {
-    let obj2;
-    const obj = { message: obj2.stringify() };
-    const showShareActionSheet = showShareActionSheet2.showShareActionSheet;
-    showShareActionSheet2;
-    obj2 = LogAggregator;
-    return showShareActionSheet(obj, "Debug Logs");
-  }}>{null}</PressableOpacity>;
+  let obj = { accessibilityLabel: null, onPress: null, children: null };
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t["Aw+09z"]);
+  obj.onPress = function onPress() {
+    const obj2 = { message: null };
+    const obj = showShareActionSheet;
+    obj2.message = LogAggregator.stringify();
+    return obj.showShareActionSheet(obj2, "Debug Logs");
+  };
+  obj.children = jsx(ShareIcon.ShareIcon, {});
+  return jsx(Pressables.PressableOpacity, { accessibilityLabel: null, onPress: null, children: null });
 }));
-const result = size.fileFinishedImporting("modules/debug/native/ShareLogsButton.tsx");
-
-export default memoResult;

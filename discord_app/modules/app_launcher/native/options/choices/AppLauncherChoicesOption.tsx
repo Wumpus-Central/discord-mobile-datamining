@@ -1,54 +1,39 @@
 // === Module 11801: AppLauncherChoicesOption ===
 
 // Module 11801 (AppLauncherChoicesOption)
-import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1881 */;
-import asyncRequire from "asyncRequire" /* 1987 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4896 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let obj2;
-const jsx = Fragment.jsx;
-let obj = { container: obj2 };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, alignItems: "center", padding: 12 };
-let closure_6 = createStyles.createStyles(obj);
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, alignItems: "center", padding: 12 } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/options/choices/AppLauncherChoicesOption.tsx");
 
 export default function AppLauncherChoicesOption(option) {
-  let Text;
-  let autoFocus;
-  let hasError;
-  let items1;
-  let obj3;
-  let onSelect;
-  let str2;
-  let style;
-  let tmp10Result;
-  let type;
   option = option.option;
   ({ initialValue: importDefault, onSelect } = option);
   const onOpenChoicesSheet = option.onOpenChoicesSheet;
   const onDismissChoicesSheet = option.onDismissChoicesSheet;
-  closure_6 = undefined;
   ({ style, autoFocus, hasError } = option);
-  const tmp = closure_6();
   const tmp3 = onOpenChoicesSheet(onDismissChoicesSheet.useState(() => {
-    let choices1;
-    let text;
-    if (null != importDefault) {
-      if ("text" === importDefault.type) {
+    if (null != type) {
+      if ("text" === type.type) {
         const choices = option.choices;
         let found;
         if (choices != null) {
           found = choices.find((displayName) => displayName.displayName === text.text);
         }
         if (null != found) {
-          const obj = { choice: found, index: choices1.indexOf(found) };
-          choices1 = option.choices;
+          const obj = { choice: found, index: null };
+          const choices1 = option.choices;
+          obj.index = choices1.indexOf(found);
           return obj;
         }
       }
@@ -58,54 +43,51 @@ export default function AppLauncherChoicesOption(option) {
   closure_6 = tmp3[1];
   const items = [onDismissChoicesSheet, onOpenChoicesSheet, onSelect, option, ];
   let index;
-  const useCallback = onDismissChoicesSheet.useCallback;
   if (first != null) {
     index = first.index;
   }
   items[4] = index;
-  const callback = useCallback(() => {
-    let index;
+  const callback = onDismissChoicesSheet.useCallback(() => {
     onOpenChoicesSheet();
-    let obj = KeyboardManagerUtils;
-    const result = obj.dismissGlobalKeyboard();
-    const openLazy = ActionSheetActionCreatorsDefault.openLazy;
-    const obj2 = {
-      option,
-      initChoiceIndex: index,
-      onChoiceSelect(choice, index) {
-        const obj = { choice, index };
-        closure_1_6(obj);
-        onSelect(choice);
-      },
-      onDismiss: onDismissChoicesSheet
-    };
-    index = undefined;
-    ActionSheetActionCreatorsDefault;
-    const tmp4 = asyncRequire(11802, dependencyMap.paths);
+    const result = KeyboardManagerUtils.dismissGlobalKeyboard();
+    const obj3 = { option, initChoiceIndex: null, onChoiceSelect: null, onDismiss: null };
+    let index;
+    const obj2 = ActionSheetActionCreatorsDefault;
     if (first != null) {
       index = first.index;
     }
-    openLazy(tmp4, "AppLauncherChoicesActionSheet", obj2);
+    obj3.initChoiceIndex = index;
+    obj3.onChoiceSelect = function onChoiceSelect(choice, index) {
+      closure_1_6({ choice, index });
+      onSelect(choice);
+    };
+    obj3.onDismiss = onDismissChoicesSheet;
+    obj2.openLazy(asyncRequireImpl(11802, dependencyMap.paths), "AppLauncherChoicesActionSheet", obj3);
   }, items);
-  let obj = option(onSelect[9]);
-  const animationDelayedAutoFocus = obj.useAnimationDelayedAutoFocus(autoFocus, callback);
-  let obj2 = { start: true, end: true, style: items1, hasError, label: first(Text, obj3), subLabel: tmp10Result, trailing: first(option(onSelect[10]).FormArrow, {}), onPress: callback };
-  items1 = [tmp.container, style];
-  const FormRow = option(onSelect[10]).FormRow;
+  const tmp = closure_6();
+  const animationDelayedAutoFocus = option(onSelect[9]).useAnimationDelayedAutoFocus(autoFocus, callback);
+  let obj2 = { start: true, end: true, style: null, hasError, label: null, subLabel: null, trailing: null, onPress: null };
+  const items1 = [tmp.container, style];
+  obj2.style = items1;
   let str = "text-sm/medium";
-  Text = option(onSelect[11]).Text;
   if (null == first) {
     str = "text-md/medium";
   }
-  obj3 = { variant: str, color: str2, lineClamp: 1, children: option.displayName };
-  str2 = "interactive-text-default";
+  let obj3 = { variant: str, color: null, lineClamp: 1, children: null };
+  let str2 = "interactive-text-default";
   if (null == first) {
     str2 = "text-default";
   }
-  tmp10Result = null;
+  obj3.color = str2;
+  obj3.children = option.displayName;
+  obj2.label = first(option(onSelect[11]).Text, obj3);
+  let tmp10Result = null;
   if (null != first) {
     const obj4 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: first.choice.displayName };
     tmp10Result = tmp10(tmp7(tmp8[11]).Text, obj4);
   }
-  return first(FormRow, obj2);
+  obj2.subLabel = tmp10Result;
+  obj2.trailing = first(option(onSelect[10]).FormArrow, {});
+  obj2.onPress = callback;
+  return first(option(onSelect[10]).FormRow, obj2);
 };

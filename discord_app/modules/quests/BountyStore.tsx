@@ -1,11 +1,11 @@
 // === Module 7199: BountyStore ===
 
 // Module 7199 (BountyStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AdCreativeType from "AdCreativeType" /* 5637 */;
-import size from "module_2" /* 2 */;
 
+require = fn;
 function resetStateForDeliveredBounties(items) {
   set = new Set(set);
   map = new Map(map);
@@ -20,53 +20,14 @@ function resetStateForDeliveredBounties(items) {
   }
 }
 let c2 = false;
-let bounties = [];
+let closure_3 = [];
 new Set();
-let set1 = new Set();
-let set = set1;
+let set = new Set();
 new Map();
-const map1 = new Map();
-let map = map1;
-const Store = get_initializedDefault.Store;
+let set1 = new Set();
+let map = new Map();
+const Store = initializeDefault.Store;
 class BountyStore extends Store {
-  isBountyCompleted(id) {
-    return set.has(id);
-  }
-  getCompletedBountyCount(first1) {
-    let num = 0;
-    const tmp = first1[Symbol.iterator]();
-    while (tmp !== undefined) {
-      if (set.has(tmp2.id)) {
-        num = num + 1;
-      }
-      continue;
-    }
-    return num;
-  }
-  isClaimingBountyReward(bountyId) {
-    return set.has(bountyId);
-  }
-  areAllBountiesCompleted() {
-    return bounties.every((id) => set.has(id.id));
-  }
-  getAdDecisionByPlacementAndAdCreativeId(questPlacementFromQuestContent, bountyId) {
-    const value = map.get(questPlacementFromQuestContent);
-    let value2;
-    if (value != null) {
-      value2 = value.get(bountyId);
-    }
-    if (value2 == null) {
-      value2 = null;
-    }
-    return value2;
-  }
-  getBountyVideoProgress(bountyId) {
-    let value = map.get(bountyId);
-    if (value == null) {
-      value = null;
-    }
-    return value;
-  }
 }
 const prototype = BountyStore.prototype;
 Object.defineProperty(prototype, "isFetchingQuestHomeBounties", {
@@ -77,30 +38,65 @@ Object.defineProperty(prototype, "isFetchingQuestHomeBounties", {
 });
 Object.defineProperty(prototype, "questHomeBounties", {
   get: function questHomeBounties() {
-    return bounties;
+    return closure_3;
   },
   set: undefined
 });
+prototype["isBountyCompleted"] = function isBountyCompleted(id) {
+  return set.has(id);
+};
+prototype["getCompletedBountyCount"] = function getCompletedBountyCount(first1) {
+  let num = 0;
+  while (tmp !== undefined) {
+    if (set.has(tmp2.id)) {
+      num = num + 1;
+    }
+    continue;
+  }
+  return num;
+};
+prototype["isClaimingBountyReward"] = function isClaimingBountyReward(bountyId) {
+  return set.has(bountyId);
+};
+prototype["areAllBountiesCompleted"] = function areAllBountiesCompleted() {
+  return closure_3.every((id) => set.has(id.id));
+};
+prototype["getAdDecisionByPlacementAndAdCreativeId"] = function getAdDecisionByPlacementAndAdCreativeId(questPlacementFromQuestContent, bountyId) {
+  value = map.get(questPlacementFromQuestContent);
+  value2 = undefined;
+  if (value != null) {
+    value2 = value.get(bountyId);
+  }
+  if (value2 == null) {
+    value2 = null;
+  }
+  return value2;
+};
+prototype["getBountyVideoProgress"] = function getBountyVideoProgress(bountyId) {
+  value = map.get(bountyId);
+  if (value == null) {
+    value = null;
+  }
+  return value;
+};
 BountyStore.displayName = "BountyStore";
-const obj = {
+const bountyStore = new BountyStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     c2 = false;
-    bounties = [];
+    closure_3 = [];
     new Set();
-    new Set();
-    new Set();
+    set = new Set();
     new Map();
-    new Map();
-    new Map();
+    const set1 = new Set();
+    map = new Map();
   },
   BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_BEGIN: function handleFetchQuestHomeBountiesBegin() {
     c2 = true;
   },
   BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_SUCCESS: function handleFetchQuestHomeBountiesSuccess(bounties) {
-    let adDecisionsByAdCreativeId;
-    let placement;
     bounties = bounties.bounties;
     c2 = false;
+    closure_3 = bounties;
     ({ placement, adDecisionsByAdCreativeId } = bounties);
     resetStateForDeliveredBounties(bounties.map((id) => id.id));
     map = new Map(map);
@@ -108,10 +104,9 @@ const obj = {
   },
   BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_FAILURE: function handleFetchQuestHomeBountiesFailure(placement) {
     c2 = false;
-    bounties = [];
-    placement = placement.placement;
+    closure_3 = [];
     map = new Map(map);
-    map.delete(placement);
+    map.delete(placement.placement);
   },
   QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: function handleFetchQuestToDeliverSuccess(creative) {
     creative = creative.creative;
@@ -127,9 +122,8 @@ const obj = {
     }
   },
   BOUNTIES_CLAIM_REWARD_BEGIN: function handleClaimBountyRewardBegin(bountyId) {
-    bountyId = bountyId.bountyId;
     set = new Set(set);
-    set.add(bountyId);
+    set.add(bountyId.bountyId);
   },
   BOUNTIES_CLAIM_REWARD_SUCCESS: function handleClaimBountyRewardSuccess(bountyId) {
     bountyId = bountyId.bountyId;
@@ -140,15 +134,10 @@ const obj = {
     set = set1;
   },
   BOUNTIES_CLAIM_REWARD_FAILURE: function handleClaimBountyRewardFailure(bountyId) {
-    bountyId = bountyId.bountyId;
     set = new Set(set);
-    set.delete(bountyId);
+    set.delete(bountyId.bountyId);
   },
   BOUNTIES_VIDEO_PROGRESS_UPDATE: function handleBountyVideoProgressUpdate(arg0) {
-    let bountyId;
-    let duration;
-    let maxTimestampSec;
-    let timestampSec;
     ({ bountyId, timestampSec, maxTimestampSec, duration } = arg0);
     map = new Map(map);
     const result = map.set(bountyId, { timestampSec, maxTimestampSec, duration });
@@ -167,15 +156,11 @@ const obj = {
     }
     if (hasItem) {
       const _Set = Set;
-      const self = this;
-      const self2 = this;
       set = new Set(set);
       set.delete(adCreativeId);
     }
     if (hasItem1) {
       const _Map = Map;
-      const self3 = this;
-      const self4 = this;
       map = new Map(map);
       map.delete(adCreativeId);
     }
@@ -189,8 +174,8 @@ const obj = {
     set = new Set();
     map = new Map();
   }
-};
-const bountyStore = new BountyStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/BountyStore.tsx");
 
 export default bountyStore;

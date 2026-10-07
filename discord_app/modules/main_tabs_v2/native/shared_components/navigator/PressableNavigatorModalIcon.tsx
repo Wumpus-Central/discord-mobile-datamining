@@ -1,17 +1,16 @@
 // === Module 7516: PressableNavigatorModalIcon ===
 
 // Module 7516 (PressableNavigatorModalIcon)
-import Fragment from "Fragment" /* 21 */;
-import intl2 from "intl" /* 1126 */;
+import jsxProd from "jsxProd" /* 21 */;
+import util from "util" /* 1126 */;
 import HeaderShared from "HeaderShared" /* 7509 */;
 import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7515 */;
 import size from "module_2" /* 2 */;
 
-const jsx = Fragment.jsx;
+const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx");
 
 export default function PressableNavigatorModalIcon(onPress) {
-  let stringResult;
   let goBack = onPress.onPress;
   if (goBack === undefined) {
     goBack = onPress.navigation.goBack;
@@ -20,15 +19,15 @@ export default function PressableNavigatorModalIcon(onPress) {
   if (str === undefined) {
     str = "back";
   }
-  PressableNavigatorButtonWrapperDefault;
-  const HeaderIconButton = HeaderShared.HeaderIconButton;
-  const intl = intl2.intl;
+  const obj = { source: importDefault("back" === str ? 7512 : 7517), onPress: goBack, accessibilityLabel: null };
+  const intl = util.intl;
   const string = intl.string;
-  const t = intl2.t;
+  const t = util.t;
   if ("back" === str) {
-    stringResult = string(t["13/7kX"]);
+    let stringResult = string(t["13/7kX"]);
   } else {
     stringResult = string(t.cpT0Cq);
   }
-  return <tmp4 isModal><HeaderIconButton source={importDefault("back" === str ? 7512 : 7517)} onPress={goBack} accessibilityLabel={stringResult} /></tmp4>;
+  obj.accessibilityLabel = stringResult;
+  return <tmp4 isModal>{jsx(HeaderShared.HeaderIconButton, { source: importDefault("back" === str ? 7512 : 7517), onPress: goBack, accessibilityLabel: null })}</tmp4>;
 };

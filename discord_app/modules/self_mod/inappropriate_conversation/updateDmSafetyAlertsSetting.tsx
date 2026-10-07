@@ -5,7 +5,6 @@ import wrappers from "wrappers" /* 1228 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require;
 
 const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx");
 
@@ -14,7 +13,6 @@ export const updateDmSafetyAlertsSetting = function updateDmSafetyAlertsSetting(
   const PreloadedUserSettingsActionCreators = require("UserSettingsProtoActionCreators").PreloadedUserSettingsActionCreators;
   return PreloadedUserSettingsActionCreators.updateAsync("privacy", async (arg0) => {
     const BoolValue = wrappers.BoolValue;
-    const obj = { value };
-    arg0.inappropriateConversationWarnings = BoolValue.create(obj);
+    arg0.inappropriateConversationWarnings = BoolValue.create({ value });
   }, require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION);
 };

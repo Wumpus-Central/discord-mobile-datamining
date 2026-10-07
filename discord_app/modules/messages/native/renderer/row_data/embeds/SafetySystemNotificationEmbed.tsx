@@ -1,32 +1,19 @@
 // === Module 13106: SafetySystemNotificationEmbed ===
 
 // Module 13106 (SafetySystemNotificationEmbed)
-import react_native from "react-native" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1085 */;
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import _modDef4467 from "module_4467" /* 4467 */;
 import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7616 */;
 import SafetyHubUtils from "SafetyHubUtils" /* 8125 */;
 import size from "module_2" /* 2 */;
 
-const Image = react_native.Image;
+const Image = _mod17.Image;
 const MessageEmbedTypes = Constants.MessageEmbedTypes;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/SafetySystemNotificationEmbed.tsx");
 
 export const createSafetySystemNotificationEmbed = function createSafetySystemNotificationEmbed(message) {
-  let diff;
-  let eevFb6;
-  let formatToPlainString;
-  let key;
-  let key1;
-  let obj3;
-  let str4;
-  let text;
-  let text1;
-  let tmp14Result;
-  let tmp6Result4;
-  let type1;
-  let type2;
   if (null != message) {
     if (null != message.embeds) {
       const first = message.embeds[0];
@@ -41,21 +28,20 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
           type = first1.type;
         }
         if (type === MessageEmbedTypes.SAFETY_SYSTEM_NOTIFICATION) {
-          const obj = SafetyHubUtils;
-          const parseMessageForPropsResult = obj.parseMessageForProps(message);
+          const parseMessageForPropsResult = SafetyHubUtils.parseMessageForProps(message);
           if (null != parseMessageForPropsResult) {
             let tmp9;
             let tmp10;
             if (null != parseMessageForPropsResult.ctas) {
               let mapCtaToNativeDataResult;
               if (null != parseMessageForPropsResult.ctas[0]) {
+                mapCtaToNativeDataResult = SafetyHubUtils.mapCtaToNativeData(parseMessageForPropsResult.ctas[0], parseMessageForPropsResult.learn_more_link, parseMessageForPropsResult.classification_id);
                 const tmp6Result = SafetyHubUtils;
-                mapCtaToNativeDataResult = tmp6Result.mapCtaToNativeData(parseMessageForPropsResult.ctas[0], parseMessageForPropsResult.learn_more_link, parseMessageForPropsResult.classification_id);
               }
               let mapCtaToNativeDataResult1;
               if (null != parseMessageForPropsResult.ctas[1]) {
+                mapCtaToNativeDataResult1 = SafetyHubUtils.mapCtaToNativeData(parseMessageForPropsResult.ctas[1], parseMessageForPropsResult.learn_more_link, parseMessageForPropsResult.classification_id);
                 const tmp6Result3 = SafetyHubUtils;
-                mapCtaToNativeDataResult1 = tmp6Result3.mapCtaToNativeData(parseMessageForPropsResult.ctas[1], parseMessageForPropsResult.learn_more_link, parseMessageForPropsResult.classification_id);
               }
               tmp9 = mapCtaToNativeDataResult1;
               tmp10 = mapCtaToNativeDataResult;
@@ -64,47 +50,53 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             if (str == null) {
               str = "";
             }
-            const obj2 = { titleText: str, titleIcon: tmp6Result4.getAssetUriForEmbed(Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 4810 : 5827))), subtitleText: formatToPlainString(eevFb6, obj3), descriptionText: str4, primaryCtaText: text, primaryCtaType: type1, primaryCtaKey: key, secondaryCtaText: text1, secondaryCtaType: type2, secondaryCtaKey: key1, footerTheme: parseMessageForPropsResult.theme };
-            tmp6Result4 = renderer_EmbedUtils;
-            const intl = intl2.intl;
-            formatToPlainString = intl.formatToPlainString;
+            const obj2 = { titleText: str, titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 4810 : 5827))), subtitleText: null, descriptionText: null, primaryCtaText: null, primaryCtaType: null, primaryCtaKey: null, secondaryCtaText: null, secondaryCtaType: null, secondaryCtaKey: null, footerTheme: null };
+            const intl = util.intl;
             let num = parseMessageForPropsResult.timestamp;
-            eevFb6 = intl2.t.eevFb6;
             if (num == null) {
               num = 0;
             }
-            obj3 = { daysAgo: diff(tmp14Result.unix(num), "days") };
-            diff = _modDef4467().diff;
-            _modDef4467();
-            str4 = parseMessageForPropsResult.body;
-            tmp14Result = _modDef4467;
+            const obj3 = { daysAgo: null };
+            const tmp6Result4 = renderer_EmbedUtils;
+            const obj7 = _modDef4467();
+            obj3.daysAgo = obj7.diff(_modDef4467.unix(num), "days");
+            obj2.subtitleText = intl.formatToPlainString(util.t.eevFb6, obj3);
+            let str4 = parseMessageForPropsResult.body;
             if (str4 == null) {
               str4 = "";
             }
-            text = undefined;
+            obj2.descriptionText = str4;
+            let text;
             if (tmp10 != null) {
               text = tmp10.text;
             }
-            type1 = undefined;
+            obj2.primaryCtaText = text;
+            let type1;
             if (tmp10 != null) {
               type1 = tmp10.type;
             }
-            key = undefined;
+            obj2.primaryCtaType = type1;
+            let key;
             if (tmp10 != null) {
               key = tmp10.key;
             }
-            text1 = undefined;
+            obj2.primaryCtaKey = key;
+            let text1;
             if (tmp9 != null) {
               text1 = tmp9.text;
             }
-            type2 = undefined;
+            obj2.secondaryCtaText = text1;
+            let type2;
             if (tmp9 != null) {
               type2 = tmp9.type;
             }
-            key1 = undefined;
+            obj2.secondaryCtaType = type2;
+            let key1;
             if (tmp9 != null) {
               key1 = tmp9.key;
             }
+            obj2.secondaryCtaKey = key1;
+            obj2.footerTheme = parseMessageForPropsResult.theme;
             return obj2;
           }
         }

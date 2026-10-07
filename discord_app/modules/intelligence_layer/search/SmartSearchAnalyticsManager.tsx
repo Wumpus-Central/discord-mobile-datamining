@@ -1,17 +1,14 @@
 // === Module 12004: SmartSearchAnalyticsManager ===
 
 // Module 12004 (SmartSearchAnalyticsManager)
-import shallowEqualDefault from "shallowEqual" /* 568 */;
-import Constants from "Constants" /* 1085 */;
+import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
 import SearchUtils from "SearchUtils" /* 11987 */;
 import SuggestedSearchStore from "SuggestedSearchStore" /* 11981 */;
-import size from "module_2" /* 2 */;
 
-let set;
-
+require = fn;
 function getCitationCompositionProperties(citations) {
-  set = new Set();
+  const set = new Set();
   const items = [];
   const items1 = [];
   const items2 = [];
@@ -34,284 +31,246 @@ function getCitationCompositionProperties(citations) {
   }
   return { num_citation_authors: set.size, citation_source_types: items, citation_channel_ids: items1, citation_message_ids: items2 };
 }
-const AnalyticEvents = Constants.AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const re5 = /\s+/;
 class SmartSearchAnalyticsManager {
   constructor() {
-    const merged = Object.assign({ rowVisibilityState: null, dwellStartTime: null, lastShownAnswerKey: null, lastShownSuggestionKey: null, parentSuggestedSearch: null });
+    merged = Object.assign({ rowVisibilityState: null, dwellStartTime: null, lastShownAnswerKey: null, lastShownSuggestionKey: null, parentSuggestedSearch: null });
     merged[0] = { isRowViewable: false, isTabActive: false, isAppActive: true, currentAnswer: null };
     return merged;
   }
-  getParentSuggestedSearch() {
-    return this.parentSuggestedSearch;
-  }
-  setIsRowViewable(isViewable, getQueryId) {
-    const obj = { isRowViewable: isViewable };
-    this.updateVisibility(obj, getQueryId);
-  }
-  setIsTabActive(isTabActive, getQueryId) {
-    const obj = { isTabActive };
-    this.updateVisibility(obj, getQueryId);
-  }
-  setIsAppActive(stateFromStores, getQueryId) {
-    const obj = { isAppActive: stateFromStores };
-    this.updateVisibility(obj, getQueryId);
-  }
-  setAnswer(currentAnswer, getQueryId) {
-    const obj = { currentAnswer };
-    this.updateVisibility(obj, getQueryId);
-  }
-  resetSession(getQueryId) {
-    this.updateVisibility({ currentAnswer: null }, getQueryId);
-    this.lastShownAnswerKey = null;
-    this.lastShownSuggestionKey = null;
-    this.parentSuggestedSearch = null;
-  }
-  updateVisibility(arg0, getQueryId) {
-    const self = this;
-    const rowVisibilityState = this.rowVisibilityState;
-    const obj = {};
-    const merged = Object.assign(rowVisibilityState);
-    const merged1 = Object.assign(arg0);
-    if (!shallowEqualDefault(obj, rowVisibilityState)) {
-      self.rowVisibilityState = obj;
-      let tmp3 = obj.isRowViewable && obj.isTabActive && obj.isAppActive && null != obj.currentAnswer;
-      if (null != self.dwellStartTime) {
-        if (!tmp3) {
-          const _performance = performance;
-          self.dwellStartTime = null;
-          if (null != rowVisibilityState.currentAnswer) {
-            const obj2 = { smartSearchQuery: rowVisibilityState.currentAnswer.smartSearchQuery, dwellDurationMs: tmp10 };
-            const result = self.trackSmartSearchAnswerDwelled(obj2, getQueryId);
-          }
-        } else {
-          const currentAnswer = obj.currentAnswer;
-          let requestKey;
-          if (currentAnswer != null) {
-            requestKey = currentAnswer.smartSearchQuery.requestKey;
-          }
-          const currentAnswer2 = rowVisibilityState.currentAnswer;
-          let requestKey1;
-          if (currentAnswer2 != null) {
-            requestKey1 = currentAnswer2.smartSearchQuery.requestKey;
-          }
-        }
-      }
-      if (tmp3) {
-        tmp3 = null != obj.currentAnswer;
-      }
-      if (tmp3) {
-        tmp3 = null == self.dwellStartTime;
-      }
-      if (tmp3) {
-        const _performance2 = performance;
-        self.dwellStartTime = performance.now();
-        const result1 = self.trackSmartSearchAnswerShownDeduped(obj.currentAnswer, getQueryId);
-      }
-    }
-  }
-  getParentSuggestedSearchId(queryText) {
-    const self = this;
-    let tmp = null;
-    if (null != this.parentSuggestedSearch) {
-      let suggestionId;
-      if (queryText === self.parentSuggestedSearch.suggestedSearchText) {
-        suggestionId = self.parentSuggestedSearch.suggestionId;
-      } else {
-        self.parentSuggestedSearch = null;
-        suggestionId = null;
-      }
-      tmp = suggestionId;
-    }
-    return tmp;
-  }
-  getContextualProperties(smartSearchQuery, getQueryId) {
-    let obj2;
-    let parentSuggestedSearchId;
-    const queryId = getQueryId.getQueryId(smartSearchQuery.searchContext);
-    const obj = { search_session_id: getQueryId.getSessionId(smartSearchQuery.searchContext), search_query_id: queryId, search_location: getQueryId.getLocation(smartSearchQuery.searchContext), guild_id: smartSearchQuery.guildId, channel_id: obj2.getChannelIdFromSearchContext(smartSearchQuery.searchContext), filter_channel_ids: smartSearchQuery.channelIds, num_filter_channels: smartSearchQuery.channelIds.length, parent_suggested_search_id: parentSuggestedSearchId };
-    parentSuggestedSearchId = this.getParentSuggestedSearchId(smartSearchQuery.queryText);
-    obj2 = SearchUtils;
-    return obj;
-  }
-  trackSmartSearchAnswerReturned(arg0, c2) {
-    let answerText;
-    let citations;
-    let durationMs;
-    let parentSuggestedSearch;
-    let requestId;
-    let responseStatus;
-    let smartSearchQuery;
-    let smartSearchStatus;
-    let str2;
-    let suggestionId;
-    ({ smartSearchQuery, answerText, citations, parentSuggestedSearch } = arg0);
-    const str = smartSearchQuery.queryText;
-    ({ requestId, durationMs, responseStatus, smartSearchStatus } = arg0);
-    const trimmed = str.trim();
-    const length = trimmed.length;
-    const parts = trimmed.split(re5);
-    const length2 = parts.filter(Boolean).length;
-    const trimmed1 = answerText.trim();
-    const length3 = trimmed1.length;
-    const parts1 = trimmed1.split(re5);
-    const length4 = parts1.filter(Boolean).length;
-    const obj = { parent_suggested_search_id: suggestionId, request_id: requestId, duration_ms: Math.round(durationMs), response_status: responseStatus, smart_search_status: smartSearchStatus, search_query_length: str2.trim().length, search_query_content_length: length, num_query_words: length2, answer_length: length3, num_answer_words: length4, num_citations_returned: citations.length };
-    const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-    const SMART_SEARCH_ANSWER_RETURNED = AnalyticEvents.SMART_SEARCH_ANSWER_RETURNED;
-    AppAnalyticsUtilsDefault;
-    const merged = Object.assign(this.getContextualProperties(smartSearchQuery, c2));
-    suggestionId = undefined;
-    if (parentSuggestedSearch != null) {
-      suggestionId = parentSuggestedSearch.suggestionId;
-    }
-    if (suggestionId == null) {
-      suggestionId = null;
-    }
-    const merged1 = Object.assign(getCitationCompositionProperties(citations));
-    str2 = smartSearchQuery.searchQueryString;
-    trackWithMetadata(SMART_SEARCH_ANSWER_RETURNED, obj);
-  }
-  trackSuggestedSearchesReturned(arg0, getQueryId) {
-    let durationMs;
-    let parentSuggestedSearch;
-    let requestId;
-    let responseStatusCode;
-    let smartSearchQuery;
-    let suggestedSearches;
-    let suggestionId;
-    ({ suggestedSearches, parentSuggestedSearch } = arg0);
-    ({ smartSearchQuery, requestId, durationMs, responseStatusCode } = arg0);
-    const obj = { parent_suggested_search_id: suggestionId, request_id: requestId, duration_ms: Math.round(durationMs), response_status_code: responseStatusCode, suggested_search_ids: suggestedSearches.map((suggestionId) => suggestionId.suggestionId) };
-    const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-    const SUGGESTED_SEARCHES_RETURNED = AnalyticEvents.SUGGESTED_SEARCHES_RETURNED;
-    AppAnalyticsUtilsDefault;
-    const merged = Object.assign(this.getContextualProperties(smartSearchQuery, getQueryId));
-    suggestionId = undefined;
-    if (parentSuggestedSearch != null) {
-      suggestionId = parentSuggestedSearch.suggestionId;
-    }
-    if (suggestionId == null) {
-      suggestionId = null;
-    }
-    trackWithMetadata(SUGGESTED_SEARCHES_RETURNED, obj);
-  }
-  trackSmartSearchAnswerToggled(arg0, getQueryId) {
-    let isCollapsed;
-    let smartSearchQuery;
-    ({ smartSearchQuery, isCollapsed } = arg0);
-    const obj = { is_collapsed: isCollapsed };
-    const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-    const SMART_SEARCH_ANSWER_TOGGLED = AnalyticEvents.SMART_SEARCH_ANSWER_TOGGLED;
-    AppAnalyticsUtilsDefault;
-    const merged = Object.assign(this.getContextualProperties(smartSearchQuery, getQueryId));
-    trackWithMetadata(SMART_SEARCH_ANSWER_TOGGLED, obj);
-  }
-  trackSmartSearchCitationOpened(citation, getQueryId) {
-    let index;
-    let numCitationsPresented;
-    let smartSearchQuery;
-    citation = citation.citation;
-    ({ smartSearchQuery, index, numCitationsPresented } = citation);
-    const obj = { citation_index: index, num_citations_presented: numCitationsPresented };
-    const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-    const SMART_SEARCH_CITATION_OPENED = AnalyticEvents.SMART_SEARCH_CITATION_OPENED;
-    AppAnalyticsUtilsDefault;
-    const merged = Object.assign(this.getContextualProperties(smartSearchQuery, getQueryId));
-    ({ sourceId: obj.citation_source_id, sourceType: obj.citation_source_type, channelId: obj.citation_channel_id, messageId: obj.citation_message_id } = citation);
-    trackWithMetadata(SMART_SEARCH_CITATION_OPENED, obj);
-  }
-  trackSuggestedSearchStarted(arg0, getQueryId) {
-    let index;
-    let numSuggestedSearches;
-    let requestId;
-    let smartSearchQuery;
-    let suggestedSearch;
-    let suggestionSource;
-    let tmp5;
-    ({ smartSearchQuery, suggestedSearch } = arg0);
-    ({ suggestionSource, index, numSuggestedSearches } = arg0);
-    const stateForScope = SuggestedSearchStore.getStateForScope(smartSearchQuery);
-    let num;
-    if (stateForScope != null) {
-      const suggestedSearches = stateForScope.suggestedSearches;
-      num = suggestedSearches.findIndex((suggestionId) => suggestionId.suggestionId === suggestedSearch.suggestionId);
-    }
-    if (num == null) {
-      num = -1;
-    }
-    const obj = { suggested_search_id: suggestedSearch.suggestionId, shown_index: index, suggestion_source: suggestionSource, num_suggested_searches: numSuggestedSearches, fetch_request_id: requestId, global_index: tmp5 };
-    const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-    const SUGGESTED_SEARCH_STARTED = AnalyticEvents.SUGGESTED_SEARCH_STARTED;
-    AppAnalyticsUtilsDefault;
-    const merged = Object.assign(this.getContextualProperties(smartSearchQuery, getQueryId));
-    requestId = undefined;
-    if (stateForScope != null) {
-      requestId = stateForScope.requestId;
-    }
-    tmp5 = null;
-    if (num >= 0) {
-      tmp5 = num;
-    }
-    trackWithMetadata(SUGGESTED_SEARCH_STARTED, obj);
-    this.parentSuggestedSearch = suggestedSearch;
-  }
-  trackSuggestedSearchesShownDeduped(arg0, getQueryId) {
-    let smartSearchQuery;
-    let suggestedSearches;
-    let suggestionSource;
-    const self = this;
-    ({ smartSearchQuery, suggestedSearches, suggestionSource } = arg0);
-    const combined = "" + suggestionSource + ":" + smartSearchQuery.requestKey;
-    if (this.lastShownSuggestionKey !== combined) {
-      self.lastShownSuggestionKey = combined;
-      const obj = { suggested_search_ids: suggestedSearches.map((suggestionId) => suggestionId.suggestionId), suggestion_source: suggestionSource };
-      const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-      const SUGGESTED_SEARCHES_SHOWN = AnalyticEvents.SUGGESTED_SEARCHES_SHOWN;
-      AppAnalyticsUtilsDefault;
-      const merged = Object.assign(self.getContextualProperties(smartSearchQuery, getQueryId));
-      trackWithMetadata(SUGGESTED_SEARCHES_SHOWN, obj);
-    }
-  }
-  trackSmartSearchAnswerShownDeduped(currentAnswer, getQueryId) {
-    let answerText;
-    let presentedCitations;
-    let smartSearchQuery;
-    let str;
-    const self = this;
-    ({ smartSearchQuery, answerText, presentedCitations } = currentAnswer);
-    if (this.lastShownAnswerKey !== smartSearchQuery.requestKey) {
-      self.lastShownAnswerKey = smartSearchQuery.requestKey;
-      const trimmed = answerText.trim();
-      const length = trimmed.length;
-      const parts = trimmed.split(re5);
-      const _Boolean = Boolean;
-      const length2 = parts.filter(Boolean).length;
-      const obj = { num_citations_presented: presentedCitations.length, answer_length: length, num_answer_words: length2, search_query_length: str.trim().length, has_keyword_results: tmp };
-      const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-      const SMART_SEARCH_ANSWER_SHOWN = AnalyticEvents.SMART_SEARCH_ANSWER_SHOWN;
-      AppAnalyticsUtilsDefault;
-      const merged = Object.assign(self.getContextualProperties(smartSearchQuery, getQueryId));
-      const merged1 = Object.assign(getCitationCompositionProperties(presentedCitations));
-      str = smartSearchQuery.searchQueryString;
-      trackWithMetadata(SMART_SEARCH_ANSWER_SHOWN, obj);
-    }
-  }
-  trackSmartSearchAnswerDwelled(arg0, getQueryId) {
-    let dwellDurationMs;
-    let smartSearchQuery;
-    ({ smartSearchQuery, dwellDurationMs } = arg0);
-    const obj = { dwell_duration_ms: Math.round(dwellDurationMs) };
-    const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-    const SMART_SEARCH_ANSWER_DWELLED = AnalyticEvents.SMART_SEARCH_ANSWER_DWELLED;
-    AppAnalyticsUtilsDefault;
-    const merged = Object.assign(this.getContextualProperties(smartSearchQuery, getQueryId));
-    trackWithMetadata(SMART_SEARCH_ANSWER_DWELLED, obj);
-  }
 }
 const prototype = SmartSearchAnalyticsManager.prototype;
+prototype["getParentSuggestedSearch"] = function getParentSuggestedSearch() {
+  return this.parentSuggestedSearch;
+};
+prototype["setIsRowViewable"] = function setIsRowViewable(isViewable, getQueryId) {
+  this.updateVisibility({ isRowViewable: isViewable }, getQueryId);
+};
+prototype["setIsTabActive"] = function setIsTabActive(isTabActive, getQueryId) {
+  this.updateVisibility({ isTabActive }, getQueryId);
+};
+prototype["setIsAppActive"] = function setIsAppActive(stateFromStores, getQueryId) {
+  this.updateVisibility({ isAppActive: stateFromStores }, getQueryId);
+};
+prototype["setAnswer"] = function setAnswer(currentAnswer, getQueryId) {
+  this.updateVisibility({ currentAnswer }, getQueryId);
+};
+prototype["resetSession"] = function resetSession(getQueryId) {
+  this.updateVisibility({ currentAnswer: null }, getQueryId);
+  this.lastShownAnswerKey = null;
+  this.lastShownSuggestionKey = null;
+  this.parentSuggestedSearch = null;
+};
+prototype["updateVisibility"] = function updateVisibility(arg0, getQueryId) {
+  const self = this;
+  const rowVisibilityState = this.rowVisibilityState;
+  const obj = {};
+  const merged = Object.assign(rowVisibilityState);
+  const merged1 = Object.assign(arg0);
+  if (!discord_common_shallowEqualDefault(obj, rowVisibilityState)) {
+    self.rowVisibilityState = obj;
+    let tmp3 = obj.isRowViewable && obj.isTabActive && obj.isAppActive;
+    if (tmp3) {
+      tmp3 = null != obj.currentAnswer;
+    }
+    if (null != self.dwellStartTime) {
+      if (!tmp3) {
+        const _performance = performance;
+        self.dwellStartTime = null;
+        if (null != rowVisibilityState.currentAnswer) {
+          const obj2 = { smartSearchQuery: rowVisibilityState.currentAnswer.smartSearchQuery, dwellDurationMs: tmp10 };
+          const result = self.trackSmartSearchAnswerDwelled(obj2, getQueryId);
+        }
+      } else {
+        const currentAnswer = obj.currentAnswer;
+        let requestKey;
+        if (currentAnswer != null) {
+          requestKey = currentAnswer.smartSearchQuery.requestKey;
+        }
+        const currentAnswer2 = rowVisibilityState.currentAnswer;
+        let requestKey1;
+        if (currentAnswer2 != null) {
+          requestKey1 = currentAnswer2.smartSearchQuery.requestKey;
+        }
+      }
+    }
+    if (tmp3) {
+      tmp3 = null != obj.currentAnswer;
+    }
+    if (tmp3) {
+      tmp3 = null == self.dwellStartTime;
+    }
+    if (tmp3) {
+      const _performance2 = performance;
+      self.dwellStartTime = performance.now();
+      const result1 = self.trackSmartSearchAnswerShownDeduped(obj.currentAnswer, getQueryId);
+    }
+  }
+};
+prototype["getParentSuggestedSearchId"] = function getParentSuggestedSearchId(queryText) {
+  parentSuggestedSearch = this;
+  if (null == this.parentSuggestedSearch) {
+    return null;
+  } else if (queryText === parentSuggestedSearch.parentSuggestedSearch.suggestedSearchText) {
+    ({ parentSuggestedSearch, suggestionId } = parentSuggestedSearch);
+  } else {
+    parentSuggestedSearch.parentSuggestedSearch = null;
+    suggestionId = null;
+  }
+};
+prototype["getContextualProperties"] = function getContextualProperties(smartSearchQuery, getQueryId) {
+  const queryId = getQueryId.getQueryId(smartSearchQuery.searchContext);
+  const obj = { search_session_id: null, search_query_id: null, search_location: null, guild_id: null, channel_id: null, filter_channel_ids: null, num_filter_channels: null, parent_suggested_search_id: null };
+  const parentSuggestedSearchId = this.getParentSuggestedSearchId(smartSearchQuery.queryText);
+  obj.search_session_id = getQueryId.getSessionId(smartSearchQuery.searchContext);
+  obj.search_query_id = queryId;
+  obj.search_location = getQueryId.getLocation(smartSearchQuery.searchContext);
+  obj.guild_id = smartSearchQuery.guildId;
+  obj.channel_id = SearchUtils.getChannelIdFromSearchContext(smartSearchQuery.searchContext);
+  obj.filter_channel_ids = smartSearchQuery.channelIds;
+  obj.num_filter_channels = smartSearchQuery.channelIds.length;
+  obj.parent_suggested_search_id = parentSuggestedSearchId;
+  return obj;
+};
+prototype["trackSmartSearchAnswerReturned"] = function trackSmartSearchAnswerReturned(arg0, getQueryId) {
+  ({ smartSearchQuery, answerText, citations, parentSuggestedSearch } = arg0);
+  ({ requestId, durationMs, responseStatus, smartSearchStatus } = arg0);
+  const str2 = smartSearchQuery.queryText.trim();
+  const parts = str2.split(re5);
+  const str3 = answerText.trim();
+  const parts1 = str3.split(re5);
+  const obj2 = {};
+  const merged = Object.assign(this.getContextualProperties(smartSearchQuery, getQueryId));
+  let suggestionId;
+  if (parentSuggestedSearch != null) {
+    suggestionId = parentSuggestedSearch.suggestionId;
+  }
+  if (suggestionId == null) {
+    suggestionId = null;
+  }
+  obj2.parent_suggested_search_id = suggestionId;
+  const merged1 = Object.assign(getCitationCompositionProperties(citations));
+  obj2.request_id = requestId;
+  obj2.duration_ms = Math.round(durationMs);
+  obj2.response_status = responseStatus;
+  obj2.smart_search_status = smartSearchStatus;
+  obj2.search_query_length = smartSearchQuery.searchQueryString.trim().length;
+  obj2.search_query_content_length = str2.length;
+  obj2.num_query_words = parts.filter(Boolean).length;
+  obj2.answer_length = str3.length;
+  obj2.num_answer_words = parts1.filter(Boolean).length;
+  obj2.num_citations_returned = citations.length;
+  AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.SMART_SEARCH_ANSWER_RETURNED, obj2);
+};
+prototype["trackSuggestedSearchesReturned"] = function trackSuggestedSearchesReturned(arg0, getQueryId) {
+  ({ suggestedSearches, parentSuggestedSearch } = arg0);
+  ({ smartSearchQuery, requestId, durationMs, responseStatusCode } = arg0);
+  const obj2 = {};
+  const merged = Object.assign(this.getContextualProperties(smartSearchQuery, getQueryId));
+  let suggestionId;
+  if (parentSuggestedSearch != null) {
+    suggestionId = parentSuggestedSearch.suggestionId;
+  }
+  if (suggestionId == null) {
+    suggestionId = null;
+  }
+  obj2.parent_suggested_search_id = suggestionId;
+  obj2.request_id = requestId;
+  obj2.duration_ms = Math.round(durationMs);
+  obj2.response_status_code = responseStatusCode;
+  obj2.suggested_search_ids = suggestedSearches.map((suggestionId) => suggestionId.suggestionId);
+  AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.SUGGESTED_SEARCHES_RETURNED, obj2);
+};
+prototype["trackSmartSearchAnswerToggled"] = function trackSmartSearchAnswerToggled(arg0, getQueryId) {
+  ({ smartSearchQuery, isCollapsed } = arg0);
+  const obj2 = {};
+  const merged = Object.assign(this.getContextualProperties(smartSearchQuery, getQueryId));
+  obj2.is_collapsed = isCollapsed;
+  AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.SMART_SEARCH_ANSWER_TOGGLED, obj2);
+};
+prototype["trackSmartSearchCitationOpened"] = function trackSmartSearchCitationOpened(citation, getQueryId) {
+  ({ smartSearchQuery, index, numCitationsPresented } = citation);
+  const obj3 = {};
+  const merged = Object.assign(this.getContextualProperties(smartSearchQuery, getQueryId));
+  ({ sourceId: obj2.citation_source_id, sourceType: obj2.citation_source_type, channelId: obj2.citation_channel_id, messageId: obj2.citation_message_id } = citation.citation);
+  obj3.citation_index = index;
+  obj3.num_citations_presented = numCitationsPresented;
+  AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.SMART_SEARCH_CITATION_OPENED, obj3);
+};
+prototype["trackSuggestedSearchStarted"] = function trackSuggestedSearchStarted(arg0, getQueryId) {
+  ({ smartSearchQuery, suggestedSearch } = arg0);
+  ({ suggestionSource, index, numSuggestedSearches } = arg0);
+  const stateForScope = SuggestedSearchStore.getStateForScope(smartSearchQuery);
+  let num;
+  if (stateForScope != null) {
+    const suggestedSearches = stateForScope.suggestedSearches;
+    num = suggestedSearches.findIndex((suggestionId) => suggestionId.suggestionId === suggestedSearch.suggestionId);
+  }
+  if (num == null) {
+    num = -1;
+  }
+  const obj2 = {};
+  const merged = Object.assign(this.getContextualProperties(smartSearchQuery, getQueryId));
+  obj2.suggested_search_id = suggestedSearch.suggestionId;
+  obj2.shown_index = index;
+  obj2.suggestion_source = suggestionSource;
+  obj2.num_suggested_searches = numSuggestedSearches;
+  let requestId;
+  if (stateForScope != null) {
+    requestId = stateForScope.requestId;
+  }
+  obj2.fetch_request_id = requestId;
+  let tmp4 = null;
+  if (num >= 0) {
+    tmp4 = num;
+  }
+  obj2.global_index = tmp4;
+  AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.SUGGESTED_SEARCH_STARTED, obj2);
+  this.parentSuggestedSearch = suggestedSearch;
+};
+prototype["trackSuggestedSearchesShownDeduped"] = function trackSuggestedSearchesShownDeduped(arg0, getQueryId) {
+  const self = this;
+  ({ smartSearchQuery, suggestedSearches, suggestionSource } = arg0);
+  const combined = "" + suggestionSource + ":" + smartSearchQuery.requestKey;
+  if (this.lastShownSuggestionKey !== combined) {
+    self.lastShownSuggestionKey = combined;
+    const obj2 = {};
+    const merged = Object.assign(self.getContextualProperties(smartSearchQuery, getQueryId));
+    obj2.suggested_search_ids = suggestedSearches.map((suggestionId) => suggestionId.suggestionId);
+    obj2.suggestion_source = suggestionSource;
+    AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.SUGGESTED_SEARCHES_SHOWN, obj2);
+  }
+};
+prototype["trackSmartSearchAnswerShownDeduped"] = function trackSmartSearchAnswerShownDeduped(currentAnswer, getQueryId) {
+  const self = this;
+  ({ smartSearchQuery, answerText, presentedCitations } = currentAnswer);
+  if (this.lastShownAnswerKey !== smartSearchQuery.requestKey) {
+    self.lastShownAnswerKey = smartSearchQuery.requestKey;
+    const str = answerText.trim();
+    const parts = str.split(re5);
+    const _Boolean = Boolean;
+    const obj2 = {};
+    const merged = Object.assign(self.getContextualProperties(smartSearchQuery, getQueryId));
+    const merged1 = Object.assign(getCitationCompositionProperties(presentedCitations));
+    obj2.num_citations_presented = presentedCitations.length;
+    obj2.answer_length = str.length;
+    obj2.num_answer_words = parts.filter(Boolean).length;
+    obj2.search_query_length = smartSearchQuery.searchQueryString.trim().length;
+    obj2.has_keyword_results = tmp;
+    AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.SMART_SEARCH_ANSWER_SHOWN, obj2);
+  }
+};
+prototype["trackSmartSearchAnswerDwelled"] = function trackSmartSearchAnswerDwelled(arg0, getQueryId) {
+  ({ smartSearchQuery, dwellDurationMs } = arg0);
+  const obj2 = {};
+  const merged = Object.assign(this.getContextualProperties(smartSearchQuery, getQueryId));
+  obj2.dwell_duration_ms = Math.round(dwellDurationMs);
+  AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.SMART_SEARCH_ANSWER_DWELLED, obj2);
+};
 let merged = Object.assign({ rowVisibilityState: null, dwellStartTime: null, lastShownAnswerKey: null, lastShownSuggestionKey: null, parentSuggestedSearch: null });
 merged[0] = { isRowViewable: false, isTabActive: false, isAppActive: true, currentAnswer: null };
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/SmartSearchAnalyticsManager.tsx");
 
 export default merged;

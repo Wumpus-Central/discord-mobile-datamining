@@ -1,17 +1,12 @@
 // === Module 17755: ExemptRolesActionSheet ===
 
 // Module 17755 (ExemptRolesActionSheet)
-import Fragment from "Fragment" /* 21 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 2107 */;
 import RoleNameDefault from "RoleName" /* 11462 */;
 import ExemptionActionSheetDefault from "ExemptionActionSheet" /* 17756 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let guildId;
-
+const require = fn;
 function renderRoleName(role) {
   return jsx(RoleNameDefault, { role, children: role.name });
 }
@@ -21,23 +16,20 @@ function getRoleId(id) {
 function getRoleName(name) {
   return name.name;
 }
-const isEveryoneRole = GuildRoleRecord.isEveryoneRole;
-const jsx = Fragment.jsx;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
-  let exemptRoles;
-  let first;
-  let onSave;
-  let tmp12;
-  let tmp6;
-  let tmp7;
-  const obj = guildId(576);
-  const cResult = obj.c(13);
+const isEveryoneRole = fn(2107).isEveryoneRole;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_automod/native/components/ExemptRolesActionSheet.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+  const cResult = guildId(576).c(13);
   guildId = guildId.guildId;
   ({ exemptRoles, onSave } = guildId);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildRoleStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -49,27 +41,27 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     cResult[1] = guildId;
     cResult[2] = fn;
     cResult[3] = items1;
-    tmp7 = items1;
-    tmp6 = fn;
+    let tmp7 = items1;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  const tmpResult = guildId(504);
-  const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
+  const obj = guildId(576);
+  const stateFromStores = guildId(504).useStateFromStores(first, tmp6, tmp7);
   if (cResult[4] !== stateFromStores) {
     const _Symbol = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
       class I {
-        constructor(role) {
-          return !isEveryoneRole(role);
+        constructor(arg0) {
+          return !closure_1_4(guildId);
         }
       }
       cResult[6] = I;
     } else {
       class I {
-        constructor(role) {
-          return !isEveryoneRole(role);
+        constructor(arg0) {
+          return !closure_1_4(guildId);
         }
       }
     }
@@ -78,59 +70,66 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     cResult[5] = found;
   } else {
     class I {
-      constructor(role) {
-        return !isEveryoneRole(role);
+      constructor(arg0) {
+        return !closure_1_4(guildId);
       }
     }
+    const _Symbol2 = Symbol;
+    if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+      class I {
+        constructor(arg0) {
+          return !closure_1_4(guildId);
+        }
+      }
+      const stringResult = obj3.string(tmp(1126).t["LPJmL/"]);
+      const intl = tmp(1126).intl;
+      const stringResult1 = intl.string(tmp(1126).t.aFO1I6);
+      cResult[7] = stringResult;
+      cResult[8] = stringResult1;
+      let tmp13 = stringResult1;
+      const tmp12 = stringResult;
+    } else {
+      class I {
+        constructor(arg0) {
+          return !closure_1_4(guildId);
+        }
+      }
+      tmp13 = cResult[8];
+    }
+    if (cResult[9] === exemptRoles) {
+      class I {
+        constructor(arg0) {
+          return !closure_1_4(guildId);
+        }
+      }
+    }
+    const obj2 = { title: tmp12, searchPlaceholder: tmp13, listId: "automod-exempt-roles", items: tmp8, initialSelected: exemptRoles, getId: getRoleId, getSearchText: getRoleName, renderLabel: renderRoleName, onSave };
+    const tmp22 = jsx(ExemptionActionSheetDefault, { title: tmp12, searchPlaceholder: tmp13, listId: "automod-exempt-roles", items: tmp8, initialSelected: exemptRoles, getId: getRoleId, getSearchText: getRoleName, renderLabel: renderRoleName, onSave });
+    cResult[9] = exemptRoles;
+    cResult[10] = onSave;
+    cResult[11] = tmp8;
+    cResult[12] = tmp22;
   }
-  if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-    class I {
-      constructor(role) {
-        return !isEveryoneRole(role);
-      }
-    }
-    const stringResult = obj3.string(guildId(1126).t["LPJmL/"]);
-    const intl = tmp(1126).intl;
-    const stringResult1 = intl.string(guildId(1126).t.aFO1I6);
-    cResult[7] = stringResult;
-    cResult[8] = stringResult1;
-    tmp12 = stringResult1;
-  } else {
-    class I {
-      constructor(role) {
-        return !isEveryoneRole(role);
-      }
-    }
-    tmp12 = cResult[8];
-  }
-  if (cResult[9] === exemptRoles) {
-    class I {
-      constructor(role) {
-        return !isEveryoneRole(role);
-      }
-    }
-  }
-  cResult[9] = exemptRoles;
-  cResult[10] = onSave;
-  cResult[11] = tmp8;
-  cResult[12] = jsx(ExemptionActionSheetDefault, { title: tmp11, searchPlaceholder: tmp12, listId: "automod-exempt-roles", items: tmp8, initialSelected: exemptRoles, getId: getRoleId, getSearchText: getRoleName, renderLabel: renderRoleName, onSave });
-  jsx(ExemptionActionSheetDefault, { title: tmp11, searchPlaceholder: tmp12, listId: "automod-exempt-roles", items: tmp8, initialSelected: exemptRoles, getId: getRoleId, getSearchText: getRoleName, renderLabel: renderRoleName, onSave });
+  const tmpResult = guildId(504);
 }) : ((guildId) => {
-  let exemptRoles;
-  let onSave;
   guildId = guildId.guildId;
   ({ exemptRoles, onSave } = guildId);
   const items = [GuildRoleStore];
   const items1 = [guildId];
-  const obj = guildId(504);
-  const stateFromStores = obj.useStateFromStores(items, () => GuildRoleStore.getSortedRoles(guildId), items1);
+  const stateFromStores = guildId(504).useStateFromStores(items, () => GuildRoleStore.getSortedRoles(guildId), items1);
   const items2 = [stateFromStores];
-  const memo = react.useMemo(() => stateFromStores.filter((item) => !closure_1_4(item)), items2);
-  stateFromStores(17756);
+  const memo = noop.useMemo(() => stateFromStores.filter((item) => !closure_1_4(item)), items2);
+  const obj2 = { title: null, searchPlaceholder: null, listId: "automod-exempt-roles", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, onSave: null };
+  const obj = guildId(504);
   const intl = guildId(1126).intl;
+  obj2.title = intl.string(guildId(1126).t["LPJmL/"]);
   const intl2 = guildId(1126).intl;
-  return <tmp3 title={intl.string(guildId(1126).t["LPJmL/"])} searchPlaceholder={intl2.string(guildId(1126).t.aFO1I6)} listId="automod-exempt-roles" items={memo} initialSelected={exemptRoles} getId={getRoleId} getSearchText={getRoleName} renderLabel={renderRoleName} onSave={onSave} />;
+  obj2.searchPlaceholder = intl2.string(guildId(1126).t.aFO1I6);
+  obj2.items = memo;
+  obj2.initialSelected = exemptRoles;
+  obj2.getId = getRoleId;
+  obj2.getSearchText = getRoleName;
+  obj2.renderLabel = renderRoleName;
+  obj2.onSave = onSave;
+  return jsx(stateFromStores(17756), { title: null, searchPlaceholder: null, listId: "automod-exempt-roles", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, onSave: null });
 });
-const result = size.fileFinishedImporting("modules/guild_automod/native/components/ExemptRolesActionSheet.tsx");
-
-export default tmp2;

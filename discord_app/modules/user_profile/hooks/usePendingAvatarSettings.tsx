@@ -1,24 +1,18 @@
 // === Module 7841: usePendingAvatarSettings ===
 
 // Module 7841 (usePendingAvatarSettings)
-import react from "react" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
 import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 7846 */;
 import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 7848 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7842 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-let dependencyMap, isTryItOut;
+_mod19.useCallback;
+let result = size.fileFinishedImporting("modules/user_profile/hooks/usePendingAvatarSettings.tsx");
 
-const useCallback = react.useCallback;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((isTryItOut) => {
-  let closure_2;
-  let first;
-  let pendingAvatar;
-  let pendingAvatarDecoration;
-  let pendingErrors;
-  let obj = isTryItOut(576);
-  const cResult = obj.c(15);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((isTryItOut) => {
+  const cResult = isTryItOut(576).c(15);
   isTryItOut = isTryItOut.isTryItOut;
   const guildId = isTryItOut.guildId;
   const tmp4 = guildId(7845)(isTryItOut.analyticsLocations);
@@ -26,42 +20,35 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((isTryItOut) => {
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserProfileSettingsStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === guildId) {
-    let tmp7;
-    let setTryItOutAvatar;
     if (cResult[2] === isTryItOut) {
-      tmp7 = cResult[3];
+      let tmp7 = cResult[3];
     }
-    const tmpResult = isTryItOut(573);
-    const stateFromStoresObject = tmpResult.useStateFromStoresObject(first, tmp7);
+    const stateFromStoresObject = tmp(573).useStateFromStoresObject(first, tmp7);
     ({ pendingAvatar, pendingAvatarDecoration, pendingErrors } = stateFromStoresObject);
     if (cResult[4] !== guildId) {
       const fn2 = function l(avatar) {
-        const obj = UserProfileSettingsActionCreators;
+        UserProfileSettingsActionCreators.setPendingChanges({ guildId, avatar });
         const obj2 = { guildId, avatar };
-        obj.setPendingChanges(obj2);
         let str = "set";
-        const announcePendingAvatarChange = ProfileCustomizationUtils.announcePendingAvatarChange;
-        ProfileCustomizationUtils;
         if (null == avatar) {
           str = "remove";
         }
-        const result = announcePendingAvatarChange(str);
+        const result = ProfileCustomizationUtils.announcePendingAvatarChange(str);
       };
       cResult[4] = guildId;
       cResult[5] = fn2;
-      setTryItOutAvatar = fn2;
+      let setTryItOutAvatar = fn2;
     } else {
       setTryItOutAvatar = cResult[5];
     }
     if (cResult[6] === guildId) {
-      let setTryItOutAvatarDecoration;
       if (cResult[7] === tmp4) {
-        setTryItOutAvatarDecoration = cResult[8];
+        let setTryItOutAvatarDecoration = cResult[8];
       }
       if (isTryItOut) {
         setTryItOutAvatar = tmp(7849).setTryItOutAvatar;
@@ -73,26 +60,28 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((isTryItOut) => {
         if (cResult[10] === pendingAvatarDecoration) {
           if (cResult[11] === pendingErrors) {
             if (cResult[12] === setTryItOutAvatar) {
-              let tmp9;
               if (cResult[13] === setTryItOutAvatarDecoration) {
-                tmp9 = cResult[14];
+                let tmp9 = cResult[14];
               }
               return tmp9;
             }
           }
         }
       }
-      let obj2 = { pendingAvatar, pendingAvatarDecoration, pendingErrors, setPendingAvatar: null, setPendingAvatarDecoration: setTryItOutAvatarDecoration };
+      let obj2 = { pendingAvatar, pendingAvatarDecoration, pendingErrors, setPendingAvatar: null, setPendingAvatarDecoration: null };
       class P {
-        constructor(avatarDecoration) {
-          const obj = UserProfileSettingsActionCreators;
-          const obj2 = { guildId, avatarDecoration };
-          obj.setPendingChanges(obj2);
-          if (null != avatarDecoration) {
-            closure_2(avatarDecoration);
+        constructor(arg0) {
+          obj = closure_0(closure_2[6]);
+          obj1 = { guildId, avatarDecoration: isTryItOut };
+          setPendingChangesResult = obj.setPendingChanges(obj1);
+          if (null != isTryItOut) {
+            tmp2 = closure_2;
+            tmp3 = closure_2(isTryItOut);
           }
+          return;
         }
       }
+      obj2.setPendingAvatarDecoration = setTryItOutAvatarDecoration;
       cResult[9] = pendingAvatar;
       cResult[10] = pendingAvatarDecoration;
       cResult[11] = pendingErrors;
@@ -102,30 +91,35 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((isTryItOut) => {
       tmp9 = obj2;
     }
     class P {
-      constructor(avatarDecoration) {
-        const obj = UserProfileSettingsActionCreators;
-        const obj2 = { guildId, avatarDecoration };
-        obj.setPendingChanges(obj2);
-        if (null != avatarDecoration) {
-          closure_2(avatarDecoration);
+      constructor(arg0) {
+        obj = closure_0(closure_2[6]);
+        obj1 = { guildId, avatarDecoration: isTryItOut };
+        setPendingChangesResult = obj.setPendingChanges(obj1);
+        if (null != isTryItOut) {
+          tmp2 = closure_2;
+          tmp3 = closure_2(isTryItOut);
         }
+        return;
       }
     }
     cResult[6] = guildId;
     cResult[7] = tmp4;
     cResult[8] = P;
     setTryItOutAvatarDecoration = P;
+    const tmpResult = tmp(573);
   }
   const fn = function s() {
     if (isTryItOut) {
       const tryItOutChanges = UserProfileSettingsStore.getTryItOutChanges();
+      const obj5 = { pendingAvatar: null, pendingAvatarDecoration: null, pendingErrors: null };
       ({ tryItOutAvatar: obj3.pendingAvatar, tryItOutAvatarDecoration: obj3.pendingAvatarDecoration } = tryItOutChanges);
-      const obj5 = { pendingAvatar: null, pendingAvatarDecoration: null, pendingErrors: UserProfileSettingsStore.getErrors(guildId).avatarDecoration };
+      obj5.pendingErrors = UserProfileSettingsStore.getErrors(guildId).avatarDecoration;
       return obj5;
     } else {
       const pendingChanges = UserProfileSettingsStore.getPendingChanges(guildId);
+      const obj6 = { pendingAvatar: null, pendingAvatarDecoration: null, pendingErrors: null };
       ({ pendingAvatar: obj2.pendingAvatar, pendingAvatarDecoration: obj2.pendingAvatarDecoration } = pendingChanges);
-      const obj6 = { pendingAvatar: null, pendingAvatarDecoration: null, pendingErrors: UserProfileSettingsStore.getErrors(guildId).avatarDecoration };
+      obj6.pendingErrors = UserProfileSettingsStore.getErrors(guildId).avatarDecoration;
       return obj6;
     }
   };
@@ -133,62 +127,55 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((isTryItOut) => {
   cResult[2] = isTryItOut;
   cResult[3] = fn;
   tmp7 = fn;
+  let obj = isTryItOut(576);
 }) : ((isTryItOut) => {
-  let closure_2;
-  let pendingAvatar;
-  let pendingAvatarDecoration;
-  let pendingErrors;
   isTryItOut = isTryItOut.isTryItOut;
   const guildId = isTryItOut.guildId;
   const tmp2 = guildId(7845)(isTryItOut.analyticsLocations);
   dependencyMap = tmp2;
-  let obj = isTryItOut(573);
   const items = [UserProfileSettingsStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = isTryItOut(573).useStateFromStoresObject(items, () => {
     if (isTryItOut) {
       const tryItOutChanges = UserProfileSettingsStore.getTryItOutChanges();
+      const obj5 = { pendingAvatar: null, pendingAvatarDecoration: null, pendingErrors: null };
       ({ tryItOutAvatar: obj3.pendingAvatar, tryItOutAvatarDecoration: obj3.pendingAvatarDecoration } = tryItOutChanges);
-      const obj5 = { pendingAvatar: null, pendingAvatarDecoration: null, pendingErrors: UserProfileSettingsStore.getErrors(guildId).avatarDecoration };
+      obj5.pendingErrors = UserProfileSettingsStore.getErrors(guildId).avatarDecoration;
       return obj5;
     } else {
       const pendingChanges = UserProfileSettingsStore.getPendingChanges(guildId);
+      const obj6 = { pendingAvatar: null, pendingAvatarDecoration: null, pendingErrors: null };
       ({ pendingAvatar: obj2.pendingAvatar, pendingAvatarDecoration: obj2.pendingAvatarDecoration } = pendingChanges);
-      const obj6 = { pendingAvatar: null, pendingAvatarDecoration: null, pendingErrors: UserProfileSettingsStore.getErrors(guildId).avatarDecoration };
+      obj6.pendingErrors = UserProfileSettingsStore.getErrors(guildId).avatarDecoration;
       return obj6;
     }
   });
   const items1 = [guildId];
   ({ pendingAvatar, pendingAvatarDecoration, pendingErrors } = stateFromStoresObject);
   let setTryItOutAvatar = useCallback((avatar) => {
-    const obj = UserProfileSettingsActionCreators;
+    UserProfileSettingsActionCreators.setPendingChanges({ guildId, avatar });
     const obj2 = { guildId, avatar };
-    obj.setPendingChanges(obj2);
     let str = "set";
-    const announcePendingAvatarChange = ProfileCustomizationUtils.announcePendingAvatarChange;
-    ProfileCustomizationUtils;
     if (null == avatar) {
       str = "remove";
     }
-    const result = announcePendingAvatarChange(str);
+    const result = ProfileCustomizationUtils.announcePendingAvatarChange(str);
   }, items1);
   const items2 = [tmp2, guildId];
   let setTryItOutAvatarDecoration = useCallback((avatarDecoration) => {
-    const obj = UserProfileSettingsActionCreators;
-    const obj2 = { guildId, avatarDecoration };
-    obj.setPendingChanges(obj2);
+    UserProfileSettingsActionCreators.setPendingChanges({ guildId, avatarDecoration });
     if (null != avatarDecoration) {
       closure_2(avatarDecoration);
     }
+    const obj2 = { guildId, avatarDecoration };
   }, items2);
-  let obj2 = { pendingAvatar, pendingAvatarDecoration, pendingErrors, setPendingAvatar: setTryItOutAvatar, setPendingAvatarDecoration: setTryItOutAvatarDecoration };
+  let obj2 = { pendingAvatar, pendingAvatarDecoration, pendingErrors, setPendingAvatar: null, setPendingAvatarDecoration: null };
   if (isTryItOut) {
     setTryItOutAvatar = tmp3(7849).setTryItOutAvatar;
   }
+  obj2.setPendingAvatar = setTryItOutAvatar;
   if (isTryItOut) {
     setTryItOutAvatarDecoration = tmp3(7849).setTryItOutAvatarDecoration;
   }
+  obj2.setPendingAvatarDecoration = setTryItOutAvatarDecoration;
   return obj2;
 });
-let result = size.fileFinishedImporting("modules/user_profile/hooks/usePendingAvatarSettings.tsx");
-
-export default tmp2;

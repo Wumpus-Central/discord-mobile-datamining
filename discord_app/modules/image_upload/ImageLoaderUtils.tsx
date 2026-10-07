@@ -1,26 +1,20 @@
 // === Module 1437: ImageLoaderUtils ===
 
 // Module 1437 (ImageLoaderUtils)
-import _modDef12 from "module_12" /* 12 */;
 import URLUtilsDefault from "URLUtils" /* 1371 */;
 import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1438 */;
 import AttachmentImageLadder from "AttachmentImageLadder" /* 1439 */;
-import LRUCacheDefault from "LRUCache" /* 1444 */;
+import privDefault from "priv" /* 1444 */;
 import _modDef1478 from "module_1478" /* 1478 */;
 import ImageUtils from "ImageUtils" /* 1481 */;
-import react_nativeDefault from "react-native" /* 1885 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import Constants from "Constants" /* 1085 */;
-import size_mod from "module_2" /* 2 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1885 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let c3, set;
-
-let hasOwnProperty;
-let metroRequire;
+require = fn;
 function handleImageLoad(arg0, callbacks, arg2) {
-  let c0 = true;
-  let closure_1 = callbacks;
+  c0 = true;
+  closure_1 = callbacks;
   callbacks = callbacks.callbacks;
   closure_10.del(callbacks.url);
   if (null != callbacks) {
@@ -28,31 +22,6 @@ function handleImageLoad(arg0, callbacks, arg2) {
   }
 }
 function getSrcWithWidthAndHeight(quality) {
-  let format;
-  let height;
-  let sourceHeight;
-  let sourceWidth;
-  let src;
-  let targetHeight;
-  let targetWidth;
-  let tmp15Result2;
-  let tmp6;
-  let tmp8;
-  let tmp9;
-  let width;
-  function getAttachmentLadderConfig(arg0) {
-    try {
-      const obj = { location: "ImageLoaderUtils.getSrcWithWidthAndHeight" };
-      const attachmentImageLadderConfig = AttachmentImageLadderExperiment.getAttachmentImageLadderConfig(obj);
-      let tmp5 = null;
-      if (true === attachmentImageLadderConfig.enabled) {
-        tmp5 = attachmentImageLadderConfig;
-      }
-      return tmp5;
-    } catch (err) {
-      return null;
-    }
-  }
   ({ src, sourceWidth, sourceHeight, format } = quality);
   ({ targetWidth, targetHeight } = quality);
   if (format === undefined) {
@@ -71,15 +40,13 @@ function getSrcWithWidthAndHeight(quality) {
     flag2 = false;
   }
   if (!src.startsWith("data:image")) {
-    let obj = URLUtilsDefault;
     if (!obj.isDiscordCdnUrl(src)) {
-      let tmp5 = _slicedToArray(src.split("?"), 2);
       const items = [, ];
-      [arr[0], tmp6] = tmp5;
+      [arr[0], tmp6] = src.split("?");
+      let tmp5 = _slicedToArray(src.split("?"), 2);
+      items[1] = _modDef1478.parse(tmp6);
       const tmp2Result = _modDef1478;
-      items[1] = tmp2Result.parse(tmp6);
       [tmp8, tmp9] = items;
-      _slicedToArray(items, 2);
       if (null != format) {
         tmp9.format = format;
       }
@@ -90,7 +57,10 @@ function getSrcWithWidthAndHeight(quality) {
         flag = flag2;
       }
       if (flag) {
-        const isMatch = re7.test(src) || re8.test(src);
+        let isMatch = re7.test(src);
+        if (!isMatch) {
+          isMatch = re8.test(src);
+        }
         flag = isMatch;
       }
       if (flag) {
@@ -99,149 +69,71 @@ function getSrcWithWidthAndHeight(quality) {
       if (re8.test(src)) {
         tmp9.format = "webp";
       }
+      const tmp7 = _slicedToArray(items, 2);
       const size1 = { width: targetWidth, height: targetHeight, maxWidth: maxHeight, maxHeight };
-      const obj3 = ImageUtils;
-      ({ width, height } = obj3.fit(size1));
-      obj3.fit(size1);
+      ({ width, height } = ImageUtils.fit(size1));
       if (width !== sourceWidth) {
-        const tmp18 = getAttachmentLadderConfig("ImageLoaderUtils.getSrcWithWidthAndHeight");
-        size = { width, height };
+        const tmp18 = (function getAttachmentLadderConfig(arg0) {
+          try {
+            const obj = { location: "ImageLoaderUtils.getSrcWithWidthAndHeight" };
+            const attachmentImageLadderConfig = AttachmentImageLadderExperiment.getAttachmentImageLadderConfig(obj);
+            let tmp5 = null;
+            if (true === attachmentImageLadderConfig.enabled) {
+              tmp5 = attachmentImageLadderConfig;
+            }
+            return tmp5;
+          } catch (err) {
+            return null;
+          }
+        })("ImageLoaderUtils.getSrcWithWidthAndHeight");
+        let size = { width, height };
         if (null != tmp18) {
-          const obj2 = { targetWidth: width, targetHeight: height, sourceWidth, sourceHeight, maxUpscale: tmp15Result2.getSnapDownMaxUpscale(tmp18, react_nativeDefault()) };
-          const snapAttachmentDimensions = AttachmentImageLadder.snapAttachmentDimensions;
-          AttachmentImageLadder;
-          tmp15Result2 = AttachmentImageLadder;
-          size = snapAttachmentDimensions(obj2);
+          const obj2 = { targetWidth: width, targetHeight: height, sourceWidth, sourceHeight, maxUpscale: null };
+          const tmp15Result = AttachmentImageLadder;
+          obj2.maxUpscale = AttachmentImageLadder.getSnapDownMaxUpscale(tmp18, getDevicePixelRatioDefault());
+          size = tmp15Result.snapAttachmentDimensions(obj2);
+          const tmp15Result2 = AttachmentImageLadder;
         }
-        const tmp20 = size.width === sourceWidth && size.height === sourceHeight;
-        if (!tmp20) {
+        if (!tmp19) {
           tmp9.width = size.width | 0;
           tmp9.height = size.height | 0;
         }
+        tmp19 = size.width === sourceWidth && size.height === sourceHeight;
       }
+      const fitResult = ImageUtils.fit(size1);
       let text = tmp8;
-      const tmp2Result3 = _modDef12;
       if (!tmp2Result3.isEmpty(tmp9)) {
         _modDef1478;
-        text = `${tmp8}?${obj8.stringify(tmp9)}`;
+        text = `${tmp8}?${obj9.stringify(tmp9)}`;
       }
       return text;
     }
+    obj = URLUtilsDefault;
   }
   return src;
 }
+const Constants = fn(1085);
 ({ NOOP: hasOwnProperty, MEDIA_PROXY_MAX_TARGET_RESOLUTION: metroRequire } = Constants);
 const re7 = /\.webp($|\?|#)/i;
 const re8 = /\.avif($|\?|#)/i;
 let closure_9 = [16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640, 1024, 1280, 1536, 2048, 3072, 4096];
-let closure_10 = new LRUCacheDefault({ max: 1000 });
-const tmp3 = new LRUCacheDefault({ max: 1000 });
-let size = size_mod;
+let closure_10 = new privDefault({ max: 1000 });
+let size = fn(2);
 let result = size.fileFinishedImporting("modules/image_upload/ImageLoaderUtils.tsx");
 
-export const getDevicePixelRatio = react_nativeDefault;
+export const getDevicePixelRatio = getDevicePixelRatioDefault;
 export const isImageLoaded = function isImageLoaded(arg0) {
-  const value = closure_10.get(arg0);
+  value = closure_10.get(arg0);
   return null != value && value.loaded;
 };
 export const loadImage = function loadImage(url, bind) {
-  let image;
-  const f135119 = async () => {
-    let c2;
-    let closure_1;
-    let tmp;
-    if (c3 === 2) {
-      let num13 = 3;
-      let num14 = 3;
-      c3 = 3;
-      let str = "Generator functions may not be called on executing generators";
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else {
-      let tmp19 = value;
-      let tmp20 = arg0;
-      let num15 = 3;
-      if (tmp3 === 3) {
-        let num12 = 1;
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          let obj3 = { value, done: true };
-          return obj3;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          let num = 2;
-          c3 = 2;
-          let tmp4 = backoff;
-          let num2 = 0;
-          if (0 === backoff) {
-            let num7 = 1;
-            if (arg0 === 1) {
-              let num10 = 3;
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              let num9 = 3;
-              c3 = 3;
-              let obj4 = { value, done: true };
-              return obj4;
-            } else {
-              backoff = tmp;
-              let tmp17 = backoff;
-              let obj2 = tmp(backoff[6]);
-              backoff = 1;
-              let num8 = 1;
-              c3 = 1;
-              let obj5 = { value: obj2.isOnline(), done: false };
-              return obj5;
-            }
-          } else {
-            let num16 = 1;
-            if (arg0 === 1) {
-              let num6 = 3;
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              let num5 = 3;
-              c3 = 3;
-              let obj = { value, done: true };
-              return obj;
-            } else {
-              let num3 = 5;
-              if (closure_129_2.fails < 5) {
-                let tmp12 = backoff;
-                let failResult = closure_129_2.fail(f154421);
-              } else {
-                let flag = true;
-                let tmp11 = closure_1_11(true, closure_129_0, closure_129_1);
-              }
-              let num4 = 3;
-              c3 = 3;
-              return { value: "IconComponent", done: null };
-            }
-          }
-        } catch (tmp18) {
-          let num11 = 3;
-          c3 = 3;
-          throw tmp18;
-        }
-      }
-    }
-  };
-  let closure_0 = url;
-  let value = closure_10.get(url);
+  value = closure_10.get(url);
   let obj3 = value;
   if (null != value) {
-    let fn;
     if (value.loaded) {
       if (null != bind) {
-        const obj2 = image(1468);
-        const awaitOnlineResult = obj2.awaitOnline();
-        awaitOnlineResult.then(() => {
-          let url;
-          const tmp2 = null != obj3 && null != obj3.callbacks;
+        const obj2 = image(obj3[6]);
+        image(obj3[6]).awaitOnline().then(() => {
           if (tmp2) {
             const callbacks = obj3.callbacks;
             const item = callbacks.forEach((fn) => {
@@ -253,36 +145,169 @@ export const loadImage = function loadImage(url, bind) {
               }
             });
           }
+          tmp2 = null != obj3 && null != obj3.callbacks;
         });
+        const awaitOnlineResult = image(obj3[6]).awaitOnline();
       }
-      fn = closure_5;
+      let fn = closure_5;
     }
     return fn;
   }
   if (null == value) {
     obj3 = { url, loaded: false };
     const result = closure_10.set(url, obj3);
-    const self5 = this;
-    const self6 = this;
     image = new globalThis.Image();
+    closure_129_0 = obj3;
+    closure_129_1 = image;
     let backoff;
     if (null == obj3.backoff) {
-      let tmp2 = image;
-      const self = this;
-      const self2 = this;
-      obj3.backoff = new image(569)();
-      const tmp4 = new image(569)();
+      const tmp6 = new image(obj3[5])();
+      obj3.backoff = tmp6;
     }
     backoff = obj3.backoff;
-    image.onerror = _asyncToGenerator(f135119);
+    image.onerror = asyncGeneratorStep(async () => {
+      if (c3 === 2) {
+        c3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          let obj3 = { value, done: true };
+          return obj3;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c3 = 2;
+          if (0 === backoff) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              let obj4 = { value, done: true };
+              return obj4;
+            } else {
+              backoff = tmp2;
+              backoff = 1;
+              c3 = 1;
+              let obj5 = { value: tmp2(backoff[6]).isOnline(), done: false };
+              return obj5;
+            }
+          } else if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            let obj = { value, done: true };
+            return obj;
+          } else {
+            if (closure_129_2.fails < 5) {
+              closure_129_2.fail(() => {
+                image = new globalThis.Image();
+                backoff = undefined;
+                if (null == backoff.backoff) {
+                  let tmp7 = new closure_1(c2[5])();
+                  tmp.backoff = tmp7;
+                }
+                backoff = tmp.backoff;
+                image.onerror = closure_2_4(async () => {
+                  if (c3 === 2) {
+                    c3 = 3;
+                    throw new TypeError("Generator functions may not be called on executing generators");
+                  } else if (tmp4 === 3) {
+                    if (arg0 === 1) {
+                      throw value;
+                    } else if (arg0 === 2) {
+                      let obj3 = { value, done: true };
+                      return obj3;
+                    } else {
+                      return { value: "IconComponent", done: null };
+                    }
+                  } else {
+                    try {
+                      c3 = 2;
+                      if (0 === backoff) {
+                        if (arg0 === 1) {
+                          c3 = 3;
+                          throw value;
+                        } else if (arg0 === 2) {
+                          c3 = 3;
+                          let obj4 = { value, done: true };
+                          return obj4;
+                        } else {
+                          backoff = tmp2;
+                          backoff = 1;
+                          c3 = 1;
+                          let obj5 = { value: tmp2(backoff[6]).isOnline(), done: false };
+                          return obj5;
+                        }
+                      } else if (arg0 === 1) {
+                        c3 = 3;
+                        throw value;
+                      } else if (arg0 === 2) {
+                        c3 = 3;
+                        let obj = { value, done: true };
+                        return obj;
+                      } else {
+                        if (closure_129_2.fails < 5) {
+                          closure_129_2.fail(() => {
+                            image = new globalThis.Image();
+                            backoff = undefined;
+                            if (null == backoff.backoff) {
+                              let tmp7 = new closure_1(c2[5])();
+                              tmp.backoff = tmp7;
+                            }
+                            backoff = tmp.backoff;
+                            image.onerror = closure_2_4(/* F135119 */ function() { ... });
+                            image.onload = function onload() { ... };
+                            image.src = backoff.url;
+                          });
+                        } else {
+                          closure_1_11(true, closure_129_0, closure_129_1);
+                        }
+                        c3 = 3;
+                      }
+                    } catch (tmp19) {
+                      c3 = tmp;
+                      throw tmp19;
+                    }
+                  }
+                });
+                image.onload = () => {
+                  backoff = backoff.backoff;
+                  if (null != backoff) {
+                    backoff.succeed();
+                  }
+                  c0 = false;
+                  ({ callbacks, url } = backoff);
+                  const size = { url, loaded: true, width: image.width, height: image.height };
+                  const result = closure_2_10.set(url, size);
+                  if (null != callbacks) {
+                    const item = callbacks.forEach((fn) => fn(c0, size));
+                  }
+                };
+                image.src = backoff.url;
+              });
+            } else {
+              closure_1_11(true, closure_129_0, closure_129_1);
+            }
+            c3 = 3;
+          }
+        } catch (tmp19) {
+          c3 = tmp;
+          throw tmp19;
+        }
+      }
+    });
     image.onload = () => {
-      let callbacks;
-      let url;
       backoff = backoff.backoff;
       if (null != backoff) {
         backoff.succeed();
       }
-      let c0 = false;
+      c0 = false;
       ({ callbacks, url } = backoff);
       const size = { url, loaded: true, width: image.width, height: image.height };
       const result = closure_2_10.set(url, size);
@@ -295,22 +320,24 @@ export const loadImage = function loadImage(url, bind) {
   }
   if (null != bind) {
     const bindResult = bind.bind(null);
+    image = bindResult;
     if (null == value.callbacks) {
       const _Set = Set;
-      const self3 = this;
-      const self4 = this;
-      value.callbacks = new Set();
-      set = new Set();
+      const set = new Set();
+      value.callbacks = set;
     }
     let callbacks = value.callbacks;
     callbacks.add(bindResult);
   }
   fn = () => {
-    const tmp2 = null != bindResult && null != obj3;
+    let tmp2 = null != image;
+    if (tmp2) {
+      tmp2 = null != obj3;
+    }
     if (tmp2) {
       if (null != obj3.callbacks) {
         const callbacks = obj3.callbacks;
-        callbacks.delete(bindResult);
+        callbacks.delete(image);
       }
       if (null != obj3.backoff) {
         const backoff = obj3.backoff;
@@ -320,7 +347,7 @@ export const loadImage = function loadImage(url, bind) {
   };
 };
 export const getBestMediaProxySize = function getBestMediaProxySize(size, arg1) {
-  let closure_0 = size;
+  closure_0 = size;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -341,30 +368,24 @@ export const getBestMediaProxySize = function getBestMediaProxySize(size, arg1) 
   return found1;
 };
 export { getSrcWithWidthAndHeight };
-export const getImageSrc = function getImageSrc(src) {
-  let height;
-  let maxHeight;
-  let maxWidth;
-  let ratio;
-  let width;
-  ({ width, height, maxWidth, maxHeight, ratio } = src);
-  src = src.src;
+export const getImageSrc = function getImageSrc(format) {
+  ({ width, height, maxWidth, maxHeight, ratio } = format);
   if (ratio === undefined) {
     ratio = 1;
   }
-  let format = src.format;
+  format = format.format;
   if (format === undefined) {
     format = null;
   }
-  let quality = src.quality;
+  let quality = format.quality;
   if (quality === undefined) {
     quality = null;
   }
-  let flag = src.animated;
+  let flag = format.animated;
   if (flag === undefined) {
     flag = false;
   }
-  let flag2 = src.srcIsAnimated;
+  let flag2 = format.srcIsAnimated;
   if (flag2 === undefined) {
     flag2 = false;
   }
@@ -386,7 +407,6 @@ export const getImageSrc = function getImageSrc(src) {
     const _Math4 = Math;
     bound1 = Math.min(rounded1, maxHeight);
   }
-  const tmp10 = react_nativeDefault();
-  const obj = { src, sourceWidth: width, sourceHeight: height, targetWidth: bound * tmp10, targetHeight: bound1 * tmp10, format, quality, animated: flag, srcIsAnimated: flag2 };
-  return getSrcWithWidthAndHeight(obj);
+  const tmp10 = getDevicePixelRatioDefault();
+  return getSrcWithWidthAndHeight({ src: format.src, sourceWidth: width, sourceHeight: height, targetWidth: bound * tmp10, targetHeight: bound1 * tmp10, format, quality, animated: flag, srcIsAnimated: flag2 });
 };

@@ -2,30 +2,25 @@
 
 // Module 7909 (useProfileEffect)
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7065 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7072 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7066 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7081 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
-const isProfileEffectRecord = ProfileEffectRecord.isProfileEffectRecord;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let closure_1;
-  let first;
-  let tmp7;
+require = fn;
+const isProfileEffectRecord = fn(7072).isProfileEffectRecord;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/profile_effects/useProfileEffect.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   _require = arg0;
-  let obj = require("react");
-  const cResult = obj.c(7);
-  const tmp = _require;
+  const cResult = require("c").c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [CollectiblesCategoryStore, CollectiblesPurchaseStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -55,27 +50,24 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    tmp7 = fn;
+    let tmp7 = fn;
   } else {
     tmp7 = cResult[2];
   }
-  const tmpResult = tmp(504);
-  const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
+  let obj = require("c");
+  const stateFromStores = require("initialize").useStateFromStores(first, tmp7);
   dependencyMap = tmp9;
   if (cResult[3] === (null != arg0 && null == stateFromStores)) {
-    let tmp10;
-    let tmp11;
     if (cResult[4] === arg0) {
-      tmp10 = cResult[5];
-      tmp11 = cResult[6];
+      let tmp10 = cResult[5];
+      let tmp11 = cResult[6];
     }
-    const effect = react.useEffect(tmp10, tmp11);
+    const effect = noop.useEffect(tmp10, tmp11);
     return stateFromStores;
   }
   const fn2 = function v() {
     if (closure_1) {
-      const obj = CollectiblesActionCreators;
-      const result = obj.maybeFetchCollectiblesProduct(closure_0);
+      const result = CollectiblesActionCreators.maybeFetchCollectiblesProduct(closure_0);
     }
   };
   const items1 = [null != arg0 && null == stateFromStores, arg0];
@@ -85,13 +77,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = items1;
   tmp11 = items1;
   tmp10 = fn2;
+  const tmpResult = require("initialize");
 }) : ((arg0) => {
-  let closure_0;
-  let closure_1;
   _require = arg0;
-  let obj = require("get initialized");
   const items = [CollectiblesCategoryStore, CollectiblesPurchaseStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
       const product = CollectiblesCategoryStore.getProduct(closure_0);
       let first;
@@ -116,14 +106,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   });
   dependencyMap = tmp2;
   const items1 = [null != arg0 && null == stateFromStores, arg0];
-  const effect = react.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (closure_1) {
-      const obj = CollectiblesActionCreators;
-      const result = obj.maybeFetchCollectiblesProduct(closure_0);
+      const result = CollectiblesActionCreators.maybeFetchCollectiblesProduct(closure_0);
     }
   }, items1);
   return stateFromStores;
 });
-let result = size.fileFinishedImporting("modules/collectibles/profile_effects/useProfileEffect.tsx");
-
-export default tmp2;

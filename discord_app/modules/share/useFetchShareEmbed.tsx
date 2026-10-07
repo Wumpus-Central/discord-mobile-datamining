@@ -1,164 +1,163 @@
 // === Module 13731: useFetchShareEmbed ===
 
 // Module 13731 (useFetchShareEmbed)
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import _slicedToArray_mod from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
-import size from "module_2" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let c4, c5;
-
-let _slicedToArray = _slicedToArray_mod;
-let react = react_mod;
+const require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/useFetchShareEmbed.tsx");
 
 export default function useFetchShareEmbed(arg0) {
-  let closure_1;
-  let closure_3;
-  let embed;
-  let hasTriedResolving;
-  let ref;
-  let ref2;
-  let tmp4;
-  let closure_0 = arg0;
-  [embed, closure_1] = react.useState(undefined);
-  let tmp3 = _slicedToArray(react.useState(false), 2);
-  [tmp4, dependencyMap] = tmp3;
-  [hasTriedResolving, closure_3] = react.useState(false);
-  _slicedToArray = react.useRef(true);
-  react = react.useRef(undefined);
-  const ref3 = react.useRef(0);
+  closure_0 = arg0;
+  const embed = _slicedToArray(noop.useState(undefined), 2);
+  closure_1 = embed[1];
+  [tmp3, dependencyMap] = noop.useState(false);
+  const hasTriedResolving = _slicedToArray(noop.useState(false), 2);
+  closure_3 = hasTriedResolving[1];
+  _slicedToArray = noop.useRef(true);
+  noop = noop.useRef(undefined);
+  noop.useRef(0);
   let items = [arg0];
-  const effect = react.useEffect(() => {
-    let timeout;
-    let obj = function _unfurl() {
-      let current;
-      obj = _asyncToGenerator(async () => {
-        let closure_2;
-        const f155746 = () => {
-          c3(true);
-          if (ref.current === batchUpdates) {
-            closure_2(false);
-          }
-        };
+  const effect = noop.useEffect(() => {
+    dependencyMap = function _unfurl() {
+      const self = this;
+      const tmp = asyncGeneratorStep(async () => {
         if (c5 === 2) {
           c5 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else {
-          const flag = true;
-          if (tmp3 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
+        } else if (tmp8 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            let c3;
-            try {
-              let c0;
-              let tmp;
-              let batchUpdates;
-              c5 = 2;
-              if (0 === c4) {
-                if (arg0 === 1) {
-                  c5 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c5 = 3;
-                  const obj6 = { value, done: true };
-                  return obj6;
-                } else {
-                  c0 = undefined;
-                  tmp = undefined;
-                  if (null != current) {
-                    const sum = ref.current + 1;
-                    ref.current = sum;
-                    c0 = sum;
-                    c5.current = current;
-                    c3 = 2;
-                    tmp55(true);
-                    const items = [current];
-                    const obj8 = current(closure_2_2[4]);
-                    batchUpdates = obj8.unfurlEmbedUrl(items);
-                    c4 = 3;
-                    c5 = 1;
-                    const obj9 = { value: batchUpdates, done: false };
-                    return obj9;
-                  }
-                }
-              } else if (1 === c4) {
-                c3 = 0;
-                const obj7 = current(closure_2_2[5]);
-                batchUpdates = obj7.batchUpdates(f155746);
-                throw tmp55;
+            return { value: "IconComponent", done: null };
+          }
+        } else {
+          try {
+            c5 = 2;
+            if (0 === c4) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                const obj6 = { value, done: true };
+                return obj6;
               } else {
-                if (2 === c4) {
-                  c3 = 1;
-                  if (ref.current === c0) {
-                    tmp(undefined);
-                  }
-                } else if (arg0 === 1) {
-                  c5 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 0;
-                  const obj5 = current(closure_2_2[5]);
-                  obj5.batchUpdates(f155746);
-                  c5 = 3;
-                  const obj10 = { value, done: true };
+                closure_0 = tmp6;
+                closure_128_0 = undefined;
+                closure_128_1 = undefined;
+                if (null != current) {
+                  const sum = ref.current + 1;
+                  ref.current = sum;
+                  closure_128_0 = sum;
+                  c5.current = current;
+                  c3 = 2;
+                  tmp62(true);
+                  const items = [current];
+                  c4 = 3;
+                  c5 = 1;
+                  const obj10 = { value: current(11500).unfurlEmbedUrl(items), done: false };
                   return obj10;
                 } else {
-                  tmp = value;
-                  batchUpdates = ref.current;
-                  if (batchUpdates !== c0) {
-                    c3 = 0;
-                    const obj4 = current(closure_2_2[5]);
-                    obj4.batchUpdates(f155746);
-                    c5 = 3;
-                    return { value: "IconComponent", done: null };
-                  } else if (0 === tmp.embeds.length) {
-                    tmp(undefined);
-                    c3 = 0;
-                    const obj2 = current(closure_2_2[5]);
-                    batchUpdates = obj2.batchUpdates(f155746);
-                    c5 = 3;
-                    const obj11 = { value: undefined, done: true };
-                    return obj11;
-                  } else {
-                    batchUpdates = tmp;
-                    obj = { embed: tmp.embeds[0], url: closure_129_0 };
-                    tmp(obj);
-                    c3 = 1;
-                  }
+                  c5 = 3;
                 }
-                c3 = 0;
-                batchUpdates = current(closure_2_2[5]).batchUpdates;
-                const tmp38 = current(closure_2_2[5]);
-                batchUpdates(f155746);
               }
-              c5 = 3;
-              return { value: "IconComponent", done: null };
-            } catch (tmp55) {
-              if (0 === c3) {
+            } else if (1 !== tmp9) {
+              if (2 === tmp9) {
+                c3 = 1;
+                if (ref.current === closure_128_0) {
+                  tmp4(undefined);
+                }
+              } else if (arg0 === 1) {
                 c5 = 3;
-                throw tmp55;
-              } else if (1 === tmp57) {
-                c4 = 1;
+                throw value;
+              } else if (arg0 === 2) {
+                c3 = 0;
+                current(1259).batchUpdates(() => {
+                  c3(true);
+                  if (ref.current === closure_1_0) {
+                    closure_2(false);
+                  }
+                });
+                c5 = 3;
+                const obj11 = { value, done: true };
+                return obj11;
               } else {
-                c4 = 2;
+                closure_128_1 = value;
+                if (ref.current !== closure_128_0) {
+                  c3 = 0;
+                  current(1259).batchUpdates(() => {
+                    c3(true);
+                    if (ref.current === closure_1_0) {
+                      closure_2(false);
+                    }
+                  });
+                  c5 = 3;
+                  return { value: "IconComponent", done: null };
+                } else if (0 === closure_128_1.embeds.length) {
+                  tmp4(undefined);
+                  c3 = 0;
+                  current(1259).batchUpdates(() => {
+                    c3(true);
+                    if (ref.current === closure_1_0) {
+                      closure_2(false);
+                    }
+                  });
+                  c5 = 3;
+                  const obj12 = { value: undefined, done: true };
+                  return obj12;
+                } else {
+                  const obj = { embed: closure_128_1.embeds[0], url: closure_129_0 };
+                  tmp4(obj);
+                  c3 = 1;
+                }
               }
+              c3 = 0;
+              current(1259).batchUpdates(() => {
+                c3(true);
+                if (ref.current === closure_1_0) {
+                  closure_2(false);
+                }
+              });
+              const obj7 = current(1259);
+            }
+            c3 = 0;
+            current(1259).batchUpdates(() => {
+              c3(true);
+              if (ref.current === closure_1_0) {
+                closure_2(false);
+              }
+            });
+            throw tmp62;
+          } catch (tmp62) {
+            if (tmp5 === c3) {
+              c5 = tmp3;
+              throw tmp62;
+            } else if (tmp2 === tmp64) {
+              c4 = tmp2;
+            } else {
+              c4 = tmp;
             }
           }
         }
       });
-      return obj(...arguments);
+      dependencyMap = tmp;
+      const apply = tmp.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     };
     if (null != closure_0) {
-      if ("" !== closure_0) {
-        const match = str.match(timeout(dependencyMap[3]).URL_REGEX);
+      if ("" !== str) {
+        const match = str.match(timeout(1371).URL_REGEX);
         let atResult;
         if (match != null) {
           atResult = match.at(0);
@@ -169,18 +168,23 @@ export default function useFetchShareEmbed(arg0) {
             ref2.current = undefined;
             ref3.current = ref3.current + 1;
             timeout(undefined);
-            obj(false);
+            dependencyMap(false);
             ref.current = false;
           } else {
             function unfurl() {
-              return obj(...arguments);
+              const self = this;
+              const apply = closure_2.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
+              }
+              return applyArgumentsResult;
             }
             if (ref.current) {
-              let flag = false;
               tmp2.current = false;
               unfurl();
             } else {
-              const tmp3 = globalThis;
               const _setTimeout = setTimeout;
               timeout = setTimeout(unfurl, 1000);
               return () => {
@@ -195,7 +199,7 @@ export default function useFetchShareEmbed(arg0) {
     ref2.current = undefined;
     ref3.current = ref3.current + 1;
     timeout(undefined);
-    obj(false);
+    dependencyMap(false);
   }, items);
-  return { embed, isLoading, hasTriedResolving };
+  return { embed: embed[0], isLoading, hasTriedResolving: hasTriedResolving[0] };
 };

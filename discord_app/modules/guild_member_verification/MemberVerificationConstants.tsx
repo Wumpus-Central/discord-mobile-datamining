@@ -5,20 +5,15 @@ import MemberVerificationTypes from "MemberVerificationTypes" /* 4708 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ field_type: MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION }];
-const items1 = [];
-({ field_type: MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION });
-items1[0] = MemberVerificationTypes.VerificationFormFieldTypes.TERMS;
-const items2 = [, , ];
+const items1 = [MemberVerificationTypes.VerificationFormFieldTypes.TERMS];
+const obj = { field_type: MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION };
+const items2 = [MemberVerificationTypes.VerificationFormFieldTypes.MULTIPLE_CHOICE, MemberVerificationTypes.VerificationFormFieldTypes.TEXT_INPUT, MemberVerificationTypes.VerificationFormFieldTypes.PARAGRAPH];
 const set = new Set(items1);
-items2[0] = MemberVerificationTypes.VerificationFormFieldTypes.MULTIPLE_CHOICE;
-items2[1] = MemberVerificationTypes.VerificationFormFieldTypes.TEXT_INPUT;
-items2[2] = MemberVerificationTypes.VerificationFormFieldTypes.PARAGRAPH;
-const set1 = new Set(items2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/MemberVerificationConstants.tsx");
 
 export const REQUIRED_FORM_FIELDS = items;
 export const AUTOMATIC_APPROVAL_FORM_FIELDS = set;
-export const MANUAL_APPROVAL_FORM_FIELDS = set1;
+export const MANUAL_APPROVAL_FORM_FIELDS = new Set(items2);
 export const MAX_FORM_ELEMENTS = 5;
 export const MAX_NUM_RULES = 16;
 export const MAX_RULE_LENGTH = 300;

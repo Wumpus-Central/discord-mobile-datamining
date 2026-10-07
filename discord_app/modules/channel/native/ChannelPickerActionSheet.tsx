@@ -4,345 +4,451 @@
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import useChannelName from "useChannelName" /* 5049 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
-import TableRowIcon2 from "TableRowIcon" /* 6006 */;
-import TableRadioRow2 from "TableRadioRow" /* 6078 */;
-import react from "react" /* 19 */;
+import TableRowIcon from "TableRowIcon" /* 6006 */;
+import TableRadioRow from "TableRadioRow" /* 6078 */;
+import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import Fragment from "Fragment" /* 21 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, noChannelOptionLabel;
 
-let hasOwnProperty;
-let metroRequire;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channels) => {
-  let guild;
-  let header;
-  let items1;
-  let onClose;
-  let title;
-  let title2;
-  let tmp21;
+require = fn;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel/native/ChannelPickerActionSheet.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((channels) => {
   _require = channels;
-  let obj = require("react");
-  const cResult = obj.c(33);
+  const cResult = require("c").c(33);
   const bottom = guild(channels[6])().bottom;
   ({ header, guild } = channels);
   channels = channels.channels;
   const onSelect = channels.onSelect;
   const selectedChannel = channels.selectedChannel;
-  if (null != header) {
-    ({ title, onClose } = header);
-    let tmp6;
-    if (null != onClose) {
-      let tmp7;
-      if (cResult[0] !== onClose) {
-        let obj2 = {
-          onPress() {
-                  const obj = ActionSheetActionCreatorsDefault;
-                  obj.hideActionSheet();
-                  onClose();
-                }
-        };
-        const tmp9 = closure_5(require("ActionSheetCloseButton").ActionSheetCloseButton, obj2);
-        cResult[0] = onClose;
-        cResult[1] = tmp9;
-        tmp7 = tmp9;
+  if (null == header) {
+    if (null == channels.noChannelOptionLabel) {
+      if (cResult[8] !== bottom) {
+        let obj2 = { paddingBottom: bottom };
+        cResult[8] = bottom;
+        cResult[9] = obj2;
+        let tmp16 = obj2;
       } else {
-        tmp7 = cResult[1];
+        tmp16 = cResult[9];
       }
-      tmp6 = tmp7;
-    }
-    let obj3 = { title, trailing: tmp6 };
-    const tmp12 = closure_5(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj3);
-    cResult[2] = tmp6;
-    cResult[3] = title;
-    cResult[4] = tmp12;
-  }
-  if (null != channels.noChannelOptionLabel) {
-    let tmp15;
-    const _Symbol = Symbol;
-    if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      let obj4 = { source: guild(tmp2[11]) };
-      const TableRowIcon = tmp(tmp2[10]).TableRowIcon;
-      const tmp17 = closure_5(TableRowIcon, obj4);
-      cResult[5] = tmp17;
-      tmp15 = tmp17;
-    } else {
-      tmp15 = cResult[5];
-    }
-    if (cResult[6] !== channels.noChannelOptionLabel) {
-      const obj5 = { value: "", label: channels.noChannelOptionLabel, icon: tmp15 };
-      const tmp20 = closure_5(require("TableRadioRow").TableRadioRow, obj5);
-      cResult[6] = channels.noChannelOptionLabel;
-      cResult[7] = tmp20;
-    }
-  }
-  if (cResult[8] !== bottom) {
-    const obj6 = { paddingBottom: bottom };
-    cResult[8] = bottom;
-    cResult[9] = obj6;
-    tmp21 = obj6;
-  } else {
-    tmp21 = cResult[9];
-  }
-  let str2;
-  if (selectedChannel != null) {
-    str2 = selectedChannel.id;
-  }
-  if (str2 == null) {
-    str2 = "";
-  }
-  if (header != null) {
-    title2 = header.title;
-  }
-  if (cResult[10] === channels) {
-    if (cResult[11] === onSelect) {
-      let tmp22;
-      let tmp23;
-      if (cResult[12] === channels) {
-        tmp22 = cResult[13];
+      let str2;
+      if (selectedChannel != null) {
+        str2 = selectedChannel.id;
       }
-      if (cResult[14] !== tmp13) {
-        let items = tmp13;
-        if (tmp13 == null) {
-          items = [];
-        }
-        cResult[14] = tmp13;
-        cResult[15] = items;
-        tmp23 = items;
-      } else {
-        tmp23 = cResult[15];
+      if (str2 == null) {
+        str2 = "";
       }
-      if (cResult[16] === channels) {
-        let tmp24;
-        if (cResult[17] === guild) {
-          tmp24 = cResult[18];
-        }
-        if (cResult[21] === str2) {
-          if (cResult[22] === title2) {
-            if (cResult[23] === tmp22) {
-              if (cResult[24] === tmp23) {
-                let tmp27;
-                if (cResult[25] === tmp24) {
-                  tmp27 = cResult[26];
-                }
-                if (cResult[27] === tmp21) {
-                  let tmp30;
-                  if (cResult[28] === tmp27) {
-                    tmp30 = cResult[29];
-                  }
-                  if (cResult[30] === tmp5) {
-                    let tmp33;
-                    if (cResult[31] === tmp30) {
-                      tmp33 = cResult[32];
+      if (header != null) {
+        const title = header.title;
+      }
+      if (cResult[10] === channels) {
+        if (cResult[11] === onSelect) {
+          if (cResult[12] === channels) {
+            let tmp17 = cResult[13];
+          }
+          if (cResult[14] !== undefined) {
+            let items;
+            if (undefined == null) {
+              items = [];
+            }
+            cResult[14] = undefined;
+            cResult[15] = items;
+            let tmp18 = items;
+          } else {
+            tmp18 = cResult[15];
+          }
+          if (cResult[16] === channels) {
+            if (cResult[17] === guild) {
+              if (cResult[21] === str2) {
+                if (cResult[22] === title) {
+                  if (cResult[23] === tmp17) {
+                    if (cResult[24] === tmp18) {
+                      if (cResult[25] === tmp19) {
+                        let tmp23 = cResult[26];
+                      }
+                      if (cResult[27] === tmp16) {
+                        if (cResult[28] === tmp23) {
+                          let tmp26 = cResult[29];
+                        }
+                        if (cResult[30] === undefined) {
+                          if (cResult[31] === tmp26) {
+                            let tmp29 = cResult[32];
+                          }
+                          return tmp29;
+                        }
+                        let obj3 = { scrollable: true, header: undefined, children: tmp26 };
+                        const tmp31 = closure_5(tmp(tmp2[17]).ActionSheet, obj3);
+                        cResult[30] = undefined;
+                        cResult[31] = tmp26;
+                        cResult[32] = tmp31;
+                        tmp29 = tmp31;
+                      }
+                      let obj4 = { contentContainerStyle: tmp16, children: tmp23 };
+                      const tmp28 = closure_5(tmp(tmp2[16]).BottomSheetScrollView, obj4);
+                      cResult[27] = tmp16;
+                      cResult[28] = tmp23;
+                      cResult[29] = tmp28;
+                      tmp26 = tmp28;
                     }
-                    return tmp33;
                   }
-                  const obj7 = { scrollable: true, header: tmp5, children: tmp30 };
-                  const tmp35 = closure_5(require("ActionSheet").ActionSheet, obj7);
-                  cResult[30] = tmp5;
-                  cResult[31] = tmp30;
-                  cResult[32] = tmp35;
-                  tmp33 = tmp35;
                 }
-                const obj8 = { contentContainerStyle: tmp21, children: tmp27 };
-                const tmp32 = closure_5(require("BottomSheetModal").BottomSheetScrollView, obj8);
-                cResult[27] = tmp21;
-                cResult[28] = tmp27;
-                cResult[29] = tmp32;
-                tmp30 = tmp32;
+              }
+              const obj5 = { defaultValue: str2, accessibilityLabel: title, onChange: tmp17, hasIcons: true, children: null };
+              const items1 = [tmp18, cResult[18]];
+              obj5.children = items1;
+              const tmp25 = closure_6(tmp(tmp2[15]).TableRadioGroup, obj5);
+              cResult[21] = str2;
+              cResult[22] = title;
+              cResult[23] = tmp17;
+              cResult[24] = tmp18;
+              cResult[25] = cResult[18];
+              cResult[26] = tmp25;
+              tmp23 = tmp25;
+            }
+          }
+          if (cResult[19] !== guild) {
+            class V {
+              constructor(arg0) {
+                tmp = closure_0;
+                tmp2 = closure_2;
+                obj = closure_0(closure_2[13]);
+                channelIconWithGuild = obj.getChannelIconWithGuild(channels, guild);
+                tmp4 = jsx;
+                obj1 = { value: channels.id, label: null, icon: null };
+                obj3 = closure_0(closure_2[14]);
+                obj1.label = obj3.computeChannelName(channels, closure_4, closure_3);
+                tmp4Result = null;
+                if (null != channelIconWithGuild) {
+                  obj5 = { source: null };
+                  obj5.source = channelIconWithGuild;
+                  tmp4Result = tmp4(tmp(tmp2[10]).TableRowIcon, obj5);
+                }
+                obj1.icon = tmp4Result;
+                return tmp4(closure_0(closure_2[12]).TableRadioRow, obj1, channels.id);
+              }
+            }
+            cResult[19] = guild;
+            cResult[20] = V;
+          } else {
+            class V {
+              constructor(arg0) {
+                tmp = closure_0;
+                tmp2 = closure_2;
+                obj = closure_0(closure_2[13]);
+                channelIconWithGuild = obj.getChannelIconWithGuild(channels, guild);
+                tmp4 = jsx;
+                obj1 = { value: channels.id, label: null, icon: null };
+                obj3 = closure_0(closure_2[14]);
+                obj1.label = obj3.computeChannelName(channels, closure_4, closure_3);
+                tmp4Result = null;
+                if (null != channelIconWithGuild) {
+                  obj5 = { source: null };
+                  obj5.source = channelIconWithGuild;
+                  tmp4Result = tmp4(tmp(tmp2[10]).TableRowIcon, obj5);
+                }
+                obj1.icon = tmp4Result;
+                return tmp4(closure_0(closure_2[12]).TableRadioRow, obj1, channels.id);
               }
             }
           }
+          const mapped = channels.map(V);
+          cResult[16] = channels;
+          cResult[17] = guild;
+          cResult[18] = mapped;
         }
-        const obj9 = { defaultValue: str2, accessibilityLabel: title2, onChange: tmp22, hasIcons: true, children: items1 };
-        items1 = [tmp23, tmp24];
-        const tmp29 = closure_6(require("TableRadioGroup").TableRadioGroup, obj9);
-        cResult[21] = str2;
-        cResult[22] = title2;
-        cResult[23] = tmp22;
-        cResult[24] = tmp23;
-        cResult[25] = tmp24;
-        cResult[26] = tmp29;
-        tmp27 = tmp29;
       }
-      if (cResult[19] !== guild) {
+      const fn = function _(arg0) {
+        noChannelOptionLabel = arg0;
+        if ("" === arg0) {
+          if (null != noChannelOptionLabel.noChannelOptionLabel) {
+            ActionSheetActionCreatorsDefault.hideActionSheet();
+            obj.onSelect(null);
+          }
+          obj = noChannelOptionLabel;
+        }
+        const found = channels.find((id) => id.id === closure_0);
+        if (null != found) {
+          ActionSheetActionCreatorsDefault.hideActionSheet();
+          onSelect(found);
+        }
+      };
+      cResult[10] = channels;
+      cResult[11] = onSelect;
+      cResult[12] = channels;
+      cResult[13] = fn;
+      tmp17 = fn;
+    } else {
+      class V {
+        constructor(arg0) {
+          tmp = closure_0;
+          tmp2 = closure_2;
+          obj = closure_0(closure_2[13]);
+          channelIconWithGuild = obj.getChannelIconWithGuild(channels, guild);
+          tmp4 = jsx;
+          obj1 = { value: channels.id, label: null, icon: null };
+          obj3 = closure_0(closure_2[14]);
+          obj1.label = obj3.computeChannelName(channels, closure_4, closure_3);
+          tmp4Result = null;
+          if (null != channelIconWithGuild) {
+            obj5 = { source: null };
+            obj5.source = channelIconWithGuild;
+            tmp4Result = tmp4(tmp(tmp2[10]).TableRowIcon, obj5);
+          }
+          obj1.icon = tmp4Result;
+          return tmp4(closure_0(closure_2[12]).TableRadioRow, obj1, channels.id);
+        }
+      }
+      const _Symbol = Symbol;
+      if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         class V {
-          constructor(id) {
-            let obj3;
-            let tmp4Result;
-            const obj = utils_ChannelUtils;
-            const channelIconWithGuild = obj.getChannelIconWithGuild(id, guild);
-            const obj2 = { value: id.id, label: obj3.computeChannelName(id, UserStore, RelationshipStore), icon: tmp4Result };
-            const TableRadioRow = TableRadioRow2.TableRadioRow;
+          constructor(arg0) {
+            tmp = closure_0;
+            tmp2 = closure_2;
+            obj = closure_0(closure_2[13]);
+            channelIconWithGuild = obj.getChannelIconWithGuild(channels, guild);
+            tmp4 = jsx;
+            obj1 = { value: channels.id, label: null, icon: null };
+            obj3 = closure_0(closure_2[14]);
+            obj1.label = obj3.computeChannelName(channels, closure_4, closure_3);
             tmp4Result = null;
-            obj3 = useChannelName;
             if (null != channelIconWithGuild) {
-              const obj4 = { source: channelIconWithGuild };
-              tmp4Result = hasOwnProperty(TableRowIcon2.TableRowIcon, obj4);
+              obj5 = { source: null };
+              obj5.source = channelIconWithGuild;
+              tmp4Result = tmp4(tmp(tmp2[10]).TableRowIcon, obj5);
             }
-            return hasOwnProperty(TableRadioRow, obj2, id.id);
+            obj1.icon = tmp4Result;
+            return tmp4(closure_0(closure_2[12]).TableRadioRow, obj1, channels.id);
           }
         }
-        cResult[19] = guild;
-        cResult[20] = V;
+        const obj6 = { source: guild(tmp2[11]) };
+        const tmp12 = closure_5(tmp(tmp2[10]).TableRowIcon, obj6);
+        cResult[5] = tmp12;
+        const tmp11 = tmp12;
       } else {
         class V {
-          constructor(id) {
-            let obj3;
-            let tmp4Result;
-            const obj = utils_ChannelUtils;
-            const channelIconWithGuild = obj.getChannelIconWithGuild(id, guild);
-            const obj2 = { value: id.id, label: obj3.computeChannelName(id, UserStore, RelationshipStore), icon: tmp4Result };
-            const TableRadioRow = TableRadioRow2.TableRadioRow;
+          constructor(arg0) {
+            tmp = closure_0;
+            tmp2 = closure_2;
+            obj = closure_0(closure_2[13]);
+            channelIconWithGuild = obj.getChannelIconWithGuild(channels, guild);
+            tmp4 = jsx;
+            obj1 = { value: channels.id, label: null, icon: null };
+            obj3 = closure_0(closure_2[14]);
+            obj1.label = obj3.computeChannelName(channels, closure_4, closure_3);
             tmp4Result = null;
-            obj3 = useChannelName;
             if (null != channelIconWithGuild) {
-              const obj4 = { source: channelIconWithGuild };
-              tmp4Result = hasOwnProperty(TableRowIcon2.TableRowIcon, obj4);
+              obj5 = { source: null };
+              obj5.source = channelIconWithGuild;
+              tmp4Result = tmp4(tmp(tmp2[10]).TableRowIcon, obj5);
             }
-            return hasOwnProperty(TableRadioRow, obj2, id.id);
+            obj1.icon = tmp4Result;
+            return tmp4(closure_0(closure_2[12]).TableRadioRow, obj1, channels.id);
           }
         }
       }
-      const mapped = channels.map(V);
-      cResult[16] = channels;
-      cResult[17] = guild;
-      cResult[18] = mapped;
-      tmp24 = mapped;
-    }
-  }
-  const fn = function _(arg0) {
-    channels = arg0;
-    if ("" === arg0) {
-      const obj = channels;
-      if (null != channels.noChannelOptionLabel) {
-        const obj3 = ActionSheetActionCreatorsDefault;
-        obj3.hideActionSheet();
-        obj.onSelect(null);
+      if (cResult[6] !== channels.noChannelOptionLabel) {
+        class V {
+          constructor(arg0) {
+            tmp = closure_0;
+            tmp2 = closure_2;
+            obj = closure_0(closure_2[13]);
+            channelIconWithGuild = obj.getChannelIconWithGuild(channels, guild);
+            tmp4 = jsx;
+            obj1 = { value: channels.id, label: null, icon: null };
+            obj3 = closure_0(closure_2[14]);
+            obj1.label = obj3.computeChannelName(channels, closure_4, closure_3);
+            tmp4Result = null;
+            if (null != channelIconWithGuild) {
+              obj5 = { source: null };
+              obj5.source = channelIconWithGuild;
+              tmp4Result = tmp4(tmp(tmp2[10]).TableRowIcon, obj5);
+            }
+            obj1.icon = tmp4Result;
+            return tmp4(closure_0(closure_2[12]).TableRadioRow, obj1, channels.id);
+          }
+        }
+        const obj7 = { value: "", label: channels.noChannelOptionLabel, icon: tmp11 };
+        const tmp14 = closure_5(tmp(tmp2[12]).TableRadioRow, obj7);
+        cResult[6] = channels.noChannelOptionLabel;
+        cResult[7] = tmp14;
+      } else {
+        class V {
+          constructor(arg0) {
+            tmp = closure_0;
+            tmp2 = closure_2;
+            obj = closure_0(closure_2[13]);
+            channelIconWithGuild = obj.getChannelIconWithGuild(channels, guild);
+            tmp4 = jsx;
+            obj1 = { value: channels.id, label: null, icon: null };
+            obj3 = closure_0(closure_2[14]);
+            obj1.label = obj3.computeChannelName(channels, closure_4, closure_3);
+            tmp4Result = null;
+            if (null != channelIconWithGuild) {
+              obj5 = { source: null };
+              obj5.source = channelIconWithGuild;
+              tmp4Result = tmp4(tmp(tmp2[10]).TableRowIcon, obj5);
+            }
+            obj1.icon = tmp4Result;
+            return tmp4(closure_0(closure_2[12]).TableRadioRow, obj1, channels.id);
+          }
+        }
       }
     }
-    const found = channels.find((id) => id.id === closure_0);
-    if (null != found) {
-      const obj2 = ActionSheetActionCreatorsDefault;
-      obj2.hideActionSheet();
-      onSelect(found);
+  } else {
+    class V {
+      constructor(arg0) {
+        tmp = closure_0;
+        tmp2 = closure_2;
+        obj = closure_0(closure_2[13]);
+        channelIconWithGuild = obj.getChannelIconWithGuild(channels, guild);
+        tmp4 = jsx;
+        obj1 = { value: channels.id, label: null, icon: null };
+        obj3 = closure_0(closure_2[14]);
+        obj1.label = obj3.computeChannelName(channels, closure_4, closure_3);
+        tmp4Result = null;
+        if (null != channelIconWithGuild) {
+          obj5 = { source: null };
+          obj5.source = channelIconWithGuild;
+          tmp4Result = tmp4(tmp(tmp2[10]).TableRowIcon, obj5);
+        }
+        obj1.icon = tmp4Result;
+        return tmp4(closure_0(closure_2[12]).TableRadioRow, obj1, channels.id);
+      }
     }
-  };
-  cResult[10] = channels;
-  cResult[11] = onSelect;
-  cResult[12] = channels;
-  cResult[13] = fn;
-  tmp22 = fn;
+    const onClose = header.onClose;
+    if (null == onClose) {
+      class V {
+        constructor(arg0) {
+          tmp = closure_0;
+          tmp2 = closure_2;
+          obj = closure_0(closure_2[13]);
+          channelIconWithGuild = obj.getChannelIconWithGuild(channels, guild);
+          tmp4 = jsx;
+          obj1 = { value: channels.id, label: null, icon: null };
+          obj3 = closure_0(closure_2[14]);
+          obj1.label = obj3.computeChannelName(channels, closure_4, closure_3);
+          tmp4Result = null;
+          if (null != channelIconWithGuild) {
+            obj5 = { source: null };
+            obj5.source = channelIconWithGuild;
+            tmp4Result = tmp4(tmp(tmp2[10]).TableRowIcon, obj5);
+          }
+          obj1.icon = tmp4Result;
+          return tmp4(closure_0(closure_2[12]).TableRadioRow, obj1, channels.id);
+        }
+      }
+      const obj8 = { title: tmp5, trailing: undefined };
+      const tmp10 = closure_5(tmp(tmp2[9]).BottomSheetTitleHeader, obj8);
+      cResult[2] = undefined;
+      cResult[3] = tmp5;
+      cResult[4] = tmp10;
+    } else {
+      class V {
+        constructor(arg0) {
+          tmp = closure_0;
+          tmp2 = closure_2;
+          obj = closure_0(closure_2[13]);
+          channelIconWithGuild = obj.getChannelIconWithGuild(channels, guild);
+          tmp4 = jsx;
+          obj1 = { value: channels.id, label: null, icon: null };
+          obj3 = closure_0(closure_2[14]);
+          obj1.label = obj3.computeChannelName(channels, closure_4, closure_3);
+          tmp4Result = null;
+          if (null != channelIconWithGuild) {
+            obj5 = { source: null };
+            obj5.source = channelIconWithGuild;
+            tmp4Result = tmp4(tmp(tmp2[10]).TableRowIcon, obj5);
+          }
+          obj1.icon = tmp4Result;
+          return tmp4(closure_0(closure_2[12]).TableRadioRow, obj1, channels.id);
+        }
+      }
+    }
+  }
+  let obj = require("c");
 }) : ((noChannelOptionLabel) => {
-  let BottomSheetScrollView;
-  let TableRadioGroup;
-  let TableRowIcon;
-  let channels;
-  let header;
-  let items1;
-  let obj4;
-  let obj6;
-  let obj7;
-  let selectedChannel;
-  let title1;
   _require = noChannelOptionLabel;
   ({ header, guild: importDefault, channels } = noChannelOptionLabel);
   ({ onSelect: RelationshipStore, selectedChannel } = noChannelOptionLabel);
   let tmp3;
-  const bottom = require("useSafeAreaInsets")().bottom;
   if (null != header) {
     const onClose = header.onClose;
     let tmp4;
-    const title = header.title;
     if (null != onClose) {
       let obj = {
         onPress() {
-              const obj = ActionSheetActionCreatorsDefault;
-              obj.hideActionSheet();
+              ActionSheetActionCreatorsDefault.hideActionSheet();
               onClose();
             }
       };
       tmp4 = closure_5(require("ActionSheetCloseButton").ActionSheetCloseButton, obj);
     }
-    let obj2 = { title, trailing: tmp4 };
+    let obj2 = { title: header.title, trailing: tmp4 };
     tmp3 = closure_5(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj2);
   }
   let items;
   if (null != noChannelOptionLabel.noChannelOptionLabel) {
-    let obj3 = { value: "", label: noChannelOptionLabel.noChannelOptionLabel, icon: closure_5(TableRowIcon, obj4) };
-    let TableRadioRow = require("TableRadioRow").TableRadioRow;
-    obj4 = { source: require("AssetRegistry") };
-    TableRowIcon = require("TableRowIcon").TableRowIcon;
-    items = closure_5(TableRadioRow, obj3);
+    let obj3 = { value: "", label: noChannelOptionLabel.noChannelOptionLabel, icon: null };
+    let obj4 = { source: require("module_12119") };
+    obj3.icon = closure_5(require("TableRowIcon").TableRowIcon, obj4);
+    items = closure_5(require("TableRadioRow").TableRadioRow, obj3);
   }
-  const obj5 = { scrollable: true, header: tmp3, children: closure_5(BottomSheetScrollView, obj6) };
-  const ActionSheet = require("ActionSheet").ActionSheet;
-  obj6 = { contentContainerStyle: { paddingBottom: bottom }, children: closure_6(TableRadioGroup, obj7) };
-  BottomSheetScrollView = require("BottomSheetModal").BottomSheetScrollView;
+  const obj5 = { scrollable: true, header: tmp3, children: null };
+  const obj6 = { contentContainerStyle: { paddingBottom: require("useSafeAreaInsets")().bottom }, children: null };
   let str;
-  TableRadioGroup = require("TableRadioGroup").TableRadioGroup;
   if (selectedChannel != null) {
     str = selectedChannel.id;
   }
   if (str == null) {
     str = "";
   }
-  obj7 = {
-    defaultValue: str,
-    accessibilityLabel: title1,
-    onChange(arg0) {
-      noChannelOptionLabel = arg0;
-      if ("" === arg0) {
-        const obj = noChannelOptionLabel;
-        if (null != noChannelOptionLabel.noChannelOptionLabel) {
-          const obj3 = ActionSheetActionCreatorsDefault;
-          obj3.hideActionSheet();
-          obj.onSelect(null);
-        }
-      }
-      const found = channels.find((id) => id.id === closure_0);
-      if (null != found) {
-        const obj2 = ActionSheetActionCreatorsDefault;
-        obj2.hideActionSheet();
-        RelationshipStore(found);
-      }
-    },
-    hasIcons: true,
-    children: items1
-  };
-  title1 = undefined;
+  const obj7 = { defaultValue: str, accessibilityLabel: null, onChange: null, hasIcons: true, children: null };
+  let title;
   if (header != null) {
-    title1 = header.title;
+    title = header.title;
   }
+  obj7.accessibilityLabel = title;
+  obj7.onChange = function onChange(arg0) {
+    noChannelOptionLabel = arg0;
+    if ("" === arg0) {
+      if (null != noChannelOptionLabel.noChannelOptionLabel) {
+        ActionSheetActionCreatorsDefault.hideActionSheet();
+        obj.onSelect(null);
+      }
+      obj = noChannelOptionLabel;
+    }
+    const found = channels.find((id) => id.id === closure_0);
+    if (null != found) {
+      ActionSheetActionCreatorsDefault.hideActionSheet();
+      RelationshipStore(found);
+    }
+  };
   if (items == null) {
     items = [];
   }
-  items1 = [
+  const items1 = [
     items,
     channels.map((id) => {
-      let obj3;
-      let tmp4Result;
-      const obj = utils_ChannelUtils;
-      const channelIconWithGuild = obj.getChannelIconWithGuild(id, importDefault);
-      const obj2 = { value: id.id, label: obj3.computeChannelName(id, UserStore, RelationshipStore), icon: tmp4Result };
-      const TableRadioRow = TableRadioRow2.TableRadioRow;
-      tmp4Result = null;
-      obj3 = useChannelName;
+      const channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(id, importDefault);
+      const obj2 = { value: id.id, label: null, icon: null };
+      obj2.label = useChannelName.computeChannelName(id, UserStore, RelationshipStore);
+      let tmp4Result = null;
       if (null != channelIconWithGuild) {
         const obj4 = { source: channelIconWithGuild };
-        tmp4Result = hasOwnProperty(TableRowIcon2.TableRowIcon, obj4);
+        tmp4Result = hasOwnProperty(TableRowIcon.TableRowIcon, obj4);
       }
-      return hasOwnProperty(TableRadioRow, obj2, id.id);
+      obj2.icon = tmp4Result;
+      return hasOwnProperty(TableRadioRow.TableRadioRow, obj2, id.id);
     })
   ];
-  return closure_5(ActionSheet, obj5);
+  obj7.children = items1;
+  obj6.children = closure_6(require("TableRadioGroup").TableRadioGroup, obj7);
+  obj5.children = closure_5(require("BottomSheetModal").BottomSheetScrollView, obj6);
+  return closure_5(require("ActionSheet").ActionSheet, obj5);
 });
-const result = size.fileFinishedImporting("modules/channel/native/ChannelPickerActionSheet.tsx");
-
-export default tmp4;

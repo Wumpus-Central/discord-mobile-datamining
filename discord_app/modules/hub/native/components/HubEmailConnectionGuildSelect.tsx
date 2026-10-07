@@ -1,9 +1,9 @@
 // === Module 12421: HubEmailConnectionGuildSelect ===
 
 // Module 12421 (HubEmailConnectionGuildSelect)
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import native from "native" /* 1188 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
@@ -11,186 +11,146 @@ import Text_Text from "Text/Text" /* 4892 */;
 import components_Button_Button from "components/Button/Button" /* 5601 */;
 import GuildIconDefault from "GuildIcon" /* 5978 */;
 import Form from "Form" /* 8924 */;
-import HubConstants from "HubConstants" /* 12400 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let c4, closure_2, navigation;
-
-let c10;
-let c9;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-let obj5;
-let react = react_mod;
-({ View: metroRequire, FlatList: metroImportDefault } = react_native);
-const HubEmailConnectionSteps = HubConstants.HubEmailConnectionSteps;
-({ jsx: c9, jsxs: c10 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { rowContainer: obj2, guildIcon: obj3, separator: { height: 8 }, header: { padding: 16, alignItems: "center", justifyContent: "center" }, title: { marginBottom: 8, textAlign: "center" }, footerSafeAreaContainer: obj4, footerContainer: { paddingHorizontal: 16, height: 110, justifyContent: "center", alignItems: "center" }, error: obj5 };
-obj2 = { marginHorizontal: 16, borderRadius: nativeDefault.radii.sm, padding: 12, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
-createStyles = createStyles.createStyles;
-obj3 = { borderRadius: nativeDefault.radii.sm };
-obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "absolute", bottom: 0, width: "100%" };
-obj5 = { color: nativeDefault.unsafe_rawColors.RED_400, alignSelf: "center", fontSize: 14, marginVertical: 8 };
-let closure_11 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let guildInfo;
-  let loading;
-  let signup;
-  let tmp5;
-  const obj = react2;
-  const cResult = obj.c(12);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, FlatList: closure_7 } = get_ActivityIndicator);
+const HubEmailConnectionSteps = fn(12400).HubEmailConnectionSteps;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { rowContainer: { marginHorizontal: 16, borderRadius: nativeDefault.radii.sm, padding: 12, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL }, guildIcon: null, separator: null, header: null, title: null, footerSafeAreaContainer: null, footerContainer: null, error: null };
+let obj3 = { marginHorizontal: 16, borderRadius: nativeDefault.radii.sm, padding: 12, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
+obj2.guildIcon = { borderRadius: nativeDefault.radii.sm };
+obj2.separator = { height: 8 };
+obj2.header = { padding: 16, alignItems: "center", justifyContent: "center" };
+obj2.title = { marginBottom: 8, textAlign: "center" };
+let obj4 = { borderRadius: nativeDefault.radii.sm };
+obj2.footerSafeAreaContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "absolute", bottom: 0, width: "100%" };
+obj2.footerContainer = { paddingHorizontal: 16, height: 110, justifyContent: "center", alignItems: "center" };
+let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "absolute", bottom: 0, width: "100%" };
+obj2.error = { color: nativeDefault.unsafe_rawColors.RED_400, alignSelf: "center", fontSize: 14, marginVertical: 8 };
+let closure_11 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(12);
   ({ guildInfo, signup, loading } = arg0);
   const tmp4 = closure_11();
-  const rowContainer = tmp4.rowContainer;
-  const name = guildInfo.name;
-  const guildIcon = tmp4.guildIcon;
   if (cResult[0] !== guildInfo) {
-    const obj2 = { features: [] };
-    const fromGuildBasic = GuildRecordUtils.fromGuildBasic;
-    GuildRecordUtils;
+    const obj2 = {};
     const merged = Object.assign(guildInfo);
-    const fromGuildBasicResult = fromGuildBasic(obj2);
+    obj2.features = [];
+    const fromGuildBasicResult = GuildRecordUtils.fromGuildBasic(obj2);
     cResult[0] = guildInfo;
     cResult[1] = fromGuildBasicResult;
-    tmp5 = fromGuildBasicResult;
+    let tmp5 = fromGuildBasicResult;
+    const tmpResult = GuildRecordUtils;
   } else {
     tmp5 = cResult[1];
   }
   if (cResult[2] === tmp4.guildIcon) {
-    let tmp11;
-    let tmp14;
     if (cResult[3] === tmp5) {
-      tmp11 = cResult[4];
+      let tmp10 = cResult[4];
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp16 = React4(Form.FormRow.Arrow, {});
-      cResult[5] = tmp16;
-      tmp14 = tmp16;
+      const tmp15 = options(Form.FormRow.Arrow, {});
+      cResult[5] = tmp15;
+      let tmp13 = tmp15;
     } else {
-      tmp14 = cResult[5];
+      tmp13 = cResult[5];
     }
     if (cResult[6] === guildInfo.name) {
       if (cResult[7] === loading) {
         if (cResult[8] === signup) {
           if (cResult[9] === tmp4.rowContainer) {
-            let tmp17;
-            if (cResult[10] === tmp11) {
-              tmp17 = cResult[11];
+            if (cResult[10] === tmp10) {
+              let tmp16 = cResult[11];
             }
-            return tmp17;
+            return tmp16;
           }
         }
       }
     }
-    const obj3 = { onPress: signup, disabled: loading, DEPRECATED_style: rowContainer, label: name, leading: tmp11, trailing: tmp14 };
-    const tmp19 = React4(Form.FormRow, obj3);
+    const obj3 = { onPress: signup, disabled: loading, DEPRECATED_style: tmp4.rowContainer, label: guildInfo.name, leading: tmp10, trailing: tmp13 };
+    const tmp18 = options(Form.FormRow, obj3);
     cResult[6] = guildInfo.name;
     cResult[7] = loading;
     cResult[8] = signup;
     cResult[9] = tmp4.rowContainer;
-    cResult[10] = tmp11;
-    cResult[11] = tmp19;
-    tmp17 = tmp19;
+    cResult[10] = tmp10;
+    cResult[11] = tmp18;
+    tmp16 = tmp18;
   }
-  const tmp12 = React4(GuildIconDefault, { style: guildIcon, guild: tmp5 });
+  const tmp11 = options(GuildIconDefault, { style: tmp4.guildIcon, guild: tmp5 });
   cResult[2] = tmp4.guildIcon;
   cResult[3] = tmp5;
-  cResult[4] = tmp12;
-  tmp11 = tmp12;
+  cResult[4] = tmp11;
+  tmp10 = tmp11;
 }) : ((guildInfo) => {
-  let fromGuildBasic;
-  let loading;
-  let obj2;
-  let obj3;
-  let signup;
-  let tmp2;
   guildInfo = guildInfo.guildInfo;
   ({ signup, loading } = guildInfo);
   const tmp = closure_11();
-  const obj = { onPress: signup, disabled: loading, DEPRECATED_style: tmp.rowContainer, label: guildInfo.name, leading: React4(tmp2, obj2), trailing: React4(Form.FormRow.Arrow, {}) };
-  const FormRow = Form.FormRow;
-  obj2 = { style: tmp.guildIcon, guild: fromGuildBasic(obj3) };
-  obj3 = { features: [] };
-  tmp2 = GuildIconDefault;
-  fromGuildBasic = GuildRecordUtils.fromGuildBasic;
-  GuildRecordUtils;
+  const obj = { onPress: signup, disabled: loading, DEPRECATED_style: tmp.rowContainer, label: guildInfo.name, leading: null, trailing: null };
+  const obj2 = { style: tmp.guildIcon, guild: null };
+  const tmp2 = GuildIconDefault;
+  const obj4 = {};
   const merged = Object.assign(guildInfo);
-  return React4(FormRow, obj);
+  obj4.features = [];
+  obj2.guild = GuildRecordUtils.fromGuildBasic(obj4);
+  obj.leading = options(tmp2, obj2);
+  obj.trailing = options(Form.FormRow.Arrow, {});
+  return options(Form.FormRow, obj);
 });
-let closure_12 = tmp5;
-ReactCompilerGating = ReactCompilerGating_mod;
+let closure_12 = tmp4;
+ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  let header;
-  let title;
-  let tmp7;
-  const obj = react2;
-  const cResult = obj.c(6);
+  const cResult = c.c(6);
   const tmp4 = closure_11();
   ({ header, title } = tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = intl2.intl;
-    const stringResult = intl.string(intl2.t.mOMeiR);
+    const intl = util.intl;
+    const stringResult = intl.string(util.t.mOMeiR);
     cResult[0] = stringResult;
-    first = stringResult;
+    let first = stringResult;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== tmp4.title) {
     const obj2 = { style: title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: first };
-    const tmp9 = React4(Text_Text.Text, obj2);
+    const tmp9 = options(Text_Text.Text, obj2);
     cResult[1] = tmp4.title;
     cResult[2] = tmp9;
-    tmp7 = tmp9;
+    let tmp7 = tmp9;
   } else {
     tmp7 = cResult[2];
   }
   if (cResult[3] === tmp4.header) {
-    let tmp10;
     if (cResult[4] === tmp7) {
-      tmp10 = cResult[5];
+      let tmp10 = cResult[5];
     }
     return tmp10;
   }
-  const tmp11 = React4(metroRequire, { style: header, children: tmp7 });
+  const tmp11 = options(timestampProducer, { style: header, children: tmp7 });
   cResult[3] = tmp4.header;
   cResult[4] = tmp7;
   cResult[5] = tmp11;
   tmp10 = tmp11;
 }) : (() => {
-  let Text;
-  let intl;
-  let obj2;
   const tmp = closure_11();
-  const obj = { style: tmp.header, children: React4(Text, obj2) };
-  obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: intl.string(intl2.t.mOMeiR) };
-  Text = Text_Text.Text;
-  intl = intl2.intl;
-  return React4(metroRequire, obj);
+  const obj = { style: tmp.header, children: null };
+  const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const intl = util.intl;
+  obj2.children = intl.string(util.t.mOMeiR);
+  obj.children = options(Text_Text.Text, obj2);
+  return options(timestampProducer, obj);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let anyErrorMessage;
-  let errors;
-  let items;
-  let loading;
-  let onFooterButtonPressed;
-  let tmp5;
-  const obj = react2;
-  const cResult = obj.c(19);
+  const cResult = c.c(19);
   ({ errors, loading, onFooterButtonPressed } = arg0);
   const tmp4 = closure_11();
   const bottom = useSafeAreaInsetsDefault().bottom;
@@ -198,60 +158,54 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj2 = { paddingBottom: bottom };
     cResult[0] = bottom;
     cResult[1] = obj2;
-    tmp5 = obj2;
+    let tmp5 = obj2;
   } else {
     tmp5 = cResult[1];
   }
   if (cResult[2] === tmp4.footerSafeAreaContainer) {
-    let tmp6;
-    let tmp8;
     if (cResult[3] === tmp5) {
-      tmp6 = cResult[4];
+      let tmp6 = cResult[4];
     }
     const _Symbol = Symbol;
-    const footerContainer = tmp4.footerContainer;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = intl2.intl;
-      const stringResult = intl.string(intl2.t.G3Zk7V);
+      const intl = util.intl;
+      const stringResult = intl.string(util.t.G3Zk7V);
       cResult[5] = stringResult;
-      tmp8 = stringResult;
+      let tmp8 = stringResult;
     } else {
       tmp8 = cResult[5];
     }
     if (cResult[6] === loading) {
-      let tmp10;
       if (cResult[7] === onFooterButtonPressed) {
-        tmp10 = cResult[8];
+        let tmp10 = cResult[8];
       }
       if (cResult[9] === errors) {
-        let tmp13;
         if (cResult[10] === tmp4.error) {
-          tmp13 = cResult[11];
+          let tmp13 = cResult[11];
         }
         if (cResult[12] === tmp4.footerContainer) {
           if (cResult[13] === tmp10) {
-            let tmp18;
             if (cResult[14] === tmp13) {
-              tmp18 = cResult[15];
+              let tmp18 = cResult[15];
             }
             if (cResult[16] === tmp6) {
-              let tmp22;
               if (cResult[17] === tmp18) {
-                tmp22 = cResult[18];
+                let tmp22 = cResult[18];
               }
               return tmp22;
             }
             const obj3 = { style: tmp6, children: tmp18 };
-            const tmp25 = React4(metroRequire, obj3);
+            const tmp25 = options(timestampProducer, obj3);
             cResult[16] = tmp6;
             cResult[17] = tmp18;
             cResult[18] = tmp25;
             tmp22 = tmp25;
           }
         }
-        const obj4 = { style: footerContainer, children: items };
-        items = [tmp10, tmp13];
-        const tmp21 = authStore(metroRequire, obj4);
+        const obj4 = { style: tmp4.footerContainer, children: null };
+        const items = [tmp10, tmp13];
+        obj4.children = items;
+        const tmp21 = v65535(timestampProducer, obj4);
         cResult[12] = tmp4.footerContainer;
         cResult[13] = tmp10;
         cResult[14] = tmp13;
@@ -260,13 +214,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       let tmp16Result = null != errors;
       if (tmp16Result) {
-        const obj5 = { style: tmp4.error, children: anyErrorMessage };
-        anyErrorMessage = undefined;
-        const LegacyText = native.LegacyText;
+        const obj5 = { style: tmp4.error, children: null };
+        let anyErrorMessage;
         if (errors != null) {
           anyErrorMessage = errors.getAnyErrorMessage();
         }
-        tmp16Result = React4(LegacyText, obj5);
+        obj5.children = anyErrorMessage;
+        tmp16Result = options(native.LegacyText, obj5);
       }
       cResult[9] = errors;
       cResult[10] = tmp4.error;
@@ -274,7 +228,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       tmp13 = tmp16Result;
     }
     const obj6 = { variant: "secondary", loading, disabled: loading, grow: true, text: tmp8, onPress: onFooterButtonPressed };
-    const tmp12 = React4(components_Button_Button.Button, obj6);
+    const tmp12 = options(components_Button_Button.Button, obj6);
     cResult[6] = loading;
     cResult[7] = onFooterButtonPressed;
     cResult[8] = tmp12;
@@ -286,99 +240,84 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = items1;
   tmp6 = items1;
 }) : ((onFooterButtonPressed) => {
-  let anyErrorMessage;
-  let errors;
-  let intl;
-  let items;
-  let items1;
-  let loading;
-  let obj3;
   ({ errors, loading } = onFooterButtonPressed);
-  onFooterButtonPressed = onFooterButtonPressed.onFooterButtonPressed;
   const tmp = closure_11();
-  const obj = { style: items, children: authStore(metroRequire, obj3) };
-  items = [tmp.footerSafeAreaContainer, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
-  obj3 = { style: tmp.footerContainer, children: items1 };
-  const obj4 = { variant: "secondary", loading, disabled: loading, grow: true, text: intl.string(intl2.t.G3Zk7V), onPress: onFooterButtonPressed };
-  ({ paddingBottom: useSafeAreaInsetsDefault().bottom });
-  const Button = components_Button_Button.Button;
-  intl = intl2.intl;
-  items1 = [React4(Button, obj4), ];
+  const obj = { style: null, children: null };
+  const items = [tmp.footerSafeAreaContainer, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
+  obj.style = items;
+  const obj3 = { style: tmp.footerContainer, children: null };
+  const obj4 = { variant: "secondary", loading, disabled: loading, grow: true, text: null, onPress: null };
+  const intl = util.intl;
+  obj4.text = intl.string(util.t.G3Zk7V);
+  obj4.onPress = onFooterButtonPressed.onFooterButtonPressed;
+  const items1 = [options(components_Button_Button.Button, obj4), ];
   let tmp3Result = null != errors;
   if (tmp3Result) {
-    const obj5 = { style: tmp.error, children: anyErrorMessage };
-    anyErrorMessage = undefined;
-    const LegacyText = native.LegacyText;
+    const obj5 = { style: tmp.error, children: null };
+    let anyErrorMessage;
     if (errors != null) {
       anyErrorMessage = errors.getAnyErrorMessage();
     }
-    tmp3Result = React4(LegacyText, obj5);
+    obj5.children = anyErrorMessage;
+    tmp3Result = options(native.LegacyText, obj5);
   }
   items1[1] = tmp3Result;
-  return React4(metroRequire, obj);
+  obj3.children = items1;
+  obj.children = v65535(timestampProducer, obj3);
+  return options(timestampProducer, obj);
 });
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionGuildSelect.tsx");
 
 export default function HubEmailConnectionGuildSelect(onClose) {
-  let closure_5;
-  let items2;
-  let obj4;
   onClose = onClose.onClose;
   let email = onClose.email;
   const guildsInfo = onClose.guildsInfo;
-  react = undefined;
-  let closure_3 = closure_11();
-  let obj = onClose(guildsInfo[18]);
-  navigation = obj.useNavigation();
+  noop = undefined;
+  closure_3 = closure_11();
+  const navigation = onClose(guildsInfo[18]).useNavigation();
   const items = [email, guildsInfo, navigation, onClose];
-  const layoutEffect = react.useLayoutEffect(() => {
-    let obj = {
+  const layoutEffect = noop.useLayoutEffect(() => {
+    navigation.setOptions({
       headerRight() {
-        let intl;
-        let obj = {
+        const obj = {
           IconComponent: onClose(guildsInfo[20]).MagnifyingGlassIcon,
           onPress() {
-            const obj = { email, onClose, guildsInfo };
-            closure_1_4.push(constants.SELECT_SCHOOL_SEARCH, obj);
+            closure_1_4.push(constants.SELECT_SCHOOL_SEARCH, { email, onClose, guildsInfo });
           },
-          accessibilityLabel: intl.string(onClose(guildsInfo[13]).t["5h0QOP"])
+          accessibilityLabel: null
         };
-        const HeaderActionButton = onClose(guildsInfo[19]).HeaderActionButton;
-        intl = onClose(guildsInfo[13]).intl;
-        return closure_2_9(HeaderActionButton, obj);
+        const intl = onClose(guildsInfo[13]).intl;
+        obj.accessibilityLabel = intl.string(onClose(guildsInfo[13]).t["5h0QOP"]);
+        return closure_2_9(onClose(guildsInfo[19]).HeaderActionButton, obj);
       }
-    };
-    navigation.setOptions(obj);
+    });
   }, items);
   const items1 = [email, navigation, onClose];
-  const callback = react.useCallback(() => {
-    const obj = { email, onClose };
-    navigation.push(HubEmailConnectionSteps.SUBMIT_SCHOOL, obj);
+  const callback = noop.useCallback(() => {
+    navigation.push(HubEmailConnectionSteps.SUBMIT_SCHOOL, { email, onClose });
   }, items1);
-  const bottom = email(guildsInfo[15])().bottom;
-  const tmp4 = navigation(react.useState(null), 2);
-  react = tmp4[1];
-  const first = tmp4[0];
-  const tmp6 = navigation(react.useState(false), 2);
-  const first1 = tmp6[0];
-  let closure_7 = tmp6[1];
-  let obj2 = { children: items2 };
-  let obj3 = {
+  const tmp4 = navigation(noop.useState(null), 2);
+  noop = tmp4[1];
+  const tmp5 = navigation(noop.useState(false), 2);
+  const loading = tmp5[0];
+  closure_7 = tmp5[1];
+  let obj2 = { children: null };
+  const obj3 = {
     data: guildsInfo,
     ListHeaderComponent() {
       return closure_1_9(closure_1_13, {});
     },
     renderItem(item) {
       item = item.item;
-      let obj = {
+      const id = item.id;
+      return closure_1_9(closure_1_12, {
         guildInfo: item,
         signup: closure_3(function*() {
-          let obj3;
-          let v3;
           if (v3 === 2) {
             v3 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
+          } else if (tmp7 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
@@ -388,7 +327,6 @@ export default function HubEmailConnectionGuildSelect(onClose) {
               return { value: "IconComponent", done: null };
             }
           } else {
-            let c3;
             try {
               v3 = 2;
               if (0 === c4) {
@@ -400,39 +338,33 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  email = tmp;
-                  onClose = tmp4;
+                  email = tmp4;
+                  onClose = tmp8;
                   v3(null);
                   closure_1_7(true);
                   c3 = 2;
                   c4 = 3;
                   v3 = 1;
-                  const obj5 = { value: obj3.sendVerificationEmail(email, true, id), done: false };
-                  obj3 = email(guildsInfo[21]);
+                  const obj5 = { value: email(12414).sendVerificationEmail(email, true, id), done: false };
                   return obj5;
                 }
-              } else if (1 === c4) {
+              } else if (1 === tmp8) {
                 c3 = 0;
                 closure_1_7(false);
                 throw closure_2;
               } else {
-                if (2 === c4) {
+                if (2 === tmp8) {
                   c3 = 1;
-                  onClose = closure_2;
-                  const self = this;
-                  const self2 = this;
-                  const aPIError = new id(guildsInfo[22]).APIError(onClose);
+                  closure_128_0 = closure_2;
+                  const aPIError = new id(5319).APIError(closure_128_0);
                   v3(aPIError);
-                } else if (arg0 === 1) {
-                  v3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
                   c3 = 0;
                   closure_1_7(false);
                   v3 = 3;
-                  const obj6 = { value, done: true };
-                  return obj6;
-                } else {
+                } else if (arg0 === 1) {
+                  v3 = 3;
+                  throw value;
+                } else if (arg0 !== 2) {
                   const obj = { email, onClose, guildId: closure_129_0 };
                   c4.push(constants.VERIFY_PIN, obj);
                   c3 = 1;
@@ -440,35 +372,34 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                 c3 = 0;
                 closure_1_7(false);
                 v3 = 3;
-                return { value: "IconComponent", done: null };
+                const obj6 = { value, done: true };
+                return obj6;
               }
-            } catch (tmp42) {
-              closure_2 = tmp42;
-              if (0 === c3) {
-                v3 = 3;
-                throw tmp42;
-              } else if (1 === tmp44) {
-                c4 = 1;
+            } catch (tmp48) {
+              closure_2 = tmp48;
+              if (tmp5 === c3) {
+                v3 = tmp3;
+                throw tmp48;
+              } else if (tmp2 === tmp50) {
+                c4 = tmp2;
               } else {
-                c4 = 2;
+                c4 = tmp;
               }
             }
           }
         }),
-        loading: first1
-      };
-      const id = item.id;
-      return closure_1_9(closure_1_12, obj);
+        loading
+      });
     },
     ItemSeparatorComponent() {
-      const obj = { style: closure_3.separator };
-      return React4(metroRequire, obj);
+      return options(timestampProducer, { style: closure_3.separator });
     },
-    contentContainerStyle: obj4
+    contentContainerStyle: null
   };
-  obj4 = { paddingBottom: 110 + bottom + 8 };
-  const HubEmailConnectionScreen = onClose(guildsInfo[23]).HubEmailConnectionScreen;
-  items2 = [closure_9(closure_7, obj3), closure_9(closure_14, { errors: first, loading: first1, onFooterButtonPressed: callback })];
-  return closure_10(HubEmailConnectionScreen, obj2);
+  let obj = onClose(guildsInfo[18]);
+  obj3.contentContainerStyle = { paddingBottom: 110 + email(guildsInfo[15])().bottom + 8 };
+  const items2 = [closure_9(closure_7, obj3), closure_9(closure_14, { errors: tmp4[0], loading, onFooterButtonPressed: callback })];
+  obj2.children = items2;
+  return closure_10(onClose(guildsInfo[23]).HubEmailConnectionScreen, obj2);
 };
-export const HubEmailConnectionGuildSelectRow = tmp5;
+export const HubEmailConnectionGuildSelectRow = tmp4;

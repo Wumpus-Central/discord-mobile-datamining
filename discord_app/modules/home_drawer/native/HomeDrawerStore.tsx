@@ -2,76 +2,54 @@
 
 // Module 15983 (HomeDrawerStore)
 import Constants from "Constants" /* 1085 */;
-import _slicedToArray from "_slicedToArray" /* 4498 */;
+import _mod4498 from "module_4498" /* 4498 */;
 import timing from "timing" /* 4897 */;
 import HomeDrawerAnimations from "HomeDrawerAnimations" /* 15984 */;
-import module_1254 from "module_1254" /* 1254 */;
+import identity from "module_1254" /* 1254 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, dependencyMap, set, set2, set3;
 
 const DM_WIDTH = Constants.DM_WIDTH;
-const withEqualityFn = module_1254.createWithEqualityFn((arg0, arg1) => {
-  let closure_0;
-  let closure_1;
-  let obj2;
-  let obj3;
-  let obj4;
-  let obj5;
-  let obj6;
+const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   _require = arg0;
   dependencyMap = arg1;
-  let obj = {
-    panelX: obj2.makeMutable(0),
-    snapX: obj3.makeMutable(0),
-    isOpenTarget: obj4.makeMutable(false),
-    gestureState: obj5.makeMutable({ active: false, initialX: 0, initialY: 0, panelX: 0 }),
-    maxX: 0,
-    lastInteractionAt: { current: 0 },
-    isPanelTouchActive: obj6.makeMutable(false),
-    setPanelX(open) {
-      let gestureState;
-      let isOpenTarget;
-      let panelX;
-      let snapX;
-      const tmp = closure_1();
-      ({ panelX, snapX, isOpenTarget, gestureState } = tmp);
-      const maxX = tmp.maxX;
-      if (isOpenTarget.get() !== "open" === open) {
-        const result = isOpenTarget.set(tmp2);
-        let num = 0;
-        set3 = panelX.set;
-        const withTiming = timing.withTiming;
-        timing;
-        if ("open" === open) {
-          num = maxX;
-        }
-        set3(withTiming(num, HomeDrawerAnimations.HOME_DRAWER_SETTLE_TIMING, "animate-always"));
-        set = snapX.set;
-        const tmp9Result = timing;
-        const result1 = set(tmp9Result.withTiming(0, HomeDrawerAnimations.HOME_DRAWER_SETTLE_TIMING, "animate-always"));
-        const obj = { active: false };
-        set2 = gestureState.set;
-        const merged = Object.assign(gestureState.get());
-        set2(obj);
+  let obj = { panelX: require("ReanimatedRexport").makeMutable(0), snapX: null, isOpenTarget: null, gestureState: null, maxX: 0, lastInteractionAt: null, isPanelTouchActive: null, setPanelX: null, updateMaxX: null, noteInteraction: null };
+  const obj2 = require("ReanimatedRexport");
+  obj.snapX = require("ReanimatedRexport").makeMutable(0);
+  let obj3 = require("ReanimatedRexport");
+  obj.isOpenTarget = require("ReanimatedRexport").makeMutable(false);
+  const obj4 = require("ReanimatedRexport");
+  obj.gestureState = require("ReanimatedRexport").makeMutable({ active: false, initialX: 0, initialY: 0, panelX: 0 });
+  obj.lastInteractionAt = { current: 0 };
+  const obj5 = require("ReanimatedRexport");
+  obj.isPanelTouchActive = require("ReanimatedRexport").makeMutable(false);
+  obj.setPanelX = function setPanelX(open) {
+    const tmp = closure_1();
+    ({ panelX, snapX, isOpenTarget, gestureState } = tmp);
+    if (isOpenTarget.get() !== "open" === open) {
+      const result = isOpenTarget.set(tmp2);
+      let num = 0;
+      if (tmp2) {
+        num = tmp.maxX;
       }
-    },
-    updateMaxX(width, left) {
-      const obj = { maxX: width.width - left.left - left.right - DM_WIDTH - 8 + 8 };
-      closure_0(obj);
-    },
-    noteInteraction() {
-      closure_1().lastInteractionAt.current = Date.now();
+      const result1 = panelX.set(timing.withTiming(num, HomeDrawerAnimations.HOME_DRAWER_SETTLE_TIMING, "animate-always"));
+      const result2 = snapX.set(timing.withTiming(0, HomeDrawerAnimations.HOME_DRAWER_SETTLE_TIMING, "animate-always"));
+      const obj = {};
+      const merged = Object.assign(gestureState.get());
+      obj.active = false;
+      const result3 = gestureState.set(obj);
+      const tmp9Result = timing;
     }
   };
-  obj2 = require("ReanimatedRexport");
-  obj3 = require("ReanimatedRexport");
-  obj4 = require("ReanimatedRexport");
-  obj5 = require("ReanimatedRexport");
-  obj6 = require("ReanimatedRexport");
+  obj.updateMaxX = function updateMaxX(width, left) {
+    closure_0({ maxX: width.width - left.left - left.right - DM_WIDTH - 8 + 8 });
+  };
+  obj.noteInteraction = function noteInteraction() {
+    closure_1().lastInteractionAt.current = Date.now();
+  };
   return obj;
-}, _slicedToArray.shallow);
+}, _mod4498.shallow);
 let result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerStore.tsx");
 
 export default withEqualityFn;

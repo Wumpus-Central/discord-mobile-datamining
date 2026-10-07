@@ -1,48 +1,31 @@
 // === Module 9893: BurstReactionToggle ===
 
 // Module 9893 (BurstReactionToggle)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import intl2 from "intl" /* 1126 */;
-import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import util from "util" /* 1126 */;
 import timing from "timing" /* 4897 */;
 import spring from "spring" /* 5604 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import createStyles from "createStyles" /* 4896 */;
-import size_mod from "module_2" /* 2 */;
 
-let importDefault, set, set2;
-
-let Easing;
-let size;
-const Pressable = react_native.Pressable;
-const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
-const jsx = Fragment.jsx;
-let obj = { duration: 100, easing: Easing.out(ReanimatedRexport.Easing.quad) };
-Easing = ReanimatedRexport.Easing;
+require = fn;
+const Pressable = fn(17).Pressable;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const jsx = fn(21).jsx;
+let obj = { duration: 100, easing: null };
+const Easing = fn(4618).Easing;
+obj.easing = Easing.out(fn(4618).Easing.quad);
 let closure_9 = { stiffness: 750, mass: 2.5, damping: 70 };
 const __initData = { code: "function BurstReactionToggleTsx1(){const{reducedMotion,targetBackgroundColor,backgroundColor,rotation}=this.__closure;const _backgroundColor=reducedMotion?targetBackgroundColor:backgroundColor.get();const _rotation=reducedMotion?0:rotation.get();return{backgroundColor:_backgroundColor,transform:[{rotate:_rotation+\"deg\"}]};}" };
 const __initData2 = { code: "function BurstReactionToggleTsx2(){const{reducedMotion,targetBackgroundColor,backgroundColor,rotation}=this.__closure;const _backgroundColor=reducedMotion?targetBackgroundColor:backgroundColor.get();const _rotation=reducedMotion?0:rotation.get();return{backgroundColor:_backgroundColor,transform:[{rotate:_rotation+\"deg\"}]};}" };
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let num3;
-  let stateFromStores;
-  let str;
-  let tmp4;
-  let tmp5;
-  let useReducedMotion;
-  obj = stateFromStores(num3[7]);
-  const cResult = obj.c(10);
+  const cResult = stateFromStores(num3[7]).c(10);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [AccessibilityStore];
     const fn = function s() {
       return useReducedMotion.useReducedMotion;
     };
-    let num = 0;
     cResult[0] = items;
     cResult[1] = fn;
     tmp4 = items;
@@ -50,12 +33,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     [tmp4, tmp5] = cResult;
   }
+  obj = stateFromStores(num3[7]);
+  stateFromStores = stateFromStores(num3[8]).useStateFromStores(tmp4, tmp5);
   const tmpResult = stateFromStores(num3[8]);
-  stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
-  const useToken = stateFromStores(num3[9]).useToken;
-  stateFromStores(num3[9]);
   const colors = str(tmp2[10]).colors;
-  str = useToken(arg0 ? colors.BACKGROUND_BRAND : colors.INPUT_BACKGROUND_DEFAULT);
+  str = stateFromStores(num3[9]).useToken(arg0 ? colors.BACKGROUND_BRAND : colors.INPUT_BACKGROUND_DEFAULT);
   if (str == null) {
     str = "";
   }
@@ -63,63 +45,57 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (arg0) {
     num3 = 360;
   }
+  const tmpResult5 = stateFromStores(num3[9]);
+  const sharedValue = stateFromStores(num3[5]).useSharedValue(str);
   const tmpResult6 = stateFromStores(num3[5]);
-  const sharedValue = tmpResult6.useSharedValue(str);
+  const sharedValue1 = stateFromStores(num3[5]).useSharedValue(num3);
   const tmpResult7 = stateFromStores(num3[5]);
-  const sharedValue1 = tmpResult7.useSharedValue(num3);
   const fn2 = function f() {
-    let items;
-    let value;
     if (stateFromStores) {
       value = str;
     } else {
       value = sharedValue.get();
     }
+    obj = { backgroundColor: value, transform: null };
     let num = 0;
-    obj = { backgroundColor: value, transform: items };
     if (!stateFromStores) {
       num = sharedValue1.get();
     }
-    items = [{ rotate: "" + num + "deg" }];
-    ({ rotate: "" + num + "deg" });
+    const items = [{ rotate: "" + num + "deg" }];
+    obj.transform = items;
     return obj;
   };
   fn2.__closure = { reducedMotion: stateFromStores, targetBackgroundColor: str, backgroundColor: sharedValue, rotation: sharedValue1 };
   fn2.__workletHash = 1525758595013;
   fn2.__initData = __initData;
-  const tmpResult8 = stateFromStores(num3[5]);
-  const animatedStyle = tmpResult8.useAnimatedStyle(fn2);
+  const animatedStyle = stateFromStores(num3[5]).useAnimatedStyle(fn2);
   if (cResult[2] === sharedValue) {
     if (cResult[3] === sharedValue1) {
       if (cResult[4] === str) {
-        let tmp12;
-        let tmp13;
-        let tmp16;
         if (cResult[5] === num3) {
-          tmp12 = cResult[6];
-          tmp13 = cResult[7];
+          let tmp11 = cResult[6];
+          let tmp12 = cResult[7];
         }
-        const effect = sharedValue.useEffect(tmp12, tmp13);
+        const effect = sharedValue.useEffect(tmp11, tmp12);
         if (cResult[8] !== animatedStyle) {
-          let obj2 = { containerStyle: animatedStyle };
+          const obj2 = { containerStyle: animatedStyle };
           cResult[8] = animatedStyle;
           cResult[9] = obj2;
-          tmp16 = obj2;
+          let tmp15 = obj2;
         } else {
-          tmp16 = cResult[9];
+          tmp15 = cResult[9];
         }
-        return tmp16;
+        return tmp15;
       }
     }
   }
   class C {
     constructor() {
-      set = sharedValue.set;
-      obj = timing;
-      const result = set(obj.withTiming(str, obj));
-      set2 = sharedValue1.set;
-      const obj2 = spring;
-      set2(obj2.withSpring(num3, closure_9));
+      obj = closure_0(closure_2[11]);
+      result = closure_3.set(obj.withTiming(c1, closure_8));
+      obj2 = closure_0(closure_2[12]);
+      result1 = closure_4.set(obj2.withSpring(c2, closure_9));
+      return;
     }
   }
   const items1 = [sharedValue, str, sharedValue1, num3];
@@ -129,20 +105,15 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = num3;
   cResult[6] = C;
   cResult[7] = items1;
-  tmp13 = items1;
-  tmp12 = C;
+  tmp12 = items1;
+  tmp11 = C;
+  const tmpResult8 = stateFromStores(num3[5]);
 }) : ((arg0) => {
-  let num;
-  let stateFromStores;
-  let str;
-  let useReducedMotion;
-  obj = stateFromStores(num[8]);
   let items = [AccessibilityStore];
-  stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const useToken = stateFromStores(num[9]).useToken;
-  stateFromStores(num[9]);
+  stateFromStores = stateFromStores(num[8]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  obj = stateFromStores(num[8]);
   const colors = str(num[10]).colors;
-  str = useToken(arg0 ? colors.BACKGROUND_BRAND : colors.INPUT_BACKGROUND_DEFAULT);
+  str = stateFromStores(num[9]).useToken(arg0 ? colors.BACKGROUND_BRAND : colors.INPUT_BACKGROUND_DEFAULT);
   if (str == null) {
     str = "";
   }
@@ -150,148 +121,138 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (arg0) {
     num = 360;
   }
+  const obj2 = stateFromStores(num[9]);
+  const sharedValue = stateFromStores(num[5]).useSharedValue(str);
   const tmpResult = stateFromStores(num[5]);
-  const sharedValue = tmpResult.useSharedValue(str);
+  const sharedValue1 = stateFromStores(num[5]).useSharedValue(num);
   const tmpResult3 = stateFromStores(num[5]);
-  const sharedValue1 = tmpResult3.useSharedValue(num);
   const fn = function c() {
-    let items;
-    let value;
     if (stateFromStores) {
       value = str;
     } else {
       value = sharedValue.get();
     }
+    obj = { backgroundColor: value, transform: null };
     num = 0;
-    obj = { backgroundColor: value, transform: items };
     if (!stateFromStores) {
       num = sharedValue1.get();
     }
-    items = [{ rotate: "" + num + "deg" }];
-    ({ rotate: "" + num + "deg" });
+    const items = [{ rotate: "" + num + "deg" }];
+    obj.transform = items;
     return obj;
   };
   fn.__closure = { reducedMotion: stateFromStores, targetBackgroundColor: str, backgroundColor: sharedValue, rotation: sharedValue1 };
   fn.__workletHash = 5208702098150;
   fn.__initData = __initData2;
   const items1 = [sharedValue, str, sharedValue1, num];
-  const tmpResult4 = stateFromStores(num[5]);
-  const containerStyle = tmpResult4.useAnimatedStyle(fn);
+  const containerStyle = stateFromStores(num[5]).useAnimatedStyle(fn);
   const effect = sharedValue.useEffect(() => {
-    set = sharedValue.set;
     obj = timing;
-    const result = set(obj.withTiming(str, obj));
-    set2 = sharedValue1.set;
-    const obj2 = spring;
-    set2(obj2.withSpring(num, closure_9));
+    const result = sharedValue.set(obj.withTiming(str, obj));
+    const result1 = sharedValue1.set(spring.withSpring(num, closure_9));
   }, items1);
   return { containerStyle };
 });
-let obj2 = { container: size };
-size = { borderRadius: nativeDefault.modules.button.BORDER_RADIUS, padding: 8, marginLeft: 8, width: 40, height: 40 };
-let closure_13 = createStyles.createStyles(obj2);
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
-  let INTERACTIVE_TEXT_DEFAULT;
-  let closure_1;
-  let tmp6;
-  obj = onPress(576);
-  const cResult = obj.c(20);
+const createStyles = fn(4896);
+let obj4 = { container: null };
+let size = { borderRadius: nativeDefault.modules.button.BORDER_RADIUS, padding: 8, marginLeft: 8, width: 40, height: 40 };
+obj4.container = size;
+let closure_13 = createStyles.createStyles(obj4);
+ReactCompilerGating = fn(558);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/reactions/native/BurstReactionToggle.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
+  const cResult = onPress(576).c(20);
   onPress = onPress.onPress;
   const isActive = onPress.isActive;
   const tmp4 = closure_13();
   const colors = nativeDefault.colors;
   if (isActive) {
-    INTERACTIVE_TEXT_DEFAULT = colors.WHITE;
-    tmp6 = tmp5;
+    let INTERACTIVE_TEXT_DEFAULT = colors.WHITE;
+    let tmp6 = tmp5;
   } else {
     INTERACTIVE_TEXT_DEFAULT = colors.INTERACTIVE_TEXT_DEFAULT;
     tmp6 = tmp5;
   }
-  const ref = react.useRef(null);
+  const ref = noop.useRef(null);
   const tmp8 = tmp6(9894)(ref);
   importDefault = tmp8;
   if (cResult[0] === tmp8) {
-    let tmp9;
-    let tmp11;
-    let tmp13;
     if (cResult[1] === onPress) {
-      tmp9 = cResult[2];
+      let tmp9 = cResult[2];
     }
     const containerStyle = closure_12(isActive).containerStyle;
     if (cResult[3] !== isActive) {
-      let stringResult;
       const intl = tmp(1126).intl;
       const string = intl.string;
-      const t = tmp(1126).t;
+      let t = tmp(1126).t;
       if (isActive) {
-        stringResult = string(t["5cRA/b"]);
+        t = t["5cRA/b"];
+        let stringResult = string(t);
       } else {
         stringResult = string(t.buV4av);
       }
       cResult[3] = isActive;
       cResult[4] = stringResult;
-      tmp11 = stringResult;
     } else {
-      tmp11 = cResult[4];
-    }
-    if (cResult[5] !== isActive) {
-      const obj2 = { checked: isActive };
-      cResult[5] = isActive;
-      cResult[6] = obj2;
-      tmp13 = obj2;
-    } else {
-      tmp13 = cResult[6];
-    }
-    if (cResult[7] === containerStyle) {
-      let tmp14;
-      let tmp15;
-      if (cResult[8] === tmp4.container) {
-        tmp14 = cResult[9];
-      }
-      if (cResult[10] !== INTERACTIVE_TEXT_DEFAULT) {
-        const tmp17 = jsx(onPress(8909).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT });
-        cResult[10] = INTERACTIVE_TEXT_DEFAULT;
-        cResult[11] = tmp17;
-        tmp15 = tmp17;
+      if (cResult[5] !== isActive) {
+        const obj2 = { checked: isActive };
+        cResult[5] = isActive;
+        cResult[6] = obj2;
+        let tmp15 = obj2;
       } else {
-        tmp15 = cResult[11];
+        tmp15 = cResult[6];
       }
-      if (cResult[12] === tmp14) {
-        let tmp18;
-        if (cResult[13] === tmp15) {
-          tmp18 = cResult[14];
+      if (cResult[7] === containerStyle) {
+        if (cResult[8] === tmp4.container) {
+          let tmp16 = cResult[9];
         }
-        if (cResult[15] === tmp9) {
-          if (cResult[16] === tmp11) {
-            if (cResult[17] === tmp13) {
-              let tmp21;
-              if (cResult[18] === tmp18) {
-                tmp21 = cResult[19];
+        if (cResult[10] !== INTERACTIVE_TEXT_DEFAULT) {
+          const obj3 = { color: INTERACTIVE_TEXT_DEFAULT };
+          const tmp19 = jsx(tmp(8909).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT });
+          cResult[10] = INTERACTIVE_TEXT_DEFAULT;
+          cResult[11] = tmp19;
+          let tmp17 = tmp19;
+        } else {
+          tmp17 = cResult[11];
+        }
+        if (cResult[12] === tmp16) {
+          if (cResult[13] === tmp17) {
+            let tmp20 = cResult[14];
+          }
+          if (cResult[15] === tmp9) {
+            if (cResult[16] === tmp11) {
+              if (cResult[17] === tmp15) {
+                if (cResult[18] === tmp20) {
+                  let tmp23 = cResult[19];
+                }
+                return tmp23;
               }
-              return tmp21;
             }
           }
+          const obj4 = { onPress: tmp9, accessible: true, accessibilityLabel: tmp11, accessibilityRole: "switch", accessibilityState: tmp15, children: tmp20 };
+          const tmp26 = <Pressable onPress={tmp9} accessible accessibilityLabel={tmp11} accessibilityRole="switch" accessibilityState={tmp15}>{tmp20}</Pressable>;
+          cResult[15] = tmp9;
+          cResult[16] = tmp11;
+          cResult[17] = tmp15;
+          cResult[18] = tmp20;
+          cResult[19] = tmp26;
+          tmp23 = tmp26;
         }
-        const tmp24 = <Pressable onPress={tmp9} accessible accessibilityLabel={tmp11} accessibilityRole="switch" accessibilityState={tmp13}>{tmp18}</Pressable>;
-        cResult[15] = tmp9;
-        cResult[16] = tmp11;
-        cResult[17] = tmp13;
-        cResult[18] = tmp18;
-        cResult[19] = tmp24;
-        tmp21 = tmp24;
+        const obj5 = { style: tmp16, ref, children: tmp17 };
+        const tmp22 = jsx(tmp6(4618).View, { style: tmp16, ref, children: tmp17 });
+        cResult[12] = tmp16;
+        cResult[13] = tmp17;
+        cResult[14] = tmp22;
+        tmp20 = tmp22;
       }
-      const tmp20 = jsx(tmp6(4618).View, { style: tmp14, ref, children: tmp15 });
-      cResult[12] = tmp14;
-      cResult[13] = tmp15;
-      cResult[14] = tmp20;
-      tmp18 = tmp20;
+      const items = [tmp4.container, containerStyle];
+      cResult[7] = containerStyle;
+      cResult[8] = tmp4.container;
+      cResult[9] = items;
+      tmp16 = items;
     }
-    const items = [tmp4.container, containerStyle];
-    cResult[7] = containerStyle;
-    cResult[8] = tmp4.container;
-    cResult[9] = items;
-    tmp14 = items;
   }
   const fn = function u() {
     closure_1(ContentDismissActionType.AUTO);
@@ -301,42 +262,50 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
   cResult[1] = onPress;
   cResult[2] = fn;
   tmp9 = fn;
+  obj = onPress(576);
 }) : ((arg0) => {
-  let closure_1;
-  let isActive;
-  let require;
-  let stringResult;
-  let tmp5;
   ({ onPress: require, isActive } = arg0);
   importDefault = undefined;
-  const tmp = closure_13();
   const colors = nativeDefault.colors;
   if (isActive) {
     let INTERACTIVE_TEXT_DEFAULT = colors.WHITE;
-    tmp5 = tmp2;
+    let tmp5 = tmp2;
   } else {
     INTERACTIVE_TEXT_DEFAULT = colors.INTERACTIVE_TEXT_DEFAULT;
     tmp5 = tmp2;
   }
-  const ref = react.useRef(null);
+  const ref = noop.useRef(null);
   importDefault = tmp5(9894)(ref);
-  const containerStyle = closure_12(isActive).containerStyle;
-  const intl = intl2.intl;
+  obj = {
+    onPress() {
+      closure_1(ContentDismissActionType.AUTO);
+      _require();
+    },
+    accessible: true,
+    accessibilityLabel: null,
+    accessibilityRole: "switch",
+    accessibilityState: null,
+    children: null
+  };
+  const intl = util.intl;
   const string = intl.string;
-  const t = intl2.t;
+  const t = util.t;
   if (isActive) {
-    stringResult = string(t["5cRA/b"]);
+    let stringResult = string(t["5cRA/b"]);
+    let tmp11 = require;
   } else {
     stringResult = string(t.buV4av);
+    tmp11 = require;
   }
-  const items = [tmp.container, containerStyle];
-  const View = tmp5(4618).View;
+  obj.accessibilityLabel = stringResult;
+  obj.accessibilityState = { checked: isActive };
+  const obj2 = { style: null, ref, children: null };
+  const items = [closure_13().container, closure_12(isActive).containerStyle];
+  obj2.style = items;
+  obj2.children = jsx(tmp11(8909).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT });
+  obj.children = jsx(tmp5(4618).View, { style: null, ref, children: null });
   return <Pressable onPress={function onPress() {
     closure_1(ContentDismissActionType.AUTO);
     _require();
-  }} accessible accessibilityLabel={stringResult} accessibilityRole="switch" accessibilityState={{ checked: isActive }}>{null}</Pressable>;
+  }} accessible accessibilityLabel={null} accessibilityRole="switch" accessibilityState={null}>{null}</Pressable>;
 });
-size = size_mod;
-let result = size.fileFinishedImporting("modules/reactions/native/BurstReactionToggle.tsx");
-
-export default tmp2;

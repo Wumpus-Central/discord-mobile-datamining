@@ -1,27 +1,20 @@
 // === Module 8542: useFetchVirtualCurrencyBalance ===
 
 // Module 8542 (useFetchVirtualCurrencyBalance)
-import react from "react" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
 import VirtualCurrencyActionCreators from "VirtualCurrencyActionCreators" /* 8544 */;
 import VirtualCurrencyStore from "VirtualCurrencyStore" /* 8543 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, disableFetch;
 
-const useEffect = react.useEffect;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((disableFetch) => {
-  let balance;
-  let error;
-  let isFetching;
-  let tmp4;
-  let tmp5;
+const useEffect = _mod19.useEffect;
+const result = size.fileFinishedImporting("modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx");
+
+export const useFetchVirtualCurrencyBalance = ReactCompilerGating.isReactCompilerEnabled() ? ((disableFetch) => {
   _require = disableFetch;
-  let obj = require("react");
-  const cResult = obj.c(14);
-  const tmp = _require;
-  const tmp2 = balance;
+  const cResult = require("c").c(14);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [VirtualCurrencyStore];
     const fn = function s() {
@@ -34,20 +27,18 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((disableFetch) => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const tmpResult = tmp(tmp2[4]);
-  const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp4, tmp5);
+  let obj = require("c");
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(tmp4, tmp5);
   balance = stateFromStoresObject.balance;
   ({ isFetching, error } = stateFromStoresObject);
   if (cResult[2] === balance) {
     if (cResult[3] === error) {
-      let tmp11;
       disableFetch = undefined;
-      const tmp8 = cResult[4];
       if (disableFetch != null) {
         disableFetch = disableFetch.disableFetch;
       }
-      if (tmp8 === disableFetch) {
-        tmp11 = cResult[5];
+      if (cResult[4] === disableFetch) {
+        let tmp10 = cResult[5];
       }
       let disableFetch1;
       if (disableFetch != null) {
@@ -55,18 +46,16 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((disableFetch) => {
       }
       if (cResult[6] === balance) {
         if (cResult[7] === error) {
-          let tmp15;
           if (cResult[8] === disableFetch1) {
-            tmp15 = cResult[9];
+            let tmp14 = cResult[9];
           }
-          error(tmp11, tmp15);
+          error(tmp10, tmp14);
           if (cResult[10] === balance) {
             if (cResult[11] === error) {
-              let tmp18;
               if (cResult[12] === isFetching) {
-                tmp18 = cResult[13];
+                let tmp17 = cResult[13];
               }
-              return tmp18;
+              return tmp17;
             }
           }
           const obj2 = { balance, isFetching, error };
@@ -74,7 +63,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((disableFetch) => {
           cResult[11] = error;
           cResult[12] = isFetching;
           cResult[13] = obj2;
-          tmp18 = obj2;
+          tmp17 = obj2;
         }
       }
       const items1 = [balance, error, disableFetch1];
@@ -82,7 +71,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((disableFetch) => {
       cResult[7] = error;
       cResult[8] = disableFetch1;
       cResult[9] = items1;
-      tmp15 = items1;
+      tmp14 = items1;
     }
   }
   cResult[2] = balance;
@@ -106,30 +95,26 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((disableFetch) => {
       disableFetch = VirtualCurrencyStore.isFetchingBalance;
     }
     if (!disableFetch) {
-      const obj = VirtualCurrencyActionCreators;
-      const virtualCurrencyBalance = obj.fetchVirtualCurrencyBalance();
+      const virtualCurrencyBalance = VirtualCurrencyActionCreators.fetchVirtualCurrencyBalance();
     }
   };
   cResult[4] = disableFetch2;
   cResult[5] = fn2;
-  tmp11 = fn2;
+  tmp10 = fn2;
+  const tmpResult = require("initialize");
 }) : ((disableFetch) => {
-  let balance;
   _require = disableFetch;
-  let obj = require("get initialized");
   const items = [VirtualCurrencyStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ balance: VirtualCurrencyStore.balance, isFetching: VirtualCurrencyStore.isFetchingBalance, error: VirtualCurrencyStore.fetchBalanceError }));
-  balance = stateFromStoresObject.balance;
-  const error = stateFromStoresObject.error;
+  const isFetching = require("initialize").useStateFromStoresObject(items, () => ({ balance: VirtualCurrencyStore.balance, isFetching: VirtualCurrencyStore.isFetchingBalance, error: VirtualCurrencyStore.fetchBalanceError }));
+  balance = isFetching.balance;
+  const error = isFetching.error;
   const items1 = [balance, error, ];
   disableFetch = undefined;
-  const isFetching = stateFromStoresObject.isFetching;
-  const tmp2 = error;
   if (disableFetch != null) {
     disableFetch = disableFetch.disableFetch;
   }
   items1[2] = disableFetch;
-  tmp2(() => {
+  error(() => {
     disableFetch = undefined;
     if (disableFetch != null) {
       disableFetch = disableFetch.disableFetch;
@@ -144,12 +129,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((disableFetch) => {
       disableFetch = VirtualCurrencyStore.isFetchingBalance;
     }
     if (!disableFetch) {
-      const obj = VirtualCurrencyActionCreators;
-      const virtualCurrencyBalance = obj.fetchVirtualCurrencyBalance();
+      const virtualCurrencyBalance = VirtualCurrencyActionCreators.fetchVirtualCurrencyBalance();
     }
   }, items1);
-  return { balance, isFetching, error };
+  return { balance, isFetching: isFetching.isFetching, error };
 });
-const result = size.fileFinishedImporting("modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx");
-
-export const useFetchVirtualCurrencyBalance = tmp2;

@@ -1,43 +1,30 @@
 // === Module 9742: StageChannelListStore ===
 
 // Module 9742 (StageChannelListStore)
-import react2 from "react" /* 576 */;
-import _slicedToArray2 from "_slicedToArray" /* 4498 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import module_1254 from "module_1254" /* 1254 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import c from "c" /* 576 */;
+import _mod4498 from "module_4498" /* 4498 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let closure_4 = module_1254.createWithEqualityFn((arg0) => {
-  let closure_0 = arg0;
-  let obj = {
+require = fn;
+const identity = fn(1254);
+let closure_4 = identity.createWithEqualityFn((arg0) => {
+  closure_0 = arg0;
+  return {
     showActiveSpeakerPill: false,
     setShowActiveSpeakerPill(showActiveSpeakerPill) {
-      let obj = showActiveSpeakerPill(dependencyMap[3]);
-      return obj.batchUpdates(() => {
-        const obj = { showActiveSpeakerPill };
-        return showActiveSpeakerPill(obj);
-      });
+      return showActiveSpeakerPill(1259).batchUpdates(() => showActiveSpeakerPill({ showActiveSpeakerPill }));
     },
     listRef: null,
     setListRef(listRef) {
-      let obj = listRef(dependencyMap[3]);
-      return obj.batchUpdates(() => {
-        const obj = { listRef };
-        return listRef(obj);
-      });
+      return listRef(1259).batchUpdates(() => listRef({ listRef }));
     }
   };
-  return obj;
 });
-let ReactCompilerGating = ReactCompilerGating_mod;
+fn(558);
+const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  let items;
-  let tmp8;
-  const obj = react2;
-  const cResult = obj.c(8);
+  const cResult = c.c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function l(arg0) {
       const items = [, ];
@@ -45,29 +32,31 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       return items;
     };
     cResult[0] = fn;
-    first = fn;
+    let first = fn;
   } else {
     first = cResult[0];
   }
-  const tmp5 = _slicedToArray(closure_4(first, _slicedToArray2.shallow), 2);
+  const tmp5 = _slicedToArray(closure_4(first, _mod4498.shallow), 2);
   const first1 = tmp5[0];
-  let closure_1 = tmp7;
+  closure_1 = tmp7;
   if (cResult[1] !== tmp5[1]) {
     const fn2 = function c(arg0) {
       closure_1(arg0);
     };
-    cResult[1] = tmp5[1];
+    cResult[1] = tmp7;
     cResult[2] = fn2;
-    tmp8 = fn2;
+    let tmp8 = fn2;
   } else {
     tmp8 = cResult[2];
   }
   if (cResult[3] !== first1) {
     class S {
       constructor() {
-        if (first1 != null) {
-          first1.scrollToLocation({ section: 0, item: 0, animated: true });
+        obj = closure_0;
+        if (closure_0 != null) {
+          scrollToLocationResult = obj.scrollToLocation({ section: 0, item: 0, animated: true });
         }
+        return;
       }
     }
     cResult[3] = first1;
@@ -75,18 +64,22 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     class S {
       constructor() {
-        if (first1 != null) {
-          first1.scrollToLocation({ section: 0, item: 0, animated: true });
+        obj = closure_0;
+        if (closure_0 != null) {
+          scrollToLocationResult = obj.scrollToLocation({ section: 0, item: 0, animated: true });
         }
+        return;
       }
     }
   }
   if (cResult[5] === S) {
     class S {
       constructor() {
-        if (first1 != null) {
-          first1.scrollToLocation({ section: 0, item: 0, animated: true });
+        obj = closure_0;
+        if (closure_0 != null) {
+          scrollToLocationResult = obj.scrollToLocation({ section: 0, item: 0, animated: true });
         }
+        return;
       }
     }
     return items;
@@ -100,29 +93,30 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const items = [, ];
     ({ listRef: arr[0], setListRef: arr[1] } = arg0);
     return items;
-  }, _slicedToArray2.shallow), 2);
+  }, _mod4498.shallow), 2);
   const first = tmp[0];
-  let closure_1 = tmp3;
+  closure_1 = tmp3;
   let items = [tmp[1]];
   const items1 = [
-    react.useCallback((arg0) => {
+    noop.useCallback((arg0) => {
       closure_1(arg0);
     }, items),
 
   ];
   const items2 = [first];
-  items1[1] = react.useCallback(() => {
+  items1[1] = noop.useCallback(() => {
     if (first != null) {
       first.scrollToLocation({ section: 0, item: 0, animated: true });
     }
   }, items2);
   return items1;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  const obj = react2;
-  const cResult = obj.c(1);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/StageChannelListStore.tsx");
+
+export const useActiveSpeakerPillScrollHandler = tmp2;
+export const useActiveSpeakerPillState = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(arg0) {
       const items = [, ];
@@ -130,17 +124,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       return items;
     };
     cResult[0] = fn;
-    first = fn;
+    let first = fn;
   } else {
     first = cResult[0];
   }
-  return closure_4(first, _slicedToArray2.shallow);
+  return closure_4(first, _mod4498.shallow);
 }) : (() => closure_4((arg0) => {
   const items = [, ];
   ({ showActiveSpeakerPill: arr[0], setShowActiveSpeakerPill: arr[1] } = arg0);
   return items;
-}, _slicedToArray2.shallow));
-const result = size.fileFinishedImporting("modules/stage_channels/native/StageChannelListStore.tsx");
-
-export const useActiveSpeakerPillScrollHandler = tmp2;
-export const useActiveSpeakerPillState = tmp3;
+}, _mod4498.shallow));

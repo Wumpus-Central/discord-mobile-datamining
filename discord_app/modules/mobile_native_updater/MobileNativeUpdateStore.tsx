@@ -2,80 +2,70 @@
 
 // Module 14176 (MobileNativeUpdateStore)
 import LoggerDefault from "Logger" /* 3 */;
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import MobileNativeUpdateUtils from "MobileNativeUpdateUtils" /* 13737 */;
 import MobileNativeUpdateConstants from "MobileNativeUpdateConstants" /* 4874 */;
 import size from "module_2" /* 2 */;
 
-let c3;
-let closure_4;
 ({ UPDATE_CONFIG: c3, UPDATE_CHECK_INTERVAL: closure_4 } = MobileNativeUpdateConstants);
 let closure_5 = new LoggerDefault("MobileNativeUpdateStore");
 let obj = { lastCheck: null, checking: false, newBuild: null };
 let c7 = null;
-const tmp3 = new LoggerDefault("MobileNativeUpdateStore");
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class MobileNativeUpdateStore extends Store {
   constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    applyArgumentsResult.hasUpdatesConfigured = null !== _false;
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    applyArgumentsResult.hasUpdatesConfigured = null !== UPDATE_CONFIG;
     return applyArgumentsResult;
-  }
-  checkForNewerBuild() {
-    if (true !== obj.checking) {
-      obj = DispatcherDefault;
-      obj.dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_STARTED" });
-      let obj2 = MobileNativeUpdateUtils;
-      const checkForNewerBuildResult = obj2.checkForNewerBuild();
-      checkForNewerBuildResult.then((newBuild) => {
-        obj = DispatcherDefault;
-        const obj2 = { type: "MOBILE_NATIVE_UPDATE_CHECK_FINISHED", newBuild };
-        obj.dispatch(obj2);
-      }, () => {
-        obj = DispatcherDefault;
-        obj.dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_FAILED" });
-      });
-    }
-  }
-  ensureInitialized() {
-    let closure_7;
-    let interval;
-    let logger;
-    const self = this;
-    if (this.hasUpdatesConfigured) {
-      if (null === interval) {
-        function backgroundUpdateCheck() {
-          logger.info("Checking for new native builds in the background");
-          self.checkForNewerBuild();
-        }
-        const _setInterval = setInterval;
-        interval = setInterval(backgroundUpdateCheck, closure_4.asMilliseconds());
-        const _setTimeout = setTimeout;
-        const timerId = setTimeout(backgroundUpdateCheck, 1000);
-      }
-    }
-  }
-  latestFetchedBuild() {
-    this.ensureInitialized();
-    return obj;
   }
 }
 const prototype = MobileNativeUpdateStore.prototype;
+prototype["checkForNewerBuild"] = function checkForNewerBuild() {
+  if (true !== obj.checking) {
+    obj = DispatcherDefault;
+    obj.dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_STARTED" });
+    MobileNativeUpdateUtils.checkForNewerBuild().then((newBuild) => {
+      DispatcherDefault.dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_FINISHED", newBuild });
+    }, () => {
+      DispatcherDefault.dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_FAILED" });
+    });
+    const checkForNewerBuildResult = MobileNativeUpdateUtils.checkForNewerBuild();
+  }
+};
+prototype["ensureInitialized"] = function ensureInitialized() {
+  const self = this;
+  if (this.hasUpdatesConfigured) {
+    if (null === interval) {
+      function backgroundUpdateCheck() {
+        logger.info("Checking for new native builds in the background");
+        self.checkForNewerBuild();
+      }
+      const _setInterval = setInterval;
+      interval = setInterval(backgroundUpdateCheck, closure_4.asMilliseconds());
+      const _setTimeout = setTimeout;
+      const timerId = setTimeout(backgroundUpdateCheck, 1000);
+    }
+  }
+};
+prototype["latestFetchedBuild"] = function latestFetchedBuild() {
+  this.ensureInitialized();
+  return obj;
+};
 MobileNativeUpdateStore.displayName = "MobileNativeUpdateStore";
 obj = {
   MOBILE_NATIVE_UPDATE_CHECK_STARTED: function handleCheckStarted() {
-    obj = { checking: true };
+    obj = {};
     const merged = Object.assign(obj);
+    obj.checking = true;
   },
   MOBILE_NATIVE_UPDATE_CHECK_FAILED: function handleCheckFailed() {
-    obj = { checking: false };
+    obj = {};
     const merged = Object.assign(obj);
+    obj.checking = false;
   },
   MOBILE_NATIVE_UPDATE_CHECK_FINISHED: function handleCheckFinished(newBuild) {
-    ({ lastCheck: new Date(), checking: false, newBuild });
-    newBuild = newBuild.newBuild;
-    new Date();
+    obj = { lastCheck: new Date(), checking: false, newBuild: newBuild.newBuild };
   }
 };
 const mobileNativeUpdateStore = new MobileNativeUpdateStore(DispatcherDefault, obj);

@@ -1,7 +1,7 @@
 // === Module 16054: HappeningNowActions ===
 
 // Module 16054 (HappeningNowActions)
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import Text_Text from "Text/Text" /* 4892 */;
@@ -9,407 +9,354 @@ import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCre
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9282 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9494 */;
 import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 11950 */;
-import AssetRegistryDefault from "AssetRegistry" /* 12457 */;
+import _modDef12457 from "module_12457" /* 12457 */;
 import HappeningNowCardDefault from "HappeningNowCard" /* 15130 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 16055 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 16056 */;
-import AssetRegistryDefault4 from "AssetRegistry" /* 16057 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import _modDef16055 from "module_16055" /* 16055 */;
+import _modDef16056 from "module_16056" /* 16056 */;
+import _modDef16057 from "module_16057" /* 16057 */;
+import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4513 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import HappeningNowConstants from "HappeningNowConstants" /* 15129 */;
-import Constants from "Constants" /* 1085 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
 
-let guildId;
-
-let HAPPENING_NOW_CARD_HEIGHT;
-let c10;
-let c9;
-let closure_12;
-let closure_4;
-let hasOwnProperty;
-let map1;
-let obj2;
-let size;
-let unpackModuleId;
-({ View: closure_4, Image: hasOwnProperty } = react_native);
-({ HappeningNowCardTrackingType: c9, HAPPENING_NOW_CARD_HEIGHT } = HappeningNowConstants);
-({ AnalyticEvents: c10, InstantInviteSources: unpackModuleId } = Constants);
-({ jsx: closure_12, jsxs: map1 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { actionCard: obj2, actionCardImage: size };
-obj2 = { flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: 8, borderWidth: 1, borderRadius: nativeDefault.radii.lg, height: HAPPENING_NOW_CARD_HEIGHT, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderColor: nativeDefault.colors.BORDER_SUBTLE };
-createStyles = createStyles.createStyles;
-size = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, height: 44, width: "100%", alignItems: "center", justifyContent: "center", marginBottom: 4, borderRadius: nativeDefault.radii.sm };
-let closure_14 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
-  let tmp5;
-  let tmp6;
-  let obj = guildId(576);
-  const cResult = obj.c(6);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
+const HappeningNowConstants = fn(15129);
+({ HappeningNowCardTrackingType: closure_9, HAPPENING_NOW_CARD_HEIGHT } = HappeningNowConstants);
+const Constants = fn(1085);
+({ AnalyticEvents: c10, InstantInviteSources: closure_11 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
+const createStyles = fn(4896);
+let obj = { actionCard: { flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: 8, borderWidth: 1, borderRadius: nativeDefault.radii.lg, height: HAPPENING_NOW_CARD_HEIGHT, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderColor: nativeDefault.colors.BORDER_SUBTLE }, actionCardImage: null };
+let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, height: 44, width: "100%", alignItems: "center", justifyContent: "center", marginBottom: 4, borderRadius: nativeDefault.radii.sm };
+obj.actionCardImage = size;
+let closure_14 = createStyles.createStyles(obj);
+fn(558);
+let obj3 = { flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: 8, borderWidth: 1, borderRadius: nativeDefault.radii.lg, height: HAPPENING_NOW_CARD_HEIGHT, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderColor: nativeDefault.colors.BORDER_SUBTLE };
+let ReactCompilerGating = fn(558);
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+  const cResult = guildId(576).c(6);
   guildId = guildId.guildId;
   const panelVariant = guildId.panelVariant;
   if (cResult[0] !== guildId) {
     const fn = function t() {
-      const GUILD_ACTION_CREATE_CHANNEL_CARD = constants.GUILD_ACTION_CREATE_CHANNEL_CARD;
-      const obj = AnalyticsUtilsDefault;
-      const obj2 = { type: GUILD_ACTION_CREATE_CHANNEL_CARD, order: 0, guild_id: guildId };
-      obj.track(constants2.ACTIVITY_CARD_CLICKED, obj2);
-      const obj3 = CreateChannelModalActionCreatorsDefault;
-      obj3.open(null, guildId, null, null);
+      AnalyticsUtilsDefault.track(constants2.ACTIVITY_CARD_CLICKED, { type: constants.GUILD_ACTION_CREATE_CHANNEL_CARD, order: 0, guild_id: guildId });
+      const obj2 = { type: constants.GUILD_ACTION_CREATE_CHANNEL_CARD, order: 0, guild_id: guildId };
+      CreateChannelModalActionCreatorsDefault.open(null, guildId, null, null);
     };
     cResult[0] = guildId;
     cResult[1] = fn;
-    tmp5 = fn;
+    let tmp5 = fn;
   } else {
     tmp5 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1126).intl;
-    const stringResult = intl.string(guildId(1126).t["fUYU+j"]);
+    const stringResult = intl.string(tmp(1126).t["fUYU+j"]);
     cResult[2] = stringResult;
-    tmp6 = stringResult;
+    let tmp6 = stringResult;
   } else {
     tmp6 = cResult[2];
   }
   if (cResult[3] === tmp5) {
-    let tmp8;
-    if (cResult[4] === (undefined !== panelVariant && panelVariant)) {
-      tmp8 = cResult[5];
+    if (cResult[4] === tmp4) {
+      let tmp8 = cResult[5];
     }
     return tmp8;
   }
-  let obj2 = { imageSource: AssetRegistryDefault2, onPress: tmp5, text: tmp6, panelVariant: tmp4 };
-  const tmp9 = closure_12(closure_15, obj2);
+  let obj = guildId(576);
+  const tmp9 = closure_12(closure_15, { imageSource: _modDef16055, onPress: tmp5, text: tmp6, panelVariant: undefined !== panelVariant && panelVariant });
   cResult[3] = tmp5;
   cResult[4] = undefined !== panelVariant && panelVariant;
   cResult[5] = tmp9;
   tmp8 = tmp9;
+  let obj2 = { imageSource: _modDef16055, onPress: tmp5, text: tmp6, panelVariant: undefined !== panelVariant && panelVariant };
 }) : ((guildId) => {
-  let callback;
-  let intl;
   guildId = guildId.guildId;
   let flag = guildId.panelVariant;
   if (flag === undefined) {
     flag = false;
   }
   const items = [guildId];
-  let obj = { imageSource: AssetRegistryDefault2, onPress: callback, text: intl.string(guildId(1126).t["fUYU+j"]), panelVariant: flag };
-  callback = react.useCallback(() => {
-    const GUILD_ACTION_CREATE_CHANNEL_CARD = constants.GUILD_ACTION_CREATE_CHANNEL_CARD;
-    const obj = AnalyticsUtilsDefault;
-    const obj2 = { type: GUILD_ACTION_CREATE_CHANNEL_CARD, order: 0, guild_id: guildId };
-    obj.track(constants2.ACTIVITY_CARD_CLICKED, obj2);
-    const obj3 = CreateChannelModalActionCreatorsDefault;
-    obj3.open(null, guildId, null, null);
+  let obj = { imageSource: null, onPress: null, text: null, panelVariant: null };
+  const callback = noop.useCallback(() => {
+    AnalyticsUtilsDefault.track(constants2.ACTIVITY_CARD_CLICKED, { type: constants.GUILD_ACTION_CREATE_CHANNEL_CARD, order: 0, guild_id: guildId });
+    const obj2 = { type: constants.GUILD_ACTION_CREATE_CHANNEL_CARD, order: 0, guild_id: guildId };
+    CreateChannelModalActionCreatorsDefault.open(null, guildId, null, null);
   }, items);
-  intl = guildId(1126).intl;
+  obj.imageSource = _modDef16055;
+  obj.onPress = callback;
+  const intl = guildId(1126).intl;
+  obj.text = intl.string(guildId(1126).t["fUYU+j"]);
+  obj.panelVariant = flag;
   return closure_12(closure_15, obj);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
-  let tmp4;
-  let obj = guildId(576);
-  const cResult = obj.c(5);
+ReactCompilerGating = fn(558);
+const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+  const cResult = guildId(576).c(5);
   guildId = guildId.guildId;
   const panelVariant = guildId.panelVariant;
   if (cResult[0] !== guildId) {
     const fn = function t() {
-      const GUILD_ACTION_CUSTOMIZE_CARD = constants.GUILD_ACTION_CUSTOMIZE_CARD;
-      const obj = AnalyticsUtilsDefault;
-      const obj2 = { type: GUILD_ACTION_CUSTOMIZE_CARD, order: 0, guild_id: guildId };
-      obj.track(constants2.ACTIVITY_CARD_CLICKED, obj2);
-      const obj3 = GuildSettingsActionCreatorsDefault;
-      obj3.open(guildId);
+      AnalyticsUtilsDefault.track(constants2.ACTIVITY_CARD_CLICKED, { type: constants.GUILD_ACTION_CUSTOMIZE_CARD, order: 0, guild_id: guildId });
+      const obj2 = { type: constants.GUILD_ACTION_CUSTOMIZE_CARD, order: 0, guild_id: guildId };
+      GuildSettingsActionCreatorsDefault.open(guildId);
     };
     cResult[0] = guildId;
     cResult[1] = fn;
-    tmp4 = fn;
+    let tmp4 = fn;
   } else {
     tmp4 = cResult[1];
   }
   if (cResult[2] === tmp4) {
-    let tmp5;
-    if (cResult[3] === (undefined !== panelVariant && panelVariant)) {
-      tmp5 = cResult[4];
+    if (cResult[3] === tmp3) {
+      let tmp5 = cResult[4];
     }
     return tmp5;
   }
-  let obj2 = { text: "Customize", imageSource: AssetRegistryDefault3, onPress: tmp4, panelVariant: tmp3 };
-  const tmp6 = closure_12(closure_15, obj2);
+  let obj = guildId(576);
+  const tmp6 = closure_12(closure_15, { text: "Customize", imageSource: _modDef16056, onPress: tmp4, panelVariant: undefined !== panelVariant && panelVariant });
   cResult[2] = tmp4;
   cResult[3] = undefined !== panelVariant && panelVariant;
   cResult[4] = tmp6;
   tmp5 = tmp6;
+  let obj2 = { text: "Customize", imageSource: _modDef16056, onPress: tmp4, panelVariant: undefined !== panelVariant && panelVariant };
 }) : ((guildId) => {
-  let callback;
   guildId = guildId.guildId;
   let flag = guildId.panelVariant;
   if (flag === undefined) {
     flag = false;
   }
   const items = [guildId];
-  let obj = { text: "Customize", imageSource: AssetRegistryDefault3, onPress: callback, panelVariant: flag };
-  callback = react.useCallback(() => {
-    const GUILD_ACTION_CUSTOMIZE_CARD = constants.GUILD_ACTION_CUSTOMIZE_CARD;
-    const obj = AnalyticsUtilsDefault;
-    const obj2 = { type: GUILD_ACTION_CUSTOMIZE_CARD, order: 0, guild_id: guildId };
-    obj.track(constants2.ACTIVITY_CARD_CLICKED, obj2);
-    const obj3 = GuildSettingsActionCreatorsDefault;
-    obj3.open(guildId);
+  let obj = { text: "Customize", imageSource: null, onPress: null, panelVariant: null };
+  const callback = noop.useCallback(() => {
+    AnalyticsUtilsDefault.track(constants2.ACTIVITY_CARD_CLICKED, { type: constants.GUILD_ACTION_CUSTOMIZE_CARD, order: 0, guild_id: guildId });
+    const obj2 = { type: constants.GUILD_ACTION_CUSTOMIZE_CARD, order: 0, guild_id: guildId };
+    GuildSettingsActionCreatorsDefault.open(guildId);
   }, items);
+  obj.imageSource = _modDef16056;
+  obj.onPress = callback;
+  obj.panelVariant = flag;
   return closure_12(closure_15, obj);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
-  let tmp5;
-  let tmp6;
-  let obj = guildId(576);
-  const cResult = obj.c(6);
+ReactCompilerGating = fn(558);
+let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+  const cResult = guildId(576).c(6);
   guildId = guildId.guildId;
   const panelVariant = guildId.panelVariant;
   if (cResult[0] !== guildId) {
     const fn = function t() {
-      const guild = GuildStore.getGuild(guildId);
+      guild = GuildStore.getGuild(guildId);
       const channels = GuildChannelStore.getChannels(guildId);
       const channelId = SelectedChannelStore.getChannelId(guildId);
       if (null != guild) {
-        const GUILD_ACTION_INVITE_CARD = constants.GUILD_ACTION_INVITE_CARD;
-        const obj2 = { type: GUILD_ACTION_INVITE_CARD, order: 0, guild_id: guildId };
-        const obj = AnalyticsUtilsDefault;
-        obj.track(constants2.ACTIVITY_CARD_CLICKED, obj2);
+        const obj2 = { type: constants.GUILD_ACTION_INVITE_CARD, order: 0, guild_id: guildId };
+        AnalyticsUtilsDefault.track(constants2.ACTIVITY_CARD_CLICKED, obj2);
         const obj3 = instant_invite_InstantInviteUtils;
-        const result = obj3.handleOpenInviteActionsheet(guild, channelId, channels, unpackModuleId.SERVER_PROFILE);
+        const result = obj3.handleOpenInviteActionsheet(guild, channelId, channels, constants3.SERVER_PROFILE);
       }
     };
     cResult[0] = guildId;
     cResult[1] = fn;
-    tmp5 = fn;
+    let tmp5 = fn;
   } else {
     tmp5 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1126).intl;
-    const stringResult = intl.string(guildId(1126).t.VINpSK);
+    const stringResult = intl.string(tmp(1126).t.VINpSK);
     cResult[2] = stringResult;
-    tmp6 = stringResult;
+    let tmp6 = stringResult;
   } else {
     tmp6 = cResult[2];
   }
   if (cResult[3] === tmp5) {
-    let tmp8;
-    if (cResult[4] === (undefined !== panelVariant && panelVariant)) {
-      tmp8 = cResult[5];
+    if (cResult[4] === tmp4) {
+      let tmp8 = cResult[5];
     }
     return tmp8;
   }
-  let obj2 = { imageSource: AssetRegistryDefault4, onPress: tmp5, text: tmp6, panelVariant: tmp4 };
-  const tmp9 = closure_12(closure_15, obj2);
+  let obj = guildId(576);
+  const tmp9 = closure_12(closure_15, { imageSource: _modDef16057, onPress: tmp5, text: tmp6, panelVariant: undefined !== panelVariant && panelVariant });
   cResult[3] = tmp5;
   cResult[4] = undefined !== panelVariant && panelVariant;
   cResult[5] = tmp9;
   tmp8 = tmp9;
+  let obj2 = { imageSource: _modDef16057, onPress: tmp5, text: tmp6, panelVariant: undefined !== panelVariant && panelVariant };
 }) : ((guildId) => {
-  let callback;
-  let intl;
   guildId = guildId.guildId;
   let flag = guildId.panelVariant;
   if (flag === undefined) {
     flag = false;
   }
   const items = [guildId];
-  let obj = { imageSource: AssetRegistryDefault4, onPress: callback, text: intl.string(guildId(1126).t.VINpSK), panelVariant: flag };
-  callback = react.useCallback(() => {
-    const guild = GuildStore.getGuild(guildId);
+  let obj = { imageSource: null, onPress: null, text: null, panelVariant: null };
+  const callback = noop.useCallback(() => {
+    guild = GuildStore.getGuild(guildId);
     const channels = GuildChannelStore.getChannels(guildId);
     const channelId = SelectedChannelStore.getChannelId(guildId);
     if (null != guild) {
-      const GUILD_ACTION_INVITE_CARD = constants.GUILD_ACTION_INVITE_CARD;
-      const obj2 = { type: GUILD_ACTION_INVITE_CARD, order: 0, guild_id: guildId };
-      const obj = AnalyticsUtilsDefault;
-      obj.track(constants2.ACTIVITY_CARD_CLICKED, obj2);
+      const obj2 = { type: constants.GUILD_ACTION_INVITE_CARD, order: 0, guild_id: guildId };
+      AnalyticsUtilsDefault.track(constants2.ACTIVITY_CARD_CLICKED, obj2);
       const obj3 = instant_invite_InstantInviteUtils;
-      const result = obj3.handleOpenInviteActionsheet(guild, channelId, channels, unpackModuleId.SERVER_PROFILE);
+      const result = obj3.handleOpenInviteActionsheet(guild, channelId, channels, constants3.SERVER_PROFILE);
     }
   }, items);
-  intl = guildId(1126).intl;
+  obj.imageSource = _modDef16057;
+  obj.onPress = callback;
+  const intl = guildId(1126).intl;
+  obj.text = intl.string(guildId(1126).t.VINpSK);
+  obj.panelVariant = flag;
   return closure_12(closure_15, obj);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
-  let tmp5;
-  let tmp6;
-  let obj = guildId(576);
-  const cResult = obj.c(6);
-  guildId = guildId.guildId;
-  const panelVariant = guildId.panelVariant;
-  let tmp4 = undefined !== panelVariant && panelVariant;
-  if (cResult[0] !== guildId) {
-    const fn = function t() {
-      const guild = GuildStore.getGuild(guildId);
-      const defaultChannel = GuildChannelStore.getDefaultChannel(guildId);
-      const tmp4 = null != guild && null != defaultChannel;
-      if (tmp4) {
-        const GUILD_ACTION_STUDENT_HUB_ADD_SERVER = constants.GUILD_ACTION_STUDENT_HUB_ADD_SERVER;
-        const obj2 = { type: GUILD_ACTION_STUDENT_HUB_ADD_SERVER, order: 0, guild_id: guildId };
-        const obj = AnalyticsUtilsDefault;
-        obj.track(constants2.ACTIVITY_CARD_CLICKED, obj2);
-        const obj6 = { directoryGuildId: null, directoryGuildName: null, directoryChannelId: defaultChannel.id };
-        ({ id: obj4.directoryGuildId, name: obj4.directoryGuildName } = guild);
-        const obj3 = GuildDirectoryAddModalActionCreatorsDefault;
-        obj3.open(obj6);
-      }
-    };
-    cResult[0] = guildId;
-    cResult[1] = fn;
-    tmp5 = fn;
-  } else {
-    tmp5 = cResult[1];
-  }
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1126).intl;
-    const stringResult = intl.string(guildId(1126).t.emRpdS);
-    cResult[2] = stringResult;
-    tmp6 = stringResult;
-  } else {
-    tmp6 = cResult[2];
-  }
-  if (cResult[3] === tmp5) {
-    let tmp8;
-    if (cResult[4] === tmp4) {
-      tmp8 = cResult[5];
-    }
-    return tmp8;
-  }
-  let obj2 = { imageSource: AssetRegistryDefault, onPress: tmp5, text: tmp6, panelVariant: tmp4 };
-  const tmp9 = closure_12(closure_15, obj2);
-  cResult[3] = tmp5;
-  cResult[4] = tmp4;
-  cResult[5] = tmp9;
-  tmp8 = tmp9;
-}) : ((guildId) => {
-  let callback;
-  let intl;
-  guildId = guildId.guildId;
-  let flag = guildId.panelVariant;
-  if (flag === undefined) {
-    flag = false;
-  }
-  const items = [guildId];
-  let obj = { imageSource: AssetRegistryDefault, onPress: callback, text: intl.string(guildId(1126).t.emRpdS), panelVariant: flag };
-  callback = react.useCallback(() => {
-    const guild = GuildStore.getGuild(guildId);
-    const defaultChannel = GuildChannelStore.getDefaultChannel(guildId);
-    const tmp4 = null != guild && null != defaultChannel;
-    if (tmp4) {
-      const GUILD_ACTION_STUDENT_HUB_ADD_SERVER = constants.GUILD_ACTION_STUDENT_HUB_ADD_SERVER;
-      const obj2 = { type: GUILD_ACTION_STUDENT_HUB_ADD_SERVER, order: 0, guild_id: guildId };
-      const obj = AnalyticsUtilsDefault;
-      obj.track(constants2.ACTIVITY_CARD_CLICKED, obj2);
-      const obj6 = { directoryGuildId: null, directoryGuildName: null, directoryChannelId: defaultChannel.id };
-      ({ id: obj4.directoryGuildId, name: obj4.directoryGuildName } = guild);
-      const obj3 = GuildDirectoryAddModalActionCreatorsDefault;
-      obj3.open(obj6);
-    }
-  }, items);
-  intl = guildId(1126).intl;
-  return closure_12(closure_15, obj);
-});
-const memo = react.memo;
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_15 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let imageSource;
-  let items;
-  let onPress;
-  let panelVariant;
-  let text;
-  let tmp6;
-  const obj = react2;
-  const cResult = obj.c(13);
+ReactCompilerGating = fn(558);
+let closure_15 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(13);
   ({ text, onPress, imageSource, panelVariant } = arg0);
   const tmp5 = closure_14();
   if (cResult[0] !== imageSource) {
     const obj2 = { source: imageSource };
-    const tmp9 = closure_12(hasOwnProperty, obj2);
+    const tmp9 = __initData(hasOwnProperty, obj2);
     cResult[0] = imageSource;
     cResult[1] = tmp9;
-    tmp6 = tmp9;
+    let tmp6 = tmp9;
   } else {
     tmp6 = cResult[1];
   }
   if (cResult[2] === tmp5.actionCardImage) {
-    let tmp10;
-    let tmp12;
     if (cResult[3] === tmp6) {
-      tmp10 = cResult[4];
+      let tmp10 = cResult[4];
     }
     if (cResult[5] !== text) {
       const obj3 = { variant: "text-sm/normal", maxFontSizeMultiplier: 2, children: text };
-      const tmp14 = closure_12(Text_Text.Text, obj3);
+      const tmp14 = __initData(Text_Text.Text, obj3);
       cResult[5] = text;
       cResult[6] = tmp14;
-      tmp12 = tmp14;
+      let tmp12 = tmp14;
     } else {
       tmp12 = cResult[6];
     }
     if (cResult[7] === onPress) {
-      if (cResult[8] === (undefined !== panelVariant && panelVariant)) {
+      if (cResult[8] === tmp4) {
         if (cResult[9] === tmp5.actionCard) {
           if (cResult[10] === tmp10) {
-            let tmp15;
             if (cResult[11] === tmp12) {
-              tmp15 = cResult[12];
+              let tmp15 = cResult[12];
             }
             return tmp15;
           }
         }
       }
     }
-    const obj4 = { onPress, style: tmp5.actionCard, width: "medium", panelVariant: undefined !== panelVariant && panelVariant, children: items };
-    items = [tmp10, tmp12];
-    const tmp18 = map1(HappeningNowCardDefault, obj4);
+    const obj4 = { onPress, style: tmp5.actionCard, width: "medium", panelVariant: tmp4, children: null };
+    const items = [tmp10, tmp12];
+    obj4.children = items;
+    const tmp18 = __initData2(HappeningNowCardDefault, obj4);
     cResult[7] = onPress;
-    cResult[8] = undefined !== panelVariant && panelVariant;
+    cResult[8] = tmp4;
     cResult[9] = tmp5.actionCard;
     cResult[10] = tmp10;
     cResult[11] = tmp12;
     cResult[12] = tmp18;
     tmp15 = tmp18;
   }
-  const obj5 = { style: tmp5.actionCardImage, children: tmp6 };
-  const tmp11 = closure_12(React3, obj5);
+  const tmp11 = __initData(React4, { style: tmp5.actionCardImage, children: tmp6 });
   cResult[2] = tmp5.actionCardImage;
   cResult[3] = tmp6;
   cResult[4] = tmp11;
   tmp10 = tmp11;
+  const obj5 = { style: tmp5.actionCardImage, children: tmp6 };
 }) : ((panelVariant) => {
-  let imageSource;
-  let items;
-  let onPress;
-  let text;
   let flag = panelVariant.panelVariant;
   ({ text, onPress, imageSource } = panelVariant);
   if (flag === undefined) {
     flag = false;
   }
   const tmp = closure_14();
-  const obj = { onPress, style: tmp.actionCard, width: "medium", panelVariant: flag, children: items };
-  const obj2 = { style: tmp.actionCardImage, children: closure_12(hasOwnProperty, { source: imageSource }) };
-  const tmp2 = HappeningNowCardDefault;
-  items = [closure_12(React3, obj2), closure_12(Text_Text.Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2, children: text })];
-  return map1(tmp2, obj);
+  const obj = { onPress, style: tmp.actionCard, width: "medium", panelVariant: flag, children: null };
+  const obj2 = { style: tmp.actionCardImage, children: __initData(hasOwnProperty, { source: imageSource }) };
+  const items = [__initData(React4, obj2), __initData(Text_Text.Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2, children: text })];
+  obj.children = items;
+  return __initData2(HappeningNowCardDefault, obj);
 }));
-size = size_mod;
+size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowActions.tsx");
 
-export const HappeningNowCardCreateChannel = tmp8;
-export const HappeningNowCardCustomizeGuild = tmp9;
-export const HappeningNowCardInvite = tmp10;
-export const HappeningNowStudentHubAddServer = tmp11;
+export const HappeningNowCardCreateChannel = tmp6;
+export const HappeningNowCardCustomizeGuild = tmp7;
+export const HappeningNowCardInvite = tmp8;
+export const HappeningNowStudentHubAddServer = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+  const cResult = guildId(576).c(6);
+  guildId = guildId.guildId;
+  const panelVariant = guildId.panelVariant;
+  if (cResult[0] !== guildId) {
+    const fn = function t() {
+      guild = GuildStore.getGuild(guildId);
+      const defaultChannel = GuildChannelStore.getDefaultChannel(guildId);
+      if (tmp4) {
+        const obj2 = { type: constants.GUILD_ACTION_STUDENT_HUB_ADD_SERVER, order: 0, guild_id: guildId };
+        AnalyticsUtilsDefault.track(constants2.ACTIVITY_CARD_CLICKED, obj2);
+        const obj6 = { directoryGuildId: null, directoryGuildName: null, directoryChannelId: null };
+        ({ id: obj4.directoryGuildId, name: obj4.directoryGuildName } = guild);
+        obj6.directoryChannelId = defaultChannel.id;
+        GuildDirectoryAddModalActionCreatorsDefault.open(obj6);
+      }
+      tmp4 = null != guild && null != defaultChannel;
+    };
+    cResult[0] = guildId;
+    cResult[1] = fn;
+    let tmp5 = fn;
+  } else {
+    tmp5 = cResult[1];
+  }
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl = tmp(1126).intl;
+    const stringResult = intl.string(tmp(1126).t.emRpdS);
+    cResult[2] = stringResult;
+    let tmp6 = stringResult;
+  } else {
+    tmp6 = cResult[2];
+  }
+  if (cResult[3] === tmp5) {
+    if (cResult[4] === tmp4) {
+      let tmp8 = cResult[5];
+    }
+    return tmp8;
+  }
+  let obj = guildId(576);
+  const tmp9 = closure_12(closure_15, { imageSource: _modDef12457, onPress: tmp5, text: tmp6, panelVariant: undefined !== panelVariant && panelVariant });
+  cResult[3] = tmp5;
+  cResult[4] = undefined !== panelVariant && panelVariant;
+  cResult[5] = tmp9;
+  tmp8 = tmp9;
+  let obj2 = { imageSource: _modDef12457, onPress: tmp5, text: tmp6, panelVariant: undefined !== panelVariant && panelVariant };
+}) : ((guildId) => {
+  guildId = guildId.guildId;
+  let flag = guildId.panelVariant;
+  if (flag === undefined) {
+    flag = false;
+  }
+  const items = [guildId];
+  let obj = { imageSource: null, onPress: null, text: null, panelVariant: null };
+  const callback = noop.useCallback(() => {
+    guild = GuildStore.getGuild(guildId);
+    const defaultChannel = GuildChannelStore.getDefaultChannel(guildId);
+    if (tmp4) {
+      const obj2 = { type: constants.GUILD_ACTION_STUDENT_HUB_ADD_SERVER, order: 0, guild_id: guildId };
+      AnalyticsUtilsDefault.track(constants2.ACTIVITY_CARD_CLICKED, obj2);
+      const obj6 = { directoryGuildId: null, directoryGuildName: null, directoryChannelId: null };
+      ({ id: obj4.directoryGuildId, name: obj4.directoryGuildName } = guild);
+      obj6.directoryChannelId = defaultChannel.id;
+      GuildDirectoryAddModalActionCreatorsDefault.open(obj6);
+    }
+    tmp4 = null != guild && null != defaultChannel;
+  }, items);
+  obj.imageSource = _modDef12457;
+  obj.onPress = callback;
+  const intl = guildId(1126).intl;
+  obj.text = intl.string(guildId(1126).t.emRpdS);
+  obj.panelVariant = flag;
+  return closure_12(closure_15, obj);
+});

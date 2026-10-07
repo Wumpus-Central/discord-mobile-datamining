@@ -4,184 +4,173 @@
 import GameStoreAsset from "GameStoreAsset" /* 14359 */;
 import Record from "Record" /* 1392 */;
 import UserRecord from "UserRecord" /* 1391 */;
-import size from "module_2" /* 2 */;
 
-class StoreListingRecord extends Record {
-  constructor(childSkuIds) {
-    let carouselItems;
-    let thumbnail;
-    const tmp2 = new StoreListingRecord(tmp, new.target, this);
-    ({ id: tmp2.id, applicationId: tmp2.applicationId, skuId: tmp2.skuId, skuFlags: tmp2.skuFlags, summary: tmp2.summary, tagline: tmp2.tagline, flavorText: tmp2.flavorText, description: tmp2.description, carouselItems } = childSkuIds);
+require = fn;
+let StoreListingRecord;
+class StoreListingRecord extends tmp2 {
+  constructor(arg0) {
+    tmp2 = new StoreListingRecord(tmp, new.target, new.target);
+    ({ id: tmp2.id, applicationId: tmp2.applicationId, skuId: tmp2.skuId, skuFlags: tmp2.skuFlags, summary: tmp2.summary, tagline: tmp2.tagline, flavorText: tmp2.flavorText, description: tmp2.description, carouselItems } = global);
     if (carouselItems == null) {
       carouselItems = [];
     }
     tmp2.carouselItems = carouselItems;
-    childSkuIds = childSkuIds.childSkuIds;
+    childSkuIds = global.childSkuIds;
     if (childSkuIds == null) {
       childSkuIds = [];
     }
     tmp2.childSkuIds = childSkuIds;
-    let alternativeSkuIds = childSkuIds.alternativeSkuIds;
+    alternativeSkuIds = global.alternativeSkuIds;
     if (alternativeSkuIds == null) {
       alternativeSkuIds = [];
     }
     tmp2.alternativeSkuIds = alternativeSkuIds;
-    let assets = childSkuIds.assets;
+    assets = global.assets;
     if (assets == null) {
       assets = [];
     }
     tmp2.assets = assets;
-    ({ staffNotes: tmp2.staffNotes, guild: tmp2.guild, thumbnail } = childSkuIds);
+    ({ staffNotes: tmp2.staffNotes, guild: tmp2.guild, thumbnail } = global);
     if (thumbnail == null) {
       thumbnail = null;
     }
     tmp2.thumbnail = thumbnail;
-    let boxArt = childSkuIds.boxArt;
+    boxArt = global.boxArt;
     if (boxArt == null) {
       boxArt = null;
     }
     tmp2.boxArt = boxArt;
-    let previewVideo = childSkuIds.previewVideo;
+    previewVideo = global.previewVideo;
     if (previewVideo == null) {
       previewVideo = null;
     }
     tmp2.previewVideo = previewVideo;
-    let headerBackground = childSkuIds.headerBackground;
+    headerBackground = global.headerBackground;
     if (headerBackground == null) {
       headerBackground = null;
     }
     tmp2.headerBackground = headerBackground;
-    let headerLogoDarkTheme = childSkuIds.headerLogoDarkTheme;
+    headerLogoDarkTheme = global.headerLogoDarkTheme;
     if (headerLogoDarkTheme == null) {
       headerLogoDarkTheme = null;
     }
     tmp2.headerLogoDarkTheme = headerLogoDarkTheme;
-    let headerLogoLightTheme = childSkuIds.headerLogoLightTheme;
+    headerLogoLightTheme = global.headerLogoLightTheme;
     if (headerLogoLightTheme == null) {
       headerLogoLightTheme = null;
     }
     tmp2.headerLogoLightTheme = headerLogoLightTheme;
-    let heroBackground = childSkuIds.heroBackground;
+    heroBackground = global.heroBackground;
     if (heroBackground == null) {
       heroBackground = null;
     }
     tmp2.heroBackground = heroBackground;
-    let heroVideo = childSkuIds.heroVideo;
+    heroVideo = global.heroVideo;
     if (heroVideo == null) {
       heroVideo = null;
     }
     tmp2.heroVideo = heroVideo;
-    let entitlementBranchId = childSkuIds.entitlementBranchId;
+    entitlementBranchId = global.entitlementBranchId;
     if (entitlementBranchId == null) {
       entitlementBranchId = null;
     }
     tmp2.entitlementBranchId = entitlementBranchId;
-    tmp2.benefits = childSkuIds.benefits;
-    tmp2.published = Boolean(childSkuIds.published);
+    tmp2.benefits = global.benefits;
+    tmp2.published = Boolean(global.published);
     return tmp2;
   }
-  static createFromServer(id) {
-    let mapped;
-    let mapped1;
-    let mapped2;
-    let mapped3;
-    let result;
-    let result1;
-    let result2;
-    let result3;
-    let result4;
-    let result5;
-    let result6;
-    let result7;
-    let tmp11;
-    let tmp8;
-    let tmp9;
-    const staff_notes = id.staff_notes;
-    const obj = { id: id.id, applicationId: id.sku.application_id, skuId: id.sku.id, skuFlags: id.sku.flags, summary: id.summary, tagline: id.tagline, flavorText: id.flavor_text, description: id.description, childSkuIds: mapped, alternativeSkuIds: mapped1, carouselItems: mapped2, assets: mapped3, staffNotes: tmp8, guild: tmp11, thumbnail: result, previewVideo: result1, headerBackground: result2, headerLogoDarkTheme: result3, headerLogoLightTheme: result4, boxArt: result5, heroBackground: result6, heroVideo: result7, entitlementBranchId: null, benefits: null, published: null };
-    mapped = null;
-    if (null != id.child_skus) {
-      const child_skus = id.child_skus;
-      mapped = child_skus.map((id) => id.id);
-    }
-    mapped1 = null;
-    if (null != id.alternative_skus) {
-      const alternative_skus = id.alternative_skus;
-      mapped1 = alternative_skus.map((id) => id.id);
-    }
-    mapped2 = null;
-    if (null != id.carousel_items) {
-      const carousel_items = id.carousel_items;
-      mapped2 = carousel_items.map((assetId) => ({ assetId: assetId.asset_id, youtubeVideoId: assetId.youtube_video_id }));
-    }
-    mapped3 = null;
-    if (null != id.assets) {
-      const assets = id.assets;
-      mapped3 = assets.map(GameStoreAsset.transformStoreAssetFromServer);
-    }
-    tmp8 = null;
-    if (null != staff_notes) {
-      const obj2 = { content: staff_notes.content, user: tmp9 };
-      tmp9 = null;
-      if (null != staff_notes.user) {
-        const self = this;
-        const self2 = this;
-        tmp9 = new UserRecord(staff_notes.user);
-      }
-      tmp8 = obj2;
-    }
-    tmp11 = null;
-    if (null != id.guild) {
-      tmp11 = { id: id.guild.id, name: id.guild.name, icon: id.guild.icon, approximateMemberCount: id.guild.approximate_member_count, approximatePresenceCount: id.guild.approximate_presence_count };
-      const obj3 = { id: id.guild.id, name: id.guild.name, icon: id.guild.icon, approximateMemberCount: id.guild.approximate_member_count, approximatePresenceCount: id.guild.approximate_presence_count };
-    }
-    result = null;
-    if (null != id.thumbnail) {
-      const obj4 = GameStoreAsset;
-      result = obj4.transformStoreAssetFromServer(id.thumbnail);
-    }
-    result1 = null;
-    if (null != id.preview_video) {
-      const obj5 = GameStoreAsset;
-      result1 = obj5.transformStoreAssetFromServer(id.preview_video);
-    }
-    result2 = null;
-    if (null != id.header_background) {
-      const obj6 = GameStoreAsset;
-      result2 = obj6.transformStoreAssetFromServer(id.header_background);
-    }
-    result3 = null;
-    if (null != id.header_logo_dark_theme) {
-      const obj7 = GameStoreAsset;
-      result3 = obj7.transformStoreAssetFromServer(id.header_logo_dark_theme);
-    }
-    result4 = null;
-    if (null != id.header_logo_light_theme) {
-      const obj8 = GameStoreAsset;
-      result4 = obj8.transformStoreAssetFromServer(id.header_logo_light_theme);
-    }
-    result5 = null;
-    if (null != id.box_art) {
-      const obj9 = GameStoreAsset;
-      result5 = obj9.transformStoreAssetFromServer(id.box_art);
-    }
-    result6 = null;
-    if (null != id.hero_background) {
-      const obj10 = GameStoreAsset;
-      result6 = obj10.transformStoreAssetFromServer(id.hero_background);
-    }
-    result7 = null;
-    if (null != id.hero_video) {
-      const obj11 = GameStoreAsset;
-      result7 = obj11.transformStoreAssetFromServer(id.hero_video);
-    }
-    ({ entitlement_branch_id: obj.entitlementBranchId, benefits: obj.benefits, published: obj.published } = id);
-    return new StoreListingRecord(obj);
-  }
-  isSlimDirectoryVersion() {
-    return null == this.description;
-  }
 }
-const prototype = StoreListingRecord.prototype;
+StoreListingRecord["createFromServer"] = function createFromServer(id) {
+  const staff_notes = id.staff_notes;
+  const obj = { id: id.id, applicationId: id.sku.application_id, skuId: id.sku.id, skuFlags: id.sku.flags, summary: id.summary, tagline: id.tagline, flavorText: id.flavor_text, description: id.description, childSkuIds: null, alternativeSkuIds: null, carouselItems: null, assets: null, staffNotes: null, guild: null, thumbnail: null, previewVideo: null, headerBackground: null, headerLogoDarkTheme: null, headerLogoLightTheme: null, boxArt: null, heroBackground: null, heroVideo: null, entitlementBranchId: null, benefits: null, published: null };
+  let mapped = null;
+  if (null != id.child_skus) {
+    const child_skus = id.child_skus;
+    mapped = child_skus.map((id) => id.id);
+  }
+  obj.childSkuIds = mapped;
+  let mapped1 = null;
+  if (null != id.alternative_skus) {
+    const alternative_skus = id.alternative_skus;
+    mapped1 = alternative_skus.map((id) => id.id);
+  }
+  obj.alternativeSkuIds = mapped1;
+  let mapped2 = null;
+  if (null != id.carousel_items) {
+    const carousel_items = id.carousel_items;
+    mapped2 = carousel_items.map((assetId) => ({ assetId: assetId.asset_id, youtubeVideoId: assetId.youtube_video_id }));
+  }
+  obj.carouselItems = mapped2;
+  let mapped3 = null;
+  if (null != id.assets) {
+    const assets = id.assets;
+    mapped3 = assets.map(GameStoreAsset.transformStoreAssetFromServer);
+  }
+  obj.assets = mapped3;
+  let tmp8 = null;
+  if (null != staff_notes) {
+    const obj2 = { content: staff_notes.content, user: null };
+    let tmp9 = null;
+    if (null != staff_notes.user) {
+      tmp9 = new UserRecord(staff_notes.user);
+    }
+    obj2.user = tmp9;
+    tmp8 = obj2;
+  }
+  obj.staffNotes = tmp8;
+  let tmp13 = null;
+  if (null != id.guild) {
+    const obj3 = { id: id.guild.id, name: id.guild.name, icon: id.guild.icon, approximateMemberCount: id.guild.approximate_member_count, approximatePresenceCount: id.guild.approximate_presence_count };
+    tmp13 = obj3;
+  }
+  obj.guild = tmp13;
+  let result = null;
+  if (null != id.thumbnail) {
+    result = GameStoreAsset.transformStoreAssetFromServer(id.thumbnail);
+  }
+  obj.thumbnail = result;
+  let result1 = null;
+  if (null != id.preview_video) {
+    result1 = GameStoreAsset.transformStoreAssetFromServer(id.preview_video);
+  }
+  obj.previewVideo = result1;
+  let result2 = null;
+  if (null != id.header_background) {
+    result2 = GameStoreAsset.transformStoreAssetFromServer(id.header_background);
+  }
+  obj.headerBackground = result2;
+  let result3 = null;
+  if (null != id.header_logo_dark_theme) {
+    result3 = GameStoreAsset.transformStoreAssetFromServer(id.header_logo_dark_theme);
+  }
+  obj.headerLogoDarkTheme = result3;
+  let result4 = null;
+  if (null != id.header_logo_light_theme) {
+    result4 = GameStoreAsset.transformStoreAssetFromServer(id.header_logo_light_theme);
+  }
+  obj.headerLogoLightTheme = result4;
+  let result5 = null;
+  if (null != id.box_art) {
+    result5 = GameStoreAsset.transformStoreAssetFromServer(id.box_art);
+  }
+  obj.boxArt = result5;
+  let result6 = null;
+  if (null != id.hero_background) {
+    result6 = GameStoreAsset.transformStoreAssetFromServer(id.hero_background);
+  }
+  obj.heroBackground = result6;
+  let result7 = null;
+  if (null != id.hero_video) {
+    result7 = GameStoreAsset.transformStoreAssetFromServer(id.hero_video);
+  }
+  obj.heroVideo = result7;
+  ({ entitlement_branch_id: obj.entitlementBranchId, benefits: obj.benefits, published: obj.published } = id);
+  return new StoreListingRecord(obj);
+};
+StoreListingRecord.prototype["isSlimDirectoryVersion"] = function isSlimDirectoryVersion() {
+  return null == this.description;
+};
+const size = fn(2);
 let result = size.fileFinishedImporting("records/StoreListingRecord.tsx");
 
 export default StoreListingRecord;

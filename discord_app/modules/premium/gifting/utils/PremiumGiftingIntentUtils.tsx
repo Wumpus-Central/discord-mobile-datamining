@@ -17,18 +17,17 @@ const map = new Map(items1);
 const result = size.fileFinishedImporting("modules/premium/gifting/utils/PremiumGiftingIntentUtils.tsx");
 
 export const getPremiumGiftingIntentAnalyticsLocation = function getPremiumGiftingIntentAnalyticsLocation(arg0) {
-  let obj;
   if (arg0 === GiftIntentType.FRIEND_ANNIVERSARY) {
-    const obj3 = { chat: null, actionButton: null, actionButtonCoachmark: null };
     ({ FRIEND_ANNIVERSARIES_CHAT: obj2.chat, FRIEND_ANNIVERSARIES_ACTION_BUTTON: obj2.actionButton, FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK: obj2.actionButtonCoachmark } = AnalyticsLocations);
-    obj = obj3;
+    let obj = { chat: null, actionButton: null, actionButtonCoachmark: null };
+    const obj3 = { chat: null, actionButton: null, actionButtonCoachmark: null };
   } else {
     obj = {};
   }
   return obj;
 };
 export const getGiftIntentTypeForLocation = function getGiftIntentTypeForLocation(arg0) {
-  let value = map.get(arg0);
+  value = map.get(arg0);
   if (value == null) {
     value = null;
   }

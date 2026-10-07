@@ -2,11 +2,11 @@
 
 // Module 10612 (UsersFastListConstants)
 import nativeDefault from "native" /* 587 */;
-import size from "module_2" /* 2 */;
 
 const PX_24 = nativeDefault.space.PX_24;
 const PX_8 = nativeDefault.space.PX_8;
 const sum = 18 + PX_24 + PX_8;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UsersFastListConstants.tsx");
 
 export const USERS_LIST_PADDING_BETWEEN_SECTIONS = PX_24;

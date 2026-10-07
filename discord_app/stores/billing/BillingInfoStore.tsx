@@ -1,12 +1,10 @@
 // === Module 4536: BillingInfoStore ===
 
 // Module 4536 (BillingInfoStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
-
-let c0, c2, c3, c4;
 
 function handlePaymentSourceCreateEnd() {
   c6 = false;
@@ -33,13 +31,23 @@ let c11 = null;
 let c12 = null;
 let c13 = false;
 let c14 = false;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class BillingInfoStore extends Store {
 }
 const prototype = BillingInfoStore.prototype;
 Object.defineProperty(prototype, "isBusy", {
   get: function isBusy() {
-    return c6 || c7 || c10 || c8;
+    let tmp = c6;
+    if (!c6) {
+      tmp = c7;
+    }
+    if (!tmp) {
+      tmp = c10;
+    }
+    if (!tmp) {
+      tmp = c8;
+    }
+    return tmp;
   },
   set: undefined
 });
@@ -150,7 +158,7 @@ Object.defineProperty(prototype, "paymentSourcesFetchRequest", {
   set: undefined
 });
 BillingInfoStore.displayName = "BillingInfoStore";
-const obj = {
+const billingInfoStore = new BillingInfoStore(DispatcherDefault, {
   BILLING_PAYMENT_SOURCE_CREATE_START: function handlePaymentSourceCreateStart() {
     c6 = true;
   },
@@ -233,8 +241,7 @@ const obj = {
   CONNECTION_OPEN: function handleConnectionOpen(countryCode) {
     countryCode = countryCode.countryCode;
   }
-};
-const billingInfoStore = new BillingInfoStore(DispatcherDefault, obj);
+});
 const result = size.fileFinishedImporting("stores/billing/BillingInfoStore.tsx");
 
 export default billingInfoStore;

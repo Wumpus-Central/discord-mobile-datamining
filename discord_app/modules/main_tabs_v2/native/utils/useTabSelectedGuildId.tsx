@@ -2,29 +2,27 @@
 
 // Module 14496 (useTabSelectedGuildId)
 import useStateFromStores from "useStateFromStores" /* 573 */;
-import react from "react" /* 576 */;
+import c from "c" /* 576 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import SortedGuildStore from "SortedGuildStore" /* 5623 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let flattenedGuildIds;
-  let tmp4;
-  let tmp5;
-  const obj = react;
-  const cResult = obj.c(2);
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/useTabSelectedGuildId.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SelectedGuildStore, SortedGuildStore];
     const fn = function n() {
       let guildId = SelectedGuildStore.getGuildId();
       const lastSelectedGuildId = SelectedGuildStore.getLastSelectedGuildId();
-      const first = flattenedGuildIds.getFlattenedGuildIds()[0];
       if (guildId == null) {
         guildId = lastSelectedGuildId;
       }
       if (guildId == null) {
-        guildId = first;
+        guildId = flattenedGuildIds.getFlattenedGuildIds()[0];
       }
       return guildId;
     };
@@ -35,25 +33,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const tmpResult = useStateFromStores;
-  return tmpResult.useStateFromStores(tmp4, tmp5);
+  return useStateFromStores.useStateFromStores(tmp4, tmp5);
 }) : (() => {
-  let flattenedGuildIds;
   const items = [SelectedGuildStore, SortedGuildStore];
-  const obj = useStateFromStores;
-  return obj.useStateFromStores(items, () => {
+  return useStateFromStores.useStateFromStores(items, () => {
     let guildId = SelectedGuildStore.getGuildId();
     const lastSelectedGuildId = SelectedGuildStore.getLastSelectedGuildId();
-    const first = flattenedGuildIds.getFlattenedGuildIds()[0];
     if (guildId == null) {
       guildId = lastSelectedGuildId;
     }
     if (guildId == null) {
-      guildId = first;
+      guildId = flattenedGuildIds.getFlattenedGuildIds()[0];
     }
     return guildId;
   });
 });
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/useTabSelectedGuildId.tsx");
-
-export default tmp2;

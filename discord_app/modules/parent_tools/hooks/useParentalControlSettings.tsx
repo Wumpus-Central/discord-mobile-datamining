@@ -1,38 +1,31 @@
 // === Module 14641: useParentalControlSettings ===
 
 // Module 14641 (useParentalControlSettings)
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 6498 */;
 import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 6814 */;
-import Constants from "Constants" /* 8108 */;
 import useUserLinks from "useUserLinks" /* 8328 */;
 import useSelectedTeen from "useSelectedTeen" /* 8330 */;
 import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14642 */;
 import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 14645 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import react from "react" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7064 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-let _require, c2, c5;
-
-const SafetyToastType = Constants.SafetyToastType;
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+const SafetyToastType = fn(8108).SafetyToastType;
+fn(558);
+let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const obj = react2;
-  const cResult = obj.c(9);
-  const obj2 = useSelectedTeen;
-  const selectedTeen = obj2.useSelectedTeen();
+  const cResult = c.c(9);
+  const selectedTeen = useSelectedTeen.useSelectedTeen();
   const ParentalControlledExplicitContent = ParentalControlledUserSettings.ParentalControlledExplicitContent;
   let id;
-  const useControlledSetting = ParentalControlledExplicitContent.useControlledSetting;
   if (selectedTeen != null) {
     id = selectedTeen.id;
   }
-  const controlledSetting = useControlledSetting(id);
+  const controlledSetting = ParentalControlledExplicitContent.useControlledSetting(id);
   if (null == selectedTeen) {
     return null;
   } else {
@@ -45,9 +38,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       prop = controlledSetting.explicitContentNonFriendDm;
     }
     if (cResult[0] === id1) {
-      let tmp9;
       if (cResult[1] === prop) {
-        tmp9 = cResult[2];
+        let tmp9 = cResult[2];
       }
       let id2;
       if (selectedTeen != null) {
@@ -58,14 +50,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         prop1 = controlledSetting.explicitContentFriendDm;
       }
       if (cResult[3] === id2) {
-        let tmp13;
         if (cResult[4] === prop1) {
-          tmp13 = cResult[5];
+          let tmp13 = cResult[5];
         }
         if (cResult[6] === tmp9) {
-          let tmp15;
           if (cResult[7] === tmp13) {
-            tmp15 = cResult[8];
+            let tmp15 = cResult[8];
           }
           return tmp15;
         }
@@ -76,85 +66,74 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         tmp15 = obj3;
       }
       const obj4 = { teenId: id2, setting: prop1, isFriend: true };
-      const tmpResult = FamilyCenterControlledSettingsUtils;
-      const explicitContentSettingWithDefaultsForTeen = tmpResult.resolveExplicitContentSettingWithDefaultsForTeen(obj4);
+      const explicitContentSettingWithDefaultsForTeen = FamilyCenterControlledSettingsUtils.resolveExplicitContentSettingWithDefaultsForTeen(obj4);
       cResult[3] = id2;
       cResult[4] = prop1;
       cResult[5] = explicitContentSettingWithDefaultsForTeen;
       tmp13 = explicitContentSettingWithDefaultsForTeen;
+      const tmpResult = FamilyCenterControlledSettingsUtils;
     }
     const obj5 = { teenId: id1, setting: prop };
-    const tmpResult2 = FamilyCenterControlledSettingsUtils;
-    const explicitContentSettingWithDefaultsForTeen1 = tmpResult2.resolveExplicitContentSettingWithDefaultsForTeen(obj5);
+    const explicitContentSettingWithDefaultsForTeen1 = FamilyCenterControlledSettingsUtils.resolveExplicitContentSettingWithDefaultsForTeen(obj5);
     cResult[0] = id1;
     cResult[1] = prop;
     cResult[2] = explicitContentSettingWithDefaultsForTeen1;
     tmp9 = explicitContentSettingWithDefaultsForTeen1;
+    const tmpResult2 = FamilyCenterControlledSettingsUtils;
   }
 }) : (() => {
-  let obj4;
-  let prop;
-  let prop1;
-  let resolveExplicitContentSettingWithDefaultsForTeen2;
-  const obj = useSelectedTeen;
-  const selectedTeen = obj.useSelectedTeen();
+  const selectedTeen = useSelectedTeen.useSelectedTeen();
   const ParentalControlledExplicitContent = ParentalControlledUserSettings.ParentalControlledExplicitContent;
   let id;
-  const useControlledSetting = ParentalControlledExplicitContent.useControlledSetting;
   if (selectedTeen != null) {
     id = selectedTeen.id;
   }
-  const controlledSetting = useControlledSetting(id);
+  const controlledSetting = ParentalControlledExplicitContent.useControlledSetting(id);
   let tmp6 = null;
   if (null != selectedTeen) {
     let id1;
-    const resolveExplicitContentSettingWithDefaultsForTeen = FamilyCenterControlledSettingsUtils.resolveExplicitContentSettingWithDefaultsForTeen;
-    FamilyCenterControlledSettingsUtils;
     if (selectedTeen != null) {
       id1 = selectedTeen.id;
     }
-    const obj2 = { teenId: id1, setting: prop };
-    prop = undefined;
+    const obj2 = { teenId: id1, setting: null };
+    let prop;
     if (controlledSetting != null) {
       prop = controlledSetting.explicitContentNonFriendDm;
     }
+    const obj3 = { explicitContentNonFriendDm: null, explicitContentFriendDm: null, explicitContentGuilds: null };
+    obj2.setting = prop;
+    obj3.explicitContentNonFriendDm = FamilyCenterControlledSettingsUtils.resolveExplicitContentSettingWithDefaultsForTeen(obj2);
+    const tmpResult = FamilyCenterControlledSettingsUtils;
     let id2;
-    const obj3 = { explicitContentNonFriendDm: resolveExplicitContentSettingWithDefaultsForTeen(obj2), explicitContentFriendDm: resolveExplicitContentSettingWithDefaultsForTeen2(obj4), explicitContentGuilds: preloaded_user_settings.ExplicitContentRedaction.BLUR };
-    resolveExplicitContentSettingWithDefaultsForTeen2 = FamilyCenterControlledSettingsUtils.resolveExplicitContentSettingWithDefaultsForTeen;
-    FamilyCenterControlledSettingsUtils;
     if (selectedTeen != null) {
       id2 = selectedTeen.id;
     }
-    obj4 = { teenId: id2, setting: prop1, isFriend: true };
-    prop1 = undefined;
+    const obj4 = { teenId: id2, setting: null, isFriend: true };
+    let prop1;
     if (controlledSetting != null) {
       prop1 = controlledSetting.explicitContentFriendDm;
     }
+    obj4.setting = prop1;
+    obj3.explicitContentFriendDm = FamilyCenterControlledSettingsUtils.resolveExplicitContentSettingWithDefaultsForTeen(obj4);
+    obj3.explicitContentGuilds = preloaded_user_settings.ExplicitContentRedaction.BLUR;
     tmp6 = obj3;
+    const tmpResult2 = FamilyCenterControlledSettingsUtils;
   }
   return tmp6;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let goreContentFriendDm;
-  let goreContentNonFriendDm;
-  const obj = react2;
-  const cResult = obj.c(9);
-  const obj2 = useSelectedTeen;
-  const selectedTeen = obj2.useSelectedTeen();
+  const cResult = c.c(9);
+  const selectedTeen = useSelectedTeen.useSelectedTeen();
   const ParentalControlledGoreContent = ParentalControlledUserSettings.ParentalControlledGoreContent;
   let id;
-  const useControlledSetting = ParentalControlledGoreContent.useControlledSetting;
   if (selectedTeen != null) {
     id = selectedTeen.id;
   }
-  const controlledSetting = useControlledSetting(id);
+  const controlledSetting = ParentalControlledGoreContent.useControlledSetting(id);
   if (null == selectedTeen) {
     return null;
   } else {
-    let tmp7;
-    let tmp8;
-    let tmp10;
     if (cResult[0] !== controlledSetting) {
       let obj3 = controlledSetting;
       if (controlledSetting == null) {
@@ -162,41 +141,40 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
       cResult[0] = controlledSetting;
       cResult[1] = obj3;
-      tmp7 = obj3;
+      let tmp7 = obj3;
     } else {
       tmp7 = cResult[1];
     }
     ({ goreContentNonFriendDm, goreContentFriendDm } = tmp7);
     if (cResult[2] !== goreContentNonFriendDm) {
       let goreSettingWithDefaultsForTeen = goreContentNonFriendDm;
-      const tmpResult = FamilyCenterControlledSettingsUtils;
       if (!tmpResult.isSetAndNotDefault(goreContentNonFriendDm)) {
+        goreSettingWithDefaultsForTeen = SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaultsForTeen({ isDm: true });
         const tmpResult4 = SensitiveMediaGoreRedactionSettingsUtils;
-        goreSettingWithDefaultsForTeen = tmpResult4.resolveGoreSettingWithDefaultsForTeen({ isDm: true });
       }
       cResult[2] = goreContentNonFriendDm;
       cResult[3] = goreSettingWithDefaultsForTeen;
-      tmp8 = goreSettingWithDefaultsForTeen;
+      let tmp8 = goreSettingWithDefaultsForTeen;
+      tmpResult = FamilyCenterControlledSettingsUtils;
     } else {
       tmp8 = cResult[3];
     }
     if (cResult[4] !== goreContentFriendDm) {
       let goreSettingWithDefaultsForTeen1 = goreContentFriendDm;
-      const tmpResult5 = FamilyCenterControlledSettingsUtils;
       if (!tmpResult5.isSetAndNotDefault(goreContentFriendDm)) {
+        goreSettingWithDefaultsForTeen1 = SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaultsForTeen({ isDm: true, isFriend: true });
         const tmpResult6 = SensitiveMediaGoreRedactionSettingsUtils;
-        goreSettingWithDefaultsForTeen1 = tmpResult6.resolveGoreSettingWithDefaultsForTeen({ isDm: true, isFriend: true });
       }
       cResult[4] = goreContentFriendDm;
       cResult[5] = goreSettingWithDefaultsForTeen1;
-      tmp10 = goreSettingWithDefaultsForTeen1;
+      let tmp10 = goreSettingWithDefaultsForTeen1;
+      tmpResult5 = FamilyCenterControlledSettingsUtils;
     } else {
       tmp10 = cResult[5];
     }
     if (cResult[6] === tmp8) {
-      let tmp12;
       if (cResult[7] === tmp10) {
-        tmp12 = cResult[8];
+        let tmp12 = cResult[8];
       }
       return tmp12;
     }
@@ -207,17 +185,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp12 = obj4;
   }
 }) : (() => {
-  let goreContentFriendDm;
-  let goreContentNonFriendDm;
-  const obj = useSelectedTeen;
-  const selectedTeen = obj.useSelectedTeen();
+  const selectedTeen = useSelectedTeen.useSelectedTeen();
   const ParentalControlledGoreContent = ParentalControlledUserSettings.ParentalControlledGoreContent;
   let id;
-  const useControlledSetting = ParentalControlledGoreContent.useControlledSetting;
   if (selectedTeen != null) {
     id = selectedTeen.id;
   }
-  let controlledSetting = useControlledSetting(id);
+  let controlledSetting = ParentalControlledGoreContent.useControlledSetting(id);
   if (null == selectedTeen) {
     return null;
   } else {
@@ -225,132 +199,82 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       controlledSetting = {};
     }
     ({ goreContentNonFriendDm, goreContentFriendDm } = controlledSetting);
-    const tmpResult = FamilyCenterControlledSettingsUtils;
     if (!tmpResult.isSetAndNotDefault(goreContentNonFriendDm)) {
+      goreContentNonFriendDm = SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaultsForTeen({ isDm: true });
       const tmpResult4 = SensitiveMediaGoreRedactionSettingsUtils;
-      goreContentNonFriendDm = tmpResult4.resolveGoreSettingWithDefaultsForTeen({ isDm: true });
     }
-    const obj2 = { goreContentNonFriendDm, goreContentFriendDm, goreContentGuilds: preloaded_user_settings.ExplicitContentRedaction.BLUR };
-    const tmpResult5 = FamilyCenterControlledSettingsUtils;
+    const obj2 = { goreContentNonFriendDm, goreContentFriendDm: null, goreContentGuilds: null };
+    tmpResult = FamilyCenterControlledSettingsUtils;
     if (!tmpResult5.isSetAndNotDefault(goreContentFriendDm)) {
+      goreContentFriendDm = SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaultsForTeen({ isDm: true, isFriend: true });
       const tmpResult6 = SensitiveMediaGoreRedactionSettingsUtils;
-      goreContentFriendDm = tmpResult6.resolveGoreSettingWithDefaultsForTeen({ isDm: true, isFriend: true });
     }
+    obj2.goreContentFriendDm = goreContentFriendDm;
+    obj2.goreContentGuilds = preloaded_user_settings.ExplicitContentRedaction.BLUR;
     return obj2;
   }
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const obj = useSelectedTeen;
-  const selectedTeen = obj.useSelectedTeen();
+  const selectedTeen = useSelectedTeen.useSelectedTeen();
   const ParentalControlledDefaultGuildsRestricted = ParentalControlledUserSettings.ParentalControlledDefaultGuildsRestricted;
   let id;
-  const useControlledSetting = ParentalControlledDefaultGuildsRestricted.useControlledSetting;
   if (selectedTeen != null) {
     id = selectedTeen.id;
   }
-  const controlledSetting = useControlledSetting(id);
+  const controlledSetting = ParentalControlledDefaultGuildsRestricted.useControlledSetting(id);
   const ParentalControlledDefaultGuildsRestrictedV2 = ParentalControlledUserSettings.ParentalControlledDefaultGuildsRestrictedV2;
   let id1;
-  const useControlledSetting2 = ParentalControlledDefaultGuildsRestrictedV2.useControlledSetting;
   if (selectedTeen != null) {
     id1 = selectedTeen.id;
   }
-  let controlledSetting2 = useControlledSetting2(id1);
-  if (null == controlledSetting2) {
-    controlledSetting2 = controlledSetting || controlledSetting;
+  let controlledSetting1 = ParentalControlledDefaultGuildsRestrictedV2.useControlledSetting(id1);
+  if (null == controlledSetting1) {
+    controlledSetting1 = controlledSetting || controlledSetting;
+    const tmp8 = controlledSetting || controlledSetting;
   }
-  return controlledSetting2;
+  return controlledSetting1;
 }) : (() => {
-  const obj = useSelectedTeen;
-  const selectedTeen = obj.useSelectedTeen();
+  const selectedTeen = useSelectedTeen.useSelectedTeen();
   const ParentalControlledDefaultGuildsRestricted = ParentalControlledUserSettings.ParentalControlledDefaultGuildsRestricted;
   let id;
-  const useControlledSetting = ParentalControlledDefaultGuildsRestricted.useControlledSetting;
   if (selectedTeen != null) {
     id = selectedTeen.id;
   }
-  const controlledSetting = useControlledSetting(id);
+  const controlledSetting = ParentalControlledDefaultGuildsRestricted.useControlledSetting(id);
   const ParentalControlledDefaultGuildsRestrictedV2 = ParentalControlledUserSettings.ParentalControlledDefaultGuildsRestrictedV2;
   let id1;
-  const useControlledSetting2 = ParentalControlledDefaultGuildsRestrictedV2.useControlledSetting;
   if (selectedTeen != null) {
     id1 = selectedTeen.id;
   }
-  let controlledSetting2 = useControlledSetting2(id1);
-  if (null == controlledSetting2) {
-    controlledSetting2 = controlledSetting || controlledSetting;
+  let controlledSetting1 = ParentalControlledDefaultGuildsRestrictedV2.useControlledSetting(id1);
+  if (null == controlledSetting1) {
+    controlledSetting1 = controlledSetting || controlledSetting;
+    const tmp8 = controlledSetting || controlledSetting;
   }
-  return controlledSetting2;
+  return controlledSetting1;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp7;
-  const obj = react2;
-  const cResult = obj.c(2);
-  const obj2 = useSelectedTeen;
-  const selectedTeen = obj2.useSelectedTeen();
-  const ParentalControlledFriendSourceFlags = ParentalControlledUserSettings.ParentalControlledFriendSourceFlags;
-  let id;
-  const useControlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting;
-  if (selectedTeen != null) {
-    id = selectedTeen.id;
-  }
-  const controlledSetting = useControlledSetting(id);
-  if (cResult[0] !== controlledSetting) {
-    const tmpResult = UserSettingsUtils;
-    const flags = tmpResult.computeFlags(controlledSetting);
-    cResult[0] = controlledSetting;
-    cResult[1] = flags;
-    tmp7 = flags;
-  } else {
-    tmp7 = cResult[1];
-  }
-  return tmp7.mutualGuilds && !tmp7.all;
-}) : (() => {
-  let controlledSetting;
-  let obj = controlledSetting(8330);
-  const selectedTeen = obj.useSelectedTeen();
-  const ParentalControlledFriendSourceFlags = controlledSetting(14642).ParentalControlledFriendSourceFlags;
-  let id;
-  const useControlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting;
-  if (selectedTeen != null) {
-    id = selectedTeen.id;
-  }
-  controlledSetting = useControlledSetting(id);
-  const items = [controlledSetting];
-  const memo = react.useMemo(() => {
-    const obj = UserSettingsUtils;
-    return obj.computeFlags(controlledSetting);
-  }, items);
-  return memo.mutualGuilds && !memo.all;
-});
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let first;
   _require = arg0;
-  const obj = require("react");
-  const cResult = obj.c(4);
-  const obj2 = require("useSelectedTeen");
-  const selectedTeenId = obj2.useSelectedTeenId();
+  const cResult = require("c").c(4);
+  const obj = require("c");
   const tmp = _require;
+  const selectedTeenId = require("useSelectedTeen").useSelectedTeenId();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [FamilyCenterControlledSettingsStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === arg0) {
-    let tmp7;
     if (cResult[2] === selectedTeenId) {
-      tmp7 = cResult[3];
+      let tmp7 = cResult[3];
     }
-    const tmpResult = tmp(504);
-    return tmpResult.useStateFromStores(first, tmp7);
+    return tmp(504).useStateFromStores(first, tmp7);
   }
   const fn = function o() {
     return FamilyCenterControlledSettingsStore.hasConsented(selectedTeenId, closure_0);
@@ -359,36 +283,31 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = selectedTeenId;
   cResult[3] = fn;
   tmp7 = fn;
+  const obj2 = require("useSelectedTeen");
 }) : ((arg0) => {
-  let closure_0;
   _require = arg0;
+  closure_1 = require("useSelectedTeen").useSelectedTeenId();
   const obj = require("useSelectedTeen");
-  let closure_1 = obj.useSelectedTeenId();
   const items = [FamilyCenterControlledSettingsStore];
-  const obj2 = require("get initialized");
-  return obj2.useStateFromStores(items, () => FamilyCenterControlledSettingsStore.hasConsented(closure_1, closure_0));
+  return require("initialize").useStateFromStores(items, () => FamilyCenterControlledSettingsStore.hasConsented(closure_1, closure_0));
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   _require = arg0;
-  let obj = require("react");
-  const cResult = obj.c(3);
-  let obj2 = require("useSelectedTeen");
-  const selectedTeenId = obj2.useSelectedTeenId();
+  const cResult = require("c").c(3);
+  let obj = require("c");
+  const selectedTeenId = require("useSelectedTeen").useSelectedTeenId();
   if (cResult[0] === arg0) {
-    let tmp3;
     if (cResult[1] === selectedTeenId) {
-      tmp3 = cResult[2];
+      let tmp3 = cResult[2];
     }
     return tmp3;
   }
-  _require = _asyncToGenerator(async (arg0) => {
-    let obj3;
-    closure_0 = arg0;
+  _require = asyncGeneratorStep(async (arg0) => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -398,7 +317,6 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         return { value: "IconComponent", done: null };
       }
     } else {
-      let c4;
       try {
         c5 = 2;
         if (0 === c2) {
@@ -410,59 +328,63 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             const obj5 = { value, done: true };
             return obj5;
           } else {
-            let closure_1 = tmp;
+            closure_1 = tmp3;
             if (null != closure_1) {
-              let items1;
-              let items2;
               if (closure_0) {
                 const items = [closure_0];
-                items1 = items;
+                let items1 = items;
               } else {
                 items1 = [];
               }
               if (closure_0) {
-                items2 = [];
+                let items2 = [];
               } else {
                 items2 = [closure_0];
               }
               c4 = 1;
+              selectedTeenId(7063).updateTeenConsents(tmp28, items1, items2);
               c2 = 2;
               c5 = 1;
-              const obj6 = { value: obj3.updateTeenConsents(tmp23, items1, items2), done: false };
-              obj3 = selectedTeenId(dependencyMap[14]);
-              return obj6;
+              const obj3 = selectedTeenId(7063);
             }
           }
-        } else if (1 === tmp4) {
-          c4 = 0;
-          const obj2 = selectedTeenId(dependencyMap[15]);
-          obj2.showFailedToast(constants.GENERIC_ERROR);
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
+        } else {
+          if (1 === tmp7) {
+            c4 = 0;
+            selectedTeenId(8113).showFailedToast(constants.GENERIC_ERROR);
+            const obj2 = selectedTeenId(8113);
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            c4 = 0;
+          }
           c4 = 0;
           c5 = 3;
           const obj = { value, done: true };
           return obj;
-        } else {
-          c4 = 0;
         }
         c5 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp15) {
-        let closure_3 = tmp15;
-        if (0 === c4) {
-          c5 = 3;
-          throw tmp15;
+      } catch (tmp19) {
+        closure_3 = tmp19;
+        if (tmp4 === c4) {
+          c5 = tmp2;
+          throw tmp19;
         } else {
-          c2 = 1;
+          c2 = tmp;
         }
       }
     }
   });
   const fn = function() {
-    return closure_0(...arguments);
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   };
   cResult[0] = arg0;
   cResult[1] = selectedTeenId;
@@ -470,16 +392,12 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp3 = fn;
 }) : ((arg0) => {
   _require = arg0;
-  let obj = require("useSelectedTeen");
-  const selectedTeenId = obj.useSelectedTeenId();
-  const useCallback = react.useCallback;
-  _require = _asyncToGenerator(async (arg0) => {
-    let obj3;
-    closure_0 = arg0;
+  const selectedTeenId = require("useSelectedTeen").useSelectedTeenId();
+  _require = asyncGeneratorStep(async (arg0) => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -489,7 +407,6 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         return { value: "IconComponent", done: null };
       }
     } else {
-      let c4;
       try {
         c5 = 2;
         if (0 === c2) {
@@ -501,72 +418,114 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             const obj5 = { value, done: true };
             return obj5;
           } else {
-            let closure_1 = tmp;
+            closure_1 = tmp3;
             if (null != closure_1) {
-              let items1;
-              let items2;
               if (closure_0) {
                 const items = [closure_0];
-                items1 = items;
+                let items1 = items;
               } else {
                 items1 = [];
               }
               if (closure_0) {
-                items2 = [];
+                let items2 = [];
               } else {
                 items2 = [closure_0];
               }
               c4 = 1;
+              selectedTeenId(7063).updateTeenConsents(tmp28, items1, items2);
               c2 = 2;
               c5 = 1;
-              const obj6 = { value: obj3.updateTeenConsents(tmp23, items1, items2), done: false };
-              obj3 = selectedTeenId(dependencyMap[14]);
-              return obj6;
+              const obj3 = selectedTeenId(7063);
             }
           }
-        } else if (1 === tmp4) {
-          c4 = 0;
-          const obj2 = selectedTeenId(dependencyMap[15]);
-          obj2.showFailedToast(constants.GENERIC_ERROR);
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
+        } else {
+          if (1 === tmp7) {
+            c4 = 0;
+            selectedTeenId(8113).showFailedToast(constants.GENERIC_ERROR);
+            const obj2 = selectedTeenId(8113);
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            c4 = 0;
+          }
           c4 = 0;
           c5 = 3;
           const obj = { value, done: true };
           return obj;
-        } else {
-          c4 = 0;
         }
         c5 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp15) {
-        let closure_3 = tmp15;
-        if (0 === c4) {
-          c5 = 3;
-          throw tmp15;
+      } catch (tmp19) {
+        closure_3 = tmp19;
+        if (tmp4 === c4) {
+          c5 = tmp2;
+          throw tmp19;
         } else {
-          c2 = 1;
+          c2 = tmp;
         }
       }
     }
   });
   let items = [selectedTeenId, arg0];
-  return useCallback(function() {
-    return closure_0(...arguments);
+  return noop.useCallback(function() {
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   }, items);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const obj = react2;
-  const cResult = obj.c(3);
+ReactCompilerGating = fn(558);
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  const selectedTeen = useSelectedTeen.useSelectedTeen();
+  const ParentalControlledFriendSourceFlags = ParentalControlledUserSettings.ParentalControlledFriendSourceFlags;
+  let id;
+  if (selectedTeen != null) {
+    id = selectedTeen.id;
+  }
+  const controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(id);
+  if (cResult[0] !== controlledSetting) {
+    const flags = UserSettingsUtils.computeFlags(controlledSetting);
+    cResult[0] = controlledSetting;
+    cResult[1] = flags;
+    let tmp7 = flags;
+    const tmpResult = UserSettingsUtils;
+  } else {
+    tmp7 = cResult[1];
+  }
+  return tmp7.mutualGuilds && !tmp7.all;
+}) : (() => {
+  const selectedTeen = controlledSetting(8330).useSelectedTeen();
+  const ParentalControlledFriendSourceFlags = controlledSetting(14642).ParentalControlledFriendSourceFlags;
+  let id;
+  if (selectedTeen != null) {
+    id = selectedTeen.id;
+  }
+  controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(id);
+  const items = [controlledSetting];
+  const memo = noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items);
+  return memo.mutualGuilds && !memo.all;
+});
+fn = () => useUserLinks.useHasActiveParentLinks();
+const size = fn(2);
+const result1 = size.fileFinishedImporting("modules/parent_tools/hooks/useParentalControlSettings.tsx");
+
+export const useParentalControlledExplicitContentSettings = tmp2;
+export const useParentalControlledGoreContentSettings = tmp3;
+export const useDefaultGuildsRestricted = tmp4;
+export const useAllowFriendsFromMutualGuildsOnlyForTeen = tmp5;
+export const useIsParentallyControlled = fn;
+export const useParentalControlledConsent = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(3);
   const tmp2 = closure_7(arg0);
   const tmp3 = closure_8(arg0);
   if (cResult[0] === tmp2) {
-    let tmp4;
     if (cResult[1] === tmp3) {
-      tmp4 = cResult[2];
+      let tmp4 = cResult[2];
     }
     return tmp4;
   }
@@ -575,19 +534,4 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp3;
   cResult[2] = obj2;
   tmp4 = obj2;
-}) : ((arg0) => {
-  const obj = { hasConsented: closure_7(arg0), updateConsent: closure_8(arg0) };
-  return obj;
-});
-let fn = () => {
-  const obj = useUserLinks;
-  return obj.useHasActiveParentLinks();
-};
-const result1 = size.fileFinishedImporting("modules/parent_tools/hooks/useParentalControlSettings.tsx");
-
-export const useParentalControlledExplicitContentSettings = tmp2;
-export const useParentalControlledGoreContentSettings = tmp3;
-export const useDefaultGuildsRestricted = tmp4;
-export const useAllowFriendsFromMutualGuildsOnlyForTeen = tmp5;
-export const useIsParentallyControlled = fn;
-export const useParentalControlledConsent = tmp7;
+}) : ((arg0) => ({ hasConsented: closure_7(arg0), updateConsent: closure_8(arg0) }));

@@ -2,43 +2,37 @@
 
 // Module 11941 (useSearchContext)
 import _modDef38 from "module_38" /* 38 */;
-import react2 from "react" /* 576 */;
-import Constants from "Constants" /* 1085 */;
-import react from "react" /* 19 */;
+import c from "c" /* 576 */;
+import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require;
 
-const SearchTypes = Constants.SearchTypes;
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+const SearchTypes = fn(1085).SearchTypes;
+fn(558);
+let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
-  let tmp2;
-  const obj = react2;
-  const cResult = obj.c(2);
+  const cResult = c.c(2);
   if (cResult[0] !== guildId) {
     const obj2 = { type: SearchTypes.GUILD, guildId };
     cResult[0] = guildId;
     cResult[1] = obj2;
-    tmp2 = obj2;
+    let tmp2 = obj2;
   } else {
     tmp2 = cResult[1];
   }
   return tmp2;
 }) : ((guildId) => {
   const items = [guildId];
-  return react.useMemo(() => ({ type: SearchTypes.GUILD, guildId }), items);
+  return noop.useMemo(() => ({ type: SearchTypes.GUILD, guildId }), items);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, channelId) => {
-  const obj = react2;
-  const cResult = obj.c(3);
+  const cResult = c.c(3);
   if (cResult[0] === channelId) {
-    let tmp2;
     if (cResult[1] === guildId) {
-      tmp2 = cResult[2];
+      let tmp2 = cResult[2];
     }
     return tmp2;
   }
@@ -49,42 +43,41 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, channelId
   tmp2 = obj2;
 }) : ((guildId, channelId) => {
   const items = [guildId, channelId];
-  return react.useMemo(() => ({ type: SearchTypes.GUILD_CHANNEL, guildId, channelId }), items);
+  return noop.useMemo(() => ({ type: SearchTypes.GUILD_CHANNEL, guildId, channelId }), items);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
 function getChannelDetailsSearchContext(channelId, guildId, isThreadResult) {
-  let obj;
-  const tmp = isThreadResult;
-  if (tmp) {
+  if (isThreadResult) {
     _modDef38(null != guildId, "[useChannelDetailsSearchContext] Thread must have a guild id");
-    obj = { type: SearchTypes.THREAD, guildId, channelId };
     const obj2 = { type: SearchTypes.THREAD, guildId, channelId };
+    let obj = obj2;
   } else if (null == guildId) {
-    obj = { type: SearchTypes.CHANNEL, channelId };
     const obj3 = { type: SearchTypes.CHANNEL, channelId };
+    obj = obj3;
   } else {
     obj = { type: SearchTypes.GUILD_CHANNEL, guildId, channelId };
   }
   return obj;
 }
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId, guildId) => {
-  let first;
-  let obj4;
-  let tmp6;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/hooks/useSearchContext.tsx");
+
+export const useGuildSearchContext = tmp2;
+export const useGuildChannelSearchContext = tmp3;
+export { getChannelDetailsSearchContext };
+export const useChannelDetailsSearchContext = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId, guildId) => {
   _require = channelId;
-  const obj = require("react");
-  const cResult = obj.c(7);
-  const tmp = _require;
+  let obj = dependencyMap;
+  const cResult = require("c").c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== channelId) {
     const fn = function o() {
-      const channel = ChannelStore.getChannel(channelId);
+      const channel = ChannelStore.getChannel(closure_0);
       let flag;
       if (channel != null) {
         flag = channel.isThread();
@@ -96,28 +89,28 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId, guildId
     };
     cResult[1] = channelId;
     cResult[2] = fn;
-    tmp6 = fn;
+    let tmp5 = fn;
   } else {
-    tmp6 = cResult[2];
+    tmp5 = cResult[2];
   }
-  const tmpResult = tmp(573);
-  const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+  const obj2 = require("c");
+  const stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp5);
   if (cResult[3] === channelId) {
     if (cResult[4] === guildId) {
-      let tmp8;
       if (cResult[5] === stateFromStores) {
-        tmp8 = cResult[6];
+        return cResult[6];
       }
-      return tmp8;
     }
   }
+  let tmp7 = null;
   if (stateFromStores) {
-    _modDef38(null != guildId, "[useChannelDetailsSearchContext] Thread must have a guild id");
-    obj4 = { type: SearchTypes.THREAD, guildId, channelId };
-    const obj2 = { type: SearchTypes.THREAD, guildId, channelId };
-  } else if (null == guildId) {
-    obj4 = { type: SearchTypes.CHANNEL, channelId };
+    tmp7 = tmp7 != guildId;
+    _modDef38(tmp7, "[useChannelDetailsSearchContext] Thread must have a guild id");
+    obj = { type: SearchTypes.THREAD, guildId, channelId };
+    let obj4 = obj;
+  } else if (tmp7 == guildId) {
     const obj3 = { type: SearchTypes.CHANNEL, channelId };
+    obj4 = obj3;
   } else {
     obj4 = { type: SearchTypes.GUILD_CHANNEL, guildId, channelId };
   }
@@ -125,14 +118,12 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId, guildId
   cResult[4] = guildId;
   cResult[5] = stateFromStores;
   cResult[6] = obj4;
-  tmp8 = obj4;
+  const tmpResult = require("useStateFromStores");
 }) : ((channelId, guildId) => {
-  let stateFromStores;
   _require = channelId;
-  let obj = require("useStateFromStores");
   const items = [ChannelStore];
-  stateFromStores = obj.useStateFromStores(items, () => {
-    const channel = ChannelStore.getChannel(channelId);
+  stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
+    const channel = ChannelStore.getChannel(closure_0);
     let flag;
     if (channel != null) {
       flag = channel.isThread();
@@ -143,24 +134,17 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId, guildId
     return flag;
   });
   const items1 = [channelId, guildId, stateFromStores];
-  return react.useMemo(() => {
-    let obj;
+  return noop.useMemo(() => {
     if (stateFromStores) {
       _modDef38(null != guildId, "[useChannelDetailsSearchContext] Thread must have a guild id");
-      obj = { type: SearchTypes.THREAD, guildId, channelId };
       const obj2 = { type: SearchTypes.THREAD, guildId, channelId };
+      let obj = obj2;
     } else if (null == guildId) {
-      obj = { type: SearchTypes.CHANNEL, channelId };
       const obj3 = { type: SearchTypes.CHANNEL, channelId };
+      obj = obj3;
     } else {
       obj = { type: SearchTypes.GUILD_CHANNEL, guildId, channelId };
     }
     return obj;
   }, items1);
 });
-const result = size.fileFinishedImporting("modules/search/native/hooks/useSearchContext.tsx");
-
-export const useGuildSearchContext = tmp2;
-export const useGuildChannelSearchContext = tmp3;
-export { getChannelDetailsSearchContext };
-export const useChannelDetailsSearchContext = tmp4;

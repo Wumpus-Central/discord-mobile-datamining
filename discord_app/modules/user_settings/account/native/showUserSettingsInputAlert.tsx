@@ -1,49 +1,45 @@
 // === Module 14598: showUserSettingsInputAlert ===
 
 // Module 14598 (showUserSettingsInputAlert)
-import Fragment from "Fragment" /* 21 */;
-import intl3 from "intl" /* 1126 */;
-import asyncRequire from "asyncRequire" /* 1987 */;
+import util from "util" /* 1126 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
-import AlertDefault from "Alert" /* 5790 */;
-import react from "react" /* 19 */;
-import size from "module_2" /* 2 */;
+import common_AlertDefault from "common/Alert" /* 5790 */;
+import noop from "module_19" /* 19 */;
 
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/native/showUserSettingsInputAlert.tsx");
 
 export default function showUserSettingsInputAlert(arg0) {
   ({ onSubmit: require, onSuccess: importDefault, onError: dependencyMap } = arg0);
-  let closure_3 = Object.assign(arg0, Object.assign({ onSubmit: 0, onSuccess: 0, onError: 0 }));
-  let obj = actions_AlertActionCreatorsDefault;
-  const obj2 = {
+  closure_3 = Object.assign(arg0, Object.assign({ onSubmit: 0, onSuccess: 0, onError: 0 }));
+  actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      let confirmColor;
-      let onError;
-      let onSubmit;
-      let onSuccess;
-      const promise = asyncRequire(14599, dependencyMap.paths);
-      return promise.then((result) => {
-        let closure_0 = result.default;
+      return asyncRequireImpl(14599, dependencyMap.paths).then((result) => {
+        closure_0 = result.default;
         return (arg0) => {
-          let RED;
-          let intl;
-          let intl2;
-          const obj = { cancelText: intl.string(intl3.t["ETE/oC"]), confirmText: intl2.string(intl3.t.BddRzS), confirmColor: RED, onSubmit, onSuccess, onError };
+          const obj = {};
           const merged = Object.assign(arg0);
           const merged1 = Object.assign(confirmColor);
-          intl = intl3.intl;
-          intl2 = intl3.intl;
+          const intl = util.intl;
+          obj.cancelText = intl.string(util.t["ETE/oC"]);
+          const intl2 = util.intl;
+          obj.confirmText = intl2.string(util.t.BddRzS);
           if (null != confirmColor.confirmColor) {
-            RED = confirmColor.confirmColor;
+            let RED = confirmColor.confirmColor;
           } else {
-            RED = AlertDefault.Colors.RED;
+            RED = common_AlertDefault.Colors.RED;
           }
-          return closure_3(require, obj);
+          obj.confirmColor = RED;
+          obj.onSubmit = onSubmit;
+          obj.onSuccess = onSuccess;
+          obj.onError = onError;
+          return closure_3(closure_0, obj);
         };
       });
     },
     isDismissable: false
-  };
-  obj.openLazy(obj2);
+  });
 };

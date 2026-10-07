@@ -1,32 +1,41 @@
 // === Module 14683: HarvesterUtils ===
 
 // Module 14683 (HarvesterUtils)
-import get_initialized from "get initialized" /* 504 */;
-import react2 from "react" /* 576 */;
-import HarvesterConstants from "HarvesterConstants" /* 14684 */;
-import _slicedToArray_mod from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import DataHarvestStore from "DataHarvestStore" /* 13539 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let clearTimeoutResult, dependencyMap;
+require = fn;
+const REQUEST_DATA_LIMIT_MS = fn(14684).REQUEST_DATA_LIMIT_MS;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/harvester/HarvesterUtils.tsx");
 
-let _slicedToArray = _slicedToArray_mod;
-const REQUEST_DATA_LIMIT_MS = HarvesterConstants.REQUEST_DATA_LIMIT_MS;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
-  let closure_1;
-  let currentUser;
-  let harvestType;
-  let ref;
-  let tmp14;
-  let tmp4;
-  let tmp5;
-  let tmp8;
-  let tmp9;
-  const obj = react2;
-  const cResult = obj.c(17);
+export const harvestDisabled = function harvestDisabled(created_at, stateFromStores) {
+  const verified = stateFromStores.verified;
+  let tmp = !verified;
+  if (verified) {
+    let isStaffResult = stateFromStores.isStaff();
+    if (!isStaffResult) {
+      let tmp5 = null != created_at;
+      if (tmp5) {
+        const _Date = Date;
+        const _Date2 = Date;
+        const timestamp = Date.now();
+        const date = new Date(created_at.created_at);
+        tmp5 = REQUEST_DATA_LIMIT_MS > timestamp - date.getTime();
+      }
+      isStaffResult = tmp5;
+    }
+    tmp = isStaffResult;
+  }
+  return tmp;
+};
+export const useRequestHarvestStatus = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(17);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     const fn = function c() {
@@ -39,8 +48,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const tmpResult = get_initialized;
-  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+  const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [DataHarvestStore];
     const fn2 = function v() {
@@ -48,14 +56,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
     };
     cResult[2] = items1;
     cResult[3] = fn2;
-    tmp9 = fn2;
-    tmp8 = items1;
+    let tmp9 = fn2;
+    let tmp8 = items1;
   } else {
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
-  const tmpResult2 = get_initialized;
-  const stateFromStores1 = tmpResult2.useStateFromStores(tmp8, tmp9);
+  const tmpResult = initialize;
+  const stateFromStores1 = initialize.useStateFromStores(tmp8, tmp9);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
       constructor() {
@@ -70,18 +78,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
       }
     }
   }
-  [tmp14, require] = react.useState(S);
-  _slicedToArray(react.useState(S), 2);
+  const tmpResult2 = initialize;
+  [tmp14, require] = noop.useState(S);
   if (cResult[5] === stateFromStores1) {
-    let tmp21;
-    let tmp24;
     class S {
       constructor() {
         return Date.now();
       }
     }
     dependencyMap = tmp15;
-    _slicedToArray = react.useRef(null);
+    _slicedToArray = noop.useRef(null);
     if (cResult[8] !== tmp15) {
       class E {
         constructor() {
@@ -101,7 +107,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
       cResult[8] = tmp15;
       cResult[9] = E;
       cResult[10] = items2;
-      tmp21 = items2;
+      let tmp23 = items2;
     } else {
       class E {
         constructor() {
@@ -117,9 +123,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
           return () => clearTimeout(ref.current);
         }
       }
-      tmp21 = cResult[10];
+      tmp23 = cResult[10];
     }
-    const effect = react.useEffect(E, tmp21);
+    const effect = noop.useEffect(E, tmp23);
     if (stateFromStores != null) {
       class E {
         constructor() {
@@ -151,7 +157,39 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
           return () => clearTimeout(ref.current);
         }
       }
-      tmp24 = tmp26;
+      const _Symbol = Symbol;
+      if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
+        class E {
+          constructor() {
+            diff = closure_1 - Date.now();
+            if (diff > 0) {
+              _setTimeout = setTimeout;
+              _clearTimeout = clearTimeout;
+              tmp3 = closure_2;
+              timerId = setTimeout(() => closure_1_0(Date.now()), diff);
+              clearTimeoutResult = clearTimeout(closure_2.current);
+              closure_2.current = timerId;
+            }
+            return () => clearTimeout(ref.current);
+          }
+        }
+        cResult[12] = tmp29;
+      } else {
+        class E {
+          constructor() {
+            diff = closure_1 - Date.now();
+            if (diff > 0) {
+              _setTimeout = setTimeout;
+              _clearTimeout = clearTimeout;
+              tmp3 = closure_2;
+              timerId = setTimeout(() => closure_1_0(Date.now()), diff);
+              clearTimeoutResult = clearTimeout(closure_2.current);
+              closure_2.current = timerId;
+            }
+            return () => clearTimeout(ref.current);
+          }
+        }
+      }
     } else {
       class E {
         constructor() {
@@ -182,8 +220,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
             return () => clearTimeout(ref.current);
           }
         }
-        cResult[11] = tmp25;
-        tmp24 = tmp25;
+        cResult[11] = tmp27;
       } else {
         class E {
           constructor() {
@@ -200,8 +237,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
           }
         }
       }
+      return tmp27;
     }
-    return tmp24;
   }
   let sum = tmp14;
   if (null != stateFromStores1) {
@@ -219,43 +256,30 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
         return () => clearTimeout(ref.current);
       }
     }
-    const self = this;
-    const self2 = this;
     const date = new Date(stateFromStores1.created_at);
     sum = date.getTime() + REQUEST_DATA_LIMIT_MS;
   }
   cResult[5] = stateFromStores1;
   cResult[6] = tmp14;
   cResult[7] = sum;
-}) : (function() {
-  let currentUser;
-  let date1;
-  let harvestType;
-  let obj6;
-  let ref;
-  let tmp3;
-  const f117757 = () => Date.now();
+  const tmp13 = _slicedToArray(noop.useState(S), 2);
+}) : (() => {
   const items = [UserStore];
-  const obj = get_initialized;
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [DataHarvestStore];
-  const obj3 = get_initialized;
-  const stateFromStores1 = obj3.useStateFromStores(items1, () => harvestType.harvestType);
-  [tmp3, require] = react.useState(f117757);
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => harvestType.harvestType);
+  [tmp3, require] = noop.useState(() => Date.now());
   let sum = tmp3;
-  _slicedToArray(react.useState(f117757), 2);
   if (null != stateFromStores1) {
     const _Date = Date;
-    const self = this;
-    const self2 = this;
     const date = new Date(stateFromStores1.created_at);
     sum = date.getTime() + REQUEST_DATA_LIMIT_MS;
   }
   dependencyMap = sum;
-  _slicedToArray = react.useRef(null);
+  _slicedToArray = noop.useRef(null);
   const items2 = [sum];
-  const effect = react.useEffect(() => {
-    const diff = dependencyMap - Date.now();
+  const effect = noop.useEffect(() => {
+    const diff = sum - Date.now();
     if (diff > 0) {
       const _setTimeout = setTimeout;
       const _clearTimeout = clearTimeout;
@@ -270,49 +294,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
     verified = stateFromStores.verified;
   }
   if (verified) {
-    let obj2;
     if (stateFromStores.isStaff()) {
-      obj2 = { allowed: false, reason: "staff" };
+      let obj2 = { allowed: false, reason: "staff" };
     } else if (null == stateFromStores1) {
       obj2 = { allowed: true };
     } else if (sum > tmp3) {
+      const obj5 = { allowed: false, reason: "rate_limited", nextAllowed: null };
       const _Date2 = Date;
-      const self3 = this;
-      const self4 = this;
-      const obj5 = { allowed: false, reason: "rate_limited", nextAllowed: date1 };
-      obj2 = obj5;
-      date1 = new Date(sum);
+      const date1 = new Date(sum);
+      obj5.nextAllowed = date1;
     } else {
       obj2 = { allowed: true };
     }
-    obj6 = obj2;
   } else {
-    obj6 = { allowed: false, reason: "not_verified" };
+    return { allowed: false, reason: "not_verified" };
   }
-  return obj6;
+  const tmp2 = _slicedToArray(noop.useState(() => Date.now()), 2);
 });
-const result = size.fileFinishedImporting("modules/harvester/HarvesterUtils.tsx");
-
-export const harvestDisabled = function harvestDisabled(created_at, stateFromStores) {
-  const verified = stateFromStores.verified;
-  let tmp = !verified;
-  if (verified) {
-    let isStaffResult = stateFromStores.isStaff();
-    if (!isStaffResult) {
-      let tmp5 = null != created_at;
-      if (tmp5) {
-        const _Date = Date;
-        const _Date2 = Date;
-        const self = this;
-        const self2 = this;
-        const timestamp = Date.now();
-        const date = new Date(created_at.created_at);
-        tmp5 = REQUEST_DATA_LIMIT_MS > timestamp - date.getTime();
-      }
-      isStaffResult = tmp5;
-    }
-    tmp = isStaffResult;
-  }
-  return tmp;
-};
-export const useRequestHarvestStatus = tmp2;

@@ -1,34 +1,35 @@
 // === Module 14508: WebAuthnStore ===
 
 // Module 14508 (WebAuthnStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Server from "Server" /* 1985 */;
-import size from "module_2" /* 2 */;
 
+require = fn;
 let c2 = false;
 let closure_3 = [];
 let c4 = false;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class WebAuthnStore extends Store {
-  hasFetchedCredentials() {
-    return c2;
-  }
-  getCredentials() {
-    return closure_3;
-  }
-  hasPendingRegisterTrigger() {
-    return c4;
-  }
 }
-Object.defineProperty(WebAuthnStore.prototype, "hasCredentials", {
+const prototype = WebAuthnStore.prototype;
+prototype["hasFetchedCredentials"] = function hasFetchedCredentials() {
+  return c2;
+};
+Object.defineProperty(prototype, "hasCredentials", {
   get: function hasCredentials() {
     return closure_3.length > 0;
   },
   set: undefined
 });
+prototype["getCredentials"] = function getCredentials() {
+  return closure_3;
+};
+prototype["hasPendingRegisterTrigger"] = function hasPendingRegisterTrigger() {
+  return c4;
+};
 WebAuthnStore.displayName = "WebAuthnStore";
-const obj = {
+const webAuthnStore = new WebAuthnStore(DispatcherDefault, {
   LOGOUT: function handleReset() {
     closure_3 = [];
     c2 = false;
@@ -41,24 +42,22 @@ const obj = {
       closure_3 = credentials;
       flag = true;
     }
-    const tmp = c2;
-    if (!tmp) {
+    if (!c2) {
       c2 = true;
       flag = true;
     }
     return flag;
   },
   AUTHENTICATOR_CREATE: function handleAuthenticatorCreate(credential) {
-    let flag;
     credential = credential.credential;
     if (credential.type === Server.AuthenticatorType.WEBAUTHN) {
-      const tmp3 = undefined === closure_3.find((id) => id.id === credential.id);
-      if (tmp3) {
+      const tmp2 = undefined === closure_3.find((id) => id.id === credential.id);
+      if (tmp2) {
         const items = [];
-        items[HermesBuiltin.arraySpread(items, closure_3, 0)] = credential;
+        items[HermesBuiltin.arraySpread(closure_3, 0)] = credential;
         closure_3 = items;
       }
-      flag = tmp3;
+      let flag = tmp2;
     } else {
       const type = credential.type;
       flag = false;
@@ -71,7 +70,6 @@ const obj = {
       const type = credential.type;
       return false;
     } else {
-      let tmp = closure_3;
       closure_3 = closure_3.map((id) => {
         let tmp = id;
         if (id.id === credential.id) {
@@ -91,8 +89,7 @@ const obj = {
     }
   },
   WEBAUTHN_TRIGGER_REGISTER: function handleTriggerRegister() {
-    const tmp = c4;
-    if (tmp) {
+    if (c4) {
       return false;
     } else {
       c4 = true;
@@ -105,8 +102,8 @@ const obj = {
       return false;
     }
   }
-};
-const webAuthnStore = new WebAuthnStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/WebAuthnStore.tsx");
 
 export default webAuthnStore;

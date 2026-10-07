@@ -1,26 +1,20 @@
 // === Module 6571: FastestListChildren ===
 
 // Module 6571 (FastestListChildren)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
 import getFastestListVisibleItemsDefault from "getFastestListVisibleItemsDefault" /* 6572 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4896 */;
-import size_mod from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
-let listFooterAlwaysMounted, map1;
-
-let map;
-const View = react_native.View;
-const jsx = Fragment.jsx;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_6 = createStyles.createStyles({ portal: { position: "absolute", opacity: 0, height: 0, top: 0 } });
-let obj = { items: [], keys: map, keyIndex: 0 };
-map = new Map();
-const memoResult = react.memo(react.forwardRef((listFooterAlwaysMounted, arg1) => {
-  let estimatedListSize;
-  let horizontal;
+let obj = { items: [], keys: new Map(), keyIndex: 0 };
+let map = new Map();
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/fastest_list/FastestListChildren.android.tsx");
+
+export default noop.memo(noop.forwardRef((listFooterAlwaysMounted, arg1) => {
   ({ estimatedListSize: importDefault, horizontal } = listFooterAlwaysMounted);
   if (horizontal === undefined) {
     horizontal = false;
@@ -52,88 +46,65 @@ const memoResult = react.memo(react.forwardRef((listFooterAlwaysMounted, arg1) =
     items[1] = rect;
     return items;
   }, items);
-  const tmp3 = listFooterAlwaysMounted(listHeaderAlwaysMounted.useState(() => {
-    obj = { estimatedListSize: importDefault, sectionsVersioned };
-    return getFastestListVisibleItemsDefault(obj);
-  }), 2);
-  let itemSize = tmp3[0];
-  let closure_16 = tmp3[1];
+  const tmp3 = listFooterAlwaysMounted(listHeaderAlwaysMounted.useState(() => getFastestListVisibleItemsDefault({ estimatedListSize, sectionsVersioned })), 2);
+  const itemSize = tmp3[0];
+  closure_16 = tmp3[1];
   const imperativeHandle = listHeaderAlwaysMounted.useImperativeHandle(arg1, () => ({
     setVisibleItems(nativeEvent) {
-      let closure_0 = nativeEvent;
-      let tmp = closure_1_16((arg0) => {
+      closure_0 = nativeEvent;
+      closure_1_16((arg0) => {
         let tmp = closure_0;
-        if (closure_2_0(closure_2_1[6])(arg0, closure_0)) {
+        if (estimatedListSize(horizontal[6])(arg0, closure_0)) {
           tmp = arg0;
         }
         return tmp;
       });
     }
   }), []);
-  const ref = listHeaderAlwaysMounted.useRef(sectionsVersioned);
+  listHeaderAlwaysMounted.useRef(sectionsVersioned);
   let items1 = [horizontal, listFooterAlwaysMounted, listHeaderAlwaysMounted, flag, renderItem, renderListFooter, renderListHeader, renderSectionFooter, renderSectionHeader, sectionsVersioned, itemSize, flag2];
-  const memo1 = listHeaderAlwaysMounted.useMemo(function() {
-    let item;
-    let itemKeys;
-    let itemSizes;
-    let keyId;
-    let keysAreUniform;
-    let listFooterKey;
-    let listFooterSize;
-    let listHeaderKey;
-    let listHeaderSize;
-    let listId;
-    let sectionFooterKeys;
-    let sectionFooterSizes;
-    let sectionHeaderKeys;
-    let sectionHeaderSizes;
-    let sections;
-    let tmp;
+  const memo1 = listHeaderAlwaysMounted.useMemo(() => {
     ({ keysAreUniform, listId, itemKeys, itemSizes, listFooterKey, listFooterSize, listHeaderKey, listHeaderSize, sections } = sectionsVersioned);
     ({ sectionFooterKeys, sectionFooterSizes, sectionHeaderKeys, sectionHeaderSizes } = sectionsVersioned);
     if (sectionsVersioned.sectionsId !== itemSize.sectionsId) {
       return ref.current;
     } else {
       function fastestListChildJSX(children, itemSize) {
-        let tmp11;
         if (flag2) {
-          let tmp10;
+          let tmp11;
           if (sectionStart) {
-            tmp10 = itemSize;
-          }
-          size = { width: tmp10, height: tmp11, overflow: "hidden" };
-          tmp11 = undefined;
-          if (!sectionStart) {
             tmp11 = itemSize;
           }
-          obj = { style: size, collapsable: false, children };
+          const size = { width: tmp11, height: null, overflow: "hidden" };
+          let tmp12;
+          if (!sectionStart) {
+            tmp12 = itemSize;
+          }
+          obj = { style: null, collapsable: false, children: null };
+          size.height = tmp12;
+          obj.style = size;
+          obj.children = children;
           return marginEnd(flag, obj);
         } else if (listHeaderAlwaysMounted.isValidElement(children)) {
           return children;
         } else {
           const _Error = Error;
-          const self = this;
-          const self2 = this;
           const error = new Error("Must return a single child element.");
           throw error;
         }
       }
       let keyIndex = ref.current.keyIndex;
       const _Map = Map;
-      let self = this;
-      let self2 = this;
-      map = new Map(ref.current.keys);
+      const map = new Map(ref.current.keys);
       const _Map2 = Map;
-      const self3 = this;
-      const self4 = this;
-      map1 = new Map();
+      const map1 = new Map();
       const items = [];
       const items1 = [];
-      const tmp91 = require("getFastestListVisibleItemsWithErrorChecking")(listId, tmp4, sections);
-      let sectionStart = tmp91.sectionStart;
-      const sectionEnd = tmp91.sectionEnd;
-      const itemStart = tmp91.itemStart;
-      const itemEnd = tmp91.itemEnd;
+      const tmp95 = estimatedListSize(horizontal[7])(listId, tmp4, sections);
+      let sectionStart = tmp95.sectionStart;
+      const sectionEnd = tmp95.sectionEnd;
+      const itemStart = tmp95.itemStart;
+      const itemEnd = tmp95.itemEnd;
       let sum = sectionStart;
       if (sectionStart <= sectionEnd) {
         do {
@@ -148,16 +119,14 @@ const memoResult = react.memo(react.forwardRef((listFooterAlwaysMounted, arg1) =
             }
             if (num <= diff) {
               do {
-                let first1;
                 let tmp9 = renderItem(sum, num);
-                let tmp10 = num;
                 if (tmp) {
                   itemSize = itemSizes[0].sizes[0];
                 } else {
                   itemSize = itemSizes[sum].sizes[num];
                 }
                 if (keysAreUniform) {
-                  first1 = itemKeys[0].keys[0];
+                  let first1 = itemKeys[0].keys[0];
                 } else {
                   first1 = itemKeys[sum].keys[num];
                 }
@@ -167,15 +136,15 @@ const memoResult = react.memo(react.forwardRef((listFooterAlwaysMounted, arg1) =
                 }
                 let _HermesInternal2 = HermesInternal;
                 let combined = "" + listId + "-" + first1;
-                let value3 = map.get(combined);
+                value3 = map.get(combined);
                 if (null != value3) {
                   let result = map1.set(combined, value3);
                   let deleteResult = map.delete(combined);
-                  let push = items.push;
-                  let obj2 = { portalId: combined, children: fastestListChildJSX(tmp9, itemSize) };
-                  let tmp21 = require("PortalToNativeView");
+                  let obj2 = { portalId: combined, children: null };
+                  let tmp21 = estimatedListSize(horizontal[8]);
+                  obj2.children = fastestListChildJSX(tmp9, itemSize);
                   let _HermesInternal3 = HermesInternal;
-                  let arr = push(marginEnd(tmp21, obj2, "" + value3));
+                  let arr = items.push(marginEnd(tmp21, obj2, "" + value3));
                 } else {
                   obj = { keyId: combined, item: tmp9, itemSize };
                   let arr2 = items1.push(obj);
@@ -188,63 +157,60 @@ const memoResult = react.memo(react.forwardRef((listFooterAlwaysMounted, arg1) =
         } while (sum <= sectionEnd);
       }
       const iter = items1[Symbol.iterator]();
-      const nextResult = iter.next();
       while (iter !== undefined) {
         ({ keyId, item, itemSize } = nextResult);
         if (map.size > 0) {
           let iter2 = map.keys();
-          let value = iter2.next().value;
+          value = iter2.next().value;
           let value4 = map.get(value);
           let result1 = map1.set(keyId, value4);
           let deleteResult1 = map.delete(value);
-          let push3 = items.push;
-          let obj3 = { portalId: keyId, children: fastestListChildJSX(item, itemSize) };
-          let tmp47 = require("PortalToNativeView");
+          let obj3 = { portalId: keyId, children: null };
+          let tmp47 = estimatedListSize(horizontal[8]);
+          obj3.children = fastestListChildJSX(item, itemSize);
           let _HermesInternal5 = HermesInternal;
-          let push3Result = push3(marginEnd(tmp47, obj3, "" + value4));
+          let arr10 = items.push(marginEnd(tmp47, obj3, "" + value4));
         } else {
           let tmp29 = +keyIndex;
           keyIndex = tmp29 + 1;
           let text = `key-${tmp29}`;
           let result2 = map1.set(keyId, `key-${tmp29}`);
-          let push2 = items.push;
-          let obj4 = { portalId: keyId, children: fastestListChildJSX(item, itemSize) };
-          let tmp36 = require("PortalToNativeView");
+          let obj4 = { portalId: keyId, children: null };
+          let tmp36 = estimatedListSize(horizontal[8]);
+          obj4.children = fastestListChildJSX(item, itemSize);
           let _HermesInternal4 = HermesInternal;
-          let push2Result = push2(marginEnd(tmp36, obj4, "" + `key-${tmp29}`));
+          let arr11 = items.push(marginEnd(tmp36, obj4, "" + `key-${tmp29}`));
         }
         continue;
       }
       if (null != renderListHeader) {
         if (listHeaderSize > 0) {
-          const tmp52 = itemStart;
-          if (tmp52) {
+          if (itemStart) {
             let str2 = "lh";
             if ("" !== listHeaderKey) {
               str2 = listHeaderKey;
             }
-            const push4 = items.push;
+            const obj5 = { portalId: null, children: null };
             const _HermesInternal6 = HermesInternal;
-            const obj5 = { portalId: "" + listId + "-" + str2, children: fastestListChildJSX(tmp51(), listHeaderSize) };
-            const tmp56 = require("PortalToNativeView");
-            push4(marginEnd(tmp56, obj5, str2));
+            obj5.portalId = "" + listId + "-" + str2;
+            obj5.children = fastestListChildJSX(tmp51(), listHeaderSize);
+            items.push(marginEnd(estimatedListSize(horizontal[8]), obj5, str2));
+            const tmp56 = estimatedListSize(horizontal[8]);
           }
         }
       }
       if (null != renderListFooter) {
         if (listFooterSize > 0) {
-          const tmp59 = sectionEnd;
-          if (tmp59) {
+          if (sectionEnd) {
             let str3 = "lf";
             if ("" !== listFooterKey) {
               str3 = listFooterKey;
             }
             const _HermesInternal7 = HermesInternal;
             const combined1 = "" + listId + "-" + str3;
-            const push5 = items.push;
             const obj6 = { portalId: combined1, children: fastestListChildJSX(tmp58(), listFooterSize) };
-            const tmp64 = require("PortalToNativeView");
-            push5(marginEnd(tmp64, obj6, combined1));
+            items.push(marginEnd(estimatedListSize(horizontal[8]), obj6, combined1));
+            const tmp64 = estimatedListSize(horizontal[8]);
           }
         }
       }
@@ -261,10 +227,10 @@ const memoResult = react.memo(react.forwardRef((listFooterAlwaysMounted, arg1) =
                 }
                 let _HermesInternal9 = HermesInternal;
                 let combined3 = "" + listId + "-" + combined2;
-                let push6 = items.push;
-                let obj7 = { portalId: combined3, children: fastestListChildJSX(tmp93(sectionStart), tmp68) };
-                let tmp74 = require("PortalToNativeView");
-                let push6Result = push6(marginEnd(tmp74, obj7, combined3));
+                let obj7 = { portalId: combined3, children: null };
+                let tmp74 = estimatedListSize(horizontal[8]);
+                obj7.children = fastestListChildJSX(tmp97(sectionStart), tmp68);
+                let arr14 = items.push(marginEnd(tmp74, obj7, combined3));
               }
             }
             let tmp76 = tmp3 ? sectionHeaderSizes[0] : sectionHeaderSizes[sectionStart];
@@ -277,27 +243,23 @@ const memoResult = react.memo(react.forwardRef((listFooterAlwaysMounted, arg1) =
                 }
                 let _HermesInternal11 = HermesInternal;
                 let combined5 = "" + listId + "-" + combined4;
-                let push7 = items.push;
-                let obj8 = { portalId: combined5, children: fastestListChildJSX(tmp94(sectionStart), tmp76) };
-                let tmp82 = require("PortalToNativeView");
-                let push7Result = push7(marginEnd(tmp82, obj8, combined5));
+                let obj8 = { portalId: combined5, children: null };
+                let tmp82 = estimatedListSize(horizontal[8]);
+                obj8.children = fastestListChildJSX(tmp98(sectionStart), tmp76);
+                let arr15 = items.push(marginEnd(tmp82, obj8, combined5));
               }
             }
           }
           sectionStart = sectionStart + 1;
         } while (sectionStart <= sectionEnd);
       }
-      return { items, keys: map1, keyIndex };
+      const obj9 = { items, keys: map1, keyIndex };
+      return obj9;
     }
   }, items1);
   const items2 = [memo1];
   const effect = listHeaderAlwaysMounted.useEffect(() => {
-    ref.current = memo1;
+    closure_17.current = memo1;
   }, items2);
-  obj = { pointerEvents: "none", style: memo, children: memo1.items };
-  return marginEnd(flag, obj);
+  return marginEnd(flag, { pointerEvents: "none", style: memo, children: memo1.items });
 }));
-let size = size_mod;
-let result = size.fileFinishedImporting("modules/fastest_list/FastestListChildren.android.tsx");
-
-export default memoResult;

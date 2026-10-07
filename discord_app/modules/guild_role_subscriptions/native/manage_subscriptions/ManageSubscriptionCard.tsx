@@ -1,567 +1,475 @@
 // === Module 15049: ManageSubscriptionCard ===
 
 // Module 15049 (ManageSubscriptionCard)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1112 */;
-import intl9 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import native from "native" /* 1188 */;
-import ChannelConstants from "ChannelConstants" /* 2058 */;
 import PremiumUtils from "PremiumUtils" /* 4534 */;
 import LinkingDefault from "Linking" /* 4571 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
 import Pressables from "Pressables" /* 5916 */;
 import GuildIconDefault from "GuildIcon" /* 5978 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9222 */;
+import _modDef9222 from "module_9222" /* 9222 */;
 import FormSeparatorDefault from "FormSeparator" /* 15050 */;
 import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 15056 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import _slicedToArray_mod from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import Constants from "Constants" /* 1085 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let c3, c4, dependencyMap, importDefault, navigation;
-
-let c9;
-let closure_12;
-let items;
-let map1;
-let metroImportAll;
-let obj10;
-let obj2;
-let obj3;
-let obj4;
-let obj5;
-let obj6;
-let obj7;
-let obj8;
-let obj9;
-let unpackModuleId;
+require = fn;
 function CardBody(isTrial) {
-  let GappedList;
-  let _undefined;
-  let buttonDivider;
-  let c5;
-  let intl;
-  let intl2;
-  let intl3;
-  let intl4;
-  let intl5;
-  let intl6;
-  let intl7;
-  let intl8;
-  let isCancelled;
-  let isPastDue;
-  let items;
-  let items1;
-  let items2;
-  let items3;
-  let items4;
-  let memberSince;
-  let nextRenewalDate;
-  let nextRenewalLabel;
-  let obj10;
-  let obj11;
-  let obj15;
-  let onCancelSubscription;
-  let prop;
-  let subscriptionPrice;
-  let tmp13Result;
-  let tmp2Result11;
-  let tmp2Result7;
-  let tmp6;
   isTrial = isTrial.isTrial;
   const subscription = isTrial.subscription;
   const guildId = isTrial.guildId;
   _slicedToArray = undefined;
   let analyticsLocations;
-  let obj = function _handleResubscribe() {
-    obj = _asyncToGenerator(async () => {
-      let closure_1;
-      let closure_2;
-      let intl;
-      let intl2;
-      function openResubsribedAlert() {
-        let paths;
-        obj = closure_1_1(closure_1_3[18]);
-        const obj2 = {
-          importer() {
-            const promise = closure_1_0(paths[20])(paths[19], paths.paths);
-            return promise.then((result) => {
-              let closure_0 = result.default;
-              return (arg0) => {
-                obj = {};
-                const merged = Object.assign(arg0);
-                return closure_2_11(closure_0, obj);
-              };
-            });
-          },
-          isDismissable: false
-        };
-        obj.openLazy(obj2);
-      }
-      if (c5 === 2) {
-        c5 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          let obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+  closure_7 = async function _handleResubscribe() {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          let closure_0;
-          let show;
-          c5 = 2;
-          if (0 === c4) {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_128_0 = undefined;
+            if (isTrial) {
+              const obj5 = { body: null, confirmText: null, isDismissable: true };
+              const intl = tmp5(1126).intl;
+              obj5.body = intl.string(tmp5(1126).t.NL7DFi);
+              const intl2 = tmp5(1126).intl;
+              obj5.confirmText = intl2.string(tmp5(1126).t["NX+WJN"]);
+              tmp3(5715).show(obj5);
+              c5 = 3;
+              const obj6 = tmp3(5715);
+            } else {
+              dependencyMap = 1;
+              _slicedToArray(true);
+              closure_128_0 = false;
+              if (tmp46) {
+                c4 = 3;
+                c5 = 1;
+                const obj7 = { value: resubscribeSubscription(), done: false };
+                return obj7;
+              } else {
+                c4 = 2;
+                c5 = 1;
+                const obj8 = { value: tmp38(5411).resubscribeToSubscription(tmp45, analyticsLocations), done: false };
+                return obj8;
+              }
+            }
+          }
+        } else if (1 === tmp8) {
+          dependencyMap = 0;
+          closure_129_5(false);
+          throw tmp38;
+        } else {
+          if (2 === tmp8) {
             if (arg0 === 1) {
               c5 = 3;
               throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              closure_0 = undefined;
-              if (isTrial) {
-                show = tmp(c3[18]).show;
-                const obj5 = { body: intl.string(show(c3[11]).t.NL7DFi), confirmText: intl2.string(show(c3[11]).t["NX+WJN"]), isDismissable: true };
-                const tmp28 = tmp(c3[18]);
-                intl = show(c3[11]).intl;
-                intl2 = show(c3[11]).intl;
-                show(obj5);
-              } else {
-                c3 = 1;
-                _undefined(true);
-                closure_0 = false;
-                if (tmp38) {
-                  show = resubscribeSubscription();
-                  c4 = 3;
-                  c5 = 1;
-                  const obj6 = { value: show, done: false };
-                  return obj6;
-                } else {
-                  const obj3 = tmp31(c3[23]);
-                  show = obj3.resubscribeToSubscription(tmp37, analyticsLocations);
-                  c4 = 2;
-                  c5 = 1;
-                  const obj7 = { value: show, done: false };
-                  return obj7;
-                }
-              }
+            } else if (arg0 !== 2) {
+              closure_128_0 = true;
             }
-          } else if (1 === c4) {
-            c3 = 0;
-            show = closure_129_5(false);
-            throw tmp31;
-          } else {
-            if (2 === c4) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c3 = 0;
-                closure_129_5(false);
-                c5 = 3;
-                const obj8 = { value, done: true };
-                return obj8;
-              } else {
-                closure_0 = true;
-              }
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 0;
-              show = closure_129_5(false);
-              c5 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              closure_0 = value;
-            }
-            show = closure_0;
-            if (show) {
-              openResubsribedAlert();
-            }
-            c3 = 0;
-            closure_129_5(false);
-          }
-          c5 = 3;
-          return { value: "IconComponent", done: null };
-        } catch (tmp31) {
-          if (0 === c3) {
+          } else if (arg0 === 1) {
             c5 = 3;
-            throw tmp31;
+            throw value;
+          } else if (arg0 === 2) {
+            dependencyMap = 0;
+            closure_129_5(false);
+            c5 = 3;
+            const obj = { value, done: true };
+            return obj;
           } else {
-            c4 = 1;
+            closure_128_0 = value;
           }
+          if (closure_128_0) {
+            (function openResubsribedAlert() {
+              closure_1_1(dependencyMap[18]).openLazy({
+                importer() {
+                  return closure_1_0(paths[20])(paths[19], paths.paths).then((result) => {
+                    closure_0 = result.default;
+                    return () => { ... };
+                  });
+                },
+                isDismissable: false
+              });
+            })();
+          }
+          dependencyMap = 0;
+          closure_129_5(false);
+        }
+        dependencyMap = 0;
+        closure_129_5(false);
+        c5 = 3;
+        const obj9 = { value, done: true };
+        return obj9;
+      } catch (tmp38) {
+        if (tmp4 === dependencyMap) {
+          c5 = tmp2;
+          throw tmp38;
+        } else {
+          c4 = tmp;
         }
       }
-    });
-    return obj(...arguments);
+    }
   };
   ({ isCancelled, isPastDue, memberSince, nextRenewalDate, nextRenewalLabel, onCancelSubscription, subscriptionPrice } = isTrial);
   const tmp = closure_14();
   dependencyMap = tmp;
-  const tmp3 = dependencyMap;
-  obj = subscription(8900);
-  let resubscribeSubscription = obj.useResubscribeSubscription(subscription.id);
+  let resubscribeSubscription = subscription(8900).useResubscribeSubscription(subscription.id);
   resubscribeSubscription = resubscribeSubscription.resubscribeSubscription;
-  const nativePaymentsConnected = resubscribeSubscription.nativePaymentsConnected;
-  [tmp6, c5] = _slicedToArray(analyticsLocations.useState(false), 2);
-  const tmp5 = _slicedToArray(analyticsLocations.useState(false), 2);
+  let obj = subscription(8900);
+  [tmp6, c5] = analyticsLocations.useState(false);
   analyticsLocations = subscription(6664)().analyticsLocations;
-  let obj2 = { style: tmp.cardContent, children: items2 };
+  let obj2 = { style: tmp.cardContent, children: null };
   let tmp7Result = null;
   if (isPastDue) {
-    let obj3 = { children: items1 };
-    let obj4 = { style: tmp.paymentOverDueWarning, children: items };
-    size = { color: subscription(587).unsafe_rawColors.YELLOW_300, width: 16, height: 16 };
-    const WarningCircle = isTrial(1188).WarningCircle;
-    items = [closure_11(WarningCircle, size), closure_11(isTrial(1188).Spacer, { size: 8 }), ];
-    let obj5 = { variant: "text-sm/medium", color: "interactive-text-active", children: intl.string(isTrial(1126).t.eaqlau) };
-    const Text = isTrial(4892).Text;
-    intl = isTrial(1126).intl;
-    items[2] = closure_11(Text, obj5);
-    items1 = [closure_12(tmp8, obj4), closure_11(isTrial(1188).Spacer, { size: 12 })];
+    const obj3 = { children: null };
+    let obj4 = { style: tmp.paymentOverDueWarning, children: null };
+    const size = { color: tmp2(587).unsafe_rawColors.YELLOW_300, width: 16, height: 16 };
+    const items = [closure_11(isTrial(1188).WarningCircle, size), closure_11(isTrial(1188).Spacer, { size: 8 }), ];
+    let obj5 = { variant: "text-sm/medium", color: "interactive-text-active", children: null };
+    let intl = isTrial(1126).intl;
+    obj5.children = intl.string(isTrial(1126).t.eaqlau);
+    items[2] = closure_11(isTrial(4892).Text, obj5);
+    obj4.children = items;
+    const items1 = [closure_12(tmp8, obj4), closure_11(isTrial(1188).Spacer, { size: 12 })];
+    obj3.children = items1;
     tmp7Result = closure_12(closure_13, obj3);
   }
-  items2 = [tmp7Result, , , , ];
-  let obj6 = { title: intl2.string(isTrial(1126).t.dltUMH), icon: tmp2Result7, onPressIcon: prop, children: subscriptionPrice };
-  const tmp2Result = subscription(15053);
-  intl2 = isTrial(1126).intl;
-  tmp2Result7 = undefined;
+  const items2 = [tmp7Result, , , , ];
+  let obj6 = { title: null, icon: null, onPressIcon: null, children: null };
+  const tmp5 = _slicedToArray(analyticsLocations.useState(false), 2);
+  let intl2 = isTrial(1126).intl;
+  obj6.title = intl2.string(isTrial(1126).t.dltUMH);
+  let tmp2Result7;
   if (isTrial) {
     tmp2Result7 = tmp2(4821);
   }
-  prop = undefined;
+  obj6.icon = tmp2Result7;
+  let prop;
   if (isTrial) {
     prop = tmp15(4573).presentGuildRoleSubscriptionTrialTierMonthCost;
   }
-  items2[1] = closure_11(tmp2Result, obj6);
+  obj6.onPressIcon = prop;
+  obj6.children = subscriptionPrice;
+  items2[1] = closure_11(subscription(15053), obj6);
   items2[2] = closure_11(isTrial(1188).Spacer, { size: 16 });
-  let obj7 = { style: tmp.cardRow, children: items3 };
-  items3 = [closure_11(subscription(15053), { title: nextRenewalLabel, children: nextRenewalDate }), closure_11(tmp15(1188).Spacer, { size: 8 }), ];
-  let obj8 = { title: intl3.string(tmp15(1126).t.AOcwWB), children: memberSince };
-  const tmp2Result8 = subscription(15053);
-  intl3 = tmp15(1126).intl;
-  items3[2] = closure_11(tmp2Result8, obj8);
-  items2[3] = closure_12(obj, obj7);
-  const obj9 = { inset: true, titleViewStyle: tmp.manageSection, title: intl4.string(isTrial(1126).t["4neDM+"]), children: closure_11(obj, obj10) };
-  const FormSection = tmp15(8924).FormSection;
-  intl4 = tmp15(1126).intl;
-  obj10 = { style: tmp.buttonsContainer, children: closure_12(GappedList, obj11) };
-  obj11 = {
+  let obj7 = { style: tmp.cardRow, children: null };
+  const items3 = [closure_11(subscription(15053), { title: nextRenewalLabel, children: nextRenewalDate }), closure_11(isTrial(1188).Spacer, { size: 8 }), ];
+  let obj8 = { title: null, children: null };
+  const tmp2Result = subscription(15053);
+  const intl3 = tmp15(1126).intl;
+  obj8.title = intl3.string(isTrial(1126).t.AOcwWB);
+  obj8.children = memberSince;
+  items3[2] = closure_11(subscription(15053), obj8);
+  obj7.children = items3;
+  items2[3] = closure_12(closure_7, obj7);
+  let obj9 = { inset: true, titleViewStyle: tmp.manageSection, title: null, children: null };
+  const intl4 = tmp15(1126).intl;
+  obj9.title = intl4.string(isTrial(1126).t["4neDM+"]);
+  const obj10 = { style: tmp.buttonsContainer, children: null };
+  const obj11 = {
     renderGap() {
-      obj = { style: buttonDivider.buttonDivider };
-      return unpackModuleId(View, obj);
+      return closure_2_11(View, { style: buttonDivider.buttonDivider });
     },
-    children: items4
+    children: null
   };
-  GappedList = tmp15(9966).GappedList;
-  const obj12 = {
-    text: intl5.string(isTrial(1126).t["7spYft"]),
-    onPress: function handleUpdatePaymentMethod() {
-      let intl;
-      let intl2;
-      if (null != subscription) {
-        if (subscription.isPurchasedViaAppleGeneric) {
-          const openURL = LinkingDefault.openURL;
-          LinkingDefault;
-          const obj2 = PremiumUtils;
-          openURL(obj2.getExternalSubscriptionMethodUrl(subscription.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"));
-        } else {
-          obj = { body: intl.string(intl9.t.fmm9jo), confirmText: intl2.string(intl9.t["NX+WJN"]), isDismissable: true };
-          const show = actions_AlertActionCreatorsDefault.show;
-          actions_AlertActionCreatorsDefault;
-          intl = intl9.intl;
-          intl2 = intl9.intl;
-          show(obj);
-        }
+  const obj12 = { text: null, onPress: null };
+  const tmp2Result8 = subscription(15053);
+  const intl5 = tmp15(1126).intl;
+  obj12.text = intl5.string(isTrial(1126).t["7spYft"]);
+  obj12.onPress = function handleUpdatePaymentMethod() {
+    if (null != subscription) {
+      if (subscription.isPurchasedViaAppleGeneric) {
+        const tmp14Result = LinkingDefault;
+        tmp14Result.openURL(PremiumUtils.getExternalSubscriptionMethodUrl(subscription.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"));
+      } else {
+        const obj = { body: null, confirmText: null, isDismissable: true };
+        const intl = util.intl;
+        obj.body = intl.string(util.t.fmm9jo);
+        const intl2 = util.intl;
+        obj.confirmText = intl2.string(util.t["NX+WJN"]);
+        actions_AlertActionCreatorsDefault.show(obj);
+        const tmp14Result2 = actions_AlertActionCreatorsDefault;
       }
     }
   };
+  const items4 = [closure_11(subscription(15054), obj12), , ];
+  const obj13 = { text: null, onPress: null };
   const tmp2Result9 = subscription(15054);
-  intl5 = tmp15(1126).intl;
-  items4 = [closure_11(tmp2Result9, obj12), , ];
-  const obj13 = {
-    text: intl6.string(isTrial(1126).t.FRbWR8),
-    onPress: function handleChangeTier() {
-      obj = router_utils;
-      obj.transitionTo(metroImportAll.CHANNEL(guildId, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
-    }
+  const intl6 = tmp15(1126).intl;
+  obj13.text = intl6.string(isTrial(1126).t.FRbWR8);
+  obj13.onPress = function handleChangeTier() {
+    router_utils.transitionTo(closure_2_8.CHANNEL(guildId, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
   };
-  const tmp2Result10 = subscription(15054);
-  intl6 = tmp15(1126).intl;
-  items4[1] = closure_11(tmp2Result10, obj13);
+  items4[1] = closure_11(subscription(15054), obj13);
   if (isCancelled) {
-    const obj14 = { style: tmp.resubscribeButtonContainer, children: closure_11(tmp2Result11, obj15) };
-    obj15 = {
-      text: intl8.string(isTrial(1126).t.iIvF2z),
-      onPress: function handleResubscribe() {
-          return obj(...arguments);
-        },
-      loading: tmp6
+    const obj14 = { style: tmp.resubscribeButtonContainer, children: null };
+    const obj15 = { text: null, onPress: null, loading: null };
+    const intl8 = tmp15(1126).intl;
+    obj15.text = intl8.string(tmp15(1126).t.iIvF2z);
+    obj15.onPress = function handleResubscribe() {
+      const self = this;
+      const apply = closure_7.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     };
-    tmp2Result11 = subscription(9916);
-    intl8 = tmp15(1126).intl;
-    tmp13Result = closure_11(tmp8, obj14);
+    obj15.loading = tmp6;
+    obj14.children = closure_11(tmp2(9916), obj15);
+    let tmp13Result = closure_11(tmp8, obj14);
+    const tmp2Result11 = tmp2(9916);
   } else {
-    const obj16 = { text: intl7.string(isTrial(1126).t.Dx0lF7), onPress: onCancelSubscription };
-    const tmp2Result12 = subscription(15054);
-    intl7 = tmp15(1126).intl;
-    tmp13Result = closure_11(tmp2Result12, obj16);
+    const obj16 = { text: null, onPress: null };
+    const intl7 = tmp15(1126).intl;
+    obj16.text = intl7.string(tmp15(1126).t.Dx0lF7);
+    obj16.onPress = onCancelSubscription;
+    tmp13Result = closure_11(tmp2(15054), obj16);
+    const tmp2Result12 = tmp2(15054);
   }
   items4[2] = tmp13Result;
-  items2[4] = closure_11(FormSection, obj9);
-  return closure_12(obj, obj2);
+  obj11.children = items4;
+  obj10.children = closure_12(isTrial(9966).GappedList, obj11);
+  obj9.children = closure_11(closure_7, obj10);
+  items2[4] = closure_11(isTrial(8924).FormSection, obj9);
+  obj2.children = items2;
+  return closure_12(closure_7, obj2);
 }
-let _slicedToArray = _slicedToArray_mod;
-const View = react_native.View;
-({ Routes: metroImportAll, UserSettingsSections: c9 } = Constants);
-const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
-({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { container: obj2, cardContent: { padding: 16 }, buttonsContainer: obj3, buttonDivider: obj4, resubscribeButtonContainer: { padding: 16 }, separator: { paddingHorizontal: 16 }, header: obj5, headerContent: { padding: 16, alignItems: "center", flexDirection: "row" }, headerTitlesContainer: { alignSelf: "stretch", flexGrow: 1, flexShrink: 1, paddingHorizontal: 16 }, expandIcon: obj6, expandIconExpanded: obj7, cardRow: { flexDirection: "row" }, manageSection: { paddingTop: 16 }, paymentOverDueWarning: { flexDirection: "row", width: "90%" }, headerStatusContainer: { paddingVertical: 4, paddingHorizontal: 18, flexDirection: "row", alignItems: "center" }, headerStatusCancel: obj8, headerStatusTrial: obj9, headerStatusPastDue: obj10 };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm };
-createStyles = createStyles.createStyles;
-obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
-obj4 = { width: "100%", borderBottomWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginLeft: 16, marginTop: -1 };
-obj5 = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
-obj6 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj7 = { transform: items };
-items = [{ rotate: "180deg" }];
-obj8 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
-obj9 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
-obj10 = { backgroundColor: nativeDefault.colors.STATUS_WARNING };
-let closure_14 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+const View = fn(17).View;
+const Constants = fn(1085);
+({ Routes: closure_8, UserSettingsSections: closure_9 } = Constants);
+const StaticChannelRoute = fn(2058).StaticChannelRoute;
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, cardContent: { padding: 16 }, buttonsContainer: null, buttonDivider: null, resubscribeButtonContainer: null, separator: null, header: null, headerContent: null, headerTitlesContainer: null, expandIcon: null, expandIconExpanded: null, cardRow: null, manageSection: null, paymentOverDueWarning: null, headerStatusContainer: null, headerStatusCancel: null, headerStatusTrial: null, headerStatusPastDue: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm };
+obj2.buttonsContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
+obj2.buttonDivider = { width: "100%", borderBottomWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginLeft: 16, marginTop: -1 };
+obj2.resubscribeButtonContainer = { padding: 16 };
+obj2.separator = { paddingHorizontal: 16 };
+let obj5 = { width: "100%", borderBottomWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginLeft: 16, marginTop: -1 };
+obj2.header = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
+obj2.headerContent = { padding: 16, alignItems: "center", flexDirection: "row" };
+obj2.headerTitlesContainer = { alignSelf: "stretch", flexGrow: 1, flexShrink: 1, paddingHorizontal: 16 };
+let obj6 = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
+obj2.expandIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let obj8 = { transform: null };
+let items = [{ rotate: "180deg" }];
+obj8.transform = items;
+obj2.expandIconExpanded = obj8;
+obj2.cardRow = { flexDirection: "row" };
+obj2.manageSection = { paddingTop: 16 };
+obj2.paymentOverDueWarning = { flexDirection: "row", width: "90%" };
+obj2.headerStatusContainer = { paddingVertical: 4, paddingHorizontal: 18, flexDirection: "row", alignItems: "center" };
+let obj7 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+obj2.headerStatusCancel = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
+let obj9 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
+obj2.headerStatusTrial = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+let obj10 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+obj2.headerStatusPastDue = { backgroundColor: nativeDefault.colors.STATUS_WARNING };
+let closure_14 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let flag;
-  let headerStatusPastDue;
-  let isCancelled;
-  let isPastDue;
-  let isTrial;
-  let str;
-  const obj = react2;
-  const cResult = obj.c(12);
+  const cResult = c.c(12);
   ({ isCancelled, isTrial, isPastDue } = arg0);
   const tmp4 = closure_14();
   if (isCancelled) {
-    let first;
     const _Symbol3 = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl3 = intl9.intl;
-      const stringResult = intl3.string(intl9.t["7uFZGt"]);
+      const intl3 = util.intl;
+      const stringResult = intl3.string(util.t["7uFZGt"]);
       cResult[0] = stringResult;
-      first = stringResult;
+      let first = stringResult;
     } else {
       first = cResult[0];
     }
-    headerStatusPastDue = tmp4.headerStatusCancel;
-    flag = true;
-    str = first;
-  } else if (isTrial) {
-    let tmp9;
-    const _Symbol2 = Symbol;
-    if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl2 = intl9.intl;
-      const stringResult1 = intl2.string(intl9.t["6anton"]);
-      cResult[1] = stringResult1;
-      tmp9 = stringResult1;
-    } else {
-      tmp9 = cResult[1];
-    }
-    headerStatusPastDue = tmp4.headerStatusTrial;
-    flag = true;
-    str = tmp9;
+    const headerStatusCancel = tmp4.headerStatusCancel;
   } else {
-    str = "";
-    flag = true;
-    if (isPastDue) {
-      let tmp6;
-      const _Symbol = Symbol;
-      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = intl9.intl;
-        const stringResult2 = intl.string(intl9.t.uENdgb);
-        cResult[2] = stringResult2;
-        tmp6 = stringResult2;
+    if (isTrial) {
+      const _Symbol2 = Symbol;
+      if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+        const intl2 = util.intl;
+        const stringResult1 = intl2.string(util.t["6anton"]);
+        cResult[1] = stringResult1;
+        let tmp9 = stringResult1;
       } else {
-        tmp6 = cResult[2];
+        tmp9 = cResult[1];
       }
-      headerStatusPastDue = tmp4.headerStatusPastDue;
-      flag = false;
-      str = tmp6;
-    }
-  }
-  if ("" === str) {
-    return null;
-  } else {
-    if (cResult[3] === headerStatusPastDue) {
-      let tmp14;
-      if (cResult[4] === tmp4.headerStatusContainer) {
-        tmp14 = cResult[5];
-      }
-      let str5 = "text-overlay-dark";
-      if (flag) {
-        str5 = "text-overlay-light";
-      }
-      if (cResult[6] === str) {
-        let tmp15;
-        if (cResult[7] === str5) {
-          tmp15 = cResult[8];
+      let headerStatusPastDue = tmp4.headerStatusTrial;
+      let flag = true;
+      let str = tmp9;
+    } else {
+      str = "";
+      flag = true;
+      if (isPastDue) {
+        const _Symbol = Symbol;
+        if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+          const intl = util.intl;
+          const stringResult2 = intl.string(util.t.uENdgb);
+          cResult[2] = stringResult2;
+          let tmp6 = stringResult2;
+        } else {
+          tmp6 = cResult[2];
         }
-        if (cResult[9] === tmp14) {
-          let tmp18;
-          if (cResult[10] === tmp15) {
-            tmp18 = cResult[11];
+        headerStatusPastDue = tmp4.headerStatusPastDue;
+        flag = false;
+        str = tmp6;
+      }
+    }
+    if ("" === str) {
+      return null;
+    } else {
+      if (cResult[3] === headerStatusPastDue) {
+        if (cResult[4] === tmp4.headerStatusContainer) {
+          let tmp15 = cResult[5];
+        }
+        let str6 = "text-overlay-dark";
+        if (flag) {
+          str6 = "text-overlay-light";
+        }
+        if (cResult[6] === str) {
+          if (cResult[7] === str6) {
+            let tmp16 = cResult[8];
           }
-          return tmp18;
+          if (cResult[9] === tmp15) {
+            if (cResult[10] === tmp16) {
+              let tmp19 = cResult[11];
+            }
+            return tmp19;
+          }
+          const obj2 = { style: tmp15, children: tmp16 };
+          const tmp22 = closure_1_11(View, obj2);
+          cResult[9] = tmp15;
+          cResult[10] = tmp16;
+          cResult[11] = tmp22;
+          tmp19 = tmp22;
         }
-        const obj2 = { style: tmp14, children: tmp15 };
-        const tmp21 = unpackModuleId(View, obj2);
-        cResult[9] = tmp14;
-        cResult[10] = tmp15;
-        cResult[11] = tmp21;
-        tmp18 = tmp21;
+        const obj3 = { variant: "text-xs/semibold", color: str6, children: str };
+        const tmp18 = closure_1_11(Text_Text.Text, obj3);
+        cResult[6] = str;
+        cResult[7] = str6;
+        cResult[8] = tmp18;
+        tmp16 = tmp18;
       }
-      const obj3 = { variant: "text-xs/semibold", color: str5, children: str };
-      const tmp17 = unpackModuleId(Text_Text.Text, obj3);
-      cResult[6] = str;
-      cResult[7] = str5;
-      cResult[8] = tmp17;
-      tmp15 = tmp17;
+      const items = [tmp4.headerStatusContainer, headerStatusPastDue];
+      cResult[3] = headerStatusPastDue;
+      cResult[4] = tmp4.headerStatusContainer;
+      cResult[5] = items;
+      tmp15 = items;
     }
-    const items = [tmp4.headerStatusContainer, headerStatusPastDue];
-    cResult[3] = headerStatusPastDue;
-    cResult[4] = tmp4.headerStatusContainer;
-    cResult[5] = items;
-    tmp14 = items;
   }
 }) : ((arg0) => {
-  let Text;
-  let flag;
-  let headerStatusPastDue;
-  let isCancelled;
-  let isPastDue;
-  let isTrial;
-  let items;
-  let obj2;
-  let str;
   ({ isCancelled, isTrial, isPastDue } = arg0);
   const tmp = closure_14();
   if (isCancelled) {
-    const intl3 = intl9.intl;
-    str = intl3.string(intl9.t["7uFZGt"]);
-    headerStatusPastDue = tmp.headerStatusCancel;
-    flag = true;
+    const intl3 = util.intl;
+    let str = intl3.string(util.t["7uFZGt"]);
+    let headerStatusPastDue = tmp.headerStatusCancel;
+    let flag = true;
   } else if (isTrial) {
-    const intl2 = intl9.intl;
-    str = intl2.string(intl9.t["6anton"]);
+    const intl2 = util.intl;
+    str = intl2.string(util.t["6anton"]);
     headerStatusPastDue = tmp.headerStatusTrial;
     flag = true;
   } else {
     str = "";
     flag = true;
     if (isPastDue) {
-      const intl = intl9.intl;
-      str = intl.string(intl9.t.uENdgb);
+      const intl = util.intl;
+      str = intl.string(util.t.uENdgb);
       headerStatusPastDue = tmp.headerStatusPastDue;
       flag = false;
     }
   }
   let tmp9Result = null;
   if ("" !== str) {
-    const obj = { style: items, children: unpackModuleId(Text, obj2) };
-    items = [tmp.headerStatusContainer, headerStatusPastDue];
+    const obj = { style: null, children: null };
+    const items = [tmp.headerStatusContainer, headerStatusPastDue];
+    obj.style = items;
     let str2 = "text-overlay-dark";
-    Text = Text_Text.Text;
     if (flag) {
       str2 = "text-overlay-light";
     }
-    obj2 = { variant: "text-xs/semibold", color: str2, children: str };
-    tmp9Result = unpackModuleId(View, obj);
+    const obj2 = { variant: "text-xs/semibold", color: str2, children: str };
+    obj.children = closure_1_11(Text_Text.Text, obj2);
+    tmp9Result = closure_1_11(View, obj);
   }
   return tmp9Result;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let expanded;
-  let guild;
-  let isCancelled;
-  let isPastDue;
-  let isTrial;
-  let items;
-  let items1;
-  let items2;
-  let items3;
-  let listing;
-  let onToggleExpanded;
-  const obj = react2;
-  const cResult = obj.c(30);
+  const cResult = c.c(30);
   ({ expanded, guild, isCancelled, isTrial, isPastDue, listing, onToggleExpanded } = arg0);
   const tmp4 = closure_14();
   if (cResult[0] === isCancelled) {
     if (cResult[1] === isPastDue) {
-      let tmp5;
-      let tmp7;
-      let tmp11;
-      let tmp15;
-      let tmp21;
-      let tmp24;
       if (cResult[2] === isTrial) {
-        tmp5 = cResult[3];
+        let tmp5 = cResult[3];
       }
       if (cResult[4] !== guild) {
         const obj2 = { guild };
-        const tmp10 = unpackModuleId(GuildIconDefault, obj2);
+        const tmp10 = closure_1_11(GuildIconDefault, obj2);
         cResult[4] = guild;
         cResult[5] = tmp10;
-        tmp7 = tmp10;
+        let tmp7 = tmp10;
       } else {
         tmp7 = cResult[5];
       }
       if (cResult[6] !== listing.name) {
         const obj3 = { ellipsizeMode: "tail", lineClamp: 2, variant: "text-md/semibold", color: "interactive-text-active", children: listing.name };
-        const tmp13 = unpackModuleId(Text_Text.Text, obj3);
+        const tmp13 = closure_1_11(Text_Text.Text, obj3);
         cResult[6] = listing.name;
         cResult[7] = tmp13;
-        tmp11 = tmp13;
+        let tmp11 = tmp13;
       } else {
         tmp11 = cResult[7];
       }
       const _Symbol = Symbol;
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp17 = unpackModuleId(native.Spacer, { size: 2 });
+        const tmp17 = closure_1_11(native.Spacer, { size: 2 });
         cResult[8] = tmp17;
-        tmp15 = tmp17;
+        let tmp15 = tmp17;
       } else {
         tmp15 = cResult[8];
       }
       let name;
-      const tmp18 = cResult[9];
       if (guild != null) {
         name = guild.name;
       }
-      if (tmp18 !== name) {
+      if (cResult[9] !== name) {
         let name1;
         if (guild != null) {
           name1 = guild.name;
         }
         if (name1 == null) {
-          const intl = intl9.intl;
-          name1 = intl.string(intl9.t["He+cmd"]);
+          const intl = util.intl;
+          name1 = intl.string(util.t["He+cmd"]);
         }
         let name2;
         if (guild != null) {
@@ -569,193 +477,172 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
         cResult[9] = name2;
         cResult[10] = name1;
-        tmp21 = name1;
+        let tmp20 = name1;
       } else {
-        tmp21 = cResult[10];
+        tmp20 = cResult[10];
       }
-      if (cResult[11] !== tmp21) {
-        const obj4 = { variant: "text-sm/medium", color: "interactive-text-default", children: tmp21 };
-        const tmp26 = unpackModuleId(Text_Text.Text, obj4);
-        cResult[11] = tmp21;
-        cResult[12] = tmp26;
-        tmp24 = tmp26;
+      if (cResult[11] !== tmp20) {
+        const obj4 = { variant: "text-sm/medium", color: "interactive-text-default", children: tmp20 };
+        const tmp25 = closure_1_11(Text_Text.Text, obj4);
+        cResult[11] = tmp20;
+        cResult[12] = tmp25;
+        let tmp23 = tmp25;
       } else {
-        tmp24 = cResult[12];
+        tmp23 = cResult[12];
       }
       if (cResult[13] === tmp4.headerTitlesContainer) {
         if (cResult[14] === tmp11) {
-          let tmp27;
-          if (cResult[15] === tmp24) {
-            tmp27 = cResult[16];
+          if (cResult[15] === tmp23) {
+            let tmp26 = cResult[16];
           }
           if (expanded) {
             expanded = tmp4.expandIconExpanded;
           }
           if (cResult[17] === tmp4.expandIcon) {
-            let tmp31;
             if (cResult[18] === expanded) {
-              tmp31 = cResult[19];
+              let tmp30 = cResult[19];
             }
             if (cResult[20] === tmp4.headerContent) {
               if (cResult[21] === tmp7) {
-                if (cResult[22] === tmp27) {
-                  let tmp35;
-                  if (cResult[23] === tmp31) {
-                    tmp35 = cResult[24];
+                if (cResult[22] === tmp26) {
+                  if (cResult[23] === tmp30) {
+                    let tmp34 = cResult[24];
                   }
                   if (cResult[25] === onToggleExpanded) {
                     if (cResult[26] === tmp4.header) {
                       if (cResult[27] === tmp5) {
-                        let tmp39;
-                        if (cResult[28] === tmp35) {
-                          tmp39 = cResult[29];
+                        if (cResult[28] === tmp34) {
+                          let tmp38 = cResult[29];
                         }
-                        return tmp39;
+                        return tmp38;
                       }
                     }
                   }
-                  const obj5 = { style: tmp4.header, onPress: onToggleExpanded, children: items };
-                  items = [tmp5, tmp35];
-                  const tmp41 = closure_12(Pressables.PressableHighlight, obj5);
+                  const obj5 = { style: tmp4.header, onPress: onToggleExpanded, children: null };
+                  const items = [tmp5, tmp34];
+                  obj5.children = items;
+                  const tmp40 = __initData(Pressables.PressableHighlight, obj5);
                   cResult[25] = onToggleExpanded;
                   cResult[26] = tmp4.header;
                   cResult[27] = tmp5;
-                  cResult[28] = tmp35;
-                  cResult[29] = tmp41;
-                  tmp39 = tmp41;
+                  cResult[28] = tmp34;
+                  cResult[29] = tmp40;
+                  tmp38 = tmp40;
                 }
               }
             }
-            const obj6 = { style: tmp4.headerContent, children: items1 };
-            items1 = [tmp7, tmp27, tmp31];
-            const tmp38 = closure_12(View, obj6);
+            const obj6 = { style: tmp4.headerContent, children: null };
+            const items1 = [tmp7, tmp26, tmp30];
+            obj6.children = items1;
+            const tmp37 = __initData(View, obj6);
             cResult[20] = tmp4.headerContent;
             cResult[21] = tmp7;
-            cResult[22] = tmp27;
-            cResult[23] = tmp31;
-            cResult[24] = tmp38;
-            tmp35 = tmp38;
+            cResult[22] = tmp26;
+            cResult[23] = tmp30;
+            cResult[24] = tmp37;
+            tmp34 = tmp37;
           }
-          const obj7 = { style: items2, size: native.Icon.Sizes.MEDIUM, source: AssetRegistryDefault };
-          items2 = [tmp4.expandIcon, expanded];
-          const Icon = native.Icon;
-          const tmp34 = unpackModuleId(Icon, obj7);
+          const obj7 = { style: null, size: null, source: null };
+          const items2 = [tmp4.expandIcon, expanded];
+          obj7.style = items2;
+          obj7.size = native.Icon.Sizes.MEDIUM;
+          obj7.source = _modDef9222;
+          const tmp33 = closure_1_11(native.Icon, obj7);
           cResult[17] = tmp4.expandIcon;
           cResult[18] = expanded;
-          cResult[19] = tmp34;
-          tmp31 = tmp34;
+          cResult[19] = tmp33;
+          tmp30 = tmp33;
         }
       }
-      const obj8 = { style: tmp4.headerTitlesContainer, children: items3 };
-      items3 = [tmp11, tmp15, tmp24];
-      const tmp30 = closure_12(View, obj8);
+      const obj8 = { style: tmp4.headerTitlesContainer, children: null };
+      const items3 = [tmp11, tmp15, tmp23];
+      obj8.children = items3;
+      const tmp29 = __initData(View, obj8);
       cResult[13] = tmp4.headerTitlesContainer;
       cResult[14] = tmp11;
-      cResult[15] = tmp24;
-      cResult[16] = tmp30;
-      tmp27 = tmp30;
+      cResult[15] = tmp23;
+      cResult[16] = tmp29;
+      tmp26 = tmp29;
     }
   }
-  const tmp6 = unpackModuleId(closure_15, { isCancelled, isTrial, isPastDue });
+  const tmp6 = closure_1_11(closure_15, { isCancelled, isTrial, isPastDue });
   cResult[0] = isCancelled;
   cResult[1] = isPastDue;
   cResult[2] = isTrial;
   cResult[3] = tmp6;
   tmp5 = tmp6;
 }) : ((arg0) => {
-  let expanded;
-  let guild;
-  let isCancelled;
-  let isPastDue;
-  let isTrial;
-  let items;
-  let items1;
-  let items2;
-  let listing;
-  let onToggleExpanded;
   ({ expanded, guild } = arg0);
   ({ isCancelled, isTrial, isPastDue, listing, onToggleExpanded } = arg0);
   const tmp = closure_14();
-  const obj = { style: tmp.header, onPress: onToggleExpanded, children: items };
-  const PressableHighlight = Pressables.PressableHighlight;
-  items = [unpackModuleId(closure_15, { isCancelled, isTrial, isPastDue }), ];
-  const obj2 = { style: tmp.headerContent, children: items1 };
-  items1 = [unpackModuleId(GuildIconDefault, { guild }), , ];
-  const obj3 = { style: tmp.headerTitlesContainer, children: items2 };
-  items2 = [, , ];
-  const obj4 = { ellipsizeMode: "tail", lineClamp: 2, variant: "text-md/semibold", color: "interactive-text-active", children: listing.name };
-  items2[0] = unpackModuleId(Text_Text.Text, obj4);
-  items2[1] = unpackModuleId(native.Spacer, { size: 2 });
+  const obj = { style: tmp.header, onPress: onToggleExpanded, children: null };
+  const items = [closure_1_11(closure_15, { isCancelled, isTrial, isPastDue }), ];
+  const obj2 = { style: tmp.headerContent, children: null };
+  const items1 = [closure_1_11(GuildIconDefault, { guild }), , ];
+  const obj3 = { style: tmp.headerTitlesContainer, children: null };
+  const items2 = [closure_1_11(Text_Text.Text, { ellipsizeMode: "tail", lineClamp: 2, variant: "text-md/semibold", color: "interactive-text-active", children: listing.name }), closure_1_11(native.Spacer, { size: 2 }), ];
   let name;
-  const Text = Text_Text.Text;
   if (guild != null) {
     name = guild.name;
   }
   if (name == null) {
-    const intl = intl9.intl;
-    name = intl.string(intl9.t["He+cmd"]);
+    const intl = util.intl;
+    name = intl.string(util.t["He+cmd"]);
   }
-  items2[2] = unpackModuleId(Text, { variant: "text-sm/medium", color: "interactive-text-default", children: name });
-  items1[1] = closure_12(View, obj3);
+  items2[2] = closure_1_11(Text_Text.Text, { variant: "text-sm/medium", color: "interactive-text-default", children: name });
+  obj3.children = items2;
+  items1[1] = __initData(View, obj3);
   const items3 = [tmp.expandIcon, ];
-  const Icon = native.Icon;
   if (expanded) {
     expanded = tmp.expandIconExpanded;
   }
   items3[1] = expanded;
-  const obj5 = { style: items3, size: native.Icon.Sizes.MEDIUM, source: AssetRegistryDefault };
-  items1[2] = unpackModuleId(Icon, obj5);
-  items[1] = closure_12(View, obj2);
-  return closure_12(PressableHighlight, obj);
+  items1[2] = closure_1_11(native.Icon, { style: items3, size: native.Icon.Sizes.MEDIUM, source: _modDef9222 });
+  obj2.children = items1;
+  items[1] = __initData(View, obj2);
+  obj.children = items;
+  return __initData(Pressables.PressableHighlight, obj);
 });
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp4;
-  const obj = react2;
-  const cResult = obj.c(2);
+  const cResult = c.c(2);
   const tmp3 = closure_14();
   if (cResult[0] !== tmp3.separator) {
     const obj2 = { style: tmp3.separator, withoutMargins: true };
-    const tmp7 = unpackModuleId(FormSeparatorDefault, obj2);
+    const tmp7 = closure_1_11(FormSeparatorDefault, obj2);
     cResult[0] = tmp3.separator;
     cResult[1] = tmp7;
-    tmp4 = tmp7;
+    let tmp4 = tmp7;
   } else {
     tmp4 = cResult[1];
   }
   return tmp4;
 }) : (() => {
-  const obj = { style: closure_14().separator, withoutMargins: true };
-  return unpackModuleId(FormSeparatorDefault, obj);
+  const tmp = closure_14();
+  return closure_1_11(FormSeparatorDefault, { style: closure_14().separator, withoutMargins: true });
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ManageSubscriptionCard(subscription) {
-  let expanded;
-  let groupListing;
-  let guild;
-  let handleToggleExpanded;
-  let id1;
-  let items;
-  let listing;
-  let subscriptionInfo;
-  let obj = subscription(576);
-  const cResult = obj.c(21);
+ReactCompilerGating = fn(558);
+let obj11 = { backgroundColor: nativeDefault.colors.STATUS_WARNING };
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/ManageSubscriptionCard.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ManageSubscriptionCard(subscription) {
+  const cResult = subscription(576).c(21);
   subscription = subscription.subscription;
-  const tmp2 = closure_14();
+  let container = closure_14();
+  const obj = subscription(576);
   ({ listing, guild, expanded, handleToggleExpanded, subscriptionInfo, groupListing } = navigation(15056)(subscription));
-  navigation(15056)(subscription);
-  const obj2 = subscription(1490);
-  navigation = obj2.useNavigation();
+  const tmp2 = navigation(15056)(subscription);
+  navigation = subscription(1490).useNavigation();
   if (cResult[0] === navigation) {
-    let tmp5;
     if (cResult[1] === subscription.id) {
-      tmp5 = cResult[2];
+      let tmp4 = cResult[2];
     }
-    let tmp7 = null;
+    let tmp6 = null;
     if (null != groupListing) {
-      tmp7 = null;
+      tmp6 = null;
       if (null != listing) {
-        tmp7 = null;
+        tmp6 = null;
         if (null != subscriptionInfo) {
           if (cResult[3] === expanded) {
             if (cResult[4] === guild) {
@@ -763,56 +650,53 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ManageSubscr
                 if (cResult[6] === listing) {
                   if (cResult[7] === subscriptionInfo.isCancelled) {
                     if (cResult[8] === subscriptionInfo.isPastDue) {
-                      let tmp8;
                       if (cResult[9] === subscriptionInfo.isTrial) {
-                        tmp8 = cResult[10];
+                        let tmp7 = cResult[10];
                       }
                       if (cResult[11] === expanded) {
                         let id;
-                        const tmp12 = cResult[12];
                         if (guild != null) {
                           id = guild.id;
                         }
-                        if (tmp12 === id) {
-                          if (cResult[13] === tmp5) {
+                        if (cResult[12] === id) {
+                          if (cResult[13] === tmp4) {
                             if (cResult[14] === subscription) {
-                              let tmp14;
                               if (cResult[15] === subscriptionInfo) {
-                                tmp14 = cResult[16];
+                                let tmp12 = cResult[16];
                               }
-                              if (cResult[17] === tmp2.container) {
-                                if (cResult[18] === tmp8) {
-                                  let tmp26;
-                                  if (cResult[19] === tmp14) {
-                                    tmp26 = cResult[20];
-                                  }
-                                  tmp7 = tmp26;
+                              if (cResult[17] === container.container) {
+                                if (cResult[18] === tmp7) {
                                 }
                               }
-                              const obj4 = { style: tmp2.container, children: items };
-                              items = [tmp8, tmp14];
-                              const tmp29 = closure_12(View, obj4);
-                              cResult[17] = tmp2.container;
-                              cResult[18] = tmp8;
-                              cResult[19] = tmp14;
-                              cResult[20] = tmp29;
-                              tmp26 = tmp29;
+                              const obj4 = { style: container.container, children: null };
+                              const items = [tmp7, tmp12];
+                              obj4.children = items;
+                              const tmp27 = closure_12(View, obj4);
+                              container = container.container;
+                              cResult[17] = container;
+                              cResult[18] = tmp7;
+                              cResult[19] = tmp12;
+                              cResult[20] = tmp27;
                             }
                           }
                         }
                       }
-                      let tmp16Result = expanded;
-                      if (tmp16Result) {
+                      let tmp14Result = expanded;
+                      if (expanded) {
                         const items1 = [closure_11(closure_17, {}), ];
-                        const obj5 = { guildId: id1, subscription, onCancelSubscription: tmp5 };
+                        const obj5 = {};
                         const merged = Object.assign(subscriptionInfo);
-                        id1 = undefined;
+                        let id1;
                         if (guild != null) {
                           id1 = guild.id;
                         }
-                        const obj6 = { children: items1 };
+                        const obj6 = { children: null };
+                        obj5.guildId = id1;
+                        obj5.subscription = subscription;
+                        obj5.onCancelSubscription = tmp4;
                         items1[1] = closure_11(CardBody, obj5);
-                        tmp16Result = closure_12(closure_13, obj6);
+                        obj6.children = items1;
+                        tmp14Result = closure_12(closure_13, obj6);
                       }
                       cResult[11] = expanded;
                       let id2;
@@ -820,20 +704,22 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ManageSubscr
                         id2 = guild.id;
                       }
                       cResult[12] = id2;
-                      cResult[13] = tmp5;
+                      cResult[13] = tmp4;
                       cResult[14] = subscription;
                       cResult[15] = subscriptionInfo;
-                      cResult[16] = tmp16Result;
-                      tmp14 = tmp16Result;
+                      cResult[16] = tmp14Result;
+                      tmp12 = tmp14Result;
                     }
                   }
                 }
               }
             }
           }
-          const obj10 = { expanded, guild, isCancelled: null, isTrial: null, isPastDue: null, listing, onToggleExpanded: handleToggleExpanded };
+          const obj10 = { expanded, guild, isCancelled: null, isTrial: null, isPastDue: null, listing: null, onToggleExpanded: null };
           ({ isCancelled: obj3.isCancelled, isTrial: obj3.isTrial, isPastDue: obj3.isPastDue } = subscriptionInfo);
-          const tmp11 = closure_11(closure_16, obj10);
+          obj10.listing = listing;
+          obj10.onToggleExpanded = handleToggleExpanded;
+          const tmp10 = closure_11(closure_16, obj10);
           cResult[3] = expanded;
           cResult[4] = guild;
           cResult[5] = handleToggleExpanded;
@@ -841,85 +727,73 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ManageSubscr
           cResult[7] = subscriptionInfo.isCancelled;
           cResult[8] = subscriptionInfo.isPastDue;
           cResult[9] = subscriptionInfo.isTrial;
-          cResult[10] = tmp11;
-          tmp8 = tmp11;
+          cResult[10] = tmp10;
+          tmp7 = tmp10;
         }
       }
     }
-    return tmp7;
+    return tmp6;
   }
   function handleCancelSubscription() {
-    const obj = {
+    navigation.push(constants.GUILD_ROLE_SUBSCRIPTIONS_CANCEL, {
       subscriptionId: subscription.id,
       onClose() {
         return navigation.pop();
       }
-    };
-    navigation.push(constants.GUILD_ROLE_SUBSCRIPTIONS_CANCEL, obj);
+    });
   }
   cResult[0] = navigation;
   cResult[1] = subscription.id;
   cResult[2] = handleCancelSubscription;
-  tmp5 = handleCancelSubscription;
+  tmp4 = handleCancelSubscription;
+  const obj2 = subscription(1490);
 }) : (function ManageSubscriptionCard(subscription) {
-  let closure_1;
-  let expanded;
-  let groupListing;
-  let guild;
-  let handleToggleExpanded;
-  let id;
-  let items;
-  let listing;
-  let subscriptionInfo;
   subscription = subscription.subscription;
-  const tmp = closure_14();
   const tmp2 = useManageSubscriptionCardDataDefault(subscription);
   ({ listing, guild, expanded, subscriptionInfo } = tmp2);
   ({ groupListing, handleToggleExpanded } = tmp2);
-  let obj = subscription(1490);
-  importDefault = obj.useNavigation();
+  const tmp = closure_14();
+  importDefault = subscription(1490).useNavigation();
   let tmp4Result = null;
   if (null != groupListing) {
     tmp4Result = null;
     if (null != listing) {
       tmp4Result = null;
       if (null != subscriptionInfo) {
-        const obj2 = { style: tmp.container, children: items };
-        const obj4 = { expanded, guild, isCancelled: null, isTrial: null, isPastDue: null, listing, onToggleExpanded: handleToggleExpanded };
+        const obj2 = { style: tmp.container, children: null };
+        const obj4 = { expanded, guild, isCancelled: null, isTrial: null, isPastDue: null, listing: null, onToggleExpanded: null };
         ({ isCancelled: obj3.isCancelled, isTrial: obj3.isTrial, isPastDue: obj3.isPastDue } = subscriptionInfo);
-        items = [closure_11(closure_16, obj4), ];
+        obj4.listing = listing;
+        obj4.onToggleExpanded = handleToggleExpanded;
+        const items = [closure_11(closure_16, obj4), ];
         if (expanded) {
           const items1 = [closure_11(closure_17, {}), ];
-          const obj5 = {
-            guildId: id,
-            subscription,
-            onCancelSubscription: function handleCancelSubscription() {
-                      const obj = {
-                        subscriptionId: subscription.id,
-                        onClose() {
-                          return closure_1_1.pop();
-                        }
-                      };
-                      closure_1.push(constants.GUILD_ROLE_SUBSCRIPTIONS_CANCEL, obj);
-                    }
-          };
+          const obj5 = {};
           const merged = Object.assign(subscriptionInfo);
-          id = undefined;
+          let id;
           if (guild != null) {
             id = guild.id;
           }
-          const obj9 = { children: items1 };
+          const obj9 = { children: null };
+          obj5.guildId = id;
+          obj5.subscription = subscription;
+          obj5.onCancelSubscription = function handleCancelSubscription() {
+            closure_1.push(constants.GUILD_ROLE_SUBSCRIPTIONS_CANCEL, {
+              subscriptionId: subscription.id,
+              onClose() {
+                return closure_1_1.pop();
+              }
+            });
+          };
           items1[1] = closure_11(CardBody, obj5);
+          obj9.children = items1;
           expanded = closure_12(closure_13, obj9);
         }
         items[1] = expanded;
+        obj2.children = items;
         tmp4Result = closure_12(View, obj2);
       }
     }
   }
   return tmp4Result;
 });
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/ManageSubscriptionCard.tsx");
-
-export default tmp5;

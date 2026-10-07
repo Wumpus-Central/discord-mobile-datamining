@@ -1,51 +1,37 @@
 // === Module 6582: VerifyPhone ===
 
 // Module 6582 (VerifyPhone)
-import Fragment from "Fragment" /* 21 */;
-import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
-import _slicedToArray_mod from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import size from "module_2" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let c2, c3, c5, c6;
+const require = globalThis.__r;
 
-let _asyncToGenerator = _asyncToGenerator_mod;
-let _slicedToArray = _slicedToArray_mod;
-const jsx = Fragment.jsx;
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/VerifyPhone.tsx");
 
 export default function VerifyPhone(phone) {
-  let backgroundStyle;
-  let closure_3;
-  let closure_4;
-  let disableKeyboardAvoidingView;
-  let error;
-  let first;
-  let first1;
-  let onCodeEnteredIntercept;
   phone = phone.phone;
+  _require = phone;
   let flag = phone.loading;
   if (flag === undefined) {
     flag = false;
   }
   ({ error, onCodeEnteredIntercept } = phone);
   const onVerified = phone.onVerified;
-  _asyncToGenerator = undefined;
   _slicedToArray = undefined;
   let onCodeEntered;
   ({ backgroundStyle, disableKeyboardAvoidingView } = phone);
-  [first, _asyncToGenerator] = onCodeEntered.useState(null);
-  [first1, _slicedToArray] = onCodeEntered.useState(false);
-  const useCallback = onCodeEntered.useCallback;
-  _asyncToGenerator(async (arg0) => {
-    let body;
-    let closure_2;
-    let obj3;
-    closure_0 = arg0;
+  const tmp = _slicedToArray(onCodeEntered.useState(null), 2);
+  asyncGeneratorStep = tmp[1];
+  [obj.disabled, _slicedToArray] = onCodeEntered.useState(false);
+  asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -55,9 +41,7 @@ export default function VerifyPhone(phone) {
         return { value: "IconComponent", done: null };
       }
     } else {
-      let c4;
       try {
-        let token;
         c6 = 2;
         if (0 === c5) {
           if (arg0 === 1) {
@@ -68,38 +52,34 @@ export default function VerifyPhone(phone) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            let closure_1 = tmp4;
-            token = undefined;
+            onCodeEnteredIntercept = tmp7;
+            closure_129_0 = closure_0;
+            let token;
             c4 = 1;
-            if (null != closure_1) {
+            if (null != onCodeEnteredIntercept) {
               c5 = 3;
               c6 = 1;
-              const obj5 = { value: closure_1(closure_0), done: false };
+              const obj5 = { value: onCodeEnteredIntercept(closure_0), done: false };
               return obj5;
             }
           }
         } else {
-          if (1 === c5) {
+          if (1 === tmp7) {
             c4 = 0;
-            body = body.body;
+            const body = tmp25.body;
             let message;
-            const tmp13 = body;
             if (body != null) {
               message = body.message;
             }
-            tmp13(message);
-          } else if (2 === c5) {
+            tmp25(message);
+            c6 = 3;
+          } else if (2 === tmp7) {
             if (arg0 === 1) {
               c6 = 3;
               throw value;
-            } else if (arg0 === 2) {
-              c4 = 0;
-              c6 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
-            } else {
+            } else if (arg0 !== 2) {
               token = value.token;
-              tmp(token);
+              tmp3(token);
               c4 = 0;
             }
           } else if (arg0 === 1) {
@@ -115,36 +95,41 @@ export default function VerifyPhone(phone) {
             c6 = 3;
             return { value: "IconComponent", done: null };
           }
+          c4 = 0;
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          const obj6 = { value, done: true };
+          return obj6;
         }
         c5 = 2;
         c6 = 1;
-        const obj7 = { value: obj3.verifyPhone(closure_0, closure_0, false), done: false };
-        obj3 = onCodeEnteredIntercept(onVerified[4]);
+        const obj7 = { value: onCodeEnteredIntercept(onVerified[4]).verifyPhone(closure_0, closure_129_0, false), done: false };
         return obj7;
-      } catch (tmp22) {
-        body = tmp22;
-        if (0 === c4) {
-          c6 = 3;
-          throw tmp22;
+      } catch (tmp25) {
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp25;
         } else {
-          c5 = 1;
+          c5 = tmp;
         }
       }
     }
   });
   const items = [onCodeEnteredIntercept, onVerified, phone];
-  onCodeEntered = useCallback(function() {
-    return closure_0(...arguments);
+  onCodeEntered = onCodeEntered.useCallback(function() {
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   }, items);
-  const useCallback2 = onCodeEntered.useCallback;
-  let closure_0 = _asyncToGenerator(async (arg0) => {
-    closure_0 = arg0;
+  _require = asyncGeneratorStep(async (arg0) => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp2 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -165,7 +150,7 @@ export default function VerifyPhone(phone) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            let closure_1 = tmp3;
+            closure_1 = tmp4;
             closure_1_4(true);
             c2 = 1;
             c3 = 1;
@@ -184,24 +169,37 @@ export default function VerifyPhone(phone) {
           c3 = 3;
           return { value: "IconComponent", done: null };
         }
-      } catch (tmp11) {
-        c3 = 3;
-        throw tmp11;
+      } catch (tmp12) {
+        c3 = tmp;
+        throw tmp12;
       }
     }
   });
   const items1 = [onCodeEntered];
-  const callback2 = useCallback2(function() {
-    return closure_0(...arguments);
+  const callback1 = onCodeEntered.useCallback(function() {
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   }, items1);
-  onCodeEnteredIntercept(onVerified[5])(callback2);
-  const tmp11 = phone;
-  onCodeEnteredIntercept(onVerified[6]);
-  const intl = phone(onVerified[7]).intl;
-  const intl2 = phone(onVerified[7]).intl;
-  const tmp7 = onVerified;
+  onCodeEnteredIntercept(onVerified[5])(callback1);
+  let obj = { title: null, description: null, error: null, backgroundStyle: null, loading: null, onCodeEntered: null, codeType: null, disabled: null, disableKeyboardAvoidingView: null };
+  const intl = require("util").intl;
+  obj.title = intl.string(require("util").t.Xclkxp);
+  const intl2 = require("util").intl;
+  obj.description = intl2.string(require("util").t["4qMI6A"]);
   if (error == null) {
-    error = first;
+    error = tmp[0];
   }
-  return <tmp10 title={intl.string(phone(onVerified[7]).t.Xclkxp)} description={intl2.string(phone(onVerified[7]).t["4qMI6A"])} error={error} backgroundStyle={backgroundStyle} loading={flag} onCodeEntered={onCodeEntered} codeType={tmp11(tmp7[6]).CodeType.NUMERIC} disabled={first1} disableKeyboardAvoidingView={disableKeyboardAvoidingView} />;
+  obj.error = error;
+  obj.backgroundStyle = backgroundStyle;
+  obj.loading = flag;
+  obj.onCodeEntered = onCodeEntered;
+  obj.codeType = require("CodeField").CodeType.NUMERIC;
+  obj.disableKeyboardAvoidingView = disableKeyboardAvoidingView;
+  return jsx(onCodeEnteredIntercept(onVerified[6]), { title: null, description: null, error: null, backgroundStyle: null, loading: null, onCodeEntered: null, codeType: null, disabled: null, disableKeyboardAvoidingView: null });
 };

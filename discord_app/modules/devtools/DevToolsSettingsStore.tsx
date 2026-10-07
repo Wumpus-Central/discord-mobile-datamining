@@ -1,33 +1,33 @@
 // === Module 7216: DevToolsSettingsStore ===
 
 // Module 7216 (DevToolsSettingsStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7217 */;
-import size from "module_2" /* 2 */;
 
 let obj = { sidebarWidth: 460, lastOpenTabId: null, lastOpenSubTabId: null, displayTools: false, showDevWidget: false, devWidgetPosition: { x: 0, y: 0 }, sortedScreenKeys: [] };
-const DeviceSettingsStore = get_initializedDefault.DeviceSettingsStore;
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class DevToolsSettingsStore extends DeviceSettingsStore {
-  initialize(arg0) {
-    let tmp = arg0;
-    if (arg0 == null) {
-      tmp = obj;
-    }
-    obj = tmp;
-    let sortedScreenKeys = tmp.sortedScreenKeys;
-    if (sortedScreenKeys == null) {
-      sortedScreenKeys = [];
-    }
-    obj = { sortedScreenKeys };
-    const merged = Object.assign(obj);
-    DispatcherDefault.actionLogger.persist = DeveloperExperimentStore.isDeveloper;
-  }
-  getUserAgnosticState() {
-    return obj;
-  }
 }
 const prototype = DevToolsSettingsStore.prototype;
+prototype["initialize"] = function initialize(arg0) {
+  let tmp = arg0;
+  if (arg0 == null) {
+    tmp = obj;
+  }
+  obj = tmp;
+  let sortedScreenKeys = tmp.sortedScreenKeys;
+  if (sortedScreenKeys == null) {
+    sortedScreenKeys = [];
+  }
+  obj = {};
+  const merged = Object.assign(obj);
+  obj.sortedScreenKeys = sortedScreenKeys;
+  DispatcherDefault.actionLogger.persist = DeveloperExperimentStore.isDeveloper;
+};
+prototype["getUserAgnosticState"] = function getUserAgnosticState() {
+  return obj;
+};
 Object.defineProperty(prototype, "sidebarWidth", {
   get: function sidebarWidth() {
     let num = 0;
@@ -60,14 +60,20 @@ Object.defineProperty(prototype, "lastOpenSubTabId", {
 });
 Object.defineProperty(prototype, "displayTools", {
   get: function displayTools() {
-    const displayTools = DeveloperExperimentStore.isDeveloper && obj.displayTools;
+    let displayTools = DeveloperExperimentStore.isDeveloper;
+    if (displayTools) {
+      displayTools = obj.displayTools;
+    }
     return displayTools;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "showDevWidget", {
   get: function showDevWidget() {
-    const showDevWidget = DeveloperExperimentStore.isDeveloper && obj.showDevWidget;
+    let showDevWidget = DeveloperExperimentStore.isDeveloper;
+    if (showDevWidget) {
+      showDevWidget = obj.showDevWidget;
+    }
     return showDevWidget;
   },
   set: undefined
@@ -96,6 +102,7 @@ obj = {
   }
 };
 const devToolsSettingsStore = new DevToolsSettingsStore(DispatcherDefault, obj);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/DevToolsSettingsStore.tsx");
 
 export default devToolsSettingsStore;

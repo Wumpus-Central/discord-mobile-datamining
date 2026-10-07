@@ -1,56 +1,51 @@
 // === Module 13919: Checkbox/Checkbox ===
 
 // Module 13919 (Checkbox/Checkbox)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13920 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 13921 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import c from "c" /* 576 */;
+import _modDef13920 from "module_13920" /* 13920 */;
+import _modDef13921 from "module_13921" /* 13921 */;
+import noop from "module_19" /* 19 */;
 
-let style;
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Checkbox/native/Checkbox.tsx");
 
-const Image = react_native.Image;
-const jsx = Fragment.jsx;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
-  let tmp3;
-  const obj = react2;
-  const cResult = obj.c(4);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+  let tmp = dependencyMap;
+  const cResult = c.c(4);
   style = style.style;
   if (style.selected) {
-    let tmp8;
     if (cResult[0] !== style) {
-      const tmp12 = <Image style={style} source={AssetRegistryDefault} />;
+      const obj2 = { style, source: null };
+      tmp = _modDef13920;
+      obj2.source = tmp;
+      const tmp12 = <Image style={style} source={null} />;
       cResult[0] = style;
       cResult[1] = tmp12;
-      tmp8 = tmp12;
-    } else {
-      tmp8 = cResult[1];
     }
-    tmp3 = tmp8;
-  } else if (cResult[2] !== style) {
-    const tmp7 = <Image style={style} source={AssetRegistryDefault2} />;
-    cResult[2] = style;
-    cResult[3] = tmp7;
-    tmp3 = tmp7;
   } else {
-    tmp3 = cResult[3];
+    if (cResult[2] !== style) {
+      const obj3 = { style, source: _modDef13921 };
+      const tmp7 = <Image style={style} source={_modDef13921} />;
+      cResult[2] = style;
+      cResult[3] = tmp7;
+      let tmp3 = tmp7;
+    } else {
+      tmp3 = cResult[3];
+    }
+    return tmp3;
   }
-  return tmp3;
 }) : ((style) => {
-  let tmp5;
   const obj = { style: style.style, source: null };
   if (style.selected) {
-    obj.source = AssetRegistryDefault;
-    tmp5 = obj;
+    obj.source = _modDef13920;
+    let tmp5 = obj;
   } else {
-    obj.source = AssetRegistryDefault2;
+    obj.source = _modDef13921;
     tmp5 = obj;
   }
   return <Image {...tmp5} />;
 });
-const result = size.fileFinishedImporting("design/void/Checkbox/native/Checkbox.tsx");
-
-export default tmp3;

@@ -8,21 +8,18 @@ import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const UserSettingsSections = Constants.UserSettingsSections;
-const obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
     return "Row Button";
   },
-  parent: MobileUserSettings.DESIGN_SYSTEMS,
+  parent: SettingsConstants.MobileUserSettings.DESIGN_SYSTEMS,
   screen: {
-    route: UserSettingsSections.DESIGN_SYSTEM_ROW_BUTTON,
+    route: Constants.UserSettingsSections.DESIGN_SYSTEM_ROW_BUTTON,
     getComponent() {
       return require("UserSettingsDesignSystemRowButton").default;
     }
   }
-};
-const route = SettingBuilders.createRoute(obj);
+});
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsRowButtonSetting.tsx");
 
 export default route;

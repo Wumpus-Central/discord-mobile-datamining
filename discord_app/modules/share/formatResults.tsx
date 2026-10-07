@@ -2,22 +2,17 @@
 
 // Module 10724 (formatResults)
 import _mod12 from "module_12" /* 12 */;
+import GlobalUtils from "GlobalUtils" /* 1375 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
-import _mod9509 from "module_9509" /* 9509 */;
+import sortByMatchScore from "sortByMatchScore" /* 9509 */;
 import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9518 */;
-import ShareConstants from "ShareConstants" /* 10725 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import QuickSwitcherStore from "QuickSwitcherStore" /* 9508 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import PermissionStore from "PermissionStore" /* 4515 */;
 import UserStore from "UserStore" /* 1377 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-let c1, c2, set;
-
-let c10;
-let c9;
+require = fn;
 function getChannelIdFromDestinationId(type) {
   if ("channel" === type.type) {
     return type.id;
@@ -30,101 +25,96 @@ function getChannelIdFromDestinationId(type) {
     return tmp4;
   }
 }
-let obj = function _getOrResolveChannelIdFromDestinationId() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let obj3;
-    let closure_0 = arg0;
-    if (c1 === 2) {
-      c1 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp2 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_12 = async function _getOrResolveChannelIdFromDestinationId(arg0) {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      let c4;
-      try {
-        c1 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            c1 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c1 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            const tmp16 = getChannelIdFromDestinationId(closure_0);
-            if (null != tmp16) {
-              c1 = 3;
-              const obj5 = { value: tmp16, done: true };
-              return obj5;
-            } else if ("user" === closure_0.type) {
-              c4 = 1;
-              c2 = 2;
-              c1 = 1;
-              const obj6 = { value: obj3.getOrEnsurePrivateChannel(closure_0.id), done: false };
-              obj3 = ChannelActionCreatorsDefault;
-              return obj6;
-            } else {
-              c1 = 3;
-              return { value: "IconComponent", done: null };
-            }
-          }
-        } else if (1 === tmp3) {
-          c4 = 0;
-          c1 = 3;
-          return { value: "IconComponent", done: null };
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c1 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
           c1 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c4 = 0;
           c1 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          c4 = 0;
-          c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const tmp20 = getChannelIdFromDestinationId(_require);
+          if (null != tmp20) {
+            c1 = 3;
+            const obj5 = { value: tmp20, done: true };
+            return obj5;
+          } else if ("user" === _require.type) {
+            c4 = 1;
+            c2 = 2;
+            c1 = 1;
+            const obj6 = { value: ChannelActionCreatorsDefault.getOrEnsurePrivateChannel(_require.id), done: false };
+            return obj6;
+          } else {
+            c1 = 3;
+            return { value: "IconComponent", done: null };
+          }
         }
-      } catch (tmp7) {
-        let closure_3 = tmp7;
-        if (0 === c4) {
-          c1 = 3;
-          throw tmp7;
-        } else {
-          c2 = 1;
-        }
+      } else if (1 === tmp6) {
+        c4 = 0;
+        c1 = 3;
+        return { value: "IconComponent", done: null };
+      } else if (arg0 === 1) {
+        c1 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c1 = 3;
+        const obj7 = { value, done: true };
+        return obj7;
+      } else {
+        c4 = 0;
+        c1 = 3;
+        const obj = { value, done: true };
+        return obj;
+      }
+    } catch (tmp10) {
+      closure_3 = tmp10;
+      if (tmp3 === c4) {
+        c1 = tmp2;
+        throw tmp10;
+      } else {
+        c2 = tmp;
       }
     }
-  });
-  return obj(...arguments);
+  }
 };
 function canShareToChannel(type, arg1) {
-  let tmp7;
-  if (type.type === _mod9509.AutocompleterResultTypes.USER) {
+  if (type.type === sortByMatchScore.AutocompleterResultTypes.USER) {
     const record = type.record;
-    let tmp9 = !record.isSystemUser();
-    record.isSystemUser();
-    if (tmp9) {
-      tmp9 = arg1 || null != ChannelStore.getDMChannelFromUserId(type.record.id);
-      const tmp11 = arg1 || null != ChannelStore.getDMChannelFromUserId(type.record.id);
+    const isSystemUserResult = record.isSystemUser();
+    let tmp9 = !isSystemUserResult;
+    if (!isSystemUserResult) {
+      let tmp11 = arg1;
+      if (!tmp11) {
+        tmp11 = null != ChannelStore.getDMChannelFromUserId(type.record.id);
+      }
+      tmp9 = tmp11;
     }
-    tmp7 = tmp9;
+    let tmp7 = tmp9;
   } else {
-    tmp7 = type.type === _mod9509.AutocompleterResultTypes.GROUP_DM;
+    tmp7 = type.type === sortByMatchScore.AutocompleterResultTypes.GROUP_DM;
     if (!tmp7) {
       let tmp4 = type.record.type !== constants2.GUILD_FORUM && type.record.type !== tmp3.GUILD_MEDIA;
       if (tmp4) {
         tmp4 = PermissionStore.can(constants.VIEW_CHANNEL, type.record) && PermissionStore.can(constants.SEND_MESSAGES, type.record);
-        PermissionStore.can(constants.VIEW_CHANNEL, type.record) && PermissionStore.can(constants.SEND_MESSAGES, type.record);
+        const tmp6 = PermissionStore.can(constants.VIEW_CHANNEL, type.record) && PermissionStore.can(constants.SEND_MESSAGES, type.record);
       }
       tmp7 = tmp4;
     }
@@ -132,7 +122,7 @@ function canShareToChannel(type, arg1) {
   return tmp7;
 }
 function mergeAndDedupeResultsWithHeaders(found, items1) {
-  set = new Set();
+  const set = new Set();
   if (null != items1) {
     const tmp3 = items1[Symbol.iterator]();
     while (tmp3 !== undefined) {
@@ -146,9 +136,8 @@ function mergeAndDedupeResultsWithHeaders(found, items1) {
   while (iter !== undefined) {
     let tmp9 = nextResult;
     if (null != nextResult) {
-      let tmp;
-      if (tmp9.type === _mod9509.AutocompleterResultTypes.HEADER) {
-        tmp = nextResult;
+      if (tmp9.type === sortByMatchScore.AutocompleterResultTypes.HEADER) {
+        let tmp = nextResult;
       } else {
         let id = tmp9.record.id;
         let tmp11 = id;
@@ -165,124 +154,119 @@ function mergeAndDedupeResultsWithHeaders(found, items1) {
   }
   return items;
 }
-const isAllowedType = ShareConstants.isAllowedType;
-({ Permissions: c9, ChannelTypes: c10 } = Constants);
+const isAllowedType = fn(10725).isAllowedType;
+const Constants = fn(1085);
+({ Permissions: closure_9, ChannelTypes: c10 } = Constants);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/formatResults.tsx");
 
 export default function formatResults(hasQuery) {
-  let channelFilter;
-  let frequentChannels;
-  let includeMissingDMs;
-  let originDestination;
-  let pinnedDestinations;
-  let queryMode;
-  let results;
-  let selectedDestinations;
-  let targetDestination;
-  const f105111 = (type) => {
-    obj = queryMode(dependencyMap[11]);
-    let isNotNullishResult = obj.isNotNullish(type);
-    if (isNotNullishResult) {
-      let tmp4 = type.type === queryMode(dependencyMap[7]).AutocompleterResultTypes.HEADER;
-      if (!tmp4) {
-        tmp4 = isAllowedType(type) && channelFilter(type, includeMissingDMs);
-        const tmp6 = isAllowedType(type) && channelFilter(type, includeMissingDMs);
-      }
-      isNotNullishResult = tmp4;
-    }
-    return isNotNullishResult;
-  };
   ({ results, queryMode } = hasQuery);
   ({ frequentChannels, targetDestination, selectedDestinations, pinnedDestinations, originDestination } = hasQuery);
   ({ channelFilter, includeMissingDMs } = hasQuery);
   if (hasQuery.hasQuery) {
+    closure_130_0 = includeMissingDMs;
     if (channelFilter === undefined) {
       channelFilter = canShareToChannel;
     }
-    return mergeAndDedupeResultsWithHeaders(results.filter(f105111));
+    closure_130_1 = channelFilter;
+    return mergeAndDedupeResultsWithHeaders(results.filter((type) => {
+      let isNotNullishResult = GlobalUtils.isNotNullish(type);
+      if (isNotNullishResult) {
+        let tmp4 = type.type === sortByMatchScore.AutocompleterResultTypes.HEADER;
+        if (!tmp4) {
+          let tmp6 = isAllowedType(type);
+          if (tmp6) {
+            tmp6 = originDestination(type, queryMode);
+          }
+          tmp4 = tmp6;
+        }
+        isNotNullishResult = tmp4;
+      }
+      return isNotNullishResult;
+    }));
   } else {
     if (null != pinnedDestinations) {
-      let mapped;
-      let mapped1;
-      let mapped2;
-      let found1;
       if (pinnedDestinations.length > 0) {
-        mapped = pinnedDestinations.map((type) => {
-          let tmp3;
+        let mapped = pinnedDestinations.map((type) => {
           if ("user" === type.type) {
             user = user.getUser(type.id);
             let tmp6 = null;
             if (null != user) {
-              tmp6 = { type: queryMode(dependencyMap[7]).AutocompleterResultTypes.USER, record: user, score: 0 };
-              obj = { type: queryMode(dependencyMap[7]).AutocompleterResultTypes.USER, record: user, score: 0 };
+              const obj = { type: queryMode(9509).AutocompleterResultTypes.USER, record: user, score: 0 };
+              tmp6 = obj;
             }
-            tmp3 = tmp6;
+            let tmp3 = tmp6;
           } else {
-            tmp3 = originDestination(dependencyMap[9])(type.id);
+            tmp3 = originDestination(9518)(type.id);
           }
           return tmp3;
         });
       }
       const channelHistory = QuickSwitcherStore.getChannelHistory();
       if (channelHistory.length > 0) {
-        mapped1 = channelHistory.map((item) => originDestination(dependencyMap[9])(item));
+        let mapped1 = channelHistory.map((item) => originDestination(9518)(item));
       } else {
         mapped1 = [];
       }
       if (frequentChannels.length > 0) {
-        mapped2 = frequentChannels.map((id) => originDestination(dependencyMap[9])(id.id));
+        let mapped2 = frequentChannels.map((id) => originDestination(9518)(id.id));
       } else {
         mapped2 = [];
       }
       const items = [];
-      let tmp4 = items;
-      const arraySpreadResult = HermesBuiltin.arraySpread(items, mapped, 0);
-      let tmp7 = null;
-      if (null != targetDestination) {
-        let tmp10;
-        if ("user" === targetDestination.type) {
-          let user = UserStore.getUser(targetDestination.id);
-          let tmp13 = null;
-          if (null != user) {
-            obj = { type: queryMode(9509).AutocompleterResultTypes.USER, record: user, score: 0 };
-            tmp13 = obj;
+      const arraySpreadResult = HermesBuiltin.arraySpread(mapped, 0);
+      if (null == targetDestination) {
+        items[arraySpreadResult] = null;
+        HermesBuiltin.arraySpread(mapped2, HermesBuiltin.arraySpread(mapped1, arraySpreadResult + 1));
+        closure_129_1 = undefined;
+        closure_129_0 = includeMissingDMs;
+        let tmp20 = channelFilter;
+        if (channelFilter === undefined) {
+          tmp20 = canShareToChannel;
+        }
+        closure_129_1 = tmp20;
+        const found = items.filter((type) => {
+          let isNotNullishResult = GlobalUtils.isNotNullish(type);
+          if (isNotNullishResult) {
+            let tmp4 = type.type === sortByMatchScore.AutocompleterResultTypes.HEADER;
+            if (!tmp4) {
+              let tmp6 = isAllowedType(type);
+              if (tmp6) {
+                tmp6 = originDestination(type, queryMode);
+              }
+              tmp4 = tmp6;
+            }
+            isNotNullishResult = tmp4;
           }
-          tmp10 = tmp13;
-        } else {
-          tmp10 = originDestination(9518)(targetDestination.id);
-        }
-        tmp7 = tmp10;
-      }
-      items[arraySpreadResult] = tmp7;
-      HermesBuiltin.arraySpread(items, mapped2, HermesBuiltin.arraySpread(items, mapped1, arraySpreadResult + 1));
-      let closure_1;
-      let tmp21 = channelFilter;
-      if (channelFilter === undefined) {
-        tmp21 = canShareToChannel;
-      }
-      closure_1 = tmp21;
-      const found = items.filter(f105111);
-      if (selectedDestinations != null) {
-        found1 = selectedDestinations.find((item) => {
-          obj = _mod12;
-          return obj.isEqual(item, originDestination);
+          return isNotNullishResult;
         });
-      }
-      if (null != originDestination) {
-        let items1;
-        let substr;
-        if (null == found1) {
-          items1 = [originDestination.id];
+        if (selectedDestinations != null) {
+          const found1 = selectedDestinations.find((item) => _mod12.isEqual(item, originDestination));
         }
-        if (null != queryMode) {
-          substr = mergeAndDedupeResultsWithHeaders(found.filter((type) => type.type === queryMode), items1);
-        } else {
-          const arr8 = mergeAndDedupeResultsWithHeaders(found, items1);
-          substr = arr8.slice(0, 15);
+        if (null != originDestination) {
+          if (null == found1) {
+            let items1 = [originDestination.id];
+          }
+          if (null != queryMode) {
+            let substr = mergeAndDedupeResultsWithHeaders(found.filter((type) => type.type === queryMode), items1);
+          } else {
+            substr = mergeAndDedupeResultsWithHeaders(found, items1).slice(0, 15);
+            const arr8 = mergeAndDedupeResultsWithHeaders(found, items1);
+          }
+          return substr;
         }
-        return substr;
+        items1 = [];
+      } else if ("user" === targetDestination.type) {
+        let user = UserStore.getUser(targetDestination.id);
+        targetDestination = null;
+        if (null != user) {
+          let obj = { type: queryMode(9509).AutocompleterResultTypes.USER, record: user, score: 0 };
+          targetDestination = obj;
+        }
+      } else {
+        const tmp9 = originDestination(9518)(targetDestination.id);
       }
-      items1 = [];
     }
     mapped = [];
   }
@@ -294,8 +278,8 @@ export const getDestinationIdFromChannelId = function getDestinationIdFromChanne
     type = channel.type;
   }
   if (type === constants2.DM) {
-    obj = { type: "user", id: channel.recipients[0] };
     const obj2 = { type: "user", id: channel.recipients[0] };
+    let obj = obj2;
   } else {
     obj = { type: "channel", id: channel_id };
   }
@@ -303,9 +287,9 @@ export const getDestinationIdFromChannelId = function getDestinationIdFromChanne
 };
 export const getDestinationIdFromResult = function getDestinationIdFromResult(results) {
   const record = results.record;
-  if (results.type === _mod9509.AutocompleterResultTypes.USER) {
-    obj = { type: "user", id: record.id };
+  if (results.type === sortByMatchScore.AutocompleterResultTypes.USER) {
     const obj2 = { type: "user", id: record.id };
+    let obj = obj2;
   } else {
     obj = { type: "channel", id: record.id };
   }
@@ -316,65 +300,67 @@ export const destinationKey = function destinationKey(destinationIdFromResult) {
 };
 export { getChannelIdFromDestinationId };
 export const getOrResolveChannelIdFromDestinationId = function getOrResolveChannelIdFromDestinationId() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_12.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const formatResultsWithHeaders = function formatResultsWithHeaders(hasNonEmptyQuery) {
-  let frequentChannels;
-  let items1;
-  let queryMode;
-  let results;
-  let selectedChannelId;
-  let selectedResult;
   ({ results, selectedResult, queryMode } = hasNonEmptyQuery);
   ({ selectedChannelId, frequentChannels } = hasNonEmptyQuery);
-  hasNonEmptyQuery = hasNonEmptyQuery.hasNonEmptyQuery;
   if (null != selectedResult) {
     const items = [selectedResult.record.id];
-    items1 = items;
+    let items1 = items;
   } else {
     items1 = [];
   }
-  const createHeaderResult = queryMode(9509).createHeaderResult;
   const intl = queryMode(1126).intl;
-  const headerResult = createHeaderResult(intl.string(queryMode(1126).t.qm9dSj));
-  if (hasNonEmptyQuery) {
+  const headerResult = queryMode(9509).createHeaderResult(intl.string(queryMode(1126).t.qm9dSj));
+  if (hasNonEmptyQuery.hasNonEmptyQuery) {
     const items2 = [headerResult];
-    HermesBuiltin.arraySpread(items2, mergeAndDedupeResultsWithHeaders(results.filter(isAllowedType), items1), 1);
+    HermesBuiltin.arraySpread(mergeAndDedupeResultsWithHeaders(results.filter(isAllowedType), items1), 1);
     return items2;
   } else {
-    let items4;
     const mapped = frequentChannels.map((id) => createAutocompleterResultForChannelIdDefault(id.id));
     const found = mapped.filter(queryMode(1375).isNotNullish);
     const found1 = found.filter(isAllowedType);
     if (null != queryMode) {
       const items3 = [headerResult];
-      HermesBuiltin.arraySpread(items3, found1.filter((type) => type.type === queryMode), 1);
-      items4 = items3;
+      HermesBuiltin.arraySpread(found1.filter((type) => type.type === queryMode), 1);
+      let items4 = items3;
     } else {
-      const createHeaderResult2 = queryMode(9509).createHeaderResult;
       const intl2 = queryMode(1126).intl;
-      items4 = [createHeaderResult2(intl2.string(queryMode(1126).t["80lOZ1"])), , ];
-      let tmp15 = null;
+      items4 = [queryMode(9509).createHeaderResult(intl2.string(queryMode(1126).t["80lOZ1"])), , ];
+      let tmp13 = null;
       if (null != selectedChannelId) {
-        const tmp9 = createAutocompleterResultForChannelIdDefault(selectedChannelId);
-        let tmp10 = null;
-        if (null != tmp9) {
-          let tmp11 = null;
-          if (isAllowedType(tmp9)) {
-            tmp11 = null;
-            const canResult = tmp9.type === queryMode(9509).AutocompleterResultTypes.USER || PermissionStore.can(constants.VIEW_CHANNEL, tmp9.record);
+        const tmp7 = createAutocompleterResultForChannelIdDefault(selectedChannelId);
+        let tmp8 = null;
+        if (null != tmp7) {
+          let tmp9 = null;
+          if (isAllowedType(tmp7)) {
+            let canResult = tmp7.type === queryMode(9509).AutocompleterResultTypes.USER;
+            if (!canResult) {
+              canResult = PermissionStore.can(constants.VIEW_CHANNEL, tmp7.record);
+            }
+            tmp9 = null;
             if (canResult) {
-              tmp11 = tmp9;
+              tmp9 = tmp7;
             }
           }
-          tmp10 = tmp11;
+          tmp8 = tmp9;
         }
-        tmp15 = tmp10;
+        tmp13 = tmp8;
       }
-      items4[1] = tmp15;
+      items4[1] = tmp13;
       items4[2] = headerResult;
-      HermesBuiltin.arraySpread(items4, found1, 3);
+      HermesBuiltin.arraySpread(found1, 3);
+      const tmpResult = queryMode(9509);
     }
     return mergeAndDedupeResultsWithHeaders(items4, items1);
   }
+  const obj = queryMode(9509);
 };

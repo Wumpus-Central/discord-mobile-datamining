@@ -2,7 +2,6 @@
 
 // Module 11560 (ContentInventoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
 import ContentInventoryPlatformActionCreatorsAll from "ContentInventoryPlatformActionCreators" /* 11562 */;
@@ -11,52 +10,45 @@ import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import UserStore from "UserStore" /* 1377 */;
 import ContentInventoryPersistedStore from "ContentInventoryPersistedStore" /* 11561 */;
-import size from "module_2" /* 2 */;
 
-const AnalyticEvents = Constants.AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryActionCreators.tsx");
 
 export const toggleMemberListContentFeedHidden = function toggleMemberListContentFeedHidden() {
-  const obj = DispatcherDefault;
-  obj.dispatch({ type: "CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN" });
+  DispatcherDefault.dispatch({ type: "CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN" });
   const obj2 = AnalyticsUtilsDefault;
-  const obj3 = { channel_id: SelectedChannelStore.getChannelId(), guild_id: SelectedGuildStore.getGuildId(), hidden: ContentInventoryPersistedStore.hidden };
-  obj2.track(AnalyticEvents.MEMBERLIST_CONTENT_FEED_HIDDEN, obj3);
+  obj2.track(AnalyticEvents.MEMBERLIST_CONTENT_FEED_HIDDEN, { channel_id: SelectedChannelStore.getChannelId(), guild_id: SelectedGuildStore.getGuildId(), hidden: ContentInventoryPersistedStore.hidden });
 };
 export const onGameProfileOpen = function onGameProfileOpen() {
-  const obj = DispatcherDefault;
-  obj.dispatch({ type: "GAME_PROFILE_OPEN" });
+  DispatcherDefault.dispatch({ type: "GAME_PROFILE_OPEN" });
 };
 export const onTapContentInventoryEntryEmbed = function onTapContentInventoryEntryEmbed(authorId) {
-  let id;
-  let items1;
-  let message;
-  let tappedElement;
   ({ message, tappedElement } = authorId);
-  authorId = authorId.authorId;
   const channel = ChannelStore.getChannel(message.channel_id);
   if ("avatar" === tappedElement) {
-    const user = UserStore.getUser(authorId);
+    const user = UserStore.getUser(authorId.authorId);
     if (null != user) {
-      const obj = { userId: user.id, channelId: id, messageId: message.id, sourceAnalyticsLocations: items1 };
-      id = undefined;
-      const showUserProfile = ContentInventoryPlatformActionCreatorsAll.showUserProfile;
-      ContentInventoryPlatformActionCreatorsAll;
+      let showUserProfileResult = { userId: user.id, channelId: null, messageId: null, sourceAnalyticsLocations: null };
+      let id;
       if (channel != null) {
         id = channel.id;
       }
-      const tmp8 = AnalyticsLocationDefault;
-      if ("avatar" === tappedElement) {
-        const items = [tmp8.AVATAR];
-        items1 = items;
+      showUserProfileResult.channelId = id;
+      showUserProfileResult.messageId = message.id;
+      let items = AnalyticsLocationDefault;
+      if (tmp2) {
+        items = [];
+        items[0] = items.AVATAR;
+        let items1 = items;
       } else {
-        items1 = [tmp8.USERNAME];
+        items1 = [items.USERNAME];
       }
-      showUserProfile(obj);
+      showUserProfileResult.sourceAnalyticsLocations = items1;
+      showUserProfileResult = ContentInventoryPlatformActionCreatorsAll.showUserProfile(showUserProfileResult);
     }
   }
 };
 export const clearDeleteHistoryError = function clearDeleteHistoryError() {
-  const obj = DispatcherDefault;
-  obj.dispatch({ type: "CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR" });
+  DispatcherDefault.dispatch({ type: "CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR" });
 };

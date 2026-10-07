@@ -3,23 +3,22 @@
 // Module 17510 (DeclarativeSystemNotifPermissionManager)
 import DeclarativeSystemNotifPermissionActionCreators from "DeclarativeSystemNotifPermissionActionCreators" /* 15868 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
-import size from "module_2" /* 2 */;
 
+require = fn;
 function handleAppStateChanged(state) {
   if ("active" === state.state) {
-    const obj = DeclarativeSystemNotifPermissionActionCreators;
-    const result = obj.refreshSystemNotifPermissionsAsync("app_state_active");
+    const result = DeclarativeSystemNotifPermissionActionCreators.refreshSystemNotifPermissionsAsync("app_state_active");
   }
 }
-class DeclarativeSystemNotifPermissionManager extends AutomaticLifecycleManager {
-  constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    const obj = { APP_STATE_UPDATE: handleAppStateChanged };
-    applyArgumentsResult.actions = obj;
-    return applyArgumentsResult;
-  }
+const prototype = function DeclarativeSystemNotifPermissionManager() {
+  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+  applyArgumentsResult.actions = { APP_STATE_UPDATE: handleAppStateChanged };
+  return applyArgumentsResult;
+}.prototype;
+class prototype extends tmp2 {
 }
-const declarativeSystemNotifPermissionManager = new DeclarativeSystemNotifPermissionManager();
+const prototype1 = new prototype();
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings/DeclarativeSystemNotifPermissionManager.tsx");
 
-export default declarativeSystemNotifPermissionManager;
+export default prototype1;

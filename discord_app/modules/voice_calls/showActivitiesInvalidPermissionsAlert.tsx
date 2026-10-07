@@ -1,19 +1,17 @@
 // === Module 9046: showActivitiesInvalidPermissionsAlert ===
 
 // Module 9046 (showActivitiesInvalidPermissionsAlert)
-import intl3 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_calls/showActivitiesInvalidPermissionsAlert.tsx");
 
 export const showActivitiesInvalidPermissionsAlert = function showActivitiesInvalidPermissionsAlert() {
-  let intl;
-  let intl2;
-  const obj = { title: intl.string(intl3.t.otsg2R), body: intl2.string(intl3.t["/Yx5qX"]), hideActionSheet: false };
-  const show = AlertActionCreatorsDefault.show;
-  AlertActionCreatorsDefault;
-  intl = intl3.intl;
-  intl2 = intl3.intl;
-  show(obj);
+  const obj2 = { title: null, body: null, hideActionSheet: false };
+  const intl = util.intl;
+  obj2.title = intl.string(util.t.otsg2R);
+  const intl2 = util.intl;
+  obj2.body = intl2.string(util.t["/Yx5qX"]);
+  AlertActionCreatorsDefault.show(obj2);
 };

@@ -1,43 +1,31 @@
 // === Module 10603: PremiumGiftCustomMessage ===
 
 // Module 10603 (PremiumGiftCustomMessage)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl3 from "intl" /* 1126 */;
-import PremiumConstants from "PremiumConstants" /* 1379 */;
-import TextArea2 from "TextArea" /* 6587 */;
+import util from "util" /* 1126 */;
+import TextArea from "TextArea" /* 6587 */;
 import NativeGiftContext from "NativeGiftContext" /* 10443 */;
-import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let obj2;
-const View = react_native.View;
-const maxLength = PremiumConstants.CUSTOM_GIFT_MESSAGE_MAX_LENGTH;
-const jsx = Fragment.jsx;
-let obj = { container: obj2 };
-obj2 = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 };
+require = fn;
+const View = fn(17).View;
+const maxLength = fn(1379).CUSTOM_GIFT_MESSAGE_MAX_LENGTH;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj = { container: { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let customGiftMessage;
-  let first;
-  let onFocusMessage;
-  let setCustomGiftMessage;
-  let setMessagePosition;
-  const obj = react2;
-  const cResult = obj.c(14);
+let ReactCompilerGating = fn(558);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(14);
   ({ onFocusMessage, setMessagePosition } = arg0);
   ({ customGiftMessage, setCustomGiftMessage } = arg0);
   closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = intl3.intl;
-    const stringResult = intl.string(intl3.t.ZkOo1U);
+    const intl = util.intl;
+    const stringResult = intl.string(util.t.ZkOo1U);
     cResult[0] = stringResult;
-    first = stringResult;
+    let first = stringResult;
   } else {
     first = cResult[0];
   }
@@ -82,8 +70,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         return;
       }
     }
-    const stringResult1 = obj2.string(intl3.t.B3miE8);
+    const stringResult1 = obj2.string(util.t.B3miE8);
     cResult[5] = stringResult1;
+    const tmp10 = stringResult1;
   } else {
     class C {
       constructor(arg0) {
@@ -100,53 +89,57 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }
+  const obj3 = { label: tmp10, placeholder: first, value: customGiftMessage, onChange: C, maxLength, onFocus: onFocusMessage };
   cResult[6] = customGiftMessage;
   cResult[7] = C;
   cResult[8] = onFocusMessage;
-  cResult[9] = jsx(TextArea2.TextArea, { label: tmp10, placeholder: first, value: customGiftMessage, onChange: C, maxLength, onFocus: onFocusMessage });
-  jsx(TextArea2.TextArea, { label: tmp10, placeholder: first, value: customGiftMessage, onChange: C, maxLength, onFocus: onFocusMessage });
+  cResult[9] = jsx(TextArea.TextArea, { label: tmp10, placeholder: first, value: customGiftMessage, onChange: C, maxLength, onFocus: onFocusMessage });
+  const tmp12 = jsx(TextArea.TextArea, { label: tmp10, placeholder: first, value: customGiftMessage, onChange: C, maxLength, onFocus: onFocusMessage });
 }) : ((arg0) => {
-  let closure_129_0;
-  let customGiftMessage;
-  let intl2;
-  let onFocusMessage;
-  let setCustomGiftMessage;
-  ({ setMessagePosition: closure_129_0, setCustomGiftMessage } = arg0);
+  ({ setMessagePosition: require, setCustomGiftMessage } = arg0);
   ({ onFocusMessage, customGiftMessage } = arg0);
-  const tmp = closure_6();
-  const intl = intl3.intl;
+  const intl = util.intl;
   const items = [setCustomGiftMessage];
-  const stringResult = intl.string(intl3.t.ZkOo1U);
-  const callback = react.useCallback((arg0) => {
+  const tmp = closure_6();
+  const obj = {
+    style: tmp.container,
+    onLayout(nativeEvent) {
+      return require(nativeEvent.nativeEvent.layout.y);
+    },
+    children: null
+  };
+  const callback = noop.useCallback((arg0) => {
     setCustomGiftMessage(arg0);
   }, items);
-  ({ label: intl2.string(intl3.t.B3miE8), placeholder: stringResult, value: customGiftMessage, onChange: callback, maxLength, onFocus: onFocusMessage });
-  const TextArea = TextArea2.TextArea;
-  intl2 = intl3.intl;
+  const obj2 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, onFocus: null };
+  const intl2 = util.intl;
+  obj2.label = intl2.string(util.t.B3miE8);
+  obj2.placeholder = intl.string(util.t.ZkOo1U);
+  obj2.value = customGiftMessage;
+  obj2.onChange = callback;
+  obj2.maxLength = maxLength;
+  obj2.onFocus = onFocusMessage;
+  obj.children = jsx(TextArea.TextArea, { label: null, placeholder: null, value: null, onChange: null, maxLength: null, onFocus: null });
   return <View style={tmp.container} onLayout={function onLayout(nativeEvent) {
-    return closure_1_0(nativeEvent.nativeEvent.layout.y);
+    return require(nativeEvent.nativeEvent.layout.y);
   }}>{null}</View>;
 });
-let closure_7 = tmp3;
-const memo = react.memo;
-ReactCompilerGating = ReactCompilerGating_mod;
-const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let customGiftMessage;
-  let onFocusMessage;
-  let setCustomGiftMessage;
-  let setMessagePosition;
-  const obj = react2;
-  const cResult = obj.c(5);
+let closure_7 = tmp2;
+ReactCompilerGating = fn(558);
+let obj3 = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftCustomMessage.tsx");
+
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(5);
   ({ onFocusMessage, setMessagePosition } = arg0);
-  const obj2 = NativeGiftContext;
-  const nativeGiftContext = obj2.useNativeGiftContext();
+  const nativeGiftContext = NativeGiftContext.useNativeGiftContext();
   ({ customGiftMessage, setCustomGiftMessage } = nativeGiftContext);
   if (cResult[0] === customGiftMessage) {
     if (cResult[1] === onFocusMessage) {
       if (cResult[2] === setCustomGiftMessage) {
-        let tmp3;
         if (cResult[3] === setMessagePosition) {
-          tmp3 = cResult[4];
+          let tmp3 = cResult[4];
         }
         return tmp3;
       }
@@ -160,14 +153,8 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
   cResult[4] = tmp4;
   tmp3 = tmp4;
 }) : ((arg0) => {
-  let onFocusMessage;
-  let setMessagePosition;
   ({ onFocusMessage, setMessagePosition } = arg0);
-  const obj = NativeGiftContext;
-  const nativeGiftContext = obj.useNativeGiftContext();
+  const nativeGiftContext = NativeGiftContext.useNativeGiftContext();
   return <closure_7 onFocusMessage={onFocusMessage} setMessagePosition={setMessagePosition} customGiftMessage={nativeGiftContext.customGiftMessage} setCustomGiftMessage={nativeGiftContext.setCustomGiftMessage} />;
 }));
-const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftCustomMessage.tsx");
-
-export default memoResult;
-export const GiftCustomMessage = tmp3;
+export const GiftCustomMessage = tmp2;

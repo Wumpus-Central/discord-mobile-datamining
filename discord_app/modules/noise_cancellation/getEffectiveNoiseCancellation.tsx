@@ -10,24 +10,24 @@ const set = new Set(["voice_isolation", "wide_spectrum"]);
 const result = size.fileFinishedImporting("modules/noise_cancellation/getEffectiveNoiseCancellation.tsx");
 
 export default function getEffectiveNoiseCancellation(noiseCancellation, systemMicrophoneMode) {
-  const obj = PlatformUtils;
   if (!obj.isIOS()) {
-    let tmp3;
-    const tmpResult = PlatformUtils;
     if (!tmpResult.isMac()) {
-      tmp3 = noiseCancellation;
-      if (tmp3) {
-        let tmp5 = null == systemMicrophoneMode || "" === systemMicrophoneMode;
+      let tmp3 = noiseCancellation;
+      if (noiseCancellation) {
+        let tmp5 = null == systemMicrophoneMode;
         if (!tmp5) {
+          tmp5 = "" === systemMicrophoneMode;
+        }
+        if (!tmp5) {
+          tmp5 = !PlatformUtils.isWindows();
           const tmpResult3 = PlatformUtils;
-          tmp5 = !tmpResult3.isWindows();
         }
         if (!tmp5) {
           tmp5 = systemMicrophoneMode !== deep_noise_suppression;
         }
         if (!tmp5) {
+          tmp5 = !WindowsEffectsExperiment.getWindowsAudioEffectsExperimentConfig({ location: "setNoiseCancellation" }).preferSystemEffects;
           const tmpResult4 = WindowsEffectsExperiment;
-          tmp5 = !tmpResult4.getWindowsAudioEffectsExperimentConfig({ location: "setNoiseCancellation" }).preferSystemEffects;
         }
         if (tmp5) {
           tmp5 = noiseCancellation;
@@ -38,6 +38,11 @@ export default function getEffectiveNoiseCancellation(noiseCancellation, systemM
     return tmp3;
   }
   const hasItem = set.has(systemMicrophoneMode);
-  tmp3 = !hasItem && noiseCancellation;
+  let tmp8 = !hasItem;
+  if (!hasItem) {
+    tmp8 = noiseCancellation;
+  }
+  tmp3 = tmp8;
+  obj = PlatformUtils;
 };
 export const WINDOWS_NOISE_SUPPRESSION_EFFECT = "deep_noise_suppression";

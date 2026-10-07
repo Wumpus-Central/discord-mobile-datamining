@@ -1,55 +1,60 @@
 // === Module 15356: ScreenDowntimeReminderSetting ===
 
 // Module 15356 (ScreenDowntimeReminderSetting)
-import get_initialized from "get initialized" /* 504 */;
-import intl2 from "intl" /* 1126 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import useUserLinks from "useUserLinks" /* 8328 */;
+import initialize from "initialize" /* 504 */;
+import util from "util" /* 1126 */;
 import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 14735 */;
 import NotificationActionCreatorsDefault from "NotificationActionCreators" /* 15357 */;
 import NotificationSettingsStore from "NotificationSettingsStore" /* 12481 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import size from "module_2" /* 2 */;
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
+require = fn;
+const ReactCompilerGating = fn(558);
+const SettingBuilders = fn(11142);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
-  const obj = useUserLinks;
   if (hasActiveParentLinks) {
     hasActiveParentLinks = obj.useHasActiveParentLinks();
   }
   return hasActiveParentLinks;
 }) : (() => {
   let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
-  const obj = useUserLinks;
   if (hasActiveParentLinks) {
     hasActiveParentLinks = obj.useHasActiveParentLinks();
   }
   return hasActiveParentLinks;
 });
-let obj = {
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.z6tZKH);
+    const intl = util.intl;
+    return intl.string(util.t.z6tZKH);
   },
   useDescription() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.TummoQ);
+    const intl = util.intl;
+    return intl.string(util.t.TummoQ);
   },
-  parent: MobileUserSettings.NOTIFICATIONS,
+  parent: fn(7645).MobileUserSettings.NOTIFICATIONS,
   useValue() {
     const items = [NotificationSettingsStore];
-    const obj = get_initialized;
-    return obj.useStateFromStores(items, () => NotificationSettingsStore.screenDowntimeReminder);
+    return initialize.useStateFromStores(items, () => NotificationSettingsStore.screenDowntimeReminder);
   },
   onValueChange(screen_downtime_reminder) {
-    const obj = NotificationActionCreatorsDefault;
-    return obj.setScreenDowntimeReminder(screen_downtime_reminder);
+    return NotificationActionCreatorsDefault.setScreenDowntimeReminder(screen_downtime_reminder);
   },
-  usePredicate: tmp2
-};
-const toggle = SettingBuilders.createToggle(obj);
+  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
+    if (hasActiveParentLinks) {
+      hasActiveParentLinks = obj.useHasActiveParentLinks();
+    }
+    return hasActiveParentLinks;
+  }) : (() => {
+    let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
+    if (hasActiveParentLinks) {
+      hasActiveParentLinks = obj.useHasActiveParentLinks();
+    }
+    return hasActiveParentLinks;
+  })
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ScreenDowntimeReminderSetting.tsx");
 
 export default toggle;

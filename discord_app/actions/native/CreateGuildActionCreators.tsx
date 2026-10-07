@@ -1,24 +1,22 @@
 // === Module 12428: CreateGuildActionCreators ===
 
 // Module 12428 (CreateGuildActionCreators)
-import Constants from "Constants" /* 1085 */;
 import GuildChannelStore from "GuildChannelStore" /* 4513 */;
-import size from "module_2" /* 2 */;
 
-const InstantInviteSources = Constants.InstantInviteSources;
+const require = fn;
+const InstantInviteSources = fn(1085).InstantInviteSources;
+const size = fn(2);
 let result = size.fileFinishedImporting("actions/native/CreateGuildActionCreators.tsx");
 
 export const showInstantInviteModal = function showInstantInviteModal(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let result = GuildChannelStore.addConditionalChangeListener(() => {
-    const defaultChannel = GuildChannelStore.getDefaultChannel(closure_0);
+    defaultChannel = GuildChannelStore.getDefaultChannel(defaultChannel);
     let flag = null == defaultChannel;
     if (!flag) {
       const _setImmediate = setImmediate;
       setImmediate(() => {
-        const obj = closure_2_0(closure_2_1[2]);
-        const obj2 = { source: constants.GUILD_CREATE };
-        const result = obj.showInstantInviteActionSheet(defaultChannel, obj2);
+        const result = defaultChannel(dependencyMap[2]).showInstantInviteActionSheet(defaultChannel, { source: constants.GUILD_CREATE });
       });
       flag = false;
     }

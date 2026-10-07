@@ -9,9 +9,6 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/user_profile/ProfileUpdateRequestUtils.tsx");
 
 export const getProfileChangesForUpdateRequest = function getProfileChangesForUpdateRequest(c0, id) {
-  let arr3;
-  let pendingProfileEffect;
-  let pendingProfileFrame;
   const obj = {};
   if (undefined !== _require.pendingBanner) {
     const pendingBanner = _require.pendingBanner;
@@ -45,9 +42,8 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
   }
   ({ pendingProfileEffect, pendingProfileFrame } = _require);
   if (undefined === pendingProfileEffect) {
-    let obj2;
     if (undefined === pendingProfileFrame) {
-      obj2 = {};
+      let obj2 = {};
     }
     if (undefined !== obj2.collectibles_sku_ids) {
       obj.collectibles_sku_ids = obj2.collectibles_sku_ids;
@@ -65,11 +61,10 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
   const items = [...collectibles];
   if (undefined !== pendingProfileEffect) {
     const found = items.filter((type) => type.type !== CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT);
-    arr3 = found;
+    let arr3 = found;
     if (null !== pendingProfileEffect) {
-      const push = found.push;
       const obj3 = { skuId: pendingProfileEffect.skuId, type: CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT };
-      push(obj3);
+      found.push(obj3);
       arr3 = found;
     }
   }

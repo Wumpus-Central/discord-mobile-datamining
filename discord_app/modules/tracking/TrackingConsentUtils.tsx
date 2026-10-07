@@ -3,11 +3,10 @@
 // Module 13973 (TrackingConsentUtils)
 import size from "module_2" /* 2 */;
 
-const obj = {
+const result = size.fileFinishedImporting("modules/tracking/TrackingConsentUtils.tsx");
+
+export default {
   canUseInstallationId() {
     return true;
   }
 };
-const result = size.fileFinishedImporting("modules/tracking/TrackingConsentUtils.tsx");
-
-export default obj;

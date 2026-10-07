@@ -1,85 +1,71 @@
 // === Module 11343: ShareChatInput ===
 
 // Module 11343 (ShareChatInput)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1085 */;
-import intl4 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import Pressables from "Pressables" /* 5916 */;
 import ReactionIcon from "ReactionIcon" /* 8444 */;
 import useMessageMaxLengthDefault from "useMessageMaxLength" /* 8839 */;
 import FormInputDefault from "FormInput" /* 8930 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let PX_8;
-let metroImportDefault;
-let metroRequire;
-let num;
-let obj2;
-let obj3;
-let obj4;
-const View = react_native.View;
-const Fonts = Constants.Fonts;
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { container: obj2, chatInput: obj3, chatText: obj4, inputPlaceholder: { color: nativeDefault.colors.TEXT_MUTED }, emojiButton: { paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8, alignSelf: "flex-end" }, focused: { borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE } };
-obj2 = { flex: 1, flexDirection: "row", backgroundColor: nativeDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12 };
-createStyles = createStyles.createStyles;
-obj3 = { flex: 1, paddingVertical: 0, paddingHorizontal: nativeDefault.space.PX_4, maxHeight: 80 };
-obj4 = { fontSize: 16, lineHeight: 20, fontFamily: Fonts.PRIMARY_NORMAL, color: nativeDefault.colors.TEXT_STRONG, paddingTop: PX_8 + num, paddingBottom: nativeDefault.space.PX_8 };
-PX_8 = nativeDefault.space.PX_8;
-num = 2;
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { container: { flex: 1, flexDirection: "row", backgroundColor: nativeDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12 }, chatInput: null, chatText: null, inputPlaceholder: null, emojiButton: null, focused: null };
+let obj3 = { flex: 1, flexDirection: "row", backgroundColor: nativeDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12 };
+obj2.chatInput = { flex: 1, paddingVertical: 0, paddingHorizontal: nativeDefault.space.PX_4, maxHeight: 80 };
+const obj5 = { fontSize: 16, lineHeight: 20, fontFamily: fn(1085).Fonts.PRIMARY_NORMAL, color: nativeDefault.colors.TEXT_STRONG, paddingTop: null, paddingBottom: null };
+const PlatformUtils = fn(1369);
+let num = 2;
 if (PlatformUtils.isAndroid()) {
   num = 0;
 }
-({ color: nativeDefault.colors.TEXT_MUTED });
-({ paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8, alignSelf: "flex-end" });
-({ borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE });
-let closure_8 = createStyles(obj);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onBlur) => {
-  let closure_129_2;
-  let disabled;
-  let inputRef;
-  let onChange;
-  let onFocus;
-  let onPressEmoji;
-  let onSelectionChange;
-  let onSend;
-  let text;
-  let tmp10;
-  let tmp9;
-  const obj = react2;
-  const cResult = obj.c(32);
+obj5.paddingTop = nativeDefault.space.PX_8 + num;
+obj5.paddingBottom = nativeDefault.space.PX_8;
+obj2.chatText = obj5;
+let obj4 = { flex: 1, paddingVertical: 0, paddingHorizontal: nativeDefault.space.PX_4, maxHeight: 80 };
+obj2.inputPlaceholder = { color: nativeDefault.colors.TEXT_MUTED };
+const obj7 = { color: nativeDefault.colors.TEXT_MUTED };
+obj2.emojiButton = { paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8, alignSelf: "flex-end" };
+const obj8 = { paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8, alignSelf: "flex-end" };
+obj2.focused = { borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE };
+let closure_8 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+const obj9 = { borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/share/native/ShareChatInput.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((onBlur) => {
+  const cResult = c.c(32);
   ({ text, inputRef, onChange, onSelectionChange, onFocus } = onBlur);
   onBlur = onBlur.onBlur;
   ({ onPressEmoji, onSend, disabled } = onBlur);
   const tmp5 = closure_8();
   const tmp7 = useMessageMaxLengthDefault();
-  [tmp9, closure_129_2] = react.useState(false);
-  _slicedToArray(react.useState(false), 2);
+  const tmp4 = undefined !== disabled && disabled;
+  [tmp9, dependencyMap] = noop.useState(false);
   if (cResult[0] !== onFocus) {
     const fn = function c() {
-      closure_1_2(true);
+      dependencyMap(true);
       onFocus();
     };
     cResult[0] = onFocus;
     cResult[1] = fn;
-    tmp10 = fn;
+    let tmp10 = fn;
   } else {
     tmp10 = cResult[1];
   }
   if (cResult[2] !== onBlur) {
     class L {
       constructor() {
-        closure_1_2(false);
-        onBlur();
+        tmp = closure_2(false);
+        tmp2 = onBlur();
+        return;
       }
     }
     cResult[2] = onBlur;
@@ -87,76 +73,82 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onBlur) => {
   } else {
     class L {
       constructor() {
-        closure_1_2(false);
-        onBlur();
+        tmp = closure_2(false);
+        tmp2 = onBlur();
+        return;
       }
     }
   }
   if (tmp9) {
     class L {
       constructor() {
-        closure_1_2(false);
-        onBlur();
+        tmp = closure_2(false);
+        tmp2 = onBlur();
+        return;
       }
     }
   }
   if (cResult[4] === tmp5.container) {
-    let tmp13;
-    let tmp15;
     class L {
       constructor() {
-        closure_1_2(false);
-        onBlur();
+        tmp = closure_2(false);
+        tmp2 = onBlur();
+        return;
       }
     }
     const _Symbol = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
       class L {
         constructor() {
-          closure_1_2(false);
-          onBlur();
+          tmp = closure_2(false);
+          tmp2 = onBlur();
+          return;
         }
       }
-      const stringResult = obj2.string(intl4.t.ZroO3G);
+      const stringResult = obj2.string(util.t.ZroO3G);
       cResult[7] = stringResult;
-      tmp13 = stringResult;
+      const tmp13 = stringResult;
     } else {
       class L {
         constructor() {
-          closure_1_2(false);
-          onBlur();
+          tmp = closure_2(false);
+          tmp2 = onBlur();
+          return;
         }
       }
     }
     const _Symbol2 = Symbol;
-    const color = tmp5.inputPlaceholder.color;
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
       class L {
         constructor() {
-          closure_1_2(false);
-          onBlur();
+          tmp = closure_2(false);
+          tmp2 = onBlur();
+          return;
         }
       }
-      const stringResult1 = obj3.string(intl4.t["/+MXmw"]);
+      const stringResult1 = obj3.string(util.t["/+MXmw"]);
       cResult[8] = stringResult1;
-      tmp15 = stringResult1;
+      const tmp15 = stringResult1;
     } else {
       class L {
         constructor() {
-          closure_1_2(false);
-          onBlur();
+          tmp = closure_2(false);
+          tmp2 = onBlur();
+          return;
         }
       }
     }
     if (cResult[9] === L) {
       class L {
         constructor() {
-          closure_1_2(false);
-          onBlur();
+          tmp = closure_2(false);
+          tmp2 = onBlur();
+          return;
         }
       }
     }
-    const obj4 = { ref: inputRef, maxLength: tmp7, placeholder: tmp13, placeholderTextColor: color, accessibilityLabel: tmp15, onSubmitEditing: onSend, onSelectionChange, style: tmp5.chatInput, value: text, onChange, onFocus: tmp10, onBlur: L, multiline: true, showBorder: false, showTopContainer: false, textAlignVertical: "center", inputTextStyle: tmp5.chatText, editable: !(undefined !== disabled && disabled) };
+    const obj4 = { ref: inputRef, maxLength: tmp7, placeholder: tmp13, placeholderTextColor: tmp5.inputPlaceholder.color, accessibilityLabel: tmp15, onSubmitEditing: onSend, onSelectionChange, style: tmp5.chatInput, value: text, onChange, onFocus: tmp10, onBlur: L, multiline: true, showBorder: false, showTopContainer: false, textAlignVertical: "center", inputTextStyle: tmp5.chatText, editable: !tmp4 };
+    const tmp20 = timestampProducer(FormInputDefault, obj4);
     cResult[9] = L;
     cResult[10] = tmp10;
     cResult[11] = inputRef;
@@ -167,28 +159,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onBlur) => {
     cResult[16] = tmp5.chatInput;
     cResult[17] = tmp5.chatText;
     cResult[18] = tmp5.inputPlaceholder.color;
-    cResult[19] = !(undefined !== disabled && disabled);
+    cResult[19] = !tmp4;
     cResult[20] = text;
-    cResult[21] = metroRequire(FormInputDefault, obj4);
-    const tmp20 = metroRequire(FormInputDefault, obj4);
+    cResult[21] = tmp20;
   }
   const items = [tmp5.container, tmp9];
   cResult[4] = tmp5.container;
   cResult[5] = tmp9;
   cResult[6] = items;
+  const tmp8 = _slicedToArray(noop.useState(false), 2);
 }) : ((onFocus) => {
-  let c2;
-  let focused;
-  let inputRef;
-  let intl;
-  let intl2;
-  let intl3;
-  let items3;
-  let onChange;
-  let onPressEmoji;
-  let onSelectionChange;
-  let onSend;
-  let text;
   onFocus = onFocus.onFocus;
   const onBlur = onFocus.onBlur;
   let flag = onFocus.disabled;
@@ -199,35 +179,48 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onBlur) => {
   c2 = undefined;
   const tmp = closure_8();
   const tmp4 = useMessageMaxLengthDefault();
-  [focused, c2] = react.useState(false);
+  [focused, c2] = noop.useState(false);
   const items = [onFocus];
   const items1 = [onBlur];
-  _slicedToArray(react.useState(false), 2);
-  const callback = react.useCallback(() => {
+  const callback = noop.useCallback(() => {
     _undefined(true);
     onFocus();
   }, items);
   const items2 = [tmp.container, ];
-  const callback1 = react.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     _undefined(false);
     onBlur();
   }, items1);
   if (focused) {
     focused = tmp.focused;
   }
-  const obj = { style: items2, children: items3 };
+  const obj = { style: items2, children: null };
   items2[1] = focused;
-  const obj2 = { ref: inputRef, maxLength: tmp4, placeholder: intl.string(intl4.t.ZroO3G), placeholderTextColor: tmp.inputPlaceholder.color, accessibilityLabel: intl2.string(intl4.t["/+MXmw"]), onSubmitEditing: onSend, onSelectionChange, style: tmp.chatInput, value: text, onChange, onFocus: callback, onBlur: callback1, multiline: true, showBorder: false, showTopContainer: false, textAlignVertical: "center", inputTextStyle: tmp.chatText, editable: !flag };
-  const tmp2Result = FormInputDefault;
-  intl = intl4.intl;
-  intl2 = intl4.intl;
-  items3 = [metroRequire(tmp2Result, obj2), ];
-  const obj3 = { accessibilityLabel: intl3.string(intl4.t.iZ7Mz9), accessibilityRole: "button", onPress: onPressEmoji, style: tmp.emojiButton, disabled: flag, children: metroRequire(ReactionIcon.ReactionIcon, { size: "md" }) };
-  const PressableOpacity = Pressables.PressableOpacity;
-  intl3 = intl4.intl;
-  items3[1] = metroRequire(PressableOpacity, obj3);
-  return metroImportDefault(View, obj);
+  const obj2 = { ref: inputRef, maxLength: tmp4, placeholder: null, placeholderTextColor: null, accessibilityLabel: null, onSubmitEditing: null, onSelectionChange: null, style: null, value: null, onChange: null, onFocus: null, onBlur: null, multiline: true, showBorder: false, showTopContainer: false, textAlignVertical: "center", inputTextStyle: null, editable: null };
+  const tmp5 = _slicedToArray(noop.useState(false), 2);
+  const intl = util.intl;
+  obj2.placeholder = intl.string(util.t.ZroO3G);
+  obj2.placeholderTextColor = tmp.inputPlaceholder.color;
+  const intl2 = util.intl;
+  obj2.accessibilityLabel = intl2.string(util.t["/+MXmw"]);
+  obj2.onSubmitEditing = onSend;
+  obj2.onSelectionChange = onSelectionChange;
+  obj2.style = tmp.chatInput;
+  obj2.value = text;
+  obj2.onChange = onChange;
+  obj2.onFocus = callback;
+  obj2.onBlur = callback1;
+  obj2.inputTextStyle = tmp.chatText;
+  obj2.editable = !flag;
+  const items3 = [timestampProducer(FormInputDefault, obj2), ];
+  const obj3 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, disabled: null, children: null };
+  const intl3 = util.intl;
+  obj3.accessibilityLabel = intl3.string(util.t.iZ7Mz9);
+  obj3.onPress = onPressEmoji;
+  obj3.style = tmp.emojiButton;
+  obj3.disabled = flag;
+  obj3.children = timestampProducer(ReactionIcon.ReactionIcon, { size: "md" });
+  items3[1] = timestampProducer(Pressables.PressableOpacity, obj3);
+  obj.children = items3;
+  return React5(View, obj);
 });
-const result = size.fileFinishedImporting("modules/share/native/ShareChatInput.tsx");
-
-export default tmp4;

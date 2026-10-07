@@ -8,22 +8,21 @@ import AudioActionCreatorsDefault from "AudioActionCreators" /* 8079 */;
 import AudioRouteStore from "AudioRouteStore" /* 9335 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 import Dispatcher from "Dispatcher" /* 584 */;
-import size from "module_2" /* 2 */;
 
-let prototype2;
-let prototype3;
+require = fn;
 let obj2 = new LoggerDefault("NativeMuteManager");
 obj2.enableNativeLogger(true);
 class NativeMuteManager {
   constructor() {
-    obj2 = Object.create(new.target.prototype);
-    obj2.ignoreForNativeUnmute = false;
-    obj2.needToUnmuteNative = false;
-    obj2.ignoreForAudioRouteChange = false;
-    const timeout = new Timers.Timeout();
-    obj2.audioRouteChangeIgnoreTimer = timeout;
-    obj2.AUDIO_ROUTE_CHANGE_IGNORE_DURATION_MS = 300;
-    obj2.handleAudioRouteChange = function handleAudioRouteChange() {
+    obj1 = Object.create(new.target.prototype);
+    closure_0 = obj1;
+    obj1.ignoreForNativeUnmute = false;
+    obj1.needToUnmuteNative = false;
+    obj1.ignoreForAudioRouteChange = false;
+    timeout = new closure_0(closure_2[3]).Timeout();
+    obj1.audioRouteChangeIgnoreTimer = timeout;
+    obj1.AUDIO_ROUTE_CHANGE_IGNORE_DURATION_MS = 300;
+    obj1.handleAudioRouteChange = function handleAudioRouteChange() {
       const audioRouteChangeIgnoreTimer = obj2.audioRouteChangeIgnoreTimer;
       if (audioRouteChangeIgnoreTimer.isStarted()) {
         const audioRouteChangeIgnoreTimer2 = obj2.audioRouteChangeIgnoreTimer;
@@ -35,58 +34,56 @@ class NativeMuteManager {
         obj2.ignoreForAudioRouteChange = false;
       });
     };
-    AudioRouteStore.addChangeListener(obj2.handleAudioRouteChange);
-    obj = Dispatcher;
-    const subscription = obj.subscribe("VOICE_CHANNEL_SELECT", obj2.handleVoiceChannelSelect);
-    return obj2;
+    addChangeListenerResult = closure_3.addChangeListener(obj1.handleAudioRouteChange);
+    obj = closure_1(closure_2[4]);
+    subscription = obj.subscribe("VOICE_CHANNEL_SELECT", obj1.handleVoiceChannelSelect);
+    return obj1;
   }
-  nativeMuteChanged() {
-    if (!MediaEngineStore.hasActiveCallKitCall()) {
-      const self = this;
-      if (this.ignoreForNativeUnmute) {
-        self.ignoreForNativeUnmute = false;
-      } else if (!self.ignoreForAudioRouteChange) {
-        self.needToUnmuteNative = true;
-        obj2.log("Native mute changed > toggling mute");
-        obj = AudioActionCreatorsDefault;
-        obj.toggleSelfMute({ playSoundEffect: false });
-      }
+}
+const prototype = NativeMuteManager.prototype;
+prototype["nativeMuteChanged"] = function nativeMuteChanged() {
+  if (!MediaEngineStore.hasActiveCallKitCall()) {
+    const self = this;
+    if (this.ignoreForNativeUnmute) {
+      self.ignoreForNativeUnmute = false;
+    } else if (!self.ignoreForAudioRouteChange) {
+      self.needToUnmuteNative = true;
+      obj2.log("Native mute changed > toggling mute");
+      AudioActionCreatorsDefault.toggleSelfMute({ playSoundEffect: false });
     }
   }
-  updateNativeMute() {
-    if (!MediaEngineStore.hasActiveCallKitCall()) {
-      const self = this;
-      if (this.needToUnmuteNative) {
-        self.needToUnmuteNative = false;
-        self.ignoreForNativeUnmute = true;
-        obj2.log("Update native mute > unmuting native");
-        obj = inject;
-        const voiceEngine = obj.getVoiceEngine();
-        const setNativeMuteState = voiceEngine.setNativeMuteState;
-        if (setNativeMuteState != null) {
-          setNativeMuteState(false);
-        }
-      }
-    }
-  }
-  handleVoiceChannelSelect(channelId) {
-    if (null == channelId.channelId) {
-      obj2.log("Leaving voice channel > unmuting native");
-      obj = inject;
-      const voiceEngine = obj.getVoiceEngine();
+};
+prototype["updateNativeMute"] = function updateNativeMute() {
+  if (!MediaEngineStore.hasActiveCallKitCall()) {
+    const self = this;
+    if (this.needToUnmuteNative) {
+      self.needToUnmuteNative = false;
+      self.ignoreForNativeUnmute = true;
+      obj2.log("Update native mute > unmuting native");
+      const voiceEngine = inject.getVoiceEngine();
       const setNativeMuteState = voiceEngine.setNativeMuteState;
       if (setNativeMuteState != null) {
         setNativeMuteState(false);
       }
     }
   }
-}
-const prototype = NativeMuteManager.prototype;
+};
+prototype["handleVoiceChannelSelect"] = function handleVoiceChannelSelect(channelId) {
+  if (null == channelId.channelId) {
+    obj2.log("Leaving voice channel > unmuting native");
+    const voiceEngine = inject.getVoiceEngine();
+    const setNativeMuteState = voiceEngine.setNativeMuteState;
+    if (setNativeMuteState != null) {
+      setNativeMuteState(false);
+    }
+  }
+};
 let obj = Object.create(NativeMuteManager.prototype);
+let closure_129_0 = obj;
 obj.ignoreForNativeUnmute = false;
 obj.needToUnmuteNative = false;
 obj.ignoreForAudioRouteChange = false;
-let timeout = new Timers.Timeout();
+let timeout = new fn(2046).Timeout();
 obj.audioRouteChangeIgnoreTimer = timeout;
 obj.AUDIO_ROUTE_CHANGE_IGNORE_DURATION_MS = 300;
 obj.handleAudioRouteChange = function handleAudioRouteChange() {
@@ -104,14 +101,15 @@ obj.handleAudioRouteChange = function handleAudioRouteChange() {
 AudioRouteStore.addChangeListener(obj.handleAudioRouteChange);
 let subscription = Dispatcher.subscribe("VOICE_CHANNEL_SELECT", obj.handleVoiceChannelSelect);
 class NativeMuteManagerWrapper {
-  nativeMuteChanged(arg0) {
-    obj.nativeMuteChanged(arg0);
-  }
-  updateNativeMute() {
-    obj.updateNativeMute();
-  }
 }
-({ prototype: prototype2, prototype: prototype3 } = NativeMuteManagerWrapper);
+const prototype2 = NativeMuteManagerWrapper.prototype;
+prototype2["nativeMuteChanged"] = function nativeMuteChanged(arg0) {
+  obj.nativeMuteChanged(arg0);
+};
+prototype2["updateNativeMute"] = function updateNativeMute() {
+  obj.updateNativeMute();
+};
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/NativeMuteManager.native.tsx");
 
-export default Object.create(prototype3);
+export default Object.create(NativeMuteManagerWrapper.prototype);

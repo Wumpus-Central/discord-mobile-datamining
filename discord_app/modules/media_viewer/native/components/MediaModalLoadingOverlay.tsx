@@ -1,143 +1,126 @@
 // === Module 12796: MediaModalLoadingOverlay ===
 
 // Module 12796 (MediaModalLoadingOverlay)
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 4892 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
-import Fragment_mod from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let StyleSheet;
-let c3;
-let closure_4;
-let hasOwnProperty;
-let metroRequire;
-let obj2;
-let obj3;
-({ View: c3, ActivityIndicator: closure_4, StyleSheet } = react_native);
-let Fragment = Fragment_mod;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { loader: obj2, loaderIndicator: obj3, loaderText: { textAlign: "center" } };
-obj2 = { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: "rgba(0, 0, 0, 0.7)" };
-createStyles = createStyles.createStyles;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, ActivityIndicator: closure_4, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4896);
+let obj = { loader: null, loaderIndicator: null, loaderText: null };
+let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj3 = { marginTop: nativeDefault.space.PX_12 };
-let closure_7 = createStyles(obj);
-const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let intl;
-  let items;
-  let items1;
-  let progress;
-  let status;
-  let style;
-  const obj = react2;
-  const cResult = obj.c(11);
+obj3.flex = 1;
+obj3.alignItems = "center";
+obj3.justifyContent = "center";
+obj3.backgroundColor = "rgba(0, 0, 0, 0.7)";
+obj.loader = obj3;
+obj.loaderIndicator = { marginTop: nativeDefault.space.PX_12 };
+obj.loaderText = { textAlign: "center" };
+let closure_7 = createStyles.createStyles(obj);
+const ReactCompilerGating = fn(558);
+let obj4 = { marginTop: nativeDefault.space.PX_12 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaModalLoadingOverlay.tsx");
+
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let stringResult = dependencyMap;
+  const cResult = c.c(11);
   ({ style, status, progress } = arg0);
-  const tmp4 = closure_7();
+  let loaderText = closure_7();
   if (cResult[0] === style) {
-    let tmp5;
-    let tmp17Result2;
-    if (cResult[1] === tmp4.loader) {
-      tmp5 = cResult[2];
+    if (cResult[1] === loaderText.loader) {
+      let tmp4 = cResult[2];
     }
     if (cResult[3] === progress) {
       if (cResult[4] === status) {
-        if (cResult[5] === tmp4.loaderIndicator) {
-          let tmp6;
-          if (cResult[6] === tmp4.loaderText) {
-            tmp6 = cResult[7];
-          }
-          if (cResult[8] === tmp5) {
-            let tmp13;
-            if (cResult[9] === tmp6) {
-              tmp13 = cResult[10];
+        if (cResult[5] === loaderText.loaderIndicator) {
+          if (cResult[6] === loaderText.loaderText) {
+            if (cResult[8] === tmp4) {
+              if (cResult[9] === tmp5) {
+                let tmp13 = cResult[10];
+              }
+              return tmp13;
             }
-            return tmp13;
+            const obj2 = { style: tmp4, children: cResult[7] };
+            const tmp16 = hasOwnProperty(React3, obj2);
+            cResult[8] = tmp4;
+            cResult[9] = cResult[7];
+            cResult[10] = tmp16;
+            tmp13 = tmp16;
           }
-          const obj2 = { style: tmp5, children: tmp6 };
-          const tmp16 = hasOwnProperty(_false, obj2);
-          cResult[8] = tmp5;
-          cResult[9] = tmp6;
-          cResult[10] = tmp16;
-          tmp13 = tmp16;
         }
       }
     }
     if ("error" === status) {
-      const obj3 = { style: tmp4.loaderText, variant: "heading-md/semibold", color: "text-overlay-light", children: intl.string(intl2.t["+ITMYX"]) };
-      const Text2 = Text_Text.Text;
-      intl = intl2.intl;
-      tmp17Result2 = hasOwnProperty(Text2, obj3);
+      const obj3 = { style: loaderText.loaderText, variant: "heading-md/semibold", color: "text-overlay-light", children: null };
+      const intl = util.intl;
+      stringResult = intl.string(util.t["+ITMYX"]);
+      obj3.children = stringResult;
+      let tmp17Result2 = hasOwnProperty(Text_Text.Text, obj3);
     } else {
       let tmp17Result = null;
-      const Fragment = react.Fragment;
       if (null != progress) {
+        const obj4 = { style: loaderText.loaderText, variant: "heading-md/semibold", color: "text-overlay-light", children: null };
         const _Math = Math;
-        const obj4 = { style: tmp4.loaderText, variant: "heading-md/semibold", color: "text-overlay-light", children: items };
-        const Text = Text_Text.Text;
-        items = [Math.round(progress), "%"];
-        tmp17Result = metroRequire(Text, obj4);
+        const items = [Math.round(progress), "%"];
+        obj4.children = items;
+        tmp17Result = timestampProducer(Text_Text.Text, obj4);
       }
-      const obj5 = { children: items1 };
-      items1 = [tmp17Result, ];
-      const obj6 = { color: "white", style: tmp4.loaderIndicator, size: "large" };
-      items1[1] = hasOwnProperty(React3, obj6);
-      tmp17Result2 = metroRequire(Fragment, obj5);
+      const obj5 = { children: null };
+      const items1 = [tmp17Result, ];
+      const obj6 = { color: "white", style: loaderText.loaderIndicator, size: "large" };
+      items1[1] = hasOwnProperty(React4, obj6);
+      obj5.children = items1;
+      tmp17Result2 = timestampProducer(noop.Fragment, obj5);
     }
     cResult[3] = progress;
     cResult[4] = status;
-    cResult[5] = tmp4.loaderIndicator;
-    cResult[6] = tmp4.loaderText;
+    status = loaderText.loaderIndicator;
+    cResult[5] = status;
+    loaderText = loaderText.loaderText;
+    cResult[6] = loaderText;
     cResult[7] = tmp17Result2;
-    tmp6 = tmp17Result2;
   }
-  const items2 = [tmp4.loader, style];
+  const items2 = [loaderText.loader, style];
   cResult[0] = style;
-  cResult[1] = tmp4.loader;
+  cResult[1] = loaderText.loader;
   cResult[2] = items2;
-  tmp5 = items2;
+  tmp4 = items2;
 }) : ((progress) => {
-  let intl;
-  let items;
-  let items1;
-  let items2;
-  let status;
-  let style;
-  let tmp12Result1;
   progress = progress.progress;
   ({ style, status } = progress);
   const tmp = closure_7();
-  const obj = { style: items, children: tmp12Result1 };
-  items = [tmp.loader, style];
+  const obj = { style: null, children: null };
+  const items = [tmp.loader, style];
+  obj.style = items;
   if ("error" === status) {
-    const obj2 = { style: tmp.loaderText, variant: "heading-md/semibold", color: "text-overlay-light", children: intl.string(intl2.t["+ITMYX"]) };
-    const Text2 = Text_Text.Text;
-    intl = intl2.intl;
-    tmp12Result1 = hasOwnProperty(Text2, obj2);
+    const obj2 = { style: tmp.loaderText, variant: "heading-md/semibold", color: "text-overlay-light", children: null };
+    const intl = util.intl;
+    obj2.children = intl.string(util.t["+ITMYX"]);
+    let tmp12Result1 = hasOwnProperty(Text_Text.Text, obj2);
   } else {
     let tmp12Result = null;
-    const Fragment = react.Fragment;
     if (null != progress) {
+      const obj3 = { style: tmp.loaderText, variant: "heading-md/semibold", color: "text-overlay-light", children: null };
       const _Math = Math;
-      const obj3 = { style: tmp.loaderText, variant: "heading-md/semibold", color: "text-overlay-light", children: items1 };
-      const Text = Text_Text.Text;
-      items1 = [Math.round(progress), "%"];
-      tmp12Result = metroRequire(Text, obj3);
+      const items1 = [Math.round(progress), "%"];
+      obj3.children = items1;
+      tmp12Result = timestampProducer(Text_Text.Text, obj3);
     }
-    const obj4 = { children: items2 };
-    items2 = [tmp12Result, ];
+    const obj4 = { children: null };
+    const items2 = [tmp12Result, ];
     const obj5 = { color: "white", style: tmp.loaderIndicator, size: "large" };
-    items2[1] = hasOwnProperty(React3, obj5);
-    tmp12Result1 = metroRequire(Fragment, obj4);
+    items2[1] = hasOwnProperty(React4, obj5);
+    obj4.children = items2;
+    tmp12Result1 = timestampProducer(noop.Fragment, obj4);
   }
-  return hasOwnProperty(_false, obj);
+  obj.children = tmp12Result1;
+  return hasOwnProperty(React3, obj);
 }));
-const result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaModalLoadingOverlay.tsx");
-
-export default memoResult;

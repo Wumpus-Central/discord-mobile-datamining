@@ -1,61 +1,53 @@
 // === Module 12223: usePowerupGroupConfig ===
 
 // Module 12223 (usePowerupGroupConfig)
-import intl4 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import _modDef2553 from "module_2553" /* 2553 */;
 import GuildTagUtils from "GuildTagUtils" /* 7847 */;
 import _modDef12224 from "module_12224" /* 12224 */;
 import _modDef12225 from "module_12225" /* 12225 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, group) => {
-  let closure_0;
-  let first;
-  let tmp17;
-  let tmp6;
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/usePowerupGroupConfig.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, group) => {
   _require = arg0;
-  let obj = require("react");
-  const cResult = obj.c(10);
+  const cResult = require("c").c(10);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
     const fn = function l() {
-      const guild = GuildStore.getGuild(closure_0);
+      guild = GuildStore.getGuild(closure_0);
       let guildSupportsTagsResult = null != guild;
       if (guildSupportsTagsResult) {
-        const obj = GuildTagUtils;
-        guildSupportsTagsResult = obj.guildSupportsTags(guild);
+        guildSupportsTagsResult = GuildTagUtils.guildSupportsTags(guild);
       }
       return guildSupportsTagsResult;
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    tmp6 = fn;
+    let tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const tmpResult = require("get initialized");
-  const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+  let obj = require("c");
+  const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
   if ("guildTagsBadgePacks" !== group.group) {
-    const tmpResult2 = require("GlobalUtils");
-    tmpResult2.assertNever(group.group);
+    tmp(1375).assertNever(group.group);
+    const tmpResult2 = tmp(1375);
   } else {
-    let tmp10;
-    let tmp9;
-    let tmp8;
-    let tmp14;
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
       const intl = tmp(1126).intl;
@@ -66,9 +58,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, group) => {
       cResult[3] = stringResult;
       cResult[4] = stringResult1;
       cResult[5] = obj2;
-      tmp10 = obj2;
-      tmp9 = stringResult1;
-      tmp8 = stringResult;
+      let tmp10 = obj2;
+      let tmp9 = stringResult1;
+      let tmp8 = stringResult;
     } else {
       tmp8 = cResult[3];
       tmp9 = cResult[4];
@@ -82,7 +74,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, group) => {
       }
       cResult[6] = stateFromStores;
       cResult[7] = stringResult2;
-      tmp14 = stringResult2;
+      let tmp14 = stringResult2;
     } else {
       tmp14 = cResult[7];
     }
@@ -90,51 +82,43 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, group) => {
       const obj3 = { title: tmp8, description: tmp9, image: tmp10, disabledReason: tmp14, badge: "IconComponent", forceStaticImages: "IconComponent" };
       cResult[8] = tmp14;
       cResult[9] = obj3;
-      tmp17 = obj3;
+      let tmp17 = obj3;
     } else {
       tmp17 = cResult[9];
     }
   }
   return tmp17;
 }) : ((arg0, arg1) => {
-  let closure_0;
-  let stateFromStores;
   _require = arg0;
   const group = arg1;
-  let obj = require("get initialized");
   const items = [GuildStore];
-  stateFromStores = obj.useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
+    guild = GuildStore.getGuild(closure_0);
     let guildSupportsTagsResult = null != guild;
     if (guildSupportsTagsResult) {
-      const obj = GuildTagUtils;
-      guildSupportsTagsResult = obj.guildSupportsTags(guild);
+      guildSupportsTagsResult = GuildTagUtils.guildSupportsTags(guild);
     }
     return guildSupportsTagsResult;
   });
   const items1 = [arg1, stateFromStores];
-  return react.useMemo(() => {
-    let intl;
-    let intl2;
-    let obj3;
-    let stringResult;
+  return noop.useMemo(() => {
     if ("guildTagsBadgePacks" === group.group) {
-      const obj2 = { title: intl.string(_modDef2553.KC9HRW), description: intl2.string(_modDef2553.GJiSmP), image: obj3, disabledReason: stringResult, badge: "IconComponent", forceStaticImages: "IconComponent" };
-      intl = intl4.intl;
-      intl2 = intl4.intl;
-      stringResult = undefined;
-      obj3 = { staticUrl: _modDef12224, animatedUrl: _modDef12225 };
+      const obj2 = { title: null, description: null, image: null, disabledReason: null, badge: "IconComponent", forceStaticImages: "IconComponent" };
+      const intl = util.intl;
+      obj2.title = intl.string(_modDef2553.KC9HRW);
+      const intl2 = util.intl;
+      obj2.description = intl2.string(_modDef2553.GJiSmP);
+      const obj3 = { staticUrl: _modDef12224, animatedUrl: _modDef12225 };
+      obj2.image = obj3;
+      let stringResult;
       if (!stateFromStores) {
-        const intl3 = intl4.intl;
+        const intl3 = util.intl;
         stringResult = intl3.string(_modDef2553.lvk1Gc);
       }
+      obj2.disabledReason = stringResult;
       return obj2;
     } else {
-      const obj = GlobalUtils;
-      obj.assertNever(tmp.group);
+      GlobalUtils.assertNever(tmp.group);
     }
   }, items1);
 });
-const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/usePowerupGroupConfig.tsx");
-
-export default tmp2;

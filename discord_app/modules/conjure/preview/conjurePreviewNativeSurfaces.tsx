@@ -46,83 +46,78 @@ function menuOptionIds(items) {
   }
 }
 function answerFor(cmd) {
-  let options;
-  let subject;
-  let closure_0 = cmd;
+  const iframeId = cmd;
   const found = closure_6.find((iframeId) => iframeId.iframeId === iframeId.iframeId);
   if (null == found) {
     return null;
   } else if (null == obj[cmd.cmd]) {
     return null;
   } else {
-    const tmp11Result = obj[cmd.cmd](cmd);
-    ({ options, subject } = tmp11Result);
-    const result = tmp11Result.result;
-    if (found.recorded.length < 20) {
-      const recorded = found.recorded;
-      obj = { command: cmd.cmd, answered: tmp13 };
+    ({ options, subject } = tmp10(cmd));
+    if (found.recorded.length >= 20) {
+      obj = { result: tmp12 };
+      return obj;
+    } else {
+      let obj2 = { command: cmd.cmd, answered: tmp13 };
       if (null != options) {
-        let obj5;
-        let obj4;
         if (options.length > 0) {
-          obj5 = { options };
-          const obj2 = { options };
+          const obj3 = { options };
+          let obj6 = obj3;
         }
-        const merged = Object.assign(obj5);
+        const merged = Object.assign(obj6);
         if (null != subject) {
-          obj4 = { subject };
-          const obj3 = { subject };
+          const obj4 = { subject };
+          let obj5 = obj4;
         } else {
-          obj4 = {};
+          obj5 = {};
         }
-        const merged1 = Object.assign(obj4);
-        tmp2(obj);
+        const merged1 = Object.assign(obj5);
+        obj2 = tmp2(obj2);
       }
-      obj5 = {};
+      obj6 = {};
     }
-    return { result };
+    const tmp10Result = tmp10(cmd);
   }
 }
 const RPCCommands = Constants.RPCCommands;
 let obj = {
   [RPCCommands.OPEN_CONTEXT_MENU]: (args) => {
     if ("custom" !== args.args.type) {
-      obj = { result: { opened: true }, answered: "opened, no selection to make" };
       const obj2 = { result: { opened: true }, answered: "opened, no selection to make" };
+      obj = obj2;
     } else {
       obj = { result: { opened: true, selected_id: null }, answered: "dismissed", options: menuOptionIds(args.args.items) };
     }
     return obj;
   },
   [RPCCommands.SHOW_CONFIRM_MODAL]: (args) => {
-    let tmp;
+    obj = { result: "confirm" === args.args.type ? { confirmed: false } : { acknowledged: false }, answered: "dismissed", subject: null };
     const title = args.args.title;
-    obj = { result: "confirm" === args.args.type ? { confirmed: false } : { acknowledged: false }, answered: "dismissed", subject: tmp };
-    tmp = undefined;
+    let tmp;
     if (typeof title === "string") {
       if ("" !== title) {
         tmp = title;
       }
     }
+    obj.subject = tmp;
     return obj;
   },
   [RPCCommands.OPEN_EXTERNAL_LINK]: (args) => {
-    let tmp;
+    obj = { result: { opened: false }, answered: "cancelled \u2014 an agent may not open external links", subject: null };
     const url = args.args.url;
-    obj = { result: { opened: false }, answered: "cancelled \u2014 an agent may not open external links", subject: tmp };
-    tmp = undefined;
+    let tmp;
     if (typeof url === "string") {
       if ("" !== url) {
         tmp = url;
       }
     }
+    obj.subject = tmp;
     return obj;
   },
   [RPCCommands.SHARE_CONTENT]: (args) => {
-    let tmp;
+    obj = { result: { success: false, didCopyLink: false, didSendMessage: false }, answered: "closed without sharing \u2014 an agent may not send a message for the user", subject: null };
     const preview_title = args.args.preview_title;
-    obj = { result: { success: false, didCopyLink: false, didSendMessage: false }, answered: "closed without sharing \u2014 an agent may not send a message for the user", subject: tmp };
-    tmp = undefined;
+    let tmp;
     if (typeof preview_title === "string") {
       if ("" !== preview_title) {
         tmp = preview_title;
@@ -138,6 +133,7 @@ let obj = {
       }
       tmp = tmp2;
     }
+    obj.subject = tmp;
     return obj;
   },
   [RPCCommands.OPEN_USER_PROFILE]: () => ({ result: { opened: true }, answered: "opened" }),
@@ -167,7 +163,6 @@ export const beginNativeSurfaceSessionForFrame = function beginNativeSurfaceSess
   if (null == iframeId) {
     return closure_5;
   } else {
-    let arr;
     const obj2 = { iframeId, recorded: [] };
     beneathBatches = undefined;
     if (beneathBatches != null) {
@@ -175,16 +170,16 @@ export const beginNativeSurfaceSessionForFrame = function beginNativeSurfaceSess
     }
     if (true === beneathBatches) {
       closure_6.push(obj2);
-      arr = closure_6;
+      let arr = closure_6;
     } else {
       arr = closure_6;
       closure_6.unshift(obj2);
     }
     if (1 === arr.length) {
+      let result = obj2(9008).setRpcCommandInterceptor(answerFor);
       obj = obj2(9008);
-      let result = obj.setRpcCommandInterceptor(answerFor);
     }
-    return {
+    const obj3 = {
       iframeId,
       drain() {
           const recorded = obj2.recorded;
@@ -195,11 +190,11 @@ export const beginNativeSurfaceSessionForFrame = function beginNativeSurfaceSess
           if (-1 !== index) {
             closure_6.splice(index, 1);
             if (0 === closure_6.length) {
-              obj = RpcCommandInterception;
-              const result = obj.setRpcCommandInterceptor(null);
+              const result = RpcCommandInterception.setRpcCommandInterceptor(null);
             }
           }
         }
     };
+    return obj3;
   }
 };

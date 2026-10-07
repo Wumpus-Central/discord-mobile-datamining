@@ -2,40 +2,37 @@
 
 // Module 15956 (useIsHCaptchaModalOpenTracking)
 import RootNavigationRef from "RootNavigationRef" /* 4743 */;
-import RegistrationUIStore from "RegistrationUIStore" /* 15906 */;
-import react from "react" /* 19 */;
-import RegistrationConstants from "RegistrationConstants" /* 15907 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let closure_4;
-let hasOwnProperty;
-let closure_3 = RegistrationUIStore.doesRegistrationHaveIdentityType;
+require = fn;
+let closure_3 = fn(15906).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(15907);
 ({ RegisterTransitionSteps: closure_4, RegistrationTransitionActionTypes: hasOwnProperty } = RegistrationConstants);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let constants2;
-  let context;
-  let tmp3;
-  let tmp4;
-  let obj = context(576);
-  const cResult = obj.c(3);
-  context = react.useContext(context(15903).TrackRegistrationContext);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/utils/useIsHCaptchaModalOpenTracking.tsx");
+
+export const useIsHCaptchaModalOpenTracking = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = context(576).c(3);
+  context = noop.useContext(context(15903).TrackRegistrationContext);
   if (cResult[0] !== context) {
     const fn = function o() {
-      let obj = RootNavigationRef;
-      const rootNavigationRef = obj.getRootNavigationRef();
+      const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
       let current;
       if (rootNavigationRef != null) {
         current = rootNavigationRef.current;
       }
       if (null != current) {
         return rootNavigationRef.addListener("state", () => {
-          const obj = context(dependencyMap[7]);
-          const isModalOpenResult = obj.isModalOpen("hcaptcha") && closure_2_3();
+          let isModalOpenResult = context(dependencyMap[7]).isModalOpen("hcaptcha");
+          if (isModalOpenResult) {
+            isModalOpenResult = closure_2_3();
+          }
           if (isModalOpenResult) {
             const obj2 = { step: constants.CAPTCHA, actionType: constants2.VIEWED };
             closure_1_0(obj2);
           }
+          const obj = context(dependencyMap[7]);
         });
       }
     };
@@ -43,37 +40,35 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[0] = context;
     cResult[1] = fn;
     cResult[2] = items;
-    tmp4 = items;
-    tmp3 = fn;
+    let tmp4 = items;
+    let tmp3 = fn;
   } else {
     tmp3 = cResult[1];
     tmp4 = cResult[2];
   }
-  const layoutEffect = react.useLayoutEffect(tmp3, tmp4);
+  const layoutEffect = noop.useLayoutEffect(tmp3, tmp4);
+  let obj = context(576);
 }) : (() => {
-  let constants2;
-  let context;
-  context = react.useContext(context(15903).TrackRegistrationContext);
+  context = noop.useContext(context(15903).TrackRegistrationContext);
   const items = [context];
-  const layoutEffect = react.useLayoutEffect(() => {
-    let obj = RootNavigationRef;
-    const rootNavigationRef = obj.getRootNavigationRef();
+  const layoutEffect = noop.useLayoutEffect(() => {
+    const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     let current;
     if (rootNavigationRef != null) {
       current = rootNavigationRef.current;
     }
     if (null != current) {
       return rootNavigationRef.addListener("state", () => {
-        const obj = context(dependencyMap[7]);
-        const isModalOpenResult = obj.isModalOpen("hcaptcha") && closure_2_3();
+        let isModalOpenResult = context(dependencyMap[7]).isModalOpen("hcaptcha");
+        if (isModalOpenResult) {
+          isModalOpenResult = closure_2_3();
+        }
         if (isModalOpenResult) {
           const obj2 = { step: constants.CAPTCHA, actionType: constants2.VIEWED };
           closure_1_0(obj2);
         }
+        const obj = context(dependencyMap[7]);
       });
     }
   }, items);
 });
-const result = size.fileFinishedImporting("modules/auth/native/components/utils/useIsHCaptchaModalOpenTracking.tsx");
-
-export const useIsHCaptchaModalOpenTracking = tmp3;

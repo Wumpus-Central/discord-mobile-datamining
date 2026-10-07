@@ -1,79 +1,82 @@
 // === Module 14803: FriendRequestsMutualGuildsSetting ===
 
 // Module 14803 (FriendRequestsMutualGuildsSetting)
-import react2 from "react" /* 576 */;
-import Constants from "Constants" /* 1085 */;
-import intl2 from "intl" /* 1126 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import FlagUtilsAll from "FlagUtils" /* 1390 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 6498 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
 import useParentalControlSettings from "useParentalControlSettings" /* 14641 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const FriendSourceFlags = Constants.FriendSourceFlags;
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+const FriendSourceFlags = fn(1085).FriendSourceFlags;
+let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-ReactCompilerGating = ReactCompilerGating_mod;
-const fn = () => {
-  const obj = useParentalControlSettings;
-  return obj.useIsParentallyControlled();
-};
+ReactCompilerGating = fn(558);
+fn = () => useParentalControlSettings.useIsParentallyControlled();
+const SettingBuilders = fn(11142);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp5;
-  const obj = react2;
-  const cResult = obj.c(2);
+  const cResult = c.c(2);
   const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
   const setting = FriendSourceFlagsSetting.useSetting();
   if (cResult[0] !== setting) {
-    const tmpResult = UserSettingsUtils;
-    const flags = tmpResult.computeFlags(setting);
+    const flags = UserSettingsUtils.computeFlags(setting);
     cResult[0] = setting;
     cResult[1] = flags;
-    tmp5 = flags;
+    let tmp5 = flags;
+    const tmpResult = UserSettingsUtils;
   } else {
     tmp5 = cResult[1];
   }
   return tmp5.mutualGuilds;
 }) : (() => {
-  let setting;
   const FriendSourceFlagsSetting = setting(2028).FriendSourceFlagsSetting;
   setting = FriendSourceFlagsSetting.useSetting();
   const items = [setting];
-  return react.useMemo(() => {
-    const obj = UserSettingsUtils;
-    return obj.computeFlags(setting);
-  }, items).mutualGuilds;
+  return noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items).mutualGuilds;
 });
-let obj = {
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.mozb8f);
+    const intl = util.intl;
+    return intl.string(util.t.mozb8f);
   },
-  parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue: tmp3,
+  parent: fn(7645).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(2);
+    const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
+    const setting = FriendSourceFlagsSetting.useSetting();
+    if (cResult[0] !== setting) {
+      const flags = UserSettingsUtils.computeFlags(setting);
+      cResult[0] = setting;
+      cResult[1] = flags;
+      let tmp5 = flags;
+      const tmpResult = UserSettingsUtils;
+    } else {
+      tmp5 = cResult[1];
+    }
+    return tmp5.mutualGuilds;
+  }) : (() => {
+    const FriendSourceFlagsSetting = setting(2028).FriendSourceFlagsSetting;
+    setting = FriendSourceFlagsSetting.useSetting();
+    const items = [setting];
+    return noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items).mutualGuilds;
+  }),
   onValueChange: function onFriendRequestsMutualGuildsSettingValueChange(arg0) {
-    let addFlagResult;
     const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
     const setting = FriendSourceFlagsSetting.getSetting();
     const FriendSourceFlagsSetting2 = UserSettings.FriendSourceFlagsSetting;
-    const updateSetting = FriendSourceFlagsSetting2.updateSetting;
     const obj = FlagUtilsAll;
-    const tmp2 = arg0;
-    if (tmp2) {
-      addFlagResult = obj.addFlag(setting, FriendSourceFlags.MUTUAL_GUILDS);
+    if (arg0) {
+      let addFlagResult = obj.addFlag(setting, FriendSourceFlags.MUTUAL_GUILDS);
     } else {
       addFlagResult = obj.removeFlags(setting, FriendSourceFlags.MUTUAL_GUILDS, FriendSourceFlags.NO_RELATION);
     }
-    updateSetting(addFlagResult);
+    FriendSourceFlagsSetting2.updateSetting(addFlagResult);
   },
   useIsDisabled: fn
-};
-const toggle = SettingBuilders.createToggle(obj);
+});
+const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/FriendRequestsMutualGuildsSetting.tsx");
 
 export default toggle;

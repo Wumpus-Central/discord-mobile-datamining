@@ -4,29 +4,11 @@
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
 import keyCodeDefault from "keyCode" /* 13899 */;
-import _slicedToArray_mod from "_slicedToArray" /* 32 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1357 */;
-import KeyboardConstants from "KeyboardConstants" /* 7026 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import size from "module_2" /* 2 */;
 
-let c1, c2, c4, c5;
-
-let LinuxKeyToCode;
-let MacosKeyToCode;
-let WindowsKeyToCode;
-const f115777 = (item) => {
-  let tmp;
-  [tmp, obj] = item;
-  const items = [tmp, ];
-  let toLocaleLowerCaseResult = obj;
-  if (null != obj) {
-    toLocaleLowerCaseResult = obj.toLocaleLowerCase();
-  }
-  items[1] = toLocaleLowerCaseResult;
-  return items;
-};
+require = fn;
 function normalizeKey(toLocaleLowerCase) {
   let toLocaleLowerCaseResult = toLocaleLowerCase;
   if (null != toLocaleLowerCase) {
@@ -35,94 +17,93 @@ function normalizeKey(toLocaleLowerCase) {
   return toLocaleLowerCaseResult;
 }
 function syncKeyboardLayoutMap() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_12.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-let obj = function _syncKeyboardLayoutMap() {
-  obj = _asyncToGenerator(async function() {
-    if (c5 === 2) {
-      c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_12 = async function _syncKeyboardLayoutMap() {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      let c3;
-      try {
-        let closure_0;
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            let closure_1 = tmp;
-            closure_0 = undefined;
-            const _navigator2 = navigator;
-            const keyboard2 = navigator.keyboard;
-            let getLayoutMap;
-            if (keyboard2 != null) {
-              getLayoutMap = keyboard2.getLayoutMap;
-            }
-            if (null != getLayoutMap) {
-              c3 = 1;
-              const _navigator = navigator;
-              c4 = 2;
-              c5 = 1;
-              const obj4 = { value: keyboard.getLayoutMap(), done: false };
-              return obj4;
-            }
-          }
-        } else if (1 === c4) {
-          c3 = 0;
-          const self2 = this;
-          let closure_10 = new closure_129_9();
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      let getLayoutMap = c4;
+      if (0 === c4) {
+        if (arg0 === 1) {
           c5 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c3 = 0;
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          closure_0 = value;
-          const _Object = Object;
-          const self = this;
-          closure_10 = new closure_129_9(Object.fromEntries(closure_0.entries()));
-          c3 = 0;
-          c5 = 3;
-          return { value: true, done: true };
+          closure_1 = tmp3;
+          closure_128_0 = undefined;
+          const _navigator2 = navigator;
+          getLayoutMap = undefined;
+          if (keyboard2 != null) {
+            getLayoutMap = keyboard2.getLayoutMap;
+          }
+          if (null != getLayoutMap) {
+            c3 = 1;
+            const _navigator = navigator;
+            c4 = 2;
+            c5 = 1;
+            const obj4 = { value: keyboard.getLayoutMap(), done: false };
+            return obj4;
+          }
         }
+      } else if (1 === getLayoutMap) {
+        c3 = 0;
+        getLayoutMap = new closure_129_9();
+        closure_129_10 = getLayoutMap;
+      } else if (arg0 === 1) {
         c5 = 3;
-        return { value: false, done: true };
-      } catch (tmp13) {
-        let closure_2 = tmp13;
-        if (0 === c3) {
-          c5 = 3;
-          throw tmp13;
-        } else {
-          c4 = 1;
-        }
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 0;
+        c5 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } else {
+        closure_128_0 = value;
+        const _Object = Object;
+        closure_129_10 = new closure_129_9(Object.fromEntries(closure_128_0.entries()));
+        c3 = 0;
+        c5 = 3;
+        return { value: true, done: true };
+      }
+      c5 = 3;
+    } catch (tmp17) {
+      closure_2 = tmp17;
+      if (tmp4 === c3) {
+        c5 = tmp2;
+        throw tmp17;
+      } else {
+        c4 = tmp;
       }
     }
-  });
-  return obj(...arguments);
+  }
 };
 function normalizeKeyMap(arg0) {
-  set = new Set();
-  obj = {};
+  const set = new Set();
+  const obj = {};
   const entries = Object.entries(arg0);
-  const tmp2 = entries[Symbol.iterator]();
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
     let tmp6 = tmp5[1];
@@ -143,9 +124,8 @@ function normalizeKeyMap(arg0) {
   return obj;
 }
 function getNormalizedEvent(keyCode) {
+  const obj = { keyCode: keyCode.keyCode, key: null, code: null };
   let tmp;
-  obj = { keyCode: keyCode.keyCode, key: tmp, code: keyCode.code };
-  tmp = undefined;
   if (null != keyCode.key) {
     let toLocaleLowerCaseResult = key;
     if (null != keyCode.key) {
@@ -153,20 +133,19 @@ function getNormalizedEvent(keyCode) {
     }
     tmp = toLocaleLowerCaseResult;
   }
+  obj.key = tmp;
+  obj.code = keyCode.code;
   return obj;
 }
 function getKeyboardMapper() {
-  let promise;
-  let tmp;
   if (null == c17) {
-    tmp = null;
+    let tmp = null;
     if (null == promise) {
-      let closure_0 = _asyncToGenerator(async function(arg0) {
-        closure_0 = arg0;
+      closure_0 = asyncGeneratorStep(async (arg0) => {
         if (c4 === 2) {
           c4 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
+        } else if (tmp4 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
@@ -187,8 +166,9 @@ function getKeyboardMapper() {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                let closure_2 = tmp4;
-                let closure_1 = tmp;
+                closure_2 = tmp5;
+                closure_1 = tmp2;
+                closure_129_0 = closure_0;
                 c3 = 1;
                 c4 = 1;
                 const obj4 = { value: syncKeyboardLayoutMap(), done: false };
@@ -199,102 +179,101 @@ function getKeyboardMapper() {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             } else {
-              const self = this;
-              let closure_17 = new KeyboardMapper(LinuxKeyToCode);
+              closure_17 = new KeyboardMapper(LinuxKeyToCode);
               const _document = document;
-              const str = "keydown";
               const listener = document.addEventListener("keydown", (event) => {
                 try {
                   if (closure_1_17 != null) {
                     closure_1_17.addEvent(event);
                   }
-                } catch (tmp3) {
-                  const obj2 = { event, error: tmp3 };
+                } catch (tmp4) {
+                  const obj2 = { event: tmp, error: tmp4 };
                   logger.error("KeyboardMapper - Error adding event", obj2);
                 }
               });
-              closure_0();
+              closure_129_0();
               c4 = 3;
               return { value: "IconComponent", done: null };
             }
-          } catch (tmp15) {
-            c4 = 3;
-            throw tmp15;
+          } catch (tmp17) {
+            c4 = tmp;
+            throw tmp17;
           }
         }
       });
-      const self = this;
-      const self2 = this;
-      tmp = null;
       promise = new Promise(function() {
-        return closure_0(...arguments);
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
       });
+      tmp = null;
     }
   } else {
     tmp = c17;
   }
   return tmp;
 }
-obj = function _resetKeyboardMapper() {
-  obj = _asyncToGenerator(async () => {
-    if (c2 === 2) {
-      c2 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp2 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_20 = async function _resetKeyboardMapper() {
+  if (c2 === 2) {
+    c2 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        c2 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            c2 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            let closure_0 = tmp3;
-            c1 = 1;
-            c2 = 1;
-            const obj4 = { value: syncKeyboardLayoutMap(), done: false };
-            return obj4;
-          }
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c2 = 2;
+      if (0 === c1) {
+        if (arg0 === 1) {
           c2 = 3;
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          obj = closure_128_19();
-          if (obj != null) {
-            obj.reset();
-          }
-          c2 = 3;
-          return { value: "IconComponent", done: null };
+          closure_0 = tmp4;
+          c1 = 1;
+          c2 = 1;
+          const obj4 = { value: syncKeyboardLayoutMap(), done: false };
+          return obj4;
         }
-      } catch (tmp9) {
+      } else if (arg0 === 1) {
         c2 = 3;
-        throw tmp9;
+        throw value;
+      } else if (arg0 === 2) {
+        c2 = 3;
+        obj5 = { value, done: true };
+        return obj5;
+      } else {
+        const obj = closure_128_19();
+        if (obj != null) {
+          obj.reset();
+        }
+        c2 = 3;
+        return { value: "IconComponent", done: null };
       }
+    } catch (tmp10) {
+      c2 = tmp;
+      throw tmp10;
     }
-  });
-  return obj(...arguments);
+  }
 };
 function reverseLookupCodeFromKey(toLocaleLowerCase) {
-  let promise;
   let tmp;
   if (null != toLocaleLowerCase) {
     let toLocaleLowerCaseResult = toLocaleLowerCase;
@@ -304,16 +283,14 @@ function reverseLookupCodeFromKey(toLocaleLowerCase) {
     tmp = toLocaleLowerCaseResult;
   }
   if (null != tmp) {
-    let tmp4;
     if (null == c17) {
-      tmp4 = null;
+      let tmp4 = null;
       if (null == promise) {
-        let closure_0 = _asyncToGenerator(async function(arg0) {
-          closure_0 = arg0;
+        closure_0 = asyncGeneratorStep(async (arg0) => {
           if (c4 === 2) {
             c4 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
+          } else if (tmp4 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
@@ -334,8 +311,9 @@ function reverseLookupCodeFromKey(toLocaleLowerCase) {
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  let closure_2 = tmp4;
-                  let closure_1 = tmp;
+                  closure_2 = tmp5;
+                  closure_1 = tmp2;
+                  closure_129_0 = closure_0;
                   c3 = 1;
                   c4 = 1;
                   const obj4 = { value: syncKeyboardLayoutMap(), done: false };
@@ -346,39 +324,42 @@ function reverseLookupCodeFromKey(toLocaleLowerCase) {
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               } else {
-                const self = this;
-                let closure_17 = new KeyboardMapper(LinuxKeyToCode);
+                closure_17 = new KeyboardMapper(LinuxKeyToCode);
                 const _document = document;
-                const str = "keydown";
                 const listener = document.addEventListener("keydown", (event) => {
                   try {
                     if (closure_1_17 != null) {
                       closure_1_17.addEvent(event);
                     }
-                  } catch (tmp3) {
-                    const obj2 = { event, error: tmp3 };
+                  } catch (tmp4) {
+                    const obj2 = { event: tmp, error: tmp4 };
                     logger.error("KeyboardMapper - Error adding event", obj2);
                   }
                 });
-                closure_0();
+                closure_129_0();
                 c4 = 3;
                 return { value: "IconComponent", done: null };
               }
-            } catch (tmp15) {
-              c4 = 3;
-              throw tmp15;
+            } catch (tmp17) {
+              c4 = tmp;
+              throw tmp17;
             }
           }
         });
-        const self = this;
-        const self2 = this;
-        tmp4 = null;
         promise = new Promise(function() {
-          return closure_0(...arguments);
+          const self = this;
+          const apply = closure_0.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
         });
+        tmp4 = null;
       }
     } else {
       tmp4 = c17;
@@ -390,29 +371,25 @@ function reverseLookupCodeFromKey(toLocaleLowerCase) {
     return result;
   }
 }
-function getExactKeyboardEventMatchFromAny(keyCode) {
-  let promise;
+function getExactKeyboardEventMatchFromAny(key) {
   let tmp;
-  keyCode = keyCode.keyCode;
-  if (null != keyCode.key) {
+  if (null != key.key) {
     let toLocaleLowerCaseResult = key;
-    if (null != keyCode.key) {
+    if (null != key.key) {
       toLocaleLowerCaseResult = key.toLocaleLowerCase();
     }
     tmp = toLocaleLowerCaseResult;
   }
   let tmp4 = null;
   if (null != tmp) {
-    let tmp6;
     if (null == c17) {
-      tmp6 = null;
+      let tmp6 = null;
       if (null == promise) {
-        let closure_0 = _asyncToGenerator(async function(arg0) {
-          closure_0 = arg0;
+        closure_0 = asyncGeneratorStep(async (arg0) => {
           if (c4 === 2) {
             c4 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
+          } else if (tmp4 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
@@ -433,8 +410,9 @@ function getExactKeyboardEventMatchFromAny(keyCode) {
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  let closure_2 = tmp4;
-                  let closure_1 = tmp;
+                  closure_2 = tmp5;
+                  closure_1 = tmp2;
+                  closure_129_0 = closure_0;
                   c3 = 1;
                   c4 = 1;
                   const obj4 = { value: syncKeyboardLayoutMap(), done: false };
@@ -445,46 +423,49 @@ function getExactKeyboardEventMatchFromAny(keyCode) {
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               } else {
-                const self = this;
-                let closure_17 = new KeyboardMapper(LinuxKeyToCode);
+                closure_17 = new KeyboardMapper(LinuxKeyToCode);
                 const _document = document;
-                const str = "keydown";
                 const listener = document.addEventListener("keydown", (event) => {
                   try {
                     if (closure_1_17 != null) {
                       closure_1_17.addEvent(event);
                     }
-                  } catch (tmp3) {
-                    const obj2 = { event, error: tmp3 };
+                  } catch (tmp4) {
+                    const obj2 = { event: tmp, error: tmp4 };
                     logger.error("KeyboardMapper - Error adding event", obj2);
                   }
                 });
-                closure_0();
+                closure_129_0();
                 c4 = 3;
                 return { value: "IconComponent", done: null };
               }
-            } catch (tmp15) {
-              c4 = 3;
-              throw tmp15;
+            } catch (tmp17) {
+              c4 = tmp;
+              throw tmp17;
             }
           }
         });
-        const self = this;
-        const self2 = this;
-        tmp6 = null;
         promise = new Promise(function() {
-          return closure_0(...arguments);
+          const self = this;
+          const apply = closure_0.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
         });
+        tmp6 = null;
       }
     } else {
       tmp6 = c17;
     }
     let result;
     if (tmp6 != null) {
-      result = tmp6.findExactKeyboardEventMatch(tmp, tmp3, keyCode);
+      result = tmp6.findExactKeyboardEventMatch(tmp, tmp3, key.keyCode);
     }
     if (result == null) {
       result = null;
@@ -493,30 +474,28 @@ function getExactKeyboardEventMatchFromAny(keyCode) {
   }
   return tmp4;
 }
-let _slicedToArray = _slicedToArray_mod;
+const KeyboardConstants = fn(7026);
 ({ LinuxKeyToCode, MacosKeyToCode, WindowsKeyToCode } = KeyboardConstants);
-let tmp3 = new LoggerDefault("KeyboardLayoutMapUtils");
-const hasOwnProperty = tmp3;
+const logger = new LoggerDefault("KeyboardLayoutMapUtils");
+const PlatformUtils = fn(1369);
 if (!PlatformUtils.isLinux()) {
-  const _module2 = PlatformUtils;
-  if (!_module2.isMac()) {
-    const _module3 = PlatformUtils;
-    if (!_module3.isWindows()) {
+  if (!obj2.isMac()) {
+    if (!obj3.isWindows()) {
       WindowsKeyToCode = keyCodeDefault.codes;
     }
     MacosKeyToCode = WindowsKeyToCode;
+    obj3 = fn(1369);
   }
   LinuxKeyToCode = MacosKeyToCode;
+  obj2 = fn(1369);
 }
 function initializeKeyboardMapper() {
-  let promise;
   if (null == promise) {
-    let closure_0 = _asyncToGenerator(async function(arg0) {
-      closure_0 = arg0;
+    closure_0 = asyncGeneratorStep(async (arg0) => {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -537,8 +516,9 @@ function initializeKeyboardMapper() {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              let closure_2 = tmp4;
-              let closure_1 = tmp;
+              closure_2 = tmp5;
+              closure_1 = tmp2;
+              closure_129_0 = closure_0;
               c3 = 1;
               c4 = 1;
               const obj4 = { value: syncKeyboardLayoutMap(), done: false };
@@ -549,294 +529,165 @@ function initializeKeyboardMapper() {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
-            const self = this;
-            let closure_17 = new KeyboardMapper(LinuxKeyToCode);
+            closure_17 = new KeyboardMapper(LinuxKeyToCode);
             const _document = document;
-            const str = "keydown";
             const listener = document.addEventListener("keydown", (event) => {
               try {
                 if (closure_1_17 != null) {
                   closure_1_17.addEvent(event);
                 }
-              } catch (tmp3) {
-                const obj2 = { event, error: tmp3 };
+              } catch (tmp4) {
+                const obj2 = { event: tmp, error: tmp4 };
                 logger.error("KeyboardMapper - Error adding event", obj2);
               }
             });
-            closure_0();
+            closure_129_0();
             c4 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp15) {
-          c4 = 3;
-          throw tmp15;
+        } catch (tmp17) {
+          c4 = tmp;
+          throw tmp17;
         }
       }
     });
-    const self = this;
-    const self2 = this;
     promise = new Promise(function() {
-      return closure_0(...arguments);
+      const self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     });
   }
   return promise;
 }
-let set = new Set([192, 220, 222, 223, 229]);
+let tmp3 = new LoggerDefault("KeyboardLayoutMapUtils");
 const frozen = Object.freeze({ KeyA: "a", KeyB: "b", KeyC: "c", KeyD: "d", KeyE: "e", KeyF: "f", KeyG: "g", KeyH: "h", KeyI: "i", KeyJ: "j", KeyK: "k", KeyL: "l", KeyM: "m", KeyN: "n", KeyO: "o", KeyP: "p", KeyQ: "q", KeyR: "r", KeyS: "s", KeyT: "t", KeyU: "u", KeyV: "v", KeyW: "w", KeyX: "x", KeyY: "y", KeyZ: "z", Digit0: "0", Digit1: "1", Digit2: "2", Digit3: "3", Digit4: "4", Digit5: "5", Digit6: "6", Digit7: "7", Digit8: "8", Digit9: "9", Backquote: "`", Backslash: "\\", Quote: "'", Slash: "/", Comma: ",", Period: ".", Semicolon: ";", Equal: "=", Minus: "-", BracketLeft: "[", BracketRight: "]", IntlBackslash: "\u00A7" });
 class DiscordKeyboardLayoutMap {
   constructor() {
-    let tmp = arg0;
-    if (arg0 === undefined) {
-      tmp = frozen;
+    tmp = global;
+    if (global === undefined) {
+      tmp = closure_7;
     }
     obj = Object.create(new.target.prototype);
-    const entries = Object.entries(tmp);
-    obj.map = new Map(entries.map(f115777));
-    new Map(entries.map(f115777));
+    entries = Object.entries(tmp);
+    map = new Map(entries.map((item) => {
+      [tmp, obj] = item;
+      const items = [tmp, ];
+      let toLocaleLowerCaseResult = obj;
+      if (null != obj) {
+        toLocaleLowerCaseResult = obj.toLocaleLowerCase();
+      }
+      items[1] = toLocaleLowerCaseResult;
+      return items;
+    }));
+    obj.map = map;
     return obj;
   }
-  get(arg0) {
-    map = this.map;
-    return map.get(arg0);
-  }
-  has(arg0) {
-    map = this.map;
-    return map.has(arg0);
-  }
-  keys() {
-    map = this.map;
-    return map.keys();
-  }
-  values() {
-    map = this.map;
-    return map.values();
-  }
-  entries() {
-    map = this.map;
-    return map.entries();
-  }
-  forEach(arg0, arg1) {
-    map = this.map;
-    return map.forEach(arg0, arg1);
-  }
-  _set(arg0, arg1) {
-    map = this.map;
-    const result = map.set(arg0, arg1);
-  }
 }
-Object.defineProperty(DiscordKeyboardLayoutMap.prototype, "size", {
+const prototype = DiscordKeyboardLayoutMap.prototype;
+prototype["get"] = function get(arg0) {
+  return this.map.get(arg0);
+};
+prototype["has"] = function has(arg0) {
+  return this.map.has(arg0);
+};
+prototype["keys"] = function keys() {
+  return this.map.keys();
+};
+prototype["values"] = function values() {
+  return this.map.values();
+};
+prototype["entries"] = function entries() {
+  return this.map.entries();
+};
+prototype["forEach"] = function forEach(arg0, arg1) {
+  return this.map.forEach(arg0, arg1);
+};
+Object.defineProperty(prototype, "size", {
   get: function size() {
     return this.map.size;
   },
   set: undefined
 });
-obj = Object.create(DiscordKeyboardLayoutMap.prototype);
+prototype["_set"] = function _set(arg0, arg1) {
+  const result = this.map.set(arg0, arg1);
+};
+let obj5 = Object.create(DiscordKeyboardLayoutMap.prototype);
 let entries = Object.entries(frozen);
-let map = new Map(entries.map(f115777));
-obj.map = map;
+let set = new Set([192, 220, 222, 223, 229]);
+obj5.map = new Map(entries.map((item) => {
+  [tmp, obj] = item;
+  const items = [tmp, ];
+  let toLocaleLowerCaseResult = obj;
+  if (null != obj) {
+    toLocaleLowerCaseResult = obj.toLocaleLowerCase();
+  }
+  items[1] = toLocaleLowerCaseResult;
+  return items;
+}));
 let c15 = "keyboard-layout-map";
 class BaseKeyboardMapper {
   constructor() {
-    obj = arg0;
-    if (arg0 === undefined) {
+    obj = global;
+    if (global === undefined) {
       obj = {};
     }
-    const merged = Object.assign({ _internalKeyLayoutMap: null, _cachedKeyCodeMapEntries: null, _cachedKeyMapEntries: null, _cachedKeyLayoutMapEntries: null, _cachedAllEvents: null });
+    merged = Object.assign({ _internalKeyLayoutMap: null, _cachedKeyCodeMapEntries: null, _cachedKeyMapEntries: null, _cachedKeyLayoutMapEntries: null, _cachedAllEvents: null });
     merged[1] = [];
     merged[2] = [];
     merged[3] = [];
     merged[4] = [];
     merged._defaultKeyMap = obj;
-    const Storage = Storage2.Storage;
-    let value = Storage.get(c15);
+    Storage = closure_0(closure_1[7]).Storage;
+    value = Storage.get(c15);
     if (value == null) {
       value = null;
     }
     if (null == value) {
-      const obj2 = {};
-      const merged1 = Object.assign(obj);
-      value = normalizeKeyMap(obj2);
+      tmp2 = normalizeKeyMap;
+      obj1 = {};
+      tmp3 = obj1;
+      tmp4 = obj;
+      merged1 = Object.assign(obj);
+      value = normalizeKeyMap(obj1);
     }
     merged.keyMap = value;
-    const result = merged._initializeInternalLayoutMap();
+    result = merged._initializeInternalLayoutMap();
     merged.keyCodeMap = merged._buildKeyCodeMapFromKeyMap();
-    merged.updateCaches();
-    merged.save();
+    updateCachesResult = merged.updateCaches();
+    saveResult = merged.save();
     return merged;
   }
-  _setCachedKeyCodeMapEntries() {
-    const entries = Object.entries(this.keyCodeMap);
-    this._cachedKeyCodeMapEntries = entries.map((item) => {
-      let tmp;
-      let tmp2;
-      [tmp, tmp2] = item;
-      const items = [Number(tmp), tmp2];
-      return items;
-    });
-    const _cachedKeyCodeMapEntries = this._cachedKeyCodeMapEntries;
-    this._cachedAllEvents = _cachedKeyCodeMapEntries.flatMap((item) => {
-      let tmp;
-      [, tmp] = item;
-      return tmp;
-    });
-  }
-  _setCachedKeyMapEntries() {
-    this._cachedKeyMapEntries = Object.entries(this.keyMap);
-  }
-  _setCachedKeyLayoutMapEntries() {
-    const layoutMap = this.getLayoutMap();
-    this._cachedKeyLayoutMapEntries = from(layoutMap.entries());
-  }
-  getKeyCodeMapItem(keyCode) {
-    const self = this;
-    if (null == this.keyCodeMap[keyCode]) {
-      self.keyCodeMap[keyCode] = [];
-    }
-    return self.keyCodeMap[keyCode];
-  }
-  _buildKeyCodeMapFromKeyMap() {
-    let tmp6;
-    let tmp7;
-    const self = this;
-    obj = {};
-    const entries = Object.entries(this.keyMap);
-    const tmp2 = entries[Symbol.iterator]();
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let items = obj[tmp7];
-      if (items == null) {
-        items = [];
-      }
-      obj[tmp7] = items;
-      let arr2 = obj[tmp7];
-      let obj2 = { keyCode: tmp7, key: tmp6, code: self.findCodeFromKeyboardLayoutMap(tmp6, true) };
-      let push = arr2.push;
-      let arr = push(obj2);
-      continue;
-    }
-    return obj;
-  }
-  _initializeInternalLayoutMap() {
-    this._internalKeyLayoutMap = new Map(Array.from(obj.entries()));
-    new Map(Array.from(obj.entries()));
-    const result = this._setCachedKeyLayoutMapEntries();
-  }
-  _hasExactMatch(keyCode) {
-    if (null == keyCode.keyCode) {
-      return false;
-    } else {
-      const self = this;
-      const tmp = null != this.keyCodeMap[keyCode.keyCode] && this.keyCodeMap[keyCode.keyCode].some((key) => key.key === keyCode.key && key.code === keyCode.code && key.keyCode === keyCode.keyCode);
-      return tmp;
-    }
-  }
-  addEvent(keyCode) {
-    let tmp;
-    obj = { keyCode: keyCode.keyCode, key: tmp, code: keyCode.code };
-    tmp = undefined;
-    if (null != keyCode.key) {
-      let toLocaleLowerCaseResult = key;
-      if (null != keyCode.key) {
-        toLocaleLowerCaseResult = key.toLocaleLowerCase();
-      }
-      tmp = toLocaleLowerCaseResult;
-    }
-    const self = this;
-    if (null == this._internalKeyLayoutMap) {
-      const result = self._initializeInternalLayoutMap();
-    }
-    if (!self._hasExactMatch(obj)) {
-      const tmp4 = null != obj.key && "dead" !== obj.key;
-      if (tmp4) {
-        if (null == self.keyMap[obj.key]) {
-          self.keyMap[obj.key] = obj.keyCode;
-        } else {
-          const logKeyboardMismatches = self.keyMap[obj.key] !== obj.keyCode && DeveloperOptionsStore.logKeyboardMismatches;
-          if (logKeyboardMismatches) {
-            const _HermesInternal = HermesInternal;
-            logger.error("KeyboardMapper - Key code mismatch for key " + obj.key + ": " + self.keyMap[obj.key] + " !== " + obj.keyCode);
-          }
-        }
-        let items = self.keyCodeMap[obj.keyCode];
-        const keyCodeMap = self.keyCodeMap;
-        keyCode = obj.keyCode;
-        if (items == null) {
-          items = [];
-        }
-        keyCodeMap[keyCode] = items;
-        const arr2 = self.keyCodeMap[obj.keyCode];
-        arr2.push(obj);
-        const _internalKeyLayoutMap = self._internalKeyLayoutMap;
-        if (_internalKeyLayoutMap != null) {
-          const result1 = _internalKeyLayoutMap.set(obj.code, obj.key);
-        }
-        self.updateCaches();
-      }
-    }
-  }
-  updateCaches() {
-    const result = this._setCachedKeyCodeMapEntries();
-    const result1 = this._setCachedKeyMapEntries();
-    const result2 = this._setCachedKeyLayoutMapEntries();
-  }
-  reset() {
-    this._internalKeyLayoutMap = null;
-    obj = {};
-    const merged = Object.assign(this._defaultKeyMap);
-    this.keyMap = normalizeKeyMap(obj);
-    const result = this._initializeInternalLayoutMap();
-    this.keyCodeMap = this._buildKeyCodeMapFromKeyMap();
-    this.updateCaches();
-    this.save();
-  }
-  save() {
-    const keyMap = this.keyMap;
-    const Storage = Storage2.Storage;
-    const result = Storage.set(c15, keyMap);
-  }
-  getLayoutMap() {
-    return null == this._internalKeyLayoutMap ? obj : this._internalKeyLayoutMap;
-  }
-  getKeyCode(arg0) {
-    return this.keyMap[arg0];
-  }
-  findCodeFromKeyboardLayoutMap(toLocaleLowerCaseResult, arg1) {
-    let flag = arg1;
-    if (arg1 === undefined) {
-      flag = false;
-    }
-    let c0;
-    let prop = this.cachedKeyLayoutMapEntries;
-    if (flag) {
-      const tmp = globalThis;
-      const _Array = Array;
-      prop = Array.from(obj.entries());
-    }
-    if (null != toLocaleLowerCaseResult) {
-      toLocaleLowerCaseResult = toLocaleLowerCaseResult.toLocaleLowerCase();
-    }
-    c0 = toLocaleLowerCaseResult;
-    const found = prop.find((item) => {
-      let tmp;
-      [, tmp] = item;
-      return tmp === c0;
-    });
-    let first;
-    if (found != null) {
-      first = found[0];
-    }
-    if (first == null) {
-      first = toLocaleLowerCaseResult;
-    }
-    return first;
-  }
 }
-const prototype = BaseKeyboardMapper.prototype;
-Object.defineProperty(prototype, "cachedKeyCodeMapEntries", {
+const prototype2 = BaseKeyboardMapper.prototype;
+prototype2["_setCachedKeyCodeMapEntries"] = function _setCachedKeyCodeMapEntries() {
+  const entries = Object.entries(this.keyCodeMap);
+  this._cachedKeyCodeMapEntries = entries.map((item) => {
+    [tmp, tmp2] = item;
+    const items = [Number(tmp), tmp2];
+    return items;
+  });
+  const _cachedKeyCodeMapEntries = this._cachedKeyCodeMapEntries;
+  this._cachedAllEvents = _cachedKeyCodeMapEntries.flatMap((item) => {
+    [, tmp] = item;
+    return tmp;
+  });
+};
+prototype2["_setCachedKeyMapEntries"] = function _setCachedKeyMapEntries() {
+  this._cachedKeyMapEntries = Object.entries(this.keyMap);
+};
+prototype2["_setCachedKeyLayoutMapEntries"] = function _setCachedKeyLayoutMapEntries() {
+  const layoutMap = this.getLayoutMap();
+  this._cachedKeyLayoutMapEntries = Array.from(layoutMap.entries());
+};
+Object.defineProperty(prototype2, "cachedKeyCodeMapEntries", {
   get: function cachedKeyCodeMapEntries() {
     const self = this;
     if (0 === this._cachedKeyCodeMapEntries.length) {
@@ -846,7 +697,7 @@ Object.defineProperty(prototype, "cachedKeyCodeMapEntries", {
   },
   set: undefined
 });
-Object.defineProperty(prototype, "cachedKeyMapEntries", {
+Object.defineProperty(prototype2, "cachedKeyMapEntries", {
   get: function cachedKeyMapEntries() {
     const self = this;
     if (0 === this._cachedKeyMapEntries.length) {
@@ -856,7 +707,7 @@ Object.defineProperty(prototype, "cachedKeyMapEntries", {
   },
   set: undefined
 });
-Object.defineProperty(prototype, "cachedKeyLayoutMapEntries", {
+Object.defineProperty(prototype2, "cachedKeyLayoutMapEntries", {
   get: function cachedKeyLayoutMapEntries() {
     const self = this;
     if (0 === this._cachedKeyLayoutMapEntries.length) {
@@ -866,7 +717,7 @@ Object.defineProperty(prototype, "cachedKeyLayoutMapEntries", {
   },
   set: undefined
 });
-Object.defineProperty(prototype, "cachedAllEvents", {
+Object.defineProperty(prototype2, "cachedAllEvents", {
   get: function cachedAllEvents() {
     const self = this;
     if (0 === this._cachedAllEvents.length) {
@@ -876,397 +727,444 @@ Object.defineProperty(prototype, "cachedAllEvents", {
   },
   set: undefined
 });
-class KeyboardMapper extends BaseKeyboardMapper {
-  getKeyString(keyCode, code) {
+prototype2["getKeyCodeMapItem"] = function getKeyCodeMapItem(keyCode) {
+  const self = this;
+  if (null == this.keyCodeMap[keyCode]) {
+    self.keyCodeMap[keyCode] = [];
+  }
+  return self.keyCodeMap[keyCode];
+};
+prototype2["_buildKeyCodeMapFromKeyMap"] = function _buildKeyCodeMapFromKeyMap() {
+  const self = this;
+  const obj = {};
+  const entries = Object.entries(this.keyMap);
+  while (tmp2 !== undefined) {
+    let tmp5 = _slicedToArray(tmp3, 2);
+    [tmp6, tmp7] = tmp5;
+    let items = obj[tmp7];
+    if (items == null) {
+      items = [];
+    }
+    obj[tmp7] = items;
+    let arr2 = obj[tmp7];
+    let obj2 = { keyCode: tmp7, key: tmp6, code: self.findCodeFromKeyboardLayoutMap(tmp6, true) };
+    let arr = arr2.push(obj2);
+    continue;
+  }
+  return obj;
+};
+prototype2["_initializeInternalLayoutMap"] = function _initializeInternalLayoutMap() {
+  this._internalKeyLayoutMap = new Map(Array.from(obj5.entries()));
+  const result = this._setCachedKeyLayoutMapEntries();
+};
+prototype2["_hasExactMatch"] = function _hasExactMatch(keyCode) {
+  if (null == keyCode.keyCode) {
+    return false;
+  } else {
     const self = this;
-    let closure_1 = keyCode;
-    let closure_0 = code;
-    let keyCodeMapItem = this.getKeyCodeMapItem(keyCode);
-    if (0 === keyCodeMapItem.length) {
-      const cachedKeyMapEntries = this.cachedKeyMapEntries;
-      const found = cachedKeyMapEntries.filter((item) => {
-        let tmp;
-        [, tmp] = item;
-        return tmp == tmp;
-      });
-      keyCodeMapItem = found.map((item) => {
-        let result;
-        let tmp;
-        let tmp2;
-        [tmp, tmp2] = item;
-        obj = { key: tmp, keyCode: tmp2, code: result };
-        result = code;
-        if (code == null) {
-          result = self.findCodeFromKeyboardLayoutMap(tmp);
+    return null != this.keyCodeMap[keyCode.keyCode] && this.keyCodeMap[keyCode.keyCode].some((key) => key.key === keyCode.key && key.code === keyCode.code && key.keyCode === keyCode.keyCode);
+  }
+};
+prototype2["addEvent"] = function addEvent(keyCode) {
+  const obj = { keyCode: keyCode.keyCode, key: null, code: null };
+  let tmp;
+  if (null != keyCode.key) {
+    let toLocaleLowerCaseResult = key;
+    if (null != keyCode.key) {
+      toLocaleLowerCaseResult = key.toLocaleLowerCase();
+    }
+    tmp = toLocaleLowerCaseResult;
+  }
+  const self = this;
+  obj.key = tmp;
+  obj.code = keyCode.code;
+  if (null == this._internalKeyLayoutMap) {
+    const result = self._initializeInternalLayoutMap();
+  }
+  if (!self._hasExactMatch(obj)) {
+    let tmp4 = null != obj.key;
+    if (tmp4) {
+      tmp4 = "dead" !== obj.key;
+    }
+    if (tmp4) {
+      if (null == self.keyMap[obj.key]) {
+        self.keyMap[obj.key] = obj.keyCode;
+      } else {
+        let logKeyboardMismatches = self.keyMap[obj.key] !== obj.keyCode;
+        if (logKeyboardMismatches) {
+          logKeyboardMismatches = DeveloperOptionsStore.logKeyboardMismatches;
         }
-        return obj;
+        if (logKeyboardMismatches) {
+          const _HermesInternal = HermesInternal;
+          logger.error("KeyboardMapper - Key code mismatch for key " + obj.key + ": " + self.keyMap[obj.key] + " !== " + obj.keyCode);
+        }
+      }
+      let items = self.keyCodeMap[obj.keyCode];
+      if (items == null) {
+        items = [];
+      }
+      self.keyCodeMap[obj.keyCode] = items;
+      self.keyCodeMap[obj.keyCode].push(obj);
+      const _internalKeyLayoutMap = self._internalKeyLayoutMap;
+      if (_internalKeyLayoutMap != null) {
+        const result1 = _internalKeyLayoutMap.set(obj.code, obj.key);
+      }
+      self.updateCaches();
+    }
+  }
+};
+prototype2["updateCaches"] = function updateCaches() {
+  const result = this._setCachedKeyCodeMapEntries();
+  const result1 = this._setCachedKeyMapEntries();
+  const result2 = this._setCachedKeyLayoutMapEntries();
+};
+prototype2["reset"] = function reset() {
+  this._internalKeyLayoutMap = null;
+  const merged = Object.assign(this._defaultKeyMap);
+  this.keyMap = normalizeKeyMap({});
+  const result = this._initializeInternalLayoutMap();
+  this.keyCodeMap = this._buildKeyCodeMapFromKeyMap();
+  this.updateCaches();
+  this.save();
+};
+prototype2["save"] = function save() {
+  const Storage = Storage2.Storage;
+  const result = Storage.set(c15, this.keyMap);
+};
+prototype2["getLayoutMap"] = function getLayoutMap() {
+  return null == this._internalKeyLayoutMap ? obj5 : this._internalKeyLayoutMap;
+};
+prototype2["getKeyCode"] = function getKeyCode(arg0) {
+  return this.keyMap[arg0];
+};
+prototype2["findCodeFromKeyboardLayoutMap"] = function findCodeFromKeyboardLayoutMap(toLocaleLowerCaseResult, arg1) {
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = false;
+  }
+  c0 = undefined;
+  let prop = this.cachedKeyLayoutMapEntries;
+  if (flag) {
+    const _Array = Array;
+    prop = Array.from(obj5.entries());
+  }
+  if (null != toLocaleLowerCaseResult) {
+    toLocaleLowerCaseResult = toLocaleLowerCaseResult.toLocaleLowerCase();
+  }
+  c0 = toLocaleLowerCaseResult;
+  const found = prop.find((item) => {
+    [, tmp] = item;
+    return tmp === c0;
+  });
+  let first;
+  if (found != null) {
+    first = found[0];
+  }
+  if (first == null) {
+    first = toLocaleLowerCaseResult;
+  }
+  return first;
+};
+class KeyboardMapper extends BaseKeyboardMapper {
+}
+const prototype3 = KeyboardMapper.prototype;
+prototype3["getKeyString"] = function getKeyString(keyCode, code) {
+  const self = this;
+  closure_1 = keyCode;
+  closure_0 = code;
+  let keyCodeMapItem = this.getKeyCodeMapItem(keyCode);
+  if (0 === keyCodeMapItem.length) {
+    const cachedKeyMapEntries = this.cachedKeyMapEntries;
+    const found = cachedKeyMapEntries.filter((item) => {
+      [, tmp] = item;
+      return tmp == tmp;
+    });
+    keyCodeMapItem = found.map((item) => {
+      [tmp, tmp2] = item;
+      const obj = { key: tmp, keyCode: tmp2, code: null };
+      let result = closure_0;
+      if (closure_0 == null) {
+        result = self.findCodeFromKeyboardLayoutMap(tmp);
+      }
+      obj.code = result;
+      return obj;
+    });
+  }
+  const found1 = keyCodeMapItem.find((keyCode) => {
+    let tmp3 = tmp;
+    if (null != closure_0) {
+      let tmp4 = tmp;
+      if (tmp) {
+        tmp4 = keyCode.code === tmp2;
+      }
+      tmp3 = tmp4;
+    }
+    return tmp3;
+  });
+  let key;
+  if (found1 != null) {
+    key = found1.key;
+  }
+  return key;
+};
+prototype3["findExactKeyboardEventMatch"] = function findExactKeyboardEventMatch(toLocaleLowerCaseResult, arg1, keyCode) {
+  let tmp = arg1;
+  closure_0 = arg1;
+  closure_1 = keyCode;
+  if (null != toLocaleLowerCaseResult) {
+    toLocaleLowerCaseResult = toLocaleLowerCaseResult.toLocaleLowerCase();
+  }
+  const self = this;
+  _slicedToArray = toLocaleLowerCaseResult;
+  if (null == tmp) {
+    const result = self.findCodeFromKeyboardLayoutMap(toLocaleLowerCaseResult);
+    closure_0 = result;
+    tmp = result;
+  }
+  if (null != keyCode) {
+    if (null != self.keyCodeMap[keyCode]) {
+      const found = arr.find((key) => {
+        toLocaleLowerCaseResult = key;
+        if (null != key.key) {
+          toLocaleLowerCaseResult = key.toLocaleLowerCase();
+        }
+        let tmp2 = toLocaleLowerCaseResult === toLocaleLowerCaseResult;
+        if (tmp2) {
+          tmp2 = key.code === closure_0;
+        }
+        return tmp2;
+      });
+      if (null != found) {
+        return found;
+      }
+    }
+  }
+  if (null != keyCode) {
+    if (null != tmp) {
+      const cachedAllEvents = self.cachedAllEvents;
+      return cachedAllEvents.find((key) => {
+        toLocaleLowerCaseResult = key;
+        if (null != key.key) {
+          toLocaleLowerCaseResult = key.toLocaleLowerCase();
+        }
+        let tmp2 = key.keyCode === closure_1;
+        if (tmp2) {
+          tmp2 = toLocaleLowerCaseResult === toLocaleLowerCaseResult;
+        }
+        if (tmp2) {
+          tmp2 = key.code === closure_0;
+        }
+        return tmp2;
       });
     }
-    const found1 = keyCodeMapItem.find((keyCode) => {
+  }
+};
+prototype3["getWeightedPossibleKeyStringMatches"] = function getWeightedPossibleKeyStringMatches(keyString, result, keyCode) {
+  closure_1 = result;
+  closure_2 = keyCode;
+  const cachedAllEvents = this.cachedAllEvents;
+  const found = cachedAllEvents.filter((key) => {
+    let toLocaleLowerCaseResult = key;
+    if (null != key.key) {
+      toLocaleLowerCaseResult = key.toLocaleLowerCase();
+    }
+    let toLocaleLowerCaseResult1 = keyString;
+    if (null != keyString) {
+      toLocaleLowerCaseResult1 = keyString.toLocaleLowerCase();
+    }
+    let tmp4 = null == closure_2 || key.keyCode === tmp3;
+    if (tmp4) {
+      tmp4 = toLocaleLowerCaseResult === toLocaleLowerCaseResult1;
+    }
+    if (tmp4) {
+      tmp4 = tmp6;
+    }
+    return tmp4;
+  });
+  return found.sort((key, key2) => {
+    let toLocaleLowerCaseResult = key;
+    if (null != key.key) {
+      toLocaleLowerCaseResult = key.toLocaleLowerCase();
+    }
+    let toLocaleLowerCaseResult1 = keyString;
+    if (null != keyString) {
+      toLocaleLowerCaseResult1 = keyString.toLocaleLowerCase();
+    }
+    let num = 0;
+    if (toLocaleLowerCaseResult === toLocaleLowerCaseResult1) {
+      num = 0.5;
+    }
+    let sum = num;
+    if (tmp4) {
+      sum = num + 0.3;
+    }
+    let sum1 = sum;
+    if (tmp7) {
+      sum1 = sum + 0.2;
+    }
+    let toLocaleLowerCaseResult2 = key2;
+    if (null != key2.key) {
+      toLocaleLowerCaseResult2 = key2.toLocaleLowerCase();
+    }
+    let toLocaleLowerCaseResult3 = keyString;
+    if (null != keyString) {
+      toLocaleLowerCaseResult3 = keyString.toLocaleLowerCase();
+    }
+    let num4 = 0;
+    if (toLocaleLowerCaseResult2 === toLocaleLowerCaseResult3) {
+      num4 = 0.5;
+    }
+    let sum2 = num4;
+    if (tmp11) {
+      sum2 = num4 + 0.3;
+    }
+    let sum3 = sum2;
+    if (tmp13) {
+      sum3 = sum2 + 0.2;
+    }
+    return sum3 - sum1;
+  });
+};
+prototype3["findKeyboardEventByKey"] = function findKeyboardEventByKey(keyString, code, keyCode) {
+  let tmp = code;
+  closure_0 = code;
+  let toLocaleLowerCaseResult = keyString;
+  if (null != keyString) {
+    toLocaleLowerCaseResult = keyString.toLocaleLowerCase();
+  }
+  const self = this;
+  dependencyMap = toLocaleLowerCaseResult;
+  if (null == tmp) {
+    const result = self.findCodeFromKeyboardLayoutMap(toLocaleLowerCaseResult);
+    closure_0 = result;
+    tmp = result;
+  }
+  if (null != keyCode) {
+    if (null != self.keyCodeMap[keyCode]) {
+      const found = arr.find((key) => {
+        toLocaleLowerCaseResult = key;
+        if (null != key.key) {
+          toLocaleLowerCaseResult = key.toLocaleLowerCase();
+        }
+        let tmp2 = toLocaleLowerCaseResult === toLocaleLowerCaseResult;
+        if (tmp2) {
+          tmp2 = key.code === closure_0;
+        }
+        return tmp2;
+      });
+      if (null != found) {
+        return found;
+      }
+    }
+  }
+  return _slicedToArray(self.getWeightedPossibleKeyStringMatches(keyString, tmp, keyCode), 1)[0];
+};
+prototype3["findKeyboardEventByKeyCode"] = function findKeyboardEventByKeyCode(keyCode, code) {
+  const self = this;
+  closure_0 = keyCode;
+  closure_1 = code;
+  let keyString = this.getKeyString(keyCode, code);
+  if (tmp2) {
+    const layoutMap = self.getLayoutMap();
+    keyString = layoutMap.get(code);
+  }
+  if (null == keyString) {
+    const keyCodeMapItem = self.getKeyCodeMapItem(keyCode);
+    const found = keyCodeMapItem.find((keyCode) => {
       let tmp3 = tmp;
-      if (null != code) {
-        tmp3 = keyCode.keyCode === closure_1 && keyCode.code === tmp2;
+      if (null != closure_1) {
+        let tmp4 = tmp;
+        if (tmp) {
+          tmp4 = keyCode.code === tmp2;
+        }
+        tmp3 = tmp4;
       }
       return tmp3;
     });
     let key;
-    if (found1 != null) {
-      key = found1.key;
+    if (found != null) {
+      key = found.key;
     }
-    return key;
+    keyString = key;
   }
-  findExactKeyboardEventMatch(toLocaleLowerCaseResult, arg1, keyCode) {
-    let tmp = arg1;
-    let closure_0 = arg1;
-    let closure_1 = keyCode;
-    if (null != toLocaleLowerCaseResult) {
-      toLocaleLowerCaseResult = toLocaleLowerCaseResult.toLocaleLowerCase();
-    }
-    const self = this;
-    _slicedToArray = toLocaleLowerCaseResult;
-    if (null == tmp) {
-      const result = self.findCodeFromKeyboardLayoutMap(toLocaleLowerCaseResult);
-      closure_0 = result;
-      tmp = result;
-    }
-    if (null != keyCode) {
-      if (null != self.keyCodeMap[keyCode]) {
-        const found = arr.find((key) => {
-          _slicedToArray = key;
-          if (null != key.key) {
-            _slicedToArray = key.toLocaleLowerCase();
-          }
-          return _slicedToArray === _slicedToArray && key.code === closure_0;
-        });
-        if (null != found) {
-          return found;
-        }
-      }
-    }
-    if (null != keyCode) {
-      if (null != tmp) {
-        const cachedAllEvents = self.cachedAllEvents;
-        return cachedAllEvents.find((key) => {
-          _slicedToArray = key;
-          if (null != key.key) {
-            _slicedToArray = key.toLocaleLowerCase();
-          }
-          let tmp2 = key.keyCode === keyCode;
-          const code = key.code;
-          if (tmp2) {
-            tmp2 = _slicedToArray === _slicedToArray;
-          }
-          if (tmp2) {
-            tmp2 = code === closure_0;
-          }
-          return tmp2;
-        });
-      }
-    }
+  if (null == keyString) {
+    let defaultKeyboardEventShape = self.getDefaultKeyboardEventShape(undefined, keyCode, code);
+  } else {
+    defaultKeyboardEventShape = self.findKeyboardEventByKey(keyString, code, keyCode);
   }
-  getWeightedPossibleKeyStringMatches(keyString, result, keyCode) {
-    let closure_1 = result;
-    let closure_2 = keyCode;
-    const cachedAllEvents = this.cachedAllEvents;
-    const found = cachedAllEvents.filter((key) => {
-      let toLocaleLowerCaseResult = key;
-      if (null != key.key) {
-        toLocaleLowerCaseResult = key.toLocaleLowerCase();
-      }
-      let toLocaleLowerCaseResult1 = keyString;
-      if (null != keyString) {
-        toLocaleLowerCaseResult1 = keyString.toLocaleLowerCase();
-      }
-      let tmp4 = null == keyCode || key.keyCode === tmp3;
-      const tmp6 = null == dependencyMap || key.key.code === tmp5;
-      if (tmp4) {
-        tmp4 = toLocaleLowerCaseResult === toLocaleLowerCaseResult1;
-      }
-      if (tmp4) {
-        tmp4 = tmp6;
-      }
-      return tmp4;
-    });
-    return found.sort((key, key2) => {
-      let toLocaleLowerCaseResult = key;
-      if (null != key.key) {
-        toLocaleLowerCaseResult = key.toLocaleLowerCase();
-      }
-      let toLocaleLowerCaseResult1 = keyString;
-      if (null != keyString) {
-        toLocaleLowerCaseResult1 = keyString.toLocaleLowerCase();
-      }
-      let num = 0;
-      if (toLocaleLowerCaseResult === toLocaleLowerCaseResult1) {
-        num = 0.5;
-      }
-      let sum = num;
-      const tmp4 = null != dependencyMap && key.key.code === dependencyMap;
-      if (tmp4) {
-        sum = num + 0.3;
-      }
-      let sum1 = sum;
-      const tmp7 = null != keyCode && key.key.keyCode === keyCode;
-      if (tmp7) {
-        sum1 = sum + 0.2;
-      }
-      let toLocaleLowerCaseResult2 = key2;
-      if (null != key2.key) {
-        toLocaleLowerCaseResult2 = key2.toLocaleLowerCase();
-      }
-      let toLocaleLowerCaseResult3 = keyString;
-      if (null != keyString) {
-        toLocaleLowerCaseResult3 = keyString.toLocaleLowerCase();
-      }
-      let num4 = 0;
-      if (toLocaleLowerCaseResult2 === toLocaleLowerCaseResult3) {
-        num4 = 0.5;
-      }
-      let sum2 = num4;
-      const tmp11 = null != dependencyMap && key2.key.code === dependencyMap;
-      if (tmp11) {
-        sum2 = num4 + 0.3;
-      }
-      let sum3 = sum2;
-      const tmp13 = null != keyCode && key2.key.keyCode === keyCode;
-      if (tmp13) {
-        sum3 = sum2 + 0.2;
-      }
-      return sum3 - sum1;
-    });
-  }
-  findKeyboardEventByKey(keyString, code, keyCode) {
-    let tmp = code;
-    let closure_0 = code;
-    let toLocaleLowerCaseResult = keyString;
-    if (null != keyString) {
-      toLocaleLowerCaseResult = keyString.toLocaleLowerCase();
-    }
-    const self = this;
-    if (null == tmp) {
-      const result = self.findCodeFromKeyboardLayoutMap(toLocaleLowerCaseResult);
-      closure_0 = result;
-      tmp = result;
-    }
-    if (null != keyCode) {
-      if (null != self.keyCodeMap[keyCode]) {
-        const found = arr.find((key) => {
-          toLocaleLowerCaseResult = key;
-          if (null != key.key) {
-            toLocaleLowerCaseResult = key.toLocaleLowerCase();
-          }
-          return toLocaleLowerCaseResult === toLocaleLowerCaseResult && key.code === closure_0;
-        });
-        if (null != found) {
-          return found;
-        }
-      }
-    }
-    return _slicedToArray(self.getWeightedPossibleKeyStringMatches(keyString, tmp, keyCode), 1)[0];
-  }
-  findKeyboardEventByKeyCode(keyCode, code) {
-    let defaultKeyboardEventShape;
-    const self = this;
-    let closure_0 = keyCode;
-    let closure_1 = code;
-    let keyString = this.getKeyString(keyCode, code);
-    const tmp2 = null == keyString && null != code;
-    if (tmp2) {
-      const layoutMap = self.getLayoutMap();
-      keyString = layoutMap.get(code);
-    }
-    if (null == keyString) {
-      const keyCodeMapItem = self.getKeyCodeMapItem(keyCode);
-      const found = keyCodeMapItem.find((keyCode) => {
-        let tmp3 = tmp;
-        if (null != code) {
-          tmp3 = keyCode.keyCode === closure_0 && keyCode.code === tmp2;
-        }
-        return tmp3;
-      });
-      let key;
-      if (found != null) {
-        key = found.key;
-      }
-      keyString = key;
-    }
-    if (null == keyString) {
-      defaultKeyboardEventShape = self.getDefaultKeyboardEventShape(undefined, keyCode, code);
-    } else {
-      defaultKeyboardEventShape = self.findKeyboardEventByKey(keyString, code, keyCode);
-    }
-    return defaultKeyboardEventShape;
-  }
-  getDefaultKeyboardEventShape(toLocaleLowerCase, keyCode, code) {
-    let tmp10;
-    let tmp7;
-    let closure_0 = keyCode;
-    let tmp;
+  return defaultKeyboardEventShape;
+};
+prototype3["getDefaultKeyboardEventShape"] = function getDefaultKeyboardEventShape(toLocaleLowerCase, keyCode, code) {
+  closure_0 = keyCode;
+  let tmp;
+  if (null != toLocaleLowerCase) {
+    let toLocaleLowerCaseResult = toLocaleLowerCase;
     if (null != toLocaleLowerCase) {
-      let toLocaleLowerCaseResult = toLocaleLowerCase;
-      if (null != toLocaleLowerCase) {
-        toLocaleLowerCaseResult = toLocaleLowerCase.toLocaleLowerCase();
-      }
-      tmp = toLocaleLowerCaseResult;
+      toLocaleLowerCaseResult = toLocaleLowerCase.toLocaleLowerCase();
     }
-    const self = this;
-    let result = code;
-    if (null != tmp) {
-      if (null != self.keyMap[tmp]) {
-        if (result == null) {
-          result = self.findCodeFromKeyboardLayoutMap(tmp);
-        }
-        const obj2 = { keyCode: self.keyMap[tmp], key: tmp10, code: result };
-        tmp10 = undefined;
+    tmp = toLocaleLowerCaseResult;
+  }
+  const self = this;
+  let result = code;
+  if (null != tmp) {
+    if (null != self.keyMap[tmp]) {
+      if (result == null) {
+        result = self.findCodeFromKeyboardLayoutMap(tmp);
+      }
+      const obj2 = { keyCode: tmp9, key: null, code: null };
+      let tmp10;
+      if (null != tmp) {
+        let toLocaleLowerCaseResult1 = tmp;
         if (null != tmp) {
-          let toLocaleLowerCaseResult1 = tmp;
-          if (null != tmp) {
-            toLocaleLowerCaseResult1 = tmp.toLocaleLowerCase();
-          }
-          tmp10 = toLocaleLowerCaseResult1;
+          toLocaleLowerCaseResult1 = tmp.toLocaleLowerCase();
         }
-        return obj2;
+        tmp10 = toLocaleLowerCaseResult1;
       }
-    } else if (null != keyCode) {
-      const cachedKeyMapEntries = self.cachedKeyMapEntries;
-      const found = cachedKeyMapEntries.find((item) => {
-        let tmp;
-        [, tmp] = item;
-        return tmp === keyCode;
-      });
-      let first;
-      if (found != null) {
-        first = found[0];
+      obj2.key = tmp10;
+      obj2.code = result;
+      return obj2;
+    }
+  } else if (null != keyCode) {
+    const cachedKeyMapEntries = self.cachedKeyMapEntries;
+    const found = cachedKeyMapEntries.find((item) => {
+      [, tmp] = item;
+      return tmp === closure_0;
+    });
+    let first;
+    if (found != null) {
+      first = found[0];
+    }
+    if (null != first) {
+      let result1 = result;
+      if (result == null) {
+        result1 = self.findCodeFromKeyboardLayoutMap(first);
       }
+      const obj = { keyCode, key: null, code: null };
+      let tmp7;
       if (null != first) {
-        let result1 = result;
-        if (result == null) {
-          result1 = self.findCodeFromKeyboardLayoutMap(first);
-        }
-        obj = { keyCode, key: tmp7, code: result1 };
-        tmp7 = undefined;
+        let toLocaleLowerCaseResult2 = first;
         if (null != first) {
-          let toLocaleLowerCaseResult2 = first;
-          if (null != first) {
-            toLocaleLowerCaseResult2 = first.toLocaleLowerCase();
-          }
-          tmp7 = toLocaleLowerCaseResult2;
+          toLocaleLowerCaseResult2 = first.toLocaleLowerCase();
         }
-        return obj;
+        tmp7 = toLocaleLowerCaseResult2;
       }
+      obj.key = tmp7;
+      obj.code = result1;
+      return obj;
     }
   }
-}
-const prototype2 = KeyboardMapper.prototype;
+};
 let c17 = null;
 let c18 = null;
+const size = fn(2);
 let result = size.fileFinishedImporting("utils/web/KeyboardLayoutMapUtils.tsx");
-const getLayoutMap_export = function getLayoutMap() {
-  let layoutMap;
-  let promise;
-  let flag = arg0;
-  if (arg0 === undefined) {
-    flag = false;
-  }
-  if (flag) {
-    layoutMap = obj;
-  } else {
-    let tmp3;
-    if (null == c17) {
-      tmp3 = null;
-      if (null == promise) {
-        let closure_0 = _asyncToGenerator(async function(arg0) {
-          closure_0 = arg0;
-          if (c4 === 2) {
-            c4 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              let obj2 = { value, done: true };
-              return obj2;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
-          } else {
-            try {
-              c4 = 2;
-              if (0 === c3) {
-                if (arg0 === 1) {
-                  c4 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c4 = 3;
-                  const obj3 = { value, done: true };
-                  return obj3;
-                } else {
-                  let closure_2 = tmp4;
-                  let closure_1 = tmp;
-                  c3 = 1;
-                  c4 = 1;
-                  const obj4 = { value: syncKeyboardLayoutMap(), done: false };
-                  return obj4;
-                }
-              } else if (arg0 === 1) {
-                c4 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                obj = { value, done: true };
-                return obj;
-              } else {
-                const self = this;
-                let closure_17 = new KeyboardMapper(LinuxKeyToCode);
-                const _document = document;
-                const str = "keydown";
-                const listener = document.addEventListener("keydown", (event) => {
-                  try {
-                    if (closure_1_17 != null) {
-                      closure_1_17.addEvent(event);
-                    }
-                  } catch (tmp3) {
-                    const obj2 = { event, error: tmp3 };
-                    logger.error("KeyboardMapper - Error adding event", obj2);
-                  }
-                });
-                closure_0();
-                c4 = 3;
-                return { value: "IconComponent", done: null };
-              }
-            } catch (tmp15) {
-              c4 = 3;
-              throw tmp15;
-            }
-          }
-        });
-        const self = this;
-        const self2 = this;
-        tmp3 = null;
-        promise = new Promise(function() {
-          return closure_0(...arguments);
-        });
-      }
-    } else {
-      tmp3 = c17;
-    }
-    layoutMap = undefined;
-    if (tmp3 != null) {
-      layoutMap = tmp3.getLayoutMap();
-    }
-    if (layoutMap == null) {
-      layoutMap = obj;
-    }
-  }
-  return layoutMap;
-};
 
 export const BACKTICK_CODES = set;
 export const DefaultKeyboardLayout = frozen;
 export { normalizeKeyMap };
 export { initializeKeyboardMapper };
 export const __DEV_overrideLayoutMapKey = function __DEV_overrideLayoutMapKey(arg0, arg1) {
-  _null._set(arg0, arg1);
+  obj5._set(arg0, arg1);
   if (_null != null) {
     const result = _null._initializeInternalLayoutMap();
   }
@@ -1276,29 +1174,31 @@ export const __DEV_overrideLayoutMapKey = function __DEV_overrideLayoutMapKey(ar
 };
 export { getKeyboardMapper };
 export const resetKeyboardMapper = function resetKeyboardMapper() {
-  return obj(...arguments);
-};
-export { getLayoutMap_export as getLayoutMap };
-export { reverseLookupCodeFromKey };
-export { getExactKeyboardEventMatchFromAny };
-export const getKeyboardEventShapeFromAny = function getKeyboardEventShapeFromAny(keyCode) {
-  let promise;
-  const tmp = getExactKeyboardEventMatchFromAny(keyCode);
-  if (null != tmp) {
-    return tmp;
+  const self = this;
+  const apply = closure_20.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
-    let tmp2;
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const getLayoutMap = function getLayoutMap() {
+  let flag = arg0;
+  if (arg0 === undefined) {
+    flag = false;
+  }
+  if (flag) {
+    let layoutMap = obj5;
+  } else {
     if (null == c17) {
-      const tmp3 = promise;
-      tmp2 = null;
+      let tmp3 = null;
       if (null == promise) {
-        const tmp4 = globalThis;
-        let closure_0 = _asyncToGenerator(async function(arg0) {
-          closure_0 = arg0;
+        closure_0 = asyncGeneratorStep(async (arg0) => {
           if (c4 === 2) {
             c4 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
+          } else if (tmp4 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
@@ -1319,8 +1219,9 @@ export const getKeyboardEventShapeFromAny = function getKeyboardEventShapeFromAn
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  let closure_2 = tmp4;
-                  let closure_1 = tmp;
+                  closure_2 = tmp5;
+                  closure_1 = tmp2;
+                  closure_129_0 = closure_0;
                   c3 = 1;
                   c4 = 1;
                   const obj4 = { value: syncKeyboardLayoutMap(), done: false };
@@ -1331,37 +1232,138 @@ export const getKeyboardEventShapeFromAny = function getKeyboardEventShapeFromAn
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               } else {
-                const self = this;
-                let closure_17 = new KeyboardMapper(LinuxKeyToCode);
+                closure_17 = new KeyboardMapper(LinuxKeyToCode);
                 const _document = document;
-                const str = "keydown";
                 const listener = document.addEventListener("keydown", (event) => {
                   try {
                     if (closure_1_17 != null) {
                       closure_1_17.addEvent(event);
                     }
-                  } catch (tmp3) {
-                    const obj2 = { event, error: tmp3 };
+                  } catch (tmp4) {
+                    const obj2 = { event: tmp, error: tmp4 };
                     logger.error("KeyboardMapper - Error adding event", obj2);
                   }
                 });
-                closure_0();
+                closure_129_0();
                 c4 = 3;
                 return { value: "IconComponent", done: null };
               }
-            } catch (tmp15) {
-              c4 = 3;
-              throw tmp15;
+            } catch (tmp17) {
+              c4 = tmp;
+              throw tmp17;
             }
           }
         });
-        let self = this;
-        const self2 = this;
         promise = new Promise(function() {
-          return closure_0(...arguments);
+          const self = this;
+          const apply = closure_0.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
+        });
+        tmp3 = null;
+      }
+    } else {
+      tmp3 = c17;
+    }
+    layoutMap = undefined;
+    if (tmp3 != null) {
+      layoutMap = tmp3.getLayoutMap();
+    }
+    if (layoutMap == null) {
+      layoutMap = obj5;
+    }
+  }
+  return layoutMap;
+};
+export { reverseLookupCodeFromKey };
+export { getExactKeyboardEventMatchFromAny };
+export const getKeyboardEventShapeFromAny = function getKeyboardEventShapeFromAny(keyCode) {
+  const tmp = getExactKeyboardEventMatchFromAny(keyCode);
+  if (null != tmp) {
+    return tmp;
+  } else {
+    if (null == c17) {
+      let tmp2 = null;
+      if (null == promise) {
+        closure_0 = asyncGeneratorStep(async (arg0) => {
+          if (c4 === 2) {
+            c4 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp4 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              let obj2 = { value, done: true };
+              return obj2;
+            } else {
+              return { value: "IconComponent", done: null };
+            }
+          } else {
+            try {
+              c4 = 2;
+              if (0 === c3) {
+                if (arg0 === 1) {
+                  c4 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c4 = 3;
+                  const obj3 = { value, done: true };
+                  return obj3;
+                } else {
+                  closure_2 = tmp5;
+                  closure_1 = tmp2;
+                  closure_129_0 = closure_0;
+                  c3 = 1;
+                  c4 = 1;
+                  const obj4 = { value: syncKeyboardLayoutMap(), done: false };
+                  return obj4;
+                }
+              } else if (arg0 === 1) {
+                c4 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                const obj = { value, done: true };
+                return obj;
+              } else {
+                closure_17 = new KeyboardMapper(LinuxKeyToCode);
+                const _document = document;
+                const listener = document.addEventListener("keydown", (event) => {
+                  try {
+                    if (closure_1_17 != null) {
+                      closure_1_17.addEvent(event);
+                    }
+                  } catch (tmp4) {
+                    const obj2 = { event: tmp, error: tmp4 };
+                    logger.error("KeyboardMapper - Error adding event", obj2);
+                  }
+                });
+                closure_129_0();
+                c4 = 3;
+                return { value: "IconComponent", done: null };
+              }
+            } catch (tmp17) {
+              c4 = tmp;
+              throw tmp17;
+            }
+          }
+        });
+        promise = new Promise(function() {
+          const self = this;
+          const apply = closure_0.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
         });
         tmp2 = null;
       }
@@ -1372,17 +1374,17 @@ export const getKeyboardEventShapeFromAny = function getKeyboardEventShapeFromAn
       return null;
     } else {
       keyCode = keyCode.keyCode;
-      let tmp8;
+      let tmp10;
       if (null != keyCode.key) {
         let toLocaleLowerCaseResult = key;
         if (null != keyCode.key) {
           toLocaleLowerCaseResult = key.toLocaleLowerCase();
         }
-        tmp8 = toLocaleLowerCaseResult;
+        tmp10 = toLocaleLowerCaseResult;
       }
       const code = keyCode.code;
-      if (null != tmp8) {
-        const result = tmp2.findKeyboardEventByKey(tmp8, code, keyCode);
+      if (null != tmp10) {
+        const result = tmp2.findKeyboardEventByKey(tmp10, code, keyCode);
         if (null != result) {
           return result;
         }
@@ -1398,18 +1400,18 @@ export const getKeyboardEventShapeFromAny = function getKeyboardEventShapeFromAn
   }
 };
 export const getKeyboardEventShapeFromKey = function getKeyboardEventShapeFromKey(codeToKeyLanguageCorrection) {
-  let tmp;
+  let tmp2;
   if (null != codeToKeyLanguageCorrection) {
-    tmp = normalizeKey(codeToKeyLanguageCorrection);
+    tmp2 = normalizeKey(codeToKeyLanguageCorrection);
   }
-  if (null == tmp) {
+  if (null == tmp2) {
     return null;
   } else {
-    const tmp12 = reverseLookupCodeFromKey(tmp);
+    const tmp15 = reverseLookupCodeFromKey(tmp2);
     const obj3 = getKeyboardMapper();
     let result;
     if (obj3 != null) {
-      result = obj3.findKeyboardEventByKey(tmp, tmp12);
+      result = obj3.findKeyboardEventByKey(tmp2, tmp15);
     }
     if (result == null) {
       result = null;
@@ -1418,10 +1420,10 @@ export const getKeyboardEventShapeFromKey = function getKeyboardEventShapeFromKe
       return result;
     } else {
       try {
-        const tmp13Result = getKeyboardMapper();
+        const tmp16Result = getKeyboardMapper();
         let defaultKeyboardEventShape;
-        if (tmp13Result != null) {
-          defaultKeyboardEventShape = tmp13Result.getDefaultKeyboardEventShape(tmp, undefined, tmp12);
+        if (tmp16Result != null) {
+          defaultKeyboardEventShape = tmp16Result.getDefaultKeyboardEventShape(tmp2, undefined, tmp15);
         }
         if (defaultKeyboardEventShape == null) {
           defaultKeyboardEventShape = null;
@@ -1429,21 +1431,18 @@ export const getKeyboardEventShapeFromKey = function getKeyboardEventShapeFromKe
         if (null == defaultKeyboardEventShape) {
           return null;
         } else {
-          const self = this;
-          const self2 = this;
-          const keyboardEvent = new globalThis.KeyboardEvent("keydown", tmp5);
-          obj = { keyCode: null, key: null, code: null };
+          const keyboardEvent = new globalThis.KeyboardEvent("keydown", tmp6);
           ({ keyCode: obj2.keyCode, key: obj2.key, code: obj2.code } = keyboardEvent);
-          return getNormalizedEvent(obj);
+          return getNormalizedEvent({ keyCode: null, key: null, code: null });
         }
       } catch (err) {
-        return null;
+        return tmp;
       }
     }
   }
 };
 export const getKeyboardEventShapeFromKeycode = function getKeyboardEventShapeFromKeycode(keyCode) {
-  obj = getKeyboardMapper();
+  const obj = getKeyboardMapper();
   let result;
   if (obj != null) {
     result = obj.findKeyboardEventByKeyCode(keyCode);
@@ -1455,10 +1454,10 @@ export const getKeyboardEventShapeFromKeycode = function getKeyboardEventShapeFr
     return result;
   } else {
     try {
-      const tmpResult = getKeyboardMapper();
+      const tmp2Result = getKeyboardMapper();
       let defaultKeyboardEventShape;
-      if (tmpResult != null) {
-        defaultKeyboardEventShape = tmpResult.getDefaultKeyboardEventShape(undefined, keyCode);
+      if (tmp2Result != null) {
+        defaultKeyboardEventShape = tmp2Result.getDefaultKeyboardEventShape(undefined, keyCode);
       }
       if (defaultKeyboardEventShape == null) {
         defaultKeyboardEventShape = null;
@@ -1466,15 +1465,12 @@ export const getKeyboardEventShapeFromKeycode = function getKeyboardEventShapeFr
       if (null == defaultKeyboardEventShape) {
         return null;
       } else {
-        const self = this;
-        const self2 = this;
-        const keyboardEvent = new globalThis.KeyboardEvent("keydown", tmp4);
-        const obj2 = { keyCode: null, key: null, code: null };
+        const keyboardEvent = new globalThis.KeyboardEvent("keydown", tmp5);
         ({ keyCode: obj3.keyCode, key: obj3.key, code: obj3.code } = keyboardEvent);
-        return getNormalizedEvent(obj2);
+        return getNormalizedEvent({ keyCode: null, key: null, code: null });
       }
     } catch (err) {
-      return null;
+      return tmp;
     }
   }
 };

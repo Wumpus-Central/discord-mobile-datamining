@@ -6,18 +6,10 @@ import GatedChannelStore from "GatedChannelStore" /* 2104 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import PermissionStore from "PermissionStore" /* 4515 */;
-import Constants from "Constants" /* 1085 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require;
 
-let MessageFlags;
-let c9;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
+require = fn;
 function canForwardMessage(state) {
   let obj = PermissionStore;
   if (PermissionStore === undefined) {
@@ -38,9 +30,9 @@ function canForwardMessage(state) {
   if (null == state) {
     return false;
   } else {
-    let hasItem1 = state.state !== metroImportDefault.SEND_FAILED;
+    let hasItem1 = state.state !== constants2.SEND_FAILED;
     if (hasItem1) {
-      const FORWARDABLE = metroImportAll.FORWARDABLE;
+      const FORWARDABLE = constants3.FORWARDABLE;
       hasItem1 = FORWARDABLE.has(state.type);
     }
     if (hasItem1) {
@@ -59,8 +51,7 @@ function canForwardMessage(state) {
       hasItem1 = null == state.activityInstance;
     }
     if (hasItem1) {
-      const obj5 = FlagUtils;
-      hasItem1 = 0 === obj5.removeFlag(state.flags, closure_10);
+      hasItem1 = 0 === FlagUtils.removeFlag(state.flags, closure_10);
     }
     if (hasItem1) {
       const channel = obj3.getChannel(state.channel_id);
@@ -77,11 +68,11 @@ function canForwardMessage(state) {
       }
       let tmp8 = null == guild_id;
       if (!tmp8) {
-        const guild = obj4.getGuild(guild_id);
+        guild = obj4.getGuild(guild_id);
         let hasItem;
         if (guild != null) {
           const features = guild.features;
-          hasItem = features.has(metroRequire.FORWARDING_DISABLED);
+          hasItem = features.has(constants.FORWARDING_DISABLED);
         }
         tmp8 = !hasItem;
       }
@@ -105,20 +96,21 @@ function canForwardMessage(state) {
     }
   }
 }
-({ GuildFeatures: metroRequire, MessageFlags, MessageStates: metroImportDefault, MessageTypesSets: metroImportAll, Permissions: c9 } = Constants);
+const Constants = fn(1085);
+({ GuildFeatures: metroRequire, MessageFlags, MessageStates: closure_7, MessageTypesSets: closure_8, Permissions: closure_9 } = Constants);
 let closure_10 = MessageFlags.CROSSPOSTED | MessageFlags.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD | MessageFlags.GUILD_FEED_HIDDEN | MessageFlags.HAS_SNAPSHOT | MessageFlags.HAS_THREAD | MessageFlags.IS_CROSSPOST | MessageFlags.IS_VOICE_MESSAGE | MessageFlags.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING | MessageFlags.SUPPRESS_EMBEDS | MessageFlags.SUPPRESS_NOTIFICATIONS | MessageFlags.URGENT | MessageFlags.IS_COMPONENTS_V2 | MessageFlags.IS_GUILD_OFFICIAL | MessageFlags.IS_SCHEDULED;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let first;
-  let tmp9;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forwarding/canForwardMessage.tsx");
+
+export { canForwardMessage };
+export const useCanForwardMessage = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   _require = arg0;
-  const obj = require("react");
-  const cResult = obj.c(3);
-  const tmp = _require;
+  const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [PermissionStore, GatedChannelStore, ChannelStore, GuildStore];
     cResult[0] = items;
-    first = items;
+    let first = items;
   } else {
     first = cResult[0];
   }
@@ -128,20 +120,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    tmp9 = fn;
+    let tmp9 = fn;
   } else {
     tmp9 = cResult[2];
   }
-  const tmpResult = tmp(504);
-  return tmpResult.useStateFromStores(first, tmp9);
+  const obj = require("c");
+  return require("initialize").useStateFromStores(first, tmp9);
 }) : ((arg0) => {
-  let closure_0;
   _require = arg0;
   const items = [PermissionStore, GatedChannelStore, ChannelStore, GuildStore];
-  const obj = require("get initialized");
-  return obj.useStateFromStores(items, () => canForwardMessage(closure_0, PermissionStore, GatedChannelStore, ChannelStore, GuildStore));
+  return require("initialize").useStateFromStores(items, () => canForwardMessage(closure_0, PermissionStore, GatedChannelStore, ChannelStore, GuildStore));
 });
-const result = size.fileFinishedImporting("modules/forwarding/canForwardMessage.tsx");
-
-export { canForwardMessage };
-export const useCanForwardMessage = tmp3;

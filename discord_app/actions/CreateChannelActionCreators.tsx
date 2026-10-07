@@ -1,7 +1,6 @@
 // === Module 9248: CreateChannelActionCreators ===
 
 // Module 9248 (CreateChannelActionCreators)
-import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import TypeUtils from "TypeUtils" /* 2064 */;
@@ -10,45 +9,35 @@ import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6616 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6621 */;
 import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 6836 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-let closure_4;
-let hasOwnProperty;
-let metroRequire;
+require = fn;
+const Constants = fn(1085);
 ({ BITRATE_DEFAULT: closure_4, ChannelTypes: hasOwnProperty, Endpoints: metroRequire } = Constants);
-let closure_7 = UserSettingsConstants.ChannelNotificationSettingsFlags;
-let obj = {
+let closure_7 = fn(1095).ChannelNotificationSettingsFlags;
+const size = fn(2);
+let result = size.fileFinishedImporting("actions/CreateChannelActionCreators.tsx");
+
+export default {
   createChannel(guildId) {
-    let applicationId;
-    let availableTags;
-    let bitrate;
-    let flags;
-    let gameId;
-    let obj3;
-    let obj5;
-    let parentId;
-    let permissionOverwrites;
-    let skuId;
-    let type;
-    let userLimit;
     guildId = guildId.guildId;
     ({ type, permissionOverwrites } = guildId);
-    const name = guildId.name;
     if (permissionOverwrites === undefined) {
       permissionOverwrites = [];
     }
     ({ bitrate, userLimit, parentId, skuId, applicationId, flags, availableTags, gameId } = guildId);
-    const branchId = guildId.branchId;
-    const tmp = permissionOverwrites;
-    let obj = permissionOverwrites(584);
-    obj.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT", guildId, channelType: type });
-    let obj2 = { type, name, permission_overwrites: permissionOverwrites };
-    const tmp4 = null != bitrate && bitrate !== closure_4;
+    permissionOverwrites(584).dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT", guildId, channelType: type });
+    let obj2 = { type, name: guildId.name, permission_overwrites: permissionOverwrites };
+    let tmp4 = null != bitrate;
+    if (tmp4) {
+      tmp4 = bitrate !== closure_4;
+    }
     if (tmp4) {
       obj2.bitrate = bitrate;
     }
-    const tmp6 = null != userLimit && userLimit > 0;
+    let tmp6 = null != userLimit;
+    if (tmp6) {
+      tmp6 = userLimit > 0;
+    }
     if (tmp6) {
       obj2.user_limit = userLimit;
     }
@@ -58,7 +47,10 @@ let obj = {
     if (null != flags) {
       obj2.flags = flags;
     }
-    const tmp7 = null != availableTags && availableTags.length > 0;
+    let tmp7 = null != availableTags;
+    if (tmp7) {
+      tmp7 = availableTags.length > 0;
+    }
     if (tmp7) {
       obj2.available_tags = availableTags.map((name) => ({ name: name.name, emoji_id: name.emojiId, emoji_name: name.emojiName, moderated: name.moderated }));
     }
@@ -68,108 +60,137 @@ let obj = {
     if (type === constants.GUILD_STORE) {
       if (null == skuId) {
         const _Error2 = Error;
-        const self3 = this;
-        const self4 = this;
         const error = new Error("Unexpected missing SKU");
         throw error;
       } else {
         obj2.sku_id = skuId;
-        obj2.branch_id = branchId;
+        obj2.branch_id = guildId.branchId;
       }
     }
     if (type === constants.GUILD_APP) {
       if (null == applicationId) {
         const _Error = Error;
-        const self = this;
-        const self2 = this;
         const error1 = new Error("Unexpected missing application");
         throw error1;
       } else {
         obj2.application_id = applicationId;
       }
     }
-    const tmpResult = tmp(5089);
-    const request = { url: closure_6.GUILD_CHANNELS(guildId), body: obj2, oldFormErrors: true, trackedActionData: obj3, rejectWithError: obj5.rejectWithMigratedError() };
-    const post = tmpResult.post;
-    obj3 = {
+    let obj = permissionOverwrites(584);
+    const request = { url: closure_6.GUILD_CHANNELS(guildId), body: obj2, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+    const tmpResult = permissionOverwrites(5089);
+    request.trackedActionData = {
       event: guildId(1260).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
+        const obj2 = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
         let id;
-        let type;
-        const obj = { is_private: permissionOverwrites.length > 0, channel_id: id, channel_type: type };
-        id = undefined;
-        const exact = TypeUtils.exact;
-        TypeUtils;
         if (body != null) {
           body = body.body;
           if (body != null) {
             id = body.id;
           }
         }
-        type = undefined;
+        obj2.channel_id = id;
+        let type;
         if (body != null) {
           const body2 = body.body;
           if (body2 != null) {
             type = body2.type;
           }
         }
-        return exact(obj);
+        obj2.channel_type = type;
+        return TypeUtils.exact(obj2);
       }
     };
-    obj5 = guildId(1282);
-    const postResult = post(request);
-    return postResult.then((body) => {
-      let obj2;
-      if (UserGuildSettingsStore.isOptInEnabled(guildId)) {
-        const obj = { guildId, channelId: body.body.id, settings: obj2, label: NotificationSettingsUtils.NotificationLabels.OptedIn };
-        obj2 = { flags: constants.OPT_IN_ENABLED };
-        const updateChannelOverrideSettings = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings;
-        NotificationSettingsModalActionCreatorsDefault;
-        const result = updateChannelOverrideSettings(obj);
+    let obj3 = {
+      event: guildId(1260).NetworkActionNames.CHANNEL_CREATE,
+      properties(body) {
+        const obj2 = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
+        let id;
+        if (body != null) {
+          body = body.body;
+          if (body != null) {
+            id = body.id;
+          }
+        }
+        obj2.channel_id = id;
+        let type;
+        if (body != null) {
+          const body2 = body.body;
+          if (body2 != null) {
+            type = body2.type;
+          }
+        }
+        obj2.channel_type = type;
+        return TypeUtils.exact(obj2);
       }
-      const obj3 = GuildTemplateTooltipActionCreatorsDefault;
-      const result1 = obj3.checkGuildTemplateDirty(guildId);
+    };
+    request.rejectWithError = guildId(1282).rejectWithMigratedError();
+    const obj6 = guildId(1282);
+    return tmpResult.post(request).then((body) => {
+      if (UserGuildSettingsStore.isOptInEnabled(guildId)) {
+        const obj2 = { guildId, channelId: body.body.id, settings: null, label: null };
+        const obj3 = { flags: constants.OPT_IN_ENABLED };
+        obj2.settings = obj3;
+        obj2.label = NotificationSettingsUtils.NotificationLabels.OptedIn;
+        const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(obj2);
+      }
+      const result1 = GuildTemplateTooltipActionCreatorsDefault.checkGuildTemplateDirty(guildId);
       return body;
     }, (body) => {
-      const obj = permissionOverwrites(dependencyMap[3]);
-      const obj2 = { type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE", errors: body.body };
-      obj.dispatch(obj2);
+      permissionOverwrites(dependencyMap[3]).dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE", errors: body.body });
       throw body;
     });
   },
   createRoleSubscriptionTemplateChannel(guildId, name, type, topic) {
-    let obj;
-    let obj4;
-    function properties(body) {
-      let type;
-      let id;
-      const exact = TypeUtils.exact;
-      TypeUtils;
-      if (body != null) {
-        body = body.body;
+    const request = { url: timestampProducer.GUILD_CHANNELS(guildId), body: { name, type, topic }, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+    const obj = TrackedHTTPUtilsDefault;
+    let obj2 = { name, type, topic };
+    request.trackedActionData = {
+      event: discord_common_AnalyticsUtils.NetworkActionNames.CHANNEL_CREATE,
+      properties(body) {
+        let id;
         if (body != null) {
-          id = body.id;
+          body = body.body;
+          if (body != null) {
+            id = body.id;
+          }
         }
-      }
-      const obj = { is_private: true, channel_id: id, channel_type: type };
-      type = undefined;
-      if (body != null) {
-        const body2 = body.body;
-        if (body2 != null) {
-          type = body2.type;
+        const obj2 = { is_private: true, channel_id: id, channel_type: null };
+        let type;
+        if (body != null) {
+          const body2 = body.body;
+          if (body2 != null) {
+            type = body2.type;
+          }
         }
+        obj2.channel_type = type;
+        return TypeUtils.exact(obj2);
       }
-      return exact(obj);
-    }
-    const tmp = TrackedHTTPUtilsDefault;
-    const request = { url: metroRequire.GUILD_CHANNELS(guildId), body: obj, oldFormErrors: true, trackedActionData: { event: discord_common_AnalyticsUtils.NetworkActionNames.CHANNEL_CREATE, properties }, rejectWithError: obj4.rejectWithMigratedError() };
-    const post = tmp.post;
-    obj = { name, type, topic };
-    ({ event: discord_common_AnalyticsUtils.NetworkActionNames.CHANNEL_CREATE, properties });
-    obj4 = HTTPUtils;
-    return post(request);
+    };
+    const obj3 = {
+      event: discord_common_AnalyticsUtils.NetworkActionNames.CHANNEL_CREATE,
+      properties(body) {
+        let id;
+        if (body != null) {
+          body = body.body;
+          if (body != null) {
+            id = body.id;
+          }
+        }
+        const obj2 = { is_private: true, channel_id: id, channel_type: null };
+        let type;
+        if (body != null) {
+          const body2 = body.body;
+          if (body2 != null) {
+            type = body2.type;
+          }
+        }
+        obj2.channel_type = type;
+        return TypeUtils.exact(obj2);
+      }
+    };
+    request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+    return obj.post(request);
   }
 };
-let result = size.fileFinishedImporting("actions/CreateChannelActionCreators.tsx");
-
-export default obj;

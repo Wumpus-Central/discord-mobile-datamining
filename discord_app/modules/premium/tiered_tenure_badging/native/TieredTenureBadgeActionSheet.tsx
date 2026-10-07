@@ -1,10 +1,9 @@
 // === Module 10861: TieredTenureBadgeActionSheet ===
 
 // Module 10861 (TieredTenureBadgeActionSheet)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl5 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import FastImageDefault from "FastImage" /* 5981 */;
@@ -13,269 +12,182 @@ import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7132 */;
 import showUserProfileActionSheet from "showUserProfileActionSheet" /* 7861 */;
 import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 10862 */;
 import useTenureBadgeRequirementString from "useTenureBadgeRequirementString" /* 10887 */;
-import react_mod from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import PremiumConstants from "PremiumConstants" /* 1379 */;
-import Constants from "Constants" /* 1085 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let BottomSheet, importDefault, userId;
 
-let c10;
-let c9;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let unpackModuleId;
-let react = react_mod;
-const View = react_native.View;
-({ PremiumTypes: metroRequire, TieredTenureBadge: metroImportDefault } = PremiumConstants);
-({ AnalyticsPages: metroImportAll, UserSettingsSections: c9 } = Constants);
-({ jsx: c10, jsxs: unpackModuleId } = Fragment);
+require = fn;
+const View = fn(17).View;
+const PremiumConstants = fn(1379);
+({ PremiumTypes: metroRequire, TieredTenureBadge: closure_7 } = PremiumConstants);
+const Constants = fn(1085);
+({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const TIERED_TENURE_BADGE_ACTION_SHEET = "TIERED_TENURE_BADGE_ACTION_SHEET";
-let obj = { headerContainer: { paddingHorizontal: 24, alignItems: "center" }, title: { marginTop: 8, paddingHorizontal: 12, textAlign: "center" }, subtitle: { marginTop: 8, textAlign: "center" }, container: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingHorizontal: 24, marginTop: 16 }, rowContainer: { flexDirection: "row", width: "100%", height: 160, gap: 8, justifyContent: "center", alignItems: "center", marginTop: 24 }, rowContainerWithUsersBadge: { height: 186 }, badgeContainer: { minWidth: 110, height: "100%", paddingTop: 16, alignItems: "center", paddingHorizontal: 8 }, usersBadgeContainer: obj2, badgeName: { marginTop: 8 }, badgeRequirement: { marginTop: 4 }, badgePremiumSince: { width: 90, marginTop: 4, textAlign: "center" }, footer: { marginHorizontal: 24 } };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderWidth: 1.2, borderColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.sm };
-let closure_13 = createStyles.createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
-  let Hu4jfi;
-  let badge;
-  let date;
-  let formatToPlainString;
-  let isUsersBadge;
-  let items;
-  let obj5;
-  let premiumSince;
-  const obj = react2;
-  const cResult = obj.c(39);
+const createStyles = fn(4896);
+let obj2 = { headerContainer: { paddingHorizontal: 24, alignItems: "center" }, title: { marginTop: 8, paddingHorizontal: 12, textAlign: "center" }, subtitle: { marginTop: 8, textAlign: "center" }, container: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingHorizontal: 24, marginTop: 16 }, rowContainer: { flexDirection: "row", width: "100%", height: 160, gap: 8, justifyContent: "center", alignItems: "center", marginTop: 24 }, rowContainerWithUsersBadge: { height: 186 }, badgeContainer: { minWidth: 110, height: "100%", paddingTop: 16, alignItems: "center", paddingHorizontal: 8 }, usersBadgeContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderWidth: 1.2, borderColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.sm }, badgeName: { marginTop: 8 }, badgeRequirement: { marginTop: 4 }, badgePremiumSince: { width: 90, marginTop: 4, textAlign: "center" }, footer: { marginHorizontal: 24 } };
+let closure_13 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(39);
   ({ badge, isUsersBadge, premiumSince } = arg0);
   const tmp4 = closure_13();
-  const obj2 = useMobileTenureBadgeImages;
-  const mobileTenureBadgeImages = obj2.useMobileTenureBadgeImages(badge);
-  let small;
+  const mobileTenureBadgeImages = useMobileTenureBadgeImages.useMobileTenureBadgeImages(badge);
   if (mobileTenureBadgeImages != null) {
-    small = mobileTenureBadgeImages.small;
+    const small = mobileTenureBadgeImages.small;
   }
   if (cResult[0] === badge) {
     if (cResult[1] === small) {
       if (cResult[2] === isUsersBadge) {
-        let tmp7;
-        let tmp8;
-        let tmp9;
-        let tmp10;
-        let tmp11;
-        let tmp12;
-        let tmp13;
-        let tmp14;
-        let tmp15;
-        let tmp16;
         if (cResult[3] === tmp4) {
-          tmp7 = cResult[4];
-          tmp8 = cResult[5];
-          tmp9 = cResult[6];
-          tmp10 = cResult[7];
-          tmp11 = cResult[8];
-          tmp12 = cResult[9];
-          tmp13 = cResult[10];
-          tmp14 = cResult[11];
-          tmp15 = cResult[12];
-          tmp16 = cResult[13];
+          let tmp14 = cResult[12];
+          let tmp15 = cResult[13];
         }
         const _Symbol = Symbol;
-        if (tmp15 === Symbol.for("react.early_return_sentinel")) {
-          if (cResult[19] === tmp7) {
-            if (cResult[20] === tmp9) {
-              if (cResult[21] === tmp10) {
-                if (cResult[22] === tmp11) {
-                  let tmp36;
-                  if (cResult[23] === tmp12) {
-                    tmp36 = cResult[24];
+        if (tmp14 !== Symbol.for("react.early_return_sentinel")) {
+          return tmp14;
+        } else {
+          if (cResult[19] === tmp6) {
+            if (cResult[20] === tmp8) {
+              if (cResult[21] === tmp9) {
+                if (cResult[22] === tmp10) {
+                  if (cResult[23] === tmp11) {
+                    let tmp31 = cResult[24];
                   }
                   if (cResult[25] === tmp4.badgeRequirement) {
-                    let tmp39;
-                    if (cResult[26] === tmp16) {
-                      tmp39 = cResult[27];
+                    if (cResult[26] === tmp15) {
+                      let tmp34 = cResult[27];
                     }
                     if (cResult[28] === isUsersBadge) {
                       if (cResult[29] === premiumSince) {
-                        let tmp42;
                         if (cResult[30] === tmp4.badgePremiumSince) {
-                          tmp42 = cResult[31];
+                          let tmp37 = cResult[31];
                         }
-                        if (cResult[32] === tmp8) {
-                          if (cResult[33] === tmp42) {
-                            if (cResult[34] === tmp13) {
-                              if (cResult[35] === tmp14) {
-                                if (cResult[36] === tmp36) {
-                                  let tmp48;
-                                  if (cResult[37] === tmp39) {
-                                    tmp48 = cResult[38];
-                                  }
-                                  tmp15 = tmp48;
+                        if (cResult[32] === tmp7) {
+                          if (cResult[33] === tmp37) {
+                            if (cResult[34] === tmp12) {
+                              if (cResult[35] === tmp13) {
+                                if (cResult[36] === tmp31) {
                                 }
                               }
                             }
                           }
                         }
-                        const obj3 = { style: tmp13, children: items };
-                        items = [tmp14, tmp36, tmp39, tmp42];
-                        const tmp50 = unpackModuleId(tmp8, obj3);
-                        cResult[32] = tmp8;
-                        cResult[33] = tmp42;
-                        cResult[34] = tmp13;
-                        cResult[35] = tmp14;
-                        cResult[36] = tmp36;
-                        cResult[37] = tmp39;
-                        cResult[38] = tmp50;
-                        tmp48 = tmp50;
+                        const obj3 = { style: tmp12, children: null };
+                        const items = [tmp13, tmp31, tmp34, tmp37];
+                        obj3.children = items;
+                        const tmp47 = closure_1_11(tmp7, obj3);
+                        cResult[32] = tmp7;
+                        cResult[33] = tmp37;
+                        cResult[34] = tmp12;
+                        cResult[35] = tmp13;
+                        cResult[36] = tmp31;
+                        cResult[37] = tmp34;
+                        cResult[38] = tmp47;
                       }
                     }
-                    let tmp43 = isUsersBadge && null != premiumSince;
-                    if (tmp43) {
-                      const obj4 = { style: tmp4.badgePremiumSince, variant: "text-xs/normal", color: "text-muted", children: formatToPlainString(Hu4jfi, obj5) };
-                      const Text = Text_Text.Text;
-                      const intl2 = intl5.intl;
-                      formatToPlainString = intl2.formatToPlainString;
+                    let tmp38 = isUsersBadge;
+                    if (isUsersBadge) {
+                      tmp38 = null != premiumSince;
+                    }
+                    if (tmp38) {
+                      const obj4 = { style: tmp4.badgePremiumSince, variant: "text-xs/normal", color: "text-muted", children: null };
+                      const intl2 = util.intl;
+                      const obj5 = { date: null };
                       const _Date = Date;
-                      const self = this;
-                      const self2 = this;
-                      obj5 = { date };
-                      Hu4jfi = intl5.t.Hu4jfi;
-                      date = new Date(premiumSince);
-                      tmp43 = authStore(Text, obj4);
+                      const date = new Date(premiumSince);
+                      obj5.date = date;
+                      obj4.children = intl2.formatToPlainString(util.t.Hu4jfi, obj5);
+                      tmp38 = v65535(Text_Text.Text, obj4);
                     }
                     cResult[28] = isUsersBadge;
                     cResult[29] = premiumSince;
                     cResult[30] = tmp4.badgePremiumSince;
-                    cResult[31] = tmp43;
-                    tmp42 = tmp43;
+                    cResult[31] = tmp38;
+                    tmp37 = tmp38;
                   }
-                  const obj6 = { style: tmp4.badgeRequirement, variant: "text-xs/normal", color: "mobile-text-heading-primary", children: tmp16 };
-                  const tmp41 = authStore(Text_Text.Text, obj6);
+                  const obj6 = { style: tmp4.badgeRequirement, variant: "text-xs/normal", color: "mobile-text-heading-primary", children: tmp15 };
+                  const tmp36 = v65535(Text_Text.Text, obj6);
                   cResult[25] = tmp4.badgeRequirement;
-                  cResult[26] = tmp16;
-                  cResult[27] = tmp41;
-                  tmp39 = tmp41;
+                  cResult[26] = tmp15;
+                  cResult[27] = tmp36;
+                  tmp34 = tmp36;
                 }
               }
             }
           }
-          const obj7 = { style: tmp9, variant: tmp10, color: tmp11, children: tmp12 };
-          const tmp38 = authStore(tmp7, obj7);
-          cResult[19] = tmp7;
-          cResult[20] = tmp9;
-          cResult[21] = tmp10;
-          cResult[22] = tmp11;
-          cResult[23] = tmp12;
-          cResult[24] = tmp38;
-          tmp36 = tmp38;
+          const obj7 = { style: tmp8, variant: tmp9, color: tmp10, children: tmp11 };
+          const tmp33 = v65535(tmp6, obj7);
+          cResult[19] = tmp6;
+          cResult[20] = tmp8;
+          cResult[21] = tmp9;
+          cResult[22] = tmp10;
+          cResult[23] = tmp11;
+          cResult[24] = tmp33;
+          tmp31 = tmp33;
         }
-        return tmp15;
       }
     }
   }
   const forResult = Symbol.for("react.early_return_sentinel");
+  let nameUnformatted = TieredTenureBadgeUtils.getTieredTenureBadgeData(badge);
   const tmpResult = TieredTenureBadgeUtils;
-  const tieredTenureBadgeData = tmpResult.getTieredTenureBadgeData(badge);
   let tenureReqNumMonths;
-  const getTenureBadgeRequirementString = useTenureBadgeRequirementString.getTenureBadgeRequirementString;
-  useTenureBadgeRequirementString;
-  if (tieredTenureBadgeData != null) {
-    tenureReqNumMonths = tieredTenureBadgeData.tenureReqNumMonths;
+  if (nameUnformatted != null) {
+    tenureReqNumMonths = nameUnformatted.tenureReqNumMonths;
   }
-  const tenureBadgeRequirementString = getTenureBadgeRequirementString(badge, tenureReqNumMonths);
-  let tmp22 = null;
-  let tmp23;
-  let tmp24;
-  let stringResult;
-  let str;
-  let str2;
-  let badgeName;
-  let tmp27;
-  let Text1;
-  if (null != tieredTenureBadgeData) {
-    const usersBadgeContainer = isUsersBadge && tmp4.usersBadgeContainer;
+  const tenureBadgeRequirementString = useTenureBadgeRequirementString.getTenureBadgeRequirementString(badge, tenureReqNumMonths);
+  if (null == nameUnformatted) {
+    cResult[0] = badge;
+    cResult[1] = small;
+    cResult[2] = isUsersBadge;
+    cResult[3] = tmp4;
+    cResult[4] = undefined;
+    cResult[5] = undefined;
+    cResult[6] = undefined;
+    cResult[7] = undefined;
+    cResult[8] = undefined;
+    cResult[9] = undefined;
+    cResult[10] = undefined;
+    cResult[11] = undefined;
+    cResult[12] = null;
+    cResult[13] = tenureBadgeRequirementString;
+    tmp14 = null;
+    tmp15 = tenureBadgeRequirementString;
+  } else {
+    let usersBadgeContainer = isUsersBadge;
+    if (isUsersBadge) {
+      usersBadgeContainer = tmp4.usersBadgeContainer;
+    }
     if (cResult[14] === tmp4.badgeContainer) {
-      let tmp30;
-      let tmp31;
-      if (cResult[15] === usersBadgeContainer) {
-        tmp30 = cResult[16];
-      }
       if (cResult[17] !== small) {
         const obj8 = { resizeMode: "contain", source: small };
-        const tmp34 = authStore(FastImageDefault, obj8);
+        const tmp24 = v65535(FastImageDefault, obj8);
         cResult[17] = small;
-        cResult[18] = tmp34;
-        tmp31 = tmp34;
-      } else {
-        tmp31 = cResult[18];
+        cResult[18] = tmp24;
       }
-      Text1 = Text_Text.Text;
-      badgeName = tmp4.badgeName;
-      const intl = intl5.intl;
-      stringResult = intl.string(tieredTenureBadgeData.nameUnformatted);
-      str = "mobile-text-heading-primary";
-      str2 = "heading-md/semibold";
-      tmp23 = tmp31;
-      tmp22 = forResult;
-      tmp24 = tmp30;
-      tmp27 = View;
+      const Text = Text_Text.Text;
+      const badgeName = tmp4.badgeName;
+      const intl = util.intl;
+      nameUnformatted = nameUnformatted.nameUnformatted;
+      intl.string(nameUnformatted);
     }
     const items1 = [tmp4.badgeContainer, usersBadgeContainer];
     cResult[14] = tmp4.badgeContainer;
     cResult[15] = usersBadgeContainer;
     cResult[16] = items1;
-    tmp30 = items1;
   }
-  cResult[0] = badge;
-  cResult[1] = small;
-  cResult[2] = isUsersBadge;
-  cResult[3] = tmp4;
-  cResult[4] = Text1;
-  cResult[5] = tmp27;
-  cResult[6] = badgeName;
-  cResult[7] = str2;
-  cResult[8] = str;
-  cResult[9] = stringResult;
-  cResult[10] = tmp24;
-  cResult[11] = tmp23;
-  cResult[12] = tmp22;
-  cResult[13] = tenureBadgeRequirementString;
-  tmp15 = tmp22;
-  tmp14 = tmp23;
-  tmp13 = tmp24;
-  tmp12 = stringResult;
-  tmp11 = str;
-  tmp10 = str2;
-  tmp9 = badgeName;
-  tmp8 = tmp27;
-  tmp7 = Text1;
-  tmp16 = tenureBadgeRequirementString;
-}) : (function(arg0) {
-  let Hu4jfi;
-  let badge;
-  let date;
-  let formatToPlainString;
-  let intl;
-  let isUsersBadge;
-  let items1;
-  let obj7;
-  let premiumSince;
-  let small;
+  const tmpResult2 = useTenureBadgeRequirementString;
+}) : ((arg0) => {
   ({ badge, isUsersBadge, premiumSince } = arg0);
   const tmp = closure_13();
-  const obj = useMobileTenureBadgeImages;
-  const mobileTenureBadgeImages = obj.useMobileTenureBadgeImages(badge);
+  const mobileTenureBadgeImages = useMobileTenureBadgeImages.useMobileTenureBadgeImages(badge);
   if (mobileTenureBadgeImages != null) {
-    small = mobileTenureBadgeImages.small;
+    const small = mobileTenureBadgeImages.small;
   }
-  const tmp2Result = TieredTenureBadgeUtils;
-  const tieredTenureBadgeData = tmp2Result.getTieredTenureBadgeData(badge);
+  const tieredTenureBadgeData = TieredTenureBadgeUtils.getTieredTenureBadgeData(badge);
   useTenureBadgeRequirementString;
   if (tieredTenureBadgeData != null) {
     const tenureReqNumMonths = tieredTenureBadgeData.tenureReqNumMonths;
@@ -283,63 +195,58 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) 
   let tmp9Result = null;
   if (null != tieredTenureBadgeData) {
     const items = [tmp.badgeContainer, ];
-    const usersBadgeContainer = isUsersBadge && tmp.usersBadgeContainer;
-    const obj2 = { style: items, children: items1 };
+    let usersBadgeContainer = isUsersBadge;
+    if (isUsersBadge) {
+      usersBadgeContainer = tmp.usersBadgeContainer;
+    }
+    const obj2 = { style: null, children: null };
     items[1] = usersBadgeContainer;
+    obj2.style = items;
     const obj3 = { resizeMode: "contain", source: small };
-    items1 = [authStore(FastImageDefault, obj3), , , ];
-    const obj4 = { style: tmp.badgeName, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: intl.string(tieredTenureBadgeData.nameUnformatted) };
-    const Text = Text_Text.Text;
-    intl = intl5.intl;
-    items1[1] = authStore(Text, obj4);
+    const items1 = [v65535(FastImageDefault, obj3), , , ];
+    const obj4 = { style: tmp.badgeName, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
+    const intl = util.intl;
+    obj4.children = intl.string(tieredTenureBadgeData.nameUnformatted);
+    items1[1] = v65535(Text_Text.Text, obj4);
     const obj5 = { style: tmp.badgeRequirement, variant: "text-xs/normal", color: "mobile-text-heading-primary", children: tmp7 };
-    items1[2] = authStore(Text_Text.Text, obj5);
+    items1[2] = v65535(Text_Text.Text, obj5);
     if (isUsersBadge) {
       isUsersBadge = null != premiumSince;
     }
     if (isUsersBadge) {
-      const obj6 = { style: tmp.badgePremiumSince, variant: "text-xs/normal", color: "text-muted", children: formatToPlainString(Hu4jfi, obj7) };
-      const Text2 = Text_Text.Text;
-      const intl2 = intl5.intl;
-      formatToPlainString = intl2.formatToPlainString;
+      const obj6 = { style: tmp.badgePremiumSince, variant: "text-xs/normal", color: "text-muted", children: null };
+      const intl2 = util.intl;
+      const obj7 = { date: null };
       const _Date = Date;
-      const self = this;
-      const self2 = this;
-      obj7 = { date };
-      Hu4jfi = intl5.t.Hu4jfi;
-      date = new Date(premiumSince);
-      isUsersBadge = authStore(Text2, obj6);
+      const date = new Date(premiumSince);
+      obj7.date = date;
+      obj6.children = intl2.formatToPlainString(util.t.Hu4jfi, obj7);
+      isUsersBadge = v65535(Text_Text.Text, obj6);
     }
     items1[3] = isUsersBadge;
-    tmp9Result = unpackModuleId(View, obj2);
+    obj2.children = items1;
+    tmp9Result = closure_1_11(View, obj2);
   }
   return tmp9Result;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
-  let closure_1;
-  let currentUser;
-  let items5;
-  let items7;
+ReactCompilerGating = fn(558);
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderWidth: 1.2, borderColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.sm };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgeActionSheet.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   let length;
-  let loading;
-  let onPress;
   let sum;
-  let tieredTenureBadgeDataForUser;
-  let tmp12;
-  let tmp16;
-  let tmp8;
-  let tmp9;
-  let obj = userId(tieredTenureBadgeDataForUser[9]);
-  const cResult = obj.c(74);
+  const cResult = userId(tieredTenureBadgeDataForUser[9]).c(74);
   userId = userId.userId;
   const shouldShowCTA = userId.shouldShowCTA;
   const tmp5 = closure_13();
   importDefault = tmp5;
+  let obj = userId(tieredTenureBadgeDataForUser[9]);
+  const tmp4 = undefined === shouldShowCTA || shouldShowCTA;
+  tieredTenureBadgeDataForUser = userId(tieredTenureBadgeDataForUser[16]).useTieredTenureBadgeDataForUser(userId);
   const tmpResult = userId(tieredTenureBadgeDataForUser[16]);
-  tieredTenureBadgeDataForUser = tmpResult.useTieredTenureBadgeDataForUser(userId);
-  const tmpResult5 = userId(tieredTenureBadgeDataForUser[16]);
-  const premiumSinceForUser = tmpResult5.usePremiumSinceForUser(userId);
+  const premiumSinceForUser = userId(tieredTenureBadgeDataForUser[16]).usePremiumSinceForUser(userId);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [UserStore];
     const fn = function u() {
@@ -352,14 +259,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   } else {
     [tmp8, tmp9] = cResult;
   }
-  const tmpResult6 = userId(tieredTenureBadgeDataForUser[17]);
-  const stateFromStores = tmpResult6.useStateFromStores(tmp8, tmp9);
+  const tmpResult5 = userId(tieredTenureBadgeDataForUser[16]);
+  const stateFromStores = userId(tieredTenureBadgeDataForUser[17]).useStateFromStores(tmp8, tmp9);
   if (cResult[2] !== stateFromStores) {
-    const tmpResult7 = userId(tieredTenureBadgeDataForUser[18]);
-    const isPremiumResult = tmpResult7.isPremium(stateFromStores, closure_6.TIER_2);
+    const isPremiumResult = tmp(tmp2[18]).isPremium(stateFromStores, closure_6.TIER_2);
     cResult[2] = stateFromStores;
     cResult[3] = isPremiumResult;
-    tmp12 = isPremiumResult;
+    let tmp12 = isPremiumResult;
+    const tmpResult7 = tmp(tmp2[18]);
   } else {
     tmp12 = cResult[3];
   }
@@ -368,11 +275,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     premiumType = stateFromStores.premiumType;
   }
   if (cResult[4] !== premiumType) {
-    const tmpResult8 = userId(tieredTenureBadgeDataForUser[18]);
-    const isPremiumAtLeastResult = tmpResult8.isPremiumAtLeast(premiumType, closure_6.TIER_0);
+    const isPremiumAtLeastResult = tmp(tmp2[18]).isPremiumAtLeast(premiumType, closure_6.TIER_0);
     cResult[4] = premiumType;
     cResult[5] = isPremiumAtLeastResult;
-    tmp16 = isPremiumAtLeastResult;
+    let tmp16 = isPremiumAtLeastResult;
+    const tmpResult8 = tmp(tmp2[18]);
   } else {
     tmp16 = cResult[5];
   }
@@ -382,24 +289,18 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   }
   if (cResult[6] === tmp12) {
     if (cResult[7] === id) {
-      let tmp20;
-      let tmp23;
-      let tmp25;
-      let tmp28;
-      let arr3;
-      let tmp35;
       if (cResult[8] === userId) {
-        tmp20 = cResult[9];
+        let tmp20 = cResult[9];
       }
       let id1;
       if (tieredTenureBadgeDataForUser != null) {
         id1 = tieredTenureBadgeDataForUser.id;
       }
       if (cResult[10] !== (null == id1)) {
-        let obj2 = { disableTrack: null == id1 };
-        cResult[10] = null == id1;
+        let obj2 = { disableTrack: tmp22 };
+        cResult[10] = tmp22;
         cResult[11] = obj2;
-        tmp23 = obj2;
+        let tmp23 = obj2;
       } else {
         tmp23 = cResult[11];
       }
@@ -411,7 +312,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
         const items1 = [id2];
         cResult[12] = id2;
         cResult[13] = items1;
-        tmp25 = items1;
+        let tmp25 = items1;
       } else {
         tmp25 = cResult[13];
       }
@@ -419,25 +320,20 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
       const bottom = require("useSafeAreaInsets")().bottom;
       if (cResult[14] !== userId) {
         const fn2 = function q() {
-          const obj = openUserSettings;
-          const obj2 = { screen: constants.PREMIUM };
-          obj.openUserSettings(obj2);
-          const obj3 = ActionSheetActionCreatorsDefault;
-          obj3.hideActionSheet(TIERED_TENURE_BADGE_ACTION_SHEET);
-          const hideActionSheet = ActionSheetActionCreatorsDefault.hideActionSheet;
-          ActionSheetActionCreatorsDefault;
-          const obj4 = showUserProfileActionSheet;
-          hideActionSheet(obj4.getUserProfileActionSheetKey(userId));
+          openUserSettings.openUserSettings({ screen: constants2.PREMIUM });
+          const obj2 = { screen: constants2.PREMIUM };
+          ActionSheetActionCreatorsDefault.hideActionSheet(TIERED_TENURE_BADGE_ACTION_SHEET);
+          const obj4 = ActionSheetActionCreatorsDefault;
+          obj4.hideActionSheet(showUserProfileActionSheet.getUserProfileActionSheetKey(userId));
         };
         cResult[14] = userId;
         cResult[15] = fn2;
-        tmp28 = fn2;
+        let tmp28 = fn2;
       } else {
         tmp28 = cResult[15];
       }
       ({ loading, onPress } = require("usePremiumFeatureUpsellGetNitro")(false, tmp28, constants.TIERED_TENURE_BADGES_ACTION_SHEET, "replaceTopSheet"));
       const _Symbol = Symbol;
-      require("usePremiumFeatureUpsellGetNitro")(false, tmp28, constants.TIERED_TENURE_BADGES_ACTION_SHEET, "replaceTopSheet");
       if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
         const _Object = Object;
         const values = Object.values(closure_7);
@@ -452,294 +348,276 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
           } while (sum < length);
         }
         cResult[16] = items2;
-        arr3 = items2;
+        let arr3 = items2;
       } else {
         arr3 = cResult[16];
       }
       if (cResult[17] !== tmp12) {
-        let stringResult;
         const intl = userId(tieredTenureBadgeDataForUser[15]).intl;
         const string = intl.string;
-        const t = userId(tieredTenureBadgeDataForUser[15]).t;
+        let Og62j7 = userId(tieredTenureBadgeDataForUser[15]).t;
         if (tmp12) {
-          stringResult = string(t.Og62j7);
+          Og62j7 = Og62j7.Og62j7;
+          let stringResult = string(Og62j7);
         } else {
-          stringResult = string(t.RtGeFS);
+          stringResult = string(Og62j7.RtGeFS);
         }
         cResult[17] = tmp12;
         cResult[18] = stringResult;
-        tmp35 = stringResult;
       } else {
-        tmp35 = cResult[18];
-      }
-      if (cResult[19] === tmp5.title) {
-        let tmp39;
-        let stringResult2;
-        if (cResult[20] === tmp35) {
-          tmp39 = cResult[21];
-        }
-        if (cResult[22] === tmp12) {
-          let tmp44;
-          if (cResult[23] === tmp28) {
-            tmp44 = cResult[24];
+        if (cResult[19] === tmp5.title) {
+          if (cResult[20] === tmp35) {
+            let tmp40 = cResult[21];
           }
-          if (cResult[25] === tmp5.subtitle) {
-            let tmp48;
-            if (cResult[26] === tmp44) {
-              tmp48 = cResult[27];
-            }
-            if (cResult[28] === tmp5.headerContainer) {
-              if (cResult[29] === tmp39) {
-                let tmp53;
-                let tmp89;
-                if (cResult[30] === tmp48) {
-                  tmp53 = cResult[31];
+          if (cResult[22] === tmp12) {
+            if (cResult[23] === tmp28) {
+              if (cResult[25] === tmp5.subtitle) {
+                if (cResult[26] === tmp45) {
+                  let tmp49 = cResult[27];
                 }
-                if (tmp12) {
-                  let tmp72;
-                  if (cResult[32] !== bottom) {
-                    let obj3 = { paddingBottom: bottom };
-                    cResult[32] = bottom;
-                    cResult[33] = obj3;
-                    tmp72 = obj3;
-                  } else {
-                    tmp72 = cResult[33];
-                  }
-                  if (cResult[34] === tmp5.footer) {
-                    let tmp73;
-                    let tmp74;
-                    let tmp78;
-                    if (cResult[35] === tmp72) {
-                      tmp73 = cResult[36];
+                if (cResult[28] === tmp5.headerContainer) {
+                  if (cResult[29] === tmp40) {
+                    if (cResult[30] === tmp49) {
+                      let tmp54 = cResult[31];
                     }
-                    const _Symbol2 = Symbol;
-                    if (cResult[37] === Symbol.for("react.memo_cache_sentinel")) {
-                      const intl4 = userId(tieredTenureBadgeDataForUser[15]).intl;
-                      const stringResult1 = intl4.string(userId(tieredTenureBadgeDataForUser[15]).t.hvVgAZ);
-                      cResult[37] = stringResult1;
-                      tmp74 = stringResult1;
-                    } else {
-                      tmp74 = cResult[37];
-                    }
-                    if (cResult[38] !== tmp28) {
-                      let obj4 = { shiny: false, text: tmp74, onPress: tmp28 };
-                      const tmp82 = closure_10(require("NitroUpsellButton"), obj4);
-                      cResult[38] = tmp28;
-                      cResult[39] = tmp82;
-                      tmp78 = tmp82;
-                    } else {
-                      tmp78 = cResult[39];
-                    }
-                    if (cResult[40] === tmp73) {
-                    }
-                    const obj5 = { style: tmp73, children: tmp78 };
-                    const tmp86 = closure_10(View, obj5);
-                    cResult[40] = tmp73;
-                    cResult[41] = tmp78;
-                    cResult[42] = tmp86;
-                  }
-                  const items3 = [tmp5.footer, tmp72];
-                  cResult[34] = tmp5.footer;
-                  cResult[35] = tmp72;
-                  cResult[36] = items3;
-                  tmp73 = items3;
-                } else {
-                  let tmp57;
-                  if (cResult[43] !== bottom) {
-                    const obj6 = { paddingBottom: bottom };
-                    cResult[43] = bottom;
-                    cResult[44] = obj6;
-                    tmp57 = obj6;
-                  } else {
-                    tmp57 = cResult[44];
-                  }
-                  if (cResult[45] === tmp5.footer) {
-                    let tmp58;
-                    let tmp59;
-                    if (cResult[46] === tmp57) {
-                      tmp58 = cResult[47];
-                    }
-                    if (cResult[48] !== tmp16) {
-                      let string2Result;
-                      const intl3 = userId(tieredTenureBadgeDataForUser[15]).intl;
-                      const string2 = intl3.string;
-                      const t2 = userId(tieredTenureBadgeDataForUser[15]).t;
-                      if (tmp16) {
-                        string2Result = string2(t2.IJI7yk);
+                    if (tmp12) {
+                      if (cResult[32] !== bottom) {
+                        let obj3 = { paddingBottom: bottom };
+                        cResult[32] = bottom;
+                        cResult[33] = obj3;
+                        let tmp74 = obj3;
                       } else {
-                        string2Result = string2(t2.pj0XBN);
+                        tmp74 = cResult[33];
                       }
-                      cResult[48] = tmp16;
-                      cResult[49] = string2Result;
-                      tmp59 = string2Result;
+                      if (cResult[34] === tmp5.footer) {
+                        if (cResult[35] === tmp74) {
+                          let tmp75 = cResult[36];
+                        }
+                        const _Symbol2 = Symbol;
+                        if (cResult[37] === Symbol.for("react.memo_cache_sentinel")) {
+                          const intl4 = userId(tieredTenureBadgeDataForUser[15]).intl;
+                          const stringResult1 = intl4.string(userId(tieredTenureBadgeDataForUser[15]).t.hvVgAZ);
+                          cResult[37] = stringResult1;
+                          let tmp76 = stringResult1;
+                        } else {
+                          tmp76 = cResult[37];
+                        }
+                        if (cResult[38] !== tmp28) {
+                          let obj4 = { shiny: false, text: tmp76, onPress: tmp28 };
+                          const tmp84 = closure_10(require("NitroUpsellButton"), obj4);
+                          cResult[38] = tmp28;
+                          cResult[39] = tmp84;
+                          let tmp80 = tmp84;
+                        } else {
+                          tmp80 = cResult[39];
+                        }
+                        if (cResult[40] === tmp75) {
+                        }
+                        const obj5 = { style: tmp75, children: tmp80 };
+                        const tmp88 = closure_10(View, obj5);
+                        cResult[40] = tmp75;
+                        cResult[41] = tmp80;
+                        cResult[42] = tmp88;
+                      }
+                      const items3 = [tmp5.footer, tmp74];
+                      cResult[34] = tmp5.footer;
+                      cResult[35] = tmp74;
+                      cResult[36] = items3;
+                      tmp75 = items3;
                     } else {
-                      tmp59 = cResult[49];
-                    }
-                    if (cResult[50] === loading) {
-                      if (cResult[51] === onPress) {
-                        let tmp63;
-                        if (cResult[52] === tmp59) {
-                          tmp63 = cResult[53];
-                        }
-                        const obj7 = { style: tmp58, children: tmp63 };
-                        const tmp71 = closure_10(View, obj7);
-                        cResult[54] = tmp58;
-                        cResult[55] = tmp63;
-                        cResult[56] = tmp71;
+                      if (cResult[43] !== bottom) {
+                        const obj6 = { paddingBottom: bottom };
+                        cResult[43] = bottom;
+                        cResult[44] = obj6;
+                        let tmp58 = obj6;
+                      } else {
+                        tmp58 = cResult[44];
                       }
-                    }
-                    const obj8 = { loading, text: tmp59, onPress };
-                    const tmp67 = closure_10(require("NitroUpsellButton"), obj8);
-                    cResult[50] = loading;
-                    cResult[51] = onPress;
-                    cResult[52] = tmp59;
-                    cResult[53] = tmp67;
-                    tmp63 = tmp67;
-                  }
-                  const items4 = [tmp5.footer, tmp57];
-                  cResult[45] = tmp5.footer;
-                  cResult[46] = tmp57;
-                  cResult[47] = items4;
-                  tmp58 = items4;
-                }
-                const sum1 = bottom + 64;
-                if (cResult[57] !== sum1) {
-                  const obj9 = { paddingBottom: sum1 };
-                  cResult[57] = sum1;
-                  cResult[58] = obj9;
-                  tmp89 = obj9;
-                } else {
-                  tmp89 = cResult[58];
-                }
-                if (cResult[59] === tmp5.container) {
-                  let tmp90;
-                  if (cResult[60] === tmp89) {
-                    tmp90 = cResult[61];
-                  }
-                  let id3;
-                  const tmp91 = cResult[62];
-                  if (tieredTenureBadgeDataForUser != null) {
-                    id3 = tieredTenureBadgeDataForUser.id;
-                  }
-                  if (tmp91 === id3) {
-                    if (cResult[63] === premiumSinceForUser) {
-                      if (cResult[64] === tmp5.rowContainer) {
-                        let tmp93;
-                        if (cResult[65] === tmp5.rowContainerWithUsersBadge) {
-                          tmp93 = cResult[66];
+                      if (cResult[45] === tmp5.footer) {
+                        if (cResult[46] === tmp58) {
+                          let tmp59 = cResult[47];
                         }
-                        if (cResult[67] === tmp53) {
-                          if (cResult[68] === tmp90) {
-                            let tmp96;
-                            if (cResult[69] === tmp93) {
-                              tmp96 = cResult[70];
-                            }
-                            if (cResult[71] === tmp87) {
-                              let tmp101;
-                              if (cResult[72] === tmp96) {
-                                tmp101 = cResult[73];
-                              }
-                              return tmp101;
-                            }
-                            const obj10 = { scrollable: true, startExpanded: true, footer: tmp87, children: tmp96 };
-                            const tmp105 = closure_10(userId(tieredTenureBadgeDataForUser[28]).BottomSheet, obj10);
-                            cResult[71] = tmp87;
-                            cResult[72] = tmp96;
-                            cResult[73] = tmp105;
-                            tmp101 = tmp105;
+                        if (cResult[48] !== tmp16) {
+                          const intl3 = userId(tieredTenureBadgeDataForUser[15]).intl;
+                          const string2 = intl3.string;
+                          let IJI7yk = userId(tieredTenureBadgeDataForUser[15]).t;
+                          if (tmp16) {
+                            IJI7yk = IJI7yk.IJI7yk;
+                            let string2Result = string2(IJI7yk);
+                          } else {
+                            string2Result = string2(IJI7yk.pj0XBN);
                           }
+                          cResult[48] = tmp16;
+                          cResult[49] = string2Result;
+                        } else {
+                          if (cResult[50] === loading) {
+                            if (cResult[51] === onPress) {
+                              if (cResult[52] === tmp60) {
+                                let tmp65 = cResult[53];
+                              }
+                              if (cResult[54] === tmp59) {
+                                const sum1 = bottom + 64;
+                                if (cResult[57] !== sum1) {
+                                  const obj7 = { paddingBottom: sum1 };
+                                  cResult[57] = sum1;
+                                  cResult[58] = obj7;
+                                  let tmp92 = obj7;
+                                } else {
+                                  tmp92 = cResult[58];
+                                }
+                                if (cResult[59] === tmp5.container) {
+                                  if (cResult[60] === tmp92) {
+                                    let tmp93 = cResult[61];
+                                  }
+                                  let id3;
+                                  if (tieredTenureBadgeDataForUser != null) {
+                                    id3 = tieredTenureBadgeDataForUser.id;
+                                  }
+                                  if (cResult[62] === id3) {
+                                    if (cResult[63] === premiumSinceForUser) {
+                                      if (cResult[64] === tmp5.rowContainer) {
+                                        if (cResult[65] === tmp5.rowContainerWithUsersBadge) {
+                                          let tmp95 = cResult[66];
+                                        }
+                                        if (cResult[67] === tmp54) {
+                                          if (cResult[68] === tmp93) {
+                                            if (cResult[69] === tmp95) {
+                                              let tmp98 = cResult[70];
+                                            }
+                                            if (cResult[71] === tmp90) {
+                                              if (cResult[72] === tmp98) {
+                                                let tmp103 = cResult[73];
+                                              }
+                                              return tmp103;
+                                            }
+                                            const obj8 = { scrollable: true, startExpanded: true, footer: tmp90, children: tmp98 };
+                                            const tmp107 = closure_10(userId(tieredTenureBadgeDataForUser[28]).BottomSheet, obj8);
+                                            cResult[71] = tmp90;
+                                            cResult[72] = tmp98;
+                                            cResult[73] = tmp107;
+                                            tmp103 = tmp107;
+                                          }
+                                        }
+                                        const obj9 = { contentContainerStyle: tmp93, children: null };
+                                        const items4 = [tmp54, tmp95];
+                                        obj9.children = items4;
+                                        const tmp102 = closure_11(userId(tieredTenureBadgeDataForUser[27]).BottomSheetScrollView, obj9);
+                                        cResult[67] = tmp54;
+                                        cResult[68] = tmp93;
+                                        cResult[69] = tmp95;
+                                        cResult[70] = tmp102;
+                                        tmp98 = tmp102;
+                                      }
+                                    }
+                                  }
+                                  const mapped = arr3.map((arr, index) => {
+                                    const someResult = arr.some((item) => {
+                                      let id;
+                                      if (user != null) {
+                                        id = user.id;
+                                      }
+                                      return item === id;
+                                    });
+                                    const items = [closure_1.rowContainer, ];
+                                    let rowContainerWithUsersBadge = someResult;
+                                    if (someResult) {
+                                      rowContainerWithUsersBadge = closure_1.rowContainerWithUsersBadge;
+                                    }
+                                    items[1] = rowContainerWithUsersBadge;
+                                    return v65535(View, {
+                                      style: items,
+                                      children: arr.map((badge, index) => {
+                                        const obj = { badge, isUsersBadge: null, premiumSince: null };
+                                        let id;
+                                        if (user != null) {
+                                          id = user.id;
+                                        }
+                                        obj.isUsersBadge = badge === id;
+                                        obj.premiumSince = premiumSince;
+                                        return closure_2_10(closure_2_14, obj, index);
+                                      })
+                                    }, index);
+                                  });
+                                  let id4;
+                                  if (tieredTenureBadgeDataForUser != null) {
+                                    id4 = tieredTenureBadgeDataForUser.id;
+                                  }
+                                  cResult[62] = id4;
+                                  cResult[63] = premiumSinceForUser;
+                                  cResult[64] = tmp5.rowContainer;
+                                  cResult[65] = tmp5.rowContainerWithUsersBadge;
+                                  cResult[66] = mapped;
+                                  tmp95 = mapped;
+                                }
+                                const items5 = [tmp5.container, tmp92];
+                                cResult[59] = tmp5.container;
+                                cResult[60] = tmp92;
+                                cResult[61] = items5;
+                                tmp93 = items5;
+                              }
+                              const obj10 = { style: tmp59, children: tmp65 };
+                              const tmp73 = closure_10(View, obj10);
+                              cResult[54] = tmp59;
+                              cResult[55] = tmp65;
+                              cResult[56] = tmp73;
+                            }
+                          }
+                          const obj11 = { loading, text: cResult[49], onPress };
+                          const tmp69 = closure_10(require("NitroUpsellButton"), obj11);
+                          cResult[50] = loading;
+                          cResult[51] = onPress;
+                          cResult[52] = cResult[49];
+                          cResult[53] = tmp69;
+                          tmp65 = tmp69;
                         }
-                        const obj11 = { contentContainerStyle: tmp90, children: items5 };
-                        items5 = [tmp53, tmp93];
-                        const tmp100 = closure_11(userId(tieredTenureBadgeDataForUser[27]).BottomSheetScrollView, obj11);
-                        cResult[67] = tmp53;
-                        cResult[68] = tmp90;
-                        cResult[69] = tmp93;
-                        cResult[70] = tmp100;
-                        tmp96 = tmp100;
                       }
+                      const items6 = [tmp5.footer, tmp58];
+                      cResult[45] = tmp5.footer;
+                      cResult[46] = tmp58;
+                      cResult[47] = items6;
+                      tmp59 = items6;
                     }
                   }
-                  const mapped = arr3.map((arr, index) => {
-                    let premiumSince;
-                    let user;
-                    const f140967 = (item) => {
-                      let id;
-                      if (user != null) {
-                        id = user.id;
-                      }
-                      return item === id;
-                    };
-                    const items = [closure_1.rowContainer, ];
-                    const rowContainerWithUsersBadge = arr.some(f140967) && closure_1.rowContainerWithUsersBadge;
-                    const someResult = arr.some(f140967);
-                    let obj = {
-                      style: items,
-                      children: arr.map((badge, index) => {
-                        let id;
-                        const obj = { badge, isUsersBadge: badge === id, premiumSince };
-                        id = undefined;
-                        if (user != null) {
-                          id = user.id;
-                        }
-                        return closure_2_10(closure_2_14, obj, index);
-                      })
-                    };
-                    items[1] = rowContainerWithUsersBadge;
-                    return authStore(View, obj, index);
-                  });
-                  let id4;
-                  if (tieredTenureBadgeDataForUser != null) {
-                    id4 = tieredTenureBadgeDataForUser.id;
-                  }
-                  cResult[62] = id4;
-                  cResult[63] = premiumSinceForUser;
-                  cResult[64] = tmp5.rowContainer;
-                  cResult[65] = tmp5.rowContainerWithUsersBadge;
-                  cResult[66] = mapped;
-                  tmp93 = mapped;
                 }
-                const items6 = [tmp5.container, tmp89];
-                cResult[59] = tmp5.container;
-                cResult[60] = tmp89;
-                cResult[61] = items6;
-                tmp90 = items6;
+                const obj12 = { style: tmp5.headerContainer, children: null };
+                const items7 = [tmp40, tmp49];
+                obj12.children = items7;
+                const tmp57 = closure_11(View, obj12);
+                cResult[28] = tmp5.headerContainer;
+                cResult[29] = tmp40;
+                cResult[30] = tmp49;
+                cResult[31] = tmp57;
+                tmp54 = tmp57;
               }
+              const obj13 = { variant: "text-md/medium", color: "text-default", style: tmp5.subtitle, children: cResult[24] };
+              const tmp53 = closure_10(userId(tieredTenureBadgeDataForUser[14]).Text, obj13);
+              cResult[25] = tmp5.subtitle;
+              cResult[26] = cResult[24];
+              cResult[27] = tmp53;
+              tmp49 = tmp53;
             }
-            const obj12 = { style: tmp5.headerContainer, children: items7 };
-            items7 = [tmp39, tmp48];
-            const tmp56 = closure_11(View, obj12);
-            cResult[28] = tmp5.headerContainer;
-            cResult[29] = tmp39;
-            cResult[30] = tmp48;
-            cResult[31] = tmp56;
-            tmp53 = tmp56;
           }
-          const obj13 = { variant: "text-md/medium", color: "text-default", style: tmp5.subtitle, children: tmp44 };
-          const tmp52 = closure_10(userId(tieredTenureBadgeDataForUser[14]).Text, obj13);
-          cResult[25] = tmp5.subtitle;
-          cResult[26] = tmp44;
-          cResult[27] = tmp52;
-          tmp48 = tmp52;
+          let IdAP91 = tieredTenureBadgeDataForUser;
+          const intl2 = userId(tieredTenureBadgeDataForUser[15]).intl;
+          if (tmp12) {
+            IdAP91 = tmp46(IdAP91[15]).t.IdAP91;
+            let stringResult2 = intl2.string(IdAP91);
+          } else {
+            const obj14 = { learnMoreHook: tmp28 };
+            stringResult2 = intl2.format(tmp46(IdAP91[15]).t["bF+q7R"], obj14);
+          }
+          cResult[22] = tmp12;
+          cResult[23] = tmp28;
+          cResult[24] = stringResult2;
         }
-        const intl2 = userId(tieredTenureBadgeDataForUser[15]).intl;
-        if (tmp12) {
-          stringResult2 = intl2.string(tmp45(tmp46[15]).t.IdAP91);
-        } else {
-          const obj14 = { learnMoreHook: tmp28 };
-          stringResult2 = intl2.format(tmp45(tmp46[15]).t["bF+q7R"], obj14);
-        }
-        cResult[22] = tmp12;
-        cResult[23] = tmp28;
-        cResult[24] = stringResult2;
-        tmp44 = stringResult2;
+        const obj15 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp5.title, children: cResult[18] };
+        const tmp44 = closure_10(userId(tieredTenureBadgeDataForUser[14]).Text, obj15);
+        cResult[19] = tmp5.title;
+        cResult[20] = cResult[18];
+        cResult[21] = tmp44;
+        tmp40 = tmp44;
       }
-      const obj15 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp5.title, children: tmp35 };
-      const tmp43 = closure_10(userId(tieredTenureBadgeDataForUser[14]).Text, obj15);
-      cResult[19] = tmp5.title;
-      cResult[20] = tmp35;
-      cResult[21] = tmp43;
-      tmp39 = tmp43;
+      const tmp31 = require("usePremiumFeatureUpsellGetNitro")(false, tmp28, constants.TIERED_TENURE_BADGES_ACTION_SHEET, "replaceTopSheet");
     }
   }
   const obj16 = { type: userId(tieredTenureBadgeDataForUser[19]).ImpressionTypes.HALFSHEET, name: userId(tieredTenureBadgeDataForUser[19]).ImpressionNames.TIERED_TENURE_BADGE_MODAL, properties: { badge: id, premium_type: tmp12, viewed_user_id: userId } };
@@ -748,24 +626,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   cResult[8] = userId;
   cResult[9] = obj16;
   tmp20 = obj16;
+  const tmpResult6 = userId(tieredTenureBadgeDataForUser[17]);
 }) : ((userId) => {
-  let BottomSheetScrollView;
-  let closure_1;
-  let closure_3;
-  let currentUser;
-  let id;
-  let intl4;
-  let items3;
-  let items4;
-  let items5;
-  let items6;
-  let loading;
-  let obj15;
-  let onPress;
-  let string2Result;
-  let stringResult;
-  let stringResult1;
-  let tmp27;
   userId = userId.userId;
   let flag = userId.shouldShowCTA;
   if (flag === undefined) {
@@ -774,56 +636,52 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   let tieredTenureBadgeDataForUser;
   const tmp = closure_13();
   importDefault = tmp;
-  const tmp3 = tieredTenureBadgeDataForUser;
+  tieredTenureBadgeDataForUser = userId(tieredTenureBadgeDataForUser[16]).useTieredTenureBadgeDataForUser(userId);
   let obj = userId(tieredTenureBadgeDataForUser[16]);
-  tieredTenureBadgeDataForUser = obj.useTieredTenureBadgeDataForUser(userId);
+  noop = userId(tieredTenureBadgeDataForUser[16]).usePremiumSinceForUser(userId);
   let obj2 = userId(tieredTenureBadgeDataForUser[16]);
-  react = obj2.usePremiumSinceForUser(userId);
-  let obj3 = userId(tieredTenureBadgeDataForUser[17]);
   let items = [UserStore];
-  const stateFromStores = obj3.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = userId(tieredTenureBadgeDataForUser[17]).useStateFromStores(items, () => currentUser.getCurrentUser());
+  let obj3 = userId(tieredTenureBadgeDataForUser[17]);
+  const isPremiumResult = userId(tieredTenureBadgeDataForUser[18]).isPremium(stateFromStores, closure_6.TIER_2);
   let obj4 = userId(tieredTenureBadgeDataForUser[18]);
-  const isPremiumResult = obj4.isPremium(stateFromStores, closure_6.TIER_2);
   let premiumType;
-  const isPremiumAtLeast = userId(tieredTenureBadgeDataForUser[18]).isPremiumAtLeast;
-  userId(tieredTenureBadgeDataForUser[18]);
   if (stateFromStores != null) {
     premiumType = stateFromStores.premiumType;
   }
-  const obj5 = { type: userId(tmp3[19]).ImpressionTypes.HALFSHEET, name: userId(tmp3[19]).ImpressionNames.TIERED_TENURE_BADGE_MODAL, properties: { badge: id, premium_type: isPremiumResult, viewed_user_id: userId } };
-  const isPremiumAtLeastResult = isPremiumAtLeast(premiumType, closure_6.TIER_0);
-  id = undefined;
-  const tmp12 = require("useTrackImpression");
+  const obj5 = userId(tieredTenureBadgeDataForUser[18]);
+  const obj6 = { type: null, name: null, properties: null };
+  const isPremiumAtLeastResult = userId(tieredTenureBadgeDataForUser[18]).isPremiumAtLeast(premiumType, closure_6.TIER_0);
+  obj6.type = userId(tieredTenureBadgeDataForUser[19]).ImpressionTypes.HALFSHEET;
+  obj6.name = userId(tieredTenureBadgeDataForUser[19]).ImpressionNames.TIERED_TENURE_BADGE_MODAL;
+  let id;
   if (tieredTenureBadgeDataForUser != null) {
     id = tieredTenureBadgeDataForUser.id;
   }
+  obj6.properties = { badge: id, premium_type: isPremiumResult, viewed_user_id: userId };
   let id1;
   if (tieredTenureBadgeDataForUser != null) {
     id1 = tieredTenureBadgeDataForUser.id;
   }
   let id2;
-  const obj6 = { disableTrack: null == id1 };
   if (tieredTenureBadgeDataForUser != null) {
     id2 = tieredTenureBadgeDataForUser.id;
   }
   const items1 = [id2];
-  tmp12(obj5, obj6, items1);
-  const bottom = tmp11(tmp3[21])().bottom;
+  require("useTrackImpression")(obj6, { disableTrack: null == id1 }, items1);
+  const bottom = tmp10(tmp3[21])().bottom;
   const items2 = [userId];
-  const callback = react.useCallback(() => {
-    const obj = openUserSettings;
-    const obj2 = { screen: constants.PREMIUM };
-    obj.openUserSettings(obj2);
-    const obj3 = ActionSheetActionCreatorsDefault;
-    obj3.hideActionSheet(TIERED_TENURE_BADGE_ACTION_SHEET);
-    const hideActionSheet = ActionSheetActionCreatorsDefault.hideActionSheet;
-    ActionSheetActionCreatorsDefault;
-    const obj4 = showUserProfileActionSheet;
-    hideActionSheet(obj4.getUserProfileActionSheetKey(userId));
+  const callback = noop.useCallback(() => {
+    openUserSettings.openUserSettings({ screen: constants2.PREMIUM });
+    const obj2 = { screen: constants2.PREMIUM };
+    ActionSheetActionCreatorsDefault.hideActionSheet(TIERED_TENURE_BADGE_ACTION_SHEET);
+    const obj4 = ActionSheetActionCreatorsDefault;
+    obj4.hideActionSheet(showUserProfileActionSheet.getUserProfileActionSheetKey(userId));
   }, items2);
+  const obj7 = { disableTrack: null == id1 };
+  const tmp11 = require("useTrackImpression");
   ({ loading, onPress } = require("usePremiumFeatureUpsellGetNitro")(false, callback, constants.TIERED_TENURE_BADGES_ACTION_SHEET, "replaceTopSheet"));
-  require("usePremiumFeatureUpsellGetNitro")(false, callback, constants.TIERED_TENURE_BADGES_ACTION_SHEET, "replaceTopSheet");
-  const memo = react.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let length;
     let sum;
     const values = Object.values(closure_1_7);
@@ -839,94 +697,96 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     }
     return items;
   }, []);
-  const obj7 = { style: tmp.headerContainer, children: items3 };
-  const obj8 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: stringResult };
-  const Text = tmp2(tmp3[14]).Text;
+  const obj8 = { style: tmp.headerContainer, children: null };
+  const obj9 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   const intl = tmp2(tmp3[15]).intl;
   const string = intl.string;
   const t = tmp2(tmp3[15]).t;
   if (isPremiumResult) {
-    stringResult = string(t.Og62j7);
+    let stringResult = string(t.Og62j7);
   } else {
     stringResult = string(t.RtGeFS);
   }
-  items3 = [closure_10(Text, obj8), ];
-  const obj9 = { variant: "text-md/medium", color: "text-default", style: tmp.subtitle, children: stringResult1 };
-  const Text2 = tmp2(tmp3[14]).Text;
+  obj9.children = stringResult;
+  const items3 = [closure_10(userId(tieredTenureBadgeDataForUser[14]).Text, obj9), ];
+  const obj10 = { variant: "text-md/medium", color: "text-default", style: tmp.subtitle, children: null };
   const intl2 = tmp2(tmp3[15]).intl;
   if (isPremiumResult) {
-    stringResult1 = intl2.string(tmp2(tmp3[15]).t.IdAP91);
+    let stringResult1 = intl2.string(tmp2(tmp3[15]).t.IdAP91);
   } else {
-    const obj10 = { learnMoreHook: callback };
-    stringResult1 = intl2.format(tmp2(tmp3[15]).t["bF+q7R"], obj10);
+    const obj11 = { learnMoreHook: callback };
+    stringResult1 = intl2.format(tmp2(tmp3[15]).t["bF+q7R"], obj11);
   }
-  items3[1] = closure_10(Text2, obj9);
-  const obj11 = { style: items4, children: null };
-  items4 = [tmp.footer, { paddingBottom: bottom }];
-  const tmp19Result = closure_11(View, obj7);
-  const tmp11Result = require("NitroUpsellButton");
+  obj10.children = stringResult1;
+  items3[1] = closure_10(userId(tieredTenureBadgeDataForUser[14]).Text, obj10);
+  obj8.children = items3;
+  const obj12 = { style: null, children: null };
+  const items4 = [tmp.footer, { paddingBottom: bottom }];
+  obj12.style = items4;
+  const tmp17 = require("usePremiumFeatureUpsellGetNitro")(false, callback, constants.TIERED_TENURE_BADGES_ACTION_SHEET, "replaceTopSheet");
+  const tmp10Result = require("NitroUpsellButton");
   if (isPremiumResult) {
-    const obj12 = { shiny: false, text: intl4.string(userId(tmp3[15]).t.hvVgAZ), onPress: callback };
-    intl4 = tmp2(tmp3[15]).intl;
-    obj11.children = closure_10(tmp11Result, obj12);
-    tmp27 = obj11;
+    const obj13 = { shiny: false, text: null, onPress: null };
+    const intl4 = tmp2(tmp3[15]).intl;
+    obj13.text = intl4.string(tmp2(tmp3[15]).t.hvVgAZ);
+    obj13.onPress = callback;
+    obj12.children = closure_10(tmp10Result, obj13);
   } else {
-    const obj13 = { loading, text: string2Result, onPress };
+    const obj14 = { loading, text: null, onPress: null };
     const intl3 = tmp2(tmp3[15]).intl;
     const string2 = intl3.string;
     const t2 = tmp2(tmp3[15]).t;
     if (isPremiumAtLeastResult) {
-      string2Result = string2(t2.IJI7yk);
+      let string2Result = string2(t2.IJI7yk);
     } else {
       string2Result = string2(t2.pj0XBN);
     }
-    obj11.children = closure_10(tmp11Result, obj13);
-    tmp27 = obj11;
+    obj14.text = string2Result;
+    obj14.onPress = onPress;
+    obj12.children = closure_10(tmp10Result, obj14);
   }
-  let tmp29;
-  const tmp21Result = closure_10(View, tmp27);
-  BottomSheet = tmp2(tmp3[28]).BottomSheet;
+  const tmp18Result = closure_11(View, obj8);
+  let tmp28;
   if (flag) {
-    tmp29 = tmp21Result;
+    tmp28 = tmp20Result;
   }
-  const obj14 = { scrollable: true, startExpanded: true, footer: tmp29, children: closure_11(BottomSheetScrollView, obj15) };
-  obj15 = { contentContainerStyle: items5, children: items6 };
-  items5 = [tmp.container, ];
-  const obj16 = { paddingBottom: bottom + 64 };
-  items5[1] = obj16;
-  items6 = [tmp19Result, ];
-  BottomSheetScrollView = tmp2(tmp3[27]).BottomSheetScrollView;
-  items6[1] = memo.map((arr, index) => {
-    let premiumSince;
-    let user;
-    const f140969 = (item) => {
-      let id;
-      if (user != null) {
-        id = user.id;
-      }
-      return item === id;
-    };
-    const items = [closure_1.rowContainer, ];
-    const rowContainerWithUsersBadge = arr.some(f140969) && closure_1.rowContainerWithUsersBadge;
-    const someResult = arr.some(f140969);
-    let obj = {
-      style: items,
-      children: arr.map((badge, index) => {
+  const obj15 = { scrollable: true, startExpanded: true, footer: tmp28, children: null };
+  const obj16 = { contentContainerStyle: null, children: null };
+  const items5 = [tmp.container, { paddingBottom: bottom + 64 }];
+  obj16.contentContainerStyle = items5;
+  const items6 = [
+    tmp18Result,
+    memo.map((arr, index) => {
+      const someResult = arr.some((item) => {
         let id;
-        const obj = { badge, isUsersBadge: badge === id, premiumSince };
-        id = undefined;
         if (user != null) {
           id = user.id;
         }
-        return closure_2_10(closure_2_14, obj, index);
-      })
-    };
-    items[1] = rowContainerWithUsersBadge;
-    return authStore(View, obj, index);
-  });
-  return closure_10(BottomSheet, obj14);
+        return item === id;
+      });
+      const items = [closure_1.rowContainer, ];
+      let rowContainerWithUsersBadge = someResult;
+      if (someResult) {
+        rowContainerWithUsersBadge = closure_1.rowContainerWithUsersBadge;
+      }
+      items[1] = rowContainerWithUsersBadge;
+      return v65535(View, {
+        style: items,
+        children: arr.map((badge, index) => {
+          const obj = { badge, isUsersBadge: null, premiumSince: null };
+          let id;
+          if (user != null) {
+            id = user.id;
+          }
+          obj.isUsersBadge = badge === id;
+          obj.premiumSince = premiumSince;
+          return closure_2_10(closure_2_14, obj, index);
+        })
+      }, index);
+    })
+  ];
+  obj16.children = items6;
+  obj15.children = closure_11(userId(tieredTenureBadgeDataForUser[27]).BottomSheetScrollView, obj16);
+  return closure_10(userId(tieredTenureBadgeDataForUser[28]).BottomSheet, obj15);
 });
-const result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgeActionSheet.tsx");
-
-export default tmp5;
 export const TIERED_TENURE_BADGE_ACTION_SHEET_KEY = "TIERED_TENURE_BADGE_ACTION_SHEET";

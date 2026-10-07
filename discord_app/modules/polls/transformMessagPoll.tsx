@@ -7,7 +7,8 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/polls/transformMessagPoll.tsx");
 
 export default function transformMessagePoll(expiry) {
-  const obj = { expiry: _modDef4467(expiry.expiry) };
+  const obj = {};
   const merged = Object.assign(expiry);
+  obj.expiry = _modDef4467(expiry.expiry);
   return obj;
 };

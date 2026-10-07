@@ -11,18 +11,17 @@ import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = GuildPowerupsConstants.GUILD_THEME_POWERUP_BOOST_PRICE;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useShouldShowGuildThemeMemberCoachmark.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const tmp = useHasAllocateBoostPermissionDefault(arg0);
-  const obj = ServerThemeExperiment;
-  let serverThemeEnabled = obj.useServerThemeEnabled(arg0, "useShouldShowGuildThemeMemberCoachmark");
-  const obj2 = ServerThemeUserExperiment;
-  const serverThemeUserEnabled = obj2.useServerThemeUserEnabled("useShouldShowGuildThemeMemberCoachmark");
-  const obj3 = ServerThemeExperiment;
-  const serverThemeRollbackEnabled = obj3.useServerThemeRollbackEnabled(arg0, "useShouldShowGuildThemeMemberCoachmark");
+  let serverThemeEnabled = ServerThemeExperiment.useServerThemeEnabled(arg0, "useShouldShowGuildThemeMemberCoachmark");
+  const serverThemeUserEnabled = ServerThemeUserExperiment.useServerThemeUserEnabled("useShouldShowGuildThemeMemberCoachmark");
+  const serverThemeRollbackEnabled = ServerThemeExperiment.useServerThemeRollbackEnabled(arg0, "useShouldShowGuildThemeMemberCoachmark");
   const tmp5 = useIsGuildThemePerkEnabledDefault(arg0);
-  let tmp8 = !useGuildPowerupsBoostCountDefault(arg0).isLoading;
-  useGuildPowerupsBoostCountDefault(arg0);
-  if (tmp8) {
+  const isLoading = useGuildPowerupsBoostCountDefault(arg0).isLoading;
+  let tmp8 = !isLoading;
+  if (!isLoading) {
     if (serverThemeEnabled) {
       serverThemeEnabled = serverThemeUserEnabled;
     }
@@ -43,16 +42,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return tmp8;
 }) : ((arg0) => {
   const tmp = useHasAllocateBoostPermissionDefault(arg0);
-  const obj = ServerThemeExperiment;
-  let serverThemeEnabled = obj.useServerThemeEnabled(arg0, "useShouldShowGuildThemeMemberCoachmark");
-  const obj2 = ServerThemeUserExperiment;
-  const serverThemeUserEnabled = obj2.useServerThemeUserEnabled("useShouldShowGuildThemeMemberCoachmark");
-  const obj3 = ServerThemeExperiment;
-  const serverThemeRollbackEnabled = obj3.useServerThemeRollbackEnabled(arg0, "useShouldShowGuildThemeMemberCoachmark");
+  let serverThemeEnabled = ServerThemeExperiment.useServerThemeEnabled(arg0, "useShouldShowGuildThemeMemberCoachmark");
+  const serverThemeUserEnabled = ServerThemeUserExperiment.useServerThemeUserEnabled("useShouldShowGuildThemeMemberCoachmark");
+  const serverThemeRollbackEnabled = ServerThemeExperiment.useServerThemeRollbackEnabled(arg0, "useShouldShowGuildThemeMemberCoachmark");
   const tmp5 = useIsGuildThemePerkEnabledDefault(arg0);
-  let tmp8 = !useGuildPowerupsBoostCountDefault(arg0).isLoading;
-  useGuildPowerupsBoostCountDefault(arg0);
-  if (tmp8) {
+  const isLoading = useGuildPowerupsBoostCountDefault(arg0).isLoading;
+  let tmp8 = !isLoading;
+  if (!isLoading) {
     if (serverThemeEnabled) {
       serverThemeEnabled = serverThemeUserEnabled;
     }
@@ -72,6 +68,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   return tmp8;
 });
-const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useShouldShowGuildThemeMemberCoachmark.tsx");
-
-export default tmp2;

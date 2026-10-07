@@ -3,41 +3,24 @@
 // Module 8107 (StageChannelActionCreators)
 import _modDef38 from "module_38" /* 38 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
 import Server from "Server" /* 1985 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5043 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
-import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 5586 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8102 */;
-import Constants2 from "Constants" /* 8108 */;
-import StageChannelUtils from "StageChannelUtils" /* 8109 */;
 import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8113 */;
 import StageInstanceActionCreators from "StageInstanceActionCreators" /* 8115 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import VoiceStateStore from "VoiceStateStore" /* 4915 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-let c3, c4, closure_4, closure_5;
-
-let c9;
-let metroImportAll;
-let metroImportDefault;
-const f96473 = (error) => {
-  if (error.code === constants.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK) {
-    obj = SafetyToastsActionCreatorsDefault;
-    obj.showFailedToast(constants2.GENERIC_ERROR);
-  }
-  return error;
-};
+const HTTPUtils = obj(1282);
+const AppAnalyticsUtils = obj(5076);
+const useStageSpeakingForCurrentUser = obj(5586);
+const StageChannelUtils = obj(8109);
+require = fn;
 function audienceAckRequestToSpeak(channel, suppress) {
-  let obj3;
-  let obj5;
-  let tmp5Result6;
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
@@ -46,121 +29,53 @@ function audienceAckRequestToSpeak(channel, suppress) {
   if (channel != null) {
     guildId = channel.getGuildId();
   }
+  let result = dependencyMap;
   _modDef38(null != guildId, "This channel cannot be guildless.");
+  let obj = require;
   const voiceStateForChannel = VoiceStateStore.getVoiceStateForChannel(channel.id);
-  obj = useAudienceRequestToSpeakState;
-  const audienceRequestToSpeakState = obj.getAudienceRequestToSpeakState(voiceStateForChannel);
+  const audienceRequestToSpeakState = useAudienceRequestToSpeakState.getAudienceRequestToSpeakState(voiceStateForChannel);
   if (!suppress) {
-    let resolved;
-    const tmp5Result = useStageSpeakingForCurrentUser;
-    if (tmp5Result.shouldAgeVerifyToSpeakForCurrentUser()) {
-      resolved = Promise.resolve();
+    if (objResult.shouldAgeVerifyToSpeakForCurrentUser()) {
+      return Promise.resolve();
     }
-    return resolved;
+    objResult = useStageSpeakingForCurrentUser;
   }
-  const tmp9 = audienceRequestToSpeakState !== useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK || suppress;
-  if (!tmp9) {
-    const obj2 = {};
-    const trackWithMetadata = AppAnalyticsUtils.trackWithMetadata;
-    const PROMOTED_TO_SPEAKER = metroImportAll.PROMOTED_TO_SPEAKER;
-    AppAnalyticsUtils;
-    const tmp5Result5 = StageChannelUtils;
-    const merged = Object.assign(tmp5Result5.getStageChannelMetadata(channel));
-    trackWithMetadata(PROMOTED_TO_SPEAKER, obj2);
+  if (!tmp7) {
+    const obj3 = {};
+    const objResult3 = AppAnalyticsUtils;
+    const merged = Object.assign(StageChannelUtils.getStageChannelMetadata(channel));
+    objResult3.trackWithMetadata(constants.PROMOTED_TO_SPEAKER, obj3);
+    const objResult4 = StageChannelUtils;
   }
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: React4.UPDATE_VOICE_STATE(guildId), body: obj3, rejectWithError: tmp5Result6.rejectWithMigratedError() };
-  const patch = HTTP.patch;
-  obj3 = { suppress, request_to_speak_timestamp: null, channel_id: channel.id };
+  const request = { url: options.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
   if (flag) {
-    obj5 = { silent: flag };
-    const obj4 = { silent: flag };
+    const obj5 = { silent: flag };
+    let obj6 = obj5;
   } else {
-    obj5 = {};
+    obj6 = {};
   }
-  const merged1 = Object.assign(obj5);
-  tmp5Result6 = HTTPUtils;
-  resolved = patch(request);
+  const merged1 = Object.assign(obj6);
+  request.body = { suppress, request_to_speak_timestamp: null, channel_id: channel.id };
+  obj = HTTPUtils;
+  result = obj.rejectWithMigratedError();
+  request.rejectWithError = result;
+  HTTP.patch(request);
+  const obj4 = { suppress, request_to_speak_timestamp: null, channel_id: channel.id };
+  tmp7 = audienceRequestToSpeakState !== useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK || suppress;
 }
-let obj = function _startStage() {
-  let voiceChannelId;
-  obj = _asyncToGenerator(async (arg0, value, arg2, arg3) => {
-    const user = arg0;
-    let closure_2 = arg2;
-    let closure_3 = arg3;
-    let c6 = 0;
-    let c7 = 0;
-    return (async (arg0, value, arg2, arg3) => {
-      if (c7 === 2) {
-        c7 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              return { value, done: true };
-            } else {
-              closure_5 = tmp;
-              closure_4 = tmp2;
-              value = undefined;
-              if ("" !== value) {
-                if (voiceChannelId.getVoiceChannelId() !== user.id) {
-                  const obj3 = StageChannelModalActionCreators;
-                  obj3.connectToStage(user);
-                }
-                c6 = 1;
-                c7 = 1;
-                const obj4 = StageInstanceActionCreators;
-                const obj6 = { value: obj4.startStageInstance(user.id, value, closure_2, closure_3), done: false };
-                return obj6;
-              } else {
-                c7 = 3;
-                return { value: "IconComponent", done: null };
-              }
-            }
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            return { value, done: true };
-          } else {
-            closure_133_11(user, false, true);
-            c7 = 3;
-            return { value, done: true };
-          }
-        } catch (tmp21) {
-          c7 = 3;
-          throw tmp21;
-        }
-      }
-    })();
-  });
-  return obj(...arguments);
-};
-obj = function _editStage() {
-  obj = _asyncToGenerator(async (arg0, arg1, arg2) => {
-    let closure_0;
-    let closure_2;
-    let obj3;
-    let closure_1 = arg1;
-    if (c3 === 2) {
-      c3 = 3;
+let closure_12 = async function _startStage(arg0, arg1, arg2, arg3) {
+  let user = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
+  closure_3 = arg3;
+  c6 = 0;
+  c7 = 0;
+  return (async (arg0, value, arg2, arg3) => {
+    if (c7 === 2) {
+      c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp2 === 3) {
+    } else if (tmp5 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -171,203 +86,250 @@ obj = function _editStage() {
       }
     } else {
       try {
-        c3 = 2;
-        if (0 === c4) {
+        c7 = 2;
+        if (0 === c6) {
           if (arg0 === 1) {
-            c3 = 3;
+            c7 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c3 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else if ("" !== closure_1) {
-            c4 = 1;
-            c3 = 1;
-            const obj5 = { value: obj3.updateStageInstance(tmp4.id, tmp5, tmp6), done: false };
-            obj3 = StageInstanceActionCreators;
+            c7 = 3;
+            const obj5 = { value, done: true };
             return obj5;
           } else {
-            c3 = 3;
-            return { value: "IconComponent", done: null };
+            closure_5 = tmp2;
+            closure_4 = tmp3;
+            closure_132_0 = user;
+            closure_132_1 = undefined;
+            if ("" !== closure_1) {
+              if (voiceChannelId.getVoiceChannelId() !== user.id) {
+                StageChannelModalActionCreators.connectToStage(user);
+              }
+              const obj4 = StageInstanceActionCreators;
+              c6 = 1;
+              c7 = 1;
+              const obj6 = { value: obj4.startStageInstance(user.id, closure_1, closure_2, closure_3), done: false };
+              return obj6;
+            } else {
+              c7 = 3;
+              return { value: "IconComponent", done: null };
+            }
           }
         } else if (arg0 === 1) {
-          c3 = 3;
+          c7 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c3 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
+          c7 = 3;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
-          c3 = 3;
-          obj = { value, done: true };
+          closure_132_1 = value;
+          closure_133_11(closure_132_0, false, true);
+          c7 = 3;
+          const obj = { value: closure_132_1, done: true };
           return obj;
         }
-      } catch (tmp9) {
-        c3 = 3;
-        throw tmp9;
+      } catch (tmp22) {
+        c7 = tmp;
+        throw tmp22;
       }
     }
-  });
-  return obj(...arguments);
+  })();
 };
-obj = function _endStage() {
-  obj = _asyncToGenerator(async (arg0) => {
-    const id = arg0;
-    let c2 = 0;
-    let c1 = 0;
-    return (async (arg0) => {
-      let obj2;
-      if (c1 === 2) {
-        c1 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp2 === 3) {
+let closure_13 = async function _editStage(arg0) {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c4) {
         if (arg0 === 1) {
+          c3 = 3;
           throw value;
         } else if (arg0 === 2) {
-          return { value, done: true };
+          c3 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else if ("" !== closure_1) {
+          c4 = 1;
+          c3 = 1;
+          const obj5 = { value: StageInstanceActionCreators.updateStageInstance(tmp5.id, tmp6, tmp7), done: false };
+          return obj5;
         } else {
+          c3 = 3;
           return { value: "IconComponent", done: null };
         }
+      } else if (arg0 === 1) {
+        c3 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
-        try {
-          c1 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c1 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c1 = 3;
-              return { value, done: true };
-            } else {
-              c2 = 1;
-              c1 = 1;
-              const obj5 = { value: obj2.endStageInstance(id.id), done: false };
-              obj2 = StageInstanceActionCreators;
-              return obj5;
-            }
-          } else if (arg0 === 1) {
+        c3 = 3;
+        const obj = { value, done: true };
+        return obj;
+      }
+    } catch (tmp10) {
+      c3 = tmp;
+      throw tmp10;
+    }
+  }
+};
+let closure_14 = async function _endStage(arg0) {
+  let id = arg0;
+  c2 = 0;
+  c1 = 0;
+  return (async (arg0) => {
+    if (c1 === 2) {
+      c1 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c1 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
             c1 = 3;
             throw value;
           } else if (arg0 === 2) {
             c1 = 3;
-            return { value, done: true };
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            c1 = 3;
-            return { value: "IconComponent", done: null };
+            c2 = 1;
+            c1 = 1;
+            const obj5 = { value: StageInstanceActionCreators.endStageInstance(id.id), done: false };
+            return obj5;
           }
-        } catch (tmp7) {
+        } else if (arg0 === 1) {
           c1 = 3;
-          throw tmp7;
+          throw value;
+        } else if (arg0 === 2) {
+          c1 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          c1 = 3;
+          return { value: "IconComponent", done: null };
         }
+      } catch (tmp8) {
+        c1 = tmp;
+        throw tmp8;
       }
-    })();
-  });
-  return obj(...arguments);
+    }
+  })();
 };
-({ AbortCodes: metroImportDefault, AnalyticEvents: metroImportAll, Endpoints: c9 } = Constants);
-const SafetyToastType = Constants2.SafetyToastType;
+const Constants = fn(1085);
+({ AbortCodes: closure_7, AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
+const SafetyToastType = fn(8108).SafetyToastType;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/StageChannelActionCreators.tsx");
 
 export const toggleRequestToSpeak = function toggleRequestToSpeak(channel_id, arg1) {
-  let tmp10Result;
-  let toISOStringResult;
   const guildId = channel_id.getGuildId();
   _modDef38(null != guildId, "This channel cannot be guildless.");
   if (arg1) {
-    obj = {};
-    const trackWithMetadata = AppAnalyticsUtils.trackWithMetadata;
-    const REQUEST_TO_SPEAK_INITIATED = metroImportAll.REQUEST_TO_SPEAK_INITIATED;
-    AppAnalyticsUtils;
-    const obj2 = StageChannelUtils;
-    const merged = Object.assign(obj2.getStageChannelMetadata(channel_id));
-    trackWithMetadata(REQUEST_TO_SPEAK_INITIATED, obj);
+    const obj2 = {};
+    const obj = AppAnalyticsUtils;
+    const merged = Object.assign(StageChannelUtils.getStageChannelMetadata(channel_id));
+    obj.trackWithMetadata(constants.REQUEST_TO_SPEAK_INITIATED, obj2);
   }
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: React4.UPDATE_VOICE_STATE(guildId), body: { request_to_speak_timestamp: toISOStringResult, channel_id: channel_id.id }, rejectWithError: tmp10Result.rejectWithMigratedError() };
-  const patch = HTTP.patch;
-  toISOStringResult = null;
+  const request = { url: options.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
+  let toISOStringResult = null;
   if (arg1) {
     const _Date = Date;
-    const self = this;
-    const self2 = this;
     const date = new Date();
     toISOStringResult = date.toISOString();
   }
-  tmp10Result = HTTPUtils;
-  return patch(request);
+  request.body = { request_to_speak_timestamp: toISOStringResult, channel_id: channel_id.id };
+  request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+  return HTTP.patch(request);
 };
 export const inviteUserToStage = function inviteUserToStage(voiceChannel, id) {
-  let constants2;
-  let date;
-  let obj4;
   const guildId = voiceChannel.getGuildId();
   _modDef38(null != guildId, "This channel cannot be guildless.");
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: React4.UPDATE_VOICE_STATE(guildId, id), body: obj, rejectWithError: obj4.rejectWithMigratedError() };
-  const patch = HTTP.patch;
-  obj = { suppress: false, request_to_speak_timestamp: date.toISOString(), channel_id: voiceChannel.id };
-  date = new Date();
-  obj4 = HTTPUtils;
-  const patchResult = patch(request);
-  return patchResult.catch((error) => {
+  const request = { url: options.UPDATE_VOICE_STATE(guildId, id), body: null, rejectWithError: null };
+  let obj = { suppress: false, request_to_speak_timestamp: new Date().toISOString(), channel_id: voiceChannel.id };
+  request.body = obj;
+  const date = new Date();
+  request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+  return HTTP.patch(request).catch((error) => {
     if (error.code === constants.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK) {
-      obj = SafetyToastsActionCreatorsDefault;
-      obj.showFailedToast(constants2.GENERIC_ERROR);
+      SafetyToastsActionCreatorsDefault.showFailedToast(constants2.GENERIC_ERROR);
     }
     return error;
   });
 };
 export { audienceAckRequestToSpeak };
 export const moveSelfToAudience = function moveSelfToAudience(channel_id) {
-  let obj2;
   let guildId;
   if (channel_id != null) {
     guildId = channel_id.getGuildId();
   }
   _modDef38(null != guildId, "This channel cannot be guildless.");
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: React4.UPDATE_VOICE_STATE(guildId), body: { suppress: true, channel_id: channel_id.id, self_video: false, self_stream: false }, rejectWithError: obj2.rejectWithMigratedError() };
-  const patch = HTTP.patch;
-  obj2 = HTTPUtils;
-  return patch(request);
+  const request = { url: options.UPDATE_VOICE_STATE(guildId), body: { suppress: true, channel_id: channel_id.id, self_video: false, self_stream: false }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+  return HTTP.patch(request);
 };
 export const setUserSuppress = function setUserSuppress(channel, id, suppress) {
-  let obj3;
   const guildId = channel.getGuildId();
   _modDef38(null != guildId, "This channel cannot be guildless.");
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: React4.UPDATE_VOICE_STATE(guildId, id), body: obj, rejectWithError: obj3.rejectWithMigratedError() };
-  const patch = HTTP.patch;
-  obj = { suppress, channel_id: channel.id };
-  obj3 = HTTPUtils;
-  const patchResult = patch(request);
-  return patchResult.catch(f96473);
+  const request = { url: options.UPDATE_VOICE_STATE(guildId, id), body: { suppress, channel_id: channel.id }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+  const obj = { suppress, channel_id: channel.id };
+  return HTTP.patch(request).catch((error) => {
+    if (error.code === constants.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK) {
+      SafetyToastsActionCreatorsDefault.showFailedToast(constants2.GENERIC_ERROR);
+    }
+    return error;
+  });
 };
 export const moveUserToAudience = function moveUserToAudience(user, voiceChannel) {
-  let constants2;
-  let obj2;
-  let obj3;
-  let obj6;
   if (null != voiceChannel) {
     if (null != user) {
       const guildId = voiceChannel.getGuildId();
       _modDef38(null != guildId, "This channel cannot be guildless.");
-      const id = user.id;
       const guildId1 = voiceChannel.getGuildId();
       _modDef38(null != guildId1, "This channel cannot be guildless.");
       const HTTP = HTTPUtils.HTTP;
-      const request = { url: React4.UPDATE_VOICE_STATE(guildId1, id), body: obj, rejectWithError: obj3.rejectWithMigratedError() };
-      const patch = HTTP.patch;
-      obj = { suppress: true, channel_id: voiceChannel.id };
-      obj3 = HTTPUtils;
-      const patchResult = patch(request);
-      patchResult.catch(f96473);
+      const request = { url: options.UPDATE_VOICE_STATE(guildId1, user.id), body: null, rejectWithError: null };
+      let obj = { suppress: true, channel_id: voiceChannel.id };
+      request.body = obj;
+      request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+      HTTP.patch(request).catch((error) => {
+        if (error.code === constants.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK) {
+          SafetyToastsActionCreatorsDefault.showFailedToast(constants2.GENERIC_ERROR);
+        }
+        return error;
+      });
       const HTTP2 = HTTPUtils.HTTP;
-      const request1 = { url: React4.UPDATE_VOICE_STATE(guildId, user.id), body: obj2, rejectWithError: obj6.rejectWithMigratedError() };
-      const patch2 = HTTP2.patch;
-      obj2 = { suppress: true, channel_id: voiceChannel.id, self_video: false, self_stream: false };
-      obj6 = HTTPUtils;
-      return patch2(request1);
+      const request1 = { url: options.UPDATE_VOICE_STATE(guildId, user.id), body: null, rejectWithError: null };
+      const obj2 = { suppress: true, channel_id: voiceChannel.id, self_video: false, self_stream: false };
+      request1.body = obj2;
+      const patchResult = HTTP.patch(request);
+      request1.rejectWithError = HTTPUtils.rejectWithMigratedError();
+      return HTTP2.patch(request1);
     }
   }
 };
@@ -376,37 +338,56 @@ export const removeUserFromChannel = function removeUserFromChannel(id, getGuild
   if (getGuildId != null) {
     guildId = getGuildId.getGuildId();
   }
-  const tmp2 = null != guildId && null != id;
   if (tmp2) {
-    obj = GuildActionCreatorsDefault;
-    obj.setChannel(guildId, id.id, null);
+    GuildActionCreatorsDefault.setChannel(guildId, id.id, null);
   }
+  tmp2 = null != guildId && null != id;
 };
 export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissionAllowed(getGuildId, REQUEST_TO_SPEAK, arg2) {
   const guildId = getGuildId.getGuildId();
   _modDef38(null != guildId, "Channel cannot be guildless");
-  obj = { id: guildId, type: Server.PermissionOverwriteType.ROLE, allow: PermissionUtilsAll.NONE, deny: PermissionUtilsAll.NONE };
+  const obj = { id: guildId, type: Server.PermissionOverwriteType.ROLE, allow: PermissionUtilsAll.NONE, deny: PermissionUtilsAll.NONE };
   const merged = Object.assign(getGuildId.permissionOverwrites[guildId]);
   const obj2 = BigFlagUtilsAll;
-  const tmp7 = arg2;
-  if (tmp7) {
+  if (arg2) {
     obj.allow = obj2.add(obj.allow, REQUEST_TO_SPEAK);
+    obj.deny = BigFlagUtilsAll.remove(obj.deny, REQUEST_TO_SPEAK);
     const tmp5Result = BigFlagUtilsAll;
-    obj.deny = tmp5Result.remove(obj.deny, REQUEST_TO_SPEAK);
   } else {
     obj.allow = obj2.remove(obj.allow, REQUEST_TO_SPEAK);
+    obj.deny = BigFlagUtilsAll.add(obj.deny, REQUEST_TO_SPEAK);
     const tmp5Result2 = BigFlagUtilsAll;
-    obj.deny = tmp5Result2.add(obj.deny, REQUEST_TO_SPEAK);
   }
+  const result = ChannelActionCreatorsDefault.updatePermissionOverwrite(getGuildId.id, obj);
   const tmp2Result = ChannelActionCreatorsDefault;
-  const result = tmp2Result.updatePermissionOverwrite(getGuildId.id, obj);
 };
 export const startStage = function startStage() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_12.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const editStage = function editStage() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_13.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const endStage = function endStage() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_14.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

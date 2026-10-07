@@ -1,190 +1,125 @@
 // === Module 9484: useStartEvent ===
 
 // Module 9484 (useStartEvent)
-import react2 from "react" /* 576 */;
 import StartEventUtilsAll from "StartEventUtils" /* 9485 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let c7, c8, closure_5;
+const require = globalThis.__r;
 
+const require = fn;
 let closure_6 = {
   onSuccess() {
 
   },
   permissionOverwrites: []
 };
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  let tmp3;
-  let tmp5;
-  let obj = react2;
-  const cResult = obj.c(4);
-  [tmp3, require] = react.useState(false);
-  _slicedToArray(react.useState(false), 2);
-  [tmp5, importAll] = _slicedToArray(react.useState(null), 2);
-  const tmp4 = _slicedToArray(react.useState(null), 2);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/useStartEvent.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = require("c").c(4);
+  const obj = require("c");
+  [tmp3, closure_0] = noop.useState(false);
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  [tmp5, importAll] = noop.useState(null);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let closure_0 = _asyncToGenerator(async function(arg0, arg1, arg2) {
-      let onSuccess;
-      let permissionOverwrites;
-      closure_0 = arg0;
-      let closure_1 = arg1;
-      let closure_2 = arg2;
-      if (c8 === 2) {
+    _require = asyncGeneratorStep(async (arg0, arg1, arg2) => {
+      closure_4 = tmp3;
+      closure_3 = tmp5;
+      closure_131_0 = closure_0;
+      closure_131_1 = closure_1;
+      let tmp49 = closure_2;
+      if (undefined === closure_2) {
+        tmp49 = closure_2_6;
+      }
+      ({ onSuccess, permissionOverwrites } = tmp49);
+      if (undefined === onSuccess) {
+        onSuccess = closure_2_6.onSuccess;
+      }
+      closure_131_2 = onSuccess;
+      if (undefined === permissionOverwrites) {
+        permissionOverwrites = closure_2_6.permissionOverwrites;
+      }
+      closure_0(true);
+      await StartEventUtilsAll.preStartEventActions(closure_0, permissionOverwrites);
+      if (1 === tmp8) {
+        c6 = 0;
+        closure_131_3 = closure_5;
+        const aPIError = new closure_0(5319).APIError(closure_131_3);
+        closure_131_4 = aPIError;
+        closure_1(closure_131_4);
+        closure_0(false);
+        closure_0(false);
         c8 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (2 === tmp8) {
         if (arg0 === 1) {
+          c8 = 3;
           throw value;
         } else if (arg0 === 2) {
-          const obj3 = { value, done: true };
-          return obj3;
+          c6 = 0;
+          c8 = 3;
+          return { value, done: true };
         } else {
-          return { value: "IconComponent", done: null };
+          c7 = 3;
+          c8 = 1;
+          return { value: StartEventUtilsAll.setEventAsActive(closure_131_0, closure_131_1), done: false };
         }
-      } else {
-        let c6;
-        try {
-          let closure_3;
-          let aPIError;
-          let preStartEventActionsResult;
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              let closure_4 = tmp;
-              let tmp43 = closure_2;
-              onSuccess = undefined;
-              closure_3 = undefined;
-              aPIError = undefined;
-              if (undefined === closure_2) {
-                tmp43 = closure_2_6;
-              }
-              ({ onSuccess, permissionOverwrites } = tmp43);
-              if (undefined === onSuccess) {
-                onSuccess = closure_2_6.onSuccess;
-              }
-              if (undefined === permissionOverwrites) {
-                permissionOverwrites = closure_2_6.permissionOverwrites;
-              }
-              closure_0(true);
-              c6 = 1;
-              const obj11 = StartEventUtilsAll;
-              preStartEventActionsResult = obj11.preStartEventActions(closure_0, permissionOverwrites);
-              c7 = 2;
-              c8 = 1;
-              const obj6 = { value: preStartEventActionsResult, done: false };
-              return obj6;
-            }
-          } else {
-            if (1 === c7) {
-              c6 = 0;
-              closure_3 = closure_5;
-              const self = this;
-              const self2 = this;
-              aPIError = new closure_0(dependencyMap[7]).APIError(closure_3);
-              preStartEventActionsResult = closure_1(aPIError);
-              closure_0(false);
-            } else if (2 === c7) {
-              if (arg0 === 1) {
-                c8 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c6 = 0;
-                c8 = 3;
-                const obj7 = { value, done: true };
-                return obj7;
-              } else {
-                const obj8 = StartEventUtilsAll;
-                preStartEventActionsResult = obj8.setEventAsActive(closure_0, closure_1);
-                c7 = 3;
-                c8 = 1;
-                const obj9 = { value: preStartEventActionsResult, done: false };
-                return obj9;
-              }
-            } else if (3 === c7) {
-              if (arg0 === 1) {
-                c8 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c6 = 0;
-                c8 = 3;
-                const obj10 = { value, done: true };
-                return obj10;
-              } else {
-                const obj5 = closure_0(dependencyMap[6]);
-                preStartEventActionsResult = obj5.navigateToEvent(closure_0, onSuccess);
-                c7 = 4;
-                c8 = 1;
-                const obj12 = { value: preStartEventActionsResult, done: false };
-                return obj12;
-              }
-            } else if (4 === c7) {
-              if (arg0 === 1) {
-                c8 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c6 = 0;
-                c8 = 3;
-                const obj13 = { value, done: true };
-                return obj13;
-              } else {
-                const obj2 = closure_0(dependencyMap[6]);
-                preStartEventActionsResult = obj2.postStartActions(closure_0, onSuccess);
-                c7 = 5;
-                c8 = 1;
-                const obj14 = { value: preStartEventActionsResult, done: false };
-                return obj14;
-              }
-            } else if (arg0 === 1) {
-              c8 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 0;
-              c8 = 3;
-              const obj = { value, done: true };
-              return obj;
-            } else {
-              closure_0(false);
-              c6 = 0;
-            }
-            closure_0(false);
-            c8 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp50) {
-          closure_5 = tmp50;
-          if (0 === c6) {
-            c8 = 3;
-            throw tmp50;
-          } else {
-            c7 = 1;
-          }
+      } else if (3 === tmp8) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 0;
+          c8 = 3;
+          return { value, done: true };
+        } else {
+          c7 = 4;
+          c8 = 1;
+          return { value: closure_0(9486).navigateToEvent(closure_131_0, closure_131_2), done: false };
         }
+      } else if (4 === tmp8) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 0;
+          c8 = 3;
+          return { value, done: true };
+        } else {
+          c7 = 5;
+          c8 = 1;
+          return { value: closure_0(9486).postStartActions(closure_131_0, closure_131_2), done: false };
+        }
+      } else if (arg0 === 1) {
+        c8 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        closure_0(false);
+        c6 = 0;
       }
+      return value;
     });
     function startEvent() {
-      return closure_0(...arguments);
+      const self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     }
     cResult[0] = startEvent;
-    first = startEvent;
+    let first = startEvent;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === tmp5) {
-    let tmp8;
     if (cResult[2] === tmp3) {
-      tmp8 = cResult[3];
+      let tmp8 = cResult[3];
     }
     return tmp8;
   }
@@ -193,22 +128,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = tmp3;
   cResult[3] = items;
   tmp8 = items;
+  const tmp4 = _slicedToArray(noop.useState(null), 2);
 }) : (() => {
-  let closure_0;
-  let first;
-  let obj = function _startEvent2() {
-    obj = _asyncToGenerator(async function(arg0, arg1) {
-      let obj11;
-      let obj2;
-      let obj5;
-      let obj8;
-      closure_0 = arg0;
-      closure_1 = arg1;
-      let closure_2 = arg2;
+  closure_2 = async function _startEvent2(arg0, arg1, arg2) {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    dependencyMap = arg2;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
+    let iter = (async (arg0, value) => {
       if (c8 === 2) {
         c8 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (tmp6 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -219,9 +152,6 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
       } else {
         try {
-          let onSuccess;
-          let permissionOverwrites;
-          let aPIError;
           c8 = 2;
           if (0 === c7) {
             if (arg0 === 1) {
@@ -232,22 +162,32 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              let closure_4 = tmp;
-              let closure_3 = tmp4;
-              onSuccess = undefined;
-              permissionOverwrites = undefined;
-              let tmp52 = closure_2;
-              if (closure_2 === undefined) {
-                tmp52 = c6;
+              closure_4 = tmp3;
+              closure_3 = tmp7;
+              closure_131_2 = undefined;
+              closure_131_3 = undefined;
+              closure_131_0 = closure_0;
+              closure_131_1 = closure_1;
+              let tmp57 = dependencyMap;
+              if (dependencyMap === undefined) {
+                tmp57 = c6;
               }
-              onSuccess = tmp52.onSuccess ?? c6.onSuccess;
-              permissionOverwrites = tmp52.permissionOverwrites ?? c6.permissionOverwrites;
-              aPIError = undefined;
+              let onSuccess = tmp57.onSuccess;
+              if (onSuccess === undefined) {
+                onSuccess = c6.onSuccess;
+              }
+              closure_131_2 = onSuccess;
+              let permissionOverwrites = tmp57.permissionOverwrites;
+              if (permissionOverwrites === undefined) {
+                permissionOverwrites = c6.permissionOverwrites;
+              }
+              closure_131_3 = permissionOverwrites;
+              closure_131_4 = undefined;
               c7 = 1;
               c8 = 1;
               return { value: "Reflect", done: true };
             }
-          } else if (1 === c7) {
+          } else if (1 === tmp7) {
             if (arg0 === 1) {
               c8 = 3;
               throw value;
@@ -260,19 +200,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               c6 = 1;
               c7 = 3;
               c8 = 1;
-              const obj7 = { value: obj11.preStartEventActions(closure_0, permissionOverwrites), done: false };
-              obj11 = closure_1(closure_2[5]);
+              const obj7 = { value: closure_1(9485).preStartEventActions(closure_131_0, closure_131_3), done: false };
               return obj7;
             }
           } else {
-            if (2 === c7) {
+            if (2 === tmp7) {
               c6 = 0;
-              const self = this;
-              const self2 = this;
-              aPIError = new closure_0(closure_2[7]).APIError(closure_5);
-              closure_132_1(aPIError);
+              closure_131_5 = closure_5;
+              const aPIError = new closure_0(5319).APIError(closure_131_5);
+              closure_131_4 = aPIError;
+              closure_132_1(closure_131_4);
               closure_132_0(false);
-            } else if (3 === c7) {
+              closure_132_0(false);
+              c8 = 3;
+            } else if (3 === tmp7) {
               if (arg0 === 1) {
                 c8 = 3;
                 throw value;
@@ -284,11 +225,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               } else {
                 c7 = 4;
                 c8 = 1;
-                const obj10 = { value: obj8.setEventAsActive(closure_0, closure_1), done: false };
-                obj8 = closure_1(closure_2[5]);
+                const obj10 = { value: closure_1(9485).setEventAsActive(closure_131_0, closure_131_1), done: false };
                 return obj10;
               }
-            } else if (4 === c7) {
+            } else if (4 === tmp7) {
               if (arg0 === 1) {
                 c8 = 3;
                 throw value;
@@ -300,11 +240,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               } else {
                 c7 = 5;
                 c8 = 1;
-                const obj13 = { value: obj5.navigateToEvent(closure_0, onSuccess), done: false };
-                obj5 = closure_0(closure_2[6]);
+                const obj13 = { value: closure_0(9486).navigateToEvent(closure_131_0, closure_131_2), done: false };
                 return obj13;
               }
-            } else if (5 === c7) {
+            } else if (5 === tmp7) {
               if (arg0 === 1) {
                 c8 = 3;
                 throw value;
@@ -316,50 +255,51 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               } else {
                 c7 = 6;
                 c8 = 1;
-                const obj15 = { value: obj2.postStartActions(closure_0, onSuccess), done: false };
-                obj2 = closure_0(closure_2[6]);
+                const obj15 = { value: closure_0(9486).postStartActions(closure_131_0, closure_131_2), done: false };
                 return obj15;
               }
             } else if (arg0 === 1) {
               c8 = 3;
               throw value;
-            } else if (arg0 === 2) {
-              c6 = 0;
-              c8 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
+            } else if (arg0 !== 2) {
               closure_132_0(false);
               c6 = 0;
             }
-            closure_132_0(false);
+            c6 = 0;
             c8 = 3;
-            return { value: "IconComponent", done: null };
+            const obj = { value, done: true };
+            return obj;
           }
-        } catch (tmp55) {
-          closure_5 = tmp55;
-          if (0 === c6) {
-            c8 = 3;
-            throw tmp55;
+        } catch (tmp60) {
+          closure_5 = tmp60;
+          if (tmp4 === c6) {
+            c8 = tmp2;
+            throw tmp60;
           } else {
-            c7 = 2;
+            c7 = tmp;
           }
         }
       }
-    });
-    return obj(...arguments);
+    })();
+    iter.next();
+    return iter;
   };
-  [first, closure_0] = react.useState(false);
-  const tmp3 = _slicedToArray(react.useState(null), 2);
-  let closure_1 = tmp3[1];
+  const tmp = _slicedToArray(noop.useState(false), 2);
+  closure_0 = tmp[1];
+  const tmp2 = _slicedToArray(noop.useState(null), 2);
+  closure_1 = tmp2[1];
   const items = [
     function startEvent(arg0, arg1) {
-      return obj(...arguments);
+      const self = this;
+      const apply = closure_2.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     },
-    { loading: first, error: tmp3[0] }
+    { loading: tmp[0], error: tmp2[0] }
   ];
   return items;
 });
-const result = size.fileFinishedImporting("modules/guild_scheduled_events/useStartEvent.tsx");
-
-export default tmp2;

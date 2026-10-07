@@ -4,8 +4,9 @@
 import conjureTopicChannel from "conjureTopicChannel" /* 2059 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8547 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import size from "module_2" /* 2 */;
 
+require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/utils/getFrameRequestSurfaceType.tsx");
 
 export default function getFrameRequestSurfaceType(type) {
@@ -13,10 +14,10 @@ export default function getFrameRequestSurfaceType(type) {
     if (null != type.channelId) {
       const channel = ChannelStore.getChannel(type.channelId);
       if (null != channel) {
-        const tmpResult = conjureTopicChannel;
         if (tmpResult.isConjureLegacyTopicChannel(channel.type, channel.topic_)) {
           return EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN;
         }
+        tmpResult = conjureTopicChannel;
       }
     }
   }

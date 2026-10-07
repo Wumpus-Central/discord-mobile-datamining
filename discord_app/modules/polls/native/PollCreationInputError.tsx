@@ -1,38 +1,32 @@
 // === Module 11873: PollCreationInputError ===
 
 // Module 11873 (PollCreationInputError)
-import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let message;
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { container: { flexDirection: "row", alignItems: "center", marginTop: -10 }, icon: { alignSelf: "center", marginRight: 5, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL } };
+let closure_6 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { alignSelf: "center", marginRight: 5, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/polls/native/PollCreationInputError.tsx");
 
-let closure_4;
-let hasOwnProperty;
-let obj2;
-const View = react_native.View;
-({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
-let obj = { container: { flexDirection: "row", alignItems: "center", marginTop: -10 }, icon: obj2 };
-obj2 = { alignSelf: "center", marginRight: 5, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
-let closure_6 = createStyles.createStyles(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
-  let items1;
-  let tmp11;
-  let tmp5;
-  let tmp6;
-  let tmp8;
-  const obj = message(576);
-  const cResult = obj.c(11);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
+  const cResult = message(576).c(11);
   message = message.message;
   const tmp4 = closure_6();
   if (cResult[0] !== message) {
     const fn = function u() {
-      const tmp2 = null != message && "" !== message;
+      let tmp2 = null != message;
+      if (tmp2) {
+        tmp2 = "" !== message;
+      }
       if (tmp2) {
         const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce(message);
@@ -42,66 +36,66 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
     cResult[0] = message;
     cResult[1] = fn;
     cResult[2] = items;
-    tmp6 = items;
-    tmp5 = fn;
+    let tmp6 = items;
+    let tmp5 = fn;
   } else {
     tmp5 = cResult[1];
     tmp6 = cResult[2];
   }
-  const effect = react.useEffect(tmp5, tmp6);
+  const effect = noop.useEffect(tmp5, tmp6);
   if (cResult[3] !== tmp4.icon) {
-    size = { width: 16, height: 16, style: tmp4.icon };
-    const tmp10 = closure_4(message(1188).WarningCircle, size);
+    const size = { width: 16, height: 16, style: tmp4.icon };
+    const tmp10 = closure_4(tmp(1188).WarningCircle, size);
     cResult[3] = tmp4.icon;
     cResult[4] = tmp10;
-    tmp8 = tmp10;
+    let tmp8 = tmp10;
   } else {
     tmp8 = cResult[4];
   }
   if (cResult[5] !== message) {
     const obj2 = { variant: "text-xs/medium", color: "text-feedback-critical", children: message };
-    const tmp13 = closure_4(message(4892).Text, obj2);
+    const tmp13 = closure_4(tmp(4892).Text, obj2);
     cResult[5] = message;
     cResult[6] = tmp13;
-    tmp11 = tmp13;
+    let tmp11 = tmp13;
   } else {
     tmp11 = cResult[6];
   }
   if (cResult[7] === tmp4.container) {
     if (cResult[8] === tmp8) {
-      let tmp14;
       if (cResult[9] === tmp11) {
-        tmp14 = cResult[10];
+        let tmp14 = cResult[10];
       }
       return tmp14;
     }
   }
-  const obj3 = { style: tmp4.container, children: items1 };
-  items1 = [tmp8, tmp11];
+  const obj3 = { style: tmp4.container, children: null };
+  const items1 = [tmp8, tmp11];
+  obj3.children = items1;
   const tmp15 = closure_5(View, obj3);
   cResult[7] = tmp4.container;
   cResult[8] = tmp8;
   cResult[9] = tmp11;
   cResult[10] = tmp15;
   tmp14 = tmp15;
+  const obj = message(576);
 }) : ((message) => {
-  let items1;
   message = message.message;
   const tmp = closure_6();
   const items = [message];
-  const effect = react.useEffect(() => {
-    const tmp2 = null != message && "" !== message;
+  const effect = noop.useEffect(() => {
+    let tmp2 = null != message;
+    if (tmp2) {
+      tmp2 = "" !== message;
+    }
     if (tmp2) {
       const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(message);
     }
   }, items);
-  size = { width: 16, height: 16, style: tmp.icon };
-  const obj = { style: tmp.container, children: items1 };
-  items1 = [closure_4(message(1188).WarningCircle, size), closure_4(message(4892).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: message })];
+  const obj = { style: tmp.container, children: null };
+  const size = { width: 16, height: 16, style: tmp.icon };
+  const items1 = [closure_4(message(1188).WarningCircle, size), closure_4(message(4892).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: message })];
+  obj.children = items1;
   return closure_5(View, obj);
 });
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/polls/native/PollCreationInputError.tsx");
-
-export default tmp3;

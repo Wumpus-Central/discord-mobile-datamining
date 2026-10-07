@@ -2,76 +2,59 @@
 
 // Module 12552 (BugReporterFeatureActionSheet)
 import _modDef12 from "module_12" /* 12 */;
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import fuzzysearchDefault from "fuzzysearch" /* 5709 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let BottomSheet, height, item;
-
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-const View = react_native.View;
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { list: obj2, searchBar: obj3, sectionHeader: obj4 };
-obj2 = { paddingHorizontal: nativeDefault.space.PX_12 };
-createStyles = createStyles.createStyles;
-obj3 = { paddingHorizontal: nativeDefault.space.PX_12 };
-obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center" };
-let closure_8 = createStyles(obj);
-let memo = react.memo;
-let ReactCompilerGating = ReactCompilerGating_mod;
-let closure_9 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let title;
-  let tmp5;
-  const obj = react2;
-  const cResult = obj.c(10);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4896);
+let obj = { list: { paddingHorizontal: nativeDefault.space.PX_12 }, searchBar: null, sectionHeader: null };
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_12 };
+obj.searchBar = { paddingHorizontal: nativeDefault.space.PX_12 };
+let obj4 = { paddingHorizontal: nativeDefault.space.PX_12 };
+obj.sectionHeader = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center" };
+let closure_8 = createStyles.createStyles(obj);
+let ReactCompilerGating = fn(558);
+let closure_9 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(10);
   ({ title, height } = arg0);
   const tmp4 = closure_8();
   if (cResult[0] !== height) {
     const obj2 = { height };
     cResult[0] = height;
     cResult[1] = obj2;
-    tmp5 = obj2;
+    let tmp5 = obj2;
   } else {
     tmp5 = cResult[1];
   }
   if (cResult[2] === tmp4.sectionHeader) {
-    let tmp6;
-    let tmp7;
     if (cResult[3] === tmp5) {
-      tmp6 = cResult[4];
+      let tmp6 = cResult[4];
     }
     if (cResult[5] !== title) {
       const obj3 = { variant: "text-sm/bold", color: "text-muted", children: title };
-      const tmp9 = metroRequire(Text_Text.Text, obj3);
+      const tmp9 = timestampProducer(Text_Text.Text, obj3);
       cResult[5] = title;
       cResult[6] = tmp9;
-      tmp7 = tmp9;
+      let tmp7 = tmp9;
     } else {
       tmp7 = cResult[6];
     }
     if (cResult[7] === tmp6) {
-      let tmp10;
       if (cResult[8] === tmp7) {
-        tmp10 = cResult[9];
+        let tmp10 = cResult[9];
       }
       return tmp10;
     }
     const obj4 = { style: tmp6, children: tmp7 };
-    const tmp13 = metroRequire(View, obj4);
+    const tmp13 = timestampProducer(View, obj4);
     cResult[7] = tmp6;
     cResult[8] = tmp7;
     cResult[9] = tmp13;
@@ -83,69 +66,57 @@ let closure_9 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = items;
   tmp6 = items;
 }) : ((arg0) => {
-  let items;
-  let title;
   ({ title, height } = arg0);
-  const obj = { style: items, children: metroRequire(Text_Text.Text, { variant: "text-sm/bold", color: "text-muted", children: title }) };
-  items = [closure_8().sectionHeader, { height }];
-  return metroRequire(View, obj);
+  const obj = { style: null, children: null };
+  const items = [closure_8().sectionHeader, { height }];
+  obj.style = items;
+  obj.children = timestampProducer(Text_Text.Text, { variant: "text-sm/bold", color: "text-muted", children: title });
+  return timestampProducer(View, obj);
 }));
-const memo2 = react.memo;
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_10 = memo2(ReactCompilerGating.isReactCompilerEnabled() ? ((item) => {
-  let end;
-  let feature;
-  let setFeature;
-  let start;
-  let tmp4;
-  let tmp6;
-  let tmp8;
-  let obj = item(576);
-  const cResult = obj.c(16);
+ReactCompilerGating = fn(558);
+let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((item) => {
+  const cResult = item(576).c(16);
   item = item.item;
   ({ feature, setFeature } = item);
   ({ start, end } = item);
   if (cResult[0] !== item) {
-    const tmpResult = item(12542);
-    const featureId = tmpResult.getFeatureId(item);
+    const featureId = tmp(12542).getFeatureId(item);
     cResult[0] = item;
     cResult[1] = featureId;
-    tmp4 = featureId;
+    let tmp4 = featureId;
+    const tmpResult = tmp(12542);
   } else {
     tmp4 = cResult[1];
   }
-  const name = item.name;
   if (cResult[2] !== item) {
-    const tmpResult3 = item(12542);
-    const featureId1 = tmpResult3.getFeatureId(item);
+    const featureId1 = tmp(12542).getFeatureId(item);
     cResult[2] = item;
     cResult[3] = featureId1;
-    tmp6 = featureId1;
+    let tmp6 = featureId1;
+    const tmpResult3 = tmp(12542);
   } else {
     tmp6 = cResult[3];
   }
   if (cResult[4] !== feature) {
-    const tmpResult4 = item(12542);
-    const featureId2 = tmpResult4.getFeatureId(feature);
+    const featureId2 = tmp(12542).getFeatureId(feature);
     cResult[4] = feature;
     cResult[5] = featureId2;
-    tmp8 = featureId2;
+    let tmp8 = featureId2;
+    const tmpResult4 = tmp(12542);
   } else {
     tmp8 = cResult[5];
   }
   if (cResult[6] === item) {
-    let tmp10;
     if (cResult[7] === setFeature) {
-      tmp10 = cResult[8];
+      let tmp10 = cResult[8];
     }
     if (cResult[9] === end) {
       if (cResult[10] === item.name) {
         if (cResult[11] === start) {
           if (cResult[12] === tmp4) {
-            if (cResult[13] === tmp6 === tmp8) {
-              let tmp12;
+            if (cResult[13] === tmp11) {
               if (cResult[14] === tmp10) {
-                tmp12 = cResult[15];
+                let tmp12 = cResult[15];
               }
               return tmp12;
             }
@@ -153,8 +124,8 @@ let closure_10 = memo2(ReactCompilerGating.isReactCompilerEnabled() ? ((item) =>
         }
       }
     }
-    const obj2 = { start, end, value: tmp4, label: name, legacyCompat_selected: tmp6 === tmp8, legacyCompat_onPress: tmp10 };
-    const tmp14 = closure_6(item(6078).TableRadioRow, obj2);
+    const obj2 = { start, end, value: tmp4, label: item.name, legacyCompat_selected: tmp6 === tmp8, legacyCompat_onPress: tmp10 };
+    const tmp14 = closure_6(tmp(6078).TableRadioRow, obj2);
     cResult[9] = end;
     cResult[10] = item.name;
     cResult[11] = start;
@@ -166,261 +137,239 @@ let closure_10 = memo2(ReactCompilerGating.isReactCompilerEnabled() ? ((item) =>
   }
   const fn = function v() {
     setFeature(item);
-    const obj = ActionSheetActionCreatorsDefault;
-    obj.hideActionSheet();
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   };
   cResult[6] = item;
   cResult[7] = setFeature;
   cResult[8] = fn;
   tmp10 = fn;
+  const obj = item(576);
 }) : ((item) => {
-  let end;
-  let feature;
-  let featureId;
-  let obj2;
-  let obj4;
-  let start;
   item = item.item;
   const setFeature = item.setFeature;
   ({ feature, start, end } = item);
-  let obj = {
-    start,
-    end,
-    value: obj2.getFeatureId(item),
-    label: item.name,
-    legacyCompat_selected: featureId === obj4.getFeatureId(feature),
-    legacyCompat_onPress() {
-      setFeature(item);
-      const obj = ActionSheetActionCreatorsDefault;
-      obj.hideActionSheet();
-    }
-  };
-  const TableRadioRow = item(6078).TableRadioRow;
-  obj2 = item(12542);
+  const obj = { start, end, value: item(12542).getFeatureId(item), label: item.name, legacyCompat_selected: null, legacyCompat_onPress: null };
+  const obj2 = item(12542);
+  const featureId = item(12542).getFeatureId(item);
   const obj3 = item(12542);
-  featureId = obj3.getFeatureId(item);
-  obj4 = item(12542);
-  return closure_6(TableRadioRow, obj);
+  obj.legacyCompat_selected = featureId === item(12542).getFeatureId(feature);
+  obj.legacyCompat_onPress = function legacyCompat_onPress() {
+    setFeature(item);
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+  };
+  return closure_6(item(6078).TableRadioRow, obj);
 }));
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((setFeature) => {
-  let feature;
-  let features;
-  let first;
-  let intl;
-  let items;
-  let obj = feature(first[7]);
-  const cResult = obj.c(35);
+ReactCompilerGating = fn(558);
+let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/bug_reporter/native/components/BugReporterFeatureActionSheet.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((setFeature) => {
+  const cResult = feature(first[7]).c(35);
   ({ features, feature } = setFeature);
   setFeature = setFeature.setFeature;
   const tmp4 = closure_8();
+  let obj = feature(first[7]);
   first = items(height.useState(""), 2)[0];
-  items(height.useState(""), 2);
   if (cResult[0] === features) {
-    let arr;
-    let tmp14;
-    let tmp16;
     if (cResult[1] === first) {
-      arr = cResult[2];
-    }
-    if (cResult[6] !== arr) {
-      const mapped = arr.map((item) => items(item, 2)[1].length);
-      cResult[6] = arr;
-      cResult[7] = mapped;
-      tmp14 = mapped;
-    } else {
-      tmp14 = cResult[7];
-    }
-    if (cResult[8] !== arr) {
-      const mapped1 = arr.map((item) => {
-        const tmp = items(item, 2);
-        return { title: tmp[0], data: tmp[1] };
-      });
-      cResult[8] = arr;
-      cResult[9] = mapped1;
-      tmp16 = mapped1;
-    } else {
-      tmp16 = cResult[9];
-    }
-    if (cResult[10] === tmp16) {
-      let tmp18;
-      if (cResult[11] === tmp14) {
-        tmp18 = cResult[12];
+      if (cResult[6] !== cResult[2]) {
+        const mapped = arr.map((item) => items(item, 2)[1].length);
+        cResult[6] = arr;
+        cResult[7] = mapped;
+        let tmp14 = mapped;
+      } else {
+        tmp14 = cResult[7];
       }
-      items = tmp18.items;
-      const sections = tmp18.sections;
-      const tmp19 = setFeature(first[15])();
-      const tmp20 = setFeature(first[16])();
-      height = tmp20;
-      if (cResult[13] === feature) {
-        if (cResult[14] === items) {
-          let tmp21;
-          if (cResult[15] === setFeature) {
-            tmp21 = cResult[16];
-          }
-          if (cResult[17] === items) {
-            let tmp22;
-            let tmp24;
-            let tmp30;
-            if (cResult[18] === tmp20) {
-              tmp22 = cResult[19];
+      if (cResult[8] !== cResult[2]) {
+        const mapped1 = arr.map((item) => {
+          const tmp = items(item, 2);
+          return { title: tmp[0], data: tmp[1] };
+        });
+        cResult[8] = arr;
+        cResult[9] = mapped1;
+        let tmp16 = mapped1;
+      } else {
+        tmp16 = cResult[9];
+      }
+      if (cResult[10] === tmp16) {
+        if (cResult[11] === tmp14) {
+          let tmp18 = cResult[12];
+        }
+        items = tmp18.items;
+        const sections = tmp18.sections;
+        const tmp19 = tmp7(tmp2[15])();
+        const tmp20 = tmp7(tmp2[16])();
+        height = tmp20;
+        if (cResult[13] === feature) {
+          if (cResult[14] === items) {
+            if (cResult[15] === setFeature) {
+              let tmp21 = cResult[16];
             }
-            class M {
-              constructor(arg0) {
-                const obj = { title: items[arg0].title, height };
-                return metroRequire(closure_9, obj);
+            if (cResult[17] === items) {
+              if (cResult[18] === tmp20) {
+                let tmp22 = cResult[19];
               }
-            }
-            if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj2 = { title: intl.string(feature(first[18]).t["77VVd8"]) };
               class M {
                 constructor(arg0) {
-                  const obj = { title: items[arg0].title, height };
-                  return metroRequire(closure_9, obj);
+                  obj = { title: items[setFeature].title, height: closure_4 };
+                  return jsx(closure_9, obj);
                 }
               }
-              intl = feature(tmp2[18]).intl;
-              const tmp27 = closure_6(tmp26, obj2);
+              if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
+                const obj2 = { title: null };
+                class M {
+                  constructor(arg0) {
+                    obj = { title: items[setFeature].title, height: closure_4 };
+                    return jsx(closure_9, obj);
+                  }
+                }
+                const intl = feature(tmp2[18]).intl;
+                obj2.title = intl.string(feature(tmp2[18]).t["77VVd8"]);
+                class T {
+                  constructor(arg0, arg1) {
+                    obj = { item: items[setFeature].data[arg1], feature, setFeature, start: 0 === arg1, end: arg1 === items[setFeature].data.length - 1 };
+                    return jsx(closure_10, obj);
+                  }
+                }
+                let tmp24 = closure_6(tmp26, obj2);
+                const tmp27 = closure_6(tmp26, obj2);
+              } else {
+                tmp24 = cResult[20];
+              }
+              const _Symbol = Symbol;
               class T {
                 constructor(arg0, arg1) {
-                  const obj = { item: items[arg0].data[arg1], feature, setFeature, start: 0 === arg1, end: arg1 === items[arg0].data.length - 1 };
-                  return metroRequire(closure_10, obj);
+                  obj = { item: items[setFeature].data[arg1], feature, setFeature, start: 0 === arg1, end: arg1 === items[setFeature].data.length - 1 };
+                  return jsx(closure_10, obj);
                 }
               }
-              tmp24 = tmp27;
-            } else {
-              tmp24 = cResult[20];
-            }
-            const _Symbol = Symbol;
-            class T {
-              constructor(arg0, arg1) {
-                const obj = { item: items[arg0].data[arg1], feature, setFeature, start: 0 === arg1, end: arg1 === items[arg0].data.length - 1 };
-                return metroRequire(closure_10, obj);
-              }
-            }
-            if (cResult[22] !== tmp4.searchBar) {
-              class M {
-                constructor(arg0) {
-                  const obj = { title: items[arg0].title, height };
-                  return metroRequire(closure_9, obj);
+              if (cResult[22] !== tmp4.searchBar) {
+                class M {
+                  constructor(arg0) {
+                    obj = { title: items[setFeature].title, height: closure_4 };
+                    return jsx(closure_9, obj);
+                  }
                 }
-              }
-              tmp33[0] = tmp4.searchBar;
-              tmp33[1] = tmp29;
-              const tmp34 = closure_6(View, tmp33);
-              cResult[22] = tmp4.searchBar;
-              class T {
-                constructor(arg0, arg1) {
-                  const obj = { item: items[arg0].data[arg1], feature, setFeature, start: 0 === arg1, end: arg1 === items[arg0].data.length - 1 };
-                  return metroRequire(closure_10, obj);
+                tmp33[0] = tmp4.searchBar;
+                tmp33[1] = tmp29;
+                const tmp34 = closure_6(View, tmp33);
+                cResult[22] = tmp4.searchBar;
+                class T {
+                  constructor(arg0, arg1) {
+                    obj = { item: items[setFeature].data[arg1], feature, setFeature, start: 0 === arg1, end: arg1 === items[setFeature].data.length - 1 };
+                    return jsx(closure_10, obj);
+                  }
                 }
+                cResult[23] = tmp34;
+                let tmp30 = tmp34;
+              } else {
+                tmp30 = cResult[23];
               }
-              cResult[23] = tmp34;
-              tmp30 = tmp34;
-            } else {
-              tmp30 = cResult[23];
-            }
-            const sum = tmp7(tmp2[5]).space.PX_16 + tmp8.bottom;
-            if (cResult[24] === tmp21) {
-              if (cResult[25] === tmp22) {
-                if (cResult[26] === tmp19) {
-                  if (cResult[27] === tmp20) {
-                    if (cResult[28] === sections) {
-                      if (cResult[29] === tmp4.list) {
-                        let tmp36;
-                        if (cResult[30] === sum) {
-                          tmp36 = cResult[31];
-                        }
-                        if (cResult[32] === tmp36) {
-                          let tmp39;
-                          if (cResult[33] === tmp30) {
-                            tmp39 = cResult[34];
+              const sum = tmp7(tmp2[5]).space.PX_16 + tmp8.bottom;
+              if (cResult[24] === tmp21) {
+                if (cResult[25] === tmp22) {
+                  if (cResult[26] === tmp19) {
+                    if (cResult[27] === tmp20) {
+                      if (cResult[28] === sections) {
+                        if (cResult[29] === tmp4.list) {
+                          if (cResult[30] === sum) {
+                            let tmp36 = cResult[31];
                           }
-                          return tmp39;
-                        }
-                        class M {
-                          constructor(arg0) {
-                            const obj = { title: items[arg0].title, height };
-                            return metroRequire(closure_9, obj);
+                          if (cResult[32] === tmp36) {
+                            if (cResult[33] === tmp30) {
+                              let tmp39 = cResult[34];
+                            }
+                            return tmp39;
                           }
-                        }
-                        const items1 = [tmp30, tmp36];
-                        const obj3 = { scrollable: true, startExpanded: true, header: tmp24, children: null };
-                        class T {
-                          constructor(arg0, arg1) {
-                            const obj = { item: items[arg0].data[arg1], feature, setFeature, start: 0 === arg1, end: arg1 === items[arg0].data.length - 1 };
-                            return metroRequire(closure_10, obj);
+                          class M {
+                            constructor(arg0) {
+                              obj = { title: items[setFeature].title, height: closure_4 };
+                              return jsx(closure_9, obj);
+                            }
                           }
+                          const obj3 = { scrollable: true, startExpanded: true, header: tmp24, children: null };
+                          const items1 = [tmp30, tmp36];
+                          class T {
+                            constructor(arg0, arg1) {
+                              obj = { item: items[setFeature].data[arg1], feature, setFeature, start: 0 === arg1, end: arg1 === items[setFeature].data.length - 1 };
+                              return jsx(closure_10, obj);
+                            }
+                          }
+                          const tmp40 = closure_7(feature(tmp2[21]).BottomSheet, obj3);
+                          cResult[32] = tmp36;
+                          cResult[33] = tmp30;
+                          cResult[34] = tmp40;
+                          tmp39 = tmp40;
                         }
-                        const tmp40 = closure_7(feature(first[21]).BottomSheet, obj3);
-                        cResult[32] = tmp36;
-                        cResult[33] = tmp30;
-                        cResult[34] = tmp40;
-                        tmp39 = tmp40;
                       }
                     }
                   }
                 }
               }
+              const obj4 = { style: tmp4.list, inActionSheet: true, sections, itemSize: tmp19, estimatedListSize: "windowSize", renderItem: tmp21, renderSectionHeader: tmp22, sectionHeaderSize: tmp20, insetEnd: sum };
+              const tmp38 = closure_6(tmp7(tmp2[20]), obj4);
+              cResult[24] = tmp21;
+              cResult[25] = tmp22;
+              cResult[26] = tmp19;
+              cResult[27] = tmp20;
+              cResult[28] = sections;
+              cResult[29] = tmp4.list;
+              cResult[30] = sum;
+              cResult[31] = tmp38;
+              tmp36 = tmp38;
             }
-            const obj4 = { style: tmp4.list, inActionSheet: true, sections, itemSize: tmp19, estimatedListSize: "windowSize", renderItem: tmp21, renderSectionHeader: tmp22, sectionHeaderSize: tmp20, insetEnd: sum };
-            const tmp38 = closure_6(setFeature(first[20]), obj4);
-            cResult[24] = tmp21;
-            cResult[25] = tmp22;
-            cResult[26] = tmp19;
-            cResult[27] = tmp20;
-            cResult[28] = sections;
-            cResult[29] = tmp4.list;
-            cResult[30] = sum;
-            cResult[31] = tmp38;
-            tmp36 = tmp38;
-          }
-          class M {
-            constructor(arg0) {
-              const obj = { title: items[arg0].title, height };
-              return metroRequire(closure_9, obj);
+            class M {
+              constructor(arg0) {
+                obj = { title: items[setFeature].title, height: closure_4 };
+                return jsx(closure_9, obj);
+              }
             }
-          }
-          cResult[17] = items;
-          cResult[18] = tmp20;
-          class T {
-            constructor(arg0, arg1) {
-              const obj = { item: items[arg0].data[arg1], feature, setFeature, start: 0 === arg1, end: arg1 === items[arg0].data.length - 1 };
-              return metroRequire(closure_10, obj);
+            cResult[17] = items;
+            cResult[18] = tmp20;
+            class T {
+              constructor(arg0, arg1) {
+                obj = { item: items[setFeature].data[arg1], feature, setFeature, start: 0 === arg1, end: arg1 === items[setFeature].data.length - 1 };
+                return jsx(closure_10, obj);
+              }
             }
+            tmp22 = M;
           }
-          tmp22 = M;
         }
-      }
-      class T {
-        constructor(arg0, arg1) {
-          const obj = { item: items[arg0].data[arg1], feature, setFeature, start: 0 === arg1, end: arg1 === items[arg0].data.length - 1 };
-          return metroRequire(closure_10, obj);
+        class T {
+          constructor(arg0, arg1) {
+            obj = { item: items[setFeature].data[arg1], feature, setFeature, start: 0 === arg1, end: arg1 === items[setFeature].data.length - 1 };
+            return jsx(closure_10, obj);
+          }
         }
+        cResult[13] = feature;
+        cResult[14] = items;
+        cResult[15] = setFeature;
+        cResult[16] = T;
+        tmp21 = T;
       }
-      cResult[13] = feature;
-      cResult[14] = items;
-      cResult[15] = setFeature;
-      cResult[16] = T;
-      tmp21 = T;
+      const obj5 = { items: tmp16, sections: tmp14 };
+      cResult[11] = tmp14;
+      cResult[12] = obj5;
+      tmp18 = obj5;
     }
-    const obj5 = { items: tmp16, sections: tmp14 };
-    cResult[11] = tmp14;
-    cResult[12] = obj5;
-    tmp18 = obj5;
   }
   if (cResult[3] !== first) {
     class H {
-      constructor(asana_inbox_id) {
-        let tmp = null != asana_inbox_id.asana_inbox_id;
+      constructor(arg0) {
+        tmp = null != setFeature.asana_inbox_id;
         if (tmp) {
-          const obj = _modDef12;
-          let isEmptyResult = obj.isEmpty(first);
+          tmp2 = closure_1;
+          tmp3 = closure_2;
+          obj = closure_1(closure_2[13]);
+          str = closure_2;
+          isEmptyResult = obj.isEmpty(closure_2);
           if (!isEmptyResult) {
-            let str3;
-            const tmp2Result = fuzzysearchDefault;
-            const formatted = first.toLowerCase();
-            if (asana_inbox_id.name != null) {
+            tmp2Result = tmp2(tmp3[14]);
+            str2 = setFeature.name;
+            str3 = undefined;
+            formatted = str.toLowerCase();
+            if (str2 != null) {
               str3 = str2.toLowerCase();
             }
             if (str3 == null) {
@@ -429,16 +378,17 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((setFeature) => {
             isEmptyResult = tmp2Result(formatted, str3);
           }
           if (!isEmptyResult) {
-            let str5;
-            const tmp2Result2 = fuzzysearchDefault;
-            const formatted1 = first.toLowerCase();
-            if (asana_inbox_id.squad != null) {
+            tmp2Result1 = tmp2(tmp3[14]);
+            str4 = setFeature.squad;
+            str5 = undefined;
+            formatted1 = str.toLowerCase();
+            if (str4 != null) {
               str5 = str4.toLowerCase();
             }
             if (str5 == null) {
               str5 = "";
             }
-            isEmptyResult = tmp2Result2(formatted1, str5);
+            isEmptyResult = tmp2Result1(formatted1, str5);
           }
           tmp = isEmptyResult;
         }
@@ -447,23 +397,27 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((setFeature) => {
     }
     class M {
       constructor(arg0) {
-        const obj = { title: items[arg0].title, height };
-        return metroRequire(closure_9, obj);
+        obj = { title: items[setFeature].title, height: closure_4 };
+        return jsx(closure_9, obj);
       }
     }
     cResult[4] = H;
   } else {
     class H {
-      constructor(asana_inbox_id) {
-        let tmp = null != asana_inbox_id.asana_inbox_id;
+      constructor(arg0) {
+        tmp = null != setFeature.asana_inbox_id;
         if (tmp) {
-          const obj = _modDef12;
-          let isEmptyResult = obj.isEmpty(first);
+          tmp2 = closure_1;
+          tmp3 = closure_2;
+          obj = closure_1(closure_2[13]);
+          str = closure_2;
+          isEmptyResult = obj.isEmpty(closure_2);
           if (!isEmptyResult) {
-            let str3;
-            const tmp2Result = fuzzysearchDefault;
-            const formatted = first.toLowerCase();
-            if (asana_inbox_id.name != null) {
+            tmp2Result = tmp2(tmp3[14]);
+            str2 = setFeature.name;
+            str3 = undefined;
+            formatted = str.toLowerCase();
+            if (str2 != null) {
               str3 = str2.toLowerCase();
             }
             if (str3 == null) {
@@ -472,16 +426,17 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((setFeature) => {
             isEmptyResult = tmp2Result(formatted, str3);
           }
           if (!isEmptyResult) {
-            let str5;
-            const tmp2Result2 = fuzzysearchDefault;
-            const formatted1 = first.toLowerCase();
-            if (asana_inbox_id.squad != null) {
+            tmp2Result1 = tmp2(tmp3[14]);
+            str4 = setFeature.squad;
+            str5 = undefined;
+            formatted1 = str.toLowerCase();
+            if (str4 != null) {
               str5 = str4.toLowerCase();
             }
             if (str5 == null) {
               str5 = "";
             }
-            isEmptyResult = tmp2Result2(formatted1, str5);
+            isEmptyResult = tmp2Result1(formatted1, str5);
           }
           tmp = isEmptyResult;
         }
@@ -489,19 +444,24 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((setFeature) => {
       }
     }
   }
+  let entries = globalThis;
   const found = features.filter(H);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     class H {
-      constructor(asana_inbox_id) {
-        let tmp = null != asana_inbox_id.asana_inbox_id;
+      constructor(arg0) {
+        tmp = null != setFeature.asana_inbox_id;
         if (tmp) {
-          const obj = _modDef12;
-          let isEmptyResult = obj.isEmpty(first);
+          tmp2 = closure_1;
+          tmp3 = closure_2;
+          obj = closure_1(closure_2[13]);
+          str = closure_2;
+          isEmptyResult = obj.isEmpty(closure_2);
           if (!isEmptyResult) {
-            let str3;
-            const tmp2Result = fuzzysearchDefault;
-            const formatted = first.toLowerCase();
-            if (asana_inbox_id.name != null) {
+            tmp2Result = tmp2(tmp3[14]);
+            str2 = setFeature.name;
+            str3 = undefined;
+            formatted = str.toLowerCase();
+            if (str2 != null) {
               str3 = str2.toLowerCase();
             }
             if (str3 == null) {
@@ -510,16 +470,17 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((setFeature) => {
             isEmptyResult = tmp2Result(formatted, str3);
           }
           if (!isEmptyResult) {
-            let str5;
-            const tmp2Result2 = fuzzysearchDefault;
-            const formatted1 = first.toLowerCase();
-            if (asana_inbox_id.squad != null) {
+            tmp2Result1 = tmp2(tmp3[14]);
+            str4 = setFeature.squad;
+            str5 = undefined;
+            formatted1 = str.toLowerCase();
+            if (str4 != null) {
               str5 = str4.toLowerCase();
             }
             if (str5 == null) {
               str5 = "";
             }
-            isEmptyResult = tmp2Result2(formatted1, str5);
+            isEmptyResult = tmp2Result1(formatted1, str5);
           }
           tmp = isEmptyResult;
         }
@@ -528,22 +489,26 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((setFeature) => {
     }
     class M {
       constructor(arg0) {
-        const obj = { title: items[arg0].title, height };
-        return metroRequire(closure_9, obj);
+        obj = { title: items[setFeature].title, height: closure_4 };
+        return jsx(closure_9, obj);
       }
     }
   } else {
     class H {
-      constructor(asana_inbox_id) {
-        let tmp = null != asana_inbox_id.asana_inbox_id;
+      constructor(arg0) {
+        tmp = null != setFeature.asana_inbox_id;
         if (tmp) {
-          const obj = _modDef12;
-          let isEmptyResult = obj.isEmpty(first);
+          tmp2 = closure_1;
+          tmp3 = closure_2;
+          obj = closure_1(closure_2[13]);
+          str = closure_2;
+          isEmptyResult = obj.isEmpty(closure_2);
           if (!isEmptyResult) {
-            let str3;
-            const tmp2Result = fuzzysearchDefault;
-            const formatted = first.toLowerCase();
-            if (asana_inbox_id.name != null) {
+            tmp2Result = tmp2(tmp3[14]);
+            str2 = setFeature.name;
+            str3 = undefined;
+            formatted = str.toLowerCase();
+            if (str2 != null) {
               str3 = str2.toLowerCase();
             }
             if (str3 == null) {
@@ -552,16 +517,17 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((setFeature) => {
             isEmptyResult = tmp2Result(formatted, str3);
           }
           if (!isEmptyResult) {
-            let str5;
-            const tmp2Result2 = fuzzysearchDefault;
-            const formatted1 = first.toLowerCase();
-            if (asana_inbox_id.squad != null) {
+            tmp2Result1 = tmp2(tmp3[14]);
+            str4 = setFeature.squad;
+            str5 = undefined;
+            formatted1 = str.toLowerCase();
+            if (str4 != null) {
               str5 = str4.toLowerCase();
             }
             if (str5 == null) {
               str5 = "";
             }
-            isEmptyResult = tmp2Result2(formatted1, str5);
+            isEmptyResult = tmp2Result1(formatted1, str5);
           }
           tmp = isEmptyResult;
         }
@@ -569,17 +535,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((setFeature) => {
       }
     }
   }
-  const tmp7Result = setFeature(first[13]);
-  const entries1 = entries(tmp7Result.groupBy(found, tmp12));
+  const _Object = entries.Object;
+  const tmp5 = items(height.useState(""), 2);
+  entries = _Object.entries(setFeature(first[13]).groupBy(found, tmp13));
   cResult[0] = features;
   cResult[1] = first;
-  cResult[2] = entries1;
-  arr = entries1;
+  cResult[2] = entries;
+  const tmp7Result = setFeature(first[13]);
 }) : ((features) => {
-  let BottomSheetTitleHeader;
-  let intl;
-  let items4;
-  let obj2;
   features = features.features;
   const feature = features.feature;
   const setFeature = features.setFeature;
@@ -588,21 +551,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((setFeature) => {
   let tmp = closure_8();
   const tmp2 = first(items.useState(""), 2);
   first = tmp2[0];
-  const items1 = [, ];
-  const tmp4 = tmp2[1];
-  items1[0] = features;
-  items1[1] = first;
-  const insets = feature(setFeature[12])().insets;
+  const items1 = [features, first];
   const memo = items.useMemo(() => {
-    let mapped;
     const found = features.filter((asana_inbox_id) => {
       let tmp = null != asana_inbox_id.asana_inbox_id;
       if (tmp) {
-        const obj = feature(setFeature[13]);
-        let isEmptyResult = obj.isEmpty(first);
+        let isEmptyResult = feature(setFeature[13]).isEmpty(first);
         if (!isEmptyResult) {
           let str3;
-          const tmp2Result = feature(setFeature[14]);
           const formatted = first.toLowerCase();
           if (asana_inbox_id.name != null) {
             str3 = str2.toLowerCase();
@@ -610,11 +566,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((setFeature) => {
           if (str3 == null) {
             str3 = "";
           }
-          isEmptyResult = tmp2Result(formatted, str3);
+          isEmptyResult = feature(setFeature[14])(formatted, str3);
+          const tmp2Result = feature(setFeature[14]);
         }
         if (!isEmptyResult) {
           let str5;
-          const tmp2Result2 = feature(setFeature[14]);
           const formatted1 = first.toLowerCase();
           if (asana_inbox_id.squad != null) {
             str5 = str4.toLowerCase();
@@ -622,58 +578,45 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((setFeature) => {
           if (str5 == null) {
             str5 = "";
           }
-          isEmptyResult = tmp2Result2(formatted1, str5);
+          isEmptyResult = feature(setFeature[14])(formatted1, str5);
+          const tmp2Result2 = feature(setFeature[14]);
         }
         tmp = isEmptyResult;
+        const obj = feature(setFeature[13]);
       }
       return tmp;
     });
-    let obj = _modDef12;
-    const entries1 = entries(obj.groupBy(found, (squad) => squad.squad));
-    const obj2 = {
-      items: entries1.map((item) => {
-        let tmp;
-        let tmp2;
-        [tmp, tmp2] = item;
-        return { title, data };
-      }),
-      sections: mapped
-    };
-    mapped = entries1.map((item) => {
-      let arr;
+    const entries = Object.entries(_modDef12.groupBy(found, (squad) => squad.squad));
+    const obj2 = { items: null, sections: null };
+    const mapped = entries.map((item) => {
       [, arr] = item;
       return arr.length;
     });
+    obj2.items = entries.map((item) => {
+      [tmp, tmp2] = item;
+      return { title, data };
+    });
+    obj2.sections = mapped;
     return obj2;
   }, items1);
   items = memo.items;
-  const sections = memo.sections;
-  const tmp6 = feature(setFeature[15])();
-  const tmp7 = feature(setFeature[16])();
-  height = tmp7;
+  const tmp6 = feature(setFeature[16])();
+  height = tmp6;
   const items2 = [items, setFeature, feature];
-  const items3 = [tmp7, items];
-  const callback = items.useCallback((arg0, arg1) => {
-    const obj = { item: items[arg0].data[arg1], feature, setFeature, start: 0 === arg1, end: arg1 === items[arg0].data.length - 1 };
-    return metroRequire(closure_10, obj);
-  }, items2);
-  const callback1 = items.useCallback((arg0) => {
-    const obj = { title: items[arg0].title, height };
-    return metroRequire(closure_9, obj);
-  }, items3);
-  let obj = { scrollable: true, startExpanded: true, header: closure_6(BottomSheetTitleHeader, obj2), children: items4 };
-  BottomSheet = features(setFeature[21]).BottomSheet;
-  obj2 = { title: intl.string(features(setFeature[18]).t["77VVd8"]) };
-  BottomSheetTitleHeader = features(setFeature[17]).BottomSheetTitleHeader;
-  intl = features(setFeature[18]).intl;
-  items4 = [, ];
-  const obj3 = { style: tmp.searchBar, children: closure_6(features(setFeature[19]).SearchField, { size: "md", onChange: tmp4 }) };
-  items4[0] = closure_6(height, obj3);
-  const obj4 = { style: tmp.list, inActionSheet: true, sections, itemSize: tmp6, estimatedListSize: "windowSize", renderItem: callback, renderSectionHeader: callback1, sectionHeaderSize: tmp7, insetEnd: feature(setFeature[5]).space.PX_16 + insets.bottom };
-  const tmp10 = feature(setFeature[20]);
-  items4[1] = closure_6(tmp10, obj4);
-  return closure_7(BottomSheet, obj);
+  const items3 = [tmp6, items];
+  const callback = items.useCallback((arg0, arg1) => timestampProducer(closure_10, { item: items[arg0].data[arg1], feature, setFeature, start: 0 === arg1, end: arg1 === items[arg0].data.length - 1 }), items2);
+  const callback1 = items.useCallback((arg0) => timestampProducer(closure_9, { title: items[arg0].title, height }), items3);
+  let obj = { scrollable: true, startExpanded: true, header: null, children: null };
+  let obj2 = { title: null };
+  const intl = features(setFeature[18]).intl;
+  obj2.title = intl.string(features(setFeature[18]).t["77VVd8"]);
+  obj.header = closure_6(features(setFeature[17]).BottomSheetTitleHeader, obj2);
+  const tmp5 = feature(setFeature[15])();
+  const items4 = [closure_6(height, { style: tmp.searchBar, children: closure_6(features(setFeature[19]).SearchField, { size: "md", onChange: tmp2[1] }) }), ];
+  const obj4 = { style: tmp.list, inActionSheet: true, sections: memo.sections, itemSize: tmp5, estimatedListSize: "windowSize", renderItem: callback, renderSectionHeader: callback1, sectionHeaderSize: tmp6, insetEnd: null };
+  const obj3 = { style: tmp.searchBar, children: closure_6(features(setFeature[19]).SearchField, { size: "md", onChange: tmp2[1] }) };
+  obj4.insetEnd = feature(setFeature[5]).space.PX_16 + feature(setFeature[12])().insets.bottom;
+  items4[1] = closure_6(feature(setFeature[20]), obj4);
+  obj.children = items4;
+  return closure_7(features(setFeature[21]).BottomSheet, obj);
 });
-const result = size.fileFinishedImporting("modules/bug_reporter/native/components/BugReporterFeatureActionSheet.tsx");
-
-export default tmp5;

@@ -1,23 +1,19 @@
 // === Module 9458: useVoiceStateForRemoteSession ===
 
 // Module 9458 (useVoiceStateForRemoteSession)
-import get_initialized from "get initialized" /* 504 */;
-import react from "react" /* 576 */;
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import GameConsoleStore from "GameConsoleStore" /* 4913 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-let id, voiceStateForSession;
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_console/hooks/useVoiceStateForRemoteSession.tsx");
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let remoteSessionId;
-  let tmp4;
-  let tmp5;
-  let tmp6;
-  const obj = react;
-  const cResult = obj.c(3);
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AuthenticationStore, VoiceStateStore, GameConsoleStore];
     const fn = function u() {
@@ -35,18 +31,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5, tmp6] = cResult;
   }
-  const tmpResult = get_initialized;
-  return tmpResult.useStateFromStores(tmp4, tmp5, tmp6);
+  return initialize.useStateFromStores(tmp4, tmp5, tmp6);
 }) : (() => {
-  let remoteSessionId;
   const items = [AuthenticationStore, VoiceStateStore, GameConsoleStore];
-  const obj = get_initialized;
-  return obj.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     id = id.getId();
     voiceStateForSession = voiceStateForSession.getVoiceStateForSession(id, remoteSessionId.getRemoteSessionId());
     return voiceStateForSession;
   }, []);
 });
-const result = size.fileFinishedImporting("modules/game_console/hooks/useVoiceStateForRemoteSession.tsx");
-
-export default tmp2;

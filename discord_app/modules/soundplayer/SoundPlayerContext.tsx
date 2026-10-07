@@ -1,11 +1,10 @@
-// === Module 17268: react ===
+// === Module 17268: SoundPlayerContext ===
 
-// Module 17268 (react)
-import react from "react" /* 19 */;
-import size from "module_2" /* 2 */;
+// Module 17268 (SoundPlayerContext)
+import noop from "module_19" /* 19 */;
 
-const obj = { audioRef: react.createRef() };
-const context = react.createContext(obj);
+const context = noop.createContext({ audioRef: noop.createRef() });
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundplayer/SoundPlayerContext.tsx");
 
 export default context;

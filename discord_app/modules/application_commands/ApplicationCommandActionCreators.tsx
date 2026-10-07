@@ -4,90 +4,55 @@
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import InteractionTypes from "InteractionTypes" /* 5126 */;
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7043 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7047 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7418 */;
-import size from "module_2" /* 2 */;
 
-const Endpoints = Constants.Endpoints;
+require = fn;
+const Endpoints = fn(1085).Endpoints;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandActionCreators.tsx");
 
 export const setActiveCommand = function setActiveCommand(command) {
-  let _location;
-  let channelId;
-  let commandOrigin;
-  let initialValues;
-  let query;
-  let queryLength;
-  let searchResultsPosition;
-  let section;
-  let sectionName;
-  let source;
-  let triggerSection;
   command = command.command;
   ({ channelId, section, location: _location, initialValues, triggerSection, queryLength, sectionName, query, searchResultsPosition, source, commandOrigin } = command);
   if (null != command) {
-    const tmp3 = _modDef38;
-    tmp3(command.inputType !== ApplicationCommandTypes.ApplicationCommandInputType.PLACEHOLDER, "command should not be placeholder");
+    _modDef38(command.inputType !== ApplicationCommandTypes.ApplicationCommandInputType.PLACEHOLDER, "command should not be placeholder");
   }
-  const obj = DispatcherDefault;
-  obj.dispatch({ type: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND", channelId, command, section, initialValues, location: _location, triggerSection, queryLength, sectionName, query, searchResultsPosition, source, commandOrigin });
+  DispatcherDefault.dispatch({ type: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND", channelId, command, section, initialValues, location: _location, triggerSection, queryLength, sectionName, query, searchResultsPosition, source, commandOrigin });
 };
 export const setPreferredCommandId = function setPreferredCommandId(channelId, commandId) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "APPLICATION_COMMAND_SET_PREFERRED_COMMAND", channelId, commandId };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "APPLICATION_COMMAND_SET_PREFERRED_COMMAND", channelId, commandId });
 };
 export const updateOptionStates = function updateOptionStates(id, changedOptionStates) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "APPLICATION_COMMAND_UPDATE_OPTIONS", channelId: id, changedOptionStates };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "APPLICATION_COMMAND_UPDATE_OPTIONS", channelId: id, changedOptionStates });
 };
 export const updateOptionValidationStates = function updateOptionValidationStates(channelId, arg1) {
   const entries = Object.entries(arg1);
-  const fromEntriesResult = fromEntries(entries.map((item) => {
-    let tmp;
-    let tmp2;
+  const fromEntriesResult = Object.fromEntries(entries.map((item) => {
     [tmp, tmp2] = item;
     const items = [tmp, { lastValidationResult: tmp2 }];
     return items;
   }));
-  const obj = DispatcherDefault;
-  const obj2 = { type: "APPLICATION_COMMAND_UPDATE_OPTIONS", channelId, changedOptionStates: fromEntriesResult };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "APPLICATION_COMMAND_UPDATE_OPTIONS", channelId, changedOptionStates: fromEntriesResult });
 };
 export const updateChannelState = function updateChannelState(arg0) {
-  let _location;
-  let changedOptionStates;
-  let channelId;
-  let command;
-  let preferredCommandId;
-  let section;
   ({ channelId, command, section, preferredCommandId, location: _location, changedOptionStates } = arg0);
-  const obj = DispatcherDefault;
-  obj.dispatch({ type: "APPLICATION_COMMAND_UPDATE_CHANNEL_STATE", channelId, command, section, preferredCommandId, location: _location, changedOptionStates });
+  DispatcherDefault.dispatch({ type: "APPLICATION_COMMAND_UPDATE_CHANNEL_STATE", channelId, command, section, preferredCommandId, location: _location, changedOptionStates });
 };
 export const updateApplicationGuildCommandPermissions = function updateApplicationGuildCommandPermissions(arg0, arg1, arg2, permissions) {
-  let obj;
   const HTTP = HTTPUtils.HTTP;
-  const request = { body: obj, url: Endpoints.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(arg0, arg1, arg2), rejectWithError: false };
-  obj = { permissions };
+  const request = { body: { permissions }, url: Endpoints.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(arg0, arg1, arg2), rejectWithError: false };
   return HTTP.put(request);
 };
-export const performAutocomplete = function performAutocomplete(c0, c2, data) {
-  let id;
-  let name;
-  let obj4;
-  let query;
-  _modDef38(null != dependencyMap.autocomplete, "Missing autocomplete context");
-  ({ query, name } = dependencyMap.autocomplete);
+export const performAutocomplete = function performAutocomplete(applicationId, autocomplete, data) {
+  _modDef38(null != autocomplete.autocomplete, "Missing autocomplete context");
+  ({ query, name } = autocomplete.autocomplete);
   let str = "";
-  let obj = ApplicationCommandUtils;
-  let interactionOptions = obj.extractInteractionDataProps(data).interactionOptions;
+  let interactionOptions = ApplicationCommandUtils.extractInteractionDataProps(data).interactionOptions;
   if (interactionOptions == null) {
     interactionOptions = [];
   }
@@ -110,61 +75,51 @@ export const performAutocomplete = function performAutocomplete(c0, c2, data) {
     }
     continue;
   }
-  let obj2 = SnowflakeUtilsDefault;
-  const fromTimestampResult = obj2.fromTimestamp(Date.now());
-  const require = fromTimestampResult;
-  if (null != dependencyMap.channel) {
-    const obj3 = { type: "APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST", nonce: fromTimestampResult, channelId: dependencyMap.channel.id, query, name, contextKey: str };
-    const tmp7Result = DispatcherDefault;
-    tmp7Result.dispatch(obj3);
-    if (null == ApplicationCommandAutocompleteStore.getAutocompleteChoices(dependencyMap.channel.id, name, query)) {
+  const fromTimestampResult = SnowflakeUtilsDefault.fromTimestamp(Date.now());
+  require = fromTimestampResult;
+  if (null != autocomplete.channel) {
+    const obj3 = { type: "APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST", nonce: fromTimestampResult, channelId: autocomplete.channel.id, query, name, contextKey: str };
+    DispatcherDefault.dispatch(obj3);
+    if (null == ApplicationCommandAutocompleteStore.getAutocompleteChoices(autocomplete.channel.id, name, query)) {
       const HTTP = HTTPUtils.HTTP;
-      const request = { url: Endpoints.INTERACTIONS, body: obj4, timeout: 3000, rejectWithError: true };
-      const post = HTTP.post;
-      const guild = dependencyMap.guild;
-      obj4 = { type: InteractionTypes.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE, application_id: _require.applicationId, guild_id: id, channel_id: dependencyMap.channel.id, session_id: AuthenticationStore.getSessionId(), data, nonce: fromTimestampResult };
-      id = undefined;
+      const request = { url: Endpoints.INTERACTIONS, body: null, timeout: 3000, rejectWithError: true };
+      const obj4 = { type: InteractionTypes.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE, application_id: applicationId.applicationId, guild_id: null, channel_id: null, session_id: null, data: null, nonce: null };
+      guild = autocomplete.guild;
+      let id;
       if (guild != null) {
         id = guild.id;
       }
-      const postResult = post(request);
-      postResult.catch(() => {
-        const obj = DispatcherDefault;
-        const obj2 = { type: "INTERACTION_FAILURE", nonce: require };
-        obj.dispatch(obj2);
+      obj4.guild_id = id;
+      obj4.channel_id = autocomplete.channel.id;
+      obj4.session_id = AuthenticationStore.getSessionId();
+      obj4.data = data;
+      obj4.nonce = fromTimestampResult;
+      request.body = obj4;
+      HTTP.post(request).catch(() => {
+        DispatcherDefault.dispatch({ type: "INTERACTION_FAILURE", nonce: fromTimestampResult });
       });
+      const postResult = HTTP.post(request);
     }
+    const tmp7Result = DispatcherDefault;
   }
 };
 export const fetchCommand = function fetchCommand(guildId, channelId, commandId) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "APPLICATION_COMMAND_FETCH", channelId, commandId, guildId };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "APPLICATION_COMMAND_FETCH", channelId, commandId, guildId });
 };
 export const fetchCommands = function fetchCommands(guildId, channelId, commandIds) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "APPLICATION_COMMANDS_FETCH", channelId, commandIds, guildId };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "APPLICATION_COMMANDS_FETCH", channelId, commandIds, guildId });
 };
 export const fetchCommandsForApplication = function fetchCommandsForApplication(arg0) {
-  let applicationId;
-  let channelId;
-  let guildId;
   ({ guildId, channelId, applicationId } = arg0);
-  const obj = DispatcherDefault;
-  obj.dispatch({ type: "APPLICATION_COMMANDS_FETCH_FOR_APPLICATION", channelId, guildId, applicationId });
+  DispatcherDefault.dispatch({ type: "APPLICATION_COMMANDS_FETCH_FOR_APPLICATION", channelId, guildId, applicationId });
 };
 export const updateRegistry = function updateRegistry(commands, applications, channelId) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "APPLICATION_COMMAND_REGISTRY_UPDATE", applications, commands, channelId };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "APPLICATION_COMMAND_REGISTRY_UPDATE", applications, commands, channelId });
 };
 export const setAppLauncherActiveCommand = function setAppLauncherActiveCommand(id, command) {
   if (null != command) {
-    const tmp3 = _modDef38;
-    tmp3(command.inputType !== ApplicationCommandTypes.ApplicationCommandInputType.PLACEHOLDER, "command should not be placeholder");
+    _modDef38(command.inputType !== ApplicationCommandTypes.ApplicationCommandInputType.PLACEHOLDER, "command should not be placeholder");
   }
-  const obj = DispatcherDefault;
+  DispatcherDefault.dispatch({ type: "APP_LAUNCHER_SET_ACTIVE_COMMAND", channelId: id, command });
   const obj2 = { type: "APP_LAUNCHER_SET_ACTIVE_COMMAND", channelId: id, command };
-  obj.dispatch(obj2);
 };

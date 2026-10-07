@@ -3,16 +3,10 @@
 // Module 10080 (MentionGuardUtils)
 import _modDef38 from "module_38" /* 38 */;
 import MessageParserDefault from "MessageParser" /* 7179 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import _slicedToArray from "module_32" /* 32 */;
 import ChannelMemberStore from "ChannelMemberStore" /* 6792 */;
 import PermissionStore from "PermissionStore" /* 4515 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-let closure_1, dependencyMap, importDefault;
-
-let hasOwnProperty;
-let metroRequire;
 function parsedItemUsesEveryoneRole(content) {
   if (typeof content.content === "string") {
     if ("inlineCode" !== content.type) {
@@ -44,11 +38,14 @@ function parsedItemUsesEveryoneRole(content) {
   }
   return null;
 }
+const Constants = fn(1085);
 ({ Permissions: hasOwnProperty, StatusTypes: metroRequire } = Constants);
 const regExp = new RegExp(/@(:?everyone|here)/);
-let obj = {
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/MentionGuardUtils.tsx");
+
+export default {
   shouldShowEveryoneGuard(extractEveryoneRoleResult, getGuildId) {
-    let tmp5;
     const guildId = getGuildId.getGuildId();
     _modDef38(null != guildId, "isGuildChannel with null guildId");
     importDefault = extractEveryoneRoleResult;
@@ -58,34 +55,42 @@ let obj = {
       if (num == null) {
         num = 0;
       }
-      tmp5 = num;
+      let tmp5 = num;
     } else {
       const groups = ChannelMemberStore.getProps(getGuildId.getGuildId(), getGuildId.id).groups;
       const item = groups.forEach((id) => {
-        const tmp = "@everyone" !== importDefault && id.id === metroRequire.OFFLINE;
+        let tmp = "@everyone" !== closure_0;
+        if (tmp) {
+          tmp = id.id === constants2.OFFLINE;
+        }
         if (!tmp) {
           closure_1 = closure_1 + id.count;
         }
       });
       tmp5 = dependencyMap;
     }
-    const canResult = tmp5 > 30 && PermissionStore.can(constants.MENTION_EVERYONE, getGuildId);
+    let canResult = tmp5 > 30;
+    if (canResult) {
+      canResult = PermissionStore.can(constants.MENTION_EVERYONE, getGuildId);
+    }
     return canResult;
   },
   everyoneMemberCount(extractEveryoneRoleResult, isThread) {
-    let tmp3;
-    let closure_0 = extractEveryoneRoleResult;
-    let c1 = 0;
+    closure_0 = extractEveryoneRoleResult;
+    c1 = 0;
     if (isThread.isThread()) {
       let num = isThread.memberCount;
       if (num == null) {
         num = 0;
       }
-      tmp3 = num;
+      let tmp3 = num;
     } else {
       const groups = ChannelMemberStore.getProps(isThread.getGuildId(), isThread.id).groups;
       const item = groups.forEach((id) => {
-        const tmp = "@everyone" !== importDefault && id.id === metroRequire.OFFLINE;
+        let tmp = "@everyone" !== closure_0;
+        if (tmp) {
+          tmp = id.id === constants2.OFFLINE;
+        }
         if (!tmp) {
           closure_1 = closure_1 + id.count;
         }
@@ -95,9 +100,7 @@ let obj = {
     return tmp3;
   },
   extractEveryoneRole(arg0, getGuildId) {
-    const obj = MessageParserDefault;
-    const parsePreprocessorResult = obj.parsePreprocessor(getGuildId, arg0);
-    const obj2 = parsePreprocessorResult[Symbol.iterator]();
+    const obj2 = MessageParserDefault.parsePreprocessor(getGuildId, arg0)[Symbol.iterator]();
     while (obj2 !== undefined) {
       let tmp4 = parsedItemUsesEveryoneRole(tmp2);
       if (null != tmp4) {
@@ -108,6 +111,3 @@ let obj = {
     return null;
   }
 };
-const result = size.fileFinishedImporting("utils/MentionGuardUtils.tsx");
-
-export default obj;

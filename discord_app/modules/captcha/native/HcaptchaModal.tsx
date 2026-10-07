@@ -1,49 +1,26 @@
 // === Module 17459: HcaptchaModal ===
 
 // Module 17459 (HcaptchaModal)
-import Constants from "Constants" /* 1085 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
 import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5414 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 5787 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
 import UserStore from "UserStore" /* 1377 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-let _require, navigation, obj1, tmp3;
-
-let c9;
-let closure_12;
-let map1;
-let metroImportAll;
-let metroImportDefault;
+require = fn;
 let closure_3 = ["onMessage", "onClose"];
 let closure_4 = ["onMessage", "onClose"];
-({ ActivityIndicator: metroImportDefault, View: metroImportAll, StyleSheet: c9 } = react_native);
-const ModalAnimation = Constants.ModalAnimation;
-({ jsx: closure_12, jsxs: map1 } = Fragment);
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: closure_7, View: closure_8, StyleSheet: closure_9 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
+const createStyles = fn(4896);
 let closure_14 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" }, title: { textAlign: "center" }, closeButtonContainer: { position: "absolute", top: 0, left: 0, zIndex: 2 }, closeButtonHitArea: { minWidth: 44, minHeight: 44, justifyContent: "center", alignItems: "center" } });
+const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let currentUser;
-  let items1;
-  let items3;
-  let obj8;
-  let onClose;
-  let onMessage;
-  let tmp10;
-  let tmp11;
-  let tmp14;
-  let tmp18Result;
-  let tmp20;
-  let tmp4;
-  const tmp = _require;
-  let obj = require("react");
-  const cResult = obj.c(37);
+  const cResult = require("c").c(37);
   if (cResult[0] !== arg0) {
     ({ onMessage, onClose } = arg0);
     const tmp8 = _objectWithoutProperties(arg0, closure_3);
@@ -51,7 +28,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[0] = arg0;
     cResult[1] = tmp8;
     cResult[2] = onMessage;
-    tmp4 = tmp8;
+    let tmp4 = tmp8;
   } else {
     tmp4 = cResult[1];
     _require = cResult[2];
@@ -66,18 +43,18 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     cResult[3] = items;
     cResult[4] = I;
-    tmp11 = I;
-    tmp10 = items;
+    let tmp11 = I;
+    let tmp10 = items;
   } else {
     tmp10 = cResult[3];
     tmp11 = cResult[4];
   }
-  const tmpResult = tmp(504);
-  const stateFromStores = tmpResult.useStateFromStores(tmp10, tmp11);
-  const tmpResult3 = tmp(1490);
-  navigation = tmpResult3.useNavigation();
+  let obj = require("c");
+  const stateFromStores = require("initialize").useStateFromStores(tmp10, tmp11);
+  const tmpResult = require("initialize");
+  const navigation = require("useNavigation").useNavigation();
   if (cResult[5] !== navigation) {
-    const state = navigation.getState();
+    state = navigation.getState();
     cResult[5] = navigation;
     class I {
       constructor() {
@@ -85,12 +62,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     cResult[6] = state;
-    tmp14 = state;
+    let tmp14 = state;
   } else {
     tmp14 = cResult[6];
   }
   const routes = tmp14.routes;
-  if (!(routes.length > 0 && "auth" === routes[0].name)) {
+  let tmp16 = routes.length > 0;
+  if (tmp16) {
+    tmp16 = "auth" === routes[0].name;
+  }
+  if (!tmp16) {
     if (stateFromStores != null) {
       const ageVerificationStatus = stateFromStores.ageVerificationStatus;
     }
@@ -100,7 +81,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }
-  const tmp19 = H(1618)();
+  const tmpResult3 = require("useNavigation");
   if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1126).intl;
     const stringResult = intl.string(tmp(1126).t.wsoPhr);
@@ -110,7 +91,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     cResult[7] = stringResult;
-    tmp20 = stringResult;
+    let tmp20 = stringResult;
   } else {
     tmp20 = cResult[7];
   }
@@ -152,15 +133,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }
-  H = tmp22;
-  if (cResult[10] !== tmp22) {
+  importDefault = H;
+  if (cResult[10] !== H) {
     class F {
       constructor() {
         tmp = closure_1();
         return true;
       }
     }
-    cResult[10] = tmp22;
+    cResult[10] = H;
     class I {
       constructor() {
         return closure_1_11.getCurrentUser();
@@ -175,8 +156,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }
-  H(5787)(F);
-  if (cResult[12] === (routes.length > 0 && "auth" === routes[0].name)) {
+  useBackPressHandlerDefault(F);
+  if (cResult[12] === tmp16) {
     class F {
       constructor() {
         tmp = closure_1();
@@ -205,7 +186,6 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
         }
         if (cResult[21] === tmp9.closeButtonContainer) {
-          let tmp48;
           class F {
             constructor() {
               tmp = closure_1();
@@ -226,16 +206,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 return true;
               }
             }
-            let obj2 = { color: null };
-            const XLargeIcon = tmp(4801).XLargeIcon;
             class I {
               constructor() {
                 return closure_1_11.getCurrentUser();
               }
             }
-            const tmp49 = closure_12(XLargeIcon, obj2);
+            const tmp49 = closure_12(tmp(4801).XLargeIcon, { color: null });
             cResult[25] = tmp49;
-            tmp48 = tmp49;
+            let obj2 = { color: null };
+            const tmp48 = tmp49;
           } else {
             class F {
               constructor() {
@@ -244,7 +223,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
             }
           }
-          if (cResult[26] === tmp22) {
+          if (cResult[26] === H) {
             class F {
               constructor() {
                 tmp = closure_1();
@@ -271,14 +250,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   return closure_1_11.getCurrentUser();
                 }
               }
-              const obj3 = { style: tmp25, children: items1 };
-              items1 = [tmp26, tmp32, tmp53];
+              const obj3 = { style: tmp25, children: null };
+              const items1 = [tmp26, tmp32, tmp53];
+              obj3.children = items1;
+              const tmp58 = closure_13(closure_8, obj3);
               cResult[32] = tmp9.container;
               cResult[33] = tmp53;
               cResult[34] = tmp26;
               cResult[35] = tmp32;
-              cResult[36] = closure_13(closure_8, obj3);
-              const tmp58 = closure_13(closure_8, obj3);
+              cResult[36] = tmp58;
             }
             class I {
               constructor() {
@@ -286,16 +266,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
             }
             const obj4 = { style: tmp45, pointerEvents: "box-none", children: tmp50 };
+            const tmp55 = closure_12(closure_8, obj4);
             cResult[29] = tmp45;
             cResult[30] = tmp50;
-            cResult[31] = closure_12(closure_8, obj4);
-            const tmp55 = closure_12(closure_8, obj4);
+            cResult[31] = tmp55;
           }
-          const obj5 = { accessibilityRole: "button", accessibilityLabel: tmp47, onPress: tmp22, style: tmp9.closeButtonHitArea, children: tmp48 };
-          cResult[26] = tmp22;
-          cResult[27] = tmp9.closeButtonHitArea;
-          cResult[28] = closure_12(tmp(5916).PressableOpacity, obj5);
+          const obj5 = { accessibilityRole: "button", accessibilityLabel: tmp47, onPress: H, style: tmp9.closeButtonHitArea, children: tmp48 };
           const tmp52 = closure_12(tmp(5916).PressableOpacity, obj5);
+          cResult[26] = H;
+          cResult[27] = tmp9.closeButtonHitArea;
+          cResult[28] = tmp52;
         }
         const items2 = [, ];
         class I {
@@ -318,33 +298,34 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         return closure_1_11.getCurrentUser();
       }
     }
-    const obj7 = { style: closure_9.absoluteFillObject, children: closure_12(tmp18Result, obj8) };
-    obj8 = { languageCode: LocaleStore.locale, onMessage };
-    tmp18Result = H(17458);
+    const obj7 = { style: closure_9.absoluteFillObject, children: null };
+    const obj8 = {};
     const merged = Object.assign(tmp4);
+    obj8.languageCode = LocaleStore.locale;
+    obj8.onMessage = onMessage;
+    obj7.children = closure_12(tmp18(17458), obj8);
+    const tmp40 = closure_12(closure_8, obj7);
     cResult[15] = tmp4;
     cResult[16] = onMessage;
-    cResult[17] = closure_12(closure_8, obj7);
-    const tmp40 = closure_12(closure_8, obj7);
+    cResult[17] = tmp40;
+    const tmp18Result = tmp18(17458);
   }
   let tmp28Result = !tmp16;
-  if (tmp28Result) {
+  if (!tmp16) {
     class F {
       constructor() {
         tmp = closure_1();
         return true;
       }
     }
-    const obj9 = { spacing: null, align: "center", children: items3 };
-    const Stack = tmp(5600).Stack;
+    const obj9 = { spacing: null, align: "center", children: null };
     class I {
       constructor() {
         return closure_1_11.getCurrentUser();
       }
     }
     const obj10 = { accessibilityRole: "header", variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp9.title, children: tmp20 };
-    items3 = [closure_12(tmp(4892).Text, obj10), ];
-    const tmpResult4 = tmp(1369);
+    const items3 = [closure_12(tmp(4892).Text, obj10), ];
     if (tmpResult4.isAndroid()) {
       class F {
         constructor() {
@@ -355,34 +336,27 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const obj11 = { size: "small", color: undefined };
     items3[1] = closure_12(closure_7, obj11);
-    tmp28Result = tmp28(Stack, obj9);
+    obj9.children = items3;
+    tmp28Result = tmp28(tmp(5600).Stack, obj9);
+    tmpResult4 = tmp(1369);
   }
-  cResult[12] = routes.length > 0 && "auth" === routes[0].name;
+  cResult[12] = tmp16;
   cResult[13] = tmp9.title;
   cResult[14] = tmp28Result;
+  tmp19 = useSafeAreaInsetsDefault();
 }) : ((onMessage) => {
-  let PressableOpacity;
-  let XLargeIcon;
-  let currentUser;
-  let intl2;
-  let items2;
-  let items3;
-  let items4;
-  let obj11;
-  let obj12;
-  let obj8;
-  let onPress;
-  let tmp9Result;
   onMessage = onMessage.onMessage;
-  const tmp = _objectWithoutProperties(onMessage, closure_4);
   const tmp2 = closure_14();
-  let obj = onMessage(504);
+  const tmp = _objectWithoutProperties(onMessage, closure_4);
   const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj2 = onMessage(1490);
-  navigation = obj2.useNavigation();
+  const stateFromStores = onMessage(504).useStateFromStores(items, () => currentUser.getCurrentUser());
+  let obj = onMessage(504);
+  const navigation = onMessage(1490).useNavigation();
   const routes = navigation.getState().routes;
-  let tmp6 = routes.length > 0 && "auth" === routes[0].name;
+  let tmp6 = routes.length > 0;
+  if (tmp6) {
+    tmp6 = "auth" === routes[0].name;
+  }
   if (!tmp6) {
     let prop;
     if (stateFromStores != null) {
@@ -393,12 +367,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const rect = onPress(1618)();
   const intl = tmp3(1126).intl;
   const items1 = [onMessage];
-  const stringResult = intl.string(onMessage(1126).t.wsoPhr);
-  onPress = react.useCallback(() => {
-    let obj2;
+  let obj2 = onMessage(1490);
+  onPress = noop.useCallback(() => {
     if (onMessage != null) {
-      const obj = { nativeEvent: obj2 };
-      obj2 = { data: SharedCaptchaUtils.CaptchaError.CANCEL };
+      const obj = { nativeEvent: null };
+      const obj2 = { data: SharedCaptchaUtils.CaptchaError.CANCEL };
+      obj.nativeEvent = obj2;
       tmp(obj);
     }
   }, items1);
@@ -406,40 +380,50 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     callback();
     return true;
   });
+  const obj3 = { style: tmp2.container, children: null };
   let tmp13Result = !tmp6;
-  const obj3 = { style: tmp2.container, children: items3 };
-  if (tmp13Result) {
-    const obj4 = { spacing: onPress(587).space.PX_16, align: "center", children: items2 };
-    const Stack = tmp3(5600).Stack;
+  if (!tmp6) {
+    const obj4 = { spacing: tmp9(587).space.PX_16, align: "center", children: null };
     const obj5 = { accessibilityRole: "header", variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp2.title, children: stringResult };
-    items2 = [closure_12(onMessage(4892).Text, obj5), ];
+    const items2 = [closure_12(tmp3(4892).Text, obj5), ];
     let WHITE;
-    const tmp3Result = onMessage(1369);
     if (tmp3Result.isAndroid()) {
       WHITE = tmp9(587).unsafe_rawColors.WHITE;
     }
     const obj6 = { size: "small", color: WHITE };
     items2[1] = closure_12(closure_7, obj6);
-    tmp13Result = closure_13(Stack, obj4);
+    obj4.children = items2;
+    tmp13Result = closure_13(tmp3(5600).Stack, obj4);
+    tmp3Result = tmp3(1369);
   }
-  items3 = [tmp13Result, , ];
-  const obj7 = { style: closure_9.absoluteFillObject, children: closure_12(tmp9Result, obj8) };
-  obj8 = { languageCode: LocaleStore.locale, onMessage };
-  tmp9Result = onPress(17458);
+  const items3 = [tmp13Result, , ];
+  const obj7 = { style: closure_9.absoluteFillObject, children: null };
+  const obj8 = {};
+  stringResult = intl.string(onMessage(1126).t.wsoPhr);
   const merged = Object.assign(tmp);
+  obj8.languageCode = LocaleStore.locale;
+  obj8.onMessage = onMessage;
+  obj7.children = closure_12(onPress(17458), obj8);
   items3[1] = closure_12(closure_8, obj7);
-  const obj9 = { style: items4, pointerEvents: "box-none", children: closure_12(PressableOpacity, obj11) };
-  items4 = [tmp2.closeButtonContainer, { paddingTop: rect.top + onPress(587).space.PX_8, paddingLeft: rect.left + onPress(587).space.PX_16 }];
-  obj11 = { accessibilityRole: "button", accessibilityLabel: intl2.string(onMessage(1126).t.cpT0Cq), onPress, style: tmp2.closeButtonHitArea, children: closure_12(XLargeIcon, obj12) };
-  ({ paddingTop: rect.top + onPress(587).space.PX_8, paddingLeft: rect.left + onPress(587).space.PX_16 });
-  PressableOpacity = tmp3(5916).PressableOpacity;
-  intl2 = tmp3(1126).intl;
-  obj12 = { color: onPress(587).colors.INTERACTIVE_ICON_DEFAULT };
-  XLargeIcon = tmp3(4801).XLargeIcon;
+  const obj9 = { style: null, pointerEvents: "box-none", children: null };
+  const items4 = [tmp2.closeButtonContainer, ];
+  const tmp9Result = onPress(17458);
+  items4[1] = { paddingTop: rect.top + onPress(587).space.PX_8, paddingLeft: rect.left + onPress(587).space.PX_16 };
+  obj9.style = items4;
+  const obj11 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
+  const intl2 = tmp3(1126).intl;
+  obj11.accessibilityLabel = intl2.string(onMessage(1126).t.cpT0Cq);
+  obj11.onPress = onPress;
+  obj11.style = tmp2.closeButtonHitArea;
+  const obj10 = { paddingTop: rect.top + onPress(587).space.PX_8, paddingLeft: rect.left + onPress(587).space.PX_16 };
+  obj11.children = closure_12(onMessage(4801).XLargeIcon, { color: onPress(587).colors.INTERACTIVE_ICON_DEFAULT });
+  obj9.children = closure_12(onMessage(5916).PressableOpacity, obj11);
   items3[2] = closure_12(closure_8, obj9);
+  obj3.children = items3;
   return closure_13(closure_8, obj3);
 });
-tmp4.modalConfig = { animation: ModalAnimation.FADE };
+tmp4.modalConfig = { animation: fn(1085).ModalAnimation.FADE };
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/captcha/native/HcaptchaModal.tsx");
 
 export default tmp4;

@@ -6,31 +6,23 @@ import size from "module_2" /* 2 */;
 let c0 = 2.0833333333333335;
 const result = size.fileFinishedImporting("modules/gateway/DispatcherWorkConstants.tsx");
 class WorkIdleDeadline {
-  constructor(_browserDeadlineMs) {
-    let flag = arg1;
-    if (arg1 === undefined) {
+  constructor(arg0) {
+    flag = require;
+    if (require === undefined) {
       flag = false;
     }
-    const obj = Object.create(new.target.prototype);
-    obj._deadlineMs = Math.max(c0, _browserDeadlineMs);
-    obj._browserDeadlineMs = _browserDeadlineMs;
+    obj = Object.create(new.target.prototype);
+    obj._deadlineMs = Math.max(c0, global);
+    obj._browserDeadlineMs = global;
     obj._firedDueToMaxTimeout = flag;
     obj._startMs = performance.now();
     return obj;
   }
-  timeRemaining() {
-    return Math.max(0, this._deadlineMs - (performance.now() - this._startMs));
-  }
-  generateDeadlineMetrics() {
-    let _deadlineMs;
-    let diff;
-    const obj = { isDeadlineNotIdeal: this._browserDeadlineMs < c0, deadlineMs: _deadlineMs.toFixed(2), timeSinceStartMs: diff.toFixed(2) };
-    _deadlineMs = this._deadlineMs;
-    diff = performance.now() - this._startMs;
-    return obj;
-  }
 }
 const prototype = WorkIdleDeadline.prototype;
+prototype["timeRemaining"] = function timeRemaining() {
+  return Math.max(0, this._deadlineMs - (performance.now() - this._startMs));
+};
 Object.defineProperty(prototype, "didTimeout", {
   get: function didTimeout() {
     return this._firedDueToMaxTimeout;
@@ -43,6 +35,14 @@ Object.defineProperty(prototype, "timeSinceExpiration", {
   },
   set: undefined
 });
+prototype["generateDeadlineMetrics"] = function generateDeadlineMetrics() {
+  const obj = { isDeadlineNotIdeal: this._browserDeadlineMs < c0, deadlineMs: null, timeSinceStartMs: null };
+  const _deadlineMs = this._deadlineMs;
+  obj.deadlineMs = _deadlineMs.toFixed(2);
+  const diff = performance.now() - this._startMs;
+  obj.timeSinceStartMs = diff.toFixed(2);
+  return obj;
+};
 
 export const DISPATCHER_STANDARD_TIMEOUT_MS = 50;
 export const DISPATCHER_IDEAL_TIME_LIMIT_MS = 50;

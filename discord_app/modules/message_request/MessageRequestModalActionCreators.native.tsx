@@ -2,12 +2,12 @@
 
 // Module 12103 (MessageRequestModalActionCreators)
 import Constants from "Constants" /* 1085 */;
-import intl5 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import asyncRequire from "asyncRequire" /* 1987 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
-import AlertDefault from "Alert" /* 5790 */;
+import common_AlertDefault from "common/Alert" /* 5790 */;
 import MessageRequestConstants from "MessageRequestConstants" /* 12100 */;
 import size from "module_2" /* 2 */;
 
@@ -16,31 +16,24 @@ const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/message_request/MessageRequestModalActionCreators.native.tsx");
 
 export const openAcceptMessageRequestConfirmModal = function openAcceptMessageRequestConfirmModal(arg0) {
-  let channelId;
-  let intl;
-  let intl2;
-  let intl3;
-  let intl4;
-  let onCancel;
-  let onConfirm;
   ({ channelId, onConfirm, onCancel } = arg0);
-  const obj = AnalyticsUtilsDefault;
+  AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, channel_id: channelId });
   const obj2 = { type, channel_id: channelId };
-  obj.track(AnalyticEvents.OPEN_MODAL, obj2);
-  const obj3 = { title: intl.string(intl5.t["66tnno"]), body: intl2.string(intl5.t["c/k4SW"]), cancelText: intl3.string(intl5.t["ETE/oC"]), confirmText: intl4.string(intl5.t["cY+Oob"]), onConfirm, onCancel, confirmColor: AlertDefault.Colors.BRAND, isDismissable: false };
-  const show = actions_AlertActionCreatorsDefault.show;
-  actions_AlertActionCreatorsDefault;
-  intl = intl5.intl;
-  intl2 = intl5.intl;
-  intl3 = intl5.intl;
-  intl4 = intl5.intl;
-  show(obj3);
+  const obj4 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, confirmColor: null, isDismissable: false };
+  const intl = util.intl;
+  obj4.title = intl.string(util.t["66tnno"]);
+  const intl2 = util.intl;
+  obj4.body = intl2.string(util.t["c/k4SW"]);
+  const intl3 = util.intl;
+  obj4.cancelText = intl3.string(util.t["ETE/oC"]);
+  const intl4 = util.intl;
+  obj4.confirmText = intl4.string(util.t["cY+Oob"]);
+  obj4.onConfirm = onConfirm;
+  obj4.onCancel = onCancel;
+  obj4.confirmColor = common_AlertDefault.Colors.BRAND;
+  actions_AlertActionCreatorsDefault.show(obj4);
 };
 export const onMarkAsNotSpamConfirmationModal = function onMarkAsNotSpamConfirmationModal(arg0) {
-  let channel;
-  let onCancel;
-  let onConfirm;
   ({ onConfirm, onCancel, channel } = arg0);
-  const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequire(12104, dependencyMap.paths), "SpamMessageHamActionSheet", { channel, onConfirm, onCancel });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12104, dependencyMap.paths), "SpamMessageHamActionSheet", { channel, onConfirm, onCancel });
 };

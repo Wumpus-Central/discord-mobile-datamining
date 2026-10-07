@@ -1,51 +1,34 @@
 // === Module 10964: QuestDockRewardTile ===
 
 // Module 10964 (QuestDockRewardTile)
-import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import AssetUtils from "AssetUtils" /* 10013 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
 
-let str, tmp, tmp2;
-
-let hasOwnProperty;
-let metroRequire;
-let react = react_mod;
-({ AppState: hasOwnProperty, View: metroRequire } = react_native);
-const jsx = Fragment.jsx;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ AppState: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { container: { borderRadius: nativeDefault.radii.sm, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" }, video: { overflow: "hidden", height: "100%", width: "100%" }, image: { height: "100%", width: "100%" } };
-  ({ borderRadius: nativeDefault.radii.sm, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" });
   return obj;
 });
-const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let accessibilityLabel;
-  let assetUrl;
-  let height;
-  let isAnimatedAsset;
-  let paused;
-  let style;
-  let tmp13;
-  let tmp6;
-  let tmp7;
-  let useReducedMotion;
-  let width;
-  let withAnimation;
-  const obj = isAnimatedAsset(576);
-  const cResult = obj.c(32);
+const ReactCompilerGating = fn(558);
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestDockRewardTile.tsx");
+
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = isAnimatedAsset(576).c(32);
   ({ assetUrl, isAnimatedAsset } = arg0);
   ({ accessibilityLabel, height, width, style, paused, withAnimation } = arg0);
   if (cResult[0] !== withAnimation) {
     let isIOSResult = withAnimation;
     if (undefined === withAnimation) {
+      isIOSResult = isAnimatedAsset(1369).isIOS();
       const tmpResult = isAnimatedAsset(1369);
-      isIOSResult = tmpResult.isIOS();
     }
     cResult[0] = withAnimation;
     cResult[1] = isIOSResult;
@@ -59,26 +42,25 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     }
     cResult[2] = items;
     cResult[3] = U;
-    tmp7 = U;
-    tmp6 = items;
+    let tmp7 = U;
+    let tmp6 = items;
   } else {
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  const tmpResult3 = isAnimatedAsset(504);
-  const stateFromStores = tmpResult3.useStateFromStores(tmp6, tmp7);
+  const obj = isAnimatedAsset(576);
+  const stateFromStores = isAnimatedAsset(504).useStateFromStores(tmp6, tmp7);
   closure_9();
-  [r10055, importDefault] = react.useState("active" === closure_5.currentState);
-  _slicedToArray(react.useState("active" === closure_5.currentState), 2);
+  const tmpResult3 = isAnimatedAsset(504);
+  [r10055, importDefault] = noop.useState("active" === closure_5.currentState);
   if (cResult[4] !== isAnimatedAsset) {
     class D {
       constructor() {
-        tmp = closure_0;
-        if (tmp) {
-          tmp2 = closure_1_5;
+        if (closure_0) {
+          tmp = closure_1_5;
           str = "change";
-          closure_0 = closure_1_5.addEventListener("change", () => { /* body not rendered: F141078 */ });
-          return () => { /* body not rendered: F141079 */ };
+          closure_0 = closure_1_5.addEventListener("change", () => { ... });
+          return () => { ... };
         } else {
           return;
         }
@@ -93,16 +75,15 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     cResult[4] = isAnimatedAsset;
     cResult[5] = D;
     cResult[6] = items1;
-    tmp13 = items1;
+    let tmp13 = items1;
   } else {
     class D {
       constructor() {
-        tmp = closure_0;
-        if (tmp) {
-          tmp2 = closure_1_5;
+        if (closure_0) {
+          tmp = closure_1_5;
           str = "change";
-          closure_0 = closure_1_5.addEventListener("change", () => { /* body not rendered: F141078 */ });
-          return () => { /* body not rendered: F141079 */ };
+          closure_0 = closure_1_5.addEventListener("change", () => { ... });
+          return () => { ... };
         } else {
           return;
         }
@@ -110,35 +91,29 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     }
     tmp13 = cResult[6];
   }
-  const effect = react.useEffect(D, tmp13);
+  const effect = noop.useEffect(D, tmp13);
   if (cResult[7] === assetUrl) {
     class D {
       constructor() {
-        tmp = closure_0;
-        if (tmp) {
-          tmp2 = closure_1_5;
+        if (closure_0) {
+          tmp = closure_1_5;
           str = "change";
-          closure_0 = closure_1_5.addEventListener("change", () => { /* body not rendered: F141078 */ });
-          return () => { /* body not rendered: F141079 */ };
+          closure_0 = closure_1_5.addEventListener("change", () => { ... });
+          return () => { ... };
         } else {
           return;
         }
       }
     }
   }
-  const tmpResult4 = isAnimatedAsset(10013);
-  const scaledImageUrl = tmpResult4.getScaledImageUrl({ assetUrl, width, height });
+  const tmp11 = _slicedToArray(noop.useState("active" === closure_5.currentState), 2);
+  const scaledImageUrl = isAnimatedAsset(10013).getScaledImageUrl({ assetUrl, width, height });
   cResult[7] = assetUrl;
   cResult[8] = height;
   cResult[9] = width;
   cResult[10] = scaledImageUrl;
+  const tmpResult4 = isAnimatedAsset(10013);
 }) : ((assetUrl) => {
-  let accessibilityLabel;
-  let c4;
-  let items3;
-  let style;
-  let tmp8;
-  let useReducedMotion;
   assetUrl = assetUrl.assetUrl;
   const isAnimatedAsset = assetUrl.isAnimatedAsset;
   const height = assetUrl.height;
@@ -150,20 +125,20 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
   }
   let withAnimation = assetUrl.withAnimation;
   if (withAnimation === undefined) {
-    let obj = assetUrl(height[9]);
-    withAnimation = obj.isIOS();
+    withAnimation = assetUrl(height[9]).isIOS();
+    const obj = assetUrl(height[9]);
   }
-  react = undefined;
+  noop = undefined;
   const items = [AccessibilityStore];
-  const obj2 = assetUrl(height[10]);
-  const stateFromStores = obj2.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const stateFromStores = assetUrl(height[10]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp6 = closure_9();
-  [tmp8, c4] = width(react.useState("active" === closure_5.currentState), 2);
+  const obj2 = assetUrl(height[10]);
+  const tmp3 = assetUrl;
+  [tmp8, c4] = width(noop.useState("active" === closure_5.currentState), 2);
   const items1 = [isAnimatedAsset];
-  width(react.useState("active" === closure_5.currentState), 2);
-  const effect = react.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (isAnimatedAsset) {
-      let closure_0 = closure_1_5.addEventListener("change", (event) => {
+      closure_0 = closure_1_5.addEventListener("change", (event) => {
         closure_1_4("active" === event);
       });
       return () => {
@@ -172,34 +147,33 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     }
   }, items1);
   const items2 = [assetUrl, width, height];
-  const memo = react.useMemo(() => {
-    size = { assetUrl, width, height };
-    const obj = AssetUtils;
-    return obj.getScaledImageUrl(size);
+  const memo = noop.useMemo(() => {
+    const size = { assetUrl, width, height };
+    return AssetUtils.getScaledImageUrl(size);
   }, items2);
-  const obj3 = { accessibilityLabel, style: items3, children: null };
-  items3 = [tmp6.container, { height, width }, style];
-  const tmp3 = assetUrl;
+  const obj3 = { accessibilityLabel, style: null, children: null };
+  const items3 = [tmp6.container, { height, width }, style];
+  obj3.style = items3;
   if (isAnimatedAsset) {
-    let tmp11Result;
     if (withAnimation) {
-      let tmp14 = !tmp8;
+      const obj4 = { style: tmp6.video, source: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants", poster: null, resizeMode: "cover", paused: null, muted: true };
       const obj5 = { uri: assetUrl };
-      const VideoComponent = tmp3(tmp4[12]).VideoComponent;
+      obj4.source = obj5;
+      obj4.poster = memo;
+      let tmp14 = !tmp8;
       if (tmp8) {
         tmp14 = flag;
       }
       if (!tmp14) {
         tmp14 = stateFromStores;
       }
-      tmp11Result = <VideoComponent style={tmp6.video} source={obj5} disableFocus preventsDisplaySleepDuringVideoPlayback={false} importantForAccessibility="no-hide-descendants" poster={memo} resizeMode="cover" paused={tmp14} muted />;
+      obj4.paused = tmp14;
+      let tmp11Result = jsx(tmp3(tmp4[12]).VideoComponent, { style: tmp6.video, source: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants", poster: null, resizeMode: "cover", paused: null, muted: true });
     }
     obj3.children = tmp11Result;
     return <tmp12 {...obj3} />;
   }
   tmp11Result = jsx(isAnimatedAsset(tmp4[13]), { source: { uri: memo }, style: tmp6.image });
+  const obj6 = { source: { uri: memo }, style: tmp6.image };
+  const tmp7 = width(noop.useState("active" === closure_5.currentState), 2);
 }));
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/quests/native/QuestDockRewardTile.tsx");
-
-export default memoResult;

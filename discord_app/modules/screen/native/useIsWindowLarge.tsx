@@ -11,12 +11,8 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/screen/native/useIsWindowLarge.tsx");
 
-export default () => {
-  const tmp = useWindowSizeClassifierDefault();
-  return tmp >= useWindowSizeClassifier.WindowSizeClassifier.LARGE;
-};
+export default () => useWindowSizeClassifierDefault() >= useWindowSizeClassifier.WindowSizeClassifier.LARGE;
 export const getIsWindowLarge = function getIsWindowLarge() {
-  const obj = useWindowSizeClassifier;
-  const windowSizeClassifier = obj.getWindowSizeClassifier();
+  const windowSizeClassifier = useWindowSizeClassifier.getWindowSizeClassifier();
   return windowSizeClassifier >= useWindowSizeClassifier.WindowSizeClassifier.LARGE;
 };

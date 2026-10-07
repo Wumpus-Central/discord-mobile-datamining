@@ -3,14 +3,12 @@
 // Module 16907 (SearchFetchPendingManager)
 import useInitialValueDefault from "useInitialValue" /* 5991 */;
 import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11980 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let _require, importDefault, set;
 
-function SearchFetchPendingManager() {
+const require = fn;
+let closure_4 = function SearchFetchPendingManager() {
   const obj = Object.create(new.target.prototype);
   obj.pending = new Set();
   obj.add = function add(arg0) {
@@ -27,34 +25,31 @@ function SearchFetchPendingManager() {
   };
   obj.flush = function flush(searchContext, tab) {
     if (obj.has(tab)) {
-      const obj2 = closure_1(dependencyMap[1]);
       if (obj2.fetchNextMessages(searchContext, tab)) {
         obj.remove(tab);
       }
+      obj2 = closure_1(dependencyMap[1]);
     }
   };
   obj.reset = function reset() {
     obj.pending = new Set();
-    new Set();
   };
-  new Set();
   return obj;
-}
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_0;
-  let closure_1;
-  let first;
+}.prototype;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchFetchPendingManager.tsx");
+
+export const useSearchFetchPendingManager = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   _require = arg0;
-  let obj = require("react");
-  const cResult = obj.c(5);
+  const cResult = require("c").c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function s() {
       if (typeof closure_4 === "function") {
         const obj = Object.create(closure_4.prototype);
         const _Set = Set;
-        const self = this;
-        const self2 = this;
-        obj.pending = new Set();
+        const set = new Set();
+        obj.pending = set;
         obj.add = function add(arg0) {
           const pending = obj.pending;
           pending.add(arg0);
@@ -69,42 +64,37 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         };
         obj.flush = function flush(searchContext, tab) {
           if (obj.has(tab)) {
-            const obj2 = closure_1(dependencyMap[1]);
             if (obj2.fetchNextMessages(searchContext, tab)) {
               obj.remove(tab);
             }
+            obj2 = closure_1(dependencyMap[1]);
           }
         };
         obj.reset = function reset() {
           obj.pending = new Set();
-          new Set();
         };
-        set = new Set();
         return obj;
       } else {
         throw new TypeError("Trying to call a non-function");
       }
     };
     cResult[0] = fn;
-    first = fn;
+    let first = fn;
   } else {
     first = cResult[0];
   }
   const tmp4 = useInitialValueDefault(first);
   importDefault = tmp4;
   if (cResult[1] === tmp4) {
-    let tmp5;
-    let tmp6;
     if (cResult[2] === arg0) {
-      tmp5 = cResult[3];
-      tmp6 = cResult[4];
+      let tmp5 = cResult[3];
+      let tmp6 = cResult[4];
     }
-    const effect = react.useEffect(tmp5, tmp6);
+    const effect = noop.useEffect(tmp5, tmp6);
     return tmp4;
   }
   const fn2 = function h() {
-    const obj = SearchPlatformUtilsDefault;
-    return obj.subscribeTextInputValue(closure_0, (arg0, arg1) => {
+    return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, (arg0, arg1) => {
       if (arg1 !== arg0) {
         navigation.reset();
       }
@@ -117,16 +107,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = items;
   tmp6 = items;
   tmp5 = fn2;
+  let obj = require("c");
 }) : ((arg0) => {
-  let closure_1;
-  let closure_0 = arg0;
-  const tmp = useInitialValueDefault(function() {
+  closure_0 = arg0;
+  const tmp = useInitialValueDefault(() => {
     if (typeof closure_4 === "function") {
       const obj = Object.create(closure_4.prototype);
       const _Set = Set;
-      const self = this;
-      const self2 = this;
-      set = new Set();
+      const set = new Set();
       obj.pending = set;
       obj.add = function add(arg0) {
         const pending = obj.pending;
@@ -142,15 +130,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       };
       obj.flush = function flush(searchContext, tab) {
         if (obj.has(tab)) {
-          const obj2 = closure_1(dependencyMap[1]);
           if (obj2.fetchNextMessages(searchContext, tab)) {
             obj.remove(tab);
           }
+          obj2 = closure_1(dependencyMap[1]);
         }
       };
       obj.reset = function reset() {
         obj.pending = new Set();
-        new Set();
       };
       return obj;
     } else {
@@ -159,16 +146,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   });
   importDefault = tmp;
   const items = [arg0, tmp];
-  const effect = react.useEffect(() => {
-    const obj = SearchPlatformUtilsDefault;
-    return obj.subscribeTextInputValue(closure_0, (arg0, arg1) => {
-      if (arg1 !== arg0) {
-        navigation.reset();
-      }
-    });
-  }, items);
+  const effect = noop.useEffect(() => SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, (arg0, arg1) => {
+    if (arg1 !== arg0) {
+      navigation.reset();
+    }
+  }), items);
   return tmp;
 });
-const result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchFetchPendingManager.tsx");
-
-export const useSearchFetchPendingManager = tmp2;

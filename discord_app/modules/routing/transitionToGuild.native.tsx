@@ -1,25 +1,21 @@
 // === Module 6855: transitionToGuild ===
 
 // Module 6855 (transitionToGuild)
-import Constants from "Constants" /* 1085 */;
 import router_utils from "router_utils" /* 1112 */;
 import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6480 */;
 import getGuildTransitionRoute from "getGuildTransitionRoute" /* 6731 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-const Routes = Constants.Routes;
+require = fn;
+const Routes = fn(1085).Routes;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/routing/transitionToGuild.native.tsx");
 
-export const transitionToGuild = function transitionToGuild(id, arg1) {
+export const transitionToGuild = function transitionToGuild(guildId, arg1) {
   const obj = getGuildTransitionRoute;
-  const first = _slicedToArray(obj.getGuildTransitionRoute(id), 1)[0];
-  const obj2 = DeprecatedLayoutAnimation;
-  const result = obj2.DeprecatedLayoutAnimation({ duration: 0, create: "r", update: "enabled", delete: "toCharArray$esjava$1" });
-  const transitionTo = router_utils.transitionTo;
-  const obj3 = { navigationReplace: true };
-  router_utils;
-  const CHANNELResult = Routes.CHANNEL(id, first);
+  const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimation({ duration: 0, create: "r", update: "enabled", delete: "toCharArray$esjava$1" });
+  const obj3 = router_utils;
+  const obj4 = { navigationReplace: true };
   const merged = Object.assign(arg1);
-  transitionTo(CHANNELResult, obj3);
+  obj3.transitionTo(Routes.CHANNEL(guildId, _slicedToArray(obj.getGuildTransitionRoute(guildId), 1)[0]), obj4);
 };

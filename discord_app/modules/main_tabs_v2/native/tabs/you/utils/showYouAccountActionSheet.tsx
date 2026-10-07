@@ -1,7 +1,7 @@
 // === Module 16350: showYouAccountActionSheet ===
 
 // Module 16350 (showYouAccountActionSheet)
-import asyncRequire from "asyncRequire" /* 1987 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import YouConstants from "YouConstants" /* 16351 */;
 import size from "module_2" /* 2 */;
@@ -18,6 +18,5 @@ export const showYouAccountActionSheet = function showYouAccountActionSheet() {
   if (arg1 === undefined) {
     flag2 = true;
   }
-  const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequire(16352, dependencyMap.paths), closure_3, { statusOnly: flag, disableHapticOnOpen: flag2 });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16352, dependencyMap.paths), closure_3, { statusOnly: flag, disableHapticOnOpen: flag2 });
 };

@@ -1,414 +1,295 @@
 // === Module 15528: PasswordScreen ===
 
 // Module 15528 (PasswordScreen)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
-import intl5 from "intl" /* 1126 */;
-import TextInput_TextInput from "TextInput/TextInput" /* 6105 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
+import TextInput from "TextInput" /* 6105 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 6439 */;
 import EyeSlashIcon from "EyeSlashIcon" /* 6463 */;
 import EyeIcon2 from "EyeIcon" /* 6465 */;
 import MfaScreenUtilsDefault from "MfaScreenUtils" /* 15521 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import _slicedToArray_mod from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let c6, importDefault;
 
-let _slicedToArray = _slicedToArray_mod;
-let react = react_mod;
-const View = react_native.View;
-const jsx = Fragment.jsx;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let closure_129_1;
-  let closure_129_3;
-  let closure_129_4;
-  let closure_129_5;
-  let finish;
-  let first;
-  let mfaChallenge;
-  let tmp10;
-  let tmp12;
-  let tmp14;
-  let tmp16;
-  let tmp7;
-  let obj = react2;
-  const cResult = obj.c(33);
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/mfa/native/screens/PasswordScreen.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(33);
   ({ mfaChallenge, finish } = arg0);
+  closure_0 = finish;
   const tmp4 = useWideAuthViewDefault();
-  let obj2 = MfaScreenUtilsDefault;
-  const screenStyles = obj2.useScreenStyles(tmp4);
-  [tmp7, closure_129_1] = _slicedToArray(react.useState(null), 2);
-  const tmp6 = _slicedToArray(react.useState(null), 2);
-  [first, tmp10] = react.useState("");
-  [tmp12, closure_129_3] = react.useState(false);
-  _slicedToArray(react.useState(false), 2);
-  [tmp14, closure_129_4] = _slicedToArray(react.useState(false), 2);
-  const tmp13 = _slicedToArray(react.useState(false), 2);
-  [tmp16, closure_129_5] = _slicedToArray(react.useState(false), 2);
-  const tmp15 = _slicedToArray(react.useState(false), 2);
+  const screenStyles = MfaScreenUtilsDefault.useScreenStyles(tmp4);
+  [tmp7, importDefault] = noop.useState(null);
+  const tmp8 = _slicedToArray(noop.useState(""), 2);
+  const first = tmp8[0];
+  const tmp6 = _slicedToArray(noop.useState(null), 2);
+  [tmp11, asyncGeneratorStep] = noop.useState(false);
+  const tmp10 = _slicedToArray(noop.useState(false), 2);
+  [tmp13, _slicedToArray] = noop.useState(false);
+  const tmp12 = _slicedToArray(noop.useState(false), 2);
+  [tmp15, noop] = noop.useState(false);
   if (cResult[0] === finish) {
-    let tmp17;
-    let tmp21;
-    let EyeIcon;
-    let tmp25;
-    let tmp28;
-    let tmp27;
     if (cResult[1] === first) {
-      tmp17 = cResult[2];
+      let tmp16 = cResult[2];
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = intl5.intl;
-      const stringResult = intl.string(intl5.t.Rw1XuM);
+      const intl = util.intl;
+      const stringResult = intl.string(util.t.Rw1XuM);
       cResult[3] = stringResult;
     }
     const _Symbol2 = Symbol;
     const inputContainer = screenStyles.inputContainer;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl2 = intl5.intl;
-      const stringResult1 = intl2.string(intl5.t["CIGa+7"]);
+      const intl2 = util.intl;
+      const stringResult1 = intl2.string(util.t["CIGa+7"]);
       cResult[4] = stringResult1;
-      tmp21 = stringResult1;
+      let tmp20 = stringResult1;
     } else {
-      tmp21 = cResult[4];
+      tmp20 = cResult[4];
     }
-    if (tmp16) {
-      EyeIcon = EyeSlashIcon.EyeSlashIcon;
+    let tmp22 = tmp11;
+    if (!tmp11) {
+      tmp22 = tmp13;
+    }
+    if (tmp15) {
+      let EyeIcon = EyeSlashIcon.EyeSlashIcon;
     } else {
       EyeIcon = EyeIcon2.EyeIcon;
     }
-    if (cResult[5] !== tmp16) {
-      let stringResult2;
-      const intl3 = intl5.intl;
+    if (cResult[5] !== tmp15) {
+      const intl3 = util.intl;
       const string = intl3.string;
-      const t = intl5.t;
-      if (tmp16) {
-        stringResult2 = string(t.Nusip4);
+      let Nusip4 = util.t;
+      if (tmp15) {
+        Nusip4 = Nusip4.Nusip4;
+        let stringResult2 = string(Nusip4);
       } else {
-        stringResult2 = string(t.nFzpM5);
+        stringResult2 = string(Nusip4.nFzpM5);
       }
-      cResult[5] = tmp16;
+      cResult[5] = tmp15;
       cResult[6] = stringResult2;
-      tmp25 = stringResult2;
     } else {
-      tmp25 = cResult[6];
-    }
-    const _Symbol3 = Symbol;
-    if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-      class D {
-        constructor() {
-          return closure_5((arg0) => !arg0);
+      const _Symbol3 = Symbol;
+      if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+        class D {
+          constructor() {
+            return closure_5((arg0) => !arg0);
+          }
         }
-      }
-      const rect = { top: 8, bottom: 8 };
-      cResult[7] = rect;
-      cResult[8] = D;
-      tmp28 = D;
-      tmp27 = rect;
-    } else {
-      class D {
-        constructor() {
-          return closure_5((arg0) => !arg0);
-        }
-      }
-      tmp28 = cResult[8];
-    }
-    if (cResult[9] !== tmp25) {
-      class D {
-        constructor() {
-          return closure_5((arg0) => !arg0);
-        }
-      }
-      tmp30[0] = tmp25;
-      tmp30[1] = tmp28;
-      tmp30[2] = tmp27;
-      cResult[9] = tmp25;
-      cResult[10] = tmp30;
-    } else {
-      class D {
-        constructor() {
-          return closure_5((arg0) => !arg0);
-        }
-      }
-    }
-    if (cResult[11] === tmp7) {
-      class D {
-        constructor() {
-          return closure_5((arg0) => !arg0);
-        }
-      }
-    }
-    const tmp33 = jsx(TextInput_TextInput.TextInput, { autoFocus: true, required: true, textContentType: "password", label: tmp21, autoComplete: "current-password", autoCapitalize: "none", errorMessage: tmp7, returnKeyType: "done", onChange: tmp10, onSubmitEditing: tmp17, disabled: tmp12 || tmp14, secureTextEntry: !tmp16, trailingIcon: EyeIcon, trailingPressableProps: tmp30 });
-    cResult[11] = tmp7;
-    cResult[12] = tmp17;
-    cResult[13] = tmp30;
-    cResult[14] = tmp12 || tmp14;
-    cResult[15] = !tmp16;
-    cResult[16] = EyeIcon;
-    cResult[17] = tmp33;
-  }
-  let closure_0 = _asyncToGenerator(async () => {
-    let closure_3;
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        const rect = { top: 8, bottom: 8 };
+        cResult[7] = rect;
+        cResult[8] = D;
+        let tmp28 = D;
+        const tmp27 = rect;
       } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      let v0;
-      try {
-        let closure_1;
-        let message2;
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            const data = tmp;
-            closure_1 = tmp4;
-            message2 = undefined;
-            closure_1(null);
-            tmp28(true);
-            v0 = 1;
-            const obj4 = { mfaType: "password", data };
-            c5 = 2;
-            c6 = 1;
-            const obj5 = { value: message2(obj4), done: false };
-            return obj5;
+        class D {
+          constructor() {
+            return closure_5((arg0) => !arg0);
           }
-        } else {
-          if (1 === c5) {
-            v0 = 0;
-            message2 = tmp28;
-            const body = message2.body;
-            let message;
-            const tmp12 = closure_1;
-            if (body != null) {
-              message = body.message;
-            }
-            message2 = message;
-            if (message == null) {
-              message2 = message2.message;
-            }
-            tmp12(message2);
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            v0 = 0;
-            c6 = 3;
-            const obj = { value, done: true };
-            return obj;
-          } else {
-            v0(true);
-            v0 = 0;
-          }
-          tmp28(false);
-          c6 = 3;
-          return { value: "IconComponent", done: null };
         }
-      } catch (tmp28) {
-        if (0 === v0) {
-          c6 = 3;
-          throw tmp28;
-        } else {
-          c5 = 1;
+        tmp28 = cResult[8];
+      }
+      if (cResult[9] !== cResult[6]) {
+        class D {
+          constructor() {
+            return closure_5((arg0) => !arg0);
+          }
+        }
+        tmp30[0] = tmp24;
+        tmp30[1] = tmp28;
+        tmp30[2] = tmp27;
+        cResult[9] = tmp24;
+        cResult[10] = tmp30;
+      } else {
+        class D {
+          constructor() {
+            return closure_5((arg0) => !arg0);
+          }
         }
       }
+      if (cResult[11] === tmp7) {
+        class D {
+          constructor() {
+            return closure_5((arg0) => !arg0);
+          }
+        }
+      }
+      const obj3 = { autoFocus: true, required: true, textContentType: "password", label: tmp20, autoComplete: "current-password", autoCapitalize: "none", errorMessage: tmp7, returnKeyType: "done", onChange: tmp8[1], onSubmitEditing: tmp16, disabled: tmp22, secureTextEntry: tmp23, trailingIcon: EyeIcon, trailingPressableProps: tmp30 };
+      const tmp33 = jsx(TextInput.TextInput, { autoFocus: true, required: true, textContentType: "password", label: tmp20, autoComplete: "current-password", autoCapitalize: "none", errorMessage: tmp7, returnKeyType: "done", onChange: tmp8[1], onSubmitEditing: tmp16, disabled: tmp22, secureTextEntry: tmp23, trailingIcon: EyeIcon, trailingPressableProps: tmp30 });
+      cResult[11] = tmp7;
+      cResult[12] = tmp16;
+      cResult[13] = tmp30;
+      cResult[14] = tmp22;
+      cResult[15] = tmp23;
+      cResult[16] = EyeIcon;
+      cResult[17] = tmp33;
     }
+  }
+  closure_0 = asyncGeneratorStep(async () => {
+    const data = tmp3;
+    closure_1(null);
+    tmp31(true);
+    let v0 = 1;
+    await message({ mfaType: "password", data });
+    if (1 === tmp7) {
+      v0 = 0;
+      closure_129_0 = tmp31;
+      const body = closure_129_0.body;
+      message = undefined;
+      if (body != null) {
+        message = body.message;
+      }
+      if (message == null) {
+        message = closure_129_0.message;
+      }
+      closure_1(message);
+      tmp31(false);
+      c6 = 3;
+    } else if (arg0 === 1) {
+      c6 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      v0(true);
+      v0 = 0;
+    }
+    v0 = 0;
+    return value;
   });
   function sendPassword() {
-    return closure_0(...arguments);
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   }
   cResult[0] = finish;
   cResult[1] = first;
   cResult[2] = sendPassword;
-  tmp17 = sendPassword;
+  tmp16 = sendPassword;
+  const tmp14 = _slicedToArray(noop.useState(false), 2);
 }) : ((finish) => {
-  let EyeIcon;
-  let _undefined;
-  let c3;
-  let c4;
-  let c5;
-  let first;
-  let first1;
-  let intl2;
-  let intl4;
-  let stringResult;
-  let tmp10;
-  let tmp12;
-  let tmp14;
-  let tmp21;
-  let tmp8;
   finish = finish.finish;
   importDefault = undefined;
-  first1 = undefined;
+  let first;
   c3 = undefined;
   _slicedToArray = undefined;
-  react = undefined;
+  noop = undefined;
   function sendPassword() {
-    return obj(...arguments);
+    const self = this;
+    const apply = closure_6.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   }
-  let obj = function _sendPassword2() {
-    let data;
-    obj = _asyncToGenerator(async () => {
-      if (c6 === 2) {
-        c6 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              let closure_2 = tmp;
-              closure_1 = tmp4;
-              closure_2_1(null);
-              _undefined(true);
-              c4 = 1;
-              const obj4 = { mfaType: "password", data };
-              c5 = 2;
-              c6 = 1;
-              const obj5 = { value: finish(obj4), done: false };
-              return obj5;
-            }
-          } else {
-            if (1 === c5) {
-              c4 = 0;
-              let message2 = closure_3;
-              const body = message2.body;
-              let message;
-              if (body != null) {
-                message = body.message;
-              }
-              message2 = message;
-              if (message == null) {
-                message2 = message2.message;
-              }
-              closure_130_1(message2);
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 0;
-              c6 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              closure_130_4(true);
-              c4 = 0;
-            }
-            closure_130_3(false);
-            c6 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp28) {
-          closure_3 = tmp28;
-          if (0 === c4) {
-            c6 = 3;
-            throw tmp28;
-          } else {
-            c5 = 1;
-          }
-        }
+  closure_6 = async function _sendPassword2() {
+    closure_2 = tmp3;
+    importDefault(null);
+    asyncGeneratorStep(true);
+    await finish({ mfaType: "password", data });
+    if (1 === tmp7) {
+      c4 = 0;
+      closure_129_0 = closure_3;
+      const body = closure_129_0.body;
+      let message;
+      if (body != null) {
+        message = body.message;
       }
-    });
-    return obj(...arguments);
+      if (message == null) {
+        message = closure_129_0.message;
+      }
+      closure_130_1(message);
+      closure_130_3(false);
+      c6 = 3;
+    } else if (arg0 === 1) {
+      c6 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      closure_130_4(true);
+      c4 = 0;
+    }
+    return value;
   };
-  const mfaChallenge = finish.mfaChallenge;
   const tmp = importDefault;
   const tmp3 = require("useWideAuthView")();
-  obj = require("MfaScreenUtils");
-  const screenStyles = obj.useScreenStyles(tmp3);
-  [first, importDefault] = react.useState(null);
-  [first1, tmp8] = react.useState("");
-  [tmp10, c3] = _slicedToArray(react.useState(false), 2);
-  const tmp9 = _slicedToArray(react.useState(false), 2);
-  [tmp12, c4] = _slicedToArray(react.useState(false), 2);
-  const tmp11 = _slicedToArray(react.useState(false), 2);
-  [tmp14, c5] = _slicedToArray(react.useState(false), 2);
-  const tmp13 = _slicedToArray(react.useState(false), 2);
-  require("MfaOptionScreen");
-  const intl = finish(first1[9]).intl;
-  let obj3 = { style: screenStyles.inputContainer, children: null };
-  let obj4 = {
-    autoFocus: true,
-    required: true,
-    textContentType: "password",
-    label: intl2.string(finish(first1[9]).t["CIGa+7"]),
-    autoComplete: "current-password",
-    autoCapitalize: "none",
-    errorMessage: first,
-    returnKeyType: "done",
-    onChange: tmp8,
-    onSubmitEditing: sendPassword,
-    disabled: tmp12 || tmp12,
-    secureTextEntry: !tmp14,
-    trailingIcon: EyeIcon,
-    trailingPressableProps: {
-      accessibilityLabel: stringResult,
-      onPress() {
-        return _undefined((arg0) => !arg0);
-      },
-      hitSlop: { top: 8, bottom: 8 }
-    }
-  };
-  const TextInput = finish(first1[12]).TextInput;
-  intl2 = finish(first1[9]).intl;
-  if (tmp14) {
-    EyeIcon = tmp17(tmp2[10]).EyeSlashIcon;
-  } else {
-    EyeIcon = tmp17(tmp2[11]).EyeIcon;
+  const screenStyles = require("MfaScreenUtils").useScreenStyles(tmp3);
+  [obj4.errorMessage, importDefault] = noop.useState(null);
+  const tmp6 = _slicedToArray(noop.useState(""), 2);
+  first = tmp6[0];
+  const obj = require("MfaScreenUtils");
+  [tmp8, c3] = _slicedToArray(noop.useState(false), 2);
+  const tmp7 = _slicedToArray(noop.useState(false), 2);
+  [tmp10, c4] = _slicedToArray(noop.useState(false), 2);
+  const tmp9 = _slicedToArray(noop.useState(false), 2);
+  [tmp12, c5] = _slicedToArray(noop.useState(false), 2);
+  const obj2 = { headerText: null, input: null, submit: null, screenProps: null, mfaMethod: "password" };
+  const tmp11 = _slicedToArray(noop.useState(false), 2);
+  const intl = finish(first[9]).intl;
+  obj2.headerText = intl.string(finish(first[9]).t.Rw1XuM);
+  const obj3 = { style: screenStyles.inputContainer, children: null };
+  const obj4 = { autoFocus: true, required: true, textContentType: "password", label: null, autoComplete: "current-password", autoCapitalize: "none", errorMessage: null, returnKeyType: "done", onChange: null, onSubmitEditing: null, disabled: null, secureTextEntry: null, trailingIcon: null, trailingPressableProps: null };
+  const intl2 = finish(first[9]).intl;
+  obj4.label = intl2.string(finish(first[9]).t["CIGa+7"]);
+  obj4.onChange = tmp6[1];
+  obj4.onSubmitEditing = sendPassword;
+  let tmp17 = tmp10;
+  if (!tmp10) {
+    tmp17 = tmp10;
   }
-  const intl3 = tmp17(tmp2[9]).intl;
+  obj4.disabled = tmp17;
+  obj4.secureTextEntry = !tmp12;
+  if (tmp12) {
+    let EyeIcon = tmp15(tmp2[10]).EyeSlashIcon;
+  } else {
+    EyeIcon = tmp15(tmp2[11]).EyeIcon;
+  }
+  obj4.trailingIcon = EyeIcon;
+  const intl3 = tmp15(tmp2[9]).intl;
   const string = intl3.string;
-  const t = tmp17(tmp2[9]).t;
-  if (tmp14) {
-    stringResult = string(t.Nusip4);
+  const t = tmp15(tmp2[9]).t;
+  if (tmp12) {
+    let stringResult = string(t.Nusip4);
   } else {
     stringResult = string(t.nFzpM5);
   }
-  let obj5 = { text: intl4.string(tmp17(first1[9]).t.geKm7t), disabled: tmp21, loading: tmp12, onPress: sendPassword };
-  tmp(first1[13]);
-  intl4 = tmp17(tmp2[9]).intl;
-  tmp21 = tmp12 || tmp12;
-  if (!tmp21) {
-    tmp21 = 0 === first1.length;
+  obj4.trailingPressableProps = {
+    accessibilityLabel: stringResult,
+    onPress() {
+      return _undefined((arg0) => !arg0);
+    },
+    hitSlop: { top: 8, bottom: 8 }
+  };
+  obj3.children = jsx(finish(first[12]).TextInput, { autoFocus: true, required: true, textContentType: "password", label: null, autoComplete: "current-password", autoCapitalize: "none", errorMessage: null, returnKeyType: "done", onChange: null, onSubmitEditing: null, disabled: null, secureTextEntry: null, trailingIcon: null, trailingPressableProps: null });
+  obj2.input = <closure_6 style={screenStyles.inputContainer}>{null}</closure_6>;
+  const obj5 = { text: null, disabled: null, loading: null, onPress: null };
+  const tmp14 = require("MfaOptionScreen");
+  const intl4 = tmp15(tmp2[9]).intl;
+  obj5.text = intl4.string(finish(first[9]).t.geKm7t);
+  let tmp20 = tmp10;
+  if (!tmp10) {
+    tmp20 = tmp10;
   }
-  return <tmp16 headerText={intl.string(finish(first1[9]).t.Rw1XuM)} input={null} submit={null} screenProps={{ mfaChallenge, finish }} mfaMethod="password" />;
+  if (!tmp20) {
+    tmp20 = 0 === first.length;
+  }
+  obj5.disabled = tmp20;
+  obj5.loading = tmp10;
+  obj5.onPress = sendPassword;
+  obj2.submit = jsx(tmp(first[13]), { text: null, disabled: null, loading: null, onPress: null });
+  obj2.screenProps = { mfaChallenge: finish.mfaChallenge, finish };
+  return <tmp14 headerText={null} input={null} submit={null} screenProps={null} mfaMethod="password" />;
 });
-const result = size.fileFinishedImporting("modules/mfa/native/screens/PasswordScreen.tsx");
-
-export default tmp2;

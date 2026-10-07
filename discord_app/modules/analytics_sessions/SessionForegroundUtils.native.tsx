@@ -1,10 +1,10 @@
-// === Module 6984: react-native ===
+// === Module 6984: SessionForegroundUtils ===
 
-// Module 6984 (react-native)
-import react_native from "react-native" /* 17 */;
+// Module 6984 (SessionForegroundUtils)
+import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 
-const AppState = react_native.AppState;
+const AppState = _mod17.AppState;
 const result = size.fileFinishedImporting("modules/analytics_sessions/SessionForegroundUtils.native.tsx");
 
 export const isForegrounded = function isForegrounded() {

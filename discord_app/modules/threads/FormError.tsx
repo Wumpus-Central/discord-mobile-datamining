@@ -1,7 +1,7 @@
 // === Module 16804: threads/FormError ===
 
 // Module 16804 (threads/FormError)
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import AutomodErrorUtils from "AutomodErrorUtils" /* 7609 */;
 import size from "module_2" /* 2 */;
 
@@ -10,51 +10,48 @@ const result = size.fileFinishedImporting("modules/threads/FormError.tsx");
 
 export { FormSubmitErrorType };
 export const makeEmptyTitleError = function makeEmptyTitleError() {
-  let obj;
-  const intl = intl2.intl;
-  let stringResult = intl.string(intl2.t.uXA573);
-  obj = { type: obj.EmptyContent, message: stringResult };
+  const intl = util.intl;
+  let stringResult = intl.string(util.t.uXA573);
+  obj = { type: obj.EmptyContent, message: null };
   if (stringResult == null) {
     stringResult = null;
   }
+  obj.message = stringResult;
   return obj;
 };
 export const makeEmptyMessageError = function makeEmptyMessageError() {
-  let obj;
-  const intl = intl2.intl;
-  let stringResult = intl.string(intl2.t.kesTVT);
-  obj = { type: obj.EmptyContent, message: stringResult };
+  const intl = util.intl;
+  let stringResult = intl.string(util.t.kesTVT);
+  obj = { type: obj.EmptyContent, message: null };
   if (stringResult == null) {
     stringResult = null;
   }
+  obj.message = stringResult;
   return obj;
 };
 export const makeApiNameRequiredError = function makeApiNameRequiredError() {
-  let obj;
-  const ApiValidation = obj.ApiValidation;
-  const intl = intl2.intl;
-  let stringResult = intl.string(intl2.t.uXA573);
-  obj = { type: ApiValidation, message: stringResult };
+  const intl = util.intl;
+  let stringResult = intl.string(util.t.uXA573);
+  obj = { type: obj.ApiValidation, message: null };
   if (stringResult == null) {
     stringResult = null;
   }
+  obj.message = stringResult;
   return obj;
 };
 export const makeAutomodViolationError = function makeAutomodViolationError(errorResponseBody, id) {
-  let obj;
-  const AutomodViolation = obj.AutomodViolation;
+  const obj = AutomodErrorUtils;
   id = undefined;
-  const getAutomodErrorMessageFromErrorResponse = AutomodErrorUtils.getAutomodErrorMessageFromErrorResponse;
-  AutomodErrorUtils;
   if (id != null) {
     id = id.id;
   }
-  let automodErrorMessageFromErrorResponse = getAutomodErrorMessageFromErrorResponse(errorResponseBody, id);
-  obj = { type: AutomodViolation, message: automodErrorMessageFromErrorResponse };
+  let automodErrorMessageFromErrorResponse = obj.getAutomodErrorMessageFromErrorResponse(errorResponseBody, id);
+  const obj2 = { type: obj.AutomodViolation, message: null };
   if (automodErrorMessageFromErrorResponse == null) {
     automodErrorMessageFromErrorResponse = null;
   }
-  return obj;
+  obj2.message = automodErrorMessageFromErrorResponse;
+  return obj2;
 };
 export const renderError = function renderError(type, content) {
   let tmp = null;

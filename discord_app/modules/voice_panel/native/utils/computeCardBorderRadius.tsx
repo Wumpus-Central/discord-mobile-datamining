@@ -7,9 +7,6 @@ import size from "module_2" /* 2 */;
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const DEFAULT_BORDER_RADIUS_PIP = VoicePanelConstants.DEFAULT_BORDER_RADIUS_PIP;
 const fn = function o(arg0) {
-  let defaultBorderRadius;
-  let focused;
-  let mode;
   ({ mode, focused, defaultBorderRadius } = arg0);
   if (mode === VoicePanelModes.PANEL) {
     if (null != focused) {

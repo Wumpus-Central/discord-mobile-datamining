@@ -1,13 +1,13 @@
-// === Module 1883: react-native ===
+// === Module 1883: readAppEntryWindowMetrics ===
 
-// Module 1883 (react-native)
-import react_nativeDefault from "react-native" /* 1353 */;
+// Module 1883 (readAppEntryWindowMetrics)
+import NativeDeviceModuleDefault from "NativeDeviceModule" /* 1353 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/screen/native/readAppEntryWindowMetrics.android.tsx");
 
 export const readWindowSizeForAppEntry = function readWindowSizeForAppEntry(appEntryKey) {
-  const obj = react_nativeDefault;
+  const obj = NativeDeviceModuleDefault;
   let windowSize;
   if (obj != null) {
     windowSize = obj.getWindowSize(appEntryKey);
@@ -15,7 +15,7 @@ export const readWindowSizeForAppEntry = function readWindowSizeForAppEntry(appE
   return windowSize;
 };
 export const readScreenSizeForAppEntry = function readScreenSizeForAppEntry(appEntryKey) {
-  const obj = react_nativeDefault;
+  const obj = NativeDeviceModuleDefault;
   let screenSize;
   if (obj != null) {
     screenSize = obj.getScreenSize(appEntryKey);

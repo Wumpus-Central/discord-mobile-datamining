@@ -9,11 +9,10 @@ const result = size.fileFinishedImporting("modules/connections/FederatedSocialUt
 
 export const validateHandle = function validateHandle(arg0, platformType) {
   if (platformType === PlatformTypes.MASTODON) {
+    const isMatch = /^@?[a-z0-9_]+([.-]+[a-z0-9_]+)*@[^@]+\.[^.@]{2,}$/i.test(arg0);
     const obj = /^@?[a-z0-9_]+([.-]+[a-z0-9_]+)*@[^@]+\.[^.@]{2,}$/i;
-    const isMatch = obj.test(arg0);
   }
-  const obj2 = /^.+\.[^.@]{2,}$/;
-  return obj2.test(arg0);
+  return /^.+\.[^.@]{2,}$/.test(arg0);
 };
 export const getExampleHandle = function getExampleHandle(platformType) {
   let str = "@example@mastodon.social";

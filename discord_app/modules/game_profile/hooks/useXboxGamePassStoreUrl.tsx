@@ -17,8 +17,7 @@ export default function useXboxGamePassStoreUrl(thirdPartySkus) {
     const found = thirdPartySkus.find((distributor) => {
       let tmp = distributor.distributor === constants.XBOX_GAME_PASS;
       if (tmp) {
-        const obj = StringUtils;
-        tmp = !obj.isNullOrEmpty(distributor.id);
+        tmp = !StringUtils.isNullOrEmpty(distributor.id);
       }
       return tmp;
     });
@@ -28,8 +27,7 @@ export default function useXboxGamePassStoreUrl(thirdPartySkus) {
     }
     let xboxGamePassStoreUrl = null;
     if (null != id) {
-      let obj = distributorStoreUrls;
-      xboxGamePassStoreUrl = obj.buildXboxGamePassStoreUrl(found.id);
+      xboxGamePassStoreUrl = distributorStoreUrls.buildXboxGamePassStoreUrl(found.id);
     }
     return xboxGamePassStoreUrl;
   }

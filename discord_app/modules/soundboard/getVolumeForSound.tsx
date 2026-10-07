@@ -4,8 +4,9 @@
 import UserSettings from "UserSettings" /* 2028 */;
 import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5690 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import size from "module_2" /* 2 */;
 
+require = fn;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/getVolumeForSound.tsx");
 
 export default function getVolumeForSound(arg0) {
@@ -22,16 +23,13 @@ export default function getVolumeForSound(arg0) {
     }
     tmp = num;
   }
-  const obj = PerceptualVolumeUtils;
-  const result = obj.amplitudeToPerceptual(tmp) / 100;
+  const result = PerceptualVolumeUtils.amplitudeToPerceptual(tmp) / 100;
   return Math.min(arg0 * result * Math.min(MediaEngineStore.getOutputVolume() / 100, 1), 1);
 };
 export const getPerceptualSoundboardVolume = function getPerceptualSoundboardVolume(USER) {
   let num = USER;
-  const amplitudeToPerceptual = PerceptualVolumeUtils.amplitudeToPerceptual;
-  PerceptualVolumeUtils;
   if (USER == null) {
     num = 100;
   }
-  return amplitudeToPerceptual(num) / 100;
+  return PerceptualVolumeUtils.amplitudeToPerceptual(num) / 100;
 };

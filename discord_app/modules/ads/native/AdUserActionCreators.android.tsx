@@ -3,143 +3,130 @@
 // Module 7234 (AdUserActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import react_nativeDefault from "react-native" /* 7235 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import NativeAdsModuleDefault from "NativeAdsModule" /* 7235 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AdUserStore from "AdUserStore" /* 7232 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-let adUser, duration_ms, duration_ms2, googleAdvertisingId, message;
-
-let closure_4;
-let hasOwnProperty;
-let obj = function _fetchAdUser() {
-  obj = _asyncToGenerator(async (_location) => {
-    let closure_2;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
-    return (async (arg0) => {
-      let googleAdvertisingId1;
-      if (c6 === 2) {
-        c6 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+let closure_6 = async function _fetchAdUser(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
+          c6 = 3;
           throw value;
         } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        let c4;
-        try {
-          let closure_1;
-          let tmp;
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              return { value, done: true };
-            } else {
-              closure_1 = undefined;
-              tmp = undefined;
-              duration_ms = undefined;
-              duration_ms2 = undefined;
-              if (null != adUser.adUser) {
-                if (null != adUser.adUser.advertisingId) {
-                  adUser = tmp80.adUser;
-                  const obj3 = { has_advertising_id: true, android_advertising_id: adUser.advertisingId, location: tmp79, success: true, last_fetched_timestamp: adUser.lastFetchedAt };
-                  const obj6 = AnalyticsUtilsDefault;
-                  obj6.track(constants.AD_IDENTIFIER_FETCHED, obj3);
-                }
-              }
-              const _performance2 = performance;
-              closure_1 = performance.now();
-              c4 = 1;
-              const obj8 = DispatcherDefault;
-              obj8.dispatch({ type: "FETCH_AD_USER_START" });
-              const obj9 = react_nativeDefault;
-              googleAdvertisingId = obj9.getGoogleAdvertisingId();
-              c5 = 2;
-              c6 = 1;
-              return { value: googleAdvertisingId, done: false };
-            }
-          } else if (1 === tmp4) {
-            c4 = 0;
-            message = duration_ms;
-            const _performance = performance;
-            duration_ms2 = performance.now() - closure_1;
-            googleAdvertisingId = { platform: closure_130_5.ANDROID, success: false, duration_ms: duration_ms2, error_message: message };
-            const _Error = Error;
-            const track = closure_130_0(closure_130_1[3]).track;
-            const AD_USER_FETCH_DURATION = closure_130_4.AD_USER_FETCH_DURATION;
-            closure_130_0(closure_130_1[3]);
-            if (message instanceof Error) {
-              message = message.message;
-            } else {
-              const _String = String;
-              message = String(message);
-            }
-            track(AD_USER_FETCH_DURATION, googleAdvertisingId);
-            const obj7 = { has_advertising_id: false, location: _location, success: false };
-            const obj4 = closure_130_0(closure_130_1[3]);
-            obj4.track(closure_130_4.AD_IDENTIFIER_FETCHED, obj7);
-            googleAdvertisingId = closure_130_0(closure_130_1[4]).dispatch;
-            closure_130_0(closure_130_1[4]);
-            googleAdvertisingId({ type: "FETCH_AD_USER_FAILURE" });
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            c6 = 3;
-            return { value, done: true };
-          } else {
-            tmp = value;
-            const _performance3 = performance;
-            duration_ms = performance.now() - closure_1;
-            const obj11 = { platform: closure_130_5.ANDROID, success: true, duration_ms, has_advertising_id: null != tmp.googleAdvertisingId, is_limit_ad_tracking_enabled: tmp.isLimitAdTrackingEnabled };
-            const obj13 = closure_130_0(closure_130_1[3]);
-            obj13.track(closure_130_4.AD_USER_FETCH_DURATION, obj11);
-            googleAdvertisingId = { has_advertising_id: null != tmp.googleAdvertisingId, android_advertising_id: googleAdvertisingId1, location: _location, success: true };
-            googleAdvertisingId1 = null;
-            const track2 = closure_130_0(closure_130_1[3]).track;
-            const AD_IDENTIFIER_FETCHED = closure_130_4.AD_IDENTIFIER_FETCHED;
-            closure_130_0(closure_130_1[3]);
-            if (null != tmp.googleAdvertisingId) {
-              googleAdvertisingId1 = tmp.googleAdvertisingId;
-            }
-            track2(AD_IDENTIFIER_FETCHED, googleAdvertisingId);
-            googleAdvertisingId = closure_130_0(closure_130_1[4]).dispatch;
-            const obj12 = { type: "FETCH_AD_USER_SUCCESS", advertisingId: tmp.googleAdvertisingId, isLimitAdTrackingEnabled: tmp.isLimitAdTrackingEnabled };
-            closure_130_0(closure_130_1[4]);
-            googleAdvertisingId(obj12);
-            c4 = 0;
-          }
           c6 = 3;
-          return { value: "IconComponent", done: null };
-        } catch (tmp54) {
-          duration_ms = tmp54;
-          if (0 === c4) {
-            c6 = 3;
-            throw tmp54;
-          } else {
-            c5 = 1;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp3;
+          closure_1 = tmp5;
+          closure_129_0 = closure_0;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          if (null != adUser.adUser) {
+            if (null != adUser.adUser.advertisingId) {
+              const obj5 = { has_advertising_id: true, android_advertising_id: adUser.adUser.advertisingId, location: tmp80, success: true, last_fetched_timestamp: adUser.lastFetchedAt };
+              AnalyticsUtilsDefault.track(constants.AD_IDENTIFIER_FETCHED, obj5);
+              c6 = 3;
+            }
           }
+          const _performance2 = performance;
+          closure_129_1 = performance.now();
+          c4 = 1;
+          DispatcherDefault.dispatch({ type: "FETCH_AD_USER_START" });
+          c5 = 2;
+          c6 = 1;
+          const obj7 = { value: NativeAdsModuleDefault.getGoogleAdvertisingId(), done: false };
+          return obj7;
         }
+      } else if (1 === tmp8) {
+        c4 = 0;
+        closure_129_5 = closure_3;
+        const _performance = performance;
+        closure_129_4 = performance.now() - closure_129_1;
+        const obj10 = { platform: closure_130_5.ANDROID, success: false, duration_ms: closure_129_4, error_message: null };
+        const _Error = Error;
+        if (closure_129_5 instanceof Error) {
+          let message = closure_129_5.message;
+        } else {
+          const _String = String;
+          message = String(closure_129_5);
+        }
+        obj10.error_message = message;
+        closure_130_0(closure_130_1[3]).track(closure_130_4.AD_USER_FETCH_DURATION, obj10);
+        const obj4 = closure_130_0(closure_130_1[3]);
+        const obj13 = { has_advertising_id: false, location: closure_129_0, success: false };
+        closure_130_0(closure_130_1[3]).track(closure_130_4.AD_IDENTIFIER_FETCHED, obj13);
+        const obj6 = closure_130_0(closure_130_1[3]);
+        closure_130_0(closure_130_1[4]).dispatch({ type: "FETCH_AD_USER_FAILURE" });
+        const obj8 = closure_130_0(closure_130_1[4]);
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        closure_129_2 = value;
+        const _performance3 = performance;
+        closure_129_3 = performance.now() - closure_129_1;
+        const obj14 = { platform: closure_130_5.ANDROID, success: true, duration_ms: closure_129_3, has_advertising_id: null != closure_129_2.googleAdvertisingId, is_limit_ad_tracking_enabled: closure_129_2.isLimitAdTrackingEnabled };
+        closure_130_0(closure_130_1[3]).track(closure_130_4.AD_USER_FETCH_DURATION, obj14);
+        const obj16 = closure_130_0(closure_130_1[3]);
+        const obj15 = { has_advertising_id: null != closure_129_2.googleAdvertisingId, android_advertising_id: null, location: null, success: true };
+        let googleAdvertisingId = null;
+        if (null != closure_129_2.googleAdvertisingId) {
+          googleAdvertisingId = closure_129_2.googleAdvertisingId;
+        }
+        obj15.android_advertising_id = googleAdvertisingId;
+        obj15.location = closure_129_0;
+        closure_130_0(closure_130_1[3]).track(closure_130_4.AD_IDENTIFIER_FETCHED, obj15);
+        const obj18 = closure_130_0(closure_130_1[3]);
+        const obj17 = { type: "FETCH_AD_USER_SUCCESS", advertisingId: closure_129_2.googleAdvertisingId, isLimitAdTrackingEnabled: closure_129_2.isLimitAdTrackingEnabled };
+        closure_130_0(closure_130_1[4]).dispatch(obj17);
+        c4 = 0;
+        const obj = closure_130_0(closure_130_1[4]);
       }
-    })();
-  });
-  return obj(...arguments);
+      c4 = 0;
+      c6 = 3;
+      const obj19 = { value, done: true };
+      return obj19;
+    } catch (tmp55) {
+      closure_3 = tmp55;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp55;
+      } else {
+        c5 = tmp;
+      }
+    }
+  }
 };
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_4, Platforms: hasOwnProperty } = Constants);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/native/AdUserActionCreators.android.tsx");
 
 export const fetchAdUser = function fetchAdUser() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_6.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

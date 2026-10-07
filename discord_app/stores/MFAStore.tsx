@@ -2,35 +2,33 @@
 
 // Module 13573 (MFAStore)
 import _modDef12 from "module_12" /* 12 */;
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import TokenManagerAll from "TokenManager" /* 1111 */;
-import size from "module_2" /* 2 */;
 
 let c3 = false;
-let codes = [];
-const key = "";
+let closure_4 = [];
 let c6 = false;
 let nonces = { viewNonce: "", regenerateNonce: "" };
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class MFAStore extends Store {
-  getVerificationKey() {
-    return key;
-  }
-  getBackupCodes() {
-    return codes;
-  }
-  getNonces() {
-    return nonces;
-  }
 }
 const prototype = MFAStore.prototype;
+prototype["getVerificationKey"] = function getVerificationKey() {
+  return key;
+};
+prototype["getBackupCodes"] = function getBackupCodes() {
+  return closure_4;
+};
 Object.defineProperty(prototype, "togglingSMS", {
   get: function togglingSMS() {
     return c3;
   },
   set: undefined
 });
+prototype["getNonces"] = function getNonces() {
+  return nonces;
+};
 Object.defineProperty(prototype, "hasSeenBackupPrompt", {
   get: function hasSeenBackupPrompt() {
     return c6;
@@ -38,19 +36,16 @@ Object.defineProperty(prototype, "hasSeenBackupPrompt", {
   set: undefined
 });
 MFAStore.displayName = "MFAStore";
-let obj = {
+const mFAStore = new MFAStore(DispatcherDefault, {
   MFA_ENABLE_SUCCESS: function handleEnableSuccess(token) {
     token = token.token;
-    codes = token.codes;
     if (undefined !== token) {
-      const obj = TokenManagerAll;
-      obj.setToken(token);
+      TokenManagerAll.setToken(token);
     }
+    const codes = token.codes;
   },
   MFA_DISABLE_SUCCESS: function handleDisableSuccess(token) {
-    token = token.token;
-    const obj = TokenManagerAll;
-    obj.setToken(token);
+    TokenManagerAll.setToken(token.token);
   },
   MFA_SMS_TOGGLE: function handleSMSToggle() {
     c3 = true;
@@ -59,12 +54,11 @@ let obj = {
     c3 = false;
   },
   MFA_CLEAR_BACKUP_CODES: function handleClearBackupCodes() {
-    codes = [];
+    closure_4 = [];
   },
   MFA_VIEW_BACKUP_CODES: function handleGetBackupCodes(arg0) {
     ({ codes, key } = arg0);
-    const obj = _modDef12;
-    codes = obj.sortBy(codes, "code");
+    closure_4 = _modDef12.sortBy(codes, "code");
   },
   MFA_SEND_VERIFICATION_KEY: function handleSendVerificationEmail(nonces) {
     nonces = nonces.nonces;
@@ -75,8 +69,8 @@ let obj = {
   CONNECTION_OPEN() {
 
   }
-};
-const mFAStore = new MFAStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/MFAStore.tsx");
 
 export default mFAStore;

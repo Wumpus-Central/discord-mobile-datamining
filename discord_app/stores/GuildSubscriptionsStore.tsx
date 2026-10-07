@@ -1,12 +1,11 @@
 // === Module 6791: GuildSubscriptionsStore ===
 
 // Module 6791 (GuildSubscriptionsStore)
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import FavoritesUtils from "FavoritesUtils" /* 2077 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 6792 */;
 import GuildSubscriptionsDefault from "GuildSubscriptions" /* 6797 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import _slicedToArray from "module_32" /* 32 */;
 import ExperimentStore from "ExperimentStore" /* 4782 */;
 import LurkingStore from "LurkingStore" /* 4516 */;
 import SpotifyStore from "SpotifyStore" /* 5446 */;
@@ -20,25 +19,22 @@ import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import RelationshipStore from "RelationshipStore" /* 4525 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-let dependencyMap, importDefault, set;
-
-let ChannelSections;
-let closure_19;
+require = fn;
 function handleConnectionOpenOrResumed(type) {
-  let closure_2;
   let obj4;
-  set = undefined;
+  let set;
   dependencyMap = undefined;
   if ("CONNECTION_OPEN" === type.type) {
-    let c0 = true;
-    let c1 = false;
+    closure_129_0 = true;
+    closure_129_1 = false;
     subscriptions = {};
+    closure_129_2 = subscriptions;
     const item = closure_20.forEach((item) => {
-      let tmp = item === SelectedGuildStore.getGuildId() || item === RTCConnectionStore.getGuildId();
+      let tmp = item === SelectedGuildStore.getGuildId();
+      if (!tmp) {
+        tmp = item === RTCConnectionStore.getGuildId();
+      }
       if (!tmp) {
         const channel = ChannelStore.getChannel(SelectedChannelStore.getChannelId());
         let guildId;
@@ -48,8 +44,11 @@ function handleConnectionOpenOrResumed(type) {
         tmp = item === guildId;
       }
       if (!tmp) {
-        tmp = null != obj && obj.guildId === item;
-        const tmp9 = null != obj && obj.guildId === item;
+        let tmp9 = null != obj;
+        if (tmp9) {
+          tmp9 = obj.guildId === item;
+        }
+        tmp = tmp9;
       }
       if (!tmp) {
         closure_20.clearWithoutFlushing(item, c0);
@@ -58,19 +57,18 @@ function handleConnectionOpenOrResumed(type) {
         }
       }
     });
-    const obj2 = set(12);
-    const tmp3 = set;
     if (!obj2.isEmpty(subscriptions)) {
       const obj3 = { type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions };
+      tmp3(584).dispatch(obj3);
       const tmp3Result = tmp3(584);
-      tmp3Result.dispatch(obj3);
     }
+    obj2 = set(12);
+    tmp3 = set;
   }
   const guildId = SelectedGuildStore.getGuildId();
   if (null != guildId) {
     const channelId = SelectedChannelStore.getChannelId(guildId);
     let tmp11 = guildId;
-    const obj5 = obj4(2077);
     if (obj5.isFavoritesGuildId(guildId)) {
       tmp11 = guildId;
       if (null != channelId) {
@@ -86,6 +84,7 @@ function handleConnectionOpenOrResumed(type) {
       }
     }
     closure_20.subscribeToGuild(tmp11);
+    obj5 = obj4(2077);
   }
   obj4 = {};
   set = new Set(LurkingStore.lurkingGuildIds());
@@ -94,29 +93,29 @@ function handleConnectionOpenOrResumed(type) {
     if (null == GuildStore.getGuild(item)) {
       closure_20.clearWithoutFlushing(item, true);
     } else {
-      const hasItem = set.has(item) && item !== closure_2;
+      let hasItem = set.has(item);
+      if (hasItem) {
+        hasItem = item !== closure_2;
+      }
       if (!hasItem) {
         obj4[item] = closure_20.get(item);
       }
     }
   });
-  const obj8 = set(12);
-  const tmp18 = set;
   if (!obj8.isEmpty(obj4)) {
     const obj6 = { type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: obj4 };
+    tmp18(584).dispatch(obj6);
     const tmp18Result = tmp18(584);
-    tmp18Result.dispatch(obj6);
   }
+  obj8 = set(12);
+  tmp18 = set;
 }
 function handleChannelSelect(arg0) {
-  let channelId;
-  let guildId;
   ({ guildId, channelId } = arg0);
-  let flag = !GuildAvailabilityStore.isUnavailable(guildId);
-  GuildAvailabilityStore.isUnavailable(guildId);
-  if (flag) {
+  const isUnavailableResult = GuildAvailabilityStore.isUnavailable(guildId);
+  let flag = !isUnavailableResult;
+  if (!isUnavailableResult) {
     let tmp4 = guildId;
-    const obj = FavoritesUtils;
     if (obj.isFavoritesGuildId(guildId)) {
       tmp4 = guildId;
       if (null != channelId) {
@@ -133,6 +132,7 @@ function handleChannelSelect(arg0) {
     }
     closure_20.subscribeToGuild(tmp4);
     flag = false;
+    obj = FavoritesUtils;
   }
   return flag;
 }
@@ -140,7 +140,6 @@ function resubscribe() {
   const guildId = SelectedGuildStore.getGuildId();
   const channelId = SelectedChannelStore.getChannelId();
   let tmp3 = guildId;
-  const obj = FavoritesUtils;
   if (obj.isFavoritesGuildId(guildId)) {
     tmp3 = guildId;
     if (null != channelId) {
@@ -159,7 +158,6 @@ function resubscribe() {
   return false;
 }
 function handleSpotifyUpdate() {
-  let obj;
   const syncingWith = SpotifyStore.getSyncingWith();
   if (null == syncingWith) {
     if (null != obj) {
@@ -188,67 +186,71 @@ function handleSpotifyUpdate() {
   }
   return false;
 }
-const EVERYONE_CHANNEL_ID = ChannelMemberStore.EVERYONE_CHANNEL_ID;
+const EVERYONE_CHANNEL_ID = fn(6792).EVERYONE_CHANNEL_ID;
+const Constants = fn(1085);
 ({ ChannelSections, ChannelTypes: closure_19 } = Constants);
-let tmp3 = new GuildSubscriptionsDefault((subscriptions) => {
-  for (const key10004 in subscriptions) {
-    let isUnavailableResult = null != GuildStore.getGuild(key10004) || GuildAvailabilityStore.isUnavailable(key10004);
+let closure_20 = new GuildSubscriptionsDefault((subscriptions) => {
+  for (const key10004 in arg0) {
+    let isUnavailableResult = null != GuildStore.getGuild(key10004);
+    if (!isUnavailableResult) {
+      isUnavailableResult = GuildAvailabilityStore.isUnavailable(key10004);
+    }
     if (isUnavailableResult) {
       continue;
     } else {
-      delete tmp[key10004];
+      delete tmp[tmp2];
       continue;
     }
     continue;
   }
-  const obj = DispatcherDefault;
+  DispatcherDefault.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions });
   const obj2 = { type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions };
-  obj.dispatch(obj2);
 });
-let closure_20 = tmp3;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class GuildSubscriptionsStore extends Store {
-  initialize() {
-    this.waitFor(AuthenticationStore, ChannelSectionStore, ChannelStore, ExperimentStore, GuildAvailabilityStore, GuildMemberStore, GuildStore, LurkingStore, RTCConnectionStore, RelationshipStore, SelectedChannelStore, SelectedGuildStore, SpotifyStore);
-    const items = [SpotifyStore];
-    this.syncWith(items, handleSpotifyUpdate);
-    const items1 = [ChannelSectionStore];
-    this.syncWith(items1, resubscribe);
-  }
-  getSubscribedThreadIds() {
-    return closure_20.getSubscribedThreadIds();
-  }
-  isSubscribedToThreads(arg0) {
-    return closure_20.isSubscribedToThreads(arg0);
-  }
-  isSubscribedToAnyMember(arg0) {
-    return closure_20.isSubscribedToAnyMember(arg0);
-  }
-  isSubscribedToMemberUpdates(arg0) {
-    return closure_20.isSubscribedToMemberUpdates(arg0);
-  }
-  isSubscribedToAnyGuildChannel(id) {
-    const channels = closure_20.get(id).channels;
-    let tmp = null != channels;
-    if (tmp) {
-      const _Object = Object;
-      tmp = Object.keys(channels).length > 0;
-    }
-    return tmp;
-  }
 }
 const prototype = GuildSubscriptionsStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(AuthenticationStore, ChannelSectionStore, ChannelStore, ExperimentStore, GuildAvailabilityStore, GuildMemberStore, GuildStore, LurkingStore, RTCConnectionStore, RelationshipStore, SelectedChannelStore, SelectedGuildStore, SpotifyStore);
+  const items = [SpotifyStore];
+  this.syncWith(items, handleSpotifyUpdate);
+  const items1 = [ChannelSectionStore];
+  this.syncWith(items1, resubscribe);
+};
+prototype["getSubscribedThreadIds"] = function getSubscribedThreadIds() {
+  return closure_20.getSubscribedThreadIds();
+};
+prototype["isSubscribedToThreads"] = function isSubscribedToThreads(arg0) {
+  return closure_20.isSubscribedToThreads(arg0);
+};
+prototype["isSubscribedToAnyMember"] = function isSubscribedToAnyMember(arg0) {
+  return closure_20.isSubscribedToAnyMember(arg0);
+};
+prototype["isSubscribedToMemberUpdates"] = function isSubscribedToMemberUpdates(arg0) {
+  return closure_20.isSubscribedToMemberUpdates(arg0);
+};
+prototype["isSubscribedToAnyGuildChannel"] = function isSubscribedToAnyGuildChannel(id) {
+  const channels = closure_20.get(id).channels;
+  let tmp = null != channels;
+  if (tmp) {
+    const _Object = Object;
+    tmp = Object.keys(channels).length > 0;
+  }
+  return tmp;
+};
 GuildSubscriptionsStore.displayName = "GuildSubscriptionsStore";
 let subscriptions = {
   CONNECTION_OPEN: handleConnectionOpenOrResumed,
   CONNECTION_RESUMED: handleConnectionOpenOrResumed,
   CONNECTION_CLOSED: function handleConnectionClosed() {
-    let c1;
-    let c0 = false;
+    c0 = false;
     importDefault = false;
     subscriptions = {};
     const item = closure_20.forEach((item) => {
-      let tmp = item === SelectedGuildStore.getGuildId() || item === RTCConnectionStore.getGuildId();
+      let tmp = item === SelectedGuildStore.getGuildId();
+      if (!tmp) {
+        tmp = item === RTCConnectionStore.getGuildId();
+      }
       if (!tmp) {
         const channel = ChannelStore.getChannel(SelectedChannelStore.getChannelId());
         let guildId;
@@ -258,8 +260,11 @@ let subscriptions = {
         tmp = item === guildId;
       }
       if (!tmp) {
-        tmp = null != obj && obj.guildId === item;
-        const tmp9 = null != obj && obj.guildId === item;
+        let tmp9 = null != obj;
+        if (tmp9) {
+          tmp9 = obj.guildId === item;
+        }
+        tmp = tmp9;
       }
       if (!tmp) {
         closure_20.clearWithoutFlushing(item, c0);
@@ -268,23 +273,22 @@ let subscriptions = {
         }
       }
     });
-    const obj2 = require("module_12");
-    const tmp2 = importDefault;
-    const tmp3 = subscriptions;
     if (!obj2.isEmpty(subscriptions)) {
       const obj3 = { type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions };
-      const tmp2Result = tmp2(tmp3[17]);
-      tmp2Result.dispatch(obj3);
+      require("Dispatcher").dispatch(obj3);
+      const tmp2Result = require("Dispatcher");
     }
   },
   IDLE: function handleIdle(idle) {
-    let c1;
     if (idle.idle) {
-      let c0 = false;
+      c0 = false;
       importDefault = true;
       subscriptions = {};
       const item = closure_20.forEach((item) => {
-        let tmp = item === SelectedGuildStore.getGuildId() || item === RTCConnectionStore.getGuildId();
+        let tmp = item === SelectedGuildStore.getGuildId();
+        if (!tmp) {
+          tmp = item === RTCConnectionStore.getGuildId();
+        }
         if (!tmp) {
           const channel = ChannelStore.getChannel(SelectedChannelStore.getChannelId());
           let guildId;
@@ -294,8 +298,11 @@ let subscriptions = {
           tmp = item === guildId;
         }
         if (!tmp) {
-          tmp = null != obj && obj.guildId === item;
-          const tmp9 = null != obj && obj.guildId === item;
+          let tmp9 = null != obj;
+          if (tmp9) {
+            tmp9 = obj.guildId === item;
+          }
+          tmp = tmp9;
         }
         if (!tmp) {
           closure_20.clearWithoutFlushing(item, c0);
@@ -304,14 +311,14 @@ let subscriptions = {
           }
         }
       });
-      const obj2 = require("module_12");
-      const tmp3 = importDefault;
-      const tmp4 = subscriptions;
       if (!obj2.isEmpty(subscriptions)) {
         const obj3 = { type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions };
+        tmp3(tmp4[17]).dispatch(obj3);
         const tmp3Result = tmp3(tmp4[17]);
-        tmp3Result.dispatch(obj3);
       }
+      obj2 = require("module_12");
+      tmp3 = importDefault;
+      tmp4 = subscriptions;
     } else {
       return false;
     }
@@ -326,7 +333,6 @@ let subscriptions = {
       const guildId = SelectedGuildStore.getGuildId();
       const channelId = SelectedChannelStore.getChannelId();
       let tmp2 = guildId;
-      const obj3 = FavoritesUtils;
       if (obj3.isFavoritesGuildId(guildId)) {
         tmp2 = guildId;
         if (null != channelId) {
@@ -342,13 +348,13 @@ let subscriptions = {
         }
       }
       closure_20.subscribeToGuild(tmp2);
+      obj3 = FavoritesUtils;
     }
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     closure_20.clearWithoutFlushing(guild.guild.id, true);
   },
   GUILD_SUBSCRIPTIONS_MEMBERS_ADD: function handleMembersAdd(arg0) {
-    let userIds;
     ({ guildId: require, userIds } = arg0);
     const item = userIds.forEach((item) => {
       if (item !== AuthenticationStore.getId()) {
@@ -358,7 +364,6 @@ let subscriptions = {
     return false;
   },
   GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE: function handleMembersRemove(arg0) {
-    let userIds;
     ({ guildId: require, userIds } = arg0);
     const item = userIds.forEach((item) => {
       closure_20.unsubscribeUser(require, item);
@@ -372,23 +377,17 @@ let subscriptions = {
     const result = closure_20.unsubscribeFromMemberUpdates(guildId.guildId);
   },
   GUILD_SUBSCRIPTIONS_CHANNEL: function handleChannel(arg0) {
-    let channelId;
-    let flag3;
-    let guildId;
-    let ranges;
     ({ guildId, channelId, ranges } = arg0);
     if (channelId === EVERYONE_CHANNEL_ID) {
-      flag3 = closure_20.subscribeChannel(guildId, channelId, ranges, false);
+      let flag3 = closure_20.subscribeChannel(guildId, channelId, ranges, false);
     } else {
       const channel = ChannelStore.getChannel(channelId);
       flag3 = false;
       if (null != channel) {
-        let subscribeChannelResult1;
         const guildId1 = channel.getGuildId();
         let isFavoritesGuildIdResult = guildId1 !== guildId;
         if (isFavoritesGuildIdResult) {
-          const obj = FavoritesUtils;
-          isFavoritesGuildIdResult = obj.isFavoritesGuildId(guildId);
+          isFavoritesGuildIdResult = FavoritesUtils.isFavoritesGuildId(guildId);
         }
         if (isFavoritesGuildIdResult) {
           closure_20.subscribeToGuild(guildId1);
@@ -398,17 +397,17 @@ let subscriptions = {
           isThreadResult = channel.isThread();
         }
         if (isThreadResult) {
-          let subscribeChannelResult;
           if (channel.type === constants.ANNOUNCEMENT_THREAD) {
-            subscribeChannelResult = closure_20.subscribeChannel(guildId1, channel.parent_id, ranges, false);
+            let subscribeChannelResult = closure_20.subscribeChannel(guildId1, channel.parent_id, ranges, false);
           } else {
-            subscribeChannelResult = channel.isActiveThread() && closure_20.subscribeThreadMemberList(guildId1, channelId, SelectedChannelStore.getChannelId());
+            subscribeChannelResult = channel.isActiveThread();
+            if (subscribeChannelResult) {
+              subscribeChannelResult = closure_20.subscribeThreadMemberList(guildId1, channelId, SelectedChannelStore.getChannelId());
+            }
           }
-          subscribeChannelResult1 = subscribeChannelResult;
         } else {
-          subscribeChannelResult1 = closure_20.subscribeChannel(guildId1, channelId, ranges, false);
+          flag3 = closure_20.subscribeChannel(guildId1, channelId, ranges, false);
         }
-        flag3 = subscribeChannelResult1;
       }
     }
     return flag3;
@@ -417,11 +416,8 @@ let subscriptions = {
     return closure_20.subscribeToGuild(guildId.guildId);
   },
   CHANNEL_PRELOAD: function handleChannelPreload(arg0) {
-    let channelId;
-    let guildId;
     ({ guildId, channelId } = arg0);
     let tmp = guildId;
-    const obj = FavoritesUtils;
     if (obj.isFavoritesGuildId(guildId)) {
       tmp = guildId;
       if (null != channelId) {
@@ -440,11 +436,8 @@ let subscriptions = {
     return false;
   },
   OVERLAY_TEXT_CHAT_SELECT_CHANNEL: function handleOverlayTextChatSelectChannel(arg0) {
-    let channelId;
-    let guildId;
     ({ guildId, channelId } = arg0);
     let tmp = guildId;
-    const obj = FavoritesUtils;
     if (obj.isFavoritesGuildId(guildId)) {
       tmp = guildId;
       if (null != channelId) {
@@ -474,12 +467,9 @@ let subscriptions = {
     return false;
   },
   THREAD_UPDATE: function handleThreadUpdate(channel) {
-    let guild_id;
-    let id;
-    let result;
     channel = channel.channel;
     if (channel.isArchivedThread()) {
-      result = closure_20.unsubscribeThreadMemberList(channel.guild_id, channel.id);
+      let result = closure_20.unsubscribeThreadMemberList(channel.guild_id, channel.id);
     } else {
       const isActiveThreadResult = channel.isActiveThread();
       let tmp2 = !isActiveThreadResult;
@@ -487,7 +477,7 @@ let subscriptions = {
         tmp2 = SelectedChannelStore.getChannelId() !== channel.id;
       }
       result = !tmp2;
-      if (result) {
+      if (!tmp2) {
         ({ guild_id, id } = channel);
         const result1 = closure_20.subscribeThreadMemberList(guild_id, id, SelectedChannelStore.getChannelId());
       }
@@ -501,6 +491,7 @@ let subscriptions = {
   THREAD_LIST_SYNC: resubscribe
 };
 const guildSubscriptionsStore = new GuildSubscriptionsStore(DispatcherDefault, subscriptions);
+const size = fn(2);
 let result = size.fileFinishedImporting("stores/GuildSubscriptionsStore.tsx");
 
 export default guildSubscriptionsStore;

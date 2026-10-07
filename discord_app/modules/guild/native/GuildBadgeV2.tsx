@@ -1,127 +1,113 @@
 // === Module 8427: GuildBadgeV2 ===
 
 // Module 8427 (GuildBadgeV2)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
-import native from "native" /* 1188 */;
-import shared from "shared" /* 4735 */;
-import GuildBadgeImageSource from "GuildBadgeImageSource" /* 8428 */;
+import c from "c" /* 576 */;
 import BadgeCategory from "BadgeCategory" /* 8429 */;
 import GuildTraits from "GuildTraits" /* 8430 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
+const native = Icon(1188);
+const shared = Icon(4735);
+const GuildBadgeImageSource = Icon(8428);
+require = fn;
 let closure_2 = ["guild", "size"];
-const jsx = Fragment.jsx;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_5 = createStyles.createStyles({ icon: { marginRight: 8 } });
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let MEDIUM;
-  let guild;
-  let tmp4;
-  let tmp5;
-  const obj = react2;
-  const cResult = obj.c(12);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild/native/GuildBadgeV2.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let Icon = require;
+  let tmp = dependencyMap;
+  const cResult = c.c(12);
   if (cResult[0] !== arg0) {
     ({ guild, size } = arg0);
-    const tmp8 = _objectWithoutProperties(arg0, closure_2);
+    const tmp7 = _objectWithoutProperties(arg0, closure_2);
     cResult[0] = arg0;
     cResult[1] = guild;
-    cResult[2] = tmp8;
+    cResult[2] = tmp7;
     cResult[3] = size;
-    MEDIUM = size;
-    tmp5 = tmp8;
-    tmp4 = guild;
+    let MEDIUM = size;
+    let tmp4 = tmp7;
+    let tmp3 = guild;
   } else {
-    tmp4 = cResult[1];
-    tmp5 = cResult[2];
+    tmp3 = cResult[1];
+    tmp4 = cResult[2];
     MEDIUM = cResult[3];
   }
   if (undefined === MEDIUM) {
     MEDIUM = native.Icon.Sizes.MEDIUM;
   }
-  const tmp9 = closure_5();
-  const tmpResult = shared;
-  const theme = tmpResult.useThemeContext().theme;
-  if (null == tmp4) {
+  let icon = closure_5();
+  const theme = shared.useThemeContext().theme;
+  if (null == tmp3) {
     return null;
   } else {
-    if (cResult[4] === tmp4) {
-      let tmp10;
+    if (cResult[4] === tmp3) {
       if (cResult[5] === theme) {
-        tmp10 = cResult[6];
+        let tmp8 = cResult[6];
       }
-      let tmp12 = null;
-      if (null != tmp10) {
-        if (cResult[7] === tmp10) {
-          if (cResult[8] === tmp5) {
+      if (null == tmp8) {
+        return null;
+      } else {
+        if (cResult[7] === tmp8) {
+          if (cResult[8] === tmp4) {
             if (cResult[9] === MEDIUM) {
-              let tmp13;
-              if (cResult[10] === tmp9.icon) {
-                tmp13 = cResult[11];
-              }
-              tmp12 = tmp13;
             }
           }
         }
-        const Icon = native.Icon;
-        const merged = Object.assign(tmp5);
-        const tmp18 = <Icon size={MEDIUM} source={tmp10} style={tmp9.icon} disableColor />;
-        cResult[7] = tmp10;
-        cResult[8] = tmp5;
+        Icon = native.Icon;
+        const obj2 = { size: MEDIUM, source: tmp8, style: icon.icon, disableColor: true };
+        const merged = Object.assign(tmp4);
+        tmp = <Icon size={MEDIUM} source={tmp8} style={icon.icon} disableColor />;
+        cResult[7] = tmp8;
+        cResult[8] = tmp4;
         cResult[9] = MEDIUM;
-        cResult[10] = tmp9.icon;
-        cResult[11] = tmp18;
-        tmp13 = tmp18;
+        icon = icon.icon;
+        cResult[10] = icon;
+        cResult[11] = tmp;
       }
-      return tmp12;
     }
-    const tmpResult2 = GuildBadgeImageSource;
-    const guildBadgeImageSource = tmpResult2.getGuildBadgeImageSource(tmp4, theme);
-    cResult[4] = tmp4;
+    const guildBadgeImageSource = GuildBadgeImageSource.getGuildBadgeImageSource(tmp3, theme);
+    cResult[4] = tmp3;
     cResult[5] = theme;
     cResult[6] = guildBadgeImageSource;
-    tmp10 = guildBadgeImageSource;
+    tmp8 = guildBadgeImageSource;
+    const IconResult1 = GuildBadgeImageSource;
   }
+  const IconResult = shared;
 }) : ((arg0) => {
-  let guild;
   ({ guild, size } = arg0);
   if (size === undefined) {
     size = native.Icon.Sizes.MEDIUM;
   }
   const merged = Object.assign(arg0, Object.assign({ guild: 0, size: 0 }));
-  const tmp4 = closure_5();
   shared;
   if (null == guild) {
     return null;
   } else {
-    const tmp5Result = GuildBadgeImageSource;
-    const guildBadgeImageSource = tmp5Result.getGuildBadgeImageSource(guild, tmp8);
+    const guildBadgeImageSource = GuildBadgeImageSource.getGuildBadgeImageSource(guild, tmp8);
     let tmp10 = null;
     if (null != guildBadgeImageSource) {
-      const Icon = native.Icon;
+      const obj = { size, source: guildBadgeImageSource, style: tmp4.icon, disableColor: true };
       const merged1 = Object.assign(merged);
-      tmp10 = <Icon size={size} source={guildBadgeImageSource} style={tmp4.icon} disableColor />;
+      tmp10 = jsx(native.Icon, { size, source: guildBadgeImageSource, style: tmp4.icon, disableColor: true });
     }
     return tmp10;
   }
+  tmp4 = closure_5();
 });
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/guild/native/GuildBadgeV2.tsx");
-
-export default tmp3;
 export const hasGuildBadge = function hasGuildBadge(fromGuildProfileResult, arg1) {
-  const obj = GuildTraits;
-  const guildTraits = obj.getGuildTraits(fromGuildProfileResult);
-  const obj2 = BadgeCategory;
-  const badgeCategory = obj2.getBadgeCategory(guildTraits);
+  const guildTraits = GuildTraits.getGuildTraits(fromGuildProfileResult);
+  const badgeCategory = BadgeCategory.getBadgeCategory(guildTraits);
   const tmp5 = GuildBadgeImageSource.badgeVariants[badgeCategory];
   let tmp6 = null != tmp5;
   if (tmp6) {
+    tmp6 = null != GuildBadgeImageSource.resolveImageSource(tmp5, guildTraits, arg1);
     const tmpResult = GuildBadgeImageSource;
-    tmp6 = null != tmpResult.resolveImageSource(tmp5, guildTraits, arg1);
   }
   return tmp6;
 };

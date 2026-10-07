@@ -1,48 +1,45 @@
 // === Module 15837: DoubleTapToReactSetting ===
 
 // Module 15837 (DoubleTapToReactSetting)
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import SettingsConstants from "SettingsConstants" /* 7645 */;
 import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-let obj = {
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["4qhAjx"]);
+    const intl = util.intl;
+    return intl.string(util.t["4qhAjx"]);
   },
-  parent: MobileUserSettings.CHAT,
+  parent: SettingsConstants.MobileUserSettings.CHAT,
   useValue() {
     const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
     return !DoubleTapReactionEmoji.useSetting().disableDoubleTap;
   },
   onValueChange(disableDoubleTap) {
-    let animated;
-    let emojiId;
-    let emojiName;
     const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
     const setting = DoubleTapReactionEmoji.getSetting();
     const DoubleTapReactionEmoji2 = UserSettings.DoubleTapReactionEmoji;
-    const obj = { disableDoubleTap: !disableDoubleTap, emojiId, emojiName, animated };
-    emojiId = undefined;
-    const updateSetting = DoubleTapReactionEmoji2.updateSetting;
+    const obj = { disableDoubleTap: !disableDoubleTap, emojiId: null, emojiName: null, animated: null };
+    let emojiId;
     if (setting != null) {
       emojiId = setting.emojiId;
     }
-    emojiName = undefined;
+    obj.emojiId = emojiId;
+    let emojiName;
     if (setting != null) {
       emojiName = setting.emojiName;
     }
-    animated = undefined;
+    obj.emojiName = emojiName;
+    let animated;
     if (setting != null) {
       animated = setting.animated;
     }
-    updateSetting(obj);
+    obj.animated = animated;
+    DoubleTapReactionEmoji2.updateSetting(obj);
   }
-};
-const toggle = SettingBuilders.createToggle(obj);
+});
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DoubleTapToReactSetting.tsx");
 
 export default toggle;

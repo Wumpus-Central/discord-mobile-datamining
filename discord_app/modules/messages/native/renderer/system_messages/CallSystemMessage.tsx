@@ -1,31 +1,23 @@
 // === Module 7649: CallSystemMessage ===
 
 // Module 7649 (CallSystemMessage)
-import Constants from "Constants" /* 1085 */;
-import intl4 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1405 */;
 import DateUtils from "DateUtils" /* 4558 */;
-import CallConstants from "CallConstants" /* 4917 */;
 import createCommonMessageDefault from "createCommonMessage" /* 7634 */;
 import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 7650 */;
 import useIsCallActive from "useIsCallActive" /* 7651 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import VoiceStateStore from "VoiceStateStore" /* 4915 */;
-import size from "module_2" /* 2 */;
 
-let user;
-
-const ME = Constants.ME;
-const ParticipantTypes = CallConstants.ParticipantTypes;
+require = fn;
+const ME = fn(1085).ME;
+const ParticipantTypes = fn(4917).ParticipantTypes;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/CallSystemMessage.tsx");
 
 export const createCallSystemMessage = function createCallSystemMessage(message) {
-  let formatToPlainStringResult;
-  let mapped;
-  let stringResult1;
-  let timestamp;
-  let tmp7Result;
   message = message.message;
   const id = AuthenticationStore.getId();
   const channelId = message.getChannelId();
@@ -33,35 +25,36 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
   const userVoiceChannelId = VoiceStateStore.getUserVoiceChannelId(ME, id);
   const tmp6 = getHumanizedCallDurationDefault(message);
   const participants = ChannelRTCStore.getParticipants(channelId);
-  let obj = useIsCallActive;
-  const checkIsCallActiveResult = obj.checkIsCallActive(channelId, message.id);
-  let tmp9 = !checkIsCallActiveResult && null != call;
+  const checkIsCallActiveResult = useIsCallActive.checkIsCallActive(channelId, message.id);
+  let tmp9 = !checkIsCallActiveResult;
+  if (!checkIsCallActiveResult) {
+    tmp9 = null != call;
+  }
   if (tmp9) {
     const participants1 = call.participants;
     tmp9 = -1 === participants1.indexOf(id);
   }
-  const intl = intl4.intl;
+  const intl = util.intl;
   const string = intl.string;
-  const t = intl4.t;
+  const t = util.t;
   if (checkIsCallActiveResult) {
     let str2 = "";
-    const stringResult = string(t["NGg/fm"]);
     if (checkIsCallActiveResult) {
       if (null == userVoiceChannelId) {
-        const intl3 = intl4.intl;
-        str2 = intl3.string(intl4.t.DqA3mi);
+        const intl3 = util.intl;
+        str2 = intl3.string(util.t.DqA3mi);
       } else {
         str2 = "";
       }
     }
     const found = participants.filter((type) => type.type === constants.USER && !type.ringing);
-    mapped = found.map((user) => {
+    let mapped = found.map((user) => {
       user = user.user;
-      const obj = utils_AvatarUtils;
-      return obj.ensureAvatarSource(user.getAvatarSource(undefined)).uri;
+      return utils_AvatarUtils.ensureAvatarSource(user.getAvatarSource(undefined)).uri;
     });
-    formatToPlainStringResult = str2;
-    stringResult1 = stringResult;
+    let formatToPlainStringResult = str2;
+    let stringResult1 = string(t["NGg/fm"]);
+    const stringResult = string(t["NGg/fm"]);
   } else {
     if (tmp9) {
       stringResult1 = string(t["2CnhoI"]);
@@ -69,23 +62,21 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
       stringResult1 = string(t.v05Xd6);
     }
     if (null != tmp6) {
-      const intl2 = intl4.intl;
-      const formatToPlainString = intl2.formatToPlainString;
-      const obj2 = { duration: tmp6, timestamp: tmp7Result.calendarFormat(message.timestamp) };
-      const SBDnp1 = intl4.t.SBDnp1;
-      tmp7Result = DateUtils;
-      formatToPlainStringResult = formatToPlainString(SBDnp1, obj2);
+      const intl2 = util.intl;
+      const obj2 = { duration: tmp6, timestamp: DateUtils.calendarFormat(message.timestamp) };
+      formatToPlainStringResult = intl2.formatToPlainString(util.t.SBDnp1, obj2);
+      const tmp7Result = DateUtils;
     } else {
+      formatToPlainStringResult = DateUtils.calendarFormat(message.timestamp);
       const tmp7Result3 = DateUtils;
-      formatToPlainStringResult = tmp7Result3.calendarFormat(message.timestamp);
     }
     const author = message.author;
-    mapped = [];
+    mapped = [utils_AvatarUtils.ensureAvatarSource(author.getAvatarSource(undefined)).uri];
     const tmp7Result4 = utils_AvatarUtils;
-    mapped[0] = tmp7Result4.ensureAvatarSource(author.getAvatarSource(undefined)).uri;
   }
-  const obj3 = { title: stringResult1, description: formatToPlainStringResult, isCallActive: checkIsCallActiveResult, missed: tmp9, avatarURLs: mapped, rawMilliseconds: timestamp.valueOf() };
-  timestamp = message.timestamp;
+  const obj3 = { title: stringResult1, description: formatToPlainStringResult, isCallActive: checkIsCallActiveResult, missed: tmp9, avatarURLs: mapped, rawMilliseconds: null };
+  const timestamp = message.timestamp;
+  obj3.rawMilliseconds = timestamp.valueOf();
   const merged = Object.assign(createCommonMessageDefault(message));
   return obj3;
 };

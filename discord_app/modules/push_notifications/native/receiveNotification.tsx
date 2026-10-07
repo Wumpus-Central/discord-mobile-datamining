@@ -2,682 +2,346 @@
 
 // Module 18140 (receiveNotification)
 import LoggerDefault from "Logger" /* 3 */;
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1112 */;
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2057 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import AssetRegistryDefault from "AssetRegistry" /* 4817 */;
+import _modDef4817 from "module_4817" /* 4817 */;
 import parseURLDefault from "parseURL" /* 4873 */;
-import Constants2 from "Constants" /* 4938 */;
-import PostConnectionCallbackStore from "PostConnectionCallbackStore" /* 5955 */;
-import PushNotificationConstants from "PushNotificationConstants" /* 6092 */;
 import MessageManagerDefault from "MessageManager" /* 7528 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8039 */;
-import Constants3 from "Constants" /* 12072 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7050 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import UserStore from "UserStore" /* 1377 */;
-import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, c0, c1, c6, c7, importDefault, navigation;
 
-let closure_12;
-let closure_14;
-let map1;
-let unpackModuleId;
-const f133368 = (arg0) => {
-  addPostConnectionCallback(arg0);
-};
+require = fn;
 function onStageConnectionError() {
-  let intl;
-  obj = { key: "STAGE_DISCOVERY_CONNECTION_ERROR_GENERIC", content: intl.string(intl2.t.ah3RLk), icon: AssetRegistryDefault };
-  const open = ToastActionCreatorsDefault.open;
-  ToastActionCreatorsDefault;
-  intl = intl2.intl;
-  open(obj);
+  const obj2 = { key: "STAGE_DISCOVERY_CONNECTION_ERROR_GENERIC", content: null, icon: null };
+  const intl = util.intl;
+  obj2.content = intl.string(util.t.ah3RLk);
+  obj2.icon = _modDef4817;
+  ToastActionCreatorsDefault.open(obj2);
 }
 function waitForConnection() {
-  const promise = new Promise(f133368);
-  return promise;
+  return new Promise((arg0) => {
+    addPostConnectionCallback(arg0);
+  });
 }
 function waitForDataOrConnection() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_22.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-let obj = function _waitForDataOrConnection() {
-  obj = _asyncToGenerator(async function(arg0, arg1) {
-    let tmp;
-    let tmp3;
-    let closure_1 = arg1;
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_22 = async function _waitForDataOrConnection(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            let closure_2 = tmp;
-            let c2;
-            if (!closure_1()) {
-              c2 = false;
-              const self = this;
-              const self2 = this;
-              const promise = new Promise((arg0) => {
-                closure_0 = arg0;
-                const result = closure_0.addConditionalChangeListener(() => {
-                  let tmp = !closure_2_2;
-                  if (tmp) {
-                    const tmp3 = closure_2_1();
-                    let flag = !tmp3;
-                    if (tmp3) {
-                      closure_0();
-                      flag = false;
-                    }
-                    tmp = flag;
-                  }
-                  return tmp;
-                });
-              });
-              const items = [promise, waitForConnection()];
-              c3 = 1;
-              c4 = 1;
-              const obj4 = { value: Promise.race(items), done: false };
-              return obj4;
-            }
-          }
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          let flag = true;
-          c2 = true;
+          closure_2 = tmp2;
+          closure_130_0 = closure_0;
+          closure_130_1 = importDefault;
+          closure_130_2 = undefined;
+          if (importDefault()) {
+            c4 = 3;
+          } else {
+            closure_130_2 = false;
+            const promise = new Promise((arg0) => {
+              closure_0 = arg0;
+              const result = closure_0.addConditionalChangeListener(() => {
+                let tmp = !closure_2_2;
+                if (!closure_2_2) {
+                  const tmp3 = closure_2_1();
+                  let flag = !tmp3;
+                  if (tmp3) {
+                    closure_0();
+                    flag = false;
+                  }
+                  tmp = flag;
+                }
+                return tmp;
+              });
+            });
+            const items = [promise, waitForConnection()];
+            c3 = 1;
+            c4 = 1;
+            const obj4 = { value: Promise.race(items), done: false };
+            return obj4;
+          }
         }
+      } else if (arg0 === 1) {
         c4 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp10) {
-        c4 = 3;
-        throw tmp10;
+        throw value;
+      } else if (arg0 !== 2) {
+        closure_130_2 = true;
       }
+      c4 = 3;
+      const obj = { value, done: true };
+      return obj;
+    } catch (tmp13) {
+      c4 = tmp;
+      throw tmp13;
     }
-  });
-  return obj(...arguments);
+  }
 };
 function waitForNavigationReady() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_24.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-obj = function _waitForNavigationReady() {
-  obj = _asyncToGenerator(async function() {
-    if (c0 === 2) {
-      c0 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp2 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_24 = async function _waitForNavigationReady() {
+  if (c0 === 2) {
+    c0 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        c0 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            c0 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c0 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            const obj5 = require("RootNavigationRef");
-            const rootNavigationRef = obj5.getRootNavigationRef();
-            const isReadyResult = null != rootNavigationRef && rootNavigationRef.isReady();
-            if (!isReadyResult) {
-              const self = this;
-              const self2 = this;
-              const promise = new Promise((arg0) => {
-                let closure_0 = arg0;
-                const ComponentDispatch = closure_1_0(closure_1_3[16]).ComponentDispatch;
-                ComponentDispatch.subscribeOnce(constants.NAVIGATOR_READY, () => {
-                  closure_0();
-                });
-              });
-              c1 = 1;
-              c0 = 1;
-              const obj4 = { value: promise, done: false };
-              return obj4;
-            }
-          }
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c0 = 2;
+      if (0 === c1) {
+        if (arg0 === 1) {
           c0 = 3;
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          const rootNavigationRef = require("RootNavigationRef").getRootNavigationRef();
+          let isReadyResult = null != rootNavigationRef;
+          if (isReadyResult) {
+            isReadyResult = rootNavigationRef.isReady();
+          }
+          if (!isReadyResult) {
+            const promise = new Promise((arg0) => {
+              closure_0 = arg0;
+              const ComponentDispatch = closure_1_0(closure_1_3[16]).ComponentDispatch;
+              ComponentDispatch.subscribeOnce(constants.NAVIGATOR_READY, () => {
+                closure_0();
+              });
+            });
+            c1 = 1;
+            c0 = 1;
+            const obj4 = { value: promise, done: false };
+            return obj4;
+          }
+          const obj5 = require("RootNavigationRef");
         }
+      } else if (arg0 === 1) {
         c0 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp8) {
+        throw value;
+      } else if (arg0 === 2) {
         c0 = 3;
-        throw tmp8;
+        const obj = { value, done: true };
+        return obj;
       }
+      c0 = 3;
+      return { value: "IconComponent", done: null };
+    } catch (tmp11) {
+      c0 = tmp;
+      throw tmp11;
     }
-  });
-  return obj(...arguments);
+  }
 };
 function _connectToStage() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_26.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-obj = function _connectToStage2() {
-  obj = _asyncToGenerator(async (arg0, arg1) => {
-    let obj3;
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    if (c7 === 2) {
-      c7 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      let c5;
-      try {
-        let closure_2;
-        c7 = 2;
-        if (0 === c6) {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            let closure_3 = tmp;
-            closure_2 = undefined;
-            c6 = 1;
-            c7 = 1;
-            const obj5 = { value: waitForConnection(), done: false };
-            return obj5;
-          }
-        } else if (1 === c6) {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
-          } else {
-            c5 = 1;
-            c6 = 3;
-            c7 = 1;
-            const obj7 = { value: obj3.connectOrLurkStage(closure_0, closure_1, true), done: false };
-            obj3 = closure_131_0(closure_131_3[17]);
-            return obj7;
-          }
-        } else {
-          if (2 === c6) {
-            c5 = 0;
-            closure_131_19();
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 0;
-            c7 = 3;
-            const obj8 = { value, done: true };
-            return obj8;
-          } else {
-            closure_2 = value;
-            obj = closure_131_0(closure_131_3[17]);
-            obj.navigateToStage(closure_2, null);
-            c5 = 0;
-          }
-          c7 = 3;
-          return { value: "IconComponent", done: null };
-        }
-      } catch (tmp24) {
-        let closure_4 = tmp24;
-        if (0 === c5) {
-          c7 = 3;
-          throw tmp24;
-        } else {
-          c6 = 2;
-        }
-      }
-    }
-  });
-  return obj(...arguments);
+let closure_26 = async function _connectToStage2(arg0) {
+  closure_3 = tmp3;
+  closure_130_0 = closure_0;
+  closure_130_1 = closure_1;
+  await waitForConnection();
+  await closure_131_0(closure_131_3[17]).connectOrLurkStage(closure_130_0, closure_130_1, true);
+  if (2 === tmp7) {
+    c5 = 0;
+    closure_131_19();
+    c7 = 3;
+  } else if (arg0 === 1) {
+    c7 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    closure_130_2 = value;
+    closure_131_0(closure_131_3[17]).navigateToStage(closure_130_2, null);
+    c5 = 0;
+    closure_131_0(closure_131_3[17]);
+  }
+  return value;
 };
-obj = function _handleStageNotification() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let closure_0 = arg0;
-    if (c1 === 2) {
-      c1 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp2 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_27 = async function _handleStageNotification(arg0) {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        c1 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            c1 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c1 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            c2 = 1;
-            c1 = 1;
-            const obj4 = { value: _connectToStage(closure_0.guild_id, closure_0.channel_id), done: false };
-            return obj4;
-          }
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c1 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
           c1 = 3;
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          c1 = 3;
-          return { value: "IconComponent", done: null };
+          c2 = 1;
+          c1 = 1;
+          const obj4 = { value: _connectToStage(_require.guild_id, _require.channel_id), done: false };
+          return obj4;
         }
-      } catch (tmp6) {
+      } else if (arg0 === 1) {
         c1 = 3;
-        throw tmp6;
-      }
-    }
-  });
-  return obj(...arguments);
-};
-obj = function _handleGuildEventNotification() {
-  obj = _asyncToGenerator(async (arg0) => {
-    function onVoiceConnectionError() {
-      let intl;
-      obj = { key: "VOICE_CONNECTION_ERROR_GENERIC", content: intl.string(closure_1_0(closure_1_3[13]).t.S69lJR), icon: closure_1_1(closure_1_3[14]) };
-      const open = closure_1_1(closure_1_3[12]).open;
-      closure_1_1(closure_1_3[12]);
-      intl = closure_1_0(closure_1_3[13]).intl;
-      open(obj);
-    }
-    let closure_0 = arg0;
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        c1 = 3;
+        const obj = { value, done: true };
+        return obj;
       } else {
+        c1 = 3;
         return { value: "IconComponent", done: null };
       }
+    } catch (tmp7) {
+      c1 = tmp;
+      throw tmp7;
+    }
+  }
+};
+let closure_28 = async function _handleGuildEventNotification(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        let channel_id;
-        let guild_scheduled_event_id;
-        let event;
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            let closure_1 = tmp2;
-            channel_id = undefined;
-            guild_scheduled_event_id = undefined;
-            event = undefined;
-            const _Number = Number;
-            const NumberResult = Number(closure_0.guild_scheduled_event_entity_type);
-            if (constants.STAGE_INSTANCE === NumberResult) {
-              const channel_id2 = closure_0.channel_id;
-              if (null == channel_id2) {
-                onStageConnectionError();
-                c4 = 3;
-                const obj5 = { value: undefined, done: true };
-                return obj5;
-              } else {
-                c3 = 2;
-                c4 = 1;
-                const obj6 = { value: _connectToStage(closure_0.guild_id, channel_id2), done: false };
-                return obj6;
-              }
-            } else if (constants.VOICE === NumberResult) {
-              channel_id = closure_0.channel_id;
-              if (null == channel_id) {
-                onVoiceConnectionError();
-                c4 = 3;
-                const obj8 = { value: undefined, done: true };
-                return obj8;
-              } else {
-                c3 = 3;
-                c4 = 1;
-                const obj9 = { value: waitForConnection(), done: false };
-                return obj9;
-              }
-            } else if (constants.EXTERNAL === NumberResult) {
-              guild_scheduled_event_id = closure_0.guild_scheduled_event_id;
-              const guild_id = closure_0.guild_id;
-              const obj7 = require("transitionToGuild");
-              obj7.transitionToGuild(guild_id);
-              c3 = 1;
-              c4 = 1;
-              const obj10 = { value: waitForConnection(), done: false };
-              return obj10;
-            }
-          }
-        } else if (1 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj11 = { value, done: true };
-            return obj11;
-          } else {
-            event = closure_130_6.getGuildScheduledEvent(guild_scheduled_event_id);
-            if (null == event) {
-              c4 = 3;
-              return { value: "IconComponent", done: null };
-            } else {
-              const obj12 = { eventId: event.id, event };
-              const obj4 = closure_130_0(closure_130_3[20]);
-              const result = obj4.openGuildEventDetails(obj12);
-            }
-          }
-        } else if (2 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj13 = { value, done: true };
-            return obj13;
-          }
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj14 = { value, done: true };
-          return obj14;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          obj = closure_130_0(closure_130_3[18]);
-          obj.transitionToChannel(channel_id);
-        }
-        c4 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp32) {
-        c4 = 3;
-        throw tmp32;
-      }
-    }
-  });
-  return obj(...arguments);
-};
-obj = function _handleRelationshipAddNotification() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let items;
-    let user;
-    let closure_0 = arg0;
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        let closure_1;
-        let user_id;
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            let closure_2 = tmp4;
-            closure_1 = undefined;
-            user_id = undefined;
-            c3 = 1;
-            c4 = 1;
-            const obj5 = { value: waitForNavigationReady(), done: false };
-            return obj5;
-          }
-        } else if (1 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj7 = { value, done: true };
-            return obj7;
-          } else {
-            const _Number = Number;
-            closure_1 = Number(closure_0.rel_type);
-            if (closure_1 === closure_130_13.PENDING_INCOMING) {
-              user_id = closure_0.user_id;
-              const obj8 = closure_130_0(closure_130_3[21]);
-              obj8.navigateToRootTab({ screen: "notifications" });
-              const obj9 = closure_130_2(closure_130_3[22]);
-              obj9.setTab(closure_130_0(closure_130_3[23]).NotificationCenterTabs.ForYou);
+          closure_2 = tmp2;
+          closure_1 = tmp3;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          let guildScheduledEvent;
+          const _Number = Number;
+          const NumberResult = Number(_require.guild_scheduled_event_entity_type);
+          if (constants.STAGE_INSTANCE === NumberResult) {
+            const channel_id2 = _require.channel_id;
+            if (null == channel_id2) {
+              onStageConnectionError();
+              c4 = 3;
+              c4 = 3;
+              const obj5 = { value, done: true };
+              return obj5;
+            } else {
               c3 = 2;
               c4 = 1;
-              const obj10 = { value: closure_130_21(closure_130_9, () => null != user.getUser(closure_1_2)), done: false };
-              return obj10;
-            } else {
-              if (closure_1 !== closure_130_13.FRIEND) {
-                if (closure_0.notification_type === closure_130_10.REMINDER) {
-                  const obj6 = closure_130_0(closure_130_3[15]);
-                  const rootNavigationRef = obj6.getRootNavigationRef();
-                  if (rootNavigationRef != null) {
-                    rootNavigationRef.navigate("friends", { screen: "requests" });
-                  }
-                }
-              } else {
-                const obj11 = { recipientIds: closure_0.user_id };
-                const obj4 = closure_130_1(closure_130_3[26]);
-                obj4.openPrivateChannel(obj11);
-              }
-              c4 = 3;
-              return { value: "IconComponent", done: null };
+              const obj6 = { value: _connectToStage(_require.guild_id, channel_id2), done: false };
+              return obj6;
             }
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj12 = { value, done: true };
-          return obj12;
-        } else {
-          obj = { userId: user_id, sourceAnalyticsLocations: items };
-          items = [];
-          const tmp9 = closure_130_1(closure_130_3[24]);
-          items[0] = closure_130_1(closure_130_3[25]).PUSH_NOTIFICATION;
-          tmp9(obj);
-          c4 = 3;
-          const obj13 = { value: undefined, done: true };
-          return obj13;
-        }
-      } catch (tmp44) {
-        c4 = 3;
-        throw tmp44;
-      }
-    }
-  });
-  return obj(...arguments);
-};
-obj = function _handleCallRingNotification() {
-  obj = _asyncToGenerator(async (arg0) => {
-    const channel_id = arg0;
-    let c3 = 0;
-    let c4 = 0;
-    return (async (arg0) => {
-      let channel;
-      if (c4 === 2) {
-        c4 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
+          } else if (constants.VOICE === NumberResult) {
+            const channel_id = _require.channel_id;
+            closure_129_0 = channel_id;
+            if (null == channel_id) {
+              (function onVoiceConnectionError() {
+                const obj2 = { key: "VOICE_CONNECTION_ERROR_GENERIC", content: null, icon: null };
+                const intl = closure_1_0(1126).intl;
+                obj2.content = intl.string(closure_1_0(1126).t.S69lJR);
+                obj2.icon = closure_1_1(4817);
+                closure_1_1(4574).open(obj2);
+              })();
               c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
               c4 = 3;
-              return { value, done: true };
+              const obj8 = { value, done: true };
+              return obj8;
             } else {
-              closure_2 = tmp;
-              closure_1 = tmp4;
-              c3 = 1;
+              c3 = 3;
               c4 = 1;
-              const obj4 = { value: waitForDataOrConnection(ChannelStore, () => null != channel.getChannel(channel_id.channel_id)), done: false };
-              return obj4;
+              const obj9 = { value: waitForConnection(), done: false };
+              return obj9;
             }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            return { value, done: true };
-          } else {
-            obj = closure_130_0(closure_130_3[18]);
-            obj.transitionToChannel(channel_id.channel_id);
-            c4 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp14) {
-          c4 = 3;
-          throw tmp14;
-        }
-      }
-    })();
-  });
-  return obj(...arguments);
-};
-obj = function _handleCallConnectNotification() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let closure_0 = arg0;
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp2 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj4 = { value, done: true };
-        return obj4;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
-          } else {
-            let c2 = 0;
-            let closure_1 = tmp3;
+          } else if (constants.EXTERNAL === NumberResult) {
+            closure_129_1 = _require.guild_scheduled_event_id;
+            require("transitionToGuild").transitionToGuild(_require.guild_id);
             c3 = 1;
             c4 = 1;
-            const obj8 = { value: waitForDataOrConnection(ChannelStore, () => null != channel.getChannel(channel_id.channel_id)), done: false };
-            return obj8;
-          }
-        } else if (1 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj9 = { value, done: true };
-            return obj9;
-          } else {
-            const obj7 = closure_130_0(closure_130_3[18]);
-            obj7.transitionToChannel(closure_0.channel_id);
-            c3 = 2;
-            c4 = 1;
-            const obj10 = { value: closure_130_20(), done: false };
+            const obj10 = { value: waitForConnection(), done: false };
             return obj10;
+          } else {
+            c4 = 3;
           }
-        } else if (arg0 === 1) {
+        }
+      } else if (1 === tmp6) {
+        if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 === 2) {
@@ -685,203 +349,70 @@ obj = function _handleCallConnectNotification() {
           const obj11 = { value, done: true };
           return obj11;
         } else {
-          const obj13 = closure_130_1(closure_130_3[27]);
-          obj13.call(closure_0.channel_id, false, false);
-          obj = { location: closure_130_1(closure_130_3[25]).PUSH_NOTIFICATION, guild_id: closure_0.guild_id, ringer_user_id: closure_0.user_id };
-          const track = closure_130_1(closure_130_3[28]).track;
-          const RING_CALL_ACCEPTED = closure_130_11.RING_CALL_ACCEPTED;
-          const tmp6 = closure_130_1(closure_130_3[28]);
-          const obj2 = closure_130_0(closure_130_3[29]);
-          const merged = Object.assign(obj2.collectChannelAnalyticsMetadataFromId(closure_0.channel_id));
-          track(RING_CALL_ACCEPTED, obj);
-          const obj3 = closure_130_0(closure_130_3[30]);
-          if (obj3.isAndroid()) {
-            if (closure_0.is_fullscreen_call_ui) {
-              const obj12 = { action_type: "join" };
-              const track2 = closure_130_1(closure_130_3[28]).track;
-              const CALLKIT_CLICKED = closure_130_11.CALLKIT_CLICKED;
-              const tmp26 = closure_130_1(closure_130_3[28]);
-              const obj5 = closure_130_0(closure_130_3[29]);
-              const merged1 = Object.assign(obj5.collectChannelAnalyticsMetadataFromId(closure_0.channel_id));
-              track2(CALLKIT_CLICKED, obj12);
-            }
-            closure_130_1(closure_130_3[31])(closure_0.channel_id);
+          guildScheduledEvent = closure_130_6.getGuildScheduledEvent(closure_129_1);
+          if (null != guildScheduledEvent) {
+            const obj12 = { eventId: guildScheduledEvent.id, event: guildScheduledEvent };
+            const result = closure_130_0(closure_130_3[20]).openGuildEventDetails(obj12);
+            const obj4 = closure_130_0(closure_130_3[20]);
           }
-          c4 = 3;
-          return { value: "IconComponent", done: null };
         }
-      } catch (tmp50) {
-        c4 = 3;
-        throw tmp50;
-      }
-    }
-  });
-  return obj(...arguments);
-};
-obj = function _handleFriendSuggestionCreateNotification() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let user;
-    let user_id = arg0;
-    let c3 = 0;
-    let c4 = 0;
-    return (async (arg0) => {
-      let items;
-      if (c4 === 2) {
-        c4 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (2 === tmp6) {
         if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        closure_130_0(closure_130_3[18]).transitionToChannel(closure_129_0);
+        const obj = closure_130_0(closure_130_3[18]);
+      }
+      c4 = 3;
+      return { value: "IconComponent", done: null };
+    } catch (tmp31) {
+      c4 = tmp;
+      throw tmp31;
+    }
+  }
+};
+let closure_29 = async function _handleRelationshipAddNotification(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
           throw value;
         } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              return { value, done: true };
-            } else {
-              closure_2 = tmp4;
-              navigation = undefined;
-              user_id = undefined;
-              c3 = 1;
-              c4 = 1;
-              const obj4 = { value: waitForNavigationReady(), done: false };
-              return obj4;
-            }
-          } else if (1 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              return { value, done: true };
-            } else {
-              const obj9 = closure_130_0(closure_130_3[15]);
-              navigation = obj9.getRootNavigationRef();
-              if (null != navigation) {
-                const obj6 = { screen: "add-friends", params: { sourcePage: "Notifications" } };
-                navigation.navigate("friends", obj6);
-              }
-              user_id = user_id.user_id;
-              c3 = 2;
-              c4 = 1;
-              const obj7 = { value: closure_130_21(closure_130_9, () => null != user.getUser(closure_1_2)), done: false };
-              return obj7;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            return { value, done: true };
-          } else {
-            obj = { userId: user_id, sourceAnalyticsLocations: items };
-            items = [];
-            const tmp9 = closure_130_1(closure_130_3[24]);
-            items[0] = closure_130_1(closure_130_3[25]).PUSH_NOTIFICATION;
-            tmp9(obj);
-            c4 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp23) {
           c4 = 3;
-          throw tmp23;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = closure_0;
+          closure_129_1 = undefined;
+          let user_id;
+          c3 = 1;
+          c4 = 1;
+          const obj5 = { value: waitForNavigationReady(), done: false };
+          return obj5;
         }
-      }
-    })();
-  });
-  return obj(...arguments);
-};
-obj = function _maybeAckNotificationCenter() {
-  obj = _asyncToGenerator(async function(arg0) {
-    let closure_0 = arg0;
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        let closure_2;
-        let prop;
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            let closure_1 = tmp;
-            closure_2 = undefined;
-            prop = null;
-            if ("notification_center_id" in closure_0) {
-              prop = closure_0.notification_center_id;
-            }
-            let since = null;
-            if ("since" in closure_0) {
-              since = closure_0.since;
-            }
-            if ("RELATIONSHIP_ADD" === closure_0.type) {
-              const _Number = Number;
-              if (Number(closure_0.rel_type) === constants.PENDING_INCOMING) {
-                if (null != since) {
-                  c3 = 1;
-                  c4 = 1;
-                  const obj4 = { value: waitForConnection(), done: false };
-                  return obj4;
-                }
-              }
-            }
-            if (null != prop) {
-              c3 = 2;
-              c4 = 1;
-              const obj5 = { value: waitForConnection(), done: false };
-              return obj5;
-            }
-          }
-        } else if (1 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
-          } else {
-            const _Date = Date;
-            const _String = String;
-            const fromTimestamp = closure_130_1(closure_130_3[32]).fromTimestamp;
-            const self = this;
-            const self2 = this;
-            const tmp25 = closure_130_1(closure_130_3[32]);
-            const date = new Date(String(closure_0.since));
-            closure_2 = fromTimestamp(date.getTime());
-            const _HermesInternal = HermesInternal;
-            const markNotificationCenterLocalItemsAcked = closure_130_0(closure_130_3[33]).markNotificationCenterLocalItemsAcked;
-            const items = [];
-            const tmp31 = closure_130_0(closure_130_3[33]);
-            items[0] = "incoming_friend_requests_" + closure_0.user_id + "_" + closure_2;
-            const result = markNotificationCenterLocalItemsAcked(items);
-          }
-        } else if (arg0 === 1) {
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 === 2) {
@@ -889,122 +420,377 @@ obj = function _maybeAckNotificationCenter() {
           const obj7 = { value, done: true };
           return obj7;
         } else {
-          obj = closure_130_0(closure_130_3[33]);
-          const result1 = obj.markNotificationCenterRemoteItemAcked(prop);
+          const _Number = Number;
+          closure_129_1 = Number(closure_129_0.rel_type);
+          if (closure_129_1 === closure_130_13.PENDING_INCOMING) {
+            user_id = closure_129_0.user_id;
+            closure_130_0(closure_130_3[21]).navigateToRootTab({ screen: "notifications" });
+            const obj8 = closure_130_0(closure_130_3[21]);
+            closure_130_2(closure_130_3[22]).setTab(closure_130_0(closure_130_3[23]).NotificationCenterTabs.ForYou);
+            c3 = 2;
+            c4 = 1;
+            const obj10 = { value: closure_130_21(closure_130_9, () => null != user.getUser(closure_1_2)), done: false };
+            return obj10;
+          } else {
+            if (closure_129_1 !== closure_130_13.FRIEND) {
+              if (closure_129_0.notification_type === closure_130_10.REMINDER) {
+                const rootNavigationRef = closure_130_0(closure_130_3[15]).getRootNavigationRef();
+                if (rootNavigationRef != null) {
+                  rootNavigationRef.navigate("friends", { screen: "requests" });
+                }
+                const obj6 = closure_130_0(closure_130_3[15]);
+              }
+            } else {
+              const obj11 = { recipientIds: closure_129_0.user_id };
+              closure_130_1(closure_130_3[26]).openPrivateChannel(obj11);
+              const obj4 = closure_130_1(closure_130_3[26]);
+            }
+            c4 = 3;
+          }
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj12 = { value, done: true };
+        return obj12;
+      } else {
+        const obj = { userId: user_id, sourceAnalyticsLocations: null };
+        const items = [closure_130_1(closure_130_3[25]).PUSH_NOTIFICATION];
+        obj.sourceAnalyticsLocations = items;
+        closure_130_1(closure_130_3[24])(obj);
+        c4 = 3;
+        const obj13 = { value: undefined, done: true };
+        return obj13;
+      }
+    } catch (tmp45) {
+      c4 = tmp;
+      throw tmp45;
+    }
+  }
+};
+let closure_30 = async function _handleCallRingNotification(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp2;
+          closure_1 = tmp5;
+          closure_129_0 = channel_id;
+          c3 = 1;
+          c4 = 1;
+          const obj4 = { value: waitForDataOrConnection(ChannelStore, () => null != channel.getChannel(channel_id.channel_id)), done: false };
+          return obj4;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj5 = { value, done: true };
+        return obj5;
+      } else {
+        closure_130_0(closure_130_3[18]).transitionToChannel(closure_129_0.channel_id);
+        c4 = 3;
+        return { value: "IconComponent", done: null };
+      }
+    } catch (tmp15) {
+      c4 = tmp;
+      throw tmp15;
+    }
+  }
+};
+let closure_31 = async function _handleCallConnectNotification(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          c2 = 0;
+          closure_1 = tmp4;
+          closure_129_0 = channel_id;
+          c3 = 1;
+          c4 = 1;
+          const obj8 = { value: waitForDataOrConnection(ChannelStore, () => null != channel.getChannel(channel_id.channel_id)), done: false };
+          return obj8;
+        }
+      } else if (1 === tmp4) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj10 = { value, done: true };
+          return obj10;
+        } else {
+          closure_130_0(closure_130_3[18]).transitionToChannel(closure_129_0.channel_id);
+          c3 = 2;
+          c4 = 1;
+          const obj11 = { value: closure_130_20(), done: false };
+          return obj11;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj12 = { value, done: true };
+        return obj12;
+      } else {
+        const tmp59 = closure_130_1(closure_130_3[27]);
+        const call = tmp59.call;
+        channel_id = closure_129_0.channel_id;
+        if (typeof call === "unknown") {
+          tmp59(false, false);
+        } else {
+          call(channel_id, false, false);
+        }
+        const obj13 = { location: closure_130_1(closure_130_3[25]).PUSH_NOTIFICATION, guild_id: closure_129_0.guild_id, ringer_user_id: closure_129_0.user_id };
+        const obj = closure_130_1(closure_130_3[28]);
+        const merged = Object.assign(closure_130_0(closure_130_3[29]).collectChannelAnalyticsMetadataFromId(closure_129_0.channel_id));
+        obj.track(closure_130_11.RING_CALL_ACCEPTED, obj13);
+        const obj3 = closure_130_0(closure_130_3[29]);
+        if (obj4.isAndroid()) {
+          if (closure_129_0.is_fullscreen_call_ui) {
+            const obj14 = { action_type: "join" };
+            const obj5 = closure_130_1(closure_130_3[28]);
+            const merged1 = Object.assign(closure_130_0(closure_130_3[29]).collectChannelAnalyticsMetadataFromId(closure_129_0.channel_id));
+            obj5.track(closure_130_11.CALLKIT_CLICKED, obj14);
+            const obj7 = closure_130_0(closure_130_3[29]);
+          }
+          closure_130_1(closure_130_3[31])(closure_129_0.channel_id);
         }
         c4 = 3;
         return { value: "IconComponent", done: null };
-      } catch (tmp17) {
-        c4 = 3;
-        throw tmp17;
       }
+    } catch (tmp50) {
+      c4 = tmp;
+      throw tmp50;
     }
-  });
-  return obj(...arguments);
+  }
+};
+let closure_32 = async function _handleFriendSuggestionCreateNotification(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = closure_0;
+          let rootNavigationRef;
+          let user_id;
+          c3 = 1;
+          c4 = 1;
+          const obj4 = { value: waitForNavigationReady(), done: false };
+          return obj4;
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          rootNavigationRef = closure_130_0(closure_130_3[15]).getRootNavigationRef();
+          if (null != rootNavigationRef) {
+            const obj6 = { screen: "add-friends", params: { sourcePage: "Notifications" } };
+            rootNavigationRef.navigate("friends", obj6);
+          }
+          user_id = closure_129_0.user_id;
+          c3 = 2;
+          c4 = 1;
+          const obj7 = { value: closure_130_21(closure_130_9, () => null != user.getUser(closure_1_2)), done: false };
+          return obj7;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj8 = { value, done: true };
+        return obj8;
+      } else {
+        const obj = { userId: user_id, sourceAnalyticsLocations: null };
+        const items = [closure_130_1(closure_130_3[25]).PUSH_NOTIFICATION];
+        obj.sourceAnalyticsLocations = items;
+        closure_130_1(closure_130_3[24])(obj);
+        c4 = 3;
+        return { value: "IconComponent", done: null };
+      }
+    } catch (tmp24) {
+      c4 = tmp;
+      throw tmp24;
+    }
+  }
+};
+let closure_33 = async function _maybeAckNotificationCenter(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = _require;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          let prop = null;
+          if ("notification_center_id" in _require) {
+            prop = _require.notification_center_id;
+          }
+          closure_129_1 = prop;
+          let since = null;
+          if ("since" in _require) {
+            since = _require.since;
+          }
+          if ("RELATIONSHIP_ADD" === _require.type) {
+            const _Number = Number;
+            if (Number(_require.rel_type) === constants.PENDING_INCOMING) {
+              if (null != since) {
+                c3 = 1;
+                c4 = 1;
+                const obj4 = { value: waitForConnection(), done: false };
+                return obj4;
+              }
+            }
+          }
+          if (null != prop) {
+            c3 = 2;
+            c4 = 1;
+            const obj5 = { value: waitForConnection(), done: false };
+            return obj5;
+          } else {
+            c4 = 3;
+          }
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          const _Date = Date;
+          const _String = String;
+          const date = new Date(String(closure_129_0.since));
+          closure_129_2 = closure_130_1(closure_130_3[32]).fromTimestamp(date.getTime());
+          const obj8 = closure_130_1(closure_130_3[32]);
+          const _HermesInternal = HermesInternal;
+          const items = ["incoming_friend_requests_" + closure_129_0.user_id + "_" + closure_129_2];
+          const result = closure_130_0(closure_130_3[33]).markNotificationCenterLocalItemsAcked(items);
+          const obj10 = closure_130_0(closure_130_3[33]);
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        const result1 = closure_130_0(closure_130_3[33]).markNotificationCenterRemoteItemAcked(closure_129_1);
+        const obj = closure_130_0(closure_130_3[33]);
+      }
+      c4 = 3;
+      const obj7 = { value, done: true };
+      return obj7;
+    } catch (tmp18) {
+      c4 = tmp;
+      throw tmp18;
+    }
+  }
 };
 function receiveNotification_(data, isAppStartupNavigation) {
-  let CHANNELResult;
-  let NOTIFICATION_CLICKED;
-  let NumberResult;
-  let channel_id1;
-  let channel_type;
-  let flag;
-  let flag2;
-  let fn;
-  let fn2;
-  let guild_id1;
-  let handleCallConnectNotification;
-  let handleCallRingNotification;
-  let handleFriendSuggestionCreateNotification;
-  let handleGuildEventNotification;
-  let handleRelationshipAddNotification;
-  let handleStageNotification;
-  let join_id;
-  let maybeAckNotificationCenter;
-  let mention_type;
-  let message_id1;
-  let message_type_;
-  let notif_instance_id;
-  let notif_type_id;
-  let notification_id;
-  let obj11;
-  let obj12;
-  let obj13;
-  let obj14;
-  let obj15;
-  let obj16;
-  let obj6;
-  let obj7;
-  let payload2;
-  let promise;
-  let tmp19;
-  let tmp19Result;
-  let tmp19Result3Result;
-  let tmp19Result5;
-  let tmp19Result6;
-  let tmp19Result7;
-  let tmp19Result8;
-  let tmp21;
-  let tmp23;
-  let tmp24;
-  let tmp27;
-  let tmp29;
-  let tmp31;
-  let tmp32;
-  let tmp34;
-  let tmp36;
-  let tmp38;
-  let tmp41;
-  let tmp43;
-  let tmp44;
-  let tmp46;
-  let tmp48;
-  let tmp50;
-  let tmpResult2;
-  let track;
-  let transitionTo;
-  let type;
-  let type2;
-  let user_id;
-  const maybeAckNotificationCenter2 = function maybeAckNotificationCenter() {
-    return obj(...arguments);
-  };
-  const f149739 = () => {
-    obj = router_utils;
-    const obj2 = { navigationReplace: true, openChannel: true, isAppStartupNavigation };
-    obj.transitionTo(authStore2.CHANNEL(data.guild_id, data.channel_id), obj2);
-  };
-  const handleRelationshipAddNotification2 = function handleRelationshipAddNotification() {
-    return obj(...arguments);
-  };
-  const handleCallRingNotification2 = function handleCallRingNotification() {
-    return obj(...arguments);
-  };
-  const handleCallConnectNotification2 = function handleCallConnectNotification() {
-    return obj(...arguments);
-  };
-  const handleFriendSuggestionCreateNotification2 = function handleFriendSuggestionCreateNotification() {
-    return obj(...arguments);
-  };
-  const handleGuildEventNotification2 = function handleGuildEventNotification() {
-    return obj(...arguments);
-  };
-  const handleStageNotification2 = function handleStageNotification() {
-    return obj(...arguments);
-  };
   _require = data;
   importDefault = isAppStartupNavigation;
-  obj = require("RouteManagerUtils");
-  const result = obj.initializeRouteManagerIfNeeded();
+  const result = require("RouteManagerUtils").initializeRouteManagerIfNeeded();
   if ("MESSAGE_CREATE" === data.type) {
     const _HermesInternal2 = HermesInternal;
     logger.log("Notification clicked of type " + data.type + " with guild:" + data.guild_id + " channel:" + data.channel_id + " message:" + data.message_id);
-    let obj2 = { guildId: null, channelId: null, messageId: null, isPreload: true };
     ({ guild_id: obj10.guildId, channel_id: obj10.channelId, message_id: obj10.messageId } = data);
-    const obj9 = MessageManagerDefault;
-    const messages = obj9.fetchMessages(obj2);
-    flag = true;
-    flag2 = true;
+    const messages = MessageManagerDefault.fetchMessages({ guildId: null, channelId: null, messageId: null, isPreload: true });
+    let flag = true;
+    let flag2 = true;
+    const obj2 = { guildId: null, channelId: null, messageId: null, isPreload: true };
   } else {
     flag = false;
     flag2 = false;
@@ -1016,7 +802,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
         flag2 = false;
         if ("" !== data.deeplink) {
           const payload = parseURLDefault(data.deeplink).payload;
-          if (payload.type === require("ConstantsIOS").LinkingTypes.MESSAGE) {
+          if (payload.type === tmp(1105).LinkingTypes.MESSAGE) {
             let tracking_type;
             if (data != null) {
               tracking_type = data.tracking_type;
@@ -1024,31 +810,31 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if (tracking_type == null) {
               tracking_type = data.type;
             }
-            const tmp8 = null != tracking_type && null != payload.messageId && null != payload.channelId;
             if (tmp8) {
-              const tmpResult = require("PushFeedbackActions");
-              tmpResult.receivedNotification(payload.messageId, payload.channelId, tracking_type);
+              tmp(11263).receivedNotification(payload.messageId, payload.channelId, tracking_type);
+              const tmpResult = tmp(11263);
             }
-            const obj4 = { guildId: null, channelId: null, messageId: null, isPreload: true };
             ({ guildId: obj8.guildId, channelId: obj8.channelId, messageId: obj8.messageId } = payload);
-            const tmp79Result = MessageManagerDefault;
-            const messages1 = tmp79Result.fetchMessages(obj4);
+            const messages1 = tmp80(7528).fetchMessages({ guildId: null, channelId: null, messageId: null, isPreload: true });
             flag = true;
             flag2 = true;
+            const obj4 = { guildId: null, channelId: null, messageId: null, isPreload: true };
+            tmp8 = null != tracking_type && null != payload.messageId && null != payload.channelId;
+            const tmp80Result = tmp80(7528);
           } else {
-            if (payload.type === require("ConstantsIOS").LinkingTypes.ICYMI) {
+            if (payload.type === tmp(1105).LinkingTypes.ICYMI) {
               if (null != data.channel_id) {
                 if (null != data.message_id) {
-                  const tmp79Result3 = ICYMIActionCreatorsDefault;
-                  const forNotification = tmp79Result3.fetchForNotification(data.channel_id, data.message_id);
+                  const forNotification = tmp80(8039).fetchForNotification(data.channel_id, data.message_id);
                   flag = false;
                   flag2 = false;
+                  const tmp80Result3 = tmp80(8039);
                 }
               }
             }
             flag = false;
             flag2 = false;
-            if (payload.type === require("ConstantsIOS").LinkingTypes.ICYMI) {
+            if (payload.type === tmp(1105).LinkingTypes.ICYMI) {
               flag = false;
               flag2 = false;
               if (null != data.user_id) {
@@ -1062,13 +848,17 @@ function receiveNotification_(data, isAppStartupNavigation) {
                       status_emoji_id = data.status_emoji_id;
                     }
                   }
-                  const obj5 = { id: data.notification_center_id, type: require("ICYMITypes").ICYMIItemTypes.CUSTOM_STATUS, score: 1000, data: obj6 };
-                  obj6 = { user_id: null, text: null, emoji_id: status_emoji_id, emoji_name: data.status_emoji_name, emoji_animated: data.status_emoji_animated };
+                  const obj5 = { id: data.notification_center_id, type: tmp(8034).ICYMIItemTypes.CUSTOM_STATUS, score: 1000, data: null };
+                  const obj6 = { user_id: null, text: null, emoji_id: null, emoji_name: null, emoji_animated: null };
                   ({ user_id: obj3.user_id, status_text: obj3.text } = data);
-                  const tmp79Result4 = ICYMIActionCreatorsDefault;
-                  const forStatusNotification = tmp79Result4.fetchForStatusNotification(obj5);
+                  obj6.emoji_id = status_emoji_id;
+                  obj6.emoji_name = data.status_emoji_name;
+                  obj6.emoji_animated = data.status_emoji_animated;
+                  obj5.data = obj6;
+                  const forStatusNotification = tmp80(8039).fetchForStatusNotification(obj5);
                   flag = false;
                   flag2 = false;
+                  const tmp80Result4 = tmp80(8039);
                 }
               }
             }
@@ -1081,1793 +871,2339 @@ function receiveNotification_(data, isAppStartupNavigation) {
   }
   switch (data.type) {
     case "MESSAGE_CREATE":
-    {
-      tmp19 = importDefault;
-      obj11 = DispatcherDefault;
-      obj7 = { type: "PUSH_NOTIFICATION_CLICK" };
+      let tmp19 = importDefault;
+      let obj11 = DispatcherDefault;
+      let obj7 = { type: "PUSH_NOTIFICATION_CLICK" };
       obj11.dispatch(obj7);
-      tmp21 = AnalyticsUtilsDefault;
-      track = tmp21.track;
-      NOTIFICATION_CLICKED = constants.NOTIFICATION_CLICKED;
-      tmp23 = "tracking_type" in data;
-      if (tmp23) {
-        type = data.tracking_type;
+      let obj13 = AnalyticsUtilsDefault;
+      let tmp22 = "tracking_type" in data;
+      if (tmp22) {
+        let type = data.tracking_type;
       } else {
         type = data.type;
       }
-      obj12 = { notif_type: type, notif_user_id: user_id, message_id: message_id1, message_type: message_type_, has_message: tmp31, guild_id: guild_id1, channel_id: channel_id1, channel_type, rel_type: NumberResult, notification_id, has_image_thumbnail: tmp43, join_id, notif_instance_id, notif_type_id, mention_type };
-      tmp24 = "user_id" in data;
-      user_id = null;
-      if (tmp24) {
+      let obj12 = { notif_type: type, notif_user_id: null, message_id: null, message_type: null, has_message: null, guild_id: null, channel_id: null, channel_type: null, rel_type: null, notification_id: null, has_image_thumbnail: null, join_id: null, notif_instance_id: null, notif_type_id: null, mention_type: null };
+      let tmp23 = "user_id" in data;
+      let user_id = null;
+      if (tmp23) {
         user_id = data.user_id;
       }
-      tmp27 = "message_id" in data;
-      message_id1 = null;
-      if (tmp27) {
+      obj12.notif_user_id = user_id;
+      let tmp26 = "message_id" in data;
+      let message_id1 = null;
+      if (tmp26) {
         message_id1 = data.message_id;
       }
-      tmp29 = "message_type_" in data;
-      message_type_ = null;
-      if (tmp29) {
+      obj12.message_id = message_id1;
+      let tmp28 = "message_type_" in data;
+      let message_type_ = null;
+      if (tmp28) {
         message_type_ = data.message_type_;
       }
-      tmp31 = "message" in data && null != data.message;
-      tmp32 = "guild_id" in data;
-      guild_id1 = null;
-      if (tmp32) {
+      obj12.message_type = message_type_;
+      let tmp30 = "message" in data;
+      if (tmp30) {
+        tmp30 = null != data.message;
+      }
+      obj12.has_message = tmp30;
+      let tmp31 = "guild_id" in data;
+      let guild_id1 = null;
+      if (tmp31) {
         guild_id1 = data.guild_id;
       }
-      tmp34 = "channel_id" in data;
-      channel_id1 = null;
-      if (tmp34) {
+      obj12.guild_id = guild_id1;
+      let tmp33 = "channel_id" in data;
+      let channel_id1 = null;
+      if (tmp33) {
         channel_id1 = data.channel_id;
       }
-      tmp36 = "channel_type" in data;
-      channel_type = null;
-      if (tmp36) {
+      obj12.channel_id = channel_id1;
+      let tmp35 = "channel_type" in data;
+      let channel_type = null;
+      if (tmp35) {
         channel_type = data.channel_type;
       }
-      tmp38 = "rel_type" in data;
-      NumberResult = null;
-      if (tmp38) {
+      obj12.channel_type = channel_type;
+      let tmp37 = "rel_type" in data;
+      let NumberResult = null;
+      if (tmp37) {
         let _Number = Number;
         NumberResult = Number(data.rel_type);
       }
-      tmp41 = "notification_id" in data;
-      notification_id = null;
-      if (tmp41) {
+      obj12.rel_type = NumberResult;
+      let tmp40 = "notification_id" in data;
+      let notification_id = null;
+      if (tmp40) {
         notification_id = data.notification_id;
       }
-      tmp43 = "image_url" in data && null != data.image_url;
-      tmp44 = "join_id" in data;
-      join_id = null;
-      if (tmp44) {
+      obj12.notification_id = notification_id;
+      let tmp42 = "image_url" in data;
+      if (tmp42) {
+        tmp42 = null != data.image_url;
+      }
+      obj12.has_image_thumbnail = tmp42;
+      let tmp43 = "join_id" in data;
+      let join_id = null;
+      if (tmp43) {
         join_id = data.join_id;
       }
-      tmp46 = "notif_instance_id" in data;
-      notif_instance_id = null;
-      if (tmp46) {
+      obj12.join_id = join_id;
+      let tmp45 = "notif_instance_id" in data;
+      let notif_instance_id = null;
+      if (tmp45) {
         notif_instance_id = data.notif_instance_id;
       }
-      tmp48 = "notif_type_id" in data;
-      notif_type_id = null;
-      if (tmp48) {
+      obj12.notif_instance_id = notif_instance_id;
+      let tmp47 = "notif_type_id" in data;
+      let notif_type_id = null;
+      if (tmp47) {
         notif_type_id = data.notif_type_id;
       }
-      tmp50 = "mention_type" in data;
-      mention_type = null;
-      if (tmp50) {
+      obj12.notif_type_id = notif_type_id;
+      let tmp49 = "mention_type" in data;
+      let mention_type = null;
+      if (tmp49) {
         mention_type = data.mention_type;
       }
-      track(NOTIFICATION_CLICKED, obj12);
-      maybeAckNotificationCenter = maybeAckNotificationCenter2;
+      obj12.mention_type = mention_type;
+      obj13.track(constants.NOTIFICATION_CLICKED, obj12);
+      function maybeAckNotificationCenter() {
+        const self = this;
+        const apply = closure_1_33.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      }
       let result1 = maybeAckNotificationCenter(data);
-      type2 = data.type;
-      switch (type2) {
+      switch (tmp53) {
         case "MESSAGE_CREATE":
-        {
-          let channel_id;
-          let guild_id;
-          let message_id;
           if (null != data.message) {
-            tmp19Result = tmp19(584);
-            obj13 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
-            tmp19Result.dispatch(obj13);
+            let tmp19Result = tmp19(584);
+            let obj14 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
+            tmp19Result.dispatch(obj14);
           }
-          tmp19Result5 = tmp19(5099);
+          let tmp19Result5 = tmp19(5099);
           tmp19Result5.popAll();
-          tmpResult2 = tmp(1112);
-          transitionTo = tmpResult2.transitionTo;
+          let tmpResult2 = tmp(1112);
           ({ guild_id, channel_id, message_id } = data);
-          CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
-          obj14 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag, isAppStartupNavigation };
-          transitionTo(CHANNELResult, obj14);
+          let CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
+          let obj15 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag, isAppStartupNavigation };
+          tmpResult2.transitionTo(CHANNELResult, obj15);
           return flag2;
-        }
         case "FORUM_THREAD_CREATED":
-        {
-          let self = this;
-          fn = f133368;
-          let self2 = this;
-          promise = new Promise(fn);
-          fn2 = f149739;
+          let fn = (arg0) => {
+            addPostConnectionCallback(arg0);
+          };
+          let promise = new Promise(fn);
+          let fn2 = () => {
+            router_utils.transitionTo(state.CHANNEL(data.guild_id, data.channel_id), { navigationReplace: true, openChannel: true, isAppStartupNavigation });
+          };
           promise.then(fn2);
-          break;
-        }
+        break;
         case "RELATIONSHIP_ADD":
-        {
-          handleRelationshipAddNotification = handleRelationshipAddNotification2;
+          function handleRelationshipAddNotification() {
+            const self = this;
+            const apply = closure_1_29.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          }
           let result2 = handleRelationshipAddNotification(data);
-          break;
-        }
+        break;
         case "CALL_RING":
-        {
-          handleCallRingNotification = handleCallRingNotification2;
+          function handleCallRingNotification() {
+            const self = this;
+            const apply = closure_1_30.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          }
           let result3 = handleCallRingNotification(data);
-          break;
-        }
+        break;
         case "CALL_CONNECT":
-        {
-          handleCallConnectNotification = handleCallConnectNotification2;
+          function handleCallConnectNotification() {
+            const self = this;
+            const apply = closure_1_31.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          }
           let result4 = handleCallConnectNotification(data);
-          break;
-        }
+        break;
         case "FRIEND_SUGGESTION_CREATE":
-        {
-          handleFriendSuggestionCreateNotification = handleFriendSuggestionCreateNotification2;
+          function handleFriendSuggestionCreateNotification() {
+            const self = this;
+            const apply = closure_1_32.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          }
           let result5 = handleFriendSuggestionCreateNotification(data);
-          break;
-        }
+        break;
         case "GUILD_STREAM_START":
-        {
-          tmp19Result6 = tmp19(5098);
-          obj15 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
-          tmp19Result6(obj15);
-          break;
-        }
+          let tmp19Result6 = tmp19(5098);
+          let obj16 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
+          tmp19Result6(obj16);
+        break;
         case "GUILD_SCHEDULED_EVENT_UPDATE":
-        {
-          handleGuildEventNotification = handleGuildEventNotification2;
+          function handleGuildEventNotification() {
+            const self = this;
+            const apply = closure_1_28.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          }
           let result6 = handleGuildEventNotification(data);
-          break;
-        }
+        break;
         case "STAGE_INSTANCE_CREATE":
-        {
-          handleStageNotification = handleStageNotification2;
+          function handleStageNotification() {
+            const self = this;
+            const apply = closure_1_27.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          }
           let result7 = handleStageNotification(data);
-          break;
-        }
+        break;
         case "GENERIC_PUSH_NOTIFICATION_SENT":
-        {
           if (null != data.deeplink) {
             if ("" !== data.deeplink) {
-              tmp19Result7 = tmp19(4873);
-              tmp19Result3Result = tmp19Result7(data.deeplink);
-              payload2 = tmp19Result3Result.payload;
-              tmp19Result8 = tmp19(13679);
-              obj16 = { payload: payload2, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
-              tmp19Result8(obj16);
+              let tmp19Result7 = tmp19(4873);
+              let tmp19Result3Result = tmp19Result7(data.deeplink);
+              let tmp19Result8 = tmp19(13679);
+              let obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
+              tmp19Result8(obj17);
             }
           }
-          break;
-        }
+        break;
       }
-      break;
-    }
+    break;
     case "FORUM_THREAD_CREATED":
-    {
       tmp19 = importDefault;
       obj11 = DispatcherDefault;
       obj7 = { type: "PUSH_NOTIFICATION_CLICK" };
       obj11.dispatch(obj7);
-      tmp21 = AnalyticsUtilsDefault;
-      track = tmp21.track;
-      NOTIFICATION_CLICKED = constants.NOTIFICATION_CLICKED;
-      tmp23 = "tracking_type" in data;
-      if (tmp23) {
+      obj13 = AnalyticsUtilsDefault;
+      tmp22 = "tracking_type" in data;
+      if (tmp22) {
         type = data.tracking_type;
       } else {
         type = data.type;
       }
-      obj12 = { notif_type: type, notif_user_id: user_id, message_id: message_id1, message_type: message_type_, has_message: tmp31, guild_id: guild_id1, channel_id: channel_id1, channel_type, rel_type: NumberResult, notification_id, has_image_thumbnail: tmp43, join_id, notif_instance_id, notif_type_id, mention_type };
-      tmp24 = "user_id" in data;
+      obj12 = { notif_type: type, notif_user_id: null, message_id: null, message_type: null, has_message: null, guild_id: null, channel_id: null, channel_type: null, rel_type: null, notification_id: null, has_image_thumbnail: null, join_id: null, notif_instance_id: null, notif_type_id: null, mention_type: null };
+      tmp23 = "user_id" in data;
       user_id = null;
-      if (tmp24) {
+      if (tmp23) {
         user_id = data.user_id;
       }
-      tmp27 = "message_id" in data;
+      obj12.notif_user_id = user_id;
+      tmp26 = "message_id" in data;
       message_id1 = null;
-      if (tmp27) {
+      if (tmp26) {
         message_id1 = data.message_id;
       }
-      tmp29 = "message_type_" in data;
+      obj12.message_id = message_id1;
+      tmp28 = "message_type_" in data;
       message_type_ = null;
-      if (tmp29) {
+      if (tmp28) {
         message_type_ = data.message_type_;
       }
-      tmp31 = "message" in data && null != data.message;
-      tmp32 = "guild_id" in data;
+      obj12.message_type = message_type_;
+      tmp30 = "message" in data;
+      if (tmp30) {
+        tmp30 = null != data.message;
+      }
+      obj12.has_message = tmp30;
+      tmp31 = "guild_id" in data;
       guild_id1 = null;
-      if (tmp32) {
+      if (tmp31) {
         guild_id1 = data.guild_id;
       }
-      tmp34 = "channel_id" in data;
+      obj12.guild_id = guild_id1;
+      tmp33 = "channel_id" in data;
       channel_id1 = null;
-      if (tmp34) {
+      if (tmp33) {
         channel_id1 = data.channel_id;
       }
-      tmp36 = "channel_type" in data;
+      obj12.channel_id = channel_id1;
+      tmp35 = "channel_type" in data;
       channel_type = null;
-      if (tmp36) {
+      if (tmp35) {
         channel_type = data.channel_type;
       }
-      tmp38 = "rel_type" in data;
+      obj12.channel_type = channel_type;
+      tmp37 = "rel_type" in data;
       NumberResult = null;
-      if (tmp38) {
-        let _Number = Number;
+      if (tmp37) {
+        _Number = Number;
         NumberResult = Number(data.rel_type);
       }
-      tmp41 = "notification_id" in data;
+      obj12.rel_type = NumberResult;
+      tmp40 = "notification_id" in data;
       notification_id = null;
-      if (tmp41) {
+      if (tmp40) {
         notification_id = data.notification_id;
       }
-      tmp43 = "image_url" in data && null != data.image_url;
-      tmp44 = "join_id" in data;
+      obj12.notification_id = notification_id;
+      tmp42 = "image_url" in data;
+      if (tmp42) {
+        tmp42 = null != data.image_url;
+      }
+      obj12.has_image_thumbnail = tmp42;
+      tmp43 = "join_id" in data;
       join_id = null;
-      if (tmp44) {
+      if (tmp43) {
         join_id = data.join_id;
       }
-      tmp46 = "notif_instance_id" in data;
+      obj12.join_id = join_id;
+      tmp45 = "notif_instance_id" in data;
       notif_instance_id = null;
-      if (tmp46) {
+      if (tmp45) {
         notif_instance_id = data.notif_instance_id;
       }
-      tmp48 = "notif_type_id" in data;
+      obj12.notif_instance_id = notif_instance_id;
+      tmp47 = "notif_type_id" in data;
       notif_type_id = null;
-      if (tmp48) {
+      if (tmp47) {
         notif_type_id = data.notif_type_id;
       }
-      tmp50 = "mention_type" in data;
+      obj12.notif_type_id = notif_type_id;
+      tmp49 = "mention_type" in data;
       mention_type = null;
-      if (tmp50) {
+      if (tmp49) {
         mention_type = data.mention_type;
       }
-      track(NOTIFICATION_CLICKED, obj12);
-      maybeAckNotificationCenter = maybeAckNotificationCenter2;
-      let result1 = maybeAckNotificationCenter(data);
-      type2 = data.type;
-      switch (type2) {
+      obj12.mention_type = mention_type;
+      obj13.track(constants.NOTIFICATION_CLICKED, obj12);
+      maybeAckNotificationCenter = function maybeAckNotificationCenter() {
+        const self = this;
+        const apply = closure_1_33.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      };
+      result1 = maybeAckNotificationCenter(data);
+      switch (tmp53) {
         case "MESSAGE_CREATE":
-        {
-          let channel_id;
-          let guild_id;
-          let message_id;
           if (null != data.message) {
             tmp19Result = tmp19(584);
-            obj13 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
-            tmp19Result.dispatch(obj13);
+            obj14 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
+            tmp19Result.dispatch(obj14);
           }
           tmp19Result5 = tmp19(5099);
           tmp19Result5.popAll();
           tmpResult2 = tmp(1112);
-          transitionTo = tmpResult2.transitionTo;
           ({ guild_id, channel_id, message_id } = data);
           CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
-          obj14 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag, isAppStartupNavigation };
-          transitionTo(CHANNELResult, obj14);
+          obj15 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag, isAppStartupNavigation };
+          tmpResult2.transitionTo(CHANNELResult, obj15);
           return flag2;
-        }
         case "FORUM_THREAD_CREATED":
-        {
-          let self = this;
-          fn = f133368;
-          let self2 = this;
+          fn = (arg0) => {
+            addPostConnectionCallback(arg0);
+          };
           promise = new Promise(fn);
-          fn2 = f149739;
+          fn2 = () => {
+            router_utils.transitionTo(state.CHANNEL(data.guild_id, data.channel_id), { navigationReplace: true, openChannel: true, isAppStartupNavigation });
+          };
           promise.then(fn2);
-          break;
-        }
+        break;
         case "RELATIONSHIP_ADD":
-        {
-          handleRelationshipAddNotification = handleRelationshipAddNotification2;
-          let result2 = handleRelationshipAddNotification(data);
-          break;
-        }
+          handleRelationshipAddNotification = function handleRelationshipAddNotification() {
+            const self = this;
+            const apply = closure_1_29.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result2 = handleRelationshipAddNotification(data);
+        break;
         case "CALL_RING":
-        {
-          handleCallRingNotification = handleCallRingNotification2;
-          let result3 = handleCallRingNotification(data);
-          break;
-        }
+          handleCallRingNotification = function handleCallRingNotification() {
+            const self = this;
+            const apply = closure_1_30.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result3 = handleCallRingNotification(data);
+        break;
         case "CALL_CONNECT":
-        {
-          handleCallConnectNotification = handleCallConnectNotification2;
-          let result4 = handleCallConnectNotification(data);
-          break;
-        }
+          handleCallConnectNotification = function handleCallConnectNotification() {
+            const self = this;
+            const apply = closure_1_31.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result4 = handleCallConnectNotification(data);
+        break;
         case "FRIEND_SUGGESTION_CREATE":
-        {
-          handleFriendSuggestionCreateNotification = handleFriendSuggestionCreateNotification2;
-          let result5 = handleFriendSuggestionCreateNotification(data);
-          break;
-        }
+          handleFriendSuggestionCreateNotification = function handleFriendSuggestionCreateNotification() {
+            const self = this;
+            const apply = closure_1_32.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result5 = handleFriendSuggestionCreateNotification(data);
+        break;
         case "GUILD_STREAM_START":
-        {
           tmp19Result6 = tmp19(5098);
-          obj15 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
-          tmp19Result6(obj15);
-          break;
-        }
+          obj16 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
+          tmp19Result6(obj16);
+        break;
         case "GUILD_SCHEDULED_EVENT_UPDATE":
-        {
-          handleGuildEventNotification = handleGuildEventNotification2;
-          let result6 = handleGuildEventNotification(data);
-          break;
-        }
+          handleGuildEventNotification = function handleGuildEventNotification() {
+            const self = this;
+            const apply = closure_1_28.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result6 = handleGuildEventNotification(data);
+        break;
         case "STAGE_INSTANCE_CREATE":
-        {
-          handleStageNotification = handleStageNotification2;
-          let result7 = handleStageNotification(data);
-          break;
-        }
+          handleStageNotification = function handleStageNotification() {
+            const self = this;
+            const apply = closure_1_27.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result7 = handleStageNotification(data);
+        break;
         case "GENERIC_PUSH_NOTIFICATION_SENT":
-        {
           if (null != data.deeplink) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(4873);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              payload2 = tmp19Result3Result.payload;
               tmp19Result8 = tmp19(13679);
-              obj16 = { payload: payload2, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
-              tmp19Result8(obj16);
+              obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
+              tmp19Result8(obj17);
             }
           }
-          break;
-        }
+        break;
       }
-      break;
-    }
+    break;
     case "RELATIONSHIP_ADD":
-    {
       tmp19 = importDefault;
       obj11 = DispatcherDefault;
       obj7 = { type: "PUSH_NOTIFICATION_CLICK" };
       obj11.dispatch(obj7);
-      tmp21 = AnalyticsUtilsDefault;
-      track = tmp21.track;
-      NOTIFICATION_CLICKED = constants.NOTIFICATION_CLICKED;
-      tmp23 = "tracking_type" in data;
-      if (tmp23) {
+      obj13 = AnalyticsUtilsDefault;
+      tmp22 = "tracking_type" in data;
+      if (tmp22) {
         type = data.tracking_type;
       } else {
         type = data.type;
       }
-      obj12 = { notif_type: type, notif_user_id: user_id, message_id: message_id1, message_type: message_type_, has_message: tmp31, guild_id: guild_id1, channel_id: channel_id1, channel_type, rel_type: NumberResult, notification_id, has_image_thumbnail: tmp43, join_id, notif_instance_id, notif_type_id, mention_type };
-      tmp24 = "user_id" in data;
+      obj12 = { notif_type: type, notif_user_id: null, message_id: null, message_type: null, has_message: null, guild_id: null, channel_id: null, channel_type: null, rel_type: null, notification_id: null, has_image_thumbnail: null, join_id: null, notif_instance_id: null, notif_type_id: null, mention_type: null };
+      tmp23 = "user_id" in data;
       user_id = null;
-      if (tmp24) {
+      if (tmp23) {
         user_id = data.user_id;
       }
-      tmp27 = "message_id" in data;
+      obj12.notif_user_id = user_id;
+      tmp26 = "message_id" in data;
       message_id1 = null;
-      if (tmp27) {
+      if (tmp26) {
         message_id1 = data.message_id;
       }
-      tmp29 = "message_type_" in data;
+      obj12.message_id = message_id1;
+      tmp28 = "message_type_" in data;
       message_type_ = null;
-      if (tmp29) {
+      if (tmp28) {
         message_type_ = data.message_type_;
       }
-      tmp31 = "message" in data && null != data.message;
-      tmp32 = "guild_id" in data;
+      obj12.message_type = message_type_;
+      tmp30 = "message" in data;
+      if (tmp30) {
+        tmp30 = null != data.message;
+      }
+      obj12.has_message = tmp30;
+      tmp31 = "guild_id" in data;
       guild_id1 = null;
-      if (tmp32) {
+      if (tmp31) {
         guild_id1 = data.guild_id;
       }
-      tmp34 = "channel_id" in data;
+      obj12.guild_id = guild_id1;
+      tmp33 = "channel_id" in data;
       channel_id1 = null;
-      if (tmp34) {
+      if (tmp33) {
         channel_id1 = data.channel_id;
       }
-      tmp36 = "channel_type" in data;
+      obj12.channel_id = channel_id1;
+      tmp35 = "channel_type" in data;
       channel_type = null;
-      if (tmp36) {
+      if (tmp35) {
         channel_type = data.channel_type;
       }
-      tmp38 = "rel_type" in data;
+      obj12.channel_type = channel_type;
+      tmp37 = "rel_type" in data;
       NumberResult = null;
-      if (tmp38) {
-        let _Number = Number;
+      if (tmp37) {
+        _Number = Number;
         NumberResult = Number(data.rel_type);
       }
-      tmp41 = "notification_id" in data;
+      obj12.rel_type = NumberResult;
+      tmp40 = "notification_id" in data;
       notification_id = null;
-      if (tmp41) {
+      if (tmp40) {
         notification_id = data.notification_id;
       }
-      tmp43 = "image_url" in data && null != data.image_url;
-      tmp44 = "join_id" in data;
+      obj12.notification_id = notification_id;
+      tmp42 = "image_url" in data;
+      if (tmp42) {
+        tmp42 = null != data.image_url;
+      }
+      obj12.has_image_thumbnail = tmp42;
+      tmp43 = "join_id" in data;
       join_id = null;
-      if (tmp44) {
+      if (tmp43) {
         join_id = data.join_id;
       }
-      tmp46 = "notif_instance_id" in data;
+      obj12.join_id = join_id;
+      tmp45 = "notif_instance_id" in data;
       notif_instance_id = null;
-      if (tmp46) {
+      if (tmp45) {
         notif_instance_id = data.notif_instance_id;
       }
-      tmp48 = "notif_type_id" in data;
+      obj12.notif_instance_id = notif_instance_id;
+      tmp47 = "notif_type_id" in data;
       notif_type_id = null;
-      if (tmp48) {
+      if (tmp47) {
         notif_type_id = data.notif_type_id;
       }
-      tmp50 = "mention_type" in data;
+      obj12.notif_type_id = notif_type_id;
+      tmp49 = "mention_type" in data;
       mention_type = null;
-      if (tmp50) {
+      if (tmp49) {
         mention_type = data.mention_type;
       }
-      track(NOTIFICATION_CLICKED, obj12);
-      maybeAckNotificationCenter = maybeAckNotificationCenter2;
-      let result1 = maybeAckNotificationCenter(data);
-      type2 = data.type;
-      switch (type2) {
+      obj12.mention_type = mention_type;
+      obj13.track(constants.NOTIFICATION_CLICKED, obj12);
+      maybeAckNotificationCenter = function maybeAckNotificationCenter() {
+        const self = this;
+        const apply = closure_1_33.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      };
+      result1 = maybeAckNotificationCenter(data);
+      switch (tmp53) {
         case "MESSAGE_CREATE":
-        {
-          let channel_id;
-          let guild_id;
-          let message_id;
           if (null != data.message) {
             tmp19Result = tmp19(584);
-            obj13 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
-            tmp19Result.dispatch(obj13);
+            obj14 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
+            tmp19Result.dispatch(obj14);
           }
           tmp19Result5 = tmp19(5099);
           tmp19Result5.popAll();
           tmpResult2 = tmp(1112);
-          transitionTo = tmpResult2.transitionTo;
           ({ guild_id, channel_id, message_id } = data);
           CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
-          obj14 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag, isAppStartupNavigation };
-          transitionTo(CHANNELResult, obj14);
+          obj15 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag, isAppStartupNavigation };
+          tmpResult2.transitionTo(CHANNELResult, obj15);
           return flag2;
-        }
         case "FORUM_THREAD_CREATED":
-        {
-          let self = this;
-          fn = f133368;
-          let self2 = this;
+          fn = (arg0) => {
+            addPostConnectionCallback(arg0);
+          };
           promise = new Promise(fn);
-          fn2 = f149739;
+          fn2 = () => {
+            router_utils.transitionTo(state.CHANNEL(data.guild_id, data.channel_id), { navigationReplace: true, openChannel: true, isAppStartupNavigation });
+          };
           promise.then(fn2);
-          break;
-        }
+        break;
         case "RELATIONSHIP_ADD":
-        {
-          handleRelationshipAddNotification = handleRelationshipAddNotification2;
-          let result2 = handleRelationshipAddNotification(data);
-          break;
-        }
+          handleRelationshipAddNotification = function handleRelationshipAddNotification() {
+            const self = this;
+            const apply = closure_1_29.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result2 = handleRelationshipAddNotification(data);
+        break;
         case "CALL_RING":
-        {
-          handleCallRingNotification = handleCallRingNotification2;
-          let result3 = handleCallRingNotification(data);
-          break;
-        }
+          handleCallRingNotification = function handleCallRingNotification() {
+            const self = this;
+            const apply = closure_1_30.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result3 = handleCallRingNotification(data);
+        break;
         case "CALL_CONNECT":
-        {
-          handleCallConnectNotification = handleCallConnectNotification2;
-          let result4 = handleCallConnectNotification(data);
-          break;
-        }
+          handleCallConnectNotification = function handleCallConnectNotification() {
+            const self = this;
+            const apply = closure_1_31.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result4 = handleCallConnectNotification(data);
+        break;
         case "FRIEND_SUGGESTION_CREATE":
-        {
-          handleFriendSuggestionCreateNotification = handleFriendSuggestionCreateNotification2;
-          let result5 = handleFriendSuggestionCreateNotification(data);
-          break;
-        }
+          handleFriendSuggestionCreateNotification = function handleFriendSuggestionCreateNotification() {
+            const self = this;
+            const apply = closure_1_32.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result5 = handleFriendSuggestionCreateNotification(data);
+        break;
         case "GUILD_STREAM_START":
-        {
           tmp19Result6 = tmp19(5098);
-          obj15 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
-          tmp19Result6(obj15);
-          break;
-        }
+          obj16 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
+          tmp19Result6(obj16);
+        break;
         case "GUILD_SCHEDULED_EVENT_UPDATE":
-        {
-          handleGuildEventNotification = handleGuildEventNotification2;
-          let result6 = handleGuildEventNotification(data);
-          break;
-        }
+          handleGuildEventNotification = function handleGuildEventNotification() {
+            const self = this;
+            const apply = closure_1_28.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result6 = handleGuildEventNotification(data);
+        break;
         case "STAGE_INSTANCE_CREATE":
-        {
-          handleStageNotification = handleStageNotification2;
-          let result7 = handleStageNotification(data);
-          break;
-        }
+          handleStageNotification = function handleStageNotification() {
+            const self = this;
+            const apply = closure_1_27.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result7 = handleStageNotification(data);
+        break;
         case "GENERIC_PUSH_NOTIFICATION_SENT":
-        {
           if (null != data.deeplink) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(4873);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              payload2 = tmp19Result3Result.payload;
               tmp19Result8 = tmp19(13679);
-              obj16 = { payload: payload2, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
-              tmp19Result8(obj16);
+              obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
+              tmp19Result8(obj17);
             }
           }
-          break;
-        }
+        break;
       }
-      break;
-    }
+    break;
     case "CALL_RING":
-    {
       tmp19 = importDefault;
       obj11 = DispatcherDefault;
       obj7 = { type: "PUSH_NOTIFICATION_CLICK" };
       obj11.dispatch(obj7);
-      tmp21 = AnalyticsUtilsDefault;
-      track = tmp21.track;
-      NOTIFICATION_CLICKED = constants.NOTIFICATION_CLICKED;
-      tmp23 = "tracking_type" in data;
-      if (tmp23) {
+      obj13 = AnalyticsUtilsDefault;
+      tmp22 = "tracking_type" in data;
+      if (tmp22) {
         type = data.tracking_type;
       } else {
         type = data.type;
       }
-      obj12 = { notif_type: type, notif_user_id: user_id, message_id: message_id1, message_type: message_type_, has_message: tmp31, guild_id: guild_id1, channel_id: channel_id1, channel_type, rel_type: NumberResult, notification_id, has_image_thumbnail: tmp43, join_id, notif_instance_id, notif_type_id, mention_type };
-      tmp24 = "user_id" in data;
+      obj12 = { notif_type: type, notif_user_id: null, message_id: null, message_type: null, has_message: null, guild_id: null, channel_id: null, channel_type: null, rel_type: null, notification_id: null, has_image_thumbnail: null, join_id: null, notif_instance_id: null, notif_type_id: null, mention_type: null };
+      tmp23 = "user_id" in data;
       user_id = null;
-      if (tmp24) {
+      if (tmp23) {
         user_id = data.user_id;
       }
-      tmp27 = "message_id" in data;
+      obj12.notif_user_id = user_id;
+      tmp26 = "message_id" in data;
       message_id1 = null;
-      if (tmp27) {
+      if (tmp26) {
         message_id1 = data.message_id;
       }
-      tmp29 = "message_type_" in data;
+      obj12.message_id = message_id1;
+      tmp28 = "message_type_" in data;
       message_type_ = null;
-      if (tmp29) {
+      if (tmp28) {
         message_type_ = data.message_type_;
       }
-      tmp31 = "message" in data && null != data.message;
-      tmp32 = "guild_id" in data;
+      obj12.message_type = message_type_;
+      tmp30 = "message" in data;
+      if (tmp30) {
+        tmp30 = null != data.message;
+      }
+      obj12.has_message = tmp30;
+      tmp31 = "guild_id" in data;
       guild_id1 = null;
-      if (tmp32) {
+      if (tmp31) {
         guild_id1 = data.guild_id;
       }
-      tmp34 = "channel_id" in data;
+      obj12.guild_id = guild_id1;
+      tmp33 = "channel_id" in data;
       channel_id1 = null;
-      if (tmp34) {
+      if (tmp33) {
         channel_id1 = data.channel_id;
       }
-      tmp36 = "channel_type" in data;
+      obj12.channel_id = channel_id1;
+      tmp35 = "channel_type" in data;
       channel_type = null;
-      if (tmp36) {
+      if (tmp35) {
         channel_type = data.channel_type;
       }
-      tmp38 = "rel_type" in data;
+      obj12.channel_type = channel_type;
+      tmp37 = "rel_type" in data;
       NumberResult = null;
-      if (tmp38) {
-        let _Number = Number;
+      if (tmp37) {
+        _Number = Number;
         NumberResult = Number(data.rel_type);
       }
-      tmp41 = "notification_id" in data;
+      obj12.rel_type = NumberResult;
+      tmp40 = "notification_id" in data;
       notification_id = null;
-      if (tmp41) {
+      if (tmp40) {
         notification_id = data.notification_id;
       }
-      tmp43 = "image_url" in data && null != data.image_url;
-      tmp44 = "join_id" in data;
+      obj12.notification_id = notification_id;
+      tmp42 = "image_url" in data;
+      if (tmp42) {
+        tmp42 = null != data.image_url;
+      }
+      obj12.has_image_thumbnail = tmp42;
+      tmp43 = "join_id" in data;
       join_id = null;
-      if (tmp44) {
+      if (tmp43) {
         join_id = data.join_id;
       }
-      tmp46 = "notif_instance_id" in data;
+      obj12.join_id = join_id;
+      tmp45 = "notif_instance_id" in data;
       notif_instance_id = null;
-      if (tmp46) {
+      if (tmp45) {
         notif_instance_id = data.notif_instance_id;
       }
-      tmp48 = "notif_type_id" in data;
+      obj12.notif_instance_id = notif_instance_id;
+      tmp47 = "notif_type_id" in data;
       notif_type_id = null;
-      if (tmp48) {
+      if (tmp47) {
         notif_type_id = data.notif_type_id;
       }
-      tmp50 = "mention_type" in data;
+      obj12.notif_type_id = notif_type_id;
+      tmp49 = "mention_type" in data;
       mention_type = null;
-      if (tmp50) {
+      if (tmp49) {
         mention_type = data.mention_type;
       }
-      track(NOTIFICATION_CLICKED, obj12);
-      maybeAckNotificationCenter = maybeAckNotificationCenter2;
-      let result1 = maybeAckNotificationCenter(data);
-      type2 = data.type;
-      switch (type2) {
+      obj12.mention_type = mention_type;
+      obj13.track(constants.NOTIFICATION_CLICKED, obj12);
+      maybeAckNotificationCenter = function maybeAckNotificationCenter() {
+        const self = this;
+        const apply = closure_1_33.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      };
+      result1 = maybeAckNotificationCenter(data);
+      switch (tmp53) {
         case "MESSAGE_CREATE":
-        {
-          let channel_id;
-          let guild_id;
-          let message_id;
           if (null != data.message) {
             tmp19Result = tmp19(584);
-            obj13 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
-            tmp19Result.dispatch(obj13);
+            obj14 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
+            tmp19Result.dispatch(obj14);
           }
           tmp19Result5 = tmp19(5099);
           tmp19Result5.popAll();
           tmpResult2 = tmp(1112);
-          transitionTo = tmpResult2.transitionTo;
           ({ guild_id, channel_id, message_id } = data);
           CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
-          obj14 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag, isAppStartupNavigation };
-          transitionTo(CHANNELResult, obj14);
+          obj15 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag, isAppStartupNavigation };
+          tmpResult2.transitionTo(CHANNELResult, obj15);
           return flag2;
-        }
         case "FORUM_THREAD_CREATED":
-        {
-          let self = this;
-          fn = f133368;
-          let self2 = this;
+          fn = (arg0) => {
+            addPostConnectionCallback(arg0);
+          };
           promise = new Promise(fn);
-          fn2 = f149739;
+          fn2 = () => {
+            router_utils.transitionTo(state.CHANNEL(data.guild_id, data.channel_id), { navigationReplace: true, openChannel: true, isAppStartupNavigation });
+          };
           promise.then(fn2);
-          break;
-        }
+        break;
         case "RELATIONSHIP_ADD":
-        {
-          handleRelationshipAddNotification = handleRelationshipAddNotification2;
-          let result2 = handleRelationshipAddNotification(data);
-          break;
-        }
+          handleRelationshipAddNotification = function handleRelationshipAddNotification() {
+            const self = this;
+            const apply = closure_1_29.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result2 = handleRelationshipAddNotification(data);
+        break;
         case "CALL_RING":
-        {
-          handleCallRingNotification = handleCallRingNotification2;
-          let result3 = handleCallRingNotification(data);
-          break;
-        }
+          handleCallRingNotification = function handleCallRingNotification() {
+            const self = this;
+            const apply = closure_1_30.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result3 = handleCallRingNotification(data);
+        break;
         case "CALL_CONNECT":
-        {
-          handleCallConnectNotification = handleCallConnectNotification2;
-          let result4 = handleCallConnectNotification(data);
-          break;
-        }
+          handleCallConnectNotification = function handleCallConnectNotification() {
+            const self = this;
+            const apply = closure_1_31.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result4 = handleCallConnectNotification(data);
+        break;
         case "FRIEND_SUGGESTION_CREATE":
-        {
-          handleFriendSuggestionCreateNotification = handleFriendSuggestionCreateNotification2;
-          let result5 = handleFriendSuggestionCreateNotification(data);
-          break;
-        }
+          handleFriendSuggestionCreateNotification = function handleFriendSuggestionCreateNotification() {
+            const self = this;
+            const apply = closure_1_32.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result5 = handleFriendSuggestionCreateNotification(data);
+        break;
         case "GUILD_STREAM_START":
-        {
           tmp19Result6 = tmp19(5098);
-          obj15 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
-          tmp19Result6(obj15);
-          break;
-        }
+          obj16 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
+          tmp19Result6(obj16);
+        break;
         case "GUILD_SCHEDULED_EVENT_UPDATE":
-        {
-          handleGuildEventNotification = handleGuildEventNotification2;
-          let result6 = handleGuildEventNotification(data);
-          break;
-        }
+          handleGuildEventNotification = function handleGuildEventNotification() {
+            const self = this;
+            const apply = closure_1_28.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result6 = handleGuildEventNotification(data);
+        break;
         case "STAGE_INSTANCE_CREATE":
-        {
-          handleStageNotification = handleStageNotification2;
-          let result7 = handleStageNotification(data);
-          break;
-        }
+          handleStageNotification = function handleStageNotification() {
+            const self = this;
+            const apply = closure_1_27.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result7 = handleStageNotification(data);
+        break;
         case "GENERIC_PUSH_NOTIFICATION_SENT":
-        {
           if (null != data.deeplink) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(4873);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              payload2 = tmp19Result3Result.payload;
               tmp19Result8 = tmp19(13679);
-              obj16 = { payload: payload2, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
-              tmp19Result8(obj16);
+              obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
+              tmp19Result8(obj17);
             }
           }
-          break;
-        }
+        break;
       }
-      break;
-    }
+    break;
     case "CALL_CONNECT":
-    {
       tmp19 = importDefault;
       obj11 = DispatcherDefault;
       obj7 = { type: "PUSH_NOTIFICATION_CLICK" };
       obj11.dispatch(obj7);
-      tmp21 = AnalyticsUtilsDefault;
-      track = tmp21.track;
-      NOTIFICATION_CLICKED = constants.NOTIFICATION_CLICKED;
-      tmp23 = "tracking_type" in data;
-      if (tmp23) {
+      obj13 = AnalyticsUtilsDefault;
+      tmp22 = "tracking_type" in data;
+      if (tmp22) {
         type = data.tracking_type;
       } else {
         type = data.type;
       }
-      obj12 = { notif_type: type, notif_user_id: user_id, message_id: message_id1, message_type: message_type_, has_message: tmp31, guild_id: guild_id1, channel_id: channel_id1, channel_type, rel_type: NumberResult, notification_id, has_image_thumbnail: tmp43, join_id, notif_instance_id, notif_type_id, mention_type };
-      tmp24 = "user_id" in data;
+      obj12 = { notif_type: type, notif_user_id: null, message_id: null, message_type: null, has_message: null, guild_id: null, channel_id: null, channel_type: null, rel_type: null, notification_id: null, has_image_thumbnail: null, join_id: null, notif_instance_id: null, notif_type_id: null, mention_type: null };
+      tmp23 = "user_id" in data;
       user_id = null;
-      if (tmp24) {
+      if (tmp23) {
         user_id = data.user_id;
       }
-      tmp27 = "message_id" in data;
+      obj12.notif_user_id = user_id;
+      tmp26 = "message_id" in data;
       message_id1 = null;
-      if (tmp27) {
+      if (tmp26) {
         message_id1 = data.message_id;
       }
-      tmp29 = "message_type_" in data;
+      obj12.message_id = message_id1;
+      tmp28 = "message_type_" in data;
       message_type_ = null;
-      if (tmp29) {
+      if (tmp28) {
         message_type_ = data.message_type_;
       }
-      tmp31 = "message" in data && null != data.message;
-      tmp32 = "guild_id" in data;
+      obj12.message_type = message_type_;
+      tmp30 = "message" in data;
+      if (tmp30) {
+        tmp30 = null != data.message;
+      }
+      obj12.has_message = tmp30;
+      tmp31 = "guild_id" in data;
       guild_id1 = null;
-      if (tmp32) {
+      if (tmp31) {
         guild_id1 = data.guild_id;
       }
-      tmp34 = "channel_id" in data;
+      obj12.guild_id = guild_id1;
+      tmp33 = "channel_id" in data;
       channel_id1 = null;
-      if (tmp34) {
+      if (tmp33) {
         channel_id1 = data.channel_id;
       }
-      tmp36 = "channel_type" in data;
+      obj12.channel_id = channel_id1;
+      tmp35 = "channel_type" in data;
       channel_type = null;
-      if (tmp36) {
+      if (tmp35) {
         channel_type = data.channel_type;
       }
-      tmp38 = "rel_type" in data;
+      obj12.channel_type = channel_type;
+      tmp37 = "rel_type" in data;
       NumberResult = null;
-      if (tmp38) {
-        let _Number = Number;
+      if (tmp37) {
+        _Number = Number;
         NumberResult = Number(data.rel_type);
       }
-      tmp41 = "notification_id" in data;
+      obj12.rel_type = NumberResult;
+      tmp40 = "notification_id" in data;
       notification_id = null;
-      if (tmp41) {
+      if (tmp40) {
         notification_id = data.notification_id;
       }
-      tmp43 = "image_url" in data && null != data.image_url;
-      tmp44 = "join_id" in data;
+      obj12.notification_id = notification_id;
+      tmp42 = "image_url" in data;
+      if (tmp42) {
+        tmp42 = null != data.image_url;
+      }
+      obj12.has_image_thumbnail = tmp42;
+      tmp43 = "join_id" in data;
       join_id = null;
-      if (tmp44) {
+      if (tmp43) {
         join_id = data.join_id;
       }
-      tmp46 = "notif_instance_id" in data;
+      obj12.join_id = join_id;
+      tmp45 = "notif_instance_id" in data;
       notif_instance_id = null;
-      if (tmp46) {
+      if (tmp45) {
         notif_instance_id = data.notif_instance_id;
       }
-      tmp48 = "notif_type_id" in data;
+      obj12.notif_instance_id = notif_instance_id;
+      tmp47 = "notif_type_id" in data;
       notif_type_id = null;
-      if (tmp48) {
+      if (tmp47) {
         notif_type_id = data.notif_type_id;
       }
-      tmp50 = "mention_type" in data;
+      obj12.notif_type_id = notif_type_id;
+      tmp49 = "mention_type" in data;
       mention_type = null;
-      if (tmp50) {
+      if (tmp49) {
         mention_type = data.mention_type;
       }
-      track(NOTIFICATION_CLICKED, obj12);
-      maybeAckNotificationCenter = maybeAckNotificationCenter2;
-      let result1 = maybeAckNotificationCenter(data);
-      type2 = data.type;
-      switch (type2) {
+      obj12.mention_type = mention_type;
+      obj13.track(constants.NOTIFICATION_CLICKED, obj12);
+      maybeAckNotificationCenter = function maybeAckNotificationCenter() {
+        const self = this;
+        const apply = closure_1_33.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      };
+      result1 = maybeAckNotificationCenter(data);
+      switch (tmp53) {
         case "MESSAGE_CREATE":
-        {
-          let channel_id;
-          let guild_id;
-          let message_id;
           if (null != data.message) {
             tmp19Result = tmp19(584);
-            obj13 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
-            tmp19Result.dispatch(obj13);
+            obj14 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
+            tmp19Result.dispatch(obj14);
           }
           tmp19Result5 = tmp19(5099);
           tmp19Result5.popAll();
           tmpResult2 = tmp(1112);
-          transitionTo = tmpResult2.transitionTo;
           ({ guild_id, channel_id, message_id } = data);
           CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
-          obj14 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag, isAppStartupNavigation };
-          transitionTo(CHANNELResult, obj14);
+          obj15 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag, isAppStartupNavigation };
+          tmpResult2.transitionTo(CHANNELResult, obj15);
           return flag2;
-        }
         case "FORUM_THREAD_CREATED":
-        {
-          let self = this;
-          fn = f133368;
-          let self2 = this;
+          fn = (arg0) => {
+            addPostConnectionCallback(arg0);
+          };
           promise = new Promise(fn);
-          fn2 = f149739;
+          fn2 = () => {
+            router_utils.transitionTo(state.CHANNEL(data.guild_id, data.channel_id), { navigationReplace: true, openChannel: true, isAppStartupNavigation });
+          };
           promise.then(fn2);
-          break;
-        }
+        break;
         case "RELATIONSHIP_ADD":
-        {
-          handleRelationshipAddNotification = handleRelationshipAddNotification2;
-          let result2 = handleRelationshipAddNotification(data);
-          break;
-        }
+          handleRelationshipAddNotification = function handleRelationshipAddNotification() {
+            const self = this;
+            const apply = closure_1_29.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result2 = handleRelationshipAddNotification(data);
+        break;
         case "CALL_RING":
-        {
-          handleCallRingNotification = handleCallRingNotification2;
-          let result3 = handleCallRingNotification(data);
-          break;
-        }
+          handleCallRingNotification = function handleCallRingNotification() {
+            const self = this;
+            const apply = closure_1_30.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result3 = handleCallRingNotification(data);
+        break;
         case "CALL_CONNECT":
-        {
-          handleCallConnectNotification = handleCallConnectNotification2;
-          let result4 = handleCallConnectNotification(data);
-          break;
-        }
+          handleCallConnectNotification = function handleCallConnectNotification() {
+            const self = this;
+            const apply = closure_1_31.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result4 = handleCallConnectNotification(data);
+        break;
         case "FRIEND_SUGGESTION_CREATE":
-        {
-          handleFriendSuggestionCreateNotification = handleFriendSuggestionCreateNotification2;
-          let result5 = handleFriendSuggestionCreateNotification(data);
-          break;
-        }
+          handleFriendSuggestionCreateNotification = function handleFriendSuggestionCreateNotification() {
+            const self = this;
+            const apply = closure_1_32.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result5 = handleFriendSuggestionCreateNotification(data);
+        break;
         case "GUILD_STREAM_START":
-        {
           tmp19Result6 = tmp19(5098);
-          obj15 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
-          tmp19Result6(obj15);
-          break;
-        }
+          obj16 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
+          tmp19Result6(obj16);
+        break;
         case "GUILD_SCHEDULED_EVENT_UPDATE":
-        {
-          handleGuildEventNotification = handleGuildEventNotification2;
-          let result6 = handleGuildEventNotification(data);
-          break;
-        }
+          handleGuildEventNotification = function handleGuildEventNotification() {
+            const self = this;
+            const apply = closure_1_28.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result6 = handleGuildEventNotification(data);
+        break;
         case "STAGE_INSTANCE_CREATE":
-        {
-          handleStageNotification = handleStageNotification2;
-          let result7 = handleStageNotification(data);
-          break;
-        }
+          handleStageNotification = function handleStageNotification() {
+            const self = this;
+            const apply = closure_1_27.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result7 = handleStageNotification(data);
+        break;
         case "GENERIC_PUSH_NOTIFICATION_SENT":
-        {
           if (null != data.deeplink) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(4873);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              payload2 = tmp19Result3Result.payload;
               tmp19Result8 = tmp19(13679);
-              obj16 = { payload: payload2, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
-              tmp19Result8(obj16);
+              obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
+              tmp19Result8(obj17);
             }
           }
-          break;
-        }
+        break;
       }
-      break;
-    }
+    break;
     case "FRIEND_SUGGESTION_CREATE":
-    {
       tmp19 = importDefault;
       obj11 = DispatcherDefault;
       obj7 = { type: "PUSH_NOTIFICATION_CLICK" };
       obj11.dispatch(obj7);
-      tmp21 = AnalyticsUtilsDefault;
-      track = tmp21.track;
-      NOTIFICATION_CLICKED = constants.NOTIFICATION_CLICKED;
-      tmp23 = "tracking_type" in data;
-      if (tmp23) {
+      obj13 = AnalyticsUtilsDefault;
+      tmp22 = "tracking_type" in data;
+      if (tmp22) {
         type = data.tracking_type;
       } else {
         type = data.type;
       }
-      obj12 = { notif_type: type, notif_user_id: user_id, message_id: message_id1, message_type: message_type_, has_message: tmp31, guild_id: guild_id1, channel_id: channel_id1, channel_type, rel_type: NumberResult, notification_id, has_image_thumbnail: tmp43, join_id, notif_instance_id, notif_type_id, mention_type };
-      tmp24 = "user_id" in data;
+      obj12 = { notif_type: type, notif_user_id: null, message_id: null, message_type: null, has_message: null, guild_id: null, channel_id: null, channel_type: null, rel_type: null, notification_id: null, has_image_thumbnail: null, join_id: null, notif_instance_id: null, notif_type_id: null, mention_type: null };
+      tmp23 = "user_id" in data;
       user_id = null;
-      if (tmp24) {
+      if (tmp23) {
         user_id = data.user_id;
       }
-      tmp27 = "message_id" in data;
+      obj12.notif_user_id = user_id;
+      tmp26 = "message_id" in data;
       message_id1 = null;
-      if (tmp27) {
+      if (tmp26) {
         message_id1 = data.message_id;
       }
-      tmp29 = "message_type_" in data;
+      obj12.message_id = message_id1;
+      tmp28 = "message_type_" in data;
       message_type_ = null;
-      if (tmp29) {
+      if (tmp28) {
         message_type_ = data.message_type_;
       }
-      tmp31 = "message" in data && null != data.message;
-      tmp32 = "guild_id" in data;
+      obj12.message_type = message_type_;
+      tmp30 = "message" in data;
+      if (tmp30) {
+        tmp30 = null != data.message;
+      }
+      obj12.has_message = tmp30;
+      tmp31 = "guild_id" in data;
       guild_id1 = null;
-      if (tmp32) {
+      if (tmp31) {
         guild_id1 = data.guild_id;
       }
-      tmp34 = "channel_id" in data;
+      obj12.guild_id = guild_id1;
+      tmp33 = "channel_id" in data;
       channel_id1 = null;
-      if (tmp34) {
+      if (tmp33) {
         channel_id1 = data.channel_id;
       }
-      tmp36 = "channel_type" in data;
+      obj12.channel_id = channel_id1;
+      tmp35 = "channel_type" in data;
       channel_type = null;
-      if (tmp36) {
+      if (tmp35) {
         channel_type = data.channel_type;
       }
-      tmp38 = "rel_type" in data;
+      obj12.channel_type = channel_type;
+      tmp37 = "rel_type" in data;
       NumberResult = null;
-      if (tmp38) {
-        let _Number = Number;
+      if (tmp37) {
+        _Number = Number;
         NumberResult = Number(data.rel_type);
       }
-      tmp41 = "notification_id" in data;
+      obj12.rel_type = NumberResult;
+      tmp40 = "notification_id" in data;
       notification_id = null;
-      if (tmp41) {
+      if (tmp40) {
         notification_id = data.notification_id;
       }
-      tmp43 = "image_url" in data && null != data.image_url;
-      tmp44 = "join_id" in data;
+      obj12.notification_id = notification_id;
+      tmp42 = "image_url" in data;
+      if (tmp42) {
+        tmp42 = null != data.image_url;
+      }
+      obj12.has_image_thumbnail = tmp42;
+      tmp43 = "join_id" in data;
       join_id = null;
-      if (tmp44) {
+      if (tmp43) {
         join_id = data.join_id;
       }
-      tmp46 = "notif_instance_id" in data;
+      obj12.join_id = join_id;
+      tmp45 = "notif_instance_id" in data;
       notif_instance_id = null;
-      if (tmp46) {
+      if (tmp45) {
         notif_instance_id = data.notif_instance_id;
       }
-      tmp48 = "notif_type_id" in data;
+      obj12.notif_instance_id = notif_instance_id;
+      tmp47 = "notif_type_id" in data;
       notif_type_id = null;
-      if (tmp48) {
+      if (tmp47) {
         notif_type_id = data.notif_type_id;
       }
-      tmp50 = "mention_type" in data;
+      obj12.notif_type_id = notif_type_id;
+      tmp49 = "mention_type" in data;
       mention_type = null;
-      if (tmp50) {
+      if (tmp49) {
         mention_type = data.mention_type;
       }
-      track(NOTIFICATION_CLICKED, obj12);
-      maybeAckNotificationCenter = maybeAckNotificationCenter2;
-      let result1 = maybeAckNotificationCenter(data);
-      type2 = data.type;
-      switch (type2) {
+      obj12.mention_type = mention_type;
+      obj13.track(constants.NOTIFICATION_CLICKED, obj12);
+      maybeAckNotificationCenter = function maybeAckNotificationCenter() {
+        const self = this;
+        const apply = closure_1_33.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      };
+      result1 = maybeAckNotificationCenter(data);
+      switch (tmp53) {
         case "MESSAGE_CREATE":
-        {
-          let channel_id;
-          let guild_id;
-          let message_id;
           if (null != data.message) {
             tmp19Result = tmp19(584);
-            obj13 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
-            tmp19Result.dispatch(obj13);
+            obj14 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
+            tmp19Result.dispatch(obj14);
           }
           tmp19Result5 = tmp19(5099);
           tmp19Result5.popAll();
           tmpResult2 = tmp(1112);
-          transitionTo = tmpResult2.transitionTo;
           ({ guild_id, channel_id, message_id } = data);
           CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
-          obj14 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag, isAppStartupNavigation };
-          transitionTo(CHANNELResult, obj14);
+          obj15 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag, isAppStartupNavigation };
+          tmpResult2.transitionTo(CHANNELResult, obj15);
           return flag2;
-        }
         case "FORUM_THREAD_CREATED":
-        {
-          let self = this;
-          fn = f133368;
-          let self2 = this;
+          fn = (arg0) => {
+            addPostConnectionCallback(arg0);
+          };
           promise = new Promise(fn);
-          fn2 = f149739;
+          fn2 = () => {
+            router_utils.transitionTo(state.CHANNEL(data.guild_id, data.channel_id), { navigationReplace: true, openChannel: true, isAppStartupNavigation });
+          };
           promise.then(fn2);
-          break;
-        }
+        break;
         case "RELATIONSHIP_ADD":
-        {
-          handleRelationshipAddNotification = handleRelationshipAddNotification2;
-          let result2 = handleRelationshipAddNotification(data);
-          break;
-        }
+          handleRelationshipAddNotification = function handleRelationshipAddNotification() {
+            const self = this;
+            const apply = closure_1_29.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result2 = handleRelationshipAddNotification(data);
+        break;
         case "CALL_RING":
-        {
-          handleCallRingNotification = handleCallRingNotification2;
-          let result3 = handleCallRingNotification(data);
-          break;
-        }
+          handleCallRingNotification = function handleCallRingNotification() {
+            const self = this;
+            const apply = closure_1_30.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result3 = handleCallRingNotification(data);
+        break;
         case "CALL_CONNECT":
-        {
-          handleCallConnectNotification = handleCallConnectNotification2;
-          let result4 = handleCallConnectNotification(data);
-          break;
-        }
+          handleCallConnectNotification = function handleCallConnectNotification() {
+            const self = this;
+            const apply = closure_1_31.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result4 = handleCallConnectNotification(data);
+        break;
         case "FRIEND_SUGGESTION_CREATE":
-        {
-          handleFriendSuggestionCreateNotification = handleFriendSuggestionCreateNotification2;
-          let result5 = handleFriendSuggestionCreateNotification(data);
-          break;
-        }
+          handleFriendSuggestionCreateNotification = function handleFriendSuggestionCreateNotification() {
+            const self = this;
+            const apply = closure_1_32.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result5 = handleFriendSuggestionCreateNotification(data);
+        break;
         case "GUILD_STREAM_START":
-        {
           tmp19Result6 = tmp19(5098);
-          obj15 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
-          tmp19Result6(obj15);
-          break;
-        }
+          obj16 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
+          tmp19Result6(obj16);
+        break;
         case "GUILD_SCHEDULED_EVENT_UPDATE":
-        {
-          handleGuildEventNotification = handleGuildEventNotification2;
-          let result6 = handleGuildEventNotification(data);
-          break;
-        }
+          handleGuildEventNotification = function handleGuildEventNotification() {
+            const self = this;
+            const apply = closure_1_28.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result6 = handleGuildEventNotification(data);
+        break;
         case "STAGE_INSTANCE_CREATE":
-        {
-          handleStageNotification = handleStageNotification2;
-          let result7 = handleStageNotification(data);
-          break;
-        }
+          handleStageNotification = function handleStageNotification() {
+            const self = this;
+            const apply = closure_1_27.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result7 = handleStageNotification(data);
+        break;
         case "GENERIC_PUSH_NOTIFICATION_SENT":
-        {
           if (null != data.deeplink) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(4873);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              payload2 = tmp19Result3Result.payload;
               tmp19Result8 = tmp19(13679);
-              obj16 = { payload: payload2, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
-              tmp19Result8(obj16);
+              obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
+              tmp19Result8(obj17);
             }
           }
-          break;
-        }
+        break;
       }
-      break;
-    }
+    break;
     case "STAGE_INSTANCE_CREATE":
-    {
       tmp19 = importDefault;
       obj11 = DispatcherDefault;
       obj7 = { type: "PUSH_NOTIFICATION_CLICK" };
       obj11.dispatch(obj7);
-      tmp21 = AnalyticsUtilsDefault;
-      track = tmp21.track;
-      NOTIFICATION_CLICKED = constants.NOTIFICATION_CLICKED;
-      tmp23 = "tracking_type" in data;
-      if (tmp23) {
+      obj13 = AnalyticsUtilsDefault;
+      tmp22 = "tracking_type" in data;
+      if (tmp22) {
         type = data.tracking_type;
       } else {
         type = data.type;
       }
-      obj12 = { notif_type: type, notif_user_id: user_id, message_id: message_id1, message_type: message_type_, has_message: tmp31, guild_id: guild_id1, channel_id: channel_id1, channel_type, rel_type: NumberResult, notification_id, has_image_thumbnail: tmp43, join_id, notif_instance_id, notif_type_id, mention_type };
-      tmp24 = "user_id" in data;
+      obj12 = { notif_type: type, notif_user_id: null, message_id: null, message_type: null, has_message: null, guild_id: null, channel_id: null, channel_type: null, rel_type: null, notification_id: null, has_image_thumbnail: null, join_id: null, notif_instance_id: null, notif_type_id: null, mention_type: null };
+      tmp23 = "user_id" in data;
       user_id = null;
-      if (tmp24) {
+      if (tmp23) {
         user_id = data.user_id;
       }
-      tmp27 = "message_id" in data;
+      obj12.notif_user_id = user_id;
+      tmp26 = "message_id" in data;
       message_id1 = null;
-      if (tmp27) {
+      if (tmp26) {
         message_id1 = data.message_id;
       }
-      tmp29 = "message_type_" in data;
+      obj12.message_id = message_id1;
+      tmp28 = "message_type_" in data;
       message_type_ = null;
-      if (tmp29) {
+      if (tmp28) {
         message_type_ = data.message_type_;
       }
-      tmp31 = "message" in data && null != data.message;
-      tmp32 = "guild_id" in data;
+      obj12.message_type = message_type_;
+      tmp30 = "message" in data;
+      if (tmp30) {
+        tmp30 = null != data.message;
+      }
+      obj12.has_message = tmp30;
+      tmp31 = "guild_id" in data;
       guild_id1 = null;
-      if (tmp32) {
+      if (tmp31) {
         guild_id1 = data.guild_id;
       }
-      tmp34 = "channel_id" in data;
+      obj12.guild_id = guild_id1;
+      tmp33 = "channel_id" in data;
       channel_id1 = null;
-      if (tmp34) {
+      if (tmp33) {
         channel_id1 = data.channel_id;
       }
-      tmp36 = "channel_type" in data;
+      obj12.channel_id = channel_id1;
+      tmp35 = "channel_type" in data;
       channel_type = null;
-      if (tmp36) {
+      if (tmp35) {
         channel_type = data.channel_type;
       }
-      tmp38 = "rel_type" in data;
+      obj12.channel_type = channel_type;
+      tmp37 = "rel_type" in data;
       NumberResult = null;
-      if (tmp38) {
-        let _Number = Number;
+      if (tmp37) {
+        _Number = Number;
         NumberResult = Number(data.rel_type);
       }
-      tmp41 = "notification_id" in data;
+      obj12.rel_type = NumberResult;
+      tmp40 = "notification_id" in data;
       notification_id = null;
-      if (tmp41) {
+      if (tmp40) {
         notification_id = data.notification_id;
       }
-      tmp43 = "image_url" in data && null != data.image_url;
-      tmp44 = "join_id" in data;
+      obj12.notification_id = notification_id;
+      tmp42 = "image_url" in data;
+      if (tmp42) {
+        tmp42 = null != data.image_url;
+      }
+      obj12.has_image_thumbnail = tmp42;
+      tmp43 = "join_id" in data;
       join_id = null;
-      if (tmp44) {
+      if (tmp43) {
         join_id = data.join_id;
       }
-      tmp46 = "notif_instance_id" in data;
+      obj12.join_id = join_id;
+      tmp45 = "notif_instance_id" in data;
       notif_instance_id = null;
-      if (tmp46) {
+      if (tmp45) {
         notif_instance_id = data.notif_instance_id;
       }
-      tmp48 = "notif_type_id" in data;
+      obj12.notif_instance_id = notif_instance_id;
+      tmp47 = "notif_type_id" in data;
       notif_type_id = null;
-      if (tmp48) {
+      if (tmp47) {
         notif_type_id = data.notif_type_id;
       }
-      tmp50 = "mention_type" in data;
+      obj12.notif_type_id = notif_type_id;
+      tmp49 = "mention_type" in data;
       mention_type = null;
-      if (tmp50) {
+      if (tmp49) {
         mention_type = data.mention_type;
       }
-      track(NOTIFICATION_CLICKED, obj12);
-      maybeAckNotificationCenter = maybeAckNotificationCenter2;
-      let result1 = maybeAckNotificationCenter(data);
-      type2 = data.type;
-      switch (type2) {
+      obj12.mention_type = mention_type;
+      obj13.track(constants.NOTIFICATION_CLICKED, obj12);
+      maybeAckNotificationCenter = function maybeAckNotificationCenter() {
+        const self = this;
+        const apply = closure_1_33.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      };
+      result1 = maybeAckNotificationCenter(data);
+      switch (tmp53) {
         case "MESSAGE_CREATE":
-        {
-          let channel_id;
-          let guild_id;
-          let message_id;
           if (null != data.message) {
             tmp19Result = tmp19(584);
-            obj13 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
-            tmp19Result.dispatch(obj13);
+            obj14 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
+            tmp19Result.dispatch(obj14);
           }
           tmp19Result5 = tmp19(5099);
           tmp19Result5.popAll();
           tmpResult2 = tmp(1112);
-          transitionTo = tmpResult2.transitionTo;
           ({ guild_id, channel_id, message_id } = data);
           CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
-          obj14 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag, isAppStartupNavigation };
-          transitionTo(CHANNELResult, obj14);
+          obj15 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag, isAppStartupNavigation };
+          tmpResult2.transitionTo(CHANNELResult, obj15);
           return flag2;
-        }
         case "FORUM_THREAD_CREATED":
-        {
-          let self = this;
-          fn = f133368;
-          let self2 = this;
+          fn = (arg0) => {
+            addPostConnectionCallback(arg0);
+          };
           promise = new Promise(fn);
-          fn2 = f149739;
+          fn2 = () => {
+            router_utils.transitionTo(state.CHANNEL(data.guild_id, data.channel_id), { navigationReplace: true, openChannel: true, isAppStartupNavigation });
+          };
           promise.then(fn2);
-          break;
-        }
+        break;
         case "RELATIONSHIP_ADD":
-        {
-          handleRelationshipAddNotification = handleRelationshipAddNotification2;
-          let result2 = handleRelationshipAddNotification(data);
-          break;
-        }
+          handleRelationshipAddNotification = function handleRelationshipAddNotification() {
+            const self = this;
+            const apply = closure_1_29.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result2 = handleRelationshipAddNotification(data);
+        break;
         case "CALL_RING":
-        {
-          handleCallRingNotification = handleCallRingNotification2;
-          let result3 = handleCallRingNotification(data);
-          break;
-        }
+          handleCallRingNotification = function handleCallRingNotification() {
+            const self = this;
+            const apply = closure_1_30.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result3 = handleCallRingNotification(data);
+        break;
         case "CALL_CONNECT":
-        {
-          handleCallConnectNotification = handleCallConnectNotification2;
-          let result4 = handleCallConnectNotification(data);
-          break;
-        }
+          handleCallConnectNotification = function handleCallConnectNotification() {
+            const self = this;
+            const apply = closure_1_31.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result4 = handleCallConnectNotification(data);
+        break;
         case "FRIEND_SUGGESTION_CREATE":
-        {
-          handleFriendSuggestionCreateNotification = handleFriendSuggestionCreateNotification2;
-          let result5 = handleFriendSuggestionCreateNotification(data);
-          break;
-        }
+          handleFriendSuggestionCreateNotification = function handleFriendSuggestionCreateNotification() {
+            const self = this;
+            const apply = closure_1_32.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result5 = handleFriendSuggestionCreateNotification(data);
+        break;
         case "GUILD_STREAM_START":
-        {
           tmp19Result6 = tmp19(5098);
-          obj15 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
-          tmp19Result6(obj15);
-          break;
-        }
+          obj16 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
+          tmp19Result6(obj16);
+        break;
         case "GUILD_SCHEDULED_EVENT_UPDATE":
-        {
-          handleGuildEventNotification = handleGuildEventNotification2;
-          let result6 = handleGuildEventNotification(data);
-          break;
-        }
+          handleGuildEventNotification = function handleGuildEventNotification() {
+            const self = this;
+            const apply = closure_1_28.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result6 = handleGuildEventNotification(data);
+        break;
         case "STAGE_INSTANCE_CREATE":
-        {
-          handleStageNotification = handleStageNotification2;
-          let result7 = handleStageNotification(data);
-          break;
-        }
+          handleStageNotification = function handleStageNotification() {
+            const self = this;
+            const apply = closure_1_27.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result7 = handleStageNotification(data);
+        break;
         case "GENERIC_PUSH_NOTIFICATION_SENT":
-        {
           if (null != data.deeplink) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(4873);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              payload2 = tmp19Result3Result.payload;
               tmp19Result8 = tmp19(13679);
-              obj16 = { payload: payload2, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
-              tmp19Result8(obj16);
+              obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
+              tmp19Result8(obj17);
             }
           }
-          break;
-        }
+        break;
       }
-      break;
-    }
+    break;
     case "GUILD_SCHEDULED_EVENT_UPDATE":
-    {
       tmp19 = importDefault;
       obj11 = DispatcherDefault;
       obj7 = { type: "PUSH_NOTIFICATION_CLICK" };
       obj11.dispatch(obj7);
-      tmp21 = AnalyticsUtilsDefault;
-      track = tmp21.track;
-      NOTIFICATION_CLICKED = constants.NOTIFICATION_CLICKED;
-      tmp23 = "tracking_type" in data;
-      if (tmp23) {
+      obj13 = AnalyticsUtilsDefault;
+      tmp22 = "tracking_type" in data;
+      if (tmp22) {
         type = data.tracking_type;
       } else {
         type = data.type;
       }
-      obj12 = { notif_type: type, notif_user_id: user_id, message_id: message_id1, message_type: message_type_, has_message: tmp31, guild_id: guild_id1, channel_id: channel_id1, channel_type, rel_type: NumberResult, notification_id, has_image_thumbnail: tmp43, join_id, notif_instance_id, notif_type_id, mention_type };
-      tmp24 = "user_id" in data;
+      obj12 = { notif_type: type, notif_user_id: null, message_id: null, message_type: null, has_message: null, guild_id: null, channel_id: null, channel_type: null, rel_type: null, notification_id: null, has_image_thumbnail: null, join_id: null, notif_instance_id: null, notif_type_id: null, mention_type: null };
+      tmp23 = "user_id" in data;
       user_id = null;
-      if (tmp24) {
+      if (tmp23) {
         user_id = data.user_id;
       }
-      tmp27 = "message_id" in data;
+      obj12.notif_user_id = user_id;
+      tmp26 = "message_id" in data;
       message_id1 = null;
-      if (tmp27) {
+      if (tmp26) {
         message_id1 = data.message_id;
       }
-      tmp29 = "message_type_" in data;
+      obj12.message_id = message_id1;
+      tmp28 = "message_type_" in data;
       message_type_ = null;
-      if (tmp29) {
+      if (tmp28) {
         message_type_ = data.message_type_;
       }
-      tmp31 = "message" in data && null != data.message;
-      tmp32 = "guild_id" in data;
+      obj12.message_type = message_type_;
+      tmp30 = "message" in data;
+      if (tmp30) {
+        tmp30 = null != data.message;
+      }
+      obj12.has_message = tmp30;
+      tmp31 = "guild_id" in data;
       guild_id1 = null;
-      if (tmp32) {
+      if (tmp31) {
         guild_id1 = data.guild_id;
       }
-      tmp34 = "channel_id" in data;
+      obj12.guild_id = guild_id1;
+      tmp33 = "channel_id" in data;
       channel_id1 = null;
-      if (tmp34) {
+      if (tmp33) {
         channel_id1 = data.channel_id;
       }
-      tmp36 = "channel_type" in data;
+      obj12.channel_id = channel_id1;
+      tmp35 = "channel_type" in data;
       channel_type = null;
-      if (tmp36) {
+      if (tmp35) {
         channel_type = data.channel_type;
       }
-      tmp38 = "rel_type" in data;
+      obj12.channel_type = channel_type;
+      tmp37 = "rel_type" in data;
       NumberResult = null;
-      if (tmp38) {
-        let _Number = Number;
+      if (tmp37) {
+        _Number = Number;
         NumberResult = Number(data.rel_type);
       }
-      tmp41 = "notification_id" in data;
+      obj12.rel_type = NumberResult;
+      tmp40 = "notification_id" in data;
       notification_id = null;
-      if (tmp41) {
+      if (tmp40) {
         notification_id = data.notification_id;
       }
-      tmp43 = "image_url" in data && null != data.image_url;
-      tmp44 = "join_id" in data;
+      obj12.notification_id = notification_id;
+      tmp42 = "image_url" in data;
+      if (tmp42) {
+        tmp42 = null != data.image_url;
+      }
+      obj12.has_image_thumbnail = tmp42;
+      tmp43 = "join_id" in data;
       join_id = null;
-      if (tmp44) {
+      if (tmp43) {
         join_id = data.join_id;
       }
-      tmp46 = "notif_instance_id" in data;
+      obj12.join_id = join_id;
+      tmp45 = "notif_instance_id" in data;
       notif_instance_id = null;
-      if (tmp46) {
+      if (tmp45) {
         notif_instance_id = data.notif_instance_id;
       }
-      tmp48 = "notif_type_id" in data;
+      obj12.notif_instance_id = notif_instance_id;
+      tmp47 = "notif_type_id" in data;
       notif_type_id = null;
-      if (tmp48) {
+      if (tmp47) {
         notif_type_id = data.notif_type_id;
       }
-      tmp50 = "mention_type" in data;
+      obj12.notif_type_id = notif_type_id;
+      tmp49 = "mention_type" in data;
       mention_type = null;
-      if (tmp50) {
+      if (tmp49) {
         mention_type = data.mention_type;
       }
-      track(NOTIFICATION_CLICKED, obj12);
-      maybeAckNotificationCenter = maybeAckNotificationCenter2;
-      let result1 = maybeAckNotificationCenter(data);
-      type2 = data.type;
-      switch (type2) {
+      obj12.mention_type = mention_type;
+      obj13.track(constants.NOTIFICATION_CLICKED, obj12);
+      maybeAckNotificationCenter = function maybeAckNotificationCenter() {
+        const self = this;
+        const apply = closure_1_33.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      };
+      result1 = maybeAckNotificationCenter(data);
+      switch (tmp53) {
         case "MESSAGE_CREATE":
-        {
-          let channel_id;
-          let guild_id;
-          let message_id;
           if (null != data.message) {
             tmp19Result = tmp19(584);
-            obj13 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
-            tmp19Result.dispatch(obj13);
+            obj14 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
+            tmp19Result.dispatch(obj14);
           }
           tmp19Result5 = tmp19(5099);
           tmp19Result5.popAll();
           tmpResult2 = tmp(1112);
-          transitionTo = tmpResult2.transitionTo;
           ({ guild_id, channel_id, message_id } = data);
           CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
-          obj14 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag, isAppStartupNavigation };
-          transitionTo(CHANNELResult, obj14);
+          obj15 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag, isAppStartupNavigation };
+          tmpResult2.transitionTo(CHANNELResult, obj15);
           return flag2;
-        }
         case "FORUM_THREAD_CREATED":
-        {
-          let self = this;
-          fn = f133368;
-          let self2 = this;
+          fn = (arg0) => {
+            addPostConnectionCallback(arg0);
+          };
           promise = new Promise(fn);
-          fn2 = f149739;
+          fn2 = () => {
+            router_utils.transitionTo(state.CHANNEL(data.guild_id, data.channel_id), { navigationReplace: true, openChannel: true, isAppStartupNavigation });
+          };
           promise.then(fn2);
-          break;
-        }
+        break;
         case "RELATIONSHIP_ADD":
-        {
-          handleRelationshipAddNotification = handleRelationshipAddNotification2;
-          let result2 = handleRelationshipAddNotification(data);
-          break;
-        }
+          handleRelationshipAddNotification = function handleRelationshipAddNotification() {
+            const self = this;
+            const apply = closure_1_29.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result2 = handleRelationshipAddNotification(data);
+        break;
         case "CALL_RING":
-        {
-          handleCallRingNotification = handleCallRingNotification2;
-          let result3 = handleCallRingNotification(data);
-          break;
-        }
+          handleCallRingNotification = function handleCallRingNotification() {
+            const self = this;
+            const apply = closure_1_30.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result3 = handleCallRingNotification(data);
+        break;
         case "CALL_CONNECT":
-        {
-          handleCallConnectNotification = handleCallConnectNotification2;
-          let result4 = handleCallConnectNotification(data);
-          break;
-        }
+          handleCallConnectNotification = function handleCallConnectNotification() {
+            const self = this;
+            const apply = closure_1_31.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result4 = handleCallConnectNotification(data);
+        break;
         case "FRIEND_SUGGESTION_CREATE":
-        {
-          handleFriendSuggestionCreateNotification = handleFriendSuggestionCreateNotification2;
-          let result5 = handleFriendSuggestionCreateNotification(data);
-          break;
-        }
+          handleFriendSuggestionCreateNotification = function handleFriendSuggestionCreateNotification() {
+            const self = this;
+            const apply = closure_1_32.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result5 = handleFriendSuggestionCreateNotification(data);
+        break;
         case "GUILD_STREAM_START":
-        {
           tmp19Result6 = tmp19(5098);
-          obj15 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
-          tmp19Result6(obj15);
-          break;
-        }
+          obj16 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
+          tmp19Result6(obj16);
+        break;
         case "GUILD_SCHEDULED_EVENT_UPDATE":
-        {
-          handleGuildEventNotification = handleGuildEventNotification2;
-          let result6 = handleGuildEventNotification(data);
-          break;
-        }
+          handleGuildEventNotification = function handleGuildEventNotification() {
+            const self = this;
+            const apply = closure_1_28.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result6 = handleGuildEventNotification(data);
+        break;
         case "STAGE_INSTANCE_CREATE":
-        {
-          handleStageNotification = handleStageNotification2;
-          let result7 = handleStageNotification(data);
-          break;
-        }
+          handleStageNotification = function handleStageNotification() {
+            const self = this;
+            const apply = closure_1_27.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result7 = handleStageNotification(data);
+        break;
         case "GENERIC_PUSH_NOTIFICATION_SENT":
-        {
           if (null != data.deeplink) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(4873);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              payload2 = tmp19Result3Result.payload;
               tmp19Result8 = tmp19(13679);
-              obj16 = { payload: payload2, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
-              tmp19Result8(obj16);
+              obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
+              tmp19Result8(obj17);
             }
           }
-          break;
-        }
+        break;
       }
-      break;
-    }
+    break;
     case "GUILD_STREAM_START":
-    {
       tmp19 = importDefault;
       obj11 = DispatcherDefault;
       obj7 = { type: "PUSH_NOTIFICATION_CLICK" };
       obj11.dispatch(obj7);
-      tmp21 = AnalyticsUtilsDefault;
-      track = tmp21.track;
-      NOTIFICATION_CLICKED = constants.NOTIFICATION_CLICKED;
-      tmp23 = "tracking_type" in data;
-      if (tmp23) {
+      obj13 = AnalyticsUtilsDefault;
+      tmp22 = "tracking_type" in data;
+      if (tmp22) {
         type = data.tracking_type;
       } else {
         type = data.type;
       }
-      obj12 = { notif_type: type, notif_user_id: user_id, message_id: message_id1, message_type: message_type_, has_message: tmp31, guild_id: guild_id1, channel_id: channel_id1, channel_type, rel_type: NumberResult, notification_id, has_image_thumbnail: tmp43, join_id, notif_instance_id, notif_type_id, mention_type };
-      tmp24 = "user_id" in data;
+      obj12 = { notif_type: type, notif_user_id: null, message_id: null, message_type: null, has_message: null, guild_id: null, channel_id: null, channel_type: null, rel_type: null, notification_id: null, has_image_thumbnail: null, join_id: null, notif_instance_id: null, notif_type_id: null, mention_type: null };
+      tmp23 = "user_id" in data;
       user_id = null;
-      if (tmp24) {
+      if (tmp23) {
         user_id = data.user_id;
       }
-      tmp27 = "message_id" in data;
+      obj12.notif_user_id = user_id;
+      tmp26 = "message_id" in data;
       message_id1 = null;
-      if (tmp27) {
+      if (tmp26) {
         message_id1 = data.message_id;
       }
-      tmp29 = "message_type_" in data;
+      obj12.message_id = message_id1;
+      tmp28 = "message_type_" in data;
       message_type_ = null;
-      if (tmp29) {
+      if (tmp28) {
         message_type_ = data.message_type_;
       }
-      tmp31 = "message" in data && null != data.message;
-      tmp32 = "guild_id" in data;
+      obj12.message_type = message_type_;
+      tmp30 = "message" in data;
+      if (tmp30) {
+        tmp30 = null != data.message;
+      }
+      obj12.has_message = tmp30;
+      tmp31 = "guild_id" in data;
       guild_id1 = null;
-      if (tmp32) {
+      if (tmp31) {
         guild_id1 = data.guild_id;
       }
-      tmp34 = "channel_id" in data;
+      obj12.guild_id = guild_id1;
+      tmp33 = "channel_id" in data;
       channel_id1 = null;
-      if (tmp34) {
+      if (tmp33) {
         channel_id1 = data.channel_id;
       }
-      tmp36 = "channel_type" in data;
+      obj12.channel_id = channel_id1;
+      tmp35 = "channel_type" in data;
       channel_type = null;
-      if (tmp36) {
+      if (tmp35) {
         channel_type = data.channel_type;
       }
-      tmp38 = "rel_type" in data;
+      obj12.channel_type = channel_type;
+      tmp37 = "rel_type" in data;
       NumberResult = null;
-      if (tmp38) {
-        let _Number = Number;
+      if (tmp37) {
+        _Number = Number;
         NumberResult = Number(data.rel_type);
       }
-      tmp41 = "notification_id" in data;
+      obj12.rel_type = NumberResult;
+      tmp40 = "notification_id" in data;
       notification_id = null;
-      if (tmp41) {
+      if (tmp40) {
         notification_id = data.notification_id;
       }
-      tmp43 = "image_url" in data && null != data.image_url;
-      tmp44 = "join_id" in data;
+      obj12.notification_id = notification_id;
+      tmp42 = "image_url" in data;
+      if (tmp42) {
+        tmp42 = null != data.image_url;
+      }
+      obj12.has_image_thumbnail = tmp42;
+      tmp43 = "join_id" in data;
       join_id = null;
-      if (tmp44) {
+      if (tmp43) {
         join_id = data.join_id;
       }
-      tmp46 = "notif_instance_id" in data;
+      obj12.join_id = join_id;
+      tmp45 = "notif_instance_id" in data;
       notif_instance_id = null;
-      if (tmp46) {
+      if (tmp45) {
         notif_instance_id = data.notif_instance_id;
       }
-      tmp48 = "notif_type_id" in data;
+      obj12.notif_instance_id = notif_instance_id;
+      tmp47 = "notif_type_id" in data;
       notif_type_id = null;
-      if (tmp48) {
+      if (tmp47) {
         notif_type_id = data.notif_type_id;
       }
-      tmp50 = "mention_type" in data;
+      obj12.notif_type_id = notif_type_id;
+      tmp49 = "mention_type" in data;
       mention_type = null;
-      if (tmp50) {
+      if (tmp49) {
         mention_type = data.mention_type;
       }
-      track(NOTIFICATION_CLICKED, obj12);
-      maybeAckNotificationCenter = maybeAckNotificationCenter2;
-      let result1 = maybeAckNotificationCenter(data);
-      type2 = data.type;
-      switch (type2) {
+      obj12.mention_type = mention_type;
+      obj13.track(constants.NOTIFICATION_CLICKED, obj12);
+      maybeAckNotificationCenter = function maybeAckNotificationCenter() {
+        const self = this;
+        const apply = closure_1_33.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      };
+      result1 = maybeAckNotificationCenter(data);
+      switch (tmp53) {
         case "MESSAGE_CREATE":
-        {
-          let channel_id;
-          let guild_id;
-          let message_id;
           if (null != data.message) {
             tmp19Result = tmp19(584);
-            obj13 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
-            tmp19Result.dispatch(obj13);
+            obj14 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
+            tmp19Result.dispatch(obj14);
           }
           tmp19Result5 = tmp19(5099);
           tmp19Result5.popAll();
           tmpResult2 = tmp(1112);
-          transitionTo = tmpResult2.transitionTo;
           ({ guild_id, channel_id, message_id } = data);
           CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
-          obj14 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag, isAppStartupNavigation };
-          transitionTo(CHANNELResult, obj14);
+          obj15 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag, isAppStartupNavigation };
+          tmpResult2.transitionTo(CHANNELResult, obj15);
           return flag2;
-        }
         case "FORUM_THREAD_CREATED":
-        {
-          let self = this;
-          fn = f133368;
-          let self2 = this;
+          fn = (arg0) => {
+            addPostConnectionCallback(arg0);
+          };
           promise = new Promise(fn);
-          fn2 = f149739;
+          fn2 = () => {
+            router_utils.transitionTo(state.CHANNEL(data.guild_id, data.channel_id), { navigationReplace: true, openChannel: true, isAppStartupNavigation });
+          };
           promise.then(fn2);
-          break;
-        }
+        break;
         case "RELATIONSHIP_ADD":
-        {
-          handleRelationshipAddNotification = handleRelationshipAddNotification2;
-          let result2 = handleRelationshipAddNotification(data);
-          break;
-        }
+          handleRelationshipAddNotification = function handleRelationshipAddNotification() {
+            const self = this;
+            const apply = closure_1_29.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result2 = handleRelationshipAddNotification(data);
+        break;
         case "CALL_RING":
-        {
-          handleCallRingNotification = handleCallRingNotification2;
-          let result3 = handleCallRingNotification(data);
-          break;
-        }
+          handleCallRingNotification = function handleCallRingNotification() {
+            const self = this;
+            const apply = closure_1_30.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result3 = handleCallRingNotification(data);
+        break;
         case "CALL_CONNECT":
-        {
-          handleCallConnectNotification = handleCallConnectNotification2;
-          let result4 = handleCallConnectNotification(data);
-          break;
-        }
+          handleCallConnectNotification = function handleCallConnectNotification() {
+            const self = this;
+            const apply = closure_1_31.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result4 = handleCallConnectNotification(data);
+        break;
         case "FRIEND_SUGGESTION_CREATE":
-        {
-          handleFriendSuggestionCreateNotification = handleFriendSuggestionCreateNotification2;
-          let result5 = handleFriendSuggestionCreateNotification(data);
-          break;
-        }
+          handleFriendSuggestionCreateNotification = function handleFriendSuggestionCreateNotification() {
+            const self = this;
+            const apply = closure_1_32.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result5 = handleFriendSuggestionCreateNotification(data);
+        break;
         case "GUILD_STREAM_START":
-        {
           tmp19Result6 = tmp19(5098);
-          obj15 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
-          tmp19Result6(obj15);
-          break;
-        }
+          obj16 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
+          tmp19Result6(obj16);
+        break;
         case "GUILD_SCHEDULED_EVENT_UPDATE":
-        {
-          handleGuildEventNotification = handleGuildEventNotification2;
-          let result6 = handleGuildEventNotification(data);
-          break;
-        }
+          handleGuildEventNotification = function handleGuildEventNotification() {
+            const self = this;
+            const apply = closure_1_28.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result6 = handleGuildEventNotification(data);
+        break;
         case "STAGE_INSTANCE_CREATE":
-        {
-          handleStageNotification = handleStageNotification2;
-          let result7 = handleStageNotification(data);
-          break;
-        }
+          handleStageNotification = function handleStageNotification() {
+            const self = this;
+            const apply = closure_1_27.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result7 = handleStageNotification(data);
+        break;
         case "GENERIC_PUSH_NOTIFICATION_SENT":
-        {
           if (null != data.deeplink) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(4873);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              payload2 = tmp19Result3Result.payload;
               tmp19Result8 = tmp19(13679);
-              obj16 = { payload: payload2, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
-              tmp19Result8(obj16);
+              obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
+              tmp19Result8(obj17);
             }
           }
-          break;
-        }
+        break;
       }
-      break;
-    }
+    break;
     case "GENERIC_PUSH_NOTIFICATION_SENT":
-    {
       tmp19 = importDefault;
       obj11 = DispatcherDefault;
       obj7 = { type: "PUSH_NOTIFICATION_CLICK" };
       obj11.dispatch(obj7);
-      tmp21 = AnalyticsUtilsDefault;
-      track = tmp21.track;
-      NOTIFICATION_CLICKED = constants.NOTIFICATION_CLICKED;
-      tmp23 = "tracking_type" in data;
-      if (tmp23) {
+      obj13 = AnalyticsUtilsDefault;
+      tmp22 = "tracking_type" in data;
+      if (tmp22) {
         type = data.tracking_type;
       } else {
         type = data.type;
       }
-      obj12 = { notif_type: type, notif_user_id: user_id, message_id: message_id1, message_type: message_type_, has_message: tmp31, guild_id: guild_id1, channel_id: channel_id1, channel_type, rel_type: NumberResult, notification_id, has_image_thumbnail: tmp43, join_id, notif_instance_id, notif_type_id, mention_type };
-      tmp24 = "user_id" in data;
+      obj12 = { notif_type: type, notif_user_id: null, message_id: null, message_type: null, has_message: null, guild_id: null, channel_id: null, channel_type: null, rel_type: null, notification_id: null, has_image_thumbnail: null, join_id: null, notif_instance_id: null, notif_type_id: null, mention_type: null };
+      tmp23 = "user_id" in data;
       user_id = null;
-      if (tmp24) {
+      if (tmp23) {
         user_id = data.user_id;
       }
-      tmp27 = "message_id" in data;
+      obj12.notif_user_id = user_id;
+      tmp26 = "message_id" in data;
       message_id1 = null;
-      if (tmp27) {
+      if (tmp26) {
         message_id1 = data.message_id;
       }
-      tmp29 = "message_type_" in data;
+      obj12.message_id = message_id1;
+      tmp28 = "message_type_" in data;
       message_type_ = null;
-      if (tmp29) {
+      if (tmp28) {
         message_type_ = data.message_type_;
       }
-      tmp31 = "message" in data && null != data.message;
-      tmp32 = "guild_id" in data;
+      obj12.message_type = message_type_;
+      tmp30 = "message" in data;
+      if (tmp30) {
+        tmp30 = null != data.message;
+      }
+      obj12.has_message = tmp30;
+      tmp31 = "guild_id" in data;
       guild_id1 = null;
-      if (tmp32) {
+      if (tmp31) {
         guild_id1 = data.guild_id;
       }
-      tmp34 = "channel_id" in data;
+      obj12.guild_id = guild_id1;
+      tmp33 = "channel_id" in data;
       channel_id1 = null;
-      if (tmp34) {
+      if (tmp33) {
         channel_id1 = data.channel_id;
       }
-      tmp36 = "channel_type" in data;
+      obj12.channel_id = channel_id1;
+      tmp35 = "channel_type" in data;
       channel_type = null;
-      if (tmp36) {
+      if (tmp35) {
         channel_type = data.channel_type;
       }
-      tmp38 = "rel_type" in data;
+      obj12.channel_type = channel_type;
+      tmp37 = "rel_type" in data;
       NumberResult = null;
-      if (tmp38) {
-        let _Number = Number;
+      if (tmp37) {
+        _Number = Number;
         NumberResult = Number(data.rel_type);
       }
-      tmp41 = "notification_id" in data;
+      obj12.rel_type = NumberResult;
+      tmp40 = "notification_id" in data;
       notification_id = null;
-      if (tmp41) {
+      if (tmp40) {
         notification_id = data.notification_id;
       }
-      tmp43 = "image_url" in data && null != data.image_url;
-      tmp44 = "join_id" in data;
+      obj12.notification_id = notification_id;
+      tmp42 = "image_url" in data;
+      if (tmp42) {
+        tmp42 = null != data.image_url;
+      }
+      obj12.has_image_thumbnail = tmp42;
+      tmp43 = "join_id" in data;
       join_id = null;
-      if (tmp44) {
+      if (tmp43) {
         join_id = data.join_id;
       }
-      tmp46 = "notif_instance_id" in data;
+      obj12.join_id = join_id;
+      tmp45 = "notif_instance_id" in data;
       notif_instance_id = null;
-      if (tmp46) {
+      if (tmp45) {
         notif_instance_id = data.notif_instance_id;
       }
-      tmp48 = "notif_type_id" in data;
+      obj12.notif_instance_id = notif_instance_id;
+      tmp47 = "notif_type_id" in data;
       notif_type_id = null;
-      if (tmp48) {
+      if (tmp47) {
         notif_type_id = data.notif_type_id;
       }
-      tmp50 = "mention_type" in data;
+      obj12.notif_type_id = notif_type_id;
+      tmp49 = "mention_type" in data;
       mention_type = null;
-      if (tmp50) {
+      if (tmp49) {
         mention_type = data.mention_type;
       }
-      track(NOTIFICATION_CLICKED, obj12);
-      maybeAckNotificationCenter = maybeAckNotificationCenter2;
-      let result1 = maybeAckNotificationCenter(data);
-      type2 = data.type;
-      switch (type2) {
+      obj12.mention_type = mention_type;
+      obj13.track(constants.NOTIFICATION_CLICKED, obj12);
+      maybeAckNotificationCenter = function maybeAckNotificationCenter() {
+        const self = this;
+        const apply = closure_1_33.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      };
+      result1 = maybeAckNotificationCenter(data);
+      switch (tmp53) {
         case "MESSAGE_CREATE":
-        {
-          let channel_id;
-          let guild_id;
-          let message_id;
           if (null != data.message) {
             tmp19Result = tmp19(584);
-            obj13 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
-            tmp19Result.dispatch(obj13);
+            obj14 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
+            tmp19Result.dispatch(obj14);
           }
           tmp19Result5 = tmp19(5099);
           tmp19Result5.popAll();
           tmpResult2 = tmp(1112);
-          transitionTo = tmpResult2.transitionTo;
           ({ guild_id, channel_id, message_id } = data);
           CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
-          obj14 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag, isAppStartupNavigation };
-          transitionTo(CHANNELResult, obj14);
+          obj15 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag, isAppStartupNavigation };
+          tmpResult2.transitionTo(CHANNELResult, obj15);
           return flag2;
-        }
         case "FORUM_THREAD_CREATED":
-        {
-          let self = this;
-          fn = f133368;
-          let self2 = this;
+          fn = (arg0) => {
+            addPostConnectionCallback(arg0);
+          };
           promise = new Promise(fn);
-          fn2 = f149739;
+          fn2 = () => {
+            router_utils.transitionTo(state.CHANNEL(data.guild_id, data.channel_id), { navigationReplace: true, openChannel: true, isAppStartupNavigation });
+          };
           promise.then(fn2);
-          break;
-        }
+        break;
         case "RELATIONSHIP_ADD":
-        {
-          handleRelationshipAddNotification = handleRelationshipAddNotification2;
-          let result2 = handleRelationshipAddNotification(data);
-          break;
-        }
+          handleRelationshipAddNotification = function handleRelationshipAddNotification() {
+            const self = this;
+            const apply = closure_1_29.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result2 = handleRelationshipAddNotification(data);
+        break;
         case "CALL_RING":
-        {
-          handleCallRingNotification = handleCallRingNotification2;
-          let result3 = handleCallRingNotification(data);
-          break;
-        }
+          handleCallRingNotification = function handleCallRingNotification() {
+            const self = this;
+            const apply = closure_1_30.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result3 = handleCallRingNotification(data);
+        break;
         case "CALL_CONNECT":
-        {
-          handleCallConnectNotification = handleCallConnectNotification2;
-          let result4 = handleCallConnectNotification(data);
-          break;
-        }
+          handleCallConnectNotification = function handleCallConnectNotification() {
+            const self = this;
+            const apply = closure_1_31.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result4 = handleCallConnectNotification(data);
+        break;
         case "FRIEND_SUGGESTION_CREATE":
-        {
-          handleFriendSuggestionCreateNotification = handleFriendSuggestionCreateNotification2;
-          let result5 = handleFriendSuggestionCreateNotification(data);
-          break;
-        }
+          handleFriendSuggestionCreateNotification = function handleFriendSuggestionCreateNotification() {
+            const self = this;
+            const apply = closure_1_32.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result5 = handleFriendSuggestionCreateNotification(data);
+        break;
         case "GUILD_STREAM_START":
-        {
           tmp19Result6 = tmp19(5098);
-          obj15 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
-          tmp19Result6(obj15);
-          break;
-        }
+          obj16 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
+          tmp19Result6(obj16);
+        break;
         case "GUILD_SCHEDULED_EVENT_UPDATE":
-        {
-          handleGuildEventNotification = handleGuildEventNotification2;
-          let result6 = handleGuildEventNotification(data);
-          break;
-        }
+          handleGuildEventNotification = function handleGuildEventNotification() {
+            const self = this;
+            const apply = closure_1_28.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result6 = handleGuildEventNotification(data);
+        break;
         case "STAGE_INSTANCE_CREATE":
-        {
-          handleStageNotification = handleStageNotification2;
-          let result7 = handleStageNotification(data);
-          break;
-        }
+          handleStageNotification = function handleStageNotification() {
+            const self = this;
+            const apply = closure_1_27.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result7 = handleStageNotification(data);
+        break;
         case "GENERIC_PUSH_NOTIFICATION_SENT":
-        {
           if (null != data.deeplink) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(4873);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              payload2 = tmp19Result3Result.payload;
               tmp19Result8 = tmp19(13679);
-              obj16 = { payload: payload2, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
-              tmp19Result8(obj16);
+              obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
+              tmp19Result8(obj17);
             }
           }
-          break;
-        }
+        break;
       }
-      break;
-    }
+    break;
     default:
-    {
       return flag2;
-    }
   }
+  const obj = require("RouteManagerUtils");
 }
-const addPostConnectionCallback = PostConnectionCallbackStore.addPostConnectionCallback;
-const NotificationTypes = PushNotificationConstants.NotificationTypes;
-({ AnalyticEvents: unpackModuleId, ComponentActions: closure_12, RelationshipTypes: map1, Routes: closure_14 } = Constants);
-const StreamTypes = Constants2.StreamTypes;
-let closure_16 = GuildScheduledEventsConstants.GuildScheduledEventEntityTypes;
-const constants = Constants3.MultiAccountSwitchLocation;
-let tmp3 = new LoggerDefault("receiveNotification");
-const logger = tmp3;
+fn(5955).addPostConnectionCallback;
+const NotificationTypes = fn(6092).NotificationTypes;
+const Constants = fn(1085);
+({ AnalyticEvents: closure_11, ComponentActions: closure_12, RelationshipTypes: map1, Routes: closure_14 } = Constants);
+const StreamTypes = fn(4938).StreamTypes;
+let closure_16 = fn(2057).GuildScheduledEventEntityTypes;
+const constants = fn(12072).MultiAccountSwitchLocation;
+const logger = new LoggerDefault("receiveNotification");
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/push_notifications/native/receiveNotification.tsx");
 
 export default function receiveNotification(getData, arg1) {
-  let closure_0;
   _require = arg1;
   if (null == getData.getData) {
     return false;
   } else {
-    const obj3 = require("TTIAnalyticsUtils");
-    obj3.trackAppOpened("notification");
+    require("TTIAnalyticsUtils").trackAppOpened("notification");
     const data = getData.getData();
-    const _HermesInternal = HermesInternal;
-    const obj4 = data(10);
-    obj4.mark("\u2757", "Receive notification " + data.type);
+    const obj3 = require("TTIAnalyticsUtils");
     const tmp10 = data;
+    const _HermesInternal = HermesInternal;
+    data(10).mark("\u2757", "Receive notification " + data.type);
     if (null != data.receiving_user_id) {
       if (null != AuthenticationStore.getId()) {
-        let flag;
         if (data.receiving_user_id !== AuthenticationStore.getId()) {
-          require("CacheStore");
-          require("GatewayConnectionStore");
-          require("MultiAccountSwitchStore");
-          const tmp6Result4 = require("MultiAccountActionCreators");
-          const switchAccountResult = tmp6Result4.switchAccount(data.receiving_user_id, false, arg1 ? constants.PUSH_NOTIFICATION_INITIAL : constants.PUSH_NOTIFICATION);
-          switchAccountResult.then(() => {
-            const Emitter = get_initializedDefault.Emitter;
+          tmp6(6998);
+          tmp6(5443);
+          tmp6(13459);
+          let receiving_user_id = data.receiving_user_id;
+          receiving_user_id = tmp6(12074).switchAccount(receiving_user_id, false, arg1 ? constants.PUSH_NOTIFICATION_INITIAL : constants.PUSH_NOTIFICATION);
+          receiving_user_id.then(() => {
+            const Emitter = initializeDefault.Emitter;
             Emitter.batched(() => receiveNotification_(data, closure_1_0));
           });
-          flag = true;
+          const tmp6Result4 = tmp6(12074);
         }
-        return flag;
       }
     }
     let Emitter = tmp10(504).Emitter;
-    flag = Emitter.batched(() => receiveNotification_(data, closure_0));
+    return Emitter.batched(() => receiveNotification_(data, closure_0));
   }
 };

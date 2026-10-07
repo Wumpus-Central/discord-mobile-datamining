@@ -1,60 +1,48 @@
 // === Module 17485: AutomodRemovedContentSheet ===
 
 // Module 17485 (AutomodRemovedContentSheet)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1085 */;
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 5118 */;
-import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6651 */;
-import ActionSheet2 from "ActionSheet" /* 6708 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6651 */;
+import ActionSheet from "ActionSheet" /* 6708 */;
 import RowGeneratorDefault from "RowGenerator" /* 7602 */;
-import react from "react" /* 19 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import ChatItemDefault from "ChatItem" /* 8336 */;
+import noop from "module_19" /* 19 */;
 
-let action;
-
-let obj2;
-let obj3;
-const View = react_native.View;
-const MessageFlags = Constants.MessageFlags;
-const jsx = Fragment.jsx;
+require = fn;
+const View = fn(17).View;
+const MessageFlags = fn(1085).MessageFlags;
+const jsx = fn(21).jsx;
 const rowGenerator = new RowGeneratorDefault();
+const createStyles = fn(4896);
+let obj2 = { content: null, blockedMessage: null };
 const tmp2 = new RowGeneratorDefault();
-let createStyles = createStyles_mod;
-let obj = { content: obj2, blockedMessage: obj3 };
-obj2 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
-createStyles = createStyles.createStyles;
-obj3 = { backgroundColor: nativeDefault.colors.MESSAGE_AUTOMOD_BACKGROUND_DEFAULT, borderLeftWidth: 2, borderLeftColor: nativeDefault.unsafe_rawColors.RED_345 };
-let closure_8 = createStyles(obj);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((action) => {
-  let message;
-  let notice;
-  let num2;
-  let thread;
-  let tmp14;
-  let tmp6;
-  const obj = react2;
-  const cResult = obj.c(18);
-  action = action.action;
+obj2.content = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
+obj2.blockedMessage = { backgroundColor: nativeDefault.colors.MESSAGE_AUTOMOD_BACKGROUND_DEFAULT, borderLeftWidth: 2, borderLeftColor: nativeDefault.unsafe_rawColors.RED_345 };
+let closure_8 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj4 = { backgroundColor: nativeDefault.colors.MESSAGE_AUTOMOD_BACKGROUND_DEFAULT, borderLeftWidth: 2, borderLeftColor: nativeDefault.unsafe_rawColors.RED_345 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_automod/native/AutomodRemovedContentSheet.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((action) => {
+  const cResult = c.c(18);
   const tmp4 = closure_8();
-  ({ message, thread, notice } = action);
+  ({ message, thread, notice } = action.action);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function u(message) {
       message = message.message;
-      let ephemeralIndication1;
+      let ephemeralIndication;
       if (message != null) {
-        ephemeralIndication1 = message.ephemeralIndication;
+        ephemeralIndication = message.ephemeralIndication;
       }
-      if (null != ephemeralIndication1) {
-        const ephemeralIndication = message.message.ephemeralIndication;
-        const intl = intl2.intl;
-        ephemeralIndication.content = intl.string(intl2.t.Nb1EQx);
+      if (null != ephemeralIndication) {
+        const intl = util.intl;
+        message.message.ephemeralIndication.content = intl.string(util.t.Nb1EQx);
       }
     };
     cResult[0] = fn;
@@ -65,152 +53,147 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((action) => {
   if (cResult[1] !== message) {
     let messageRecord;
     if (null != message) {
-      const obj2 = { flags: num2 | MessageFlags.EPHEMERAL };
-      const createMessageRecord = MessageRecordUtils.createMessageRecord;
-      MessageRecordUtils;
+      const obj2 = {};
       const merged = Object.assign(message);
-      num2 = message.flags;
+      let num2 = message.flags;
       if (num2 == null) {
         num2 = 0;
       }
-      messageRecord = createMessageRecord(obj2);
+      obj2.flags = num2 | MessageFlags.EPHEMERAL;
+      messageRecord = MessageRecordUtils.createMessageRecord(obj2);
+      const tmpResult = MessageRecordUtils;
     }
     cResult[1] = message;
     cResult[2] = messageRecord;
-    tmp6 = messageRecord;
+    let tmp6 = messageRecord;
   } else {
     tmp6 = cResult[2];
   }
   if (cResult[3] !== thread) {
-    let StrErG;
-    let intl = intl2.intl;
-    const string = intl.string;
+    let intl = util.intl;
     if (null != thread) {
-      StrErG = intl2.t["8czF24"];
+      let StrErG = util.t["8czF24"];
     } else {
-      StrErG = intl2.t.StrErG;
+      StrErG = util.t.StrErG;
     }
-    const stringResult = string(StrErG);
+    const stringResult = intl.string(StrErG);
     cResult[3] = thread;
     cResult[4] = stringResult;
-    tmp14 = stringResult;
   } else {
-    tmp14 = cResult[4];
-  }
-  let name;
-  if (thread != null) {
-    name = thread.name;
-  }
-  if (cResult[5] === tmp14) {
-    let tmp18;
-    let tmp22;
-    if (cResult[6] === name) {
-      tmp18 = cResult[7];
+    let name;
+    if (thread != null) {
+      name = thread.name;
     }
-    if (cResult[8] === tmp6) {
-      if (cResult[9] === notice) {
-        let tmp20;
-        if (cResult[10] === tmp4.blockedMessage) {
-          tmp20 = cResult[11];
-        }
-        if (cResult[12] === tmp4.content) {
-          let tmp27;
-          if (cResult[13] === tmp20) {
-            tmp27 = cResult[14];
-          }
-          if (cResult[15] === tmp18) {
-            let tmp31;
-            if (cResult[16] === tmp27) {
-              tmp31 = cResult[17];
-            }
-            return tmp31;
-          }
-          const tmp33 = jsx(ActionSheet2.ActionSheet, { header: tmp18, children: tmp27 });
-          cResult[15] = tmp18;
-          cResult[16] = tmp27;
-          cResult[17] = tmp33;
-          tmp31 = tmp33;
-        }
-        const tmp30 = <View style={tmp4.content}>{tmp20}</View>;
-        cResult[12] = tmp4.content;
-        cResult[13] = tmp20;
-        cResult[14] = tmp30;
-        tmp27 = tmp30;
+    if (cResult[5] === cResult[4]) {
+      if (cResult[6] === name) {
+        let tmp19 = cResult[7];
       }
+      if (cResult[8] === tmp6) {
+        if (cResult[9] === notice) {
+          if (cResult[10] === tmp4.blockedMessage) {
+            if (cResult[12] === tmp4.content) {
+              if (cResult[13] === tmp22) {
+                let tmp30 = cResult[14];
+              }
+              if (cResult[15] === tmp19) {
+                if (cResult[16] === tmp30) {
+                  let tmp34 = cResult[17];
+                }
+                return tmp34;
+              }
+              const obj3 = { header: tmp19, children: tmp30 };
+              const tmp36 = jsx(ActionSheet.ActionSheet, { header: tmp19, children: tmp30 });
+              cResult[15] = tmp19;
+              cResult[16] = tmp30;
+              cResult[17] = tmp36;
+              tmp34 = tmp36;
+            }
+            const obj4 = { style: tmp4.content, children: cResult[11] };
+            const tmp33 = <View style={tmp4.content}>{cResult[11]}</View>;
+            cResult[12] = tmp4.content;
+            cResult[13] = cResult[11];
+            cResult[14] = tmp33;
+            tmp30 = tmp33;
+          }
+        }
+      }
+      if (null != tmp6) {
+        const obj5 = { style: tmp4.blockedMessage, children: null };
+        const obj6 = { rowGenerator, message: tmp6, modifyRow: first, pointerEvents: "none" };
+        obj5.children = jsx(ChatItemDefault, { rowGenerator, message: tmp6, modifyRow: first, pointerEvents: "none" });
+        let tmp24 = <View style={tmp4.blockedMessage}>{null}</View>;
+      } else {
+        const obj7 = { variant: "text-md/normal", color: "text-default", children: notice };
+        tmp24 = jsx(Text_Text.Text, { variant: "text-md/normal", color: "text-default", children: notice });
+      }
+      cResult[8] = tmp6;
+      cResult[9] = notice;
+      notice = tmp4.blockedMessage;
+      cResult[10] = notice;
+      cResult[11] = tmp24;
     }
-    if (null != tmp6) {
-      tmp22 = <View style={tmp4.blockedMessage}>{null}</View>;
-    } else {
-      tmp22 = jsx(Text_Text.Text, { variant: "text-md/normal", color: "text-default", children: notice });
-    }
-    cResult[8] = tmp6;
-    cResult[9] = notice;
-    cResult[10] = tmp4.blockedMessage;
-    cResult[11] = tmp22;
-    tmp20 = tmp22;
+    const obj8 = { title: cResult[4], subtitle: name };
+    const tmp21 = jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: cResult[4], subtitle: name });
+    cResult[5] = cResult[4];
+    cResult[6] = name;
+    cResult[7] = tmp21;
+    tmp19 = tmp21;
   }
-  const tmp19 = jsx(BottomSheetTitleHeader2.BottomSheetTitleHeader, { title: tmp14, subtitle: name });
-  cResult[5] = tmp14;
-  cResult[6] = name;
-  cResult[7] = tmp19;
-  tmp18 = tmp19;
 }) : ((action) => {
-  let StrErG;
   action = action.action;
   const tmp = closure_8();
   let message = action.message;
   const thread = action.thread;
-  const notice = action.notice;
   const items = [message];
-  const callback = react.useCallback((message) => {
+  const callback = noop.useCallback((message) => {
     message = message.message;
-    let ephemeralIndication1;
+    let ephemeralIndication;
     if (message != null) {
-      ephemeralIndication1 = message.ephemeralIndication;
+      ephemeralIndication = message.ephemeralIndication;
     }
-    if (null != ephemeralIndication1) {
-      const ephemeralIndication = message.message.ephemeralIndication;
-      const intl = message(dependencyMap[9]).intl;
-      ephemeralIndication.content = intl.string(message(dependencyMap[9]).t.Nb1EQx);
+    if (null != ephemeralIndication) {
+      const intl = message(1126).intl;
+      message.message.ephemeralIndication.content = intl.string(message(1126).t.Nb1EQx);
     }
   }, []);
-  const memo = react.useMemo(() => {
-    let num;
+  const memo = noop.useMemo(() => {
     let messageRecord;
     if (null != message) {
-      const obj = { flags: num | MessageFlags.EPHEMERAL };
-      const createMessageRecord = MessageRecordUtils.createMessageRecord;
-      MessageRecordUtils;
+      const obj2 = {};
       const merged = Object.assign(message);
-      num = message.flags;
+      let num = message.flags;
       if (num == null) {
         num = 0;
       }
-      messageRecord = createMessageRecord(obj);
+      obj2.flags = num | MessageFlags.EPHEMERAL;
+      messageRecord = MessageRecordUtils.createMessageRecord(obj2);
     }
     return messageRecord;
   }, items);
-  const tmp5 = message;
-  const ActionSheet = message(6708).ActionSheet;
-  const BottomSheetTitleHeader = message(6651).BottomSheetTitleHeader;
   let intl = message(1126).intl;
-  const string = intl.string;
   if (null != thread) {
-    StrErG = tmp5(1126).t["8czF24"];
+    let StrErG = tmp5(1126).t["8czF24"];
   } else {
     StrErG = tmp5(1126).t.StrErG;
   }
+  let obj = { title: intl.string(StrErG), subtitle: null };
   let name;
   if (thread != null) {
     name = thread.name;
   }
+  let obj2 = { header: jsx(message(6651).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null };
+  obj.subtitle = name;
+  const obj3 = { style: tmp.content, children: null };
   if (null != memo) {
+    const obj4 = { style: tmp.blockedMessage, children: null };
+    const obj5 = { rowGenerator, message: memo, modifyRow: callback, pointerEvents: "none" };
+    obj4.children = jsx(ChatItemDefault, { rowGenerator, message: memo, modifyRow: callback, pointerEvents: "none" });
     let tmp4Result = <View style={tmp.blockedMessage}>{null}</View>;
   } else {
-    tmp4Result = jsx(tmp5(4892).Text, { variant: "text-md/normal", color: "text-default", children: notice });
+    const obj6 = { variant: "text-md/normal", color: "text-default", children: action.notice };
+    tmp4Result = jsx(tmp5(4892).Text, { variant: "text-md/normal", color: "text-default", children: action.notice });
   }
-  return <ActionSheet header={<BottomSheetTitleHeader title={string(StrErG)} subtitle={name} />}>{null}</ActionSheet>;
+  obj3.children = tmp4Result;
+  obj2.children = <View style={tmp.content}>{null}</View>;
+  return jsx(message(6708).ActionSheet, { header: jsx(message(6651).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null });
 });
-const result = size.fileFinishedImporting("modules/guild_automod/native/AutomodRemovedContentSheet.tsx");
-
-export default tmp4;

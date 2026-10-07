@@ -2,20 +2,14 @@
 
 // Module 17442 (useIsOnMainSurface)
 import RootNavigationRef from "RootNavigationRef" /* 4743 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
+require = fn;
 function getIsOnMainSurface() {
-  let index;
-  let index2;
-  let routes;
-  let routes2;
-  const obj = RootNavigationRef;
-  const rootNavigationRef = obj.getRootNavigationRef();
+  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       const rootState = rootNavigationRef.getRootState();
@@ -36,7 +30,7 @@ function getIsOnMainSurface() {
       if ("main" !== name) {
         return false;
       } else {
-        const state = tmp2.state;
+        state = tmp2.state;
         let tmp4;
         if (null != state) {
           if (0 !== state.routes.length) {
@@ -47,7 +41,10 @@ function getIsOnMainSurface() {
             tmp4 = routes2[index2];
           }
         }
-        const hasItem = null != tmp4 && set.has(tmp4.name);
+        let hasItem = null != tmp4;
+        if (hasItem) {
+          hasItem = set.has(tmp4.name);
+        }
         return hasItem;
       }
     }
@@ -55,18 +52,17 @@ function getIsOnMainSurface() {
   return false;
 }
 const set = new Set(["tabs", "channel"]);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let closure_0;
-  let first;
-  let tmp4;
-  let tmp5;
-  let obj = require("react");
-  const cResult = obj.c(2);
-  [first, _require] = react.useState(getIsOnMainSurface);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useIsOnMainSurface.native.tsx");
+
+export const useIsOnMainSurface = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = require("c").c(2);
+  const tmp2 = _slicedToArray(noop.useState(getIsOnMainSurface), 2);
+  _require = tmp2[1];
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function u() {
-      const obj = closure_0(dependencyMap[2]);
-      const rootNavigationRef = obj.getRootNavigationRef();
+      const rootNavigationRef = closure_0(dependencyMap[2]).getRootNavigationRef();
       if (null != rootNavigationRef) {
         function handleNavigationChange() {
           return rootNavigationRef(getIsOnMainSurface());
@@ -77,28 +73,25 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           rootNavigationRef.removeListener("state", handleNavigationChange);
         };
       }
+      const obj = closure_0(dependencyMap[2]);
     };
     const items = [];
     cResult[0] = fn;
     cResult[1] = items;
-    tmp4 = fn;
-    tmp5 = items;
+    tmp3 = fn;
+    tmp4 = items;
   } else {
-    [tmp4, tmp5] = cResult;
+    [tmp3, tmp4] = cResult;
   }
-  const effect = react.useEffect(tmp4, tmp5);
-  return first;
+  const effect = noop.useEffect(tmp3, tmp4);
+  return tmp2[0];
 }) : (() => {
-  let require;
-  let tmp2;
-  [tmp2, require] = _slicedToArray(react.useState(getIsOnMainSurface), 2);
-  const tmp = _slicedToArray(react.useState(getIsOnMainSurface), 2);
-  const effect = react.useEffect(() => {
+  [tmp2, require] = noop.useState(getIsOnMainSurface);
+  const effect = noop.useEffect(() => {
     function handleNavigationChange() {
       return rootNavigationRef(getIsOnMainSurface());
     }
-    const obj = require("RootNavigationRef");
-    const rootNavigationRef = obj.getRootNavigationRef();
+    const rootNavigationRef = require("RootNavigationRef").getRootNavigationRef();
     if (null != rootNavigationRef) {
       rootNavigationRef(getIsOnMainSurface());
       rootNavigationRef.addListener("state", handleNavigationChange);
@@ -106,9 +99,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         rootNavigationRef.removeListener("state", handleNavigationChange);
       };
     }
+    const obj = require("RootNavigationRef");
   }, []);
   return tmp2;
 });
-const result = size.fileFinishedImporting("modules/parent_tools/hooks/useIsOnMainSurface.native.tsx");
-
-export const useIsOnMainSurface = tmp3;

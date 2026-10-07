@@ -2,79 +2,70 @@
 
 // Module 17075 (ContextMenuCommandItem)
 import _modDef12 from "module_12" /* 12 */;
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import Server from "Server" /* 1985 */;
 import SendMessageIcon from "SendMessageIcon" /* 4847 */;
 import FastImageDefault from "FastImage" /* 5981 */;
-import TableRow2 from "TableRow" /* 6000 */;
+import TableRow from "TableRow" /* 6000 */;
 import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 11874 */;
-import react from "react" /* 19 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let obj2;
-let obj3;
-let size;
-const View = react_native.View;
-const jsx = Fragment.jsx;
-let createStyles = createStyles_mod;
-let obj = { commandIcon: size, loadingIcon: obj2, loadingName: obj3 };
-size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg };
-createStyles = createStyles.createStyles;
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
-obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: 24, borderRadius: nativeDefault.radii.md };
-let closure_6 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let end;
-  let first;
-  let obj3;
-  let start;
-  let tmp7;
-  const obj = react2;
-  const cResult = obj.c(11);
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { commandIcon: null, loadingIcon: null, loadingName: null };
+let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg };
+obj2.commandIcon = size;
+obj2.loadingIcon = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+obj2.loadingName = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: 24, borderRadius: nativeDefault.radii.md };
+let closure_6 = createStyles.createStyles(obj2);
+fn(558);
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: 24, borderRadius: nativeDefault.radii.md };
+let ReactCompilerGating = fn(558);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(11);
   ({ start, end } = arg0);
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { width: "" + obj3.random(60, 80) + "%" };
+    const obj2 = { width: null };
     const _HermesInternal = HermesInternal;
+    obj2.width = "" + _modDef12.random(60, 80) + "%";
     cResult[0] = obj2;
-    first = obj2;
-    obj3 = _modDef12;
+    let first = obj2;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== tmp4.loadingName) {
+    const obj4 = { style: null };
     const items = [tmp4.loadingName, first];
-    const tmp10 = <View style={items} />;
+    obj4.style = items;
+    const tmp10 = <View style={null} />;
     cResult[1] = tmp4.loadingName;
     cResult[2] = tmp10;
-    tmp7 = tmp10;
+    let tmp7 = tmp10;
   } else {
     tmp7 = cResult[2];
   }
   if (cResult[3] === tmp4.commandIcon) {
-    let tmp11;
     if (cResult[4] === tmp4.loadingIcon) {
-      tmp11 = cResult[5];
+      let tmp11 = cResult[5];
     }
     if (cResult[6] === end) {
       if (cResult[7] === start) {
         if (cResult[8] === tmp7) {
-          let tmp13;
           if (cResult[9] === tmp11) {
-            tmp13 = cResult[10];
+            let tmp13 = cResult[10];
           }
           return tmp13;
         }
       }
     }
-    const tmp15 = jsx(TableRow2.TableRow, { label: tmp7, icon: tmp11, start, end });
+    const obj5 = { label: tmp7, icon: tmp11, start, end };
+    const tmp15 = jsx(TableRow.TableRow, { label: tmp7, icon: tmp11, start, end });
     cResult[6] = end;
     cResult[7] = start;
     cResult[8] = tmp7;
@@ -82,123 +73,122 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[10] = tmp15;
     tmp13 = tmp15;
   }
+  const obj6 = { style: null };
   const items1 = [, ];
   ({ commandIcon: arr2[0], loadingIcon: arr2[1] } = tmp4);
-  const tmp12 = <View style={items1} />;
+  obj6.style = items1;
+  const tmp12 = <View style={null} />;
   cResult[3] = tmp4.commandIcon;
   cResult[4] = tmp4.loadingIcon;
   cResult[5] = tmp12;
   tmp11 = tmp12;
 }) : ((arg0) => {
-  let end;
-  let obj4;
-  let start;
   ({ start, end } = arg0);
   const tmp = closure_6();
+  const obj = { label: null, icon: null, start: null, end: null };
+  const obj2 = { style: null };
   const items = [tmp.loadingName, ];
-  const obj3 = { width: "" + obj4.random(60, 80) + "%" };
-  const TableRow = TableRow2.TableRow;
+  const obj3 = { width: "" + _modDef12.random(60, 80) + "%" };
   items[1] = obj3;
+  obj2.style = items;
+  obj.label = <View style={null} />;
+  const obj5 = { style: null };
   const items1 = [, ];
   ({ commandIcon: arr2[0], loadingIcon: arr2[1] } = tmp);
-  obj4 = _modDef12;
-  return <TableRow label={null} icon={null} start={start} end={end} />;
+  obj5.style = items1;
+  obj.icon = <View style={null} />;
+  obj.start = start;
+  obj.end = end;
+  return jsx(TableRow.TableRow, { label: null, icon: null, start: null, end: null });
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let end;
-  let first;
-  let start;
-  const obj = react2;
-  const cResult = obj.c(8);
+ReactCompilerGating = fn(558);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(8);
   ({ start, end } = arg0);
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = intl2.intl;
-    const stringResult = intl.string(intl2.t.YSNlV2);
+    const intl = util.intl;
+    const stringResult = intl.string(util.t.YSNlV2);
     cResult[0] = stringResult;
-    first = stringResult;
+    let first = stringResult;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === tmp4.commandIcon) {
-    let tmp7;
     if (cResult[2] === tmp4.loadingIcon) {
-      tmp7 = cResult[3];
+      let tmp7 = cResult[3];
     }
     if (cResult[4] === end) {
       if (cResult[5] === start) {
-        let tmp9;
         if (cResult[6] === tmp7) {
-          tmp9 = cResult[7];
+          let tmp9 = cResult[7];
         }
         return tmp9;
       }
     }
-    const tmp11 = jsx(TableRow2.TableRow, { label: first, icon: tmp7, start, end });
+    const obj2 = { label: first, icon: tmp7, start, end };
+    const tmp11 = jsx(TableRow.TableRow, { label: first, icon: tmp7, start, end });
     cResult[4] = end;
     cResult[5] = start;
     cResult[6] = tmp7;
     cResult[7] = tmp11;
     tmp9 = tmp11;
   }
+  const obj3 = { style: null };
   const items = [, ];
   ({ commandIcon: arr[0], loadingIcon: arr[1] } = tmp4);
-  const tmp8 = <View style={items} />;
+  obj3.style = items;
+  const tmp8 = <View style={null} />;
   cResult[1] = tmp4.commandIcon;
   cResult[2] = tmp4.loadingIcon;
   cResult[3] = tmp8;
   tmp7 = tmp8;
 }) : ((arg0) => {
-  let end;
-  let start;
   ({ start, end } = arg0);
-  const tmp = closure_6();
-  const TableRow = TableRow2.TableRow;
-  const intl = intl2.intl;
+  const obj = { label: null, icon: null, start: null, end: null };
+  const intl = util.intl;
+  obj.label = intl.string(util.t.YSNlV2);
+  const obj2 = { style: null };
   const items = [, ];
-  ({ commandIcon: arr[0], loadingIcon: arr[1] } = tmp);
-  return <TableRow label={intl.string(intl2.t.YSNlV2)} icon={null} start={start} end={end} />;
+  ({ commandIcon: arr[0], loadingIcon: arr[1] } = closure_6());
+  obj2.style = items;
+  obj.icon = <View style={null} />;
+  obj.start = start;
+  obj.end = end;
+  return jsx(TableRow.TableRow, { label: null, icon: null, start: null, end: null });
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let end;
-  let onPress;
-  let section;
-  let start;
-  let tmp5;
-  const obj = react2;
-  const cResult = obj.c(11);
+ReactCompilerGating = fn(558);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(11);
   ({ section, onPress, start, end } = arg0);
   const tmp4 = closure_6();
   if (cResult[0] !== section) {
-    const tmpResult = application_commands_ApplicationCommandUtils;
-    const applicationCommandsIconSource = tmpResult.getApplicationCommandsIconSource(section);
+    const applicationCommandsIconSource = application_commands_ApplicationCommandUtils.getApplicationCommandsIconSource(section);
     cResult[0] = section;
     cResult[1] = applicationCommandsIconSource;
-    tmp5 = applicationCommandsIconSource;
+    let tmp5 = applicationCommandsIconSource;
+    const tmpResult = application_commands_ApplicationCommandUtils;
   } else {
     tmp5 = cResult[1];
   }
   if (cResult[2] === tmp5) {
-    let tmp7;
     if (cResult[3] === tmp4) {
-      tmp7 = cResult[4];
+      let tmp7 = cResult[4];
     }
     if (cResult[5] === end) {
       if (cResult[6] === onPress) {
         if (cResult[7] === section.name) {
           if (cResult[8] === start) {
-            let tmp11;
             if (cResult[9] === tmp7) {
-              tmp11 = cResult[10];
+              let tmp11 = cResult[10];
             }
             return tmp11;
           }
         }
       }
     }
-    const tmp13 = jsx(TableRow2.TableRow, { onPress, label: section.name, icon: tmp7, start, end, arrow: true });
+    const obj2 = { onPress, label: section.name, icon: tmp7, start, end, arrow: true };
+    const tmp13 = jsx(TableRow.TableRow, { onPress, label: section.name, icon: tmp7, start, end, arrow: true });
     cResult[5] = end;
     cResult[6] = onPress;
     cResult[7] = section.name;
@@ -207,157 +197,152 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[10] = tmp13;
     tmp11 = tmp13;
   }
-  const tmp8 = null != tmp5 && jsx(FastImageDefault, { style: tmp4.commandIcon, source: tmp5 });
+  let tmp8 = null != tmp5;
+  if (tmp8) {
+    const obj3 = { style: tmp4.commandIcon, source: tmp5 };
+    tmp8 = jsx(FastImageDefault, { style: tmp4.commandIcon, source: tmp5 });
+  }
   cResult[2] = tmp5;
   cResult[3] = tmp4;
   cResult[4] = tmp8;
   tmp7 = tmp8;
 }) : ((section) => {
-  let end;
-  let onPress;
-  let start;
   section = section.section;
   ({ onPress, start, end } = section);
   const tmp = closure_6();
-  const obj = application_commands_ApplicationCommandUtils;
-  const applicationCommandsIconSource = obj.getApplicationCommandsIconSource(section);
+  const applicationCommandsIconSource = application_commands_ApplicationCommandUtils.getApplicationCommandsIconSource(section);
+  const obj2 = { onPress, label: section.name, icon: null, start: null, end: null, arrow: true };
   let tmp4Result = null != applicationCommandsIconSource;
-  const TableRow = TableRow2.TableRow;
   if (tmp4Result) {
+    const obj3 = { style: tmp.commandIcon, source: applicationCommandsIconSource };
     tmp4Result = jsx(FastImageDefault, { style: tmp.commandIcon, source: applicationCommandsIconSource });
   }
-  return <TableRow onPress={onPress} label={section.name} icon={tmp4Result} start={start} end={end} arrow />;
+  obj2.icon = tmp4Result;
+  obj2.start = start;
+  obj2.end = end;
+  return jsx(TableRow.TableRow, { onPress, label: section.name, icon: null, start: null, end: null, arrow: true });
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let end;
-  let item;
-  let onPress;
-  let section;
-  let start;
-  let tmp14;
-  const obj = react2;
-  const cResult = obj.c(16);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/application_commands/native/ContextMenuCommandItem.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(16);
   ({ item, onPress, section, start, end } = arg0);
   const tmp4 = closure_6();
   const type = item.type;
-  if (Server.ApplicationCommandType.MESSAGE === type) {
-    if (cResult[0] === item.displayName) {
-      let name;
-      if (section != null) {
-        name = section.name;
+  if (Server.ApplicationCommandType.MESSAGE !== type) {
+    if (Server.ApplicationCommandType.USER !== type) {
+      if (cResult[3] !== section) {
+        const applicationCommandsIconSource = application_commands_ApplicationCommandUtils.getApplicationCommandsIconSource(section);
+        cResult[3] = section;
+        cResult[4] = applicationCommandsIconSource;
+        let tmp12 = applicationCommandsIconSource;
+        const tmpResult = application_commands_ApplicationCommandUtils;
+      } else {
+        tmp12 = cResult[4];
       }
-    }
-    const intl = intl2.intl;
-    const formatToPlainString = intl.formatToPlainString;
-    let name1;
-    const Pk4Mz3 = intl2.t.Pk4Mz3;
-    if (section != null) {
-      name1 = section.name;
-    }
-    const obj2 = { applicationName: name1, commandName: item.displayName };
-    const formatToPlainStringResult = formatToPlainString(Pk4Mz3, obj2);
-    cResult[0] = item.displayName;
-    let name2;
-    if (section != null) {
-      name2 = section.name;
-    }
-    cResult[1] = name2;
-    cResult[2] = formatToPlainStringResult;
-  }
-  if (cResult[3] !== section) {
-    const tmpResult = application_commands_ApplicationCommandUtils;
-    const applicationCommandsIconSource = tmpResult.getApplicationCommandsIconSource(section);
-    cResult[3] = section;
-    cResult[4] = applicationCommandsIconSource;
-    tmp14 = applicationCommandsIconSource;
-  } else {
-    tmp14 = cResult[4];
-  }
-  if (cResult[5] === tmp14) {
-    let tmp16;
-    let tmp21;
-    if (cResult[6] === tmp4) {
-      tmp16 = cResult[7];
-    }
-    const _Symbol = Symbol;
-    if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp23 = jsx(SendMessageIcon.SendMessageIcon, {});
-      cResult[8] = tmp23;
-      tmp21 = tmp23;
-    } else {
-      tmp21 = cResult[8];
-    }
-    if (cResult[9] === tmp5) {
-      if (cResult[10] === end) {
-        if (cResult[11] === item.displayName) {
-          if (cResult[12] === onPress) {
-            if (cResult[13] === start) {
-              let tmp24;
-              if (cResult[14] === tmp16) {
-                tmp24 = cResult[15];
+      if (cResult[5] === tmp12) {
+        if (cResult[6] === tmp4) {
+          let tmp14 = cResult[7];
+        }
+        const _Symbol = Symbol;
+        if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+          const tmp22 = jsx(SendMessageIcon.SendMessageIcon, {});
+          cResult[8] = tmp22;
+          let tmp20 = tmp22;
+        } else {
+          tmp20 = cResult[8];
+        }
+        if (cResult[9] === undefined) {
+          if (cResult[10] === end) {
+            if (cResult[11] === item.displayName) {
+              if (cResult[12] === onPress) {
+                if (cResult[13] === start) {
+                  if (cResult[14] === tmp14) {
+                    let tmp23 = cResult[15];
+                  }
+                  return tmp23;
+                }
               }
-              return tmp24;
             }
           }
         }
+        const obj2 = { accessibilityLabel: undefined, onPress, label: item.displayName, icon: tmp14, trailing: tmp20, start, end };
+        const tmp25 = jsx(TableRow.TableRow, { accessibilityLabel: undefined, onPress, label: item.displayName, icon: tmp14, trailing: tmp20, start, end });
+        cResult[9] = undefined;
+        cResult[10] = end;
+        cResult[11] = item.displayName;
+        cResult[12] = onPress;
+        cResult[13] = start;
+        cResult[14] = tmp14;
+        cResult[15] = tmp25;
+        tmp23 = tmp25;
       }
+      let tmp16 = null != tmp12;
+      if (tmp16) {
+        const obj3 = { style: tmp4.commandIcon, source: tmp12 };
+        tmp16 = jsx(FastImageDefault, { style: tmp4.commandIcon, source: tmp12 });
+      }
+      cResult[5] = tmp12;
+      cResult[6] = tmp4;
+      cResult[7] = tmp16;
+      tmp14 = tmp16;
     }
-    const tmp26 = jsx(TableRow2.TableRow, { accessibilityLabel: tmp5, onPress, label: item.displayName, icon: tmp16, trailing: tmp21, start, end });
-    cResult[9] = tmp5;
-    cResult[10] = end;
-    cResult[11] = item.displayName;
-    cResult[12] = onPress;
-    cResult[13] = start;
-    cResult[14] = tmp16;
-    cResult[15] = tmp26;
-    tmp24 = tmp26;
   }
-  const tmp17 = null != tmp14 && jsx(FastImageDefault, { style: tmp4.commandIcon, source: tmp14 });
-  cResult[5] = tmp14;
-  cResult[6] = tmp4;
-  cResult[7] = tmp17;
-  tmp16 = tmp17;
+  if (cResult[0] === item.displayName) {
+    let name;
+    if (section != null) {
+      name = section.name;
+    }
+  }
+  const intl = util.intl;
+  let name1;
+  if (section != null) {
+    name1 = section.name;
+  }
+  const formatToPlainStringResult = intl.formatToPlainString(util.t.Pk4Mz3, { applicationName: name1, commandName: item.displayName });
+  cResult[0] = item.displayName;
+  let name2;
+  if (section != null) {
+    name2 = section.name;
+  }
+  cResult[1] = name2;
+  cResult[2] = formatToPlainStringResult;
+  const obj4 = { applicationName: name1, commandName: item.displayName };
 }) : ((item) => {
-  let end;
-  let onPress;
-  let start;
   item = item.item;
   const section = item.section;
   ({ onPress, start, end } = item);
   const items = [item, ];
   let name;
-  const useMemo = react.useMemo;
-  const tmp = closure_6();
   if (section != null) {
     name = section.name;
   }
   items[1] = name;
-  const memo = useMemo(() => {
+  const memo = noop.useMemo(() => {
     const type = item.type;
-    const intl = intl2.intl;
-    const formatToPlainString = intl.formatToPlainString;
+    const intl = util.intl;
     let name;
-    const Pk4Mz3 = intl2.t.Pk4Mz3;
     if (section != null) {
       name = section.name;
     }
-    const obj = { applicationName: name, commandName: item.displayName };
-    return formatToPlainString(Pk4Mz3, obj);
+    return intl.formatToPlainString(util.t.Pk4Mz3, { applicationName: name, commandName: item.displayName });
   }, items);
-  let obj = item(11874);
-  const applicationCommandsIconSource = obj.getApplicationCommandsIconSource(section);
+  const tmp = closure_6();
+  const tmp5 = item;
+  const applicationCommandsIconSource = item(11874).getApplicationCommandsIconSource(section);
+  const obj2 = { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null };
   let tmp8Result = null != applicationCommandsIconSource;
-  const TableRow = item(6000).TableRow;
   if (tmp8Result) {
+    const obj3 = { style: tmp.commandIcon, source: applicationCommandsIconSource };
     tmp8Result = jsx(section(5981), { style: tmp.commandIcon, source: applicationCommandsIconSource });
   }
-  return <TableRow accessibilityLabel={memo} onPress={onPress} label={item.displayName} icon={tmp8Result} trailing={null} start={start} end={end} />;
+  obj2.icon = tmp8Result;
+  obj2.trailing = jsx(tmp5(4847).SendMessageIcon, {});
+  obj2.start = start;
+  obj2.end = end;
+  return jsx(item(6000).TableRow, { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null });
 });
-size = size_mod;
-const result = size.fileFinishedImporting("modules/application_commands/native/ContextMenuCommandItem.tsx");
-
-export default tmp6;
-export const ContextMenuCommandLoadingItem = tmp3;
-export const ContextMenuCommandEmptyItem = tmp4;
-export const ContextMenuCommandAppItem = tmp5;
+export const ContextMenuCommandLoadingItem = tmp2;
+export const ContextMenuCommandEmptyItem = tmp3;
+export const ContextMenuCommandAppItem = tmp4;

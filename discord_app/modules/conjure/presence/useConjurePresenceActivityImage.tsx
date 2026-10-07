@@ -12,8 +12,6 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/conjure/presence/useConjurePresenceActivityImage.tsx");
 
 export default () => {
-  const obj = shared;
-  const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
   const tmp2 = conjurePresenceActivityImageDefault;
-  return isThemeDarkResult ? tmp2.dark : tmp2.light;
+  return shared.isThemeDark(useThemeDefault()) ? tmp2.dark : tmp2.light;
 };

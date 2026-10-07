@@ -1,60 +1,51 @@
 // === Module 13068: getHeaderTextForInvite ===
 
 // Module 13068 (getHeaderTextForInvite)
-import intl2 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/getHeaderTextForInvite.tsx");
 
 export const getHeaderTextForInvite = function getHeaderTextForInvite(arg0) {
-  let isGuest;
-  let isHubGuild;
-  let isOwnInvite;
-  let isStage;
-  let isStream;
-  let isVoiceChannel;
-  let stringResult3;
   ({ isOwnInvite, isGuest, isStage, isStream } = arg0);
   ({ isVoiceChannel, isHubGuild } = arg0);
-  const intl = intl2.intl;
+  const intl = util.intl;
   const string = intl.string;
-  const t = intl2.t;
+  let N85DCl = util.t;
   if (isVoiceChannel) {
-    let stringResult1;
-    if (isOwnInvite) {
-      let stringResult;
+    if (!isOwnInvite) {
       if (isStream) {
-        stringResult = string(t.N85DCl);
+        let stringResult = string(N85DCl.Mnvc3C);
       } else if (isStage) {
-        stringResult = string(t.TJQcNv);
+        stringResult = string(N85DCl.FdPNr5);
       } else if (isGuest) {
-        stringResult = string(t.mJyBir);
+        stringResult = string(N85DCl.f4gmrf);
       } else {
-        stringResult = string(t.lxTgP9);
+        stringResult = string(N85DCl.H39rEY);
       }
-      stringResult1 = stringResult;
-    } else if (isStream) {
-      stringResult1 = string(t.Mnvc3C);
+    }
+    if (isStream) {
+      N85DCl = N85DCl.N85DCl;
+      let stringResult1 = string(N85DCl);
     } else if (isStage) {
-      stringResult1 = string(t.FdPNr5);
+      stringResult1 = string(N85DCl.TJQcNv);
     } else if (isGuest) {
-      stringResult1 = string(t.f4gmrf);
+      stringResult1 = string(N85DCl.mJyBir);
     } else {
-      stringResult1 = string(t.H39rEY);
+      stringResult1 = string(N85DCl.lxTgP9);
     }
-    stringResult3 = stringResult1;
   } else if (isHubGuild) {
-    let stringResult2;
     if (isOwnInvite) {
-      stringResult2 = string(t.UxmnHx);
+      let stringResult2 = string(N85DCl.UxmnHx);
     } else {
-      stringResult2 = string(t.sigPEf);
+      stringResult2 = string(N85DCl.sigPEf);
     }
-    stringResult3 = stringResult2;
-  } else if (isOwnInvite) {
-    stringResult3 = string(t["oU/lsl"]);
   } else {
-    stringResult3 = string(t.BoQUFf);
+    if (isOwnInvite) {
+      let stringResult3 = string(N85DCl["oU/lsl"]);
+    } else {
+      stringResult3 = string(N85DCl.BoQUFf);
+    }
+    return stringResult3;
   }
-  return stringResult3;
 };

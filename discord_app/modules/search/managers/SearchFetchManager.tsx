@@ -7,18 +7,14 @@ import size from "module_2" /* 2 */;
 
 const AbstractSearchFetchManager = AbstractSearchFetchManager2.AbstractSearchFetchManager;
 class SearchFetchManager extends AbstractSearchFetchManager {
-  create(arg0) {
-    let id;
-    let searchQuery;
-    let searchType;
-    ({ id, searchType, searchQuery } = arg0);
-    this.cancel(id);
-    const searchFetcherImpl = new SearchFetcher.SearchFetcherImpl(id, searchType, searchQuery);
-    const result = this.set(id, searchFetcherImpl);
-    return searchFetcherImpl;
-  }
 }
-const prototype = SearchFetchManager.prototype;
+SearchFetchManager.prototype["create"] = function create(arg0) {
+  ({ id, searchType, searchQuery } = arg0);
+  this.cancel(id);
+  const searchFetcherImpl = new SearchFetcher.SearchFetcherImpl(id, searchType, searchQuery);
+  const result = this.set(id, searchFetcherImpl);
+  return searchFetcherImpl;
+};
 const searchFetchManager = new SearchFetchManager();
 let result = size.fileFinishedImporting("modules/search/managers/SearchFetchManager.tsx");
 

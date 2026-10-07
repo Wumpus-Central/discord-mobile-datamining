@@ -1,149 +1,123 @@
 // === Module 9426: GuildProfileLoadingError ===
 
 // Module 9426 (GuildProfileLoadingError)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl4 from "intl" /* 1126 */;
+import util from "util" /* 1126 */;
 import useToken from "useToken" /* 4586 */;
 import useThemeDefault from "useTheme" /* 4797 */;
-import WarningIcon3 from "WarningIcon" /* 4809 */;
+import WarningIcon from "WarningIcon" /* 4809 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import LinearGradientDefault from "LinearGradient" /* 5612 */;
 import Pressables from "Pressables" /* 5916 */;
 import GuildProfileView from "GuildProfileView" /* 9413 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let onRetry;
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileLoadingError.tsx");
 
-let closure_4;
-let hasOwnProperty;
-const View = react_native.View;
-({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onRetry) => {
-  let intl;
-  let intl3;
-  let items;
-  let items1;
-  let items2;
-  const obj = react2;
-  const cResult = obj.c(30);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((onRetry) => {
+  const cResult = c.c(30);
   onRetry = onRetry.onRetry;
-  const obj2 = GuildProfileView;
-  const styles = obj2.useStyles();
+  const styles = GuildProfileView.useStyles();
   const tmp6 = useThemeDefault();
-  const obj3 = useToken;
-  const token = obj3.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
+  const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
   if (cResult[0] === token) {
-    let tmp10;
     if (cResult[1] === tmp6) {
-      tmp10 = cResult[2];
+      let tmp10 = cResult[2];
     }
     if (cResult[3] === styles.colorBanner) {
-      let tmp12;
-      let tmp17;
-      let tmp20;
       if (cResult[4] === tmp10) {
-        tmp12 = cResult[5];
+        let tmp12 = cResult[5];
       }
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const obj4 = { size: "lg", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
-        const WarningIcon = WarningIcon3.WarningIcon;
-        const tmp19 = React3(WarningIcon, obj4);
+        const tmp19 = React4(WarningIcon.WarningIcon, obj4);
         cResult[6] = tmp19;
-        tmp17 = tmp19;
+        let tmp17 = tmp19;
       } else {
         tmp17 = cResult[6];
       }
       if (cResult[7] !== styles.avatarBackground) {
         const obj5 = { style: styles.avatarBackground, children: tmp17 };
-        const tmp23 = React3(View, obj5);
+        const tmp23 = React4(View, obj5);
         cResult[7] = styles.avatarBackground;
         cResult[8] = tmp23;
-        tmp20 = tmp23;
+        let tmp20 = tmp23;
       } else {
         tmp20 = cResult[8];
       }
       if (cResult[9] === styles.avatarBackground) {
-        let tmp24;
         if (cResult[10] === tmp20) {
-          tmp24 = cResult[11];
+          let tmp24 = cResult[11];
         }
         if (cResult[12] === styles.header) {
-          let tmp28;
-          let tmp32;
-          let tmp36;
-          let tmp35;
-          let tmp40;
           if (cResult[13] === tmp24) {
-            tmp28 = cResult[14];
+            let tmp28 = cResult[14];
           }
           const _Symbol2 = Symbol;
-          const body = styles.body;
           if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj6 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: intl.string(intl4.t.DmIUGK) };
-            const Text = Text_Text.Text;
-            intl = intl4.intl;
-            const tmp34 = React3(Text, obj6);
+            const obj6 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+            const intl = util.intl;
+            obj6.children = intl.string(util.t.DmIUGK);
+            const tmp34 = React4(Text_Text.Text, obj6);
             cResult[15] = tmp34;
-            tmp32 = tmp34;
+            let tmp32 = tmp34;
           } else {
             tmp32 = cResult[15];
           }
           const _Symbol3 = Symbol;
-          const error = styles.error;
           if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl2 = intl4.intl;
-            const stringResult = intl2.string(intl4.t.s1fAEw);
+            const intl2 = util.intl;
+            const stringResult = intl2.string(util.t.s1fAEw);
             const obj7 = { size: "sm", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
-            const WarningIcon2 = WarningIcon3.WarningIcon;
-            const tmp39 = React3(WarningIcon2, obj7);
+            const tmp39 = React4(WarningIcon.WarningIcon, obj7);
             cResult[16] = stringResult;
             cResult[17] = tmp39;
-            tmp36 = tmp39;
-            tmp35 = stringResult;
+            let tmp36 = tmp39;
+            let tmp35 = stringResult;
           } else {
             tmp35 = cResult[16];
             tmp36 = cResult[17];
           }
           const _Symbol4 = Symbol;
           if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj8 = { variant: "text-sm/normal", color: "text-feedback-warning", children: intl3.string(intl4.t.tmGHjc) };
-            const Text2 = Text_Text.Text;
-            intl3 = intl4.intl;
-            const tmp42 = React3(Text2, obj8);
+            const obj8 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
+            const intl3 = util.intl;
+            obj8.children = intl3.string(util.t.tmGHjc);
+            const tmp42 = React4(Text_Text.Text, obj8);
             cResult[18] = tmp42;
-            tmp40 = tmp42;
+            let tmp40 = tmp42;
           } else {
             tmp40 = cResult[18];
           }
           if (cResult[19] === onRetry) {
-            let tmp43;
             if (cResult[20] === styles.error) {
-              tmp43 = cResult[21];
+              let tmp43 = cResult[21];
             }
             if (cResult[22] === styles.body) {
-              let tmp46;
               if (cResult[23] === tmp43) {
-                tmp46 = cResult[24];
+                let tmp46 = cResult[24];
               }
               if (cResult[25] === styles.container) {
                 if (cResult[26] === tmp46) {
                   if (cResult[27] === tmp12) {
-                    let tmp50;
                     if (cResult[28] === tmp28) {
-                      tmp50 = cResult[29];
+                      let tmp50 = cResult[29];
                     }
                     return tmp50;
                   }
                 }
               }
-              const obj9 = { style: tmp8, children: items };
-              items = [tmp12, tmp28, tmp46];
+              const obj9 = { style: tmp8, children: null };
+              const items = [tmp12, tmp28, tmp46];
+              obj9.children = items;
               const tmp53 = hasOwnProperty(View, obj9);
               cResult[25] = styles.container;
               cResult[26] = tmp46;
@@ -152,16 +126,18 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onRetry) => {
               cResult[29] = tmp53;
               tmp50 = tmp53;
             }
-            const obj10 = { style: body, children: items1 };
-            items1 = [tmp32, tmp43];
+            const obj10 = { style: styles.body, children: null };
+            const items1 = [tmp32, tmp43];
+            obj10.children = items1;
             const tmp49 = hasOwnProperty(View, obj10);
             cResult[22] = styles.body;
             cResult[23] = tmp43;
             cResult[24] = tmp49;
             tmp46 = tmp49;
           }
-          const obj11 = { style: error, onPress: onRetry, accessibilityRole: "button", accessibilityLabel: tmp35, children: items2 };
-          items2 = [tmp36, tmp40];
+          const obj11 = { style: styles.error, onPress: onRetry, accessibilityRole: "button", accessibilityLabel: tmp35, children: null };
+          const items2 = [tmp36, tmp40];
+          obj11.children = items2;
           const tmp45 = hasOwnProperty(Pressables.PressableOpacity, obj11);
           cResult[19] = onRetry;
           cResult[20] = styles.error;
@@ -169,81 +145,69 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onRetry) => {
           tmp43 = tmp45;
         }
         const obj12 = { style: styles.header, children: tmp24 };
-        const tmp31 = React3(View, obj12);
+        const tmp31 = React4(View, obj12);
         cResult[12] = styles.header;
         cResult[13] = tmp24;
         cResult[14] = tmp31;
         tmp28 = tmp31;
       }
       const obj13 = { style: styles.avatarBackground, children: tmp20 };
-      const tmp27 = React3(View, obj13);
+      const tmp27 = React4(View, obj13);
       cResult[9] = styles.avatarBackground;
       cResult[10] = tmp20;
       cResult[11] = tmp27;
       tmp24 = tmp27;
     }
     const obj14 = { style: tmp9, start: GuildProfileView.DiagonalGradient.START, end: GuildProfileView.DiagonalGradient.END, colors: tmp10 };
-    const tmp5Result = LinearGradientDefault;
-    const tmp15 = React3(tmp5Result, obj14);
+    const tmp15 = React4(LinearGradientDefault, obj14);
     cResult[3] = styles.colorBanner;
     cResult[4] = tmp10;
     cResult[5] = tmp15;
     tmp12 = tmp15;
+    const tmp5Result = LinearGradientDefault;
   }
-  const tmpResult = GuildProfileView;
-  const backgroundForProfile = tmpResult.getBackgroundForProfile(tmp6, token);
+  const backgroundForProfile = GuildProfileView.getBackgroundForProfile(tmp6, token);
   cResult[0] = token;
   cResult[1] = tmp6;
   cResult[2] = backgroundForProfile;
   tmp10 = backgroundForProfile;
-}) : ((onRetry) => {
-  let WarningIcon;
-  let intl;
-  let intl2;
-  let intl3;
-  let items;
-  let items1;
-  let items2;
-  let obj5;
-  let obj7;
-  let obj8;
-  let obj9;
-  onRetry = onRetry.onRetry;
-  const obj = GuildProfileView;
-  const styles = obj.useStyles();
-  const obj3 = { style: styles.container, children: items };
+  const tmpResult = GuildProfileView;
+}) : ((onPress) => {
+  const styles = GuildProfileView.useStyles();
   const tmp2 = useThemeDefault();
-  const obj2 = useToken;
-  const token = obj2.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
-  const obj4 = { style: styles.colorBanner, start: GuildProfileView.DiagonalGradient.START, end: GuildProfileView.DiagonalGradient.END, colors: obj5.getBackgroundForProfile(tmp2, token) };
+  const obj3 = { style: styles.container, children: null };
+  const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
+  const obj4 = { style: styles.colorBanner, start: null, end: null, colors: null };
+  obj4.start = GuildProfileView.DiagonalGradient.START;
+  obj4.end = GuildProfileView.DiagonalGradient.END;
   const tmp4 = LinearGradientDefault;
-  obj5 = GuildProfileView;
-  items = [React3(tmp4, obj4), , ];
-  const obj6 = { style: styles.header, children: React3(View, obj7) };
-  obj7 = { style: styles.avatarBackground, children: React3(View, obj8) };
-  obj8 = { style: styles.avatarBackground, children: React3(WarningIcon, obj9) };
-  obj9 = { size: "lg", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
-  WarningIcon = WarningIcon3.WarningIcon;
-  items[1] = React3(View, obj6);
-  const obj10 = { style: styles.body, children: items1 };
-  const obj11 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: intl.string(intl4.t.DmIUGK) };
-  const Text = Text_Text.Text;
-  intl = intl4.intl;
-  items1 = [React3(Text, obj11), ];
-  const obj12 = { style: styles.error, onPress: onRetry, accessibilityRole: "button", accessibilityLabel: intl2.string(intl4.t.s1fAEw), children: items2 };
-  const PressableOpacity = Pressables.PressableOpacity;
-  intl2 = intl4.intl;
-  const obj13 = { size: "sm", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
-  const WarningIcon2 = WarningIcon3.WarningIcon;
-  items2 = [React3(WarningIcon2, obj13), ];
-  const obj14 = { variant: "text-sm/normal", color: "text-feedback-warning", children: intl3.string(intl4.t.tmGHjc) };
-  const Text2 = Text_Text.Text;
-  intl3 = intl4.intl;
-  items2[1] = React3(Text2, obj14);
-  items1[1] = hasOwnProperty(PressableOpacity, obj12);
+  obj4.colors = GuildProfileView.getBackgroundForProfile(tmp2, token);
+  const items = [React4(tmp4, obj4), , ];
+  const obj6 = { style: styles.header, children: null };
+  const obj7 = { style: styles.avatarBackground, children: null };
+  const obj8 = { style: styles.avatarBackground, children: null };
+  obj8.children = React4(WarningIcon.WarningIcon, { size: "lg", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING });
+  obj7.children = React4(View, obj8);
+  obj6.children = React4(View, obj7);
+  items[1] = React4(View, obj6);
+  const obj10 = { style: styles.body, children: null };
+  const obj11 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  const intl = util.intl;
+  obj11.children = intl.string(util.t.DmIUGK);
+  const items1 = [React4(Text_Text.Text, obj11), ];
+  const obj12 = { style: styles.error, onPress: onPress.onRetry, accessibilityRole: "button", accessibilityLabel: null, children: null };
+  const intl2 = util.intl;
+  obj12.accessibilityLabel = intl2.string(util.t.s1fAEw);
+  const obj9 = { size: "lg", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
+  const items2 = [React4(WarningIcon.WarningIcon, { size: "sm", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING }), ];
+  const obj14 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
+  const intl3 = util.intl;
+  obj14.children = intl3.string(util.t.tmGHjc);
+  items2[1] = React4(Text_Text.Text, obj14);
+  obj12.children = items2;
+  items1[1] = hasOwnProperty(Pressables.PressableOpacity, obj12);
+  obj10.children = items1;
   items[2] = hasOwnProperty(View, obj10);
+  obj3.children = items;
   return hasOwnProperty(View, obj3);
 });
-const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileLoadingError.tsx");
-
-export default tmp4;

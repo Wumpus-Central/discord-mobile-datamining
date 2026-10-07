@@ -1,38 +1,34 @@
 // === Module 17314: ActivitiesDebugOverlay ===
 
 // Module 17314 (ActivitiesDebugOverlay)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
 import Text_Text from "Text/Text" /* 4892 */;
 import useThermalState from "useThermalState" /* 9025 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ColorUtils_mod from "ColorUtils" /* 4733 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
 const useThermalStateDefault = useThermalState;
 
-let ColorUtils;
-let closure_4;
-let hasOwnProperty;
-let rect;
-const View = react_native.View;
-({ jsxs: closure_4, jsx: hasOwnProperty } = Fragment);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
 let c6 = 16;
-let createStyles = createStyles_mod;
-let obj = { container: rect, row: { flexDirection: "row" } };
-rect = { position: "absolute", top: 0, left: 0, backgroundColor: ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7), paddingRight: 16, paddingBottom: 16 };
-createStyles = createStyles.createStyles;
-ColorUtils = ColorUtils_mod;
-let closure_7 = createStyles(obj);
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let items;
-  const obj = react2;
-  const cResult = obj.c(16);
+const createStyles = fn(4896);
+let obj2 = { container: null, row: null };
+let rect = { position: "absolute", top: 0, left: 0, backgroundColor: null, paddingRight: 16, paddingBottom: 16 };
+const ColorUtils = fn(4733);
+rect.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
+obj2.container = rect;
+obj2.row = { flexDirection: "row" };
+let closure_7 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/native/ActivitiesDebugOverlay.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(16);
   const tmp4 = closure_7();
   const tmp6 = useThermalStateDefault();
   let str = "text-overlay-light";
@@ -59,39 +55,33 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const sum = rect.top + c6;
   const sum1 = rect.left + c6;
   if (cResult[0] === sum1) {
-    let tmp9;
     if (cResult[1] === sum) {
-      tmp9 = cResult[2];
+      let tmp9 = cResult[2];
     }
     if (cResult[3] === tmp4.container) {
-      let tmp10;
-      let tmp12;
       if (cResult[4] === tmp9) {
-        tmp10 = cResult[5];
+        let tmp10 = cResult[5];
       }
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { variant: "text-md/normal", color: "text-overlay-light", children: ["thermal state:", " "] };
-        const tmp14 = React3(Text_Text.Text, obj2);
+        const tmp14 = React4(Text_Text.Text, obj2);
         cResult[6] = tmp14;
-        tmp12 = tmp14;
+        let tmp12 = tmp14;
       } else {
         tmp12 = cResult[6];
       }
       if (cResult[7] === str2) {
-        let tmp15;
         if (cResult[8] === str) {
-          tmp15 = cResult[9];
+          let tmp15 = cResult[9];
         }
         if (cResult[10] === tmp4.row) {
-          let tmp18;
           if (cResult[11] === tmp15) {
-            tmp18 = cResult[12];
+            let tmp18 = cResult[12];
           }
           if (cResult[13] === tmp10) {
-            let tmp22;
             if (cResult[14] === tmp18) {
-              tmp22 = cResult[15];
+              let tmp22 = cResult[15];
             }
             return tmp22;
           }
@@ -102,9 +92,10 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           cResult[15] = tmp25;
           tmp22 = tmp25;
         }
-        const obj4 = { style: tmp4.row, children: items };
-        items = [tmp12, tmp15];
-        const tmp21 = React3(View, obj4);
+        const obj4 = { style: tmp4.row, children: null };
+        const items = [tmp12, tmp15];
+        obj4.children = items;
+        const tmp21 = React4(View, obj4);
         cResult[10] = tmp4.row;
         cResult[11] = tmp15;
         cResult[12] = tmp21;
@@ -129,9 +120,6 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = obj6;
   tmp9 = obj6;
 }) : (() => {
-  let items;
-  let items1;
-  let obj3;
   const tmp = closure_7();
   const tmp4 = useThermalStateDefault();
   let str = "text-overlay-light";
@@ -155,14 +143,12 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   const rect = useSafeAreaInsetsDefault();
-  const obj = { style: items, pointerEvents: "none", children: React3(View, obj3) };
-  items = [tmp.container, ];
-  const obj2 = { paddingTop: rect.top + c6, paddingLeft: rect.left + c6 };
-  items[1] = obj2;
-  obj3 = { style: tmp.row, children: items1 };
-  items1 = [React3(Text_Text.Text, { variant: "text-md/normal", color: "text-overlay-light", children: ["thermal state:", " "] }), hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", color: str, children: str2 })];
+  const obj = { style: null, pointerEvents: "none", children: null };
+  const items = [tmp.container, { paddingTop: rect.top + c6, paddingLeft: rect.left + c6 }];
+  obj.style = items;
+  const obj3 = { style: tmp.row, children: null };
+  const items1 = [React4(Text_Text.Text, { variant: "text-md/normal", color: "text-overlay-light", children: ["thermal state:", " "] }), hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", color: str, children: str2 })];
+  obj3.children = items1;
+  obj.children = React4(View, obj3);
   return hasOwnProperty(View, obj);
 });
-const result = size.fileFinishedImporting("modules/activities/native/ActivitiesDebugOverlay.tsx");
-
-export default tmp5;

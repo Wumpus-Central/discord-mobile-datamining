@@ -1,81 +1,71 @@
 // === Module 15370: SettingsAdvancedScreen ===
 
 // Module 15370 (SettingsAdvancedScreen)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
-import Constants from "Constants" /* 1085 */;
-import intl5 from "intl" /* 1126 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import SettingBuilders from "SettingBuilders" /* 11142 */;
 import SettingLayoutDefault from "SettingLayout" /* 14515 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
+require = fn;
 function getAdvancedSettings() {
-  let intl;
-  let intl2;
-  let intl3;
-  let intl4;
-  let items;
-  let items2;
-  let items3;
-  let items4;
-  let obj2;
-  const obj = { label: intl.string(intl5.t["+U02+i"]), settings: items, subLabel: intl2.format(intl5.t["CY6q/Q"], obj2) };
-  intl = intl5.intl;
-  items = [MobileUserSettings.DEVELOPER_MODE];
-  intl2 = intl5.intl;
+  const obj = { label: null, settings: null, subLabel: null };
+  const intl = util.intl;
+  obj.label = intl.string(util.t["+U02+i"]);
+  const items = [MobileUserSettings.DEVELOPER_MODE];
+  obj.settings = items;
+  const intl2 = util.intl;
+  obj.subLabel = intl2.format(util.t["CY6q/Q"], { apiDocsUrl: MarketingURLs.API_DOCS });
   const items1 = [obj, , , ];
-  obj2 = { apiDocsUrl: MarketingURLs.API_DOCS };
-  const obj3 = { settings: items2, subLabel: intl3.string(intl5.t.gI2GEL) };
-  items2 = [MobileUserSettings.LAUNCHPAD];
-  intl3 = intl5.intl;
+  const obj3 = { settings: null, subLabel: null };
+  const items2 = [MobileUserSettings.LAUNCHPAD];
+  obj3.settings = items2;
+  const intl3 = util.intl;
+  obj3.subLabel = intl3.string(util.t.gI2GEL);
   items1[1] = obj3;
-  const obj4 = { settings: items3 };
-  items3 = [MobileUserSettings.CHANNEL_LIST_LAYOUT];
+  const obj4 = { settings: null };
+  const items3 = [MobileUserSettings.CHANNEL_LIST_LAYOUT];
+  obj4.settings = items3;
   items1[2] = obj4;
-  const obj5 = { label: intl4.string(intl5.t["jnXV/V"]), settings: items4 };
-  intl4 = intl5.intl;
-  items4 = [MobileUserSettings.ICYMI_TAB];
+  const obj5 = { label: null, settings: null };
+  const intl4 = util.intl;
+  obj5.label = intl4.string(util.t["jnXV/V"]);
+  const items4 = [MobileUserSettings.ICYMI_TAB];
+  obj5.settings = items4;
   items1[3] = obj5;
   return items1;
 }
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const MarketingURLs = Constants.MarketingURLs;
-const jsx = Fragment.jsx;
-const memo = react.memo;
-const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  let tmp8;
-  const obj = react2;
-  const cResult = obj.c(2);
+const MobileUserSettings = fn(7645).MobileUserSettings;
+const MarketingURLs = fn(1085).MarketingURLs;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/advanced/native/SettingsAdvancedScreen.tsx");
+
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { sections: getAdvancedSettings() };
-    const createList = SettingBuilders.createList;
-    SettingBuilders;
-    const list = createList(obj2);
+    const list = SettingBuilders.createList(obj2);
     cResult[0] = list;
-    first = list;
+    let first = list;
+    const tmpResult = SettingBuilders;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp11 = jsx(SettingLayoutDefault, { node: first });
-    cResult[1] = tmp11;
-    tmp8 = tmp11;
+    const obj3 = { node: first };
+    const tmp10 = jsx(SettingLayoutDefault, { node: first });
+    cResult[1] = tmp10;
+    let tmp7 = tmp10;
   } else {
-    tmp8 = cResult[1];
+    tmp7 = cResult[1];
   }
-  return tmp8;
+  return tmp7;
 }) : (() => {
-  const node = react.useMemo(() => {
+  const node = noop.useMemo(() => {
     const obj = SettingBuilders;
-    const obj2 = { sections: getAdvancedSettings() };
-    return obj.createList(obj2);
+    return obj.createList({ sections: getAdvancedSettings() });
   }, []);
   return jsx(SettingLayoutDefault, { node });
 }));
-const result = size.fileFinishedImporting("modules/user_settings/advanced/native/SettingsAdvancedScreen.tsx");
-
-export default memoResult;

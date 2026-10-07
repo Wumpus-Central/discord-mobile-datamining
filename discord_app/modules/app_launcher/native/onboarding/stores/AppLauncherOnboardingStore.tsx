@@ -2,47 +2,50 @@
 
 // Module 11673 (AppLauncherOnboardingStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import get_initializedDefault from "get initialized" /* 504 */;
+import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7047 */;
+import useCanShowAppLauncherOnboarding from "useCanShowAppLauncherOnboarding" /* 11671 */;
 import UserStore from "UserStore" /* 1377 */;
-import size from "module_2" /* 2 */;
 
-const Store = get_initializedDefault.Store;
+require = fn;
+const Store = initializeDefault.Store;
 class AppLauncherOnboardingStore extends Store {
-  initialize() {
-    this.waitFor(UserStore);
-  }
-  getRecentMessageMetadata() {
-    return obj2;
-  }
-  getRecentApplicationCommandMetadata() {
-    return obj;
-  }
 }
 const prototype = AppLauncherOnboardingStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(UserStore);
+};
+prototype["getRecentMessageMetadata"] = function getRecentMessageMetadata() {
+  return obj2;
+};
+prototype["getRecentApplicationCommandMetadata"] = function getRecentApplicationCommandMetadata() {
+  return obj;
+};
 AppLauncherOnboardingStore.displayName = "AppLauncherOnboardingStore";
-let obj = {
+const appLauncherOnboardingStore = new AppLauncherOnboardingStore(DispatcherDefault, {
   APPLICATION_COMMAND_USED: function handleApplicationCommandUsed(context) {
-    let command;
-    let commandOrigin;
-    let id;
     context = context.context;
     ({ command, commandOrigin } = context);
-    const tmp = commandOrigin !== ApplicationCommandTypes.CommandOrigin.APPLICATION_LAUNCHER && null != context.channel;
+    let tmp = commandOrigin !== ApplicationCommandTypes.CommandOrigin.APPLICATION_LAUNCHER;
     if (tmp) {
-      ({ timeMs: Date.now(), applicationId: command.applicationId, guildId: id, channelId: context.channel.id });
+      tmp = null != context.channel;
+    }
+    if (tmp) {
+      obj = { timeMs: null, applicationId: null, guildId: null, channelId: null };
       const _Date = Date;
-      const guild = context.guild;
-      id = undefined;
+      obj.timeMs = Date.now();
+      obj.applicationId = command.applicationId;
+      guild = context.guild;
+      let id;
       if (guild != null) {
         id = guild.id;
       }
+      obj.guildId = id;
+      obj.channelId = context.channel.id;
     }
   },
   MESSAGE_CREATE: function handleMessageCreate(message) {
-    let channelId;
-    let guildId;
     message = message.message;
     ({ channelId, guildId } = message);
     const currentUser = UserStore.getCurrentUser();
@@ -50,17 +53,19 @@ let obj = {
       if (null != currentUser.id) {
         if (null != message.author) {
           if (currentUser.id === message.author.id) {
-            obj = SnowflakeUtilsDefault;
-            const extractTimestampResult = obj.extractTimestamp(message.id);
+            const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(message.id);
             const _Date = Date;
             const timestamp = Date.now();
+            if (timestamp <= extractTimestampResult + useCanShowAppLauncherOnboarding.RECENT_MESSAGE_MS) {
+              obj2 = { timeMs: extractTimestampResult, guildId, channelId };
+            }
           }
         }
       }
     }
   }
-};
-const appLauncherOnboardingStore = new AppLauncherOnboardingStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingStore.tsx");
 
 export default appLauncherOnboardingStore;

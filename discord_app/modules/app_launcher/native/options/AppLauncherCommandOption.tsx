@@ -1,9 +1,7 @@
 // === Module 11800: AppLauncherCommandOption ===
 
 // Module 11800 (AppLauncherCommandOption)
-import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1489 */;
 import utils_AutocompleteUtilsDefault from "utils/AutocompleteUtils" /* 5708 */;
 import AppLauncherChoicesOptionDefault from "AppLauncherChoicesOption" /* 11801 */;
 import AppLauncherAutocompleteOptionDefault from "AppLauncherAutocompleteOption" /* 11808 */;
@@ -15,37 +13,23 @@ import AppLauncherMentionableOptionDefault from "AppLauncherMentionableOption" /
 import AppLauncherRoleOptionDefault from "AppLauncherRoleOption" /* 11823 */;
 import AppLauncherUserOptionDefault from "AppLauncherUserOption" /* 11824 */;
 import AppLauncherChannelOptionDefault from "AppLauncherChannelOption" /* 11830 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let option;
+require = fn;
+const View = fn(17).View;
+let closure_4 = fn(1489).AppLauncherOptionAutoFocusType;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { dismissableOptionWrapper: { flexDirection: "row", alignItems: "center" }, optionViewContainer: { flex: 1 }, dismissButton: { marginLeft: 8, marginRight: -4, padding: 4, borderRadius: nativeDefault.radii.round }, option: { flex: 1 } };
+let closure_7 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { marginLeft: 8, marginRight: -4, padding: 4, borderRadius: nativeDefault.radii.round };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_launcher/native/options/AppLauncherCommandOption.tsx");
 
-let hasOwnProperty;
-let metroRequire;
-let obj2;
-const View = react_native.View;
-let closure_4 = AppLauncherNativeConstants.AppLauncherOptionAutoFocusType;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
-let obj = { dismissableOptionWrapper: { flexDirection: "row", alignItems: "center" }, optionViewContainer: { flex: 1 }, dismissButton: obj2, option: { flex: 1 } };
-obj2 = { marginLeft: 8, marginRight: -4, padding: 4, borderRadius: nativeDefault.radii.round };
-let closure_7 = createStyles.createStyles(obj);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
-  let autoFocusType;
-  let channel;
-  let command;
-  let hasError;
-  let items;
-  let onDismiss;
-  let onEndEditing;
-  let onFocus;
-  let onPressAttachmentOption;
-  let optionValues;
-  let tmp13;
-  let obj = option(onEndEditing[7]);
-  const cResult = obj.c(162);
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
+  const cResult = option(onEndEditing[7]).c(162);
   option = option.option;
   const onStartEditing = option.onStartEditing;
   onEndEditing = option.onEndEditing;
@@ -53,56 +37,52 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
   const onPress = option.onPress;
   ({ onPressAttachmentOption, onDismiss } = option);
   ({ onFocus, channel, autoFocusType, command, optionValues, hasError } = option);
-  const tmp4 = closure_7();
+  let dismissableOptionWrapper = closure_7();
   let type = option.type;
   if (option(onEndEditing[8]).ApplicationCommandOptionType.STRING !== type) {
-    if (option(onEndEditing[8]).ApplicationCommandOptionType.INTEGER !== type) {
-      let tmp89;
-      if (option(onEndEditing[8]).ApplicationCommandOptionType.NUMBER !== type) {
-        if (option(onEndEditing[8]).ApplicationCommandOptionType.ATTACHMENT === type) {
+    if (tmp(tmp2[8]).ApplicationCommandOptionType.INTEGER !== type) {
+      if (tmp(tmp2[8]).ApplicationCommandOptionType.NUMBER !== type) {
+        if (tmp(tmp2[8]).ApplicationCommandOptionType.ATTACHMENT === type) {
           if (cResult[62] === onEndEditing) {
             if (cResult[63] === onOptionValueChange) {
-              let tmp56;
               if (cResult[64] === option) {
-                tmp56 = cResult[65];
+                let tmp55 = cResult[65];
               }
               if (cResult[66] === channel) {
                 if (cResult[67] === hasError) {
                   if (cResult[68] === onPressAttachmentOption) {
                     if (cResult[69] === option) {
-                      if (cResult[70] === tmp4.option) {
-                        if (cResult[71] === tmp56) {
-                          let tmp59;
-                          if (cResult[72] === autoFocusType === onPress.OPTIONAL_OPTION_ADDED) {
-                            tmp59 = cResult[73];
+                      if (cResult[70] === dismissableOptionWrapper.option) {
+                        if (cResult[71] === tmp55) {
+                          if (cResult[72] === tmp57) {
+                            let tmp58 = cResult[73];
                           }
-                          tmp13 = tmp59;
+                          let tmp12 = tmp58;
                         }
                       }
                     }
                   }
                 }
               }
-              let obj2 = { style: tmp4.option, option, onSelectAttachment: tmp56, channel, autoFocus: autoFocusType === onPress.OPTIONAL_OPTION_ADDED, hasError, onPress: onPressAttachmentOption };
-              const tmp62 = onDismiss(onStartEditing(onEndEditing[12]), obj2, option.name);
+              let obj2 = { style: dismissableOptionWrapper.option, option, onSelectAttachment: tmp55, channel, autoFocus: autoFocusType === onPress.OPTIONAL_OPTION_ADDED, hasError, onPress: onPressAttachmentOption };
+              const tmp61 = onDismiss(onStartEditing(tmp2[12]), obj2, option.name);
               cResult[66] = channel;
               cResult[67] = hasError;
               cResult[68] = onPressAttachmentOption;
               cResult[69] = option;
-              cResult[70] = tmp4.option;
-              cResult[71] = tmp56;
+              cResult[70] = dismissableOptionWrapper.option;
+              cResult[71] = tmp55;
               cResult[72] = autoFocusType === onPress.OPTIONAL_OPTION_ADDED;
-              cResult[73] = tmp62;
-              tmp59 = tmp62;
+              cResult[73] = tmp61;
+              tmp58 = tmp61;
             }
           }
           function ne(text) {
-            let items1;
             onEndEditing(option);
             if (null != text) {
-              const items = [{ type: "text", text }];
-              items1 = items;
               const obj = { type: "text", text };
+              const items = [obj];
+              let items1 = items;
             } else {
               items1 = [];
             }
@@ -112,41 +92,38 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
           cResult[63] = onOptionValueChange;
           cResult[64] = option;
           cResult[65] = ne;
-          tmp56 = ne;
-        } else if (option(onEndEditing[8]).ApplicationCommandOptionType.BOOLEAN === type) {
-          let first;
+          tmp55 = ne;
+        } else if (tmp(tmp2[8]).ApplicationCommandOptionType.BOOLEAN === type) {
           if (optionValues.current[option.name] != null) {
-            first = tmp48[0];
+            const first = tmp47[0];
           }
           if (cResult[74] === onPress) {
             if (cResult[75] === onEndEditing) {
               if (cResult[76] === onOptionValueChange) {
-                let tmp51;
                 if (cResult[77] === option) {
-                  tmp51 = cResult[78];
+                  let tmp50 = cResult[78];
                 }
                 if (cResult[79] === hasError) {
                   if (cResult[80] === option) {
-                    if (cResult[81] === tmp4.option) {
+                    if (cResult[81] === dismissableOptionWrapper.option) {
                       if (cResult[82] === first) {
-                        let tmp52;
-                        if (cResult[83] === tmp51) {
-                          tmp52 = cResult[84];
+                        if (cResult[83] === tmp50) {
+                          let tmp51 = cResult[84];
                         }
-                        tmp13 = tmp52;
+                        tmp12 = tmp51;
                       }
                     }
                   }
                 }
-                let obj3 = { style: tmp4.option, option, initialValue: first, onPress: tmp51, hasError };
-                const tmp55 = onDismiss(onStartEditing(onEndEditing[13]), obj3, option.name);
+                let obj3 = { style: dismissableOptionWrapper.option, option, initialValue: first, onPress: tmp50, hasError };
+                const tmp54 = onDismiss(onStartEditing(tmp2[13]), obj3, option.name);
                 cResult[79] = hasError;
                 cResult[80] = option;
-                cResult[81] = tmp4.option;
+                cResult[81] = dismissableOptionWrapper.option;
                 cResult[82] = first;
-                cResult[83] = tmp51;
-                cResult[84] = tmp55;
-                tmp52 = tmp55;
+                cResult[83] = tmp50;
+                cResult[84] = tmp54;
+                tmp51 = tmp54;
               }
             }
           }
@@ -154,7 +131,6 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
             onPress();
             onEndEditing(option);
             const items = [{ type: "text", text: arg0.toString() }];
-            ({ type: "text", text: arg0.toString() });
             onOptionValueChange(option, items);
           }
           cResult[74] = onPress;
@@ -162,34 +138,30 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
           cResult[76] = onOptionValueChange;
           cResult[77] = option;
           cResult[78] = ie;
-          tmp51 = ie;
-        } else if (option(onEndEditing[8]).ApplicationCommandOptionType.MENTIONABLE === type) {
-          let first1;
+          tmp50 = ie;
+        } else if (tmp(tmp2[8]).ApplicationCommandOptionType.MENTIONABLE === type) {
           if (optionValues.current[option.name] != null) {
-            first1 = tmp37[0];
+            const first1 = tmp36[0];
           }
           if (cResult[85] === onOptionValueChange) {
-            let tmp40;
             if (cResult[86] === option) {
-              tmp40 = cResult[87];
+              let tmp39 = cResult[87];
             }
             if (cResult[88] === onEndEditing) {
-              let tmp41;
               if (cResult[89] === option) {
-                tmp41 = cResult[90];
+                let tmp40 = cResult[90];
               }
               if (cResult[91] === channel) {
                 if (cResult[92] === onPress) {
                   if (cResult[93] === hasError) {
                     if (cResult[94] === option) {
                       if (cResult[95] === first1) {
-                        if (cResult[96] === tmp40) {
-                          if (cResult[97] === tmp41) {
-                            let tmp44;
-                            if (cResult[98] === autoFocusType === onPress.OPTIONAL_OPTION_ADDED) {
-                              tmp44 = cResult[99];
+                        if (cResult[96] === tmp39) {
+                          if (cResult[97] === tmp40) {
+                            if (cResult[98] === tmp42) {
+                              let tmp43 = cResult[99];
                             }
-                            tmp13 = tmp44;
+                            tmp12 = tmp43;
                           }
                         }
                       }
@@ -197,18 +169,18 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
                   }
                 }
               }
-              let obj4 = { option, initialValue: first1, onMentionablePress: tmp40, onActionSheetDismiss: tmp41, channel, autoFocus: autoFocusType === onPress.OPTIONAL_OPTION_ADDED, hasError, onPress };
-              const tmp47 = onDismiss(onStartEditing(onEndEditing[16]), obj4);
+              let obj4 = { option, initialValue: first1, onMentionablePress: tmp39, onActionSheetDismiss: tmp40, channel, autoFocus: autoFocusType === onPress.OPTIONAL_OPTION_ADDED, hasError, onPress };
+              const tmp46 = onDismiss(onStartEditing(tmp2[16]), obj4);
               cResult[91] = channel;
               cResult[92] = onPress;
               cResult[93] = hasError;
               cResult[94] = option;
               cResult[95] = first1;
-              cResult[96] = tmp40;
-              cResult[97] = tmp41;
+              cResult[96] = tmp39;
+              cResult[97] = tmp40;
               cResult[98] = autoFocusType === onPress.OPTIONAL_OPTION_ADDED;
-              cResult[99] = tmp47;
-              tmp44 = tmp47;
+              cResult[99] = tmp46;
+              tmp43 = tmp46;
             }
             function le() {
               return onEndEditing(option);
@@ -216,32 +188,31 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
             cResult[88] = onEndEditing;
             cResult[89] = option;
             cResult[90] = le;
-            tmp41 = le;
+            tmp40 = le;
           }
           function re(mentionable) {
             mentionable = mentionable.mentionable;
             if (null != mentionable) {
               const type = mentionable.type;
               if (AppLauncherMentionableListActionSheet.MentionableItemTypes.USER === type) {
-                const items = [{ type: "userMention", userId: mentionable.result.user.id }];
                 const obj2 = { type: "userMention", userId: mentionable.result.user.id };
+                const items = [obj2];
                 onOptionValueChange(option, items);
               } else if (AppLauncherMentionableListActionSheet.MentionableItemTypes.ROLE === type) {
-                const items1 = [{ type: "roleMention", roleId: mentionable.result.id }];
                 const obj3 = { type: "roleMention", roleId: mentionable.result.id };
+                const items1 = [obj3];
                 onOptionValueChange(option, items1);
               } else if (AppLauncherMentionableListActionSheet.MentionableItemTypes.GLOBAL === type) {
                 const result = mentionable.result;
-                const text = result.text;
-                const obj4 = utils_AutocompleteUtilsDefault;
-                if (text === obj4.MENTION_EVERYONE().text) {
+                if (result.text === obj4.MENTION_EVERYONE().text) {
                   const items2 = [{ type: "textMention", text: "@everyone" }];
                   onOptionValueChange(option, items2);
                 } else {
-                  const items3 = [{ type: "text", text: result.text }];
                   const obj = { type: "text", text: result.text };
+                  const items3 = [obj];
                   onOptionValueChange(option, items3);
                 }
+                obj4 = utils_AutocompleteUtilsDefault;
               }
             } else {
               onOptionValueChange(option, []);
@@ -250,40 +221,37 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
           cResult[85] = onOptionValueChange;
           cResult[86] = option;
           cResult[87] = re;
-          tmp40 = re;
-        } else if (option(onEndEditing[8]).ApplicationCommandOptionType.ROLE === type) {
-          let first2;
+          tmp39 = re;
+        } else if (tmp(tmp2[8]).ApplicationCommandOptionType.ROLE === type) {
           if (optionValues.current[option.name] != null) {
-            first2 = tmp26[0];
+            const first2 = tmp25[0];
           }
           if (cResult[100] === onOptionValueChange) {
-            let tmp29;
             if (cResult[101] === option) {
-              tmp29 = cResult[102];
+              let tmp28 = cResult[102];
             }
             if (cResult[103] === onEndEditing) {
-              let tmp30;
               if (cResult[104] === option) {
-                tmp30 = cResult[105];
+                let tmp29 = cResult[105];
               }
               class Oe {
                 constructor() {
-                  onEndEditing(option);
+                  tmp = onEndEditing(option);
+                  return;
                 }
               }
               if (cResult[106] === channel) {
                 if (cResult[107] === onPress) {
                   if (cResult[108] === hasError) {
                     if (cResult[109] === option) {
-                      if (cResult[110] === tmp4.option) {
+                      if (cResult[110] === dismissableOptionWrapper.option) {
                         if (cResult[111] === first2) {
-                          if (cResult[112] === tmp29) {
-                            if (cResult[113] === tmp30) {
-                              let tmp33;
-                              if (cResult[114] === tmp32) {
-                                tmp33 = cResult[115];
+                          if (cResult[112] === tmp28) {
+                            if (cResult[113] === tmp29) {
+                              if (cResult[114] === tmp31) {
+                                let tmp32 = cResult[115];
                               }
-                              tmp13 = tmp33;
+                              tmp12 = tmp32;
                             }
                           }
                         }
@@ -292,83 +260,81 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
                   }
                 }
               }
-              const obj5 = { style: tmp4.option, option, initialValue: first2, onRolePress: tmp29, onActionSheetDismiss: tmp30, channel, autoFocus: tmp32, hasError, onPress };
-              const tmp36 = onDismiss(onStartEditing(onEndEditing[17]), obj5, option.name);
+              const obj5 = { style: dismissableOptionWrapper.option, option, initialValue: first2, onRolePress: tmp28, onActionSheetDismiss: tmp29, channel, autoFocus: tmp31, hasError, onPress };
+              const tmp35 = onDismiss(onStartEditing(tmp2[17]), obj5, option.name);
               cResult[106] = channel;
               cResult[107] = onPress;
               cResult[108] = hasError;
               cResult[109] = option;
-              cResult[110] = tmp4.option;
+              cResult[110] = dismissableOptionWrapper.option;
               cResult[111] = first2;
-              cResult[112] = tmp29;
-              cResult[113] = tmp30;
-              cResult[114] = tmp32;
-              cResult[115] = tmp36;
-              tmp33 = tmp36;
+              cResult[112] = tmp28;
+              cResult[113] = tmp29;
+              cResult[114] = tmp31;
+              cResult[115] = tmp35;
+              tmp32 = tmp35;
             }
             class Oe {
               constructor() {
-                onEndEditing(option);
+                tmp = onEndEditing(option);
+                return;
               }
             }
             cResult[103] = onEndEditing;
             cResult[104] = option;
             cResult[105] = Oe;
-            tmp30 = Oe;
+            tmp29 = Oe;
           }
           function me(role) {
-            let items;
             role = role.role;
             if (null == role) {
-              items = [];
+              let items = [];
             } else {
-              items = [{ type: "roleMention", roleId: role.id }];
               const obj = { type: "roleMention", roleId: role.id };
+              items = [obj];
             }
             onOptionValueChange(option, items);
           }
           cResult[100] = onOptionValueChange;
           cResult[101] = option;
           cResult[102] = me;
-          tmp29 = me;
-        } else if (option(onEndEditing[8]).ApplicationCommandOptionType.USER === type) {
-          let first3;
+          tmp28 = me;
+        } else if (tmp(tmp2[8]).ApplicationCommandOptionType.USER === type) {
           class Oe {
             constructor() {
-              onEndEditing(option);
+              tmp = onEndEditing(option);
+              return;
             }
           }
           if (optionValues.current[option.name] != null) {
-            first3 = tmp16[0];
+            const first3 = tmp15[0];
           }
           if (cResult[116] === onOptionValueChange) {
-            let tmp19;
             if (cResult[117] === option) {
-              tmp19 = cResult[118];
+              let tmp18 = cResult[118];
             }
             if (cResult[119] === onEndEditing) {
-              let tmp20;
               if (cResult[120] === option) {
-                tmp20 = cResult[121];
+                let tmp19 = cResult[121];
               }
               class Oe {
                 constructor() {
-                  onEndEditing(option);
+                  tmp = onEndEditing(option);
+                  return;
                 }
               }
               if (cResult[122] === channel) {
                 if (cResult[123] === onPress) {
                   if (cResult[124] === hasError) {
                     if (cResult[125] === option) {
-                      if (cResult[126] === tmp4.option) {
+                      if (cResult[126] === dismissableOptionWrapper.option) {
                         if (cResult[127] === first3) {
-                          if (cResult[128] === tmp19) {
-                            if (cResult[129] === tmp20) {
-                              let tmp23;
-                              if (cResult[130] === tmp22) {
-                                tmp23 = cResult[131];
+                          if (cResult[128] === tmp18) {
+                            if (cResult[129] === tmp19) {
+                              if (cResult[130] === tmp21) {
+                                let tmp22 = cResult[131];
                               }
-                              tmp13 = tmp23;
+                              tmp12 = tmp22;
                             }
                           }
                         }
@@ -378,119 +344,131 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
                 }
               }
               class Ee {
-                constructor(user) {
-                  let items;
-                  user = user.user;
+                constructor(arg0) {
+                  user = option.user;
+                  tmp = onOptionValueChange;
+                  tmp2 = option;
                   if (null == user) {
                     items = [];
                   } else {
-                    let id = user;
+                    id = user;
                     if (typeof user !== "string") {
                       id = user.id;
                     }
-                    items = [{ type: "userMention", userId: id }];
-                    const obj = { type: "userMention", userId: id };
+                    obj = { type: "userMention", userId: null };
+                    obj.userId = id;
+                    items = [];
+                    items[0] = obj;
                   }
-                  onOptionValueChange(option, items);
+                  tmpResult = tmp(tmp2, items);
+                  return;
                 }
               }
-              const obj6 = { style: tmp4.option, option, initialValue: first3, onUserPress: tmp19, onActionSheetDismiss: tmp20, channel, autoFocus: tmp22, hasError, onPress };
-              const tmp25 = onDismiss(onStartEditing(onEndEditing[18]), obj6, option.name);
+              const obj6 = { style: dismissableOptionWrapper.option, option, initialValue: first3, onUserPress: tmp18, onActionSheetDismiss: tmp19, channel, autoFocus: tmp21, hasError, onPress };
+              const tmp24 = onDismiss(onStartEditing(tmp2[18]), obj6, option.name);
               cResult[122] = channel;
               cResult[123] = onPress;
               cResult[124] = hasError;
               cResult[125] = option;
-              cResult[126] = tmp4.option;
+              cResult[126] = dismissableOptionWrapper.option;
               cResult[127] = first3;
-              cResult[128] = tmp19;
-              cResult[129] = tmp20;
-              cResult[130] = tmp22;
-              cResult[131] = tmp25;
-              tmp23 = tmp25;
+              cResult[128] = tmp18;
+              cResult[129] = tmp19;
+              cResult[130] = tmp21;
+              cResult[131] = tmp24;
+              tmp22 = tmp24;
             }
             class Oe {
               constructor() {
-                onEndEditing(option);
+                tmp = onEndEditing(option);
+                return;
               }
             }
             cResult[119] = onEndEditing;
             class Ee {
-              constructor(user) {
-                let items;
-                user = user.user;
+              constructor(arg0) {
+                user = option.user;
+                tmp = onOptionValueChange;
+                tmp2 = option;
                 if (null == user) {
                   items = [];
                 } else {
-                  let id = user;
+                  id = user;
                   if (typeof user !== "string") {
                     id = user.id;
                   }
-                  items = [{ type: "userMention", userId: id }];
-                  const obj = { type: "userMention", userId: id };
+                  obj = { type: "userMention", userId: null };
+                  obj.userId = id;
+                  items = [];
+                  items[0] = obj;
                 }
-                onOptionValueChange(option, items);
+                tmpResult = tmp(tmp2, items);
+                return;
               }
             }
             cResult[120] = option;
             cResult[121] = Ae;
-            tmp20 = Ae;
+            tmp19 = Ae;
           }
           class Ee {
-            constructor(user) {
-              let items;
-              user = user.user;
+            constructor(arg0) {
+              user = option.user;
+              tmp = onOptionValueChange;
+              tmp2 = option;
               if (null == user) {
                 items = [];
               } else {
-                let id = user;
+                id = user;
                 if (typeof user !== "string") {
                   id = user.id;
                 }
-                items = [{ type: "userMention", userId: id }];
-                const obj = { type: "userMention", userId: id };
+                obj = { type: "userMention", userId: null };
+                obj.userId = id;
+                items = [];
+                items[0] = obj;
               }
-              onOptionValueChange(option, items);
+              tmpResult = tmp(tmp2, items);
+              return;
             }
           }
           cResult[116] = onOptionValueChange;
           cResult[117] = option;
           cResult[118] = Ee;
-          tmp19 = Ee;
-        } else if (option(onEndEditing[8]).ApplicationCommandOptionType.CHANNEL === type) {
-          let first4;
+          tmp18 = Ee;
+        } else if (tmp(tmp2[8]).ApplicationCommandOptionType.CHANNEL === type) {
           class Oe {
             constructor() {
-              onEndEditing(option);
+              tmp = onEndEditing(option);
+              return;
             }
           }
           if (optionValues.current[option.name] != null) {
-            first4 = tmp6[0];
+            const first4 = tmp5[0];
           }
           if (cResult[132] === onOptionValueChange) {
-            let tmp9;
             if (cResult[133] === option) {
-              tmp9 = cResult[134];
+              let tmp8 = cResult[134];
             }
             if (cResult[135] === onEndEditing) {
-              let tmp10;
               if (cResult[136] === option) {
-                tmp10 = cResult[137];
+                let tmp9 = cResult[137];
               }
               class Oe {
                 constructor() {
-                  onEndEditing(option);
+                  tmp = onEndEditing(option);
+                  return;
                 }
               }
               if (cResult[138] === channel) {
                 if (cResult[139] === onPress) {
                   if (cResult[140] === hasError) {
                     if (cResult[141] === option) {
-                      if (cResult[142] === tmp4.option) {
+                      if (cResult[142] === dismissableOptionWrapper.option) {
                         if (cResult[143] === first4) {
-                          if (cResult[144] === tmp9) {
-                            if (cResult[145] === tmp10) {
-                              if (cResult[146] === tmp12) {
-                                tmp13 = cResult[147];
+                          if (cResult[144] === tmp8) {
+                            if (cResult[145] === tmp9) {
+                              if (cResult[146] === tmp11) {
+                                tmp12 = cResult[147];
                               }
                             }
                           }
@@ -501,98 +479,111 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
                 }
               }
               class Ee {
-                constructor(user) {
-                  let items;
-                  user = user.user;
+                constructor(arg0) {
+                  user = option.user;
+                  tmp = onOptionValueChange;
+                  tmp2 = option;
                   if (null == user) {
                     items = [];
                   } else {
-                    let id = user;
+                    id = user;
                     if (typeof user !== "string") {
                       id = user.id;
                     }
-                    items = [{ type: "userMention", userId: id }];
-                    const obj = { type: "userMention", userId: id };
+                    obj = { type: "userMention", userId: null };
+                    obj.userId = id;
+                    items = [];
+                    items[0] = obj;
                   }
-                  onOptionValueChange(option, items);
+                  tmpResult = tmp(tmp2, items);
+                  return;
                 }
               }
-              const obj7 = { style: tmp4.option, option, initialValue: first4, onChannelPress: tmp9, onActionSheetDismiss: tmp10, channel, autoFocus: tmp12, hasError, onPress };
-              const tmp15 = onDismiss(onStartEditing(onEndEditing[19]), obj7, option.name);
+              const obj7 = { style: dismissableOptionWrapper.option, option, initialValue: first4, onChannelPress: tmp8, onActionSheetDismiss: tmp9, channel, autoFocus: tmp11, hasError, onPress };
+              const tmp14 = onDismiss(onStartEditing(tmp2[19]), obj7, option.name);
               cResult[138] = channel;
               cResult[139] = onPress;
               cResult[140] = hasError;
               cResult[141] = option;
-              cResult[142] = tmp4.option;
+              cResult[142] = dismissableOptionWrapper.option;
               cResult[143] = first4;
-              cResult[144] = tmp9;
-              cResult[145] = tmp10;
-              cResult[146] = tmp12;
-              cResult[147] = tmp15;
-              tmp13 = tmp15;
+              cResult[144] = tmp8;
+              cResult[145] = tmp9;
+              cResult[146] = tmp11;
+              cResult[147] = tmp14;
+              tmp12 = tmp14;
             }
             class Oe {
               constructor() {
-                onEndEditing(option);
+                tmp = onEndEditing(option);
+                return;
               }
             }
             cResult[135] = onEndEditing;
             class Ee {
-              constructor(user) {
-                let items;
-                user = user.user;
+              constructor(arg0) {
+                user = option.user;
+                tmp = onOptionValueChange;
+                tmp2 = option;
                 if (null == user) {
                   items = [];
                 } else {
-                  let id = user;
+                  id = user;
                   if (typeof user !== "string") {
                     id = user.id;
                   }
-                  items = [{ type: "userMention", userId: id }];
-                  const obj = { type: "userMention", userId: id };
+                  obj = { type: "userMention", userId: null };
+                  obj.userId = id;
+                  items = [];
+                  items[0] = obj;
                 }
-                onOptionValueChange(option, items);
+                tmpResult = tmp(tmp2, items);
+                return;
               }
             }
             cResult[136] = option;
             cResult[137] = Ne;
-            tmp10 = Ne;
+            tmp9 = Ne;
           }
           class Ee {
-            constructor(user) {
-              let items;
-              user = user.user;
+            constructor(arg0) {
+              user = option.user;
+              tmp = onOptionValueChange;
+              tmp2 = option;
               if (null == user) {
                 items = [];
               } else {
-                let id = user;
+                id = user;
                 if (typeof user !== "string") {
                   id = user.id;
                 }
-                items = [{ type: "userMention", userId: id }];
-                const obj = { type: "userMention", userId: id };
+                obj = { type: "userMention", userId: null };
+                obj.userId = id;
+                items = [];
+                items[0] = obj;
               }
-              onOptionValueChange(option, items);
+              tmpResult = tmp(tmp2, items);
+              return;
             }
           }
           cResult[132] = onOptionValueChange;
           cResult[133] = option;
           cResult[134] = Pe;
-          tmp9 = Pe;
+          tmp8 = Pe;
         } else {
           return null;
         }
       }
-      if (null != onDismiss) {
-        if (cResult[148] === tmp13) {
-          let tmp90;
-          if (cResult[149] === tmp4.optionViewContainer) {
-            tmp90 = cResult[150];
+      if (null == onDismiss) {
+        return tmp12;
+      } else {
+        if (cResult[148] === tmp12) {
+          if (cResult[149] === dismissableOptionWrapper.optionViewContainer) {
+            let tmp89 = cResult[150];
           }
           if (cResult[151] === onDismiss) {
-            let tmp93;
             if (cResult[152] === option) {
-              tmp93 = cResult[153];
+              let tmp92 = cResult[153];
             }
             class O {
               constructor() {
@@ -600,34 +591,32 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
               }
             }
             class Ee {
-              constructor(user) {
-                let items;
-                user = user.user;
+              constructor(arg0) {
+                user = option.user;
+                tmp = onOptionValueChange;
+                tmp2 = option;
                 if (null == user) {
                   items = [];
                 } else {
-                  let id = user;
+                  id = user;
                   if (typeof user !== "string") {
                     id = user.id;
                   }
-                  items = [{ type: "userMention", userId: id }];
-                  const obj = { type: "userMention", userId: id };
+                  obj = { type: "userMention", userId: null };
+                  obj.userId = id;
+                  items = [];
+                  items[0] = obj;
                 }
-                onOptionValueChange(option, items);
+                tmpResult = tmp(tmp2, items);
+                return;
               }
             }
-            if (cResult[155] === tmp4.dismissButton) {
-              let tmp97;
-              if (cResult[156] === tmp93) {
-                tmp97 = cResult[157];
+            if (cResult[155] === dismissableOptionWrapper.dismissButton) {
+              if (cResult[156] === tmp92) {
+                let tmp96 = cResult[157];
               }
-              if (cResult[158] === tmp4.dismissableOptionWrapper) {
-                if (cResult[159] === tmp90) {
-                  let tmp100;
-                  if (cResult[160] === tmp97) {
-                    tmp100 = cResult[161];
-                  }
-                  tmp89 = tmp100;
+              if (cResult[158] === dismissableOptionWrapper.dismissableOptionWrapper) {
+                if (cResult[159] === tmp89) {
                 }
               }
               class O {
@@ -635,38 +624,43 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
                   return onDismiss(option);
                 }
               }
-              const obj9 = { style: null, children: items };
+              const obj9 = { style: null, children: null };
               class Ee {
-                constructor(user) {
-                  let items;
-                  user = user.user;
+                constructor(arg0) {
+                  user = option.user;
+                  tmp = onOptionValueChange;
+                  tmp2 = option;
                   if (null == user) {
                     items = [];
                   } else {
-                    let id = user;
+                    id = user;
                     if (typeof user !== "string") {
                       id = user.id;
                     }
-                    items = [{ type: "userMention", userId: id }];
-                    const obj = { type: "userMention", userId: id };
+                    obj = { type: "userMention", userId: null };
+                    obj.userId = id;
+                    items = [];
+                    items[0] = obj;
                   }
-                  onOptionValueChange(option, items);
+                  tmpResult = tmp(tmp2, items);
+                  return;
                 }
               }
-              items = [tmp90, tmp97];
-              const tmp102 = closure_6(onOptionValueChange, obj9);
-              cResult[158] = tmp4.dismissableOptionWrapper;
-              cResult[159] = tmp90;
-              cResult[160] = tmp97;
-              cResult[161] = tmp102;
-              tmp100 = tmp102;
+              let items = [tmp89, tmp96];
+              obj9.children = items;
+              const tmp101 = closure_6(onOptionValueChange, obj9);
+              dismissableOptionWrapper = dismissableOptionWrapper.dismissableOptionWrapper;
+              cResult[158] = dismissableOptionWrapper;
+              cResult[159] = tmp89;
+              cResult[160] = tmp96;
+              cResult[161] = tmp101;
             }
-            const obj10 = { style: tmp4.dismissButton, onPress: tmp93, children: tmp96 };
-            const tmp99 = onDismiss(option(onEndEditing[21]).PressableOpacity, obj10);
-            cResult[155] = tmp4.dismissButton;
-            cResult[156] = tmp93;
-            cResult[157] = tmp99;
-            tmp97 = tmp99;
+            const obj10 = { style: dismissableOptionWrapper.dismissButton, onPress: tmp92, children: tmp95 };
+            const tmp98 = onDismiss(tmp(tmp2[21]).PressableOpacity, obj10);
+            cResult[155] = dismissableOptionWrapper.dismissButton;
+            cResult[156] = tmp92;
+            cResult[157] = tmp98;
+            tmp96 = tmp98;
           }
           class O {
             constructor() {
@@ -675,56 +669,64 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
           }
           cResult[151] = onDismiss;
           class Ee {
-            constructor(user) {
-              let items;
-              user = user.user;
+            constructor(arg0) {
+              user = option.user;
+              tmp = onOptionValueChange;
+              tmp2 = option;
               if (null == user) {
                 items = [];
               } else {
-                let id = user;
+                id = user;
                 if (typeof user !== "string") {
                   id = user.id;
                 }
-                items = [{ type: "userMention", userId: id }];
-                const obj = { type: "userMention", userId: id };
+                obj = { type: "userMention", userId: null };
+                obj.userId = id;
+                items = [];
+                items[0] = obj;
               }
-              onOptionValueChange(option, items);
+              tmpResult = tmp(tmp2, items);
+              return;
             }
           }
           cResult[152] = option;
           cResult[153] = O;
-          tmp93 = O;
+          tmp92 = O;
         }
         class Oe {
           constructor() {
-            onEndEditing(option);
+            tmp = onEndEditing(option);
+            return;
           }
         }
-        const obj11 = { style: tmp4.optionViewContainer, children: null };
+        const obj11 = { style: dismissableOptionWrapper.optionViewContainer, children: null };
         class Ee {
-          constructor(user) {
-            let items;
-            user = user.user;
+          constructor(arg0) {
+            user = option.user;
+            tmp = onOptionValueChange;
+            tmp2 = option;
             if (null == user) {
               items = [];
             } else {
-              let id = user;
+              id = user;
               if (typeof user !== "string") {
                 id = user.id;
               }
-              items = [{ type: "userMention", userId: id }];
-              const obj = { type: "userMention", userId: id };
+              obj = { type: "userMention", userId: null };
+              obj.userId = id;
+              items = [];
+              items[0] = obj;
             }
-            onOptionValueChange(option, items);
+            tmpResult = tmp(tmp2, items);
+            return;
           }
         }
-        const tmp92 = onDismiss(onOptionValueChange, obj11);
-        cResult[148] = tmp13;
-        cResult[149] = tmp4.optionViewContainer;
-        cResult[150] = tmp92;
-        tmp90 = tmp92;
+        const tmp91 = onDismiss(onOptionValueChange, obj11);
+        cResult[148] = tmp12;
+        cResult[149] = dismissableOptionWrapper.optionViewContainer;
+        cResult[150] = tmp91;
+        tmp89 = tmp91;
       }
-      return tmp89;
     }
   }
   if (null != option.choices) {
@@ -735,20 +737,17 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
     }
     if (cResult[0] === onEndEditing) {
       if (cResult[1] === onOptionValueChange) {
-        let tmp80;
         if (cResult[2] === option) {
-          tmp80 = cResult[3];
+          let tmp79 = cResult[3];
         }
         if (cResult[4] === onPress) {
           if (cResult[5] === onStartEditing) {
-            let tmp81;
             if (cResult[6] === option) {
-              tmp81 = cResult[7];
+              let tmp80 = cResult[7];
             }
             if (cResult[8] === onEndEditing) {
-              let tmp82;
               if (cResult[9] === option) {
-                tmp82 = cResult[10];
+                let tmp81 = cResult[10];
               }
               class O {
                 constructor() {
@@ -757,16 +756,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
               }
               if (cResult[11] === hasError) {
                 if (cResult[12] === option) {
-                  if (cResult[13] === tmp4.option) {
-                    if (cResult[14] === tmp79) {
-                      if (cResult[15] === tmp80) {
-                        if (cResult[16] === tmp81) {
-                          if (cResult[17] === tmp82) {
-                            let tmp86;
-                            if (cResult[18] === tmp85) {
-                              tmp86 = cResult[19];
-                            }
-                            tmp13 = tmp86;
+                  if (cResult[13] === dismissableOptionWrapper.option) {
+                    if (cResult[14] === tmp78) {
+                      if (cResult[15] === tmp79) {
+                        if (cResult[16] === tmp80) {
+                          if (cResult[17] === tmp81) {
                           }
                         }
                       }
@@ -775,48 +769,56 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
                 }
               }
               class R {
-                constructor(displayName) {
-                  onEndEditing(option);
-                  let str;
-                  if (displayName != null) {
-                    str = displayName.displayName;
+                constructor(arg0) {
+                  tmp = option;
+                  tmp2 = onEndEditing(option);
+                  str = undefined;
+                  tmp3 = onOptionValueChange;
+                  if (option != null) {
+                    str = option.displayName;
                   }
                   if (str == null) {
                     str = "";
                   }
-                  const items = [{ type: "text", text: str }];
-                  onOptionValueChange(option, items);
+                  items = [];
+                  items[0] = { type: "text", text: str };
+                  tmp3Result = tmp3(tmp, items);
+                  return;
                 }
               }
               class Ee {
-                constructor(user) {
-                  let items;
-                  user = user.user;
+                constructor(arg0) {
+                  user = option.user;
+                  tmp = onOptionValueChange;
+                  tmp2 = option;
                   if (null == user) {
                     items = [];
                   } else {
-                    let id = user;
+                    id = user;
                     if (typeof user !== "string") {
                       id = user.id;
                     }
-                    items = [{ type: "userMention", userId: id }];
-                    const obj = { type: "userMention", userId: id };
+                    obj = { type: "userMention", userId: null };
+                    obj.userId = id;
+                    items = [];
+                    items[0] = obj;
                   }
-                  onOptionValueChange(option, items);
+                  tmpResult = tmp(tmp2, items);
+                  return;
                 }
               }
-              const obj12 = { style: tmp4.option, option, initialValue: tmp79, onSelect: tmp80, onOpenChoicesSheet: tmp81, onDismissChoicesSheet: tmp82, autoFocus: tmp85, hasError };
-              const tmp87 = onDismiss(onStartEditing(onEndEditing[9]), obj12, option.name);
+              const obj12 = { style: dismissableOptionWrapper.option, option, initialValue: tmp78, onSelect: tmp79, onOpenChoicesSheet: tmp80, onDismissChoicesSheet: tmp81, autoFocus: tmp84, hasError };
+              const tmp86 = onDismiss(onStartEditing(tmp2[9]), obj12, option.name);
               cResult[11] = hasError;
               cResult[12] = option;
-              cResult[13] = tmp4.option;
-              cResult[14] = tmp79;
-              cResult[15] = tmp80;
-              cResult[16] = tmp81;
-              cResult[17] = tmp82;
-              cResult[18] = tmp85;
-              cResult[19] = tmp87;
-              tmp86 = tmp87;
+              hasError = dismissableOptionWrapper.option;
+              cResult[13] = hasError;
+              cResult[14] = tmp78;
+              cResult[15] = tmp79;
+              cResult[16] = tmp80;
+              cResult[17] = tmp81;
+              cResult[18] = tmp84;
+              cResult[19] = tmp86;
             }
             class O {
               constructor() {
@@ -824,39 +826,47 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
               }
             }
             class R {
-              constructor(displayName) {
-                onEndEditing(option);
-                let str;
-                if (displayName != null) {
-                  str = displayName.displayName;
+              constructor(arg0) {
+                tmp = option;
+                tmp2 = onEndEditing(option);
+                str = undefined;
+                tmp3 = onOptionValueChange;
+                if (option != null) {
+                  str = option.displayName;
                 }
                 if (str == null) {
                   str = "";
                 }
-                const items = [{ type: "text", text: str }];
-                onOptionValueChange(option, items);
+                items = [];
+                items[0] = { type: "text", text: str };
+                tmp3Result = tmp3(tmp, items);
+                return;
               }
             }
             class Ee {
-              constructor(user) {
-                let items;
-                user = user.user;
+              constructor(arg0) {
+                user = option.user;
+                tmp = onOptionValueChange;
+                tmp2 = option;
                 if (null == user) {
                   items = [];
                 } else {
-                  let id = user;
+                  id = user;
                   if (typeof user !== "string") {
                     id = user.id;
                   }
-                  items = [{ type: "userMention", userId: id }];
-                  const obj = { type: "userMention", userId: id };
+                  obj = { type: "userMention", userId: null };
+                  obj.userId = id;
+                  items = [];
+                  items[0] = obj;
                 }
-                onOptionValueChange(option, items);
+                tmpResult = tmp(tmp2, items);
+                return;
               }
             }
             cResult[9] = option;
-            cResult[10] = tmp83;
-            tmp82 = tmp83;
+            cResult[10] = tmp82;
+            tmp81 = tmp82;
           }
         }
         class O {
@@ -865,78 +875,94 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
           }
         }
         class R {
-          constructor(displayName) {
-            onEndEditing(option);
-            let str;
-            if (displayName != null) {
-              str = displayName.displayName;
+          constructor(arg0) {
+            tmp = option;
+            tmp2 = onEndEditing(option);
+            str = undefined;
+            tmp3 = onOptionValueChange;
+            if (option != null) {
+              str = option.displayName;
             }
             if (str == null) {
               str = "";
             }
-            const items = [{ type: "text", text: str }];
-            onOptionValueChange(option, items);
+            items = [];
+            items[0] = { type: "text", text: str };
+            tmp3Result = tmp3(tmp, items);
+            return;
           }
         }
         class Ee {
-          constructor(user) {
-            let items;
-            user = user.user;
+          constructor(arg0) {
+            user = option.user;
+            tmp = onOptionValueChange;
+            tmp2 = option;
             if (null == user) {
               items = [];
             } else {
-              let id = user;
+              id = user;
               if (typeof user !== "string") {
                 id = user.id;
               }
-              items = [{ type: "userMention", userId: id }];
-              const obj = { type: "userMention", userId: id };
+              obj = { type: "userMention", userId: null };
+              obj.userId = id;
+              items = [];
+              items[0] = obj;
             }
-            onOptionValueChange(option, items);
+            tmpResult = tmp(tmp2, items);
+            return;
           }
         }
         cResult[5] = onStartEditing;
         cResult[6] = option;
         cResult[7] = F;
-        tmp81 = F;
+        tmp80 = F;
       }
     }
     class R {
-      constructor(displayName) {
-        onEndEditing(option);
-        let str;
-        if (displayName != null) {
-          str = displayName.displayName;
+      constructor(arg0) {
+        tmp = option;
+        tmp2 = onEndEditing(option);
+        str = undefined;
+        tmp3 = onOptionValueChange;
+        if (option != null) {
+          str = option.displayName;
         }
         if (str == null) {
           str = "";
         }
-        const items = [{ type: "text", text: str }];
-        onOptionValueChange(option, items);
+        items = [];
+        items[0] = { type: "text", text: str };
+        tmp3Result = tmp3(tmp, items);
+        return;
       }
     }
     class Ee {
-      constructor(user) {
-        let items;
-        user = user.user;
+      constructor(arg0) {
+        user = option.user;
+        tmp = onOptionValueChange;
+        tmp2 = option;
         if (null == user) {
           items = [];
         } else {
-          let id = user;
+          id = user;
           if (typeof user !== "string") {
             id = user.id;
           }
-          items = [{ type: "userMention", userId: id }];
-          const obj = { type: "userMention", userId: id };
+          obj = { type: "userMention", userId: null };
+          obj.userId = id;
+          items = [];
+          items[0] = obj;
         }
-        onOptionValueChange(option, items);
+        tmpResult = tmp(tmp2, items);
+        return;
       }
     }
     cResult[0] = onEndEditing;
     cResult[1] = onOptionValueChange;
     cResult[2] = option;
     cResult[3] = R;
-    tmp80 = R;
+    tmp79 = R;
   } else if (option.autocomplete) {
     class O {
       constructor() {
@@ -944,31 +970,39 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
       }
     }
     class R {
-      constructor(displayName) {
-        onEndEditing(option);
-        let str;
-        if (displayName != null) {
-          str = displayName.displayName;
+      constructor(arg0) {
+        tmp = option;
+        tmp2 = onEndEditing(option);
+        str = undefined;
+        tmp3 = onOptionValueChange;
+        if (option != null) {
+          str = option.displayName;
         }
         if (str == null) {
           str = "";
         }
-        const items = [{ type: "text", text: str }];
-        onOptionValueChange(option, items);
+        items = [];
+        items[0] = { type: "text", text: str };
+        tmp3Result = tmp3(tmp, items);
+        return;
       }
     }
     class U {
-      constructor(displayName) {
-        onEndEditing(option);
-        let str;
-        if (displayName != null) {
-          str = displayName.displayName;
+      constructor(arg0) {
+        tmp = option;
+        tmp2 = onEndEditing(option);
+        str = undefined;
+        tmp3 = onOptionValueChange;
+        if (option != null) {
+          str = option.displayName;
         }
         if (str == null) {
           str = "";
         }
-        const items = [{ type: "text", text: str }];
-        onOptionValueChange(option, items);
+        items = [];
+        items[0] = { type: "text", text: str };
+        tmp3Result = tmp3(tmp, items);
+        return;
       }
     }
     cResult[20] = onEndEditing;
@@ -981,78 +1015,90 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
         return onDismiss(option);
       }
     }
-    const name = option.name;
     class R {
-      constructor(displayName) {
-        onEndEditing(option);
-        let str;
-        if (displayName != null) {
-          str = displayName.displayName;
+      constructor(arg0) {
+        tmp = option;
+        tmp2 = onEndEditing(option);
+        str = undefined;
+        tmp3 = onOptionValueChange;
+        if (option != null) {
+          str = option.displayName;
         }
         if (str == null) {
           str = "";
         }
-        const items = [{ type: "text", text: str }];
-        onOptionValueChange(option, items);
+        items = [];
+        items[0] = { type: "text", text: str };
+        tmp3Result = tmp3(tmp, items);
+        return;
       }
     }
     class U {
-      constructor(displayName) {
-        onEndEditing(option);
-        let str;
-        if (displayName != null) {
-          str = displayName.displayName;
+      constructor(arg0) {
+        tmp = option;
+        tmp2 = onEndEditing(option);
+        str = undefined;
+        tmp3 = onOptionValueChange;
+        if (option != null) {
+          str = option.displayName;
         }
         if (str == null) {
           str = "";
         }
-        const items = [{ type: "text", text: str }];
-        onOptionValueChange(option, items);
+        items = [];
+        items[0] = { type: "text", text: str };
+        tmp3Result = tmp3(tmp, items);
+        return;
       }
     }
     if (cResult[43] === onEndEditing) {
-      let tmp67;
       if (cResult[44] === option) {
-        tmp67 = cResult[45];
+        let tmp66 = cResult[45];
       }
       if (cResult[46] === onOptionValueChange) {
         if (cResult[47] === onStartEditing) {
-          let tmp68;
           if (cResult[48] === option) {
-            tmp68 = cResult[49];
+            let tmp67 = cResult[49];
           }
           class O {
             constructor() {
               return onDismiss(option);
             }
           }
-          let str = "react.memo_cache_sentinel";
           class R {
-            constructor(displayName) {
-              onEndEditing(option);
-              let str;
-              if (displayName != null) {
-                str = displayName.displayName;
+            constructor(arg0) {
+              tmp = option;
+              tmp2 = onEndEditing(option);
+              str = undefined;
+              tmp3 = onOptionValueChange;
+              if (option != null) {
+                str = option.displayName;
               }
               if (str == null) {
                 str = "";
               }
-              const items = [{ type: "text", text: str }];
-              onOptionValueChange(option, items);
+              items = [];
+              items[0] = { type: "text", text: str };
+              tmp3Result = tmp3(tmp, items);
+              return;
             }
           }
           class U {
-            constructor(displayName) {
-              onEndEditing(option);
-              let str;
-              if (displayName != null) {
-                str = displayName.displayName;
+            constructor(arg0) {
+              tmp = option;
+              tmp2 = onEndEditing(option);
+              str = undefined;
+              tmp3 = onOptionValueChange;
+              if (option != null) {
+                str = option.displayName;
               }
               if (str == null) {
                 str = "";
               }
-              const items = [{ type: "text", text: str }];
-              onOptionValueChange(option, items);
+              items = [];
+              items[0] = { type: "text", text: str };
+              tmp3Result = tmp3(tmp, items);
+              return;
             }
           }
           const hasItem = obj8.includes(autoFocusType);
@@ -1061,19 +1107,19 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
               return onEndEditing(option);
             }
           }
-          const obj13 = { style: tmp63, option, guildId: tmp64, initialValue: tmp66, onEndEditing: tmp67, onChangeText: tmp68, onFocus, autoFocus: hasItem, hasError, onPressIn: onPress };
+          const obj13 = { style: tmp62, option, guildId: tmp63, initialValue: tmp65, onEndEditing: tmp66, onChangeText: tmp67, onFocus, autoFocus: hasItem, hasError, onPressIn: onPress };
+          const tmp73 = onDismiss(onStartEditing(tmp2[11]), obj13, option.name);
           cResult[51] = channel.guild_id;
           cResult[52] = onPress;
           cResult[53] = hasError;
           cResult[54] = onFocus;
           cResult[55] = option;
-          cResult[56] = tmp4.option;
-          cResult[57] = tmp66;
-          cResult[58] = tmp67;
-          cResult[59] = tmp68;
+          cResult[56] = dismissableOptionWrapper.option;
+          cResult[57] = tmp65;
+          cResult[58] = tmp66;
+          cResult[59] = tmp67;
           cResult[60] = hasItem;
-          cResult[61] = onDismiss(onStartEditing(onEndEditing[11]), obj13, name);
-          const tmp74 = onDismiss(onStartEditing(onEndEditing[11]), obj13, name);
+          cResult[61] = tmp73;
         }
       }
       class O {
@@ -1082,31 +1128,39 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
         }
       }
       class R {
-        constructor(displayName) {
-          onEndEditing(option);
-          let str;
-          if (displayName != null) {
-            str = displayName.displayName;
+        constructor(arg0) {
+          tmp = option;
+          tmp2 = onEndEditing(option);
+          str = undefined;
+          tmp3 = onOptionValueChange;
+          if (option != null) {
+            str = option.displayName;
           }
           if (str == null) {
             str = "";
           }
-          const items = [{ type: "text", text: str }];
-          onOptionValueChange(option, items);
+          items = [];
+          items[0] = { type: "text", text: str };
+          tmp3Result = tmp3(tmp, items);
+          return;
         }
       }
       class U {
-        constructor(displayName) {
-          onEndEditing(option);
-          let str;
-          if (displayName != null) {
-            str = displayName.displayName;
+        constructor(arg0) {
+          tmp = option;
+          tmp2 = onEndEditing(option);
+          str = undefined;
+          tmp3 = onOptionValueChange;
+          if (option != null) {
+            str = option.displayName;
           }
           if (str == null) {
             str = "";
           }
-          const items = [{ type: "text", text: str }];
-          onOptionValueChange(option, items);
+          items = [];
+          items[0] = { type: "text", text: str };
+          tmp3Result = tmp3(tmp, items);
+          return;
         }
       }
       cResult[47] = onStartEditing;
@@ -1117,7 +1171,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
       }
       cResult[48] = option;
       cResult[49] = X;
-      tmp68 = X;
+      tmp67 = X;
     }
     class Q {
       constructor() {
@@ -1127,359 +1181,293 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
     cResult[43] = onEndEditing;
     cResult[44] = option;
     cResult[45] = Q;
-    tmp67 = Q;
+    tmp66 = Q;
   }
+  let obj = option(onEndEditing[7]);
 }) : ((option) => {
-  let autoFocusType;
-  let channel;
-  let command;
-  let first;
-  let first1;
-  let first2;
-  let first3;
-  let first4;
-  let first5;
-  let first6;
-  let first7;
-  let hasError;
-  let items;
-  let items1;
-  let onFocus;
-  let onPress;
-  let onPressAttachmentOption;
-  let optionValues;
-  let tmp49;
-  let tmp62Result;
-  option = option.option;
+  let name = option.option;
   ({ onStartEditing: importDefault, onEndEditing: dependencyMap, onOptionValueChange: View, onPress } = option);
   const onDismiss = option.onDismiss;
   ({ channel, autoFocusType, optionValues, hasError } = option);
   ({ onPressAttachmentOption, onFocus, command } = option);
   const tmp = closure_7();
-  let type = option.type;
-  if (option(1985).ApplicationCommandOptionType.STRING !== type) {
-    if (option(1985).ApplicationCommandOptionType.INTEGER !== type) {
-      let tmp28Result;
-      let tmp13;
-      if (option(1985).ApplicationCommandOptionType.NUMBER !== type) {
-        if (option(1985).ApplicationCommandOptionType.ATTACHMENT === type) {
+  let type = name.type;
+  if (name(1985).ApplicationCommandOptionType.STRING !== type) {
+    if (tmp2(1985).ApplicationCommandOptionType.INTEGER !== type) {
+      if (tmp2(1985).ApplicationCommandOptionType.NUMBER !== type) {
+        if (tmp2(1985).ApplicationCommandOptionType.ATTACHMENT === type) {
           let obj2 = {
             style: tmp.option,
-            option,
+            option: name,
             onSelectAttachment(text) {
-                      let items1;
-                      dependencyMap(option);
+                      dependencyMap(name);
                       if (null != text) {
-                        const items = [{ type: "text", text }];
-                        items1 = items;
                         const obj = { type: "text", text };
+                        const items = [obj];
+                        let items1 = items;
                       } else {
                         items1 = [];
                       }
-                      View(option, items1);
+                      View(name, items1);
                     },
             channel,
             autoFocus: autoFocusType === onPress.OPTIONAL_OPTION_ADDED,
             hasError,
             onPress: onPressAttachmentOption
           };
-          tmp28Result = onDismiss(AppLauncherAttachmentOptionDefault, obj2, option.name);
-          tmp13 = onDismiss;
-        } else if (option(1985).ApplicationCommandOptionType.BOOLEAN === type) {
-          let obj3 = {
-            style: tmp.option,
-            option,
-            initialValue: first,
-            onPress(arg0) {
-                      onPress();
-                      dependencyMap(option);
-                      const items = [{ type: "text", text: arg0.toString() }];
-                      ({ type: "text", text: arg0.toString() });
-                      View(option, items);
-                    },
-            hasError
-          };
-          first = undefined;
-          const tmp37 = AppLauncherBooleanOptionDefault;
-          if (optionValues.current[option.name] != null) {
+          let tmp28Result = onDismiss(AppLauncherAttachmentOptionDefault, obj2, name.name);
+          let tmp13 = onDismiss;
+        } else if (tmp2(1985).ApplicationCommandOptionType.BOOLEAN === type) {
+          let obj3 = { style: tmp.option, option: name, initialValue: null, onPress: null, hasError: null };
+          let first;
+          if (optionValues.current[name.name] != null) {
             first = tmp38[0];
           }
-          tmp28Result = tmp35(tmp37, obj3, option.name);
-          tmp13 = tmp35;
-        } else if (option(1985).ApplicationCommandOptionType.MENTIONABLE === type) {
-          let obj4 = {
-            option,
-            initialValue: first1,
-            onMentionablePress(mentionable) {
-                      mentionable = mentionable.mentionable;
-                      if (null != mentionable) {
-                        const type = mentionable.type;
-                        if (AppLauncherMentionableListActionSheet.MentionableItemTypes.USER === type) {
-                          const items = [{ type: "userMention", userId: mentionable.result.user.id }];
-                          const obj2 = { type: "userMention", userId: mentionable.result.user.id };
-                          View(option, items);
-                        } else if (AppLauncherMentionableListActionSheet.MentionableItemTypes.ROLE === type) {
-                          const items1 = [{ type: "roleMention", roleId: mentionable.result.id }];
-                          const obj3 = { type: "roleMention", roleId: mentionable.result.id };
-                          View(option, items1);
-                        } else if (AppLauncherMentionableListActionSheet.MentionableItemTypes.GLOBAL === type) {
-                          const result = mentionable.result;
-                          const text = result.text;
-                          const obj4 = utils_AutocompleteUtilsDefault;
-                          if (text === obj4.MENTION_EVERYONE().text) {
-                            const items2 = [{ type: "textMention", text: "@everyone" }];
-                            View(option, items2);
-                          } else {
-                            const items3 = [{ type: "text", text: result.text }];
-                            const obj = { type: "text", text: result.text };
-                            View(option, items3);
-                          }
-                        }
-                      } else {
-                        View(option, []);
-                      }
-                    },
-            onActionSheetDismiss() {
-                      return dependencyMap(option);
-                    },
-            channel,
-            autoFocus: autoFocusType === onPress.OPTIONAL_OPTION_ADDED,
-            hasError,
-            onPress
+          obj3.initialValue = first;
+          obj3.onPress = function onPress(arg0) {
+            onPress();
+            dependencyMap(name);
+            const items = [{ type: "text", text: arg0.toString() }];
+            View(name, items);
           };
-          first1 = undefined;
-          const tmp30 = AppLauncherMentionableOptionDefault;
-          if (optionValues.current[option.name] != null) {
+          obj3.hasError = hasError;
+          tmp28Result = tmp35(AppLauncherBooleanOptionDefault, obj3, name.name);
+          tmp13 = tmp35;
+        } else if (tmp2(1985).ApplicationCommandOptionType.MENTIONABLE === type) {
+          let obj4 = { option: name, initialValue: null, onMentionablePress: null, onActionSheetDismiss: null, channel: null, autoFocus: null, hasError: null, onPress: null };
+          let first1;
+          if (optionValues.current[name.name] != null) {
             first1 = tmp31[0];
           }
-          tmp28Result = tmp28(tmp30, obj4);
-          tmp13 = tmp28;
-        } else if (option(1985).ApplicationCommandOptionType.ROLE === type) {
-          const obj5 = {
-            style: tmp.option,
-            option,
-            initialValue: first2,
-            onRolePress(role) {
-                      let items;
-                      role = role.role;
-                      if (null == role) {
-                        items = [];
-                      } else {
-                        items = [{ type: "roleMention", roleId: role.id }];
-                        const obj = { type: "roleMention", roleId: role.id };
-                      }
-                      View(option, items);
-                    },
-            onActionSheetDismiss() {
-                      dependencyMap(option);
-                    },
-            channel,
-            autoFocus: autoFocusType === onPress.OPTIONAL_OPTION_ADDED,
-            hasError,
-            onPress
+          obj4.initialValue = first1;
+          obj4.onMentionablePress = function onMentionablePress(mentionable) {
+            mentionable = mentionable.mentionable;
+            if (null != mentionable) {
+              const type = mentionable.type;
+              if (AppLauncherMentionableListActionSheet.MentionableItemTypes.USER === type) {
+                const obj2 = { type: "userMention", userId: mentionable.result.user.id };
+                const items = [obj2];
+                View(name, items);
+              } else if (AppLauncherMentionableListActionSheet.MentionableItemTypes.ROLE === type) {
+                const obj3 = { type: "roleMention", roleId: mentionable.result.id };
+                const items1 = [obj3];
+                View(name, items1);
+              } else if (AppLauncherMentionableListActionSheet.MentionableItemTypes.GLOBAL === type) {
+                const result = mentionable.result;
+                if (result.text === obj4.MENTION_EVERYONE().text) {
+                  const items2 = [{ type: "textMention", text: "@everyone" }];
+                  View(name, items2);
+                } else {
+                  const obj = { type: "text", text: result.text };
+                  const items3 = [obj];
+                  View(name, items3);
+                }
+                obj4 = utils_AutocompleteUtilsDefault;
+              }
+            } else {
+              View(name, []);
+            }
           };
-          first2 = undefined;
-          const tmp23 = AppLauncherRoleOptionDefault;
-          if (optionValues.current[option.name] != null) {
+          obj4.onActionSheetDismiss = function onActionSheetDismiss() {
+            return dependencyMap(name);
+          };
+          obj4.channel = channel;
+          obj4.autoFocus = autoFocusType === onPress.OPTIONAL_OPTION_ADDED;
+          obj4.hasError = hasError;
+          obj4.onPress = onPress;
+          tmp28Result = tmp28(AppLauncherMentionableOptionDefault, obj4);
+          tmp13 = tmp28;
+        } else if (tmp2(1985).ApplicationCommandOptionType.ROLE === type) {
+          const obj5 = { style: tmp.option, option: name, initialValue: null, onRolePress: null, onActionSheetDismiss: null, channel: null, autoFocus: null, hasError: null, onPress: null };
+          let first2;
+          if (optionValues.current[name.name] != null) {
             first2 = tmp24[0];
           }
-          tmp28Result = tmp21(tmp23, obj5, option.name);
-          tmp13 = tmp21;
-        } else if (option(1985).ApplicationCommandOptionType.USER === type) {
-          const obj6 = {
-            style: tmp.option,
-            option,
-            initialValue: first3,
-            onUserPress(user) {
-                      let items;
-                      user = user.user;
-                      if (null == user) {
-                        items = [];
-                      } else {
-                        let id = user;
-                        if (typeof user !== "string") {
-                          id = user.id;
-                        }
-                        items = [{ type: "userMention", userId: id }];
-                        const obj = { type: "userMention", userId: id };
-                      }
-                      View(option, items);
-                    },
-            onActionSheetDismiss() {
-                      return dependencyMap(option);
-                    },
-            channel,
-            autoFocus: autoFocusType === onPress.OPTIONAL_OPTION_ADDED,
-            hasError,
-            onPress
+          obj5.initialValue = first2;
+          obj5.onRolePress = function onRolePress(role) {
+            role = role.role;
+            if (null == role) {
+              let items = [];
+            } else {
+              const obj = { type: "roleMention", roleId: role.id };
+              items = [obj];
+            }
+            View(name, items);
           };
-          first3 = undefined;
-          const tmp16 = AppLauncherUserOptionDefault;
-          if (optionValues.current[option.name] != null) {
+          obj5.onActionSheetDismiss = function onActionSheetDismiss() {
+            dependencyMap(name);
+          };
+          obj5.channel = channel;
+          obj5.autoFocus = autoFocusType === onPress.OPTIONAL_OPTION_ADDED;
+          obj5.hasError = hasError;
+          obj5.onPress = onPress;
+          tmp28Result = tmp21(AppLauncherRoleOptionDefault, obj5, name.name);
+          tmp13 = tmp21;
+        } else if (tmp2(1985).ApplicationCommandOptionType.USER === type) {
+          const obj6 = { style: tmp.option, option: name, initialValue: null, onUserPress: null, onActionSheetDismiss: null, channel: null, autoFocus: null, hasError: null, onPress: null };
+          let first3;
+          if (optionValues.current[name.name] != null) {
             first3 = tmp17[0];
           }
-          tmp28Result = tmp14(tmp16, obj6, option.name);
-          tmp13 = tmp14;
-        } else if (option(1985).ApplicationCommandOptionType.CHANNEL === type) {
-          let obj = {
-            style: tmp.option,
-            option,
-            initialValue: first4,
-            onChannelPress(channel) {
-                      let items1;
-                      channel = channel.channel;
-                      if (null != channel) {
-                        const items = [{ type: "channelMention", channelId: channel.id }];
-                        items1 = items;
-                        const obj = { type: "channelMention", channelId: channel.id };
-                      } else {
-                        items1 = [];
-                      }
-                      View(option, items1);
-                    },
-            onActionSheetDismiss() {
-                      dependencyMap(option);
-                    },
-            channel,
-            autoFocus: autoFocusType === onPress.OPTIONAL_OPTION_ADDED,
-            hasError,
-            onPress
+          obj6.initialValue = first3;
+          obj6.onUserPress = function onUserPress(user) {
+            user = user.user;
+            if (null == user) {
+              let items = [];
+            } else {
+              let id = user;
+              if (typeof user !== "string") {
+                id = user.id;
+              }
+              const obj = { type: "userMention", userId: id };
+              items = [obj];
+            }
+            View(name, items);
           };
-          first4 = undefined;
-          const tmp7 = AppLauncherChannelOptionDefault;
-          if (optionValues.current[option.name] != null) {
+          obj6.onActionSheetDismiss = function onActionSheetDismiss() {
+            return dependencyMap(name);
+          };
+          obj6.channel = channel;
+          obj6.autoFocus = autoFocusType === onPress.OPTIONAL_OPTION_ADDED;
+          obj6.hasError = hasError;
+          obj6.onPress = onPress;
+          tmp28Result = tmp14(AppLauncherUserOptionDefault, obj6, name.name);
+          tmp13 = tmp14;
+        } else if (tmp2(1985).ApplicationCommandOptionType.CHANNEL === type) {
+          let obj = { style: tmp.option, option: name, initialValue: null, onChannelPress: null, onActionSheetDismiss: null, channel: null, autoFocus: null, hasError: null, onPress: null };
+          let first4;
+          if (optionValues.current[name.name] != null) {
             first4 = tmp8[0];
           }
-          tmp28Result = tmp5(tmp7, obj, option.name);
+          obj.initialValue = first4;
+          obj.onChannelPress = function onChannelPress(channel) {
+            channel = channel.channel;
+            if (null != channel) {
+              const obj = { type: "channelMention", channelId: channel.id };
+              const items = [obj];
+              let items1 = items;
+            } else {
+              items1 = [];
+            }
+            View(name, items1);
+          };
+          obj.onActionSheetDismiss = function onActionSheetDismiss() {
+            dependencyMap(name);
+          };
+          obj.channel = channel;
+          obj.autoFocus = autoFocusType === onPress.OPTIONAL_OPTION_ADDED;
+          obj.hasError = hasError;
+          obj.onPress = onPress;
+          tmp28Result = tmp5(AppLauncherChannelOptionDefault, obj, name.name);
           tmp13 = tmp5;
         } else {
           return null;
         }
+        let tmp62 = tmp28Result;
+        if (null != onDismiss) {
+          const obj7 = { style: tmp.dismissableOptionWrapper, children: null };
+          const obj8 = { style: tmp.optionViewContainer, children: tmp28Result };
+          let items = [tmp13(View, obj8), ];
+          const obj9 = {
+            style: tmp.dismissButton,
+            onPress() {
+                      return onDismiss(name);
+                    },
+            children: tmp13(tmp2(4803).CircleXIcon, { size: "md" })
+          };
+          items[1] = tmp13(tmp2(5916).PressableOpacity, obj9);
+          obj7.children = items;
+          tmp62 = closure_6(View, obj7);
+        }
+        return tmp62;
       }
-      let tmp61 = tmp28Result;
-      if (null != onDismiss) {
-        const obj7 = { style: tmp.dismissableOptionWrapper, children: items };
-        const obj8 = { style: tmp.optionViewContainer, children: tmp28Result };
-        items = [tmp13(View, obj8), ];
-        const obj9 = {
-          style: tmp.dismissButton,
-          onPress() {
-                  return onDismiss(option);
-                },
-          children: tmp13(option(4803).CircleXIcon, { size: "md" })
-        };
-        const PressableOpacity = tmp2(5916).PressableOpacity;
-        items[1] = tmp13(PressableOpacity, obj9);
-        tmp61 = closure_6(View, obj7);
-      }
-      return tmp61;
     }
   }
-  if (null != option.choices) {
-    const obj10 = {
-      style: tmp.option,
-      option,
-      initialValue: first5,
-      onSelect(displayName) {
-          dependencyMap(option);
-          let str;
-          if (displayName != null) {
-            str = displayName.displayName;
-          }
-          if (str == null) {
-            str = "";
-          }
-          const items = [{ type: "text", text: str }];
-          View(option, items);
-        },
-      onOpenChoicesSheet() {
-          onPress();
-          importDefault(option);
-        },
-      onDismissChoicesSheet() {
-          return dependencyMap(option);
-        },
-      autoFocus: autoFocusType === onPress.OPTIONAL_OPTION_ADDED,
-      hasError
-    };
-    first5 = undefined;
-    const tmp56 = AppLauncherChoicesOptionDefault;
-    if (optionValues.current[option.name] != null) {
-      first5 = tmp57[0];
+  let tmp44 = null;
+  if (null != name.choices) {
+    const obj10 = { style: tmp.option, option: name, initialValue: null, onSelect: null, onOpenChoicesSheet: null, onDismissChoicesSheet: null, autoFocus: null, hasError: null };
+    let first5;
+    if (optionValues.current[name.name] != tmp44) {
+      first5 = tmp58[0];
     }
-    tmp62Result = tmp54(tmp56, obj10, option.name);
-    tmp49 = tmp54;
-  } else if (option.autocomplete) {
-    const obj11 = {
-      style: tmp.option,
-      channel,
-      option,
-      activeCommand: command,
-      optionValues,
-      initialValue: first6,
-      autoFocus: autoFocusType === onPress.OPTIONAL_OPTION_ADDED,
-      onSelect(displayName) {
-          dependencyMap(option);
-          let str;
-          if (displayName != null) {
-            str = displayName.displayName;
-          }
-          if (str == null) {
-            str = "";
-          }
-          const items = [{ type: "text", text: str }];
-          View(option, items);
-        },
-      onOpenAutocompleteSheet() {
-          onPress();
-          importDefault(option);
-        },
-      onDismissAutocompleteSheet() {
-          return dependencyMap(option);
-        },
-      hasError
+    obj10.initialValue = first5;
+    obj10.onSelect = function onSelect(displayName) {
+      dependencyMap(name);
+      let str;
+      if (displayName != null) {
+        str = displayName.displayName;
+      }
+      if (str == null) {
+        str = "";
+      }
+      const items = [{ type: "text", text: str }];
+      View(name, items);
     };
-    first6 = undefined;
-    const tmp63Result = AppLauncherAutocompleteOptionDefault;
-    if (optionValues.current[option.name] != null) {
-      first6 = tmp51[0];
+    obj10.onOpenChoicesSheet = function onOpenChoicesSheet() {
+      onPress();
+      importDefault(name);
+    };
+    obj10.onDismissChoicesSheet = function onDismissChoicesSheet() {
+      return dependencyMap(name);
+    };
+    optionValues = onPress.OPTIONAL_OPTION_ADDED;
+    tmp44 = autoFocusType === optionValues;
+    obj10.autoFocus = tmp44;
+    obj10.hasError = hasError;
+    name = name.name;
+    onDismiss(AppLauncherChoicesOptionDefault, obj10, name);
+  } else if (name.autocomplete) {
+    const obj11 = { style: tmp.option, channel, option: name, activeCommand: command, optionValues, initialValue: null, autoFocus: null, onSelect: null, onOpenAutocompleteSheet: null, onDismissAutocompleteSheet: null, hasError: null };
+    let first6;
+    if (optionValues.current[name.name] != tmp44) {
+      first6 = tmp52[0];
     }
-    tmp62Result = tmp62(tmp63Result, obj11, option.name);
-    tmp49 = tmp62;
+    obj11.initialValue = first6;
+    obj11.autoFocus = autoFocusType === onPress.OPTIONAL_OPTION_ADDED;
+    obj11.onSelect = function onSelect(displayName) {
+      dependencyMap(name);
+      let str;
+      if (displayName != null) {
+        str = displayName.displayName;
+      }
+      if (str == null) {
+        str = "";
+      }
+      const items = [{ type: "text", text: str }];
+      View(name, items);
+    };
+    obj11.onOpenAutocompleteSheet = function onOpenAutocompleteSheet() {
+      onPress();
+      importDefault(name);
+    };
+    obj11.onDismissAutocompleteSheet = function onDismissAutocompleteSheet() {
+      return dependencyMap(name);
+    };
+    obj11.hasError = hasError;
+    tmp63(AppLauncherAutocompleteOptionDefault, obj11, name.name);
+    const tmp64Result = AppLauncherAutocompleteOptionDefault;
   } else {
-    const obj12 = {
-      style: tmp.option,
-      option,
-      guildId: channel.guild_id,
-      initialValue: first7,
-      onEndEditing() {
-          return dependencyMap(option);
-        },
-      onChangeText(text) {
-          importDefault(option);
-          const items = [];
-          const obj = { type: "text", text };
-          items[0] = obj;
-          View(option, items);
-        },
-      onFocus,
-      autoFocus: items1.includes(autoFocusType),
-      hasError,
-      onPressIn: onPress
-    };
-    first7 = undefined;
-    const tmp63Result2 = AppLauncherTextInputOptionDefault;
-    if (optionValues.current[option.name] != null) {
-      first7 = tmp45[0];
+    const obj12 = { style: tmp.option, option: name, guildId: channel.guild_id, initialValue: null, onEndEditing: null, onChangeText: null, onFocus: null, autoFocus: null, hasError: null, onPressIn: null };
+    let first7;
+    if (optionValues.current[name.name] != tmp44) {
+      first7 = tmp46[0];
     }
-    items1 = [, ];
+    obj12.initialValue = first7;
+    obj12.onEndEditing = function onEndEditing() {
+      return dependencyMap(name);
+    };
+    obj12.onChangeText = function onChangeText(text) {
+      importDefault(name);
+      const items = [{ type: "text", text }];
+      View(name, items);
+    };
+    obj12.onFocus = onFocus;
+    let items1 = [, ];
     ({ FIRST_REQUIRED_OPTION: arr[0], OPTIONAL_OPTION_ADDED: arr[1] } = onPress);
-    tmp62Result = tmp62(tmp63Result2, obj12, option.name);
-    tmp49 = tmp62;
+    obj12.autoFocus = items1.includes(autoFocusType);
+    obj12.hasError = hasError;
+    obj12.onPressIn = onPress;
+    tmp63(AppLauncherTextInputOptionDefault, obj12, name.name);
+    const tmp64Result2 = AppLauncherTextInputOptionDefault;
   }
-  tmp13 = tmp49;
-  tmp28Result = tmp62Result;
 });
-let result = size.fileFinishedImporting("modules/app_launcher/native/options/AppLauncherCommandOption.tsx");
-
-export default tmp4;

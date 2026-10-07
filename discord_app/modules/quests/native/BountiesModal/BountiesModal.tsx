@@ -1,28 +1,22 @@
 // === Module 14828: BountiesModal ===
 
 // Module 14828 (BountiesModal)
-import Fragment from "Fragment" /* 21 */;
 import BountiesModalTypes from "BountiesModalTypes" /* 14829 */;
 import BountiesModalContentScrollDefault from "BountiesModalContentScroll" /* 14830 */;
 import BountiesModalContentDefault from "BountiesModalContent" /* 14880 */;
-import react from "react" /* 19 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let bountyId;
-
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
 const bounty_main = "bounty_main";
-const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bountyId) => {
-  let first;
-  let obj4;
-  let variant;
-  let obj = bountyId(variant[3]);
-  const cResult = obj.c(11);
-  const tmp = bountyId;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModal.tsx");
+
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bountyId) => {
+  const cResult = bountyId(variant[3]).c(11);
   bountyId = bountyId.bountyId;
   const sourceQuestContent = bountyId.sourceQuestContent;
-  const tmp2 = variant;
   variant = bountyId.variant;
   const bounty = bountyId.bounty;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -30,37 +24,34 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((b
       return null;
     };
     cResult[0] = fn;
-    first = fn;
+    let first = fn;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === bounty) {
     if (cResult[2] === bountyId) {
       if (cResult[3] === sourceQuestContent) {
-        let tmp5;
-        let tmp7;
-        let tmp12;
         if (cResult[4] === variant) {
-          tmp5 = cResult[5];
+          let tmp5 = cResult[5];
         }
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           class C {
             constructor() {
-              const obj = bountyId(variant[7]);
-              obj.applyOrientationLock("PORTRAIT");
+              obj = bountyId(variant[7]);
+              applyOrientationLockResult = obj.applyOrientationLock("PORTRAIT");
               return bountyId(variant[7]).restoreDefaultOrientationLock;
             }
           }
           const items = [];
           cResult[6] = C;
           cResult[7] = items;
-          tmp7 = items;
+          let tmp7 = items;
         } else {
           class C {
             constructor() {
-              const obj = bountyId(variant[7]);
-              obj.applyOrientationLock("PORTRAIT");
+              obj = bountyId(variant[7]);
+              applyOrientationLockResult = obj.applyOrientationLock("PORTRAIT");
               return bountyId(variant[7]).restoreDefaultOrientationLock;
             }
           }
@@ -71,8 +62,8 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((b
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           class C {
             constructor() {
-              const obj = bountyId(variant[7]);
-              obj.applyOrientationLock("PORTRAIT");
+              obj = bountyId(variant[7]);
+              applyOrientationLockResult = obj.applyOrientationLock("PORTRAIT");
               return bountyId(variant[7]).restoreDefaultOrientationLock;
             }
           }
@@ -80,8 +71,8 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((b
         } else {
           class C {
             constructor() {
-              const obj = bountyId(variant[7]);
-              obj.applyOrientationLock("PORTRAIT");
+              obj = bountyId(variant[7]);
+              applyOrientationLockResult = obj.applyOrientationLock("PORTRAIT");
               return bountyId(variant[7]).restoreDefaultOrientationLock;
             }
           }
@@ -89,20 +80,21 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((b
         if (cResult[9] !== tmp5) {
           class C {
             constructor() {
-              const obj = bountyId(variant[7]);
-              obj.applyOrientationLock("PORTRAIT");
+              obj = bountyId(variant[7]);
+              applyOrientationLockResult = obj.applyOrientationLock("PORTRAIT");
               return bountyId(variant[7]).restoreDefaultOrientationLock;
             }
           }
+          let obj2 = { hideTitle: true, initialRouteName: bounty_main, screens: tmp5, viewStyle: tmp11 };
           const tmp14 = jsx(tmp(tmp2[8]).Modal, { hideTitle: true, initialRouteName: bounty_main, screens: tmp5, viewStyle: tmp11 });
           cResult[9] = tmp5;
           cResult[10] = tmp14;
-          tmp12 = tmp14;
+          const tmp12 = tmp14;
         } else {
           class C {
             constructor() {
-              const obj = bountyId(variant[7]);
-              obj.applyOrientationLock("PORTRAIT");
+              obj = bountyId(variant[7]);
+              applyOrientationLockResult = obj.applyOrientationLock("PORTRAIT");
               return bountyId(variant[7]).restoreDefaultOrientationLock;
             }
           }
@@ -112,25 +104,29 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((b
     }
   }
   const obj3 = { [closure_5]: obj4 };
-  obj4 = {
-    fullscreen: true,
-    headerLeft: first,
-    render() {
-      let tmp7;
-      if (variant === BountiesModalTypes.BountiesModalVariant.VERTICAL_SCROLL) {
-        tmp7 = jsx(BountiesModalContentScrollDefault, { bountyId, sourceQuestContent });
-      } else {
-        tmp7 = jsx(BountiesModalContentDefault, { bountyId, sourceQuestContent, bounty });
-      }
-      return tmp7;
-    }
-  };
   cResult[1] = bounty;
   cResult[2] = bountyId;
   cResult[3] = sourceQuestContent;
   cResult[4] = variant;
   cResult[5] = obj3;
   tmp5 = obj3;
+  let obj = bountyId(variant[3]);
+  obj4 = {
+    fullscreen: true,
+    headerLeft: first,
+    render() {
+      if (variant === BountiesModalTypes.BountiesModalVariant.VERTICAL_SCROLL) {
+        const obj2 = { bountyId, sourceQuestContent };
+        let tmp7 = jsx(BountiesModalContentScrollDefault, { bountyId, sourceQuestContent });
+      } else {
+        const obj = { bountyId, sourceQuestContent, bounty };
+        tmp7 = jsx(BountiesModalContentDefault, { bountyId, sourceQuestContent, bounty });
+      }
+      return tmp7;
+    }
+  };
+  tmp = bountyId;
+  tmp2 = variant;
 }) : ((bountyId) => {
   bountyId = bountyId.bountyId;
   const sourceQuestContent = bountyId.sourceQuestContent;
@@ -144,10 +140,11 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((b
         return null;
       },
       render() {
-        let tmp7;
         if (closure_1_2 === bountyId(variant[4]).BountiesModalVariant.VERTICAL_SCROLL) {
-          tmp7 = jsx(sourceQuestContent(variant[5]), { bountyId, sourceQuestContent });
+          const obj2 = { bountyId, sourceQuestContent };
+          let tmp7 = jsx(sourceQuestContent(variant[5]), { bountyId, sourceQuestContent });
         } else {
+          const obj = { bountyId, sourceQuestContent, bounty };
           tmp7 = jsx(sourceQuestContent(variant[6]), { bountyId, sourceQuestContent, bounty });
         }
         return tmp7;
@@ -155,12 +152,8 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((b
     }
   }), items);
   const layoutEffect = bounty.useLayoutEffect(() => {
-    const obj = bountyId(variant[7]);
-    obj.applyOrientationLock("PORTRAIT");
+    bountyId(variant[7]).applyOrientationLock("PORTRAIT");
     return bountyId(variant[7]).restoreDefaultOrientationLock;
   }, []);
   return jsx(bountyId(variant[8]).Modal, { hideTitle: true, initialRouteName: bounty_main, screens: memo, viewStyle: { backgroundColor: "#000000" } });
 }));
-const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModal.tsx");
-
-export default memoResult;

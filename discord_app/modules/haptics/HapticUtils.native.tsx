@@ -12,169 +12,136 @@ const result = size.fileFinishedImporting("modules/haptics/HapticUtils.native.ts
 export const HapticFeedbackTypes = haptics_HapticFeedbackTypesDefault;
 export const triggerHapticFeedback = function triggerHapticFeedback(IMPACT_LIGHT) {
   if (haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT === IMPACT_LIGHT) {
-    const trigger6 = Patterns.trigger;
-    Patterns;
+    const obj41 = Patterns;
     let str36 = "selection";
-    const obj36 = PlatformUtils;
-    if (obj36.isAndroid()) {
+    if (obj42.isAndroid()) {
       const _parseInt5 = parseInt;
       let str37 = "effectTick";
-      const tmp74Result = DeviceUtils;
-      if (parseInt(tmp74Result.getSystemVersion()) < 29) {
+      if (parseInt(tmp69Result.getSystemVersion()) < 29) {
         str37 = "impactLight";
       }
       str36 = str37;
+      tmp69Result = DeviceUtils;
     }
-    trigger6(str36);
+    obj41.trigger(str36);
+    obj42 = PlatformUtils;
   } else if (haptics_HapticFeedbackTypesDefault.IMPACT_MEDIUM === IMPACT_LIGHT) {
-    const trigger5 = Patterns.trigger;
-    Patterns;
+    const obj38 = Patterns;
     let str34 = "impactMedium";
-    const obj34 = PlatformUtils;
-    if (obj34.isAndroid()) {
+    if (obj39.isAndroid()) {
       const _parseInt4 = parseInt;
       let str35 = "effectTick";
-      const tmp70Result = DeviceUtils;
-      if (parseInt(tmp70Result.getSystemVersion()) < 29) {
+      if (parseInt(tmp66Result.getSystemVersion()) < 29) {
         str35 = "impactLight";
       }
       str34 = str35;
+      tmp66Result = DeviceUtils;
     }
-    trigger5(str34);
+    obj38.trigger(str34);
+    obj39 = PlatformUtils;
   } else if (haptics_HapticFeedbackTypesDefault.IMPACT_HEAVY === IMPACT_LIGHT) {
-    const obj33 = Patterns;
-    obj33.trigger("impactHeavy");
+    Patterns.trigger("impactHeavy");
   } else if (haptics_HapticFeedbackTypesDefault.NOTIFICATION_ERROR === IMPACT_LIGHT) {
-    const obj32 = Patterns;
-    obj32.trigger("notificationError");
+    Patterns.trigger("notificationError");
   } else if (haptics_HapticFeedbackTypesDefault.DRAG_AND_DROP_START === IMPACT_LIGHT) {
-    const trigger4 = Patterns.trigger;
-    Patterns;
+    const obj34 = Patterns;
     let str31 = "impactHeavy";
-    const obj31 = PlatformUtils;
-    if (obj31.isAndroid()) {
+    if (obj35.isAndroid()) {
       str31 = "impactMedium";
     }
-    trigger4(str31);
+    obj34.trigger(str31);
+    obj35 = PlatformUtils;
   } else if (haptics_HapticFeedbackTypesDefault.DRAG_AND_DROP_END === IMPACT_LIGHT) {
-    const trigger3 = Patterns.trigger;
-    Patterns;
+    const obj31 = Patterns;
     let str29 = "notificationSuccess";
-    const obj29 = PlatformUtils;
-    if (obj29.isAndroid()) {
+    if (obj32.isAndroid()) {
       const _parseInt3 = parseInt;
       let str30 = "effectTick";
-      const tmp59Result = DeviceUtils;
-      if (parseInt(tmp59Result.getSystemVersion()) < 29) {
+      if (parseInt(tmp57Result.getSystemVersion()) < 29) {
         str30 = "impactLight";
       }
       str29 = str30;
+      tmp57Result = DeviceUtils;
     }
-    trigger3(str29);
+    obj31.trigger(str29);
+    obj32 = PlatformUtils;
   } else if (haptics_HapticFeedbackTypesDefault.DRAG_AND_DROP_MOVE === IMPACT_LIGHT) {
-    const trigger2 = Patterns.trigger;
-    Patterns;
+    const obj28 = Patterns;
     let str27 = "impactMedium";
-    const obj27 = PlatformUtils;
-    if (obj27.isAndroid()) {
+    if (obj29.isAndroid()) {
       const _parseInt2 = parseInt;
       let str28 = "effectTick";
-      const tmp55Result = DeviceUtils;
-      if (parseInt(tmp55Result.getSystemVersion()) < 29) {
+      if (parseInt(tmp54Result.getSystemVersion()) < 29) {
         str28 = "impactLight";
       }
       str27 = str28;
+      tmp54Result = DeviceUtils;
     }
-    trigger2(str27);
+    obj28.trigger(str27);
+    obj29 = PlatformUtils;
   } else if (haptics_HapticFeedbackTypesDefault.SOFT === IMPACT_LIGHT) {
-    const obj26 = Patterns;
-    obj26.trigger("soft");
+    Patterns.trigger("soft");
   } else if (haptics_HapticFeedbackTypesDefault.SELECTION === IMPACT_LIGHT) {
-    const trigger = Patterns.trigger;
-    Patterns;
+    const obj24 = Patterns;
     let str24 = "selection";
-    const obj24 = PlatformUtils;
-    if (obj24.isAndroid()) {
+    if (obj25.isAndroid()) {
       const _parseInt = parseInt;
       let str25 = "effectTick";
-      const tmp49Result = DeviceUtils;
       if (parseInt(tmp49Result.getSystemVersion()) < 29) {
         str25 = "impactLight";
       }
       str24 = str25;
+      tmp49Result = DeviceUtils;
     }
-    trigger(str24);
+    obj24.trigger(str24);
+    obj25 = PlatformUtils;
   } else if (haptics_HapticFeedbackTypesDefault.RIGID === IMPACT_LIGHT) {
-    const obj23 = Patterns;
-    obj23.trigger("rigid");
+    Patterns.trigger("rigid");
   } else if (haptics_HapticFeedbackTypesDefault.NOTIFICATION_SUCCESS === IMPACT_LIGHT) {
-    const obj22 = Patterns;
-    obj22.trigger("notificationSuccess");
+    Patterns.trigger("notificationSuccess");
   } else if (haptics_HapticFeedbackTypesDefault.NOTIFICATION_WARNING === IMPACT_LIGHT) {
-    const obj21 = Patterns;
-    obj21.trigger("notificationWarning");
+    Patterns.trigger("notificationWarning");
   } else if (haptics_HapticFeedbackTypesDefault.CONFIRM === IMPACT_LIGHT) {
-    const obj20 = Patterns;
-    obj20.trigger("confirm");
+    Patterns.trigger("confirm");
   } else if (haptics_HapticFeedbackTypesDefault.REJECT === IMPACT_LIGHT) {
-    const obj19 = Patterns;
-    obj19.trigger("reject");
+    Patterns.trigger("reject");
   } else if (haptics_HapticFeedbackTypesDefault.GESTURE_START === IMPACT_LIGHT) {
-    const obj18 = Patterns;
-    obj18.trigger("gestureStart");
+    Patterns.trigger("gestureStart");
   } else if (haptics_HapticFeedbackTypesDefault.GESTURE_END === IMPACT_LIGHT) {
-    const obj17 = Patterns;
-    obj17.trigger("gestureEnd");
+    Patterns.trigger("gestureEnd");
   } else if (haptics_HapticFeedbackTypesDefault.SEGMENT_TICK === IMPACT_LIGHT) {
-    const obj16 = Patterns;
-    obj16.trigger("segmentTick");
+    Patterns.trigger("segmentTick");
   } else if (haptics_HapticFeedbackTypesDefault.SEGMENT_FREQUENT_TICK === IMPACT_LIGHT) {
-    const obj15 = Patterns;
-    obj15.trigger("segmentFrequentTick");
+    Patterns.trigger("segmentFrequentTick");
   } else if (haptics_HapticFeedbackTypesDefault.TOGGLE_ON === IMPACT_LIGHT) {
-    const obj14 = Patterns;
-    obj14.trigger("toggleOn");
+    Patterns.trigger("toggleOn");
   } else if (haptics_HapticFeedbackTypesDefault.TOGGLE_OFF === IMPACT_LIGHT) {
-    const obj13 = Patterns;
-    obj13.trigger("toggleOff");
+    Patterns.trigger("toggleOff");
   } else if (haptics_HapticFeedbackTypesDefault.CLOCK_TICK === IMPACT_LIGHT) {
-    const obj12 = Patterns;
-    obj12.trigger("clockTick");
+    Patterns.trigger("clockTick");
   } else if (haptics_HapticFeedbackTypesDefault.CONTEXT_CLICK === IMPACT_LIGHT) {
-    const obj11 = Patterns;
-    obj11.trigger("contextClick");
+    Patterns.trigger("contextClick");
   } else if (haptics_HapticFeedbackTypesDefault.KEYBOARD_PRESS === IMPACT_LIGHT) {
-    const obj10 = Patterns;
-    obj10.trigger("keyboardPress");
+    Patterns.trigger("keyboardPress");
   } else if (haptics_HapticFeedbackTypesDefault.KEYBOARD_RELEASE === IMPACT_LIGHT) {
-    const obj9 = Patterns;
-    obj9.trigger("keyboardRelease");
+    Patterns.trigger("keyboardRelease");
   } else if (haptics_HapticFeedbackTypesDefault.KEYBOARD_TAP === IMPACT_LIGHT) {
-    const obj8 = Patterns;
-    obj8.trigger("keyboardTap");
+    Patterns.trigger("keyboardTap");
   } else if (haptics_HapticFeedbackTypesDefault.LONG_PRESS === IMPACT_LIGHT) {
-    const obj7 = Patterns;
-    obj7.trigger("longPress");
+    Patterns.trigger("longPress");
   } else if (haptics_HapticFeedbackTypesDefault.TEXT_HANDLE_MOVE === IMPACT_LIGHT) {
-    const obj6 = Patterns;
-    obj6.trigger("textHandleMove");
+    Patterns.trigger("textHandleMove");
   } else if (haptics_HapticFeedbackTypesDefault.VIRTUAL_KEY === IMPACT_LIGHT) {
-    const obj5 = Patterns;
-    obj5.trigger("virtualKey");
+    Patterns.trigger("virtualKey");
   } else if (haptics_HapticFeedbackTypesDefault.VIRTUAL_KEY_RELEASE === IMPACT_LIGHT) {
-    const obj4 = Patterns;
-    obj4.trigger("virtualKeyRelease");
+    Patterns.trigger("virtualKeyRelease");
   } else if (haptics_HapticFeedbackTypesDefault.EFFECT_CLICK === IMPACT_LIGHT) {
-    const obj3 = Patterns;
-    obj3.trigger("effectClick");
+    Patterns.trigger("effectClick");
   } else if (haptics_HapticFeedbackTypesDefault.EFFECT_DOUBLE_CLICK === IMPACT_LIGHT) {
-    const obj2 = Patterns;
-    obj2.trigger("effectDoubleClick");
+    Patterns.trigger("effectDoubleClick");
   } else if (haptics_HapticFeedbackTypesDefault.EFFECT_HEAVY_CLICK === IMPACT_LIGHT) {
-    const obj = Patterns;
-    obj.trigger("effectHeavyClick");
+    Patterns.trigger("effectHeavyClick");
   } else if (haptics_HapticFeedbackTypesDefault.EFFECT_TICK === IMPACT_LIGHT) {
-    const obj38 = Patterns;
-    obj38.trigger("effectTick");
+    Patterns.trigger("effectTick");
   }
 };

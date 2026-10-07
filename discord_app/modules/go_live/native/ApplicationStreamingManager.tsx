@@ -2,77 +2,65 @@
 
 // Module 18093 (ApplicationStreamingManager)
 import LoggerDefault from "Logger" /* 3 */;
-import Fragment from "Fragment" /* 21 */;
-import Constants from "Constants" /* 4921 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 4943 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 8079 */;
 import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 9650 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4942 */;
-import ApplicationStreamingManager2 from "go_live/ApplicationStreamingManager" /* 18094 */;
-import size from "module_2" /* 2 */;
+import ApplicationStreamingManager from "go_live/ApplicationStreamingManager" /* 18094 */;
 
-const require = globalThis.__r;
-
-const ApplicationStreamPresets = StreamSettingsConstants.ApplicationStreamPresets;
-const MediaEngineContextTypes = Constants.MediaEngineContextTypes;
-const jsx = Fragment.jsx;
+const require = fn;
+const ApplicationStreamPresets = fn(4943).ApplicationStreamPresets;
+const MediaEngineContextTypes = fn(4921).MediaEngineContextTypes;
+const jsx = fn(21).jsx;
 let obj = new LoggerDefault("ApplicationStreamingManager");
 obj.enableNativeLogger(true);
-class ApplicationStreamingManager extends ApplicationStreamingManager2 {
-  platformShowStreamFull() {
-    let paths;
-    obj = actions_AlertActionCreatorsDefault;
-    const obj2 = {
-      importer() {
-        const promise = require("asyncRequire")(paths[8], paths.paths);
-        return promise.then((result) => {
-          let closure_0 = result.default;
-          return (arg0) => {
-            obj = {};
-            const merged = Object.assign(arg0);
-            return closure_2_6(closure_0, obj);
-          };
-        });
-      },
-      isDismissable: false
-    };
-    obj.openLazy(obj2);
-  }
-  platformHandleStreamStart(sourceId) {
-    let fps;
-    let obj3;
-    let obj4;
-    let preset;
-    let resolution;
-    let soundshareEnabled;
-    sourceId = sourceId.sourceId;
-    if (null != sourceId) {
-      let state;
-      obj = MobileGoLiveUpsellExperimentDefault;
-      if (obj.getConfig({ location: "platformHandleStreamStart" }).showMobileGoLiveUpsell) {
-        state = ApplicationStreamingSettingsStore.getState();
-      } else {
-        state = { preset: ApplicationStreamPresets.PRESET_CUSTOM, resolution: 720, fps: 30, soundshareEnabled: true };
-      }
-      ({ preset, resolution, fps, soundshareEnabled } = state);
-      const obj2 = { desktopSettings: obj3, qualityOptions: obj4, context: MediaEngineContextTypes.STREAM };
-      obj3 = { sourceId, sound: soundshareEnabled };
-      obj4 = { preset, resolution, frameRate: fps };
-      const tmp4Result = AudioActionCreatorsDefault;
-      tmp4Result.setGoLiveSource(obj2);
-    } else {
-      const _HermesInternal = HermesInternal;
-      obj.warn("invalid start_stream: both application + display modes were specified (source-id: " + sourceId + ")");
-    }
-  }
-  platformHandleVoiceStateUpdate() {
-
-  }
+class ApplicationStreamingManager extends tmp4 {
 }
 const prototype = ApplicationStreamingManager.prototype;
+prototype["platformShowStreamFull"] = function platformShowStreamFull() {
+  actions_AlertActionCreatorsDefault.openLazy({
+    importer() {
+      return require("asyncRequireImpl")(paths[8], paths.paths).then((result) => {
+        closure_0 = result.default;
+        return (arg0) => {
+          const merged = Object.assign(arg0);
+          return closure_2_6(closure_0, {});
+        };
+      });
+    },
+    isDismissable: false
+  });
+};
+prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sourceId) {
+  sourceId = sourceId.sourceId;
+  if (null != sourceId) {
+    let setGoLiveSource = importDefault;
+    obj = MobileGoLiveUpsellExperimentDefault;
+    if (obj.getConfig({ location: "platformHandleStreamStart" }).showMobileGoLiveUpsell) {
+      state = ApplicationStreamingSettingsStore.getState();
+    } else {
+      state = { preset: ApplicationStreamPresets.PRESET_CUSTOM, resolution: 720, fps: 30, soundshareEnabled: true };
+    }
+    ({ preset, resolution, fps, soundshareEnabled } = state);
+    setGoLiveSource = setGoLiveSource(8079).setGoLiveSource;
+    const obj2 = { desktopSettings: null, qualityOptions: null, context: null };
+    const obj3 = { sourceId, sound: soundshareEnabled };
+    obj2.desktopSettings = obj3;
+    const obj4 = { preset, resolution, frameRate: fps };
+    obj2.qualityOptions = obj4;
+    obj2.context = MediaEngineContextTypes.STREAM;
+    setGoLiveSource(obj2);
+    const setGoLiveSourceResult = setGoLiveSource(8079);
+  } else {
+    const _HermesInternal = HermesInternal;
+    obj.warn("invalid start_stream: both application + display modes were specified (source-id: " + sourceId + ")");
+  }
+};
+prototype["platformHandleVoiceStateUpdate"] = function platformHandleVoiceStateUpdate() {
+
+};
 const applicationStreamingManager = new ApplicationStreamingManager();
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/native/ApplicationStreamingManager.tsx");
 
 export default applicationStreamingManager;

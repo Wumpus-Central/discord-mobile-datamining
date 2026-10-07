@@ -3,7 +3,6 @@
 // Module 5576 (SelectedChannelActionCreatorsAdditional)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import v1 from "v1" /* 1266 */;
-import StageChannelsConstants from "StageChannelsConstants" /* 5578 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import GuildVerificationStore from "GuildVerificationStore" /* 5577 */;
@@ -12,31 +11,28 @@ import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import UserStore from "UserStore" /* 1377 */;
 import VoiceStateStore from "VoiceStateStore" /* 4915 */;
-import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, importDefault;
 
-const STAGE_BOOSTING_SHEET_KEY = StageChannelsConstants.STAGE_BOOSTING_SHEET_KEY;
+require = fn;
+const STAGE_BOOSTING_SHEET_KEY = fn(5578).STAGE_BOOSTING_SHEET_KEY;
+const size = fn(2);
 let result = size.fileFinishedImporting("actions/SelectedChannelActionCreatorsAdditional.native.tsx");
 
 export const getChannelSelectionOrigin = function getChannelSelectionOrigin() {
-  let channelId;
   let guildId = SelectedGuildStore.getGuildId();
   if (guildId == null) {
     guildId = null;
   }
-  const obj = { fromGuildId: guildId, fromChannelId: channelId };
-  channelId = SelectedChannelStore.getChannelId(guildId, false);
+  const obj = { fromGuildId: guildId, fromChannelId: null };
+  let channelId = SelectedChannelStore.getChannelId(guildId, false);
   if (channelId == null) {
     channelId = null;
   }
+  obj.fromChannelId = channelId;
   return obj;
 };
 export const selectVoiceChannelAdditional = function selectVoiceChannelAdditional(id, guildId) {
-  let channelId;
-  let flag;
-  let flag2;
   _require = id;
   importDefault = guildId;
   if (flag === undefined) {
@@ -62,38 +58,35 @@ export const selectVoiceChannelAdditional = function selectVoiceChannelAdditiona
   if (null != currentUser) {
     if (null != channel) {
       const obj9 = require("ChannelUtils");
-      const isChannelFullResult = obj9.isChannelFull(channel, VoiceStateStore, flag3);
       const check = flag4.getCheck(channel.guild_id);
       if (!check.canChat) {
-        const tmp17Result = require("StageChannelPermissionUtils");
         if (!tmp17Result.canLurkerListen(channel)) {
-          const tmp17Result3 = require("ToastUtils");
-          return tmp17Result3.unverifiedVoiceGate(check);
+          return tmp17(tmp18[11]).unverifiedVoiceGate(check);
         }
+        tmp17Result = tmp17(tmp18[10]);
       }
-      require("canJoinVoiceChannel")(channel, PermissionStore);
+      const isChannelFullResult = require("ChannelUtils").isChannelFull(channel, VoiceStateStore, flag3);
       const tmp2 = importDefault;
       if (isChannelFullResult) {
         if (channel.isGuildStageVoice()) {
-          const tmp17Result4 = require("StageMediaHooks");
           if (tmp17Result4.getStageHasMedia(channel.id)) {
             let obj2 = { channel };
-            const tmp2Result = tmp2(flag[14]);
-            tmp2Result.openLazy(require("asyncRequire")(flag[15], flag.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
+            tmp2(tmp18[14]).openLazy(tmp17(tmp18[16])(tmp18[15], tmp18.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
+            const tmp2Result = tmp2(tmp18[14]);
           }
+          tmp17Result4 = tmp17(tmp18[13]);
         }
       }
+      const tmp4 = require("canJoinVoiceChannel")(channel, PermissionStore);
     }
     if (flag) {
+      const result = require("applyBackgroundOption").applyInitialVideoBackgroundOption();
       const obj6 = require("applyBackgroundOption");
-      const result = obj6.applyInitialVideoBackgroundOption();
     }
     require("collectCallFeedback")(() => {
-      const obj = v1;
-      const v4Result = obj.v4();
+      const v4Result = v1.v4();
       const obj2 = DispatcherDefault;
-      const obj3 = { type: "VOICE_CHANNEL_SELECT", guildId, channelId, currentVoiceChannelId: SelectedChannelStore.getVoiceChannelId(), video: flag, stream: flag2, lockVoiceStateForResume: flag3, joinVoiceId: v4Result, bypassIdleUpdate: flag4 };
-      obj2.dispatch(obj3);
+      obj2.dispatch({ type: "VOICE_CHANNEL_SELECT", guildId, channelId, currentVoiceChannelId: SelectedChannelStore.getVoiceChannelId(), video: flag, stream: flag2, lockVoiceStateForResume: flag3, joinVoiceId: v4Result, bypassIdleUpdate: flag4 });
     }, id, flag2, flag);
   }
 };

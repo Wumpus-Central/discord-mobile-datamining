@@ -1,10 +1,10 @@
-// === Module 6001: react ===
+// === Module 6001: TableRowGroupContext ===
 
-// Module 6001 (react)
-import react from "react" /* 19 */;
+// Module 6001 (TableRowGroupContext)
+import _mod19 from "module_19" /* 19 */;
 import size from "module_2" /* 2 */;
 
-const context = react.createContext(false);
+const context = _mod19.createContext(false);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowGroupContext.native.tsx");
 
 export const TableRowGroupContext = context;

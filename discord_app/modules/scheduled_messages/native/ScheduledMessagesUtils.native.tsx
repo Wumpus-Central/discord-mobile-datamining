@@ -1,411 +1,288 @@
 // === Module 11854: ScheduledMessagesUtils ===
 
 // Module 11854 (ScheduledMessagesUtils)
-import intl3 from "intl" /* 1126 */;
-import asyncRequire from "asyncRequire" /* 1987 */;
+import util from "util" /* 1126 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import _modDef4467 from "module_4467" /* 4467 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
 import DraftActionCreatorsDefault from "DraftActionCreators" /* 7416 */;
 import ScheduledMessageUtils from "ScheduledMessageUtils" /* 7486 */;
-import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import size from "module_2" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
-let _require, closure_2, closure_3, closure_4;
 
-function onSelect(toISOString) {
-  return id(toISOString.toISOString());
-}
+require = fn;
 function editScheduledMessage() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_5.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-let obj = function _editScheduledMessage() {
-  obj = _asyncToGenerator(async (scheduledMessageId, arg1) => {
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
-    return (async (arg0, value) => {
-      if (c7 === 2) {
-        c7 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+let closure_5 = async function _editScheduledMessage() {
+  closure_1 = arg1;
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              return { value, done: true };
-            } else {
-              closure_3 = tmp;
-              closure_2 = tmp4;
-              c5 = 1;
-              const obj5 = { scheduledMessageId };
-              const updateScheduledMessage = require("ScheduledMessageActionCreators").updateScheduledMessage;
-              require("ScheduledMessageActionCreators");
-              const merged = Object.assign(closure_1);
-              c6 = 2;
-              c7 = 1;
-              const obj6 = { value: updateScheduledMessage(obj5), done: false };
-              return obj6;
-            }
-          } else if (1 === c6) {
-            c5 = 0;
-            scheduledMessageId = closure_4;
-            const obj3 = closure_131_0(closure_131_2[11]);
-            const result = obj3.showScheduledMessageEditFailureToast(scheduledMessageId.message);
-            c7 = 3;
-            return { value: false, done: true };
-          } else if (arg0 === 1) {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
             c7 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c5 = 0;
             c7 = 3;
-            return { value, done: true };
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
-            obj = closure_131_0(closure_131_2[11]);
-            const result1 = obj.showScheduledMessageEditSuccessToast();
-            c5 = 0;
-            c7 = 3;
-            return { value: true, done: true };
+            closure_3 = tmp3;
+            closure_2 = tmp7;
+            c5 = 1;
+            const obj6 = { scheduledMessageId };
+            const merged = Object.assign(closure_1);
+            c6 = 2;
+            c7 = 1;
+            const obj7 = { value: require("ScheduledMessageActionCreators").updateScheduledMessage(obj6), done: false };
+            return obj7;
           }
-        } catch (tmp24) {
-          closure_4 = tmp24;
-          if (0 === c5) {
-            c7 = 3;
-            throw tmp24;
-          } else {
-            c6 = 1;
-          }
-        }
-      }
-    })();
-  });
-  return obj(...arguments);
-};
-obj = function _cancelScheduledMessage() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let message = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
-    return (async (arg0) => {
-      let obj4;
-      if (c6 === 2) {
-        c6 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
+        } else if (1 === tmp7) {
+          c5 = 0;
+          closure_130_0 = closure_4;
+          const result = closure_131_0(closure_131_2[11]).showScheduledMessageEditFailureToast(closure_130_0.message);
+          c7 = 3;
+          return { value: false, done: true };
+        } else if (arg0 === 1) {
+          c7 = 3;
           throw value;
         } else if (arg0 === 2) {
-          return { value, done: true };
+          c5 = 0;
+          c7 = 3;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
-          return { value: "IconComponent", done: null };
+          const result1 = closure_131_0(closure_131_2[11]).showScheduledMessageEditSuccessToast();
+          c5 = 0;
+          c7 = 3;
+          return { value: true, done: true };
         }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              return { value, done: true };
-            } else {
-              closure_2 = tmp;
-              closure_1 = tmp4;
-              c4 = 1;
-              c5 = 2;
-              c6 = 1;
-              const obj6 = { value: obj4.deleteScheduledMessage(message), done: false };
-              obj4 = require("ScheduledMessageActionCreators");
-              return obj6;
-            }
-          } else {
-            if (1 === c5) {
-              c4 = 0;
-              message = closure_3;
-              const obj3 = closure_130_0(closure_130_2[11]);
-              const result = obj3.showScheduleMessageDeleteFailureToast(message.message);
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 0;
-              c6 = 3;
-              return { value, done: true };
-            } else {
-              obj = closure_130_0(closure_130_2[11]);
-              const result1 = obj.showScheduleMessageDeleteSuccessToast();
-              c4 = 0;
-            }
-            c6 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp20) {
-          closure_3 = tmp20;
-          if (0 === c4) {
-            c6 = 3;
-            throw tmp20;
-          } else {
-            c5 = 1;
-          }
+      } catch (tmp26) {
+        closure_4 = tmp26;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp26;
+        } else {
+          c6 = tmp;
         }
       }
-    })();
-  });
-  return obj(...arguments);
+    }
+  })();
 };
-obj = function _sendScheduledMessageNow() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let message = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
-    return (async (arg0) => {
-      let obj4;
-      if (c6 === 2) {
-        c6 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              return { value, done: true };
-            } else {
-              closure_2 = tmp;
-              closure_1 = tmp4;
-              c4 = 1;
-              c5 = 2;
-              c6 = 1;
-              const obj6 = { value: obj4.sendScheduledMessageNow(message), done: false };
-              obj4 = require("ScheduledMessageActionCreators");
-              return obj6;
-            }
-          } else {
-            if (1 === c5) {
-              c4 = 0;
-              message = closure_3;
-              const obj3 = closure_130_0(closure_130_2[11]);
-              const result = obj3.showScheduleMessageSentNowFailureToast(message.message);
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 0;
-              c6 = 3;
-              return { value, done: true };
-            } else {
-              obj = closure_130_0(closure_130_2[11]);
-              const result1 = obj.showScheduleMessageSentNowSuccessToast();
-              c4 = 0;
-            }
-            c6 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp20) {
-          closure_3 = tmp20;
-          if (0 === c4) {
-            c6 = 3;
-            throw tmp20;
-          } else {
-            c5 = 1;
-          }
-        }
-      }
-    })();
-  });
-  return obj(...arguments);
+let closure_6 = async function _cancelScheduledMessage(arg0) {
+  closure_2 = tmp3;
+  await require("ScheduledMessageActionCreators").deleteScheduledMessage(closure_0);
+  if (1 === tmp7) {
+    c4 = 0;
+    closure_129_0 = closure_3;
+    const result = closure_130_0(closure_130_2[11]).showScheduleMessageDeleteFailureToast(closure_129_0.message);
+    c6 = 3;
+    closure_130_0(closure_130_2[11]);
+  } else if (arg0 === 1) {
+    c6 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    const result1 = closure_130_0(closure_130_2[11]).showScheduleMessageDeleteSuccessToast();
+    c4 = 0;
+    closure_130_0(closure_130_2[11]);
+  }
+  return value;
+};
+let closure_7 = async function _sendScheduledMessageNow(arg0) {
+  closure_2 = tmp3;
+  await require("ScheduledMessageActionCreators").sendScheduledMessageNow(closure_0);
+  if (1 === tmp7) {
+    c4 = 0;
+    closure_129_0 = closure_3;
+    const result = closure_130_0(closure_130_2[11]).showScheduleMessageSentNowFailureToast(closure_129_0.message);
+    c6 = 3;
+    closure_130_0(closure_130_2[11]);
+  } else if (arg0 === 1) {
+    c6 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    const result1 = closure_130_0(closure_130_2[11]).showScheduleMessageSentNowSuccessToast();
+    c4 = 0;
+    closure_130_0(closure_130_2[11]);
+  }
+  return value;
 };
 function openSendTimeActionSheet(title) {
-  let channelId;
-  let defaultValue;
-  let entryPoint;
-  let intl;
-  let intl2;
-  let isEditing;
-  let items;
-  let items2;
-  let key;
-  let onClear;
   title = title.title;
-  ({ startDate: importDefault, scheduledMessageId: dependencyMap, onSelect: _asyncToGenerator, onClear } = title);
-  const tmp2 = title;
+  ({ startDate: importDefault, scheduledMessageId: dependencyMap, onSelect: asyncGeneratorStep, onClear } = title);
   ({ key, entryPoint, isEditing, channelId } = title);
-  obj = title(7486);
-  const result = obj.trackScheduledMessageTimePickerOpened({ entryPoint, isEditing, channelId });
-  let obj2 = { key, header: { title }, hasIcons: false, options: items };
-  const showSimpleActionSheet = title(6700).showSimpleActionSheet;
-  title(6700);
-  let obj3 = title(7486);
-  const presetScheduledTimes = obj3.getPresetScheduledTimes();
-  items = [
+  const result = title(7486).trackScheduledMessageTimePickerOpened({ entryPoint, isEditing, channelId });
+  let obj = title(7486);
+  let obj3 = { key, header: { title }, hasIcons: false, options: null };
+  let obj2 = title(6700);
+  const presetScheduledTimes = title(7486).getPresetScheduledTimes();
+  const items = [
     ...presetScheduledTimes.map((label) => {
-      let value;
       title = label.value;
       return {
         label: label.label,
         onPress() {
-          return _asyncToGenerator(title);
+          return asyncGeneratorStep(value);
         }
       };
     })
   ];
-  let obj4 = {
-    label: intl.string(title(1126).t.stHooC),
-    onPress() {
-      let obj3;
-      let obj4;
-      obj = ActionSheetActionCreatorsDefault;
-      obj.hideActionSheet();
-      const pushLazy = ModalActionCreatorsDefault.pushLazy;
-      ModalActionCreatorsDefault;
-      const obj2 = {
-        title,
-        defaultValue: importDefault,
-        minimumDate: obj3.getEarliestScheduledTime(),
-        maximumDate: obj4.getLatestScheduledTime(dependencyMap),
-        getError(isBefore) {
-          obj = title(dependencyMap[4]);
-          return obj.getScheduledTimeError(isBefore, closure_1_2);
-        },
-        createReminder(arg0) {
-          return closure_1_3(_modDef4467(arg0));
-        },
-        onClose: ModalActionCreatorsDefault.pop
-      };
-      const tmp3 = asyncRequire(11356, dependencyMap.paths);
-      obj3 = ScheduledMessageUtils;
-      obj4 = ScheduledMessageUtils;
-      pushLazy(tmp3, obj2, "scheduled-message-custom-time", { presentation: "modal" });
-    }
+  const obj5 = { label: null, onPress: null };
+  const intl = title(1126).intl;
+  obj5.label = intl.string(title(1126).t.stHooC);
+  obj5.onPress = function onPress() {
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+    const obj2 = ModalActionCreatorsDefault;
+    const obj3 = { title, defaultValue, minimumDate: null, maximumDate: null, getError: null, createReminder: null, onClose: null };
+    const tmp2 = asyncRequireImpl(11356, dependencyMap.paths);
+    obj3.minimumDate = ScheduledMessageUtils.getEarliestScheduledTime();
+    obj3.maximumDate = ScheduledMessageUtils.getLatestScheduledTime(closure_1_2);
+    obj3.getError = function getError(isBefore) {
+      return title(7486).getScheduledTimeError(isBefore, dependencyMap);
+    };
+    obj3.createReminder = function createReminder(arg0) {
+      return closure_1_3(defaultValue(4467)(arg0));
+    };
+    obj3.onClose = ModalActionCreatorsDefault.pop;
+    obj2.pushLazy(tmp2, obj3, "scheduled-message-custom-time", { presentation: "modal" });
   };
-  intl = title(1126).intl;
-  items[tmp6] = obj4;
+  items[tmp4] = obj5;
   if (null != onClear) {
-    const obj5 = { label: intl2.string(tmp2(1126).t.VkKicb), onPress: onClear };
-    intl2 = tmp2(1126).intl;
-    const items1 = [obj5];
-    items2 = items1;
+    const obj6 = { label: null, onPress: null };
+    const intl2 = tmp(1126).intl;
+    obj6.label = intl2.string(tmp(1126).t.VkKicb);
+    obj6.onPress = onClear;
+    const items1 = [obj6];
+    let items2 = items1;
   } else {
     items2 = [];
   }
-  HermesBuiltin.arraySpread(items, items2, tmp6 + 1);
-  const result1 = showSimpleActionSheet(obj2);
+  HermesBuiltin.arraySpread(items2, tmp4 + 1);
+  obj3.options = items;
+  const result1 = obj2.showSimpleActionSheet(obj3);
+  let obj4 = title(7486);
 }
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessagesUtils.native.tsx");
 
 export const openScheduleMessageActionSheet = function openScheduleMessageActionSheet(id, COMPOSER_BAR, scheduledTimestamp) {
-  let channelId;
-  let closure_129_0;
-  let currentTimestamp;
-  let defaultScheduledTime;
-  let entryPoint;
-  let intl;
-  let onClear;
   _require = id;
-  obj = {
+  const obj = {
     onSelect(scheduledTimestamp) {
-      obj = DraftActionCreatorsDefault;
-      const obj2 = { scheduledTimestamp };
-      return obj.changeScheduledMessage(id, obj2);
+      return DraftActionCreatorsDefault.changeScheduledMessage(closure_0, { scheduledTimestamp });
     },
     currentTimestamp: scheduledTimestamp,
     entryPoint: COMPOSER_BAR,
     channelId: id
   };
-  ({ onSelect: closure_129_0, currentTimestamp } = obj);
-  let obj2 = { key: "schedule-message", title: intl.string(require("intl").t["3+ii4F"]), startDate: defaultScheduledTime, onSelect, onClear, entryPoint, isEditing: null != currentTimestamp, channelId };
+  ({ onSelect: closure_0, currentTimestamp } = obj);
+  const obj2 = { key: "schedule-message", title: null, startDate: null, onSelect: null, onClear: null, entryPoint: null, isEditing: null, channelId: null };
   ({ onClear, entryPoint, channelId } = obj);
-  intl = require("intl").intl;
-  const tmp2 = _require;
+  const intl = require("util").intl;
+  obj2.title = intl.string(require("util").t["3+ii4F"]);
   if (null != currentTimestamp) {
-    defaultScheduledTime = _modDef4467(currentTimestamp);
+    let defaultScheduledTime = _modDef4467(currentTimestamp);
   } else {
+    defaultScheduledTime = tmp2(7486).getDefaultScheduledTime();
     const tmp2Result = tmp2(7486);
-    defaultScheduledTime = tmp2Result.getDefaultScheduledTime();
   }
+  obj2.startDate = defaultScheduledTime;
+  obj2.onSelect = function onSelect(toISOString) {
+    return id(toISOString.toISOString());
+  };
+  obj2.onClear = onClear;
+  obj2.entryPoint = entryPoint;
+  obj2.isEditing = null != currentTimestamp;
+  obj2.channelId = channelId;
   openSendTimeActionSheet(obj2);
+  tmp2 = _require;
 };
 export const pickScheduledMessageTime = function pickScheduledMessageTime(arg0) {
-  let channelId;
-  let closure_129_0;
-  let currentTimestamp;
-  let defaultScheduledTime;
-  let entryPoint;
-  let intl;
-  let onClear;
-  ({ onSelect: closure_129_0, currentTimestamp } = arg0);
-  obj = { key: "schedule-message", title: intl.string(intl3.t["3+ii4F"]), startDate: defaultScheduledTime, onSelect, onClear, entryPoint, isEditing: null != currentTimestamp, channelId };
+  ({ onSelect: require, currentTimestamp } = arg0);
+  const obj = { key: "schedule-message", title: null, startDate: null, onSelect: null, onClear: null, entryPoint: null, isEditing: null, channelId: null };
   ({ onClear, entryPoint, channelId } = arg0);
-  intl = intl3.intl;
+  const intl = util.intl;
+  obj.title = intl.string(util.t["3+ii4F"]);
   if (null != currentTimestamp) {
-    defaultScheduledTime = _modDef4467(currentTimestamp);
+    let defaultScheduledTime = _modDef4467(currentTimestamp);
   } else {
+    defaultScheduledTime = ScheduledMessageUtils.getDefaultScheduledTime();
     const tmp2Result = ScheduledMessageUtils;
-    defaultScheduledTime = tmp2Result.getDefaultScheduledTime();
   }
+  obj.startDate = defaultScheduledTime;
+  obj.onSelect = function onSelect(toISOString) {
+    return id(toISOString.toISOString());
+  };
+  obj.onClear = onClear;
+  obj.entryPoint = entryPoint;
+  obj.isEditing = null != currentTimestamp;
+  obj.channelId = channelId;
   openSendTimeActionSheet(obj);
 };
 export const showScheduledMessagesModal = function showScheduledMessagesModal() {
-  obj = ModalActionCreatorsDefault;
-  obj.pushLazy(asyncRequire(11855, dependencyMap.paths), {}, "scheduled-messages-modal", { presentation: "modal" });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11855, dependencyMap.paths), {}, "scheduled-messages-modal", { presentation: "modal" });
 };
 export const openScheduledMessageEditContentModal = function openScheduledMessageEditContentModal(scheduledMessage) {
-  obj = ModalActionCreatorsDefault;
-  const obj2 = { scheduledMessage };
-  obj.pushLazy(asyncRequire(11865, dependencyMap.paths), obj2, "scheduled-message-edit-content", { presentation: "modal" });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11865, dependencyMap.paths), { scheduledMessage }, "scheduled-message-edit-content", { presentation: "modal" });
 };
 export const openRescheduleMessageActionSheet = function openRescheduleMessageActionSheet(scheduledMessageId, sendAtTimestamp, channelId) {
-  let intl;
   _require = scheduledMessageId;
-  obj = {
-    key: "reschedule-message",
-    title: intl.string(require("intl").t.jbdHj3),
-    startDate: _modDef4467(sendAtTimestamp),
-    scheduledMessageId,
-    onSelect(toISOString) {
-      obj = { scheduledTimestamp: toISOString.toISOString() };
-      return editScheduledMessage(scheduledMessageId, obj);
-    },
-    entryPoint: require("ScheduledMessageTypes").ScheduledMessageEntryPoint.INBOX,
-    isEditing: true,
-    channelId
+  const obj = { key: "reschedule-message", title: null, startDate: null, scheduledMessageId: null, onSelect: null, entryPoint: null, isEditing: true, channelId: null };
+  const intl = require("util").intl;
+  obj.title = intl.string(require("util").t.jbdHj3);
+  obj.startDate = _modDef4467(sendAtTimestamp);
+  obj.scheduledMessageId = scheduledMessageId;
+  obj.onSelect = function onSelect(toISOString) {
+    return editScheduledMessage(closure_0, { scheduledTimestamp: toISOString.toISOString() });
   };
-  intl = require("intl").intl;
+  obj.entryPoint = require("ScheduledMessageTypes").ScheduledMessageEntryPoint.INBOX;
+  obj.channelId = channelId;
   openSendTimeActionSheet(obj);
 };
 export { editScheduledMessage };
 export const cancelScheduledMessage = function cancelScheduledMessage() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_6.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const sendScheduledMessageNow = function sendScheduledMessageNow() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_7.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

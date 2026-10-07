@@ -1,193 +1,176 @@
 // === Module 16694: ConjureNativeStepImages ===
 
 // Module 16694 (ConjureNativeStepImages)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 576 */;
+import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import openMediaModal from "openMediaModal" /* 7944 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 12923 */;
 import useConjureAttachmentImage from "useConjureAttachmentImage" /* 16678 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
-import createStyles_mod from "createStyles" /* 4896 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import size_mod from "module_2" /* 2 */;
+import noop from "module_19" /* 19 */;
 
-let onOpen;
-
-let c3;
-let closure_4;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-({ ActivityIndicator: c3, Image: closure_4, Pressable: hasOwnProperty, ScrollView: metroRequire, View: metroImportDefault } = react_native);
-const getAttachmentUrl = ConjureConnectionStore.getAttachmentUrl;
-const jsx = Fragment.jsx;
-let createStyles = createStyles_mod;
-let obj = { strip: obj2, thumb: obj3, placeholder: obj4 };
-obj2 = { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 };
-createStyles = createStyles.createStyles;
-obj3 = { height: 96, aspectRatio: 1.6, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
-obj4 = { height: 96, aspectRatio: 1.6, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, alignItems: "center", justifyContent: "center" };
-let closure_10 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: c3, Image: closure_4, Pressable: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const getAttachmentUrl = fn(12923).getAttachmentUrl;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { strip: { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 }, thumb: null, placeholder: null };
+let obj3 = { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 };
+obj2.thumb = { height: 96, aspectRatio: 1.6, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+let obj4 = { height: 96, aspectRatio: 1.6, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+obj2.placeholder = { height: 96, aspectRatio: 1.6, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, alignItems: "center", justifyContent: "center" };
+let closure_10 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((image) => {
-  let handleError;
-  let src;
-  const obj = react2;
-  const cResult = obj.c(12);
-  image = image.image;
+  const cResult = c.c(12);
+  let name = image.image;
   onOpen = image.onOpen;
-  const projectId = image.projectId;
-  const tmp2 = closure_10();
-  const obj2 = useConjureAttachmentImage;
-  const conjureAttachmentImage = obj2.useConjureAttachmentImage(projectId, image.id);
+  let thumb = closure_10();
+  const conjureAttachmentImage = useConjureAttachmentImage.useConjureAttachmentImage(image.projectId, name.id);
   ({ src, handleError } = conjureAttachmentImage);
-  if (cResult[0] === image) {
-    let tmp5;
+  if (cResult[0] === name) {
     if (cResult[1] === onOpen) {
-      tmp5 = cResult[2];
+      let tmp4 = cResult[2];
     }
-    let tmp7 = null;
-    if (!tmp4) {
-      let tmp11;
+    if (tmp3) {
+      return null;
+    } else {
       if (cResult[3] === handleError) {
         if (cResult[4] === src) {
-          if (cResult[5] === tmp2.placeholder) {
-            let tmp8;
-            if (cResult[6] === tmp2.thumb) {
-              tmp8 = cResult[7];
-            }
-            if (cResult[8] === tmp5) {
-              if (cResult[9] === image.name) {
-                let tmp15;
-                if (cResult[10] === tmp8) {
-                  tmp15 = cResult[11];
+          if (cResult[5] === thumb.placeholder) {
+            if (cResult[6] === thumb.thumb) {
+              if (cResult[8] === tmp4) {
+                if (cResult[9] === name.name) {
                 }
-                tmp7 = tmp15;
               }
+              const obj3 = { onPress: tmp4, accessibilityRole: "imagebutton", accessibilityLabel: name.name, children: cResult[7] };
+              const tmp18 = <hasOwnProperty onPress={tmp4} accessibilityRole="imagebutton" accessibilityLabel={name.name}>{cResult[7]}</hasOwnProperty>;
+              cResult[8] = tmp4;
+              name = name.name;
+              cResult[9] = name;
+              cResult[10] = cResult[7];
+              cResult[11] = tmp18;
             }
-            const tmp18 = <hasOwnProperty onPress={tmp5} accessibilityRole="imagebutton" accessibilityLabel={image.name}>{tmp8}</hasOwnProperty>;
-            cResult[8] = tmp5;
-            cResult[9] = image.name;
-            cResult[10] = tmp8;
-            cResult[11] = tmp18;
-            tmp15 = tmp18;
           }
         }
       }
       if (null == src) {
-        tmp11 = <metroImportDefault style={tmp2.placeholder}><_false size="small" /></metroImportDefault>;
+        const obj4 = { style: thumb.placeholder, children: <React3 size="small" /> };
+        let tmp10 = <React5 style={thumb.placeholder}><React3 size="small" /></React5>;
       } else {
-        tmp11 = <React3 source={{ uri: src }} style={tmp2.thumb} resizeMode="cover" onError={handleError} />;
+        const obj5 = { source: null, style: null, resizeMode: "cover", onError: null };
         const obj6 = { uri: src };
+        obj5.source = obj6;
+        obj5.style = thumb.thumb;
+        obj5.onError = handleError;
+        tmp10 = <React4 source={null} style={null} resizeMode="cover" onError={null} />;
       }
       cResult[3] = handleError;
       cResult[4] = src;
-      cResult[5] = tmp2.placeholder;
-      cResult[6] = tmp2.thumb;
-      cResult[7] = tmp11;
-      tmp8 = tmp11;
+      src = thumb.placeholder;
+      cResult[5] = src;
+      thumb = thumb.thumb;
+      cResult[6] = thumb;
+      cResult[7] = tmp10;
     }
-    return tmp7;
   }
   const fn = function n() {
-    return onOpen(image);
+    return onOpen(name);
   };
-  cResult[0] = image;
+  cResult[0] = name;
   cResult[1] = onOpen;
   cResult[2] = fn;
-  tmp5 = fn;
+  tmp4 = fn;
 }) : ((image) => {
-  let gone;
-  let handleError;
   image = image.image;
   onOpen = image.onOpen;
-  const projectId = image.projectId;
-  const tmp = closure_10();
-  const obj = useConjureAttachmentImage;
-  const conjureAttachmentImage = obj.useConjureAttachmentImage(projectId, image.id);
+  let tmp = closure_10();
+  const conjureAttachmentImage = useConjureAttachmentImage.useConjureAttachmentImage(image.projectId, image.id);
   const src = conjureAttachmentImage.src;
   const items = [image, onOpen];
   ({ gone, handleError } = conjureAttachmentImage);
-  let tmp5Result2 = null;
-  if (!gone) {
-    let tmp5Result;
+  if (gone) {
+    return null;
+  } else {
+    const obj2 = { onPress: tmp3, accessibilityRole: "imagebutton", accessibilityLabel: image.name, children: null };
     if (null == src) {
-      tmp5Result = <metroImportDefault style={tmp.placeholder}><_false size="small" /></metroImportDefault>;
+      const obj3 = { style: tmp.placeholder, children: null };
+      tmp = React3;
+      obj3.children = <React3 size="small" />;
+      let tmp4Result = <React5 style={tmp.placeholder}>{null}</React5>;
     } else {
-      tmp5Result = <React3 source={{ uri: src }} style={tmp.thumb} resizeMode="cover" onError={handleError} />;
+      const obj4 = { source: null, style: null, resizeMode: "cover", onError: null };
       const obj5 = { uri: src };
+      obj4.source = obj5;
+      obj4.style = tmp.thumb;
+      obj4.onError = handleError;
+      tmp4Result = <React4 source={null} style={null} resizeMode="cover" onError={null} />;
     }
-    tmp5Result2 = <hasOwnProperty onPress={tmp3} accessibilityRole="imagebutton" accessibilityLabel={image.name}>{tmp5Result}</hasOwnProperty>;
+    obj2.children = tmp4Result;
+    <hasOwnProperty onPress={tmp3} accessibilityRole="imagebutton" accessibilityLabel={image.name}>{null}</hasOwnProperty>;
   }
-  return tmp5Result2;
 });
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
-  let images;
-  let obj = projectId(images[7]);
-  const cResult = obj.c(13);
+ReactCompilerGating = fn(558);
+let obj5 = { height: 96, aspectRatio: 1.6, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, alignItems: "center", justifyContent: "center" };
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureNativeStepImages.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
+  const cResult = projectId(images[7]).c(13);
   projectId = projectId.projectId;
   images = projectId.images;
   const tmp2 = closure_10();
   if (cResult[0] === images) {
-    let tmp3;
     if (cResult[1] === projectId) {
-      tmp3 = cResult[2];
+      let tmp3 = cResult[2];
     }
     onOpen = tmp3;
     if (0 === images.length) {
       return null;
     } else {
-      let tmp4;
       if (cResult[3] === tmp3) {
         if (cResult[4] === images) {
           if (cResult[5] === projectId) {
-            tmp4 = cResult[6];
-          }
-          if (cResult[10] === tmp2.strip) {
-            let tmp7;
-            if (cResult[11] === tmp4) {
-              tmp7 = cResult[12];
+            if (cResult[10] === tmp2.strip) {
+              if (cResult[11] === tmp4) {
+                let tmp8 = cResult[12];
+              }
+              return tmp8;
             }
-            return tmp7;
-          }
-          class C {
-            constructor(image) {
-              return <closure_11 key={image.id} projectId={projectId} image={image} onOpen={onOpen} />;
+            class C {
+              constructor(arg0) {
+                obj = { projectId, image: projectId, onOpen: closure_2 };
+                return jsx(f74823, obj, projectId.id);
+              }
             }
+            const obj2 = { horizontal: true, showsHorizontalScrollIndicator: false, contentContainerStyle: tmp12, children: cResult[6] };
+            const tmp10 = <closure_6 horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={tmp12}>{cResult[6]}</closure_6>;
+            cResult[10] = tmp2.strip;
+            cResult[11] = cResult[6];
+            cResult[12] = tmp10;
+            tmp8 = tmp10;
           }
-          const tmp9 = <closure_6 horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={tmp11}>{tmp4}</closure_6>;
-          cResult[10] = tmp2.strip;
-          cResult[11] = tmp4;
-          cResult[12] = tmp9;
-          tmp7 = tmp9;
         }
       }
       if (cResult[7] === tmp3) {
-        let tmp5;
         if (cResult[8] === projectId) {
-          tmp5 = cResult[9];
+          let tmp5 = cResult[9];
         }
         let mapped = images.map(tmp5);
         class C {
-          constructor(image) {
-            return <closure_11 key={image.id} projectId={projectId} image={image} onOpen={onOpen} />;
+          constructor(arg0) {
+            obj = { projectId, image: projectId, onOpen: closure_2 };
+            return jsx(f74823, obj, projectId.id);
           }
         }
         cResult[3] = tmp3;
         cResult[4] = images;
         cResult[5] = projectId;
         cResult[6] = mapped;
-        tmp4 = mapped;
       }
       class C {
-        constructor(image) {
-          return <closure_11 key={image.id} projectId={projectId} image={image} onOpen={onOpen} />;
+        constructor(arg0) {
+          obj = { projectId, image: projectId, onOpen: closure_2 };
+          return jsx(f74823, obj, projectId.id);
         }
       }
       cResult[7] = tmp3;
@@ -197,18 +180,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     }
   }
   const fn = function n(arg0) {
-    let closure_1;
     const id = arg0;
     images = images.findIndex((id) => id.id === id.id);
-    const allPromises = Promise.all(images.map((id) => getAttachmentUrl(id, id.id)));
-    allPromises.then((arr) => {
+    Promise.all(images.map((id) => getAttachmentUrl(closure_0, id.id))).then((arr) => {
       const mapped = arr.map((uri, mediaIndex) => {
-        size = { uri, mediaIndex, width: 1280, height: 800, accessoryType: "embed", description: closure_1_1[mediaIndex].name, disableDownload: true };
+        const size = { uri, mediaIndex, width: 1280, height: 800, accessoryType: "embed", description: closure_1_1[mediaIndex].name, disableDownload: true };
         return size;
       });
       const obj = openMediaModal;
-      const obj2 = { initialSources: mapped, initialIndex: Math.max(0, closure_1), analyticsSource: "VibegrationsChat", shareable: false, disableDownload: true, disableMediaOverlayButton: true, disableMediaOverlayFooter: true };
-      obj.openMediaModal(obj2);
+      obj.openMediaModal({ initialSources: mapped, initialIndex: Math.max(0, closure_1), analyticsSource: "VibegrationsChat", shareable: false, disableDownload: true, disableMediaOverlayButton: true, disableMediaOverlayFooter: true });
     }, () => {
 
     });
@@ -217,36 +197,30 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   cResult[1] = projectId;
   cResult[2] = fn;
   tmp3 = fn;
+  let obj = projectId(images[7]);
 }) : ((projectId) => {
   projectId = projectId.projectId;
   let images = projectId.images;
   onOpen = undefined;
   const items = [images, projectId];
-  const tmp = closure_10();
   onOpen = onOpen.useCallback((arg0) => {
-    let closure_1;
     const id = arg0;
     images = images.findIndex((id) => id.id === id.id);
-    const allPromises = Promise.all(images.map((id) => getAttachmentUrl(id, id.id)));
-    allPromises.then((arr) => {
+    Promise.all(images.map((id) => getAttachmentUrl(closure_0, id.id))).then((arr) => {
       const mapped = arr.map((uri, mediaIndex) => {
-        size = { uri, mediaIndex, width: 1280, height: 800, accessoryType: "embed", description: closure_1_1[mediaIndex].name, disableDownload: true };
+        const size = { uri, mediaIndex, width: 1280, height: 800, accessoryType: "embed", description: closure_1_1[mediaIndex].name, disableDownload: true };
         return size;
       });
       const obj = openMediaModal;
-      const obj2 = { initialSources: mapped, initialIndex: Math.max(0, closure_1), analyticsSource: "VibegrationsChat", shareable: false, disableDownload: true, disableMediaOverlayButton: true, disableMediaOverlayFooter: true };
-      obj.openMediaModal(obj2);
+      obj.openMediaModal({ initialSources: mapped, initialIndex: Math.max(0, closure_1), analyticsSource: "VibegrationsChat", shareable: false, disableDownload: true, disableMediaOverlayButton: true, disableMediaOverlayFooter: true });
     }, () => {
 
     });
   }, items);
   let tmp2 = null;
   if (0 !== images.length) {
+    let obj = { horizontal: true, showsHorizontalScrollIndicator: false, contentContainerStyle: tmp.strip, children: images.map((image) => <closure_11 key={image.id} projectId={projectId} image={image} onOpen={onOpen} />) };
     tmp2 = <closure_6 horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={tmp.strip}>{images.map((image) => <closure_11 key={image.id} projectId={projectId} image={image} onOpen={onOpen} />)}</closure_6>;
   }
   return tmp2;
 });
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureNativeStepImages.tsx");
-
-export default tmp4;
