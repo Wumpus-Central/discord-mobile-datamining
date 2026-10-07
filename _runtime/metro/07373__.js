@@ -3,9 +3,12 @@
 // Module 7373
 import _modDef7361 from "module_7361" /* 7361 */;
 
+importDefault = arg2;
+const dependencyMap = arg6;
 const typeSizes = { 1: 1, 2: 1, 3: 2, 4: 4, 5: 8, 7: 1, 9: 4, 10: 8, 13: 4 };
 const obj2 = { BYTE: 1, ASCII: 2, SHORT: 3, LONG: 4, RATIONAL: 5, UNDEFINED: 7, SLONG: 9, SRATIONAL: 10, IFD: 13 };
-const obj3 = {
+
+export default {
   getAsciiValue(items) {
     return items.map((item) => String.fromCharCode(item));
   },
@@ -47,8 +50,6 @@ const obj3 = {
   getTypeSize(LONG) {
     if (undefined === obj2[LONG]) {
       const _Error = Error;
-      const self = this;
-      const self2 = this;
       const error = new Error("No such type found.");
       throw error;
     } else {
@@ -56,5 +57,3 @@ const obj3 = {
     }
   }
 };
-
-export default obj3;

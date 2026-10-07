@@ -1,27 +1,27 @@
 // === Module 738: timedEventsToMeasurements ===
 
 // Module 738 (timedEventsToMeasurements)
-import TRACE_FLAG_NONE from "TRACE_FLAG_NONE" /* 695 */;
+import spanToJSON from "spanToJSON" /* 695 */;
 import _mod699 from "module_699" /* 699 */;
-import CONSOLE_LEVELS from "CONSOLE_LEVELS" /* 700 */;
+import consoleSandbox from "consoleSandbox" /* 700 */;
 import SEMANTIC_ATTRIBUTE_CACHE_HIT from "SEMANTIC_ATTRIBUTE_CACHE_HIT" /* 715 */;
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
-  let activeSpan = self;
-  if (self === undefined) {
-    const obj = TRACE_FLAG_NONE;
-    activeSpan = obj.getActiveSpan();
+  let activeSpan = _getSpanForScopeResult;
+  if (_getSpanForScopeResult === undefined) {
+    activeSpan = spanToJSON.getActiveSpan();
   }
   let rootSpan = activeSpan;
-  if (rootSpan) {
-    const obj3 = TRACE_FLAG_NONE;
-    rootSpan = obj3.getRootSpan(activeSpan);
+  if (activeSpan) {
+    rootSpan = spanToJSON.getRootSpan(activeSpan);
   }
   if (rootSpan) {
     if (_mod699.DEBUG_BUILD) {
-      const debug = CONSOLE_LEVELS.debug;
+      const debug = consoleSandbox.debug;
       const _HermesInternal = HermesInternal;
       debug.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
     }
@@ -32,8 +32,7 @@ export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
   }
 };
 export const timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
-  let tmp = arr;
-  if (tmp) {
+  if (arr) {
     if (0 !== arr.length) {
       let obj = {};
       const item = arr.forEach((attributes) => {

@@ -1,7 +1,7 @@
 // === Module 5725: TabsHost ===
 
 // Module 5725 (TabsHost)
-import TabsHostDefault from "TabsHost" /* 5726 */;
+import _modDef5726 from "module_5726" /* 5726 */;
 
 
-export const TabsHost = TabsHostDefault;
+export const TabsHost = _modDef5726;

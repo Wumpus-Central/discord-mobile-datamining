@@ -3,11 +3,9 @@
 // Module 7986
 const re0 = /[|\\{}()[\]^$+*?.-]/g;
 
-export default function(str) {
+export default (str) => {
   if (typeof str !== "string") {
     const _TypeError = TypeError;
-    const self = this;
-    const self2 = this;
     const typeError = new TypeError("Expected a string");
     throw typeError;
   } else {

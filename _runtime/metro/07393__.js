@@ -8,8 +8,6 @@ export const isMissingNamespaceError = function isMissingNamespaceError(message)
   let num = 0;
   if (0 < items.length) {
     const _RegExp = RegExp;
-    const self = this;
-    const self2 = this;
     const regExp = new RegExp(items[num]);
     while (!regExp.test(message.message)) {
       num = num + 1;
@@ -18,23 +16,23 @@ export const isMissingNamespaceError = function isMissingNamespaceError(message)
   }
   return false;
 };
-export const addMissingNamespaces = function addMissingNamespaces(tmp7Result) {
-  const match = tmp7Result.match(/<([A-Za-z_][A-Za-z0-9._-]*)([^>]*)>/);
+export const addMissingNamespaces = function addMissingNamespaces(str) {
+  const match = str.match(/<([A-Za-z_][A-Za-z0-9._-]*)([^>]*)>/);
   if (match) {
     const items = [];
     const obj = /xmlns:([\w-]+)=["'][^"']+["']/g;
-    let match1 = obj.exec(tmp7Result);
+    let match1 = obj.exec(str);
     if (null !== match1) {
       do {
         if (-1 === items.indexOf(match1[1])) {
           let arr = items.push(match1[1]);
         }
-        match1 = obj.exec(tmp7Result);
+        match1 = obj.exec(str);
       } while (null !== match1);
     }
     const items1 = [];
     const obj2 = /\b([A-Za-z_][A-Za-z0-9._-]*):[A-Za-z_][A-Za-z0-9._-]*\b/g;
-    let match2 = obj2.exec(tmp7Result);
+    let match2 = obj2.exec(str);
     if (null !== match2) {
       do {
         let tmp8 = match2[1];
@@ -44,13 +42,12 @@ export const addMissingNamespaces = function addMissingNamespaces(tmp7Result) {
             let arr2 = items1.push(tmp8);
           }
         }
-        match2 = obj2.exec(tmp7Result);
+        match2 = obj2.exec(str);
       } while (null !== match2);
     }
     const found = items1.filter((item) => -1 === items.indexOf(item));
-    let replaced = tmp7Result;
+    let replaced = str;
     if (0 !== found.length) {
-      let num3;
       const items2 = [];
       for (let num3 = 0; num3 < found.length; num3 = num3 + 1) {
         let tmp12 = found[num3];
@@ -61,14 +58,12 @@ export const addMissingNamespaces = function addMissingNamespaces(tmp7Result) {
         let arr3 = items2.push(` xmlns:${tmp12}="${tmp14}"`);
       }
       const _RegExp = RegExp;
-      const self = this;
-      const self2 = this;
       const joined = items2.join("");
       const regExp = new RegExp("<" + tmp2 + "([^>]*)>");
-      replaced = tmp7Result.replace(regExp, `<${tmp2}$1${tmp17}>`);
+      replaced = str.replace(regExp, `<${tmp2}$1${tmp17}>`);
     }
     return replaced;
   } else {
-    return tmp7Result;
+    return str;
   }
 };

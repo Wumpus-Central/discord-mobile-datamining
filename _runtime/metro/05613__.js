@@ -8,25 +8,21 @@ import _createClass from "_createClass" /* 42 */;
 import metroRequire from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import react_mod from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
+import noop_mod from "module_19" /* 19 */;
 
-let Component;
-let c10;
-let c9;
-let closure_12;
-let map1;
-let metroImportAll;
-let unpackModuleId;
+const LinearGradient = global;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -35,30 +31,34 @@ function _isNativeReflectConstruct() {
   }
 }
 let closure_3 = ["children", "colors", "end", "locations", "useAngle", "angleCenter", "angle", "start", "style"];
-let react = react_mod;
-({ createRef: metroImportAll, Component } = react);
-react = react_mod;
-({ processColor: c9, StyleSheet: c10, View: unpackModuleId } = react_native);
-({ jsx: closure_12, jsxs: map1 } = Fragment);
+let noop = fn(19);
+({ createRef: closure_8, Component } = noop);
+let noop = noop_mod;
+get_ActivityIndicator = fn(17);
+({ processColor: closure_9, StyleSheet: c10, View: closure_11 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
 function convertPoint(arg0, arg1) {
 
 }
 class LinearGradient {
   constructor() {
-    let constructResult;
-    const self = this;
-    const items = [...arguments];
-    _classCallCheck(this, LinearGradient);
-    const items1 = [...items];
-    const obj = _getPrototypeOf(LinearGradient);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, _getPrototypeOf(self).constructor);
+    self = this;
+    items = [...arguments];
+    tmp = hasOwnProperty(this, LinearGradient);
+    items1 = [...items];
+    tmp2 = closure_7;
+    obj = closure_7(LinearGradient);
+    tmp3 = metroRequire;
+    if (closure_2_14()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items1);
     }
-    const tmp3Result = metroRequire(self, constructResult);
-    tmp3Result.gradientRef = metroImportAll();
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.gradientRef = closure_8();
     return tmp3Result;
   }
 }
@@ -75,26 +75,21 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let angle;
-      let angleCenter;
-      let children;
-      let colors;
-      let end;
-      let locations;
-      let mapped;
-      let start;
-      let style;
-      let useAngle;
       const props = this.props;
       ({ colors, end, locations, angleCenter, start, style } = props);
       ({ children, useAngle, angle } = props);
-      const tmp = _objectWithoutProperties(props, closure_3);
-      const tmp2 = colors && locations && colors.length !== locations.length;
+      let tmp2 = colors;
+      if (colors) {
+        tmp2 = locations;
+      }
+      if (tmp2) {
+        tmp2 = colors.length !== locations.length;
+      }
       if (tmp2) {
         const _console = console;
         console.warn("LinearGradient colors and locations props should be arrays of the same length");
       }
-      const tmp5 = authStore.flatten(style) || {};
+      const tmp5 = v65535.flatten(style) || {};
       let tmp6 = tmp5.borderRadius || 0;
       const borderTopLeftRadius = tmp5.borderTopLeftRadius;
       let tmp7 = tmp6;
@@ -143,14 +138,16 @@ let items = [
         tmp6 = borderBottomLeftRadius2;
       }
       items[7] = tmp6;
-      const obj = { ref: this.gradientRef, style };
-      const merged = Object.assign(tmp);
-      const obj2 = { style: { position: "absolute", top: 0, left: 0, bottom: 0, right: 0 }, colors: mapped, startPoint: null, endPoint: null, locations: null, useAngle: null, angleCenter: null, angle: null, borderRadii: null };
-      mapped = colors;
-      const tmp18 = _modDef5614;
-      if (!global.RN$Bridgeless) {
-        mapped = colors.map(React4);
+      const obj = { ref: this.gradientRef };
+      const merged = Object.assign(_objectWithoutProperties(props, closure_3));
+      obj.style = style;
+      const obj2 = { style: { position: "absolute", top: 0, left: 0, bottom: 0, right: 0 }, colors: null, startPoint: null, endPoint: null, locations: null, useAngle: null, angleCenter: null, angle: null, borderRadii: null };
+      let mapped = colors;
+      const tmp = _objectWithoutProperties(props, closure_3);
+      if (!LinearGradient.RN$Bridgeless) {
+        mapped = colors.map(options);
       }
+      obj2.colors = mapped;
       if (typeof convertPoint === "function") {
         const _Array = Array;
         let tmp23 = start;
@@ -195,9 +192,9 @@ let items = [
             obj2.angleCenter = tmp28;
             obj2.angle = angle;
             obj2.borderRadii = items;
-            const items1 = [closure_12(tmp18, obj2), children];
+            const items1 = [__initData(tmp18, obj2), children];
             obj.children = items1;
-            return map1(unpackModuleId, obj);
+            return __initData2(closure_1_11, obj);
           } else {
             throw new TypeError("Trying to call a non-function");
           }
@@ -207,6 +204,7 @@ let items = [
       } else {
         throw new TypeError("Trying to call a non-function");
       }
+      tmp18 = _modDef5614;
     }
   }
 ];

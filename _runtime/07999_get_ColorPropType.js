@@ -4,7 +4,7 @@
 const require = globalThis.__r;
 
 const obj = {};
-Object.defineProperty(obj, "ColorPropType", { get: () => require("normalizeColor"), set: undefined });
+Object.defineProperty(obj, "ColorPropType", { get: () => require("colorPropType"), set: undefined });
 Object.defineProperty(obj, "EdgeInsetsPropType", { get: () => require("module_8002"), set: undefined });
 Object.defineProperty(obj, "ImagePropTypes", { get: () => require("module_8003"), set: undefined });
 Object.defineProperty(obj, "PointPropType", { get: () => require("module_8013"), set: undefined });

@@ -1,26 +1,27 @@
 // === Module 304: ? ===
 
 // Module 304
-import reactAll from "react" /* 19 */;
-import _modDef38 from "module_38" /* 38 */;
-import processColorDefault from "processColor" /* 50 */;
+import _modAll19 from "module_19" /* 19 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import get_mod from "module_305" /* 305 */;
 
-let tmp7;
-let tmp8;
+const StatusBar = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -28,26 +29,29 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturnDefault;
 class StatusBar {
   constructor() {
-    let constructResult;
-    const self = this;
-    const items = [...arguments];
-    _classCallCheck(this, StatusBar);
-    const items1 = [...items];
-    const obj = _getPrototypeOf(StatusBar);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, _getPrototypeOf(self).constructor);
+    self = this;
+    items = [...arguments];
+    tmp = closure_3(this, StatusBar);
+    items1 = [...items];
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(StatusBar);
+    tmp3 = closure_4;
+    if (metroRequire()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items1);
     }
-    const tmp3Result = _possibleConstructorReturn(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
     tmp3Result._stackEntry = null;
     return tmp3Result;
   }
 }
-_inherits(StatusBar, reactAll.Component);
+_inherits(StatusBar, _modAll19.Component);
 const entry = {
   key: "componentDidMount",
   value: function componentDidMount() {
@@ -84,8 +88,7 @@ const entry1 = {
   key: "setHidden",
   value: function setHidden(value, arg1) {
     StatusBar._defaultProps.hidden.value = value;
-    const obj = get;
-    obj.setHidden(value);
+    StatusBar(305).setHidden(value);
   }
 };
 let items1 = [
@@ -94,8 +97,7 @@ let items1 = [
     key: "setBarStyle",
     value: function setBarStyle(barStyle, arg1) {
       StatusBar._defaultProps.barStyle.value = barStyle;
-      const obj = get;
-      obj.setStyle(barStyle);
+      StatusBar(305).setStyle(barStyle);
     }
   },
   {
@@ -106,14 +108,17 @@ let items1 = [
   },
   {
     key: "setBackgroundColor",
-    value: function setBackgroundColor(value, arg1) {
-      const tmp = arg1 || false;
+    value: function setBackgroundColor(value, animated) {
+      let flag = animated;
+      if (!animated) {
+        flag = false;
+      }
       StatusBar._defaultProps.backgroundColor.value = value;
-      const tmp4 = processColorDefault(value);
-      if (null != tmp4) {
-        _modDef38(typeof tmp4 === "number", "Unexpected color given for StatusBar.setBackgroundColor");
-        const tmp2Result = get;
-        tmp2Result.setColor(tmp4, tmp);
+      const tmp3 = StatusBar(50)(value);
+      if (null != tmp3) {
+        StatusBar(38)(typeof tmp3 === "number", "Unexpected color given for StatusBar.setBackgroundColor");
+        StatusBar(305).setColor(tmp3, flag);
+        const tmpResult = StatusBar(305);
       } else {
         const _console = console;
         const _String = String;
@@ -126,15 +131,12 @@ let items1 = [
     key: "setTranslucent",
     value: function setTranslucent(translucent) {
       StatusBar._defaultProps.translucent = translucent;
-      const obj = get;
-      obj.setTranslucent(translucent);
+      StatusBar(305).setTranslucent(translucent);
     }
   },
   {
     key: "pushStackEntry",
     value: function pushStackEntry(animated) {
-      let tmp2;
-      let tmp3;
       let flag = animated.animated;
       if (flag == null) {
         flag = false;
@@ -145,20 +147,24 @@ let items1 = [
       }
       let tmp = null;
       if (null != animated.backgroundColor) {
-        tmp = { value: animated.backgroundColor, animated: flag };
         const obj = { value: animated.backgroundColor, animated: flag };
+        tmp = obj;
       }
-      const obj2 = { backgroundColor: tmp, barStyle: tmp2, translucent: animated.translucent, hidden: tmp3, networkActivityIndicatorVisible: animated.networkActivityIndicatorVisible };
-      tmp2 = null;
+      const obj2 = { backgroundColor: tmp, barStyle: null, translucent: null, hidden: null, networkActivityIndicatorVisible: null };
+      let tmp2 = null;
       if (null != animated.barStyle) {
-        tmp2 = { value: animated.barStyle, animated: flag };
         const obj3 = { value: animated.barStyle, animated: flag };
+        tmp2 = obj3;
       }
-      tmp3 = null;
+      obj2.barStyle = tmp2;
+      obj2.translucent = animated.translucent;
+      let tmp3 = null;
       if (null != animated.hidden) {
-        tmp3 = { value: animated.hidden, animated: flag, transition: str };
         const obj4 = { value: animated.hidden, animated: flag, transition: str };
+        tmp3 = obj4;
       }
+      obj2.hidden = tmp3;
+      obj2.networkActivityIndicatorVisible = animated.networkActivityIndicatorVisible;
       const _propsStack = StatusBar._propsStack;
       _propsStack.push(obj2);
       StatusBar._updatePropsStack();
@@ -180,8 +186,6 @@ let items1 = [
   {
     key: "replaceStackEntry",
     value: function replaceStackEntry(arg0, animated) {
-      let tmp2;
-      let tmp3;
       let flag = animated.animated;
       if (flag == null) {
         flag = false;
@@ -192,20 +196,24 @@ let items1 = [
       }
       let tmp = null;
       if (null != animated.backgroundColor) {
-        tmp = { value: animated.backgroundColor, animated: flag };
         const obj = { value: animated.backgroundColor, animated: flag };
+        tmp = obj;
       }
-      const obj2 = { backgroundColor: tmp, barStyle: tmp2, translucent: animated.translucent, hidden: tmp3, networkActivityIndicatorVisible: animated.networkActivityIndicatorVisible };
-      tmp2 = null;
+      const obj2 = { backgroundColor: tmp, barStyle: null, translucent: null, hidden: null, networkActivityIndicatorVisible: null };
+      let tmp2 = null;
       if (null != animated.barStyle) {
-        tmp2 = { value: animated.barStyle, animated: flag };
         const obj3 = { value: animated.barStyle, animated: flag };
+        tmp2 = obj3;
       }
-      tmp3 = null;
+      obj2.barStyle = tmp2;
+      obj2.translucent = animated.translucent;
+      let tmp3 = null;
       if (null != animated.hidden) {
-        tmp3 = { value: animated.hidden, animated: flag, transition: str };
         const obj4 = { value: animated.hidden, animated: flag, transition: str };
+        tmp3 = obj4;
       }
+      obj2.hidden = tmp3;
+      obj2.networkActivityIndicatorVisible = animated.networkActivityIndicatorVisible;
       const _propsStack = StatusBar._propsStack;
       const index = _propsStack.indexOf(arg0);
       if (-1 !== index) {
@@ -238,74 +246,80 @@ if (null != obj.backgroundColor) {
   let obj2 = { value: obj.backgroundColor, animated: flag };
   tmp6 = obj2;
 }
-let obj3 = { backgroundColor: tmp6, barStyle: tmp7, translucent: obj.translucent, hidden: tmp8, networkActivityIndicatorVisible: obj.networkActivityIndicatorVisible };
-tmp7 = null;
+let obj3 = { backgroundColor: tmp6, barStyle: null, translucent: null, hidden: null, networkActivityIndicatorVisible: null };
+let tmp7 = null;
 if (null != obj.barStyle) {
   let obj4 = { value: obj.barStyle, animated: flag };
   tmp7 = obj4;
 }
-tmp8 = null;
+obj3.barStyle = tmp7;
+obj3.translucent = obj.translucent;
+let tmp8 = null;
 if (null != obj.hidden) {
-  tmp8 = { value: obj.hidden, animated: flag, transition: str2 };
   const obj5 = { value: obj.hidden, animated: flag, transition: str2 };
+  tmp8 = obj5;
 }
+obj3.hidden = tmp8;
+obj3.networkActivityIndicatorVisible = obj.networkActivityIndicatorVisible;
 importDefaultResultResult._defaultProps = obj3;
 importDefaultResultResult._updateImmediate = null;
 importDefaultResultResult._currentValues = null;
-get = get_mod;
+let get = get_mod;
 importDefaultResultResult.currentHeight = get.getConstants().HEIGHT;
 importDefaultResultResult._updatePropsStack = () => {
-  let _defaultProps;
   clearImmediate(importDefaultResultResult._updateImmediate);
   importDefaultResultResult._updateImmediate = setImmediate(() => {
-    let _currentValues;
-    let _propsStack;
     ({ _currentValues, _propsStack } = _defaultProps);
-    const obj = {};
-    const reduce = _propsStack.reduce;
     const merged = Object.assign(_defaultProps._defaultProps);
-    const reduced = reduce((arg0, obj) => {
-      for (const key10005 in obj) {
-        if (null == obj[key10005]) {
+    const reduced = _propsStack.reduce((acc, item) => {
+      for (const key10005 in arg1) {
+        if (null == arg1[key10005]) {
           continue;
         } else {
-          arg0[key10005] = obj[key10005];
+          arg0[key10005] = arg1[key10005];
           continue;
         }
         continue;
       }
-      return arg0;
-    }, obj);
-    const obj2 = get;
-    obj2.setStyle(reduced.barStyle.value);
-    const tmp7 = processColorDefault(reduced.backgroundColor.value);
+      return acc;
+    }, {});
+    StatusBar(305).setStyle(reduced.barStyle.value);
+    const tmp7 = StatusBar(50)(reduced.backgroundColor.value);
     if (null == tmp7) {
       const _console = console;
       const _HermesInternal = HermesInternal;
       console.warn("`StatusBar._updatePropsStack`: Color " + reduced.backgroundColor.value + " parsed to null or undefined");
     } else {
-      _modDef38(typeof tmp7 === "number", "Unexpected color given in StatusBar._updatePropsStack");
-      const tmp4Result = get;
-      tmp4Result.setColor(tmp7, reduced.backgroundColor.animated);
+      StatusBar(38)(typeof tmp7 === "number", "Unexpected color given in StatusBar._updatePropsStack");
+      StatusBar(305).setColor(tmp7, reduced.backgroundColor.animated);
+      const tmp4Result = StatusBar(305);
     }
     let tmp12 = _currentValues;
-    if (tmp12) {
-      let value;
+    if (_currentValues) {
+      value = undefined;
       if (_currentValues.hidden != null) {
         value = iter.value;
       }
       tmp12 = value === reduced.hidden.value;
     }
     if (!tmp12) {
-      const tmp4Result3 = get;
-      tmp4Result3.setHidden(reduced.hidden.value);
+      StatusBar(305).setHidden(reduced.hidden.value);
+      const tmp4Result3 = StatusBar(305);
     }
-    const tmp15 = _currentValues && _currentValues.translucent === reduced.translucent && !reduced.translucent;
+    let tmp15 = _currentValues;
+    if (_currentValues) {
+      tmp15 = _currentValues.translucent === reduced.translucent;
+    }
+    if (tmp15) {
+      tmp15 = !reduced.translucent;
+    }
     if (!tmp15) {
-      const tmp4Result4 = get;
-      tmp4Result4.setTranslucent(reduced.translucent);
+      StatusBar(305).setTranslucent(reduced.translucent);
+      const tmp4Result4 = StatusBar(305);
     }
     _defaultProps._currentValues = reduced;
+    const obj = {};
+    const obj2 = StatusBar(305);
   });
 };
 

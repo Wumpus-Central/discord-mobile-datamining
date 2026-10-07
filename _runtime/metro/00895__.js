@@ -5,47 +5,55 @@ function noop() {
 
 }
 class Promise {
-  constructor(fn) {
-    const self = this;
+  constructor(arg0) {
+    self = this;
     if (typeof this !== "object") {
-      const _TypeError2 = TypeError;
-      const self4 = this;
-      const self5 = this;
-      const typeError = new TypeError("Promises must be constructed via new");
+      tmp8 = globalThis;
+      _TypeError2 = TypeError;
+      tmp9 = new.target;
+      str2 = "Promises must be constructed via new";
+      tmp10 = new.target;
+      typeError = new TypeError("Promises must be constructed via new");
+      tmp12 = typeError;
       throw typeError;
-    } else if (typeof fn !== "function") {
-      const _TypeError = TypeError;
-      const self2 = this;
-      const self3 = this;
-      const typeError1 = new TypeError("Promise constructor's argument is not a function");
-      throw typeError1;
     } else {
-      self._40 = 0;
-      self._65 = 0;
-      self._55 = null;
-      self._72 = null;
-      if (fn !== noop) {
-        doResolve(fn, self);
+      tmp13 = global;
+      if (typeof global !== "function") {
+        tmp3 = globalThis;
+        _TypeError = TypeError;
+        tmp4 = new.target;
+        str = "Promise constructor's argument is not a function";
+        tmp5 = new.target;
+        typeError1 = new TypeError("Promise constructor's argument is not a function");
+        tmp7 = typeError1;
+        throw typeError1;
+      } else {
+        num = 0;
+        self._40 = 0;
+        self._65 = 0;
+        tmp14 = null;
+        self._55 = null;
+        self._72 = null;
+        tmp15 = noop;
+        if (global !== noop) {
+          tmp = doResolve;
+          tmp2 = doResolve(global, self);
+        }
+        return;
       }
     }
   }
-  then(fn, fn2) {
-    let tmp5;
-    let tmp6;
-    let self = this;
+  then(arg0, arg1) {
+    self = this;
     if (this.constructor !== Promise) {
-      let closure_1 = fn;
-      closure_2 = fn2;
-      const self4 = this;
-      const self5 = this;
-      const constructor = new self.constructor(function(arg0, arg1) {
-        let tmp11;
-        let tmp12;
+      closure_1 = global;
+      closure_2 = require;
+      tmp13 = new.target;
+      tmp14 = new.target;
+      constructor = new self.constructor((arg0, arg1) => {
         const obj3 = Object.create(Promise.prototype);
         if (typeof obj3 !== "object") {
           const _TypeError = TypeError;
-          self = this;
-          const self2 = this;
           const typeError = new TypeError("Promises must be constructed via new");
           throw typeError;
         } else {
@@ -56,47 +64,60 @@ class Promise {
           // // eliminated: always false
           obj3.then(arg0, arg1);
           Object.create(Handler.prototype);
-          const obj = { onFulfilled: tmp11, onRejected: tmp12, promise: obj3 };
-          tmp11 = null;
-          const tmp6 = self;
-          if (typeof fn === "function") {
-            tmp11 = fn;
+          const obj = {};
+          let tmp11 = null;
+          if (typeof closure_1 === "function") {
+            tmp11 = closure_1;
           }
-          tmp12 = null;
-          if (typeof fn2 === "function") {
-            tmp12 = fn2;
+          obj.onFulfilled = tmp11;
+          let tmp12 = null;
+          if (typeof closure_2 === "function") {
+            tmp12 = closure_2;
           }
-          handle(tmp6, obj);
+          obj.onRejected = tmp12;
+          obj.promise = obj3;
+          handle(self, obj);
         }
       });
-      let tmp12 = constructor;
+      tmp16 = constructor;
       return constructor;
     } else {
-      let obj3 = Object.create(tmp.prototype);
-      if (typeof obj3 !== "object") {
-        let _TypeError = TypeError;
-        let self2 = this;
-        const self3 = this;
-        let typeError = new TypeError("Promises must be constructed via new");
+      tmp17 = self;
+      obj1 = Object.create(tmp.prototype);
+      if (typeof obj1 !== "object") {
+        tmp8 = globalThis;
+        _TypeError = TypeError;
+        tmp9 = new.target;
+        str = "Promises must be constructed via new";
+        tmp10 = new.target;
+        typeError = new TypeError("Promises must be constructed via new");
+        tmp12 = typeError;
         throw typeError;
       } else {
-        obj3._40 = 0;
-        obj3._65 = 0;
-        obj3._55 = null;
-        obj3._72 = null;
+        num = 0;
+        obj1._40 = 0;
+        obj1._65 = 0;
+        tmp19 = null;
+        obj1._55 = null;
+        obj1._72 = null;
         // // eliminated: always false
-        Object.create(Handler.prototype);
-        let obj = { onFulfilled: tmp5, onRejected: tmp6, promise: obj3 };
+        tmp3 = Handler;
+        tmp2 = handle;
+        obj2 = Object.create(Handler.prototype);
+        obj = {};
         tmp5 = null;
-        if (typeof fn === "function") {
-          tmp5 = fn;
+        if (typeof global === "function") {
+          tmp5 = global;
         }
+        obj.onFulfilled = tmp5;
         tmp6 = null;
-        if (typeof fn2 === "function") {
-          tmp6 = fn2;
+        if (typeof require === "function") {
+          tmp6 = require;
         }
-        handle(self, obj);
-        return obj3;
+        obj.onRejected = tmp6;
+        obj.promise = obj1;
+        tmp2Result = tmp2(self, obj);
+        return obj1;
       }
     }
   }
@@ -120,7 +141,6 @@ function handle(_65, _72) {
       tmp2._40 = 1;
       tmp2._72 = _72;
     } else if (1 === tmp2._40) {
-      let num2 = 2;
       tmp2._40 = 2;
       const items = [tmp2._72, _72];
       tmp2._72 = items;
@@ -135,73 +155,69 @@ function handle(_65, _72) {
     setImmediate(() => {
       let length;
       let length2;
-      let onRejected;
-      let tmp2;
-      function tryCallOne(onRejected, _55) {
-        try {
-          return onRejected(_55);
-        } catch (tmp3) {
-          closure_1 = tmp3;
-          return closure_1_2;
-        }
-      }
       if (1 === _55._65) {
-        const tmp3 = _55;
-        onRejected = _55.onFulfilled;
-        tmp2 = _55;
+        let onRejected = _55.onFulfilled;
+        let tmp2 = _55;
       } else {
         tmp2 = _55;
         onRejected = _55.onRejected;
       }
       if (null !== onRejected) {
-        const tmp11 = tryCallOne(onRejected, _55._55);
+        const tmp11 = (function tryCallOne(onRejected, _55) {
+          try {
+            return onRejected(_55);
+          } catch (tmp3) {
+            closure_1 = tmp3;
+            return closure_1_2;
+          }
+        })(onRejected, tmp._55);
         if (tmp11 === closure_2) {
           tmp2.promise._65 = 2;
           tmp2.promise._55 = _55;
           if (Promise._87) {
-            Promise._87(tmp2.promise, tmp15);
+            Promise._87(promise, tmp15);
           }
           if (1 === tmp2.promise._40) {
-            handle(tmp2.promise, tmp2.promise._72);
-            tmp2.promise._72 = null;
+            handle(promise, promise._72);
+            promise._72 = null;
           }
           if (2 === tmp2.promise._40) {
             let num6 = 0;
-            if (0 < tmp2.promise._72.length) {
+            if (0 < promise._72.length) {
               do {
                 let tmp20 = handle(promise, promise._72[num6]);
                 num6 = num6 + 1;
                 length2 = promise._72.length;
               } while (num6 < length2);
             }
-            tmp2.promise._72 = null;
+            promise._72 = null;
           }
         } else {
           resolve(tmp2.promise, tmp11);
         }
-      } else if (1 === _55._65) {
-        resolve(tmp2.promise, _55._55);
+      } else if (1 === tmp._65) {
+        resolve(tmp2.promise, tmp._55);
       } else {
         _55 = tmp._55;
         tmp2.promise._65 = 2;
         tmp2.promise._55 = _55;
         if (Promise._87) {
-          Promise._87(tmp2.promise, _55);
+          Promise._87(promise2, _55);
         }
         if (1 === tmp2.promise._40) {
-          handle(tmp2.promise, tmp2.promise._72);
-          tmp2.promise._72 = null;
+          handle(promise2, promise2._72);
+          promise2._72 = null;
         }
         if (2 === tmp2.promise._40) {
           let num2 = 0;
-          if (0 < tmp2.promise._72.length) {
+          if (0 < promise2._72.length) {
             do {
               let tmp8 = handle(promise2, promise2._72[num2]);
               num2 = num2 + 1;
               length = promise2._72.length;
             } while (num2 < length);
           }
-          tmp2.promise._72 = null;
+          promise2._72 = null;
         }
       }
     });
@@ -212,18 +228,8 @@ function resolve(_40, _55) {
   let length2;
   let length3;
   let length4;
-  function getThen(_55) {
-    try {
-      return _55.then;
-    } catch (tmp2) {
-      closure_1 = tmp2;
-      return closure_1_2;
-    }
-  }
   if (_55 === _40) {
     const _TypeError = TypeError;
-    const self = this;
-    const self2 = this;
     const typeError = new TypeError("A promise cannot be resolved with itself.");
     _40._65 = 2;
     _40._55 = typeError;
@@ -238,7 +244,7 @@ function resolve(_40, _55) {
       let num18 = 0;
       if (0 < _40._72.length) {
         do {
-          let tmp33 = handle(_40, _40._72[num18]);
+          let tmp35 = handle(_40, _40._72[num18]);
           num18 = num18 + 1;
           length4 = _40._72.length;
         } while (num18 < length4);
@@ -248,7 +254,14 @@ function resolve(_40, _55) {
   } else {
     if (_55) {
       if (typeof _55 === "object") {
-        const obj = getThen(_55);
+        const obj = (function getThen(_55) {
+          try {
+            return _55.then;
+          } catch (tmp2) {
+            closure_1 = tmp2;
+            return closure_1_2;
+          }
+        })(_55);
         if (obj === closure_2) {
           _40._65 = 2;
           _40._55 = _55;
@@ -318,13 +331,26 @@ function resolve(_40, _55) {
   }
 }
 function Handler(fn, fn2, promise) {
-
+  const obj = {};
+  let tmp = null;
+  if (typeof fn === "function") {
+    tmp = fn;
+  }
+  obj.onFulfilled = tmp;
+  let tmp2 = null;
+  if (typeof fn2 === "function") {
+    tmp2 = fn2;
+  }
+  obj.onRejected = tmp2;
+  obj.promise = promise;
 }
 function doResolve(arg0, _40) {
   let length;
-  let tmp;
   _55 = false;
-  const tmp2 = _55 || tmp !== closure_2;
+  let tmp2 = _55;
+  if (!_55) {
+    tmp2 = tmp !== closure_2;
+  }
   if (!tmp2) {
     _55 = true;
     _40._65 = 2;

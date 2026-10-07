@@ -3,9 +3,7 @@
 // Module 1480
 
 export default (arg0, arg1, arg2, arg3) => {
-  let _undefined;
-  let str11;
-  let c0 = arg0;
+  c0 = arg0;
   let str = arg1;
   let str2 = arg2;
   if (!arg1) {
@@ -21,17 +19,15 @@ export default (arg0, arg1, arg2, arg3) => {
     const _Object = Object;
     const keys = Object.keys(tmp);
     let mapped = keys.map((item) => {
-      let joined;
       str = item;
-      let _encodeURIComponent = encodeURIComponent;
       if ("string" !== typeof item) {
-        if ("boolean" === typeof item) {
+        if ("boolean" === tmp) {
           let str5 = "false";
           if (item) {
             str5 = "true";
           }
           str = str5;
-        } else if ("number" === typeof item) {
+        } else if ("number" === tmp) {
           let _isFinite = isFinite;
           let str4 = "";
           if (isFinite(item)) {
@@ -42,20 +38,19 @@ export default (arg0, arg1, arg2, arg3) => {
           str = "";
         }
       }
-      const sum = _encodeURIComponent(str) + str2;
-      if (Array.isArray(c0[item])) {
-        const arr = c0[item];
-        const mapped = arr.map((item) => {
+      const sum = encodeURIComponent(str) + str2;
+      _undefined = sum;
+      if (Array.isArray(_undefined[item])) {
+        const mapped = tmp3[item].map((item) => {
           str = item;
-          const _encodeURIComponent = encodeURIComponent;
           if ("string" !== typeof item) {
-            if ("boolean" === typeof item) {
+            if ("boolean" === tmp2) {
               let str5 = "false";
               if (item) {
                 str5 = "true";
               }
               str = str5;
-            } else if ("number" === typeof item) {
+            } else if ("number" === tmp2) {
               const _isFinite = isFinite;
               let str4 = "";
               if (isFinite(item)) {
@@ -66,23 +61,22 @@ export default (arg0, arg1, arg2, arg3) => {
               str = "";
             }
           }
-          return sum + _encodeURIComponent(str);
+          return sum + encodeURIComponent(str);
         });
-        joined = mapped.join(str);
+        let joined = mapped.join(str);
       } else {
         let str6 = tmp4;
-        const _encodeURIComponent2 = encodeURIComponent;
-        if ("string" !== typeof c0[item]) {
-          if ("boolean" === typeof c0[item]) {
+        if ("string" !== typeof tmp3[item]) {
+          if ("boolean" === tmp5) {
             let str10 = "false";
-            if (c0[item]) {
+            if (tmp4) {
               str10 = "true";
             }
             str6 = str10;
-          } else if ("number" === typeof c0[item]) {
+          } else if ("number" === tmp5) {
             const _isFinite2 = isFinite;
             let str9 = "";
-            if (isFinite(c0[item])) {
+            if (isFinite(tmp4)) {
               str9 = tmp4;
             }
             str6 = str9;
@@ -90,64 +84,47 @@ export default (arg0, arg1, arg2, arg3) => {
             str6 = "";
           }
         }
-        joined = sum + _encodeURIComponent2(str6);
+        joined = sum + encodeURIComponent(str6);
       }
       return joined;
     });
     const _Boolean = Boolean;
     const found = mapped.filter(Boolean);
-    str11 = found.join(str);
+    let str10 = found.join(str);
   } else {
     let str9 = "";
-    str11 = "";
+    str10 = "";
     if (arg3) {
-      const str3 = "string";
-      let tmp4 = arg3;
-      let _encodeURIComponent = encodeURIComponent;
+      let isFiniteResult = globalThis;
+      const _encodeURIComponent = encodeURIComponent;
       if ("string" !== typeof arg3) {
-        let str4 = "boolean";
-        if ("boolean" === typeof arg3) {
+        if ("boolean" === tmp2) {
           let str6 = "false";
           if (arg3) {
             str6 = "true";
           }
-          tmp4 = str6;
-        } else {
-          let str5 = "number";
-          if ("number" === typeof arg3) {
-            let _isFinite = isFinite;
-            let tmp5 = str9;
-            if (isFinite(arg3)) {
-              tmp5 = arg3;
-            }
-            tmp4 = tmp5;
-          } else {
-            tmp4 = str9;
-          }
+        } else if ("number" === tmp2) {
+          let _isFinite = isFinite;
         }
       }
-      let tmp8 = tmp;
-      let sum = _encodeURIComponent(tmp4) + str2;
-      let _encodeURIComponent2 = encodeURIComponent;
-      if ("string" !== typeof arg0) {
-        if ("boolean" === typeof arg0) {
-          let str10 = "false";
-          if (arg0) {
-            str10 = "true";
-          }
-          tmp8 = str10;
-        } else if ("number" === typeof arg0) {
-          let _isFinite2 = isFinite;
-          if (isFinite(arg0)) {
-            str9 = tmp;
-          }
-          tmp8 = str9;
-        } else {
-          tmp8 = str9;
+      let tmp7 = tmp;
+      if ("string" === typeof tmp) {
+        let sum = tmp5 + encodeURIComponent(tmp7);
+      } else if ("boolean" === tmp6) {
+        str9 = "false";
+        if (tmp) {
+          str9 = "true";
         }
+        tmp7 = str9;
+      } else if ("number" !== tmp6) {
+        tmp7 = str9;
       }
-      str11 = sum + _encodeURIComponent2(tmp8);
+      isFiniteResult = isFiniteResult.isFinite(tmp);
+      if (isFiniteResult) {
+        str9 = tmp;
+      }
+      tmp7 = str9;
     }
   }
-  return str11;
+  return str10;
 };

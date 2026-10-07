@@ -1,10 +1,9 @@
 // === Module 1913: ? ===
 
 // Module 1913
-const obj = {
+globalThis.IntlMessageFormat.__addLocaleData({
   locale: "ja",
   pluralRuleFunction(arg0, arg1) {
     return "other";
   }
-};
-globalThis.IntlMessageFormat.__addLocaleData(obj);
+});

@@ -1,26 +1,21 @@
 // === Module 6039: ? ===
 
 // Module 6039
-import _mod6037 from "module_6037" /* 6037 */;
+import hsl from "hsl" /* 6037 */;
 
 
 export default (arg0) => {
-  let num;
-  let num3;
-  let parent2;
   const obj = {};
-  const keys = Object.keys(_mod6037);
-  const length = keys.length;
+  const keys = Object.keys(hsl);
   for (let num = 0; num < length; num = num + 1) {
     obj[keys[num]] = { distance: -1, parent: null };
   }
   const items = [arg0];
   obj[arg0].distance = 0;
   while (items.length) {
-    let num2;
     let arr = items.pop();
     let _Object = Object;
-    let keys1 = Object.keys(_mod6037[arr]);
+    let keys1 = Object.keys(hsl[arr]);
     let length2 = keys1.length;
     for (let num2 = 0; num2 < length2; num2 = num2 + 1) {
       let tmp4 = keys1[num2];
@@ -34,18 +29,17 @@ export default (arg0) => {
   }
   const obj2 = {};
   const keys2 = Object.keys(obj);
-  const length3 = keys2.length;
   for (let num3 = 0; num3 < length3; num3 = num3 + 1) {
     let tmp8 = keys2[num3];
     if (null !== obj[tmp8].parent) {
       let items1 = [obj[tmp8].parent, tmp8];
-      let fn = _mod6037[obj[tmp8].parent][tmp8];
+      let fn = hsl[obj[tmp8].parent][tmp8];
       let parent3 = obj[tmp8].parent;
       let tmp13 = fn;
       if (obj[parent3].parent) {
         do {
           let arr3 = items1.unshift(obj[parent3].parent);
-          let closure_0 = _mod6037[obj[parent3].parent][parent3];
+          closure_0 = hsl[obj[parent3].parent][parent3];
           fn = (arg0) => fn(closure_0(arg0));
           let parent = obj[parent3].parent;
           parent3 = parent;

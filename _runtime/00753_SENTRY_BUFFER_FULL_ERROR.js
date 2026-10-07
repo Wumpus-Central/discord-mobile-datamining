@@ -3,62 +3,51 @@
 // Module 753 (SENTRY_BUFFER_FULL_ERROR)
 import SyncPromise from "SyncPromise" /* 749 */;
 
-let set;
-
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const forResult = Symbol.for("SentryBufferFullError");
 let c2 = forResult;
 
 export const SENTRY_BUFFER_FULL_ERROR = forResult;
 export const makePromiseBuffer = function makePromiseBuffer() {
-  let num = arg0;
-  if (arg0 === undefined) {
-    num = 100;
-  }
-  set = new Set();
-  let obj = {
-    add(fn) {
-      let promise;
-      if (set.size < promise) {
-        promise = fn();
-        set.add(promise);
-        promise.then(() => {
-          set.delete(promise);
-        }, () => {
-          set.delete(promise);
-        });
-        return promise;
-      } else {
-        const obj2 = num(set[0]);
-        return obj2.rejectedSyncPromise(closure_1_2);
-      }
-    },
-    drain(arg0) {
-      const f134399 = (arg0) => {
-        closure_0 = arg0;
-        return setTimeout(() => closure_0(false), closure_0);
-      };
-      let closure_0 = arg0;
-      if (set.size) {
-        const _Array = Array;
-        const allSettledResult = Promise.allSettled(Array.from(tmp));
-        const nextPromise = allSettledResult.then(() => true);
-        if (arg0) {
-          const items = [nextPromise, ];
-          const self = this;
-          const self2 = this;
-          items[1] = new Promise(f134399);
-          const promise = new Promise(f134399);
-          return Promise.race(items);
-        } else {
-          return nextPromise;
-        }
-      } else {
-        const obj = SyncPromise;
-        return obj.resolvedSyncPromise(true);
-      }
+  const set = new Set();
+  const obj = {};
+  Object.defineProperty(obj, "$", { get: () => Array.from(set), set: undefined });
+  obj.add = function add(fn) {
+    if (set.size < promise) {
+      promise = fn();
+      set.add(promise);
+      promise.then(() => {
+        set.delete(promise);
+      }, () => {
+        set.delete(promise);
+      });
+      return promise;
+    } else {
+      return num(set[0]).rejectedSyncPromise(closure_1_2);
     }
   };
-  Object.defineProperty(obj, "$", { get: () => Array.from(set), set: undefined });
+  obj.drain = function drain(arg0) {
+    closure_0 = arg0;
+    if (set.size) {
+      const _Array = Array;
+      const nextPromise = Promise.allSettled(Array.from(tmp)).then(() => true);
+      if (arg0) {
+        const items = [nextPromise, ];
+        const promise = new Promise((arg0) => {
+          closure_0 = arg0;
+          return setTimeout(() => closure_0(false), closure_0);
+        });
+        items[1] = promise;
+        return Promise.race(items);
+      } else {
+        return nextPromise;
+      }
+      const allSettledResult = Promise.allSettled(Array.from(tmp));
+    } else {
+      return SyncPromise.resolvedSyncPromise(true);
+    }
+  };
   return obj;
 };

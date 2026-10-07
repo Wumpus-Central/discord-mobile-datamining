@@ -2,29 +2,24 @@
 
 // Module 6135
 import normalizeSnapPoint from "normalizeSnapPoint" /* 6136 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
-let c2;
-let c3;
-({ useCallback: c2, useRef: c3 } = react);
+({ useCallback: c2, useRef: c3 } = noop);
 
 export const useScrollable = () => {
-  let ref;
-  let ref2;
   const tmp = closure_3(null);
   _require = tmp;
   dependencyMap = closure_3(null);
-  let obj = require("module_1643");
-  const sharedValue = obj.useSharedValue(require("GESTURE_SOURCE").SCROLLABLE_TYPE.UNDETERMINED);
-  const obj2 = require("module_1643");
-  const sharedValue1 = obj2.useSharedValue(0);
-  const obj3 = require("module_1643");
-  const sharedValue2 = obj3.useSharedValue(require("GESTURE_SOURCE").SCROLLABLE_STATE.UNDETERMINED);
-  const obj4 = require("module_1643");
-  const sharedValue3 = obj4.useSharedValue(false);
+  const sharedValue = require("cancelAnimation").useSharedValue(require("value2").SCROLLABLE_TYPE.UNDETERMINED);
+  let obj = require("cancelAnimation");
+  const sharedValue1 = require("cancelAnimation").useSharedValue(0);
+  const obj2 = require("cancelAnimation");
+  const sharedValue2 = require("cancelAnimation").useSharedValue(require("value2").SCROLLABLE_STATE.UNDETERMINED);
+  const obj3 = require("cancelAnimation");
+  const sharedValue3 = require("cancelAnimation").useSharedValue(false);
+  const obj4 = require("cancelAnimation");
   const tmp6 = closure_2((id) => {
     const current = ref.current;
     id = undefined;
@@ -36,22 +31,36 @@ export const useScrollable = () => {
     }
     if (id !== id.id) {
       if (ref.current) {
-        ref2.current = ref.current;
+        closure_1.current = ref.current;
       }
       ref.current = id;
     }
   }, []);
-  const obj5 = {
+  return {
     scrollableRef: tmp,
     animatedScrollableType: sharedValue,
     animatedScrollableContentOffsetY: sharedValue1,
     animatedScrollableOverrideState: sharedValue2,
     isScrollableRefreshable: sharedValue3,
-    setScrollableRef: tmp6,
+    setScrollableRef: closure_2((id) => {
+      const current = ref.current;
+      id = undefined;
+      if (current != null) {
+        id = current.id;
+      }
+      if (id == null) {
+        id = null;
+      }
+      if (id !== id.id) {
+        if (ref.current) {
+          closure_1.current = ref.current;
+        }
+        ref.current = id;
+      }
+    }, []),
     removeScrollableRef: closure_2((current) => {
       try {
-        const obj = normalizeSnapPoint;
-        const findNodeHandleResult = obj.findNodeHandle(current.current);
+        const findNodeHandleResult = normalizeSnapPoint.findNodeHandle(current.current);
         current = ref.current;
         let id;
         if (current != null) {
@@ -64,8 +73,8 @@ export const useScrollable = () => {
           ref.current = ref2.current;
         }
       } catch (err) {
+        return tmp;
       }
     }, [])
   };
-  return obj5;
 };

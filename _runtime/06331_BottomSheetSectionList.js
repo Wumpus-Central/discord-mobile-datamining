@@ -6,7 +6,7 @@ import _modDef6339 from "module_6339" /* 6339 */;
 import BottomSheetFlatListDefault from "BottomSheetFlatList" /* 6340 */;
 import BottomSheetScrollViewDefault from "BottomSheetScrollView" /* 6341 */;
 import BottomSheetVirtualizedListDefault from "BottomSheetVirtualizedList" /* 6342 */;
-import BottomSheetFlashListDefault from "BottomSheetFlashList" /* 6343 */;
+import _modDef6343 from "module_6343" /* 6343 */;
 
 
 export const createBottomSheetScrollableComponent = _mod6332.createBottomSheetScrollableComponent;
@@ -14,4 +14,4 @@ export const BottomSheetSectionList = _modDef6339;
 export const BottomSheetFlatList = BottomSheetFlatListDefault;
 export const BottomSheetScrollView = BottomSheetScrollViewDefault;
 export const BottomSheetVirtualizedList = BottomSheetVirtualizedListDefault;
-export const BottomSheetFlashList = BottomSheetFlashListDefault;
+export const BottomSheetFlashList = _modDef6343;

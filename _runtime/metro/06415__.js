@@ -2,30 +2,23 @@
 
 // Module 6415
 import _mod6367 from "module_6367" /* 6367 */;
-import _slicedToArray from "_slicedToArray" /* 6349 */;
-import react from "react" /* 19 */;
+import _slicedToArray from "module_6349" /* 6349 */;
 
-let c3;
-let closure_4;
-let hasOwnProperty;
-({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty } = react);
+require = fn;
+const noop = fn(19);
+({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
 
 export const useRecyclingState = function useRecyclingState(arg0, arg1, arg2) {
-  let tmp3;
-  let closure_0 = arg0;
-  let closure_1 = arg2;
+  closure_0 = arg0;
+  closure_1 = arg2;
   let tmp = hasOwnProperty(undefined);
-  let closure_2 = tmp;
-  const obj = _mod6367;
-  const tmp2 = _slicedToArray(obj.useLayoutState(0), 2);
-  [r10015, tmp3] = tmp2;
-  let c3 = tmp3;
-  React3(() => {
+  [r10015, tmp3] = _mod6367.useLayoutState(0);
+  React4(() => {
     let tmpResult = closure_0;
     if (typeof closure_0 === "function") {
       tmpResult = tmp();
     }
-    ref.current = tmpResult;
+    closure_2.current = tmpResult;
     if (closure_1 != null) {
       tmp3();
     }
@@ -33,7 +26,7 @@ export const useRecyclingState = function useRecyclingState(arg0, arg1, arg2) {
   const items = [tmp3];
   const items1 = [
     tmp.current,
-    _false((fn, arg1) => {
+    React3((fn, arg1) => {
       let tmp = fn;
       if (typeof fn === "function") {
         tmp = fn(ref.current);

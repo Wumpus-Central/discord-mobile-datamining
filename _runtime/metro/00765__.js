@@ -1,28 +1,26 @@
 // === Module 765: ? ===
 
 // Module 765
-import browserPerformanceTimeOrigin from "browserPerformanceTimeOrigin" /* 714 */;
-import _mod740 from "module_740" /* 740 */;
+import dateTimestampInSeconds from "dateTimestampInSeconds" /* 714 */;
+import forEachEnvelopeItem from "forEachEnvelopeItem" /* 740 */;
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const createClientReportEnvelope = function createClientReportEnvelope(discarded_events, dsn, arg2) {
-  let obj3;
   let result = arg2;
   const items = [{ type: "client_report" }, ];
   if (!arg2) {
-    const obj = browserPerformanceTimeOrigin;
-    result = obj.dateTimestampInSeconds();
+    result = dateTimestampInSeconds.dateTimestampInSeconds();
   }
   items[1] = { timestamp: result, discarded_events };
-  const createEnvelope = _mod740.createEnvelope;
-  _mod740;
   if (dsn) {
-    obj3 = { dsn };
-    const obj2 = { dsn };
+    const obj3 = { dsn };
+    let obj4 = obj3;
   } else {
-    obj3 = {};
+    obj4 = {};
   }
   const items1 = [items];
-  return createEnvelope(obj3, items1);
+  return forEachEnvelopeItem.createEnvelope(obj4, items1);
 };

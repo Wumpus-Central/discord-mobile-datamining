@@ -1,11 +1,10 @@
 // === Module 6283: ? ===
 
 // Module 6283
-import Fragment from "Fragment" /* 21 */;
-import TOUCHABLE_STATEDefault from "TOUCHABLE_STATE" /* 6280 */;
-import react from "react" /* 19 */;
+import _modDef6280 from "module_6280" /* 6280 */;
+import noop from "module_19" /* 19 */;
 
-const jsx = Fragment.jsx;
+const jsx = fn(21).jsx;
 
 export default function _default(delayLongPress) {
   let num = delayLongPress.delayLongPress;
@@ -17,7 +16,6 @@ export default function _default(delayLongPress) {
     extraButtonProps = { rippleColor: "transparent", exclusive: true };
   }
   const merged = Object.assign(delayLongPress, Object.assign({ delayLongPress: 0, extraButtonProps: 0 }));
-  TOUCHABLE_STATEDefault;
   const merged1 = Object.assign(merged);
-  return <tmp2 delayLongPress={num} extraButtonProps={extraButtonProps} />;
+  return jsx(_modDef6280, { delayLongPress: num, extraButtonProps });
 };

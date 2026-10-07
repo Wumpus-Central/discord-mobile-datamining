@@ -1,21 +1,18 @@
 // === Module 6150: ? ===
 
 // Module 6150
-import react_native from "react-native" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
 import handlerIDToTag from "handlerIDToTag" /* 6151 */;
-import State from "State" /* 6153 */;
-import GestureStateManager2 from "GestureStateManager" /* 6154 */;
+import _mod6153 from "module_6153" /* 6153 */;
+import _mod6154 from "module_6154" /* 6154 */;
 import TouchEventType from "TouchEventType" /* 6155 */;
 
-let set;
-
 function onGestureHandlerEvent(handlerTag) {
-  const obj = handlerIDToTag;
-  const findHandlerResult = obj.findHandler(handlerTag.handlerTag);
+  const findHandlerResult = handlerIDToTag.findHandler(handlerTag.handlerTag);
   if (findHandlerResult) {
     if (null != handlerTag.oldState) {
-      if (handlerTag.oldState === State.State.UNDETERMINED) {
-        if (handlerTag.state === State.State.BEGAN) {
+      if (handlerTag.oldState === _mod6153.State.UNDETERMINED) {
+        if (handlerTag.state === _mod6153.State.BEGAN) {
           const handlers11 = findHandlerResult.handlers;
           const onBegin = handlers11.onBegin;
           if (onBegin != null) {
@@ -23,8 +20,8 @@ function onGestureHandlerEvent(handlerTag) {
           }
         }
       }
-      if (handlerTag.oldState === State.State.BEGAN) {
-        if (handlerTag.state === State.State.ACTIVE) {
+      if (handlerTag.oldState === _mod6153.State.BEGAN) {
+        if (handlerTag.state === _mod6153.State.ACTIVE) {
           const handlers6 = findHandlerResult.handlers;
           const onStart = handlers6.onStart;
           if (onStart != null) {
@@ -34,8 +31,8 @@ function onGestureHandlerEvent(handlerTag) {
         }
       }
       if (handlerTag.oldState !== handlerTag.state) {
-        if (handlerTag.state === State.State.END) {
-          if (handlerTag.oldState === State.State.ACTIVE) {
+        if (handlerTag.state === _mod6153.State.END) {
+          if (handlerTag.oldState === _mod6153.State.ACTIVE) {
             const handlers9 = findHandlerResult.handlers;
             const onEnd2 = handlers9.onEnd;
             if (onEnd2 != null) {
@@ -50,9 +47,15 @@ function onGestureHandlerEvent(handlerTag) {
           closure_6[findHandlerResult.handlers.handlerTag] = undefined;
         }
       }
-      const tmp18 = handlerTag.state !== State.State.FAILED && handlerTag.state !== State.State.CANCELLED || handlerTag.oldState === handlerTag.state;
+      let tmp18 = handlerTag.state !== _mod6153.State.FAILED;
+      if (tmp18) {
+        tmp18 = handlerTag.state !== _mod6153.State.CANCELLED;
+      }
       if (!tmp18) {
-        if (handlerTag.oldState === State.State.ACTIVE) {
+        tmp18 = handlerTag.oldState === handlerTag.state;
+      }
+      if (!tmp18) {
+        if (handlerTag.oldState === _mod6153.State.ACTIVE) {
           const handlers7 = findHandlerResult.handlers;
           const onEnd = handlers7.onEnd;
           if (onEnd != null) {
@@ -69,12 +72,10 @@ function onGestureHandlerEvent(handlerTag) {
       }
     } else if (null != handlerTag.eventType) {
       if (!map.has(handlerTag.handlerTag)) {
-        handlerTag = handlerTag.handlerTag;
-        set = map.set;
-        const GestureStateManager = GestureStateManager2.GestureStateManager;
-        const result = set(handlerTag, GestureStateManager.create(handlerTag.handlerTag));
+        const GestureStateManager = _mod6154.GestureStateManager;
+        const result = map.set(handlerTag.handlerTag, GestureStateManager.create(handlerTag.handlerTag));
       }
-      const value = map.get(handlerTag.handlerTag);
+      value = map.get(handlerTag.handlerTag);
       const eventType = handlerTag.eventType;
       if (TouchEventType.TouchEventType.TOUCHES_DOWN === eventType) {
         const handlers5 = findHandlerResult.handlers;
@@ -115,7 +116,6 @@ function onGestureHandlerEvent(handlerTag) {
       if (onUpdate != null) {
         onUpdate(handlerTag);
       }
-      const tmp9 = findHandlerResult.handlers.onChange && findHandlerResult.handlers.changeEventCalculator;
       if (tmp9) {
         const handlers = findHandlerResult.handlers;
         const onChange = handlers.onChange;
@@ -130,10 +130,10 @@ function onGestureHandlerEvent(handlerTag) {
         }
         closure_6[findHandlerResult.handlers.handlerTag] = handlerTag;
       }
+      tmp9 = findHandlerResult.handlers.onChange && findHandlerResult.handlers.changeEventCalculator;
     }
   } else {
-    const tmpResult = handlerIDToTag;
-    const result2 = tmpResult.findOldGestureHandler(handlerTag.handlerTag);
+    const result2 = handlerIDToTag.findOldGestureHandler(handlerTag.handlerTag);
     if (result2) {
       const obj2 = { nativeEvent: handlerTag };
       if (null != handlerTag.oldState) {
@@ -142,9 +142,10 @@ function onGestureHandlerEvent(handlerTag) {
         result2.onGestureEvent(obj2);
       }
     }
+    const tmpResult = handlerIDToTag;
   }
 }
-const DeviceEventEmitter = react_native.DeviceEventEmitter;
+const DeviceEventEmitter = _mod17.DeviceEventEmitter;
 let closure_3 = null;
 let closure_4 = null;
 const map = new Map();

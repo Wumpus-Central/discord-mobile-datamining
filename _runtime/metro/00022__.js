@@ -2,7 +2,6 @@
 
 // Module 22
 function jsxProd(BaseIconImage, size, key) {
-  let tmp7;
   let text = null;
   if (undefined !== key) {
     text = `${key}`;
@@ -28,11 +27,13 @@ function jsxProd(BaseIconImage, size, key) {
       }
     }
   }
-  const element = { $$typeof: _typeof, type: BaseIconImage, key: text, ref: tmp7, props: tmp3 };
-  tmp7 = null;
+  const element = { $$typeof: _typeof, type: BaseIconImage, key: text, ref: null, props: null };
+  let tmp7 = null;
   if (undefined !== tmp3.ref) {
     tmp7 = ref;
   }
+  element.ref = tmp7;
+  element.props = tmp3;
   return element;
 }
 const _typeof = Symbol.for("react.transitional.element");

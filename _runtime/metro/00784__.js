@@ -1,21 +1,20 @@
 // === Module 784: ? ===
 
 // Module 784
-import CONSOLE_LEVELS from "CONSOLE_LEVELS" /* 700 */;
-import browserPerformanceTimeOrigin from "browserPerformanceTimeOrigin" /* 714 */;
+import consoleSandbox from "consoleSandbox" /* 700 */;
+import dateTimestampInSeconds from "dateTimestampInSeconds" /* 714 */;
 import _mod724 from "module_724" /* 724 */;
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
-  let tmpResult;
-  let closure_0 = arg1;
-  const obj = _mod724;
-  const client = obj.getClient();
-  const obj3 = _mod724;
-  const isolationScope = obj3.getIsolationScope();
+  closure_0 = arg1;
+  const client = _mod724.getClient();
+  const isolationScope = _mod724.getIsolationScope();
   if (client) {
-    const options = client.getOptions();
+    options = client.getOptions();
     let beforeBreadcrumb = options.beforeBreadcrumb;
     let tmp5 = null;
     if (undefined !== beforeBreadcrumb) {
@@ -28,12 +27,11 @@ export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
       num = maxBreadcrumbs;
     }
     if (num > 0) {
-      let obj2 = { timestamp: tmpResult.dateTimestampInSeconds() };
-      tmpResult = browserPerformanceTimeOrigin;
+      let obj2 = { timestamp: dateTimestampInSeconds.dateTimestampInSeconds() };
       const merged = Object.assign(arg0);
       if (tmp5) {
-        const tmpResult2 = CONSOLE_LEVELS;
-        obj2 = tmpResult2.consoleSandbox(() => beforeBreadcrumb(obj2, closure_0));
+        obj2 = consoleSandbox.consoleSandbox(() => beforeBreadcrumb(obj2, closure_0));
+        const tmpResult2 = consoleSandbox;
       }
       if (null !== obj2) {
         if (client.emit) {
@@ -41,6 +39,7 @@ export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
         }
         isolationScope.addBreadcrumb(obj2, num);
       }
+      const tmpResult = dateTimestampInSeconds;
     }
   }
 };

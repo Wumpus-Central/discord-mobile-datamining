@@ -8,7 +8,7 @@ let fn = function t(worklet, arg1) {
   if (arg1 === undefined) {
     num = 0;
   }
-  const obj = { time: 0 };
+  value = { time: 0 };
   const fn = function o() {
     const items = [...arguments];
     const timestamp = Date.now();
@@ -17,11 +17,11 @@ let fn = function t(worklet, arg1) {
     } else {
       obj.time = timestamp;
       const items1 = [];
-      HermesBuiltin.arraySpread(items1, items, 0);
-      return HermesBuiltin.apply(closure_0, items1, undefined);
+      HermesBuiltin.arraySpread(items, 0);
+      return HermesBuiltin.apply(items1, undefined);
     }
   };
-  fn.__closure = { value: obj, wait: num, worklet };
+  fn.__closure = { value, wait: num, worklet };
   fn.__workletHash = 8768898864142;
   fn.__initData = __initData;
   return fn;
@@ -30,7 +30,7 @@ fn.__closure = {};
 fn.__workletHash = 1678132827161;
 fn.__initData = { code: "function pnpm_utilsTs1(worklet,wait=0){const value={time:0};return function(...args){\"worklet\";const t=Date.now();const now=t-value.time;if(now<wait){value.time=t;return;}value.time=t;return worklet(...args);};}" };
 const fn2 = function n(arg0, snapToOffsets) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let found;
   if (snapToOffsets) {
     found = snapToOffsets.find((item) => item >= closure_0);

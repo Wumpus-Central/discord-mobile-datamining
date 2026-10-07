@@ -2,54 +2,70 @@
 
 // Module 8 (Deque)
 class Deque {
-  constructor(num) {
-    let num8;
-    const obj = { _capacity: num8, _length: 0, _front: 0 };
-    let length = num;
-    if (typeof num === "number") {
-      const _Math = Math;
-      const _Math2 = Math;
-      const diff = (Math.min(Math.max(16, length), 1073741824) >>> 0) - 1;
+  constructor(arg0) {
+    obj = {};
+    length = global;
+    if (typeof global === "number") {
+      tmp = globalThis;
+      _Math = Math;
+      _Math2 = Math;
+      num = 16;
+      num2 = 1073741824;
+      num3 = 0;
+      num4 = 1;
+      diff = (Math.min(Math.max(16, length), 1073741824) >>> 0) - 1;
+      tmp3 = diff | diff >> 1;
+      num5 = 2;
+      tmp4 = tmp3 | tmp3 >> 2;
+      num6 = 4;
+      tmp5 = tmp4 | tmp4 >> 4;
+      num7 = 8;
+      tmp6 = tmp5 | tmp5 >> 8;
       num8 = 1 + (tmp6 | tmp6 >> 16);
     } else {
+      tmp8 = isArray;
       num8 = 16;
-      if (isArray(num)) {
-        length = num.length;
+      if (isArray(global)) {
+        length = global.length;
       }
     }
-    obj._makeCapacity();
-    if (isArray(num)) {
-      let num10;
+    obj._capacity = num8;
+    obj._length = 0;
+    obj._front = 0;
+    _makeCapacityResult = obj._makeCapacity();
+    if (isArray(global)) {
+      length2 = global.length;
+      num9 = 1;
       for (let num10 = 0; num10 < length2; num10 = num10 + 1) {
-        obj[num10] = num[num10];
+        obj[num10] = global[num10];
       }
-      obj._length = num.length;
+      obj._length = length2;
     }
+    return;
   }
   toArray() {
-    let num;
-    const _length = this._length;
-    const array = new Array(_length);
+    _length = this._length;
+    array = new Array(_length);
     for (let num = 0; num < _length; num = num + 1) {
       array[num] = this[this._front + num & tmp2 - 1];
     }
     return array;
   }
   push(arg0) {
-    const self = this;
-    const length = arguments.length;
-    const _length = this._length;
+    self = this;
+    length = arguments.length;
+    _length = this._length;
     if (length > 1) {
-      const _capacity = self._capacity;
+      _capacity = self._capacity;
       if (_length + length > _capacity) {
-        let num3 = 0;
-        let tmp4 = _length;
-        let tmp5 = _length;
+        num3 = 0;
+        tmp4 = _length;
+        tmp5 = _length;
         if (0 < length) {
           do {
-            let _checkCapacityResult = self._checkCapacity(tmp4 + 1);
+            _checkCapacityResult = self._checkCapacity(tmp4 + 1);
             self[self._front + tmp4 & self._capacity - 1] = arguments[num3];
-            let sum = tmp4 + 1;
+            sum = tmp4 + 1;
             self._length = sum;
             num3 = num3 + 1;
             tmp4 = sum;
@@ -58,8 +74,7 @@ class Deque {
         }
         return tmp5;
       } else {
-        let num2;
-        let _front = self._front;
+        _front = self._front;
         for (let num2 = 0; num2 < length; num2 = num2 + 1) {
           self[_front + _length & _capacity - 1] = arguments[num2];
           _front = _front + 1;
@@ -68,10 +83,12 @@ class Deque {
         return _length + length;
       }
     } else {
-      let sum1 = _length;
+      num = 0;
+      sum1 = _length;
       if (0 !== length) {
-        self._checkCapacity(_length + 1);
-        self[self._front + _length & self._capacity - 1] = arg0;
+        tmp2 = global;
+        _checkCapacityResult1 = self._checkCapacity(_length + 1);
+        self[self._front + _length & self._capacity - 1] = global;
         self._length = _length + 1;
         sum1 = _length + 1;
       }
@@ -79,42 +96,50 @@ class Deque {
     }
   }
   pop() {
-    const self = this;
-    const _length = this._length;
+    self = this;
+    _length = this._length;
     if (0 !== _length) {
-      self[self._front + _length - 1 & self._capacity - 1] = undefined;
+      num = 1;
+      tmp = self._front + _length - 1 & self._capacity - 1;
+      self[tmp] = undefined;
       self._length = _length - 1;
-      return self[self._front + _length - 1 & self._capacity - 1];
+      return self[tmp];
+    } else {
+      return;
     }
   }
   shift() {
-    const self = this;
-    const _length = this._length;
+    self = this;
+    _length = this._length;
     if (0 !== _length) {
-      const _front = self._front;
+      _front = self._front;
       self[_front] = undefined;
+      num = 1;
       self._front = _front + 1 & self._capacity - 1;
       self._length = _length - 1;
       return self[_front];
+    } else {
+      return;
     }
   }
   unshift(arg0) {
-    const self = this;
-    const _length = this._length;
-    const length = arguments.length;
+    self = this;
+    _length = this._length;
+    length = arguments.length;
     if (length > 1) {
-      const _capacity2 = self._capacity;
+      _capacity2 = self._capacity;
       if (_length + length > _capacity2) {
-        let diff = length - 1;
-        let tmp8 = _length;
-        let tmp9 = _length;
+        diff = length - 1;
+        num3 = 0;
+        tmp8 = _length;
+        tmp9 = _length;
         if (0 <= diff) {
           do {
-            let _checkCapacityResult = self._checkCapacity(tmp8 + 1);
-            let _capacity3 = self._capacity;
-            let diff1 = (self._front - 1 & _capacity3 - 1 ^ _capacity3) - _capacity3;
+            _checkCapacityResult = self._checkCapacity(tmp8 + 1);
+            _capacity3 = self._capacity;
+            diff1 = (self._front - 1 & _capacity3 - 1 ^ _capacity3) - _capacity3;
             self[diff1] = arguments[diff];
-            let sum = tmp8 + 1;
+            sum = tmp8 + 1;
             self._length = sum;
             self._front = diff1;
             diff = diff - 1;
@@ -124,12 +149,13 @@ class Deque {
         }
         return tmp9;
       } else {
-        let _front = self._front;
-        let diff2 = length - 1;
-        let tmp5 = _front;
+        _front = self._front;
+        diff2 = length - 1;
+        num2 = 0;
+        tmp5 = _front;
         if (0 <= diff2) {
           do {
-            let diff3 = (_front - 1 & _capacity2 - 1 ^ _capacity2) - _capacity2;
+            diff3 = (_front - 1 & _capacity2 - 1 ^ _capacity2) - _capacity2;
             self[diff3] = arguments[diff2];
             diff2 = diff2 - 1;
             _front = diff3;
@@ -140,113 +166,134 @@ class Deque {
         self._length = _length + length;
         return _length + length;
       }
-    } else if (0 === length) {
-      return _length;
     } else {
-      self._checkCapacity(_length + 1);
-      const _capacity = self._capacity;
-      const diff4 = (self._front - 1 & _capacity - 1 ^ _capacity) - _capacity;
-      self[diff4] = arg0;
-      self._length = _length + 1;
-      self._front = diff4;
-      return _length + 1;
+      num = 0;
+      if (0 === length) {
+        return _length;
+      } else {
+        tmp = global;
+        _checkCapacityResult1 = self._checkCapacity(_length + 1);
+        _capacity = self._capacity;
+        diff4 = (self._front - 1 & _capacity - 1 ^ _capacity) - _capacity;
+        self[diff4] = global;
+        self._length = _length + 1;
+        self._front = diff4;
+        return _length + 1;
+      }
     }
   }
   peekBack() {
-    const self = this;
-    const _length = this._length;
+    self = this;
+    _length = this._length;
     if (0 !== _length) {
+      num = 1;
       return self[self._front + _length - 1 & self._capacity - 1];
+    } else {
+      return;
     }
   }
   peekFront() {
-    const self = this;
+    self = this;
     return 0 !== this._length ? self[self._front] : undefined;
   }
   get(arg0) {
-    if (arg0 === (arg0 | 0)) {
-      const self = this;
-      const _length = this._length;
-      let sum = arg0;
-      if (arg0 < 0) {
-        sum = arg0 + _length;
+    if (global === (global | 0)) {
+      self = this;
+      _length = this._length;
+      num = 0;
+      sum = global;
+      if (global < 0) {
+        sum = global + _length;
       }
       if (sum >= 0) {
         if (sum < _length) {
+          num2 = 1;
           return self[self._front + sum & self._capacity - 1];
         }
       }
     }
+    return;
   }
   isEmpty() {
     return 0 === this._length;
   }
   clear() {
-    const obj = { _length: 0, _front: 0 };
-    obj._makeCapacity();
+    obj = { _length: 0, _front: 0 };
+    _makeCapacityResult = obj._makeCapacity();
+    return;
   }
   toString() {
-    const str = this.toArray();
+    str = this.toArray();
     return str.toString();
   }
   _makeCapacity() {
-    let num;
-    const _capacity = this._capacity;
+    _capacity = this._capacity;
     for (let num = 0; num < _capacity; num = num + 1) {
       this[num] = undefined;
     }
+    return;
   }
   _checkCapacity(arg0) {
-    const self = this;
-    if (this._capacity < arg0) {
-      let num7;
-      const sum = 1.5 * self._capacity + 16;
-      let length = sum;
-      const _resizeTo = self._resizeTo;
+    self = this;
+    if (this._capacity < global) {
+      num8 = 1.5;
+      num9 = 16;
+      sum = 1.5 * self._capacity + 16;
+      length = sum;
       if (typeof sum === "number") {
-        const _Math = Math;
-        const _Math2 = Math;
-        const diff = (Math.min(Math.max(16, length), 1073741824) >>> 0) - 1;
+        tmp = globalThis;
+        _Math = Math;
+        _Math2 = Math;
+        num = 1073741824;
+        num2 = 0;
+        num3 = 1;
+        diff = (Math.min(Math.max(16, length), 1073741824) >>> 0) - 1;
+        tmp3 = diff | diff >> 1;
+        num4 = 2;
+        tmp4 = tmp3 | tmp3 >> 2;
+        num5 = 4;
+        tmp5 = tmp4 | tmp4 >> 4;
+        num6 = 8;
+        tmp6 = tmp5 | tmp5 >> 8;
         num7 = 1 + (tmp6 | tmp6 >> 16);
       } else {
+        tmp8 = isArray;
         num7 = 16;
         if (isArray(sum)) {
           length = sum.length;
         }
       }
-      _resizeTo(num7);
+      _resizeToResult = self._resizeTo(num7);
     }
+    return;
   }
-  _resizeTo(_capacity) {
-    let _front;
-    let num;
-    const self = this;
+  _resizeTo(arg0) {
+    self = this;
     ({ _front, _capacity } = this);
-    const array = new Array(_capacity);
-    const _length = this._length;
+    array = new Array(_capacity);
+    _length = this._length;
     for (let num = 0; num < _capacity; num = num + 1) {
-      let tmp2 = num;
+      tmp2 = num;
       array[tmp2] = self[tmp2];
     }
-    self._capacity = _capacity;
-    self._makeCapacity();
+    self._capacity = global;
+    _makeCapacityResult = self._makeCapacity();
     self._front = 0;
     if (_front + _length <= _capacity) {
-      let num4;
       for (let num4 = 0; num4 < _length; num4 = num4 + 1) {
         self[num4] = array[num4 + _front];
       }
     } else {
-      const diff = _length - (_front + _length & _capacity - 1);
-      let num2 = 0;
+      diff = _length - (_front + _length & _capacity - 1);
+      num2 = 0;
       if (0 < diff) {
         do {
           self[num2] = array[num2 + _front];
           num2 = num2 + 1;
         } while (num2 < diff);
       }
-      const diff1 = _length - diff;
-      let num3 = 0;
+      diff1 = _length - diff;
+      num3 = 0;
       if (0 < diff1) {
         do {
           self[num3 + diff] = array[num3];
@@ -254,6 +301,7 @@ class Deque {
         } while (num3 < diff1);
       }
     }
+    return;
   }
 }
 Deque.prototype.valueOf = Deque.prototype.toString;
@@ -264,7 +312,7 @@ Deque.prototype.insertBack = Deque.prototype.push;
 Deque.prototype.enqueue = Deque.prototype.push;
 Deque.prototype.dequeue = Deque.prototype.shift;
 Deque.prototype.toJSON = Deque.prototype.toArray;
-let obj = {
+Object.defineProperty(Deque.prototype, "length", {
   get() {
     return this._length;
   },
@@ -272,7 +320,6 @@ let obj = {
     const rangeError = new RangeError("");
     throw rangeError;
   }
-};
-Object.defineProperty(Deque.prototype, "length", obj);
+});
 
 export default Deque;

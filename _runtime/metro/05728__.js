@@ -3,6 +3,8 @@
 // Module 5728
 import get_synchronousScreenUpdatesEnabled from "get synchronousScreenUpdatesEnabled" /* 5729 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
 export const RNSLog = {
   log(arg0) {
@@ -10,9 +12,9 @@ export const RNSLog = {
     if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
       const _console = console;
       const items = [arg0];
-      HermesBuiltin.arraySpread(items, substr, 1);
+      HermesBuiltin.arraySpread(substr, 1);
       const _console2 = console;
-      HermesBuiltin.apply(log, items, console);
+      HermesBuiltin.apply(items, console);
     }
   },
   warn(arg0) {
@@ -20,9 +22,9 @@ export const RNSLog = {
     if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
       const _console = console;
       const items = [arg0];
-      HermesBuiltin.arraySpread(items, substr, 1);
+      HermesBuiltin.arraySpread(substr, 1);
       const _console2 = console;
-      HermesBuiltin.apply(warn, items, console);
+      HermesBuiltin.apply(items, console);
     }
   },
   error(arg0) {
@@ -30,9 +32,9 @@ export const RNSLog = {
     if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
       const _console = console;
       const items = [arg0];
-      HermesBuiltin.arraySpread(items, substr, 1);
+      HermesBuiltin.arraySpread(substr, 1);
       const _console2 = console;
-      HermesBuiltin.apply(error, items, console);
+      HermesBuiltin.apply(items, console);
     }
   },
   info(arg0) {
@@ -40,9 +42,9 @@ export const RNSLog = {
     if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
       const _console = console;
       const items = [arg0];
-      HermesBuiltin.arraySpread(items, substr, 1);
+      HermesBuiltin.arraySpread(substr, 1);
       const _console2 = console;
-      HermesBuiltin.apply(info, items, console);
+      HermesBuiltin.apply(items, console);
     }
   }
 };

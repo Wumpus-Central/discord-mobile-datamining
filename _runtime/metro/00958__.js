@@ -2,15 +2,17 @@
 
 // Module 958
 import _mod693 from "module_693" /* 693 */;
-import _mod904 from "module_904" /* 904 */;
+import ignoreNextOnError from "ignoreNextOnError" /* 904 */;
 import _mod948 from "module_948" /* 948 */;
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const checkAndWarnIfIsEmbeddedBrowserExtension = function checkAndWarnIfIsEmbeddedBrowserExtension() {
   let flag = false;
-  if (undefined !== _mod904.WINDOW.window) {
-    const WINDOW = _mod904.WINDOW;
+  if (undefined !== ignoreNextOnError.WINDOW.window) {
+    const WINDOW = ignoreNextOnError.WINDOW;
     flag = false;
     if (!WINDOW.nw) {
       let id;
@@ -22,14 +24,14 @@ export const checkAndWarnIfIsEmbeddedBrowserExtension = function checkAndWarnIfI
       }
       flag = false;
       if (id) {
-        const tmpResult = _mod693;
-        const locationHref = tmpResult.getLocationHref();
-        let someResult = _mod904.WINDOW === _mod904.WINDOW.top;
+        const locationHref = _mod693.getLocationHref();
+        let someResult = ignoreNextOnError.WINDOW === ignoreNextOnError.WINDOW.top;
         if (someResult) {
           const items = ["chrome-extension", "moz-extension", "ms-browser-extension", "safari-web-extension"];
           someResult = items.some((item) => closure_0.startsWith("" + item + "://"));
         }
         flag = !someResult;
+        const tmpResult = _mod693;
       }
     }
   }
@@ -37,11 +39,11 @@ export const checkAndWarnIfIsEmbeddedBrowserExtension = function checkAndWarnIfI
   if (flag2) {
     flag2 = true;
     if (_mod948.DEBUG_BUILD) {
-      const tmpResult2 = _mod693;
-      tmpResult2.consoleSandbox(() => {
+      _mod693.consoleSandbox(() => {
         console.error("[Sentry] You cannot use Sentry.init() in a browser extension, see: https://docs.sentry.io/platforms/javascript/best-practices/browser-extensions/");
       });
       flag2 = true;
+      const tmpResult2 = _mod693;
     }
   }
   return flag2;

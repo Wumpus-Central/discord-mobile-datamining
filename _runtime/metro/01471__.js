@@ -1,7 +1,8 @@
 // === Module 1471: ? ===
 
 // Module 1471
-const obj = {
+
+export default {
   reachabilityUrl: "https://clients3.google.com/generate_204",
   reachabilityMethod: "HEAD",
   reachabilityHeaders: {},
@@ -17,5 +18,3 @@ const obj = {
   shouldFetchWiFiSSID: false,
   useNativeReachability: true
 };
-
-export default obj;

@@ -5,34 +5,34 @@ import _mod12578 from "module_12578" /* 12578 */;
 import _mod12580 from "module_12580" /* 12580 */;
 import _mod12581 from "module_12581" /* 12581 */;
 
+require = arg1;
+const dependencyMap = arg6;
 function instrumentConsole() {
   if ("console" in _mod12581.GLOBAL_OBJ) {
     const CONSOLE_LEVELS = _mod12580.CONSOLE_LEVELS;
     const item = CONSOLE_LEVELS.forEach((item) => {
-      let closure_0 = item;
-      if (item in closure_0(closure_1[1]).GLOBAL_OBJ.console) {
-        const tmpResult = closure_0(closure_1[3]);
-        tmpResult.fill(closure_0(closure_1[1]).GLOBAL_OBJ.console, item, (arg0) => {
+      closure_0 = item;
+      if (item in closure_0(12581).GLOBAL_OBJ.console) {
+        tmp(12586).fill(tmp(12581).GLOBAL_OBJ.console, item, (arg0) => {
           _mod12580.originalConsoleMethods[level] = arg0;
           return () => {
             const items = [...arguments];
-            const obj = { args: items, level };
-            const obj2 = level(closure_2_1[0]);
-            obj2.triggerHandlers("console", obj);
-            const obj3 = level(closure_2_1[2]).originalConsoleMethods[level];
+            level(12578).triggerHandlers("console", { args: items, level });
+            const obj3 = level(12580).originalConsoleMethods[level];
             if (obj3) {
-              obj3.apply(level(closure_2_1[1]).GLOBAL_OBJ.console, items);
+              obj3.apply(level(12581).GLOBAL_OBJ.console, items);
             }
+            const obj = { args: items, level };
+            const obj2 = level(12578);
           };
         });
+        const tmpResult = tmp(12586);
       }
     });
   }
 }
 
 export const addConsoleInstrumentationHandler = function addConsoleInstrumentationHandler(errorCallback) {
-  const obj = _mod12578;
-  obj.addHandler("console", errorCallback);
-  const obj2 = _mod12578;
-  obj2.maybeInstrument("console", instrumentConsole);
+  _mod12578.addHandler("console", errorCallback);
+  _mod12578.maybeInstrument("console", instrumentConsole);
 };

@@ -1,7 +1,7 @@
 // === Module 921: generateUniqueID ===
 
 // Module 921 (generateUniqueID)
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const generateUniqueID = () => {
   const timestamp = Date.now();

@@ -1,35 +1,36 @@
 // === Module 1681: valueSetter ===
 
 // Module 1681 (valueSetter)
+const global = arg0;
 function valueSetter(iter, value) {
-  let closure_0 = iter;
-  let obj;
+  closure_0 = iter;
+  if (flag === undefined) {
+    flag = false;
+  }
   let step;
-  const _animation = iter._animation;
+  let _animation = iter._animation;
   if (_animation) {
     _animation.cancelled = true;
-    let tmp = null;
     iter._animation = null;
   }
   if (typeof value === "function") {
-    obj = value;
+    _animation = value;
     if (typeof value === "function") {
-      obj = value();
+      _animation = value();
     }
-    if (iter._value === obj.current) {
-      if (!obj.isHigherOrder) {
+    if (iter._value === _animation.current) {
+      if (!_animation.isHigherOrder) {
         if (!flag) {
-          if (obj.callback) {
-            obj.callback(true);
+          if (_animation.callback) {
+            _animation.callback(true);
           }
         }
       }
     }
     let timestamp = global.__frameTimestamp || global._getAnimationTimestamp();
-    obj.onStart(obj, iter.value, timestamp, _animation);
+    _animation.onStart(_animation, iter.value, timestamp, _animation);
     step = function step(arg0) {
       let timestamp = arg0;
-      const tmp = obj.timestamp || 0;
       if (arg0 < tmp) {
         timestamp = obj.timestamp;
       }
@@ -50,29 +51,30 @@ function valueSetter(iter, value) {
           const animationFrame = requestAnimationFrame(step);
         }
       }
+      tmp = obj.timestamp || 0;
     };
-    iter._animation = obj;
-    const tmp8 = obj.timestamp || 0;
+    iter._animation = _animation;
     if (timestamp < tmp8) {
-      timestamp = obj.timestamp;
+      timestamp = _animation.timestamp;
     }
-    if (obj.cancelled) {
-      if (obj.callback) {
-        obj.callback(false);
+    if (_animation.cancelled) {
+      if (_animation.callback) {
+        _animation.callback(false);
       }
     } else {
-      obj.finished = true;
-      obj.timestamp = timestamp;
-      iter._value = obj.current;
-      if (obj.onFrame(obj, timestamp)) {
-        if (obj.callback) {
-          obj.callback(true);
+      _animation.finished = true;
+      _animation.timestamp = timestamp;
+      iter._value = _animation.current;
+      if (_animation.onFrame(_animation, timestamp)) {
+        if (_animation.callback) {
+          _animation.callback(true);
         }
       } else {
         let _requestAnimationFrame = requestAnimationFrame;
         let animationFrame = requestAnimationFrame(step);
       }
     }
+    tmp8 = _animation.timestamp || 0;
   } else {
     iter._value = value;
   }

@@ -1,8 +1,10 @@
 // === Module 1306: bind ===
 
 // Module 1306 (bind)
-import bind2 from "bind" /* 1307 */;
+import concatty from "concatty" /* 1307 */;
 
-const bind = Function.prototype.bind || bind2;
+if (!bind) {
+  bind = concatty;
+}
 
 export default bind;

@@ -7,9 +7,14 @@ if (typeof document === "object") {
   all = document.all;
 }
 if (undefined === all) {
-  let fn;
   if (undefined !== all) {
-    fn = (fn) => typeof fn === "function" || fn === all;
+    let fn = (fn) => {
+      let tmp = typeof fn === "function";
+      if (typeof fn !== "function") {
+        tmp = fn === all;
+      }
+      return tmp;
+    };
   }
   module.exports = fn;
 }

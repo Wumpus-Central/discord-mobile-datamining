@@ -1,70 +1,59 @@
 // === Module 5753: SearchBar ===
 
 // Module 5753 (SearchBar)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
 import _modDef5754 from "module_5754" /* 5754 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-let importDefault;
-
+const require = fn;
 let closure_3 = ["obscureBackground", "hideNavigationBar", "onFocus", "onBlur", "onSearchButtonPress", "onCancelButtonPress", "onChangeText", "ref"];
-const View = react_native.View;
-const jsx = Fragment.jsx;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
 
 export default function SearchBar(ref) {
-  let closure_1;
-  let hideNavigationBar;
-  let obscureBackground;
-  let onBlur;
-  let onCancelButtonPress;
-  let onChangeText;
-  let onFocus;
-  let onSearchButtonPress;
-  const ref1 = react.useRef(null);
-  const imperativeHandle = react.useImperativeHandle(ref.ref, () => ({
+  const ref1 = noop.useRef(null);
+  const imperativeHandle = noop.useImperativeHandle(ref.ref, () => ({
     blur() {
       closure_1_1((arg0) => {
-        const Commands = closure_1_0(closure_1_2[4]).Commands;
+        const Commands = closure_1_0(dependencyMap[4]).Commands;
         return Commands.blur(arg0);
       });
     },
     focus() {
       closure_1_1((arg0) => {
-        const Commands = closure_1_0(closure_1_2[4]).Commands;
+        const Commands = closure_1_0(dependencyMap[4]).Commands;
         return Commands.focus(arg0);
       });
     },
     toggleCancelButton(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       closure_1_1((arg0) => {
-        const Commands = closure_2_0(closure_2_2[4]).Commands;
+        const Commands = ref1(5754).Commands;
         return Commands.toggleCancelButton(arg0, closure_0);
       });
     },
     clearText() {
       closure_1_1((arg0) => {
-        const Commands = closure_1_0(closure_1_2[4]).Commands;
+        const Commands = closure_1_0(dependencyMap[4]).Commands;
         return Commands.clearText(arg0);
       });
     },
     setText(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       closure_1_1((arg0) => {
-        const Commands = closure_2_0(closure_2_2[4]).Commands;
+        const Commands = ref1(5754).Commands;
         return Commands.setText(arg0, closure_0);
       });
     },
     cancelSearch() {
       closure_1_1((arg0) => {
-        const Commands = closure_1_0(closure_1_2[4]).Commands;
+        const Commands = closure_1_0(dependencyMap[4]).Commands;
         return Commands.cancelSearch(arg0);
       });
     }
   }));
   const items = [ref1];
-  importDefault = react.useCallback((fn) => {
+  importDefault = noop.useCallback((fn) => {
     const current = ref1.current;
     if (current) {
       fn(current);
@@ -75,12 +64,18 @@ export default function SearchBar(ref) {
   }, items);
   if (ref1(5746).isSearchBarAvailableForCurrentPlatform) {
     ({ obscureBackground, hideNavigationBar, onFocus, onBlur, onSearchButtonPress, onCancelButtonPress, onChangeText } = ref.ref);
+    const obj = { ref: ref1 };
     const tmp10 = _objectWithoutProperties(ref.ref, closure_3);
-    _modDef5754;
     const merged = Object.assign(tmp10);
-    const tmp3Result = ref1(5746);
-    const tmp3Result2 = ref1(5746);
-    return <tmp13 ref={ref1} obscureBackground={tmp3Result.parseBooleanToOptionalBooleanNativeProp(obscureBackground)} hideNavigationBar={tmp3Result2.parseBooleanToOptionalBooleanNativeProp(hideNavigationBar)} onSearchFocus={onFocus} onSearchBlur={onBlur} onSearchButtonPress={onSearchButtonPress} onCancelButtonPress={onCancelButtonPress} onChangeText={onChangeText} />;
+    obj.obscureBackground = tmp3(5746).parseBooleanToOptionalBooleanNativeProp(obscureBackground);
+    const tmp3Result = tmp3(5746);
+    obj.hideNavigationBar = tmp3(5746).parseBooleanToOptionalBooleanNativeProp(hideNavigationBar);
+    obj.onSearchFocus = onFocus;
+    obj.onSearchBlur = onBlur;
+    obj.onSearchButtonPress = onSearchButtonPress;
+    obj.onCancelButtonPress = onCancelButtonPress;
+    obj.onChangeText = onChangeText;
+    return <tmp13 ref={ref1} />;
   } else {
     let _console = console;
     console.warn("Importing SearchBar is only valid on iOS and Android devices.");

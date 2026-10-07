@@ -1,27 +1,25 @@
 // === Module 12638: ? ===
 
 // Module 12638
-import _browserPerformanceTimeOriginMode from "_browserPerformanceTimeOriginMode" /* 12594 */;
+import _mod12594 from "module_12594" /* 12594 */;
 import _mod12624 from "module_12624" /* 12624 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
 export const createClientReportEnvelope = function createClientReportEnvelope(discarded_events, dsn, arg2) {
-  let obj3;
   let result = arg2;
   const items = [{ type: "client_report" }, ];
   if (!arg2) {
-    const obj = _browserPerformanceTimeOriginMode;
-    result = obj.dateTimestampInSeconds();
+    result = _mod12594.dateTimestampInSeconds();
   }
   items[1] = { timestamp: result, discarded_events };
-  const createEnvelope = _mod12624.createEnvelope;
-  _mod12624;
   if (dsn) {
-    obj3 = { dsn };
-    const obj2 = { dsn };
+    const obj3 = { dsn };
+    let obj4 = obj3;
   } else {
-    obj3 = {};
+    obj4 = {};
   }
   const items1 = [items];
-  return createEnvelope(obj3, items1);
+  return _mod12624.createEnvelope(obj4, items1);
 };

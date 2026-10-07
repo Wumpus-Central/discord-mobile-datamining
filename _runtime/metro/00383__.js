@@ -1,9 +1,7 @@
 // === Module 383: ? ===
 
 // Module 383
-import get_nativeEventEmitterDefault from "get nativeEventEmitter" /* 357 */;
 import _modDef366 from "module_366" /* 366 */;
-import _modDef367 from "module_367" /* 367 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
@@ -11,14 +9,19 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
+const AnimatedTransform = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -27,21 +30,24 @@ function _isNativeReflectConstruct() {
   }
 }
 class AnimatedTransform {
-  constructor(_nodes, _transforms, arg2) {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, AnimatedTransform);
-    const items = [arg2];
-    const obj = _getPrototypeOf(AnimatedTransform);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+  constructor(arg0, arg1, arg2) {
+    self = this;
+    tmp = c2(this, AnimatedTransform);
+    items = [];
+    items[0] = importDefault;
+    tmp2 = closure_4;
+    obj = closure_4(AnimatedTransform);
+    tmp3 = closure_3;
+    if (metroRequire()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    const tmp3Result = c3(self, constructResult);
-    tmp3Result._nodes = _nodes;
-    tmp3Result._transforms = _transforms;
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result._nodes = global;
+    tmp3Result._transforms = arg1;
     return tmp3Result;
   }
 }
@@ -49,15 +55,13 @@ _inherits(AnimatedTransform, _modDef366);
 const entry = {
   key: "__makeNative",
   value: function __makeNative(arg0) {
-    let num;
     const self = this;
     const _nodes = this._nodes;
-    const length = _nodes.length;
     for (let num = 0; num < length; num = num + 1) {
       let obj = _nodes[num];
       let __makeNativeResult = obj.__makeNative(arg0);
     }
-    let fn = _get(_getPrototypeOf(AnimatedTransform.prototype), "__makeNative", self);
+    let fn = hasOwnProperty(_getPrototypeOf(AnimatedTransform.prototype), "__makeNative", self);
     if (typeof fn === "function") {
       fn = (items) => fn.apply(self, items);
     }
@@ -74,9 +78,9 @@ let items = [
       const f134172 = (__getValue) => __getValue.__getValue();
       return _transforms.map((item) => {
         const obj = {};
-        for (const key10006 in item) {
-          let arr = item[key10006];
-          if (arr instanceof _modDef367) {
+        for (const key10006 in arg0) {
+          let arr = arg0[key10006];
+          if (arr instanceof AnimatedTransform(367)) {
             obj[key10006] = f134175(arr);
             continue;
           } else {
@@ -93,11 +97,10 @@ let items = [
             } else {
               if (typeof arr === "object") {
                 let obj2 = {};
-                let tmp = arr;
                 for (const key10013 in arr) {
                   let tmp9 = arr[key10013];
                   let tmp3 = tmp9;
-                  if (tmp9 instanceof _modDef367) {
+                  if (tmp9 instanceof AnimatedTransform(367)) {
                     tmp3 = f134175(tmp9);
                   }
                   obj2[key10013] = tmp3;
@@ -122,16 +125,16 @@ let items = [
   {
     key: "__getValueWithStaticTransforms",
     value: function __getValueWithStaticTransforms(arr) {
-      let closure_0 = [];
+      let f134173 = [];
       const _transforms = this._transforms;
-      const f134173 = (__getValue) => {
-        closure_0.push(__getValue.__getValue());
+      f134173 = (__getValue) => {
+        f134173.push(__getValue.__getValue());
       };
       const mapped = _transforms.map((item) => {
         const obj = {};
-        for (const key10006 in item) {
-          let arr = item[key10006];
-          if (arr instanceof _modDef367) {
+        for (const key10006 in arg0) {
+          let arr = arg0[key10006];
+          if (arr instanceof AnimatedTransform(367)) {
             obj[key10006] = f134175(arr);
             continue;
           } else {
@@ -148,11 +151,10 @@ let items = [
             } else {
               if (typeof arr === "object") {
                 let obj2 = {};
-                let tmp = arr;
                 for (const key10013 in arr) {
                   let tmp9 = arr[key10013];
                   let tmp3 = tmp9;
-                  if (tmp9 instanceof _modDef367) {
+                  if (tmp9 instanceof AnimatedTransform(367)) {
                     tmp3 = f134175(tmp9);
                   }
                   obj2[key10013] = tmp3;
@@ -172,12 +174,12 @@ let items = [
         }
         return obj;
       });
-      const f134174 = () => f134174.shift();
+      closure_129_0 = () => f134173.shift();
       return arr.map((item) => {
         const obj = {};
-        for (const key10006 in item) {
-          let arr = item[key10006];
-          if (arr instanceof _modDef367) {
+        for (const key10006 in arg0) {
+          let arr = arg0[key10006];
+          if (arr instanceof AnimatedTransform(367)) {
             obj[key10006] = f134175(arr);
             continue;
           } else {
@@ -194,11 +196,10 @@ let items = [
             } else {
               if (typeof arr === "object") {
                 let obj2 = {};
-                let tmp = arr;
                 for (const key10013 in arr) {
                   let tmp9 = arr[key10013];
                   let tmp3 = tmp9;
-                  if (tmp9 instanceof _modDef367) {
+                  if (tmp9 instanceof AnimatedTransform(367)) {
                     tmp3 = f134175(tmp9);
                   }
                   obj2[key10013] = tmp3;
@@ -227,9 +228,9 @@ let items = [
       const f134175 = (__getAnimatedValue) => __getAnimatedValue.__getAnimatedValue();
       return _transforms.map((item) => {
         const obj = {};
-        for (const key10006 in item) {
-          let arr = item[key10006];
-          if (arr instanceof _modDef367) {
+        for (const key10006 in arg0) {
+          let arr = arg0[key10006];
+          if (arr instanceof AnimatedTransform(367)) {
             obj[key10006] = f134175(arr);
             continue;
           } else {
@@ -246,11 +247,10 @@ let items = [
             } else {
               if (typeof arr === "object") {
                 let obj2 = {};
-                let tmp = arr;
                 for (const key10013 in arr) {
                   let tmp9 = arr[key10013];
                   let tmp3 = tmp9;
-                  if (tmp9 instanceof _modDef367) {
+                  if (tmp9 instanceof AnimatedTransform(367)) {
                     tmp3 = f134175(tmp9);
                   }
                   obj2[key10013] = tmp3;
@@ -275,15 +275,13 @@ let items = [
   {
     key: "__attach",
     value: function __attach() {
-      let num;
       const self = this;
       const _nodes = this._nodes;
-      const length = _nodes.length;
       for (let num = 0; num < length; num = num + 1) {
         let obj = _nodes[num];
         let __addChildResult = obj.__addChild(self);
       }
-      let fn = _get(_getPrototypeOf(AnimatedTransform.prototype), "__attach", self);
+      let fn = hasOwnProperty(_getPrototypeOf(AnimatedTransform.prototype), "__attach", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -293,15 +291,13 @@ let items = [
   {
     key: "__detach",
     value: function __detach() {
-      let num;
       const self = this;
       const _nodes = this._nodes;
-      const length = _nodes.length;
       for (let num = 0; num < length; num = num + 1) {
         let obj = _nodes[num];
         let __removeChildResult = obj.__removeChild(self);
       }
-      let fn = _get(_getPrototypeOf(AnimatedTransform.prototype), "__detach", self);
+      let fn = hasOwnProperty(_getPrototypeOf(AnimatedTransform.prototype), "__detach", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -311,49 +307,46 @@ let items = [
   {
     key: "__getNativeConfig",
     value: function __getNativeConfig() {
-      let num;
       const self = this;
       const items = [];
       const _transforms = this._transforms;
-      const length = _transforms.length;
       for (let num = 0; num < length; num = num + 1) {
         let tmp = _transforms[num];
         for (const key10012 in tmp) {
           let obj5 = tmp[key10012];
           let push = items.push;
-          if (obj5 instanceof _modDef367) {
+          if (obj5 instanceof AnimatedTransform(367)) {
             let obj2 = { type: "animated", property: key10012, nodeTag: obj5.__getNativeTag() };
             let arr = push(obj2);
             continue;
           } else {
-            let obj = { type: "static", property: key10012, value: tmp7Result.transformDataType(obj5) };
-            let tmp7Result = get_nativeEventEmitterDefault;
+            let obj = { type: "static", property: key10012, value: null };
+            let tmp7Result = AnimatedTransform(357);
+            obj.value = tmp7Result.transformDataType(obj5);
             let arr2 = push(obj);
             continue;
           }
           continue;
         }
       }
-      const obj3 = { type: "transform", transforms: items, debugID: self.__getDebugID() };
-      return obj3;
+      return { type: "transform", transforms: items, debugID: self.__getDebugID() };
     }
   }
 ];
 const entry1 = {
   key: "from",
   value: function from(_transforms) {
-    let num;
+    let construct = globalThis;
     let items = _transforms;
     if (!Array.isArray(_transforms)) {
       items = [];
     }
     const items1 = [];
-    const length = items.length;
     for (let num = 0; num < length; num = num + 1) {
       let tmp = items[num];
       for (const key10017 in tmp) {
         let tmp9 = tmp[key10017];
-        if (!(tmp9 instanceof _modDef367)) {
+        if (!(tmp9 instanceof AnimatedTransform(367))) {
           continue;
         } else {
           let arr = items1.push(tmp9);
@@ -362,25 +355,27 @@ const entry1 = {
         continue;
       }
     }
-    let tmp5 = null;
-    if (0 !== items1.length) {
-      let constructResult;
+    if (0 === items1.length) {
+      return null;
+    } else {
       const obj2 = Object.create(AnimatedTransform.prototype);
       _classCallCheck(obj2, AnimatedTransform);
       const items2 = [undefined];
+      let constructor = _getPrototypeOf;
       const obj = _getPrototypeOf(AnimatedTransform);
-      if (_isNativeReflectConstruct()) {
-        const _Reflect = Reflect;
-        constructResult = Reflect.construct(obj, items2, _getPrototypeOf(obj2).constructor);
+      if (metroRequire()) {
+        const _Reflect = construct.Reflect;
+        construct = _Reflect.construct;
+        constructor = constructor(obj2).constructor;
+        let constructResult = construct(obj, items2, constructor);
       } else {
         constructResult = obj.apply(obj2, items2);
       }
-      const tmp17Result = c3(obj2, constructResult);
-      tmp17Result._nodes = items1;
-      tmp17Result._transforms = _transforms;
-      tmp5 = tmp17Result;
+      const tmp16Result = _possibleConstructorReturn(obj2, constructResult);
+      tmp16Result._nodes = items1;
+      tmp16Result._transforms = _transforms;
     }
-    return tmp5;
+    length = items.length;
   }
 };
 let items1 = [entry1];

@@ -1,44 +1,40 @@
 // === Module 42: _createClass ===
 
 // Module 42 (_createClass)
-import toPropertyKey from "toPropertyKey" /* 43 */;
+import _mod43 from "module_43" /* 43 */;
 
 
 export default function _createClass(arg0, arg1, arg2) {
-  const tmp = arg1;
-  if (tmp) {
-    let num;
+  if (arg1) {
     for (let num = 0; num < arg1.length; num = num + 1) {
-      let tmp4 = arg1[num];
-      let flag2 = tmp4.enumerable;
+      let tmp3 = arg1[num];
+      let flag2 = tmp3.enumerable;
       if (!flag2) {
         flag2 = false;
       }
-      tmp4.enumerable = flag2;
-      tmp4.configurable = true;
-      if ("value" in tmp4) {
-        tmp4.writable = true;
+      tmp3.enumerable = flag2;
+      tmp3.configurable = true;
+      if ("value" in tmp3) {
+        tmp3.writable = true;
       }
       let _Object = Object;
-      let definePropertyResult = Object.defineProperty(tmp2, toPropertyKey(tmp4.key), tmp4);
+      let definePropertyResult = Object.defineProperty(tmp, _mod43(tmp3.key), tmp3);
     }
   }
-  const tmp9 = arg2;
-  if (tmp9) {
-    let num3;
+  if (arg2) {
     for (let num3 = 0; num3 < arg2.length; num3 = num3 + 1) {
-      let tmp11 = arg2[num3];
-      let flag4 = tmp11.enumerable;
+      let tmp9 = arg2[num3];
+      let flag4 = tmp9.enumerable;
       if (!flag4) {
         flag4 = false;
       }
-      tmp11.enumerable = flag4;
-      tmp11.configurable = true;
-      if ("value" in tmp11) {
-        tmp11.writable = true;
+      tmp9.enumerable = flag4;
+      tmp9.configurable = true;
+      if ("value" in tmp9) {
+        tmp9.writable = true;
       }
       let _Object2 = Object;
-      let definePropertyResult1 = Object.defineProperty(arg0, toPropertyKey(tmp11.key), tmp11);
+      let definePropertyResult1 = Object.defineProperty(arg0, _mod43(tmp9.key), tmp9);
     }
   }
   Object.defineProperty(arg0, "prototype", { writable: false });

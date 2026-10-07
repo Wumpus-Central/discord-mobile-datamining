@@ -1,10 +1,11 @@
 // === Module 72: unstable_hasComponent ===
 
 // Module 72 (unstable_hasComponent)
+const global = arg0;
 const map = new Map();
 
 export const unstable_hasComponent = function unstable_hasComponent(arg0) {
-  let value = map.get(arg0);
+  value = map.get(arg0);
   if (null == value) {
     if (global.__nativeComponentRegistry__hasComponent) {
       const result = global.__nativeComponentRegistry__hasComponent(arg0);
@@ -13,8 +14,6 @@ export const unstable_hasComponent = function unstable_hasComponent(arg0) {
     } else {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      const self = this;
-      const self2 = this;
       const error = new Error("unstable_hasComponent('" + arg0 + "'): Global function is not registered");
       throw error;
     }

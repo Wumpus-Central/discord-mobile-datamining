@@ -4,46 +4,47 @@
 import _mod14079 from "module_14079" /* 14079 */;
 import _mod14080 from "module_14080" /* 14080 */;
 import _mod14081 from "module_14081" /* 14081 */;
-import isForced from "isForced" /* 14118 */;
+import _mod14118 from "module_14118" /* 14118 */;
 import _mod14119 from "module_14119" /* 14119 */;
 import _mod14135 from "module_14135" /* 14135 */;
 import _mod14136 from "module_14136" /* 14136 */;
 
 
 export default (dontCallGetSet, obj) => {
-  let _global;
-  let stat;
-  let target;
-  let tmp5;
   ({ target, global: _global, stat } = dontCallGetSet);
   const tmp3 = _mod14079;
   if (_global) {
-    tmp5 = tmp3;
+    let prototype = tmp3;
   } else {
     let tmp4 = tmp3[target];
     if (stat) {
       if (!tmp4) {
         tmp4 = _mod14080(target, {});
       }
-      tmp5 = tmp4;
+      prototype = tmp4;
     } else {
-      tmp5 = tmp4 && _mod14079[target].prototype;
+      prototype = tmp4;
+      if (tmp4) {
+        prototype = _mod14079[target].prototype;
+      }
     }
   }
-  if (tmp5) {
-    for (const key10024 in obj) {
-      let tmp8;
-      let tmp22 = obj[key10024];
-      if (dontCallGetSet.dontCallGetSet) {
+  if (prototype) {
+    for (const key10024 in arg1) {
+      let tmp21 = arg1[key10024];
+      if (arg0.dontCallGetSet) {
         obj = _mod14081;
-        let iter = obj.f(tmp5, key10024);
-        let value = iter && iter.value;
-        tmp8 = value;
+        let iter = obj.f(prototype, key10024);
+        value = iter;
+        if (iter) {
+          value = iter.value;
+        }
+        let tmp7 = value;
       } else {
-        tmp8 = tmp5[key10024];
+        tmp7 = prototype[key10024];
       }
       let sum = key10024;
-      let tmp13 = isForced;
+      let tmp12 = _mod14118;
       if (!_global) {
         let str4 = "#";
         if (stat) {
@@ -51,25 +52,28 @@ export default (dontCallGetSet, obj) => {
         }
         sum = target + str4 + key10024;
       }
-      if (!tmp13(sum, dontCallGetSet.forced)) {
-        if (undefined !== tmp8) {
-          if (typeof tmp22 === typeof tmp8) {
+      if (!tmp12(sum, arg0.forced)) {
+        if (undefined !== tmp7) {
+          if (typeof tmp21 === typeof tmp7) {
             continue;
           } else {
-            let tmp23 = _mod14119(tmp22, tmp8);
+            let tmp22 = _mod14119(tmp21, tmp7);
           }
         }
         continue;
       }
-      let sham = dontCallGetSet.sham;
+      let sham = arg0.sham;
       if (!sham) {
-        let sham2 = tmp8 && tmp8.sham;
+        let sham2 = tmp7;
+        if (tmp7) {
+          sham2 = tmp7.sham;
+        }
         sham = sham2;
       }
       if (sham) {
-        let tmp15 = _mod14135(tmp22, "sham", true);
+        let tmp14 = _mod14135(tmp21, "sham", true);
       }
-      let tmp20 = _mod14136(tmp5, key10024, tmp22, dontCallGetSet);
+      let tmp19 = _mod14136(prototype, key10024, tmp21, arg0);
       continue;
     }
   }

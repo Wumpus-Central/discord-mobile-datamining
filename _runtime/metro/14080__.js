@@ -8,8 +8,8 @@ export default (arg0, value) => {
   try {
     const obj = { value, configurable: true, writable: true };
     defineProperty(_mod14079, arg0, obj);
+    return value;
   } catch (err) {
-    _mod14079[arg0] = value;
+    _mod14079[tmp2] = tmp;
   }
-  return value;
 };

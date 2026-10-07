@@ -1,7 +1,7 @@
 // === Module 850: CHATS_CREATE_METHOD ===
 
 // Module 850 (CHATS_CREATE_METHOD)
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const CHATS_CREATE_METHOD = "chats.create";
 export const CHAT_PATH = "chat";

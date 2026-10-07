@@ -3,6 +3,8 @@
 // Module 1198
 const require = globalThis.__r;
 
+const require = arg1;
+const dependencyMap = arg6;
 
 export const typeofJsonValue = require("typeofJsonValue").typeofJsonValue;
 export const isJsonObject = require("typeofJsonValue").isJsonObject;
@@ -16,8 +18,8 @@ export const BinaryReader = require("binaryReadOptions").BinaryReader;
 export const binaryReadOptions = require("binaryReadOptions").binaryReadOptions;
 export const BinaryWriter = require("binaryWriteOptions").BinaryWriter;
 export const binaryWriteOptions = require("binaryWriteOptions").binaryWriteOptions;
-export const PbLong = require("PbULong").PbLong;
-export const PbULong = require("PbULong").PbULong;
+export const PbLong = require("module_1205").PbLong;
+export const PbULong = require("module_1205").PbULong;
 export const jsonReadOptions = require("jsonReadOptions").jsonReadOptions;
 export const jsonWriteOptions = require("jsonReadOptions").jsonWriteOptions;
 export const mergeJsonOptions = require("jsonReadOptions").mergeJsonOptions;
@@ -34,7 +36,7 @@ export const ReflectionTypeCheck = require("ReflectionTypeCheck").ReflectionType
 export const reflectionCreate = require("reflectionCreate").reflectionCreate;
 export const reflectionScalarDefault = require("reflectionScalarDefault").reflectionScalarDefault;
 export const reflectionMergePartial = require("reflectionMergePartial").reflectionMergePartial;
-export const reflectionEquals = require("reflectionEquals").reflectionEquals;
+export const reflectionEquals = require("primitiveEq").reflectionEquals;
 export const ReflectionBinaryReader = require("ReflectionBinaryReader").ReflectionBinaryReader;
 export const ReflectionBinaryWriter = require("ReflectionBinaryWriter").ReflectionBinaryWriter;
 export const ReflectionJsonReader = require("ReflectionJsonReader").ReflectionJsonReader;
@@ -45,10 +47,10 @@ export const setOneofValue = require("module_1214").setOneofValue;
 export const getOneofValue = require("module_1214").getOneofValue;
 export const clearOneofValue = require("module_1214").clearOneofValue;
 export const getSelectedOneofValue = require("module_1214").getSelectedOneofValue;
-export const listEnumValues = require("_slicedToArray").listEnumValues;
-export const listEnumNames = require("_slicedToArray").listEnumNames;
-export const listEnumNumbers = require("_slicedToArray").listEnumNumbers;
-export const isEnumObject = require("_slicedToArray").isEnumObject;
+export const listEnumValues = require("module_1225").listEnumValues;
+export const listEnumNames = require("module_1225").listEnumNames;
+export const listEnumNumbers = require("module_1225").listEnumNumbers;
+export const isEnumObject = require("module_1225").isEnumObject;
 export const lowerCamelCase = require("lowerCamelCase").lowerCamelCase;
 export const assert = require("assert").assert;
 export const assertNever = require("assert").assertNever;

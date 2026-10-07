@@ -5,8 +5,7 @@ import cloneArrayBuffer from "cloneArrayBuffer" /* 4988 */;
 
 
 export default function cloneTypedArray(buffer, arg1) {
-  const tmp = arg1;
-  if (tmp) {
+  if (arg1) {
     buffer = cloneArrayBuffer(buffer.buffer);
   } else {
     buffer = buffer.buffer;

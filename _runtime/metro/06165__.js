@@ -1,13 +1,13 @@
 // === Module 6165: ? ===
 
 // Module 6165
-import react_native from "react-native" /* 17 */;
-import react from "react" /* 19 */;
-import reactDefault from "react" /* 6166 */;
+import _mod17 from "module_17" /* 17 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef6166 from "module_6166" /* 6166 */;
 
-const use = react.use;
-const Platform = react_native.Platform;
+const use = _mod19.use;
+const Platform = _mod17.Platform;
 
 export const useEnsureGestureHandlerRootView = function useEnsureGestureHandlerRootView() {
-  use(reactDefault);
+  use(_modDef6166);
 };

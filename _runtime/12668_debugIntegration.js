@@ -1,10 +1,10 @@
 // === Module 12668: debugIntegration ===
 
 // Module 12668 (debugIntegration)
-import module_12636 from "module_12636" /* 12636 */;
+import setupIntegration from "module_12636" /* 12636 */;
 
 
-export const debugIntegration = module_12636.defineIntegration(() => {
+export const debugIntegration = setupIntegration.defineIntegration(() => {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -15,16 +15,15 @@ export const debugIntegration = module_12636.defineIntegration(() => {
     name: "Debug",
     setup(on) {
       on.on("beforeSendEvent", (arg0, arg1) => {
-        let closure_0 = arg0;
-        let closure_1 = arg1;
-        const obj = obj2(closure_1_1[0]);
-        obj.consoleSandbox(() => {
+        closure_0 = arg0;
+        closure_1 = arg1;
+        obj2(closure_1_1[0]).consoleSandbox(() => {
           const _console = console;
           if (obj2.stringify) {
             const _JSON = JSON;
             log(JSON.stringify(closure_0, null, 2));
             let length2 = closure_1;
-            if (length2) {
+            if (closure_1) {
               const _Object2 = Object;
               length2 = Object.keys(closure_1).length;
             }
@@ -36,7 +35,7 @@ export const debugIntegration = module_12636.defineIntegration(() => {
           } else {
             log(closure_0);
             let length = closure_1;
-            if (length) {
+            if (closure_1) {
               const _Object = Object;
               length = Object.keys(closure_1).length;
             }

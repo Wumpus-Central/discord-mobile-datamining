@@ -1,13 +1,11 @@
 // === Module 782: ? ===
 
 // Module 782
-let c3, c4, closure_2;
-
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const debounce = function debounce(arg0, arg1, maxWait) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   function invokeFunc() {
     if (undefined !== c3) {
       const _clearTimeout = clearTimeout;
@@ -27,10 +25,9 @@ export const debounce = function debounce(arg0, arg1, maxWait) {
   if (maxWait != null) {
     maxWait = maxWait.maxWait;
   }
-  let num = 0;
   if (maxWait) {
     const _Math = Math;
-    num = Math.max(maxWait.maxWait, arg1);
+    const num = Math.max(maxWait.maxWait, arg1);
   }
   let setTimeoutImpl;
   if (maxWait != null) {
@@ -40,14 +37,16 @@ export const debounce = function debounce(arg0, arg1, maxWait) {
     setTimeoutImpl = setTimeout;
   }
   function debounced() {
-    const tmp = c3;
-    if (tmp) {
+    if (c3) {
       const _clearTimeout = clearTimeout;
       clearTimeout(c3);
     }
     c3 = setTimeoutImpl(invokeFunc, closure_1);
-    const tmp8 = num && undefined === c4;
-    if (tmp8) {
+    let tmp7 = num;
+    if (num) {
+      tmp7 = undefined === c4;
+    }
+    if (tmp7) {
       c4 = setTimeoutImpl(invokeFunc, num);
     }
     return closure_2;
@@ -66,9 +65,8 @@ export const debounce = function debounce(arg0, arg1, maxWait) {
   };
   debounced.flush = function flush() {
     if (undefined === c3) {
-      let tmp3;
       if (undefined === c4) {
-        tmp3 = closure_2;
+        let tmp3 = closure_2;
       }
       return tmp3;
     }

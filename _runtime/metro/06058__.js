@@ -1,29 +1,27 @@
 // === Module 6058: ? ===
 
 // Module 6058
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import _mod6059 from "module_6059" /* 6059 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-const UIManager = react_native.UIManager;
-const jsx = Fragment.jsx;
+const UIManager = fn(17).UIManager;
+const jsx = fn(21).jsx;
 try {
-  let closure_0 = _mod6059.default;
+  let closure_0 = fn(6059).default;
+  let closure_2 = null != UIManager.getViewManagerConfig("RNCMaskedView");
+  exports.MaskedView = function MaskedView(children) {
+    children = children.children;
+    const merged = Object.assign(children, Object.assign({ children: 0 }));
+    let tmp2 = children;
+    if (closure_2) {
+      tmp2 = children;
+      if (closure_0) {
+        const obj = {};
+        const merged1 = Object.assign(merged);
+        obj.children = children;
+        tmp2 = <tmp3 />;
+      }
+    }
+    return tmp2;
+  };
 } catch (err) {
 }
-let closure_2 = null != UIManager.getViewManagerConfig("RNCMaskedView");
-
-export const MaskedView = function MaskedView(children) {
-  children = children.children;
-  const merged = Object.assign(children, Object.assign({ children: 0 }));
-  let tmp2 = children;
-  if (closure_2) {
-    tmp2 = children;
-    if (closure_0) {
-      const merged1 = Object.assign(merged);
-      tmp2 = <tmp3>{children}</tmp3>;
-    }
-  }
-  return tmp2;
-};

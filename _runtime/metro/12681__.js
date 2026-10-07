@@ -2,16 +2,13 @@
 
 // Module 12681
 import _mod12586 from "module_12586" /* 12586 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-
-let hasOwnProperty;
+import _slicedToArray from "module_32" /* 32 */;
 
 let items = [["\n", "\\n"], ["\r", "\\r"], ["\t", "\\t"], ["\\", "\\\\"], ["|", "\\u{7c}"], [",", "\\u{2c}"]];
 
 export const getBucketKey = function getBucketKey(metricType, sanitizeMetricKeyResult, sanitizeUnitResult, sanitizeTagsResult) {
-  const obj = _mod12586;
-  const entries1 = entries(obj.dropUndefinedKeys(sanitizeTagsResult));
-  return "" + metricType + sanitizeMetricKeyResult + sanitizeUnitResult + entries1.sort((arg0, arg1) => {
+  const entries = Object.entries(_mod12586.dropUndefinedKeys(sanitizeTagsResult));
+  return "" + metricType + sanitizeMetricKeyResult + sanitizeUnitResult + entries.sort((arg0, arg1) => {
     const first = arg0[0];
     return first.localeCompare(arg1[0]);
   });
@@ -21,30 +18,33 @@ export const sanitizeMetricKey = function sanitizeMetricKey(str) {
 };
 export const sanitizeTags = function sanitizeTags(tags) {
   let obj = {};
-  for (const key10007 in tags) {
+  for (const key10007 in arg0) {
     let _Object = Object;
     hasOwnProperty = Object.prototype.hasOwnProperty;
-    if (!hasOwnProperty.call(tags, key10007)) {
+    let call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let hasOwnPropertyResult = hasOwnProperty(key10007);
+    } else {
+      hasOwnPropertyResult = call(arg0, key10007);
+    }
+    if (!hasOwnPropertyResult) {
       continue;
     } else {
       let _String = String;
       let replaced = key10007.replace(/[^\w\-./]+/gi, "");
       items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(items, String(tags[key10007]), 0);
-      obj[replaced] = items.reduce((acc, item) => {
-        function getCharOrReplacement(item) {
-          const obj = closure_1_3[Symbol.iterator]();
-          while (obj !== undefined) {
-            let tmp4 = closure_1_2(tmp2, 2);
-            if (item === tmp4[0]) {
-              obj.return();
-              return tmp5;
-            }
+      let arraySpreadResult = HermesBuiltin.arraySpread(String(arg0[key10007]), 0);
+      obj[replaced] = items.reduce((acc, item) => acc + (function getCharOrReplacement(item) {
+        const obj = dependencyMap[Symbol.iterator]();
+        while (obj !== undefined) {
+          let tmp4 = closure_1_2(tmp2, 2);
+          if (item === tmp4[0]) {
+            obj.return();
+            return tmp5;
           }
-          return item;
         }
-        return acc + getCharOrReplacement(item);
-      }, "");
+        return item;
+      })(item), "");
       continue;
     }
     continue;
@@ -66,8 +66,6 @@ export const serializeMetricBuckets = function serializeMetricBuckets(arg0) {
     let str2 = "";
     if (entries.length > 0) {
       let mapped = arr2.map((item) => {
-        let tmp;
-        let tmp2;
         [tmp, tmp2] = item;
         return "" + tmp + ":" + tmp2;
       });

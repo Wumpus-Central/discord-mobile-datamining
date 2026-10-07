@@ -1,30 +1,30 @@
 // === Module 878: ? ===
 
 // Module 878
-import react_native from "react-native" /* 17 */;
 import RN_GLOBAL_OBJ from "RN_GLOBAL_OBJ" /* 692 */;
-import ReactNativeLibraries from "ReactNativeLibraries" /* 873 */;
+import TurboModuleRegistry from "TurboModuleRegistry" /* 873 */;
 import _mod879 from "module_879" /* 879 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-const Platform = react_native.Platform;
+require = fn;
+const Platform = fn(17).Platform;
 
 export const isHermesEnabled = function isHermesEnabled() {
   return RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.HermesInternal;
 };
 export const isTurboModuleEnabled = function isTurboModuleEnabled() {
-  const tmp3 = true === RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.RN$Bridgeless || null != RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.__turboModuleProxy;
+  let tmp3 = true === RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.RN$Bridgeless;
+  if (!tmp3) {
+    tmp3 = null != RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.__turboModuleProxy;
+  }
   return tmp3;
 };
 export const isFabricEnabled = function isFabricEnabled() {
   return null != RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.nativeFabricUIManager;
 };
 export const getReactNativeVersion = function getReactNativeVersion() {
-  let major;
-  let minor;
-  let patch;
-  if (ReactNativeLibraries.ReactNativeLibraries.ReactNativeVersion) {
-    const version = ReactNativeLibraries.ReactNativeLibraries.ReactNativeVersion.version;
+  if (TurboModuleRegistry.ReactNativeLibraries.ReactNativeVersion) {
+    const version = TurboModuleRegistry.ReactNativeLibraries.ReactNativeVersion.version;
     ({ major, minor, patch } = version);
     let str2 = "";
     if (null != version.prerelease) {
@@ -39,12 +39,10 @@ export const isExpo = function isExpo() {
   return null != RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.expo;
 };
 export const isExpoGo = function isExpoGo() {
-  const obj = _mod879;
-  return obj.getExpoGo();
+  return _mod879.getExpoGo();
 };
 export const getExpoGoVersion = function getExpoGoVersion() {
-  const obj = _mod879;
-  const expoConstants = obj.getExpoConstants();
+  const expoConstants = _mod879.getExpoConstants();
   let expoVersion;
   if (null != expoConstants) {
     expoVersion = expoConstants.expoVersion;
@@ -56,9 +54,7 @@ export const getExpoGoVersion = function getExpoGoVersion() {
   return expoVersion1;
 };
 export const getExpoSdkVersion = function getExpoSdkVersion() {
-  let parts;
-  const obj = _mod879;
-  const expoConstants = obj.getExpoConstants();
+  const expoConstants = _mod879.getExpoConstants();
   let manifest;
   if (null != expoConstants) {
     manifest = expoConstants.manifest;
@@ -70,8 +66,7 @@ export const getExpoSdkVersion = function getExpoSdkVersion() {
     }
   }
   if (typeof runtimeVersion === "string") {
-    const str = expoConstants.manifest.runtimeVersion;
-    parts = str.split(":");
+    let parts = expoConstants.manifest.runtimeVersion.split(":");
   } else {
     parts = [];
   }
@@ -97,13 +92,12 @@ export const getHermesVersion = function getHermesVersion() {
       getRuntimeProperties = _HermesInternal.getRuntimeProperties;
     }
   }
-  let prop;
   if (null !== getRuntimeProperties) {
     if (undefined !== getRuntimeProperties) {
-      prop = getRuntimeProperties.call(_HermesInternal)["OSS Release Version"];
+      const call = getRuntimeProperties.call;
+      const prop = typeof call === "unknown" ? getRuntimeProperties() : call(_HermesInternal)["OSS Release Version"];
     }
   }
-  return prop;
 };
 export function getDefaultEnvironment() {
   return "production";

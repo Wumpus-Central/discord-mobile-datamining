@@ -35,9 +35,9 @@ export const varint64read = function varint64read() {
           } else {
             let tmp16 = globalThis;
             let _Error = Error;
-            let self2 = this;
+            let tmp17 = new.target;
             let str = "invalid varint";
-            let self3 = this;
+            let tmp18 = new.target;
             let error = new Error("invalid varint");
             throw error;
           }
@@ -82,11 +82,10 @@ export const varint64write = function varint64write(lo, hi, buf) {
         let num4 = 3;
         let tmp9 = hi >> 3;
         let tmp10 = tmp8;
-        let push = buf.push;
         if (tmp9) {
           tmp10 = 128 | tmp8;
         }
-        let arr4 = push(255 & tmp10);
+        let arr4 = buf.push(255 & tmp10);
         if (tmp9) {
           while (true) {
             let tmp12 = hi >>> num4;
@@ -225,7 +224,7 @@ export const varint32read = function varint32read() {
   this.pos = +this.pos + 1;
   if (128 & this.buf[+this.pos]) {
     self.pos = +self.pos + 1;
-    const tmp7 = 127 & this.buf[+this.pos] | (127 & self.buf[+self.pos]) << 7;
+    const tmp7 = tmp3 | (127 & self.buf[+self.pos]) << 7;
     if (128 & self.buf[+self.pos]) {
       self.pos = +self.pos + 1;
       const tmp11 = tmp7 | (127 & self.buf[+self.pos]) << 14;
@@ -236,7 +235,6 @@ export const varint32read = function varint32read() {
           self.pos = +self.pos + 1;
           let tmp18 = self.buf[tmp17];
           let num5 = 5;
-          const tmp19 = 15 & tmp18;
           if (128 & tmp18) {
             self.pos = +self.pos + 1;
             tmp18 = tmp21;
@@ -250,15 +248,13 @@ export const varint32read = function varint32read() {
           }
           if (128 & tmp18) {
             const _Error = Error;
-            const self2 = this;
-            const self3 = this;
             const error = new Error("invalid varint");
             throw error;
           } else {
-            const tmp23 = tmp15 | tmp19 << 28;
             self.assertBounds();
-            return tmp23 >>> 0;
+            return (tmp15 | tmp19 << 28) >>> 0;
           }
+          tmp19 = 15 & tmp18;
         } else {
           self.assertBounds();
           return tmp15;
@@ -273,6 +269,6 @@ export const varint32read = function varint32read() {
     }
   } else {
     self.assertBounds();
-    return 127 & this.buf[+this.pos];
+    return tmp3;
   }
 };

@@ -14,8 +14,7 @@ export default function serialize(arg0) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const length = [];
-  let closure_2 = [];
+  closure_2 = [];
   return JSON.stringify(arg0, function(arg0, nativeEvent) {
     if (true === nativeEvent) {
       return true;
@@ -36,7 +35,7 @@ export default function serialize(arg0) {
     } else if ("" === nativeEvent) {
       return "~~~ empty string ~~~";
     } else {
-      if (false) {
+      if (flag) {
         if (typeof nativeEvent === "object") {
           if (nativeEvent.nativeEvent) {
             return nativeEvent.nativeEvent;
@@ -44,10 +43,10 @@ export default function serialize(arg0) {
         }
       }
       if ("string" !== typeof nativeEvent) {
-        if ("number" !== typeof nativeEvent) {
-          if ("bigint" === typeof nativeEvent) {
+        if ("number" !== tmp) {
+          if ("bigint" === tmp) {
             return nativeEvent.toString();
-          } else if ("function" === typeof nativeEvent) {
+          } else if ("function" === tmp) {
             const name = nativeEvent.name;
             let str4 = "~~~ anonymous function ~~~";
             if (null != name) {
@@ -59,13 +58,12 @@ export default function serialize(arg0) {
             }
             return str4;
           } else {
-            let str2;
             const _Symbol = Symbol;
             if (nativeEvent[Symbol.iterator]) {
               const _Array = Array;
               if (!Array.isArray(nativeEvent)) {
                 const items = [];
-                HermesBuiltin.arraySpread(items, nativeEvent, 0);
+                HermesBuiltin.arraySpread(nativeEvent, 0);
                 return items;
               }
             }
@@ -82,7 +80,7 @@ export default function serialize(arg0) {
               } else {
                 closure_2.push(arg0);
               }
-              str2 = nativeEvent;
+              let str2 = nativeEvent;
               if (~length.indexOf(nativeEvent)) {
                 str2 = "~~~ Circular Reference ~~~";
               }

@@ -1,7 +1,7 @@
 // === Module 712: ? ===
 
 // Module 712
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const parseSampleRate = function parseSampleRate(flag) {
   if (typeof flag === "boolean") {

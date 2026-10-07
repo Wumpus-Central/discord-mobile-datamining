@@ -1,7 +1,8 @@
 // === Module 484: ? ===
 
 // Module 484
-const obj = {
+
+export default {
   get(arg0) {
     console.warn("Settings is not yet supported on this platform.");
     return null;
@@ -17,5 +18,3 @@ const obj = {
     console.warn("Settings is not yet supported on this platform.");
   }
 };
-
-export default obj;

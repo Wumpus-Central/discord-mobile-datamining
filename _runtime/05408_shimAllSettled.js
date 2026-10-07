@@ -2,19 +2,18 @@
 
 // Module 5408 (shimAllSettled)
 import requirePromise from "requirePromise" /* 5331 */;
-import getPolyfill from "getPolyfill" /* 5332 */;
-import defineProperties from "defineProperties" /* 5360 */;
+import _mod5332 from "module_5332" /* 5332 */;
+import _mod5360 from "module_5360" /* 5360 */;
 
 
 export default function shimAllSettled() {
   requirePromise();
-  const tmp2 = getPolyfill();
-  let closure_0 = tmp2;
-  const obj = {
+  const tmp2 = _mod5332();
+  closure_0 = tmp2;
+  _mod5360(Promise, { allSettled: tmp2 }, {
     allSettled: function testAllSettled() {
       return Promise.allSettled !== closure_0;
     }
-  };
-  defineProperties(Promise, { allSettled: tmp2 }, obj);
+  });
   return tmp2;
 };

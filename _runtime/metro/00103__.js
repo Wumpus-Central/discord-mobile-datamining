@@ -3,15 +3,16 @@
 // Module 103
 import _modDef104 from "module_104" /* 104 */;
 
+importDefault = arg2;
+const dependencyMap = arg6;
 
 export const createViewConfig = function createViewConfig(uiViewClassName) {
   const obj = { uiViewClassName: uiViewClassName.uiViewClassName, Commands: {}, bubblingEventTypes: null, directEventTypes: null, validAttributes: null };
   let bubblingEventTypes1 = _modDef104.bubblingEventTypes;
   const bubblingEventTypes = uiViewClassName.bubblingEventTypes;
   if (null != bubblingEventTypes1) {
-    let obj2;
     if (null != bubblingEventTypes) {
-      obj2 = {};
+      let obj2 = {};
       const merged = Object.assign(bubblingEventTypes1);
       const merged1 = Object.assign(bubblingEventTypes);
     }
@@ -19,9 +20,8 @@ export const createViewConfig = function createViewConfig(uiViewClassName) {
     let directEventTypes1 = _modDef104.directEventTypes;
     const directEventTypes = uiViewClassName.directEventTypes;
     if (null != directEventTypes1) {
-      let obj3;
       if (null != directEventTypes) {
-        obj3 = {};
+        let obj3 = {};
         const merged2 = Object.assign(directEventTypes1);
         const merged3 = Object.assign(directEventTypes);
       }
@@ -29,9 +29,8 @@ export const createViewConfig = function createViewConfig(uiViewClassName) {
       let validAttributes2 = _modDef104.validAttributes;
       const validAttributes = uiViewClassName.validAttributes;
       if (null != validAttributes2) {
-        let obj4;
         if (null != validAttributes) {
-          obj4 = {};
+          let obj4 = {};
           const merged4 = Object.assign(validAttributes2);
           const merged5 = Object.assign(validAttributes);
         }

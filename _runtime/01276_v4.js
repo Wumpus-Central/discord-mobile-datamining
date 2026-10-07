@@ -1,18 +1,20 @@
 // === Module 1276: v4 ===
 
 // Module 1276 (v4)
-import rngDefault from "rng" /* 1268 */;
-import stringify from "stringify" /* 1269 */;
+import uint8ArrayDefault from "uint8Array" /* 1268 */;
+import unsafeStringify from "unsafeStringify" /* 1269 */;
 import _modDef1277 from "module_1277" /* 1277 */;
 
+require = arg1;
+importDefault = arg2;
+const dependencyMap = arg6;
 
-export default function v4(c2, arg1, arg2) {
-  let obj = c2;
+export default function v4(arg0, arg1, arg2) {
+  let obj = arg0;
   if (_modDef1277.randomUUID) {
     if (!arg1) {
       if (!obj) {
-        const tmpResult = _modDef1277;
-        return tmpResult.randomUUID();
+        return _modDef1277.randomUUID();
       }
     }
   }
@@ -21,21 +23,23 @@ export default function v4(c2, arg1, arg2) {
   }
   let random = obj.random;
   if (!random) {
-    const tmp3 = obj.rng || rngDefault;
-    random = tmp3();
+    random = obj.rng || uint8ArrayDefault();
+    const tmp3 = obj.rng || uint8ArrayDefault;
   }
   random[6] = 15 & random[6] | 64;
   random[8] = 63 & random[8] | 128;
   if (arg1) {
-    let num3 = 0;
-    const tmp5 = arg2 || 0;
+    let num = arg2;
+    if (!arg2) {
+      num = 0;
+    }
+    let num4 = 0;
     do {
-      arg1[tmp5 + num3] = random[num3];
-      num3 = num3 + 1;
-    } while (num3 < 16);
+      arg1[num + num4] = random[num4];
+      num4 = num4 + 1;
+    } while (num4 < 16);
     return arg1;
   } else {
-    const obj3 = stringify;
-    return obj3.unsafeStringify(random);
+    return unsafeStringify.unsafeStringify(random);
   }
 };

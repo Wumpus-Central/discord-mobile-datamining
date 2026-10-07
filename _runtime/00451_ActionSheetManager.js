@@ -1,12 +1,12 @@
 // === Module 451: ActionSheetManager ===
 
 // Module 451 (ActionSheetManager)
-import _mod452 from "module_452" /* 452 */;
+import _modDef452 from "module_452" /* 452 */;
 
-const _modDef452 = _mod452;
+const require = globalThis.__r;
 
-for (const key10016 in _mod452) {
-  exports[key10016] = _mod452[key10016];
+for (const key10016 in require("module_452")) {
+  arg5[key10016] = require("module_452")[key10016];
   continue;
 }
 

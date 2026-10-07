@@ -1,30 +1,26 @@
 // === Module 17699: ? ===
 
 // Module 17699
-import _createClass_mod from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _assertThisInitialized from "_assertThisInitialized" /* 94 */;
+import _createClass from "_createClass" /* 42 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _assertThisInitialized_mod from "_assertThisInitialized" /* 94 */;
 import c3_mod from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
 
-let c1;
-
-let POSITIVE_INFINITY;
-let _moduleResult1;
-let fn2;
-const o2 = function o(arg0, arg1) {
-
-};
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -32,112 +28,64 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _createClass = _createClass_mod;
+let _moduleResult1 = _createClass;
+let _classCallCheck = _classCallCheck_mod;
+let _assertThisInitialized = _assertThisInitialized_mod;
 let c3 = c3_mod;
 if (typeof exports === "object") {
   if (undefined !== module) {
     const _Error = Error;
     const fn3 = function t(arg0) {
-      let constructResult;
       const self = this;
-      o(this, fn);
+      _classCallCheck(this, closure_0);
       let str = "Timed out";
       if (null != arg0) {
         const _HermesInternal = HermesInternal;
         str = "Timed out after waiting for " + arg0 + " ms";
       }
       const items = [str];
-      const obj = _getPrototypeOf(fn);
+      const obj = _getPrototypeOf(closure_0);
       if (_isNativeReflectConstruct()) {
         const _Reflect = Reflect;
-        constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+        let constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
       } else {
         constructResult = obj.apply(self, items);
       }
-      const tmp5Result = POSITIVE_INFINITY(self, constructResult);
-      Object.setPrototypeOf(closure_2(tmp5Result), fn.prototype);
+      const tmp5Result = _possibleConstructorReturn(self, constructResult);
+      Object.setPrototypeOf(_assertThisInitialized(tmp5Result), closure_0.prototype);
       return tmp5Result;
     };
     _inherits(fn3, _wrapNativeSuper(Error));
-    let o = o2;
-    const _Number = Number;
-    const POSITIVE_INFINITY2 = Number.POSITIVE_INFINITY;
-    const fn4 = function r(arg0, timeout, arg2) {
-      let raceResult;
-      const f154056 = function(arg0, arg1) {
-        const f155803 = (fn, fn2) => {
-          try {
-            fn(closure_1_0());
-          } catch (tmp4) {
-            fn2(tmp4);
-          }
-        };
-        closure_0 = arg0;
-        let closure_1 = arg1;
-        function r() {
-          if (!c3) {
-            let self = this;
-            let self2 = this;
-            let promise = new Promise(f155803);
-            const tmp3 = promise;
-            let nextPromise = promise.then(function(result) {
-              const tmp = result;
-              if (tmp) {
-                closure_1_0(result);
-              } else if (typeof num === "function") {
-                closure_0 = num2;
-                closure_1 = tmp3;
-                const self = this;
-                const self2 = this;
-                const promise = new Promise((dependencyMap, fn) => {
-                  try {
-                    closure_0.schedule(dependencyMap, closure_1);
-                  } catch (tmp5) {
-                    fn(tmp5);
-                  }
-                });
-                const tmp5 = promise;
-                const nextPromise = promise.then(closure_1_2);
-                nextPromise.catch(closure_1_1);
-              } else {
-                throw new TypeError("Trying to call a non-function");
+    const _moduleResult = _createClass(fn3);
+    _moduleResult1 = _moduleResult;
+    _classCallCheck = function o(arg0, arg1) {
+
+    };
+    const obj2 = {
+      schedule(dependencyMap, arg1) {
+            const timeout = setTimeout(() => {
+              if (null != c1) {
+                const _clearTimeout = clearTimeout;
+                clearTimeout(tmp);
               }
-            });
-            nextPromise.catch(closure_1);
-          }
-        }
-        if (!c3) {
-          const _Promise = Promise;
-          let self = this;
-          let self2 = this;
-          let promise = new Promise(f155803);
-          let tmp3 = promise;
-          let nextPromise = promise.then(function(result) {
-            const tmp = result;
-            if (tmp) {
-              closure_1_0(result);
-            } else if (typeof num === "function") {
-              closure_0 = num2;
-              closure_1 = tmp3;
-              const self = this;
-              const self2 = this;
-              const promise = new Promise((dependencyMap, fn) => {
-                try {
-                  closure_0.schedule(dependencyMap, closure_1);
-                } catch (tmp5) {
-                  fn(tmp5);
+              c1 = undefined;
+              dependencyMap();
+            }, arg1);
+            return {
+              cancel() {
+                if (null != c1) {
+                  const _clearTimeout = clearTimeout;
+                  clearTimeout(tmp);
                 }
-              });
-              const tmp5 = promise;
-              const nextPromise = promise.then(closure_1_2);
-              nextPromise.catch(closure_1_1);
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          });
-          const catchPromise = nextPromise.catch(arg1);
-        }
-      };
+                c1 = undefined;
+              }
+            };
+          }
+    };
+    _assertThisInitialized = obj2;
+    const _Number = Number;
+    c3 = POSITIVE_INFINITY2;
+    const fn4 = function r(arg0, timeout, arg2) {
       closure_0 = arg0;
       let tmp = timeout;
       if (typeof timeout !== "number") {
@@ -162,23 +110,14 @@ if (typeof exports === "object") {
         }
         tmp3 = prop;
       }
-      let num2 = 50;
       if (null !== tmp3) {
-        num2 = 50;
-        if (undefined !== tmp3) {
-          num2 = tmp3;
-        }
       }
-      let c3 = false;
+      c3 = false;
       let fn;
       if (num !== c3) {
-        fn = function() {
-          let tmp;
+        fn = () => {
           if (typeof o === "function") {
             closure_0 = closure_2;
-            let closure_1 = tmp;
-            const self = this;
-            const self2 = this;
             const promise = new Promise((dependencyMap, fn) => {
               try {
                 closure_0.schedule(dependencyMap, closure_1);
@@ -188,8 +127,7 @@ if (typeof exports === "object") {
             });
             return promise.then(() => {
               c3 = true;
-              const tmp = new closure_0(num);
-              throw tmp;
+              throw new closure_0(closure_1);
             });
           } else {
             throw new TypeError("Trying to call a non-function");
@@ -197,63 +135,251 @@ if (typeof exports === "object") {
         };
       }
       if (null != fn) {
-        const self3 = this;
-        const self4 = this;
-        let promise = new Promise(f154056);
+        let promise = new Promise((arg0, arg1) => {
+          closure_0 = arg0;
+          closure_1 = arg1;
+          function r() {
+            if (!c3) {
+              let promise = new Promise((fn, fn2) => {
+                try {
+                  fn(closure_1_0());
+                } catch (tmp4) {
+                  fn2(tmp4);
+                }
+              });
+              promise.then((result) => {
+                if (result) {
+                  closure_1_0(result);
+                } else if (typeof num === "function") {
+                  closure_0 = num2;
+                  closure_1 = tmp2;
+                  const promise = new Promise((dependencyMap, fn) => {
+                    try {
+                      closure_0.schedule(dependencyMap, closure_1);
+                    } catch (tmp5) {
+                      fn(tmp5);
+                    }
+                  });
+                  promise.then(closure_1_2).catch(closure_1_1);
+                  const nextPromise = promise.then(closure_1_2);
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              }).catch(closure_1);
+              let nextPromise = promise.then((result) => {
+                if (result) {
+                  closure_1_0(result);
+                } else if (typeof num === "function") {
+                  closure_0 = num2;
+                  closure_1 = tmp2;
+                  const promise = new Promise((dependencyMap, fn) => {
+                    try {
+                      closure_0.schedule(dependencyMap, closure_1);
+                    } catch (tmp5) {
+                      fn(tmp5);
+                    }
+                  });
+                  promise.then(closure_1_2).catch(closure_1_1);
+                  const nextPromise = promise.then(closure_1_2);
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              });
+            }
+          }
+          if (!c3) {
+            let promise = new Promise((fn, fn2) => {
+              try {
+                fn(closure_1_0());
+              } catch (tmp4) {
+                fn2(tmp4);
+              }
+            });
+            promise.then((result) => {
+              if (result) {
+                closure_1_0(result);
+              } else if (typeof num === "function") {
+                closure_0 = num2;
+                closure_1 = tmp2;
+                const promise = new Promise((dependencyMap, fn) => {
+                  try {
+                    closure_0.schedule(dependencyMap, closure_1);
+                  } catch (tmp5) {
+                    fn(tmp5);
+                  }
+                });
+                promise.then(closure_1_2).catch(closure_1_1);
+                const nextPromise = promise.then(closure_1_2);
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            }).catch(arg1);
+            let nextPromise = promise.then((result) => {
+              if (result) {
+                closure_1_0(result);
+              } else if (typeof num === "function") {
+                closure_0 = num2;
+                closure_1 = tmp2;
+                const promise = new Promise((dependencyMap, fn) => {
+                  try {
+                    closure_0.schedule(dependencyMap, closure_1);
+                  } catch (tmp5) {
+                    fn(tmp5);
+                  }
+                });
+                promise.then(closure_1_2).catch(closure_1_1);
+                const nextPromise = promise.then(closure_1_2);
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            });
+          }
+        });
         const items = [promise, fn()];
-        raceResult = race(items);
+        let racePromise = Promise.race(items);
       } else {
-        let tmp5 = globalThis;
-        let _Promise = Promise;
-        let self = this;
-        let self2 = this;
-        raceResult = new Promise(f154056);
+        racePromise = new Promise((arg0, arg1) => {
+          closure_0 = arg0;
+          closure_1 = arg1;
+          function r() {
+            if (!c3) {
+              let promise = new Promise((fn, fn2) => {
+                try {
+                  fn(closure_1_0());
+                } catch (tmp4) {
+                  fn2(tmp4);
+                }
+              });
+              promise.then((result) => {
+                if (result) {
+                  closure_1_0(result);
+                } else if (typeof num === "function") {
+                  closure_0 = num2;
+                  closure_1 = tmp2;
+                  const promise = new Promise((dependencyMap, fn) => {
+                    try {
+                      closure_0.schedule(dependencyMap, closure_1);
+                    } catch (tmp5) {
+                      fn(tmp5);
+                    }
+                  });
+                  promise.then(closure_1_2).catch(closure_1_1);
+                  const nextPromise = promise.then(closure_1_2);
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              }).catch(closure_1);
+              let nextPromise = promise.then((result) => {
+                if (result) {
+                  closure_1_0(result);
+                } else if (typeof num === "function") {
+                  closure_0 = num2;
+                  closure_1 = tmp2;
+                  const promise = new Promise((dependencyMap, fn) => {
+                    try {
+                      closure_0.schedule(dependencyMap, closure_1);
+                    } catch (tmp5) {
+                      fn(tmp5);
+                    }
+                  });
+                  promise.then(closure_1_2).catch(closure_1_1);
+                  const nextPromise = promise.then(closure_1_2);
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              });
+            }
+          }
+          if (!c3) {
+            let promise = new Promise((fn, fn2) => {
+              try {
+                fn(closure_1_0());
+              } catch (tmp4) {
+                fn2(tmp4);
+              }
+            });
+            promise.then((result) => {
+              if (result) {
+                closure_1_0(result);
+              } else if (typeof num === "function") {
+                closure_0 = num2;
+                closure_1 = tmp2;
+                const promise = new Promise((dependencyMap, fn) => {
+                  try {
+                    closure_0.schedule(dependencyMap, closure_1);
+                  } catch (tmp5) {
+                    fn(tmp5);
+                  }
+                });
+                promise.then(closure_1_2).catch(closure_1_1);
+                const nextPromise = promise.then(closure_1_2);
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            }).catch(arg1);
+            let nextPromise = promise.then((result) => {
+              if (result) {
+                closure_1_0(result);
+              } else if (typeof num === "function") {
+                closure_0 = num2;
+                closure_1 = tmp2;
+                const promise = new Promise((dependencyMap, fn) => {
+                  try {
+                    closure_0.schedule(dependencyMap, closure_1);
+                  } catch (tmp5) {
+                    fn(tmp5);
+                  }
+                });
+                promise.then(closure_1_2).catch(closure_1_1);
+                const nextPromise = promise.then(closure_1_2);
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            });
+          }
+        });
       }
-      return raceResult;
+      return racePromise;
     };
-    let num = 50;
     exports.DEFAULT_INTERVAL_BETWEEN_ATTEMPTS_IN_MS = 50;
-    let num2 = 5000;
     exports.DEFAULT_TIMEOUT_IN_MS = 5000;
-    exports.TimeoutError = _createClass(fn3);
+    exports.TimeoutError = _moduleResult;
     exports.WAIT_FOREVER = POSITIVE_INFINITY2;
     exports.default = fn4;
     exports.waitUntil = fn4;
     const _Object = Object;
-    let str = "__esModule";
-    _createClass(fn3);
   }
 }
 if (typeof globalThis.define === "function") {
-  const define2 = globalThis.define;
   if (globalThis.define.amd) {
     globalThis.define(["exports"], function i(arg0) {
       let fn = function t(arg0) {
-        let constructResult;
         const self = this;
-        o(this, fn);
+        _classCallCheck(this, closure_0);
         let str = "Timed out";
         if (null != arg0) {
           const _HermesInternal = HermesInternal;
           str = "Timed out after waiting for " + arg0 + " ms";
         }
         const items = [str];
-        const obj = _getPrototypeOf(fn);
+        const obj = _getPrototypeOf(closure_0);
         if (_isNativeReflectConstruct()) {
           const _Reflect = Reflect;
-          constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+          let constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
         } else {
           constructResult = obj.apply(self, items);
         }
-        const tmp5Result = POSITIVE_INFINITY(self, constructResult);
-        Object.setPrototypeOf(closure_2(tmp5Result), fn.prototype);
+        const tmp5Result = _possibleConstructorReturn(self, constructResult);
+        Object.setPrototypeOf(_assertThisInitialized(tmp5Result), closure_0.prototype);
         return tmp5Result;
       };
-      let tmp = _inherits(fn, _wrapNativeSuper(Error));
-      const tmp2 = _createClass(fn);
-      _createClass = tmp2;
-      const o = o2;
-      let closure_2 = {
+      closure_129_0 = fn;
+      _inherits(fn, _wrapNativeSuper(Error));
+      tmp2 = tmp2(fn);
+      function o(arg0, arg1) {
+
+      }
+      closure_2 = {
         schedule(dependencyMap, arg1) {
           const timeout = setTimeout(() => {
             if (null != c1) {
@@ -275,81 +401,6 @@ if (typeof globalThis.define === "function") {
         }
       };
       const fn2 = function r(arg0, timeout, arg2) {
-        let raceResult;
-        const f154056 = function(arg0, arg1) {
-          const f155803 = (fn, fn2) => {
-            try {
-              fn(closure_1_0());
-            } catch (tmp4) {
-              fn2(tmp4);
-            }
-          };
-          closure_0 = arg0;
-          let closure_1 = arg1;
-          function r() {
-            if (!c3) {
-              let self = this;
-              let self2 = this;
-              let promise = new Promise(f155803);
-              const tmp3 = promise;
-              let nextPromise = promise.then(function(result) {
-                const tmp = result;
-                if (tmp) {
-                  closure_1_0(result);
-                } else if (typeof num === "function") {
-                  closure_0 = num2;
-                  closure_1 = tmp3;
-                  const self = this;
-                  const self2 = this;
-                  const promise = new Promise((dependencyMap, fn) => {
-                    try {
-                      closure_0.schedule(dependencyMap, closure_1);
-                    } catch (tmp5) {
-                      fn(tmp5);
-                    }
-                  });
-                  const tmp5 = promise;
-                  const nextPromise = promise.then(closure_1_2);
-                  nextPromise.catch(closure_1_1);
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              });
-              nextPromise.catch(closure_1);
-            }
-          }
-          if (!c3) {
-            const _Promise = Promise;
-            let self = this;
-            let self2 = this;
-            let promise = new Promise(f155803);
-            let tmp3 = promise;
-            let nextPromise = promise.then(function(result) {
-              const tmp = result;
-              if (tmp) {
-                closure_1_0(result);
-              } else if (typeof num === "function") {
-                closure_0 = num2;
-                closure_1 = tmp3;
-                const self = this;
-                const self2 = this;
-                const promise = new Promise((dependencyMap, fn) => {
-                  try {
-                    closure_0.schedule(dependencyMap, closure_1);
-                  } catch (tmp5) {
-                    fn(tmp5);
-                  }
-                });
-                const tmp5 = promise;
-                const nextPromise = promise.then(closure_1_2);
-                nextPromise.catch(closure_1_1);
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            });
-            const catchPromise = nextPromise.catch(arg1);
-          }
-        };
         closure_0 = arg0;
         let tmp = timeout;
         if (typeof timeout !== "number") {
@@ -374,23 +425,14 @@ if (typeof globalThis.define === "function") {
           }
           tmp3 = prop;
         }
-        let num2 = 50;
         if (null !== tmp3) {
-          num2 = 50;
-          if (undefined !== tmp3) {
-            num2 = tmp3;
-          }
         }
-        let c3 = false;
+        c3 = false;
         let fn;
         if (num !== c3) {
-          fn = function() {
-            let tmp;
+          fn = () => {
             if (typeof o === "function") {
               closure_0 = closure_2;
-              let closure_1 = tmp;
-              const self = this;
-              const self2 = this;
               const promise = new Promise((dependencyMap, fn) => {
                 try {
                   closure_0.schedule(dependencyMap, closure_1);
@@ -400,8 +442,7 @@ if (typeof globalThis.define === "function") {
               });
               return promise.then(() => {
                 c3 = true;
-                const tmp = new closure_0(num);
-                throw tmp;
+                throw new closure_0(closure_1);
               });
             } else {
               throw new TypeError("Trying to call a non-function");
@@ -409,19 +450,187 @@ if (typeof globalThis.define === "function") {
           };
         }
         if (null != fn) {
-          const self3 = this;
-          const self4 = this;
-          let promise = new Promise(f154056);
+          let promise = new Promise((arg0, arg1) => {
+            closure_0 = arg0;
+            closure_1 = arg1;
+            function r() {
+              if (!c3) {
+                let promise = new Promise((fn, fn2) => {
+                  try {
+                    fn(closure_1_0());
+                  } catch (tmp4) {
+                    fn2(tmp4);
+                  }
+                });
+                promise.then((result) => {
+                  if (result) {
+                    closure_1_0(result);
+                  } else if (typeof num === "function") {
+                    closure_0 = num2;
+                    closure_1 = tmp2;
+                    const promise = new Promise(() => { ... });
+                    promise.then(closure_1_2).catch(closure_1_1);
+                    const nextPromise = promise.then(closure_1_2);
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
+                  }
+                }).catch(closure_1);
+                let nextPromise = promise.then((result) => {
+                  if (result) {
+                    closure_1_0(result);
+                  } else if (typeof num === "function") {
+                    closure_0 = num2;
+                    closure_1 = tmp2;
+                    const promise = new Promise(() => { ... });
+                    promise.then(closure_1_2).catch(closure_1_1);
+                    const nextPromise = promise.then(closure_1_2);
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
+                  }
+                });
+              }
+            }
+            if (!c3) {
+              let promise = new Promise((fn, fn2) => {
+                try {
+                  fn(closure_1_0());
+                } catch (tmp4) {
+                  fn2(tmp4);
+                }
+              });
+              promise.then((result) => {
+                if (result) {
+                  closure_1_0(result);
+                } else if (typeof num === "function") {
+                  closure_0 = num2;
+                  closure_1 = tmp2;
+                  const promise = new Promise((dependencyMap, fn) => {
+                    try {
+                      closure_0.schedule(dependencyMap, closure_1);
+                    } catch (tmp5) {
+                      fn(tmp5);
+                    }
+                  });
+                  promise.then(closure_1_2).catch(closure_1_1);
+                  const nextPromise = promise.then(closure_1_2);
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              }).catch(arg1);
+              let nextPromise = promise.then((result) => {
+                if (result) {
+                  closure_1_0(result);
+                } else if (typeof num === "function") {
+                  closure_0 = num2;
+                  closure_1 = tmp2;
+                  const promise = new Promise((dependencyMap, fn) => {
+                    try {
+                      closure_0.schedule(dependencyMap, closure_1);
+                    } catch (tmp5) {
+                      fn(tmp5);
+                    }
+                  });
+                  promise.then(closure_1_2).catch(closure_1_1);
+                  const nextPromise = promise.then(closure_1_2);
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              });
+            }
+          });
           const items = [promise, fn()];
-          raceResult = race(items);
+          let racePromise = Promise.race(items);
         } else {
-          let tmp5 = globalThis;
-          let _Promise = Promise;
-          let self = this;
-          let self2 = this;
-          raceResult = new Promise(f154056);
+          racePromise = new Promise((arg0, arg1) => {
+            closure_0 = arg0;
+            closure_1 = arg1;
+            function r() {
+              if (!c3) {
+                let promise = new Promise((fn, fn2) => {
+                  try {
+                    fn(closure_1_0());
+                  } catch (tmp4) {
+                    fn2(tmp4);
+                  }
+                });
+                promise.then((result) => {
+                  if (result) {
+                    closure_1_0(result);
+                  } else if (typeof num === "function") {
+                    closure_0 = num2;
+                    closure_1 = tmp2;
+                    const promise = new Promise(() => { ... });
+                    promise.then(closure_1_2).catch(closure_1_1);
+                    const nextPromise = promise.then(closure_1_2);
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
+                  }
+                }).catch(closure_1);
+                let nextPromise = promise.then((result) => {
+                  if (result) {
+                    closure_1_0(result);
+                  } else if (typeof num === "function") {
+                    closure_0 = num2;
+                    closure_1 = tmp2;
+                    const promise = new Promise(() => { ... });
+                    promise.then(closure_1_2).catch(closure_1_1);
+                    const nextPromise = promise.then(closure_1_2);
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
+                  }
+                });
+              }
+            }
+            if (!c3) {
+              let promise = new Promise((fn, fn2) => {
+                try {
+                  fn(closure_1_0());
+                } catch (tmp4) {
+                  fn2(tmp4);
+                }
+              });
+              promise.then((result) => {
+                if (result) {
+                  closure_1_0(result);
+                } else if (typeof num === "function") {
+                  closure_0 = num2;
+                  closure_1 = tmp2;
+                  const promise = new Promise((dependencyMap, fn) => {
+                    try {
+                      closure_0.schedule(dependencyMap, closure_1);
+                    } catch (tmp5) {
+                      fn(tmp5);
+                    }
+                  });
+                  promise.then(closure_1_2).catch(closure_1_1);
+                  const nextPromise = promise.then(closure_1_2);
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              }).catch(arg1);
+              let nextPromise = promise.then((result) => {
+                if (result) {
+                  closure_1_0(result);
+                } else if (typeof num === "function") {
+                  closure_0 = num2;
+                  closure_1 = tmp2;
+                  const promise = new Promise((dependencyMap, fn) => {
+                    try {
+                      closure_0.schedule(dependencyMap, closure_1);
+                    } catch (tmp5) {
+                      fn(tmp5);
+                    }
+                  });
+                  promise.then(closure_1_2).catch(closure_1_1);
+                  const nextPromise = promise.then(closure_1_2);
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              });
+            }
+          });
         }
-        return raceResult;
+        return racePromise;
       };
       arg0.DEFAULT_INTERVAL_BETWEEN_ATTEMPTS_IN_MS = 50;
       arg0.DEFAULT_TIMEOUT_IN_MS = 5000;
@@ -436,33 +645,34 @@ let self = this;
 if (typeof globalThis !== "undefined") {
   self = globalThis;
 }
-let obj = { DEFAULT_INTERVAL_BETWEEN_ATTEMPTS_IN_MS: 50, DEFAULT_TIMEOUT_IN_MS: 5000, TimeoutError: _moduleResult1, WAIT_FOREVER: POSITIVE_INFINITY, default: fn2, waitUntil: fn2 };
+let obj = {};
 self["async-wait-until"] = obj;
 let fn = function t(arg0) {
-  let constructResult;
   const self = this;
-  o(this, fn);
+  _classCallCheck(this, closure_0);
   let str = "Timed out";
   if (null != arg0) {
     const _HermesInternal = HermesInternal;
     str = "Timed out after waiting for " + arg0 + " ms";
   }
   const items = [str];
-  const obj = _getPrototypeOf(fn);
+  const obj = _getPrototypeOf(closure_0);
   if (_isNativeReflectConstruct()) {
     const _Reflect = Reflect;
-    constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+    let constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
   } else {
     constructResult = obj.apply(self, items);
   }
-  const tmp5Result = POSITIVE_INFINITY(self, constructResult);
-  Object.setPrototypeOf(closure_2(tmp5Result), fn.prototype);
+  const tmp5Result = _possibleConstructorReturn(self, constructResult);
+  Object.setPrototypeOf(_assertThisInitialized(tmp5Result), closure_0.prototype);
   return tmp5Result;
 };
 _inherits(fn, _wrapNativeSuper(Error));
 _moduleResult1 = _createClass(fn);
-o = o2;
-let closure_2 = {
+_classCallCheck = function o(arg0, arg1) {
+
+};
+_assertThisInitialized = {
   schedule(dependencyMap, arg1) {
     const timeout = setTimeout(() => {
       if (null != c1) {
@@ -483,83 +693,8 @@ let closure_2 = {
     };
   }
 };
-POSITIVE_INFINITY = Number.POSITIVE_INFINITY;
-fn2 = function r(arg0, timeout, arg2) {
-  let raceResult;
-  const f154056 = function(arg0, arg1) {
-    const f155803 = (fn, fn2) => {
-      try {
-        fn(closure_1_0());
-      } catch (tmp4) {
-        fn2(tmp4);
-      }
-    };
-    closure_0 = arg0;
-    let closure_1 = arg1;
-    function r() {
-      if (!c3) {
-        let self = this;
-        let self2 = this;
-        let promise = new Promise(f155803);
-        const tmp3 = promise;
-        let nextPromise = promise.then(function(result) {
-          const tmp = result;
-          if (tmp) {
-            closure_1_0(result);
-          } else if (typeof num === "function") {
-            closure_0 = num2;
-            closure_1 = tmp3;
-            const self = this;
-            const self2 = this;
-            const promise = new Promise((dependencyMap, fn) => {
-              try {
-                closure_0.schedule(dependencyMap, closure_1);
-              } catch (tmp5) {
-                fn(tmp5);
-              }
-            });
-            const tmp5 = promise;
-            const nextPromise = promise.then(closure_1_2);
-            nextPromise.catch(closure_1_1);
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        });
-        nextPromise.catch(closure_1);
-      }
-    }
-    if (!c3) {
-      const _Promise = Promise;
-      let self = this;
-      let self2 = this;
-      let promise = new Promise(f155803);
-      let tmp3 = promise;
-      let nextPromise = promise.then(function(result) {
-        const tmp = result;
-        if (tmp) {
-          closure_1_0(result);
-        } else if (typeof num === "function") {
-          closure_0 = num2;
-          closure_1 = tmp3;
-          const self = this;
-          const self2 = this;
-          const promise = new Promise((dependencyMap, fn) => {
-            try {
-              closure_0.schedule(dependencyMap, closure_1);
-            } catch (tmp5) {
-              fn(tmp5);
-            }
-          });
-          const tmp5 = promise;
-          const nextPromise = promise.then(closure_1_2);
-          nextPromise.catch(closure_1_1);
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      });
-      const catchPromise = nextPromise.catch(arg1);
-    }
-  };
+c3 = POSITIVE_INFINITY;
+let fn2 = function r(arg0, timeout, arg2) {
   closure_0 = arg0;
   let tmp = timeout;
   if (typeof timeout !== "number") {
@@ -584,23 +719,14 @@ fn2 = function r(arg0, timeout, arg2) {
     }
     tmp3 = prop;
   }
-  let num2 = 50;
   if (null !== tmp3) {
-    num2 = 50;
-    if (undefined !== tmp3) {
-      num2 = tmp3;
-    }
   }
-  let c3 = false;
+  c3 = false;
   let fn;
   if (num !== c3) {
-    fn = function() {
-      let tmp;
+    fn = () => {
       if (typeof o === "function") {
         closure_0 = closure_2;
-        let closure_1 = tmp;
-        const self = this;
-        const self2 = this;
         const promise = new Promise((dependencyMap, fn) => {
           try {
             closure_0.schedule(dependencyMap, closure_1);
@@ -610,8 +736,7 @@ fn2 = function r(arg0, timeout, arg2) {
         });
         return promise.then(() => {
           c3 = true;
-          const tmp = new closure_0(num);
-          throw tmp;
+          throw new closure_0(closure_1);
         });
       } else {
         throw new TypeError("Trying to call a non-function");
@@ -619,17 +744,215 @@ fn2 = function r(arg0, timeout, arg2) {
     };
   }
   if (null != fn) {
-    const self3 = this;
-    const self4 = this;
-    let promise = new Promise(f154056);
+    let promise = new Promise((arg0, arg1) => {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      function r() {
+        if (!c3) {
+          let promise = new Promise((fn, fn2) => {
+            try {
+              fn(closure_1_0());
+            } catch (tmp4) {
+              fn2(tmp4);
+            }
+          });
+          promise.then((result) => {
+            if (result) {
+              closure_1_0(result);
+            } else if (typeof num === "function") {
+              closure_0 = num2;
+              closure_1 = tmp2;
+              const promise = new Promise((dependencyMap, fn) => {
+                try {
+                  closure_0.schedule(dependencyMap, closure_1);
+                } catch (tmp5) {
+                  fn(tmp5);
+                }
+              });
+              promise.then(closure_1_2).catch(closure_1_1);
+              const nextPromise = promise.then(closure_1_2);
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          }).catch(closure_1);
+          let nextPromise = promise.then((result) => {
+            if (result) {
+              closure_1_0(result);
+            } else if (typeof num === "function") {
+              closure_0 = num2;
+              closure_1 = tmp2;
+              const promise = new Promise((dependencyMap, fn) => {
+                try {
+                  closure_0.schedule(dependencyMap, closure_1);
+                } catch (tmp5) {
+                  fn(tmp5);
+                }
+              });
+              promise.then(closure_1_2).catch(closure_1_1);
+              const nextPromise = promise.then(closure_1_2);
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          });
+        }
+      }
+      if (!c3) {
+        let promise = new Promise((fn, fn2) => {
+          try {
+            fn(closure_1_0());
+          } catch (tmp4) {
+            fn2(tmp4);
+          }
+        });
+        promise.then((result) => {
+          if (result) {
+            closure_1_0(result);
+          } else if (typeof num === "function") {
+            closure_0 = num2;
+            closure_1 = tmp2;
+            const promise = new Promise((dependencyMap, fn) => {
+              try {
+                closure_0.schedule(dependencyMap, closure_1);
+              } catch (tmp5) {
+                fn(tmp5);
+              }
+            });
+            promise.then(closure_1_2).catch(closure_1_1);
+            const nextPromise = promise.then(closure_1_2);
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        }).catch(arg1);
+        let nextPromise = promise.then((result) => {
+          if (result) {
+            closure_1_0(result);
+          } else if (typeof num === "function") {
+            closure_0 = num2;
+            closure_1 = tmp2;
+            const promise = new Promise((dependencyMap, fn) => {
+              try {
+                closure_0.schedule(dependencyMap, closure_1);
+              } catch (tmp5) {
+                fn(tmp5);
+              }
+            });
+            promise.then(closure_1_2).catch(closure_1_1);
+            const nextPromise = promise.then(closure_1_2);
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        });
+      }
+    });
     const items = [promise, fn()];
-    raceResult = race(items);
+    let racePromise = Promise.race(items);
   } else {
-    let tmp5 = globalThis;
-    let _Promise = Promise;
-    let self = this;
-    let self2 = this;
-    raceResult = new Promise(f154056);
+    racePromise = new Promise((arg0, arg1) => {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      function r() {
+        if (!c3) {
+          let promise = new Promise((fn, fn2) => {
+            try {
+              fn(closure_1_0());
+            } catch (tmp4) {
+              fn2(tmp4);
+            }
+          });
+          promise.then((result) => {
+            if (result) {
+              closure_1_0(result);
+            } else if (typeof num === "function") {
+              closure_0 = num2;
+              closure_1 = tmp2;
+              const promise = new Promise((dependencyMap, fn) => {
+                try {
+                  closure_0.schedule(dependencyMap, closure_1);
+                } catch (tmp5) {
+                  fn(tmp5);
+                }
+              });
+              promise.then(closure_1_2).catch(closure_1_1);
+              const nextPromise = promise.then(closure_1_2);
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          }).catch(closure_1);
+          let nextPromise = promise.then((result) => {
+            if (result) {
+              closure_1_0(result);
+            } else if (typeof num === "function") {
+              closure_0 = num2;
+              closure_1 = tmp2;
+              const promise = new Promise((dependencyMap, fn) => {
+                try {
+                  closure_0.schedule(dependencyMap, closure_1);
+                } catch (tmp5) {
+                  fn(tmp5);
+                }
+              });
+              promise.then(closure_1_2).catch(closure_1_1);
+              const nextPromise = promise.then(closure_1_2);
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          });
+        }
+      }
+      if (!c3) {
+        let promise = new Promise((fn, fn2) => {
+          try {
+            fn(closure_1_0());
+          } catch (tmp4) {
+            fn2(tmp4);
+          }
+        });
+        promise.then((result) => {
+          if (result) {
+            closure_1_0(result);
+          } else if (typeof num === "function") {
+            closure_0 = num2;
+            closure_1 = tmp2;
+            const promise = new Promise((dependencyMap, fn) => {
+              try {
+                closure_0.schedule(dependencyMap, closure_1);
+              } catch (tmp5) {
+                fn(tmp5);
+              }
+            });
+            promise.then(closure_1_2).catch(closure_1_1);
+            const nextPromise = promise.then(closure_1_2);
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        }).catch(arg1);
+        let nextPromise = promise.then((result) => {
+          if (result) {
+            closure_1_0(result);
+          } else if (typeof num === "function") {
+            closure_0 = num2;
+            closure_1 = tmp2;
+            const promise = new Promise((dependencyMap, fn) => {
+              try {
+                closure_0.schedule(dependencyMap, closure_1);
+              } catch (tmp5) {
+                fn(tmp5);
+              }
+            });
+            promise.then(closure_1_2).catch(closure_1_1);
+            const nextPromise = promise.then(closure_1_2);
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        });
+      }
+    });
   }
-  return raceResult;
+  return racePromise;
 };
+obj.DEFAULT_INTERVAL_BETWEEN_ATTEMPTS_IN_MS = 50;
+obj.DEFAULT_TIMEOUT_IN_MS = 5000;
+obj.TimeoutError = _moduleResult1;
+obj.WAIT_FOREVER = POSITIVE_INFINITY;
+obj.default = fn2;
+obj.waitUntil = fn2;

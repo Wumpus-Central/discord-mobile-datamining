@@ -1,38 +1,41 @@
 // === Module 12613: ? ===
 
 // Module 12613
-import _mod12585 from "module_12585" /* 12585 */;
-import generatePropagationContext from "generatePropagationContext" /* 12590 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
+const SentryNonRecordingSpan = require;
 class SentryNonRecordingSpan {
   constructor() {
-    let obj = arg0;
-    if (arg0 === undefined) {
+    obj = global;
+    if (global === undefined) {
       obj = {};
     }
-    const self = this;
-    _classCallCheck(this, SentryNonRecordingSpan);
-    let traceId = obj.traceId;
+    self = this;
+    tmp = c2(this, SentryNonRecordingSpan);
+    traceId = obj.traceId;
     if (!traceId) {
-      const obj2 = generatePropagationContext;
+      tmp2 = closure_0;
+      tmp3 = closure_1;
+      obj2 = closure_0(closure_1[2]);
       traceId = obj2.generateTraceId();
     }
     self._traceId = traceId;
-    let spanId = obj.spanId;
+    spanId = obj.spanId;
     if (!spanId) {
-      const obj3 = generatePropagationContext;
+      tmp4 = closure_0;
+      tmp5 = closure_1;
+      obj3 = closure_0(closure_1[2]);
       spanId = obj3.generateSpanId();
     }
     self._spanId = spanId;
+    return;
   }
 }
 const entry = {
   key: "spanContext",
   value: function spanContext() {
-    const obj = { spanId: this._spanId, traceId: this._traceId, traceFlags: _mod12585.TRACE_FLAG_NONE };
-    return obj;
+    return { spanId: this._spanId, traceId: this._traceId, traceFlags: SentryNonRecordingSpan(12585).TRACE_FLAG_NONE };
   }
 };
 const items = [
@@ -98,6 +101,5 @@ const items = [
     }
   }
 ];
-const SentryNonRecordingSpan_export = _createClass(SentryNonRecordingSpan, items);
 
-export { SentryNonRecordingSpan_export as SentryNonRecordingSpan };
+export const SentryNonRecordingSpan = _createClass(SentryNonRecordingSpan, items);

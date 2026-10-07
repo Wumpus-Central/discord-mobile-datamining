@@ -3,7 +3,6 @@
 // Module 8142 (arrayAggregator)
 
 export default function arrayAggregator(arg0, fn, fn2, arg3) {
-  let num2;
   let num = 0;
   if (null != arg0) {
     num = arg0.length;

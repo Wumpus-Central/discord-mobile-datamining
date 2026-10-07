@@ -7,17 +7,14 @@ import f2 from "f" /* 14121 */;
 import _mod14131 from "module_14131" /* 14131 */;
 import _mod14132 from "module_14132" /* 14132 */;
 
-function ownKeys(arg0) {
-  const obj = f2;
-  const fResult = obj.f(_mod14131(arg0));
+let closure_2 = _mod14086([].concat);
+
+export default _mod14107("Reflect", "ownKeys") || (function ownKeys(arg0) {
+  const fResult = f2.f(_mod14131(arg0));
   const f = _mod14132.f;
   let tmp2 = fResult;
   if (f) {
     tmp2 = closure_2(fResult, f(arg0));
   }
   return tmp2;
-}
-let closure_2 = _mod14086([].concat);
-_mod14107("Reflect", "ownKeys") || ownKeys;
-
-export default _mod14107("Reflect", "ownKeys") || ownKeys;
+});

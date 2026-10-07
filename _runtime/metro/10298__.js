@@ -1,21 +1,25 @@
 // === Module 10298: ? ===
 
 // Module 10298
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10181 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import map from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -23,21 +27,29 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
 class ZHHansCasualDateParser {
   constructor() {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, ZHHansCasualDateParser);
-    const obj = _getPrototypeOf(ZHHansCasualDateParser);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    self = this;
+    tmp = closure_0(this, ZHHansCasualDateParser);
+    tmp2 = c2;
+    obj = c2(ZHHansCasualDateParser);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return map(self, constructResult);
+    return tmp3(self, constructResult);
   }
 }
+_classCallCheck = ZHHansCasualDateParser;
 _inherits(ZHHansCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
@@ -68,21 +80,21 @@ const items = [
           if (refDate.getHours() > 1) {
             date.setDate(date.getDate() + 1);
           }
-        } else if ("\u6628" == index[2]) {
+        } else if ("\u6628" == tmp25) {
           date.setDate(date.getDate() - 1);
-        } else if ("\u524D" == index[2]) {
+        } else if ("\u524D" == tmp25) {
           date.setDate(date.getDate() - 2);
-        } else if ("\u5927\u524D" == index[2]) {
+        } else if ("\u5927\u524D" == tmp25) {
           date.setDate(date.getDate() - 3);
-        } else if ("\u540E" == index[2]) {
+        } else if ("\u540E" == tmp25) {
           date.setDate(date.getDate() + 2);
-        } else if ("\u5927\u540E" == index[2]) {
+        } else if ("\u5927\u540E" == tmp25) {
           date.setDate(date.getDate() + 3);
         }
         if ("\u65E9" == index[3]) {
           const start15 = parsingResult.start;
           start15.imply("hour", 6);
-        } else if ("\u665A" == index[3]) {
+        } else if ("\u665A" == tmp26) {
           const start25 = parsingResult.start;
           start25.imply("hour", 22);
           const start26 = parsingResult.start;
@@ -125,15 +137,15 @@ const items = [
           if (refDate.getHours() > 1) {
             date.setDate(date.getDate() + 1);
           }
-        } else if ("\u6628" == index[5]) {
+        } else if ("\u6628" == tmp2) {
           date.setDate(date.getDate() - 1);
-        } else if ("\u524D" == index[5]) {
+        } else if ("\u524D" == tmp2) {
           date.setDate(date.getDate() - 2);
-        } else if ("\u5927\u524D" == index[5]) {
+        } else if ("\u5927\u524D" == tmp2) {
           date.setDate(date.getDate() - 3);
-        } else if ("\u540E" == index[5]) {
+        } else if ("\u540E" == tmp2) {
           date.setDate(date.getDate() + 2);
-        } else if ("\u5927\u540E" == index[5]) {
+        } else if ("\u5927\u540E" == tmp2) {
           date.setDate(date.getDate() + 3);
         }
         if (index[6]) {

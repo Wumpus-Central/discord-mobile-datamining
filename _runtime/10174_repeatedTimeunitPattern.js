@@ -13,7 +13,7 @@ export const repeatedTimeunitPattern = function repeatedTimeunitPattern(arg0, co
 export const extractTerms = function extractTerms(arr) {
   if (arr instanceof Array) {
     const items = [];
-    HermesBuiltin.arraySpread(items, arr, 0);
+    HermesBuiltin.arraySpread(arr, 0);
     arr = items;
   } else {
     const _Map = Map;
@@ -28,11 +28,10 @@ export const extractTerms = function extractTerms(arr) {
   return arr;
 };
 export const matchAnyPattern = function matchAnyPattern(MONTH_DICTIONARY) {
-  let arr;
   if (MONTH_DICTIONARY instanceof Array) {
     const items = [];
-    HermesBuiltin.arraySpread(items, MONTH_DICTIONARY, 0);
-    arr = items;
+    HermesBuiltin.arraySpread(MONTH_DICTIONARY, 0);
+    let arr = items;
   } else {
     const _Map = Map;
     if (MONTH_DICTIONARY instanceof Map) {
@@ -44,6 +43,5 @@ export const matchAnyPattern = function matchAnyPattern(MONTH_DICTIONARY) {
     }
   }
   const sorted = arr.sort((arg0, arg1) => arg1.length - arg0.length);
-  const str = sorted.join("|");
-  return "(?:" + str.replace(/\./g, "\\.") + ")";
+  return "(?:" + sorted.join("|").replace(/\./g, "\\.") + ")";
 };

@@ -7,7 +7,7 @@ import _mod538 from "module_538" /* 538 */;
 import _mod645 from "module_645" /* 645 */;
 import Stack from "Stack" /* 650 */;
 import equalArrays from "equalArrays" /* 656 */;
-import equalByTag from "equalByTag" /* 662 */;
+import valueOf from "valueOf" /* 662 */;
 import equalObjects from "equalObjects" /* 666 */;
 
 
@@ -15,7 +15,6 @@ export default function baseIsEqualDeep(value, value2, arg2, arg3, fn, arg5) {
   const tmp3 = _mod514(value);
   let str = "[object Array]";
   let str2 = "[object Array]";
-  const tmp4 = _mod514(value2);
   if (!tmp3) {
     str2 = _mod645(value);
   }
@@ -28,7 +27,6 @@ export default function baseIsEqualDeep(value, value2, arg2, arg3, fn, arg5) {
   if (str == "[object Arguments]") {
     str = "[object Object]";
   }
-  let callResult = str == "[object Object]";
   let flag = tmp5;
   let flag2 = tmp3;
   if (str2 == str) {
@@ -46,52 +44,57 @@ export default function baseIsEqualDeep(value, value2, arg2, arg3, fn, arg5) {
   if (str2 == str) {
     if (!flag) {
       let tmp9 = tmp8;
-      if (!tmp9) {
-        const self = this;
-        const self2 = this;
+      if (!tmp8) {
         tmp9 = new Stack();
       }
       if (!flag2) {
-        let tmp17;
         if (!_mod538(value)) {
-          tmp17 = equalByTag(value, value2, str2, arg2, arg3, fn, tmp9);
+          let tmp19 = valueOf(value, value2, str2, arg2, arg3, fn, tmp9);
         }
-        return tmp17;
+        return tmp19;
       }
-      tmp17 = equalArrays(value, value2, arg2, arg3, fn, tmp9);
+      tmp19 = equalArrays(value, value2, arg2, arg3, fn, tmp9);
     }
   }
   if (!(1 & arg2)) {
-    if (flag) {
-      flag = hasOwnProperty.call(value, "__wrapped__");
+    if (!flag) {
+      if (!tmp6) {
+        let valueResult = value;
+        if (flag) {
+          valueResult = value.value();
+        }
+        let valueResult2 = value2;
+        if (tmp6) {
+          valueResult2 = value2.value();
+        }
+        let tmp34 = tmp8;
+        if (!tmp8) {
+          tmp34 = new Stack();
+        }
+        return fn(valueResult, valueResult2, arg2, arg3, tmp34);
+      } else {
+        const call2 = hasOwnProperty.call;
+        if (typeof call2 === "unknown") {
+          let call2Result = hasOwnProperty("__wrapped__");
+        } else {
+          call2Result = call2(value2, "__wrapped__");
+        }
+      }
+    } else {
+      const call = hasOwnProperty.call;
+      if (typeof call === "unknown") {
+        let callResult = hasOwnProperty("__wrapped__");
+      } else {
+        callResult = call(value, "__wrapped__");
+      }
     }
-    if (callResult) {
-      callResult = hasOwnProperty.call(value2, "__wrapped__");
-    }
-    let valueResult = value;
-    if (flag) {
-      valueResult = value.value();
-    }
-    let valueResult2 = value2;
-    if (callResult) {
-      valueResult2 = value2.value();
-    }
-    let tmp26 = tmp8;
-    if (!tmp26) {
-      const self3 = this;
-      const self4 = this;
-      tmp26 = new Stack();
-    }
-    return fn(valueResult, valueResult2, arg2, arg3, tmp26);
   }
-  let tmp32 = tmp7;
-  if (tmp32) {
+  let tmp42 = tmp7;
+  if (tmp42) {
     if (!tmp8) {
-      const self5 = this;
-      const self6 = this;
       tmp8 = new Stack();
     }
-    tmp32 = equalObjects(value, value2, arg2, arg3, fn, tmp8);
+    tmp42 = equalObjects(value, value2, arg2, arg3, fn, tmp8);
   }
-  return tmp32;
+  return tmp42;
 };

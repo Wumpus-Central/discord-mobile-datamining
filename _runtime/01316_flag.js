@@ -2,9 +2,9 @@
 
 // Module 1316 (flag)
 let flag = tmp;
-if (flag) {
+if (Object.defineProperty || false) {
   try {
-    Object.defineProperty || false({}, "a", { value: 1 });
+    tmp({}, "a", { value: 1 });
     flag = tmp;
   } catch (err) {
     flag = false;

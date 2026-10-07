@@ -3,6 +3,8 @@
 // Module 7573 (processFonts)
 import _modDef26 from "module_26" /* 26 */;
 
+importDefault = arg2;
+const dependencyMap = arg6;
 
 export const processFonts = function processFonts(items3) {
   const fontFamily = _modDef26.fontFamily;

@@ -1,7 +1,7 @@
 // === Module 816: CLIENT_ADDRESS_ATTRIBUTE ===
 
 // Module 816 (CLIENT_ADDRESS_ATTRIBUTE)
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const CLIENT_ADDRESS_ATTRIBUTE = "client.address";
 export const CLIENT_PORT_ATTRIBUTE = "client.port";

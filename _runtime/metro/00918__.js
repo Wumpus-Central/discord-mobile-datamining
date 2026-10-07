@@ -3,11 +3,12 @@
 // Module 918
 import _mod919 from "module_919" /* 919 */;
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const getActivationStart = () => {
-  const obj = _mod919;
-  const navigationEntry = obj.getNavigationEntry();
+  const navigationEntry = _mod919.getNavigationEntry();
   let num;
   if (navigationEntry != null) {
     num = navigationEntry.activationStart;

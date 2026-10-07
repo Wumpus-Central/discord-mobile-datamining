@@ -2,7 +2,7 @@
 
 // Module 1199 (typeofJsonValue)
 
-export const typeofJsonValue = function typeofJsonValue(PbLong) {
+export const typeofJsonValue = function typeofJsonValue(obj) {
   if (typeof obj === "object") {
     const _Array = Array;
     if (Array.isArray(obj)) {

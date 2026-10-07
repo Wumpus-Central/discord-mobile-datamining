@@ -1,12 +1,10 @@
 // === Module 1910: ? ===
 
 // Module 1910
-const obj = {
+globalThis.IntlMessageFormat.__addLocaleData({
   locale: "hr",
   pluralRuleFunction(arg0, arg1) {
-    let str4;
-    const str = String(arg0);
-    const parts = str.split(".");
+    const parts = String(arg0).split(".");
     const first = parts[0];
     const substr = first.slice(-1);
     const substr1 = first.slice(-2);
@@ -14,15 +12,14 @@ const obj = {
     const substr3 = arr2.slice(-2);
     let str2 = "other";
     if (!arg1) {
-      let str3;
-      if (!parts[1]) {
+      if (!tmp2) {
         if (1 == substr) {
-          str3 = "one";
+          let str3 = "one";
         }
         str2 = str3;
       }
       if (1 != substr2) {
-        if (!parts[1]) {
+        if (!tmp2) {
           if (substr >= 2) {
             if (substr <= 4) {
               if (substr1 >= 12) {
@@ -47,6 +44,5 @@ const obj = {
     }
     return str2;
   }
-};
-globalThis.IntlMessageFormat.__addLocaleData(obj);
+});
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "hr-BA", parentLocale: "hr" });

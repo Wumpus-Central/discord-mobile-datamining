@@ -2,4 +2,4 @@
 
 // Module 6329
 
-export const useBottomSheetSpringConfigs = (arg0) => arg0;
+export (arg0) => arg0

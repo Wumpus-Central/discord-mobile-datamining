@@ -2,159 +2,171 @@
 
 // Module 1447 (Yallist)
 class Yallist {
-  constructor(arr) {
-    let self = this;
-    let closure_0 = this;
+  constructor(arg0) {
+    self = this;
+    closure_0 = this;
+    tmp = Yallist;
     if (!(this instanceof Yallist)) {
-      const tmpResult = Yallist();
+      tmpResult = tmp();
       closure_0 = tmpResult;
       self = tmpResult;
     }
     self.tail = null;
     self.head = null;
     self.length = 0;
-    if (arr) {
-      if (typeof arr.forEach === "function") {
-        const item = arr.forEach((item) => {
+    if (global) {
+      if (typeof global.forEach === "function") {
+        item = global.forEach((item) => {
           closure_0.push(item);
         });
       }
       return self;
     }
     if (arguments.length > 0) {
-      let num2;
-      const length = arguments.length;
+      length = arguments.length;
+      num = 1;
       for (let num2 = 0; num2 < length; num2 = num2 + 1) {
         arr = self.push(arguments[num2]);
       }
     }
+    return;
   }
-  removeNode(list) {
-    let next;
-    let prev;
-    const self = this;
-    if (list.list !== this) {
-      const _Error = Error;
-      const self2 = this;
-      const self3 = this;
-      const error = new Error("removing node which does not belong to this list");
+  removeNode(arg0) {
+    self = this;
+    if (global.list !== this) {
+      tmp2 = globalThis;
+      _Error = Error;
+      tmp3 = new.target;
+      str = "removing node which does not belong to this list";
+      tmp4 = new.target;
+      error = new Error("removing node which does not belong to this list");
+      tmp6 = error;
       throw error;
     } else {
-      ({ next, prev } = list);
+      ({ next, prev } = global);
       if (next) {
         next.prev = prev;
       }
       if (prev) {
         prev.next = next;
       }
-      if (list === self.head) {
+      if (global === self.head) {
         self.head = next;
       }
-      if (list === self.tail) {
+      if (global === self.tail) {
         self.tail = prev;
       }
-      list = list.list;
+      list = global.list;
       list.length = list.length - 1;
-      list.next = null;
-      list.prev = null;
-      list.list = null;
+      tmp = null;
+      global.next = null;
+      global.prev = null;
+      global.list = null;
+      return;
     }
   }
-  unshiftNode(list) {
-    const self = this;
-    if (list !== this.head) {
-      if (list.list) {
-        list = list.list;
-        list.removeNode(list);
+  unshiftNode(arg0) {
+    self = this;
+    if (global !== this.head) {
+      if (global.list) {
+        list = global.list;
+        removeNodeResult = list.removeNode(global);
       }
-      const head = self.head;
-      list.list = self;
-      list.next = head;
+      head = self.head;
+      global.list = self;
+      global.next = head;
       if (head) {
-        head.prev = list;
+        head.prev = global;
       }
-      self.head = list;
+      self.head = global;
       if (!self.tail) {
-        self.tail = list;
+        self.tail = global;
       }
       self.length = self.length + 1;
     }
+    return;
   }
-  pushNode(list) {
-    const self = this;
-    if (list !== this.tail) {
-      if (list.list) {
-        list = list.list;
-        list.removeNode(list);
+  pushNode(arg0) {
+    self = this;
+    if (global !== this.tail) {
+      if (global.list) {
+        list = global.list;
+        removeNodeResult = list.removeNode(global);
       }
-      const tail = self.tail;
-      list.list = self;
-      list.prev = tail;
+      tail = self.tail;
+      global.list = self;
+      global.prev = tail;
       if (tail) {
-        tail.next = list;
+        tail.next = global;
       }
-      self.tail = list;
+      self.tail = global;
       if (!self.head) {
-        self.head = list;
+        self.head = global;
       }
       self.length = self.length + 1;
     }
+    return;
   }
   push() {
-    let num;
-    const self = this;
-    const length = arguments.length;
-    for (let num = 0; num < length; num = num + 1) {
-      let tmp13;
-      let tmp = arguments[num];
-      let tail = self.tail;
-      let obj = Object.create(Node.prototype);
-      if (obj instanceof Node) {
-        obj.list = self;
-        obj.value = tmp;
-        if (tail) {
-          tail.next = obj;
-          obj.prev = tail;
-        } else {
-          obj.prev = null;
-        }
-        obj.next = null;
-      } else {
-        let tmp2Result;
-        let obj3 = Object.create(Node.prototype);
-        if (obj3 instanceof Node) {
-          obj3.list = self;
-          obj3.value = tmp;
+    self = this;
+    length = arguments.length;
+    num = 0;
+    if (0 < length) {
+      tmp = arguments[num];
+      tmp2 = Node;
+      tail = self.tail;
+      obj = Object.create(Node.prototype);
+      tmp4 = num;
+      while (!(obj instanceof Node)) {
+        obj1 = Object.create(tmp2.prototype);
+        if (obj1 instanceof tmp2) {
+          obj1.list = self;
+          obj1.value = tmp;
           if (tail) {
-            tail.next = obj3;
-            obj3.prev = tail;
+            tail.next = obj1;
+            obj1.prev = tail;
           } else {
-            obj3.prev = null;
+            obj1.prev = null;
           }
-          obj3.next = null;
+          obj1.next = null;
         } else {
-          let obj4 = Object.create(Node.prototype);
-          tmp2Result = Node(tmp, tail, null, self);
+          obj2 = Object.create(tmp2.prototype);
+          tmp7 = obj2;
+          tmp8 = tmp;
+          tmp9 = tail;
+          tmp10 = null;
+          tmp11 = self;
+          tmp2Result = tmp2(tmp, tail, null, self);
+          tmp13 = tmp2Result;
+          self.tail = tmp2Result;
+          if (!self.head) {
+            self.head = self.tail;
+          }
+          self.length = self.length + 1;
+          num = num + 1;
         }
-        tmp13 = tmp2Result;
       }
-      self.tail = tmp13;
-      if (!self.head) {
-        self.head = self.tail;
+      obj.list = self;
+      obj.value = tmp;
+      if (tail) {
+        tail.next = obj;
+        obj.prev = tail;
+      } else {
+        obj.prev = null;
       }
-      self.length = self.length + 1;
+      obj.next = null;
     }
     return self.length;
   }
   unshift() {
-    let num;
-    const self = this;
-    const length = arguments.length;
+    self = this;
+    length = arguments.length;
     for (let num = 0; num < length; num = num + 1) {
-      let tmp13;
-      let tmp = arguments[num];
-      let head = self.head;
-      let obj = Object.create(Node.prototype);
+      tmp = arguments[num];
+      tmp2 = Node;
+      head = self.head;
+      obj = Object.create(Node.prototype);
+      tmp4 = num;
       if (obj instanceof Node) {
         obj.list = self;
         obj.value = tmp;
@@ -166,24 +178,29 @@ class Yallist {
           obj.next = null;
         }
       } else {
-        let tmp2Result;
-        let obj3 = Object.create(Node.prototype);
-        if (obj3 instanceof Node) {
-          obj3.list = self;
-          obj3.value = tmp;
-          obj3.prev = null;
+        obj1 = Object.create(tmp2.prototype);
+        if (obj1 instanceof tmp2) {
+          obj1.list = self;
+          obj1.value = tmp;
+          obj1.prev = null;
           if (head) {
-            head.prev = obj3;
-            obj3.next = head;
+            head.prev = obj1;
+            obj1.next = head;
           } else {
-            obj3.next = null;
+            obj1.next = null;
           }
         } else {
-          let obj4 = Object.create(Node.prototype);
-          tmp2Result = Node(tmp, null, head, self);
+          obj2 = Object.create(tmp2.prototype);
+          tmp7 = obj2;
+          tmp8 = tmp;
+          tmp9 = null;
+          tmp10 = head;
+          tmp11 = self;
+          tmp2Result = tmp2(tmp, null, head, self);
         }
         tmp13 = tmp2Result;
       }
+      tmp14 = tmp13;
       self.head = tmp13;
       if (!self.tail) {
         self.tail = self.head;
@@ -193,71 +210,108 @@ class Yallist {
     return self.length;
   }
   pop() {
-    const self = this;
+    self = this;
     if (this.tail) {
       self.tail = self.tail.prev;
-      const value = self.tail.value;
+      tmp = null;
       if (self.tail) {
         self.tail.next = null;
       } else {
         self.head = null;
       }
       self.length = self.length - 1;
-      return value;
+      return self.tail.value;
+    } else {
+      return;
     }
   }
   shift() {
-    const self = this;
+    self = this;
     if (this.head) {
       self.head = self.head.next;
-      const value = self.head.value;
+      tmp = null;
       if (self.head) {
         self.head.prev = null;
       } else {
         self.tail = null;
       }
       self.length = self.length - 1;
-      return value;
+      return self.head.value;
+    } else {
+      return;
     }
   }
-  forEach(call, arg1) {
-    const self = this;
-    let iter = self.head;
-    let num = 0;
+  forEach(arg0, arg1) {
+    self = this;
+    tmp = require;
+    if (!require) {
+      tmp = self;
+    }
+    iter = self.head;
+    num = 0;
     if (null !== iter) {
       do {
-        let value = iter.value;
-        let callResult = call.call(tmp, value, num, self);
+        call = global.call;
+        value = iter.value;
+        tmp3 = iter;
+        if (typeof call === "unknown") {
+          tmp4 = global(value, num, self);
+        } else {
+          tmp5 = global;
+          tmp6 = tmp;
+          tmp7 = value;
+          tmp8 = num;
+          tmp9 = self;
+          callResult = call(tmp, value, tmp2, self);
+        }
         iter = iter.next;
         num = num + 1;
       } while (null !== iter);
     }
+    return;
   }
-  forEachReverse(call, arg1) {
-    const self = this;
-    let iter = self.tail;
-    let diff = self.length - 1;
+  forEachReverse(arg0, arg1) {
+    self = this;
+    tmp = require;
+    if (!require) {
+      tmp = self;
+    }
+    iter = self.tail;
+    diff = self.length - 1;
     if (null !== iter) {
       do {
-        let value = iter.value;
-        let callResult = call.call(tmp, value, diff, self);
+        call = global.call;
+        value = iter.value;
+        tmp4 = iter;
+        if (typeof call === "unknown") {
+          tmp5 = global(value, diff, self);
+        } else {
+          tmp6 = global;
+          tmp7 = tmp;
+          tmp8 = value;
+          tmp9 = diff;
+          tmp10 = self;
+          callResult = call(tmp, value, tmp3, self);
+        }
         iter = iter.prev;
         diff = diff - 1;
       } while (null !== iter);
     }
+    return;
   }
   get(arg0) {
-    const head = this.head;
-    let iter = head;
-    let num = 0;
+    head = this.head;
+    iter = head;
+    num = 0;
     if (null !== head) {
-      let iter2 = head;
-      let num3 = 0;
+      num2 = 1;
+      iter2 = head;
+      num3 = 0;
       iter = head;
       num = 0;
-      if (0 < arg0) {
-        const next = iter2.next;
-        const sum = num3 + 1;
+      if (0 < global) {
+        next = iter2.next;
+        sum = num3 + 1;
         iter = next;
         num = sum;
         while (null !== next) {
@@ -265,30 +319,32 @@ class Yallist {
           num3 = sum;
           iter = next;
           num = sum;
-          if (sum >= arg0) {
+          if (sum >= global) {
             break;
           }
         }
       }
     }
-    if (num === arg0) {
+    if (num === global) {
       if (null !== iter) {
         return iter.value;
       }
     }
+    return;
   }
   getReverse(arg0) {
-    const tail = this.tail;
-    let iter = tail;
-    let num = 0;
+    tail = this.tail;
+    iter = tail;
+    num = 0;
     if (null !== tail) {
-      let tmp = tail;
-      let num3 = 0;
+      num2 = 1;
+      tmp = tail;
+      num3 = 0;
       iter = tail;
       num = 0;
-      if (0 < arg0) {
-        const prev = tmp.prev;
-        const sum = num3 + 1;
+      if (0 < global) {
+        prev = tmp.prev;
+        sum = num3 + 1;
         iter = prev;
         num = sum;
         while (null !== prev) {
@@ -296,106 +352,125 @@ class Yallist {
           num3 = sum;
           iter = prev;
           num = sum;
-          if (sum >= arg0) {
+          if (sum >= global) {
             break;
           }
         }
       }
     }
-    if (num === arg0) {
+    if (num === global) {
       if (null !== iter) {
         return iter.value;
       }
     }
+    return;
   }
-  map(call, arg1) {
-    const self = this;
-    const tmp = arg1 || self;
-    const arr = Yallist();
-    let iter = self.head;
+  map(arg0, arg1) {
+    self = this;
+    tmp = require;
+    if (!require) {
+      tmp = self;
+    }
+    arr = Yallist();
+    iter = self.head;
     if (null !== iter) {
       do {
-        let arr2 = arr.push(call.call(tmp, iter.value, self));
+        call = global.call;
+        value = iter.value;
+        tmp2 = iter;
+        arr1 = arr.push(typeof call === "unknown" ? global(value, self) : call(tmp, value, self));
         iter = iter.next;
       } while (null !== iter);
     }
     return arr;
   }
-  mapReverse(call, arg1) {
-    const self = this;
-    const tmp = arg1 || self;
-    const arr = Yallist();
-    let iter = self.tail;
+  mapReverse(arg0, arg1) {
+    self = this;
+    tmp = require;
+    if (!require) {
+      tmp = self;
+    }
+    arr = Yallist();
+    iter = self.tail;
     if (null !== iter) {
       do {
-        let arr2 = arr.push(call.call(tmp, iter.value, self));
+        call = global.call;
+        value = iter.value;
+        tmp2 = iter;
+        arr1 = arr.push(typeof call === "unknown" ? global(value, self) : call(tmp, value, self));
         iter = iter.prev;
       } while (null !== iter);
     }
     return arr;
   }
-  reduce(fn, arg1) {
-    const self = this;
-    let value = arg1;
-    let iter = this.head;
+  reduce(arg0, arg1) {
+    self = this;
+    value = require;
+    iter = this.head;
     if (arguments.length <= 1) {
       if (self.head) {
         iter = self.head.next;
         value = self.head.value;
       } else {
-        const _TypeError = TypeError;
-        const self2 = this;
-        const self3 = this;
-        const typeError = new TypeError("Reduce of empty list with no initial value");
+        tmp = globalThis;
+        _TypeError = TypeError;
+        tmp2 = new.target;
+        str = "Reduce of empty list with no initial value";
+        tmp3 = new.target;
+        typeError = new TypeError("Reduce of empty list with no initial value");
+        tmp5 = typeError;
         throw typeError;
       }
     }
-    let tmp4 = value;
-    let num = 0;
-    let tmp5 = value;
+    tmp6 = value;
+    num = 0;
+    tmp7 = value;
     if (null !== iter) {
       do {
-        tmp4 = fn(tmp4, iter.value, num);
+        tmp6 = global(tmp6, iter.value, num);
         iter = iter.next;
         num = num + 1;
-        tmp5 = tmp4;
+        tmp7 = tmp6;
       } while (null !== iter);
     }
-    return tmp5;
+    return tmp7;
   }
-  reduceReverse(fn, arg1) {
-    const self = this;
-    let value = arg1;
-    let iter = this.tail;
+  reduceReverse(arg0, arg1) {
+    self = this;
+    value = require;
+    iter = this.tail;
     if (arguments.length <= 1) {
       if (self.tail) {
         iter = self.tail.prev;
         value = self.tail.value;
       } else {
-        const _TypeError = TypeError;
-        const self2 = this;
-        const self3 = this;
-        const typeError = new TypeError("Reduce of empty list with no initial value");
+        tmp = globalThis;
+        _TypeError = TypeError;
+        tmp2 = new.target;
+        str = "Reduce of empty list with no initial value";
+        tmp3 = new.target;
+        typeError = new TypeError("Reduce of empty list with no initial value");
+        tmp5 = typeError;
         throw typeError;
       }
     }
-    let diff = self.length - 1;
-    let tmp5 = value;
-    let tmp6 = value;
+    diff = self.length - 1;
+    tmp7 = value;
+    tmp8 = value;
     if (null !== iter) {
       do {
-        tmp5 = fn(tmp5, iter.value, diff);
+        tmp7 = global(tmp7, iter.value, diff);
         iter = iter.prev;
         diff = diff - 1;
-        tmp6 = tmp5;
+        tmp8 = tmp7;
       } while (null !== iter);
     }
-    return tmp6;
+    return tmp8;
   }
   toArray() {
-    const array = new Array(this.length);
-    let iter = this.head;
-    let num = 0;
+    array = new Array(this.length);
+    iter = this.head;
+    num = 0;
     if (null !== iter) {
       do {
         array[num] = iter.value;
@@ -406,9 +481,9 @@ class Yallist {
     return array;
   }
   toArrayReverse() {
-    const array = new Array(this.length);
-    let iter = this.tail;
-    let num = 0;
+    array = new Array(this.length);
+    iter = this.tail;
+    num = 0;
     if (null !== iter) {
       do {
         array[num] = iter.value;
@@ -419,56 +494,68 @@ class Yallist {
     return array;
   }
   slice(arg0, arg1) {
-    const self = this;
-    let length = tmp;
-    if ((arg1 || self.length) < 0) {
-      length = tmp + self.length;
+    self = this;
+    length = require;
+    if (!require) {
+      length = self.length;
     }
-    let num = tmp2;
-    if ((arg0 || 0) < 0) {
-      num = tmp2 + self.length;
+    length2 = length;
+    if (length < 0) {
+      length2 = length + self.length;
     }
-    const arr = Yallist();
-    if (length >= num) {
-      if (length >= 0) {
-        if (num < 0) {
-          num = 0;
-        }
-        if (length > self.length) {
-          length = self.length;
-        }
-        const head = self.head;
-        let iter = head;
-        let num2 = 0;
-        if (null !== head) {
-          let iter2 = head;
-          let num4 = 0;
-          iter = head;
+    num = global;
+    if (!global) {
+      num = 0;
+    }
+    num2 = num;
+    if (num < 0) {
+      num2 = num + self.length;
+    }
+    arr = Yallist();
+    if (length2 >= num2) {
+      if (length2 >= 0) {
+        if (num2 < 0) {
           num2 = 0;
-          if (0 < num) {
-            const next = iter2.next;
-            const sum = num4 + 1;
+        }
+        if (length2 > self.length) {
+          length2 = self.length;
+        }
+        head = self.head;
+        tmp = null;
+        iter = head;
+        num3 = 0;
+        if (null !== head) {
+          num4 = 1;
+          iter2 = head;
+          num5 = 0;
+          iter = head;
+          num3 = 0;
+          if (0 < num2) {
+            next = iter2.next;
+            sum = num5 + 1;
             iter = next;
-            num2 = sum;
+            num3 = sum;
             while (null !== next) {
               iter2 = next;
-              num4 = sum;
+              num5 = sum;
               iter = next;
-              num2 = sum;
-              if (sum >= num) {
+              num3 = sum;
+              if (sum >= num2) {
                 break;
               }
             }
           }
         }
         if (null !== iter) {
-          if (num2 < length) {
-            arr.push(iter.value);
-            const next2 = iter.next;
+          num6 = 1;
+          if (num3 < length2) {
+            arr1 = arr.push(iter.value);
+            next2 = iter.next;
+            tmp4 = num3;
             while (null !== next2) {
-              num2 = num2 + 1;
+              num3 = num3 + 1;
               iter = next2;
-              if (num2 >= length) {
+              if (num3 >= length2) {
                 break;
               }
             }
@@ -480,59 +567,66 @@ class Yallist {
     return arr;
   }
   sliceReverse(arg0, arg1) {
-    let length2;
-    let tail;
-    const self = this;
-    let length = tmp;
-    if ((arg1 || self.length) < 0) {
-      length = tmp + self.length;
+    self = this;
+    length = require;
+    if (!require) {
+      length = self.length;
     }
-    let num = tmp2;
-    if ((arg0 || 0) < 0) {
-      num = tmp2 + self.length;
+    length2 = length;
+    if (length < 0) {
+      length2 = length + self.length;
     }
-    const arr = Yallist();
-    if (length >= num) {
-      if (length >= 0) {
-        if (num < 0) {
-          num = 0;
+    num = global;
+    if (!global) {
+      num = 0;
+    }
+    num2 = num;
+    if (num < 0) {
+      num2 = num + self.length;
+    }
+    arr = Yallist();
+    if (length2 >= num2) {
+      if (length2 >= 0) {
+        if (num2 < 0) {
+          num2 = 0;
         }
-        if (length > self.length) {
-          length = self.length;
+        if (length2 > self.length) {
+          length2 = self.length;
         }
-        ({ length: length2, tail } = self);
-        let iter = tail;
-        let tmp4 = length2;
+        ({ length: length3, tail } = self);
+        tmp = null;
+        iter = tail;
+        tmp2 = length3;
         if (null !== tail) {
-          let tmp5 = tail;
-          let tmp6 = length2;
+          tmp3 = tail;
+          tmp4 = length3;
           iter = tail;
-          tmp4 = length2;
-          if (length2 > length) {
-            const prev = tmp5.prev;
-            const diff = tmp6 - 1;
+          tmp2 = length3;
+          if (length3 > length2) {
+            prev = tmp3.prev;
+            diff = tmp4 - 1;
             iter = prev;
-            tmp4 = diff;
+            tmp2 = diff;
             while (null !== prev) {
-              tmp5 = prev;
-              tmp6 = diff;
-              iter = prev;
+              tmp3 = prev;
               tmp4 = diff;
-              if (diff <= length) {
+              iter = prev;
+              tmp2 = diff;
+              if (diff <= length2) {
                 break;
               }
             }
           }
         }
         if (null !== iter) {
-          if (tmp4 > num) {
-            arr.push(iter.value);
-            const diff1 = tmp4 - 1;
-            const prev2 = iter.prev;
+          if (tmp2 > num2) {
+            arr1 = arr.push(iter.value);
+            diff1 = tmp2 - 1;
+            prev2 = iter.prev;
             while (null !== prev2) {
               iter = prev2;
-              tmp4 = diff1;
-              if (diff1 <= num) {
+              tmp2 = diff1;
+              if (diff1 <= num2) {
                 break;
               }
             }
@@ -544,10 +638,9 @@ class Yallist {
     return arr;
   }
   reverse() {
-    const self = this;
-    const head = this.head;
-    let iter = head;
-    const tail = this.tail;
+    self = this;
+    head = this.head;
+    iter = head;
     if (null !== head) {
       do {
         iter.prev = iter.next;
@@ -555,32 +648,42 @@ class Yallist {
         iter = iter.prev;
       } while (null !== iter);
     }
-    self.head = tail;
+    self.head = this.tail;
     self.tail = head;
     return self;
   }
 }
 class Node {
-  constructor(value, prev, next, list) {
-    const self = this;
+  constructor(arg0, arg1, arg2, arg3) {
+    self = this;
+    tmp = Node;
     if (this instanceof Node) {
-      self.list = list;
-      self.value = value;
-      if (prev) {
-        prev.next = self;
-        self.prev = prev;
+      self.list = importAll;
+      self.value = global;
+      if (require) {
+        require.next = self;
+        self.prev = require;
       } else {
+        tmp10 = null;
         self.prev = null;
       }
-      if (next) {
-        next.prev = self;
-        self.next = next;
+      if (importDefault) {
+        importDefault.prev = self;
+        self.next = importDefault;
       } else {
+        tmp11 = null;
         self.next = null;
       }
+      return;
     } else {
-      Object.create(Node.prototype);
-      const tmpResult = Node(value, prev, next, list);
+      obj = Object.create(tmp.prototype);
+      tmp3 = obj;
+      tmp4 = global;
+      tmp5 = require;
+      tmp6 = importDefault;
+      tmp7 = importAll;
+      tmpResult = tmp(global, require, importDefault, importAll);
+      tmp9 = tmpResult;
       return tmpResult;
     }
   }

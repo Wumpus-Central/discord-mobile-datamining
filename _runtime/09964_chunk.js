@@ -1,22 +1,21 @@
 // === Module 9964: chunk ===
 
 // Module 9964 (chunk)
-import toInteger from "toInteger" /* 4930 */;
-import isIterateeCall from "isIterateeCall" /* 8072 */;
+import _mod4930 from "module_4930" /* 4930 */;
+import _mod8072 from "module_8072" /* 8072 */;
 import baseSlice from "baseSlice" /* 9965 */;
 
 
 export default function chunk(arg0, arg1, arg2) {
   let sum1;
-  let tmp;
   if (arg2) {
-    tmp = isIterateeCall(arg0, arg1, arg2);
+    let tmp = _mod8072(arg0, arg1, arg2);
   } else {
     tmp = undefined === arg1;
   }
   let num = 1;
   if (!tmp) {
-    num = max(toInteger(arg1), 0);
+    num = max(_mod4930(arg1), 0);
   }
   let num3 = 0;
   if (null != arg0) {

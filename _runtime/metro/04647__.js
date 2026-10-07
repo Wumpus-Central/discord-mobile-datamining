@@ -1,85 +1,89 @@
 // === Module 4647: ? ===
 
 // Module 4647
-import react2 from "react" /* 576 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
+import c from "c" /* 576 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-let ref;
-
-let c3;
-let closure_4;
-let useCallback;
-({ useRef: c3, useCallback, useState: closure_4 } = react);
+require = fn;
+const noop = fn(19);
+({ useRef: c3, useCallback, useState: closure_4 } = noop);
 
 export const useRive = function useRive() {
-  let closure_129_1;
-  let first;
-  let tmp4;
-  let tmp6;
-  let tmp7;
-  const obj = react2;
-  const cResult = obj.c(4);
-  const tmp2 = _false(null);
-  let closure_0 = tmp2;
-  [tmp4, closure_129_1] = _slicedToArray(React3(null), 2);
-  const tmp3 = _slicedToArray(React3(null), 2);
-  let closure_2 = _false(null);
+  const cResult = c.c(4);
+  const tmp2 = React3(null);
+  [tmp4, dependencyMap] = React4(null);
+  React3(null);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(current) {
-      ref = current;
-      if (ref.current !== current) {
+      if (current.current !== current) {
         ref.current = current;
         if (ref2.current) {
           let _clearTimeout = clearTimeout;
-          clearTimeout(tmp9.current);
+          clearTimeout(tmp11.current);
         }
-        const self = this;
-        const self2 = this;
-        let awaitViewReadyResult;
         const promise = new Promise((arg0, arg1) => {
-          let closure_0 = arg1;
+          closure_0 = arg1;
           ref.current = setTimeout(() => {
             const error = new Error("Rive view ready timeout");
             closure_0(error);
           }, 5000);
         });
+        let awaitViewReadyResult;
         if (current != null) {
           awaitViewReadyResult = current.awaitViewReady();
         }
         const items = [awaitViewReadyResult, promise];
-        const raceResult = race(items);
-        const nextPromise = raceResult.then((result) => {
+        const racePromise = Promise.race(items);
+        const nextPromise = Promise.race(items).then((result) => {
           if (true === result) {
-            closure_2_1(current);
+            dependencyMap(closure_0);
           } else {
             const _console = console;
             console.warn("Rive view ready check returned false");
-            closure_2_1(null);
+            dependencyMap(null);
           }
         });
-        const catchPromise = nextPromise.catch((error) => {
+        Promise.race(items).then((result) => {
+          if (true === result) {
+            dependencyMap(closure_0);
+          } else {
+            const _console = console;
+            console.warn("Rive view ready check returned false");
+            dependencyMap(null);
+          }
+        }).catch((error) => {
           console.warn("Failed to initialize Rive view:", error);
           closure_1_1(null);
-        });
-        catchPromise.finally(() => {
+        }).finally(() => {
           if (ref.current) {
             const _clearTimeout = clearTimeout;
             clearTimeout(ref.current);
             ref.current = null;
           }
         });
+        const catchPromise = Promise.race(items).then((result) => {
+          if (true === result) {
+            dependencyMap(closure_0);
+          } else {
+            const _console = console;
+            console.warn("Rive view ready check returned false");
+            dependencyMap(null);
+          }
+        }).catch((error) => {
+          console.warn("Failed to initialize Rive view:", error);
+          closure_1_1(null);
+        });
       }
     };
     cResult[0] = fn;
-    first = fn;
+    let first = fn;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { f: first };
     cResult[1] = obj2;
-    tmp6 = obj2;
+    let tmp6 = obj2;
   } else {
     tmp6 = cResult[1];
   }
@@ -87,7 +91,7 @@ export const useRive = function useRive() {
     const obj3 = { riveRef: tmp2, riveViewRef: tmp4, setHybridRef: tmp6 };
     cResult[2] = tmp4;
     cResult[3] = obj3;
-    tmp7 = obj3;
+    let tmp7 = obj3;
   } else {
     tmp7 = cResult[3];
   }

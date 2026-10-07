@@ -1,19 +1,19 @@
 // === Module 427: BoundingDimensions ===
 
 // Module 427 (BoundingDimensions)
-import module_426 from "module_426" /* 426 */;
+import oneArgumentPooler from "oneArgumentPooler" /* 426 */;
 
 class BoundingDimensions {
   constructor(arg0, arg1) {
-
+    return;
   }
   destructor() {
-
+    return;
   }
-  static getPooledFromElement(offsetWidth) {
-  return BoundingDimensions.getPooled(offsetWidth.offsetWidth, offsetWidth.offsetHeight);
+  static getPooledFromElement(arg0) {
+    return BoundingDimensions.getPooled(global.offsetWidth, global.offsetHeight);
+  }
 }
-}
-module_426.addPoolingTo(BoundingDimensions, module_426.twoArgumentPooler);
+oneArgumentPooler.addPoolingTo(BoundingDimensions, oneArgumentPooler.twoArgumentPooler);
 
 export default BoundingDimensions;

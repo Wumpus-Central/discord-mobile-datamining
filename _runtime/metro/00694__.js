@@ -1,43 +1,40 @@
 // === Module 694: ? ===
 
 // Module 694
-import TRACE_FLAG_NONE from "TRACE_FLAG_NONE" /* 695 */;
+import spanToJSON from "spanToJSON" /* 695 */;
 import _mod699 from "module_699" /* 699 */;
-import CONSOLE_LEVELS from "CONSOLE_LEVELS" /* 700 */;
+import consoleSandbox from "consoleSandbox" /* 700 */;
 import SPAN_STATUS_ERROR from "SPAN_STATUS_ERROR" /* 716 */;
-import _mod725 from "module_725" /* 725 */;
-import _mod727 from "module_727" /* 727 */;
+import instrumentError from "instrumentError" /* 725 */;
+import instrumentUnhandledRejection from "instrumentUnhandledRejection" /* 727 */;
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let c2 = false;
 
 export const registerSpanErrorInstrumentation = function registerSpanErrorInstrumentation() {
-  const tmp = c2;
-  if (!tmp) {
+  if (!c2) {
     function errorCallback() {
-      const obj = TRACE_FLAG_NONE;
-      const activeSpan = obj.getActiveSpan();
+      const activeSpan = spanToJSON.getActiveSpan();
       let rootSpan = activeSpan;
-      if (rootSpan) {
-        const tmpResult = TRACE_FLAG_NONE;
-        rootSpan = tmpResult.getRootSpan(activeSpan);
+      if (activeSpan) {
+        rootSpan = spanToJSON.getRootSpan(activeSpan);
+        const tmpResult = spanToJSON;
       }
       if (rootSpan) {
         if (_mod699.DEBUG_BUILD) {
-          const debug = CONSOLE_LEVELS.debug;
+          const debug = consoleSandbox.debug;
           const _HermesInternal = HermesInternal;
           debug.log("[Tracing] Root span: " + "internal_error" + " -> Global error occurred");
         }
-        const setStatus = rootSpan.setStatus;
         const obj2 = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "internal_error" };
-        setStatus(obj2);
+        rootSpan.setStatus(obj2);
       }
     }
     errorCallback.tag = "sentry_tracingErrorCallback";
     c2 = true;
-    let obj = _mod725;
-    const result = obj.addGlobalErrorInstrumentationHandler(errorCallback);
-    let obj2 = _mod727;
-    const result1 = obj2.addGlobalUnhandledRejectionInstrumentationHandler(errorCallback);
+    const result = instrumentError.addGlobalErrorInstrumentationHandler(errorCallback);
+    const result1 = instrumentUnhandledRejection.addGlobalUnhandledRejectionInstrumentationHandler(errorCallback);
   }
 };

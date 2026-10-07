@@ -3,13 +3,13 @@
 // Module 1501 (TabActions)
 import SwitchRouter from "SwitchRouter" /* 1502 */;
 
-let obj;
-
+require = arg1;
+const dependencyMap = arg6;
 const TabActions = {
   jumpTo(name, params) {
-    let payload;
-    const action = { type: "JUMP_TO", payload };
-    payload = { name, params };
+    const action = { type: "JUMP_TO", payload: null };
+    const payload = { name, params };
+    action.payload = payload;
     return action;
   }
 };
@@ -18,27 +18,31 @@ export { TabActions };
 export const TabRouter = function TabRouter(merged) {
   const actionCreators = SwitchRouter;
   const SwitchRouterResult = actionCreators.SwitchRouter(merged);
-  const obj2 = {
-    type: "tab",
-    getInitialState(arg0) {
-      const initialState = SwitchRouterResult.getInitialState(arg0);
-      obj = { type: "tab", key: "tab-" + initialState.key };
-      const merged = Object.assign(initialState);
-      return obj;
-    },
-    getRehydratedState(stale, arg1) {
-      if (false === stale.stale) {
-        return stale;
-      } else {
-        const rehydratedState = SwitchRouterResult.getRehydratedState(stale, arg1);
-        obj = { type: "tab", key: "tab-" + rehydratedState.key };
-        const merged = Object.assign(rehydratedState);
-        const _HermesInternal = HermesInternal;
-        return obj;
-      }
-    },
-    actionCreators
-  };
+  require = SwitchRouterResult;
+  const obj2 = {};
   merged = Object.assign(SwitchRouterResult);
+  obj2.type = "tab";
+  obj2.getInitialState = function getInitialState(arg0) {
+    const initialState = SwitchRouterResult.getInitialState(arg0);
+    obj = {};
+    const merged = Object.assign(initialState);
+    obj.type = "tab";
+    obj.key = "tab-" + initialState.key;
+    return obj;
+  };
+  obj2.getRehydratedState = function getRehydratedState(stale, arg1) {
+    if (false === stale.stale) {
+      return stale;
+    } else {
+      const rehydratedState = SwitchRouterResult.getRehydratedState(stale, arg1);
+      obj = {};
+      const merged = Object.assign(rehydratedState);
+      obj.type = "tab";
+      const _HermesInternal = HermesInternal;
+      obj.key = "tab-" + rehydratedState.key;
+      return obj;
+    }
+  };
+  obj2.actionCreators = actionCreators;
   return obj2;
 };

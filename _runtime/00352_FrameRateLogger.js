@@ -1,12 +1,12 @@
 // === Module 352: FrameRateLogger ===
 
 // Module 352 (FrameRateLogger)
-import _mod353 from "module_353" /* 353 */;
+import _modDef353 from "module_353" /* 353 */;
 
-const _modDef353 = _mod353;
+const require = globalThis.__r;
 
-for (const key10016 in _mod353) {
-  exports[key10016] = _mod353[key10016];
+for (const key10016 in require("module_353")) {
+  arg5[key10016] = require("module_353")[key10016];
   continue;
 }
 

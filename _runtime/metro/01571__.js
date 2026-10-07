@@ -1,54 +1,29 @@
 // === Module 1571: ? ===
 
 // Module 1571
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-let set;
-
+const require = arg1;
 let closure_3 = Symbol("VISITED_ROUTE_KEYS");
 function shouldPreventRemove(emitter, beforeRemoveListeners, routes, routes2, target) {
-  let obj3;
-  let closure_0 = routes2.map((key) => key.key);
+  let tmp = target;
+  closure_0 = routes2.map((key) => key.key);
   const found = routes.filter((key) => !closure_0.includes(key.key));
-  const reversed = found.reverse();
-  if (closure_3 in target) {
-    const _Set = Set;
-    if (target[closure_3] instanceof Set) {
-      set = target[closure_3];
-    }
+  let reversed = found.reverse();
+  let tmp3 = closure_3;
+  if (!(closure_3 in target)) {
+    const _Set2 = Set;
+    let set = new Set();
     const obj = {};
-    const merged = Object.assign(target);
-    obj[closure_3] = set;
-    const iter = reversed[Symbol.iterator]();
-    const nextResult = iter.next();
-    while (iter !== undefined) {
-      let tmp12 = nextResult;
-      if (!set.has(nextResult.key)) {
-        let tmp14 = beforeRemoveListeners[tmp12.key];
-        let tmp14Result;
-        if (tmp14 != null) {
-          tmp14Result = tmp14(obj);
-        }
-        if (tmp14Result) {
-          iter.return();
-          let flag2 = true;
-          return true;
-        } else {
-          let addResult = set.add(tmp12.key);
-          let obj2 = { type: "beforeRemove", target: tmp12.key, data: obj3, canPreventDefault: true };
-          obj3 = { action: obj };
-          if (emitter.emit(obj2).defaultPrevented) {
-            iter.return();
-            let flag = true;
-            return true;
-          }
-        }
-      }
-      continue;
-    }
-    return false;
+    const merged = Object.assign(tmp);
+    obj[tmp3] = set;
+    tmp = reversed;
+    tmp3 = reversed[Symbol.iterator]();
+    reversed = null;
+  } else {
+    const _Set = Set;
   }
-  set = new Set();
+  set = tmp[tmp3];
 }
 
 export { shouldPreventRemove };
@@ -59,12 +34,11 @@ export const useOnPreventRemove = function useOnPreventRemove(getState) {
   const addKeyedListener = beforeRemoveListeners.useContext(getState(emitter[1]).NavigationBuilderContext).addKeyedListener;
   const context = beforeRemoveListeners.useContext(getState(emitter[2]).NavigationRouteContext);
   let key;
-  const obj = beforeRemoveListeners;
   if (context != null) {
     key = context.key;
   }
   const items = [addKeyedListener, beforeRemoveListeners, emitter, getState, key];
-  const effect = obj.useEffect(() => {
+  const effect = beforeRemoveListeners.useEffect(() => {
     if (key) {
       let tmp2Result;
       if (addKeyedListener != null) {

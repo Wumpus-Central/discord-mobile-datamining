@@ -1,96 +1,90 @@
 // === Module 780: ? ===
 
 // Module 780
-import TRACE_FLAG_NONE from "TRACE_FLAG_NONE" /* 695 */;
-import CONSOLE_LEVELS from "CONSOLE_LEVELS" /* 700 */;
-import _mod701 from "module_701" /* 701 */;
-import regExp from "regExp" /* 710 */;
-import MAX_BAGGAGE_STRING_LENGTH from "MAX_BAGGAGE_STRING_LENGTH" /* 711 */;
-import _mod717 from "module_717" /* 717 */;
 import _mod724 from "module_724" /* 724 */;
-import freezeDscOnSpan from "freezeDscOnSpan" /* 733 */;
-import _mod745 from "module_745" /* 745 */;
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+const spanToJSON = tmp3(695);
+const consoleSandbox = tmp3(700);
+const _mod701 = tmp3(701);
+const _mod710 = tmp3(710);
+const MAX_BAGGAGE_STRING_LENGTH = tmp3(711);
+const _mod717 = tmp3(717);
+const _mod733 = tmp3(733);
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const getTraceData = function getTraceData(arg0) {
-  let propagationSpanId;
-  let propagationSpanId2;
-  let sampled;
-  let sampled2;
-  let traceId;
-  let traceId2;
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
   let client = obj.client;
   if (!client) {
-    const obj2 = _mod724;
-    client = obj2.getClient();
+    client = _mod724.getClient();
   }
-  const obj3 = _mod745;
+  let tmp3 = require;
+  let spanToTraceparentHeader = dependencyMap;
   if (obj3.isEnabled()) {
     if (client) {
+      const mainCarrier = _mod701.getMainCarrier();
       const tmp3Result = _mod701;
-      const mainCarrier = tmp3Result.getMainCarrier();
-      const tmp3Result10 = _mod717;
-      const asyncContextStrategy = tmp3Result10.getAsyncContextStrategy(mainCarrier);
+      const asyncContextStrategy = _mod717.getAsyncContextStrategy(mainCarrier);
       if (asyncContextStrategy.getTraceData) {
         return asyncContextStrategy.getTraceData(obj);
       } else {
-        let spanToTraceHeaderResult;
-        let dynamicSamplingContextFromSpan;
         let scope = obj.scope;
         if (!scope) {
-          const tmp3Result11 = _mod724;
-          scope = tmp3Result11.getCurrentScope();
+          scope = _mod724.getCurrentScope();
+          const tmp3Result10 = _mod724;
         }
         let span = obj.span;
         if (!span) {
-          const tmp3Result12 = TRACE_FLAG_NONE;
-          span = tmp3Result12.getActiveSpan();
+          span = spanToJSON.getActiveSpan();
+          const tmp3Result11 = spanToJSON;
         }
         if (span) {
-          const tmp3Result13 = TRACE_FLAG_NONE;
-          spanToTraceHeaderResult = tmp3Result13.spanToTraceHeader(span);
+          let spanToTraceHeaderResult = spanToJSON.spanToTraceHeader(span);
+          const tmp3Result12 = spanToJSON;
         } else {
           const propagationContext = scope.getPropagationContext();
           ({ traceId, sampled, propagationSpanId } = propagationContext);
-          const tmp3Result14 = regExp;
-          spanToTraceHeaderResult = tmp3Result14.generateSentryTraceHeader(traceId, propagationSpanId, sampled);
+          spanToTraceHeaderResult = _mod710.generateSentryTraceHeader(traceId, propagationSpanId, sampled);
+          const tmp3Result13 = _mod710;
         }
-        const tmp3Result15 = freezeDscOnSpan;
+        const tmp3Result14 = _mod733;
         if (span) {
-          dynamicSamplingContextFromSpan = tmp3Result15.getDynamicSamplingContextFromSpan(span);
+          let dynamicSamplingContextFromSpan = tmp3Result14.getDynamicSamplingContextFromSpan(span);
         } else {
-          dynamicSamplingContextFromSpan = tmp3Result15.getDynamicSamplingContextFromScope(client, scope);
+          dynamicSamplingContextFromSpan = tmp3Result14.getDynamicSamplingContextFromScope(client, scope);
         }
-        const tmp3Result16 = MAX_BAGGAGE_STRING_LENGTH;
-        const result = tmp3Result16.dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan);
-        const TRACEPARENT_REGEXP = regExp.TRACEPARENT_REGEXP;
+        const result = MAX_BAGGAGE_STRING_LENGTH.dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan);
+        const TRACEPARENT_REGEXP = _mod710.TRACEPARENT_REGEXP;
         if (TRACEPARENT_REGEXP.test(spanToTraceHeaderResult)) {
           const obj4 = { "sentry-trace": spanToTraceHeaderResult, baggage: result };
-          if (obj.propagateTraceparent) {
-            let result1;
+          if (!obj.propagateTraceparent) {
+            return obj4;
+          } else {
             if (span) {
-              const tmp3Result17 = TRACE_FLAG_NONE;
-              result1 = tmp3Result17.spanToTraceparentHeader(span);
+              tmp3 = spanToJSON;
+              spanToTraceparentHeader = tmp3.spanToTraceparentHeader;
+              let result1 = spanToTraceparentHeader(span);
             } else {
               const propagationContext1 = scope.getPropagationContext();
               ({ traceId: traceId2, sampled: sampled2, propagationSpanId: propagationSpanId2 } = propagationContext1);
-              const tmp3Result18 = regExp;
-              result1 = tmp3Result18.generateTraceparentHeader(traceId2, propagationSpanId2, sampled2);
+              result1 = _mod710.generateTraceparentHeader(traceId2, propagationSpanId2, sampled2);
+              const tmp3Result16 = _mod710;
             }
             obj4.traceparent = result1;
           }
-          return obj4;
         } else {
-          const debug = CONSOLE_LEVELS.debug;
+          const debug = consoleSandbox.debug;
           debug.warn("Invalid sentry-trace data. Cannot generate trace data");
           return {};
         }
+        const tmp3Result15 = MAX_BAGGAGE_STRING_LENGTH;
       }
+      const tmp3Result9 = _mod717;
     }
   }
   return {};

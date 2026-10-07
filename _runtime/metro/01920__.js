@@ -1,12 +1,10 @@
 // === Module 1920: ? ===
 
 // Module 1920
-const obj = {
+globalThis.IntlMessageFormat.__addLocaleData({
   locale: "ro",
   pluralRuleFunction(arg0, arg1) {
-    let str2;
-    const str = String(arg0);
-    const parts = str.split(".");
+    const parts = String(arg0).split(".");
     let substr = Number(parts[0]) == arg0;
     if (substr) {
       const first = parts[0];
@@ -17,12 +15,11 @@ const obj = {
       if (1 == arg0) {
         str5 = "one";
       }
-      str2 = str5;
+      let str2 = str5;
     } else if (1 != arg0) {
-      if (!parts[1]) {
-        let str4;
+      if (!tmp2) {
         if (0 != arg0) {
-          str4 = "other";
+          let str4 = "other";
           if (1 != arg0) {
             str4 = "other";
             if (substr >= 1) {
@@ -38,6 +35,5 @@ const obj = {
     }
     return str2;
   }
-};
-globalThis.IntlMessageFormat.__addLocaleData(obj);
+});
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "ro-MD", parentLocale: "ro" });

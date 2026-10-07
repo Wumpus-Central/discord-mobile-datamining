@@ -7,10 +7,9 @@ const combined = "(" + exports.NUMBER_PATTERN + ")\\s{0,5}(" + repeatedTimeunitP
 const regExp = new RegExp(combined, "i");
 
 export const parseNumberPattern = function parseNumberPattern(str) {
-  let num3;
   str = str.toLowerCase();
   if (undefined !== exports.INTEGER_WORD_DICTIONARY[str]) {
-    num3 = exports.INTEGER_WORD_DICTIONARY[str];
+    let num3 = exports.INTEGER_WORD_DICTIONARY[str];
   } else {
     num3 = 1;
     if ("un" !== str) {
@@ -63,11 +62,10 @@ export const parseDuration = function parseDuration(arg0) {
   const obj = {};
   let match = regExp.exec(arg0);
   while (match) {
-    let num;
     let str2 = match[1];
     let str3 = str2.toLowerCase();
     if (undefined !== exports.INTEGER_WORD_DICTIONARY[str3]) {
-      num = exports.INTEGER_WORD_DICTIONARY[str3];
+      let num = exports.INTEGER_WORD_DICTIONARY[str3];
     } else {
       num = 1;
       if ("un" !== str3) {
@@ -100,10 +98,10 @@ export const parseDuration = function parseDuration(arg0) {
   }
   return obj;
 };
-export const WEEKDAY_DICTIONARY = { domingo: 0, dom: 0, lunes: 1, lun: 1, martes: 2, mar: 2, "mi\u00e9rcoles": 3, miercoles: 3, "mi\u00e9": 3, mie: 3, jueves: 4, jue: 4, viernes: 5, vie: 5, "s\u00e1bado": 6, sabado: 6, "s\u00e1b": 6, sab: 6 };
+export const WEEKDAY_DICTIONARY = { domingo: 0, dom: 0, lunes: 1, lun: 1, martes: 2, mar: 2, "miércoles": 3, miercoles: 3, "mié": 3, mie: 3, jueves: 4, jue: 4, viernes: 5, vie: 5, "sábado": 6, sabado: 6, "sáb": 6, sab: 6 };
 export const MONTH_DICTIONARY = { enero: 1, ene: 1, "ene.": 1, febrero: 2, feb: 2, "feb.": 2, marzo: 3, mar: 3, "mar.": 3, abril: 4, abr: 4, "abr.": 4, mayo: 5, may: 5, "may.": 5, junio: 6, jun: 6, "jun.": 6, julio: 7, jul: 7, "jul.": 7, agosto: 8, ago: 8, "ago.": 8, septiembre: 9, setiembre: 9, sep: 9, "sep.": 9, octubre: 10, oct: 10, "oct.": 10, noviembre: 11, nov: 11, "nov.": 11, diciembre: 12, dic: 12, "dic.": 12 };
 export const INTEGER_WORD_DICTIONARY = { uno: 1, dos: 2, tres: 3, cuatro: 4, cinco: 5, seis: 6, siete: 7, ocho: 8, nueve: 9, diez: 10, once: 11, doce: 12, trece: 13 };
-export const TIME_UNIT_DICTIONARY = { sec: "second", segundo: "second", segundos: "second", min: "minute", mins: "minute", minuto: "minute", minutos: "minute", h: "hour", hr: "hour", hrs: "hour", hora: "hour", horas: "hour", "d\u00eda": "day", "d\u00edas": "day", semana: "week", semanas: "week", mes: "month", meses: "month", cuarto: "quarter", cuartos: "quarter", "a\u00f1o": "year", "a\u00f1os": "year" };
+export const TIME_UNIT_DICTIONARY = { sec: "second", segundo: "second", segundos: "second", min: "minute", mins: "minute", minuto: "minute", minutos: "minute", h: "hour", hr: "hour", hrs: "hour", hora: "hour", horas: "hour", "día": "day", "días": "day", semana: "week", semanas: "week", mes: "month", meses: "month", cuarto: "quarter", cuartos: "quarter", "año": "year", "años": "year" };
 export const NUMBER_PATTERN = "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.INTEGER_WORD_DICTIONARY) + "|[0-9]+|[0-9]+\\.[0-9]+|un?|uno?|una?|algunos?|unos?|demi-?)";
 export const YEAR_PATTERN = "[0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?";
 export const TIME_UNITS_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern("", combined);

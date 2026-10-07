@@ -1,13 +1,14 @@
 // === Module 6173: tapGestureHandlerProps ===
 
 // Module 6173 (tapGestureHandlerProps)
-import createHandler from "createHandler" /* 6174 */;
+import _isNativeReflectConstruct from "module_6174" /* 6174 */;
 
-let items1;
 const items = ["maxDurationMs", "maxDelayMs", "numberOfTaps", "maxDeltaX", "maxDeltaY", "maxDist", "minPointers"];
-const obj = { name: "TapGestureHandler", allowedProps: items1, config: { shouldCancelWhenOutside: true } };
-items1 = [...items];
+const obj = { name: "TapGestureHandler", allowedProps: null, config: null };
+const items1 = [...items];
+obj.allowedProps = items1;
+obj.config = { shouldCancelWhenOutside: true };
 
 export const tapGestureHandlerProps = items;
 export const tapHandlerName = "TapGestureHandler";
-export const TapGestureHandler = createHandler(obj);
+export const TapGestureHandler = _isNativeReflectConstruct(obj);

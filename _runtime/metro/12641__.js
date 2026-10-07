@@ -5,28 +5,30 @@ import _mod12586 from "module_12586" /* 12586 */;
 import _mod12624 from "module_12624" /* 12624 */;
 import _mod12627 from "module_12627" /* 12627 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export const createCheckInEnvelope = function createCheckInEnvelope(arg0, contexts, sdk, arg3, _dsn) {
-  let date;
-  const obj = { sent_at: date.toISOString() };
-  date = new Date();
-  const tmp = sdk && sdk.sdk;
-  if (tmp) {
+export const createCheckInEnvelope = function createCheckInEnvelope(arg0, contexts, sdk, arg3, url) {
+  const obj = { sent_at: new Date().toISOString() };
+  if (sdk) {
+    sdk = sdk.sdk;
+  }
+  if (sdk) {
     const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
     obj.sdk = obj2;
   }
-  const tmp2 = arg3 && _dsn;
-  if (tmp2) {
-    const obj4 = _mod12627;
-    obj.dsn = obj4.dsnToString(_dsn);
+  let tmp = arg3;
+  if (arg3) {
+    tmp = url;
   }
-  const tmp5 = contexts;
-  if (tmp5) {
-    const obj5 = _mod12586;
-    obj.trace = obj5.dropUndefinedKeys(contexts);
+  if (tmp) {
+    obj.dsn = _mod12627.dsnToString(url);
+  }
+  if (contexts) {
+    obj.trace = _mod12586.dropUndefinedKeys(contexts);
   }
   const items = [{ type: "check_in" }, arg0];
+  const date = new Date();
   const items1 = [items];
-  const obj6 = _mod12624;
-  return obj6.createEnvelope(obj, items1);
+  return _mod12624.createEnvelope(obj, items1);
 };

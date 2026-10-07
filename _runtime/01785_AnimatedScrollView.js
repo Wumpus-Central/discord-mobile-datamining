@@ -1,32 +1,26 @@
 // === Module 1785: AnimatedScrollView ===
 
 // Module 1785 (AnimatedScrollView)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import _mod1786 from "module_1786" /* 1786 */;
+import eulerToQuaternion from "eulerToQuaternion" /* 1786 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
-import module_1677 from "module_1677" /* 1677 */;
-import module_1782 from "componentWithRef" /* 1782 */;
+import noop from "module_19" /* 19 */;
 
-let scrollViewOffset;
-
+require = fn;
 let closure_2 = ["scrollViewOffset"];
-const ScrollView = react_native.ScrollView;
-const jsx = Fragment.jsx;
-let closure_5 = module_1677.createAnimatedComponent(ScrollView);
+const jsx = fn(21).jsx;
+const _isNativeReflectConstruct = fn(1677);
+let closure_5 = _isNativeReflectConstruct.createAnimatedComponent(fn(17).ScrollView);
+const module_1782 = fn(1782);
 
 export const AnimatedScrollView = module_1782.componentWithRef((scrollViewOffset, arg1) => {
   let animatedRef = arg1;
   scrollViewOffset = scrollViewOffset.scrollViewOffset;
   const tmp2 = _objectWithoutProperties(scrollViewOffset, closure_2);
   if (null === arg1) {
-    const obj = _mod1786;
-    animatedRef = obj.useAnimatedRef();
+    animatedRef = eulerToQuaternion.useAnimatedRef();
   }
   if (scrollViewOffset) {
-    const obj2 = _mod1786;
-    const scrollViewOffset1 = obj2.useScrollViewOffset(animatedRef, scrollViewOffset);
+    const scrollViewOffset1 = eulerToQuaternion.useScrollViewOffset(animatedRef, scrollViewOffset);
   }
   if (!("scrollEventThrottle" in tmp2)) {
     tmp2.scrollEventThrottle = 1;

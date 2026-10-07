@@ -3,6 +3,8 @@
 // Module 1281 (version)
 import validateDefault from "validate" /* 1270 */;
 
+importDefault = arg2;
+const dependencyMap = arg6;
 
 export default function version(arr) {
   if (validateDefault(arr)) {

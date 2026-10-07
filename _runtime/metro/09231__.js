@@ -1,18 +1,14 @@
 // === Module 9231: ? ===
 
 // Module 9231
-import Fragment from "Fragment" /* 21 */;
-import DatePickerAndroid2 from "DatePickerAndroid" /* 9232 */;
-import _slicedToArray from "_slicedToArray" /* 9236 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import colorToHex from "colorToHex" /* 9236 */;
+import noop from "module_19" /* 19 */;
 
-let Platform;
-let Text;
-let c2;
-({ Appearance: c2, Platform, Text } = react_native);
-const jsx = Fragment.jsx;
-const DatePickerAndroid = DatePickerAndroid2.DatePickerAndroid;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Appearance: c2, Platform, Text } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const DatePickerAndroid = fn(9232).DatePickerAndroid;
 function getTheme(arg0) {
 
 }
@@ -29,15 +25,14 @@ function getTitle(arg0) {
 
 }
 
-export default react.memo((theme) => {
+export default noop.memo((theme) => {
   const obj = {};
   const merged = Object.assign(theme);
-  _slicedToArray;
+  colorToHex;
   if (typeof getTextColor === "function") {
     if (typeof getTheme === "function") {
-      let str;
       if (theme.theme) {
-        str = theme.theme;
+        let str = theme.theme;
       } else {
         str = "auto";
         if (React2) {
@@ -59,15 +54,13 @@ export default react.memo((theme) => {
         str4 = str6;
       }
       obj.textColor = tmp7(str4);
-      _slicedToArray;
+      colorToHex;
       if (typeof getDividerColor === "function") {
-        let dividerColor;
         if (theme.dividerColor) {
-          dividerColor = theme.dividerColor;
+          let dividerColor = theme.dividerColor;
         } else if (typeof getTheme === "function") {
-          let str7;
           if (theme.theme) {
-            str7 = theme.theme;
+            let str7 = theme.theme;
           } else {
             str7 = "auto";
             if (React2) {
@@ -91,14 +84,13 @@ export default react.memo((theme) => {
           throw new TypeError("Trying to call a non-function");
         }
         obj.dividerColor = tmp13(dividerColor);
-        _slicedToArray;
+        colorToHex;
         if (typeof getButtonColor === "function") {
           if (theme.buttonColor) {
             str2 = theme.buttonColor;
           } else if (typeof getTheme === "function") {
-            let str10;
             if (theme.theme) {
-              str10 = theme.theme;
+              let str10 = theme.theme;
             } else {
               str10 = "auto";
               if (React2) {
@@ -122,9 +114,8 @@ export default react.memo((theme) => {
           }
           obj.buttonColor = tmp19(str2);
           if (typeof getTheme === "function") {
-            let str13;
             if (theme.theme) {
-              str13 = theme.theme;
+              let str13 = theme.theme;
             } else {
               str13 = "auto";
               if (React2) {
@@ -173,8 +164,7 @@ export default react.memo((theme) => {
               }
               obj.mode = str20;
               if (null != theme.timeZoneOffsetInMinutes) {
-                const str21 = theme.timeZoneOffsetInMinutes;
-                str14 = str21.toString();
+                str14 = theme.timeZoneOffsetInMinutes.toString();
               }
               obj.timeZoneOffsetInMinutes = str14;
               return <DatePickerAndroid {...obj} />;

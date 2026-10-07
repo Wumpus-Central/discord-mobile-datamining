@@ -1,15 +1,14 @@
 // === Module 4982: keysIn ===
 
 // Module 4982 (keysIn)
-import isArrayLike from "isArrayLike" /* 518 */;
+import _mod518 from "module_518" /* 518 */;
 import arrayLikeKeys from "arrayLikeKeys" /* 532 */;
 import baseKeysIn from "baseKeysIn" /* 4983 */;
 
 
 export default function keysIn(arg0) {
-  let tmp3;
-  if (isArrayLike(arg0)) {
-    tmp3 = arrayLikeKeys(arg0, true);
+  if (_mod518(arg0)) {
+    let tmp3 = arrayLikeKeys(arg0, true);
   } else {
     tmp3 = baseKeysIn(arg0);
   }

@@ -1,153 +1,134 @@
 // === Module 12623: ? ===
 
 // Module 12623
-import _mod12585 from "module_12585" /* 12585 */;
+import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12585 */;
 import _mod12624 from "module_12624" /* 12624 */;
 import _mod12627 from "module_12627" /* 12627 */;
-import DEBUG_BUILD from "module_12579" /* 12579 */;
-import CONSOLE_LEVELS from "module_12580" /* 12580 */;
-
-const require = globalThis.__r;
-let _require, integrations;
+import __SENTRY_DEBUG__ from "module_12579" /* 12579 */;
+import consoleSandbox from "module_12580" /* 12580 */;
 
 
-export const createEventEnvelope = function createEventEnvelope(type, _dsn, sdk, tunnel) {
-  const obj = _mod12624;
-  const sdkMetadataForEnvelopeHeader = obj.getSdkMetadataForEnvelopeHeader(sdk);
+export const createEventEnvelope = function createEventEnvelope(type, url, sdk, arg3) {
+  const sdkMetadataForEnvelopeHeader = _mod12624.getSdkMetadataForEnvelopeHeader(sdk);
   let str = "event";
-  const tmp2 = type;
   if (type.type) {
     str = "event";
     if ("replay_event" !== type.type) {
       str = type.type;
     }
   }
-  if (sdk && sdk.sdk) {
+  if (sdk) {
+    sdk = sdk.sdk;
+  }
+  if (sdk) {
     type.sdk = type.sdk || {};
     let name = type.sdk.name;
-    sdk = type.sdk;
     if (!name) {
-      name = tmp6.name;
+      name = sdk.name;
     }
-    sdk.name = name;
+    type.sdk.name = name;
     let version = type.sdk.version;
-    const sdk2 = type.sdk;
     if (!version) {
-      version = tmp6.version;
+      version = sdk.version;
     }
-    sdk2.version = version;
-    integrations = type.sdk.integrations;
-    const sdk3 = type.sdk;
+    type.sdk.version = version;
+    let integrations = type.sdk.integrations;
     if (!integrations) {
       integrations = [];
     }
     const items = [];
-    const arraySpreadResult = HermesBuiltin.arraySpread(items, integrations, 0);
-    const tmp10 = (sdk && sdk.sdk).integrations || [];
-    HermesBuiltin.arraySpread(items, tmp10, arraySpreadResult);
-    sdk3.integrations = items;
+    const arraySpreadResult = HermesBuiltin.arraySpread(integrations, 0);
+    const tmp9 = sdk.integrations || [];
+    HermesBuiltin.arraySpread(tmp9, arraySpreadResult);
+    type.sdk.integrations = items;
     let packages = type.sdk.packages;
-    const sdk4 = type.sdk;
     if (!packages) {
       packages = [];
     }
     const items1 = [];
-    const arraySpreadResult5 = HermesBuiltin.arraySpread(items1, packages, 0);
-    const tmp18 = (sdk && sdk.sdk).packages || [];
-    HermesBuiltin.arraySpread(items1, tmp18, arraySpreadResult5);
-    sdk4.packages = items1;
+    const arraySpreadResult5 = HermesBuiltin.arraySpread(packages, 0);
+    const tmp17 = sdk.packages || [];
+    HermesBuiltin.arraySpread(tmp17, arraySpreadResult5);
+    type.sdk.packages = items1;
   }
-  const tmp3Result = _mod12624;
-  const eventEnvelopeHeaders = tmp3Result.createEventEnvelopeHeaders(type, sdkMetadataForEnvelopeHeader, tunnel, _dsn);
-  delete tmp2["sdkProcessingMetadata"];
+  const eventEnvelopeHeaders = _mod12624.createEventEnvelopeHeaders(type, sdkMetadataForEnvelopeHeader, arg3, url);
+  delete tmp[tmp2];
   const items2 = [{ type: str }, type];
+  const tmp3Result = _mod12624;
   const items3 = [items2];
-  const tmp3Result2 = _mod12624;
-  return tmp3Result2.createEnvelope(eventEnvelopeHeaders, items3);
+  return _mod12624.createEnvelope(eventEnvelopeHeaders, items3);
 };
-export const createSessionEnvelope = function createSessionEnvelope(toJSON, _dsn, _metadata, tunnel) {
-  let date;
-  let items1;
-  let tmpResult;
-  const obj = _mod12624;
-  const sdkMetadataForEnvelopeHeader = obj.getSdkMetadataForEnvelopeHeader(_metadata);
-  const obj2 = { sent_at: date.toISOString() };
+export const createSessionEnvelope = function createSessionEnvelope(toJSON, url, sdk, arg3) {
+  const sdkMetadataForEnvelopeHeader = _mod12624.getSdkMetadataForEnvelopeHeader(sdk);
+  const obj2 = { sent_at: null };
+  obj2.sent_at = new Date().toISOString();
   let tmp4 = sdkMetadataForEnvelopeHeader;
-  date = new Date();
-  if (tmp4) {
-    tmp4 = { sdk: sdkMetadataForEnvelopeHeader };
+  if (sdkMetadataForEnvelopeHeader) {
     const obj3 = { sdk: sdkMetadataForEnvelopeHeader };
+    tmp4 = obj3;
   }
   const merged = Object.assign(tmp4);
-  let tmp6 = tunnel && _dsn;
+  let tmp6 = arg3 && url;
   if (tmp6) {
-    const obj4 = { dsn: tmpResult.dsnToString(_dsn) };
+    const obj4 = { dsn: _mod12627.dsnToString(url) };
     tmp6 = obj4;
-    tmpResult = _mod12627;
+    const tmpResult = _mod12627;
   }
   const merged1 = Object.assign(tmp6);
   if ("aggregates" in toJSON) {
     const items = [{ type: "sessions" }, toJSON];
-    items1 = items;
+    let items1 = items;
   } else {
     items1 = [{ type: "session" }, toJSON.toJSON()];
   }
+  const date = new Date();
   const items2 = [items1];
-  const tmpResult2 = _mod12624;
-  return tmpResult2.createEnvelope(obj2, items2);
+  return _mod12624.createEnvelope(obj2, items2);
 };
-export const createSpanEnvelope = function createSpanEnvelope(items, getDsn) {
-  let closure_0;
-  let date;
-  let tmp2Result;
-  function dscHasRequiredProps(dynamicSamplingContextFromSpan) {
+export const createSpanEnvelope = function createSpanEnvelope(arg0, getDsn) {
+  const dynamicSamplingContextFromSpan = beforeSendSpan(12616).getDynamicSamplingContextFromSpan(arg0[0]);
+  let dsn = getDsn;
+  if (getDsn) {
+    dsn = getDsn.getDsn();
+  }
+  let tunnel = getDsn;
+  if (getDsn) {
+    tunnel = getDsn.getOptions().tunnel;
+  }
+  const obj = beforeSendSpan(12616);
+  const obj2 = { sent_at: new Date().toISOString() };
+  const tmp2 = beforeSendSpan;
+  let tmp7 = (function dscHasRequiredProps(dynamicSamplingContextFromSpan) {
     return dynamicSamplingContextFromSpan.trace_id && dynamicSamplingContextFromSpan.public_key;
-  }
-  let obj = require("module_12616");
-  const dynamicSamplingContextFromSpan = obj.getDynamicSamplingContextFromSpan(items[0]);
-  const tmp6 = getDsn && getDsn.getDsn();
-  const obj2 = { sent_at: date.toISOString() };
-  const tmp7 = getDsn && getDsn.getOptions().tunnel;
-  date = new Date();
-  let tmp8 = dscHasRequiredProps(dynamicSamplingContextFromSpan);
-  const tmp2 = _require;
-  if (tmp8) {
-    tmp8 = { trace: dynamicSamplingContextFromSpan };
+  })(dynamicSamplingContextFromSpan);
+  if (tmp7) {
     const obj3 = { trace: dynamicSamplingContextFromSpan };
+    tmp7 = obj3;
   }
-  const merged = Object.assign(tmp8);
-  let tmp10 = tmp7 && tmp6;
-  if (tmp10) {
-    const obj4 = { dsn: tmp2Result.dsnToString(tmp6) };
-    tmp10 = obj4;
-    tmp2Result = tmp2(12627);
+  const merged = Object.assign(tmp7);
+  let tmp9 = tunnel && dsn;
+  if (tmp9) {
+    const obj4 = { dsn: tmp2(12627).dsnToString(dsn) };
+    tmp9 = obj4;
+    const tmp2Result = tmp2(12627);
   }
-  const merged1 = Object.assign(tmp10);
-  const tmp14 = getDsn && getDsn.getOptions().beforeSendSpan;
-  _require = tmp14;
-  items = [];
-  const tmp15 = tmp14 ? ((arg0) => {
-    const obj = _mod12585;
-    const tmp3 = closure_0(obj.spanToJSON(arg0));
-    if (!tmp3) {
-      const tmpResult = _mod12585;
-      tmpResult.showSpanDropWarning();
-    }
-    return tmp3;
-  }) : ((arg0) => {
-    const obj = closure_0(dependencyMap[5]);
-    return obj.spanToJSON(arg0);
-  });
-  const iter = items[Symbol.iterator]();
-  while (iter !== undefined) {
-    let tmp15Result = tmp15(iter.next());
-    if (tmp15Result) {
-      let push = items.push;
-      let obj7 = require("module_12624");
-      let arr = push(obj7.createSpanEnvelopeItem(tmp17));
-    }
-    continue;
+  const merged1 = Object.assign(tmp9);
+  beforeSendSpan = getDsn;
+  if (getDsn) {
+    beforeSendSpan = getDsn.getOptions().beforeSendSpan;
   }
-  const obj8 = require("module_12624");
-  return obj8.createEnvelope(obj2, items);
+  if (beforeSendSpan) {
+    const fn2 = (arg0) => {
+      const tmp3 = beforeSendSpan(spanTimeInputToSeconds.spanToJSON(arg0));
+      if (!tmp3) {
+        spanTimeInputToSeconds.showSpanDropWarning();
+        const tmpResult = spanTimeInputToSeconds;
+      }
+      return tmp3;
+    };
+  } else {
+    const fn = (arg0) => beforeSendSpan(dependencyMap[5]).spanToJSON(arg0);
+  }
+  arg0[Symbol.iterator]();
+  const date = new Date();
 };

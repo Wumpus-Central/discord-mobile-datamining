@@ -3,19 +3,6 @@
 // Module 13490 (inflate_fast)
 
 export default function inflate_fast(avail_in, arg1) {
-  let _window;
-  let bits;
-  let diff21;
-  let distcode;
-  let hold;
-  let input;
-  let lencode;
-  let next_in;
-  let next_out;
-  let output;
-  let state;
-  let wnext;
-  let wsize;
   ({ state, next_in, input } = avail_in);
   const sum = next_in + (avail_in.avail_in - 5);
   ({ next_out, output } = avail_in);
@@ -39,10 +26,6 @@ export default function inflate_fast(avail_in, arg1) {
     let diff = sum5 - tmp19;
     let tmp22 = tmp18 >>> 16 & 255;
     while (0 !== tmp22) {
-      let tmp24;
-      let tmp25;
-      let tmp26;
-      let tmp27;
       if (16 & tmp22) {
         let tmp28 = 65535 & tmp18;
         let tmp29 = tmp22 & 15;
@@ -82,18 +65,15 @@ export default function inflate_fast(avail_in, arg1) {
         let diff2 = sum13 - tmp45;
         let tmp48 = tmp44 >>> 16 & 255;
         while (!(16 & tmp48)) {
-          let sum14;
-          let sum15;
           if (64 & tmp48) {
             let str2 = "invalid distance code";
             avail_in.msg = "invalid distance code";
             state.mode = 30;
-            tmp24 = diff2;
-            tmp25 = tmp46;
-            tmp26 = next_out;
-            tmp27 = sum11;
+            let tmp24 = diff2;
+            let tmp25 = tmp46;
+            let tmp26 = next_out;
+            let tmp27 = sum11;
           } else {
-            tmp44 = distcode[(65535 & tmp44) + (tmp46 & (1 << tmp48) - 1)];
             sum13 = diff2;
             sum12 = tmp46;
             continue;
@@ -103,13 +83,13 @@ export default function inflate_fast(avail_in, arg1) {
           avail_in.next_in = diff3;
           avail_in.next_out = tmp26;
           if (diff3 < sum) {
-            sum14 = sum - diff3 + 5;
+            let sum14 = sum - diff3 + 5;
           } else {
             sum14 = 5 - (diff3 - sum);
           }
           avail_in.avail_in = sum14;
           if (tmp26 < sum1) {
-            sum15 = sum1 - tmp26 + 257;
+            let sum15 = sum1 - tmp26 + 257;
           } else {
             sum15 = 257 - (tmp26 - sum1);
           }
@@ -151,18 +131,10 @@ export default function inflate_fast(avail_in, arg1) {
           tmp26 = next_out;
           tmp27 = tmp54;
         } else {
-          let tmp75;
-          let tmp76;
-          let sum39;
-          let tmp78;
           let tmp129 = tmp53 >>> tmp51;
           let diff5 = tmp52 - tmp51;
           let diff6 = next_out - tmp2;
           if (sum22 > diff6) {
-            let tmp85;
-            let num5;
-            let diff10;
-            let tmp87;
             let diff7 = sum22 - diff6;
             if (diff7 > tmp5) {
               if (state.sane) {
@@ -177,17 +149,16 @@ export default function inflate_fast(avail_in, arg1) {
             }
             if (0 === wnext) {
               let diff8 = wsize - diff7;
-              tmp85 = _window;
-              num5 = diff8;
-              diff10 = sum9;
-              tmp87 = next_out;
+              let tmp85 = _window;
+              let num5 = diff8;
+              let diff10 = sum9;
+              let tmp87 = next_out;
               if (diff7 < sum9) {
-                let sum23;
                 let diff9 = diff7;
                 let tmp105 = next_out;
                 do {
                   let tmp106 = +tmp105;
-                  sum23 = tmp106 + 1;
+                  let sum23 = tmp106 + 1;
                   output[tmp106] = _window[diff8];
                   diff9 = diff9 - 1;
                   diff8 = diff8 + 1;
@@ -206,12 +177,11 @@ export default function inflate_fast(avail_in, arg1) {
               tmp87 = next_out;
               diff10 = sum9;
               if (diff12 < sum9) {
-                let sum24;
                 let diff13 = diff12;
                 let tmp97 = next_out;
                 do {
                   let tmp94 = +tmp97;
-                  sum24 = tmp94 + 1;
+                  let sum24 = tmp94 + 1;
                   output[tmp94] = _window[diff11];
                   diff13 = diff13 - 1;
                   diff11 = diff11 + 1;
@@ -223,13 +193,12 @@ export default function inflate_fast(avail_in, arg1) {
                 diff10 = diff14;
                 tmp87 = sum24;
                 if (wnext < diff14) {
-                  let sum25;
                   let num6 = 0;
                   let diff16 = wnext;
                   let diff15 = diff14 - wnext;
                   do {
                     let tmp101 = +sum24;
-                    sum25 = tmp101 + 1;
+                    let sum25 = tmp101 + 1;
                     output[tmp101] = _window[num6];
                     diff16 = diff16 - 1;
                     num6 = num6 + 1;
@@ -248,12 +217,11 @@ export default function inflate_fast(avail_in, arg1) {
               diff10 = sum9;
               tmp87 = next_out;
               if (diff7 < sum9) {
-                let sum26;
                 let diff18 = diff7;
                 let tmp91 = next_out;
                 do {
                   let tmp88 = +tmp91;
-                  sum26 = tmp88 + 1;
+                  let sum26 = tmp88 + 1;
                   output[tmp88] = _window[diff17];
                   diff18 = diff18 - 1;
                   diff17 = diff17 + 1;
@@ -289,10 +257,10 @@ export default function inflate_fast(avail_in, arg1) {
                 tmp113 = diff19;
               } while (2 < diff19);
             }
-            tmp75 = diff5;
-            tmp76 = tmp129;
-            sum39 = tmp112;
-            tmp78 = tmp54;
+            let tmp75 = diff5;
+            let tmp76 = tmp129;
+            let sum39 = tmp112;
+            let tmp78 = tmp54;
             if (tmp113) {
               let tmp119 = +tmp112;
               let sum31 = tmp119 + 1;
@@ -309,8 +277,6 @@ export default function inflate_fast(avail_in, arg1) {
               tmp78 = tmp54;
             }
           } else {
-            let sum35;
-            let sum36;
             let diff20 = next_out - sum22;
             let tmp74 = sum9;
             let tmp73 = next_out;
@@ -322,8 +288,8 @@ export default function inflate_fast(avail_in, arg1) {
               let sum34 = sum33 + 1;
               output[tmp66] = output[sum33];
               let tmp68 = +tmp66 + 1;
-              sum35 = tmp68 + 1;
-              sum36 = sum34 + 1;
+              let sum35 = tmp68 + 1;
+              let sum36 = sum34 + 1;
               output[tmp68] = output[sum34];
               diff21 = tmp74 - 3;
               diff20 = sum36;
@@ -382,7 +348,6 @@ export default function inflate_fast(avail_in, arg1) {
           tmp27 = sum3;
         }
       } else {
-        tmp18 = lencode[(65535 & tmp18) + (tmp20 & (1 << tmp22) - 1)];
         sum5 = diff;
         sum4 = tmp20;
         continue;

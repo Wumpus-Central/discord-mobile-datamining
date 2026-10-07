@@ -6,17 +6,14 @@ import floor from "floor" /* 5367 */;
 
 
 export default function truncate(num) {
-  let tmp3;
   if (typeof num !== "number") {
     if (typeof num !== "bigint") {
-      const self = this;
-      const self2 = this;
-      const tmp8 = new _mod1293("argument must be a Number or a BigInt");
-      throw tmp8;
+      const tmp10 = new _mod1293("argument must be a Number or a BigInt");
+      throw tmp10;
     }
   }
   if (num < 0) {
-    tmp3 = -floor(-num);
+    let tmp3 = -floor(-num);
   } else {
     tmp3 = floor(num);
   }

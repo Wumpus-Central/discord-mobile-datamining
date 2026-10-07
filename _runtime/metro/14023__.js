@@ -1,25 +1,20 @@
 // === Module 14023: ? ===
 
 // Module 14023
-import _mod1172 from "module_1172" /* 1172 */;
+import e from "e" /* 1172 */;
 import data from "data" /* 14024 */;
 import regions from "regions" /* 14025 */;
 
-let obj3;
-
+require = arg1;
+const dependencyMap = arg6;
 function isMatched(region, str, arg2) {
-  let arr;
-  let tmp2;
-  let tmp3;
-  let tmp4;
   const parts = str.split("-");
   [tmp2, tmp3, arr] = parts;
   if (arr) {
     if ("$" === arr[0]) {
-      let arr2;
       const slice = arr.slice;
       if ("!" !== arr[1]) {
-        arr2 = arg2[slice(arr, 1)];
+        let arr2 = arg2[slice(arr, 1)];
       } else {
         arr2 = arg2[slice(arr, 2)];
       }
@@ -32,23 +27,21 @@ function isMatched(region, str, arg2) {
         return tmp;
       });
       const reduced = mapped.reduce((acc, item) => {
-        const __spreadArray = _mod1172.__spreadArray;
-        _mod1172;
-        const obj = _mod1172;
-        return __spreadArray(obj.__spreadArray([], acc, true), item, true);
+        const obj = e;
+        return obj.__spreadArray(e.__spreadArray([], acc, true), item, true);
       }, []);
       let str4 = region.region;
-      const indexOf = reduced.indexOf;
       if (!str4) {
         str4 = "";
       }
-      tmp4 = indexOf(str4) > -1 === tmp7;
+      let tmp4 = reduced.indexOf(str4) > -1 === tmp7;
     }
     if (tmp4) {
       const script = region.script;
       let tmp8 = !script;
       if (script) {
         tmp8 = "*" === tmp3 || tmp3 === region.script;
+        const tmp9 = "*" === tmp3 || tmp3 === region.script;
       }
       tmp4 = tmp8;
     }
@@ -57,6 +50,7 @@ function isMatched(region, str, arg2) {
       let tmp10 = !language;
       if (language) {
         tmp10 = "*" === tmp2 || tmp2 === region.language;
+        const tmp11 = "*" === tmp2 || tmp2 === region.language;
       }
       tmp4 = tmp10;
     }
@@ -66,6 +60,7 @@ function isMatched(region, str, arg2) {
   tmp4 = !region;
   if (region) {
     tmp4 = "*" === arr || arr === region.region;
+    const tmp5 = "*" === arr || arr === region.region;
   }
 }
 function findMatchingDistanceForLSR(arg0, arg1, matches) {
@@ -95,17 +90,14 @@ function findMatchingDistanceForLSR(arg0, arg1, matches) {
     const items = [, , ];
     ({ language: arr3[0], script: arr3[1], region: arr3[2] } = arg0);
     const _Boolean = Boolean;
-    const indexOf = paradigmLocales.indexOf;
     const found = items.filter(Boolean);
     const paradigmLocales1 = matches.paradigmLocales;
     const items1 = [, , ];
     ({ language: arr5[0], script: arr5[1], region: arr5[2] } = arg1);
     const _Boolean2 = Boolean;
-    const indexOf2 = paradigmLocales1.indexOf;
-    const tmp10 = indexOf(found.join("-")) > -1;
     const found1 = items1.filter(Boolean);
     let diff = result;
-    if (tmp10 !== indexOf2(found1.join("-")) > -1) {
+    if (tmp10 !== paradigmLocales1.indexOf(found1.join("-")) > -1) {
       diff = result - 1;
     }
     return diff;
@@ -114,16 +106,14 @@ function findMatchingDistanceForLSR(arg0, arg1, matches) {
   throw error;
 }
 function findMatchingDistance(matchedDesiredLocale, matchedSupportedLocale) {
-  let __spreadArray;
-  let __spreadArrayResult;
-  let locale = new Intl.Locale(matchedDesiredLocale);
+  locale = new Intl.Locale(matchedDesiredLocale);
   const maximizeResult = locale.maximize();
   const locale1 = new Intl.Locale(matchedSupportedLocale);
   const maximizeResult1 = locale1.maximize();
   const obj = { language: maximizeResult.language, script: maximizeResult.script || "", region: maximizeResult.region || "" };
   const obj2 = { language: maximizeResult1.language, script: maximizeResult1.script || "", region: maximizeResult1.region || "" };
   let tmp3 = obj3;
-  if (!tmp3) {
+  if (!obj3) {
     let first = data.data.supplemental.languageMatching["written-new"][0];
     let paradigmLocales;
     if (null !== first) {
@@ -134,8 +124,7 @@ function findMatchingDistance(matchedDesiredLocale, matchedSupportedLocale) {
     let parts;
     if (null !== paradigmLocales) {
       if (undefined !== paradigmLocales) {
-        let str = paradigmLocales._locales;
-        parts = str.split(" ");
+        parts = paradigmLocales._locales.split(" ");
       }
     }
     const prop = data.data.supplemental.languageMatching["written-new"];
@@ -149,22 +138,20 @@ function findMatchingDistance(matchedDesiredLocale, matchedSupportedLocale) {
         }, {}),
       matchVariables: substr.reduce((acc, item) => {
           const first = Object.keys(item)[0];
-          const str = item[first]._value;
           const substr = first.slice(1);
-          acc[substr] = str.split("+");
+          acc[substr] = item[first]._value.split("+");
           return acc;
         }, {}),
-      paradigmLocales: __spreadArray(__spreadArrayResult, parts.map((item) => {
-          const locale = new Intl.Locale(item.replace(/_/g, "-"));
-          const str = locale.maximize();
-          return str.toString();
-        }), true)
+      paradigmLocales: null
     };
-    __spreadArray = _mod1172.__spreadArray;
-    _mod1172;
-    const tmp4Result2 = _mod1172;
+    const tmp4Result = e;
+    const tmp4Result2 = e;
+    obj3.paradigmLocales = tmp4Result.__spreadArray(e.__spreadArray([], parts, true), parts.map((item) => {
+      locale = new Intl.Locale(item.replace(/_/g, "-"));
+      return locale.maximize().toString();
+    }), true);
     tmp3 = obj3;
-    __spreadArrayResult = tmp4Result2.__spreadArray([], parts, true);
+    const __spreadArrayResult = e.__spreadArray([], parts, true);
   }
   let num3 = 0;
   if (obj.language !== obj2.language) {
@@ -191,17 +178,14 @@ export const invariant = function invariant(arg0, arg1, arg2) {
   if (undefined === arg2) {
     _Error = Error;
   }
-  const tmp2 = arg0;
-  if (!tmp2) {
-    const self = this;
-    const self2 = this;
+  if (!arg0) {
     const _Error1 = new _Error(arg1);
     throw _Error1;
   }
 };
 export { findMatchingDistance };
 export const findBestMatch = function findBestMatch(arr, arg1, arg2) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   let tmp = arg2;
   if (undefined === arg2) {
     tmp = c3;
@@ -210,12 +194,12 @@ export const findBestMatch = function findBestMatch(arr, arg1, arg2) {
   const obj = { matchedDesiredLocale: "", distances: {} };
   let item = arr.forEach((item, index) => {
     const matchedDesiredLocale = item;
-    let closure_1 = index;
+    closure_1 = index;
     if (!obj.distances[item]) {
       obj.distances[item] = {};
     }
     item = matchedDesiredLocale.forEach((matchedSupportedLocale) => {
-      const sum = findMatchingDistance(matchedDesiredLocale, matchedSupportedLocale) + 40 * index;
+      const sum = findMatchingDistance(matchedDesiredLocale, matchedSupportedLocale) + 40 * closure_1;
       obj.distances[matchedDesiredLocale][matchedSupportedLocale] = sum;
       if (sum < Infinity) {
         Infinity = sum;

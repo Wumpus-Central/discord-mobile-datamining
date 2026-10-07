@@ -7,7 +7,6 @@ import _nonIterableRest from "_nonIterableRest" /* 37 */;
 import _iterableToArray from "_iterableToArray" /* 730 */;
 
 
-export default function _toArray(alerts) {
-  const tmp3 = _arrayWithHoles(alerts) || _iterableToArray(alerts) || _unsupportedIterableToArray(alerts) || _nonIterableRest();
-  return tmp3;
+export default function _toArray(current) {
+  return _arrayWithHoles(current) || _iterableToArray(current) || _unsupportedIterableToArray(current) || _nonIterableRest();
 };

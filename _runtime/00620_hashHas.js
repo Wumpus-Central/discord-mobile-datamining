@@ -1,16 +1,16 @@
 // === Module 620: hashHas ===
 
 // Module 620 (hashHas)
-import getNative from "getNative" /* 611 */;
+import _mod611 from "module_611" /* 611 */;
 
 
-export default function hashHas(arg0) {
-  let callResult;
+export default function hashHas(View) {
   const __data__ = this.__data__;
-  if (getNative) {
-    callResult = undefined !== __data__[arg0];
+  if (_mod611) {
+    let tmp2 = undefined !== __data__[View];
   } else {
-    callResult = hasOwnProperty.call(__data__, arg0);
+    const call = hasOwnProperty.call;
+    tmp2 = typeof call === "unknown" ? hasOwnProperty(View) : call(__data__, View);
   }
-  return callResult;
+  return tmp2;
 };

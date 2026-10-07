@@ -1,10 +1,9 @@
 // === Module 6179: ghQueueMicrotask ===
 
 // Module 6179 (ghQueueMicrotask)
-let bindResult;
 if (typeof setImmediate === "function") {
   const _setImmediate = setImmediate;
-  bindResult = setImmediate.bind(null);
+  let bindResult = setImmediate.bind(null);
 } else {
   const _requestAnimationFrame2 = requestAnimationFrame;
   if (typeof requestAnimationFrame === "function") {

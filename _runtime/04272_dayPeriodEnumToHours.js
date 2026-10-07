@@ -4,6 +4,8 @@
 import daysInWeek from "daysInWeek" /* 4143 */;
 import numericPatterns from "numericPatterns" /* 4273 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
 export function dayPeriodEnumToHours(arg0) {
   if ("morning" === arg0) {
@@ -24,7 +26,7 @@ export function dayPeriodEnumToHours(arg0) {
 export const isLeapYearIndex = function isLeapYearIndex(uTCFullYear) {
   const result = uTCFullYear % 400;
   let tmp2 = result === 0;
-  if (!tmp2) {
+  if (result !== 0) {
     const result1 = uTCFullYear % 4;
     let tmp4 = result1 === 0;
     if (result1 === 0) {
@@ -35,8 +37,7 @@ export const isLeapYearIndex = function isLeapYearIndex(uTCFullYear) {
   return tmp2;
 };
 export const mapValue = function mapValue(value, valueCallback) {
-  const tmp = value;
-  if (tmp) {
+  if (value) {
     const obj = { value: valueCallback(value.value), rest: value.rest };
     return obj;
   } else {
@@ -44,7 +45,6 @@ export const mapValue = function mapValue(value, valueCallback) {
   }
 };
 export const normalizeTwoDigitYear = function normalizeTwoDigitYear(year, arg1) {
-  let diff1;
   let diff = arg1;
   if (arg1 <= 0) {
     diff = 1 - arg1;
@@ -54,7 +54,7 @@ export const normalizeTwoDigitYear = function normalizeTwoDigitYear(year, arg1) 
     if (!num2) {
       num2 = 100;
     }
-    diff1 = num2;
+    let diff1 = num2;
   } else {
     const sum = diff + 50;
     const _Math = Math;
@@ -75,9 +75,11 @@ export const parseAnyDigitsSigned = function parseAnyDigitsSigned(str) {
   const match = str.match(numericPatterns.numericPatterns.anyDigitsSigned);
   let tmp2 = null;
   if (match) {
+    const obj = { value: null, rest: null };
     const _parseInt = parseInt;
-    tmp2 = { value: parseInt(match[0], 10), rest: str.slice(match[0].length) };
-    const obj = { value: parseInt(match[0], 10), rest: str.slice(match[0].length) };
+    obj.value = parseInt(match[0], 10);
+    obj.rest = str.slice(match[0].length);
+    tmp2 = obj;
   }
   return tmp2;
 };
@@ -86,49 +88,57 @@ export const parseNDigits = function parseNDigits(length, str) {
     const match = str.match(numericPatterns.numericPatterns.singleDigit);
     let tmp20 = null;
     if (match) {
+      const obj2 = { value: null, rest: null };
       const _parseInt5 = parseInt;
-      tmp20 = { value: parseInt(match[0], 10), rest: str.slice(match[0].length) };
-      const obj2 = { value: parseInt(match[0], 10), rest: str.slice(match[0].length) };
+      obj2.value = parseInt(match[0], 10);
+      obj2.rest = str.slice(match[0].length);
+      tmp20 = obj2;
     }
     return tmp20;
   } else if (2 === length) {
     const match1 = str.match(numericPatterns.numericPatterns.twoDigits);
     let tmp15 = null;
     if (match1) {
+      const obj3 = { value: null, rest: null };
       const _parseInt4 = parseInt;
-      tmp15 = { value: parseInt(match1[0], 10), rest: str.slice(match1[0].length) };
-      const obj3 = { value: parseInt(match1[0], 10), rest: str.slice(match1[0].length) };
+      obj3.value = parseInt(match1[0], 10);
+      obj3.rest = str.slice(match1[0].length);
+      tmp15 = obj3;
     }
     return tmp15;
   } else if (3 === length) {
     const match2 = str.match(numericPatterns.numericPatterns.threeDigits);
     let tmp10 = null;
     if (match2) {
+      const obj4 = { value: null, rest: null };
       const _parseInt3 = parseInt;
-      tmp10 = { value: parseInt(match2[0], 10), rest: str.slice(match2[0].length) };
-      const obj4 = { value: parseInt(match2[0], 10), rest: str.slice(match2[0].length) };
+      obj4.value = parseInt(match2[0], 10);
+      obj4.rest = str.slice(match2[0].length);
+      tmp10 = obj4;
     }
     return tmp10;
   } else if (4 === length) {
     const match3 = str.match(numericPatterns.numericPatterns.fourDigits);
     let tmp5 = null;
     if (match3) {
+      const obj5 = { value: null, rest: null };
       const _parseInt2 = parseInt;
-      tmp5 = { value: parseInt(match3[0], 10), rest: str.slice(match3[0].length) };
-      const obj5 = { value: parseInt(match3[0], 10), rest: str.slice(match3[0].length) };
+      obj5.value = parseInt(match3[0], 10);
+      obj5.rest = str.slice(match3[0].length);
+      tmp5 = obj5;
     }
     return tmp5;
   } else {
     const _RegExp = RegExp;
-    const self = this;
-    const self2 = this;
     const regExp = new RegExp("^\\d{1," + length + "}");
     const match4 = str.match(regExp);
     let tmp = null;
     if (match4) {
+      const obj = { value: null, rest: null };
       const _parseInt = parseInt;
-      tmp = { value: parseInt(match4[0], 10), rest: "^\\d{1,".slice(match4[0].length) };
-      const obj = { value: parseInt(match4[0], 10), rest: "^\\d{1,".slice(match4[0].length) };
+      obj.value = parseInt(match4[0], 10);
+      obj.rest = str.slice(match4[0].length);
+      tmp = obj;
     }
     return tmp;
   }
@@ -138,49 +148,57 @@ export const parseNDigitsSigned = function parseNDigitsSigned(length, str) {
     const match = str.match(numericPatterns.numericPatterns.singleDigitSigned);
     let tmp20 = null;
     if (match) {
+      const obj2 = { value: null, rest: null };
       const _parseInt5 = parseInt;
-      tmp20 = { value: parseInt(match[0], 10), rest: str.slice(match[0].length) };
-      const obj2 = { value: parseInt(match[0], 10), rest: str.slice(match[0].length) };
+      obj2.value = parseInt(match[0], 10);
+      obj2.rest = str.slice(match[0].length);
+      tmp20 = obj2;
     }
     return tmp20;
   } else if (2 === length) {
     const match1 = str.match(numericPatterns.numericPatterns.twoDigitsSigned);
     let tmp15 = null;
     if (match1) {
+      const obj3 = { value: null, rest: null };
       const _parseInt4 = parseInt;
-      tmp15 = { value: parseInt(match1[0], 10), rest: str.slice(match1[0].length) };
-      const obj3 = { value: parseInt(match1[0], 10), rest: str.slice(match1[0].length) };
+      obj3.value = parseInt(match1[0], 10);
+      obj3.rest = str.slice(match1[0].length);
+      tmp15 = obj3;
     }
     return tmp15;
   } else if (3 === length) {
     const match2 = str.match(numericPatterns.numericPatterns.threeDigitsSigned);
     let tmp10 = null;
     if (match2) {
+      const obj4 = { value: null, rest: null };
       const _parseInt3 = parseInt;
-      tmp10 = { value: parseInt(match2[0], 10), rest: str.slice(match2[0].length) };
-      const obj4 = { value: parseInt(match2[0], 10), rest: str.slice(match2[0].length) };
+      obj4.value = parseInt(match2[0], 10);
+      obj4.rest = str.slice(match2[0].length);
+      tmp10 = obj4;
     }
     return tmp10;
   } else if (4 === length) {
     const match3 = str.match(numericPatterns.numericPatterns.fourDigitsSigned);
     let tmp5 = null;
     if (match3) {
+      const obj5 = { value: null, rest: null };
       const _parseInt2 = parseInt;
-      tmp5 = { value: parseInt(match3[0], 10), rest: str.slice(match3[0].length) };
-      const obj5 = { value: parseInt(match3[0], 10), rest: str.slice(match3[0].length) };
+      obj5.value = parseInt(match3[0], 10);
+      obj5.rest = str.slice(match3[0].length);
+      tmp5 = obj5;
     }
     return tmp5;
   } else {
     const _RegExp = RegExp;
-    const self = this;
-    const self2 = this;
     const regExp = new RegExp("^-?\\d{1," + length + "}");
     const match4 = str.match(regExp);
     let tmp = null;
     if (match4) {
+      const obj = { value: null, rest: null };
       const _parseInt = parseInt;
-      tmp = { value: parseInt(match4[0], 10), rest: "^-?\\d{1,".slice(match4[0].length) };
-      const obj = { value: parseInt(match4[0], 10), rest: "^-?\\d{1,".slice(match4[0].length) };
+      obj.value = parseInt(match4[0], 10);
+      obj.rest = str.slice(match4[0].length);
+      tmp = obj;
     }
     return tmp;
   }
@@ -189,18 +207,19 @@ export const parseNumericPattern = function parseNumericPattern(month, str) {
   const match = str.match(month);
   let tmp2 = null;
   if (match) {
+    const obj = { value: null, rest: null };
     const _parseInt = parseInt;
-    tmp2 = { value: parseInt(match[0], 10), rest: str.slice(match[0].length) };
-    const obj = { value: parseInt(match[0], 10), rest: str.slice(match[0].length) };
+    obj.value = parseInt(match[0], 10);
+    obj.rest = str.slice(match[0].length);
+    tmp2 = obj;
   }
   return tmp2;
 };
 export const parseTimezonePattern = function parseTimezonePattern(basic, str) {
-  let sum;
   const match = str.match(basic);
   if (match) {
     if ("Z" === match[0]) {
-      const obj2 = { value: 0, rest: "Z".slice(1) };
+      const obj2 = { value: 0, rest: str.slice(1) };
       return obj2;
     } else {
       let num = -1;
@@ -222,9 +241,11 @@ export const parseTimezonePattern = function parseTimezonePattern(basic, str) {
         const _parseInt3 = parseInt;
         num6 = parseInt(match[5], 10);
       }
-      const obj = { value: num * (sum + num6 * daysInWeek.millisecondsInSecond), rest: "Z".slice(match[0].length) };
+      const obj = { value: null, rest: null };
       const result = num2 * daysInWeek.millisecondsInHour;
-      sum = result + num4 * daysInWeek.millisecondsInMinute;
+      const sum = result + num4 * daysInWeek.millisecondsInMinute;
+      obj.value = num * (sum + num6 * daysInWeek.millisecondsInSecond);
+      obj.rest = str.slice(match[0].length);
       return obj;
     }
   } else {

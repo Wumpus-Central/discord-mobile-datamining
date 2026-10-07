@@ -4,13 +4,14 @@
 import normalizeColor from "normalizeColor" /* 51 */;
 import PlatformColor from "PlatformColor" /* 52 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
 export default function processColor(tintColor) {
   if (null == tintColor) {
     return tintColor;
   } else {
-    const obj = normalizeColor;
-    const defaultResult = obj.default(tintColor);
+    const defaultResult = normalizeColor.default(tintColor);
     if (null != defaultResult) {
       if (typeof defaultResult === "object") {
         const processColorObjectResult = PlatformColor.processColorObject(defaultResult);

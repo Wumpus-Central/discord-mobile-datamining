@@ -1,31 +1,27 @@
 // === Module 338: ? ===
 
 // Module 338
-import ViewDefault from "View" /* 108 */;
-import flattenStyleDefault from "flattenStyle" /* 148 */;
-import get_hairlineWidthDefault from "get hairlineWidth" /* 254 */;
-import ImageDefault from "Image" /* 328 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-let size;
-
-let metroImportAll;
-let metroImportDefault;
+const ImageBackground = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -34,23 +30,26 @@ function _isNativeReflectConstruct() {
   }
 }
 let closure_2 = ["children", "style", "imageStyle", "imageRef", "importantForAccessibility"];
-({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 class ImageBackground {
   constructor() {
-    let constructResult;
-    const self = this;
-    const items = [...arguments];
-    let closure_0;
-    _classCallCheck(this, ImageBackground);
-    const items1 = [...items];
-    const obj = _getPrototypeOf(ImageBackground);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, _getPrototypeOf(self).constructor);
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_4(this, ImageBackground);
+    items1 = [...items];
+    tmp2 = metroRequire;
+    obj = metroRequire(ImageBackground);
+    tmp3 = hasOwnProperty;
+    if (closure_9()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items1);
     }
-    const tmp3Result = hasOwnProperty(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
     tmp3Result._viewRef = null;
     tmp3Result._captureRef = (_viewRef) => {
@@ -59,7 +58,7 @@ class ImageBackground {
     return tmp3Result;
   }
 }
-_inherits(ImageBackground, react.Component);
+_inherits(ImageBackground, noop.Component);
 const entry = {
   key: "setNativeProps",
   value: function setNativeProps(arg0) {
@@ -74,38 +73,34 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let children;
-      let height;
-      let imageRef;
-      let imageStyle;
-      let importantForAccessibility;
-      let items;
-      let items1;
-      let style;
       const props = this.props;
       ({ style, importantForAccessibility } = props);
       ({ children, imageStyle, imageRef } = props);
+      const size = ImageBackground(148)(style);
+      const obj = { accessibilityIgnoresInvertColors: true, importantForAccessibility, style, ref: this._captureRef, children: null };
       const tmp = _objectWithoutProperties(props, closure_2);
-      size = flattenStyleDefault(style);
-      const obj = { accessibilityIgnoresInvertColors: true, importantForAccessibility, style, ref: this._captureRef, children: items1 };
-      const obj2 = { importantForAccessibility, style: items, ref: imageRef };
-      const tmp3 = ViewDefault;
-      const tmp5 = ImageDefault;
+      const obj2 = {};
+      const tmp3 = ImageBackground(108);
       const merged = Object.assign(tmp);
-      items = [get_hairlineWidthDefault.absoluteFill, , ];
+      obj2.importantForAccessibility = importantForAccessibility;
+      const items = [ImageBackground(254).absoluteFill, , ];
       let width;
       if (size != null) {
         width = size.width;
       }
-      const size1 = { width, height };
-      height = undefined;
+      const size1 = { width, height: null };
+      let height;
       if (size != null) {
         height = size.height;
       }
+      size1.height = height;
       items[1] = size1;
       items[2] = imageStyle;
-      items1 = [metroImportDefault(tmp5, obj2), children];
-      return metroImportAll(tmp3, obj);
+      obj2.style = items;
+      obj2.ref = imageRef;
+      const items1 = [React5(ImageBackground(328), obj2), children];
+      obj.children = items1;
+      return closure_1_8(tmp3, obj);
     }
   }
 ];

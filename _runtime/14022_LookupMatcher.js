@@ -4,9 +4,11 @@
 import _mod14023 from "module_14023" /* 14023 */;
 import BestAvailableLocale from "BestAvailableLocale" /* 14026 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
 export const LookupMatcher = function LookupMatcher(arg0, arg1, fn) {
-  const obj = { locale: fn() };
+  const obj = { locale: "" };
   let num = 0;
   if (0 < arg1.length) {
     const replaced = str.replace(_mod14023.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
@@ -16,9 +18,10 @@ export const LookupMatcher = function LookupMatcher(arg0, arg1, fn) {
     }
     obj.locale = BestAvailableLocaleResult;
     if (arg1[num] !== replaced) {
-      obj.extension = arg1[num].slice(replaced.length, arg1[num].length);
+      obj.extension = str.slice(replaced.length, str.length);
     }
     return obj;
   }
+  obj.locale = fn();
   return obj;
 };

@@ -1,21 +1,19 @@
 // === Module 1592: ? ===
 
 // Module 1592
-import Fragment from "Fragment" /* 21 */;
 import BaseNavigationContainer from "BaseNavigationContainer" /* 1493 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
 
 export const createStaticNavigation = function createStaticNavigation(getComponent) {
-  let closure_1;
   const component = getComponent.getComponent();
-  return react.forwardRef(function Navigation(linking, ref) {
+  return noop.forwardRef(function Navigation(linking, ref) {
     linking = linking.linking;
     let merged = Object.assign(linking, Object.assign({ linking: 0 }));
     let memo;
     let enabled;
-    const useMemo = React.useMemo;
     if (linking != null) {
       enabled = linking.enabled;
     }
@@ -36,11 +34,8 @@ export const createStaticNavigation = function createStaticNavigation(getCompone
       }
     }
     items[2] = initialRouteName;
-    memo = useMemo(() => {
-      let initialRouteName1;
+    memo = React.useMemo(() => {
       let initialRouteName;
-      const createPathConfigForStaticNavigation = BaseNavigationContainer.createPathConfigForStaticNavigation;
-      BaseNavigationContainer;
       if (linking != null) {
         const config = linking.config;
         if (config != null) {
@@ -51,7 +46,7 @@ export const createStaticNavigation = function createStaticNavigation(getCompone
       if (linking != null) {
         enabled = linking.enabled;
       }
-      const pathConfigForStaticNavigation = createPathConfigForStaticNavigation(getComponent, { initialRouteName }, "auto" === enabled);
+      const pathConfigForStaticNavigation = BaseNavigationContainer.createPathConfigForStaticNavigation(closure_0, { initialRouteName }, "auto" === enabled);
       if (pathConfigForStaticNavigation) {
         let path;
         if (linking != null) {
@@ -60,24 +55,25 @@ export const createStaticNavigation = function createStaticNavigation(getCompone
             path = config2.path;
           }
         }
-        const obj = { path, initialRouteName: initialRouteName1, screens: pathConfigForStaticNavigation };
-        initialRouteName1 = undefined;
+        const obj2 = { path, initialRouteName: null, screens: null };
+        let initialRouteName1;
         if (linking != null) {
           const config3 = linking.config;
           if (config3 != null) {
             initialRouteName1 = config3.initialRouteName;
           }
         }
-        return obj;
+        obj2.initialRouteName = initialRouteName1;
+        obj2.screens = pathConfigForStaticNavigation;
+        return obj2;
       }
     }, items);
     const items1 = [linking, memo];
     let enabled1;
     const memo1 = React.useMemo(() => {
       if (linking) {
-        let enabled;
         if (typeof linking.enabled === "boolean") {
-          enabled = linking.enabled;
+          let enabled = linking.enabled;
         } else {
           let screens;
           if (memo != null) {
@@ -85,8 +81,10 @@ export const createStaticNavigation = function createStaticNavigation(getCompone
           }
           enabled = null != screens;
         }
-        const obj = { enabled, config: memo };
+        const obj = {};
         const merged = Object.assign(linking);
+        obj.enabled = enabled;
+        obj.config = memo;
         return obj;
       }
     }, items1);
@@ -100,14 +98,15 @@ export const createStaticNavigation = function createStaticNavigation(getCompone
       }
       if (null == screens) {
         const _Error = Error;
-        const self = this;
-        const self2 = this;
         const error = new Error("Linking is enabled but no linking configuration was found for the screens.\n\nTo solve this:\n- Specify a 'linking' property for the screens you want to link to.\n- Or set 'linking.enabled' to 'auto' to generate paths automatically.\n\nSee usage guide: https://reactnavigation.org/docs/static-configuration#linking");
         throw error;
       }
     }
-    const NavigationContainer = getComponent(closure_1[3]).NavigationContainer;
+    let obj2 = {};
     const merged1 = Object.assign(merged);
-    return <NavigationContainer ref={ref} linking={memo1}><memo /></NavigationContainer>;
+    obj2.ref = ref;
+    obj2.linking = memo1;
+    obj2.children = <memo />;
+    return jsx(getComponent(closure_1[3]).NavigationContainer, {});
   });
 };

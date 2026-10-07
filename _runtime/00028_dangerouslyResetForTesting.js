@@ -1,30 +1,30 @@
 // === Module 28: dangerouslyResetForTesting ===
 
 // Module 28 (dangerouslyResetForTesting)
-let React2, closure_2;
+import NativeReactNativeFeatureFlagsCxxDefault from "NativeReactNativeFeatureFlagsCxx" /* 29 */;
 
+importDefault = arg2;
+const dependencyMap = arg6;
 const set = new Set();
-new Set();
-let tmp4 = true === global.RN$Bridgeless;
+const set1 = new Set();
+let tmp4 = true === RN$Bridgeless.RN$Bridgeless;
 if (!tmp4) {
-  const tmp5 = null;
-  tmp4 = null != global.__turboModuleProxy;
+  tmp4 = null != RN$Bridgeless.__turboModuleProxy;
 }
 let closure_5 = tmp4;
 
 export function createJavaScriptFlagGetter(animatedShouldDebounceQueueFlush, arg1) {
-  let closure_0 = animatedShouldDebounceQueueFlush;
   const f80038 = () => {
     set.add(f80038);
     let tmp5Result;
-    if (closure_2_2 != null) {
-      if (closure_2_2[f80038] != null) {
+    if (global != null) {
+      if (global[f80038] != null) {
         tmp5Result = tmp5();
       }
     }
     return tmp5Result;
   };
-  let closure_1 = arg1;
+  closure_1 = arg1;
   return () => {
     if (null == closure_2) {
       let tmp2 = f80039();
@@ -37,16 +37,21 @@ export function createJavaScriptFlagGetter(animatedShouldDebounceQueueFlush, arg
   };
 }
 export function createNativeFlagGetter(cdpInteractionMetricsEnabled, arg1) {
-  let closure_0 = cdpInteractionMetricsEnabled;
   const f80039 = () => {
-    const hasItem = cdpInteractionMetricsEnabled(dependencyMap[0]) || set.has(f80039) || !closure_2_5;
+    let hasItem = NativeReactNativeFeatureFlagsCxxDefault;
     if (!hasItem) {
-      set.add(f80039);
+      hasItem = set1.has(f80039);
+    }
+    if (!hasItem) {
+      hasItem = !closure_5;
+    }
+    if (!hasItem) {
+      set1.add(f80039);
       const _console = console;
       const _HermesInternal = HermesInternal;
       console.error("Could not access feature flag '" + f80039 + "' because native module method was not available");
     }
-    const tmp2Result = cdpInteractionMetricsEnabled(dependencyMap[0]);
+    const tmp2Result = NativeReactNativeFeatureFlagsCxxDefault;
     let tmp13Result;
     if (tmp2Result != null) {
       if (tmp2Result[f80039] != null) {
@@ -55,7 +60,7 @@ export function createNativeFlagGetter(cdpInteractionMetricsEnabled, arg1) {
     }
     return tmp13Result;
   };
-  let closure_1 = arg1;
+  closure_1 = arg1;
   return () => {
     if (null == closure_2) {
       let tmp2 = f80039();
@@ -68,26 +73,21 @@ export function createNativeFlagGetter(cdpInteractionMetricsEnabled, arg1) {
   };
 }
 export function getOverrides() {
-  return React2;
+  return global;
 }
 export const setOverrides = function setOverrides(arg0) {
-  if (null != React2) {
+  if (null != global) {
     const _Error2 = Error;
-    const self3 = this;
-    const self4 = this;
     const error = new Error("Feature flags cannot be overridden more than once");
     throw error;
   } else if (set.size > 0) {
     const _Array = Array;
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const self = this;
-    const self2 = this;
-    const arr = Array.from(tmp);
-    const error1 = new Error("Feature flags were accessed before being overridden: " + arr.join(", "));
+    const error1 = new Error("Feature flags were accessed before being overridden: " + Array.from(tmp).join(", "));
     throw error1;
   } else {
-    React2 = arg0;
+    global = arg0;
   }
 };
 export function dangerouslyResetForTesting() {

@@ -1,29 +1,28 @@
 // === Module 6279: ? ===
 
 // Module 6279
-import react2 from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import TOUCHABLE_STATEDefault from "TOUCHABLE_STATE" /* 6280 */;
+import _modDef6280 from "module_6280" /* 6280 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import metroRequire from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import react_native from "react-native" /* 17 */;
+import noop from "module_19" /* 19 */;
 
-const react = react2;
-
-let c10;
-let c9;
+const TouchableHighlight = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -32,31 +31,34 @@ function _isNativeReflectConstruct() {
   }
 }
 let closure_3 = ["style"];
-const Component = react2.Component;
-({ StyleSheet: c9, View: c10 } = react_native);
-const jsx = Fragment.jsx;
+get_ActivityIndicator = fn(17);
+({ StyleSheet: closure_9, View: c10 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
 class TouchableHighlight {
   constructor(arg0) {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, TouchableHighlight);
-    const items = [arg0];
-    const obj = _getPrototypeOf(TouchableHighlight);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+    self = this;
+    tmp = hasOwnProperty(this, TouchableHighlight);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_7;
+    obj = closure_7(TouchableHighlight);
+    tmp3 = metroRequire;
+    if (closure_12()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    const tmp3Result = metroRequire(self, constructResult);
-    let closure_0 = tmp3Result;
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
     tmp3Result.showUnderlay = () => {
-      let obj3;
-      let obj4;
       if (closure_0.hasPressHandler()) {
-        const obj2 = { extraChildStyle: obj3, extraUnderlayStyle: obj4 };
-        obj3 = { opacity: closure_0.props.activeOpacity };
-        obj4 = { backgroundColor: closure_0.props.underlayColor };
+        const obj2 = { extraChildStyle: null, extraUnderlayStyle: null };
+        const obj3 = { opacity: closure_0.props.activeOpacity };
+        obj2.extraChildStyle = obj3;
+        const obj4 = { backgroundColor: closure_0.props.underlayColor };
+        obj2.extraUnderlayStyle = obj4;
         closure_0.setState(obj2);
         const props = closure_0.props;
         const onShowUnderlay = props.onShowUnderlay;
@@ -75,32 +77,31 @@ class TouchableHighlight {
       }
     };
     tmp3Result.onStateChange = (arg0, arg1) => {
-      if (arg1 === TouchableHighlight(closure_2_2[9]).TOUCHABLE_STATE.BEGAN) {
+      if (arg1 === TouchableHighlight(6280).TOUCHABLE_STATE.BEGAN) {
         closure_0.showUnderlay();
       } else {
-        const tmp3 = arg1 !== TouchableHighlight(closure_2_2[9]).TOUCHABLE_STATE.UNDETERMINED && arg1 !== TouchableHighlight(closure_2_2[9]).TOUCHABLE_STATE.MOVED_OUTSIDE;
         if (!tmp3) {
           closure_0.hideUnderlay();
         }
+        tmp3 = arg1 !== TouchableHighlight(6280).TOUCHABLE_STATE.UNDETERMINED && arg1 !== TouchableHighlight(6280).TOUCHABLE_STATE.MOVED_OUTSIDE;
       }
     };
     tmp3Result.state = { extraChildStyle: null, extraUnderlayStyle: null };
     return tmp3Result;
   }
 }
-_inherits(TouchableHighlight, Component);
+_inherits(TouchableHighlight, fn(19).Component);
 const entry = {
   key: "renderChildren",
   value: function renderChildren() {
     const self = this;
     if (this.props.children) {
-      const Children = react.Children;
+      const Children = noop.Children;
       const onlyResult = Children.only(self.props.children);
-      const cloneElement = react.cloneElement;
-      const obj = { style: React4.compose(onlyResult.props.style, self.state.extraChildStyle) };
-      return cloneElement(onlyResult, obj);
+      const obj = { style: options.compose(onlyResult.props.style, self.state.extraChildStyle) };
+      return noop.cloneElement(onlyResult, obj);
     } else {
-      return <authStore />;
+      return <v65535 />;
     }
   }
 };
@@ -115,18 +116,23 @@ let items = [
       if (undefined === style) {
         style = {};
       }
-      const extraUnderlayStyle = self.state.extraUnderlayStyle;
+      const obj = {};
       const tmp = _objectWithoutProperties(props, closure_3);
-      TOUCHABLE_STATEDefault;
       const merged = Object.assign(tmp);
-      const items = [style, extraUnderlayStyle];
-      return <tmp2 style={items} onStateChange={self.onStateChange}>{self.renderChildren()}</tmp2>;
+      const items = [style, self.state.extraUnderlayStyle];
+      obj.style = items;
+      obj.onStateChange = self.onStateChange;
+      obj.children = self.renderChildren();
+      return jsx(_modDef6280, {});
     }
   }
 ];
 const importDefaultResultResult = _createClass(TouchableHighlight, items);
-let obj = { activeOpacity: 0.85, delayPressOut: 100, underlayColor: "black" };
-let merged = Object.assign(TOUCHABLE_STATEDefault.defaultProps);
+let obj = {};
+let merged = Object.assign(_modDef6280.defaultProps);
+obj.activeOpacity = 0.85;
+obj.delayPressOut = 100;
+obj.underlayColor = "black";
 importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

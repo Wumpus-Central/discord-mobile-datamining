@@ -1,0 +1,286 @@
+// === Module 756: _INTERNAL_captureSerializedLog ===
+
+// Module 756 (_INTERNAL_captureSerializedLog)
+import _mod699 from "module_699" /* 699 */;
+import consoleSandbox from "consoleSandbox" /* 700 */;
+import _mod701 from "module_701" /* 701 */;
+import _mod703 from "module_703" /* 703 */;
+import dateTimestampInSeconds from "dateTimestampInSeconds" /* 714 */;
+import _getSpanForScope from "_getSpanForScope" /* 720 */;
+import _mod724 from "module_724" /* 724 */;
+import mergeScopeData from "mergeScopeData" /* 747 */;
+import _getTraceInfoFromScope from "_getTraceInfoFromScope" /* 757 */;
+import SEVERITY_TEXT_TO_SEVERITY_NUMBER from "SEVERITY_TEXT_TO_SEVERITY_NUMBER" /* 758 */;
+import _mod759 from "module_759" /* 759 */;
+import _mod760 from "module_760" /* 760 */;
+import _slicedToArray from "module_32" /* 32 */;
+
+function _INTERNAL_captureSerializedLog(getOptions, arg1) {
+  const globalSingleton = _mod701.getGlobalSingleton("clientToLogBufferMap", () => {
+    const weakMap = new WeakMap();
+    return weakMap;
+  });
+  const globalSingleton1 = _mod701.getGlobalSingleton("clientToLogBufferMap", () => {
+    const weakMap = new WeakMap();
+    return weakMap;
+  });
+  value = globalSingleton1.get(getOptions);
+  if (undefined === value) {
+    const items = [arg1];
+    const result = globalSingleton.set(getOptions, items);
+  } else if (value.length >= 100) {
+    _INTERNAL_flushLogsBuffer(getOptions, value);
+    const items1 = [arg1];
+    const result1 = globalSingleton.set(getOptions, items1);
+  } else {
+    const items2 = [];
+    items2[HermesBuiltin.arraySpread(value, 0)] = arg1;
+    const result2 = globalSingleton.set(getOptions, items2);
+  }
+}
+function _INTERNAL_flushLogsBuffer(getOptions, value) {
+  let items = value;
+  if (value == null) {
+    const globalSingleton = _mod701.getGlobalSingleton("clientToLogBufferMap", () => {
+      const weakMap = new WeakMap();
+      return weakMap;
+    });
+    items = globalSingleton.get(getOptions);
+  }
+  if (items == null) {
+    items = [];
+  }
+  if (0 !== items.length) {
+    options = getOptions.getOptions();
+    const obj3 = _mod760;
+    ({ _metadata, tunnel } = options);
+    const logEnvelope = obj3.createLogEnvelope(items, _metadata, tunnel, getOptions.getDsn());
+    const globalSingleton1 = _mod701.getGlobalSingleton("clientToLogBufferMap", () => {
+      const weakMap = new WeakMap();
+      return weakMap;
+    });
+    const result = globalSingleton1.set(getOptions, []);
+    getOptions.emit("flushLogs");
+    getOptions.sendEnvelope(logEnvelope);
+  }
+}
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+
+export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes) {
+  let currentScope = scope;
+  if (scope === undefined) {
+    currentScope = _mod724.getCurrentScope();
+  }
+  let tmp3 = arg2;
+  if (arg2 === undefined) {
+    tmp3 = _INTERNAL_captureSerializedLog;
+  }
+  let beforeSendLog;
+  attributes = undefined;
+  let obj4;
+  let client;
+  if (currentScope != null) {
+    client = currentScope.getClient();
+  }
+  if (client == null) {
+    client = _mod724.getClient();
+  }
+  if (client) {
+    options = client.getOptions();
+    ({ release, environment, enableLogs } = options);
+    beforeSendLog = options.beforeSendLog;
+    if (tmp11) {
+      const tmp17 = _slicedToArray(_getTraceInfoFromScope._getTraceInfoFromScope(client, currentScope), 2)[1];
+      attributes = {};
+      const merged = Object.assign(attributes.attributes);
+      const tmp12Result = _getTraceInfoFromScope;
+      const tmp12Result9 = mergeScopeData;
+      const combinedScopeData = tmp12Result9.getCombinedScopeData(_mod724.getIsolationScope(), currentScope);
+      ({ id, email, username } = combinedScopeData.user);
+      let attributes1 = combinedScopeData.attributes;
+      if (undefined === attributes1) {
+        attributes1 = {};
+      }
+      let tmp21 = !id;
+      if (id) {
+        tmp21 = attributes["user.id"] && true;
+        const tmp22 = attributes["user.id"] && true;
+      }
+      if (!tmp21) {
+        attributes["user.id"] = id;
+      }
+      let tmp23 = !email;
+      if (email) {
+        tmp23 = attributes["user.email"] && true;
+        const tmp24 = attributes["user.email"] && true;
+      }
+      if (!tmp23) {
+        attributes["user.email"] = email;
+      }
+      let tmp25 = !username;
+      if (username) {
+        tmp25 = attributes["user.name"] && true;
+        const tmp26 = attributes["user.name"] && true;
+      }
+      if (!tmp25) {
+        attributes["user.name"] = username;
+      }
+      let tmp27 = !release;
+      if (release) {
+        tmp27 = attributes["sentry.release"] && false;
+        const tmp28 = attributes["sentry.release"] && false;
+      }
+      if (!tmp27) {
+        attributes["sentry.release"] = release;
+      }
+      let tmp29 = !environment;
+      if (environment) {
+        tmp29 = attributes["sentry.environment"] && false;
+        const tmp30 = attributes["sentry.environment"] && false;
+      }
+      if (!tmp29) {
+        attributes["sentry.environment"] = environment;
+      }
+      const sdkMetadata = client.getSdkMetadata();
+      let sdk;
+      if (sdkMetadata != null) {
+        sdk = sdkMetadata.sdk;
+      }
+      if (sdk == null) {
+        sdk = {};
+      }
+      ({ name, version } = sdk);
+      let tmp32 = !name;
+      if (name) {
+        tmp32 = attributes["sentry.sdk.name"] && false;
+        const tmp33 = attributes["sentry.sdk.name"] && false;
+      }
+      if (!tmp32) {
+        attributes["sentry.sdk.name"] = name;
+      }
+      let tmp34 = !version;
+      if (version) {
+        tmp34 = attributes["sentry.sdk.version"] && false;
+        const tmp35 = attributes["sentry.sdk.version"] && false;
+      }
+      if (!tmp34) {
+        attributes["sentry.sdk.version"] = version;
+      }
+      const integrationByName = client.getIntegrationByName("Replay");
+      let replayId;
+      if (integrationByName != null) {
+        replayId = integrationByName.getReplayId(true);
+      }
+      let tmp37 = !replayId;
+      if (replayId) {
+        tmp37 = attributes["sentry.replay_id"] && false;
+        const tmp38 = attributes["sentry.replay_id"] && false;
+      }
+      if (!tmp37) {
+        attributes["sentry.replay_id"] = replayId;
+      }
+      if (replayId) {
+        let recordingMode;
+        if (integrationByName != null) {
+          recordingMode = integrationByName.getRecordingMode();
+        }
+        replayId = "buffer" === recordingMode;
+      }
+      if (replayId) {
+        if (!tmp40) {
+          attributes["sentry._internal.replay_is_buffering"] = true;
+        }
+        tmp40 = attributes["sentry._internal.replay_is_buffering"] && false;
+      }
+      const message = attributes.message;
+      const tmp12Result10 = _mod724;
+      if (tmp12Result11.isParameterizedString(message)) {
+        ({ __sentry_template_values__, __sentry_template_string__ } = message);
+        if (undefined === __sentry_template_values__) {
+          __sentry_template_values__ = [];
+        }
+        let length;
+        if (__sentry_template_values__ != null) {
+          length = __sentry_template_values__.length;
+        }
+        if (length) {
+          attributes["sentry.message.template"] = __sentry_template_string__;
+        }
+        const item = __sentry_template_values__.forEach((item, index) => {
+          obj["sentry.message.parameter." + index] = item;
+        });
+      }
+      tmp12Result11 = _mod703;
+      const _getSpanForScopeResult = _getSpanForScope._getSpanForScope(currentScope);
+      let spanId;
+      if (_getSpanForScopeResult != null) {
+        spanId = _getSpanForScopeResult.spanContext().spanId;
+      }
+      let tmp44 = !spanId;
+      if (spanId) {
+        tmp44 = attributes["sentry.trace.parent_span_id"] && false;
+        const tmp45 = attributes["sentry.trace.parent_span_id"] && false;
+      }
+      if (!tmp44) {
+        attributes["sentry.trace.parent_span_id"] = spanId;
+      }
+      obj4 = {};
+      const merged1 = Object.assign(attributes);
+      obj4.attributes = attributes;
+      client.emit("beforeCaptureLog", obj4);
+      if (beforeSendLog) {
+        obj4 = consoleSandbox.consoleSandbox(() => beforeSendLog(obj4));
+        const tmp12Result13 = consoleSandbox;
+      }
+      if (obj4) {
+        ({ level, attributes, message: message2 } = obj4);
+        if (undefined === attributes) {
+          attributes = {};
+        }
+        let severityNumber = obj4.severityNumber;
+        const obj5 = { timestamp: dateTimestampInSeconds.timestampInSeconds(), level, body: message2, trace_id: null, severity_number: null, attributes: null };
+        let trace_id;
+        if (tmp17 != null) {
+          trace_id = tmp17.trace_id;
+        }
+        obj5.trace_id = trace_id;
+        if (severityNumber == null) {
+          severityNumber = SEVERITY_TEXT_TO_SEVERITY_NUMBER.SEVERITY_TEXT_TO_SEVERITY_NUMBER[level];
+        }
+        obj5.severity_number = severityNumber;
+        const obj6 = {};
+        const tmp12Result14 = dateTimestampInSeconds;
+        const merged2 = Object.assign(_mod759.serializeAttributes(attributes1));
+        const tmp12Result15 = _mod759;
+        const merged3 = Object.assign(_mod759.serializeAttributes(attributes, true));
+        obj5.attributes = obj6;
+        tmp3(client, obj5);
+        client.emit("afterCaptureLog", obj4);
+        const tmp12Result16 = _mod759;
+      } else {
+        client.recordDroppedEvent("before_send", "log_item", 1);
+        if (_mod699.DEBUG_BUILD) {
+          const debug3 = consoleSandbox.debug;
+          debug3.warn("beforeSendLog returned null, log will not be captured.");
+        }
+      }
+      const tmp12Result12 = _getSpanForScope;
+    } else if (_mod699.DEBUG_BUILD) {
+      const debug2 = consoleSandbox.debug;
+      debug2.warn("logging option not enabled, log will not be captured.");
+    }
+    tmp11 = undefined !== enableLogs && enableLogs;
+  } else if (_mod699.DEBUG_BUILD) {
+    const debug = consoleSandbox.debug;
+    debug.warn("No client available to capture log.");
+  }
+};
+export { _INTERNAL_captureSerializedLog };
+export { _INTERNAL_flushLogsBuffer };
+export const _INTERNAL_getLogBuffer = function _INTERNAL_getLogBuffer(arg0) {
+  const globalSingleton = _mod701.getGlobalSingleton("clientToLogBufferMap", () => {
+    const weakMap = new WeakMap();
+    return weakMap;
+  });
+  return globalSingleton.get(arg0);
+};

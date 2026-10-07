@@ -1,9 +1,9 @@
 // === Module 1449: ? ===
 
 // Module 1449
-import isArguments from "isArguments" /* 1450 */;
-import isGeneratorFunction from "isGeneratorFunction" /* 1452 */;
-import isTypedArray from "isTypedArray" /* 1455 */;
+import _mod1450 from "module_1450" /* 1450 */;
+import _mod1452 from "module_1452" /* 1452 */;
+import _mod1455 from "module_1455" /* 1455 */;
 import _mod1456 from "module_1456" /* 1456 */;
 
 function checkBoxedPrimitive(obj, fn) {
@@ -18,55 +18,48 @@ function checkBoxedPrimitive(obj, fn) {
     }
   }
 }
-function isMapToString(View) {
-  return "[object Map]" === hasOwnProperty(View);
+function isMapToString(arg0) {
+  return "[object Map]" === bindResult(arg0);
 }
-function isSetToString(View) {
-  return "[object Set]" === hasOwnProperty(View);
+function isSetToString(arg0) {
+  return "[object Set]" === bindResult(arg0);
 }
-function isWeakMapToString(View) {
-  return "[object WeakMap]" === hasOwnProperty(View);
+function isWeakMapToString(arg0) {
+  return "[object WeakMap]" === bindResult(arg0);
 }
-function isArrayBufferToString(View) {
-  return "[object ArrayBuffer]" === hasOwnProperty(View);
+function isArrayBufferToString(arg0) {
+  return "[object ArrayBuffer]" === bindResult(arg0);
 }
-function isDataViewToString(View) {
-  return "[object DataView]" === hasOwnProperty(View);
+function isDataViewToString(arg0) {
+  return "[object DataView]" === bindResult(arg0);
 }
-function isSharedArrayBufferToString(View) {
-  return "[object SharedArrayBuffer]" === hasOwnProperty(View);
+function isSharedArrayBufferToString(arg0) {
+  return "[object SharedArrayBuffer]" === bindResult(arg0);
 }
 let closure_3 = typeof BigInt !== "undefined";
 let closure_4 = typeof Symbol !== "undefined";
 const call = toString.call;
-const _Symbol = Symbol;
 const bindResult = call.bind(toString);
 const hasOwnProperty = bindResult;
 const call2 = valueOf.call;
 let closure_6 = call2.bind(valueOf);
-const valueOf2 = String.prototype.valueOf;
 const call3 = valueOf2.call;
 let closure_7 = call3.bind(valueOf2);
-const valueOf3 = Boolean.prototype.valueOf;
 const call4 = valueOf3.call;
 let closure_8 = call4.bind(valueOf3);
 if (typeof BigInt !== "undefined") {
   const _BigInt = BigInt;
-  const valueOf4 = BigInt.prototype.valueOf;
   const call5 = valueOf4.call;
   let closure_9 = call5.bind(valueOf4);
 }
-if (typeof _Symbol !== "undefined") {
-  const _Symbol2 = Symbol;
-  const valueOf5 = Symbol.prototype.valueOf;
+if (typeof Symbol !== "undefined") {
+  const _Symbol = Symbol;
   const call6 = valueOf5.call;
   let closure_10 = call6.bind(valueOf5);
 }
 let tmp2 = typeof Map !== "undefined";
 if (typeof Map !== "undefined") {
   let _Map = Map;
-  const self5 = this;
-  const self6 = this;
   const map = new Map();
   tmp2 = "[object Map]" === bindResult(map);
 }
@@ -74,8 +67,6 @@ isMapToString.working = tmp2;
 let tmp3 = typeof Set !== "undefined";
 if (typeof Set !== "undefined") {
   let _Set = Set;
-  const self7 = this;
-  const self8 = this;
   const set = new Set();
   tmp3 = "[object Set]" === bindResult(set);
 }
@@ -83,8 +74,6 @@ isSetToString.working = tmp3;
 let tmp4 = typeof WeakMap !== "undefined";
 if (typeof WeakMap !== "undefined") {
   let _WeakMap = WeakMap;
-  const self9 = this;
-  const self10 = this;
   const weakMap = new WeakMap();
   tmp4 = "[object WeakMap]" === bindResult(weakMap);
 }
@@ -92,19 +81,15 @@ isWeakMapToString.working = tmp4;
 let tmp5 = typeof WeakSet !== "undefined";
 if (typeof WeakSet !== "undefined") {
   const _WeakSet = WeakSet;
-  const self11 = this;
-  const self12 = this;
   const weakSet = new WeakSet();
   tmp5 = "[object WeakSet]" === bindResult(weakSet);
 }
-(function isWeakSetToString(View) {
-  return "[object WeakSet]" === hasOwnProperty(View);
-}.working) = tmp5;
+function isWeakSetToString(arg0) {
+  return "[object WeakSet]" === bindResult(arg0);
+}.working = tmp5;
 let tmp6 = typeof ArrayBuffer !== "undefined";
 if (typeof ArrayBuffer !== "undefined") {
   let _ArrayBuffer2 = ArrayBuffer;
-  const self13 = this;
-  const self14 = this;
   const arrayBuffer = new ArrayBuffer();
   tmp6 = "[object ArrayBuffer]" === bindResult(arrayBuffer);
 }
@@ -117,13 +102,8 @@ if (typeof ArrayBuffer !== "undefined") {
 if (tmp7) {
   let _DataView = DataView;
   let _ArrayBuffer = ArrayBuffer;
-  let self = this;
-  let self2 = this;
   const arrayBuffer2 = new ArrayBuffer(1);
-  const self3 = this;
-  const self4 = this;
   const dataView = new DataView(arrayBuffer2, 0, 1);
-  let tmp11 = dataView;
   tmp7 = "[object DataView]" === bindResult(dataView);
 }
 isDataViewToString.working = tmp7;
@@ -133,20 +113,19 @@ if (typeof SharedArrayBuffer !== "undefined") {
 }
 const items = ["isProxy", "isExternal", "isModuleNamespaceObject"];
 const item = items.forEach((item) => {
-  let closure_0 = item;
-  const obj = {
+  closure_0 = item;
+  Object.defineProperty(exports, item, {
     enumerable: false,
     value() {
       const error = new Error(closure_0 + " is not supported in userland");
       throw error;
     }
-  };
-  Object.defineProperty(exports, item, obj);
+  });
 });
 
-export const isArgumentsObject = isArguments;
-export { isGeneratorFunction };
-export { isTypedArray };
+export const isArgumentsObject = _mod1450;
+export const isGeneratorFunction = _mod1452;
+export const isTypedArray = _mod1455;
 export const isPromise = function isPromise(obj) {
   let tmp = typeof Promise !== "undefined";
   if (typeof Promise !== "undefined") {
@@ -154,34 +133,30 @@ export const isPromise = function isPromise(obj) {
   }
   if (!tmp) {
     tmp = null !== obj && typeof obj === "object" && typeof obj.then === "function" && typeof obj.catch === "function";
+    const tmp3 = null !== obj && typeof obj === "object" && typeof obj.then === "function" && typeof obj.catch === "function";
   }
   return tmp;
 };
-export const isArrayBufferView = function isArrayBufferView(View) {
-  let isViewResult;
+export const isArrayBufferView = function isArrayBufferView(arg0) {
   if (typeof ArrayBuffer !== "undefined") {
     const _ArrayBuffer2 = ArrayBuffer;
     if (ArrayBuffer.isView) {
       const _ArrayBuffer = ArrayBuffer;
-      isViewResult = ArrayBuffer.isView(View);
+      let isViewResult = ArrayBuffer.isView(arg0);
     }
     return isViewResult;
   }
-  isViewResult = isTypedArray(View);
+  isViewResult = _mod1455(arg0);
   if (!isViewResult) {
     const _DataView = DataView;
-    let tmp2 = typeof DataView !== "undefined";
-    if (typeof DataView !== "undefined") {
-      let tmp3;
-      if (isDataViewToString.working) {
-        tmp3 = "[object DataView]" === hasOwnProperty(View);
-      } else {
-        const _DataView2 = DataView;
-        tmp3 = View instanceof DataView;
-      }
-      tmp2 = tmp3;
+    if (typeof DataView === "undefined") {
+      isViewResult = typeof DataView !== "undefined";
+    } else if (isDataViewToString.working) {
+      let tmp2 = "[object DataView]" === bindResult(arg0);
+    } else {
+      const _DataView2 = DataView;
+      tmp2 = arg0 instanceof DataView;
     }
-    isViewResult = tmp2;
   }
 };
 export const isUint8Array = function isUint8Array(arg0) {
@@ -217,112 +192,110 @@ export const isBigInt64Array = function isBigInt64Array(arg0) {
 export const isBigUint64Array = function isBigUint64Array(arg0) {
   return "BigUint64Array" === _mod1456(arg0);
 };
-export const isMap = function isMap(View) {
-  let tmp = typeof Map !== "undefined";
-  if (typeof Map !== "undefined") {
-    let tmp2;
+export const isMap = function isMap(arg0) {
+  if (typeof Map === "undefined") {
+    return typeof Map !== "undefined";
+  } else {
+    let tmp3 = arg0;
     if (isMapToString.working) {
-      tmp2 = "[object Map]" === hasOwnProperty(View);
+      tmp3 = bindResult(tmp3);
+      let tmp = "[object Map]" === tmp3;
     } else {
       const _Map = Map;
-      tmp2 = View instanceof Map;
+      tmp = tmp3 instanceof Map;
     }
-    tmp = tmp2;
   }
-  return tmp;
 };
-export const isSet = function isSet(View) {
-  let tmp = typeof Set !== "undefined";
-  if (typeof Set !== "undefined") {
-    let tmp2;
+export const isSet = function isSet(arg0) {
+  if (typeof Set === "undefined") {
+    return typeof Set !== "undefined";
+  } else {
+    let tmp3 = arg0;
     if (isSetToString.working) {
-      tmp2 = "[object Set]" === hasOwnProperty(View);
+      tmp3 = bindResult(tmp3);
+      let tmp = "[object Set]" === tmp3;
     } else {
       const _Set = Set;
-      tmp2 = View instanceof Set;
+      tmp = tmp3 instanceof Set;
     }
-    tmp = tmp2;
   }
-  return tmp;
 };
-export const isWeakMap = function isWeakMap(View) {
-  let tmp = typeof WeakMap !== "undefined";
-  if (typeof WeakMap !== "undefined") {
-    let tmp2;
+export const isWeakMap = function isWeakMap(arg0) {
+  if (typeof WeakMap === "undefined") {
+    return typeof WeakMap !== "undefined";
+  } else {
+    let tmp3 = arg0;
     if (isWeakMapToString.working) {
-      tmp2 = "[object WeakMap]" === hasOwnProperty(View);
+      tmp3 = bindResult(tmp3);
+      let tmp = "[object WeakMap]" === tmp3;
     } else {
       const _WeakMap = WeakMap;
-      tmp2 = View instanceof WeakMap;
+      tmp = tmp3 instanceof WeakMap;
     }
-    tmp = tmp2;
   }
-  return tmp;
 };
-export const isWeakSet = function isWeakSet(View) {
-  return "[object WeakSet]" === hasOwnProperty(View);
+export const isWeakSet = function isWeakSet(arg0) {
+  return "[object WeakSet]" === bindResult(arg0);
 };
-export const isArrayBuffer = function isArrayBuffer(View) {
-  let tmp = typeof ArrayBuffer !== "undefined";
-  if (typeof ArrayBuffer !== "undefined") {
-    let tmp2;
+export const isArrayBuffer = function isArrayBuffer(arg0) {
+  if (typeof ArrayBuffer === "undefined") {
+    return typeof ArrayBuffer !== "undefined";
+  } else {
+    let tmp3 = arg0;
     if (isArrayBufferToString.working) {
-      tmp2 = "[object ArrayBuffer]" === hasOwnProperty(View);
+      tmp3 = bindResult(tmp3);
+      let tmp = "[object ArrayBuffer]" === tmp3;
     } else {
       const _ArrayBuffer = ArrayBuffer;
-      tmp2 = View instanceof ArrayBuffer;
+      tmp = tmp3 instanceof ArrayBuffer;
     }
-    tmp = tmp2;
   }
-  return tmp;
 };
-export const isDataView = function isDataView(View) {
-  let tmp = typeof DataView !== "undefined";
-  if (typeof DataView !== "undefined") {
-    let tmp2;
+export const isDataView = function isDataView(arg0) {
+  if (typeof DataView === "undefined") {
+    return typeof DataView !== "undefined";
+  } else {
+    let tmp3 = arg0;
     if (isDataViewToString.working) {
-      tmp2 = "[object DataView]" === hasOwnProperty(View);
+      tmp3 = bindResult(tmp3);
+      let tmp = "[object DataView]" === tmp3;
     } else {
       const _DataView = DataView;
-      tmp2 = View instanceof DataView;
+      tmp = tmp3 instanceof DataView;
     }
-    tmp = tmp2;
   }
-  return tmp;
 };
-export const isSharedArrayBuffer = function isSharedArrayBuffer(View) {
-  let tmp2 = undefined !== _SharedArrayBuffer;
-  if (tmp2) {
-    let tmp8;
+export const isSharedArrayBuffer = function isSharedArrayBuffer(arg0) {
+  if (undefined === _SharedArrayBuffer) {
+    return tmp2;
+  } else {
     if (undefined === isSharedArrayBufferToString.working) {
-      const self = this;
-      const self2 = this;
-      const tmp4 = new _SharedArrayBuffer();
-      isSharedArrayBufferToString.working = "[object SharedArrayBuffer]" === hasOwnProperty(tmp4);
+      const tmp6 = new _SharedArrayBuffer();
+      isSharedArrayBufferToString.working = "[object SharedArrayBuffer]" === bindResult(tmp6);
     }
+    let tmp9 = arg0;
     if (isSharedArrayBufferToString.working) {
-      tmp8 = "[object SharedArrayBuffer]" === hasOwnProperty(View);
+      tmp9 = bindResult(tmp9);
+      let tmp10 = "[object SharedArrayBuffer]" === tmp9;
     } else {
-      tmp8 = View instanceof _SharedArrayBuffer;
+      tmp10 = tmp9 instanceof _SharedArrayBuffer;
     }
-    tmp2 = tmp8;
   }
-  return tmp2;
 };
-export const isAsyncFunction = function isAsyncFunction(View) {
-  return "[object AsyncFunction]" === hasOwnProperty(View);
+export const isAsyncFunction = function isAsyncFunction(arg0) {
+  return "[object AsyncFunction]" === bindResult(arg0);
 };
-export const isMapIterator = function isMapIterator(View) {
-  return "[object Map Iterator]" === hasOwnProperty(View);
+export const isMapIterator = function isMapIterator(arg0) {
+  return "[object Map Iterator]" === bindResult(arg0);
 };
-export const isSetIterator = function isSetIterator(View) {
-  return "[object Set Iterator]" === hasOwnProperty(View);
+export const isSetIterator = function isSetIterator(arg0) {
+  return "[object Set Iterator]" === bindResult(arg0);
 };
-export const isGeneratorObject = function isGeneratorObject(View) {
-  return "[object Generator]" === hasOwnProperty(View);
+export const isGeneratorObject = function isGeneratorObject(arg0) {
+  return "[object Generator]" === bindResult(arg0);
 };
-export const isWebAssemblyCompiledModule = function isWebAssemblyCompiledModule(View) {
-  return "[object WebAssembly.Module]" === hasOwnProperty(View);
+export const isWebAssemblyCompiledModule = function isWebAssemblyCompiledModule(arg0) {
+  return "[object WebAssembly.Module]" === bindResult(arg0);
 };
 export const isNumberObject = function isNumberObject(arg0) {
   return checkBoxedPrimitive(arg0, closure_6);
@@ -334,60 +307,73 @@ export const isBooleanObject = function isBooleanObject(arg0) {
   return checkBoxedPrimitive(arg0, closure_8);
 };
 export const isBigIntObject = function isBigIntObject(arg0) {
-  const tmp = closure_3 && checkBoxedPrimitive(arg0, closure_9);
+  let tmp = closure_3;
+  if (closure_3) {
+    tmp = checkBoxedPrimitive(arg0, closure_9);
+  }
   return tmp;
 };
 export const isSymbolObject = function isSymbolObject(arg0) {
-  const tmp = closure_4 && checkBoxedPrimitive(arg0, closure_10);
+  let tmp = closure_4;
+  if (closure_4) {
+    tmp = checkBoxedPrimitive(arg0, closure_10);
+  }
   return tmp;
 };
 export const isBoxedPrimitive = function isBoxedPrimitive(arg0) {
-  let tmpResult = checkBoxedPrimitive(arg0, closure_6) || checkBoxedPrimitive(arg0, closure_7) || checkBoxedPrimitive(arg0, closure_8);
+  let tmpResult = checkBoxedPrimitive(arg0, closure_6);
   if (!tmpResult) {
-    tmpResult = closure_3 && checkBoxedPrimitive(arg0, closure_9);
-    const tmpResult3 = closure_3 && checkBoxedPrimitive(arg0, closure_9);
+    tmpResult = checkBoxedPrimitive(arg0, closure_7);
   }
   if (!tmpResult) {
-    tmpResult = closure_4 && checkBoxedPrimitive(arg0, closure_10);
-    const tmpResult4 = closure_4 && checkBoxedPrimitive(arg0, closure_10);
+    tmpResult = checkBoxedPrimitive(arg0, closure_8);
+  }
+  if (!tmpResult) {
+    let tmpResult3 = closure_3;
+    if (closure_3) {
+      tmpResult3 = checkBoxedPrimitive(arg0, closure_9);
+    }
+    tmpResult = tmpResult3;
+  }
+  if (!tmpResult) {
+    let tmpResult4 = closure_4;
+    if (closure_4) {
+      tmpResult4 = checkBoxedPrimitive(arg0, closure_10);
+    }
+    tmpResult = tmpResult4;
   }
   return tmpResult;
 };
-export const isAnyArrayBuffer = function isAnyArrayBuffer(View) {
+export const isAnyArrayBuffer = function isAnyArrayBuffer(arg0) {
   let tmp = typeof Uint8Array !== "undefined";
   if (typeof Uint8Array !== "undefined") {
+    let tmp15 = arg0;
     const _ArrayBuffer2 = ArrayBuffer;
-    let tmp4 = typeof ArrayBuffer !== "undefined";
-    if (typeof ArrayBuffer !== "undefined") {
-      let tmp2;
-      if (isArrayBufferToString.working) {
-        tmp2 = "[object ArrayBuffer]" === hasOwnProperty(View);
-      } else {
-        const _ArrayBuffer = ArrayBuffer;
-        tmp2 = View instanceof ArrayBuffer;
-      }
-      tmp4 = tmp2;
-    }
-    if (!tmp4) {
-      let tmp6 = undefined !== _SharedArrayBuffer;
-      if (tmp6) {
-        let tmp11;
-        if (undefined === isSharedArrayBufferToString.working) {
-          const self = this;
-          const self2 = this;
-          const tmp52 = new _SharedArrayBuffer();
-          isSharedArrayBufferToString.working = "[object SharedArrayBuffer]" === hasOwnProperty(tmp52);
-        }
-        if (isSharedArrayBufferToString.working) {
-          tmp11 = "[object SharedArrayBuffer]" === hasOwnProperty(View);
+    let tmp17 = typeof ArrayBuffer !== "undefined";
+    if (typeof ArrayBuffer === "undefined") {
+      if (!tmp17) {
+        if (undefined === _SharedArrayBuffer) {
+          tmp17 = tmp6;
         } else {
-          tmp11 = View instanceof _SharedArrayBuffer;
+          if (undefined === isSharedArrayBufferToString.working) {
+            const tmp52 = new _SharedArrayBuffer();
+            isSharedArrayBufferToString.working = "[object SharedArrayBuffer]" === bindResult(tmp52);
+          }
+          if (isSharedArrayBufferToString.working) {
+            tmp15 = bindResult(tmp15);
+            let tmp13 = "[object SharedArrayBuffer]" === tmp15;
+          } else {
+            tmp13 = tmp15 instanceof _SharedArrayBuffer;
+          }
         }
-        tmp6 = tmp11;
       }
-      tmp4 = tmp6;
+      tmp = tmp17;
+    } else if (isArrayBufferToString.working) {
+      let tmp2 = "[object ArrayBuffer]" === bindResult(tmp15);
+    } else {
+      const _ArrayBuffer = ArrayBuffer;
+      tmp2 = tmp15 instanceof ArrayBuffer;
     }
-    tmp = tmp4;
   }
   return tmp;
 };

@@ -1,11 +1,10 @@
 // === Module 7989: WebViewTarget ===
 
 // Module 7989 (WebViewTarget)
-import react_native from "react-native" /* 17 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-let closure_1 = react_native.requireNativeComponent("RNCWebViewTarget");
+let closure_1 = fn(17).requireNativeComponent("RNCWebViewTarget");
 
-export default function WebViewTarget(is) {
-  return <closure_1 {...is} />;
+export default function WebViewTarget(merged) {
+  return <closure_1 {......merged} />;
 };

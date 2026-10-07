@@ -3,52 +3,52 @@
 // Module 7405
 import _modDef7373 from "module_7373" /* 7373 */;
 
-let obj = {
+importDefault = arg2;
+const dependencyMap = arg6;
+let c2 = 4;
+let c3 = 7;
+
+export default {
   read(getUint8, sum) {
-    let obj4;
-    let obj5;
-    let str2;
-    let sum5;
-    const obj = _modDef7373;
-    const byteAt = obj.getByteAt(getUint8, sum);
+    const byteAt = _modDef7373.getByteAt(getUint8, sum);
     let num = 0;
     if (16 & byteAt) {
       num = 1;
     }
+    const obj2 = { value: num, description: null };
     let str = "No";
-    const obj2 = { value: num, description: str2 };
-    str2 = "No";
+    let str2 = "No";
     if (16 & byteAt) {
       str2 = "Yes";
     }
+    const obj3 = { Alpha: obj2 };
+    obj2.description = str2;
     let num2 = 0;
-    const obj3 = { Alpha: obj2, Animation: obj4, ImageWidth: obj5, ImageHeight: { value: sum5, description: `${tmp13}px` } };
     if (2 & byteAt) {
       num2 = 1;
     }
-    obj4 = { value: num2, description: str };
+    const obj4 = { value: num2, description: null };
     if (2 & byteAt) {
       str = "Yes";
     }
+    obj4.description = str;
+    obj3.Animation = obj4;
     sum = sum + c2;
+    const byteAt1 = _modDef7373.getByteAt(getUint8, sum);
     const tmpResult = _modDef7373;
-    const byteAt1 = tmpResult.getByteAt(getUint8, sum);
+    const sum1 = byteAt1 + 256 * _modDef7373.getByteAt(getUint8, sum + 1);
     const tmpResult6 = _modDef7373;
-    const sum1 = byteAt1 + 256 * tmpResult6.getByteAt(getUint8, sum + 1);
-    const tmpResult7 = _modDef7373;
-    const sum2 = sum1 + 65536 * tmpResult7.getByteAt(getUint8, sum + 2) + 1;
+    const sum2 = sum1 + 65536 * _modDef7373.getByteAt(getUint8, sum + 2) + 1;
+    obj3.ImageWidth = { value: sum2, description: `${tmp9}px` };
     const sum3 = sum + c3;
-    obj5 = { value: sum2, description: `${tmp9}px` };
+    const obj5 = { value: sum2, description: `${tmp9}px` };
+    const tmpResult7 = _modDef7373;
+    const byteAt2 = _modDef7373.getByteAt(getUint8, sum3);
     const tmpResult8 = _modDef7373;
-    const byteAt2 = tmpResult8.getByteAt(getUint8, sum3);
+    const sum4 = byteAt2 + 256 * _modDef7373.getByteAt(getUint8, sum3 + 1);
     const tmpResult9 = _modDef7373;
-    const sum4 = byteAt2 + 256 * tmpResult9.getByteAt(getUint8, sum3 + 1);
-    const tmpResult10 = _modDef7373;
-    sum5 = sum4 + 65536 * tmpResult10.getByteAt(getUint8, sum3 + 2) + 1;
+    const sum5 = sum4 + 65536 * _modDef7373.getByteAt(getUint8, sum3 + 2) + 1;
+    obj3.ImageHeight = { value: sum5, description: `${tmp13}px` };
     return obj3;
   }
 };
-let c2 = 4;
-let c3 = 7;
-
-export default obj;

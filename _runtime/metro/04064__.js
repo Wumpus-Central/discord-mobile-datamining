@@ -1,48 +1,44 @@
 // === Module 4064: ? ===
 
 // Module 4064
-import formatDistance from "formatDistance" /* 4065 */;
-import buildFormatLongFn from "buildFormatLongFn" /* 4066 */;
-import formatRelative from "formatRelative" /* 4067 */;
+import module_4065 from "module_4065" /* 4065 */;
+import module_4066 from "module_4066" /* 4066 */;
+import dayAndTimeWithAdjective from "dayAndTimeWithAdjective" /* 4067 */;
 import date_mod from "module_4068" /* 4068 */;
-import date_mod2 from "module_4069" /* 4069 */;
+import date_mod from "module_4069" /* 4069 */;
 
-let tmp11;
-let tmp3;
-let tmp5;
-let tmp7;
-let tmp9;
-if (!formatDistance) {
-  tmp3 = { default: formatDistance };
-  const obj = { default: formatDistance };
+if (!module_4065) {
+  const obj = { default: module_4065 };
+  let tmp3 = obj;
 } else {
-  tmp3 = formatDistance;
+  tmp3 = module_4065;
 }
-if (!buildFormatLongFn) {
-  tmp5 = { default: buildFormatLongFn };
-  const obj2 = { default: buildFormatLongFn };
+if (!module_4066) {
+  const obj2 = { default: module_4066 };
+  let tmp5 = obj2;
 } else {
-  tmp5 = buildFormatLongFn;
+  tmp5 = module_4066;
 }
-if (!formatRelative) {
-  tmp7 = { default: formatRelative };
-  const obj3 = { default: formatRelative };
+if (!dayAndTimeWithAdjective) {
+  const obj3 = { default: dayAndTimeWithAdjective };
+  let tmp7 = obj3;
 } else {
-  tmp7 = formatRelative;
+  tmp7 = dayAndTimeWithAdjective;
 }
-let date = date_mod2;
+let date = date_mod;
 if (!date) {
-  tmp9 = { default: date };
   const obj4 = { default: date };
+  let tmp9 = obj4;
 } else {
   tmp9 = date;
 }
-date = date_mod2;
+let date = date_mod;
 if (!date) {
-  tmp11 = { default: date };
   const obj5 = { default: date };
+  let tmp11 = obj5;
 } else {
   tmp11 = date;
 }
 
 export default { code: "pl", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default exports.default;

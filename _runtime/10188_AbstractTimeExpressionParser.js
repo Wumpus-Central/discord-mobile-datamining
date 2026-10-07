@@ -1,17 +1,17 @@
 // === Module 10188: AbstractTimeExpressionParser ===
 
 // Module 10188 (AbstractTimeExpressionParser)
-import Meridiem from "Meridiem" /* 10179 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
+const AbstractTimeExpressionParser = require;
 class AbstractTimeExpressionParser {
   constructor() {
-    let flag = arg0;
-    if (arg0 === undefined) {
+    flag = global;
+    if (global === undefined) {
       flag = false;
     }
-    _classCallCheck(this, AbstractTimeExpressionParser);
+    tmp = c2(this, AbstractTimeExpressionParser);
     this.cachedPrimaryPrefix = null;
     this.cachedPrimarySuffix = null;
     this.cachedPrimaryTimePattern = null;
@@ -19,6 +19,7 @@ class AbstractTimeExpressionParser {
     this.cachedFollowingSuffix = null;
     this.cachedFollowingTimePatten = null;
     this.strictMode = flag;
+    return;
   }
 }
 const entry = {
@@ -60,42 +61,37 @@ const items = [
       const result = this.extractPrimaryTimeComponents(createParsingResult, index);
       if (result) {
         const sum = index.index + index[1].length;
-        const str2 = index[0];
-        const str3 = str2.substring(index[1].length);
+        const str3 = index[0].substring(index[1].length);
         const parsingResult = createParsingResult.createParsingResult(sum, str3, result);
         index.index = index.index + index[0].length;
-        const str4 = createParsingResult.text;
-        const substr = str4.substring(index.index);
+        const substr = createParsingResult.text.substring(index.index);
         const followingTimePatternThroughCache = self.getFollowingTimePatternThroughCache();
         const match = followingTimePatternThroughCache.exec(substr);
         if (str3.match(/^\d{3,4}/)) {
           if (match) {
-            const str5 = match[0];
             if (str5.match(/^\s*([+-])\s*\d{2,4}$/)) {
               return null;
             } else {
-              const str6 = match[0];
               if (str6.match(/^\s*([+-])\s*\d{2}\W\d{2}/)) {
                 return null;
               }
+              str6 = match[0];
             }
+            str5 = match[0];
           }
         }
         if (match) {
-          let result1;
-          const str7 = match[0];
           if (!str7.match(/^\s*([+-])\s*\d{3,4}$/)) {
             parsingResult.end = self.extractFollowingTimeComponents(createParsingResult, match, parsingResult);
             if (parsingResult.end) {
               parsingResult.text = parsingResult.text + match[0];
             }
-            result1 = self.checkAndReturnWithFollowingPattern(parsingResult);
+            let result1 = self.checkAndReturnWithFollowingPattern(parsingResult);
           }
           return result1;
         }
         result1 = self.checkAndReturnWithoutFollowingPattern(parsingResult);
       } else {
-        const str = index[0];
         index = index.index;
         if (str.match(/^\d{4}/)) {
           index.index = index + 4;
@@ -148,52 +144,48 @@ const items = [
         } else {
           let PM1 = null;
           if (rounded > 12) {
-            PM1 = Meridiem.Meridiem.PM;
+            PM1 = AbstractTimeExpressionParser(10179).Meridiem.PM;
           }
           let tmp8 = rounded;
-          let tmp9 = PM1;
+          let PM = PM1;
           if (null != arg1[6]) {
             if (rounded > 12) {
               return null;
             } else {
-              const str10 = arg1[6][0];
-              const formatted = str10.toLowerCase();
-              let tmp12 = rounded;
+              const formatted = arg1[6][0].toLowerCase();
+              let tmp11 = rounded;
               if ("a" == formatted) {
                 let num5 = rounded;
-                const AM = Meridiem.Meridiem.AM;
                 if (12 == rounded) {
                   num5 = 0;
                 }
-                tmp12 = num5;
-                PM1 = AM;
+                tmp11 = num5;
+                PM1 = AbstractTimeExpressionParser(10179).Meridiem.AM;
               }
-              tmp9 = PM1;
-              tmp8 = tmp12;
+              PM = PM1;
+              tmp8 = tmp11;
               if ("p" == formatted) {
-                let sum = tmp12;
-                const PM = Meridiem.Meridiem.PM;
-                if (12 != tmp12) {
-                  sum = tmp12 + 12;
+                let sum = tmp11;
+                if (12 != tmp11) {
+                  sum = tmp11 + 12;
                 }
                 tmp8 = sum;
-                tmp9 = PM;
+                PM = AbstractTimeExpressionParser(10179).Meridiem.PM;
               }
             }
           }
           parsingComponents.assign("hour", tmp8);
           parsingComponents.assign("minute", num);
-          if (null !== tmp9) {
-            parsingComponents.assign("meridiem", tmp9);
+          if (null !== PM) {
+            parsingComponents.assign("meridiem", PM);
           } else if (tmp8 < 12) {
-            parsingComponents.imply("meridiem", Meridiem.Meridiem.AM);
+            parsingComponents.imply("meridiem", AbstractTimeExpressionParser(10179).Meridiem.AM);
           } else {
-            parsingComponents.imply("meridiem", Meridiem.Meridiem.PM);
+            parsingComponents.imply("meridiem", AbstractTimeExpressionParser(10179).Meridiem.PM);
           }
           if (null != arg1[5]) {
             const _parseInt2 = parseInt;
-            const str7 = arg1[5];
-            const parsed1 = parseInt(str7.substring(0, 3));
+            const parsed1 = parseInt(arg1[5].substring(0, 3));
             if (parsed1 >= 1000) {
               return null;
             } else {
@@ -217,15 +209,10 @@ const items = [
   {
     key: "extractFollowingTimeComponents",
     value: function extractFollowingTimeComponents(createParsingComponents, arg1, start) {
-      let num6;
-      let rounded;
-      let start10;
-      let start11;
       const parsingComponents = createParsingComponents.createParsingComponents();
       if (null != arg1[5]) {
         const _parseInt = parseInt;
-        const str = arg1[5];
-        const parsed = parseInt(str.substring(0, 3));
+        const parsed = parseInt(arg1[5].substring(0, 3));
         if (parsed >= 1000) {
           return null;
         } else {
@@ -244,8 +231,8 @@ const items = [
       const parsed2 = parseInt(arg1[2]);
       if (null != arg1[3]) {
         const _parseInt3 = parseInt;
-        num6 = parseInt(arg1[3]);
-        rounded = parsed2;
+        let num6 = parseInt(arg1[3]);
+        let rounded = parsed2;
       } else {
         num6 = 0;
         rounded = parsed2;
@@ -259,7 +246,7 @@ const items = [
         if (rounded <= 24) {
           let num7 = -1;
           if (rounded >= 12) {
-            num7 = Meridiem.Meridiem.PM;
+            num7 = AbstractTimeExpressionParser(10179).Meridiem.PM;
           }
           let tmp10 = num7;
           let tmp11 = rounded;
@@ -267,12 +254,10 @@ const items = [
             if (rounded > 12) {
               return null;
             } else {
-              const str13 = arg1[6][0];
-              const formatted = str13.toLowerCase();
+              const formatted = arg1[6][0].toLowerCase();
               let tmp15 = rounded;
               if ("a" == formatted) {
                 let num8 = rounded;
-                const AM = Meridiem.Meridiem.AM;
                 if (12 == rounded) {
                   num8 = 0;
                   if (!parsingComponents.isCertain("day")) {
@@ -281,25 +266,24 @@ const items = [
                   }
                 }
                 tmp15 = num8;
-                num7 = AM;
+                num7 = AbstractTimeExpressionParser(10179).Meridiem.AM;
               }
               let tmp16 = tmp15;
               if ("p" == formatted) {
                 let sum = tmp15;
-                const PM = Meridiem.Meridiem.PM;
                 if (12 != tmp15) {
                   sum = tmp15 + 12;
                 }
                 tmp16 = sum;
-                num7 = PM;
+                num7 = AbstractTimeExpressionParser(10179).Meridiem.PM;
               }
               start = start.start;
               tmp10 = num7;
               tmp11 = tmp16;
               if (!start.isCertain("meridiem")) {
-                if (num7 == Meridiem.Meridiem.AM) {
+                if (num7 == AbstractTimeExpressionParser(10179).Meridiem.AM) {
                   const start4 = start.start;
-                  start4.imply("meridiem", Meridiem.Meridiem.AM);
+                  start4.imply("meridiem", AbstractTimeExpressionParser(10179).Meridiem.AM);
                   const start5 = start.start;
                   tmp10 = num7;
                   tmp11 = tmp16;
@@ -311,7 +295,7 @@ const items = [
                   }
                 } else {
                   const start2 = start.start;
-                  start2.imply("meridiem", Meridiem.Meridiem.PM);
+                  start2.imply("meridiem", AbstractTimeExpressionParser(10179).Meridiem.PM);
                   const start3 = start.start;
                   tmp10 = num7;
                   tmp11 = tmp16;
@@ -336,23 +320,22 @@ const items = [
               if (start7.get("hour") > 12) {
                 const start8 = start.start;
                 if (start8.get("hour") - 12 > tmp11) {
-                  parsingComponents.imply("meridiem", Meridiem.Meridiem.AM);
+                  parsingComponents.imply("meridiem", AbstractTimeExpressionParser(10179).Meridiem.AM);
                 } else if (tmp11 <= 12) {
                   parsingComponents.assign("hour", tmp11 + 12);
-                  parsingComponents.assign("meridiem", Meridiem.Meridiem.PM);
+                  parsingComponents.assign("meridiem", AbstractTimeExpressionParser(10179).Meridiem.PM);
                 }
               }
             }
             if (tmp11 > 12) {
-              parsingComponents.imply("meridiem", Meridiem.Meridiem.PM);
+              parsingComponents.imply("meridiem", AbstractTimeExpressionParser(10179).Meridiem.PM);
             } else if (tmp11 <= 12) {
-              parsingComponents.imply("meridiem", Meridiem.Meridiem.AM);
+              parsingComponents.imply("meridiem", AbstractTimeExpressionParser(10179).Meridiem.AM);
             }
           }
           const start9 = start.start;
+          const time = parsingComponents.date().getTime();
           const dateResult = parsingComponents.date();
-          const time = dateResult.getTime();
-          const dateResult1 = start9.date();
           if (time < dateResult1.getTime()) {
             parsingComponents.imply("day", parsingComponents.get("day") + 1);
           }
@@ -365,58 +348,55 @@ const items = [
   {
     key: "checkAndReturnWithoutFollowingPattern",
     value: function checkAndReturnWithoutFollowingPattern(parsingResult) {
-      const str = parsingResult.text;
       if (str.match(/^\d$/)) {
         return null;
       } else {
-        const str2 = parsingResult.text;
         if (str2.match(/^\d\d\d+$/)) {
           return null;
         } else {
-          const str3 = parsingResult.text;
           if (str3.match(/\d[apAP]$/)) {
             return null;
           } else {
-            const str4 = parsingResult.text;
-            const match = str4.match(/[^\d:.](\d[\d.]+)$/);
+            const match = parsingResult.text.match(/[^\d:.](\d[\d.]+)$/);
             if (match) {
               const self = this;
               if (this.strictMode) {
                 return null;
               } else {
-                if (match[1].includes(".")) {
-                  if (!match[1].match(/\d(\.\d{2})+$/)) {
+                if (str5.includes(".")) {
+                  if (!str5.match(/\d(\.\d{2})+$/)) {
                     return null;
                   }
                 }
                 const _parseInt = parseInt;
-                if (parseInt(match[1]) > 24) {
+                if (parseInt(str5) > 24) {
                   return null;
                 }
               }
             }
             return parsingResult;
           }
+          str3 = parsingResult.text;
         }
+        str2 = parsingResult.text;
       }
+      str = parsingResult.text;
     }
   },
   {
     key: "checkAndReturnWithFollowingPattern",
     value: function checkAndReturnWithFollowingPattern(parsingResult) {
-      const str = parsingResult.text;
       if (str.match(/^\d+-\d+$/)) {
         return null;
       } else {
-        const str2 = parsingResult.text;
-        const match = str2.match(/[^\d:.](\d[\d.]+)\s*-\s*(\d[\d.]+)$/);
+        const match = parsingResult.text.match(/[^\d:.](\d[\d.]+)\s*-\s*(\d[\d.]+)$/);
         if (match) {
           const self = this;
           if (this.strictMode) {
             return null;
           } else {
             if (match[2].includes(".")) {
-              if (!match[2].match(/\d(\.\d{2})+$/)) {
+              if (!str3.match(/\d(\.\d{2})+$/)) {
                 return null;
               }
             }
@@ -428,6 +408,7 @@ const items = [
         }
         return parsingResult;
       }
+      str = parsingResult.text;
     }
   },
   {
@@ -436,14 +417,11 @@ const items = [
       const self = this;
       const primaryPrefixResult = this.primaryPrefix();
       const primarySuffixResult = this.primarySuffix();
-      const tmp3 = this.cachedPrimaryPrefix === primaryPrefixResult && self.cachedPrimarySuffix === primarySuffixResult;
       if (!tmp3) {
         const result = self.primaryPatternLeftBoundary();
+        const patternFlagsResult = self.patternFlags();
         const _RegExp = RegExp;
         const _HermesInternal = HermesInternal;
-        const self2 = this;
-        const self3 = this;
-        const patternFlagsResult = self.patternFlags();
         const regExp = new RegExp("" + result + primaryPrefixResult + "(\\d{1,4})(?:(?:\\.|:|\uFF1A)(\\d{1,2})(?:(?::|\uFF1A)(\\d{2})(?:\\.(\\d{1,6}))?)?)?(?:\\s*(a\\.m\\.|p\\.m\\.|am?|pm?))?" + primarySuffixResult, patternFlagsResult);
         self.cachedPrimaryTimePattern = regExp;
         self.cachedPrimaryPrefix = primaryPrefixResult;
@@ -458,12 +436,9 @@ const items = [
       const self = this;
       const followingPhaseResult = this.followingPhase();
       const followingSuffixResult = this.followingSuffix();
-      const tmp3 = this.cachedFollowingPhase === followingPhaseResult && self.cachedFollowingSuffix === followingSuffixResult;
       if (!tmp3) {
         const _RegExp = RegExp;
         const _HermesInternal = HermesInternal;
-        const self2 = this;
-        const self3 = this;
         const regExp = new RegExp("^(" + followingPhaseResult + ")(\\d{1,4})(?:(?:\\.|\\:|\\\uFF1A)(\\d{1,2})(?:(?:\\.|\\:|\\\uFF1A)(\\d{1,2})(?:\\.(\\d{1,6}))?)?)?(?:\\s*(a\\.m\\.|p\\.m\\.|am?|pm?))?" + followingSuffixResult, "i");
         self.cachedFollowingTimePatten = regExp;
         self.cachedFollowingPhase = followingPhaseResult;
@@ -473,6 +448,5 @@ const items = [
     }
   }
 ];
-const AbstractTimeExpressionParser_export = _createClass(AbstractTimeExpressionParser, items);
 
-export { AbstractTimeExpressionParser_export as AbstractTimeExpressionParser };
+export const AbstractTimeExpressionParser = _createClass(AbstractTimeExpressionParser, items);

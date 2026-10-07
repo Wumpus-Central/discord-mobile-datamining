@@ -1,46 +1,47 @@
 // === Module 6390: VelocityTracker ===
 
 // Module 6390 (VelocityTracker)
-import _createClassDefault from "_createClass" /* 6359 */;
-import _classCallCheck from "_classCallCheck" /* 6358 */;
+import _modDef6359 from "module_6359" /* 6359 */;
+import _classCallCheck_mod from "module_6358" /* 6358 */;
 
+let _classCallCheck = _classCallCheck_mod;
 class VelocityTracker {
   constructor() {
-    _classCallCheck(this, VelocityTracker);
+    tmp = closure_0(this, VelocityTracker);
     this.lastUpdateTime = Date.now();
     this.velocity = { x: 0, y: 0 };
     this.timeoutId = null;
+    return;
   }
 }
+_classCallCheck = VelocityTracker;
 const entry = {
   key: "computeVelocity",
   value: function computeVelocity(adjustOffsetForRTLResult, absoluteLastScrollOffset, arg2, fn) {
     const self = this;
-    let closure_0 = fn;
+    closure_0 = fn;
     this.cleanUp();
     const timestamp = Date.now();
     const diff = adjustOffsetForRTLResult - absoluteLastScrollOffset;
     const result = diff / Math.max(1, timestamp - this.lastUpdateTime);
     this.lastUpdateTime = timestamp;
     let num = 0;
-    const velocity = this.velocity;
     if (arg2) {
       num = result;
     }
-    velocity.x = num;
+    this.velocity.x = num;
     let num2 = 0;
-    const velocity2 = self.velocity;
     if (!arg2) {
       num2 = result;
     }
-    velocity2.y = num2;
+    self.velocity.y = num2;
     fn(self.velocity, false);
     self.timeoutId = setTimeout(() => {
       self.cleanUp();
       self.lastUpdateTime = Date.now();
       self.velocity.x = 0;
       self.velocity.y = 0;
-      fn(self.velocity, true);
+      closure_0(self.velocity, true);
     }, 100);
   }
 };
@@ -58,6 +59,5 @@ const items = [
     }
   }
 ];
-const VelocityTracker_export = _createClassDefault(VelocityTracker, items);
 
-export { VelocityTracker_export as VelocityTracker };
+export const VelocityTracker = _modDef6359(VelocityTracker, items);

@@ -1,7 +1,8 @@
 // === Module 1077: defaultConfiguration ===
 
 // Module 1077 (defaultConfiguration)
-const obj = {
+
+export const defaultConfiguration = {
   onFormOpen() {
 
   },
@@ -48,7 +49,5 @@ const obj = {
   captureScreenshotButtonLabel: "Take a screenshot",
   genericError: "Unable to send feedback due to an unexpected error."
 };
-
-export const defaultConfiguration = obj;
 export const defaultButtonConfiguration = { triggerLabel: "Report a Bug", triggerAriaLabel: "" };
 export const defaultScreenshotButtonConfiguration = { triggerLabel: "Take Screenshot", triggerAriaLabel: "" };

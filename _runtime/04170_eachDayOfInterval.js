@@ -1,23 +1,21 @@
 // === Module 4170: eachDayOfInterval ===
 
 // Module 4170 (eachDayOfInterval)
-import toDate_mod from "toDate" /* 3964 */;
+import _typeof_mod from "module_3964" /* 3964 */;
 import requiredArgs_mod from "requiredArgs" /* 3965 */;
 
-let tmp3;
-let tmp5;
-let toDate = toDate_mod;
-if (!toDate) {
-  let obj = { default: toDate };
-  tmp3 = obj;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  let obj = { default: _typeof };
+  let tmp3 = obj;
 } else {
-  tmp3 = toDate;
+  tmp3 = _typeof;
 }
-toDate = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  tmp5 = { default: requiredArgs };
   const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
@@ -30,13 +28,11 @@ export default function eachDayOfInterval(arg0, step) {
   if (!arg0) {
     obj = {};
   }
-  const defaultResult1 = toDate.default(obj.start);
-  const defaultResult2 = toDate.default(obj.end);
-  const time = defaultResult2.getTime();
+  const defaultResult1 = _typeof.default(obj.start);
+  const time = _typeof.default(obj.end).getTime();
   if (defaultResult1.getTime() <= time) {
     defaultResult1.setHours(0, 0, 0, 0);
     step = undefined;
-    const _Number = Number;
     if (null != step) {
       step = step.step;
     }
@@ -47,15 +43,15 @@ export default function eachDayOfInterval(arg0, step) {
         num5 = step;
       }
     }
-    const _NumberResult = _Number(num5);
-    if (_NumberResult >= 1) {
+    const NumberResult = Number(num5);
+    if (NumberResult >= 1) {
       const _isNaN = isNaN;
-      if (!isNaN(_NumberResult)) {
+      if (!isNaN(NumberResult)) {
         const items = [];
         if (defaultResult1.getTime() <= time) {
           do {
-            let arr = items.push(toDate.default(defaultResult1));
-            let setDateResult = defaultResult1.setDate(defaultResult1.getDate() + _NumberResult);
+            let arr = items.push(_typeof.default(defaultResult1));
+            let setDateResult = defaultResult1.setDate(defaultResult1.getDate() + NumberResult);
             let setHoursResult1 = defaultResult1.setHours(0, 0, 0, 0);
             time1 = defaultResult1.getTime();
           } while (time1 <= time);
@@ -64,15 +60,13 @@ export default function eachDayOfInterval(arg0, step) {
       }
     }
     const _RangeError2 = RangeError;
-    const self3 = this;
-    const self4 = this;
     const rangeError = new RangeError("`options.step` must be a number greater than 1");
     throw rangeError;
   } else {
     const _RangeError = RangeError;
-    const self = this;
-    const self2 = this;
     const rangeError1 = new RangeError("Invalid interval");
     throw rangeError1;
   }
+  const defaultResult2 = _typeof.default(obj.end);
 };
+export default exports.default;

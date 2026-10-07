@@ -1,9 +1,7 @@
 // === Module 382: ? ===
 
 // Module 382
-import react from "react" /* 19 */;
 import _modDef366 from "module_366" /* 366 */;
-import _modDef367 from "module_367" /* 367 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
@@ -11,17 +9,19 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
-const require = globalThis.__r;
-let importDefault;
-
+let AnimatedObject = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -29,8 +29,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function flatAnimatedNodes(_value) {
-  let items;
+function flatAnimatedNodes(label) {
   if (items === undefined) {
     items = [];
   }
@@ -41,22 +40,21 @@ function flatAnimatedNodes(_value) {
   if (num >= 5) {
     return items;
   } else {
-    if (_value instanceof _modDef367) {
-      items.push(_value);
+    if (label instanceof AnimatedObject(367)) {
+      items.push(label);
     } else {
       const _Array = Array;
-      if (Array.isArray(_value)) {
-        let num7;
-        const length2 = _value.length;
+      if (Array.isArray(label)) {
         for (let num7 = 0; num7 < length2; num7 = num7 + 1) {
-          let tmp12 = flatAnimatedNodes(_value[num7], items, tmp10);
+          let tmp12 = flatAnimatedNodes(label[num7], items, tmp10);
         }
+        length2 = label.length;
       } else {
         let prototypeOf;
-        if (null !== _value) {
-          if (typeof _value === "object") {
+        if (null !== label) {
+          if (typeof label === "object") {
             const _Object3 = Object;
-            prototypeOf = Object.getPrototypeOf(_value);
+            prototypeOf = Object.getPrototypeOf(label);
           }
         }
         let tmp4 = undefined !== prototypeOf;
@@ -67,18 +65,17 @@ function flatAnimatedNodes(_value) {
             isPrototypeOfResult = prototypeOf.isPrototypeOf(Object);
           }
           if (isPrototypeOfResult) {
-            isPrototypeOfResult = !isValidElement(_value);
+            isPrototypeOfResult = !isValidElement(label);
           }
           tmp4 = isPrototypeOfResult;
         }
         if (tmp4) {
-          let num4;
           const _Object2 = Object;
-          const keys = Object.keys(_value);
-          const length = keys.length;
+          const keys = Object.keys(label);
           for (let num4 = 0; num4 < length; num4 = num4 + 1) {
-            let tmp9 = flatAnimatedNodes(_value[keys[num4]], items, tmp7);
+            let tmp9 = flatAnimatedNodes(label[keys[num4]], items, tmp7);
           }
+          length = keys.length;
         }
       }
     }
@@ -86,19 +83,19 @@ function flatAnimatedNodes(_value) {
   }
 }
 function mapAnimatedNodes(_value, fn, arg2) {
-  importDefault = fn;
+  AnimatedObject = fn;
   let num = arg2;
   if (arg2 === undefined) {
     num = 0;
   }
   if (num >= 5) {
     return _value;
-  } else if (_value instanceof require("module_367")) {
+  } else if (_value instanceof AnimatedObject(num[7])) {
     return fn(_value);
   } else {
     const _Array = Array;
     if (Array.isArray(_value)) {
-      return _value.map((item) => mapAnimatedNodes(item, fn, num + 1));
+      return _value.map((item) => mapAnimatedNodes(item, closure_0, num + 1));
     } else {
       let prototypeOf;
       if (null !== _value) {
@@ -120,11 +117,9 @@ function mapAnimatedNodes(_value, fn, arg2) {
         tmp4 = isPrototypeOfResult;
       }
       if (tmp4) {
-        let num4;
         const obj = {};
         const _Object2 = Object;
         const keys = Object.keys(_value);
-        const length = keys.length;
         for (let num4 = 0; num4 < length; num4 = num4 + 1) {
           let tmp8 = keys[num4];
           obj[tmp8] = mapAnimatedNodes(_value[tmp8], fn, tmp7);
@@ -136,23 +131,26 @@ function mapAnimatedNodes(_value, fn, arg2) {
     }
   }
 }
-const isValidElement = react.isValidElement;
+const isValidElement = fn(19).isValidElement;
 class AnimatedObject {
-  constructor(_nodes, _value, arg2) {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, AnimatedObject);
-    const items = [arg2];
-    const obj = _getPrototypeOf(AnimatedObject);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+  constructor(arg0, arg1, arg2) {
+    self = this;
+    tmp = c2(this, AnimatedObject);
+    items = [];
+    items[0] = importDefault;
+    tmp2 = closure_4;
+    obj = closure_4(AnimatedObject);
+    tmp3 = closure_3;
+    if (closure_7()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    const tmp3Result = c3(self, constructResult);
-    tmp3Result._nodes = _nodes;
-    tmp3Result._value = _value;
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result._nodes = global;
+    tmp3Result._value = fn;
     return tmp3Result;
   }
 }
@@ -169,11 +167,10 @@ let items = [
     key: "__getValueWithStaticObject",
     value: function __getValueWithStaticObject(_value) {
       const _nodes = this._nodes;
-      let closure_1 = 0;
+      closure_1 = 0;
       return mapAnimatedNodes(_value, () => {
         closure_1 = tmp + 1;
-        const obj = _nodes[+closure_1];
-        return obj.__getValue();
+        return _nodes[+closure_1].__getValue();
       });
     }
   },
@@ -186,15 +183,13 @@ let items = [
   {
     key: "__attach",
     value: function __attach() {
-      let num;
       const self = this;
       const _nodes = this._nodes;
-      const length = _nodes.length;
       for (let num = 0; num < length; num = num + 1) {
         let obj = _nodes[num];
         let __addChildResult = obj.__addChild(self);
       }
-      let fn = _get(_getPrototypeOf(AnimatedObject.prototype), "__attach", self);
+      let fn = hasOwnProperty(_getPrototypeOf(AnimatedObject.prototype), "__attach", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -204,15 +199,13 @@ let items = [
   {
     key: "__detach",
     value: function __detach() {
-      let num;
       const self = this;
       const _nodes = this._nodes;
-      const length = _nodes.length;
       for (let num = 0; num < length; num = num + 1) {
         let obj = _nodes[num];
         let __removeChildResult = obj.__removeChild(self);
       }
-      let fn = _get(_getPrototypeOf(AnimatedObject.prototype), "__detach", self);
+      let fn = hasOwnProperty(_getPrototypeOf(AnimatedObject.prototype), "__detach", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -222,15 +215,13 @@ let items = [
   {
     key: "__makeNative",
     value: function __makeNative(arg0) {
-      let num;
       const self = this;
       const _nodes = this._nodes;
-      const length = _nodes.length;
       for (let num = 0; num < length; num = num + 1) {
         let obj = _nodes[num];
         let __makeNativeResult = obj.__makeNative(arg0);
       }
-      let fn = _get(_getPrototypeOf(AnimatedObject.prototype), "__makeNative", self);
+      let fn = hasOwnProperty(_getPrototypeOf(AnimatedObject.prototype), "__makeNative", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -241,41 +232,33 @@ let items = [
   {
     key: "__getNativeConfig",
     value: function __getNativeConfig() {
-      let obj = {
-        type: "object",
-        value: mapAnimatedNodes(this._value, (__getNativeTag) => {
-          const obj = { nodeTag: __getNativeTag.__getNativeTag() };
-          return obj;
-        }),
-        debugID: this.__getDebugID()
-      };
-      return obj;
+      return { type: "object", value: mapAnimatedNodes(this._value, (__getNativeTag) => ({ nodeTag: __getNativeTag.__getNativeTag() })), debugID: this.__getDebugID() };
     }
   }
 ];
 const entry1 = {
   key: "from",
   value: function from(_value) {
-    const arr = flatAnimatedNodes(_value);
-    let tmp = null;
-    if (0 !== arr.length) {
-      let constructResult;
+    const arr = closure_8(_value);
+    if (0 === arr.length) {
+      return null;
+    } else {
       const obj2 = Object.create(AnimatedObject.prototype);
       _classCallCheck(obj2, AnimatedObject);
       const items = [undefined];
+      let constructor = _getPrototypeOf;
       const obj = _getPrototypeOf(AnimatedObject);
       if (_isNativeReflectConstruct()) {
         const _Reflect = Reflect;
-        constructResult = Reflect.construct(obj, items, _getPrototypeOf(obj2).constructor);
+        constructor = constructor(obj2).constructor;
+        let constructResult = Reflect.construct(obj, items, constructor);
       } else {
         constructResult = obj.apply(obj2, items);
       }
-      const tmp10Result = c3(obj2, constructResult);
-      tmp10Result._nodes = arr;
-      tmp10Result._value = _value;
-      tmp = tmp10Result;
+      const tmp9Result = _possibleConstructorReturn(obj2, constructResult);
+      tmp9Result._nodes = arr;
+      tmp9Result._value = _value;
     }
-    return tmp;
   }
 };
 const items1 = [entry1];

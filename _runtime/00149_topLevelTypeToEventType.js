@@ -3,6 +3,8 @@
 // Module 149 (topLevelTypeToEventType)
 import customBubblingEventTypes from "customBubblingEventTypes" /* 66 */;
 
+require = arg1;
+const dependencyMap = arg6;
 let closure_2 = {};
 
 export const topLevelTypeToEventType = function topLevelTypeToEventType(str) {
@@ -22,9 +24,8 @@ export const topLevelTypeToEventType = function topLevelTypeToEventType(str) {
 };
 export const getEventTypePropName = function getEventTypePropName(arg0, arg1) {
   if (undefined !== closure_2[arg0]) {
-    return arg1 ? closure_2[arg0].captured : closure_2[arg0].bubbled;
+    return arg1 ? tmp3.captured : tmp3.bubbled;
   } else {
-    let obj2;
     for (const key10005 in customBubblingEventTypes.customBubblingEventTypes) {
       let charCodeAtResult = key10005.charCodeAt(3);
       let formatted = key10005;
@@ -45,22 +46,27 @@ export const getEventTypePropName = function getEventTypePropName(arg0, arg1) {
         if (null == phasedRegistrationNames) {
           continue;
         } else {
-          let bubbled1 = phasedRegistrationNames.bubbled ?? null;
-          obj2 = { bubbled: bubbled1, captured };
-          let captured = phasedRegistrationNames.captured ?? null;
+          let bubbled1 = phasedRegistrationNames.bubbled;
+          if (bubbled1 == null) {
+            bubbled1 = null;
+          }
+          let obj2 = { bubbled: bubbled1, captured: null };
+          let captured = phasedRegistrationNames.captured;
+          if (captured == null) {
+            captured = null;
+          }
+          obj2.captured = captured;
         }
-        let tmp17 = null;
-        if (null != obj2) {
-          let bubbled;
+        if (null == obj2) {
+          return null;
+        } else {
           tmp2[arg0] = obj2;
           if (arg1) {
-            bubbled = obj2.captured;
+            let bubbled = obj2.captured;
           } else {
             bubbled = obj2.bubbled;
           }
-          tmp17 = bubbled;
         }
-        return tmp17;
       }
       continue;
     }

@@ -5,8 +5,7 @@ const WebEasings = { linear: [0, 0, 1, 1], ease: [0.42, 0, 1, 1], quad: [0.11, 0
 
 export { WebEasings };
 export const getEasingByName = function getEasingByName(linear) {
-  const str = obj[linear];
-  return "cubic-bezier(" + str.toString() + ")";
+  return "cubic-bezier(" + obj[linear].toString() + ")";
 };
 export const maybeGetBezierEasing = function maybeGetBezierEasing(easingV) {
   if ("factory" in easingV) {

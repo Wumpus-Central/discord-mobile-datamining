@@ -4,21 +4,17 @@
 import _mod4467 from "module_4467" /* 4467 */;
 
 const fn = function t(moment) {
-  let items;
-  let split;
-  let split2;
   const obj = {
-    eras: items,
+    eras: null,
     eraYearOrdinalRegex: /(元|\d+)年/,
-    eraYearOrdinalParse(match, match2) {
+    eraYearOrdinalParse(match, match) {
       let num = 1;
       if ("\u5143" !== match[1]) {
         let tmp2 = match[1];
-        const _parseInt = parseInt;
         if (!tmp2) {
           tmp2 = match;
         }
-        num = _parseInt(tmp2, 10);
+        num = parseInt(tmp2, 10);
       }
       return num;
     },
@@ -44,7 +40,6 @@ const fn = function t(moment) {
       nextDay: "[\u660E\u65E5] LT",
       nextWeek(week) {
         let str = "dddd LT";
-        const weekResult = week.week();
         if (weekResult !== this.week()) {
           str = "[\u6765\u9031]dddd LT";
         }
@@ -53,7 +48,6 @@ const fn = function t(moment) {
       lastDay: "[\u6628\u65E5] LT",
       lastWeek(week) {
         let str = "dddd LT";
-        const weekResult = this.week();
         if (weekResult !== week.week()) {
           str = "[\u5148\u9031]dddd LT";
         }
@@ -82,7 +76,8 @@ const fn = function t(moment) {
     },
     relativeTime: { future: "%s\u5F8C", past: "%s\u524D", s: "\u6570\u79D2", ss: "%d\u79D2", m: "1\u5206", mm: "%d\u5206", h: "1\u6642\u9593", hh: "%d\u6642\u9593", d: "1\u65E5", dd: "%d\u65E5", M: "1\u30F6\u6708", MM: "%d\u30F6\u6708", y: "1\u5E74", yy: "%d\u5E74" }
   };
-  items = [{ since: "2019-05-01", offset: 1, name: "\u4EE4\u548C", narrow: "\u32FF", abbr: "R" }, { since: "1989-01-08", until: "2019-04-30", offset: 1, name: "\u5E73\u6210", narrow: "\u337B", abbr: "H" }, { since: "1926-12-25", until: "1989-01-07", offset: 1, name: "\u662D\u548C", narrow: "\u337C", abbr: "S" }, { since: "1912-07-30", until: "1926-12-24", offset: 1, name: "\u5927\u6B63", narrow: "\u337D", abbr: "T" }, { since: "1873-01-01", until: "1912-07-29", offset: 6, name: "\u660E\u6CBB", narrow: "\u337E", abbr: "M" }, { since: "0001-01-01", until: "1873-12-31", offset: 1, name: "\u897F\u66A6", narrow: "AD", abbr: "AD" }, { since: "0000-12-31", until: -Infinity, offset: 1, name: "\u7D00\u5143\u524D", narrow: "BC", abbr: "BC" }];
+  const items = [{ since: "2019-05-01", offset: 1, name: "\u4EE4\u548C", narrow: "\u32FF", abbr: "R" }, { since: "1989-01-08", until: "2019-04-30", offset: 1, name: "\u5E73\u6210", narrow: "\u337B", abbr: "H" }, { since: "1926-12-25", until: "1989-01-07", offset: 1, name: "\u662D\u548C", narrow: "\u337C", abbr: "S" }, { since: "1912-07-30", until: "1926-12-24", offset: 1, name: "\u5927\u6B63", narrow: "\u337D", abbr: "T" }, { since: "1873-01-01", until: "1912-07-29", offset: 6, name: "\u660E\u6CBB", narrow: "\u337E", abbr: "M" }, { since: "0001-01-01", until: "1873-12-31", offset: 1, name: "\u897F\u66A6", narrow: "AD", abbr: "AD" }, { since: "0000-12-31", until: -Infinity, offset: 1, name: "\u7D00\u5143\u524D", narrow: "BC", abbr: "BC" }];
+  obj.eras = items;
   ({ split, split: split2 } = "\u65E5_\u6708_\u706B_\u6C34_\u6728_\u91D1_\u571F");
   return moment.defineLocale("ja", obj);
 };
@@ -94,7 +89,6 @@ if (typeof exports === "object") {
   }
 }
 if (typeof globalThis.define === "function") {
-  const define2 = globalThis.define;
   if (globalThis.define.amd) {
     globalThis.define(["../moment"], fn);
   }

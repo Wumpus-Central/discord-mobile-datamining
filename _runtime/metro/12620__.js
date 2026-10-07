@@ -4,6 +4,8 @@
 import _mod12580 from "module_12580" /* 12580 */;
 import _mod12608 from "module_12608" /* 12608 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
 export const parseSampleRate = function parseSampleRate(flag) {
   if (typeof flag === "boolean") {
@@ -28,11 +30,10 @@ export const parseSampleRate = function parseSampleRate(flag) {
     if (_mod12608.DEBUG_BUILD) {
       const logger = _mod12580.logger;
       const _JSON = JSON;
-      const warn = logger.warn;
       const json = JSON.stringify(flag);
       const _JSON2 = JSON;
       const _HermesInternal = HermesInternal;
-      warn("[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " + json + " of type " + JSON.stringify(typeof flag) + ".");
+      logger.warn("[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " + json + " of type " + JSON.stringify(typeof flag) + ".");
     }
   }
 };

@@ -11,7 +11,6 @@ export default (arg0, arg1) => {
   if (0 === compareResult) {
     return null;
   } else {
-    let str5;
     let tmp3 = tmp;
     if (compareResult > 0) {
       tmp3 = obj;
@@ -21,8 +20,7 @@ export default (arg0, arg1) => {
       tmp4 = tmp;
     }
     if (tmp4.prerelease.length) {
-      if (!tmp3.prerelease.length) {
-        let str;
+      if (!length) {
         if (tmp4.patch) {
           let str2 = "patch";
           if (!tmp3.patch) {
@@ -32,7 +30,7 @@ export default (arg0, arg1) => {
             }
             str2 = str3;
           }
-          str = str2;
+          let str = str2;
         } else {
           str = "major";
         }
@@ -44,7 +42,7 @@ export default (arg0, arg1) => {
       str4 = "pre";
     }
     if (obj.major !== tmp.major) {
-      str5 = `${str4}major`;
+      let str5 = `${str4}major`;
     } else if (obj.minor !== tmp.minor) {
       str5 = `${str4}minor`;
     } else {

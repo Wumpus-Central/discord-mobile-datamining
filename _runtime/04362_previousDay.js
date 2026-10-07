@@ -2,32 +2,29 @@
 
 // Module 4362 (previousDay)
 import requiredArgs_mod from "requiredArgs" /* 3965 */;
-import getDay_mod from "getDay" /* 4227 */;
+import module_4227_mod from "module_4227" /* 4227 */;
 import subDays_mod from "subDays" /* 4335 */;
 
-let tmp3;
-let tmp5;
-let tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  tmp3 = { default: requiredArgs };
   const obj = { default: requiredArgs };
+  let tmp3 = obj;
 } else {
   tmp3 = requiredArgs;
 }
 requiredArgs = tmp3;
-let getDay = getDay_mod;
-if (!getDay) {
-  tmp5 = { default: getDay };
-  const obj2 = { default: getDay };
+let module_4227 = module_4227_mod;
+if (!module_4227) {
+  const obj2 = { default: module_4227 };
+  let tmp5 = obj2;
 } else {
-  tmp5 = getDay;
+  tmp5 = module_4227;
 }
-getDay = tmp5;
+module_4227 = tmp5;
 let subDays = subDays_mod;
 if (!subDays) {
-  tmp7 = { default: subDays };
   const obj3 = { default: subDays };
+  let tmp7 = obj3;
 } else {
   tmp7 = subDays;
 }
@@ -35,10 +32,11 @@ subDays = tmp7;
 
 export default function previousDay(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const diff = getDay.default(arg0) - arg1;
+  const diff = module_4227.default(arg0) - arg1;
   let sum = diff;
   if (diff <= 0) {
     sum = diff + 7;
   }
   return subDays.default(arg0, sum);
 };
+export default exports.default;

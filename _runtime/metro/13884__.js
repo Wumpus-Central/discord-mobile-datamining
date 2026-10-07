@@ -5,29 +5,25 @@ import _mod13849 from "module_13849" /* 13849 */;
 import _mod13869 from "module_13869" /* 13869 */;
 
 
-export default function(arg0, arg1) {
-  let obj;
-  const tmp = obj;
+export default (arg0, arg1) => {
   obj = new obj(13878)(arg0, arg1);
   const tmp3 = new obj(13849)("0.0.0");
   if (obj.test(tmp3)) {
     return tmp3;
   } else {
-    let self = this;
-    let self2 = this;
-    const tmp4 = new tmp(13849)("0.0.0-0");
-    if (obj.test(tmp4)) {
-      return tmp4;
+    const tmp6 = new tmp(13849)("0.0.0-0");
+    if (obj.test(tmp6)) {
+      return tmp6;
     } else {
       let num = 0;
       let num3 = 0;
-      let tmp7 = null;
-      let tmp8 = null;
+      let tmp9 = null;
+      let tmp10 = null;
       if (0 < obj.set.length) {
         do {
           let arr = obj.set[num3];
           obj = null;
-          let item = arr.forEach(function(semver) {
+          let item = arr.forEach((semver) => {
             obj = new _mod13849(semver.semver.version);
             const operator = semver.operator;
             if (">" === operator) {
@@ -38,48 +34,51 @@ export default function(arg0, arg1) {
                 prerelease.push(0);
               }
               obj.raw = obj.format();
-            } else if ("" !== operator) {
-              if (">=" !== operator) {
-                if ("<" !== operator) {
-                  if ("<=" !== operator) {
-                    const _Error = Error;
-                    const _HermesInternal = HermesInternal;
-                    const self = this;
-                    const self2 = this;
-                    const error = new Error("Unexpected operation: " + semver.operator);
-                    throw error;
+            } else {
+              if ("" !== operator) {
+                if (">=" !== operator) {
+                  if ("<" !== operator) {
+                    if ("<=" !== operator) {
+                      const _Error = Error;
+                      const _HermesInternal = HermesInternal;
+                      const error = new Error("Unexpected operation: " + semver.operator);
+                      throw error;
+                    }
                   }
                 }
               }
+              if (obj) {
+                !_mod13869(obj, obj);
+              }
             }
-            obj && !_mod13869(obj, obj);
           });
-          let tmp11 = !obj;
-          let tmp12 = tmp7;
+          let tmp13 = !obj;
+          let tmp14 = tmp9;
           if (obj) {
-            let tmp14 = tmp12;
+            let tmp16 = tmp14;
             if (tmp14) {
-              tmp14 = !obj(13869)(tmp12, obj);
+              tmp16 = !obj(13869)(tmp14, obj);
             }
-            tmp11 = tmp14;
+            tmp13 = tmp16;
           }
-          if (!tmp11) {
-            tmp12 = obj;
+          if (!tmp13) {
+            tmp14 = obj;
           }
           num3 = num + 1;
-          tmp7 = tmp12;
-          tmp8 = tmp12;
+          tmp9 = tmp14;
+          tmp10 = tmp14;
           num = num3;
         } while (num3 < obj.set.length);
       }
-      let tmp18 = null;
-      if (tmp8) {
-        tmp18 = null;
-        if (obj.test(tmp8)) {
-          tmp18 = tmp8;
+      let tmp20 = null;
+      if (tmp10) {
+        tmp20 = null;
+        if (obj.test(tmp10)) {
+          tmp20 = tmp10;
         }
       }
-      return tmp18;
+      return tmp20;
     }
   }
+  tmp = obj;
 };

@@ -2,21 +2,25 @@
 
 // Module 163 (PerformanceEntry)
 import _createClassDefault from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import module_126 from "module_126" /* 126 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 
-function get() {
-  return this.__name;
-}
+let _classCallCheck = _classCallCheck_mod;
 class PerformanceEntry {
-  constructor(__entryType, arg1) {
-    _classCallCheck(this, PerformanceEntry);
-    this.__entryType = __entryType;
-    ({ name: this.__name, startTime: this.__startTime, duration: this.__duration } = arg1);
+  constructor(arg0, arg1) {
+    tmp = closure_0(this, PerformanceEntry);
+    this.__entryType = global;
+    ({ name: this.__name, startTime: this.__startTime, duration: this.__duration } = fn);
+    return;
   }
 }
+_classCallCheck = PerformanceEntry;
 const items = [
-  { key: "name", get },
+  {
+    key: "name",
+    get() {
+      return this.__name;
+    }
+  },
   {
     key: "entryType",
     get() {
@@ -42,11 +46,16 @@ const items = [
     }
   }
 ];
-const obj = { key: "name", get };
 const tmp2 = _createClassDefault(PerformanceEntry, items);
-tmp3.prototype = tmp2.prototype;
+class PerformanceEntry {
+  constructor() {
+    typeError = new TypeError("Failed to construct 'PerformanceEntry': Illegal constructor");
+    throw typeError;
+  }
+}
+PerformanceEntry.prototype = tmp2.prototype;
+const module_126 = fn(126);
 module_126.setPlatformObject(tmp2);
-const PerformanceEntry_export = tmp2;
 
-export { PerformanceEntry_export as PerformanceEntry };
-export const PerformanceEntry_public = tmp3;
+export const PerformanceEntry = tmp2;
+export const PerformanceEntry_public = PerformanceEntry;

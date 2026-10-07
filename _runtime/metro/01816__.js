@@ -1,27 +1,23 @@
 // === Module 1816: ? ===
 
 // Module 1816
-import ReanimatedError from "ReanimatedError" /* 1654 */;
+import _mod1654 from "module_1654" /* 1654 */;
 import module_1646 from "module_1646" /* 1646 */;
 
-let property;
+const require = globalThis.__r;
 
 let obj = { fps: 60 };
 function getStylesFromObject(jestInlineStyle) {
-  let fromEntriesResult;
   if (undefined === jestInlineStyle) {
-    fromEntriesResult = {};
+    let fromEntriesResult = {};
   } else {
-    const tmp = globalThis;
     const _Object = Object;
     const _Object2 = Object;
     const entries = Object.entries(jestInlineStyle);
-    fromEntriesResult = fromEntries(entries.map((item) => {
-      let iter;
-      let tmp;
+    fromEntriesResult = Object.fromEntries(entries.map((item) => {
       [tmp, iter] = item;
       const items = [tmp, ];
-      let value = iter;
+      value = iter;
       if (iter._isReanimatedSharedValue) {
         value = iter.value;
       }
@@ -32,7 +28,6 @@ function getStylesFromObject(jestInlineStyle) {
   return fromEntriesResult;
 }
 function getCurrentStyle(props) {
-  let value;
   const style = props.props.style;
   obj = {};
   if (Array.isArray(style)) {
@@ -65,9 +60,8 @@ function getCurrentStyle(props) {
     obj = obj3;
     return obj3;
   } else {
-    let tmp7;
-    obj = {};
     const tmp3 = getStylesFromObject(jestInlineStyle);
+    obj = {};
     if (((value) => {
       let tmp = !value;
       if (value) {
@@ -77,7 +71,7 @@ function getCurrentStyle(props) {
       return tmp;
     })(value)) {
       const merged4 = Object.assign(tmp3);
-      tmp7 = obj;
+      let tmp7 = obj;
     } else {
       const merged5 = Object.assign(value);
       tmp7 = obj;
@@ -106,8 +100,8 @@ function checkEqual(arr2, arr3) {
       if (arr2) {
         if (typeof arr3 === "object") {
           if (arr3) {
-            for (const key10009 in arr3) {
-              if (checkEqual(arr2[key10009], arr3[key10009])) {
+            for (const key10009 in arg1) {
+              if (checkEqual(arg0[key10009], arg1[key10009])) {
                 continue;
               } else {
                 let flag = false;
@@ -128,9 +122,9 @@ function compareAndFormatDifferences(currentStyle, arg1) {
   if (shouldMatchAllProps === undefined) {
     flag = false;
   }
-  let closure_0;
-  let closure_1;
-  let closure_2;
+  closure_0 = undefined;
+  closure_1 = undefined;
+  closure_2 = undefined;
   const items = [];
   let flag2 = true;
   let flag3 = true;
@@ -141,13 +135,10 @@ function compareAndFormatDifferences(currentStyle, arg1) {
       let arr4 = currentStyle[tmp4];
       let arr5 = arg1[tmp4];
       if (typeof checkEqual === "function") {
-        let flag4;
-        let sum1;
-        let sum;
         let _Array = Array;
         if (Array.isArray(arr5)) {
           let _Array4 = Array;
-          flag4 = false;
+          let flag4 = false;
           if (Array.isArray(arr4)) {
             flag4 = false;
             if (arr5.length === arr4.length) {
@@ -156,20 +147,19 @@ function compareAndFormatDifferences(currentStyle, arg1) {
               if (0 < arr4.length) {
                 let arr2 = arr4[num3];
                 let arr3 = arr5[num3];
-                sum1 = num3;
+                let sum1 = num3;
                 while (typeof checkEqual === "function") {
-                  let flag6;
                   let _Array5 = Array;
                   if (Array.isArray(arr3)) {
                     let _Array6 = Array;
-                    flag6 = false;
+                    let flag6 = false;
                     if (Array.isArray(arr2)) {
                       flag6 = false;
                       if (arr3.length === arr2.length) {
                         let num2 = 0;
                         flag6 = true;
                         if (0 < arr2.length) {
-                          sum = num2;
+                          let sum = num2;
                           flag6 = false;
                           while (checkEqual(arr2[num2], arr3[num2])) {
                             sum = sum + 1;
@@ -239,11 +229,10 @@ function compareAndFormatDifferences(currentStyle, arg1) {
                       let arr6 = arr4[tmp7];
                       let arr7 = arr5[tmp7];
                       if (typeof checkEqual === "function") {
-                        let flag5;
                         let _Array2 = Array;
                         if (Array.isArray(arr7)) {
                           let _Array3 = Array;
-                          flag5 = false;
+                          let flag5 = false;
                           if (Array.isArray(arr6)) {
                             flag5 = false;
                             if (arr7.length === arr6.length) {
@@ -350,35 +339,36 @@ function compareAndFormatDifferences(currentStyle, arg1) {
     }
   }
   if (flag7) {
-    return {
+    const obj3 = {
       message() {
           return "ok";
         },
       pass: true
     };
+    return obj3;
   } else {
     const _JSON = JSON;
     closure_0 = JSON.stringify(currentStyle);
     const _JSON2 = JSON;
     closure_1 = JSON.stringify(arg1);
-    const mapped = items.map((property) => {
-      property = property.property;
-      const json = JSON.stringify(property.expect);
-      return "- '" + property + "' should be " + json + ", but is " + JSON.stringify(property.current);
+    const mapped = items.map((expect) => {
+      const json = JSON.stringify(expect.expect);
+      return "- '" + expect.property + "' should be " + json + ", but is " + JSON.stringify(expect.current);
     });
     closure_2 = mapped.join("\n");
-    return {
+    const obj4 = {
       message() {
           return "Expected: " + closure_1 + "\nReceived: " + closure_0 + "\n\nDifferences:\n" + closure_2;
         },
       pass: false
     };
+    return obj4;
   }
 }
 let closure_8 = Math.round(1000 / obj.fps);
 if (!module_1646.isJest()) {
   require = () => {
-    const reanimatedError = new ReanimatedError.ReanimatedError("`setUpTests` is available only in Jest environment.");
+    const reanimatedError = new _mod1654.ReanimatedError("`setUpTests` is available only in Jest environment.");
     throw reanimatedError;
   };
 }
@@ -412,55 +402,101 @@ export const setUpTests = () => {
   let _default = global.expect;
   if (undefined === _default) {
     const tmp2 = require("expect");
-    let tmp3 = undefined !== tmp2 && undefined !== tmp2.extend;
     _default = tmp2;
     if (!tmp3) {
       _default = tmp2.default;
     }
+    tmp3 = undefined !== tmp2 && undefined !== tmp2.extend;
   }
-  let obj2 = {};
   let merged = Object.assign(obj);
   const merged1 = Object.assign(obj);
-  closure_8 = Math.round(1000 / obj2.fps);
-  const obj3 = {
+  closure_8 = Math.round(1000 / {}.fps);
+  _default.extend({
     toHaveAnimatedProps(props, arg1) {
-      let tmp3;
-      function message() {
-        return "Component doesn't have props.";
-      }
       if (props.props.jestAnimatedProps) {
-        let tmp7;
         const _Object = Object;
         if (0 === Object.keys(props.props.jestAnimatedProps.value).length) {
-          tmp7 = { message, pass: false };
-          const obj2 = { message, pass: false };
+          const obj2 = {
+            message() {
+                  return "Component doesn't have props.";
+                },
+            pass: false
+          };
+          let tmp7 = obj2;
         }
         return tmp7;
       }
-      let value;
+      value = undefined;
       if (props.props.jestAnimatedProps != null) {
         value = iter.value;
       }
       obj = {};
       if (value) {
         const merged = Object.assign(value);
+        let tmp3 = obj;
+      } else {
         tmp3 = obj;
+      }
+      tmp7 = compareAndFormatDifferences(tmp3, arg1);
+    }
+  });
+  _default.extend({
+    toHaveAnimatedStyle(props, arg1) {
+      obj = arg2;
+      if (arg2 === undefined) {
+        obj = {};
+      }
+      if (props.props.style) {
+        let obj2 = compareAndFormatDifferences(getCurrentStyle(props), arg1, obj.shouldMatchAllProps);
+      } else {
+        obj2 = {
+          message() {
+              return "Component doesn't have a style.";
+            },
+          pass: false
+        };
+      }
+      return obj2;
+    }
+  });
+  let obj2 = {};
+  const obj3 = {
+    toHaveAnimatedProps(props, arg1) {
+      if (props.props.jestAnimatedProps) {
+        const _Object = Object;
+        if (0 === Object.keys(props.props.jestAnimatedProps.value).length) {
+          const obj2 = {
+            message() {
+                  return "Component doesn't have props.";
+                },
+            pass: false
+          };
+          let tmp7 = obj2;
+        }
+        return tmp7;
+      }
+      value = undefined;
+      if (props.props.jestAnimatedProps != null) {
+        value = iter.value;
+      }
+      obj = {};
+      if (value) {
+        const merged = Object.assign(value);
+        let tmp3 = obj;
       } else {
         tmp3 = obj;
       }
       tmp7 = compareAndFormatDifferences(tmp3, arg1);
     }
   };
-  _default.extend(obj3);
   const obj4 = {
     toHaveAnimatedStyle(props, arg1) {
-      let obj2;
       obj = arg2;
       if (arg2 === undefined) {
         obj = {};
       }
       if (props.props.style) {
-        obj2 = compareAndFormatDifferences(getCurrentStyle(props), arg1, obj.shouldMatchAllProps);
+        let obj2 = compareAndFormatDifferences(getCurrentStyle(props), arg1, obj.shouldMatchAllProps);
       } else {
         obj2 = {
           message() {
@@ -472,6 +508,5 @@ export const setUpTests = () => {
       return obj2;
     }
   };
-  _default.extend(obj4);
 };
 export const getAnimatedStyle = (props) => getCurrentStyle(props);

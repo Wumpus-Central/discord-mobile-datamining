@@ -8,10 +8,9 @@ const combined = "(" + exports.NUMBER_PATTERN + ")\\s{0,3}(" + repeatedTimeunitP
 const regExp = new RegExp(combined, "i");
 
 export const parseNumberPattern = function parseNumberPattern(str) {
-  let num5;
   str = str.toLowerCase();
   if (undefined !== exports.INTEGER_WORD_DICTIONARY[str]) {
-    num5 = exports.INTEGER_WORD_DICTIONARY[str];
+    let num5 = exports.INTEGER_WORD_DICTIONARY[str];
   } else {
     num5 = 1;
     if ("un" !== str) {
@@ -50,17 +49,14 @@ export const parseOrdinalNumberPattern = function parseOrdinalNumberPattern(str)
   }
 };
 export const parseYear = function parseYear(match) {
-  const obj = /BE/i;
   if (obj.test(match)) {
     const _parseInt4 = parseInt;
     return parseInt(match.replace(/BE/i, "")) - 543;
   } else {
-    const obj2 = /BCE?/i;
     if (obj2.test(match)) {
       const _parseInt3 = parseInt;
       return -parseInt(match.replace(/BCE?/i, ""));
     } else {
-      const obj3 = /(AD|CE)/i;
       if (obj3.test(match)) {
         const _parseInt2 = parseInt;
         return parseInt(match.replace(/(AD|CE)/i, ""));
@@ -69,19 +65,21 @@ export const parseYear = function parseYear(match) {
         const parsed = parseInt(match);
         return findMostLikelyADYear.findMostLikelyADYear(parsed);
       }
+      obj3 = /(AD|CE)/i;
     }
+    obj2 = /BCE?/i;
   }
+  obj = /BE/i;
 };
 export const parseDuration = function parseDuration(arg0) {
   let str = arg0;
   const obj = {};
   let match = regExp.exec(arg0);
   while (match) {
-    let num5;
     let str2 = match[1];
     let str3 = str2.toLowerCase();
     if (undefined !== exports.INTEGER_WORD_DICTIONARY[str3]) {
-      num5 = exports.INTEGER_WORD_DICTIONARY[str3];
+      let num5 = exports.INTEGER_WORD_DICTIONARY[str3];
     } else {
       num5 = 1;
       if ("un" !== str3) {
@@ -117,7 +115,7 @@ export const parseDuration = function parseDuration(arg0) {
   }
   return obj;
 };
-export const WEEKDAY_DICTIONARY = { domenica: 0, dom: 0, "luned\u00ec": 1, lun: 1, "marted\u00ec": 2, mar: 2, "mercoled\u00ec": 3, merc: 3, "gioved\u00ec": 4, giov: 4, "venerd\u00ec": 5, ven: 5, sabato: 6, sab: 6 };
+export const WEEKDAY_DICTIONARY = { domenica: 0, dom: 0, "lunedì": 1, lun: 1, "martedì": 2, mar: 2, "mercoledì": 3, merc: 3, "giovedì": 4, giov: 4, "venerdì": 5, ven: 5, sabato: 6, sab: 6 };
 export const FULL_MONTH_NAME_DICTIONARY = {};
 export const MONTH_DICTIONARY = Object.assign(Object.assign({}, exports.FULL_MONTH_NAME_DICTIONARY), { gennaio: 1, gen: 1, "gen.": 1, febbraio: 2, feb: 2, "feb.": 2, febraio: 2, febb: 2, "febb.": 2, marzo: 3, mar: 3, "mar.": 3, aprile: 4, apr: 4, "apr.": 4, maggio: 5, mag: 5, giugno: 6, giu: 6, luglio: 7, lug: 7, lugl: 7, "lug.": 7, agosto: 8, ago: 8, settembre: 9, set: 9, "set.": 9, sett: 9, "sett.": 9, ottobre: 10, ott: 10, "ott.": 10, novembre: 11, nov: 11, "nov.": 11, dicembre: 12, dic: 12, dice: 12, "dic.": 12 });
 export const INTEGER_WORD_DICTIONARY = { uno: 1, due: 2, tre: 3, quattro: 4, cinque: 5, sei: 6, sette: 7, otto: 8, nove: 9, dieci: 10, undici: 11, dodici: 12 };

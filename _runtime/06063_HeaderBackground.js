@@ -1,28 +1,22 @@
 // === Module 6063: HeaderBackground ===
 
 // Module 6063 (HeaderBackground)
-import Fragment from "Fragment" /* 21 */;
 import Link from "Link" /* 1491 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import noop from "module_19" /* 19 */;
 
-let Platform;
-let StyleSheet;
-let c2;
-({ Animated: c2, Platform, StyleSheet } = react_native);
-const jsx = Fragment.jsx;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Animated: c2, Platform, StyleSheet } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
 const container = StyleSheet.create({ container: { flex: 1, elevation: 4 } });
 
 export const HeaderBackground = function HeaderBackground(style) {
-  let colors;
-  let dark;
-  style = style.style;
   const merged = Object.assign(style, Object.assign({ style: 0 }));
-  const obj = Link;
-  const theme = obj.useTheme();
+  const theme = Link.useTheme();
   ({ colors, dark } = theme);
-  const items = [container.container, { backgroundColor: colors.card, borderBottomColor: colors.border }, style];
-  const View = RN.View;
+  const obj2 = { style: null };
+  const items = [container.container, { backgroundColor: colors.card, borderBottomColor: colors.border }, style.style];
+  obj2.style = items;
   const merged1 = Object.assign(merged);
-  return <View style={items} />;
+  return <RN.View style={null} />;
 };

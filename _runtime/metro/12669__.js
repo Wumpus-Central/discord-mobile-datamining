@@ -2,34 +2,28 @@
 
 // Module 12669
 import _mod12580 from "module_12580" /* 12580 */;
-import _mod12583 from "module_12583" /* 12583 */;
+import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12583 */;
 import _mod12608 from "module_12608" /* 12608 */;
-import module_12636 from "module_12636" /* 12636 */;
-
-let closure_1_0;
+import setupIntegration from "module_12636" /* 12636 */;
 
 function _shouldDropEvent(message, message2) {
   let tmp = message2;
   if (tmp) {
-    let flag;
     message = message.message;
     message2 = message2.message;
     if (message) {
       if (!message) {
         if (message) {
-          flag = false;
+          let flag = false;
           if (message === message2) {
             flag = false;
             if (_isSameFingerprint(message, message2)) {
-              let flag2;
-              const obj = _mod12583;
-              const framesFromEvent = obj.getFramesFromEvent(message);
-              const obj2 = _mod12583;
-              const framesFromEvent1 = obj2.getFramesFromEvent(message2);
+              const framesFromEvent = stackParserFromStackParserOptions.getFramesFromEvent(message);
+              const framesFromEvent1 = stackParserFromStackParserOptions.getFramesFromEvent(message2);
               if (framesFromEvent) {
                 if (!framesFromEvent) {
                   if (framesFromEvent) {
-                    flag2 = false;
+                    let flag2 = false;
                     if (framesFromEvent1.length === framesFromEvent.length) {
                       let num = 0;
                       flag2 = true;
@@ -89,22 +83,19 @@ function _shouldDropEvent(message, message2) {
       let flag3 = false;
       if (message2.exception && message2.exception.values && message2.exception.values[0]) {
         flag3 = false;
-        if (message.exception && message.exception.values && message.exception.values[0]) {
+        if (iter2) {
           flag3 = false;
-          if ((message2.exception && message2.exception.values && message2.exception.values[0]).type === (message.exception && message.exception.values && message.exception.values[0]).type) {
+          if (iter.type === iter2.type) {
             flag3 = false;
-            if ((message2.exception && message2.exception.values && message2.exception.values[0]).value === (message.exception && message.exception.values && message.exception.values[0]).value) {
+            if (iter.value === iter2.value) {
               flag3 = false;
               if (_isSameFingerprint(message, message2)) {
-                let flag4;
-                const obj3 = _mod12583;
-                const framesFromEvent2 = obj3.getFramesFromEvent(message);
-                const obj4 = _mod12583;
-                const framesFromEvent3 = obj4.getFramesFromEvent(message2);
+                const framesFromEvent2 = stackParserFromStackParserOptions.getFramesFromEvent(message);
+                const framesFromEvent3 = stackParserFromStackParserOptions.getFramesFromEvent(message2);
                 if (framesFromEvent2) {
                   if (!framesFromEvent2) {
                     if (framesFromEvent2) {
-                      flag4 = false;
+                      let flag4 = false;
                       if (framesFromEvent3.length === framesFromEvent2.length) {
                         let num2 = 0;
                         flag4 = true;
@@ -179,21 +170,21 @@ function _isSameFingerprint(fingerprint, fingerprint2) {
 }
 
 export { _shouldDropEvent };
-export const dedupeIntegration = module_12636.defineIntegration(() => ({
+export const dedupeIntegration = setupIntegration.defineIntegration(() => ({
   name: "Dedupe",
   processEvent(type) {
     if (type.type) {
       return type;
     } else {
       try {
-        if (_shouldDropEvent(type, closure_1_0)) {
+        if (_shouldDropEvent(type, closure_0)) {
           if (_mod12608.DEBUG_BUILD) {
             const logger = _mod12580.logger;
             logger.warn("Event dropped due to being a duplicate of previously captured event.");
           }
           return null;
         } else {
-          closure_1_0 = type;
+          closure_0 = type;
           return type;
         }
       } catch (err) {

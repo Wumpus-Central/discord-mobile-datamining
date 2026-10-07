@@ -3,9 +3,9 @@
 // Module 6534
 
 export const getModalRouteKeys = (arr, arg1) => {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   return arr.reduce((arr, key) => {
-    let options;
+    options = undefined;
     if (closure_0[key.key] != null) {
       options = tmp.options;
     }
@@ -13,7 +13,13 @@ export const getModalRouteKeys = (arr, arg1) => {
       options = {};
     }
     const presentation = options.presentation;
-    const tmp2 = arr.length && !presentation || "modal" === presentation || "transparentModal" === presentation;
+    let tmp2 = arr.length && !presentation;
+    if (!tmp2) {
+      tmp2 = "modal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "transparentModal" === presentation;
+    }
     if (tmp2) {
       arr = arr.push(key.key);
     }

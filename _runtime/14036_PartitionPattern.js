@@ -1,8 +1,10 @@
 // === Module 14036: PartitionPattern ===
 
 // Module 14036 (PartitionPattern)
-import UNICODE_EXTENSION_SEQUENCE_REGEX from "UNICODE_EXTENSION_SEQUENCE_REGEX" /* 13988 */;
+import _mod13988 from "module_13988" /* 13988 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
 export const PartitionPattern = function PartitionPattern(arr) {
   const items = [];
@@ -16,15 +18,13 @@ export const PartitionPattern = function PartitionPattern(arr) {
         let index1 = arr.indexOf("}", index);
         let concat = "Invalid pattern ".concat;
         let tmp5 = index1 > index;
-        let invariantResult = UNICODE_EXTENSION_SEQUENCE_REGEX.invariant(tmp5, "Invalid pattern ".concat(arr));
+        let invariantResult = _mod13988.invariant(tmp5, "Invalid pattern ".concat(arr));
         if (index > num4) {
           let obj = { type: "literal", value: arr.substring(num4, index) };
-          let push = items.push;
-          arr = push(obj);
+          arr = items.push(obj);
         }
         let obj2 = { type: arr.substring(index + 1, index1), value: "Array" };
-        let push2 = items.push;
-        let push2Result = push2(obj2);
+        let arr4 = items.push(obj2);
         let sum = index1 + 1;
         let index2 = arr.indexOf("{", sum);
         num = sum;
@@ -42,9 +42,8 @@ export const PartitionPattern = function PartitionPattern(arr) {
     }
   }
   if (num < arr.length) {
-    const push3 = items.push;
-    const obj3 = { type: "literal", value: arr.substring(num, arr.length) };
-    push3(obj3);
+    const obj3 = { type: "literal", value: arr.substring(num, length) };
+    items.push(obj3);
   }
   return items;
 };

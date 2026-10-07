@@ -1,7 +1,7 @@
 // === Module 1117: valueEqual ===
 
 // Module 1117 (valueEqual)
-import valueEqual from "valueEqual" /* 1118 */;
+import _mod1118 from "module_1118" /* 1118 */;
 
 
-export default valueEqual;
+export default _mod1118;

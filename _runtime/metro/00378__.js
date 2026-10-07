@@ -2,18 +2,17 @@
 
 // Module 378
 
-export const fromOrigamiTensionAndFriction = function fromOrigamiTensionAndFriction(overshootClamping, overshootClamping2) {
+export const fromOrigamiTensionAndFriction = function fromOrigamiTensionAndFriction(overshootClamping, overshootClamping) {
   return { stiffness: 3.62 * (overshootClamping - 30) + 194, damping: 3 * (overshootClamping - 8) + 25 };
 };
-export const fromBouncinessAndSpeed = function fromBouncinessAndSpeed(overshootClamping, overshootClamping2) {
-  let sum1;
+export const fromBouncinessAndSpeed = function fromBouncinessAndSpeed(overshootClamping, overshootClamping) {
   const sum = 0.5 + overshootClamping / 1.7 / 20 * 199.5;
   const result = overshootClamping / 1.7;
   if (sum <= 18) {
     const _Math5 = Math;
     const _Math6 = Math;
     const result1 = 0.0007 * Math.pow(sum, 3);
-    sum1 = result1 - 0.031 * Math.pow(sum, 2) + 0.64 * sum + 1.28;
+    let sum1 = result1 - 0.031 * Math.pow(sum, 2) + 0.64 * sum + 1.28;
   } else {
     if (18 < sum) {
       if (sum <= 44) {

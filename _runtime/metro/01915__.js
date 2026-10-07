@@ -1,15 +1,13 @@
 // === Module 1915: ? ===
 
 // Module 1915
-const obj = {
+globalThis.IntlMessageFormat.__addLocaleData({
   locale: "lt",
   pluralRuleFunction(arg0, arg1) {
-    const str = String(arg0);
-    const parts = str.split(".");
-    const tmp2 = parts[1] || "";
+    const parts = String(arg0).split(".");
     let substr1 = Number(parts[0]) == arg0;
     let substr = substr1;
-    if (substr) {
+    if (substr1) {
       const first = parts[0];
       substr = first.slice(-1);
     }
@@ -20,17 +18,15 @@ const obj = {
     let str2 = "other";
     let str3 = "other";
     if (!arg1) {
-      let str5;
       if (1 != substr) {
         if (substr >= 2) {
-          let str7;
           if (substr <= 9) {
-            str7 = "few";
+            let str7 = "few";
             if (substr1 >= 11) {
               str7 = "few";
             }
           }
-          str5 = str7;
+          let str5 = str7;
         }
         if (0 != tmp2) {
           str2 = "many";
@@ -46,5 +42,4 @@ const obj = {
     }
     return str3;
   }
-};
-globalThis.IntlMessageFormat.__addLocaleData(obj);
+});

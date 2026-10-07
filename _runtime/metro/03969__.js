@@ -1,11 +1,11 @@
 // === Module 3969: ? ===
 
 // Module 3969
-let closure_0 = {};
+let global = {};
 
 export function getDefaultOptions() {
-  return closure_0;
+  return global;
 }
 export function setDefaultOptions(arg0) {
-  closure_0 = arg0;
+  global = arg0;
 }

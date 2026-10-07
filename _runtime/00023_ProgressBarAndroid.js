@@ -1,15 +1,14 @@
 // === Module 23: ProgressBarAndroid ===
 
 // Module 23 (ProgressBarAndroid)
-import Fragment from "Fragment" /* 21 */;
+import jsxProd from "jsxProd" /* 21 */;
 import _modDef24 from "module_24" /* 24 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-const jsx = Fragment.jsx;
+const jsx = jsxProd.jsx;
 
 export default function ProgressBarAndroid(styleAttr) {
   let str = styleAttr.styleAttr;
-  const ref = styleAttr.ref;
   if (str === undefined) {
     str = "Normal";
   }
@@ -22,7 +21,8 @@ export default function ProgressBarAndroid(styleAttr) {
     flag2 = true;
   }
   const merged = Object.assign(styleAttr, Object.assign({ ref: 0, styleAttr: 0, indeterminate: 0, animating: 0 }));
-  _modDef24;
+  const obj = { styleAttr: str, indeterminate: flag, animating: flag2 };
   const merged1 = Object.assign(merged);
-  return <tmp2 styleAttr={str} indeterminate={flag} animating={flag2} ref={ref} />;
+  obj.ref = styleAttr.ref;
+  return jsx(_modDef24, { styleAttr: str, indeterminate: flag, animating: flag2 });
 };

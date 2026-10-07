@@ -1,23 +1,19 @@
 // === Module 5744: DelayedFreeze ===
 
 // Module 5744 (DelayedFreeze)
-import Fragment from "Fragment" /* 21 */;
-import react2 from "react" /* 5745 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
+import Suspender from "Suspender" /* 5745 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
 
-export default function DelayedFreeze(freeze) {
-  let closure_1;
-  let first;
-  freeze = freeze.freeze;
-  closure_1 = undefined;
-  const children = freeze.children;
-  [first, closure_1] = react.useState(false);
+export default function DelayedFreeze(children) {
+  const freeze = children.freeze;
+  const tmp = _slicedToArray(noop.useState(false), 2);
+  closure_1 = tmp[1];
   const items = [freeze];
-  const effect = react.useEffect(() => {
-    let closure_0;
+  const effect = noop.useEffect(() => {
     const timeout = setTimeout(() => {
       closure_1_1(closure_0);
     }, 0);
@@ -25,10 +21,9 @@ export default function DelayedFreeze(freeze) {
       clearTimeout(closure_0);
     };
   }, items);
-  let freeze2 = freeze;
-  const Freeze = react2.Freeze;
-  if (freeze2) {
-    freeze2 = first;
+  let freeze1 = freeze;
+  if (freeze1) {
+    freeze1 = tmp[0];
   }
-  return <Freeze freeze={freeze2}>{children}</Freeze>;
+  return jsx(Suspender.Freeze, { freeze: freeze1, children: children.children });
 };

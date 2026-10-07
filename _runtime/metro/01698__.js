@@ -1,74 +1,48 @@
 // === Module 1698: ? ===
 
 // Module 1698
-import react_native from "react-native" /* 1647 */;
-import LayoutAnimationType from "LayoutAnimationType" /* 1668 */;
-import EasingNameSymbol from "EasingNameSymbol" /* 1695 */;
+import _mod1647 from "module_1647" /* 1647 */;
+import _mod1668 from "module_1668" /* 1668 */;
+import linear from "linear" /* 1695 */;
 import TransitionType from "TransitionType" /* 1699 */;
 import maybeModifyStyleForKeyframe from "maybeModifyStyleForKeyframe" /* 1712 */;
 import BaseAnimationBuilder from "BaseAnimationBuilder" /* 1713 */;
 import _mod1729 from "module_1729" /* 1729 */;
-import configureWebLayoutAnimations from "configureWebLayoutAnimations" /* 1730 */;
+import findDescendantWithExitingAnimation from "findDescendantWithExitingAnimation" /* 1730 */;
 import TransitionGenerator from "TransitionGenerator" /* 1731 */;
 
-let set, size;
-
+require = arg1;
+const dependencyMap = arg6;
 function startWebLayoutAnimation(props, _componentDOMRef, ENTERING, easingY) {
-  let entering;
-  function maybeReportOverwrittenProperties(style, style2) {
-    set = new Set();
-    const matchAllResult = style.matchAll(/([a-zA-Z-]+)(?=:)/g);
-    for (const item10014 of matchAllResult) {
-      let addResult = set.add(item10014[1]);
-      continue;
-    }
-    const arr = Array.from(style2);
-    const found = arr.filter((item) => set.has(item));
-    if (0 !== found.length) {
-      const logger = react_native.logger;
-      let str = "Properties";
-      const warn = logger.warn;
-      if (1 === found.length) {
-        str = "Property";
-      }
-      const _HermesInternal = HermesInternal;
-      warn("" + str + " [" + found.join(", ") + "] may be overwritten by a layout animation. Please wrap your component with an animated view and apply the layout animation on the wrapper.");
-    }
-  }
-  if (ENTERING === LayoutAnimationType.LayoutAnimationType.ENTERING) {
-    entering = props.entering;
-  } else if (ENTERING === LayoutAnimationType.LayoutAnimationType.EXITING) {
+  if (ENTERING === _mod1668.LayoutAnimationType.ENTERING) {
+    let entering = props.entering;
+  } else if (ENTERING === _mod1668.LayoutAnimationType.EXITING) {
     entering = props.exiting;
   } else {
     entering = null;
-    if (ENTERING === LayoutAnimationType.LayoutAnimationType.LAYOUT) {
+    if (ENTERING === _mod1668.LayoutAnimationType.LAYOUT) {
       entering = props.layout;
     }
   }
   let processedConfig = null;
   if (entering) {
-    let presetName;
-    const LAYOUT = LayoutAnimationType.LayoutAnimationType.LAYOUT;
     const tmp5 = entering instanceof BaseAnimationBuilder.Keyframe;
-    const initialValues = entering.initialValues;
     if (tmp5) {
+      let presetName = TransitionGenerator.createCustomKeyFrameAnimation(entering.definitions);
       const tmpResult = TransitionGenerator;
-      presetName = tmpResult.createCustomKeyFrameAnimation(entering.definitions);
     } else if (typeof entering === "function") {
       presetName = entering.presetName;
     } else {
       presetName = entering.constructor.presetName;
     }
     let animationWithInitialValues = presetName;
-    if (undefined !== initialValues) {
+    if (undefined !== entering.initialValues) {
+      animationWithInitialValues = TransitionGenerator.createAnimationWithInitialValues(presetName, entering.initialValues);
       const tmpResult8 = TransitionGenerator;
-      animationWithInitialValues = tmpResult8.createAnimationWithInitialValues(presetName, entering.initialValues);
     }
-    const tmp8 = ENTERING === LAYOUT || tmp5 || undefined !== initialValues;
-    let flag = !(animationWithInitialValues in TransitionType.Animations) && !tmp8;
+    let flag = !(animationWithInitialValues in TransitionType.Animations) && !(ENTERING === _mod1668.LayoutAnimationType.LAYOUT || tmp5 || undefined !== entering.initialValues);
     if (flag) {
-      let logger = react_native.logger;
-      let str = "Couldn't load entering/exiting animation. Current version supports only predefined animations with modifiers: duration, delay, easing, randomizeDelay, withCallback, reducedMotion.";
+      let logger = _mod1647.logger;
       logger.warn("Couldn't load entering/exiting animation. Current version supports only predefined animations with modifiers: duration, delay, easing, randomizeDelay, withCallback, reducedMotion.");
       flag = true;
     }
@@ -82,53 +56,68 @@ function startWebLayoutAnimation(props, _componentDOMRef, ENTERING, easingY) {
           hasItem = keys.includes("to");
         }
         if (!hasItem) {
-          const logger2 = react_native.logger;
+          const logger2 = _mod1647.logger;
           logger2.warn("Neither '100' nor 'to' was specified in Keyframe definition. This may result in wrong final position of your component. One possible solution is to duplicate last timestamp in definition as '100' (or 'to')");
         }
       }
+      processedConfig = maybeModifyStyleForKeyframe.getProcessedConfig(animationWithInitialValues, ENTERING, entering);
       const tmpResult9 = maybeModifyStyleForKeyframe;
-      processedConfig = tmpResult9.getProcessedConfig(animationWithInitialValues, ENTERING, entering);
     }
+    const tmp8 = ENTERING === _mod1668.LayoutAnimationType.LAYOUT || tmp5 || undefined !== entering.initialValues;
   }
-  const tmpResult10 = maybeModifyStyleForKeyframe;
-  const result = tmpResult10.maybeModifyStyleForKeyframe(_componentDOMRef, props.entering);
+  const result = maybeModifyStyleForKeyframe.maybeModifyStyleForKeyframe(_componentDOMRef, props.entering);
   let animationName;
   if (processedConfig != null) {
     animationName = processedConfig.animationName;
   }
   if (animationName in TransitionType.Animations) {
     let animationName1;
-    const Animations = TransitionType.Animations;
     if (processedConfig != null) {
       animationName1 = processedConfig.animationName;
     }
-    maybeReportOverwrittenProperties(Animations[animationName1].style, _componentDOMRef.style);
+    (function maybeReportOverwrittenProperties(style, style2) {
+      const set = new Set();
+      for (const item10014 of matchAllResult) {
+        let addResult = set.add(item10014[1]);
+        continue;
+      }
+      const matchAllResult = style.matchAll(/([a-zA-Z-]+)(?=:)/g);
+      const found = Array.from(style2).filter((item) => set.has(item));
+      if (0 !== found.length) {
+        const logger = _mod1647.logger;
+        let str = "Properties";
+        if (1 === found.length) {
+          str = "Property";
+        }
+        const _HermesInternal = HermesInternal;
+        logger.warn("" + str + " [" + found.join(", ") + "] may be overwritten by a layout animation. Please wrap your component with an animated view and apply the layout animation on the wrapper.");
+      }
+      const arr = Array.from(style2);
+    })(TransitionType.Animations[animationName1].style, _componentDOMRef.style);
   }
   if (processedConfig) {
-    if (LayoutAnimationType.LayoutAnimationType.ENTERING === ENTERING) {
+    if (_mod1668.LayoutAnimationType.ENTERING === ENTERING) {
+      maybeModifyStyleForKeyframe.setElementAnimation(_componentDOMRef, processedConfig, true);
       const tmpResult11 = maybeModifyStyleForKeyframe;
-      tmpResult11.setElementAnimation(_componentDOMRef, processedConfig, true);
-    } else if (LayoutAnimationType.LayoutAnimationType.LAYOUT === ENTERING) {
+    } else if (_mod1668.LayoutAnimationType.LAYOUT === ENTERING) {
       easingY.reversed = processedConfig.reversed;
+      const result1 = maybeModifyStyleForKeyframe.handleLayoutTransition(_componentDOMRef, processedConfig, easingY);
       const tmpResult12 = maybeModifyStyleForKeyframe;
-      const result1 = tmpResult12.handleLayoutTransition(_componentDOMRef, processedConfig, easingY);
-    } else if (LayoutAnimationType.LayoutAnimationType.EXITING === ENTERING) {
+    } else if (_mod1668.LayoutAnimationType.EXITING === ENTERING) {
+      const result2 = maybeModifyStyleForKeyframe.handleExitingAnimation(_componentDOMRef, processedConfig);
       const tmpResult13 = maybeModifyStyleForKeyframe;
-      const result2 = tmpResult13.handleExitingAnimation(_componentDOMRef, processedConfig);
     }
   } else {
+    const elementVisible = _mod1729.makeElementVisible(_componentDOMRef, 0);
     const tmpResult14 = _mod1729;
-    const elementVisible = tmpResult14.makeElementVisible(_componentDOMRef, 0);
   }
+  const tmpResult10 = maybeModifyStyleForKeyframe;
 }
 
 export { startWebLayoutAnimation };
 export const tryActivateLayoutTransition = function tryActivateLayoutTransition(props, _componentDOMRef, arg2) {
-  let str;
-  let str2;
   if (props.layout) {
-    size = _componentDOMRef.getBoundingClientRect();
-    const obj = configureWebLayoutAnimations;
+    const size = _componentDOMRef.getBoundingClientRect();
     if (!obj.areDOMRectsEqual(size, arg2)) {
       const enteringV = props.layout.enteringV;
       let presetName;
@@ -140,24 +129,29 @@ export const tryActivateLayoutTransition = function tryActivateLayoutTransition(
       if (exitingV != null) {
         presetName1 = exitingV.presetName;
       }
+      const obj2 = { translateX: arg2.x - size.x + (arg2.width - size.width) / 2, translateY: arg2.y - size.y + (arg2.height - size.height) / 2, scaleX: arg2.width / size.width, scaleY: arg2.height / size.height, reversed: false, easingX: null, easingY: null, entering: null, exiting: null };
       const easingXV = props.layout.easingXV;
-      const obj2 = { translateX: arg2.x - size.x + (arg2.width - size.width) / 2, translateY: arg2.y - size.y + (arg2.height - size.height) / 2, scaleX: arg2.width / size.width, scaleY: arg2.height / size.height, reversed: false, easingX: str, easingY: str2, entering: presetName, exiting: presetName1 };
-      str = undefined;
+      let str;
       if (easingXV != null) {
-        str = easingXV[EasingNameSymbol.EasingNameSymbol];
+        str = easingXV[linear.EasingNameSymbol];
       }
       if (str == null) {
         str = "ease";
       }
+      obj2.easingX = str;
       const easingYV = props.layout.easingYV;
-      str2 = undefined;
+      let str2;
       if (easingYV != null) {
-        str2 = easingYV[EasingNameSymbol.EasingNameSymbol];
+        str2 = easingYV[linear.EasingNameSymbol];
       }
       if (str2 == null) {
         str2 = "ease";
       }
-      startWebLayoutAnimation(props, _componentDOMRef, LayoutAnimationType.LayoutAnimationType.LAYOUT, obj2);
+      obj2.easingY = str2;
+      obj2.entering = presetName;
+      obj2.exiting = presetName1;
+      startWebLayoutAnimation(props, _componentDOMRef, _mod1668.LayoutAnimationType.LAYOUT, obj2);
     }
+    obj = findDescendantWithExitingAnimation;
   }
 };

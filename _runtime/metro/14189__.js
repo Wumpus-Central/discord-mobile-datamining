@@ -4,8 +4,7 @@
 
 export const getReactNativeVersionWithModules = function getReactNativeVersionWithModules(constants) {
   try {
-    const tmp = constants;
-    if (tmp) {
+    if (constants) {
       if (constants.reactNativeVersion) {
         const major = constants.reactNativeVersion.major;
         const minor = constants.reactNativeVersion.minor;
@@ -17,10 +16,9 @@ export const getReactNativeVersionWithModules = function getReactNativeVersionWi
           const items = [];
           const _HermesInternal2 = HermesInternal;
           items.push("" + tmp4 + "." + minor + "." + patch);
-          const tmp16 = prerelease;
-          if (tmp16) {
+          if (prerelease) {
             const _HermesInternal = HermesInternal;
-            items.push("-" + prerelease);
+            arr2.push("-" + prerelease);
           }
           return items.join("");
         }

@@ -1,21 +1,25 @@
 // === Module 207: ? ===
 
 // Module 207
-import _modDef133 from "module_133" /* 133 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import EventDefault from "Event" /* 133 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import map from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -23,52 +27,55 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
 class ProgressEvent {
-  constructor(arg0, lengthComputable) {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, ProgressEvent);
-    const items = [arg0, lengthComputable];
-    const obj = _getPrototypeOf(ProgressEvent);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+  constructor(arg0, arg1) {
+    self = this;
+    tmp = closure_0(this, ProgressEvent);
+    items = [, ];
+    items[0] = global;
+    items[1] = arg1;
+    tmp2 = c2;
+    obj = c2(ProgressEvent);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    const tmp3Result = map(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
     lengthComputable = undefined;
-    const _Boolean = Boolean;
-    if (lengthComputable != null) {
-      lengthComputable = lengthComputable.lengthComputable;
+    if (arg1 != null) {
+      lengthComputable = arg1.lengthComputable;
     }
-    tmp3Result._lengthComputable = _Boolean(lengthComputable);
-    let loaded;
-    const _Number = Number;
-    if (lengthComputable != null) {
-      loaded = lengthComputable.loaded;
+    tmp3Result._lengthComputable = Boolean(lengthComputable);
+    loaded = undefined;
+    if (arg1 != null) {
+      loaded = arg1.loaded;
     }
-    tmp3Result._loaded = _Number(loaded) || 0;
-    let total;
-    const _Number2 = Number;
-    _Number(loaded) || 0;
-    if (lengthComputable != null) {
-      total = lengthComputable.total;
+    tmp9 = Number(loaded) || 0;
+    tmp3Result._loaded = tmp9;
+    total = undefined;
+    if (arg1 != null) {
+      total = arg1.total;
     }
-    tmp3Result._total = _Number2(total) || 0;
-    _Number2(total) || 0;
+    tmp11 = Number(total) || 0;
+    tmp3Result._total = tmp11;
     return tmp3Result;
   }
 }
-_inherits(ProgressEvent, _modDef133);
-let obj = {
-  key: "lengthComputable",
-  get() {
-    return this._lengthComputable;
-  }
-};
+_classCallCheck = ProgressEvent;
+_inherits(ProgressEvent, EventDefault);
 let items = [
-  obj,
+  {
+    key: "lengthComputable",
+    get() {
+      return this._lengthComputable;
+    }
+  },
   {
     key: "loaded",
     get() {

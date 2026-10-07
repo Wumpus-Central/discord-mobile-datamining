@@ -1,15 +1,13 @@
 // === Module 1866: ? ===
 
 // Module 1866
-import Fragment from "Fragment" /* 21 */;
 import TEST_ID_KEYBOARD_TOOLBAR from "TEST_ID_KEYBOARD_TOOLBAR" /* 1861 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import noop from "module_19" /* 19 */;
 
-let StyleSheet;
-let c2;
-({ StyleSheet, View: c2 } = react_native);
-const jsx = Fragment.jsx;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet, View: c2 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
 const styles = StyleSheet.create({ flex: { flex: 1 } });
 
 export default function _default(children) {

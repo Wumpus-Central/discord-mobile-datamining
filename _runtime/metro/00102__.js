@@ -3,12 +3,12 @@
 // Module 102
 let closure_0 = { "0.75": "ldpi", 1: "mdpi", "1.5": "hdpi", 2: "xhdpi", 3: "xxhdpi", 4: "xxxhdpi" };
 const set = new Set(["gif", "heic", "heif", "jpeg", "jpg", "ktx", "png", "webp", "xml"]);
-const obj = {
+
+export default {
   getAndroidResourceFolderName(asset, arg1) {
     if (set.has(asset.type)) {
-      let text;
       if (arg1.toString() in closure_0) {
-        text = closure_0[arg1.toString(arg1)];
+        let text = closure_0[arg1.toString(arg1)];
       } else {
         const _Number = Number;
         if (Number.isFinite(arg1)) {
@@ -18,8 +18,6 @@ const obj = {
           }
         }
         const _Error = Error;
-        const self = this;
-        const self2 = this;
         const error = new Error("no such scale " + arg1.toString());
         throw error;
       }
@@ -32,8 +30,6 @@ const obj = {
         const _JSON2 = JSON;
         const text2 = `${`Don't know which android drawable suffix to use for scale: ${arg1}`}
     Asset: ${JSON.stringify(asset, null, "\t")}`;
-        const self3 = this;
-        const self4 = this;
         const error1 = new Error(text2 + "\nPossible scales are:" + JSON.stringify(closure_0, null, "\t"));
         throw error1;
       }
@@ -48,10 +44,9 @@ const obj = {
       substr = httpServerLocation.slice(1);
     }
     const str = `${tmp}/${asset.name}`;
-    const str2 = str.toLowerCase();
-    const str3 = str2.replace(/\//g, "_");
-    const str4 = str3.replace(/([^a-z0-9_])/g, "");
-    return str4.replace(/^(?:assets|assetsunstable_path)_/, "");
+    const str2 = `${tmp}/${asset.name}`.toLowerCase();
+    const str3 = `${tmp}/${asset.name}`.toLowerCase().replace(/\//g, "_");
+    return `${tmp}/${asset.name}`.toLowerCase().replace(/\//g, "_").replace(/([^a-z0-9_])/g, "").replace(/^(?:assets|assetsunstable_path)_/, "");
   },
   getBasePath(asset) {
     const httpServerLocation = asset.httpServerLocation;
@@ -62,5 +57,3 @@ const obj = {
     return substr;
   }
 };
-
-export default obj;

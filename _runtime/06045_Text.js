@@ -1,27 +1,20 @@
 // === Module 6045: Text ===
 
 // Module 6045 (Text)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
+import _mod17 from "module_17" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 import Link from "Link" /* 1491 */;
 
-const Text = react_native.Text;
-const jsx = Fragment.jsx;
-const Text_export = function Text(style) {
-  let colors;
-  let fonts;
-  style = style.style;
+const Text = _mod17.Text;
+const jsx = jsxProd.jsx;
+
+export const Text = function Text(style) {
   const merged = Object.assign(style, Object.assign({ style: 0 }));
-  const obj = Link;
-  const theme = obj.useTheme();
+  const theme = Link.useTheme();
+  const obj2 = {};
   ({ colors, fonts } = theme);
   const merged1 = Object.assign(merged);
-  const items = [, , ];
-  const obj3 = { color: colors.text };
-  items[0] = obj3;
-  items[1] = fonts.regular;
-  items[2] = style;
-  return <Text style={items} />;
+  const items = [{ color: colors.text }, fonts.regular, style.style];
+  obj2.style = items;
+  return <Text />;
 };
-
-export { Text_export as Text };

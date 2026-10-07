@@ -1,10 +1,10 @@
 // === Module 7379: ? ===
 
 // Module 7379
-const obj = {
+
+export default {
   ApertureValue(arg0) {
-    const powResult = Math.pow(Math.sqrt(2), arg0[0] / arg0[1]);
-    return powResult.toFixed(2);
+    return Math.pow(Math.sqrt(2), arg0[0] / arg0[1]).toFixed(2);
   },
   ColorSpace(parsed) {
     let str = "sRGB";
@@ -133,21 +133,19 @@ const obj = {
   },
   ExposureTime(arg0) {
     if (arg0[0] / arg0[1] > 0.25) {
-      let text;
       const result = arg0[0] / arg0[1];
       const _Number = Number;
       if (Number.isInteger(result)) {
-        text = `${obj}`;
+        let text = `${obj}`;
       } else {
         text = result.toFixed(1);
       }
       return text;
     } else {
-      let combined;
       if (0 !== arg0[0]) {
         const _Math = Math;
         const _HermesInternal2 = HermesInternal;
-        combined = "1/" + Math.round(arg0[1] / arg0[0]);
+        let combined = "1/" + Math.round(arg0[1] / arg0[0]);
       } else {
         const _HermesInternal = HermesInternal;
         combined = "0/" + arg0[1];
@@ -156,8 +154,7 @@ const obj = {
     }
   },
   FNumber(arg0) {
-    const NumberResult = Number(arg0[0] / arg0[1]);
-    return "f/" + NumberResult.toFixed(1);
+    return "f/" + Number(arg0[0] / arg0[1]).toFixed(1);
   },
   FocalLength(arg0) {
     return arg0[0] / arg0[1] + " mm";
@@ -359,12 +356,11 @@ const obj = {
     return str;
   },
   ShutterSpeedValue(arg0) {
-    let combined;
     const powResult = Math.pow(2, arg0[0] / arg0[1]);
     if (powResult <= 1) {
       const _Math2 = Math;
       const _HermesInternal2 = HermesInternal;
-      combined = "" + Math.round(1 / powResult);
+      let combined = "" + Math.round(1 / powResult);
     } else {
       const _Math = Math;
       const _HermesInternal = HermesInternal;
@@ -390,5 +386,3 @@ const obj = {
     return "" + Math.round(arg0[0] / arg0[1]);
   }
 };
-
-export default obj;

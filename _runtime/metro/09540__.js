@@ -9,202 +9,13 @@ import QRPolynomial from "QRPolynomial" /* 9547 */;
 
 class QRCode {
   constructor(arg0, arg1) {
-
-  }
-  static createData(arg0, arg1, arg2) {
-    let length;
-    let length2;
-    let result1;
-    const obj = QRRSBlock;
-    const rSBlocks = obj.getRSBlocks(arg0, arg1);
-    const obj2 = new QRBitBuffer();
-    let num = 0;
-    if (0 < arg2.length) {
-      do {
-        let obj3 = arg2[num];
-        let putResult = obj2.put(obj3.mode, 4);
-        let put = obj2.put;
-        let length1 = obj3.getLength();
-        let obj4 = _mod9546;
-        let putResult1 = put(length1, obj4.getLengthInBits(obj3.mode, arg0));
-        let writeResult = obj3.write(obj2);
-        num = num + 1;
-        length = arg2.length;
-      } while (num < length);
-    }
-    let num2 = 0;
-    let num3 = 0;
-    let num4 = 0;
-    if (0 < rSBlocks.length) {
-      do {
-        num2 = num2 + rSBlocks[num3].dataCount;
-        num3 = num3 + 1;
-        num4 = num2;
-        length2 = rSBlocks.length;
-      } while (num3 < length2);
-    }
-    const result = 8 * num4;
-    if (obj2.getLengthInBits() > result) {
-      const _Error = Error;
-      const self = this;
-      const self2 = this;
-      const error = new Error("code length overflow. (" + obj2.getLengthInBits() + ">" + result + ")");
-      throw error;
-    } else {
-      if (obj2.getLengthInBits() + 4 <= result) {
-        obj2.put(0, 4);
-      }
-      if (obj2.getLengthInBits() % 8 !== 0) {
-        do {
-          let putBitResult = obj2.putBit(false);
-          result1 = obj2.getLengthInBits() % 8;
-        } while (result1 !== 0);
-      }
-      if (obj2.getLengthInBits() < result) {
-        obj2.put(QRCode.PAD0, 8);
-        if (obj2.getLengthInBits() < result) {
-          obj2.put(QRCode.PAD1, 8);
-          while (obj2.getLengthInBits() < result) {
-            let putResult5 = obj2.put(QRCode.PAD0, 8);
-            if (obj2.getLengthInBits() >= result) {
-              break;
-            }
-          }
-        }
-      }
-      return QRCode.createBytes(obj2, rSBlocks);
-    }
-  }
-  static createBytes(arg0, arg1) {
-    let length;
-    let length2;
-    const array = new Array(arg1.length);
-    const array5 = new Array(arg1.length);
-    let num = 0;
-    let num2 = 0;
-    let num3 = 0;
-    let num4 = 0;
-    let num5 = 0;
-    let num6 = 0;
-    if (0 < arg1.length) {
-      do {
-        let num8;
-        let dataCount = arg1[num].dataCount;
-        let diff = arg1[num].totalCount - dataCount;
-        let _Math = Math;
-        let bound = Math.max(num3, dataCount);
-        let _Math2 = Math;
-        let bound1 = Math.max(num2, diff);
-        let _Array = Array;
-        let self = this;
-        let self2 = this;
-        let array6 = new Array(dataCount);
-        array[num] = array6;
-        let num7 = 0;
-        if (0 < array[num].length) {
-          do {
-            array[num][num7] = 255 & arg0.buffer[num7 + num4];
-            num7 = num7 + 1;
-            length = array[num].length;
-          } while (num7 < length);
-        }
-        let sum = num4 + dataCount;
-        let obj = _mod9546;
-        let errorCorrectPolynomial = obj.getErrorCorrectPolynomial(diff);
-        let tmp14 = QRPolynomial;
-        let self3 = this;
-        let self4 = this;
-        let tmp142 = new tmp14(array[num], errorCorrectPolynomial.getLength() - 1);
-        let modResult = tmp142.mod(errorCorrectPolynomial);
-        let _Array2 = Array;
-        let self5 = this;
-        let self6 = this;
-        let array7 = new Array(errorCorrectPolynomial.getLength() - 1);
-        array5[num] = array7;
-        for (let num8 = 0; num8 < array5[num].length; num8 = num8 + 1) {
-          let diff1 = num8 + modResult.getLength() - array5[num].length;
-          let num9 = 0;
-          let tmp19 = array5[num];
-          if (0 <= diff1) {
-            num9 = modResult.get(diff1);
-          }
-          tmp19[num8] = num9;
-        }
-        num = num + 1;
-        num2 = bound1;
-        num3 = bound;
-        num4 = sum;
-        num5 = bound1;
-        num6 = bound;
-      } while (num < arg1.length);
-    }
-    let num10 = 0;
-    let num11 = 0;
-    let num12 = 0;
-    if (0 < arg1.length) {
-      do {
-        num10 = num10 + arg1[num11].totalCount;
-        num11 = num11 + 1;
-        num12 = num10;
-        length2 = arg1.length;
-      } while (num11 < length2);
-    }
-    const array8 = new Array(num12);
-    let num13 = 0;
-    let num14 = 0;
-    let num15 = 0;
-    if (0 < num6) {
-      do {
-        let tmp22 = num13;
-        let num16 = 0;
-        let tmp24 = num13;
-        if (0 < arg1.length) {
-          do {
-            let sum1 = tmp22;
-            if (num14 < array[num16].length) {
-              sum1 = tmp22 + 1;
-              array8[tmp22] = array[num16][num14];
-            }
-            num16 = num16 + 1;
-            tmp22 = sum1;
-            tmp24 = sum1;
-          } while (num16 < arg1.length);
-        }
-        num14 = num14 + 1;
-        num13 = tmp24;
-        num15 = tmp24;
-      } while (num14 < num6);
-    }
-    let num17 = 0;
-    if (0 < num5) {
-      do {
-        let tmp28 = num15;
-        let num18 = 0;
-        let tmp30 = num15;
-        if (0 < arg1.length) {
-          do {
-            let sum2 = tmp28;
-            if (num17 < array5[num18].length) {
-              sum2 = tmp28 + 1;
-              array8[tmp28] = array5[num18][num17];
-            }
-            num18 = num18 + 1;
-            tmp28 = sum2;
-            tmp30 = sum2;
-          } while (num18 < arg1.length);
-        }
-        num17 = num17 + 1;
-        num15 = tmp30;
-      } while (num17 < num5);
-    }
-    return array8;
+    return;
   }
 }
 const prototype = QRCode.prototype;
 prototype.addData = function(arg0) {
   const dataList = this.dataList;
-  const tmp = new QR8bitByte(arg0);
-  dataList.push(tmp);
+  dataList.push(new QR8bitByte(arg0));
   this.dataCache = null;
 };
 prototype.isDark = function(arg0, arg1) {
@@ -225,17 +36,15 @@ prototype.getModuleCount = function() {
   return this.moduleCount;
 };
 prototype.make = function() {
-  let length;
-  let length2;
-  let tmp11;
+  let tmp13;
   const self = this;
   let num = 1;
   if (this.typeNumber < 1) {
     while (true) {
       let obj = QRRSBlock;
       let rSBlocks = obj.getRSBlocks(num, self.errorCorrectLevel);
-      let self2 = this;
-      let self3 = this;
+      let tmp3 = new.target;
+      let tmp4 = new.target;
       let obj2 = new QRBitBuffer();
       let num2 = 0;
       let num3 = 0;
@@ -253,32 +62,30 @@ prototype.make = function() {
         do {
           let obj3 = self.dataList[num5];
           let putResult = obj2.put(obj3.mode, 4);
-          let put = obj2.put;
           let length1 = obj3.getLength();
           let obj4 = _mod9546;
-          let putResult1 = put(length1, obj4.getLengthInBits(obj3.mode, num));
+          let putResult1 = obj2.put(length1, obj4.getLengthInBits(obj3.mode, num));
           let writeResult = obj3.write(obj2);
           num5 = num5 + 1;
           length2 = self.dataList.length;
         } while (num5 < length2);
       }
-      tmp11 = num;
+      tmp13 = num;
       if (obj2.getLengthInBits() <= 8 * num4) {
         break;
       } else {
         num = num + 1;
-        tmp11 = num;
+        tmp13 = num;
         if (num >= 40) {
           break;
         }
       }
     }
-    self.typeNumber = tmp11;
+    self.typeNumber = tmp13;
   }
   const impl = self.makeImpl(false, self.getBestMaskPattern());
 };
 prototype.makeImpl = function(arg0, arg1) {
-  let moduleCount;
   const self = this;
   this.moduleCount = 4 * this.typeNumber + 17;
   const array = new Array(this.moduleCount);
@@ -287,11 +94,10 @@ prototype.makeImpl = function(arg0, arg1) {
   if (0 < this.moduleCount) {
     do {
       let _Array = Array;
-      let self2 = this;
-      let self3 = this;
-      let modules = self.modules;
+      let tmp2 = new.target;
+      let tmp3 = new.target;
       let array2 = new Array(self.moduleCount);
-      modules[num] = array2;
+      self.modules[num] = array2;
       let num2 = 0;
       if (0 < self.moduleCount) {
         do {
@@ -330,44 +136,46 @@ prototype.setupPositionProbePattern = function(arg0, arg1) {
             tmp2 = self.moduleCount <= arg1 + num2;
           }
           if (!tmp2) {
-            let tmp6 = tmp16;
-            let tmp4 = self.modules[arg0 + num];
+            let tmp5 = tmp15;
             let sum = arg1 + num2;
             if (0 <= num) {
-              tmp6 = tmp15;
+              tmp5 = tmp14;
             }
-            if (tmp6) {
-              let tmp7 = 0 === num2 || 6 === num2;
-              tmp6 = tmp7;
+            if (tmp5) {
+              let tmp6 = 0 === num2;
+              if (0 !== num2) {
+                tmp6 = 6 === num2;
+              }
+              tmp5 = tmp6;
             }
-            if (!tmp6) {
-              let tmp8 = 0 <= num2;
+            if (!tmp5) {
+              let tmp7 = 0 <= num2;
               if (0 <= num2) {
-                tmp8 = num2 <= 6;
+                tmp7 = num2 <= 6;
               }
-              if (tmp8) {
-                let tmp9 = tmp14;
+              if (tmp7) {
+                let tmp8 = tmp13;
                 if (0 !== num) {
-                  tmp9 = tmp13;
+                  tmp8 = tmp12;
                 }
-                tmp8 = tmp9;
+                tmp7 = tmp8;
               }
-              tmp6 = tmp8;
+              tmp5 = tmp7;
             }
-            if (!tmp6) {
-              let tmp10 = tmp12;
+            if (!tmp5) {
+              let tmp9 = tmp11;
               if (2 <= num) {
-                tmp10 = tmp11;
+                tmp9 = tmp10;
               }
-              if (tmp10) {
-                tmp10 = 2 <= num2;
+              if (tmp9) {
+                tmp9 = 2 <= num2;
               }
-              if (tmp10) {
-                tmp10 = num2 <= 4;
+              if (tmp9) {
+                tmp9 = num2 <= 4;
               }
-              tmp6 = tmp10;
+              tmp5 = tmp9;
             }
-            tmp4[sum] = tmp6;
+            self.modules[arg0 + num][sum] = tmp5;
           }
           num2 = num2 + 1;
         } while (num2 <= 7);
@@ -409,7 +217,6 @@ prototype.createMovieClip = function(createEmptyMovieClip, arg1, arg2) {
   let num = 0;
   if (0 < this.modules.length) {
     do {
-      let num2;
       let tmp2 = num;
       let sum = tmp2 + 1;
       for (let num2 = 0; num2 < self.modules[num].length; num2 = num2 + 1) {
@@ -451,12 +258,9 @@ prototype.setupTimingPattern = function() {
   }
 };
 prototype.setupPositionAdjustPattern = function() {
-  let num;
   const self = this;
-  const obj = _mod9546;
-  const patternPosition = obj.getPatternPosition(this.typeNumber);
+  const patternPosition = _mod9546.getPatternPosition(this.typeNumber);
   for (let num = 0; num < patternPosition.length; num = num + 1) {
-    let num2;
     for (let num2 = 0; num2 < patternPosition.length; num2 = num2 + 1) {
       let tmp2 = patternPosition[num];
       let tmp3 = patternPosition[num2];
@@ -465,26 +269,25 @@ prototype.setupPositionAdjustPattern = function() {
         let num4 = -2;
         do {
           do {
-            let tmp12 = tmp7;
-            let tmp9 = self.modules[tmp2 + num3];
+            let tmp11 = tmp7;
             let sum = tmp3 + num4;
             if (-2 !== num3) {
-              tmp12 = tmp6;
+              tmp11 = tmp6;
             }
-            if (!tmp12) {
-              tmp12 = -2 === num4;
+            if (!tmp11) {
+              tmp11 = -2 === num4;
             }
-            if (!tmp12) {
-              tmp12 = 2 === num4;
+            if (!tmp11) {
+              tmp11 = 2 === num4;
             }
-            if (!tmp12) {
-              let tmp13 = tmp5;
+            if (!tmp11) {
+              let tmp12 = tmp5;
               if (0 === num3) {
-                tmp13 = 0 === num4;
+                tmp12 = 0 === num4;
               }
-              tmp12 = tmp13;
+              tmp11 = tmp12;
             }
-            tmp9[sum] = tmp12;
+            self.modules[tmp2 + num3][sum] = tmp11;
             num4 = num4 + 1;
           } while (num4 <= 2);
           num3 = num3 + 1;
@@ -496,8 +299,7 @@ prototype.setupPositionAdjustPattern = function() {
 prototype.setupTypeNumber = function(arg0) {
   let num2;
   const self = this;
-  const obj = _mod9546;
-  const bCHTypeNumber = obj.getBCHTypeNumber(this.typeNumber);
+  const bCHTypeNumber = _mod9546.getBCHTypeNumber(this.typeNumber);
   let num = 0;
   do {
     let tmp2 = !arg0;
@@ -522,9 +324,7 @@ prototype.setupTypeNumber = function(arg0) {
 prototype.setupTypeInfo = function(arg0, arg1) {
   let num2;
   const self = this;
-  const tmp = this.errorCorrectLevel << 3 | arg1;
-  const obj = _mod9546;
-  const bCHTypeInfo = obj.getBCHTypeInfo(tmp);
+  const bCHTypeInfo = _mod9546.getBCHTypeInfo(this.errorCorrectLevel << 3 | arg1);
   let num = 0;
   do {
     let tmp3 = !arg0;
@@ -577,12 +377,10 @@ prototype.mapData = function(arg0, arg1) {
       let tmp14 = tmp9;
       let num4 = 0;
       while (true) {
-        let sum;
-        let num5;
         do {
           let diff3 = diff2 - num4;
-          sum = tmp13;
-          num5 = tmp14;
+          let sum = tmp13;
+          let num5 = tmp14;
           if (null == self.modules[tmp10][diff3]) {
             let flag = false;
             if (tmp13 < arg0.length) {
@@ -622,5 +420,186 @@ prototype.mapData = function(arg0, arg1) {
 };
 QRCode.PAD0 = 236;
 QRCode.PAD1 = 17;
+QRCode.createData = (arg0, arg1, arg2) => {
+  let length;
+  let length2;
+  let result1;
+  const rSBlocks = QRRSBlock.getRSBlocks(arg0, arg1);
+  const obj2 = new QRBitBuffer();
+  let num = 0;
+  if (0 < arg2.length) {
+    do {
+      let obj3 = arg2[num];
+      let putResult = obj2.put(obj3.mode, 4);
+      let length1 = obj3.getLength();
+      let obj4 = _mod9546;
+      let putResult1 = obj2.put(length1, obj4.getLengthInBits(obj3.mode, arg0));
+      let writeResult = obj3.write(obj2);
+      num = num + 1;
+      length = arg2.length;
+    } while (num < length);
+  }
+  let num2 = 0;
+  let num3 = 0;
+  let num4 = 0;
+  if (0 < rSBlocks.length) {
+    do {
+      num2 = num2 + rSBlocks[num3].dataCount;
+      num3 = num3 + 1;
+      num4 = num2;
+      length2 = rSBlocks.length;
+    } while (num3 < length2);
+  }
+  const result = 8 * num4;
+  if (obj2.getLengthInBits() > result) {
+    const _Error = Error;
+    const error = new Error("code length overflow. (" + obj2.getLengthInBits() + ">" + result + ")");
+    throw error;
+  } else {
+    if (obj2.getLengthInBits() + 4 <= result) {
+      obj2.put(0, 4);
+    }
+    if (obj2.getLengthInBits() % 8 !== 0) {
+      do {
+        let putBitResult = obj2.putBit(false);
+        result1 = obj2.getLengthInBits() % 8;
+      } while (result1 !== 0);
+    }
+    if (obj2.getLengthInBits() < result) {
+      obj2.put(QRCode.PAD0, 8);
+      if (obj2.getLengthInBits() < result) {
+        obj2.put(QRCode.PAD1, 8);
+        while (obj2.getLengthInBits() < result) {
+          let putResult5 = obj2.put(QRCode.PAD0, 8);
+          if (obj2.getLengthInBits() >= result) {
+            break;
+          }
+        }
+      }
+    }
+    return QRCode.createBytes(obj2, rSBlocks);
+  }
+};
+QRCode.createBytes = (arg0, arg1) => {
+  let length2;
+  const array = new Array(arg1.length);
+  const array5 = new Array(arg1.length);
+  let num = 0;
+  let num2 = 0;
+  let num3 = 0;
+  let num4 = 0;
+  let num5 = 0;
+  let num6 = 0;
+  if (0 < arg1.length) {
+    do {
+      let dataCount = arg1[num].dataCount;
+      let diff = arg1[num].totalCount - dataCount;
+      let _Math = Math;
+      let bound = Math.max(num3, dataCount);
+      let _Math2 = Math;
+      let bound1 = Math.max(num2, diff);
+      let _Array = Array;
+      let tmp6 = new.target;
+      let tmp7 = new.target;
+      let array6 = new Array(dataCount);
+      array[num] = array6;
+      let num7 = 0;
+      if (0 < array[num].length) {
+        do {
+          array[num][num7] = 255 & arg0.buffer[num7 + num4];
+          num7 = num7 + 1;
+          length = array[num].length;
+        } while (num7 < length);
+      }
+      let sum = num4 + dataCount;
+      let obj = _mod9546;
+      let errorCorrectPolynomial = obj.getErrorCorrectPolynomial(diff);
+      let tmp16 = QRPolynomial;
+      let tmp17 = new.target;
+      let tmp18 = new.target;
+      let tmp162 = new tmp16(array[num], errorCorrectPolynomial.getLength() - 1);
+      let modResult = tmp162.mod(errorCorrectPolynomial);
+      let _Array2 = Array;
+      let tmp20 = new.target;
+      let tmp21 = new.target;
+      let array7 = new Array(errorCorrectPolynomial.getLength() - 1);
+      array5[num] = array7;
+      for (let num8 = 0; num8 < array5[num].length; num8 = num8 + 1) {
+        let diff1 = num8 + modResult.getLength() - array5[num].length;
+        let num9 = 0;
+        if (0 <= diff1) {
+          num9 = modResult.get(diff1);
+        }
+        array5[num][num8] = num9;
+      }
+      num = num + 1;
+      num2 = bound1;
+      num3 = bound;
+      num4 = sum;
+      num5 = bound1;
+      num6 = bound;
+    } while (num < arg1.length);
+  }
+  let num10 = 0;
+  let num11 = 0;
+  let num12 = 0;
+  if (0 < arg1.length) {
+    do {
+      num10 = num10 + arg1[num11].totalCount;
+      num11 = num11 + 1;
+      num12 = num10;
+      length2 = arg1.length;
+    } while (num11 < length2);
+  }
+  const array8 = new Array(num12);
+  let num13 = 0;
+  let num14 = 0;
+  let num15 = 0;
+  if (0 < num6) {
+    do {
+      let tmp27 = num13;
+      let num16 = 0;
+      let tmp29 = num13;
+      if (0 < arg1.length) {
+        do {
+          let sum1 = tmp27;
+          if (num14 < array[num16].length) {
+            sum1 = tmp27 + 1;
+            array8[tmp27] = array[num16][num14];
+          }
+          num16 = num16 + 1;
+          tmp27 = sum1;
+          tmp29 = sum1;
+        } while (num16 < arg1.length);
+      }
+      num14 = num14 + 1;
+      num13 = tmp29;
+      num15 = tmp29;
+    } while (num14 < num6);
+  }
+  let num17 = 0;
+  if (0 < num5) {
+    do {
+      let tmp33 = num15;
+      let num18 = 0;
+      let tmp35 = num15;
+      if (0 < arg1.length) {
+        do {
+          let sum2 = tmp33;
+          if (num17 < array5[num18].length) {
+            sum2 = tmp33 + 1;
+            array8[tmp33] = array5[num18][num17];
+          }
+          num18 = num18 + 1;
+          tmp33 = sum2;
+          tmp35 = sum2;
+        } while (num18 < arg1.length);
+      }
+      num17 = num17 + 1;
+      num15 = tmp35;
+    } while (num17 < num5);
+  }
+  return array8;
+};
 
 export default QRCode;

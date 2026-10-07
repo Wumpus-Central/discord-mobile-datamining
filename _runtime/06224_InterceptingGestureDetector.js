@@ -1,72 +1,42 @@
 // === Module 6224: InterceptingGestureDetector ===
 
 // Module 6224 (InterceptingGestureDetector)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
 import _mod6214 from "module_6214" /* 6214 */;
-import react2 from "react" /* 6225 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
+import _mod6225 from "module_6225" /* 6225 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop_mod from "module_19" /* 19 */;
 
-let dependencyMap, set;
-
-let closure_4;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-let react = react_mod;
-({ useCallback: closure_4, useEffect: hasOwnProperty, useMemo: metroRequire, useState: metroImportDefault } = react);
-react = react_mod;
-const Platform = react_native.Platform;
-let jsx = Fragment.jsx;
+require = fn;
+let noop = fn(19);
+({ useCallback: closure_4, useEffect: hasOwnProperty, useMemo: metroRequire, useState: closure_7 } = noop);
+let noop = noop_mod;
+const Platform = fn(17).Platform;
+let jsx = fn(21).jsx;
 
 export const InterceptingGestureDetector = function InterceptingGestureDetector(gesture) {
-  let REANIMATED;
-  let ReanimatedNativeDetector;
-  let animatedEventHandler;
-  let children;
-  let closure_2;
-  let closure_8;
-  let enableContextMenu;
-  let obj4;
-  let prop4;
-  let prop5;
-  let prop6;
-  let touchAction;
-  let userSelect;
   gesture = gesture.gesture;
-  dependencyMap = undefined;
   let first1;
-  let closure_4;
+  closure_4 = undefined;
   let register;
   let unregister;
-  let closure_7;
+  closure_7 = undefined;
   jsx = undefined;
-  let closure_9;
-  const tmp = gesture;
-  let tmp2 = dependencyMap;
+  closure_9 = undefined;
   ({ children, touchAction, userSelect, enableContextMenu } = gesture);
-  let obj = gesture(6165);
-  obj.useEnsureGestureHandlerRootView();
-  const tmp6 = first1(closure_7(() => {
-    set = new Set();
-    return set;
-  }), 2);
+  gesture(6165).useEnsureGestureHandlerRootView();
+  const tmp6 = first1(closure_7(() => new Set()), 2);
   const first = tmp6[0];
   dependencyMap = tmp6[1];
   let items = [first];
   let prop;
+  let obj = gesture(6165);
   const tmp4 = closure_7;
   const tmp5 = first1;
-  const tmp9 = unregister(() => {
-    const arr = Array.from(first);
-    return arr.map((viewTag) => ({ viewTag: viewTag.viewTag, handlerTags: viewTag.handlerTags }));
-  }, items);
   if (gesture != null) {
     prop = gesture.config.shouldUseReanimatedDetector;
   }
   if (prop) {
-    REANIMATED = tmp(6225).InterceptingDetectorMode.REANIMATED;
+    let REANIMATED = tmp(6225).InterceptingDetectorMode.REANIMATED;
   } else {
     let prop1;
     if (gesture != null) {
@@ -78,27 +48,27 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
   const tmp5Result = tmp5(tmp4(REANIMATED), 2);
   first1 = tmp5Result[0];
   closure_4 = tmp5Result[1];
-  const tmp14 = first1 === tmp(6225).InterceptingDetectorMode.REANIMATED;
-  if (first1 === tmp(6225).InterceptingDetectorMode.ANIMATED) {
-    ReanimatedNativeDetector = tmp(6161).AnimatedNativeDetector;
+  const tmp14 = first1 === gesture(6225).InterceptingDetectorMode.REANIMATED;
+  if (first1 === gesture(6225).InterceptingDetectorMode.ANIMATED) {
+    let ReanimatedNativeDetector = tmp(6161).AnimatedNativeDetector;
   } else if (tmp14) {
     ReanimatedNativeDetector = tmp(6220).ReanimatedNativeDetector;
   } else {
     ReanimatedNativeDetector = first(6162);
   }
   const tmp17 = closure_4((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     closure_2((items) => {
-      set = new Set(items);
+      const set = new Set(items);
       set.add(closure_0);
       return set;
     });
   }, []);
   register = tmp17;
   const tmp18 = closure_4((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     closure_2((items) => {
-      set = new Set(items);
+      const set = new Set(items);
       set.delete(closure_0);
       return set;
     });
@@ -108,11 +78,10 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
   const tmp8Result = unregister(() => ({
     mode: first1,
     setMode(arg0) {
-      if (arg0 !== gesture(closure_2[5]).InterceptingDetectorMode.REANIMATED) {
+      if (arg0 !== gesture(dependencyMap[5]).InterceptingDetectorMode.REANIMATED) {
         closure_1_4(arg0);
       }
-      const tmpResult = gesture(closure_2[9]);
-      const error = new Error(tmpResult.tagMessage("InterceptingGestureDetector can only handle either Reanimated or Animated events."));
+      const error = new Error(gesture(dependencyMap[9]).tagMessage("InterceptingGestureDetector can only handle either Reanimated or Animated events."));
       throw error;
     },
     register,
@@ -121,7 +90,6 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
   closure_7 = tmp8Result;
   const items2 = [tmp8Result, , ];
   let prop2;
-  const tmp20 = register;
   if (gesture != null) {
     let config = gesture.config;
     if (config != null) {
@@ -137,7 +105,7 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
     }
   }
   items2[2] = prop3;
-  tmp20(() => {
+  register(() => {
     let prop;
     if (gesture != null) {
       const config = gesture.config;
@@ -146,7 +114,7 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
       }
     }
     if (prop) {
-      closure_7.setMode(react2.InterceptingDetectorMode.ANIMATED);
+      closure_7.setMode(_mod6225.InterceptingDetectorMode.ANIMATED);
     } else {
       let prop1;
       if (gesture != null) {
@@ -156,28 +124,27 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
         }
       }
       if (prop1) {
-        closure_7.setMode(react2.InterceptingDetectorMode.REANIMATED);
+        closure_7.setMode(_mod6225.InterceptingDetectorMode.REANIMATED);
       }
     }
   }, items2);
   if (ReanimatedNativeDetector) {
     const items3 = [gesture, first];
-    const tmp16Result = closure_4((arg0) => {
-      let detectorCallbacks = arg0;
+    const tmp16Result = tmp16((arg0) => {
+      closure_0 = arg0;
       return (arg0) => {
-        let closure_0;
-        detectorCallbacks = arg0;
+        closure_0 = arg0;
         let tmp2;
-        if (detectorCallbacks != null) {
-          tmp2 = tmp.detectorCallbacks[detectorCallbacks];
+        if (closure_0 != null) {
+          tmp2 = tmp.detectorCallbacks[closure_0];
         }
         if (typeof tmp2 === "function") {
-          detectorCallbacks = detectorCallbacks.detectorCallbacks;
-          detectorCallbacks[detectorCallbacks](arg0);
+          tmp.detectorCallbacks[closure_0](arg0);
+          const detectorCallbacks = tmp.detectorCallbacks;
         }
         const item = first.forEach((item) => {
-          if (typeof item.methods[detectorCallbacks] === "function") {
-            item.methods[detectorCallbacks](detectorCallbacks);
+          if (typeof item.methods[closure_0] === "function") {
+            tmp(closure_0);
           }
         });
       };
@@ -189,8 +156,8 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
       detectorCallbacks = gesture.detectorCallbacks;
     }
     items4[1] = detectorCallbacks;
-    const tmp16Result2 = closure_4((arg0) => {
-      let closure_0 = arg0;
+    const tmp16Result2 = tmp16((arg0) => {
+      closure_0 = arg0;
       const items = [];
       let tmp2;
       if (gesture != null) {
@@ -201,72 +168,74 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
       }
       const item = first.forEach((item) => {
         if (item.methods[closure_0]) {
-          items.push(item.methods[closure_0]);
+          items.push(tmp);
         }
       });
       return items;
     }, items4);
     closure_9 = tmp16Result2;
     const items5 = [tmp16Result2];
-    const tmp8Result4 = unregister(() => closure_9("reanimatedEventHandler"), items5);
     const Reanimated = tmp(6190).Reanimated;
     let composedEventHandler;
     if (Reanimated != null) {
       composedEventHandler = Reanimated.useComposedEventHandler(tmp8Result4);
     }
-    let tmpResult = tmp(6221);
-    const result = tmpResult.ensureNativeDetectorComponent(ReanimatedNativeDetector);
-    const tmpResult4 = tmp(6222);
-    const gestureRelationsUpdater = tmpResult4.useGestureRelationsUpdater(gesture);
+    tmp8Result4 = tmp8(() => closure_9("reanimatedEventHandler"), items5);
+    const result = tmp(6221).ensureNativeDetectorComponent(ReanimatedNativeDetector);
+    const tmpResult = tmp(6221);
+    const gestureRelationsUpdater = tmp(6222).useGestureRelationsUpdater(gesture);
     const items6 = [gesture];
-    const tmp8Result5 = unregister(() => {
-      let items;
+    const tmp8Result5 = tmp8(() => {
       if (gesture) {
-        let handlerTags;
-        const obj = _mod6214;
         if (obj.isComposedGesture(gesture)) {
-          handlerTags = gesture.handlerTags;
+          let handlerTags = gesture.handlerTags;
         } else {
           handlerTags = [gesture.handlerTag];
         }
-        items = handlerTags;
+        obj = _mod6214;
       } else {
-        items = [];
+        return [];
       }
-      return items;
     }, items6);
-    const tmpResult5 = tmp(6223);
-    const detectorAttachmentGuard = tmpResult5.useDetectorAttachmentGuard(tmp8Result5);
+    const tmpResult4 = tmp(6222);
+    const detectorAttachmentGuard = tmp(6223).useDetectorAttachmentGuard(tmp8Result5);
     const obj2 = { onGestureHandlerReanimatedEvent: composedEventHandler };
     const items7 = [tmp16Result];
-    const tmp8Result6 = unregister(() => closure_8("jsEventHandler"), items7);
-    const obj3 = { value: tmp8Result, children: jsx(ReanimatedNativeDetector, obj4) };
-    obj4 = { touchAction, userSelect, enableContextMenu, pointerEvents: "box-none", onGestureHandlerStateChange: tmp8Result6, onGestureHandlerEvent: tmp8Result6, onGestureHandlerTouchEvent: tmp8Result6, onGestureHandlerAnimatedEvent: animatedEventHandler, onGestureHandlerReanimatedStateChange: prop4, onGestureHandlerReanimatedEvent: prop5, onGestureHandlerReanimatedTouchEvent: prop6, handlerTags: tmp8Result5, style: tmp(6161).nativeDetectorStyles.detector, virtualChildren: tmp9, moduleId: globalThis._RNGH_MODULE_ID, children };
-    animatedEventHandler = undefined;
-    const InterceptingDetectorContext = tmp(6225).InterceptingDetectorContext;
+    const tmp8Result6 = tmp8(() => closure_8("jsEventHandler"), items7);
+    const obj3 = { value: tmp8Result, children: null };
+    const obj4 = { touchAction, userSelect, enableContextMenu, pointerEvents: "box-none", onGestureHandlerStateChange: tmp8Result6, onGestureHandlerEvent: tmp8Result6, onGestureHandlerTouchEvent: tmp8Result6, onGestureHandlerAnimatedEvent: null, onGestureHandlerReanimatedStateChange: null, onGestureHandlerReanimatedEvent: null, onGestureHandlerReanimatedTouchEvent: null, handlerTags: null, style: null, virtualChildren: null, moduleId: null, children: null };
+    let animatedEventHandler;
     if (gesture != null) {
       animatedEventHandler = gesture.detectorCallbacks.animatedEventHandler;
     }
-    prop4 = undefined;
+    obj4.onGestureHandlerAnimatedEvent = animatedEventHandler;
+    let prop4;
     if (tmp14) {
       prop4 = obj2.onGestureHandlerReanimatedStateChange;
     }
-    prop5 = undefined;
+    obj4.onGestureHandlerReanimatedStateChange = prop4;
+    let prop5;
     if (tmp14) {
       prop5 = obj2.onGestureHandlerReanimatedEvent;
     }
-    prop6 = undefined;
+    obj4.onGestureHandlerReanimatedEvent = prop5;
+    let prop6;
     if (tmp14) {
       prop6 = obj2.onGestureHandlerReanimatedTouchEvent;
     }
+    obj4.onGestureHandlerReanimatedTouchEvent = prop6;
+    obj4.handlerTags = tmp8Result5;
+    obj4.style = tmp(6161).nativeDetectorStyles.detector;
+    obj4.virtualChildren = tmp9;
     const _globalThis = globalThis;
-    return jsx(InterceptingDetectorContext, obj3);
+    obj4.moduleId = globalThis._RNGH_MODULE_ID;
+    obj4.children = children;
+    obj3.children = jsx(ReanimatedNativeDetector, obj4);
+    return jsx(tmp(6225).InterceptingDetectorContext, obj3);
   } else {
     const _Error = Error;
-    const self = this;
-    const self2 = this;
-    const tmpResult6 = tmp(6152);
-    let error = new Error(tmpResult6.tagMessage("Gesture expects to run on the UI thread, but failed to create the Reanimated NativeDetector."));
+    let error = new Error(tmp(6152).tagMessage("Gesture expects to run on the UI thread, but failed to create the Reanimated NativeDetector."));
     throw error;
   }
+  tmp9 = unregister(() => Array.from(first).map((viewTag) => ({ viewTag: viewTag.viewTag, handlerTags: viewTag.handlerTags })), items);
 };

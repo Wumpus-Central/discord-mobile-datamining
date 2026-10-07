@@ -3,10 +3,10 @@
 // Module 303 (dismissKeyboard)
 import _mod144 from "module_144" /* 144 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
 export default function dismissKeyboard() {
-  const blurTextInput = _mod144.default.blurTextInput;
-  _mod144.default;
-  const _default2 = _mod144.default;
-  blurTextInput(_default2.currentlyFocusedInput());
+  const _default = _mod144.default;
+  _default.blurTextInput(_mod144.default.currentlyFocusedInput());
 };

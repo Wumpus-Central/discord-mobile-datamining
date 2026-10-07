@@ -1,24 +1,24 @@
 // === Module 14053: ? ===
 
 // Module 14053
-import _mod1172 from "module_1172" /* 1172 */;
-import calendars2 from "calendars" /* 14054 */;
+import e from "e" /* 1172 */;
+import calendars from "calendars" /* 14054 */;
 import hourCycles from "hourCycles" /* 14055 */;
 import timezones from "timezones" /* 14056 */;
-import weekData2 from "weekData" /* 14057 */;
+import weekData from "weekData" /* 14057 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
 export const getCalendarPreferenceDataForRegion = function getCalendarPreferenceDataForRegion(region) {
   let str = null;
   if (region) {
     str = region.toUpperCase();
   }
-  const calendars = calendars2.calendars;
   if (!str) {
     str = "";
   }
-  const arr = calendars[str] || calendars2.calendars["001"];
-  return arr.map((item) => {
+  return calendars.calendars[str] || calendars.calendars["001"].map((item) => {
     let str = "gregory";
     if ("gregorian" !== item) {
       let str2 = "islamicc";
@@ -44,15 +44,13 @@ export const getHourCyclesPreferenceDataForLocaleOrRegion = function getHourCycl
   if (!v001) {
     v001 = hourCycles.hourCycles["001"];
   }
-  const tmp2Result = _mod1172;
-  return tmp2Result.__spreadArray([], v001, true);
+  return e.__spreadArray([], v001, true);
 };
 export const getTimeZonePreferenceForRegion = function getTimeZonePreferenceForRegion(region) {
   const formatted = region.toLowerCase();
   const items = [];
   if (timezones.timezones[formatted]) {
-    const tmp2Result = _mod1172;
-    return tmp2Result.__spreadArray(items, timezones.timezones[formatted], true);
+    return e.__spreadArray(items, timezones.timezones[formatted], true);
   } else {
     return items;
   }
@@ -62,10 +60,8 @@ export const getWeekDataForRegion = function getWeekDataForRegion(region) {
   if (region) {
     str = region.toUpperCase();
   }
-  const weekData = weekData2.weekData;
   if (!str) {
     str = "001";
   }
-  const tmp3 = weekData[str] || weekData2.weekData["001"];
-  return tmp3;
+  return weekData.weekData[str] || weekData.weekData["001"];
 };

@@ -3,11 +3,8 @@
 // Module 1120 (invariant)
 
 export default function invariant(arg0, arg1) {
-  const tmp = arg0;
-  if (!tmp) {
+  if (!arg0) {
     const _Error = Error;
-    const self = this;
-    const self2 = this;
     const error = new Error("Invariant failed");
     throw error;
   }

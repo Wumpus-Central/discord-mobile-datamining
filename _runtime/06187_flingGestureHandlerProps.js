@@ -1,13 +1,14 @@
 // === Module 6187: flingGestureHandlerProps ===
 
 // Module 6187 (flingGestureHandlerProps)
-import createHandler from "createHandler" /* 6174 */;
+import _isNativeReflectConstruct from "module_6174" /* 6174 */;
 
-let items1;
 const items = ["numberOfPointers", "direction"];
-const obj = { name: "FlingGestureHandler", allowedProps: items1, config: {} };
-items1 = [...items];
+const obj = { name: "FlingGestureHandler", allowedProps: null, config: null };
+const items1 = [...items];
+obj.allowedProps = items1;
+obj.config = {};
 
 export const flingGestureHandlerProps = items;
 export const flingHandlerName = "FlingGestureHandler";
-export const FlingGestureHandler = createHandler(obj);
+export const FlingGestureHandler = _isNativeReflectConstruct(obj);

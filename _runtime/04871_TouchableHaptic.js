@@ -1,17 +1,16 @@
 // === Module 4871: TouchableHaptic ===
 
 // Module 4871 (TouchableHaptic)
-import react_native from "react-native" /* 17 */;
-import react from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
+import _mod17 from "module_17" /* 17 */;
+import _mod19 from "module_19" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 import _modDef4864 from "module_4864" /* 4864 */;
 
-react.useCallback;
-const Pressable = react_native.Pressable;
-const jsx = Fragment.jsx;
+_mod19.useCallback;
+const Pressable = _mod17.Pressable;
+const jsx = jsxProd.jsx;
 
 export const TouchableHaptic = function TouchableHaptic(hapticType) {
-  let hapticOptions;
   let impactMedium = hapticType.hapticType;
   if (impactMedium === undefined) {
     impactMedium = impactMedium(hapticOptions[3]).HapticFeedbackTypes.impactMedium;
@@ -27,10 +26,9 @@ export const TouchableHaptic = function TouchableHaptic(hapticType) {
   const merged = Object.assign(hapticType, Object.assign({ hapticType: 0, hapticTrigger: 0, hapticOptions: 0, onPressIn: 0, onPress: 0, onLongPress: 0 }));
   const items = [impactMedium, hapticOptions];
   const tmp4 = onPressIn(() => {
-    const obj = _modDef4864;
-    obj.trigger(impactMedium, hapticOptions);
+    _modDef4864.trigger(impactMedium, hapticOptions);
   }, items);
-  let closure_6 = tmp4;
+  closure_6 = tmp4;
   const items1 = [str, tmp4, onPressIn];
   const items2 = [str, tmp4, onPress];
   const items3 = [str, tmp4, onLongPress];
@@ -50,9 +48,17 @@ export const TouchableHaptic = function TouchableHaptic(hapticType) {
       tmp3(arg0);
     }
   }, items2);
-  let obj = {
+  const merged1 = Object.assign(merged);
+  return onLongPress(onPress, {
     onPressIn: tmp5,
-    onPress: tmp6,
+    onPress: onPressIn((arg0) => {
+      if ("onPress" === str) {
+        closure_6();
+      }
+      if (onPress != null) {
+        tmp3(arg0);
+      }
+    }, items2),
     onLongPress: onPressIn((arg0) => {
       if ("onLongPress" === str) {
         closure_6();
@@ -61,7 +67,5 @@ export const TouchableHaptic = function TouchableHaptic(hapticType) {
         tmp3(arg0);
       }
     }, items3)
-  };
-  const merged1 = Object.assign(merged);
-  return onLongPress(onPress, obj);
+  });
 };

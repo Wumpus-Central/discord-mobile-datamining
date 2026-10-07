@@ -1,39 +1,37 @@
 // === Module 4399: subHours ===
 
 // Module 4399 (subHours)
-import addHours_mod from "addHours" /* 4118 */;
+import module_4118_mod from "module_4118" /* 4118 */;
 import requiredArgs_mod from "requiredArgs" /* 3965 */;
-import toInteger_mod from "toInteger" /* 3968 */;
+import module_3968_mod from "module_3968" /* 3968 */;
 
-let tmp3;
-let tmp5;
-let tmp7;
-let addHours = addHours_mod;
-if (!addHours) {
-  tmp3 = { default: addHours };
-  const obj = { default: addHours };
+let module_4118 = module_4118_mod;
+if (!module_4118) {
+  const obj = { default: module_4118 };
+  let tmp3 = obj;
 } else {
-  tmp3 = addHours;
+  tmp3 = module_4118;
 }
-addHours = tmp3;
+module_4118 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  tmp5 = { default: requiredArgs };
   const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
-let toInteger = toInteger_mod;
-if (!toInteger) {
-  tmp7 = { default: toInteger };
-  const obj3 = { default: toInteger };
+let module_3968 = module_3968_mod;
+if (!module_3968) {
+  const obj3 = { default: module_3968 };
+  let tmp7 = obj3;
 } else {
-  tmp7 = toInteger;
+  tmp7 = module_3968;
 }
-toInteger = tmp7;
+module_3968 = tmp7;
 
 export default function subHours(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return addHours.default(arg0, -toInteger.default(arg1));
+  return module_4118.default(arg0, -module_3968.default(arg1));
 };
+export default exports.default;

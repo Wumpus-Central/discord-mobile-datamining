@@ -8,7 +8,6 @@ if (typeof crypto !== "undefined") {
 }
 if (randomUUID) {
   const _crypto = crypto;
-  const randomUUID2 = crypto.randomUUID;
   const _crypto2 = crypto;
   randomUUID = randomUUID2.bind(crypto);
 }

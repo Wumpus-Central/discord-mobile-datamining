@@ -1,39 +1,38 @@
 // === Module 30: ? ===
 
 // Module 30
-import _mod31 from "module_31" /* 31 */;
+import genModule from "genModule" /* 31 */;
 import _modDef38 from "module_38" /* 38 */;
 
-const __turboModuleProxy = global.__turboModuleProxy;
+require = arg1;
+importDefault = arg2;
+const dependencyMap = arg6;
+__turboModuleProxy = __turboModuleProxy.__turboModuleProxy;
 
 export const get = function get(AccessibilityInfo) {
-  let tmpResult;
   if (null == __turboModuleProxy) {
-    const tmp5 = _mod31.default[AccessibilityInfo];
+    const tmp5 = genModule.default[AccessibilityInfo];
     let tmp6 = null;
     if (null != tmp5) {
       tmp6 = tmp5;
     }
-    tmpResult = tmp6;
+    let tmpResult = tmp6;
   } else {
     tmpResult = tmp(AccessibilityInfo);
   }
   return tmpResult;
 };
 export const getEnforcing = function getEnforcing(RNGestureHandlerModule) {
-  let tmpResult;
   if (null == __turboModuleProxy) {
-    const tmp5 = _mod31.default[RNGestureHandlerModule];
+    const tmp5 = genModule.default[RNGestureHandlerModule];
     let tmp6 = null;
     if (null != tmp5) {
       tmp6 = tmp5;
     }
-    tmpResult = tmp6;
+    let tmpResult = tmp6;
   } else {
     tmpResult = tmp(RNGestureHandlerModule);
   }
-  const tmp7 = _modDef38;
-  const tmp8 = null != tmpResult;
-  tmp7(tmp8, "TurboModuleRegistry.getEnforcing(...): '" + RNGestureHandlerModule + "' could not be found. Verify that a module by this name is registered in the native binary.");
+  _modDef38(null != tmpResult, "TurboModuleRegistry.getEnforcing(...): '" + RNGestureHandlerModule + "' could not be found. Verify that a module by this name is registered in the native binary.");
   return tmpResult;
 };

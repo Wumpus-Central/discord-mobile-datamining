@@ -2,24 +2,22 @@
 
 // Module 1731 (TransitionGenerator)
 import TransitionType from "TransitionType" /* 1699 */;
-import _slicedToArray2 from "_slicedToArray" /* 1701 */;
-import configureWebLayoutAnimations from "configureWebLayoutAnimations" /* 1730 */;
+import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes" /* 1701 */;
+import findDescendantWithExitingAnimation from "findDescendantWithExitingAnimation" /* 1730 */;
 import LinearTransition from "LinearTransition" /* 1732 */;
 import SequencedTransition from "SequencedTransition" /* 1733 */;
 import FadingTransition from "FadingTransition" /* 1734 */;
 import JumpingTransition from "JumpingTransition" /* 1735 */;
 import prepareCurvedTransition from "prepareCurvedTransition" /* 1736 */;
-import _slicedToArray3 from "_slicedToArray" /* 1737 */;
+import _mod1737 from "module_1737" /* 1737 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import _slicedToArray from "module_32" /* 32 */;
 
+require = arg1;
 function addPxToTransform(transform) {
   return transform.map((item) => {
-    let first;
-    let tmp6;
     const obj = {};
     const entries = Object.entries(item);
-    const tmp2 = entries[Symbol.iterator]();
     while (tmp2 !== undefined) {
       [first, tmp6] = tmp3;
       let obj3 = first;
@@ -43,52 +41,46 @@ let closure_2 = ["transform"];
 let closure_6 = 0;
 
 export const createCustomKeyFrameAnimation = function createCustomKeyFrameAnimation(definitions) {
-  let num;
   const values = Object.values(definitions);
   const iter = values[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp3 = nextResult;
+    let tmp5 = nextResult;
     if (nextResult.transform) {
-      tmp3.transform = addPxToTransform(tmp3.transform);
+      tmp5.transform = addPxToTransform(tmp5.transform);
     }
     continue;
   }
   const obj = { name: generateNextCustomKeyframeName(), style: definitions, duration: -1 };
   const keys = Object.keys(definitions);
   for (let num = 1; num < keys.length; num = num + 1) {
-    let tmp7 = definitions[keys[num]];
-    if (tmp7.easing) {
-      definitions[keys[num - 1]].easing = tmp7.easing;
-      delete tmp7[tmp6];
+    let tmp8 = definitions[keys[num]];
+    if (tmp8.easing) {
+      definitions[keys[num - 1]].easing = tmp8.easing;
+      delete tmp2[tmp];
     }
   }
-  const obj2 = _slicedToArray2;
-  const result = obj2.convertAnimationObjectToKeyframes(obj);
-  const obj3 = configureWebLayoutAnimations;
-  obj3.insertWebAnimation(obj.name, result);
+  const result = convertAnimationObjectToKeyframes.convertAnimationObjectToKeyframes(obj);
+  findDescendantWithExitingAnimation.insertWebAnimation(obj.name, result);
   return obj.name;
 };
 export const createAnimationWithInitialValues = function createAnimationWithInitialValues(presetName, initialValues) {
   const structuredCloneResult = structuredClone(TransitionType.AnimationsData[presetName].style);
   const first = structuredCloneResult[0];
   const transform = initialValues.transform;
-  const tmp3 = _objectWithoutProperties(initialValues, closure_2);
   if (transform) {
     const tmp5 = addPxToTransform(transform);
     if (first.transform) {
       const _Map = Map;
-      const self = this;
-      const self2 = this;
-      map = new Map();
+      const map = new Map();
       const transform2 = first.transform;
-      const tmp8 = transform2[Symbol.iterator]();
-      while (tmp8 !== undefined) {
+      const tmp10 = transform2[Symbol.iterator]();
+      while (tmp10 !== undefined) {
         let _Object = Object;
-        let entries = Object.entries(tmp10);
+        let entries = Object.entries(tmp12);
         for (const item10040 of entries) {
-          let tmp16 = _slicedToArray(item10040, 2);
-          let result = map.set(tmp16[0], tmp16[1]);
+          let tmp18 = _slicedToArray(item10040, 2);
+          let result = map.set(tmp18[0], tmp18[1]);
           continue;
         }
         continue;
@@ -97,15 +89,14 @@ export const createAnimationWithInitialValues = function createAnimationWithInit
         let _Object2 = Object;
         let entries1 = Object.entries(item10053);
         for (const item10061 of entries1) {
-          let tmp24 = _slicedToArray(item10061, 2);
-          let result1 = map.set(tmp24[0], tmp24[1]);
+          let tmp26 = _slicedToArray(item10061, 2);
+          let result1 = map.set(tmp26[0], tmp26[1]);
           continue;
         }
         continue;
       }
       const _Array = Array;
       first.transform = Array.from(map, (arg0) => {
-        let tmp;
         [r10007, tmp] = arg0;
         return { [r10007]: tmp };
       });
@@ -113,54 +104,49 @@ export const createAnimationWithInitialValues = function createAnimationWithInit
       first.transform = tmp5;
     }
   }
-  const obj = {};
   const merged = Object.assign(structuredCloneResult[0]);
-  const merged1 = Object.assign(tmp3);
-  structuredCloneResult[0] = obj;
-  const tmp28 = generateNextCustomKeyframeName();
-  const obj2 = { name: tmp28, style: structuredCloneResult, duration: TransitionType.AnimationsData[presetName].duration };
-  const obj4 = _slicedToArray2;
-  const result2 = obj4.convertAnimationObjectToKeyframes(obj2);
-  const obj5 = configureWebLayoutAnimations;
-  obj5.insertWebAnimation(tmp28, result2);
-  return tmp28;
+  const merged1 = Object.assign(_objectWithoutProperties(initialValues, closure_2));
+  structuredCloneResult[0] = {};
+  const tmp30 = generateNextCustomKeyframeName();
+  const obj = {};
+  const tmp3 = _objectWithoutProperties(initialValues, closure_2);
+  const obj2 = { name: tmp30, style: structuredCloneResult, duration: TransitionType.AnimationsData[presetName].duration };
+  const result2 = convertAnimationObjectToKeyframes.convertAnimationObjectToKeyframes(obj2);
+  findDescendantWithExitingAnimation.insertWebAnimation(tmp30, result2);
+  return tmp30;
 };
 export const TransitionGenerator = function TransitionGenerator(ENTRY_EXIT, easingY) {
-  let dummyTransitionKeyframeName;
-  let firstKeyframeObj;
-  let secondKeyframeObj;
   closure_6 = tmp + 1;
   const transitionKeyframeName = `REA${tmp}`;
   if (TransitionType.TransitionType.LINEAR === ENTRY_EXIT) {
+    firstKeyframeObj = LinearTransition.LinearTransition(`REA${tmp}`, easingY);
     const tmp3Result = LinearTransition;
-    firstKeyframeObj = tmp3Result.LinearTransition(`REA${tmp}`, easingY);
   } else if (TransitionType.TransitionType.SEQUENCED === ENTRY_EXIT) {
+    firstKeyframeObj = SequencedTransition.SequencedTransition(`REA${tmp}`, easingY);
     const tmp3Result10 = SequencedTransition;
-    firstKeyframeObj = tmp3Result10.SequencedTransition(`REA${tmp}`, easingY);
   } else if (TransitionType.TransitionType.FADING === ENTRY_EXIT) {
+    firstKeyframeObj = FadingTransition.FadingTransition(`REA${tmp}`, easingY);
     const tmp3Result11 = FadingTransition;
-    firstKeyframeObj = tmp3Result11.FadingTransition(`REA${tmp}`, easingY);
   } else if (TransitionType.TransitionType.JUMPING === ENTRY_EXIT) {
+    firstKeyframeObj = JumpingTransition.JumpingTransition(`REA${tmp}`, easingY);
     const tmp3Result12 = JumpingTransition;
-    firstKeyframeObj = tmp3Result12.JumpingTransition(`REA${tmp}`, easingY);
   } else if (TransitionType.TransitionType.CURVED === ENTRY_EXIT) {
     closure_6 = tmp7 + 1;
     const text1 = `REA${tmp7}`;
     const tmp3Result13 = prepareCurvedTransition;
-    ({ firstKeyframeObj, secondKeyframeObj } = tmp3Result13.CurvedTransition(`REA${+closure_6}`, `REA${+closure_6}`, easingY));
-    tmp3Result13.CurvedTransition(`REA${+closure_6}`, `REA${+closure_6}`, easingY);
-    const tmp3Result14 = _slicedToArray2;
-    const result = tmp3Result14.convertAnimationObjectToKeyframes(secondKeyframeObj);
-    const tmp3Result15 = configureWebLayoutAnimations;
-    tmp3Result15.insertWebAnimation(`REA${+closure_6}`, result);
-    dummyTransitionKeyframeName = text1;
+    ({ firstKeyframeObj, secondKeyframeObj } = prepareCurvedTransition.CurvedTransition(`REA${tmp}`, `REA${+closure_6}`, easingY));
+    const CurvedTransitionResult = prepareCurvedTransition.CurvedTransition(`REA${tmp}`, `REA${+closure_6}`, easingY);
+    const result = convertAnimationObjectToKeyframes.convertAnimationObjectToKeyframes(secondKeyframeObj);
+    const tmp3Result14 = convertAnimationObjectToKeyframes;
+    findDescendantWithExitingAnimation.insertWebAnimation(`REA${+closure_6}`, result);
+    const dummyTransitionKeyframeName = text1;
+    const tmp3Result15 = findDescendantWithExitingAnimation;
   } else if (TransitionType.TransitionType.ENTRY_EXIT === ENTRY_EXIT) {
-    const tmp3Result16 = _slicedToArray3;
-    firstKeyframeObj = tmp3Result16.EntryExitTransition(`REA${tmp}`, easingY);
+    firstKeyframeObj = _mod1737.EntryExitTransition(`REA${tmp}`, easingY);
+    const tmp3Result16 = _mod1737;
   }
-  const tmp3Result17 = _slicedToArray2;
-  const result1 = tmp3Result17.convertAnimationObjectToKeyframes(firstKeyframeObj);
-  const tmp3Result18 = configureWebLayoutAnimations;
-  tmp3Result18.insertWebAnimation(transitionKeyframeName, result1);
+  const result1 = convertAnimationObjectToKeyframes.convertAnimationObjectToKeyframes(firstKeyframeObj);
+  const tmp3Result17 = convertAnimationObjectToKeyframes;
+  findDescendantWithExitingAnimation.insertWebAnimation(transitionKeyframeName, result1);
   return { transitionKeyframeName, dummyTransitionKeyframeName };
 };

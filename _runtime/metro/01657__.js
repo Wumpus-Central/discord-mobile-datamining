@@ -1,59 +1,49 @@
 // === Module 1657: ? ===
 
 // Module 1657
-import react_native from "react-native" /* 1647 */;
-import ReanimatedError from "ReanimatedError" /* 1654 */;
-import mockedRequestAnimationFrame2 from "mockedRequestAnimationFrame" /* 1658 */;
-import WorkletsModule from "WorkletsModule" /* 1659 */;
-import LayoutAnimationType from "LayoutAnimationType" /* 1668 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import _slicedToArray from "module_32" /* 32 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _classPrivateFieldKey from "_classPrivateFieldKey" /* 91 */;
-import module_1646 from "module_1646" /* 1646 */;
 
+const JSReanimated = fn;
+const module_1646 = fn(1646);
 if (!module_1646.isJest()) {
   const _globalThis = globalThis;
   if (requestAnimationFrame) {
     const _globalThis2 = globalThis;
     let mockedRequestAnimationFrame = requestAnimationFrame;
   }
-  let str = "workletsModule";
   let closure_5 = _classPrivateFieldKey("workletsModule");
   class JSReanimated {
     constructor() {
-      const self = this;
-      const tmp = _classCallCheck(this, JSReanimated);
-      let obj = { writable: true, value: WorkletsModule.WorkletsModule };
-      Object.defineProperty(this, closure_5, obj);
+      self = this;
+      tmp = closure_3(this, JSReanimated);
+      obj = { writable: true, value: closure_0(closure_1[6]).WorkletsModule };
+      definePropertyResult = Object.defineProperty(this, hasOwnProperty, obj);
       this.nextSensorId = 0;
-      this.sensors = new Map();
+      map = new Map();
+      this.sensors = map;
       this.platform = undefined;
       this.getSensorCallback = (arg0, arg1, arg2) => {
-        let closure_0 = arg0;
-        let closure_1 = arg2;
-        if (self(closure_1_1[7]).SensorType.ACCELEROMETER !== arg1) {
-          if (self(closure_1_1[7]).SensorType.GRAVITY !== arg1) {
-            if (self(closure_1_1[7]).SensorType.GYROSCOPE !== arg1) {
-              if (self(closure_1_1[7]).SensorType.MAGNETIC_FIELD !== arg1) {
-                if (self(closure_1_1[7]).SensorType.ROTATION === arg1) {
+        closure_0 = arg0;
+        closure_1 = arg2;
+        if (self(dependencyMap[7]).SensorType.ACCELEROMETER !== arg1) {
+          if (self(dependencyMap[7]).SensorType.GRAVITY !== arg1) {
+            if (self(dependencyMap[7]).SensorType.GYROSCOPE !== arg1) {
+              if (self(dependencyMap[7]).SensorType.MAGNETIC_FIELD !== arg1) {
+                if (self(dependencyMap[7]).SensorType.ROTATION === arg1) {
                   return () => {
-                    let tmp2;
-                    let tmp3;
-                    let tmp4;
-                    let tmp5;
-                    let tmp6;
-                    let tmp7;
-                    [tmp2, tmp3, tmp4, tmp5] = closure_3_2(closure_0.quaternion, 4);
-                    closure_3_2(closure_0.quaternion, 4);
-                    if (self.platform === constants.WEB_ANDROID) {
+                    [tmp2, tmp3, tmp4, tmp5] = closure_0.quaternion;
+                    if (self.platform === obj2.WEB_ANDROID) {
                       const items = [tmp5, -tmp4];
                       [tmp7, tmp6] = items;
                     }
+                    const tmp = _slicedToArray(closure_0.quaternion, 4);
                     const tmp8 = -Math.atan2(2 * (tmp4 * tmp5 + tmp2 * tmp3), tmp2 * tmp2 - tmp3 * tmp3 - tmp4 * tmp4 + tmp5 * tmp5);
                     const sinResult = Math.sin(-2 * (tmp3 * tmp5 - tmp2 * tmp4));
-                    const obj = { qw: tmp2, qx: tmp3, qy: tmp4, qz: tmp5, yaw: tmp8, pitch: sinResult, roll: -Math.atan2(2 * (tmp3 * tmp4 + tmp2 * tmp5), tmp2 * tmp2 + tmp3 * tmp3 - tmp4 * tmp4 - tmp5 * tmp5), interfaceOrientation: 0 };
-                    closure_1(obj);
+                    closure_1({ qw: tmp2, qx: tmp3, qy: tmp4, qz: tmp5, yaw: tmp8, pitch: Math.sin(-2 * (tmp3 * tmp5 - tmp2 * tmp4)), roll: -Math.atan2(2 * (tmp3 * tmp4 + tmp2 * tmp5), tmp2 * tmp2 + tmp3 * tmp3 - tmp4 * tmp4 - tmp5 * tmp5), interfaceOrientation: 0 });
+                    const obj = { qw: tmp2, qx: tmp3, qy: tmp4, qz: tmp5, yaw: tmp8, pitch: Math.sin(-2 * (tmp3 * tmp5 - tmp2 * tmp4)), roll: -Math.atan2(2 * (tmp3 * tmp4 + tmp2 * tmp5), tmp2 * tmp2 + tmp3 * tmp3 - tmp4 * tmp4 - tmp5 * tmp5), interfaceOrientation: 0 };
                   };
                 }
               }
@@ -65,21 +55,15 @@ if (!module_1646.isJest()) {
           }
         }
         return () => {
-          let tmp;
-          let tmp2;
-          let tmp3;
-          let x;
-          let y;
-          let z;
           ({ x, y, z } = closure_0);
-          if (self.platform === constants.WEB_ANDROID) {
+          if (self.platform === obj2.WEB_ANDROID) {
             const items = [-x, -y, -z];
             [tmp3, tmp2, tmp] = items;
           }
           closure_1({ x, y, z, interfaceOrientation: 0 });
         };
       };
-      new Map();
+      return;
     }
   }
   const entry = {
@@ -92,7 +76,7 @@ if (!module_1646.isJest()) {
   const entry1 = {
     key: "createWorkletRuntime",
     value: function createWorkletRuntime(arg0, arg1) {
-        const reanimatedError = new ReanimatedError.ReanimatedError("createWorkletRuntime is not available in JSReanimated.");
+        const reanimatedError = new JSReanimated(1654).ReanimatedError("createWorkletRuntime is not available in JSReanimated.");
         throw reanimatedError;
       }
   };
@@ -100,7 +84,7 @@ if (!module_1646.isJest()) {
   const entry2 = {
     key: "scheduleOnRuntime",
     value: function scheduleOnRuntime() {
-        const reanimatedError = new ReanimatedError.ReanimatedError("scheduleOnRuntime is not available in JSReanimated.");
+        const reanimatedError = new JSReanimated(1654).ReanimatedError("scheduleOnRuntime is not available in JSReanimated.");
         throw reanimatedError;
       }
   };
@@ -108,7 +92,7 @@ if (!module_1646.isJest()) {
   const entry3 = {
     key: "registerEventHandler",
     value: function registerEventHandler(arg0, arg1, arg2) {
-        const reanimatedError = new ReanimatedError.ReanimatedError("registerEventHandler is not available in JSReanimated.");
+        const reanimatedError = new JSReanimated(1654).ReanimatedError("registerEventHandler is not available in JSReanimated.");
         throw reanimatedError;
       }
   };
@@ -116,7 +100,7 @@ if (!module_1646.isJest()) {
   const entry4 = {
     key: "unregisterEventHandler",
     value: function unregisterEventHandler(arg0) {
-        const reanimatedError = new ReanimatedError.ReanimatedError("unregisterEventHandler is not available in JSReanimated.");
+        const reanimatedError = new JSReanimated(1654).ReanimatedError("unregisterEventHandler is not available in JSReanimated.");
         throw reanimatedError;
       }
   };
@@ -124,27 +108,27 @@ if (!module_1646.isJest()) {
   const entry5 = {
     key: "enableLayoutAnimations",
     value: function enableLayoutAnimations() {
-        const obj = module_1646;
         if (obj.isWeb()) {
-          const logger3 = react_native.logger;
+          const logger3 = JSReanimated(1647).logger;
           logger3.warn("Layout Animations are not supported on web yet.");
         } else {
-          const tmpResult = module_1646;
           if (tmpResult.isJest()) {
-            const logger2 = react_native.logger;
+            const logger2 = JSReanimated(1647).logger;
             logger2.warn("Layout Animations are no-ops when using Jest.");
           } else {
-            const tmpResult2 = module_1646;
-            const isChromeDebuggerResult = tmpResult2.isChromeDebugger();
-            const logger = react_native.logger;
+            const tmpResult2 = JSReanimated(1646);
+            const logger = JSReanimated(1647).logger;
             const warn = logger.warn;
             if (isChromeDebuggerResult) {
               warn("Layout Animations are no-ops when using Chrome Debugger.");
             } else {
               warn("Layout Animations are not supported on this configuration.");
             }
+            isChromeDebuggerResult = JSReanimated(1646).isChromeDebugger();
           }
+          tmpResult = JSReanimated(1646);
         }
+        obj = JSReanimated(1646);
       }
   };
   items[5] = entry5;
@@ -165,7 +149,6 @@ if (!module_1646.isJest()) {
   const entry8 = {
     key: "registerSensor",
     value: function registerSensor(arg0, arg1, arg2, arg3) {
-        const obj = module_1646;
         if (obj.isWindowAvailable()) {
           const self = this;
           if (undefined === this.platform) {
@@ -184,11 +167,9 @@ if (!module_1646.isJest()) {
             self.nextSensorId = +self.nextSensorId + 1;
             return +self.nextSensorId;
           } else {
-            const logger = react_native.logger;
-            const warn = logger.warn;
+            const logger = JSReanimated(1647).logger;
             let str = "";
             let str2 = "";
-            const tmpResult = module_1646;
             if (tmpResult.isWeb()) {
               const _location = location;
               str2 = str;
@@ -196,16 +177,17 @@ if (!module_1646.isJest()) {
                 str2 = " Make sure you use secure origin with `npx expo start --web --https`.";
               }
             }
-            if (self.platform === obj.WEB_IOS) {
+            if (self.platform === obj2.WEB_IOS) {
               str = " For iOS web, you will also have to also grant permission in the browser: https://dev.to/li/how-to-requestpermission-for-devicemotion-and-deviceorientation-events-in-ios-13-46g2.";
             }
             const _HermesInternal = HermesInternal;
-            warn("Sensor is not available." + str2 + str);
+            logger.warn("Sensor is not available." + str2 + str);
             return -1;
           }
         } else {
           return -1;
         }
+        obj = JSReanimated(1646);
       }
   };
   items[8] = entry8;
@@ -213,7 +195,7 @@ if (!module_1646.isJest()) {
     key: "unregisterSensor",
     value: function unregisterSensor(arg0) {
         const sensors = this.sensors;
-        const value = sensors.get(arg0);
+        value = sensors.get(arg0);
         if (undefined !== value) {
           value.stop();
           const sensors2 = this.sensors;
@@ -225,26 +207,25 @@ if (!module_1646.isJest()) {
   const entry10 = {
     key: "subscribeForKeyboardEvents",
     value: function subscribeForKeyboardEvents(arg0) {
-        const obj = module_1646;
         if (obj.isWeb()) {
-          const logger3 = react_native.logger;
+          const logger3 = JSReanimated(1647).logger;
           logger3.warn("useAnimatedKeyboard is not available on web yet.");
         } else {
-          const tmpResult = module_1646;
           if (tmpResult.isJest()) {
-            const logger2 = react_native.logger;
+            const logger2 = JSReanimated(1647).logger;
             logger2.warn("useAnimatedKeyboard is not available when using Jest.");
           } else {
-            const tmpResult2 = module_1646;
-            const isChromeDebuggerResult = tmpResult2.isChromeDebugger();
-            const logger = react_native.logger;
+            const tmpResult2 = JSReanimated(1646);
+            const logger = JSReanimated(1647).logger;
             const warn = logger.warn;
             if (isChromeDebuggerResult) {
               warn("useAnimatedKeyboard is not available when using Chrome Debugger.");
             } else {
               warn("useAnimatedKeyboard is not available on this configuration.");
             }
+            isChromeDebuggerResult = JSReanimated(1646).isChromeDebugger();
           }
+          tmpResult = JSReanimated(1646);
         }
         return -1;
       }
@@ -260,40 +241,29 @@ if (!module_1646.isJest()) {
   const entry12 = {
     key: "initializeSensor",
     value: function initializeSensor(arg0, arg1) {
-        let obj;
         if (arg1 <= 0) {
-          obj = { referenceFrame: "device" };
+          let obj = { referenceFrame: "device" };
         } else {
           obj = { frequency: 1000 / arg1 };
         }
-        if (LayoutAnimationType.SensorType.ACCELEROMETER === arg0) {
+        if (JSReanimated(1668).SensorType.ACCELEROMETER === arg0) {
           const _window5 = window;
-          const self9 = this;
-          const self10 = this;
           const accelerometer = new window.Accelerometer(obj);
           return accelerometer;
-        } else if (LayoutAnimationType.SensorType.GYROSCOPE === arg0) {
+        } else if (JSReanimated(1668).SensorType.GYROSCOPE === arg0) {
           const _window4 = window;
-          const self7 = this;
-          const self8 = this;
           const gyroscope = new window.Gyroscope(obj);
           return gyroscope;
-        } else if (LayoutAnimationType.SensorType.GRAVITY === arg0) {
+        } else if (JSReanimated(1668).SensorType.GRAVITY === arg0) {
           const _window3 = window;
-          const self5 = this;
-          const self6 = this;
           const gravitySensor = new window.GravitySensor(obj);
           return gravitySensor;
-        } else if (LayoutAnimationType.SensorType.MAGNETIC_FIELD === arg0) {
+        } else if (JSReanimated(1668).SensorType.MAGNETIC_FIELD === arg0) {
           const _window2 = window;
-          const self3 = this;
-          const self4 = this;
           const magnetometer = new window.Magnetometer(obj);
           return magnetometer;
-        } else if (LayoutAnimationType.SensorType.ROTATION === arg0) {
+        } else if (JSReanimated(1668).SensorType.ROTATION === arg0) {
           const _window = window;
-          const self = this;
-          const self2 = this;
           const absoluteOrientationSensor = new window.AbsoluteOrientationSensor(obj);
           return absoluteOrientationSensor;
         }
@@ -303,15 +273,15 @@ if (!module_1646.isJest()) {
   const entry13 = {
     key: "getSensorName",
     value: function getSensorName(arg0) {
-        if (LayoutAnimationType.SensorType.ACCELEROMETER === arg0) {
+        if (JSReanimated(1668).SensorType.ACCELEROMETER === arg0) {
           return "Accelerometer";
-        } else if (LayoutAnimationType.SensorType.GRAVITY === arg0) {
+        } else if (JSReanimated(1668).SensorType.GRAVITY === arg0) {
           return "GravitySensor";
-        } else if (LayoutAnimationType.SensorType.GYROSCOPE === arg0) {
+        } else if (JSReanimated(1668).SensorType.GYROSCOPE === arg0) {
           return "Gyroscope";
-        } else if (LayoutAnimationType.SensorType.MAGNETIC_FIELD === arg0) {
+        } else if (JSReanimated(1668).SensorType.MAGNETIC_FIELD === arg0) {
           return "Magnetometer";
-        } else if (LayoutAnimationType.SensorType.ROTATION === arg0) {
+        } else if (JSReanimated(1668).SensorType.ROTATION === arg0) {
           return "AbsoluteOrientationSensor";
         }
       }
@@ -320,7 +290,7 @@ if (!module_1646.isJest()) {
   const entry14 = {
     key: "getSettledUpdates",
     value: function getSettledUpdates() {
-        const reanimatedError = new ReanimatedError.ReanimatedError("`getSettledUpdates` is not available in JSReanimated.");
+        const reanimatedError = new JSReanimated(1654).ReanimatedError("`getSettledUpdates` is not available in JSReanimated.");
         throw reanimatedError;
       }
   };
@@ -328,7 +298,6 @@ if (!module_1646.isJest()) {
   const entry15 = {
     key: "detectPlatform",
     value: function detectPlatform() {
-        let obj;
         let opera = navigator.userAgent;
         if (!opera) {
           const _navigator = navigator;
@@ -340,19 +309,19 @@ if (!module_1646.isJest()) {
         }
         const self = this;
         if (undefined === opera) {
-          self.platform = obj.UNKNOWN;
+          self.platform = obj2.UNKNOWN;
         } else {
-          obj = /iPad|iPhone|iPod/;
           if (obj.test(opera)) {
-            self.platform = obj.WEB_IOS;
+            self.platform = obj2.WEB_IOS;
           } else {
-            const obj2 = /android/i;
+            obj2 = /android/i;
             if (obj2.test(opera)) {
-              self.platform = obj.WEB_ANDROID;
+              self.platform = tmp.WEB_ANDROID;
             } else {
-              self.platform = obj.WEB;
+              self.platform = tmp.WEB;
             }
           }
+          obj = /iPad|iPhone|iPod/;
         }
       }
   };
@@ -360,7 +329,7 @@ if (!module_1646.isJest()) {
   const entry16 = {
     key: "getViewProp",
     value: function getViewProp(arg0, arg1, arg2, arg3) {
-        const reanimatedError = new ReanimatedError.ReanimatedError("getViewProp is not available in JSReanimated.");
+        const reanimatedError = new JSReanimated(1654).ReanimatedError("getViewProp is not available in JSReanimated.");
         throw reanimatedError;
       }
   };
@@ -368,7 +337,7 @@ if (!module_1646.isJest()) {
   const entry17 = {
     key: "configureProps",
     value: function configureProps() {
-        const reanimatedError = new ReanimatedError.ReanimatedError("configureProps is not available in JSReanimated.");
+        const reanimatedError = new JSReanimated(1654).ReanimatedError("configureProps is not available in JSReanimated.");
         throw reanimatedError;
       }
   };
@@ -376,7 +345,7 @@ if (!module_1646.isJest()) {
   const entry18 = {
     key: "executeOnUIRuntimeSync",
     value: function executeOnUIRuntimeSync(arg0) {
-        const reanimatedError = new ReanimatedError.ReanimatedError("`executeOnUIRuntimeSync` is not available in JSReanimated.");
+        const reanimatedError = new JSReanimated(1654).ReanimatedError("`executeOnUIRuntimeSync` is not available in JSReanimated.");
         throw reanimatedError;
       }
   };
@@ -384,7 +353,7 @@ if (!module_1646.isJest()) {
   const entry19 = {
     key: "markNodeAsRemovable",
     value: function markNodeAsRemovable(arg0) {
-        const reanimatedError = new ReanimatedError.ReanimatedError("markNodeAsRemovable is not available in JSReanimated.");
+        const reanimatedError = new JSReanimated(1654).ReanimatedError("markNodeAsRemovable is not available in JSReanimated.");
         throw reanimatedError;
       }
   };
@@ -392,18 +361,16 @@ if (!module_1646.isJest()) {
   const entry20 = {
     key: "unmarkNodeAsRemovable",
     value: function unmarkNodeAsRemovable(arg0) {
-        const reanimatedError = new ReanimatedError.ReanimatedError("unmarkNodeAsRemovable is not available in JSReanimated.");
+        const reanimatedError = new JSReanimated(1654).ReanimatedError("unmarkNodeAsRemovable is not available in JSReanimated.");
         throw reanimatedError;
       }
   };
   items[20] = entry20;
   let closure_6 = _createClass(JSReanimated, items);
-  const Platform = { WEB_IOS: "web iOS", WEB_ANDROID: "web Android", WEB: "web", UNKNOWN: "unknown" };
-  let str2 = "web iOS";
+  let obj2 = { WEB_IOS: "web iOS", WEB_ANDROID: "web Android", WEB: "web", UNKNOWN: "unknown" };
   exports.createJSReanimatedModule = function createJSReanimatedModule() {
-    const tmp = new closure_6();
-    return tmp;
+    return new closure_6();
   };
-  exports.Platform = Platform;
+  exports.Platform = obj2;
 }
-mockedRequestAnimationFrame = mockedRequestAnimationFrame2.mockedRequestAnimationFrame;
+mockedRequestAnimationFrame = fn(1658).mockedRequestAnimationFrame;

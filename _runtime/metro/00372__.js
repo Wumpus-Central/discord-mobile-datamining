@@ -1,7 +1,6 @@
 // === Module 372: ? ===
 
 // Module 372
-import _modDef363 from "module_363" /* 363 */;
 import _modDef366 from "module_366" /* 366 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
@@ -10,14 +9,19 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
+const AnimatedDiffClamp = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -26,24 +30,27 @@ function _isNativeReflectConstruct() {
   }
 }
 class AnimatedDiffClamp {
-  constructor(_a, _min, _max, arg3) {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, AnimatedDiffClamp);
-    const items = [arg3];
-    const obj = _getPrototypeOf(AnimatedDiffClamp);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+  constructor(arg0, arg1, arg2, arg3) {
+    self = this;
+    tmp = c2(this, AnimatedDiffClamp);
+    items = [];
+    items[0] = importAll;
+    tmp2 = closure_4;
+    obj = closure_4(AnimatedDiffClamp);
+    tmp3 = closure_3;
+    if (metroRequire()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    const tmp3Result = c3(self, constructResult);
-    tmp3Result._a = _a;
-    tmp3Result._min = _min;
-    tmp3Result._max = _max;
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result._a = global;
+    tmp3Result._min = arg1;
+    tmp3Result._max = importDefault;
     _a = tmp3Result._a;
-    const __getValueResult = _a.__getValue();
+    __getValueResult = _a.__getValue();
     tmp3Result._lastValue = __getValueResult;
     tmp3Result._value = __getValueResult;
     return tmp3Result;
@@ -56,7 +63,7 @@ const entry = {
     const _a = this._a;
     _a.__makeNative(arg0);
     const self = this;
-    let fn = _get(_getPrototypeOf(AnimatedDiffClamp.prototype), "__makeNative", this);
+    let fn = hasOwnProperty(_getPrototypeOf(AnimatedDiffClamp.prototype), "__makeNative", this);
     if (typeof fn === "function") {
       fn = (items) => fn.apply(self, items);
     }
@@ -69,8 +76,7 @@ let items = [
   {
     key: "interpolate",
     value: function interpolate(arg0) {
-      const tmp = new _modDef363(this, arg0);
-      return tmp;
+      return new AnimatedDiffClamp(363)(this, arg0);
     }
   },
   {
@@ -89,7 +95,7 @@ let items = [
       const _a = this._a;
       _a.__addChild(this);
       const self = this;
-      let fn = _get(_getPrototypeOf(AnimatedDiffClamp.prototype), "__attach", this);
+      let fn = hasOwnProperty(_getPrototypeOf(AnimatedDiffClamp.prototype), "__attach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -102,7 +108,7 @@ let items = [
       const _a = this._a;
       _a.__removeChild(this);
       const self = this;
-      let fn = _get(_getPrototypeOf(AnimatedDiffClamp.prototype), "__detach", this);
+      let fn = hasOwnProperty(_getPrototypeOf(AnimatedDiffClamp.prototype), "__detach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -112,9 +118,9 @@ let items = [
   {
     key: "__getNativeConfig",
     value: function __getNativeConfig() {
-      let _a;
-      const range = { type: "diffclamp", input: _a.__getNativeTag(), min: this._min, max: this._max, debugID: this.__getDebugID() };
-      _a = this._a;
+      const range = { type: "diffclamp", input: null, min: this._min, max: this._max, debugID: this.__getDebugID() };
+      const _a = this._a;
+      range.input = _a.__getNativeTag();
       return range;
     }
   }

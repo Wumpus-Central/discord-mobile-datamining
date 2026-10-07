@@ -1,37 +1,30 @@
 // === Module 12639: ? ===
 
 // Module 12639
-import _mod12576 from "module_12576" /* 12576 */;
-import _mod12580 from "module_12580" /* 12580 */;
-import _mod12585 from "module_12585" /* 12585 */;
-import _mod12591 from "module_12591" /* 12591 */;
-import _mod12602 from "module_12602" /* 12602 */;
-import _mod12604 from "module_12604" /* 12604 */;
-import _mod12607 from "module_12607" /* 12607 */;
-import _mod12608 from "module_12608" /* 12608 */;
-import _mod12616 from "module_12616" /* 12616 */;
-import SessionFlusher from "SessionFlusher" /* 12633 */;
-import BaseClient from "BaseClient" /* 12635 */;
-import eventFromMessage2 from "eventFromMessage" /* 12640 */;
-import _mod12641 from "module_12641" /* 12641 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _mod12635 from "module_12635" /* 12635 */;
+import _slicedToArray from "module_32" /* 32 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
-import DEBUG_BUILD from "module_12579" /* 12579 */;
-import _browserPerformanceTimeOriginMode from "_browserPerformanceTimeOriginMode" /* 12594 */;
+import __SENTRY_DEBUG__ from "module_12579" /* 12579 */;
+import dateTimestampInSeconds from "module_12594" /* 12594 */;
 
+const ServerRuntimeClient = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -39,47 +32,49 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturn;
 class ServerRuntimeClient {
   constructor(arg0) {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, ServerRuntimeClient);
-    const obj = _mod12576;
-    const result = obj.registerSpanErrorInstrumentation();
-    const items = [arg0];
-    const obj2 = _getPrototypeOf(ServerRuntimeClient);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj2, items, _getPrototypeOf(self).constructor);
+    self = this;
+    tmp = closure_3(this, ServerRuntimeClient);
+    obj = closure_0(closure_1[9]);
+    result = obj.registerSpanErrorInstrumentation();
+    items = [];
+    items[0] = global;
+    tmp3 = hasOwnProperty;
+    obj2 = hasOwnProperty(ServerRuntimeClient);
+    tmp4 = closure_4;
+    if (closure_7()) {
+      tmp6 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj2, items, tmp3(self).constructor);
     } else {
       constructResult = obj2.apply(self, items);
     }
-    return _possibleConstructorReturn(self, constructResult);
+    return tmp4(self, constructResult);
   }
 }
-_inherits(ServerRuntimeClient, BaseClient.BaseClient);
+_inherits(ServerRuntimeClient, _mod12635.BaseClient);
 const entry = {
   key: "eventFromException",
-  value: function eventFromException(name, data) {
-    const obj = eventFromMessage2;
-    const result = obj.eventFromUnknownInput(this, this._options.stackParser, name, data);
+  value: function eventFromException(arg0, arg1) {
+    const result = ServerRuntimeClient(12640).eventFromUnknownInput(this, this._options.stackParser, arg0, arg1);
     result.level = "error";
-    const obj2 = _mod12604;
-    return obj2.resolvedSyncPromise(result);
+    const obj = ServerRuntimeClient(12640);
+    return ServerRuntimeClient(12604).resolvedSyncPromise(result);
   }
 };
 let items = [
   entry,
   {
     key: "eventFromMessage",
-    value: function eventFromMessage(value) {
-      let str = info;
-      if (info === undefined) {
+    value: function eventFromMessage(arg0) {
+      let str = arg1;
+      if (arg1 === undefined) {
         str = "info";
       }
-      const resolvedSyncPromise = _mod12604.resolvedSyncPromise;
-      const obj = eventFromMessage2;
-      return resolvedSyncPromise(obj.eventFromMessage(this._options.stackParser, value, str, event_id, this._options.attachStacktrace));
+      const obj = ServerRuntimeClient(12604);
+      return obj.resolvedSyncPromise(ServerRuntimeClient(12640).eventFromMessage(this._options.stackParser, arg0, str, arg2, this._options.attachStacktrace));
     }
   },
   {
@@ -88,16 +83,19 @@ let items = [
       const self = this;
       if (this._options.autoSessionTracking) {
         if (self._sessionFlusher) {
-          const obj = _mod12607;
-          const isolationScope = obj.getIsolationScope();
+          const isolationScope = ServerRuntimeClient(12607).getIsolationScope();
           const requestSession = isolationScope.getRequestSession();
-          const tmp4 = requestSession && "ok" === requestSession.status;
+          let tmp4 = requestSession;
+          if (requestSession) {
+            tmp4 = "ok" === requestSession.status;
+          }
           if (tmp4) {
             requestSession.status = "errored";
           }
+          const obj = ServerRuntimeClient(12607);
         }
       }
-      let fn = _get(_getPrototypeOf(ServerRuntimeClient.prototype), "captureException", self);
+      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "captureException", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -111,25 +109,28 @@ let items = [
       const self = this;
       if (this._options.autoSessionTracking) {
         if (self._sessionFlusher) {
-          const tmp = type.type || "exception";
           if ("exception" === tmp) {
             if (type.exception) {
               if (type.exception.values) {
                 if (type.exception.values.length > 0) {
-                  const obj = _mod12607;
-                  const isolationScope = obj.getIsolationScope();
+                  const isolationScope = ServerRuntimeClient(12607).getIsolationScope();
                   const requestSession = isolationScope.getRequestSession();
-                  const tmp5 = requestSession && "ok" === requestSession.status;
+                  let tmp5 = requestSession;
+                  if (requestSession) {
+                    tmp5 = "ok" === requestSession.status;
+                  }
                   if (tmp5) {
                     requestSession.status = "errored";
                   }
+                  const obj = ServerRuntimeClient(12607);
                 }
               }
             }
           }
+          tmp = type.type || "exception";
         }
       }
-      let fn = _get(_getPrototypeOf(ServerRuntimeClient.prototype), "captureEvent", self);
+      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "captureEvent", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -145,7 +146,7 @@ let items = [
         const _sessionFlusher = self._sessionFlusher;
         _sessionFlusher.close();
       }
-      let fn = _get(_getPrototypeOf(ServerRuntimeClient.prototype), "close", self);
+      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "close", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -159,13 +160,11 @@ let items = [
       const self = this;
       const release = this._options.release;
       if (release) {
-        const self2 = this;
-        const self3 = this;
         const obj = { release, environment: tmp };
-        const sessionFlusher = new SessionFlusher.SessionFlusher(self, obj);
+        const sessionFlusher = new ServerRuntimeClient(12633).SessionFlusher(self, obj);
         self._sessionFlusher = sessionFlusher;
-      } else if (_mod12608.DEBUG_BUILD) {
-        const logger = _mod12580.logger;
+      } else if (ServerRuntimeClient(12608).DEBUG_BUILD) {
+        const logger = ServerRuntimeClient(12580).logger;
         logger.warn("Cannot initialize an instance of SessionFlusher if no release is provided!");
       }
     }
@@ -173,15 +172,13 @@ let items = [
   {
     key: "captureCheckIn",
     value: function captureCheckIn(checkInId, arg1, arg2) {
-      let tmp10;
-      let tmp9;
       if ("checkInId" in checkInId) {
         if (checkInId.checkInId) {
           checkInId = checkInId.checkInId;
         }
         const self = this;
         if (this._isEnabled()) {
-          const options = self.getOptions();
+          options = self.getOptions();
           const tunnel = options.tunnel;
           const obj4 = { check_in_id: checkInId, monitor_slug: null, status: null, release: null, environment: null };
           ({ monitorSlug: obj2.monitor_slug, status: obj2.status } = checkInId);
@@ -189,37 +186,35 @@ let items = [
           if ("duration" in checkInId) {
             obj4.duration = checkInId.duration;
           }
-          const tmp5 = arg1;
-          if (tmp5) {
-            const obj7 = { schedule: null, checkin_margin: null, max_runtime: null, timezone: null, failure_issue_threshold: null, recovery_threshold: null };
+          if (arg1) {
             ({ schedule: obj3.schedule, checkinMargin: obj3.checkin_margin, maxRuntime: obj3.max_runtime, timezone: obj3.timezone, failureIssueThreshold: obj3.failure_issue_threshold, recoveryThreshold: obj3.recovery_threshold } = arg1);
-            obj4.monitor_config = obj7;
+            obj4.monitor_config = { schedule: null, checkin_margin: null, max_runtime: null, timezone: null, failure_issue_threshold: null, recovery_threshold: null };
+            const obj8 = { schedule: null, checkin_margin: null, max_runtime: null, timezone: null, failure_issue_threshold: null, recovery_threshold: null };
           }
           [tmp9, tmp10] = self._getTraceInfoFromScope(arg2);
-          _slicedToArray(self._getTraceInfoFromScope(arg2), 2);
           if (tmp10) {
-            const obj8 = { trace: tmp10 };
-            obj4.contexts = obj8;
+            const obj9 = { trace: tmp10 };
+            obj4.contexts = obj9;
           }
-          const createCheckInEnvelope = _mod12641.createCheckInEnvelope;
+          const obj5 = ServerRuntimeClient(12641);
           const sdkMetadata = self.getSdkMetadata();
-          const checkInEnvelope = createCheckInEnvelope(obj4, tmp9, sdkMetadata, tunnel, self.getDsn());
-          if (_mod12608.DEBUG_BUILD) {
-            const logger2 = _mod12580.logger;
+          const checkInEnvelope = obj5.createCheckInEnvelope(obj4, tmp9, sdkMetadata, tunnel, self.getDsn());
+          if (ServerRuntimeClient(12608).DEBUG_BUILD) {
+            const logger2 = ServerRuntimeClient(12580).logger;
             logger2.info("Sending checkin:", checkInId.monitorSlug, checkInId.status);
           }
           self.sendEnvelope(checkInEnvelope);
           return checkInId;
         } else {
-          if (_mod12608.DEBUG_BUILD) {
-            const logger = _mod12580.logger;
+          if (ServerRuntimeClient(12608).DEBUG_BUILD) {
+            const logger = ServerRuntimeClient(12580).logger;
             logger.warn("SDK not enabled, will not capture checkin.");
           }
           return checkInId;
         }
       }
-      const obj = _mod12591;
-      checkInId = obj.uuid4();
+      checkInId = ServerRuntimeClient(12591).uuid4();
+      const obj = ServerRuntimeClient(12591);
     }
   },
   {
@@ -228,8 +223,8 @@ let items = [
       if (this._sessionFlusher) {
         const _sessionFlusher = this._sessionFlusher;
         const result = _sessionFlusher.incrementSessionStatusCount();
-      } else if (_mod12608.DEBUG_BUILD) {
-        const logger = _mod12580.logger;
+      } else if (ServerRuntimeClient(12608).DEBUG_BUILD) {
+        const logger = ServerRuntimeClient(12580).logger;
         logger.warn("Discarded request mode session because autoSessionTracking option was disabled");
       }
     }
@@ -237,21 +232,21 @@ let items = [
   {
     key: "_prepareEvent",
     value: function _prepareEvent(platform, arg1, arg2, arg3) {
-      let tmp3;
       const self = this;
       if (this._options.platform) {
         platform.platform = platform.platform || self._options.platform;
       }
       if (self._options.runtime) {
-        const obj = { runtime: tmp3.runtime || self._options.runtime };
+        const obj = {};
         const merged = Object.assign(platform.contexts);
-        tmp3 = platform.contexts || {};
+        obj.runtime = platform.contexts || {}.runtime || self._options.runtime;
         platform.contexts = obj;
+        const tmp3 = platform.contexts || {};
       }
       if (self._options.serverName) {
         platform.server_name = platform.server_name || self._options.serverName;
       }
-      let fn = _get(_getPrototypeOf(ServerRuntimeClient.prototype), "_prepareEvent", self);
+      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "_prepareEvent", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -261,26 +256,22 @@ let items = [
   },
   {
     key: "_getTraceInfoFromScope",
-    value: function _getTraceInfoFromScope(self) {
-      const tmp = self;
-      if (tmp) {
-        let spanToTraceContextResult;
-        let dynamicSamplingContextFromSpan;
-        const obj = _mod12602;
-        const _getSpanForScopeResult = obj._getSpanForScope(self);
+    value: function _getTraceInfoFromScope(arg0) {
+      if (arg0) {
+        const _getSpanForScopeResult = ServerRuntimeClient(12602)._getSpanForScope(arg0);
         if (_getSpanForScopeResult) {
-          const tmp2Result = _mod12585;
-          spanToTraceContextResult = tmp2Result.spanToTraceContext(_getSpanForScopeResult);
+          let spanToTraceContextResult = ServerRuntimeClient(12585).spanToTraceContext(_getSpanForScopeResult);
+          const tmpResult = ServerRuntimeClient(12585);
         } else {
-          const tmp2Result3 = _mod12607;
-          spanToTraceContextResult = tmp2Result3.getTraceContextFromScope(self);
+          spanToTraceContextResult = ServerRuntimeClient(12607).getTraceContextFromScope(arg0);
+          const tmpResult3 = ServerRuntimeClient(12607);
         }
-        const tmp2Result4 = _mod12616;
+        const tmpResult4 = ServerRuntimeClient(12616);
         if (_getSpanForScopeResult) {
-          dynamicSamplingContextFromSpan = tmp2Result4.getDynamicSamplingContextFromSpan(_getSpanForScopeResult);
+          let dynamicSamplingContextFromSpan = tmpResult4.getDynamicSamplingContextFromSpan(_getSpanForScopeResult);
         } else {
-          self = this;
-          dynamicSamplingContextFromSpan = tmp2Result4.getDynamicSamplingContextFromScope(this, self);
+          const self = this;
+          dynamicSamplingContextFromSpan = tmpResult4.getDynamicSamplingContextFromScope(this, arg0);
         }
         const items = [dynamicSamplingContextFromSpan, spanToTraceContextResult];
         return items;
@@ -291,6 +282,5 @@ let items = [
     }
   }
 ];
-const ServerRuntimeClient_export = _createClass(ServerRuntimeClient, items);
 
-export { ServerRuntimeClient_export as ServerRuntimeClient };
+export const ServerRuntimeClient = _createClass(ServerRuntimeClient, items);

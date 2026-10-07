@@ -2,198 +2,178 @@
 
 // Module 5402 (ValidateAndApplyPropertyDescriptor)
 import _mod1293 from "module_1293" /* 1293 */;
-import isObject from "isObject" /* 5336 */;
-import isPropertyKey from "isPropertyKey" /* 5383 */;
-import isPropertyDescriptor from "isPropertyDescriptor" /* 5387 */;
+import _mod5336 from "module_5336" /* 5336 */;
+import _mod5383 from "module_5383" /* 5383 */;
+import _mod5387 from "module_5387" /* 5387 */;
 import DefineOwnProperty from "DefineOwnProperty" /* 5390 */;
 import IsDataDescriptor from "IsDataDescriptor" /* 5391 */;
 import SameValue from "SameValue" /* 5392 */;
 import FromPropertyDescriptor from "FromPropertyDescriptor" /* 5393 */;
 import IsAccessorDescriptor from "IsAccessorDescriptor" /* 5400 */;
-import Type from "Type" /* 5403 */;
-import isFullyPopulatedPropertyDescriptor from "isFullyPopulatedPropertyDescriptor" /* 5404 */;
+import _mod5403 from "module_5403" /* 5403 */;
+import _mod5404 from "module_5404" /* 5404 */;
 import IsGenericDescriptor from "IsGenericDescriptor" /* 5405 */;
 
 
 export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __Configurable__, arg4) {
-  let tmp35;
-  let tmp36;
-  let tmp51;
-  const tmp3 = Type(arg0);
+  const tmp3 = _mod5403(arg0);
   if (undefined !== arg0) {
-    if (!isObject(arg0)) {
-      const self = this;
-      const self2 = this;
-      const tmp4 = new _mod1293("Assertion failed: O must be undefined or an Object");
-      throw tmp4;
+    if (!_mod5336(arg0)) {
+      const tmp6 = new _mod1293("Assertion failed: O must be undefined or an Object");
+      throw tmp6;
     }
   }
-  if (isPropertyKey(arg1)) {
+  if (_mod5383(arg1)) {
     if (typeof flag !== "boolean") {
-      const self11 = this;
-      const self12 = this;
-      const tmp78 = new _mod1293("Assertion failed: extensible must be a Boolean");
-      throw tmp78;
-    } else if (isPropertyDescriptor(__Configurable__)) {
-      let tmp11 = arg4;
+      const tmp88 = new _mod1293("Assertion failed: extensible must be a Boolean");
+      throw tmp88;
+    } else if (_mod5387(__Configurable__)) {
+      let prop = arg4;
       if (undefined !== arg4) {
-        if (!isPropertyDescriptor(tmp11)) {
-          const self7 = this;
-          const self8 = this;
-          const tmp12 = new _mod1293("Assertion failed: current must be a Property Descriptor, or undefined");
-          throw tmp12;
+        if (!_mod5387(prop)) {
+          const tmp20 = new _mod1293("Assertion failed: current must be a Property Descriptor, or undefined");
+          throw tmp20;
         }
       }
-      if (undefined === tmp11) {
-        let tmp58 = flag;
-        if (tmp58) {
-          let tmp59 = "Undefined" === tmp3;
-          if (!tmp59) {
-            let tmpResultResult;
-            const tmp60 = IsAccessorDescriptor(__Configurable__);
+      if (undefined === prop) {
+        let tmp65 = flag;
+        if (tmp65) {
+          if ("Undefined" === tmp3) {
+            tmp65 = tmp66;
+          } else {
             const tmpResult = DefineOwnProperty;
             const tmpResult17 = IsDataDescriptor;
             const tmpResult18 = SameValue;
             const tmpResult19 = FromPropertyDescriptor;
-            if (tmp60) {
-              tmpResultResult = tmpResult(tmpResult17, tmpResult18, tmpResult19, arg0, arg1, __Configurable__);
+            if (tmp67) {
+              let tmpResultResult = tmpResult(tmpResult17, tmpResult18, tmpResult19, arg0, arg1, __Configurable__);
             } else {
               const obj2 = { "[[Configurable]]": __Configurable__["[[Configurable]]"], "[[Enumerable]]": __Configurable__["[[Enumerable]]"], "[[Value]]": __Configurable__["[[Value]]"], "[[Writable]]": __Configurable__["[[Writable]]"] };
               tmpResultResult = tmpResult(tmpResult17, tmpResult18, tmpResult19, arg0, arg1, obj2);
             }
-            tmp59 = tmpResultResult;
+            tmp67 = IsAccessorDescriptor(__Configurable__);
           }
-          tmp58 = tmp59;
         }
-        return tmp58;
+        return tmp65;
       } else {
         const obj3 = { IsAccessorDescriptor, IsDataDescriptor };
-        const tmpResult20 = isFullyPopulatedPropertyDescriptor;
-        if (tmpResult20(obj3, tmp11)) {
-          if (!tmp11["[[Configurable]]"]) {
+        if (tmpResult20(obj3, prop)) {
+          if (!prop["[[Configurable]]"]) {
             if ("[[Configurable]]" in __Configurable__) {
               if (__Configurable__["[[Configurable]]"]) {
                 return false;
               }
             }
             if ("[[Enumerable]]" in __Configurable__) {
-              if (!SameValue(__Configurable__["[[Enumerable]]"], tmp11["[[Enumerable]]"])) {
+              if (!SameValue(__Configurable__["[[Enumerable]]"], prop["[[Enumerable]]"])) {
                 return false;
               }
             }
             if (!IsGenericDescriptor(__Configurable__)) {
               const tmpResult21 = SameValue;
-              const tmp17 = IsAccessorDescriptor(__Configurable__);
-              if (!tmpResult21(tmp17, IsAccessorDescriptor(tmp11))) {
+              if (!tmpResult21(tmp27, IsAccessorDescriptor(prop))) {
                 return false;
               }
+              tmp27 = IsAccessorDescriptor(__Configurable__);
             }
-            if (IsAccessorDescriptor(tmp11)) {
+            if (IsAccessorDescriptor(prop)) {
               if ("[[Get]]" in __Configurable__) {
-                if (!SameValue(__Configurable__["[[Get]]"], tmp11["[[Get]]"])) {
+                if (!SameValue(__Configurable__["[[Get]]"], prop["[[Get]]"])) {
                   return false;
                 }
               }
               if ("[[Set]]" in __Configurable__) {
-                if (!SameValue(__Configurable__["[[Set]]"], tmp11["[[Set]]"])) {
+                if (!SameValue(__Configurable__["[[Set]]"], prop["[[Set]]"])) {
                   return false;
                 }
               }
-            } else if (!tmp11["[[Writable]]"]) {
+            } else if (!prop["[[Writable]]"]) {
               if ("[[Writable]]" in __Configurable__) {
                 if (__Configurable__["[[Writable]]"]) {
                   return false;
                 }
               }
               if ("[[Value]]" in __Configurable__) {
-                if (!SameValue(__Configurable__["[[Value]]"], tmp11["[[Value]]"])) {
+                if (!SameValue(__Configurable__["[[Value]]"], prop["[[Value]]"])) {
                   return false;
                 }
               }
             }
           }
-          let tmp18 = "Undefined" === tmp3;
-          if (!tmp18) {
-            let tmpResult6Result;
-            if (IsDataDescriptor(tmp11)) {
-              if (IsAccessorDescriptor(__Configurable__)) {
-                let tmp43 = tmp11;
-                if ("[[Configurable]]" in __Configurable__) {
-                  tmp43 = __Configurable__;
+          if ("Undefined" === tmp3) {
+            return tmp28;
+          } else {
+            if (!IsDataDescriptor(prop)) {
+              if (IsAccessorDescriptor(prop)) {
+                if (IsDataDescriptor(__Configurable__)) {
+                  let tmp37 = prop;
+                  if ("[[Configurable]]" in __Configurable__) {
+                    tmp37 = __Configurable__;
+                  }
+                  let tmp38 = prop;
+                  if ("[[Enumerable]]" in __Configurable__) {
+                    tmp38 = __Configurable__;
+                  }
+                  const tmpResult23 = IsDataDescriptor;
+                  const tmpResult24 = SameValue;
+                  const tmpResult25 = FromPropertyDescriptor;
+                  const obj = { "[[Configurable]]": tmp37["[[Configurable]]"], "[[Enumerable]]": tmp38["[[Enumerable]]"], "[[Value]]": null, "[[Writable]]": null };
+                  let tmp43 = prop;
+                  if ("[[Value]]" in __Configurable__) {
+                    tmp43 = __Configurable__;
+                  }
+                  obj["[[Value]]"] = tmp43["[[Value]]"];
+                  let tmp44 = prop;
+                  if ("[[Writable]]" in __Configurable__) {
+                    tmp44 = __Configurable__;
+                  }
+                  obj["[[Writable]]"] = tmp44["[[Writable]]"];
+                  let tmpResult6Result = DefineOwnProperty(tmpResult23, tmpResult24, tmpResult25, arg0, arg1, obj);
+                  const tmpResult22 = DefineOwnProperty;
                 }
-                let tmp45 = tmp11;
-                const prop = tmp43["[[Configurable]]"];
-                if ("[[Enumerable]]" in __Configurable__) {
-                  tmp45 = __Configurable__;
-                }
-                const prop1 = tmp45["[[Enumerable]]"];
-                const tmpResult22 = DefineOwnProperty;
-                const tmpResult23 = IsDataDescriptor;
-                const tmpResult24 = SameValue;
-                const obj4 = { "[[Configurable]]": prop, "[[Enumerable]]": prop1, "[[Get]]": tmp51["[[Get]]"], "[[Set]]": tmp11["[[Set]]"] };
-                tmp51 = tmp11;
-                const tmpResult25 = FromPropertyDescriptor;
-                if ("[[Get]]" in __Configurable__) {
-                  tmp51 = __Configurable__;
-                }
-                if ("[[Set]]" in __Configurable__) {
-                  tmp11 = __Configurable__;
-                }
-                tmpResult6Result = tmpResult22(tmpResult23, tmpResult24, tmpResult25, arg0, arg1, obj4);
               }
-              tmp18 = tmpResult6Result;
+              const tmpResult27 = IsDataDescriptor;
+              const tmpResult26 = DefineOwnProperty;
+              tmpResult6Result = tmpResult26(tmpResult27, SameValue, FromPropertyDescriptor, arg0, arg1, __Configurable__);
+              const tmpResult28 = SameValue;
             }
-            if (IsAccessorDescriptor(tmp11)) {
-              if (IsDataDescriptor(__Configurable__)) {
-                let tmp27 = tmp11;
-                if ("[[Configurable]]" in __Configurable__) {
-                  tmp27 = __Configurable__;
-                }
-                let tmp29 = tmp11;
-                const prop2 = tmp27["[[Configurable]]"];
-                if ("[[Enumerable]]" in __Configurable__) {
-                  tmp29 = __Configurable__;
-                }
-                const prop3 = tmp29["[[Enumerable]]"];
-                const tmpResult26 = DefineOwnProperty;
-                const tmpResult27 = IsDataDescriptor;
-                const tmpResult28 = SameValue;
-                const obj = { "[[Configurable]]": prop2, "[[Enumerable]]": prop3, "[[Value]]": tmp35["[[Value]]"], "[[Writable]]": tmp36["[[Writable]]"] };
-                tmp35 = tmp11;
-                const tmpResult29 = FromPropertyDescriptor;
-                if ("[[Value]]" in __Configurable__) {
-                  tmp35 = __Configurable__;
-                }
-                tmp36 = tmp11;
-                if ("[[Writable]]" in __Configurable__) {
-                  tmp36 = __Configurable__;
-                }
-                tmpResult6Result = tmpResult26(tmpResult27, tmpResult28, tmpResult29, arg0, arg1, obj);
-              }
+            let tmp51 = prop;
+            if ("[[Configurable]]" in __Configurable__) {
+              tmp51 = __Configurable__;
             }
-            const tmpResult30 = DefineOwnProperty;
-            const tmpResult31 = IsDataDescriptor;
-            const tmpResult32 = SameValue;
-            tmpResult6Result = tmpResult30(tmpResult31, tmpResult32, FromPropertyDescriptor, arg0, arg1, __Configurable__);
+            let tmp52 = prop;
+            if ("[[Enumerable]]" in __Configurable__) {
+              tmp52 = __Configurable__;
+            }
+            const tmpResult30 = IsDataDescriptor;
+            const tmpResult31 = SameValue;
+            const tmpResult32 = FromPropertyDescriptor;
+            const obj4 = { "[[Configurable]]": tmp51["[[Configurable]]"], "[[Enumerable]]": tmp52["[[Enumerable]]"], "[[Get]]": null, "[[Set]]": null };
+            let tmp57 = prop;
+            if ("[[Get]]" in __Configurable__) {
+              tmp57 = __Configurable__;
+            }
+            obj4["[[Get]]"] = tmp57["[[Get]]"];
+            if ("[[Set]]" in __Configurable__) {
+              prop = __Configurable__;
+            }
+            prop = prop["[[Set]]"];
+            obj4["[[Set]]"] = prop;
+            tmpResult6Result = DefineOwnProperty(tmpResult30, tmpResult31, tmpResult32, arg0, arg1, obj4);
+            const tmpResult29 = DefineOwnProperty;
           }
-          return tmp18;
         } else {
-          const self9 = this;
-          const self10 = this;
-          const tmp14 = new _mod1293("`current`, when present, must be a fully populated and valid Property Descriptor");
-          throw tmp14;
+          const tmp24 = new _mod1293("`current`, when present, must be a fully populated and valid Property Descriptor");
+          throw tmp24;
         }
+        tmpResult20 = _mod5404;
       }
     } else {
-      const self5 = this;
-      const self6 = this;
-      const tmp9 = new _mod1293("Assertion failed: Desc must be a Property Descriptor");
-      throw tmp9;
+      const tmp15 = new _mod1293("Assertion failed: Desc must be a Property Descriptor");
+      throw tmp15;
     }
   } else {
-    const self3 = this;
-    const self4 = this;
-    const tmp6 = new _mod1293("Assertion failed: P must be a Property Key");
-    throw tmp6;
+    const tmp10 = new _mod1293("Assertion failed: P must be a Property Key");
+    throw tmp10;
   }
 };

@@ -1,27 +1,27 @@
 // === Module 14195: ? ===
 
 // Module 14195
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import map from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
+import noop from "module_19" /* 19 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let size;
-
-let value;
-let weakMap;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -29,110 +29,112 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
 if (typeof WeakMap === "function") {
   const _WeakMap = WeakMap;
-  let self = this;
-  const self2 = this;
-  weakMap = new WeakMap();
+  const weakMap = new WeakMap();
   const _WeakMap2 = WeakMap;
-  const self3 = this;
   const weakMap1 = new WeakMap();
 }
-if (!react) {
-  let tmp7 = null;
+if (!noop) {
   let merged = Object.assign({ default: null });
-  merged[0] = react;
-  value = merged;
-  if (null !== react) {
-    if (typeof react === "object") {
+  merged[0] = noop;
+  let value = merged;
+  if (null !== noop) {
+    if (typeof noop === "object") {
       if (!weakMap) {
         value = merged;
         const keys = Object.keys();
         if (keys !== undefined) {
           value = merged;
           while (keys[tmp] !== undefined) {
-            let callResult = "default" !== tmp12;
-            if (callResult) {
-              let hasOwnProperty = {}.hasOwnProperty;
-              callResult = hasOwnProperty.call(react, tmp12);
-            }
-            if (!callResult) {
-              continue;
-            } else {
-              let _Object = Object;
-              let ownPropertyDescriptor = defineProperty;
-              if (ownPropertyDescriptor) {
-                let _Object2 = Object;
-                ownPropertyDescriptor = Object.getOwnPropertyDescriptor(react, tmp12);
-              }
-              if (!ownPropertyDescriptor) {
-                merged[tmp12] = react[tmp12];
+            let tmp22 = "default" !== tmp12;
+            if (!tmp22) {
+              if (!tmp22) {
                 continue;
               } else {
-                let definePropertyResult1 = defineProperty(merged, tmp12, ownPropertyDescriptor);
+                let _Object = Object;
+                let ownPropertyDescriptor = defineProperty;
+                if (defineProperty) {
+                  let _Object2 = Object;
+                  ownPropertyDescriptor = Object.getOwnPropertyDescriptor(noop, tmp12);
+                }
+                if (!ownPropertyDescriptor) {
+                  merged[tmp12] = noop[tmp12];
+                  continue;
+                } else {
+                  let definePropertyResult1 = defineProperty(merged, tmp12, ownPropertyDescriptor);
+                  continue;
+                }
                 continue;
               }
               continue;
+            } else {
+              let hasOwnProperty = {}.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              let tmp13 = typeof call === "unknown" ? hasOwnProperty(tmp12) : call(noop, tmp12);
             }
-            continue;
           }
         }
-      } else if (weakMap.has(react)) {
-        value = weakMap.get(react);
+      } else if (weakMap.has(noop)) {
+        value = weakMap.get(noop);
       } else {
-        const result = weakMap.set(react, merged);
+        const result = weakMap.set(noop, merged);
       }
     } else {
       value = merged;
     }
   }
 } else {
-  value = react;
+  value = noop;
 }
-const metroRequire = { container: { position: "absolute", left: 0, top: 0, right: 0, bottom: 0, zIndex: 1000, opacity: 0.25 }, debugContainer: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", backgroundColor: "transparent", zIndex: 2000 }, debugTextContainer: { backgroundColor: "lightgray", margin: 50, padding: 20 }, debugText: { color: "red", fontSize: 16, marginBottom: 10 } };
+const container = { container: { position: "absolute", left: 0, top: 0, right: 0, bottom: 0, zIndex: 1000, opacity: 0.25 }, debugContainer: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", backgroundColor: "transparent", zIndex: 2000 }, debugTextContainer: { backgroundColor: "lightgray", margin: 50, padding: 20 }, debugText: { color: "red", fontSize: 16, marginBottom: 10 } };
 class FullScreenOverlay {
-  constructor(emitter) {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, FullScreenOverlay);
-    const items = [emitter];
-    let obj = _getPrototypeOf(FullScreenOverlay);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+  constructor(arg0) {
+    self = this;
+    tmp = closure_0(this, FullScreenOverlay);
+    items = [];
+    items[0] = global;
+    tmp2 = c2;
+    obj = c2(FullScreenOverlay);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    const tmp3Result = map(self, constructResult);
-    let closure_0 = tmp3Result;
-    const obj2 = { opacity: container.container.opacity, uri: null, justifyContent: "center", alignItems: "center" };
-    tmp3Result.state = obj2;
-    emitter = emitter.emitter;
-    emitter.on("overlay", (arg0) => {
-      const setState = closure_0.setState;
-      const obj = {};
-      const merged = Object.assign(closure_0.state);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    obj1 = { opacity: metroRequire.container.opacity, uri: null, justifyContent: "center", alignItems: "center" };
+    tmp3Result.state = obj1;
+    emitter = global.emitter;
+    onResult = emitter.on("overlay", (arg0) => {
+      const merged = Object.assign(state.state);
       const merged1 = Object.assign(arg0);
-      setState(obj);
+      state.setState({});
     });
     return tmp3Result;
   }
 }
+_classCallCheck = FullScreenOverlay;
 _inherits(FullScreenOverlay, value.Component);
 const entry = {
   key: "createContainerStyle",
   value: function createContainerStyle() {
-    let alignItems;
-    let height;
-    let justifyContent;
-    let opacity;
-    let width;
-    const Dimensions = react_native.Dimensions;
+    const Dimensions = get_ActivityIndicator.Dimensions;
     ({ opacity, justifyContent, alignItems } = this.state);
-    const value = Dimensions.get("window");
-    const obj = { opacity, width, height, justifyContent, alignItems };
+    value = Dimensions.get("window");
+    const obj = {};
     ({ width, height } = value);
     const merged = Object.assign(container.container);
+    obj.opacity = opacity;
+    obj.width = width;
+    obj.height = height;
+    obj.justifyContent = justifyContent;
+    obj.alignItems = alignItems;
     return obj;
   }
 };
@@ -147,20 +149,8 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let growToWindow;
-      let height;
-      let jsx2;
-      let jsxResult;
-      let jsxs;
-      let marginLeft;
-      let num4;
-      let resizeMode;
-      let tmp6;
-      let tmp7;
-      let uri;
-      let width;
       const self = this;
-      const state = this.state;
+      state = this.state;
       ({ uri, growToWindow, marginLeft } = state);
       let num = 0;
       ({ width, height, resizeMode } = state);
@@ -178,38 +168,42 @@ let items = [
         num3 = marginTop;
       }
       const marginBottom = state.marginBottom;
-      size = { width, height, marginTop: num3, marginRight: num2, marginBottom: num4, marginLeft: num };
-      num4 = 0;
+      const size = { width, height, marginTop: num3, marginRight: num2, marginBottom: null, marginLeft: null };
+      let num4 = 0;
       if (undefined !== marginBottom) {
         num4 = marginBottom;
       }
+      size.marginBottom = num4;
+      size.marginLeft = num;
       if (growToWindow) {
-        const Dimensions = react_native.Dimensions;
-        const value = Dimensions.get("window");
+        const Dimensions = get_ActivityIndicator.Dimensions;
+        value = Dimensions.get("window");
         ({ width: obj.width, height: obj.height } = value);
       }
-      const jsx = Fragment.jsx;
+      const jsx = jsxProd.jsx;
       if (uri) {
-        let tmp8 = null;
-        const Image = react_native.Image;
+        const obj2 = { source: null, style: null, resizeMode: null };
         const obj3 = { uri };
+        obj2.source = obj3;
+        obj2.style = size;
+        let tmp8 = null;
         if (growToWindow) {
           tmp8 = resizeMode;
         }
-        jsxResult = <Image source={obj3} style={size} resizeMode={tmp8} />;
-        tmp6 = react_native;
-        tmp7 = Fragment;
+        obj2.resizeMode = tmp8;
+        let jsxResult = <get ActivityIndicator.Image source={null} style={null} resizeMode={null} />;
+        let tmp6 = get_ActivityIndicator;
+        let tmp7 = jsxProd;
       } else {
-        jsxResult = <react-native.View />;
-        tmp6 = react_native;
-        tmp7 = Fragment;
+        jsxResult = <get ActivityIndicator.View />;
+        tmp6 = get_ActivityIndicator;
+        tmp7 = jsxProd;
       }
+      const obj4 = { children: null };
       ({ jsxs, Fragment, jsx: jsx2 } = tmp7);
-      const items = [, ];
-      const obj5 = { style: self.createContainerStyle(), pointerEvents: "none", children: jsxResult };
-      items[0] = jsx2(tmp6.View, obj5);
-      items[1] = self.renderDebug();
-      return <>{items}</>;
+      const items = [jsx2(tmp6.View, { style: self.createContainerStyle(), pointerEvents: "none", children: jsxResult }), self.renderDebug()];
+      obj4.children = items;
+      return <>{null}</>;
     }
   }
 ];

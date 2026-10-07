@@ -3,63 +3,63 @@
 // Module 12644
 import _mod12604 from "module_12604" /* 12604 */;
 
-let diff;
+require = arg1;
+const dependencyMap = arg6;
 
-
-export function makePromiseBuffer(arg0) {
-  let closure_0 = arg0;
+export function makePromiseBuffer(bufferSize) {
   const items = [];
-  let obj = {
+  return {
     $: items,
     add(fn) {
-      let promise;
-      const tmp2 = undefined === promise || items.length < tmp;
+      let tmp2 = undefined === promise;
+      if (!tmp2) {
+        tmp2 = items.length < tmp;
+      }
       if (tmp2) {
         promise = fn();
         if (-1 === items.indexOf(promise)) {
           items.push(promise);
         }
-        const nextPromise = promise.then(() => {
-          const first = items.splice(items.indexOf(promise), 1)[0] || Promise.resolve(undefined);
+        promise.then(() => {
+          let first = items.splice(items.indexOf(promise), 1)[0];
+          if (!first) {
+            first = Promise.resolve(undefined);
+          }
           return first;
-        });
-        nextPromise.then(null, () => {
-          const first = items.splice(items.indexOf(promise), 1)[0] || Promise.resolve(undefined);
+        }).then(null, () => {
+          let first = items.splice(items.indexOf(promise), 1)[0];
+          if (!first) {
+            first = Promise.resolve(undefined);
+          }
           return first.then(null, () => {
 
           });
         });
         return promise;
       } else {
-        const self = this;
-        const self2 = this;
-        const rejectedSyncPromise = closure_0(items[0]).rejectedSyncPromise;
-        const sentryError = new closure_0(items[1]).SentryError("Not adding Promise because buffer limit was reached.");
-        return rejectedSyncPromise(sentryError);
+        const sentryError = new bufferSize(items[1]).SentryError("Not adding Promise because buffer limit was reached.");
+        return bufferSize(items[0]).rejectedSyncPromise(sentryError);
       }
     },
     drain(arg0) {
-      let length;
-      closure_0 = arg0;
-      const syncPromise = new closure_0(items[0]).SyncPromise((fn, arg1) => {
-        let closure_3;
+      bufferSize = arg0;
+      return new bufferSize(items[0]).SyncPromise((fn, arg1) => {
         closure_0 = fn;
-        let closure_1 = arg1;
-        const arr = length;
-        if (length.length) {
-          const tmp = globalThis;
+        closure_1 = arg1;
+        length = length.length;
+        if (length) {
           const _setTimeout = setTimeout;
-          let tmp2 = closure_0;
           const timeout = setTimeout(() => {
-            const tmp2 = closure_0 && tmp > 0;
+            let tmp2 = closure_0;
+            if (closure_0) {
+              tmp2 = tmp > 0;
+            }
             if (tmp2) {
               closure_0(false);
             }
           }, closure_0);
           const item = arr.forEach((item) => {
-            const obj = _mod12604;
-            const resolvedSyncPromiseResult = obj.resolvedSyncPromise(item);
-            resolvedSyncPromiseResult.then(() => {
+            _mod12604.resolvedSyncPromise(item).then(() => {
               diff = diff - 1;
               if (!diff) {
                 const _clearTimeout = clearTimeout;
@@ -71,9 +71,8 @@ export function makePromiseBuffer(arg0) {
         } else {
           return fn(true);
         }
+        arr = length;
       });
-      return syncPromise;
     }
   };
-  return obj;
 }

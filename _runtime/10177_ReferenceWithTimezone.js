@@ -1,43 +1,41 @@
 // === Module 10177: ReferenceWithTimezone ===
 
 // Module 10177 (ReferenceWithTimezone)
-import EmptyDuration2 from "EmptyDuration" /* 10176 */;
-import TIMEZONE_ABBR_MAP from "TIMEZONE_ABBR_MAP" /* 10178 */;
-import assignSimilarDate from "assignSimilarDate" /* 10180 */;
 import _readOnlyError from "_readOnlyError" /* 377 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
-let set;
-
+let ParsingComponents = require;
 class ReferenceWithTimezone {
   constructor(arg0, arg1) {
-    const self = this;
-    let date = arg0;
-    _classCallCheck(this, ReferenceWithTimezone);
-    if (null == arg0) {
-      const _Date = Date;
-      const self2 = this;
-      const self3 = this;
+    self = this;
+    date = global;
+    tmp2 = c2(this, ParsingResult);
+    if (null == global) {
+      tmp3 = globalThis;
+      _Date = Date;
+      tmp4 = new.target;
+      tmp5 = new.target;
       date = new Date();
     }
     self.instant = date;
-    let tmp4 = null;
-    if (null != arg1) {
-      tmp4 = arg1;
+    tmp6 = null;
+    if (null != require) {
+      tmp6 = require;
     }
-    self.timezoneOffset = tmp4;
+    self.timezoneOffset = tmp6;
+    return;
   }
 }
+ParsingComponents = ReferenceWithTimezone;
 const entry = {
   key: "getDateWithAdjustedTimezone",
   value: function getDateWithAdjustedTimezone() {
     const self = this;
     const date = new Date(this.instant);
     if (null !== this.timezoneOffset) {
-      const setMinutes = date.setMinutes;
       const minutes = date.getMinutes();
-      setMinutes(minutes - self.getSystemTimezoneAdjustmentMinute(self.instant));
+      date.setMinutes(minutes - self.getSystemTimezoneAdjustmentMinute(self.instant));
     }
     return date;
   }
@@ -54,24 +52,22 @@ let items = [
       let date = instant;
       if (tmp) {
         const _Date = Date;
-        const self = this;
-        const self2 = this;
         date = new Date();
       }
       let timezoneOffset = arg1;
-      const tmp3 = -date.getTimezoneOffset();
+      const tmp5 = -date.getTimezoneOffset();
       if (null == arg1) {
-        const self3 = this;
+        const self = this;
         timezoneOffset = this.timezoneOffset;
       }
-      let tmp4 = tmp3;
+      let tmp6 = tmp5;
       if (null !== timezoneOffset) {
-        tmp4 = tmp3;
+        tmp6 = tmp5;
         if (undefined !== timezoneOffset) {
-          tmp4 = timezoneOffset;
+          tmp6 = timezoneOffset;
         }
       }
-      return tmp3 - tmp4;
+      return tmp5 - tmp6;
     }
   },
   {
@@ -90,12 +86,10 @@ const entry1 = {
   key: "fromDate",
   value: function fromDate(arg0) {
     let date = arg0;
-    const obj = Object.create(ReferenceWithTimezone.prototype);
-    _classCallCheck(obj, ReferenceWithTimezone);
+    const obj = Object.create(ParsingComponents.prototype);
+    _classCallCheck(obj, ParsingComponents);
     if (null == arg0) {
       const _Date = Date;
-      const self = this;
-      const self2 = this;
       date = new Date();
     }
     obj.instant = date;
@@ -109,7 +103,7 @@ const items1 = [
     key: "fromInput",
     value: function fromInput(instant, timezones) {
       if (instant instanceof Date) {
-        return ReferenceWithTimezone.fromDate(instant);
+        return ParsingComponents.fromDate(instant);
       } else {
         instant = undefined;
         if (null != instant) {
@@ -117,67 +111,64 @@ const items1 = [
         }
         if (null === instant) {
           const _Date = Date;
-          const self = this;
-          const self2 = this;
           instant = new Date();
         }
         let timezone;
-        const toTimezoneOffset = TIMEZONE_ABBR_MAP.toTimezoneOffset;
         if (null != instant) {
           timezone = instant.timezone;
         }
-        const toTimezoneOffsetResult = toTimezoneOffset(timezone, instant, timezones);
-        const obj = Object.create(ReferenceWithTimezone.prototype);
-        _classCallCheck(obj, ReferenceWithTimezone);
+        const toTimezoneOffsetResult = ParsingComponents(10178).toTimezoneOffset(timezone, instant, timezones);
+        const obj = Object.create(ParsingComponents.prototype);
+        _classCallCheck(obj, ParsingComponents);
         if (null == instant) {
           const _Date2 = Date;
-          const self3 = this;
-          const self4 = this;
           instant = new Date();
         }
         obj.instant = instant;
-        let tmp12 = null;
+        let tmp16 = null;
         if (null != toTimezoneOffsetResult) {
-          tmp12 = toTimezoneOffsetResult;
+          tmp16 = toTimezoneOffsetResult;
         }
-        obj.timezoneOffset = tmp12;
+        obj.timezoneOffset = tmp16;
         return obj;
       }
     }
   }
 ];
 class ParsingComponents {
-  constructor(reference, date) {
-    const self = this;
-    _classCallCheck(this, ParsingComponents);
-    this._tags = new Set();
-    this.reference = reference;
+  constructor(arg0, arg1) {
+    self = this;
+    tmp = c2(this, ParsingResult);
+    set = new Set();
+    this._tags = set;
+    this.reference = global;
     this.knownValues = {};
     this.impliedValues = {};
-    new Set();
-    if (date) {
-      for (const key10017 in date) {
-        self.knownValues[key10017] = date[key10017];
+    if (require) {
+      tmp3 = require;
+      for (const key10017 in arg1) {
+        tmp11 = key10017;
+        self.knownValues[key10017] = arg1[key10017];
         continue;
       }
     }
-    const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
-    self.imply("day", dateWithAdjustedTimezone.getDate());
-    self.imply("month", dateWithAdjustedTimezone.getMonth() + 1);
-    self.imply("year", dateWithAdjustedTimezone.getFullYear());
-    self.imply("hour", 12);
-    self.imply("minute", 0);
-    self.imply("second", 0);
-    self.imply("millisecond", 0);
+    dateWithAdjustedTimezone = global.getDateWithAdjustedTimezone();
+    implyResult = self.imply("day", dateWithAdjustedTimezone.getDate());
+    implyResult1 = self.imply("month", dateWithAdjustedTimezone.getMonth() + 1);
+    implyResult2 = self.imply("year", dateWithAdjustedTimezone.getFullYear());
+    implyResult3 = self.imply("hour", 12);
+    implyResult4 = self.imply("minute", 0);
+    implyResult5 = self.imply("second", 0);
+    implyResult6 = self.imply("millisecond", 0);
+    return;
   }
 }
 const entry2 = {
   key: "get",
   value: function get(arg0) {
-    let tmp;
     const self = this;
     if (arg0 in this.knownValues) {
-      tmp = self.knownValues[arg0];
+      let tmp = self.knownValues[arg0];
     } else {
       tmp = null;
       if (arg0 in self.impliedValues) {
@@ -215,7 +206,7 @@ const items2 = [
     key: "assign",
     value: function assign(arg0, arg1) {
       this.knownValues[arg0] = arg1;
-      delete this.impliedValues[arg0];
+      delete tmp[tmp2];
       return this;
     }
   },
@@ -224,8 +215,17 @@ const items2 = [
     value: function addDurationAsImplied(EmptyDuration) {
       const self = this;
       const result = this.dateWithoutTimezoneAdjustment();
-      const addDurationResult = EmptyDuration2.addDuration(result, EmptyDuration);
-      const tmp2 = "day" in EmptyDuration || "week" in EmptyDuration || "month" in EmptyDuration || "year" in EmptyDuration;
+      const addDurationResult = ParsingComponents(10176).addDuration(result, EmptyDuration);
+      let tmp2 = "day" in EmptyDuration;
+      if (!tmp2) {
+        tmp2 = "week" in EmptyDuration;
+      }
+      if (!tmp2) {
+        tmp2 = "month" in EmptyDuration;
+      }
+      if (!tmp2) {
+        tmp2 = "year" in EmptyDuration;
+      }
       if (tmp2) {
         self.delete(["day", "weekday", "month", "year"]);
         self.imply("day", addDurationResult.getDate());
@@ -233,7 +233,13 @@ const items2 = [
         self.imply("month", addDurationResult.getMonth() + 1);
         self.imply("year", addDurationResult.getFullYear());
       }
-      const tmp8 = "second" in EmptyDuration || "minute" in EmptyDuration || "hour" in EmptyDuration;
+      let tmp8 = "second" in EmptyDuration;
+      if (!tmp8) {
+        tmp8 = "minute" in EmptyDuration;
+      }
+      if (!tmp8) {
+        tmp8 = "hour" in EmptyDuration;
+      }
       if (tmp8) {
         self.delete(["second", "minute", "hour"]);
         self.imply("second", addDurationResult.getSeconds());
@@ -247,14 +253,16 @@ const items2 = [
     key: "delete",
     value: function _delete(str) {
       const self = this;
-      let tmp = str;
+      let tmp3 = str;
       if (typeof str === "string") {
         const items = [str];
-        tmp = items;
+        tmp3 = items;
       }
-      for (const item10007 of tmp) {
-        delete self.knownValues[item10007];
-        delete self.impliedValues[item10007];
+      for (const item10007 of tmp3) {
+        let knownValues = self.knownValues;
+        delete tmp[tmp2];
+        let impliedValues = self.impliedValues;
+        delete tmp[tmp2];
         continue;
       }
     }
@@ -270,7 +278,6 @@ const items2 = [
       obj.reference = reference;
       obj.knownValues = {};
       obj.impliedValues = {};
-      new Set();
       const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
       obj.imply("day", dateWithAdjustedTimezone.getDate());
       obj.imply("month", dateWithAdjustedTimezone.getMonth() + 1);
@@ -296,9 +303,9 @@ const items2 = [
     key: "isOnlyDate",
     value: function isOnlyDate() {
       const self = this;
-      let tmp2 = !this.isCertain("hour");
-      this.isCertain("hour");
-      if (tmp2) {
+      const isCertainResult = this.isCertain("hour");
+      let tmp2 = !isCertainResult;
+      if (!isCertainResult) {
         tmp2 = !self.isCertain("minute");
       }
       if (tmp2) {
@@ -311,7 +318,16 @@ const items2 = [
     key: "isOnlyTime",
     value: function isOnlyTime() {
       const self = this;
-      const isCertainResult = this.isCertain("weekday") || self.isCertain("day") || self.isCertain("month") || self.isCertain("year");
+      let isCertainResult = this.isCertain("weekday");
+      if (!isCertainResult) {
+        isCertainResult = self.isCertain("day");
+      }
+      if (!isCertainResult) {
+        isCertainResult = self.isCertain("month");
+      }
+      if (!isCertainResult) {
+        isCertainResult = self.isCertain("year");
+      }
       return !isCertainResult;
     }
   },
@@ -319,7 +335,13 @@ const items2 = [
     key: "isOnlyWeekdayComponent",
     value: function isOnlyWeekdayComponent() {
       const self = this;
-      const isCertainResult = this.isCertain("weekday") && !self.isCertain("day") && !self.isCertain("month");
+      let isCertainResult = this.isCertain("weekday");
+      if (isCertainResult) {
+        isCertainResult = !self.isCertain("day");
+      }
+      if (isCertainResult) {
+        isCertainResult = !self.isCertain("month");
+      }
       return isCertainResult;
     }
   },
@@ -327,7 +349,10 @@ const items2 = [
     key: "isDateWithUnknownYear",
     value: function isDateWithUnknownYear() {
       const self = this;
-      const isCertainResult = this.isCertain("month") && !self.isCertain("year");
+      let isCertainResult = this.isCertain("month");
+      if (isCertainResult) {
+        isCertainResult = !self.isCertain("year");
+      }
       return isCertainResult;
     }
   },
@@ -342,8 +367,7 @@ const items2 = [
         const month = result.getMonth();
         let tmp4 = month === self.get("month") - 1;
         if (tmp4) {
-          const date = result.getDate();
-          let tmp6 = date === self.get("day");
+          let tmp6 = result.getDate() === self.get("day");
           if (tmp6) {
             let tmp8 = null == self.get("hour");
             if (!tmp8) {
@@ -361,6 +385,7 @@ const items2 = [
             tmp6 = tmp8;
           }
           tmp4 = tmp6;
+          const date = result.getDate();
         }
         tmp2 = tmp4;
       }
@@ -370,8 +395,7 @@ const items2 = [
   {
     key: "toString",
     value: function toString() {
-      const arr = Array.from(this._tags);
-      const json = stringify(arr.sort());
+      const json = JSON.stringify(Array.from(this._tags).sort());
       const json1 = JSON.stringify(this.knownValues);
       const json2 = JSON.stringify(this.impliedValues);
       return "[ParsingComponents {\n            tags: " + json + ", \n            knownValues: " + json1 + ", \n            impliedValues: " + json2 + "}, \n            reference: " + JSON.stringify(this.reference) + "]";
@@ -383,8 +407,7 @@ const items2 = [
       const result = this.dateWithoutTimezoneAdjustment();
       const reference = this.reference;
       const systemTimezoneAdjustmentMinute = reference.getSystemTimezoneAdjustmentMinute(result, this.get("timezoneOffset"));
-      const date = new Date(result.getTime() + 60000 * systemTimezoneAdjustmentMinute);
-      return date;
+      return new Date(result.getTime() + 60000 * systemTimezoneAdjustmentMinute);
     }
   },
   {
@@ -399,7 +422,6 @@ const items2 = [
     key: "addTags",
     value: function addTags(arg0) {
       const self = this;
-      const tmp = arg0[Symbol.iterator]();
       while (tmp !== undefined) {
         let _tags = self._tags;
         let addResult = _tags.add(tmp2);
@@ -411,14 +433,13 @@ const items2 = [
   {
     key: "tags",
     value: function tags() {
-      set = new Set(this._tags);
-      return set;
+      return new Set(this._tags);
     }
   },
   {
     key: "dateWithoutTimezoneAdjustment",
     value: function dateWithoutTimezoneAdjustment() {
-      const value = this.get("year");
+      value = this.get("year");
       const diff = this.get("month") - 1;
       const value5 = this.get("day");
       const value6 = this.get("hour");
@@ -435,16 +456,15 @@ const entry3 = {
   value: function createRelativeFromReference(reference) {
     let EmptyDuration = reverseDurationResult;
     if (reverseDurationResult === undefined) {
-      EmptyDuration = EmptyDuration2.EmptyDuration;
+      EmptyDuration = ParsingComponents(10176).EmptyDuration;
     }
-    const addDurationResult = EmptyDuration2.addDuration(reference.getDateWithAdjustedTimezone(), EmptyDuration);
+    const addDurationResult = ParsingComponents(10176).addDuration(reference.getDateWithAdjustedTimezone(), EmptyDuration);
     const obj = Object.create(ParsingComponents.prototype);
     _classCallCheck(obj, ParsingComponents);
     obj._tags = new Set();
     obj.reference = reference;
     obj.knownValues = {};
     obj.impliedValues = {};
-    new Set();
     const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
     obj.imply("day", dateWithAdjustedTimezone.getDate());
     obj.imply("month", dateWithAdjustedTimezone.getMonth() + 1);
@@ -458,7 +478,7 @@ const entry3 = {
       if (!("minute" in EmptyDuration)) {
         if (!("second" in EmptyDuration)) {
           if (!("millisecond" in EmptyDuration)) {
-            assignSimilarDate.implySimilarTime(obj, addDurationResult);
+            ParsingComponents(10180).implySimilarTime(obj, addDurationResult);
             obj.imply("timezoneOffset", reference.getTimezoneOffset());
             if ("day" in EmptyDuration) {
               obj.assign("day", addDurationResult.getDate());
@@ -490,42 +510,44 @@ const entry3 = {
       }
     }
     obj.addTag("result/relativeDateAndTime");
-    assignSimilarDate.assignSimilarTime(obj, addDurationResult);
-    assignSimilarDate.assignSimilarDate(obj, addDurationResult);
+    ParsingComponents(10180).assignSimilarTime(obj, addDurationResult);
+    ParsingComponents(10180).assignSimilarDate(obj, addDurationResult);
     obj.assign("timezoneOffset", reference.getTimezoneOffset());
+    const set = new Set();
   }
 };
 const items3 = [entry3];
 const _module1Result = _createClass(ParsingComponents, items2, items3);
 let c3 = _module1Result;
 class ParsingResult {
-  constructor(reference, index, substr, relativeFromReference, parsingComponents1) {
-    const self = this;
-    let tmp = relativeFromReference;
-    _classCallCheck(this, ParsingResult);
-    this.reference = reference;
-    this.refDate = reference.instant;
-    this.index = index;
-    this.text = substr;
-    if (!relativeFromReference) {
-      const self2 = this;
-      const self3 = this;
-      tmp = new c3(reference);
+  constructor(arg0, arg1, arg2, arg3, arg4) {
+    self = this;
+    tmp = importAll;
+    tmp2 = c2(this, ParsingResult);
+    this.reference = global;
+    this.refDate = global.instant;
+    this.index = require;
+    this.text = importDefault;
+    if (!importAll) {
+      tmp3 = closure_3;
+      tmp4 = new.target;
+      tmp5 = new.target;
+      tmp6 = global;
+      tmp = new closure_3(global);
     }
     self.start = tmp;
-    self.end = parsingComponents1;
+    self.end = module;
+    return;
   }
 }
+ParsingComponents = ParsingResult;
 const entry4 = {
   key: "clone",
   value: function clone() {
-    let index;
-    let reference;
-    let text;
     const self = this;
     ({ reference, index, text } = this);
-    const obj = Object.create(ParsingResult.prototype);
-    _classCallCheck(obj, ParsingResult);
+    const obj = Object.create(ParsingComponents.prototype);
+    _classCallCheck(obj, ParsingComponents);
     obj.reference = reference;
     obj.refDate = reference.instant;
     obj.index = index;
@@ -533,7 +555,6 @@ const entry4 = {
     obj.start = new c3(reference);
     obj.end = undefined;
     let cloneResult = null;
-    new c3(reference);
     if (this.start) {
       const start = self.start;
       cloneResult = start.clone();
@@ -587,7 +608,7 @@ const items4 = [
     key: "tags",
     value: function tags() {
       const start = this.start;
-      set = new Set(start.tags());
+      const set = new Set(start.tags());
       if (this.end) {
         const end = this.end;
         const tagsResult = end.tags();
@@ -602,15 +623,11 @@ const items4 = [
   {
     key: "toString",
     value: function toString() {
-      const arr = Array.from(this.tags());
-      return "[ParsingResult {index: " + this.index + ", text: '" + this.text + "', tags: " + JSON.stringify(arr.sort()) + " ...}]";
+      return "[ParsingResult {index: " + this.index + ", text: '" + this.text + "', tags: " + JSON.stringify(Array.from(this.tags()).sort()) + " ...}]";
     }
   }
 ];
-const ReferenceWithTimezone_export = _createClass(ReferenceWithTimezone, items, items1);
-const ParsingComponents_export = _module1Result;
-const ParsingResult_export = _createClass(ParsingResult, items4);
 
-export { ReferenceWithTimezone_export as ReferenceWithTimezone };
-export { ParsingComponents_export as ParsingComponents };
-export { ParsingResult_export as ParsingResult };
+export const ReferenceWithTimezone = _createClass(ReferenceWithTimezone, items, items1);
+export const ParsingComponents = _module1Result;
+export const ParsingResult = _createClass(ParsingResult, items4);

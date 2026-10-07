@@ -8,34 +8,34 @@ export const AndroidConsumptionState = { yet: 0, [0]: "yet", consumed: 1, [1]: "
 export const AndroidAcknowledgementState = { yet: 0, [0]: "yet", acknowledged: 1, [1]: "acknowledged" };
 export const FeatureType = { IN_APP_MESSAGING: "IN_APP_MESSAGING", PRICE_CHANGE_CONFIRMATION: "PRICE_CHANGE_CONFIRMATION", PRODUCT_DETAILS: "PRODUCT_DETAILS", SUBSCRIPTIONS: "SUBSCRIPTIONS", SUBSCRIPTIONS_UPDATE: "SUBSCRIPTIONS_UPDATE" };
 export const singleProductAndroidMap = (oneTimePurchaseOfferDetails) => {
-  let formattedPrice;
-  let formattedPrice1;
-  let priceCurrencyCode;
-  const obj = { price: formattedPrice, localizedPrice: formattedPrice1, currency: priceCurrencyCode };
+  const obj = {};
   const merged = Object.assign(oneTimePurchaseOfferDetails);
   oneTimePurchaseOfferDetails = oneTimePurchaseOfferDetails.oneTimePurchaseOfferDetails;
-  formattedPrice = undefined;
+  let formattedPrice;
   if (oneTimePurchaseOfferDetails != null) {
     formattedPrice = oneTimePurchaseOfferDetails.formattedPrice;
   }
   if (formattedPrice == null) {
     formattedPrice = oneTimePurchaseOfferDetails.price;
   }
+  obj.price = formattedPrice;
   const oneTimePurchaseOfferDetails2 = oneTimePurchaseOfferDetails.oneTimePurchaseOfferDetails;
-  formattedPrice1 = undefined;
+  let formattedPrice1;
   if (oneTimePurchaseOfferDetails2 != null) {
     formattedPrice1 = oneTimePurchaseOfferDetails2.formattedPrice;
   }
   if (formattedPrice1 == null) {
     formattedPrice1 = oneTimePurchaseOfferDetails.price;
   }
+  obj.localizedPrice = formattedPrice1;
   const oneTimePurchaseOfferDetails3 = oneTimePurchaseOfferDetails.oneTimePurchaseOfferDetails;
-  priceCurrencyCode = undefined;
+  let priceCurrencyCode;
   if (oneTimePurchaseOfferDetails3 != null) {
     priceCurrencyCode = oneTimePurchaseOfferDetails3.priceCurrencyCode;
   }
   if (priceCurrencyCode == null) {
     priceCurrencyCode = oneTimePurchaseOfferDetails.currency;
   }
+  obj.currency = priceCurrencyCode;
   return obj;
 };

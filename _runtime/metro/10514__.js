@@ -1,24 +1,20 @@
 // === Module 10514: ? ===
 
 // Module 10514
-import Fragment from "Fragment" /* 21 */;
-import _mod1643 from "module_1643" /* 1643 */;
-import react from "react" /* 19 */;
+import cancelAnimation from "cancelAnimation" /* 1643 */;
+import noop from "module_19" /* 19 */;
 
-const jsx = Fragment.jsx;
-let context = react.createContext({});
+require = fn;
+const jsx = fn(21).jsx;
+let context = noop.createContext({});
 const __initData = { code: "function pnpm_indexTsx1(index,dimensions){const{itemDimensions}=this.__closure;itemDimensions.value={...itemDimensions.value,[index]:dimensions};}" };
 const __initData2 = { code: "function pnpm_indexTsx2(dimensions){const{containerSize}=this.__closure;containerSize.value=dimensions;}" };
 
 export const GlobalStateContext = context;
 export const GlobalStateProvider = (arg0) => {
-  let children;
-  let value;
   ({ children, value } = arg0);
-  let obj = _mod1643;
-  const sharedValue = obj.useSharedValue({ width: 0, height: 0 });
-  const obj2 = _mod1643;
-  const sharedValue1 = obj2.useSharedValue({});
+  const sharedValue = cancelAnimation.useSharedValue({ width: 0, height: 0 });
+  const sharedValue1 = cancelAnimation.useSharedValue({});
   const fn = function c(arg0, arg1) {
     const obj = {};
     const merged = Object.assign(sharedValue1.value);
@@ -34,19 +30,20 @@ export const GlobalStateProvider = (arg0) => {
   fn2.__closure = { containerSize: sharedValue };
   fn2.__workletHash = 5978604737778;
   fn2.__initData = __initData2;
-  const Provider = context.Provider;
-  const obj4 = { layout: { containerSize: sharedValue, itemDimensions: sharedValue1, updateItemDimensions: fn, updateContainerSize: fn2 } };
+  const obj3 = { value: null, children: null };
+  const obj4 = {};
   let merged = Object.assign(value);
-  return <Provider value={obj4}>{children}</Provider>;
+  obj4.layout = { containerSize: sharedValue, itemDimensions: sharedValue1, updateItemDimensions: fn, updateContainerSize: fn2 };
+  obj3.value = obj4;
+  obj3.children = children;
+  return <context.Provider value={null}>{null}</context.Provider>;
 };
-export const useGlobalState = function() {
-  context = react.useContext(context);
+export const useGlobalState = () => {
+  context = noop.useContext(context);
   if (context) {
     return context;
   } else {
     const _Error = Error;
-    const self = this;
-    const self2 = this;
     const error = new Error("useGlobalState must be used within a GlobalStateProvider");
     throw error;
   }

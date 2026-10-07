@@ -3,11 +3,10 @@
 // Module 1541 (CHILD_STATE)
 import _mod1542 from "module_1542" /* 1542 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
 export const getFocusedRouteNameFromRoute = function getFocusedRouteNameFromRoute(state) {
-  let index;
-  let routes;
-  let screen;
   state = state[_mod1542.CHILD_STATE];
   if (state == null) {
     state = state.state;
@@ -16,15 +15,14 @@ export const getFocusedRouteNameFromRoute = function getFocusedRouteNameFromRout
   if (state) {
     ({ index, routes } = state);
     if (index == null) {
-      let num2;
       if (typeof state.type !== "string") {
-        num2 = state.routes.length - 1;
+        let num2 = state.routes.length - 1;
       } else {
         num2 = 0;
       }
       index = num2;
     }
-    screen = routes[index].name;
+    let screen = routes[index].name;
   } else {
     let screen1;
     if (params != null) {

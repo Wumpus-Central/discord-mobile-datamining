@@ -1,15 +1,10 @@
 // === Module 178: ? ===
 
 // Module 178
-import Promise_mod from "module_177" /* 177 */;
+import noop_mod from "module_177" /* 177 */;
 
-const require = globalThis.__r;
-let _require;
-
-let Promise;
 function valuePromise(_z) {
-  const tmp = Promise;
-  const tmp2 = new tmp(Promise._D);
+  const tmp2 = new noop(noop._D);
   tmp2._y = 1;
   tmp2._z = _z;
   return tmp2;
@@ -21,52 +16,48 @@ function onSettledReject(reason) {
   return { status: "rejected", reason };
 }
 function mapAllSettled(value) {
-  const tmp = value;
-  if (tmp) {
+  if (value) {
     if (typeof value === "object") {
-      if (value instanceof Promise) {
-        if (value.then === Promise.prototype.then) {
+      if (value instanceof noop) {
+        if (value.then === noop.prototype.then) {
           return value.then(onSettledFulfill, onSettledReject);
         }
       }
       const then = value.then;
       if (typeof then === "function") {
-        const self = this;
-        const self2 = this;
-        const tmp2Result = Promise;
-        const tmp2Result1 = new tmp2Result(then.bind(value));
-        return tmp2Result1.then(onSettledFulfill, onSettledReject);
+        const tmpResult1 = new noop(then.bind(value));
+        return tmpResult1.then(onSettledFulfill, onSettledReject);
       }
     }
   }
   return { status: "fulfilled", value };
 }
-Promise = Promise_mod;
-const _module6 = new Promise(Promise._D);
+let noop = noop_mod;
+const _module6 = new noop(noop._D);
 _module6._y = 1;
 _module6._z = true;
-Promise = Promise_mod;
-const _module11 = new Promise(Promise._D);
+let noop = noop_mod;
+const _module11 = new noop(noop._D);
 _module11._y = 1;
 _module11._z = false;
-Promise = Promise_mod;
-const _module21 = new Promise(Promise._D);
+let noop = noop_mod;
+const _module21 = new noop(noop._D);
 _module21._y = 1;
 _module21._z = null;
-Promise = Promise_mod;
-const _module31 = new Promise(Promise._D);
+let noop = noop_mod;
+const _module31 = new noop(noop._D);
 _module31._y = 1;
 _module31._z = undefined;
-Promise = Promise_mod;
-const _module41 = new Promise(Promise._D);
+let noop = noop_mod;
+const _module41 = new noop(noop._D);
 _module41._y = 1;
 _module41._z = 0;
-Promise = Promise_mod;
-const _module51 = new Promise(Promise._D);
+let noop = noop_mod;
+const _module51 = new noop(noop._D);
 _module51._y = 1;
 _module51._z = "";
-Promise.resolve = function(self) {
-  if (self instanceof Promise) {
+noop.resolve = (self) => {
+  if (self instanceof noop) {
     return self;
   } else if (null === self) {
     return _module21;
@@ -84,68 +75,62 @@ Promise.resolve = function(self) {
     if (typeof self === "object") {
       try {
         const then = self.then;
-        const obj = then;
         if (typeof then === "function") {
-          self = this;
-          const self2 = this;
-          const tmpResult = Promise;
-          const tmpResult1 = new tmpResult(obj.bind(self));
-          return tmpResult1;
+          const tmp4Result1 = new noop(obj.bind(self));
+          return tmp4Result1;
         }
-      } catch (tmp9) {
-        let closure_0 = tmp9;
-        const self3 = this;
-        const self4 = this;
-        const tmp10 = new Promise((arg0, fn) => {
+        obj = then;
+      } catch (tmp14) {
+        const require = tmp14;
+        const tmp17 = new tmp2(tmp[0])((arg0, fn) => {
           fn(closure_0);
         });
-        return tmp10;
+        return tmp17;
       }
     }
     return valuePromise(self);
   }
 };
 function iterableToArray(arg0) {
-  let callResult;
   if (typeof Array.from === "function") {
     const _Array = Array;
     iterableToArray = Array.from;
     const _Array2 = Array;
-    callResult = Array.from(arg0);
+    let arr = Array.from(arg0);
   } else {
     iterableToArray = function iterableToArray(arg0) {
-      return slice.call(arg0);
+      const call = slice.call;
+      return typeof call === "unknown" ? slice() : call(arg0);
     };
     const _Array3 = Array;
-    callResult = slice.call(arg0);
+    let call = slice.call;
+    arr = typeof call === "unknown" ? slice() : call(arg0);
   }
-  return callResult;
+  return arr;
 }
-Promise.all = (arg0) => {
+noop.all = (arg0) => {
   _require = iterableToArray(arg0);
-  let tmp = new require("module_177")((fn, arg1) => {
+  return new require("module_177")((fn, arg1) => {
     closure_0 = fn;
-    let closure_1 = arg1;
+    closure_1 = arg1;
     function res(arg0, _y) {
       closure_0 = arg0;
-      const tmp = _y;
-      if (tmp) {
+      if (_y) {
         if (typeof _y === "object") {
           if (_y instanceof closure_0(dependencyMap[0])) {
-            if (_y.then === closure_0(dependencyMap[0]).prototype.then) {
-              let tmp17;
-              let tmp12 = _y;
+            if (_y.then === tmp(dependencyMap[0]).prototype.then) {
+              let tmp13 = _y;
               let promise2 = _y;
               if (3 === _y._y) {
                 do {
-                  let _z = tmp12._z;
-                  tmp12 = _z;
+                  let _z = tmp13._z;
+                  tmp13 = _z;
                   promise2 = _z;
                   _y = _z._y;
                 } while (3 === _y);
               }
               if (1 === promise2._y) {
-                tmp17 = res(arg0, promise2._z);
+                const tmp18 = res(arg0, promise2._z);
               } else {
                 if (2 === promise2._y) {
                   closure_1(promise2._z);
@@ -154,36 +139,33 @@ Promise.all = (arg0) => {
                   res(closure_0, result);
                 }, closure_1);
               }
-              return tmp17;
+              return tmp18;
             }
           }
           const then = _y.then;
           if (typeof then === "function") {
-            const self = this;
-            const self2 = this;
-            const tmp2Result = closure_0(dependencyMap[0]);
-            const tmp2Result1 = new tmp2Result(then.bind(_y));
-            tmp2Result1.then((result) => {
+            const tmpResult1 = new tmp(dependencyMap[0])(then.bind(_y));
+            tmpResult1.then((result) => {
               res(closure_0, result);
             }, closure_1);
+            const tmpResult = tmp(dependencyMap[0]);
           }
         }
       }
       closure_0[arg0] = _y;
       const diff = length - 1;
-      length = diff;
       if (0 == diff) {
-        closure_0(tmp4);
+        closure_0(tmp3);
       }
+      length = diff;
     }
     if (0 === closure_0.length) {
       return fn([]);
     } else {
       let length = arr.length;
       let num2 = 0;
-      if (0 < closure_0.length) {
+      if (0 < arr.length) {
         do {
-          let tmp = closure_0;
           let resResult = res(num2, closure_0[num2]);
           num2 = num2 + 1;
           length = closure_0.length;
@@ -191,100 +173,82 @@ Promise.all = (arg0) => {
       }
     }
   });
-  return tmp;
 };
-Promise.allSettled = (arg0) => {
-  const all = Promise.all;
-  Promise;
-  const arr = iterableToArray(arg0);
-  return all(arr.map(mapAllSettled));
+noop.allSettled = (arg0) => {
+  const obj = noop;
+  return obj.all(iterableToArray(arg0).map(mapAllSettled));
 };
-Promise.reject = (arg0) => {
-  let closure_0 = arg0;
-  const tmp = new Promise((arg0, fn) => {
+noop.reject = (arg0) => {
+  closure_0 = arg0;
+  return new noop((arg0, fn) => {
     fn(closure_0);
   });
-  return tmp;
 };
-Promise.race = (arg0) => {
+noop.race = (arg0) => {
   _require = arg0;
-  const tmp = new require("module_177")((arg0, arg1) => {
+  return new require("module_177")((arg0, arg1) => {
     closure_0 = arg0;
-    let closure_1 = arg1;
-    const arr = iterableToArray(closure_0);
-    const item = arr.forEach((item) => {
-      const obj = closure_2_0(closure_2_1[0]);
-      const resolveResult = obj.resolve(item);
-      resolveResult.then(closure_0, closure_1);
+    closure_1 = arg1;
+    const item = iterableToArray(closure_0).forEach((item) => {
+      const obj = closure_0(dependencyMap[0]);
+      closure_0(dependencyMap[0]).resolve(item).then(closure_0, closure_1);
     });
   });
-  return tmp;
 };
-Promise.prototype.catch = function(arg0) {
+noop.prototype.catch = function(arg0) {
   return this.then(null, arg0);
 };
-Promise.any = function promiseAny(arg0) {
+noop.any = function promiseAny(arg0) {
   _require = arg0;
-  let tmp = new require("module_177")(function(arg0, fn) {
+  return new require("module_177")((arg0, fn) => {
     closure_0 = arg0;
-    let closure_1 = fn;
+    closure_1 = fn;
     function resolveOnce(arg0) {
-      const tmp = c3;
-      if (!tmp) {
+      if (!c3) {
         c3 = true;
         closure_0(arg0);
       }
     }
     function rejectionCheck(arg0) {
-      arr = items.push(arg0);
       if (items.length === arr.length) {
-        let aggregateError;
+        let aggregateError = globalThis;
         if (typeof globalThis.AggregateError === "function") {
-          const AggregateError2 = globalThis.AggregateError;
-          const self = this;
-          const self2 = this;
-          aggregateError = new globalThis.AggregateError(items, "All promises were rejected");
+          aggregateError = new aggregateError.AggregateError(items, "All promises were rejected");
+          let tmp8 = aggregateError;
         } else {
           const _Error = Error;
-          const self3 = this;
-          const self4 = this;
           const error = new Error("All promises were rejected");
-          aggregateError = error;
+          tmp8 = error;
           error.name = "AggregateError";
           error.errors = items;
         }
-        closure_1(aggregateError);
+        closure_1(tmp8);
       }
+      arr = items.push(arg0);
     }
     let arr = iterableToArray(closure_0);
-    let c3 = false;
+    c3 = false;
     const items = [];
     if (0 === arr.length) {
-      let aggregateError;
+      let aggregateError = globalThis;
       if (typeof globalThis.AggregateError === "function") {
-        let AggregateError2 = globalThis.AggregateError;
-        let self = this;
-        let self2 = this;
-        aggregateError = new globalThis.AggregateError(items, "All promises were rejected");
+        aggregateError = new aggregateError.AggregateError(items, "All promises were rejected");
+        let tmp6 = aggregateError;
       } else {
         let _Error = Error;
-        let self3 = this;
-        let self4 = this;
         let error = new Error("All promises were rejected");
-        aggregateError = error;
+        tmp6 = error;
         error.name = "AggregateError";
         error.errors = items;
       }
-      fn(aggregateError);
+      fn(tmp6);
     } else {
       const item = arr.forEach((item) => {
-        const obj = closure_2_0(closure_2_1[0]);
-        const resolveResult = obj.resolve(item);
-        resolveResult.then(resolveOnce, rejectionCheck);
+        const obj = closure_0(dependencyMap[0]);
+        closure_0(dependencyMap[0]).resolve(item).then(resolveOnce, rejectionCheck);
       });
     }
   });
-  return tmp;
 };
 
-export default Promise;
+export default noop;

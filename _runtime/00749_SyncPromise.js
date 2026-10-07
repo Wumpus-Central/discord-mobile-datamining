@@ -1,27 +1,28 @@
 // === Module 749: SyncPromise ===
 
 // Module 749 (SyncPromise)
-import _mod703 from "module_703" /* 703 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
+const SyncPromise = require;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class SyncPromise {
-  constructor(fn) {
-    _classCallCheck(this, SyncPromise);
+  constructor(arg0) {
+    tmp = c2(this, SyncPromise);
     this._state = 0;
     this._handlers = [];
-    this._runExecutor(fn);
+    _runExecutorResult = this._runExecutor(global);
+    return;
   }
 }
 const entry = {
   key: "then",
   value: function then(arg0, arg1) {
     const self = this;
-    let closure_1 = arg0;
-    let closure_0 = arg1;
+    closure_1 = arg0;
+    closure_0 = arg1;
     const obj = Object.create(SyncPromise.prototype);
-    const tmp = _classCallCheck(obj, SyncPromise);
+    _classCallCheck(obj, SyncPromise);
     obj._state = 0;
     obj._handlers = [];
     obj._runExecutor((arg0, arg1) => {
@@ -71,32 +72,31 @@ let items = [
     key: "finally",
     value: function _finally(arg0) {
       const self = this;
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const obj = Object.create(SyncPromise.prototype);
-      const tmp = _classCallCheck(obj, SyncPromise);
+      _classCallCheck(obj, SyncPromise);
       obj._state = 0;
       obj._handlers = [];
       obj._runExecutor((arg0, arg1) => {
-        let closure_1;
         closure_0 = arg0;
-        const nextPromise = arg1.then((result) => {
+        _self = arg1;
+        return _self.then((result) => {
           c3 = false;
-          let closure_1_2 = result;
+          closure_2 = result;
           if (closure_0) {
             tmp();
           }
         }, (arg0) => {
           c3 = true;
-          let closure_1_2 = arg0;
+          closure_2 = arg0;
           if (closure_0) {
             tmp();
           }
-        });
-        return nextPromise.then(() => {
+        }).then(() => {
           if (c3) {
-            closure_1(closure_1_2);
+            closure_1(closure_2);
           } else {
-            closure_0(closure_1_2);
+            closure_0(closure_2);
           }
         });
       });
@@ -131,7 +131,6 @@ let items = [
       const self = this;
       function resolve(_value) {
         if (0 === self._state) {
-          const obj2 = _mod703;
           if (obj2.isThenable(_value)) {
             _value.then(resolve, reject);
           } else {
@@ -139,11 +138,11 @@ let items = [
             self._value = _value;
             self._executeHandlers();
           }
+          obj2 = SyncPromise(703);
         }
       }
       function reject(_value) {
         if (0 === self._state) {
-          const obj2 = _mod703;
           if (obj2.isThenable(_value)) {
             _value.then(resolve, reject);
           } else {
@@ -151,32 +150,30 @@ let items = [
             self._value = _value;
             self._executeHandlers();
           }
+          obj2 = SyncPromise(703);
         }
       }
       try {
         fn(resolve, reject);
-      } catch (tmp3) {
-        reject(tmp3);
+      } catch (tmp4) {
+        tmp(tmp4);
       }
     }
   }
 ];
 const _moduleResult = _createClass(SyncPromise, items);
 let c3 = _moduleResult;
-const SyncPromise_export = _moduleResult;
 
-export { SyncPromise_export as SyncPromise };
+export const SyncPromise = _moduleResult;
 export const rejectedSyncPromise = function rejectedSyncPromise(arg0) {
-  let closure_0 = arg0;
-  const tmp = new c3((arg0, fn) => {
+  closure_0 = arg0;
+  return new _moduleResult((arg0, fn) => {
     fn(closure_0);
   });
-  return tmp;
 };
-export const resolvedSyncPromise = function resolvedSyncPromise(result) {
-  let closure_0 = result;
-  const tmp = new c3((fn) => {
+export const resolvedSyncPromise = function resolvedSyncPromise(arg0) {
+  closure_0 = arg0;
+  return new _moduleResult((fn) => {
     fn(closure_0);
   });
-  return tmp;
 };

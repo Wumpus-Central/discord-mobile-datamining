@@ -1,19 +1,17 @@
 // === Module 333: unstable_setImageComponentDecorator ===
 
 // Module 333 (unstable_setImageComponentDecorator)
-import react2 from "react" /* 19 */;
-import useMergeRefsDefault from "useMergeRefs" /* 334 */;
+import _modDef334 from "module_334" /* 334 */;
+import noop from "module_19" /* 19 */;
 
-let importDefault;
-
-const useRef = react2.useRef;
+const useRef = fn(19).useRef;
 const set = new Set();
 
 export function unstable_setImageComponentDecorator(_BaseImage) {
-  let closure_1_2 = _BaseImage;
+  global = _BaseImage;
 }
 export function unstable_getImageComponentDecorator() {
-  return React2;
+  return global;
 }
 export const unstable_registerImageAttachedCallback = function unstable_registerImageAttachedCallback(arg0) {
   set.add(arg0);
@@ -26,12 +24,11 @@ export const useWrapRefWithImageAttachedCallbacks = function useWrapRefWithImage
   let tmp = useRef(null);
   if (null == tmp.current) {
     tmp.current = (arg0) => {
-      ref = arg0;
       if (null == arg0) {
         if (ref.current.length > 0) {
           let current = tmp3.current;
           const item = current.forEach((fn) => fn());
-          ref.current = [];
+          tmp3.current = [];
         }
       } else {
         const item1 = set.forEach((fn) => {
@@ -44,5 +41,5 @@ export const useWrapRefWithImageAttachedCallbacks = function useWrapRefWithImage
       }
     };
   }
-  return useMergeRefsDefault(ref, tmp.current);
+  return _modDef334(ref, tmp.current);
 };

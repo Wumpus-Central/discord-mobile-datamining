@@ -1,18 +1,18 @@
 // === Module 5768: ScreenFooter ===
 
 // Module 5768 (ScreenFooter)
-import Fragment from "Fragment" /* 21 */;
-import react_nativeDefault from "react-native" /* 5769 */;
-import react from "react" /* 19 */;
+import _modDef5769 from "module_5769" /* 5769 */;
+import noop from "module_19" /* 19 */;
 
 class ScreenFooter {
   constructor(arg0) {
-    react_nativeDefault;
-    const merged = Object.assign(arg0);
-    return <tmp />;
+    obj = {};
+    tmp = closure_0(closure_1[2]);
+    merged = Object.assign(global);
+    return jsx(tmp, obj);
   }
 }
-const jsx = Fragment.jsx;
+const jsx = fn(21).jsx;
 
 export default ScreenFooter;
 export const FooterComponent = function FooterComponent(children) {

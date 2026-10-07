@@ -5,7 +5,8 @@ import _modDef143 from "module_143" /* 143 */;
 import DEFAULT_INITIAL_NUM_TO_RENDER from "module_442" /* 442 */;
 
 const FALLBACK_ESTIMATED_WIDTH = DEFAULT_INITIAL_NUM_TO_RENDER.FALLBACK_ESTIMATED_WIDTH;
-let obj = {
+
+export default {
   initial: {
     itemCount: DEFAULT_INITIAL_NUM_TO_RENDER.INITIAL_NUM_TO_RENDER,
     spacerStyle(arg0) {
@@ -13,13 +14,9 @@ let obj = {
     }
   },
   next(arg0) {
-    let target;
-    let targetRect;
-    let thresholdRect;
     ({ target, targetRect, thresholdRect } = arg0);
-    let c0;
+    c0 = undefined;
     if (target instanceof _modDef143) {
-      let result;
       const _Math = Math;
       const _Math2 = Math;
       const bound = Math.min(targetRect.x + targetRect.width, thresholdRect.x + thresholdRect.width);
@@ -47,7 +44,7 @@ let obj = {
               previousElementSibling = previousElementSibling2;
               num5 = sum;
               num2 = sum;
-              obj = tmp7;
+              obj = tmp9;
               if (!nodeName2.startsWith("RN:VirtualView")) {
                 break;
               }
@@ -56,25 +53,22 @@ let obj = {
         }
       }
       if (0 < num2) {
-        result = (target.getBoundingClientRect().left - obj.getBoundingClientRect().left) / num2;
+        let result = (target.getBoundingClientRect().left - obj.getBoundingClientRect().left) / num2;
       } else {
         result = FALLBACK_ESTIMATED_WIDTH;
       }
       c0 = result;
-      return {
+      const obj2 = {
         itemCount: diff / result,
         spacerStyle(arg0) {
             return { width: arg0 * c0 };
           }
       };
+      return obj2;
     } else {
       const _Error = Error;
-      const self = this;
-      const self2 = this;
       const error = new Error("Expected target to be a ReactNativeElement. VirtualRow requires DOM APIs to be enabled in React Native.");
       throw error;
     }
   }
 };
-
-export default obj;

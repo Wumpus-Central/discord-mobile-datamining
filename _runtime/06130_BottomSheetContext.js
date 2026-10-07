@@ -1,19 +1,19 @@
 // === Module 6130: BottomSheetContext ===
 
 // Module 6130 (BottomSheetContext)
-import react from "react" /* 6126 */;
-import react2 from "react" /* 6128 */;
-import react3 from "react" /* 6131 */;
-import react4 from "react" /* 6132 */;
-import react5 from "react" /* 6133 */;
+import _mod6126 from "module_6126" /* 6126 */;
+import _mod6128 from "module_6128" /* 6128 */;
+import _mod6131 from "module_6131" /* 6131 */;
+import _mod6132 from "module_6132" /* 6132 */;
+import _mod6133 from "module_6133" /* 6133 */;
 
 
-export const BottomSheetContext = react.BottomSheetContext;
-export const BottomSheetProvider = react.BottomSheetProvider;
-export const BottomSheetInternalContext = react2.BottomSheetInternalContext;
-export const BottomSheetInternalProvider = react2.BottomSheetInternalProvider;
-export const BottomSheetGestureHandlersContext = react3.BottomSheetGestureHandlersContext;
-export const BottomSheetModalContext = react4.BottomSheetModalContext;
-export const BottomSheetModalProvider = react4.BottomSheetModalProvider;
-export const BottomSheetModalInternalContext = react5.BottomSheetModalInternalContext;
-export const BottomSheetModalInternalProvider = react5.BottomSheetModalInternalProvider;
+export const BottomSheetContext = _mod6126.BottomSheetContext;
+export const BottomSheetProvider = _mod6126.BottomSheetProvider;
+export const BottomSheetInternalContext = _mod6128.BottomSheetInternalContext;
+export const BottomSheetInternalProvider = _mod6128.BottomSheetInternalProvider;
+export const BottomSheetGestureHandlersContext = _mod6131.BottomSheetGestureHandlersContext;
+export const BottomSheetModalContext = _mod6132.BottomSheetModalContext;
+export const BottomSheetModalProvider = _mod6132.BottomSheetModalProvider;
+export const BottomSheetModalInternalContext = _mod6133.BottomSheetModalInternalContext;
+export const BottomSheetModalInternalProvider = _mod6133.BottomSheetModalInternalProvider;

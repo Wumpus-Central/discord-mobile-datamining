@@ -1,7 +1,7 @@
 // === Module 1926: ? ===
 
 // Module 1926
-const obj = {
+globalThis.IntlMessageFormat.__addLocaleData({
   locale: "vi",
   pluralRuleFunction(arg0, arg1) {
     let str = "other";
@@ -13,5 +13,4 @@ const obj = {
     }
     return str;
   }
-};
-globalThis.IntlMessageFormat.__addLocaleData(obj);
+});

@@ -1,27 +1,16 @@
 // === Module 970: ? ===
 
 // Module 970
-import _addMeasureSpans from "_addMeasureSpans" /* 909 */;
+import triggerHandlers from "triggerHandlers" /* 909 */;
 import _mod948 from "module_948" /* 948 */;
 import registerSpanErrorInstrumentation from "module_693" /* 693 */;
 
-let closure_2;
-
-const f82820 = (description) => {
-  description = description.description;
-  let hasItem;
-  if (description != null) {
-    hasItem = description.includes("#sentry-spotlight");
-  }
-  return hasItem;
-};
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const SpotlightBrowser = "SpotlightBrowser";
 
 export const INTEGRATION_NAME = "SpotlightBrowser";
 export const isSpotlightInteraction = function isSpotlightInteraction(type) {
   let spans = "transaction" === type.type;
-  const _Boolean = Boolean;
   if (spans) {
     spans = type.spans;
   }
@@ -38,17 +27,24 @@ export const isSpotlightInteraction = function isSpotlightInteraction(type) {
   }
   if (spans) {
     const spans2 = type.spans;
-    spans = spans2.some(f82820);
+    spans = spans2.some((description) => {
+      description = description.description;
+      let hasItem;
+      if (description != null) {
+        hasItem = description.includes("#sentry-spotlight");
+      }
+      return hasItem;
+    });
   }
-  return _Boolean(spans);
+  return Boolean(spans);
 };
 export const spotlightBrowserIntegration = registerSpanErrorInstrumentation.defineIntegration(() => {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
-  let closure_0 = obj.sidecarUrl || "http://localhost:8969/stream";
-  let obj2 = {
+  closure_0 = obj.sidecarUrl || "http://localhost:8969/stream";
+  return {
     name: SpotlightBrowser,
     setup() {
       if (_mod948.DEBUG_BUILD) {
@@ -58,7 +54,6 @@ export const spotlightBrowserIntegration = registerSpanErrorInstrumentation.defi
     },
     processEvent(type) {
       let spans = "transaction" === type.type;
-      const _Boolean = Boolean;
       if (spans) {
         spans = type.spans;
       }
@@ -75,30 +70,36 @@ export const spotlightBrowserIntegration = registerSpanErrorInstrumentation.defi
       }
       if (spans) {
         const spans2 = type.spans;
-        spans = spans2.some(f82820);
+        spans = spans2.some((description) => {
+          description = description.description;
+          let hasItem;
+          if (description != null) {
+            hasItem = description.includes("#sentry-spotlight");
+          }
+          return hasItem;
+        });
       }
       let tmp3 = null;
-      if (!_Boolean(spans)) {
+      if (!Boolean(spans)) {
         tmp3 = type;
       }
       return tmp3;
     },
     afterAllSetup(on) {
-      const obj = _addMeasureSpans;
-      const nativeImplementation = obj.getNativeImplementation("fetch");
-      let c2 = 0;
+      const nativeImplementation = triggerHandlers.getNativeImplementation("fetch");
+      c2 = 0;
       on.on("beforeEnvelope", (arg0) => {
-        let obj2;
         if (c2 > 3) {
-          let debug = closure_2_0(closure_2_1[1]).debug;
+          let debug = closure_0(693).debug;
           debug.warn("[Spotlight] Disabled Sentry -> Spotlight integration due to too many failed requests:", c2);
         } else {
-          let tmp = arg0;
-          const request = { method: "POST", body: obj2.serializeEnvelope(arg0), headers: { "Content-Type": "application/x-sentry-envelope" }, mode: "cors" };
-          obj2 = closure_2_0(closure_2_1[1]);
-          const promise = closure_1(closure_0, request);
-          promise.then((status) => {
-            const tmp = status.status >= 200 && status.status < 400;
+          const request = { method: "POST", body: closure_0(693).serializeEnvelope(arg0), headers: { "Content-Type": "application/x-sentry-envelope" }, mode: "cors" };
+          const obj2 = closure_0(693);
+          closure_1(closure_0, request).then((status) => {
+            let tmp = status.status >= 200;
+            if (tmp) {
+              tmp = status.status < 400;
+            }
             if (tmp) {
               closure_2 = 0;
             }
@@ -107,9 +108,9 @@ export const spotlightBrowserIntegration = registerSpanErrorInstrumentation.defi
             const debug = closure_0(closure_1[1]).debug;
             debug.error("Sentry SDK can't connect to Sidecar is it running? See: https://spotlightjs.com/sidecar/npx/", arg0);
           });
+          const promise = closure_1(closure_0, request);
         }
       });
     }
   };
-  return obj2;
 });

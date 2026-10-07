@@ -1,8 +1,6 @@
 // === Module 10278: ? ===
 
 // Module 10278
-import EmptyDuration from "EmptyDuration" /* 10176 */;
-import ReferenceWithTimezone from "ReferenceWithTimezone" /* 10177 */;
 import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10181 */;
 import _mod10268 from "module_10268" /* 10268 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
@@ -11,14 +9,19 @@ import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const NLTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -29,19 +32,21 @@ function _isNativeReflectConstruct() {
 const regExp = new RegExp("(" + _mod10268.TIME_UNITS_PATTERN + ")(?:geleden|voor|eerder)(?=(?:\\W|$))", "i");
 const regExp1 = new RegExp("(" + _mod10268.TIME_UNITS_PATTERN + ")geleden(?=(?:\\W|$))", "i");
 class NLTimeUnitAgoFormatParser {
-  constructor(strictMode) {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, NLTimeUnitAgoFormatParser);
-    const obj = _getPrototypeOf(NLTimeUnitAgoFormatParser);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], _getPrototypeOf(self).constructor);
+  constructor(arg0) {
+    self = this;
+    tmp = c2(this, NLTimeUnitAgoFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(NLTimeUnitAgoFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, undefined);
     }
-    const tmp3Result = c3(self, constructResult);
-    tmp3Result.strictMode = strictMode;
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMode = global;
     return tmp3Result;
   }
 }
@@ -57,10 +62,9 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const parseDurationResult = _mod10268.parseDuration(arg1[1]);
-      const reverseDurationResult = EmptyDuration.reverseDuration(parseDurationResult);
-      const ParsingComponents = ReferenceWithTimezone.ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      const parseDurationResult = NLTimeUnitAgoFormatParser(10268).parseDuration(arg1[1]);
+      const ParsingComponents = NLTimeUnitAgoFormatParser(10177).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, NLTimeUnitAgoFormatParser(10176).reverseDuration(NLTimeUnitAgoFormatParser(10268).parseDuration(arg1[1])));
     }
   }
 ];

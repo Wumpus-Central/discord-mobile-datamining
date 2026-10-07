@@ -1,12 +1,9 @@
 // === Module 199: ? ===
 
 // Module 199
-import _mod38 from "module_38" /* 38 */;
-import _modDef132 from "module_132" /* 132 */;
-import _modDef133 from "module_133" /* 133 */;
-import EVENT_TARGET_GET_THE_PARENT_KEY from "EVENT_TARGET_GET_THE_PARENT_KEY" /* 135 */;
+import dispatchDefault from "dispatch" /* 132 */;
+import EventDefault from "Event" /* 133 */;
 import _modDef207 from "module_207" /* 207 */;
-import _mod208 from "module_208" /* 208 */;
 import _get from "_get" /* 96 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
@@ -14,17 +11,19 @@ import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const require = globalThis.__r;
-let map, set;
-
+let XMLHttpRequest = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -32,121 +31,114 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-if (require("module_200").default.isAvailable) {
-  let _default = require("module_200").default;
-  _default.addNetworkingHandler();
+if (fn(200).default.isAvailable) {
+  fn(200).default.addNetworkingHandler();
+  let _default = fn(200).default;
 }
 let closure_8 = { arraybuffer: typeof global.ArrayBuffer === "function", blob: typeof global.Blob === "function", document: false, json: true, text: true, "": true };
 class XMLHttpRequestEventTarget {
   constructor() {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, XMLHttpRequestEventTarget);
-    const obj = _getPrototypeOf(XMLHttpRequestEventTarget);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    self = this;
+    tmp = closure_4(this, XMLHttpRequest);
+    tmp2 = metroRequire;
+    obj = metroRequire(XMLHttpRequest);
+    tmp3 = hasOwnProperty;
+    if (closure_7()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return hasOwnProperty(self, constructResult);
+    return tmp3(self, constructResult);
   }
 }
-_inherits(XMLHttpRequestEventTarget, _modDef132);
-let obj = {
-  key: "onload",
-  get() {
-    const obj = require("module_205");
-    return obj.getEventHandlerAttribute(this, "load");
-  },
-  set(handleEvent) {
-    const obj = require("module_205");
-    const result = obj.setEventHandlerAttribute(this, "load", handleEvent);
-  }
-};
+XMLHttpRequest = XMLHttpRequestEventTarget;
+_inherits(XMLHttpRequestEventTarget, dispatchDefault);
 let items = [
-  obj,
+  {
+    key: "onload",
+    get() {
+      return XMLHttpRequest(205).getEventHandlerAttribute(this, "load");
+    },
+    set(handleEvent) {
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "load", handleEvent);
+    }
+  },
   {
     key: "onloadstart",
     get() {
-      const obj = require("module_205");
-      return obj.getEventHandlerAttribute(this, "loadstart");
+      return XMLHttpRequest(205).getEventHandlerAttribute(this, "loadstart");
     },
     set(handleEvent) {
-      const obj = require("module_205");
-      const result = obj.setEventHandlerAttribute(this, "loadstart", handleEvent);
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "loadstart", handleEvent);
     }
   },
   {
     key: "onprogress",
     get() {
-      const obj = require("module_205");
-      return obj.getEventHandlerAttribute(this, "progress");
+      return XMLHttpRequest(205).getEventHandlerAttribute(this, "progress");
     },
     set(handleEvent) {
-      const obj = require("module_205");
-      const result = obj.setEventHandlerAttribute(this, "progress", handleEvent);
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "progress", handleEvent);
     }
   },
   {
     key: "ontimeout",
     get() {
-      const obj = require("module_205");
-      return obj.getEventHandlerAttribute(this, "timeout");
+      return XMLHttpRequest(205).getEventHandlerAttribute(this, "timeout");
     },
     set(handleEvent) {
-      const obj = require("module_205");
-      const result = obj.setEventHandlerAttribute(this, "timeout", handleEvent);
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "timeout", handleEvent);
     }
   },
   {
     key: "onerror",
     get() {
-      const obj = require("module_205");
-      return obj.getEventHandlerAttribute(this, "error");
+      return XMLHttpRequest(205).getEventHandlerAttribute(this, "error");
     },
     set(handleEvent) {
-      const obj = require("module_205");
-      const result = obj.setEventHandlerAttribute(this, "error", handleEvent);
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "error", handleEvent);
     }
   },
   {
     key: "onabort",
     get() {
-      const obj = require("module_205");
-      return obj.getEventHandlerAttribute(this, "abort");
+      return XMLHttpRequest(205).getEventHandlerAttribute(this, "abort");
     },
     set(handleEvent) {
-      const obj = require("module_205");
-      const result = obj.setEventHandlerAttribute(this, "abort", handleEvent);
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "abort", handleEvent);
     }
   },
   {
     key: "onloadend",
     get() {
-      const obj = require("module_205");
-      return obj.getEventHandlerAttribute(this, "loadend");
+      return XMLHttpRequest(205).getEventHandlerAttribute(this, "loadend");
     },
     set(handleEvent) {
-      const obj = require("module_205");
-      const result = obj.setEventHandlerAttribute(this, "loadend", handleEvent);
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "loadend", handleEvent);
     }
   }
 ];
 let closure_9 = _createClass(XMLHttpRequestEventTarget, items);
 class XMLHttpRequest {
   constructor() {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, XMLHttpRequest);
-    const obj = _getPrototypeOf(XMLHttpRequest);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], _getPrototypeOf(self).constructor);
+    self = this;
+    tmp = closure_4(this, XMLHttpRequest);
+    tmp2 = metroRequire;
+    obj = metroRequire(XMLHttpRequest);
+    tmp3 = hasOwnProperty;
+    if (closure_7()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, undefined);
     }
-    const tmp3Result = hasOwnProperty(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
     tmp3Result.UNSENT = 0;
     tmp3Result.OPENED = 1;
     tmp3Result.HEADERS_RECEIVED = 2;
@@ -156,7 +148,8 @@ class XMLHttpRequest {
     tmp3Result.status = 0;
     tmp3Result.timeout = 0;
     tmp3Result.withCredentials = true;
-    tmp3Result.upload = new closure_9();
+    tmp6 = new closure_9();
+    tmp3Result.upload = tmp6;
     tmp3Result._aborted = false;
     tmp3Result._hasError = false;
     tmp3Result._method = null;
@@ -166,19 +159,18 @@ class XMLHttpRequest {
     tmp3Result._timedOut = false;
     tmp3Result._incrementalEvents = false;
     tmp3Result._performanceLogger = null;
-    new closure_9();
-    tmp3Result._reset();
+    _resetResult = tmp3Result._reset();
     return tmp3Result;
   }
 }
-_inherits(XMLHttpRequest, _modDef132);
+_inherits(XMLHttpRequest, dispatchDefault);
 const entry = {
   key: "_reset",
   value: function _reset() {
     this.readyState = this.UNSENT;
     this.responseHeaders = undefined;
     this.status = 0;
-    delete this["responseURL"];
+    delete tmp[tmp2];
     this._requestId = null;
     this._cachedResponse = undefined;
     this._hasError = false;
@@ -201,23 +193,21 @@ const items1 = [
     set(_responseType) {
       if (this._sent) {
         const _Error = Error;
-        const self = this;
-        const self2 = this;
         const error = new Error("Failed to set the 'responseType' property on 'XMLHttpRequest': The response type cannot be set after the request has been sent.");
         throw error;
       } else if (closure_8.hasOwnProperty(_responseType)) {
         let tmp9 = closure_8[_responseType];
-        const tmp8 = _mod38;
         if (!tmp9) {
           tmp9 = "document" === _responseType;
         }
         const _HermesInternal2 = HermesInternal;
-        tmp8(tmp9, "The provided value '" + _responseType + "' is unsupported in this environment.");
+        XMLHttpRequest(38)(tmp9, "The provided value '" + _responseType + "' is unsupported in this environment.");
         if ("blob" === _responseType) {
-          const tmp6Result = _mod38;
-          tmp6Result(require("module_200").default.isAvailable, "Native module BlobModule is required for blob support");
+          XMLHttpRequest(38)(XMLHttpRequest(200).default.isAvailable, "Native module BlobModule is required for blob support");
+          const tmp6Result = XMLHttpRequest(38);
         }
         tmp._responseType = _responseType;
+        const tmp8 = XMLHttpRequest(38);
       } else {
         const _console = console;
         const _HermesInternal = HermesInternal;
@@ -234,8 +224,6 @@ const items1 = [
         if ("text" !== self._responseType) {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
-          const self2 = this;
-          const self3 = this;
           const error = new Error("The 'responseText' property is only available if 'responseType' is set to '' or 'text', but it is '" + self._responseType + "'.");
           throw error;
         }
@@ -249,8 +237,6 @@ const items1 = [
   {
     key: "response",
     get() {
-      let _response;
-      let _response2;
       const self = this;
       const responseType = this.responseType;
       if ("" !== responseType) {
@@ -263,33 +249,31 @@ const items1 = [
             if ("document" === responseType) {
               self._cachedResponse = null;
             } else if ("arraybuffer" === responseType) {
-              const obj = require("byteLength");
-              self._cachedResponse = obj.toByteArray(self._response).buffer;
+              self._cachedResponse = XMLHttpRequest(206).toByteArray(self._response).buffer;
+              const obj = XMLHttpRequest(206);
             } else if ("blob" === responseType) {
               if (typeof self._response === "object") {
                 if (self._response) {
-                  const _default2 = require("module_200").default;
-                  self._cachedResponse = _default2.createFromOptions(self._response);
+                  self._cachedResponse = XMLHttpRequest(200).default.createFromOptions(self._response);
+                  const _default2 = XMLHttpRequest(200).default;
                 }
               }
               if ("" !== self._response) {
                 const _Error = Error;
                 ({ _response: _response2, _response } = self);
                 const _HermesInternal = HermesInternal;
-                const self2 = this;
-                const self3 = this;
                 const error = new Error("Invalid response for blob - expecting object, was " + typeof _response + ": " + _response2.trim());
                 throw error;
               } else {
-                const _default = require("module_200").default;
-                self._cachedResponse = _default.createFromParts([]);
+                self._cachedResponse = XMLHttpRequest(200).default.createFromParts([]);
+                const _default = XMLHttpRequest(200).default;
               }
             } else if ("json" === responseType) {
               try {
                 const _JSON = JSON;
                 self._cachedResponse = JSON.parse(self._response);
               } catch (err) {
-                self._cachedResponse = null;
+                tmp._cachedResponse = null;
               }
             }
             return self._cachedResponse;
@@ -314,11 +298,10 @@ const items1 = [
       if (XMLHttpRequest._interceptor) {
         const _interceptor = XMLHttpRequest._interceptor;
         let str = self._url;
-        const requestSent = _interceptor.requestSent;
         if (!str) {
           str = "";
         }
-        const sent = requestSent(_requestId, str, tmp, self._headers);
+        const sent = _interceptor.requestSent(_requestId, str, tmp, self._headers);
       }
     }
   },
@@ -326,14 +309,10 @@ const items1 = [
     key: "__didUploadProgress",
     value: function __didUploadProgress(arg0, loaded, total) {
       if (arg0 === this._requestId) {
-        const dispatchTrustedEvent = EVENT_TARGET_GET_THE_PARENT_KEY.dispatchTrustedEvent;
-        const upload = tmp.upload;
-        const self = this;
-        const self2 = this;
-        const obj = { lengthComputable: true, loaded, total };
-        EVENT_TARGET_GET_THE_PARENT_KEY;
-        const tmp9 = new _modDef207("progress", obj);
-        dispatchTrustedEvent(upload, tmp9);
+        const obj2 = { lengthComputable: true, loaded, total };
+        const tmp10 = new _modDef207("progress", obj2);
+        XMLHttpRequest(135).dispatchTrustedEvent(tmp.upload, tmp10);
+        const obj = XMLHttpRequest(135);
       }
     }
   },
@@ -343,8 +322,7 @@ const items1 = [
       const self = this;
       if (arg0 === this._requestId) {
         const _performanceLogger = self._performanceLogger;
-        const tmp = null != self._perfKey && null != _performanceLogger;
-        if (tmp) {
+        if (tmp3) {
           _performanceLogger.stopTimespan(self._perfKey);
         }
         let obj = arg2;
@@ -354,11 +332,10 @@ const items1 = [
         self.setReadyState(self.HEADERS_RECEIVED);
         if (!arg3) {
           if ("" !== str) {
-            delete self["responseURL"];
+            delete tmp2[tmp];
           }
           if (XMLHttpRequest._interceptor) {
             const _interceptor = XMLHttpRequest._interceptor;
-            const responseReceived = _interceptor.responseReceived;
             if (!str) {
               str = self._url;
             }
@@ -368,10 +345,11 @@ const items1 = [
             if (!obj) {
               obj = {};
             }
-            responseReceived(arg0, str, status, obj);
+            _interceptor.responseReceived(arg0, str, status, obj);
           }
         }
         self.responseURL = str;
+        tmp3 = null != self._perfKey && null != _performanceLogger;
       }
     }
   },
@@ -413,13 +391,10 @@ const items1 = [
     key: "__didReceiveDataProgress",
     value: function __didReceiveDataProgress(arg0, loaded, total) {
       if (arg0 === this._requestId) {
-        const dispatchTrustedEvent = EVENT_TARGET_GET_THE_PARENT_KEY.dispatchTrustedEvent;
-        const self = this;
-        const self2 = this;
-        const obj = { lengthComputable: total >= 0, loaded, total };
-        EVENT_TARGET_GET_THE_PARENT_KEY;
-        const tmp9 = new _modDef207("progress", obj);
-        dispatchTrustedEvent(tmp, tmp9);
+        const obj2 = { lengthComputable: total >= 0, loaded, total };
+        const tmp10 = new _modDef207("progress", obj2);
+        XMLHttpRequest(135).dispatchTrustedEvent(tmp, tmp10);
+        const obj = XMLHttpRequest(135);
       }
     }
   },
@@ -428,9 +403,11 @@ const items1 = [
     value: function __didCompleteResponse(arg0, _response, arg2) {
       const self = this;
       if (arg0 === this._requestId) {
-        const tmp9 = _response;
-        if (tmp9) {
-          const tmp = "" !== self._responseType && "text" !== self._responseType;
+        if (_response) {
+          let tmp = "" !== self._responseType;
+          if (tmp) {
+            tmp = "text" !== self._responseType;
+          }
           if (!tmp) {
             self._response = _response;
           }
@@ -458,10 +435,12 @@ const items1 = [
   {
     key: "_clearSubscriptions",
     value: function _clearSubscriptions() {
-      const _subscriptions = this._subscriptions || [];
+      let _subscriptions = this._subscriptions;
+      if (!_subscriptions) {
+        _subscriptions = [];
+      }
       const item = _subscriptions.forEach((remove) => {
-        const tmp = remove;
-        if (tmp) {
+        if (remove) {
           remove.remove();
         }
       });
@@ -474,33 +453,31 @@ const items1 = [
       if (this.responseHeaders) {
         const responseHeaders = this.responseHeaders;
         const _Map = Map;
-        const self2 = this;
-        const self = this;
-        map = new Map();
+        const map = new Map();
         const _Object = Object;
         const keys = Object.keys(responseHeaders);
         const iter = keys[Symbol.iterator]();
         const str2 = iter.next();
         while (iter !== undefined) {
           let str3 = str2;
-          let tmp8 = responseHeaders[str2];
+          let tmp10 = responseHeaders[str2];
           let formatted = str2.toLowerCase();
-          let tmp10 = formatted;
-          let value = map.get(formatted);
-          let tmp12 = value;
-          if (tmp12) {
-            tmp12.headerValue = `${tmp12.headerValue}, ${tmp8}`;
-            let result = map.set(tmp10, tmp12);
+          let tmp12 = formatted;
+          value = map.get(formatted);
+          let tmp14 = value;
+          if (value) {
+            tmp14.headerValue = `${tmp14.headerValue}, ${tmp10}`;
+            let result = map.set(tmp12, tmp14);
           } else {
-            let obj = { lowerHeaderName: tmp10, upperHeaderName: str3.toUpperCase(), headerValue: tmp8 };
-            set = map.set;
-            let result1 = set(tmp10, obj);
+            let obj = { lowerHeaderName: tmp12, upperHeaderName: null, headerValue: null };
+            obj.upperHeaderName = str3.toUpperCase();
+            obj.headerValue = tmp10;
+            let result1 = map.set(tmp12, obj);
           }
           continue;
         }
         const items = [];
-        let num = 0;
-        HermesBuiltin.arraySpread(items, map.values(), 0);
+        HermesBuiltin.arraySpread(map.values(), 0);
         const sorted = items.sort((upperHeaderName, upperHeaderName2) => {
           let num = -1;
           if (upperHeaderName.upperHeaderName >= upperHeaderName2.upperHeaderName) {
@@ -535,15 +512,12 @@ const items1 = [
     value: function setRequestHeader(baggage, StringResult) {
       if (this.readyState !== this.OPENED) {
         const _Error = Error;
-        const self = this;
-        const self2 = this;
         const error = new Error("Request has not been opened");
         throw error;
       } else {
-        const _headers = tmp._headers;
         const _String = String;
         const formatted = baggage.toLowerCase();
-        _headers[formatted] = String(StringResult);
+        tmp._headers[formatted] = String(StringResult);
       }
     }
   },
@@ -567,30 +541,23 @@ const items1 = [
       const self = this;
       if (this.readyState !== this.UNSENT) {
         const _Error3 = Error;
-        const self6 = this;
-        const self7 = this;
         const error = new Error("Cannot open, already sending");
         throw error;
       } else {
         if (undefined !== arg2) {
           if (!arg2) {
             const _Error = Error;
-            const self2 = this;
-            const self3 = this;
             const error1 = new Error("Synchronous http requests are not supported");
             throw error1;
           }
         }
-        const tmp4 = _url;
-        if (tmp4) {
+        if (_url) {
           self._method = str.toUpperCase();
           self._url = _url;
           self._aborted = false;
           self.setReadyState(self.OPENED);
         } else {
           const _Error2 = Error;
-          const self4 = this;
-          const self5 = this;
           const error2 = new Error("Cannot load an empty url");
           throw error2;
         }
@@ -600,66 +567,49 @@ const items1 = [
   {
     key: "send",
     value: function send(arg0) {
-      let __didCreateRequest;
-      let _headers;
-      let _method;
-      let _trackingName;
-      let _url2;
-      let timeout;
       const self = this;
       if (this.readyState !== this.OPENED) {
         const _Error2 = Error;
-        const self4 = this;
-        const self5 = this;
         const error = new Error("Request has not been opened");
         throw error;
       } else if (self._sent) {
         const _Error = Error;
-        const self2 = this;
-        const self3 = this;
         const error1 = new Error("Request has already been sent");
         throw error1;
       } else {
         self._sent = true;
         const _subscriptions = self._subscriptions;
-        const push = _subscriptions.push;
-        const _default = _mod208.default;
-        push(_default.addListener("didSendNetworkData", (arg0) => {
+        _subscriptions.push(XMLHttpRequest(208).default.addListener("didSendNetworkData", (arg0) => {
           const items = [...arg0];
           return self.__didUploadProgress.apply(items);
         }));
         const _subscriptions1 = self._subscriptions;
-        const push2 = _subscriptions1.push;
-        const _default2 = _mod208.default;
-        push2(_default2.addListener("didReceiveNetworkResponse", (arg0) => {
+        const _default = XMLHttpRequest(208).default;
+        _subscriptions1.push(XMLHttpRequest(208).default.addListener("didReceiveNetworkResponse", (arg0) => {
           const items = [...arg0];
           return self.__didReceiveResponse.apply(items);
         }));
         const _subscriptions2 = self._subscriptions;
-        const push3 = _subscriptions2.push;
-        const _default3 = _mod208.default;
-        push3(_default3.addListener("didReceiveNetworkData", (arg0) => {
+        const _default2 = XMLHttpRequest(208).default;
+        _subscriptions2.push(XMLHttpRequest(208).default.addListener("didReceiveNetworkData", (arg0) => {
           const items = [...arg0];
           return self.__didReceiveData.apply(items);
         }));
         const _subscriptions3 = self._subscriptions;
-        const push4 = _subscriptions3.push;
-        const _default4 = _mod208.default;
-        push4(_default4.addListener("didReceiveNetworkIncrementalData", (arg0) => {
+        const _default3 = XMLHttpRequest(208).default;
+        _subscriptions3.push(XMLHttpRequest(208).default.addListener("didReceiveNetworkIncrementalData", (arg0) => {
           const items = [...arg0];
           return self.__didReceiveIncrementalData.apply(items);
         }));
         const _subscriptions4 = self._subscriptions;
-        const push5 = _subscriptions4.push;
-        const _default5 = _mod208.default;
-        push5(_default5.addListener("didReceiveNetworkDataProgress", (arg0) => {
+        const _default4 = XMLHttpRequest(208).default;
+        _subscriptions4.push(XMLHttpRequest(208).default.addListener("didReceiveNetworkDataProgress", (arg0) => {
           const items = [...arg0];
           return self.__didReceiveDataProgress.apply(items);
         }));
         const _subscriptions5 = self._subscriptions;
-        const push6 = _subscriptions5.push;
-        const _default6 = _mod208.default;
-        push6(_default6.addListener("didCompleteNetworkResponse", (arg0) => {
+        const _default5 = XMLHttpRequest(208).default;
+        _subscriptions5.push(XMLHttpRequest(208).default.addListener("didCompleteNetworkResponse", (arg0) => {
           const items = [...arg0];
           return self.__didCompleteResponse.apply(items);
         }));
@@ -680,13 +630,13 @@ const items1 = [
           self._perfKey = `network_XMLHttpRequest_${String(_url)}`;
           _performanceLogger.startTimespan(self._perfKey);
         }
-        _mod38(self._method, "XMLHttpRequest method needs to be defined (%s).", _url);
-        _mod38(self._url, "XMLHttpRequest URL needs to be defined (%s).", _url);
+        XMLHttpRequest(38)(self._method, "XMLHttpRequest method needs to be defined (%s).", _url);
+        XMLHttpRequest(38)(self._url, "XMLHttpRequest URL needs to be defined (%s).", _url);
+        const _default7 = XMLHttpRequest(208).default;
         ({ _method, _trackingName } = self);
-        const sendRequest = _mod208.default.sendRequest;
         ({ __didCreateRequest, _url: _url2, _headers, timeout } = self);
-        const _default7 = _mod208.default;
-        sendRequest(_method, _trackingName, _url2, _headers, arg0, str7, self._incrementalEvents || self.onreadystatechange || self.onprogress, timeout, __didCreateRequest.bind(self), self.withCredentials);
+        _default7.sendRequest(_method, _trackingName, _url2, _headers, arg0, str7, self._incrementalEvents || self.onreadystatechange || self.onprogress, timeout, __didCreateRequest.bind(self), self.withCredentials);
+        const _default6 = XMLHttpRequest(208).default;
       }
     }
   },
@@ -696,12 +646,13 @@ const items1 = [
       const self = this;
       this._aborted = true;
       if (this._requestId) {
-        const _default = _mod208.default;
-        _default.abortRequest(self._requestId);
+        XMLHttpRequest(208).default.abortRequest(self._requestId);
+        const _default = XMLHttpRequest(208).default;
       }
       let tmp4 = self.readyState === self.UNSENT;
       if (!tmp4) {
         tmp4 = self.readyState === self.OPENED && !self._sent;
+        const tmp5 = self.readyState === self.OPENED && !self._sent;
       }
       if (!tmp4) {
         tmp4 = self.readyState === self.DONE;
@@ -717,7 +668,11 @@ const items1 = [
     key: "setResponseHeaders",
     value: function setResponseHeaders(arg0) {
       let obj = arg0;
-      this.responseHeaders = arg0 || null;
+      let tmp = arg0;
+      if (!arg0) {
+        tmp = null;
+      }
+      this.responseHeaders = tmp;
       if (!obj) {
         obj = {};
       }
@@ -733,57 +688,49 @@ const items1 = [
     value: function setReadyState(DONE) {
       const self = this;
       this.readyState = DONE;
-      const dispatchTrustedEvent = EVENT_TARGET_GET_THE_PARENT_KEY.dispatchTrustedEvent;
-      EVENT_TARGET_GET_THE_PARENT_KEY;
-      const tmp5 = new _modDef133("readystatechange");
-      dispatchTrustedEvent(this, tmp5);
+      let obj = XMLHttpRequest;
+      const obj2 = XMLHttpRequest(135);
+      obj2.dispatchTrustedEvent(this, new EventDefault("readystatechange"));
       if (DONE === this.DONE) {
         if (self._aborted) {
-          const dispatchTrustedEvent4 = EVENT_TARGET_GET_THE_PARENT_KEY.dispatchTrustedEvent;
-          const self5 = this;
-          const self6 = this;
-          EVENT_TARGET_GET_THE_PARENT_KEY;
-          const tmp22 = new _modDef133("abort");
-          const result = dispatchTrustedEvent4(self, tmp22);
-        } else if (self._hasError) {
-          const _timedOut = self._timedOut;
-          const dispatchTrustedEvent3 = EVENT_TARGET_GET_THE_PARENT_KEY.dispatchTrustedEvent;
-          EVENT_TARGET_GET_THE_PARENT_KEY;
-          const tmp4Result = _modDef133;
-          const self4 = this;
-          if (_timedOut) {
-            const tmp4Result1 = new tmp4Result("timeout");
-            const result1 = dispatchTrustedEvent3(self, tmp4Result1);
-          } else {
-            const tmp4Result2 = new tmp4Result("error");
-            const result2 = dispatchTrustedEvent3(self, tmp4Result2);
-          }
-        } else {
-          const dispatchTrustedEvent2 = EVENT_TARGET_GET_THE_PARENT_KEY.dispatchTrustedEvent;
-          const self2 = this;
-          const self3 = this;
-          EVENT_TARGET_GET_THE_PARENT_KEY;
-          const tmp8 = new _modDef133("load");
-          const result3 = dispatchTrustedEvent2(self, tmp8);
+          const tmp23 = new EventDefault("abort");
+          obj(135).dispatchTrustedEvent(self, tmp23);
+          obj = obj(135);
+          const objResult = obj(135);
+          const tmp2 = new.target;
+          const tmp2Result2 = new EventDefault("loadend");
+          obj.dispatchTrustedEvent(self, tmp2Result2);
+          const tmp2Result = EventDefault;
+        } else if (!self._hasError) {
+          const tmp7 = new EventDefault("load");
+          obj(135).dispatchTrustedEvent(self, tmp7);
+          const objResult3 = obj(135);
         }
-        const dispatchTrustedEvent5 = EVENT_TARGET_GET_THE_PARENT_KEY.dispatchTrustedEvent;
-        const self7 = this;
-        const self8 = this;
-        EVENT_TARGET_GET_THE_PARENT_KEY;
-        const tmp26 = new _modDef133("loadend");
-        const result4 = dispatchTrustedEvent5(self, tmp26);
+        const dispatchTrustedEvent = obj(135).dispatchTrustedEvent;
+        const tmp2Result3 = EventDefault;
+        if (self._timedOut) {
+          const tmp2Result11 = new tmp2Result3("timeout");
+          dispatchTrustedEvent(self, tmp2Result11);
+        } else {
+          const tmp2Result12 = new tmp2Result3("error");
+          dispatchTrustedEvent(self, tmp2Result12);
+        }
+        const objResult4 = obj(135);
       }
     }
   },
   {
     key: "addEventListener",
     value: function addEventListener(arg0, arg1) {
+      let tmp = "readystatechange" !== arg0;
+      if (tmp) {
+        tmp = "progress" !== arg0;
+      }
       const self = this;
-      const tmp = "readystatechange" !== arg0 && "progress" !== arg0;
       if (!tmp) {
         self._incrementalEvents = true;
       }
-      let fn = _get(_getPrototypeOf(XMLHttpRequest.prototype), "addEventListener", self);
+      let fn = _get(metroRequire(XMLHttpRequest.prototype), "addEventListener", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -794,89 +741,73 @@ const items1 = [
   {
     key: "onabort",
     get() {
-      const obj = require("module_205");
-      return obj.getEventHandlerAttribute(this, "abort");
+      return XMLHttpRequest(205).getEventHandlerAttribute(this, "abort");
     },
     set(handleEvent) {
-      const obj = require("module_205");
-      const result = obj.setEventHandlerAttribute(this, "abort", handleEvent);
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "abort", handleEvent);
     }
   },
   {
     key: "onerror",
     get() {
-      const obj = require("module_205");
-      return obj.getEventHandlerAttribute(this, "error");
+      return XMLHttpRequest(205).getEventHandlerAttribute(this, "error");
     },
     set(handleEvent) {
-      const obj = require("module_205");
-      const result = obj.setEventHandlerAttribute(this, "error", handleEvent);
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "error", handleEvent);
     }
   },
   {
     key: "onload",
     get() {
-      const obj = require("module_205");
-      return obj.getEventHandlerAttribute(this, "load");
+      return XMLHttpRequest(205).getEventHandlerAttribute(this, "load");
     },
     set(handleEvent) {
-      const obj = require("module_205");
-      const result = obj.setEventHandlerAttribute(this, "load", handleEvent);
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "load", handleEvent);
     }
   },
   {
     key: "onloadstart",
     get() {
-      const obj = require("module_205");
-      return obj.getEventHandlerAttribute(this, "loadstart");
+      return XMLHttpRequest(205).getEventHandlerAttribute(this, "loadstart");
     },
     set(handleEvent) {
-      const obj = require("module_205");
-      const result = obj.setEventHandlerAttribute(this, "loadstart", handleEvent);
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "loadstart", handleEvent);
     }
   },
   {
     key: "onprogress",
     get() {
-      const obj = require("module_205");
-      return obj.getEventHandlerAttribute(this, "progress");
+      return XMLHttpRequest(205).getEventHandlerAttribute(this, "progress");
     },
     set(handleEvent) {
-      const obj = require("module_205");
-      const result = obj.setEventHandlerAttribute(this, "progress", handleEvent);
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "progress", handleEvent);
     }
   },
   {
     key: "ontimeout",
     get() {
-      const obj = require("module_205");
-      return obj.getEventHandlerAttribute(this, "timeout");
+      return XMLHttpRequest(205).getEventHandlerAttribute(this, "timeout");
     },
     set(handleEvent) {
-      const obj = require("module_205");
-      const result = obj.setEventHandlerAttribute(this, "timeout", handleEvent);
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "timeout", handleEvent);
     }
   },
   {
     key: "onloadend",
     get() {
-      const obj = require("module_205");
-      return obj.getEventHandlerAttribute(this, "loadend");
+      return XMLHttpRequest(205).getEventHandlerAttribute(this, "loadend");
     },
     set(handleEvent) {
-      const obj = require("module_205");
-      const result = obj.setEventHandlerAttribute(this, "loadend", handleEvent);
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "loadend", handleEvent);
     }
   },
   {
     key: "onreadystatechange",
     get() {
-      const obj = require("module_205");
-      return obj.getEventHandlerAttribute(this, "readystatechange");
+      return XMLHttpRequest(205).getEventHandlerAttribute(this, "readystatechange");
     },
     set(handleEvent) {
-      const obj = require("module_205");
-      const result = obj.setEventHandlerAttribute(this, "readystatechange", handleEvent);
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "readystatechange", handleEvent);
     }
   }
 ];

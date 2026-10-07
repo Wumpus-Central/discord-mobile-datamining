@@ -3,39 +3,38 @@
 // Module 12697
 
 export function makeFifoCache(arg0) {
-  let closure_0 = arg0;
-  let closure_1 = [];
-  let closure_2 = {};
+  closure_0 = arg0;
+  closure_1 = [];
+  const dependencyMap = {};
   return {
     add(arg0, arg1) {
       if (closure_1.length >= closure_0) {
         do {
-          let arr = closure_1.shift();
-          if (undefined !== arr) {
-            delete closure_2[tmp2];
+          if (undefined !== closure_1.shift()) {
+            delete tmp[tmp2];
           }
         } while (closure_1.length >= closure_0);
       }
-      if (closure_2[arg0]) {
+      if (dependencyMap[arg0]) {
         const self = this;
         this.delete(arg0);
       }
       closure_1.push(arg0);
-      closure_2[arg0] = arg1;
+      dependencyMap[arg0] = arg1;
     },
     clear() {
       closure_2 = {};
       closure_1 = [];
     },
     get(arg0) {
-      return closure_2[arg0];
+      return dependencyMap[arg0];
     },
     size() {
       return closure_1.length;
     },
-    delete: (arg0) => {
-      if (closure_2[arg0]) {
-        delete closure_2[tmp];
+    delete(arg0) {
+      if (dependencyMap[arg0]) {
+        delete tmp[tmp2];
         let num = 0;
         if (0 < closure_1.length) {
           while (closure_1[num] !== arg0) {

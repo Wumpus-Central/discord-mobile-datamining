@@ -1,18 +1,17 @@
 // === Module 6310: BottomSheetBackground ===
 
 // Module 6310 (BottomSheetBackground)
-import react_native from "react-native" /* 17 */;
-import react2 from "react" /* 19 */;
-import Fragment from "Fragment" /* 21 */;
-import react_native2 from "react-native" /* 6309 */;
+import _mod6309 from "module_6309" /* 6309 */;
+import noop from "module_19" /* 19 */;
 
-const memo = react2.memo;
-const View = react_native.View;
-const jsx = Fragment.jsx;
-const memoResult = memo((pointerEvents) => {
-  const style = pointerEvents.style;
-  const items = [react_native2.styles.background, style];
-  return <View pointerEvents={pointerEvents.pointerEvents} accessible accessibilityRole="adjustable" accessibilityLabel="Bottom Sheet" style={items} />;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const memoResult = fn(19).memo((pointerEvents) => {
+  const obj = { pointerEvents: pointerEvents.pointerEvents, accessible: true, accessibilityRole: "adjustable", accessibilityLabel: "Bottom Sheet", style: null };
+  const items = [_mod6309.styles.background, pointerEvents.style];
+  obj.style = items;
+  return <View pointerEvents={pointerEvents.pointerEvents} accessible accessibilityRole="adjustable" accessibilityLabel="Bottom Sheet" style={null} />;
 });
 memoResult.displayName = "BottomSheetBackground";
 

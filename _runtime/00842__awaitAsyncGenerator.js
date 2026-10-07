@@ -5,6 +5,5 @@ import _OverloadYield from "_OverloadYield" /* 843 */;
 
 
 export default function _awaitAsyncGenerator(iter) {
-  const tmp = new _OverloadYield(iter, 0);
-  return tmp;
+  return new _OverloadYield(iter, 0);
 };

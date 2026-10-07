@@ -3,9 +3,9 @@
 // Module 1050 (graphqlIntegration)
 import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 900 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
 export const graphqlIntegration = function graphqlIntegration(endpoints) {
-  const obj = feedbackAsyncIntegration;
-  const obj2 = { endpoints: endpoints.endpoints };
-  return obj.graphqlClientIntegration(obj2);
+  return feedbackAsyncIntegration.graphqlClientIntegration({ endpoints: endpoints.endpoints });
 };

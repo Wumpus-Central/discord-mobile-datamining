@@ -2,181 +2,235 @@
 
 // Module 1446
 class PseudoMap {
-  constructor(arr) {
-    const self = this;
+  constructor(arg0) {
+    self = this;
     if (this instanceof PseudoMap) {
-      self.clear();
-      if (arr) {
-        if (!(arr instanceof tmp)) {
-          const _Map = Map;
+      tmp7 = global;
+      clearResult = self.clear();
+      if (global) {
+        if (!(global instanceof tmp)) {
+          tmp9 = globalThis;
+          _Map = Map;
           if (typeof Map === "function") {
-            const _Map2 = Map;
+            _Map2 = Map;
           }
-          const _Array = Array;
-          if (Array.isArray(arr)) {
-            const item = arr.forEach(function(item) {
+          _Array = Array;
+          if (Array.isArray(global)) {
+            item = global.forEach(function(item) {
               const result = this.set(item[0], item[1]);
             }, self);
           } else {
-            const _TypeError2 = TypeError;
-            const self4 = this;
-            const self5 = this;
-            const typeError = new TypeError("invalid argument");
+            _TypeError2 = TypeError;
+            tmp10 = new.target;
+            str2 = "invalid argument";
+            tmp11 = new.target;
+            typeError = new TypeError("invalid argument");
+            tmp13 = typeError;
             throw typeError;
           }
         }
-        const item1 = arr.forEach(function(item, index) {
+        item1 = global.forEach(function(item, index) {
           const result = this.set(index, item);
         }, self);
       }
+      return;
     } else {
-      const _TypeError = TypeError;
-      const self2 = this;
-      const self3 = this;
-      const typeError1 = new TypeError("Constructor PseudoMap requires 'new'");
+      tmp2 = globalThis;
+      _TypeError = TypeError;
+      tmp3 = new.target;
+      str = "Constructor PseudoMap requires 'new'";
+      tmp4 = new.target;
+      typeError1 = new TypeError("Constructor PseudoMap requires 'new'");
+      tmp6 = typeError1;
       throw typeError1;
     }
   }
   forEach(arg0, arg1) {
-    let closure_0 = arg0;
-    let tmp = arg1;
-    let self = arg1;
-    if (!self) {
+    self = this;
+    closure_0 = global;
+    tmp = require;
+    self = require;
+    if (!require) {
       tmp = self;
     }
     self = tmp;
-    const keys = Object.keys(self._data);
-    const item = keys.forEach(function(item) {
+    keys = Object.keys(self._data);
+    item = keys.forEach(function(item) {
       if ("size" !== item) {
         self = this;
-        closure_0.call(self, this._data[item].value, this._data[item].key);
+        const call = closure_0.call;
+        value = this._data[item].value;
+        if (typeof call === "unknown") {
+          closure_0(value, key);
+        } else {
+          call(tmp2, value, key);
+        }
+        tmp2 = self;
       }
     }, self);
+    return;
   }
   has(arg0) {
-    const _data = this._data;
-    const text = `_${arg0}`;
-    let tmp2 = text;
-    let num = 0;
-    let tmp3;
-    if (hasOwnProperty.call(_data, `_${arg0}`)) {
+    _data = this._data;
+    text = `_${global}`;
+    tmp2 = hasOwnProperty;
+    call = hasOwnProperty.call;
+    tmp3 = text;
+    num = 0;
+    tmp4 = undefined;
+    if (typeof call === "unknown" ? tmp2(`_${global}`) : call(_data, `_${global}`)) {
       while (true) {
-        let key = _data[tmp2].key;
-        let tmp4 = key === arg0;
-        if (!tmp4) {
-          let tmp7 = key != key && arg0 != arg0;
-          tmp4 = tmp7;
+        key = _data[tmp3].key;
+        tmp5 = key === global;
+        tmp6 = tmp3;
+        tmp7 = num;
+        if (!tmp5) {
+          tmp8 = key != key && global != global;
+          tmp5 = tmp8;
         }
-        if (tmp4) {
+        if (tmp5) {
           break;
         } else {
-          let sum = text + num;
+          sum = text + num;
+          tmp10 = hasOwnProperty;
+          call2 = hasOwnProperty.call;
           num = num + 1;
-          tmp2 = sum;
-        }
-      }
-      tmp3 = _data[tmp2];
-    }
-    return tmp3;
-  }
-  get(arg0) {
-    const _data = this._data;
-    const text = `_${arg0}`;
-    let tmp2 = text;
-    let num = 0;
-    let tmp3;
-    if (hasOwnProperty.call(_data, `_${arg0}`)) {
-      while (true) {
-        let key = _data[tmp2].key;
-        let tmp4 = key === arg0;
-        if (!tmp4) {
-          let tmp7 = key != key && arg0 != arg0;
-          tmp4 = tmp7;
-        }
-        if (tmp4) {
-          break;
-        } else {
-          let sum = text + num;
-          num = num + 1;
-          tmp2 = sum;
-        }
-      }
-      tmp3 = _data[tmp2];
-    }
-    return tmp3 && tmp3.value;
-  }
-  set(key, value) {
-    const _data = this._data;
-    const text = `_${key}`;
-    let tmp2 = text;
-    let num = 0;
-    let tmp3 = text;
-    if (!hasOwnProperty.call(_data, `_${key}`)) {
-      _data.size = _data.size + 1;
-      Object.create(Entry.prototype);
-      const obj = { key, value, _index: tmp3 };
-      _data[tmp3] = obj;
-    } else {
-      while (true) {
-        key = _data[tmp2].key;
-        let tmp4 = key === key;
-        if (!tmp4) {
-          let tmp7 = key != key && key != key;
-          tmp4 = tmp7;
-        }
-        if (tmp4) {
-          break;
-        } else {
-          let sum = text + num;
-          num = num + 1;
-          tmp2 = sum;
           tmp3 = sum;
         }
       }
-      _data[tmp2].value = value;
+      tmp4 = _data[tmp3];
     }
+    return tmp4;
   }
-  delete(arg0) {
-    const self = this;
-    const _data = this._data;
-    const text = `_${arg0}`;
-    let tmp2 = text;
-    let num = 0;
-    let tmp3;
-    if (hasOwnProperty.call(_data, `_${arg0}`)) {
+  get(arg0) {
+    _data = this._data;
+    text = `_${global}`;
+    tmp2 = hasOwnProperty;
+    call = hasOwnProperty.call;
+    tmp3 = text;
+    num = 0;
+    tmp4 = undefined;
+    if (typeof call === "unknown" ? tmp2(`_${global}`) : call(_data, `_${global}`)) {
       while (true) {
-        let key = _data[tmp2].key;
-        let tmp4 = key === arg0;
-        if (!tmp4) {
-          let tmp7 = key != key && arg0 != arg0;
-          tmp4 = tmp7;
+        key = _data[tmp3].key;
+        tmp5 = key === global;
+        tmp6 = tmp3;
+        tmp7 = num;
+        if (!tmp5) {
+          tmp8 = key != key && global != global;
+          tmp5 = tmp8;
         }
-        if (tmp4) {
+        if (tmp5) {
           break;
         } else {
-          let sum = text + num;
+          sum = text + num;
+          tmp10 = hasOwnProperty;
+          call2 = hasOwnProperty.call;
           num = num + 1;
-          tmp2 = sum;
+          tmp3 = sum;
         }
       }
-      tmp3 = _data[tmp2];
+      tmp4 = _data[tmp3];
     }
-    if (tmp3) {
-      delete self._data[tmp3._index];
-      const _data2 = self._data;
-      _data2.size = _data2.size - 1;
+    value = tmp4;
+    if (tmp4) {
+      value = tmp4.value;
     }
+    return value;
+  }
+  set(arg0, arg1) {
+    _data = this._data;
+    text = `_${global}`;
+    tmp2 = hasOwnProperty;
+    call = hasOwnProperty.call;
+    tmp3 = text;
+    num = 0;
+    tmp4 = text;
+    if (!(typeof call === "unknown" ? tmp2(`_${global}`) : call(_data, `_${global}`))) {
+      _data.size = _data.size + 1;
+      tmp11 = Entry;
+      obj1 = Object.create(Entry.prototype);
+      obj = {};
+      obj.key = global;
+      obj.value = require;
+      obj._index = tmp4;
+      _data[tmp4] = obj;
+    } else {
+      while (true) {
+        key = _data[tmp3].key;
+        tmp5 = key === global;
+        tmp6 = tmp3;
+        tmp7 = num;
+        if (!tmp5) {
+          tmp8 = key != key && global != global;
+          tmp5 = tmp8;
+        }
+        if (tmp5) {
+          break;
+        } else {
+          sum = text + num;
+          tmp10 = hasOwnProperty;
+          call2 = hasOwnProperty.call;
+          num = num + 1;
+          tmp3 = sum;
+          tmp4 = sum;
+        }
+      }
+      _data[tmp3].value = require;
+    }
+    return;
+  }
+  delete(arg0) {
+    self = this;
+    _data = this._data;
+    text = `_${global}`;
+    tmp4 = hasOwnProperty;
+    call = hasOwnProperty.call;
+    tmp5 = text;
+    num = 0;
+    tmp6 = undefined;
+    if (typeof call === "unknown" ? tmp4(`_${global}`) : call(_data, `_${global}`)) {
+      while (true) {
+        key = _data[tmp5].key;
+        tmp7 = key === global;
+        tmp8 = tmp5;
+        tmp9 = num;
+        if (!tmp7) {
+          tmp10 = key != key && global != global;
+          tmp7 = tmp10;
+        }
+        if (tmp7) {
+          break;
+        } else {
+          sum = text + num;
+          tmp12 = hasOwnProperty;
+          call2 = hasOwnProperty.call;
+          num = num + 1;
+          tmp5 = sum;
+        }
+      }
+      tmp6 = _data[tmp5];
+    }
+    if (tmp6) {
+      _data2 = self._data;
+      _index = tmp6._index;
+      delete tmp2[tmp];
+      _data3 = self._data;
+      _data3.size = _data3.size - 1;
+    }
+    return;
   }
   clear() {
-    const obj = Object.create(null);
+    obj = Object.create(null);
     obj.size = 0;
-    Object.defineProperty(this, "_data", { value: obj, enumerable: false, configurable: true, writable: false });
+    definePropertyResult = Object.defineProperty(this, "_data", { value: obj, enumerable: false, configurable: true, writable: false });
+    return;
   }
 }
 function Entry(arg0, arg1, arg2) {
 
 }
-let obj = {
+Object.defineProperty(PseudoMap.prototype, "size", {
   get() {
     return this._data.size;
   },
@@ -185,8 +239,7 @@ let obj = {
   },
   enumerable: true,
   configurable: true
-};
-Object.defineProperty(PseudoMap.prototype, "size", obj);
+});
 const fn = () => {
   const error = new Error("iterators are not implemented in this version");
   throw error;

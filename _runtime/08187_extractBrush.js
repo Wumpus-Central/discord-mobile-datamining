@@ -1,10 +1,10 @@
 // === Module 8187: extractBrush ===
 
 // Module 8187 (extractBrush)
-import react_native from "react-native" /* 17 */;
-import RGB_RGBA_PATTERN from "RGB_RGBA_PATTERN" /* 8188 */;
+import _mod17 from "module_17" /* 17 */;
+import percentTo255 from "percentTo255" /* 8188 */;
 
-const processColor = react_native.processColor;
+const processColor = _mod17.processColor;
 const re3 = /^url\(#(.+)\)$/;
 let closure_4 = { type: 2 };
 let closure_5 = { type: 3 };
@@ -25,14 +25,13 @@ export default function extractBrush(str) {
       match = str.match(re3);
     }
     if (match) {
-      return { type: 1, brushRef: match[1] };
+      const obj2 = { type: 1, brushRef: match[1] };
+      return obj2;
     } else {
-      let tmp7;
-      const obj = RGB_RGBA_PATTERN;
-      const tmp4 = processColor(obj.convertPercentageColor(str));
+      const tmp4 = processColor(percentTo255.convertPercentageColor(str));
       if (typeof tmp4 === "number") {
         const action = { type: 0, payload: tmp4 };
-        tmp7 = action;
+        let tmp7 = action;
       } else {
         const _console = console;
         const _String = String;

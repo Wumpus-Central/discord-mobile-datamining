@@ -18,43 +18,46 @@ export default (num, arg1) => {
     if (typeof StringResult !== "string") {
       return null;
     } else {
-      let match3;
-      const tmp3 = arg1 || {};
-      if (tmp3.rtl) {
-        let obj;
-        const includePrerelease2 = tmp3.includePrerelease;
+      let obj = arg1;
+      if (!arg1) {
+        obj = {};
+      }
+      if (obj.rtl) {
         const safeRe2 = _mod13853.safeRe;
         const t2 = _mod13853.t;
-        if (includePrerelease2) {
-          obj = safeRe2[t2.COERCERTLFULL];
+        if (obj.includePrerelease) {
+          let obj2 = safeRe2[t2.COERCERTLFULL];
         } else {
-          obj = safeRe2[t2.COERCERTL];
+          obj2 = safeRe2[t2.COERCERTL];
         }
-        let match1 = obj.exec(StringResult);
-        let tmp7 = null;
-        let tmp9 = null;
-        if (match1) {
+        let match = obj2.exec(StringResult);
+        let tmp6 = null;
+        let tmp8 = null;
+        if (match) {
           while (true) {
-            let tmp11 = tmp7;
-            let tmp12 = tmp7 && match1.index + match1[0].length === tmp11.index + tmp11[0].length;
-            if (!tmp12) {
-              tmp11 = match1;
+            let tmp10 = tmp6;
+            let tmp11 = tmp6;
+            if (tmp6) {
+              tmp11 = match.index + match[0].length === tmp10.index + tmp10[0].length;
             }
-            obj.lastIndex = match1.index + match1[1].length + match1[2].length;
-            let match2 = obj.exec(StringResult);
-            tmp9 = tmp11;
-            if (!match2) {
+            if (!tmp11) {
+              tmp10 = match;
+            }
+            obj2.lastIndex = match.index + match[1].length + match[2].length;
+            let match1 = obj2.exec(StringResult);
+            tmp8 = tmp10;
+            if (!match1) {
               break;
             } else {
-              match1 = match2;
-              tmp7 = tmp11;
-              if (!tmp7) {
+              match = match1;
+              tmp6 = tmp10;
+              if (!tmp10) {
                 continue;
               } else {
-                match1 = match2;
-                tmp7 = tmp11;
-                tmp9 = tmp11;
-                if (tmp11.index + tmp11[0].length === StringResult.length) {
+                match = match1;
+                tmp6 = tmp10;
+                tmp8 = tmp10;
+                if (tmp10.index + tmp10[0].length === StringResult.length) {
                   break;
                 }
               }
@@ -62,43 +65,39 @@ export default (num, arg1) => {
             }
           }
         }
-        obj.lastIndex = -1;
-        match3 = tmp9;
+        obj2.lastIndex = -1;
+        let match2 = tmp8;
       } else {
-        let tmp4;
-        const match = StringResult.match;
-        const includePrerelease = tmp3.includePrerelease;
         const safeRe = _mod13853.safeRe;
         const t = _mod13853.t;
-        if (includePrerelease) {
-          tmp4 = safeRe[t.COERCEFULL];
+        if (obj.includePrerelease) {
+          let tmp3 = safeRe[t.COERCEFULL];
         } else {
-          tmp4 = safeRe[t.COERCE];
+          tmp3 = safeRe[t.COERCE];
         }
-        match3 = match(tmp4);
+        match2 = StringResult.match(tmp3);
       }
-      if (null === match3) {
+      if (null === match2) {
         return null;
       } else {
         let str2 = "";
-        if (tmp3.includePrerelease) {
+        if (obj.includePrerelease) {
           str2 = "";
-          if (match3[5]) {
+          if (match2[5]) {
             const _HermesInternal = HermesInternal;
-            str2 = "-" + match3[5];
+            str2 = "-" + match2[5];
           }
         }
         let str4 = "";
-        if (tmp3.includePrerelease) {
+        if (obj.includePrerelease) {
           str4 = "";
-          if (match3[6]) {
+          if (match2[6]) {
             const _HermesInternal2 = HermesInternal;
-            str4 = "+" + match3[6];
+            str4 = "+" + match2[6];
           }
         }
         const _HermesInternal3 = HermesInternal;
-        const tmp21 = _mod13848;
-        return tmp21("" + match3[2] + "." + match3[3] || "0" + "." + match3[4] || "0" + str2 + str4, tmp3);
+        return _mod13848("" + match2[2] + "." + match2[3] || "0" + "." + match2[4] || "0" + str2 + str4, obj);
       }
     }
   }

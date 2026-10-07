@@ -1,43 +1,30 @@
 // === Module 1622: ? ===
 
 // Module 1622
-import Fragment from "Fragment" /* 21 */;
-import NativeSafeAreaProvider2 from "NativeSafeAreaProvider" /* 1623 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import NativeSafeAreaProvider from "NativeSafeAreaProvider" /* 1623 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let size;
-
-let StyleSheet;
-let closure_4;
-({ Dimensions: closure_4, StyleSheet } = react_native);
-const jsx = Fragment.jsx;
-let context = react.createContext(null);
-let context1 = react.createContext(null);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Dimensions: closure_4, StyleSheet } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+let context = noop.createContext(null);
+let context1 = noop.createContext(null);
 const styles = StyleSheet.create({ fill: { flex: 1 } });
 let c9 = "No safe area value available. Make sure you are rendering `<SafeAreaProvider>` at the top of your app.";
 
 export const SafeAreaInsetsContext = context;
 export const SafeAreaFrameContext = context1;
 export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
-  let c0;
-  let c1;
-  let children;
-  let initialSafeAreaInsets;
-  let style;
-  let tmp13;
-  let tmp9;
   initialMetrics = initialMetrics.initialMetrics;
   ({ children, initialSafeAreaInsets, style } = initialMetrics);
   const merged = Object.assign(initialMetrics, Object.assign({ children: 0, initialMetrics: 0, initialSafeAreaInsets: 0, style: 0 }));
   c0 = undefined;
   c1 = undefined;
-  context = react.useContext(context);
+  context = noop.useContext(context);
   let insets;
-  const tmp4 = context1;
-  context1 = react.useContext(context1);
-  const useState = react.useState;
+  context1 = noop.useContext(context1);
   if (initialMetrics != null) {
     insets = initialMetrics.insets;
   }
@@ -50,10 +37,8 @@ export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
   if (insets == null) {
     insets = null;
   }
-  [tmp9, c0] = useState(insets);
+  [tmp9, c0] = noop.useState(insets);
   let frame;
-  const useState2 = react.useState;
-  _slicedToArray(useState(insets), 2);
   if (initialMetrics != null) {
     frame = initialMetrics.frame;
   }
@@ -61,20 +46,17 @@ export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
     frame = context1;
   }
   if (frame == null) {
-    size = { x: 0, y: 0, width: React3.get("window").width, height: React3.get("window").height };
+    let size = { x: 0, y: 0, width: React4.get("window").width, height: React4.get("window").height };
     frame = size;
   }
-  [tmp13, c1] = useState2(frame);
-  _slicedToArray(useState2(frame), 2);
-  const callback = react.useCallback((nativeEvent) => {
-    let closure_129_0;
-    let closure_129_1;
-    ({ frame: closure_129_0, insets: closure_129_1 } = nativeEvent.nativeEvent);
-    let tmp = _undefined2((height) => {
-      let tmp;
-      size = closure_1_0;
-      if (!size) {
-        tmp = height;
+  const tmp8 = _slicedToArray(noop.useState(insets), 2);
+  [tmp13, c1] = noop.useState(frame);
+  const callback = noop.useCallback((nativeEvent) => {
+    ({ frame: c0, insets: c1 } = nativeEvent.nativeEvent);
+    _undefined2((height) => {
+      const size = _undefined;
+      if (!_undefined) {
+        let tmp = height;
       } else {
         tmp = size;
         if (size.height === height.height) {
@@ -91,7 +73,7 @@ export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
     });
     _undefined((arg0) => {
       let rect = arg0;
-      if (rect) {
+      if (arg0) {
         const rect2 = bottom;
         if (bottom.bottom === rect.bottom) {
           if (rect2.left === rect.left) {
@@ -102,36 +84,38 @@ export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
       rect = bottom;
     });
   }, []);
+  const obj2 = { style: null, onInsetsChange: callback };
   const items = [closure_8.fill, style];
-  const NativeSafeAreaProvider = NativeSafeAreaProvider2.NativeSafeAreaProvider;
+  obj2.style = items;
   const merged1 = Object.assign(merged);
   let tmp15Result = null;
   if (null != tmp9) {
-    const Provider = tmp4.Provider;
-    tmp15Result = <Provider value={tmp13}>{null}</Provider>;
+    const obj3 = { value: tmp13, children: null };
+    const obj4 = { value: tmp9, children };
+    obj3.children = <tmp2.Provider value={tmp9}>{children}</tmp2.Provider>;
+    tmp15Result = <tmp4.Provider value={tmp13}>{null}</tmp4.Provider>;
   }
-  return <NativeSafeAreaProvider style={items} onInsetsChange={callback}>{tmp15Result}</NativeSafeAreaProvider>;
+  obj2.children = tmp15Result;
+  return jsx(NativeSafeAreaProvider.NativeSafeAreaProvider, { style: null, onInsetsChange: callback });
 };
 export const SafeAreaListener = function SafeAreaListener(onChange) {
-  let children;
-  let style;
   onChange = onChange.onChange;
   ({ style, children } = onChange);
   const merged = Object.assign(onChange, Object.assign({ onChange: 0, style: 0, children: 0 }));
-  const NativeSafeAreaProvider = NativeSafeAreaProvider2.NativeSafeAreaProvider;
+  const obj = {};
   const merged1 = Object.assign(merged);
   const items = [closure_8.fill, style];
-  return <NativeSafeAreaProvider style={items} onInsetsChange={function onInsetsChange(insets) {
-    const obj = { insets: insets.nativeEvent.insets, frame: insets.nativeEvent.frame };
-    onChange(obj);
-  }}>{children}</NativeSafeAreaProvider>;
+  obj.style = items;
+  obj.onInsetsChange = function onInsetsChange(insets) {
+    onChange({ insets: insets.nativeEvent.insets, frame: insets.nativeEvent.frame });
+  };
+  obj.children = children;
+  return jsx(NativeSafeAreaProvider.NativeSafeAreaProvider, {});
 };
 export const useSafeAreaInsets = function useSafeAreaInsets() {
-  context = react.useContext(context);
+  context = noop.useContext(context);
   if (null == context) {
     const _Error = Error;
-    const self = this;
-    const self2 = this;
     const error = new Error(c9);
     throw error;
   } else {
@@ -139,11 +123,9 @@ export const useSafeAreaInsets = function useSafeAreaInsets() {
   }
 };
 export const useSafeAreaFrame = function useSafeAreaFrame() {
-  context = react.useContext(context1);
+  context = noop.useContext(context1);
   if (null == context) {
     const _Error = Error;
-    const self = this;
-    const self2 = this;
     const error = new Error(c9);
     throw error;
   } else {
@@ -151,27 +133,26 @@ export const useSafeAreaFrame = function useSafeAreaFrame() {
   }
 };
 export const withSafeAreaInsets = function withSafeAreaInsets(arg0) {
-  let closure_0 = arg0;
-  return react.forwardRef(function(arg0, ref) {
-    context = react.useContext(context);
+  closure_0 = arg0;
+  return noop.forwardRef((arg0, ref) => {
+    context = noop.useContext(context);
     if (null == context) {
       const _Error = Error;
-      const self = this;
-      const self2 = this;
       const error = new Error(c9);
       throw error;
     } else {
+      const obj = {};
       const merged = Object.assign(arg0);
-      return <closure_0 insets={context} ref={ref} />;
+      obj.insets = context;
+      obj.ref = ref;
+      return <closure_0 />;
     }
   });
 };
 export const useSafeArea = function useSafeArea() {
-  context = react.useContext(context);
+  context = noop.useContext(context);
   if (null == context) {
     const _Error = Error;
-    const self = this;
-    const self2 = this;
     const error = new Error(c9);
     throw error;
   } else {

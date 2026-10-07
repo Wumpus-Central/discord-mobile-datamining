@@ -1,6 +1,7 @@
 // === Module 6142: ? ===
 
 // Module 6142
+const global = arg0;
 
 export const isFabricInstalled = function isFabricInstalled() {
   let prop;

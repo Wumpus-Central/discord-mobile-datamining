@@ -3,47 +3,45 @@
 // Module 7374
 import _modDef7373 from "module_7373" /* 7373 */;
 
+importDefault = arg2;
+const dependencyMap = arg6;
 
 export default {
   read(buffer, sum) {
-    let str6;
-    let tmp13;
-    let tmp15;
-    let tmp17;
-    const obj = _modDef7373;
-    const shortAt = obj.getShortAt(buffer, sum);
-    let tmp4;
+    const shortAt = _modDef7373.getShortAt(buffer, sum);
+    let tmp6;
     if (15 <= shortAt) {
-      const tmpResult = _modDef7373;
-      const byteAt = tmpResult.getByteAt(buffer, sum + 14);
+      const byteAt = _modDef7373.getByteAt(buffer, sum + 14);
+      const obj2 = { value: byteAt, description: null };
       const _HermesInternal = HermesInternal;
-      tmp4 = { value: byteAt, description: "" + byteAt + "px" };
-      const obj2 = { value: byteAt, description: "" + byteAt + "px" };
+      obj2.description = "" + byteAt + "px";
+      tmp6 = obj2;
+      const tmp3Result = _modDef7373;
     }
-    let tmp7;
+    let tmp9;
     if (16 <= shortAt) {
-      const tmpResult7 = _modDef7373;
-      const byteAt1 = tmpResult7.getByteAt(buffer, sum + 15);
+      const byteAt1 = _modDef7373.getByteAt(buffer, sum + 15);
+      const obj3 = { value: byteAt1, description: null };
       const _HermesInternal2 = HermesInternal;
-      tmp7 = { value: byteAt1, description: "" + byteAt1 + "px" };
-      const obj3 = { value: byteAt1, description: "" + byteAt1 + "px" };
+      obj3.description = "" + byteAt1 + "px";
+      tmp9 = obj3;
+      const tmp3Result7 = _modDef7373;
     }
-    let tmp10;
+    let tmp12;
     if (9 <= shortAt) {
-      const tmpResult8 = _modDef7373;
-      const byteAt2 = tmpResult8.getByteAt(buffer, sum + 7);
-      const tmpResult9 = _modDef7373;
-      const byteAt3 = tmpResult9.getByteAt(buffer, sum + 7 + 1);
-      tmp10 = { value: 256 * byteAt2 + byteAt3, description: `${tmp11}.${tmp12}` };
-      const obj4 = { value: 256 * byteAt2 + byteAt3, description: `${tmp11}.${tmp12}` };
+      const byteAt2 = _modDef7373.getByteAt(buffer, sum + 7);
+      const tmp3Result8 = _modDef7373;
+      const byteAt3 = _modDef7373.getByteAt(buffer, sum + 7 + 1);
+      const obj4 = { value: 256 * byteAt2 + byteAt3, description: `${tmp13}.${tmp14}` };
+      tmp12 = obj4;
+      const tmp3Result9 = _modDef7373;
     }
-    const obj5 = { "JFIF Version": tmp10, "Resolution Unit": tmp13, XResolution: tmp15, YResolution: tmp17, "JFIF Thumbnail Width": tmp4, "JFIF Thumbnail Height": tmp7 };
-    tmp13 = undefined;
+    const obj5 = { "JFIF Version": tmp12, "Resolution Unit": null, XResolution: null, YResolution: null, "JFIF Thumbnail Width": null, "JFIF Thumbnail Height": null };
+    let tmp15;
     if (10 <= shortAt) {
-      const tmpResult10 = _modDef7373;
-      const byteAt4 = tmpResult10.getByteAt(buffer, sum + 9);
-      const obj6 = { value: byteAt4, description: str6 };
-      str6 = "None";
+      const byteAt4 = _modDef7373.getByteAt(buffer, sum + 9);
+      const obj6 = { value: byteAt4, description: null };
+      let str6 = "None";
       if (0 !== byteAt4) {
         let str7 = "inches";
         if (1 !== byteAt4) {
@@ -55,45 +53,52 @@ export default {
         }
         str6 = str7;
       }
-      tmp13 = obj6;
+      obj6.description = str6;
+      tmp15 = obj6;
+      const tmp3Result10 = _modDef7373;
     }
-    tmp15 = undefined;
+    obj5["Resolution Unit"] = tmp15;
+    let tmp17;
     if (12 <= shortAt) {
-      const tmpResult11 = _modDef7373;
-      const shortAt1 = tmpResult11.getShortAt(buffer, sum + 10);
-      tmp15 = { value: shortAt1, description: "" + shortAt1 };
+      const shortAt1 = _modDef7373.getShortAt(buffer, sum + 10);
       const obj7 = { value: shortAt1, description: "" + shortAt1 };
+      tmp17 = obj7;
+      const tmp3Result11 = _modDef7373;
     }
-    tmp17 = undefined;
+    obj5.XResolution = tmp17;
+    let tmp19;
     if (14 <= shortAt) {
-      const tmpResult12 = _modDef7373;
-      const shortAt2 = tmpResult12.getShortAt(buffer, sum + 12);
-      tmp17 = { value: shortAt2, description: "" + shortAt2 };
+      const shortAt2 = _modDef7373.getShortAt(buffer, sum + 12);
       const obj8 = { value: shortAt2, description: "" + shortAt2 };
+      tmp19 = obj8;
+      const tmp3Result12 = _modDef7373;
     }
-    if (undefined !== tmp4) {
-      if (undefined !== tmp7) {
-        const result = 3 * tmp4.value * tmp7.value;
-        let tmp20;
+    obj5.YResolution = tmp19;
+    obj5["JFIF Thumbnail Width"] = tmp6;
+    obj5["JFIF Thumbnail Height"] = tmp9;
+    if (undefined !== tmp6) {
+      if (undefined !== tmp9) {
+        const result = 3 * tmp6.value * tmp9.value;
+        let tmp22;
         if (0 !== result) {
           if (16 + result <= shortAt) {
             buffer = buffer.buffer;
-            tmp20 = { value: buffer.slice(sum + 16, sum + 16 + result), description: "<24-bit RGB pixel data>" };
-            const obj10 = { value: buffer.slice(sum + 16, sum + 16 + result), description: "<24-bit RGB pixel data>" };
+            const obj9 = { value: buffer.slice(sum + 16, sum + 16 + result), description: "<24-bit RGB pixel data>" };
+            tmp22 = obj9;
           }
         }
-        if (tmp20) {
-          obj5["JFIF Thumbnail"] = tmp20;
+        if (tmp22) {
+          obj5["JFIF Thumbnail"] = tmp22;
         }
       }
     }
     const keys = Object.keys();
     if (keys !== undefined) {
       while (keys[16] !== undefined) {
-        if (undefined !== obj5[tmp22]) {
+        if (undefined !== obj5[tmp24]) {
           continue;
         } else {
-          delete obj9[tmp23];
+          delete tmp[tmp2];
           continue;
         }
         continue;

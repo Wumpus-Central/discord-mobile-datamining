@@ -3,6 +3,8 @@
 // Module 12650
 import _mod12582 from "module_12582" /* 12582 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
 export const applySdkMetadata = function applySdkMetadata(_metadata, arg1) {
   let arr = arg2;
@@ -16,15 +18,11 @@ export const applySdkMetadata = function applySdkMetadata(_metadata, arg1) {
   }
   const tmp = _metadata._metadata || {};
   if (!tmp.sdk) {
-    let obj = {
-      name: "sentry.javascript." + arg1,
-      packages: arr.map((item) => {
-          const obj = { name: "" + str + ":@sentry/" + item, version: _mod12582.SDK_VERSION };
-          return obj;
-        }),
-      version: str(12582).SDK_VERSION
-    };
+    const obj = { name: null, packages: null, version: null };
     const _HermesInternal = HermesInternal;
+    obj.name = "sentry.javascript." + arg1;
+    obj.packages = arr.map((item) => ({ name: "" + str + ":@sentry/" + item, version: _mod12582.SDK_VERSION }));
+    obj.version = str(12582).SDK_VERSION;
     tmp.sdk = obj;
   }
   _metadata._metadata = tmp;

@@ -2,221 +2,176 @@
 
 // Module 6348 (RecyclerView)
 import ErrorMessages from "ErrorMessages" /* 6346 */;
-import react_native from "react-native" /* 6386 */;
+import areDimensionsNotEqual from "areDimensionsNotEqual" /* 6386 */;
 import WarningMessages from "WarningMessages" /* 6389 */;
-import react_native2 from "react-native" /* 6399 */;
+import CompatView from "CompatView" /* 6399 */;
 import StickyHeaders from "StickyHeaders" /* 6402 */;
-import ScrollAnchor2 from "ScrollAnchor" /* 6404 */;
-import _slicedToArray from "_slicedToArray" /* 6349 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 6355 */;
-import react_mod from "react" /* 19 */;
-import react_native3 from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
+import ScrollAnchor from "ScrollAnchor" /* 6404 */;
+import _slicedToArray from "module_6349" /* 6349 */;
+import _objectWithoutProperties from "module_6355" /* 6355 */;
+import noop_mod from "module_19" /* 19 */;
 
-let map, set, size;
-
-let c10;
-let c9;
-let closure_12;
-let closure_14;
-let forwardRef;
-let hasOwnProperty;
-let map1;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let unpackModuleId;
+require = fn;
 let closure_2 = ["horizontal", "renderItem", "data", "extraData", "onLoad", "CellRendererComponent", "overrideProps", "refreshing", "onRefresh", "progressViewOffset", "ListEmptyComponent", "ListHeaderComponent", "ListHeaderComponentStyle", "ListFooterComponent", "ListFooterComponentStyle", "ItemSeparatorComponent", "renderScrollComponent", "style", "stickyHeaderIndices", "maintainVisibleContentPosition", "onCommitLayoutEffect", "onChangeStickyIndex", "stickyHeaderConfig", "inverted"];
-let react = react_mod;
-({ useCallback: hasOwnProperty, useLayoutEffect: metroRequire, useMemo: metroImportDefault, useRef: metroImportAll, useState: c9, useId: c10, forwardRef } = react);
-react = react_mod;
-({ Animated: unpackModuleId, I18nManager: closure_12 } = react_native3);
-({ jsx: map1, jsxs: closure_14 } = Fragment);
+let noop = fn(19);
+({ useCallback: hasOwnProperty, useLayoutEffect: metroRequire, useMemo: closure_7, useRef: closure_8, useState: closure_9, useId: c10, forwardRef } = noop);
+let noop = noop_mod;
+get_ActivityIndicator = fn(17);
+({ Animated: closure_11, I18nManager: closure_12 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: map1, jsxs: closure_14 } = jsxProd);
 class RecyclerViewComponent {
-  constructor(horizontal, arg1) {
-    let CellRendererComponent;
-    let CompatScrollView;
-    let CompatView;
-    let ItemSeparatorComponent;
-    let ListEmptyComponent;
-    let ListFooterComponent;
-    let ListFooterComponentStyle;
-    let ListHeaderComponent;
-    let ListHeaderComponentStyle;
-    let closure_23;
-    let closure_29;
-    let closure_31;
-    let closure_6;
-    let computeFirstVisibleIndexForOffsetCorrection;
-    let first;
-    let handlerMethods;
-    let inverted;
-    let items10;
-    let items8;
-    let items9;
-    let obj8;
-    let onChangeStickyIndex;
-    let onLoad;
-    let onRefresh;
-    let overrideProps;
-    let progressViewOffset;
-    let refreshControl;
-    let refreshing;
-    let renderEmpty;
-    let renderFooter;
-    let renderHeader;
-    let renderScrollComponent;
-    let renderStickyHeaderBackdrop;
-    let stickyHeaderConfig;
-    let stickyHeaderIndices;
-    let style;
-    let tmp16;
-    horizontal = horizontal.horizontal;
-    const renderItem = horizontal.renderItem;
-    const data = horizontal.data;
-    const extraData = horizontal.extraData;
-    ({ overrideProps, refreshing, onRefresh, progressViewOffset, ListEmptyComponent, ListHeaderComponent, ListHeaderComponentStyle, ListFooterComponent, ListFooterComponentStyle, renderScrollComponent, stickyHeaderIndices } = horizontal);
-    const maintainVisibleContentPosition = horizontal.maintainVisibleContentPosition;
-    ({ onCommitLayoutEffect: closure_6, onChangeStickyIndex } = horizontal);
-    ({ stickyHeaderConfig, inverted } = horizontal);
-    ({ onLoad, CellRendererComponent, ItemSeparatorComponent, style } = horizontal);
-    let tmp = stickyHeaderIndices(horizontal, data);
-    let tmp2 = first;
-    let tmp3 = extraData;
-    first = extraData(first(() => {
+  constructor(arg0, arg1) {
+    horizontal = global.horizontal;
+    renderItem = global.renderItem;
+    data = global.data;
+    extraData = global.extraData;
+    ({ overrideProps, refreshing, onRefresh, progressViewOffset, ListEmptyComponent, ListHeaderComponent, ListHeaderComponentStyle, ListFooterComponent, ListFooterComponentStyle, renderScrollComponent, stickyHeaderIndices } = global);
+    maintainVisibleContentPosition = global.maintainVisibleContentPosition;
+    closure_5 = maintainVisibleContentPosition;
+    ({ onCommitLayoutEffect, onChangeStickyIndex } = global);
+    ({ stickyHeaderConfig, inverted } = global);
+    ({ onLoad, CellRendererComponent, ItemSeparatorComponent, style } = global);
+    tmp = stickyHeaderIndices(global, data);
+    tmp2 = closure_9;
+    tmp3 = extraData;
+    first = extraData(closure_9(() => {
       const renderTimeTracker = new horizontal(renderItem[5]).RenderTimeTracker();
       return renderTimeTracker;
     }), 1)[0];
-    first.startTracking();
-    let num;
+    closure_9 = first;
+    startTrackingResult = first.startTracking();
+    num = undefined;
     if (stickyHeaderConfig != null) {
       num = stickyHeaderConfig.offset;
     }
     if (num == null) {
       num = 0;
     }
-    let flag;
+    c10 = num;
+    flag = undefined;
     if (stickyHeaderConfig != null) {
       flag = stickyHeaderConfig.useNativeDriver;
     }
     if (flag == null) {
       flag = true;
     }
-    let flag2;
+    c11 = flag;
+    flag2 = undefined;
     if (stickyHeaderConfig != null) {
       flag2 = stickyHeaderConfig.hideRelatedCell;
     }
     if (flag2 == null) {
       flag2 = false;
     }
-    let num2;
+    c12 = flag2;
+    num2 = undefined;
     if (stickyHeaderConfig != null) {
       num2 = stickyHeaderConfig.zIndex;
     }
     if (num2 == null) {
       num2 = 2;
     }
-    let invertedTransformStyle;
+    c13 = num2;
+    invertedTransformStyle = undefined;
     if (inverted) {
-      let tmp7 = renderItem;
-      let obj2 = horizontal(renderItem[6]);
+      tmp6 = horizontal;
+      tmp7 = renderItem;
+      obj2 = horizontal(renderItem[6]);
       invertedTransformStyle = obj2.getInvertedTransformStyle(horizontal);
     }
-    const tmp8 = inverted(null);
-    let closure_14 = tmp8;
-    const tmp9 = inverted(null);
-    let ref = tmp9;
-    const ref2 = inverted(null);
-    const ref3 = inverted(undefined);
+    tmp8 = inverted(null);
+    closure_14 = tmp8;
+    tmp9 = inverted(null);
+    closure_15 = tmp9;
+    closure_16 = inverted(null);
+    closure_17 = inverted(undefined);
     set = new Set();
-    let current = inverted(set).current;
-    const value = new flag.Value(0);
-    let current2 = inverted(value).current;
-    const stickyHeaderRef = inverted(null);
-    const tmp12 = inverted(null);
-    const scrollAnchorRef = tmp12;
-    let obj3 = horizontal(renderItem[7]);
-    [r10087, tmp16] = tmp3(obj3.useLayoutState(0), 2);
-    let closure_22 = tmp16;
-    tmp3(obj3.useLayoutState(0), 2);
-    [r10091, closure_23] = tmp3(tmp2(0), 2);
-    tmp3(tmp2(0), 2);
-    const tmp3Result4 = tmp3(tmp2(-1), 2);
-    const first1 = tmp3Result4[0];
-    let closure_25 = tmp3Result4[1];
-    const tmp21 = onChangeStickyIndex(() => {
-      map = new Map();
-      return map;
-    }, []);
-    let closure_26 = tmp21;
-    let obj4 = horizontal(renderItem[8]);
-    const recyclerViewManager1 = obj4.useRecyclerViewManager(horizontal);
-    const recyclerViewManager = recyclerViewManager1.recyclerViewManager;
-    const velocityTracker = recyclerViewManager1.velocityTracker;
-    const obj5 = horizontal(renderItem[9]);
-    const recyclerViewController = obj5.useRecyclerViewController(recyclerViewManager, arg1, tmp8, tmp12);
-    ({ applyOffsetCorrection: closure_29, computeFirstVisibleIndexForOffsetCorrection } = recyclerViewController);
-    ({ applyInitialScrollIndex: closure_31, handlerMethods } = recyclerViewController);
-    const tmp24 = inverted(null);
-    const ref4 = tmp24;
-    const obj6 = horizontal(renderItem[10]);
-    const onListLoad = obj6.useOnListLoad(recyclerViewManager, onLoad);
-    const obj7 = horizontal(renderItem[11]);
-    const checkBounds = obj7.useBoundDetection(recyclerViewManager, tmp8).checkBounds;
-    let closure_35 = tmp26;
-    closure_6(() => {
+    current = inverted(set).current;
+    value = new c11.Value(0);
+    current2 = inverted(value).current;
+    current = current2;
+    closure_20 = inverted(null);
+    tmp12 = inverted(null);
+    closure_21 = tmp12;
+    tmp13 = horizontal;
+    tmp14 = renderItem;
+    obj3 = horizontal(renderItem[7]);
+    tmp3Result = tmp3(obj3.useLayoutState(0), 2);
+    [r10087, tmp16] = tmp3Result;
+    closure_22 = tmp16;
+    tmp3Result1 = tmp3(tmp2(0), 2);
+    [r10091, closure_23] = tmp3Result1;
+    tmp3Result2 = tmp3(tmp2(-1), 2);
+    first1 = tmp3Result2[0];
+    closure_24 = first1;
+    closure_25 = tmp3Result2[1];
+    tmp20 = onChangeStickyIndex;
+    tmp21 = onChangeStickyIndex(() => new Map(), []);
+    closure_26 = tmp21;
+    obj4 = horizontal(renderItem[8]);
+    recyclerViewManager1 = obj4.useRecyclerViewManager(global);
+    recyclerViewManager = recyclerViewManager1.recyclerViewManager;
+    velocityTracker = recyclerViewManager1.velocityTracker;
+    obj5 = horizontal(renderItem[9]);
+    recyclerViewController = obj5.useRecyclerViewController(recyclerViewManager, fn, tmp8, tmp12);
+    ({ applyOffsetCorrection, computeFirstVisibleIndexForOffsetCorrection } = recyclerViewController);
+    closure_30 = computeFirstVisibleIndexForOffsetCorrection;
+    ({ applyInitialScrollIndex, handlerMethods } = recyclerViewController);
+    tmp24 = inverted(null);
+    closure_33 = tmp24;
+    obj6 = horizontal(renderItem[10]);
+    onListLoad = obj6.useOnListLoad(recyclerViewManager, onLoad);
+    obj7 = horizontal(renderItem[11]);
+    checkBounds = obj7.useBoundDetection(recyclerViewManager, tmp8).checkBounds;
+    tmp26 = c12.isRTL && horizontal;
+    horizontal = tmp26;
+    tmp27 = onCommitLayoutEffect(() => {
       if (ref.current) {
         if (ref2.current) {
-          const obj = react_native;
-          size = obj.measureParentSize(ref.current);
-          const obj2 = react_native;
-          const size2 = obj2.measureFirstChildLayout(tmp2.current, ref.current);
-          ref3.current = size;
+          const size = areDimensionsNotEqual.measureParentSize(ref.current);
+          const size2 = areDimensionsNotEqual.measureFirstChildLayout(tmp2.current, ref.current);
+          closure_17.current = size;
           const tmp7 = horizontal ? size2.x : size2.y;
           const size1 = { width: horizontal ? size.width : size2.width, height: horizontal ? size2.height : size.height };
           let diff = tmp7;
-          const updateLayoutParams = recyclerViewManager.updateLayoutParams;
           if (closure_35) {
             diff = tmp7;
             if (recyclerViewManager.hasLayout()) {
               diff = tmp7 - recyclerViewManager.getChildContainerDimensions().width;
             }
           }
-          updateLayoutParams(size1, diff);
+          recyclerViewManager.updateLayoutParams(size1, diff);
         }
       }
     });
-    closure_6(() => {
+    tmp28 = onCommitLayoutEffect(() => {
       if (current.size <= 0) {
         const _Array = Array;
-        const arr = Array.from(closure_26, (arg0) => {
-          let obj2;
-          let tmp;
-          let tmp2;
-          [tmp, tmp2] = arg0;
-          const obj = { index: tmp, dimensions: obj2.measureItemLayout(tmp2.current, recyclerViewManager.tryGetLayout(tmp)) };
-          obj2 = horizontal(renderItem[12]);
-          return obj;
-        });
         const result = first.hasExceededMaxRendersWithoutCommit();
         if (result) {
           const _console = console;
           console.warn(WarningMessages.WarningMessages.exceededMaxRendersWithoutCommit);
         }
         num = undefined;
-        const modifyChildrenLayout = recyclerViewManager.modifyChildrenLayout;
         if (data != null) {
           num = data.length;
         }
         if (num == null) {
           num = 0;
         }
-        if (modifyChildrenLayout(arr, num)) {
+        if (recyclerViewManager.modifyChildrenLayout(arr, num)) {
           if (!result) {
-            closure_23((arg0) => arg0 + 1);
+            closure_1_23((arg0) => arg0 + 1);
           }
-          const tmp11 = horizontal && recyclerViewManager.hasLayout() && recyclerViewManager.getWindowSize().height > 0;
-          if (tmp11) {
+          let hasLayoutResult = horizontal;
+          if (horizontal) {
+            hasLayoutResult = recyclerViewManager.hasLayout();
+          }
+          if (hasLayoutResult) {
+            hasLayoutResult = recyclerViewManager.getWindowSize().height > 0;
+          }
+          if (hasLayoutResult) {
             if (recyclerViewContext != null) {
               result1 = recyclerViewContext.unmarkChildLayoutAsPending(closure_38);
             }
@@ -226,38 +181,45 @@ class RecyclerViewComponent {
         if (current != null) {
           current.commitLayout();
         }
-        closure_29();
+        closure_1_29();
+        arr = Array.from(closure_26, (arg0) => {
+          [tmp, tmp2] = arg0;
+          const obj = { index: tmp, dimensions: horizontal(renderItem[12]).measureItemLayout(tmp2.current, recyclerViewManager.tryGetLayout(tmp)) };
+          return obj;
+        });
       }
     });
-    let items = [checkBounds, computeFirstVisibleIndexForOffsetCorrection, horizontal, flag2.isRTL && horizontal, recyclerViewManager, velocityTracker];
-    const tmp29 = maintainVisibleContentPosition((nativeEvent) => {
+    items = [, , , , , ];
+    items[0] = checkBounds;
+    items[1] = computeFirstVisibleIndexForOffsetCorrection;
+    items[2] = horizontal;
+    items[3] = tmp26;
+    items[4] = recyclerViewManager;
+    items[5] = velocityTracker;
+    tmp29 = closure_5((nativeEvent) => {
       if (!recyclerViewManager.ignoreScrollEvents) {
-        let tmp = nativeEvent;
         const contentOffset = nativeEvent.nativeEvent.contentOffset;
         const tmp3 = horizontal ? contentOffset.x : contentOffset.y;
         horizontal = tmp3;
         let tmp5 = tmp3;
-        const tmp2 = horizontal;
         if (closure_35) {
-          const obj2 = horizontal(renderItem[14]);
-          const adjustOffsetForRTLResult = obj2.adjustOffsetForRTL(tmp3, nativeEvent.nativeEvent.contentSize.width, nativeEvent.nativeEvent.layoutMeasurement.width);
+          const adjustOffsetForRTLResult = horizontal(renderItem[14]).adjustOffsetForRTL(tmp3, nativeEvent.nativeEvent.contentSize.width, nativeEvent.nativeEvent.layoutMeasurement.width);
           horizontal = adjustOffsetForRTLResult;
           tmp5 = adjustOffsetForRTLResult;
+          const obj2 = horizontal(renderItem[14]);
         }
-        const computeVelocity = velocityTracker.computeVelocity;
         const _Boolean = Boolean;
         const absoluteLastScrollOffset = recyclerViewManager.getAbsoluteLastScrollOffset();
-        const velocity = computeVelocity(tmp5, absoluteLastScrollOffset, Boolean(tmp2), (arg0, arg1) => {
+        const velocity = velocityTracker.computeVelocity(tmp5, absoluteLastScrollOffset, Boolean(horizontal), (arg0, arg1) => {
           if (!recyclerViewManager.ignoreScrollEvents) {
-            const tmp = arg1;
-            if (tmp) {
+            if (arg1) {
               computeFirstVisibleIndexForOffsetCorrection();
               if (recyclerViewManager.isOffsetProjectionEnabled) {
                 recyclerViewManager.resetVelocityCompute();
               }
             }
-            if (recyclerViewManager.updateScrollOffset(horizontal, arg0)) {
-              closure_23((arg0) => arg0 + 1);
+            if (recyclerViewManager.updateScrollOffset(adjustOffsetForRTLResult, arg0)) {
+              closure_2_23((arg0) => arg0 + 1);
             }
           }
         });
@@ -277,127 +239,137 @@ class RecyclerViewComponent {
         }
       }
     }, items);
-    const listener = tmp29;
-    const tmp13Result = horizontal(renderItem[15]);
-    const recyclerViewContext = tmp13Result.useRecyclerViewContext();
-    const tmp30 = num();
-    let closure_38 = tmp30;
-    const items1 = [handlerMethods, recyclerViewContext, current, recyclerViewManager.isDisposed, tmp16];
-    const tmp20Result = onChangeStickyIndex(() => {
-      let isDisposed;
-      return {
-        layout() {
-          closure_1_22((arg0) => arg0 + 1);
-        },
-        getRef() {
-          let tmp = null;
-          if (!isDisposed.isDisposed) {
-            tmp = handlerMethods;
-          }
-          return tmp;
-        },
-        getParentRef() {
-          ref = undefined;
-          if (recyclerViewContext != null) {
-            ref = recyclerViewContext.getRef();
-          }
-          if (ref == null) {
-            ref = null;
-          }
-          return ref;
-        },
-        getParentScrollViewRef() {
-          let scrollViewRef;
-          if (recyclerViewContext != null) {
-            scrollViewRef = recyclerViewContext.getScrollViewRef();
-          }
-          if (scrollViewRef == null) {
-            scrollViewRef = null;
-          }
-          return scrollViewRef;
-        },
-        getScrollViewRef() {
-          return ref.current;
-        },
-        markChildLayoutAsPending(arg0) {
-          set.add(arg0);
-        },
-        unmarkChildLayoutAsPending(arg0) {
-          if (set.has(arg0)) {
-            set.delete(arg0);
-            closure_1_39.layout();
-          }
+    closure_36 = tmp29;
+    tmp13Result = tmp13(tmp14[15]);
+    recyclerViewContext = tmp13Result.useRecyclerViewContext();
+    closure_37 = recyclerViewContext;
+    tmp30 = c10();
+    closure_38 = tmp30;
+    items1 = [, , , , ];
+    items1[0] = handlerMethods;
+    items1[1] = recyclerViewContext;
+    items1[2] = current;
+    items1[3] = recyclerViewManager.isDisposed;
+    items1[4] = tmp16;
+    tmp20Result = tmp20(() => ({
+      layout() {
+        closure_1_22((arg0) => arg0 + 1);
+      },
+      getRef() {
+        let tmp = null;
+        if (!isDisposed.isDisposed) {
+          tmp = handlerMethods;
         }
-      };
-    }, items1);
-    let closure_39 = tmp20Result;
-    const items2 = [tmp20Result, recyclerViewManager];
-    const tmp32 = maintainVisibleContentPosition((arg0, width) => {
-      size = recyclerViewManager.getLayout(arg0);
+        return tmp;
+      },
+      getParentRef() {
+        ref = undefined;
+        if (recyclerViewContext != null) {
+          ref = recyclerViewContext.getRef();
+        }
+        if (ref == null) {
+          ref = null;
+        }
+        return ref;
+      },
+      getParentScrollViewRef() {
+        let scrollViewRef;
+        if (recyclerViewContext != null) {
+          scrollViewRef = recyclerViewContext.getScrollViewRef();
+        }
+        if (scrollViewRef == null) {
+          scrollViewRef = null;
+        }
+        return scrollViewRef;
+      },
+      getScrollViewRef() {
+        return ref.current;
+      },
+      markChildLayoutAsPending(arg0) {
+        set.add(arg0);
+      },
+      unmarkChildLayoutAsPending(arg0) {
+        if (set.has(arg0)) {
+          set.delete(arg0);
+          closure_1_39.layout();
+        }
+      }
+    }), items1);
+    closure_39 = tmp20Result;
+    items2 = [, ];
+    items2[0] = tmp20Result;
+    items2[1] = recyclerViewManager;
+    tmp32 = closure_5((arg0, width) => {
+      const size = recyclerViewManager.getLayout(arg0);
       num = size.maxWidth;
-      const _Math = Math;
-      const _Math2 = Math;
-      width = size.width;
       if (num == null) {
         num = Infinity;
       }
       num2 = size.minWidth;
-      const minResult = min(width, num);
+      const bound = Math.min(size.width, num);
       if (num2 == null) {
         num2 = 0;
       }
       let num3 = size.maxHeight;
-      const _Math3 = Math;
-      const max2 = Math.max;
-      const _Math4 = Math;
-      const min2 = Math.min;
-      const height = size.height;
-      const maxResult = max(minResult, num2);
+      const bound1 = Math.max(bound, num2);
       if (num3 == null) {
         num3 = Infinity;
       }
       let num4 = size.minHeight;
-      const min2Result = min2(height, num3);
+      const bound2 = Math.min(size.height, num3);
       if (num4 == null) {
         num4 = 0;
       }
-      const max2Result = max2(min2Result, num4);
-      const obj = react_native;
-      let result = obj.areDimensionsNotEqual(maxResult, width.width);
+      const bound3 = Math.max(bound2, num4);
+      let result = areDimensionsNotEqual.areDimensionsNotEqual(bound1, width.width);
       if (!result) {
-        const tmp5Result = react_native;
-        result = tmp5Result.areDimensionsNotEqual(max2Result, width.height);
+        result = areDimensionsNotEqual.areDimensionsNotEqual(bound3, width.height);
+        const tmp5Result = areDimensionsNotEqual;
       }
       if (result) {
         closure_39.layout();
       }
     }, items2);
-    const tmp13Result2 = horizontal(renderItem[16]);
-    const secondaryProps = tmp13Result2.useSecondaryProps(horizontal);
+    tmp13Result1 = tmp13(tmp14[16]);
+    secondaryProps = tmp13Result1.useSecondaryProps(global);
     ({ refreshControl, renderHeader, renderFooter, renderEmpty, CompatScrollView, renderStickyHeaderBackdrop } = secondaryProps);
-    const isFirstLayoutComplete = recyclerViewManager.getIsFirstLayoutComplete();
-    const tmp35 = !isFirstLayoutComplete && recyclerViewManager.getDataLength() > 0;
+    isFirstLayoutComplete = recyclerViewManager.getIsFirstLayoutComplete();
+    tmp35 = !isFirstLayoutComplete;
+    if (!isFirstLayoutComplete) {
+      tmp35 = recyclerViewManager.getDataLength() > 0;
+    }
     if (tmp35) {
       if (recyclerViewContext != null) {
-        let result = recyclerViewContext.markChildLayoutAsPending(tmp30);
+        result = recyclerViewContext.markChildLayoutAsPending(tmp30);
       }
     }
-    const items3 = [data, stickyHeaderIndices, num, renderItem, current2, horizontal, recyclerViewManager, extraData, first1, onChangeStickyIndex, flag2, num2, inverted];
-    const tmp20Result6 = onChangeStickyIndex(function() {
+    items3 = [, , , , , , , , , , , , ];
+    items3[0] = data;
+    items3[1] = stickyHeaderIndices;
+    items3[2] = num;
+    items3[3] = renderItem;
+    items3[4] = current2;
+    items3[5] = horizontal;
+    items3[6] = recyclerViewManager;
+    items3[7] = extraData;
+    items3[8] = first1;
+    items3[9] = onChangeStickyIndex;
+    items3[10] = flag2;
+    items3[11] = num2;
+    items3[12] = inverted;
+    tmp20Result1 = tmp20(() => {
       if (data) {
         if (data.length > 0) {
           if (stickyHeaderIndices) {
             if (stickyHeaderIndices.length > 0) {
               if (horizontal) {
                 const _Error = Error;
-                const self = this;
-                const self2 = this;
                 const error = new Error(ErrorMessages.ErrorMessages.stickyHeadersNotSupportedForHorizontal);
                 throw error;
               } else {
                 const obj = {
                   stickyHeaderIndices,
-                  stickyHeaderOffset: 0,
+                  stickyHeaderOffset: num,
                   data,
                   renderItem,
                   scrollY: current2,
@@ -411,11 +383,11 @@ class RecyclerViewComponent {
                                 closure_1_25(arg0);
                               }
                               if (onChangeStickyIndex != null) {
-                                tmp4(arg0, first1);
+                                tmp3(arg0, first1);
                               }
                             }
                 };
-                return map1(StickyHeaders.StickyHeaders, obj);
+                return __initData2(StickyHeaders.StickyHeaders, obj);
               }
             }
           }
@@ -423,36 +395,43 @@ class RecyclerViewComponent {
       }
       return null;
     }, items3);
-    let closure_40 = tmp20Result6;
-    const items4 = [tmp29, current2, tmp20Result6, flag];
-    const tmp20Result7 = onChangeStickyIndex(() => {
-      let eventResult;
-      let obj2;
-      let obj3;
+    closure_40 = tmp20Result1;
+    items4 = [, , , ];
+    items4[0] = tmp29;
+    items4[1] = current2;
+    items4[2] = tmp20Result1;
+    items4[3] = flag;
+    tmp20Result2 = tmp20(() => {
       if (closure_40) {
-        const obj = { nativeEvent: obj2 };
-        obj2 = { contentOffset: obj3 };
+        const obj = { nativeEvent: null };
+        const obj2 = { contentOffset: null };
+        const obj3 = { y: current2 };
+        obj2.contentOffset = obj3;
+        obj.nativeEvent = obj2;
         const items = [obj];
-        obj3 = { y: current2 };
         const obj4 = { useNativeDriver: flag, listener };
-        eventResult = unpackModuleId.event(items, obj4);
+        let eventResult = closure_2_11.event(items, obj4);
       } else {
         eventResult = listener;
       }
       return eventResult;
     }, items4);
-    let result1 = recyclerViewManager.shouldMaintainVisibleContentPosition();
-    const items5 = [maintainVisibleContentPosition, result1];
-    const tmp20Result8 = onChangeStickyIndex(() => {
+    result1 = recyclerViewManager.shouldMaintainVisibleContentPosition();
+    closure_41 = result1;
+    items5 = [, ];
+    items5[0] = maintainVisibleContentPosition;
+    items5[1] = result1;
+    tmp20Result3 = tmp20(() => {
       if (result1) {
-        const obj = { minIndexForVisible: 0 };
+        const obj = {};
         const merged = Object.assign(maintainVisibleContentPosition);
+        obj.minIndexForVisible = 0;
         return obj;
       }
     }, items5);
-    let tmp41 = recyclerViewManager.getDataLength() > 0;
+    tmp41 = recyclerViewManager.getDataLength() > 0;
     if (tmp41) {
-      let flag3;
+      flag3 = undefined;
       if (maintainVisibleContentPosition != null) {
         flag3 = maintainVisibleContentPosition.startRenderingFromBottom;
       }
@@ -461,153 +440,176 @@ class RecyclerViewComponent {
       }
       tmp41 = flag3;
     }
-    flag3 = tmp41;
-    const items6 = [horizontal, num];
-    const tmp20Result9 = onChangeStickyIndex(() => {
+    c42 = tmp41;
+    items6 = [, ];
+    items6[0] = horizontal;
+    items6[1] = num;
+    tmp20Result4 = tmp20(() => {
       let tmp3;
-      const CompatView = react_native2.CompatView;
       if (!horizontal) {
         tmp3 = num;
       }
-      size = { marginTop: tmp3, height: 0, width: num2 };
+      const size = { marginTop: tmp3, height: 0, width: null };
       num2 = undefined;
       if (horizontal) {
         num2 = 0;
       }
-      const obj = { style: size, ref: ref2 };
-      return map1(CompatView, obj);
+      size.width = num2;
+      return __initData2(CompatView.CompatView, { style: size, ref: ref2 });
     }, items6);
-    const items7 = [horizontal, result1];
-    let obj = { value: tmp20Result, children: closure_14(CompatView, obj8) };
-    const tmp20Result10 = onChangeStickyIndex(() => {
+    items7 = [, ];
+    items7[0] = horizontal;
+    items7[1] = result1;
+    tmp44 = c13;
+    tmp20Result5 = tmp20(() => {
       let tmp = null;
       if (result1) {
+        const obj = { horizontal: null, scrollAnchorRef: null };
         const _Boolean = Boolean;
-        const obj = { horizontal: Boolean(horizontal), scrollAnchorRef };
-        const ScrollAnchor = ScrollAnchor2.ScrollAnchor;
-        tmp = map1(ScrollAnchor, obj);
+        obj.horizontal = Boolean(horizontal);
+        obj.scrollAnchorRef = scrollAnchorRef;
+        tmp = __initData2(ScrollAnchor.ScrollAnchor, obj);
       }
       return tmp;
     }, items7);
-    const RecyclerViewContextProvider = tmp13(tmp14[15]).RecyclerViewContextProvider;
-    let num3 = 1;
-    CompatView = tmp13(tmp14[19]).CompatView;
-    obj8 = {
-      style: items8,
+    obj1 = { value: tmp20Result, children: null };
+    tmp45 = closure_14;
+    num3 = 1;
+    obj15 = {
+      style: null,
       ref: tmp9,
       collapsable: false,
       onLayout(nativeEvent) {
-        current = ref3.current;
-        num = undefined;
-        const areDimensionsNotEqual = react_native.areDimensionsNotEqual;
-        const width = nativeEvent.nativeEvent.layout.width;
-        react_native;
-        if (current != null) {
-          num = current.width;
-        }
-        if (num == null) {
-          num = 0;
-        }
-        let result = areDimensionsNotEqual(width, num);
-        if (!result) {
-          current2 = ref3.current;
-          num2 = undefined;
-          const areDimensionsNotEqual2 = react_native.areDimensionsNotEqual;
-          const height = nativeEvent.nativeEvent.layout.height;
-          react_native;
-          if (current2 != null) {
-            num2 = current2.height;
-          }
-          if (num2 == null) {
-            num2 = 0;
-          }
-          result = areDimensionsNotEqual2(height, num2);
-        }
-        if (result) {
-          closure_39.layout();
-        }
-      },
-      children: items10
+            current = ref3.current;
+            num = undefined;
+            if (current != null) {
+              num = current.width;
+            }
+            if (num == null) {
+              num = 0;
+            }
+            let result = areDimensionsNotEqual.areDimensionsNotEqual(nativeEvent.nativeEvent.layout.width, num);
+            if (!result) {
+              current2 = ref3.current;
+              num2 = undefined;
+              if (current2 != null) {
+                num2 = current2.height;
+              }
+              if (num2 == null) {
+                num2 = 0;
+              }
+              result = areDimensionsNotEqual.areDimensionsNotEqual(nativeEvent.nativeEvent.layout.height, num2);
+              const tmpResult = areDimensionsNotEqual;
+            }
+            if (result) {
+              closure_39.layout();
+            }
+          },
+      children: null
     };
-    items8 = [{ flex: num3, overflow: "hidden" }, style, invertedTransformStyle];
-    const obj9 = { horizontal, ref: tmp8, onScroll: tmp20Result7, maintainVisibleContentPosition: tmp20Result8, removeClippedSubviews: false, refreshControl, children: items9 };
-    let merged = Object.assign(tmp);
-    const merged1 = Object.assign(overrideProps);
-    items9 = [tmp20Result10, flag2.isRTL && horizontal && tmp20Result9, renderHeader, !(flag2.isRTL && horizontal) && tmp20Result9, , , ];
-    const obj10 = {
+    items8 = [, , ];
+    items8[0] = { flex: num3, overflow: "hidden" };
+    items8[1] = style;
+    items8[2] = invertedTransformStyle;
+    obj15.style = items8;
+    obj16 = {};
+    merged = Object.assign(tmp);
+    obj16.horizontal = horizontal;
+    obj16.ref = tmp8;
+    obj16.onScroll = tmp20Result2;
+    obj16.maintainVisibleContentPosition = tmp20Result3;
+    obj16.removeClippedSubviews = false;
+    obj16.refreshControl = refreshControl;
+    merged1 = Object.assign(overrideProps);
+    items9 = [, , , , , , ];
+    items9[0] = tmp20Result5;
+    tmp48 = tmp26;
+    if (tmp26) {
+      tmp48 = tmp20Result4;
+    }
+    items9[1] = tmp48;
+    items9[2] = renderHeader;
+    tmp49 = !tmp26;
+    if (!tmp26) {
+      tmp49 = tmp20Result4;
+    }
+    items9[3] = tmp49;
+    obj17 = {
       viewHolderCollectionRef: tmp24,
       data,
       horizontal,
       renderStack: recyclerViewManager.getRenderStack(),
       getLayout(arg0) {
-        return recyclerViewManager.getLayout(arg0);
-      },
+            return recyclerViewManager.getLayout(arg0);
+          },
       getAdjustmentMargin() {
-        if (flag3) {
-          if (recyclerViewManager.hasLayout()) {
-            size = recyclerViewManager.getWindowSize();
-            const tmp3 = horizontal ? size.width : size.height;
-            const size2 = recyclerViewManager.getChildContainerDimensions();
-            const _Math = Math;
-            return Math.max(0, tmp3 - (horizontal ? size2.width : size2.height) - recyclerViewManager.firstItemOffset);
-          }
-        }
-        return 0;
-      },
+            if (flag3) {
+              if (recyclerViewManager.hasLayout()) {
+                const size = recyclerViewManager.getWindowSize();
+                const size2 = recyclerViewManager.getChildContainerDimensions();
+                const _Math = Math;
+                return Math.max(0, (horizontal ? size.width : size.height) - (horizontal ? size2.width : size2.height) - recyclerViewManager.firstItemOffset);
+              }
+            }
+            return 0;
+          },
       refHolder: tmp21,
       onSizeChanged: tmp32,
       renderItem,
       extraData,
       onCommitLayoutEffect() {
-        closure_31();
-        if (recyclerViewContext != null) {
-          const result = recyclerViewContext.unmarkChildLayoutAsPending(closure_38);
-        }
-        if (closure_6 != null) {
-          closure_6();
-        }
-      },
+            closure_1_31();
+            if (recyclerViewContext != null) {
+              const result = recyclerViewContext.unmarkChildLayoutAsPending(closure_38);
+            }
+            if (closure_1_6 != null) {
+              closure_1_6();
+            }
+          },
       onCommitEffect() {
-        first.markRenderComplete();
-        const result = recyclerViewManager.updateAverageRenderTime(first.getAverageRenderTime());
-        closure_31();
-        checkBounds();
-        const itemViewability = recyclerViewManager.computeItemViewability();
-        recyclerViewManager.animationOptimizationsEnabled = false;
-      },
+            first.markRenderComplete();
+            const result = recyclerViewManager.updateAverageRenderTime(first.getAverageRenderTime());
+            closure_1_31();
+            checkBounds();
+            const itemViewability = recyclerViewManager.computeItemViewability();
+            recyclerViewManager.animationOptimizationsEnabled = false;
+          },
       CellRendererComponent,
       ItemSeparatorComponent,
       isInLastRow(arg0) {
-        return recyclerViewManager.isInLastRow(arg0);
-      },
+            return recyclerViewManager.isInLastRow(arg0);
+          },
       getChildContainerLayout() {
-        let childContainerDimensions;
-        if (recyclerViewManager.hasLayout()) {
-          childContainerDimensions = recyclerViewManager.getChildContainerDimensions();
-        }
-        return childContainerDimensions;
-      },
+            let childContainerDimensions;
+            if (recyclerViewManager.hasLayout()) {
+              childContainerDimensions = recyclerViewManager.getChildContainerDimensions();
+            }
+            return childContainerDimensions;
+          },
       currentStickyIndex: first1,
       hideStickyHeaderRelatedCell: flag2,
       inverted
     };
-    const ViewHolderCollection = tmp13(tmp14[21]).ViewHolderCollection;
-    items9[4] = num2(ViewHolderCollection, obj10);
+    items9[4] = tmp44(tmp13(tmp14[21]).ViewHolderCollection, obj17);
     items9[5] = renderEmpty;
     items9[6] = renderFooter;
-    items10 = [closure_14(CompatScrollView, obj9), , ];
-    let tmp48 = null;
+    obj16.children = items9;
+    items10 = [, , ];
+    items10[0] = tmp45(CompatScrollView, obj16);
+    tmp50 = null;
     if (stickyHeaderIndices) {
-      tmp48 = null;
+      tmp50 = null;
       if (stickyHeaderIndices.length > 0) {
-        tmp48 = renderStickyHeaderBackdrop;
+        tmp50 = renderStickyHeaderBackdrop;
       }
     }
-    items10[1] = tmp48;
-    items10[2] = tmp20Result6;
-    return num2(RecyclerViewContextProvider, obj);
+    items10[1] = tmp50;
+    items10[2] = tmp20Result1;
+    obj15.children = items10;
+    obj1.children = tmp45(tmp13(tmp14[19]).CompatView, obj15);
+    return tmp44(tmp13(tmp14[15]).RecyclerViewContextProvider, obj1);
   }
 }
 RecyclerViewComponent.displayName = "FlashList";
 
-export const RecyclerView = react.memo(forwardRef(RecyclerViewComponent));
+export const RecyclerView = noop.memo(forwardRef(RecyclerViewComponent));

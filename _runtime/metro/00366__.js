@@ -1,11 +1,11 @@
 // === Module 366: ? ===
 
 // Module 366
-import get_nativeEventEmitterDefault from "get nativeEventEmitter" /* 357 */;
-import _modDef367 from "module_367" /* 367 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import result1Default from "result1" /* 357 */;
+import _assertNativeAnimatedModuleDefault from "_assertNativeAnimatedModule" /* 367 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import map from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
@@ -13,11 +13,15 @@ import _inherits from "_inherits" /* 98 */;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -25,28 +29,33 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const connectAnimatedNodes = get_nativeEventEmitterDefault.API.connectAnimatedNodes;
-const disconnectAnimatedNodes = get_nativeEventEmitterDefault.API.disconnectAnimatedNodes;
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+const connectAnimatedNodes = result1Default.API.connectAnimatedNodes;
+const disconnectAnimatedNodes = result1Default.API.disconnectAnimatedNodes;
 class AnimatedWithChildren {
   constructor() {
-    let constructResult;
-    const self = this;
-    const items = [...arguments];
-    _classCallCheck(this, AnimatedWithChildren);
-    const items1 = [...items];
-    const obj = _getPrototypeOf(AnimatedWithChildren);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, _getPrototypeOf(self).constructor);
+    self = this;
+    items = [...arguments];
+    tmp = closure_0(this, AnimatedWithChildren);
+    items1 = [...items];
+    tmp2 = c2;
+    obj = c2(AnimatedWithChildren);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items1);
     }
-    const tmp3Result = map(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
     tmp3Result._children = [];
     return tmp3Result;
   }
 }
-_inherits(AnimatedWithChildren, _modDef367);
+_classCallCheck = AnimatedWithChildren;
+_inherits(AnimatedWithChildren, _assertNativeAnimatedModuleDefault);
 const entry = {
   key: "__makeNative",
   value: function __makeNative(arg0) {
@@ -55,16 +64,15 @@ const entry = {
       self.__isNative = true;
       const _children = self._children;
       if (_children.length > 0) {
-        let num3;
         for (let num3 = 0; num3 < length; num3 = num3 + 1) {
           let obj = _children[num3];
           let __makeNativeResult = obj.__makeNative(arg0);
           let __getNativeTagResult = self.__getNativeTag();
-          let tmp4 = connectAnimatedNodes(__getNativeTagResult, obj.__getNativeTag());
+          let tmp4 = hasOwnProperty(__getNativeTagResult, obj.__getNativeTag());
         }
       }
     }
-    let fn = _get(_getPrototypeOf(AnimatedWithChildren.prototype), "__makeNative", self);
+    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "__makeNative", self);
     if (typeof fn === "function") {
       fn = (items) => fn.apply(self, items);
     }
@@ -85,8 +93,8 @@ let items = [
       _children.push(__makeNative);
       if (self.__isNative) {
         __makeNative.__makeNative(self.__getPlatformConfig());
+        connectAnimatedNodes(self.__getNativeTag(), __makeNative.__getNativeTag());
         const __getNativeTagResult = self.__getNativeTag();
-        connectAnimatedNodes(__getNativeTagResult, __makeNative.__getNativeTag());
       }
     }
   },
@@ -97,16 +105,16 @@ let items = [
       const _children = this._children;
       const index = _children.indexOf(__isNative);
       if (-1 !== index) {
-        const tmp4 = self.__isNative && __isNative.__isNative;
         if (tmp4) {
+          disconnectAnimatedNodes(self.__getNativeTag(), __isNative.__getNativeTag());
           const __getNativeTagResult = self.__getNativeTag();
-          disconnectAnimatedNodes(__getNativeTagResult, __isNative.__getNativeTag());
         }
         const _children1 = self._children;
         _children1.splice(index, 1);
         if (0 === self._children.length) {
           self.__detach();
         }
+        tmp4 = self.__isNative && __isNative.__isNative;
       } else {
         const _console = console;
         console.warn("Trying to remove a child that doesn't exist");
@@ -123,20 +131,23 @@ let items = [
     key: "__callListeners",
     value: function __callListeners(arg0) {
       const self = this;
-      let fn = _get(_getPrototypeOf(AnimatedWithChildren.prototype), "__callListeners", this);
+      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "__callListeners", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];
       fn(items);
       if (!self.__isNative) {
-        let num;
         const _children = self._children;
-        for (let num = 0; num < _children.length; num = num + 1) {
-          let obj = _children[num];
-          if (obj.__getValue) {
-            let __callListenersResult = obj.__callListeners(obj.__getValue());
-          }
+        let num = 0;
+        if (0 < _children.length) {
+          do {
+            let obj = _children[num];
+            if (obj.__getValue) {
+              let __callListenersResult = obj.__callListeners(obj.__getValue());
+            }
+            num = num + 1;
+          } while (num < length);
         }
       }
     }

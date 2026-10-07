@@ -3,6 +3,6 @@
 // Module 540 (baseUnary)
 
 export default function baseUnary(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return (arg0) => closure_0(arg0);
 };

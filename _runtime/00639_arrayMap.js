@@ -3,7 +3,6 @@
 // Module 639 (arrayMap)
 
 export default function arrayMap(arg0, fn) {
-  let num2;
   let num = 0;
   if (null != arg0) {
     num = arg0.length;

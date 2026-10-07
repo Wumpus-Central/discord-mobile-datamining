@@ -1,15 +1,14 @@
 // === Module 5350: ToPrimitive ===
 
 // Module 5350 (ToPrimitive)
-import ToPrimitive2 from "ToPrimitive" /* 5351 */;
+import _mod5351 from "module_5351" /* 5351 */;
 
 
 export default function ToPrimitive(arg0) {
-  let tmp3;
   if (arguments.length > 1) {
-    tmp3 = ToPrimitive2(arg0, arguments[1]);
+    let tmp3 = _mod5351(arg0, arguments[1]);
   } else {
-    tmp3 = ToPrimitive2(arg0);
+    tmp3 = _mod5351(arg0);
   }
   return tmp3;
 };

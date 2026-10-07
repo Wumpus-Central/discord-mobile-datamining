@@ -4,28 +4,23 @@
 import _mod4467 from "module_4467" /* 4467 */;
 
 const fn = function t(moment) {
-  let closure_0 = "jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.".split("_");
-  let closure_1 = "jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec".split("_");
+  closure_0 = "jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.".split("_");
+  closure_1 = "jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec".split("_");
   const items = [/^jan/i, /^feb/i, /^(maart|mrt\.?)$/i, /^apr/i, /^mei$/i, /^jun[i.]?$/i, /^jul[i.]?$/i, /^aug/i, /^sep/i, /^okt/i, /^nov/i, /^dec/i];
-  let tmp = /^(januari|februari|maart|april|mei|ju[nl]i|augustus|september|oktober|november|december|jan\.?|feb\.?|mrt\.?|apr\.?|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i;
-  let obj = {
+  const tmp = /^(januari|februari|maart|april|mei|ju[nl]i|augustus|september|oktober|november|december|jan\.?|feb\.?|mrt\.?|apr\.?|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i;
+  return moment.defineLocale("nl", {
     months: "januari_februari_maart_april_mei_juni_juli_augustus_september_oktober_november_december".split("_"),
     monthsShort(arg0, arg1) {
-      let tmp2;
-      const tmp = arg0;
-      if (tmp) {
-        let tmp5;
-        const obj = /-MMM-/;
+      if (arg0) {
         if (obj.test(arg1)) {
-          tmp5 = closure_1[arg0.month(arg0)];
+          let tmp3 = closure_1[arg0.month(arg0)];
         } else {
-          tmp5 = closure_0[arg0.month(arg0)];
+          tmp3 = closure_0[arg0.month(arg0)];
         }
-        tmp2 = tmp5;
+        obj = /-MMM-/;
       } else {
-        tmp2 = closure_0;
+        return closure_0;
       }
-      return tmp2;
     },
     monthsRegex: tmp,
     monthsShortRegex: tmp,
@@ -44,17 +39,15 @@ const fn = function t(moment) {
     dayOfMonthOrdinalParse: /\d{1,2}(ste|de)/,
     ordinal(arg0) {
       if (1 !== arg0) {
-        let str;
         if (8 !== arg0) {
-          str = "de";
+          let str = "de";
         }
         return arg0 + str;
       }
       str = "ste";
     },
     week: { dow: 1, doy: 4 }
-  };
-  return moment.defineLocale("nl", obj);
+  });
 };
 if (typeof exports === "object") {
   if (undefined !== module) {
@@ -64,7 +57,6 @@ if (typeof exports === "object") {
   }
 }
 if (typeof globalThis.define === "function") {
-  const define2 = globalThis.define;
   if (globalThis.define.amd) {
     globalThis.define(["../moment"], fn);
   }

@@ -1,7 +1,7 @@
 // === Module 8067: head ===
 
 // Module 8067 (head)
-import head from "head" /* 8068 */;
+import _mod8068 from "module_8068" /* 8068 */;
 
 
-export default head;
+export default _mod8068;

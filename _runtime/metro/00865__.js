@@ -1,7 +1,7 @@
 // === Module 865: ? ===
 
 // Module 865
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export function getSDKSource() {
   return "npm";

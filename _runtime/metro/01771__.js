@@ -1,34 +1,29 @@
 // === Module 1771: ? ===
 
 // Module 1771
-import CurvedTransition from "CurvedTransition" /* 1772 */;
-import EntryExitTransition from "EntryExitTransition" /* 1773 */;
-import _mod1774 from "module_1774" /* 1774 */;
-import _mod1775 from "module_1775" /* 1775 */;
-import _mod1776 from "module_1776" /* 1776 */;
-import _mod1777 from "module_1777" /* 1777 */;
+const require = globalThis.__r;
 
-for (const key10013 in CurvedTransition) {
-  exports[key10013] = CurvedTransition[key10013];
+for (const key10013 in require("module_1772")) {
+  arg5[key10013] = require("module_1772")[key10013];
   continue;
 }
-for (const key10017 in EntryExitTransition) {
-  exports[key10017] = EntryExitTransition[key10017];
+for (const key10017 in require("module_1773")) {
+  arg5[key10017] = require("module_1773")[key10017];
   continue;
 }
-for (const key10021 in _mod1774) {
-  exports[key10021] = _mod1774[key10021];
+for (const key10021 in require("module_1774")) {
+  arg5[key10021] = require("module_1774")[key10021];
   continue;
 }
-for (const key10025 in _mod1775) {
-  exports[key10025] = _mod1775[key10025];
+for (const key10025 in require("module_1775")) {
+  arg5[key10025] = require("module_1775")[key10025];
   continue;
 }
-for (const key10029 in _mod1776) {
-  exports[key10029] = _mod1776[key10029];
+for (const key10029 in require("module_1776")) {
+  arg5[key10029] = require("module_1776")[key10029];
   continue;
 }
-for (const key10033 in _mod1777) {
-  exports[key10033] = _mod1777[key10033];
+for (const key10033 in require("module_1777")) {
+  arg5[key10033] = require("module_1777")[key10033];
   continue;
 }

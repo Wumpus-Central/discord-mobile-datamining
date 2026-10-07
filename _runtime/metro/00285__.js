@@ -1,21 +1,25 @@
 // === Module 285: ? ===
 
 // Module 285
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import _modDef286 from "module_286" /* 286 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import map from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -23,31 +27,41 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
 class ResponderEvent {
-  constructor(arg0, arg1, arg2, arg3, _touchHistory) {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, ResponderEvent);
-    const items = [arg0, arg1, arg2, arg3];
-    const obj = _getPrototypeOf(ResponderEvent);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+  constructor(arg0, arg1, arg2, arg3, arg4) {
+    self = this;
+    tmp = closure_0(this, ResponderEvent);
+    items = [, , , ];
+    items[0] = global;
+    items[1] = arg1;
+    items[2] = importDefault;
+    items[3] = importAll;
+    tmp2 = c2;
+    obj = c2(ResponderEvent);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    const tmp3Result = map(self, constructResult);
-    tmp3Result._touchHistory = _touchHistory;
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result._touchHistory = module;
     return tmp3Result;
   }
 }
+_classCallCheck = ResponderEvent;
 _inherits(ResponderEvent, _modDef286);
-let obj = {
-  key: "touchHistory",
-  get() {
-    return this._touchHistory;
+let items = [
+  {
+    key: "touchHistory",
+    get() {
+      return this._touchHistory;
+    }
   }
-};
-let items = [obj];
+];
 
 export default _createClass(ResponderEvent, items);

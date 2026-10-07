@@ -2,15 +2,15 @@
 
 // Module 770
 import _mod713 from "module_713" /* 713 */;
-import _mod740 from "module_740" /* 740 */;
+import forEachEnvelopeItem from "forEachEnvelopeItem" /* 740 */;
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const createCheckInEnvelope = function createCheckInEnvelope(arg0, trace, sdk, arg3, _dsn) {
-  let date;
-  const obj = { sent_at: date.toISOString() };
+export const createCheckInEnvelope = function createCheckInEnvelope(arg0, trace, sdk, arg3, url) {
+  const obj = { sent_at: new Date().toISOString() };
   sdk = undefined;
-  date = new Date();
   if (sdk != null) {
     sdk = sdk.sdk;
   }
@@ -18,17 +18,18 @@ export const createCheckInEnvelope = function createCheckInEnvelope(arg0, trace,
     const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
     obj.sdk = obj2;
   }
-  const tmp2 = arg3 && _dsn;
-  if (tmp2) {
-    const obj4 = _mod713;
-    obj.dsn = obj4.dsnToString(_dsn);
+  let tmp2 = arg3;
+  if (arg3) {
+    tmp2 = url;
   }
-  const tmp5 = trace;
-  if (tmp5) {
+  if (tmp2) {
+    obj.dsn = _mod713.dsnToString(url);
+  }
+  if (trace) {
     obj.trace = trace;
   }
   const items = [{ type: "check_in" }, arg0];
+  const date = new Date();
   const items1 = [items];
-  const obj5 = _mod740;
-  return obj5.createEnvelope(obj, items1);
+  return forEachEnvelopeItem.createEnvelope(obj, items1);
 };

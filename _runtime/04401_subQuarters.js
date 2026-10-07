@@ -1,33 +1,30 @@
 // === Module 4401: subQuarters ===
 
 // Module 4401 (subQuarters)
-import toInteger_mod from "toInteger" /* 3968 */;
-import addQuarters_mod from "addQuarters" /* 4130 */;
+import module_3968_mod from "module_3968" /* 3968 */;
+import module_4130_mod from "module_4130" /* 4130 */;
 import requiredArgs_mod from "requiredArgs" /* 3965 */;
 
-let tmp3;
-let tmp5;
-let tmp7;
-let toInteger = toInteger_mod;
-if (!toInteger) {
-  tmp3 = { default: toInteger };
-  const obj = { default: toInteger };
+let module_3968 = module_3968_mod;
+if (!module_3968) {
+  const obj = { default: module_3968 };
+  let tmp3 = obj;
 } else {
-  tmp3 = toInteger;
+  tmp3 = module_3968;
 }
-toInteger = tmp3;
-let addQuarters = addQuarters_mod;
-if (!addQuarters) {
-  tmp5 = { default: addQuarters };
-  const obj2 = { default: addQuarters };
+module_3968 = tmp3;
+let module_4130 = module_4130_mod;
+if (!module_4130) {
+  const obj2 = { default: module_4130 };
+  let tmp5 = obj2;
 } else {
-  tmp5 = addQuarters;
+  tmp5 = module_4130;
 }
-addQuarters = tmp5;
+module_4130 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  tmp7 = { default: requiredArgs };
   const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }
@@ -35,5 +32,6 @@ requiredArgs = tmp7;
 
 export default function subQuarters(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return addQuarters.default(arg0, -toInteger.default(arg1));
+  return module_4130.default(arg0, -module_3968.default(arg1));
 };
+export default exports.default;

@@ -1,21 +1,25 @@
 // === Module 10334: ? ===
 
 // Module 10334
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _mod10192 from "module_10192" /* 10192 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import map from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -23,38 +27,44 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
 let fn = this;
 if (this) {
   fn = this.__importDefault;
 }
 if (!fn) {
   fn = (__esModule) => {
-    let tmp2;
-    const tmp = __esModule;
-    if (!tmp) {
-      tmp2 = { default: __esModule };
+    if (!__esModule) {
       const obj = { default: __esModule };
+      let tmp = obj;
     } else {
-      tmp2 = __esModule;
+      tmp = __esModule;
     }
-    return tmp2;
+    return tmp;
   };
 }
 class UKMergeDateRangeRefiner {
   constructor() {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, UKMergeDateRangeRefiner);
-    const obj = _getPrototypeOf(UKMergeDateRangeRefiner);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    self = this;
+    tmp = closure_0(this, UKMergeDateRangeRefiner);
+    tmp2 = c2;
+    obj = c2(UKMergeDateRangeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return map(self, constructResult);
+    return tmp3(self, constructResult);
   }
 }
+_classCallCheck = UKMergeDateRangeRefiner;
 _inherits(UKMergeDateRangeRefiner, fn(_mod10192).default);
 const entry = {
   key: "patternBetween",

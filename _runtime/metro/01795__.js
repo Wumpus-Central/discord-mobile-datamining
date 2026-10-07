@@ -1,24 +1,19 @@
 // === Module 1795: ? ===
 
 // Module 1795
-import startMapper from "startMapper" /* 1687 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
+import runOnRuntime from "runOnRuntime" /* 1687 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-let c3;
-let closure_4;
-({ useEffect: c3, useState: closure_4 } = react);
+require = fn;
+const noop = fn(19);
+({ useEffect: c3, useState: closure_4 } = noop);
 
 export const useSharedValue = function useSharedValue(point) {
-  let closure_0 = point;
-  const first = _slicedToArray(closure_4(() => {
-    const obj = startMapper;
-    return obj.makeMutable(point);
-  }), 1)[0];
+  closure_0 = point;
+  const first = _slicedToArray(closure_4(() => runOnRuntime.makeMutable(closure_0)), 1)[0];
   const items = [first];
   closure_3(() => () => {
-    const obj = point(first[3]);
-    obj.cancelAnimation(closure_1_1);
+    closure_0(first[3]).cancelAnimation(closure_1_1);
   }, items);
   return first;
 };

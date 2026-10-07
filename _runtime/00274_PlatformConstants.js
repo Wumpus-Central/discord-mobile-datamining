@@ -1,12 +1,12 @@
 // === Module 274: PlatformConstants ===
 
 // Module 274 (PlatformConstants)
-import _mod275 from "module_275" /* 275 */;
+import _modDef275 from "module_275" /* 275 */;
 
-const _modDef275 = _mod275;
+const require = globalThis.__r;
 
-for (const key10016 in _mod275) {
-  exports[key10016] = _mod275[key10016];
+for (const key10016 in require("module_275")) {
+  arg5[key10016] = require("module_275")[key10016];
   continue;
 }
 

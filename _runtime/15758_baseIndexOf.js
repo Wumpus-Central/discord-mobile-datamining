@@ -7,12 +7,10 @@ import baseIsNaN from "baseIsNaN" /* 15760 */;
 
 
 export default function baseIndexOf(arg0, arg1, arg2) {
-  let tmp3Result;
   if (arg1 == arg1) {
-    tmp3Result = strictIndexOf(arg0, arg1, arg2);
+    let tmp3Result = strictIndexOf(arg0, arg1, arg2);
   } else {
-    const tmp3 = baseFindIndex;
-    tmp3Result = tmp3(arg0, baseIsNaN, arg2);
+    tmp3Result = baseFindIndex(arg0, baseIsNaN, arg2);
   }
   return tmp3Result;
 };

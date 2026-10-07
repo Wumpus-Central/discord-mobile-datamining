@@ -4,7 +4,6 @@
 import assignValue from "assignValue" /* 4979 */;
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
 let obj = {};
 obj["[object Uint32Array]"] = true;
@@ -33,129 +32,116 @@ obj["[object WeakMap]"] = false;
 obj["[object Function]"] = false;
 obj["[object Error]"] = false;
 function baseClone(arr, arg1, fn, arg3, arg4, arg5) {
-  let closure_1;
-  let obj2;
   _require = arr;
   dependencyMap = arg1;
-  let closure_2 = fn;
-  let closure_3 = arg5;
-  let tmp = 1 & arg1;
-  let tmp2 = 2 & arg1;
-  let tmp4;
-  const tmp3 = 4 & arg1;
-  if (fn) {
-    let tmp5;
-    if (arg4) {
-      tmp5 = fn(arr, arg3, arg4, arg5);
-    } else {
-      tmp5 = fn(arr);
-    }
-    obj2 = tmp5;
-    tmp4 = tmp5;
-  }
-  if (undefined !== tmp4) {
-    return tmp4;
-  } else if (require("isObject")(arr)) {
-    let tmp14;
-    const tmp10 = require("module_514")(arr);
-    if (tmp10) {
-      const tmp18 = require("initCloneArray")(arr);
-      obj2 = tmp18;
-      tmp14 = tmp18;
-      if (!tmp) {
-        return require("copyArray")(arr, tmp18);
-      }
-    } else {
-      const tmp11 = require("module_645")(arr);
-      const tmp12 = tmp11 == "[object Function]" || "[object GeneratorFunction]" == tmp11;
-      if (require("module_536")(arr)) {
-        return require("cloneBuffer")(arr, tmp);
-      } else {
-        if (tmp11 != "[object Object]") {
-          if (tmp11 != "[object Arguments]") {
-            if (closure_2[tmp11]) {
-              tmp14 = tmp30(4987)(arr, tmp11, tmp);
-              obj2 = tmp14;
-            } else {
-              obj = arr;
-              if (!arg4) {
-                obj = {};
-              }
-              return obj;
-            }
-          }
-        }
-        if (!tmp2) {
-          if (!tmp12) {
-            obj2 = tmp30(4974)(arr);
-          }
-          tmp14 = obj2;
+  closure_2 = fn;
+  closure_3 = arg5;
+  if (!fn) {
+    {
+      if (require("module_521")(arr)) {
+        const tmp10 = tmp32(514)(arr);
+        if (tmp10) {
+          const tmp18 = tmp32(4971)(arr);
+          closure_4 = tmp18;
+          let tmp14 = tmp18;
           if (!tmp) {
-            let tmp30ResultResult;
-            if (tmp2) {
-              const tmp30Result = require("copySymbolsIn");
-              tmp30ResultResult = tmp30Result(arr, tmp30(4981)(obj2, arr));
-            } else {
-              const tmp30Result3 = require("copySymbols");
-              tmp30ResultResult = tmp30Result3(arr, tmp30(4986)(obj2, arr));
+            return tmp32(4972)(arr, tmp18);
+          }
+        } else {
+          const tmp11 = tmp32(645)(arr);
+          let tmp12 = tmp11 == "[object Function]";
+          if (!tmp12) {
+            tmp12 = "[object GeneratorFunction]" == tmp11;
+          }
+          if (tmp32(536)(arr)) {
+            return tmp32(4973)(arr, tmp);
+          } else {
+            if (tmp11 != "[object Object]") {
+              if (tmp11 != "[object Arguments]") {
+                if (closure_2[tmp11]) {
+                  tmp14 = tmp32(4987)(arr, tmp11, tmp);
+                  closure_4 = tmp14;
+                } else {
+                  obj = arr;
+                  if (!arg4) {
+                    obj = {};
+                  }
+                  return obj;
+                }
+              }
             }
-            return tmp30ResultResult;
+            if (!tmp2) {
+              if (!tmp12) {
+                let obj2 = tmp32(4974)(arr);
+              }
+              closure_4 = obj2;
+              tmp14 = obj2;
+              if (!tmp) {
+                if (tmp2) {
+                  let tmp32ResultResult = tmp32(4977)(arr, tmp32(4981)(obj2, arr));
+                  const tmp32Result = tmp32(4977);
+                } else {
+                  tmp32ResultResult = tmp32(4985)(arr, tmp32(4986)(obj2, arr));
+                  const tmp32Result3 = tmp32(4985);
+                }
+                return tmp32ResultResult;
+              }
+            }
+            obj2 = {};
           }
         }
-        obj2 = {};
-      }
-    }
-    let obj3 = arg5;
-    if (!obj3) {
-      const self = this;
-      const self2 = this;
-      const tmp19 = new require("Stack")();
-      closure_3 = tmp19;
-      obj3 = tmp19;
-    }
-    const value = obj3.get(arr);
-    if (value) {
-      return value;
-    } else {
-      let tmp26;
-      let result = obj3.set(arr, tmp14);
-      if (require("module_4993")(arr)) {
-        const item = arr.forEach((item) => {
-          obj2.add(baseClone(item, closure_1, fn, item, arr, closure_3));
-        });
-      } else if (require("module_4995")(arr)) {
-        const item1 = arr.forEach((item, index) => {
-          const result = obj2.set(index, baseClone(item, closure_1, fn, index, arr, closure_3));
-        });
-      }
-      if (tmp3) {
-        tmp26 = tmp2 ? 4997 : 667;
-      } else {
-        tmp26 = tmp2 ? 4982 : 531;
-      }
-      let tmp27;
-      if (!tmp10) {
-        tmp27 = tmp30(tmp26)(arr);
-      }
-      let closure_5 = tmp27;
-      const tmp30Result4 = require("arrayEach");
-      if (!tmp27) {
-        tmp27 = arr;
-      }
-      tmp30Result4(tmp27, (arg0, arg1) => {
-        let tmp = arg1;
-        let tmp2 = arg0;
-        if (closure_5) {
-          tmp2 = arr[arg0];
-          tmp = arg0;
+        let obj3 = arg5;
+        if (!arg5) {
+          const tmp21 = new tmp32(650)();
+          closure_3 = tmp21;
+          obj3 = tmp21;
         }
-        const tmp4 = assignValue;
-        tmp4(obj2, tmp, baseClone(tmp2, closure_1, fn, tmp, arr, closure_3));
-      });
-      return tmp14;
+        value = obj3.get(arr);
+        if (value) {
+          return value;
+        } else {
+          let result = obj3.set(arr, tmp14);
+          if (tmp32(4993)(arr)) {
+            const item = arr.forEach((item) => {
+              closure_4.add(baseClone(item, closure_1, closure_2, item, closure_0, closure_3));
+            });
+          } else if (tmp32(4995)(arr)) {
+            const item1 = arr.forEach((item, index) => {
+              const result = closure_4.set(index, baseClone(item, closure_1, closure_2, index, closure_0, closure_3));
+            });
+          }
+          if (!tmp3) {
+            let tmp29;
+            if (!tmp10) {
+              tmp29 = tmp32(tmp2 ? 4982 : 531)(arr);
+            }
+            closure_5 = tmp29;
+            if (!tmp29) {
+              tmp29 = arr;
+            }
+            tmp32(515)(tmp29, (arg0, arg1) => {
+              let tmp = arg1;
+              let tmp2 = arg0;
+              if (closure_5) {
+                tmp2 = closure_0[arg0];
+                tmp = arg0;
+              }
+              assignValue(closure_4, tmp, baseClone(tmp2, closure_1, closure_2, tmp, closure_0, closure_3));
+            });
+            return tmp14;
+          }
+        }
+      } else {
+        return arr;
+      }
     }
   } else {
-    return arr;
+    if (arg4) {
+      let tmp4 = fn(arr, arg3, arg4, arg5);
+    } else {
+      tmp4 = fn(arr);
+    }
+    closure_4 = tmp4;
   }
 }
 

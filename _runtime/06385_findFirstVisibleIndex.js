@@ -1,8 +1,6 @@
 // === Module 6385: findFirstVisibleIndex ===
 
 // Module 6385 (findFirstVisibleIndex)
-let size;
-
 
 export const findFirstVisibleIndex = function findFirstVisibleIndex(layouts, bound1, horizontal) {
   let diff = layouts.length - 1;
@@ -13,14 +11,13 @@ export const findFirstVisibleIndex = function findFirstVisibleIndex(layouts, bou
     while (true) {
       let _Math = Math;
       let rounded = Math.floor((num3 + diff) / 2);
-      size = layouts[rounded];
+      let size = layouts[rounded];
       let tmp3 = num;
       let diff1 = diff;
       let tmp6 = horizontal ? size.x : size.y;
       if (tmp6 < bound1) {
-        let sum;
         if (tmp6 + (horizontal ? size.width : size.height) <= bound1) {
-          sum = rounded + 1;
+          let sum = rounded + 1;
         }
         num = tmp3;
         diff = diff1;
@@ -48,7 +45,7 @@ export const findLastVisibleIndex = function findLastVisibleIndex(layouts, arg1,
     do {
       let _Math = Math;
       let rounded = Math.floor((num3 + diff) / 2);
-      size = layouts[rounded];
+      let size = layouts[rounded];
       let tmp3 = num;
       sum = num3;
       let tmp6 = horizontal ? size.x : size.y;

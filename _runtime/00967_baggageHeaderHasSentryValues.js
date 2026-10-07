@@ -1,9 +1,11 @@
 // === Module 967: baggageHeaderHasSentryValues ===
 
 // Module 967 (baggageHeaderHasSentryValues)
-import _mod904 from "module_904" /* 904 */;
+import ignoreNextOnError from "ignoreNextOnError" /* 904 */;
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const baggageHeaderHasSentryValues = function baggageHeaderHasSentryValues(baggage) {
   const parts = baggage.split(",");
@@ -12,12 +14,10 @@ export const baggageHeaderHasSentryValues = function baggageHeaderHasSentryValue
     return trimmed.startsWith("sentry-");
   });
 };
-export const createHeadersSafely = function createHeadersSafely(headers) {
+export const createHeadersSafely = function createHeadersSafely(request_headers) {
   try {
     const _Headers = Headers;
-    const self = this;
-    const self2 = this;
-    headers = new Headers(headers);
+    const headers = new Headers(request_headers);
     return headers;
   } catch (err) {
   }
@@ -25,18 +25,25 @@ export const createHeadersSafely = function createHeadersSafely(headers) {
 export const getFullURL = function getFullURL(url) {
   try {
     const _URL = URL;
-    const self = this;
-    const self2 = this;
-    const uRL = new URL(url, _mod904.WINDOW.location.origin);
+    const uRL = new URL(url, ignoreNextOnError.WINDOW.location.origin);
     return uRL.href;
   } catch (err) {
   }
 };
 export const isPerformanceResourceTiming = function isPerformanceResourceTiming(entryType) {
-  let tmp = "resource" === entryType.entryType && "initiatorType" in entryType && typeof entryType.nextHopProtocol === "string";
+  let tmp = "resource" === entryType.entryType;
   if (tmp) {
-    tmp = "fetch" === entryType.initiatorType || "xmlhttprequest" === entryType.initiatorType;
-    const tmp2 = "fetch" === entryType.initiatorType || "xmlhttprequest" === entryType.initiatorType;
+    tmp = "initiatorType" in entryType;
+  }
+  if (tmp) {
+    tmp = typeof entryType.nextHopProtocol === "string";
+  }
+  if (tmp) {
+    let tmp2 = "fetch" === entryType.initiatorType;
+    if (!tmp2) {
+      tmp2 = "xmlhttprequest" === entryType.initiatorType;
+    }
+    tmp = tmp2;
   }
   return tmp;
 };

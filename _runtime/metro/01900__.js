@@ -1,16 +1,14 @@
 // === Module 1900: ? ===
 
 // Module 1900
-const obj = {
+
+export default {
   locale: "en",
   pluralRuleFunction(arg0, arg1) {
-    let str3;
-    const str = String(arg0);
-    const parts = str.split(".");
-    const tmp2 = parts[1];
+    const parts = String(arg0).split(".");
     let substr1 = Number(parts[0]) == arg0;
     let substr = substr1;
-    if (substr) {
+    if (substr1) {
       const first = parts[0];
       substr = first.slice(-1);
     }
@@ -19,9 +17,7 @@ const obj = {
       substr1 = first1.slice(-2);
     }
     if (arg1) {
-      let str4;
       if (1 != substr) {
-        let str5;
         if (2 != substr) {
           let str7 = "other";
           if (3 == substr) {
@@ -30,20 +26,20 @@ const obj = {
               str7 = "few";
             }
           }
-          str5 = str7;
+          let str5 = str7;
         } else {
           str5 = "two";
         }
-        str4 = str5;
+        let str4 = str5;
       } else {
         str4 = "one";
       }
-      str3 = str4;
+      let str3 = str4;
     } else {
       str3 = "other";
       if (1 == arg0) {
         str3 = "other";
-        if (!tmp2) {
+        if (!parts[1]) {
           str3 = "one";
         }
       }
@@ -51,5 +47,3 @@ const obj = {
     return str3;
   }
 };
-
-export default obj;

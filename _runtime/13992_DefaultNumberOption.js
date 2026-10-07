@@ -21,8 +21,6 @@ export const DefaultNumberOption = function DefaultNumberOption(maximumFractionD
     const concat = "".concat;
     const combined = "".concat(NumberResult, " is outside of range [");
     const combined1 = combined.concat(minimumSignificantDigits, ", ");
-    const self = this;
-    const self2 = this;
     const rangeError = new RangeError(combined1.concat(arg2, "]"));
     throw rangeError;
   }

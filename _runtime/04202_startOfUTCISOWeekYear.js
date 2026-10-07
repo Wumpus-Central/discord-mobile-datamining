@@ -1,33 +1,30 @@
 // === Module 4202: startOfUTCISOWeekYear ===
 
 // Module 4202 (startOfUTCISOWeekYear)
-import getUTCISOWeekYear_mod from "getUTCISOWeekYear" /* 4203 */;
+import module_4203_mod from "module_4203" /* 4203 */;
 import startOfUTCISOWeek_mod from "startOfUTCISOWeek" /* 4201 */;
 import requiredArgs_mod from "requiredArgs" /* 3965 */;
 
-let tmp3;
-let tmp5;
-let tmp7;
-let getUTCISOWeekYear = getUTCISOWeekYear_mod;
-if (!getUTCISOWeekYear) {
-  tmp3 = { default: getUTCISOWeekYear };
-  const obj = { default: getUTCISOWeekYear };
+let module_4203 = module_4203_mod;
+if (!module_4203) {
+  const obj = { default: module_4203 };
+  let tmp3 = obj;
 } else {
-  tmp3 = getUTCISOWeekYear;
+  tmp3 = module_4203;
 }
-getUTCISOWeekYear = tmp3;
+module_4203 = tmp3;
 let startOfUTCISOWeek = startOfUTCISOWeek_mod;
 if (!startOfUTCISOWeek) {
-  tmp5 = { default: startOfUTCISOWeek };
   const obj2 = { default: startOfUTCISOWeek };
+  let tmp5 = obj2;
 } else {
   tmp5 = startOfUTCISOWeek;
 }
 startOfUTCISOWeek = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  tmp7 = { default: requiredArgs };
   const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }
@@ -35,9 +32,9 @@ requiredArgs = tmp7;
 
 export default function startOfUTCISOWeekYear(arg0) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = getUTCISOWeekYear.default(arg0);
   const date = new Date(0);
-  date.setUTCFullYear(defaultResult1, 0, 4);
+  date.setUTCFullYear(module_4203.default(arg0), 0, 4);
   date.setUTCHours(0, 0, 0, 0);
   return startOfUTCISOWeek.default(date);
 };
+export default exports.default;

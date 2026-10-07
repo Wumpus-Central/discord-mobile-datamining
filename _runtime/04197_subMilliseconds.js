@@ -1,39 +1,37 @@
 // === Module 4197: subMilliseconds ===
 
 // Module 4197 (subMilliseconds)
-import addMilliseconds_mod from "addMilliseconds" /* 4119 */;
+import module_4119_mod from "module_4119" /* 4119 */;
 import requiredArgs_mod from "requiredArgs" /* 3965 */;
-import toInteger_mod from "toInteger" /* 3968 */;
+import module_3968_mod from "module_3968" /* 3968 */;
 
-let tmp3;
-let tmp5;
-let tmp7;
-let addMilliseconds = addMilliseconds_mod;
-if (!addMilliseconds) {
-  tmp3 = { default: addMilliseconds };
-  const obj = { default: addMilliseconds };
+let module_4119 = module_4119_mod;
+if (!module_4119) {
+  const obj = { default: module_4119 };
+  let tmp3 = obj;
 } else {
-  tmp3 = addMilliseconds;
+  tmp3 = module_4119;
 }
-addMilliseconds = tmp3;
+module_4119 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  tmp5 = { default: requiredArgs };
   const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
-let toInteger = toInteger_mod;
-if (!toInteger) {
-  tmp7 = { default: toInteger };
-  const obj3 = { default: toInteger };
+let module_3968 = module_3968_mod;
+if (!module_3968) {
+  const obj3 = { default: module_3968 };
+  let tmp7 = obj3;
 } else {
-  tmp7 = toInteger;
+  tmp7 = module_3968;
 }
-toInteger = tmp7;
+module_3968 = tmp7;
 
 export default function subMilliseconds(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return addMilliseconds.default(arg0, -toInteger.default(arg1));
+  return module_4119.default(arg0, -module_3968.default(arg1));
 };
+export default exports.default;

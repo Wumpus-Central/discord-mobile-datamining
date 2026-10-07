@@ -1,7 +1,8 @@
 // === Module 7390: ? ===
 
 // Module 7390
-const obj = {
+
+export default {
   get() {
     if (typeof TextDecoder !== "undefined") {
       const _TextDecoder = TextDecoder;
@@ -9,5 +10,3 @@ const obj = {
     }
   }
 };
-
-export default obj;

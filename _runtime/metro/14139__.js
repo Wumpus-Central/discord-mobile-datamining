@@ -10,16 +10,19 @@ if (getOwnPropertyDescriptor) {
   getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
 }
 const tmp = _mod14102(prototype, "name");
-let tmp3 = tmp;
-const tmp2 = tmp && "something" === (function something() {
+let tmp2 = tmp;
+if (tmp) {
+  tmp2 = "something" === function something() {
 
-}).name;
-if (tmp3) {
+  }.name;
+}
+let tmp3 = tmp;
+if (tmp) {
   const _module = getOwnPropertyDescriptor;
   let tmp5 = !_module;
   if (_module) {
     tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-    getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
   }
   tmp3 = tmp5;
 }

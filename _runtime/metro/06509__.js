@@ -1,19 +1,21 @@
 // === Module 6509: ? ===
 
 // Module 6509
-import Fragment from "Fragment" /* 21 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
-import react2 from "react" /* 6510 */;
-import react from "react" /* 19 */;
+import GestureHandlerRefContext from "GestureHandlerRefContext" /* 6510 */;
+import noop from "module_19" /* 19 */;
 
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
 
 export const PanGestureHandler = function PanGestureHandler(arg0) {
-  const ref = react.useRef(null);
-  const Provider = react2.GestureHandlerRefContext.Provider;
-  LegacyBaseButton.PanGestureHandler;
+  const ref = noop.useRef(null);
+  const obj = { value: ref, children: null };
+  const obj2 = {};
   const merged = Object.assign(arg0);
-  return <Provider value={ref}>{null}</Provider>;
+  obj2.ref = ref;
+  obj.children = jsx(LegacyBaseButton.PanGestureHandler, {});
+  return jsx(GestureHandlerRefContext.GestureHandlerRefContext.Provider, { value: ref, children: null });
 };
-export const GestureHandlerRootView = LegacyBaseButton.GestureHandlerRootView;
-export const GestureState = LegacyBaseButton.State;
+export const GestureHandlerRootView = fn(6147).GestureHandlerRootView;
+export const GestureState = fn(6147).State;

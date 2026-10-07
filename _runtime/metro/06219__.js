@@ -1,37 +1,26 @@
 // === Module 6219: ? ===
 
 // Module 6219
-import Fragment from "Fragment" /* 21 */;
-import react_mod from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import noop_mod from "module_19" /* 19 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-let closure_9, diff, sum;
-
-let StyleSheet;
-let _window;
-let c2;
-let c3;
-let closure_4;
-let hasOwnProperty;
-let map;
-let react = react_mod;
-({ useCallback: _window, useEffect: map, useMemo: c2, useRef: c3 } = react);
-react = react_mod;
-({ Keyboard: closure_4, StyleSheet, View: hasOwnProperty } = react_native);
-const jsx = Fragment.jsx;
+let noop = noop_mod;
+({ useCallback: closure_0, useEffect: closure_1, useMemo: c2, useRef: c3 } = noop);
+let noop = noop_mod;
+({ Keyboard: closure_4, StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
+const jsx = jsxProd.jsx;
 let c7 = 0;
 let closure_8 = [];
 let c9 = false;
-const context = react.createContext(null);
+const context = noop.createContext(null);
 const logicalResponder = StyleSheet.create({ logicalResponder: { display: "contents" } });
 
-export default function _default(keyboardShouldPersistTaps) {
-  keyboardShouldPersistTaps = keyboardShouldPersistTaps.keyboardShouldPersistTaps;
-  const children = keyboardShouldPersistTaps.children;
+export default function _default(children) {
+  const keyboardShouldPersistTaps = children.keyboardShouldPersistTaps;
   const tmp = closure_3(false);
   const isRNGHResponderEvent = tmp;
   let items = [tmp, keyboardShouldPersistTaps];
-  let tmp2 = closure_2(() => ({ isRNGHResponderEvent, keyboardShouldPersistTaps }), items);
   isRNGHResponderEvent(() => {
     sum = sum + 1;
     if (1 >= sum) {
@@ -58,8 +47,11 @@ export default function _default(keyboardShouldPersistTaps) {
           if (endCoordinates != null) {
             height = endCoordinates.height;
           }
-          c9 = null != height && height > 0;
-          const tmp2 = null != height && height > 0;
+          let tmp2 = null != height;
+          if (tmp2) {
+            tmp2 = height > 0;
+          }
+          c9 = tmp2;
         }
         closure_9 = tmp5;
         items = [
@@ -72,7 +64,7 @@ export default function _default(keyboardShouldPersistTaps) {
       }
     }
     return () => {
-      function unsubscribeFromKeyboardVisibility() {
+      (function unsubscribeFromKeyboardVisibility() {
         diff = diff - 1;
         if (0 >= diff) {
           for (const item10008 of closure_8) {
@@ -82,27 +74,27 @@ export default function _default(keyboardShouldPersistTaps) {
           closure_8 = [];
           c9 = false;
         }
-      }
-      unsubscribeFromKeyboardVisibility();
+      })();
     };
   }, []);
   const items1 = [keyboardShouldPersistTaps];
+  let tmp2 = closure_2(() => ({ isRNGHResponderEvent, keyboardShouldPersistTaps }), items);
+  const obj = { value: tmp2, children: null };
   const tmp4 = keyboardShouldPersistTaps(() => {
-    isRNGHResponderEvent.current = false;
+    closure_1.current = false;
     return false;
   }, []);
-  ({
-    collapsable: false,
-    onStartShouldSetResponderCapture: tmp4,
-    onStartShouldSetResponder: keyboardShouldPersistTaps(() => {
-      const current = "handled" === keyboardShouldPersistTaps && isRNGHResponderEvent.current;
-      isRNGHResponderEvent.current = false;
-      return current;
-    }, items1),
-    pointerEvents: "box-none",
-    style: logicalResponder.logicalResponder,
-    children
-  });
+  obj.children = <closure_5 collapsable={false} onStartShouldSetResponderCapture={keyboardShouldPersistTaps(() => {
+    closure_1.current = false;
+    return false;
+  }, [])} onStartShouldSetResponder={keyboardShouldPersistTaps(() => {
+    let current = "handled" === keyboardShouldPersistTaps;
+    if (current) {
+      current = isRNGHResponderEvent.current;
+    }
+    isRNGHResponderEvent.current = false;
+    return current;
+  }, items1)} pointerEvents="box-none" style={logicalResponder.logicalResponder}>{children.children}</closure_5>;
   return <context value={tmp2}>{null}</context>;
 };
 export const JSResponderContext = context;

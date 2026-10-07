@@ -1,33 +1,30 @@
 // === Module 4126: differenceInCalendarDays ===
 
 // Module 4126 (differenceInCalendarDays)
-import getTimezoneOffsetInMilliseconds_mod from "getTimezoneOffsetInMilliseconds" /* 4127 */;
+import module_4127_mod from "module_4127" /* 4127 */;
 import startOfDay_mod from "startOfDay" /* 4128 */;
 import requiredArgs_mod from "requiredArgs" /* 3965 */;
 
-let tmp3;
-let tmp5;
-let tmp7;
-let getTimezoneOffsetInMilliseconds = getTimezoneOffsetInMilliseconds_mod;
-if (!getTimezoneOffsetInMilliseconds) {
-  tmp3 = { default: getTimezoneOffsetInMilliseconds };
-  const obj = { default: getTimezoneOffsetInMilliseconds };
+let module_4127 = module_4127_mod;
+if (!module_4127) {
+  const obj = { default: module_4127 };
+  let tmp3 = obj;
 } else {
-  tmp3 = getTimezoneOffsetInMilliseconds;
+  tmp3 = module_4127;
 }
-getTimezoneOffsetInMilliseconds = tmp3;
+module_4127 = tmp3;
 let startOfDay = startOfDay_mod;
 if (!startOfDay) {
-  tmp5 = { default: startOfDay };
   const obj2 = { default: startOfDay };
+  let tmp5 = obj2;
 } else {
   tmp5 = startOfDay;
 }
 startOfDay = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  tmp7 = { default: requiredArgs };
   const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }
@@ -39,7 +36,8 @@ export default function differenceInCalendarDays(arg0, arg1) {
   const defaultResult1 = startOfDay.default(arg0);
   const defaultResult2 = startOfDay.default(arg1);
   const time = defaultResult1.getTime();
-  const diff = time - getTimezoneOffsetInMilliseconds.default(defaultResult1);
+  const diff = time - module_4127.default(defaultResult1);
   const time1 = defaultResult2.getTime();
-  return Math.round((diff - (time1 - getTimezoneOffsetInMilliseconds.default(defaultResult2))) / c3);
+  return Math.round((diff - (time1 - module_4127.default(defaultResult2))) / c3);
 };
+export default exports.default;

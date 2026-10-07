@@ -1,29 +1,24 @@
 // === Module 1027: reactRouterV7BrowserTracingIntegration ===
 
 // Module 1027 (reactRouterV7BrowserTracingIntegration)
-import _mod1024 from "module_1024" /* 1024 */;
+import computeLocationKey from "computeLocationKey" /* 1024 */;
 import registerSpanErrorInstrumentation from "module_693" /* 693 */;
 import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 900 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const reactRouterV7BrowserTracingIntegration = function reactRouterV7BrowserTracingIntegration(instrumentPageLoad) {
-  const obj = _mod1024;
-  return obj.createReactRouterV6CompatibleTracingIntegration(instrumentPageLoad, "7");
+  return computeLocationKey.createReactRouterV6CompatibleTracingIntegration(instrumentPageLoad, "7");
 };
 export const withSentryReactRouterV7Routing = function withSentryReactRouterV7Routing(arg0) {
-  const obj = _mod1024;
-  return obj.createV6CompatibleWithSentryReactRouterRouting(arg0, "7");
+  return computeLocationKey.createV6CompatibleWithSentryReactRouterRouting(arg0, "7");
 };
 export const wrapCreateBrowserRouterV7 = function wrapCreateBrowserRouterV7(arg0) {
-  const obj = _mod1024;
-  return obj.createV6CompatibleWrapCreateBrowserRouter(arg0, "7");
+  return computeLocationKey.createV6CompatibleWrapCreateBrowserRouter(arg0, "7");
 };
 export const wrapCreateMemoryRouterV7 = function wrapCreateMemoryRouterV7(arg0) {
-  const obj = _mod1024;
-  return obj.createV6CompatibleWrapCreateMemoryRouter(arg0, "7");
+  return computeLocationKey.createV6CompatibleWrapCreateMemoryRouter(arg0, "7");
 };
 export const wrapUseRoutesV7 = function wrapUseRoutesV7(arg0) {
-  const obj = _mod1024;
-  return obj.createV6CompatibleWrapUseRoutes(arg0, "7");
+  return computeLocationKey.createV6CompatibleWrapUseRoutes(arg0, "7");
 };

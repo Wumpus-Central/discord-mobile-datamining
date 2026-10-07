@@ -1,19 +1,16 @@
 // === Module 1911: ? ===
 
 // Module 1911
-const obj = {
+globalThis.IntlMessageFormat.__addLocaleData({
   locale: "hu",
   pluralRuleFunction(arg0, arg1) {
-    let str;
-    const tmp = arg1;
-    if (tmp) {
-      let str2;
+    if (arg1) {
       if (1 == arg0) {
-        str2 = "one";
+        let str2 = "one";
       } else {
         str2 = "other";
       }
-      str = str2;
+      let str = str2;
     } else {
       str = "other";
       if (1 == arg0) {
@@ -22,5 +19,4 @@ const obj = {
     }
     return str;
   }
-};
-globalThis.IntlMessageFormat.__addLocaleData(obj);
+});

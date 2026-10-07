@@ -13,7 +13,7 @@ export const deepComparePlayList = function deepComparePlayList(current, playLis
       tmp4 = !Array.isArray(playList);
     }
     let tmp5 = !tmp4;
-    if (tmp5) {
+    if (!tmp4) {
       const joined = current.join("");
       tmp5 = joined === playList.join("");
     }

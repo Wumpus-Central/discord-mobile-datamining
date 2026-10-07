@@ -3,14 +3,14 @@
 // Module 664 (mapToArray)
 
 export default function mapToArray(size) {
-  let sum;
-  let closure_0 = -1;
+  c0 = -1;
   const ArrayResult = Array(size.size);
-  let closure_1 = ArrayResult;
+  closure_1 = ArrayResult;
   const item = size.forEach((item, index) => {
-    closure_0 = closure_0 + 1;
+    const sum = c0 + 1;
+    c0 = sum;
     const items = [index, item];
-    closure_1[closure_0] = items;
+    ArrayResult[sum] = items;
   });
   return ArrayResult;
 };

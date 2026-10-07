@@ -4,6 +4,8 @@
 import _mod13982 from "module_13982" /* 13982 */;
 import currencies2 from "currencies" /* 14066 */;
 
+require = arg1;
+const dependencyMap = arg6;
 function isSupportedCurrency(arr3, locale) {
   let str = locale;
   if (undefined === locale) {
@@ -14,7 +16,7 @@ function isSupportedCurrency(arr3, locale) {
     const memoizedNumberFormat = _mod13982.createMemoizedNumberFormat(str, obj);
     const str2 = memoizedNumberFormat.format(123);
     if (str2.substring(0, 3) !== arr3) {
-      if (str2.substring(str2.length - 3) !== arr3) {
+      if (str3.substring(str3.length - 3) !== arr3) {
         return true;
       }
     }
@@ -24,7 +26,6 @@ function isSupportedCurrency(arr3, locale) {
 }
 
 export const getSupportedCurrencies = function getSupportedCurrencies(locale) {
-  let num;
   const items = [];
   const currencies = currencies2.currencies;
   for (let num = 0; num < currencies.length; num = num + 1) {

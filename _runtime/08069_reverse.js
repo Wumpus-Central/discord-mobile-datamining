@@ -3,9 +3,10 @@
 // Module 8069 (reverse)
 
 export default function reverse(arg0) {
-  let callResult = arg0;
-  if (null != arg0) {
-    callResult = reverse.call(arg0);
+  if (null == arg0) {
+    return arg0;
+  } else {
+    const call = reverse.call;
+    typeof call === "unknown" ? reverse() : call(arg0);
   }
-  return callResult;
 };

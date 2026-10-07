@@ -1,138 +1,68 @@
 // === Module 1588: ? ===
 
 // Module 1588
-import Fragment from "Fragment" /* 21 */;
 import BaseNavigationContainer from "BaseNavigationContainer" /* 1493 */;
 import _mod1589 from "module_1589" /* 1589 */;
-import react2 from "react" /* 1591 */;
+import _mod1591 from "module_1591" /* 1591 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let _require, closure_1, dependencyMap, navigation;
 
+require = fn;
 let closure_2 = ["children", "id", "initialRouteName", "layout", "screenLayout", "screenListeners", "screenOptions", "UNSTABLE_routeNamesChangeBehavior", "UNSTABLE_router"];
-const jsx = Fragment.jsx;
+const jsx = fn(21).jsx;
 
 export const createStandardNavigationFactories = function createStandardNavigationFactories(arg0, arg1, arg2) {
-  let closure_0;
-  let obj2;
-  let obj3;
-  let type;
-  let version;
   _require = arg1;
   dependencyMap = arg2;
   ({ type, version, NavigatorContent: closure_2 } = arg0);
   if ("standard" !== type) {
     let str3 = "unknown type.";
-    const _Error2 = Error;
     if (typeof type === "string") {
       const _HermesInternal2 = HermesInternal;
       str3 = "type \"" + type + "\".";
     }
-    const self3 = this;
-    const self4 = this;
-    const _Error21 = new _Error2("createStandardNavigationFactories only works with standard navigator objects, but got navigator of " + str3);
-    throw _Error21;
+    const error = new Error("createStandardNavigationFactories only works with standard navigator objects, but got navigator of " + str3);
+    throw error;
   } else if (1 !== version) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const self = this;
-    const self2 = this;
-    const error = new Error("createStandardNavigationFactories only works with version 1 of standard navigator objects, but got version " + version + ".");
-    throw error;
+    const error1 = new Error("createStandardNavigationFactories only works with version 1 of standard navigator objects, but got version " + version + ".");
+    throw error1;
   } else {
     let obj = {
-      createNavigator: obj2.createNavigatorFactory(function StandardNavigationNavigator(UNSTABLE_routeNamesChangeBehavior) {
-          let UNSTABLE_router;
-          let children;
-          let id;
-          let initialRouteName;
-          let layout;
-          let screenLayout;
-          let screenListeners;
-          let screenOptions;
-          let obj = BaseNavigationContainer;
-          const navigationBuilder = obj.useNavigationBuilder(closure_0, UNSTABLE_routeNamesChangeBehavior);
-          const obj3 = _mod1589;
-          closure_1 = obj3.useBuildHref();
-          let tmp = react2;
-          if ("preloadedRoutes" in navigationBuilder.state) {
-            let combined;
-            const _Array = Array;
-            if (Array.isArray(navigationBuilder.state.preloadedRoutes)) {
-              const routes = navigationBuilder.state.routes;
-              combined = routes.concat(navigationBuilder.state.preloadedRoutes);
-            }
-            const tmp2Result = tmp2(combined.map((key) => {
+      createNavigator: require("BaseNavigationContainer").createNavigatorFactory(function StandardNavigationNavigator(UNSTABLE_routeNamesChangeBehavior) {
+          const navigationBuilder = BaseNavigationContainer.useNavigationBuilder(closure_0, UNSTABLE_routeNamesChangeBehavior);
+          closure_1 = _mod1589.useBuildHref();
+          let tmp2 = _mod1591;
+          let flag = tmp2.useMemoArray;
+          if (!("preloadedRoutes" in navigationBuilder.state)) {
+            let routes1 = navigationBuilder.state.routes;
+            const flagResult = flag(routes1.map((key) => {
               const tmp = closure_1(key.name, key.params);
-              const items = [, ];
-              const obj = { key: key.key, name: key.name, params: key.params, href: tmp };
-              items[0] = obj;
+              const items = [{ key: key.key, name: key.name, params: key.params, href: tmp }, ];
               const items1 = [, , , ];
               ({ key: arr2[0], name: arr2[1], params: arr2[2] } = key);
               items1[3] = tmp;
               items[1] = items1;
               return items;
             }));
-            closure_2 = tmp2Result;
-            let items = [navigationBuilder.state.index, tmp2Result];
-            const memo = react.useMemo(() => ({ index: navigationBuilder.state.index, routes }), items);
-            const obj2 = {};
-            const routes2 = memo.routes;
-            const iter = routes2[Symbol.iterator]();
-            const nextResult = iter.next();
-            while (iter !== undefined) {
-              let tmp12 = nextResult;
-              let describeResult = navigationBuilder.descriptors[nextResult.key];
-              if (describeResult == null) {
-                describeResult = navigationBuilder.describe(tmp12, true);
-              }
-              let obj4 = { options: null, render: null };
-              ({ options: obj5.options, render: obj5.render } = describeResult);
-              obj2[tmp12.key] = obj4;
-              continue;
-            }
-            let items1 = [navigationBuilder.navigation, navigationBuilder.state.key];
-            const items2 = [navigationBuilder.navigation];
-            const memo1 = react.useMemo(() => {
-              let obj = {
-                navigate(arg0, arg1) {
-                  navigation = closure_1_0.navigation;
-                  const dispatch = navigation.dispatch;
-                  const obj = { target: closure_1_0.state.key };
-                  const CommonActions = navigationBuilder(closure_1[3]).CommonActions;
-                  const merged = Object.assign(CommonActions.navigate(arg0, arg1));
-                  dispatch(obj);
-                },
-                back() {
-                  navigation = navigationBuilder.navigation;
-                  navigation.goBack();
-                }
-              };
-              return obj;
-            }, items1);
-            let tmp19Result;
-            const memo2 = react.useMemo(() => ({ emit: navigationBuilder.navigation.emit }), items2);
-            if (closure_1 != null) {
-              const obj7 = { state: null, navigation: null };
-              ({ state: obj6.state, navigation: obj6.navigation } = navigationBuilder);
-              tmp19Result = tmp19(obj7);
-            }
-            ({ children, id, initialRouteName, layout, screenLayout, screenListeners, screenOptions, UNSTABLE_routeNamesChangeBehavior, UNSTABLE_router } = UNSTABLE_routeNamesChangeBehavior);
-            const NavigationContent = navigationBuilder.NavigationContent;
-            let merged = Object.assign(_objectWithoutProperties(UNSTABLE_routeNamesChangeBehavior, closure_2));
-            const merged1 = Object.assign(tmp19Result);
-            return <NavigationContent>{null}</NavigationContent>;
+            closure_2 = flagResult;
+            let items = [navigationBuilder.state.index, flagResult];
+            const routes2 = noop.useMemo(() => ({ index: navigationBuilder.state.index, routes: flagResult }), items).routes;
+            tmp2 = routes2[Symbol.iterator]();
+            flag = true;
+          } else {
+            const _Array = Array;
           }
-          combined = navigationBuilder.state.routes;
+          const routes = navigationBuilder.state.routes;
+          routes1 = routes.concat(navigationBuilder.state.preloadedRoutes);
         }),
-      createScreen: obj3.createScreenFactory()
+      createScreen: null
     };
-    let tmp = _require;
-    const tmp2 = dependencyMap;
-    obj2 = require("BaseNavigationContainer");
-    obj3 = require("BaseNavigationContainer");
+    let obj2 = require("BaseNavigationContainer");
+    obj.createScreen = require("BaseNavigationContainer").createScreenFactory();
     return obj;
   }
 };

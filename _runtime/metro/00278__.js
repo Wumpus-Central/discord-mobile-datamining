@@ -1,36 +1,29 @@
 // === Module 278: ? ===
 
 // Module 278
-import SyntheticError from "SyntheticError" /* 189 */;
+import _mod189 from "module_189" /* 189 */;
 
-const SyntheticErrorDefault = SyntheticError;
+const _modDef189 = _mod189;
 
+require = arg1;
+importDefault = arg2;
+const dependencyMap = arg6;
 
 export default {
   showErrorDialog(error) {
     error = error.error;
-    let tmp = error;
-    const componentStack = error.componentStack;
-    if (!(error instanceof Error)) {
-      let syntheticError;
-      if (typeof error === "string") {
-        const self = this;
-        const self2 = this;
-        syntheticError = new SyntheticError.SyntheticError(error);
-      } else {
-        const self3 = this;
-        const self4 = this;
-        syntheticError = new SyntheticError.SyntheticError("Unspecified error");
+    if (error instanceof Error) {
+      try {
+        error.componentStack = error.componentStack;
+        error.isComponentError = true;
+        _modDef189.handleException(error, false);
+        return false;
+      } catch (err) {
       }
-      tmp = syntheticError;
+    } else if (typeof error === "string") {
+      let syntheticError = new _mod189.SyntheticError(error);
+    } else {
+      syntheticError = new _mod189.SyntheticError("Unspecified error");
     }
-    try {
-      tmp.componentStack = componentStack;
-      tmp.isComponentError = true;
-    } catch (err) {
-    }
-    const obj = SyntheticErrorDefault;
-    obj.handleException(tmp, false);
-    return false;
   }
 };

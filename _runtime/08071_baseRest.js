@@ -8,6 +8,5 @@ import overRest from "overRest" /* 5004 */;
 
 export default function baseRest(arg0, arg1) {
   const tmp = shortOut;
-  const tmp2 = overRest;
-  return tmp(tmp2(arg0, arg1, identity), "" + arg0);
+  return tmp(overRest(arg0, arg1, identity), "" + arg0);
 };

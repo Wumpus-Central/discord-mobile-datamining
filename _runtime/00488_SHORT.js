@@ -13,15 +13,12 @@ export default {
   BOTTOM: ToastAndroid.BOTTOM,
   CENTER: ToastAndroid.CENTER,
   show(arg0, arg1) {
-    const obj = ToastAndroid;
-    obj.show(arg0, arg1);
+    ToastAndroid.show(arg0, arg1);
   },
   showWithGravity(arg0, arg1, arg2) {
-    const obj = ToastAndroid;
-    obj.showWithGravity(arg0, arg1, arg2);
+    ToastAndroid.showWithGravity(arg0, arg1, arg2);
   },
   showWithGravityAndOffset(arg0, arg1, arg2, arg3, arg4) {
-    const obj = ToastAndroid;
-    const result = obj.showWithGravityAndOffset(arg0, arg1, arg2, arg3, arg4);
+    const result = ToastAndroid.showWithGravityAndOffset(arg0, arg1, arg2, arg3, arg4);
   }
 };

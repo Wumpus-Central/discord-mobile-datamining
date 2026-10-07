@@ -1,32 +1,32 @@
 // === Module 311: ? ===
 
 // Module 311
-import Fragment from "Fragment" /* 21 */;
-import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
-import _mod38 from "module_38" /* 38 */;
-import deepDiffer from "deepDiffer" /* 147 */;
-import get_hairlineWidth from "get hairlineWidth" /* 254 */;
+import _modAll27 from "module_27" /* 27 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import get_VirtualizedListDefault from "get VirtualizedList" /* 312 */;
-import memoizeOneDefault from "memoizeOne" /* 327 */;
+import areInputsEqualDefault from "areInputsEqual" /* 327 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import metroImportDefault from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-let importDefault;
 
+const FlatList = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -35,22 +35,26 @@ function _isNativeReflectConstruct() {
   }
 }
 let closure_4 = ["numColumns", "columnWrapperStyle", "removeClippedSubviews", "strictMode"];
-const jsx = Fragment.jsx;
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
 class FlatList {
   constructor(arg0) {
-    let constructResult;
-    const self = this;
-    let tmp = _classCallCheck(this, FlatList);
-    let items = [arg0];
-    let obj = _getPrototypeOf(FlatList);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+    self = this;
+    tmp = metroRequire(this, FlatList);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_8;
+    obj = closure_8(FlatList);
+    tmp3 = closure_7;
+    if (closure_11()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    let tmp3Result = metroImportDefault(self, constructResult);
-    let closure_0 = tmp3Result;
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
     tmp3Result._virtualizedListPairs = [];
     tmp3Result._captureRef = (_listRef) => {
       closure_0._listRef = _listRef;
@@ -61,7 +65,6 @@ class FlatList {
         num = 1;
       }
       if (num > 1) {
-        let num2;
         const items = [];
         for (let num2 = 0; num2 < num; num2 = num2 + 1) {
           let sum = arg1 * num + num2;
@@ -78,14 +81,13 @@ class FlatList {
       if (null != arg0) {
         const _Object = Object;
         if (typeof Object(arg0).length === "number") {
-          let length;
           let num = closure_0.props.numColumns;
           if (num == null) {
             num = 1;
           }
           if (num > 1) {
             const _Math = Math;
-            length = Math.ceil(arg0.length / num);
+            let length = Math.ceil(arg0.length / num);
           } else {
             length = arg0.length;
           }
@@ -95,86 +97,72 @@ class FlatList {
       return 0;
     };
     tmp3Result._keyExtractor = (arr, arg1) => {
-      let joined;
       closure_0 = arg1;
       let num = closure_0.props.numColumns;
-      const tmp = closure_0;
       if (num == null) {
         num = 1;
       }
-      let keyExtractor = tmp.props.keyExtractor;
+      let keyExtractor = closure_0.props.keyExtractor;
       if (keyExtractor == null) {
-        keyExtractor = closure_2_1(closure_2_3[9]).keyExtractor;
+        keyExtractor = get_VirtualizedListDefault.keyExtractor;
       }
       if (num > 1) {
         const _Array = Array;
-        const tmp7 = FlatList(closure_2_3[10]);
-        tmp7(Array.isArray(arr), "FlatList: Encountered internal consistency error, expected each item to consist of an array with 1-%s columns; instead, received a single item.", num);
+        FlatList(38)(Array.isArray(arr), "FlatList: Encountered internal consistency error, expected each item to consist of an array with 1-%s columns; instead, received a single item.", num);
         const mapped = arr.map((item, index) => keyExtractor(item, closure_0 * num + index));
-        joined = mapped.join(":");
+        let joined = mapped.join(":");
+        const tmp7 = FlatList(38);
       } else {
         joined = keyExtractor(arr, arg1);
       }
       return joined;
     };
     tmp3Result._renderer = (arg0, arg1, arg2, arg3, arg4) => {
-      let obj;
-      let row;
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      let closure_2 = arg2;
-      let num = arg3;
-      if (arg3 == null) {
-        num = 1;
-      }
+      closure_0 = arg0;
+      closure_1 = arg1;
+      closure_2 = arg2;
       function render(arg0) {
 
       }
       function renderProp(arg0) {
-        let _default;
-        let item;
         const separators = arg0;
         if (num > 1) {
           ({ item, index: closure_1 } = arg0);
           const _Array = Array;
+          separators(num[10])(Array.isArray(item), "Expected array of items with numColumns > 1");
+          let obj2 = { style: null, children: null };
           const tmp11 = separators(num[10]);
-          tmp11(Array.isArray(item), "Expected array of items with numColumns > 1");
-          let obj2 = {
-            style: _default.compose(row.row, closure_2),
-            children: item.map((item, index) => {
-                const obj = { item, index: closure_1 * num + index, separators: separators.separators };
-                if (typeof render === "function") {
-                  let tmp2Result;
-                  if (separators) {
-                    const obj2 = {};
-                    const merged = Object.assign(obj);
-                    tmp2Result = closure_1_10(tmp, obj2);
-                  } else {
-                    tmp2Result = null;
-                    if (closure_1) {
-                      tmp2Result = tmp2(obj);
-                    }
-                  }
-                  let tmp8 = null;
-                  if (null != tmp2Result) {
-                    const obj3 = { children: tmp2Result };
-                    tmp8 = closure_3_10(React.Fragment, obj3, index);
-                  }
-                  return tmp8;
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              })
-          };
           const tmp16 = closure_1(num[11]);
-          _default = separators(num[12]).default;
+          obj2.style = separators(num[12]).default.compose(row.row, closure_2);
+          obj2.children = item.map((item, index) => {
+            const obj = { item, index: closure_1_1 * num + index, separators: separators.separators };
+            if (typeof render === "function") {
+              if (separators) {
+                const obj2 = {};
+                const merged = Object.assign(obj);
+                let tmp2Result = closure_1_10(tmp, obj2);
+              } else {
+                tmp2Result = null;
+                if (closure_1) {
+                  tmp2Result = tmp2(obj);
+                }
+              }
+              let tmp8 = null;
+              if (null != tmp2Result) {
+                const obj3 = { children: tmp2Result };
+                tmp8 = < key={index}>{tmp2Result}</>;
+              }
+              return tmp8;
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          });
           return closure_1_10(tmp16, obj2);
         } else if (typeof render === "function") {
-          let tmp3Result;
           if (separators) {
             let obj = {};
             let merged = Object.assign(arg0);
-            tmp3Result = closure_1_10(tmp2, obj);
+            let tmp3Result = closure_1_10(tmp2, obj);
           } else {
             tmp3Result = null;
             if (closure_1) {
@@ -188,40 +176,35 @@ class FlatList {
       }
       if (arg0) {
         let obj2 = { ListItemComponent: renderProp };
-        obj = obj2;
+        let obj = obj2;
       } else {
         obj = { renderItem: renderProp };
       }
       return obj;
     };
-    tmp3Result._memoizedRenderer = memoizeOneDefault(tmp3Result._renderer);
-    tmp3Result._checkProps(tmp3Result.props);
-    let props = tmp3Result.props;
+    tmp3Result._memoizedRenderer = closure_1(closure_3[13])(tmp3Result._renderer);
+    _checkPropsResult = tmp3Result._checkProps(tmp3Result.props);
+    props = tmp3Result.props;
     if (tmp3Result.props.viewabilityConfigCallbackPairs) {
-      const prop = props.viewabilityConfigCallbackPairs;
-      tmp3Result._virtualizedListPairs = prop.map((viewabilityConfig) => {
-        const obj = { viewabilityConfig: viewabilityConfig.viewabilityConfig, onViewableItemsChanged: closure_0._createOnViewableItemsChanged(viewabilityConfig.onViewableItemsChanged) };
-        return obj;
-      });
+      prop = props.viewabilityConfigCallbackPairs;
+      tmp3Result._virtualizedListPairs = prop.map((viewabilityConfig) => ({ viewabilityConfig: viewabilityConfig.viewabilityConfig, onViewableItemsChanged: closure_0._createOnViewableItemsChanged(viewabilityConfig.onViewableItemsChanged) }));
     } else if (props.onViewableItemsChanged) {
-      const prop1 = tmp3Result._virtualizedListPairs;
-      let obj2 = {
-        viewabilityConfig: tmp3Result.props.viewabilityConfig,
-        onViewableItemsChanged: tmp3Result._createOnViewableItemsChanged(() => {
-            const items = [...arguments];
-            FlatList(closure_2_3[10])(closure_0.props.onViewableItemsChanged, "Changing the nullability of onViewableItemsChanged is not supported. Once a function or null is supplied that cannot be changed.");
-            const props = closure_0.props;
-            const items1 = [...items];
-            return props.onViewableItemsChanged.apply(items1);
-          })
-      };
-      const push = prop1.push;
-      let arr = push(obj2);
+      prop1 = tmp3Result._virtualizedListPairs;
+      obj1 = { viewabilityConfig: null, onViewableItemsChanged: null };
+      obj1.viewabilityConfig = tmp3Result.props.viewabilityConfig;
+      obj1.onViewableItemsChanged = tmp3Result._createOnViewableItemsChanged(() => {
+        const items = [...arguments];
+        FlatList(38)(closure_0.props.onViewableItemsChanged, "Changing the nullability of onViewableItemsChanged is not supported. Once a function or null is supplied that cannot be changed.");
+        const props = closure_0.props;
+        const items1 = [...items];
+        return props.onViewableItemsChanged.apply(items1);
+      });
+      arr1 = prop1.push(obj1);
     }
     return tmp3Result;
   }
 }
-_inherits(FlatList, react.PureComponent);
+_inherits(FlatList, noop.PureComponent);
 const entry = {
   key: "scrollToEnd",
   value: function scrollToEnd(arg0) {
@@ -317,24 +300,17 @@ let items = [
   {
     key: "componentDidUpdate",
     value: function componentDidUpdate(numColumns) {
-      _mod38(numColumns.numColumns === this.props.numColumns, "Changing numColumns on the fly is not supported. Change the key prop on FlatList when changing the number of columns to force a fresh render of the component.");
-      _mod38(null == numColumns.onViewableItemsChanged === (null == this.props.onViewableItemsChanged), "Changing onViewableItemsChanged nullability on the fly is not supported");
-      const tmp3 = _mod38;
-      const obj = deepDiffer;
-      tmp3(!obj.default(numColumns.viewabilityConfig, this.props.viewabilityConfig), "Changing viewabilityConfig on the fly is not supported");
-      _mod38(numColumns.viewabilityConfigCallbackPairs === this.props.viewabilityConfigCallbackPairs, "Changing viewabilityConfigCallbackPairs on the fly is not supported");
+      FlatList(38)(numColumns.numColumns === this.props.numColumns, "Changing numColumns on the fly is not supported. Change the key prop on FlatList when changing the number of columns to force a fresh render of the component.");
+      FlatList(38)(null == numColumns.onViewableItemsChanged === (null == this.props.onViewableItemsChanged), "Changing onViewableItemsChanged nullability on the fly is not supported");
+      const tmp3 = FlatList(38);
+      tmp3(!FlatList(147).default(numColumns.viewabilityConfig, this.props.viewabilityConfig), "Changing viewabilityConfig on the fly is not supported");
+      FlatList(38)(numColumns.viewabilityConfigCallbackPairs === this.props.viewabilityConfigCallbackPairs, "Changing viewabilityConfigCallbackPairs on the fly is not supported");
       this._checkProps(this.props);
     }
   },
   {
     key: "_checkProps",
     value: function _checkProps(arg0) {
-      let columnWrapperStyle;
-      let getItem;
-      let getItemCount;
-      let horizontal;
-      let onViewableItemsChanged;
-      let viewabilityConfigCallbackPairs;
       ({ getItem, onViewableItemsChanged } = arg0);
       let num = this.props.numColumns;
       ({ getItemCount, horizontal, columnWrapperStyle, viewabilityConfigCallbackPairs } = arg0);
@@ -342,21 +318,21 @@ let items = [
         num = 1;
       }
       let tmp4 = !getItem;
-      const tmp3 = _mod38;
       if (!getItem) {
         tmp4 = !getItemCount;
       }
-      tmp3(tmp4, "FlatList does not support custom data formats.");
+      FlatList(38)(tmp4, "FlatList does not support custom data formats.");
       if (num > 1) {
-        _mod38(!horizontal, "numColumns does not support horizontal.");
+        FlatList(38)(!horizontal, "numColumns does not support horizontal.");
       } else {
-        _mod38(!columnWrapperStyle, "columnWrapperStyle not supported for single column lists");
+        FlatList(38)(!columnWrapperStyle, "columnWrapperStyle not supported for single column lists");
       }
-      const tmpResult = _mod38;
+      const tmp3 = FlatList(38);
       if (onViewableItemsChanged) {
         onViewableItemsChanged = viewabilityConfigCallbackPairs;
       }
-      tmpResult(!onViewableItemsChanged, "FlatList does not support setting both onViewableItemsChanged and viewabilityConfigCallbackPairs.");
+      FlatList(38)(!onViewableItemsChanged, "FlatList does not support setting both onViewableItemsChanged and viewabilityConfigCallbackPairs.");
+      const tmpResult = FlatList(38);
     }
   },
   {
@@ -373,12 +349,14 @@ let items = [
       }
       item = item.item;
       const item1 = item.forEach((item, index) => {
-        _mod38(null != item.index, "Missing index!");
+        FlatList(38)(null != item.index, "Missing index!");
         const sum = item.index * num + index;
-        const push = items.push;
-        const obj = { item, key: keyExtractor(item, sum), index: sum };
+        const obj = {};
         const merged = Object.assign(item);
-        push(obj);
+        obj.item = item;
+        obj.key = keyExtractor(item, sum);
+        obj.index = sum;
+        items.push(obj);
       });
     }
   },
@@ -386,10 +364,8 @@ let items = [
     key: "_createOnViewableItemsChanged",
     value: function _createOnViewableItemsChanged(onViewableItemsChanged) {
       const self = this;
-      let closure_0 = onViewableItemsChanged;
+      closure_0 = onViewableItemsChanged;
       return (viewableItems) => {
-        let items;
-        let items1;
         let num = items1.props.numColumns;
         if (num == null) {
           num = 1;
@@ -403,9 +379,9 @@ let items = [
             const changed = viewableItems.changed;
             const item1 = changed.forEach((item) => self._pushMultiColumnViewable(items, item));
             const obj = { viewableItems: items1, changed: items };
-            items(obj);
+            tmp(obj);
           } else {
-            items(viewableItems);
+            tmp(viewableItems);
           }
         }
       };
@@ -414,32 +390,26 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let columnWrapperStyle;
-      let numColumns;
-      let removeClippedSubviews;
-      let strictMode;
       const self = this;
       const props = this.props;
       ({ numColumns, columnWrapperStyle, removeClippedSubviews, strictMode } = props);
-      const obj = { removeClippedSubviews };
+      const obj = {};
+      const merged = Object.assign(_objectWithoutProperties(props, closure_4));
+      ({ _getItem: obj.getItem, _getItemCount: obj.getItemCount, _keyExtractor: obj.keyExtractor, _captureRef: obj.ref, _virtualizedListPairs: obj.viewabilityConfigCallbackPairs } = self);
       const tmp = undefined !== strictMode && strictMode;
       const tmp2 = _objectWithoutProperties(props, closure_4);
-      const tmp3 = tmp ? self._memoizedRenderer : self._renderer;
-      const VirtualizedList = get_VirtualizedListDefault.VirtualizedList;
-      const merged = Object.assign(tmp2);
-      ({ _getItem: obj.getItem, _getItemCount: obj.getItemCount, _keyExtractor: obj.keyExtractor, _captureRef: obj.ref, _virtualizedListPairs: obj.viewabilityConfigCallbackPairs } = self);
-      const obj2 = javaScriptFlagGetterAll;
-      const result = obj2.shouldUseRemoveClippedSubviewsAsDefaultOnIOS();
+      const tmp3 = undefined !== strictMode && strictMode ? self._memoizedRenderer : self._renderer;
+      const result = _modAll27.shouldUseRemoveClippedSubviewsAsDefaultOnIOS();
       if (removeClippedSubviews == null) {
         removeClippedSubviews = true;
       }
+      obj.removeClippedSubviews = removeClippedSubviews;
       const merged1 = Object.assign(tmp3(self.props.ListItemComponent, self.props.renderItem, columnWrapperStyle, numColumns, self.props.extraData));
-      return <VirtualizedList removeClippedSubviews={removeClippedSubviews} />;
+      return jsx(get_VirtualizedListDefault.VirtualizedList, {});
     }
   }
 ];
 const importDefaultResultResult = _createClass(FlatList, items);
-let _default = get_hairlineWidth.default;
-let closure_12 = _default.create({ row: { flexDirection: "row" } });
+let closure_12 = fn(254).default.create({ row: { flexDirection: "row" } });
 
 export default importDefaultResultResult;

@@ -14,8 +14,6 @@ export default {
       return c1;
     } else {
       const _Error = Error;
-      const self = this;
-      const self2 = this;
       const error = new Error("Illegal byte order value. Faulty image.");
       throw error;
     }

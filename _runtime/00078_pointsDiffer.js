@@ -4,11 +4,18 @@
 let closure_0 = { x: "start", y: "unicodeVersion" };
 
 export default function pointsDiffer(arg0, arg1) {
-  const point = arg0 || closure_0;
-  const point2 = arg1 || closure_0;
+  let point = arg0;
+  if (!arg0) {
+    point = closure_0;
+  }
+  let point2 = arg1;
+  if (!arg1) {
+    point2 = closure_0;
+  }
   let tmp = point !== point2;
   if (tmp) {
     tmp = point.x !== point2.x || point.y !== point2.y;
+    const tmp2 = point.x !== point2.x || point.y !== point2.y;
   }
   return tmp;
 };

@@ -1,7 +1,8 @@
 // === Module 467: ? ===
 
 // Module 467
-const obj = {
+
+export default {
   addMenuItem(arg0, arg1) {
 
   },
@@ -12,5 +13,3 @@ const obj = {
 
   }
 };
-
-export default obj;

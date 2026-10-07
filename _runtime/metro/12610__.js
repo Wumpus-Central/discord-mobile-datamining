@@ -1,10 +1,11 @@
 // === Module 12610: ? ===
 
 // Module 12610
-import _mod12576 from "module_12576" /* 12576 */;
+import errorCallback from "errorCallback" /* 12576 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
 export const addTracingExtensions = function addTracingExtensions() {
-  const obj = _mod12576;
-  const result = obj.registerSpanErrorInstrumentation();
+  const result = errorCallback.registerSpanErrorInstrumentation();
 };

@@ -2,7 +2,7 @@
 
 // Module 987 (eventOriginIntegration)
 
-export const eventOriginIntegration = () => ({
+export () => ({
   name: "EventOrigin",
   setupOnce() {
 
@@ -17,4 +17,4 @@ export const eventOriginIntegration = () => ({
     tags.tags["event.environment"] = "javascript";
     return tags;
   }
-});
+})

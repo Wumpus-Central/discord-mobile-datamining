@@ -1,17 +1,19 @@
 // === Module 4629: ? ===
 
 // Module 4629
-import installedNitro1 from "installedNitro1" /* 4621 */;
+import _mod4621 from "module_4621" /* 4621 */;
 
+require = arg1;
+const dependencyMap = arg6;
 const map = new Map();
 
 export const getHybridObjectConstructor = function getHybridObjectConstructor(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   if (map.has(arg0)) {
     return map.get(arg0);
   } else {
     function constructorFunc() {
-      const NitroModules = installedNitro1.NitroModules;
+      const NitroModules = _mod4621.NitroModules;
       const hybridObject = NitroModules.createHybridObject(closure_0);
       const prototypeOf = Object.getPrototypeOf(hybridObject);
       if (constructorFunc.prototype !== prototypeOf) {
@@ -26,7 +28,7 @@ export const getHybridObjectConstructor = function getHybridObjectConstructor(ar
     const obj2 = {
       value(arg0) {
           if (!constructorFunc.prototypeInitialized) {
-            const NitroModules = installedNitro1.NitroModules;
+            const NitroModules = _mod4621.NitroModules;
             const _Object = Object;
             constructorFunc.prototype = Object.getPrototypeOf(NitroModules.createHybridObject(closure_0));
             constructorFunc.prototypeInitialized = true;

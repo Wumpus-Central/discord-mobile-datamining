@@ -2,38 +2,36 @@
 
 // Module 708
 import _mod703 from "module_703" /* 703 */;
-import UNKNOWN_FUNCTION from "UNKNOWN_FUNCTION" /* 709 */;
+import _mod709 from "module_709" /* 709 */;
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const isMatchingPattern = function isMatchingPattern(arr, test) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
-  const obj = _mod703;
-  let isStringResult = obj.isString(arr);
-  if (isStringResult) {
-    let isMatch;
-    const tmpResult = _mod703;
+  const isStringResult = _mod703.isString(arr);
+  if (!isStringResult) {
+    return isStringResult;
+  } else {
     if (tmpResult.isRegExp(test)) {
-      isMatch = test.test(arr);
+      let isMatch = test.test(arr);
     } else {
-      const tmpResult2 = _mod703;
-      isMatch = tmpResult2.isString(test);
+      isMatch = _mod703.isString(test);
       if (isMatch) {
-        let hasItem;
         if (flag) {
-          hasItem = arr === test;
+          let hasItem = arr === test;
         } else {
           hasItem = arr.includes(test);
         }
-        isMatch = hasItem;
       }
+      const tmpResult2 = _mod703;
     }
-    isStringResult = isMatch;
+    tmpResult = _mod703;
   }
-  return isStringResult;
 };
 export const safeJoin = function safeJoin(__v_isVNode, arg1) {
   if (Array.isArray(__v_isVNode)) {
@@ -42,30 +40,30 @@ export const safeJoin = function safeJoin(__v_isVNode, arg1) {
     if (0 < __v_isVNode.length) {
       try {
         const push = items.push;
-        const obj = _mod703;
-        if (obj.isVueViewModel(__v_isVNode[num])) {
-          const tmp3Result = UNKNOWN_FUNCTION;
-          push(tmp3Result.getVueInternalName(__v_isVNode[num]));
+        if (obj.isVueViewModel(tmp2)) {
+          push(_mod709.getVueInternalName(tmp2));
+          const tmp4Result = _mod709;
         } else {
           const _String = String;
-          push(String(__v_isVNode[num]));
+          push(String(tmp2));
         }
+        num = num + 1;
+        obj = _mod703;
       } catch (err) {
-        items.push("[value cannot be serialized]");
+        arr.push(tmp);
       }
-      num = num + 1;
     }
     return items.join(arg1);
   } else {
     return "";
   }
 };
-export const snipLine = function snipLine(arr, arg1) {
+export const snipLine = function snipLine(arr, lineno) {
   if (arr.length <= 150) {
     return arr;
   } else {
-    let tmp = arg1;
-    if (arg1 > arr.length) {
+    let tmp = lineno;
+    if (lineno > length) {
       tmp = length;
     }
     const _Math = Math;
@@ -75,10 +73,10 @@ export const snipLine = function snipLine(arr, arg1) {
     }
     const _Math2 = Math;
     let bound = Math.min(num3 + 140, length);
-    if (bound > arr.length - 5) {
+    if (bound > length - 5) {
       bound = length;
     }
-    if (bound === arr.length) {
+    if (bound === length) {
       const _Math3 = Math;
       num3 = Math.max(bound - 140, 0);
     }
@@ -89,7 +87,7 @@ export const snipLine = function snipLine(arr, arg1) {
       combined = "'{snip} " + substr;
     }
     let text = combined;
-    if (bound < arr.length) {
+    if (bound < length) {
       text = `${tmp6} {snip}`;
     }
     return text;
@@ -105,44 +103,40 @@ export const stringMatchesSomePattern = function stringMatchesSomePattern(transa
     flag = false;
   }
   return items.some((test) => {
-    const obj2 = _mod703;
-    let isStringResult = obj2.isString(transaction);
-    if (isStringResult) {
-      let isMatch;
-      const tmpResult = _mod703;
+    const isStringResult = _mod703.isString(transaction);
+    if (!isStringResult) {
+      return isStringResult;
+    } else {
       if (tmpResult.isRegExp(test)) {
-        isMatch = test.test(transaction);
+        let isMatch = test.test(transaction);
       } else {
-        const tmpResult2 = _mod703;
-        isMatch = tmpResult2.isString(test);
+        isMatch = _mod703.isString(test);
         if (isMatch) {
-          let hasItem;
           if (flag) {
-            hasItem = transaction === test;
+            let hasItem = transaction === test;
           } else {
             hasItem = transaction.includes(test);
           }
-          isMatch = hasItem;
         }
+        const tmpResult2 = _mod703;
       }
-      isStringResult = isMatch;
+      tmpResult = _mod703;
     }
-    return isStringResult;
   });
 };
-export const truncate = function truncate(message) {
+export const truncate = function truncate(str) {
   let num = maxValueLength;
   if (maxValueLength === undefined) {
     num = 0;
   }
-  let combined = message;
-  if (typeof message === "string") {
-    combined = message;
+  let combined = str;
+  if (typeof str === "string") {
+    combined = str;
     if (0 !== num) {
-      combined = message;
-      if (message.length > num) {
+      combined = str;
+      if (str.length > num) {
         const _HermesInternal = HermesInternal;
-        combined = "" + message.slice(0, num) + "...";
+        combined = "" + str.slice(0, num) + "...";
       }
     }
   }

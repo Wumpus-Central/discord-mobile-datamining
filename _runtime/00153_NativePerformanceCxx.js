@@ -2,10 +2,10 @@
 
 // Module 153 (NativePerformanceCxx)
 import _modDef154 from "module_154" /* 154 */;
-import setUpPerformanceModernDefault from "setUpPerformanceModern" /* 155 */;
+import _modDef155 from "module_155" /* 155 */;
 
 if (_modDef154) {
-  setUpPerformanceModernDefault();
+  _modDef155();
 } else if (!global.performance) {
   const obj = {
     mark() {

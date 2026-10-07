@@ -1,12 +1,10 @@
 // === Module 621: hashSet ===
 
 // Module 621 (hashSet)
-import getNative from "getNative" /* 611 */;
+import _mod611 from "module_611" /* 611 */;
 
 
 export default function hashSet(arg0, arg1) {
-  let __data__;
-  let str;
   const self = this;
   ({ __data__, size } = this);
   let num = 1;
@@ -14,8 +12,8 @@ export default function hashSet(arg0, arg1) {
     num = 0;
   }
   self.size = size + num;
-  if (!getNative) {
-    str = arg1;
+  if (!_mod611) {
+    let str = arg1;
   } else {
     str = "__lodash_hash_undefined__";
   }

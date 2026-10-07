@@ -1,8 +1,7 @@
 // === Module 385: ? ===
 
 // Module 385
-import bezier from "bezier" /* 364 */;
-import _modDef379 from "module_379" /* 379 */;
+import AnimationDefault from "Animation" /* 379 */;
 import _readOnlyError from "_readOnlyError" /* 377 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
@@ -11,16 +10,20 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
-let inOutResult;
-
+const TimingAnimation = global;
+const require = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -29,50 +32,54 @@ function _isNativeReflectConstruct() {
   }
 }
 class TimingAnimation {
-  constructor(duration) {
-    let constructResult;
-    let easing;
-    const self = this;
-    _classCallCheck(this, TimingAnimation);
-    const items = [duration];
-    const obj = _getPrototypeOf(TimingAnimation);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+  constructor(arg0) {
+    self = this;
+    tmp = closure_4(this, TimingAnimation);
+    items = [];
+    items[0] = global;
+    tmp2 = metroRequire;
+    obj = metroRequire(TimingAnimation);
+    tmp3 = hasOwnProperty;
+    if (closure_8()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    const tmp3Result = hasOwnProperty(self, constructResult);
-    ({ toValue: tmp6._toValue, easing } = duration);
+    tmp3Result = tmp3(self, constructResult);
+    ({ toValue: tmp6._toValue, easing } = global);
     if (easing == null) {
-      let tmp7 = inOutResult;
-      if (!tmp7) {
-        const _default = bezier.default;
+      tmp7 = closure_3;
+      if (!closure_3) {
+        tmp8 = closure_1;
+        tmp9 = c2;
+        _default = closure_1(c2[7]).default;
         inOutResult = _default.inOut(_default.ease);
+        closure_3 = inOutResult;
         tmp7 = inOutResult;
       }
       easing = tmp7;
     }
     tmp3Result._easing = easing;
-    let num = duration.duration;
+    num = global.duration;
     if (num == null) {
       num = 500;
     }
     tmp3Result._duration = num;
-    let num2 = duration.delay;
+    num2 = global.delay;
     if (num2 == null) {
       num2 = 0;
     }
     tmp3Result._delay = num2;
-    tmp3Result._platformConfig = duration.platformConfig;
+    tmp3Result._platformConfig = global.platformConfig;
     return tmp3Result;
   }
 }
-_inherits(TimingAnimation, _modDef379);
+_inherits(TimingAnimation, AnimationDefault);
 const entry = {
   key: "__getNativeAnimationConfig",
   value: function __getNativeAnimationConfig() {
-    let num;
     const self = this;
     const items = [];
     const rounded = Math.round(this._duration / 16.666666666666668);
@@ -80,52 +87,49 @@ const entry = {
       let arr = items.push(self._easing(num / rounded));
     }
     items.push(self._easing(1));
-    const obj = { type: "frames", frames: items, toValue: self._toValue, iterations: self.__iterations, platformConfig: self._platformConfig, debugID: self.__getDebugID() };
-    return obj;
+    return { type: "frames", frames: items, toValue: self._toValue, iterations: self.__iterations, platformConfig: self._platformConfig, debugID: self.__getDebugID() };
   }
 };
 let items = [
   entry,
   {
     key: "start",
-    value: function start(_fromValue, _onUpdate, arg2, arg3, __makeNative) {
-      const f149944 = () => self.onUpdate();
-      let closure_0 = __makeNative;
-      const self = this;
-      const tmp = _get(_getPrototypeOf(TimingAnimation.prototype), "start", this);
-      let closure_1 = tmp;
+    value: function start(_fromValue, _onUpdate, arg2, arg3, self) {
+      self = this;
+      const tmp = _get(metroRequire(TimingAnimation.prototype), "start", this);
+      closure_1 = tmp;
       let fn = tmp;
       if (typeof tmp === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      const items = [_fromValue, _onUpdate, arg2, arg3, __makeNative];
+      const items = [_fromValue, _onUpdate, arg2, arg3, self];
       fn(items);
       self._fromValue = _fromValue;
       self._onUpdate = _onUpdate;
       if (self._delay) {
         const _setTimeout = setTimeout;
         self._timeout = setTimeout(function start() {
-          self._startTime = Date.now();
-          if (!self.__startAnimationIfNative(closure_0)) {
-            if (0 === self._duration) {
-              self._onUpdate(self._toValue);
-              self.__notifyAnimationEnd({ finished: true });
+          closure_1._startTime = Date.now();
+          if (!closure_1.__startAnimationIfNative(self)) {
+            if (0 === closure_1._duration) {
+              closure_1._onUpdate(closure_1._toValue);
+              closure_1.__notifyAnimationEnd({ finished: true });
             } else {
               const _requestAnimationFrame = requestAnimationFrame;
-              self._animationFrame = requestAnimationFrame(f149944);
+              closure_1._animationFrame = requestAnimationFrame(() => closure_1_1.onUpdate());
             }
           }
         }, self._delay);
       } else {
         const _Date = Date;
         self._startTime = Date.now();
-        if (!self.__startAnimationIfNative(__makeNative)) {
+        if (!self.__startAnimationIfNative(self)) {
           if (0 === self._duration) {
             self._onUpdate(self._toValue);
             self.__notifyAnimationEnd({ finished: true });
           } else {
             let _requestAnimationFrame = requestAnimationFrame;
-            self._animationFrame = requestAnimationFrame(f149944);
+            self._animationFrame = requestAnimationFrame(() => closure_1_1.onUpdate());
           }
         }
       }
@@ -134,10 +138,6 @@ let items = [
   {
     key: "onUpdate",
     value: function onUpdate() {
-      let _fromValue;
-      let _fromValue2;
-      let _onUpdate;
-      let _onUpdate2;
       const self = this;
       const timestamp = Date.now();
       if (timestamp >= this._startTime + this._duration) {
@@ -163,14 +163,14 @@ let items = [
     key: "stop",
     value: function stop() {
       const self = this;
-      let fn = _get(_getPrototypeOf(TimingAnimation.prototype), "stop", this);
+      let fn = _get(metroRequire(TimingAnimation.prototype), "stop", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
       clearTimeout(self._timeout);
       if (null != self._animationFrame) {
-        global.cancelAnimationFrame(self._animationFrame);
+        TimingAnimation.cancelAnimationFrame(self._animationFrame);
       }
       self.__notifyAnimationEnd({ finished: false });
     }

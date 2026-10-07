@@ -1,12 +1,12 @@
 // === Module 489: ToastAndroid ===
 
 // Module 489 (ToastAndroid)
-import _mod490 from "module_490" /* 490 */;
+import _modDef490 from "module_490" /* 490 */;
 
-const _modDef490 = _mod490;
+const require = globalThis.__r;
 
-for (const key10013 in _mod490) {
-  exports[key10013] = _mod490[key10013];
+for (const key10013 in require("module_490")) {
+  arg5[key10013] = require("module_490")[key10013];
   continue;
 }
 

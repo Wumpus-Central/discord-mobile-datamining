@@ -2,10 +2,9 @@
 
 // Module 7328
 function fetchFromObject(FileTypes, arr) {
-  let tmp2;
   const index = arr.indexOf(".");
   if (index > -1) {
-    tmp2 = fetchFromObject(FileTypes[arr.slice(arr, 0, index)], arr.slice(index + 1));
+    let tmp2 = fetchFromObject(FileTypes[arr.slice(arr, 0, index)], arr.slice(index + 1));
   } else {
     tmp2 = FileTypes[arr];
   }
@@ -20,9 +19,6 @@ export const getFileChunk = function getFileChunk(fileChunk) {
   let uint8Array = fileChunk;
   if (fileChunk instanceof ArrayBuffer) {
     const _Uint8Array = Uint8Array;
-    const self = this;
-    const self2 = this;
-    let tmp = fileChunk;
     uint8Array = new Uint8Array(fileChunk);
   }
   if (!Array.isArray(fileChunk)) {
@@ -32,8 +28,6 @@ export const getFileChunk = function getFileChunk(fileChunk) {
       if (!(fileChunk instanceof Uint8Array)) {
         const _TypeError = TypeError;
         const _HermesInternal = HermesInternal;
-        const self3 = this;
-        const self4 = this;
         const typeError = new TypeError("Expected the `file` argument to be of type `Array<number>`, `Uint8Array`, or `ArrayBuffer`, got `" + typeof fileChunk + "`");
         throw typeError;
       }
@@ -51,8 +45,6 @@ export const getFileChunk = function getFileChunk(fileChunk) {
     return arr;
   } else {
     const _TypeError2 = TypeError;
-    const self5 = this;
-    const self6 = this;
     const typeError1 = new TypeError("File content contains illegal values");
     throw typeError1;
   }
@@ -101,14 +93,16 @@ export const isftypStringIncluded = function isftypStringIncluded(fileChunk) {
 };
 export const isFlvStringIncluded = function isFlvStringIncluded(fileChunk) {
   const substr = fileChunk.slice(0, 3);
-  const textDecoder = new TextDecoder();
-  const decode = textDecoder.decode;
+  const decoder = new TextDecoder();
   const uint8Array = new Uint8Array(substr);
-  const decodeResult = decode(uint8Array);
-  return decodeResult.includes("FLV");
+  return decoder.decode(uint8Array).includes("FLV");
 };
 export const isFileContaineJfiforExifHeader = function isFileContaineJfiforExifHeader(arg0) {
-  return 224 === tmp || 225 === tmp;
+  let tmp2 = 224 === tmp;
+  if (!tmp2) {
+    tmp2 = 225 === tmp;
+  }
+  return tmp2;
 };
 export const isAvifStringIncluded = function isAvifStringIncluded(fileChunk) {
   const substr = fileChunk.slice(4, 12);
@@ -117,7 +111,7 @@ export const isAvifStringIncluded = function isAvifStringIncluded(fileChunk) {
 };
 export const isHeicSignatureIncluded = function isHeicSignatureIncluded(fileChunk) {
   const mapped = fileChunk.map((item) => String.fromCharCode(item));
-  let closure_0 = mapped.join("");
+  closure_0 = mapped.join("");
   const items = ["ftypheic", "ftyphevc", "ftypmif1", "ftypmsf1"];
   return items.some((item) => closure_0.includes(item));
 };

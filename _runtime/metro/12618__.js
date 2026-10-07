@@ -2,14 +2,15 @@
 
 // Module 12618
 import _mod12580 from "module_12580" /* 12580 */;
-import _mod12585 from "module_12585" /* 12585 */;
+import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12585 */;
 import _mod12608 from "module_12608" /* 12608 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
 export const logSpanEnd = function logSpanEnd(spanContext) {
   if (_mod12608.DEBUG_BUILD) {
-    const tmpResult = _mod12585;
-    const spanToJSONResult = tmpResult.spanToJSON(spanContext);
+    const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(spanContext);
     const description = spanToJSONResult.description;
     let str = "< unknown name >";
     if (undefined !== description) {
@@ -21,8 +22,8 @@ export const logSpanEnd = function logSpanEnd(spanContext) {
       str2 = op;
     }
     const spanId = spanContext.spanContext().spanId;
+    const tmpResult = spanTimeInputToSeconds;
     let str3 = "";
-    const tmpResult2 = _mod12585;
     if (tmpResult2.getRootSpan(spanContext) === spanContext) {
       str3 = "root ";
     }
@@ -30,14 +31,12 @@ export const logSpanEnd = function logSpanEnd(spanContext) {
     const combined = "[Tracing] Finishing \"" + str2 + "\" " + str3 + "span \"" + str + "\" with ID " + spanId;
     const logger = _mod12580.logger;
     logger.log(combined);
+    tmpResult2 = spanTimeInputToSeconds;
   }
 };
 export const logSpanStart = function logSpanStart(spanContext) {
-  let description2;
-  let op2;
   if (_mod12608.DEBUG_BUILD) {
-    const tmpResult = _mod12585;
-    const spanToJSONResult = tmpResult.spanToJSON(spanContext);
+    const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(spanContext);
     const description = spanToJSONResult.description;
     let str = "< unknown name >";
     if (undefined !== description) {
@@ -49,11 +48,10 @@ export const logSpanStart = function logSpanStart(spanContext) {
       str2 = op;
     }
     const parent_span_id = spanToJSONResult.parent_span_id;
-    const spanId = spanContext.spanContext().spanId;
-    const tmpResult4 = _mod12585;
-    const spanIsSampledResult = tmpResult4.spanIsSampled(spanContext);
-    const tmpResult5 = _mod12585;
-    const rootSpan = tmpResult5.getRootSpan(spanContext);
+    const tmpResult = spanTimeInputToSeconds;
+    const tmpResult4 = spanTimeInputToSeconds;
+    const spanIsSampledResult = spanTimeInputToSeconds.spanIsSampled(spanContext);
+    const rootSpan = spanTimeInputToSeconds.getRootSpan(spanContext);
     let str3 = "unsampled";
     if (spanIsSampledResult) {
       str3 = "sampled";
@@ -69,16 +67,15 @@ export const logSpanStart = function logSpanStart(spanContext) {
     const _HermesInternal3 = HermesInternal;
     items[1] = "name: " + str;
     const _HermesInternal4 = HermesInternal;
-    items[2] = "ID: " + spanId;
+    items[2] = "ID: " + spanContext.spanContext().spanId;
     if (parent_span_id) {
       const _HermesInternal5 = HermesInternal;
       items.push("parent ID: " + parent_span_id);
     }
     if (rootSpan !== spanContext) {
-      const tmpResult6 = _mod12585;
-      ({ op: op2, description: description2 } = tmpResult6.spanToJSON(rootSpan));
+      const tmpResult6 = spanTimeInputToSeconds;
+      ({ op: op2, description: description2 } = spanTimeInputToSeconds.spanToJSON(rootSpan));
       const _HermesInternal6 = HermesInternal;
-      tmpResult6.spanToJSON(rootSpan);
       items.push("root ID: " + rootSpan.spanContext().spanId);
       if (op2) {
         const _HermesInternal7 = HermesInternal;
@@ -88,9 +85,11 @@ export const logSpanStart = function logSpanStart(spanContext) {
         const _HermesInternal8 = HermesInternal;
         items.push("root description: " + description2);
       }
+      const spanToJSONResult1 = spanTimeInputToSeconds.spanToJSON(rootSpan);
     }
     const logger = _mod12580.logger;
     const _HermesInternal9 = HermesInternal;
     logger.log("" + combined + "\n  " + items.join("\n  "));
+    const tmpResult5 = spanTimeInputToSeconds;
   }
 };

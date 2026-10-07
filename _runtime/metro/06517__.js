@@ -1,36 +1,26 @@
 // === Module 6517: ? ===
 
 // Module 6517
-import _mod6026 from "module_6026" /* 6026 */;
-import SlideFromRightIOS from "SlideFromRightIOS" /* 6518 */;
-import forHorizontalIOS from "forHorizontalIOS" /* 6520 */;
-import _mod6522 from "module_6522" /* 6522 */;
-import MaybeScreenContainer2 from "MaybeScreenContainer" /* 6524 */;
-import CardContainer2 from "CardContainer" /* 6525 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-let _require, dependencyMap, flatten;
-
-let Platform;
-let StyleSheet;
-let c9;
-let hasOwnProperty;
-let metroImportAll;
+let CardStack = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -38,10 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-({ Animated: hasOwnProperty, Platform, StyleSheet } = react_native);
-const View = react_native.View;
-({ jsx: metroImportAll, jsxs: c9 } = Fragment);
-let obj = { default: SlideFromRightIOS.DefaultTransition, fade: SlideFromRightIOS.ModalFadeTransition, fade_from_bottom: SlideFromRightIOS.FadeFromBottomAndroid, fade_from_right: SlideFromRightIOS.FadeFromRightAndroid, none: SlideFromRightIOS.DefaultTransition, reveal_from_bottom: SlideFromRightIOS.RevealFromBottomAndroid, scale_from_center: SlideFromRightIOS.ScaleFromCenterAndroid, slide_from_left: SlideFromRightIOS.SlideFromLeftIOS, slide_from_right: SlideFromRightIOS.SlideFromRightIOS, slide_from_bottom: SlideFromRightIOS.BottomSheetAndroid };
+get_ActivityIndicator = fn(17);
+({ Animated: hasOwnProperty, Platform, StyleSheet } = get_ActivityIndicator);
+const View = get_ActivityIndicator.View;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let obj = { default: fn(6518).DefaultTransition, fade: fn(6518).ModalFadeTransition, fade_from_bottom: fn(6518).FadeFromBottomAndroid, fade_from_right: fn(6518).FadeFromRightAndroid, none: fn(6518).DefaultTransition, reveal_from_bottom: fn(6518).RevealFromBottomAndroid, scale_from_center: fn(6518).ScaleFromCenterAndroid, slide_from_left: fn(6518).SlideFromLeftIOS, slide_from_right: fn(6518).SlideFromRightIOS, slide_from_bottom: fn(6518).BottomSheetAndroid };
 let closure_12 = Object.freeze({ options: {} });
 function getInterpolationIndex(arg0, arg1) {
 
@@ -61,20 +53,18 @@ function getDistanceFromOptions(size, gestureDirection, arg2) {
     gestureDirection1 = gestureDirection.gestureDirection;
   }
   if (gestureDirection1) {
-    const obj2 = _mod6522;
-    return obj2.getDistanceForDirection(size, gestureDirection.gestureDirection, arg2);
+    return CardStack(6522).getDistanceForDirection(size, gestureDirection.gestureDirection, arg2);
   } else {
-    let tmp3;
     let presentation;
     if (gestureDirection != null) {
       presentation = gestureDirection.presentation;
     }
     if ("modal" === presentation) {
-      gestureDirection = SlideFromRightIOS.ModalTransition.gestureDirection;
-      tmp3 = require;
+      gestureDirection = CardStack(6518).ModalTransition.gestureDirection;
+      let tmp3 = CardStack;
     } else {
-      tmp3 = require;
-      gestureDirection = SlideFromRightIOS.DefaultTransition.gestureDirection;
+      tmp3 = CardStack;
+      gestureDirection = CardStack(6518).DefaultTransition.gestureDirection;
     }
     let animation;
     if (gestureDirection != null) {
@@ -91,8 +81,7 @@ function getDistanceFromOptions(size, gestureDirection, arg2) {
       }
       gestureDirection = gestureDirection2;
     }
-    const tmp3Result = tmp3(6522);
-    return tmp3Result.getDistanceForDirection(size, gestureDirection, arg2);
+    return tmp3(6522).getDistanceForDirection(size, gestureDirection, arg2);
   }
 }
 function getProgressFromGesture(arg0, arg1, arg2, arg3) {
@@ -100,51 +89,51 @@ function getProgressFromGesture(arg0, arg1, arg2, arg3) {
 }
 class CardStack {
   constructor(arg0) {
-    let constructResult;
-    const self = this;
-    const tmp = _classCallCheck(this, CardStack);
-    const items = [arg0];
-    obj = _getPrototypeOf(CardStack);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+    self = this;
+    tmp = c2(this, CardStack);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_4;
+    obj = closure_4(CardStack);
+    tmp3 = closure_3;
+    if (c10()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    const tmp3Result = c3(self, constructResult);
-    let closure_0 = tmp3Result;
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
     tmp3Result.handleLayout = (nativeEvent) => {
       let layout = nativeEvent.nativeEvent.layout;
       let height = layout.height;
-      const width = layout.width;
-      let closure_2 = { width, height };
-      closure_0.setState((layout, arg1) => {
-        let tmp2;
+      let width = layout.width;
+      layout = { width, height };
+      state.setState((layout, arg1) => {
         if (height !== layout.layout.height) {
           obj = { layout, headerHeights: null };
           const scenes = layout.scenes;
-          if (typeof closure_2_16 === "function") {
-            let closure_1 = tmp6;
+          if (typeof getHeaderHeights === "function") {
+            width = tmp6;
             layout = tmp7;
-            let closure_3 = tmp8;
-            let closure_4 = tmp4;
-            let closure_5 = tmp9;
+            closure_3 = tmp8;
+            closure_4 = tmp4;
             obj.headerHeights = scenes.reduce((acc, descriptor, index) => {
-              const options = descriptor.descriptor.options;
+              options = descriptor.descriptor.options;
               let headerStatusBarHeight = options.headerStatusBarHeight;
               if (undefined === headerStatusBarHeight) {
                 let num = 0;
                 if (!closure_2) {
-                  num = top.top;
+                  num = scenes.top;
                 }
                 headerStatusBarHeight = num;
               }
               let headerStyle = options.headerStyle;
-              flatten = flatten.flatten;
               if (!headerStyle) {
                 headerStyle = {};
               }
-              const flattenResult = flatten(headerStyle);
+              const flattenResult = closure_2_6.flatten(headerStyle);
               if ("height" in flattenResult) {
                 if (typeof flattenResult.height === "number") {
                   height = flattenResult.height;
@@ -178,18 +167,23 @@ class CardStack {
                     if (!tmp16) {
                       const cardStyleInterpolator = descriptor.descriptor.options.cardStyleInterpolator;
                       if (typeof closure_2_14 === "function") {
-                        flag = (cardStyleInterpolator === closure_2_0(width[9]).forModalPresentationIOS || "forModalPresentationIOS" === cardStyleInterpolator.name) && 0 !== num5;
-                        const tmp20 = (cardStyleInterpolator === closure_2_0(width[9]).forModalPresentationIOS || "forModalPresentationIOS" === cardStyleInterpolator.name) && 0 !== num5;
+                        let tmp20 = cardStyleInterpolator === height(width[9]).forModalPresentationIOS;
+                        if (!tmp20) {
+                          tmp20 = "forModalPresentationIOS" === cardStyleInterpolator.name;
+                        }
+                        if (tmp20) {
+                          tmp20 = 0 !== num5;
+                        }
+                        flag = tmp20;
                       } else {
                         throw new TypeError("Trying to call a non-function");
                       }
                     }
-                    const key = descriptor.route.key;
                     if (typeof height !== "number") {
-                      const obj2 = closure_2_0(width[10]);
-                      height = obj2.getDefaultHeaderHeight(closure_4, flag, headerStatusBarHeight);
+                      height = height(width[10]).getDefaultHeaderHeight(closure_4, flag, headerStatusBarHeight);
+                      const obj2 = height(width[10]);
                     }
-                    acc[key] = height;
+                    acc[descriptor.route.key] = height;
                     return acc;
                   } else {
                     throw new TypeError("Trying to call a non-function");
@@ -198,9 +192,9 @@ class CardStack {
                   throw new TypeError("Trying to call a non-function");
                 }
               }
-              height = closure_5[descriptor.route.key];
+              height = tmp9[descriptor.route.key];
             }, {});
-            tmp2 = obj;
+            let tmp2 = obj;
           } else {
             throw new TypeError("Trying to call a non-function");
           }
@@ -211,218 +205,200 @@ class CardStack {
       });
     };
     tmp3Result.handleHeaderLayout = (arg0) => {
-      let closure_129_0;
-      let closure_129_1;
-      ({ route: closure_129_0, height: closure_129_1 } = arg0);
-      closure_0.setState((headerHeights) => {
-        let obj2;
+      ({ route: closure_0, height: closure_1 } = arg0);
+      key.setState((headerHeights) => {
         headerHeights = headerHeights.headerHeights;
         let tmp3 = null;
         if (headerHeights[key.key] !== closure_1_1) {
-          obj = { headerHeights: obj2 };
-          obj2 = {};
+          obj = { headerHeights: null };
+          const obj2 = {};
           const merged = Object.assign(headerHeights);
           obj2[tmp.key] = tmp2;
+          obj.headerHeights = obj2;
           tmp3 = obj;
         }
         return tmp3;
       });
     };
     tmp3Result.getFocusedRoute = () => {
-      const state = closure_0.props.state;
+      state = state.props.state;
       return state.routes[state.index];
     };
     tmp3Result.getPreviousScene = (route) => {
-      const scenes = closure_0.state.scenes;
-      obj = { route: route.route };
-      const previousRoute = closure_0.props.getPreviousRoute(obj);
+      const scenes = state.state.scenes;
+      const previousRoute = state.props.getPreviousRoute({ route: route.route });
       if (previousRoute) {
         return scenes.find((descriptor) => descriptor.descriptor.route.key === previousRoute.key);
       }
+      obj = { route: route.route };
     };
-    let obj2 = { routes: [], scenes: [], gestures: {}, layout: _mod6026.SafeAreaProviderCompat.initialMetrics.frame, descriptors: tmp3Result.props.descriptors, activeStates: [], headerHeights: {} };
-    tmp3Result.state = obj2;
+    obj1 = { routes: [], scenes: [], gestures: {}, layout: closure_0(closure_1[10]).SafeAreaProviderCompat.initialMetrics.frame, descriptors: tmp3Result.props.descriptors, activeStates: [], headerHeights: {} };
+    tmp3Result.state = obj1;
     return tmp3Result;
   }
 }
-_inherits(CardStack, react.Component);
+_inherits(CardStack, noop.Component);
 const entry = {
   key: "render",
   value: function render() {
-    let closure_20;
-    let closure_5;
-    let closure_9;
-    let detachInactiveScreens;
-    let headerHeights;
-    let items;
-    let items2;
-    let items3;
-    let onCloseRoute;
-    let onGestureCancel;
-    let onGestureEnd;
-    let onGestureStart;
-    let onOpenRoute;
-    let onTransitionEnd;
-    let onTransitionStart;
-    let renderHeader;
-    let state;
     const self = this;
     const props = this.props;
     ({ insets: dependencyMap, state } = props);
     const routes = props.routes;
     ({ openingRouteKeys: _getPrototypeOf, closingRouteKeys: closure_5, onOpenRoute: StyleSheet, onCloseRoute: View, renderHeader } = props);
     ({ isParentHeaderShown: closure_9, isParentModal: _isNativeReflectConstruct, onTransitionStart: obj, onTransitionEnd: closure_12, onGestureStart: getInterpolationIndex, onGestureEnd: getIsModalPresentation, onGestureCancel: getIsModal, detachInactiveScreens } = props);
-    const tmp2 = undefined === detachInactiveScreens || detachInactiveScreens;
-    const enabled = tmp2;
+    const enabled = tmp;
     const state2 = self.state;
     const scenes = state2.scenes;
     const layout = state2.layout;
     ({ gestures: closure_19, activeStates: closure_20, headerHeights } = state2);
-    const tmp3 = state.routes[state.index];
-    const key = tmp3;
     const scenes1 = self.state.scenes;
-    const tmp4 = headerHeights[tmp3.key];
     const substr = scenes1.slice(-2);
     let someResult = substr.some((descriptor) => {
-      let headerShown;
-      let headerTransparent;
-      let options = descriptor.descriptor.options;
+      options = descriptor.descriptor.options;
       if (options == null) {
         options = {};
       }
       ({ headerTransparent, headerShown } = options);
       let tmp = !headerTransparent;
-      const headerMode = options.headerMode;
       if (!headerTransparent) {
         tmp = false !== (undefined === headerShown || headerShown);
+        const tmp2 = undefined === headerShown || headerShown;
       }
       if (tmp) {
-        tmp = "screen" !== headerMode;
+        tmp = "screen" !== options.headerMode;
       }
       return !tmp;
     });
-    const require = someResult;
-    obj = { style: closure_19.container, children: items2 };
-    const obj2 = { mode: "float", layout, scenes, getPreviousScene: self.getPreviousScene, getFocusedRoute: self.getFocusedRoute, contentHeight: headerHeights[tmp3.key], onContentHeightChange: self.handleHeaderLayout, style: items };
-    items = [closure_19.floating, ];
+    CardStack = someResult;
+    obj = { style: closure_19.container, children: null };
+    const obj2 = { mode: "float", layout, scenes, getPreviousScene: self.getPreviousScene, getFocusedRoute: self.getFocusedRoute, contentHeight: headerHeights[state.routes[state.index].key], onContentHeightChange: self.handleHeaderLayout, style: null };
+    let items = [closure_19.floating, ];
     if (someResult) {
-      let obj3 = { height: tmp4 };
+      let obj3 = { height: headerHeights[tmp2.key] };
       const items1 = [obj3, closure_19.absolute];
       someResult = items1;
     }
     items[1] = someResult;
-    items2 = [renderHeader(obj2), ];
-    const obj4 = {
-      enabled: tmp2,
-      style: closure_19.container,
-      onLayout: self.handleLayout,
-      children: items3.map((key, index) => {
-        let CardContainer;
-        let autoHideHomeIndicator;
-        let bottom;
-        let freezeOnBlur;
-        let headerTransparent;
-        let items;
-        let left;
-        let obj3;
-        let right;
-        let tmp32;
-        let tmp33;
-        let tmp43;
-        let top;
-        const preloadedRoutes = state.preloadedRoutes;
-        const key2 = key.key.key;
-        const tmp = closure_19[key.key.key];
-        const hasItem = preloadedRoutes.includes(key) && !routes.includes(key);
-        const preloadedRoutes2 = state.preloadedRoutes;
-        if (preloadedRoutes2.includes(key.key)) {
-          if (routes.includes(key.key)) {
-            if (index >= routes.length) {
-              return null;
-            }
+    obj2.style = items;
+    const items2 = [renderHeader(obj2), ];
+    const obj4 = { enabled: undefined === detachInactiveScreens || detachInactiveScreens, style: closure_19.container, onLayout: self.handleLayout, children: null };
+    const items3 = [];
+    HermesBuiltin.arraySpread(state.preloadedRoutes, HermesBuiltin.arraySpread(routes, 0));
+    obj4.children = items3.map((key, index) => {
+      const preloadedRoutes = state.preloadedRoutes;
+      let hasItem = preloadedRoutes.includes(key);
+      if (hasItem) {
+        hasItem = !routes.includes(key);
+      }
+      const preloadedRoutes2 = state.preloadedRoutes;
+      if (preloadedRoutes2.includes(key)) {
+        if (routes.includes(key)) {
+          if (index >= routes.length) {
+            return null;
           }
         }
-        const options = tmp3.descriptor.options;
-        const headerShown = options.headerShown;
-        let num = 0;
-        const tmp7 = undefined === headerShown || headerShown;
-        ({ headerTransparent, freezeOnBlur, autoHideHomeIndicator } = options);
-        ({ top, right, bottom, left } = dependencyMap);
-        if (false !== tmp7) {
-          num = headerHeights[key.key];
-        }
-        if (typeof getInterpolationIndex === "function") {
-          let diff = index - 1;
-          let num3 = 0;
-          let num4 = 0;
-          if (0 <= diff) {
-            while (true) {
-              let tmp12 = scenes[diff];
-              let prop;
-              if (tmp12 != null) {
-                prop = tmp12.descriptor.options.cardStyleInterpolator;
-              }
+      }
+      options = tmp2.descriptor.options;
+      const headerShown = options.headerShown;
+      let num = 0;
+      ({ headerTransparent, freezeOnBlur, autoHideHomeIndicator } = options);
+      ({ top, right, bottom, left } = dependencyMap);
+      if (false !== tmp6) {
+        num = headerHeights[key.key];
+      }
+      if (typeof getInterpolationIndex === "function") {
+        let diff = index - 1;
+        let num3 = 0;
+        let num4 = 0;
+        if (0 <= diff) {
+          while (true) {
+            let tmp11 = scenes[diff];
+            let prop;
+            if (tmp11 != null) {
+              prop = tmp11.descriptor.options.cardStyleInterpolator;
+            }
+            num4 = num3;
+            if (prop !== tmp8) {
+              break;
+            } else {
+              num3 = num3 + 1;
+              diff = diff - 1;
               num4 = num3;
-              if (prop !== tmp9) {
+              if (0 > diff) {
                 break;
-              } else {
-                num3 = num3 + 1;
-                diff = diff - 1;
-                num4 = num3;
-                if (0 > diff) {
-                  break;
-                }
               }
             }
           }
-          if (typeof getIsModal === "function") {
-            let flag = true;
-            if (!tmp17) {
-              const cardStyleInterpolator = tmp3.descriptor.options.cardStyleInterpolator;
-              if (typeof getIsModalPresentation === "function") {
-                flag = (cardStyleInterpolator === forHorizontalIOS.forModalPresentationIOS || "forModalPresentationIOS" === cardStyleInterpolator.name) && 0 !== num4;
-                const tmp21 = (cardStyleInterpolator === forHorizontalIOS.forModalPresentationIOS || "forModalPresentationIOS" === cardStyleInterpolator.name) && 0 !== num4;
-              } else {
-                throw new TypeError("Trying to call a non-function");
+        }
+        if (typeof getIsModal === "function") {
+          let flag = true;
+          if (!tmp16) {
+            const cardStyleInterpolator = tmp2.descriptor.options.cardStyleInterpolator;
+            if (typeof getIsModalPresentation === "function") {
+              let tmp20 = cardStyleInterpolator === CardStack(6520).forModalPresentationIOS;
+              if (!tmp20) {
+                tmp20 = "forModalPresentationIOS" === cardStyleInterpolator.name;
               }
+              if (tmp20) {
+                tmp20 = 0 !== num4;
+              }
+              flag = tmp20;
+            } else {
+              throw new TypeError("Trying to call a non-function");
             }
-            let presentation;
-            if (scenes[index + 1] != null) {
-              presentation = tmp22.descriptor.options.presentation;
-            }
-            let detachPreviousScreen;
-            if (scenes[index + 1] != null) {
-              detachPreviousScreen = tmp24.descriptor.options.detachPreviousScreen;
-            }
-            let num5 = 0;
-            if (!hasItem) {
-              num5 = closure_20[index];
-            }
-            obj = { style: items, enabled, active: num5, freezeOnBlur, shouldFreeze: tmp32, homeIndicatorHidden: autoHideHomeIndicator, pointerEvents: "box-none", children: metroImportAll(CardContainer, obj3) };
-            items = [StyleSheet.absoluteFill];
-            tmp32 = 0 === num5;
-            const MaybeScreen = MaybeScreenContainer2.MaybeScreen;
-            if (tmp32) {
-              tmp32 = !hasItem;
-            }
-            obj3 = { index, interpolationIndex: num4, modal: flag, active: index === routes.length - 1, focused: tmp33, opening: _getPrototypeOf.includes(key.key.key), closing: Value.includes(key.key.key), layout, gesture: tmp, scene: scenes[index], safeAreaInsetTop: top, safeAreaInsetRight: right, safeAreaInsetBottom: bottom, safeAreaInsetLeft: left, onGestureStart: getInterpolationIndex, onGestureCancel: getIsModal, onGestureEnd: getIsModalPresentation, headerHeight: num, isParentHeaderShown, onHeaderHeightChange: null, getPreviousScene: null, getFocusedRoute: null, hasAbsoluteFloatHeader: tmp43, renderHeader, onOpenRoute: StyleSheet, onCloseRoute: View, onTransitionStart, onTransitionEnd, isNextScreenTransparent: "transparentModal" === presentation, detachCurrentScreen: false !== detachPreviousScreen, preloaded: hasItem };
-            tmp33 = key.key === key2;
-            CardContainer = CardContainer2.CardContainer;
-            ({ handleHeaderLayout: obj2.onHeaderHeightChange, getPreviousScene: obj2.getPreviousScene, getFocusedRoute: obj2.getFocusedRoute } = self);
-            tmp43 = require && !headerTransparent;
-            return metroImportAll(MaybeScreen, obj, key.key.key);
-          } else {
-            throw new TypeError("Trying to call a non-function");
           }
+          let presentation;
+          if (scenes[index + 1] != null) {
+            presentation = tmp21.descriptor.options.presentation;
+          }
+          let detachPreviousScreen;
+          if (scenes[index + 1] != null) {
+            detachPreviousScreen = tmp23.descriptor.options.detachPreviousScreen;
+          }
+          let num5 = 0;
+          if (!hasItem) {
+            num5 = closure_1_20[index];
+          }
+          obj = { style: null, enabled: null, active: null, freezeOnBlur: null, shouldFreeze: null, homeIndicatorHidden: null, pointerEvents: "box-none", children: null };
+          const items = [StyleSheet.absoluteFill];
+          obj.style = items;
+          obj.enabled = enabled;
+          obj.active = num5;
+          obj.freezeOnBlur = freezeOnBlur;
+          let tmp31 = 0 === num5;
+          if (tmp31) {
+            tmp31 = !hasItem;
+          }
+          obj.shouldFreeze = tmp31;
+          obj.homeIndicatorHidden = autoHideHomeIndicator;
+          const obj3 = { index, interpolationIndex: num4, modal: flag, active: index === routes.length - 1, focused: key.key === key.key, opening: _getPrototypeOf.includes(key.key), closing: Value.includes(key.key), layout, gesture: closure_1_19[key.key], scene: tmp2, safeAreaInsetTop: top, safeAreaInsetRight: right, safeAreaInsetBottom: bottom, safeAreaInsetLeft: left, onGestureStart, onGestureCancel, onGestureEnd, headerHeight: num, isParentHeaderShown, onHeaderHeightChange: null, getPreviousScene: null, getFocusedRoute: null, hasAbsoluteFloatHeader: null, renderHeader: null, onOpenRoute: null, onCloseRoute: null, onTransitionStart: null, onTransitionEnd: null, isNextScreenTransparent: null, detachCurrentScreen: null, preloaded: null };
+          ({ handleHeaderLayout: obj2.onHeaderHeightChange, getPreviousScene: obj2.getPreviousScene, getFocusedRoute: obj2.getFocusedRoute } = self);
+          let tmp42 = someResult;
+          if (someResult) {
+            tmp42 = !headerTransparent;
+          }
+          obj3.hasAbsoluteFloatHeader = tmp42;
+          obj3.renderHeader = renderHeader;
+          obj3.onOpenRoute = onOpenRoute;
+          obj3.onCloseRoute = onCloseRoute;
+          obj3.onTransitionStart = onTransitionStart;
+          obj3.onTransitionEnd = onTransitionEnd;
+          obj3.isNextScreenTransparent = "transparentModal" === presentation;
+          obj3.detachCurrentScreen = false !== detachPreviousScreen;
+          obj3.preloaded = hasItem;
+          obj.children = closure_2_8(CardStack(6525).CardContainer, obj3);
+          return closure_2_8(CardStack(6524).MaybeScreen, obj, key.key);
         } else {
           throw new TypeError("Trying to call a non-function");
         }
-      })
-    };
-    items3 = [];
-    const MaybeScreenContainer = MaybeScreenContainer2.MaybeScreenContainer;
-    HermesBuiltin.arraySpread(items3, state.preloadedRoutes, HermesBuiltin.arraySpread(items3, routes, 0));
-    items2[1] = renderHeader(MaybeScreenContainer, obj4);
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+      tmp6 = undefined === headerShown || headerShown;
+    });
+    items2[1] = renderHeader(CardStack(6524).MaybeScreenContainer, obj4);
+    obj.children = items2;
     return isParentHeaderShown(View, obj);
   }
 };
@@ -430,8 +406,7 @@ let items = [entry];
 const entry1 = {
   key: "getDerivedStateFromProps",
   value: function getDerivedStateFromProps(routes, routes2) {
-    let tmp18;
-    _require = routes;
+    CardStack = routes;
     dependencyMap = routes2;
     if (routes.routes === routes2.routes) {
       if (routes.descriptors === routes2.descriptors) {
@@ -439,58 +414,41 @@ const entry1 = {
       }
     }
     let items = [...routes.state.preloadedRoutes];
-    const reduced = items.reduce(function(acc, key) {
-      let options;
-      if ((routes.descriptors[key.key] || routes.preloadedDescriptors[key.key]) != null) {
+    const reduced = items.reduce((acc, key) => {
+      options = undefined;
+      if ((closure_0.descriptors[key.key] || closure_0.preloadedDescriptors[key.key]) != null) {
         options = tmp2.options;
       }
       if (!options) {
         options = {};
       }
       let str = options.animation;
-      let value = routes2.gestures[key.key];
+      value = closure_1.gestures[key.key];
       if (!value) {
-        const openingRouteKeys = routes.openingRouteKeys;
-        hasOwnProperty = hasOwnProperty.Value;
-        if (!openingRouteKeys.includes(key.key.key)) {
-          const preloadedRoutes = routes.state.preloadedRoutes;
+        const openingRouteKeys = closure_0.openingRouteKeys;
+        if (!openingRouteKeys.includes(key.key)) {
+          const preloadedRoutes = closure_0.state.preloadedRoutes;
           let num = 0;
-          const self = this;
-          const self2 = this;
-          value = new hasOwnProperty(num);
+          value = new Value.Value(num);
         } else if (str == null) {
           str = "default";
         }
         let options1;
-        const layout = tmp3.layout;
-        if ((routes.descriptors[key.key] || routes.preloadedDescriptors[key.key]) != null) {
+        if (tmp2 != null) {
           options1 = tmp2.options;
         }
-        num = getDistanceFromOptions(layout, options1, "rtl" === routes.direction);
+        num = getDistanceFromOptions(tmp3.layout, options1, "rtl" === closure_0.direction);
       }
       acc[key.key] = value;
       return acc;
     }, {});
-    const tmp2 = require("module_6534");
     let items1 = [...routes.state.preloadedRoutes];
-    const getModalRouteKeys = tmp2.getModalRouteKeys;
-    obj = {};
     let merged = Object.assign(routes.descriptors);
     let merged1 = Object.assign(routes.preloadedDescriptors);
-    let closure_3 = getModalRouteKeys(items1, obj);
+    const modalRouteKeys = CardStack(6534).getModalRouteKeys(items1, {});
     let items2 = [...routes.state.preloadedRoutes];
     const mapped = items2.map((key, index, arg2) => {
-      let items;
-      let items1;
-      let items2;
-      let items3;
-      let items4;
-      let items5;
-      let obj5;
-      let obj6;
-      let tmp59;
-      let tmp63;
-      const preloadedRoutes = routes.state.preloadedRoutes;
+      const preloadedRoutes = __memo.state.preloadedRoutes;
       const hasItem = preloadedRoutes.includes(key);
       let tmp3;
       if (!hasItem) {
@@ -500,274 +458,289 @@ const entry1 = {
       if (!hasItem) {
         tmp4 = arg2[index + 1];
       }
-      routes = tmp6;
-      const tmp8 = (hasItem ? routes.preloadedDescriptors : routes.descriptors)[key.key] || routes2.descriptors[key.key] || (routes2.scenes[index] ? routes2.scenes[index].descriptor : closure_12);
-      let tmp9 = tmp4;
-      if (tmp9) {
-        key = undefined;
-        const descriptors = tmp.descriptors;
-        if (tmp4 != null) {
-          key = tmp4.key;
-        }
-        let tmp12 = descriptors[key];
-        if (!tmp12) {
-          let key1;
-          const descriptors2 = routes2.descriptors;
+      __memo = tmp6;
+      const tmp8 = hasItem ? __memo.preloadedDescriptors : __memo.descriptors[key.key] || closure_1.descriptors[key.key];
+      if (tmp8) {
+        let tmp10 = tmp4;
+        if (tmp4) {
+          key = undefined;
           if (tmp4 != null) {
-            key1 = tmp4.key;
+            key = tmp4.key;
           }
-          tmp12 = descriptors2[key1];
+          let tmp13 = tmp.descriptors[key];
+          if (!tmp13) {
+            let key1;
+            if (tmp4 != null) {
+              key1 = tmp4.key;
+            }
+            tmp13 = closure_1.descriptors[key1];
+          }
+          let options1;
+          if (tmp13 != null) {
+            options1 = tmp13.options;
+          }
+          tmp10 = options1;
         }
-        let options1;
-        if (tmp12 != null) {
-          options1 = tmp12.options;
-        }
-        tmp9 = options1;
-      }
-      let tmp15 = tmp3;
-      if (tmp15) {
-        let key2;
-        const descriptors3 = tmp.descriptors;
-        if (tmp3 != null) {
-          key2 = tmp3.key;
-        }
-        let tmp18 = descriptors3[key2];
-        if (!tmp18) {
-          let key3;
-          const descriptors4 = routes2.descriptors;
+        let tmp16 = tmp3;
+        if (tmp3) {
+          let key2;
           if (tmp3 != null) {
-            key3 = tmp3.key;
+            key2 = tmp3.key;
           }
-          tmp18 = descriptors4[key3];
-        }
-        let options2;
-        if (tmp18 != null) {
-          options2 = tmp18.options;
-        }
-        tmp15 = options2;
-      }
-      if (index !== arg2.length - 1) {
-        let options;
-        let ModalTransition;
-        if (tmp9) {
-          let presentation;
-          if (tmp9 != null) {
-            presentation = tmp9.presentation;
-          }
-          options = tmp9;
-        }
-        let str2 = options.animation;
-        const hasItem1 = closure_3.includes(key.key);
-        if (str2 == null) {
-          str2 = "default";
-        }
-        let str3 = str2;
-        if (str2 == null) {
-          str3 = "default";
-        }
-        if ("default" !== str2) {
-          ModalTransition = obj[str2];
-        } else if ("transparentModal" === options.presentation) {
-          ModalTransition = SlideFromRightIOS.ModalFadeTransition;
-        } else {
-          if ("modal" !== options.presentation) {
-            if (!hasItem1) {
-              ModalTransition = SlideFromRightIOS.DefaultTransition;
+          let tmp19 = tmp.descriptors[key2];
+          if (!tmp19) {
+            let key3;
+            if (tmp3 != null) {
+              key3 = tmp3.key;
             }
+            tmp19 = closure_1.descriptors[key3];
           }
-          ModalTransition = SlideFromRightIOS.ModalTransition;
+          let options2;
+          if (tmp19 != null) {
+            options2 = tmp19.options;
+          }
+          tmp16 = options2;
         }
-        const gestureEnabled = options.gestureEnabled;
-        let gestureDirection = options.gestureDirection;
-        const tmp33 = undefined !== gestureEnabled && gestureEnabled;
-        if (undefined === gestureDirection) {
-          gestureDirection = ModalTransition.gestureDirection;
-        }
-        let transitionSpec = options.transitionSpec;
-        if (undefined === transitionSpec) {
-          transitionSpec = ModalTransition.transitionSpec;
-        }
-        let cardStyleInterpolator = options.cardStyleInterpolator;
-        if (undefined === cardStyleInterpolator) {
-          let forNoAnimation;
-          if ("none" !== str3) {
-            forNoAnimation = ModalTransition.cardStyleInterpolator;
+        if (index !== arg2.length - 1) {
+          if (tmp10) {
+            let presentation;
+            if (tmp10 != null) {
+              presentation = tmp10.presentation;
+            }
+            options = tmp10;
+          }
+          let str2 = options.animation;
+          const hasItem1 = closure_3.includes(key.key);
+          if (str2 == null) {
+            str2 = "default";
+          }
+          let str3 = str2;
+          if (str2 == null) {
+            str3 = "default";
+          }
+          if ("default" !== str2) {
+            let ModalTransition = obj[str2];
+          } else if ("transparentModal" === options.presentation) {
+            ModalTransition = CardStack(6518).ModalFadeTransition;
           } else {
-            forNoAnimation = forHorizontalIOS.forNoAnimation;
-          }
-          cardStyleInterpolator = forNoAnimation;
-        }
-        let headerStyleInterpolator = options.headerStyleInterpolator;
-        if (undefined === headerStyleInterpolator) {
-          headerStyleInterpolator = ModalTransition.headerStyleInterpolator;
-        }
-        let cardOverlayEnabled = options.cardOverlayEnabled;
-        if (undefined === cardOverlayEnabled) {
-          let tmp36 = "transparentModal" !== options.presentation;
-          if (!tmp36) {
-            if (typeof getIsModalPresentation === "function") {
-              tmp36 = cardStyleInterpolator === forHorizontalIOS.forModalPresentationIOS || "forModalPresentationIOS" === cardStyleInterpolator.name;
-              const tmp40 = cardStyleInterpolator === forHorizontalIOS.forModalPresentationIOS || "forModalPresentationIOS" === cardStyleInterpolator.name;
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          }
-          cardOverlayEnabled = tmp36;
-        }
-        let str10 = tmp8.options.headerMode;
-        if (str10 == null) {
-          let tmp41 = "modal" !== options.presentation && "transparentModal" !== options.presentation;
-          if (tmp41) {
-            let presentation1;
-            if (tmp9 != null) {
-              presentation1 = tmp9.presentation;
-            }
-            tmp41 = "modal" !== presentation1;
-          }
-          if (tmp41) {
-            let presentation2;
-            if (tmp9 != null) {
-              presentation2 = tmp9.presentation;
-            }
-            tmp41 = "transparentModal" !== presentation2;
-          }
-          str10 = "screen";
-          if (tmp41) {
-            if (typeof getIsModalPresentation === "function") {
-              str10 = "screen";
-              if (cardStyleInterpolator !== forHorizontalIOS.forModalPresentationIOS) {
-                const name = cardStyleInterpolator.name;
-                str10 = "screen";
+            if ("modal" !== options.presentation) {
+              if (!hasItem1) {
+                ModalTransition = CardStack(6518).DefaultTransition;
               }
-            } else {
-              throw new TypeError("Trying to call a non-function");
             }
+            ModalTransition = CardStack(6518).ModalTransition;
           }
-        }
-        const obj4 = { route: key, descriptor: obj5, progress: null, __memo: null };
-        const direction = tmp.direction;
-        obj5 = { options: obj6 };
-        const merged = Object.assign(tmp8);
-        obj6 = { animation: str2, cardOverlayEnabled, cardStyleInterpolator, gestureDirection, gestureEnabled: tmp33, headerStyleInterpolator, transitionSpec, headerMode: str10 };
-        const merged1 = Object.assign(tmp8.options);
-        const layout = routes2.layout;
-        if (typeof getProgressFromGesture === "function") {
-          let interpolateResult;
-          size = { width: Math.max(1, layout.width), height: Math.max(1, layout.height) };
-          const _Math = Math;
-          const _Math2 = Math;
-          const tmp57 = getDistanceFromOptions(size, tmp53, "rtl" === direction);
-          if (tmp57 > 0) {
-            const obj7 = { inputRange: items, outputRange: [1, 0] };
-            items = [0, tmp57];
-            interpolateResult = obj.interpolate(obj7);
-          } else {
-            const obj8 = { inputRange: items1, outputRange: [0, 1] };
-            items1 = [tmp57, 0];
-            interpolateResult = obj.interpolate(obj8);
+          const gestureEnabled = options.gestureEnabled;
+          let gestureDirection = options.gestureDirection;
+          if (undefined === gestureDirection) {
+            gestureDirection = ModalTransition.gestureDirection;
           }
-          const obj9 = { current: interpolateResult, next: tmp59, previous: tmp63 };
-          tmp59 = undefined;
-          if (obj3) {
-            let presentation3;
-            if (tmp9 != null) {
-              presentation3 = tmp9.presentation;
+          let transitionSpec = options.transitionSpec;
+          if (undefined === transitionSpec) {
+            transitionSpec = ModalTransition.transitionSpec;
+          }
+          const cardStyleInterpolator = options.cardStyleInterpolator;
+          if (undefined !== cardStyleInterpolator) {
+            let headerStyleInterpolator = options.headerStyleInterpolator;
+            if (undefined === headerStyleInterpolator) {
+              headerStyleInterpolator = ModalTransition.headerStyleInterpolator;
             }
-            if ("transparentModal" !== presentation3) {
-              const layout3 = routes2.layout;
-              if (typeof getProgressFromGesture === "function") {
-                let interpolateResult1;
-                const size1 = { width: Math.max(1, layout3.width), height: Math.max(1, layout3.height) };
-                const _Math3 = Math;
-                const _Math4 = Math;
-                const tmp55Result = getDistanceFromOptions(size1, tmp9, "rtl" === direction);
-                if (tmp55Result > 0) {
-                  const obj10 = { inputRange: items2, outputRange: [1, 0] };
-                  items2 = [0, tmp55Result];
-                  interpolateResult1 = obj3.interpolate(obj10);
+            let cardOverlayEnabled = options.cardOverlayEnabled;
+            if (undefined === cardOverlayEnabled) {
+              let tmp38 = "transparentModal" !== options.presentation;
+              if (!tmp38) {
+                if (typeof getIsModalPresentation === "function") {
+                  let tmp42 = cardStyleInterpolator === CardStack(6520).forModalPresentationIOS;
+                  if (!tmp42) {
+                    tmp42 = "forModalPresentationIOS" === cardStyleInterpolator.name;
+                  }
+                  tmp38 = tmp42;
                 } else {
-                  const obj11 = { inputRange: items3, outputRange: [0, 1] };
-                  items3 = [tmp55Result, 0];
-                  interpolateResult1 = obj3.interpolate(obj11);
+                  throw new TypeError("Trying to call a non-function");
                 }
-                tmp59 = interpolateResult1;
-              } else {
-                throw new TypeError("Trying to call a non-function");
+              }
+              cardOverlayEnabled = tmp38;
+            }
+            let str10 = tmp8.options.headerMode;
+            if (str10 == null) {
+              let tmp43 = "modal" !== options.presentation;
+              if (tmp43) {
+                tmp43 = "transparentModal" !== options.presentation;
+              }
+              if (tmp43) {
+                let presentation1;
+                if (tmp10 != null) {
+                  presentation1 = tmp10.presentation;
+                }
+                tmp43 = "modal" !== presentation1;
+              }
+              if (tmp43) {
+                let presentation2;
+                if (tmp10 != null) {
+                  presentation2 = tmp10.presentation;
+                }
+                tmp43 = "transparentModal" !== presentation2;
+              }
+              str10 = "screen";
+              if (tmp43) {
+                if (typeof getIsModalPresentation === "function") {
+                  str10 = "screen";
+                  if (cardStyleInterpolator !== CardStack(6520).forModalPresentationIOS) {
+                    const name = cardStyleInterpolator.name;
+                    str10 = "screen";
+                  }
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
               }
             }
-          }
-          tmp63 = undefined;
-          if (obj2) {
-            const layout2 = routes2.layout;
+            const obj4 = { route: key, descriptor: null, progress: null, __memo: null };
+            const obj5 = {};
+            const merged = Object.assign(tmp8);
+            const obj6 = {};
+            const merged1 = Object.assign(tmp8.options);
+            obj6.animation = str2;
+            obj6.cardOverlayEnabled = cardOverlayEnabled;
+            obj6.cardStyleInterpolator = cardStyleInterpolator;
+            obj6.gestureDirection = gestureDirection;
+            obj6.gestureEnabled = tmp34;
+            obj6.headerStyleInterpolator = headerStyleInterpolator;
+            obj6.transitionSpec = transitionSpec;
+            obj6.headerMode = str10;
+            obj5.options = obj6;
+            obj4.descriptor = obj5;
+            const layout = closure_1.layout;
             if (typeof getProgressFromGesture === "function") {
-              let interpolateResult2;
-              const size2 = { width: Math.max(1, layout2.width), height: Math.max(1, layout2.height) };
-              const _Math5 = Math;
-              const _Math6 = Math;
-              const tmp55Result2 = getDistanceFromOptions(size2, tmp15, "rtl" === direction);
-              if (tmp55Result2 > 0) {
-                const obj12 = { inputRange: items4, outputRange: [1, 0] };
-                items4 = [0, tmp55Result2];
-                interpolateResult2 = obj2.interpolate(obj12);
+              const size = { width: null, height: null };
+              const _Math = Math;
+              size.width = Math.max(1, layout.width);
+              const _Math2 = Math;
+              size.height = Math.max(1, layout.height);
+              const tmp59 = getDistanceFromOptions(size, tmp55, "rtl" === tmp.direction);
+              if (tmp59 > 0) {
+                const obj7 = { inputRange: null, outputRange: null };
+                const items = [0, tmp59];
+                obj7.inputRange = items;
+                obj7.outputRange = [1, 0];
+                let interpolateResult = obj.interpolate(obj7);
               } else {
-                const obj13 = { inputRange: items5, outputRange: [0, 1] };
-                items5 = [tmp55Result2, 0];
-                interpolateResult2 = obj2.interpolate(obj13);
+                const obj8 = { inputRange: null, outputRange: null };
+                const items1 = [tmp59, 0];
+                obj8.inputRange = items1;
+                obj8.outputRange = [0, 1];
+                interpolateResult = obj.interpolate(obj8);
               }
-              tmp63 = interpolateResult2;
+              const obj9 = { current: interpolateResult, next: null, previous: null };
+              if (obj3) {
+                let presentation3;
+                if (tmp10 != null) {
+                  presentation3 = tmp10.presentation;
+                }
+                if ("transparentModal" !== presentation3) {
+                  const layout3 = closure_1.layout;
+                  if (typeof getProgressFromGesture === "function") {
+                    const size1 = { width: null, height: null };
+                    const _Math3 = Math;
+                    size1.width = Math.max(1, layout3.width);
+                    const _Math4 = Math;
+                    size1.height = Math.max(1, layout3.height);
+                    const tmp57Result = getDistanceFromOptions(size1, tmp10, tmp56);
+                    if (tmp57Result > 0) {
+                      const obj10 = { inputRange: null, outputRange: null };
+                      const items2 = [0, tmp57Result];
+                      obj10.inputRange = items2;
+                      obj10.outputRange = [1, 0];
+                      let interpolateResult1 = obj3.interpolate(obj10);
+                    } else {
+                      const obj11 = { inputRange: null, outputRange: null };
+                      const items3 = [tmp57Result, 0];
+                      obj11.inputRange = items3;
+                      obj11.outputRange = [0, 1];
+                      interpolateResult1 = obj3.interpolate(obj11);
+                    }
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
+                  }
+                }
+              }
+              obj9.next = undefined;
+              if (!obj2) {
+                obj9.previous = undefined;
+                obj4.progress = obj9;
+                const items4 = [closure_1.layout, tmp8, tmp10, tmp16, obj, obj3, obj2];
+                obj4.__memo = items4;
+                let tmp69 = obj4;
+                if (tmp6) {
+                  __memo = obj4.__memo;
+                  tmp69 = obj4;
+                  if (__memo.every((item, index) => __memo.__memo[index] === item)) {
+                    tmp69 = tmp6;
+                  }
+                }
+                return tmp69;
+              } else {
+                const layout2 = closure_1.layout;
+                if (typeof getProgressFromGesture === "function") {
+                  const size2 = { width: null, height: null };
+                  const _Math5 = Math;
+                  size2.width = Math.max(1, layout2.width);
+                  const _Math6 = Math;
+                  size2.height = Math.max(1, layout2.height);
+                  const tmp57Result2 = getDistanceFromOptions(size2, tmp16, tmp56);
+                  if (tmp57Result2 > 0) {
+                    const obj12 = { inputRange: null, outputRange: null };
+                    const items5 = [0, tmp57Result2];
+                    obj12.inputRange = items5;
+                    obj12.outputRange = [1, 0];
+                    let interpolateResult2 = obj2.interpolate(obj12);
+                  } else {
+                    const obj13 = { inputRange: null, outputRange: null };
+                    const items6 = [tmp57Result2, 0];
+                    obj13.inputRange = items6;
+                    obj13.outputRange = [0, 1];
+                    interpolateResult2 = obj2.interpolate(obj13);
+                  }
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              }
             } else {
               throw new TypeError("Trying to call a non-function");
             }
+          } else if ("none" !== str3) {
+            let forNoAnimation = ModalTransition.cardStyleInterpolator;
+          } else {
+            forNoAnimation = CardStack(6520).forNoAnimation;
           }
-          obj4.progress = obj9;
-          const items6 = [routes2.layout, tmp8, tmp9, tmp15, reduced[key.key], obj3, obj2];
-          obj4.__memo = items6;
-          let tmp66 = obj4;
-          if (routes2.scenes[index]) {
-            const __memo = obj4.__memo;
-            tmp66 = obj4;
-            if (__memo.every((item, index) => __memo.__memo[index] === item)) {
-              tmp66 = tmp6;
-            }
-          }
-          return tmp66;
-        } else {
-          throw new TypeError("Trying to call a non-function");
+          tmp34 = undefined !== gestureEnabled && gestureEnabled;
         }
+        options = tmp8.options;
       }
-      options = tmp8.options;
     });
     let activeStates = routes2.activeStates;
     if (routes.routes.length !== routes2.routes.length) {
-      let num2 = 1;
-      let c5 = 1;
+      c5 = 1;
       let diff = routes.routes.length - 1;
-      let num3 = 2;
-      let str = "forModalPresentationIOS";
-      let str2 = "transparentModal";
       let num = 1;
       if (0 <= diff) {
         while (true) {
-          let tmp13;
-          let options = mapped[diff].descriptor.options;
+          options = mapped[diff].descriptor.options;
           let detachPreviousScreen = options.detachPreviousScreen;
-          let tmp6 = num;
           if (undefined === detachPreviousScreen) {
-            let tmp12 = "transparentModal" !== options.presentation;
-            if (tmp12) {
+            let tmp11 = "transparentModal" !== options.presentation;
+            if (tmp11) {
               let cardStyleInterpolator = options.cardStyleInterpolator;
               if (typeof getIsModalPresentation !== "function") {
                 break;
               } else {
-                let tmp8 = _require;
-                let tmp9 = dependencyMap;
-                let tmp10 = cardStyleInterpolator === require("forHorizontalIOS").forModalPresentationIOS || "forModalPresentationIOS" === cardStyleInterpolator.name;
-                let tmp11 = !tmp10;
-                if (tmp10) {
-                  let tmp8Result = tmp8(6535);
-                  tmp11 = diff !== tmp8Result.findLastIndex(mapped, (descriptor) => {
+                let tmp7 = CardStack;
+                let tmp9 = cardStyleInterpolator === CardStack(6520).forModalPresentationIOS || "forModalPresentationIOS" === cardStyleInterpolator.name;
+                let tmp10 = !tmp9;
+                if (tmp9) {
+                  let tmp7Result = tmp7(6535);
+                  tmp10 = diff !== tmp7Result.findLastIndex(mapped, (descriptor) => {
                     const cardStyleInterpolator = descriptor.descriptor.options.cardStyleInterpolator;
-                    let tmp = cardStyleInterpolator === routes(routes2[9]).forModalPresentationIOS;
+                    let tmp = cardStyleInterpolator === closure_0(closure_1[9]).forModalPresentationIOS;
                     if (!tmp) {
                       let name;
                       if (cardStyleInterpolator != null) {
@@ -778,30 +751,26 @@ const entry1 = {
                     return tmp;
                   });
                 }
-                tmp12 = tmp11;
+                tmp11 = tmp10;
               }
             }
-            detachPreviousScreen = tmp12;
+            detachPreviousScreen = tmp11;
           }
           if (false === detachPreviousScreen) {
             let sum = num + 1;
             c5 = sum;
-            tmp13 = sum;
+            let tmp12 = sum;
             diff = diff - 1;
-            num = tmp13;
+            num = tmp12;
           } else {
-            tmp13 = num;
+            tmp12 = num;
           }
         }
-        let str3 = "Trying to call a non-function";
         throw new TypeError("Trying to call a non-function");
       }
       routes = routes.routes;
       activeStates = routes.map((item, index, arg2) => {
-        let items;
-        let num;
-        const tmp = index >= arg2.length - c5;
-        if (0 !== routes2.activeStates[index]) {
+        if (0 !== closure_1.activeStates[index]) {
           let num2 = 1;
           let num3 = 2;
           if (index !== arg2.length - 1) {
@@ -813,40 +782,41 @@ const entry1 = {
           }
           if (mapped[arg2.length - 1]) {
             const current = tmp3.progress.current;
-            obj = { inputRange: [0, 0.99999, 1], outputRange: items, extrapolate: "clamp" };
-            items = [1, 1, num3];
+            obj = { inputRange: [0, 0.99999, 1], outputRange: null, extrapolate: "clamp" };
+            const items = [1, 1, num3];
+            obj.outputRange = items;
             num2 = current.interpolate(obj);
           }
-          num = num2;
+          let num = num2;
         } else {
           num = 0;
         }
         return num;
       });
     }
-    const obj2 = { routes: routes.routes, scenes: mapped, gestures: reduced, descriptors: routes.descriptors, activeStates, headerHeights: null };
+    const obj3 = { routes: routes.routes, scenes: mapped, gestures: reduced, descriptors: routes.descriptors, activeStates, headerHeights: null };
     if (typeof getHeaderHeights === "function") {
-      dependencyMap = tmp16;
-      let closure_2 = tmp17;
-      closure_3 = tmp18;
-      let closure_4 = tmp19;
-      let closure_5 = tmp20;
-      obj2.headerHeights = mapped.reduce((acc, descriptor, index) => {
-        const options = descriptor.descriptor.options;
+      closure_129_0 = mapped;
+      closure_129_1 = tmp15;
+      closure_129_2 = tmp16;
+      closure_129_3 = tmp17;
+      closure_129_4 = tmp18;
+      closure_129_5 = tmp19;
+      obj3.headerHeights = mapped.reduce((acc, descriptor, index) => {
+        options = descriptor.descriptor.options;
         let headerStatusBarHeight = options.headerStatusBarHeight;
         if (undefined === headerStatusBarHeight) {
           let num = 0;
           if (!closure_2) {
-            num = top.top;
+            num = scenes.top;
           }
           headerStatusBarHeight = num;
         }
         let headerStyle = options.headerStyle;
-        flatten = flatten.flatten;
         if (!headerStyle) {
           headerStyle = {};
         }
-        const flattenResult = flatten(headerStyle);
+        const flattenResult = closure_2_6.flatten(headerStyle);
         if ("height" in flattenResult) {
           if (typeof flattenResult.height === "number") {
             height = flattenResult.height;
@@ -880,18 +850,23 @@ const entry1 = {
               if (!tmp16) {
                 const cardStyleInterpolator = descriptor.descriptor.options.cardStyleInterpolator;
                 if (typeof closure_2_14 === "function") {
-                  flag = (cardStyleInterpolator === closure_2_0(width[9]).forModalPresentationIOS || "forModalPresentationIOS" === cardStyleInterpolator.name) && 0 !== num5;
-                  const tmp20 = (cardStyleInterpolator === closure_2_0(width[9]).forModalPresentationIOS || "forModalPresentationIOS" === cardStyleInterpolator.name) && 0 !== num5;
+                  let tmp20 = cardStyleInterpolator === height(width[9]).forModalPresentationIOS;
+                  if (!tmp20) {
+                    tmp20 = "forModalPresentationIOS" === cardStyleInterpolator.name;
+                  }
+                  if (tmp20) {
+                    tmp20 = 0 !== num5;
+                  }
+                  flag = tmp20;
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
               }
-              const key = descriptor.route.key;
               if (typeof height !== "number") {
-                const obj2 = closure_2_0(width[10]);
-                height = obj2.getDefaultHeaderHeight(closure_4, flag, headerStatusBarHeight);
+                height = height(width[10]).getDefaultHeaderHeight(closure_4, flag, headerStatusBarHeight);
+                const obj2 = height(width[10]);
               }
-              acc[key] = height;
+              acc[descriptor.route.key] = height;
               return acc;
             } else {
               throw new TypeError("Trying to call a non-function");
@@ -900,18 +875,18 @@ const entry1 = {
             throw new TypeError("Trying to call a non-function");
           }
         }
-        height = closure_5[descriptor.route.key];
+        height = tmp9[descriptor.route.key];
       }, {});
-      return obj2;
+      return obj3;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
+    obj = CardStack(6534);
+    const obj2 = {};
   }
 };
 let items1 = [entry1];
-const importDefaultResultResult = _createClass(CardStack, items, items1);
 const styles = StyleSheet.create({ container: { flex: 1 }, absolute: { position: "absolute", top: 0, start: 0, end: 0 }, floating: { zIndex: 1 } });
-const CardStack_export = importDefaultResultResult;
 
 export const getAnimationEnabled = function getAnimationEnabled(animation) {
   let str = animation;
@@ -920,4 +895,4 @@ export const getAnimationEnabled = function getAnimationEnabled(animation) {
   }
   return "none" !== str;
 };
-export { CardStack_export as CardStack };
+export const CardStack = _createClass(CardStack, items, items1);

@@ -2,40 +2,41 @@
 
 // Module 231
 import _createClassDefault from "_createClass" /* 42 */;
-import DialogManagerAndroid from "DialogManagerAndroid" /* 232 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 
-let constants;
-
+const Alert = arg1;
 class Alert {
   constructor() {
-    _classCallCheck(this, Alert);
+    tmp = c2(this, Alert);
+    return;
   }
 }
 const entry = {
   key: "alert",
   value: function alert(Alert, captureScreenshotError, items, arg3) {
-    let closure_0 = arg3;
-    const _default = DialogManagerAndroid.default;
+    closure_0 = arg3;
+    const _default = Alert(232).default;
     if (_default) {
-      let substr;
       let str = Alert;
-      constants = _default.getConstants();
+      const buttonClicked = _default.getConstants();
       if (!Alert) {
         str = "";
       }
       let str2 = captureScreenshotError;
-      const obj = { title: str, message: str2, cancelable: false };
+      const obj = { title: str, message: null, cancelable: false };
       if (!captureScreenshotError) {
         str2 = "";
       }
-      const tmp = arg3 && arg3.cancelable;
-      if (tmp) {
+      obj.message = str2;
+      let cancelable = arg3;
+      if (arg3) {
+        cancelable = arg3.cancelable;
+      }
+      if (cancelable) {
         obj.cancelable = arg3.cancelable;
       }
-      const tmp2 = items;
-      if (tmp2) {
-        substr = items.slice(0, 3);
+      if (items) {
+        let substr = items.slice(0, 3);
       } else {
         substr = [{ text: "OK" }];
       }
@@ -62,13 +63,19 @@ const entry = {
               arr4.onPress();
             }
           } else {
-            const onPress = arg1 === buttonClicked.buttonPositive && arr.onPress;
+            let onPress = arg1 === buttonClicked.buttonPositive;
+            if (onPress) {
+              onPress = arr.onPress;
+            }
             if (onPress) {
               arr.onPress();
             }
           }
         } else {
-          const onDismiss = arg0 === buttonClicked.dismissed && closure_0 && closure_0.onDismiss;
+          let onDismiss = arg0 === buttonClicked.dismissed && closure_0;
+          if (onDismiss) {
+            onDismiss = closure_0.onDismiss;
+          }
           if (onDismiss) {
             closure_0.onDismiss();
           }

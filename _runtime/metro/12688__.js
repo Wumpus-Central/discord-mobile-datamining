@@ -2,68 +2,71 @@
 
 // Module 12688
 import _mod12607 from "module_12607" /* 12607 */;
-import _mod12628 from "module_12628" /* 12628 */;
+import _flush from "_flush" /* 12628 */;
 import _mod12653 from "module_12653" /* 12653 */;
 
+require = arg1;
+const dependencyMap = arg6;
 function getCurrentHubShim() {
-  let obj = {
+  return {
     bindClient(arg0) {
-      const obj = _mod12607;
-      const currentScope = obj.getCurrentScope();
+      const currentScope = _mod12607.getCurrentScope();
       currentScope.setClient(arg0);
     },
     withScope: _mod12607.withScope,
     getClient() {
-      const obj = _mod12607;
-      return obj.getClient();
+      return _mod12607.getClient();
     },
     getScope: _mod12607.getCurrentScope,
     getIsolationScope: _mod12607.getIsolationScope,
     captureException(arg0, arg1) {
-      const obj = _mod12607;
-      const currentScope = obj.getCurrentScope();
+      const currentScope = _mod12607.getCurrentScope();
       return currentScope.captureException(arg0, arg1);
     },
     captureMessage(arg0, arg1, arg2) {
-      const obj = _mod12607;
-      const currentScope = obj.getCurrentScope();
+      const currentScope = _mod12607.getCurrentScope();
       return currentScope.captureMessage(arg0, arg1, arg2);
     },
-    captureEvent: _mod12628.captureEvent,
+    captureEvent: _flush.captureEvent,
     addBreadcrumb: _mod12653.addBreadcrumb,
-    setUser: _mod12628.setUser,
-    setTags: _mod12628.setTags,
-    setTag: _mod12628.setTag,
-    setExtra: _mod12628.setExtra,
-    setExtras: _mod12628.setExtras,
-    setContext: _mod12628.setContext,
+    setUser: _flush.setUser,
+    setTags: _flush.setTags,
+    setTag: _flush.setTag,
+    setExtra: _flush.setExtra,
+    setExtras: _flush.setExtras,
+    setContext: _flush.setContext,
     getIntegration(id) {
-      const obj = _mod12607;
-      const client = obj.getClient();
-      const integrationByName = client && client.getIntegrationByName(id.id) || null;
+      const client = _mod12607.getClient();
+      let integrationByName = client;
+      if (client) {
+        integrationByName = client.getIntegrationByName(id.id);
+      }
+      if (!integrationByName) {
+        integrationByName = null;
+      }
       return integrationByName;
     },
-    startSession: _mod12628.startSession,
-    endSession: _mod12628.endSession,
+    startSession: _flush.startSession,
+    endSession: _flush.endSession,
     captureSession(arg0) {
-      const tmp3 = arg0;
-      if (tmp3) {
-        const tmpResult = _mod12628;
-        return tmpResult.endSession();
+      if (arg0) {
+        return _flush.endSession();
       } else {
+        const currentScope = _mod12607.getCurrentScope();
         const tmpResult3 = _mod12607;
-        const currentScope = tmpResult3.getCurrentScope();
-        const tmpResult4 = _mod12607;
-        const client = tmpResult4.getClient();
+        const client = _mod12607.getClient();
         const session = currentScope.getSession();
-        const tmp5 = client && session;
-        if (tmp5) {
+        let tmp4 = client;
+        if (client) {
+          tmp4 = session;
+        }
+        if (tmp4) {
           client.captureSession(session);
         }
+        const tmpResult4 = _mod12607;
       }
     }
   };
-  return obj;
 }
 
 export const getCurrentHub = getCurrentHubShim;

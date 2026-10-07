@@ -1,36 +1,27 @@
 // === Module 6061: HeaderButton ===
 
 // Module 6061 (HeaderButton)
-import Fragment from "Fragment" /* 21 */;
-import PlatformPressable2 from "PlatformPressable" /* 6044 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import _mod6044 from "module_6044" /* 6044 */;
+import noop from "module_19" /* 19 */;
 
-let Platform;
-let StyleSheet;
-({ StyleSheet, Platform } = react_native);
-const jsx = Fragment.jsx;
-const forwardRefResult = react.forwardRef(function HeaderButtonInternal(disabled, ref) {
-  let accessibilityLabel;
-  let children;
-  let href;
-  let items;
-  let onPress;
-  let pressColor;
-  let pressOpacity;
-  let style;
-  let testID;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet, Platform } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const forwardRefResult = noop.forwardRef(function HeaderButtonInternal(disabled, ref) {
   disabled = disabled.disabled;
   ({ onPress, pressColor, pressOpacity, accessibilityLabel, testID, style, href, children } = disabled);
-  android_ripple = { ref, disabled, href, "aria-label": accessibilityLabel, testID, onPress, pressColor, pressOpacity, android_ripple, style: items, hitSlop: { top: 16, right: 16, bottom: 16, left: 16 }, children };
-  items = [closure_4.container, , ];
-  const PlatformPressable = PlatformPressable2.PlatformPressable;
+  android_ripple = { ref, disabled, href, "aria-label": accessibilityLabel, testID, onPress, pressColor, pressOpacity, android_ripple, style: null, hitSlop: null, children: null };
+  const items = [closure_4.container, , ];
   if (disabled) {
     disabled = closure_4.disabled;
   }
   items[1] = disabled;
   items[2] = style;
-  return <PlatformPressable ref={ref} disabled={disabled} href={href} aria-label={accessibilityLabel} testID={testID} onPress={onPress} pressColor={pressColor} pressOpacity={pressOpacity} android_ripple={android_ripple} style={items} hitSlop={{ top: 16, right: 16, bottom: 16, left: 16 }}>{children}</PlatformPressable>;
+  android_ripple.style = items;
+  android_ripple.hitSlop = { top: 16, right: 16, bottom: 16, left: 16 };
+  android_ripple.children = children;
+  return jsx(_mod6044.PlatformPressable, { ref, disabled, href, "aria-label": accessibilityLabel, testID, onPress, pressColor, pressOpacity, android_ripple, style: null, hitSlop: null, children: null });
 });
 forwardRefResult.displayName = "HeaderButton";
 let android_ripple = { borderless: true, foreground: Platform.Version >= 23, radius: 20 };

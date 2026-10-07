@@ -1,7 +1,7 @@
 // === Module 1907: ? ===
 
 // Module 1907
-const obj = {
+globalThis.IntlMessageFormat.__addLocaleData({
   locale: "es",
   pluralRuleFunction(arg0, arg1) {
     let str = "other";
@@ -14,8 +14,7 @@ const obj = {
     }
     return str2;
   }
-};
-globalThis.IntlMessageFormat.__addLocaleData(obj);
+});
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "es-419", parentLocale: "es" });
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "es-AR", parentLocale: "es-419" });
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "es-BO", parentLocale: "es-419" });

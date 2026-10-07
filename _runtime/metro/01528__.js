@@ -1,8 +1,9 @@
 // === Module 1528: ? ===
 
 // Module 1528
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 
+const require = arg1;
 
 export const createNavigatorFactory = function createNavigatorFactory(NativeStackNavigator) {
   let Navigator = NativeStackNavigator;
@@ -16,17 +17,16 @@ export const createNavigatorFactory = function createNavigatorFactory(NativeStac
   return function createNavigator(config) {
     Navigator = config;
     if (null != config) {
-      const obj2 = { Navigator, Screen: Navigator(str[2]).Screen, Group: Navigator(str[3]).Group, config };
-      const createComponentForStaticNavigation = Navigator(str[1]).createComponentForStaticNavigation;
-      Navigator(str[1]);
-      Navigator = createComponentForStaticNavigation(obj2, Navigator);
-      return {
+      const obj3 = { Navigator, Screen: Navigator(str[2]).Screen, Group: Navigator(str[3]).Group, config };
+      Navigator = Navigator(str[1]).createComponentForStaticNavigation(obj3, Navigator);
+      const obj4 = {
         config,
-        with: (IMAGE_ONLY_ANSWERS) => {
+        with(IMAGE_ONLY_ANSWERS) {
             config = IMAGE_ONLY_ANSWERS;
             class WithComponent {
               constructor() {
-                return <IMAGE_ONLY_ANSWERS Navigator={Navigator} />;
+                obj = { Navigator: closure_1 };
+                return closure_2.createElement(closure_0, obj);
               }
             }
             WithComponent.displayName = "" + Navigator + "With";
@@ -38,9 +38,10 @@ export const createNavigatorFactory = function createNavigatorFactory(NativeStac
             };
           },
         getComponent() {
-            return Navigator;
+            return closure_1;
           }
       };
+      return obj4;
     } else {
       const obj = { Navigator, Screen: Navigator(str[2]).Screen, Group: Navigator(str[3]).Group };
       return obj;

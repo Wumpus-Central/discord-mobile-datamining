@@ -1,12 +1,12 @@
 // === Module 497: ? ===
 
 // Module 497
-import _mod498 from "module_498" /* 498 */;
+import _modDef498 from "module_498" /* 498 */;
 
-const _modDef498 = _mod498;
+const require = globalThis.__r;
 
-for (const key10016 in _mod498) {
-  exports[key10016] = _mod498[key10016];
+for (const key10016 in require("module_498")) {
+  arg5[key10016] = require("module_498")[key10016];
   continue;
 }
 

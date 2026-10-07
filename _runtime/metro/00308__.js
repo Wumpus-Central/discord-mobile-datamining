@@ -3,8 +3,6 @@
 // Module 308
 import get from "module_30" /* 30 */;
 
-let constants;
-
 const uiStore = get.getEnforcing("StatusBarManager");
 let closure_1 = null;
 

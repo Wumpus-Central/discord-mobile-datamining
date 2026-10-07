@@ -1,24 +1,24 @@
 // === Module 6263: GestureHandlerRootView ===
 
 // Module 6263 (GestureHandlerRootView)
-import react_native from "react-native" /* 17 */;
-import Fragment from "Fragment" /* 21 */;
-import reactDefault from "react" /* 6166 */;
+import _modDef6166 from "module_6166" /* 6166 */;
 import _modDef6264 from "module_6264" /* 6264 */;
-import react from "react" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-const StyleSheet = react_native.StyleSheet;
-const jsx = Fragment.jsx;
+const StyleSheet = fn(17).StyleSheet;
+const jsx = fn(21).jsx;
 let container = StyleSheet.create({ container: { flex: 1 } });
 
 export default function GestureHandlerRootView(style) {
   container = style.style;
   const merged = Object.assign(style, Object.assign({ style: 0 }));
-  reactDefault;
-  _modDef6264;
   if (container == null) {
     container = container.container;
   }
+  const obj = { value: true, children: null };
+  const obj2 = { style: container };
   const merged1 = Object.assign(merged);
+  obj2.moduleId = globalThis._RNGH_MODULE_ID;
+  obj.children = jsx(_modDef6264, { style: container });
   return <tmp3 value>{null}</tmp3>;
 };

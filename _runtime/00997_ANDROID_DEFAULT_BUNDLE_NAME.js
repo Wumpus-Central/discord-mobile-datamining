@@ -1,51 +1,48 @@
 // === Module 997: ANDROID_DEFAULT_BUNDLE_NAME ===
 
 // Module 997 (ANDROID_DEFAULT_BUNDLE_NAME)
-import react_native from "react-native" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
 import _mod693 from "module_693" /* 693 */;
 import _mod878 from "module_878" /* 878 */;
 
-let filename;
-
-const Platform = react_native.Platform;
+const Platform = _mod17.Platform;
 let c2 = "app:///index.android.bundle";
 
 export const ANDROID_DEFAULT_BUNDLE_NAME = "app:///index.android.bundle";
 export const IOS_DEFAULT_BUNDLE_NAME = "app:///main.jsbundle";
 export const createReactNativeRewriteFrames = function createReactNativeRewriteFrames() {
-  const obj = _mod693;
-  const obj2 = {
+  return _mod693.rewriteFramesIntegration({
     iteratee(platform) {
       if ("java" !== platform.platform) {
         if ("cocoa" !== platform.platform) {
           if (platform.filename) {
-            delete tmp["abs_path"];
-            const str = platform.filename;
-            const str3 = str.replace(/^file:\/\//, "");
-            const str4 = str3.replace(/^address at /, "");
-            platform.filename = str4.replace(/^.*\/[^.]+(\.app|CodePush|.*(?=\/))/, "");
+            delete tmp[tmp2];
+            const str4 = platform.filename.replace(/^file:\/\//, "");
+            platform.filename = platform.filename.replace(/^file:\/\//, "").replace(/^address at /, "").replace(/^.*\/[^.]+(\.app|CodePush|.*(?=\/))/, "");
             if ("[native code]" !== platform.filename) {
               if ("native" !== platform.filename) {
-                const obj3 = _mod878;
-                const isHermesEnabledResult = obj3.isHermesEnabled() && 1 === platform.lineno && undefined !== platform.colno;
+                let isHermesEnabledResult = _mod878.isHermesEnabled();
+                if (isHermesEnabledResult) {
+                  isHermesEnabledResult = 1 === platform.lineno;
+                }
+                if (isHermesEnabledResult) {
+                  isHermesEnabledResult = undefined !== platform.colno;
+                }
                 if (isHermesEnabledResult) {
                   platform.colno = platform.colno + 1;
                 }
-                const tmp8Result = _mod878;
-                if (tmp8Result.isExpo()) {
+                if (tmp9Result.isExpo()) {
                   platform.filename = filename;
                   return platform;
                 } else {
-                  let combined;
-                  const tmp8Result2 = _mod878;
-                  tmp8Result2.isExpo();
+                  _mod878.isExpo();
                   if ("/InternalBytecode.js" === platform.filename) {
                     platform.in_app = false;
                   }
                   filename = platform.filename;
                   if (0 === filename.indexOf("/")) {
                     const _HermesInternal2 = HermesInternal;
-                    combined = "" + "app://" + platform.filename;
+                    let combined = "" + "app://" + platform.filename;
                   } else {
                     const _HermesInternal = HermesInternal;
                     combined = "" + "app://" + "/" + platform.filename;
@@ -53,6 +50,7 @@ export const createReactNativeRewriteFrames = function createReactNativeRewriteF
                   platform.filename = combined;
                   return platform;
                 }
+                tmp9Result = _mod878;
               }
             }
             return platform;
@@ -63,6 +61,5 @@ export const createReactNativeRewriteFrames = function createReactNativeRewriteF
       }
       return platform;
     }
-  };
-  return obj.rewriteFramesIntegration(obj2);
+  });
 };

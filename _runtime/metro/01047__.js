@@ -1,38 +1,30 @@
 // === Module 1047: ? ===
 
 // Module 1047
-import _mod877 from "module_877" /* 877 */;
+import NativeModules from "NativeModules" /* 877 */;
 
-let tags;
-
+require = arg1;
+const dependencyMap = arg6;
 const PrimitiveTagIntegration = "PrimitiveTagIntegration";
 
 export const INTEGRATION_NAME = "PrimitiveTagIntegration";
-export const primitiveTagIntegration = () => {
-  let obj = {
-    name: PrimitiveTagIntegration,
-    setup(on) {
-      on.on("beforeSendEvent", (tags) => {
-        if (tags.tags) {
-          const _Object = Object;
-          const keys = Object.keys(tags.tags);
-          const item = keys.forEach((item) => {
-            tags = tags.tags;
-            const obj = closure_2_0(closure_2_1[0]);
-            tags[item] = obj.PrimitiveToString(tags.tags[item]);
-          });
-        }
-      });
-    },
-    afterAllSetup() {
-      if (_mod877.NATIVE.enableNative) {
-        const NATIVE = _mod877.NATIVE;
-        const result = NATIVE._setPrimitiveProcessor((arg0) => {
-          const obj = closure_1_0(closure_1_1[0]);
-          return obj.PrimitiveToString(arg0);
+export () => ({
+  name: PrimitiveTagIntegration,
+  setup(on) {
+    on.on("beforeSendEvent", (tags) => {
+      if (tags.tags) {
+        const _Object = Object;
+        const keys = Object.keys(tags.tags);
+        const item = keys.forEach((item) => {
+          tags.tags[item] = closure_2_0(closure_2_1[0]).PrimitiveToString(tags.tags[item]);
         });
       }
+    });
+  },
+  afterAllSetup() {
+    if (NativeModules.NATIVE.enableNative) {
+      const NATIVE = NativeModules.NATIVE;
+      const result = NATIVE._setPrimitiveProcessor((arg0) => closure_1_0(closure_1_1[0]).PrimitiveToString(arg0));
     }
-  };
-  return obj;
-};
+  }
+})

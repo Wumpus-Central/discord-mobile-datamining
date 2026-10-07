@@ -3,6 +3,8 @@
 // Module 6217
 import tagMessage from "tagMessage" /* 6152 */;
 
+require = arg1;
+const dependencyMap = arg6;
 function isNativeEvent(arg0) {
   return "nativeEvent" in arg0;
 }
@@ -23,39 +25,39 @@ maybeExtractNativeEvent.__closure = { isNativeEvent };
 maybeExtractNativeEvent.__workletHash = 9418753326359;
 maybeExtractNativeEvent.__initData = { code: "function maybeExtractNativeEvent_Pnpm_eventUtilsTs2(event){const{isNativeEvent}=this.__closure;return isNativeEvent(event)?event.nativeEvent:event;}" };
 function flattenAndFilterEvent(handlerTag) {
-  const obj = { handlerTag: handlerTag.handlerTag };
   const merged = Object.assign(handlerTag.handlerData);
-  return obj;
+  return { handlerTag: handlerTag.handlerTag };
 }
 flattenAndFilterEvent.__closure = {};
 flattenAndFilterEvent.__workletHash = 12741778497058;
 flattenAndFilterEvent.__initData = { code: "function flattenAndFilterEvent_Pnpm_eventUtilsTs3(event){return{handlerTag:event.handlerTag,...event.handlerData};}" };
-function isEventForHandlerWithTag(current, handlerTag) {
-  return handlerTag.handlerTag === current;
+function isEventForHandlerWithTag(arg0, handlerTag) {
+  return handlerTag.handlerTag === arg0;
 }
 isEventForHandlerWithTag.__closure = {};
 isEventForHandlerWithTag.__workletHash = 11134871115176;
 isEventForHandlerWithTag.__initData = { code: "function isEventForHandlerWithTag_Pnpm_eventUtilsTs4(handlerTag,event){return event.handlerTag===handlerTag;}" };
 function isNativeAnimatedEvent(onUpdate) {
-  return onUpdate && "_argMapping" in onUpdate;
+  let tmp = onUpdate;
+  if (tmp) {
+    tmp = "_argMapping" in onUpdate;
+  }
+  return tmp;
 }
 isNativeAnimatedEvent.__closure = {};
 isNativeAnimatedEvent.__workletHash = 3439774750008;
 isNativeAnimatedEvent.__initData = { code: "function isNativeAnimatedEvent_Pnpm_eventUtilsTs5(callback){return!!callback&&'_argMapping'in callback;}" };
 const __initData = { code: "function pnpm_eventUtilsTs7(current,previous){const{diffCalculator}=this.__closure;const currentEventData=current.handlerData;const previousEventData=previous?previous.handlerData:null;const changePayload=diffCalculator(currentEventData,previousEventData);current.handlerData={...currentEventData,...changePayload};return current;}" };
 function getChangeEventCalculator(diffCalculator) {
-  let closure_0 = diffCalculator;
   const fn = function t(handlerData, handlerData2) {
     handlerData = handlerData.handlerData;
     let handlerData1 = null;
     if (handlerData2) {
       handlerData1 = handlerData2.handlerData;
     }
-    const obj = {};
-    const tmp2 = closure_0(handlerData, handlerData1);
     const merged = Object.assign(handlerData);
-    const merged1 = Object.assign(tmp2);
-    handlerData.handlerData = obj;
+    const merged1 = Object.assign(diffCalculator(handlerData, handlerData1));
+    handlerData.handlerData = {};
     return handlerData;
   };
   fn.__closure = { diffCalculator };
@@ -73,7 +75,11 @@ isTouchEvent.__closure = {};
 isTouchEvent.__workletHash = 14798108877298;
 isTouchEvent.__initData = { code: "function isTouchEvent_Pnpm_eventUtilsTs8(event){return'allTouches'in event;}" };
 function isStateChangeEvent(oldState) {
-  return "oldState" in oldState && undefined !== oldState.oldState;
+  let tmp = "oldState" in oldState;
+  if (tmp) {
+    tmp = undefined !== oldState.oldState;
+  }
+  return tmp;
 }
 isStateChangeEvent.__closure = {};
 isStateChangeEvent.__workletHash = 7295971713196;
@@ -88,7 +94,7 @@ export const checkMappingForChangeProperties = function checkMappingForChangePro
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
-    if (tmp2) {
+    if (nextResult) {
       if ("nativeEvent" in tmp2) {
         if ("handlerData" in tmp2.nativeEvent) {
           for (const key10023 in tmp2.nativeEvent.handlerData) {
@@ -101,8 +107,8 @@ export const checkMappingForChangeProperties = function checkMappingForChangePro
               let _HermesInternal = HermesInternal;
               let str = " is not available when using Animated.Event.";
               let str2 = "";
-              let self = this;
-              let self2 = this;
+              let tmp10 = new.target;
+              let tmp11 = new.target;
               let error = new Error(obj.tagMessage("" + key10023 + " is not available when using Animated.Event."));
               throw error;
             }

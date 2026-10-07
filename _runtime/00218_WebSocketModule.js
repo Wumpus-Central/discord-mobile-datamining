@@ -1,12 +1,12 @@
 // === Module 218: WebSocketModule ===
 
 // Module 218 (WebSocketModule)
-import _mod219 from "module_219" /* 219 */;
+import _modDef219 from "module_219" /* 219 */;
 
-const _modDef219 = _mod219;
+const require = globalThis.__r;
 
-for (const key10016 in _mod219) {
-  exports[key10016] = _mod219[key10016];
+for (const key10016 in require("module_219")) {
+  arg5[key10016] = require("module_219")[key10016];
   continue;
 }
 

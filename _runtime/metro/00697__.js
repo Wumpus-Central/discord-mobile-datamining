@@ -1,6 +1,6 @@
 // === Module 697: ? ===
 
 // Module 697
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const GLOBAL_OBJ = globalThis;

@@ -4,18 +4,17 @@
 import _mod693 from "module_693" /* 693 */;
 import _mod910 from "module_910" /* 910 */;
 import extractNetworkProtocol from "extractNetworkProtocol" /* 935 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import _slicedToArray from "module_32" /* 32 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 function _onElementTiming(arg0) {
   const entries = arg0.entries;
   let transactionName;
-  let obj = transactionName(693);
-  const activeSpan = obj.getActiveSpan();
+  const activeSpan = transactionName(693).getActiveSpan();
   let rootSpan;
   if (activeSpan) {
+    rootSpan = tmp(693).getRootSpan(activeSpan);
     let tmpResult = tmp(693);
-    rootSpan = tmpResult.getRootSpan(activeSpan);
   }
   const tmpResult2 = transactionName(693);
   if (rootSpan) {
@@ -25,42 +24,23 @@ function _onElementTiming(arg0) {
     transactionName = currentScope.getScopeData().transactionName;
   }
   const item = entries.forEach((identifier) => {
-    let combined;
-    let element;
-    let first;
-    let loadTime;
-    let name;
-    let renderTime;
-    let str8;
-    let tmp6;
     if (identifier.identifier) {
-      let items2;
       ({ name, renderTime, loadTime } = identifier);
       if (loadTime) {
-        const items = [, ];
+        const items = [extractNetworkProtocol.msToSec(loadTime), "load-time"];
+        let items2 = items;
         const tmpResult = extractNetworkProtocol;
-        items[0] = tmpResult.msToSec(loadTime);
-        items[1] = "load-time";
-        items2 = items;
       } else if (renderTime) {
-        const items1 = [, ];
-        const tmpResult3 = extractNetworkProtocol;
-        items1[0] = tmpResult3.msToSec(renderTime);
-        items1[1] = "render-time";
+        const items1 = [extractNetworkProtocol.msToSec(renderTime), "render-time"];
         items2 = items1;
+        const tmpResult3 = extractNetworkProtocol;
       } else {
-        items2 = [, ];
+        items2 = [_mod693.timestampInSeconds(), "entry-emission"];
         const tmpResult4 = _mod693;
-        items2[0] = tmpResult4.timestampInSeconds();
-        items2[1] = "entry-emission";
       }
-      [first, tmp6] = items2;
-      let num3 = 0;
+      [startTime, obj["sentry.span_start_time_source"]] = items2;
       if ("image-paint" === name) {
         let num4 = renderTime;
-        const msToSec = extractNetworkProtocol.msToSec;
-        const _Math = Math;
-        extractNetworkProtocol;
         if (renderTime == null) {
           num4 = 0;
         }
@@ -68,14 +48,15 @@ function _onElementTiming(arg0) {
         if (loadTime == null) {
           num5 = 0;
         }
-        num3 = msToSec(max(0, num4 - num5));
+        extractNetworkProtocol.msToSec(Math.max(0, num4 - num5));
       }
-      const obj = { "sentry.span_start_time_source": tmp6, "sentry.transaction_name": transactionName, "element.type": str8, "element.size": combined, "element.render_time": renderTime, "element.load_time": loadTime, "element.url": identifier.url || undefined, "element.identifier": identifier.identifier, "element.paint_type": name };
+      const obj = {};
       obj[_mod693.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.elementtiming";
       obj[_mod693.SEMANTIC_ATTRIBUTE_SENTRY_OP] = "ui.elementtiming";
       obj[_mod693.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "component";
-      ({ id: obj4["element.id"], element } = identifier);
-      str8 = undefined;
+      obj["sentry.transaction_name"] = transactionName;
+      ({ id: obj5["element.id"], element } = identifier);
+      let str8;
       if (element != null) {
         if (element.tagName != null) {
           str8 = str9.toLowerCase();
@@ -84,37 +65,44 @@ function _onElementTiming(arg0) {
       if (!str8) {
         str8 = "unknown";
       }
-      combined = undefined;
+      obj["element.type"] = str8;
+      let combined;
       if (identifier.naturalWidth) {
         if (identifier.naturalHeight) {
           const _HermesInternal = HermesInternal;
           combined = "" + identifier.naturalWidth + "x" + identifier.naturalHeight;
         }
       }
+      obj["element.size"] = combined;
+      obj["element.render_time"] = renderTime;
+      obj["element.load_time"] = loadTime;
+      obj["element.url"] = identifier.url || undefined;
+      obj["element.identifier"] = identifier.identifier;
+      obj["element.paint_type"] = name;
+      const obj2 = { name: null, attributes: null, startTime: null, onlyIfParent: true };
       const _HermesInternal2 = HermesInternal;
-      const obj2 = { name: "element[" + identifier.identifier + "]", attributes: obj, startTime: first, onlyIfParent: true };
-      const startSpan = _mod693.startSpan;
-      _mod693;
-      startSpan(obj2, (end) => {
+      obj2.name = "element[" + identifier.identifier + "]";
+      obj2.attributes = obj;
+      obj2.startTime = startTime;
+      _mod693.startSpan(obj2, (end) => {
         end.end(first + num3);
       });
     }
   });
+  let obj = transactionName(693);
 }
 
 export { _onElementTiming };
 export const startTrackingElementTiming = function startTrackingElementTiming() {
-  const obj = extractNetworkProtocol;
   if (obj.getBrowserPerformanceAPI()) {
-    let fn;
-    const tmpResult = _mod693;
     if (tmpResult.browserPerformanceTimeOrigin()) {
+      let fn = _mod910.addPerformanceInstrumentationHandler("element", _onElementTiming);
       const tmpResult2 = _mod910;
-      fn = tmpResult2.addPerformanceInstrumentationHandler("element", _onElementTiming);
     }
     return fn;
   }
   fn = () => {
 
   };
+  obj = extractNetworkProtocol;
 };

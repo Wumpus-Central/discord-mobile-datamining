@@ -1,12 +1,12 @@
 // === Module 457: AppState ===
 
 // Module 457 (AppState)
-import _mod458 from "module_458" /* 458 */;
+import _modDef458 from "module_458" /* 458 */;
 
-const _modDef458 = _mod458;
+const require = globalThis.__r;
 
-for (const key10016 in _mod458) {
-  exports[key10016] = _mod458[key10016];
+for (const key10016 in require("module_458")) {
+  arg5[key10016] = require("module_458")[key10016];
   continue;
 }
 

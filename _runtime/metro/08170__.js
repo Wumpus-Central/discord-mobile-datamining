@@ -1,26 +1,23 @@
 // === Module 8170: ? ===
 
 // Module 8170
-import _mod8171 from "module_8171" /* 8171 */;
-import Circle from "Circle" /* 8172 */;
-import multiplyMatricesDefault from "multiplyMatrices" /* 8193 */;
+import CircleDefault from "Circle" /* 8172 */;
+import _modDef8193 from "module_8193" /* 8193 */;
 import showErrorCSS from "showErrorCSS" /* 8275 */;
-import SvgAst from "SvgAst" /* 8276 */;
-import _mod8278 from "module_8278" /* 8278 */;
+import _mod8276 from "module_8276" /* 8276 */;
+import _fetchText from "_fetchText" /* 8278 */;
 import RNSVGCircle from "RNSVGCircle" /* 8279 */;
 
-const CircleDefault = Circle;
+const require = globalThis.__r;
 
-for (const key10013 in _mod8171) {
-  exports[key10013] = _mod8171[key10013];
+for (const key10013 in require("module_8171")) {
+  arg5[key10013] = require("module_8171")[key10013];
   continue;
 }
-for (const key10017 in Circle) {
-  exports[key10017] = Circle[key10017];
+for (const key10017 in require("Circle")) {
+  arg5[key10017] = require("Circle")[key10017];
   continue;
 }
-const RNSVGCircle_export = RNSVGCircle.RNSVGCircle;
-const SvgAst_export = SvgAst.SvgAst;
 
 export const inlineStyles = showErrorCSS.inlineStyles;
 export const loadLocalRawResource = showErrorCSS.loadLocalRawResource;
@@ -30,10 +27,10 @@ export const SvgCssUri = showErrorCSS.SvgCssUri;
 export const SvgWithCss = showErrorCSS.SvgWithCss;
 export const SvgWithCssUri = showErrorCSS.SvgWithCssUri;
 export const WithLocalSvg = showErrorCSS.WithLocalSvg;
-export const camelCase = SvgAst.camelCase;
-export const fetchText = _mod8278.fetchText;
-export const parse = SvgAst.parse;
-export { RNSVGCircle_export as RNSVGCircle };
+export const camelCase = _mod8276.camelCase;
+export const fetchText = _fetchText.fetchText;
+export const parse = _mod8276.parse;
+export const RNSVGCircle = RNSVGCircle.RNSVGCircle;
 export const RNSVGClipPath = RNSVGCircle.RNSVGClipPath;
 export const RNSVGDefs = RNSVGCircle.RNSVGDefs;
 export const RNSVGEllipse = RNSVGCircle.RNSVGEllipse;
@@ -61,10 +58,10 @@ export const RNSVGText = RNSVGCircle.RNSVGText;
 export const RNSVGTextPath = RNSVGCircle.RNSVGTextPath;
 export const RNSVGTSpan = RNSVGCircle.RNSVGTSpan;
 export const RNSVGUse = RNSVGCircle.RNSVGUse;
-export const Shape = multiplyMatricesDefault;
-export { SvgAst_export as SvgAst };
-export const SvgFromUri = SvgAst.SvgFromUri;
-export const SvgFromXml = SvgAst.SvgFromXml;
-export const SvgUri = SvgAst.SvgUri;
-export const SvgXml = SvgAst.SvgXml;
+export const Shape = _modDef8193;
+export const SvgAst = _mod8276.SvgAst;
+export const SvgFromUri = _mod8276.SvgFromUri;
+export const SvgFromXml = _mod8276.SvgFromXml;
+export const SvgUri = _mod8276.SvgUri;
+export const SvgXml = _mod8276.SvgXml;
 export default CircleDefault;

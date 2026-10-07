@@ -3,66 +3,64 @@
 // Module 12589
 import _mod12587 from "module_12587" /* 12587 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
 export const isMatchingPattern = function isMatchingPattern(arr, test) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
-  const obj = _mod12587;
-  let isStringResult = obj.isString(arr);
-  if (isStringResult) {
-    let isMatch;
-    const tmpResult = _mod12587;
+  const isStringResult = _mod12587.isString(arr);
+  if (!isStringResult) {
+    return isStringResult;
+  } else {
     if (tmpResult.isRegExp(test)) {
-      isMatch = test.test(arr);
+      let isMatch = test.test(arr);
     } else {
-      const tmpResult2 = _mod12587;
-      isMatch = tmpResult2.isString(test);
+      isMatch = _mod12587.isString(test);
       if (isMatch) {
-        let hasItem;
         if (flag) {
-          hasItem = arr === test;
+          let hasItem = arr === test;
         } else {
           hasItem = arr.includes(test);
         }
-        isMatch = hasItem;
       }
+      const tmpResult2 = _mod12587;
     }
-    isStringResult = isMatch;
+    tmpResult = _mod12587;
   }
-  return isStringResult;
 };
-export const safeJoin = function safeJoin(__isVue, arg1) {
-  if (Array.isArray(__isVue)) {
+export const safeJoin = function safeJoin(arg0, arg1) {
+  if (Array.isArray(arg0)) {
     const items = [];
     let num = 0;
-    if (0 < __isVue.length) {
+    if (0 < arg0.length) {
       try {
         const push = items.push;
-        const obj = _mod12587;
-        if (obj.isVueViewModel(__isVue[num])) {
+        if (obj.isVueViewModel(tmp2)) {
           push("[VueViewModel]");
         } else {
           const _String = String;
-          push(String(__isVue[num]));
+          push(String(tmp2));
         }
+        num = num + 1;
+        obj = _mod12587;
       } catch (err) {
-        items.push("[value cannot be serialized]");
+        arr.push(tmp);
       }
-      num = num + 1;
     }
     return items.join(arg1);
   } else {
     return "";
   }
 };
-export const snipLine = function snipLine(arr, arg1) {
+export const snipLine = function snipLine(arr, lineno) {
   if (arr.length <= 150) {
     return arr;
   } else {
-    let tmp = arg1;
-    if (arg1 > arr.length) {
+    let tmp = lineno;
+    if (lineno > length) {
       tmp = length;
     }
     const _Math = Math;
@@ -72,10 +70,10 @@ export const snipLine = function snipLine(arr, arg1) {
     }
     const _Math2 = Math;
     let bound = Math.min(num3 + 140, length);
-    if (bound > arr.length - 5) {
+    if (bound > length - 5) {
       bound = length;
     }
-    if (bound === arr.length) {
+    if (bound === length) {
       const _Math3 = Math;
       num3 = Math.max(bound - 140, 0);
     }
@@ -86,14 +84,13 @@ export const snipLine = function snipLine(arr, arg1) {
       combined = "'{snip} " + substr;
     }
     let text = combined;
-    if (bound < arr.length) {
+    if (bound < length) {
       text = `${tmp6} {snip}`;
     }
     return text;
   }
 };
 export const stringMatchesSomePattern = function stringMatchesSomePattern(transaction) {
-  let items;
   if (items === undefined) {
     items = [];
   }
@@ -102,44 +99,40 @@ export const stringMatchesSomePattern = function stringMatchesSomePattern(transa
     flag = false;
   }
   return items.some((test) => {
-    const obj2 = _mod12587;
-    let isStringResult = obj2.isString(transaction);
-    if (isStringResult) {
-      let isMatch;
-      const tmpResult = _mod12587;
+    const isStringResult = _mod12587.isString(transaction);
+    if (!isStringResult) {
+      return isStringResult;
+    } else {
       if (tmpResult.isRegExp(test)) {
-        isMatch = test.test(transaction);
+        let isMatch = test.test(transaction);
       } else {
-        const tmpResult2 = _mod12587;
-        isMatch = tmpResult2.isString(test);
+        isMatch = _mod12587.isString(test);
         if (isMatch) {
-          let hasItem;
           if (flag) {
-            hasItem = transaction === test;
+            let hasItem = transaction === test;
           } else {
             hasItem = transaction.includes(test);
           }
-          isMatch = hasItem;
         }
+        const tmpResult2 = _mod12587;
       }
-      isStringResult = isMatch;
+      tmpResult = _mod12587;
     }
-    return isStringResult;
   });
 };
-export const truncate = function truncate(value) {
+export const truncate = function truncate(str) {
   let num = maxValueLength;
   if (maxValueLength === undefined) {
     num = 0;
   }
-  let combined = value;
-  if (typeof value === "string") {
-    combined = value;
+  let combined = str;
+  if (typeof str === "string") {
+    combined = str;
     if (0 !== num) {
-      combined = value;
-      if (value.length > num) {
+      combined = str;
+      if (str.length > num) {
         const _HermesInternal = HermesInternal;
-        combined = "" + value.slice(0, num) + "...";
+        combined = "" + str.slice(0, num) + "...";
       }
     }
   }

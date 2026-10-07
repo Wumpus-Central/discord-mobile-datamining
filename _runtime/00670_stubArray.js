@@ -1,30 +1,29 @@
 // === Module 670: stubArray ===
 
 // Module 670 (stubArray)
-import stubArray from "stubArray" /* 671 */;
+import _mod671 from "module_671" /* 671 */;
 
 const require = globalThis.__r;
-let _require;
 
-let fn;
 if (getOwnPropertySymbols) {
-  fn = (arg0) => {
-    let closure_0;
-    let items;
+  let fn = (arg0) => {
     _require = arg0;
     if (null == arg0) {
-      items = [];
+      let items = [];
     } else {
       const _Object = Object;
       const ObjectResult = Object(arg0);
       _require = ObjectResult;
+      items = require("arrayFilter")(getOwnPropertySymbols(ObjectResult), (ownPropertySymbols) => {
+        const call = propertyIsEnumerable.call;
+        return typeof call === "unknown" ? propertyIsEnumerable(ownPropertySymbols) : call(closure_0, ownPropertySymbols);
+      });
       const tmp5 = require("arrayFilter");
-      items = tmp5(getOwnPropertySymbols(ObjectResult), (arg0) => propertyIsEnumerable.call(closure_0, arg0));
     }
     return items;
   };
 } else {
-  fn = stubArray;
+  fn = _mod671;
 }
 
 export default fn;

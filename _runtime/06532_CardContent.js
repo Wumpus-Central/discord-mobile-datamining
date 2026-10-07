@@ -1,40 +1,30 @@
 // === Module 6532: CardContent ===
 
 // Module 6532 (CardContent)
-import Fragment from "Fragment" /* 21 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import react_native from "react-native" /* 17 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let size;
-
-let StyleSheet;
-let c2;
-({ StyleSheet, View: c2 } = react_native);
-const jsx = Fragment.jsx;
+get_ActivityIndicator = fn(17);
+({ StyleSheet, View: c2 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
 const styles = StyleSheet.create({ page: { minHeight: "100%" }, card: { flex: 1, overflow: "hidden" } });
 
 export const CardContent = function CardContent(layout) {
-  let closure_1;
-  let enabled;
-  let first;
-  let style;
   layout = layout.layout;
   ({ enabled, style } = layout);
   const merged = Object.assign(layout, Object.assign({ enabled: 0, layout: 0, style: 0 }));
-  closure_1 = undefined;
-  [first, closure_1] = react.useState(false);
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  closure_1 = tmp2[1];
   let items = [, ];
   ({ height: arr[0], width: arr[1] } = layout);
-  const effect = react.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (typeof document !== "undefined") {
       const _document8 = document;
       if (document.body) {
         const _document = document;
         const _document2 = document;
-        size = layout;
+        const size = layout;
         if (clientHeight === layout.height) {
-          let fn;
           const _navigator = navigator;
           if (navigator.maxTouchPoints > 0) {
             const _document4 = document;
@@ -55,16 +45,18 @@ export const CardContent = function CardContent(layout) {
             const _document6 = document;
             if (!head.contains(element)) {
               const _document7 = document;
-              const head2 = document.head;
               head2.appendChild(element);
             }
             const _window2 = window;
             const listener = window.addEventListener("resize", updateStyle);
-            fn = function t() {
+            const fn = function t() {
               const removed = window.removeEventListener("resize", updateStyle);
             };
           }
-          const tmp10 = tmp === size.width && clientHeight === size.height;
+          let tmp10 = tmp === size.width;
+          if (tmp10) {
+            tmp10 = clientHeight === size.height;
+          }
           closure_1(tmp10);
           return fn;
         }
@@ -76,12 +68,12 @@ export const CardContent = function CardContent(layout) {
       }
     }
   }, items);
-  const obj = { pointerEvents: "box-none" };
+  const obj = {};
   const merged1 = Object.assign(merged);
+  obj.pointerEvents = "box-none";
   if (enabled) {
-    let card;
-    if (first) {
-      card = closure_4.page;
+    if (tmp2[0]) {
+      let card = closure_4.page;
     }
     const items1 = [card, style];
     obj.style = items1;

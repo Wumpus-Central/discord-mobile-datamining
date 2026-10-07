@@ -1,12 +1,12 @@
 // === Module 232: DialogManagerAndroid ===
 
 // Module 232 (DialogManagerAndroid)
-import _mod233 from "module_233" /* 233 */;
+import _modDef233 from "module_233" /* 233 */;
 
-const _modDef233 = _mod233;
+const require = globalThis.__r;
 
-for (const key10016 in _mod233) {
-  exports[key10016] = _mod233[key10016];
+for (const key10016 in require("module_233")) {
+  arg5[key10016] = require("module_233")[key10016];
   continue;
 }
 
